@@ -1,9 +1,10 @@
-import React, { useState } from 'react';"
-import { Link } from 'react-router-dom';"
-import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from 'lucide-react';"
-export function MainNavigation({ className = '' }) {
+import React, { useState } from 'react';"'"'
+import React from 'react';'"
+import { Link } from 'react-router-dom';"'"'"
+import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from 'lucide-react';"'
+export function MainNavigation({ className =  }) {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isCompOpen, setIsCompOpen] = useState(false);
-"
-}
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);"
+  const [isCompOpen, setIsCompOpen] = useState(false);""
+"'"
+}'"'"

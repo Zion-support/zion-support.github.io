@@ -1,3 +1,4 @@
+import React from 'react';
 export interface ComprehensivePricingGuide2028 {
   id: string;
    title: string;
@@ -20,3 +21,4 @@ export interface ComprehensivePricingGuide2028 {
    contactInfo: {  phone: string;
    email: string
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string aiCapabilities?: string[] complianceFeatures?: string[] scalabilityFeatures?: string[] pricingTiers?: { name: string price: number features: string[] benefits: string[]  }[] roiAnalysis?: { shortTerm: string mediumTerm: string longTerm: string paybackPeriod: string  } marketPositioning?: { competitiveAdvantage: string uniqueValueProposition: string targetMarketSegment: string marketPenetration: string  } } export const COMPREHENSIVE_PRICING_GUIDE_2028: ComprehensivePricingGuide2028[] = [;
+'

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';"
 import { render, screen } from '@testing-library/react';"
 import '@testing-library/jest-dom';"
@@ -11,7 +12,23 @@ describe('AiSolutions', () => {"
 "
   it('displays expected content', () => {
     render(<AiSolutions /" >);
+=======
+import React from 'react';"'"'
+import React from 'react';'"
+import { render, screen } from '@testing-library/react';"'"'"
+import '@testing-library/jest-dom';"''"
+import AISolutions from './AISolutions';"'"
+"'"'"
+describe('AISolutions', () => {"''"
+  it('renders without crashing', () => {"'"
+    render(<AISolutions /" ></AISolutions>);"''
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"
+});"'"
+"''"
+  it('displays expected content', () => {""
+    render(<AISolutions /" ></AISolutions>);
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-4c90
     // Add more specific tests here,
-});,
-});
-"
+});,"
+});"'"
+"'"'"

@@ -1,36 +1,37 @@
-import React, { createContext, useContext, useReducer, useEffect } from 'react';"
-import { safeStorage } from '@/utils/safeStorage';"
-import { useAuth } from '@/hooks/useAuth';"
+import React, { createContext, useContext, useReducer, useEffect } from 'react';"'"'
+import React from 'react';'"
+import { safeStorage } from '@/utils/safeStorage';"'"'"
+import { useAuth } from '@/hooks/useAuth';"''
 import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
 
 const initialState = { items: [] };
-
-function cartReducer(state, action) {
-    switch (action.type) {"
+"
+function cartReducer(state, action) {"'"
+    switch (action.type) {"''
         case 'ADD_ITEM': {
             const existing = state.items.find(i => i.id === action.payload.id);
             let items;
             if (existing) {
                 items = state.items.map(i => i.id === action.payload.id
-                    ? { ...i, quantity: i.quantity + action.payload.quantity }
+                    ? { ...i, quantity: i.quantity + action.payload.quantity };
                     : i);,
 } else {
                 items = [...state.items, action.payload];,
-}
-            return { items };,
 }"
-        case 'REMOVE_ITEM':
-            return { items: state.items.filter(i => i.id !== action.payload) };"
+            return { items };,"'"
+}"''"
+        case 'REMOVE_ITEM':"'"
+            return { items: state.items.filter(i => i.id !== action.payload) };"''
         case 'UPDATE_QUANTITY': {
             const { id, quantity } = action.payload;
             return {
                 items: state.items.map(item =>
                     item.id === id ? { ...item, quantity } : item
-                ),
-};,
-}"
-        case 'CLEAR_CART':
-            return { items: [] };"
+                ),"
+};,"'"
+}"''"
+        case 'CLEAR_CART':"'"
+            return { items: [] };"''
         case 'SET_ITEMS':
             return { items: action.payload };
         default:
@@ -40,9 +41,9 @@ function cartReducer(state, action) {
 
 const CartContext = createContext(null);
 
-export function useCart() {
-    const ctx = useContext(CartContext);
-    if (!ctx) {"
+export function useCart() {"
+    const ctx = useContext(CartContext);"'"
+    if (!ctx) {"''
         throw new Error('useCart must be used within a CartProvider');,
 }
     return ctx;,
@@ -75,9 +76,9 @@ export function CartProvider({ children }) {
                     /* ignore */,
 }
                 safeStorage.removeItem(getCartKey());,
-}
-        }
-"
+}"
+        }"'"
+"''
         dispatch({ type: 'SET_ITEMS', payload: items });,
 }, [cartKey, user?.id]);
 
@@ -85,17 +86,17 @@ export function CartProvider({ children }) {
         safeStorage.setItem(cartKey, JSON.stringify(state.items));,
 }, [state.items, cartKey]);
 
-    const value = {
-        items: state.items,
-        dispatch,"
-        addItem: (item) => dispatch({ type: 'ADD_ITEM', payload: item }),"
-        removeItem: (id) => dispatch({ type: 'REMOVE_ITEM', payload: id }),"
-        updateQuantity: (id, quantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } }),"
+    const value = {"
+        items: state.items,"'"
+        dispatch,"'"'"
+        addItem: (item) => dispatch({ type: 'ADD_ITEM', payload: item }),"'"'"
+        removeItem: (id) => dispatch({ type: 'REMOVE_ITEM', payload: id }),"'"'"
+        updateQuantity: (id, quantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } }),"''
         clearCart: () => dispatch({ type: 'CLEAR_CART' }),
         getTotalItems: () => state.items.reduce((total, item) => total + item.quantity, 0),
-        getTotalPrice: () => state.items.reduce((total, item) => total + (item.price * item.quantity), 0),
-};
-
-    return <CartContext .Provider value={value}" >{children}</CartContext.Provider>;,
-}
-"
+        getTotalPrice: () => state.items.reduce((total, item) => total + (item.price * item.quantity), 0),;
+};"
+""
+    return <CartContext .Provider value={value}" ></CartContext>{children}</CartContext.Provider>;,"
+}"'"
+"'"'"

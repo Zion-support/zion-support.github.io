@@ -123,15 +123,15 @@ function NotificationItem({ notification, onRemove }: NotificationItemProps) {
   const getIcon = (type: NotificationType) => {
     switch (type) {
       case 'success':
-        return <CheckCircle className="w-6 h-6" />;
+        return <CheckCircle className="w-6 h-6" />
       case 'error':
-        return <XCircle className="w-6 h-6" />;
+        return <XCircle className="w-6 h-6" />
       case 'warning':
-        return <AlertTriangle className="w-6 h-6" />;
+        return <AlertTriangle className="w-6 h-6" />
       case 'info':
-        return <Info className="w-6 h-6" />;
+        return <Info className="w-6 h-6" />
       default:
-        return <Info className="w-6 h-6" />;
+        return <Info className="w-6 h-6" />
     }
   };
 

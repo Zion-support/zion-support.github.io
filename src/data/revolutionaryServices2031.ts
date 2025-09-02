@@ -1,3 +1,4 @@
+import React from 'react';
 export interface RevolutionaryService2031 {
   id: string;
    title: string;
@@ -21,3 +22,4 @@ export interface RevolutionaryService2031 {
    email: string;
    website: string
    address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string } export const REVOLUTIONARY_SERVICES_2031: RevolutionaryService2031[] = [;
+'

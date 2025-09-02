@@ -111,8 +111,8 @@ const AccessibilityManager: React.FC = () => {
       <div className='accessibility-controls fixed bottom-4 right-4 z-50'>
         <button;
           onClick={() => setIsOpen(!isOpen)}
-          className='bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2';
-          aria-label='Open accessibility settings';
+          className='bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+          aria-label='Open accessibility settings'
           aria-expanded={isOpen}
         >;
           <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
@@ -137,7 +137,7 @@ const AccessibilityManager: React.FC = () => {
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
                       settings.highContrast ? 'translate-x-6' : 'translate-x-1';
                     }`}
-                  />;
+                  />
                 </button>
               </label>
             </div>
@@ -176,7 +176,7 @@ const AccessibilityManager: React.FC = () => {
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
                       settings.reducedMotion ? 'translate-x-6' : 'translate-x-1';
                     }`}
-                  />;
+                  />
                 </button>
               </label>
             </div>
@@ -195,7 +195,7 @@ const AccessibilityManager: React.FC = () => {
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
                       settings.focusVisible ? 'translate-x-6' : 'translate-x-1';
                     }`}
-                  />;
+                  />
                 </button>
               </label>
             </div>

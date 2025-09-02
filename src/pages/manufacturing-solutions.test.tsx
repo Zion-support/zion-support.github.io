@@ -1,17 +1,18 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import manufacturing-solutions from './manufacturing-solutions';
-"
-describe('manufacturing-solutions', () => {"
-  it('renders without crashing', () => {
-    render(<manufacturing -solutions /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
-"
-  it('displays expected content', () => {
-    render(<manufacturing -solutions /" >);
+import React from 'react';"'"'
+import React from 'react';'"
+import { render, screen } from '@testing-library/react';"'"'"
+import '@testing-library/jest-dom';"''"
+import manufacturing-solutions from './manufacturing-solutions';"'"
+"'"'"
+describe('manufacturing-solutions', () => {"''"
+  it('renders without crashing', () => {"'"
+    render(<manufacturing -solutions /" ></manufacturing>);"''
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"
+});"'"
+"''"
+  it('displays expected content', () => {""
+    render(<manufacturing -solutions /" ></manufacturing>);
     // Add more specific tests here,
-});,
-});
-"
+});,"
+});"'"
+"'"'"

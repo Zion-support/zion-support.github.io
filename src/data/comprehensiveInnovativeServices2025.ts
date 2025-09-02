@@ -1,3 +1,4 @@
+import React from 'react';
 export interface ComprehensiveInnovativeService {
   id: string;
    title: string;
@@ -20,3 +21,4 @@ export interface ComprehensiveInnovativeService {
    contactInfo: {  phone: string;
    email: string
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string } export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeService[] = [;
+'

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { SEO } from '../components/SEO';
 export default function Page() {
 const Services: React.FC = () => {"
@@ -14,3 +15,12 @@ const Services: React.FC = () => {"
 ;
 "
 }
+=======
+import React from 'react';
+ursor/automate-test-fix-improve-and-merge-code-48f3
+  return (    <>'
+      <SEO title='Services - Zion Tech Group' /"" ></SEO>'      <div className='min-h-screen bg-white py-20'></di>'        <div className='max-w-4xl mx-auto px-4'></di>'          <h1 className='text-4xl font-bold text-gray-900 mb-8'></h>Services</h1>'          <p className='text-lg text-gray-600'>Content coming soon...</p>'        </div>'      </div>""
+</>)}"""
+export default Services""'"
+"'"'"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-4c90

@@ -1,6 +1,7 @@
+import React from 'react';
 
 export const formatDate = (date) => {
-  return new Date(date).toLocaleDateString()}
+  return new Date(date).toLocaleDateString()};
 ;
 export const debounce = (func, wait) => {;
   let timeout;
@@ -23,3 +24,4 @@ export const throttle = (func, limit) => {;
       setTimeout(() => inThrottle = false, limit)}
   }
 }
+'

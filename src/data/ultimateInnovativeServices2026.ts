@@ -1,3 +1,4 @@
+import React from 'react';
  export interface UltimateInnovativeService {
   id: string;
    title: string;
@@ -19,5 +20,5 @@
    innovationLevel: string;
    contactInfo: {  phone: string;
    email: string
-   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string uniqueValue?: string}export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = ['';"
-"
+   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string uniqueValue?: string}export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [;""'"
+"'"'"

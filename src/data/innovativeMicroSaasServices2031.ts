@@ -1,3 +1,4 @@
+import React from 'react';
 export interface InnovativeMicroSaasService2031 {
   id: string;
    title: string;
@@ -20,3 +21,4 @@ export interface InnovativeMicroSaasService2031 {
    contactInfo: {  phone: string;
    email: string
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string } export const INNOVATIVE_MICRO_SAAS_SERVICES_2031: InnovativeMicroSaasService2031[] = [;
+'

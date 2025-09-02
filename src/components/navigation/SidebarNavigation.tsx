@@ -1,3 +1,4 @@
-import React, { useState } from 'react' import { Link, useLocation } from 'react-router-dom' import { motion, AnimatePresence } from 'framer-motion' import {  Brain, Cloud, Shield, Cpu, Zap, Leaf, Star, ChevronRight, ChevronDown, Home, Users, Settings, FileText, HelpCircle, Phone, Mail, MapPin, Globe, Rocket, Sparkles, Target, Lightbulb, Code, Database, Network, Lock, Heart, Activity, Building, Briefcase, GraduationCap, Factory, ShoppingCart, Truck, Zap as ZapIcon, Sun, TreePine } from 'lucide-react'  interface NavigationItem {;
-"
-}
+import React, { useState } from 'react' import { Link, useLocation } from 'react-router-dom' import { motion, AnimatePresence } from 'framer-motion' import {  Brain, Cloud, Shield, Cpu, Zap, Leaf, Star, ChevronRight, ChevronDown, Home, Users, Settings, FileText, HelpCircle, Phone, Mail, MapPin, Globe, Rocket, Sparkles, Target, Lightbulb, Code, Database, Network, Lock, Heart, Activity, Building, Briefcase, GraduationCap, Factory, ShoppingCart, Truck, Zap as ZapIcon, Sun, TreePine } from 'lucide-react'  interface NavigationItem {;'
+import React from 'react';
+"'"
+}'"'"

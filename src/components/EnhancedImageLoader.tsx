@@ -1,3 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion'  interface EnhancedImageLoaderProps {;
-"
-}
+import React, { useState, useRef, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion'  interface EnhancedImageLoaderProps {;'
+import React from 'react';
+"'"
+}'"'"

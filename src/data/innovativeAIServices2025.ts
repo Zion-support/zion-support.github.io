@@ -1,3 +1,4 @@
+import React from 'react';
 export interface InnovativeAIService {
   id: string;
    title: string;
@@ -20,3 +21,4 @@ export interface InnovativeAIService {
    contactInfo: {  phone: string;
    email: string
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [;
+'

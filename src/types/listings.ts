@@ -1,3 +1,4 @@
+import React from 'react';
 export interface Listing {
   id: string;
    title: string;
@@ -13,3 +14,4 @@ export interface Listing {
    rating: number
    reviews: number} location: string ;
 }
+'

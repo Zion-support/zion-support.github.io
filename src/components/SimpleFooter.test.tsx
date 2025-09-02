@@ -1,12 +1,13 @@
-import { render, screen } from '@testing-library/react';"
-import SimpleFooter from './SimpleFooter';"
-describe('SimpleFooter', () => {"
-  it('renders without crashing', () => {"
-    render(<SimpleFooter /" >)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"
-  it('displays expected content', () => {
-    render(<SimpleFooter /" >)
-    // Add specific test assertions based on component content,
-});
-"
-}}
+import React from 'react';'
+import { render, screen } from '@testing-library/react';"'"'"
+import SimpleFooter from './SimpleFooter';"'"'"
+describe('SimpleFooter', () => {"'"'"
+  it('renders without crashing', () => {""'"
+    render(<SimpleFooter /" ></SimpleFooter>)"'"'"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"''"
+  it('displays expected content', () => {""
+    render(<SimpleFooter /" ></SimpleFooter>)
+    // Add specific test assertions based on component content,"
+});""
+"'"
+}}'"'"

@@ -1,3 +1,4 @@
+import React from 'react';
 export interface IoTEdgeService {
   id: string;
    title: string;
@@ -20,3 +21,4 @@ export interface IoTEdgeService {
    contactInfo: {  phone: string;
    email: string
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [;
+'

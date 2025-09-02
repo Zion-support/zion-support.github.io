@@ -1,3 +1,4 @@
-"export const getWallet = () => axios.get("/api/v1/wallet").then(r => r.data)';';"
-'export const getWallet = () => axios.get('/api/v1/wallet').then(r => r.data)';';'";"
-"
+import React from 'react';'
+"export const getWallet = () => axios.get("/api/v1/wallet").then(r => r.data)';';"'"'"
+'export const getWallet = () => axios.get('/api/v1/wallet').then(r => r.data)';';'";""'"
+"'"'"

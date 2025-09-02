@@ -1,3 +1,4 @@
+import React from 'react';
 interface SupabaseUser {
   id: string;
    email?: string;
@@ -18,3 +19,4 @@ interface SupabaseUser {
    isEmailVerified?: boolean;
    createdAt?: string;
    updatedAt?: string}  export role: profile.role, isEmailVerified: profile.is_email_verified || false, createdAt: profile.created_at || supabaseUser.created_at, updatedAt: profile.updated_at || supabaseUser.updated_at}}
+'

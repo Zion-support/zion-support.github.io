@@ -1,12 +1,13 @@
+import React from 'react';'
 import '@testing-library/jest-dom';
-
-// Mock Next.js router"
-jest.mock('next/router', () => ({
-  useRouter() {
-    return {"
-      route: '/',"
-      pathname: '/',
-      query: {},"
+'
+// Mock Next.js router"''
+jest.mock('next/router', () => ({"
+  useRouter() {"'"
+    return {"'"'"
+      route: '/',"''"
+      pathname: '/',"'"
+      query: {},"''
       asPath: '/',
       push: jest.fn(),
       pop: jest.fn(),
@@ -22,9 +23,9 @@ jest.mock('next/router', () => ({
       isFallback: false,
     };,
 },
-}));
-
-// Mock Next.js navigation"
+}));"
+"'"
+// Mock Next.js navigation"''
 jest.mock('next/navigation', () => ({
   useRouter() {
     return {
@@ -37,9 +38,9 @@ jest.mock('next/navigation', () => ({
     };,
 },
   useSearchParams() {
-    return new URLSearchParams();,
-},
-  usePathname() {"
+    return new URLSearchParams();,"
+},"'"
+  usePathname() {"''
     return '/';,
 },
 }));
@@ -55,6 +56,6 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
-"
+  disconnect: jest.fn(),"
+}));"'"
+"'"'"

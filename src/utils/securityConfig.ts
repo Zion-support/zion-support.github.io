@@ -1,6 +1,7 @@
-export const securityConfig = {
+import React from 'react';
+export const securityConfig = {;'
   contentSecurityPolicy: 'default-src;'
-  'self''}'
-  contentSecurityPolicy: 'default - src 'self''}
-;
-"
+  'self}'
+  contentSecurityPolicy: 'default - src 'self}
+;'
+"'"'"

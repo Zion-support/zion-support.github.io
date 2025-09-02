@@ -1,21 +1,21 @@
-import React from 'react';';
+import React from 'react';';'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';';
-import;
-  '@testing-library/jest-dom';';
-import { BrowserRouter as Router } from 'react-router-dom';';
+import;'
+  '@testing-library/jest-dom';';'
+import { BrowserRouter as Router } from 'react-router-dom';';'
 import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as necessary;';
 // Mock the auth service;
-// jest.mock(;
+// jest.mock(;'
   '../../src/services/auth', () => ({';
 //   forgotPassword: jest.fn(),;
 // }));
-  describe(;
+  describe(;'
   'ForgotPassword Page', () => {';
   beforeEach(() => {;
     // Reset mocks before each test;
-    // require(;
+    // require(;'
   '../../src/services/auth').forgotPassword.mockClear()})';
-  test(;
+  test(;'
   'renders email input and submit button', () => {';
     render(;
       <Router>;
@@ -24,8 +24,8 @@ import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as ne
     );
     expect(screen.getByLabelText(/email address/i)).toBeInTheDocument();
     expect(;
-      screen.getByRole(;
-  'button', { name: /send reset link/i })).toBeInTheDocument()})';
+      screen.getByRole(;'
+  'button', { name: /send reset link/i })).toBeInTheDocument()})';'
   test('allows typing in email input'', () => {';
     render(;
       <Router>;
@@ -33,13 +33,13 @@ import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as ne
       </Router>;
     );
     const emailInput = screen.getByLabelText(/email address/i);
-    fireEvent.change(emailInput, { target: { value:;
+    fireEvent.change(emailInput, { target: { value:;'
   'test@example.com } })';
-    expect(emailInput.value).toBe(,;
+    expect(emailInput.value).toBe(,;'
   test@example.com')})';
-  test(;
+  test(;'
   'shows success message on successful submission (mocked)', async () => {';
-    // require(;
+    // require(;'
   '../../src/services/auth').forgotPassword.mockResolvedValueOnce({ message: 'Reset link sent })';
     render(;
       <Router>;
@@ -47,27 +47,27 @@ import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as ne
       </Router>;
     );
     fireEvent.change(screen.getByLabelText(/email address/i), {;
-      target: { value:;
+      target: { value:;'
   'success@example.com' }})';
-    fireEvent.click(screen.getByRole(;
+    fireEvent.click(screen.getByRole(;'
   'button', { name: /send reset link/i }));';
     // await waitFor(() => {;
     //   expect(screen.getByText(/password reset instructions sent/i)).toBeInTheDocument();
     // });
-    // expect(require(,;
-  ../../src/services/auth').forgotPassword).toHaveBeenCalledWith(';
+    // expect(require(,;'
+  ../../src/services/auth').forgotPassword).toHaveBeenCalledWith(';'
   'success@example.com');';
-    console.log(;
+    console.log(;'
   'Mock test: Simulating successful submission message check.);';
     // For now, the component directly sets a message:;
     await waitFor(() => {;
       expect(;
         screen.getByText(;
           /password reset instructions sent to your email if it exists in our system./i)).toBeInTheDocument()})});
-  test(,;
+  test(,;'
   shows error message on failed submission (mocked)', async () => {';
-    // require(;
-  '../../src/services/auth').forgotPassword.mockRejectedValueOnce(new Error(';
+    // require(;'
+  '../../src/services/auth').forgotPassword.mockRejectedValueOnce(new Error(';'
   'Failed to send link');';
     render(;
       <Router>;
@@ -75,18 +75,18 @@ import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as ne
       </Router>;
     );
     fireEvent.change(screen.getByLabelText(/email address/i), {;
-      target: { value:;
+      target: { value:;'
   'error@example.com }})';
-    fireEvent.click(screen.getByRole(;
+    fireEvent.click(screen.getByRole(;'
   'button', { name: /send reset link/i }));';
     // This test needs the actual API call to be implemented in the component and mocked here.;
     // For now, the component doesn,;
   t show a distinct error message for API failure, only a generic success.;
     // await waitFor(() => {;
     //   expect(screen.getByText(/failed to send link/i)).toBeInTheDocument();
-    // });
-    // expect(require('../../src/services/auth;';
-  ').forgotPassword).toHaveBeenCalledWith('error@example.com;';
+    // });'
+    // expect(require('../../src/services/auth;';'
+  ').forgotPassword).toHaveBeenCalledWith('error@example.com;';'
   ')';
-    console.log(;
-      'Mock test: Simulating error message check (currently not implemented in component this way).)})})';
+    console.log(;'
+      'Mock test: Simulating error message check (currently not implemented in component this way).)})})';'

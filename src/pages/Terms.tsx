@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { SEO } from '../components/SEO';
 export default function Page() {
 const Terms: React.FC = () => {"
@@ -14,3 +15,9 @@ const Terms: React.FC = () => {"
 ;
 "
 }
+=======
+import React from 'react';'
+import { motion } from 'framer-motion';"''"
+import { FileText, Scale, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';"'"
+"'"'"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-4c90

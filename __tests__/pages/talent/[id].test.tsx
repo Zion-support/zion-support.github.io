@@ -1,11 +1,11 @@
-import React from 'react';';
-import { render, screen, waitFor } from '@testing-library/react';';
-import { vi } from 'vitest';';
-import TalentPage from '@/pages/talent/[id]';';
-import { TALENT_PROFILES, TalentProfileData } from '@/data/talentData' // Adjust path if necessary;';
-import { useRouter } from 'next/router' // Correct import for useRouter;';
-// Mock next/router;
-vi.mock(;
+React from 'react';
+{ render, screen, waitFor } from '@testing-library/react';
+{ vi } from 'vitest';
+TalentPage from '@/pages/talent/[id]';
+{ TALENT_PROFILES, TalentProfileData } from '@/data/talentData' // Adjust path if necessary;
+{ useRouter } from 'next/router' // Correct import for useRouter;
+// Mock next/router;'
+vi.mock(;''
   'next/router', () => ({';
   useRouter: vi.fn(),;
 }));
@@ -16,54 +16,54 @@ const mockFetch = <T,>(data: T, ok = true, status = 200) => {;
     ok,;
     status,;
     json: () => Promise.resolve(data),;
-    text: () =>;
-      Promise.resolve(typeof data ===;
-  'string' ? data : JSON.stringify(data))}});';
-// Mock TalentDetails and NextHead to simplify testing TalentPage focus;
-vi.mock(;
+    text: () =>;'
+      Promise.resolve(typeof data ===;''
+  'string' ? data : JSON.stringify(data))}););';
+// Mock TalentDetails and NextHead to simplify testing TalentPage focus;'
+vi.mock(;''
   '@/components/talent/TalentDetails', () => ({';
-  // Use TalentProfileData for the talent prop;
-  default: ({ talent }: { talent: TalentProfileData }) => (;
+  // Use TalentProfileData for the talent prop;'
+  default: ({ talent }: { talent: TalentProfileData }) => (;''
     <div data-testid='talent-details'>';
       <h1>{talent.full_name}</h1>;
       {talent.skills.map((skill: string) => (;
         <span key={skill}>{skill}</span>;
       )});
     </div>;
-  )});
-vi.mock(;
+  )});'
+vi.mock(;''
   '@/components/NextHead', () => ({';
   default: ({ title }: { title: string }) => <title>{title}</title>}));
-// Mock TalentProfileSkeleton;
-vi.mock(;
-  '@/components/talent/TalentProfileSkeleton', () => ({';
+// Mock TalentProfileSkeleton;'
+vi.mock(;''
+  '@/components/talent/TalentProfileSkeleton', () => ({';''
   default: () => <div data-testid='talent-profile-skeleton'>Loading...</div>}));';
-// Mock NotFound component;
-vi.mock(;
-  '@/components/NotFound', () => ({';
-  default: () => <div data-testid='not-found-page'>Page Not Found</div>}));';
-  describe('TalentPage'', () => {';
-  it(;
+// Mock NotFound component;'
+vi.mock(;''
+  '@/components/NotFound', () => ({';''
+  default: () => <div data-testid='not-found-page'>Page Not Found</div>}));';''
+  describe('TalentPage'', () => {';'
+  it(;''
   'should render skeleton loader when router is not ready', () => {';
     (useRouter as jest.Mock).mockReturnValue({;
-      // Use jest.Mock for type safety on mockReturnValue;
-      query: { id:;
+      // Use jest.Mock for type safety on mockReturnValue;'
+      query: { id:;''
   't-001 },';
       isReady: false});
-    render(<TalentPage />);
-    expect(screen.getByTestId(,;
-  talent-profile-skeleton')).toBeInTheDocument()})';
-  it(;
+    render(<TalentPage />);'
+    expect(screen.getByTestId(,;''
+  talent-profile-skeleton')).toBeInTheDocument()})';'
+  it(;''
   'should render skeleton loader when initially loading data even if router is ready', () => {';
-    (useRouter as jest.Mock).mockReturnValue({;
-      query: { id:;
+    (useRouter as jest.Mock).mockReturnValue({;'
+      query: { id:;''
   't-001 },';
       isReady: true});
     global.fetch = vi.fn(() => new Promise(() => {});
-    render(<TalentPage />);
-    expect(screen.getByTestId(;
-  'talent-profile-skeleton')).toBeInTheDocument()})';
-  it(;
+    render(<TalentPage />);'
+    expect(screen.getByTestId(;''
+  'talent-profile-skeleton')).toBeInTheDocument()})';'
+  it(;''
   'should fetch and display talent profile successfully', async () => {';
     const mockProfile = TALENT_PROFILES[0];
     (useRouter as jest.Mock).mockReturnValue({;
@@ -71,54 +71,54 @@ vi.mock(;
       isReady: true});
     mockFetch<{ profile: TalentProfileData }>({ profile: mockProfile }) // Specify type for mockFetch;
     render(<TalentPage />);
-    await waitFor(() => {;
-      expect(screen.getByTestId(,;
+    await waitFor(() => {;'
+      expect(screen.getByTestId(,;''
   talent-details')).toBeInTheDocument()})';
     expect(screen.getByText(mockProfile.full_name)).toBeInTheDocument();
     mockProfile.skills.forEach(skill => {;
       expect(screen.getByText(skill)).toBeInTheDocument()});
-    expect(;
-      screen.queryByTestId(;
-  'talent-profile-skeleton')).not.toBeInTheDocument();';
-    expect(screen.queryByTestId(;
-  'not-found-page')).not.toBeInTheDocument()})';
-  it(;
+    expect(;'
+      screen.queryByTestId(;''
+  'talent-profile-skeleton')).not.toBeInTheDocument();';'
+    expect(screen.queryByTestId(;''
+  'not-found-page')).not.toBeInTheDocument()})';'
+  it(;''
   'should render NotFound component when API returns 404', async () => {';
-    (useRouter as jest.Mock).mockReturnValue({;
-      query: { id:;
+    (useRouter as jest.Mock).mockReturnValue({;'
+      query: { id:;''
   'non-existent-id },';
-      isReady: true});
-    mockFetch<{ error: string }>({ error:,;
+      isReady: true});'
+    mockFetch<{ error: string }>({ error:,;''
   Talent not found' }, false, 404)';
     render(<TalentPage />);
-    await waitFor(() => {;
-      expect(screen.getByTestId(;
-  'not-found-page')).toBeInTheDocument()})';
-    expect(screen.queryByTestId(;
+    await waitFor(() => {;'
+      expect(screen.getByTestId(;''
+  'not-found-page')).toBeInTheDocument()})';'
+    expect(screen.queryByTestId(;''
   'talent-details')).not.toBeInTheDocument();';
-    expect(;
-      screen.queryByTestId(;
-  'talent-profile-skeleton')).not.toBeInTheDocument()})';
-  it(;
+    expect(;'
+      screen.queryByTestId(;''
+  'talent-profile-skeleton')).not.toBeInTheDocument()})';'
+  it(;''
   'should render generic error message when API returns a non-404 error', async () => {';
-    (useRouter as jest.Mock).mockReturnValue({;
-      query: { id:;
+    (useRouter as jest.Mock).mockReturnValue({;'
+      query: { id:;''
   't-001 },';
-      isReady: true});
-    mockFetch<{ error: string }>({ error:,;
+      isReady: true});'
+    mockFetch<{ error: string }>({ error:,;''
   Server error' }, false, 500)';
     render(<TalentPage />);
     await waitFor(() => {;
       expect(;
         screen.getByText(/Failed to load talent profile./i)).toBeInTheDocument()});
     expect(screen.getByText(/Status: 500/i)).toBeInTheDocument();
-    expect(screen.getByText(/Message: Server error/i)).toBeInTheDocument();
-    expect(screen.queryByTestId(;
+    expect(screen.getByText(/Message: Server error/i)).toBeInTheDocument();'
+    expect(screen.queryByTestId(;''
   'talent-details')).not.toBeInTheDocument();';
-    expect(;
-      screen.queryByTestId(;
-  'talent-profile-skeleton')).not.toBeInTheDocument()';
-    expect(screen.queryByTestId(;
+    expect(;'
+      screen.queryByTestId(;''
+  'talent-profile-skeleton')).not.toBeInTheDocument()';'
+    expect(screen.queryByTestId(;''
   'not-found-page)).not.toBeInTheDocument()})})';
-afterEach(() => {;
-  vi.restoreAllMocks()});
+afterEach(() => {;'
+  vi.restoreAllMocks()});''

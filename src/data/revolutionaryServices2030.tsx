@@ -1,3 +1,4 @@
+import React from 'react';
 export interface RevolutionaryService2030 {
   id: string;
    title: string;
@@ -75,3 +76,4 @@ export interface RevolutionaryService2030 {
    innovationLevel: string;
    marketSize: string;
    ethicalAI: string[]}
+'

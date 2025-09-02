@@ -1,30 +1,31 @@
+import React from 'react';
 '
-import Link from 'next/link''
-import { MessageSquare } from 'lucide-react''
-import { Button } from '@/components/ui/button';
-import {}"
+import Link from 'react';'
+import { MessageSquare } from 'react';'
+import { Button } from '@/components/ui/button';'
+import {}"'
   Tooltip, TooltipContent, TooltipProvider,'
-  TooltipTrigger} from '@/components/ui/tooltip'
-const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
-  return()"
-    <div className='text-center py-16'>''''
-      <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>''''
-        <MessageSquare className='h-10 w-10 text-zion-purple' /" >'''
-      </div>''''
-      <h2 className='text-xl font-medium mb-2'>{title}</h2>''''
+  TooltipTrigger} from '@/components/ui/tooltip'"
+const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"'"
+  return()"''
+    <div className='text-center py-16'></div>''"
+      <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'></div>'"'"
+        <MessageSquare className='h-10 w-10 text-zion-purple' /" ></MessageSquare>'
+      </div>''"
+      <h2 className='text-xl font-medium mb-2'></h>{title}</h2>'"'"
       <p className='text-muted-foreground mb-6">{subtitle}</p>
-      <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger asChild" >
-            {hasSession ? (
-              <Button asChild" >
-                <Link href={href}" >{cta}</Link>
-              </Button>
-            ) : (
-              <Button disabled" >{cta}</Button>
+      <TooltipProvider></TooltipProvider>"
+        <Tooltip></Tooltip>""
+          <TooltipTrigger asChild" ></TooltipTrigger>"
+            {hasSession ? (""
+              <Button asChild" ></Button>""
+                <Link href={href}" ></Lin>{cta}</Link>
+              </Button>"
+            ) : (""
+              <Button disabled" ></Butto>{cta}</Button>
             )}
           </TooltipTrigger>
-          {!hasSession && <TooltipContent>Login required</TooltipContent>}
+          {!hasSession && <TooltipContent></TooltipConten>Login required</TooltipContent>}
         </Tooltip>
       </TooltipProvider>
     </div>)}
@@ -35,7 +36,7 @@ export { EmptyState }
 export { EmptyState }
 
 export { EmptyState }
-
-export { EmptyState }
-
+;
 export { EmptyState };"
+;"'"
+export { EmptyState };"'"'"

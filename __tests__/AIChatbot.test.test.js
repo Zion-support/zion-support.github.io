@@ -1,21 +1,20 @@
-
-import React from 'react';';
-import { render, screen, fireEvent } from '@testing-library/react';';
-import '@testing-library/jest-dom';';
-import AIChatbottest from "../components/AIChatbot.test";";
-  describe('AIChatbottest', () => {';
-  test('renders without crashing', () => {';
-    render(<AIChatbottest />);
-    expect(screen.getByTestId('aichatbot.test')).toBeInTheDocument()})';
+React from 'react';
+{ render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+AIChatbottest from "../components/AIChatbot.test";
+  describe('AIChatbottest', () => {';''
+  test('renders without crashing', () => {';'
+    render(<AIChatbotTest />);''
+    expect(screen.getByTestId('aichatbot.test')).toBeInTheDocument()});;''
   test('displays correct content', () => {';
-    render(<AIChatbottest />);
-    // Add specific content tests based on component;
-  });
+    render(<AIChatbotTest />);
+    // Add specific content tests based on component;'
+  });''
   test('handles user interactions', () => {';
-    render(<AIChatbottest />);
-    // Add interaction tests based on component functionality;
-  });
+    render(<AIChatbotTest />);
+    // Add interaction tests based on component functionality;'
+  });''
   test('applies correct styling', () => {';
-    render(<AIChatbottest />);
-    // Add styling tests if needed;
-  })});
+    render(<AIChatbotTest />);
+    // Add styling tests if needed;'"
+  })});'"'"
