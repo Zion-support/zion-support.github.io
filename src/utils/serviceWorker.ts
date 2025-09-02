@@ -1,200 +1,190 @@
-export function registerServiceWorker() {
+// Service Worker Registration and Management
+export function registerServiceWorker(swUrl: string, isDev: boolean = false) {
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('SW registered: ', registration);
-          
-          // Check for updates
-          registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
-            if (newWorker) {
-              newWorker.addEventListener('statechange', () => {
-                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                  // New content is available
-                  console.log('New content is available; please refresh.');
-                }
-              });
-            }
-          });
-        })
-        .catch((registrationError) => {
-          console.error('SW registration failed: ', registrationError);
-        });
-    });
-  }
-}
-
-export function unregisterServiceWorker() {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready
+    console.log(`Registering service worker: ${swUrl} (${isDev ? 'dev' : 'prod'})`);
+    navigator.serviceWorker
+      .register(swUrl)
       .then((registration) => {
-        registration.unregister();
+        console.log('SW registered: ', registration);
+        // Handle updates
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          if (newWorker) {
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New content is available
+                console.log('New content is available; please refresh.');
+              }
+            });
+          }
+        });
       })
-      .catch((error) => {
-        console.error(error.message);
+      .catch((registrationError) => {
+        console.error('SW registration failed: ', registrationError);
       });
   }
 }
 
-// Service Worker for Zion Tech Group
-// Handles caching, offline functionality, and performance optimization
-const CACHE_NAME = 'zion-tech-group-v1';
-const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/favicon.ico',
-  '/og-image.jpg'
-];
-
-const DYNAMIC_ROUTES = [
-  '/about',
-  '/services',
-  '/contact',
-  '/careers',
-  '/blog',
-  '/case-studies'
-];
-
-const API_ENDPOINTS = [
-  '/api/',
-  '/graphql'
-];
-
-// Install event - cache static assets
-self.addEventListener('install', (event: ExtendableEvent) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('Caching static assets');
-        return cache.addAll(STATIC_ASSETS);
-      })
-      .then(() => {
-        console.log('Service Worker installed successfully');
-        return self.skipWaiting();
-      })
-      .catch(error => {
-        console.error('Service Worker installation failed:', error);
-      })
-  );
-});
-
-// Activate event - clean up old caches
-self.addEventListener('activate', (event: ExtendableEvent) => {
-  event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames.map(cacheName => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('Deleting old cache:', cacheName);
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    }).then(() => {
-      console.log('Service Worker activated successfully');
-      return self.clients.claim();
-    })
-  );
-});
-
-// Fetch event - handle different caching strategies
-self.addEventListener('fetch', (event: FetchEvent) => {
-  const { request } = event;
-  const url = new URL(request.url);
-  
-  // Skip non-GET requests
-  if (request.method !== 'GET') {
-    return;
-  }
-  
-  // Skip chrome-extension and other non-http requests
-  if (!url.protocol.startsWith('http')) {
-    return;
-  }
-  
-  // Handle different types of requests
-  if (isStaticAsset(request)) {
-    event.respondWith(cacheFirst(request, CACHE_NAME));
-  } else if (isImage(request) || isFont(request)) {
-    event.respondWith(cacheFirst(request, CACHE_NAME));
-  } else if (isAPIRequest(request)) {
-    event.respondWith(networkFirst(request, CACHE_NAME));
-  } else if (isDynamicRoute(request)) {
-    event.respondWith(networkFirst(request, CACHE_NAME));
-  } else {
-    event.respondWith(networkFirst(request, CACHE_NAME));
-  }
-});
-
-// Helper functions
-function isStaticAsset(request: Request): boolean {
-  return STATIC_ASSETS.some(asset => request.url.includes(asset));
-}
-
-function isImage(request: Request): boolean {
-  return request.destination === 'image';
-}
-
-function isFont(request: Request): boolean {
-  return request.destination === 'font';
-}
-
-function isAPIRequest(request: Request): boolean {
-  return API_ENDPOINTS.some(endpoint => request.url.includes(endpoint));
-}
-
-function isDynamicRoute(request: Request): boolean {
-  return DYNAMIC_ROUTES.some(route => request.url.includes(route));
-}
-
-// Caching strategies
-async function cacheFirst(request: Request, cacheName: string): Promise<Response> {
-  const cache = await caches.open(cacheName);
-  const cachedResponse = await cache.match(request);
-  
-  if (cachedResponse) {
-    return cachedResponse;
-  }
-  
-  try {
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    // Return offline page if available
-    const offlineResponse = await cache.match('/offline.html');
-    if (offlineResponse) {
-      return offlineResponse;
-    }
-    throw error;
+// Service Worker Update Management
+export function checkForUpdates() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistration().then((registration) => {
+      if (registration) {
+        registration.update();
+      }
+    });
   }
 }
 
-async function networkFirst(request: Request, cacheName: string): Promise<Response> {
-  try {
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(cacheName);
-      cache.put(request, networkResponse.clone());
+// Service Worker Unregistration
+export function unregisterServiceWorker() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      registrations.forEach((registration) => {
+        registration.unregister();
+      });
+    });
+  }
+}
+
+// Service Worker Message Handling
+export function setupServiceWorkerMessaging() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.addEventListener('message', (event) => {
+      const { type, payload } = event.data;
+      
+      switch (type) {
+        case 'CACHE_UPDATED':
+          console.log('Cache updated:', payload);
+          break;
+        case 'OFFLINE_READY':
+          console.log('App is ready for offline use');
+          break;
+        case 'UPDATE_AVAILABLE':
+          console.log('Update available, refreshing...');
+          window.location.reload();
+          break;
+        default:
+          console.log('Unknown message from service worker:', event.data);
+      }
+    });
+  }
+}
+
+// Service Worker Installation Prompt
+export function showUpdatePrompt() {
+  if ('serviceWorker' in navigator) {
+    const registration = navigator.serviceWorker.getRegistration();
+    if (registration) {
+      // Show update notification to user
+      const updateNotification = document.createElement('div');
+      updateNotification.innerHTML = `
+        <div style="position: fixed; top: 20px; right: 20px; background: #4CAF50; color: white; padding: 15px; border-radius: 5px; z-index: 1000;">
+          <p>New version available!</p>
+          <button onclick="window.location.reload()" style="background: white; color: #4CAF50; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">
+            Update Now
+          </button>
+        </div>
+      `;
+      document.body.appendChild(updateNotification);
     }
-    return networkResponse;
-  } catch (error) {
-    const cache = await caches.open(cacheName);
-    const cachedResponse = await cache.match(request);
-    
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-    
-    // Return offline page if available
-    const offlineResponse = await cache.match('/offline.html');
-    if (offlineResponse) {
-      return offlineResponse;
-    }
-    throw error;
+  }
+}
+
+// Service Worker Cache Management
+export function clearServiceWorkerCache() {
+  if ('serviceWorker' in navigator) {
+    caches.keys().then((cacheNames) => {
+      cacheNames.forEach((cacheName) => {
+        caches.delete(cacheName);
+      });
+    });
+  }
+}
+
+// Service Worker Network Status
+export function isOnline(): boolean {
+  return navigator.onLine;
+}
+
+// Service Worker Offline Handling
+export function handleOfflineStatus() {
+  window.addEventListener('online', () => {
+    console.log('Connection restored');
+    // Sync any pending data
+  });
+
+  window.addEventListener('offline', () => {
+    console.log('Connection lost');
+    // Show offline indicator
+  });
+}
+
+// Service Worker Background Sync
+export function registerBackgroundSync(tag: string) {
+  if ('serviceWorker' in navigator && 'sync' in window.ServiceWorkerRegistration.prototype) {
+    navigator.serviceWorker.ready.then((registration) => {
+      return registration.sync.register(tag);
+    });
+  }
+}
+
+// Service Worker Push Notifications
+export function requestNotificationPermission(): Promise<NotificationPermission> {
+  if ('Notification' in window) {
+    return Notification.requestPermission();
+  }
+  return Promise.resolve('denied');
+}
+
+// Service Worker Push Subscription
+export function subscribeToPushNotifications(): Promise<PushSubscription | null> {
+  if ('serviceWorker' in navigator && 'PushManager' in window) {
+    return navigator.serviceWorker.ready.then((registration) => {
+      return registration.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: process.env.REACT_APP_VAPID_PUBLIC_KEY
+      });
+    });
+  }
+  return Promise.resolve(null);
+}
+
+// Service Worker Performance Monitoring
+export function monitorServiceWorkerPerformance() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.addEventListener('message', (event) => {
+      if (event.data.type === 'PERFORMANCE_METRICS') {
+        const metrics = event.data.payload;
+        console.log('Service Worker Performance:', metrics);
+        // Send metrics to analytics
+      }
+    });
+  }
+}
+
+// Service Worker Error Handling
+export function handleServiceWorkerErrors() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.addEventListener('error', (event) => {
+      console.error('Service Worker Error:', event);
+      // Report error to monitoring service
+    });
+
+    navigator.serviceWorker.addEventListener('unhandledrejection', (event) => {
+      console.error('Service Worker Unhandled Rejection:', event);
+      // Report error to monitoring service
+    });
+  }
+}
+
+// Initialize Service Worker
+export function initializeServiceWorker() {
+  if (process.env.NODE_ENV === 'production') {
+    registerServiceWorker('/sw.js', false);
+    setupServiceWorkerMessaging();
+    handleOfflineStatus();
+    handleServiceWorkerErrors();
+    monitorServiceWorkerPerformance();
   }
 }

@@ -1,8 +1,9 @@
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
-export default function AICybersecuritySuite(...args: []):  {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+export default function AICybersecuritySuite() {
   return (
     <>
       <Helmet>
@@ -32,6 +33,7 @@ export default function AICybersecuritySuite(...args: []):  {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
                   Get Protected
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -55,7 +57,8 @@ export default function AICybersecuritySuite(...args: []):  {
                 with intelligent detection and automated response capabilities.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -110,7 +113,8 @@ export default function AICybersecuritySuite(...args: []):  {
                 Our defense-in-depth approach ensures comprehensive protection across all attack vectors.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   layer: "01",
@@ -177,11 +181,11 @@ export default function AICybersecuritySuite(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">Threat Categories</h3>
                 <div className="space-y-4">
                   {[
-                    { type: "Malware", icon: AlertTriangle, color: "from-red-500 to-pink-500", count: "10M+" },
+                    { type: anyanyanyanyanyanyanyanyanyanyanyanyany"Malware", icon: AlertTriangle, color: "from-red-500 to-pink-500", count: "10M+" },
                     { type: "Phishing", icon: Eye, color: "from-orange-500 to-red-500", count: "5M+" },
                     { type: "Ransomware", icon: Lock, color: "from-purple-500 to-red-500", count: "2M+" },
                     { type: "DDoS", icon: Activity, color: "from-blue-500 to-cyan-500", count: "1M+" }
-                  ].map((item, index)  => (
+                  ].map((item, index)               => (
                     <div key={index} className="flex justify-between items-center">
                       <div className="flex items-center space-x-3">
                         <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
@@ -208,7 +212,8 @@ export default function AICybersecuritySuite(...args: []):  {
                 Meet regulatory requirements with built-in compliance features and audit capabilities.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "SOC 2 Type II",

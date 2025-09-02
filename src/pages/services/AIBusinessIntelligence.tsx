@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react.ts';
   Database,
   Cpu,
   Lock
 } from 'lucide-react';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+
+import { motion              } from 'framer-motion.ts';
+import { Brain,
   BarChart3,
   TrendingUp,
   Zap,
@@ -22,8 +22,9 @@ import {
   Clock,
   DollarSign,
   Lightbulb
- } from 'lucide-react';
-const AIBusinessIntelligence: React.FC = () => {
+              } from 'lucide-react.ts';
+
+const AIBusinessIntelligence: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
@@ -202,8 +203,9 @@ const AIBusinessIntelligence: React.FC = () => {
               to deliver actionable insights that transform your business.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {features.map((feature, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 lg:gap-12">
+            {features.map((feature, index)              => (
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Powerful Features
@@ -213,8 +215,9 @@ const AIBusinessIntelligence: React.FC = () => {
               data analysis, visualization, and decision-making support.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)               => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -383,8 +386,9 @@ const AIBusinessIntelligence: React.FC = () => {
               platform to achieve remarkable results.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)              => (
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Industry Applications
@@ -394,8 +398,9 @@ const AIBusinessIntelligence: React.FC = () => {
               enabling data-driven decision making and operational excellence.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)               => (
               <motion.div
                 key={useCase.industry}
                 initial = {
@@ -452,8 +457,9 @@ const AIBusinessIntelligence: React.FC = () => {
               and drive measurable business outcomes.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)              => (
               <div key={index} className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
                 plan.popular ? 'border-blue-500 ring-4 ring-blue-500/20' : 'border-gray-200'
               }`}>
@@ -493,6 +499,7 @@ const AIBusinessIntelligence: React.FC = () => {
               </div>
             ))}
           </div>
+
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Need a custom solution?</p>
             <a

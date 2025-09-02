@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Brain,
   Zap,
   Shield,
   TrendingUp,
@@ -123,7 +122,8 @@ const AIServices = [
       results: ['80% faster diagnosis', 'Improved accuracy', 'Better patient outcomes'];
     };
   ];
-const AIServicesPage: React.FC = () => {
+
+const AIServicesPage: React.FC = (): JSX.Element => {
   return (
     <>
       <SEO
@@ -161,8 +161,8 @@ const AIServicesPage: React.FC = () => {
           {/* AI Solutions Grid */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">AI Solutions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {aiSolutions.map((solution, index) => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+              {aiSolutions.map((solution, index)              => (
                 <motion.div
                   key={index}
                   initial = {
@@ -195,8 +195,8 @@ const AIServicesPage: React.FC = () => {
           {/* Case Studies */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Success Stories</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {caseStudies.map((study, index) => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {caseStudies.map((study, index)              => (
                 <motion.div
                   key={index}
                   initial = {
@@ -212,7 +212,8 @@ const AIServicesPage: React.FC = () => {
   delay: index * 0.1 
 }}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"
-                  <h3 className="text-xl font-semibold text-white mb-2">{study.company}</h3>
+
+                  <h3 className="text-xl font-semibold text-white mb-2">{study.comp}</h3>
                   <p className="text-purple-400 text-sm mb-4">{study.industry}</p>
                   <div className="space-y-3">
                     <div>

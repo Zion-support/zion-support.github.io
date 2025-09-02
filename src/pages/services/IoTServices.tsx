@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe  } from 'lucide-react';
-const IoTServices = () => {
+
+const IoTServices: React.FC = ($2) => {
   const iotServices = [
     {
       title: "IoT Device Development",
@@ -24,6 +24,7 @@ const IoTServices = () => {
       icon: Database;
     };
   ];
+
   const iotTechnologies = [
     {
       name: "Edge Computing",
@@ -44,6 +45,7 @@ const IoTServices = () => {
       features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"];
     };
   ];
+
   const benefits = [;
     "Real-time monitoring and control capabilities",;
     "Improved operational efficiency and automation",;
@@ -52,6 +54,7 @@ const IoTServices = () => {
     "Scalable and flexible IoT infrastructure",;
     "Better decision-making with real-time data";
   ];
+
   return (
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
@@ -81,6 +84,7 @@ const IoTServices = () => {
           </div>
         </div>
       </section>
+
       {/* IoT Services */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -93,6 +97,7 @@ const IoTServices = () => {
               operations and unlock new possibilities.
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {iotServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
@@ -115,6 +120,7 @@ const IoTServices = () => {
           </div>
         </div>
       </section>
+
       {/* IoT Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -127,6 +133,7 @@ const IoTServices = () => {
               scalable IoT solutions.
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {iotTechnologies.map((tech, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
@@ -147,6 +154,7 @@ const IoTServices = () => {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -186,6 +194,7 @@ const IoTServices = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -209,5 +218,6 @@ const IoTServices = () => {
     </div>;
   );
 };
+
 export default IoTServices;
 }}}

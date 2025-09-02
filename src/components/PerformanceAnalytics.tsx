@@ -20,15 +20,18 @@ interface PerformanceMetric {
   trend: 'up' | 'down' | 'stable';
   status: 'good' | 'warning' | 'critical';
   icon: React.ComponentType<any>;
+
 interface PerformanceData {
   timestamp: number;
   metrics: PerformanceMetric[];
   alerts: string[];
   recommendations: string[];
+
 const PerformanceAnalytics: React.FC = () => {;
   const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
+
   // Mock performance data - in real implementation, this would come from actual monitoring
   const generateMockData = useCallback((): PerformanceData => {;
     const now = Date.now();
@@ -80,17 +83,21 @@ const PerformanceAnalytics: React.FC = () => {;
         trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.7 ? 'good' : 'warning',
         icon: Zap
+
     ];
+
     const alerts = [;
       'High memory usage detected on server-01',;
       'Network latency increased by 15%',;
       'Error rate spike detected in last 5 minutes';
     ];
+
     const recommendations = [;
       'Consider implementing lazy loading for images',;
       'Optimize database queries for better performance',;
       'Enable CDN for static assets delivery';
     ];
+
     return {
       timestamp: now,
       metrics,
@@ -98,41 +105,52 @@ const PerformanceAnalytics: React.FC = () => {;
       recommendations
     };
   }, []);
+
   useEffect(() => {
     if (isMonitoring) {
       const interval = setInterval(() => {;
         setPerformanceData(generateMockData());
       }, 5000); // Update every 5 seconds
+
       return () => clearInterval(interval);
     }
   }, [isMonitoring, generateMockData]);
-  const getStatusColor = (status: string) => {;
+
+  const getStatusColor: React.FC = ($2) => {;
     switch (status) {;
       case 'good': return 'text-green-400';
       case 'warning': return 'text-yellow-400';
       case 'critical': return 'text-red-400';
       default: return 'text-gray-400';
+
   };
-  const getStatusBgColor = (status: string) => {;
+
+  const getStatusBgColor: React.FC = ($2) => {;
     switch (status) {;
       case 'good': return 'bg-green-500/20';
       case 'warning': return 'bg-yellow-500/20';
       case 'critical': return 'bg-red-500/20';
       default: return 'bg-gray-500/20';
+
   };
-  const getTrendIcon = (trend: string) => {;
+
+  const getTrendIcon: React.FC = ($2) => {;
     switch (trend) {;
       case 'up': return <TrendingUp className="w-4 h-4 text-red-400" />;
       case 'down': return <TrendingDown className="w-4 h-4 text-green-400" />;
       default: return <Activity className="w-4 h-4 text-blue-400" />;
+
   };
-  const startMonitoring = () => {;
+
+  const startMonitoring: React.FC = ($2) => {;
     setIsMonitoring(true);
     setPerformanceData(generateMockData());
   };
-  const stopMonitoring = () => {;
+
+  const stopMonitoring: React.FC = ($2) => {;
     setIsMonitoring(false);
   };
+
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6">
       <div className="max-w-7xl mx-auto">
@@ -141,10 +159,22 @@ const PerformanceAnalytics: React.FC = () => {;
           initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
           className="text-center mb-12"
         >
@@ -155,15 +185,28 @@ const PerformanceAnalytics: React.FC = () => {;
             Real-time monitoring and analytics for optimal application performance
           </p>
         </motion.div>
+
         {/* Controls */}
         <motion.div
           initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
           transition={{ delay: 0.2 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
@@ -194,6 +237,7 @@ const PerformanceAnalytics: React.FC = () => {;
               Stop Monitoring
             </button>
           </div>
+
           <select
             value={selectedTimeframe}
             onChange={(e) => setSelectedTimeframe(e.target.value as '1h' | '24h' | '7d' | '30d')}
@@ -205,16 +249,29 @@ const PerformanceAnalytics: React.FC = () => {;
             <option value="30d">Last 30 Days</option>
           </select>
         </motion.div>
+
         {/* Performance Metrics Grid */}
         {performanceData && (
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
             transition={{ delay: 0.3 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
@@ -225,10 +282,22 @@ const PerformanceAnalytics: React.FC = () => {;
                 initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
                 transition={{ delay: 0.4 + index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
@@ -242,6 +311,7 @@ const PerformanceAnalytics: React.FC = () => {;
                   </div>
                   {getTrendIcon(metric.trend)}
                 </div>
+
                 <div className="text-center">
                   <div className="text-3xl font-bold text-white mb-2">
                     {metric.value.toFixed(metric.unit === '%' ? 1 : 0)}
@@ -255,16 +325,29 @@ const PerformanceAnalytics: React.FC = () => {;
             ))}
           </motion.div>
         )}
+
         {/* Alerts and Recommendations */}
         {performanceData && (
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
             transition={{ delay: 0.5 }}
             className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12"
@@ -284,6 +367,7 @@ const PerformanceAnalytics: React.FC = () => {;
                 ))}
               </div>
             </div>
+
             {/* Recommendations */}
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
@@ -301,15 +385,28 @@ const PerformanceAnalytics: React.FC = () => {;
             </div>
           </motion.div>
         )}
+
         {/* Performance Chart Placeholder */}
         <motion.div
           initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
           transition={{ delay: 0.6 }}
           className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center"
@@ -329,16 +426,29 @@ const PerformanceAnalytics: React.FC = () => {;
             </div>
           )}
         </motion.div>
+
         {/* Status Summary */}
         {performanceData && (
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
             transition={{ delay: 0.7 }}
             className="mt-8 text-center"
@@ -355,4 +465,5 @@ const PerformanceAnalytics: React.FC = () => {;
     </div>;
   );
 </div>};
+
 export default PerformanceAnalytics;}}}}}}}}

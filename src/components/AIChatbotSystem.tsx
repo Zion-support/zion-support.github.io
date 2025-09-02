@@ -28,7 +28,9 @@ import {
   CheckCircle,
   AlertCircle
  } from 'lucide-react';
+
 interface ChatMessage {
+
   id: string;
   content: string;
   sender: 'user' | 'bot';
@@ -40,13 +42,16 @@ metadata?: {
     suggestions?: string[];
     relatedServices?: string[];
     estimatedResponseTime?: number}}
+
 interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
+
   showHeader?: boolean;
   showSettings?: boolean;
   maxMessages?: number;
   autoScroll?: boolean}
+
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
-  showHeader = true,;
+showHeader:  true,;
   showSettings = true,;
   maxMessages = 50,;
   autoScroll = true;
@@ -66,6 +71,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   const [isListening, setIsListening] = useState(false);
   const [chatHistory, setChatHistory] = useState<any>([]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
   // Sample welcome message
   useEffect(() => {
     if (isOpen && messages.length = == 0) {
@@ -83,15 +89,20 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   estimatedResponseTime: 2;
         ;
 ;
+
+
+
 };
       };
       setMessages([welcomeMessage])}
   }, [isOpen, messages.length]);
+
   // Auto-scroll to bottom
   useEffect(()  => {
     if (autoScroll && messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })}
   }, [messages, autoScroll]);
+
   // Simulate AI response
         suggestions['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
         relatedServices['Digital Transformation', 'Process Optimization', 'Change Management']
@@ -102,7 +113,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management'];
       };
     ];
+
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+
     const botMessage: ChatMessage = {
   id: Date.now().toString(),
       content: randomResponse.content,
@@ -119,30 +132,41 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   estimatedResponseTime: 1 + Math.random() * 2;
       ;
 ;
+
+
+
+
+
 };
     };
+
     setMessages(prev => [...prev, botMessage]);
     setIsTyping(false);
   };
+
   // Handle message submission
       setMessages(prev = > [...prev, fileMessage])};
   };
+
   // Handle suggestion click
-  const handleSuggestionClick = (suggestion: string) => {;
+  const handleSuggestionClick: React.FC = ($2) => {;
     setInputValue(suggestion);
   };
+
   // Rate response
-  const rateResponse = (messageId: string, rating: 'positive' | 'negative') => {
+  const rateResponse: React.FC = ($2) => {
     setMessages(prev => prev.map(msg =>
       msg.id === messageId
         ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }
         : msg
     ));
   };
+
   // Clear chat
-  const clearChat = () => {;
+  const clearChat: React.FC = ($2) => {;
     setMessages([]);
     setChatHistory([])};
+
   return (
     <>
       {/* Chat Toggle Button */}
@@ -152,8 +176,10 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Toggle AI chatbot"
+
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
       </motion.button>
+
       {/* Chat Window */}
       <AnimatePresence>
         {isOpen && (
@@ -161,22 +187,47 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
             initial = {
   { opacity: 0, scale: 0.9,
   y: 20 
+
+
+
+
+
+
 }}
             animate = {
   { opacity: 1, scale: 1,
   y: 0 
+
+
+
+
+
+
 }}
             exit = {
   { opacity: 0, scale: 0.9,
   y: 20 
+
+
+
+
+
+
 }}
             transition = {
   { duration: 0.3,
   ease: 'easeOut' 
+
+
+
+
+
+
 }}
             className="fixed bottom-20 right-4 z-40 w-96 h-[600px] bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl overflow-hidden"
+
             {/* Header */}
-            {showHeader && (
+            {showHeader && (;
               <div className="p-4 bg-zinc-800/50 border-b border-zinc-700/50">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -191,25 +242,29 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                       </div>
                     </div>
                   </div>
+
                   <div className="flex items-center gap-2">
                     {showSettingsPanel && (
                       <button
                         onClick={() => setShowSettingsPanel(!showSettingsPanel)}
                         className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                         aria-label="Chat settings"
+
                         <Settings className="w-4 h-4" />
-                      </button>
+                      </button>;
                     )}
                     <button
                       onClick={clearChat}
                       className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                       aria-label="Clear chat"
+
                       <RefreshCw className="w-4 h-4" />
                     </button>
                   </div>
-                </div>
+                </div>;
               </div>
             )}
+
             {/* Settings Panel */}
             <AnimatePresence>
               {showSettingsPanel && (
@@ -217,17 +272,36 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   initial = {
   { height: 0,
   opacity: 0 
+
+
+
+
+
+
 }}
                   animate = {
   { height: 'auto',
   opacity: 1 
+
+
+
+
+
+
 }}
                   exit = {
   { height: 0,
   opacity: 0 
+
+
+
+
+
+
 }}
                   transition={{ duration: 0.3 }}
                   className="border-b border-zinc-700/50 overflow-hidden"
+
                   <div className="p-4 space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-zinc-300">Voice Input</span>
@@ -235,48 +309,77 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                         onClick = {
   () => setSettings(prev => ({ ...prev,
   voiceEnabled: !prev.voiceEnabled 
+
+
+
+
+
+
 }))}
                         className={`p-2 rounded-lg transition-colors ${
                           settings.voiceEnabled
                             ? 'bg-zion-cyan text-white'
                             : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
                         }`}
+
                         {settings.voiceEnabled ? <Mic className="w-4 h-4" /> : <MicOff className="w-4 h-4" />}
                       </button>
                     </div>
+
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-zinc-300">Auto Response</span>
                       <button
                         onClick = {
   () => setSettings(prev => ({ ...prev,
   autoResponse: !prev.autoResponse 
+
+
+
+
+
+
 }))}
                         className={`p-2 rounded-lg transition-colors ${
                           settings.autoResponse
                             ? 'bg-zion-cyan text-white'
                             : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
                         }`}
+
                         <CheckCircle className="w-4 h-4" />
                       </button>
-                    </div>
+                    </div>;
                   </div>
                 </motion.div>
               )}
             </AnimatePresence>
+
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-96">
-              {messages.map((message) => (
+            <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-96">;
+              {messages.map((message) => (;
                 <motion.div
                   key={message.id}
                   initial = {
   { opacity: 0,
   y: 10 
+
+
+
+
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
                   className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+
                   <div className={`max-w-[80%] ${message.sender === 'user' ? 'order-2' : 'order-1'}`}>
                     <div className={`p-3 rounded-lg ${
                       message.sender === 'user'
@@ -284,6 +387,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                         : 'bg-zinc-800/50 text-zinc-100'
                     }`}>
                       <div className="whitespace-pre-wrap">{message.content}</div>
+
                       {/* Message Metadata */}
                       {message.metadata && (
                         <div className="mt-2 pt-2 border-t border-zinc-600/30">
@@ -292,6 +396,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                               Confidence: {Math.round(message.metadata.confidence * 100)}%
                             </div>
                           )}
+
                           {message.metadata.suggestions && (
                             <div className="flex flex-wrap gap-1 mb-2">
                               {message.metadata.suggestions.map((suggestion, index) => (
@@ -299,17 +404,20 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                                   key={index}
                                   onClick={() => handleSuggestionClick(suggestion)}
                                   className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-600/50 transition-colors"
+
                                   {suggestion}
                                 </button>
                               ))}
                             </div>
                           )}
+
                           {message.metadata.relatedServices && (
                             <div className="flex flex-wrap gap-1">
                               {message.metadata.relatedServices.map((service, index) => (
                                 <span
                                   key={index}
                                   className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full"
+
                                   {service}
                                 </span>
                               ))}
@@ -318,40 +426,57 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                         </div>
                       )}
                     </div>
+
                     {/* Message Actions */}
-                    <div className={`flex items-center gap-2 mt-2 ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
+                    <div className={`flex items-center gap-2 mt-2 ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>;
                       <span className="text-xs text-zinc-500">
                         {message.timestamp.toLocaleTimeString()}
                       </span>
+
                       {message.sender === 'bot' && (
                         <div className="flex items-center gap-1">
                           <button
                             onClick = {
   () => rateResponse(message.id,
   'positive')
+
+
+
+
+
+
 }
                             className="p-1 text-zinc-400 hover:text-green-400 transition-colors"
                             aria-label="Rate response positively"
+
                             <ThumbsUp className="w-3 h-3" />
                           </button>
                           <button
                             onClick = {
   () => rateResponse(message.id,
   'negative')
+
+
+
+
+
+
 }
                             className="p-1 text-zinc-400 hover:text-red-400 transition-colors"
                             aria-label="Rate response negatively"
+
                             <ThumbsDown className="w-3 h-3" />
-                          </button>
+                          </button>;
                         </div>
                       )}
                     </div>
                   </div>
+
                   {/* Avatar */}
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+<div className: {`w-8 h-8 rounded-full flex items-center justify-center ${
                     message.sender === 'user' ? 'order-1 ml-2' : 'order-2 mr-2'
                   }`}>
-                    {message.sender === 'user' ? (
+                    {message.sender === 'user' ? (;
                       <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">
                         <User className="w-4 h-4 text-zinc-300" />
                       </div>
@@ -363,12 +488,14 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   </div>
                 </motion.div>
               ))}
+
               {/* Typing Indicator */}
               {isTyping && (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="flex justify-start"
+
                   <div className="flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg">
                     <div className="flex space-x-1">
                       <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce"></div>
@@ -377,12 +504,14 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     </div>
                     <span className="text-sm text-zinc-400">Zion AI is typing...</span>
                   </div>
-                </motion.div>
+                </motion.div>;
               )}
+
               <div ref={messagesEndRef} />
             </div>
+
             {/* Input Area */}
-            <div className="p-4 border-t border-zinc-700/50">
+            <div className="p-4 border-t border-zinc-700/50">;
               <form onSubmit={handleSubmit} className="flex items-center gap-2">
                 <div className="flex-1 relative">
                   <input
@@ -393,6 +522,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
                     disabled={isTyping}
                   />
+
                   {/* File Upload */}
                   <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
                     <input
@@ -404,6 +534,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     <Paperclip className="w-4 h-4 text-zinc-400 hover:text-zinc-300 transition-colors" />
                   </label>
                 </div>
+
                 {/* Voice Input */}
                 {settings.voiceEnabled && (
                   <button
@@ -415,20 +546,24 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                         : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
                     }`}
                     aria-label="Voice input"
+
                     {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
                   </button>
                 )}
+
                 {/* Send Button */}
                 <button
                   type="submit"
                   disabled={!inputValue.trim() || isTyping}
                   className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   aria-label="Send message"
+
                   <Send className="w-4 h-4" />
                 </button>
               </form>
+
               {/* Quick Actions */}
-              <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">
+              <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">;
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-3 h-3" />
                   <span>Powered by Zion AI</span>

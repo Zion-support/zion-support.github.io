@@ -1,28 +1,30 @@
+
 import { Route, Routes  } from 'react-router-dom.ts';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import Dashboard from "@/pages/Dashboard";
-import ClientDashboard from "@/pages/ClientDashboard";
-import TalentDashboard from "@/pages/TalentDashboard";
-import CreatorDashboard from "@/pages/CreatorDashboard";
-import Analytics from "@/pages/Analytics";
-import ProjectMilestones from "@/pages/ProjectMilestones";
-import ProjectDetails from "@/pages/ProjectDetails";
-import ProjectRoom from "@/pages/ProjectRoom";
+import { ProtectedRoute  } from '@/src/src/components/ProtectedRoute';
+import Dashboard from '@/src/src/pages/Dashboard';
+import ClientDashboard from '@/src/src/pages/ClientDashboard';
+import TalentDashboard from '@/src/src/pages/TalentDashboard';
+import CreatorDashboard from '@/src/src/pages/CreatorDashboard';
+import Analytics from '@/src/src/pages/Analytics';
+import ProjectMilestones from '@/src/src/pages/ProjectMilestones';
+import ProjectDetails from '@/src/src/pages/ProjectDetails';
+import ProjectRoom from '@/src/src/pages/ProjectRoom';
 // MessagingInbox import removed - page not found
-import Payments from "@/pages/Payments";
-import Interviews from "@/pages/Interviews";
-import Notifications from "@/pages/Notifications";
-import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
-import HiringTracker from "@/pages/HiringTracker";
-import PortfolioBuilder from "@/pages/PortfolioBuilder";
+import Payments from '@/src/src/pages/Payments';
+import Interviews from '@/src/src/pages/Interviews';
+import Notifications from '@/src/src/pages/Notifications';
+import ApplicationStatusTracker from '@/src/src/pages/ApplicationStatusTracker';
+import HiringTracker from '@/src/src/pages/HiringTracker';
+import PortfolioBuilder from '@/src/src/pages/PortfolioBuilder';
 // Referrals import removed - page not found
-import DeveloperPortal from "@/pages/DeveloperPortal";
+import DeveloperPortal from '@/src/src/pages/DeveloperPortal';
 // WalletPage import removed - page not found
-import OrdersPage from "@/pages/Orders";
-import OrderDetailPage from "@/pages/OrderDetail";
-import ContractBuilder from "@/pages/ContractBuilder";
-import Projects from "@/pages/Projects";
-const DashboardRoutes = () => {
+import OrdersPage from '@/src/src/pages/Orders';
+import OrderDetailPage from '@/src/src/pages/OrderDetail';
+import ContractBuilder from '@/src/src/pages/ContractBuilder';
+import Projects from '@/src/src/pages/Projects';
+
+const DashboardRoutes: React.FC = ($2) => {
   return (
     <Routes>
       {/* Dashboard Routes */}
@@ -48,6 +50,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <TalentDashboard />
           </ProtectedRoute>
+
       />
       <Route
         path="/creator-dashboard"
@@ -79,6 +82,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ProjectDetails />
           </ProtectedRoute>
+
       />
       <Route
         path="/project/:id/room"
@@ -86,6 +90,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ProjectRoom />
           </ProtectedRoute>
+
       />
       <Route
         path="/messages"
@@ -141,6 +146,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <HiringTracker />
           </ProtectedRoute>
+
       />
       <Route
         path="/projects"
@@ -148,6 +154,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <Projects />
           </ProtectedRoute>
+
       />
       <Route
         path="/portfolio-builder"
@@ -171,6 +178,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
+
       />
       <Route
         path="/wallet"
@@ -178,6 +186,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <div>Wallet Page</div>
           </ProtectedRoute>
+
       />
       <Route
         path="/orders"
@@ -185,6 +194,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <OrdersPage />
           </ProtectedRoute>
+
       />
       <Route
         path="/orders/:orderId"
@@ -192,6 +202,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <OrderDetailPage />
           </ProtectedRoute>
+
       />
       <Route
         path="/dashboard/api-access"
@@ -209,8 +220,9 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         }
       />
-    </Routes>
+    </Routes>;
   );
 };
+
 export default DashboardRoutes;
-}}}}}}}}}}}}}}}}}}}}}}}}
+}}}}

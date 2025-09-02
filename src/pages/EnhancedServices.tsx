@@ -1,6 +1,5 @@
-import React from 'react';
-import SEO from '@/components/SEO';
-const EnhancedServices = () => {
+import SEO from '@/src/src/components/SEO';
+const EnhancedServices: React.FC = ($2) => {
   return (
     <>
       <SEO

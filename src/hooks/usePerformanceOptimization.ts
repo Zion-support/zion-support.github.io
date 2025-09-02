@@ -1,10 +1,53 @@
-import { useEffect, useRef, useCallback, useMemo  } from 'react.ts';
+import { useEffect, useRef, useCallback, useMemo               } from 'react.ts';
+
 interface PerformanceMetrics {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
-  fps: number}
+fps: number;
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
 interface UsePerformanceOptimizationOptions {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   enableLazyLoading?: boolean;
   enableIntersectionObserver?: boolean;
   enableMemoryManagement?: boolean;
@@ -70,7 +113,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     if (!enableMemoryManagement) return;
     const checkMemoryUsage = () => {;
       if ('memory' in performance) {;
-        const memory = (performance as any).memory;
+        const memory = (performance as ).memory;
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
         // Warn if memory usage is high
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
@@ -109,11 +152,13 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
         })}
     }}, []);
   // Debounced function utility
-    return (...args: Parameters<T>)  => {
+    
+    return (...args: anyanyanyanyanyanyanyanyanyanyanyanyanyParameters<T>)               => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => func(...args), delay)}}, []);
   // Throttled function utility
-    return (...args: Parameters<T>)  => {
+    
+    return (...args: anyanyanyanyanyanyanyanyanyanyanyanyanyParameters<T>)               => {
       const now = Date.now();
       if (now - lastCall >= delay) {
         lastCall = now;
@@ -126,13 +171,13 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   const getMetrics = useCallback(() => ({ ...metricsRef.current }), []);
   // Memoized performance data
   const performanceData = useMemo(() => ({;
-    metrics: getMetrics(),;
+    metrics: anyanyanyanyanyanyanyanyanyanyanyanyanygetMetrics(),;
     isLowFPS: metricsRef.current.fps < 30,;
     isHighMemory: metricsRef.current.memoryUsage > 100,;
     isSlowRender: metricsRef.current.renderTime > 16;
   }), [getMetrics]);
   // Cleanup on unmount
-  useEffect(() => {
+  useEffect(()               => {
     return cleanup}, [cleanup]);
   return {
     lazyLoad,
@@ -147,5 +192,19 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 // Type declaration for gtag
 declare global {
   interface Window {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     gtag?: (...args[])  => void}
 }

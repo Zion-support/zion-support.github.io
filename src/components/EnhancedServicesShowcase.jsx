@@ -24,15 +24,16 @@ const EnhancedServicesShowcase = () => {
             transition: {
                 staggerChildren: 0.1,
                 delayChildren: 0.2
+            }
+        }
     };
     const itemVariants = {
-  hidden: { opacity: 0,
-  y: 20 
-},
+        hidden: { opacity: 0, y: 20 },
         visible: {
             opacity: 1,
             y: 0,
             transition: { duration: 0.5 }
+        }
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -266,6 +267,7 @@ const EnhancedServicesShowcase = () => {
           </motion.div>
         </div>
       </section>
-    </div>)};
+    </div>);
+};
+
 export default EnhancedServicesShowcase;
-}}}

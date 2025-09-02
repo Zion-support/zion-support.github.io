@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -21,15 +20,15 @@ import {
   Target,
   Globe
  } from 'lucide-react';
-const MicroSAASPage = () => {
+const MicroSAASPage: React.FC = ($2) => {
   const saasServices = [
     {
       id: 'custom-applications',
       title: 'Custom Applications',
       description: 'Tailored software solutions designed for your specific business needs',
       icon: <Code className="w-8 h-8" />,
-      features['Custom Development', 'Scalable Architecture', 'User Management', 'API Integration'],
-      useCases['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],
+      features['Custom Development', 'Scalable Architecture', 'User Management', 'API Integration'],;
+      useCases['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],;
       pricing: 'Starting from $2,500/month'
     },
     {
@@ -37,8 +36,8 @@ const MicroSAASPage = () => {
       title: 'API Development',
       description: 'Robust and scalable APIs to connect your applications and services',
       icon: <Database className="w-8 h-8" />,
-      features['RESTful APIs', 'GraphQL Services', 'Authentication', 'Rate Limiting'],
-      useCases['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],
+      features['RESTful APIs', 'GraphQL Services', 'Authentication', 'Rate Limiting'],;
+      useCases['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],;
       pricing: 'Starting from $1,800/month'
     },
     {
@@ -46,8 +45,8 @@ const MicroSAASPage = () => {
       title: 'Scalable Architecture',
       description: 'Cloud-native architectures that grow with your business',
       icon: <Globe className="w-8 h-8" />,
-      features['Microservices', 'Containerization', 'Auto-scaling', 'Load Balancing'],
-      useCases['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],
+      features['Microservices', 'Containerization', 'Auto-scaling', 'Load Balancing'],;
+      useCases['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],;
       pricing: 'Starting from $3,200/month'
     },
     {
@@ -76,6 +75,12 @@ const MicroSAASPage = () => {
   const itemVariants = {
   hidden: { opacity: 0,
   y: 20 
+
+
+
+
+
+
 },
     visible: {;
       opacity: 1,;
@@ -93,13 +98,26 @@ const MicroSAASPage = () => {
           initial = {
   { opacity: 0,
   y: 30 
+
+
+
+
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
+
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">
             <Zap className="w-10 h-10 text-white" />
           </div>
@@ -140,6 +158,7 @@ const MicroSAASPage = () => {
               key={service.id}
               variants={itemVariants}
               className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10"
+
               {/* Service Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center text-white mb-4">
@@ -156,7 +175,7 @@ const MicroSAASPage = () => {
                 {service.description}
               </p>
               {/* Features */}
-              <div className="mb-6">
+              <div className="mb-6">;
                 <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
@@ -166,7 +185,7 @@ const MicroSAASPage = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div>;
               {/* Use Cases */}
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3">Use Cases:</h4>
@@ -175,6 +194,7 @@ const MicroSAASPage = () => {
                     <span
                       key={useCaseIndex}
                       className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20"
+
                       {useCase}
                     </span>
                   ))}
@@ -182,10 +202,11 @@ const MicroSAASPage = () => {
               </div>
               {/* CTA Button */}
               <Link
-                to={`/micro-saas/${service.id}`}
+to: {`/micro-saas/${service.id}`}
                 className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+
                 Learn More
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />;
               </Link>
             </motion.div>
           ))}
@@ -194,18 +215,37 @@ const MicroSAASPage = () => {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
+
+
+
+
+
+
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
+
+
+
+
+
+
 }}
           transition = {
   { duration: 0.8,
-  delay: 0.3 
+  delay: 0.3 ;
+
+
+
+
+
+
 }}
           className="mb-16"
-          <div className="text-center mb-8">
+
+          <div className="text-center mb-8">;
             <h2 className="text-3xl font-bold text-white mb-4">
               Benefits of Micro SAAS
             </h2>
@@ -221,18 +261,37 @@ const MicroSAASPage = () => {
                 initial = {
   { opacity: 0,
   scale: 0.8 
+
+
+
+
+
+
 }}
                 animate = {
   { opacity: 1,
   scale: 1 
+
+
+
+
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
+
+
+
+
 }}
                 className="bg-zion-blue-dark/20 border border-zion-cyan/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300"
+
                 <div className="text-zion-cyan font-medium">{benefit}</div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </motion.div>
@@ -240,18 +299,37 @@ const MicroSAASPage = () => {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
+
+
+
+
+
+
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
+
+
+
+
+
+
 }}
           transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4 ;
+
+
+
+
+
+
 }}
           className="mb-16"
-          <div className="text-center mb-8">
+
+          <div className="text-center mb-8">;
             <h2 className="text-3xl font-bold text-white mb-4">
               Why Choose Our SAAS Solutions?
             </h2>
@@ -290,19 +368,38 @@ const MicroSAASPage = () => {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
+
+
+
+
+
+
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
+
+
+
+
+
+
 }}
           transition = {
   { duration: 0.8,
-  delay: 0.5 
+  delay: 0.5 ;
+
+
+
+
+
+
 }}
           className="text-center bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8"
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Build Your SAAS?
+
+          <h2 className="text-3xl font-bold text-white mb-4">;
+            Ready to Build Your SAAS?;
           </h2>
           <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
             Let our SAAS experts help you create a successful software product
@@ -312,11 +409,13 @@ const MicroSAASPage = () => {
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:scale-105"
+
               Start SAAS Project
             </Link>
             <Link
               to="/services/pricing"
               className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
+
               View SAAS Pricing
             </Link>;
           </div>;

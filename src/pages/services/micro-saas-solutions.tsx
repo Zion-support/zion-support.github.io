@@ -1,390 +1,242 @@
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { ShoppingCart, Zap, Settings, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Rocket  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
-export default function MicroSAASSolutions(...args: []):  {
+import React from 'react';
+import { 
+  Globe, 
+  Settings, 
+  Zap, 
+  Rocket, 
+  Shield, 
+  BarChart3, 
+  Users, 
+  Clock, 
+  CheckCircle, 
+  ArrowRight,
+  Star,
+  Award,
+  TrendingUp,
+  Smartphone,
+  Database,
+  Cloud,
+  Lock,
+  Headphones
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const MicroSaasSolutions: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name = "description" content="Build and scale your micro SaaS business with our comprehensive solutions. From development to deployment and growth strategies." />
-        <meta name="keywords" content="micro SaaS, software as a service, SaaS development, SaaS marketing, SaaS growth, subscription business" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-violet-500/10 to-purple-600/10"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-violet-500/10 border border-violet-500/20 rounded-full text-violet-400 text-sm font-medium mb-8">
-                <ShoppingCart className="w-4 h-4 mr-2" />
-                Micro SaaS Solutions
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Micro SaaS
-                <span className="bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent"> Solutions</span>
-              </h1>
-              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Build, launch, and scale your micro SaaS business with our comprehensive solutions.
-                From development to marketing, we help you create profitable subscription businesses.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                  Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <button className="inline-flex items-center px-8 py-4 border border-violet-500/30 text-violet-400 font-semibold rounded-lg hover:bg-violet-500/10 transition-all duration-200">
-                  <Play className="mr-2 w-5 h-5" />
-                  Watch Demo
-                </button>
-              </div>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            Micro SaaS
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              {" "}Solutions
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your business with our comprehensive Micro SaaS solutions. 
+            From concept to deployment, we deliver scalable, secure, and innovative 
+            software-as-a-service applications.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link 
+              to="/pricing" 
+              className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+            >
+              View Pricing
+            </Link>
           </div>
-        </section>
-        {/* Features Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Micro SaaS Platform
-              </h2>
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our micro SaaS platform provides everything you need to build, launch, and grow
-                your subscription business successfully.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: Rocket,
-                  title: "SaaS Development",
-                  description: "Custom SaaS application development with modern technologies and best practices."
-                },
-                {
-                  icon: ShoppingCart,
-                  title: "Subscription Management",
-                  description: "Complete subscription billing, payment processing, and customer management."
-                },
-                {
-                  icon: Users,
-                  title: "User Management",
-                  description: "User authentication, role-based access control, and team collaboration features."
-                },
-                {
-                  icon: Shield,
-                  title: "Security & Compliance",
-                  description: "Enterprise-grade security with SOC 2 compliance and data protection."
-                },
-                {
-                  icon: Zap,
-                  title: "Analytics & Insights",
-                  description: "Comprehensive analytics for user behavior, revenue tracking, and business insights."
-                },
-                {
-                  icon: Globe,
-                  title: "Multi-tenant Architecture",
-                  description: "Scalable multi-tenant architecture for growing SaaS businesses."
-                }
-              ].map((feature, index)  => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                  <p className="text-slate-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* SaaS Categories Section */}
-        <section className="py-20 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Micro SaaS Categories
-              </h2>
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Discover profitable micro SaaS niches and business opportunities across different industries.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Business Tools",
-                  description: "Productivity, project management, and business automation tools.",
-                  icon: Settings,
-                  benefits: ["Project management", "Time tracking", "Task automation"]
-                },
-                {
-                  title: "Marketing & Sales",
-                  description: "Lead generation, email marketing, and sales automation platforms.",
-                  icon: Target,
-                  benefits: ["Lead generation", "Email marketing", "Sales automation"]
-                },
-                {
-                  title: "Finance & Accounting",
-                  description: "Invoicing, expense tracking, and financial management tools.",
-                  icon: BarChart3,
-                  benefits: ["Invoicing", "Expense tracking", "Financial reporting"]
-                },
-                {
-                  title: "HR & Recruitment",
-                  description: "Employee management, hiring, and HR automation solutions.",
-                  icon: Users,
-                  benefits: ["Employee management", "Hiring automation", "HR workflows"]
-                },
-                {
-                  title: "Customer Support",
-                  description: "Helpdesk, live chat, and customer service automation.",
-                  icon: Activity,
-                  benefits: ["Helpdesk", "Live chat", "Support automation"]
-                },
-                {
-                  title: "Content & SEO",
-                  description: "Content management, SEO tools, and digital marketing platforms.",
-                  icon: Database,
-                  benefits: ["Content management", "SEO tools", "Digital marketing"]
-                }
-              ].map((category, index)  => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                    <category.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{category.title}</h3>
-                  <p className="text-slate-300 mb-4">{category.description}</p>
-                  <ul className="space-y-1">
-                    {category.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-sm text-violet-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Development Process Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                SaaS Development Process
-              </h2>
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our proven development methodology ensures successful SaaS product delivery and launch.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  step: "01",
-                  title: "Discovery & Planning",
-                  description: "Market research, user interviews, and product strategy development."
-                },
-                {
-                  step: "02",
-                  title: "Design & Prototyping",
-                  description: "User experience design, wireframes, and interactive prototypes."
-                },
-                {
-                  step: "03",
-                  title: "Development & Testing",
-                  description: "Agile development, continuous testing, and quality assurance."
-                },
-                {
-                  step: "04",
-                  title: "Launch & Growth",
-                  description: "Product launch, marketing, and continuous improvement."
-                }
-              ].map((step, index)  => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-xl">{step.step}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-slate-300">{step.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Technology Stack Section */}
-        <section className="py-20 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Modern Technology Stack
-              </h2>
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Built on cutting-edge technologies for maximum performance, scalability, and reliability.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="space-y-6">
-                  {[
-                    "React/Next.js for frontend development and user experience",
-                    "Node.js/Python for backend services and API development",
-                    "PostgreSQL/MongoDB for scalable database solutions",
-                    "AWS/Azure for cloud infrastructure and deployment",
-                    "Docker/Kubernetes for containerization and orchestration",
-                    "CI/CD pipelines for automated testing and deployment"
-                  ].map((technology, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-violet-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-300">{technology}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
-                <h3 className="text-2xl font-semibold text-white mb-4">Key Features</h3>
-                <div className="space-y-4">
-                  {[
-                    { feature: "Responsive Design", icon: Globe, color: "from-blue-500 to-cyan-500" },
-                    { feature: "API Integration", icon: Settings, color: "from-purple-500 to-pink-500" },
-                    { feature: "Real-time Updates", icon: Zap, color: "from-green-500 to-emerald-500" },
-                    { feature: "Mobile Apps", icon: Rocket, color: "from-orange-500 to-red-500" }
-                  ].map((item, index)  => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
-                        <item.icon className="w-4 h-4 text-white" />
-                      </div>
-                      <span className="text-slate-300">{item.feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Growth Strategies Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                SaaS Growth Strategies
-              </h2>
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Proven strategies to acquire customers, increase revenue, and scale your micro SaaS business.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
-              <div>
-                <h3 className="text-2xl font-semibold text-white mb-6">Customer Acquisition</h3>
-                <div className="space-y-4">
-                  {[
-                    "Content marketing and thought leadership",
-                    "SEO optimization and organic traffic generation",
-                    "Social media marketing and community building",
-                    "Referral programs and affiliate marketing",
-                    "Free trials and freemium models",
-                    "Partnerships and integrations"
-                  ].map((strategy, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-violet-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-300">{strategy}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold text-white mb-6">Revenue Optimization</h3>
-                <div className="space-y-4">
-                  {[
-                    "Pricing strategy optimization and A/B testing",
-                    "Upselling and cross-selling strategies",
-                    "Customer success and retention programs",
-                    "Churn reduction and win-back campaigns",
-                    "Revenue analytics and performance tracking",
-                    "Subscription model optimization"
-                  ].map((strategy, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-violet-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-300">{strategy}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Success Metrics Section */}
-        <section className="py-20 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Key Success Metrics
-              </h2>
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Track the right metrics to measure and improve your SaaS business performance.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  metric: "MRR",
-                  title: "Monthly Recurring Revenue",
-                  description: "Track predictable monthly revenue growth"
-                },
-                {
-                  metric: "Churn Rate",
-                  title: "Customer Churn",
-                  description: "Monitor customer retention and satisfaction"
-                },
-                {
-                  metric: "LTV",
-                  title: "Customer Lifetime Value",
-                  description: "Measure long-term customer value"
-                },
-                {
-                  metric: "CAC",
-                  title: "Customer Acquisition Cost",
-                  description: "Optimize marketing and sales efficiency"
-                }
-              ].map((metric, index)  => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-xl">{metric.metric}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{metric.title}</h3>
-                  <p className="text-slate-300">{metric.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-violet-500/10 to-purple-600/10">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Build Your Micro SaaS?
-            </h2>
-            <p className="text-xl text-slate-300 mb-8">
-              Transform your idea into a profitable subscription business with our comprehensive solutions.
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Micro SaaS Solutions?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide end-to-end Micro SaaS development with cutting-edge technology and proven methodologies.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200"
-                Start Your Project
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 border border-violet-500/30 text-violet-400 font-semibold rounded-lg hover:bg-violet-500/10 transition-all duration-200"
-              >
-                Explore All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Rocket,
+                title: "Rapid Development",
+                description: "Get your SaaS to market faster with our agile development process and pre-built components.",
+                color: "from-blue-500 to-cyan-500"
+              },
+              {
+                icon: Shield,
+                title: "Enterprise Security",
+                description: "Bank-level security with encryption, authentication, and compliance built-in from day one.",
+                color: "from-green-500 to-emerald-500"
+              },
+              {
+                icon: BarChart3,
+                title: "Analytics & Insights",
+                description: "Comprehensive analytics dashboard to track user behavior and business metrics.",
+                color: "from-purple-500 to-pink-500"
+              },
+              {
+                icon: Users,
+                title: "Multi-tenant Architecture",
+                description: "Scalable architecture that supports multiple customers with data isolation and security.",
+                color: "from-orange-500 to-red-500"
+              },
+              {
+                icon: Cloud,
+                title: "Cloud-Native",
+                description: "Built for the cloud with auto-scaling, load balancing, and high availability.",
+                color: "from-indigo-500 to-blue-500"
+              },
+              {
+                icon: Smartphone,
+                title: "Mobile-First",
+                description: "Responsive design and mobile apps to ensure your users can access your SaaS anywhere.",
+                color: "from-pink-500 to-rose-500"
+              }
+            ].map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300">
+                <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-4 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Our Micro SaaS Services</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From MVP to enterprise-scale, we provide comprehensive Micro SaaS development services.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "MVP Development",
+                description: "Launch your SaaS idea quickly with a minimum viable product that validates your concept.",
+                features: ["User Authentication", "Core Features", "Basic Analytics", "Payment Integration"],
+                price: "Starting at $15,000"
+              },
+              {
+                title: "Full-Scale SaaS",
+                description: "Complete SaaS platform with advanced features, scalability, and enterprise capabilities.",
+                features: ["Multi-tenant Architecture", "Advanced Analytics", "API Development", "Mobile Apps"],
+                price: "Starting at $50,000"
+              },
+              {
+                title: "SaaS Migration",
+                description: "Migrate your existing application to a modern SaaS architecture with zero downtime.",
+                features: ["Data Migration", "Architecture Redesign", "Performance Optimization", "Security Enhancement"],
+                price: "Starting at $25,000"
+              },
+              {
+                title: "SaaS Maintenance",
+                description: "Ongoing support, updates, and maintenance to keep your SaaS running smoothly.",
+                features: ["24/7 Monitoring", "Regular Updates", "Security Patches", "Performance Optimization"],
+                price: "Starting at $2,000/month"
+              }
+            ].map((service, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700">
+                <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="text-2xl font-bold text-purple-400 mb-4">{service.price}</div>
+                <Link 
+                  to="/contact" 
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Stack */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Technology Stack</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We use the latest technologies and frameworks to build robust, scalable Micro SaaS solutions.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: "React/Next.js", description: "Frontend Framework" },
+              { name: "Node.js", description: "Backend Runtime" },
+              { name: "PostgreSQL", description: "Database" },
+              { name: "AWS/Azure", description: "Cloud Platform" },
+              { name: "Docker", description: "Containerization" },
+              { name: "Kubernetes", description: "Orchestration" },
+              { name: "Redis", description: "Caching" },
+              { name: "Stripe", description: "Payments" }
+            ].map((tech, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700 text-center">
+                <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
+                <p className="text-gray-400">{tech.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-violet-500/10 to-purple-600/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Build Your Micro SaaS?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss your project and create a custom solution that drives your business forward.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Start Your Project
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link 
+              to="/portfolio" 
+              className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+            >
+              View Our Work
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
   );
-}}}}}}
+};
+
+export default MicroSaasSolutions;

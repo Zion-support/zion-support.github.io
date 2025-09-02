@@ -1,6 +1,20 @@
 // Emerging Technology Services 2030 - Zion Tech Group
 // Revolutionary AI, Quantum Computing, and Next-Generation Solutions
 export interface EmergingTechService2030 {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   description: string;
@@ -19,11 +33,24 @@ export interface EmergingTechService2030 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string;
-  };
+  
+
+
+
+
+
+
+
+
+
+
+
+
+};
   technicalSpecs: {
     technology: string[];
     integrations: string[];

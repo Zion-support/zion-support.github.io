@@ -1,4 +1,5 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing              } from '@/types/listings';
+
 export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
   "AI Development": {
     icon: "🤖",

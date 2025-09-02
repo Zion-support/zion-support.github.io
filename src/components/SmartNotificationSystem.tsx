@@ -168,7 +168,7 @@ export function SmartNotificationSystem({
   });
 
   // Get notification icon
-  const getNotificationIcon = (type: Notification['type']) => {
+  const getNotificationIcon: React.FC = ($2) => {
     switch (type) {
       case 'success': return CheckCircle;
       case 'error': return XCircle;
@@ -180,7 +180,7 @@ export function SmartNotificationSystem({
   };
 
   // Get priority color
-  const getPriorityColor = (priority: Notification['priority']) => {
+  const getPriorityColor: React.FC = ($2) => {
     switch (priority) {
       case 'critical': return 'text-red-600 bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800';
       case 'high': return 'text-orange-600 bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800';
@@ -191,7 +191,7 @@ export function SmartNotificationSystem({
   };
 
   // Get category icon
-  const getCategoryIcon = (category: Notification['category']) => {
+  const getCategoryIcon: React.FC = ($2) => {
     switch (category) {
       case 'user': return Eye;
       case 'system': return Zap;
@@ -532,7 +532,7 @@ export function SmartNotificationSystem({
 }
 
 // Export the addNotification function for external use
-export const addNotification = (notification: Omit<Notification, 'id' | 'timestamp' | 'read' | 'archived'>) => {
+export const addNotification: React.FC = ($2) => {
   // This will be implemented by the component instance
   console.warn('addNotification called before component initialization');
 };

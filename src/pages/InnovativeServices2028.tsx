@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Brain,
   Zap,
   Lock,
   Cloud,
@@ -27,8 +26,9 @@ import {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
-import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from "../data/innovativeServices2028";
-export default function InnovativeServices2028(...args[]):  {
+import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo              } from '../data/innovativeServices2028';
+
+export default function InnovativeServices2028(...args[]: any):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('name');
@@ -51,6 +51,7 @@ export default function InnovativeServices2028(...args[]):  {
       default:
         return 0}
   });
+
             </motion.div>;
           </div>;
         </div>;

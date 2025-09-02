@@ -53,7 +53,7 @@ export function AdvancedAnalyticsDashboard({
   const [showAdvancedMetrics, setShowAdvancedMetrics] = useState(false);
   
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const chartRefs = useRef<{ [key: string]: any }>({});
+  const chartRefs = useRef<{ [key: string]: unknown }>({});
 
   // Generate sample analytics data
   const generateAnalyticsData = useCallback(() => {
@@ -141,7 +141,7 @@ export function AdvancedAnalyticsDashboard({
   }, [isOpen, generateAnalyticsData]);
 
   // Get trend icon and color
-  const getTrendDisplay = (trend: 'up' | 'down' | 'stable', change: number) => {
+  const getTrendDisplay: React.FC = ($2) => {
     const colors = {
       up: 'text-green-500',
       down: 'text-red-500',
@@ -165,7 +165,7 @@ export function AdvancedAnalyticsDashboard({
   };
 
   // Get category icon
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon: React.FC = ($2) => {
     const icons: { [key: string]: React.ReactNode } = {
       performance: <Zap className="w-5 h-5" />,
       users: <Users className="w-5 h-5" />,

@@ -1,11 +1,14 @@
-import React, { memo } from 'react';
-import { motion } from 'framer-motion';
-interface LoaderProps {
+import React, { memo } from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+
+interface LoaderProps extends React.PropsWithChildren<{}> {
+
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
   fullScreen?: boolean;
   showLogo?: boolean;
+
 }
 export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
   size = 'md',
@@ -75,18 +78,10 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
 });
 PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
 // Skeleton loader for content
-export function SkeletonLoader({
-  className = "",
-  lines = 3,
-  height = "h-4"
-}: {
-  className?: string;
-  lines?: number;
-  height?: string;
-}) {
+export function SkeletonLoader(...args: any[]): any {
   return (
     <div className = {`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanylines }).map((_, index)               => (
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
@@ -101,7 +96,7 @@ export function SkeletonLoader({
     </div>;
   );
 // Card skeleton loader
-export function CardSkeleton({ className = "" }: { className?: string }) {
+export function CardSkeleton(...args: any[]): any {
   return (
     <div className={`bg-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 ${className}`}>
       <div className="space-y-4">
@@ -122,24 +117,16 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
     </div>;
   );
 // Grid skeleton loader
-export function GridSkeleton({
-  columns = 3,
-  rows = 2,
-  className = ""
-}: {
-  columns?: number;
-  rows?: number;
-  className?: string;
-}) {
+export function GridSkeleton(...args: any[]): any {
   return (
-    <div className = {`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>;
-      {Array.from({ length: columns * rows }).map((_, index) => (;
+    <div className = {`grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>;
+      {Array.from({ length: columns * rows }).map((_, index)               => (;
         <CardSkeleton key={index} />;
       ))};
     </div>;
   );
 // Page skeleton loader
-export function PageSkeleton({ className = "" }: { className?: string }) {
+export function PageSkeleton(...args: any[]): any {
   return (
     <div className={`space-y-8 ${className}`}>
       {/* Header skeleton */}

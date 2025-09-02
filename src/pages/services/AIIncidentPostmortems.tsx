@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion               } from 'framer-motion.ts';
 import { AlertTriangle, 
   Clock, 
   TrendingUp, 
@@ -25,8 +25,9 @@ import { AlertTriangle,
   MapPin,
   Server
 } from 'lucide-react';
-import { SEO } from "../../components/SEO";
-export default function AIIncidentPostmortems(...args[]):  {
+import { SEO              } from '../../components/SEO';
+
+export default function AIIncidentPostmortems(...args[]: any):  {
   const contactInfo = {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -223,8 +224,9 @@ export default function AIIncidentPostmortems(...args[]):  {
               Everything you need to manage incidents effectively and build a culture of continuous improvement
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -273,8 +275,9 @@ export default function AIIncidentPostmortems(...args[]):  {
               Transform your incident management process and unlock new levels of efficiency
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -320,8 +323,9 @@ export default function AIIncidentPostmortems(...args[]):  {
               Choose the plan that fits your team size and incident volume
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -399,8 +403,9 @@ export default function AIIncidentPostmortems(...args[]):  {
               Whether you're in IT, DevOps, Security, or Customer Support, our platform adapts to your needs
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)               => (
               <motion.div
                 key={index}
                 initial = {

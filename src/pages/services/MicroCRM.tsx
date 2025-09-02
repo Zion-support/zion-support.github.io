@@ -1,7 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, ArrowRight } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO } from '@/src/src/components/SEO';
 
 const MicroCRM: React.FC = () => {
   const services = [

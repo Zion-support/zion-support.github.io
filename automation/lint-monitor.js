@@ -15,9 +15,9 @@ class LintMonitor {
     this.logFile = path.join(__dirname, 'logs', 'lint-monitor.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-
     this.ensureLogDirectory()}
   ensureLogDirectory() {
+
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true })}
@@ -34,20 +34,18 @@ class LintMonitor {
         encoding: 'utf8',
         stdio: 'pipe'
       });
-
       this.errorCount = 0;
       this.lastCheck = new Date();
       this.log('✅ Lint check passed - no errors found');
       return { success: true, errors: 0 };
-    } catch (error) {
-      const errorLines = errorOutput.split('\n').filter(line => 
-        line.includes('error') || line.includes('Error')
-      );
+    } catch (error) {;
+      const errorLines = errorOutput.split('\n').filter(line =>;
+        line.includes('error') || line.includes('Error');
 
+      );
       this.errorCount = errorLines.length;
       this.lastCheck = new Date();
       this.log(`❌ Lint check failed - ${this.errorCount} errors found`);
-      
       return { success: false, errors: this.errorCount, output: errorOutput }}
   }
   async autoFix() {
@@ -64,18 +62,15 @@ class LintMonitor {
   }
   startContinuousMonitoring() {
     this.log('👀 Starting continuous lint monitoring...');
-
     // Check every 30 seconds
     const checkInterval = setInterval(async () => {
       if (!this.isRunning) {
         clearInterval(checkInterval);
         return}
       const status = await this.checkLintStatus();
-
       if (!status.success && status.errors > 0) {
         this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`);
         const fixed = await this.autoFix();
-
         if (fixed) {
           // Re-check after fix
           setTimeout(async () => {
@@ -86,7 +81,6 @@ class LintMonitor {
     this.checkInterval = checkInterval}
   startFileWatcher() {
     this.log('📁 Starting file watcher...');
-
     const watcher = chokidar.watch([
       'pages/**/*.{js,jsx,ts,tsx}',
       'components/**/*.{js,jsx,ts,tsx}',
@@ -106,7 +100,6 @@ class LintMonitor {
     this.log('✅ File watcher started')}
   async handleFileChange(filePath) {
     this.log(`🔍 Checking file: ${filePath}`);
-
     try {
       // Check if the specific file has lint issues
       const result = execSync(`npx eslint "${filePath}"`, {
@@ -115,7 +108,6 @@ class LintMonitor {
       });
       this.log(`✅ File ${filePath} passed lint check`)} catch (error) {
       this.log(`❌ Lint issues found in ${filePath}`);
-
       // Try to auto-fix the specific file
       try {
         execSync(`npx eslint "${filePath}" --fix`, {
@@ -141,15 +133,12 @@ class LintMonitor {
     this.log('✅ Lint Monitor started successfully')}
   stop() {
     this.isRunning = false;
-
     if (this.checkInterval) {
       clearInterval(this.checkInterval);
       this.checkInterval = null}
-    
     if (this.watcher) {
       this.watcher.close();
       this.watcher = null}
-    
     this.log('🛑 Lint Monitor stopped')}
   status() {
     const status = {
@@ -157,19 +146,10 @@ class LintMonitor {
       errorCount: this.errorCount,
       lastCheck: this.lastCheck,
   uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0
-    
-
-
-
-
-
-
 };
-    
     this.log(`📊 Status: ${status.running ? 'Running' : 'Stopped'}`);
     this.log(`📊 Error Count: ${status.errorCount}`);
     this.log(`📊 Last Check: ${status.lastCheck?.toISOString() || 'Never'}`);
-    
     return status}
   getStats() {
     const stats = {
@@ -177,17 +157,9 @@ class LintMonitor {
       totalErrors: 0,
       autoFixes: 0,
   filesWatched: 0
-    
-
-
-
-
-
-
 };
     try {
       const lines = logContent.split('\n');
-
       stats.totalChecks = lines.filter(line => line.includes('Checking lint status')).length;
       stats.totalErrors = lines.filter(line => line.includes('errors found')).length;
       stats.autoFixes = lines.filter(line => line.includes('Auto-fix completed')).length;

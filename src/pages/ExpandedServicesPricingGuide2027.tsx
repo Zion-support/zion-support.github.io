@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Search,
   Filter,
   Grid3X3,
   List,
@@ -60,11 +59,11 @@ import {
   Info,
   AlertTriangle,
   Zap
-import { SEO } from '@/components/SEO';
-import {
-  ALL_EXPANDED_SERVICES_PRICING,
+import { SEO              } from '@/components/SEO';
+import { ALL_EXPANDED_SERVICES_PRICING,
   type ExpandedServicePricing
-} from '@/data/expandedServicesPricing2027';
+             } from '@/data/expandedServicesPricing2027';
+
       pricing = pricing.filter(p => p.category === selectedCategory)}
     if (searchQuery) {
       pricing = pricing.filter(p =>
@@ -73,7 +72,8 @@ import {
         p.subcategory.toLowerCase().includes(searchQuery.toLowerCase());
       )};
     setFilteredPricing(pricing)}, [selectedCategory, searchQuery]);
-  const getCategoryIcon = (category: string)  => {
+
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     switch (category) {
       case 'Cybersecurity':;
       pricing = pricing.filter(p => ;
@@ -83,7 +83,8 @@ import {
       );
     setFilteredPricing(pricing);
   }, [selectedCategory, searchQuery]);
-  const getCategoryIcon = (category: string) => {;
+
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (category) {;
       case 'Cybersecurity':;
         return Shield;
@@ -100,10 +101,13 @@ import {
       default:
         return Rocket}
   };
+
         return 'from-gray-500 to-slate-600'}
   };
+
         return 'bg-gray-100 text-gray-800'}
   };
+
               </a>;
             </div>;
           </div>;
@@ -222,9 +226,9 @@ import {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark: border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
-                {categories.map((category)  => (
+                {categories.map((category)               => (
                   <option key={category} value={category}>
                     {category}
                   </option>
@@ -241,8 +245,8 @@ import {
         </div>
         {/* Pricing Grid */}
         {filteredPricing.length > 0 ? (
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {filteredPricing.map((pricing)  => renderPricingCard(pricing))}
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {filteredPricing.map((pricing)               => renderPricingCard(pricing))}
           </div>
         ) : (
           <div className="text-center py-16">

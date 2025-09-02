@@ -10,6 +10,7 @@ function cartReducer(state, action) {
     case 'ADD_ITEM': {
       const existing = state.items.find(i => i.id === action.payload.id);
       let items;
+      
       if (existing) {
         items = state.items.map(i => 
           i.id === action.payload.id
@@ -19,19 +20,21 @@ function cartReducer(state, action) {
       } else {
         items = [...state.items, action.payload];
       }
+      
+      return { items };
+    }
+    
+    case 'UPDATE_ITEM': {
+      const items = state.items.map(i => 
+        i.id === action.payload.id
+          ? { ...i, ...action.payload.updates }
+          : i
+      );
       return { items };
     }
     
     case 'REMOVE_ITEM':
       return { items: state.items.filter(i => i.id !== action.payload) };
-    
-    case 'UPDATE_QUANTITY': {
-      const { id, quantity } = action.payload;
-      const items = state.items.map(i => 
-        i.id === id ? { ...i, quantity } : i
-      );
-      return { items };
-    }
     
     case 'CLEAR_CART':
       return { items: [] };
@@ -101,20 +104,21 @@ export function CartProvider({ children }) {
     dispatch({ type: 'ADD_ITEM', payload: item });
   };
 
+  const updateItem = (id, updates) => {
+    dispatch({ type: 'UPDATE_ITEM', payload: { id, updates } });
+  };
+
   const removeItem = (id) => {
     dispatch({ type: 'REMOVE_ITEM', payload: id });
   };
 
-  const updateQuantity = (id, quantity) => {
-    if (quantity <= 0) {
-      removeItem(id);
-    } else {
-      dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } });
-    }
-  };
-
   const clearCart = () => {
     dispatch({ type: 'CLEAR_CART' });
+  };
+
+  const getItemQuantity = (id) => {
+    const item = state.items.find(i => i.id === id);
+    return item ? item.quantity : 0;
   };
 
   const getTotalItems = () => {
@@ -128,12 +132,12 @@ export function CartProvider({ children }) {
   const value = {
     items: state.items,
     addItem,
+    updateItem,
     removeItem,
-    updateQuantity,
     clearCart,
+    getItemQuantity,
     getTotalItems,
-    getTotalPrice,
-    dispatch
+    getTotalPrice
   };
 
   return (
@@ -142,3 +146,6 @@ export function CartProvider({ children }) {
     </CartContext.Provider>
   );
 }
+
+export default CartContext;
+

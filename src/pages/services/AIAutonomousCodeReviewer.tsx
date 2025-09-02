@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Code, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Code, 
   CheckCircle, 
   Shield, 
   Zap, 
@@ -41,7 +40,8 @@ import {
   Github,
   Gitlab,
   Bitbucket
-} from 'lucide-react';
+             } from 'lucide-react.ts';
+
 const AIAutonomousCodeReviewer = () => {
   const features = [
     {
@@ -213,6 +213,7 @@ const AIAutonomousCodeReviewer = () => {
           </motion.div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -230,8 +231,9 @@ const AIAutonomousCodeReviewer = () => {
               and quality improvement recommendations.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -266,8 +268,9 @@ const AIAutonomousCodeReviewer = () => {
               solutions for modern development teams.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -337,6 +340,7 @@ const AIAutonomousCodeReviewer = () => {
           </div>
         </div>
       </section>
+
       {/* Pricing Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -354,8 +358,9 @@ const AIAutonomousCodeReviewer = () => {
               All plans include a 14-day free trial.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -419,8 +424,9 @@ const AIAutonomousCodeReviewer = () => {
               analysis and recommendations for your specific development needs.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

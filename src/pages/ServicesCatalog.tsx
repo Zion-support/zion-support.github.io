@@ -1,5 +1,6 @@
 import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
+import { SEO               } from '@/components/SEO';
+
 type Service = {;
   name: string;
   path: string;
@@ -38,7 +39,9 @@ const services: Service[] = [
   { name: 'SOC2/ISO 27001 Readiness', path: '/services/soc2-iso-readiness', summary: 'Policies, controls, evidence automation, and gap closure.', price: '$8k–$45k project', category: 'IT Services' },
   { name: 'FinOps Advisory Sprint', path: '/services/finops-advisory-sprint', summary: '90-day cost optimization with KPIs and automation.', price: '$9k–$35k fixed', category: 'IT Services' }
 ];
+
   return acc}, {});
+
           <p className="text-slate-300">Mobile: <a className="underline" href="tel:+13024640950">+1 302 464 0950</a> • Email: <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;
           <p className="text-slate-400 mt-1">364 E Main St STE 1008, Middletown DE 19709</p>;
         </div>;

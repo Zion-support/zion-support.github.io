@@ -1,7 +1,8 @@
 import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { Helmet               } from 'react-helmet-async.ts';
+import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail               } from 'lucide-react.ts';
+import { Link               } from 'react-router-dom.ts';
+
 export default function AIEnterpriseOrchestrator(...args: []):  {
   return (
     <>
@@ -55,7 +56,8 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 making your enterprise more efficient, responsive, and intelligent.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -111,7 +113,8 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 transform your enterprise operations.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -178,11 +181,11 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">Key Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: "40%", label: "Cost Reduction" },
+                    { metric: anyanyanyanyanyanyanyanyanyanyanyanyany"40%", label: "Cost Reduction" },
                     { metric: "60%", label: "Efficiency Improvement" },
                     { metric: "24/7", label: "Operation Availability" },
                     { metric: "99.9%", label: "Uptime Reliability" }
-                  ].map((item, index)  => (
+                  ].map((item, index)               => (
                     <div key={index} className="flex justify-between items-center">
                       <span className="text-slate-300">{item.label}</span>
                       <span className="text-2xl font-bold text-cyan-400">{item.metric}</span>

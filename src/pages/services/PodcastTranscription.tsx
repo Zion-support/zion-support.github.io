@@ -1,5 +1,6 @@
 import React from 'react';
-import SEO from '@/components/SEO';
+import SEO from '@/src/src/components/SEO';
+
 function PodcastTranscription() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
@@ -39,7 +40,10 @@ function PodcastTranscription() {
       </section>;
     </div>;
   );
+
 export default PodcastTranscription;
+
+
 export default PodcastTranscription;
 export default PodcastTranscription;
 export default PodcastTranscription;

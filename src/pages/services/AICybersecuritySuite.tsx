@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { SEO  } from "../../components/SEO";
-import { motion  } from 'framer-motion.ts';
+import { SEO               } from '../../components/SEO';
+import { motion               } from 'framer-motion.ts';
 import { Shield, 
   Brain, 
   Eye, 
@@ -24,7 +24,8 @@ import { Shield,
   Monitor,
   Activity
  } from 'lucide-react';
-export default function AICybersecuritySuite(...args[]):  {
+
+export default function AICybersecuritySuite(...args[]: any):  {
   const features = [
     {
       icon: Brain,
@@ -347,8 +348,9 @@ export default function AICybersecuritySuite(...args[]):  {
               that protect your business around the clock.
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {securityMetrics.map((metric, index) => (
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {securityMetrics.map((metric, index)              => (
               <motion.div
                 key={index}
                 initial = {
@@ -396,8 +398,9 @@ export default function AICybersecuritySuite(...args[]):  {
               Our cybersecurity suite combines cutting-edge AI technology with industry-leading security practices to deliver unmatched protection
             </p>
           </motion.div>
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -445,8 +448,9 @@ export default function AICybersecuritySuite(...args[]):  {
               Choose the security package that fits your business needs and budget
             </p>
           </motion.div>
-          <div className="grid md: grid-cols-2 gap-8">
-            {services.map((service, index)  => (
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -504,8 +508,9 @@ export default function AICybersecuritySuite(...args[]):  {
               Comprehensive security coverage across all aspects of your digital infrastructure
             </p>
           </motion.div>
-          <div className="grid md: grid-cols-2 gap-8">
-            {securityModules.map((module, index)  => (
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {securityModules.map((module, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -559,8 +564,9 @@ export default function AICybersecuritySuite(...args[]):  {
               Experience the advantages of intelligent cybersecurity that adapts to your business needs
             </p>
           </motion.div>
-          <div className="grid md: grid-cols-2 gap-8">
-            {benefits.map((benefit, index)  => (
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {benefits.map((benefit, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -609,8 +615,9 @@ export default function AICybersecuritySuite(...args[]):  {
               Built on cutting-edge AI and cybersecurity technologies for maximum protection
             </p>
           </motion.div>
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index)  => (
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {technologies.map((tech, index)               => (
               <motion.div
                 key={index}
                 initial = {

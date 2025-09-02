@@ -1,14 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Globe,
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Globe,
   MapPin,
   Users,
   Clock,
   Star,
   Award,
   CheckCircle
-} from 'lucide-react';
+              } from 'lucide-react.ts';
+
       established: '2022';
     };
   ];
@@ -48,7 +48,8 @@ const globalStats = [;
   { label: "Languages Supported", value: "15+", icon: "🗣️" },;
   { label: "24/7 Support", value: "Global", icon: "⏰" };
 ];
-export function GlobalPresenceSection() {
+
+export function GlobalPresenceSection(...args: any[]): any {
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -73,6 +74,7 @@ export function GlobalPresenceSection() {
             Our distributed team ensures 24/7 support and cultural understanding.
           </p>
         </motion.div>
+
         {/* Global Statistics */}
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -86,11 +88,11 @@ export function GlobalPresenceSection() {
 }}
           viewport={{ once: true }}
           transition = {
-  { duration: 0.6,
+  { duration: anyanyanyanyanyanyanyanyanyanyanyanyanyany0.6,
   delay: 0.2 
 }}
         >;
-          {globalStats.map((stat, index)  => {;
+          {globalStats.map((stat, index)                => {;
             const IconComponent = stat.icon;
             return (
               <div key = {stat.label} className="text-center">
@@ -106,6 +108,7 @@ export function GlobalPresenceSection() {
               </div>
             )})}
         </motion.div>
+
         {/* Global Offices */}
         <motion.div 
           className="mb-16"
@@ -126,8 +129,9 @@ export function GlobalPresenceSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Strategic Global Locations
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {globalOffices.map((office, index) => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {globalOffices.map((office, index)               => (
               <motion.div
                 key={office.city}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"

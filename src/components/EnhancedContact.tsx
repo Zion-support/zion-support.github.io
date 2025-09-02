@@ -1,28 +1,77 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  CheckCircle,
-  AlertCircle,
-  CheckCircle,
-  Clock,
   MessageSquare,
   Building,
   Globe
  } from 'lucide-react';
 interface ContactFormData {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   name: string;
   email: string;
   phone: string;
   comp: string;
   service: string;
-  message: string}
+message: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
 interface ContactFormErrors {
-  [key: string]: string}
-export function EnhancedContact(...args[]):  {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[key: string]: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+export function EnhancedContact(...args[]: any):  {
   const [formData, setFormData] = useState<any>({
     name: '',
     email: '',
@@ -57,6 +106,7 @@ export function EnhancedContact(...args[]):  {
 ;
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0};
+
       // // // // // // // console.error('Error submitting form:', error);
     } finally {
       setIsSubmitting(false);
@@ -384,10 +434,10 @@ export function EnhancedContact(...args[]):  {
                     Comp </label>
                   <input
                     type="text"
-                    id="company"
-                    value={formData.company}
+                    id="comp"
+                    value={formData.comp}
                     onChange = {
-  (e) => handleInputChange('company',
+  (e) => handleInputChange('comp',
   e.target.value)
 }
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
@@ -407,9 +457,9 @@ export function EnhancedContact(...args[]):  {
   (e) => handleInputChange('service',
   e.target.value)
 }
-                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
+                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
                 >
-                  {services.map(service  => (
+                  {services.map(service                => (
                     <option key={service.value} value={service.value}>
                       {service.label}
                     </option>

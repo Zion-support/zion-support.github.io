@@ -1,28 +1,29 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  ChevronDown,
+
+import React, { useState, useRef, useEffect } from 'react.ts';
+import { Link, useLocation              } from 'react-router-dom.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { ChevronDown,
+
   Menu,
   X,
-  Home,
-  Settings,
-  Users,
-  Building,
-  Globe,
-  Zap,
+  ChevronDown,
   Brain,
   Shield,
   Cloud,
   Code,
   BarChart3
- } from 'lucide-react';
+              } from 'lucide-react.ts';
+
 interface NavigationLink {
-  key: string;
+
+  key: anyanyanyanyanyanyanyanyanyanyanyanyanystring;
   href: string;
   name: string;
-  matches: (path: string)  => boolean;
-  children?: NavigationLink[]}
+  matches: anyanyanyanyanyanyanyanyanyanyanyanyany(path: string)               => boolean;
+children?: NavigationLink[];
+
+}
+
         setIsCompOpen(false);
         setActiveDropdown(null)}
     };
@@ -30,113 +31,79 @@ interface NavigationLink {
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
   const baseLinks: NavigationLink[] = [
     {
-      key: 'home',
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'home',
       href: '/',
       name: 'Home',
-      matches: (path: string) => path = == '/'
+      matches: anyanyanyanyanyanyanyanyanyanyanyanyany(path: string)              => path = == '/'
     },
     {
-      key: 'services',
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'services',
       href: '/services',
       name: 'Services',
-      matches: (path: string)  => path.startsWith('/services'),
-      children[
+      matches: (path: string) => path.startsWith('/services'),
+      children: [
         {
-          key: 'ai-services',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'ai-services',
           href: '/services/ai',
           name: 'AI & Analytics',
-          matches: (path: string)  => path.startsWith('/services/ai')
+          matches: (path: string) => path.startsWith('/services/ai')
         },
         {
-          key: 'quantum',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'quantum',
           href: '/services/quantum',
           name: 'Quantum Computing',
-          matches: (path: string)  => path.startsWith('/services/quantum')
+          matches: (path: string) => path.startsWith('/services/quantum')
         },
         {
-          key: 'blockchain',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'blockchain',
           href: '/services/blockchain',
           name: 'Blockchain',
-          matches: (path: string)  => path.startsWith('/services/blockchain')
+          matches: (path: string) => path.startsWith('/services/blockchain')
         },
         {
-          key: 'iot',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'iot',
           href: '/services/iot',
           name: 'IoT & Edge',
-          matches: (path: string)  => path.startsWith('/services/iot')
+          matches: (path: string) => path.startsWith('/services/iot')
         },
         {
-          key: 'cybersecurity',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'cybersecurity',
           href: '/services/cybersecurity',
           name: 'Cybersecurity',
-          matches: (path: string)  => path.startsWith('/services/cybersecurity')
-        },
-        {
-          key: 'healthcare',
-          href: '/services/healthcare',
-          name: 'Healthcare',
-          matches: (path: string)  => path.startsWith('/services/healthcare')
-        },
-        {
-          key: 'finance',
-          href: '/services/finance',
-          name: 'Finance',
-          matches: (path: string)  => path.startsWith('/services/finance')
-        },
-        {
-          key: 'manufacturing',
-          href: '/services/manufacturing',
-          name: 'Manufacturing',
-          matches: (path: string)  => path.startsWith('/services/manufacturing')
-        },
-        {
-          key: 'sustainability',
-          href: '/services/sustainability',
-          name: 'Sustainability',
-          matches: (path: string)  => path.startsWith('/services/sustainability')
+          matches: (path: string) => path.startsWith('/services/cybersecurity')
         }
       ]
     },
     {
-      key: 'ai-services',
-      href: '/ai-services',
-      name: 'AI Services',
-      matches: (path: string)  => path.startsWith('/ai-services')
+      key: 'solutions',
+      href: '/solutions',
+      name: 'Solutions',
+      matches: (path: string) => path.startsWith('/solutions')
     },
     {
-      key: 'it-services',
-      href: '/it-services',
-      name: 'IT Services',
-      matches: (path: string)  => path.startsWith('/it-services')
+      key: 'pricing',
+      href: '/pricing',
+      name: 'Pricing',
+      matches: (path: string) => path.startsWith('/pricing')
     },
     {
-      key: 'micro-saas',
-      href: '/micro-saas',
-      name: 'Micro SAAS',
-      matches: (path: string)  => path.startsWith('/micro-saas')
-    },
-    {
-      key: 'marketplace',
-      href: '/marketplace',
-      name: 'Marketplace',
-      matches: (path: string)  => path.startsWith('/marketplace')
-    },
-    {
-      key: 'about',
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'about',
       href: '/about',
       name: 'About',
-      matches: (path: string)  => path.startsWith('/about')
+      matches: (path: string) => path.startsWith('/about')
     },
     {
-      matches: (path: string)  => path.startsWith('/contact')
+      matches: anyanyanyanyanyanyanyanyanyanyanyanyany(path: string)               => path.startsWith('/contact')
     };
-      key: 'contact',;
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'contact',;
       href: '/contact',;
       name: 'Contact',;
-      matches: (path: string) => path.startsWith('/contact');
+      matches: (path: string)              => path.startsWith('/contact');
     };
   ];
-  const isActive = (link: NavigationLink)  => link.matches(location.pathname);
+
+  const isActive = (link: anyanyanyanyanyanyanyanyanyanyanyanyanyNavigationLink)               => link.matches(location.pathname);
+
               </div>;
             </motion.div>;
           )};
@@ -147,8 +114,8 @@ interface NavigationLink {
   return (
     <nav className = {`${className}`}>
       {/* Desktop Navigation */}
-      <div className="hidden lg: flex items-center space-x-1">
-        {baseLinks.map((link)  => (
+      <div className="hidden lg: anyanyanyanyanyanyanyanyanyanyanyanyanyflex items-center space-x-1">
+        {baseLinks.map((link)               => (
           <div key={link.key}>
             {link.children ? (
               renderDropdown(
@@ -168,7 +135,81 @@ interface NavigationLink {
               </Link>
             )}
           </div>
-        ))}
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {baseLinks.map((link) => (
+              <div key={link.key} className="relative">
+                {link.children ? (
+                  <div className="relative">
+                    <button
+                      className={`flex items-center space-x-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                        isActive(link)
+                          ? 'text-zion-cyan bg-zion-cyan/10'
+                          : 'text-zion-slate-light hover:text-white hover:bg-white/10'
+                      }`}
+                      onMouseEnter={() => setActiveDropdown(link.key)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                      <span>{link.name}</span>
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
+
+                    {/* Dropdown Menu */}
+                    <AnimatePresence>
+                      {activeDropdown === link.key && (
+                        <motion.div
+                          className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-white/10 rounded-lg shadow-xl z-50"
+                          initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                          transition={{ duration: 0.2 }}
+                          onMouseEnter={() => setActiveDropdown(link.key)}
+                          onMouseLeave={() => setActiveDropdown(null)}
+                        >
+                          <div className="py-2">
+                            {link.children.map((child) => (
+                              <Link
+                                key={child.key}
+                                to={child.href}
+                                className={`block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-white/10 transition-colors ${
+                                  isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''
+                                }`}
+                              >
+                                {child.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ) : (
+                  <Link
+                    to={link.href}
+                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                      isActive(link)
+                        ? 'text-zion-cyan bg-zion-cyan/10'
+                        : 'text-zion-slate-light hover:text-white hover:bg-white/10'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
       </div>
       {/* Mobile Menu Button */}
       <button

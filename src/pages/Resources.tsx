@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { Link              } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
 import {
   BookOpen,
   FileText,
@@ -305,8 +306,8 @@ const Resources: React.FC = (): JSX.Element => {;
           <h2 className="text-3xl font-bold font-rajdhani text-cyan-400 text-center mb-8 uppercase tracking-wider">
             Featured Resources
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredResources.map((resource, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredResources.map((resource, index)              => (
               <motion.div
                 key={resource.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -341,8 +342,8 @@ const Resources: React.FC = (): JSX.Element => {;
           </div>
         </motion.div>
         {/* Resource Categories */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {resourceCategories.map((category, categoryIndex) => (
+        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+          {resourceCategories.map((category, categoryIndex)              => (
             <motion.div
               initial = {
   { opacity: 0,
@@ -358,8 +359,9 @@ const Resources: React.FC = (): JSX.Element => {;
               <h2 className="text-3xl font-bold text-white mb-4">Featured Resources</h2>
               <p className="text-zion-slate-light">Our most popular and valuable resources</p>
             </motion.div>
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">;
-              {featuredResources.map((resource, index)  => {;
+
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
+              {featuredResources.map((resource, index)               => {;
                 const ResourceIcon = getResourceIcon(resource.type);
                 return (
                   <motion.article
@@ -455,8 +457,9 @@ const Resources: React.FC = (): JSX.Element => {;
               Discover our most popular and valuable resources to accelerate your success
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {resourceCategories.filter(cat => cat.featured).map((category, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {resourceCategories.filter(cat              => cat.featured).map((category, index) => (
               <motion.div
                 key={category.id}
                 initial = {
@@ -547,8 +550,9 @@ const Resources: React.FC = (): JSX.Element => {;
               Never miss valuable knowledge from Zion Tech Group.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {resourceCategories.map((category, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {resourceCategories.map((category, index)              => (
               <motion.div
                 key={category.id}
                 id={category.id}
@@ -620,8 +624,9 @@ const Resources: React.FC = (): JSX.Element => {;
               Specialized tools and platforms to support your development journey
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {additionalResources.map((resource, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {additionalResources.map((resource, index)              => (
               <motion.div
                 key={resource.id}
                 id={resource.id}

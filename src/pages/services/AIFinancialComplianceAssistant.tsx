@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion               } from 'framer-motion.ts';
 import { Shield, 
   FileText, 
   TrendingUp, 
@@ -32,8 +32,9 @@ import { Shield,
   Gauge,
   PieChart
 } from 'lucide-react';
-import { SEO } from "../../components/SEO";
-export default function AIFinancialComplianceAssistant(...args[]):  {
+import { SEO              } from '../../components/SEO';
+
+export default function AIFinancialComplianceAssistant(...args[]: any):  {
   const contactInfo = {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -267,8 +268,9 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
               Everything you need to stay compliant with evolving financial regulations
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -317,8 +319,9 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
               Comprehensive coverage of all major financial compliance requirements
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map((framework, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {complianceFrameworks.map((framework, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -367,8 +370,9 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
               Transform your compliance process and unlock new levels of efficiency and accuracy
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -414,8 +418,9 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
               From startups to enterprise institutions, our platform scales with your needs
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -464,8 +469,9 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
               Choose the plan that fits your organization size and compliance needs
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)               => (
               <motion.div
                 key={index}
                 initial = {

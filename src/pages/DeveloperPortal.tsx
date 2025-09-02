@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react.ts';
 import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import { motion              } from 'framer-motion.ts';
 import {
   Code,
   BookOpen,
@@ -32,7 +32,8 @@ import {
   Target,
   Award,
   Lightbulb
-} from 'lucide-react';
+             } from 'lucide-react.ts';
+
 const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const apiFeatures = [
@@ -178,8 +179,9 @@ const data = await response.json();
               Powerful tools to accelerate your development workflow
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {quickStartSteps.map((step, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {quickStartSteps.map((step, index)               => (
               <motion.div
                 key={tool.title}
                 initial = {
@@ -243,8 +245,9 @@ const data = await response.json();
               Comprehensive guides and tutorials for all skill levels
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {apiFeatures.map((feature, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {apiFeatures.map((feature, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -283,8 +286,9 @@ const data = await response.json();
               Get started quickly with these ready-to-use code examples in your preferred language.
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {codeExamples.map((example, index) => (
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {codeExamples.map((example, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -322,8 +326,9 @@ const data = await response.json();
               Comprehensive documentation, tools, and community resources to help you succeed.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {resources.map((resource, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {resources.map((resource, index)              => (
               <motion.div
                 key={resource.title}
                 initial = {
@@ -355,6 +360,7 @@ const data = await response.json();
                     <p className="text-gray-300">{resource.description}</p>
                   </div>
                 </div>
+
                 <h3 className="text-lg font-bold text-white mb-3 text-center">{resource.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4 text-center leading-relaxed">{resource.description}</p>
                 <div className="flex items-center justify-between">

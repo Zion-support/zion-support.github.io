@@ -1,8 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle, BarChart3, TrendingUp, Target, Zap, Shield, Brain, Database, Globe, Smartphone, Users, PieChart } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-export default function AIDataAnalytics() {
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { CheckCircle, BarChart3, TrendingUp, Target, Zap, Shield, Brain, Database, Globe, Smartphone, Users, PieChart              } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
+
+export default function AIDataAnalytics(...args: any[]): any {
   const features = [
     {
       title: "Predictive Analytics Engine",
@@ -214,8 +215,9 @@ export default function AIDataAnalytics() {
               Our AI engine processes massive amounts of data to uncover hidden patterns and predict future outcomes
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
@@ -235,6 +237,7 @@ export default function AIDataAnalytics() {
           </div>
         </div>
       </section>
+
       {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -252,8 +255,9 @@ export default function AIDataAnalytics() {
               From customer insights to financial forecasting, our AI analytics cover every aspect of your business
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -289,8 +293,9 @@ export default function AIDataAnalytics() {
               Join thousands of businesses who have transformed their decision-making with AI analytics
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {benefits.map((benefit, index)              => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -327,8 +332,9 @@ export default function AIDataAnalytics() {
               Connect with your existing tools and data sources without disruption
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {integrations.map((integration, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {integrations.map((integration, index)              => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -364,8 +370,9 @@ export default function AIDataAnalytics() {
               Choose the plan that fits your data analytics needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)              => (
               <motion.div
                 key={index}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
@@ -384,6 +391,7 @@ export default function AIDataAnalytics() {
                     </span>
                   </div>
                 )}
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">

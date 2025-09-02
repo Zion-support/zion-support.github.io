@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState              } from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
 import { Brain, 
   Cloud, 
   Shield, 
@@ -52,13 +52,15 @@ import { Brain,
 import { revolutionaryMicroSaasServices2028, 
   revolutionaryITInfrastructureServices2028, 
   revolutionaryAIServices2028 
- } from '@/data/innovativeMicroSaasServices2028';
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
-export default function ComprehensiveServicesLanding2028(...args[]):  {
+              } from '@/data/innovativeMicroSaasServices2028';
+import { SEO               } from '@/components/SEO';
+import { Button               } from '@/components/ui/button';
+import { Badge               } from '@/components/ui/badge';
+
+export default function ComprehensiveServicesLanding2028(...args[]: any):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [selectedService, setSelectedService] = useState(null);
+
     };
       company: "BioTech Innovations",;
       content: "Their quantum AI drug discovery platform has accelerated our research by 10x. We're now able to analyze molecular interactions that were previously impossible to model.",;
@@ -72,9 +74,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
     { number: "99.9%", label: "Client Satisfaction", icon: Star },;
     { number: "24/7", label: "Support Available", icon: Clock };
   ];
+
       default: return Rocket}
   };
-  const getCategoryColor = (category: string)  => {
+
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     const colors = [
       'from-blue-600 to-cyan-600',
       'from-purple-600 to-pink-600',;
@@ -170,8 +174,8 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       {/* Stats Section */}
       <section className="py-16 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
-            {stats.map((stat, index)  => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {stats.map((stat, index)               => (
               <motion.div
                 key={stat.label}
                 initial = {
@@ -216,8 +220,9 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               Discover our revolutionary solutions designed to transform your business operations and drive growth
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {allServices.slice(0, 6).map((service, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {allServices.slice(0, 6).map((service, index)               => (
               <motion.div
                 key={service.id}
                 initial = {

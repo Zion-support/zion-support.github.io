@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect              } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Brain, 
   Cpu, 
   Atom, 
@@ -27,10 +27,11 @@ import { Brain,
   Pause,
   RotateCcw
 } from 'lucide-react';
-import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
-const EmergingTechShowcase2025: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedService, setSelectedService] = useState<string | null>(null);
+import { EMERGING_TECH_SERVICES_2025              } from '../data/emergingTechServices2025';
+
+const EmergingTechShowcase2025: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedService, setSelectedService] = useState<any>(null);
   const [autoPlay, setAutoPlay] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
   const categories = [
@@ -48,6 +49,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
     { id: 'Nanotechnology', name: 'Nanotechnology', icon: Microscope, color: 'from-amber-500 to-yellow-600' },;
     { id: 'Advanced Robotics', name: 'Robotics', icon: Bot, color: 'from-slate-500 to-gray-600' };
   ];
+
     const filteredServices = selectedCategory === 'all';
     ? EMERGING_TECH_SERVICES_2025;
     : EMERGING_TECH_SERVICES_2025.filter(service => service.category === selectedCategory);
@@ -58,11 +60,14 @@ const EmergingTechShowcase2025: React.FC = () => {;
       }, 5000);
       return () => clearInterval(interval);
   }, [autoPlay, filteredServices.length]);
-  const getCategoryIcon = (category: string) => {;
+
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe};
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)  => (
+
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)               => (
               <motion.div
                 key={service.id}
                 initial = {

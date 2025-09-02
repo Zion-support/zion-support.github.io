@@ -1,8 +1,23 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket } from 'lucide-react';
-import { SEO } from "../components/SEO";
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket              } from 'lucide-react.ts';
+import { SEO              } from '../components/SEO';
+
 interface DemoFormData {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   firstName: string;
   lastName: string;
   email: string;
@@ -12,7 +27,21 @@ interface DemoFormData {
   preferredTime: string;
   attendees: string;
   services: string[];
-  message: string}
+message: string;
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
 const ScheduleDemo: React.FC = (): JSX.Element => {
   const [formData, setFormData] = useState<any>({
     firstName: '',
@@ -42,6 +71,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     { id: 'cloud-devops', name: 'Cloud DevOps', icon: Cloud, description: 'DevOps & Infrastructure' },;
     { id: 'micro-saas', name: 'Micro SaaS Products', icon: Star, description: 'AI automations with transparent pricing' };
   ];
+
       // // // // // // // console.error('Error submitting form:', error);
     } finally {
       setIsSubmitting(false);
@@ -240,7 +270,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                       <input
                         type="text"
                         required
-                        value={formData.company}
+                        value={formData.comp}
                         onChange = {
   (e) => setFormData(prev => ({ ...prev,
   company: e.target.value 
@@ -324,8 +354,8 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Services of Interest
                     </label>
-                    <div className="grid grid-cols-1 md: grid-cols-2 gap-3">
-                      {availableServices.map((service)  => (
+                    <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-3">
+                      {availableServices.map((service)               => (
                         <label key={service.id} className="flex items-center gap-3 p-3 bg-slate-700/30 rounded-lg cursor-pointer hover:bg-slate-700/50 transition-colors">
                           <input
                             type="checkbox"

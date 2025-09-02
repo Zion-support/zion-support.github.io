@@ -1,4 +1,5 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from '@/src/src/types/listings';
+
 export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
   // AI-Powered Micro SAAS Services
   {
@@ -617,16 +618,3 @@ export const pricingCategories2027 = [;
   'Fusion Energy Solutions';
 ];
 export const pricingSubcategories2027 = {
-  'Metaverse Solutions': ['E-commerce', 'Gaming', 'Social', 'Education'],
-  'Web3 Solutions': ['DeFi', 'NFTs', 'Blockchain', 'Cryptocurrency'],
-  'Sustainable Tech': ['Cloud Computing', 'Energy Management', 'Waste Management', 'Carbon Tracking'],
-  'NeuroTech Solutions': ['Medical Technology', 'Research', 'Accessibility', 'Gaming'],
-  'Fusion Energy Solutions': ['Energy Research', 'Plasma Physics', 'Reactor Design',;
-  ;
-  ;
-  ;
-  ;
-  'Simulation'];
-;
-};
-}}}}}}}}}}}}

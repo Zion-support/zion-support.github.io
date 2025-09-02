@@ -1,5 +1,6 @@
 import React from 'react';
-import SEO from '@/components/SEO';
+import SEO from '@/src/src/components/SEO';
+
 function ReturnsManagement() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
@@ -14,6 +15,7 @@ function ReturnsManagement() {
           returns portal that automates labels, RMAs, inspections, and refunds while syncing
           with your e‑commerce and shipping providers.
         </p>
+
         <div className="grid-futuristic mt-10">
           <div className="card-futuristic">
             <h2 className="text-xl font-semibold mb-2">Key capabilities</h2>
@@ -36,6 +38,7 @@ function ReturnsManagement() {
             </ul>
           </div>
         </div>
+
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {[{
             plan: 'Starter', price: '$99/mo', features: ['Up to 500 returns', '1 brand portal', '1 store integration']
@@ -61,7 +64,10 @@ function ReturnsManagement() {
       </section>;
     </div>;
   );
+
 export default ReturnsManagement;
+
+
 export default ReturnsManagement;
 export default ReturnsManagement;
 export default ReturnsManagement;

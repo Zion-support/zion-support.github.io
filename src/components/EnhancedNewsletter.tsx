@@ -1,11 +1,56 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide-react';
+import React, { useState  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+} from 'react.ts';
+import { motion                } from 'framer-motion.ts';
+import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift                } from 'lucide-react.ts';
+
 interface NewsletterFormData {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   email: string;
   firstName: string;
   interests: string[];
-  frequency: 'weekly' | 'monthly' | 'quarterly'}
+frequency: 'weekly' | 'monthly' | 'quarterly';
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
 const interests = [;
   { id: 'ai-solutions', label: 'AI Solutions', icon: Zap },;
   { id: 'cloud-services', label: 'Cloud Services', icon: Shield },;
@@ -19,6 +64,8 @@ const frequencies = [;
   { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
   { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
 ];
+
+  
   const [status, setStatus] = useState<any>('idle');
   const [errors, setErrors] = useState<Partial<NewsletterFormData>>({});
   const validateForm = (): boolean => {;
@@ -33,6 +80,7 @@ const frequencies = [;
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0};
+
       return}
     setStatus('loading');
     try {
@@ -40,10 +88,12 @@ const frequencies = [;
       await new Promise(resolve => setTimeout(resolve, 2000));
       // Here you would typically send the data to your newsletter service
       // // // // // // // console.log('Newsletter subscription:', formData);
-      console.log('Newsletter subscription: ', formData);
+
+      console.log('Newsletter subscription: anyanyanyanyanyanyanyanyanyanyanyanyanyany', formData);
+      
       setStatus('success');
       // Reset form after successful submission
-      setTimeout(()  => {
+      setTimeout(()                => {
         setFormData({
           email: '',
           firstName: '',
@@ -56,10 +106,12 @@ const frequencies = [;
       setStatus('error');
       console.error('Newsletter subscription error:', error)}
   };
+
       setErrors(prev => ({ ...prev, interests: null }));
     }
   };
-  const handleInputChange = (field: keyof NewsletterFormData, value: string | string[]) => {;
+
+  const handleInputChange = (field: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof NewsletterFormData, value: string | string[])               => {;
     setFormData(prev => ({ ...prev, [field]: value }));
     // Clear error when user starts typing
     if (errors[field]) {
@@ -204,8 +256,8 @@ const frequencies = [;
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">;
             Areas of Interest * (Select all that apply);
           </label>;
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
-            {interests.map((interest) => {;
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-3">;
+            {interests.map((interest)               => {;
               const Icon = interest.icon;
               const isSelected = formData.interests.includes(interest.id);
               return (
@@ -239,8 +291,8 @@ const frequencies = [;
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
             Update Frequency
           </label>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-3">
-            {frequencies.map((freq)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-3">
+            {frequencies.map((freq)                => (
               <label
                 key={freq.value}
                 className={`relative flex flex-col p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 ${

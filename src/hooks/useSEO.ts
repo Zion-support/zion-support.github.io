@@ -1,5 +1,20 @@
-import { useEffect, useCallback, useMemo  } from 'react.ts';
+import { useEffect, useCallback, useMemo               } from 'react.ts';
+
 interface SEOData {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   title: string;
   description: string;
   keywords?: string;
@@ -8,8 +23,36 @@ interface SEOData {
   ogType?: string;
   twitterCard?: string;
   noindex?: boolean;
-  structuredData?: object}
+structuredData?: object;
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
 interface UseSEOOptions {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   enableAutoTitle?: boolean;
   enableStructuredData?: boolean;
   enablePerformanceTracking?: boolean;
@@ -33,12 +76,12 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com';
   }, [seoData.canonical]);
   // Update document title
-  const updateTitle = useCallback((title: string) => {;
+  const updateTitle = useCallback((title: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     if (typeof document !== 'null') {;
       document.title = title;
   }, []);
   // Update meta tags
-  const updateMetaTags = useCallback((data: SEOData) => {;
+  const updateMetaTags = useCallback((data: anyanyanyanyanyanyanyanyanyanyanyanyanySEOData)              => {;
     if (typeof document === 'null') return;
     // Update or create meta description
     let metaDesc = document.querySelector('meta[name="description"]');
@@ -72,10 +115,10 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       robotsMeta.setAttribute('content', 'noindex, nofollow')}
   }, [canonicalUrl]);
   // Update Open Graph tags
-  const updateOpenGraphTags = useCallback((data: SEOData) => {;
+  const updateOpenGraphTags = useCallback((data: anyanyanyanyanyanyanyanyanyanyanyanyanySEOData)              => {;
     if (typeof document === 'null') return;
     const ogTags = [
-      { property: 'og:title', content: fullTitle },;
+      { property: anyanyanyanyanyanyanyanyanyanyanyanyany'og:title', content: fullTitle },;
       { property: 'og:description', content: data.description },;
       { property: 'og:type', content: data.ogType || 'website' },;
       { property: 'og:url', content: canonicalUrl },;
@@ -83,7 +126,8 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       { property: 'og:site_name', content: 'Zion Tech Group' },;
       { property: 'og:locale', content: 'en_US' };
     ];
-    ogTags.forEach(({ property, content })  => {
+
+    ogTags.forEach(({ property, content })               => {
       let ogTag = document.querySelector(`meta[property="${property}"]`);
       if (!ogTag) {
         ogTag = document.createElement('meta');
@@ -91,16 +135,17 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
         document.head.appendChild(ogTag)}
       ogTag.setAttribute('content', content)})}, [fullTitle, canonicalUrl]);
   // Update Twitter Card tags
-  const updateTwitterCardTags = useCallback((data: SEOData) => {;
+  const updateTwitterCardTags = useCallback((data: anyanyanyanyanyanyanyanyanyanyanyanyanySEOData)              => {;
     if (typeof document === 'null') return;
     const twitterTags = [;
-      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },;
+      { name: anyanyanyanyanyanyanyanyanyanyanyanyany'twitter:card', content: data.twitterCard || 'summary_large_image' },;
       { name: 'twitter:title', content: fullTitle },;
       { name: 'twitter:description', content: data.description },;
       { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
       { name: 'twitter:site', content: '@ziontechgroup' };
     ];
-    twitterTags.forEach(({ name, content })  => {
+
+    twitterTags.forEach(({ name, content })               => {
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
       if (!twitterTag) {
         twitterTag = document.createElement('meta');
@@ -108,7 +153,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
         document.head.appendChild(twitterTag)}
       twitterTag.setAttribute('content', content)})}, [fullTitle]);
   // Add structured data
-  const addStructuredData = useCallback((data: object) => {;
+  const addStructuredData = useCallback((data: anyanyanyanyanyanyanyanyanyanyanyanyanyobject)              => {;
     if (!enableStructuredData || typeof document === 'null') return;
     // Remove existing structured data
     const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
@@ -151,7 +196,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     ];
   }), []);
   // Track page view
-  const trackPageView = useCallback((pageData: SEOData) => {;
+  const trackPageView = useCallback((pageData: anyanyanyanyanyanyanyanyanyanyanyanyanySEOData)              => {;
     if (!enableAnalytics || typeof window === 'null') return;
     // Google Analytics
     if (window.gtag) {
@@ -193,7 +238,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
         const metrics = {
-  dns: navigation.domainLookupEnd - navigation.domainLookupStart,
+  dns: anyanyanyanyanyanyanyanyanyanyanyanyanynavigation.domainLookupEnd - navigation.domainLookupStart,
           tcp: navigation.connectEnd - navigation.connectStart,
           ttfb: navigation.responseStart - navigation.requestStart,
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,;
@@ -206,7 +251,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
 };
         // Track to analytics
         if (window.gtag) {
-          Object.entries(metrics).forEach(([key, value])  => {
+          Object.entries(metrics).forEach(([key, value])               => {
             window.gtag('event', 'performance_metric', {
               event_category: 'performance',
               event_label: key,
@@ -269,6 +314,20 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
 // Type declarations
 declare global {
   interface Window {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     gtag?: (...args[])  => void;
     dataLayer?[]}
 }

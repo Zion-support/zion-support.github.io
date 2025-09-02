@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
+import { SEO } from '@/src/src/components/SEO';
 import { 
   Shield, 
   CheckCircle, 
@@ -43,7 +42,7 @@ import {
   Network
 } from 'lucide-react';
 
-const AIFinancialComplianceAssistant = () => {
+const AIFinancialComplianceAssistant: React.FC = ($2) => {
   const features = [
     {
       icon: Brain,

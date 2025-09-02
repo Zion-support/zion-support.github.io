@@ -1,35 +1,54 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react.ts';
+import { Link, useLocation               } from 'react-router-dom.ts';
+import { cn } from '@/lib/utils';
+import {
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Home,
+  Briefcase,
+  Users,
+  Settings,
+  BarChart3,
+  FileText,
+  MessageSquare,
+  HelpCircle,
+  Code,
+  Smartphone,
+  Globe,
+  Building,
+  Mail,
+  Phone,
+  MapPin,
+  Brain,
+  Cpu,
+  Shield,
+  Rocket,
 import { 
   Menu, 
   X, 
   ChevronDown, 
   ChevronRight,
   Home,
+
   Zap,
-  Brain,
-  Shield,
   Cloud,
-  Cpu,
-  Users,
   ShoppingCart,
   BookOpen,
   MessageCircle,
-  HelpCircle,
   DollarSign,
   Star,
   Target,
   TrendingUp,
   Award,
-  Settings,
-  Globe,
-  Rocket,
   Heart,
   Lock,
   Database,
   Network,
   Palette,
   Video,
+
   PenTool,
   Atom,
   Server,
@@ -43,21 +62,92 @@ import {
   Phone,
   Mail,
   MapPin,
-  Users
+ 
+} from 'lucide-react.ts';
+
+  Building2,
+  TestTube,
+  Newspaper,
+  Handshake,
+  Monitor,
+  GraduationCap,
+  Lightbulb,
+  Code,
+  Activity,
+  Workflow,
+  Truck
+
 } from 'lucide-react';
+
 interface SidebarItem {
+
   name: string;
   href: string;
   icon: React.ComponentType<any>;
   children?: SidebarItem[];
   featured?: boolean;
   description?: string;
+
 }
-export function MainSidebar() {
+
+interface NavigationSection {
+  Users
+  Audio,
+  Document,
+  Folder,
+  File,
+  Archive,
+  Backup,
+  Restore,
+  Sync,
+  Share,
+  Export,
+  Import,
+  Download,
+  Upload,
+  Copy,
+  Paste,
+  Cut,
+  Delete,
+  Undo,
+  Redo,
+  Save,
+  Load,
+  Open,
+  Close,
+  Minimize,
+  Maximize,
+  Move,
+  Resize,
+  Rotate,
+  Scale,
+  Transform,
+  Animate,
+  Transition,
+  Effect,
+  Filter,
+  Blend,
+  Mask,
+  Clip,
+  Crop
+} from 'lucide-react';
+interface SidebarItem {
+  title: string;
+  href?: string;
+  icon: React.ComponentType<{ className?: string }>;
+  children?: SidebarItem[];
+  badge?: string;
+  disabled?: boolean;
+}
+
+export function MainSidebar(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
+  const [expandedSections, setExpandedSections] = useState<any>(['services']);
   const location = useLocation();
+
   const toggleSection = (section: string) => {
+
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
@@ -144,10 +234,13 @@ export function MainSidebar() {
       ]
     },
     {
+
       name: 'Emerging Tech',
       href: '#',
       icon: Rocket,
       children: [
+      title: 'Resources',
+      items: [
         {
           name: 'Quantum Computing',
           href: '/services/quantum-computing',
@@ -259,6 +352,9 @@ export function MainSidebar() {
           icon: MessageCircle,
           description: 'Support Resources'
         },
+
+      title: 'Resources',
+      items: [
         {
           name: 'Documentation',
           href: '/docs',
@@ -330,62 +426,176 @@ export function MainSidebar() {
         )}
       </div>
     );
+
+interface MainSidebarProps {
+  className?: string;
+  isOpen?: boolean;
+  onToggle?: () => void;
+}
+
+const navigationItems: SidebarItem[] = [
+  {
+    title: 'Dashboard',
+    href: '/',
+    icon: Home
+  },
+  {
+    title: 'AI Services',
+    href: '/ai-services',
+    icon: Brain,
+    children: [
+      {
+        title: 'AI Solutions',
+        href: '/ai-solutions',
+        icon: Brain
+      },
+      {
+        title: 'AI Healthcare',
+        href: '/services/ai-healthcare-platform',
+        icon: Heart
+      },
+      {
+        title: 'AI Cybersecurity',
+        href: '/services/ai-cybersecurity-platform',
+        icon: Shield
+      },
+      {
+        title: 'AI Supply Chain',
+        href: '/services/ai-supply-chain-optimization',
+        icon: Network
+      },
+      {
+        title: 'AI Quantum Hybrid',
+        href: '/services/ai-quantum-hybrid-platform',
+        icon: Cpu
+      }
+    ]
+  },
+  {
+    title: 'IT Services',
+    href: '/it-services',
+    icon: Code,
+    children: [
+      {
+        title: 'Cloud Solutions',
+        href: '/cloud-solutions',
+        icon: Cloud
+      },
+      {
+        title: 'Digital Transformation',
+        href: '/digital-transformation',
+        icon: Rocket
+      },
+      {
+        title: 'Edge Computing',
+        href: '/services/edge-computing-platform',
+        icon: Zap
+      }
+    ]
+  },
+  {
+    title: 'Enterprise',
+    href: '/enterprise',
+    icon: Building
+  },
+  {
+    title: 'Industry Solutions',
+    href: '/industry-solutions',
+    icon: Target
+  },
+  {
+    title: 'Emerging Tech',
+    href: '/emerging-tech',
+    icon: Star
+  },
+  {
+    title: 'Micro SaaS',
+    href: '/micro-saas',
+    icon: ShoppingCart
+  },
+  {
+    title: 'About',
+    href: '/about',
+    icon: Users
+  },
+  {
+    title: 'Contact',
+    href: '/contact',
+    icon: MessageSquare
+  }
+];
+
+const SidebarItem: React.FC<{ item: SidebarItem; level?: number }> = ({ item, level = 0 }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const location = useLocation();
+  const isActive = item.href && location.pathname === item.href;
+  const hasChildren = item.children && item.children.length > 0;
+
+  const handleToggle = () => {
+    if (hasChildren) {
+      setIsExpanded(!isExpanded);
+    }
   };
   return (
-    <>
-      {/* Mobile menu button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+    <div>
+      <div
+        className={cn(
+          'flex items-center justify-between px-3 py-2 rounded-lg cursor-pointer transition-colors',
+          isActive
+            ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+            : 'text-gray-300 hover:bg-white/10 hover:text-white',
+          level > 0 && 'ml-4'
+        )}
+        onClick={handleToggle}
       >
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </button>
-      {/* Sidebar */}
-      <div className={`
-        fixed inset-y-0 left-0 z-50 w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl
-        transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-      `}>
-        <div className="flex flex-col h-full">
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-slate-700/50">
-            <h2 className="text-lg font-semibold text-white">Navigation</h2>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="lg:hidden p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
-          {/* Navigation */}
-          <nav className="flex-1 overflow-y-auto p-4 space-y-2">
-            {navigation.map(item => renderSidebarItem(item))}
-          </nav>
-          {/* Footer */}
-          <div className="p-4 border-t border-slate-700/50">
-            <div className="text-xs text-slate-400 space-y-2">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-3 h-3" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-3 h-3" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-3 h-3" />
-                <span>Middletown DE 19709</span>
-              </div>
-            </div>
-          </div>
+        <div className="flex items-center space-x-3">
+          <item.icon className="w-5 h-5" />
+          <span className="text-sm font-medium">{item.title}</span>
+          {item.badge && (
+            <span className="px-2 py-1 text-xs bg-cyan-500/20 text-cyan-400 rounded-full">
+              {item.badge}
+            </span>
+          )}
         </div>
+        {hasChildren && (
+          <ChevronRight
+            className={cn(
+              'w-4 h-4 transition-transform',
+              isExpanded && 'rotate-90'
+            )}
+          />
+        )}
       </div>
-      {/* Overlay */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-black/50 lg:hidden"
-          onClick={() => setIsOpen(false)}
-        />
+      
+      {hasChildren && isExpanded && (
+        <div className="mt-2 space-y-1">
+          {item.children!.map((child, index) => (
+            <SidebarItem key={index} item={child} level={level + 1} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export const MainSidebar: React.FC<MainSidebarProps> = ({
+  className,
+  isOpen = true,
+  onToggle
+}) => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+          />
+        )}
+      </div>
+    );
+  };
+  return (
+    <aside
+      className={cn(
+        'bg-slate-900/95 backdrop-blur-sm border-r border-white/10 transition-all duration-300',
+        isCollapsed ? 'w-16' : 'w-64',
+        className
       )}
     </>
   )};
@@ -395,4 +605,4 @@ export function MainSidebar() {
       </div>;
     </>;
   );
-}
+};

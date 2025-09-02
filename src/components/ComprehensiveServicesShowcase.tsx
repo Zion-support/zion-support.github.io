@@ -31,6 +31,7 @@ import { Link } from 'react-router-dom';
 import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data/expandedInnovativeServices2025";
 import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 interface Service {
+
   id: string;
   title: string;
   description: string;
@@ -85,7 +86,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon: React.FC = ($2) => {
     switch (category) {
       case 'AI & Analytics':;
       case 'AI & Customer Experience':;
@@ -144,20 +145,22 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
+
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-colors"
+
                 Request Quote
               </Link>
             </div>
           </div>
-        </div>
+        </div>;
       </section>
       {/* Contact Information Banner */}
-      <section className="bg-white border-b border-gray-200">
+      <section className="bg-white border-b border-gray-200">;
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-wrap items-center justify-center gap-8 text-gray-700">
             <div className="flex items-center gap-2">
@@ -175,6 +178,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-zion-blue hover:text-zion-cyan transition-colors"
+
                 ziontechgroup.com
               </a>
             </div>
@@ -186,7 +190,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Filters Section */}
-      <section className="bg-white py-8 border-b border-gray-200">
+      <section className="bg-white py-8 border-b border-gray-200">;
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-between gap-4">
             {/* Search */}
@@ -236,7 +240,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-16">
+      <section className="py-16">;
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map((service, index)  => (
@@ -245,16 +249,35 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                 initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
+
+
+
+
 }}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
+
                 {/* Service Header */}
                 <div className="p-6 border-b border-gray-100">
                   <div className="flex items-start justify-between mb-4">
@@ -289,9 +312,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                   </div>
                 </div>
                 {/* Service Details */}
-                <div className="p-6">
+                <div className="p-6">;
                   {/* Market Price & ROI */}
-                  <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="grid grid-cols-2 gap-4 mb-6">;
                     <div className="text-center p-3 bg-gray-50 rounded-lg">
                       <div className="text-sm text-gray-500">Market Price</div>
                       <div className="font-semibold text-gray-900">{service.marketPrice}</div>
@@ -300,7 +323,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                       <div className="text-sm text-gray-500">ROI</div>
                       <div className="font-semibold text-green-700">{service.roi}</div>
                     </div>
-                  </div>
+                  </div>;
                   {/* Features */}
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
@@ -342,6 +365,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                         <span
                           key={idx}
                           className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full"
+
                           {tag}
                         </span>
                       ))}
@@ -352,11 +376,13 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                     <Link
                       to={`/contact?service=${service.id}`}
                       className="flex-1 bg-zion-cyan text-white text-center py-2 px-4 rounded-lg hover:bg-zion-cyan-light transition-colors font-medium"
+
                       Get Started
                     </Link>
                     <Link
                       to={`/services/${service.id}`}
                       className="flex-1 border border-zion-cyan text-zion-cyan text-center py-2 px-4 rounded-lg hover:bg-zion-cyan hover:text-white transition-colors font-medium"
+
                       Learn More
                     </Link>
                   </div>
@@ -382,7 +408,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Call to Action Section */}
-      <section className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white py-16">
+      <section className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white py-16">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Business?
@@ -395,12 +421,14 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-3 bg-white text-zion-blue font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+
               Contact Us
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <a
               href="tel:+13024640950"
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue transition-colors"
+
               <Phone className="mr-2 h-5 w-5" />
               Call Now
             </a>;

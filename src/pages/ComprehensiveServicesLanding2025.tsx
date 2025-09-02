@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Search,
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Search,
   Filter,
   Star,
   TrendingUp,
@@ -40,9 +39,10 @@ import {
   ExternalLink
 } from 'lucide-react';
 import SEO from '../components/SEO';
-import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
-const ComprehensiveServicesLanding2025: React.FC = () => {;
-  const getCategoryIcon = (category: string) => {;
+import { INNOVATIVE_SERVICES_2025              } from '../data/innovativeServices2025';
+
+const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {;
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (category) {;
       case 'AI & Automation':;
         return <Brain className="w-8 h-8" />;
@@ -67,7 +67,8 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
       default:
         return <Sparkles className="w-8 h-8" />;
   };
-  const getCategoryColor = (category: string) => {;
+
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (category) {;
       case 'AI & Automation':;
         return 'from-purple-500 to-pink-500';
@@ -95,7 +96,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
   const categories = Array.from(new Set(INNOVATIVE_SERVICES_2025.map(service => service.category)));
   const servicesByCategory = categories.map(category => ({;
     category,;
-    services: INNOVATIVE_SERVICES_2025.filter(service => service.category === category),;
+    services: anyanyanyanyanyanyanyanyanyanyanyanyanyINNOVATIVE_SERVICES_2025.filter(service              => service.category === category),;
     icon: getCategoryIcon(category),;
     color: getCategoryColor(category);
   }));
@@ -179,8 +180,9 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
               Browse our services by category to find the perfect solution for your business needs
             </p>
           </div>
-          <div className="grid gap-8 grid-cols-1 md: grid-cols-2 lg:grid-cols-3">
-            {featuredCategories.map((category, index)  => (
+
+          <div className="grid gap-8 grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+            {featuredCategories.map((category, index)               => (
               <motion.div
                 key={categoryData.category}
                 initial = {
@@ -233,8 +235,9 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
               Browse our comprehensive range of technology services across all categories
             </p>
           </div>
-          <div className="grid gap-6 grid-cols-1 md: grid-cols-2 lg:grid-cols-3">
-            {filteredCategories.map((category, index)  => (
+
+          <div className="grid gap-6 grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+            {filteredCategories.map((category, index)               => (
               <motion.div
                 key={category.id}
                 initial = {
@@ -297,8 +300,9 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
               Our most popular and innovative solutions that are transforming businesses worldwide
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {INNOVATIVE_SERVICES_2025.slice(0, 6).map((service, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {INNOVATIVE_SERVICES_2025.slice(0, 6).map((service, index)              => (
               <motion.div
                 key={service.id}
                 initial = {
@@ -406,9 +410,10 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
               },
               {
                 icon: <Shield className="w-8 h-8" />,
-                title: 'Enterprise Security',
+                title: anyanyanyanyanyanyanyanyanyanyanyanyany'Enterprise Security',
                 description: 'Bank-grade security with compliance certifications and best practices'
-            ].map((feature, index) => (
+
+            ].map((feature, index)              => (
               <motion.div
                 key={index}
                 initial = {

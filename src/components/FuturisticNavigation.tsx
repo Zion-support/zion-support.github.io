@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MobileSidebarToggle } from './MobileSidebarToggle';
-import {
-  Menu,
+import React, { useState, useEffect               } from 'react.ts';
+import { Link, useLocation               } from 'react-router-dom.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { MobileSidebarToggle               } from './MobileSidebarToggle';
+import { Menu,
   X,
   Search,
   User,
@@ -179,7 +178,7 @@ import {
   SkipBack2Dodecagon,
   SkipForward2Dodecagon
 } from 'lucide-react';
-export const FuturisticNavigation: React.FC = () => {;
+export const FuturisticNavigation: React.FC = (): JSX.Element => {;
   const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState<any>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -193,15 +192,15 @@ export const FuturisticNavigation: React.FC = () => {;
   useEffect(() => {
     setActiveDropdown(null);
   }, [location.pathname]);
-  const handleSearch = (e: React.FormEvent) => {;
+  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {;
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
   };
-  const toggleDropdown = (dropdown: string) => {;
+  const toggleDropdown = (dropdown: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
-  const toggleDropdown = (dropdown: string)  => {;
+  const toggleDropdown = (dropdown: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
   // Enhanced service categories with better organization
   const serviceCategories = [

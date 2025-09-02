@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Server,
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Server,
   Shield,
   Cloud,
   Database,
@@ -12,7 +11,8 @@ import {
   Cpu,
   HardDrive,
   Check
-} from 'lucide-react';
+             } from 'lucide-react.ts';
+
 const ITInfrastructure = () => {
   const services = [
     {
@@ -105,8 +105,9 @@ const ITInfrastructure = () => {
               that ensure your business runs smoothly and efficiently.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {services.map((service, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -153,8 +154,9 @@ const ITInfrastructure = () => {
                 Experience enterprise-grade infrastructure with unmatched reliability, security, and performance.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index)              => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}

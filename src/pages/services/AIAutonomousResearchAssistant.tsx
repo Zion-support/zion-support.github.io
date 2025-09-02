@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect              } from 'react.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
 import { 
   Brain, 
   Search, 
@@ -40,7 +40,8 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-export default function AIAutonomousResearchAssistant() {
+
+export default function AIAutonomousResearchAssistant(...args: any[]): any {
   const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -317,8 +318,9 @@ export default function AIAutonomousResearchAssistant() {
                     Discover the cutting-edge capabilities that make our AI research platform the most advanced in the world
                   </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {features.map((feature, index) => (
+
+                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+                  {features.map((feature, index)              => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}

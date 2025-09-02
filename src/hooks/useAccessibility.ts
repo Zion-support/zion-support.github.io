@@ -1,12 +1,55 @@
-import { useEffect, useRef, useCallback, useMemo  } from 'react.ts';
+import { useEffect, useRef, useCallback, useMemo               } from 'react.ts';
+
 interface UseAccessibilityOptions {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   enableKeyboardNavigation?: boolean;
   enableFocusManagement?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableReducedMotion?: boolean;
-  enableLargeText?: boolean}
+enableLargeText?: boolean;
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
 interface AccessibilityFeatures {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   isHighContrast: boolean;
   isReducedMotion: boolean;
   isLargeText: boolean;
@@ -97,7 +140,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
       focusableElementsRef.current = []};
   }, []);
   // Get all focusable elements
-  const getFocusableElements = useCallback((container: HTMLElement): HTMLElement[]  => {
+  const getFocusableElements = useCallback((container: anyanyanyanyanyanyanyanyanyanyanyanyanyHTMLElement): HTMLElement[]               => {
     const selector = [
       'button:not([disabled])',;
       'input:not([disabled])',;

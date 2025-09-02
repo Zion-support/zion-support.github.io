@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react.ts';
+import { useEffect, useRef, useState              } from 'react.ts';
 interface PerformanceMetrics {
+
   fcp: number | null; // First Contentful Paint
   lcp: number | null; // Largest Contentful Paint
   fid: number | null; // First Input Delay
@@ -8,16 +9,20 @@ interface PerformanceMetrics {
   ttfb: number | null; // Time to First Byte
   domLoad: number | null; // DOM Content Loaded
   windowLoad: number | null; // Window Load
+
 }
 interface PerformanceOptions {
+
   enableRealUserMonitoring?: boolean;
   enableWebVitals?: boolean;
   enableResourceTiming?: boolean;
   enableNavigationTiming?: boolean;
   logToConsole?: boolean;
   sendToAnalytics?: boolean;
+
 }
-export function usePerformance(options: PerformanceOptions = {}) {
+
+export function usePerformance(...args: any[]): any {
   const {
     enableRealUserMonitoring = true,
     enableWebVitals = true,
@@ -26,7 +31,8 @@ export function usePerformance(options: PerformanceOptions = {}) {
     logToConsole = false,
     sendToAnalytics = false
   } = options;
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+
+  const [metrics, setMetrics] = useState<any>({
     fcp: null,
     lcp: null,
     fid: null,
@@ -96,6 +102,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
         domLoad,
         windowLoad
       }));
+
           // // // // // // // console.warn('Long task detected:', {
             duration: entry.duration,
             startTime: entry.startTime,
@@ -106,9 +113,10 @@ export function usePerformance(options: PerformanceOptions = {}) {
     try {
       longTaskObserver.observe({ entryTypes: ['longtask'] });
     } catch (error) {
-      // // // // // // // console.warn('Error setting up long task observer:', error);
+      // // // // // // // console.warn('Error setting up long task observer: anyanyanyanyanyanyanyanyanyanyanyanyany', error);
     }
-    return () => longTaskObserver.disconnect();
+    return ()              => longTaskObserver.disconnect();
+
       if (logToConsole) {
         console.log('Navigation Timing:', { ttfb, domLoad, windowLoad });
       }
@@ -164,7 +172,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
         let clsValue = 0;
         for (const entry of list.getEntries()) {
           if (!entry.hadRecentInput) {
-            clsValue += (entry as any).value;
+            clsValue += (entry as ).value;
           }
         }
         setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -180,7 +188,8 @@ export function usePerformance(options: PerformanceOptions = {}) {
     if (!enableWebVitals) return;
     let firstInputTime: number | null = null;
     let firstInputDelay: number | null = null;
-    const firstInputHandler = (event: Event) => {
+
+    const firstInputHandler = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyEvent)              => {
       if (firstInputTime !== null) return;
       firstInputTime = performance.now();
       firstInputDelay = firstInputTime - (performance.timeOrigin || 0);
@@ -274,7 +283,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     const analyticsData = {
       ...metrics,
       performanceScore,
-      timestamp: Date.now(),
+      timestamp: anyanyanyanyanyanyanyanyanyanyanyanyanyDate.now(),
       userAgent: navigator.userAgent,
       url: window.location.href
     };
@@ -290,7 +299,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     }).catch(console.error);
   }, [metrics, sendToAnalytics, getPerformanceScore]);
   // Auto-start monitoring on mount
-  useEffect(() => {
+  useEffect(()              => {
     if (enableRealUserMonitoring) {
       startMonitoring();
     }
@@ -307,7 +316,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
   return {
     metrics,
     isMonitoring,
-    performanceScore: getPerformanceScore(),
+    performanceScore: anyanyanyanyanyanyanyanyanyanyanyanyanygetPerformanceScore(),
     startMonitoring,
     stopMonitoring,
     getResourceTiming,
@@ -318,7 +327,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     return () => observer.disconnect();
   }, [eventName, callback]);
 // Hook for measuring time between renders
-export function useRenderTime() {
+export function useRenderTime(...args: any[]): any {
   const renderStart = useRef(performance.now());
   const [renderTime, setRenderTime] = useState(0);
   useEffect(() => {
@@ -331,9 +340,9 @@ export function useRenderTime() {
 }}}}}}}}}}}}}}}}}}}}
 }
 // Hook for monitoring specific component performance
-export function useComponentPerformance(componentName: string) {
-  const [renderTime, setRenderTime] = useState<number>(0);
-  const [mountTime, setMountTime] = useState<number>(0);
+export function useComponentPerformance(...args: any[]): any {
+  const [renderTime, setRenderTime] = useState<any>(0);
+  const [mountTime, setMountTime] = useState<any>(0);
   const startTime = useRef<number>(0);
   useEffect(() => {
     startTime.current = performance.now();
@@ -351,9 +360,10 @@ export function useComponentPerformance(componentName: string) {
   return { renderTime, mountTime };
 }
 // Hook for monitoring API call performance
-export function useAPIPerformance() {
+export function useAPIPerformance(...args: any[]): any {
   const [apiMetrics, setApiMetrics] = useState<Map<string, number[]>>(new Map());
-  const trackAPICall = useCallback((endpoint: string, duration: number) => {
+
+  const trackAPICall = useCallback((endpoint: anyanyanyanyanyanyanyanyanyanyanyanyanystring, duration: number)              => {
     setApiMetrics(prev => {
       const newMap = new Map(prev);
       const existing = newMap.get(endpoint) || [];
@@ -361,13 +371,14 @@ export function useAPIPerformance() {
       return newMap;
     });
   }, []);
-  const getAPIAverage = useCallback((endpoint: string) => {
+
+  const getAPIAverage = useCallback((endpoint: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     const metrics = apiMetrics.get(endpoint);
     if (!metrics || metrics.length === 0) return 0;
     return metrics.reduce((sum, time) => sum + time, 0) / metrics.length;
   }, [apiMetrics]);
   const getSlowAPIs = useCallback((threshold: number = 1000) => {
-    const slowAPIs: Array<{ endpoint: string; average: number }> = [];
+    const slowAPIs: Array<any> = [];
     apiMetrics.forEach((times, endpoint) => {
       const average = times.reduce((sum, time) => sum + time, 0) / times.length;
       if (average > threshold) {

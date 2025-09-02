@@ -1,22 +1,23 @@
 import React from 'react';
-import { Footer } from "@/components/Footer";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { TestimonialCarousel } from "@/components/TestimonialCarousel";
-import { FloatingCTA } from "@/components/FloatingCTA";
-import { HeroSection } from "@/components/HeroSection";
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { WaitlistSection } from "@/components/WaitlistSection";
-import { BlogSection } from "@/components/BlogSection";
-import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/button";
+
+import { Footer } from '@/src/src/components/Footer';
+import { TrustedBySection } from '@/src/src/components/TrustedBySection';
+import { TestimonialCarousel } from '@/src/src/components/TestimonialCarousel';
+import { FloatingCTA } from '@/src/src/components/FloatingCTA';
+import { HeroSection } from '@/src/src/components/HeroSection';
+import { CategoriesSection } from '@/src/src/components/CategoriesSection';
+import { BenefitsSection } from '@/src/src/components/BenefitsSection';
+import { HowItWorksSection } from '@/src/src/components/HowItWorksSection';
+import { WaitlistSection } from '@/src/src/components/WaitlistSection';
+import { BlogSection } from '@/src/src/components/BlogSection';
+import SEO from '@/src/src/components/SEO';
+import { Button } from '@/src/src/components/ui/button';
 import { Link } from "react-router-dom";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
-import { SocialShareSection } from "@/components/SocialShareSection";
+import { FeaturedListingsSection } from '@/src/src/components/FeaturedListingsSection';
+import { FeaturesGuideSection } from '@/src/src/components/FeaturesGuideSection';
+import { SocialShareSection } from '@/src/src/components/SocialShareSection';
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "@/context/LanguageContext";
+import { useLanguage } from '@/src/src/context/LanguageContext';
 import {
   ArrowRight,
   Users,
@@ -28,9 +29,11 @@ import {
   BarChart3,
   Smartphone
 } from "lucide-react";
+
 export default function Index() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
+
   // Tools and features showcase
   const toolsFeatures = [
     {
@@ -76,6 +79,7 @@ export default function Index() {
       link: "/mobile-launch"
     }
   ];
+
   return (
     <div className="min-h-screen bg-zion-blue text-white">
       <SEO
@@ -85,6 +89,7 @@ export default function Index() {
         canonical="https://ziontechgroup.com/"
       />
               <HeroSection />
+
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -96,6 +101,7 @@ export default function Index() {
               {t("home.tools_description")}
             </p>
           </div>
+
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {toolsFeatures.map((feature, index) => (
               <Link
@@ -117,17 +123,22 @@ export default function Index() {
           </div>
         </div>
       </section>
+
       <CategoriesSection />
       <BenefitsSection />
+
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
+
       <HowItWorksSection />
       <FeaturedListingsSection />
       <TestimonialCarousel />
       <TrustedBySection />
       <BlogSection />
+
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
+
       <WaitlistSection />
       <FloatingCTA />
       <Footer />
@@ -140,4 +151,5 @@ export default function Index() {
     </div>;
   );
 };
+
 export default Home;

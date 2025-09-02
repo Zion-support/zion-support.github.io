@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
 import { Brain, 
   Rocket, 
   Zap, 
@@ -28,9 +28,10 @@ import { Brain,
   Heart,
   Zap as Lightning
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
-import { emergingTechServices2030 } from "../data/emergingTechServices2030";
-export default function EmergingTech2030(...args[]):  {
+import { SEO              } from '../components/SEO';
+import { emergingTechServices2030              } from '../data/emergingTechServices2030';
+
+export default function EmergingTech2030(...args[]: any):  {
   const containerVariants = {
     hidden: { opacity: 0 },;
     visible: {;
@@ -144,8 +145,8 @@ export default function EmergingTech2030(...args[]):  {
               </p>;
             </motion.div>;
 ;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {emergingTechServices2030.map((service, index) => {;
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
+              {emergingTechServices2030.map((service, index)              => {;
                 const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Cpu;
                 return (
                   <motion.div
@@ -219,7 +220,8 @@ export default function EmergingTech2030(...args[]):  {
                 We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Award,

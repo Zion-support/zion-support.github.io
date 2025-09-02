@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Cpu, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Cpu, 
   Network, 
   Zap, 
   Globe, 
@@ -22,9 +21,10 @@ import {
   Server,
   Router,
   Satellite
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-export default function IoTEdgeComputing() {
+             } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
+
+export default function IoTEdgeComputing(...args: any[]): any {
   const features = [
     {
       icon: Cpu,
@@ -152,8 +152,9 @@ export default function IoTEdgeComputing() {
               to deliver real-time processing and insights.
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -188,8 +189,9 @@ export default function IoTEdgeComputing() {
               of your connected ecosystem needs.
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)              => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -231,8 +233,9 @@ export default function IoTEdgeComputing() {
               Our platform leverages cutting-edge technologies to provide the most advanced IoT and edge computing solutions available.
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {technologies.map((tech, index)              => (
               <motion.div
                 key={tech}
                 initial={{ opacity: 0, scale: 0.9 }}

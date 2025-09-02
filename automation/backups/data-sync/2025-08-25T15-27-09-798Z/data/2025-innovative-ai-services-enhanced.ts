@@ -35,6 +35,7 @@ export interface InnovativeAIService {
   customers: number;
   rating: number;
   reviews: number}
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -45,12 +46,6 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
   {
@@ -1632,5 +1627,4 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     customers: 95,
     rating: 4.7,
     reviews: 58
-
 ];}}

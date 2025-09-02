@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
-import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO } from '@/data/enhancedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import {
-  Search,
+import React, { useState } from 'react.ts';
+import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO              } from '@/data/enhancedServices';
+import { Button              } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
+import { Badge              } from '@/components/ui/badge';
+import { Input              } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue              } from '@/components/ui/select';
+import { Tabs, TabsContent, TabsList, TabsTrigger              } from '@/components/ui/tabs';
+import { Search,
   Filter,
   Star,
   Clock,
@@ -30,7 +29,8 @@ import {
   CheckCircle
 } from 'lucide-react';
 import SEO from '@/components/SEO';
-export default function EnhancedServicesPage(...args[]):  {
+
+export default function EnhancedServicesPage(...args[]: any):  {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -47,8 +47,10 @@ export default function EnhancedServicesPage(...args[]):  {
                         (selectedPriceRange === 'premium' && service.price > 25000);
     return matchesSearch && matchesCategory && matchesPrice;
   });
+
         return <Code className = "w-5 h-5" />};
   };
+
                 onClick = {
   () => window.open(CONTACT_INFO.website,
   '_blank')

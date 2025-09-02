@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Home,
-  Users,
-  Briefcase,
-  Phone,
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  Home, 
+  Users, 
+  Briefcase, 
+  Phone, 
   Info,
   Settings,
   HelpCircle,
@@ -34,13 +34,22 @@ import {
   MapPin,
   Clock
  } from 'lucide-react';
+
 interface NavigationItem {
+
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string 
 }>;
+} from 'lucide-react';
+
+interface NavigationItem {
+  label: string;
+  path: string;
+  icon: React.ComponentType<{ size?: number; className?: string }>;
   children?: NavigationItem[];
   description?: string}
+
 const navigationItems: NavigationItem[] = [
   {
     label: 'Home',
@@ -58,7 +67,7 @@ const navigationItems: NavigationItem[] = [
     label: 'Services',
     path: '/services',
     icon: Briefcase,
-    children[
+    children[;
       {
         label: 'AI & Machine Learning',
         path: '/services/ai',
@@ -94,8 +103,9 @@ const navigationItems: NavigationItem[] = [
         path: '/services/consulting',
         icon: Users,
         description: 'Strategic IT consulting'
-    ]
-  },
+
+    ];
+  },;
   {
     label: 'Solutions',
     path: '/solutions',
@@ -107,7 +117,9 @@ const navigationItems: NavigationItem[] = [
     path: '/contact',
     icon: Phone,
     description: 'Get in touch with us'
+
 ];
+
 const quickActions = [
   {
     label: 'Get Quote',
@@ -128,8 +140,24 @@ const quickActions = [
     color: 'bg-zion-blue';
   };
 ];
+
+export const EnhancedMobileNavigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+  const [activePath, setActivePath] = useState('/');
+  const location = useLocation();
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setActivePath(location.pathname)}, [location]);
+
+  useEffect(() => {
+    const handleClickOutside: React.FC = ($2) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
       }
     };
+
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'hidden'}
@@ -137,27 +165,49 @@ const quickActions = [
     return () => {;
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset'}}, [isOpen]);
+
+  const toggleExpanded: React.FC = ($2) => {
+    setExpandedItems(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(label)) {
         newSet.delete(label)} else {
         newSet.add(label)}
       return newSet})};
-  const isActive = (path: string) => {;
+
+  const handleNavigation: React.FC = ($2) => {
+    setIsOpen(false);
+    setExpandedItems(new Set())};
+
+  const isActive: React.FC = ($2) => {;
     if (path === '/') {;
+  const isActive: React.FC = ($2) => {
+    if (path === '/') {
       return activePath === '/';
+
     return activePath.startsWith(path);
   };
-  const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {;
+
+  const renderNavigationItem: React.FC = ($2) => {;
     const isExpanded = expandedItems.has(item.label);
     const hasChildren = item.children && item.children.length > 0;
     const isItemActive = isActive(item.path);
+
     return (
       <div key = {item.label} className="w-full">
         <motion.div
           initial={false}
           animate = {
   { backgroundColor: isItemActive ? 'rgba(34, 221, 210,
-  0.1)' : 'transparent' 
+  0.1)' : 'transparent' ;
+
+
+
+
+
+
 }}
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
+
           <Link
             to={item.path}
             onClick={() => handleNavigation(item.path)}
@@ -166,6 +216,7 @@ const quickActions = [
                 ? 'text-zion-cyan border-l-2 border-zion-cyan'
                 : 'text-white hover:text-zion-cyan'
             }`}
+
             <div className="flex items-center gap-3">
               <item.icon
                 size={20}
@@ -187,41 +238,69 @@ const quickActions = [
               />
             )}
           </Link>
-          {hasChildren && (
+
+          {hasChildren && (;
             <button
               onClick={() => toggleExpanded(item.label)}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover:text-white transition-colors"
               aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
+
               <ChevronDown
                 size={16}
                 className={`transition-transform duration-200 ${
                   isExpanded ? 'rotate-180' : ''
                 }`}
               />
-            </button>
+            </button>;
           )}
         </motion.div>
-        {hasChildren && (
+
+        {hasChildren && (;
           <AnimatePresence>
             {isExpanded && (
               <motion.div
                 initial = {
   { height: 0,
   opacity: 0 
+
+
+
+
+
+
 }}
                 animate = {
   { height: 'auto',
   opacity: 1 
+
+
+
+
+
+
 }}
                 exit = {
   { height: 0,
   opacity: 0 
+
+
+
+
+
+
 }}
                 transition = {
   { duration: 0.3,
   ease: 'easeInOut' 
+
+
+
+
+
+
 }}
                 className="overflow-hidden"
+
                 <div className="border-l border-zion-slate-light/20 ml-4">
                   {item.children!.map(child => renderNavigationItem(child, depth + 1))}
                 </div>
@@ -232,6 +311,7 @@ const quickActions = [
       </div>;
     );
   };
+
   return (
     <>
       {/* Mobile Menu Toggle */}
@@ -239,8 +319,10 @@ const quickActions = [
         onClick = {() => setIsOpen(true)}
         className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg"
         aria-label="Open mobile navigation menu"
+
         <Menu size={24} />
       </button>
+
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>
         {isOpen && (
@@ -250,6 +332,7 @@ const quickActions = [
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden"
+
             <motion.div
               ref={menuRef}
               initial={{ x: '100%' }}
@@ -258,8 +341,15 @@ const quickActions = [
               transition = {
   { duration: 0.3,
   ease: 'easeOut' 
+
+
+
+
+
+
 }}
               className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl"
+
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-zion-slate-light/20">
                 <div className="flex items-center gap-3">
@@ -275,13 +365,15 @@ const quickActions = [
                   onClick={() => setIsOpen(false)}
                   className="p-2 text-zion-slate-light hover:text-white transition-colors rounded-lg hover:bg-zion-slate-light/10"
                   aria-label="Close mobile navigation menu"
+
                   <X size={24} />
                 </button>
-              </div>
+              </div>;
+
               {/* Navigation Content */}
-              <div className="flex-1 overflow-y-auto">
+              <div className="flex-1 overflow-y-auto">;
                 {/* Quick Actions */}
-                <div className="p-6 border-b border-zion-slate-light/20">
+                <div className="p-6 border-b border-zion-slate-light/20">;
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
                     Quick Actions
                   </h3>
@@ -292,14 +384,16 @@ const quickActions = [
                         to={action.path}
                         onClick={() => handleNavigation(action.path)}
                         className={`${action.color} p-4 rounded-lg text-white text-center hover:scale-105 transition-transform duration-200`}
+
                         <action.icon size={20} className="mx-auto mb-2" />
                         <span className="text-xs font-medium">{action.label}</span>
-                      </Link>
+                      </Link>;
                     ))}
                   </div>
                 </div>
+
                 {/* Main Navigation */}
-                <nav className="p-6">
+                <nav className="p-6">;
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
                     Navigation
                   </h3>
@@ -307,8 +401,9 @@ const quickActions = [
                     {navigationItems.map(item => renderNavigationItem(item))}
                   </div>
                 </nav>
+
                 {/* Contact Information */}
-                <div className="p-6 border-t border-zion-slate-light/20">
+                <div className="p-6 border-t border-zion-slate-light/20">;
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
                     Contact Info
                   </h3>
@@ -332,8 +427,9 @@ const quickActions = [
                   </div>
                 </div>
               </div>
+
               {/* Footer */}
-              <div className="p-6 border-t border-zion-slate-light/20">
+              <div className="p-6 border-t border-zion-slate-light/20">;
                 <div className="flex items-center justify-between text-sm text-zion-slate-light">
                   <span>© 2024 Zion Tech Group</span>
                   <div className="flex items-center gap-4">
@@ -352,4 +448,5 @@ const quickActions = [
       </AnimatePresence>;
     </>;
   );
+};
 };

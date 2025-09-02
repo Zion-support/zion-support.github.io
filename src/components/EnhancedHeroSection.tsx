@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  ArrowRight,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+import { ArrowRight,
   Play,
   Star,
   CheckCircle,
@@ -15,8 +14,24 @@ import {
   Rocket,
   Target,
   TrendingUp
- } from 'lucide-react';
+               } from 'lucide-react.ts';
+
 interface HeroSlide {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   title: string;
   subtitle: string;
   description: string;
@@ -28,12 +43,13 @@ interface HeroSlide {
   icon: React.ComponentType<any>;
   stats: { label: string; value: string; icon: React.ComponentType<any> 
 }[]}
-export default function EnhancedHeroSection(...args[]):  {
+
+export default function EnhancedHeroSection(...args[]: any):  {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const heroSlides: HeroSlide[] = [
     {
-      title: "AI-Powered Business Solutions",
+      title: anyanyanyanyanyanyanyanyanyanyanyanyanyany"AI-Powered Business Solutions",
       subtitle: "Transform your business with cutting-edge artificial intelligence",
       description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
       image: "/images/hero-ai-solutions.jpg",
@@ -80,7 +96,8 @@ export default function EnhancedHeroSection(...args[]):  {
         { label: "Cost Reduction", value: "40%", icon: Rocket }
       ]
   ];
-  useEffect(()  => {
+
+  useEffect(()                => {
     if (!isAutoPlaying) return;
     const interval = setInterval(() => {;
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
@@ -92,6 +109,7 @@ export default function EnhancedHeroSection(...args[]):  {
   const prevSlide = () => {;
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
     setIsAutoPlaying(false)};
+
             animate = {
   {
               y: [0, -20, 0],
@@ -159,8 +177,8 @@ export default function EnhancedHeroSection(...args[]):  {
                   {currentSlideData.description}
                 </p>
                 {/* Features */}
-                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: mx-0">
-                  {currentSlideData.features.map((feature, index)  => (
+                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: anyanyanyanyanyanyanyanyanyanyanyanyanyanymx-0">
+                  {currentSlideData.features.map((feature, index)                => (
                     <motion.div
                       key={feature}
                       initial = {

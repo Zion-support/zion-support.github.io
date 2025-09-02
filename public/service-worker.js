@@ -19,6 +19,7 @@ self.addEventListener('activate', event => {
         keyList.map(key => {
           if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
             return caches.delete(key)}
+
         })
       )
     )
@@ -38,6 +39,7 @@ self.addEventListener('fetch', event => {
       )
     );
     return}
+
   event.respondWith(
     caches.match(event.request).then(response => {
       return (
@@ -45,3 +47,4 @@ self.addEventListener('fetch', event => {
         fetch(event.request).catch(() => caches.match('/offline.html'))
       )})
   )});
+

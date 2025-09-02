@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Menu,
+import React, { useState, useEffect } from 'react.ts';
+import { Link, useLocation               } from 'react-router-dom.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Menu,
   X,
   Search,
   User,
@@ -218,7 +217,8 @@ import {
   Chi,
   Psi,
   Omega
- } from 'lucide-react';
+               } from 'lucide-react.ts';
+
     const handleScroll = () => {;
       setScrolled(window.scrollY > 20);
     };
@@ -227,9 +227,11 @@ import {
   useEffect(() => {
     setMobileMenuOpen(false);
     setActiveDropdown(null)}, [location.pathname]);
+
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
   };
-  const toggleDropdown = (dropdown: string) => {;
+
+  const toggleDropdown = (dropdown: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
   const navigationItems = [

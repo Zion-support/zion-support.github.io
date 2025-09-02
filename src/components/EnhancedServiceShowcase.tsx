@@ -19,7 +19,9 @@ import {
   Award,
   CheckCircle
  } from 'lucide-react';
+
 interface Service {
+
   id: string;
   title: string;
   description: string;
@@ -32,6 +34,7 @@ icon: React.ComponentType<{ className?: string}>;
   color: string;
   popular?: boolean;
   link: string}
+
 const services: Service[] = [
   {
     id: 'ai-business-intelligence',
@@ -39,7 +42,7 @@ const services: Service[] = [
     description: 'Advanced analytics with AI-powered insights and predictive modeling',
     icon: Brain,
     category: 'AI & Machine Learning',
-    features['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration'],
+    features['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration'],;
     pricing: '$2,999/month',
     rating: 4.9,
     reviews: 156,
@@ -53,7 +56,7 @@ const services: Service[] = [
     description: 'Next-generation quantum computing solutions for complex problem solving',
     icon: Rocket,
     category: 'Emerging Tech',
-    features['Quantum algorithms', 'Hybrid classical-quantum', 'Scientific computing', 'Optimization'],
+    features['Quantum algorithms', 'Hybrid classical-quantum', 'Scientific computing', 'Optimization'],;
     pricing: '$5,000/month',
     rating: 4.8,
     reviews: 89,
@@ -66,7 +69,7 @@ const services: Service[] = [
     description: 'Intelligent threat detection and response with zero-trust architecture',
     icon: Shield,
     category: 'Cybersecurity',
-    features['AI threat detection', 'Zero-trust architecture', 'Compliance automation', '24/7 monitoring'],
+    features['AI threat detection', 'Zero-trust architecture', 'Compliance automation', '24/7 monitoring'],;
     pricing: '$2,500/month',
     rating: 4.9,
     reviews: 234,
@@ -80,7 +83,7 @@ const services: Service[] = [
     description: 'Scalable cloud infrastructure with intelligent automation',
     icon: Cloud,
     category: 'Cloud & DevOps',
-    features['Multi-cloud management', 'CI/CD automation', 'Infrastructure as code', 'Cost optimization'],
+    features['Multi-cloud management', 'CI/CD automation', 'Infrastructure as code', 'Cost optimization'],;
     pricing: '$1,500/month',
     rating: 4.7,
     reviews: 189,
@@ -93,7 +96,7 @@ const services: Service[] = [
     description: 'Decentralized finance solutions with advanced blockchain technology',
     icon: Globe,
     category: 'Blockchain & Web3',
-    features['DeFi protocols', 'Smart contracts', 'Yield optimization', 'Cross-chain support'],
+    features['DeFi protocols', 'Smart contracts', 'Yield optimization', 'Cross-chain support'],;
     pricing: '$1,800/month',
     rating: 4.6,
     reviews: 123,
@@ -106,7 +109,7 @@ const services: Service[] = [
     description: 'End-to-end business transformation with cutting-edge technology',
     icon: TrendingUp,
     category: 'Digital Transformation',
-    features['Strategy consulting', 'Process optimization', 'Change management', 'ROI tracking'],
+    features['Strategy consulting', 'Process optimization', 'Change management', 'ROI tracking'],;
     pricing: '$3,500/month',
     rating: 4.8,
     reviews: 167,
@@ -119,7 +122,7 @@ const services: Service[] = [
     description: 'Rapid development and deployment of SaaS applications',
     icon: Code,
     category: 'Micro SAAS',
-    features['Rapid prototyping', 'Scalable architecture', 'Multi-tenancy', 'Analytics dashboard'],
+    features['Rapid prototyping', 'Scalable architecture', 'Multi-tenancy', 'Analytics dashboard'],;
     pricing: '$899/month',
     rating: 4.7,
     reviews: 98,
@@ -132,13 +135,15 @@ const services: Service[] = [
     description: 'AI-powered diagnostic and patient care optimization',
     icon: Users,
     category: 'Healthcare AI',
-    features['Medical imaging AI', 'Predictive diagnostics', 'Patient monitoring', 'HIPAA compliant'],
+    features['Medical imaging AI', 'Predictive diagnostics', 'Patient monitoring', 'HIPAA compliant'],;
     pricing: '$4,500/month',
     rating: 4.9,
     reviews: 78,
     color: 'from-emerald-500 to-teal-500',
     link: '/ai-services/healthcare'
+
 ];
+
 const categories = [
   'All Services',
   'AI & Machine Learning',
@@ -150,18 +155,23 @@ const categories = [
   'Micro SAAS',;
   'Healthcare AI';
 ];
+
         }
       },
       { threshold: 0.1 }
     );
+
     const element = document.getElementById('service-showcase');
     if (element) {
       observer.observe(element)}
+
     return () => observer.disconnect()}, []);
+
   const filteredServices = selectedCategory === 'All Services'
     ? services
     : services.filter(service => service.category === selectedCategory);
-  const renderStars = (rating: number)  => {
+
+  const renderStars: React.FC = ($2) => {
     return Array.from({ length: 5 }, (_, i)  => (
       <Star
         key={i}
@@ -179,6 +189,7 @@ const categories = [
       />;
     ));
   };
+
   return (
     <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-6">
@@ -187,13 +198,26 @@ const categories = [
           initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
+
+
+
+
+
+
 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
+
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
               Services
@@ -204,21 +228,41 @@ const categories = [
             cutting-edge AI, cybersecurity, and innovative digital transformation services.
           </p>
         </motion.div>
+
         {/* Category Filter */}
         <motion.div
           initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
+
+
+
+
+
+
 } : { opacity: 0, y: 20 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
+
+
+
+
 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
+
           {categories.map((category, index) => (
             <button
               key={category}
@@ -228,10 +272,12 @@ const categories = [
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
                   : 'bg-zion-slate-light text-gray-300 hover:bg-zion-cyan/10 hover:text-zion-cyan border border-zion-slate'
               }`}
+
               {category}
             </button>
           ))}
         </motion.div>
+
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -239,8 +285,15 @@ const categories = [
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
+
+
+
+
 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+
           <AnimatePresence mode="wait">
             {filteredServices.map((service, index) => (
               <motion.div
@@ -253,11 +306,19 @@ const categories = [
                   delay: index * 0.1,
                   type: "spring",
   stiffness: 100
+                
+
+
+
+
+
+
 }}
                 whileHover={{ y: -10 }}
                 onHoverStart={() => setHoveredService(service.id)}
                 onHoverEnd={() => setHoveredService(null)}
                 className="relative group"
+
                 <Link to={service.link}>
                   <div className="bg-gradient-to-br from-zion-slate to-zion-slate-light p-8 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10 h-full">
                     {/* Popular Badge */}
@@ -266,18 +327,22 @@ const categories = [
                         Popular
                       </div>
                     )}
+
                     {/* Service Icon */}
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
+
                     {/* Service Info */}
                     <div className="space-y-4">
                       <h3 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors duration-300">
                         {service.title}
                       </h3>
+
                       <p className="text-gray-400 leading-relaxed">
                         {service.description}
                       </p>
+
                       {/* Features */}
                       <div className="space-y-2">
                         {service.features.slice(0, 3).map((feature, featureIndex) => (
@@ -292,6 +357,7 @@ const categories = [
                           </div>
                         )}
                       </div>
+
                       {/* Pricing & Rating */}
                       <div className="flex items-center justify-between pt-4 border-t border-zion-slate">
                         <div className="flex items-center space-x-2">
@@ -304,6 +370,7 @@ const categories = [
                           <span className="text-sm text-gray-400">({service.reviews})</span>
                         </div>
                       </div>
+
                       {/* CTA Button */}
                       <div className="flex items-center justify-between pt-4">
                         <span className="text-sm text-zion-cyan font-semibold">
@@ -318,21 +385,41 @@ const categories = [
             ))}
           </AnimatePresence>
         </motion.div>
+
         {/* CTA Section */}
         <motion.div
           initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
+
+
+
+
+
+
 } : { opacity: 0, y: 20 }}
           transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
+
+
+
+
 }}
           className="text-center mt-16"
+
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light border border-zion-cyan/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -345,12 +432,14 @@ const categories = [
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25"
+
                 <Play className="w-5 h-5 mr-2" />
                 Get Started Today
               </Link>
               <Link
                 to="/enhanced-services"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
+
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>

@@ -24,7 +24,6 @@ async function analyzeBundle() {
     // // // // // // // console.error('❌ Bundle analysis failed:', error.message);
     process.exit(1);
 
-
     generateBundleReport()} catch (error) {
     console.error('❌ Bundle analysis failed:', error.message);
     process.exit(1)}
@@ -32,7 +31,6 @@ async function analyzeBundle() {
 function generateBundleReport() {
   const distPath = path.join(process.cwd(), 'dist');
   const jsPath = path.join(distPath, 'js');
-
   if (!fs.existsSync(jsPath)) {
     // // // // // // // console.log('⚠️  No dist/js directory found. Run build first.');
     return;
@@ -51,7 +49,6 @@ function generateBundleReport() {
       }})
     .sort((a, b) => b.size - a.size);
   // // // // // // // console.log('\n📋 Bundle Size Report:');
-
   const totalSize = 0;
   jsFiles.forEach(file => {
     totalSize += file.size;
@@ -59,7 +56,6 @@ function generateBundleReport() {
   console.log(`Total JS Size: ${(totalSize / 1024).toFixed(2)} KB`);
   // Recommendations
   // // // console.log('\n💡 Optimization Recommendations:');
-
   const largeFiles = jsFiles.filter(file => file.size > 100 * 1024); // > 100KB
   if (largeFiles.length > 0) {
     // // // console.log('🚨 Large files detected:');
@@ -69,7 +65,6 @@ function generateBundleReport() {
   // // // // // // // console.log(`Total JS Size: ${(totalSize / 1024).toFixed(2)} KB`);
   // Recommendations
   // // // // // // // console.log('\n💡 Optimization Recommendations:');
-
   const largeFiles = jsFiles.filter(file => file.size > 100 * 1024); // > 100KB
   if (largeFiles.length > 0) {
     // // // // // // // console.log('🚨 Large files detected:');
@@ -78,6 +73,7 @@ function generateBundleReport() {
     });
     // // // // // // // console.log('   Consider code splitting or lazy loading for these components.');
   }
+
       console.log(`   - ${file.name}: ${file.sizeKB} KB`)});
     console.log('   Consider code splitting or lazy loading for these components.')}
   const mediumFiles = jsFiles.filter(file => file.size > 50 * 1024 && file.size <= 100 * 1024);
@@ -91,6 +87,7 @@ function generateBundleReport() {
   // // // // // // // console.log('   - Optimize images and use modern formats (WebP, AVIF)');
   // // // // // // // console.log('   - Enable gzip compression on your server');
 }
+
       console.log(`   - ${file.name}: ${file.sizeKB} KB`)})}
   // Performance tips
   console.log('\n🚀 Performance Tips:');

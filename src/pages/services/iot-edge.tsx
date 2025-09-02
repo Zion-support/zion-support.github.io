@@ -1,7 +1,8 @@
 import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { Helmet               } from 'react-helmet-async.ts';
+import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield               } from 'lucide-react.ts';
+import { Link               } from 'react-router-dom.ts';
+
 export default function IoTEdge(...args: []):  {
   return (
     <>
@@ -55,7 +56,8 @@ export default function IoTEdge(...args: []):  {
                 real-time analytics, and intelligent automation capabilities.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Cpu,
@@ -110,7 +112,8 @@ export default function IoTEdge(...args: []):  {
                 Discover how IoT and edge computing can transform different industries and operations.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Smart Manufacturing",
@@ -201,11 +204,11 @@ export default function IoTEdge(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: "90%", label: "Reduced Latency" },
+                    { metric: anyanyanyanyanyanyanyanyanyanyanyanyany"90%", label: "Reduced Latency" },
                     { metric: "60%", label: "Bandwidth Savings" },
                     { metric: "99.9%", label: "Uptime Reliability" },
                     { metric: "24/7", label: "Local Processing" }
-                  ].map((item, index)  => (
+                  ].map((item, index)               => (
                     <div key={index} className="flex justify-between items-center">
                       <span className="text-slate-300">{item.label}</span>
                       <span className="text-2xl font-bold text-indigo-400">{item.metric}</span>
@@ -227,7 +230,8 @@ export default function IoTEdge(...args: []):  {
                 Built on cutting-edge IoT and edge computing technologies for maximum performance and reliability.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   title: "IoT Protocols",
@@ -268,7 +272,8 @@ export default function IoTEdge(...args: []):  {
                 Our systematic approach ensures successful IoT and edge computing implementation.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -322,12 +327,12 @@ export default function IoTEdge(...args: []):  {
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200"
               >
-                Explore All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
+                Explore All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
-}}}}}}
+}

@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
-import { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useTalentQuotes } from "@/hooks/useTalentQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import {
-  RequestsHeader,
+import React, { useState } from 'react.ts';
+
+import { useState              } from 'react.ts';
+import { Header              } from '@/components/Header';
+import { Footer              } from '@/components/Footer';
+import { useTalentQuotes              } from '@/hooks/useTalentQuotes';
+import { useAuth              } from '@/hooks/useAuth';
+import { Tabs, TabsContent, TabsList, TabsTrigger              } from '@/components/ui/tabs';
+import { QuoteDetails              } from '@/components/quotes/QuoteDetails';
+import { RequestsHeader,
   QuoteRequestsList
-} from "@/components/quotes";
+             } from '@/components/quotes';
 import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-export default function RequestsPanel(...args[]):  {
+import { ProtectedRoute               } from '@/components/ProtectedRoute';
+
+export default function RequestsPanel(...args[]: any):  {
   const { user } = useAuth();
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+
+  const [selectedQuote, setSelectedQuote] = useState<any>(null);
   const [showDetails, setShowDetails] = useState(false);
   const {
     quotes,
@@ -28,11 +30,13 @@ export default function RequestsPanel(...args[]):  {
     markAsResponded,
     toggleArchive
   } = useTalentQuotes();
+
     if (quote.status = == 'new') {;
       markAsViewed(quote.id);
   };
   // Filter quotes by archive status
-  const archivedQuotes = quotes.filter((q: QuoteRequest) => q.is_archived);
+  const archivedQuotes = quotes.filter((q: anyanyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)              => q.is_archived);
+
   return (
     <ProtectedRoute>
       <div>

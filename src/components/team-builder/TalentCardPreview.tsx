@@ -1,8 +1,8 @@
-import { TalentProfile  } from '@/types';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
+import { TalentProfile  } from '@/src/src/types';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/src/src/components/ui/card';
+import { Button  } from '@/src/src/components/ui/button';
+import { Badge  } from '@/src/src/components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage  } from '@/src/src/components/ui/avatar';
 import { DollarSign, Briefcase, User  } from 'lucide-react';
 
 interface TalentCardPreviewProps extends React.PropsWithChildren<{}> {
@@ -13,7 +13,7 @@ interface TalentCardPreviewProps extends React.PropsWithChildren<{}> {
 
 }
 
-export const TalentCardPreview = ({ talent, onInvite, roleTitle }: TalentCardPreviewProps) => {
+export const TalentCardPreview: React.FC = ($2) => {
   return (
     <Card className="w-full overflow-hidden shadow-sm hover:shadow-md transition-shadow">
       <CardContent className="p-4">

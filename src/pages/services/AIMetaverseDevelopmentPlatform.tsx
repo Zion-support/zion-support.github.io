@@ -1,6 +1,6 @@
 import React from 'react';
-import { Globe, Brain, Zap, Shield, TrendingUp, Users, ArrowRight, CheckCircle, Star, Eye, Sparkles } from 'lucide-react';
 import { SEO } from "../../components/SEO";
+
 export default function AIMetaverseDevelopmentPlatform() {
   const features = [;
     'AI-powered 3D world generation and design',;
@@ -10,6 +10,7 @@ export default function AIMetaverseDevelopmentPlatform() {
     'AI-driven social interaction and engagement',;
     'Metaverse economy and NFT marketplace tools';
   ];
+
   const tiers = [
     {
       name: 'Developer',
@@ -53,6 +54,7 @@ export default function AIMetaverseDevelopmentPlatform() {
       ];
     };
   ];
+
   const useCases = [;
     'Virtual events and conferences',;
     'Gaming and entertainment platforms',;
@@ -61,6 +63,7 @@ export default function AIMetaverseDevelopmentPlatform() {
     'Education and training environments',;
     'Social networking and communities';
   ];
+
   const benefits = [;
     'Reduce development time by 50-70% with AI automation',;
     'Create immersive experiences that increase user engagement',;
@@ -68,6 +71,7 @@ export default function AIMetaverseDevelopmentPlatform() {
     'Enable cross-platform compatibility and accessibility',;
     'Build sustainable metaverse economies and ecosystems';
   ];
+
   const industries = [;
     'Gaming and Entertainment',;
     'Real Estate and Architecture',;
@@ -76,6 +80,7 @@ export default function AIMetaverseDevelopmentPlatform() {
     'Retail and E-commerce',;
     'Corporate and Enterprise';
   ];
+
   return (
     <>
       <SEO 
@@ -83,6 +88,7 @@ export default function AIMetaverseDevelopmentPlatform() {
         description="Revolutionary AI-powered metaverse development platform for creating immersive virtual worlds. AI-driven 3D generation, avatar systems, and spatial computing."
         keywords="AI metaverse, virtual reality, 3D world generation, avatar creation, spatial computing, VR development, AR development"
       />
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -103,19 +109,22 @@ export default function AIMetaverseDevelopmentPlatform() {
               <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
+
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="#pricing"
                 className="inline-flex items-center px-8 py-3 border border-indigo-400 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-200"
+
                 View Pricing
               </a>
             </div>
           </div>
         </section>
+
         {/* Key Features */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -137,8 +146,9 @@ export default function AIMetaverseDevelopmentPlatform() {
             </div>
           </div>
         </section>
+
         {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
+        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -172,15 +182,17 @@ export default function AIMetaverseDevelopmentPlatform() {
                   <a
                     href="https://ziontechgroup.com/contact"
                     className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
+
                     Get Started
                   </a>
-                </div>
+                </div>;
               ))}
             </div>
           </div>
         </section>
+
         {/* Use Cases */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -202,8 +214,9 @@ export default function AIMetaverseDevelopmentPlatform() {
             </div>
           </div>
         </section>
+
         {/* Benefits */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -225,8 +238,9 @@ export default function AIMetaverseDevelopmentPlatform() {
             </div>
           </div>
         </section>
+
         {/* Industries */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -248,8 +262,9 @@ export default function AIMetaverseDevelopmentPlatform() {
             </div>
           </div>
         </section>
+
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Build the Metaverse?

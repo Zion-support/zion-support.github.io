@@ -1,11 +1,12 @@
-import React from 'react';
 interface Stat {
   label: string;
   value: string;
   description: string;
+
 interface InteractiveStatsProps {
   stats: Stat[];
   className?: string;
+
 const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = "" }) => {
   return (
     <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 ${className}`}>
@@ -22,4 +23,5 @@ const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = 
     </div>;
   );
 };
+
 export default InteractiveStats;}}

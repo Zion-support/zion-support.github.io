@@ -173,9 +173,11 @@ import {
   BatteryMedium as BatteryMedium10,
   BatteryEmpty as BatteryEmpty10
 } from 'lucide-react';
+
 export default function GreenIT() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
+
   const categories = [
     { id: 'all', name: 'All Solutions', count: 12 },
     { id: 'energy', name: 'Energy Efficiency', count: 4 },
@@ -183,6 +185,7 @@ export default function GreenIT() {
     { id: 'software', name: 'Sustainable Software', count: 3 },
     { id: 'data', name: 'Data Centers', count: 2 }
   ];
+
   const greenSolutions = [
     {
       id: 'energy-monitoring',
@@ -485,6 +488,7 @@ export default function GreenIT() {
       pricing: 'Starting from $8,000'
     }
   ];
+
   const environmentalImpact = [
     {
       icon: TreePine,
@@ -511,6 +515,7 @@ export default function GreenIT() {
       description: 'Carbon emissions reduced through our solutions'
     }
   ];
+
   const certifications = [
     {
       name: 'ISO 14001',
@@ -537,6 +542,7 @@ export default function GreenIT() {
       color: 'from-purple-500 to-pink-500'
     }
   ];
+
   const caseStudies = [
     {
       title: 'Fortune 500 Manufacturing Company',
@@ -581,18 +587,22 @@ export default function GreenIT() {
       timeline: '4 months'
     }
   ];
-  const toggleSection = (sectionId: string) => {
+
+  const toggleSection: React.FC = ($2) => {
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
+
   const filteredSolutions = selectedCategory === 'all' 
     ? greenSolutions 
     : greenSolutions.filter(solution => solution.category === selectedCategory);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Green IT Solutions - Zion Tech Group"
         description="Transform your technology infrastructure with our sustainable Green IT solutions. Reduce energy consumption, lower costs, and minimize environmental impact."
       />
+      
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
@@ -624,6 +634,7 @@ export default function GreenIT() {
           </motion.div>
         </div>
       </section>
+
       {/* Environmental Impact */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -638,6 +649,7 @@ export default function GreenIT() {
               Real results from implementing sustainable technology solutions
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {environmentalImpact.map((impact, index) => (
               <motion.div
@@ -658,6 +670,7 @@ export default function GreenIT() {
           </div>
         </div>
       </section>
+
       {/* Green IT Solutions */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
@@ -672,6 +685,7 @@ export default function GreenIT() {
               Comprehensive sustainable technology solutions for your organization
             </p>
           </motion.div>
+
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
@@ -688,6 +702,7 @@ export default function GreenIT() {
               </button>
             ))}
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index) => (
               <motion.div
@@ -709,6 +724,7 @@ export default function GreenIT() {
                         {categories.find(c => c.id === solution.category)?.name}
                       </span>
                     </div>
+                    
                     <div className="flex items-center gap-3 mb-4">
                       <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl">
                         <solution.icon className="w-6 h-6 text-green-400" />
@@ -717,9 +733,11 @@ export default function GreenIT() {
                         {solution.name}
                       </h3>
                     </div>
+                    
                     <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                       {solution.description}
                     </p>
+                    
                     <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
                       <div>
                         <div className="text-gray-400">Savings</div>
@@ -734,12 +752,14 @@ export default function GreenIT() {
                         <div className="text-purple-400 font-medium">{solution.pricing}</div>
                       </div>
                     </div>
+                    
                     <button
                       onClick={() => toggleSection(solution.id)}
                       className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
                     >
                       {expandedSection === solution.id ? 'Show Less' : 'Learn More'}
                     </button>
+                    
                     {expandedSection === solution.id && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
@@ -759,6 +779,7 @@ export default function GreenIT() {
                             ))}
                           </ul>
                         </div>
+                        
                         <div className="mb-4">
                           <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
                           <ul className="space-y-1">
@@ -779,6 +800,7 @@ export default function GreenIT() {
           </div>
         </div>
       </section>
+
       {/* Certifications */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -793,6 +815,7 @@ export default function GreenIT() {
               Recognized for our commitment to environmental sustainability
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {certifications.map((cert, index) => (
               <motion.div
@@ -812,6 +835,7 @@ export default function GreenIT() {
           </div>
         </div>
       </section>
+
       {/* Case Studies */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
@@ -826,6 +850,7 @@ export default function GreenIT() {
               Real results from organizations implementing our Green IT solutions
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div
@@ -841,17 +866,21 @@ export default function GreenIT() {
                       {study.industry}
                     </span>
                   </div>
+                  
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-200">
                     {study.title}
                   </h3>
+                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Challenge:</h4>
                     <p className="text-gray-300 text-sm">{study.challenge}</p>
                   </div>
+                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Solution:</h4>
                     <p className="text-gray-300 text-sm">{study.solution}</p>
                   </div>
+                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Results:</h4>
                     <ul className="space-y-1">
@@ -863,6 +892,7 @@ export default function GreenIT() {
                       ))}
                     </ul>
                   </div>
+                  
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <div className="text-gray-400">Annual Savings</div>
@@ -879,6 +909,7 @@ export default function GreenIT() {
           </div>
         </div>
       </section>
+
       {/* Call to Action */}
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
@@ -894,6 +925,7 @@ export default function GreenIT() {
               Start your sustainability journey today. Our Green IT experts will assess your 
               current infrastructure and provide a customized plan to reduce costs and environmental impact.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
                 Schedule Green IT Assessment
@@ -905,6 +937,7 @@ export default function GreenIT() {
                 Contact Green IT Team
               </a>
             </div>
+            
             <div className="mt-8 text-center">
               <p className="text-gray-400 text-sm">
                 Get a free sustainability assessment and customized Green IT roadmap

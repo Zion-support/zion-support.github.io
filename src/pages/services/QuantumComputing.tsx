@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Zap, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Zap, 
   Brain, 
   Shield, 
   Cloud, 
@@ -22,8 +21,9 @@ import {
   Server,
   CircuitBoard,
   Microchip
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+             } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
+
 export default function QuantumComputing(...args: []):  {
   const features = [
     {
@@ -151,8 +151,9 @@ export default function QuantumComputing(...args: []):  {
               Our quantum computing platform combines the latest advances in quantum mechanics with practical business applications.
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -170,6 +171,7 @@ export default function QuantumComputing(...args: []):  {
           </div>
         </div>
       </section>
+
       {/* Use Cases Section */}
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
@@ -186,8 +188,9 @@ export default function QuantumComputing(...args: []):  {
               Discover how quantum computing is transforming industries and solving complex problems.
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={useCase.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -221,8 +224,9 @@ export default function QuantumComputing(...args: []):  {
               Our platform leverages the latest quantum computing technologies and methodologies.
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {technologies.map((tech, index) => (
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {technologies.map((tech, index)              => (
               <motion.div
                 key={tech}
                 initial={{ opacity: 0, scale: 0.9 }}

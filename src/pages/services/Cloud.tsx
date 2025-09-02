@@ -1,19 +1,19 @@
 import React from 'react.ts';
-import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3  } from 'lucide-react';
-const CloudServices = () => {
+
+const CloudServices: React.FC = ($2) => {
   const cloudServices = [
     {
       title: "Cloud Migration & Strategy",
       description: "Comprehensive cloud migration services with multi-cloud strategy and cost optimization.",
       price: "From $8,500/project",
-      features["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"],
+      features["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"],;
       icon: Cloud
     },
     {
       title: "Cloud-Native Development",
       description: "Build scalable applications using cloud-native technologies and microservices architecture.",
       price: "From $12,000/project",
-      features["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"],
+      features["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"],;
       icon: Server
     },
     {
@@ -25,21 +25,22 @@ const CloudServices = () => {
       icon: Shield;
     };
   ];
+
   const cloudPlatforms = [
     {
       name: "Amazon Web Services",
       description: "Comprehensive cloud services and infrastructure",
       icon: Cloud,
-      features["EC2, S3, Lambda", "RDS, DynamoDB", "CloudFormation", "CloudWatch"]
-    },
+      features["EC2, S3, Lambda", "RDS, DynamoDB", "CloudFormation", "CloudWatch"];
+    },;
     {
       name: "Microsoft Azure",
       description: "Enterprise cloud platform with hybrid capabilities",
       icon: Server,
-      features["Virtual Machines", "Azure SQL", "Functions", "Monitor"]
-    },
+      features["Virtual Machines", "Azure SQL", "Functions", "Monitor"];
+    },;
     {
-      features["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]
+      features["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"];
     };
       name: "Google Cloud Platform",;
       description: "AI-first cloud platform with advanced analytics",;
@@ -47,6 +48,7 @@ const CloudServices = () => {
       features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"];
     };
   ];
+
   const benefits = [;
     "Scalable infrastructure that grows with your business",;
     "Reduced capital expenditure and operational costs",;
@@ -55,6 +57,7 @@ const CloudServices = () => {
     "Global availability and disaster recovery",;
     "Automated scaling and resource management";
   ];
+
   return (
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
@@ -84,6 +87,7 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
+
       {/* Cloud Services */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -96,6 +100,7 @@ const CloudServices = () => {
               and accelerate your business growth.
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cloudServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
@@ -118,6 +123,7 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
+
       {/* Cloud Platforms */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -130,6 +136,7 @@ const CloudServices = () => {
               solutions for your specific needs.
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {cloudPlatforms.map((platform, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
@@ -150,6 +157,7 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -189,6 +197,7 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -211,4 +220,5 @@ const CloudServices = () => {
     </div>;
   );
 };
+
 export default CloudServices;}}}

@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from "../components/SEO";
+import { motion               } from 'framer-motion.ts';
+import { SEO               } from '../components/SEO';
 import { Wrench, 
   Clock, 
   Shield, 
@@ -26,8 +26,9 @@ import { Wrench,
   ArrowRight,
   Globe
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
-export default function OnsiteSupport(...args[]):  {
+import { SEO              } from '../components/SEO';
+
+export default function OnsiteSupport(...args[]: any):  {
   const services = [
     {
       icon: Server,
@@ -282,8 +283,9 @@ export default function OnsiteSupport(...args[]):  {
               handle all aspects of your IT infrastructure.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index)               => (
               <motion.div
                 key={service.title}
                 initial = {
@@ -336,8 +338,9 @@ export default function OnsiteSupport(...args[]):  {
           className="text-3xl font-bold text-white text-center mb-12"
           Service Coverage Areas
         </motion.h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {coverageAreas.map((area, index) => (
+
+        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+          {coverageAreas.map((area, index)              => (
             <motion.div
               key={area.title}
               initial = {
@@ -362,8 +365,8 @@ export default function OnsiteSupport(...args[]):  {
               </div>
               <div className="space-y-4">
                 <div className="space-y-3">
-                  <h4 className="text-slate-300 font-medium">Coverage:</h4>
-                  {area.areas.map((location, idx) => (
+                  <h4 className="text-slate-300 font-medium">Coverage: anyanyanyanyanyanyanyanyanyanyanyanyany</h4>
+                  {area.areas.map((location, idx)              => (
                     <div key={idx} className="flex items-center space-x-3">
                       <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
                       <span className="text-slate-300 text-sm">{location}</span>
@@ -405,8 +408,9 @@ export default function OnsiteSupport(...args[]):  {
               with our comprehensive onsite support services.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)               => (
               <motion.div
                 key={tier.title}
                 initial = {
@@ -451,8 +455,9 @@ export default function OnsiteSupport(...args[]):  {
           className="text-3xl font-bold text-white text-center mb-12"
           Our Response Process
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-          {responseProcess.map((step, index) => (
+
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-5 gap-6">
+          {responseProcess.map((step, index)              => (
             <motion.div
               key={step.step}
               initial = {
@@ -503,8 +508,9 @@ export default function OnsiteSupport(...args[]):  {
               guaranteed response times based on priority levels.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {responseTimes.map((item, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {responseTimes.map((item, index)               => (
               <motion.div
                 key={item.priority}
                 initial = {
@@ -554,8 +560,9 @@ export default function OnsiteSupport(...args[]):  {
           className="text-3xl font-bold text-white text-center mb-12"
           Get Onsite Support
         </motion.h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {contactInfo.map((contact, index) => (
+
+        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+          {contactInfo.map((contact, index)              => (
             <motion.div
               key={contact.title}
               initial = {

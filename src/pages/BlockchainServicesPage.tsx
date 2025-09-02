@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Link,
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link,
   Coins,
   Shield,
   Zap,
@@ -24,7 +23,8 @@ import {
   Users,
   Clock,
   Check
- } from 'lucide-react';
+              } from 'lucide-react.ts';
+
         "Network monitoring";
       ],;
       icon: Globe,;
@@ -34,7 +34,7 @@ import {
     };
   ];
   const categories = [
-    { id: 'all', name: 'All Services', count: blockchainServices.length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'all', name: 'All Services', count: blockchainServices.length },
               }
             ].map((feature, index)  => (
               <motion.div

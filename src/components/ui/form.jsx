@@ -12,14 +12,15 @@ export const FormItem = ({ children, className = '' }) => {
   return <div className={className}>{children}</div>;
 };
 
+export const FormControl = ({ children }) => {
+  return <>{children}</>;
+
+};
+
 export const FormLabel = ({ children, className = '' }) => {
   return <label className={className}>{children}</label>;
 };
 
-export const FormMessage = ({ children, className = '' }) => {
-  return <div className={className}>{children}</div>;
-};
-
-export const FormControl = ({ children }) => {
-  return <div>{children}</div>;
+export const FormMessage = ({ className = '' }) => {
+  return <div className={className}></div>;
 };

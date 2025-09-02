@@ -3,20 +3,29 @@ import { motion } from 'framer-motion';
 import { 
   Brain, 
   BarChart3, 
-  TrendingUp, 
   Target, 
-  Users, 
   Zap, 
   Shield, 
-  Globe,
+  Globe, 
+  Users, 
+  TrendingUp,
   CheckCircle,
-  ArrowRight,
   Star,
-  Eye,
-  PenTool,
-  BarChart3,
+  ArrowRight,
+  Play,
+  BookOpen,
   MessageSquare,
-  Calendar,
+  FileText,
+  Eye,
+  Search,
+  Filter,
+  Analytics,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Award,
+  Clock,
   DollarSign
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
@@ -34,24 +43,24 @@ const AIContentIntelligencePlatform = () => {
       description: "Comprehensive insights into content performance, audience behavior, and ROI metrics"
     },
     {
-      icon: TrendingUp,
-      title: "Predictive Content Optimization",
-      description: "AI-driven recommendations for content improvement and audience engagement"
-    },
-    {
       icon: Target,
       title: "Audience Intelligence",
-      description: "Deep insights into audience demographics, preferences, and content consumption patterns"
-    },
-    {
-      icon: Users,
-      title: "Multi-platform Integration",
-      description: "Seamless integration with social media, websites, and content management systems"
+      description: "Deep understanding of your audience through behavioral analysis and predictive modeling"
     },
     {
       icon: Zap,
-      title: "Automated Content Scheduling",
-      description: "Smart scheduling based on optimal posting times and audience activity patterns"
+      title: "Content Optimization Engine",
+      description: "AI-driven recommendations for headlines, keywords, and content structure optimization"
+    },
+    {
+      icon: Shield,
+      title: "Brand Safety Monitoring",
+      description: "Automated detection of brand mentions and sentiment analysis across all channels"
+    },
+    {
+      icon: Globe,
+      title: "Multi-Channel Integration",
+      description: "Seamless integration with social media, websites, blogs, and marketing platforms"
     }
   ];
 
@@ -63,10 +72,10 @@ const AIContentIntelligencePlatform = () => {
       description: "Perfect for small businesses and content creators",
       features: [
         "Up to 10,000 content pieces analyzed",
-        "Basic analytics dashboard",
-        "5 social media integrations",
+        "Basic AI insights and recommendations",
+        "Standard analytics dashboard",
         "Email support",
-        "Basic reporting"
+        "Basic API access"
       ],
       popular: false
     },
@@ -77,12 +86,12 @@ const AIContentIntelligencePlatform = () => {
       description: "Ideal for growing businesses and marketing teams",
       features: [
         "Up to 100,000 content pieces analyzed",
-        "Advanced analytics & AI insights",
-        "Unlimited social media integrations",
+        "Advanced AI insights and predictions",
+        "Custom analytics dashboard",
         "Priority support",
-        "Custom reporting",
-        "API access",
-        "Team collaboration tools"
+        "Full API access",
+        "Team collaboration tools",
+        "Advanced reporting"
       ],
       popular: true
     },
@@ -93,7 +102,7 @@ const AIContentIntelligencePlatform = () => {
       description: "For large organizations with complex content needs",
       features: [
         "Unlimited content analysis",
-        "Custom AI models",
+        "Custom AI model training",
         "White-label solutions",
         "Dedicated account manager",
         "Custom integrations",
@@ -104,36 +113,26 @@ const AIContentIntelligencePlatform = () => {
     }
   ];
 
-  const benefits = [
+  const useCases = [
     {
-      icon: Eye,
-      title: "Increased Content Visibility",
-      description: "Boost your content reach by up to 300% with AI-optimized strategies"
+      title: "Content Marketing Optimization",
+      description: "Optimize your content strategy with AI-driven insights and performance predictions",
+      icon: TrendingUp
     },
     {
-      icon: PenTool,
-      title: "Content Quality Improvement",
-      description: "AI-powered suggestions improve content quality and engagement rates"
+      title: "Social Media Intelligence",
+      description: "Monitor and analyze social media content performance across all platforms",
+      icon: Users
     },
     {
-      icon: Analytics,
-      title: "Data-Driven Decisions",
-      description: "Make informed content decisions based on real-time analytics and insights"
+      title: "Brand Reputation Management",
+      description: "Track brand mentions and sentiment in real-time across the web",
+      icon: Shield
     },
     {
-      icon: MessageSquare,
-      title: "Better Audience Engagement",
-      description: "Understand your audience better and create more engaging content"
-    },
-    {
-      icon: Calendar,
-      title: "Optimized Publishing Schedule",
-      description: "Publish content at the perfect time for maximum engagement"
-    },
-    {
-      icon: DollarSign,
-      title: "Improved ROI",
-      description: "Increase content marketing ROI by up to 400% with intelligent optimization"
+      title: "Competitive Analysis",
+      description: "Analyze competitor content strategies and identify opportunities",
+      icon: Eye
     }
   ];
 
@@ -141,43 +140,44 @@ const AIContentIntelligencePlatform = () => {
     <>
       <SEO 
         title="AI Content Intelligence Platform | Zion Tech Group"
-        description="Transform your content strategy with AI-powered intelligence. Analyze, optimize, and engage your audience with cutting-edge machine learning technology."
-        keywords="AI content analysis, content intelligence, content optimization, audience analytics, content marketing AI"
+        description="Transform your content strategy with our AI-powered content intelligence platform. Get real-time insights, audience intelligence, and content optimization recommendations."
+        keywords="AI content analysis, content intelligence, content optimization, audience analytics, brand monitoring"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-6">
-          <div className="container mx-auto max-w-7xl">
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
+          <div className="container mx-auto px-6 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+              className="text-center max-w-4xl mx-auto"
             >
-              <div className="inline-flex items-center space-x-2 bg-cyan-500/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <div className="inline-flex items-center space-x-2 bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Brain className="w-4 h-4" />
                 <span>AI-Powered Content Intelligence</span>
               </div>
               
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                AI Content
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                AI Content Intelligence
                 <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  Intelligence Platform
+                  Platform
                 </span>
               </h1>
               
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your content strategy with cutting-edge AI technology. Analyze performance, 
-                optimize engagement, and drive results with intelligent content insights.
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Transform your content strategy with cutting-edge AI that analyzes, optimizes, and predicts content performance. 
+                Get real-time insights into audience behavior and content ROI.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
                 </button>
-                <button className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300">
-                  Schedule Demo
+                <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300">
+                  Watch Demo
                 </button>
               </div>
             </motion.div>
@@ -185,20 +185,20 @@ const AIContentIntelligencePlatform = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-6">
-          <div className="container mx-auto max-w-7xl">
+        <section className="py-20">
+          <div className="container mx-auto px-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                Powerful Features for Content Success
+                Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI platform provides everything you need to create, analyze, and optimize 
-                content that drives real business results.
+                Our platform combines advanced machine learning with intuitive design to give you unprecedented insights into your content performance.
               </p>
             </motion.div>
 
@@ -206,13 +206,14 @@ const AIContentIntelligencePlatform = () => {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                   className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-cyan-400" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                    <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -222,38 +223,39 @@ const AIContentIntelligencePlatform = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 px-6 bg-slate-800/30">
-          <div className="container mx-auto max-w-7xl">
+        {/* Use Cases Section */}
+        <section className="py-20 bg-slate-800/30">
+          <div className="container mx-auto px-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                Why Choose Our AI Content Platform?
+                Use Cases
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of businesses that have transformed their content strategy 
-                with our AI-powered platform.
+                Discover how our AI Content Intelligence Platform can transform your business across various industries and use cases.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid md:grid-cols-2 gap-8">
+              {useCases.map((useCase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center"
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                    <useCase.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
+                  <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
+                  <p className="text-gray-300 text-lg">{useCase.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -261,33 +263,34 @@ const AIContentIntelligencePlatform = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-6">
-          <div className="container mx-auto max-w-7xl">
+        <section className="py-20">
+          <div className="container mx-auto px-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                Choose Your Plan
+                Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing plans designed to scale with your business needs. 
-                Start free and upgrade as you grow.
+                Choose the perfect plan for your business needs. All plans include our core AI features and analytics.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                     plan.popular 
-                      ? 'border-cyan-500 shadow-lg shadow-cyan-500/25' 
+                      ? 'border-cyan-500 scale-105' 
                       : 'border-slate-700'
                   }`}
                 >
@@ -320,7 +323,7 @@ const AIContentIntelligencePlatform = () => {
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
-                      : 'bg-slate-700 text-white hover:bg-slate-600'
+                      : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
                   }`}>
                     Get Started
                   </button>
@@ -331,25 +334,26 @@ const AIContentIntelligencePlatform = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-6">
-          <div className="container mx-auto max-w-4xl text-center">
+        <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
+          <div className="container mx-auto px-6 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Content Strategy?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses using AI to create better content and drive real results.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Join thousands of businesses that are already using AI to optimize their content and drive better results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
                 </button>
-                <button className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300">
-                  Contact Sales
+                <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300">
+                  Schedule Demo
                 </button>
               </div>
             </motion.div>

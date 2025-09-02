@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
+import React, { useState              } from 'react.ts';
 import Link from 'next/link.ts';
-import { useRouter  } from 'next/router.ts';
+import { useRouter               } from 'next/router.ts';
 import { Home, 
   Briefcase, 
   Users, 
@@ -64,18 +64,20 @@ import { Home,
   Leaf,
   Sun,
   Wind
- } from 'lucide-react';
+  
+} from 'lucide-react.ts';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
 
-  isOpen: boolean;
-  onClose: ()  => void}
+  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  onClose: ()               => void}
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<any>([]);
 
-  const toggleSection = (section: string) => {;
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     setExpandedSections(prev => ;
       prev.includes(section) ;
         ? prev.filter(s => s !== section);
@@ -83,9 +85,10 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     );
   };
 
-  const isActive = (path: string) => router.pathname === path;
+  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
 
   const navigation = {
+
     main: [
       { name: 'Home', href: '/', icon: Home },
       { name: 'About', href: '/about', icon: Building },
@@ -149,7 +152,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
   ];
 
-  const renderNavSection = (title: string, items: any[], sectionKey: string) => (
+  const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => (
     <div key={sectionKey} className="mb-6">
       <button
         onClick={() => toggleSection(sectionKey)}
@@ -171,6 +174,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               href={item.href}
               onClick={onClose}
               className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+
                 isActive(item.href)
                   ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'
                   : 'text-gray-400 hover:text-white hover:bg-white/5'
@@ -202,6 +206,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
       {/* Sidebar */}
       <div className={`fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-dark border-r border-zion-blue-light z-50 transform transition-transform duration-300 ease-in-out ${
+
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } lg:translate-x-0 lg:relative lg:z-auto`}>
 
@@ -260,6 +265,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 href={item.href}
                 onClick={onClose}
                 className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+
                   isActive(item.href)
                     ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'
                     : 'text-gray-300 hover:text-white hover:bg-white/5'

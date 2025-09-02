@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
 import SEO from '@/components/SEO';
 import { 
   PenTool, 
@@ -18,8 +18,9 @@ import {
   BarChart3,
   Users,
   Sparkles
-} from 'lucide-react';
-export default function AIContentGenerator(...args[]):  {
+             } from 'lucide-react.ts';
+
+export default function AIContentGenerator(...args[]: any):  {
   const features = [
     {
       icon: PenTool,
@@ -247,8 +248,9 @@ export default function AIContentGenerator(...args[]):  {
                 that engages your audience and drives results.
               </p>
             </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
+            
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)               => (
                 <motion.div
                   key={index}
                   initial = {
@@ -285,8 +287,9 @@ export default function AIContentGenerator(...args[]):  {
                 From blog posts to social media content, our AI handles it all
               </p>
             </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {contentTypes.map((type, index)  => (
+            
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {contentTypes.map((type, index)               => (
                 <motion.div
                   key={index}
                   initial = {
@@ -324,8 +327,9 @@ export default function AIContentGenerator(...args[]):  {
                 Whether you're a solo creator or enterprise team, our platform scales with you
               </p>
             </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {useCases.map((useCase, index)  => (
+            
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {useCases.map((useCase, index)               => (
                 <motion.div
                   key={index}
                   initial = {
@@ -374,8 +378,9 @@ export default function AIContentGenerator(...args[]):  {
                 their content strategy with AI-powered generation.
               </p>
             </div>
-            <div className="grid md: grid-cols-2 gap-8">
-              {benefits.map((benefit, index)  => (
+            
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)               => (
                 <motion.div
                   key={index}
                   initial = {
@@ -420,8 +425,9 @@ export default function AIContentGenerator(...args[]):  {
                 All plans include a 14-day free trial.
               </p>
             </div>
-            <div className="grid md: grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)  => (
+            
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)               => (
                 <motion.div
                   key={index}
                   initial = {

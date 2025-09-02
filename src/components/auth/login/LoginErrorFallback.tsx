@@ -1,9 +1,11 @@
 import React from 'react.ts';
-import { AlertTriangle, RefreshCw  } from 'lucide-react';
+import { AlertTriangle, RefreshCw   
+             } from 'lucide-react.ts';
 interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {
-  error: Error;
-  resetErrorBoundary: ()  => void}
-export default function LoginErrorFallback(...args[]):  {
+
+  error: anyanyanyanyanyanyanyanyanyanyanyanyanyanyError;
+  resetErrorBoundary: ()                => void}
+export default function LoginErrorFallback(...args[]: any):  {
   return (
     <div className = "min-h-screen flex items-center justify-center bg-futuristic p-4">
       <div className="max-w-md w-full bg-zion-slate-dark rounded-xl border border-zion-cyan/20 p-8 text-center">

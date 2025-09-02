@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Brain,
   Atom,
   Rocket,
   Shield,
@@ -23,7 +22,8 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from "../data/innovativeServices2027";
+import { innovativeServices2027, serviceCategories2027, getServicesByCategory               } from '../data/innovativeServices2027';
+
 const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-500 to-pink-500',
   'Quantum AI': 'from-blue-500 to-cyan-500',
@@ -38,9 +38,10 @@ const categoryColors: { [key: string]: string } = {
   'Nanotechnology': 'from-gray-500 to-slate-500',
   'Neural Technology': 'from-violet-500 to-purple-500'
 };
-export const InnovativeServicesShowcase2027: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+
+export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [expandedService, setExpandedService] = useState<any>(null);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(;
@@ -58,7 +59,8 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
   const filteredServices = selectedCategory === 'All'
     ? innovativeServices2027
     : getServicesByCategory(selectedCategory);
-  const toggleServiceExpansion = (serviceId: string) => {;
+
+  const toggleServiceExpansion = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
   const contactInfo = {
@@ -129,12 +131,12 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === 'All'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-                  : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white';
+                  : 'bg-zion-slate-light/50 text-gray-300 hover: anyanyanyanyanyanyanyanyanyanyanyanyanyanybg-zion-slate-light/70 hover:text-white';
               }`};
             >;
               All Categories;
             </button>;
-            {serviceCategories2027.map((category) => {;
+            {serviceCategories2027.map((category)               => {;
               const Icon = categoryIcons[category];
               return (
                 <button
@@ -167,7 +169,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
   { duration: 0.8,
   delay: 0.4 
 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {filteredServices.map((service, index)  => (
             <motion.div

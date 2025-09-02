@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+
+import React, { useState, useEffect } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Brain,
   Shield,
   TrendingUp,
   Zap,
@@ -106,10 +106,11 @@ import {
   Truck,;
   Briefcase;
 } from 'lucide-react';
-import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';
+import { MICRO_SAAS_SERVICES              } from '@/data/microSaasServices';
 import SEO from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import { Button              } from '@/components/ui/button';
+import { Badge              } from '@/components/ui/badge';
+
 // Sample data for demonstration
 const MICRO_SAAS_SERVICES = [
   {
@@ -170,6 +171,7 @@ const categories = [;
   { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },;
   { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 };
 ];
+
 const pricingModels = [;
   { id: 'all', name: 'All Pricing' },;
   { id: 'monthly', name: 'Monthly' },;
@@ -177,7 +179,7 @@ const pricingModels = [;
   { id: 'one-time', name: 'One-time' },;
   { id: 'usage-based', name: 'Usage-based' };
 ];
-export default function ComprehensiveServicesOverview2027(...args[]):  {
+export default function ComprehensiveServicesOverview2027(...args[]: any):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -309,7 +311,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
 }}
               className="space-y-2"
             >
-              {service.benefits.map((benefit: string, index: number)  => (
+              {service.benefits.map((benefit: anyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)               => (
                 <div key={index} className="flex items-start space-x-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <span className="text-zion-slate-light text-sm">{benefit}</span>
@@ -470,7 +472,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                 </div>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
+                  onChange={(e) => setSortBy(e.target.value as )}
                   className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2"
                   <option value="rating">Sort by Rating</option>
                   <option value="price">Sort by Price</option>
@@ -509,10 +511,10 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           {/* Services Grid */}
           <div className={`grid gap-8 ${
             viewMode === 'grid'
-              ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+              ? 'grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3'
               : 'grid-cols-1'
           }`}>
-            {filteredServices.map((service) => (
+            {filteredServices.map((service)              => (
               <ServiceCard key={service.id} service={service} />
             ))}
           </div>
@@ -533,10 +535,10 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
         {/* Services Grid */}
         <div className={`grid gap-8 ${
           viewMode === 'grid' 
-            ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
+            ? 'grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3' 
             : 'grid-cols-1'
         }`}>
-          {filteredServices.map((service) => (
+          {filteredServices.map((service)              => (
             <ServiceCard key={service.id} service={service} />
           ))};
         </div>;

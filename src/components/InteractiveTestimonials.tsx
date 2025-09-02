@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
 import {
   Star,
   Quote,
@@ -10,7 +10,22 @@ import {
   Users,
   Award,
   TrendingUp
-} from 'lucide-react';
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+} from 'lucide-react.ts';
+
 const testimonials = [
   {
     id: 1,
@@ -69,7 +84,8 @@ const testimonials = [
   };
 ];
 const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Research", "Manufacturing IoT", "Cybersecurity"];
-export function InteractiveTestimonials() {
+
+export function InteractiveTestimonials(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedTestimonial, setSelectedTestimonial] = useState(0);
   const filteredTestimonials = selectedCategory === "All" ;
@@ -86,7 +102,8 @@ export function InteractiveTestimonials() {
       prev === 0 ? filteredTestimonials.length - 1 : prev - 1;
     );
   };
-  const goToTestimonial = (index: number) => {
+
+  const goToTestimonial = (index: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
     setCurrentIndex(index);
   };
   const togglePlayPause = () => {
@@ -125,6 +142,7 @@ export function InteractiveTestimonials() {
             across industries with our innovative technology solutions.
           </p>
         </motion.div>
+
               className="bg-white rounded-3xl shadow-2xl p-12 max-w-4xl mx-auto"
             >
               <div className="text-center mb-8">
@@ -156,8 +174,9 @@ export function InteractiveTestimonials() {
                   "{currentTestimonial.quote}"
                 </p>
               </blockquote>
-              <div className="grid md: grid-cols-3 gap-6">
-                {Object.entries(currentTestimonial.metrics).map(([key, value])  => (
+
+              <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+                {Object.entries(currentTestimonial.metrics).map(([key, value])                => (
                   <div key={key} className="text-center p-4 bg-blue-50 rounded-xl">
                     <div className="text-2xl font-bold text-blue-600 mb-1">
                       {value}

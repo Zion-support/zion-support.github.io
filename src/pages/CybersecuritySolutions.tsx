@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Shield,
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Shield,
   Lock,
   Eye,
   AlertTriangle,
@@ -25,8 +24,9 @@ import {
   Clock,
   BarChart3,
   CreditCard
- } from 'lucide-react';
-export default function CybersecuritySolutions(...args[]):  {
+              } from 'lucide-react.ts';
+
+export default function CybersecuritySolutions(...args[]: any):  {
   const [selectedThreat, setSelectedThreat] = useState('all');
   const [activeService, setActiveService] = useState('overview');
   const securityServices = [
@@ -199,8 +199,8 @@ export default function CybersecuritySolutions(...args[]):  {
     };
   };
   const filteredThreats = selectedThreat === 'all'
-    ? securityThreats
-    : securityThreats.filter(threat => threat.type === selectedThreat);
+    ? securityThreats: anyanyanyanyanyanyanyanyanyanyanyanyanysecurityThreats.filter(threat              => threat.type === selectedThreat);
+
   return (
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -277,8 +277,9 @@ export default function CybersecuritySolutions(...args[]):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
-            {securityServices.map((service, index) => (
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
+
+            {securityServices.map((service, index)              => (
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -345,9 +346,9 @@ export default function CybersecuritySolutions(...args[]):  {
 ;
 }};
             transition={{ duration: 0.6 }};
-            viewport={{ once: true }};
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }};
           >;
-            {threatTypes.map((threat) => {;
+            {threatTypes.map((threat)              => {;
               const Icon = threat.icon;
               return (
                 <button
@@ -371,8 +372,9 @@ export default function CybersecuritySolutions(...args[]):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
-            {filteredThreats.map((threat, index) => (
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
+
+            {filteredThreats.map((threat, index)              => (
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -442,8 +444,9 @@ export default function CybersecuritySolutions(...args[]):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
-            {complianceFrameworks.map((framework, index) => (
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
+
+            {complianceFrameworks.map((framework, index)              => (
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -502,8 +505,9 @@ export default function CybersecuritySolutions(...args[]):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
-            {securityMetrics.map((metric, index) => (
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
+
+            {securityMetrics.map((metric, index)              => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -546,7 +550,8 @@ export default function CybersecuritySolutions(...args[]):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
+
             {[
               {
                 step: "01",
@@ -571,7 +576,8 @@ export default function CybersecuritySolutions(...args[]):  {
                 title: "Monitoring & Maintenance",
                 description: "Continuous security monitoring and regular updates",
                 icon: Monitor
-            ].map((phase, index) => (
+
+            ].map((phase, index)              => (
               <motion.div
                 key={index}
                 className="relative"

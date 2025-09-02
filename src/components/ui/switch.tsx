@@ -1,5 +1,5 @@
-import React from 'react';
 import { cn } from "../../utils/cn";
+
 interface SwitchProps {
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
@@ -7,6 +7,7 @@ interface SwitchProps {
   className?: string;
   id?: string;
   'aria-label'?: string;
+
 export function Switch({
   checked = false,
   onCheckedChange,
@@ -16,10 +17,12 @@ export function Switch({
   'aria-label': ariaLabel,;
   ...props;
 }: SwitchProps) {;
-  const handleToggle = () => {;
+  const handleToggle: React.FC = ($2) => {;
     if (!disabled && onCheckedChange) {;
       onCheckedChange(!checked);
+
   };
+
   return (
     <button
       type = "button"
@@ -35,9 +38,16 @@ export function Switch({
         disabled && 'opacity-50 cursor-not-allowed',
   className
       )
+
+
+
+
+
+
 }
       id={id}
       {...props}
+
       <span
         className = {
   cn(
@@ -47,6 +57,9 @@ export function Switch({
 ;
 ;
 ;
+
+
+
 };
       />;
     </button>;

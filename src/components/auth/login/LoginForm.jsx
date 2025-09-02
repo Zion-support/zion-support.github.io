@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Link } from "react-router-dom";
+import { LoadingOverlay } from "@/components/LoadingOverlay";
 
 // Form validation schema
 const loginSchema = z.object({
@@ -35,44 +36,50 @@ function LoginForm() {
 
     try {
       setIsSubmitting(true);
-      const result = await login(data.email, data.password);
+      const result = await login(data);
       
       if (result.success) {
         navigate("/");
       } else {
-        form.setError("root", { message: "Login failed. Please check your credentials." });
+        form.setError("root", { message: result.error });
       }
     } catch (error) {
-      form.setError("root", { message: "An error occurred. Please try again." });
+      form.setError("root", { message: "An unexpected error occurred. Please try again." });
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  if (isLoading) {
+    return <LoadingOverlay />;
+  }
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" autoComplete="off">
+        {/* Error Message */}
         {form.formState.errors.root && (
           <p className="text-red-400 text-sm" role="alert">
             {form.formState.errors.root.message}
           </p>
         )}
 
+        {/* Email Field */}
         <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-zion-slate-light">Email address</FormLabel>
+              <FormLabel className="text-gray-300">Email address</FormLabel>
               <FormControl>
                 <div className="relative">
                   <Input
                     placeholder="you@example.com"
-                    className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                    className="bg-white/10 pl-10 placeholder:text-gray-400 border-white/20 focus:border-cyan-400 text-white"
                     {...field}
                     autoComplete="off"
                   />
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
                 </div>
               </FormControl>
               <FormMessage className="text-red-400" />
@@ -80,27 +87,28 @@ function LoginForm() {
           )}
         />
 
+        {/* Password Field */}
         <FormField
           control={form.control}
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-zion-slate-light">Password</FormLabel>
+              <FormLabel className="text-gray-300">Password</FormLabel>
               <FormControl>
                 <div className="relative">
                   <Input
                     type={showPassword ? "text" : "password"}
                     placeholder="••••••••"
-                    className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple"
+                    className="bg-white/10 pl-10 pr-12 border-white/20 focus:border-cyan-400 text-white"
                     {...field}
                     autoComplete="off"
                   />
-                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
                   <Button
                     type="button"
                     variant="ghost"
                     size="sm"
-                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
+                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-gray-400 h-8 hover:text-white"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? (
@@ -119,47 +127,51 @@ function LoginForm() {
           )}
         />
 
+        {/* Forgot Password Link */}
         <div className="flex items-center justify-between">
           <div className="text-sm">
             <Link
               to="/forgot-password"
-              className="font-medium text-zion-cyan hover:text-zion-cyan-light"
+              className="font-medium text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               Forgot your password?
             </Link>
           </div>
         </div>
 
+        {/* Submit Button */}
         <Button
           type="submit"
-          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white"
-          disabled={isSubmitting || isLoading}
+          className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled={isSubmitting}
         >
           {isSubmitting ? (
-            <>
-              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
               Signing in...
-            </>
+            </div>
           ) : (
-            <>
-              <LogIn className="h-4 w-4 mr-2" />
-              Sign in
-            </>
+            <div className="flex items-center gap-2">
+              <LogIn className="h-4 w-4" />
+              Sign In
+            </div>
           )}
         </Button>
 
-        <div className="text-center text-sm">
-          <span className="text-zion-slate-light">Don't have an account? </span>
+        {/* Sign Up Link */}
+        <div className="text-center text-sm text-gray-300">
+          Don't have an account?{" "}
           <Link
             to="/signup"
-            className="font-medium text-zion-cyan hover:text-zion-cyan-light"
+            className="font-medium text-cyan-400 hover:text-cyan-300 transition-colors"
           >
-            Sign up
+            Sign up here
           </Link>
         </div>
       </form>
     </Form>
   );
+
 }
 
 export default LoginForm;

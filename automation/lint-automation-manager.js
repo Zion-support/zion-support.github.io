@@ -13,9 +13,9 @@ class LintAutomationManager {
     this.logFile = path.join(__dirname, 'logs', 'lint-automation.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-
     this.ensureLogDirectory()}
   ensureLogDirectory() {
+
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true })}
@@ -51,7 +51,6 @@ class LintAutomationManager {
   }
   startFileWatcher() {
     this.log('👀 Starting file watcher...');
-
     const watcher = chokidar.watch([
       'pages/**/*.{js,jsx,ts,tsx}',
       'components/**/*.{js,jsx,ts,tsx}',
@@ -71,7 +70,6 @@ class LintAutomationManager {
     this.log('✅ File watcher started')}
   async handleFileChange(filePath) {
     this.log(`🔍 Checking file: ${filePath}`);
-
     // Run lint on the specific file
     try {
       const result = execSync(`npx eslint "${filePath}" --fix`, {

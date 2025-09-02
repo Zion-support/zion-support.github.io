@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
+import { motion               } from 'framer-motion.ts';
+import { SEO               } from '@/components/SEO';
 import { Shield, 
   Eye, 
   AlertTriangle, 
@@ -21,7 +21,8 @@ import { Shield,
   Cpu,
   Brain,
   Users
- } from 'lucide-react';
+              } from 'lucide-react.ts';
+
 export default function AICybersecurityThreatDetection(...args: []):  {
   const features = [
     {
@@ -223,8 +224,9 @@ export default function AICybersecurityThreatDetection(...args: []):  {
               Our platform leverages cutting-edge artificial intelligence to provide unmatched cybersecurity protection
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -273,8 +275,9 @@ export default function AICybersecurityThreatDetection(...args: []):  {
               Join thousands of organizations already protected by our AI-powered cybersecurity platform
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -323,8 +326,9 @@ export default function AICybersecurityThreatDetection(...args: []):  {
               Our AI platform protects against all types of cyber threats, from common attacks to sophisticated zero-day exploits
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {threatTypes.map((threat, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {threatTypes.map((threat, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -373,8 +377,9 @@ export default function AICybersecurityThreatDetection(...args: []):  {
               Meet industry standards and regulatory requirements with our certified security platform
             </p>
           </motion.div>
-          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6">
-            {complianceFrameworks.map((framework, index)  => (
+
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
+            {complianceFrameworks.map((framework, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -420,8 +425,9 @@ export default function AICybersecurityThreatDetection(...args: []):  {
               Flexible pricing options designed to protect organizations of all sizes
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)               => (
               <motion.div
                 key={index}
                 initial = {

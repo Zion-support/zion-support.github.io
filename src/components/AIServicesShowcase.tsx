@@ -1,6 +1,7 @@
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
-export const AIServicesShowcase = () => {
+
+export const AIServicesShowcase: React.FC = ($2) => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -12,6 +13,7 @@ export const AIServicesShowcase = () => {
             Transform your business with cutting-edge artificial intelligence and machine learning solutions
           </p>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">🤖</div>
@@ -21,6 +23,7 @@ export const AIServicesShowcase = () => {
               Learn More →
             </Link>
           </div>
+
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">🔍</div>
             <h3 className="text-xl font-semibold text-white mb-3">Predictive Insights</h3>
@@ -29,6 +32,7 @@ export const AIServicesShowcase = () => {
               Learn More →
             </Link>
           </div>
+
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">⚡</div>
             <h3 className="text-xl font-semibold text-white mb-3">Automation</h3>
@@ -42,4 +46,5 @@ export const AIServicesShowcase = () => {
     </section>;
   );
 };
+
 export default AIServicesShowcase;

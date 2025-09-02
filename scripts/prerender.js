@@ -31,10 +31,8 @@ async function prerender() {
 }
 prerender().catch((err) => {
   // // // // // // // console.error('Error prerendering:', err);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   process.exit(1);
 });
 }
-  console.log('Pre-rendered homepage to dist/index.html')}
-prerender().catch((err) => {
-  console.error('Error prerendering:', err);
-  process.exit(1)});
+

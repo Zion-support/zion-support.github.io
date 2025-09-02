@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
-interface InteractiveSearchProps {
+import React, { useState } from 'react.ts';
+
+interface InteractiveSearchProps extends React.PropsWithChildren<{}> {
+
   placeholder?: string;
-  onSearch: (query: string) => void;
+  onSearch: anyanyanyanyanyanyanyanyanyanyanyanyanyany(query: string)               => void;
   className?: string;
+
 const InteractiveSearch: React.FC<InteractiveSearchProps> = ({ 
   placeholder = "Search...", ;
   onSearch, ;
   className = "" ;
 }) => {;
   const [query, setQuery] = useState('');
-  const handleSubmit = (e: React.FormEvent) => {;
+
+  const handleSubmit = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {;
     e.preventDefault();
     if (query.trim()) {
       onSearch(query.trim());

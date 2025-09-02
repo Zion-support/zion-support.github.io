@@ -1,7 +1,37 @@
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { ChevronLeft, ChevronRight, Star, Quote  } from 'lucide-react';
+import React, { useState  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+} from 'react.ts';
+import { motion, AnimatePresence                } from 'framer-motion.ts';
+import { ChevronLeft, ChevronRight, Star, Quote                } from 'lucide-react.ts';
+
 interface Testimonial {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: number;
   name: string;
   role: string;
@@ -9,14 +39,30 @@ interface Testimonial {
   content: string;
   rating: number;
   avatar: string;
-  industry: string}
+industry: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
   const nextTestimonial = () => {;
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
   const prevTestimonial = () => {;
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
-  const goToTestimonial = (index: number) => {;
+
+  const goToTestimonial = (index: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
     setCurrentIndex(index);
   };
   return (

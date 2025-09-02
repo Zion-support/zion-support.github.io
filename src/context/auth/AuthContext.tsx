@@ -1,5 +1,7 @@
 import React, { createContext, useContext } from 'react.ts';
+
 interface User {
+
   id: string;
   email: string;
   displayName?: string;
@@ -8,10 +10,14 @@ interface User {
   isEmailVerified?: boolean;
   createdAt?: string;
   updatedAt?: string}
+
 interface AuthTokens {
+
   accessToken: string | null;
   refreshToken: string | null}
+
 interface AuthContextType {
+
   user: User | null;
   isLoading: boolean;
   onboardingStep: number;
@@ -26,12 +32,16 @@ login: (email: string, password: string)  => Promise<any>;
   loginWithFacebook: ()  => Promise<any>;
   loginWithTwitter: ()  => Promise<any>;
   loginWithWeb3: ()  => Promise<any>}
+
 const AuthContext = createContext<AuthContextType | null>(null);
-export const useAuth = () => {;
+
+export const useAuth: React.FC = ($2) => {;
   const context = useContext(AuthContext);
   if (context = == null) {;
     throw new Error('useAuth must be used within an AuthProvider');
+
   return context;
 };
+
 export { AuthContext };
 export type { User, AuthTokens, AuthContextType };}}}}

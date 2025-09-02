@@ -1,7 +1,8 @@
 import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { Helmet               } from 'react-helmet-async.ts';
+import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope               } from 'lucide-react.ts';
+import { Link               } from 'react-router-dom.ts';
+
 export default function HealthcareTech(...args: []):  {
   return (
     <>
@@ -55,7 +56,8 @@ export default function HealthcareTech(...args: []):  {
                 from AI diagnostics to patient management systems.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Heart,
@@ -110,7 +112,8 @@ export default function HealthcareTech(...args: []):  {
                 Discover how our technology solutions can transform different aspects of healthcare delivery.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Diagnostic Imaging",
@@ -202,11 +205,11 @@ export default function HealthcareTech(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Healthcare Benefits</h3>
                 <div className="space-y-4">
                   {[
-                    { benefit: "Improved Accuracy", metric: "95%", description: "Diagnostic accuracy" },
+                    { benefit: anyanyanyanyanyanyanyanyanyanyanyanyany"Improved Accuracy", metric: "95%", description: "Diagnostic accuracy" },
                     { benefit: "Faster Results", metric: "60%", description: "Reduced wait time" },
                     { benefit: "Cost Savings", metric: "30%", description: "Operational costs" },
                     { benefit: "Better Outcomes", metric: "40%", description: "Patient outcomes" }
-                  ].map((item, index)  => (
+                  ].map((item, index)               => (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-pink-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.benefit}</div>
@@ -229,7 +232,8 @@ export default function HealthcareTech(...args: []):  {
                 Built-in compliance features ensure your healthcare technology meets all regulatory requirements.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "HIPAA Compliance",
@@ -298,7 +302,8 @@ export default function HealthcareTech(...args: []):  {
                 Our systematic approach ensures successful healthcare technology implementation.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -352,12 +357,12 @@ export default function HealthcareTech(...args: []):  {
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-pink-500/30 text-pink-400 font-semibold rounded-lg hover:bg-pink-500/10 transition-all duration-200"
               >
-                Explore All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
+                Explore All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
-}}}}}}
+}

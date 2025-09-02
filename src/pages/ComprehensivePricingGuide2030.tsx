@@ -28,44 +28,51 @@ import { CheckCircle,
 import { innovativeAIServices2030 } from "../data/innovativeAIServices2030";
 import { innovativeCybersecurityServices2030 } from "../data/innovativeCybersecurityServices2030";
 import { innovativeCloudDevOpsServices2030 } from "../data/innovativeCloudDevOpsServices2030";
+
 const ComprehensivePricingGuide2030: React.FC = () => {;
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+
   const allServices = [;
     ...innovativeAIServices2030,;
     ...innovativeCybersecurityServices2030,;
     ...innovativeCloudDevOpsServices2030;
   ];
+
   const filteredServices = allServices.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
+
   const categories = [;
     { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;
     { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },;
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
   ];
-  const getCategoryIcon = (category: string) => {;
+
+  const getCategoryIcon: React.FC = ($2) => {;
     if (category.toLowerCase().includes('ai')) return Brain;
     if (category.toLowerCase().includes('cybersecurity')) return Shield;
     if (category.toLowerCase().includes('cloud')) return Cloud;
     return Star;
   };
-  const getPricingTier = (price: number) => {;
+
+  const getPricingTier: React.FC = ($2) => {;
     if (price < 300) return { tier: 'Starter', color: 'bg-green-600/20 border-green-500/30 text-green-300' };
     if (price < 600) return { tier: 'Professional', color: 'bg-blue-600/20 border-blue-500/30 text-blue-300' };
     if (price < 1000) return { tier: 'Enterprise', color: 'bg-purple-600/20 border-purple-500/30 text-purple-300' };
     return { tier: 'Premium', color: 'bg-orange-600/20 border-orange-500/30 text-orange-300' };
   };
+
   const pricingTiers = [
     {
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
       price: 299,
-      features[
+      features[;
         'Basic AI features',
         'Email support',
         'Up to 5 users',
@@ -73,7 +80,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         'Community forum access',
         'Basic analytics',
         'Mobile app access'
-      ],
+      ],;
       color: 'from-cyan-500 to-blue-600',
       popular: false,
       bestFor: 'Small businesses, startups, individual professionals'
@@ -82,7 +89,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
       price: 999,
-      features[
+      features[;
         'Advanced AI capabilities',
         'Priority support',
         'Up to 25 users',
@@ -92,7 +99,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         'Advanced analytics dashboard',
         'White-label options',
         'Training and onboarding'
-      ],
+      ],;
       color: 'from-purple-500 to-pink-600',
       popular: true,
       bestFor: 'Growing businesses, mid-size companies, agencies'
@@ -101,7 +108,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       name: 'Enterprise',
       description: 'For large organizations with complex needs',
       price: 2999,
-      features[
+      features[;
         'Full AI suite access',
         '24/7 dedicated support',
         'Unlimited users',
@@ -112,12 +119,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         'Dedicated account manager',
         'Custom development',
         'On-premise deployment options'
-      ],
+      ],;
       color: 'from-indigo-500 to-purple-600',
       popular: false,
       bestFor: 'Large enterprises, government agencies, Fortune 500 companies';
     };
   ];
+
   const marketInsights = [
     {
       title: 'AI Services Market',
@@ -148,6 +156,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       color: 'from-indigo-500 to-purple-600';
     };
   ];
+
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -157,12 +166,25 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
             transition={{ duration: 0.8 }}
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Comprehensive Pricing Guide 2030
             </h1>
@@ -185,9 +207,10 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
+
       {/* Contact Banner */}
-      <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-8 px-4">
+      <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-8 px-4">;
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-white">
             <div className="flex items-center gap-2">
@@ -205,8 +228,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           </div>
         </div>
       </section>
+
       {/* Search and Filter */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-6 mb-8">
             <div className="flex-1">
@@ -231,28 +255,42 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                       ? 'bg-purple-600 border-purple-500 text-white'
                       : 'bg-white/10 border-white/20 text-white hover:bg-white/20'
                   }`}
+
                   <category.icon className="w-4 h-4" />
                   <span>{category.name}</span>
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                     {category.count}
                   </span>
-                </button>
+                </button>;
               ))}
             </div>
           </div>
         </div>
       </section>
+
       {/* Pricing Overview */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
@@ -266,14 +304,32 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
+
+
+
+
 }}
                 viewport={{ once: true }}
                 className={`${plan.color} border rounded-xl p-6 text-center`}
@@ -290,6 +346,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           </div>
         </div>
       </section>
+
       {/* Services Grid */};
       <section className="py-12 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
@@ -297,20 +354,39 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             {filteredServices.map((service, index) => {;
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);
+              
               return (
                 <motion.div
                   key = {service.id}
                   initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
+
+
+
+
 }}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all group"
                 >
@@ -329,6 +405,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                       <div className="text-xs text-slate-400">per {service.pricingModel}</div>
                     </div>
                   </div>
+
                   {/* Content */}
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                     {service.title}
@@ -336,6 +413,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   <p className="text-slate-300 text-sm mb-4 line-clamp-3">
                     {service.description}
                   </p>
+
                   {/* Category and ROI */}
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs bg-slate-800 px-2 py-1 rounded text-cyan-300">
@@ -346,6 +424,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                       <div className="text-sm font-semibold text-green-400">{service.roi}</div>
                     </div>
                   </div>
+
                   {/* Market Price Comparison */}
                   <div className="mb-4 p-3 bg-slate-800/50 rounded-lg">
                     <div className="text-xs text-slate-400 mb-1">Market Price Range</div>
@@ -354,6 +433,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                       Our price: {service.currency}{service.price.toLocaleString()}/{service.pricingModel}
                     </div>
                   </div>
+
                   {/* Key Benefits */}
                   <div className="mb-4">
                     <div className="text-xs text-slate-400 mb-2">Key Benefits:</div>
@@ -366,6 +446,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                       ))}
                     </div>
                   </div>
+
                   {/* CTA */}
                   <div className="flex items-center justify-between">
                     <Link
@@ -387,6 +468,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               );
             })}
           </div>
+
           {filteredServices.length = == 0 && (;
             <div className="text-center py-12">;
               <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>;
@@ -403,21 +485,35 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           )}
         </div>
       </section>
+
       {/* Pricing Benefits */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
+
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Why Our Pricing is Competitive
             </h2>
@@ -425,6 +521,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               We offer transparent, value-driven pricing that gives you the best ROI in the market
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -456,23 +553,43 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 icon: Clock,
                 title: "24/7 Support",
                 description: "Round-the-clock support included in all plans. No additional support fees."
-            ].map((benefit, index) => (
+
+            ].map((benefit, index) => (;
               <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
+
+
+
+
 }}
                 viewport={{ once: true }}
                 className="text-center"
+
                 <div className="w-16 h-16 bg-purple-600/20 border border-purple-500/30 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-purple-400" />
                 </div>
@@ -484,7 +601,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   <div className="text-3xl font-bold text-purple-400 mb-2">40-80%</div>
                   <div className="text-slate-300">Cost Reduction</div>
                 </div>
-              </div>
+              </div>;
+              
               <Link 
                 to="/contact" 
                 className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
@@ -496,20 +614,34 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           </div>
         </div>
       </section>
+
       {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Get Started?
             </motion.h2>
@@ -517,32 +649,39 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
               className="text-xl text-slate-300 mb-8"
             >
               Our team of experts is ready to help you choose the right services and pricing plan. 
               Get in touch today for a personalized consultation.
             </motion.p>
+            
             <motion.div 
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
               className="grid md:grid-cols-3 gap-8 mb-12"
             >
@@ -575,18 +714,22 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 </div>
               </div>
             </motion.div>
+
             <motion.div 
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.6 
+
 }}
               className="flex flex-wrap justify-center gap-4"
             >
@@ -607,8 +750,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           </div>
         </div>
       </section>
+
       {/* Footer CTA */}
-      <section className="py-16">
+      <section className="py-16">;
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <div className="text-slate-300 mb-6">
@@ -653,4 +797,5 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
     </div>;
   );
 };
+
 export default ComprehensivePricingGuide2030;}}

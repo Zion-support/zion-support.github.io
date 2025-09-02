@@ -1,6 +1,19 @@
 // Revolutionary Pricing Guide 2030 - Zion Tech Group
 // Comprehensive pricing for cutting-edge micro SAAS, IT, and AI services
 export interface PricingTier {
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   name: string;
   price: number;
@@ -11,8 +24,34 @@ export interface PricingTier {
   recommendedFor: string[];
   savings?: number;
   popular?: boolean;
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 export interface EnterprisePricing {
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   name: string;
   description: string;
@@ -26,16 +65,42 @@ export interface EnterprisePricing {
     website: string;
   };
 export interface ServicePricing {
+
+
+
+
+
+
+
+
+
+
+
+
+
   serviceId: string;
   serviceName: string;
   category: string;
   tiers: PricingTier[];
   enterprise: EnterprisePricing;
-  marketComparison: {
+marketComparison: {;
     competitors: string[];
     ourAdvantage: string;
     priceDifference: string;
-  };
+  
+
+
+
+
+
+
+
+
+
+
+
+
+};
 }
 // Zion Tech Group Contact Information
 const zionContact = {
@@ -471,6 +536,7 @@ export const pricingRecommendations = {
     roi: "400-600% within 18 months"
   }
 };
+
 // Export all pricing data
 export const allRevolutionaryPricing2030 = {
   microSaas: revolutionaryMicroSaasPricing,

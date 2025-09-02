@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
 import { 
   Settings, 
   Brain, 
@@ -25,8 +25,9 @@ import {
   Shield,
   Users,
   Workflow
-} from 'lucide-react';
-const AIAutonomousBusinessOperations: React.FC = () => {
+             } from 'lucide-react.ts';
+
+const AIAutonomousBusinessOperations: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
@@ -117,7 +118,8 @@ const AIAutonomousBusinessOperations: React.FC = () => {
               Our AI platform provides comprehensive business operations capabilities for modern enterprises
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -154,6 +156,7 @@ const AIAutonomousBusinessOperations: React.FC = () => {
               Experience measurable improvements in operational efficiency and business performance
             </p>
           </motion.div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}

@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion   } from 'framer-motion.ts';
+import { Link   } from 'react-router-dom.ts';
 import { Brain, 
   Database, 
   BarChart3, 
@@ -15,10 +15,10 @@ import { Brain,
   Target,
   PieChart,
   Activity
- } from 'lucide-react';
-import { SEO  } from "../../components/SEO";
+  } from 'lucide-react.ts';
+import { SEO   } from '../../components/SEO';
 
-const AIEnterpriseResourcePlanning = () => {
+const AIEnterpriseResourcePlanning: React.FC = ($2) => {
   const features = [
     {
       icon: Brain,
@@ -57,41 +57,41 @@ const AIEnterpriseResourcePlanning = () => {
       name: "Starter Plan",
       price: "$2,999",
       period: "/month",
-      features[
+      features[;
         "Core ERP modules",
         "AI-powered analytics",
         "Basic automation",
         "Standard support",
         "Up to 50 users"
-      ],
+      ],;
       popular: false
     },
     {
       name: "Professional Plan",
       price: "$5,999",
       period: "/month",
-      features[
+      features[;
         "Advanced AI capabilities",
         "Custom integrations",
         "Advanced automation",
         "Priority support",
         "Up to 200 users",
         "Advanced reporting"
-      ],
+      ],;
       popular: true
     },
     {
       name: "Enterprise Plan",
       price: "$12,999",
       period: "/month",
-      features[
+      features[;
         "Full AI suite",
         "Unlimited users",
         "Custom development",
         "24/7 dedicated support",
         "Advanced security",
         "Multi-tenant architecture"
-      ],
+      ],;
       popular: false;
     };
   ];
@@ -100,18 +100,18 @@ const AIEnterpriseResourcePlanning = () => {
     {
       industry: "Manufacturing",
       description: "Optimize production planning, inventory management, and supply chain operations with AI-driven insights",
-      benefits["30% reduction in inventory costs", "25% improvement in production efficiency", "40% faster decision-making"]
-    },
+      benefits["30% reduction in inventory costs", "25% improvement in production efficiency", "40% faster decision-making"];
+    },;
     {
       industry: "Retail",
       description: "Streamline operations from procurement to customer service with intelligent automation and analytics",
-      benefits["20% increase in customer satisfaction", "35% reduction in operational costs", "50% faster market response"]
-    },
+      benefits["20% increase in customer satisfaction", "35% reduction in operational costs", "50% faster market response"];
+    },;
     {
       industry: "Healthcare",
       description: "Enhance patient care coordination, resource management, and administrative efficiency",
-      benefits["Improved patient outcomes", "25% reduction in administrative overhead", "Better resource utilization"]
-    },
+      benefits["Improved patient outcomes", "25% reduction in administrative overhead", "Better resource utilization"];
+    },;
     {
       industry: "Financial Services",
       description: "Optimize risk management, compliance, and customer relationship management",
@@ -204,8 +204,8 @@ const AIEnterpriseResourcePlanning = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={index}
                 initial = {
@@ -263,8 +263,8 @@ const AIEnterpriseResourcePlanning = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {services.map((service, index)   => (
               <motion.div
                 key={index}
                 initial = {
@@ -357,8 +357,8 @@ const AIEnterpriseResourcePlanning = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)   => (
               <motion.div
                 key={index}
                 initial = {
@@ -424,8 +424,8 @@ const AIEnterpriseResourcePlanning = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {technologies.map((tech, index)  => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6 max-w-4xl mx-auto">
+            {technologies.map((tech, index)   => (
               <motion.div
                 key={index}
                 initial = {

@@ -1,28 +1,74 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-	trailingSlash: true,
-	output: 'export',
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  experimental: {
+    esmExternals: false,
+    optimizeCss: false,
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
+  },
+  output: 'standalone',
   images: {
-		unoptimized: true
-},
-	eslint: {
-		ignoreDuringBuilds: true
-	},
-	typescript: {
-		ignoreBuildErrors: true,
-	},
-	async redirects() {
-		return [
-			{ source: '/ai-customer-success-platform', destination: '/services/ai-customer-success-platform', permanent: true },
-			{ source: '/ai-sales-intelligence-platform', destination: '/services/ai-sales-intelligence-platform', permanent: true },
-			{ source: '/ai-financial-planning-platform', destination: '/services/ai-financial-planning-platform', permanent: true },
-			{ source: '/ai-powered-decision-engine', destination: '/services/ai-powered-decision-engine', permanent: true },
-			{ source: '/intelligent-content-automation-platform', destination: '/services/intelligent-content-automation-platform', permanent: true },
-			{ source: '/intelligent-hr-analytics-platform', destination: '/services/intelligent-hr-analytics-platform', permanent: true },
-			{ source: '/smart-crm-intelligence-suite', destination: '/services/smart-crm-intelligence-suite', permanent: true },
-			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true }
-		]}
+    domains: ['ziontechgroup.com'],
+    unoptimized: true,
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  webpack: (config, { dev, isServer }) => {
+    // Exclude contracts directory from compilation
+    config.module.rules.push({
+      test: /\.(ts|tsx)$/,
+      include: [
+        /src/,
+        /pages/,
+        /components/,
+      ],
+      exclude: [
+        /node_modules/,
+        /contracts/,
+        /api-backup/,
+        /pages\.disabled/,
+        /backup-pages/,
+        /\.backup/,
+        /\.disabled/,
+        /automation\/backups/,
+        /automation_backup/,
+        /broken_files_backup/,
+        /contracts/,
+        /cypress/,
+      ],
+    });
+    
+    // Exclude contracts directory specifically
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'hardhat/config': false,
+    };
+    
+    // Add fallback for problematic modules
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false,
+    };
+    
+    return config;
+  },
+  // Try to exclude problematic directories at the Next.js level
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  onDemandEntries: {
+    // period (in ms) where the server will keep pages in the buffer
+    maxInactiveAge: 25 * 1000,
+    // number of pages that should be kept simultaneously without being disposed
+    pagesBufferLength: 2,
+  },
 };
+
 export default nextConfig;
-}

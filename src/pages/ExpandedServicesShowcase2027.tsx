@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Search,
   Filter,
   Grid3X3,
   List,
@@ -56,26 +55,30 @@ import {
   Server as Edge,
   Monitor as Healthcare,
   Cpu as FinTech
-import { SEO } from '@/components/SEO';
-import {
-  ALL_EXPANDED_SERVICES_2027,
+import { SEO              } from '@/components/SEO';
+import { ALL_EXPANDED_SERVICES_2027,
   EXPANDED_SERVICE_CATEGORIES,
   getExpandedServicesByCategory,
   searchExpandedServices,
   type ExpandedService2027
-} from '@/data/expandedInnovativeServices2027';
+             } from '@/data/expandedInnovativeServices2027';
+
       services = searchExpandedServices(searchQuery)};
     setFilteredServices(services)}, [selectedCategory, searchQuery]);
+
         return Rocket}
   };
+
         return 'from-gray-500 to-slate-600'}
   };
-  const formatPrice = (pricing: ExpandedService2027['pricing']) => {;
+
+  const formatPrice = (pricing: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027['pricing'])              => {;
     if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees';
     return `$${pricing.basePrice.toLocaleString()}/month`;
   };
-  const renderServiceCard = (service: ExpandedService2027) => {;
+
+  const renderServiceCard = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027)              => {;
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
     return (
@@ -253,7 +256,8 @@ import {
       </motion.div>;
     );
   };
-  const renderServiceList = (service: ExpandedService2027) => {;
+
+  const renderServiceList = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027)              => {;
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
     return (
@@ -448,9 +452,9 @@ import {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark: border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
-                {EXPANDED_SERVICE_CATEGORIES.map((category)  => (
+                {EXPANDED_SERVICE_CATEGORIES.map((category)               => (
                   <option key={category} value={category}>
                     {category}
                   </option>
@@ -488,8 +492,8 @@ import {
         </div>
         {/* Services Grid/List */}
         {filteredServices.length > 0 ? (
-          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-            {filteredServices.map((service) =>
+          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+            {filteredServices.map((service)              =>
               viewMode === 'grid' ? renderServiceCard(service) : renderServiceList(service)
             )}
           </div>

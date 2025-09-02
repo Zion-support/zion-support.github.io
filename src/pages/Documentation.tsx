@@ -1,554 +1,742 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
 import { 
-  Search,
-  BookOpen,
-  FileText,
-  Code,
-  Database,
-  Server,
+
+  BookOpen, 
+  Code, 
+  FileText, 
+  Video, 
+  Download, 
+  Search, 
+  ChevronRight, 
+  ExternalLink, 
+  Star, 
+  Clock, 
+  Users, 
+  Bookmark, 
+  Filter,
+  ArrowRight,
+  CheckCircle,
+  Zap,
+  Brain,
   Cloud,
   Shield,
-  Brain,
-  Zap,
-  Target,
   Rocket,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  ChevronRight,
-  ChevronDown,
-  ExternalLink,
-  Download,
-  Play,
-  Lightbulb,
-  AlertCircle,
-  Info,
-  HelpCircle,
-  MessageSquare,
   Globe,
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  User,
-  Users,
-  Building2,
+  Database,
+  Network,
+  Smartphone,
   Settings,
-  Tool,
-  Wrench,
-  Cog,
-  Key,
-  Lock,
-  Unlock,
+  HelpCircle,
+  Info,
+  AlertCircle,
+  TrendingUp,
+  Target,
+  Lightbulb,
+  Award,
+  ChevronDown,
+  ChevronUp,
   Eye,
-  EyeOff,
+  Heart,
+  Share2,
   Copy,
-  Check,
-  X,
+  Printer,
+  Mail,
+  MessageCircle,
+  Phone,
+  MapPin,
+  Calendar,
+  Tag,
+  Folder,
+  FolderOpen,
+  File,
+  FileText as FileTextIcon,
+  Image,
+  Play,
+  Pause,
+  SkipBack,
+  SkipForward,
+  Volume2,
+  VolumeX,
+  Maximize2,
+  Minimize2,
+  RotateCcw,
+  RefreshCw,
   Plus,
   Minus,
-  Filter,
-  SortAsc,
-  SortDesc,
-  Grid,
-  List,
-  Bookmark,
-  Share2,
-  Heart,
-  Download as DownloadIcon,
-  Upload,
-  RefreshCw,
-  Save,
-  Edit,
-  Trash2,
-  Archive,
-  Tag,
-  Hash,
-  Hash as HashIcon,
-  Hash as HashIcon2,
-  Hash as HashIcon3,
-  Hash as HashIcon4,
-  Hash as HashIcon5,
-  Hash as HashIcon6,
-  Hash as HashIcon7,
-  Hash as HashIcon8,
-  Hash as HashIcon9,
-  Hash as HashIcon10
+  X,
+  Check,
+  AlertTriangle,
+  Info as InfoIcon,
+  QuestionMark,
+  Tool,
+  Wrench,
+  Hammer,
+  Scissors,
+  Palette,
+  Brush,
+  PenTool,
+  MousePointer,
+  MousePointer2,
+  Hand,
+  HandMetal,
+  HandHeart,
+  Handshake,
+  ThumbsUp,
+  ThumbsDown,
+  Smile,
+  Frown,
+  Meh,
+  Heart as HeartIcon,
+  HeartOff,
+  MessageSquare,
+  MessageCircle as MessageCircleIcon,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  MapPin as MapPinIcon,
+  Navigation,
+  Compass,
+  Home,
+  ShoppingCart,
+  CreditCard,
+  Wallet,
+  Receipt,
+  Calculator,
+  TrendingDown,
+  MinusCircle,
+  PlusCircle,
+  AlertCircle as AlertCircleIcon,
+  AlertTriangle as AlertTriangleIcon,
+  Info as InfoIcon2,
+  HelpCircle as HelpCircleIcon,
+  CheckSquare,
+  Square,
+  Radio,
+  ToggleLeft,
+  ToggleRight,
+  Sliders,
+  SlidersHorizontal,
+  Volume1,
+  Volume3,
+  Mic,
+  MicOff,
+  Headphones,
+  Speaker,
+  SpeakerOff,
+  Play as PlayIcon,
+  Pause as PauseIcon,
+  SkipBack as SkipBackIcon,
+  SkipForward as SkipForwardIcon,
+  Rewind,
+  FastForward,
+  Shuffle,
+  Repeat,
+  Repeat1,
+  Shuffle as ShuffleIcon,
+  SkipBack as SkipBackIcon2,
+  SkipForward as SkipForwardIcon2,
+  Rewind as RewindIcon,
+  FastForward as FastForwardIcon,
+  Repeat as RepeatIcon,
+  Repeat1 as Repeat1Icon,
+  Shuffle as ShuffleIcon2,
+  SkipBack as SkipBackIcon3,
+  SkipForward as SkipForwardIcon2,
+  Rewind as RewindIcon2,
+  FastForward as FastForwardIcon2,
+  Repeat as RepeatIcon2,
+  Repeat1 as Repeat1Icon2
 } from 'lucide-react';
+
+interface DocCategory {
+  id: string;
+  name: string;
+  icon: React.ComponentType<any>;
+  description: string;
+  articles: DocArticle[];
+}
+
+interface DocArticle {
+  title: string;
+  readTime: string;
+  difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+  url?: string;
+  tags?: string[];
+}
+
+interface ApiDoc {
+  name: string;
+  description: string;
+  version: string;
+  status: 'Stable' | 'Beta' | 'Alpha' | 'Deprecated';
+  endpoints: number;
+  url?: string;
+}
 
 export default function Documentation() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedSections, setExpandedSections] = useState<string[]>(['getting-started']);
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
-  const categories = [
-    { id: 'all', name: 'All Documentation', icon: BookOpen, count: 245 },
-    { id: 'getting-started', name: 'Getting Started', icon: Rocket, count: 18 },
-    { id: 'api', name: 'API Reference', icon: Code, count: 67 },
-    { id: 'sdks', name: 'SDKs & Libraries', icon: Database, count: 23 },
-    { id: 'tutorials', name: 'Tutorials', icon: Play, count: 45 },
-    { id: 'guides', name: 'User Guides', icon: FileText, count: 52 },
-    { id: 'examples', name: 'Code Examples', icon: Code, count: 38 },
-    { id: 'troubleshooting', name: 'Troubleshooting', icon: Wrench, count: 22 }
-  ];
-
-  const documentationSections = [
+  const docCategories: DocCategory[] = [
     {
       id: 'getting-started',
-      title: 'Getting Started',
+      name: 'Getting Started',
       icon: Rocket,
-      description: 'Quick start guides and setup instructions',
+      description: 'Quick start guides and basic setup',
       articles: [
-        { id: 'quick-start', title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min', difficulty: 'Beginner' },
-        { id: 'installation', title: 'Installation Guide', description: 'Step-by-step installation instructions', readTime: '10 min', difficulty: 'Beginner' },
-        { id: 'configuration', title: 'Configuration', description: 'Configure your environment and settings', readTime: '15 min', difficulty: 'Intermediate' },
-        { id: 'first-project', title: 'Your First Project', description: 'Build your first application', readTime: '20 min', difficulty: 'Beginner' },
-        { id: 'authentication', title: 'Authentication Setup', description: 'Set up user authentication and security', readTime: '25 min', difficulty: 'Intermediate' }
+        { title: 'Welcome to Zion Tech Group', readTime: '5 min', difficulty: 'Beginner' },
+        { title: 'Account Setup Guide', readTime: '10 min', difficulty: 'Beginner' },
+        { title: 'First Project Setup', readTime: '15 min', difficulty: 'Beginner' },
+        { title: 'Dashboard Overview', readTime: '8 min', difficulty: 'Beginner' }
       ]
     },
     {
-      id: 'api',
-      title: 'API Reference',
-      icon: Code,
-      description: 'Complete API documentation and endpoints',
+      id: 'ai-services',
+      name: 'AI Services',
+      icon: Brain,
+      description: 'AI and machine learning documentation',
       articles: [
-        { id: 'api-overview', title: 'API Overview', description: 'Understanding the API structure and concepts', readTime: '15 min', difficulty: 'Intermediate' },
-        { id: 'authentication', title: 'Authentication', description: 'API authentication methods and tokens', readTime: '20 min', difficulty: 'Intermediate' },
-        { id: 'endpoints', title: 'API Endpoints', description: 'Complete list of available endpoints', readTime: '30 min', difficulty: 'Advanced' },
-        { id: 'rate-limiting', title: 'Rate Limiting', description: 'Understanding API rate limits and quotas', readTime: '10 min', difficulty: 'Intermediate' },
-        { id: 'error-codes', title: 'Error Codes', description: 'Common error codes and troubleshooting', readTime: '15 min', difficulty: 'Intermediate' }
+        { title: 'AI Business Intelligence Setup', readTime: '20 min', difficulty: 'Intermediate' },
+        { title: 'Machine Learning Model Training', readTime: '30 min', difficulty: 'Advanced' },
+        { title: 'AI Compliance Assistant', readTime: '15 min', difficulty: 'Intermediate' },
+        { title: 'LLM Content Studio Guide', readTime: '25 min', difficulty: 'Intermediate' }
       ]
     },
     {
-      id: 'sdks',
-      title: 'SDKs & Libraries',
+      id: 'cloud-devops',
+      name: 'Cloud & DevOps',
+      icon: Cloud,
+      description: 'Cloud infrastructure and DevOps guides',
+      articles: [
+        { title: 'Cloud Migration Guide', readTime: '45 min', difficulty: 'Advanced' },
+        { title: 'DevOps Pipeline Setup', readTime: '30 min', difficulty: 'Intermediate' },
+        { title: 'Container Orchestration', readTime: '25 min', difficulty: 'Advanced' },
+        { title: 'Performance Optimization', readTime: '20 min', difficulty: 'Intermediate' }
+      ]
+    },
+    {
+      id: 'security',
+      name: 'Security & Compliance',
+      icon: Shield,
+      description: 'Security best practices and compliance',
+      articles: [
+        { title: 'Zero Trust Implementation', readTime: '35 min', difficulty: 'Advanced' },
+        { title: 'Security Audit Process', readTime: '25 min', difficulty: 'Intermediate' },
+        { title: 'Compliance Requirements', readTime: '20 min', difficulty: 'Intermediate' },
+        { title: 'Incident Response Guide', readTime: '30 min', difficulty: 'Advanced' }
+      ]
+    },
+    {
+      id: 'data-analytics',
+      name: 'Data & Analytics',
       icon: Database,
-      description: 'Client libraries and SDKs for various platforms',
+      description: 'Data processing and analytics documentation',
       articles: [
-        { id: 'javascript-sdk', title: 'JavaScript SDK', description: 'Node.js and browser JavaScript SDK', readTime: '25 min', difficulty: 'Intermediate' },
-        { id: 'python-sdk', title: 'Python SDK', description: 'Python client library and examples', readTime: '25 min', difficulty: 'Intermediate' },
-        { id: 'java-sdk', title: 'Java SDK', description: 'Java client library and integration', readTime: '30 min', difficulty: 'Advanced' },
-        { id: 'dotnet-sdk', title: '.NET SDK', description: 'C# and .NET client library', readTime: '25 min', difficulty: 'Intermediate' },
-        { id: 'mobile-sdks', title: 'Mobile SDKs', description: 'iOS and Android SDKs', readTime: '35 min', difficulty: 'Advanced' }
+        { title: 'Data Pipeline Setup', readTime: '25 min', difficulty: 'Intermediate' },
+        { title: 'Business Intelligence Dashboard', readTime: '20 min', difficulty: 'Intermediate' },
+        { title: 'Data Visualization Guide', readTime: '15 min', difficulty: 'Beginner' },
+        { title: 'Advanced Analytics', readTime: '35 min', difficulty: 'Advanced' }
       ]
     },
     {
-      id: 'tutorials',
-      title: 'Tutorials',
-      icon: Play,
-      description: 'Step-by-step tutorials and walkthroughs',
+      id: 'mobile-development',
+      name: 'Mobile Development',
+      icon: Smartphone,
+      description: 'Mobile app development guides',
       articles: [
-        { id: 'ai-integration', title: 'AI Integration Tutorial', description: 'Integrate AI services into your application', readTime: '45 min', difficulty: 'Advanced' },
-        { id: 'cloud-deployment', title: 'Cloud Deployment', description: 'Deploy your application to the cloud', readTime: '40 min', difficulty: 'Intermediate' },
-        { id: 'security-implementation', title: 'Security Implementation', description: 'Implement security best practices', readTime: '50 min', difficulty: 'Advanced' },
-        { id: 'data-analytics', title: 'Data Analytics Setup', description: 'Set up data collection and analytics', readTime: '35 min', difficulty: 'Intermediate' },
-        { id: 'microservices', title: 'Microservices Architecture', description: 'Build scalable microservices', readTime: '60 min', difficulty: 'Advanced' }
-      ]
-    },
-    {
-      id: 'guides',
-      title: 'User Guides',
-      icon: FileText,
-      description: 'Comprehensive guides for specific features',
-      articles: [
-        { id: 'user-management', title: 'User Management', description: 'Manage users, roles, and permissions', readTime: '30 min', difficulty: 'Intermediate' },
-        { id: 'data-management', title: 'Data Management', description: 'Handle data storage and retrieval', readTime: '25 min', difficulty: 'Intermediate' },
-        { id: 'monitoring', title: 'Monitoring & Logging', description: 'Set up monitoring and logging systems', readTime: '35 min', difficulty: 'Advanced' },
-        { id: 'backup-restore', title: 'Backup & Restore', description: 'Data backup and recovery procedures', readTime: '20 min', difficulty: 'Intermediate' },
-        { id: 'performance-tuning', title: 'Performance Tuning', description: 'Optimize your application performance', readTime: '40 min', difficulty: 'Advanced' }
-      ]
-    },
-    {
-      id: 'examples',
-      title: 'Code Examples',
-      icon: Code,
-      description: 'Practical code examples and snippets',
-      articles: [
-        { id: 'basic-examples', title: 'Basic Examples', description: 'Simple examples to get you started', readTime: '20 min', difficulty: 'Beginner' },
-        { id: 'advanced-examples', title: 'Advanced Examples', description: 'Complex examples for advanced users', readTime: '45 min', difficulty: 'Advanced' },
-        { id: 'integration-examples', title: 'Integration Examples', description: 'Examples of third-party integrations', readTime: '35 min', difficulty: 'Intermediate' },
-        { id: 'best-practices', title: 'Best Practices', description: 'Code examples following best practices', readTime: '30 min', difficulty: 'Intermediate' },
-        { id: 'common-patterns', title: 'Common Patterns', description: 'Reusable patterns and solutions', readTime: '25 min', difficulty: 'Intermediate' }
-      ]
-    },
-    {
-      id: 'troubleshooting',
-      title: 'Troubleshooting',
-      icon: Wrench,
-      description: 'Common issues and their solutions',
-      articles: [
-        { id: 'common-issues', title: 'Common Issues', description: 'Frequently encountered problems and solutions', readTime: '20 min', difficulty: 'Beginner' },
-        { id: 'debugging', title: 'Debugging Guide', description: 'Tools and techniques for debugging', readTime: '30 min', difficulty: 'Intermediate' },
-        { id: 'performance-issues', title: 'Performance Issues', description: 'Identify and fix performance problems', readTime: '35 min', difficulty: 'Advanced' },
-        { id: 'security-issues', title: 'Security Issues', description: 'Common security vulnerabilities and fixes', readTime: '25 min', difficulty: 'Intermediate' },
-        { id: 'support-contacts', title: 'Getting Help', description: 'When and how to contact support', readTime: '10 min', difficulty: 'Beginner' }
+        { title: 'Mobile App Setup', readTime: '20 min', difficulty: 'Intermediate' },
+        { title: 'Cross-Platform Development', readTime: '30 min', difficulty: 'Intermediate' },
+        { title: 'Mobile Testing Guide', readTime: '15 min', difficulty: 'Beginner' },
+        { title: 'App Store Deployment', readTime: '25 min', difficulty: 'Intermediate' }
       ]
     }
   ];
 
-  const toggleSection = (sectionId: string) => {
-    setExpandedSections(prev => 
-      prev.includes(sectionId) 
-        ? prev.filter(id => id !== sectionId)
-        : [...prev, sectionId]
-    );
-  };
+  const apiDocs: ApiDoc[] = [
+    {
+      name: 'REST API',
+      description: 'Complete REST API reference for all services',
+      version: 'v2.1.0',
+      status: 'Stable',
+      endpoints: 45
+    },
+    {
+      name: 'GraphQL API',
+      description: 'Flexible GraphQL API for complex queries',
+      version: 'v1.8.0',
+      status: 'Beta',
+      endpoints: 32
+    },
+    {
+      name: 'Webhooks',
+      description: 'Real-time event notifications and integrations',
+      version: 'v1.5.0',
+      status: 'Stable',
+      endpoints: 18
+    },
+    {
+      name: 'SDK Libraries',
+      description: 'Client libraries for popular programming languages',
+      version: 'v2.0.0',
+      status: 'Stable',
+      endpoints: 12
+    }
+  ];
 
-  const filteredSections = documentationSections.filter(section => {
-    const matchesSearch = section.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         section.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         section.articles.some(article => 
-                           article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           article.description.toLowerCase().includes(searchQuery.toLowerCase())
-                         );
-    const matchesCategory = selectedCategory === 'all' || section.id === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+  const filteredCategories = selectedCategory === 'all' 
+    ? docCategories 
+    : docCategories.filter(cat => cat.id === selectedCategory);
+
+  const filteredArticles = filteredCategories.flatMap(cat => 
+    cat.articles.filter(article => 
+      !searchQuery || 
+      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      article.difficulty.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  );
 
   const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty.toLowerCase()) {
-      case 'beginner':
-        return 'bg-green-500/20 text-green-400';
-      case 'intermediate':
-        return 'bg-yellow-500/20 text-yellow-400';
-      case 'advanced':
-        return 'bg-red-500/20 text-red-400';
+    switch (difficulty) {
+      case 'Beginner':
+        return 'text-green-400 bg-green-400/10 border-green-400/20';
+      case 'Intermediate':
+        return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20';
+      case 'Advanced':
+        return 'text-red-400 bg-red-400/10 border-red-400/20';
       default:
-        return 'bg-zinc-500/20 text-zinc-400';
+        return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
     }
+  };
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'Stable':
+        return 'text-green-400 bg-green-400/10 border-green-400/20';
+      case 'Beta':
+        return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20';
+      case 'Alpha':
+        return 'text-red-400 bg-red-400/10 border-red-400/20';
+      case 'Deprecated':
+        return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
+      default:
+        return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
+    }
+  };
+
+  const toggleCategory = (categoryId: string) => {
+    setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Header Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark to-zion-purple opacity-20"></div>
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Documentation
-            </h1>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto mb-8">
-              Comprehensive guides, tutorials, and API references to help you build amazing applications 
-              with Zion Tech Group's cutting-edge technology solutions.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-zinc-300">
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-zion-cyan" />
-                <span>Step-by-step Guides</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-zion-cyan" />
-                <span>Code Examples</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-zion-cyan" />
-                <span>API References</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+    <>
+      <SEO 
+        title="Documentation - Zion Tech Group"
+        description="Comprehensive documentation for Zion Tech Group services, APIs, and development guides. Get started quickly with our detailed tutorials and references."
+        keywords="documentation, API docs, tutorials, guides, Zion Tech Group, development"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+        {/* Header Section */}
+        <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <motion.div
 
-      {/* Search and Filter Section */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-6"
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Search */}
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zinc-400" />
-              <input
-                type="text"
-                placeholder="Search documentation..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              />
-            </div>
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Documentation{' '}
+                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Center
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+                Everything you need to get started with Zion Tech Group services. 
+                From quick start guides to advanced API documentation.
+              </p>
+              
+              {/* Search Form */}
+              <form className="max-w-2xl mx-auto">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
+                  <input
+                    type="text"
+                    placeholder="Search documentation, APIs, or guides..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors text-lg"
+                  />
+                </div>
+              </form>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Documentation Categories */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Documentation Categories
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Browse our comprehensive documentation organized by category. 
+                Find guides, tutorials, and references for all our services.
+              </p>
+            </motion.div>
 
             {/* Category Filter */}
-            <div>
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="flex flex-wrap justify-center gap-3 mb-12"
+            >
+              <button
+                onClick={() => setSelectedCategory('all')}
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  selectedCategory === 'all'
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
+                }`}
               >
-                {categories.map((category) => (
-                  <option key={category.id} value={category.id}>
-                    {category.name} ({category.count})
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Quick Actions */}
-            <div className="flex space-x-3">
-              <button className="flex-1 px-4 py-3 bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30 rounded-lg hover:bg-zion-cyan/30 transition-colors flex items-center justify-center">
-                <Download className="w-4 h-4 mr-2" />
-                Download PDF
+                All Categories
               </button>
-              <button className="flex-1 px-4 py-3 bg-zion-purple/20 text-zion-purple border border-zion-purple/30 rounded-lg hover:bg-zion-purple/30 transition-colors flex items-center justify-center">
-                <Share2 className="w-4 h-4 mr-2" />
-                Share
-              </button>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Documentation Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Sidebar Navigation */}
-          <div className="lg:col-span-1">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-6 sticky top-8"
-            >
-              <h3 className="text-lg font-bold text-white mb-4">Quick Navigation</h3>
-              <nav className="space-y-2">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`w-full text-left p-3 rounded-lg transition-colors ${
-                      selectedCategory === category.id
-                        ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
-                        : 'text-zinc-300 hover:bg-zinc-700/30 hover:text-white'
-                    }`}
-                  >
-                    <div className="flex items-center space-x-3">
-                      <category.icon className="w-4 h-4" />
-                      <span className="text-sm font-medium">{category.name}</span>
-                      <span className="ml-auto text-xs text-zinc-400">{category.count}</span>
-                    </div>
-                  </button>
-                ))}
-              </nav>
-
-              <div className="mt-8 pt-6 border-t border-zinc-700/50">
-                <h4 className="text-sm font-semibold text-zinc-300 mb-3">Additional Resources</h4>
-                <div className="space-y-2">
-                  <Link
-                    to="/blog"
-                    className="flex items-center space-x-2 text-zinc-400 hover:text-zion-cyan transition-colors text-sm"
-                  >
-                    <FileText className="w-4 h-4" />
-                    <span>Blog & Updates</span>
-                  </Link>
-                  <Link
-                    to="/support"
-                    className="flex items-center space-x-2 text-zinc-400 hover:text-zion-cyan transition-colors text-sm"
-                  >
-                    <HelpCircle className="w-4 h-4" />
-                    <span>Support Center</span>
-                  </Link>
-                  <Link
-                    to="/contact"
-                    className="flex items-center space-x-2 text-zinc-400 hover:text-zion-cyan transition-colors text-sm"
-                  >
-                    <MessageSquare className="w-4 h-4" />
-                    <span>Contact Us</span>
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Main Content */}
-          <div className="lg:col-span-3">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="space-y-8"
-            >
-              {filteredSections.map((section, sectionIndex) => (
-                <div
-                  key={section.id}
-                  className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl overflow-hidden"
+              {docCategories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
+                  }`}
                 >
-                  {/* Section Header */}
-                  <button
-                    onClick={() => toggleSection(section.id)}
-                    className="w-full p-6 text-left hover:bg-zinc-700/30 transition-colors"
-                  >
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-4">
-                        <div className="w-12 h-12 bg-zion-cyan/20 rounded-xl flex items-center justify-center">
-                          <section.icon className="w-6 h-6 text-zion-cyan" />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-bold text-white">{section.title}</h3>
-                          <p className="text-zinc-400">{section.description}</p>
-                        </div>
-                      </div>
-                      {expandedSections.includes(section.id) ? (
-                        <ChevronDown className="w-6 h-6 text-zinc-400" />
-                      ) : (
-                        <ChevronRight className="w-6 h-6 text-zinc-400" />
-                      )}
-                    </div>
-                  </button>
-
-                  {/* Section Content */}
-                  {expandedSections.includes(section.id) && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="border-t border-zinc-700/50"
-                    >
-                      <div className="p-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          {section.articles.map((article, articleIndex) => (
-                            <motion.div
-                              key={article.id}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ duration: 0.3, delay: 0.1 * articleIndex }}
-                              className="group"
-                            >
-                              <Link
-                                to={`/docs/${section.id}/${article.id}`}
-                                className="block p-4 border border-zinc-600 rounded-lg hover:border-zion-cyan/30 hover:bg-zinc-700/30 transition-all duration-300"
-                              >
-                                <div className="flex items-start justify-between mb-3">
-                                  <h4 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">
-                                    {article.title}
-                                  </h4>
-                                  <ArrowRight className="w-4 h-4 text-zinc-400 group-hover:text-zion-cyan transition-colors" />
-                                </div>
-                                <p className="text-zinc-400 text-sm mb-3 line-clamp-2">
-                                  {article.description}
-                                </p>
-                                <div className="flex items-center justify-between text-xs">
-                                  <span className="text-zinc-500">{article.readTime}</span>
-                                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(article.difficulty)}`}>
-                                    {article.difficulty}
-                                  </span>
-                                </div>
-                              </Link>
-                            </motion.div>
-                          ))}
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </div>
+                  {category.name}
+                </button>
               ))}
             </motion.div>
+
+            {/* Categories Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredCategories.map((category, index) => (
+                <motion.div
+                  key={category.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:border-cyan-400/50 transition-all duration-300"
+                >
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                        <category.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white">{category.name}</h3>
+                        <p className="text-sm text-gray-400">{category.description}</p>
+
+                      </div>
+                      
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center space-x-4 text-slate-400 text-sm">
+                          <span className="flex items-center">
+                            <Clock className="w-4 h-4 mr-1" />
+                            {guide.readTime}
+                          </span>
+                          <span>{guide.difficulty}</span>
+                        </div>
+                        <span className="text-slate-400 text-sm">{guide.views} views</span>
+                      </div>
+                      
+                      <button className="w-full bg-slate-700 text-white py-3 px-6 rounded-xl font-semibold hover:bg-slate-600 transition-colors duration-300">
+                        Read Guide
+                      </button>
+                    </div>
+
+                    <div className="space-y-3 mb-4">
+                      {category.articles.slice(0, 3).map((article, idx) => (
+                        <div key={idx} className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+                          <div className="flex-1">
+                            <h4 className="text-white font-medium text-sm">{article.title}</h4>
+                            <div className="flex items-center gap-2 mt-1">
+                              <span className="text-xs text-gray-400">{article.readTime}</span>
+                              <span className="text-xs text-gray-400">•</span>
+                              <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${getDifficultyColor(article.difficulty)}`}>
+                                {article.difficulty}
+                              </span>
+                            </div>
+                          </div>
+                          <ChevronRight className="w-4 h-4 text-gray-400" />
+                        </div>
+                      ))}
+                    </div>
+
+                    <button
+                      onClick={() => toggleCategory(category.id)}
+                      className="w-full py-3 px-4 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+                    >
+                      {expandedCategory === category.id ? 'Show Less' : 'View All Articles'}
+                      {expandedCategory === category.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                    </button>
+
+                    {expandedCategory === category.id && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="mt-4 space-y-3"
+                      >
+                        {category.articles.slice(3).map((article, idx) => (
+                          <div key={idx} className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+                            <div className="flex-1">
+                              <h4 className="text-white font-medium text-sm">{article.title}</h4>
+                              <div className="flex items-center gap-2 mt-1">
+                                <span className="text-xs text-gray-400">{article.readTime}</span>
+                                <span className="text-xs text-gray-400">•</span>
+                                <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${getDifficultyColor(article.difficulty)}`}>
+                                  {article.difficulty}
+                                </span>
+                              </div>
+                            </div>
+                            <ChevronRight className="w-4 h-4 text-gray-400" />
+                          </div>
+                        ))}
+                      </motion.div>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      {/* Quick Start Section */}
-      <div className="bg-zinc-800/30 border-t border-zinc-700/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="text-center"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
-              Follow our quick start guide to have your first application running in minutes.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/docs/getting-started/quick-start"
-                className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Quick Start Guide
-              </Link>
-              <Link
-                to="/docs/getting-started/first-project"
-                className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
-              >
-                Build Your First App
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+        {/* API Documentation */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                API Documentation
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive API references, SDKs, and integration guides for developers.
+              </p>
+            </motion.div>
 
-      {/* Help & Support Section */}
-      <div className="bg-zinc-800/30 border-t border-zinc-700/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1 }}
-            className="text-center"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Need Help?
-            </h2>
-            <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
-              Can't find what you're looking for? Our support team is here to help.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <HelpCircle className="w-8 h-8 text-zion-cyan" />
-                </div>
-                <h3 className="text-lg font-bold text-white mb-2">Documentation</h3>
-                <p className="text-zinc-400 text-sm mb-4">Browse our comprehensive guides and tutorials</p>
-                <Link
-                  to="/docs"
-                  className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium"
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {apiDocs.map((api, index) => (
+                <motion.div
+                  key={api.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300"
                 >
-                  Explore Docs
-                </Link>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MessageSquare className="w-8 h-8 text-zion-purple" />
-                </div>
-                <h3 className="text-lg font-bold text-white mb-2">Community</h3>
-                <p className="text-zinc-400 text-sm mb-4">Join our community forum for discussions</p>
-                <Link
-                  to="/community"
-                  className="text-zion-purple hover:text-zion-purple-light text-sm font-medium"
-                >
-                  Join Community
-                </Link>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-zion-blue/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-zion-blue" />
-                </div>
-                <h3 className="text-lg font-bold text-white mb-2">Contact Support</h3>
-                <p className="text-zinc-400 text-sm mb-4">Get direct help from our support team</p>
-                <Link
-                  to="/contact"
-                  className="text-zion-blue hover:text-zion-blue-light text-sm font-medium"
-                >
-                  Contact Us
-                </Link>
-              </div>
+                  <div className="text-center mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Code className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-2">{api.name}</h3>
+                    <p className="text-gray-300 text-sm mb-3">{api.description}</p>
+                  </div>
+
+                  <div className="space-y-3 mb-4">
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-gray-400">Version:</span>
+                      <span className="text-white font-mono">{api.version}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-gray-400">Status:</span>
+                      <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${getStatusColor(api.status)}`}>
+                        {api.status}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-gray-400">Endpoints:</span>
+                      <span className="text-white">{api.endpoints}</span>
+                    </div>
+                  </div>
+
+                  <a
+                    href="#"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                  >
+                    View Docs
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </motion.div>
+              ))}
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </section>
+
+        {/* Quick Start Guides */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Quick Start Guides
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Get up and running quickly with our step-by-step guides and tutorials.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: Rocket,
+                  title: '5-Minute Setup',
+                  description: 'Get your first project running in under 5 minutes',
+                  time: '5 min',
+                  difficulty: 'Beginner',
+                  color: 'from-green-500 to-emerald-500'
+                },
+                {
+                  icon: Brain,
+                  title: 'AI Service Integration',
+                  description: 'Integrate AI services into your existing applications',
+                  time: '15 min',
+                  difficulty: 'Intermediate',
+                  color: 'from-purple-500 to-pink-500'
+                },
+                {
+                  icon: Cloud,
+                  title: 'Cloud Deployment',
+                  description: 'Deploy your applications to the cloud with ease',
+                  time: '20 min',
+                  difficulty: 'Intermediate',
+                  color: 'from-blue-500 to-cyan-500'
+                },
+                {
+                  icon: Shield,
+                  title: 'Security Setup',
+                  description: 'Configure security and compliance for your projects',
+                  time: '25 min',
+                  difficulty: 'Advanced',
+                  color: 'from-red-500 to-orange-500'
+                },
+                {
+                  icon: Database,
+                  title: 'Data Pipeline',
+                  description: 'Set up data processing and analytics pipelines',
+                  time: '30 min',
+                  difficulty: 'Advanced',
+                  color: 'from-indigo-500 to-purple-500'
+                },
+                {
+                  icon: Smartphone,
+                  title: 'Mobile App',
+                  description: 'Build and deploy your first mobile application',
+                  time: '45 min',
+                  difficulty: 'Intermediate',
+                  color: 'from-yellow-500 to-orange-500'
+                }
+              ].map((guide, index) => (
+
+                <motion.div
+                  key={resource.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-br ${guide.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <guide.icon className="w-8 h-8 text-white" />
+
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-3">{guide.title}</h3>
+                  <p className="text-gray-300 mb-4">{guide.description}</p>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2 text-sm text-gray-400">
+                      <Clock className="w-4 h-4" />
+                      <span>{guide.time}</span>
+                    </div>
+                    <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${getDifficultyColor(guide.difficulty)}`}>
+                      {guide.difficulty}
+                    </span>
+                  </div>
+                  
+                  <a
+                    href="#"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                  >
+                    Start Guide
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Need Help with Documentation?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Can't find what you're looking for? Our support team is here to help 
+                with any documentation questions or technical issues.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                >
+                  Contact Support
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
+                >
+                  📞 Call Now
+                </a>
+              </div>
+
+            </motion.div>
+          </div>
+        </section>
       </div>
-    </div>
+    </>
   );
 }

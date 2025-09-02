@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone } from 'lucide-react';
-import SEO from '@/components/SEO';
+import SEO from '../../components/SEO';
 import { Link as RouterLink } from 'react-router-dom';
-export default function Blockchain(...args[]):  {
+
+export default function Blockchain() {
   const features = [
     {
       icon: Link,
@@ -186,8 +187,9 @@ export default function Blockchain(...args[]):  {
               Unprecedented security, transparency, and efficiency
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)               => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -215,6 +217,7 @@ export default function Blockchain(...args[]):  {
           </div>
         </div>
       </div>
+
       <div className="relative z-10">
         {/* Hero Section */}
         <section className="pt-32 pb-20">
@@ -279,8 +282,9 @@ export default function Blockchain(...args[]):  {
                 Discover how blockchain is transforming industries across the globe
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {useCases.map((useCase, index)              => (
                 <motion.div
                   key={index}
                   className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300"
@@ -337,8 +341,9 @@ export default function Blockchain(...args[]):  {
                 Our comprehensive approach ensures your blockchain solutions are secure, scalable, and innovative
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)              => (
                 <motion.div
                   key={index}
                   className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300"
@@ -387,8 +392,9 @@ export default function Blockchain(...args[]):  {
                 Choose the plan that fits your blockchain needs. All plans include our core blockchain features.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricing.map((plan, index) => (
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricing.map((plan, index)              => (
                 <motion.div
                   key={index}
                   className={`relative p-8 rounded-2xl ${
@@ -468,8 +474,9 @@ export default function Blockchain(...args[]):  {
                 See measurable improvements in your business processes and customer trust
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)              => (
                 <motion.div
                   key={index}
                   className="flex items-start space-x-4 p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm"
