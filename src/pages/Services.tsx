@@ -1,9 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Brain, 
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Brain, 
   Cloud, 
   Shield, 
   Zap, 
@@ -42,14 +39,97 @@ import {
   FileText,
   MessageCircle,
   Search,
-  BarChart,
-  Users2,
-  Settings,
-  Palette,
-  TrendingUp,
-  Scale,
-  Gauge
-} from 'lucide-react';
+  Clock
+             } from 'lucide-react.ts';
+
+type Service = {
+  title: string;
+  description: string;
+  priceRange: string;
+  learnMoreUrl?: string;
+  ctaUrl?: string;
+};
+
+const featuredServices: Service[] = [
+  {
+    title: 'AI Development & MLOps',
+    description: 'Custom LLMs, RAG, fine-tuning, and MLOps pipelines on AWS/Azure/GCP.',
+    priceRange: '$8,000 - $120,000',
+    learnMoreUrl: 'https://learn.microsoft.com/azure/machine-learning/',
+  },
+  {
+    title: 'Cloud Migration & Modernization',
+    description: 'Lift-and-shift, containerization, and serverless refactors with IaC.',
+    priceRange: '$15,000 - $250,000',
+    learnMoreUrl: 'https://aws.amazon.com/migration-hub/',
+  },
+  {
+    title: 'Zero-Trust Cybersecurity',
+    description: 'ZTA architecture, SOC hardening, SIEM, EDR/XDR integrations.',
+    priceRange: '$5,000 - $90,000',
+    learnMoreUrl: 'https://cloud.google.com/security-command-center',
+  },
+  {
+    title: 'Data Engineering & Analytics',
+    description: 'ELT/ETL, data lakes/warehouses, BI dashboards, KPI design.',
+    priceRange: '$7,500 - $140,000',
+    learnMoreUrl: 'https://cloud.google.com/bigquery/docs',
+  },
+  {
+    title: 'IoT & Edge Platforms',
+    description: 'Secure device onboarding, telemetry pipelines, OTA, and twin modeling.',
+    priceRange: '$12,000 - $180,000',
+    learnMoreUrl: 'https://learn.microsoft.com/azure/iot-hub/',
+  },
+  {
+    title: 'Quantum Readiness Advisory',
+    description: 'PQ crypto readiness, QC PoCs, and quantum-inspired optimizations.',
+    priceRange: '$6,000 - $60,000',
+    learnMoreUrl: 'https://quantum.microsoft.com/azure-quantum',
+  },
+];
+
+const microSaaS: Service[] = [
+  {
+    title: 'LeadGen AI Microsite',
+    description: 'SEO + AI chat, CRM integration, and analytics for B2B lead capture.',
+    priceRange: '$99 - $499/mo',
+    learnMoreUrl: 'https://vercel.com/ai',
+  },
+  {
+    title: 'Agentic Support Bot',
+    description: 'Retrieval-augmented agent with help center and Slack/Teams connectors.',
+    priceRange: '$149 - $999/mo',
+    learnMoreUrl: 'https://platform.openai.com/',
+  },
+  {
+    title: 'Automated Reporting Studio',
+    description: 'Auto-ingest spreadsheets/CSV, generate dashboards and scheduled PDFs.',
+    priceRange: '$79 - $399/mo',
+    learnMoreUrl: 'https://www.metabase.com/',
+  },
+  {
+    title: 'Security Posture Scanner',
+    description: 'Continuous cloud config checks and CIS benchmarks with alerts.',
+    priceRange: '$199 - $1,499/mo',
+    learnMoreUrl: 'https://www.aquasec.com/cloud-security/',
+  },
+  {
+    title: 'Image/Doc OCR Pipeline',
+    description: 'OCR + LLM extraction for invoices, IDs, and contracts at scale.',
+    priceRange: '$0.50 - $2.00 / 1k tokens + hosting',
+    learnMoreUrl: 'https://platform.openai.com/docs/guides/vision',
+  },
+  {
+    title: 'Synthetic Data Generator',
+    description: 'Privacy-safe tabular and text data generation to augment small datasets.',
+    priceRange: '$299 - $1,999/mo',
+    learnMoreUrl: 'https://huggingface.co/',
+  },
+];
+
+const Services: React.FC = (): JSX.Element => {
+  const [activeCategory, setActiveCategory] = useState('all');
 
 export default function Services() {
   const serviceCategories = [

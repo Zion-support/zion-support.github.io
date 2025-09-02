@@ -106,6 +106,7 @@ export function Footer(...args: any[]): any {
         { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning", badge: "ERP" },
         { name: "AI Autonomous Business Operations", href: "/services/ai-autonomous-business-operations-platform", badge: "Automation" },
         { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform", badge: "Analytics" }
+
       ]
     },
     {
@@ -130,6 +131,7 @@ export function Footer(...args: any[]): any {
         { name: 'Manufacturing', href: '/manufacturing-solutions' },
         { name: 'Industry Solutions', href: '/industry-solutions' },
         { name: 'Emerging Tech', href: '/emerging-tech' }
+
       ]
     },
     {
@@ -176,6 +178,11 @@ export function Footer(...args: any[]): any {
     { name: "Education Solutions", href: "/solutions/education" },
     { name: "Startup Solutions", href: "/solutions/startup" }
   ];
+
+    { name: "FAQ", href: "/faq" }
+  ];
+=======
+=======
 
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-purple/30">

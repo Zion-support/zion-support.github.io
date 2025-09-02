@@ -1,6 +1,5 @@
 import React, { useState } from 'react.ts';
 import { Link, useLocation               } from 'react-router-dom.ts';
-=======
 import { cn } from '@/lib/utils';
 import {
   Menu,
@@ -26,6 +25,13 @@ import {
   Cpu,
   Shield,
   Rocket,
+=======
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  ChevronRight,
+  Home,
   Zap,
   Cloud,
   ShoppingCart,
@@ -71,6 +77,7 @@ import {
   Activity,
   Workflow,
   Truck
+
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -162,11 +169,16 @@ interface SidebarItem {
   disabled?: boolean;
 }
 
+
+export function MainSidebar() {
+=======
+
 export function MainSidebar(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<any>(['services']);
   const location = useLocation();
 
+  const toggleSection = (section: string) => {
 =======
 
   const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
@@ -256,13 +268,6 @@ export function MainSidebar(...args: any[]): any {
       ]
     },
     {
-      name: 'Emerging Tech',
-      href: '#',
-      icon: Rocket,
-      children: [
-      title: 'Resources',
-      items: [
-=======
         {
           name: 'Quantum Computing',
           href: '/services/quantum-computing',
@@ -374,6 +379,9 @@ export function MainSidebar(...args: any[]): any {
           icon: MessageCircle,
           description: 'Support Resources'
         },
+=======
+      title: 'Resources',
+      items: [
         {
           name: 'Documentation',
           href: '/docs',
@@ -441,11 +449,6 @@ export function MainSidebar(...args: any[]): any {
             {isFeatured && (
               <Star className="w-3 h-3 text-yellow-400" />
             )}
-          </Link>
-        )}
-      </div>
-    );
-=======
 
 interface MainSidebarProps {
   className?: string;
@@ -605,6 +608,12 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({
 }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
+=======
+          />
+        )}
+      </div>
+    );
+  };
   return (
     <aside
       className={cn(
@@ -612,41 +621,12 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({
         isCollapsed ? 'w-16' : 'w-64',
         className
       )}
-    >
-      <div className="flex flex-col h-full">
-        {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-white/10">
-          {!isCollapsed && (
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-lg font-bold text-white">Zion Tech</span>
-            </div>
-          )}
-          <button
-            onClick={() => setIsCollapsed(!isCollapsed)}
-            className="p-1 rounded-lg hover:bg-white/10 text-gray-400 hover:text-white transition-colors"
-          >
-            {isCollapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-          </button>
-        </div>
-
-        {/* Navigation */}
-        <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
-          {navigationItems.map((item, index) => (
-            <SidebarItem key={index} item={item} />
-          ))}
-        </nav>
-
-        {/* Footer */}
-        <div className="p-4 border-t border-white/10">
-          <div className="flex items-center space-x-3 text-sm text-gray-400">
-            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-            <span>System Online</span>
-          </div>
-        </div>
-      </div>
-    </aside>
+    </>
+  )};
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </>;
   );
 };

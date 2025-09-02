@@ -5,60 +5,57 @@ import {
   Database, 
   Lock, 
   Eye, 
-  FileText, 
+  BarChart3, 
   Users, 
   CheckCircle, 
-  ArrowRight,
   Zap,
   Globe,
-  BarChart3,
+  FileText,
   Settings,
-  AlertTriangle,
-  Clock,
-  Star
+  AlertTriangle
 } from 'lucide-react';
 
 const AIDataGovernancePlatform: React.FC = () => {
   const features = [
     {
-      icon: Shield,
+      icon: <Shield className="w-6 h-6" />,
       title: "AI-Powered Data Classification",
-      description: "Automatically classify and tag sensitive data using advanced ML algorithms"
+      description: "Automatically classify and categorize data based on sensitivity, business value, and regulatory requirements using advanced machine learning algorithms."
     },
     {
-      icon: Lock,
-      title: "Privacy Compliance Automation",
-      description: "GDPR, CCPA, and SOC2 compliance with automated data handling workflows"
+      icon: <Database className="w-6 h-6" />,
+      title: "Intelligent Data Lineage",
+      description: "Track data flow across systems with AI-driven lineage mapping, ensuring complete transparency and auditability of data transformations."
     },
     {
-      icon: Eye,
-      title: "Real-time Data Monitoring",
-      description: "Continuous monitoring of data access patterns and potential breaches"
+      icon: <Lock className="w-6 h-6" />,
+      title: "Smart Access Control",
+      description: "Dynamic access management using AI to analyze user behavior patterns and automatically adjust permissions based on risk assessment."
     },
     {
-      icon: Database,
-      title: "Data Lineage Tracking",
-      description: "Complete audit trail of data movement and transformation across systems"
+      icon: <Eye className="w-6 h-6" />,
+      title: "Real-time Monitoring",
+      description: "Continuous AI-powered surveillance of data access, usage patterns, and potential security threats with instant alerting."
     },
     {
-      icon: Users,
-      title: "Role-Based Access Control",
-      description: "Granular permissions with AI-suggested access patterns"
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Predictive Compliance",
+      description: "AI algorithms predict potential compliance violations before they occur, enabling proactive risk mitigation."
     },
     {
-      icon: FileText,
-      title: "Automated Policy Enforcement",
-      description: "Enforce data policies automatically with ML-driven rule optimization"
+      icon: <Users className="w-6 h-6" />,
+      title: "Behavioral Analytics",
+      description: "Advanced user behavior analysis to detect anomalies and potential insider threats using machine learning models."
     }
   ];
 
   const benefits = [
-    "Reduce compliance costs by 60% through automation",
-    "Achieve 99.9% data accuracy with AI validation",
-    "Cut data breach response time by 80%",
-    "Streamline audit processes with automated reporting",
-    "Improve data quality scores by 40%",
-    "Ensure regulatory compliance across all jurisdictions"
+    "Reduce data governance costs by 40-60% through automation",
+    "Achieve 99.9% compliance accuracy with AI-powered validation",
+    "Cut incident response time from hours to minutes",
+    "Eliminate manual data classification errors",
+    "Provide real-time visibility into data usage patterns",
+    "Enable proactive risk management and threat prevention"
   ];
 
   const pricing = [
@@ -67,24 +64,24 @@ const AIDataGovernancePlatform: React.FC = () => {
       price: "$2,500",
       period: "/month",
       features: [
-        "Up to 10TB data management",
+        "Up to 1TB data management",
         "Basic AI classification",
-        "GDPR compliance tools",
-        "Standard reporting",
-        "Email support"
+        "Standard compliance reporting",
+        "Email support",
+        "Basic audit trails"
       ]
     },
     {
       plan: "Professional",
-      price: "$7,500",
+      price: "$8,500",
       period: "/month",
       features: [
-        "Up to 100TB data management",
+        "Up to 10TB data management",
         "Advanced AI classification",
-        "Full compliance suite",
         "Real-time monitoring",
         "Priority support",
-        "Custom policies"
+        "Advanced analytics",
+        "Custom compliance rules"
       ]
     },
     {
@@ -93,173 +90,149 @@ const AIDataGovernancePlatform: React.FC = () => {
       period: "/month",
       features: [
         "Unlimited data management",
-        "Custom AI models",
-        "Multi-cloud support",
+        "Full AI governance suite",
+        "Custom AI model training",
         "24/7 dedicated support",
+        "Advanced threat detection",
         "Custom integrations",
-        "White-label options"
+        "On-premise deployment"
       ]
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2" />
-              AI-Powered Data Governance
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"
+      >
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex justify-center mb-6">
+            <div className="p-3 bg-blue-600/20 rounded-full">
+              <Shield className="w-12 h-12 text-blue-400" />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Data Governance
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Platform
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your data governance with AI-powered automation. Ensure compliance, 
-              protect sensitive data, and maintain data quality across your entire organization.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-              <a
-                href="#demo"
-                className="inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-gray-500 hover:text-white transition-all duration-200"
-              >
-                Watch Demo
-              </a>
-            </div>
-          </motion.div>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI Data Governance Platform
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Transform your data governance with AI-powered automation, intelligent compliance, 
+            and proactive risk management. Secure, compliant, and efficient data operations.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
+              Start Free Trial
+            </button>
+            <button className="px-8 py-4 border border-gray-600 text-gray-300 hover:border-gray-500 font-semibold rounded-lg transition-colors">
+              Schedule Demo
+            </button>
+          </div>
         </div>
-      </section>
+      </motion.div>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8"
+      >
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Intelligent Data Governance Features
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              AI-Powered Features
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Leverage AI to automate complex data governance tasks and ensure compliance
+              Leverage cutting-edge artificial intelligence to automate and enhance every aspect of your data governance
             </p>
-          </motion.div>
-
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all"
               >
-                <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-blue-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-400">
-                  {feature.description}
-                </p>
+                <div className="text-blue-400 mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-400">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"
+      >
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Data Governance
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Platform?
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              See measurable improvements in compliance, security, and operational efficiency
+              Experience unprecedented efficiency and security in data governance
             </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="flex items-start space-x-3"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-start space-x-4"
               >
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
+                <p className="text-gray-300 text-lg">{benefit}</p>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8"
+      >
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Flexible Pricing Plans
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Choose the plan that fits your organization's data governance needs
+              Choose the plan that fits your organization's needs and scale
             </p>
-          </motion.div>
-
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                  index === 1 
-                    ? 'border-blue-500/50 bg-blue-500/5' 
-                    : 'border-slate-700'
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`bg-white/5 backdrop-blur-lg rounded-xl p-8 border ${
+                  index === 1 ? 'border-blue-500/50 bg-blue-500/10' : 'border-white/10'
                 }`}
               >
-                {index === 1 && (
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-500 text-white text-sm font-medium mb-4">
-                    Most Popular
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
-                )}
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-white">{plan.price}</span>
-                  <span className="text-gray-400">{plan.period}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
@@ -269,83 +242,87 @@ const AIDataGovernancePlatform: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="/contact"
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                    index === 1
-                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
-                      : 'border border-slate-600 text-gray-300 hover:border-slate-500 hover:text-white'
-                  }`}
-                >
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+                  index === 1
+                    ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                    : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
+                }`}>
                   Get Started
-                </a>
+                </button>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20"
+      >
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Data Governance?
-            </h2>
-            <p className="text-xl text-gray-400 mb-8">
-              Join leading organizations that trust our AI-powered platform for their data governance needs
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200"
-              >
-                Schedule a Demo
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-gray-500 hover:text-white transition-all duration-200"
-              >
-                Call +1 (302) 464-0950
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Info */}
-      <section className="py-12 px-4 border-t border-slate-700">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="grid md:grid-cols-3 gap-8 text-gray-400">
-            <div>
-              <h3 className="text-white font-semibold mb-2">Contact Us</h3>
-              <p>kleber@ziontechgroup.com</p>
-              <p>+1 (302) 464-0950</p>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-2">Address</h3>
-              <p>364 E Main St STE 1008</p>
-              <p>Middletown DE 19709</p>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-2">Website</h3>
-              <a 
-                href="https://ziontechgroup.com" 
-                className="text-blue-400 hover:text-blue-300 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ziontechgroup.com
-              </a>
-            </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Data Governance?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join leading organizations that trust our AI-powered platform for their data governance needs
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
+              Start Free Trial
+            </button>
+            <button className="px-8 py-4 border border-white/30 text-white hover:bg-white/10 font-semibold rounded-lg transition-colors">
+              Contact Sales
+            </button>
           </div>
         </div>
-      </section>
+      </motion.section>
+
+      {/* Contact Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8"
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Get in Touch
+          </h2>
+          <p className="text-xl text-gray-400 mb-8">
+            Have questions about our AI Data Governance Platform? Our experts are here to help.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="p-3 bg-blue-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <Globe className="w-8 h-8 text-blue-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Website</h3>
+              <p className="text-gray-400">https://ziontechgroup.com</p>
+            </div>
+            <div>
+              <div className="p-3 bg-blue-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <FileText className="w-8 h-8 text-blue-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+              <p className="text-gray-400">kleber@ziontechgroup.com</p>
+            </div>
+            <div>
+              <div className="p-3 bg-blue-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <Settings className="w-8 h-8 text-blue-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+              <p className="text-gray-400">+1 (302) 464-0950</p>
+            </div>
+          </div>
+          <div className="mt-12 p-6 bg-white/5 rounded-xl border border-white/10">
+            <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+            <p className="text-gray-400">364 E Main St STE 1008, Middletown DE 19709</p>
+          </div>
+        </div>
+      </motion.section>
     </div>
   );
 };

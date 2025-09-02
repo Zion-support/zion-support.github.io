@@ -1,14 +1,3 @@
-export interface InnovativeService2025 {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
   useCases: string[];
   targetAudience: string[];
   tags: string[];
@@ -32,7 +21,6 @@ export interface InnovativeService2025 {
     compliance: string[];
   };
 import { ProductListing              } from '@/types/listings';
-=======
   competitors: string[];
   marketTrend: string;
   aiModel?: string;
@@ -46,6 +34,7 @@ import { ProductListing              } from '@/types/listings';
     caseStudies?: string[];
   };
 }
+=======
 
 export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
   // AI-Powered Quantum Computing Platform
@@ -1169,5 +1158,113 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
   }
 ];
 
+export const INNOVATIVE_SERVICE_CATEGORIES_2025 = {
+  "AI & Machine Learning": {
+    icon: "🧠",
+    description: "Advanced artificial intelligence and machine learning solutions",
+    color: "from-blue-500 to-indigo-500",
+    count: 6
+  },
+  "Cybersecurity": {
+    icon: "🛡️",
+    description: "Next-generation security and data protection solutions",
+    color: "from-red-500 to-pink-500",
+    count: 3
+  },
+  "Cloud & DevOps": {
+    icon: "☁️",
+    description: "Cloud infrastructure and development operations automation",
+    color: "from-cyan-500 to-blue-500",
+    count: 3
+  },
+  "Emerging Technologies": {
+    icon: "🚀",
+    description: "Cutting-edge technologies like quantum computing and blockchain",
+    color: "from-purple-500 to-pink-500",
+    count: 3
+  },
+  "Data & Analytics": {
+    icon: "📊",
+    description: "Data processing, analytics, and business intelligence solutions",
+    color: "from-green-500 to-teal-500",
+    count: 2
+  },
+  "Micro SaaS": {
+    icon: "💼",
+    description: "Affordable software solutions for small businesses",
+    color: "from-orange-500 to-red-500",
+    count: 3
+  }
+};
+
+export const INNOVATIVE_SERVICE_SUBCATEGORIES_2025 = {
+  "AI & Machine Learning": [
+    "Business Intelligence",
+    "Compliance",
+    "Sales Automation",
+    "Content Creation",
+    "Customer Support"
+  ],
+  "Cybersecurity": [
+    "Quantum Security",
+    "Zero Trust",
+    "Data Privacy"
+  ],
+  "Cloud & DevOps": [
+    "Multi-Cloud",
+    "DevOps Automation",
+    "Cost Optimization"
+  ],
+  "Emerging Technologies": [
+    "Quantum Computing",
+    "IoT",
+    "Blockchain"
+  ],
+  "Data & Analytics": [
+    "Real-Time Analytics",
+    "Predictive Analytics"
+  ],
+  "Micro SaaS": [
+    "CRM",
+    "Helpdesk",
+    "Project Management"
+  ]
+};
+
+export const INNOVATIVE_PRICING_TIERS_2025 = {
+  "Starter": {
+    price: "$2,000 - $5,000",
+    features: ["Basic functionality", "Standard support", "Core integrations", "Up to 10 users"],
+    color: "from-green-500 to-emerald-500"
+  },
+  "Professional": {
+    price: "$6,000 - $15,000",
+    features: ["Advanced features", "Priority support", "Full integrations", "Up to 100 users", "Customization"],
+    color: "from-blue-500 to-indigo-500"
+  },
+  "Enterprise": {
+    price: "$16,000 - $30,000",
+    features: ["Enterprise features", "24/7 support", "Custom integrations", "Unlimited users", "White-label options", "Dedicated account manager"],
+    color: "from-purple-500 to-pink-500"
+  }
+};
+
+export const INNOVATIVE_CONTACT_INFO_2025 = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  website: "https://ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709",
+  hours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
+  emergency: "24/7 Emergency Support Available"
+};
+
+export const INNOVATIVE_SERVICE_GUARANTEES_2025 = {
+  "Quality Assurance": "100% satisfaction guarantee with 30-day money-back policy",
+  "Performance": "99.9% uptime guarantee with SLA commitments",
+  "Security": "Enterprise-grade security with regular penetration testing",
+  "Support": "24/7 technical support with response time guarantees",
+  "Updates": "Regular feature updates and security patches included",
+  "Training": "Comprehensive onboarding and training included"
+};
 =======
 export default INNOVATIVE_SERVICES_2025;

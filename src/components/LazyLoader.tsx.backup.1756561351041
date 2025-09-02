@@ -1,0 +1,12 @@
+import React, { Suspense, lazy } from 'react.ts'
+import { LoadingSpinner             } from './ui/LoadingSpinner'
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+interface LazyLoaderProps extends React.PropsWithChildren<{}> {
+
+component: React.ComponentType<any>;
+fallback?: React.ReactNode;
+props?}
+
+export const LazyPricing = lazy(() => import('../pages/Pricing'));
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

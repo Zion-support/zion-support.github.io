@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState, useCallback } from 'react.ts';
+import { motion, AnimatePresence           } from 'framer-motion.ts';
 import { 
   Eye, 
   EyeOff, 
@@ -57,6 +57,7 @@ export function AccessibilityEnhancer({
       }
     }
   }, [applySettings]);
+
   // Keyboard navigation support
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {;
@@ -497,6 +498,7 @@ export function AccessibilityEnhancer({
                   {isScanning ? 'Scanning...' : 'Scan Now'}
                 </button>
               </div>
+
               {issues.length > 0 && (
                 <div className="space-y-2 max-h-32 overflow-y-auto">
                   {issues.map((issue) => (
@@ -558,6 +560,7 @@ export function AccessibilityEnhancer({
           </motion.button>
         )}
       </AnimatePresence>
+
       {/* Notifications */}
       <div className="fixed top-4 right-4 z-50 space-y-2">
         <AnimatePresence>

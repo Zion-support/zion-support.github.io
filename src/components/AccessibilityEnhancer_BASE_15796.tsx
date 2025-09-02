@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState, useCallback } from 'react.ts';
+import { motion, AnimatePresence          } from 'framer-motion.ts';
 import { 
   Eye, 
   EyeOff, 
