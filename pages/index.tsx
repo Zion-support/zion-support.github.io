@@ -2,7 +2,7 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { services, getServicesByCategory } from '../data/services';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, Phone, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
 
 const Home: NextPage = () => {
@@ -29,7 +29,8 @@ const Home: NextPage = () => {
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
             Leading technology solutions provider helping businesses transform their digital presence 
             with cutting-edge AI, cloud architecture, and innovative development services. From micro SaaS 
-            applications to enterprise AI solutions, we deliver measurable results that drive growth and efficiency.
+            applications to enterprise AI solutions, quantum computing, and blockchain technology, we deliver 
+            measurable results that drive growth and efficiency.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
@@ -118,6 +119,107 @@ const Home: NextPage = () => {
               <Link href="/services/ai-services" className="text-blue-600 hover:text-blue-700 font-semibold">
                 Learn More →
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Innovative Services Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Cutting-Edge Technology Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Explore our innovative services that leverage the latest technologies including quantum computing, 
+              blockchain, AI, and edge computing to give your business a competitive advantage.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Quantum Computing */}
+            <div className="bg-gradient-to-br from-purple-50 to-blue-50 p-6 rounded-lg border border-purple-100">
+              <div className="text-purple-600 mb-4">
+                <span className="text-3xl">⚛️</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Quantum Computing</h3>
+              <p className="text-gray-600 mb-4">
+                Leverage quantum computing power for complex optimization problems, cryptography, and scientific research.
+              </p>
+              <div className="text-sm text-purple-600 font-semibold">Starting from $25,000</div>
+            </div>
+
+            {/* Blockchain Solutions */}
+            <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-lg border border-green-100">
+              <div className="text-green-600 mb-4">
+                <span className="text-3xl">⛓️</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Blockchain Solutions</h3>
+              <p className="text-gray-600 mb-4">
+                Build secure, decentralized applications with smart contracts and blockchain infrastructure.
+              </p>
+              <div className="text-sm text-green-600 font-semibold">Starting from $20,000</div>
+            </div>
+
+            {/* AI-Powered Solutions */}
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-100">
+              <div className="text-blue-600 mb-4">
+                <span className="text-3xl">🤖</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">AI-Powered Solutions</h3>
+              <p className="text-gray-600 mb-4">
+                Transform your business with intelligent automation, predictive analytics, and machine learning.
+              </p>
+              <div className="text-sm text-blue-600 font-semibold">Starting from $8,000</div>
+            </div>
+
+            {/* Edge Computing */}
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-lg border border-orange-100">
+              <div className="text-orange-600 mb-4">
+                <span className="text-3xl">🌐</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Edge Computing</h3>
+              <p className="text-gray-600 mb-4">
+                Ultra-low latency processing for IoT applications, autonomous systems, and real-time analytics.
+              </p>
+              <div className="text-sm text-orange-600 font-semibold">Starting from $12,000</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+            <p className="text-xl text-gray-600 mb-8">
+              Ready to transform your business with cutting-edge technology? Contact our experts for a free consultation.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="text-blue-600 mb-4">
+                  <Phone className="w-8 h-8 mx-auto" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                <p className="text-gray-600">+1 302 464 0950</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="text-blue-600 mb-4">
+                  <Mail className="w-8 h-8 mx-auto" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-600">kleber@ziontechgroup.com</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="text-blue-600 mb-4">
+                  <MapPin className="w-8 h-8 mx-auto" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
             </div>
           </div>
         </div>

@@ -72,7 +72,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 "@type": "ContactPoint",
                 "telephone": "+1-302-464-0950",
                 "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
+                "email": "kleber@ziontechgroup.com",
+                "availableLanguage": "English"
               },
               "sameAs": [
                 "https://linkedin.com/company/ziontechgroup",
