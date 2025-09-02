@@ -1,52 +1,55 @@
-import React from 'react';
-import Head from 'next/head';
+import React, { useEffect } from 'react';
 
 interface SEOEnhancerProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
+  children: React.ReactNode;
 }
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group - Leading Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, cloud architecture, and innovative development services.',
-  keywords = 'AI solutions, cloud architecture, DevOps, cybersecurity, digital transformation',
-  canonicalUrl,
-  ogImage = '/og-image.jpg',
-  ogType = 'website'
-}) => {
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:image" content={ogImage} />
-      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Additional SEO meta tags */}
-      <meta name="theme-color" content="#2563eb" />
-      <meta name="msapplication-TileColor" content="#2563eb" />
-    </Head>
-  );
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ children }) => {
+  useEffect(() => {
+    // Add structured data
+    const addStructuredData = () => {
+      const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Zion Tech Group",
+        "url": "https://ziontechgroup.com",
+        "logo": "https://ziontechgroup.com/logo.png",
+        "description": "Leading provider of cutting-edge technology solutions, AI services, and digital transformation services.",
+        "sameAs": [
+          "https://linkedin.com/company/zion-tech-group",
+          "https://twitter.com/ziontechgroup"
+        ]
+      };
+
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    };
+
+    // Add meta tags for better SEO
+    const addMetaTags = () => {
+      const metaTags = [
+        { name: 'robots', content: 'index, follow' },
+        { name: 'googlebot', content: 'index, follow' },
+        { name: 'bingbot', content: 'index, follow' }
+      ];
+
+      metaTags.forEach(tag => {
+        if (!document.querySelector(`meta[name="${tag.name}"]`)) {
+          const meta = document.createElement('meta');
+          meta.name = tag.name;
+          meta.content = tag.content;
+          document.head.appendChild(meta);
+        }
+      });
+    };
+
+    addStructuredData();
+    addMetaTags();
+  }, []);
+
+  return <>{children}</>;
 };
 
 export default SEOEnhancer;

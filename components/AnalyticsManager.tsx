@@ -2,12 +2,6 @@
 
 import { useEffect, useState, useCallback } from 'react';
 
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
-}
-
 interface AnalyticsEvent {
   name: string;
   category: string;
@@ -42,9 +36,6 @@ const AnalyticsManager: React.FC = () => {
     conversionRate: 0,
   });
 
-  // Suppress unused variable warning for now
-  console.log('User behavior tracking:', userBehavior);
-
   // Initialize analytics
   useEffect(() => {
     initializeAnalytics();
@@ -58,8 +49,8 @@ const AnalyticsManager: React.FC = () => {
 
   const initializeAnalytics = useCallback(() => {
     // Initialize Google Analytics
-    if (typeof window.gtag !== 'undefined') {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof gtag !== 'undefined') {
+      gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: document.title,
         page_location: window.location.href,
         custom_map: {
@@ -121,8 +112,8 @@ const AnalyticsManager: React.FC = () => {
     };
 
     // Google Analytics
-    if (typeof window.gtag !== 'undefined') {
-      window.gtag('event', 'page_view', pageData);
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'page_view', pageData);
     }
 
     // Custom analytics
@@ -145,8 +136,8 @@ const AnalyticsManager: React.FC = () => {
     if (!isInitialized) return;
 
     // Google Analytics
-    if (typeof window.gtag !== 'undefined') {
-      window.gtag('event', event.name, {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', event.name, {
         event_category: event.category,
         event_label: event.label,
         value: event.value,
@@ -183,8 +174,8 @@ const AnalyticsManager: React.FC = () => {
   }, []);
 
   const trackUserProperties = useCallback((properties: Record<string, any>) => {
-    if (typeof window.gtag !== 'undefined') {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof gtag !== 'undefined') {
+      gtag('config', 'GA_MEASUREMENT_ID', {
         custom_map: properties,
       });
     }
@@ -200,23 +191,23 @@ const AnalyticsManager: React.FC = () => {
 
   const trackPerformance = useCallback((metrics: PerformanceMetrics) => {
     // Google Analytics
-    if (typeof window.gtag !== 'undefined') {
-      window.gtag('event', 'web_vitals', {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'web_vitals', {
         name: 'FCP',
         value: Math.round(metrics.fcp),
         event_category: 'Performance',
       });
-      window.gtag('event', 'web_vitals', {
+      gtag('event', 'web_vitals', {
         name: 'LCP',
         value: Math.round(metrics.lcp),
         event_category: 'Performance',
       });
-      window.gtag('event', 'web_vitals', {
+      gtag('event', 'web_vitals', {
         name: 'FID',
         value: Math.round(metrics.fid),
         event_category: 'Performance',
       });
-      window.gtag('event', 'web_vitals', {
+      gtag('event', 'web_vitals', {
         name: 'CLS',
         value: Math.round(metrics.cls * 1000),
         event_category: 'Performance',
@@ -233,17 +224,12 @@ const AnalyticsManager: React.FC = () => {
   }, []);
 
   const trackConversion = useCallback((conversionType: string, value?: number) => {
-    const event: AnalyticsEvent = {
+    trackEvent({
       name: 'conversion',
       category: 'Conversion',
       action: conversionType,
-    };
-    
-    if (value !== undefined) {
-      event.value = value;
-    }
-    
-    trackEvent(event);
+      value: value,
+    });
 
     // Update user behavior
     setUserBehavior(prev => ({

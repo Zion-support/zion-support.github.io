@@ -1,7 +1,5 @@
-import React from
-  'react';
-import { Helmet } from
-  'react-helmet-async';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
   title: string;
@@ -14,19 +12,17 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title, 
+  title,
   description,
-  keywords = "AI, artificial intelligence, technology, automation, machine learning, cloud computing, cybersecurity, data analytics, business solutions", 
+  keywords = "AI, artificial intelligence, technology, automation, machine learning, cloud computing, cybersecurity, data analytics, business solutions",
   image = "https://ziontechgroup.com/api/placeholder/1200/630",
-  url = "https://ziontechgroup.com", 
+  url = "https://ziontechgroup.com",
   type = "website",
   siteName = "Zion Tech Group"
 }) => {
-  const fullTitle = title.includes(
-  'Zion Tech Group') ? title : `${title} - Zion Tech Group`;
-  const fullUrl = url.startsWith(
-  'http') ? url : `https://ziontechgroup.com${url}`;
-  
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;
+  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
+
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -51,24 +47,13 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      
-      {/* Additional Meta Tags */}
-      <meta name="theme-color" content="#1e293b" />
-      <meta name="msapplication-TileColor" content="#1e293b" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />
       
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
+      {/* Additional SEO Meta Tags */}
+      <meta name="theme-color" content="#1e40af" />
+      <meta name="msapplication-TileColor" content="#1e40af" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
@@ -78,26 +63,18 @@ const SEO: React.FC<SEOProps> = ({
           "name": "Zion Tech Group",
           "url": "https://ziontechgroup.com",
           "logo": "https://ziontechgroup.com/logo.png",
-          "description": "Leading provider of AI-powered solutions and technology services",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "123 Technology Drive",
-            "addressLocality": "San Francisco",
-            "addressRegion": "CA",
-            "postalCode": "94105",
-            "addressCountry": "US"
-          },
+          "description": "Leading provider of cutting-edge technology solutions, AI services, and digital transformation services.",
+          "sameAs": [
+            "https://linkedin.com/company/zion-tech-group",
+            "https://twitter.com/ziontechgroup"
+          ],
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+1-555-123-4567",
+            "telephone": "+1-555-ZION-TECH",
             "contactType": "customer service",
-            "email": "contact@ziontechgroup.com"
-          },
-          "sameAs": [
-            "https://linkedin.com/company/ziontechgroup",
-            "https://twitter.com/ziontechgroup",
-            "https://github.com/ziontechgroup"
-          ]
+            "areaServed": "US",
+            "availableLanguage": "English"
+          }
         })}
       </script>
     </Helmet>
@@ -105,3 +82,4 @@ const SEO: React.FC<SEOProps> = ({
 };
 
 export default SEO;
+export { SEO };

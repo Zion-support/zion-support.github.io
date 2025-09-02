@@ -18,20 +18,18 @@ eslint: {
   typescript: {
     ignoreBuildErrors: true,},
   images: {
-    domains: [
-  'ziontechgroup.com'],
+    domains: ['ziontechgroup.com'],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     unoptimized: true,
   },
   compiler: {
-<<<<<<< HEAD:next.config.js
-    removeConsole: process.env.NODE_ENV === 'production',
-=======
     removeConsole: process.env.NODE_ENV ===
   'production',
->>>>>>> origin/main:next.config.cjs
   },
   webpack: (config, { dev, isServer }) => {
-    // Exclude problematic directories from the build
+    // Completely exclude problematic directories from the build
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -39,22 +37,13 @@ eslint: {
         /api-backup/,
         /pages\.disabled/,
         /backup-pages/,
-<<<<<<< HEAD:next.config.js
-        /\.backup/,
-=======
 /\.backup/,
->>>>>>> origin/main:next.config.cjs
         /\.disabled/,
         /automation\/backups/,
         /automation_backup/,
         /broken_files_backup/,
         /contracts/,
-<<<<<<< HEAD:next.config.js
-        /contracts_backup/,
-        /cypress/,
-=======
         /hardhat/,
->>>>>>> origin/main:next.config.cjs
       ],
     });
     

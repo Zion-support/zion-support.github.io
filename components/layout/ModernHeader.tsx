@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react.ts';
-import Link from 'next/link.ts';
-import {
-  '
+React, { useState, useEffect } from
+  'react.ts';
+import Link from 'next/link';
+  'next/link.ts';'import {;'
   Menu, X,
   ChevronDown, Zap,
   Shield, Cpu,
@@ -13,4 +13,5 @@ import {
   Globe2, Zap2,
   Brain2, Cloud2,
   Lock2} from
-  'lucide-react.ts';''
+  'lucide-react.ts;
+

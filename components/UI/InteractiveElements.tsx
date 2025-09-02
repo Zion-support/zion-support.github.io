@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from
   'react';
-import { motion, useAnimation, useInView } from
+import { motion, useAnimation, useInView } from 'lucide-react';
   'framer-motion';
 
 type ButtonVariant =
