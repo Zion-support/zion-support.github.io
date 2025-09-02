@@ -1,6 +1,26 @@
+import React, { useEffect } from 'react';
 import type { AppProps } from 'next/app';
-import '../styles/globals.css';
+import { HelmetProvider } from 'react-helmet-async';
+import '../src/index.css';
+import Layout from '../components/Layout';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      const swUrl = '/service-worker.js';
+      navigator.serviceWorker
+        .register(swUrl)
+        .catch(() => {
+          // no-op: registration failed, ignore
+        });
+    }
+  }, []);
+
+  return (
+    <HelmetProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </HelmetProvider>
+  );
 }

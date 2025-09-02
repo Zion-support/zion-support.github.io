@@ -8,18 +8,10 @@ const InteractiveNavigation: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           <div className="text-xl font-bold text-gray-800">Interactive Nav</div>
           <div className="hidden md:flex space-x-8">
-            <Link href="/">
-              <span className="text-gray-600 hover:text-gray-900 transition-colors">Home</span>
-            </Link>
-            <Link href="/services">
-              <span className="text-gray-600 hover:text-gray-900 transition-colors">Services</span>
-            </Link>
-            <Link href="/about">
-              <span className="text-gray-600 hover:text-gray-900 transition-colors">About</span>
-            </Link>
-            <Link href="/contact">
-              <span className="text-gray-600 hover:text-gray-900 transition-colors">Contact</span>
-            </Link>
+            <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors">Home</Link>
+            <Link href="/services" className="text-gray-600 hover:text-gray-900 transition-colors">Services</Link>
+            <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">About</Link>
+            <Link href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</Link>
           </div>
         </div>
       </div>
