@@ -1,4 +1,7 @@
-import React from 'react';'import { SEO } from '../components/SEO';''const Home: React.FC = () => {
+React from
+  'react';
+import { SEO } from
+  '../components/SEO';''const Home: React.FC = () => {
   return (
     <>
       <SEO 

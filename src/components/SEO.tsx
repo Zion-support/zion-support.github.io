@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
   title?: string;
   description?: string;
+=======
+import { Helmet } from
+  'react-helmet-async';'
+  'interface SEOProps {title?: string;description?: string;
+>>>>>>> origin/main
   keywords?: string;
   image?: string;
   url?: string;
@@ -11,6 +17,7 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({
+<<<<<<< HEAD
   title = 'Zion Tech Group - Leading Technology Solutions',
   description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',
   keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',
@@ -19,6 +26,16 @@ export const SEO: React.FC<SEOProps> = ({
   type = 'website'
 }) => {
   return (
+=======
+title =,
+  Zion Tech Group - Leading Technology Solutions
+  ', description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
+  ', keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group
+  ', image = '/og-image.svg
+  ','  url =
+  'https: //ziontechgroup.com, type =
+  'website''}) => {'  return (
+>>>>>>> origin/main
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>

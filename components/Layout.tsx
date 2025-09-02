@@ -1,5 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
+=======
+  'react';
+import Head from 'next/head';
+  'next/head';
+import EnhancedNavigation from
+  './layout/EnhancedNavigation';
+import EnhancedFooter from
+  './layout/EnhancedFooter';
+>>>>>>> origin/main
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -9,8 +19,15 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ 
   children, 
+<<<<<<< HEAD
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.'
+=======
+  title =
+  'Zion Tech Group - Leading Technology Solutions Provider',
+  description =
+  'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.'
+>>>>>>> origin/main
 }) => {
   return (
     <>
@@ -28,9 +45,17 @@ const Layout: React.FC<LayoutProps> = ({
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
       <div className="min-h-screen flex flex-col">
+<<<<<<< HEAD
         <main className="flex-grow">
           {children}
         </main>
+=======
+        <EnhancedNavigation />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <EnhancedFooter />
+>>>>>>> origin/main
       </div>
     </>
   );

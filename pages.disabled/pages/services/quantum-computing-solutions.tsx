@@ -10,7 +10,8 @@ import {}
   Lightbulb,
   Database,
   Cloud,
-  Cpu} from 'lucide-react.ts';
+  Cpu} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
 export default function QuantumComputingSolutions(...args: any[]): any {
@@ -224,5 +225,6 @@ export default function QuantumComputingSolutions(...args: any[]): any {
       </section>
     </div>
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
-  )}'"
+  )}
+  '"
 '"'"

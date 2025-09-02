@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '../components/SEO';
 import Navigation from '../src/components/Navigation';
@@ -23,6 +24,12 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
+=======
+import React from
+  'react';
+import Head from
+  'next/head';
+>>>>>>> origin/main
 
 export default function Home() {
   const services = [

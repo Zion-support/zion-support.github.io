@@ -10,7 +10,8 @@ import {}
   Zap,
   Brain,
   Target,
-  BarChart3} from 'lucide-react.ts';
+  BarChart3} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
 export default function AICybersecurityThreatHunter(...args: any[]): any {return()
@@ -174,8 +175,8 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com
             </a>"
           </div>""
-          <div className="mt-4 text-sm text-zion-slate-light">'
-            Visit us at:{' '}"<a""
+          <div className="mt-4 text-sm text-zion-slate-light">,
+  Visit us at: {'}"<a""
               href="https://ziontechgroup.com""
               target="_blank""
               rel="noreferrer""
@@ -188,4 +189,4 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
     </div>
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
   )}'"
-'"'"
+  '"'"

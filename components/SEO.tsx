@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/main
 
 interface SEOProps {
   title: string;
@@ -12,6 +16,7 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
+<<<<<<< HEAD
   title, 
   description,
   keywords = "AI, artificial intelligence, technology, automation, machine learning, cloud computing, cybersecurity, data analytics, business solutions", 
@@ -97,8 +102,33 @@ const SEO: React.FC<SEOProps> = ({
         })}
       </script>
     </Head>
+=======
+  title,
+  description,
+  keywords,
+  image,
+  url,
+  type = 'website',
+  siteName = 'Zion Tech Group'
+}) => {
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content={siteName} />
+      {image && <meta property="og:image" content={image} />}
+      {url && <meta property="og:url" content={url} />}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      {image && <meta name="twitter:image" content={image} />}
+    </Helmet>
+>>>>>>> origin/main
   );
 };
 
-export { SEO };
 export default SEO;
