@@ -2,6 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
+import PerformanceOptimizer from '../PerformanceOptimizer';
+import AccessibilityEnhancer from '../AccessibilityEnhancer';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -49,6 +51,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
+        {/* Performance optimizations */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -59,7 +65,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
               "name": "Zion Tech Group",
               "url": "https://ziontechgroup.com",
               "logo": "https://ziontechgroup.com/logo.png",
-              "description": "Leading technology solutions provider helping businesses transform their digital presence",
+              "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "364 E Main St STE 1008",
@@ -75,18 +81,20 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 "email": "kleber@ziontechgroup.com"
               },
               "sameAs": [
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://facebook.com/ziontechgroup"
+                "https://www.linkedin.com/company/zion-tech-group",
+                "https://twitter.com/ziontechgroup"
               ]
             })
           }}
         />
       </Head>
       
+      <PerformanceOptimizer />
+      <AccessibilityEnhancer />
+      
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-grow">
+        <main id="main-content" className="flex-grow" role="main">
           {children}
         </main>
         <Footer />

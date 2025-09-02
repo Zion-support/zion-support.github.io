@@ -1,9 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -20,7 +31,14 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <motion.header 
+      className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'shadow-xl' : 'shadow-lg'
+      }`}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       {/* Top bar with contact info */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -96,20 +114,34 @@ const Header: React.FC = () => {
 
             {/* Mobile menu button */}
             <button
-              className="lg:hidden p-2"
+              className="lg:hidden p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isMenuOpen}
             >
-              {isMenuOpen ? (
-                <X className="w-6 h-6 text-gray-700" />
-              ) : (
-                <Menu className="w-6 h-6 text-gray-700" />
-              )}
+              <motion.div
+                animate={{ rotate: isMenuOpen ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                {isMenuOpen ? (
+                  <X className="w-6 h-6 text-gray-700" />
+                ) : (
+                  <Menu className="w-6 h-6 text-gray-700" />
+                )}
+              </motion.div>
             </button>
           </div>
 
           {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="lg:hidden border-t border-gray-200 py-4">
+          <AnimatePresence>
+            {isMenuOpen && (
+              <motion.div 
+                className="lg:hidden border-t border-gray-200 py-4"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+              >
               <div className="flex flex-col space-y-4">
                 {navigation.map((item) => (
                   <Link
@@ -146,11 +178,12 @@ const Header: React.FC = () => {
                   Get Quote
                 </Link>
               </div>
-            </div>
-          )}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </nav>
-    </header>
+    </motion.header>
   );
 };
 
