@@ -8,8 +8,9 @@ const Header: React.FC = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
-    { name: 'Products', href: '/products' },
+    { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -82,6 +83,19 @@ const Header: React.FC = () => {
                       {category.name}
                     </Link>
                   ))}
+                  <div className="border-t border-gray-200 my-2"></div>
+                  <Link
+                    href="/partners"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    Partners
+                  </Link>
+                  <Link
+                    href="/faq"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    FAQ
+                  </Link>
                 </div>
               </div>
 
@@ -135,6 +149,21 @@ const Header: React.FC = () => {
                       {category.name}
                     </Link>
                   ))}
+                  <div className="border-t border-gray-200 my-2"></div>
+                  <Link
+                    href="/partners"
+                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Partners
+                  </Link>
+                  <Link
+                    href="/faq"
+                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    FAQ
+                  </Link>
                 </div>
 
                 {/* Mobile CTA */}
