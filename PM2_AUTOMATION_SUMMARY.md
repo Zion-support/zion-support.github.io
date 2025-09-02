@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 # PM2 Automation System - Error Monitoring & Auto-Fixing
 
 ## 🚀 Overview
@@ -338,6 +341,8 @@ cron_restart: '*/5 * * * *' // Every 5 minutes
 ---
 
 Your project now has a robust, automated error monitoring and fixing system powered by PM2! 🎉
+<<<<<<< HEAD
+=======
 =======
 # PM2 Automation System Summary
 
@@ -467,3 +472,4 @@ All automation processes are running successfully and will continue to monitor a
 **Total Processes:** 5 (+ 1 module)
 **Status:** All processes online and healthy
 >>>>>>> f7db7ceeeca70e96601169c4adc70ab97d4c7057
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

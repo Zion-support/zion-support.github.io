@@ -108,7 +108,6 @@ export interface PaginationParams {
   sort?: string;
   order?: 'asc' | 'desc';
 }
-
 export interface PaginatedResponse<T> {
   data: T[];
   pagination: {
@@ -231,6 +230,7 @@ export interface FormState {
 }
 
 // Utility types
+
 export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
@@ -238,13 +238,13 @@ export type DeepPartial<T> = {
 };
 
 // Component prop types
+
 export interface BaseComponentProps {
   className?: string;
   children?: React.ReactNode;
   id?: string;
   'data-testid'?: string;
 }
-
 export interface ButtonProps extends BaseComponentProps {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
   size?: 'sm' | 'md' | 'lg';
@@ -253,7 +253,6 @@ export interface ButtonProps extends BaseComponentProps {
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
 }
-
 export interface InputProps extends BaseComponentProps {
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
   placeholder?: string;
@@ -265,6 +264,7 @@ export interface InputProps extends BaseComponentProps {
 }
 
 // API types
+
 export interface ApiError {
   status: number;
   message: string;
@@ -281,6 +281,7 @@ export interface ApiRequest {
 }
 
 // Environment types
+
 export interface Environment {
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;

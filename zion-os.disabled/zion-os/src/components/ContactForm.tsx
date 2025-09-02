@@ -42,9 +42,8 @@ export default function ContactForm() {
     <div>
       <h2 className = "text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
 
->>>>>>> cursor/add-new-services-and-advertise-them-971c
-      {submitSuccess && (
-        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+{submitSuccess && ({submitSuccess && (
+<div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
           <p className="text-green-800">
             Thank you for your message! We'll get back to you within 24 hours.
           </p>
