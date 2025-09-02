@@ -9,40 +9,40 @@ const Footer: React.FC = () => {
     {
       title: 'Micro SaaS',
       services: [
+        { name: 'AI Email Responder Pro', href: '/services/ai-email-responder' },
+        { name: 'Smart Inventory Predictor', href: '/services/smart-inventory-predictor' },
+        { name: 'AI Customer Insights Platform', href: '/services/ai-customer-insights' },
+        { name: 'Smart Contract Security Auditor', href: '/services/smart-contract-auditor' },
+        { name: 'AI Video Editor Pro', href: '/services/ai-video-editor' },
+        { name: 'Smart Energy Monitor', href: '/services/smart-energy-monitor' },
         { name: 'AI Meeting Summary Generator', href: '/services/ai-meeting-summary-generator' },
         { name: 'AI Customer Sentiment Analyzer', href: '/services/ai-customer-sentiment-analyzer' },
-        { name: 'AI Code Review Assistant', href: '/services/ai-code-review-assistant' },
-        { name: 'Smart Digital Marketing Optimizer', href: '/services/smart-digital-marketing-optimizer' },
-        { name: 'AI Content Curation Platform', href: '/services/ai-content-curation-platform' },
-        { name: 'AI Workflow Automation Suite', href: '/services/ai-workflow-automation' },
-        { name: 'AI SEO Optimizer Pro', href: '/services/ai-seo-optimizer' },
-        { name: 'AI Data Visualization Platform', href: '/services/ai-data-visualization-platform' },
       ]
     },
     {
       title: 'IT Services',
       services: [
+        { name: 'Zero Trust Security Implementation', href: '/services/zero-trust-security' },
+        { name: 'Hybrid Cloud Management Platform', href: '/services/hybrid-cloud-management' },
+        { name: 'IoT Platform Development', href: '/services/iot-platform-development' },
+        { name: 'API Security Gateway', href: '/services/api-security-gateway' },
         { name: 'Edge Computing Solutions', href: '/services/edge-computing-solutions' },
         { name: 'Quantum-Ready Security', href: '/services/quantum-ready-security' },
         { name: '5G Network Optimization', href: '/services/5g-network-optimization' },
         { name: 'Blockchain Infrastructure', href: '/services/blockchain-infrastructure' },
-        { name: 'AI Infrastructure & MLOps', href: '/services/ai-infrastructure-setup' },
-        { name: 'Cloud Migration Expert', href: '/services/cloud-migration' },
-        { name: 'Kubernetes Orchestration', href: '/services/kubernetes-orchestration' },
-        { name: 'Microservices Architecture', href: '/services/microservices-architecture' },
       ]
     },
     {
       title: 'AI Services',
       services: [
+        { name: 'AI Voice Synthesis Platform', href: '/services/ai-voice-synthesis' },
+        { name: 'AI Medical Diagnosis Assistant', href: '/services/ai-medical-diagnosis' },
+        { name: 'AI Legal Document Analyzer', href: '/services/ai-legal-document-analyzer' },
+        { name: 'AI Autonomous Vehicle Systems', href: '/services/ai-autonomous-vehicles' },
+        { name: 'AI Robotic Process Automation', href: '/services/ai-robotic-process-automation' },
         { name: 'AI Drug Discovery Platform', href: '/services/ai-drug-discovery' },
         { name: 'AI Climate Modeling', href: '/services/ai-climate-modeling' },
-        { name: 'AI Autonomous Systems', href: '/services/ai-autonomous-systems' },
         { name: 'AI Personalized Medicine', href: '/services/ai-personalized-medicine' },
-        { name: 'AI Financial Trading System', href: '/services/ai-financial-trading' },
-        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
-        { name: 'Custom AI Model Development', href: '/services/custom-ai-models' },
-        { name: 'Computer Vision Solutions', href: '/services/computer-vision-solutions' },
       ]
     }
   ];

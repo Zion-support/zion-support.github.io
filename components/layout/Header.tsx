@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
+import Sidebar from './Sidebar';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -141,17 +143,27 @@ const Header: React.FC = () => {
               </Link>
             </div>
 
-            {/* Mobile menu button */}
-            <button
-              className="lg:hidden p-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? (
-                <X className="w-6 h-6 text-gray-700" />
-              ) : (
+            {/* Mobile menu buttons */}
+            <div className="lg:hidden flex items-center space-x-2">
+              <button
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                onClick={() => setIsSidebarOpen(true)}
+                title="Services Menu"
+              >
                 <Menu className="w-6 h-6 text-gray-700" />
-              )}
-            </button>
+              </button>
+              <button
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                title="Main Menu"
+              >
+                {isMenuOpen ? (
+                  <X className="w-6 h-6 text-gray-700" />
+                ) : (
+                  <Menu className="w-6 h-6 text-gray-700" />
+                )}
+              </button>
+            </div>
           </div>
 
           {/* Mobile Navigation */}
@@ -233,6 +245,9 @@ const Header: React.FC = () => {
           )}
         </div>
       </nav>
+
+      {/* Sidebar */}
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
     </header>
   );
 };

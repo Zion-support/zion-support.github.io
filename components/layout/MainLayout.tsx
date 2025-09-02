@@ -34,7 +34,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       <div className="min-h-screen flex flex-col">
         <Header />
         <main id="main-content" className="flex-grow">
-          {children}
+          <div className="w-full">
+            {children}
+          </div>
         </main>
         <Footer />
         <AccessibilityEnhancer />

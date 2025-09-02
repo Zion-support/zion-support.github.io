@@ -93,22 +93,16 @@ const Home: NextPage = () => {
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <div className="mb-4">
               <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-blue-100 text-blue-800 border border-blue-200">
                 <TrendingUp className="w-4 h-4 mr-2" />
                 Our Expertise
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Core Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We provide comprehensive technology solutions to help your business thrive in the digital age with cutting-edge innovation.
-=======
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Comprehensive Technology Solutions</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Comprehensive Technology Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               From AI-powered micro SaaS applications to quantum-ready security solutions and autonomous systems development, 
               we provide cutting-edge technology solutions that drive measurable business results and future-proof competitive advantages.
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-6be0
             </p>
           </div>
           
@@ -120,22 +114,16 @@ const Home: NextPage = () => {
                   <Zap className="w-8 h-8" />
                 </div>
               </div>
-<<<<<<< HEAD
               <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">Micro SaaS Solutions</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Innovative, focused software solutions that solve specific business problems with minimal overhead and maximum impact.
-=======
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h3>
-              <p className="text-gray-600 mb-6">
                 AI-powered micro SaaS solutions including meeting summarization, sentiment analysis, code review automation, 
                 and workflow optimization. Starting from $12/month, our intelligent applications deliver immediate ROI and scale with your business.
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-6be0
               </p>
               <div className="flex items-center justify-between">
                 <Link href="/services/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:translate-x-2 transition-transform duration-300">
                   Learn More →
                 </Link>
-                <div className="text-sm text-gray-400">8+ Solutions</div>
+                <div className="text-sm text-gray-400">15+ Solutions</div>
               </div>
             </div>
 
@@ -146,22 +134,16 @@ const Home: NextPage = () => {
                   <Shield className="w-8 h-8" />
                 </div>
               </div>
-<<<<<<< HEAD
               <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">IT Services</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Comprehensive IT infrastructure, cloud migration, and cybersecurity solutions for modern businesses.
-=======
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>
-              <p className="text-gray-600 mb-6">
                 Next-generation IT infrastructure including edge computing, quantum-ready security, 5G optimization, 
                 and blockchain solutions. From $2,000 to $200,000, our advanced IT services ensure your infrastructure is future-proof and optimized.
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-6be0
               </p>
               <div className="flex items-center justify-between">
                 <Link href="/services/it-services" className="text-purple-600 hover:text-purple-700 font-semibold group-hover:translate-x-2 transition-transform duration-300">
                   Learn More →
                 </Link>
-                <div className="text-sm text-gray-400">12+ Services</div>
+                <div className="text-sm text-gray-400">16+ Services</div>
               </div>
             </div>
 
@@ -172,22 +154,16 @@ const Home: NextPage = () => {
                   <Globe className="w-8 h-8" />
                 </div>
               </div>
-<<<<<<< HEAD
               <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors">AI Services</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Cutting-edge artificial intelligence solutions to automate processes and gain competitive advantages.
-=======
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>
-              <p className="text-gray-600 mb-6">
                 Revolutionary AI solutions including drug discovery, climate modeling, autonomous systems, and personalized medicine. 
                 From $4,000 to $400,000, our advanced AI services transform industries with cutting-edge machine learning and automation.
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-6be0
               </p>
               <div className="flex items-center justify-between">
                 <Link href="/services/ai-services" className="text-indigo-600 hover:text-indigo-700 font-semibold group-hover:translate-x-2 transition-transform duration-300">
                   Learn More →
                 </Link>
-                <div className="text-sm text-gray-400">10+ Solutions</div>
+                <div className="text-sm text-gray-400">18+ Solutions</div>
               </div>
             </div>
           </div>
@@ -247,14 +223,9 @@ const Home: NextPage = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
-<<<<<<< HEAD
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Let's discuss how we can help transform your business with cutting-edge technology solutions tailored to your needs.
-=======
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
             Join 1000+ successful businesses that have transformed their operations with our cutting-edge technology solutions. 
             From AI-powered automation to quantum-ready security, get a free consultation and discover how we can accelerate your growth and future-proof your business.
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-6be0
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="group bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
