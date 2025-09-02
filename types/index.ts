@@ -108,6 +108,7 @@ export interface PaginationParams {
   sort?: string;
   order?: 'asc' | 'desc';
 }
+
 export interface PaginatedResponse<T> {
   data: T[];
   pagination: {

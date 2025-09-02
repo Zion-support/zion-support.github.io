@@ -1,4 +1,4 @@
-import React from 'react.ts';'import Link from 'next/link.ts';'import {;'
+import React from 'react.ts';\nimport Link from 'next/link.ts';\nimport {;'
   Mail, Phone,
   MapPin, Linkedin,
   Twitter, Github,

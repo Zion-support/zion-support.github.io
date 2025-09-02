@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';'import { motion, AnimatePresence } from 'framer-motion';'import { ;'  BarChart3, Users, 
+import React, { useEffect, useState, useCallback } from 'react';\nimport { motion, AnimatePresence } from 'framer-motion';\nimport { ;'  BarChart3, Users, 
   Eye, MousePointer, 
   Clock, TrendingUp, 
   Globe, Smartphone,

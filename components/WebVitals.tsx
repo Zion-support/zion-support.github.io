@@ -1,4 +1,4 @@
-import { useEffect } from 'react';'import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';''interface WebVitalsMetric {name: string;
+import { useEffect } from 'react';\nimport { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';''interface WebVitalsMetric {name: string;
   value: number;
   delta: number;
   id: string;

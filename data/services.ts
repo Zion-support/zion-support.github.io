@@ -4847,6 +4847,849 @@ export const services: Service[] = [
     technologies: ['Python', 'Prophet', 'NeuralForecast', 'dbt', 'Snowflake/BigQuery'],
     link: 'https://ziontechgroup.com/services/ai-sales-forecasting-suite',
     icon: '📈'
+  },
+  // New Innovative Micro SAAS Services - 2025
+  {
+    id: 'ai-customer-support-automation',
+    name: 'AI Customer Support Automation',
+    category: 'micro-saas',
+    description: 'Intelligent customer support automation with AI chatbots, ticket routing, and sentiment analysis for 24/7 customer service excellence.',
+    features: [
+      'Multi-channel AI chatbot (website, WhatsApp, email)',
+      'Intelligent ticket routing and prioritization',
+      'Real-time sentiment analysis and escalation',
+      'Knowledge base integration with RAG',
+      'Customer satisfaction scoring',
+      'Automated follow-up sequences',
+      'Multi-language support (50+ languages)',
+      'CRM integration (Salesforce, HubSpot, Pipedrive)',
+      'Analytics dashboard with insights',
+      'Custom branding and white-label options'
+    ],
+    pricing: {
+      starter: 99,
+      professional: 299,
+      enterprise: 799,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduce support costs by 60-80%',
+      '24/7 customer availability',
+      'Instant response times',
+      'Consistent service quality',
+      'Scalable support operations',
+      'Improved customer satisfaction scores'
+    ],
+    useCases: [
+      'E-commerce customer support',
+      'SaaS product support',
+      'Healthcare patient inquiries',
+      'Financial services support',
+      'Real estate customer service'
+    ],
+    technologies: ['OpenAI GPT-4', 'LangChain', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
+    link: 'https://ziontechgroup.com/services/ai-customer-support-automation',
+    icon: '🤖'
+  },
+  {
+    id: 'smart-inventory-management',
+    name: 'Smart Inventory Management System',
+    category: 'micro-saas',
+    description: 'AI-powered inventory optimization with demand forecasting, automated reordering, and real-time tracking for retail and e-commerce businesses.',
+    features: [
+      'AI demand forecasting with 95% accuracy',
+      'Automated reorder point calculations',
+      'Multi-location inventory tracking',
+      'Barcode and QR code scanning',
+      'Supplier management and PO automation',
+      'Real-time stock alerts and notifications',
+      'Inventory valuation and cost tracking',
+      'Integration with major e-commerce platforms',
+      'Mobile app for warehouse management',
+      'Advanced analytics and reporting'
+    ],
+    pricing: {
+      starter: 149,
+      professional: 399,
+      enterprise: 999,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduce inventory costs by 25-40%',
+      'Eliminate stockouts and overstock',
+      'Automate manual processes',
+      'Improve cash flow management',
+      'Enhanced supplier relationships',
+      'Real-time visibility across locations'
+    ],
+    useCases: [
+      'E-commerce inventory management',
+      'Retail chain operations',
+      'Manufacturing raw materials',
+      'Healthcare supplies management',
+      'Food and beverage inventory'
+    ],
+    technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS IoT'],
+    link: 'https://ziontechgroup.com/services/smart-inventory-management',
+    icon: '📦'
+  },
+  {
+    id: 'ai-social-media-scheduler',
+    name: 'AI Social Media Scheduler Pro',
+    category: 'micro-saas',
+    description: 'Intelligent social media management with AI content creation, optimal posting times, and performance analytics across all major platforms.',
+    features: [
+      'AI content generation for all platforms',
+      'Optimal posting time recommendations',
+      'Multi-platform scheduling (Instagram, Facebook, Twitter, LinkedIn, TikTok)',
+      'Hashtag research and optimization',
+      'Visual content creation with AI',
+      'Engagement rate predictions',
+      'Competitor analysis and benchmarking',
+      'Influencer collaboration tools',
+      'ROI tracking and analytics',
+      'Team collaboration and approval workflows'
+    ],
+    pricing: {
+      starter: 39,
+      professional: 99,
+      enterprise: 299,
+      currency: 'USD'
+    },
+    benefits: [
+      'Increase engagement by 200-300%',
+      'Save 10+ hours per week',
+      'Consistent brand presence',
+      'Data-driven content strategy',
+      'Automated posting and optimization',
+      'Comprehensive performance insights'
+    ],
+    useCases: [
+      'Digital marketing agencies',
+      'E-commerce social selling',
+      'Personal brand building',
+      'Local business marketing',
+      'Enterprise social media management'
+    ],
+    technologies: ['OpenAI GPT-4', 'DALL-E', 'React', 'Node.js', 'PostgreSQL', 'Social APIs'],
+    link: 'https://ziontechgroup.com/services/ai-social-media-scheduler',
+    icon: '📱'
+  },
+  {
+    id: 'smart-expense-tracker',
+    name: 'Smart Expense Tracker & Analytics',
+    category: 'micro-saas',
+    description: 'AI-powered expense management with receipt scanning, categorization, and financial insights for businesses and individuals.',
+    features: [
+      'OCR receipt scanning and data extraction',
+      'AI-powered expense categorization',
+      'Multi-currency support and conversion',
+      'Mileage and travel expense tracking',
+      'Tax deduction identification',
+      'Budget alerts and spending limits',
+      'Team expense management',
+      'Integration with accounting software',
+      'Mobile app with offline capability',
+      'Advanced financial reporting and insights'
+    ],
+    pricing: {
+      starter: 19,
+      professional: 49,
+      enterprise: 149,
+      currency: 'USD'
+    },
+    benefits: [
+      'Save 5+ hours per week on expense management',
+      'Reduce expense processing errors by 90%',
+      'Automated tax deduction identification',
+      'Real-time budget monitoring',
+      'Simplified reimbursement processes',
+      'Comprehensive financial insights'
+    ],
+    useCases: [
+      'Small business expense management',
+      'Freelancer and contractor tracking',
+      'Corporate travel expense management',
+      'Real estate investment tracking',
+      'Personal finance management'
+    ],
+    technologies: ['OCR/Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    link: 'https://ziontechgroup.com/services/smart-expense-tracker',
+    icon: '💰'
+  },
+  {
+    id: 'ai-lead-scoring-platform',
+    name: 'AI Lead Scoring & Qualification Platform',
+    category: 'micro-saas',
+    description: 'Intelligent lead scoring and qualification system that uses AI to identify high-value prospects and optimize sales conversion rates.',
+    features: [
+      'AI-powered lead scoring algorithms',
+      'Behavioral tracking and analysis',
+      'Multi-touch attribution modeling',
+      'Lead qualification automation',
+      'CRM integration and sync',
+      'Email sequence automation',
+      'Lead nurturing workflows',
+      'Conversion rate optimization',
+      'A/B testing for lead scoring models',
+      'Real-time lead alerts and notifications'
+    ],
+    pricing: {
+      starter: 79,
+      professional: 199,
+      enterprise: 499,
+      currency: 'USD'
+    },
+    benefits: [
+      'Increase conversion rates by 30-50%',
+      'Reduce sales cycle length',
+      'Prioritize high-value prospects',
+      'Automate lead qualification',
+      'Improve sales team efficiency',
+      'Data-driven sales decisions'
+    ],
+    useCases: [
+      'B2B sales organizations',
+      'Real estate lead management',
+      'Insurance sales optimization',
+      'SaaS product sales',
+      'Financial services lead generation'
+    ],
+    technologies: ['Machine Learning', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
+    link: 'https://ziontechgroup.com/services/ai-lead-scoring-platform',
+    icon: '🎯'
+  },
+  {
+    id: 'smart-email-marketing-automation',
+    name: 'Smart Email Marketing Automation',
+    category: 'micro-saas',
+    description: 'AI-driven email marketing platform with personalization, send-time optimization, and advanced segmentation for maximum engagement.',
+    features: [
+      'AI-powered email personalization',
+      'Optimal send-time prediction',
+      'Advanced audience segmentation',
+      'Dynamic content blocks',
+      'A/B testing automation',
+      'Email template library with AI generation',
+      'Deliverability optimization',
+      'Advanced analytics and reporting',
+      'Integration with major e-commerce platforms',
+      'Compliance with GDPR and CAN-SPAM'
+    ],
+    pricing: {
+      starter: 29,
+      professional: 79,
+      enterprise: 199,
+      currency: 'USD'
+    },
+    benefits: [
+      'Increase open rates by 40-60%',
+      'Boost click-through rates by 25-35%',
+      'Automate personalized campaigns',
+      'Optimize send times automatically',
+      'Reduce unsubscribes and spam complaints',
+      'Comprehensive performance insights'
+    ],
+    useCases: [
+      'E-commerce email marketing',
+      'SaaS product onboarding',
+      'Content marketing automation',
+      'Event marketing campaigns',
+      'Customer retention programs'
+    ],
+    technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'Email APIs'],
+    link: 'https://ziontechgroup.com/services/smart-email-marketing-automation',
+    icon: '📧'
+  },
+  {
+    id: 'ai-project-management-assistant',
+    name: 'AI Project Management Assistant',
+    category: 'micro-saas',
+    description: 'Intelligent project management with AI task prioritization, resource allocation, and risk prediction for optimal project delivery.',
+    features: [
+      'AI task prioritization and scheduling',
+      'Resource allocation optimization',
+      'Risk prediction and mitigation alerts',
+      'Automated progress tracking',
+      'Team workload balancing',
+      'Smart deadline predictions',
+      'Integration with popular PM tools',
+      'Real-time collaboration features',
+      'Advanced reporting and analytics',
+      'Mobile app for on-the-go management'
+    ],
+    pricing: {
+      starter: 49,
+      professional: 129,
+      enterprise: 349,
+      currency: 'USD'
+    },
+    benefits: [
+      'Improve project delivery by 25-40%',
+      'Reduce project risks and delays',
+      'Optimize team productivity',
+      'Automated task management',
+      'Data-driven project insights',
+      'Enhanced team collaboration'
+    ],
+    useCases: [
+      'Software development projects',
+      'Marketing campaign management',
+      'Construction project tracking',
+      'Event planning and coordination',
+      'Consulting project delivery'
+    ],
+    technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'WebSocket'],
+    link: 'https://ziontechgroup.com/services/ai-project-management-assistant',
+    icon: '📋'
+  },
+  {
+    id: 'smart-crm-with-ai-insights',
+    name: 'Smart CRM with AI Insights',
+    category: 'micro-saas',
+    description: 'Next-generation CRM with AI-powered insights, predictive analytics, and automated sales processes for maximum revenue growth.',
+    features: [
+      'AI-powered sales forecasting',
+      'Predictive lead scoring',
+      'Automated follow-up sequences',
+      'Customer lifetime value prediction',
+      'Churn risk identification',
+      'Sales opportunity prioritization',
+      'Integration with 100+ business tools',
+      'Advanced pipeline analytics',
+      'Mobile-first design',
+      'Customizable dashboards and reports'
+    ],
+    pricing: {
+      starter: 99,
+      professional: 249,
+      enterprise: 599,
+      currency: 'USD'
+    },
+    benefits: [
+      'Increase sales revenue by 20-35%',
+      'Reduce sales cycle length',
+      'Improve customer retention',
+      'Automate repetitive sales tasks',
+      'Data-driven sales strategies',
+      'Enhanced customer relationships'
+    ],
+    useCases: [
+      'B2B sales organizations',
+      'Real estate agencies',
+      'Insurance sales teams',
+      'SaaS companies',
+      'Professional services firms'
+    ],
+    technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'APIs'],
+    link: 'https://ziontechgroup.com/services/smart-crm-with-ai-insights',
+    icon: '👥'
+  },
+  // New Innovative AI Services - 2025
+  {
+    id: 'ai-computer-vision-platform',
+    name: 'AI Computer Vision Platform',
+    category: 'ai-services',
+    description: 'Advanced computer vision solutions with object detection, facial recognition, and image analysis for business automation and security.',
+    features: [
+      'Real-time object detection and classification',
+      'Facial recognition and identity verification',
+      'OCR and document processing',
+      'Quality control and defect detection',
+      'Retail analytics and customer behavior tracking',
+      'Medical image analysis and diagnosis support',
+      'Autonomous vehicle perception systems',
+      'Security surveillance and threat detection',
+      'Custom model training and deployment',
+      'Edge computing optimization for real-time processing'
+    ],
+    pricing: {
+      starter: 299,
+      professional: 799,
+      enterprise: 1999,
+      currency: 'USD'
+    },
+    benefits: [
+      'Automate visual inspection processes',
+      'Improve accuracy and reduce human error',
+      'Enable 24/7 monitoring capabilities',
+      'Reduce operational costs significantly',
+      'Enhance security and safety measures',
+      'Scale visual analysis across operations'
+    ],
+    useCases: [
+      'Manufacturing quality control',
+      'Retail customer analytics',
+      'Healthcare diagnostic imaging',
+      'Security and surveillance systems',
+      'Autonomous vehicle development'
+    ],
+    technologies: ['TensorFlow', 'PyTorch', 'OpenCV', 'YOLO', 'Python', 'CUDA', 'Docker'],
+    link: 'https://ziontechgroup.com/services/ai-computer-vision-platform',
+    icon: '👁️'
+  },
+  {
+    id: 'ai-natural-language-processing',
+    name: 'AI Natural Language Processing Suite',
+    category: 'ai-services',
+    description: 'Comprehensive NLP solutions for text analysis, sentiment analysis, language translation, and conversational AI applications.',
+    features: [
+      'Advanced text classification and categorization',
+      'Sentiment analysis and emotion detection',
+      'Multi-language translation (100+ languages)',
+      'Named entity recognition and extraction',
+      'Text summarization and key phrase extraction',
+      'Question answering systems',
+      'Chatbot and conversational AI development',
+      'Document processing and information extraction',
+      'Language model fine-tuning and customization',
+      'Real-time text processing APIs'
+    ],
+    pricing: {
+      starter: 199,
+      professional: 599,
+      enterprise: 1499,
+      currency: 'USD'
+    },
+    benefits: [
+      'Automate text processing workflows',
+      'Extract insights from unstructured data',
+      'Improve customer communication',
+      'Enable multilingual operations',
+      'Reduce manual content analysis time',
+      'Enhance decision-making with text insights'
+    ],
+    useCases: [
+      'Customer feedback analysis',
+      'Content moderation and filtering',
+      'Legal document processing',
+      'Market research and social listening',
+      'Healthcare patient record analysis'
+    ],
+    technologies: ['Transformers', 'BERT', 'GPT', 'spaCy', 'NLTK', 'Python', 'FastAPI'],
+    link: 'https://ziontechgroup.com/services/ai-natural-language-processing',
+    icon: '💬'
+  },
+  {
+    id: 'ai-predictive-analytics-engine',
+    name: 'AI Predictive Analytics Engine',
+    category: 'ai-services',
+    description: 'Advanced predictive analytics platform with machine learning models for forecasting, risk assessment, and business intelligence.',
+    features: [
+      'Time series forecasting and trend analysis',
+      'Customer churn prediction and prevention',
+      'Demand forecasting and inventory optimization',
+      'Risk assessment and fraud detection',
+      'Sales forecasting and revenue prediction',
+      'Market trend analysis and investment insights',
+      'Predictive maintenance for equipment',
+      'Real-time anomaly detection',
+      'Custom model development and training',
+      'Automated model retraining and optimization'
+    ],
+    pricing: {
+      starter: 399,
+      professional: 999,
+      enterprise: 2499,
+      currency: 'USD'
+    },
+    benefits: [
+      'Make data-driven business decisions',
+      'Reduce risks and prevent losses',
+      'Optimize resource allocation',
+      'Improve operational efficiency',
+      'Increase revenue through better forecasting',
+      'Gain competitive advantage with insights'
+    ],
+    useCases: [
+      'Financial services risk management',
+      'E-commerce demand planning',
+      'Manufacturing predictive maintenance',
+      'Healthcare patient outcome prediction',
+      'Energy consumption optimization'
+    ],
+    technologies: ['Scikit-learn', 'XGBoost', 'Prophet', 'Python', 'Apache Spark', 'MLflow'],
+    link: 'https://ziontechgroup.com/services/ai-predictive-analytics-engine',
+    icon: '📊'
+  },
+  {
+    id: 'ai-automated-machine-learning',
+    name: 'AI Automated Machine Learning (AutoML)',
+    category: 'ai-services',
+    description: 'Automated machine learning platform that builds, trains, and deploys ML models without requiring data science expertise.',
+    features: [
+      'Automated feature engineering and selection',
+      'Model selection and hyperparameter optimization',
+      'Automated data preprocessing and cleaning',
+      'Model performance monitoring and retraining',
+      'One-click model deployment to production',
+      'A/B testing for model comparison',
+      'Explainable AI and model interpretability',
+      'Integration with popular data sources',
+      'Custom model templates and workflows',
+      'Enterprise-grade security and compliance'
+    ],
+    pricing: {
+      starter: 499,
+      professional: 1299,
+      enterprise: 2999,
+      currency: 'USD'
+    },
+    benefits: [
+      'Democratize AI for non-technical users',
+      'Reduce model development time by 80%',
+      'Lower barrier to entry for ML adoption',
+      'Ensure best practices and model quality',
+      'Scale AI initiatives across organization',
+      'Reduce dependency on data science teams'
+    ],
+    useCases: [
+      'Business process automation',
+      'Customer segmentation and targeting',
+      'Price optimization and dynamic pricing',
+      'Quality control and defect prediction',
+      'Marketing campaign optimization'
+    ],
+    technologies: ['AutoML', 'H2O.ai', 'DataRobot', 'Python', 'Kubernetes', 'Docker'],
+    link: 'https://ziontechgroup.com/services/ai-automated-machine-learning',
+    icon: '🤖'
+  },
+  {
+    id: 'ai-recommendation-engine',
+    name: 'AI Recommendation Engine',
+    category: 'ai-services',
+    description: 'Intelligent recommendation system for personalized content, products, and services to increase engagement and conversion rates.',
+    features: [
+      'Collaborative filtering and content-based recommendations',
+      'Real-time personalization and dynamic updates',
+      'Multi-armed bandit optimization',
+      'A/B testing for recommendation algorithms',
+      'Cold start problem solutions',
+      'Cross-domain recommendation capabilities',
+      'Explainable recommendations with reasoning',
+      'Integration with e-commerce and content platforms',
+      'Performance analytics and optimization',
+      'Scalable architecture for high-volume traffic'
+    ],
+    pricing: {
+      starter: 249,
+      professional: 699,
+      enterprise: 1799,
+      currency: 'USD'
+    },
+    benefits: [
+      'Increase conversion rates by 20-40%',
+      'Improve user engagement and retention',
+      'Boost average order value',
+      'Reduce bounce rates and cart abandonment',
+      'Personalize user experience at scale',
+      'Drive revenue growth through better targeting'
+    ],
+    useCases: [
+      'E-commerce product recommendations',
+      'Content streaming platforms',
+      'Social media content curation',
+      'News and article recommendations',
+      'Job matching and career platforms'
+    ],
+    technologies: ['TensorFlow', 'PyTorch', 'Apache Spark', 'Redis', 'Python', 'Kafka'],
+    link: 'https://ziontechgroup.com/services/ai-recommendation-engine',
+    icon: '🎯'
+  },
+  {
+    id: 'ai-speech-recognition-processing',
+    name: 'AI Speech Recognition & Processing',
+    category: 'ai-services',
+    description: 'Advanced speech recognition, voice synthesis, and audio processing solutions for voice-enabled applications and accessibility.',
+    features: [
+      'High-accuracy speech-to-text conversion',
+      'Multi-language voice recognition (50+ languages)',
+      'Real-time transcription and live captioning',
+      'Voice synthesis and text-to-speech',
+      'Speaker identification and verification',
+      'Voice emotion and sentiment analysis',
+      'Audio noise reduction and enhancement',
+      'Voice command processing and NLP integration',
+      'Custom voice model training',
+      'API integration for voice-enabled applications'
+    ],
+    pricing: {
+      starter: 199,
+      professional: 599,
+      enterprise: 1499,
+      currency: 'USD'
+    },
+    benefits: [
+      'Enable hands-free operation and accessibility',
+      'Improve user experience with voice interfaces',
+      'Automate transcription and documentation',
+      'Enhance customer service with voice AI',
+      'Reduce manual data entry and processing',
+      'Support multilingual operations'
+    ],
+    useCases: [
+      'Voice assistants and chatbots',
+      'Meeting transcription and notes',
+      'Accessibility and assistive technology',
+      'Call center automation',
+      'Voice-controlled applications'
+    ],
+    technologies: ['Whisper', 'Wav2Vec', 'Tacotron', 'Python', 'WebRTC', 'FFmpeg'],
+    link: 'https://ziontechgroup.com/services/ai-speech-recognition-processing',
+    icon: '🎤'
+  },
+  // New Comprehensive IT Services - 2025
+  {
+    id: 'cloud-migration-consulting',
+    name: 'Cloud Migration & Consulting Services',
+    category: 'it-services',
+    description: 'Comprehensive cloud migration services with strategy, planning, and execution for AWS, Azure, and Google Cloud platforms.',
+    features: [
+      'Cloud readiness assessment and strategy',
+      'Application migration planning and execution',
+      'Data migration and synchronization',
+      'Infrastructure as Code (IaC) implementation',
+      'Cloud cost optimization and monitoring',
+      'Security and compliance implementation',
+      'Disaster recovery and backup solutions',
+      'Performance optimization and scaling',
+      '24/7 cloud monitoring and support',
+      'Training and knowledge transfer'
+    ],
+    pricing: {
+      starter: 5000,
+      professional: 15000,
+      enterprise: 50000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduce infrastructure costs by 30-50%',
+      'Improve scalability and flexibility',
+      'Enhance security and compliance',
+      'Increase operational efficiency',
+      'Enable remote work capabilities',
+      'Future-proof your technology stack'
+    ],
+    useCases: [
+      'Legacy system modernization',
+      'Data center consolidation',
+      'Disaster recovery implementation',
+      'Application modernization',
+      'Hybrid cloud architecture'
+    ],
+    technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
+    link: 'https://ziontechgroup.com/services/cloud-migration-consulting',
+    icon: '☁️'
+  },
+  {
+    id: 'cybersecurity-audit-compliance',
+    name: 'Cybersecurity Audit & Compliance',
+    category: 'it-services',
+    description: 'Comprehensive cybersecurity services including security audits, compliance assessments, and implementation of security frameworks.',
+    features: [
+      'Security risk assessment and vulnerability scanning',
+      'Penetration testing and ethical hacking',
+      'Compliance audits (SOC 2, ISO 27001, GDPR, HIPAA)',
+      'Security policy development and implementation',
+      'Incident response planning and testing',
+      'Security awareness training programs',
+      'Identity and access management (IAM)',
+      'Network security monitoring and SIEM',
+      'Data encryption and key management',
+      'Security operations center (SOC) services'
+    ],
+    pricing: {
+      starter: 3000,
+      professional: 10000,
+      enterprise: 30000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Protect against cyber threats and breaches',
+      'Ensure regulatory compliance',
+      'Reduce security risks and vulnerabilities',
+      'Improve security posture and awareness',
+      'Minimize financial and reputational damage',
+      'Build customer trust and confidence'
+    ],
+    useCases: [
+      'Financial services security',
+      'Healthcare data protection',
+      'E-commerce security compliance',
+      'Government contractor requirements',
+      'Enterprise security transformation'
+    ],
+    technologies: ['Nessus', 'Metasploit', 'Splunk', 'CrowdStrike', 'Okta', 'AWS Security'],
+    link: 'https://ziontechgroup.com/services/cybersecurity-audit-compliance',
+    icon: '🔒'
+  },
+  {
+    id: 'devops-automation-pipeline',
+    name: 'DevOps Automation & CI/CD Pipeline',
+    category: 'it-services',
+    description: 'Complete DevOps transformation with automated CI/CD pipelines, infrastructure automation, and monitoring solutions.',
+    features: [
+      'CI/CD pipeline design and implementation',
+      'Infrastructure as Code (IaC) automation',
+      'Container orchestration with Kubernetes',
+      'Automated testing and quality gates',
+      'Deployment automation and rollback strategies',
+      'Monitoring and observability setup',
+      'Security scanning and compliance checks',
+      'Performance optimization and scaling',
+      'Disaster recovery and backup automation',
+      'Team training and best practices'
+    ],
+    pricing: {
+      starter: 8000,
+      professional: 25000,
+      enterprise: 75000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduce deployment time by 80-90%',
+      'Improve code quality and reliability',
+      'Enable faster time-to-market',
+      'Reduce manual errors and downtime',
+      'Increase team productivity',
+      'Enhance collaboration and transparency'
+    ],
+    useCases: [
+      'Software development acceleration',
+      'Microservices architecture implementation',
+      'Legacy application modernization',
+      'Multi-environment management',
+      'Enterprise DevOps transformation'
+    ],
+    technologies: ['Jenkins', 'GitLab CI', 'Docker', 'Kubernetes', 'Terraform', 'Prometheus'],
+    link: 'https://ziontechgroup.com/services/devops-automation-pipeline',
+    icon: '⚙️'
+  },
+  {
+    id: 'data-analytics-business-intelligence',
+    name: 'Data Analytics & Business Intelligence',
+    category: 'it-services',
+    description: 'Advanced data analytics and business intelligence solutions with data warehousing, visualization, and predictive analytics.',
+    features: [
+      'Data warehouse design and implementation',
+      'ETL/ELT pipeline development',
+      'Real-time data processing and streaming',
+      'Business intelligence dashboard creation',
+      'Advanced analytics and machine learning',
+      'Data governance and quality management',
+      'Self-service analytics platform',
+      'Mobile analytics and reporting',
+      'Data integration and API development',
+      'Performance optimization and scaling'
+    ],
+    pricing: {
+      starter: 10000,
+      professional: 30000,
+      enterprise: 100000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Make data-driven business decisions',
+      'Improve operational efficiency',
+      'Identify new revenue opportunities',
+      'Enhance customer insights',
+      'Reduce manual reporting time',
+      'Enable self-service analytics'
+    ],
+    useCases: [
+      'Customer analytics and segmentation',
+      'Sales performance optimization',
+      'Supply chain analytics',
+      'Financial reporting and forecasting',
+      'Marketing campaign analysis'
+    ],
+    technologies: ['Snowflake', 'Tableau', 'Power BI', 'Apache Spark', 'Python', 'SQL Server'],
+    link: 'https://ziontechgroup.com/services/data-analytics-business-intelligence',
+    icon: '📈'
+  },
+  {
+    id: 'network-infrastructure-optimization',
+    name: 'Network Infrastructure Optimization',
+    category: 'it-services',
+    description: 'Network design, optimization, and management services for improved performance, security, and scalability.',
+    features: [
+      'Network architecture design and planning',
+      'Performance monitoring and optimization',
+      'Security assessment and hardening',
+      'Load balancing and traffic management',
+      'VPN and remote access solutions',
+      'Wireless network design and implementation',
+      'Network automation and orchestration',
+      'Disaster recovery and redundancy planning',
+      '24/7 network monitoring and support',
+      'Capacity planning and scaling'
+    ],
+    pricing: {
+      starter: 5000,
+      professional: 15000,
+      enterprise: 50000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Improve network performance and reliability',
+      'Enhance security and compliance',
+      'Reduce network downtime',
+      'Optimize bandwidth utilization',
+      'Enable remote work capabilities',
+      'Future-proof network infrastructure'
+    ],
+    useCases: [
+      'Enterprise network modernization',
+      'Branch office connectivity',
+      'Data center network optimization',
+      'Cloud connectivity solutions',
+      'Network security implementation'
+    ],
+    technologies: ['Cisco', 'Juniper', 'Fortinet', 'Palo Alto', 'SD-WAN', 'MPLS'],
+    link: 'https://ziontechgroup.com/services/network-infrastructure-optimization',
+    icon: '🌐'
+  },
+  {
+    id: 'managed-it-services-support',
+    name: 'Managed IT Services & Support',
+    category: 'it-services',
+    description: 'Comprehensive managed IT services including help desk, system administration, and proactive monitoring for business continuity.',
+    features: [
+      '24/7 help desk and technical support',
+      'Proactive system monitoring and maintenance',
+      'Patch management and security updates',
+      'Backup and disaster recovery services',
+      'User account management and provisioning',
+      'Software license management',
+      'Hardware procurement and lifecycle management',
+      'IT asset tracking and inventory',
+      'Performance optimization and tuning',
+      'Compliance monitoring and reporting'
+    ],
+    pricing: {
+      starter: 150,
+      professional: 300,
+      enterprise: 500,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduce IT operational costs',
+      'Improve system reliability and uptime',
+      'Enhance security and compliance',
+      'Free up internal IT resources',
+      'Access to expert technical knowledge',
+      'Predictable IT budgeting'
+    ],
+    useCases: [
+      'Small business IT management',
+      'Remote workforce support',
+      'Healthcare IT compliance',
+      'Financial services IT operations',
+      'Manufacturing IT support'
+    ],
+    technologies: ['Microsoft 365', 'Active Directory', 'VMware', 'Backup Solutions', 'Monitoring Tools'],
+    link: 'https://ziontechgroup.com/services/managed-it-services-support',
+    icon: '🛠️'
   }
 ];
 

@@ -52,7 +52,7 @@ export function findServicesByTag(
 
 export function findServicesByPriceRange(
   allServiceArrays: Service[][], 
-  minPrice: number,
+  minPrice: number, 
   maxPrice: number
 ): Service[] {
   const results: Service[] = [];
