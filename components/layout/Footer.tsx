@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   Brain,
   Mail,
@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center space-x-2 mb-6">
+            <Link href="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
               </div>
@@ -168,7 +168,7 @@ const Footer: React.FC = () => {
                     {category.services.map((service) => (
                       <li key={service.name}>
                         <Link
-                          to={service.href}
+                          href={service.href}
                           className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
                         >
                           <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -189,7 +189,7 @@ const Footer: React.FC = () => {
               {quickLinks.map((link) => (
                 <Link
                   key={link.name}
-                  to={link.href}
+                  href={link.href}
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
                   {link.name}
@@ -254,7 +254,7 @@ const Footer: React.FC = () => {
                 {legalLinks.map((link) => (
                   <Link
                     key={link.name}
-                    to={link.href}
+                    href={link.href}
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {link.name}

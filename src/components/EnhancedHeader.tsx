@@ -15,6 +15,9 @@ export const EnhancedHeader: React.FC = () => {
             <a href="/about" className="text-gray-700 hover:text-blue-600">About</a>
             <a href="/services" className="text-gray-700 hover:text-blue-600">Services</a>
             <a href="/solutions" className="text-gray-700 hover:text-blue-600">Solutions</a>
+            <a href="/marketplace" className="text-gray-700 hover:text-blue-600">Marketplace</a>
+            <a href="/micro-saas" className="text-gray-700 hover:text-blue-600">Micro SAAS</a>
+            <a href="/blog" className="text-gray-700 hover:text-blue-600">Blog</a>
             <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact</a>
           </nav>
         </div>

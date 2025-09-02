@@ -15,10 +15,10 @@ export const EnhancedFooter: React.FC = () => {
           <div>
             <h4 className="text-md font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="/services/ai" className="hover:text-white">AI Solutions</a></li>
+              <li><a href="/services/ai-analytics" className="hover:text-white">AI Analytics</a></li>
               <li><a href="/services/cybersecurity" className="hover:text-white">Cybersecurity</a></li>
-              <li><a href="/services/cloud" className="hover:text-white">Cloud Services</a></li>
-              <li><a href="/services/transformation" className="hover:text-white">Digital Transformation</a></li>
+              <li><a href="/services/cloud-devops" className="hover:text-white">Cloud & DevOps</a></li>
+              <li><a href="/services/digital-transformation" className="hover:text-white">Digital Transformation</a></li>
             </ul>
           </div>
           <div>
