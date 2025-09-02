@@ -4,90 +4,58 @@ const path = require('path');
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    let fixed = false;
     
-    // Fix malformed function declarations with imports inside
-    content = content.replace(/export\s+default\s+function\s+Page\(\)\s*\{\s*import\s+\{([^}]+)\}\s+from\s+['"`]([^'"`]+)['"`];/g, "import { $1 } from '$2';");
-    
-    // Remove duplicate export default function Page() declarations
-    content = content.replace(/export\s+default\s+function\s+Page\(\)\s*\{\s*\n\s*export\s+default\s+function\s+Page\(\)\s*\{/g, "export default function Page() {");
-    
-    // Fix malformed function declarations
-    content = content.replace(/export\s+default\s+function\s+(\w+)\s*\(\)\s*\{\s*import\s+\{/g, "export default function $1() {\n  import {");
-    content = content.replace(/export\s+function\s+(\w+)\s*\(\)\s*\{\s*import\s+\{/g, "export function $1() {\n  import {");
-    
-    // Fix import statements with extra spaces
-    content = content.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]([^'"`]+)['"`];/g, (match, imports, path) => {
-      const cleanImports = imports.replace(/\s+/g, ' ').trim();
-      return `import { ${cleanImports} } from '${path}';`;
-    });
-    
-    // Fix import paths with spaces
-    content = content.replace(/from\s+['"`]\.\.\/data\s*\/\s*([^'"`]+)['"`]/g, "from '../data/$1'");
-    content = content.replace(/from\s+['"`]\.\.\/components\s*\/\s*([^'"`]+)['"`]/g, "from '../components/$1'");
-    
-    // Fix framer-motion imports
-    content = content.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]framer\s*-\s*motion['"`]/g, "import { $1 } from 'framer-motion'");
-    
-    // Fix lucide-react imports
-    content = content.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]lucide\s*-\s*react['"`]/g, "import { $1 } from 'lucide-react'");
-    
-    // Fix react-router-dom imports
-    content = content.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]react\s*-\s*router\s*-\s*dom['"`]/g, "import { $1 } from 'react-router-dom'");
-    
-    // Fix React imports
-    content = content.replace(/import\s+React\s+from\s+['"`]react\.ts['"`]/g, "import React from 'react'");
-    
-    // Fix missing function declarations
-    if (content.includes('import {') && !content.includes('export default function') && !content.includes('export function')) {
-      content = content.replace(/^\s*import\s+\{[^}]*\}\s+from\s+['"`][^'"`]*['"`];\s*$/gm, (match) => {
-        return match + "\nexport default function Page() {";
-      });
+    // Fix concatenated imports
+    if (content.includes("';'import")) {
+      content = content.replace(/';'import/g, ";\nimport");
+      fixed = true;
     }
     
-    // Fix missing closing braces
-    if (content.includes('export default function') && !content.includes('}')) {
-      content += '\n}';
+    // Fix concatenated statements
+    if (content.includes("';'const")) {
+      content = content.replace(/';'const/g, ";\n\nconst");
+      fixed = true;
     }
     
-    // Fix JSX syntax issues
-    content = content.replace(/return\s*\(/g, 'return (');
-    content = content.replace(/return\s*\{/g, 'return {');
+    if (content.includes("';'interface")) {
+      content = content.replace(/';'interface/g, ";\n\ninterface");
+      fixed = true;
+    }
     
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (content.includes("';'function")) {
+      content = content.replace(/';'function/g, ";\n\nfunction");
+      fixed = true;
+    }
+    
+    // Fix malformed function parameters
+    content = content.replace(/(\w+), title = '([^']*)','/g, "$1, title = '$2',\n  ");
+    content = content.replace(/(\w+), description = '([^']*)','/g, "$1, description = '$2',\n  ");
+    
+    // Fix malformed URLs
+    content = content.replace(/https: \/\//g, 'https://');
+    
+    // Fix malformed JSX
+    content = content.replace(/>"(\s*<)/g, '>\n    $1');
+    content = content.replace(/>"(\s*<\/)/g, '>\n  $1');
+    
+    if (fixed) {
+      fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
-      return true;
     }
-    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
-  
-  files.forEach(file => {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      if (!['node_modules', '.git', '.next', 'out', 'dist'].includes(file)) {
-        fixedCount += processDirectory(filePath);
-      }
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      if (fixFile(filePath)) {
-        fixedCount++;
-      }
-    }
-  });
-  
-  return fixedCount;
-}
+// Fix critical files
+const criticalFiles = [
+  'components/AccessibilityEnhancer.tsx',
+  'components/PerformanceOptimizer.tsx', 
+  'components/SEOEnhancer.tsx',
+  'components/layout/EnhancedFooter.tsx',
+  'components/layout/EnhancedNavigation.tsx'
+];
 
-console.log('Starting comprehensive syntax fixes...');
-const fixedCount = processDirectory('./src');
-console.log(`Fixed ${fixedCount} files.`);
+criticalFiles.forEach(fixFile);
+console.log('Critical files fixed!');

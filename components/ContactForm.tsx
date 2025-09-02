@@ -1,4 +1,6 @@
-import React, { useState } from 'react';'import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';''interface FormData {name: string;
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+interface FormData {name: string;
   email: string;
   company: string;
   service: string;
@@ -9,7 +11,8 @@ const ContactForm: React.FC = () => {
 
 const [formData, setFormData] = useState<FormData>({;
 
-    name: '', email: '','    company: '', service: '','    message: ''});'  const [isSubmitting, setIsSubmitting] = useState(false);'  const [isSubmitted, setIsSubmitted] = useState(false);
+    name: '', email: '','    company: '', service: '','    message: ''
+      });'  const [isSubmitting, setIsSubmitting] = useState(false);'  const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
 
   const services = [;
@@ -50,7 +53,8 @@ const handleSubmit = async (e: React.FormEvent) => {;e.preventDefault();
       setIsSubmitted(false);
       setFormData({
 
-name: '', email: '','        company: '', service: '','        message: ''});'    }, 3000);'  };
+name: '', email: '','        company: '', service: '','        message: ''
+      });'    }, 3000);'  };
 
   const handleChange = (;e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement

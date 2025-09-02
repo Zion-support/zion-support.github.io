@@ -1,4 +1,6 @@
-import React, { useEffect, useState, useCallback } from 'react';'import { motion, AnimatePresence } from 'framer-motion';'import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';''interface PerformanceMetrics {fcp: number;
+import React, { useEffect, useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';'import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';
+interface PerformanceMetrics {fcp: number;
   lcp: number;
   fid: number;
   cls: number;
@@ -75,7 +77,8 @@ const finalMetrics = {;
 
       // Observe different types of performance entries
       try {
-observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });'      } catch (error) {'        console.warn('Performance Observer not supported: ', error);'      }'// Fallback timeout
+observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });'      } catch (error) {'        console.warn('Performance Observer not supported: ', error);'
+            }'// Fallback timeout
       setTimeout(() => {
         resolve({
           fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0, fmp: 0, tti: 0, score: 0
@@ -94,7 +97,8 @@ const updateMetrics = useCallback(async () => {;setIsLoading(true);
       const newAlerts: string[] = [];
 if (newMetrics.fcp > 3000) newAlerts.push('First Contentful Paint is slow');'      if (newMetrics.lcp > 4000) newAlerts.push('Largest Contentful Paint is slow');'      if (newMetrics.fid > 300) newAlerts.push('First Input Delay is high');'      if (newMetrics.cls > 0.25) newAlerts.push('Cumulative Layout Shift is high');'      if (newMetrics.score < 50) newAlerts.push('Overall performance score is low');''      setAlerts(newAlerts);
     } catch (error) {
-      console.error('Error collecting performance metrics: ', error);'    } finally {'      setIsLoading(false);}
+      console.error('Error collecting performance metrics: ', error);'
+          } finally {'      setIsLoading(false);}
   }, [collectMetrics]);
 
   useEffect(() => {
@@ -154,7 +158,8 @@ const getScoreColor = (score: number): string => {;
             {alerts.length > 0 && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
-animate={{ opacity: 1, height: 'auto' }}'                exit={{ opacity: 0, height: 0 }}'                className="space-y-2""              >"                <h4 className="text-sm font-medium text-red-600 dark:text-red-400 flex items-center">"                  <AlertTriangle className="w-4 h-4 mr-1" />"                  Performance Alerts"                </h4>{alerts.map((alert, index) => (
+animate={{ opacity: 1, height: 'auto'
+       }}'                exit={{ opacity: 0, height: 0 }}'                className="space-y-2""              >"                <h4 className="text-sm font-medium text-red-600 dark:text-red-400 flex items-center">"                  <AlertTriangle className="w-4 h-4 mr-1" />"                  Performance Alerts"                </h4>{alerts.map((alert, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}

@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react';'import { motion, AnimatePresence } from 'framer-motion';'import { ;'  BarChart3, Users, 
+import React, { useEffect, useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';'import { ;'  BarChart3, Users, 
   Eye, MousePointer, 
   Clock, TrendingUp, 
   Globe, Smartphone,
@@ -59,7 +60,8 @@ pageViews: baseViews, uniqueVisitors: baseVisitors,;
       setAnalytics(data);
       setLastUpdated(new Date());
     } catch (error) {
-console.error('Error fetching analytics: ', error);'    } finally {'      setIsLoading(false);}
+console.error('Error fetching analytics: ', error);'
+          } finally {'      setIsLoading(false);}
   }, [generateMockAnalytics]);
 
   useEffect(() => {

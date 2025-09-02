@@ -1,4 +1,6 @@
-import React, { useState } from 'react';'import { motion } from 'framer-motion';'import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucide-react';''const ContactFormEnhanced: React.FC = () => {
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';'import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucide-react';
+const ContactFormEnhanced: React.FC = () => {
   const [formData, setFormData] = useState({;
     name: '', email: '','    subject: '', message: '''  });'  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');''  const handleSubmit = async (e: React.FormEvent) => {;e.preventDefault();
@@ -7,7 +9,8 @@ import React, { useState } from 'react';'import { motion } from 'framer-motion';
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     
-setSubmitStatus('success');'    setIsSubmitting(false);'    setFormData({ name: '', email: '', subject: '', message: '' });'  };'
+setSubmitStatus('success');'    setIsSubmitting(false);'    setFormData({ name: '', email: '', subject: '', message: ''
+       });'  };'
   return (
     <div className="max-w-2xl mx-auto p-6">"      <motion.div"        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

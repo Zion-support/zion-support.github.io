@@ -57,7 +57,8 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
       />
       <div className="relative flex items-center gap-2">
         {loading ? (
-          <motion.div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full" animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear' }} />
+          <motion.div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full" animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear'
+       }} />
         ) : (
           icon && <span className="flex-shrink-0">{icon}</span>
         )}
@@ -76,7 +77,8 @@ interface AnimatedCardProps {
 
 export const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className = '', delay = 0, direction = 'up' }) => {
   const ref = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: '-100px'
+       });
   const controls = useAnimation();
 
   useEffect(() => {

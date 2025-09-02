@@ -1,4 +1,6 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';'import { AlertTriangle, RefreshCw } from 'lucide-react';''interface Props {children: ReactNode;
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw } from 'lucide-react';
+interface Props {children: ReactNode;
   fallback?: ReactNode;
 }
 
@@ -16,7 +18,8 @@ public state: State = {;hasError: false
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-console.error('ErrorBoundary caught an error: ', error, errorInfo);'  }'private handleRetry = () => {
+console.error('ErrorBoundary caught an error: ', error, errorInfo);'
+        }'private handleRetry = () => {
     this.setState({ hasError: false, error: undefined });
   };
 

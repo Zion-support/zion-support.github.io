@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';'import { motion, AnimatePresence } from 'framer-motion';'import { Download, X, Smartphone, Monitor } from 'lucide-react';''interface BeforeInstallPromptEvent extends Event {
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';'import { Download, X, Smartphone, Monitor } from 'lucide-react';
+interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[];
   readonly userChoice: Promise<{;
     outcome: 'accepted' | 'dismissed';'    platform: string;'  }>;prompt(): Promise<void>;
@@ -27,8 +29,10 @@ const handleAppInstalled = () => {;setIsInstalled(true);
     };
 
 window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);'    window.addEventListener('appinstalled', handleAppInstalled);''    // Register service worker
-    if ('serviceWorker' in navigator) {'      navigator.serviceWorker.register('/sw.js')'        .then((registration) => {'          console.log('Service Worker registered successfully: ', registration);'        })'        .catch((error) => {
-          console.log('Service Worker registration failed: ', error);'        });'    }
+    if ('serviceWorker' in navigator) {'      navigator.serviceWorker.register('/sw.js')'        .then((registration) => {'          console.log('Service Worker registered successfully: ', registration);'
+              })'        .catch((error) => {
+          console.log('Service Worker registration failed: ', error);'
+              });'    }
 
     return () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);'      window.removeEventListener('appinstalled', handleAppInstalled);'    };'  }, []);
