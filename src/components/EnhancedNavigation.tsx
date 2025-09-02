@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-import { Link, useLocation               } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
 import { Menu, 
   X, 
   ChevronDown, 
@@ -26,48 +26,22 @@ import { Menu,
   Building,
   Rocket,
   Star
-              } from 'lucide-react.ts';
+ } from 'lucide-react.ts';
 
 interface NavigationItem {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  label: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
+  label: anystring;
   href: string;
   icon?: React.ReactNode;
   children?: NavigationItem[];
   featured?: boolean;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
 interface EnhancedNavigationProps extends React.PropsWithChildren<{}> {
 
   className?: string;
-  onThemeChange?: (theme: 'light' | 'dark' | 'system')               => void;
+  onThemeChange?: (theme: 'light' | 'dark' | 'system')  => void;
 
 }
 
@@ -211,7 +185,7 @@ const navigationItems: NavigationItem[] = [
 ];
 
 export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ 
-  className = '',;
+className:  '',;
   onThemeChange ;
 }) => {;
   const [isOpen, setIsOpen] = useState(false);
@@ -221,7 +195,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {;
+    const handleScroll: React.FC = ($2) => {;
       setIsScrolled(window.scrollY > 10);
     };
 
@@ -234,7 +208,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     setActiveDropdown(null);
   }, [location]);
 
-  const handleThemeChange = useCallback((newTheme: anyanyanyanyanyanyanyanyanyanyanyanyanyany'light' | 'dark' | 'system')               => {;
+  const handleThemeChange = useCallback((newTheme: unknown'light' | 'dark' | 'system')  => {;
     setTheme(newTheme);
     onThemeChange?.(newTheme);
     
@@ -251,11 +225,11 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     localStorage.setItem('zion-theme', newTheme);
   }, [onThemeChange]);
 
-  const toggleDropdown = (label: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+  const toggleDropdown: React.FC = ($2) => {
     setActiveDropdown(activeDropdown === label ? null : label);
   };
 
-  const closeDropdown = () => {
+  const closeDropdown: React.FC = ($2) => {
     setActiveDropdown(null);
   };
 
@@ -287,8 +261,8 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg: anyanyanyanyanyanyanyanyanyanyanyanyanyanyflex items-center space-x-8">
-            {navigationItems.map((item)               => (
+          <div className="hidden lg: anyflex items-center space-x-8">
+            {navigationItems.map((item)  => (
               <div key={item.label} className="relative group">
                 {item.children ? (
                   <button

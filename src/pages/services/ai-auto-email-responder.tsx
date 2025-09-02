@@ -2,9 +2,7 @@ import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export default function AIAutoEmailResponder(...args: []):  {
   return (
     <>
@@ -60,7 +58,6 @@ export default function AIAutoEmailResponder(...args: []):  {
             </div>
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   icon: Bot,
@@ -91,7 +88,6 @@ export default function AIAutoEmailResponder(...args: []):  {
                   icon: Shield,
                   title: "Security & Privacy",
                   description: "Enterprise-grade security with data encryption and privacy protection."
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
@@ -118,7 +114,6 @@ export default function AIAutoEmailResponder(...args: []):  {
             </div>
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   title: "Customer Support",
@@ -155,7 +150,6 @@ export default function AIAutoEmailResponder(...args: []):  {
                   description: "Automated surveys, review requests, and customer feedback gathering.",
                   icon: BarChart3,
                   benefits: ["Surveys", "Review requests", "Feedback collection"]
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((useCase, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
@@ -190,7 +184,6 @@ export default function AIAutoEmailResponder(...args: []):  {
             </div>
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   step: "01",
@@ -211,7 +204,6 @@ export default function AIAutoEmailResponder(...args: []):  {
                   step: "04",
                   title: "Delivery & Logging",
                   description: "Automated responses are sent and logged in CRM systems."
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((step, index)  => (
                 <div key={index} className="text-center">
@@ -286,7 +278,6 @@ export default function AIAutoEmailResponder(...args: []):  {
             </div>
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   title: "Email Platforms",
@@ -323,7 +314,6 @@ export default function AIAutoEmailResponder(...args: []):  {
                   description: "Zendesk, Freshdesk, and customer support platforms.",
                   icon: Users,
                   features: ["Zendesk", "Freshdesk", "Support Systems"]
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((integration, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">

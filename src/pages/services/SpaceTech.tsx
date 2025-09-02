@@ -2,7 +2,6 @@ import React from 'react.ts';
 import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database               } from 'lucide-react.ts';
 
 const SpaceTech = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const spaceServices = [
     {
       title: "Satellite Technology",
@@ -25,7 +24,6 @@ const SpaceTech = () => {
       features: ["Ground stations", "Mission control", "Data processing", "Communication systems"],
       icon: Database;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const spaceTechnologies = [
@@ -44,7 +42,6 @@ const SpaceTech = () => {
     {
       features: ["Threat detection", "Secure communications", "System protection", "Compliance"];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -65,7 +62,6 @@ const SpaceTech = () => {
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">
               <Rocket className="w-4 h-4 mr-2"/>
               Space Technology
-=======
       icon: Navigation,
       title: 'Space Navigation',
       description: 'Advanced positioning and navigation systems for space missions';
@@ -161,7 +157,6 @@ const SpaceTech = () => {
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
               <Rocket className="w-4 h-4 mr-2" />
               Space Technology Solutions
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Space Technology
@@ -212,7 +207,6 @@ const SpaceTech = () => {
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Advanced Space Technology Features
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Comprehensive space technology solutions designed to advance
@@ -258,7 +252,6 @@ const SpaceTech = () => {
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
@@ -306,7 +299,6 @@ const SpaceTech = () => {
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Core Space Technology Services
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Cutting-edge technologies and platforms to build robust,
@@ -442,7 +434,6 @@ const SpaceTech = () => {
         </div>;
       </section>;
     </div>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 };
 

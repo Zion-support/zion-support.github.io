@@ -6,13 +6,10 @@ import { Badge               } from './ui/badge';
 import { Progress               } from './ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger               } from './ui/tabs';
 import { User, 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Settings, 
   Palette, 
   Eye, 
   MousePointer, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Smartphone,
   Monitor,
   Zap,
@@ -23,7 +20,6 @@ import { User,
   Accessibility,
   Languages
                } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 interface UserPreference {
 
@@ -41,7 +37,6 @@ interface UserPreference {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   value: string | boolean | number;
@@ -65,7 +60,6 @@ description: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface UserActivity {
 
@@ -83,7 +77,6 @@ interface UserActivity {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   action: string;
   timestamp: Date;
@@ -106,7 +99,6 @@ category: 'navigation' | 'interaction' | 'search' | 'purchase';
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface AccessibilityFeature {
 
@@ -124,7 +116,6 @@ interface AccessibilityFeature {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   enabled: boolean;
@@ -146,18 +137,15 @@ impact: 'high' | 'medium' | 'low';
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const InteractiveUserExperience: React.FC = (): JSX.Element => {;
   const [preferences, setPreferences] = useState<any>([]);
   const [userActivities, setUserActivities] = useState<any>([]);
   const [accessibilityFeatures, setAccessibilityFeatures] = useState<any>([]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [currentTheme, setCurrentTheme] = useState('light');
   const [fontSize, setFontSize] = useState(16);
   const [contrast, setContrast] = useState('normal');
   const [language, setLanguage] = useState('en');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   // Initialize sample data
   useEffect(() => {
@@ -229,7 +217,6 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {;
   // Initialize accessibility features
   useEffect(()                => {
     const features: AccessibilityFeature[] = [
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       {
         id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'1',
         name: 'Screen Reader Support',
@@ -308,13 +295,11 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {;
   const toggleAccessibilityFeature = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     setAccessibilityFeatures(prev => prev.map(feature => ;
       feature.id === id ? { ...feature, enabled: !feature.enabled } : feature;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ));
   }, []);
 
   const getActivityIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanyUserActivity['category'])               => {;
     switch (category) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'navigation': return <MousePointer className="h-4 w-4" />;
       case 'interaction': return <User className="h-4 w-4" />;
       case 'search': return <Eye className="h-4 w-4" />;

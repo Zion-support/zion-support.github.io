@@ -1,22 +1,3 @@
-  Rocket,
-  TrendingUp,
-  BarChart3,
-  Atom,
-  Network,
-  Lock,
-  Cpu,
-  Wifi,
-  Satellite,
-  Handshake,
-  FileText,
-  Video,
-  GraduationCap,
-  Lightbulb,
-  Star as StarIcon,
-  HelpCircle,
-  BarChart as BarChartIcon,
-  ShoppingCart,
-  Clock
 =======
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
@@ -29,7 +10,6 @@ import { Calculator,
   Building2,
   Users,
   Globe,
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Shield,
   Zap,
   Database,
@@ -70,7 +50,6 @@ import { Calculator,
  
  
  
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 } from 'lucide-react';
 
 export default function RequestQuote(...args: any[]): any {
@@ -92,7 +71,6 @@ export default function RequestQuote(...args: any[]): any {
   const [expandedService, setExpandedService] = useState<any>(null);
   const [isSubmitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const companySizes = [
     { value: 'startup', label: 'Startup (1-50 employees)' },
@@ -305,18 +283,12 @@ export default function RequestQuote(...args: any[]): any {
   ];
 
   const handleInputChange = (field: anyanyanyanyanyanyanyanyanyanyanyanyanystring, value: string | string[])              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
 
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Header Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark to-zion-purple opacity-20"></div>
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20">
 =======
   const toggleService = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     setFormData(prev => ({
@@ -341,11 +313,9 @@ export default function RequestQuote(...args: any[]): any {
     if (formStep > 1) {
       setFormStep(formStep - 1);
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
     setSubmitting(true);
     
@@ -412,7 +382,6 @@ export default function RequestQuote(...args: any[]): any {
                 <div>
                   <div className="text-white font-medium">Initial Review</div>
                   <div className="text-gray-300 text-sm">Our team reviews your requirements and project scope</div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
               </div>
       {/* Benefits */}
@@ -420,7 +389,6 @@ export default function RequestQuote(...args: any[]): any {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -874,7 +842,6 @@ export default function RequestQuote(...args: any[]): any {
       {/* Contact Information */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6 text-center">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

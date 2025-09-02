@@ -1,19 +1,17 @@
-import React, { useState               } from 'react.ts';
-import { GradientHeading                } from '@/components/GradientHeading';
-import { Button                } from '@/components/ui/button';
-import { Input                } from '@/components/ui/input';
-import { useNavigate                } from 'react-router-dom.ts';
-import { motion                } from 'framer-motion.ts';
-import { Clock, Globe, Shield, Zap, MapPin, CheckCircle                } from 'lucide-react.ts';
+import React, { useState } from 'react.ts';
+import { GradientHeading  } from '@/src/src/components/GradientHeading';
+import { Button  } from '@/src/src/components/ui/button';
+import { Input  } from '@/src/src/components/ui/input';
+import { useNavigate  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react';
 
-export function ITServiceRequestHero(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export function ITServiceRequestHero(...args[]):  {
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)                => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  const handleSubmit = async (e: React.FormEvent)  => {;
     e.preventDefault();
     if (location.trim()) {
       setIsSubmitting(true);
@@ -22,9 +20,11 @@ export function ITServiceRequestHero(...args[]: any):  {
         setIsSubmitting(false);
         router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)};
   };
+
   const containerVariants = {
   hidden: { opacity: 0,
   y: 20 
+
 },
     visible: {
       opacity: 1,
@@ -35,9 +35,11 @@ export function ITServiceRequestHero(...args[]: any):  {
       };
     };
   };
+
   const itemVariants = {
   hidden: { opacity: 0,
   y: 20 
+
 },
     visible: {
       opacity: 1,
@@ -45,12 +47,18 @@ export function ITServiceRequestHero(...args[]: any):  {
       transition: { duration: 0.5 };
     };
   };
+
   const features = [
     { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
+
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+
+export function ITServiceRequestHero() {
   return (
     <section className = "py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
       {/* Background Elements */}
@@ -58,12 +66,14 @@ export function ITServiceRequestHero(...args[]: any):  {
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
       </div>
+
       <motion.div
         className="container mx-auto px-4 relative z-10"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <motion.div variants={itemVariants} className="text-white">
@@ -75,13 +85,16 @@ export function ITServiceRequestHero(...args[]: any):  {
                 Global IT Services
               </span>
             </div>
+
             <GradientHeading className="mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight">
               24/7 Global IT Onsite Services
             </GradientHeading>
+
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl leading-relaxed">
               Get professional IT technicians anywhere in the world, anytime you need them.
               From emergency repairs to scheduled maintenance, we're there when you need us most.
             </p>
+
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
@@ -102,39 +115,62 @@ export function ITServiceRequestHero(...args[]: any):  {
                 <span className="text-gray-200">Custom Solutions for Your Business</span>
               </div>
             </div>
+
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 onClick={() => document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+
                 Request Service Now
                 <MapPin className="w-5 h-5 ml-2" />
               </Button>
               <Button
                 variant="outline"
                 className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
+
                 Learn More
               </Link>
             </div>
           </motion.div>
+
           <motion.div
             initial = {
   { opacity: 0,
   x: 30 
+
+
+
+
+
+
 }}
             whileInView = {
   { opacity: 1,
   x: 0 
+
+
+
+
+
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
+
+
+
+
 }}
             className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8"
           >
             <h3 className="text-2xl font-bold text-white mb-6 text-center">
               Contact Information
             </h3>
+            
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -145,6 +181,7 @@ export function ITServiceRequestHero(...args[]: any):  {
                   <p className="text-white font-semibold">+1 302 464 0950</p>
                 </div>
               </div>
+              
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
                   <span className="text-white text-xl">✉️</span>
@@ -154,6 +191,7 @@ export function ITServiceRequestHero(...args[]: any):  {
                   <p className="text-white font-semibold">kleber@ziontechgroup.com</p>
                 </div>
               </div>
+              
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
                   <span className="text-white text-xl">📍</span>
@@ -163,6 +201,7 @@ export function ITServiceRequestHero(...args[]: any):  {
                   <p className="text-white font-semibold text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
+              
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center">
                   <span className="text-white text-xl">🌐</span>
@@ -173,6 +212,7 @@ export function ITServiceRequestHero(...args[]: any):  {
                 </div>
               </div>
             </div>
+
             <div className="mt-8 text-center">
               <p className="text-gray-400 text-sm mb-4">
                 Available 24/7 for emergency support

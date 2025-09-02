@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from 'react.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-import { RefreshCw, X, CheckCircle, AlertTriangle, Info               } from 'lucide-react.ts';
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-interface PWAUpdaterProps extends React.PropsWithChildren<{}> {
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+interface PWAUpdaterProps {
   autoCheck?: boolean;
   checkInterval?: number;
   showUpdatePrompt?: boolean;
-
 }
+
 const PWAUpdater: React.FC<PWAUpdaterProps> = ({
   autoCheck = true,
   checkInterval = 300000, // 5 minutes
@@ -18,8 +15,9 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [updating, setUpdating] = useState(false);
   const [updateComplete, setUpdateComplete] = useState(false);
-  const [registration, setRegistration] = useState<any>(null);
+  const [registration, setRegistration] = useState<ServiceWorkerRegistration | null>(null);
   const [showPrompt, setShowPrompt] = useState(false);
+
   useEffect(() => {
     // Check if service worker is supported
     if ('serviceWorker' in navigator) {
@@ -28,17 +26,18 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
       navigator.serviceWorker.register('/sw.js')
         .then((reg) => {
           setRegistration(reg);
-          console.log('Service Worker registered successfully: anyanyanyanyanyanyanyanyanyanyanyanyanyany', reg);
+          console.log('Service Worker registered successfully:', reg);
           
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           // Check for updates
           if (autoCheck) {
             checkForUpdates(reg);
           }
+          
           // Listen for updates
-          reg.addEventListener('updatefound', ()               => {
+          reg.addEventListener('updatefound', () => {
             console.log('Service Worker update found');
             const newWorker = reg.installing;
+            
             if (newWorker) {
               newWorker.addEventListener('statechange', () => {
                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
@@ -50,12 +49,14 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
               });
             }
           });
+          
           // Listen for controller change (update applied)
           navigator.serviceWorker.addEventListener('controllerchange', () => {
             console.log('Service Worker controller changed - update applied');
             setUpdateComplete(true);
             setUpdateAvailable(false);
             setUpdating(false);
+            
             // Hide prompt after a delay
             setTimeout(() => {
               setShowPrompt(false);
@@ -64,23 +65,22 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           });
         })
         .catch((error) => {
-          console.error('Service Worker registration failed: anyanyanyanyanyanyanyanyanyanyanyanyanyany', error);
+          console.error('Service Worker registration failed:', error);
         });
     }
   }, [autoCheck, showUpdatePrompt]);
 
-  useEffect(()               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  useEffect(() => {
     if (autoCheck && registration) {
       const interval = setInterval(() => {
         checkForUpdates(registration);
       }, checkInterval);
+      
       return () => clearInterval(interval);
     }
   }, [autoCheck, checkInterval, registration]);
 
-  const checkForUpdates = async (reg: anyanyanyanyanyanyanyanyanyanyanyanyanyanyServiceWorkerRegistration)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  const checkForUpdates = async (reg: ServiceWorkerRegistration) => {
     try {
       await reg.update();
       console.log('Service Worker update check completed');
@@ -88,28 +88,34 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
       console.error('Service Worker update check failed:', error);
     }
   };
+
   const applyUpdate = async () => {
     if (!registration) return;
+    
     setUpdating(true);
     setShowPrompt(false);
+    
     try {
       // Send message to service worker to skip waiting
       if (registration.waiting) {
-        registration.waiting.postMessage({ type: anyanyanyanyanyanyanyanyanyanyanyanyanyany'SKIP_WAITING' });
+        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
       }
+      
       // Reload the page to apply the update
-      setTimeout(()               => {
+      setTimeout(() => {
         window.location.reload();
       }, 1000);
     } catch (error) {
       // // // // // // // console.error('Update failed:', error);
       setIsUpdating(false);
+
       console.error('Failed to apply update:', error);
       setUpdating(false);
       setShowPrompt(true);
     }
   };
-  const dismissUpdate = () => {
+
+  const dismissUpdate: React.FC = ($2) => {
     setShowPrompt(false);
     // Auto-show again after 1 hour
     setTimeout(() => {
@@ -118,10 +124,12 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
       }
     }, 3600000);
   };
+
   // Don't render anything if no update is available
   if (!updateAvailable && !updating && !updateComplete) {
     return null;
   }
+
   return (
     <>
       {/* Update Prompt */}
@@ -170,6 +178,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
+
       {/* Update Progress */}
       <AnimatePresence>
         {updating && (
@@ -209,6 +218,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
+
       {/* Update Complete */}
       <AnimatePresence>
         {updateComplete && (
@@ -235,6 +245,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
+
       {/* Floating Update Indicator */}
       {updateAvailable && !showPrompt && !updating && (
         <motion.div
@@ -255,4 +266,5 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
     </>
   );
 };
+
 export default PWAUpdater;

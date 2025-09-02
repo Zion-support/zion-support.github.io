@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
+import { motion  } from 'framer-motion.ts';
 import { Phone,
   Mail,
   MapPin,
@@ -16,9 +16,9 @@ import { Phone,
   Github,
   Facebook,
   Instagram
-             } from 'lucide-react.ts';
+ } from 'lucide-react.ts';
 
-export function ContactPage(...args: any[]): any {
+export function ContactPage(...args: unknown[]): unknown {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -32,14 +32,14 @@ export function ContactPage(...args: any[]): any {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)              => {
+  const handleInputChange: React.FC = ($2) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {
+  const handleSubmit = async (e: anyReact.FormEvent)  => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -186,8 +186,8 @@ export function ContactPage(...args: any[]): any {
         </div>
 
         {/* Contact Methods */}
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {contactMethods.map((method, index)              => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {contactMethods.map((method, index)  => (
             <motion.div
               key={method.title}
               initial={{ opacity: 0, y: 20 }}

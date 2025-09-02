@@ -1,10 +1,9 @@
-import React from 'react.ts';
-import SEO from '@/components/SEO';
+import React from 'react';
+import SEO from '@/src/src/components/SEO';
 
-export default function AIAutoEmailResponder(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+export default function AIAutoEmailResponder(...args[]):  {
   return (
-    <div className = "min-h-screen bg-futuristic text-white">
+    <div className = "min-h-screen bg-futuristic text-white">;
       <SEO
         title="AI Auto Email Responder | Zion Tech Group"
         description="Automate customer email replies with secure AI, sentiment detection, intent routing, and CRM logging."
@@ -18,6 +17,7 @@ export default function AIAutoEmailResponder(...args[]: any):  {
           classifies priority, detects sentiment, and logs to your CRM. Privacy-first deployment options
           (VPC, data redaction, PII filtering) and human-in-the-loop approvals included.
         </p>
+
         <div className="grid gap-8 md:grid-cols-2 mt-10">;
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">;
             <h2 className="text-xl font-semibold mb-3">Key Capabilities</h2>;
@@ -64,3 +64,4 @@ export default function AIAutoEmailResponder(...args[]: any):  {
     </div>;
   );
 }
+

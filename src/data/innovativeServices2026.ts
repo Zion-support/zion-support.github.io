@@ -1,10 +1,12 @@
-export type InnovativeService = {;
+export interface InnovativeService2026 {
   id: string;
-  title: string;
+  name: string;
   description: string;
-  category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation';
-  price: string;
-  billing: 'month' | 'project' | 'hour' | 'year';
+  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Cybersecurity' | 'Cloud Solutions' | 'Blockchain' | 'IoT' | 'Quantum Computing' | 'FinTech' | 'HealthTech' | 'EdTech' | 'GreenTech';
+  subcategory: string;
+  price: number;
+  currency: string;
+  marketPrice: string;
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -618,7 +620,6 @@ export const serviceCategories = [
     services: innovativeServices2026.filter(s               => s.category === 'IT Services')
   },
     services: anyanyanyanyanyanyanyanyanyanyanyanyanyinnovativeServices2026.filter(s               => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
   {;
     name: anyanyanyanyanyanyanyanyanyanyanyanyany'Emerging Technologies',;
@@ -626,4 +627,5 @@ export const serviceCategories = [
     services: innovativeServices2026.filter(s              => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category));
   };
 ];
-export default innovativeServices2026;}}
+
+export default INNOVATIVE_SERVICES_2026;

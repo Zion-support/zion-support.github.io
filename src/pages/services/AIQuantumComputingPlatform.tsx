@@ -19,7 +19,6 @@ import { Brain,
 import { SEO               } from '../../components/SEO';
 
 const AIQuantumComputingPlatform = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     'AI-powered quantum algorithm optimization',
     'Hybrid quantum-classical computing solutions',
@@ -47,7 +46,6 @@ const AIQuantumComputingPlatform = () => {
       name: 'Starter',
       price: '$1,299/mo',
       features: ['Up to 10 qubits', 'Basic quantum simulation', 'Standard algorithms', 'Email support', 'Monthly usage reports'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       popular: false
     },
     {
@@ -92,7 +90,6 @@ const AIQuantumComputingPlatform = () => {
 
   return (
     <div className = "min-h-screen bg-white">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
@@ -130,7 +127,6 @@ const AIQuantumComputingPlatform = () => {
               </button>
             </div>
           </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
       </section>
 
@@ -184,7 +180,6 @@ const AIQuantumComputingPlatform = () => {
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
@@ -247,7 +242,6 @@ const AIQuantumComputingPlatform = () => {
                 }`}
               >
                 {service.popular && (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
@@ -268,7 +262,6 @@ const AIQuantumComputingPlatform = () => {
                     <li key={featureIndex} className="flex items-center text-zion-slate-light">
                       <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
                       {feature}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     </li>
                   ))}
                 </ul>
@@ -281,14 +274,12 @@ const AIQuantumComputingPlatform = () => {
                       : 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
                   }`}
                 >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   Get Started
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </motion.div>
             ))}
           </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
       </section>
 
@@ -493,5 +484,3 @@ const AIQuantumComputingPlatform = () => {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

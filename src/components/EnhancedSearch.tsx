@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef, useCallback } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield, Sparkles, Brain, Zap, ArrowRight               } from 'lucide-react.ts';
 import { useNavigate               } from 'react-router-dom.ts';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SearchResult {
 
@@ -21,7 +19,6 @@ interface SearchResult {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -44,7 +41,6 @@ relevance: number;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SearchFilter {
 
@@ -64,7 +60,6 @@ interface SearchFilter {
 
   type: string[];
   category: string[];
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   tags: string[];
 }
 interface SearchSuggestion {
@@ -102,7 +97,6 @@ interface SearchSuggestion {
 
 interface EnhancedSearchProps extends React.PropsWithChildren<{}> {
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   className?: string;
   placeholder?: string;
   onSearch?: (query: string)               => void;
@@ -150,8 +144,6 @@ const searchData: SearchResult[] = [
     type: 'page',
     category: 'Comp',
     tags: ['About', 'Comp', 'Mission', 'Values'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     relevance: 85
   },
   {
@@ -184,7 +176,6 @@ const categories = [
 ];
 
 export function EnhancedSearch(...args: any[]): any {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<any>([]);
@@ -199,8 +190,6 @@ export function EnhancedSearch(...args: any[]): any {;
   const [showFilters, setShowFilters] = useState(false);
   const [recentSearches, setRecentSearches] = useState<any>([]);
   
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
@@ -241,14 +230,12 @@ export function EnhancedSearch(...args: any[]): any {;
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
   // Handle keyboard navigation
   useEffect(() => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         inputRef.current?.focus()}
     };
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
   const handleSearch = useCallback((searchQuery: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (searchQuery.trim()) {;
       // Add to recent searches;
       const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
@@ -262,9 +249,7 @@ export function EnhancedSearch(...args: any[]): any {;
   const handleResultClick = (result: anyanyanyanyanyanyanyanyanyanyanyanyanyanySearchResult)                => {;
     handleSearch(result.title);
     router(result.url);
-=======
     const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       if (!isOpen) return;
       switch (event.key) {
         case 'ArrowDown':
@@ -334,13 +319,11 @@ export function EnhancedSearch(...args: any[]): any {;
   }, [query, filters, handleSearch]);
 
   const handleResultClick = (result: anyanyanyanyanyanyanyanyanyanyanyanyanyanySearchResult)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     router(result.url);
     setIsOpen(false);
     setQuery('')};
 
   const toggleFilter = (filterType: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof SearchFilter, value: string)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setFilters(prev => ({;
       ...prev,;
       [filterType]: prev[filterType].includes(value);
@@ -353,7 +336,6 @@ export function EnhancedSearch(...args: any[]): any {;
   };
 
   const getTypeIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (type) {;
       case 'service': return <Code className="h-4 w-4" />;
       case 'page': return <Globe className="h-4 w-4" />;

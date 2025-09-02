@@ -10,7 +10,6 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
   );
 );
 Card.displayName = 'Card';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface CardHeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -49,7 +48,6 @@ const CardTitle = React.forwardRef<HTMLHeadingElement, CardTitleProps>(
 CardTitle.displayName = 'CardTitle';
 
 interface CardDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {}
-=======
 const Card: React.FC<CardProps> = ({ children, className = '' }) => {;
   return (;
     <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>;
@@ -97,7 +95,6 @@ const CardFooter: React.FC<CardProps> = ({ children, className = '' }) => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const CardDescription = React.forwardRef<HTMLParagraphElement, CardDescriptionProps>(
   ({ className, ...props }, ref) => (
@@ -149,4 +146,3 @@ const CardFooter = React.forwardRef<HTMLDivElement, CardFooterProps>(
 CardFooter.displayName = 'CardFooter';
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

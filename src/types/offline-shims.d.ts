@@ -1,14 +1,15 @@
+import React from 'react';
 // Minimal type declarations for offline development
 
 // React stubs
 declare module 'react' {
-  export type FC<P = any> = (props: anyanyanyanyanyanyanyanyanyanyanyanyanyP)              => ;
+  export type FC<P = any> = (props: anyP)  => ;
   export type ReactNode = ;
   export interface ChangeEvent<T = any> { target: T }
   export interface FormEvent<T = any> {}
   export interface KeyboardEvent<T = any> {};
   export interface RefObject<T> { current: T };
-  export type RefCallback<T> = (value: anyanyanyanyanyanyanyanyanyanyanyanyanyT)              => void;
+  export type RefCallback<T> = (value: anyT)  => void;
   export type Ref<T> = RefObject<T> | RefCallback<T> | null;
   export type LegacyRef<T> = Ref<T>;
   export function useRef<T = any>(initial: T): { current: T };
@@ -23,59 +24,11 @@ declare module 'react/jsx-runtime' {
 declare namespace JSX {
   interface Element {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
   interface IntrinsicElements {
 
-
-
-
-
-
-
-
-
-
-
-
-
     [elemName: string]: ;
   
-
-
-
-
-
-
-
-
-
-
-
-
 }
 }
 
@@ -94,24 +47,24 @@ declare module 'react-router-dom' {
 }
 
 declare module 'react-hook-form' {
-  export function useForm<T = any>(...args: any[]): ;
+  export function useForm<T = any>(...args: unknown[]): ;
   const rhf: ;
   export default rhf;
 }
 
 declare module '@hookform/resolvers/zod' {
-  export function zodResolver(...args: any[]): ;
+  export function zodResolver(...args: unknown[]): ;
 }
 
 declare module '@tanstack/react-query' {
-  export function useMutation<T = any>(...args: any[]): ;
+  export function useMutation<T = any>(...args: unknown[]): ;
   const rq: ;
   export default rq;
 }
 
 declare module 'jspdf' {
   export class jsPDF {
-    constructor(...args: any[]);
+    constructor(...args: unknown[]);
     [key: string]: ;
   }
 }

@@ -1,17 +1,14 @@
 import React from 'react.ts';
-import { Helmet               } from 'react-helmet-async.ts';
-import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone               } from 'lucide-react.ts';
-import { Link               } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+import { Helmet  } from 'react-helmet-async.ts';
+import { Link  } from 'react-router-dom.ts';
 
+export default function DigitalTransformation(...args: []):  {
   return (
     <>
       <Helmet>
         <title>Digital Transformation - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with comprehensive digital transformation services. Modernize operations, enhance customer experience, and drive innovation." />
+        <meta name = "description" content="Transform your business with comprehensive digital transformation services. Modernize operations, enhance customer experience, and drive innovation." />
         <meta name="keywords" content="digital transformation, business modernization, digital strategy, technology consulting, process automation, digital innovation" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/digital-transformation" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -39,7 +36,7 @@ import { Link               } from 'react-router-dom.ts';
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -53,7 +50,7 @@ import { Link               } from 'react-router-dom.ts';
         </section>
 
         {/* Features Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -65,7 +62,7 @@ import { Link               } from 'react-router-dom.ts';
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -98,7 +95,6 @@ import { Link               } from 'react-router-dom.ts';
                   description: "Leverage data insights for informed decision-making and optimization."
                 }
               ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -112,7 +108,7 @@ import { Link               } from 'react-router-dom.ts';
         </section>
 
         {/* Transformation Areas Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -123,7 +119,7 @@ import { Link               } from 'react-router-dom.ts';
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Technology Infrastructure",
@@ -162,7 +158,6 @@ import { Link               } from 'react-router-dom.ts';
                   benefits: ["Cybersecurity", "Data protection", "Compliance frameworks"]
                 }
               ].map((area, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <area.icon className="w-6 h-6 text-white" />
@@ -184,7 +179,7 @@ import { Link               } from 'react-router-dom.ts';
         </section>
 
         {/* Technology Stack Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -195,7 +190,7 @@ import { Link               } from 'react-router-dom.ts';
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Cloud Platforms",
@@ -234,7 +229,6 @@ import { Link               } from 'react-router-dom.ts';
                   features: ["Zero-trust security", "Compliance automation", "Threat detection"]
                 }
               ].map((tech, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <tech.icon className="w-6 h-6 text-white" />
@@ -249,7 +243,6 @@ import { Link               } from 'react-router-dom.ts';
                       </li>
                     ))}
                   </ul>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
               ))}
             </div>
@@ -257,36 +250,45 @@ import { Link               } from 'react-router-dom.ts';
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-slate-800/20">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose Digital Transformation?
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Digital Transformation Benefits
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Transform your business and stay ahead of the competition with our proven digital transformation approach.
+                Transform your business operations with measurable improvements and competitive advantages.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                {benefits.slice(0, 3).map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                    <p className="text-slate-300 text-lg">{benefit}</p>
-                  </div>
-                ))}
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="space-y-6">
+                  {[
+                    "25-40% improvement in operational efficiency",
+                    "30-50% reduction in operational costs",
+                    "Enhanced customer satisfaction and engagement",
+                    "Improved decision-making with data insights",
+                    "Increased agility and market responsiveness",
+                    "Better employee productivity and satisfaction"
+                  ].map((benefit, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="w-6 h-6 text-purple-400 mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-300">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">Transformation Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: anyanyanyanyanyanyanyanyanyanyanyanyany"25-40%", label: "Efficiency", description: "Operational improvement" },
+                    { metric: "25-40%", label: "Efficiency", description: "Operational improvement" },
                     { metric: "30-50%", label: "Cost Reduction", description: "Operational costs" },
                     { metric: "60%+", label: "Customer Satisfaction", description: "Improvement" },
                     { metric: "80%+", label: "Digital Adoption", description: "Technology adoption" }
-                  ].map((item, index)               => (
+                  ].map((item, index)  => (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-purple-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -294,25 +296,24 @@ import { Link               } from 'react-router-dom.ts';
                     </div>
                   ))}
                 </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               </div>
             </div>
           </div>
         </section>
 
-        {/* Services Section */}
-        <section className="py-20">
+        {/* Implementation Process Section */}
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Our Digital Transformation Services
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Transformation Process
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                End-to-end digital transformation solutions tailored to your business needs.
+                Our systematic approach ensures successful digital transformation implementation.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -335,21 +336,12 @@ import { Link               } from 'react-router-dom.ts';
                   description: "Continuously monitor, optimize, and scale digital capabilities."
                 }
               ].map((step, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-slate-400 mb-4">{service.description}</p>
-                  <Link 
-                    to="/contact" 
-                    className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors group-hover:translate-x-1"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
+                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
+                  <p className="text-slate-300">{step.description}</p>
                 </div>
               ))}
             </div>
@@ -357,28 +349,32 @@ import { Link               } from 'react-router-dom.ts';
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-slate-800/20">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-600/10">;
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Let's discuss how digital transformation can accelerate your business growth and innovation.
+              Start your digital transformation journey with comprehensive strategy and implementation services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
-              >
-                Get Started
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200"
+
+                Schedule a Consultation
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <button className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-800 transition-all duration-300">
-                Schedule Consultation
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"
+              >
+                Explore All Services;
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
-}
+}}}}}}

@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Search,
   Filter,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
   ArrowRight,
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   Star,
   Clock,
   CheckCircle,
@@ -57,8 +55,6 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
       case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gray-600';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
       icon: Search,
       title: "AI-Powered SEO Platform",
@@ -85,7 +81,6 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
       features: ["Demand forecasting", "Inventory optimization", "Route optimization", "Risk management"],
       link: "/services/ai-supply-chain-optimization-enhanced",
       category: "Supply Chain"
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     }
   ];
 
@@ -333,7 +328,6 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -358,7 +352,6 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-4xl mx-auto"
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Experience the future with Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services.
               Quantum computing, edge AI, autonomous agents, and blockchain solutions that redefine what's possible.
             </motion.p>
@@ -465,7 +458,6 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
 
 }}
                   className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 >
                   <category.icon className="h-5 w-5" />
                   {category.name}
@@ -473,13 +465,11 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
                     {category.count}
                   </span>
                 </motion.button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               ))}
             </div>
                   <span className="text-xs bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded-full">
                     {service.category}
                   </span>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
                 </div>
 
                 {/* Service Content */}

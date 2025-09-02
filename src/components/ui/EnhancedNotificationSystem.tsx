@@ -2,7 +2,6 @@ import React, { useState, useEffect, createContext, useContext               } f
 import { motion, AnimatePresence                } from 'framer-motion.ts';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell                } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export type NotificationType = 'success' | 'error' | 'warning' | 'info';
 export interface Notification {
 
@@ -21,7 +20,6 @@ export interface Notification {
 
 
   id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   type: NotificationType;
   title: string;
   message: string;
@@ -29,7 +27,6 @@ export interface Notification {
 action?: {;
     label: string;
     onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()                => void}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface NotificationContextType {
 
@@ -65,28 +62,23 @@ clearAll: anyanyanyanyanyanyanyanyanyanyanyanyanyany()                => void;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const NotificationContext = createContext<NotificationContextType | null>(null);
 export const useNotifications = () => {;
   const context = useContext(NotificationContext);
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider')
 }
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return context};
 interface NotificationProviderProps extends React.PropsWithChildren<{}> {
   children: React.ReactNode}
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
   const [notifications, setNotifications] = useState<any>([]);
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         removeNotification(id)}, notification.duration || 5000)}
   };
 
   const removeNotification = (id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setNotifications(prev => prev.filter(n => n.id !== id));
   };
   const clearAll = () => {;
@@ -107,8 +99,6 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
 };
 
 const NotificationContainer: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const { notifications, removeNotification, clearAll } = useNotifications();
   if (notifications.length === 0) return null;
   return (
@@ -151,22 +141,17 @@ const NotificationContainer: React.FC = (): JSX.Element => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   notification: anyanyanyanyanyanyanyanyanyanyanyanyanyanyNotification;
   onRemove: anyanyanyanyanyanyanyanyanyanyanyanyanyany(id: string)                => void}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return <Info className = "w-5 h-5 text-blue-400" />};
   };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return 'border-blue-500/30'}
   };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return 'bg-blue-500/10'}
   };
   return (
@@ -208,7 +193,6 @@ export const notify = {
   success: anyanyanyanyanyanyanyanyanyanyanyanyanyany(title: string, message: string, options?: Partial<Notification>)                => {
     // This would be used with the context
     console.log('Success notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ...options 
 })},
   error: (title: string, message: string, options?: Partial<Notification>)                => {
@@ -217,9 +201,7 @@ export const notify = {
     console.log('Warning notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options })},
   info: (title: string, message: string, options?: Partial<Notification>)                => {
     console.log('Info notification:', { title, message, ...options })};
-=======;
     console.log('Success notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message,;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;
   ;
   ;
@@ -237,7 +219,6 @@ export const notify = {
 };}}}}}}}}}}}
 =======
     // // // // // // // console.log('Success notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options });
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   },
   error: (title: string, message: string, options?: Partial<Notification>)               => {
     // // // // // // // console.log('Error notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options });

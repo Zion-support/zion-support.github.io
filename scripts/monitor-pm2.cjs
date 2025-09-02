@@ -32,13 +32,16 @@ class PM2Monitor {
   // Get PM2 logs for a specific process
   async getLogs(processName, lines = 10) {
     return new Promise((resolve, reject) => {
-      exec(`pm2 logs ${processName} --lines ${lines} --nostream`, (error, stdout, stderr) => {
-        if (error) {
-          reject(error);
-          return;
+      exec(
+        `pm2 logs ${processName} --lines ${lines} --nostream`,
+        (error, stdout, stderr) => {
+          if (error) {
+            reject(error);
+            return;
+          }
+          resolve(stdout);
         }
-        resolve(stdout);
-      });
+      );
     });
   }
 
@@ -67,25 +70,25 @@ class PM2Monitor {
     try {
       const status = await this.getStatus();
       const timestamp = new Date().toISOString();
-      
+
       const report = {
         timestamp,
         status: 'success',
         processes: this.parseStatus(status),
-        summary: this.generateSummary(status)
+        summary: this.generateSummary(status),
       };
 
       // Save report to file
       const reportPath = path.join(this.logsDir, 'pm2-status-report.json');
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-      
+
       return report;
     } catch (error) {
       console.error('Error generating report:', error);
       return {
         timestamp: new Date().toISOString(),
         status: 'error',
-        error: error.message
+        error: error.message,
       };
     }
   }
@@ -94,10 +97,13 @@ class PM2Monitor {
   parseStatus(statusOutput) {
     const lines = statusOutput.split('\n');
     const processes = [];
-    
+
     for (const line of lines) {
       if (line.includes('│') && !line.includes('──') && !line.includes('id')) {
-        const parts = line.split('│').map(part => part.trim()).filter(part => part);
+        const parts = line
+          .split('│')
+          .map(part => part.trim())
+          .filter(part => part);
         if (parts.length >= 6) {
           processes.push({
             id: parts[0],
@@ -106,35 +112,38 @@ class PM2Monitor {
             restarts: parts[3],
             status: parts[4],
             cpu: parts[5],
-            memory: parts[6] || 'N/A'
+            memory: parts[6] || 'N/A',
           });
         }
       }
     }
-    
+
     return processes;
   }
 
   // Generate summary statistics
   generateSummary(statusOutput) {
     const processes = this.parseStatus(statusOutput);
-    
+
     const summary = {
       total: processes.length,
       online: processes.filter(p => p.status === 'online').length,
       errored: processes.filter(p => p.status === 'errored').length,
       stopped: processes.filter(p => p.status === 'stopped').length,
       launching: processes.filter(p => p.status === 'launching').length,
-      totalRestarts: processes.reduce((sum, p) => sum + parseInt(p.restarts || 0), 0),
+      totalRestarts: processes.reduce(
+        (sum, p) => sum + parseInt(p.restarts || 0),
+        0
+      ),
       averageMemory: 0,
-      totalMemory: 0
+      totalMemory: 0,
     };
 
     // Calculate memory statistics
     const memoryValues = processes
       .filter(p => p.memory && p.memory !== 'N/A')
       .map(p => this.parseMemory(p.memory));
-    
+
     if (memoryValues.length > 0) {
       summary.totalMemory = memoryValues.reduce((sum, mem) => sum + mem, 0);
       summary.averageMemory = summary.totalMemory / memoryValues.length;
@@ -147,15 +156,19 @@ class PM2Monitor {
   parseMemory(memoryStr) {
     const match = memoryStr.match(/(\d+(?:\.\d+)?)\s*(mb|kb|b)/i);
     if (!match) return 0;
-    
+
     const value = parseFloat(match[1]);
     const unit = match[2].toLowerCase();
-    
+
     switch (unit) {
-      case 'mb': return value * 1024 * 1024;
-      case 'kb': return value * 1024;
-      case 'b': return value;
-      default: return 0;
+      case 'mb':
+        return value * 1024 * 1024;
+      case 'kb':
+        return value * 1024;
+      case 'b':
+        return value;
+      default:
+        return 0;
     }
   }
 
@@ -186,7 +199,7 @@ class PM2Monitor {
       try {
         console.clear();
         console.log('📊 PM2 Monitoring Dashboard - Zion Application');
-        console.log('=' .repeat(60));
+        console.log('='.repeat(60));
         console.log(`⏰ Last Updated: ${new Date().toLocaleString()}\n`);
 
         // Get and display status
@@ -202,8 +215,12 @@ class PM2Monitor {
         console.log(`   Stopped: ${summary.stopped} ⏸️`);
         console.log(`   Launching: ${summary.launching} 🔄`);
         console.log(`   Total Restarts: ${summary.totalRestarts}`);
-        console.log(`   Average Memory: ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB`);
-        console.log(`   Total Memory: ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB`);
+        console.log(
+          `   Average Memory: ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB`
+        );
+        console.log(
+          `   Total Memory: ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB`
+        );
 
         // Check for issues
         if (summary.errored > 0) {

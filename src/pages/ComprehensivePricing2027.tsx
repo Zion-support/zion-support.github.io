@@ -7,10 +7,8 @@ import { Check, Star, Brain, Cpu, Database, Network, Shield, Zap,
  } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027               } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027               } from '@/data/emergingTechServices2027';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function ComprehensivePricing2027(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState<any>('price');
@@ -73,7 +71,6 @@ export default function ComprehensivePricing2027(...args[]: any):  {
     };
   };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             initial = {
   { opacity: 0,
   scale: 0.8 
@@ -180,8 +177,6 @@ export default function ComprehensivePricing2027(...args[]: any):  {
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
                   {categories.map(category               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
@@ -241,7 +236,6 @@ export default function ComprehensivePricing2027(...args[]: any):  {
   y: -20 
 }}
                 transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyanyany0.3 }}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               >
                 {filteredServices.map((service, index)  => (
                   <motion.div

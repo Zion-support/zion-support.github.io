@@ -1,8 +1,6 @@
 import React from 'react.ts';
-import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-const QuantumTechnology = () => {
+const QuantumTechnology: React.FC = ($2) => {
   const quantumServices = [
     {
       title: "Quantum Neural Networks",
@@ -26,6 +24,7 @@ const QuantumTechnology = () => {
       icon: Shield;
     };
   ];
+
   const quantumTechnologies = [
     {
       name: "Quantum Computing",
@@ -46,6 +45,7 @@ const QuantumTechnology = () => {
       features: ["Quantum key distribution", "Entanglement", "Secure channels", "Quantum networks"];
     };
   ];
+
   const benefits = [;
     "Exponential speedup for complex computational problems",;
     "Unbreakable encryption and enhanced security",;
@@ -54,6 +54,7 @@ const QuantumTechnology = () => {
     "Competitive advantage in technology innovation",;
     "Future-proof solutions for emerging challenges";
   ];
+
   return (
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
@@ -83,6 +84,7 @@ const QuantumTechnology = () => {
           </div>
         </div>
       </section>
+
       {/* What is Quantum Computing Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -123,6 +125,7 @@ const QuantumTechnology = () => {
           </div>
         </div>
       </section>
+
       {/* Quantum Services */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -136,9 +139,8 @@ const QuantumTechnology = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {quantumServices.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {quantumServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -159,6 +161,7 @@ const QuantumTechnology = () => {
           </div>
         </div>
       </section>
+
       {/* Quantum Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -172,9 +175,8 @@ const QuantumTechnology = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {quantumTechnologies.map((tech, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {quantumTechnologies.map((tech, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>
@@ -193,6 +195,7 @@ const QuantumTechnology = () => {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -232,6 +235,7 @@ const QuantumTechnology = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -255,4 +259,5 @@ const QuantumTechnology = () => {
     </div>;
   );
 };
+
 export default QuantumTechnology;}}}

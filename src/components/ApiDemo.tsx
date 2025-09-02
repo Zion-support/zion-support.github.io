@@ -1,20 +1,7 @@
 import React, { useState, useEffect } from 'react.ts';
-import { api, ApiResponse               } from '@/services/api';
+import { api, ApiResponse  } from '@/src/src/services/api';
 
 interface User {
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   id: number;
   name: string;
@@ -26,19 +13,6 @@ const ApiDemo: React.FC = (): JSX.Element => {;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<any>(null);
 const [newUser, setNewUser] = useState({ name: '', email: '';
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
   const [healthStatus, setHealthStatus] = useState<any>('Checking...');
 
@@ -73,7 +47,7 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
 
   };
 
-  const handleCreateUser = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {;
+  const handleCreateUser = async (e: anyReact.FormEvent)  => {;
     e.preventDefault();
 
     if (!newUser.name.trim() || !newUser.email.trim()) {

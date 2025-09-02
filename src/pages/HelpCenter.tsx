@@ -1,7 +1,8 @@
-import React, { useState } from 'react.ts';
-import { Link              } from 'react-router-dom.ts';
-import { motion, AnimatePresence              } from 'framer-motion.ts';
-import { Search,
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Search,
   HelpCircle,
   MessageCircle,
   Phone,
@@ -32,87 +33,29 @@ import { Search,
   CheckCircle,
   AlertCircle,
   Info
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-} from 'lucide-react.ts';
+} from 'lucide-react';
 
 interface HelpSection {
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
-  icon: ;
+  icon: unknown;
   description: string;
-articles: Array<any>;
-
-
-
-
-
-
-
-
-
-
-
-
+  articles: Array<{
+    title: string;
+    description: string;
+    path?: string;
+    external?: boolean;
+    difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+    readTime: string;
+  }>;
 }
+
 interface FAQItem {
-
-
-
-
-
-
-
-
-
-
-
-
-
   question: string;
   answer: string;
   category: string;
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
+
 const helpSections: HelpSection[] = [
   {
     title: 'Getting Started',
@@ -330,6 +273,7 @@ const helpSections: HelpSection[] = [
     ]
   }
 ];
+
 const faqData: FAQItem[] = [
   {
     question: 'What services does Zion Tech Group offer?',
@@ -363,17 +307,17 @@ const faqData: FAQItem[] = [
   }
 ];
 
-export function HelpCenter(...args: any[]): any {
+export function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  const handleSearch = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  const handleSearch: React.FC = ($2) => {
     setSearchQuery(query);
     if (query.trim() === '') {
       setFilteredFAQs(faqData);
       return;
+
     const filtered = faqData.filter(faq =>
       faq.question.toLowerCase().includes(query.toLowerCase()) ||
       faq.answer.toLowerCase().includes(query.toLowerCase()) ||
@@ -381,11 +325,13 @@ export function HelpCenter(...args: any[]): any {
     );
     setFilteredFAQs(filtered);
   };
-  const filteredFAQ = selectedCategory === 'All' 
-    ? faqData: anyanyanyanyanyanyanyanyanyanyanyanyanyfaqData.filter(item              => item.category === selectedCategory);
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  const filteredFAQ = selectedCategory === 'All' 
+    ? faqData 
+    : faqData.filter(item => item.category === selectedCategory);
+
   const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
       <div className="container-responsive">
@@ -395,17 +341,20 @@ export function HelpCenter(...args: any[]): any {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+
           <h1 className="text-4xl font-bold text-white mb-4">Help Center</h1>
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
             Find answers to your questions, learn how to use our services, and get the support you need to succeed with Zion Tech Group.
           </p>
         </motion.div>
+
         {/* Search Bar */}
         <motion.div
           className="max-w-2xl mx-auto mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
+
           <div className="relative">
             <input
               type="text"
@@ -417,23 +366,27 @@ export function HelpCenter(...args: any[]): any {
             <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-6 w-6" />
           </div>
         </motion.div>
+
         {/* Help Categories */}
         <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
+
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Browse Help Topics</h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {helpCategories.map((category, index)              => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {helpCategories.map((category, index) => (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+
                 <Link
                   to={category.path}
                   className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 group"
+
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <category.icon className="h-8 w-8 text-white" />
                   </div>
@@ -443,28 +396,32 @@ export function HelpCenter(...args: any[]): any {
                     <span className="text-sm font-medium">{category.articleCount} articles</span>
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
-                </Link>
+                </Link>;
               </motion.div>
             ))}
           </div>
         </motion.div>
+
         {/* Support Options */}
         <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
+
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Support</h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {supportOptions.map((option, index)              => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportOptions.map((option, index) => (
               <motion.div
                 key={option.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+
                 <Link
                   to={option.path}
                   className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 text-center group"
+
                   <div className={`w-16 h-16 bg-gradient-to-br ${option.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <option.icon className="h-8 w-8 text-white" />
                   </div>
@@ -473,19 +430,22 @@ export function HelpCenter(...args: any[]): any {
                   <div className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg text-sm font-medium group-hover:from-zion-cyan-dark group-hover:to-zion-purple-dark transition-all duration-300">
                     {option.action}
                   </div>
-                </Link>
+                </Link>;
               </motion.div>
             ))}
           </div>
         </motion.div>
+
         {/* FAQ Section */}
         <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
+
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
+
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-3 mb-8">
               <button
@@ -493,11 +453,12 @@ export function HelpCenter(...args: any[]): any {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   selectedCategory === 'all'
                     ? 'bg-zion-cyan text-white'
-                    : 'bg-white/10 text-zion-slate-light hover: anyanyanyanyanyanyanyanyanyanyanyanyanybg-white/20'
+                    : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
                 }`}
+
                 All Categories
               </button>
-              {helpCategories.map(category              => (
+              {helpCategories.map(category => (
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
@@ -506,6 +467,7 @@ export function HelpCenter(...args: any[]): any {
                       ? 'bg-zion-cyan text-white'
                       : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
                   }`}
+
                   {category.title}
                 </button>
               ))}
@@ -513,8 +475,9 @@ export function HelpCenter(...args: any[]): any {
           </motion.div>
         </div>
       </div>
+
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Help Sections */}
           <div className="lg:col-span-2">
@@ -524,6 +487,7 @@ export function HelpCenter(...args: any[]): any {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <h2 className="text-2xl font-bold text-white mb-6">Help Articles & Tutorials</h2>
+              
               <div className="space-y-6">
                 {helpSections.map((section, index) => (
                   <motion.div
@@ -554,6 +518,7 @@ export function HelpCenter(...args: any[]): any {
                         )}
                       </div>
                     </button>
+
                     <AnimatePresence>
                       {expandedSections.has(section.id) && (
                         <motion.div
@@ -561,7 +526,6 @@ export function HelpCenter(...args: any[]): any {
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.3 }}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                           className="border-t border-cyan-400/20"
                         >
                           <div className="p-6 space-y-4">
@@ -631,6 +595,7 @@ export function HelpCenter(...args: any[]): any {
               </div>
             </motion.div>
           </div>
+
         {/* Contact Support */}
         <motion.div
           className="text-center"
@@ -640,6 +605,7 @@ export function HelpCenter(...args: any[]): any {
           className="mt-16"
         >
           <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+          
           <div className="grid gap-4">
             {filteredFAQ.map((faq, index) => (
               <motion.div
@@ -669,4 +635,5 @@ export function HelpCenter(...args: any[]): any {
     </div>
   );
 }
+
 export default HelpCenter;

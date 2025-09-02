@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { LinkChecker, LinkInfo, PageInfo               } from '../utils/linkChecker';
+import { LinkChecker, LinkInfo, PageInfo  } from '../utils/linkChecker';
 import { CheckCircle, 
   XCircle, 
   AlertTriangle, 
@@ -9,22 +9,9 @@ import { CheckCircle,
   Link as LinkIcon,
   Download,
   RefreshCw
-              } from 'lucide-react.ts';
+ } from 'lucide-react.ts';
 
 interface AnalysisResult {
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 summary: {;
     totalLinks: number;
@@ -32,19 +19,6 @@ summary: {;
     missingPages: number;
     externalLinks: number;
   
-
-
-
-
-
-
-
-
-
-
-
-
-
 };
   pages: PageInfo[];
   brokenLinks: LinkInfo[];
@@ -155,7 +129,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     }
   };
 
-  const exportReport = () => {
+  const exportReport: React.FC = ($2) => {
     if (!analysisResult) return;
 
     const report = {
@@ -177,7 +151,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     URL.revokeObjectURL(url);
   };
 
-  const getStatusIcon = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+  const getStatusIcon: React.FC = ($2) => {
     switch (status) {
       case 'working':
         return <CheckCircle className="w-4 h-4 text-green-500" />;
@@ -192,7 +166,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     }
   };
 
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+  const getStatusColor: React.FC = ($2) => {
     switch (status) {
       case 'working':
         return 'text-green-600 bg-green-100';
@@ -369,8 +343,8 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                     </div>
                     <p className="text-sm text-gray-600 mb-3 font-mono">{page.path}</p>
                     {page.links.length > 0 && (
-                      <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-2">
-                        {page.links.slice(0, 6).map((link, linkIndex)               => (
+                      <div className="grid grid-cols-1 md: anygrid-cols-2 gap-2">
+                        {page.links.slice(0, 6).map((link, linkIndex)  => (
                           <div key={linkIndex} className="flex items-center space-x-2 text-sm">
                             {getStatusIcon(link.status)}
                             <span className="font-mono text-xs truncate">{link.url}</span>

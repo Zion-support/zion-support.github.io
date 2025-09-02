@@ -2,7 +2,6 @@ import React from 'react.ts';
   Monitor,
   CreditCard
 } from 'lucide-react';
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
 export default function AICybersecurityPlatform(...args: any[]): any {
   const features = [
@@ -30,7 +29,6 @@ export default function AICybersecurityPlatform(...args: any[]): any {
       description: 'AI-driven incident response that automatically contains and remediates threats within seconds.',
       benefits: ['Instant containment', 'Automated remediation', 'Playbook execution', 'Recovery automation']
     }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   ];
 
   const securityLayers = [
@@ -45,7 +43,6 @@ export default function AICybersecurityPlatform(...args: any[]): any {
       title: 'Endpoint Protection',
       description: 'Comprehensive endpoint security for all devices and operating systems',
       features: ['Antivirus protection', 'Device control', 'Application whitelisting', 'Data encryption']
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     },
     {
       icon: Globe,
@@ -62,7 +59,6 @@ export default function AICybersecurityPlatform(...args: any[]): any {
   ];
 
   const pricingPlans = [
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     {
       name: 'Essential',
       price: '$3,500',
@@ -237,7 +233,6 @@ export default function AICybersecurityPlatform(...args: any[]): any {
             <div className="flex items-center gap-2">
               <CheckCircle className="w-5 h-5 text-green-400" />
               <span>99.9% Threat Detection</span>
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             </div>
             <div className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-blue-400" />
@@ -247,7 +242,6 @@ export default function AICybersecurityPlatform(...args: any[]): any {
               <Users className="w-5 h-5 text-purple-400" />
               <span>1000+ Protected Organizations</span>
             </div>
-=======
 import { SEO              } from '../../components/SEO';
 import { Button              } from '../../components/ui/Button';
 import { Card              } from '../../components/ui/Card';
@@ -329,7 +323,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
               <h3 className="text-xl font-semibold text-white mb-3">90% Cost Reduction</h3>
               <p className="text-gray-300">Automated security operations reduce manual intervention and operational costs</p>
             </Card>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </section>
@@ -340,7 +333,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Advanced Security Features
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our AI-powered cybersecurity platform combines cutting-edge technology with intelligent automation 
@@ -367,11 +359,9 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
                       </li>
                     ))}
                   </ul>
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 </div>
               </div>
             ))}
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -446,7 +436,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
                 </div>
               </div>
             </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </section>
@@ -457,7 +446,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Multi-Layer Security Architecture
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our defense-in-depth approach provides comprehensive protection across all attack vectors 
@@ -471,7 +459,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-xl flex items-center justify-center">
                     <layer.icon className="w-8 h-8 text-white" />
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">{layer.title}</h3>
                 </div>
@@ -531,7 +518,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Industry Compliance & Certifications
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our platform meets the highest security standards and compliance requirements 
@@ -544,7 +530,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
               <div key={index} className="text-center group">
                 <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <framework.icon className="w-10 h-10 text-white" />
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{framework.name}</h3>
                 <p className="text-sm text-gray-600">{framework.description}</p>
@@ -560,7 +545,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Transparent Security Pricing
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose the security plan that best fits your organization's needs. All plans include 
@@ -621,7 +605,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
               <h3 className="text-xl font-semibold text-white mb-3">Incident Response</h3>
               <p className="text-gray-300">Automated incident detection, response orchestration, and forensic analysis</p>
             </Card>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
         </div>
       </section>
@@ -634,7 +617,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
               <div key={index} className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
                 plan.popular ? 'border-red-500 ring-4 ring-red-500/20' : 'border-gray-200'
               }`}>
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -685,7 +667,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
               Contact our security team
               <ArrowRight className="w-4 h-4" />
             </a>
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
           </div>
         </div>
       </section>
@@ -726,7 +707,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
                 </li>
               </ul>
               <Button className="w-full bg-red-600 hover:bg-red-700">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Start Free Trial
               </Button>
             </Card>
@@ -872,7 +852,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-=======
       <section className="py-20 lg:py-32 bg-gradient-to-br from-red-900 via-gray-900 to-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
@@ -882,7 +861,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
             Join thousands of organizations already protected by our AI-powered cybersecurity platform. 
             Don't wait until it's too late - secure your future today.
           </p>
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -924,6 +902,5 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
         </div>;
       </section>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}}}}

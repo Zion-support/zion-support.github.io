@@ -1,17 +1,36 @@
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, Cloud, Shield, Zap, Rocket, Atom, Cpu, Database, 
-  Network, Smartphone, Lock, BarChart3, Code, Server, 
-  Cpu as ChipIcon, Wifi, Globe2, Bot, Workflow, Eye, Sparkles,
-  Star, TrendingUp, Users, Award, CheckCircle, ArrowRight,
-  Search, Filter, DollarSign, Clock, Zap as ZapIcon
-} from 'lucide-react';
-import { LoadingSkeleton, ServicesGridSkeleton } from './ui/loading-skeleton';
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+import { Brain,
+  Shield,
+  Cloud,
+  Database,
+  Globe,
+  Users,
+  Target,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  Search
+               } from 'lucide-react.ts';
 
 interface Service {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
   id: string;
   icon: React.ComponentType<any>;
   title: string;
@@ -119,10 +138,16 @@ const categories = ['All', 'AI & Machine Learning', 'Quantum Computing', 'Cloud 
 
 export function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 50000]);
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'marketSize'>('name');
-  const [isLoading, setIsLoading] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [selectedDeliveryTime, setSelectedDeliveryTime] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('name');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [currentPage, setCurrentPage] = useState(1);
+  const servicesPerPage = 12;
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
   const filteredServices = useMemo(() => {
     let filtered = services.filter(service => {
@@ -147,9 +172,133 @@ export function EnhancedServicesShowcase() {
       }
     });
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  // Pagination logic
+  const totalPages = Math.ceil(filteredServices.length / servicesPerPage);
+  const startIndex = (currentPage - 1) * servicesPerPage;
+  const endIndex = startIndex + servicesPerPage;
+  const currentServices = filteredServices.slice(startIndex, endIndex);
+
+  // Reset to first page when filters change
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, selectedCategory, selectedInnovationLevel, selectedPriceRange, selectedDeliveryTime, sortBy]);
+
+  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
+  const innovationLevels = ['all', ...Array.from(new Set(allServices.map(s => s.innovationLevel)))];
+  const priceRanges = [
+    { value: 'all', label: 'All Prices' },
+    { value: 'under-1000', label: 'Under $1,000' },
+    { value: '1000-5000', label: '$1,000 - $5,000' },
+    { value: '5000-10000', label: '$5,000 - $10,000' },
+    { value: 'over-10000', label: 'Over $10,000' }
+  ];
+  const deliveryTimes = [
+    { value: 'all', label: 'All Delivery Times' },
+    { value: 'under-1-week', label: 'Under 1 Week' },
+    { value: '1-2-weeks', label: '1-2 Weeks' },
+    { value: '2-4-weeks', label: '2-4 Weeks' },
+    { value: 'over-4-weeks', label: 'Over 4 Weeks' }
+  ];
+
+  const getInnovationLevelColor = (level: string) => {
+    switch (level) {
+      case 'Revolutionary': return 'text-purple-400 border-purple-400';
+      case 'Cutting-edge': return 'text-blue-400 border-blue-400';
+      case 'Advanced': return 'text-green-400 border-green-400';
+      default: return 'text-gray-400 border-gray-400';
+    }
+  };
+
+  const getSupportLevelColor = (level: string) => {
+    switch (level) {
+      case 'enterprise': return 'bg-red-100 text-red-800';
+      case 'premium': return 'bg-blue-100 text-blue-800';
+      case 'standard': return 'bg-green-100 text-green-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Header Section */}
+      <div className="bg-black/20 backdrop-blur-sm border-b border-white/10">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Zion Tech Group
+            </h1>
+            <h2 className="text-3xl font-semibold text-purple-300 mb-4">
+              Innovative Micro SAAS, IT & AI Services 2030
+            </h2>
+            <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+              Transform your business with cutting-edge technology solutions. From AI-powered platforms to quantum-ready infrastructure, 
+              we deliver innovative services that drive growth, efficiency, and competitive advantage.
+            </p>
+            
+            {/* Contact Information */}
+            <div className="mt-8 p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+              <div className="grid md:grid-cols-3 gap-6 text-center">
+                <div className="flex flex-col items-center">
+                  <Phone className="w-8 h-8 text-purple-400 mb-2" />
+                  <p className="text-white font-semibold">Phone</p>
+                  <a href="tel:+13024640950" className="text-purple-300 hover:text-purple-200 transition-colors">
+                    +1 302 464 0950
+                  </a>
+                </div>
+                <div className="flex flex-col items-center">
+                  <Mail className="w-8 h-8 text-purple-400 mb-2" />
+                  <p className="text-white font-semibold">Email</p>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-purple-300 hover:text-purple-200 transition-colors">
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+                <div className="flex flex-col items-center">
+                  <MapPin className="w-8 h-8 text-purple-400 mb-2" />
+                  <p className="text-white font-semibold">Address</p>
+                  <p className="text-purple-300">
+                    364 E Main St STE 1008<br />
+                    Middletown DE 19709
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Filters and Search */}
+      <div className="container mx-auto px-4 py-8">
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 mb-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+            {/* Search */}
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              />
+            </div>
+
+            {/* Category Filter */}
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+            >
+              {categories.map(category => (
+                <option key={category} value={category} className="bg-slate-800 text-white">
+                  {category === 'all' ? 'All Categories' : category}
+                </option>
+              ))}
+            </select>
+
+}}
+=======
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 export const EnhancedServicesShowcase: React.FC = (): JSX.Element => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const services = [
     {
       title: 'AI Workflow Automation',
@@ -241,9 +390,7 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
 
   const filteredServices = selectedCategory === 'All'
     ? services: anyanyanyanyanyanyanyanyanyanyanyanyanyanyservices.filter(service               => service.category === selectedCategory);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-24 bg-futuristic-enhanced relative overflow-hidden">
       {/* Background Elements */}
@@ -284,9 +431,7 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
   margin: "-100px" 
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           {services.map((service, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={index}
               variants={itemVariants}
@@ -555,25 +700,40 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
           transition={{ duration: 0.6 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
-            <p className="text-xl opacity-90 mb-6">
-              Let's discuss how our revolutionary services can drive your success
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
-              >
-                Get Started
-              </Link>
-              <Link
-                to="/services"
-                className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                View All Services
-              </Link>
-            </div>
+          {categories.map((category, index)               => (
+            <motion.button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                selectedCategory === category
+                  ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
+              }`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+              viewport={{ once: true }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
+            >
+              View All Services
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <a
+              href="tel:+13024640950"
+              className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              Call +1 302 464 0950
+            </a>
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
           </div>
         </motion.div>
       </div>

@@ -320,7 +320,7 @@ class DependencyMonitor {;
     try {;
       // Create a report of what will be updated;
       const reportContent = `Dependency Update Report - ${new Date().toISOString()}\n\n${outdatedPackages.map(pkg =>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
         `${pkg.name}: ${pkg.current} → ${pkg.latest}`;
       ).join('\n')}\n\nUpdating packages...`;
 ;
@@ -458,7 +458,7 @@ class DependencyMonitor {;
 ;
         // Create a report for major updates;
         const reportContent = `Major Updates Report - ${new Date().toISOString()}\n\n${majorUpdates.map(pkg =>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
           `${pkg.name}: ${pkg.current} → ${pkg.latest} (MAJOR)`;
         ).join('\n')}\n\nReview these updates carefully as they may contain breaking changes.`;
 ;

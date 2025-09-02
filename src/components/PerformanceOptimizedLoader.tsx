@@ -3,14 +3,12 @@ import { motion               } from 'framer-motion.ts';
 
 interface LoaderProps extends React.PropsWithChildren<{}> {
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
   fullScreen?: boolean;
   showLogo?: boolean;
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
   size = 'md',

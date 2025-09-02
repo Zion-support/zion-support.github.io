@@ -1,12 +1,8 @@
-import React from 'react.ts';
-import { SEO              } from '../../components/SEO';
-import { motion              } from 'framer-motion.ts';
-import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle              } from 'lucide-react.ts';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+import React from 'react';
+import { SEO } from "../../components/SEO";
+import { motion } from 'framer-motion';
 
-export default function BlockchainEnterpriseSolutions(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+export default function BlockchainEnterpriseSolutions(...args[]):  {
   const features = [
     {
       icon: Lock,
@@ -45,27 +41,28 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
       color: 'from-indigo-500 to-purple-500';
     };
   ];
+
   const services = [
     {
       title: 'Blockchain Strategy',
       description: 'Comprehensive blockchain roadmap and implementation strategy',
       price: 'From $5,000',
-      features['Technology assessment', 'Use case identification', 'ROI analysis', 'Implementation plan']
-    },
+      features['Technology assessment', 'Use case identification', 'ROI analysis', 'Implementation plan'];
+    },;
     {
       title: 'Smart Contract Development',
       description: 'Custom smart contracts for business automation and compliance',
       price: 'From $8,000',
-      features['Contract design', 'Security auditing', 'Testing & deployment', 'Maintenance']
-    },
+      features['Contract design', 'Security auditing', 'Testing & deployment', 'Maintenance'];
+    },;
     {
       title: 'Private Blockchain Networks',
       description: 'Enterprise-grade private blockchain infrastructure',
       price: 'From $15,000',
-      features['Network setup', 'Node configuration', 'Security implementation', 'Monitoring']
-    },
+      features['Network setup', 'Node configuration', 'Security implementation', 'Monitoring'];
+    },;
     {
-      features['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']
+      features['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration'];
     };
       title: 'DeFi Solutions',;
       description: 'Decentralized finance applications and protocols',;
@@ -73,6 +70,7 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
       features: ['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration'];
     };
   ];
+
   const useCases = [;
     { name: 'Supply Chain', icon: Network, description: 'End-to-end traceability and transparency' },;
     { name: 'Financial Services', icon: Bitcoin, description: 'Cross-border payments and settlements' },;
@@ -81,12 +79,14 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
     { name: 'Voting Systems', icon: CheckCircle, description: 'Secure and transparent elections' },;
     { name: 'Intellectual Property', icon: Lock, description: 'Digital rights management and protection' };
   ];
+
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Blockchain Enterprise Solutions - Zion Tech Group"
         description="Transform your business with enterprise-grade blockchain solutions. From smart contracts to DeFi applications, we help you leverage the power of distributed ledger technology."
       />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
@@ -95,13 +95,26 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
             initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
+
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
                 <Lock className="w-10 h-10 text-white" />
@@ -122,32 +135,48 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+
                 Get Started
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
+
                 Learn More
               </motion.button>
             </div>
-          </motion.div>
+          </motion.div>;
         </div>
       </section>
+
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Blockchain Technology?
             </h2>
@@ -157,48 +186,80 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
                 initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
+
+
+
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-slate-300">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
+
       {/* Services & Pricing */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Our Blockchain Services
             </h2>
@@ -207,24 +268,42 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index)  => (
               <motion.div
                 key={service.title}
                 initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
+
+
+
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-300 mb-4">{service.description}</p>
                 <div className="text-2xl font-bold text-pink-400 mb-4">{service.price}</div>
@@ -240,27 +319,42 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+
                   Get Quote
-                </motion.button>
+                </motion.button>;
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
       {/* Use Cases */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
+
             <h2 className="text-4xl font-bold text-white mb-4">
               Blockchain Use Cases
             </h2>
@@ -270,47 +364,79 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-8">
-            {useCases.map((useCase, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
+            {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase.name}
                 initial = {
   { opacity: 0,
   scale: 0.8 
+
+
+
+
+
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
+
+
+
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
+
+
+
+
 }}
                 className="text-center group"
+
                 <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
                   <useCase.icon className="w-8 h-8 text-pink-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.name}</h3>
                 <p className="text-sm text-slate-400">{useCase.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
+      <section className="py-20 bg-gradient-to-r from-purple-600/20 to-pink-600/20">;
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
             transition={{ duration: 0.6 }}
+
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -323,12 +449,14 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+
                 Schedule Consultation
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
+
                 View Case Studies
               </motion.button>
             </div>;

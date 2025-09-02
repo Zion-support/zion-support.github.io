@@ -1,64 +1,72 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  TrendingDown, 
+  TrendingUp, 
   Shield, 
   BarChart3, 
   AlertTriangle, 
-  DollarSign, 
   Clock, 
+  Users, 
   CheckCircle, 
-  ArrowRight,
   Zap,
   Globe,
-  Database,
+  FileText,
   Settings,
-  Eye,
-  Star,
-  Target
+  Brain,
+  Target,
+  Activity
 } from 'lucide-react';
 
 const AIFinancialRiskManagement: React.FC = () => {
   const features = [
     {
-      icon: TrendingDown,
-      title: "Real-time Risk Monitoring",
-      description: "24/7 monitoring of market conditions, portfolio performance, and risk indicators"
-    },
-    {
-      icon: Shield,
+      icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Risk Assessment",
-      description: "Advanced ML algorithms analyze historical data to predict potential risk scenarios"
+      description: "Advanced machine learning algorithms analyze market data, portfolio performance, and economic indicators to predict potential risks with 95%+ accuracy."
     },
     {
-      icon: BarChart3,
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Real-time Market Monitoring",
+      description: "Continuous surveillance of global markets, news sentiment, and economic events to identify emerging risks before they impact your portfolio."
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
       title: "Portfolio Stress Testing",
-      description: "Simulate extreme market conditions to evaluate portfolio resilience"
+      description: "AI-driven scenario analysis and stress testing to evaluate portfolio resilience under various market conditions and economic scenarios."
     },
     {
-      icon: AlertTriangle,
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Predictive Analytics",
+      description: "Machine learning models forecast market movements, volatility patterns, and correlation changes to optimize risk-adjusted returns."
+    },
+    {
+      icon: <AlertTriangle className="w-6 h-6" />,
       title: "Early Warning System",
-      description: "Proactive alerts for emerging risks before they impact your investments"
+      description: "Proactive risk alerts and notifications when potential threats are detected, enabling timely risk mitigation strategies."
     },
     {
-      icon: DollarSign,
-      title: "Regulatory Compliance",
-      description: "Automated compliance reporting for Basel III, Solvency II, and other regulations"
-    },
-    {
-      icon: Clock,
-      title: "Instant Risk Reporting",
-      description: "Real-time dashboards and automated reports for stakeholders and regulators"
+      icon: <Target className="w-6 h-6" />,
+      title: "Dynamic Risk Allocation",
+      description: "AI-optimized portfolio rebalancing and risk allocation based on real-time market conditions and risk tolerance profiles."
     }
   ];
 
   const benefits = [
-    "Reduce portfolio losses by up to 35% through early risk detection",
-    "Achieve 99.7% accuracy in risk prediction using AI models",
-    "Cut compliance reporting time by 75% with automation",
-    "Improve risk-adjusted returns by 20-40%",
-    "Real-time monitoring across all asset classes and geographies",
-    "Automated regulatory compliance across multiple jurisdictions"
+    "Reduce portfolio volatility by 25-40% through AI-driven risk management",
+    "Achieve 15-30% improvement in risk-adjusted returns",
+    "Cut risk assessment time from days to minutes",
+    "Eliminate human bias in risk decision-making",
+    "Provide 24/7 automated risk monitoring",
+    "Enable proactive risk mitigation strategies"
+  ];
+
+  const useCases = [
+    "Investment Management & Asset Allocation",
+    "Hedge Fund Risk Management",
+    "Corporate Treasury Operations",
+    "Insurance Risk Assessment",
+    "Banking Portfolio Management",
+    "Pension Fund Risk Control"
   ];
 
   const pricing = [
@@ -67,26 +75,26 @@ const AIFinancialRiskManagement: React.FC = () => {
       price: "$3,500",
       period: "/month",
       features: [
-        "Up to $100M portfolio monitoring",
-        "Basic AI risk models",
-        "Daily risk reports",
-        "Email alerts",
-        "Standard compliance tools",
-        "Email support"
+        "Up to $100M portfolio management",
+        "Basic AI risk assessment",
+        "Real-time market monitoring",
+        "Standard reporting",
+        "Email support",
+        "Basic stress testing"
       ]
     },
     {
       plan: "Enterprise",
-      price: "$8,500",
+      price: "$12,500",
       period: "/month",
       features: [
-        "Up to $1B portfolio monitoring",
+        "Up to $1B portfolio management",
         "Advanced AI risk models",
-        "Real-time monitoring",
-        "Custom risk thresholds",
-        "Full compliance suite",
+        "Custom risk metrics",
         "Priority support",
-        "API access"
+        "Advanced analytics",
+        "Custom integrations",
+        "Multi-portfolio support"
       ]
     },
     {
@@ -94,239 +102,185 @@ const AIFinancialRiskManagement: React.FC = () => {
       price: "$22,000",
       period: "/month",
       features: [
-        "Unlimited portfolio monitoring",
-        "Custom AI model training",
-        "Multi-asset class support",
+        "Unlimited portfolio management",
+        "Full AI risk suite",
+        "Custom model training",
         "24/7 dedicated support",
+        "Advanced threat detection",
         "White-label solutions",
-        "Custom integrations",
-        "On-premise options"
+        "On-premise deployment"
       ]
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Hedge Funds",
-      description: "Monitor complex derivative portfolios and detect correlation breakdowns",
-      icon: Target
-    },
-    {
-      title: "Asset Managers",
-      description: "Optimize portfolio allocation based on real-time risk metrics",
-      icon: BarChart3
-    },
-    {
-      title: "Banks",
-      description: "Comply with Basel III requirements and monitor credit risk exposure",
-      icon: Shield
-    },
-    {
-      title: "Insurance Companies",
-      description: "Manage investment portfolio risks and ensure Solvency II compliance",
-      icon: TrendingDown
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-sm font-medium mb-6">
-              <TrendingDown className="w-4 h-4 mr-2" />
-              AI-Powered Risk Management
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"
+      >
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex justify-center mb-6">
+            <div className="p-3 bg-green-600/20 rounded-full">
+              <TrendingUp className="w-12 h-12 text-green-400" />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Financial
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
-                {" "}Risk Management
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Protect your investments with AI-driven risk management. Monitor portfolios in real-time, 
-              predict market risks, and ensure regulatory compliance across all asset classes.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-              <a
-                href="#demo"
-                className="inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-gray-500 hover:text-white transition-all duration-200"
-              >
-                Watch Demo
-              </a>
-            </div>
-          </motion.div>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI Financial Risk Management
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Transform your financial risk management with AI-powered analytics, real-time monitoring, 
+            and predictive insights. Protect your investments and optimize returns.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors">
+              Start Free Trial
+            </button>
+            <button className="px-8 py-4 border border-gray-600 text-gray-300 hover:border-gray-500 font-semibold rounded-lg transition-colors">
+              Schedule Demo
+            </button>
+          </div>
         </div>
-      </section>
+      </motion.div>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8"
+      >
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Risk Management Features
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              AI-Powered Risk Management Features
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Leverage cutting-edge AI to identify, assess, and mitigate financial risks in real-time
+              Leverage cutting-edge artificial intelligence to identify, assess, and mitigate financial risks
             </p>
-          </motion.div>
-
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/50 transition-all"
               >
-                <div className="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-red-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-400">
-                  {feature.description}
-                </p>
+                <div className="text-green-400 mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-400">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Designed for Financial Institutions
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Tailored solutions for different types of financial organizations
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <useCase.icon className="w-8 h-8 text-red-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {useCase.title}
-                </h3>
-                <p className="text-gray-400">
-                  {useCase.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </motion.section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"
+      >
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Risk Management
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Platform?
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              See measurable improvements in risk detection, portfolio performance, and compliance
+              Experience unprecedented efficiency and accuracy in financial risk management
             </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="flex items-start space-x-3"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-start space-x-4"
               >
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
+                <p className="text-gray-300 text-lg">{benefit}</p>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
+
+      {/* Use Cases Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8"
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Our AI platform serves diverse financial institutions and investment professionals
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center hover:border-green-500/50 transition-all"
+              >
+                <div className="p-3 bg-green-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Activity className="w-8 h-8 text-green-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"
+      >
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Flexible Pricing Plans
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               Choose the plan that fits your organization's risk management needs
             </p>
-          </motion.div>
-
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                  index === 1 
-                    ? 'border-red-500/50 bg-red-500/5' 
-                    : 'border-slate-700'
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`bg-white/5 backdrop-blur-lg rounded-xl p-8 border ${
+                  index === 1 ? 'border-green-500/50 bg-green-500/10' : 'border-white/10'
                 }`}
               >
-                {index === 1 && (
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-red-500 text-white text-sm font-medium mb-4">
-                    Most Popular
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
-                )}
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-white">{plan.price}</span>
-                  <span className="text-gray-400">{plan.period}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
@@ -336,83 +290,87 @@ const AIFinancialRiskManagement: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="/contact"
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                    index === 1
-                      ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600'
-                      : 'border border-slate-600 text-gray-300 hover:border-slate-500 hover:text-white'
-                  }`}
-                >
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+                  index === 1
+                    ? 'bg-green-600 hover:bg-green-700 text-white'
+                    : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
+                }`}>
                   Get Started
-                </a>
+                </button>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-600/20 to-blue-600/20"
+      >
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Protect Your Investments?
-            </h2>
-            <p className="text-xl text-gray-400 mb-8">
-              Join leading financial institutions that trust our AI-powered risk management platform
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200"
-              >
-                Schedule a Demo
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-gray-500 hover:text-white transition-all duration-200"
-              >
-                Call +1 (302) 464-0950
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Info */}
-      <section className="py-12 px-4 border-t border-slate-700">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="grid md:grid-cols-3 gap-8 text-gray-400">
-            <div>
-              <h3 className="text-white font-semibold mb-2">Contact Us</h3>
-              <p>kleber@ziontechgroup.com</p>
-              <p>+1 (302) 464-0950</p>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-2">Address</h3>
-              <p>364 E Main St STE 1008</p>
-              <p>Middletown DE 19709</p>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-2">Website</h3>
-              <a 
-                href="https://ziontechgroup.com" 
-                className="text-red-400 hover:text-red-300 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ziontechgroup.com
-              </a>
-            </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Risk Management?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join leading financial institutions that trust our AI-powered platform for their risk management needs
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors">
+              Start Free Trial
+            </button>
+            <button className="px-8 py-4 border border-white/30 text-white hover:bg-white/10 font-semibold rounded-lg transition-colors">
+              Contact Sales
+            </button>
           </div>
         </div>
-      </section>
+      </motion.section>
+
+      {/* Contact Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8"
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Get in Touch
+          </h2>
+          <p className="text-xl text-gray-400 mb-8">
+            Have questions about our AI Financial Risk Management platform? Our experts are here to help.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="p-3 bg-green-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <Globe className="w-8 h-8 text-green-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Website</h3>
+              <p className="text-gray-400">https://ziontechgroup.com</p>
+            </div>
+            <div>
+              <div className="p-3 bg-green-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <FileText className="w-8 h-8 text-green-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+              <p className="text-gray-400">kleber@ziontechgroup.com</p>
+            </div>
+            <div>
+              <div className="p-3 bg-green-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <Settings className="w-8 h-8 text-green-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+              <p className="text-gray-400">+1 (302) 464-0950</p>
+            </div>
+          </div>
+          <div className="mt-12 p-6 bg-white/5 rounded-xl border border-white/10">
+            <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+            <p className="text-gray-400">364 E Main St STE 1008, Middletown DE 19709</p>
+          </div>
+        </div>
+      </motion.section>
     </div>
   );
 };

@@ -61,7 +61,6 @@ export default function NewServicesShowcase2025(...args: any[]): any {
       path: '/services/ai-edge-computing-platform'
 
   ];
-=======
   Brain,
   Shield,
   Cpu,
@@ -261,7 +260,6 @@ export function NewServicesShowcase2025(...args: any[]): any {
     };
     return iconMap[category] || Brain;
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const getGradientColor = (index: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {
     const gradients = [
@@ -306,7 +304,6 @@ export function NewServicesShowcase2025(...args: any[]): any {
               <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Zap className="w-6 h-6 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Proven ROI</h3>
                 <p className="text-gray-400 text-sm">Average 400-800% return on investment across all services</p>
@@ -366,7 +363,6 @@ export function NewServicesShowcase2025(...args: any[]): any {
                     <DollarSign className="w-4 h-4 text-green-400" />
                     <span className="text-green-400 font-semibold text-sm">{service.currency}{service.price.toLocaleString()}/{service.pricingModel}</span>
                   </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
 
                 {/* ROI Badge */}
@@ -462,7 +458,6 @@ export function NewServicesShowcase2025(...args: any[]): any {
               </div>
             </div>
           </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
 
         {/* Success Stories */}
@@ -579,7 +574,6 @@ export function NewServicesShowcase2025(...args: any[]): any {
               </div>
             </div>
           </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
       </div>
     </div>
@@ -587,4 +581,3 @@ export function NewServicesShowcase2025(...args: any[]): any {
 }
 
 export default NewServicesShowcase2025;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

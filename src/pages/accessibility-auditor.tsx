@@ -8,7 +8,6 @@ import { Eye,
   Users,
   Globe,
   ArrowRight,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Star,
   Heart,
   Users,
@@ -21,7 +20,6 @@ import { Eye,
              } from 'lucide-react.ts';
 
 export default function AccessibilityPage(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const currentYear = new Date().getFullYear();
   const accessibilityFeatures = [
     {

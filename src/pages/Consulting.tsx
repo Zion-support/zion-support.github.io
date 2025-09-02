@@ -1,41 +1,40 @@
 import React from 'react.ts';
-import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase               } from 'lucide-react.ts';
+import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase  } from 'lucide-react';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-const Consulting = () => {
+const Consulting: React.FC = ($2) => {
   const consultingServices = [
     {
       icon: Lightbulb,
       title: "Technology Strategy",
       description: "Strategic technology planning and digital transformation roadmaps",
-      features["Technology assessment", "Digital transformation", "Innovation strategy", "Technology roadmaps"]
-    },
+      features["Technology assessment", "Digital transformation", "Innovation strategy", "Technology roadmaps"];
+    },;
     {
       icon: Target,
       title: "AI & ML Consulting",
       description: "Expert guidance on AI implementation and machine learning strategies",
-      features["AI readiness assessment", "ML model development", "Data strategy", "Implementation planning"]
-    },
+      features["AI readiness assessment", "ML model development", "Data strategy", "Implementation planning"];
+    },;
     {
       icon: Shield,
       title: "Cybersecurity Consulting",
       description: "Comprehensive security assessments and risk management strategies",
-      features["Security audits", "Risk assessment", "Compliance consulting", "Incident response planning"]
-    },
+      features["Security audits", "Risk assessment", "Compliance consulting", "Incident response planning"];
+    },;
     {
       icon: Globe,
       title: "Cloud Strategy",
       description: "Cloud migration planning and multi-cloud optimization strategies",
-      features["Cloud assessment", "Migration planning", "Cost optimization", "Security architecture"]
-    },
+      features["Cloud assessment", "Migration planning", "Cost optimization", "Security architecture"];
+    },;
     {
       icon: Database,
       title: "Data Strategy",
       description: "Data governance, analytics, and business intelligence consulting",
-      features["Data governance", "Analytics strategy", "BI implementation", "Data quality management"]
-    },
+      features["Data governance", "Analytics strategy", "BI implementation", "Data quality management"];
+    },;
     {
-      features["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
+      features["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"];
     };
       icon: Zap,;
       title: "Digital Innovation",;
@@ -43,6 +42,7 @@ const Consulting = () => {
       features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"];
     };
   ];
+
   const industries = [
     {
       title: "Financial Services",
@@ -75,6 +75,7 @@ const Consulting = () => {
       icon: Briefcase;
     };
   ];
+
   const benefits = [;
     "Expert guidance from industry professionals",;
     "Proven methodologies and best practices",;
@@ -83,6 +84,7 @@ const Consulting = () => {
     "Measurable results and ROI",;
     "Access to cutting-edge technology insights";
   ];
+
   const process = [
     {
       phase: "Discovery",
@@ -105,6 +107,7 @@ const Consulting = () => {
       duration: "Ongoing";
     };
   ];
+
   return (
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
@@ -134,6 +137,7 @@ const Consulting = () => {
           </div>
         </div>
       </section>
+
       {/* Consulting Services */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -147,9 +151,8 @@ const Consulting = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {consultingServices.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {consultingServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -169,6 +172,7 @@ const Consulting = () => {
           </div>
         </div>
       </section>
+
       {/* Industries */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -182,9 +186,8 @@ const Consulting = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((industry, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-orange-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <industry.icon className="w-8 h-8 text-white"/>
@@ -196,6 +199,7 @@ const Consulting = () => {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -235,6 +239,7 @@ const Consulting = () => {
           </div>
         </div>
       </section>
+
       {/* Consulting Process */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -246,9 +251,8 @@ const Consulting = () => {
             success and maximizes value for our clients.
           </p>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((phase, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {process.map((phase, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
                   {index + 1}
@@ -261,6 +265,7 @@ const Consulting = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -284,4 +289,5 @@ const Consulting = () => {
     </div>;
   );
 };
+
 export default Consulting;}}}}

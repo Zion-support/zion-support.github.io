@@ -1,6 +1,5 @@
-import { ProductListing              } from '@/types/listings';
+import { ProductListing } from '@/src/src/types/listings';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
   // AI-Powered Micro SAAS Services
   {
@@ -607,9 +606,9 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
   }
 ];
 export const getComprehensivePricingGuide2027 = () => comprehensivePricingGuide2027;
-export const getComprehensivePricingGuide2027ByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              =>
+export const getComprehensivePricingGuide2027ByCategory = (category: string) =>
   comprehensivePricingGuide2027.filter(item => item.category === category);
-export const getComprehensivePricingGuide2027ById = (id: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              =>
+export const getComprehensivePricingGuide2027ById = (id: string) =>
   comprehensivePricingGuide2027.find(item => item.id === id);
 export const pricingCategories2027 = [;
   'Metaverse Solutions',;
@@ -619,16 +618,3 @@ export const pricingCategories2027 = [;
   'Fusion Energy Solutions';
 ];
 export const pricingSubcategories2027 = {
-  'Metaverse Solutions': ['E-commerce', 'Gaming', 'Social', 'Education'],
-  'Web3 Solutions': ['DeFi', 'NFTs', 'Blockchain', 'Cryptocurrency'],
-  'Sustainable Tech': ['Cloud Computing', 'Energy Management', 'Waste Management', 'Carbon Tracking'],
-  'NeuroTech Solutions': ['Medical Technology', 'Research', 'Accessibility', 'Gaming'],
-  'Fusion Energy Solutions': ['Energy Research', 'Plasma Physics', 'Reactor Design',;
-  ;
-  ;
-  ;
-  ;
-  'Simulation'];
-;
-};
-}}}}}}}}}}}}

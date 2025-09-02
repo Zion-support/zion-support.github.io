@@ -1,17 +1,14 @@
 import React from 'react.ts';
-import { Helmet               } from 'react-helmet-async.ts';
-import { Truck, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain               } from 'lucide-react.ts';
-import { Link               } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+import { Helmet  } from 'react-helmet-async.ts';
+import { Link  } from 'react-router-dom.ts';
 
+export default function AISupplyChainOptimization(...args: []):  {
   return (
     <>
       <Helmet>
         <title>AI Supply Chain Optimization - Zion Tech Group</title>
-        <meta name="description" content="Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance visibility across your entire supply network." />
+        <meta name = "description" content="Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance visibility across your entire supply network." />
         <meta name="keywords" content="AI supply chain, supply chain optimization, logistics AI, inventory management, demand forecasting, supply chain analytics" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-supply-chain-optimization" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -39,7 +36,7 @@ import { Link               } from 'react-router-dom.ts';
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -53,7 +50,7 @@ import { Link               } from 'react-router-dom.ts';
         </section>
 
         {/* Features Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -65,7 +62,7 @@ import { Link               } from 'react-router-dom.ts';
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -98,14 +95,12 @@ import { Link               } from 'react-router-dom.ts';
                   description: "Optimize stock levels and reduce carrying costs with AI insights."
                 }
               ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-slate-400">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-slate-300">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -113,7 +108,7 @@ import { Link               } from 'react-router-dom.ts';
         </section>
 
         {/* Optimization Areas Section */}
-        <section className="py-20 bg-slate-800/20">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -124,7 +119,7 @@ import { Link               } from 'react-router-dom.ts';
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Demand Forecasting",
@@ -163,15 +158,13 @@ import { Link               } from 'react-router-dom.ts';
                   benefits: ["Risk assessment", "Mitigation planning", "Contingency strategies"]
                 }
               ].map((area, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <area.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
-                  <p className="text-slate-400 mb-4">{area.description}</p>
-                  <ul className="space-y-2">
+                  <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
+                  <p className="text-slate-300 mb-4">{area.description}</p>
+                  <ul className="space-y-1">
                     {area.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-blue-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
@@ -186,7 +179,7 @@ import { Link               } from 'react-router-dom.ts';
         </section>
 
         {/* AI Capabilities Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -197,7 +190,7 @@ import { Link               } from 'react-router-dom.ts';
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Machine Learning",
@@ -236,15 +229,13 @@ import { Link               } from 'react-router-dom.ts';
                   features: ["Linear programming", "Genetic algorithms", "Heuristic optimization"]
                 }
               ].map((capability, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <capability.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{capability.title}</h3>
-                  <p className="text-slate-400 mb-4">{capability.description}</p>
-                  <ul className="space-y-2">
+                  <h3 className="text-xl font-semibold text-white mb-2">{capability.title}</h3>
+                  <p className="text-slate-300 mb-4">{capability.description}</p>
+                  <ul className="space-y-1">
                     {capability.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-sm text-blue-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
@@ -259,7 +250,7 @@ import { Link               } from 'react-router-dom.ts';
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-slate-800/20">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -273,7 +264,14 @@ import { Link               } from 'react-router-dom.ts';
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-6">
-                  {benefits.map((benefit, index) => (
+                  {[
+                    "15-25% reduction in supply chain costs",
+                    "30-40% improvement in delivery performance",
+                    "20-30% reduction in inventory carrying costs",
+                    "Improved supplier performance and relationships",
+                    "Enhanced risk management and resilience",
+                    "Better customer satisfaction and service levels"
+                  ].map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{benefit}</span>
@@ -282,16 +280,15 @@ import { Link               } from 'react-router-dom.ts';
                 </div>
               </div>
 
-              <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: anyanyanyanyanyanyanyanyanyanyanyanyany"15-25%", label: "Cost Reduction", description: "Supply chain costs" },
+                    { metric: "15-25%", label: "Cost Reduction", description: "Supply chain costs" },
                     { metric: "30-40%", label: "Delivery Performance", description: "Improvement" },
                     { metric: "20-30%", label: "Inventory Costs", description: "Reduction" },
                     { metric: "90%+", label: "Visibility", description: "Supply chain transparency" }
-                  ].map((item, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+                  ].map((item, index)  => (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-blue-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -305,7 +302,7 @@ import { Link               } from 'react-router-dom.ts';
         </section>
 
         {/* Implementation Process Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -316,7 +313,7 @@ import { Link               } from 'react-router-dom.ts';
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -339,8 +336,6 @@ import { Link               } from 'react-router-dom.ts';
                   description: "Continuously monitor, optimize, and improve supply chain performance."
                 }
               ].map((step, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -354,7 +349,7 @@ import { Link               } from 'react-router-dom.ts';
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-500/10 to-indigo-600/10">
+        <section className="py-20 bg-gradient-to-r from-blue-500/10 to-indigo-600/10">;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Optimize Your Supply Chain?
@@ -366,7 +361,7 @@ import { Link               } from 'react-router-dom.ts';
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200"
-              >
+
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -374,12 +369,12 @@ import { Link               } from 'react-router-dom.ts';
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200"
               >
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+                Explore All Services;
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
-}
+}}}}}}

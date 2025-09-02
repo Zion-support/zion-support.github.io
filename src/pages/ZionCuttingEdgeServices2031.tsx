@@ -88,7 +88,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
     return filtered;
   }, [searchQuery, selectedCategory, sortBy]);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon: React.FC = ($2) => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
       'FinTech & Trading': Coins,
       'Healthcare & AI': Heart,
@@ -104,7 +104,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
     return iconMap[category] || Globe;
   };
 
-  const getInnovationColor = (level: string) => {
+  const getInnovationColor: React.FC = ($2) => {
     const colorMap: { [key: string]: string } = {
       'Revolutionary': 'from-purple-500 to-pink-500',
       'Cutting-edge': 'from-blue-500 to-indigo-500',
@@ -114,7 +114,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
     return colorMap[level] || 'from-gray-500 to-slate-500';
   };
 
-  const toggleServiceExpansion = (id: number) => {
+  const toggleServiceExpansion: React.FC = ($2) => {
     setExpandedService(expandedService === id ? null : id);
   };
 

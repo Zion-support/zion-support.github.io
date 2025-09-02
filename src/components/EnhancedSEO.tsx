@@ -3,13 +3,11 @@ import { Helmet               } from 'react-helmet-async.ts';
 
 interface EnhancedSEOProps extends React.PropsWithChildren<{}> {
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export interface SEOData {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   title: string;
   description: string;
   keywords?: string[];
@@ -17,11 +15,9 @@ export interface SEOData {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   structuredData?: object;
   noIndex?: boolean;
   noFollow?: boolean;
-=======
   twitterCreator?: string;
   twitterSite?: string;
   robots?: string;
@@ -33,9 +29,7 @@ export interface SEOData {
   favicon?: string;
   msTileColor?: string;
   msConfig?: string;
-=======
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 
 interface EnhancedSEOProps {
@@ -143,7 +137,6 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ data, children }) => {
     "foundingDate": "2020",
     "numberOfEmployees": "100+",
     "serviceArea": "Worldwide",
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Technology Services",
@@ -182,7 +175,6 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ data, children }) => {
     const fontLinks = [
       'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'
     ];
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
     // Add structured data to page
     if (finalStructuredData) {
@@ -210,12 +202,9 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ data, children }) => {
       document.head.appendChild(link);
     });
   }, [ogImage]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
   const metaDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
   return (
     <>

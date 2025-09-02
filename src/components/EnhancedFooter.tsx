@@ -1,21 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 import { 
   Zap, Mail, Phone, MapPin, Globe, Twitter, Linkedin, 
   Facebook, Instagram, Youtube, Github, ArrowRight,
-  Shield, Users, Code, Building, BookOpen, HelpCircle
+  Shield, Users, Code, Building, BookOpen, HelpCircle,
+  Star, Brain, Cloud, Award, TrendingUp, Lightbulb, 
+  Rocket, Target, CheckCircle, Heart, MessageCircle,
+  ShoppingCart, Cpu, Database, Network, Lock, BarChart3,
+  Server, Smartphone, Cpu as CpuIcon, Wifi, ShieldCheck,
+  Globe2, Bot, Workflow, Eye, Sparkles, ExternalLink,
+  Handshake, FileText, Video, GraduationCap, Atom,
+  PenTool, Leaf, ChevronRight, ChevronDown, DollarSign, Package
 } from 'lucide-react';
 
 export function EnhancedFooter() {
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
   const currentYear = new Date().getFullYear();
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const footerSections = [
+  const serviceCategories = [
     {
       title: 'Company',
       links: [
@@ -25,7 +28,7 @@ export function EnhancedFooter() {
         { name: 'Careers', href: '/careers', description: 'Join our team' },
         { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
         { name: 'News', href: '/news', description: 'Latest updates' },
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
       ]
     },
     {
@@ -35,9 +38,12 @@ export function EnhancedFooter() {
         { name: 'Cloud Services', href: '/services/cloud-devops', description: 'Infrastructure & DevOps' },
         { name: 'Cybersecurity', href: '/services/ai-cybersecurity-platform', description: 'Security & compliance' },
         { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization' },
+        { name: 'Quantum Computing', href: '/services/ai-quantum-financial-trading-platform', description: 'Next-gen computing power' },
+        { name: 'Smart City Solutions', href: '/services/ai-smart-city-infrastructure-management', description: 'Urban infrastructure management' },
+        { name: 'Autonomous Systems', href: '/services/ai-autonomous-vehicle-management-platform', description: 'AI-powered automation' },
         { name: 'Micro SaaS', href: '/micro-saas', description: 'Lightweight applications' },
         { name: 'Consulting', href: '/it-consulting', description: 'Technology advisory' },
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
       ]
     },
     {
@@ -49,11 +55,11 @@ export function EnhancedFooter() {
         { name: 'Manufacturing', href: '/manufacturing-solutions', description: 'Industry 4.0' },
         { name: 'Research & Development', href: '/research-development', description: 'Innovation labs' },
         { name: 'Green IT', href: '/green-it', description: 'Sustainable technology' },
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
       ]
     },
     {
-      title: 'Resources',
+      title: 'Events & Media',
       links: [
         { name: 'Blog', href: '/blog', description: 'Insights & updates' },
         { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
@@ -61,7 +67,7 @@ export function EnhancedFooter() {
         { name: 'Webinars', href: '/webinars', description: 'Educational content' },
         { name: 'Documentation', href: '/documentation', description: 'Technical guides' },
         { name: 'API Reference', href: '/api', description: 'Developer resources' },
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
       ]
     },
     {
@@ -75,6 +81,16 @@ export function EnhancedFooter() {
         { name: 'Community', href: '/community', description: 'User forums' },
       ]
     }
+  ];
+
+  // Featured Services for quick access
+  const featuredServices = [
+    { name: 'AI Quantum Financial Analytics', href: '/services/ai-quantum-financial-analytics-platform', icon: BarChart3, featured: true },
+    { name: 'AI Autonomous Supply Chain', href: '/services/ai-autonomous-supply-chain-management-platform', icon: Package, featured: true },
+    { name: 'AI Cybersecurity Operations', href: '/services/ai-cybersecurity-operations-center', icon: Shield, featured: true },
+    { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },
+    { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },
+    { name: '2026 Services Showcase', href: '/innovative-services-showcase-2026', icon: Sparkles, featured: true }
   ];
 
   const legalLinks = [
@@ -99,23 +115,23 @@ export function EnhancedFooter() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'contact@ziontechgroup.com',
-      href: 'mailto:contact@ziontechgroup.com',
+      value: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com',
       description: 'Send us a message'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+1 302 464 0950',
+      href: 'tel:+13024640950',
       description: 'Call us directly'
     },
     {
       icon: MapPin,
       label: 'Address',
-      value: '123 Tech Street, Innovation City, IC 12345',
-      href: 'https://maps.google.com/?q=123+Tech+Street+Innovation+City',
-      description: 'Visit our headquarters'
+      value: '364 E Main St STE 1008, Middletown DE 19709',
+      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
+      description: 'Visit our office'
     }
   ];
 
@@ -134,13 +150,13 @@ export function EnhancedFooter() {
               <span className="text-2xl font-bold">Zion Tech Group</span>
             </div>
             
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading the future of technology with cutting-edge AI solutions, 
               quantum computing, and innovative micro SAAS services. 
               Transforming businesses through digital innovation.
             </p>
-            
+
             {/* Contact Information */}
             <div className="space-y-4">
               {contactInfo.map((contact) => (
@@ -179,7 +195,7 @@ export function EnhancedFooter() {
                   </a>
                 ))}
               </div>
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
             </div>
           </div>
 
@@ -196,7 +212,7 @@ export function EnhancedFooter() {
               </h3>
               
               <ul className="space-y-3">
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
@@ -212,7 +228,7 @@ export function EnhancedFooter() {
                           {link.description}
                         </div>
                       </div>
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
                     </Link>
                   </li>
                 ))}
@@ -248,7 +264,7 @@ export function EnhancedFooter() {
                 Subscribe
               </button>
             </form>
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
           </div>
         </div>
       </div>
@@ -274,7 +290,7 @@ export function EnhancedFooter() {
                 >
                   {link.name}
                 </Link>
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
               ))}
             </div>
           </div>
@@ -308,4 +324,4 @@ export function EnhancedFooter() {
     </footer>
   );
 }
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685

@@ -113,7 +113,7 @@ interface Category {
   count: number;
 }
 
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 export default function Webinars() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -129,7 +129,7 @@ export default function Webinars() {
     { id: 'healthcare-tech', name: 'Healthcare Technology', icon: Heart, count: 2 },
     { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, count: 1 },
     { id: 'sustainability', name: 'Sustainability & Green IT', icon: Globe, count: 1 }
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
   ];
 
   const upcomingWebinars: Webinar[] = [
@@ -178,7 +178,7 @@ export default function Webinars() {
       speakers: ['Jennifer Kim', 'Cybersecurity Experts', 'AI Security Team'],
       maxAttendees: 500,
       currentAttendees: 342,
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
       featured: false,
       tags: ['Cybersecurity', 'AI Security', 'Threat Detection', 'Automated Response'],
       thumbnail: '/images/webinars/ai-cybersecurity-2025.jpg',
@@ -255,7 +255,7 @@ export default function Webinars() {
       thumbnail: '/images/webinars/sustainable-tech-2025.jpg',
       registrationRequired: false,
       recordingAvailable: true
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
     }
   ];
 
@@ -269,7 +269,7 @@ export default function Webinars() {
       webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
     const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
     
     return matchesSearch && matchesCategory;
   });
@@ -278,7 +278,7 @@ export default function Webinars() {
     setExpandedWebinar(expandedWebinar === webinarId ? null : webinarId);
   };
 
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
@@ -323,7 +323,7 @@ export default function Webinars() {
         return 'text-emerald-400 bg-emerald-400/10 border-emerald-400/20';
       default:
         return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
     }
   };
 
@@ -340,7 +340,7 @@ export default function Webinars() {
         <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -370,7 +370,7 @@ export default function Webinars() {
                   />
                 </div>
               </form>
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
             </motion.div>
           </div>
         </section>
@@ -424,7 +424,7 @@ export default function Webinars() {
                     All Webinars
                   </button>
                 </div>
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
               </div>
             </div>
           </div>
@@ -597,7 +597,7 @@ export default function Webinars() {
                     </div>
                   </motion.div>
                 ))}
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
               </div>
             ) : (
               <motion.div
@@ -638,7 +638,7 @@ export default function Webinars() {
                 Want to Host a Webinar?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
                 Have expertise to share? We're always looking for industry leaders and subject matter experts 
                 to present on cutting-edge topics. Let's discuss how we can collaborate.
               </p>
@@ -656,7 +656,7 @@ export default function Webinars() {
                 >
                   📞 Call Now
                 </a>
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
               </div>
             </motion.div>
           </div>

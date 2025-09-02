@@ -1,23 +1,9 @@
-import { specializedIndustrySolutions2026              } from '../../data/2026-specialized-industry-solutions';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+import { specializedIndustrySolutions2026 } from '@/src/src/data/2026-specialized-industry-solutions';
+
 
 // Interface for the existing service structure
 export interface Service {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -36,25 +22,11 @@ export interface Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  contactInfo: {
     phone: string;
     email: string;
     website: string;
-  
-
-
-
-
-
-
-
-
-
-
-
-
-};
+  };
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -69,7 +41,9 @@ contactInfo: {;
 
 // Map 2026 services to existing service structure
 export function map2026ServicesToExistingStructure(): Service[] {
+
   return specializedIndustrySolutions2026.map(service => ({
+
     id: service.id,
     title: service.name,
     description: service.description,

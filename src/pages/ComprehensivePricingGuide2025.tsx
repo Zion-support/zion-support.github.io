@@ -3,15 +3,27 @@ import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
 import { DollarSign, 
   Star, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   CheckCircle, 
+import React, { useState } from 'react';
+import { 
+  CheckCircle, 
+  Star, 
+  TrendingUp, 
+  Zap, 
+  Shield, 
+  Brain, 
+  Cpu, 
+  Database,
+  Globe,
+  Users,
+  Target,
+  DollarSign,
 =======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, 
   Filter, 
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   Star, 
   Shield, 
   Zap, 
@@ -31,19 +43,48 @@ import {
   Server,
   Smartphone,
   Network,
-  CheckCircle, 
-  Target,
-  DollarSign,
   Clock,
   ArrowRight,
   Phone,
   Mail,
   MapPin,
+  CheckCircle,
+  Award,
+  Target,
+  Lightbulb,
+  Sparkles,
+  Eye,
+  Heart,
+  DollarSign,
+  Calendar,
+  Settings,
+  Monitor,
+  Smartphone as MobileIcon,
+  Globe as WebIcon,
+  Shield as SecurityIcon,
+  Zap as PerformanceIcon,
+  Brain as AIIcon,
+  Cloud as CloudIcon,
+  Rocket as InnovationIcon,
+  ChevronDown,
+  ChevronUp,
+  Info,
+  AlertCircle,
+  Clock as TimeIcon,
+  Users as TeamIcon,
+  Globe as WorldIcon,
+  Shield as SecurityIcon2,
+  Zap as SpeedIcon,
+  Brain as IntelligenceIcon,
+  Cloud as CloudIcon2,
+  Rocket as LaunchIcon
+} from 'lucide-react';
+import { comprehensiveServices2025Enhanced, serviceCategories } from '../data/comprehensive-services-2025-enhanced';
+
   Linkedin,
   Twitter,
   Github
              } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
   const serviceCategories = [
@@ -199,7 +240,6 @@ const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709',
     website: 'https://ziontechgroup.com'
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
   technicalSpecs?: {
     technology: string[];
@@ -216,7 +256,6 @@ const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
   growthRate?: string;
   compliance?: string[];
 }
-=======
 export function ComprehensivePricingGuide2025() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -225,7 +264,6 @@ export function ComprehensivePricingGuide2025() {
   const [selectedService, setSelectedService] = useState<any>(null);
   const [showModal, setShowModal] = useState(false);
   const [expandedServices, setExpandedServices] = useState<Set<string>>(new Set());
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
   const filteredServices = comprehensiveServices2025Enhanced.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -497,21 +535,7 @@ export default function ComprehensivePricingGuide2025() {
             </div>
           </div>
         </div>
-      </section>
-                </div>
-                <div className="flex flex-col items-center">
-                  <MapPin className="w-10 h-10 text-purple-400 mb-3" />
-                  <p className="text-white font-semibold text-lg mb-2">Address</p>
-                  <p className="text-purple-300 text-lg">
-                    364 E Main St STE 1008<br />
-                    Middletown DE 19709
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
 
       {/* Pricing Statistics */}
       <section className="py-12 px-4">
@@ -615,7 +639,6 @@ export default function ComprehensivePricingGuide2025() {
           <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
             {services.map((service, index)              => (
               <motion.div
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 key={service.id}
                 className="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
               >
@@ -651,7 +674,6 @@ export default function ComprehensivePricingGuide2025() {
                   {service.marketPrice && (
                     <div className="text-sm text-slate-400 mb-2">
                       Market Price: {service.marketPrice}
-=======
           {/* Services Grid */}
           <div className={`grid gap-6 ${
             viewMode === 'grid' 
@@ -683,7 +705,6 @@ export default function ComprehensivePricingGuide2025() {
                           {getPriceRange(service.price)}
                         </span>
                       </div>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
                     </div>
 
                     <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
@@ -856,7 +877,6 @@ export default function ComprehensivePricingGuide2025() {
                   Get ROI Consultation
                 </a>
               </div>
-=======
         {/* Pricing Benefits */}
         <motion.section 
           className="py-16 px-6 bg-gradient-to-br from-purple-900/20 via-slate-900/50 to-pink-900/20"
@@ -888,7 +908,6 @@ export default function ComprehensivePricingGuide2025() {
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
               ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
           </div>
         </motion.section>
@@ -910,7 +929,6 @@ export default function ComprehensivePricingGuide2025() {
                   <h2 className="text-3xl md:text-4xl font-bold text-white">
                     {category.name}
                   </h2>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                   Choose the perfect plan for your {category.name.toLowerCase()} needs. All plans include our core capabilities and expert support.
@@ -1014,7 +1032,6 @@ export default function ComprehensivePricingGuide2025() {
                     </div>
                   </motion.div>
                 ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
             </div>
           </motion.section>
@@ -1035,7 +1052,6 @@ export default function ComprehensivePricingGuide2025() {
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Contact our team to discuss your needs and find the perfect solution for your business.
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               </p>
               <button
                 onClick={() => {
@@ -1047,12 +1063,10 @@ export default function ComprehensivePricingGuide2025() {
               >
                 Clear Filters
               </button>
-=======
             <div className="text-center py-20">
               <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
               <p className="text-gray-400">Try adjusting your search criteria or filters</p>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
             </div>
           )}
         </div>
@@ -1339,7 +1353,6 @@ export default function ComprehensivePricingGuide2025() {
               </a>
             </div>
           </motion.div>
-=======
                 className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="name">Sort by Name</option>
@@ -1567,8 +1580,9 @@ export default function ComprehensivePricingGuide2025() {
               Visit us at: <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">https://ziontechgroup.com</a>
             </p>
           </div>
+=======
         </div>
-      </section>
+      </div>
     </div>
   );
   }

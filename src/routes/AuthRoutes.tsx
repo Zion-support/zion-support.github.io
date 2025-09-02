@@ -1,20 +1,20 @@
 
-import { Route, Routes               } from 'react-router-dom.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-import Login from "@/pages/Login";
-import Signup from "@/pages/Signup";
-import ForgotPassword from "@/pages/ForgotPassword";
-import UpdatePassword from "@/pages/UpdatePassword";
-import { ProtectedRoute } from '@/components/ProtectedRoute';
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
-import Onboarding from "@/pages/Onboarding";
-import TalentOnboarding from "@/pages/TalentOnboarding";
-import ServiceOnboarding from "@/pages/ServiceOnboarding";
-const AuthRoutes = () => {
+import { Route, Routes  } from 'react-router-dom.ts';
+import Login from '@/src/src/pages/Login';
+import Signup from '@/src/src/pages/Signup';
+import ForgotPassword from '@/src/src/pages/ForgotPassword';
+import UpdatePassword from '@/src/src/pages/UpdatePassword';
+import { ProtectedRoute  } from '@/src/src/components/ProtectedRoute';
+import Onboarding from '@/src/src/pages/Onboarding';
+import TalentOnboarding from '@/src/src/pages/TalentOnboarding';
+import ServiceOnboarding from '@/src/src/pages/ServiceOnboarding';
+
+const AuthRoutes: React.FC = ($2) => {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+
       {/* Protected routes that require authentication */}
       <Route
         path="/profile"
@@ -22,14 +22,18 @@ const AuthRoutes = () => {
           <ProtectedRoute>
             <div>Profile Page</div>
           </ProtectedRoute>
+
       />
+
       <Route
         path="/dashboard"
         element={
           <ProtectedRoute>
             <div>Dashboard</div>
           </ProtectedRoute>
+
       />
+
       <Route
         path="/settings"
         element={;
@@ -41,4 +45,5 @@ const AuthRoutes = () => {
     </Routes>;
   );
 };
+
 export default AuthRoutes;}}}

@@ -1,92 +1,91 @@
-import { GradientHeading } from './GradientHeading';
-import { Link } from 'react-router-dom';
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe import { motion } from 'framer-motion';
-const categories = [;
-  {;
-    title: 'Services',;
-    description: 'On-demand IT support, consulting, development, and more',;
-    icon: <Briefcase className='w-10 h-10'              />,;
-    link: '/services',;
-    color: 'from-purple-500 to-indigo-600',;
-    features['24/7 Support', 'Global Coverage', 'Certified Experts'],;
-    stats: '500+ Services';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  },;
-  {;
-    title: 'AI & IT Services',;
-    description: 'Professional IT consulting, development, and AI integration',;
-    icon: <Brain className='w-10 h-10'              />,;
-    link: '/services',;
-    color: 'from-zion-purple to-zion-purple-dark',;
-    featured: true;
-  },;
-  {;
-    title: 'Talent Network',;
-    description: 'Connect with AI experts, developers, and tech specialists',;
-    icon: <Users className='w-10 h-10'              />,;
-    link: '/talent',;
-    color: 'from-cyan-500 to-blue-600',;
-    features['AI Matching', 'Verified Profiles', 'Skill Validation'],;
-    stats: '10,000+ Talents';
-  },;
-  {;
-    title: 'Equipment & Hardware',;
-    description: 'Rent or buy specialized hardware, servers, and devices',;
-    icon: <HardDrive className='w-10 h-10'              />,;
-    link: '/equipment',;
-    color: 'from-amber-500 to-orange-600',;
-    features['Flexible Rental', 'Buy Options', 'Maintenance Included'],;
-    stats: '1,000+ Items';
-  },;
-  {;
-    title: 'Innovation Hub',;
-    description: 'Discover cutting-edge solutions and tech breakthroughs',;
-    icon: <Lightbulb className='w-10 h-10'              />,;
-    link: '/category/innovation',;
-    color: 'from-emerald-500 to-green-600',;
-    features['Latest Tech', 'Research Labs', 'Startup Solutions'],;
-    stats: '100+ Innovations';
-  },;
-  {;
-    title: 'AI Hiring Platform',;
-    description: 'AI-powered recruitment and talent acquisition tools',;
-    icon: <ZapIcon className='w-10 h-10'              />,;
-    link: '/zion-hire-ai',;
-    color: 'from-zion-purple to-zion-purple-dark',;
+import { GradientHeading } from "./GradientHeading";
+import { Link } from "react-router-dom";
+import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe import { motion } from "framer-motion";
+const categories = [
+  {
+    title: "Services",
+    description: "On-demand IT support, consulting, development, and more",
+    icon: <Briefcase className="w-10 h-10" />,
+    link: "/services",
+    color: "from-purple-500 to-indigo-600",
+    features["24/7 Support", "Global Coverage", "Certified Experts"],
+    stats: "500+ Services"
+  },
+  {
+    title: "AI & IT Services",
+    description: "Professional IT consulting, development, and AI integration",
+    icon: <Brain className="w-10 h-10" />,
+    link: "/services",
+    color: "from-zion-purple to-zion-purple-dark",
+    featured: true
+  },
+  {
+    title: "Talent Network",
+    description: "Connect with AI experts, developers, and tech specialists",
+    icon: <Users className="w-10 h-10" />,
+    link: "/talent",
+    color: "from-cyan-500 to-blue-600",
+    features["AI Matching", "Verified Profiles", "Skill Validation"],
+    stats: "10,000+ Talents"
+  },
+  {
+    title: "Equipment & Hardware",
+    description: "Rent or buy specialized hardware, servers, and devices",
+    icon: <HardDrive className="w-10 h-10" />,
+    link: "/equipment",
+    color: "from-amber-500 to-orange-600",
+    features["Flexible Rental", "Buy Options", "Maintenance Included"],
+    stats: "1,000+ Items"
+  },
+  {
+    title: "Innovation Hub",
+    description: "Discover cutting-edge solutions and tech breakthroughs",
+    icon: <Lightbulb className="w-10 h-10" />,
+    link: "/category/innovation",
+    color: "from-emerald-500 to-green-600",
+    features["Latest Tech", "Research Labs", "Startup Solutions"],
+    stats: "100+ Innovations"
+  },
+  {
+    title: "AI Hiring Platform",;
+    description: "AI-powered recruitment and talent acquisition tools",;
+    icon: <ZapIcon className="w-10 h-10" />,;
+    link: "/zion-hire-ai",;
+    color: "from-zion-purple to-zion-purple-dark",;
     featured: true;
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-const specialServices = [;
-  {;
-    title: 'IT Onsite Services',;
-    link: '/it-onsite-services',;
-    icon: <Zap className='w-5 h-5'              />,;
-    description: '24/7 global technical support';
+const specialServices = [
+  {
+    title: "IT Onsite Services",
+    link: "/it-onsite-services",
+    icon: <Zap className="w-5 h-5" />,
+    description: "24/7 global technical support"
+  },
+  {
+    title: "AI Consulting",
+    link: "/ai-consulting",
+    icon: <Lightbulb className="w-5 h-5" />,
+    description: "Expert AI strategy & implementation"
+  },
+  {
+    title: "Cloud Solutions",
+    link: "/cloud-solutions",
+    icon: <Globe className="w-5 h-5" />,
+    description: "Scalable cloud infrastructure"
   },;
   {;
-    title: 'AI Consulting',;
-    link: '/ai-consulting',;
-    icon: <Lightbulb className='w-5 h-5'              />,;
-    description: 'Expert AI strategy & implementation';
-  },;
-  {;
-    title: 'Cloud Solutions',;
-    link: '/cloud-solutions',;
-    icon: <Globe className='w-5 h-5'              />,;
-    description: 'Scalable cloud infrastructure';
-  },;
-  {;
-    title: 'Security Services',;
-    link: '/security-services',;
-    icon: <Shield className='w-5 h-5'              />,;
-    description: 'Cybersecurity & compliance';
+    title: "Security Services",;
+    link: "/security-services",;
+    icon: <Shield className="w-5 h-5" />,;
+    description: "Cybersecurity & compliance";
   };
 ];
-interface CategoriesSectionProps {;
-  showTitle?: boolean};
-export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {;
-  const containerVariants = {;
+interface CategoriesSectionProps {
+  showTitle?: boolean}
+export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+  const containerVariants = {
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -95,22 +94,88 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       };
     };
   };
-  const itemVariants = {;
-  hidden: { opacity: 0,;
-  y: 30;
-;
-;
-;
-;
-;
+  const itemVariants = {
+  hidden: { opacity: 0,
+  y: 30 
 ;
 },;
     visible: {;
       opacity: 1,;
       y: 0,;
-      transition: { duration: 0.6, ease: 'easeOut' };
+      transition: { duration: 0.6, ease: "easeOut" };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+          initial = {
+  { opacity: 0,
+  y: 30 
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.4 
+}}
+        >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+          <h3 className="text-center text-2xl font-bold text-white mb-8">Featured Services</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {specialServices.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial = {
+  { opacity: 0,
+  scale: 0.9 
+}}
+                animate = {
+  { opacity: 1,
+  scale: 1 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.5 + index * 0.1 
+}}
+              >
+                <Link 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                  to={service.link}
+                  className="block p-4 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 border border-zion-purple/20 hover:border-zion-purple/50 rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="text-zion-purple group-hover:scale-110 transition-transform">
+                      {service.icon}
+                    </div>
+                    <span className="font-semibold text-sm">{service.title}</span>
+                  </div>
+                  <p className="text-xs text-zion-slate-light leading-relaxed">
+                    {service.description}
+                  </p>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+        <motion.div
+          className="text-center"
+          initial = {
+  { opacity: 0,
+  y: 30 
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.6 
+}}
+        >
+          <Link 
+            to="/categories" 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+            className="inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-dark transition-colors text-lg font-semibold group"
+            Explore All Categories
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+=======
   };
   return (;
     <section className = 'py-20 bg-gradient-to-b from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden'>;
@@ -240,7 +305,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 ;
 }};
         >;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
           <h3 className='text-center text-2xl font-bold text-white mb-8'>Featured Services</h3>;
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>;
             {specialServices.map((service, index) => (;
@@ -278,7 +342,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 }};
               >;
                 <Link;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
                   to={service.link};
                   className='block p-4 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 border border-zion-purple/20 hover:border-zion-purple/50 rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group';
 ;
@@ -332,18 +395,16 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         >;
           <Link;
             to='/categories';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
             className='inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-dark transition-colors text-lg font-semibold group';
 ;
             Explore All Categories;
             <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform'              />;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
           </Link>;
         </motion.div>;
       </div>;
     </section>;
   );
-};
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

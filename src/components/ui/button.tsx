@@ -2,21 +2,16 @@ import React from 'react.ts';
 interface ButtonProps extends React.PropsWithChildren<{
 }> {
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   variant?: 'default' | 'outline' | 'ghost' | 'link';
   size?: 'sm' | 'md' | 'lg' | 'icon';
   asChild?: boolean;
   className?: string;
   onClick?: ()                => void;
   type?: 'button' | 'submit' | 'reset';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   disabled?: boolean;
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function Button(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   const variantClasses = {
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',

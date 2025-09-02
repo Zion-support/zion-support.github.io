@@ -1,8 +1,7 @@
 import React from 'react.ts';
-import { cn               } from '../../utils/cn';
+import { cn  } from '../../utils/cn';
 
 interface SkeletonProps extends React.PropsWithChildren<{}> {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   className?: string;
   width?: string | number;
@@ -12,7 +11,7 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function Skeleton(...args: any[]): any {
+export function Skeleton(...args: unknown[]): unknown {
   const baseClasses = 'bg-gray-300 dark:bg-gray-700';
   
   const variantClasses = {
@@ -20,27 +19,49 @@ export function Skeleton(...args: any[]): any {
     circular: 'rounded-full',
     rectangular: '',
     rounded: 'rounded-lg'
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
+  
+  const animationClasses = {
+    pulse: 'animate-pulse',
+    wave: 'animate-pulse bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700',
+    none: ''
+  };
+  
+  const style = {
+    width: typeof width === 'number' ? `${width}px` : width,
+    height: typeof height === 'number' ? `${height}px` : height
+  };
+  
+  return (
+    <div
+      className={cn(
+        baseClasses,
+        variantClasses[variant],
+        animationClasses[animation],
+        className
+      )}
+      style={style}
+    />
+  );
+}
 
 // Predefined skeleton components for common use cases
-export function SkeletonText(...args: any[]): any {
+export function SkeletonText(...args: unknown[]): unknown {
   return (
     <div className={cn('space-y-2', className)}>
-      {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanylines }).map((_, i)               => (
+      {Array.from({ length: anylines }).map((_, i)  => (
         <Skeleton
           key={i}
           variant="text"
           width={i === lines - 1 ? '75%' : '100%'}
           className="h-4"
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         />
       ))}
-    </>
+    </div>
   );
-};
+}
 
-export function SkeletonCard(...args: any[]): any {
+export function SkeletonCard(...args: unknown[]): unknown {
   return (
     <div className={cn('p-6 space-y-4', className)}>
       <div className="flex items-center space-x-4">
@@ -54,29 +75,25 @@ export function SkeletonCard(...args: any[]): any {
       <div className="flex space-x-2">
         <Skeleton variant="rounded" width={80} height={32} />
         <Skeleton variant="rounded" width={100} height={32} />
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       </div>
     </div>
-    <Skeleton className="h-4 w-full mb-2" />
-    <Skeleton className="h-4 w-5/6 mb-2" />
-    <Skeleton className="h-4 w-4/6" />
-  </div>
-);
+  );
+}
 
-export function SkeletonTable(...args: any[]): any {
+export function SkeletonTable(...args: unknown[]): unknown {
   return (
     <div className={cn('space-y-3', className)}>
       {/* Header */}
       <div className="flex space-x-4">
-        {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanycolumns }).map((_, i)               => (
+        {Array.from({ length: anycolumns }).map((_, i)  => (
           <Skeleton key={i} variant="text" width={120} height={20} />
         ))}
       </div>
       
       {/* Rows */}
-      {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyrows }).map((_, rowIndex)               => (
+      {Array.from({ length: anyrows }).map((_, rowIndex)  => (
         <div key={rowIndex} className="flex space-x-4">
-          {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanycolumns }).map((_, colIndex)               => (
+          {Array.from({ length: anycolumns }).map((_, colIndex)  => (
             <Skeleton
               key={colIndex}
               variant="text"
@@ -84,31 +101,30 @@ export function SkeletonTable(...args: any[]): any {
               height={16}
             />
           ))}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       ))}
     </div>
-  </div>
-);
+  );
+}
 
-export function SkeletonGrid(...args: any[]): any {
+export function SkeletonGrid(...args: unknown[]): unknown {
   return (
     <div className={cn(
       'grid gap-6',
       columns === 1 && 'grid-cols-1',
       columns === 2 && 'grid-cols-1 md:grid-cols-2',
       columns === 3 && 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
-      columns === 4 && 'grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4',
+      columns === 4 && 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4',
       className
     )}>
-      {Array.from({ length: items }).map((_, i)               => (
+      {Array.from({ length: items }).map((_, i)  => (
         <SkeletonCard key={i} />
       ))}
     </div>
   );
 }
 
-export function SkeletonHero(...args: any[]): any {
+export function SkeletonHero(...args: unknown[]): unknown {
   return (
     <div className={cn('space-y-8', className)}>
       {/* Title */}
@@ -128,4 +144,3 @@ export function SkeletonHero(...args: any[]): any {
     </div>
   );
 }
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

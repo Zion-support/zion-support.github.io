@@ -1,5 +1,7 @@
-import React from 'react.ts';
-import { Route, Routes              } from 'react-router-dom.ts';
-import NotFound from "@/pages/NotFound";
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import NotFound from '@/src/src/pages/NotFound';
+
 };
+
 export default ErrorRoutes;}

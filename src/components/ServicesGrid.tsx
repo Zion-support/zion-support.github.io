@@ -1,22 +1,8 @@
 import React from 'react.ts';
-import { Link               } from 'react-router-dom.ts';
-import { motion               } from 'framer-motion.ts';
-import { ArrowRight, CheckCircle, LucideIcon               } from 'lucide-react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
 
 interface Service {
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   title: string;
   description: string;
@@ -24,19 +10,6 @@ interface Service {
   href: string;
   features: string[];
   color: string;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
@@ -46,10 +19,10 @@ interface ServicesGridProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function ServicesGrid(...args: any[]): any {
+export function ServicesGrid(...args: unknown[]): unknown {
   return (
-    <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-      {services.map((service, index)               => (
+    <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+      {services.map((service, index)  => (
         <motion.div
           key={service.title}
           initial={{ opacity: 0, y: 20 }}

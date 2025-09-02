@@ -1,8 +1,6 @@
 import React from 'react.ts';
-import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-const DigitalTransformation = () => {
+const DigitalTransformation: React.FC = ($2) => {
   const transformationServices = [
     {
       title: "Process Automation",
@@ -26,6 +24,7 @@ const DigitalTransformation = () => {
       icon: Users;
     };
   ];
+
   const transformationAreas = [
     {
       name: "Customer Experience",
@@ -46,6 +45,7 @@ const DigitalTransformation = () => {
       features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"];
     };
   ];
+
   const benefits = [;
     "Increased operational efficiency and productivity",;
     "Enhanced customer experience and satisfaction",;
@@ -54,6 +54,7 @@ const DigitalTransformation = () => {
     "Faster time to market for new products",;
     "Better competitive positioning in the market";
   ];
+
   return (
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
@@ -83,6 +84,7 @@ const DigitalTransformation = () => {
           </div>
         </div>
       </section>
+
       {/* Transformation Services */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -96,9 +98,8 @@ const DigitalTransformation = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {transformationServices.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {transformationServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -119,6 +120,7 @@ const DigitalTransformation = () => {
           </div>
         </div>
       </section>
+
       {/* Transformation Areas */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -132,9 +134,8 @@ const DigitalTransformation = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {transformationAreas.map((area, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {transformationAreas.map((area, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <area.icon className="w-8 h-8 text-white"/>
@@ -153,6 +154,7 @@ const DigitalTransformation = () => {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -192,6 +194,7 @@ const DigitalTransformation = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -215,4 +218,5 @@ const DigitalTransformation = () => {
     </div>;
   );
 };
+
 export default DigitalTransformation;}}}

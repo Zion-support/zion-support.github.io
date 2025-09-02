@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Eye, 
@@ -16,7 +16,7 @@ import {
   Info,
   Settings,
   X
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 } from 'lucide-react';
 
 interface AccessibilitySettings {
@@ -54,7 +54,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhanc
   showPanel = false,
   autoFix = true,
   complianceLevel = 'AA'
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -399,7 +399,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhanc
           </div>
         )}
       </motion.button>
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
       {/* Accessibility Panel */}
       <AnimatePresence>
@@ -554,7 +554,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhanc
                     <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
                     <option value="tritanopia">Tritanopia (Blue-Blind)</option>
                   </select>
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
                 </div>
               </div>
             </div>
@@ -581,4 +581,4 @@ export const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhanc
     </>
   );
 };
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685

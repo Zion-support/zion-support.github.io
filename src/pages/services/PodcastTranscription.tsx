@@ -1,8 +1,7 @@
-import React from 'react.ts';
-import SEO from '@/components/SEO';
+import React from 'react';
+import SEO from '@/src/src/components/SEO';
 
-function PodcastTranscription(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+function PodcastTranscription() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
       <SEO
@@ -41,7 +40,10 @@ function PodcastTranscription(...args: any[]): any {
       </section>;
     </div>;
   );
+
 export default PodcastTranscription;
+
+
 export default PodcastTranscription;
 export default PodcastTranscription;
 export default PodcastTranscription;

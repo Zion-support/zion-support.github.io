@@ -1,8 +1,6 @@
 import React from 'react.ts';
-import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-const MicroSAAS = () => {
+const MicroSAAS: React.FC = ($2) => {
   const microsaasServices = [
     {
       icon: Package,
@@ -47,6 +45,7 @@ const MicroSAAS = () => {
       features: ["AWS/Azure deployment", "Container orchestration", "Auto-scaling", "Monitoring"];
     };
   ];
+
   const benefits = [;
     "Lower development costs and faster time to market",;
     "Scalable architecture that grows with your business",;
@@ -55,6 +54,7 @@ const MicroSAAS = () => {
     "Flexible subscription models and pricing strategies",;
     "Continuous updates and feature improvements";
   ];
+
   const technologies = [
     {
       name: "Frontend",
@@ -75,6 +75,7 @@ const MicroSAAS = () => {
       features: ["Cloud platforms", "Containerization", "Auto-scaling", "Load balancing"];
     };
   ];
+
   const industries = [
     {
       title: "Healthcare",
@@ -97,6 +98,7 @@ const MicroSAAS = () => {
       icon: Package;
     };
   ];
+
   return (
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
@@ -126,6 +128,7 @@ const MicroSAAS = () => {
           </div>
         </div>
       </section>
+
       {/* MicroSAAS Services Grid */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -139,9 +142,8 @@ const MicroSAAS = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {microsaasServices.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {microsaasServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -162,6 +164,7 @@ const MicroSAAS = () => {
           </div>
         </div>
       </section>
+
       {/* Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -175,9 +178,8 @@ const MicroSAAS = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {technologies.map((tech, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {technologies.map((tech, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>
@@ -196,6 +198,7 @@ const MicroSAAS = () => {
           </div>
         </div>
       </section>
+
       {/* Industries */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -209,9 +212,8 @@ const MicroSAAS = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {industries.map((industry, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {industries.map((industry, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <industry.icon className="w-6 h-6 text-white"/>
@@ -223,6 +225,7 @@ const MicroSAAS = () => {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -262,6 +265,7 @@ const MicroSAAS = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -285,4 +289,5 @@ const MicroSAAS = () => {
     </div>;
   );
 };
+
 export default MicroSAAS;}}}}

@@ -6,10 +6,7 @@ import { cuttingEdgeComprehensiveServices2027              } from '../../data/20
 import { specializedInnovativeServices2027              } from '../../data/2027-specialized-innovative-services';
 import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap              } from 'lucide-react.ts';
 import { Link              } from 'react-router-dom.ts';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -70,7 +67,6 @@ const pricingTiers = [
 ];
 
 export default function ComprehensivePricing(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<any>('all');
   // Combine all services
@@ -100,7 +96,6 @@ export default function ComprehensivePricing(...args[]: any):  {
     return matchesCategory && matchesPrice;
   });
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'All Prices'}
   };
   return (

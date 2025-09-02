@@ -151,7 +151,7 @@ interface Type {
   count: number;
 }
 
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 export default function Research() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
@@ -161,7 +161,7 @@ export default function Research() {
 
   const categories: Category[] = [
     { id: 'all', name: 'All Categories', icon: FlaskConical, count: 52 },
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 12 },
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 8 },
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 6 },
@@ -248,13 +248,13 @@ export default function Research() {
           year: 2024,
           doi: '10.1109/TMI.2024.001234',
           citations: 32
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
         }
       ],
       tags: ['Federated Learning', 'Healthcare', 'Privacy', 'Machine Learning', 'Security'],
       featured: true,
       progress: 100,
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
       impact: 'high'
     },
     {
@@ -326,7 +326,7 @@ export default function Research() {
       project.leadResearcher.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
     const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
     const matchesStatus = activeStatus === 'all' || project.status === activeStatus;
     const matchesType = activeType === 'all' || project.type === activeType;
@@ -336,7 +336,7 @@ export default function Research() {
 
   const toggleProjectExpansion = (projectId: number) => {
     setExpandedProject(expandedProject === projectId ? null : projectId);
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
   };
 
   const getStatusColor = (status: string) => {
@@ -351,7 +351,7 @@ export default function Research() {
         return 'text-purple-400 bg-purple-400/10 border-purple-400/20';
       default:
         return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
     }
   };
 
@@ -500,7 +500,7 @@ export default function Research() {
                     </button>
                   ))}
                 </div>
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
               </div>
             </div>
             <h1 className="text-5xl font-bold text-white mb-6">
@@ -701,7 +701,7 @@ export default function Research() {
                 </button>
               </div>
             )}
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
           </div>
         </section>
 

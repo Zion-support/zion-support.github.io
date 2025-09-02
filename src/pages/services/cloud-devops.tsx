@@ -1,52 +1,124 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Cloud, 
+  Brain, 
+  Target, 
+  BarChart3, 
+  Zap, 
+  ArrowRight,
+  Clock,
+  Star,
+  Lightbulb,
+  CheckCircle,
+  Eye,
+  Globe,
+  PieChart,
+  Monitor,
+  FileText,
+  Share2,
+  Server,
+  Cpu
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+export default function CloudDevOps() {
+  const features = [
+    {
+      icon: Cloud,
+      title: "Cloud Infrastructure",
+      description: "Design and deploy scalable cloud infrastructure across multiple platforms."
+    },
+    {
+      icon: Brain,
+      title: "AI-Powered DevOps",
+      description: "Leverage AI and machine learning to automate and optimize DevOps processes."
+    },
+    {
+      icon: Target,
+      title: "Continuous Integration/Deployment",
+      description: "Implement CI/CD pipelines for automated testing and deployment."
+    },
+    {
+      icon: BarChart3,
+      title: "Performance Monitoring",
+      description: "Monitor application and infrastructure performance with real-time analytics."
+    },
+    {
+      icon: Zap,
+      title: "Automation & Orchestration",
+      description: "Automate infrastructure provisioning and application deployment workflows."
+    },
+    {
+      icon: Server,
+      title: "Container Orchestration",
+      description: "Manage containerized applications with Kubernetes and Docker."
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: Target,
+      title: "Faster Deployment",
+      description: "Reduce deployment time from days to minutes with automated pipelines."
+    },
+    {
+      icon: Lightbulb,
+      title: "Improved Reliability",
+      description: "Increase system reliability and reduce downtime with automated monitoring."
+    },
+    {
+      icon: Clock,
+      title: "Cost Optimization",
+      description: "Optimize cloud costs with intelligent resource management and scaling."
+    },
+    {
+      icon: Star,
+      title: "Better Collaboration",
+      title: "Enhanced Security",
+      description: "Implement security best practices and compliance requirements."
+    }
+  ];
+
+  const serviceTypes = [
+    {
+      title: "Cloud Migration",
+      description: "Migrate existing infrastructure to cloud platforms with minimal downtime."
+    },
+    {
+      title: "DevOps Transformation",
+      description: "Transform traditional development and operations to modern DevOps practices."
+    },
+    {
+      title: "Infrastructure as Code",
+      description: "Manage infrastructure using code and version control systems."
+    },
+    {
+      title: "Microservices Architecture",
+      description: "Design and implement scalable microservices-based applications."
+    }
+  ];
+=======
 import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { Cloud, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, GitBranch, Server               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
-    <>
-      <Helmet>
-        <title>Cloud DevOps - Zion Tech Group</title>
-        <meta name="description" content="Streamline your development and operations with cloud-native DevOps solutions. Automate deployments, improve collaboration, and accelerate delivery." />
-        <meta name="keywords" content="cloud devops, CI/CD, cloud infrastructure, automation, containerization, kubernetes, aws, azure, google cloud" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/cloud-devops" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-600/10"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
-                <Cloud className="w-4 h-4 mr-2" />
-                Cloud-Native DevOps
-              </div>
-
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Cloud
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> DevOps</span>
-              </h1>
-
-              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Streamline your development and operations with cloud-native DevOps solutions. Automate deployments,
-                improve collaboration, and accelerate delivery with modern cloud infrastructure.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <button className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200">
-                  <Play className="mr-2 w-5 h-5" />
-                  Watch Demo
-                </button>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-white/20 rounded-full">
+                <Cloud className="h-8 w-8 text-white" />
               </div>
             </div>
           </div>
@@ -98,10 +170,8 @@ import { Link               } from 'react-router-dom.ts';
                   description: "Real-time monitoring and analytics for application performance."
                 }
               ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -163,10 +233,8 @@ import { Link               } from 'react-router-dom.ts';
                   benefits: ["Vulnerability scanning", "Compliance checks", "Security policies"]
                 }
               ].map((area, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <area.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
@@ -236,10 +304,8 @@ import { Link               } from 'react-router-dom.ts';
                   features: ["Vulnerability scanning", "Compliance automation", "Security policies"]
                 }
               ].map((tech, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <tech.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{tech.title}</h3>
@@ -291,7 +357,6 @@ import { Link               } from 'react-router-dom.ts';
                     { metric: "40-70%", label: "Recovery Time", description: "Improvement" },
                     { metric: "99.9%+", label: "Uptime", description: "Availability" }
                   ].map((item, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-cyan-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -339,8 +404,6 @@ import { Link               } from 'react-router-dom.ts';
                   description: "Continuously monitor, optimize, and improve processes."
                 }
               ].map((step, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -365,21 +428,185 @@ import { Link               } from 'react-router-dom.ts';
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
               >
-                Schedule a Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Advanced Cloud DevOps Features
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our platform provides comprehensive cloud DevOps capabilities to accelerate your development.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+              >
+                <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-lg mb-6">
+                  <feature.icon className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">
+                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Cloud DevOps Services?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Experience the benefits of modern cloud DevOps that accelerate development and improve reliability.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-4"
+              >
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg">
+                    <benefit.icon className="h-6 w-6 text-blue-600" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {benefit.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Types Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Service Offerings
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our comprehensive cloud DevOps services cover all aspects of modern development and operations.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {serviceTypes.map((serviceType, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-50 p-8 rounded-xl border border-gray-200"
+              >
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {serviceType.title}
+                </h3>
+                <p className="text-gray-600">
+                  {serviceType.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your DevOps?
+            </h2>
+            <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              Join organizations that are already leveraging cloud DevOps to accelerate development.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Explore All Services
               </Link>
             </div>
-          </div>
-        </section>
-      </div>
-    </>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 }

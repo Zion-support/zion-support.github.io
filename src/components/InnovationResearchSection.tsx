@@ -12,7 +12,6 @@ import { Lightbulb,
   Target
               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       patents: '11';
     };
   ];
@@ -60,7 +59,6 @@ const innovationMetrics = [
 ];
 
 export function InnovationResearchSection(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -82,7 +80,6 @@ export function InnovationResearchSection(...args: any[]): any {
         {/* Innovation Metrics */}
         <motion.div 
           className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -96,7 +93,6 @@ export function InnovationResearchSection(...args: any[]): any {
             )})}
         </motion.div>
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         {/* Research Areas */}
         <motion.div 
           className = "mb-16"
@@ -120,8 +116,6 @@ export function InnovationResearchSection(...args: any[]): any {
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {researchAreas.map((area, index)               => (
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={area.title}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"

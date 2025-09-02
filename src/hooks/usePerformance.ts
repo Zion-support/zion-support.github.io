@@ -15,7 +15,6 @@ interface PerformanceMetrics {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   fcp: number | null; // First Contentful Paint
   lcp: number | null; // Largest Contentful Paint
   fid: number | null; // First Input Delay
@@ -36,7 +35,6 @@ interface PerformanceMetrics {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 interface PerformanceOptions {
 
@@ -74,7 +72,6 @@ interface PerformanceOptions {
 }
 
 export function usePerformance(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const {
     enableRealUserMonitoring = true,
     enableWebVitals = true,
@@ -84,9 +81,7 @@ export function usePerformance(...args: any[]): any {
     sendToAnalytics = false
   } = options;
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [metrics, setMetrics] = useState<any>({
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     fcp: null,
     lcp: null,
     fid: null,
@@ -157,7 +152,6 @@ export function usePerformance(...args: any[]): any {
         windowLoad
       }));
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           // // // // // // // console.warn('Long task detected:', {
             duration: entry.duration,
             startTime: entry.startTime,
@@ -170,10 +164,8 @@ export function usePerformance(...args: any[]): any {
     } catch (error) {
       // // // // // // // console.warn('Error setting up long task observer: anyanyanyanyanyanyanyanyanyanyanyanyany', error);
     }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return ()              => longTaskObserver.disconnect();
 =======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       if (logToConsole) {
         console.log('Navigation Timing:', { ttfb, domLoad, windowLoad });
       }
@@ -247,7 +239,6 @@ export function usePerformance(...args: any[]): any {
     let firstInputDelay: number | null = null;
 
     const firstInputHandler = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyEvent)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       if (firstInputTime !== null) return;
       firstInputTime = performance.now();
       firstInputDelay = firstInputTime - (performance.timeOrigin || 0);
@@ -380,7 +371,6 @@ export function usePerformance(...args: any[]): any {
     getResourceTiming,
     sendMetricsToAnalytics
   };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       // // // // // // // console.warn(`Error observing ${eventName}:`, error);
     }
     return () => observer.disconnect();
@@ -423,7 +413,6 @@ export function useAPIPerformance(...args: any[]): any {
   const [apiMetrics, setApiMetrics] = useState<Map<string, number[]>>(new Map());
 
   const trackAPICall = useCallback((endpoint: anyanyanyanyanyanyanyanyanyanyanyanyanystring, duration: number)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setApiMetrics(prev => {
       const newMap = new Map(prev);
       const existing = newMap.get(endpoint) || [];
@@ -433,7 +422,6 @@ export function useAPIPerformance(...args: any[]): any {
   }, []);
 
   const getAPIAverage = useCallback((endpoint: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const metrics = apiMetrics.get(endpoint);
     if (!metrics || metrics.length === 0) return 0;
     return metrics.reduce((sum, time) => sum + time, 0) / metrics.length;

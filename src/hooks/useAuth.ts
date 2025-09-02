@@ -4,7 +4,7 @@ import { loginUser, signupUser, logoutUser, checkAuthStatus, selectUser, selectI
 
 interface User {
   id: number;
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
   email: string;
   name: string;
   role: 'user' | 'admin' | 'moderator';
@@ -65,7 +65,7 @@ export function useAuth() {
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
   return {
     user,
@@ -79,4 +79,4 @@ export function useAuth() {
 }
 
 export default useAuth;
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685

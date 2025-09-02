@@ -1,22 +1,167 @@
-import React from 'react.ts';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Calendar, User, ArrowRight, Globe, TrendingUp } from 'lucide-react';
 
-export default function News(...args: any[]): any {
+const News = () => {
+  const newsArticles = [
+    {
+      id: 1,
+      title: "Zion Tech Group Launches Revolutionary AI Platform",
+      excerpt: "Our new AI platform revolutionizes business automation with cutting-edge machine learning capabilities.",
+      date: "2024-01-15",
+      author: "Sarah Johnson",
+      category: "Product Launch",
+      image: "/images/news/ai-platform.jpg",
+      readTime: "5 min read"
+    },
+    {
+      id: 2,
+      title: "Quantum Computing Breakthrough Achieved",
+      excerpt: "Zion Tech Group achieves significant milestone in quantum computing research and development.",
+      date: "2024-01-10",
+      author: "Dr. Michael Chen",
+      category: "Research",
+      image: "/images/news/quantum-breakthrough.jpg",
+      readTime: "7 min read"
+    },
+    {
+      id: 3,
+      title: "Partnership with Global Tech Leaders",
+      excerpt: "Strategic partnerships announced with leading technology companies worldwide.",
+      date: "2024-01-05",
+      author: "Alex Rodriguez",
+      category: "Partnerships",
+      image: "/images/news/partnerships.jpg",
+      readTime: "4 min read"
+    },
+    {
+      id: 4,
+      title: "Cybersecurity Solutions for Modern Threats",
+      excerpt: "Advanced cybersecurity solutions designed to protect against evolving digital threats.",
+      date: "2024-01-01",
+      author: "Emma Wilson",
+      category: "Security",
+      image: "/images/news/cybersecurity.jpg",
+      readTime: "6 min read"
+    }
+  ];
+
+  const categories = ["All", "Product Launch", "Research", "Partnerships", "Security", "Innovation"];
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-8">
-      <div className="max-w-2xl text-center">
-        <h1 className="text-4xl font-bold mb-4">News</h1>
-        <p className="text-slate-300">Latest updates and announcements from Zion Tech Group.</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Latest <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">News</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Stay updated with the latest developments, innovations, and insights from Zion Tech Group
+          </p>
+        </motion.div>
+
+        {/* Category Filter */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-4 mb-12"
+        >
+          {categories.map((category) => (
+            <button
+              key={category}
+              className="px-6 py-2 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-white/20 transition-all duration-300"
+            >
+              {category}
+            </button>
+          ))}
+        </motion.div>
+
+        {/* News Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {newsArticles.map((article, index) => (
+            <motion.article
+              key={article.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 group"
+            >
+              <div className="h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+                <Globe className="w-16 h-16 text-white/50" />
+              </div>
+              
+              <div className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full">
+                    {article.category}
+                  </span>
+                  <span className="text-gray-400 text-sm">{article.readTime}</span>
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
+                  {article.title}
+                </h3>
+                
+                <p className="text-gray-300 mb-4 line-clamp-3">
+                  {article.excerpt}
+                </p>
+                
+                <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                  <div className="flex items-center gap-2">
+                    <User className="w-4 h-4" />
+                    {article.author}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    {new Date(article.date).toLocaleDateString()}
+                  </div>
+                </div>
+                
+                <button className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors group">
+                  Read More
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+
+        {/* Newsletter Signup */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-16 text-center"
+        >
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto">
+            <TrendingUp className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Stay Updated
+            </h3>
+            <p className="text-gray-300 mb-6">
+              Subscribe to our newsletter for the latest news and insights
+            </p>
+            <div className="flex gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
+              />
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
-  )};
-=======;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;
   );
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+};
+
+export default News;

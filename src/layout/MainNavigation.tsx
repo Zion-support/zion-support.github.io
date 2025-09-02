@@ -3,9 +3,7 @@ import React, { useState, useRef, useEffect } from 'react.ts';
 import { Link, useLocation              } from 'react-router-dom.ts';
 import { motion, AnimatePresence              } from 'framer-motion.ts';
 import { ChevronDown,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   Menu,
   X,
   ChevronDown,
@@ -16,7 +14,6 @@ import { ChevronDown,
   BarChart3
               } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface NavigationLink {
 
 
@@ -50,9 +47,7 @@ children?: NavigationLink[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         setIsCompOpen(false);
         setActiveDropdown(null)}
     };
@@ -64,8 +59,6 @@ children?: NavigationLink[];
       href: '/',
       name: 'Home',
       matches: anyanyanyanyanyanyanyanyanyanyanyanyany(path: string)              => path = == '/'
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     },
     {
       key: anyanyanyanyanyanyanyanyanyanyanyanyany'services',
@@ -73,41 +66,35 @@ children?: NavigationLink[];
       name: 'Services',
       matches: (path: string) => path.startsWith('/services'),
       children: [
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         {
           key: anyanyanyanyanyanyanyanyanyanyanyanyany'ai-services',
           href: '/services/ai',
           name: 'AI & Analytics',
           matches: (path: string) => path.startsWith('/services/ai')
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         },
         {
           key: anyanyanyanyanyanyanyanyanyanyanyanyany'quantum',
           href: '/services/quantum',
           name: 'Quantum Computing',
           matches: (path: string) => path.startsWith('/services/quantum')
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         },
         {
           key: anyanyanyanyanyanyanyanyanyanyanyanyany'blockchain',
           href: '/services/blockchain',
           name: 'Blockchain',
           matches: (path: string) => path.startsWith('/services/blockchain')
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         },
         {
           key: anyanyanyanyanyanyanyanyanyanyanyanyany'iot',
           href: '/services/iot',
           name: 'IoT & Edge',
           matches: (path: string) => path.startsWith('/services/iot')
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         },
         {
           key: anyanyanyanyanyanyanyanyanyanyanyanyany'cybersecurity',
           href: '/services/cybersecurity',
           name: 'Cybersecurity',
           matches: (path: string) => path.startsWith('/services/cybersecurity')
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         }
       ]
     },
@@ -122,21 +109,17 @@ children?: NavigationLink[];
       href: '/pricing',
       name: 'Pricing',
       matches: (path: string) => path.startsWith('/pricing')
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     },
     {
       key: anyanyanyanyanyanyanyanyanyanyanyanyany'about',
       href: '/about',
       name: 'About',
       matches: (path: string) => path.startsWith('/about')
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     },
     {
       matches: anyanyanyanyanyanyanyanyanyanyanyanyany(path: string)               => path.startsWith('/contact')
     };
-=======;
       key: anyanyanyanyanyanyanyanyanyanyanyanyany'contact',;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       href: '/contact',;
       name: 'Contact',;
       matches: (path: string)              => path.startsWith('/contact');
@@ -145,7 +128,6 @@ children?: NavigationLink[];
 
   const isActive = (link: anyanyanyanyanyanyanyanyanyanyanyanyanyNavigationLink)               => link.matches(location.pathname);
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               </div>;
             </motion.div>;
           )};

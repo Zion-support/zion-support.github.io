@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion               } from 'framer-motion.ts';
+import { motion  } from 'framer-motion.ts';
 
 interface SkeletonProps extends React.PropsWithChildren<{}> {
 
@@ -25,7 +25,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   if (animated) {
     return (
       <>
-        {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanycount }).map((_, index)               => (
+        {Array.from({ length: anycount }).map((_, index)  => (
           <motion.div
             key={index}
             className={`animate-pulse ${baseClasses}`}
@@ -33,7 +33,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
               opacity: [0.5, 1, 0.5],
             }}
             transition={{
-              duration: anyanyanyanyanyanyanyanyanyanyanyanyanyany1.5,
+              duration: any1.5,;
               repeat: Infinity,
               ease: "easeInOut"
             }}
@@ -45,7 +45,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   
   return (
     <>
-      {Array.from({ length: count }).map((_, index)               => (
+      {Array.from({ length: count }).map((_, index)  => (
         <div
           key={index}
           className={`animate-pulse ${baseClasses}`}
@@ -105,24 +105,24 @@ interface TableSkeletonProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function TableSkeleton(...args: any[]): any {
+export function TableSkeleton(...args: unknown[]): unknown {
   return (
     <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
       {/* Header */}
       <div className="bg-gray-50 dark:bg-gray-700 px-6 py-4 border-b border-gray-200 dark:border-gray-600">
         <div className="flex space-x-4">
-          {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanycolumns }).map((_, index)               => (
+          {Array.from({ length: anycolumns }).map((_, index)  => (
             <Skeleton key={index} className="h-4 flex-1" />
           ))}
         </div>
       </div>
       
       {/* Rows */}
-      <div className="divide-y divide-gray-200 dark: anyanyanyanyanyanyanyanyanyanyanyanyanyanydivide-gray-600">
-        {Array.from({ length: rows }).map((_, rowIndex)               => (
+      <div className="divide-y divide-gray-200 dark: anydivide-gray-600">
+        {Array.from({ length: rows }).map((_, rowIndex)  => (
           <div key={rowIndex} className="px-6 py-4">
             <div className="flex space-x-4">
-              {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanycolumns }).map((_, colIndex)               => (
+              {Array.from({ length: anycolumns }).map((_, colIndex)  => (
                 <Skeleton 
                   key={colIndex} 
                   className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} 
@@ -144,10 +144,10 @@ interface ListSkeletonProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function ListSkeleton(...args: any[]): any {
+export function ListSkeleton(...args: unknown[]): unknown {
   return (
     <div className={`space-y-4 ${className}`}>
-      {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyitems }).map((_, index)               => (
+      {Array.from({ length: anyitems }).map((_, index)  => (
         <div key={index} className="flex items-center space-x-4 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
           {showAvatar && (
             <Skeleton className="w-12 h-12 rounded-full flex-shrink-0" />
@@ -171,10 +171,10 @@ interface GridSkeletonProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function GridSkeleton(...args: any[]): any {
+export function GridSkeleton(...args: unknown[]): unknown {
   return (
-    <div className={`grid grid-cols-1 sm: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
-      {Array.from({ length: items }).map((_, index)               => (
+    <div className={`grid grid-cols-1 sm: anygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
+      {Array.from({ length: items }).map((_, index)  => (
         <CardSkeleton 
           key={index} 
         />

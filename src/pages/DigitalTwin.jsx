@@ -41,10 +41,8 @@ import {
 } from 'lucide-react';
     technologies["BMS Integration", "IoT Sensors", "3D Modeling", "AI Analytics"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 =======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const digitalTwinTechnologies = [
   {
     name: "IoT Sensors",
@@ -156,7 +154,6 @@ const digitalTwinBenefits = [
     icon: Gauge,
     examples["Energy optimization", "Maintenance planning", "Resource allocation"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 export default function DigitalTwin() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -590,4 +587,3 @@ export default function DigitalTwin() {
       </section>
     </div>
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

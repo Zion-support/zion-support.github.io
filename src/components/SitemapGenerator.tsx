@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { Link               } from 'react-router-dom.ts';
+import { Link  } from 'react-router-dom.ts';
 import { FileText, 
   Download, 
   Globe, 
@@ -39,22 +39,9 @@ import { FileText,
   Phone,
   MapPin,
   Mail
-              } from 'lucide-react.ts';
+ } from 'lucide-react.ts';
 
 interface SitemapSection {
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   title: string;
   icon: React.ComponentType<any>;
@@ -62,35 +49,9 @@ interface SitemapSection {
   routes: SitemapRoute[];
   featured?: boolean;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 interface SitemapRoute {
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   path: string;
   name: string;
@@ -99,19 +60,6 @@ interface SitemapRoute {
   category: string;
   featured?: boolean;
   external?: boolean;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
@@ -124,7 +72,7 @@ export const SitemapGenerator: React.FC = (): JSX.Element => {
     generateSitemap();
   }, []);
 
-  const generateSitemap = () => {
+  const generateSitemap: React.FC = ($2) => {
     const sitemap: SitemapSection[] = [
       {
         title: 'Main Pages',
@@ -282,7 +230,7 @@ export const SitemapGenerator: React.FC = (): JSX.Element => {
 
   const filteredSitemap = sitemapData.map(section => ({
     ...section,
-    routes: anyanyanyanyanyanyanyanyanyanyanyanyanyanysection.routes.filter(route               => {
+    routes: anysection.routes.filter(route  => {
       const matchesSearch = route.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            route.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            route.path.toLowerCase().includes(searchQuery.toLowerCase());
@@ -295,10 +243,10 @@ export const SitemapGenerator: React.FC = (): JSX.Element => {
     section.routes.map(route => route.category)
   )))];
 
-  const exportSitemap = () => {
+  const exportSitemap: React.FC = ($2) => {
     const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: anyanyanyanyanyanyanyanyanyanyanyanyanyany//www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapData.flatMap(section               => 
+<urlset xmlns="http: unknown//www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapData.flatMap(section  => 
   section.routes.map(route => 
     `  <url>
     <loc>https://ziontechgroup.com${route.path}</loc>
@@ -321,7 +269,7 @@ ${sitemapData.flatMap(section               =>
     URL.revokeObjectURL(url);
   };
 
-  const exportCSV = () => {
+  const exportCSV: React.FC = ($2) => {
     const csvContent = [
       ['Path', 'Name', 'Description', 'Category', 'Featured'],
       ...sitemapData.flatMap(section => 
@@ -390,9 +338,9 @@ ${sitemapData.flatMap(section               =>
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                {allCategories.map(category               => (
+                {allCategories.map(category  => (
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -415,8 +363,8 @@ ${sitemapData.flatMap(section               =>
               </div>
               <p className="text-gray-600 mb-4">{section.description}</p>
               
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4">
-                {section.routes.map((route, routeIndex)               => (
+              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-4">
+                {section.routes.map((route, routeIndex)  => (
                   <div
                     key={routeIndex}
                     className={`p-4 border rounded-lg transition-all duration-200 hover:shadow-md ${

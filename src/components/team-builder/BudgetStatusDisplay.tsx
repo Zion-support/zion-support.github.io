@@ -1,8 +1,8 @@
-import { Progress                } from '@/components/ui/progress';
-import { Alert, AlertDescription, AlertTitle                } from '@/components/ui/alert'; // AlertTitle not used, but kept for consistency
-import { Badge                } from '@/components/ui/badge'; // Badge not used, but kept for consistency
-import { TrendingDown, TrendingUp, AlertTriangle, CheckCircle, Info                } from 'lucide-react.ts';
-import { Card                } from '@/components/ui/card'; // Added missing import
+import { Progress  } from '@/src/src/components/ui/progress';
+import { Alert, AlertDescription, AlertTitle  } from '@/src/src/components/ui/alert'; // AlertTitle not used, but kept for consistency
+import { Badge  } from '@/src/src/components/ui/badge'; // Badge not used, but kept for consistency
+import { TrendingDown, TrendingUp, AlertTriangle, CheckCircle, Info  } from 'lucide-react';
+import { Card  } from '@/src/src/components/ui/card'; // Added missing import
 
 interface BudgetStatusDisplayProps extends React.PropsWithChildren<{}> {
 
@@ -12,12 +12,12 @@ estimatedCost: { // From TeamRecommendation;
     max: number}}
 
 // Helper to parse budget string (very basic, needs improvement for production)
-const parseBudget = (budgetString: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring): { min: number | null; max: number | null }                => {
+const parseBudget = (budgetString: string): { min: number | null; max: number | null }  => {
   budgetString = budgetString.toLowerCase().replace(/[^0-9-\s$k,]/g, ''); // Clean string
 
   let max: number | null = null;
 
-  const kTo1000 = (val: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => parseFloat(val.replace('k', '')) * 1000;
+  const kTo1000 = (val: string)  => parseFloat(val.replace('k', '')) * 1000;
 
   if (budgetString.includes('-')) {
     const parts = budgetString.split('-');
@@ -44,7 +44,7 @@ const parseBudget = (budgetString: anyanyanyanyanyanyanyanyanyanyanyanyanyanystr
   return { min, max }};
 
 
-export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: BudgetStatusDisplayProps) => {;
+export const BudgetStatusDisplay: React.FC = ($2) => {;
   const userBudget = parseBudget(projectBriefBudget);
   const estimatedAvgCost = (estimatedCost.min + estimatedCost.max) / 2;
 
@@ -82,20 +82,20 @@ export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: Budge
     // No clear target for progress bar, maybe show 50% or hide it
     progressValue = 50}
 ;
-  const getAlertVariant = () => {;
+  const getAlertVariant: React.FC = ($2) => {;
     if (status === 'good') return "bg-green-50 border-green-500 text-green-700 dark:bg-green-900/30 dark:text-green-300";
     if (status === 'warning') return "bg-yellow-50 border-yellow-500 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300";
     if (status === 'danger') return "bg-red-50 border-red-500 text-red-700 dark:bg-red-900/30 dark:text-red-300";
     return "bg-blue-50 border-blue-500 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300"; // Info
   };
 
-  const getIcon = () => {;
+  const getIcon: React.FC = ($2) => {;
     if (status === 'good') return <CheckCircle className="h-5 w-5 text-green-500" />;
     if (status === 'warning') return <AlertTriangle className="h-5 w-5 text-yellow-500" />;
     if (status === 'danger') return <TrendingDown className="h-5 w-5 text-red-500" />; // Or AlertTriangle
     return <Info className="h-5 w-5 text-blue-500" />};
 
-  const getProgressColor = () => {;
+  const getProgressColor: React.FC = ($2) => {;
     if (status === 'good') return "bg-green-500";
     if (status === 'warning') return "bg-yellow-500";
     if (status === 'danger') return "bg-red-500";

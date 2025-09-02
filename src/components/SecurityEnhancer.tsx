@@ -1,12 +1,22 @@
+import React, { useEffect, useState, useCallback               } from 'react.ts';
+import { Card, CardContent, CardHeader, CardTitle               } from './ui/card';
+import { Button               } from './ui/button';
+import { Badge               } from './ui/badge';
+import { Alert, AlertDescription               } from './ui/alert';
+import { Progress               } from './ui/progress';
+import { Shield, 
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Shield, 
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
   Lock, 
   AlertTriangle, 
   CheckCircle, 
   Eye, 
+               } from 'lucide-react.ts';
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
   EyeOff, 
   Settings,
   X,
@@ -31,8 +41,12 @@ interface SecurityStatus {
   permissionsPolicy: boolean;
 }
 
-
 interface SecurityThreat {
+=======
+  status: 'active' | 'mitigated' | 'resolved';
+}
+interface SecurityMetrics {
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 status: 'active' | 'mitigated' | 'resolved';
 
 
@@ -48,7 +62,6 @@ status: 'active' | 'mitigated' | 'resolved';
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SecurityMetrics {
 
@@ -66,7 +79,6 @@ interface SecurityMetrics {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   overallScore: number;
   vulnerabilities: number;
   threatsBlocked: number;
@@ -74,7 +86,6 @@ interface SecurityMetrics {
   complianceScore: number;
   encryptionStrength: number;
 }
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 interface SecurityCheck {
 =======
 encryptionStrength: number;
@@ -92,7 +103,6 @@ encryptionStrength: number;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SecurityCheck {
 
@@ -110,11 +120,9 @@ interface SecurityCheck {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   status: 'pass' | 'fail' | 'warning';
-=======
   id: string;
   type: 'high' | 'medium' | 'low';
   category: 'injection' | 'xss' | 'csrf' | 'authentication' | 'authorization' | 'data-exposure';
@@ -130,6 +138,35 @@ interface SecurityCheck {
   category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
 }
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
+=======
+  id: string;
+  type: 'high' | 'medium' | 'low';
+  category: 'injection' | 'xss' | 'csrf' | 'authentication' | 'authorization' | 'data-exposure';
+  description: string;
+  impact: string;
+  recommendation: string;
+category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
+
+
+
+
+
+
+
+
+
+
+
+
+
+  status: 'detected' | 'mitigated' | 'resolved';
+  timestamp: Date;
+}
+
+=======
+  category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
+}
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 const SecurityEnhancer: React.FC = (): JSX.Element => {
   const [metrics, setMetrics] = useState<any>({
     overallScore: 85,
@@ -180,7 +217,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   
   // Generate security checks
   useEffect(()                => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
     const checks: SecurityCheck[] = [
       {
         id: '1',
@@ -238,29 +275,6 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
       threatsBlocked: prev.threatsBlocked + Math.floor(Math.random() * 10),
       lastScan: new Date()
     }));
-
-  const mitigateThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-    setThreats(prev => prev.map(threat => ;
-      threat.id === threatId ;
-        ? { ...threat, status: 'mitigated' as const };
-        : threat;
-    ));
-  }, []);
-
-  const resolveThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-    setThreats(prev => prev.map(threat => ;
-      threat.id === threatId ;
-        ? { ...threat, status: 'resolved' as const };
-        : threat;
-    ));
-  }, []);
-
-  const getThreatIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanySecurityThreat['type'])               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-    switch (type) {;
-=======
     setIsScanning(false);
   }, []);
   const mitigateThreat = useCallback((threatId: string) => {
@@ -478,6 +492,8 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
 };
 export default SecurityEnhancer;
 =======
+=======
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 interface SecurityEnhancerProps {
   enabled?: boolean;
   showPanel?: boolean;
@@ -760,17 +776,66 @@ export const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     const score = Object.values(newStatus).filter(Boolean).length * (100 / Object.keys(newStatus).length);
     setSecurityScore(score);
 
+  const mitigateThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+    setThreats(prev => prev.map(threat => ;
+      threat.id === threatId ;
+        ? { ...threat, status: 'mitigated' as const };
+        : threat;
+    ));
+  }, []);
+
+  const resolveThreat = useCallback((threatId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+    setThreats(prev => prev.map(threat => ;
+      threat.id === threatId ;
+        ? { ...threat, status: 'resolved' as const };
+        : threat;
+    ));
+  }, []);
+
+  const getThreatIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanySecurityThreat['type'])               => {;
+    switch (type) {;
+    setIsScanning(false);
+  }, []);
+  const mitigateThreat = useCallback((threatId: string) => {
+    setThreats(prev => prev.map(threat => 
+      threat.id === threatId 
+        ? { ...threat, status: 'mitigated' as const }
+        : threat
+    ));
+  }, []);
+  const resolveThreat = useCallback((threatId: string) => {
+    setThreats(prev => prev.map(threat => 
+      threat.id === threatId 
+        ? { ...threat, status: 'resolved' as const }
+        : threat
+    ));
+  }, []);
+  const getThreatIcon = (type: SecurityThreat['type']) => {
+    switch (type) {
+      case 'xss': return <Bug className="h-4 w-4" />;
+      case 'csrf': return <Network className="h-4 w-4" />;
+      case 'injection': return <Database className="h-4 w-4" />;
+      case 'authentication': return <Lock className="h-4 w-4" />;
+      case 'authorization': return <Shield className="h-4 w-4" />;
+      case 'data-leak': return <Eye className="h-4 w-4" />;
+      default: return <AlertTriangle className="h-4 w-4" />;
+    }
     setIsScanning(false);
   };
 
+      default: return 'bg-gray-500'}
   // Get threat count by type
   const getThreatCount = (type: 'high' | 'medium' | 'low') => {
     return threats.filter(threat => threat.type === type).length;
   };
 
+      default: return 'bg-gray-100 text-gray-800'}
   // Get threat count by status
   const getThreatCountByStatus = (status: 'detected' | 'mitigated' | 'resolved') => {
     return threats.filter(threat => threat.status === status).length;
+  };
+
+      default: return <AlertTriangle className = "h-4 w-4 text-gray-600" />};
   };
 
   // Get security score color
@@ -948,10 +1013,183 @@ export const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
                 </div>
               )}
             </div>
+            <strong>Security Warning:</strong> Your security score is below the recommended threshold. 
+            Consider running a comprehensive security audit and implementing the suggested improvements.;
+          </AlertDescription>;
+        </Alert>;
+      )};
+    </div>;
+  const getStatusColor = (status: SecurityThreat['status']) => {
+    switch (status) {
+      case 'active': return 'bg-red-500';
+      case 'mitigated': return 'bg-yellow-500';
+      case 'resolved': return 'bg-green-500';
+      default: return 'bg-gray-500';
+    }
+  };
+  const getStatusTextColor = (status: SecurityThreat['status']) => {
+    switch (status) {
+      case 'active': return 'bg-gray-100 text-gray-800';
+      case 'mitigated': return 'bg-gray-100 text-gray-800';
+      case 'resolved': return 'bg-gray-100 text-gray-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+  const getCheckIcon = (status: SecurityCheck['status']) => {
+    switch (status) {
+      case 'pass': return <CheckCircle className="h-4 w-4 text-green-500" />;
+      case 'fail': return <AlertTriangle className="h-4 w-4 text-red-500" />;
+      case 'warning': return <Zap className="h-4 w-4 text-yellow-500" />;
+      default: return <AlertTriangle className="h-4 w-4 text-gray-600" />;
+    }
+  };
+  return (
+    <div className="grid gap-6">
+      <Card>
+        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+          <div>
+            <CardTitle className="text-2xl font-bold">Security Dashboard</CardTitle>
+            <p className="text-sm text-muted-foreground">
+              Monitor and enhance your application's security posture.
+            </p>
+          </div>
+          <Button onClick={runSecurityScan} disabled={isScanning}>
+            {isScanning ? (
+              <>
+                <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
+                Scanning...
+              </>
+            ) : (
+              <>
+                <Zap className="mr-2 h-4 w-4" />
+                Run Security Scan
+              </>
+            )}
+          </Button>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-semibold">Overall Security Score</h3>
+              <Badge variant="secondary">{metrics.overallScore}%</Badge>
+            </div>
+            <Progress value={metrics.overallScore} className="h-2" />
+
+            <div className="grid gap-4">
+              <h3 className="text-lg font-semibold">Security Threats</h3>
+              <div className="flex items-center justify-between">
+                <Badge variant="danger">Active Threats: {threats.filter(t => t.status === 'active').length}</Badge>
+                <Button variant="outline" onClick={() => setShowThreats(!showThreats)}>
+                  {showThreats ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                </Button>
+              </div>
+              {showThreats && threats.length > 0 && (
+                <div className="grid gap-3">
+                  {threats.map(threat => (
+                    <div key={threat.id} className="flex items-center justify-between p-3 rounded-lg bg-gray-50">
+                      <div className="flex items-center">
+                        {getThreatIcon(threat.type)}
+                        <div className="ml-3">
+                          <h4 className="text-sm font-medium">{threat.description}</h4>
+                          <p className="text-xs text-muted-foreground">{threat.location}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Badge variant={getStatusColor(threat.status)}>{threat.status}</Badge>
+                        {threat.status === 'active' && (
+                          <>
+                            <Button variant="outline" size="sm" onClick={() => mitigateThreat(threat.id)}>
+                              Mitigate
+                            </Button>
+                            <Button variant="outline" size="sm" onClick={() => resolveThreat(threat.id)}>
+                              Resolve
+                            </Button>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {threats.length === 0 && (
+                <p>No active security threats detected.</p>
+              )}
+            </div>
+
+            <div className="grid gap-4">
+              <h3 className="text-lg font-semibold">Security Checks</h3>
+              <div className="grid gap-3">
+                {securityChecks.map(check => (
+                  <div key={check.id} className="flex items-center justify-between p-3 rounded-lg bg-gray-50">
+                    <div className="flex items-center">
+                      {getCheckIcon(check.status)}
+                      <div className="ml-3">
+                        <h4 className="text-sm font-medium">{check.name}</h4>
+                        <p className="text-xs text-muted-foreground">{check.description}</p>
+                      </div>
+                    </div>
+                    <Badge variant={getStatusTextColor(check.status)}>{check.status}</Badge>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid gap-4">
+              <h3 className="text-lg font-semibold">Compliance Status</h3>
+              <div className="grid gap-3">
+                <div className="flex items-center justify-between p-3 rounded-lg bg-gray-50">
+                  <div className="flex items-center">
+                    <ShieldCheck className="h-4 w-4 text-green-500" />
+                    <div className="ml-3">
+                      <h4 className="text-sm font-medium">GDPR Compliance</h4>
+                      <p className="text-xs text-muted-foreground">
+                        Your data handling practices comply with GDPR requirements.
+                      </p>
+                    </div>
+                  </div>
+                  <Badge variant="success">Pass</Badge>
+                </div>
+                <div className="flex items-center justify-between p-3 rounded-lg bg-gray-50">
+                  <div className="flex items-center">
+                    <ShieldCheck className="h-4 w-4 text-red-500" />
+                    <div className="ml-3">
+                      <h4 className="text-sm font-medium">Encryption Strength</h4>
+                      <p className="text-xs text-muted-foreground">
+                        Your encryption strength is below the recommended threshold.
+                      </p>
+                    </div>
+                  </div>
+                  <Badge variant="danger">Fail</Badge>
+                </div>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-2xl font-bold">Security Recommendations</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <Alert variant="warning">
+            <ShieldCheck className="h-4 w-4 mr-2" />
+            <AlertDescription>
+              <strong>Security Warning:</strong> Your security score is below the recommended threshold. 
+              Consider running a comprehensive security audit and implementing the suggested improvements.
+            </AlertDescription>
+          </Alert>
+        </CardContent>
+      </Card>
+    </div>
+  );
+};
+export default SecurityEnhancer;
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
           </motion.div>
         )}
       </AnimatePresence>
     </>
   );
 };
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685

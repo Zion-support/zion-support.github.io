@@ -1,6 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
-
-// Security configuration object
+// Security Configuration and Utilities
 export const securityConfig = {
   // Content Security Policy
   csp: {
@@ -15,21 +13,22 @@ export const securityConfig = {
     'base-uri': ["'self'"],
     'form-action': ["'self'"],
     'frame-ancestors': ["'none'"],
-    'upgrade-insecure-requests': [],
+    'upgrade-insecure-requests': true
   },
+
 
   // Security Headers
   headers: {
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
     'X-XSS-Protection': '1; mode=block',
-    'Content-Security-Policy': 'default-src \'self\'; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data: https:; font-src \'self\' https:; connect-src \'self\' https:; frame-src \'none\'; object-src \'none\'; base-uri \'self\'; form-action \'self\'; frame-ancestors \'none\'; upgrade-insecure-requests',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation()',
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+    'Permissions-Policy': 'geolocation=(), microphone=(), camera=()',
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   },
 
   // Rate Limiting
+
   rateLimit: {
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 100, // limit each IP to 100 requests per windowMs
@@ -38,21 +37,17 @@ export const securityConfig = {
     legacyHeaders: false,
   },
 
-  // JWT Configuration
-  jwt: {
-    secret: process.env.JWT_SECRET || 'your-secret-key',
-    expiresIn: '24h',
-    refreshExpiresIn: '7d',
-    algorithm: 'HS256',
-  },
-
-  // Password Requirements
-  password: {
-    minLength: 12,
-    requireUppercase: true,
-    requireLowercase: true,
-    requireNumbers: true,
-    requireSpecialChars: true,
+  // Input validation patterns
+  validation: {
+    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    phone: /^\+?[\d\s\-()]{10,}$/,
+    name: /^[a-zA-Z\s\-']{2,50}$/,
+    username: /^[a-zA-Z0-9_-]{3,20}$/,
+    password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+    url: /^https?:\/\/[^\s/$.?#].[^\s]*$/,
+    alphanumeric: /^[a-zA-Z0-9\s]+$/,
+    numeric: /^\d+$/,
+    decimal: /^\d+(\.\d{1,2})?$/
   },
 
   // Session Configuration
@@ -69,6 +64,38 @@ export const securityConfig = {
   },
 };
 
+// Input sanitization functions
+export const sanitizeInput = {
+  // Remove potentially dangerous HTML tags
+  html: (input: string): string => {
+    return input.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+                .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
+                .replace(/<object\b[^<]*(?:(?!<\/object>)<[^<]*)*<\/object>/gi, '')
+                .replace(/<embed\b[^<]*(?:(?!<\/embed>)<[^<]*)*<\/embed>/gi, '');
+  },
+
+
+  // Remove SQL injection patterns
+  sql: (input: string): string => {
+    return input.replace(/['";\\]/g, '');
+  },
+
+  // Remove XSS patterns
+  xss: (input: string): string => {
+    return input.replace(/javascript:/gi, '')
+                .replace(/on\w+\s*=/gi, '')
+                .replace(/<script/gi, '')
+                .replace(/<\/script>/gi, '');
+
+  },
+
+  // General sanitization
+  general: (input: string): string => {
+
+    return sanitizeInput.html(sanitizeInput.sql(sanitizeInput.xss(input)));
+  }
+};
+
 // Helper function to generate CSP header string
 export const generateCSPHeader = (): string => {
   return Object.entries(securityConfig.csp)
@@ -81,89 +108,52 @@ export const generateCSPHeader = (): string => {
     .join('; ');
 };
 
-// Security middleware for Express/Node.js
-export const securityMiddleware = (req: Request, res: Response, next: NextFunction) => {
-  // Set security headers
-  Object.entries(securityConfig.headers).forEach(([key, value]) => {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
-    res.setHeader(key, value);
-  });
+// Validate input against patterns
 
-  // Additional security measures
-  res.setHeader('X-Download-Options', 'noopen');
-  res.setHeader('X-Permitted-Cross-Domain-Policies', 'none');
-  res.setHeader('X-DNS-Prefetch-Control', 'off');
-
-  // Remove server information
-  res.removeHeader('X-Powered-By');
-
-  next();
+export const validateInput = {
+  email: (email: string): boolean => securityConfig.validation.email.test(email),
+  phone: (phone: string): boolean => securityConfig.validation.phone.test(phone),
+  name: (name: string): boolean => securityConfig.validation.name.test(name),
+  username: (username: string): boolean => securityConfig.validation.username.test(username),
+  password: (password: string): boolean => securityConfig.validation.password.test(password),
+  url: (url: string): boolean => securityConfig.validation.url.test(url),
+  alphanumeric: (text: string): boolean => securityConfig.validation.alphanumeric.test(text),
+  numeric: (num: string): boolean => securityConfig.validation.numeric.test(num),
+  decimal: (num: string): boolean => securityConfig.validation.decimal.test(num)
 };
 
-// Rate limiting middleware
-export const rateLimitMiddleware = (req: Request, res: Response, next: NextFunction) => {
-  const { rateLimit } = securityConfig;
-  
-  // Simple in-memory rate limiting (use Redis in production)
-  const clientIP = req.ip || req.connection.remoteAddress;
-  const now = Date.now();
-  
-  if (!req.app.locals.rateLimit) {
-    req.app.locals.rateLimit = new Map();
-  }
-  
-  const clientData = req.app.locals.rateLimit.get(clientIP) || { count: 0, resetTime: now + rateLimit.windowMs };
-  
-  if (now > clientData.resetTime) {
-    clientData.count = 1;
-    clientData.resetTime = now + rateLimit.windowMs;
-  } else if (clientData.count >= rateLimit.max) {
-    return res.status(429).json({ error: rateLimit.message });
-  } else {
-    clientData.count++;
-  }
-  
-  req.app.locals.rateLimit.set(clientIP, clientData);
-  
-  // Set rate limit headers
-  if (rateLimit.standardHeaders) {
-    res.setHeader('X-RateLimit-Limit', rateLimit.max);
-    res.setHeader('X-RateLimit-Remaining', Math.max(0, rateLimit.max - clientData.count));
-    res.setHeader('X-RateLimit-Reset', new Date(clientData.resetTime).toISOString());
-  }
-  
-  next();
+
+// Security middleware configuration
+export const securityMiddleware = {
+  // Enable all security features
+  enableAll: () => ({
+    csp: true,
+    headers: true,
+    rateLimit: true,
+    session: true,
+    validation: true
+  }),
+
+
+  // Enable only essential security features
+  enableEssential: () => ({
+    csp: true,
+    headers: true,
+    rateLimit: false,
+    session: true,
+    validation: true
+  }),
+
+  // Enable only basic security features
+  enableBasic: () => ({
+    csp: false,
+    headers: true,
+    rateLimit: false,
+    session: false,
+    validation: true
+  })
 };
 
-// CORS configuration
-export const corsConfig = {
-  origin: process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : ['https://ziontechgroup.com'],
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
-  exposedHeaders: ['X-RateLimit-Limit', 'X-RateLimit-Remaining', 'X-RateLimit-Reset'],
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
-};
 
-// Helmet configuration for additional security
-export const helmetConfig = {
-  contentSecurityPolicy: {
-    directives: securityConfig.csp,
-  },
-  hsts: {
-    maxAge: 31536000,
-    includeSubDomains: true,
-    preload: true,
-  },
-  noSniff: true,
-  referrerPolicy: { policy: 'strict-origin-when-cross-origin' },
-  xssFilter: true,
-  frameguard: { action: 'deny' },
-  hidePoweredBy: true,
-  ieNoOpen: true,
-  noCache: false, // Set to true for sensitive routes
-};
 
-// Export default configuration
 export default securityConfig;
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089

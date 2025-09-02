@@ -1,8 +1,7 @@
 import React from 'react.ts';
-import { Link                } from 'react-router-dom.ts';
+import { Link  } from 'react-router-dom.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-export const EnhancedInnovativeServicesShowcase = () => {
+export const EnhancedInnovativeServicesShowcase: React.FC = ($2) => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto px-6">
@@ -14,6 +13,7 @@ export const EnhancedInnovativeServicesShowcase = () => {
             Discover our next-generation technology solutions designed for the future
           </p>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">🚀</div>
@@ -23,6 +23,7 @@ export const EnhancedInnovativeServicesShowcase = () => {
               Learn More →
             </Link>
           </div>
+
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">☁️</div>
             <h3 className="text-xl font-semibold text-white mb-3">Cloud Solutions</h3>
@@ -31,6 +32,7 @@ export const EnhancedInnovativeServicesShowcase = () => {
               Learn More →
             </Link>
           </div>
+
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4">🔒</div>
             <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
@@ -44,4 +46,5 @@ export const EnhancedInnovativeServicesShowcase = () => {
     </section>;
   );
 };
+
 export default EnhancedInnovativeServicesShowcase;

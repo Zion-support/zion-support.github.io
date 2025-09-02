@@ -1,10 +1,9 @@
 // removed duplicate old section
 
 import React from 'react.ts';
-import { SEO               } from '@/components/SEO';
-import { TrendingUp, CheckCircle, Database, PlugZap               } from 'lucide-react.ts';
+import { SEO  } from '@/src/src/components/SEO';
+import { TrendingUp, CheckCircle, Database, PlugZap  } from 'lucide-react';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AiLeadScoring: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -20,6 +19,7 @@ const AiLeadScoring: React.FC = (): JSX.Element => {
         </div>
         <h1 className="text-4xl font-bold">Prioritize the right leads with explainable AI</h1>
         <p className="mt-3 text-slate-300 max-w-2xl">Ship an AI model that ranks leads by conversion probability and surfaces the why behind each score. Integrate with Salesforce, HubSpot, or custom CRMs.</p>
+
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">
             <div className="mb-2 font-semibold">Features</div>
@@ -82,5 +82,7 @@ const AiLeadScoring: React.FC = (): JSX.Element => {
     </div>;
   );
 };
+
 export default AiLeadScoring;
+
 }

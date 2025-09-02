@@ -1,5 +1,4 @@
 import React, { useState              } from 'react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import Link from 'next/link.ts';
 import { useRouter               } from 'next/router.ts';
 import { Home, 
@@ -72,15 +71,13 @@ interface SidebarProps extends React.PropsWithChildren<{}> {
 
   isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
   onClose: ()               => void}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<any>([]);
 
   const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedSections(prev => ;
       prev.includes(section) ;
         ? prev.filter(s => s !== section);
@@ -89,9 +86,9 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   };
 
   const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const navigation = {
+
     main: [
       { name: 'Home', href: '/', icon: Home },
       { name: 'About', href: '/about', icon: Building },
@@ -156,7 +153,6 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   ];
 
   const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     <div key={sectionKey} className="mb-6">
       <button
         onClick={() => toggleSection(sectionKey)}
@@ -178,6 +174,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               href={item.href}
               onClick={onClose}
               className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+
                 isActive(item.href)
                   ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'
                   : 'text-gray-400 hover:text-white hover:bg-white/5'
@@ -209,6 +206,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
       {/* Sidebar */}
       <div className={`fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-dark border-r border-zion-blue-light z-50 transform transition-transform duration-300 ease-in-out ${
+
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } lg:translate-x-0 lg:relative lg:z-auto`}>
 
@@ -267,6 +265,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 href={item.href}
                 onClick={onClose}
                 className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+
                   isActive(item.href)
                     ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'
                     : 'text-gray-300 hover:text-white hover:bg-white/5'

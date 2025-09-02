@@ -46,11 +46,8 @@ import { ArrowRight,
 } from 'lucide-react';
 import { SEO              } from '../components/SEO';
 import { REVOLUTIONARY_SERVICES_2030              } from '../data/revolutionaryServices2030';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function RevolutionaryServicesShowcase2030(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('aiScore');
@@ -99,16 +96,13 @@ export default function RevolutionaryServicesShowcase2030(...args[]: any):  {
   const currentServices = sortedServices.slice(startIndex, endIndex);
 
   const handleServiceSelect = (service: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setSelectedService(service);
   };
   const closeModal = () => {;
     setSelectedService(null);
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI & Autonomous Systems': <Rocket className="w-6 h-6" />,
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
@@ -143,7 +137,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]: any):  {
     return iconMap[category] || <Rocket className="w-6 h-6" />};
 
   const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const colorMap: { [key: string]: string } = {
       'AI & Autonomous Systems': 'from-cyan-500 to-blue-500',
       'AI & Business Intelligence': 'from-purple-500 to-pink-500',
@@ -177,7 +170,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]: any):  {
     };
     return colorMap[category] || 'from-gray-500 to-slate-500'};
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       return sum + roiNumber}
     return sum}, 0) / REVOLUTIONARY_SERVICES_2030.length;
   return (
@@ -433,8 +425,6 @@ export default function RevolutionaryServicesShowcase2030(...args[]: any):  {
                   </button>
                   
                   {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanytotalPages }, (_, i)               => i + 1).map((page) => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <button
                       key={page}
                       onClick={() => handlePageChange(page)}

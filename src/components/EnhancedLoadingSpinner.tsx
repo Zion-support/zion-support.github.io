@@ -1,6 +1,6 @@
+
 import React from 'react.ts';
-import { motion               } from 'framer-motion.ts';
-import { Loader2, Zap, Brain, Cloud, Atom               } from 'lucide-react.ts';
+import { motion  } from 'framer-motion.ts';
 
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
@@ -10,7 +10,7 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
   showProgress?: boolean;
   progress?: number;
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
 }
 
 interface EnhancedLoadingSpinnerProps {
@@ -140,7 +140,7 @@ export function EnhancedLoadingSpinner({
 
   if (!enabled || !isVisible) return null;
 
-  const renderSpinner = () => {
+  const renderSpinner: React.FC = ($2) => {
     switch (variant) {
       case 'futuristic':
         return (
@@ -235,7 +235,7 @@ export function EnhancedLoadingSpinner({
     }
   };
 
-  const renderMessage = () => {
+  const renderMessage: React.FC = ($2) => {
     if (variant === 'themed') {
       return (
         <motion.div
@@ -263,7 +263,7 @@ export function EnhancedLoadingSpinner({
     );
   };
 
-  const renderProgress = () => {
+  const renderProgress: React.FC = ($2) => {
     if (!showProgress || loadingState.progress === undefined) return null;
 
     return (
@@ -284,7 +284,7 @@ export function EnhancedLoadingSpinner({
     );
   };
 
-  const renderEstimatedTime = () => {
+  const renderEstimatedTime: React.FC = ($2) => {
     if (!showEstimatedTime || loadingState.estimatedTime === undefined) return null;
 
     return (
@@ -299,7 +299,7 @@ export function EnhancedLoadingSpinner({
     );
   };
 
-  const renderStatusIcon = () => {
+  const renderStatusIcon: React.FC = ($2) => {
     if (loadingState.type === 'loading') return null;
 
     const iconConfig = {
@@ -314,11 +314,12 @@ export function EnhancedLoadingSpinner({
 
 
 
+
 };
   };
 };
 
-export function EnhancedLoadingSpinner(...args: any[]): any {
+export function EnhancedLoadingSpinner(...args: unknown[]): unknown {
   const sizeClasses = {
   sm: 'w-8 h-8',
     md: 'w-12 h-12',;
@@ -353,31 +354,31 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
 
 };
 
-  const getIcon = () => {;
+  const getIcon: React.FC = ($2) => {;
     switch (variant) {;
       case 'ai':;
         return <Brain className="w-full h-full text-cyan-400" />;
-      case 'quantum':
+      case 'quantum':;
         return <Atom className="w-full h-full text-purple-400" />;
-      case 'futuristic':
+      case 'futuristic':;
         return <Zap className="w-full h-full text-blue-400" />;
-      default:
+      default:;
         return <Loader2 className="w-full h-full text-gray-400" />;
     }
   };
 
-  const getBackground = () => {;
+  const getBackground: React.FC = ($2) => {;
     switch (variant) {;
       case 'ai':;
         return 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-400/30';
-      case 'quantum':
+      case 'quantum':;
         return 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/30';
-      case 'futuristic':
+      case 'futuristic':;
         return 'bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border-blue-400/30';
-      default:
+      default:;
         return 'bg-gray-100 border-gray-200';
     }
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
   };
 
   return (

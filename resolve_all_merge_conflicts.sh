@@ -1,141 +1,165 @@
 #!/bin/bash
 
-echo "🔧 Resolving All Merge Conflicts - Keeping PM2 Migration Changes"
+# Comprehensive Merge Conflict Resolution Script
+# This script resolves all merge conflicts in the project
 
-# Function to resolve conflicts in a file by keeping local version
-resolve_conflict_keep_local() {
+set -e
+
+echo "🔧 Starting comprehensive merge conflict resolution..."
+
+# Function to resolve merge conflicts in a file
+resolve_merge_conflicts() {
     local file="$1"
-    echo "🔧 Resolving conflicts in: $file (keeping local version)"
     
-    # Remove all conflict markers and keep local version
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
+    if [ ! -f "$file" ]; then
+        return
+    fi
     
-    echo "✅ Resolved conflicts in: $file"
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        echo "🔧 Resolving conflicts in: $file"
+        
+        # Create backup
+        cp "$file" "${file}.backup.$(date +%s)"
+        
+        # Remove merge conflict markers and keep HEAD version
+        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+        sed -i '/>>>>>>> /d' "$file"
+        
+        # Clean up any remaining markers
+        sed -i '/<<<<<<< HEAD/d' "$file"
+        sed -i '/=======/d' "$file"
+        sed -i '/>>>>>>> /d' "$file"
+        
+        echo "✅ Resolved conflicts in: $file"
+    fi
 }
 
-# Function to resolve conflicts in a file by keeping remote version
-resolve_conflict_keep_remote() {
-    local file="$1"
-    echo "🔧 Resolving conflicts in: $file (keeping remote version)"
+# Function to resolve conflicts in all source files
+resolve_all_source_conflicts() {
+    echo "🔍 Scanning for merge conflicts in source files..."
     
-    # Remove local version and conflict markers, keep remote version
-    sed -i '/^<<<<<<< HEAD/,/^>>>>>>> /d' "$file"
+    # Find all files with merge conflicts
+    local files_with_conflicts=$(grep -l "<<<<<<< HEAD" src/**/*.{js,jsx,ts,tsx} 2>/dev/null || true)
     
-    echo "✅ Resolved conflicts in: $file"
+    if [ -n "$files_with_conflicts" ]; then
+        echo "Found files with merge conflicts:"
+        echo "$files_with_conflicts"
+        echo ""
+        
+        # Resolve conflicts in each file
+        while IFS= read -r file; do
+            if [ -n "$file" ]; then
+                resolve_merge_conflicts "$file"
+            fi
+        done <<< "$files_with_conflicts"
+    else
+        echo "✅ No source files with merge conflicts found"
+    fi
 }
 
-# Function to remove GitHub Actions workflow files (we don't need them anymore)
-remove_github_actions() {
-    echo "🗑️  Removing GitHub Actions workflow files (replaced by PM2)"
+# Function to resolve conflicts in configuration files
+resolve_config_conflicts() {
+    echo "🔍 Scanning for merge conflicts in configuration files..."
     
-    # Remove all GitHub Actions workflow files
-    rm -f .github/workflows/*.yml
-    rm -f .github/workflows/*.yaml
-    
-    echo "✅ Removed GitHub Actions workflow files"
-}
-
-# Function to resolve specific file conflicts
-resolve_specific_conflicts() {
-    echo "🔧 Resolving specific file conflicts..."
-    
-    # Keep our local PM2 migration changes
-    local_files=(
-        "ecosystem.config.cjs"
-        "scripts/automation/"
-        "GITHUB_ACTIONS_TO_PM2_MIGRATION_SUMMARY.md"
-        "MERGE_CONFLICTS_RESOLUTION_SUMMARY.md"
-        "CURRENT_STATUS_SUMMARY.md"
-        "FINAL_STATUS_REPORT.md"
+    local config_files=(
+        "package.json"
+        "tsconfig.json"
+        "next.config.js"
+        "tailwind.config.js"
+        "eslint.config.js"
+        "vite.config.ts"
+        "postcss.config.js"
+        "jest.config.js"
+        "netlify.toml"
     )
     
-    for file in "${local_files[@]}"; do
-        if [ -f "$file" ]; then
-            echo "✅ Keeping local file: $file"
+    for file in "${config_files[@]}"; do
+        if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file"; then
+            echo "🔧 Resolving conflicts in config file: $file"
+            resolve_merge_conflicts "$file"
         fi
     done
+}
+
+# Function to resolve conflicts in root files
+resolve_root_conflicts() {
+    echo "🔍 Scanning for merge conflicts in root files..."
     
-    # Resolve package.json conflicts by keeping our version
-    if [ -f "package.json" ]; then
-        resolve_conflict_keep_local "package.json"
-    fi
+    local root_files=(
+        "README.md"
+        "CHANGELOG.md"
+        "LICENSE"
+        ".gitignore"
+        ".env.example"
+    )
     
-    # Resolve tsconfig.json conflicts by keeping our version
-    if [ -f "tsconfig.json" ]; then
-        resolve_conflict_keep_local "tsconfig.json"
-    fi
+    for file in "${root_files[@]}"; do
+        if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file"; then
+            echo "🔧 Resolving conflicts in root file: $file"
+            resolve_merge_conflicts "$file"
+        fi
+    done
+}
+
+# Function to clean up backup files
+cleanup_backups() {
+    echo "🧹 Cleaning up backup files..."
     
-    # Resolve vite.config.ts conflicts by keeping our version
-    if [ -f "vite.config.ts" ]; then
-        resolve_conflict_keep_local "vite.config.ts"
-    fi
+    # Remove backup files created during conflict resolution
+    find . -name "*.backup.*" -type f -delete 2>/dev/null || true
     
-    # Resolve tailwind.config.js conflicts by keeping our version
-    if [ -f "tailwind.config.js" ]; then
-        resolve_conflict_keep_local "tailwind.config.js"
+    # Remove other backup files
+    find . -name "*.cleanup-backup.*" -type f -delete 2>/dev/null || true
+    
+    echo "✅ Backup files cleaned up"
+}
+
+# Function to verify all conflicts are resolved
+verify_conflicts_resolved() {
+    echo "🔍 Verifying all conflicts are resolved..."
+    
+    local remaining_conflicts=$(grep -r "<<<<<<< HEAD" src/ 2>/dev/null | wc -l)
+    
+    if [ "$remaining_conflicts" -eq 0 ]; then
+        echo "✅ All merge conflicts have been resolved!"
+        return 0
+    else
+        echo "⚠️  Warning: $remaining_conflicts merge conflicts still remain"
+        echo "Remaining conflicts:"
+        grep -r "<<<<<<< HEAD" src/ 2>/dev/null || true
+        return 1
     fi
 }
 
-# Main conflict resolution process
-echo "🚀 Starting comprehensive conflict resolution..."
-
-# Step 1: Remove GitHub Actions workflows
-remove_github_actions
-
-# Step 2: Resolve specific file conflicts
-resolve_specific_conflicts
-
-# Step 3: Find and resolve all remaining conflicts
-echo "🔍 Finding all remaining merge conflicts..."
-
-# Find all files with conflict markers
-conflict_files=$(grep -l "^<<<<<<< HEAD" -r . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.sh" --exclude="*.md" 2>/dev/null)
-
-if [ -n "$conflict_files" ]; then
-    echo "📁 Found $(echo "$conflict_files" | wc -l) files with conflicts"
+# Main execution
+main() {
+    echo "🚀 Starting comprehensive merge conflict resolution..."
+    echo "=================================================="
     
-    echo "$conflict_files" | while read -r file; do
-        if [ -f "$file" ]; then
-            echo "🔧 Resolving conflicts in: $file"
-            
-            # For most files, keep our local version (PM2 migration)
-            resolve_conflict_keep_local "$file"
-        fi
-    done
-else
-    echo "✅ No remaining conflict files found"
-fi
-
-# Step 4: Clean up any remaining conflict markers
-echo "🧹 Cleaning up any remaining conflict markers..."
-
-# Remove any remaining conflict markers
-find . -type f -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" | grep -v node_modules | grep -v .git | while read -r file; do
-    if [ -f "$file" ]; then
-        # Remove any remaining conflict markers
-        sed -i '/^<<<<<<< HEAD/d' "$file" 2>/dev/null
-        sed -i '/^=======/d' "$file" 2>/dev/null
-        sed -i '/^>>>>>>> /d' "$file" 2>/dev/null
+    # Resolve conflicts in different file types
+    resolve_all_source_conflicts
+    resolve_config_conflicts
+    resolve_root_conflicts
+    
+    # Clean up backup files
+    cleanup_backups
+    
+    # Verify all conflicts are resolved
+    if verify_conflicts_resolved; then
+        echo ""
+        echo "🎉 All merge conflicts have been successfully resolved!"
+        echo "=================================================="
+        echo "Next steps:"
+        echo "1. Review the resolved files to ensure they are correct"
+        echo "2. Run tests to ensure everything works"
+        echo "3. Commit the changes"
+        echo "4. Merge the branch into main"
+    else
+        echo ""
+        echo "⚠️  Some conflicts remain. Please review and resolve them manually."
+        exit 1
     fi
-done
+}
 
-echo "✅ Cleanup completed"
-
-# Step 5: Check for remaining conflicts
-echo "🔍 Final check for remaining conflicts..."
-remaining_conflicts=$(grep -r "^<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null | wc -l)
-
-if [ "$remaining_conflicts" -eq 0 ]; then
-    echo "🎉 All conflicts resolved successfully!"
-else
-    echo "⚠️  Found $remaining_conflicts remaining conflict markers"
-    echo "🔍 Remaining conflicts:"
-    grep -r "^<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null | head -10
-fi
-
-echo "✅ Conflict resolution script completed!"
-echo "📝 Next steps:"
-echo "   1. git add ."
-echo "   2. git commit -m 'Resolve all merge conflicts and complete PM2 migration'"
-echo "   3. git push origin main"
+# Run the main function
+main "$@"

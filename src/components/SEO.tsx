@@ -5,12 +5,21 @@ interface SEOProps {
   title: string;
   description: string;
   keywords?: string;
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
   canonical?: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
+  noindex?: boolean;
+  nofollow?: boolean;
+  language?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 }
 
 export function SEO({ 
@@ -21,12 +30,22 @@ export function SEO({
   ogImage = '/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData
-}: SEOProps) {
+  structuredData,
+  noindex = false,
+  nofollow = false,
+  language = 'en',
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section = 'Technology',
+  tags = []
+}) => {
+  const siteName = 'Zion Tech Group';
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
   const siteUrl = 'https://ziontechgroup.com';
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
   // Default structured data for organization
   const defaultStructuredData = {
@@ -35,8 +54,8 @@ export function SEO({
     "name": "Zion Tech Group",
     "url": siteUrl,
     "logo": `${siteUrl}/logo.png`,
-    "description": "Leading provider of AI solutions, quantum computing, and cloud infrastructure",
-
+    "description": "Leading provider of AI solutions, quantum computing, and cloud infrastructure. Transform your business with cutting-edge technology.",
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -48,12 +67,13 @@ export function SEO({
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
       "https://twitter.com/ziontechgroup",
       "https://github.com/Zion-Holdings",
       "https://www.youtube.com/@ziontechgroup"
@@ -61,12 +81,13 @@ export function SEO({
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
-
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
+      <title>{fullTitle}</title>
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={fullCanonical} />
@@ -86,23 +107,39 @@ export function SEO({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullOgImage} />
-      
-      {/* Additional Meta Tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
-      </script>
-      
+      {/* Additional Meta Tags for Better SEO */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#06b6d4" />
+      <meta name="msapplication-TileColor" content="#06b6d4" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content={siteName} />
+
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://cdn.gpteng.co" />
+
+      {/* Favicon and App Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(finalStructuredData)}
+      </script>
+
+      {/* Additional SEO Meta Tags */}
+      <meta name="application-name" content={siteName} />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
     </Helmet>
   );
-}
-
+};
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685

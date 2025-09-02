@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { motion               } from 'framer-motion.ts';
-import { comprehensiveNewServices2025               } from '../data/comprehensiveNewServices2025';
+import { motion  } from 'framer-motion.ts';
+import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2025';
 import { Search,
   Filter,
   Star,
@@ -27,9 +27,9 @@ import { Search,
   BarChart3,
   Satellite,
   Cpu
-              } from 'lucide-react.ts';
+ } from 'lucide-react.ts';
 
-export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
+export function ComprehensiveNewServicesShowcase2025(...args: unknown[]): unknown {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
@@ -62,12 +62,12 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
       return 0;
     });
 
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+  const getCategoryIcon: React.FC = ($2) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+  const getCategoryColor: React.FC = ($2) => {
     const colors: { [key: string]: string } = {
       'ai-services': 'from-purple-500 to-pink-600',
       'quantum-computing': 'from-indigo-500 to-purple-600',
@@ -149,8 +149,8 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service, index)               => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service, index)  => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}

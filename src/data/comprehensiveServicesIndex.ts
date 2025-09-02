@@ -1,20 +1,25 @@
 // Comprehensive Services Index
 // This file exports all our innovative technology services
+
 // Core Innovative Services
 export { EXPANDED_INNOVATIVE_SERVICES_2025 } from "./expandedInnovativeServices2025";
 export type { ExpandedInnovativeService } from "./expandedInnovativeServices2025";
+
 // Emerging Technology Services
 export { EMERGING_TECH_SERVICES_2025 } from "./emergingTechServices2025";
 export type { EmergingTechService } from "./emergingTechServices2025";
+
 // Ultimate Micro SAAS Services
 export { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "./ultimateMicroSaasServices2025";
 export type { UltimateMicroSaasService } from "./ultimateMicroSaasServices2025";
+
 // Combined Services Array
-export const ALL_COMPREHENSIVE_SERVICES = [
-  ...EXPANDED_INNOVATIVE_SERVICES_2025,
-  ...EMERGING_TECH_SERVICES_2025,
-  ...ULTIMATE_MICRO_SAAS_SERVICES_2025
+export const ALL_COMPREHENSIVE_SERVICES = [;
+  ...EXPANDED_INNOVATIVE_SERVICES_2025,;
+  ...EMERGING_TECH_SERVICES_2025,;
+  ...ULTIMATE_MICRO_SAAS_SERVICES_2025;
 ];
+
 // Service Categories
 export const SERVICE_CATEGORIES = [
   'AI & Analytics',
@@ -31,33 +36,37 @@ export const SERVICE_CATEGORIES = [
   'Quantum Computing',
   'AR/VR & Immersive Tech',
   '5G & Telecommunications',
-  'Space Technology',
-  'Neuromorphic Computing',
-  'Digital Twin & Simulation',
-  'Synthetic Biology',
-  'Brain-Computer Interface',
-  'Sustainability & Energy',
-  'Autonomous Vehicles & Fleet Management'
+  'Space Technology',;
+  'Neuromorphic Computing',;
+  'Digital Twin & Simulation',;
+  'Synthetic Biology',;
+  'Brain-Computer Interface',;
+  'Sustainability & Energy',;
+  'Autonomous Vehicles & Fleet Management';
 ];
+
 // Innovation Levels
-export const INNOVATION_LEVELS = [
-  'Cutting-edge',
-  'Advanced',
-  'Professional'
+export const INNOVATION_LEVELS = [;
+  'Cutting-edge',;
+  'Advanced',;
+  'Professional';
 ];
+
 // Support Levels
-export const SUPPORT_LEVELS = [
-  'enterprise',
-  'professional',
-  'basic'
+export const SUPPORT_LEVELS = [;
+  'enterprise',;
+  'professional',;
+  'basic';
 ];
+
 // Pricing Models
-export const PRICING_MODELS = [
-  'monthly',
-  'annual',
-  'one-time',
-  'usage-based'
+export const PRICING_MODELS = [;
+  'monthly',;
+  'annual',;
+  'one-time',;
+  'usage-based';
 ];
+
 // Contact Information
 export const CONTACT_INFO = {
   phone: '+1 302 464 0950',
@@ -70,7 +79,14 @@ export const CONTACT_INFO = {
   ;
   Middletown DE 19709';
 ;
+
+
+
+
+
+
 };
+
 // Service Statistics
 export const SERVICE_STATS = {
   totalServices: ALL_COMPREHENSIVE_SERVICES.length,
@@ -83,29 +99,35 @@ export const SERVICE_STATS = {
   ;
   pricingModels: PRICING_MODELS.length;
 ;
+
+
+
+
+
+
 };
+
 // Helper Functions
-export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+export const getServicesByCategory: React.FC = ($2) => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category);
 };
 
-export const getServicesByInnovationLevel = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+export const getServicesByInnovationLevel: React.FC = ($2) => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level);
 };
 
-export const getServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, maxPrice: number)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+export const getServicesByPriceRange: React.FC = ($2) => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
     service.price >= minPrice && service.price <= maxPrice
   );
 };
 
-export const getServicesByTags = (tags: anyanyanyanyanyanyanyanyanyanyanyanyanystring[])              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+export const getServicesByTags: React.FC = ($2) => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     tags.some(tag => service.tags.includes(tag));
   );
 };
+
 export const searchTerm = query.toLowerCase();
   return ALL_COMPREHENSIVE_SERVICES.filter(service = >;
     service.title.toLowerCase().includes(searchTerm) ||;
@@ -114,4 +136,5 @@ export const searchTerm = query.toLowerCase();
     service.category.toLowerCase().includes(searchTerm);
   );
 };
+
 export default ALL_COMPREHENSIVE_SERVICES;

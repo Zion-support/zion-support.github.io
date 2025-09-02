@@ -180,7 +180,6 @@ const faqCategories: FAQCategory[] = [
     ]
 
 ];
-=======
 import { HelpCircle, 
   MessageCircle, 
   Phone, 
@@ -199,7 +198,6 @@ import { HelpCircle,
   CheckCircle,
   AlertCircle,
   Info,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Star,
   Zap,
   Brain,
@@ -211,11 +209,9 @@ import { HelpCircle,
   Target,
   TrendingUp
              } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function Support(...args: any[]): any {
   const [activeTab, setActiveTab] = useState('help');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -369,7 +365,6 @@ export default function Support(...args: any[]): any {
       console.log('Searching for:', searchQuery);
     }
   };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -433,7 +428,6 @@ export default function Support(...args: any[]): any {
       <div className="container-responsive py-16">
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
           {supportCategories.map((category, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={category.id}
               initial={{ opacity: 0, y: 20 }}
@@ -535,7 +529,6 @@ export default function Support(...args: any[]): any {
 
               <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
               <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-=======
               transition={{ duration: 0.6, delay: index * 0.1 }}
               onClick={() => setActiveTab(category.id)}
               className={`cursor-pointer p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
@@ -549,7 +542,6 @@ export default function Support(...args: any[]): any {
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
               <p className="text-sm text-gray-400">{category.description}</p>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </motion.div>
           ))}
         </div>
@@ -586,7 +578,6 @@ export default function Support(...args: any[]): any {
                       <section.icon className="w-5 h-5 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white">{section.category}</h3>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   </div>
                 ))}
               </div>
@@ -605,7 +596,6 @@ export default function Support(...args: any[]): any {
                 Multiple ways to get in touch with our support team for personalized assistance
               </p>
             </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {contactMethods.map((method, index)              => (
@@ -631,7 +621,6 @@ export default function Support(...args: any[]): any {
             </div>
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {supportResources.map((resource, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={resource.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -699,7 +688,6 @@ export default function Support(...args: any[]): any {
             </div>
 
             <div className="text-center mt-12">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <Link
                 to="/services"
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"

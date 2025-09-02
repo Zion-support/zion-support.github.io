@@ -6,7 +6,6 @@ import {
   Zap,
   Target,
   Users,
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   FileText,
   Phone,
   ChevronRight,
@@ -33,8 +32,6 @@ import {
 export function Sidebar(...args: any[]): any {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [activeSection, setActiveSection] = useState<any>(null);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
 
@@ -43,9 +40,7 @@ export function Sidebar(...args: any[]): any {
       return location.pathname === '/';
 
     return location.pathname.startsWith(href);
-=======
     },
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     {
       id: 'ai-ml',
       title: 'AI & Machine Learning',
@@ -134,9 +129,7 @@ export function Sidebar(...args: any[]): any {
 
   const toggleSection = (sectionName: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     setActiveSection(activeSection === sectionName ? null : sectionName);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <>

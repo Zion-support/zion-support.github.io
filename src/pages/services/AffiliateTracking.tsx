@@ -1,10 +1,10 @@
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Link              } from 'react-router-dom.ts';
-import SEO from '@/components/SEO';
-import { Button              } from '@/components/ui/button';
-import { Badge              } from '@/components/ui/badge';
-import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export default function AffiliateTracking(...args: any[]): any {
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import SEO from '@/src/src/components/SEO';
+import { Button } from '@/src/src/components/ui/button';
+import { Badge } from '@/src/src/components/ui/badge';
+import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export default function AffiliateTracking() {
   const features: { title: string; description: string }[] = [
     {
       title: 'Multi-channel attribution',
@@ -29,7 +29,9 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
     {
       title: 'Analytics & BI',
       description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.'
+
   ];
+
   const plans = [
     {
       name: 'Starter',
@@ -69,6 +71,7 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
       ];
     };
   ];
+
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
@@ -76,6 +79,7 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
         description="Launch and scale a high-performing affiliate program with advanced attribution, fraud prevention, automated payouts, and partner CRM."
         keywords="affiliate tracking, partner marketing, attribution, coupons, referral tracking, payouts"
       />
+
       {/* Hero */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />
@@ -84,19 +88,34 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
             initial = {
   { opacity: 0,
   y: 30 
+
+
+
+
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
+
             Affiliate Tracking Platform
             <span className="block text-zion-cyan text-2xl md:text-3xl mt-2">Recruit. Attribute. Reward.</span>
           </motion.h1>
+
           <p className="text-xl text-zion-slate-light max-w-3xl">
             End-to-end partner marketing infrastructure: from recruitment to payouts, with trusted, fraud-resistant attribution.
           </p>
+
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white">
               <Link to="/request-quote">
@@ -109,25 +128,39 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
             </Button>
           </div>
         </div>
-      </section>
+      </section>;
+
       {/* Feature grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((f)              => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((f) => (
               <motion.div
                 key={f.title}
                 initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
                 className="bg-zion-slate-dark/30 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50"
+
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5" />
                   <div>
@@ -135,13 +168,14 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
                     <p className="text-zion-slate-light text-sm">{f.description}</p>
                   </div>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
+
       {/* Market context */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">
+      <section className="py-8 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto bg-gradient-to-br from-zion-blue-dark/30 to-zion-purple/30 border border-zion-blue-light/20 rounded-2xl p-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div className="flex items-center gap-3">
@@ -162,32 +196,53 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
           </p>
         </div>
       </section>
+
       {/* Plans */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {plans.map((plan, i)              => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {plans.map((plan, i) => (
               <motion.div
                 key={plan.name}
                 initial = {
   { opacity: 0,
   y: 20 
+
+
+
+
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
+
+
+
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.5,
   delay: i * 0.05 
+
+
+
+
+
+
 }}
                 className={`relative rounded-2xl p-8 ${i === 1 ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple' : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'}`}
-                {i === 1 && (
+
+                {i === 1 && (;
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <Badge className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-4 py-2">Most Popular</Badge>
                   </div>
                 )}
+
                 <h3 className="text-2xl font-bold text-white">{plan.name}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{plan.bestFor}</p>
                 <div className="mb-6">
@@ -208,13 +263,14 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
+
       {/* CTA */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto bg-zion-purple/20 border border-zion-purple/30 rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <h3 className="text-white text-xl font-semibold">Want a tailored affiliate strategy?</h3>
@@ -230,8 +286,9 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
           </div>
         </div>
       </section>
+
       {/* References */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">
+      <section className="py-8 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <h3 className="text-white text-lg font-semibold mb-4">Helpful links</h3>
           <ul className="space-y-2">
@@ -256,5 +313,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
     </div>;
   );
 </div>}
+
 // Duplicate leftover block removed
 }}}

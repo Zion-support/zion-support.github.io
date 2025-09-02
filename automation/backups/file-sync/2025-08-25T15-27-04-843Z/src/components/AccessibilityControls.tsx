@@ -1,39 +1,38 @@
 import { useState, useEffect } from 'react';
 import { Settings, Eye, Zap, X, Volume2, Keyboard, Monitor } from 'lucide-react';
-import { useAccessibility } from '../hooks/useAccessibility';
-interface AccessibilityControlsProps {;
+import { useAccessibility } from "../hooks/useAccessibility";
+interface AccessibilityControlsProps {
   className?: string;
-  position?: 'top-right' | 'bottom-right' | 'floating'};
-export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({;
+  position?: 'top-right' | 'bottom-right' | 'floating'}
+export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({ 
   className = '',;
   position = 'floating';
 }) => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const { preferences, savePreferences, announceToScreenReader } = useAccessibility();
-  // Close panel when clicking outside;
-  useEffect(() => {;
+  // Close panel when clicking outside
+  useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {;
       const target = event.target as HTMLElement;
-      if (!target.closest('.accessibility-controls')) {;
+      if (!target.closest('.accessibility-controls')) {
         setIsOpen(false);
-        setIsExpanded(false)};
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+        setIsExpanded(false)}
     };
-    if (isOpen) {;
+    if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
-      return () => document.removeEventListener('mousedown', handleClickOutside)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+      return () => document.removeEventListener('mousedown', handleClickOutside)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [isOpen]);
   const togglePanel = () => {;
     setIsOpen(!isOpen);
-    if (!isOpen) {;
-      announceToScreenReader('Accessibility controls opened')};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+    if (!isOpen) {
+      announceToScreenReader('Accessibility controls opened')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
   const toggleExpanded = () => {;
     setIsExpanded(!isExpanded);
   };
@@ -44,16 +43,16 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({;
   const getPositionClasses = () => {;
     switch (position) {;
       case 'top-right':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
         return 'top-4 right-4';
-      case 'bottom-right':;
+      case 'bottom-right':
         return 'bottom-4 right-4';
-      case 'floating':;
-      default:;
-        return 'bottom-4 right-4'};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+      case 'floating':
+      default:
+        return 'bottom-4 right-4'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
+=======
   return (;
     <div className = {`accessibility-controls fixed ${getPositionClasses()} z-50 ${className}`}>;
       {/* Main Toggle Button */};
@@ -254,7 +253,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({;
                 <p><kbd className='px-1 py-0.5 bg-gray-100 dark:bg-gray-700 rounded'>Escape</kbd> Close modals</p>;
                 <p><kbd className='px-1 py-0.5 bg-gray-100 dark:bg-gray-700 rounded'>Tab</kbd> Navigate elements</p>;
               </div>;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
             </div>;
           </div>;
         </div>;
@@ -262,6 +261,4 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190

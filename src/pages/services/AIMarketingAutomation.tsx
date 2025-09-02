@@ -1,7 +1,6 @@
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Target, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   TrendingUp, 
   Users, 
   Clock, 
@@ -24,7 +23,6 @@ import { Target,
              } from 'lucide-react.ts';
 import { SEO              } from '../../components/SEO';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AIMarketingAutomation = () => {
   const features = [
     {
@@ -136,7 +134,6 @@ const AIMarketingAutomation = () => {
     }
   ];
   return (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     <>
       <SEO 
         title="AI Marketing Automation - Zion Tech Group"
@@ -207,7 +204,6 @@ const AIMarketingAutomation = () => {
 
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -244,7 +240,6 @@ const AIMarketingAutomation = () => {
 
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -282,7 +277,6 @@ const AIMarketingAutomation = () => {
 
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
               {pricingPlans.map((plan, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -318,7 +312,6 @@ const AIMarketingAutomation = () => {
                     ))}
                   </ul>
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}

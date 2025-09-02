@@ -2,7 +2,6 @@ import React from 'react.ts';
 import { motion                } from 'framer-motion.ts';
 import { cn                } from '@/lib/utils';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface SkeletonProps extends React.PropsWithChildren<{}> {
   className?: string;
   variant?: 'default' | 'circular' | 'rectangular' | 'text' | 'avatar' | 'card';
@@ -128,7 +127,6 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
     {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyrows }).map((_, rowIndex)                => (
       <div key={rowIndex} className="flex space-x-4">
         {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanycolumns }).map((_, colIndex)               => (;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <Skeleton key={colIndex} variant="rectangular" height={16} width="100%" />;
         ))};
       </div>;
@@ -145,7 +143,6 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
 
 }>
     {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyitems }).map((_, index)                => (
-=======
   <div className = {
   cn('space-y-4',
   className)
@@ -157,8 +154,6 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
 
 }>
     {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyitems }).map((_, index)               => (
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       <div key={index} className="flex items-center space-x-4">
         <Skeleton variant="circular" width={40} height={40} />
         <div className="flex-1 space-y-2">;
@@ -184,7 +179,6 @@ export const GridSkeleton: React.FC<{
   className)
 } style={{
     gridTemplateColumns: anyanyanyanyanyanyanyanyanyanyanyanyanyany`repeat(${columns}, minmax(0, 1fr))`
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   }}>;
     {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyrows * columns }).map((_, index)               => (;
       <Skeleton key={index} variant="card" height={itemHeight} />;

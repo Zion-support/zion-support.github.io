@@ -1,17 +1,14 @@
-import React, { useState } from 'react.ts';
-import { ReactNode               } from 'react.ts';
-interface LayoutProps extends React.PropsWithChildren<{}> {
-
+import React, { useState } from 'react';
+import { ReactNode } from 'react';
+interface LayoutProps {
   children: ReactNode;
 
 const navigation: NavItem[] = [;
-{ label: 'Home', href: '/';
-},
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  { label: 'Home', href: '/' },
   {
     label: 'Services',
     href: '/services',
-    children[
+    children[;
       { label: 'AI & Machine Learning', href: '/services#ai' },
       { label: 'Quantum Technology', href: '/services#quantum' },
       { label: 'Cybersecurity', href: '/services#cybersecurity' },
@@ -25,18 +22,18 @@ const navigation: NavItem[] = [;
       { label: 'Consulting & Strategy', href: '/services#consulting' },
       { label: 'All Services', href: '/services' }
     ]
-  },
+  },;
   { label: 'Contact', href: '/contact' }
 ];
-export default function Layout(...args[]: any):  {
+export default function Layout(...args[]):  {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<any>(null);
   const location = useLocation();
-  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => location.pathname === href;
-  const toggleSidebarDropdown = (label: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  const isActive = (href: string) => location.pathname === href;
+  const toggleSidebarDropdown: React.FC = ($2) => {;
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
   };
+
   return (
     <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       {/* Header */}
@@ -69,16 +66,17 @@ export default function Layout(...args[]: any):  {
               <a
                 href="tel:+13024640950"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+
                 📞 Call Us
               </a>
             </div>
           </div>
         </div>
-      </header>
+      </header>;
       {/* Main Content */}
-      <div className="flex">
+      <div className="flex">;
         {/* Sidebar */}
-        <aside className={`fixed left-0 top-16 h-full w-64 bg-background border-r transform transition-transform duration-300 ease-in-out z-40 ${
+<aside className: {`fixed left-0 top-16 h-full w-64 bg-background border-r transform transition-transform duration-300 ease-in-out z-40 ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         } md:translate-x-0`}>
           <div className="p-4">
@@ -90,6 +88,7 @@ export default function Layout(...args[]: any):  {
                       <button
                         onClick={() => toggleSidebarDropdown(item.label)}
                         className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors"
+
                         <span className="flex items-center space-x-2">
                           {item.icon && <item.icon className="w-4 h-4" />}
                           <span>{item.label}</span>
@@ -98,13 +97,14 @@ export default function Layout(...args[]: any):  {
                           sidebarDropdownOpen === item.label ? 'rotate-90' : ''
                         }`} />
                       </button>
-                      {sidebarDropdownOpen === item.label && (
+                      {sidebarDropdownOpen === item.label && (;
                         <div className="ml-4 mt-2 space-y-1">
                           {item.children.map((child) => (
                             <a
                               key={child.label}
                               href={child.href}
                               className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
+
                               {child.label}
                             </a>
                           ))}
@@ -115,9 +115,10 @@ export default function Layout(...args[]: any):  {
                     <a
                       href={item.href}
                       className="flex items-center space-x-2 px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors"
+
                       {item.icon && <item.icon className="w-4 h-4" />}
                       <span>{item.label}</span>
-                    </a>
+                    </a>;
                   )}
                 </div>
               ))}

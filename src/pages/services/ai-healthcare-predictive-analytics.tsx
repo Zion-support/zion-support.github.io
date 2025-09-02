@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
+import { SEO } from '@/src/src/components/SEO';
 import { 
   Heart, 
   Activity, 
@@ -55,7 +54,7 @@ import {
   Laptop
 } from 'lucide-react';
 
-const AIHealthcarePredictiveAnalytics = () => {
+const AIHealthcarePredictiveAnalytics: React.FC = ($2) => {
   const features = [
     {
       icon: Brain,

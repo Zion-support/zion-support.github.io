@@ -1,6 +1,5 @@
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Settings, 
   Brain, 
@@ -29,8 +28,6 @@ import {
              } from 'lucide-react.ts';
 
 const AIAutonomousBusinessOperations: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Brain,
@@ -123,8 +120,6 @@ const AIAutonomousBusinessOperations: React.FC = (): JSX.Element => {
           </motion.div>
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -162,7 +157,6 @@ const AIAutonomousBusinessOperations: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -205,7 +199,6 @@ const AIAutonomousBusinessOperations: React.FC = (): JSX.Element => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

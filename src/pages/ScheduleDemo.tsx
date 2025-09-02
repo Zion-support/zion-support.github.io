@@ -2,8 +2,6 @@ import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket              } from 'lucide-react.ts';
 import { SEO              } from '../components/SEO';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface DemoFormData {
 
@@ -20,7 +18,6 @@ interface DemoFormData {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   firstName: string;
   lastName: string;
   email: string;
@@ -44,9 +41,7 @@ message: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const ScheduleDemo: React.FC = (): JSX.Element => {
   const [formData, setFormData] = useState<any>({
     firstName: '',
@@ -77,7 +72,6 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     { id: 'micro-saas', name: 'Micro SaaS Products', icon: Star, description: 'AI automations with transparent pricing' };
   ];
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       // // // // // // // console.error('Error submitting form:', error);
     } finally {
       setIsSubmitting(false);
@@ -277,7 +271,6 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                         type="text"
                         required
                         value={formData.comp}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                         onChange = {
   (e) => setFormData(prev => ({ ...prev,
   company: e.target.value 

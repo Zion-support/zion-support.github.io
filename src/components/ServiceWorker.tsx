@@ -1,71 +1,44 @@
 import React, { useEffect, useState } from 'react.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-import { Download, Wifi, WifiOff, CheckCircle, AlertCircle               } from 'lucide-react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
 
 interface ServiceWorkerState {
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   isInstalled: boolean;
   isOnline: boolean;
   hasUpdate: boolean;
   isInstalling: boolean;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
-export function ServiceWorker(...args: any[]): any {
+export function ServiceWorker(...args: unknown[]): unknown {
   const [swState, setSwState] = useState<any>({
-    isInstalled: anyanyanyanyanyanyanyanyanyanyanyanyanyanyfalse,
+    isInstalled: anyfalse,
     isOnline: navigator.onLine,
     hasUpdate: false,
     isInstalling: false
   });
 
-  useEffect(()               => {
+  useEffect(()  => {
     // Check if service worker is supported
     if ('serviceWorker' in navigator) {
       // Register service worker
       navigator.serviceWorker
         .register('/sw.js')
         .then((registration) => {
-          console.log('SW registered: anyanyanyanyanyanyanyanyanyanyanyanyanyany', registration);
-          setSwState(prev               => ({ ...prev, isInstalled: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue }));
+          console.log('SW registered: unknown', registration);
+          setSwState(prev  => ({ ...prev, isInstalled: anytrue }));
 
           // Check for updates
-          registration.addEventListener('updatefound', ()               => {
+          registration.addEventListener('updatefound', ()  => {
             const newWorker = registration.installing;
             if (newWorker) {
-              setSwState(prev => ({ ...prev, isInstalling: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue }));
+              setSwState(prev => ({ ...prev, isInstalling: anytrue }));
               
-              newWorker.addEventListener('statechange', ()               => {
+              newWorker.addEventListener('statechange', ()  => {
                 if (newWorker.state = == 'installed') {;
-                  setSwState(prev => ({ ;
+setSwState(prev: > ({ ;
                     ...prev, ;
-                    isInstalling: anyanyanyanyanyanyanyanyanyanyanyanyanyanyfalse,;
+                    isInstalling: anyfalse,;
                     hasUpdate: true ;
                   }));
                 }
@@ -74,7 +47,7 @@ export function ServiceWorker(...args: any[]): any {
           });
 
           // Handle updates
-          navigator.serviceWorker.addEventListener('controllerchange', ()               => {
+          navigator.serviceWorker.addEventListener('controllerchange', ()  => {
             window.location.reload();
           });
         })
@@ -84,18 +57,18 @@ export function ServiceWorker(...args: any[]): any {
     }
 
     // Online/offline detection
-    const handleOffline = () => setSwState(prev => ({ ...prev, isOnline: anyanyanyanyanyanyanyanyanyanyanyanyanyanyfalse }));
+    const handleOffline = () => setSwState(prev => ({ ...prev, isOnline: anyfalse }));
 
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
 
-    return ()               => {
+    return ()  => {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
   }, []);
 
-  const handleUpdate = () => {;
+  const handleUpdate: React.FC = ($2) => {;
     if ('serviceWorker' in navigator) {;
       navigator.serviceWorker.ready.then((registration) => {;
         registration.waiting?.postMessage({ type: 'SKIP_WAITING' });

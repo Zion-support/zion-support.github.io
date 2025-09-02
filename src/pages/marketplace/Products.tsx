@@ -1,7 +1,7 @@
-import React, { useState } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Search, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Search, 
   Filter, 
   Star, 
   ShoppingCart, 
@@ -54,17 +54,17 @@ import { Search,
   Infinity,
   Zap as ZapIcon,
   MessageCircle
-             } from 'lucide-react.ts';
-import { SEO              } from '../../components/SEO';
+} from 'lucide-react';
+import { SEO } from '../../components/SEO';
 
-export default function MarketplaceProducts(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+export default function MarketplaceProducts() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
-  const [viewMode, setViewMode] = useState<any>('grid');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [showFilters, setShowFilters] = useState(false);
+
   const categories = [
     { id: 'all', name: 'All Products', icon: Package, count: 156 },
     { id: 'ai-tools', name: 'AI Tools & Software', icon: Brain, count: 45 },
@@ -74,6 +74,7 @@ export default function MarketplaceProducts(...args: any[]): any {
     { id: 'development', name: 'Development Tools', icon: Code, count: 18 },
     { id: 'iot', name: 'IoT Solutions', icon: Network, count: 8 }
   ];
+
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'free', name: 'Free', range: 'Free' },
@@ -82,6 +83,7 @@ export default function MarketplaceProducts(...args: any[]): any {
     { id: '200-500', name: '$200 - $500', range: '$200 - $500' },
     { id: 'over-500', name: 'Over $500', range: '$500+' }
   ];
+
   const sortOptions = [
     { id: 'featured', name: 'Featured' },
     { id: 'newest', name: 'Newest' },
@@ -90,6 +92,7 @@ export default function MarketplaceProducts(...args: any[]): any {
     { id: 'rating', name: 'Highest Rated' },
     { id: 'popular', name: 'Most Popular' }
   ];
+
   const products = [
     {
       id: 1,
@@ -333,6 +336,7 @@ export default function MarketplaceProducts(...args: any[]): any {
       lastUpdated: "2025-01-03"
     }
   ];
+
   const filteredProducts = products.filter(product => {
     const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -344,8 +348,10 @@ export default function MarketplaceProducts(...args: any[]): any {
                         (selectedPriceRange === '50-200' && product.price >= 50 && product.price <= 200) ||
                         (selectedPriceRange === '200-500' && product.price > 200 && product.price <= 500) ||
                         (selectedPriceRange === 'over-500' && product.price > 500);
+    
     return matchesSearch && matchesCategory && matchesPrice;
   });
+
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     switch (sortBy) {
       case 'newest':
@@ -363,17 +369,15 @@ export default function MarketplaceProducts(...args: any[]): any {
     }
   });
 
-  const formatPrice = (price: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, currency: string)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  const formatPrice: React.FC = ($2) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: currency
     }).format(price);
   };
 
-  const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {
-    return Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyany5 }, (_, i)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  const renderStars: React.FC = ($2) => {
+    return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}
         className={`w-4 h-4 ${
@@ -386,12 +390,14 @@ export default function MarketplaceProducts(...args: any[]): any {
       />
     ));
   };
+
   return (
     <div className="min-h-screen bg-futuristic">
       <SEO 
         title="Marketplace Products - Zion Tech Group"
         description="Discover innovative technology products in our marketplace. From AI tools to cybersecurity solutions, find the perfect products for your business needs."
       />
+      
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue to-zion-slate-dark">
         <div className="container mx-auto px-4 text-center">
@@ -414,6 +420,7 @@ export default function MarketplaceProducts(...args: any[]): any {
           </motion.p>
         </div>
       </section>
+
       {/* Search and Filters */}
       <section className="py-8 bg-zion-slate-dark border-b border-zion-slate-light/20">
         <div className="container mx-auto px-4">
@@ -429,6 +436,7 @@ export default function MarketplaceProducts(...args: any[]): any {
                 className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
               />
             </div>
+
             {/* Controls */}
             <div className="flex flex-wrap gap-4 items-center">
               {/* View Mode Toggle */}
@@ -454,18 +462,20 @@ export default function MarketplaceProducts(...args: any[]): any {
                   <List className="w-5 h-5" />
                 </button>
               </div>
+
               {/* Sort */}
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-zion-cyan"
+                className="bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan"
               >
-                {sortOptions.map((option)              => (
+                {sortOptions.map((option) => (
                   <option key={option.id} value={option.id}>
                     {option.name}
                   </option>
                 ))}
               </select>
+
               {/* Filters Toggle */}
               <button
                 onClick={() => setShowFilters(!showFilters)}
@@ -477,6 +487,7 @@ export default function MarketplaceProducts(...args: any[]): any {
               </button>
             </div>
           </div>
+
           {/* Expanded Filters */}
           {showFilters && (
             <motion.div
@@ -493,30 +504,32 @@ export default function MarketplaceProducts(...args: any[]): any {
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-zion-cyan"
+                    className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan"
                   >
-                    {categories.map((category)              => (
+                    {categories.map((category) => (
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
                     ))}
                   </select>
                 </div>
+
                 {/* Price Range Filter */}
                 <div>
                   <label className="block text-white font-medium mb-2">Price Range</label>
                   <select
                     value={selectedPriceRange}
                     onChange={(e) => setSelectedPriceRange(e.target.value)}
-                    className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-zion-cyan"
+                    className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan"
                   >
-                    {priceRanges.map((range)              => (
+                    {priceRanges.map((range) => (
                       <option key={range.id} value={range.id}>
                         {range.name}
                       </option>
                     ))}
                   </select>
                 </div>
+
                 {/* Clear Filters */}
                 <div className="flex items-end">
                   <button
@@ -535,15 +548,17 @@ export default function MarketplaceProducts(...args: any[]): any {
           )}
         </div>
       </section>
+
       {/* Results Summary */}
       <section className="py-4 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between text-zion-slate-light">
             <span>Showing {sortedProducts.length} of {products.length} products</span>
-            <span>Sort by: anyanyanyanyanyanyanyanyanyanyanyanyany{sortOptions.find(opt              => opt.id === sortBy)?.name}</span>
+            <span>Sort by: {sortOptions.find(opt => opt.id === sortBy)?.name}</span>
           </div>
         </div>
       </section>
+
       {/* Products Grid/List */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -554,8 +569,8 @@ export default function MarketplaceProducts(...args: any[]): any {
               <p className="text-zion-slate-light">Try adjusting your search or filter criteria.</p>
             </div>
           ) : (
-            <div className={viewMode === 'grid' ? 'grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-              {sortedProducts.map((product, index)              => (
+            <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+              {sortedProducts.map((product, index) => (
                 <motion.article
                   key={product.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -598,6 +613,7 @@ export default function MarketplaceProducts(...args: any[]): any {
                       </div>
                     )}
                   </div>
+                  
                   {/* Product Content */}
                   <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
                     {/* Category and Vendor */}
@@ -612,10 +628,12 @@ export default function MarketplaceProducts(...args: any[]): any {
                         )}
                       </div>
                     </div>
+                    
                     {/* Product Name */}
                     <h3 className="text-xl font-bold text-white mb-3 leading-tight group-hover:text-zion-cyan transition-colors duration-200">
                       {product.name}
                     </h3>
+                    
                     {/* Rating */}
                     <div className="flex items-center gap-2 mb-3">
                       <div className="flex items-center">
@@ -625,10 +643,12 @@ export default function MarketplaceProducts(...args: any[]): any {
                         {product.rating} ({product.reviewCount} reviews)
                       </span>
                     </div>
+                    
                     {/* Description */}
                     <p className="text-zion-slate-light mb-4 leading-relaxed">
                       {product.description}
                     </p>
+                    
                     {/* Features */}
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2">Key Features</h4>
@@ -640,6 +660,7 @@ export default function MarketplaceProducts(...args: any[]): any {
                         ))}
                       </div>
                     </div>
+                    
                     {/* Price and Actions */}
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-2xl font-bold text-white">
@@ -654,6 +675,7 @@ export default function MarketplaceProducts(...args: any[]): any {
                           formatPrice(product.price, product.currency)
                         )}
                       </div>
+                      
                       <div className="flex items-center gap-2">
                         <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200">
                           <Heart className="w-5 h-5" />
@@ -663,6 +685,7 @@ export default function MarketplaceProducts(...args: any[]): any {
                         </button>
                       </div>
                     </div>
+                    
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {product.tags.slice(0, 3).map((tag) => (
@@ -671,6 +694,7 @@ export default function MarketplaceProducts(...args: any[]): any {
                         </span>
                       ))}
                     </div>
+                    
                     {/* Action Buttons */}
                     <div className="flex gap-3">
                       <button className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-medium rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 group-hover:scale-105">
@@ -688,6 +712,7 @@ export default function MarketplaceProducts(...args: any[]): any {
           )}
         </div>
       </section>
+
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
         <div className="container mx-auto px-4 text-center">

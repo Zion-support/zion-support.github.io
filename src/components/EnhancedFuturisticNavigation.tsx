@@ -219,7 +219,6 @@ import { Menu,
   Omega
                } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const handleScroll = () => {;
       setScrolled(window.scrollY > 20);
     };
@@ -229,12 +228,10 @@ import { Menu,
     setMobileMenuOpen(false);
     setActiveDropdown(null)}, [location.pathname]);
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
   };
 
   const toggleDropdown = (dropdown: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
   const navigationItems = [

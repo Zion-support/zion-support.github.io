@@ -1,434 +1,245 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { SEO } from '../../components/SEO';
+import { motion } from 'framer-motion';
 import { 
   ShoppingCart, 
-  TrendingUp, 
-  Users, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Zap, 
-  Target, 
+  Store, 
+  Smartphone, 
   BarChart3, 
-  Smartphone,
-  CreditCard,
+  Users, 
   Package,
-  Truck,
-  Store,
-  Globe,
-  Lock,
-  Activity,
-  CheckCircle,
   ArrowRight,
-  Star,
-  Award,
-  Lightbulb,
-  Rocket,
-  Building2,
-  Network,
-  Database,
-  Workflow,
-  MessageCircle,
-  Calendar,
-  FileText,
-  Video,
-  BookOpen,
-  Users2,
-  Cog,
-  Monitor,
-  Smartphone as MobileIcon,
-  Wifi,
-  Satellite,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  MessageSquare,
-  PieChart,
-  LineChart,
-  BarChart,
-  PieChart as PieChartIcon,
-  LineChart as LineChartIcon,
-  BarChart as BarChartIcon2
+  CheckCircle,
+  TrendingUp
 } from 'lucide-react';
 
+const features = [
+  {
+    icon: ShoppingCart,
+    title: 'E-commerce Platform',
+    description: 'Modern, scalable online retail solutions'
+  },
+  {
+    icon: Store,
+    title: 'Omnichannel Retail',
+    description: 'Seamless integration across all sales channels'
+  },
+  {
+    icon: Smartphone,
+    title: 'Mobile Commerce',
+    description: 'Optimized mobile shopping experiences'
+  },
+  {
+    icon: BarChart3,
+    title: 'Retail Analytics',
+    description: 'Data-driven insights for retail optimization'
+  },
+  {
+    icon: Users,
+    title: 'Customer Experience',
+    description: 'Personalized shopping and customer service'
+  },
+  {
+    icon: Package,
+    title: 'Inventory Management',
+    description: 'Smart inventory and supply chain optimization'
+  }
+];
+
+const solutions = [
+  {
+    title: 'E-commerce Platform',
+    description: 'Complete online retail solution with AI-powered features',
+    features: ['Product Management', 'Shopping Cart', 'Payment Processing', 'Order Management']
+  },
+  {
+    title: 'Retail Analytics Suite',
+    description: 'Comprehensive analytics for retail decision-making',
+    features: ['Sales Analytics', 'Customer Insights', 'Inventory Optimization', 'Performance Metrics']
+  },
+  {
+    title: 'Customer Experience Platform',
+    description: 'Personalized shopping experiences and customer service',
+    features: ['Personalization', 'Recommendations', 'Customer Support', 'Loyalty Programs']
+  },
+  {
+    title: 'Supply Chain Optimization',
+    description: 'Intelligent inventory and supply chain management',
+    features: ['Demand Forecasting', 'Inventory Management', 'Supplier Analytics', 'Logistics Optimization']
+  }
+];
+
 export default function RetailSolutions() {
-  const features = [
-    {
-      icon: ShoppingCart,
-      title: "Omnichannel Commerce",
-      description: "Seamlessly integrate online and offline shopping experiences with unified inventory and customer data management."
-    },
-    {
-      icon: Brain,
-      title: "AI-Powered Personalization",
-      description: "Deliver personalized shopping experiences using advanced AI algorithms for product recommendations and targeted marketing."
-    },
-    {
-      icon: TrendingUp,
-      title: "Predictive Analytics",
-      description: "Forecast demand, optimize pricing, and improve inventory management with machine learning-powered insights."
-    },
-    {
-      icon: Shield,
-      title: "Enhanced Security",
-      description: "Protect customer data and transactions with enterprise-grade cybersecurity and fraud detection systems."
-    },
-    {
-      icon: Cloud,
-      title: "Cloud-Native Architecture",
-      description: "Scalable, resilient infrastructure that grows with your business and ensures high availability."
-    },
-    {
-      icon: Users,
-      title: "Customer Experience Management",
-      description: "Comprehensive tools for managing customer journeys, loyalty programs, and satisfaction metrics."
-    }
-  ];
-
-  const solutions = [
-    {
-      category: "E-commerce Platforms",
-      items: [
-        "AI-Powered Product Recommendations",
-        "Personalized Shopping Experiences",
-        "Multi-channel Inventory Management",
-        "Advanced Search & Filtering",
-        "Mobile-First Design",
-        "Progressive Web Apps (PWA)"
-      ]
-    },
-    {
-      category: "Retail Analytics",
-      items: [
-        "Customer Behavior Analysis",
-        "Sales Performance Tracking",
-        "Inventory Optimization",
-        "Demand Forecasting",
-        "Price Optimization",
-        "Competitive Intelligence"
-      ]
-    },
-    {
-      category: "Supply Chain Management",
-      items: [
-        "Real-time Inventory Tracking",
-        "Automated Replenishment",
-        "Supplier Management",
-        "Logistics Optimization",
-        "Returns Management",
-        "Quality Control"
-      ]
-    },
-    {
-      category: "Customer Engagement",
-      items: [
-        "Loyalty Programs",
-        "Personalized Marketing",
-        "Customer Support Automation",
-        "Social Media Integration",
-        "Email Marketing Automation",
-        "SMS & Push Notifications"
-      ]
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: "Increased Revenue",
-      description: "Drive sales growth through personalized experiences and optimized operations"
-    },
-    {
-      icon: Users,
-      title: "Enhanced Customer Satisfaction",
-      description: "Improve customer loyalty and retention with seamless shopping experiences"
-    },
-    {
-      icon: Cog,
-      title: "Operational Efficiency",
-      description: "Streamline processes and reduce costs through automation and optimization"
-    },
-    {
-      icon: Shield,
-      title: "Risk Mitigation",
-      description: "Protect against fraud, data breaches, and operational disruptions"
-    }
-  ];
-
-  const technologies = [
-    { name: "AI & Machine Learning", icon: Brain, description: "Advanced algorithms for personalization and automation" },
-    { name: "Cloud Computing", icon: Cloud, description: "Scalable infrastructure and services" },
-    { name: "IoT & Edge Computing", icon: Wifi, description: "Real-time data collection and processing" },
-    { name: "Blockchain", icon: Network, description: "Secure transactions and supply chain transparency" },
-    { name: "Big Data Analytics", icon: BarChart3, description: "Comprehensive insights and reporting" },
-    { name: "Mobile Technologies", icon: Smartphone, description: "Cross-platform mobile solutions" }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <SEO 
+        title="Retail Solutions - Zion Tech Group" 
+        description="AI-powered retail technology solutions, e-commerce platforms, omnichannel retail, and customer experience optimization for modern retail businesses." 
+      />
+      
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-purple/20 text-zion-purple text-sm font-medium mb-6">
-              <Target className="w-4 h-4 mr-2" />
-              Industry Solutions
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Retail Technology
-              <span className="block text-zion-cyan">Solutions</span>
-            </h1>
-            <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
-              Transform your retail business with cutting-edge AI, cloud, and digital solutions. 
-              Enhance customer experiences, optimize operations, and drive growth in the digital age.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white font-semibold rounded-lg hover:from-zion-purple-light hover:to-zion-purple transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-zion-purple/25"
-              >
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border border-zinc-600 text-white font-semibold rounded-lg hover:border-zion-cyan hover:text-zion-cyan transition-all duration-300"
-              >
-                Contact Sales
-                <MessageSquare className="w-5 h-5 ml-2" />
-              </Link>
-            </div>
-          </div>
+      <section className="container mx-auto px-4 py-16 pt-32">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-4xl mx-auto"
+        >
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            Retail Solutions
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Transform your retail business with AI-powered e-commerce platforms, 
+            omnichannel solutions, and customer experience optimization. 
+            Drive sales, improve efficiency, and enhance customer satisfaction.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Features Grid */}
+      <section className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl font-bold mb-4">Why Choose Zion Tech Group for Retail?</h2>
+          <p className="text-gray-300 max-w-2xl mx-auto">
+            Our retail solutions are built with deep understanding of 
+            customer behavior, market trends, and operational efficiency.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"
+            >
+              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                <feature.icon className="w-6 h-6 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+              <p className="text-gray-400">{feature.description}</p>
+            </motion.div>
+          ))}
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Zion Tech Group for Retail?
-            </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our comprehensive retail solutions combine cutting-edge technology with deep industry expertise 
-              to deliver measurable business outcomes.
+      {/* Solutions Section */}
+      <section className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl font-bold mb-4">Retail Solutions</h2>
+          <p className="text-gray-300 max-w-2xl mx-auto">
+            Comprehensive solutions designed to address the unique challenges of 
+            modern retail and e-commerce operations.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {solutions.map((solution, index) => (
+            <motion.div
+              key={solution.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50"
+            >
+              <h3 className="text-2xl font-semibold mb-3">{solution.title}</h3>
+              <p className="text-gray-300 mb-6">{solution.description}</p>
+              <ul className="space-y-2">
+                {solution.features.map((feature) => (
+                  <li key={feature} className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Omnichannel Section */}
+      <section className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/20"
+        >
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">Omnichannel Retail Excellence</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Our solutions enable seamless integration across all retail channels 
+              for a unified customer experience.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:-translate-y-2"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-zinc-300">{feature.description}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <Store className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Brick & Mortar</h3>
+              <p className="text-gray-300">In-store technology and POS integration</p>
+            </div>
+            <div className="text-center">
+              <Smartphone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Mobile & Web</h3>
+              <p className="text-gray-300">Responsive e-commerce and mobile apps</p>
+            </div>
+            <div className="text-center">
+              <TrendingUp className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Marketplace Integration</h3>
+              <p className="text-gray-300">Multi-channel sales and distribution</p>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Solutions Overview */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Retail Solutions
-            </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              From e-commerce platforms to supply chain optimization, we provide end-to-end solutions 
-              that address every aspect of modern retail operations.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {solutions.map((solution, index) => (
-              <div key={index} className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6">
-                <h3 className="text-2xl font-semibold text-zion-cyan mb-4 flex items-center">
-                  <Zap className="w-6 h-6 mr-2" />
-                  {solution.category}
-                </h3>
-                <ul className="space-y-3">
-                  {solution.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-center text-zinc-300">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Business Benefits
-            </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our retail solutions deliver measurable improvements across all key business metrics, 
-              helping you stay competitive in an evolving market.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="text-center bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-zinc-300 text-sm">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Cutting-Edge Technologies
-            </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              We leverage the latest technologies to deliver innovative retail solutions that 
-              provide competitive advantages and future-proof your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
-              <div
-                key={index}
-                className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center mb-4">
-                  <tech.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
-                <p className="text-zinc-300 text-sm">{tech.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
-          <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Retail Business?
-            </h2>
-            <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
-              Join leading retailers who have already transformed their operations with Zion Tech Group's 
-              innovative solutions. Let's discuss how we can help you achieve your business goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white font-semibold rounded-lg hover:from-zion-purple-light hover:to-zion-purple transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-zion-purple/25"
-              >
-                Get Free Consultation
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/case-studies"
-                className="inline-flex items-center px-8 py-4 border border-zinc-600 text-white font-semibold rounded-lg hover:border-zion-cyan hover:text-zion-cyan transition-all duration-300"
-              >
-                View Case Studies
-                <FileText className="w-5 h-5 ml-2" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Solutions */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Explore Other Industry Solutions
-            </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Discover how our technology solutions can transform other industries and business processes.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link
-              to="/solutions/healthcare"
-              className="group bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:-translate-y-2"
+      <section className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Retail Business?</h2>
+          <p className="text-gray-300 max-w-2xl mx-auto mb-8">
+            Let's discuss how our retail solutions can drive sales, 
+            improve customer experience, and optimize your operations.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                Healthcare Solutions
-              </h3>
-              <p className="text-zinc-300 mb-4">
-                AI-powered healthcare analytics, patient management, and clinical decision support systems.
-              </p>
-              <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
-                Learn More
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
-
-            <Link
-              to="/solutions/financial"
-              className="group bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:-translate-y-2"
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+            <a
+              href="/services"
+              className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
-                <DollarSign className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                Financial Solutions
-              </h3>
-              <p className="text-zinc-300 mb-4">
-                Advanced trading platforms, risk management, and financial analytics powered by AI.
-              </p>
-              <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
-                Learn More
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
-
-            <Link
-              to="/solutions/manufacturing"
-              className="group bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:-translate-y-2"
-            >
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
-                <Cog className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                Manufacturing Solutions
-              </h3>
-              <p className="text-zinc-300 mb-4">
-                Smart manufacturing, predictive maintenance, and supply chain optimization with IoT and AI.
-              </p>
-              <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
-                Learn More
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
+              View All Services
+            </a>
           </div>
-        </div>
+        </motion.div>
       </section>
     </div>
   );

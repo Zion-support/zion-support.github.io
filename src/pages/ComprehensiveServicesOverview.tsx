@@ -1,7 +1,9 @@
+
 import React, { useState, useEffect } from 'react.ts';
-import { Link              } from 'react-router-dom.ts';
-import { motion              } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
 import { Brain,
+
   Cloud,
   Shield,
   Server,
@@ -27,10 +29,9 @@ import { Brain,
   Search,
   Filter,
   Sparkles
-             } from 'lucide-react.ts';
+ } from 'lucide-react.ts';
   };
-  const getServicePrice = (service: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  const getServicePrice: React.FC = ($2) => {
     if (typeof service.price === 'number') {
       return service.price;
     }

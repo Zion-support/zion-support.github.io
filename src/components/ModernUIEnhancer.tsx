@@ -1,24 +1,45 @@
-import React, { useEffect, useCallback, useState } from 'react.ts';
+import React, { useEffect, useCallback, useState } from 'react';
 
-interface ModernUIEnhancerProps extends React.PropsWithChildren<{}> {
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+interface ModernUIEnhancerProps {
+  children?: React.ReactNode;
   enabled?: boolean;
-
+  enableDarkMode?: boolean;
+  enableThemeSystem?: boolean;
+  enableGlassmorphism?: boolean;
+  enableGradients?: boolean;
+  enableAnimations?: boolean;
+  enableCustomCursor?: boolean;
+  enableLoadingStates?: boolean;
+  enableScrollProgress?: boolean;
+  enableMicroInteractions?: boolean;
 }
+
 export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({ 
-  enabled = true 
+  children,
+  enabled = true,
+  enableDarkMode = true,
+  enableThemeSystem = true,
+  enableGlassmorphism = true,
+  enableGradients = true,
+  enableAnimations = true,
+  enableCustomCursor = true,
+  enableLoadingStates = true,
+  enableScrollProgress = true,
+  enableMicroInteractions = true
 }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [accentColor, setAccentColor] = useState('#0ea5e9');
+
   const enhanceTypography = useCallback(() => {
     if (!enabled) return;
+    
     // Add modern font loading
     const fontLink = document.createElement('link');
     fontLink.rel = 'preload';
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter: wght@300;400;500;600;700&display=swap';
     fontLink.as = 'style';
     document.head.appendChild(fontLink);
+
     // Apply modern typography
     const root = document.documentElement;
     root.style.setProperty('--font-family', "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif");
@@ -28,52 +49,54 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     root.style.setProperty('--font-weight-semibold', '600');
     root.style.setProperty('--font-weight-bold', '700');
   }, [enabled]);
+
   const enhanceColorScheme = useCallback(() => {
-    if (!enabled) return;
+    if (!enabled || !enableDarkMode) return;
+    
     const root = document.documentElement;
+    
     // Modern color palette
     const colors = {
-      primary: anyanyanyanyanyanyanyanyanyanyanyanyanyanyaccentColor,
-      secondary: '#6366f1',
+      primary: '#0ea5e9',
+      secondary: '#8b5cf6',
+      accent: '#f59e0b',
       success: '#10b981',
       warning: '#f59e0b',
       error: '#ef4444',
-      info: '#3b82f6',
-      neutral: {
-        50: '#f8fafc',
-        100: '#f1f5f9',
-        200: '#e2e8f0',
-        300: '#cbd5e1',
-        400: '#94a3b8',
-        500: '#64748b',
-        600: '#475569',
-        700: '#334155',
-        800: '#1e293b',
-        900: '#0f172a'
-      }
+      info: '#3b82f6'
     };
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-    // Apply CSS custom properties
+    // Apply color variables
     Object.entries(colors).forEach(([key, value]) => {
-      if (typeof value === 'string') {
-        root.style.setProperty(`--color-${key}`, value);
-      } else {
-        Object.entries(value).forEach(([shade, colorValue]) => {
-          root.style.setProperty(`--color-${key}-${shade}`, colorValue);
-        });
-      }
+      root.style.setProperty(`--color-${key}`, value);
     });
-    // Apply accent color variations
-    root.style.setProperty('--color-primary-light', `${accentColor}20`);
-    root.style.setProperty('--color-primary-dark', `${accentColor}80`);
-  }, [enabled, accentColor]);
+
+    // Dark mode colors
+    if (isDarkMode) {
+      root.style.setProperty('--bg-primary', '#0f172a');
+      root.style.setProperty('--bg-secondary', '#1e293b');
+      root.style.setProperty('--bg-tertiary', '#334155');
+      root.style.setProperty('--text-primary', '#f8fafc');
+      root.style.setProperty('--text-secondary', '#cbd5e1');
+      root.style.setProperty('--text-muted', '#94a3b8');
+    } else {
+      root.style.setProperty('--bg-primary', '#ffffff');
+      root.style.setProperty('--bg-secondary', '#f8fafc');
+      root.style.setProperty('--bg-tertiary', '#e2e8f0');
+      root.style.setProperty('--text-primary', '#0f172a');
+      root.style.setProperty('--text-secondary', '#475569');
+      root.style.setProperty('--text-muted', '#64748b');
+    }
+  }, [enabled, enableDarkMode, isDarkMode]);
+
   const enhanceSpacing = useCallback(() => {
     if (!enabled) return;
+    
     const root = document.documentElement;
+    
     // Modern spacing scale (4px base unit)
     const spacing = {
-      0: anyanyanyanyanyanyanyanyanyanyanyanyanyany'0px',
+      0: '0px',
       1: '4px',
       2: '8px',
       3: '12px',
@@ -85,145 +108,214 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       9: '36px',
       10: '40px',
       12: '48px',
-      14: '56px',
       16: '64px',
       20: '80px',
       24: '96px',
-      28: '112px',
-      32: '128px'
+      32: '128px',
+      40: '160px',
+      48: '192px',
+      56: '224px',
+      64: '256px'
     };
 
-    Object.entries(spacing).forEach(([key, value])               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+    Object.entries(spacing).forEach(([key, value]) => {
       root.style.setProperty(`--spacing-${key}`, value);
     });
   }, [enabled]);
-  const enhanceShadows = useCallback(() => {
-    if (!enabled) return;
+
+  const enhanceGlassmorphism = useCallback(() => {
+    if (!enabled || !enableGlassmorphism) return;
+    
     const root = document.documentElement;
-    // Modern shadow system
-    const shadows = {
-      xs: anyanyanyanyanyanyanyanyanyanyanyanyanyany'0 1px 2px 0 rgb(0 0 0 / 0.05)',
-      sm: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
-      md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
-      lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
-      xl: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
-      '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
-      inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)'
+    
+    // Glassmorphism styles
+    root.style.setProperty('--glass-bg', 'rgba(255, 255, 255, 0.1)');
+    root.style.setProperty('--glass-border', 'rgba(255, 255, 255, 0.2)');
+    root.style.setProperty('--glass-backdrop', 'blur(10px)');
+    root.style.setProperty('--glass-shadow', '0 8px 32px 0 rgba(31, 38, 135, 0.37)');
+  }, [enabled, enableGlassmorphism]);
+
+  const enhanceGradients = useCallback(() => {
+    if (!enabled || !enableGradients) return;
+    
+    const root = document.documentElement;
+    
+    // Modern gradient definitions
+    const gradients = {
+      primary: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      secondary: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+      accent: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+      success: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+      warning: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+      error: 'linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%)'
     };
 
-    Object.entries(shadows).forEach(([key, value])               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-      root.style.setProperty(`--shadow-${key}`, value);
+    Object.entries(gradients).forEach(([key, value]) => {
+      root.style.setProperty(`--gradient-${key}`, value);
     });
-  }, [enabled]);
-  const enhanceTransitions = useCallback(() => {
-    if (!enabled) return;
-    const root = document.documentElement;
-    // Modern transition system
-    const transitions = {
-      fast: anyanyanyanyanyanyanyanyanyanyanyanyanyany'150ms ease-in-out',
-      normal: '250ms ease-in-out',
-      slow: '350ms ease-in-out',
-      bounce: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
-      smooth: 'cubic-bezier(0.4, 0, 0.2, 1)',
-      sharp: 'cubic-bezier(0.4, 0, 0.6, 1)'
-    };
+  }, [enabled, enableGradients]);
 
-    Object.entries(transitions).forEach(([key, value])               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-      root.style.setProperty(`--transition-${key}`, value);
-    });
-  }, [enabled]);
-  const enhanceBorderRadius = useCallback(() => {
-    if (!enabled) return;
+  const enhanceAnimations = useCallback(() => {
+    if (!enabled || !enableAnimations) return;
+    
     const root = document.documentElement;
-    // Modern border radius system
-    const radius = {
-      none: anyanyanyanyanyanyanyanyanyanyanyanyanyany'0px',
-      sm: '2px',
-      md: '6px',
-      lg: '8px',
-      xl: '12px',
-      '2xl': '16px',
-      '3xl': '24px',
-      full: '9999px'
-    };
+    
+    // Animation timing functions
+    root.style.setProperty('--ease-in-out', 'cubic-bezier(0.4, 0, 0.2, 1)');
+    root.style.setProperty('--ease-out', 'cubic-bezier(0, 0, 0.2, 1)');
+    root.style.setProperty('--ease-in', 'cubic-bezier(0.4, 0, 1, 1)');
+    root.style.setProperty('--ease-bounce', 'cubic-bezier(0.68, -0.55, 0.265, 1.55)');
+    
+    // Animation durations
+    root.style.setProperty('--duration-fast', '150ms');
+    root.style.setProperty('--duration-normal', '300ms');
+    root.style.setProperty('--duration-slow', '500ms');
+  }, [enabled, enableAnimations]);
 
-    Object.entries(radius).forEach(([key, value])               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-      root.style.setProperty(`--radius-${key}`, value);
-    });
-  }, [enabled]);
-  const enhanceDarkMode = useCallback(() => {
-    if (!enabled) return;
-    const root = document.documentElement;
-    if (isDarkMode) {
-      root.classList.add('dark');
-      root.style.setProperty('--bg-primary', '#0f172a');
-      root.style.setProperty('--bg-secondary', '#1e293b');
-      root.style.setProperty('--text-primary', '#f8fafc');
-      root.style.setProperty('--text-secondary', '#cbd5e1');
-      root.style.setProperty('--border-color', '#334155');
-    } else {
-      root.classList.remove('dark');
-      root.style.setProperty('--bg-primary', '#ffffff');
-      root.style.setProperty('--bg-secondary', '#f8fafc');
-      root.style.setProperty('--text-primary', '#0f172a');
-      root.style.setProperty('--text-secondary', '#475569');
-      root.style.setProperty('--border-color', '#e2e8f0');
-    }
-  }, [enabled, isDarkMode]);
-  const enhanceComponents = useCallback(() => {
-    if (!enabled) return;
-    // Add modern button styles
-    const buttons = document.querySelectorAll('button, .btn, [role="button"]');
-    buttons.forEach((button) => {
-      if (!button.classList.contains('modern-enhanced')) {
-        button.classList.add('modern-enhanced');
-        button.style.cssText += `
-          border-radius: var(--radius-md);
-          transition: var(--transition-normal);
-          font-weight: var(--font-weight-medium);
-          box-shadow: var(--shadow-sm);
-        `;
+  const enhanceCustomCursor = useCallback(() => {
+    if (!enabled || !enableCustomCursor) return;
+    
+    // Add custom cursor styles
+    const style = document.createElement('style');
+    style.textContent = `
+      .custom-cursor {
+        cursor: none;
       }
-    });
-    // Add modern card styles
-    const cards = document.querySelectorAll('.card, [class*="card"], [class*="Card"]');
-    cards.forEach((card) => {
-      if (!card.classList.contains('modern-enhanced')) {
-        card.classList.add('modern-enhanced');
-        card.style.cssText += `
-          border-radius: var(--radius-lg);
-          box-shadow: var(--shadow-md);
-          transition: var(--transition-normal);
-          border: 1px solid var(--border-color);
-        `;
+      .cursor-dot {
+        width: 8px;
+        height: 8px;
+        background: var(--color-primary);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transition: transform 0.1s ease;
       }
-    });
-  }, [enabled]);
+      .cursor-outline {
+        width: 32px;
+        height: 32px;
+        border: 2px solid var(--color-primary);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9998;
+        transition: all 0.15s ease;
+      }
+    `;
+    document.head.appendChild(style);
+  }, [enabled, enableCustomCursor]);
+
+  const enhanceLoadingStates = useCallback(() => {
+    if (!enabled || !enableLoadingStates) return;
+    
+    const root = document.documentElement;
+    
+    // Loading state styles
+    root.style.setProperty('--loading-bg', 'rgba(0, 0, 0, 0.5)');
+    root.style.setProperty('--loading-spinner', 'var(--color-primary)');
+    root.style.setProperty('--loading-text', 'var(--text-primary)');
+  }, [enabled, enableLoadingStates]);
+
+  const enhanceScrollProgress = useCallback(() => {
+    if (!enabled || !enableScrollProgress) return;
+    
+    // Add scroll progress indicator
+    const progressBar = document.createElement('div');
+    progressBar.id = 'scroll-progress';
+    progressBar.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: var(--gradient-primary);
+      z-index: 9999;
+      transition: width 0.1s ease;
+    `;
+    document.body.appendChild(progressBar);
+
+    const updateScrollProgress = () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progressBar.style.width = scrollPercent + '%';
+    };
+
+    window.addEventListener('scroll', updateScrollProgress);
+    
+    return () => {
+      window.removeEventListener('scroll', updateScrollProgress);
+      progressBar.remove();
+    };
+  }, [enabled, enableScrollProgress]);
+
+  const enhanceMicroInteractions = useCallback(() => {
+    if (!enabled || !enableMicroInteractions) return;
+    
+    // Add micro-interaction styles
+    const style = document.createElement('style');
+    style.textContent = `
+      .micro-interaction {
+        transition: all var(--duration-normal) var(--ease-in-out);
+      }
+      .micro-interaction:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .micro-interaction:active {
+        transform: translateY(0);
+        transition: all var(--duration-fast) var(--ease-in-out);
+      }
+    `;
+    document.head.appendChild(style);
+  }, [enabled, enableMicroInteractions]);
+
+  // Initialize all enhancements
   useEffect(() => {
-    if (!enabled) return;
     enhanceTypography();
     enhanceColorScheme();
     enhanceSpacing();
-    enhanceShadows();
-    enhanceTransitions();
-    enhanceBorderRadius();
-    enhanceDarkMode();
-    enhanceComponents();
+    enhanceGlassmorphism();
+    enhanceGradients();
+    enhanceAnimations();
+    enhanceCustomCursor();
+    enhanceLoadingStates();
+    
+    const cleanupScrollProgress = enhanceScrollProgress();
+    enhanceMicroInteractions();
+
+    return () => {
+      if (cleanupScrollProgress) {
+        cleanupScrollProgress();
+      }
+    };
   }, [
-    enabled,
     enhanceTypography,
     enhanceColorScheme,
     enhanceSpacing,
-    enhanceShadows,
-    enhanceTransitions,
-    enhanceBorderRadius,
-    enhanceDarkMode,
-    enhanceComponents
+    enhanceGlassmorphism,
+    enhanceGradients,
+    enhanceAnimations,
+    enhanceCustomCursor,
+    enhanceLoadingStates,
+    enhanceScrollProgress,
+    enhanceMicroInteractions
   ]);
-  // Don't render anything - this is a utility component
-  return null;
+
+  // Toggle dark mode
+  const toggleDarkMode = useCallback(() => {
+    setIsDarkMode(prev => !prev);
+  }, []);
+
+  // Update accent color
+  const updateAccentColor = useCallback((color: string) => {
+    setAccentColor(color);
+    document.documentElement.style.setProperty('--color-primary', color);
+  }, []);
+
+  return (
+    <div className="modern-ui-enhancer">
+      {children}
+    </div>
+  );
 };

@@ -1,672 +1,327 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
+import { Search, Filter, Star, ShoppingCart, Heart, Eye, ArrowRight, Tag, Users, Clock } from 'lucide-react';
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 
-import { Link } from 'react-router-dom';
-import { 
-  Store, 
-  Search, 
-  Filter, 
-  Star, 
-  Heart, 
-  ShoppingCart, 
-  Eye, 
-  Download, 
-  Play, 
-  BookOpen, 
-  Code, 
-  Cloud, 
-  Shield, 
-  Bot, 
-  Database, 
-  Server, 
-  Monitor, 
-  Smartphone, 
-  Package, 
-  Users, 
-  TrendingUp, 
-  Award, 
-  CheckCircle, 
-  ArrowRight, 
-  ChevronDown, 
-  ChevronUp,
-  Zap,
-  Globe,
-  Target,
-  BarChart3,
-  Settings,
-  Palette,
-  Cpu,
-  HardDrive,
-  Network,
-  Lightbulb,
-  Settings as Cog,
-  FileText,
-  Video,
-  Headphones,
-  Calendar,
-  Clock,
-  DollarSign,
-  Percent,
-  Tag,
-  ExternalLink,
-  Mail,
-  Phone,
-  MapPin,
-  MessageCircle,
-  HelpCircle,
-  Info,
-  AlertTriangle,
-  X,
-  Plus,
-  Minus,
-  RefreshCw,
-  RotateCcw,
-  Maximize2,
-  Minimize2,
-  Volume2,
-  VolumeX,
-  Power,
-  PowerOff,
-  Battery,
-  BatteryCharging,
-  BatteryFull,
-  BatteryLow,
-  BatteryMedium,
-  BatteryEmpty,
-  Wifi,
-  WifiOff,
-  Signal,
-  SignalOff,
-  Bluetooth,
-  BluetoothOff,
-  Lock,
-  Unlock,
-  Key,
-  Fingerprint,
-  QrCode,
-  Barcode,
-  Camera,
-  Image,
-  File,
-  Folder,
-  Archive,
-  Trash2,
-  Edit,
-  Copy,
-  Scissors,
-  Printer,
-  Share2,
-  Bookmark,
-  Flag,
-  ThumbsUp,
-  ThumbsDown,
-  Smile,
-  Frown,
-  Meh,
-  MessageSquare,
-  Bell,
-  AlertCircle,
-  CheckSquare,
-  Square,
-  Radio,
-  ToggleLeft,
-  ToggleRight,
-  Sliders,
-  SlidersHorizontal,
-  Volume1,
-  Volume3,
-  Mic,
-  MicOff,
-  Headphones as HeadphonesIcon,
-  Speaker,
-  SpeakerOff,
-  Play as PlayIcon,
-  Pause,
-  SkipBack,
-  SkipForward,
-  Rewind,
-  FastForward,
-  Shuffle,
-  Repeat,
-  Repeat1,
-  Shuffle as ShuffleIcon,
-  SkipBack as SkipBackIcon,
-  SkipForward as SkipForwardIcon,
-  Rewind as RewindIcon,
-  FastForward as FastForwardIcon,
-  Repeat as RepeatIcon,
-  Repeat1 as Repeat1Icon,
-  Shuffle as ShuffleIcon2,
-  SkipBack as SkipBackIcon2,
-  SkipForward as SkipForwardIcon2,
-  Rewind as RewindIcon2,
-  FastForward as FastForwardIcon2,
-  Repeat as RepeatIcon2,
-  Repeat1 as Repeat1Icon2
-} from 'lucide-react';
-
-interface MarketplaceItem {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  price: number;
-  rating: number;
-  reviews: number;
-  downloads: number;
-  image: string;
-  tags: string[];
-  featured?: boolean;
-  new?: boolean;
-  trending?: boolean;
-}
-
-interface Category {
-  id: string;
-  name: string;
-  icon: React.ComponentType<any>;
-  count: number;
-}
-
-export default function Marketplace() {
+const Marketplace = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState('popular');
-  const [priceRange, setPriceRange] = useState([0, 1000]);
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [sortBy, setSortBy] = useState('featured');
 
-  const categories: Category[] = [
-    { id: 'all', name: 'All Items', icon: Store, count: 156 },
-    { id: 'ai-tools', name: 'AI Tools', icon: Bot, count: 23 },
-    { id: 'cloud-services', name: 'Cloud Services', icon: Cloud, count: 18 },
-    { id: 'security', name: 'Security', icon: Shield, count: 15 },
-    { id: 'data-analytics', name: 'Data Analytics', icon: BarChart3, count: 12 },
-    { id: 'mobile-apps', name: 'Mobile Apps', icon: Smartphone, count: 9 },
-    { id: 'web-tools', name: 'Web Tools', icon: Globe, count: 14 },
-    { id: 'automation', name: 'Automation', icon: Zap, count: 11 }
-  ];
-
-  const marketplaceItems: MarketplaceItem[] = [
+  const products = [
     {
-      id: '1',
-      title: 'AI Business Intelligence Suite',
-      description: 'Comprehensive AI-powered business intelligence platform with advanced analytics and reporting capabilities.',
-      category: 'ai-tools',
-      price: 299,
+      id: 1,
+      title: 'AI Content Generator Pro',
+      description: 'Advanced AI-powered content creation tool for blogs, social media, and marketing materials.',
+      price: '$299',
+      originalPrice: '$399',
       rating: 4.8,
       reviews: 124,
-      downloads: 2156,
-      image: '/images/marketplace/ai-bi-suite.jpg',
-      tags: ['AI', 'Business Intelligence', 'Analytics', 'Reporting'],
+      category: 'AI Tools',
+      image: '/images/marketplace/ai-content-generator.jpg',
       featured: true,
-      trending: true
+      tags: ['AI', 'Content', 'Marketing'],
+      seller: 'Tech Solutions Inc.',
+      downloads: 2500
     },
     {
-      id: '2',
-      title: 'Cloud Security Manager',
-      description: 'Enterprise-grade cloud security management tool with real-time threat detection and compliance monitoring.',
-      category: 'security',
-      price: 199,
+      id: 2,
+      title: 'Cybersecurity Dashboard',
+      description: 'Comprehensive security monitoring dashboard with real-time threat detection.',
+      price: '$599',
+      originalPrice: '$799',
       rating: 4.9,
       reviews: 89,
-      downloads: 1876,
-      image: '/images/marketplace/cloud-security.jpg',
-      tags: ['Security', 'Cloud', 'Compliance', 'Threat Detection'],
-      featured: true
+      category: 'Security',
+      image: '/images/marketplace/cybersecurity-dashboard.jpg',
+      featured: true,
+      tags: ['Security', 'Monitoring', 'Dashboard'],
+      seller: 'SecureTech Pro',
+      downloads: 1800
     },
     {
-      id: '3',
-      title: 'Data Pipeline Orchestrator',
-      description: 'Advanced data pipeline management tool for ETL processes and real-time data streaming.',
-      category: 'data-analytics',
-      price: 149,
+      id: 3,
+      title: 'Cloud Migration Toolkit',
+      description: 'Complete toolkit for seamless cloud migration with automated deployment scripts.',
+      price: '$199',
+      originalPrice: '$299',
       rating: 4.7,
-      reviews: 67,
-      downloads: 1432,
-      image: '/images/marketplace/data-pipeline.jpg',
-      tags: ['Data', 'ETL', 'Streaming', 'Pipeline'],
-      new: true
+      reviews: 156,
+      category: 'Cloud Tools',
+      image: '/images/marketplace/cloud-migration.jpg',
+      featured: false,
+      tags: ['Cloud', 'Migration', 'DevOps'],
+      seller: 'Cloud Masters',
+      downloads: 3200
     },
     {
-      id: '4',
-      title: 'Mobile App Analytics Dashboard',
-      description: 'Comprehensive mobile app analytics and user behavior tracking platform.',
-      category: 'mobile-apps',
-      price: 99,
+      id: 4,
+      title: 'Data Analytics Platform',
+      description: 'Powerful data visualization and analytics platform with machine learning capabilities.',
+      price: '$799',
+      originalPrice: '$999',
       rating: 4.6,
-      reviews: 45,
-      downloads: 987,
-      image: '/images/marketplace/mobile-analytics.jpg',
-      tags: ['Mobile', 'Analytics', 'User Behavior', 'Tracking']
-    },
-    {
-      id: '5',
-      title: 'Web Performance Optimizer',
-      description: 'AI-powered web performance optimization tool with automated testing and optimization recommendations.',
-      category: 'web-tools',
-      price: 179,
-      rating: 4.8,
-      reviews: 78,
-      downloads: 1654,
-      image: '/images/marketplace/web-performance.jpg',
-      tags: ['Web', 'Performance', 'Optimization', 'AI'],
-      trending: true
-    },
-    {
-      id: '6',
-      title: 'Workflow Automation Engine',
-      description: 'Powerful workflow automation platform with drag-and-drop interface and extensive integration capabilities.',
-      category: 'automation',
-      price: 129,
-      rating: 4.7,
-      reviews: 56,
-      downloads: 1234,
-      image: '/images/marketplace/workflow-automation.jpg',
-      tags: ['Automation', 'Workflow', 'Integration', 'Drag & Drop']
+      reviews: 203,
+      category: 'Analytics',
+      image: '/images/marketplace/data-analytics.jpg',
+      featured: false,
+      tags: ['Analytics', 'Data', 'Visualization'],
+      seller: 'Data Insights Co.',
+      downloads: 4100
     }
   ];
 
-  const allTags = Array.from(new Set(marketplaceItems.flatMap(item => item.tags)));
+  const categories = [
+    { id: 'all', name: 'All Categories', count: 24 },
+    { id: 'ai-tools', name: 'AI Tools', count: 8 },
+    { id: 'security', name: 'Security', count: 5 },
+    { id: 'cloud-tools', name: 'Cloud Tools', count: 6 },
+    { id: 'analytics', name: 'Analytics', count: 5 }
+  ];
 
-  const filteredItems = marketplaceItems.filter(item => {
-    const matchesSearch = !searchQuery || 
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    
-    const matchesPrice = item.price >= priceRange[0] && item.price <= priceRange[1];
-    
-    const matchesTags = selectedTags.length === 0 || 
-      selectedTags.some(tag => item.tags.includes(tag));
-    
-    return matchesSearch && matchesCategory && matchesPrice && matchesTags;
+  const filteredProducts = products.filter(product => {
+    const matchesSearch = product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         product.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || 
+                           product.category.toLowerCase().replace(' ', '-') === selectedCategory;
+    return matchesSearch && matchesCategory;
   });
-
-  const sortedItems = [...filteredItems].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
-        return a.price - b.price;
-      case 'price-high':
-        return b.price - a.price;
-      case 'rating':
-        return b.rating - a.rating;
-      case 'downloads':
-        return b.downloads - a.downloads;
-      case 'newest':
-        return a.id.localeCompare(b.id);
-      default:
-        return b.downloads - a.downloads; // popular
-    }
-  });
-
-  const toggleTag = (tag: string) => {
-    setSelectedTags(prev => 
-      prev.includes(tag) 
-        ? prev.filter(t => t !== tag)
-        : [...prev, tag]
-    );
-  };
-
-  const clearFilters = () => {
-    setSearchQuery('');
-    setSelectedCategory('all');
-    setPriceRange([0, 1000]);
-    setSelectedTags([]);
-    setSortBy('popular');
-  };
 
   return (
-    <>
-      <SEO 
-        title="Marketplace - Zion Tech Group"
-        description="Discover and download innovative tools, services, and solutions from Zion Tech Group's marketplace. AI tools, cloud services, security solutions, and more."
-        keywords="marketplace, tools, services, AI, cloud, security, data analytics, mobile apps, Zion Tech Group"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-        {/* Header Section */}
-        <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Tech <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Marketplace</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover and purchase cutting-edge technology solutions from verified vendors
+          </p>
+        </motion.div>
+
+        {/* Search and Filters */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 mb-12"
+        >
+          <div className="grid md:grid-cols-4 gap-4">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search products..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
+              />
+            </div>
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="px-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
             >
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Marketplace{' '}
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Store
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-                Discover innovative tools, services, and solutions to accelerate your business growth. 
-                From AI-powered applications to enterprise security solutions.
-              </p>
-              
-              {/* Search Form */}
-              <form className="max-w-2xl mx-auto">
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
-                  <input
-                    type="text"
-                    placeholder="Search tools, services, or solutions..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors text-lg"
-                  />
-                </div>
-              </form>
-            </motion.div>
+              {categories.map(category => (
+                <option key={category.id} value={category.id} className="bg-gray-800">
+                  {category.name} ({category.count})
+                </option>
+              ))}
+            </select>
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="px-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
+            >
+              <option value="featured" className="bg-gray-800">Featured</option>
+              <option value="price-low" className="bg-gray-800">Price: Low to High</option>
+              <option value="price-high" className="bg-gray-800">Price: High to Low</option>
+              <option value="rating" className="bg-gray-800">Highest Rated</option>
+              <option value="newest" className="bg-gray-800">Newest</option>
+            </select>
+            <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center gap-2">
+              <Filter className="w-4 h-4" />
+              Filter
+            </button>
           </div>
-        </section>
+        </motion.div>
 
-        {/* Filters and Controls */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
-              {/* Category Filter */}
-              <div className="flex flex-wrap gap-3">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
-                    }`}
-                  >
-                    <category.icon className="w-4 h-4" />
-                    {category.name}
-                    <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
-                      {category.count}
-                    </span>
-                  </button>
-                ))}
-              </div>
-
-              {/* View Controls */}
-              <div className="flex items-center gap-4">
-                {/* View Mode Toggle */}
-                <div className="flex bg-white/10 rounded-lg p-1 border border-white/20">
-                  <button
-                    onClick={() => setViewMode('grid')}
-                    className={`p-2 rounded-md transition-all duration-300 ${
-                      viewMode === 'grid'
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
-                        : 'text-gray-400 hover:text-white'
-                    }`}
-                  >
-                    <Grid className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={() => setViewMode('list')}
-                    className={`p-2 rounded-md transition-all duration-300 ${
-                      viewMode === 'list'
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
-                        : 'text-gray-400 hover:text-white'
-                    }`}
-                  >
-                    <List className="w-5 h-5" />
-                  </button>
-                </div>
-
-                {/* Sort Dropdown */}
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-white/10 border border-white/20 text-white rounded-lg px-3 py-2 focus:outline-none focus:border-cyan-400 transition-colors"
+        {/* Featured Products */}
+        {selectedCategory === 'all' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mb-16"
+          >
+            <h2 className="text-2xl font-bold text-white mb-8">Featured Products</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {products.filter(product => product.featured).map((product, index) => (
+                <motion.div
+                  key={product.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
+                  className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden border border-purple-500/50 shadow-lg shadow-purple-500/10 hover:border-white/40 transition-all duration-300 group"
                 >
-                  <option value="popular">Most Popular</option>
-                  <option value="rating">Highest Rated</option>
-                  <option value="downloads">Most Downloaded</option>
-                  <option value="price-low">Price: Low to High</option>
-                  <option value="price-high">Price: High to Low</option>
-                  <option value="newest">Newest First</option>
-                </select>
-
-                {/* Clear Filters */}
-                {(searchQuery || selectedCategory !== 'all' || selectedTags.length > 0 || priceRange[1] !== 1000) && (
-                  <button
-                    onClick={clearFilters}
-                    className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/20 transition-colors"
-                  >
-                    Clear Filters
-                  </button>
-                )}
-              </div>
-            </div>
-
-            {/* Advanced Filters */}
-            <div className="mt-6 p-4 bg-white/5 rounded-lg border border-white/10">
-              <div className="flex flex-col lg:flex-row gap-6">
-                {/* Price Range */}
-                <div className="flex-1">
-                  <label className="block text-white font-medium mb-2">Price Range</label>
-                  <div className="flex items-center gap-3">
-                    <input
-                      type="number"
-                      placeholder="Min"
-                      value={priceRange[0]}
-                      onChange={(e) => setPriceRange([parseInt(e.target.value) || 0, priceRange[1]])}
-                      className="w-20 bg-white/10 border border-white/20 text-white rounded px-2 py-1 text-sm focus:outline-none focus:border-cyan-400"
-                    />
-                    <span className="text-gray-400">to</span>
-                    <input
-                      type="number"
-                      placeholder="Max"
-                      value={priceRange[1]}
-                      onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value) || 1000])}
-                      className="w-20 bg-white/10 border border-white/20 text-white rounded px-2 py-1 text-sm focus:outline-none focus:border-cyan-400"
-                    />
+                  <div className="h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <Tag className="w-8 h-8 text-white" />
+                      </div>
+                      <span className="text-white/70 text-sm">Featured</span>
+                    </div>
                   </div>
-                </div>
-
-                {/* Tags Filter */}
-                <div className="flex-1">
-                  <label className="block text-white font-medium mb-2">Tags</label>
-                  <div className="flex flex-wrap gap-2">
-                    {allTags.slice(0, 8).map((tag) => (
-                      <button
-                        key={tag}
-                        onClick={() => toggleTag(tag)}
-                        className={`px-3 py-1 rounded-full text-xs font-medium transition-all duration-300 ${
-                          selectedTags.includes(tag)
-                            ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
-                            : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
-                        }`}
-                      >
-                        {tag}
-                      </button>
-                    ))}
-                    {allTags.length > 8 && (
-                      <span className="text-gray-400 text-xs px-3 py-1">
-                        +{allTags.length - 8} more
+                  
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-full">
+                        {product.category}
                       </span>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Results Section */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            {/* Results Header */}
-            <div className="flex items-center justify-between mb-8">
-              <div>
-                <h2 className="text-2xl font-bold text-white">
-                  {filteredItems.length} {filteredItems.length === 1 ? 'Item' : 'Items'} Found
-                </h2>
-                {searchQuery && (
-                  <p className="text-gray-400 mt-1">
-                    Results for "{searchQuery}"
-                  </p>
-                )}
-              </div>
-              <div className="text-gray-400">
-                Showing {sortedItems.length} of {marketplaceItems.length} total items
-              </div>
-            </div>
-
-            {/* Items Grid/List */}
-            {sortedItems.length > 0 ? (
-              <div className={viewMode === 'grid' 
-                ? 'grid md:grid-cols-2 lg:grid-cols-3 gap-6' 
-                : 'space-y-4'
-              }>
-                {sortedItems.map((item, index) => (
-                  <motion.div
-                    key={item.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className={`bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:border-cyan-400/50 transition-all duration-300 ${
-                      viewMode === 'list' ? 'p-6' : 'p-6'
-                    }`}
-                  >
-                    {/* Item Header */}
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          {item.featured && (
-                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white">
-                              Featured
-                            </span>
-                          )}
-                          {item.new && (
-                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-green-500 to-emerald-500 text-white">
-                              New
-                            </span>
-                          )}
-                          {item.trending && (
-                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-pink-500 to-rose-500 text-white">
-                              Trending
-                            </span>
-                          )}
-                        </div>
-                        <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                        <p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
+                      {product.title}
+                    </h3>
+                    
+                    <p className="text-gray-300 mb-4 line-clamp-3">
+                      {product.description}
+                    </p>
+                    
+                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        {product.rating} ({product.reviews})
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Users className="w-4 h-4" />
+                        {product.downloads}
                       </div>
                     </div>
-
-                    {/* Item Stats */}
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-4 text-sm text-gray-400">
-                        <div className="flex items-center gap-1">
-                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                          <span>{item.rating}</span>
-                          <span>({item.reviews})</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Download className="w-4 h-4" />
-                          <span>{item.downloads.toLocaleString()}</span>
-                        </div>
+                    
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-2xl font-bold text-white">{product.price}</div>
+                        <div className="text-sm text-gray-400 line-through">{product.originalPrice}</div>
                       </div>
-                      <div className="text-2xl font-bold text-white">
-                        ${item.price}
-                      </div>
-                    </div>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {item.tags.slice(0, 3).map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-2 py-1 bg-white/5 text-gray-300 text-xs rounded-full border border-white/10"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                      {item.tags.length > 3 && (
-                        <span className="text-gray-400 text-xs px-2 py-1">
-                          +{item.tags.length - 3} more
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Action Buttons */}
-                    <div className="flex gap-3">
-                      <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                      <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2">
                         <ShoppingCart className="w-4 h-4" />
-                        Get Now
-                      </button>
-                      <button className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/20 transition-colors">
-                        <Heart className="w-4 h-4" />
-                      </button>
-                      <button className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/20 transition-colors">
-                        <Eye className="w-4 h-4" />
+                        Buy Now
                       </button>
                     </div>
-                  </motion.div>
-                ))}
-              </div>
-            ) : (
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+
+        {/* All Products */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        >
+          <h2 className="text-2xl font-bold text-white mb-8">
+            {selectedCategory === 'all' ? 'All Products' : categories.find(cat => cat.id === selectedCategory)?.name}
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProducts.map((product, index) => (
               <motion.div
+                key={product.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-center py-16"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 group"
               >
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">No items found</h3>
-                <p className="text-gray-300 mb-6">
-                  Try adjusting your search terms or filters to find what you're looking for.
-                </p>
-                <button
-                  onClick={clearFilters}
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-                >
-                  Clear All Filters
-                </button>
+                <div className="h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                      <Tag className="w-6 h-6 text-white" />
+                    </div>
+                    <span className="text-white/70 text-sm">{product.category}</span>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full">
+                      {product.category}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
+                    {product.title}
+                  </h3>
+                  
+                  <p className="text-gray-300 mb-4 text-sm line-clamp-2">
+                    {product.description}
+                  </p>
+                  
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                    <div className="flex items-center gap-1">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      {product.rating}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Users className="w-4 h-4" />
+                      {product.downloads}
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-lg font-bold text-white">{product.price}</div>
+                      <div className="text-sm text-gray-400 line-through">{product.originalPrice}</div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <button className="p-2 text-gray-400 hover:text-white transition-colors">
+                        <Heart className="w-4 h-4" />
+                      </button>
+                      <button className="p-2 text-gray-400 hover:text-white transition-colors">
+                        <Eye className="w-4 h-4" />
+                      </button>
+                      <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-1">
+                        <ShoppingCart className="w-4 h-4" />
+                        Buy
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
-            )}
+            ))}
           </div>
-        </section>
+        </motion.div>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Can't Find What You Need?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Looking for a custom solution or have specific requirements? 
-                Our team can help you build exactly what you need.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-                >
-                  Request Custom Solution
-                </a>
-                <a
-                  href="tel:+13024640950"
-                  className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
-                >
-                  📞 Call Now
-                </a>
-              </div>
-            </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Want to Sell Your Products?
+            </h3>
+            <p className="text-gray-300 mb-6">
+              Join our marketplace and reach thousands of potential customers. Start selling your technology solutions today.
+            </p>
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2 mx-auto">
+              Become a Seller
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
-        </section>
+        </motion.div>
       </div>
-    </>
+    </div>
   );
-}
+};
 
+export default Marketplace;
+>>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
