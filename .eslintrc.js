@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('eslint').Linter.Config} */
+const config = {
   extends: [
     "next/core-web-vitals"
   ],
@@ -12,3 +13,5 @@ module.exports = {
     "no-explicit-any": "warn"
   }
 };
+
+module.exports = config;
