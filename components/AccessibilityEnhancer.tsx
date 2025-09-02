@@ -1,24 +1,23 @@
 <<<<<<< HEAD
 import React, { useEffect, useState } from
-  'react';'
-  'interface AccessibilityEnhancerProps {children: React.ReactNode;
+  'react';''
+  'interface AccessibilityEnhancerProps {children: React.ReactNode;'
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
-const [fontSize, setFontSize] = useState(,
-  normal
-  ');'  const [reducedMotion, setReducedMotion] = useState(false);'
+const [fontSize, setFontSize] = useState(, normal
+  ');'  const [reducedMotion, setReducedMotion] = useState(false);''
   useEffect(() => {
-    // Check for user&apos;s motion preferences'
+    // Check for user&apos;s motion preferences''
   '    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
-  ').matches;'    setReducedMotion(prefersReducedMotion);'
+  ').matches;'    setReducedMotion(prefersReducedMotion);''
     // Apply accessibility settings from localStorage
     const savedHighContrast = localStorage.getItem(
   'highContrast') ===
-  'true';'    const savedFontSize = localStorage.getItem(
+  'true';'    const savedFontSize = localStorage.getItem('
   'fontSize') ||
-  'normal';'    setIsHighContrast(savedHighContrast);setFontSize(savedFontSize);
+  'normal';'    setIsHighContrast(savedHighContrast);setFontSize(savedFontSize);'
 =======
 import React, { useEffect, useState } from 'react'''interface AccessibilityEnhancerProps {children: React.ReactNode;
 }
@@ -41,35 +40,34 @@ const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reduc
     // High contrast mode
     if (highContrast) {
 <<<<<<< HEAD
-root.classList.add(,
-  high-contrast
+root.classList.add(, high-contrast
   ');'    } else {
   '      root.classList.remove('high-contrast
   ');'    }
-  '
+  ''
     // Font size adjustments
-    root.classList.remove('font-small
+    root.classList.remove('font-small'
   ', 'font-normal
   ', 'font-large
   ', 'font-extra-large
-  ');'    root.classList.add(`font-${fontSize}`);'`    // Reduced motion
+  ');'    root.classList.add(`font-${fontSize}`);'`    // Reduced motion'
     if (reducedMotion) {
       root.classList.add(
-  'reduced-motion');'    } else {
+  'reduced-motion');'    } else {'
   '      root.classList.remove('reduced-motion
   ');'    }
-  '  };
+  '  };'
 
   const toggleHighContrast = () => {;
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
-    localStorage.setItem('highContrast
-  ', newValue.toString());'    applyAccessibilityStyles(newValue, fontSize, reducedMotion);'  };
+    localStorage.setItem('highContrast'
+  ', newValue.toString());'    applyAccessibilityStyles(newValue, fontSize, reducedMotion);'  };'
 
   const changeFontSize = (newSize: string) => {;
     setFontSize(newSize);
     localStorage.setItem(
-  'fontSize, newSize);'    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);'  };return (
+  'fontSize, newSize);'    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);'  };return ('
 =======
 root.classList.add('high-contrast')'    } else {'      root.classList.remove('high-contrast')'    }'
     // Font size adjustments
@@ -93,18 +91,16 @@ root.classList.add('high-contrast')'    } else {'      root.classList.remove('hi
         <div className="space-y-2">"          <button"            onClick={toggleHighContrast}
             className={`w-full px-3 py-1 text-xs rounded ${`              isHighContrast 
 <<<<<<< HEAD
-                ?,
-  bg-blue-600 text-white' 
+                ?, bg-blue-600 text-white' '
   ': 'bg-gray-200 text-gray-700 hover:bg-gray-300'            }`}'            aria-label={`${isHighContrast ?,
   Disable': 'Enable} high contrast mode`}
+, >'            {isHighContrast ?'
+  'Disable': 'Enable} High Contrast,'
+  </button>'          `          <div className="text-xs text-gray-600 dark: text-gray-300">"            Font Size:"          </div>'
+          <div className="flex gap-1">"            {["
+  'small, '
 ,
-  >'            {isHighContrast ?
-  'Disable': 'Enable} High Contrast,
-  </button>'          `          <div className="text-xs text-gray-600 dark: text-gray-300">"            Font Size:"          </div>
-          <div className="flex gap-1">"            {[
-  'small,
-,
-  normal',
+  normal', '
   'large',
   'extra-large'].map((size) => (
   '              <button'                key={size}

@@ -1,6 +1,5 @@
 <<<<<<< HEAD
-import React from,
-  react';
+import React from, react';'
 import type { NextPage } from
   'next';
 import MainLayout from
@@ -14,32 +13,28 @@ import Link from
 
 const ITServicesPage: NextPage = () => {
   const itServices = getServicesByCategory(
-  'it-services);
+  'it-services);'
 
   const benefits = [
     {
-      icon: <Shield className="w-8 h-8" />,
-      title:,
-  Enterprise Security',
-      description: 'Bank-level security protocols and compliance standards to protect your business data.
+      icon: <Shield className="w-8 h-8" />, title:,
+  Enterprise Security', '
+      description: 'Bank-level security protocols and compliance standards to protect your business data.'
     },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title:,
-  Performance Optimization',
-      description: 'Optimize your infrastructure for maximum performance and efficiency.
+      icon: <Zap className="w-8 h-8" />, title:,
+  Performance Optimization', '
+      description: 'Optimize your infrastructure for maximum performance and efficiency.'
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title:,
-  Expert Team',
-      description: 'Experienced IT professionals with deep expertise in enterprise solutions.
+      icon: <Users className="w-8 h-8" />, title:,
+  Expert Team', '
+      description: 'Experienced IT professionals with deep expertise in enterprise solutions.'
     },
     {
-      icon: <Globe className="w-8 h-8" />,
-      title:,
-  Global Support',
-      description: '24/7 support and monitoring to ensure your systems run smoothly.
+      icon: <Globe className="w-8 h-8" />, title:,
+  Global Support', '
+      description: '24/7 support and monitoring to ensure your systems run smoothly.'
 =======
 import React from 'react'
 import type { NextPage } from 'next'
@@ -345,7 +340,7 @@ const ITServicesPage: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your IT Infrastructure?</h2>
           <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
-            Let&aposs discuss how our IT services can help modernize your infrastructure '
+            Let&aposs discuss how our IT services can help modernize your infrastructure ''
             and drive operational efficiency.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">

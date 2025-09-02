@@ -1,6 +1,5 @@
 <<<<<<< HEAD
-import React from,
-  react';
+import React from, react';'
 import type { NextPage } from
   'next';
 import MainLayout from
@@ -21,57 +20,36 @@ const SmallBusiness: NextPage = () => {
   const solutions = [
     {
 <<<<<<< HEAD
-      title:
-  'Cloud-Based Business Management,
-      description:
-  'Complete business management suite in the cloud',
-      icon: <Globe className="w-8 h-8" />,
-      features: [,
-  Customer relationship management',
+      title: 'Cloud-Based Business Management, '
+      description: 'Complete business management suite in the cloud',
+      icon: <Globe className="w-8 h-8" />, features: [,
+  Customer relationship management', '
   'Inventory tracking',
-  'Financial reporting',
-  'Team collaboration tools'
+  'Financial reporting', 'Team collaboration tools'
       ]
-    },
-    {
-      title: 'AI-Powered Customer Support,
-      description:
-  'Automated customer service with human touch',
-      icon: <Users className="w-8 h-8" />,
-      features: [,
-  24/7 chatbot support',
-  'Ticket management system',
-  'Knowledge base integration',
+    }, {
+      title: 'AI-Powered Customer Support,'
+      description: 'Automated customer service with human touch', icon: <Users className="w-8 h-8" />,
+      features: [, 24/7 chatbot support','
+  'Ticket management system', 'Knowledge base integration',
   'Performance analytics'
       ]
-    },
-    {
-      title: 'Digital Marketing Automation,
-      description:
-  'Streamline your marketing efforts with AI',
-      icon: <Zap className="w-8 h-8" />,
-      features: [,
-  Email marketing campaigns',
-  'Social media management',
-  'Content generation',
+    }, {
+      title: 'Digital Marketing Automation,'
+      description: 'Streamline your marketing efforts with AI', icon: <Zap className="w-8 h-8" />,
+      features: [, Email marketing campaigns','
+  'Social media management', 'Content generation',
   'Lead nurturing automation'
       ]
-    },
-    {
-      title: 'Cybersecurity Protection,
-      description:
-  'Comprehensive security for your business data',
-      icon: <Shield className="w-8 h-8" />,
+    }, {
+      title: 'Cybersecurity Protection,'
+      description: 'Comprehensive security for your business data', icon: <Shield className="w-8 h-8" />,
       features: [
-  'Data encryption',
-  'Regular security audits',
-  'Backup and recovery',
-  'Employee training'
+  'Data encryption', 'Regular security audits',
+  'Backup and recovery', 'Employee training'
 =======
-      title: 'Cloud-Based Business Management', description: 'Complete business management suite in the cloud',
-      icon: <Globe className="w-8 h-8" />, features: [
-        'Customer relationship managementInventory trackingFinancial reporting',
-        'Team collaboration tools'
+      title: 'Cloud-Based Business Management', description: 'Complete business management suite in the cloud', icon: <Globe className="w-8 h-8" />, features: [
+        'Customer relationship managementInventory trackingFinancial reporting', 'Team collaboration tools'
       ]
     }, {
       title: 'AI-Powered Customer Support',
@@ -98,28 +76,22 @@ const SmallBusiness: NextPage = () => {
   const benefits = [
     {
 <<<<<<< HEAD
-      icon: <DollarSign className="w-6 h-6" />,
-      title:,
-  Cost Effective',
-      description: 'Reduce operational costs by up to 40% with our efficient solutions
+      icon: <DollarSign className="w-6 h-6" />, title:,
+  Cost Effective', '
+      description: 'Reduce operational costs by up to 40% with our efficient solutions'
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title:,
-  Quick Implementation',
-      description: Get up and running in weeks, not months'
-    },
-    {
+      icon: <Clock className="w-6 h-6" />, title:,
+  Quick Implementation', '
+      description: Get up and running in weeks, not months''
+    }, {
       icon: <Shield className="w-6 h-6" />,
-      title:,
-  Scalable Growth',
-      description: 'Solutions that grow with your business
-    },
-    {
+      title:, Scalable Growth','
+      description: 'Solutions that grow with your business'
+    }, {
       icon: <Users className="w-6 h-6" />,
-      title:,
-  Dedicated Support',
-      description: 'Personal support team for your business needs
+      title:, Dedicated Support','
+      description: 'Personal support team for your business needs'
 =======
       icon: <DollarSign className="w-6 h-6" />, title: 'Cost Effective',
       description: 'Reduce operational costs by up to 40% with our efficient solutions'
@@ -140,50 +112,37 @@ const SmallBusiness: NextPage = () => {
   const pricing = [
     {
 <<<<<<< HEAD
-      name:,
-  Starter',
-      price: '$299,
+      name:, Starter','
+      price: '$299, '
       period:,
-  /month',
-      description: 'Perfect for small businesses just getting started,
-      features: [,
-  Up to 5 users',
-  'Basic CRM functionality',
-  'Email support',
-  'Standard security features',
-  'Monthly reporting'
+  /month', '
+      description: 'Perfect for small businesses just getting started,'
+      features: [, Up to 5 users','
+  'Basic CRM functionality', 'Email support',
+  'Standard security features', 'Monthly reporting'
       ]
-    },
-    {
-      name: 'Growth,
-      price:,
-  $599',
-      period: '/month,
+    }, {
+      name: 'Growth,'
+      price:, $599','
+      period: '/month, '
       description:,
-  Ideal for growing small businesses',
+  Ideal for growing small businesses', '
       features: [
-  'Up to 15 users,
-,
-  Advanced CRM features',
-  'AI customer support',
-  'Priority support',
-  'Advanced analytics',
-  'Custom integrations'
+  'Up to 15 users,'
+, Advanced CRM features','
+  'AI customer support', 'Priority support',
+  'Advanced analytics', 'Custom integrations'
       ]
-    },
-    {
-      name: 'Professional,
-      price:,
-  $999',
-      period: '/month,
+    }, {
+      name: 'Professional,'
+      price:, $999','
+      period: '/month, '
       description:,
-  Complete solution for established small businesses',
+  Complete solution for established small businesses', '
       features: [
-  'Unlimited users,
-  'Full feature access',
-  'Dedicated account manager',
-  '24/7 phone support',
-  'Custom development',
+  'Unlimited users,'
+  'Full feature access', 'Dedicated account manager',
+  '24/7 phone support', 'Custom development',
   'Advanced security features'
 =======
       name: 'Starter', price: '$299',

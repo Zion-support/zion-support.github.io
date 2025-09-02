@@ -2,22 +2,21 @@
 React, { useState } from
   'react';
 import { motion } from
-  'framer-motion';'import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from
-  'lucide-react';'
-  'const ContactFormEnhanced: React.FC = () => {
+  'framer-motion';'import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from'
+  'lucide-react';''
+  'const ContactFormEnhanced: React.FC = () => {'
   const [formData, setFormData] = useState({;
-    name:,
-  ', email: ','    subject:,
+    name:, ', email: ', '    subject:,'
   ', message: ''  });'  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
   'idle' |
   'success' |
   'error'>(
-  'idle');'
-  '  const handleSubmit = async (e: React.FormEvent) => {;e.preventDefault();
+  'idle');''
+  '  const handleSubmit = async (e: React.FormEvent) => {;e.preventDefault();'
 =======
 import React, { useState } from 'react'
-import  { motion } from 'framer-motion''import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucide-react'''const ContactFormEnhanced: React.FC = () => {
+import  { motion } from 'framer-motion''import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucide-react'''const ContactFormEnhanced: React.FC = () => {'
   const [formData, setFormData] = useState({
     name: '', email: '','    subject: '', message: '''  })'  const [isSubmitting, setIsSubmitting] = useState(false);'
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')''  const handleSubmit = async (e: React.FormEvent) => {;e.preventDefault();
@@ -28,8 +27,7 @@ import  { motion } from 'framer-motion''import { Send, CheckCircle, AlertCircle,
     await new Promise(resolve => setTimeout(resolve, 2000))
     
 <<<<<<< HEAD
-setSubmitStatus(,
-  success
+setSubmitStatus(, success
   ');'    setIsSubmitting(false);'    setFormData({ name: ', email:,
   ', subject: ', message: '' });'  };'
 =======

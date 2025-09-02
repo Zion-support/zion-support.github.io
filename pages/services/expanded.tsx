@@ -12,8 +12,7 @@ const ExpandedServicesPage: NextPage = () => {
   const ai = getServicesByCategory('ai-services');
 
   const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
+    phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
@@ -40,7 +39,7 @@ const ExpandedServicesPage: NextPage = () => {
           >
             Explore our full catalog of Micro SaaS products, enterprise IT services, and AI solutions. All offerings include real features, typical pricing ranges, and direct links.
           </motion.p>
-          <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="mt-6 flex flex-col sm: flex-row gap-3 justify-center">
             <Link href="/contact" className="bg-white text-blue-700 hover:bg-gray-100 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center">
               Talk to Sales <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
@@ -56,7 +55,7 @@ const ExpandedServicesPage: NextPage = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Micro SaaS</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {micro.slice(0, 12).map((svc) => (
-              <div key={svc.id} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div key={svc.id} className="border rounded-lg p-6 hover: shadow-lg transition-shadow">
                 <div className="flex items-start justify-between mb-3">
                   <div className="text-3xl" aria-hidden>{svc.icon}</div>
                   <div className="text-right">
@@ -71,7 +70,7 @@ const ExpandedServicesPage: NextPage = () => {
                   ))}
                 </ul>
                 <div className="flex justify-between items-center">
-                  <Link href={svc.link} className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">Learn more <ArrowRight className="w-4 h-4 ml-1" /></Link>
+                  <Link href={svc.link} className="text-blue-600 hover: text-blue-700 font-medium inline-flex items-center">Learn more <ArrowRight className="w-4 h-4 ml-1" /></Link>
                   <Link href="/contact" className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium">Get started</Link>
                 </div>
               </div>
@@ -83,9 +82,9 @@ const ExpandedServicesPage: NextPage = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">IT Services</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md: grid-cols-2 gap-8">
             {it.slice(0, 12).map((svc) => (
-              <div key={svc.id} className="bg-white border rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div key={svc.id} className="bg-white border rounded-lg p-6 hover: shadow-lg transition-shadow">
                 <div className="flex items-start justify-between mb-3">
                   <div className="text-3xl" aria-hidden>{svc.icon}</div>
                   <div className="text-right">
@@ -100,7 +99,7 @@ const ExpandedServicesPage: NextPage = () => {
                   ))}
                 </ul>
                 <div className="flex justify-between items-center">
-                  <Link href={svc.link} className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">Learn more <ArrowRight className="w-4 h-4 ml-1" /></Link>
+                  <Link href={svc.link} className="text-blue-600 hover: text-blue-700 font-medium inline-flex items-center">Learn more <ArrowRight className="w-4 h-4 ml-1" /></Link>
                   <Link href="/contact" className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium">Request quote</Link>
                 </div>
               </div>
@@ -112,9 +111,9 @@ const ExpandedServicesPage: NextPage = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">AI Services</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md: grid-cols-2 gap-8">
             {ai.slice(0, 12).map((svc) => (
-              <div key={svc.id} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div key={svc.id} className="border rounded-lg p-6 hover: shadow-lg transition-shadow">
                 <div className="flex items-start justify-between mb-3">
                   <div className="text-3xl" aria-hidden>{svc.icon}</div>
                   <div className="text-right">
@@ -129,7 +128,7 @@ const ExpandedServicesPage: NextPage = () => {
                   ))}
                 </ul>
                 <div className="flex justify-between items-center">
-                  <Link href={svc.link} className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">Learn more <ArrowRight className="w-4 h-4 ml-1" /></Link>
+                  <Link href={svc.link} className="text-blue-600 hover: text-blue-700 font-medium inline-flex items-center">Learn more <ArrowRight className="w-4 h-4 ml-1" /></Link>
                   <Link href="/contact" className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium">Book consult</Link>
                 </div>
               </div>
@@ -140,7 +139,7 @@ const ExpandedServicesPage: NextPage = () => {
 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-6 border">
               <h3 className="text-lg font-semibold mb-2">Contact</h3>
               <ul className="space-y-2 text-sm text-gray-700">

@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import React, { useEffect, useState } from
-  'react';'
-  'interface PerformanceMetrics {fcp?: number;
+  'react';''
+  'interface PerformanceMetrics {fcp?: number;'
 =======
 import React, { useEffect, useState } from 'react'''interface PerformanceMetrics {fcp?: number;
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
@@ -17,14 +17,13 @@ const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
 <<<<<<< HEAD
-if (typeof window ===,
-  undefined
-  ') return;''    // Only show in development or for admin users
+if (typeof window ===, undefined
+  ') return;''    // Only show in development or for admin users'
     const isDev = process.env.NODE_ENV ===
-  'development';'    const isAdmin = localStorage.getItem(
+  'development';'    const isAdmin = localStorage.getItem('
   'admin_mode') ===
-  'true';'
-  '    if (!isDev && !isAdmin) return;
+  'true';''
+  '    if (!isDev && !isAdmin) return;'
 =======
 if (typeof window === 'undefined') return''    // Only show in development or for admin users
     const isDev = process.env.NODE_ENV === 'development''    const isAdmin = localStorage.getItem('admin_mode') === 'true''    '    if (!isDev && !isAdmin) return'
@@ -35,37 +34,34 @@ if (typeof window === 'undefined') return''    // Only show in development or fo
       entries.forEach((entry) => {
         switch (entry.entryType) {
 <<<<<<< HEAD
-case 'paint
+case 'paint'
   ': if (entry.name === 'first-contentful-paint
   ') {              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));'            }
             break;
           case
   'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry.startTime }));'            break;'          case
-  'first-input': setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));,
-  break;'          case
+  'first-input': setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));, break;'          case'
   'layout-shift': if (!(entry as any).hadRecentInput) {
-  '              setMetrics(prev => ({                ...prev, cls: (prev.cls || 0) + (entry as any).value 
+  '              setMetrics(prev => ({                ...prev, cls: (prev.cls || 0) + (entry as any).value '
               }));
             }
             break;
           case
-  'navigation': setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }));,
-  break;'        }});
+  'navigation': setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }));, break;'        }});'
     });
 
     // Observe different types of performance entries
     try {
 observer.observe({ entryTypes: [
-  'paint,
+  'paint, '
 ,
-  largest-contentful-paint',
+  largest-contentful-paint', '
   'first-input',
-  'layout-shift',
-  'navigation'] });'    } catch (e) {
-  '      // Fallback for browsers that don&apos;t support all entry types''      observer.observe({ entryTypes: [
-  'paint,
-  'largest-contentful-paint'] });'    }
-  '
+  'layout-shift', 'navigation'] });'    } catch (e) {'
+  '      // Fallback for browsers that don&apos;t support all entry types''      observer.observe({ entryTypes: ['
+  'paint, '
+  'largest-contentful-paint'] });'    }'
+  ''
 =======
 case 'paint': if (entry.name === 'first-contentful-paint') {'              setMetrics(prev => ({ ...prev, fcp: entry.startTime }))'            }
             break;
@@ -94,14 +90,14 @@ observer.observe({ entryTypes: ['paintlargest-contentful-paintfirst-input', 'lay
 
 <<<<<<< HEAD
   const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
-if (value <= thresholds.good) return 'text-green-600
+if (value <= thresholds.good) return 'text-green-600'
   ';'    if (value <= thresholds.poor) return
-  'text-yellow-600';'    return
+  'text-yellow-600';'    return'
   'text-red-600';'  };'
   const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
     if (value <= thresholds.good) return
-  'Good';'    if (value <= thresholds.poor) return
-  'Needs Improvement';'    return
+  'Good';'    if (value <= thresholds.poor) return'
+  'Needs Improvement';'    return'
   'Poor';'  };'
 =======
   const getScoreColor = (value: number, thresholds: { good: number poor: number }) => {

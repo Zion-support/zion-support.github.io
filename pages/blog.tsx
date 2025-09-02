@@ -12,32 +12,19 @@ import { Card } from
 import { Badge } from
   '../components/ui/Badge';
 import { 
-  Calendar,
-  Clock,
-  User,
-  ArrowRight,
-  Search,
-  Filter,
-  Tag,
-  BookOpen,
-  TrendingUp,
-  Star,
-  Eye,
-  MessageCircle,
-  Share2,
-  Heart,
-  Brain,
-  Zap,
-  Shield,
-  Cloud,
-  Database,
-  Network,
-  Code,
-  Rocket,
-  Target,
-  Globe,
-  Phone,
-  Mail
+  Calendar, Clock,
+  User, ArrowRight,
+  Search, Filter,
+  Tag, BookOpen,
+  TrendingUp, Star,
+  Eye, MessageCircle,
+  Share2, Heart,
+  Brain, Zap,
+  Shield, Cloud,
+  Database, Network,
+  Code, Rocket,
+  Target, Globe,
+  Phone, Mail
 } from
   'lucide-react';
 =======
@@ -47,7 +34,6 @@ import { SEO } from '../components/SEO'
 import { Button } from '../components/ui/Button'
 import { Card } from '../components/ui/Card'
 import { Badge } from '../components/ui/Badge'
-import { 
   Calendar, Clock,
   User, ArrowRight,
   Search, Filter,
@@ -282,8 +268,7 @@ const Blog: React.FC = () => {
                         key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
                           category.active 
-                            ?,
-  bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
+                            ?, bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
                         }`}
                       >
                         <span>{category.name}</span>

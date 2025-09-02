@@ -10,22 +10,14 @@ import { Card } from
 import { Badge } from
   '../components/ui/Badge';
 import { 
-  Shield,
-  Lock,
-  Eye,
-  Database,
-  Users,
-  Mail,
-  Phone,
-  Calendar,
-  FileText,
-  CheckCircle,
-  AlertTriangle,
-  Globe,
-  Settings,
-  Trash2,
-  Download,
-  ArrowRight
+  Shield, Lock,
+  Eye, Database,
+  Users, Mail,
+  Phone, Calendar,
+  FileText, CheckCircle,
+  AlertTriangle, Globe,
+  Settings, Trash2,
+  Download, ArrowRight
 } from
   'lucide-react';
 =======
@@ -34,7 +26,6 @@ import { motion } from 'framer-motion'
 import { SEO } from '../components/SEO'
 import { Card } from '../components/ui/Card'
 import { Badge } from '../components/ui/Badge'
-import { 
   Shield, Lock,
   Eye, Database,
   Users, Mail,

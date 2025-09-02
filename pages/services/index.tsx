@@ -1,6 +1,5 @@
 <<<<<<< HEAD
-import React from,
-  react';
+import React from, react';'
 import type { NextPage } from
   'next';
 import MainLayout from
@@ -22,41 +21,30 @@ const ServicesPage: NextPage = () => {
   'ai-services');
 
   const stats = [
-    { number:
-  '80+, label:
-  'Micro SaaS Solutions', icon: Zap },
-    { number:,
-  35+', label: 'IT Services, icon: Shield },
-    { number:,
-  30+', label: 'AI Services, icon: Globe },
-    { number:,
-  500+', label: 'Projects Completed, icon: TrendingUp },
-  ];
+    { number: '80+, label: '
+  'Micro SaaS Solutions', icon: Zap }, { number:,
+  35+', label: 'IT Services, icon: Shield }, { number:,
+  30+', label: 'AI Services, icon: Globe }, { number:,
+  500+', label: 'Projects Completed, icon: TrendingUp },  ];
 
   const benefits = [
     {
-      icon: <DollarSign className="w-8 h-8" />,
-      title:,
-  Competitive Pricing',
-      description: Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.'
-    },
-    {
+      icon: <DollarSign className="w-8 h-8" />, title:,
+  Competitive Pricing', '
+      description: Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.''
+    }, {
       icon: <Target className="w-8 h-8" />,
-      title:,
-  Proven Results',
-      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.
-    },
-    {
+      title:, Proven Results','
+      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.'
+    }, {
       icon: <Rocket className="w-8 h-8" />,
-      title:,
-  Fast Implementation',
-      description: Rapid deployment and implementation with minimal downtime, getting you up and running quickly.'
+      title:, Fast Implementation','
+      description: Rapid deployment and implementation with minimal downtime, getting you up and running quickly.''
     },
     {
-      icon: <Award className="w-8 h-8" />,
-      title:,
-  Expert Support',
-      description: 24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
+      icon: <Award className="w-8 h-8" />, title:,
+  Expert Support', '
+      description: 24/7 expert support from our experienced team of developers, engineers, and AI specialists.''
 =======
 import React from 'react'
 import type { NextPage } from 'next'
@@ -452,7 +440,7 @@ const ServicesPage: NextPage = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let&aposs discuss how our comprehensive technology solutions can help your business achieve its goals and stay ahead of the competition.'
+              Let&aposs discuss how our comprehensive technology solutions can help your business achieve its goals and stay ahead of the competition.''
             </p>
             <div className="flex flex-col sm: flex-row justify-center gap-4">
               <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg">

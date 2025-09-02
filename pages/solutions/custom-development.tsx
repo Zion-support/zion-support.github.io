@@ -21,70 +21,51 @@ const CustomDevelopment: NextPage = () => {
   const developmentServices = [
     {
 <<<<<<< HEAD
-      icon: Code,
-      title:,
-  Web Application Development',
-      description: 'Custom web applications built with modern frameworks and technologies.,
+      icon: Code, title:,
+  Web Application Development', '
+      description: 'Custom web applications built with modern frameworks and technologies.,'
       features: [
-  'React, Vue.js, Angular',
-  'Node.js, Python, PHP',
-  'Responsive design',
-  'API integration']
-    },
-    {
+  'React, Vue.js, Angular', 'Node.js, Python, PHP',
+  'Responsive design', 'API integration']
+    }, {
       icon: Smartphone,
-      title:,
-  Mobile App Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android.,
+      title:, Mobile App Development','
+      description: 'Native and cross-platform mobile applications for iOS and Android., '
       features: [
-  'React Native, Flutter',
-  'Swift, Kotlin',
-  'App Store optimization',
+  'React Native, Flutter', 'Swift, Kotlin', 'App Store optimization',
   'Push notifications']
-    },
-    {
+    }, {
       icon: Globe,
-      title:,
-  E-commerce Solutions',
-      description: 'Complete e-commerce platforms with payment integration and inventory management.,
+      title:, E-commerce Solutions','
+      description: 'Complete e-commerce platforms with payment integration and inventory management., '
       features: [
   'Shopping cart functionality',
-  'Payment gateway integration',
-  'Inventory management',
+  'Payment gateway integration', 'Inventory management',
   'Order tracking']
-    },
-    {
+    }, {
       icon: Database,
-      title:,
-  Database Design & Management',
-      description: 'Custom database solutions optimized for performance and scalability.,
+      title:, Database Design & Management','
+      description: 'Custom database solutions optimized for performance and scalability., '
       features: [
   'MySQL, PostgreSQL, MongoDB',
-  'Data modeling',
-  'Performance optimization',
+  'Data modeling', 'Performance optimization',
   'Backup & recovery']
-    },
-    {
+    }, {
       icon: Zap,
-      title:,
-  API Development',
-      description: 'RESTful and GraphQL APIs for seamless integration between systems.,
+      title:, API Development','
+      description: 'RESTful and GraphQL APIs for seamless integration between systems., '
       features: [
   'RESTful APIs',
-  'GraphQL endpoints',
-  'Authentication & authorization',
+  'GraphQL endpoints', 'Authentication & authorization',
   'Rate limiting']
-    },
-    {
+    }, {
       icon: Shield,
-      title:,
-  Security Implementation',
-      description: 'Comprehensive security measures to protect your applications and data.,
+      title:, Security Implementation','
+      description: 'Comprehensive security measures to protect your applications and data., '
       features: [,
-  SSL/TLS encryption',
+  SSL/TLS encryption', '
   'Authentication systems',
-  'Data validation',
-  'Security audits']
+  'Data validation', 'Security audits']
 =======
       icon: Code, title: 'Web Application Development',
       description: 'Custom web applications built with modern frameworks and technologies.', features: ['React, Vue.js, AngularNode.js, Python, PHPResponsive design', 'API integration']
@@ -115,43 +96,37 @@ const CustomDevelopment: NextPage = () => {
   const developmentProcess = [
     {
 <<<<<<< HEAD
-      step: '01,
+      step: '01, '
       title:,
-  Discovery & Planning',
-      description: 'We analyze your requirements and create a detailed project roadmap.
+  Discovery & Planning', '
+      description: 'We analyze your requirements and create a detailed project roadmap.'
     },
     {
-      step:,
-  02',
-      title: 'Design & Architecture,
+      step:, 02','
+      title: 'Design & Architecture, '
       description:,
-  Our team designs the system architecture and user interface.'
+  Our team designs the system architecture and user interface.''
+    }, {
+      step: '03,'
+      title:, Development','
+      description: 'We build your solution using agile methodologies and best practices.'
+    }, {
+      step:,
+  04', '
+      title: 'Testing & Quality Assurance,'
+      description:, Comprehensive testing ensures your solution works flawlessly.''
     },
     {
-      step: '03,
+      step: '05, '
       title:,
-  Development',
-      description: 'We build your solution using agile methodologies and best practices.
+  Deployment & Launch', '
+      description: 'We deploy your solution and provide launch support.'
     },
     {
-      step:,
-  04',
-      title: 'Testing & Quality Assurance,
+      step:, 06','
+      title: 'Maintenance & Support, '
       description:,
-  Comprehensive testing ensures your solution works flawlessly.'
-    },
-    {
-      step: '05,
-      title:,
-  Deployment & Launch',
-      description: 'We deploy your solution and provide launch support.
-    },
-    {
-      step:,
-  06',
-      title: 'Maintenance & Support,
-      description:,
-  Ongoing support and maintenance to keep your solution running smoothly.'
+  Ongoing support and maintenance to keep your solution running smoothly.''
 =======
       step: '01', title: 'Discovery & Planning',
       description: 'We analyze your requirements and create a detailed project roadmap.'
@@ -177,29 +152,29 @@ const CustomDevelopment: NextPage = () => {
   ]
 
   const technologies = [
-    { name: 'React, category:,
-  Frontend' },
-    { name: 'Vue.js, category:,
-  Frontend' },
-    { name: 'Angular, category:,
-  Frontend' },
-    { name: 'Node.js, category:,
-  Backend' },
-    { name: 'Python, category:,
-  Backend' },
-    { name: 'PHP, category:,
-  Backend' },
-    { name: 'MySQL, category:,
-  Database' },
-    { name: 'PostgreSQL, category:,
-  Database' },
-    { name: 'MongoDB, category:,
-  Database' },
-    { name: 'AWS, category:,
-  Cloud' },
-    { name: 'Azure, category:,
-  Cloud' },
-    { name: 'Docker, category:
+    { name: 'React, category:,'
+  Frontend' }, '
+    { name: 'Vue.js, category:, '
+  Frontend' },'
+    { name: 'Angular, category:,'
+  Frontend' }, '
+    { name: 'Node.js, category:, '
+  Backend' },'
+    { name: 'Python, category:,'
+  Backend' }, '
+    { name: 'PHP, category:, '
+  Backend' },'
+    { name: 'MySQL, category:,'
+  Database' }, '
+    { name: 'PostgreSQL, category:, '
+  Database' },'
+    { name: 'MongoDB, category:,'
+  Database' }, '
+    { name: 'AWS, category:, '
+  Cloud' },'
+    { name: 'Azure, category:,'
+  Cloud' }, '
+    { name: 'Docker, category: '
   'DevOps' }
   ];
 
@@ -333,7 +308,7 @@ const CustomDevelopment: NextPage = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Start Your Project?</h2>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let&aposs discuss your custom development needs and create a solution that drives your business forward.'
+              Let&aposs discuss your custom development needs and create a solution that drives your business forward.''
             </p>
             <div className="flex flex-col sm: flex-row justify-center gap-4">
               <Link

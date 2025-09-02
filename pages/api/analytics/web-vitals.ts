@@ -14,26 +14,24 @@ interface WebVitalsData {
 export default async function handler(
   req: NextApiRequest, res: NextApiResponse
 ) {
-  if (req.method !==,
-  POST') {
-    return res.status(405).json({ error: 'Method not allowed });
+  if (req.method !==, POST') {'
+    return res.status(405).json({ error: 'Method not allowed });'
   }
 
   try {
     const data: WebVitalsData = req.body
 
     // Validate required fields
-    if (!data.name || typeof data.value !==,
-  number') {
-      return res.status(400).json({ error: 'Invalid data format });
+    if (!data.name || typeof data.value !==, number') {'
+      return res.status(400).json({ error: 'Invalid data format });'
     }
 
 <<<<<<< HEAD
     // Log the web vitals data (in production, you,
   d send this to your analytics service)
-    console.log('Web Vitals: , {
+    console.log('Web Vitals:  , {'
 =======
-    // Log the web vitals data (in production, you&aposd send this to your analytics service)'
+    // Log the web vitals data (in production, you&aposd send this to your analytics service)''
     console.log('Web Vitals: ', {
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       metric: data.name,
@@ -43,21 +41,18 @@ export default async function handler(
     // Here you would typically send the data to your analytics service
     // For example: Google Analytics, Mixpanel, or your own analytics database
     
-    // For now, we&aposll just acknowledge receipt'
+    // For now, we&aposll just acknowledge receipt''
     res.status(200).json({ 
 <<<<<<< HEAD
-      success: true, 
-      message:
-  'Web vitals data received',
-      metric: data.name,
-      value: data.value 
+      success: true, message: 'Web vitals data received',
+      metric: data.name, value: data.value 
     });
 
   } catch (error) {
     console.error(
-  'Error processing web vitals:,
+  'Error processing web vitals:, '
   , error);
-    res.status(500).json({ error: 'Internal server error });
+    res.status(500).json({ error: 'Internal server error });'
 =======
       success: true, message: 'Web vitals data received',
       metric: data.name, value: data.value 

@@ -322,8 +322,7 @@ const WhitePapers: React.FC = () => {
                         key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
                           category.active 
-                            ?,
-  bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
+                            ?, bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
                         }`}
                       >
                         <span>{category.name}</span>

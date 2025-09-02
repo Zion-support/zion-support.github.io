@@ -1,6 +1,5 @@
 <<<<<<< HEAD
-import React from,
-  react';
+import React from, react';'
 import type { NextPage } from
   'next';
 import MainLayout from
@@ -21,131 +20,84 @@ const Whitepapers: NextPage = () => {
   const whitepapers = [
     {
 <<<<<<< HEAD
-      id:
-  'ai-business-transformation,
+      id: 'ai-business-transformation, '
       title:,
-  AI-Powered Business Transformation: A Comprehensive Guide,
-      description:,
-  Explore how artificial intelligence is reshaping business operations and driving digital transformation across industries.',
-      author: 'Dr. Sarah Johnson,
-      date:,
-  2024-01-20',
-      category: 'Artificial Intelligence,
+  AI-Powered Business Transformation: A Comprehensive Guide, description:,
+  Explore how artificial intelligence is reshaping business operations and driving digital transformation across industries.', '
+      author: 'Dr. Sarah Johnson,'
+      date:, 2024-01-20','
+      category: 'Artificial Intelligence, '
       pages: 45,
-      downloads:
-  '12.5k',
-      rating: 4.8,
-      featured: true,
-      topics: [,
-  Machine Learning',
+      downloads: '12.5k', rating: 4.8,
+      featured: true, topics: [,
+  Machine Learning', '
   'Business Strategy',
-  'Digital Transformation',
-  'ROI Analysis']
-    },
-    {
-      id: 'cloud-migration-strategies,
-      title:,
-  Cloud Migration Strategies for Enterprise Success',
-      description: 'Best practices and proven strategies for successful cloud migration in enterprise environments.,
+  'Digital Transformation', 'ROI Analysis']
+    }, {
+      id: 'cloud-migration-strategies,'
+      title:, Cloud Migration Strategies for Enterprise Success','
+      description: 'Best practices and proven strategies for successful cloud migration in enterprise environments., '
       author:,
-  Michael Chen',
-      date: '2024-01-15,
-      category:
-  'Cloud Computing',
-      pages: 32,
-      downloads:
-  '8.2k',
-      rating: 4.7,
-      featured: true,
-      topics: [,
-  Cloud Architecture',
+  Michael Chen', '
+      date: '2024-01-15,'
+      category: 'Cloud Computing', pages: 32,
+      downloads: '8.2k', rating: 4.7,
+      featured: true, topics: [,
+  Cloud Architecture', '
   'Migration Planning',
-  'Cost Optimization',
-  'Security']
-    },
-    {
-      id: 'cybersecurity-framework,
-      title:,
-  Modern Cybersecurity Framework for Digital Businesses',
-      description: 'Comprehensive cybersecurity framework to protect your digital assets and ensure business continuity.,
+  'Cost Optimization', 'Security']
+    }, {
+      id: 'cybersecurity-framework,'
+      title:, Modern Cybersecurity Framework for Digital Businesses','
+      description: 'Comprehensive cybersecurity framework to protect your digital assets and ensure business continuity., '
       author:,
-  David Rodriguez',
-      date: '2024-01-10,
-      category:
-  'Cybersecurity',
-      pages: 38,
-      downloads:
-  '6.8k',
-      rating: 4.9,
-      featured: false,
-      topics: [,
-  Threat Detection',
+  David Rodriguez', '
+      date: '2024-01-10,'
+      category: 'Cybersecurity', pages: 38,
+      downloads: '6.8k', rating: 4.9,
+      featured: false, topics: [,
+  Threat Detection', '
   'Risk Management',
-  'Compliance',
-  'Incident Response']
-    },
-    {
-      id: 'microservices-architecture,
-      title:,
-  Microservices Architecture: Design Patterns and Best Practices,
-      description:,
-  Complete guide to designing and implementing microservices architecture for scalable applications.',
-      author: 'Emily Watson,
+  'Compliance', 'Incident Response']
+    }, {
+      id: 'microservices-architecture,'
+      title:, Microservices Architecture: Design Patterns and Best Practices,
+      description:, Complete guide to designing and implementing microservices architecture for scalable applications.','
+      author: 'Emily Watson, '
       date:,
-  2024-01-05',
-      category: 'Software Architecture,
-      pages: 52,
-      downloads:
-  '5.4k',
-      rating: 4.6,
-      featured: false,
-      topics: [,
-  Service Design',
-  'API Management',
-  'Scalability',
+  2024-01-05', '
+      category: 'Software Architecture,'
+      pages: 52, downloads: '5.4k',
+      rating: 4.6, featured: false,
+      topics: [, Service Design','
+  'API Management', 'Scalability',
   'DevOps']
-    },
-    {
-      id: 'data-analytics-insights,
-      title:,
-  Data Analytics for Business Intelligence: From Insights to Action,
-      description:,
-  How to leverage data analytics to drive informed business decisions and competitive advantage.',
-      author: 'Alex Thompson,
+    }, {
+      id: 'data-analytics-insights,'
+      title:, Data Analytics for Business Intelligence: From Insights to Action,
+      description:, How to leverage data analytics to drive informed business decisions and competitive advantage.','
+      author: 'Alex Thompson, '
       date:,
-  2023-12-28',
-      category: 'Data Analytics,
-      pages: 41,
-      downloads:
-  '4.9k',
-      rating: 4.7,
-      featured: false,
-      topics: [,
-  Business Intelligence',
-  'Data Visualization',
-  'Predictive Analytics',
+  2023-12-28', '
+      category: 'Data Analytics,'
+      pages: 41, downloads: '4.9k',
+      rating: 4.7, featured: false,
+      topics: [, Business Intelligence','
+  'Data Visualization', 'Predictive Analytics',
   'KPIs']
-    },
-    {
-      id: 'mobile-app-development,
-      title:,
-  Mobile App Development: Native vs Cross-Platform Strategies,
-      description:,
-  Comprehensive comparison of mobile development approaches and their impact on business outcomes.',
-      author: 'Lisa Park,
+    }, {
+      id: 'mobile-app-development,'
+      title:, Mobile App Development: Native vs Cross-Platform Strategies,
+      description:, Comprehensive comparison of mobile development approaches and their impact on business outcomes.','
+      author: 'Lisa Park, '
       date:,
-  2023-12-20',
-      category: 'Mobile Development,
-      pages: 28,
-      downloads:
-  '3.7k',
-      rating: 4.5,
-      featured: false,
+  2023-12-20', '
+      category: 'Mobile Development,'
+      pages: 28, downloads: '3.7k',
+      rating: 4.5, featured: false,
       topics: [
-  'React Native',
-  'Flutter',
-  'Performance',
-  'User Experience']
+  'React Native', 'Flutter',
+  'Performance', 'User Experience']
 =======
       id: 'ai-business-transformation', title: 'AI-Powered Business Transformation: A Comprehensive Guide',
       description: 'Explore how artificial intelligence is reshaping business operations and driving digital transformation across industries.', author: 'Dr. Sarah Johnson',
@@ -194,12 +146,9 @@ const Whitepapers: NextPage = () => {
 
 <<<<<<< HEAD
   const categories = [
-  'All',
-  'Artificial Intelligence',
-  'Cloud Computing',
-  'Cybersecurity',
-  'Software Architecture',
-  'Data Analytics',
+  'All', 'Artificial Intelligence',
+  'Cloud Computing', 'Cybersecurity',
+  'Software Architecture', 'Data Analytics',
   'Mobile Development'];
 =======
   const categories = ['AllArtificial IntelligenceCloud Computing', 'CybersecuritySoftware ArchitectureData Analytics', 'Mobile Development'];

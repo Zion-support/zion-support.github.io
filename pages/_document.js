@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https: //fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         
         {/* DNS prefetch for external resources */}
@@ -43,8 +43,7 @@ export default function Document() {
                   navigator.serviceWorker.register('/sw.js');
                 });
               }
-            `,
-          }}
+            `, }}
         />
       </Head>
       <body>

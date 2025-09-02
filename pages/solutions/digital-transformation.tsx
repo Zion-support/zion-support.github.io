@@ -21,70 +21,52 @@ const DigitalTransformation: NextPage = () => {
   const transformationServices = [
     {
 <<<<<<< HEAD
-      icon: Cloud,
-      title:,
-  Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.,
+      icon: Cloud, title:,
+  Cloud Migration', '
+      description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.,'
       benefits: [
-  'Reduced infrastructure costs',
-  'Improved scalability',
-  'Enhanced security',
-  'Better performance']
-    },
-    {
+  'Reduced infrastructure costs', 'Improved scalability',
+  'Enhanced security', 'Better performance']
+    }, {
       icon: Database,
-      title:,
-  Data Modernization',
-      description: 'Transform your data architecture to support modern analytics and business intelligence.,
+      title:, Data Modernization','
+      description: 'Transform your data architecture to support modern analytics and business intelligence., '
       benefits: [
   'Real-time analytics',
-  'Improved data quality',
-  'Better insights',
+  'Improved data quality', 'Better insights',
   'Automated reporting']
-    },
-    {
+    }, {
       icon: Users,
-      title:,
-  Process Automation',
-      description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors.,
+      title:, Process Automation','
+      description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors., '
       benefits: [
   'Increased productivity',
-  'Reduced errors',
-  'Cost savings',
+  'Reduced errors', 'Cost savings',
   'Better compliance']
-    },
-    {
+    }, {
       icon: Zap,
-      title:,
-  AI Integration',
-      description: 'Integrate artificial intelligence into your business processes for enhanced decision making.,
+      title:, AI Integration','
+      description: 'Integrate artificial intelligence into your business processes for enhanced decision making., '
       benefits: [
   'Predictive analytics',
-  'Automated insights',
-  'Improved accuracy',
+  'Automated insights', 'Improved accuracy',
   'Competitive advantage']
-    },
-    {
+    }, {
       icon: Shield,
-      title:,
-  Security Enhancement',
-      description: 'Implement modern security measures to protect your digital assets and ensure compliance.,
+      title:, Security Enhancement','
+      description: 'Implement modern security measures to protect your digital assets and ensure compliance., '
       benefits: [
   'Enhanced security',
-  'Compliance assurance',
-  'Risk reduction',
+  'Compliance assurance', 'Risk reduction',
   'Peace of mind']
-    },
-    {
+    }, {
       icon: Target,
-      title:,
-  Customer Experience',
-      description: 'Improve customer interactions through digital channels and personalized experiences.,
+      title:, Customer Experience','
+      description: 'Improve customer interactions through digital channels and personalized experiences., '
       benefits: [,
-  Better customer satisfaction',
+  Better customer satisfaction', '
   'Increased engagement',
-  'Higher retention',
-  'Improved loyalty']
+  'Higher retention', 'Improved loyalty']
 =======
       icon: Cloud, title: 'Cloud Migration',
       description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.', benefits: ['Reduced infrastructure costsImproved scalabilityEnhanced security', 'Better performance']
@@ -115,83 +97,68 @@ const DigitalTransformation: NextPage = () => {
   const transformationStages = [
     {
 <<<<<<< HEAD
-      stage: 'Assessment,
+      stage: 'Assessment, '
       title:,
-  Current State Analysis',
+  Current State Analysis', '
       description: We analyze your current systems, processes, and technology stack to identify opportunities for improvement.,
-  ,
-      duration: '2-4 weeks
+  , duration: '2-4 weeks'
     },
     {
-      stage:,
-  Strategy',
-      title: 'Digital Strategy Development,
+      stage:, Strategy','
+      title: 'Digital Strategy Development, '
       description:,
-  We create a comprehensive digital transformation roadmap aligned with your business objectives.',
-      duration: '3-6 weeks
+  We create a comprehensive digital transformation roadmap aligned with your business objectives.', '
+      duration: '3-6 weeks'
     },
     {
-      stage:,
-  Implementation',
-      title: 'Solution Implementation,
+      stage:, Implementation','
+      title: 'Solution Implementation, '
       description:,
-  We implement the digital solutions using agile methodologies and best practices.',
-      duration: '8-24 weeks
+  We implement the digital solutions using agile methodologies and best practices.', '
+      duration: '8-24 weeks'
     },
     {
-      stage:,
-  Optimization',
-      title: 'Continuous Improvement,
+      stage:, Optimization','
+      title: 'Continuous Improvement, '
       description:,
-  We monitor performance and continuously optimize your digital solutions for maximum impact.',
-      duration: 'Ongoing
+  We monitor performance and continuously optimize your digital solutions for maximum impact.', '
+      duration: 'Ongoing'
 =======
-      stage: 'Assessment', title: 'Current State Analysis',
-      description: 'We analyze your current systems, processes, and technology stack to identify opportunities for improvement.', duration: '2-4 weeks'
-    },
-    {
-      stage: 'Strategy', title: 'Digital Strategy Development',
-      description: 'We create a comprehensive digital transformation roadmap aligned with your business objectives.', duration: '3-6 weeks'
-    },
-    {
-      stage: 'Implementation', title: 'Solution Implementation',
-      description: 'We implement the digital solutions using agile methodologies and best practices.', duration: '8-24 weeks'
-    },
-    {
-      stage: 'Optimization', title: 'Continuous Improvement',
-      description: 'We monitor performance and continuously optimize your digital solutions for maximum impact.', duration: 'Ongoing'
+      stage: 'Assessment', title: 'Current State Analysis', description: 'We analyze your current systems, processes, and technology stack to identify opportunities for improvement.', duration: '2-4 weeks'
+    }, {
+      stage: 'Strategy', title: 'Digital Strategy Development', description: 'We create a comprehensive digital transformation roadmap aligned with your business objectives.', duration: '3-6 weeks'
+    }, {
+      stage: 'Implementation', title: 'Solution Implementation', description: 'We implement the digital solutions using agile methodologies and best practices.', duration: '8-24 weeks'
+    }, {
+      stage: 'Optimization', title: 'Continuous Improvement', description: 'We monitor performance and continuously optimize your digital solutions for maximum impact.', duration: 'Ongoing'
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
   ]
 
   const industries = [
 <<<<<<< HEAD
-    { name:,
-  Healthcare', description: Digital health records, telemedicine, and patient management systems,
+    { name:, Healthcare', description: Digital health records, telemedicine, and patient management systems, '
   },
-    { name: 'Finance, description:,
-  Digital banking, fraud detection, and automated trading systems' },
-    { name: 'Manufacturing, description:,
-  IoT integration, predictive maintenance, and supply chain optimization' },
-    { name: 'Retail, description:,
-  E-commerce platforms, inventory management, and customer analytics' },
-    { name: 'Education, description:,
-  Learning management systems, virtual classrooms, and student analytics' },
-    { name: 'Government, description:,
-  Citizen services, digital governance, and public safety systems' }
+    { name: 'Finance, description:,'
+  Digital banking, fraud detection, and automated trading systems' }, '
+    { name: 'Manufacturing, description:, '
+  IoT integration, predictive maintenance, and supply chain optimization' },'
+    { name: 'Retail, description:,'
+  E-commerce platforms, inventory management, and customer analytics' }, '
+    { name: 'Education, description:, '
+  Learning management systems, virtual classrooms, and student analytics' },'
+    { name: 'Government, description:,'
+  Citizen services, digital governance, and public safety systems' }'
   ];
 
   const successMetrics = [
-    { metric: '85%, label:,
+    { metric: '85%, label:,'
   Cost Reduction', description: 'Average cost savings achieved through digital transformation },
-    { metric:,
-  60%', label: 'Efficiency Gain, description:,
-  Improvement in operational efficiency' },
-    { metric: '90%, label:,
-  Customer Satisfaction', description: 'Increase in customer satisfaction scores },
-    { metric:,
-  75%', label: 'Time Savings, description:
-  'Reduction in time-to-market for new products' }
+    { metric:, 60%', label: 'Efficiency Gain, description:,
+  Improvement in operational efficiency' }, '
+    { metric: '90%, label:, '
+  Customer Satisfaction', description: 'Increase in customer satisfaction scores }, { metric:,
+  75%', label: 'Time Savings, description: 'Reduction in time-to-market for new products' }
 =======
     { name: 'Healthcare', description: 'Digital health records, telemedicine, and patient management systems' },
     { name: 'Finance', description: 'Digital banking, fraud detection, and automated trading systems' },
@@ -360,7 +327,7 @@ const DigitalTransformation: NextPage = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h2>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let&aposs discuss how we can help you achieve your digital transformation goals and drive sustainable growth.'
+              Let&aposs discuss how we can help you achieve your digital transformation goals and drive sustainable growth.''
             </p>
             <div className="flex flex-col sm: flex-row justify-center gap-4">
               <Link

@@ -5,7 +5,7 @@ import { SEO } from
   '../components/SEO';''const Home: React.FC = () => {
 =======
 import React from 'react'
-import  { SEO } from '../components/SEO'''const Home: React.FC = () => {'
+import  { SEO } from '../components/SEO'''const Home: React.FC = () => {''
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   return (
     <>

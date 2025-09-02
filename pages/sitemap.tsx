@@ -1,18 +1,17 @@
 <<<<<<< HEAD
-React from,
-  react';
+React from, react';'
 import { motion } from
-  'framer-motion';'{ SEO } from
+  'framer-motion';'{ SEO } from'
   '../components/SEO';
 import { Card } from
-  '../components/ui/Card';'{ Badge } from
+  '../components/ui/Card';'{ Badge } from'
   '../components/ui/Badge';
-import { ;'  Map, ArrowRight,
+import { ;'  Map, ArrowRight,'
 =======
 import React from 'react'
-import  { motion } from 'framer-motion''import { SEO } from '../components/SEO'
-import  { Card } from '../components/ui/Card''import { Badge } from '../components/ui/Badge';
-import  { '  Map, ArrowRight,
+import  { motion } from 'framer-motion''import { SEO } from '../components/SEO''
+import  { Card } from '../components/ui/Card''import { Badge } from '../components/ui/Badge';'
+import  { '  Map, ArrowRight,'
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   ExternalLink, Home,
   Users, Briefcase,
@@ -28,9 +27,9 @@ import  { '  Map, ArrowRight,
   CheckCircle
 <<<<<<< HEAD
 } from
-  'lucide-react';'
-  'const Sitemap: React.FC = () => {
-  const lastUpdated = new Date().toISOString().split('T
+  'lucide-react';''
+  'const Sitemap: React.FC = () => {'
+  const lastUpdated = new Date().toISOString().split('T'
   ')[0];'  const mainPages = [;
 =======
 } from 'lucide-react'''const Sitemap: React.FC = () => {
@@ -45,7 +44,7 @@ import  { '  Map, ArrowRight,
     { name: "Main Pages", pages: mainPages, color: "from-blue-500 to-cyan-500" }, { name: "Services", pages: servicePages, color: "from-purple-500 to-pink-500" },"    { name: "Content", pages: contentPages, color: "from-green-500 to-emerald-500" }"  ];""
   return (
 <<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"      <SEO "        title="Sitemap - Zion Tech Group" "        description="Navigate through all pages and content on the Zion Tech Group website. Find what you&apos;re looking for quickly and easily."'
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"      <SEO "        title="Sitemap - Zion Tech Group" "        description="Navigate through all pages and content on the Zion Tech Group website. Find what you&apos;re looking for quickly and easily."''"
   '      />'      
 =======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"      <SEO "        title="Sitemap - Zion Tech Group" "        description="Navigate through all pages and content on the Zion Tech Group website. Find what you&aposre looking for quickly and easily."''      />'      '"

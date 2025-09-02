@@ -30,10 +30,8 @@ interface UserBehavior {
 const AnalyticsManager: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
   const [userBehavior, setUserBehavior] = useState<UserBehavior>({
-    pageViews: 0,
-    sessionDuration: 0,
-    bounceRate: 0,
-    conversionRate: 0,
+    pageViews: 0, sessionDuration: 0,
+    bounceRate: 0, conversionRate: 0,
   });
 
   // Initialize analytics
@@ -51,13 +49,10 @@ const AnalyticsManager: React.FC = () => {
     // Initialize Google Analytics
     if (typeof gtag !== 'undefined') {
       gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: document.title,
-        page_location: window.location.href,
+        page_title: document.title, page_location: window.location.href,
         custom_map: {
-          custom_parameter_1: 'user_type',
-          custom_parameter_2: 'session_id',
-        },
-      });
+          custom_parameter_1: 'user_type', custom_parameter_2: 'session_id',
+        }, });
     }
 
     // Initialize other analytics services
@@ -78,14 +73,10 @@ const AnalyticsManager: React.FC = () => {
     
     // Track user properties
     trackUserProperties({
-      session_id: sessionId,
-      user_id: userId,
-      user_agent: navigator.userAgent,
-      screen_resolution: `${screen.width}x${screen.height}`,
-      viewport_size: `${window.innerWidth}x${window.innerHeight}`,
-      color_depth: screen.colorDepth,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      language: navigator.language,
+      session_id: sessionId, user_id: userId,
+      user_agent: navigator.userAgent, screen_resolution: `${screen.width}x${screen.height}`,
+      viewport_size: `${window.innerWidth}x${window.innerHeight}`, color_depth: screen.colorDepth,
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone, language: navigator.language,
     });
   }, []);
 
@@ -104,12 +95,9 @@ const AnalyticsManager: React.FC = () => {
 
   const trackPageView = useCallback(() => {
     const pageData = {
-      page_title: document.title,
-      page_location: window.location.href,
-      page_path: window.location.pathname,
-      referrer: document.referrer,
-      timestamp: new Date().toISOString(),
-    };
+      page_title: document.title, page_location: window.location.href,
+      page_path: window.location.pathname, referrer: document.referrer,
+      timestamp: new Date().toISOString(), };
 
     // Google Analytics
     if (typeof gtag !== 'undefined') {
@@ -118,17 +106,13 @@ const AnalyticsManager: React.FC = () => {
 
     // Custom analytics
     sendAnalyticsEvent({
-      name: 'page_view',
-      category: 'Navigation',
-      action: 'view',
-      label: window.location.pathname,
-      custom_parameters: pageData,
-    });
+      name: 'page_view', category: 'Navigation',
+      action: 'view', label: window.location.pathname,
+      custom_parameters: pageData, });
 
     // Update user behavior
     setUserBehavior(prev => ({
-      ...prev,
-      pageViews: prev.pageViews + 1,
+      ...prev, pageViews: prev.pageViews + 1,
     }));
   }, []);
 
@@ -138,10 +122,8 @@ const AnalyticsManager: React.FC = () => {
     // Google Analytics
     if (typeof gtag !== 'undefined') {
       gtag('event', event.name, {
-        event_category: event.category,
-        event_label: event.label,
-        value: event.value,
-        ...event.custom_parameters,
+        event_category: event.category, event_label: event.label,
+        value: event.value, ...event.custom_parameters,
       });
     }
 
@@ -152,22 +134,15 @@ const AnalyticsManager: React.FC = () => {
   const sendAnalyticsEvent = useCallback(async (event: AnalyticsEvent) => {
     try {
       const eventData = {
-        ...event,
-        timestamp: new Date().toISOString(),
-        session_id: sessionStorage.getItem('analytics_session_id'),
-        user_id: sessionStorage.getItem('analytics_user_id'),
-        page_url: window.location.href,
-        user_agent: navigator.userAgent,
-      };
+        ...event, timestamp: new Date().toISOString(), session_id: sessionStorage.getItem('analytics_session_id'), user_id: sessionStorage.getItem('analytics_user_id'), page_url: window.location.href,
+        user_agent: navigator.userAgent, };
 
       // Send to custom analytics endpoint
       await fetch('/api/analytics', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(eventData),
-      });
+          'Content-Type': 'application/json', },
+        body: JSON.stringify(eventData), });
     } catch (error) {
       console.error('Analytics: Failed to send event', error);
     }
@@ -176,16 +151,13 @@ const AnalyticsManager: React.FC = () => {
   const trackUserProperties = useCallback((properties: Record<string, any>) => {
     if (typeof gtag !== 'undefined') {
       gtag('config', 'GA_MEASUREMENT_ID', {
-        custom_map: properties,
-      });
+        custom_map: properties, });
     }
 
     // Store in custom analytics
     sendAnalyticsEvent({
-      name: 'user_properties',
-      category: 'User',
-      action: 'identify',
-      custom_parameters: properties,
+      name: 'user_properties', category: 'User',
+      action: 'identify', custom_parameters: properties,
     });
   }, []);
 
@@ -193,48 +165,35 @@ const AnalyticsManager: React.FC = () => {
     // Google Analytics
     if (typeof gtag !== 'undefined') {
       gtag('event', 'web_vitals', {
-        name: 'FCP',
-        value: Math.round(metrics.fcp),
-        event_category: 'Performance',
+        name: 'FCP', value: Math.round(metrics.fcp), event_category: 'Performance',
       });
       gtag('event', 'web_vitals', {
-        name: 'LCP',
-        value: Math.round(metrics.lcp),
-        event_category: 'Performance',
+        name: 'LCP', value: Math.round(metrics.lcp), event_category: 'Performance',
       });
       gtag('event', 'web_vitals', {
-        name: 'FID',
-        value: Math.round(metrics.fid),
-        event_category: 'Performance',
+        name: 'FID', value: Math.round(metrics.fid), event_category: 'Performance',
       });
       gtag('event', 'web_vitals', {
-        name: 'CLS',
-        value: Math.round(metrics.cls * 1000),
-        event_category: 'Performance',
+        name: 'CLS', value: Math.round(metrics.cls * 1000), event_category: 'Performance',
       });
     }
 
     // Custom analytics
     sendAnalyticsEvent({
-      name: 'performance_metrics',
-      category: 'Performance',
-      action: 'measure',
-      custom_parameters: metrics,
+      name: 'performance_metrics', category: 'Performance',
+      action: 'measure', custom_parameters: metrics,
     });
   }, []);
 
   const trackConversion = useCallback((conversionType: string, value?: number) => {
     trackEvent({
-      name: 'conversion',
-      category: 'Conversion',
-      action: conversionType,
-      value: value,
+      name: 'conversion', category: 'Conversion',
+      action: conversionType, value: value,
     });
 
     // Update user behavior
     setUserBehavior(prev => ({
-      ...prev,
-      conversionRate: prev.conversionRate + 1,
+      ...prev, conversionRate: prev.conversionRate + 1,
     }));
   }, [trackEvent]);
 
@@ -244,8 +203,7 @@ const AnalyticsManager: React.FC = () => {
     const updateSessionDuration = () => {
       const duration = Date.now() - startTime;
       setUserBehavior(prev => ({
-        ...prev,
-        sessionDuration: duration,
+        ...prev, sessionDuration: duration,
       }));
     };
 
@@ -264,10 +222,8 @@ const AnalyticsManager: React.FC = () => {
     const sessionDuration = Date.now() - parseInt(sessionStorage.getItem('analytics_start_time') || '0');
     
     trackEvent({
-      name: 'session_end',
-      category: 'Session',
-      action: 'end',
-      value: sessionDuration,
+      name: 'session_end', category: 'Session',
+      action: 'end', value: sessionDuration,
     });
   }, [trackEvent]);
 
@@ -280,17 +236,13 @@ const AnalyticsManager: React.FC = () => {
       
       if (link) {
         trackEvent({
-          name: 'link_click',
-          category: 'Interaction',
-          action: 'click',
-          label: link.href,
+          name: 'link_click', category: 'Interaction',
+          action: 'click', label: link.href,
         });
       } else if (button) {
         trackEvent({
-          name: 'button_click',
-          category: 'Interaction',
-          action: 'click',
-          label: button.textContent || button.className,
+          name: 'button_click', category: 'Interaction',
+          action: 'click', label: button.textContent || button.className,
         });
       }
     };
@@ -300,10 +252,8 @@ const AnalyticsManager: React.FC = () => {
       
       if (scrollPercent > 0 && scrollPercent % 25 === 0) {
         trackEvent({
-          name: 'scroll_depth',
-          category: 'Engagement',
-          action: 'scroll',
-          value: scrollPercent,
+          name: 'scroll_depth', category: 'Engagement',
+          action: 'scroll', value: scrollPercent,
         });
       }
     };
@@ -311,10 +261,8 @@ const AnalyticsManager: React.FC = () => {
     const handleFormSubmit = (event: Event) => {
       const form = event.target as HTMLFormElement;
       trackEvent({
-        name: 'form_submit',
-        category: 'Conversion',
-        action: 'submit',
-        label: form.action || form.className,
+        name: 'form_submit', category: 'Conversion',
+        action: 'submit', label: form.action || form.className,
       });
     };
 
@@ -332,14 +280,12 @@ const AnalyticsManager: React.FC = () => {
   // Expose analytics functions globally
   useEffect(() => {
     (window as any).analytics = {
-      track: trackEvent,
-      trackConversion,
-      trackPerformance,
-      trackUserProperties,
+      track: trackEvent, trackConversion,
+      trackPerformance, trackUserProperties,
     };
   }, [trackEvent, trackConversion, trackPerformance, trackUserProperties]);
 
-  return null; // This component doesn't render anything
+  return null; // This component doesn&apos;t render anything'
 };
 
 export default AnalyticsManager;

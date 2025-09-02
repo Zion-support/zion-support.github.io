@@ -2,12 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Brain, Cloud, Shield, Zap, Users, Rocket, TrendingUp, CheckCircle, ArrowRight, 
-  Star, Award, Globe, Database, Lock, Cpu, Network, Smartphone, BarChart3, 
-  Code, Server, Chip, Wifi, ShieldCheck, Bot, GitFork, Eye, Sparkles, 
-  Phone, Mail, MapPin, MessageSquare, FileText, Search, Clock, Atom, 
-  Target, DollarSign, Building2, Heart, Car, Leaf, Stethoscope, Microscope, 
-  Workflow, Automation, BookOpen, Receipt, Calendar, Share2, CreditCard, 
+  Brain, Cloud, Shield, Zap, Users, Rocket, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Database, Lock, Cpu, Network, Smartphone, BarChart3, 
+  Code, Server, Chip, Wifi, ShieldCheck, Bot, GitFork, Eye, Sparkles, Phone, Mail, MapPin, MessageSquare, FileText, Search, Clock, Atom, Target, DollarSign, Building2, Heart, Car, Leaf, Stethoscope, Microscope, Workflow, Automation, BookOpen, Receipt, Calendar, Share2, CreditCard, 
   Package, Bot as BotIcon, Camera, Video, Music, Image, Download, Upload,
   Monitor, Laptop, Smartphone as PhoneIcon, Tablet, Headphones, Printer,
   HardDrive, MemoryStick, Router, Wifi as WifiIcon, Bluetooth, Usb,
@@ -31,587 +27,351 @@ type Service = {
 
 const microSaaSServices: Service[] = [
   {
-    title: 'AI-Powered Content Creation Suite',
-    description: 'Complete AI content generation platform with SEO optimization, multi-language support, and brand voice consistency.',
-    priceRange: '$99 - $499/month',
-    marketPrice: '$150 - $600/month',
-    learnMoreUrl: '/services/ai-content-creation',
-    icon: FileText,
-    category: 'Content & Marketing',
-    popular: true,
+    title: 'AI-Powered Content Creation Suite', description: 'Complete AI content generation platform with SEO optimization, multi-language support, and brand voice consistency.',
+    priceRange: '$99 - $499/month', marketPrice: '$150 - $600/month',
+    learnMoreUrl: '/services/ai-content-creation', icon: FileText,
+    category: 'Content & Marketing', popular: true,
     features: [
-      'AI blog post generation',
-      'Social media content creation',
-      'SEO optimization suggestions',
-      'Multi-language translation',
-      'Brand voice training',
-      'Content calendar automation'
-    ],
-    benefits: [
+      'AI blog post generation', 'Social media content creation',
+      'SEO optimization suggestions', 'Multi-language translation',
+      'Brand voice training', 'Content calendar automation'
+    ], benefits: [
       'Save 80% content creation time',
-      'Increase engagement by 300%',
-      'Improve SEO rankings',
-      'Maintain consistent brand voice',
-      'Scale content production'
+      'Increase engagement by 300%', 'Improve SEO rankings',
+      'Maintain consistent brand voice', 'Scale content production'
     ]
-  },
-  {
+  }, {
     title: 'Smart Invoice & Payment Management',
-    description: 'Automated invoicing, payment tracking, and financial analytics with AI-powered insights for small businesses.',
-    priceRange: '$29 - $149/month',
-    marketPrice: '$50 - $200/month',
-    learnMoreUrl: '/services/smart-invoicing',
-    icon: CreditCard,
-    category: 'Finance & Accounting',
-    popular: true,
-    features: [
+    description: 'Automated invoicing, payment tracking, and financial analytics with AI-powered insights for small businesses.', priceRange: '$29 - $149/month',
+    marketPrice: '$50 - $200/month', learnMoreUrl: '/services/smart-invoicing',
+    icon: CreditCard, category: 'Finance & Accounting',
+    popular: true, features: [
       'Automated invoice generation',
-      'Payment tracking & reminders',
-      'Financial analytics dashboard',
-      'Tax preparation assistance',
-      'Multi-currency support',
+      'Payment tracking & reminders', 'Financial analytics dashboard',
+      'Tax preparation assistance', 'Multi-currency support',
       'Integration with accounting software'
-    ],
-    benefits: [
+    ], benefits: [
       'Reduce payment delays by 60%',
-      'Automate 90% of invoicing tasks',
-      'Improve cash flow visibility',
-      'Simplify tax preparation',
-      'Professional invoice templates'
+      'Automate 90% of invoicing tasks', 'Improve cash flow visibility',
+      'Simplify tax preparation', 'Professional invoice templates'
     ]
-  },
-  {
+  }, {
     title: 'AI Customer Support Chatbot Builder',
-    description: 'Create intelligent chatbots with natural language processing, sentiment analysis, and seamless human handoff.',
-    priceRange: '$79 - $399/month',
-    marketPrice: '$120 - $500/month',
-    learnMoreUrl: '/services/ai-chatbot-builder',
-    icon: BotIcon,
-    category: 'Customer Service',
-    popular: true,
-    features: [
+    description: 'Create intelligent chatbots with natural language processing, sentiment analysis, and seamless human handoff.', priceRange: '$79 - $399/month',
+    marketPrice: '$120 - $500/month', learnMoreUrl: '/services/ai-chatbot-builder',
+    icon: BotIcon, category: 'Customer Service',
+    popular: true, features: [
       'No-code chatbot builder',
-      'Natural language processing',
-      'Sentiment analysis',
-      'Multi-channel deployment',
-      'Analytics & insights',
+      'Natural language processing', 'Sentiment analysis',
+      'Multi-channel deployment', 'Analytics & insights',
       'Human agent handoff'
-    ],
-    benefits: [
+    ], benefits: [
       '24/7 customer support',
-      'Reduce support costs by 70%',
-      'Improve response time by 90%',
-      'Increase customer satisfaction',
-      'Scale support operations'
+      'Reduce support costs by 70%', 'Improve response time by 90%',
+      'Increase customer satisfaction', 'Scale support operations'
     ]
-  },
-  {
+  }, {
     title: 'Smart Inventory Management System',
-    description: 'Real-time inventory tracking with predictive analytics, automated reordering, and demand forecasting.',
-    priceRange: '$99 - $499/month',
-    marketPrice: '$150 - $600/month',
-    learnMoreUrl: '/services/smart-inventory',
-    icon: Package,
-    category: 'E-commerce & Retail',
-    popular: false,
-    features: [
+    description: 'Real-time inventory tracking with predictive analytics, automated reordering, and demand forecasting.', priceRange: '$99 - $499/month',
+    marketPrice: '$150 - $600/month', learnMoreUrl: '/services/smart-inventory',
+    icon: Package, category: 'E-commerce & Retail',
+    popular: false, features: [
       'Real-time inventory tracking',
-      'Predictive demand forecasting',
-      'Automated reorder points',
-      'Multi-location management',
-      'Barcode scanning integration',
+      'Predictive demand forecasting', 'Automated reorder points',
+      'Multi-location management', 'Barcode scanning integration',
       'Supplier management'
-    ],
-    benefits: [
+    ], benefits: [
       'Reduce stockouts by 80%',
-      'Optimize inventory levels',
-      'Lower carrying costs',
-      'Improve cash flow',
-      'Streamline operations'
+      'Optimize inventory levels', 'Lower carrying costs',
+      'Improve cash flow', 'Streamline operations'
     ]
-  },
-  {
+  }, {
     title: 'AI-Powered Email Marketing Platform',
-    description: 'Intelligent email campaigns with personalization, A/B testing, and advanced analytics for maximum ROI.',
-    priceRange: '$39 - $199/month',
-    marketPrice: '$60 - $250/month',
-    learnMoreUrl: '/services/ai-email-marketing',
-    icon: Mail,
-    category: 'Email Marketing',
-    popular: false,
-    features: [
+    description: 'Intelligent email campaigns with personalization, A/B testing, and advanced analytics for maximum ROI.', priceRange: '$39 - $199/month',
+    marketPrice: '$60 - $250/month', learnMoreUrl: '/services/ai-email-marketing',
+    icon: Mail, category: 'Email Marketing',
+    popular: false, features: [
       'AI-powered personalization',
-      'Automated campaign sequences',
-      'A/B testing optimization',
-      'Advanced segmentation',
-      'Deliverability optimization',
+      'Automated campaign sequences', 'A/B testing optimization',
+      'Advanced segmentation', 'Deliverability optimization',
       'ROI tracking & analytics'
-    ],
-    benefits: [
+    ], benefits: [
       'Increase open rates by 40%',
-      'Boost click-through rates by 60%',
-      'Improve conversion rates',
-      'Automate campaign management',
-      'Maximize email ROI'
+      'Boost click-through rates by 60%', 'Improve conversion rates',
+      'Automate campaign management', 'Maximize email ROI'
     ]
-  },
-  {
+  }, {
     title: 'Smart Project Time Tracker',
-    description: 'Advanced time tracking with AI-powered productivity insights, team management, and project analytics.',
-    priceRange: '$19 - $99/month',
-    marketPrice: '$30 - $120/month',
-    learnMoreUrl: '/services/smart-time-tracking',
-    icon: Clock,
-    category: 'Project Management',
-    popular: false,
-    features: [
+    description: 'Advanced time tracking with AI-powered productivity insights, team management, and project analytics.', priceRange: '$19 - $99/month',
+    marketPrice: '$30 - $120/month', learnMoreUrl: '/services/smart-time-tracking',
+    icon: Clock, category: 'Project Management',
+    popular: false, features: [
       'Automatic time tracking',
-      'AI productivity insights',
-      'Team performance analytics',
-      'Project profitability analysis',
-      'Client billing automation',
+      'AI productivity insights', 'Team performance analytics',
+      'Project profitability analysis', 'Client billing automation',
       'Integration with project tools'
-    ],
-    benefits: [
+    ], benefits: [
       'Increase productivity by 25%',
-      'Accurate project billing',
-      'Identify efficiency opportunities',
-      'Improve team performance',
-      'Streamline time management'
+      'Accurate project billing', 'Identify efficiency opportunities',
+      'Improve team performance', 'Streamline time management'
     ]
-  },
-  {
+  }, {
     title: 'AI Social Media Scheduler Pro',
-    description: 'Intelligent social media management with AI content optimization, engagement analytics, and cross-platform posting.',
-    priceRange: '$49 - $299/month',
-    marketPrice: '$80 - $350/month',
-    learnMoreUrl: '/services/ai-social-scheduler',
-    icon: Share2,
-    category: 'Social Media & Marketing',
-    popular: true,
-    features: [
+    description: 'Intelligent social media management with AI content optimization, engagement analytics, and cross-platform posting.', priceRange: '$49 - $299/month',
+    marketPrice: '$80 - $350/month', learnMoreUrl: '/services/ai-social-scheduler',
+    icon: Share2, category: 'Social Media & Marketing',
+    popular: true, features: [
       'AI content optimization',
-      'Optimal posting time suggestions',
-      'Cross-platform scheduling',
-      'Engagement analytics',
-      'Hashtag optimization',
+      'Optimal posting time suggestions', 'Cross-platform scheduling',
+      'Engagement analytics', 'Hashtag optimization',
       'Competitor analysis'
-    ],
-    benefits: [
+    ], benefits: [
       'Increase engagement by 200%',
-      'Save 5+ hours per week',
-      'Improve content performance',
-      'Grow social media following',
-      'Optimize posting strategy'
+      'Save 5+ hours per week', 'Improve content performance',
+      'Grow social media following', 'Optimize posting strategy'
     ]
-  },
-  {
+  }, {
     title: 'Smart Website Analytics Dashboard',
-    description: 'User-friendly analytics platform tailored for small business owners with actionable insights and recommendations.',
-    priceRange: '$29 - $149/month',
-    marketPrice: '$50 - $180/month',
-    learnMoreUrl: '/services/smart-analytics',
-    icon: BarChart3,
-    category: 'Analytics & Insights',
-    popular: false,
-    features: [
+    description: 'User-friendly analytics platform tailored for small business owners with actionable insights and recommendations.', priceRange: '$29 - $149/month',
+    marketPrice: '$50 - $180/month', learnMoreUrl: '/services/smart-analytics',
+    icon: BarChart3, category: 'Analytics & Insights',
+    popular: false, features: [
       'User-friendly dashboards',
-      'Actionable insights',
-      'Conversion tracking',
-      'Heatmap analysis',
-      'A/B testing tools',
+      'Actionable insights', 'Conversion tracking',
+      'Heatmap analysis', 'A/B testing tools',
       'Custom reporting'
-    ],
-    benefits: [
+    ], benefits: [
       'Make data-driven decisions',
-      'Improve website performance',
-      'Increase conversion rates',
-      'Understand user behavior',
-      'Optimize marketing spend'
+      'Improve website performance', 'Increase conversion rates',
+      'Understand user behavior', 'Optimize marketing spend'
     ]
   }
 ];
 
 const aiServices: Service[] = [
   {
-    title: 'AI Business Intelligence Platform',
-    description: 'Advanced AI-powered analytics with predictive modeling, real-time insights, and automated reporting for enterprises.',
-    priceRange: '$2,500 - $12,000/month',
-    marketPrice: '$3,000 - $15,000/month',
-    learnMoreUrl: '/services/ai-business-intelligence',
-    icon: Brain,
-    category: 'AI & Analytics',
-    popular: true,
+    title: 'AI Business Intelligence Platform', description: 'Advanced AI-powered analytics with predictive modeling, real-time insights, and automated reporting for enterprises.',
+    priceRange: '$2, 500 - $12,000/month', marketPrice: '$3,000 - $15, 000/month',
+    learnMoreUrl: '/services/ai-business-intelligence', icon: Brain,
+    category: 'AI & Analytics', popular: true,
     features: [
-      'Predictive analytics modeling',
-      'Real-time data processing',
-      'Automated report generation',
-      'Natural language queries',
-      'Custom dashboard creation',
-      'Integration with 100+ data sources'
-    ],
-    benefits: [
+      'Predictive analytics modeling', 'Real-time data processing',
+      'Automated report generation', 'Natural language queries',
+      'Custom dashboard creation', 'Integration with 100+ data sources'
+    ], benefits: [
       'Make faster business decisions',
-      'Identify growth opportunities',
-      'Reduce manual reporting by 90%',
-      'Improve forecast accuracy',
-      'Increase operational efficiency'
+      'Identify growth opportunities', 'Reduce manual reporting by 90%',
+      'Improve forecast accuracy', 'Increase operational efficiency'
     ]
-  },
-  {
+  }, {
     title: 'AI Cybersecurity Threat Detection',
-    description: 'Military-grade AI cybersecurity with real-time threat detection, automated response, and behavioral analysis.',
-    priceRange: '$3,500 - $18,000/month',
-    marketPrice: '$4,000 - $20,000/month',
-    learnMoreUrl: '/services/ai-cybersecurity',
-    icon: Shield,
-    category: 'Cybersecurity',
-    popular: true,
-    features: [
+    description: 'Military-grade AI cybersecurity with real-time threat detection, automated response, and behavioral analysis.', priceRange: '$3,500 - $18, 000/month',
+    marketPrice: '$4, 000 - $20,000/month', learnMoreUrl: '/services/ai-cybersecurity',
+    icon: Shield, category: 'Cybersecurity',
+    popular: true, features: [
       'Real-time threat detection',
-      'Behavioral analysis',
-      'Automated incident response',
-      'Zero-day attack prevention',
-      'Compliance monitoring',
+      'Behavioral analysis', 'Automated incident response',
+      'Zero-day attack prevention', 'Compliance monitoring',
       '24/7 security monitoring'
-    ],
-    benefits: [
+    ], benefits: [
       'Prevent 99.9% of cyber attacks',
-      'Reduce security incidents by 95%',
-      'Comply with industry standards',
-      'Minimize security team workload',
-      'Protect sensitive data'
+      'Reduce security incidents by 95%', 'Comply with industry standards',
+      'Minimize security team workload', 'Protect sensitive data'
     ]
-  },
-  {
+  }, {
     title: 'AI Customer Experience Optimization',
-    description: 'Intelligent customer journey mapping with personalization, sentiment analysis, and experience optimization.',
-    priceRange: '$1,500 - $8,000/month',
-    marketPrice: '$2,000 - $10,000/month',
-    learnMoreUrl: '/services/ai-customer-experience',
-    icon: Users,
-    category: 'Customer Experience',
-    popular: false,
-    features: [
+    description: 'Intelligent customer journey mapping with personalization, sentiment analysis, and experience optimization.', priceRange: '$1,500 - $8, 000/month',
+    marketPrice: '$2, 000 - $10,000/month', learnMoreUrl: '/services/ai-customer-experience',
+    icon: Users, category: 'Customer Experience',
+    popular: false, features: [
       'Customer journey mapping',
-      'Sentiment analysis',
-      'Personalization engine',
-      'Churn prediction',
-      'Experience optimization',
+      'Sentiment analysis', 'Personalization engine',
+      'Churn prediction', 'Experience optimization',
       'Multi-channel integration'
-    ],
-    benefits: [
+    ], benefits: [
       'Increase customer satisfaction by 40%',
-      'Reduce churn rate by 30%',
-      'Improve customer lifetime value',
-      'Optimize customer touchpoints',
-      'Enhance brand loyalty'
+      'Reduce churn rate by 30%', 'Improve customer lifetime value',
+      'Optimize customer touchpoints', 'Enhance brand loyalty'
     ]
-  },
-  {
+  }, {
     title: 'AI Healthcare Analytics Platform',
-    description: 'Advanced healthcare data analytics with predictive modeling, patient insights, and clinical decision support.',
-    priceRange: '$499 - $2,999/month',
-    marketPrice: '$600 - $3,500/month',
-    learnMoreUrl: '/services/ai-healthcare-analytics',
-    icon: Heart,
-    category: 'Healthcare & AI',
-    popular: true,
-    features: [
+    description: 'Advanced healthcare data analytics with predictive modeling, patient insights, and clinical decision support.', priceRange: '$499 - $2,999/month', marketPrice: '$600 - $3,500/month', learnMoreUrl: '/services/ai-healthcare-analytics',
+    icon: Heart, category: 'Healthcare & AI',
+    popular: true, features: [
       'Patient data analytics',
-      'Predictive health modeling',
-      'Clinical decision support',
-      'Treatment outcome prediction',
-      'HIPAA compliance',
+      'Predictive health modeling', 'Clinical decision support',
+      'Treatment outcome prediction', 'HIPAA compliance',
       'Integration with EHR systems'
-    ],
-    benefits: [
+    ], benefits: [
       'Improve patient outcomes',
-      'Reduce healthcare costs',
-      'Enhance clinical decisions',
-      'Prevent medical errors',
-      'Optimize treatment plans'
+      'Reduce healthcare costs', 'Enhance clinical decisions',
+      'Prevent medical errors', 'Optimize treatment plans'
     ]
-  },
-  {
+  }, {
     title: 'AI Financial Risk Management',
-    description: 'Real-time financial risk assessment and predictive analytics for enterprises with fraud detection.',
-    priceRange: '$799 - $3,999/month',
-    marketPrice: '$1,000 - $4,500/month',
-    learnMoreUrl: '/services/ai-financial-risk',
-    icon: DollarSign,
-    category: 'Finance & Risk',
-    popular: true,
+    description: 'Real-time financial risk assessment and predictive analytics for enterprises with fraud detection.', priceRange: '$799 - $3,999/month', marketPrice: '$1,000 - $4, 500/month',
+    learnMoreUrl: '/services/ai-financial-risk', icon: DollarSign,
+    category: 'Finance & Risk', popular: true,
     features: [
-      'Real-time risk assessment',
-      'Fraud detection algorithms',
-      'Credit scoring models',
-      'Market risk analysis',
-      'Regulatory compliance',
-      'Automated reporting'
-    ],
-    benefits: [
+      'Real-time risk assessment', 'Fraud detection algorithms',
+      'Credit scoring models', 'Market risk analysis',
+      'Regulatory compliance', 'Automated reporting'
+    ], benefits: [
       'Reduce financial losses by 70%',
-      'Improve risk assessment accuracy',
-      'Comply with regulations',
-      'Automate risk monitoring',
-      'Enhance decision making'
+      'Improve risk assessment accuracy', 'Comply with regulations',
+      'Automate risk monitoring', 'Enhance decision making'
     ]
   }
 ];
 
 const itServices: Service[] = [
   {
-    title: 'Cloud Infrastructure Management',
-    description: 'Complete cloud infrastructure setup, management, and optimization with 24/7 monitoring and support.',
-    priceRange: '$1,200 - $6,000/month',
-    marketPrice: '$1,500 - $7,000/month',
-    learnMoreUrl: '/services/cloud-infrastructure',
-    icon: Cloud,
-    category: 'Cloud Services',
-    popular: true,
+    title: 'Cloud Infrastructure Management', description: 'Complete cloud infrastructure setup, management, and optimization with 24/7 monitoring and support.',
+    priceRange: '$1, 200 - $6,000/month', marketPrice: '$1,500 - $7, 000/month',
+    learnMoreUrl: '/services/cloud-infrastructure', icon: Cloud,
+    category: 'Cloud Services', popular: true,
     features: [
-      'Multi-cloud management',
-      'Auto-scaling configuration',
-      '24/7 monitoring',
-      'Security hardening',
-      'Cost optimization',
-      'Disaster recovery planning'
-    ],
-    benefits: [
+      'Multi-cloud management', 'Auto-scaling configuration',
+      '24/7 monitoring', 'Security hardening',
+      'Cost optimization', 'Disaster recovery planning'
+    ], benefits: [
       'Reduce infrastructure costs by 30%',
-      'Improve system reliability',
-      'Scale resources automatically',
-      'Enhance security posture',
-      'Minimize downtime'
+      'Improve system reliability', 'Scale resources automatically',
+      'Enhance security posture', 'Minimize downtime'
     ]
-  },
-  {
+  }, {
     title: 'DevOps Automation & CI/CD',
-    description: 'Automated development workflows with continuous integration, deployment, and infrastructure as code.',
-    priceRange: '$2,000 - $10,000/month',
-    marketPrice: '$2,500 - $12,000/month',
-    learnMoreUrl: '/services/devops-automation',
-    icon: Workflow,
-    category: 'DevOps',
-    popular: true,
-    features: [
+    description: 'Automated development workflows with continuous integration, deployment, and infrastructure as code.', priceRange: '$2,000 - $10, 000/month',
+    marketPrice: '$2, 500 - $12,000/month', learnMoreUrl: '/services/devops-automation',
+    icon: Workflow, category: 'DevOps',
+    popular: true, features: [
       'CI/CD pipeline setup',
-      'Infrastructure as code',
-      'Automated testing',
-      'Deployment automation',
-      'Monitoring & alerting',
+      'Infrastructure as code', 'Automated testing',
+      'Deployment automation', 'Monitoring & alerting',
       'Security scanning'
-    ],
-    benefits: [
+    ], benefits: [
       'Deploy 10x faster',
-      'Reduce deployment errors by 90%',
-      'Improve code quality',
-      'Automate repetitive tasks',
-      'Enhance team productivity'
+      'Reduce deployment errors by 90%', 'Improve code quality',
+      'Automate repetitive tasks', 'Enhance team productivity'
     ]
-  },
-  {
+  }, {
     title: 'API Development & Integration',
-    description: 'Custom API development, third-party integrations, and API management with comprehensive documentation.',
-    priceRange: '$1,500 - $7,500/month',
-    marketPrice: '$2,000 - $8,500/month',
-    learnMoreUrl: '/services/api-development',
-    icon: Network,
-    category: 'API Services',
-    popular: false,
-    features: [
+    description: 'Custom API development, third-party integrations, and API management with comprehensive documentation.', priceRange: '$1,500 - $7, 500/month',
+    marketPrice: '$2, 000 - $8,500/month', learnMoreUrl: '/services/api-development',
+    icon: Network, category: 'API Services',
+    popular: false, features: [
       'RESTful API development',
-      'GraphQL implementation',
-      'Third-party integrations',
-      'API documentation',
-      'Rate limiting & security',
+      'GraphQL implementation', 'Third-party integrations',
+      'API documentation', 'Rate limiting & security',
       'Performance optimization'
-    ],
-    benefits: [
+    ], benefits: [
       'Connect disparate systems',
-      'Improve data flow',
-      'Enhance system flexibility',
-      'Reduce development time',
-      'Enable third-party partnerships'
+      'Improve data flow', 'Enhance system flexibility',
+      'Reduce development time', 'Enable third-party partnerships'
     ]
-  },
-  {
+  }, {
     title: 'IT Infrastructure Monitoring',
-    description: 'Comprehensive IT infrastructure monitoring with proactive alerting, performance optimization, and capacity planning.',
-    priceRange: '$800 - $4,000/month',
-    marketPrice: '$1,000 - $4,500/month',
-    learnMoreUrl: '/services/it-monitoring',
-    icon: Monitor,
-    category: 'IT Monitoring',
-    popular: false,
+    description: 'Comprehensive IT infrastructure monitoring with proactive alerting, performance optimization, and capacity planning.', priceRange: '$800 - $4,000/month', marketPrice: '$1,000 - $4, 500/month',
+    learnMoreUrl: '/services/it-monitoring', icon: Monitor,
+    category: 'IT Monitoring', popular: false,
     features: [
-      '24/7 infrastructure monitoring',
-      'Proactive alerting',
-      'Performance optimization',
-      'Capacity planning',
-      'Root cause analysis',
-      'Custom dashboards'
-    ],
-    benefits: [
+      '24/7 infrastructure monitoring', 'Proactive alerting',
+      'Performance optimization', 'Capacity planning',
+      'Root cause analysis', 'Custom dashboards'
+    ], benefits: [
       'Prevent system failures',
-      'Optimize performance',
-      'Reduce downtime by 80%',
-      'Improve resource utilization',
-      'Enhance system reliability'
+      'Optimize performance', 'Reduce downtime by 80%',
+      'Improve resource utilization', 'Enhance system reliability'
     ]
-  },
-  {
+  }, {
     title: 'Cybersecurity Assessment & Implementation',
-    description: 'Comprehensive cybersecurity assessment, implementation, and ongoing management with compliance support.',
-    priceRange: '$2,500 - $12,000/month',
-    marketPrice: '$3,000 - $14,000/month',
-    learnMoreUrl: '/services/cybersecurity-implementation',
-    icon: ShieldCheck,
-    category: 'Cybersecurity',
-    popular: true,
-    features: [
+    description: 'Comprehensive cybersecurity assessment, implementation, and ongoing management with compliance support.', priceRange: '$2,500 - $12, 000/month',
+    marketPrice: '$3, 000 - $14,000/month', learnMoreUrl: '/services/cybersecurity-implementation',
+    icon: ShieldCheck, category: 'Cybersecurity',
+    popular: true, features: [
       'Security assessment',
-      'Vulnerability scanning',
-      'Penetration testing',
-      'Security policy development',
-      'Compliance management',
+      'Vulnerability scanning', 'Penetration testing',
+      'Security policy development', 'Compliance management',
       'Incident response planning'
-    ],
-    benefits: [
+    ], benefits: [
       'Protect against cyber threats',
-      'Comply with regulations',
-      'Reduce security risks',
-      'Improve security posture',
-      'Minimize breach impact'
+      'Comply with regulations', 'Reduce security risks',
+      'Improve security posture', 'Minimize breach impact'
     ]
-  },
-  {
+  }, {
     title: 'Data Migration & Integration Services',
-    description: 'Seamless data migration, integration, and transformation services with minimal downtime and data integrity.',
-    priceRange: '$1,000 - $5,000/month',
-    marketPrice: '$1,200 - $6,000/month',
-    learnMoreUrl: '/services/data-migration',
-    icon: Database,
-    category: 'Data Services',
-    popular: false,
-    features: [
+    description: 'Seamless data migration, integration, and transformation services with minimal downtime and data integrity.', priceRange: '$1,000 - $5, 000/month',
+    marketPrice: '$1, 200 - $6,000/month', learnMoreUrl: '/services/data-migration',
+    icon: Database, category: 'Data Services',
+    popular: false, features: [
       'Data migration planning',
-      'ETL process development',
-      'Data quality assurance',
-      'Minimal downtime migration',
-      'Data validation',
+      'ETL process development', 'Data quality assurance',
+      'Minimal downtime migration', 'Data validation',
       'Post-migration support'
-    ],
-    benefits: [
+    ], benefits: [
       'Seamless system transitions',
-      'Maintain data integrity',
-      'Minimize business disruption',
-      'Improve data quality',
-      'Enable system modernization'
+      'Maintain data integrity', 'Minimize business disruption',
+      'Improve data quality', 'Enable system modernization'
     ]
   }
 ];
 
 const emergingTechServices: Service[] = [
   {
-    title: 'Quantum Edge Computing Solutions',
-    description: 'Next-generation quantum computing with edge deployment capabilities for ultra-fast processing.',
-    priceRange: '$1,999 - $9,999/month',
-    marketPrice: '$2,500 - $12,000/month',
-    learnMoreUrl: '/services/quantum-edge-computing',
-    icon: Atom,
-    category: 'Quantum Computing',
-    popular: true,
+    title: 'Quantum Edge Computing Solutions', description: 'Next-generation quantum computing with edge deployment capabilities for ultra-fast processing.',
+    priceRange: '$1, 999 - $9,999/month', marketPrice: '$2,500 - $12, 000/month',
+    learnMoreUrl: '/services/quantum-edge-computing', icon: Atom,
+    category: 'Quantum Computing', popular: true,
     features: [
-      'Quantum algorithm optimization',
-      'Edge computing deployment',
-      'Ultra-fast processing',
-      'Hybrid quantum-classical systems',
-      'Custom quantum applications',
-      'Performance benchmarking'
-    ],
-    benefits: [
+      'Quantum algorithm optimization', 'Edge computing deployment',
+      'Ultra-fast processing', 'Hybrid quantum-classical systems',
+      'Custom quantum applications', 'Performance benchmarking'
+    ], benefits: [
       'Solve complex problems faster',
-      'Enable breakthrough innovations',
-      'Process massive datasets',
-      'Optimize resource utilization',
-      'Future-proof technology stack'
+      'Enable breakthrough innovations', 'Process massive datasets',
+      'Optimize resource utilization', 'Future-proof technology stack'
     ]
-  },
-  {
+  }, {
     title: 'AI Carbon Footprint Management',
-    description: 'Environmental impact tracking and sustainability optimization for businesses with AI-powered insights.',
-    priceRange: '$199 - $1,499/month',
-    marketPrice: '$250 - $1,800/month',
-    learnMoreUrl: '/services/ai-carbon-management',
-    icon: Leaf,
-    category: 'Sustainability',
-    popular: false,
-    features: [
+    description: 'Environmental impact tracking and sustainability optimization for businesses with AI-powered insights.', priceRange: '$199 - $1,499/month', marketPrice: '$250 - $1,800/month', learnMoreUrl: '/services/ai-carbon-management',
+    icon: Leaf, category: 'Sustainability',
+    popular: false, features: [
       'Carbon footprint tracking',
-      'Sustainability reporting',
-      'Green energy optimization',
-      'Waste reduction strategies',
-      'ESG compliance',
+      'Sustainability reporting', 'Green energy optimization',
+      'Waste reduction strategies', 'ESG compliance',
       'Environmental analytics'
-    ],
-    benefits: [
+    ], benefits: [
       'Reduce environmental impact',
-      'Meet sustainability goals',
-      'Improve ESG ratings',
-      'Lower operational costs',
-      'Enhance brand reputation'
+      'Meet sustainability goals', 'Improve ESG ratings',
+      'Lower operational costs', 'Enhance brand reputation'
     ]
-  },
-  {
+  }, {
     title: 'AI Supply Chain Optimization',
-    description: 'Intelligent supply chain management with predictive analytics, automation, and risk mitigation.',
-    priceRange: '$599 - $2,499/month',
-    marketPrice: '$750 - $3,000/month',
-    learnMoreUrl: '/services/ai-supply-chain',
-    icon: Package,
-    category: 'Supply Chain',
-    popular: true,
-    features: [
+    description: 'Intelligent supply chain management with predictive analytics, automation, and risk mitigation.', priceRange: '$599 - $2,499/month', marketPrice: '$750 - $3,000/month', learnMoreUrl: '/services/ai-supply-chain',
+    icon: Package, category: 'Supply Chain',
+    popular: true, features: [
       'Demand forecasting',
-      'Inventory optimization',
-      'Supplier risk assessment',
-      'Route optimization',
-      'Quality control automation',
+      'Inventory optimization', 'Supplier risk assessment',
+      'Route optimization', 'Quality control automation',
       'Supply chain visibility'
-    ],
-    benefits: [
+    ], benefits: [
       'Reduce supply chain costs by 25%',
-      'Improve delivery times',
-      'Minimize supply disruptions',
-      'Optimize inventory levels',
-      'Enhance supplier relationships'
+      'Improve delivery times', 'Minimize supply disruptions',
+      'Optimize inventory levels', 'Enhance supplier relationships'
     ]
-  },
-  {
+  }, {
     title: 'AI Legal Document Automation',
-    description: 'AI-powered legal document generation, review, and compliance automation for law firms and enterprises.',
-    priceRange: '$299 - $1,999/month',
-    marketPrice: '$400 - $2,500/month',
-    learnMoreUrl: '/services/ai-legal-automation',
-    icon: FileText,
-    category: 'Legal & Compliance',
-    popular: true,
-    features: [
+    description: 'AI-powered legal document generation, review, and compliance automation for law firms and enterprises.', priceRange: '$299 - $1,999/month', marketPrice: '$400 - $2,500/month', learnMoreUrl: '/services/ai-legal-automation',
+    icon: FileText, category: 'Legal & Compliance',
+    popular: true, features: [
       'Document generation',
-      'Contract review',
-      'Compliance monitoring',
-      'Legal research assistance',
-      'Risk assessment',
+      'Contract review', 'Compliance monitoring',
+      'Legal research assistance', 'Risk assessment',
       'Document management'
-    ],
-    benefits: [
+    ], benefits: [
       'Reduce legal costs by 60%',
-      'Accelerate document processing',
-      'Improve compliance accuracy',
-      'Minimize legal risks',
-      'Enhance productivity'
+      'Accelerate document processing', 'Improve compliance accuracy',
+      'Minimize legal risks', 'Enhance productivity'
     ]
   }
 ];
@@ -663,7 +423,7 @@ export default function ComprehensiveServices2025() {
 
       {service.features && (
         <div className="mb-4">
-          <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+          <h4 className="text-sm font-semibold text-white mb-2">Key Features: </h4>
           <ul className="text-xs text-slate-300 space-y-1">
             {service.features.slice(0, 3).map((feature, idx) => (
               <li key={idx} className="flex items-center">
@@ -677,7 +437,7 @@ export default function ComprehensiveServices2025() {
 
       <Link
         to={service.learnMoreUrl || '/contact'}
-        className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-200 text-sm"
+        className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover: from-purple-400 hover:to-blue-500 transition-all duration-200 text-sm"
       >
         Learn More
         <ArrowRight className="w-4 h-4 ml-2" />
@@ -731,7 +491,7 @@ export default function ComprehensiveServices2025() {
               Transform your business with cutting-edge technology solutions designed for modern enterprises.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
@@ -783,7 +543,7 @@ export default function ComprehensiveServices2025() {
           </div>
 
           {/* Service Grid */}
-          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid lg: grid-cols-2 xl:grid-cols-3 gap-8">
             {serviceCategories
               .find(cat => cat.id === activeTab)
               ?.services.map((service, index) => renderServiceCard(service, index))}
@@ -802,11 +562,11 @@ export default function ComprehensiveServices2025() {
             >
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
               <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-                Join the future of technology with Zion Tech Group's innovative services and solutions. 
+                Join the future of technology with Zion Tech Group&apos;s innovative services and solutions. '
                 Get started with a free consultation today.
               </p>
               
-              <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <div className="grid md: grid-cols-3 gap-6 mb-12">
                 <div className="flex items-center justify-center space-x-3 text-slate-300">
                   <Phone className="w-5 h-5 text-purple-400" />
                   <span>+1 302 464 0950</span>
@@ -821,7 +581,7 @@ export default function ComprehensiveServices2025() {
                 </div>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"

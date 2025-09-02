@@ -21,42 +21,32 @@ const Partners: NextPage = () => {
   const partnerTypes = [
     {
 <<<<<<< HEAD
-      icon: Handshake,
-      title:,
-  Strategic Partners',
-      description: 'Long-term partnerships that drive mutual growth and innovation.,
+      icon: Handshake, title:,
+  Strategic Partners', '
+      description: 'Long-term partnerships that drive mutual growth and innovation.,'
       benefits: [
-  'Joint product development',
-  'Shared resources',
+  'Joint product development', 'Shared resources',
   'Market expansion']
-    },
-    {
+    }, {
       icon: Award,
-      title:,
-  Technology Partners',
-      description: 'Integration partnerships with leading technology providers.,
+      title:, Technology Partners','
+      description: 'Integration partnerships with leading technology providers., '
       benefits: [
   'API integrations',
-  'Technical support',
-  'Co-marketing opportunities']
-    },
-    {
+  'Technical support', 'Co-marketing opportunities']
+    }, {
       icon: Users,
-      title:,
-  Channel Partners',
-      description: 'Reseller and distribution partnerships for market reach.,
+      title:, Channel Partners','
+      description: 'Reseller and distribution partnerships for market reach., '
       benefits: [
   'Revenue sharing',
-  'Training programs',
-  'Marketing support']
-    },
-    {
+  'Training programs', 'Marketing support']
+    }, {
       icon: Globe,
-      title:,
-  Global Partners',
-      description: 'International partnerships for worldwide market presence.,
+      title:, Global Partners','
+      description: 'International partnerships for worldwide market presence., '
       benefits: [,
-  Local expertise',
+  Local expertise', '
   'Regional support',
   'Cultural adaptation']
 =======
@@ -81,52 +71,46 @@ const Partners: NextPage = () => {
   const currentPartners = [
     {
 <<<<<<< HEAD
-      name: 'Microsoft,
+      name: 'Microsoft, '
       logo:,
-  /api/placeholder/200/100',
-      description: 'Cloud infrastructure and AI services partnership,
-      category:,
-  Technology Partner'
+  /api/placeholder/200/100', '
+      description: 'Cloud infrastructure and AI services partnership,'
+      category:, Technology Partner''
     },
     {
-      name: 'Amazon Web Services,
+      name: 'Amazon Web Services, '
       logo:,
-  /api/placeholder/200/100',
-      description: 'Cloud computing and machine learning solutions,
-      category:,
-  Technology Partner'
+  /api/placeholder/200/100', '
+      description: 'Cloud computing and machine learning solutions,'
+      category:, Technology Partner''
     },
     {
-      name: 'Google Cloud,
+      name: 'Google Cloud, '
       logo:,
-  /api/placeholder/200/100',
-      description: 'AI and analytics platform integration,
-      category:,
-  Technology Partner'
+  /api/placeholder/200/100', '
+      description: 'AI and analytics platform integration,'
+      category:, Technology Partner''
     },
     {
-      name: 'IBM,
+      name: 'IBM, '
       logo:,
-  /api/placeholder/200/100',
-      description: 'Quantum computing and enterprise solutions,
-      category:,
-  Strategic Partner'
+  /api/placeholder/200/100', '
+      description: 'Quantum computing and enterprise solutions,'
+      category:, Strategic Partner''
     },
     {
-      name: 'Oracle,
+      name: 'Oracle, '
       logo:,
-  /api/placeholder/200/100',
-      description: 'Database and enterprise application integration,
-      category:,
-  Technology Partner'
+  /api/placeholder/200/100', '
+      description: 'Database and enterprise application integration,'
+      category:, Technology Partner''
     },
     {
-      name: 'Salesforce,
+      name: 'Salesforce, '
       logo:,
-  /api/placeholder/200/100',
-      description: 'CRM and customer experience solutions,
-      category:
-  'Technology Partner'
+  /api/placeholder/200/100', '
+      description: 'CRM and customer experience solutions,'
+      category: 'Technology Partner'
 =======
       name: 'Microsoft', logo: '/api/placeholder/200/100',
       description: 'Cloud infrastructure and AI services partnership', category: 'Technology Partner'
@@ -157,41 +141,32 @@ const Partners: NextPage = () => {
   const partnershipBenefits = [
     {
 <<<<<<< HEAD
-      icon: Star,
-      title:,
-  Access to Cutting-Edge Technology',
-      description: 'Leverage the latest innovations and technologies from our partners.
-    },
-    {
-      icon: Users,
-      title:,
-  Expanded Market Reach',
-      description: 'Tap into new markets and customer segments through our partner network.
-    },
-    {
-      icon: Award,
-      title:,
-  Enhanced Credibility',
-      description: 'Build trust with customers through our established partner relationships.
-    },
-    {
-      icon: CheckCircle,
-      title:,
-  Comprehensive Support',
-      description: 'Access to expert support and resources from our partner ecosystem.
-=======
-      icon: Star, title: 'Access to Cutting-Edge Technology',
+      icon: Star, title:,
+  Access to Cutting-Edge Technology', '
       description: 'Leverage the latest innovations and technologies from our partners.'
-    }, {
-      icon: Users,
-      title: 'Expanded Market Reach', description: 'Tap into new markets and customer segments through our partner network.'
     },
     {
-      icon: Award, title: 'Enhanced Credibility',
+      icon: Users, title:,
+  Expanded Market Reach', '
+      description: 'Tap into new markets and customer segments through our partner network.'
+    },
+    {
+      icon: Award, title:,
+  Enhanced Credibility', '
       description: 'Build trust with customers through our established partner relationships.'
+    },
+    {
+      icon: CheckCircle, title:,
+  Comprehensive Support', '
+      description: 'Access to expert support and resources from our partner ecosystem.'
+=======
+      icon: Star, title: 'Access to Cutting-Edge Technology', description: 'Leverage the latest innovations and technologies from our partners.'
     }, {
-      icon: CheckCircle,
-      title: 'Comprehensive Support', description: 'Access to expert support and resources from our partner ecosystem.'
+      icon: Users, title: 'Expanded Market Reach', description: 'Tap into new markets and customer segments through our partner network.'
+    }, {
+      icon: Award, title: 'Enhanced Credibility', description: 'Build trust with customers through our established partner relationships.'
+    }, {
+      icon: CheckCircle, title: 'Comprehensive Support', description: 'Access to expert support and resources from our partner ecosystem.'
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
   ];
@@ -252,9 +227,9 @@ const Partners: NextPage = () => {
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
 <<<<<<< HEAD
                 We
-  're proud to work with industry leaders and innovative companies across the globe.
+  're proud to work with industry leaders and innovative companies across the globe.'
 =======
-                We&aposre proud to work with industry leaders and innovative companies across the globe.'
+                We&aposre proud to work with industry leaders and innovative companies across the globe.''
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
               </p>
             </div>
@@ -303,7 +278,7 @@ const Partners: NextPage = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Become a Partner</h2>
             <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-              Ready to join our partner ecosystem? Let&apos;s explore how we can work together to drive innovation and growth.'
+              Ready to join our partner ecosystem? Let&apos;s explore how we can work together to drive innovation and growth.''
             </p>
             <div className="flex flex-col sm: flex-row justify-center gap-4">
               <Link

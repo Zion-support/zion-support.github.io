@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import React, { useEffect } from
-  'react';'
-  'interface AnalyticsProps {trackingId?: string;
+  'react';''
+  'interface AnalyticsProps {trackingId?: string;'
 =======
 import React, { useEffect } from 'react'''interface AnalyticsProps {trackingId?: string
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
@@ -12,18 +12,17 @@ const Analytics: React.FC<AnalyticsProps> = ({
 }) => {
   useEffect(() => {
 <<<<<<< HEAD
-if (!trackingId || typeof window === 'undefined
-  ') return;''    // Load Google Analytics
+if (!trackingId || typeof window === 'undefined'
+  ') return;''    // Load Google Analytics'
     const script1 = document.createElement(
   'script');'    script1.async = true;'    script1.src = `https: //www.googletagmanager.com/gtag/js?id=${trackingId}`;`    document.head.appendChild(script1);
 
     const script2 = document.createElement(
-  'script');'    script2.innerHTML = `
-  '      window.dataLayer = window.dataLayer || [];`      function gtag(){dataLayer.push(arguments);}
-      gtag('js
+  'script');'    script2.innerHTML = `'
+  '      window.dataLayer = window.dataLayer || [];`      function gtag(){dataLayer.push(arguments);}'
+      gtag('js'
   ', new Date());'      gtag(
-  'config',
-  '${trackingId}', {
+  'config', '${trackingId}', {
   '        page_title: document.title, page_location: window.location.href,'        send_page_view: true
 =======
 if (!trackingId || typeof window === 'undefined') return''    // Load Google Analytics
@@ -42,12 +41,12 @@ if (!trackingId || typeof window === 'undefined') return''    // Load Google Ana
   'undefined') {
   '        gtag('config
   ', trackingId, {'          page_title: document.title, page_location: window.location.href,
-  '        });}
+  '        });}'
     };
 
     // Listen for route changes (Next.js)
-window.addEventListener('popstate
-  ', handleRouteChange);''    return () => {
+window.addEventListener('popstate'
+  ', handleRouteChange);''    return () => {'
       window.removeEventListener(
   'popstate', handleRouteChange);'    };'  }, [trackingId]);
 
@@ -57,7 +56,7 @@ window.addEventListener('popstate
   'undefined') {
   '      gtag('event
   ', action, {'        event_category: category, event_label: label,
-  '        value: value, });}
+  '        value: value, });}'
 =======
     const handleRouteChange = () => {
       if (typeof gtag !== 'undefined') {'        gtag('config', trackingId, {'          page_title: document.title, page_location: window.location.href,'        })}'
@@ -76,22 +75,22 @@ window.addEventListener('popstate', handleRouteChange)''    return () => {
   // Track page performance
   useEffect(() => {
 <<<<<<< HEAD
-if (typeof window === 'undefined
-  ') return;''    const trackPerformance = () => {;
+if (typeof window === 'undefined'
+  ') return;''    const trackPerformance = () => {;'
       if (typeof gtag !==
   'undefined' &&
   'performance' in window) {
   '        const perfData = performance.getEntriesByType('navigation
   ')[0] as PerformanceNavigationTiming;'        if (perfData) {
-  '          const loadTime = perfData.loadEventEnd - perfData.fetchStart;
-          trackEvent('page_load_time
+  '          const loadTime = perfData.loadEventEnd - perfData.fetchStart;'
+          trackEvent('page_load_time'
   ', 'Performance
   ', 'Page Load
   ', Math.round(loadTime));'        }
-  '      }
+  '      }'
     };
 
-    window.addEventListener('load
+    window.addEventListener('load'
   ', trackPerformance);'    return () => window.removeEventListener(
   'load', trackPerformance);'  }, []);'
 =======
@@ -112,7 +111,7 @@ export const trackEvent = (action: string, category: string, label?: string, val
   'undefined') {
   '    gtag('event
   ', action, {'      event_category: category, event_label: label,
-  '      value: value, });
+  '      value: value, });'
 =======
 export const trackEvent = (action: string, category: string, label?: string, value?: number) => {
   if (typeof gtag !== 'undefined') {'    gtag('event', action, {'      event_category: category, event_label: label,'      value: value, })'
@@ -122,10 +121,10 @@ export const trackEvent = (action: string, category: string, label?: string, val
 
 export const trackPageView = (url: string, title: string) => {;
 <<<<<<< HEAD
-  if (typeof gtag !== 'undefined
+  if (typeof gtag !== 'undefined'
   ') {'    gtag(
-  'config', process.env.NEXT_PUBLIC_GA_TRACKING_ID || '
-  ', {'      page_title: title, page_location: url,'    });}
+  'config', process.env.NEXT_PUBLIC_GA_TRACKING_ID || ''
+  ', {'      page_title: title, page_location: url,'    });}'
 =======
   if (typeof gtag !== 'undefined') {'    gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID || '', {'      page_title: title, page_location: url,'    })}'
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3

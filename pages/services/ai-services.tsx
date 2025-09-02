@@ -1,6 +1,5 @@
 <<<<<<< HEAD
-import React from,
-  react';
+import React from, react';'
 import type { NextPage } from
   'next';
 import MainLayout from
@@ -14,32 +13,28 @@ import Link from
 
 const AIServicesPage: NextPage = () => {
   const aiServices = getServicesByCategory(
-  'ai-services);
+  'ai-services);'
 
   const benefits = [
     {
-      icon: <Brain className="w-8 h-8" />,
-      title:,
-  Advanced AI',
-      description: 'Cutting-edge machine learning and AI technologies to solve complex business problems.
+      icon: <Brain className="w-8 h-8" />, title:,
+  Advanced AI', '
+      description: 'Cutting-edge machine learning and AI technologies to solve complex business problems.'
     },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title:,
-  Rapid Implementation',
-      description: 'Quick deployment of AI solutions with proven methodologies and best practices.
+      icon: <Zap className="w-8 h-8" />, title:,
+  Rapid Implementation', '
+      description: 'Quick deployment of AI solutions with proven methodologies and best practices.'
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title:,
-  Expert Team',
-      description: 'AI specialists with deep expertise in machine learning and data science.
+      icon: <Users className="w-8 h-8" />, title:,
+  Expert Team', '
+      description: 'AI specialists with deep expertise in machine learning and data science.'
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title:,
-  Scalable Solutions',
-      description: 'AI solutions that grow with your business and adapt to changing needs.
+      icon: <Shield className="w-8 h-8" />, title:,
+  Scalable Solutions', '
+      description: 'AI solutions that grow with your business and adapt to changing needs.'
 =======
 import React from 'react'
 import type { NextPage } from 'next'
@@ -403,7 +398,7 @@ const AIServicesPage: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Harness the Power of AI?</h2>
           <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
-            Let&aposs discuss how our AI services can help automate your processes, '
+            Let&aposs discuss how our AI services can help automate your processes, ''
             gain insights, and create competitive advantages for your business.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">

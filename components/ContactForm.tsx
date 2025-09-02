@@ -2,11 +2,11 @@
 React, { useState } from
   'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from
-  'lucide-react';'
-  'interface FormData {name: string;
+  'lucide-react';''
+  'interface FormData {name: string;'
 =======
 import React, { useState } from 'react'
-import  { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react''interface FormData {
+import  { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react''interface FormData {'
   name: string
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   email: string;
@@ -20,45 +20,41 @@ const ContactForm: React.FC = () => {
 const [formData, setFormData] = useState<FormData>({;
 
 <<<<<<< HEAD
-    name:,
-  ', email: ','    company:,
+    name:, ', email: ', '    company:,'
   ', service: ',
-,
-  message: '});'  const [isSubmitting, setIsSubmitting] = useState(false);'  const [isSubmitted, setIsSubmitted] = useState(false);
+, message: '});'  const [isSubmitting, setIsSubmitting] = useState(false);'  const [isSubmitted, setIsSubmitted] = useState(false);'
   const [errors, setErrors] = useState<Partial<FormData>>({});
 
   const services = [;
 
-  'AI & Machine Learning',
-  'Cloud & DevOps',
+  'AI & Machine Learning', 'Cloud & DevOps',
   '    'Cybersecurity
   ', 'Web Development
   ',' 
-  'Mobile Development',
-  'Data Analytics',
+  'Mobile Development', 'Data Analytics',
   '    'Digital Transformation
   ', 'Other
-  ','  ];'
+  ','  ];''
   const validateForm = (): boolean => {;const newErrors: Partial<FormData> = {};
 
     if (!formData.name.trim()) {
 
 newErrors.name =
-  'Name is required';'    }
-  '
+  'Name is required';'    }'
+  ''
     if (!formData.email.trim()) {
 
-      newErrors.email = 'Email is required
+      newErrors.email = 'Email is required'
   ';'    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-  '
-      newErrors.email = 'Email is invalid
+  ''
+      newErrors.email = 'Email is invalid'
   ';'    }
-  '
+  ''
     if (!formData.message.trim()) {
 
-      newErrors.message = 'Message is required
+      newErrors.message = 'Message is required'
   ';'    }
-  'setErrors(newErrors);
+  'setErrors(newErrors);'
 =======
     name: '', email: '','    company: '', service: '','    message: ''})'  const [isSubmitting, setIsSubmitting] = useState(false);'  const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
@@ -103,11 +99,9 @@ const handleSubmit = async (e: React.FormEvent) => {;e.preventDefault();
       setFormData({
 
 <<<<<<< HEAD
-name:,
-  ', email: ','        company:,
+name:, ', email: ', '        company:,'
   ', service: ',
-,
-  message: '});'    }, 3000);'  };
+, message: '});'    }, 3000);'  };'
 =======
 name: '', email: '','        company: '', service: '','        message: ''})'    }, 3000);'  };
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
@@ -134,13 +128,13 @@ name: '', email: '','        company: '', service: '','        message: ''})'   
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
 <<<<<<< HEAD
-className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""      >"        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />"        <h3 className="text-2xl font-bold text-green-800 mb-2">"          Message Sent!"        </h3>
-        <p className="text-green-600">"          Thank you for reaching out. We&apos;ll get back to you within 24 hours.'
+className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""      >"        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />"        <h3 className="text-2xl font-bold text-green-800 mb-2">"          Message Sent!"        </h3>"
+        <p className="text-green-600">"          Thank you for reaching out. We&apos;ll get back to you within 24 hours.''"
   '        </p>'      </motion.div>);
   }
 
   return (
-<div className="bg-white rounded-xl shadow-xl p-8">"      <div className="text-center mb-8">"        <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>"        <p className="text-gray-600 max-w-2xl mx-auto">"          Ready to transform your business? Let&apos;s discuss how our technology'
+<div className="bg-white rounded-xl shadow-xl p-8">"      <div className="text-center mb-8">"        <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>"        <p className="text-gray-600 max-w-2xl mx-auto">"          Ready to transform your business? Let&apos;s discuss how our technology''
   '          solutions can drive your success.'        </p>
 =======
 className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""      >"        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />"        <h3 className="text-2xl font-bold text-green-800 mb-2">"          Message Sent!"        </h3>"
@@ -169,9 +163,8 @@ className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""     
                 type="text""                id="name""                name="name""                value={formData.name}"                onChange={handleChange}
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${`
                   errors.name ?,
-  border-red-500': 'border-gray-300'                }`}
-,
-  placeholder="John Doe""              />"              {errors.name && (`                <p className="text-red-500 text-sm mt-1">{errors.name}</p>"              )}"            </div>
+  border-red-500': 'border-gray-300'                }`}'
+, placeholder="John Doe""              />"              {errors.name && (`                <p className="text-red-500 text-sm mt-1">{errors.name}</p>"              )}"            </div>
 
             <div>
               <label
@@ -180,7 +173,7 @@ className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""     
               <input
                 type="email""                id="email""                name="email""                value={formData.email}"                onChange={handleChange}
                 className={`w-full px-4 py-3 border rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent ${`
-                  errors.email ? 'border-red-500
+                  errors.email ? 'border-red-500'
   ' : 'border-gray-300'                }`}'                placeholder="john@company.com""              />"              {errors.email && (`                <p className="text-red-500 text-sm mt-1">{errors.email}</p>"              )}"            </div>
           </div>
 
@@ -212,16 +205,14 @@ htmlFor="message""              className="block text-sm font-medium text-gray-7
               id="message""              name="message""              value={formData.message}"              onChange={handleChange}"
               rows={5}
               className={`w-full px-4 py-3 border rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent ${`
-                errors.message ?,
-  border-red-500': 'border-gray-300'              }`}
-  '              placeholder="Tell us about your project and how we can help...""            />"            {errors.message && (`              <p className="text-red-500 text-sm mt-1">{errors.message}</p>"            )}"          </div>
+                errors.message ?, border-red-500': 'border-gray-300'              }`}'
+  '              placeholder="Tell us about your project and how we can help...""            />"            {errors.message && (`              <p className="text-red-500 text-sm mt-1">{errors.message}</p>"            )}"          </div>'
 
           <motion.button
             type="submit""            disabled={isSubmitting}"            whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className={`w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center space-x-2 ${`
-              isSubmitting ?,
-  opacity-50 cursor-not-allowed
+              isSubmitting ?, opacity-50 cursor-not-allowed
   ': ''            }`}'          >`            {isSubmitting ? (
               <>
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>"                <span>Sending...</span>"</>

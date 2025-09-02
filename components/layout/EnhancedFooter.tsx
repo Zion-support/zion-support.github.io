@@ -6,13 +6,13 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide
 const EnhancedFooter: React.FC = () => {
 =======
 import React from 'react'
-import  Link from 'next/link''import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react'''const EnhancedFooter: React.FC = () => {
+import  Link from 'next/link''import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react'''const EnhancedFooter: React.FC = () => {'
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -27,7 +27,7 @@ import  Link from 'next/link''import { Mail, Phone, MapPin, Linkedin, Twitter, G
             </p>
 <<<<<<< HEAD
             <div className="flex space-x-4">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="https: //linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
@@ -146,7 +146,7 @@ import  Link from 'next/link''import { Mail, Phone, MapPin, Linkedin, Twitter, G
 <<<<<<< HEAD
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md: flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © 2024 Zion Tech Group. All rights reserved.
             </div>

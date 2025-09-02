@@ -5,21 +5,13 @@ export const EnhancedHeader: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   const navLinks = [
-    { label:,
-  Home', href: '/ },
-    { label:,
+    { label:, Home', href: '/ }, { label:,
   Services', href: '/services },
-    { label:,
-  Solutions', href: '/solutions },
-    { label:,
+    { label:, Solutions', href: '/solutions }, { label:,
   Enterprise', href: '/enterprise },
-    { label:,
-  Request Quote', href: '/request-quote },
-    { label:,
+    { label:, Request Quote', href: '/request-quote }, { label:,
   Case Studies', href: '/case-studies },
-    { label:,
-  Careers', href: '/careers },
-    { label:,
+    { label:, Careers', href: '/careers }, { label:,
   Contact', href: '/contact }
   ];
   return (

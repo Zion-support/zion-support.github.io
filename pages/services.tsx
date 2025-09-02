@@ -240,14 +240,14 @@ export default function Services() {
 						<p className="mt-6 text-lg leading-8 text-gray-600">
 							More real, production-ready services across AI, IT, and Micro SaaS. Transparent starting prices and clear outcomes. Visit our website at
 							{' '}
-							<a href="https://ziontechgroup.com" className="text-blue-600 hover:text-blue-500 underline" target="_blank" rel="noreferrer">ziontechgroup.com</a>.
+							<a href="https: //ziontechgroup.com" className="text-blue-600 hover:text-blue-500 underline" target="_blank" rel="noreferrer">ziontechgroup.com</a>.
 						</p>
 
 						<p className="mt-3 text-sm text-gray-500">
 							Average market price ranges referenced from public agency rate cards and vendor quotes.
 							For tailored pricing, see our
 							{' '}
-							<Link to="/pricing-guide" className="text-blue-600 hover:text-blue-500 underline">Pricing Guide</Link>.
+							<Link to="/pricing-guide" className="text-blue-600 hover: text-blue-500 underline">Pricing Guide</Link>.
 						</p>
 					</div>
 
@@ -265,7 +265,7 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-blue-600">Starting $8k–$25k</span>
-								<Link to="/contact" className="text-blue-600 hover:text-blue-500">Talk to us →</Link>
+								<Link to="/contact" className="text-blue-600 hover: text-blue-500">Talk to us →</Link>
 							</div>
 						</div>
 
@@ -281,7 +281,7 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-indigo-600">Starting $10k–$40k</span>
-								<Link to="/contact" className="text-indigo-600 hover:text-indigo-500">Get estimate →</Link>
+								<Link to="/contact" className="text-indigo-600 hover: text-indigo-500">Get estimate →</Link>
 							</div>
 						</div>
 
@@ -297,7 +297,7 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-emerald-600">Starting $15k–$60k</span>
-								<Link to="/contact" className="text-emerald-600 hover:text-emerald-500">Learn more →</Link>
+								<Link to="/contact" className="text-emerald-600 hover: text-emerald-500">Learn more →</Link>
 							</div>
 						</div>
 
@@ -314,7 +314,7 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-green-600">Assessments $4k–$12k</span>
-								<Link to="/contact" className="text-green-600 hover:text-green-500">Start now →</Link>
+								<Link to="/contact" className="text-green-600 hover: text-green-500">Start now →</Link>
 							</div>
 						</div>
 
@@ -330,7 +330,7 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-purple-600">From $3k/mo</span>
-								<Link to="/contact" className="text-purple-600 hover:text-purple-500">Request details →</Link>
+								<Link to="/contact" className="text-purple-600 hover: text-purple-500">Request details →</Link>
 							</div>
 						</div>
 
@@ -346,7 +346,7 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-orange-600">From $4k/mo</span>
-								<Link to="/contact" className="text-orange-600 hover:text-orange-500">Book intro →</Link>
+								<Link to="/contact" className="text-orange-600 hover: text-orange-500">Book intro →</Link>
 							</div>
 						</div>
 
@@ -379,7 +379,7 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-sky-600">From $299/mo</span>
-								<Link to="/contact" className="text-sky-600 hover:text-sky-500">See live demo →</Link>
+								<Link to="/contact" className="text-sky-600 hover: text-sky-500">See live demo →</Link>
 							</div>
 						</div>
 
@@ -395,7 +395,7 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-teal-600">From $249/mo</span>
-								<Link to="/contact" className="text-teal-600 hover:text-teal-500">Book a walkthrough →</Link>
+								<Link to="/contact" className="text-teal-600 hover: text-teal-500">Book a walkthrough →</Link>
 							</div>
 						</div>
 					</div>
@@ -464,7 +464,7 @@ export default function Services() {
 							Ready to get started?
 						</h2>
 						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
-							Let&aposs discuss your project requirements and how we can help you achieve your goals.'
+							Let&aposs discuss your project requirements and how we can help you achieve your goals.''
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link

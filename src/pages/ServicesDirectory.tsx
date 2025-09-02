@@ -2,138 +2,96 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  Brain,
-  Shield,
-  Cloud,
-  Database,
-  Cpu,
-  Zap,
-  Globe,
-  Lock,
-  Smartphone,
-  BarChart3,
-  Network,
-  Server,
-  ArrowRight,
-  CheckCircle,
+  Brain, Shield,
+  Cloud, Database,
+  Cpu, Zap,
+  Globe, Lock,
+  Smartphone, BarChart3,
+  Network, Server,
+  ArrowRight, CheckCircle,
   Star
 } from 'lucide-react';
 
 const ServicesDirectory = () => {
   const serviceCategories = [
     {
-      title: "Artificial Intelligence & Machine Learning",
-      description: "Advanced AI solutions to transform your business operations",
-      icon: Brain,
-      color: "from-purple-500 to-indigo-500",
+      title: "Artificial Intelligence & Machine Learning", description: "Advanced AI solutions to transform your business operations",
+      icon: Brain, color: "from-purple-500 to-indigo-500",
       services: [
         {
-          name: "AI Quantum Financial Trading",
-          description: "Revolutionary quantum-powered trading algorithms",
-          path: "/services/ai-quantum-financial-trading",
-          featured: true
+          name: "AI Quantum Financial Trading", description: "Revolutionary quantum-powered trading algorithms",
+          path: "/services/ai-quantum-financial-trading", featured: true
         },
         {
-          name: "AI Business Intelligence",
-          description: "Intelligent analytics and decision-making systems",
+          name: "AI Business Intelligence", description: "Intelligent analytics and decision-making systems",
           path: "/services/ai-business-intelligence"
-        },
-        {
+        }, {
           name: "AI Code Review",
-          description: "Automated code analysis and optimization",
-          path: "/services/ai-code-review"
+          description: "Automated code analysis and optimization", path: "/services/ai-code-review"
         },
         {
-          name: "AI Content Generator",
-          description: "Advanced content creation and automation",
+          name: "AI Content Generator", description: "Advanced content creation and automation",
           path: "/services/ai-content-generator"
         }
       ]
-    },
-    {
+    }, {
       title: "Cybersecurity Solutions",
-      description: "Comprehensive security services to protect your digital assets",
-      icon: Shield,
-      color: "from-red-500 to-orange-500",
-      services: [
+      description: "Comprehensive security services to protect your digital assets", icon: Shield,
+      color: "from-red-500 to-orange-500", services: [
         {
           name: "Zero Trust Security",
-          description: "Advanced zero-trust architecture implementation",
-          path: "/services/zero-trust-security",
+          description: "Advanced zero-trust architecture implementation", path: "/services/zero-trust-security",
           featured: true
-        },
-        {
+        }, {
           name: "Vulnerability Assessment",
-          description: "Comprehensive security vulnerability scanning",
-          path: "/services/vulnerability-assessment"
+          description: "Comprehensive security vulnerability scanning", path: "/services/vulnerability-assessment"
         },
         {
-          name: "Penetration Testing",
-          description: "Ethical hacking and security testing services",
+          name: "Penetration Testing", description: "Ethical hacking and security testing services",
           path: "/services/penetration-testing"
-        },
-        {
+        }, {
           name: "Security Monitoring",
-          description: "24/7 security monitoring and threat detection",
-          path: "/services/security-monitoring"
+          description: "24/7 security monitoring and threat detection", path: "/services/security-monitoring"
         }
       ]
-    },
-    {
+    }, {
       title: "Cloud & Infrastructure",
-      description: "Scalable cloud solutions and modern infrastructure",
-      icon: Cloud,
-      color: "from-blue-500 to-cyan-500",
-      services: [
+      description: "Scalable cloud solutions and modern infrastructure", icon: Cloud,
+      color: "from-blue-500 to-cyan-500", services: [
         {
           name: "Cloud Migration",
-          description: "Seamless cloud migration and optimization",
-          path: "/services/cloud-migration",
+          description: "Seamless cloud migration and optimization", path: "/services/cloud-migration",
           featured: true
-        },
-        {
+        }, {
           name: "DevOps Automation",
-          description: "Automated deployment and CI/CD pipelines",
-          path: "/services/devops-automation"
+          description: "Automated deployment and CI/CD pipelines", path: "/services/devops-automation"
         },
         {
-          name: "Infrastructure as Code",
-          description: "Automated infrastructure management",
+          name: "Infrastructure as Code", description: "Automated infrastructure management",
           path: "/services/infrastructure-as-code"
-        },
-        {
+        }, {
           name: "Container Orchestration",
-          description: "Docker and Kubernetes deployment solutions",
-          path: "/services/container-orchestration"
+          description: "Docker and Kubernetes deployment solutions", path: "/services/container-orchestration"
         }
       ]
-    },
-    {
+    }, {
       title: "Data & Analytics",
-      description: "Transform data into actionable business insights",
-      icon: Database,
-      color: "from-green-500 to-teal-500",
-      services: [
+      description: "Transform data into actionable business insights", icon: Database,
+      color: "from-green-500 to-teal-500", services: [
         {
           name: "Big Data Processing",
-          description: "Large-scale data processing and analytics",
-          path: "/services/big-data-processing",
+          description: "Large-scale data processing and analytics", path: "/services/big-data-processing",
           featured: true
-        },
-        {
+        }, {
           name: "Real-time Analytics",
-          description: "Live data streaming and analysis",
-          path: "/services/real-time-analytics"
+          description: "Live data streaming and analysis", path: "/services/real-time-analytics"
         },
         {
-          name: "Data Visualization",
-          description: "Interactive dashboards and reporting",
+          name: "Data Visualization", description: "Interactive dashboards and reporting",
           path: "/services/data-visualization"
-        },
-        {
+        }, {
           name: "Business Intelligence",
-          description: "Strategic insights and decision support",
-          path: "/services/business-intelligence"
+          description: "Strategic insights and decision support", path: "/services/business-intelligence"
         }
       ]
     }
@@ -239,7 +197,7 @@ const ServicesDirectory = () => {
                       
                       <Link
                         to={service.path}
-                        className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-semibold"
+                        className="inline-flex items-center gap-2 text-cyan-400 hover: text-cyan-300 transition-colors text-sm font-semibold"
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4" />
@@ -266,10 +224,10 @@ const ServicesDirectory = () => {
               Need a Custom Solution?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Don't see exactly what you're looking for? Our expert team can create 
+              Don&apos;t see exactly what you&apos;re looking for? Our expert team can create 
               tailored solutions designed specifically for your unique business needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

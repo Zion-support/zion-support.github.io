@@ -18,44 +18,33 @@ const Cookies: NextPage = () => {
   const cookieTypes = [
     {
 <<<<<<< HEAD
-      icon: Cookie,
-      title:,
-  Essential Cookies',
-      description: 'These cookies are necessary for the website to function and cannot be switched off.,
+      icon: Cookie, title:,
+  Essential Cookies', '
+      description: 'These cookies are necessary for the website to function and cannot be switched off.,'
       examples: [
-  'Authentication',
-  'Security',
+  'Authentication', 'Security',
   'Load balancing']
-    },
-    {
+    }, {
       icon: Settings,
-      title:,
-  Functional Cookies',
-      description: 'These cookies enable enhanced functionality and personalization.,
+      title:, Functional Cookies','
+      description: 'These cookies enable enhanced functionality and personalization., '
       examples: [
   'User preferences',
-  'Language settings',
-  'Customization']
-    },
-    {
+  'Language settings', 'Customization']
+    }, {
       icon: Eye,
-      title:,
-  Analytics Cookies',
-      description: 'These cookies help us understand how visitors interact with our website.,
+      title:, Analytics Cookies','
+      description: 'These cookies help us understand how visitors interact with our website., '
       examples: [
   'Page views',
-  'User behavior',
-  'Performance metrics']
-    },
-    {
+  'User behavior', 'Performance metrics']
+    }, {
       icon: Database,
-      title:,
-  Marketing Cookies',
-      description: 'These cookies are used to deliver relevant advertisements and marketing campaigns.,
+      title:, Marketing Cookies','
+      description: 'These cookies are used to deliver relevant advertisements and marketing campaigns., '
       examples: [
   'Ad targeting',
-  'Campaign tracking',
-  'Conversion measurement']
+  'Campaign tracking', 'Conversion measurement']
 =======
       icon: Cookie, title: 'Essential Cookies',
       description: 'These cookies are necessary for the website to function and cannot be switched off.', examples: ['AuthenticationSecurityLoad balancing']
@@ -78,32 +67,25 @@ const Cookies: NextPage = () => {
   const cookieFeatures = [
     {
 <<<<<<< HEAD
-      icon: Shield,
-      title:,
-  Cookie Consent',
-      description: 'We obtain your consent before setting non-essential cookies.
-    },
-    {
-      icon: Settings,
-      title:,
-  Cookie Management',
-      description: 'You can manage your cookie preferences at any time.
-    },
-    {
-      icon: CheckCircle,
-      title:,
-  Transparency',
-      description: 'We provide clear information about the cookies we use.
-=======
-      icon: Shield, title: 'Cookie Consent',
+      icon: Shield, title:,
+  Cookie Consent', '
       description: 'We obtain your consent before setting non-essential cookies.'
-    }, {
-      icon: Settings,
-      title: 'Cookie Management', description: 'You can manage your cookie preferences at any time.'
     },
     {
-      icon: CheckCircle, title: 'Transparency',
+      icon: Settings, title:,
+  Cookie Management', '
+      description: 'You can manage your cookie preferences at any time.'
+    },
+    {
+      icon: CheckCircle, title:,
+  Transparency', '
       description: 'We provide clear information about the cookies we use.'
+=======
+      icon: Shield, title: 'Cookie Consent', description: 'We obtain your consent before setting non-essential cookies.'
+    }, {
+      icon: Settings, title: 'Cookie Management', description: 'You can manage your cookie preferences at any time.'
+    }, {
+      icon: CheckCircle, title: 'Transparency', description: 'We provide clear information about the cookies we use.'
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
   ];

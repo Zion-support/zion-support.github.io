@@ -10,15 +10,13 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from
 
 const ContactPage: NextPage = () => {
   const [formData, setFormData] = useState({
-    name:,
-  ',
-    email: ',
+    name:, ','
+    email: ', '
     company:,
-  ',
-    phone: ',
-    service:,
-  ',
-    message: '
+  ', '
+    phone: ','
+    service:, ','
+    message: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -58,16 +56,14 @@ const ContactPage: NextPage = () => {
     setTimeout(() => {
 <<<<<<< HEAD
       setIsSubmitting(false);
-      setSubmitStatus(,
-  success');
+      setSubmitStatus(, success');'
       setFormData({
-        name: ',
+        name: ', '
         email:,
-  ',
-        company: ',
-        phone:,
-  ',
-        service: ',
+  ', '
+        company: ','
+        phone:, ','
+        service: ', '
         message: ''
 =======
       setIsSubmitting(false)
@@ -84,163 +80,93 @@ const ContactPage: NextPage = () => {
   const contactInfo = [
     {
 <<<<<<< HEAD
-      icon: <Phone className="w-6 h-6" />,
-      title:,
-  Phone',
-      details: '+1 302 464 0950,
-      link:,
-  tel: +13024640950
+      icon: <Phone className="w-6 h-6" />, title:,
+  Phone', '
+      details: '+1 302 464 0950,'
+      link:, tel: +13024640950
     },
     {
-      icon: <Mail className="w-6 h-6" />,
-      title:,
-  Email',
-      details: 'kleber@ziontechgroup.com,
-      link:,
-  mailto: kleber@ziontechgroup.com
+      icon: <Mail className="w-6 h-6" />, title:,
+  Email', '
+      details: 'kleber@ziontechgroup.com,'
+      link:, mailto: kleber@ziontechgroup.com
     },
     {
-      icon: <MapPin className="w-6 h-6" />,
-      title:,
-  Address',
-      details: 364 E Main St STE 1008, Middletown DE 19709,
-  ,
-      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title:,
-  Business Hours',
-      details: 'Mon-Fri: 9AM-6PM EST,
-=======
-      icon: <Phone className="w-6 h-6" />, title: 'Phone',
-      details: '+1 302 464 0950', link: 'tel:+13024640950'
-    },
-    {
-      icon: <Mail className="w-6 h-6" />, title: 'Email',
-      details: 'kleber@ziontechgroup.com', link: 'mailto:kleber@ziontechgroup.com'
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />, title: 'Address',
-      details: '364 E Main St STE 1008, Middletown DE 19709',
+      icon: <MapPin className="w-6 h-6" />, title:,
+  Address', '
+      details: 364 E Main St STE 1008, Middletown DE 19709,  ,
       link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
     }, {
       icon: <Clock className="w-6 h-6" />,
-      title: 'Business Hours', details: 'Mon-Fri: 9AM-6PM EST',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+      title:, Business Hours','
+      details: 'Mon-Fri: 9AM-6PM EST, '
+=======
+      icon: <Phone className="w-6 h-6" />, title: 'Phone', details: '+1 302 464 0950', link: 'tel:+13024640950'
+    }, {
+      icon: <Mail className="w-6 h-6" />, title: 'Email', details: 'kleber@ziontechgroup.com', link: 'mailto:kleber@ziontechgroup.com'
+    }, {
+      icon: <MapPin className="w-6 h-6" />, title: 'Address', details: '364 E Main St STE 1008, Middletown DE 19709', link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
+    }, {
+      icon: <Clock className="w-6 h-6" />, title: 'Business Hours', details: 'Mon-Fri: 9AM-6PM EST', >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       link: null
     }
   ]
 
   const services = [
 <<<<<<< HEAD
-    // Micro SaaS Services,
-  AI Content Generator Pro',
-  'Social Media Scheduler Pro',
-  'Email Marketing Automation Suite',
-  'Smart Invoice Management',
-  'Time Tracking & Productivity Suite',
-  'CRM & Sales Pipeline Manager',
-  'Smart Appointment Booking',
-  'Inventory & POS System',
-  'Document Management & Collaboration',
-  'Survey & Feedback Platform',
-  'Expense Management & Reimbursement',
-  'Smart Project Manager',
-  'Inventory Tracker Pro',
-  'AI Support Assistant',
-  'AI Video Editor Pro',
-  'AI Voice Cloning Studio',
-  'AI Code Reviewer Pro',
-  'AI Meeting Transcriber & Analyzer',
-  'AI Personal Finance Manager',
-  'AI Health & Wellness Coach',
-  'AI Language Learning Tutor',
-  'AI Interior Design Studio',
-  'AI Job Matching Platform',
-  'AI Social Media Analyzer',
-  'Smart Expense Tracker',
-  'AI Lead Scoring Platform',
-  'Time Tracking Analytics Pro',
-  'Website Speed Optimizer',
-  'API Monitoring Platform',
-  'Business Password Manager',
-  'Advanced Form Builder',
-  'Screenshot API Service',
-  'AI Email Responder Pro',
-  'Mobile-First Survey Platform',
-  'Industry-Specific Productivity Planner',
-  'Smart Event Management Dashboard',
-  'AI SEO Content Optimizer',
-  'AI Talent Matching Platform',
-  'AI Recruiting Platform',
-  'Quantum Computing Solutions',
-    
-    // IT Services
+    // Micro SaaS Services, AI Content Generator Pro','
+  'Social Media Scheduler Pro', 'Email Marketing Automation Suite',
+  'Smart Invoice Management', 'Time Tracking & Productivity Suite',
+  'CRM & Sales Pipeline Manager', 'Smart Appointment Booking',
+  'Inventory & POS System', 'Document Management & Collaboration',
+  'Survey & Feedback Platform', 'Expense Management & Reimbursement',
+  'Smart Project Manager', 'Inventory Tracker Pro',
+  'AI Support Assistant', 'AI Video Editor Pro',
+  'AI Voice Cloning Studio', 'AI Code Reviewer Pro',
+  'AI Meeting Transcriber & Analyzer', 'AI Personal Finance Manager',
+  'AI Health & Wellness Coach', 'AI Language Learning Tutor',
+  'AI Interior Design Studio', 'AI Job Matching Platform',
+  'AI Social Media Analyzer', 'Smart Expense Tracker',
+  'AI Lead Scoring Platform', 'Time Tracking Analytics Pro',
+  'Website Speed Optimizer', 'API Monitoring Platform',
+  'Business Password Manager', 'Advanced Form Builder',
+  'Screenshot API Service', 'AI Email Responder Pro',
+  'Mobile-First Survey Platform', 'Industry-Specific Productivity Planner',
+  'Smart Event Management Dashboard', 'AI SEO Content Optimizer',
+  'AI Talent Matching Platform', 'AI Recruiting Platform',
+  'Quantum Computing Solutions', // IT Services
   'Cloud Migration Expert',
-  'Multi-Cloud Strategy & Management',
-  'Container Orchestration & Kubernetes',
-  'Serverless Architecture Implementation',
-  'Network Security & Infrastructure Audit',
-  'Database Optimization & Migration',
-  'API Gateway & Microservices Management',
-  'Disaster Recovery & Business Continuity',
-  'IT Infrastructure Monitoring & Management',
-  'Identity & Access Management (IAM)',
-  'Cybersecurity Assessment',
-  'DevOps Automation Suite',
-  'Data Backup & Recovery',
-  'Kubernetes Orchestration',
-  'API Gateway & Management',
-  'Database Performance Optimization',
-  'Network Security Audit',
-  'Disaster Recovery Planning',
-  'Microservices Architecture Design',
-  'Application Performance Monitoring',
-  'Identity & Access Management',
-  'Quantum Cloud Computing Solutions',
-  'Metaverse Infrastructure & Development',
-  'Autonomous Systems Development',
-  'Digital Twin Platform Development',
-  'Cyber-Physical Systems Integration',
-  'Neuromorphic Computing Solutions',
-  'Satellite Communication Systems',
-  'Advanced Biometric Security Systems',
-  'Edge Computing Solutions',
-  'Blockchain Infrastructure & Development',
-  'Zero Trust Security Architecture',
-  '5G Network Implementation & Optimization',
-  'Hyperautomation Platform',
-    
-    // AI Services
+  'Multi-Cloud Strategy & Management', 'Container Orchestration & Kubernetes',
+  'Serverless Architecture Implementation', 'Network Security & Infrastructure Audit',
+  'Database Optimization & Migration', 'API Gateway & Microservices Management',
+  'Disaster Recovery & Business Continuity', 'IT Infrastructure Monitoring & Management',
+  'Identity & Access Management (IAM)', 'Cybersecurity Assessment',
+  'DevOps Automation Suite', 'Data Backup & Recovery',
+  'Kubernetes Orchestration', 'API Gateway & Management',
+  'Database Performance Optimization', 'Network Security Audit',
+  'Disaster Recovery Planning', 'Microservices Architecture Design',
+  'Application Performance Monitoring', 'Identity & Access Management',
+  'Quantum Cloud Computing Solutions', 'Metaverse Infrastructure & Development',
+  'Autonomous Systems Development', 'Digital Twin Platform Development',
+  'Cyber-Physical Systems Integration', 'Neuromorphic Computing Solutions',
+  'Satellite Communication Systems', 'Advanced Biometric Security Systems',
+  'Edge Computing Solutions', 'Blockchain Infrastructure & Development',
+  'Zero Trust Security Architecture', '5G Network Implementation & Optimization',
+  'Hyperautomation Platform', // AI Services
   'Custom AI Model Development',
-  'Computer Vision & Image Recognition',
-  'Natural Language Processing (NLP)',
-  'Predictive Analytics & Forecasting',
-  'AI-Powered Recommendation Engine',
-  'AI-Powered Workflow Automation',
-  'AI Data Analytics & Business Intelligence',
-  'AI Chatbot & Voice Assistant Development',
-  'AI Fraud Detection & Security',
-  'AI Content Moderation & Safety',
-  'AI Supply Chain Optimization',
-  'AI Process Automation',
-  'AI Analytics Platform',
-  'AI Chatbot Development',
-  'AI Drug Discovery Platform',
-  'AI Climate Modeling & Prediction',
-  'AI Space Exploration Solutions',
-  'AI Neuroscience Research Platform',
-  'AI Robotics & Automation',
-  'AI Financial Trading Platform',
-  'AI Weather Prediction & Climate Modeling',
-  'AI Mental Health & Wellness Platform',
-  'AI Legal Research & Analysis Platform',
-  'AI Sports Analytics & Performance Platform',
-  'AI Education Personalization Platform',
-  'AI Energy Optimization & Smart Grid',
-  'AI Cybersecurity Threat Intelligence',
-  'AI Augmented Reality Solutions',
+  'Computer Vision & Image Recognition', 'Natural Language Processing (NLP)', 'Predictive Analytics & Forecasting',
+  'AI-Powered Recommendation Engine', 'AI-Powered Workflow Automation',
+  'AI Data Analytics & Business Intelligence', 'AI Chatbot & Voice Assistant Development',
+  'AI Fraud Detection & Security', 'AI Content Moderation & Safety',
+  'AI Supply Chain Optimization', 'AI Process Automation',
+  'AI Analytics Platform', 'AI Chatbot Development',
+  'AI Drug Discovery Platform', 'AI Climate Modeling & Prediction',
+  'AI Space Exploration Solutions', 'AI Neuroscience Research Platform',
+  'AI Robotics & Automation', 'AI Financial Trading Platform',
+  'AI Weather Prediction & Climate Modeling', 'AI Mental Health & Wellness Platform',
+  'AI Legal Research & Analysis Platform', 'AI Sports Analytics & Performance Platform',
+  'AI Education Personalization Platform', 'AI Energy Optimization & Smart Grid',
+  'AI Cybersecurity Threat Intelligence', 'AI Augmented Reality Solutions',
   'Other'
 =======
     // Micro SaaS Services
@@ -273,10 +199,10 @@ const ContactPage: NextPage = () => {
     <MainLayout
       title="Contact Us - Zion Tech Group"
 <<<<<<< HEAD
-      description="Get in touch with Zion Tech Group for technology solutions, consultations, and support. We
-  're here to help transform your business."
+      description="Get in touch with Zion Tech Group for technology solutions, consultations, and support. We"
+  're here to help transform your business."'"
 =======
-      description="Get in touch with Zion Tech Group for technology solutions, consultations, and support. We&aposre here to help transform your business."'
+      description="Get in touch with Zion Tech Group for technology solutions, consultations, and support. We&aposre here to help transform your business."''
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     >
       {/* Hero Section */}
@@ -287,7 +213,7 @@ const ContactPage: NextPage = () => {
 <<<<<<< HEAD
               Lets Build Something Amazing Together
 =======
-              Let&apos;s Build Something Amazing Together'
+              Let&apos;s Build Something Amazing Together''
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
             </h1>
             <p className="text-xl md: text-2xl mb-8 text-gray-200 leading-relaxed">
@@ -341,15 +267,15 @@ const ContactPage: NextPage = () => {
                 <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
 <<<<<<< HEAD
                   Thank you for your message! We
-  'll get back to you within 24 hours.
+  'll get back to you within 24 hours.'
 =======
-                  Thank you for your message! We&aposll get back to you within 24 hours.'
+                  Thank you for your message! We&aposll get back to you within 24 hours.''
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
                 </div>
               )}
 
-              {submitStatus === 'error
-  ' && (
+              {submitStatus === 'error'
+  ' && ('
                 <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
                   There was an error sending your message. Please try again or contact us directly.
                 </div>
@@ -479,7 +405,7 @@ const ContactPage: NextPage = () => {
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  We&aposre here to help you transform your business with cutting-edge technology solutions. '
+                  We&aposre here to help you transform your business with cutting-edge technology solutions. ''
                   Whether you need a custom AI solution, cloud migration, or a complete digital transformation, our expert team is ready to assist you.
                 </p>
                 <p className="text-gray-600">
@@ -519,9 +445,9 @@ const ContactPage: NextPage = () => {
                 <p className="text-gray-600 mb-4">
 <<<<<<< HEAD
                   We understand that time is valuable. That
-  's why we guarantee a response within 24 hours 
+  's why we guarantee a response within 24 hours '
 =======
-                  We understand that time is valuable. That&apos;s why we guarantee a response within 24 hours '
+                  We understand that time is valuable. That&apos;s why we guarantee a response within 24 hours ''
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
                   for all inquiries.
                 </p>

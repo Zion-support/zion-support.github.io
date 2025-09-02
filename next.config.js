@@ -56,15 +56,12 @@ eslint: {
     return config
   },
   // Try to exclude problematic directories at the Next.js level
-<<<<<<< HEAD:next.config.cjs
   pageExtensions: [
-  'tsx',
-  'ts',
-  'jsx',
-  'js'],
-=======
-  pageExtensions: ['tsxtsjsx', 'js'],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:next.config.js
+    'tsx',
+    'ts',
+    'jsx',
+    'js'
+  ],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,

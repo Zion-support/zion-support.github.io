@@ -8,10 +8,8 @@ interface AccessibilityEnhancerProps {
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
-  skipToContent = true,
-  focusManagement = true,
-  keyboardNavigation = true
+  children, skipToContent = true,
+  focusManagement = true, keyboardNavigation = true
 }) => {
   useEffect(() => {
     // Add skip to content functionality
@@ -38,7 +36,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         const modals = document.querySelectorAll('[role="dialog"]');
         modals.forEach(modal => {
           const focusableElements = modal.querySelectorAll(
-            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            'button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])'
           );
           
           if (focusableElements.length > 0) {
@@ -123,7 +121,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         <a
           id="skip-to-content"
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           onFocus={(e) => {
             e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }}
@@ -132,7 +130,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         </a>
       )}
       {children}
-    </>
+</>
   );
 };
 

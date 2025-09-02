@@ -12,30 +12,18 @@ import { Card } from
 import { Badge } from
   '../components/ui/Badge';
 import { 
-  TrendingUp,
-  Users,
-  DollarSign,
-  Clock,
-  Target,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Award,
-  BarChart3,
-  Brain,
-  Shield,
-  Cloud,
-  Database,
-  Network,
-  Zap,
-  Globe,
-  Phone,
-  Mail,
-  Eye,
-  Download,
-  Share2,
-  Filter,
-  Search
+  TrendingUp, Users,
+  DollarSign, Clock,
+  Target, CheckCircle,
+  ArrowRight, Star,
+  Award, BarChart3,
+  Brain, Shield,
+  Cloud, Database,
+  Network, Zap,
+  Globe, Phone,
+  Mail, Eye,
+  Download, Share2,
+  Filter, Search
 } from
   'lucide-react';
 =======
@@ -45,7 +33,6 @@ import { SEO } from '../components/SEO'
 import { Button } from '../components/ui/Button'
 import { Card } from '../components/ui/Card'
 import { Badge } from '../components/ui/Badge'
-import { 
   TrendingUp, Users,
   DollarSign, Clock,
   Target, CheckCircle,
@@ -165,9 +152,9 @@ const CaseStudies: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 <<<<<<< HEAD
               Discover how we
-  've helped businesses across industries achieve remarkable results with AI-powered solutions.
+  've helped businesses across industries achieve remarkable results with AI-powered solutions.'
 =======
-              Discover how we&aposve helped businesses across industries achieve remarkable results with AI-powered solutions.'
+              Discover how we&aposve helped businesses across industries achieve remarkable results with AI-powered solutions.''
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
             </p>
           </motion.div>
@@ -341,8 +328,7 @@ const CaseStudies: React.FC = () => {
                         key={industry.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
                           industry.active 
-                            ?,
-  bg-gradient-to-r from-blue-500 to-purple-600 text-white
+                            ?, bg-gradient-to-r from-blue-500 to-purple-600 text-white
   ': 'text-gray-300 hover:bg-slate-700
                         }`}
                       >

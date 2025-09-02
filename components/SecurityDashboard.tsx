@@ -2,12 +2,12 @@
 React, { useEffect, useState } from
   'react';
 import { motion } from
-  'framer-motion';'import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from
-  'lucide-react';'
-  'interface SecurityMetrics {
+  'framer-motion';'import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from'
+  'lucide-react';''
+  'interface SecurityMetrics {'
 =======
 import React, { useEffect, useState } from 'react'
-import  { motion } from 'framer-motion''import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from 'lucide-react'''interface SecurityMetrics {
+import  { motion } from 'framer-motion''import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from 'lucide-react'''interface SecurityMetrics {'
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   overallScore: number;
   vulnerabilities: {;critical: number;
@@ -42,9 +42,9 @@ const mockData: SecurityMetrics = {;
 
 <<<<<<< HEAD
   const getScoreColor = (score: number): string => {;
-    if (score >= 90) return 'text-green-500
+    if (score >= 90) return 'text-green-500'
   ';'    if (score >= 70) return
-  'text-yellow-500';'    return
+  'text-yellow-500';'    return'
   'text-red-500';'  };'
 =======
   const getScoreColor = (score: number): string => {

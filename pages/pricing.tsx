@@ -12,28 +12,17 @@ import { Card } from
 import { Badge } from
   '../components/ui/Badge';
 import { 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Shield, 
-  Users, 
-  Globe, 
-  Phone, 
-  Mail, 
-  ArrowRight,
-  DollarSign,
-  TrendingUp,
-  Award,
-  Clock,
-  Target,
-  Brain,
-  Server,
-  Cloud,
-  Lock,
-  BarChart3,
-  Rocket,
-  Heart,
-  Sparkles
+  CheckCircle, Star, 
+  Zap, Shield, 
+  Users, Globe, 
+  Phone, Mail, 
+  ArrowRight, DollarSign,
+  TrendingUp, Award,
+  Clock, Target,
+  Brain, Server,
+  Cloud, Lock,
+  BarChart3, Rocket,
+  Heart, Sparkles
 } from
   'lucide-react';
 =======
@@ -43,7 +32,6 @@ import { SEO } from '../components/SEO'
 import { Button } from '../components/ui/Button'
 import { Card } from '../components/ui/Card'
 import { Badge } from '../components/ui/Badge'
-import { 
   CheckCircle, Star, 
   Zap, Shield, 
   Users, Globe, 

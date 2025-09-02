@@ -2,11 +2,11 @@
 React, { useEffect } from
   'react';
 import Head from
-  'next/head';'
-  'interface PerformanceOptimizerProps {preloadImages?: string[];
+  'next/head';''
+  'interface PerformanceOptimizerProps {preloadImages?: string[];'
 =======
 import React, { useEffect } from 'react'
-import  Head from 'next/head''interface PerformanceOptimizerProps {
+import  Head from 'next/head''interface PerformanceOptimizerProps {'
   preloadImages?: string[]
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   preloadFonts?: string[];
@@ -16,7 +16,7 @@ import  Head from 'next/head''interface PerformanceOptimizerProps {
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 <<<<<<< HEAD
 preloadImages = [], preloadFonts = [,
-  https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'  ], criticalCSS,
+  https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'  ], criticalCSS,'
   }) => {
   useEffect(() => {
     // Performance monitoring
@@ -27,29 +27,27 @@ preloadImages = [], preloadFonts = [,
         for (const entry of list.getEntries()) {
 if (entry.entryType ===
   'largest-contentful-paint') {
-  '            console.log('LCP: , entry.startTime);,
-  }
+  '            console.log('LCP:  , entry.startTime);, }
   '          if (entry.entryType === 'first-input
   ') {'            console.log(
-  'FID: , entry.processingStart - entry.startTime);,
+  'FID:  , entry.processingStart - entry.startTime);, '
   }
   '          if (entry.entryType === 'layout-shift
   ') {'            if (!(entry as any).hadRecentInput) {
-  '              console.log('CLS: , (entry as any).value);,
-  }
-  '          }}
+  '              console.log('CLS:  , (entry as any).value);, }
+  '          }}'
       });
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint, 'first-input
   ', 'layout-shift
   '] });'      } catch (e) {
-  '        // Fallback for browsers that don&apos;t support all entry types''        console.log(
-  'Performance monitoring not fully supported');'      }
-  '
+  '        // Fallback for browsers that don&apos;t support all entry types''        console.log('
+  'Performance monitoring not fully supported');'      }'
+  ''
       // Resource hints for better performance
       const addResourceHint = (href: string, as: string, type?: string) => {;
-        const link = document.createElement('link
+        const link = document.createElement('link'
   ');'        link.rel =
   'preload';'        link.href = href;'        link.as = as;if (type) link.type = type;
 =======
@@ -74,11 +72,9 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
       // Preload critical resources
       preloadImages.forEach(image => {
 <<<<<<< HEAD
-addResourceHint(image,
-  'image');'      });'
+addResourceHint(image, 'image');'      });'
       preloadFonts.forEach(font => {
-        addResourceHint(font,
-  'style');'      });'    }}, [preloadImages, preloadFonts]);
+        addResourceHint(font, 'style');'      });'    }}, [preloadImages, preloadFonts]);
 =======
 addResourceHint(image, 'image')'      });'
       preloadFonts.forEach(font => {
@@ -100,10 +96,9 @@ key={`preload-image-${index}`}`          rel="preload""          as="image""    
       {preloadFonts.map((font, index) => (
         <link
 <<<<<<< HEAD
-key={`preload-font-${index}`}`          rel="preload""          as="style""          href={font}"          onLoad={() => {
-            const link = document.querySelector(`link[href="${font}"]`);"            if (link) {"              (link as HTMLLinkElement).rel =,
-  stylesheet';'            }
-  '          }}`        />
+key={`preload-font-${index}`}`          rel="preload""          as="style""          href={font}"          onLoad={() => {"
+            const link = document.querySelector(`link[href="${font}"]`);"            if (link) {"              (link as HTMLLinkElement).rel =, stylesheet';'            }
+  '          }}`        />'
 =======
 key={`preload-font-${index}`}`          rel="preload""          as="style""          href={font}"          onLoad={() => {"
             const link = document.querySelector(`link[href="${font}"]`)"            if (link) {"              (link as HTMLLinkElement).rel = 'stylesheet''            }'          }}`        />
@@ -115,15 +110,14 @@ key={`preload-font-${index}`}`          rel="preload""          as="style""     
       <script
         dangerouslySetInnerHTML={{
 <<<<<<< HEAD
-          __html: ``            if ('serviceWorker
+          __html: ``            if ('serviceWorker'
   ' in navigator) {'              window.addEventListener(
-  'load, function() {,
-  navigator.serviceWorker.register('/sw.js
+  'load, function() {, '
+  navigator.serviceWorker.register('/sw.js'
   ')'                  .then(function(registration) {
-  '                    console.log('SW registered: , registration);,
-  })
-  '                  .catch(function(registrationError) {
-                    console.log('SW registration failed: , registrationError);'                  });'              });
+  '                    console.log('SW registered:  , registration);, })
+  '                  .catch(function(registrationError) {'
+                    console.log('SW registration failed:  , registrationError);'                  });'              });'
 =======
           __html: ``            if ('serviceWorker' in navigator) {'              window.addEventListener('load', function() {'                navigator.serviceWorker.register('/sw.js')'                  .then(function(registration) {'                    console.log('SW registered: ', registration)'                  })'                  .catch(function(registrationError) {
                     console.log('SW registration failed: ', registrationError)'                  });'              });

@@ -21,8 +21,7 @@ interface ErrorReport {
 const errorReports: ErrorReport[] = [];
 
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
+  req: NextApiRequest, res: NextApiResponse
 ) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -45,12 +44,10 @@ export default async function handler(
     errorReports.push(errorReport);
 
     // Log for debugging
-    console.error('Error Report:', {
+    console.error('Error Report: ', {
       message: errorReport.error.message,
-      stack: errorReport.error.stack,
-      url: errorReport.url,
-      timestamp: errorReport.timestamp,
-    });
+      stack: errorReport.error.stack, url: errorReport.url,
+      timestamp: errorReport.timestamp, });
 
     // Send to external error monitoring services
     await sendToErrorMonitoringServices(errorReport);
@@ -62,7 +59,7 @@ export default async function handler(
 
     res.status(200).json({ success: true });
   } catch (error) {
-    console.error('Error Reporting API Error:', error);
+    console.error('Error Reporting API Error: ', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 }
@@ -71,49 +68,34 @@ async function sendToErrorMonitoringServices(errorReport: ErrorReport) {
   try {
     // Sentry
     if (process.env.SENTRY_DSN) {
-      await fetch('https://sentry.io/api/0/projects/', {
+      await fetch('https: //sentry.io/api/0/projects/', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'X-Sentry-Auth': `Sentry sentry_version=7, sentry_key=${process.env.SENTRY_KEY}`,
-        },
+          'Content-Type': 'application/json', 'X-Sentry-Auth': `Sentry sentry_version=7, sentry_key=${process.env.SENTRY_KEY}`, },
         body: JSON.stringify({
-          message: errorReport.error.message,
-          stacktrace: {
-            frames: parseStackTrace(errorReport.error.stack),
-          },
+          message: errorReport.error.message, stacktrace: {
+            frames: parseStackTrace(errorReport.error.stack), },
           tags: {
-            component: 'frontend',
-            url: errorReport.url,
-          },
-          user: {
+            component: 'frontend', url: errorReport.url,
+          }, user: {
             id: errorReport.userId,
-          },
-          extra: {
+          }, extra: {
             userAgent: errorReport.userAgent,
-            sessionId: errorReport.sessionId,
-            componentStack: errorReport.errorInfo.componentStack,
-          },
-        }),
-      });
+            sessionId: errorReport.sessionId, componentStack: errorReport.errorInfo.componentStack,
+          }, }), });
     }
 
     // LogRocket
     if (process.env.LOGROCKET_APP_ID) {
-      await fetch(`https://api.logrocket.com/v1/projects/${process.env.LOGROCKET_APP_ID}/errors`, {
+      await fetch(`https: //api.logrocket.com/v1/projects/${process.env.LOGROCKET_APP_ID}/errors`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.LOGROCKET_API_KEY}`,
-        },
-        body: JSON.stringify({
+          'Content-Type': 'application/json', 'Authorization': `Bearer ${process.env.LOGROCKET_API_KEY}`,
+        }, body: JSON.stringify({
           message: errorReport.error.message,
-          stack: errorReport.error.stack,
-          url: errorReport.url,
-          userAgent: errorReport.userAgent,
-          timestamp: errorReport.timestamp,
-        }),
-      });
+          stack: errorReport.error.stack, url: errorReport.url,
+          userAgent: errorReport.userAgent, timestamp: errorReport.timestamp,
+        }), });
     }
 
     // Custom webhook
@@ -121,13 +103,11 @@ async function sendToErrorMonitoringServices(errorReport: ErrorReport) {
       await fetch(process.env.ERROR_WEBHOOK_URL, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(errorReport),
-      });
+          'Content-Type': 'application/json', },
+        body: JSON.stringify(errorReport), });
     }
   } catch (error) {
-    console.error('Failed to send to error monitoring services:', error);
+    console.error('Failed to send to error monitoring services: ', error);
   }
 }
 
@@ -135,32 +115,23 @@ function parseStackTrace(stack?: string) {
   if (!stack) return [];
   
   return stack.split('\n').map(line => {
-    const match = line.match(/at\s+(.+?)\s+\((.+?):(\d+):(\d+)\)/);
+    const match = line.match(/at\s+(.+?)\s+\((.+?): (\d+): (\d+)\)/);
     if (match) {
       return {
-        function: match[1],
-        filename: match[2],
-        lineno: parseInt(match[3]),
-        colno: parseInt(match[4]),
-      };
+        function: match[1], filename: match[2], lineno: parseInt(match[3]), colno: parseInt(match[4]), };
     }
     return {
-      function: line.trim(),
-      filename: 'unknown',
-      lineno: 0,
-      colno: 0,
+      function: line.trim(), filename: 'unknown',
+      lineno: 0, colno: 0,
     };
   });
 }
 
 function isCriticalError(errorReport: ErrorReport): boolean {
   const criticalPatterns = [
-    /chunk load failed/i,
-    /loading chunk/i,
-    /network error/i,
-    /failed to fetch/i,
-    /script error/i,
-  ];
+    /chunk load failed/i, /loading chunk/i,
+    /network error/i, /failed to fetch/i,
+    /script error/i,  ];
 
   return criticalPatterns.some(pattern => 
     pattern.test(errorReport.error.message)
@@ -174,11 +145,9 @@ async function sendCriticalErrorAlert(errorReport: ErrorReport) {
       await fetch('/api/send-alert-email', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json', },
         body: JSON.stringify({
-          to: process.env.ALERT_EMAIL,
-          subject: 'Critical Error Alert - Zion Tech Group',
+          to: process.env.ALERT_EMAIL, subject: 'Critical Error Alert - Zion Tech Group',
           body: `
             A critical error has occurred on the website:
             
@@ -189,9 +158,7 @@ async function sendCriticalErrorAlert(errorReport: ErrorReport) {
             
             Stack Trace:
             ${errorReport.error.stack}
-          `,
-        }),
-      });
+          `, }), });
     }
 
     // Send Slack notification
@@ -199,35 +166,24 @@ async function sendCriticalErrorAlert(errorReport: ErrorReport) {
       await fetch(process.env.SLACK_WEBHOOK_URL, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json', },
         body: JSON.stringify({
-          text: `🚨 Critical Error Alert`,
-          attachments: [{
+          text: `🚨 Critical Error Alert`, attachments: [{
             color: 'danger',
             fields: [
               {
-                title: 'Error Message',
-                value: errorReport.error.message,
-                short: false,
-              },
+                title: 'Error Message', value: errorReport.error.message,
+                short: false, },
               {
-                title: 'URL',
-                value: errorReport.url,
-                short: true,
-              },
+                title: 'URL', value: errorReport.url,
+                short: true, },
               {
-                title: 'Timestamp',
-                value: errorReport.timestamp,
-                short: true,
-              },
-            ],
-          }],
-        }),
-      });
+                title: 'Timestamp', value: errorReport.timestamp,
+                short: true, },
+            ], }], }), });
     }
   } catch (error) {
-    console.error('Failed to send critical error alert:', error);
+    console.error('Failed to send critical error alert: ', error);
   }
 }
 

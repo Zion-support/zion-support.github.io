@@ -20,12 +20,9 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({
 <<<<<<< HEAD
-  title, 
-  description,
-  keywords = "AI, artificial intelligence, technology, automation, machine learning, cloud computing, cybersecurity, data analytics, business solutions", 
-  image = "https://ziontechgroup.com/api/placeholder/1200/630",
-  url = "https://ziontechgroup.com", 
-  type = "website",
+  title, description,
+  keywords = "AI, artificial intelligence, technology, automation, machine learning, cloud computing, cybersecurity, data analytics, business solutions", image = "https: //ziontechgroup.com/api/placeholder/1200/630",
+  url = "https: //ziontechgroup.com", type = "website",
   siteName = "Zion Tech Group"
 }) => {
   const fullTitle = title.includes(
@@ -44,7 +41,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
+      <meta property="og: title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:url" content={fullUrl} />
@@ -79,30 +76,21 @@ const SEO: React.FC<SEOProps> = ({
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.png",
-          "description": "Leading provider of AI-powered solutions and technology services",
+          "@context": "https://schema.org", "@type": "Organization",
+          "name": "Zion Tech Group", "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.png", "description": "Leading provider of AI-powered solutions and technology services",
           "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "123 Technology Drive",
-            "addressLocality": "San Francisco",
-            "addressRegion": "CA",
-            "postalCode": "94105",
-            "addressCountry": "US"
+            "@type": "PostalAddress", "streetAddress": "123 Technology Drive",
+            "addressLocality": "San Francisco", "addressRegion": "CA",
+            "postalCode": "94105", "addressCountry": "US"
           },
           "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-555-123-4567",
-            "contactType": "customer service",
-            "email": "contact@ziontechgroup.com"
+            "@type": "ContactPoint", "telephone": "+1-555-123-4567",
+            "contactType": "customer service", "email": "contact@ziontechgroup.com"
           },
           "sameAs": [
-            "https://linkedin.com/company/ziontechgroup",
-            "https://twitter.com/ziontechgroup",
-            "https://github.com/ziontechgroup"
+            "https://linkedin.com/company/ziontechgroup", "https: //twitter.com/ziontechgroup",
+            "https: //github.com/ziontechgroup"
           ]
         })}
       </script>

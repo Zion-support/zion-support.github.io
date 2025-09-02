@@ -2,11 +2,11 @@
 React from
   'react';
 import Head from
-  'next/head';'
-  'interface SEOEnhancerProps {title?: string;
+  'next/head';''
+  'interface SEOEnhancerProps {title?: string;'
 =======
 import React from 'react'
-import  Head from 'next/head''interface SEOEnhancerProps {
+import  Head from 'next/head''interface SEOEnhancerProps {'
   title?: string
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   description?: string;
@@ -20,11 +20,10 @@ import  Head from 'next/head''interface SEOEnhancerProps {
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 <<<<<<< HEAD
-title =,
-  Zion Tech Group - Leading Technology Solutions Provider
+title =, Zion Tech Group - Leading Technology Solutions Provider
   ', description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence with measurable results.
   ', keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, blockchain, quantum computing, enterprise solutions
-  ', ogImage = 'https: //ziontechgroup.com/og-image.jpg,'  canonicalUrl =,
+  ', ogImage = 'https: //ziontechgroup.com/og-image.jpg, '  canonicalUrl =,'
   https: //ziontechgroup.com, structuredData,
   '  noindex = false, nofollow = false'}) => {
 =======
@@ -38,10 +37,9 @@ title = 'Zion Tech Group - Leading Technology Solutions Provider', description =
       {/* Basic Meta Tags */}
       <title>{title}</title>
 <<<<<<< HEAD
-<meta name="description" content={description} />"      <meta name="keywords" content={keywords} />"      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />"      <meta name="robots" content={`${noindex ?,
-  noindex': 'index}, ${nofollow ?,
-  nofollow': 'follow}`} />'      <meta name="author" content="Zion Tech Group" />"      <meta name="generator" content="Next.js" />"      "      {/* Canonical URL */}`      <link rel="canonical" href={canonicalUrl} />"      "      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />"      <meta property="og:description" content={description} />"      <meta property="og:image" content={ogImage} />"      <meta property="og:image:width" content="1200" />"      <meta property="og:image:height" content="630" />"      <meta property="og:image:alt" content={title} />"      <meta property="og:type" content="website" />"      <meta property="og:url" content={canonicalUrl} />"      <meta property="og:site_name" content="Zion Tech Group" />"      <meta property="og:locale" content="en_US" />"      "      {/* Twitter Card Meta Tags */}
+<meta name="description" content={description} />"      <meta name="keywords" content={keywords} />"      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />"      <meta name="robots" content={`${noindex ?, "
+  noindex': 'index}, ${nofollow ?, nofollow': 'follow}`} />'      <meta name="author" content="Zion Tech Group" />"      <meta name="generator" content="Next.js" />"      "      {/* Canonical URL */}`      <link rel="canonical" href={canonicalUrl} />"      "      {/* Open Graph Meta Tags */}'"
+      <meta property="og:title" content={title} />"      <meta property="og:description" content={description} />"      <meta property="og:image" content={ogImage} />"      <meta property="og:image:width" content="1200" />"      <meta property="og:image:height" content="630" />"      <meta property="og:image:alt" content={title} />"      <meta property="og:type" content="website" />"      <meta property="og:url" content={canonicalUrl} />"      <meta property="og:site_name" content="Zion Tech Group" />"      <meta property="og:locale" content="en_US" />"      "      {/* Twitter Card Meta Tags */}"
 =======
 <meta name="description" content={description} />"      <meta name="keywords" content={keywords} />"      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />"      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />'      <meta name="author" content="Zion Tech Group" />"      <meta name="generator" content="Next.js" />"      "      {/* Canonical URL */}`      <link rel="canonical" href={canonicalUrl} />"      "      {/* Open Graph Meta Tags */}'
       <meta property="og:title" content={title} />"      <meta property="og:description" content={description} />"      <meta property="og:image" content={ogImage} />"      <meta property="og:image:width" content="1200" />"      <meta property="og:image:height" content="630" />"      <meta property="og:image:alt" content={title} />"      <meta property="og:type" content="website" />"      <meta property="og:url" content={canonicalUrl} />"      <meta property="og:site_name" content="Zion Tech Group" />"      <meta property="og:locale" content="en_US" />"      "      {/* Twitter Card Meta Tags */}"

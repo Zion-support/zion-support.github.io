@@ -7,7 +7,7 @@ const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 =======
 import React, { useState } from 'react'
-import  Link from 'next/link''import { Menu, X, ChevronDown } from 'lucide-react'''const EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
+import  Link from 'next/link''import { Menu, X, ChevronDown } from 'lucide-react'''const EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);'
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   const [servicesOpen, setServicesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false)
@@ -26,7 +26,7 @@ import  Link from 'next/link''import { Menu, X, ChevronDown } from 'lucide-react
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md: flex items-center space-x-8">
             <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">
               Home
             </Link>
@@ -53,7 +53,7 @@ import  Link from 'next/link''import { Menu, X, ChevronDown } from 'lucide-react
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
                 >
-                  <Link href="/services/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  <Link href="/services/ai-services" className="block px-4 py-2 text-gray-700 hover: bg-gray-100">
                     AI Services
                   </Link>
                   <Link href="/services/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
@@ -72,7 +72,7 @@ import  Link from 'next/link''import { Menu, X, ChevronDown } from 'lucide-react
             {/* Solutions Dropdown */}
             <div className="relative group">
               <button 
-                className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
+                className="flex items-center space-x-1 text-gray-700 hover: text-blue-600 transition-colors"
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
               >
@@ -85,7 +85,7 @@ import  Link from 'next/link''import { Menu, X, ChevronDown } from 'lucide-react
                   onMouseEnter={() => setSolutionsOpen(true)}
                   onMouseLeave={() => setSolutionsOpen(false)}
                 >
-                  <Link href="/solutions/enterprise" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  <Link href="/solutions/enterprise" className="block px-4 py-2 text-gray-700 hover: bg-gray-100">
                     Enterprise
                   </Link>
                   <Link href="/solutions/startups" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
@@ -98,7 +98,7 @@ import  Link from 'next/link''import { Menu, X, ChevronDown } from 'lucide-react
               )}
             </div>
 
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <Link href="/about" className="text-gray-700 hover: text-blue-600 transition-colors">
               About
             </Link>
             <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">

@@ -1,6 +1,5 @@
 <<<<<<< HEAD
-import React from,
-  react';
+import React from, react';'
 import MainLayout from
   '../components/layout/MainLayout';
 import Link from
@@ -8,16 +7,12 @@ import Link from
 
 const MarketplacePage: React.FC = () => {
   const sections = [
-    { title:
-  'Products, href:,
-  /marketplace/products', description: AI tools, software, and platforms.,
-  },
-    { title: 'Talent, href:,
-  /marketplace/talent', description: 'Expert contractors and fractional teams. },
-    { title:,
-  Equipment', href: '/marketplace/equipment, description:,
-  Hardware and infrastructure.' },
-    { title: 'Services, href:,
+    { title: 'Products, href:,'
+  /marketplace/products', description: AI tools, software, and platforms.,'
+  }, { title: 'Talent, href:, '
+  /marketplace/talent', description: 'Expert contractors and fractional teams. }, { title:,
+  Equipment', href: '/marketplace/equipment, description:, Hardware and infrastructure.' },'
+    { title: 'Services, href:,'
   /marketplace/services', description: 'Professional and managed services. },
 =======
 import React from 'react'

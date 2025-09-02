@@ -13,29 +13,18 @@ const Footer: React.FC = () => {
       { name: 'Mobile Apps', href: '/services/mobile-app-development-chat' },
       { name: 'Data Analytics', href: '/services/business-intelligence-chat' },
       { name: 'Cybersecurity', href: '/services/network-security-chat' }
-    ],
-    solutions: [
-      { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
-      { name: 'IoT Platforms', href: '/iot-platforms' },
-      { name: 'AI-Powered Systems', href: '/services/ai-model-development-chat' }
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/talent' },
-      { name: 'Careers', href: '/talent' },
-      { name: 'Contact', href: '/contact' }
-    ],
-    resources: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Case Studies', href: '/blog' },
-      { name: 'Documentation', href: '/blog' },
-      { name: 'Support', href: '/contact' }
+    ], solutions: [
+      { name: 'Blockchain Solutions', href: '/blockchain-solutions' }, { name: 'IoT Platforms', href: '/iot-platforms' }, { name: 'AI-Powered Systems', href: '/services/ai-model-development-chat' }
+    ], company: [
+      { name: 'About Us', href: '/about' }, { name: 'Our Team', href: '/talent' }, { name: 'Careers', href: '/talent' }, { name: 'Contact', href: '/contact' }
+    ], resources: [
+      { name: 'Blog', href: '/blog' }, { name: 'Case Studies', href: '/blog' }, { name: 'Documentation', href: '/blog' }, { name: 'Support', href: '/contact' }
     ]
   };
 
   return (
     <footer className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
@@ -63,7 +52,7 @@ const Footer: React.FC = () => {
 
             {/* Social Links */}
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="#" className="text-gray-400 hover: text-blue-400 transition-colors">
                 <Linkedin className="h-6 w-6" />
               </a>
               <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
@@ -83,7 +72,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover: text-blue-400 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -100,7 +89,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover: text-blue-400 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -117,7 +106,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover: text-blue-400 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -131,7 +120,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover: text-blue-400 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -143,7 +132,7 @@ const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md: flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </p>

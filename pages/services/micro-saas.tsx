@@ -1,6 +1,5 @@
 <<<<<<< HEAD
-import React from,
-  react';
+import React from, react';'
 import type { NextPage } from
   'next';
 import MainLayout from
@@ -14,32 +13,26 @@ import Link from
 
 const MicroSaasPage: NextPage = () => {
   const microSaasServices = getServicesByCategory(
-  'micro-saas);
+  'micro-saas);'
 
   const benefits = [
     {
-      icon: <Zap className="w-8 h-8" />,
-      title:,
-  Lightning Fast Setup',
-      description: Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.'
-    },
-    {
+      icon: <Zap className="w-8 h-8" />, title:,
+  Lightning Fast Setup', '
+      description: Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.''
+    }, {
       icon: <Users className="w-8 h-8" />,
-      title:,
-  Scalable Solutions',
-      description: 'Start small and grow as your business expands. Our solutions scale with your needs.
-    },
-    {
+      title:, Scalable Solutions','
+      description: 'Start small and grow as your business expands. Our solutions scale with your needs.'
+    }, {
       icon: <Shield className="w-8 h-8" />,
-      title:,
-  Enterprise Security',
-      description: Bank-level security with SOC 2 compliance, ensuring your data is always protected.'
+      title:, Enterprise Security','
+      description: Bank-level security with SOC 2 compliance, ensuring your data is always protected.''
     },
     {
-      icon: <Star className="w-8 h-8" />,
-      title:,
-  Proven Results',
-      description: 'Track record of successful implementations with measurable ROI for our clients.
+      icon: <Star className="w-8 h-8" />, title:,
+  Proven Results', '
+      description: 'Track record of successful implementations with measurable ROI for our clients.'
 =======
 import React from 'react'
 import type { NextPage } from 'next'
@@ -387,7 +380,7 @@ const MicroSaasPage: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
-            Let&aposs discuss how our micro SaaS solutions can help streamline your operations '
+            Let&aposs discuss how our micro SaaS solutions can help streamline your operations ''
             and drive growth for your business.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">

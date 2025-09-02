@@ -1,6 +1,5 @@
 <<<<<<< HEAD
-import type { NextPage } from,
-  next';
+import type { NextPage } from, next';'
 import MainLayout from
   '../components/layout/MainLayout';
 import { Users, Target, Award, Globe, Zap, Shield, Heart, Lightbulb } from
@@ -10,45 +9,35 @@ import Link from
 
 const AboutPage: NextPage = () => {
   const stats = [
-    { number:
-  '500+, label:
-  'Projects Completed', icon: <Award className="w-8 h-8" /> },
-    { number:,
-  50+', label: 'Happy Clients, icon: <Users className="w-8 h-8" /> },
-    { number:,
-  99.9%', label: 'Uptime Guarantee, icon: <Shield className="w-8 h-8" /> },
-    { number:,
-  24/7', label: 'Support Available, icon: <Globe className="w-8 h-8" /> },
-  ];
+    { number: '500+, label: '
+  'Projects Completed', icon: <Award className="w-8 h-8" /> }, { number:,
+  50+', label: 'Happy Clients, icon: <Users className="w-8 h-8" /> }, { number:,
+  99.9%', label: 'Uptime Guarantee, icon: <Shield className="w-8 h-8" /> }, { number:,
+  24/7', label: 'Support Available, icon: <Globe className="w-8 h-8" /> },  ];
 
   const values = [
     {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title:,
-  Innovation',
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value.
+      icon: <Lightbulb className="w-8 h-8" />, title:,
+  Innovation', '
+      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value.'
     },
     {
-      icon: <Heart className="w-8 h-8" />,
-      title:,
-  Customer Focus',
-      description: 'Our clients\ success is our success. We build lasting partnerships based on trust, transparency, and mutual growth.
-  '
+      icon: <Heart className="w-8 h-8" />, title:,
+  Customer Focus', '
+      description: 'Our clients\ success is our success. We build lasting partnerships based on trust, transparency, and mutual growth.'
+  ''
     },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title:,
+      icon: <Zap className="w-8 h-8" />, title:,
   Excellence
-  ',
+  ', '
       description: We maintain the highest standards of quality in everything we do, from code to customer service.
-  '
-    },
-    {
+  ''
+    }, {
       icon: <Target className="w-8 h-8" />,
-      title:,
-  Results-Driven
-  ',
-      description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.
+      title:, Results-Driven
+  ','
+      description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.'
 =======
 import type { NextPage } from 'next'
 import MainLayout from '../components/layout/MainLayout'
@@ -83,59 +72,47 @@ const AboutPage: NextPage = () => {
   const team = [
     {
 <<<<<<< HEAD
-      name:,
-  Kleber Silva
-  ',
-      role: 'Founder & CEO,
+      name:, Kleber Silva
+  ','
+      role: 'Founder & CEO, '
       bio:,
   Technology visionary with over 15 years of experience in software development and business transformation.
-  ',
-      image: '/team/kleber.jpg
+  ', '
+      image: '/team/kleber.jpg'
     },
     {
-      name:,
-  Sarah Johnson
-  ',
-      role: 'CTO,
+      name:, Sarah Johnson
+  ','
+      role: 'CTO, '
       bio:,
   Expert in cloud architecture and AI/ML solutions with a passion for scalable, innovative technology.
-  ',
-      image: '/team/sarah.jpg
-    },
-    {
-      name:,
-  Michael Chen
-  ',
-      role: 'Head of Engineering,
-      bio:,
-  Full-stack development specialist focused on creating robust, user-centric applications.
-  ',
-      image: '/team/michael.jpg
-    },
-    {
-      name:,
-  Emily Rodriguez
-  ',
-      role: 'Head of Design,
-      bio:,
-  UX/UI expert dedicated to creating intuitive, beautiful, and functional user experiences.
-  ',
-      image: '/team/emily.jpg
-=======
-      name: 'Kleber Silva', role: 'Founder & CEO',
-      bio: 'Technology visionary with over 15 years of experience in software development and business transformation.', image: '/team/kleber.jpg'
-    },
-    {
-      name: 'Sarah Johnson', role: 'CTO',
-      bio: 'Expert in cloud architecture and AI/ML solutions with a passion for scalable, innovative technology.',
+  ','
       image: '/team/sarah.jpg'
     }, {
-      name: 'Michael Chen',
-      role: 'Head of Engineering', bio: 'Full-stack development specialist focused on creating robust, user-centric applications.', image: '/team/michael.jpg'
+      name:,
+  Michael Chen
+  ', '
+      role: 'Head of Engineering,'
+      bio:, Full-stack development specialist focused on creating robust, user-centric applications.
+  ', '
+      image: '/team/michael.jpg'
     },
     {
-      name: 'Emily Rodriguez', role: 'Head of Design',
-      bio: 'UX/UI expert dedicated to creating intuitive, beautiful, and functional user experiences.', image: '/team/emily.jpg'
+      name:, Emily Rodriguez
+  ','
+      role: 'Head of Design, '
+      bio:,
+  UX/UI expert dedicated to creating intuitive, beautiful, and functional user experiences.
+  ', '
+      image: '/team/emily.jpg'
+=======
+      name: 'Kleber Silva', role: 'Founder & CEO', bio: 'Technology visionary with over 15 years of experience in software development and business transformation.', image: '/team/kleber.jpg'
+    }, {
+      name: 'Sarah Johnson', role: 'CTO', bio: 'Expert in cloud architecture and AI/ML solutions with a passion for scalable, innovative technology.', image: '/team/sarah.jpg'
+    }, {
+      name: 'Michael Chen', role: 'Head of Engineering', bio: 'Full-stack development specialist focused on creating robust, user-centric applications.', image: '/team/michael.jpg'
+    }, {
+      name: 'Emily Rodriguez', role: 'Head of Design', bio: 'UX/UI expert dedicated to creating intuitive, beautiful, and functional user experiences.', image: '/team/emily.jpg'
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
   ]
@@ -143,43 +120,34 @@ const AboutPage: NextPage = () => {
   const timeline = [
     {
 <<<<<<< HEAD
-      year:,
-  2020
-  ',
-      title: 'Company Founded,
+      year:, 2020
+  ','
+      title: 'Company Founded, '
       description:,
   Zion Tech Group was established with a vision to democratize technology solutions for businesses of all sizes.
-  '
-    },
-    {
-      year: '2021,
-      title:,
-  First Major Client
-  ',
+  ''
+    }, {
+      year: '2021,'
+      title:, First Major Client
+  ','
       description: Successfully delivered our first enterprise AI solution, marking the beginning of our growth journey.,
-  },
-    {
-      year: '2022,
-      title:,
-  Micro SaaS Launch
-  ',
+  }, {
+      year: '2022,'
+      title:, Micro SaaS Launch
+  ','
       description: Introduced our first suite of micro SaaS solutions, helping small businesses scale efficiently.,
-  },
-    {
-      year: '2023,
-      title:,
-  Team Expansion
-  ',
-      description: 'Grew our team to 20+ experts and expanded our service offerings to include comprehensive IT services.
-    },
-    {
+  }, {
+      year: '2023,'
+      title:, Team Expansion
+  ','
+      description: 'Grew our team to 20+ experts and expanded our service offerings to include comprehensive IT services.'
+    }, {
       year:,
   2024
-  ',
-      title: 'Global Reach,
-      description:,
-  Serving clients across multiple countries and industries, with a focus on AI and digital transformation.
-  '
+  ', '
+      title: 'Global Reach,'
+      description:, Serving clients across multiple countries and industries, with a focus on AI and digital transformation.
+  ''
 =======
       year: '2020', title: 'Company Founded',
       description: 'Zion Tech Group was established with a vision to democratize technology solutions for businesses of all sizes.'
@@ -203,7 +171,7 @@ const AboutPage: NextPage = () => {
   return (
     <MainLayout
       title="About Us - Zion Tech Group"
-      description="Learn about Zion Tech Group&aposs mission to transform businesses through innovative technology solutions. Meet our expert team and discover our story."'
+      description="Learn about Zion Tech Group&aposs mission to transform businesses through innovative technology solutions. Meet our expert team and discover our story."''
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -216,7 +184,7 @@ const AboutPage: NextPage = () => {
 <<<<<<< HEAD
               Were a team of passionate technologists dedicated to helping businesses 
 =======
-              We&apos;re a team of passionate technologists dedicated to helping businesses '
+              We&apos;re a team of passionate technologists dedicated to helping businesses ''
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
               leverage cutting-edge technology to achieve their goals and drive growth.
             </p>
@@ -241,12 +209,12 @@ const AboutPage: NextPage = () => {
               </p>
               <p className="text-lg text-gray-600">
 <<<<<<< HEAD
-                Whether you're a startup looking to scale or an enterprise seeking digital transformation, 
+                Whether you&apos;re a startup looking to scale or an enterprise seeking digital transformation, '
                 we
-  're here to be your technology partner every step of the way.
+  're here to be your technology partner every step of the way.'
 =======
-                Whether you&aposre a startup looking to scale or an enterprise seeking digital transformation, '
-                we&apos;re here to be your technology partner every step of the way.'
+                Whether you&aposre a startup looking to scale or an enterprise seeking digital transformation, ''
+                we&apos;re here to be your technology partner every step of the way.''
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
               </p>
             </div>
@@ -346,7 +314,7 @@ const AboutPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From humble beginnings to serving clients worldwide, here&aposs our story of growth and innovation.'
+              From humble beginnings to serving clients worldwide, here&aposs our story of growth and innovation.''
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
@@ -374,7 +342,7 @@ const AboutPage: NextPage = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 <<<<<<< HEAD
               We
-  're not just another technology company. Here's what makes us different.
+  're not just another technology company. Here&apos;s what makes us different.
 =======
               We&apos;re not just another technology company. Here&apos;s what makes us different.
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
@@ -392,9 +360,9 @@ const AboutPage: NextPage = () => {
               <p className="text-gray-600">
 <<<<<<< HEAD
                 We
-  've successfully delivered hundreds of projects across various industries 
+  've successfully delivered hundreds of projects across various industries '
 =======
-                We&apos;ve successfully delivered hundreds of projects across various industries '
+                We&apos;ve successfully delivered hundreds of projects across various industries ''
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
                 and business sizes.
               </p>
@@ -436,7 +404,7 @@ const AboutPage: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Work Together?</h2>
           <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
-            Let&aposs discuss how our team can help transform your business with innovative '
+            Let&aposs discuss how our team can help transform your business with innovative ''
             technology solutions.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">

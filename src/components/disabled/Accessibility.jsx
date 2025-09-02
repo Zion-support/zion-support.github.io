@@ -1,6 +1,5 @@
 <<<<<<< HEAD
-import React, { useState, useEffect, createContext, useContext } from,
-  react'; import { motion, AnimatePresence } from
+import React, { useState, useEffect, createContext, useContext } from, react'; import { motion, AnimatePresence } from'
   'framer-motion'; ; import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from
   '../ui/button'; const AccessibilityContext = createContext(undefined); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if (!context) {; throw new Error(
   'useAccessibility must be used within an AccessibilityProvider'); ; return context; };import React, { useState, useEffect, createContext, useContext } from
@@ -123,7 +122,7 @@ export const AccessibilityProvider = ({ children }) => {;
   'url(#deuteranopia)' :;
 ;
 
-  'url(#tritanopia)}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
+  'url(#tritanopia)}, [highContrast, reducedMotion, fontSize, colorBlindMode]);'
 =======
 
             root.classList.add('high-contrast');
@@ -140,9 +139,7 @@ export const AccessibilityProvider = ({ children }) => {;
 ;// Font size
         root.style.fontSize = fontSize === 'small' ? '14px' : fontSize === 'large' ? '18px' : '16px';
         // Color blind mode
-        root.style.filter = colorBlindMode === 'none' ? 'none' :
-            colorBlindMode === 'protanopia' ? 'url(#protanopia)' :
-                colorBlindMode === 'deuteranopia' ? 'url(#deuteranopia)' :;
+        root.style.filter = colorBlindMode === 'none' ? 'none' : colorBlindMode === 'protanopia' ? 'url(#protanopia)' : colorBlindMode === 'deuteranopia' ? 'url(#deuteranopia)' :;
 
                     'url(#tritanopia)'}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
@@ -191,12 +188,12 @@ export const AccessibilityPanel = () => {;
   'M') {;
                 event.preventDefault();
                 toggleReducedMotion();
-;};"
+;};""
         window.addEventListener(
   'keydown', handleKeyDown);";"
         return () => window.removeEventListener(
   'keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);";"
-    return (<>;"";"
+    return (<>;"";""
 =======
             // Ctrl/Cmd + Shift + H to toggle high contrast
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {;
@@ -267,8 +264,7 @@ export const AccessibilityPanel = () => {;
 <<<<<<< HEAD
                   <div className="flex gap-2">";"";"
                     {[
-  'small',
-  'medium',
+  'small', 'medium',
   'large'].map((size) => (<Button key={size} variant={fontSize === size ? "default" : "outline"} size="sm" onClick={() => setFontSize(size)} className={fontSize === size ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>;
 =======
                   <div className="flex gap-2">";"""
@@ -284,11 +280,9 @@ export const AccessibilityPanel = () => {;
 <<<<<<< HEAD
                   <div className="grid grid-cols-2 gap-2">";"";"
                     {[
-  'none',
-  'protanopia',
-  'deuteranopia',
-  'tritanopia'].map((mode) => (<Button key={mode} variant={colorBlindMode === mode ? "default" : "outline"} size="sm" onClick={() => setColorBlindMode(mode)} className={colorBlindMode === mode ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>;
-                        {mode.charAt(0).toUpperCase() + mode.slice(1)};"
+  'none', 'protanopia',
+  'deuteranopia', 'tritanopia'].map((mode) => (<Button key={mode} variant={colorBlindMode === mode ? "default" : "outline"} size="sm" onClick={() => setColorBlindMode(mode)} className={colorBlindMode === mode ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>;
+                        {mode.charAt(0).toUpperCase() + mode.slice(1)};""
 =======
                   <div className="grid grid-cols-2 gap-2">";"""
                     {['noneprotanopiadeuteranopia', 'tritanopia'].map((mode) => (<Button key={mode} variant={colorBlindMode === mode ? "default" : "outline"} size="sm" onClick={() => setColorBlindMode(mode)} className={colorBlindMode === mode ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>;
@@ -337,10 +331,9 @@ export const SkipToContent = () => (<a href="#main-content" className="sr-only f
 export const useFocusTrap = (isActive) => {;";"
     useEffect(() => {;";"
 <<<<<<< HEAD
-        if (!isActive);"";"
+        if (!isActive);"";""
             return;";"";"
-        const focusableElements =,
-  button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])';
+        const focusableElements =, button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])';'
         const container = document.activeElement?.closest(
   '[data-focus-trap]');
 =======
@@ -356,7 +349,7 @@ export const useFocusTrap = (isActive) => {;";"
 <<<<<<< HEAD
         const handleTabKey = (e) => {;
             if (e.key ===
-  'Tab) {;
+  'Tab) {;'
 =======
         const handleTabKey = (e) => {
             if (e.key === 'Tab') {;
@@ -376,7 +369,7 @@ export const useFocusTrap = (isActive) => {;";"
         document.addEventListener(
   'keydown', handleTabKey);";"
         return () => document.removeEventListener(
-  'keydown', handleTabKey)}, [isActive])};"";"
+  'keydown', handleTabKey)}, [isActive])};"";""
 =======
 ;};""
         document.addEventListener('keydown', handleTabKey);""

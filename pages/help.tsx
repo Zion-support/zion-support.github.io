@@ -21,32 +21,25 @@ const Help: NextPage = () => {
   const helpCategories = [
     {
 <<<<<<< HEAD
-      icon: Book,
-      title:,
-  Getting Started',
-      description: 'Learn the basics and get up and running quickly,
+      icon: Book, title:,
+  Getting Started', '
+      description: 'Learn the basics and get up and running quickly,'
       articles: [
-  'Welcome to Zion Tech Group',
-  'Setting up your account',
-  'Understanding our services',
-  'First steps guide'
+  'Welcome to Zion Tech Group', 'Setting up your account',
+  'Understanding our services', 'First steps guide'
 =======
-      icon: Book, title: 'Getting Started',
-      description: 'Learn the basics and get up and running quickly', articles: [
-        'Welcome to Zion Tech GroupSetting up your accountUnderstanding our services',
-        'First steps guide'
+      icon: Book, title: 'Getting Started', description: 'Learn the basics and get up and running quickly', articles: [
+        'Welcome to Zion Tech GroupSetting up your accountUnderstanding our services', 'First steps guide'
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       ]
     }, {
       icon: FileText,
 <<<<<<< HEAD
-      title:,
-  User Guides',
-      description: 'Detailed guides for using our services,
+      title:, User Guides','
+      description: 'Detailed guides for using our services, '
       articles: [
   'Service management',
-  'Account settings',
-  'Billing and payments',
+  'Account settings', 'Billing and payments',
   'Security best practices'
 =======
       title: 'User Guides', description: 'Detailed guides for using our services',
@@ -57,13 +50,11 @@ const Help: NextPage = () => {
     }, {
       icon: Video,
 <<<<<<< HEAD
-      title:,
-  Video Tutorials',
-      description: 'Watch step-by-step video tutorials,
+      title:, Video Tutorials','
+      description: 'Watch step-by-step video tutorials, '
       articles: [
   'Platform overview',
-  'Service configuration',
-  'Troubleshooting common issues',
+  'Service configuration', 'Troubleshooting common issues',
   'Advanced features'
 =======
       title: 'Video Tutorials', description: 'Watch step-by-step video tutorials',
@@ -74,17 +65,14 @@ const Help: NextPage = () => {
     }, {
       icon: MessageCircle,
 <<<<<<< HEAD
-      title:,
-  FAQ',
-      description: 'Frequently asked questions and answers,
+      title:, FAQ','
+      description: 'Frequently asked questions and answers, '
       articles: [,
-  General questions',
+  General questions', '
   'Technical support',
-  'Billing questions',
-  'Service-specific FAQs'
+  'Billing questions', 'Service-specific FAQs'
 =======
-      title: 'FAQ', description: 'Frequently asked questions and answers',
-      articles: [
+      title: 'FAQ', description: 'Frequently asked questions and answers', articles: [
         'General questionsTechnical supportBilling questions', 'Service-specific FAQs'
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       ]
@@ -94,53 +82,41 @@ const Help: NextPage = () => {
   const popularArticles = [
     {
 <<<<<<< HEAD
-      title: 'How to get started with our services,
+      title: 'How to get started with our services, '
       category:,
-  Getting Started',
-      views: '1.2k views
-    },
-    {
-      title:,
-  Understanding your billing and payments',
-      category: 'Billing,
-      views:,
-  890 views'
-    },
-    {
-      title: 'Setting up two-factor authentication,
-      category:,
-  Security',
-      views: '756 views
-    },
-    {
-      title:,
-  Troubleshooting common login issues',
-      category: 'Technical,
-      views:,
-  634 views'
-    },
-    {
-      title: 'Managing your account settings,
-      category:,
-  Account',
-      views: '521 views
-=======
-      title: 'How to get started with our services', category: 'Getting Started',
+  Getting Started', '
       views: '1.2k views'
-    }, {
-      title: 'Understanding your billing and payments',
-      category: 'Billing', views: '890 views'
     },
     {
-      title: 'Setting up two-factor authentication', category: 'Security',
+      title:, Understanding your billing and payments','
+      category: 'Billing, '
+      views:,
+  890 views''
+    }, {
+      title: 'Setting up two-factor authentication,'
+      category:, Security','
       views: '756 views'
     }, {
-      title: 'Troubleshooting common login issues',
-      category: 'Technical', views: '634 views'
+      title:,
+  Troubleshooting common login issues', '
+      category: 'Technical,'
+      views:, 634 views''
     },
     {
-      title: 'Managing your account settings', category: 'Account',
+      title: 'Managing your account settings, '
+      category:,
+  Account', '
       views: '521 views'
+=======
+      title: 'How to get started with our services', category: 'Getting Started', views: '1.2k views'
+    }, {
+      title: 'Understanding your billing and payments', category: 'Billing', views: '890 views'
+    }, {
+      title: 'Setting up two-factor authentication', category: 'Security', views: '756 views'
+    }, {
+      title: 'Troubleshooting common login issues', category: 'Technical', views: '634 views'
+    }, {
+      title: 'Managing your account settings', category: 'Account', views: '521 views'
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
   ]
@@ -148,31 +124,25 @@ const Help: NextPage = () => {
   const supportOptions = [
     {
 <<<<<<< HEAD
-      icon: MessageCircle,
-      title:,
-  Live Chat',
-      description: 'Get instant help from our support team,
-      availability:,
-  Available 24/7',
-      action: 'Start Chat
-    },
-    {
+      icon: MessageCircle, title:,
+  Live Chat', '
+      description: 'Get instant help from our support team,'
+      availability:, Available 24/7','
+      action: 'Start Chat'
+    }, {
       icon: Phone,
-      title:,
-  Phone Support',
-      description: 'Speak directly with our technical experts,
+      title:, Phone Support','
+      description: 'Speak directly with our technical experts, '
       availability:,
-  Mon-Fri 9AM-6PM EST',
-      action: 'Call +1 302 464 0950
+  Mon-Fri 9AM-6PM EST', '
+      action: 'Call +1 302 464 0950'
     },
     {
-      icon: Mail,
-      title:,
-  Email Support',
-      description: 'Send us your questions and get detailed responses,
-      availability:,
-  Response within 24 hours',
-      action: 'Send Email
+      icon: Mail, title:,
+  Email Support', '
+      description: 'Send us your questions and get detailed responses,'
+      availability:, Response within 24 hours','
+      action: 'Send Email'
 =======
       icon: MessageCircle, title: 'Live Chat',
       description: 'Get instant help from our support team', availability: 'Available 24/7',
@@ -203,7 +173,7 @@ const Help: NextPage = () => {
             <h1 className="text-4xl md: text-5xl font-bold mb-6">Help Center</h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Find answers, get support, and learn how to make the most of our services. 
-              We&aposre here to help you succeed.'
+              We&aposre here to help you succeed.''
             </p>
           </div>
         </section>

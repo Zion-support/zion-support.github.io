@@ -14,18 +14,13 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Future Technology Solutions',
-  description = 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.',
-  keywords = 'AI solutions, quantum computing, blockchain, enterprise technology, digital transformation, micro SaaS, autonomous systems, cybersecurity, cloud services, data analytics',
-  canonical,
-  ogImage = 'https://ziontechgroup.com/og-image.svg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  noindex = false,
+  title = 'Zion Tech Group - Future Technology Solutions', description = 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.', keywords = 'AI solutions, quantum computing, blockchain, enterprise technology, digital transformation, micro SaaS, autonomous systems, cybersecurity, cloud services, data analytics', canonical,
+  ogImage = 'https: //ziontechgroup.com/og-image.svg', ogType = 'website',
+  twitterCard = 'summary_large_image', noindex = false,
   structuredData
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || 'https://ziontechgroup.com';
+  const canonicalUrl = canonical || 'https: //ziontechgroup.com';
 
   return (
     <Head>
@@ -34,7 +29,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
+      <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index,follow'} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="language" content="English" />
@@ -44,7 +39,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="canonical" href={canonicalUrl} />
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
+      <meta property="og: title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:url" content={canonicalUrl} />
@@ -101,30 +96,21 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "description": description,
-              "foundingDate": "2020",
-              "address": {
+              "@context": "https://schema.org", "@type": "Organization",
+              "name": "Zion Tech Group", "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png", "description": description,
+              "foundingDate": "2020", "address": {
                 "@type": "PostalAddress",
                 "addressCountry": "US"
-              },
-              "contactPoint": {
+              }, "contactPoint": {
                 "@type": "ContactPoint",
-                "contactType": "customer service",
-                "url": "https://ziontechgroup.com/contact"
+                "contactType": "customer service", "url": "https://ziontechgroup.com/contact"
               },
               "sameAs": [
-                "https://linkedin.com/company/zion-tech-group",
-                "https://twitter.com/ZionTechGroup"
-              ],
-              "offers": {
+                "https://linkedin.com/company/zion-tech-group", "https: //twitter.com/ZionTechGroup"
+              ], "offers": {
                 "@type": "AggregateOffer",
-                "offerCount": "500+",
-                "description": "Technology solutions and services"
+                "offerCount": "500+", "description": "Technology solutions and services"
               }
             })
           }}

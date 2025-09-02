@@ -5,7 +5,7 @@ import Link from
   'next/link.ts';'import {;'
 =======
 import React from 'react.ts'
-import  Link from 'next/link.ts''import {;''
+import  Link from 'next/link.ts''import {;'''
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   Mail, Phone,
   MapPin, Linkedin,

@@ -257,8 +257,8 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
 
   {
 
-          background: 'radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0,
-  1) 100%)'
+          background: 'radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0,'
+  1) 100%)''
 
 }}
       />

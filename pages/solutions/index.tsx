@@ -429,7 +429,7 @@ const Solutions: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Find Your Solution?</h2>
           <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-            Let&aposs discuss your business needs and find the perfect technology solution to drive your success.'
+            Let&aposs discuss your business needs and find the perfect technology solution to drive your success.''
           </p>
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
