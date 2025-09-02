@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
 
 import Head from 'next/head';
 import Link from 'next/link';
