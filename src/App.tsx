@@ -1,5 +1,5 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { useRouter } from 'next/router';
 
 // Layout Components;
 import { EnhancedHeader } from './components/EnhancedHeader';
