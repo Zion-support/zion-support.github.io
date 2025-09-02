@@ -170,7 +170,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 );
 ;
 function App() {;
-return (;
+return (
     <HelmetProvider>;
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>'        <PerformanceOptimizer>'          <SEO />";
           <div className="min-h-screen bg-gray-50">"            <EnhancedHeader />"            <main className="flex-1">"              <Routes>"                {/* Core Pages */}";
