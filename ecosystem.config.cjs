@@ -192,9 +192,9 @@ module.exports = {
       cron_restart: '0 2 * * *', // Run daily at 2 AM
       pmx: true
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/test-and-fix-pm2-automations-merge-to-main-22c7
 >>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
+=======
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
   ],
 

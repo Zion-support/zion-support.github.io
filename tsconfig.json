@@ -95,7 +95,8 @@
     "strictFunctionTypes": true,
     "strictBindCallApply": true,
     "strictPropertyInitialization": true,
-    "alwaysStrict": true
+    "alwaysStrict": true,
+    "tsBuildInfoFile": ".next/tsbuildinfo"
   },
   "include": [
     "next-env.d.ts",
@@ -111,15 +112,16 @@
     "automation/backups",
     "automation_backup",
     "broken_files_backup",
+    "components",
     "contracts",
     "cypress",
-    "**/*.backup",
-    "**/*.disabled",
     "temp_working",
     "supabase/functions",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx"
+    "**/*.spec.tsx",
+    "**/*.backup",
+    "**/*.disabled"
   ]
 }

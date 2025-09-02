@@ -1,82 +1,134 @@
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout';
-import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+<<<<<<< HEAD
+import React from, react';'
+import type { NextPage } from
+  'next';
+import MainLayout from
+  '../../components/layout/MainLayout';
+import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from
+  'lucide-react';
+import Link from
+  'next/link';
+=======
+import React from 'react'
+import type { NextPage } from 'next'
+import MainLayout from '../../components/layout/MainLayout'
+import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from 'lucide-react'
+import Link from 'next/link'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
 const AIContentGenerator: NextPage = () => {
   const features = [
     {
-      title: 'Multi-Language Support',
+<<<<<<< HEAD
+      title: 'Multi-Language Support, '
       description: 'Generate content in over 50 languages with native-level quality',
       icon: <Globe className="w-6 h-6" />
-    },
-    {
-      title: 'SEO Optimization',
-      description: 'AI-powered SEO optimization for better search rankings',
+    }, {
+      title:,
+  SEO Optimization', '
+      description: 'AI-powered SEO optimization for better search rankings,'
       icon: <Zap className="w-6 h-6" />
-    },
-    {
-      title: 'Brand Voice Consistency',
-      description: 'Maintain consistent brand voice across all content',
+    }, {
+      title:,
+  Brand Voice Consistency', '
+      description: 'Maintain consistent brand voice across all content,'
       icon: <Shield className="w-6 h-6" />
+    }, {
+      title:,
+  Real-time Collaboration', '
+      description: 'Work together with your team in real-time,'
+      icon: <Users className="w-6 h-6" />
+=======
+      title: 'Multi-Language Support', description: 'Generate content in over 50 languages with native-level quality',
+      icon: <Globe className="w-6 h-6" />
+    }, {
+      title: 'SEO Optimization',
+      description: 'AI-powered SEO optimization for better search rankings', icon: <Zap className="w-6 h-6" />
     },
     {
+      title: 'Brand Voice Consistency', description: 'Maintain consistent brand voice across all content',
+      icon: <Shield className="w-6 h-6" />
+    }, {
       title: 'Real-time Collaboration',
-      description: 'Work together with your team in real-time',
-      icon: <Users className="w-6 h-6" />
+      description: 'Work together with your team in real-time', icon: <Users className="w-6 h-6" />
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
-  ];
+  ]
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small businesses and individuals',
+<<<<<<< HEAD
+      name:, Starter','
+      price: '$99, '
+      period:,
+  /month', '
+      description: 'Perfect for small businesses and individuals,'
       features: [
-        '10,000 words per month',
-        '5 languages supported',
-        'Basic SEO optimization',
-        'Email support',
-        'Standard templates'
-      ],
-      popular: false
+  '10, 000 words per month',
+  '5 languages supported', 'Basic SEO optimization',
+  'Email support', 'Standard templates'
+      ], popular: false
     },
     {
-      name: 'Professional',
-      price: '$199',
-      period: '/month',
-      description: 'Ideal for growing businesses and content teams',
+      name:, Professional','
+      price: '$199, '
+      period:,
+  /month', '
+      description: 'Ideal for growing businesses and content teams,'
       features: [
-        '50,000 words per month',
-        '25 languages supported',
-        'Advanced SEO optimization',
-        'Priority support',
-        'Custom templates',
-        'Team collaboration (up to 5 users)',
-        'API access'
-      ],
-      popular: true
+  '50, 000 words per month',
+  '25 languages supported', 'Advanced SEO optimization',
+  'Priority support', 'Custom templates',
+  'Team collaboration (up to 5 users)', 'API access'
+      ], popular: true
     },
     {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Tailored solutions for large organizations',
+      name:, Enterprise','
+      price: 'Custom, '
+      period:,
+  ', '
+      description: 'Tailored solutions for large organizations,'
       features: [
-        'Unlimited words',
-        'All languages supported',
-        'Custom AI models',
-        'Dedicated support',
-        'White-label solution',
-        'Unlimited team members',
-        'Advanced analytics',
+        'Unlimited words'
+  ', '
+        'All languages supported'
+  ','
+        'Custom AI models'
+  ', '
+        'Dedicated support'
+  ','
+        'White-label solution'
+  ', '
+        'Unlimited team members'
+  ','
+        'Advanced analytics'
+  ', '
         'Custom integrations'
-      ],
-      popular: false
+  ''
+      ], popular: false
+=======
+      name: 'Starter', price: '$99', period: '/month', description: 'Perfect for small businesses and individuals', features: [
+        '10, 000 words per month5 languages supportedBasic SEO optimization', 'Email support', 'Standard templates'
+      ], popular: false
+    },
+    {
+      name: 'Professional', price: '$199',
+      period: '/month', description: 'Ideal for growing businesses and content teams',
+      features: [
+        '50, 000 words per month25 languages supportedAdvanced SEO optimization',
+        'Priority supportCustom templatesTeam collaboration (up to 5 users)', 'API access'
+      ], popular: true
+    },
+    {
+      name: 'Enterprise', price: 'Custom',
+      period: '', description: 'Tailored solutions for large organizations',
+      features: [
+        'Unlimited wordsAll languages supportedCustom AI models', 'Dedicated supportWhite-label solutionUnlimited team members',
+        'Advanced analytics', 'Custom integrations'
+      ], popular: false
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
-  ];
+  ]
 
   return (
     <MainLayout
@@ -86,7 +138,7 @@ const AIContentGenerator: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             AI Content <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Generator</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
@@ -94,7 +146,7 @@ const AIContentGenerator: NextPage = () => {
             Generate high-quality, SEO-optimized content in minutes, not hours.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+          <div className="flex flex-col sm: flex-row justify-center gap-4 mb-12">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Start Free Trial
             </Link>
@@ -159,9 +211,10 @@ const AIContentGenerator: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-white p-8 rounded-lg shadow-lg relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}>
+              <div key={index} className={`bg-white p-8 rounded-lg shadow-lg relative ${plan.popular ?, ring-2 ring-blue-500
+  ': '}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
@@ -192,8 +245,14 @@ const AIContentGenerator: NextPage = () => {
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
-                      ? 'bg-blue-600 hover:bg-blue-700 text-white'
+<<<<<<< HEAD
+                      ?, bg-blue-600 hover: bg-blue-700 text-white''
+                      :
+  'bg-gray-100 hover:bg-gray-200 text-gray-900'
+=======
+                      ? 'bg-blue-600 hover: bg-blue-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
                   }`}
                 >
                   Get Started
@@ -213,7 +272,7 @@ const AIContentGenerator: NextPage = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses already using our AI Content Generator to create better content faster.
           </p>
-          <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+          <Link href="/contact" className="bg-white text-blue-600 hover: bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
             Start Your Free Trial
           </Link>
         </div>

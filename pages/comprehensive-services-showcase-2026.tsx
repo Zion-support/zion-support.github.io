@@ -1,18 +1,28 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Star, Users, TrendingUp, Clock, Shield, Zap, Brain, Cloud, Database, Code, Building, Rocket } from 'lucide-react'
-import PageTransition from '../src/components/PageTransition'
-import { comprehensiveExpandedServices, serviceCategories } from '../data/comprehensive-2026-expanded-services'
+import React, { useState } from,
+  react''
+import { Link } from
+  'react-router-dom'
+import { ArrowRight, Star, Users, TrendingUp, Clock, Shield, Zap, Brain, Cloud, Database, Code, Building, Rocket } from
+  'lucide-react'
+import PageTransition from
+  '../src/components/PageTransition'
+import { comprehensiveExpandedServices, serviceCategories } from
+  '../data/comprehensive-2026-expanded-services'
 
 export default function ComprehensiveServicesShowcase2026() {
-	const title = 'Comprehensive Services Showcase 2026 — Zion Tech Group'
-	const description = 'Explore our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.'
+	const title =
+  'Comprehensive Services Showcase 2026 — Zion Tech Group'
+	const description =
+  'Explore our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.'
 
-	const [selectedCategory, setSelectedCategory] = useState<string>('all')
-	const [searchTerm, setSearchTerm] = useState('')
+	const [selectedCategory, setSelectedCategory] = useState<string>(
+  'all')
+	const [searchTerm, setSearchTerm] = useState(''
+  ')'
 
 	const filteredServices = comprehensiveExpandedServices.filter(service => {
-		const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+		const matchesCategory = selectedCategory === 'all'
+  ' || service.category === selectedCategory'
 		const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
@@ -24,11 +34,11 @@ export default function ComprehensiveServicesShowcase2026() {
 	return (
 		<PageTransition>
 			{/* Hero Section */}
-			<section className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 sm:py-32">
+			<section className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 sm: py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-							Comprehensive{' '}
+							Comprehensive{'}'
 							<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
 								Services Portfolio
 							</span>
@@ -39,7 +49,7 @@ export default function ComprehensiveServicesShowcase2026() {
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
 								to="/contact"
-								className="rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl"
+								className="rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl"
 							>
 								Get Started
 								<ArrowRight className="ml-2 h-4 w-4 inline" />
@@ -67,7 +77,7 @@ export default function ComprehensiveServicesShowcase2026() {
 									placeholder="Search services..."
 									value={searchTerm}
 									onChange={(e) => setSearchTerm(e.target.value)}
-									className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+									className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"
 								/>
 								<div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
 									<svg className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -80,11 +90,13 @@ export default function ComprehensiveServicesShowcase2026() {
 						{/* Category Filter */}
 						<div className="flex flex-wrap gap-2">
 							<button
-								onClick={() => setSelectedCategory('all')}
+								onClick={() => setSelectedCategory(, all
+  ')}'
 								className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
 									selectedCategory === 'all'
+  ''
 										? 'bg-blue-600 text-white'
-										: 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+  ': 'bg-gray-100 text-gray-700 hover:bg-gray-200
 								}`}
 							>
 								All Services
@@ -95,8 +107,8 @@ export default function ComprehensiveServicesShowcase2026() {
 									onClick={() => setSelectedCategory(category.name)}
 									className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
 										selectedCategory === category.name
-											? 'bg-blue-600 text-white'
-											: 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+											?, bg-blue-600 text-white
+  ': 'bg-gray-100 text-gray-700 hover:bg-gray-200
 									}`}
 								>
 									{category.icon} {category.name}
@@ -110,7 +122,7 @@ export default function ComprehensiveServicesShowcase2026() {
 			{/* Popular Services Section */}
 			{popularServices.length > 0 && (
 				<section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-16">
-					<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-7xl px-6 lg: px-8">
 						<div className="mx-auto max-w-2xl text-center mb-12">
 							<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
 								Most Popular Services
@@ -121,7 +133,7 @@ export default function ComprehensiveServicesShowcase2026() {
 						</div>
 						<div className="grid gap-8 lg:grid-cols-2">
 							{popularServices.map((service) => (
-								<div key={service.id} className="relative rounded-2xl border border-gray-200 bg-white p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+								<div key={service.id} className="relative rounded-2xl border border-gray-200 bg-white p-8 shadow-lg hover: shadow-xl transition-all duration-300">
 									<div className="flex items-start justify-between mb-4">
 										<div className="flex items-center gap-x-3">
 											<div className="text-4xl">{service.icon}</div>
@@ -170,7 +182,7 @@ export default function ComprehensiveServicesShowcase2026() {
 			)}
 
 			{/* All Services Grid */}
-			<section className="py-24 sm:py-32">
+			<section className="py-24 sm: py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center mb-16">
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -194,9 +206,9 @@ export default function ComprehensiveServicesShowcase2026() {
 									</h3>
 									<p className="text-gray-600">{category.description}</p>
 								</div>
-								<div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+								<div className="grid gap-6 lg: grid-cols-2 xl:grid-cols-3">
 									{categoryServices.map((service) => (
-										<div key={service.id} className="group relative rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-lg transition-all duration-300">
+										<div key={service.id} className="group relative rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover: shadow-lg transition-all duration-300">
 											<div className="flex items-start justify-between mb-4">
 												<div className="text-3xl">{service.icon}</div>
 												{service.popular && (
@@ -211,7 +223,7 @@ export default function ComprehensiveServicesShowcase2026() {
 											
 											{/* Features */}
 											<div className="mb-4">
-												<h5 className="text-sm font-medium text-gray-900 mb-2">Key Features:</h5>
+												<h5 className="text-sm font-medium text-gray-900 mb-2">Key Features: </h5>
 												<ul className="space-y-1">
 													{service.features.slice(0, 3).map((feature, index) => (
 														<li key={index} className="flex items-center gap-2 text-xs text-gray-600">
@@ -237,7 +249,7 @@ export default function ComprehensiveServicesShowcase2026() {
 											{/* Market Info */}
 											<div className="mb-4 p-3 bg-gray-50 rounded-lg">
 												<div className="flex items-center justify-between text-xs text-gray-600 mb-2">
-													<span>Market Size:</span>
+													<span>Market Size: </span>
 													<span className="font-medium">{service.marketSize}</span>
 												</div>
 												<div className="flex items-center justify-between text-xs text-gray-600">
@@ -293,7 +305,7 @@ export default function ComprehensiveServicesShowcase2026() {
 			</section>
 
 			{/* Contact Information Section */}
-			<section className="bg-gradient-to-r from-gray-900 to-gray-800 py-24 sm:py-32">
+			<section className="bg-gradient-to-r from-gray-900 to-gray-800 py-24 sm: py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
