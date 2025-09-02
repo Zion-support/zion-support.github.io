@@ -5,6 +5,9 @@ import Footer from './Footer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import SEOEnhancer from '../SEOEnhancer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
+import AnalyticsTracker from '../AnalyticsTracker';
+import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
+import SecurityEnhancer from '../SecurityEnhancer';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -30,6 +33,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         keywords={keywords}
         ogImage={ogImage}
       />
+      <AnalyticsTracker pageName={title} />
+      <SecurityEnhancer />
+      <EnhancedPerformanceMonitor />
       
       <div className="min-h-screen flex flex-col">
         <Header />
