@@ -4,10 +4,7 @@ export interface Service {
   id: string;
   name: string;
   description: string;
-  category:
-  'micro-saas' |
-  'ai-services' |
-  'it-services';
+  category: 'micro-saas' | 'ai-services' | 'it-services';
   price: {
     min: number;
     max: number;
@@ -29,10 +26,7 @@ export interface ContactForm {
   service: string;
   budget?: string;
   message: string;
-  preferredContact:
-  'email' |
-  'phone' |
-  'both';
+  preferredContact: 'email' | 'phone' | 'both';
 }
 
 export interface TeamMember {
@@ -93,10 +87,7 @@ export interface PricingTier {
   name: string;
   price: number;
   currency: string;
-  period:
-  'month' |
-  'year' |
-  'one-time';
+  period: 'month' | 'year' | 'one-time';
   features: string[];
   limitations?: string[];
   popular?: boolean;
@@ -115,9 +106,7 @@ export interface PaginationParams {
   page: number;
   limit: number;
   sort?: string;
-  order?:
-  'asc' |
-  'desc';
+  order?: 'asc' | 'desc';
 }
 
 export interface PaginatedResponse<T> {
@@ -158,10 +147,7 @@ export interface AccessibilitySettings {
 }
 
 export interface UserPreferences {
-  theme:
-  'light' |
-  'dark' |
-  'system';
+  theme: 'light' | 'dark' | 'system';
   language: string;
   accessibility: AccessibilitySettings;
   notifications: {
@@ -179,12 +165,7 @@ export interface NavigationItem {
 }
 
 export interface SocialLink {
-  platform:
-  'linkedin' |
-  'twitter' |
-  'github' |
-  'facebook' |
-  'instagram';
+  platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
   url: string;
   label: string;
 }
@@ -200,8 +181,7 @@ export interface CompanyInfo {
     zip: string;
     country: string;
   };
-  contact: {
-    phone: string;
+contact: {;phone: string;
     email: string;
     website: string;
   };
@@ -229,17 +209,7 @@ export interface LoadingState {
 export interface FormField {
   name: string;
   label: string;
-  type:
-  'text' |
-  'email' |
-  'tel' |
-  'textarea' |
-  'select' |
-  'checkbox' |
-  'radio';
-  required: boolean;
-  placeholder?: string;
-  options?: { value: string; label: string }[];
+type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio';'  required: boolean;'  placeholder?: string;options?: { value: string; label: string }[];
   validation?: {
     min?: number;
     max?: number;
@@ -262,54 +232,23 @@ export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
 };
 
-// Component prop types
-
-export interface BaseComponentProps {
+// Component prop types;export interface BaseComponentProps {
   className?: string;
   children?: React.ReactNode;
   id?: string;
-
-  'data-testid'?: string;
-}
-
+'data-testid'?: string;'}'
 export interface ButtonProps extends BaseComponentProps {
-  variant?:,
-  primary' |
-  'secondary' |
-  'outline' |
-  'ghost' |
-  'danger';
-  size?: 'sm' |
-  'md' |
-  'lg';
-  disabled?: boolean;
-  loading?: boolean;
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';'  size?: 'sm' | 'md' | 'lg';'  disabled?: boolean;'  loading?: boolean;
   onClick?: () => void;
-  type?:
-  'button' |
-  'submit' |
-  'reset;
-}
-
+  type?: 'button' | 'submit' | 'reset';'}'
 export interface InputProps extends BaseComponentProps {
-  type?:
-  'text' |
-  'email' |
-  'password' |
-  'tel' |
-  'url' |
-  'number';
-  placeholder?: string;
-  value?: string;
-  onChange?: (value: string) => void;
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';'  placeholder?: string;'  value?: string;onChange?: (value: string) => void;
   error?: string;
   disabled?: boolean;
   required?: boolean;
 }
 
-// API types
-
-export interface ApiError {
+// API types;export interface ApiError {
   status: number;
   message: string;
   code?: string;
@@ -317,27 +256,12 @@ export interface ApiError {
 }
 
 export interface ApiRequest {
-  method:
-  'GET' |
-  'POST' |
-  'PUT' |
-  'DELETE' |
-  'PATCH';
-  url: string;
-  data?: any;
-  params?: Record<string, any>;
+method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';'  url: string;'  data?: any;params?: Record<string, any>;
   headers?: Record<string, string>;
 }
 
-// Environment types
-
+// Environment types;
 export interface Environment {
-  NODE_ENV:
-  'development' |
-  'production' |
-  'test';
-  NEXT_PUBLIC_API_URL?: string;
-  NEXT_PUBLIC_APP_URL?: string;
-  NEXT_PUBLIC_GA_ID?: string;
+  NODE_ENV: 'development' | 'production' | 'test';'  NEXT_PUBLIC_API_URL?: string;'  NEXT_PUBLIC_APP_URL?: string;NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
 }

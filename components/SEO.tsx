@@ -32,7 +32,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
+
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -41,20 +41,31 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content="en_US" />
-      
+
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+
+      {/* Additional Meta Tags */}
+      <meta name="theme-color" content="#1e293b" />
+      <meta name="msapplication-TileColor" content="#1e293b" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#1e40af" />
-      <meta name="msapplication-TileColor" content="#1e40af" />
-      
+
+      {/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -63,23 +74,31 @@ const SEO: React.FC<SEOProps> = ({
           "name": "Zion Tech Group",
           "url": "https://ziontechgroup.com",
           "logo": "https://ziontechgroup.com/logo.png",
-          "description": "Leading provider of cutting-edge technology solutions, AI services, and digital transformation services.",
-          "sameAs": [
-            "https://linkedin.com/company/zion-tech-group",
-            "https://twitter.com/ziontechgroup"
-          ],
+          "description": "Leading provider of AI-powered solutions and technology services",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Technology Drive",
+            "addressLocality": "San Francisco",
+            "addressRegion": "CA",
+            "postalCode": "94105",
+            "addressCountry": "US"
+          },
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+1-555-ZION-TECH",
+            "telephone": "+1-555-123-4567",
             "contactType": "customer service",
-            "areaServed": "US",
-            "availableLanguage": "English"
-          }
+            "email": "contact@ziontechgroup.com"
+          },
+          "sameAs": [
+            "https://linkedin.com/company/ziontechgroup",
+            "https://twitter.com/ziontechgroup",
+            "https://github.com/ziontechgroup"
+          ]
         })}
       </script>
     </Helmet>
   );
 };
 
-export default SEO;
 export { SEO };
+export default SEO;
