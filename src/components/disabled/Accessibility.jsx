@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, createContext, useContext } from 'react'; import { motion, AnimatePresence } from 'framer-motion'; ; import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from '../ui/button'; const AccessibilityContext = createContext(undefined); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if (!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider'); ; return context; };import React, { useState, useEffect, createContext, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 ;
@@ -234,6 +233,3 @@ export const useFocusTrap = (isActive) => {;";"
 export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);";"
 export default AccessibilityPanel;"";"
 }}}}}}}}}}}}}}}";"";"
-=======
-import React, { useState, useEffect, createContext, useContext } from 'react'; import { motion, AnimatePresence } from 'framer-motion'; <<<<<<< HEAD; import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from '../ui/button'; const AccessibilityContext = createContext(undefined); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if (!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider'); ; return context; }; =======; import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react'; import { Button } from "../ui/button"; const AccessibilityContext = createContext(null); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if (!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider')}; return context}; >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

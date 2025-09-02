@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 import React from 'react'; export default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth); const talentRoutes = completeSitemap.filter() route =>;''
-=======
-import React from 'react'; export default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth); const talentRoutes = completeSitemap.filter() route =>;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

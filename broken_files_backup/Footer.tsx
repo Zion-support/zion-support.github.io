@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-import { Twitter, Linkedin, Facebook, Instagram, Github import { Twitter, Linkedin, Facebook, Instagram, Github import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Shield, Zap, Users import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Zap, Brain, Cloud, Shield, Users, Code, Building, Globe import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Zap, Brain, Shield, Globe, Code, TrendingUp, Users, Building import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Link } from "react-router-dom";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github =======
-import { Twitter, Linkedin, Facebook, Instagram, Github =======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Shield, Zap, Users =======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin =======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Zap, Brain, Cloud, Shield, Users, Code, Building, Globe =======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink =======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Zap, Brain, Shield, Globe, Code, TrendingUp, Users, Building =======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin =======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Link } from "react-router-dom";
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-
-import { Link } from 'react-router-dom';
+import { Twitter, Linkedin, Facebook, Instagram, Github import { Twitter, Linkedin, Facebook, Instagram, Github import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Shield, Zap, Users import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Zap, Brain, Cloud, Shield, Users, Code, Building, Globe import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Zap, Brain, Shield, Globe, Code, TrendingUp, Users, Building import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Link } from "react-router-dom";import { Link } from 'react-router-dom';
 import {
   Mail,
   Phone,
@@ -89,14 +75,8 @@ export function Footer() {
               <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
                 <Youtube className="h-5 w-5" />;
               </a>;
-<<<<<<< HEAD
 ;
-;
-=======
-=======;
-=======;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-import React from 'react';
+;import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Mail, Phone, MapPin, Globe import { motion, Variants } from 'framer-motion';
 const Footer: React.FC = () => {;

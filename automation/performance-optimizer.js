@@ -6,12 +6,7 @@ class PerformanceOptimizer {;
   constructor() {;
     this.optimizations = [];
     // // // // // // // // console.log(message);
-<<<<<<< HEAD
-fs.appendFileSync(this.logFile, logMessage);
-=======
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
-    fs.appendFileSync(this.logFile, logMessage);
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
+fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logMessage);
 ;
 ;
   async optimizePerformance() {;
@@ -44,24 +39,14 @@ fs.appendFileSync(this.logFile, logMessage);
 ;
 };
 ;
-<<<<<<< HEAD
-this.saveReport(report);
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-      this.saveReport(report);
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-      this.log('Performance optimization completed');
+this.saveReport(report);this.saveReport(report);
+this.log('Performance optimization completed');
       return report} catch (error) {;
       this.log(`Performance optimization failed: ${error.message}`, 'ERROR');
       return null};
   };
-<<<<<<< HEAD
-analyzeBundleSize() {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  analyzeBundleSize() {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    try {;
+analyzeBundleSize() {;analyzeBundleSize() {;
+try {;
       // Placeholder for bundle analysis;
       return {;
         totalSize: '2.1MB',;
@@ -106,10 +91,6 @@ analyzeBundleSize() {;
       'Use React.memo for expensive components';
     // // // // // // // // console.log('Performance report:', report);
   };
-<<<<<<< HEAD
-=======
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 ;
 });
 }}}}}}}}}}}}}}}

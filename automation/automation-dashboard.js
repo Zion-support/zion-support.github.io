@@ -19,12 +19,7 @@ class AutomationDashboard {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     // // // // // // // // console.log(message);
-<<<<<<< HEAD
-fs.appendFileSync(this.logFile, logMessage);
-=======
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
-    fs.appendFileSync(this.logFile, logMessage);
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
+fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logMessage);
 ;
 ;
   loadAutomationSystems() {;
@@ -56,25 +51,15 @@ fs.appendFileSync(this.logFile, logMessage);
         })};
     };
   };
-<<<<<<< HEAD
-startMetricsCollection() {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  startMetricsCollection() {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    // Collect metrics every 30 seconds;
+startMetricsCollection() {;startMetricsCollection() {;
+// Collect metrics every 30 seconds;
     setInterval(() => {;
       this.collectMetrics()}, 30000);
     // Generate alerts every minute;
     setInterval(() => {;
       this.generateAlerts()}, 60000)};
-<<<<<<< HEAD
-collectMetrics() {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  collectMetrics() {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    for (const [name, system] of this.automationSystems) {;
+collectMetrics() {;collectMetrics() {;
+for (const [name, system] of this.automationSystems) {;
       const metrics = {;
   timestamp: new Date().toISOString(),;
         isRunning: system.isRunning,;
@@ -83,13 +68,8 @@ collectMetrics() {;
         averageExecutionTime: system.averageExecutionTime,;
   ursor/fix-project-errors-and-automate-future-fixes-53bd;
   };
-<<<<<<< HEAD
-generateAlerts() {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  generateAlerts() {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    this.alerts = [];
+generateAlerts() {;generateAlerts() {;
+this.alerts = [];
     for (const [name, system] of this.automationSystems) {;
       const successRate = system.successCount / (system.successCount + system.failureCount) || 0;
 ;
@@ -100,25 +80,15 @@ generateAlerts() {;
           message: `Low success rate: ${(successRate * 100).toFixed(1)}%`,;
           timestamp: new Date().toISOString();
         })};
-<<<<<<< HEAD
-if (system.averageExecutionTime > 30000) {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-      if (system.averageExecutionTime > 30000) {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-        this.alerts.push({;
+if (system.averageExecutionTime > 30000) {;if (system.averageExecutionTime > 30000) {;
+this.alerts.push({;
           type: 'warning',;
           system: name,;
           message: `Slow execution time: ${system.averageExecutionTime}ms`,;
           timestamp: new Date().toISOString();
         })};
-<<<<<<< HEAD
-if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-      if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-        this.alerts.push({;
+if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;
+this.alerts.push({;
           type: 'error',;
           system: name,;
           message: 'System not running recently',;
@@ -126,23 +96,13 @@ if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
         })};
     };
   };
-<<<<<<< HEAD
-async runSystem(systemName) {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  async runSystem(systemName) {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    const system = this.automationSystems.get(systemName);
+async runSystem(systemName) {;async runSystem(systemName) {;
+const system = this.automationSystems.get(systemName);
     if (!system) {;
       this.log(`❌ System not found: ${systemName}`);
       return false};
-<<<<<<< HEAD
-const startTime = Date.now();
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-    const startTime = Date.now();
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    system.isRunning = true;
+const startTime = Date.now();const startTime = Date.now();
+system.isRunning = true;
     try {;
       this.log(`🚀 Running system: ${systemName}`);
 ;
@@ -163,13 +123,8 @@ const startTime = Date.now();
       return { success: false, error: error.message, executionTime }} finally {;
       system.isRunning = false};
   };
-<<<<<<< HEAD
-updateSystemMetrics(systemName, success, executionTime) {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  updateSystemMetrics(systemName, success, executionTime) {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    const system = this.automationSystems.get(systemName);
+updateSystemMetrics(systemName, success, executionTime) {;updateSystemMetrics(systemName, success, executionTime) {;
+const system = this.automationSystems.get(systemName);
     if (!system) return;
     if (success) {;
       system.successCount++} else {;
@@ -177,13 +132,8 @@ updateSystemMetrics(systemName, success, executionTime) {;
     system.totalExecutionTime += executionTime;
     system.averageExecutionTime = system.totalExecutionTime / (system.successCount + system.failureCount);
     system.lastRun = new Date()};
-<<<<<<< HEAD
-async runAllSystems() {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  async runAllSystems() {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    this.log('🚀 Running all automation systems...');
+async runAllSystems() {;async runAllSystems() {;
+this.log('🚀 Running all automation systems...');
 ;
     const results = [];
     for (const [name, system] of this.automationSystems) {;
@@ -197,13 +147,8 @@ async runAllSystems() {;
 ;
     this.log(`📊 Completed ${results.length} systems`);
     return results};
-<<<<<<< HEAD
-generateDashboardHTML() {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  generateDashboardHTML() {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    const systems = Array.from(this.automationSystems.values());
+generateDashboardHTML() {;generateDashboardHTML() {;
+const systems = Array.from(this.automationSystems.values());
     const metrics = Array.from(this.metrics.values());
     const alerts = this.alerts;
     return `<!DOCTYPE html>;
@@ -306,13 +251,8 @@ generateDashboardHTML() {;
                     setTimeout(refreshDashboard, 5000)})};
         function refreshDashboard() {;
             location.reload()};
-<<<<<<< HEAD
-function generateReport() {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-        function generateReport() {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-            fetch('/api/report');
+function generateReport() {;function generateReport() {;
+fetch('/api/report');
                 .then(response => response.json());
                 .then(data => {;
                     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
@@ -321,23 +261,13 @@ function generateReport() {;
                     a.href = url;
                     a.download = 'automation-report.json';
                     a.click()})};
-<<<<<<< HEAD
-// Auto-refresh every 30 seconds;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-        // Auto-refresh every 30 seconds;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-        setInterval(refreshDashboard, 30000);
+// Auto-refresh every 30 seconds;// Auto-refresh every 30 seconds;
+setInterval(refreshDashboard, 30000);
     </script>;
 </body>;
 </html>`};
-<<<<<<< HEAD
-generateReport() {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  generateReport() {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    const report = {;
+generateReport() {;generateReport() {;
+const report = {;
   timestamp: new Date().toISOString(),;
       summary: {;
         totalSystems: this.automationSystems.size,;
@@ -354,13 +284,8 @@ generateReport() {;
 },;
       systems: {},;
       metrics: {},;
-<<<<<<< HEAD
-alerts: this.alerts,;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-      alerts: this.alerts,;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-      recommendations: this.generateRecommendations();
+alerts: this.alerts,;alerts: this.alerts,;
+recommendations: this.generateRecommendations();
     };
     // System details;
     for (const [name, system] of this.automationSystems) {;
@@ -379,25 +304,15 @@ alerts: this.alerts,;
     for (const [name, metric] of this.metrics) {;
       report.metrics[name] = metric};
     return report};
-<<<<<<< HEAD
-calculateAverageSuccessRate() {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  calculateAverageSuccessRate() {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    const systems = Array.from(this.automationSystems.values());
+calculateAverageSuccessRate() {;calculateAverageSuccessRate() {;
+const systems = Array.from(this.automationSystems.values());
     const totalSuccessRate = systems.reduce((sum, system) => {;
       const rate = system.successCount / (system.successCount + system.failureCount) || 0;
       return sum + rate}, 0);
 ;
     return systems.length > 0 ? totalSuccessRate / systems.length : 0};
-<<<<<<< HEAD
-generateRecommendations() {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  generateRecommendations() {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    const recommendations = [];
+generateRecommendations() {;generateRecommendations() {;
+const recommendations = [];
     for (const [name, system] of this.automationSystems) {;
       const successRate = system.successCount / (system.successCount + system.failureCount) || 0;
 ;
@@ -408,25 +323,15 @@ generateRecommendations() {;
           message: `Improve ${name} reliability - current success rate: ${(successRate * 100).toFixed(1)}%`,;
           priority: 'high';
         })};
-<<<<<<< HEAD
-if (system.averageExecutionTime > 30000) {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-      if (system.averageExecutionTime > 30000) {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-        recommendations.push({;
+if (system.averageExecutionTime > 30000) {;if (system.averageExecutionTime > 30000) {;
+recommendations.push({;
           type: 'optimization',;
           system: name,;
           message: `Optimize ${name} performance - average execution time: ${system.averageExecutionTime}ms`,;
           priority: 'medium';
         })};
-<<<<<<< HEAD
-if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-      if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-        recommendations.push({;
+if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;
+recommendations.push({;
           type: 'maintenance',;
           system: name,;
           message: `Schedule regular runs for ${name} - last run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : 'Never'}`,;
@@ -434,13 +339,8 @@ if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
         })};
     };
     return recommendations};
-<<<<<<< HEAD
-createServer() {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  createServer() {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    const server = http.createServer((req, res) => {;
+createServer() {;createServer() {;
+const server = http.createServer((req, res) => {;
       const pathname = parsedUrl.pathname;
       res.setHeader('Content-Type', 'application/json');
       res.setHeader('Access-Control-Allow-Origin', '*');
@@ -450,13 +350,8 @@ createServer() {;
         res.writeHead(200);
         res.end();
         return};
-<<<<<<< HEAD
-switch (pathname) {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-      switch (pathname) {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-        case '/':;
+switch (pathname) {;switch (pathname) {;
+case '/':;
           res.setHeader('Content-Type', 'text/html');
           res.writeHead(200);
           res.end(this.generateDashboardHTML());
@@ -476,13 +371,8 @@ switch (pathname) {;
               res.end(JSON.stringify({ success: true, results }))})} else {;
             res.writeHead(405);
             res.end(JSON.stringify({ error: 'Method not allowed' }))};
-<<<<<<< HEAD
-break;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-          break;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-        case '/api/run':;
+break;break;
+case '/api/run':;
           if (req.method === 'POST') {;
             const body = '';
             req.on('data', chunk => body += chunk);
@@ -493,13 +383,8 @@ break;
                 res.end(JSON.stringify(result))})})} else {;
             res.writeHead(405);
             res.end(JSON.stringify({ error: 'Method not allowed' }))};
-<<<<<<< HEAD
-break;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-          break;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-        case '/api/report':;
+break;break;
+case '/api/report':;
           res.writeHead(200);
           res.end(JSON.stringify(this.generateReport()));
           break;
@@ -510,22 +395,13 @@ break;
     return server};
   sleep(ms) {;
     return new Promise(resolve => setTimeout(resolve, ms))};
-<<<<<<< HEAD
-start(port = 3001) {;
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  start(port = 3001) {;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    const server = this.createServer();
+start(port = 3001) {;start(port = 3001) {;
+const server = this.createServer();
     server.listen(port, () => {;
       this.log(`🚀 Automation Dashboard started on port ${port}`);
       this.log(`📊 Dashboard available at: http://localhost:${port}`);
       this.log(`📊 API available at: http://localhost:${port}/api/status`)})};
 };
-<<<<<<< HEAD
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 // CLI handling;
 const dashboard = new AutomationDashboard();
 const command = process.argv[2];
@@ -540,13 +416,8 @@ switch (command) {;
   case 'run-all':;
     dashboard.runAllSystems().then(results => {;
       // // // // // // // // console.log(JSON.stringify(results, null, 2));
-<<<<<<< HEAD
-process.exit(0);
-=======
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
-      process.exit(0);
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    });
+process.exit(0);process.exit(0);
+});
     break;
   default:;
     // // // // // // // // console.log('Usage: node automation-dashboard.js [start|status|run-all] [port]');
@@ -554,22 +425,12 @@ process.exit(0);
     // // // // // // // // console.log('  start    - Start the dashboard server');
     // // // // // // // // console.log('  status   - Show current status');
     // // // // // // // // console.log('  run-all  - Run all automation systems');
-<<<<<<< HEAD
-process.exit(1);
-=======
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
-    process.exit(1);
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
+process.exit(1);process.exit(1);
 ;
 // Graceful shutdown;
 process.on('SIGINT', () => {;
   // // // // // // // // console.log('\n🛑 Shutting down automation dashboard...');
-<<<<<<< HEAD
-process.exit(0);
-=======
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
-  process.exit(0);
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
+process.exit(0);process.exit(0);
 });
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}};
 ;

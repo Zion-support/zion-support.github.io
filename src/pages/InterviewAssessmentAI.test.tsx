@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 describe ("InterviewAssessmentAI", () => { it ("renders without crashing", () => { render (<InterviewAssessmentAI />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () ; }) ; it ("displays expected content", () => { render (<InterviewAssessmentAI />) ;""
-=======
-describe ("InterviewAssessmentAI", () => { it ("renders without crashing", () => { render (<InterviewAssessmentAI />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () ; }) ; it ("displays expected content", () => { render (<InterviewAssessmentAI />) ;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

@@ -49,12 +49,7 @@ class AutomationFactory {;
     // // // // // // // // console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logMessage);
 ;
-<<<<<<< HEAD
-;
-=======
-=======;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    };
+;};
   };
   log(message, level = 'INFO') {;
     const timestamp = new Date().toISOString();
@@ -112,12 +107,7 @@ class CodeQualityMonitor {;
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
 ;
-<<<<<<< HEAD
-;
-=======
-=======;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-  };
+;};
   log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
@@ -187,12 +177,7 @@ class CodeQualityMonitor {;
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
     // // // // // // // // console.log('Metrics:', metrics);
   };
-<<<<<<< HEAD
-;
-=======
-=======;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-          walkDir(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {;
+;walkDir(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {;
           files.push(fullPath)};
       })};
 ;
@@ -231,12 +216,7 @@ class PerformanceOptimizer {;
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
 ;
-<<<<<<< HEAD
-;
-=======
-=======;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log')};
+;this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log')};
   log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
@@ -322,12 +302,7 @@ class PerformanceOptimizer {;
       'Use React.memo for expensive components';
     // // // // // // // // console.log('Performance report:', report);
   };
-<<<<<<< HEAD
-;
-=======
-=======;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    ]};
+;]};
   saveReport(report) {;
     const reportFile = path.join(__dirname, 'logs', 'performance-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))};
@@ -427,12 +402,7 @@ optimizer.optimizePerformance().then(report => {;
       const duration = Date.now() - info.startTime;
       // // // // // // // // console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`);
     };
-<<<<<<< HEAD
-;
-=======
-=======;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-;
+;;
       console.log(`\n${name}:`);
       console.log(`  Description: ${script.description}`);
       console.log(`  Status: ${status}`);
@@ -493,12 +463,7 @@ switch (command) {;
     // // // // // // // // console.log('  node automation-factory.js continuous');
     break;
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}};
-<<<<<<< HEAD
-;
-=======
-=======;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    console.log('Usage:');
+;console.log('Usage:');
     console.log('  node automation-factory.js list');
     console.log('  node automation-factory.js run [script-name]');
     console.log('  node automation-factory.js generate');

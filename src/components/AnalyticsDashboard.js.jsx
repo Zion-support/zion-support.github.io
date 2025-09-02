@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 export const AnalyticsDashboard = ({ className = ", showRealTime = true, refreshInterval = 5000}) => { const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion} = useAnalytics({ enableTracking: true, enablePerformanceTracking: true, enableUserBehaviorTracking: true, enableHeatmapTracking: false}); const [isExpanded, setIsExpanded] = useState(false); const [selectedTimeRange, setSelectedTimeRange] = useState("24h"); const [analyticsSummary, setAnalyticsSummary] = useState(null);"""
-=======
-export const AnalyticsDashboard = ({ className = ", showRealTime = true, refreshInterval = 5000}) => { const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion} = useAnalytics({ enableTracking: true, enablePerformanceTracking: true, enableUserBehaviorTracking: true, enableHeatmapTracking: false}); const [isExpanded, setIsExpanded] = useState(false); const [selectedTimeRange, setSelectedTimeRange] = useState("24h"); const [analyticsSummary, setAnalyticsSummary] = useState(null);
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

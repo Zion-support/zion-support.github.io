@@ -20,17 +20,7 @@ import {
   BookOpen,
   CheckCircle} from 'lucide-react.ts';
 
-<<<<<<< HEAD
-'All','
-=======
-
-
-
-
-=======
-  'All','
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-  'AI & ML','
+'All',''AI & ML','
   'Cybersecurity','
   'Cloud & DevOps','
   'Data Analytics','
@@ -45,32 +35,14 @@ export default function Events(...args: any[]): any {
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
-<<<<<<< HEAD
-    return matchesType && matchesCategory && matchesStatus && matchesSearch}) ;
-
-=======
-  
-    
-    
-    
-    return matchesType && matchesCategory && matchesStatus && matchesSearch}) ;
-
-  
-  
-  
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    return date.toLocaleDateString('en-US', {
+return matchesType && matchesCategory && matchesStatus && matchesSearch}) ;return date.toLocaleDateString('en-US', {
 
       weekday: 'long',
       year: 'numeric',
       month: 'long',
       day: 'numeric'})};
 
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-      case 'Cybersecurity':
+case 'Cybersecurity':
         return Shield;
       case 'Cloud & DevOps':
         return Cloud;
@@ -210,11 +182,7 @@ export default function Events(...args: any[]): any {
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
               {upcomingEvents.map((event, index) => {
 
-<<<<<<< HEAD
-=======
-                
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-                return()                  <motion.div
+return()                  <motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -349,11 +317,7 @@ export default function Events(...args: any[]): any {
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
               {pastEvents.map((event, index) => {
 
-<<<<<<< HEAD
-=======
-                
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-                return()                  <motion.div
+return()                  <motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 describe ("CybersecuritySolutions", () => { it ("renders without crashing", () => { render (<CybersecuritySolutions />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () ; }) ; it ("displays expected content", () => { render (<CybersecuritySolutions />) ;""
-=======
-describe ("CybersecuritySolutions", () => { it ("renders without crashing", () => { render (<CybersecuritySolutions />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () ; }) ; it ("displays expected content", () => { render (<CybersecuritySolutions />) ;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function ErrorBoundaryFallback({ error, resetError, retryCount = 0 }) {
@@ -16,6 +15,3 @@ export default function ErrorBoundaryFallback({ error, resetError, retryCount = 
     </div>
   );
 }
-=======
-function ErrorFallback({ error, resetError, retryCount = 0 }) { const navigate = useNavigate(); const maxRetries = 3; const handleRetry = () => { if (retryCount < maxRetries) { resetError(); } else {
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

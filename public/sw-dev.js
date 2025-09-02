@@ -21,13 +21,8 @@ self.addEventListener('install', (event) => {
           STATIC_FILES.map(url =>
             cache.add(url).catch(error => {
               // // // // // // // console.warn(`Dev SW: Failed to cache ${url}:`, error);
-<<<<<<< HEAD
-return null;
-=======
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-              return null;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-            })
+return null;return null;
+})
           )
         );
       })
@@ -39,13 +34,8 @@ return null;
       })
       .catch((error) => {
         // // // // // // // console.error('Dev SW: Error in install:', error);
-<<<<<<< HEAD
-})
-=======
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-      })
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-  );
+})})
+);
 });
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
@@ -56,24 +46,14 @@ self.addEventListener('activate', (event) => {
           cacheNames.map((cacheName) => {
             if (cacheName !== CACHE_NAME) {
               // // // // // // // console.log('Dev SW: Deleting old cache:', cacheName);
-<<<<<<< HEAD
-return caches.delete(cacheName);
-=======
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-              return caches.delete(cacheName);
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-          })
+return caches.delete(cacheName);return caches.delete(cacheName);
+})
         );
       })
       .then(() => {
         // // // // // // // console.log('Dev SW: Activated');
-<<<<<<< HEAD
-return self.clients.claim();
-=======
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-        return self.clients.claim();
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-      })
+return self.clients.claim();return self.clients.claim();
+})
   );
 });
 // Fetch event - network first for development
@@ -88,13 +68,8 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       fetch(request).catch((error) => {
         // // // // // // // console.warn('Dev SW: External request failed:', url.href, error);
-<<<<<<< HEAD
-// Return empty response for failed external requests
-=======
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-        // Return empty response for failed external requests
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-        return new Response('', { status: 204 });
+// Return empty response for failed external requests// Return empty response for failed external requests
+return new Response('', { status: 204 });
       })
     );
     return;
@@ -112,13 +87,8 @@ self.addEventListener('fetch', (event) => {
       })
       .catch((error) => {
         // // // // // // // console.log('Dev SW: Network failed, trying cache:', url.href);
-<<<<<<< HEAD
-// Try to serve from cache if network fails
-=======
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-        // Try to serve from cache if network fails
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-        return caches.match(request).then((cachedResponse) => {
+// Try to serve from cache if network fails// Try to serve from cache if network fails
+return caches.match(request).then((cachedResponse) => {
           if (cachedResponse) {
             return cachedResponse;
           // Return offline page for navigation requests

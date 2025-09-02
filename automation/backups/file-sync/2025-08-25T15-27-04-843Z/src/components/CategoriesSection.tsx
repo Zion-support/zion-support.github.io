@@ -125,8 +125,3 @@ const itemVariants = {
     </section>;
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

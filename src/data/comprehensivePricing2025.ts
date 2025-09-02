@@ -1,6 +1,2 @@
-<<<<<<< HEAD
 export interface ComprehensivePricingService {
   id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; marketPrice: string; roi: string; estimatedDelivery: string; supportLevel: string; contactInfo: { phone: string; email: string; website: string;  }; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string; }; export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [;
-=======
-export interface ComprehensivePricingService {; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; marketPrice: string; roi: string; estimatedDelivery: string; supportLevel: string; contactInfo: {; phone: string; email: string; website: string; }; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string; }; export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
