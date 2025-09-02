@@ -8,246 +8,324 @@ interface FAQItem {
 const helpSections: HelpSection[] = [
   {
 
-    title: 'Getting Started',
+    title:
+  'Getting Started',
     icon: Zap,
-    description: 'Essential information to begin using our services',
+    description:,
+  Essential information to begin using our services',
     articles: [
       {
 
-        title: 'Welcome to Zion Tech Group',
-        description: 'Introduction to our platform and services',
-        path: '/about',
-        difficulty: 'Beginner',
-        readTime: '5 min'
+        title:
+  'Welcome to Zion Tech Group,
+        description:,
+  Introduction to our platform and services',
+        path: '/about,
+        difficulty:,
+  Beginner',
+        readTime: '5 min
       },
       {
 
-        title: 'Setting Up Your Account',
-        description: 'Step-by-step account creation and configuration',
-        path: '/signup',
-        difficulty: 'Beginner',
-        readTime: '10 min'
+        title:,
+  Setting Up Your Account',
+        description: 'Step-by-step account creation and configuration,
+        path:,
+  /signup',
+        difficulty: 'Beginner,
+        readTime:,
+  10 min'
       },
       {
 
-        title: 'First Steps with AI Services',
-        description: 'Quick start guide for AI-powered solutions',
-        path: '/ai-services',
-        difficulty: 'Beginner',
-        readTime: '15 min'
+        title: 'First Steps with AI Services,
+        description:,
+  Quick start guide for AI-powered solutions',
+        path: '/ai-services,
+        difficulty:,
+  Beginner',
+        readTime: '15 min
       },
       {
 
-        title: 'Understanding Our Pricing',
-        description: 'Complete pricing structure and plans',
-        path: '/pricing',
-        difficulty: 'Beginner',
-        readTime: '8 min'
+        title:,
+  Understanding Our Pricing',
+        description: 'Complete pricing structure and plans,
+        path:,
+  /pricing',
+        difficulty: 'Beginner,
+        readTime:,
+  8 min'
       }
     ]
   },
   {
 
-    id: 'ai-services',
-    title: 'AI Services',
+    id: 'ai-services,
+    title:
+  'AI Services',
     icon: Brain,
-    description: 'Artificial Intelligence and Machine Learning solutions',
+    description:,
+  Artificial Intelligence and Machine Learning solutions',
     articles: [
       {
 
-        title: 'AI Business Intelligence Guide',
-        description: 'How to leverage AI for business insights',
-        path: '/services/ai-business-intelligence',
-        difficulty: 'Intermediate',
-        readTime: '20 min'
+        title:
+  'AI Business Intelligence Guide,
+        description:,
+  How to leverage AI for business insights',
+        path: '/services/ai-business-intelligence,
+        difficulty:,
+  Intermediate',
+        readTime: '20 min
       },
       {
 
-        title: 'AI Compliance Assistant Setup',
-        description: 'Configuring automated compliance monitoring',
-        path: '/services/ai-compliance-assistant',
-        difficulty: 'Intermediate',
-        readTime: '25 min'
+        title:,
+  AI Compliance Assistant Setup',
+        description: 'Configuring automated compliance monitoring,
+        path:,
+  /services/ai-compliance-assistant',
+        difficulty: 'Intermediate,
+        readTime:,
+  25 min'
       },
       {
 
-        title: 'AI Sales Copilot Integration',
-        description: 'Integrating AI sales optimization tools',
-        path: '/services/ai-sales-copilot',
-        difficulty: 'Intermediate',
-        readTime: '18 min'
+        title: 'AI Sales Copilot Integration,
+        description:,
+  Integrating AI sales optimization tools',
+        path: '/services/ai-sales-copilot,
+        difficulty:,
+  Intermediate',
+        readTime: '18 min
       },
       {
 
-        title: 'AI Content Marketing Suite',
-        description: 'Creating content with AI assistance',
-        path: '/services/ai-content-marketing-suite',
-        difficulty: 'Beginner',
-        readTime: '12 min'
+        title:,
+  AI Content Marketing Suite',
+        description: 'Creating content with AI assistance,
+        path:,
+  /services/ai-content-marketing-suite',
+        difficulty: 'Beginner,
+        readTime:,
+  12 min'
       }
     ]
   },
   {
 
-    id: 'cloud-infrastructure',
-    title: 'Cloud & Infrastructure',
+    id: 'cloud-infrastructure,
+    title:
+  'Cloud & Infrastructure',
     icon: Cloud,
-    description: 'Cloud computing and infrastructure services',
+    description:,
+  Cloud computing and infrastructure services',
     articles: [
       {
 
-        title: 'Cloud DevOps Best Practices',
-        description: 'DevOps implementation in cloud environments',
-        path: '/services/cloud-devops',
-        difficulty: 'Advanced',
-        readTime: '30 min'
+        title:
+  'Cloud DevOps Best Practices,
+        description:,
+  DevOps implementation in cloud environments',
+        path: '/services/cloud-devops,
+        difficulty:,
+  Advanced',
+        readTime: '30 min
       },
       {
 
-        title: 'IT Infrastructure Planning',
-        description: 'Strategic infrastructure design and implementation',
-        path: '/services/it-infrastructure',
-        difficulty: 'Advanced',
-        readTime: '35 min'
+        title:,
+  IT Infrastructure Planning',
+        description: 'Strategic infrastructure design and implementation,
+        path:,
+  /services/it-infrastructure',
+        difficulty: 'Advanced,
+        readTime:,
+  35 min'
       },
       {
 
-        title: 'FinOps Cost Optimization',
-        description: 'Managing and optimizing cloud costs',
-        path: '/services/finops-advisor',
-        difficulty: 'Intermediate',
-        readTime: '22 min'
+        title: 'FinOps Cost Optimization,
+        description:,
+  Managing and optimizing cloud costs',
+        path: '/services/finops-advisor,
+        difficulty:,
+  Intermediate',
+        readTime: '22 min
       },
       {
 
-        title: 'Digital Transformation Guide',
-        description: 'Strategic technology transformation planning',
-        path: '/services/digital-transformation',
-        difficulty: 'Advanced',
-        readTime: '40 min'
+        title:,
+  Digital Transformation Guide',
+        description: 'Strategic technology transformation planning,
+        path:,
+  /services/digital-transformation',
+        difficulty: 'Advanced,
+        readTime:,
+  40 min'
       }
     ]
   },
   {
 
-    id: 'cybersecurity',
-    title: 'Cybersecurity',
+    id: 'cybersecurity,
+    title:
+  'Cybersecurity',
     icon: Shield,
-    description: 'Security and compliance solutions',
+    description:,
+  Security and compliance solutions',
     articles: [
       {
 
-        title: 'AI Cybersecurity Platform',
-        description: 'AI-powered security threat detection',
-        path: '/services/ai-cybersecurity-platform',
-        difficulty: 'Advanced',
-        readTime: '28 min'
+        title:
+  'AI Cybersecurity Platform,
+        description:,
+  AI-powered security threat detection',
+        path: '/services/ai-cybersecurity-platform,
+        difficulty:,
+  Advanced',
+        readTime: '28 min
       },
       {
 
-        title: 'Security Headers & CSP Setup',
-        description: 'Web security configuration and hardening',
-        path: '/services/security-headers-csp',
-        difficulty: 'Intermediate',
-        readTime: '20 min'
+        title:,
+  Security Headers & CSP Setup',
+        description: 'Web security configuration and hardening,
+        path:,
+  /services/security-headers-csp',
+        difficulty: 'Intermediate,
+        readTime:,
+  20 min'
       },
       {
 
-        title: 'Zero Trust Network Architecture',
-        description: 'Implementing modern security frameworks',
-        path: '/services/zero-trust-network-access',
-        difficulty: 'Advanced',
-        readTime: '35 min'
+        title: 'Zero Trust Network Architecture,
+        description:,
+  Implementing modern security frameworks',
+        path: '/services/zero-trust-network-access,
+        difficulty:,
+  Advanced',
+        readTime: '35 min
       },
       {
 
-        title: 'GDPR/CCPA Compliance Guide',
-        description: 'Privacy regulation compliance automation',
-        path: '/services/dsr-portal',
-        difficulty: 'Intermediate',
-        readTime: '25 min'
+        title:,
+  GDPR/CCPA Compliance Guide',
+        description: 'Privacy regulation compliance automation,
+        path:,
+  /services/dsr-portal',
+        difficulty: 'Intermediate,
+        readTime:,
+  25 min'
       }
     ]
   },
   {
 
-    id: 'micro-saas',
-    title: 'Micro SaaS Solutions',
+    id: 'micro-saas,
+    title:
+  'Micro SaaS Solutions',
     icon: ShoppingCart,
-    description: 'Niche software solutions and platforms',
+    description:,
+  Niche software solutions and platforms',
     articles: [
       {
 
-        title: 'Micro SaaS Platform Overview',
-        description: 'Understanding our micro SaaS ecosystem',
-        path: '/micro-saas',
-        difficulty: 'Beginner',
-        readTime: '15 min'
+        title:
+  'Micro SaaS Platform Overview,
+        description:,
+  Understanding our micro SaaS ecosystem',
+        path: '/micro-saas,
+        difficulty:,
+  Beginner',
+        readTime: '15 min
       },
       {
 
-        title: 'Micro CRM Implementation',
-        description: 'Setting up customer relationship management',
-        path: '/services/micro-crm',
-        difficulty: 'Intermediate',
-        readTime: '20 min'
+        title:,
+  Micro CRM Implementation',
+        description: 'Setting up customer relationship management,
+        path:,
+  /services/micro-crm',
+        difficulty: 'Intermediate,
+        readTime:,
+  20 min'
       },
       {
 
-        title: 'Helpdesk Platform Setup',
-        description: 'Customer support system configuration',
-        path: '/services/helpdesk',
-        difficulty: 'Intermediate',
-        readTime: '18 min'
+        title: 'Helpdesk Platform Setup,
+        description:,
+  Customer support system configuration',
+        path: '/services/helpdesk,
+        difficulty:,
+  Intermediate',
+        readTime: '18 min
       },
       {
 
-        title: 'Website Analytics Dashboard',
-        description: 'Performance tracking and insights setup',
-        path: '/services/website-analytics',
-        difficulty: 'Beginner',
-        readTime: '12 min'
+        title:,
+  Website Analytics Dashboard',
+        description: 'Performance tracking and insights setup,
+        path:,
+  /services/website-analytics',
+        difficulty: 'Beginner,
+        readTime:,
+  12 min'
       }
     ]
   },
   {
 
-    id: 'emerging-tech',
-    title: 'Emerging Technologies',
+    id: 'emerging-tech,
+    title:
+  'Emerging Technologies',
     icon: Atom,
-    description: 'Cutting-edge and future technologies',
+    description:,
+  Cutting-edge and future technologies',
     articles: [
       {
 
-        title: 'Quantum Computing Primer',
-        description: 'Introduction to quantum computing concepts',
-        path: '/services/quantum-computing',
-        difficulty: 'Advanced',
-        readTime: '45 min'
+        title:
+  'Quantum Computing Primer,
+        description:,
+  Introduction to quantum computing concepts',
+        path: '/services/quantum-computing,
+        difficulty:,
+  Advanced',
+        readTime: '45 min
       },
       {
 
-        title: 'IoT Edge Computing Guide',
-        description: 'Internet of Things and edge computing',
-        path: '/services/iot-edge-computing',
-        difficulty: 'Intermediate',
-        readTime: '25 min'
+        title:,
+  IoT Edge Computing Guide',
+        description: 'Internet of Things and edge computing,
+        path:,
+  /services/iot-edge-computing',
+        difficulty: 'Intermediate,
+        readTime:,
+  25 min'
       },
       {
 
-        title: 'AI Quantum Hybrid Platform',
-        description: 'Combining AI and quantum computing',
-        path: '/services/ai-quantum-hybrid-platform',
-        difficulty: 'Advanced',
-        readTime: '40 min'
+        title: 'AI Quantum Hybrid Platform,
+        description:,
+  Combining AI and quantum computing',
+        path: '/services/ai-quantum-hybrid-platform,
+        difficulty:,
+  Advanced',
+        readTime: '40 min
       },
       {
 
-        title: 'Space Technology Solutions',
-        description: 'Space-based technology applications',
-        path: '/space-tech',
-        difficulty: 'Advanced',
-        readTime: '30 min'
+        title:,
+  Space Technology Solutions',
+        description: 'Space-based technology applications,
+        path:,
+  /space-tech',
+        difficulty: 'Advanced,
+        readTime:,
+  30 min'
       }
     ]
   }
@@ -256,50 +334,71 @@ const helpSections: HelpSection[] = [
 const faqData: FAQItem[] = [
   {
 
-    question: 'What services does Zion Tech Group offer?',
-    answer: 'We offer a comprehensive range of technology services including AI and machine learning solutions, cloud infrastructure, cybersecurity, emerging technologies like quantum computing, and micro SaaS platforms. Our services are designed to help businesses of all sizes leverage cutting-edge technology.',
-    category: 'General'
+    question:
+  'What services does Zion Tech Group offer?,
+    answer:,
+  We offer a comprehensive range of technology services including AI and machine learning solutions, cloud infrastructure, cybersecurity, emerging technologies like quantum computing, and micro SaaS platforms. Our services are designed to help businesses of all sizes leverage cutting-edge technology.',
+    category: 'General
   },
   {
 
-    question: 'How do I get started with your AI services?',
-    answer: 'Getting started is easy! Begin by exploring our AI services overview page, then contact our team for a consultation. We\'ll assess your needs and recommend the best AI solutions for your business. We also offer comprehensive onboarding and training.',
-    category: 'AI Services'
+    question:,
+  How do I get started with your AI services?',
+    answer: Getting started is easy! Begin by exploring our AI services overview page, then contact our team for a consultation. We\,
+  ll assess your needs and recommend the best AI solutions for your business. We also offer comprehensive onboarding and training.
+  ',
+    category: 'AI Services
   },
   {
 
-    question: 'What is your pricing structure?',
-    answer: 'Our pricing varies based on the service and your specific requirements. We offer flexible plans including pay-as-you-go, subscription models, and enterprise custom pricing. Contact us for a detailed quote tailored to your needs.',
-    category: 'Pricing'
+    question:,
+  What is your pricing structure?
+  ',
+    answer: Our pricing varies based on the service and your specific requirements. We offer flexible plans including pay-as-you-go, subscription models, and enterprise custom pricing. Contact us for a detailed quote tailored to your needs.,
+  ,
+    category: 'Pricing
   },
   {
 
-    question: 'Do you provide support and training?',
-    answer: 'Yes! We provide comprehensive support including 24/7 technical assistance, detailed documentation, video tutorials, and personalized training sessions. Our team is committed to ensuring your success with our solutions.',
-    category: 'Support'
+    question:,
+  Do you provide support and training?
+  ',
+    answer: Yes! We provide comprehensive support including 24/7 technical assistance, detailed documentation, video tutorials, and personalized training sessions. Our team is committed to ensuring your success with our solutions.,
+  ,
+    category: 'Support
   },
   {
 
-    question: 'Are your services suitable for small businesses?',
-    answer: 'Absolutely! We design our services to be scalable and accessible to businesses of all sizes. Our micro SaaS solutions are particularly well-suited for small businesses, offering enterprise-grade technology at accessible price points.',
-    category: 'General'
+    question:,
+  Are your services suitable for small businesses?
+  ',
+    answer: Absolutely! We design our services to be scalable and accessible to businesses of all sizes. Our micro SaaS solutions are particularly well-suited for small businesses, offering enterprise-grade technology at accessible price points.,
+  ,
+    category: 'General
   },
   {
 
-    question: 'How do you ensure data security and compliance?',
-    answer: 'Security is our top priority. We implement industry-leading security measures including encryption, regular security audits, and compliance with GDPR, CCPA, and other regulations. Our AI-powered security platforms provide real-time threat detection and response.',
-    category: 'Security'
+    question:,
+  How do you ensure data security and compliance?
+  ',
+    answer: Security is our top priority. We implement industry-leading security measures including encryption, regular security audits, and compliance with GDPR, CCPA, and other regulations. Our AI-powered security platforms provide real-time threat detection and response.,
+  ,
+    category: 'Security
   }
 ];
 
 export function HelpCenter() {
 
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set([
+  'getting-started']));
+  const [selectedCategory, setSelectedCategory] = useState<string>(
+  'All');
 
-    if (query.trim() === '') {
-setSearchQuery(query);'    if (query.trim() === '') {
+    if (query.trim() === '
+  ') {
+setSearchQuery(query);'    if (query.trim() === '
+  ') {
 
       setFilteredFAQs(faqData);
       return;
@@ -417,13 +516,15 @@ setSearchQuery(query);'    if (query.trim() === '') {
 
             {/* Category Filter */}"
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              <button'
-                onClick={() => setSelectedCategory('all')}`
+              <button,
+  onClick={() => setSelectedCategory(
+  'all')}`
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
 
-                  selectedCategory === 'all''
-                    ? 'bg-zion-cyan text-white''
-                    : 'bg-white/10 text-zion-slate-light hover:bg-white/20'`
+                  selectedCategory ===
+  'all''
+                    ?
+  'bg-zion-cyan text-white'': 'bg-white/10 text-zion-slate-light hover:bg-white/20`
                 }`}
 
                 All Categories
@@ -434,9 +535,9 @@ setSearchQuery(query);'    if (query.trim() === '') {
                   onClick={() => setSelectedCategory(category.id)}`
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
 
-                    selectedCategory === category.id'
-                      ? 'bg-zion-cyan text-white''
-                      : 'bg-white/10 text-zion-slate-light hover:bg-white/20'`
+                    selectedCategory === category.id,
+  ? 'bg-zion-cyan text-white'
+  ': 'bg-white/10 text-zion-slate-light hover:bg-white/20`
                   }`}
 
                   {category.title}
@@ -492,7 +593,8 @@ setSearchQuery(query);'    if (query.trim() === '') {
                       {expandedSections.has(section.id) && (
                         <motion.div
                           initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
+                          animate={{ opacity: 1, height: 'auto
+  ' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.3 }}"
                           className="border-t border-cyan-400/20"
@@ -520,9 +622,15 @@ setSearchQuery(query);'    if (query.trim() === '') {
                                         <div className="flex items-center space-x-4 mt-3">`
                                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${
 
-                                            article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :'
-                                            article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :'
-                                            'bg-red-500/20 text-red-400'`
+                                            article.difficulty ===,
+  Beginner
+  ' ? 'bg-green-500/20 text-green-400
+  ': '
+                                            article.difficulty ===
+  'Intermediate' ?
+  'bg-yellow-500/20 text-yellow-400' :
+  '
+                                            'bg-red-500/20 text-red-400`
                                           }`}>
                                             {article.difficulty}
                                           </span>"
@@ -541,9 +649,15 @@ setSearchQuery(query);'    if (query.trim() === '') {
                                     <div className="flex items-center space-x-4 mt-3">`
                                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
 
-                                        article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :'
-                                        article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :'
-                                        'bg-red-500/20 text-red-400'`
+                                        article.difficulty ===,
+  Beginner
+  ' ? 'bg-green-500/20 text-green-400
+  ': '
+                                        article.difficulty ===
+  'Intermediate' ?
+  'bg-yellow-500/20 text-yellow-400' :
+  '
+                                        'bg-red-500/20 text-red-400`
                                       }`}>
                                         {article.difficulty}
                                       </span>"
