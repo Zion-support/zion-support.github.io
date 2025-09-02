@@ -344,6 +344,118 @@ export default function MicroSaaS() {
       pricing: '$299 - $1,200/month',
       delivery: '3-5 weeks',
       category: 'Development SaaS'
+    },
+    {
+      title: 'Affiliate Marketing Tracking Platform',
+      description: 'Comprehensive affiliate program management with fraud detection and automated payouts',
+      icon: TrendingUp,
+      features: [
+        'Custom referral link generation and tracking',
+        'Cross-device attribution and fraud detection',
+        'Automated commission calculations and payouts',
+        'Real-time performance analytics and reporting',
+        'Multi-tier affiliate program support',
+        'Integration with e-commerce platforms and payment systems'
+      ],
+      pricing: '$199 - $999/month',
+      delivery: '3-4 weeks',
+      category: 'Marketing SaaS'
+    },
+    {
+      title: 'AI-Powered Email Follow-up Automation',
+      description: 'Intelligent email sequence automation with personalization and engagement tracking',
+      icon: Mail,
+      features: [
+        'Smart follow-up sequence creation and management',
+        'AI-powered personalization and timing optimization',
+        'Engagement tracking and response analysis',
+        'A/B testing for email campaigns',
+        'CRM integration and lead scoring',
+        'Compliance with email regulations (CAN-SPAM, GDPR)'
+      ],
+      pricing: '$99 - $499/month',
+      delivery: '2-3 weeks',
+      category: 'Email Marketing SaaS'
+    },
+    {
+      title: 'Intelligent Helpdesk & Support Platform',
+      description: 'AI-powered customer support system with ticket management and chatbot integration',
+      icon: MessageSquare,
+      features: [
+        'Smart ticket routing and prioritization',
+        'AI chatbot with natural language processing',
+        'Knowledge base creation and management',
+        'Multi-channel support (email, chat, phone)',
+        'Customer satisfaction tracking and analytics',
+        'Integration with CRM and business tools'
+      ],
+      pricing: '$149 - $799/month',
+      delivery: '3-4 weeks',
+      category: 'Customer Support SaaS'
+    },
+    {
+      title: 'AI-Powered Content Creation Suite',
+      description: 'Comprehensive content generation platform for blogs, social media, and marketing materials',
+      icon: FileText,
+      features: [
+        'AI-generated blog posts, articles, and web content',
+        'Social media content creation and scheduling',
+        'Marketing copy and email templates',
+        'SEO optimization and keyword integration',
+        'Brand voice consistency and tone matching',
+        'Content calendar and publishing automation'
+      ],
+      pricing: '$199 - $899/month',
+      delivery: '2-3 weeks',
+      category: 'Content Creation SaaS'
+    },
+    {
+      title: 'Smart Project Management Dashboard',
+      description: 'AI-enhanced project management with predictive analytics and resource optimization',
+      icon: Target,
+      features: [
+        'AI-powered project timeline prediction',
+        'Resource allocation and workload optimization',
+        'Risk assessment and mitigation recommendations',
+        'Team collaboration and communication tools',
+        'Progress tracking and milestone management',
+        'Integration with popular development and design tools'
+      ],
+      pricing: '$299 - $1,299/month',
+      delivery: '4-5 weeks',
+      category: 'Project Management SaaS'
+    },
+    {
+      title: 'Intelligent Financial Analytics Platform',
+      description: 'AI-powered financial analysis and forecasting with automated reporting',
+      icon: BarChart3,
+      features: [
+        'Automated financial data analysis and insights',
+        'Predictive cash flow and revenue forecasting',
+        'Expense categorization and budget optimization',
+        'Investment portfolio analysis and recommendations',
+        'Compliance reporting and audit preparation',
+        'Integration with accounting software and banks'
+      ],
+      pricing: '$399 - $1,599/month',
+      delivery: '4-6 weeks',
+      category: 'Financial Analytics SaaS'
+    },
+    {
+      title: 'AI-Powered HR Management System',
+      description: 'Comprehensive human resources platform with recruitment automation and employee analytics',
+      icon: Users,
+      features: [
+        'AI-powered resume screening and candidate matching',
+        'Employee performance tracking and analytics',
+        'Automated onboarding and training workflows',
+        'Payroll processing and benefits management',
+        'Employee engagement surveys and feedback',
+        'Compliance tracking and reporting'
+      ],
+      pricing: '$199 - $999/month',
+      delivery: '4-5 weeks',
+      category: 'HR Management SaaS'
     }
   ];
 

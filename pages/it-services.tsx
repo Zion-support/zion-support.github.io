@@ -309,6 +309,118 @@ export default function ITServices() {
       pricing: '$8,000 - $60,000/month',
       delivery: '10-24 weeks',
       category: 'FinTech Services'
+    },
+    {
+      title: 'Edge Computing & Distributed Systems',
+      description: 'Edge computing infrastructure and distributed system architecture',
+      icon: Cpu,
+      features: [
+        'Edge computing platform deployment',
+        'Distributed system architecture design',
+        'Real-time data processing at the edge',
+        'Edge AI and machine learning deployment',
+        'Multi-cloud and hybrid edge solutions',
+        'Edge security and device management'
+      ],
+      pricing: '$6,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Edge Computing Services'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation and management',
+      icon: Shield,
+      features: [
+        'Zero trust network architecture design',
+        'Identity and access management (IAM)',
+        'Micro-segmentation implementation',
+        'Continuous security monitoring',
+        'Privileged access management (PAM)',
+        'Security orchestration and automation'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '6-14 weeks',
+      category: 'Security Architecture Services'
+    },
+    {
+      title: 'Hyperautomation & RPA Solutions',
+      description: 'Intelligent process automation and robotic process automation',
+      icon: Settings,
+      features: [
+        'Robotic process automation (RPA) implementation',
+        'Intelligent document processing',
+        'Workflow automation and optimization',
+        'AI-powered decision making integration',
+        'Process mining and discovery',
+        'End-to-end automation orchestration'
+      ],
+      pricing: '$4,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Automation Services'
+    },
+    {
+      title: 'Digital Twin & Simulation Platforms',
+      description: 'Digital twin development and simulation platform implementation',
+      icon: Monitor,
+      features: [
+        'Digital twin architecture and development',
+        'Real-time simulation and modeling',
+        'IoT sensor integration and data collection',
+        'Predictive analytics and maintenance',
+        'Virtual testing and optimization',
+        'Integration with existing systems'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Digital Twin Services'
+    },
+    {
+      title: 'Multi-Cloud & Hybrid Cloud Management',
+      description: 'Comprehensive multi-cloud strategy and hybrid cloud management',
+      icon: Cloud,
+      features: [
+        'Multi-cloud architecture design and implementation',
+        'Cloud cost optimization and FinOps',
+        'Hybrid cloud connectivity and management',
+        'Cloud migration and modernization',
+        'Disaster recovery across clouds',
+        'Cloud governance and compliance'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-20 weeks',
+      category: 'Multi-Cloud Services'
+    },
+    {
+      title: 'Low-Code/No-Code Platform Development',
+      description: 'Custom low-code and no-code platform development and implementation',
+      icon: Code,
+      features: [
+        'Custom low-code platform development',
+        'No-code application builder creation',
+        'Workflow automation and integration',
+        'User interface and experience design',
+        'API integration and data connectivity',
+        'Training and support services'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '8-16 weeks',
+      category: 'Low-Code Services'
+    },
+    {
+      title: 'Cybersecurity Operations Center (SOC)',
+      description: '24/7 security operations center and threat monitoring services',
+      icon: Shield,
+      features: [
+        '24/7 security monitoring and incident response',
+        'Threat hunting and intelligence analysis',
+        'Security incident management and forensics',
+        'Vulnerability management and patching',
+        'Security awareness training and testing',
+        'Compliance monitoring and reporting'
+      ],
+      pricing: '$3,000 - $20,000/month',
+      delivery: '4-8 weeks',
+      category: 'SOC Services'
     }
   ];
 
@@ -382,7 +494,7 @@ export default function ITServices() {
                 <ArrowRight className="ml-2 h-4 w-4 inline" />
               </Link>
               <Link
-                href="/pricing-guide"
+                href="/pricing"
                 className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600"
               >
                 View Pricing <span aria-hidden="true">→</span>

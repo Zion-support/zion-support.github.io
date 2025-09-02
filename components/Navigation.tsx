@@ -27,10 +27,14 @@ const Navigation: React.FC = () => {
         { name: 'Customer Support Platform', href: '/solutions/customer-support' },
         { name: 'Event Management', href: '/solutions/event-management' },
         { name: 'Project Management', href: '/solutions/project-management' },
-        { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
+        { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
+        { name: 'Affiliate Marketing Tracking', href: '/solutions/affiliate-tracking' },
+        { name: 'Financial Analytics', href: '/solutions/financial-analytics' },
+        { name: 'HR Management', href: '/solutions/hr-management' },
+        { name: 'Helpdesk & Support', href: '/solutions/helpdesk-support' }
       ]
     },
-    { name: 'Pricing', href: '/pricing-guide' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }
