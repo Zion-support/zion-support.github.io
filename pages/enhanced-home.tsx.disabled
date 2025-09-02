@@ -100,8 +100,8 @@ const EnhancedHome: React.FC = () => {
         canonicalUrl='https://ziontechgroup.com';
         ogImage='/images/og-homepage.jpg';
       />;
-      <AccessibilityManager />
-      <SecurityEnhancer />
+      {/* <AccessibilityManager />
+      <SecurityEnhancer /> */}
       <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
         {/* Hero Section */}
         <section className='relative overflow-hidden'>
