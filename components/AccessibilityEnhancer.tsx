@@ -20,193 +20,55 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
-
-    // Apply initial styles
-    applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
   }, []);
 
-  const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
-    const root = document.documentElement;
-    
-    // High contrast mode
-    if (highContrast) {
-      root.classList.add('high-contrast');
+  useEffect(() => {
+    // Apply high contrast mode
+    if (isHighContrast) {
+      document.documentElement.classList.add('high-contrast');
     } else {
-      root.classList.remove('high-contrast');
+      document.documentElement.classList.remove('high-contrast');
     }
 
-    // Font size adjustments
-    root.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large');
-    root.classList.add(`font-${fontSize}`);
+    // Apply font size
+    document.documentElement.setAttribute('data-font-size', fontSize);
 
-    // Reduced motion
+    // Apply reduced motion
     if (reducedMotion) {
-      root.classList.add('reduced-motion');
+      document.documentElement.classList.add('reduced-motion');
     } else {
-      root.classList.remove('reduced-motion');
+      document.documentElement.classList.remove('reduced-motion');
     }
-  };
+  }, [isHighContrast, fontSize, reducedMotion]);
 
   const toggleHighContrast = () => {
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage.setItem('highContrast', newValue.toString());
-    applyAccessibilityStyles(newValue, fontSize, reducedMotion);
   };
 
-  const changeFontSize = (newSize: string) => {
-    setFontSize(newSize);
-    localStorage.setItem('fontSize', newSize);
-    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
+  const changeFontSize = (size: string) => {
+    setFontSize(size);
+    localStorage.setItem('fontSize', size);
   };
 
   return (
     <>
-      {/* Accessibility Controls */}
-      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 border">
-        <h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">
-          Accessibility Options
-        </h3>
-        
-        <div className="space-y-2">
-          <button
-            onClick={toggleHighContrast}
-            className={`w-full px-3 py-1 text-xs rounded ${
-              isHighContrast 
-                ? 'bg-blue-600 text-white' 
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-            }`}
-            aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
-          >
-            {isHighContrast ? 'Disable' : 'Enable'} High Contrast
-          </button>
-          
-          <div className="text-xs text-gray-600 dark:text-gray-300">
-            Font Size:
-          </div>
-          <div className="flex gap-1">
-            {['small', 'normal', 'large', 'extra-large'].map((size) => (
-              <button
-                key={size}
-                onClick={() => changeFontSize(size)}
-                className={`px-2 py-1 text-xs rounded ${
-                  fontSize === size
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-                aria-label={`Set font size to ${size}`}
-              >
-                {size.charAt(0).toUpperCase()}
-              </button>
-            ))}
-          </div>
+      {children}
+      <div className="accessibility-controls" style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 1000 }}>
+        <button
+          onClick={toggleHighContrast}
+          className="accessibility-btn"
+          aria-label="Toggle high contrast mode"
+        >
+          {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
+        </button>
+        <div className="font-size-controls">
+          <button onClick={() => changeFontSize('small')}>A</button>
+          <button onClick={() => changeFontSize('normal')}>A</button>
+          <button onClick={() => changeFontSize('large')}>A</button>
         </div>
       </div>
-
-      {/* Skip to main content link */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
-      >
-        Skip to main content
-      </a>
-
-      {/* Screen reader only content */}
-      <div className="sr-only">
-        <h1>Zion Tech Group - Technology Solutions Provider</h1>
-        <p>
-          Leading technology solutions provider helping businesses transform their digital presence 
-          with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.
-        </p>
-      </div>
-
-      {/* Main content wrapper with accessibility attributes */}
-      <main id="main-content" role="main" aria-label="Main content">
-        {children}
-      </main>
-
-      {/* Accessibility styles */}
-      <style jsx global>{`
-        /* High contrast mode */
-        .high-contrast {
-          --tw-bg-opacity: 1;
-          --tw-text-opacity: 1;
-        }
-        
-        .high-contrast * {
-          background-color: white !important;
-          color: black !important;
-          border-color: black !important;
-        }
-        
-        .high-contrast button,
-        .high-contrast a {
-          border: 2px solid black !important;
-        }
-        
-        .high-contrast button:hover,
-        .high-contrast a:hover {
-          background-color: black !important;
-          color: white !important;
-        }
-
-        /* Font size adjustments */
-        .font-small {
-          font-size: 0.875rem;
-        }
-        
-        .font-normal {
-          font-size: 1rem;
-        }
-        
-        .font-large {
-          font-size: 1.125rem;
-        }
-        
-        .font-extra-large {
-          font-size: 1.25rem;
-        }
-
-        /* Reduced motion */
-        .reduced-motion *,
-        .reduced-motion *::before,
-        .reduced-motion *::after {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-          scroll-behavior: auto !important;
-        }
-
-        /* Focus indicators */
-        *:focus {
-          outline: 2px solid #3b82f6 !important;
-          outline-offset: 2px !important;
-        }
-
-        /* Screen reader only content */
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-
-        .focus\\:not-sr-only:focus {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: inherit;
-          margin: inherit;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
-        }
-      `}</style>
     </>
   );
 };
