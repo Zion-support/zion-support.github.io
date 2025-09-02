@@ -24,7 +24,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             console.log('LCP:', entry.startTime);
           }
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
+            const firstInput = entry as unknown as PerformanceEventTiming;
+            console.log('FID:', (firstInput.processingStart ?? firstInput.startTime) - firstInput.startTime);
           }
           if (entry.entryType === 'layout-shift') {
             if (!(entry as any).hadRecentInput) {

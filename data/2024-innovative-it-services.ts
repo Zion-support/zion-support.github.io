@@ -17,9 +17,9 @@ export interface InnovativeITService2024 {
   setupTime: string;
   category: string;
   realService: boolean;
-  technology: string;
-  integrations: string;
-  useCases: string;
+  technology: string | string[];
+  integrations: string | string[];
+  useCases: string | string[];
   roi: string;
   competitors: string[];
   marketSize: string;
@@ -28,6 +28,7 @@ export interface InnovativeITService2024 {
   contactInfo: {
     mobile: string;
     email: string;
+    address?: string;
     website: string;
   };
   realImplementation: boolean;
