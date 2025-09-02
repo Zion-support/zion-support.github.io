@@ -10,20 +10,19 @@ interface SEOProps {
   type?: string;
   siteName?: string;
 }
-;
-const SEO: React.FC<SEOProps> = ({;
-  title,;
-  description,;
-  keywords,;
-  image,;
-  url,;
-  type = 'website',;
-  siteName = 'Zion Tech Group';
-}) => {;
+
+const SEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  keywords,
+  image,
+  url,
+  type = 'website',
+  siteName = 'Zion Tech Group'
+}) => {
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullImage = image || '/images/og-image.jpg';
   const fullUrl = url || 'https://ziontechgroup.com';
-;
   return (
     <Head>
       <title>{fullTitle}</title>
