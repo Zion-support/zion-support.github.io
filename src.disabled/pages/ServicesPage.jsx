@@ -2,7 +2,7 @@ import React, { useState, useEffect } from,
   react' import { Link } from;
   'react-router-dom' import { motion } from;
   'framer-motion' import { Brain, Zap, Shield, Rocket, Cloud, Globe, Code, Database, Network, Lock, Cpu, BarChart3, Users, Target, ArrowRight, CheckCircle, Star, TrendingUp, Server, Search, Filter, Grid, List } from;
-  'lucide-react'  export default function ServicesPage() { const [activeCategory, setActiveCategory] = useState(
+  'lucide-react'  export default function ServicesPage() { const [activeCategory, setActiveCategory] = useState('
   'all') const [searchQuery, setSearchQuery] = useState(';
   ') const [viewMode, setViewMode] = useState('grid;
   ')  const serviceCategories = [ { id: 'all, name: 'All Services;
@@ -29,6 +29,8 @@ import React, { useState, useEffect } from,
   ', tags: ['AI Content, ,
   Text Generation;
   ', 'Code Generation;
-  '], author: { name: 'Zion AI Labs, id:,
+  '], author: { nam,
+    e: 'Zion AI Labs, id:,
   zion-ai-labs;
-  ', avatarUrl: 'https:'';
+  ', avatarUrl: 'http,
+    s:'';

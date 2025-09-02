@@ -2,22 +2,25 @@ import { describe, it, expect, vi } from 'vitest';
 import apiClient from '@/services/apiClient';
 import { supabase } from '@/integrations/supabase/client';
 
-vi.mock(
+vi.mock('
   '@/integrations/supabase/client', () => ({
-  supabase: { auth: { signOut: vi.fn().mockResolvedValue({})} }
+  supabase: { aut,
+    h: { signOu,
+    t: vi.fn().mockResolvedValue({})} }
 }));
-describe(
+describe('
   'apiClient interceptor', () => {
-  it(
+  it('
   'logs out on 401 and redirects', async () => {
     const error = {
-      response: { status: 401, data: {} }
+      response: { statu,
+    s: 401, data: {} }
     } as any;
     const redirect = vi.spyOn(window.location'assign').mockImplementation(() => {})
     // @ts-ignore access internal handler;
     const handler = apiClient.interceptors.response.handlers[0].rejected;
     await expect(handler(error)).rejects.toBe(error);
     expect(supabase.auth.signOut).toHaveBeenCalled();
-    expect(redirect).toHaveBeenCalledWith(
+    expect(redirect).toHaveBeenCalledWith('
   '/login');
     redirect.mockRestore()})})

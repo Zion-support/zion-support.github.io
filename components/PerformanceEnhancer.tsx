@@ -1,5 +1,5 @@
 'use client';
-
+'
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMetrics {
@@ -8,8 +8,10 @@ interface PerformanceMetrics {
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
-  loadTime: number | null;
-  memoryUsage: number | null;
+  loadTim,
+    e: number | null;
+  memoryUsag,
+    e: number | null;
 }
 
 const PerformanceEnhancer: React.FC = () => {
@@ -25,14 +27,14 @@ const PerformanceEnhancer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   // Only show in development or when explicitly enabled
-  useEffect(() => {
+  useEffect(() => {'
     if (process.env.NODE_ENV === 'development' || process.env['NEXT_PUBLIC_SHOW_PERFORMANCE'] === 'true') {
       setIsVisible(true);
     }
   }, []);
 
   // Measure Core Web Vitals
-  useEffect(() => {
+  useEffect(() => {'
     if (typeof window === 'undefined' || !isVisible) return;
 
     const measurePerformance = () => {
@@ -92,14 +94,14 @@ const PerformanceEnhancer: React.FC = () => {
         });
         navigationObserver.observe({ entryTypes: ['navigation'] });
 
-        // Measure page load time
+        // Measure page load time'
         window.addEventListener('load', () => {
           const loadTime = performance.now();
           setMetrics(prev => ({ ...prev, loadTime }));
         });
 
         // Measure memory usage
-        const updateMemoryUsage = () => {
+        const updateMemoryUsage = () => {'
           if ('memory' in performance) {
             const memory = (performance as any).memory;
             setMetrics(prev => ({
@@ -128,8 +130,8 @@ const PerformanceEnhancer: React.FC = () => {
   }, [isVisible]);
 
   // Send metrics to analytics
-  const sendToAnalytics = useCallback((metricName: string, value: number) => {
-    if (typeof gtag !== 'undefined') {
+  const sendToAnalytics = useCallback((metricName: string, value: number) => {'
+    if (typeof gtag !== 'undefined') {'
       gtag('event', 'web_vitals', {
         name: metricName,
         value: Math.round(value),
@@ -153,9 +155,9 @@ const PerformanceEnhancer: React.FC = () => {
     return null;
   }
 
-  return (
-    <div className="fixed bottom-4 left-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
-      <div className="mb-2 font-bold">Performance Metrics</div>
+  return ('
+    <div className="fixed bottom-4 left-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">"
+      <div className="mb-2 font-bold">Performance Metrics</div>"
       <div className="space-y-1">
         {metrics.fcp !== null && (
           <div>FCP: {metrics.fcp.toFixed(2)}ms</div>
@@ -183,4 +185,4 @@ const PerformanceEnhancer: React.FC = () => {
   );
 };
 
-export default PerformanceEnhancer;
+export default PerformanceEnhancer;"

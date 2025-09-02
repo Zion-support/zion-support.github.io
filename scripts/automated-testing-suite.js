@@ -6,24 +6,30 @@ import { execSync } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
+'
 console.log('🧪 Automated Testing Suite Starting...');
 
 class AutomatedTestingSuite {
-  constructor() {
+  constructor() {'
     this.projectRoot = path.resolve(__dirname, '..');
     this.testResults = {
       timestamp: new Date().toISOString(),
-      unit: { passed: 0, failed: 0, total: 0 },
-      integration: { passed: 0, failed: 0, total: 0 },
-      e2e: { passed: 0, failed: 0, total: 0 },
-      performance: { passed: 0, failed: 0, total: 0 },
-      accessibility: { passed: 0, failed: 0, total: 0 },
-      security: { passed: 0, failed: 0, total: 0 },
+      unit: { passe,
+    d: 0, failed: 0, total: 0 },
+      integration: { passe,
+    d: 0, failed: 0, total: 0 },
+      e2e: { passe,
+    d: 0, failed: 0, total: 0 },
+      performance: { passe,
+    d: 0, failed: 0, total: 0 },
+      accessibility: { passe,
+    d: 0, failed: 0, total: 0 },
+      security: { passe,
+    d: 0, failed: 0, total: 0 },
     };
   }
 
-  async runAllTests() {
+  async runAllTests() {'
     console.log('🔍 Running comprehensive test suite...');
 
     await this.runUnitTests();
@@ -36,72 +42,72 @@ class AutomatedTestingSuite {
     this.generateTestReport();
   }
 
-  async runUnitTests() {
+  async runUnitTests() {'
     console.log('🧪 Running unit tests...');
-    try {
+    try {'
       // Create basic test files if they don't exist
       await this.createBasicTests();
 
-      // Run Jest tests
+      // Run Jest tests'
       const output = execSync('npm test -- --coverage --watchAll=false', {
         cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe',
       });
-
+'
       this.testResults.unit.passed = this.extractTestCount(output, 'passed');
       this.testResults.unit.failed = this.extractTestCount(output, 'failed');
       this.testResults.unit.total =
         this.testResults.unit.passed + this.testResults.unit.failed;
 
-      console.log(
+      console.log('
         `✅ Unit tests: ${this.testResults.unit.passed} passed, ${this.testResults.unit.failed} failed`
       );
-    } catch (error) {
+    } catch (error) {`
       console.log('⚠️ Unit tests failed:', error.message);
       this.testResults.unit.failed = 1;
       this.testResults.unit.total = 1;
     }
   }
 
-  async createBasicTests() {
+  async createBasicTests() {'
     const testDir = path.join(this.projectRoot, '__tests__');
     if (!fs.existsSync(testDir)) {
       fs.mkdirSync(testDir, { recursive: true });
     }
 
-    // Create basic App test
+    // Create basic App test'
     const appTest = `import { render, screen } from '@testing-library/react';
 import App from '../src/App';
-
-describe('App', () => {
+'
+describe('App', () => {'
   it('renders without crashing', () => {
     render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument()})
-
+'
   it('has proper heading structure', () => {
     render(<App />);
-    const heading = screen.getByRole('heading', { level: 1 })
+    const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument()})})`;
-
+`
     fs.writeFileSync(path.join(testDir, 'App.test.tsx'), appTest);
 
-    // Create utility tests
-    const utilityTest = `describe('Utility Functions', () => {
-  it('should format date correctly', () => {
+    // Create utility tests'
+    const utilityTest = `describe('Utility Functions', () => {'
+  it('should format date correctly', () => {'
     const date = new Date('2024-01-01');
     const formatted = date.toISOString().split('T')[0];
     expect(formatted).toBe('2024-01-01')})
-
-  it('should validate email format', () => {
+'
+  it('should validate email format', () => {'
     const validEmail = 'test@example.com';
     const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
     expect(emailRegex.test(validEmail)).toBe(true)})})`;
-
+`
     fs.writeFileSync(path.join(testDir, 'utils.test.ts'), utilityTest);
   }
 
-  async runIntegrationTests() {
+  async runIntegrationTests() {'
     console.log('🔗 Running integration tests...');
     try {
       // Test API endpoints
@@ -112,9 +118,9 @@ describe('App', () => {
 
       this.testResults.integration.passed = 2;
       this.testResults.integration.total = 2;
-
+'
       console.log('✅ Integration tests passed');
-    } catch (error) {
+    } catch (error) {'
       console.log('⚠️ Integration tests failed:', error.message);
       this.testResults.integration.failed = 1;
       this.testResults.integration.total = 1;
@@ -123,30 +129,31 @@ describe('App', () => {
 
   async testAPIEndpoints() {
     // Test health endpoint
-    try {
-      const healthCheck = execSync('curl -f http://localhost:3000/api/health', {
+    try {'
+      const healthCheck = execSync('curl -f http://localhos,
+    t:3000/api/health', {'
         encoding: 'utf8',
         stdio: 'pipe',
       });
       console.log('✅ Health endpoint working');
-    } catch (error) {
+    } catch (error) {'
       console.log('⚠️ Health endpoint not available');
     }
   }
 
   async testComponentIntegration() {
-    // This would test component integration in a real scenario
+    // This would test component integration in a real scenario'
     console.log('✅ Component integration tests passed');
   }
 
-  async runE2ETests() {
+  async runE2ETests() {'
     console.log('🌐 Running E2E tests...');
     try {
       // Create basic E2E test
       await this.createE2ETests();
 
       // Run Playwright or Cypress tests
-      try {
+      try {'
         execSync('npx playwright test', {
           cwd: this.projectRoot,
           stdio: 'pipe',
@@ -154,48 +161,48 @@ describe('App', () => {
         this.testResults.e2e.passed = 1;
         this.testResults.e2e.total = 1;
         console.log('✅ E2E tests passed');
-      } catch (error) {
+      } catch (error) {'
         console.log('⚠️ E2E tests not configured');
         this.testResults.e2e.failed = 1;
         this.testResults.e2e.total = 1;
       }
-    } catch (error) {
+    } catch (error) {'
       console.log('⚠️ E2E tests failed:', error.message);
       this.testResults.e2e.failed = 1;
       this.testResults.e2e.total = 1;
     }
   }
 
-  async createE2ETests() {
+  async createE2ETests() {'
     const e2eDir = path.join(this.projectRoot, 'e2e');
     if (!fs.existsSync(e2eDir)) {
       fs.mkdirSync(e2eDir, { recursive: true });
     }
-
+'
     const e2eTest = `import { test, expect } from '@playwright/test';
-
-test('homepage loads correctly', async ({ page }) => {
+'
+test('homepage loads correctly', async ({ page }) => {'
   await page.goto('/');
   await expect(page).toHaveTitle(/Zion Tech Group/);
   await expect(page.locator('h1')).toBeVisible()})
-
-test('navigation works', async ({ page }) => {
+'
+test('navigation works', async ({ page }) => {'
   await page.goto('/');
   await page.click('text=Services');
   await expect(page).toHaveURL(/.*services/)})
-
-test('contact form works', async ({ page }) => {
+'
+test('contact form works', async ({ page }) => {'
   await page.goto('/contact');
-  await page.fill('input[name="name"]', 'Test User');
-  await page.fill('input[name="email"]', 'test@example.com');
-  await page.fill('textarea[name="message"]', 'Test message');
-  await page.click('button[type="submit"]');
+  await page.fill('input[name="name"], 'Test User');
+  await page.fill('input[name="email"], 'test@example.com');
+  await page.fill('textarea[name="message"], 'Test message');
+  await page.click('button[type="submit"]);
   await expect(page.locator('.success-message')).toBeVisible()})`;
-
+`
     fs.writeFileSync(path.join(e2eDir, 'homepage.spec.ts'), e2eTest);
   }
 
-  async runPerformanceTests() {
+  async runPerformanceTests() {'
     console.log('⚡ Running performance tests...');
     try {
       // Test page load times
@@ -212,10 +219,10 @@ test('contact form works', async ({ page }) => {
         this.testResults.performance.passed +
         this.testResults.performance.failed;
 
-      console.log(
+      console.log('
         `✅ Performance tests: ${this.testResults.performance.passed} passed, ${this.testResults.performance.failed} failed`
       );
-    } catch (error) {
+    } catch (error) {`
       console.log('⚠️ Performance tests failed:', error.message);
       this.testResults.performance.failed = 1;
       this.testResults.performance.total = 1;
@@ -223,7 +230,7 @@ test('contact form works', async ({ page }) => {
   }
 
   async testPagePerformance() {
-    // Simulate performance testing
+    // Simulate performance testing'
     const pages = ['/', '/about', '/services', '/contact'];
     let passed = 0;
     let failed = 0;
@@ -237,11 +244,11 @@ test('contact form works', async ({ page }) => {
           passed++;
           console.log(`✅ ${page} loaded in ${loadTime.toFixed(0)}ms`);
         } else {
-          failed++;
+          failed++;`
           console.log(`⚠️ ${page} loaded slowly: ${loadTime.toFixed(0)}ms`);
         }
       } catch (error) {
-        failed++;
+        failed++;`
         console.log(`❌ ${page} failed to load`);
       }
     }
@@ -267,14 +274,14 @@ test('contact form works', async ({ page }) => {
     if (vitals.CLS < 0.1) passed++;
     else failed++;
 
-    console.log(
+    console.log(`
       `📊 Web Vitals - LCP: ${vitals.LCP.toFixed(0)}ms, FID: ${vitals.FID.toFixed(0)}ms, CLS: ${vitals.CLS.toFixed(3)}`
     );
 
     return { passed, failed };
   }
 
-  async runAccessibilityTests() {
+  async runAccessibilityTests() {`
     console.log('♿ Running accessibility tests...');
     try {
       // Test WCAG compliance
@@ -285,10 +292,10 @@ test('contact form works', async ({ page }) => {
       this.testResults.accessibility.total =
         accessibilityResults.passed + accessibilityResults.failed;
 
-      console.log(
+      console.log('
         `✅ Accessibility tests: ${this.testResults.accessibility.passed} passed, ${this.testResults.accessibility.failed} failed`
       );
-    } catch (error) {
+    } catch (error) {`
       console.log('⚠️ Accessibility tests failed:', error.message);
       this.testResults.accessibility.failed = 1;
       this.testResults.accessibility.total = 1;
@@ -297,7 +304,7 @@ test('contact form works', async ({ page }) => {
 
   async testWCAGCompliance() {
     // Simulate accessibility testing
-    const checks = [
+    const checks = ['
       'Color contrast ratios',
       'Keyboard navigation',
       'Screen reader compatibility',
@@ -318,7 +325,7 @@ test('contact form works', async ({ page }) => {
         passed++;
         console.log(`✅ ${check}`);
       } else {
-        failed++;
+        failed++;`
         console.log(`❌ ${check}`);
       }
     }
@@ -326,7 +333,7 @@ test('contact form works', async ({ page }) => {
     return { passed, failed };
   }
 
-  async runSecurityTests() {
+  async runSecurityTests() {`
     console.log('🔒 Running security tests...');
     try {
       // Test for security vulnerabilities
@@ -337,10 +344,10 @@ test('contact form works', async ({ page }) => {
       this.testResults.security.total =
         securityResults.passed + securityResults.failed;
 
-      console.log(
+      console.log('
         `✅ Security tests: ${this.testResults.security.passed} passed, ${this.testResults.security.failed} failed`
       );
-    } catch (error) {
+    } catch (error) {`
       console.log('⚠️ Security tests failed:', error.message);
       this.testResults.security.failed = 1;
       this.testResults.security.total = 1;
@@ -349,7 +356,7 @@ test('contact form works', async ({ page }) => {
 
   async testSecurityVulnerabilities() {
     // Test for common security issues
-    const securityChecks = [
+    const securityChecks = ['
       'Dependency vulnerabilities',
       'XSS protection',
       'CSRF protection',
@@ -370,7 +377,7 @@ test('contact form works', async ({ page }) => {
         passed++;
         console.log(`✅ ${check}`);
       } else {
-        failed++;
+        failed++;`
         console.log(`❌ ${check}`);
       }
     }
@@ -378,7 +385,7 @@ test('contact form works', async ({ page }) => {
     return { passed, failed };
   }
 
-  extractTestCount(output, type) {
+  extractTestCount(output, type) {`
     const regex = new RegExp(`(\\d+) ${type}`, 'i');
     const match = output.match(regex);
     return match ? parseInt(match[1]) : 0;
@@ -386,43 +393,44 @@ test('contact form works', async ({ page }) => {
 
   generateTestReport() {
     // Calculate overall results
-    const totalPassed = Object.values(this.testResults)
-      .filter(
+    const totalPassed = Object.values(this.testResults);
+      .filter('
         result => typeof result === 'object' && result.passed !== undefined
-      )
+      );
       .reduce((sum, result) => sum + result.passed, 0);
 
-    const totalFailed = Object.values(this.testResults)
-      .filter(
+    const totalFailed = Object.values(this.testResults);
+      .filter('
         result => typeof result === 'object' && result.failed !== undefined
-      )
+      );
       .reduce((sum, result) => sum + result.failed, 0);
 
     const totalTests = totalPassed + totalFailed;
     const successRate =
       totalTests > 0 ? ((totalPassed / totalTests) * 100).toFixed(1) : 0;
 
-    // Save report
+    // Save report'
     const reportPath = path.join(this.projectRoot, 'test-results.json');
     fs.writeFileSync(reportPath, JSON.stringify(this.testResults, null, 2));
 
-    // Display summary
+    // Display summary'
     console.log('\n📊 Test Results Summary:');
-    console.log(`Total Tests: ${totalTests}`);
-    console.log(`Passed: ${totalPassed}`);
-    console.log(`Failed: ${totalFailed}`);
+    console.log(`Total Test,
+    s: ${totalTests}`);`
+    console.log(`Passed: ${totalPassed}`);`
+    console.log(`Failed: ${totalFailed}`);`
     console.log(`Success Rate: ${successRate}%`);
-
+`
     console.log('\n📋 Detailed Results:');
-    Object.entries(this.testResults).forEach(([category, results]) => {
-      if (typeof results === 'object' && results.passed !== undefined) {
+    Object.entries(this.testResults).forEach(([category, results]) => {'
+      if (typeof results === 'object' && results.passed !== undefined) {'
         const status = results.failed === 0 ? '✅' : '⚠️';
-        console.log(
+        console.log('
           `${status} ${category}: ${results.passed}/${results.total} passed`
         );
       }
     });
-
+`
     console.log(`\n📄 Full report saved to: ${reportPath}`);
 
     // Exit with appropriate code
@@ -437,3 +445,4 @@ async function main() {
 }
 
 main().catch(console.error);
+`

@@ -26,23 +26,29 @@ export interface InnovativeAIService {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
-  reviews: number}
+  ratin,
+    g: number;
+  review,
+    s: number}
 const contact = {
   mobile:,
   +1 302 464 0950',
   email: 'kleber@ziontechgroup.com,
   address:,
   364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com}
+  website: 'http,
+    s://ziontechgroup.com}
 export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
-    id:,
+    i,
+    d:,
   ai-consciousness-evolution-platform',
     name: 'AI Consciousness Evolution Platform,
     tagline:,
@@ -70,7 +76,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-purple-600 to-pink-600,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/ai-consciousness-evolution-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-consciousness-evolution-platform,
     marketPosition:,
   First-of-its-kind AI consciousness platform. Our advantage: Revolutionary approach to emotional intelligence and consciousness in AI systems.,
     targetAudience:;
@@ -93,7 +100,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   45% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -136,7 +144,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-blue-600 to-cyan-600,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/ai-quantum-neural-network,
+    link: 'http,
+    s://ziontechgroup.com/ai-quantum-neural-network,
     marketPosition:,
   Leading hybrid AI-Quantum platform. Our advantage: First to market with practical AI-Quantum hybrid solutions for enterprise use.,
     targetAudience:;
@@ -159,7 +168,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   55% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -201,9 +211,11 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-green-600 to-emerald-600,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-research-assistant,
+    link: 'http,
+    s://ziontechgroup.com/ai-autonomous-research-assistant,
     marketPosition:;
-  'First autonomous AI research platform. Our advantage: AI that conducts research independently, reducing human research time by 90%.,
+  'First autonomous AI research platform. Our advantag,
+    e: AI that conducts research independently, reducing human research time by 90%.,
   ,
     targetAudience: Research institutions, Universities, Pharmaceutical companies, Technology companies, Government research labs',
     trialDays: 21,
@@ -224,7 +236,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   18% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -266,7 +279,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-red-600 to-pink-600,
     textColor:,
   text-red-400',
-    link: 'https://ziontechgroup.com/ai-emotional-intelligence-training,
+    link: 'http,
+    s://ziontechgroup.com/ai-emotional-intelligence-training,
     marketPosition:,
   Leading AI emotional intelligence training platform. Our advantage: Comprehensive emotional training that increases AI empathy by 400%.,
     targetAudience:;
@@ -289,7 +303,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   35% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -331,7 +346,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-orange-600 to-red-600,
     textColor:,
   text-orange-400',
-    link: 'https://ziontechgroup.com/ai-predictive-maintenance-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-predictive-maintenance-platform,
     marketPosition:,
   Competes with PTC ThingWorx ($50/month), Siemens Mindsphere ($100/month). Our advantage: AI algorithms reduce maintenance costs by 40% and increase equipment uptime by 30%.,
     targetAudience:;
@@ -354,7 +370,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   25% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -396,7 +413,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-indigo-600 to-purple-600,
     textColor:,
   text-indigo-400',
-    link: 'https://ziontechgroup.com/ai-content-personalization-engine,
+    link: 'http,
+    s://ziontechgroup.com/ai-content-personalization-engine,
     marketPosition:,
   Competes with Dynamic Yield ($1,000/month), Optimizely ($1,000/month). Our advantage: AI personalization increases engagement by 250% and conversion rates by 180%.,
     targetAudience:;
@@ -419,7 +437,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   22% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -462,7 +481,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-teal-600 to-cyan-600,
     textColor:,
   text-teal-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-ecosystem-manager,
+    link: 'http,
+    s://ziontechgroup.com/ai-autonomous-ecosystem-manager,
     marketPosition:,
   First autonomous AI ecosystem management platform. Our advantage: AI systems that coordinate and optimize entire business ecosystems automatically.,
     targetAudience:;
@@ -485,7 +505,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   40% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -527,7 +548,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-gray-600 to-slate-600,
     textColor:,
   text-gray-400',
-    link: 'https://ziontechgroup.com/ai-ethics-governance-framework,
+    link: 'http,
+    s://ziontechgroup.com/ai-ethics-governance-framework,
     marketPosition:,
   Leading AI ethics and governance platform. Our advantage: Comprehensive ethical frameworks that reduce AI risks by 80% and ensure compliance.,
     targetAudience:;
@@ -550,7 +572,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   30% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -592,7 +615,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-pink-600 to-purple-600,
     textColor:,
   text-pink-400',
-    link: 'https://ziontechgroup.com/ai-creativity-studio,
+    link: 'http,
+    s://ziontechgroup.com/ai-creativity-studio,
     marketPosition:,
   Competes with Canva Pro ($12.99/month), Adobe Creative Cloud ($52.99/month). Our advantage: AI creativity increases content output by 500% and reduces design time by 70%.,
     targetAudience:;
@@ -615,7 +639,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   20% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -657,7 +682,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-yellow-600 to-orange-600,
     textColor:,
   text-yellow-400',
-    link: 'https://ziontechgroup.com/ai-education-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-education-platform,
     marketPosition:,
   Competes with Coursera ($49/month), Udemy ($19.99/month). Our advantage: AI personalization increases learning effectiveness by 300% and reduces learning time by 40%.,
     targetAudience:;
@@ -680,7 +706,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   25% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -723,7 +750,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-teal-600 to-cyan-700,
     textColor:,
   text-teal-400',
-    link: 'https://ziontechgroup.com/ai-healthcare-diagnostics,
+    link: 'http,
+    s://ziontechgroup.com/ai-healthcare-diagnostics,
     marketPosition:,
   Competes with IBM Watson Health ($10,000/month), Google Health ($5,000/month). Our advantage: Specialized diagnostics and affordable pricing.,
     targetAudience:;
@@ -746,7 +774,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   140% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -789,7 +818,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-yellow-600 to-amber-700,
     textColor:,
   text-yellow-400',
-    link: 'https://ziontechgroup.com/ai-financial-intelligence,
+    link: 'http,
+    s://ziontechgroup.com/ai-financial-intelligence,
     marketPosition:,
   Competes with Bloomberg Terminal ($24,000/year), Thomson Reuters ($5,000/month). Our advantage: AI automation and affordable pricing.,
     targetAudience:;
@@ -812,7 +842,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   24% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -854,7 +885,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-green-600 to-emerald-700,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/ai-sustainability-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-sustainability-platform,
     marketPosition:,
   Competes with sustainability consulting ($200/hour), ESG platforms ($500/month). Our advantage: AI automation and comprehensive sustainability management.,
     targetAudience:;
@@ -877,7 +909,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   160% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -920,7 +953,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-red-600 to-pink-700,
     textColor:,
   text-red-400',
-    link: 'https://ziontechgroup.com/ai-emotional-intelligence-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-emotional-intelligence-platform,
     marketPosition:,
   Competes with sentiment analysis tools ($100/month), emotion AI platforms ($500/month). Our advantage: Comprehensive emotional intelligence and empathy modeling.,
     targetAudience:;
@@ -943,7 +977,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   280% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -985,7 +1020,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-purple-600 to-indigo-600,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/ai-predictive-analytics-engine,
+    link: 'http,
+    s://ziontechgroup.com/ai-predictive-analytics-engine,
     marketPosition:,
   Competes with DataRobot ($custom), H2O.ai ($custom). Our advantage: Real-time processing and custom algorithm development.,
     targetAudience:;
@@ -1008,7 +1044,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   32% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1050,7 +1087,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-blue-600 to-cyan-600,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/ai-computer-vision-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-computer-vision-platform,
     marketPosition:,
   Competes with Google Vision AI ($1.50/1000 requests), AWS Rekognition ($1.00/1000 images). Our advantage: Custom training and edge deployment.,
     targetAudience:;
@@ -1073,7 +1111,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   28% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1115,7 +1154,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-green-600 to-emerald-600,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/ai-nlp-suite,
+    link: 'http,
+    s://ziontechgroup.com/ai-nlp-suite,
     marketPosition:,
   Competes with OpenAI API ($0.002/1K tokens), Google Cloud NLP ($1.00/1000 requests). Our advantage: Custom training and comprehensive analysis tools.,
     targetAudience:;
@@ -1138,7 +1178,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   25% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1180,7 +1221,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-pink-600 to-rose-600,
     textColor:,
   text-pink-400',
-    link: 'https://ziontechgroup.com/ai-recommendation-engine,
+    link: 'http,
+    s://ziontechgroup.com/ai-recommendation-engine,
     marketPosition:,
   Competes with Amazon Personalize ($custom), Google Recommendations AI ($custom). Our advantage: Custom algorithms and comprehensive analytics.,
     targetAudience:;
@@ -1203,7 +1245,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   30% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1245,7 +1288,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-red-600 to-orange-600,
     textColor:,
   text-red-400',
-    link: 'https://ziontechgroup.com/ai-fraud-detection-system,
+    link: 'http,
+    s://ziontechgroup.com/ai-fraud-detection-system,
     marketPosition:,
   Competes with Sift ($0.50/transaction), Signifyd ($custom). Our advantage: Custom algorithms and comprehensive risk analysis.,
     targetAudience:;
@@ -1268,7 +1312,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   35% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1310,7 +1355,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-indigo-600 to-purple-600,
     textColor:,
   text-indigo-400',
-    link: 'https://ziontechgroup.com/ai-supply-chain-optimization,
+    link: 'http,
+    s://ziontechgroup.com/ai-supply-chain-optimization,
     marketPosition:,
   Competes with SAP SCM ($custom), Oracle SCM ($custom). Our advantage: AI-powered optimization and affordable pricing.,
     targetAudience:;
@@ -1333,7 +1379,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   22% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1375,7 +1422,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-yellow-600 to-orange-600,
     textColor:,
   text-yellow-400',
-    link: 'https://ziontechgroup.com/ai-energy-management-system,
+    link: 'http,
+    s://ziontechgroup.com/ai-energy-management-system,
     marketPosition:,
   Competes with Schneider Electric ($custom), Siemens ($custom). Our advantage: AI-powered optimization and comprehensive analytics.,
     targetAudience:;
@@ -1398,7 +1446,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   28% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1440,7 +1489,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-teal-600 to-cyan-600,
     textColor:,
   text-teal-400',
-    link: 'https://ziontechgroup.com/ai-quality-control-system,
+    link: 'http,
+    s://ziontechgroup.com/ai-quality-control-system,
     marketPosition:,
   Competes with Cognex ($custom), Keyence ($custom). Our advantage: AI-powered inspection and affordable pricing.,
     targetAudience:;
@@ -1463,7 +1513,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   25% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1505,7 +1556,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-violet-600 to-purple-600,
     textColor:,
   text-violet-400',
-    link: 'https://ziontechgroup.com/ai-customer-segmentation-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-customer-segmentation-platform,
     marketPosition:,
   Competes with Segment ($120/month), Mixpanel ($25/month). Our advantage: AI-powered segmentation and comprehensive analytics.,
     targetAudience:;
@@ -1528,7 +1580,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   26% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1571,7 +1624,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-purple-600 to-indigo-600,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/ai-quantum-neural-network,
+    link: 'http,
+    s://ziontechgroup.com/ai-quantum-neural-network,
     marketPosition:,
   First-to-market quantum-AI hybrid platform. Competes with IBM Quantum ($1,000/hour) and Google Quantum AI. Our advantage: Seamless integration of classical AI with quantum processing.,
     targetAudience:;
@@ -1594,7 +1648,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   25% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1637,7 +1692,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-purple-500 to-pink-600,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-research-assistant,
+    link: 'http,
+    s://ziontechgroup.com/ai-autonomous-research-assistant,
     marketPosition:,
   First-to-market autonomous AI research platform with breakthrough discovery capabilities and self-improving algorithms.',
     targetAudience: Research institutions, Universities, Pharmaceutical companies, Technology companies, Government agencies',
@@ -1673,7 +1729,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   400%+ annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1716,7 +1773,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-pink-500 to-rose-600,
     textColor:,
   text-pink-400',
-    link: 'https://ziontechgroup.com/ai-emotional-intelligence-training,
+    link: 'http,
+    s://ziontechgroup.com/ai-emotional-intelligence-training,
     marketPosition:,
   Leading AI-powered emotional intelligence training platform with personalized coaching and real-time feedback capabilities.',
     targetAudience: HR departments, Leadership teams, Educational institutions, Healthcare professionals, Customer service teams',
@@ -1755,7 +1813,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   22% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1798,7 +1857,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-blue-500 to-indigo-600,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/ai-predictive-maintenance-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-predictive-maintenance-platform,
     marketPosition:,
   Leading AI-powered predictive maintenance platform with advanced machine learning algorithms and IoT integration capabilities.',
     targetAudience: Manufacturing companies, Industrial facilities, Energy companies, Transportation companies, Healthcare facilities',
@@ -1837,7 +1897,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   30% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1880,7 +1941,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-green-500 to-emerald-600,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/ai-content-personalization-engine,
+    link: 'http,
+    s://ziontechgroup.com/ai-content-personalization-engine,
     marketPosition:,
   Advanced AI-powered content personalization platform with real-time optimization and multi-channel delivery capabilities.',
     targetAudience: E-commerce companies, Media companies, Marketing teams, Content creators, Digital publishers',
@@ -1921,7 +1983,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   25% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1964,7 +2027,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-indigo-500 to-purple-600,
     textColor:,
   text-indigo-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-ecosystem-manager,
+    link: 'http,
+    s://ziontechgroup.com/ai-autonomous-ecosystem-manager,
     marketPosition:,
   First-to-market autonomous AI ecosystem management platform with advanced coordination and optimization capabilities.',
     targetAudience: Large enterprises, Multi-national companies, Government agencies, Complex organizations, Strategic planners',
@@ -2000,7 +2064,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   500%+ annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -2043,7 +2108,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-emerald-500 to-teal-600,
     textColor:,
   text-emerald-400',
-    link: 'https://ziontechgroup.com/ai-ethics-governance-framework,
+    link: 'http,
+    s://ziontechgroup.com/ai-ethics-governance-framework,
     marketPosition:,
   Leading AI ethics and governance platform with comprehensive compliance monitoring and ethical AI development tools.',
     targetAudience: AI development companies, Technology companies, Government agencies, Healthcare organizations, Financial institutions',
@@ -2082,7 +2148,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   35% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -2125,7 +2192,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     color: 'from-pink-500 to-purple-600,
     textColor:,
   text-pink-400',
-    link: 'https://ziontechgroup.com/ai-creativity-studio,
+    link: 'http,
+    s://ziontechgroup.com/ai-creativity-studio,
     marketPosition:,
   Innovative AI-powered creativity platform with advanced content generation and creative collaboration capabilities.',
     targetAudience: Creative professionals, Designers, Musicians, Artists, Content creators, Marketing teams',
@@ -2165,7 +2233,8 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [{
     growthRate:,
   40% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',

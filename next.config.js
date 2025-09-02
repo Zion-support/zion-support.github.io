@@ -2,18 +2,22 @@
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuild,
+    s: true
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildError,
+    s: true,
   },
   images: {
-    formats: ['image/webp', 'image/avif'],
+    format,
+    s: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+  compiler: {'
+    removeConsol,
+    e: process.env.NODE_ENV === 'production',
   },
 
   // Webpack optimizations
@@ -46,14 +50,16 @@ const nextConfig = {
 
     return config;
   },
-  // Try to exclude problematic directories at the Next.js level
+  // Try to exclude problematic directories at the Next.js level'
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
-    maxInactiveAge: 25 * 1000,
+    maxInactiveAg,
+    e: 25 * 1000,
     // number of pages that should be kept simultaneously without being disposed
     pagesBufferLength: 2,
   },
 };
 
 export default nextConfig;
+'

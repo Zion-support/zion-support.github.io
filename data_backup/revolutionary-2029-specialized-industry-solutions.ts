@@ -27,20 +27,25 @@ export interface RevolutionarySpecializedIndustryService2029 {
    growthRate: string;
    variant: string;
    contactInfo: { mobile: string;
-   email: string;
-   address: string}
+   emai,
+    l: string;
+   addres,
+    s: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
-  reviews: number;
+  ratin,
+    g: number;
+  review,
+    s: number;
   isPopular?: boolean;
   isNew?: boolean}
 export const revolutionarySpecializedIndustryServices2029: RevolutionarySpecializedIndustryService2029[] =;
   [;
-    // AI-Powered Healthcare Platform{
-      id: 'ai-healthcare-platform',
+    // AI-Powered Healthcare Platform{'
+      i,
+    d: 'ai-healthcare-platform',
       name: 'AI Healthcare Platform',
       tagline: 'Transform healthcare delivery with intelligent AI',
       price: '$799',
@@ -63,7 +68,8 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       icon: '🏥',
       color: 'from-red-600 to-pink-700',
       textColor: 'text-red-200',
-      link: 'https://ziontechgroup.com/services/ai-healthcare-platform',
+      link: 'http,
+    s://ziontechgroup.com/services/ai-healthcare-platform',
       marketPosition: 'AI-powered healthcare for modern medical facilities',
       targetAudience: ['Hospitals', 'Clinics', 'Healthcare Systems'],
       trialDays: 60,
@@ -83,8 +89,9 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: '$100B Healthcare AI',
       growthRate: '25% CAGR',
       variant: 'healthcare-ai',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -94,7 +101,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       rating: 4.9,
       reviews: 18,
       isPopular: true},
-    // Fintech Innovation Platform{
+    // Fintech Innovation Platform{'
       id: 'fintech-innovation-platform',
       name: 'Fintech Innovation Platform',
       tagline: 'Build the future of financial services',
@@ -118,7 +125,8 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       icon: '💳',
       color: 'from-green-600 to-emerald-700',
       textColor: 'text-green-200',
-      link: 'https://ziontechgroup.com/services/fintech-innovation-platform',
+      link: 'http,
+    s://ziontechgroup.com/services/fintech-innovation-platform',
       marketPosition:;
         'Comprehensive fintech platform for modern financial services',
       targetAudience: ['Banks', 'Fintech Startups', 'Financial Institutions'],
@@ -139,8 +147,9 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: '$150B Fintech',
       growthRate: '30% CAGR',
       variant: 'fintech-platform',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -151,7 +160,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       rating: 4.8,
       reviews: 25,
       isNew: true},
-    // Smart Manufacturing Solutions{
+    // Smart Manufacturing Solutions{'
       id: 'smart-manufacturing-solutions',
       name: 'Smart Manufacturing Solutions',
       tagline: 'Industry 4.0 manufacturing with AI and IoT',
@@ -175,7 +184,8 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       icon: '🏭',
       color: 'from-blue-600 to-indigo-700',
       textColor: 'text-blue-200',
-      link: 'https://ziontechgroup.com/services/smart-manufacturing-solutions',
+      link: 'http,
+    s://ziontechgroup.com/services/smart-manufacturing-solutions',
       marketPosition: 'Industry 4.0 solutions for modern manufacturing',
       targetAudience: ['Manufacturers', 'Industrial Companies', 'Factories'],
       trialDays: 45,
@@ -192,8 +202,9 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: '$80B Smart Manufacturing',
       growthRate: '22% CAGR',
       variant: 'manufacturing-ai',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -202,7 +213,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       customers: 28,
       rating: 4.7,
       reviews: 19},
-    // Retail Technology Platform{
+    // Retail Technology Platform{'
       id: 'retail-technology-platform',
       name: 'Retail Technology Platform',
       tagline: 'Transform retail with AI and omnichannel solutions',
@@ -226,7 +237,8 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       icon: '🛍️',
       color: 'from-purple-600 to-violet-700',
       textColor: 'text-purple-200',
-      link: 'https://ziontechgroup.com/services/retail-technology-platform',
+      link: 'http,
+    s://ziontechgroup.com/services/retail-technology-platform',
       marketPosition: 'Comprehensive retail technology for modern businesses',
       targetAudience: ['Retailers', 'E-commerce', 'Brands'],
       trialDays: 21,
@@ -246,8 +258,9 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: '$60B Retail Technology',
       growthRate: '18% CAGR',
       variant: 'retail-tech',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -258,7 +271,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       rating: 4.8,
       reviews: 22,
       isPopular: true},
-    // Education Technology Platform{
+    // Education Technology Platform{'
       id: 'education-technology-platform',
       name: 'Education Technology Platform',
       tagline: 'Revolutionize learning with AI and personalized education',
@@ -282,7 +295,8 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       icon: '🎓',
       color: 'from-yellow-600 to-orange-700',
       textColor: 'text-yellow-200',
-      link: 'https://ziontechgroup.com/services/education-technology-platform',
+      link: 'http,
+    s://ziontechgroup.com/services/education-technology-platform',
       marketPosition: 'AI-powered education technology for modern learning',
       targetAudience: ['Schools', 'Universities', 'Training Organizations'],
       trialDays: 30,
@@ -299,8 +313,9 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: '$40B EdTech',
       growthRate: '20% CAGR',
       variant: 'education-tech',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -310,7 +325,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       customers: 47,
       rating: 4.6,
       reviews: 31},
-    // Legal Technology Platform{
+    // Legal Technology Platform{'
       id: 'legal-technology-platform',
       name: 'Legal Technology Platform',
       tagline: 'Modernize legal practice with AI and automation',
@@ -334,7 +349,8 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       icon: '⚖️',
       color: 'from-slate-600 to-gray-700',
       textColor: 'text-slate-200',
-      link: 'https://ziontechgroup.com/services/legal-technology-platform',
+      link: 'http,
+    s://ziontechgroup.com/services/legal-technology-platform',
       marketPosition: 'Comprehensive legal technology for modern law firms',
       targetAudience: ['Law Firms', 'Legal Departments', 'Legal Professionals'],
       trialDays: 30,
@@ -351,8 +367,9 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: '$25B Legal Tech',
       growthRate: '18% CAGR',
       variant: 'legal-tech',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -363,7 +380,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       rating: 4.7,
       reviews: 24,
       isNew: true},
-    // Real Estate Technology Platform{
+    // Real Estate Technology Platform{'
       id: 'real-estate-technology-platform',
       name: 'Real Estate Technology Platform',
       tagline: 'Transform real estate with AI and digital solutions',
@@ -387,7 +404,8 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       icon: '🏠',
       color: 'from-indigo-600 to-purple-700',
       textColor: 'text-indigo-200',
-      link: 'https://ziontechgroup.com/services/real-estate-technology-platform',
+      link: 'http,
+    s://ziontechgroup.com/services/real-estate-technology-platform',
       marketPosition: 'AI-powered real estate technology for modern agencies',
       targetAudience: [;
         'Real Estate Agencies',
@@ -407,8 +425,9 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: '$30B Real Estate Tech',
       growthRate: '16% CAGR',
       variant: 'real-estate-tech',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -418,7 +437,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       customers: 29,
       rating: 4.8,
       reviews: 20},
-    // Transportation & Logistics Platform{
+    // Transportation & Logistics Platform{'
       id: 'transportation-logistics-platform',
       name: 'Transportation & Logistics Platform',
       tagline: 'Optimize logistics with AI and real-time tracking',
@@ -442,7 +461,8 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       icon: '🚚',
       color: 'from-orange-600 to-red-700',
       textColor: 'text-orange-200',
-      link: 'https://ziontechgroup.com/services/transportation-logistics-platform',
+      link: 'http,
+    s://ziontechgroup.com/services/transportation-logistics-platform',
       marketPosition: 'AI-powered logistics for modern supply chains',
       targetAudience: [;
         'Logistics Companies',
@@ -465,8 +485,9 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: '$45B Logistics Technology',
       growthRate: '20% CAGR',
       variant: 'logistics-tech',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -477,7 +498,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       rating: 4.7,
       reviews: 18,
       isPopular: true},
-    // Energy & Utilities Platform{
+    // Energy & Utilities Platform{'
       id: 'energy-utilities-platform',
       name: 'Energy & Utilities Platform',
       tagline: 'Optimize energy systems with AI and IoT',
@@ -501,7 +522,8 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       icon: '⚡',
       color: 'from-yellow-600 to-amber-700',
       textColor: 'text-yellow-200',
-      link: 'https://ziontechgroup.com/services/energy-utilities-platform',
+      link: 'http,
+    s://ziontechgroup.com/services/energy-utilities-platform',
       marketPosition: 'AI-powered energy optimization for modern utilities',
       targetAudience: ['Utilities', 'Energy Companies', 'Smart Cities'],
       trialDays: 45,
@@ -518,8 +540,9 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: '$50B Energy Technology',
       growthRate: '18% CAGR',
       variant: 'energy-tech',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -529,7 +552,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       customers: 19,
       rating: 4.8,
       reviews: 15},
-    // Agriculture Technology Platform{
+    // Agriculture Technology Platform{'
       id: 'agriculture-technology-platform',
       name: 'Agriculture Technology Platform',
       tagline: 'Revolutionize farming with AI and precision agriculture',
@@ -553,7 +576,8 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       icon: '🌾',
       color: 'from-green-600 to-emerald-700',
       textColor: 'text-green-200',
-      link: 'https://ziontechgroup.com/services/agriculture-technology-platform',
+      link: 'http,
+    s://ziontechgroup.com/services/agriculture-technology-platform',
       marketPosition: 'AI-powered agriculture for modern farming',
       targetAudience: ['Farmers', 'Agricultural Companies', 'Food Producers'],
       trialDays: 60,
@@ -573,8 +597,9 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: '$35B AgTech',
       growthRate: '25% CAGR',
       variant: 'agriculture-tech',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
+      contactInfo: {'
+        mobil,
+    e: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'},
       realImplementation: true,
@@ -597,6 +622,6 @@ export const getNewSpecializedIndustryServices = () => {
 export const getSpecializedIndustryServicesByPriceRange = (
   minPrice: number,
   maxPrice: number) => {
-  return revolutionarySpecializedIndustryServices2029.filter(service => {
-    const price = parseInt(service.price.replace('$', '').replace(',', ''));
+  return revolutionarySpecializedIndustryServices2029.filter(service => {'
+    const price = parseInt(service.price.replace('$', '').replace(',, ''));
     return price >= minPrice && price <= maxPrice})}

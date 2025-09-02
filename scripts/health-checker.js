@@ -18,7 +18,8 @@ class HealthChecker {
     this.logDir = path.join(this.projectRoot,
   'logs');
     this.port = process.env.PORT || 3000;
-    this.healthEndpoint = `http://localhost:${this.port}/health`;
+    this.healthEndpoint = `http://localhos,
+    t:${this.port}/health`;
     this.maxResponseTime = 5000 // 5 seconds;
     this.checks = [];
     this.ensureDirectories()}
@@ -32,13 +33,13 @@ class HealthChecker {
       timestamp,
       level,
       message,
-      data}
+      data}`
     console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`);
     if (data) {
-      console.log(JSON.stringify(data, null, 2))}
+      console.log(JSON.stringify(data, null, 2));
     // Write to log file;
     const logFile = path.join(this.logDir,
-,
+,`
   health-checker.log');
     fs.appendFileSync(logFile, JSON.stringify(logEntry) +;
   '\n')}
@@ -48,22 +49,22 @@ class HealthChecker {
       const req = http.get(this.healthEndpoint, res => {
         const responseTime = Date.now() - startTime;
         if (res.statusCode === 200) {
-          this.log(
-  'info', `Application health check passed (${responseTime}ms)`)          resolve({
+          this.log('
+  'info', `Application health check passed (${responseTime}ms)`)          resolve({`
             status: 'healthy,
             responseTime,
             statusCode: res.statusCode})} else {
           this.log(,
-  warning', `Application health check failed with status ${res.statusCode}`)          resolve({
+  warning', `Application health check failed with status ${res.statusCode}`)          resolve({`
             status: 'unhealthy,
             responseTime,
             statusCode: res.statusCode,
             reason: `HTTP ${res.statusCode}`})}
       })
-      req.on(
+      req.on(`
   'error', (error) => {
         const responseTime = Date.now() - startTime;
-        this.log(
+        this.log('
   'error',
   'Application health check failed', { error: error.message })        resolve({
           status:;
@@ -76,30 +77,30 @@ class HealthChecker {
         this.log(,
   error',
   'Application health check timed out');
-        resolve({
+        resolve({'
           status: 'unhealthy,
           responseTime,
           reason:;
   'Timeout'        })})})}
   async checkDiskSpace() {
     try {
-      const result = execSync(
+      const result = execSync('
   'df -h .', {
         cwd: this.projectRoot,
         encoding:,
-  utf8'})
-      const lines = result.trim().split(
+  utf8'});
+      const lines = result.trim().split('
   '\n');
       const diskInfo = lines[1].split(/\s+/);
       const usage = diskInfo[4];
-      const usagePercent = parseInt(usage.replace(
+      const usagePercent = parseInt(usage.replace('
   '%', ';
   '));
       const status = usagePercent > 90 ? 'critical;
   ': usagePercent > 80 ? 'warning;
   ' : 'healthy;
   ';
-      this.log('info, `Disk usage: ${usage}`, { status, usagePercent })
+      this.log('info, `Disk usage: ${usage}`, { status, usagePercent });
             return {
         status,
         usage: usage,
@@ -108,10 +109,10 @@ class HealthChecker {
         total: diskInfo[1]}
     } catch (error) {
       this.log(,
-  error;
+  error;`
   ', 'Failed to check disk space;
   ', error);
-      return {
+      return {'
         status: 'unknown,
         reason: error.message      }
     }
@@ -120,7 +121,7 @@ class HealthChecker {
     try {
       const result = execSync(,
   free -m;
-  ', { encoding: 'utf8 })
+  ', { encoding: 'utf8 });
       const lines = result.trim().split(,
   \n;
   ');
@@ -132,19 +133,19 @@ class HealthChecker {
   ': usagePercent > 80 ? 'warning;
   ' : 'healthy;
   ';
-      this.log('info, `Memory usage: ${usagePercent}%`, { status, used, total })
+      this.log('info, `Memory usage: ${usagePercent}%`, { status, used, total });
             return {
         status,
-        usagePercent,
-        used: `${used}MB`,
-        total: `${total}MB`,
+        usagePercent,`
+        used: `${used}MB`,`
+        total: `${total}MB`,`
         available: `${total - used}MB`}
     } catch (error) {
       this.log(,
-  error;
+  error;`
   ', 'Failed to check memory usage;
   ', error);
-      return {
+      return {'
         status: 'unknown,
         reason: error.message      }
     }
@@ -153,7 +154,7 @@ class HealthChecker {
     try {
       const result = execSync(,
   pm2 jlist;
-  ', { encoding: 'utf8 })
+  ', { encoding: 'utf8 });
       const processes = JSON.parse(result);
       const healthyProcesses = processes.filter(p => p.pm2_env.status ===,
   online;
@@ -171,18 +172,19 @@ class HealthChecker {
         healthy: healthyProcesses.length,
         unhealthy: unhealthyProcesses.length,
         processes: processes.map(p => ({
-          name: p.name,
+          nam,
+    e: p.name,
           status: p.pm2_env.status,
           cpu: p.monit.cpu,
           memory: p.monit.memory,
           uptime: p.pm2_env.pm_uptime,
-          restarts: p.pm2_env.restart_time}))}
+          restarts: p.pm2_env.restart_time}));
     } catch (error) {
       this.log(,
-  error;
+  error;`
   ', 'Failed to check PM2 processes;
   ', error);
-      return {
+      return {'
         status: 'unknown,
         reason: error.message      }
     }
@@ -203,21 +205,21 @@ class HealthChecker {
       const totalSize = logStats.reduce((sum, log) => sum + log.sizeBytes, 0);
       const totalSizeMB = Math.round(totalSize / (1024 * 1024));
       const status = totalSizeMB > 500 ?,
-  warning;
+  warning;`
   ': 'healthy;
   ';
       this.log('info, `Log files: ${logFiles.length} files, ${totalSizeMB}MB total`);
             return {
         status,
-        fileCount: logFiles.length,
+        fileCount: logFiles.length,`
         totalSize: `${totalSizeMB}MB`,
         files: logStats}
     } catch (error) {
       this.log(,
-  error;
+  error;`
   ', 'Failed to check log files;
   ', error);
-      return {
+      return {'
         status: 'unknown,
         reason: error.message      }
     }
@@ -233,23 +235,23 @@ class HealthChecker {
       const nodeModulesPath = path.join(this.projectRoot, 'node_modules;
   ');
       const nodeModulesExists = fs.existsSync(nodeModulesPath);
-      if (!nodeModulesExists) {
+      if (!nodeModulesExists) {'
         this.log('warning;
   ', 'node_modules directory not found;
   ');
-        return {
+        return {'
           status: 'warning,
           reason: 'node_modules not found;
   ',
           dependencies: Object.keys(packageJson.dependencies || {}).length,
-          devDependencies: Object.keys(packageJson.devDependencies || {})
+          devDependencies: Object.keys(packageJson.devDependencies || {});
             .length}
       }
       const dependencyCount = Object.keys(packageJson.dependencies || {}).length;
       const devDependencyCount = Object.keys(packageJson.devDependencies || {}).length;
       this.log('info;
   ', `Dependencies: ${dependencyCount} production, ${devDependencyCount} development`);
-            return {
+            return {`
         status: 'healthy;
   ',
         dependencies: dependencyCount,
@@ -260,7 +262,7 @@ class HealthChecker {
   error;
   ', 'Failed to check dependencies;
   ', error);
-      return {
+      return {'
         status: 'unknown,
         reason: error.message      }
     }
@@ -268,34 +270,34 @@ class HealthChecker {
   determineOverallHealth(checks) {
     const statuses = checks.map(check => check.status);
     if (statuses.includes('critical;
-  ')) {
+  ')) {'
       return 'critical;
   '} else if (statuses.includes('unhealthy;
-  ')) {
+  ')) {'
       return 'unhealthy;
   '} else if (statuses.includes('warning;
-  ')) {
+  ')) {'
       return 'warning;
   '} else if (statuses.every(status => status === 'healthy;
-  ')) {
+  ')) {'
       return 'healthy;
-  '    } else {
+  '    } else {'
       return 'unknown;
   '}
   }
-  async triggerRestartIfNeeded(overallHealth) {
+  async triggerRestartIfNeeded(overallHealth) {'
     if (overallHealth === 'critical;
   ' || overallHealth === 'unhealthy;
   ') {
-      try {
+      try {'
         this.log('warning;
   ', 'Triggering application restart due to poor health;
   ');
         execSync('pm2 restart zion-app;
-  ', { cwd: this.projectRoot })
+  ', { cwd: this.projectRoot });
         this.log('info;
   ', 'Application restarted successfully;
-  ')        return true} catch (error) {
+  ')        return true} catch (error) {'
         this.log('error;
   ', 'Failed to restart application;
   ', error);
@@ -313,8 +315,9 @@ class HealthChecker {
       overallHealth,
       checks: this.checks,
       summary: {
-        healthy: this.checks.filter(c => c.status ===,
-  healthy;
+        health,
+    y: this.checks.filter(c => c.status ===,
+  healthy;`
   ').length,
         warning: this.checks.filter(c => c.status === 'warning).length,
         unhealthy: this.checks.filter(c => c.status ===,
@@ -330,11 +333,11 @@ class HealthChecker {
   async run() {
     try {
       this.log(,
-  info;
+  info;`
   ', 'Starting health check...;
   ');
       // Run all health checks;
-      const healthChecks = [
+      const healthChecks = ['
         { name: 'application, check: this.checkApplicationHealth.bind(this) },
         { name: 'diskSpace;
   ', check: this.checkDiskSpace.bind(this) },
@@ -358,7 +361,7 @@ class HealthChecker {
       await this.triggerRestartIfNeeded(overallHealth);
       this.log('info;
   ', `Health check completed. Overall status: ${overallHealth}`);
-            return report} catch (error) {
+            return report} catch (error) {`
       this.log('error;
   ', 'Health check failed;
   ', error);
@@ -369,10 +372,10 @@ class HealthChecker {
 const isMainModule = import.meta.url === `file://${process.argv[1]}`;
 if (isMainModule) {
   const checker = new HealthChecker();
-  checker.run().then(report => {
+  checker.run().then(report => {`
     console.log('Health check completed successfully;
   ');
-    process.exit(0)}).catch(error => {
+    process.exit(0)}).catch(error => {'
     console.error('Health check failed:', error);
     process.exit(1)})}
 export default HealthChecker;

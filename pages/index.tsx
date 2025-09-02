@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
 
 export default function Home() {
-  const stats = [
+  const stats = ['
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
@@ -14,19 +14,19 @@ export default function Home() {
   ];
   
   const services = [
-    {
+    {'
       title: 'AI Services',
       description: 'Cutting-edge artificial intelligence solutions',
       icon: Brain,
       href: '/services/ai-services'
     },
-    {
+    {'
       title: 'IT Services',
       description: 'Comprehensive information technology services',
       icon: Network,
       href: '/services/it-services'
     },
-    {
+    {'
       title: 'Micro SaaS',
       description: 'Scalable software as a service solutions',
       icon: Cloud,
@@ -60,32 +60,35 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Zion Tech Group - Leading Technology Solutions Provider</title>
-        <meta name="description" content="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Zion Tech Group - Leading Technology Solutions Provider</title>'
+        <meta name="description" content="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation." />"
+        <meta name="viewport" content="width=device-width, initial-scale=1" />"
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
       
       <Navigation />
-      
+      "
       <main className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
+        {/* Hero Section */}"
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">"
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 l,
+    g:px-8">"
+            <div className="text-center">"
               <h1 className="text-5xl font-bold text-gray-900 mb-6">
-                Transform Your Business with
+                Transform Your Business with"
                 <span className="text-blue-600"> Technology</span>
-              </h1>
+              </h1>"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
                 Leading provider of revolutionary AI services, IT solutions, and micro SaaS development. 
                 We help businesses innovate, scale, and succeed in the digital age.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </p>"
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
                 <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                   Get Started
-                </Link>
-                <Link href="/services" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
+                </Link>"
+                <Link href="/services" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hove,
+    r:bg-blue-600 hove,
+    r:text-white transition-colors">
                   View Services
                 </Link>
               </div>
@@ -93,13 +96,15 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+        {/* Stats Section */}"
+        <section className="py-20 bg-white">"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8">"
+            <div className="grid grid-cols-2 m,
+    d:grid-cols-4 gap-8">
+              {stats.map((stat, index) => ("
+                <div key={index} className="text-center">"
+                  <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>"
                   <div className="text-gray-600">{stat.label}</div>
                 </div>
               ))}
@@ -107,27 +112,29 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Services Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
+        {/* Services Section */}"
+        <section className="py-20 bg-gray-50">"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8">"
+            <div className="text-center mb-16">"
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>"
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Comprehensive technology solutions designed to drive your business forward
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6">
+            "
+            <div className="grid grid-cols-1 m,
+    d:grid-cols-3 gap-8">
+              {services.map((service, index) => ("
+                <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">"
+                  <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6">"
                     <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{service.title}</h3>
-                  <p className="text-gray-600 mb-6 text-center">{service.description}</p>
-                  <Link href={service.href} className="block">
+                  </div>"
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{service.title}</h3>"
+                  <p className="text-gray-600 mb-6 text-center">{service.description}</p>"
+                  <Link href={service.href} className="block">"
                     <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center flex items-center justify-center">
-                      Learn More
+                      Learn More"
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </div>
                   </Link>
@@ -137,23 +144,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+        {/* Features Section */}"
+        <section className="py-20 bg-white">"
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 l,
+    g:px-8">"
+            <div className="text-center mb-16">"
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>"
               <p className="text-lg text-gray-600">
                 We deliver exceptional results through innovation, expertise, and dedication
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+            "
+            <div className="grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-4 gap-8">
+              {features.map((feature, index) => ("
+                <div key={index} className="text-center">"
+                  <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">"
                     <feature.icon className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                  </div>"
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>"
                   <p className="text-gray-600">{feature.description}</p>
                 </div>
               ))}
@@ -161,20 +170,22 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* CTA Section */}"
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            </h2>"
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">"
               Let's discuss how our technology solutions can drive your success. Get started with a free consultation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>'
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Get Free Consultation
-              </Link>
-              <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+              </Link>"
+              <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hove,
+    r:bg-white hove,
+    r:text-blue-600 transition-colors">
                 Learn More About Us
               </Link>
             </div>
@@ -185,4 +196,4 @@ export default function Home() {
       <Footer />
     </>
   );
-}
+}"

@@ -4,9 +4,11 @@ import { Download, X, Smartphone, Monitor } from 'lucide-react';
 
 interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[];
-  readonly userChoice: Promise<{
-    outcome: 'accepted' | 'dismissed';
-    platform: string;
+  readonly userChoice: Promise<{'
+    outcom,
+    e: 'accepted' | 'dismissed';
+    platfor,
+    m: string;
   }>;
   prompt(): Promise<void>;
 }
@@ -17,8 +19,8 @@ const PWARegistration: React.FC = () => {
   const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {
-    // Check if app is already installed
-    if (window.matchMedia('(display-mode: standalone)').matches) {
+    // Check if app is already installed'
+    if (window.matchMedia('(display-mode: standalone)).matches) {
       setIsInstalled(true);
     }
 
@@ -35,22 +37,22 @@ const PWARegistration: React.FC = () => {
       setShowInstallPrompt(false);
       setDeferredPrompt(null);
     };
-
+'
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     window.addEventListener('appinstalled', handleAppInstalled);
 
-    // Register service worker
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
+    // Register service worker'
+    if ('serviceWorker' in navigator) {'
+      navigator.serviceWorker.register('/sw.js');
+        .then((registration) => {'
           console.log('Service Worker registered successfully:', registration);
         })
-        .catch((error) => {
+        .catch((error) => {'
           console.log('Service Worker registration failed:', error);
         });
     }
 
-    return () => {
+    return () => {'
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
       window.removeEventListener('appinstalled', handleAppInstalled);
     };
@@ -61,10 +63,10 @@ const PWARegistration: React.FC = () => {
 
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
-    
-    if (outcome === 'accepted') {
+    '
+    if (outcome === 'accepted') {'
       console.log('User accepted the install prompt');
-    } else {
+    } else {'
       console.log('User dismissed the install prompt');
     }
     
@@ -87,47 +89,50 @@ const PWARegistration: React.FC = () => {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 100 }}
-          className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-sm z-50"
-        >
-          <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4">
-            <div className="flex items-start justify-between mb-3">
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+          className="fixed bottom-4 left-4 right-4 md: left-auto m,
+    d:right-4 m,
+    d:max-w-sm z-50"
+        >"
+          <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4">"
+            <div className="flex items-start justify-between mb-3">"
+              <div className="flex items-center">"
+                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-3">"
                   <Download className="w-5 h-5 text-white" />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">Install App</h3>
+                <div>"
+                  <h3 className="font-semibold text-gray-900">Install App</h3>"
                   <p className="text-sm text-gray-600">Get quick access to our platform</p>
                 </div>
               </div>
               <button
-                onClick={handleDismiss}
+                onClick={handleDismiss}"
                 className="text-gray-400 hover:text-gray-600 transition-colors"
-              >
+              >"
                 <X className="w-5 h-5" />
               </button>
             </div>
-
-            <div className="flex items-center space-x-4 mb-4">
-              <div className="flex items-center text-sm text-gray-600">
+"
+            <div className="flex items-center space-x-4 mb-4">"
+              <div className="flex items-center text-sm text-gray-600">"
                 <Smartphone className="w-4 h-4 mr-1" />
                 <span>Mobile</span>
-              </div>
-              <div className="flex items-center text-sm text-gray-600">
+              </div>"
+              <div className="flex items-center text-sm text-gray-600">"
                 <Monitor className="w-4 h-4 mr-1" />
                 <span>Desktop</span>
               </div>
             </div>
-
+"
             <div className="flex space-x-3">
               <button
-                onClick={handleInstallClick}
-                className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+                onClick={handleInstallClick}"
+                className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hove,
+    r:to-purple-700 transition-all duration-200"
               >
                 Install
               </button>
               <button
-                onClick={handleDismiss}
+                onClick={handleDismiss}"
                 className="px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors"
               >
                 Not now
@@ -140,4 +145,4 @@ const PWARegistration: React.FC = () => {
   );
 };
 
-export default PWARegistration;
+export default PWARegistration;"

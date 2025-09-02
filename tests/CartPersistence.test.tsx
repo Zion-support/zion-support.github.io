@@ -7,18 +7,20 @@ import { AuthContext } from '@/context/auth/AuthContext';
 import { safeStorage } from '@/utils/safeStorage';
 import { getCartKey } from '@/utils/cartUtils';
 
-vi.mock(
+vi.mock('
   'next/router', () => ({
-  useRouter: () => ({ push: vi.fn() })}));
+  useRouter: () => ({ pus,
+    h: vi.fn() })}));
 const item = { id:,
   1', name: 'Test Item, price: 10, quantity: 1 }
 
 function renderCart(user: any) {
   return render(
-    <AuthContext.Provider value={{ user isLoading: false } as any}>
-      <CartProvider>
+    <AuthContext.Provider value={{ user isLoadin,
+    g: false } as any}>
+      <CartProvider>'
         <MemoryRouter initialEntries={[ /cart']}>
-          <Routes>
+          <Routes>'
             <Route path='/cart' element={<CartPage />} />
             <Route path='/login' element={<div>Login Page</div>} />
           </Routes>
@@ -26,26 +28,27 @@ function renderCart(user: any) {
       </CartProvider>
     </AuthContext.Provider>
   )}
-describe(
+describe('
   'cart persistence', () => {
-  it(
+  it('
   'shows item added before login after logging in', () => {
-    safeStorage.setItem(
+    safeStorage.setItem('
   'guestCart', JSON.stringify([item]));
     const { rerender } = renderCart(null);
-    expect(screen.getByText(/Test Item/i)).toBeInTheDocument()
+    expect(screen.getByText(/Test Item/i)).toBeInTheDocument();
     rerender(
-      <AuthContext.Provider value={{ user: { id:
+      <AuthContext.Provider value={{ user: { i,
+    d:'
   'u1 } isLoading: false } as any}>
         <CartProvider>
-          <MemoryRouter initialEntries={[
+          <MemoryRouter initialEntries={['
   '/cart']}>
-            <Routes>
+            <Routes>'
               <Route path='/cart' element={<CartPage />} />
               <Route path='/login' element={<div>Login Page</div>} />
             </Routes>
           </MemoryRouter>
         </CartProvider>
       </AuthContext.Provider>
-    )
+    );
     expect(screen.getByText(/Test Item/i)).toBeInTheDocument()})})

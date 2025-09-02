@@ -32,45 +32,46 @@ class AutoFixer {
       level,
       message,
       error: error ? {
-        message: error.message,
+        messag,
+    e: error.message,
         stack: error.stack} : null}
     console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`);
     if (error) {
       console.error(error)}
     // Write to log file;
-    const logFile = path.join(this.logDir,
+    const logFile = path.join(this.logDir,`
   'auto-fixer.log');
     fs.appendFileSync(logFile, JSON.stringify(logEntry) +;
   '\n')}
   async fixMergeConflicts() {
     try {
-      this.log(
+      this.log('
   'info',
   'Checking for merge conflicts...');
       // Find files with merge conflict markers;
-      const conflictFiles = execSync(
+      const conflictFiles = execSync('
   'grep -r '' src/ --include='*.ts' --include='*.tsx' --include='*.js' --include='*.jsx' -l || true', {        cwd: this.projectRoot,
         encoding:;
-  'utf8'}).trim().split(
+  'utf8'}).trim().split('
   '\n').filter(f => f);
       if (conflictFiles.length === 0) {
-        this.log(
+        this.log('
   'info',
   'No merge conflicts found');
         return true}
-      this.log(
+      this.log('
   'info', `Found ${conflictFiles.length} files with merge conflicts`);
       for (const file of conflictFiles) {
         if (!file.trim()) continue;
         try {
-          await this.resolveMergeConflict(path.join(this.projectRoot, file));
+          await this.resolveMergeConflict(path.join(this.projectRoot, file));`
           this.fixesApplied.push(`Resolved merge conflict in ${file}`)} catch (error) {
-          this.log(
-  'error', `Failed to resolve merge conflict in ${file}`, error);
+          this.log(`
+  'error', `Failed to resolve merge conflict in ${file}`, error);`
           this.fixesFailed.push(`Failed to resolve merge conflict in ${file}: ${error.message}`)}
       }
       return true} catch (error) {
-      this.log(
+      this.log(`
   'error',
   'Failed to fix merge conflicts', error);
       return false}
@@ -93,7 +94,7 @@ class AutoFixer {
     this.log('info;
   ', `Resolved merge conflict in ${filePath}`)}
   async fixImportErrors() {
-    try {
+    try {`
       this.log('info;
   ', 'Fixing import errors...;
   ');
@@ -101,10 +102,10 @@ class AutoFixer {
       execSync('npx eslint src/ --fix --quiet || true;
   ', {
         cwd: this.projectRoot,
-        timeout: 120000})
+        timeout: 120000});
       this.fixesApplied.push('Applied ESLint auto-fixes for imports;
   ');
-      return true} catch (error) {
+      return true} catch (error) {'
       this.log('error;
   ', 'Failed to fix import errors;
   ', error);
@@ -112,7 +113,7 @@ class AutoFixer {
       return false}
   }
   async fixTypeScriptErrors() {
-    try {
+    try {`
       this.log('info;
   ', 'Fixing TypeScript errors...;
   ');
@@ -124,7 +125,7 @@ class AutoFixer {
       ];
       for (const fix of fixes) {
         await fix()}
-      return true} catch (error) {
+      return true} catch (error) {'
       this.log('error;
   ', 'Failed to fix TypeScript errors;
   ', error);
@@ -160,7 +161,7 @@ class AutoFixer {
           fs.writeFileSync(filePath, content);
           this.fixesApplied.push(`Added missing types in ${file}`)}
       }
-    } catch (error) {
+    } catch (error) {`
       this.log('error;
   ', 'Failed to fix missing types;
   ', error)}
@@ -186,17 +187,17 @@ class AutoFixer {
           .replace(/(\w+)\s*$/gm, '$1');
           // Fix incomplete function declarations;
           .replace(/export\s*$/gm,
-  'export default {}');
+  'export default {});
           // Fix incomplete object declarations;
           .replace(/{\s*$/gm,
-  '{}');
+  '{});
           // Fix incomplete string literals;
           .replace(/'\s*$/gm,
   '''');
           // Fix incomplete array declarations;
           .replace(/\[\s*$/gm,
 ,
-  '[]');
+  '[]);
           // Remove trailing commas in objects/arrays;
           .replace(/,(\s*[}\]])/g,
   '$1');
@@ -204,7 +205,7 @@ class AutoFixer {
           .replace(/:\s*;/g,
   ': any');
           .replace(/:\s*}/g,
-  ': any }');
+  ': any });
           .replace(/:\s*$/gm,
   ': any');
         if (content !== originalContent) {
@@ -212,18 +213,18 @@ class AutoFixer {
           this.fixesApplied.push(`Fixed syntax errors in ${file}`)}
       }
     } catch (error) {
-      this.log(
+      this.log(`
   'error',
   'Failed to fix syntax errors', error)}
   }
   async fixImportExtensions() {
     try {
       // Fix import extensions for TypeScript;
-      const tsFiles = execSync(
+      const tsFiles = execSync('
   'find src/ -name '*.ts' -o -name '*.tsx'', {
         cwd: this.projectRoot,
         encoding:;
-  'utf8'}).trim().split(
+  'utf8'}).trim().split('
   '\n');
       for (const file of tsFiles) {
         if (!file.trim()) continue;
@@ -255,18 +256,18 @@ class AutoFixer {
           this.fixesApplied.push(`Fixed import extensions in ${file}`)}
       }
     } catch (error) {
-      this.log(
+      this.log(`
   'error',
   'Failed to fix import extensions', error)}
   }
   async cleanupFiles() {
     try {
-      this.log(
+      this.log('
   'info',
   'Cleaning up problematic files...');
       // Remove empty files;
-      const emptyFiles = execSync(
-  'find src/ -name '*.ts' -o -name '*.tsx' -o -name '*.js' -o -name '*.jsx' | xargs -I {} sh -c \'[ ! -s '{}' ] && echo '{}'\';
+      const emptyFiles = execSync('
+  'find src/ -name '*.ts' -o -name '*.tsx' -o -name '*.js' -o -name '*.jsx' | xargs -I {} sh -c \'[ ! -s '{} ] && echo '{}\';
   ', {
         cwd: this.projectRoot,
         encoding: 'utf8;
@@ -278,35 +279,35 @@ class AutoFixer {
         fs.writeFileSync(filePath, 'export {}\n;
   ');
         this.fixesApplied.push(`Added default export to empty file ${file}`)}
-      return true} catch (error) {
+      return true} catch (error) {`
       this.log('error;
   ', 'Failed to cleanup files;
   ', error);
       return false}
   }
   async validateFixes() {
-    try {
+    try {'
       this.log('info;
   ', 'Validating applied fixes...;
   ');
       // Run type check to validate fixes;
-      const typeCheckResult = execSync('npm run type-check 2>&1 || echo 'TYPE_CHECK_FAILED";
+      const typeCheckResult = execSync('npm run type-check 2>&1 || echo 'TYPE_CHECK_FAILED";"
   ', {
         cwd: this.projectRoot,
         encoding: 'utf8;
   ',
-        timeout: 120000})
+        timeout: 120000});
       if (!typeCheckResult.includes('TYPE_CHECK_FAILED;
-  ')) {
+  ')) {'
         this.log('info;
   ', 'Type check passed after fixes;
   ');
-        return true} else {
+        return true} else {'
         this.log('warning;
   ', 'Some type errors remain after fixes;
   ');
         return false}
-    } catch (error) {
+    } catch (error) {'
       this.log('error;
   ', 'Failed to validate fixes;
   ', error);
@@ -318,23 +319,24 @@ class AutoFixer {
     const report = {
       timestamp,
       summary: {
-        fixesApplied: this.fixesApplied.length,
+        fixesApplie,
+    d: this.fixesApplied.length,
         fixesFailed: this.fixesFailed.length},
       fixesApplied: this.fixesApplied,
       fixesFailed: this.fixesFailed,
       status: this.fixesFailed.length === 0 ?,
-  success;
+  success;`
   ': 'partial}
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log('info;
   ', `Auto-fixer report generated: ${reportFile}`);
     return report}
   async run(errorFile = null) {
-    try {
+    try {`
       this.log('info;
   ', 'Starting auto-fixer...;
   ');
-      if (errorFile && fs.existsSync(errorFile)) {
+      if (errorFile && fs.existsSync(errorFile)) {'
         const errors = JSON.parse(fs.readFileSync(errorFile, 'utf8;
   '));
         this.log('info;
@@ -347,10 +349,10 @@ class AutoFixer {
       // Validate fixes;
       await this.validateFixes();
       // Generate report;
-      const report = await this.generateReport();
+      const report = await this.generateReport();`
       this.log('info;
   ', `Auto-fixer completed. Applied ${this.fixesApplied.length} fixes, ${this.fixesFailed.length} failed.`);
-      return report} catch (error) {
+      return report} catch (error) {`
       this.log('error;
   ', 'Auto-fixer failed;
   ', error);
@@ -362,10 +364,10 @@ const isMainModule = import.meta.url === `file://${process.argv[1]}`;
 if (isMainModule) {
   const fixer = new AutoFixer();
   const errorFile = process.argv[2];
-  fixer.run(errorFile).then(report => {
+  fixer.run(errorFile).then(report => {`
     console.log('Auto-fixer completed successfully;
   ');
-    process.exit(0)}).catch(error => {
+    process.exit(0)}).catch(error => {'
     console.error('Auto-fixer failed:', error);
     process.exit(1)})}
 export default AutoFixer;

@@ -15,18 +15,22 @@ export const advancedMicroSaasServices2025 = [{
   'Customer sentiment analysis';
     ],
     pricing: {
-      starter: { price: 89, period:;
+      starte,
+    r: { pric,
+    e: 89, period:;
   'month', features[;
   'Up to 500 customers',
   'Basic AI insights',
   'Email automation'] },
-      professional: { price: 199, period:;
+      professional: { pric,
+    e: 199, period:;
   'month', features[;
   'Up to 2,000 customers',
   'Advanced AI models',
   'Full automation suite',
   'Custom integrations'] },
-      enterprise: { price: 499, period:,
+      enterprise: { pric,
+    e: 499, period:,
   month', features[;
   'Unlimited customers',
   'Custom AI training',
@@ -39,9 +43,11 @@ export const advancedMicroSaasServices2025 = [{
   'Customer Success',
   'Automation',
   'Analytics'],
-    website: 'https://ziontechgroup.com/customer-success-ai-pro,
+    website: 'http,
+    s://ziontechgroup.com/customer-success-ai-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -49,7 +55,7 @@ export const advancedMicroSaasServices2025 = [{
     targetAudience: SaaS companies, subscription businesses, enterprise software,
   ,
     competitiveAdvantage: Industry-leading AI accuracy in churn prediction, comprehensive automation, and seamless integration ecosystem},
-  {
+  {'
     id: 'intelligent-inventory-optimization,
     name:,
   SmartInventory AI',
@@ -65,18 +71,22 @@ export const advancedMicroSaasServices2025 = [{
   'Mobile app for warehouse management';
     ],
     pricing: {
-      starter: { price: 79, period:;
+      starte,
+    r: { pric,
+    e: 79, period:;
   'month', features[;
   'Up to 1,000 SKUs',
   'Basic forecasting',
   'Email alerts'] },
-      professional: { price: 179, period:;
+      professional: { pric,
+    e: 179, period:;
   'month', features[;
   'Up to 10,000 SKUs',
   'Advanced AI models',
   'Full automation',
   'Multi-location support'] },
-      enterprise: { price: 399, period:,
+      enterprise: { pric,
+    e: 399, period:,
   month', features[;
   'Unlimited SKUs',
   'Custom AI training',
@@ -89,9 +99,11 @@ export const advancedMicroSaasServices2025 = [{
   'Inventory',
   'Supply Chain',
   'Automation'],
-    website: 'https://ziontechgroup.com/smart-inventory-ai,
+    website: 'http,
+    s://ziontechgroup.com/smart-inventory-ai,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -99,7 +111,7 @@ export const advancedMicroSaasServices2025 = [{
     targetAudience: E-commerce businesses, retail chains, manufacturers, distributors,
   ,
     competitiveAdvantage: Advanced AI demand forecasting with 92% accuracy, comprehensive automation, and seamless e-commerce integration},
-  {
+  {'
     id: 'automated-hr-compliance-suite,
     name:,
   HRCompliance Pro',
@@ -115,18 +127,22 @@ export const advancedMicroSaasServices2025 = [{
   'Legal document generation';
     ],
     pricing: {
-      starter: { price: 99, period:;
+      starte,
+    r: { pric,
+    e: 99, period:;
   'month', features[;
   'Up to 100 employees',
   'Basic compliance tools',
   'Policy templates'] },
-      professional: { price: 249, period:;
+      professional: { pric,
+    e: 249, period:;
   'month', features[;
   'Up to 500 employees',
   'Advanced automation',
   'Custom policies',
   'Full compliance suite'] },
-      enterprise: { price: 599, period:,
+      enterprise: { pric,
+    e: 599, period:,
   month', features[;
   'Unlimited employees',
   'Custom compliance rules',
@@ -139,9 +155,11 @@ export const advancedMicroSaasServices2025 = [{
   'Compliance',
   'Automation',
   'Legal'],
-    website: 'https://ziontechgroup.com/hr-compliance-pro,
+    website: 'http,
+    s://ziontechgroup.com/hr-compliance-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -149,7 +167,7 @@ export const advancedMicroSaasServices2025 = [{
     targetAudience: HR departments, legal teams, compliance officers, small to enterprise businesses,
   ,
     competitiveAdvantage: Comprehensive compliance automation, real-time regulatory updates, and seamless HRIS integration},
-  {
+  {'
     id: 'intelligent-expense-management,
     name:,
   ExpenseAI Manager',
@@ -165,18 +183,22 @@ export const advancedMicroSaasServices2025 = [{
   'Automated approval workflows';
     ],
     pricing: {
-      starter: { price: 59, period:;
+      starte,
+    r: { pric,
+    e: 59, period:;
   'month', features[;
   'Up to 50 users',
   'Basic OCR',
   'Expense tracking'] },
-      professional: { price: 149, period:;
+      professional: { pric,
+    e: 149, period:;
   'month', features[;
   'Up to 200 users',
   'Advanced AI',
   'Full automation',
   'Custom policies'] },
-      enterprise: { price: 349, period:,
+      enterprise: { pric,
+    e: 349, period:,
   month', features[;
   'Unlimited users',
   'Custom AI training',
@@ -189,9 +211,11 @@ export const advancedMicroSaasServices2025 = [{
   'Expense Management',
   'OCR',
   'Automation'],
-    website: 'https://ziontechgroup.com/expense-ai-manager,
+    website: 'http,
+    s://ziontechgroup.com/expense-ai-manager,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -199,7 +223,7 @@ export const advancedMicroSaasServices2025 = [{
     targetAudience: Finance teams, accounting firms, small to enterprise businesses,
   ,
     competitiveAdvantage: Industry-leading OCR accuracy, comprehensive automation, and seamless accounting software integration},
-  {
+  {'
     id: 'smart-contract-automation-platform,
     name:,
   ContractFlow AI',
@@ -215,18 +239,22 @@ export const advancedMicroSaasServices2025 = [{
   'Legal compliance monitoring';
     ],
     pricing: {
-      starter: { price: 129, period:;
+      starte,
+    r: { pric,
+    e: 129, period:;
   'month', features[;
   'Up to 100 contracts',
   'Basic AI analysis',
   'Template library'] },
-      professional: { price: 299, period:;
+      professional: { pric,
+    e: 299, period:;
   'month', features[;
   'Up to 1,000 contracts',
   'Advanced AI',
   'Full automation',
   'Custom workflows'] },
-      enterprise: { price: 699, period:,
+      enterprise: { pric,
+    e: 699, period:,
   month', features[;
   'Unlimited contracts',
   'Custom AI training',
@@ -239,9 +267,11 @@ export const advancedMicroSaasServices2025 = [{
   'Contract Management',
   'Legal Tech',
   'Automation'],
-    website: 'https://ziontechgroup.com/contract-flow-ai,
+    website: 'http,
+    s://ziontechgroup.com/contract-flow-ai,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -249,7 +279,7 @@ export const advancedMicroSaasServices2025 = [{
     targetAudience: Legal departments, contract managers, procurement teams, enterprise businesses,
   ,
     competitiveAdvantage: Advanced AI contract analysis, comprehensive automation, and seamless legal workflow integration},
-  {
+  {'
     id: 'intelligent-vendor-management,
     name:,
   VendorIQ Pro',
@@ -265,18 +295,22 @@ export const advancedMicroSaasServices2025 = [{
   'Supplier diversity tracking';
     ],
     pricing: {
-      starter: { price: 89, period:;
+      starte,
+    r: { pric,
+    e: 89, period:;
   'month', features[;
   'Up to 50 vendors',
   'Basic performance tracking',
   'Procurement tools'] },
-      professional: { price: 199, period:;
+      professional: { pric,
+    e: 199, period:;
   'month', features[;
   'Up to 200 vendors',
   'Advanced AI',
   'Full automation',
   'Custom workflows'] },
-      enterprise: { price: 449, period:,
+      enterprise: { pric,
+    e: 449, period:,
   month', features[;
   'Unlimited vendors',
   'Custom AI training',
@@ -289,9 +323,11 @@ export const advancedMicroSaasServices2025 = [{
   'Vendor Management',
   'Procurement',
   'Automation'],
-    website: 'https://ziontechgroup.com/vendor-iq-pro,
+    website: 'http,
+    s://ziontechgroup.com/vendor-iq-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -299,7 +335,7 @@ export const advancedMicroSaasServices2025 = [{
     targetAudience: Procurement teams, supply chain managers, enterprise businesses,
   ,
     competitiveAdvantage: Comprehensive vendor performance analytics, advanced automation, and seamless ERP integration},
-  {
+  {'
     id: 'automated-project-management-ai,
     name:,
   ProjectAI Manager',
@@ -315,18 +351,22 @@ export const advancedMicroSaasServices2025 = [{
   'Team collaboration tools';
     ],
     pricing: {
-      starter: { price: 69, period:;
+      starte,
+    r: { pric,
+    e: 69, period:;
   'month', features[;
   'Up to 10 projects',
   'Basic AI insights',
   'Task management'] },
-      professional: { price: 169, period:;
+      professional: { pric,
+    e: 169, period:;
   'month', features[;
   'Up to 50 projects',
   'Advanced AI',
   'Full automation',
   'Custom workflows'] },
-      enterprise: { price: 399, period:,
+      enterprise: { pric,
+    e: 399, period:,
   month', features[;
   'Unlimited projects',
   'Custom AI training',
@@ -339,9 +379,11 @@ export const advancedMicroSaasServices2025 = [{
   'Project Management',
   'Automation',
   'Analytics'],
-    website: 'https://ziontechgroup.com/project-ai-manager,
+    website: 'http,
+    s://ziontechgroup.com/project-ai-manager,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -349,7 +391,7 @@ export const advancedMicroSaasServices2025 = [{
     targetAudience: Project managers, development teams, consulting firms, enterprise businesses,
   ,
     competitiveAdvantage: Advanced AI resource optimization, comprehensive risk prediction, and seamless development tool integration},
-  {
+  {'
     id: 'intelligent-workflow-automation,
     name:,
   WorkflowAI Studio',
@@ -365,18 +407,22 @@ export const advancedMicroSaasServices2025 = [{
   'Process mining and analysis';
     ],
     pricing: {
-      starter: { price: 79, period:;
+      starte,
+    r: { pric,
+    e: 79, period:;
   'month', features[;
   'Up to 10 workflows',
   'Basic automation',
   'Process templates'] },
-      professional: { price: 199, period:;
+      professional: { pric,
+    e: 199, period:;
   'month', features[;
   'Up to 100 workflows',
   'Advanced AI',
   'Full automation',
   'Custom rules'] },
-      enterprise: { price: 499, period:,
+      enterprise: { pric,
+    e: 499, period:,
   month', features[;
   'Unlimited workflows',
   'Custom AI training',
@@ -389,9 +435,11 @@ export const advancedMicroSaasServices2025 = [{
   'Workflow Automation',
   'Process Mining',
   'Integration'],
-    website: 'https://ziontechgroup.com/workflow-ai-studio,
+    website: 'http,
+    s://ziontechgroup.com/workflow-ai-studio,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -399,7 +447,7 @@ export const advancedMicroSaasServices2025 = [{
     targetAudience: Business analysts, operations teams, process improvement specialists, enterprise businesses,
   ,
     competitiveAdvantage: Advanced AI process discovery, comprehensive automation, and extensive business tool integration},
-  {
+  {'
     id: 'smart-data-governance-platform,
     name:,
   DataGuardian AI',
@@ -415,18 +463,22 @@ export const advancedMicroSaasServices2025 = [{
   'Data catalog management';
     ],
     pricing: {
-      starter: { price: 149, period:;
+      starte,
+    r: { pric,
+    e: 149, period:;
   'month', features[;
   'Up to 1TB data',
   'Basic quality monitoring',
   'Compliance templates'] },
-      professional: { price: 349, period:;
+      professional: { pric,
+    e: 349, period:;
   'month', features[;
   'Up to 10TB data',
   'Advanced AI',
   'Full automation',
   'Custom rules'] },
-      enterprise: { price: 799, period:,
+      enterprise: { pric,
+    e: 799, period:,
   month', features[;
   'Unlimited data',
   'Custom AI training',
@@ -439,9 +491,11 @@ export const advancedMicroSaasServices2025 = [{
   'Data Governance',
   'Compliance',
   'Data Quality'],
-    website: 'https://ziontechgroup.com/data-guardian-ai,
+    website: 'http,
+    s://ziontechgroup.com/data-guardian-ai,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -449,7 +503,7 @@ export const advancedMicroSaasServices2025 = [{
     targetAudience: Data governance teams, compliance officers, data engineers, enterprise businesses,
   ,
     competitiveAdvantage: Advanced AI data quality scoring, comprehensive compliance automation, and seamless data warehouse integration},
-  {
+  {'
     id: 'intelligent-api-management-suite,
     name:,
   APIGuardian Pro',
@@ -465,18 +519,22 @@ export const advancedMicroSaasServices2025 = [{
   'API versioning and lifecycle management';
     ],
     pricing: {
-      starter: { price: 99, period:;
+      starte,
+    r: { pric,
+    e: 99, period:;
   'month', features[;
   'Up to 100 API calls/min',
   'Basic monitoring',
   'Security alerts'] },
-      professional: { price: 249, period:;
+      professional: { pric,
+    e: 249, period:;
   'month', features[;
   'Up to 1,000 API calls/min',
   'Advanced AI',
   'Full automation',
   'Custom policies'] },
-      enterprise: { price: 599, period:,
+      enterprise: { pric,
+    e: 599, period:,
   month', features[;
   'Unlimited API calls',
   'Custom AI training',
@@ -489,9 +547,11 @@ export const advancedMicroSaasServices2025 = [{
   'API Management',
   'Security',
   'Monitoring'],
-    website: 'https://ziontechgroup.com/api-guardian-pro,
+    website: 'http,
+    s://ziontechgroup.com/api-guardian-pro,
     contact: {
-phone:,
+phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,

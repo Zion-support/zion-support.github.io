@@ -3,18 +3,18 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
-export default function AIServices() {
+export default function AIServices() {'
   const title = 'AI Services — Zion Tech Group';
-  const description =
+  const description ='
     'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.';
 
   const aiServices = [
-    {
+    {'
       title: 'AI-Powered Email Responder',
-      description:
+      description:'
         'Automated email responses with sentiment analysis and intelligent categorization',
       icon: MessageSquare,
-      features: [
+      features: ['
         'Smart email categorization and prioritization',
         'Automated response generation with personalization',
         'Sentiment analysis and escalation triggers',
@@ -25,12 +25,12 @@ export default function AIServices() {
       delivery: '2-3 weeks',
       category: 'Communication AI',
     },
-    {
+    {'
       title: 'AI Content Creation Suite',
-      description:
+      description:'
         'Comprehensive AI-powered content generation for marketing, social media, and documentation',
       icon: FileText,
-      features: [
+      features: ['
         'Automated blog posts and articles',
         'Social media content generation',
         'Product descriptions and marketing copy',
@@ -41,12 +41,12 @@ export default function AIServices() {
       delivery: '1-2 weeks',
       category: 'Content AI',
     },
-    {
+    {'
       title: 'Intelligent Document Processing',
-      description:
+      description:'
         'AI-powered document analysis, extraction, and processing for business automation',
       icon: FileText,
-      features: [
+      features: ['
         'Automated data extraction from PDFs and forms',
         'Document classification and routing',
         'OCR with 99%+ accuracy',
@@ -57,12 +57,12 @@ export default function AIServices() {
       delivery: '3-4 weeks',
       category: 'Document AI',
     },
-    {
+    {'
       title: 'AI-Powered Talent Matching',
-      description:
+      description:'
         'Advanced recruitment platform with AI-driven candidate screening and matching',
       icon: Users,
-      features: [
+      features: ['
         'Resume parsing and skill extraction',
         'Cultural fit and personality analysis',
         'Automated interview scheduling',
@@ -73,12 +73,12 @@ export default function AIServices() {
       delivery: '4-6 weeks',
       category: 'HR AI',
     },
-    {
+    {'
       title: 'Computer Vision Solutions',
-      description:
+      description:'
         'Image and video analysis for quality control, security, and automation',
       icon: Eye,
-      features: [
+      features: ['
         'Real-time object detection and recognition',
         'Quality control and defect detection',
         'Facial recognition and access control',
@@ -89,14 +89,14 @@ export default function AIServices() {
       delivery: '6-8 weeks',
       category: 'Vision AI',
     },
-    {
+    {'
       title: 'AI Chatbot & Virtual Assistant',
-      description:
+      description:'
         'Intelligent conversational AI for customer support and business automation',
       icon: Bot,
-      features: [
+      features: ['
         'Natural language understanding',
-        'Multi-channel deployment (web, mobile, voice)',
+        'Multi-channel deployment (web, mobile, voice),
         'Integration with business systems',
         'Sentiment analysis and escalation',
         'Continuous learning and improvement',
@@ -105,12 +105,12 @@ export default function AIServices() {
       delivery: '2-4 weeks',
       category: 'Conversational AI',
     },
-    {
+    {'
       title: 'Predictive Analytics Platform',
-      description:
+      description:'
         'AI-driven forecasting and predictive modeling for business intelligence',
       icon: TrendingUp,
-      features: [
+      features: ['
         'Sales forecasting and demand planning',
         'Customer churn prediction',
         'Financial risk assessment',
@@ -121,12 +121,12 @@ export default function AIServices() {
       delivery: '8-12 weeks',
       category: 'Analytics AI',
     },
-    {
+    {'
       title: 'AI-Powered Search Engine',
-      description:
+      description:'
         'Intelligent search with semantic understanding and personalized results',
       icon: Search,
-      features: [
+      features: ['
         'Semantic search with natural language queries',
         'Personalized search results',
         'Auto-complete and suggestions',
@@ -137,12 +137,12 @@ export default function AIServices() {
       delivery: '4-6 weeks',
       category: 'Search AI',
     },
-    {
+    {'
       title: 'AI Voice & Speech Processing',
-      description:
+      description:'
         'Advanced voice recognition, synthesis, and real-time translation services',
       icon: Mic,
-      features: [
+      features: ['
         'Real-time speech-to-text with 99% accuracy',
         'Multi-language voice synthesis',
         'Voice cloning and personalization',
@@ -154,12 +154,12 @@ export default function AIServices() {
       delivery: '5-8 weeks',
       category: 'Voice AI',
     },
-    {
+    {'
       title: 'AI-Powered Fraud Detection',
-      description:
+      description:'
         'Real-time fraud prevention and risk assessment using machine learning',
       icon: Shield,
-      features: [
+      features: ['
         'Real-time transaction monitoring',
         'Behavioral pattern analysis',
         'Anomaly detection algorithms',
@@ -171,12 +171,12 @@ export default function AIServices() {
       delivery: '6-10 weeks',
       category: 'Security AI',
     },
-    {
+    {'
       title: 'AI Recommendation Engine',
-      description:
+      description:'
         'Personalized recommendation system for e-commerce, content, and services',
       icon: Star,
-      features: [
+      features: ['
         'Collaborative and content-based filtering',
         'Real-time personalization',
         'A/B testing and optimization',
@@ -188,12 +188,12 @@ export default function AIServices() {
       delivery: '4-7 weeks',
       category: 'Recommendation AI',
     },
-    {
+    {'
       title: 'AI-Powered Video Analytics',
-      description:
+      description:'
         'Intelligent video processing for security, marketing, and business insights',
       icon: Video,
-      features: [
+      features: ['
         'Real-time video object detection',
         'Facial recognition and tracking',
         'Emotion and sentiment analysis',
@@ -205,12 +205,12 @@ export default function AIServices() {
       delivery: '8-12 weeks',
       category: 'Video AI',
     },
-    {
+    {'
       title: 'AI Process Mining & Optimization',
-      description:
+      description:'
         'Intelligent process analysis and optimization for business workflows',
       icon: Settings,
-      features: [
+      features: ['
         'Automated process discovery',
         'Bottleneck identification and analysis',
         'Process optimization recommendations',
@@ -222,12 +222,12 @@ export default function AIServices() {
       delivery: '10-16 weeks',
       category: 'Process AI',
     },
-    {
+    {'
       title: 'AI-Powered Supply Chain Optimization',
-      description:
+      description:'
         'Intelligent supply chain management with predictive analytics and automation',
       icon: Network,
-      features: [
+      features: ['
         'Demand forecasting and planning',
         'Supplier risk assessment',
         'Route optimization and logistics',
@@ -239,12 +239,12 @@ export default function AIServices() {
       delivery: '12-20 weeks',
       category: 'Supply Chain AI',
     },
-    {
+    {'
       title: 'AI Customer Sentiment Analysis',
-      description:
+      description:'
         'Real-time customer sentiment monitoring across all communication channels',
       icon: MessageSquare,
-      features: [
+      features: ['
         'Multi-channel sentiment monitoring',
         'Real-time emotion detection',
         'Trend analysis and reporting',
@@ -256,12 +256,12 @@ export default function AIServices() {
       delivery: '3-5 weeks',
       category: 'Sentiment AI',
     },
-    {
+    {'
       title: 'AI-Powered Code Generation',
-      description:
+      description:'
         'Intelligent code generation and software development assistance',
       icon: Code,
-      features: [
+      features: ['
         'Automated code generation from specifications',
         'Code review and optimization suggestions',
         'Bug detection and fixing recommendations',
@@ -273,12 +273,12 @@ export default function AIServices() {
       delivery: '6-10 weeks',
       category: 'Development AI',
     },
-    {
+    {'
       title: 'AI-Powered Market Research',
-      description:
+      description:'
         'Intelligent market analysis and competitive intelligence platform',
       icon: BarChart3,
-      features: [
+      features: ['
         'Automated market trend analysis',
         'Competitor monitoring and analysis',
         'Consumer behavior insights',
@@ -290,12 +290,12 @@ export default function AIServices() {
       delivery: '6-12 weeks',
       category: 'Market AI',
     },
-    {
+    {'
       title: 'AI Autonomous Agents Platform',
-      description:
+      description:'
         'Multi-agent AI system for complex task automation and decision making',
       icon: Bot,
-      features: [
+      features: ['
         'Multi-agent orchestration and coordination',
         'Autonomous task execution and decision making',
         'Agent-to-agent communication and collaboration',
@@ -307,12 +307,12 @@ export default function AIServices() {
       delivery: '8-16 weeks',
       category: 'Autonomous AI',
     },
-    {
+    {'
       title: 'AI-Powered Drug Discovery Platform',
-      description:
+      description:'
         'Intelligent pharmaceutical research with molecular analysis and drug design',
       icon: Brain,
-      features: [
+      features: ['
         'Molecular structure analysis and optimization',
         'Drug-target interaction prediction',
         'Toxicity and side effect assessment',
@@ -324,12 +324,12 @@ export default function AIServices() {
       delivery: '12-24 weeks',
       category: 'Pharma AI',
     },
-    {
+    {'
       title: 'AI-Powered Climate Modeling System',
-      description:
+      description:'
         'Advanced climate prediction and environmental impact analysis platform',
       icon: Globe,
-      features: [
+      features: ['
         'High-resolution climate modeling and prediction',
         'Environmental impact assessment and monitoring',
         'Carbon footprint tracking and optimization',
@@ -341,12 +341,12 @@ export default function AIServices() {
       delivery: '10-20 weeks',
       category: 'Climate AI',
     },
-    {
+    {'
       title: 'AI-Powered Quantum Computing Interface',
-      description:
+      description:'
         'Intelligent quantum computing optimization and algorithm development',
       icon: Cpu,
-      features: [
+      features: ['
         'Quantum algorithm optimization and development',
         'Quantum error correction and noise mitigation',
         'Hybrid classical-quantum computing workflows',
@@ -358,12 +358,12 @@ export default function AIServices() {
       delivery: '16-32 weeks',
       category: 'Quantum AI',
     },
-    {
+    {'
       title: 'AI-Powered Space Mission Planning',
-      description:
+      description:'
         'Intelligent space mission optimization and satellite constellation management',
       icon: Globe,
-      features: [
+      features: ['
         'Mission trajectory optimization and planning',
         'Satellite constellation design and management',
         'Space debris tracking and collision avoidance',
@@ -375,12 +375,12 @@ export default function AIServices() {
       delivery: '20-40 weeks',
       category: 'Space AI',
     },
-    {
+    {'
       title: 'AI-Powered Neuromorphic Computing',
-      description:
+      description:'
         'Brain-inspired computing systems with spiking neural networks',
       icon: Brain,
-      features: [
+      features: ['
         'Spiking neural network design and optimization',
         'Neuromorphic chip simulation and testing',
         'Edge AI processing and optimization',
@@ -392,11 +392,11 @@ export default function AIServices() {
       delivery: '12-24 weeks',
       category: 'Neuromorphic AI',
     },
-    {
+    {'
       title: 'AI-Powered Synthetic Biology Platform',
       description: 'Intelligent biological system design and optimization',
       icon: Cpu,
-      features: [
+      features: ['
         'Genetic circuit design and optimization',
         'Protein structure prediction and design',
         'Metabolic pathway engineering',
@@ -408,11 +408,11 @@ export default function AIServices() {
       delivery: '16-28 weeks',
       category: 'Synthetic Biology AI',
     },
-    {
+    {'
       title: 'AI-Powered Fusion Energy Optimization',
       description: 'Intelligent fusion reactor control and plasma optimization',
       icon: Zap,
-      features: [
+      features: ['
         'Plasma confinement optimization',
         'Magnetic field control and stabilization',
         'Energy output maximization',
@@ -424,12 +424,12 @@ export default function AIServices() {
       delivery: '24-48 weeks',
       category: 'Fusion AI',
     },
-    {
+    {'
       title: 'AI-Powered Brain-Computer Interface',
-      description:
+      description:'
         'Intelligent neural signal processing and brain-computer communication',
       icon: Brain,
-      features: [
+      features: ['
         'Neural signal acquisition and processing',
         'Brain activity pattern recognition',
         'Motor intention decoding and control',
@@ -441,12 +441,12 @@ export default function AIServices() {
       delivery: '20-36 weeks',
       category: 'BCI AI',
     },
-    {
+    {'
       title: 'AI-Powered Autonomous Vehicle Fleet',
-      description:
+      description:'
         'Intelligent autonomous vehicle coordination and fleet management',
       icon: Network,
-      features: [
+      features: ['
         'Multi-vehicle coordination and communication',
         'Dynamic route optimization and planning',
         'Real-time traffic and obstacle avoidance',
@@ -458,12 +458,12 @@ export default function AIServices() {
       delivery: '24-40 weeks',
       category: 'Autonomous Vehicle AI',
     },
-    {
+    {'
       title: 'AI-Powered Metaverse Platform',
-      description:
+      description:'
         'Intelligent virtual world creation and immersive experience optimization',
       icon: Globe,
-      features: [
+      features: ['
         'Procedural world generation and optimization',
         'Avatar behavior and interaction modeling',
         'Real-time physics simulation and optimization',
@@ -475,12 +475,12 @@ export default function AIServices() {
       delivery: '20-36 weeks',
       category: 'Metaverse AI',
     },
-    {
+    {'
       title: 'AI-Powered Digital Twin Platform',
-      description:
+      description:'
         'Intelligent digital twin creation and real-time synchronization',
       icon: Monitor,
-      features: [
+      features: ['
         'Real-time data synchronization and modeling',
         'Predictive analytics and simulation',
         'Performance optimization and recommendations',
@@ -492,12 +492,12 @@ export default function AIServices() {
       delivery: '16-28 weeks',
       category: 'Digital Twin AI',
     },
-    {
+    {'
       title: 'AI-Powered Edge Computing Orchestrator',
-      description:
+      description:'
         'Intelligent edge computing resource management and optimization',
       icon: Server,
-      features: [
+      features: ['
         'Distributed computing resource allocation',
         'Edge-to-cloud workload optimization',
         'Real-time latency and bandwidth optimization',
@@ -509,12 +509,12 @@ export default function AIServices() {
       delivery: '12-24 weeks',
       category: 'Edge AI',
     },
-    {
+    {'
       title: 'AI-Powered Blockchain Analytics',
-      description:
+      description:'
         'Intelligent blockchain transaction analysis and DeFi optimization',
       icon: Network,
-      features: [
+      features: ['
         'Blockchain transaction pattern analysis',
         'DeFi protocol optimization and yield farming',
         'Smart contract security auditing',
@@ -528,57 +528,57 @@ export default function AIServices() {
     },
   ];
   const aiTechnologies = [
-    {
+    {'
       name: 'Machine Learning',
       icon: Brain,
       description: 'Custom ML models and algorithms',
     },
-    {
+    {'
       name: 'Natural Language Processing',
       icon: MessageSquare,
       description: 'Text analysis and generation',
     },
-    {
+    {'
       name: 'Computer Vision',
       icon: Eye,
       description: 'Image and video processing',
     },
-    {
+    {'
       name: 'Deep Learning',
       icon: Cpu,
       description: 'Neural networks and deep architectures',
     },
-    {
+    {'
       name: 'Reinforcement Learning',
       icon: Target,
       description: 'Autonomous decision making',
     },
-    {
+    {'
       name: 'Generative AI',
       icon: FileText,
       description: 'Content creation and synthesis',
     },
   ];
   const benefits = [
-    {
+    {'
       title: 'Increased Efficiency',
       description: 'Automate repetitive tasks and processes',
       icon: Zap,
       stat: '80%',
     },
-    {
+    {'
       title: 'Cost Reduction',
       description: 'Reduce operational costs through automation',
       icon: TrendingUp,
       stat: '60%',
     },
-    {
+    {'
       title: 'Enhanced Accuracy',
       description: 'Minimize human errors with AI precision',
       icon: Target,
       stat: '95%',
     },
-    {
+    {'
       title: '24/7 Availability',
       description: 'Round-the-clock AI-powered services',
       icon: Clock,
@@ -588,43 +588,47 @@ export default function AIServices() {
   return (
     <PageTransition>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{title}</title>'
+        <meta name="description" content={description} />"
+        <meta name="viewport" content="width=device-width, initial-scale=1" />"
         <link rel="canonical" href="https: //ziontechgroup.com/ai-services" />
       </Head>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="flex items-center justify-center mb-6">
-              <Brain className="h-12 w-12 text-blue-600 mr-4" />
-              <Award className="h-6 w-6 text-blue-600 mr-2" />
+      {/* Hero Section */}"
+      <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 sm: py-32">"
+        <div className="mx-auto max-w-7xl px-6 l,
+    g:px-8">"
+          <div className="mx-auto max-w-3xl text-center">"
+            <div className="flex items-center justify-center mb-6">"
+              <Brain className="h-12 w-12 text-blue-600 mr-4" />"
+              <Award className="h-6 w-6 text-blue-600 mr-2" />"
               <span className="text-base font-semibold leading-7 text-blue-600">
                 AI Services
               </span>
-            </div>
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            </div>"
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 s,
+    m:text-6xl">
               Artificial Intelligence Solutions
-            </h1>
+            </h1>"
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Transform your business with cutting-edge AI technologies. From
               machine learning to natural language processing, we deliver
               intelligent solutions that drive growth and efficiency.
-            </p>
+            </p>"
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Link
-                href="/contact"
-                className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              <Link"
+                href="/contact""
+                className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visibl,
+    e:outline-blue-600"
               >
-                Get Started
+                Get Started"
                 <ArrowRight className="ml-2 h-4 w-4 inline" />
               </Link>
-              <Link
-                href="/pricing-guide"
-                className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600"
-              >
+              <Link"
+                href="/pricing-guide""
+                className="text-sm font-semibold leading-6 text-gray-900 hove,
+    r:text-blue-600"
+              >"
                 View Pricing <span aria-hidden="true">→</span>
               </Link>
             </div>
@@ -632,29 +636,31 @@ export default function AIServices() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-24 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
+      {/* Benefits Section */}"
+      <section className="py-24 sm: py-32 bg-white">"
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">"
+          <div className="mx-auto max-w-2xl text-center mb-16">"
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Why Choose Our AI Services?
-            </h2>
+            </h2>"
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Proven results and measurable impact for your business
             </p>
-          </div>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mx-auto mb-4">
+          </div>"
+          <div className="grid grid-cols-1 gap-8 s,
+    m:grid-cols-2 l,
+    g:grid-cols-4">
+            {benefits.map((benefit, index) => ("
+              <div key={index} className="text-center">"
+                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mx-auto mb-4">"
                   <benefit.icon className="h-8 w-8 text-blue-600" />
-                </div>
+                </div>"
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {benefit.stat}
-                </h3>
+                </h3>"
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   {benefit.title}
-                </h4>
+                </h4>"
                 <p className="text-gray-600">{benefit.description}</p>
               </div>
             ))}
@@ -662,31 +668,33 @@ export default function AIServices() {
         </div>
       </section>
 
-      {/* AI Technologies */}
-      <section className="py-24 sm: py-32 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
+      {/* AI Technologies */}"
+      <section className="py-24 sm: py-32 bg-gray-50">"
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">"
+          <div className="mx-auto max-w-2xl text-center mb-16">"
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               AI Technologies We Master
-            </h2>
+            </h2>"
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Cutting-edge AI technologies powering the future of business
             </p>
-          </div>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          </div>"
+          <div className="grid grid-cols-1 gap-8 s,
+    m:grid-cols-2 l,
+    g:grid-cols-3">
             {aiTechnologies.map((tech, index) => (
               <div
-                key={index}
+                key={index}"
                 className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
+              >"
+                <div className="flex items-center mb-4">"
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">"
                     <tech.icon className="h-6 w-6 text-blue-600" />
-                  </div>
+                  </div>"
                   <h3 className="text-lg font-semibold text-gray-900 ml-4">
                     {tech.name}
                   </h3>
-                </div>
+                </div>"
                 <p className="text-gray-600">{tech.description}</p>
               </div>
             ))}
@@ -694,80 +702,86 @@ export default function AIServices() {
         </div>
       </section>
 
-      {/* AI Services Grid */}
-      <section className="py-24 sm: py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      {/* AI Services Grid */}"
+      <section className="py-24 sm: py-32 bg-white">"
+        <div className="mx-auto max-w-7xl px-6 l,
+    g:px-8">"
+          <div className="mx-auto max-w-2xl text-center mb-16">"
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 s,
+    m:text-4xl">
               Our AI Service Portfolio
-            </h2>
+            </h2>"
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Comprehensive AI solutions tailored to your business needs. All
-              services include implementation, training, and ongoing support.
+              services include implementation, training, and ongoing support."
               Contact us at{' '}
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="text-blue-600 hover:text-blue-500"
+              <a'
+                href="mailto:kleber@ziontechgroup.com""
+                className="text-blue-600 hove,
+    r:text-blue-500"
               >
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com"
               </a>{' '}
               or call{' '}
-              <a
-                href="tel:+13024640950"
-                className="text-blue-600 hover:text-blue-500"
+              <a'
+                href="tel:+13024640950""
+                className="text-blue-600 hove,
+    r:text-blue-500"
               >
-                +1 302 464 0950
+                +1 302 464 0950"
               </a>{' '}
               for custom pricing.
             </p>
-          </div>
+          </div>'
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {aiServices.map((service, index) => (
               <div
-                key={index}
+                key={index}"
                 className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
-              >
-                <div className="flex items-center gap-x-3 mb-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors">
+              >"
+                <div className="flex items-center gap-x-3 mb-6">"
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hove,
+    r:bg-blue-700 transition-colors">"
                     <service.icon className="h-7 w-7 text-white" />
                   </div>
-                  <div>
+                  <div>"
                     <h3 className="text-xl font-semibold text-gray-900">
                       {service.title}
-                    </h3>
+                    </h3>"
                     <p className="text-sm text-blue-600 font-medium">
                       {service.category}
                     </p>
                   </div>
-                </div>
-                <p className="text-gray-600 mb-6">{service.description}</p>
+                </div>"
+                <p className="text-gray-600 mb-6">{service.description}</p>"
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li
-                      key={featureIndex}
+                      key={featureIndex}"
                       className="flex items-center gap-x-3"
-                    >
-                      <CheckCircle className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                    >"
+                      <CheckCircle className="h-4 w-4 text-blue-600 flex-shrink-0" />"
                       <span className="text-sm text-gray-700">{feature}</span>
                     </li>
                   ))}
-                </ul>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4 text-sm text-gray-500">
-                    <div className="flex items-center space-x-1">
+                </ul>"
+                <div className="flex items-center justify-between">"
+                  <div className="flex items-center space-x-4 text-sm text-gray-500">"
+                    <div className="flex items-center space-x-1">"
                       <Clock className="h-4 w-4" />
                       <span>{service.delivery}</span>
-                    </div>
+                    </div>"
                     <div className="font-semibold text-blue-600">
                       {service.pricing}
                     </div>
                   </div>
-                  <Link
-                    href="/contact"
+                  <Link"
+                    href="/contact""
                     className="inline-flex items-center text-sm font-semibold text-blue-600 hover: text-blue-500 transition-colors group"
                   >
-                    Get Started
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    Get Started"
+                    <ArrowRight className="ml-2 h-4 w-4 group-hove,
+    r:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
@@ -776,28 +790,30 @@ export default function AIServices() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-blue-600 py-16 sm: py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
+      {/* CTA Section */}"
+      <section className="bg-blue-600 py-16 sm: py-24">"
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">"
+          <div className="mx-auto max-w-2xl text-center">"
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Ready to Transform Your Business with AI?
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-blue-100">
+            </h2>"
+            <p className="mt-6 text-lg leading-8 text-blue-100">"
               Let's discuss how our AI solutions can drive your business
               forward. Get a free consultation and custom proposal.
-            </p>
+            </p>'
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Link
-                href="/contact"
+              <Link"
+                href="/contact""
                 className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Schedule Consultation
               </Link>
-              <a
-                href="tel:+13024640950"
-                className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
-              >
+              <a"
+                href="te,
+    l:+13024640950""
+                className="text-sm font-semibold leading-6 text-white hove,
+    r:text-blue-100"
+              >"
                 Call +1 302 464 0950 <span aria-hidden="true">→</span>
               </a>
             </div>
@@ -807,3 +823,4 @@ export default function AIServices() {
     </PageTransition>
   );
 }
+"

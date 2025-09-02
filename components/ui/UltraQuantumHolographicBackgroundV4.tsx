@@ -5,3 +5,4 @@ export default function UltraQuantumHolographicBackgroundV4({
 }: Props) {
   return <>{children}</>;
 }
+'

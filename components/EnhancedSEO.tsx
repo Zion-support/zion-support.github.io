@@ -11,12 +11,12 @@ interface SEOProps {
   author?: string;
 }
 
-const defaultSEO = {
+const defaultSEO = {'
   title: 'Zion Tech Group - Leading Technology Solutions Provider',
   description: 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.',
   image: '/images/og-image.jpg',
   type: 'website',
-  keywords: [
+  keywords: ['
     'AI solutions',
     'quantum computing',
     'blockchain',
@@ -37,54 +37,58 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   author = defaultSEO.author
 }) => {
   const router = useRouter();
-  const currentUrl = url || `https://ziontechgroup.com${router.asPath}`;
+  const currentUrl = url || `https://ziontechgroup.com${router.asPath}`;`
   const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
 
   return (
     <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
+      <title>{title}</title>`
+      <meta name="description" content={description} />"
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="author" content={author} />
       
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullImageUrl} />
-      <meta property="og:url" content={currentUrl} />
-      <meta property="og:type" content={type} />
+      {/* Open Graph */}"
+      <meta property="og:title" content={title} />"
+      <meta property="og:description" content={description} />"
+      <meta property="og:image" content={fullImageUrl} />"
+      <meta property="og:url" content={currentUrl} />"
+      <meta property="og:type" content={type} />"
       <meta property="og:site_name" content="Zion Tech Group" />
       
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      {/* Twitter Card */}"
+      <meta name="twitter:card" content="summary_large_image" />"
+      <meta name="twitte,
+    r:title" content={title} />"
+      <meta name="twitter:description" content={description} />"
       <meta name="twitter:image" content={fullImageUrl} />
       
-      {/* Additional SEO */}
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      {/* Additional SEO */}"
+      <meta name="robots" content="index, follow" />"
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />"
       <link rel="canonical" href={currentUrl} />
       
       {/* Structured Data */}
-      <script
+      <script"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
+          __html: JSON.stringify({"
+            '@context': 'http,
+    s://schema.org',
             '@type': 'Organization',
             name: 'Zion Tech Group',
             description: description,
-            url: 'https://ziontechgroup.com',
-            logo: 'https://ziontechgroup.com/images/logo.png',
-            contactPoint: {
+            url: 'http,
+    s://ziontechgroup.com',
+            logo: 'http,
+    s://ziontechgroup.com/images/logo.png',
+            contactPoint: {'
               '@type': 'ContactPoint',
               telephone: '+1-302-464-0950',
               contactType: 'customer service',
               areaServed: 'US',
               availableLanguage: 'English'
             },
-            address: {
+            address: {'
               '@type': 'PostalAddress',
               streetAddress: '364 E Main St STE 1008',
               addressLocality: 'Middletown',
@@ -92,7 +96,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
               postalCode: '19709',
               addressCountry: 'US'
             }
-          })
+          });
         }}
       />
     </Head>

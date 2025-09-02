@@ -10,7 +10,7 @@ import React from;
   Edge-to-Cloud Orchestration', description: 'Seamless data flow between edge devices and cloud infrastructure with intelligent routing }, { icon: Cloud, title:,
   Hybrid Cloud Integration', description: 'Support for multi-cloud environments with intelligent data placement and processing }, { icon: Shield, title:,
   Edge Security & Privacy', description: Advanced security protocols including encryption, authentication, and secure boot,
-   } ]  const benefits = ['Reduce latency by 90%',';Lower bandwidth costs by 70%',';Improve data privacy and security',';Enable real-time decision making',';Reduce cloud dependency',';Scale IoT deployments efficiently' ]  const useCases = [ { industry: 'Manufacturing, applications: [;
+   } ]  const benefits = ['Reduce latency by 90%',;Lower bandwidth costs by 70%',;Improve data privacy and security',;Enable real-time decision making',;Reduce cloud dependency',;Scale IoT deployments efficiently' ]  const useCases = [ { industry: 'Manufacturing, applications: [;
   'Predictive maintenance',
   'Quality control',
   'Supply chain monitoring',
@@ -30,13 +30,16 @@ import React from;
   'Crop monitoring',
   'Livestock tracking',
   'Weather prediction'], icon: Network } ]  const technologies = [,
-  TensorFlow Lite',';ONNX Runtime',';Apache Kafka',';MQTT Protocol',';Kubernetes Edge',';Docker Edge',';Azure IoT Edge',';AWS Greengrass',';Google Cloud IoT',';NVIDIA Jetson',';Intel OpenVINO',';ARM Cortex-M',';RISC-V',';LoRaWAN',';5G Networks' ]  const pricingPlans = [ { name: 'Starter, description:;
-  'Perfect for small IoT projects and prototypes', price: { monthly: 299, annual: 2990 }, features: [';Up to 100 edge devices',';Basic AI models',';Cloud integration',';Email support',';Standard security',';Monthly reports' ], icon: Rocket, color:;
+  TensorFlow Lite',;ONNX Runtime',;Apache Kafka',;MQTT Protocol',;Kubernetes Edge',;Docker Edge',;Azure IoT Edge',;AWS Greengrass',;Google Cloud IoT',;NVIDIA Jetson',;Intel OpenVINO',;ARM Cortex-M',;RISC-V',;LoRaWAN',;5G Networks' ]  const pricingPlans = [ { name: 'Starter, description:;
+  'Perfect for small IoT projects and prototypes', price: { monthl,
+    y: 299, annual: 2990 }, features: [';Up to 100 edge devices',;Basic AI models',;Cloud integration',;Email support',;Standard security',;Monthly reports' ], icon: Rocket, color:;
   'from-orange-500 to-red-500', popular: false, cta:,
   Start Free Trial', link: '/contact }, { name:,
-  Professional', description: 'Ideal for production IoT deployments, price: { monthly: 899, annual: 8990 }, features: [';Up to 1, 000 edge devices',';Advanced AI models',';Real-time analytics',';Priority support',';Custom integrations',';Advanced security',';API access',';Training sessions' ], icon: Building, color:;
+  Professional', description: 'Ideal for production IoT deployments, price: { monthl,
+    y: 899, annual: 8990 }, features: [';Up to 1, 000 edge devices',;Advanced AI models',;Real-time analytics',;Priority support',;Custom integrations',;Advanced security',;API access',;Training sessions' ], icon: Building, color:;
   'from-blue-500 to-cyan-500', popular: true, cta:,
   Get Started', link: '/contact }, { name:,
-  Enterprise', description: 'For large-scale IoT operations, price: { monthly: 2499, annual: 24990 }, features: [';Unlimited edge devices',';Custom AI models',';Dedicated IoT team',';24/7 priority support',';On-premise deployment',';White-label solutions',';SLA guarantees',';Compliance reporting' ], icon: Globe, color:;
+  Enterprise', description: 'For large-scale IoT operations, price: { monthl,
+    y: 2499, annual: 24990 }, features: [';Unlimited edge devices',;Custom AI models',;Dedicated IoT team',;24/7 priority support',;On-premise deployment',;White-label solutions',;SLA guarantees',;Compliance reporting' ], icon: Globe, color:;
   'from-purple-500 to-pink-500', popular: false, cta:,
-  Contact Sales', link: '/contact } ]  return ( <div className='min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900'>'' <SEO '';' title='AI-Powered IoT Edge Computing Platform | Zion Tech Group'';' description='Transform IoT with AI-powered edge computing. Process data at the edge, reduce latency, and enable real-time decision making with intelligent edge devices.'';' keywords='IoT edge computing, edge AI, real-time processing, IoT platform, edge analytics, distributed computing'';' canonical='https:''';
+  Contact Sales', link: '/contact } ]  return ( <div className='min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900>' <SEO ''; title='AI-Powered IoT Edge Computing Platform | Zion Tech Group''; description='Transform IoT with AI-powered edge computing. Process data at the edge, reduce latency, and enable real-time decision making with intelligent edge devices.''; keywords='IoT edge computing, edge AI, real-time processing, IoT platform, edge analytics, distributed computing''; canonical='https:''';

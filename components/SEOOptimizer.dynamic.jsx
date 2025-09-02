@@ -4,3 +4,4 @@ const SEOOptimizer = dynamic(() => import('./SEOOptimizer'), {
 });
 
 export default SEOOptimizer;
+'

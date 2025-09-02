@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-
+'
 test('Performance test - Page load time', async ({ page }) => {
   const startTime = Date.now();
   await page.goto('/');
@@ -14,13 +14,13 @@ test('Performance test - Page load time', async ({ page }) => {
   })
   expect(metrics.loadTime).toBeLessThan(3000);
   expect(metrics.domContentLoaded).toBeLessThan(2000)})
-test('Performance test - Bundle size', async ({ page }) => {
+test('Performance test - Bundle size', async ({ page }) => {'
   await page.goto('/');
   // Check for large bundle warnings;
   const consoleErrors = [];
-  page.on('console', msg => {
+  page.on('console', msg => {'
     if (msg.type() === 'error' && msg.text().includes('bundle')) {
-      consoleErrors.push(msg.text())}
+      consoleErrors.push(msg.text());
   })
   await page.waitForLoadState('networkidle');
   expect(consoleErrors.length).toBe(0)})

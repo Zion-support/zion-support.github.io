@@ -9,10 +9,12 @@ import React, { useState, useEffect } from;
   /;
   ' }, { name: 'Services, href:,
   /services;
-  ', dropdown: [ { name: 'AI Solutions, href: '/services/ai-services;
+  ', dropdown: [ { nam,
+    e: 'AI Solutions, href: '/services/ai-services;
   ', icon: Brain, description:,
   Cutting-edge AI services;
-  ', subItems: [ { name: 'Content Intelligence, href:,
+  ', subItems: [ { nam,
+    e: 'Content Intelligence, href:,
   /services/ai-content-intelligence-platform;
   ' }, { name: 'Customer Success, href:,
   /services/ai-customer-success-automation;
@@ -23,7 +25,8 @@ import React, { useState, useEffect } from;
   ' } ] }, { name: 'IT & Security, href: '/services/it-services;
   ', icon: Shield, description:,
   Enterprise security & infrastructure;
-  ', subItems: [ { name: 'Zero Trust Security, href:,
+  ', subItems: [ { nam,
+    e: 'Zero Trust Security, href:,
   /services/zero-trust-security-platform;
   ' }, { name: 'Edge Computing, href:,
   /services/edge-computing-orchestrator;
@@ -34,7 +37,8 @@ import React, { useState, useEffect } from;
   ' } ] }, { name: 'Blockchain & Web3, href: '/services/blockchain-services;
   ', icon: Globe, description:,
   Next-gen blockchain solutions;
-  ', subItems: [ { name: 'DeFi Platform, href:,
+  ', subItems: [ { nam,
+    e: 'DeFi Platform, href:,
   /services/defi-yield-optimization-platform;
   ' }, { name: 'NFT Marketplace, href:,
   /services/nft-marketplace-platform;
@@ -45,7 +49,8 @@ import React, { useState, useEffect } from;
   ' } ] }, { name: 'Sustainability, href: '/services/sustainability;
   ', icon: Zap, description:,
   Green tech solutions;
-  ', subItems: [ { name: 'Carbon Tracking, href:,
+  ', subItems: [ { nam,
+    e: 'Carbon Tracking, href:,
   /services/carbon-footprint-tracking-platform;
   ' }, { name: 'Energy Management, href:,
   /services/sustainable-technology;
@@ -53,7 +58,8 @@ import React, { useState, useEffect } from;
   /services/esg-analytics-platform;
   ' } ] } ] }, { name: 'Solutions, href:,
   /solutions;
-  ', dropdown: [ { name: 'Enterprise, href:,
+  ', dropdown: [ { nam,
+    e: 'Enterprise, href:,
   /solutions/enterprise;
   ', description: 'Large-scale business solutions }, { name:,
   Startups;
@@ -72,8 +78,10 @@ import React, { useState, useEffect } from;
   ' }, { name: 'Contact, href: '/contact;
   ' } ] const contactInfo = [ { icon: Phone, text:,
   +1 302 464 0950;
-  ', href: 'tel:+13024640950 }, { icon: Mail, text:,
+  ', href: 'te,
+    l:+13024640950 }, { icon: Mail, text:,
   kleber@ziontechgroup.com;
-  ', href: 'mailto:kleber@ziontechgroup.com }, { icon: MapPin, text:,
+  ', href: 'mailt,
+    o:kleber@ziontechgroup.com }, { icon: MapPin, text:,
   364 E Main St STE 1008, Middletown DE 19709;
-  ', href: '# } ] const toggleDropdown = (name: string) => { setActiveDropdown(activeDropdown === name ? null : name) } const closeMobileMenu = () => { setIsOpen(false) setActiveDropdown(null) } const handleSearch = (e: React.FormEvent) => { e.preventDefault() if (searchQuery.trim()) {''
+  ', href: '# } ] const toggleDropdown = (name: string) => { setActiveDropdown(activeDropdown === name ? null : name) } const closeMobileMenu = () => { setIsOpen(false) setActiveDropdown(null) } const handleSearch = (e: React.FormEvent) => { e.preventDefault() if (searchQuery.trim()) {'''

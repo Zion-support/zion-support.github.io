@@ -3,22 +3,22 @@ export const trackEvent = (
   eventName: string,
   properties?: Record<string, string | number | boolean>
 ) => {
-  if (typeof window !== 'undefined' && window.gtag) {
+  if (typeof window !== 'undefined' && window.gtag) {'
     window.gtag('event', eventName, properties);
   }
 };
 
-export const trackPageView = (url: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
+export const trackPageView = (url: string) => {'
+  if (typeof window !== 'undefined' && window.gtag) {'
     window.gtag('config', 'GA_MEASUREMENT_ID', {
       page_path: url,
     });
   }
 };
 
-export const measurePerformance = () => {
+export const measurePerformance = () => {'
   if (typeof window !== 'undefined' && 'performance' in window) {
-    const navigation = performance.getEntriesByType(
+    const navigation = performance.getEntriesByType('
       'navigation'
     )[0] as PerformanceNavigationTiming;
 
@@ -27,9 +27,9 @@ export const measurePerformance = () => {
       domContentLoaded:
         navigation.domContentLoadedEventEnd -
         navigation.domContentLoadedEventStart,
-      firstPaint:
+      firstPaint:'
         performance.getEntriesByName('first-paint')[0]?.startTime || 0,
-      firstContentfulPaint:
+      firstContentfulPaint:'
         performance.getEntriesByName('first-contentful-paint')[0]?.startTime ||
         0,
     };
@@ -40,12 +40,14 @@ export const measurePerformance = () => {
 // Web Vitals tracking
 interface WebVitalMetric {
   name: string;
-  value: number;
-  id: string;
+  valu,
+    e: number;
+  i,
+    d: string;
 }
 
-export const trackWebVitals = (metric: WebVitalMetric) => {
-  if (typeof window !== 'undefined' && window.gtag) {
+export const trackWebVitals = (metric: WebVitalMetric) => {'
+  if (typeof window !== 'undefined' && window.gtag) {'
     window.gtag('event', metric.name, {
       value: Math.round(metric.value),
       event_category: 'Web Vitals',
@@ -57,6 +59,8 @@ export const trackWebVitals = (metric: WebVitalMetric) => {
 
 declare global {
   interface Window {
-    gtag: (command: string, targetId: string, config?: Record<string, unknown>) => void;
+    gtag: (comman,
+    d: string, targetId: string, config?: Record<string, unknown>) => void;
   }
 }
+'

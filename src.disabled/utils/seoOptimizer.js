@@ -16,7 +16,7 @@ export class SEOOptimizer {
     '/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.',
     '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.',
     '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.'}
-  static KEYWORD_MAPPINGS = {
+  static KEYWORD_MAPPINGS = {'
     '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
     '/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'],
     '/ai-solutions': ['artificial intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'],
@@ -47,10 +47,10 @@ export class SEOOptimizer {
       canonicalUrl,
       structuredData}
   }
-  static generateTitle(path) {
+  static generateTitle(path) {'
     const baseTitle = 'Zion Tech Group';
-    if (path === '/') {
-      return `${baseTitle} - Revolutionary Technology Solutions`}
+    if (path === '/') {'
+      return `${baseTitle} - Revolutionary Technology Solutions`}`
     const pathSegments = path.split('/').filter(Boolean);
     if (pathSegments.length === 0) {
       return baseTitle}
@@ -61,23 +61,23 @@ export class SEOOptimizer {
       .join(' ');
     return `${formattedSegment} - ${baseTitle}`}
   static generateDescription(path) {
-    return this.DEFAULT_META_DESCRIPTIONS[path] ||;
+    return this.DEFAULT_META_DESCRIPTIONS[path] ||;`
       'Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.'}
   static generateKeywords(path) {
     return this.KEYWORD_MAPPINGS[path] ||;
       ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation']
   }
-  static generateCanonicalUrl(path) {
+  static generateCanonicalUrl(path) {'
     const baseUrl = 'https://ziontechgroup.com';
     return `${baseUrl}${path}`}
   static generateStructuredData(path) {
-    return {
+    return {`
       '@context': 'https://schema.org',
       '@type': 'Organization',
       'name': 'Zion Tech Group',
       'url': 'https://ziontechgroup.com',
       'description': this.generateDescription(path),
-      'contactPoint': {
+      'contactPoint': {'
         '@type': 'ContactPoint',
         'telephone': '+1-302-464-0950',
         'contactType': 'customer service',

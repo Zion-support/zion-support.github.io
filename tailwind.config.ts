@@ -5,10 +5,13 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   ],  darkMode: 'class,
   theme: {
     extend: {
-      colors: {
+      color,
+    s: {
         // Zion Tech Group brand colors;
-        zion: {
-          50:,
+        zio,
+    n: {
+          5,
+    0:,
   #f0f9ff',
           100: '#e0f2fe,
           200:,
@@ -27,7 +30,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   #082f49'},
         // Extended gray palette for better contrast;
         gray: {
-          950:;
+          95,
+    0:;
   '#0a0a0a,
           960:,
   #050505',
@@ -37,7 +41,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
           990: '#010101},
         // Accent colors;
         accent: {
-          cyan:,
+          cya,
+    n:,
   #06b6d4',
           blue: '#3b82f6,
           purple:,
@@ -49,7 +54,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
           rose:,
   #f43f5e'}
       },
-      animation: {
+      animation: {'
   'gradient':;
   'gradient 6s ease infinite,
 ,
@@ -59,14 +64,15 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
 ,
   spin-slow': 'spin 8s linear infinite},
       keyframes: {
-        gradient: {,
-  0%, 100%': {
+        gradien,
+    t: {,
+  0%, 100%': {'
   'background-size':;
   '200% 200%,
 ,
   background-position': 'left center},
 ,
-  50%': {
+  50%': {'
   'background-size':;
   '200% 200%,
 ,
@@ -76,7 +82,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
       fontFamily: {
 ursor/automate-test-fix-improve-and-merge-code-48f3;
         ]},
-      fontSize: {
+      fontSize: {'
   'xs': [;
   '0.75rem, { lineHeight:,
   1rem' }],
@@ -116,7 +122,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   '9xl': [;
   '8rem, { lineHeight:,
   1' }]},
-      spacing: {
+      spacing: {'
   '18':;
   '4.5rem,
 ,
@@ -204,7 +210,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   background-shift': 'backgroundShift 20s ease-in-out infinite},
       keyframes: {
         // Enhanced keyframes;
-        fadeIn: {,
+        fadeI,
+    n: {,
   0%': { opacity:;
   '0 },
 ,
@@ -213,33 +220,37 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
         fadeInUp: {,
   0%': { opacity:;
   '0, transform:,
-  translateY(20px)' },
+  translateY(20px) },
   '100%': { opacity:;
   '1, transform:,
-  translateY(0)' }},
-        fadeInDown: {
-  '0%': { opacity:;
+  translateY(0) }},
+        fadeInDown: {'
+  '0%': { opacit,
+    y:;
   '0, transform:,
-  translateY(-20px)' },
+  translateY(-20px) },
   '100%': { opacity:;
   '1, transform:,
-  translateY(0)' }},
-        fadeInLeft: {
-  '0%': { opacity:;
+  translateY(0) }},
+        fadeInLeft: {'
+  '0%': { opacit,
+    y:;
   '0, transform:,
-  translateX(-20px)' },
+  translateX(-20px) },
   '100%': { opacity:;
   '1, transform:,
-  translateX(0)' }},
-        fadeInRight: {
-  '0%': { opacity:;
+  translateX(0) }},
+        fadeInRight: {'
+  '0%': { opacit,
+    y:;
   '0, transform:,
-  translateX(20px)' },
+  translateX(20px) },
   '100%': { opacity:;
   '1, transform:,
-  translateX(0)' }},
-        slideInUp: {
-  '0%': { transform:;
+  translateX(0) }},
+        slideInUp: {'
+  '0%': { transfor,
+    m:;
   'translateY(100%) },
 ,
   100%': { transform:;
@@ -287,8 +298,9 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   100%': { transform:;
   'scale(1), opacity:,
   1' }},
-        bounceOut: {
-  '0%': { transform:;
+        bounceOut: {'
+  '0%': { transfor,
+    m:;
   'scale(1), opacity:,
   1' },
   '20%': { transform:;
@@ -300,22 +312,25 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   100%': { transform:;
   'scale(0.3), opacity:,
   0' }},
-        rotateIn: {
-  '0%': { transform:;
+        rotateIn: {'
+  '0%': { transfor,
+    m:;
   'rotate(-200deg), opacity:,
   0' },
   '100%': { transform:;
   'rotate(0), opacity:,
   1' }},
-        rotateOut: {
-  '0%': { transform:;
+        rotateOut: {'
+  '0%': { transfor,
+    m:;
   'rotate(0), opacity:,
   1' },
   '100%': { transform:;
   'rotate(200deg), opacity:,
   0' }},
-        flipIn: {
-  '0%': { transform:;
+        flipIn: {'
+  '0%': { transfor,
+    m:;
   'perspective(400px) rotateY(90deg), opacity:,
   0' },
   '40%': { transform:;
@@ -330,15 +345,17 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   100%': { transform:;
   'perspective(400px) rotateY(0deg), opacity:,
   1' }},
-        flipOut: {
-  '0%': { transform:;
+        flipOut: {'
+  '0%': { transfor,
+    m:;
   'perspective(400px) rotateY(0deg), opacity:,
   1' },
   '100%': { transform:;
   'perspective(400px) rotateY(90deg), opacity:,
   0' }},
-        hinge: {
-  '0%': { transform:;
+        hinge: {'
+  '0%': { transfor,
+    m:;
   'rotate(0), transformOrigin:,
   top left', animationTimingFunction: 'ease-in-out },
 ,
@@ -357,22 +374,25 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   100%': { transform:;
   'translateY(700px), opacity:,
   0' }},
-        rollIn: {
-  '0%': { transform:;
+        rollIn: {'
+  '0%': { transfor,
+    m:;
   'translateX(-100%) rotate(-120deg), opacity:,
   0' },
   '100%': { transform:;
   'translateX(0) rotate(0deg), opacity:,
   1' }},
-        rollOut: {
-  '0%': { transform:;
+        rollOut: {'
+  '0%': { transfor,
+    m:;
   'translateX(0) rotate(0deg), opacity:,
   1' },
   '100%': { transform:;
   'translateX(100%) rotate(120deg), opacity:,
   0' }},
-        zoomIn: {
-  '0%': { transform:;
+        zoomIn: {'
+  '0%': { transfor,
+    m:;
   'scale(0.3), opacity:,
   0' },
   '50%': { opacity:;
@@ -381,8 +401,9 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   100%': { transform:;
   'scale(1), opacity:,
   1' }},
-        zoomOut: {
-  '0%': { transform:;
+        zoomOut: {'
+  '0%': { transfor,
+    m:;
   'scale(1), opacity:,
   1' },
   '50%': { opacity:;
@@ -392,14 +413,15 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   'scale(0.3), opacity:,
   0' }},
         float: {0%, 100%': { transform:,
-  translateY(0px)' },
+  translateY(0px) },
   '50%': { transform:;
   'translateY(-20px) }},
         glow: {,
   0%': { boxShadow:0 0 20px rgba(6, 182, 212, 0.5)},
   '100%': { boxShadow:0 0 30px rgba(6, 182, 212, 0.8)}},
-        shimmer: {
-  '0%': { backgroundPosition:;
+        shimmer: {'
+  '0%': { backgroundPositio,
+    n:;
   '-200% 0 },
 ,
   100%': { backgroundPosition:;
@@ -439,26 +461,28 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
         hologram: {,
   0%, 100%': { opacity:;
   '0.8, filter:,
-  hue-rotate(0deg)' },
+  hue-rotate(0deg) },
   '50%': { opacity:;
   '1, filter:,
-  hue-rotate(180deg)' }},
+  hue-rotate(180deg) }},
         quantumPulse: {0%, 100%': { transform:,
-  scale(1)', opacity: '1 },
+  scale(1), opacity: '1 },
 ,
   50%': { transform:;
   'scale(1.1), opacity:,
   0.8' }},
-        neonFlicker: {
-  '0%': { textShadow:0 0 5px #06b6d4, 0 0 10px #06b6d4, 0 0 15px #06b6d4},
+        neonFlicker: {'
+  '0%': { textShado,
+    w:0 0 5px #06b6d4, 0 0 10px #06b6d4, 0 0 15px #06b6d4},
   '100%': { textShadow:0 0 2px #06b6d4, 0 0 5px #06b6d4, 0 0 7px #06b6d4}},
         backgroundShift: {0%, 100%': { transform:,
-  translate(0, 0) scale(1)' },
+  translate(0, 0) scale(1) },
   '25%': { transform:translate(-2%, -1%) scale(1.02)},
   '50%': { transform:translate(1%, -2%) scale(0.98)},
   '75%': { transform:translate(-1%, 1%) scale(1.01)}}},
       backdropBlur: {
-        xs:;
+        x,
+    s:;
   '2px},
       boxShadow: {,
   glow': 0 0 20px rgba(6, 182, 212, 0.5),
@@ -471,7 +495,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   ,
   'inner-glow': inset 0 0 20px rgba(6, 182, 212, 0.3),
   },
-      backgroundImage: {
+      backgroundImage: {'
   'gradient-radial':;
   'radial-gradient(var(--tw-gradient-stops)),
 ,
@@ -481,7 +505,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   ,
   'cyber-grid': linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px),
   },
-      backgroundSize: {
+      backgroundSize: {'
   'cyber-grid':;
   '20px 20px},
       transitionTimingFunction: {,
@@ -493,7 +517,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   ,
   'elastic-out': cubic-bezier(0.175, 0.885, 0.32, 1.275),
   },
-      zIndex: {
+      zIndex: {'
   '60':;
   '60,
 ,
@@ -505,9 +529,9 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
 ,
   100': '100}}},
   plugins: [;
-    require(
+    require('
   '@tailwindcss/forms'),
-    require(
+    require('
   '@tailwindcss/typography'),
-    require(
+    require('
   '@tailwindcss/aspect-ratio')]} satisfies Config;

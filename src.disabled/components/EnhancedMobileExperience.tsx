@@ -13,8 +13,10 @@ import React, { useState, useEffect, useCallback, useMemo } from,
    batteryOptimization: boolean;
    networkOptimization: boolean;
    viewportMode: 'mobile' | 'tablet' | 'desktop' | 'auto';
-   touchSensitivity: 'low' | 'medium' | 'high;
-   mobileAnimations: boolean} interface MobileExperienceProps {
+   touchSensitivit,
+    y: 'low' | 'medium' | 'high;
+   mobileAnimation,
+    s: boolean} interface MobileExperienceProps {
    enabled?: boolean;
    showControls?: boolean;
    onSettingsChange?: (settings: MobileSettings) => void} export const EnhancedMobileExperience: React.FC<MobileExperienceProps> = ({ enabled = true, showControls = true, onSettingsChange }) => { const [isOpen, setIsOpen] = useState(false) const [settings, setSettings] = useState<MobileSettings>({ touchOptimization: true, gestureNavigation: true, mobileFirst: true, responsiveImages: true, touchFeedback: true, mobileMenu: true, swipeGestures: true, mobileNotifications: true, batteryOptimization: true, networkOptimization: true, viewportMode:,
@@ -26,4 +28,4 @@ import React, { useState, useEffect, useCallback, useMemo } from,
   'slow' |;
   'medium' |;
   'fast' |;
-  'unknown' }) '
+  'unknown' }) ''

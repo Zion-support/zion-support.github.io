@@ -4,28 +4,32 @@ import { LoginForm } from '@/components/auth/login';
 import * as authService from '@/services/authService';
 import * as authHook from '@/hooks/useAuth';
 import { vi } from 'vitest';
-
+'
 vi.spyOn(authHook'useAuth').mockReturnValue({ isLoading: false, login: vi.fn() } as any);
-describe(
+describe('
   'LoginForm', () => {
-  it(
-  'shows server error on 401 response', async () => {
+  it('
+  'shows server error on 401 response', async () => {'
     vi.spyOn(authService'loginUser').mockResolvedValue({
-      res: { status: 401 } as Response,
-      data: { error:,
+      res: { statu,
+    s: 401 } as Response,
+      data: { erro,
+    r:,
   Invalid credentials' }
-    })
+    });
     render(
       <MemoryRouter>
         <LoginForm />
       </MemoryRouter>
     );
-    fireEvent.input(screen.getByLabelText(/email address/i), { target: { value:;
+    fireEvent.input(screen.getByLabelText(/email address/i), { target: { valu,
+    e:;
   'a@b.com } })
-    fireEvent.input(screen.getByLabelText(/password/i), { target: { value:;
+    fireEvent.input(screen.getByLabelText(/password/i), { target: { valu,
+    e:;
   'secret' } })
-    fireEvent.submit(screen.getByRole(
+    fireEvent.submit(screen.getByRole('
   'button', { name: /login/i }));
     // wait for error message to appear
-    await screen.findByText(
+    await screen.findByText('
   'Invalid credentials')})})

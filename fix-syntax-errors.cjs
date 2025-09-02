@@ -3,49 +3,69 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix syntax errors in a file
-function fixSyntaxErrors(filePath) {
+// Common syntax error patterns and their fixes
+const fixes = [
+  // Fix import statements with comma issues
+  {
+    pattern: /import\s+(\w+)\s+from\s*,\s*['"`]([^'"`]+)['"`]/g,
+    replacement: "import $1 from '$2'"
+  },
+  {
+    pattern: /import\s+(\w+)\s+from\s*,\s*([^;]+);/g,
+    replacement: "import $1 from $2;"
+  },
+  
+  // Fix missing semicolons in function calls
+  {
+    pattern: /(\w+\([^)]*\))\s*\)\s*}/g,
+    replacement: "$1);"
+  },
+  
+  // Fix unterminated strings
+  {
+    pattern: /(['"`])([^'"`]*)\s*$/gm,
+    replacement: (match, quote, content) => {
+      if (!content.includes(quote)) {
+        return match + quote;
+      }
+      return match;
+    }
+  },
+  
+  // Fix missing commas in object literals
+  {
+    pattern: /(\w+:\s*[^,}]+)\s*(\w+:\s*[^,}]+)/g,
+    replacement: "$1,\n    $2"
+  },
+  
+  // Fix missing semicolons after statements
+  {
+    pattern: /(\w+\([^)]*\))\s*$/gm,
+    replacement: "$1;"
+  }
+];
+
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix common syntax errors
-    const fixes = [
-      // Fix extra semicolons in object literals and function calls
-      { pattern: /(\w+)\s*\(\s*;/g, replacement: '$1(' },
-      { pattern: /{\s*;/g, replacement: '{' },
-      { pattern: /}\s*;/g, replacement: '}' },
-      { pattern: /,\s*;/g, replacement: ',' },
-      { pattern: /;\s*;/g, replacement: ';' },
-      { pattern: /\(\s*;/g, replacement: '(' },
-      { pattern: /;\s*\)/g, replacement: ')' },
-      { pattern: /;\s*}/g, replacement: '}' },
-      { pattern: /;\s*{/g, replacement: '{' },
-      { pattern: /;\s*,/g, replacement: ',' },
-      { pattern: /,\s*;/g, replacement: ',' },
-      // Fix semicolons in import statements
-      { pattern: /import\s*{\s*([^}]+);\s*}/g, replacement: 'import { $1 }' },
-      // Fix semicolons in function declarations
-      { pattern: /\)\s*=>\s*{;/g, replacement: ') => {' },
-      { pattern: /}\s*\)\s*;/g, replacement: '})' },
-      // Fix semicolons in JSX
-      { pattern: /className={cn\(\s*;/g, replacement: 'className={cn(' },
-      { pattern: /}\s*\)\s*}/g, replacement: '})}' },
-    ];
-
+    let originalContent = content;
+    
+    // Apply fixes
     fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
+      if (typeof fix.replacement === 'function') {
+        content = content.replace(fix.pattern, fix.replacement);
+      } else {
+        content = content.replace(fix.pattern, fix.replacement);
       }
     });
-
-    if (modified) {
+    
+    // Only write if content changed
+    if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -53,32 +73,38 @@ function fixSyntaxErrors(filePath) {
   }
 }
 
-// Function to recursively find and fix files
-function fixFilesInDirectory(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-
-    if (
-      stat.isDirectory() &&
-      !file.startsWith('.') &&
-      file !== 'node_modules'
-    ) {
-      fixedCount += fixFilesInDirectory(filePath);
-    } else if (stat.isFile() && /\.(ts|tsx|js|jsx)$/.test(file)) {
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++;
+function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
       }
     }
-  });
-
-  return fixedCount;
+  }
+  
+  traverse(dir);
+  return files;
 }
 
 // Main execution
-console.log('🔧 Starting syntax error fixes...');
-const fixedCount = fixFilesInDirectory('.');
-console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
+const files = findFiles('.');
+let fixedCount = 0;
+
+console.log(`Found ${files.length} files to check...`);
+
+files.forEach(file => {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
+});
+
+console.log(`Fixed ${fixedCount} files`);

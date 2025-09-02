@@ -4,3 +4,4 @@ const PWARegistration = dynamic(() => import('./PWARegistration'), {
 });
 
 export default PWARegistration;
+'

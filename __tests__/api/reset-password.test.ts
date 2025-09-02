@@ -11,13 +11,14 @@ interface ErrorResponse {
   // success: boolean;
    // message?: string;
    //}
-describe('/api/auth/reset token validation'', () => {
-  it(
+describe('/api/auth/reset token validation', () => {
+  it('
   'returns 400 if token is missing', async () => {
-    const { req, res } = createMocks({
-      method: 'POST as RequestMethod,
-      body: { newPassword:;
-  'pass12345' }})
+    const { req, res } = createMocks({'
+      method: 'POST' as RequestMethod,
+      body: { newPasswor,
+    d: 'pass12345' }
+    });
     // Cast to the specific NextApi types for the handler;
     await handler(
       req as unknown as NextApiRequest,
@@ -26,20 +27,22 @@ describe('/api/auth/reset token validation'', () => {
     // Assuming the response JSON structure is { message: string } for errors;
     expect((res._getJSONData() as ErrorResponse).message).toBe(,
   Token and new password are required.')})
-  it(
+  it('
   'returns 400 for invalid token', async () => {
-    const { req, res } = createMocks({
+    const { req, res } = createMocks({'
       method: 'POST as RequestMethod,
-      body: { token:,
-  invalid', newPassword: 'pass12345 }})
+      body: { toke,
+    n:,
+  invalid', newPassword: 'pass12345 }});
     await handler(
       req as unknown as NextApiRequest,
       res as unknown as NextApiResponse);
     expect(res._getStatusCode()).toBe(400);
-    expect((res._getJSONData() as ErrorResponse).message).toBe(
+    expect((res._getJSONData() as ErrorResponse).message).toBe('
   'Invalid or expired password reset token.')})
   // TODO: Add a test case for a successful password reset if this file is to be comprehensive.;
-  // This would involve mocking Prisma calls within the handler:;
+  // This would involve mocking Prisma calls within the handle,
+    r:;
   // - prisma.user.findFirst to find a user by a valid (hashed) token;
   // - prisma.user.update to update the password and clear reset token fields;
   // - (Potentially) supabase.auth.admin.updateUserById if Supabase auth password also needs update})

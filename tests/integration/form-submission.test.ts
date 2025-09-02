@@ -5,31 +5,32 @@ import React from 'react';
 
 // Mock form component for testing;
 const YourFormComponent = () => {
-  return React.createElement(
+  return React.createElement('
   'form', null,
-    React.createElement(
+    React.createElement('
   'label', { htmlFor: 'email },
 ,
   Email'),
-    React.createElement(
+    React.createElement('
   'input', { id: 'email, type:,
   email' }),
-    React.createElement(
+    React.createElement('
   'button', { type: 'submit },
 ,
-  Submit'))}
-describe(
+  Submit'));
+describe('
   'Form Submission Integration', () => {
-  it(
+  it('
   'should handle form submission correctly', async () => {
     render(React.createElement(YourFormComponent));
     // Fill out form;
     const input = screen.getByLabelText(/email/i);
-    fireEvent.change(input, { target: { value:;
-  'test@example.com } })
+    fireEvent.change(input, { target: { valu,
+    e:;
+  'test@example.com } });
     // Submit form;
     const submitButton = screen.getByText(/submit/i);
     fireEvent.click(submitButton);
     await waitFor(() => {
-      expect(input).toHaveValue(
+      expect(input).toHaveValue('
   'test@example.com')})})})

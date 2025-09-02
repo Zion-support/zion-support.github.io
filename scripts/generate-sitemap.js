@@ -4,7 +4,7 @@ import path from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Get all pages from the pages directory
+// Get all pages from the pages directory'
 function getPages(dir, basePath = '') {
   const pages = [];
   const items = fs.readdirSync(dir);
@@ -18,14 +18,14 @@ function getPages(dir, basePath = '') {
       pages.push(...getPages(fullPath, path.join(basePath, item)));
     } else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {
       // Skip special Next.js files
-      if (
-        !item.startsWith('_') &&
-        item !== 'index.tsx' &&
+      if ('
+        !item.startsWith('_') &&'
+        item !== 'index.tsx' &&'
         item !== 'index.jsx'
-      ) {
+      ) {'
         const pageName = item.replace(/\.(tsx|jsx)$/, '');
         pages.push(path.join(basePath, pageName));
-      } else if (item === 'index.tsx' || item === 'index.jsx') {
+      } else if (item === 'index.tsx' || item === 'index.jsx') {'
         pages.push(basePath || '/');
       }
     }
@@ -35,33 +35,34 @@ function getPages(dir, basePath = '') {
 }
 
 // Generate sitemap.xml
-function generateSitemap() {
+function generateSitemap() {'
   const pagesDir = path.join(__dirname, '..', 'pages');
   const pages = getPages(pagesDir);
-
+'
   const baseUrl = 'https://ziontechgroup.com';
   const pages = ['/', '/about', '/services', '/contact', '/blog', '/careers'];
-
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+'
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${pages
-    .map(page => {
-      const url = page === '/' ? baseUrl : `${baseUrl}${page}`;
+    .map(page => {"
+      const url = page === '/' ? baseUrl : `${baseUrl}${page}`;`
       return `  <url>
     <loc>${url}</loc>
     <lastmod>${currentDate}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${page === '/' ? '1.0' : '0.8'}</priority>
+    <changefreq>weekly</changefreq>`
+    <priority>${page === '/' ? '1.0' : '0.8'}</priority>'
   </url>`;
-    })
+    })`
     .join('\n')}
 </urlset>`;
-
+`
   const outputPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
   fs.writeFileSync(outputPath, sitemap);
-
-  console.log(`Generated sitemap with ${pages.length} pages`);
+'
+  console.log(`Generated sitemap with ${pages.length} pages`);`
   console.log(`Sitemap saved to: ${outputPath}`);
 }
 
 generateSitemap();
+`

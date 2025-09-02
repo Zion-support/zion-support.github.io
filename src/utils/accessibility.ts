@@ -1,13 +1,14 @@
 export const accessibilityUtils = {
   // Focus management
-  trapFocus: (element: HTMLElement) => {
+  trapFocus: (elemen,
+    t: HTMLElement) => {
     const focusableElements = element.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-    const handleTabKey = (e: KeyboardEvent) => {
+    const handleTabKey = (e: KeyboardEvent) => {'
       if (e.key === 'Tab') {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
@@ -23,17 +24,18 @@ export const accessibilityUtils = {
 
       }
     };
-
+'
     element.addEventListener('keydown', handleTabKey);
     firstElement?.focus();
 
-    return () => {
+    return () => {'
       element.removeEventListener('keydown', handleTabKey);
     };
   },
 
   // ARIA helpers
-  announceToScreenReader: (message: string) => {
+  announceToScreenReader: (messag,
+    e: string) => {'
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
@@ -48,8 +50,10 @@ export const accessibilityUtils = {
   },
 
   // Color contrast checker
-  getContrastRatio: (color1: string, color2: string): number => {
-    const getLuminance = (color: string): number => {
+  getContrastRatio: (color,
+    1: string, color2: string): number => {
+    const getLuminance = (colo,
+    r: string): number => {
       const rgb = color.match(/\d+/g);
       if (!rgb) return 0;
       
@@ -70,3 +74,4 @@ export const accessibilityUtils = {
   }
 };
 
+'

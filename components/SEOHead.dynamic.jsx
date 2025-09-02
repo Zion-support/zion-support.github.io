@@ -4,3 +4,4 @@ const SEOHead = dynamic(() => import('./SEOHead'), {
 });
 
 export default SEOHead;
+'

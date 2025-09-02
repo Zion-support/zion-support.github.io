@@ -6,8 +6,10 @@ export interface PricingTier2032 {
    billingCycle: string;
    description: string;
    features: string[];
-   limitations: string[];
-   bestFor: string;
+   limitation,
+    s: string[];
+   bestFo,
+    r: string;
    popular?: boolean;
    savings?: string} export interface ServicePricing2032 {
   serviceId: string;
@@ -19,5 +21,13 @@ export interface PricingTier2032 {
    tiers: PricingTier2032[];
    enterprisePricing: {  custom: boolean;
    startingPrice: number;
-   contactRequired: boolean
-   features: string[]} addOns: { name: string price: number description: string  }[] volumeDiscounts: { users: number discount: number  }[] annualDiscount: number freeTrial: boolean trialDuration: string moneyBackGuarantee: boolean guaranteeDuration: string sla: string supportLevels: { level: string responseTime: string features: string[]  }[] } export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [;
+   contactRequire,
+    d: boolean
+   feature,
+    s: string[]} addOns: { name: string pric,
+    e: number descriptio,
+    n: string  }[] volumeDiscounts: { user,
+    s: number discoun,
+    t: number  }[] annualDiscount: number freeTrial: boolean trialDuration: string moneyBackGuarantee: boolean guaranteeDuration: string sla: string supportLevels: { level: string responseTim,
+    e: string feature,
+    s: string[]  }[] } export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [;

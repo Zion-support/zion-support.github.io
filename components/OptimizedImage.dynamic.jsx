@@ -4,3 +4,4 @@ const OptimizedImage = dynamic(() => import('./OptimizedImage'), {
 });
 
 export default OptimizedImage;
+'

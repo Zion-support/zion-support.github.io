@@ -5,8 +5,8 @@ export function EnhancedSearchInput({
   value, 
   onChange, 
   onSelectSuggestion, 
-  suggestions = [], 
-  placeholder = "Search...",
+  suggestions = [], '
+  placeholder = "Search...","
   className = ""
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +36,7 @@ export function EnhancedSearchInput({
         setIsOpen(false);
       }
     };
-
+"
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
@@ -44,7 +44,7 @@ export function EnhancedSearchInput({
   const handleKeyDown = (e) => {
     if (!isOpen) return;
 
-    switch (e.key) {
+    switch (e.key) {'
       case 'ArrowDown':
         e.preventDefault();
         setHighlightedIndex(prev => 
@@ -74,7 +74,7 @@ export function EnhancedSearchInput({
     setHighlightedIndex(-1);
   };
 
-  const handleClear = () => {
+  const handleClear = () => {'
     onChange('');
     setIsOpen(false);
     setHighlightedIndex(-1);
@@ -96,38 +96,41 @@ export function EnhancedSearchInput({
     }
   };
 
-  const recentSearches = [
+  const recentSearches = ['
     'AI Services',
     'Cloud Migration',
     'Cybersecurity',
     'Digital Transformation'
   ];
 
-  const popularSearches = [
+  const popularSearches = ['
     'Micro SAAS',
     'IT Infrastructure',
     'DevOps',
     'Machine Learning'
   ];
 
-  return (
-    <div className="relative" ref={inputRef}>
-      <div className="relative">
+  return ('
+    <div className="relative" ref={inputRef}>"
+      <div className="relative">"
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
-        <input
+        <input"
           type="text"
           value={value}
           onChange={(e) => onChange(e.target.value)}
           onKeyDown={handleKeyDown}
           onFocus={() => value.trim() && setIsOpen(true)}
-          placeholder={placeholder}
-          className={`w-full pl-10 pr-10 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-transparent transition-all duration-200 ${className}`}
+          placeholder={placeholder}"
+          className={`w-full pl-10 pr-10 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focu,
+    s:ring-zion-purple/50 focu,
+    s:border-transparent transition-all duration-200 ${className}`}
         />
         {value && (
           <button
-            onClick={handleClear}
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded transition-colors"
-          >
+            onClick={handleClear}`
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 text-zion-slate-light hover:text-white hove,
+    r:bg-zion-purple/10 rounded transition-colors"
+          >"
             <X className="h-4 w-4" />
           </button>
         )}
@@ -136,12 +139,12 @@ export function EnhancedSearchInput({
       {/* Suggestions Dropdown */}
       {isOpen && (
         <div 
-          ref={suggestionsRef}
+          ref={suggestionsRef}"
           className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50 max-h-96 overflow-y-auto"
         >
           {/* Search Results */}
-          {filteredSuggestions.length > 0 && (
-            <div className="py-2">
+          {filteredSuggestions.length > 0 && ("
+            <div className="py-2">"
               <div className="px-3 py-2 text-xs font-semibold text-zion-cyan uppercase tracking-wider">
                 Search Results
               </div>
@@ -150,14 +153,15 @@ export function EnhancedSearchInput({
                 return (
                   <button
                     key={suggestion}
-                    onClick={() => handleSuggestionSelect(suggestion)}
+                    onClick={() => handleSuggestionSelect(suggestion)}"
                     className={`w-full flex items-center px-3 py-2 text-sm transition-colors ${
-                      index === highlightedIndex
-                        ? 'text-white bg-zion-purple/20'
-                        : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
+                      index === highlightedIndex`
+                        ? 'text-white bg-zion-purple/20''
+                        : 'text-zion-slate-light hover:text-white hove,
+    r:bg-zion-purple/10''
                     }`}
-                  >
-                    <Icon className="h-4 w-4 mr-3 text-zion-cyan flex-shrink-0" />
+                  >`
+                    <Icon className="h-4 w-4 mr-3 text-zion-cyan flex-shrink-0" />"
                     <span className="truncate">{suggestion}</span>
                   </button>
                 );
@@ -165,18 +169,19 @@ export function EnhancedSearchInput({
             </div>
           )}
 
-          {/* Recent Searches */}
-          {value.trim() === '' && (
-            <div className="py-2">
+          {/* Recent Searches */}"
+          {value.trim() === '' && ('
+            <div className="py-2">"
               <div className="px-3 py-2 text-xs font-semibold text-zion-cyan uppercase tracking-wider">
                 Recent Searches
               </div>
               {recentSearches.map((search) => (
                 <button
                   key={search}
-                  onClick={() => handleSuggestionSelect(search)}
-                  className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
-                >
+                  onClick={() => handleSuggestionSelect(search)}"
+                  className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover:text-white hove,
+    r:bg-zion-purple/10 transition-colors"
+                >"
                   <Clock className="h-4 w-4 mr-3 text-zion-slate-light" />
                   <span>{search}</span>
                 </button>
@@ -184,18 +189,19 @@ export function EnhancedSearchInput({
             </div>
           )}
 
-          {/* Popular Searches */}
-          {value.trim() === '' && (
-            <div className="py-2">
+          {/* Popular Searches */}"
+          {value.trim() === '' && ('
+            <div className="py-2">"
               <div className="px-3 py-2 text-xs font-semibold text-zion-cyan uppercase tracking-wider">
                 Popular Searches
               </div>
               {popularSearches.map((search) => (
                 <button
                   key={search}
-                  onClick={() => handleSuggestionSelect(search)}
-                  className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
-                >
+                  onClick={() => handleSuggestionSelect(search)}"
+                  className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover:text-white hove,
+    r:bg-zion-purple/10 transition-colors"
+                >"
                   <TrendingUp className="h-4 w-4 mr-3 text-zion-cyan" />
                   <span>{search}</span>
                 </button>
@@ -204,9 +210,9 @@ export function EnhancedSearchInput({
           )}
 
           {/* No Results */}
-          {value.trim() && filteredSuggestions.length === 0 && (
-            <div className="py-4 text-center">
-              <div className="text-zion-slate-light text-sm mb-2">No results found</div>
+          {value.trim() && filteredSuggestions.length === 0 && ("
+            <div className="py-4 text-center">"
+              <div className="text-zion-slate-light text-sm mb-2">No results found</div>"
               <div className="text-xs text-zion-slate-light">
                 Try different keywords or browse our categories
               </div>
@@ -217,3 +223,4 @@ export function EnhancedSearchInput({
     </div>
   );
 }
+"

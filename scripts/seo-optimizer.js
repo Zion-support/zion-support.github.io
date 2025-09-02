@@ -3,23 +3,22 @@
  * SEO Optimization Script for Zion Tech Group Website;
  * Generates sitemap, robots.txt, and optimizes meta tags;
  */;
-import fs from,
-  fs';
+import fs from fs';
 import path from;
   'path';
 import { fileURLToPath } from;
   'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-console.log(
+console.log('
   '🔍 Starting SEO optimization...');
 // 1. Generate sitemap.xml;
 function generateSitemap() {
-  console.log(
+  console.log('
   '🗺️ Generating sitemap...');
   const baseUrl =;
   'https: //ziontechgroup.com';
-  const pages = [
+  const pages = ['
   '/,
   '/about',
   '/contact',
@@ -38,28 +37,28 @@ function generateSitemap() {
   '/services/consulting',
   '/privacy',
   '/terms'  ];
-  const sitemap = `<?xml version='1.0' encoding='UTF-8'?>
+  const sitemap = `<?xml version='1.0' encoding='UTF-8'?>'
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
 ${pages;
-  .map(
+  .map('
     page => `  <url>
     <loc>${baseUrl}${page}</loc>
-    <lastmod>${new Date().toISOString().split(,
+    <lastmod>${new Date().toISOString().split(,`
   T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${page ===;
   '/' ?;
-  '1.0': '0.8}</priority>
-  </url>`).join(
+  '1.0': '0.8}</priority>'
+  </url>`).join(`
   '\n')}
 </urlset>`;
-  const sitemapPath = path.join(__dirname,
+  const sitemapPath = path.join(__dirname,`
   '../public/sitemap.xml')  fs.writeFileSync(sitemapPath, sitemap);
-  console.log(
+  console.log('
   '✅ Generated sitemap.xml')}
 // 2. Generate robots.txt;
 function generateRobotsTxt() {
-  console.log(
+  console.log('
   '🤖 Generating robots.txt...');
     const robotsTxt = `User-agent: *;
 Allow: /;
@@ -75,18 +74,20 @@ Disallow: /private/;
 # Allow important pages;
 Allow: /services/;
 Allow: /solutions/;
-Allow: /about/;
-Allow: /contact/`;
+Allo,
+    w: /about/;`
+Allo,
+    w: /contact/`;
   const robotsPath = path.join(__dirname,
-,
+,`
   ../public/robots.txt')  fs.writeFileSync(robotsPath, robotsTxt);
-  console.log(
+  console.log('
   '✅ Generated robots.txt')}
 // 3. Generate manifest.json for PWA;
 function generateManifest() {
-  console.log(
+  console.log('
   '📱 Generating manifest.json...');
-  const manifest = {
+  const manifest = {'
     name: 'Zion Tech Group - AI-Powered IT Solutions,
     short_name:,
   Zion Tech',
@@ -99,7 +100,8 @@ function generateManifest() {
     theme_color:,
   #3b82f6',
     icons: [{
-        src:;
+        sr,
+    c:;
   '/icon-192x192.png,
         sizes:,
   192x192',
@@ -121,30 +123,33 @@ function generateManifest() {
   'portrait-primary'}
   const manifestPath = path.join(__dirname,
   '../public/manifest.json')  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-  console.log(
+  console.log('
   '✅ Generated manifest.json')}
 // 4. Generate structured data;
 function generateStructuredData() {
-  console.log(
+  console.log('
   '📊 Generating structured data...');
-    const structuredData = {
+    const structuredData = {'
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
+    url: 'http,
+    s://ziontechgroup.com',
+    logo: 'http,
+    s://ziontechgroup.com/logo.png',
     description:;
       'Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.',
-    address: {
+    address: {'
       '@type': 'PostalAddress',
       addressCountry: 'US'},
-    contactPoint: {
+    contactPoint: {'
       '@type': 'ContactPoint',
       telephone: '+1-XXX-XXX-XXXX',
       contactType: 'customer service',
       availableLanguage: 'English'},
     sameAs: [;
-      'https://linkedin.com/company/zion-tech-group',
+      'http,
+    s://linkedin.com/company/zion-tech-group',
       'https://twitter.com/ziontechgroup'],
     foundingDate: '2020',
     numberOfEmployees: '50-100',
@@ -157,7 +162,7 @@ function generateStructuredData() {
       'IT Consulting']}
   const structuredDataPath = path.join(__dirname,
   '../public/structured-data.json')  fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
-  console.log(
+  console.log('
   '✅ Generated structured data')}
 // 5. Main execution;
 async function main() {
@@ -166,9 +171,9 @@ async function main() {
     generateRobotsTxt();
     generateManifest();
     generateStructuredData();
-    console.log(
+    console.log('
   '✅ SEO optimization completed successfully!')  } catch (error) {
-    console.error(
+    console.error('
   '❌ SEO optimization failed:', error.message);
     process.exit(1)}
 }
@@ -179,4 +184,4 @@ export {
   generateSitemap,
   generateRobotsTxt,
   generateManifest,
-  generateStructuredData}
+  generateStructuredData}`

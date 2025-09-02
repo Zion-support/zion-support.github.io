@@ -4,17 +4,17 @@ async function handler(req, res) {
   if (req.method !==;
   'GET') {
     res.statusCode = 405;
-    res.setHeader(
+    res.setHeader('
   'Allow',
   'GET');
-    res.end(
+    res.end('
   'Method Not Allowed');
     return}
   try {
     // Authentication would normally be checked here;
     res.statusCode = 200;
     res.json({ points: 0, history: [] })} catch (err) {
-    console.error(
+    console.error('
   'Wallet API error:,
   , err);
     res.statusCode = 500;

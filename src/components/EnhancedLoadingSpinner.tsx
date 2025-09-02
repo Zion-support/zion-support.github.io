@@ -1,1 +1,1 @@
-interface EnhancedLoadingSpinnerProps {"
+interface EnhancedLoadingSpinnerProps {""

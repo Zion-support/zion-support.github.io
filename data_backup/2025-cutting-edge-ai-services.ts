@@ -17,27 +17,31 @@ export const cuttingEdgeAIServices2025 = [{
   'Consciousness level assessment and progression tracking';
     ],
     pricing: {
-starter: {
-        price: 399,
+starte,
+    r: {
+        pric,
+    e: 399,
         period:,
   month',
-        features: [
+        features: ['
   'Basic consciousness development,
   'Up to 200 interactions/month',
   'Standard analytics',
   'Email support']},
       professional: {
-        price: 999,
+        pric,
+    e: 999,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced consciousness models,
   'Unlimited interactions',
   'Custom training',
   'Priority support',
   'API access']},
       enterprise: {
-        price: 2499,
+        pric,
+    e: 2499,
         period:,
   month',
         features: [;
@@ -54,9 +58,11 @@ starter: {
   'Emotional Intelligence',
   'Self-Awareness',
   'Human-AI Collaboration'],
-    website: 'https://ziontechgroup.com/ai-consciousness-evolution-pro,
+    website: 'http,
+    s://ziontechgroup.com/ai-consciousness-evolution-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -78,13 +84,13 @@ starter: {
   'AI development tools',
   'Neuroscience equipment',
   'Academic databases'],
-    compliance[
+    compliance['
   'GDPR',
   'CCPA',
   'SOC2',
   'ISO 27001',
   'Research ethics standards']},
-  {
+  {'
     id: 'quantum-ai-fusion-platform,
     name:,
   Quantum AI Fusion Platform',
@@ -102,27 +108,31 @@ starter: {
   'API access for quantum computing resources and services';
     ],
     pricing: {
-starter: {
-        price: 799,
+starte,
+    r: {
+        pric,
+    e: 799,
         period:,
   month',
-        features: [
+        features: ['
   'Basic quantum-AI processing,
   'Up to 200 quantum operations/month',
   'Standard analytics',
   'Email support']},
       professional: {
-        price: 1999,
+        pric,
+    e: 1999,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced quantum-AI models,
   'Unlimited quantum operations',
   'Custom algorithms',
   'Priority support',
   'API access']},
       enterprise: {
-        price: 4999,
+        pric,
+    e: 4999,
         period:,
   month',
         features: [;
@@ -139,9 +149,11 @@ starter: {
   'Machine Learning',
   'Pattern Recognition',
   'Hybrid Computing'],
-    website: 'https://ziontechgroup.com/quantum-ai-fusion-platform,
+    website: 'http,
+    s://ziontechgroup.com/quantum-ai-fusion-platform,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -163,13 +175,13 @@ starter: {
   'Cloud services',
   'Research tools',
   'Enterprise systems'],
-    compliance[
+    compliance['
   'SOC2',
   'ISO 27001',
   'FedRAMP',
   'GDPR',
   'CCPA']},
-  {
+  {'
     id: 'ai-autonomous-ecosystem,
     name:,
   AI Autonomous Ecosystem',
@@ -187,27 +199,31 @@ starter: {
   'Intelligent integration and API management';
     ],
     pricing: {
-starter: {
-        price: 599,
+starte,
+    r: {
+        pric,
+    e: 599,
         period:,
   month',
-        features: [
+        features: ['
   'Basic autonomous features,
   'Up to 100 autonomous operations/month',
   'Standard monitoring',
   'Email support']},
       professional: {
-        price: 1499,
+        pric,
+    e: 1499,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced autonomous capabilities,
   'Unlimited operations',
   'Custom workflows',
   'Priority support',
   'API access']},
       enterprise: {
-        price: 3999,
+        pric,
+    e: 3999,
         period:,
   month',
         features: [;
@@ -224,9 +240,11 @@ starter: {
   'Self-Management',
   'Machine Learning',
   'Automation'],
-    website: 'https://ziontechgroup.com/ai-autonomous-ecosystem,
+    website: 'http,
+    s://ziontechgroup.com/ai-autonomous-ecosystem,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -248,13 +266,13 @@ starter: {
   'IoT devices',
   'AI frameworks',
   'Monitoring tools'],
-    compliance[
+    compliance['
   'SOC2',
   'ISO 27001',
   'FedRAMP',
   'GDPR',
   'CCPA']},
-  {
+  {'
     id: 'ai-ethics-governance-platform,
     name:,
   AI Ethics & Governance Platform',
@@ -272,27 +290,31 @@ starter: {
   'Integration with regulatory frameworks and standards';
     ],
     pricing: {
-starter: {
-        price: 299,
+starte,
+    r: {
+        pric,
+    e: 299,
         period:,
   month',
-        features: [
+        features: ['
   'Basic ethics monitoring,
   'Up to 50 AI models',
   'Standard reporting',
   'Email support']},
       professional: {
-        price: 799,
+        pric,
+    e: 799,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced ethics tools,
   'Unlimited models',
   'Custom frameworks',
   'Priority support',
   'API access']},
       enterprise: {
-        price: 1999,
+        pric,
+    e: 1999,
         period:,
   month',
         features: [;
@@ -309,9 +331,11 @@ starter: {
   'Bias Detection',
   'Fairness',
   'Compliance'],
-    website: 'https://ziontechgroup.com/ai-ethics-governance-platform,
+    website: 'http,
+    s://ziontechgroup.com/ai-ethics-governance-platform,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -333,13 +357,13 @@ starter: {
   'Monitoring systems',
   'Reporting tools',
   'Training platforms'],
-    compliance[
+    compliance['
   'SOC2',
   'ISO 27001',
   'GDPR',
   'CCPA',
   'AI ethics standards']},
-  {
+  {'
     id: 'ai-creativity-studio-pro,
     name:,
   AI Creativity Studio Pro',
@@ -357,27 +381,31 @@ starter: {
   'Real-time creative collaboration and feedback';
     ],
     pricing: {
-starter: {
-        price: 199,
+starte,
+    r: {
+        pric,
+    e: 199,
         period:,
   month',
-        features: [
+        features: ['
   'Basic creative tools,
   'Up to 100 creations/month',
   'Standard templates',
   'Email support']},
       professional: {
-        price: 599,
+        pric,
+    e: 599,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced creative capabilities,
   'Unlimited creations',
   'Custom models',
   'Priority support',
   'API access']},
       enterprise: {
-        price: 1499,
+        pric,
+    e: 1499,
         period:,
   month',
         features: [;
@@ -394,9 +422,11 @@ starter: {
   'Content Generation',
   'Design',
   'Innovation'],
-    website: 'https://ziontechgroup.com/ai-creativity-studio-pro,
+    website: 'http,
+    s://ziontechgroup.com/ai-creativity-studio-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -419,7 +449,7 @@ integrations: [;
   'Marketing platforms',
   'Content management systems',
   'Collaboration tools'],
-    compliance: [
+    compliance: ['
   'SOC2,
   'ISO 27001',
   'GDPR',

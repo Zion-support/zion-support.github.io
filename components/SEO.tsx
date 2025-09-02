@@ -3,7 +3,8 @@ import Head from 'next/head';
 
 interface SEOProps {
   title: string;
-  description: string;
+  descriptio,
+    n: string;
   keywords?: string;
   image?: string;
   url?: string;
@@ -19,14 +20,14 @@ const SEO: React.FC<SEOProps> = ({
   url,
   type = 'website',
   siteName = 'Zion Tech Group'
-}) => {
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+}) => {'
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;`
   const fullImage = image || '/images/og-image.jpg';
   const fullUrl = url || 'https://ziontechgroup.com';
 
   return (
     <Head>
-      <title>{fullTitle}</title>
+      <title>{fullTitle}</title>'
       <meta name='description' content={description} />
       {keywords && <meta name='keywords' content={keywords} />}
       {/* Open Graph */}
@@ -38,7 +39,8 @@ const SEO: React.FC<SEOProps> = ({
       <meta property='og:site_name' content={siteName} />
       {/* Twitter */}
       <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:title' content={fullTitle} />
+      <meta name='twitte,
+    r:title' content={fullTitle} />
       <meta name='twitter:description' content={description} />
       <meta name='twitter:image' content={fullImage} />
       {/* Additional meta tags */}
@@ -46,17 +48,18 @@ const SEO: React.FC<SEOProps> = ({
       <meta name='robots' content='index, follow' />
       <link rel='canonical' href={fullUrl} />
       {/* JSON-LD Structured Data */}
-      <script
+      <script'
         type='application/ld+json'
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
+          __html: JSON.stringify({'
+            '@context': 'http,
+    s://schema.org',
             '@type': 'Organization',
             'name': siteName,
             'url': 'https://ziontechgroup.com',
             'logo': 'https://ziontechgroup.com/images/logo.png',
             'description': 'Leading technology solutions provider specializing in AI, quantum computing, and innovative micro SAAS services.',
-            'address': {
+            'address': {'
               '@type': 'PostalAddress',
               'streetAddress': '364 E Main St STE 1008',
               'addressLocality': 'Middletown',
@@ -64,18 +67,18 @@ const SEO: React.FC<SEOProps> = ({
               'postalCode': '19709',
               'addressCountry': 'US'
             },
-            'contactPoint': {
+            'contactPoint': {'
               '@type': 'ContactPoint',
               'telephone': '+1-302-464-0950',
               'contactType': 'customer service',
               'email': 'kleber@ziontechgroup.com'
             },
-            'sameAs': [
+            'sameAs': ['
               'https://linkedin.com/company/ziontechgroup',
               'https://twitter.com/ziontechgroup',
               'https://github.com/ziontechgroup'
             ]
-          })
+          });
         }}
       />
     </Head>

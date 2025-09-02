@@ -1,5 +1,5 @@
 'use client';
-
+'
 import { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -7,8 +7,10 @@ interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
   cls: number | null;
-  ttfb: number | null;
-  loadTime: number | null;
+  ttf,
+    b: number | null;
+  loadTim,
+    e: number | null;
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -24,7 +26,7 @@ const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Only show in development or when explicitly enabled
+    // Only show in development or when explicitly enabled'
     if (process.env.NODE_ENV === 'development' || process.env.NEXT_PUBLIC_SHOW_PERFORMANCE === 'true') {
       setIsVisible(true);
     }
@@ -85,7 +87,7 @@ const PerformanceMonitor: React.FC = () => {
       });
       navigationObserver.observe({ entryTypes: ['navigation'] });
 
-      // Measure page load time
+      // Measure page load time'
       window.addEventListener('load', () => {
         const loadTime = performance.now();
         setMetrics(prev => ({ ...prev, loadTime }));
@@ -105,9 +107,9 @@ const PerformanceMonitor: React.FC = () => {
     return null;
   }
 
-  return (
-    <div className="fixed bottom-4 left-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
-      <div className="mb-2 font-bold">Performance Monitor</div>
+  return ('
+    <div className="fixed bottom-4 left-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">"
+      <div className="mb-2 font-bold">Performance Monitor</div>"
       <div className="space-y-1">
         {metrics.fcp !== null && (
           <div>FCP: {metrics.fcp.toFixed(2)}ms</div>
@@ -132,4 +134,4 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 
-export default PerformanceMonitor;
+export default PerformanceMonitor;"

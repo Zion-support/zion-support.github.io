@@ -6,13 +6,15 @@ import tsparser from '@typescript-eslint/parser';
 
 export default [
   js.configs.recommended,
-  {
-    files: ['**/*.{js,jsx}'],
+  {'
+    files: ['**/*.{js,jsx}],
     languageOptions: {
-      ecmaVersion: 2021,
+      ecmaVersio,
+    n: 2021,
       sourceType: 'module',
-      globals: {
-        window: 'readonly',
+      globals: {'
+        windo,
+    w: 'readonly',
         document: 'readonly',
         navigator: 'readonly',
         localStorage: 'readonly',
@@ -49,8 +51,10 @@ export default [
         React: 'readonly',
       },
       parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
+        ecmaFeature,
+    s: {
+          js,
+    x: true,
         },
       },
     },
@@ -58,7 +62,7 @@ export default [
       react,
       'react-hooks': reactHooks,
     },
-    rules: {
+    rules: {'
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'no-unused-vars': 'warn',
@@ -66,24 +70,30 @@ export default [
       'no-undef': 'error',
     },
     settings: {
-      react: {
-        version: 'detect',
+      reac,
+    t: {'
+        versio,
+    n: 'detect',
       },
     },
   },
-  {
-    files: ['**/*.{ts,tsx}'],
+  {'
+    files: ['**/*.{ts,tsx}],
     languageOptions: {
-      ecmaVersion: 2021,
+      ecmaVersio,
+    n: 2021,
       sourceType: 'module',
       parser: tsparser,
       parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
+        ecmaFeature,
+    s: {
+          js,
+    x: true,
         },
       },
-      globals: {
-        window: 'readonly',
+      globals: {'
+        windo,
+    w: 'readonly',
         document: 'readonly',
         navigator: 'readonly',
         localStorage: 'readonly',
@@ -132,10 +142,10 @@ export default [
       'react-hooks': reactHooks,
       '@typescript-eslint': tseslint,
     },
-    rules: {
+    rules: {'
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      '@typescript-eslint/no-unused-vars': [
+      '@typescript-eslint/no-unused-vars': ['
         'warn',
         { argsIgnorePattern: '^_' },
       ],
@@ -146,13 +156,15 @@ export default [
       'no-undef': 'off',
     },
     settings: {
-      react: {
-        version: 'detect',
+      reac,
+    t: {'
+        versio,
+    n: 'detect',
       },
     },
   },
   {
-    ignores: [
+    ignores: ['
       'src/**',
       'components/**',
       'backup-pages/**',
@@ -278,3 +290,4 @@ export default [
     ],
   },
 ];
+'

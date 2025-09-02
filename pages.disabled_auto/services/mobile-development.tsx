@@ -2,46 +2,48 @@ import React from 'react';
 import Link from 'next/link';
 
 export default function MobileDevelopment() {
-  return (
-    <div className="bg-white">
-      <section className="container mx-auto px-4 py-12 max-w-6xl">
+  return ('
+    <div className="bg-white">"
+      <section className="container mx-auto px-4 py-12 max-w-6xl">"
         <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900">
           Mobile Development
-        </h1>
+        </h1>"
         <p className="mt-4 text-lg text-gray-600">
           Native-quality cross-platform apps with React Native and Expo.
           Offline-first, push notifications, analytics, and CI/CD.
         </p>
-      </section>
-      <section className="bg-gray-50 border-t border-b border-gray-100">
-        <div className="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
+      </section>"
+      <section className="bg-gray-50 border-t border-b border-gray-100">"
+        <div className="container mx-auto px-4 py-12 grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-6 max-w-6xl">
           {[
-            {
-              title: 'MVP Build',
+            {"
+              titl,
+    e: 'MVP Build',
               desc: 'Core features, auth, APIs, app store deploy.',
               price: '$20,000–$80,000',
             },
-            {
+            {'
               title: 'Feature Development',
               desc: 'Payments, chat, maps, media, deep links.',
               price: '$5,000–$25,000/feature',
             },
-            {
+            {'
               title: 'App Modernization',
               desc: 'Upgrade RN/Expo, performance, crash-free sessions.',
               price: '$6,000–$30,000',
             },
-            {
+            {'
               title: 'Mobile CI/CD',
               desc: 'EAS, Fastlane, OTA updates, release automation.',
               price: '$4,000–$12,000',
             },
-            {
+            {'
               title: 'App Analytics',
               desc: 'Events, funnels, retention, cohorts.',
               price: '$2,000–$8,000',
             },
-            {
+            {'
               title: 'Maintenance',
               desc: 'SLA-based support and monitoring.',
               price: '$3,000–$12,000/mo',
@@ -50,22 +52,24 @@ export default function MobileDevelopment() {
             <div
               key={item.title}
               className="p-6 bg-white rounded-xl shadow-sm border border-gray-100"
-            >
+            >"
               <h3 className="text-xl font-semibold text-gray-900">
                 {item.title}
-              </h3>
-              <p className="mt-2 text-gray-600">{item.desc}</p>
+              </h3>"
+              <p className="mt-2 text-gray-600">{item.desc}</p>"
               <p className="mt-4 text-gray-900 font-medium">
                 Typical budget: {item.price}
               </p>
             </div>
-          ))}
+          ));
         </div>
-      </section>
-      <section className="container mx-auto px-4 py-12 max-w-6xl">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Stack</h2>
-        <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
-          {[
+      </section>"
+      <section className="container mx-auto px-4 py-12 max-w-6xl">"
+        <h2 className="text-2xl md: text-3xl font-bold text-gray-900">Stack</h2>"
+        <div className="mt-6 grid grid-cols-2 m,
+    d:grid-cols-3 l,
+    g:grid-cols-6 gap-3 text-sm">
+          {["
             'React Native',
             'Expo',
             'TypeScript',
@@ -82,11 +86,11 @@ export default function MobileDevelopment() {
             >
               {t}
             </div>
-          ))}
-        </div>
+          ));
+        </div>"
         <div className="mt-6">
-          <Link
-            href="/contact"
+          <Link"
+            href="/contact""
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold"
           >
             Book a discovery call
@@ -96,3 +100,4 @@ export default function MobileDevelopment() {
     </div>
   );
 }
+"

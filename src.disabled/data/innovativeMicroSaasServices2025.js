@@ -41,9 +41,11 @@ export const innovativeMicroSaasServices2025 = [{
       'Encryption',
       'Simulation';
     ],
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: {'
+      phon,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com'}
+      website: 'http,
+    s://ziontechgroup.com'}
   }
 ];

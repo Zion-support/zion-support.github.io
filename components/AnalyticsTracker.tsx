@@ -1,31 +1,34 @@
 import React, { useEffect } from 'react';
 import { Home } from 'lucide-react';
-
+'
 import Head from 'next/head';
 interface AnalyticsTrackerProps {
   pageName?: string;
   customEvents?: Array<{
     event: string;
-    category: string;
-    action: string;
+    categor,
+    y: string;
+    actio,
+    n: string;
     label?: string;
     value?: number;
   }>;
 }
 
-const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
+const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
   pageName = 'Home',
   customEvents = [],
 }) => {
   useEffect(() => {
     // Enhanced analytics tracking
-    const trackPageView = () => {
-      if (typeof window !== 'undefined' && window.gtag) {
+    const trackPageView = () => {'
+      if (typeof window !== 'undefined' && window.gtag) {'
         window.gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: pageName,
           page_location: window.location.href,
-          custom_map: {
-            custom_parameter_1: 'zion_tech_group',
+          custom_map: {'
+            custom_parameter_,
+    1: 'zion_tech_group',
           },
         });
       }
@@ -39,9 +42,9 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           const timeSpent = Date.now() - startTime;
           if (timeSpent > 30000) {
             // 30 seconds
-            // Track meaningful engagement
-            if (typeof window !== 'undefined' && window.gtag) {
-              window.gtag('event', 'engagement', {
+            // Track meaningful engagement'
+            if (typeof window !== 'undefined' && window.gtag) {'
+              window.gtag('event', 'engagement', {'
                 event_category: 'user_behavior',
                 event_label: 'meaningful_engagement',
                 value: Math.floor(timeSpent / 1000),
@@ -55,8 +58,8 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       const handleBeforeUnload = () => {
         isActive = false;
         const timeSpent = Date.now() - startTime;
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'page_exit', {
+        if (typeof window !== 'undefined' && window.gtag) {'
+          window.gtag('event', 'page_exit', {'
             event_category: 'user_behavior',
             event_label: 'time_on_page',
             value: Math.floor(timeSpent / 1000),
@@ -71,25 +74,25 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
             100
         );
 
-        if (scrollDepth >= 25 && scrollDepth < 50) {
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'scroll', {
+        if (scrollDepth >= 25 && scrollDepth < 50) {'
+          if (typeof window !== 'undefined' && window.gtag) {'
+            window.gtag('event', 'scroll', {'
               event_category: 'user_behavior',
               event_label: '25_percent_scroll',
               value: scrollDepth,
             });
           }
-        } else if (scrollDepth >= 50 && scrollDepth < 75) {
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'scroll', {
+        } else if (scrollDepth >= 50 && scrollDepth < 75) {'
+          if (typeof window !== 'undefined' && window.gtag) {'
+            window.gtag('event', 'scroll', {'
               event_category: 'user_behavior',
               event_label: '50_percent_scroll',
               value: scrollDepth,
             });
           }
-        } else if (scrollDepth >= 75) {
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'scroll', {
+        } else if (scrollDepth >= 75) {'
+          if (typeof window !== 'undefined' && window.gtag) {'
+            window.gtag('event', 'scroll', {'
               event_category: 'user_behavior',
               event_label: '75_percent_scroll',
               value: scrollDepth,
@@ -102,11 +105,11 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         const target = e.target as HTMLElement;
         if (target.tagName === 'BUTTON' || target.closest('button')) {
           const buttonText =
-            target.textContent ||
-            target.closest('button')?.textContent ||
+            target.textContent ||'
+            target.closest('button')?.textContent ||'
             'Unknown';
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'click', {
+          if (typeof window !== 'undefined' && window.gtag) {'
+            window.gtag('event', 'click', {'
               event_category: 'button_click',
               event_label: buttonText,
               page_title: pageName,
@@ -121,13 +124,13 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           | HTMLInputElement
           | HTMLTextAreaElement
           | HTMLSelectElement;
-        if (
-          target.tagName === 'INPUT' ||
-          target.tagName === 'TEXTAREA' ||
+        if ('
+          target.tagName === 'INPUT' ||'
+          target.tagName === 'TEXTAREA' ||'
           target.tagName === 'SELECT'
-        ) {
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'form_interaction', {
+        ) {'
+          if (typeof window !== 'undefined' && window.gtag) {'
+            window.gtag('event', 'form_interaction', {'
               event_category: 'form_engagement',
               event_label: target.name || target.id || 'unknown_field',
               page_title: pageName,
@@ -136,14 +139,14 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         }
       };
 
-      // Set up event listeners
+      // Set up event listeners'
       window.addEventListener('beforeunload', handleBeforeUnload);
       window.addEventListener('scroll', trackScrollDepth, { passive: true });
       document.addEventListener('click', trackButtonClicks);
       document.addEventListener('focus', trackFormInteractions, true);
       // Track time on page every 30 seconds
       const interval = setInterval(trackTimeOnPage, 30000);
-      return () => {
+      return () => {'
         window.removeEventListener('beforeunload', handleBeforeUnload);
         window.removeEventListener('scroll', trackScrollDepth);
         document.removeEventListener('click', trackButtonClicks);
@@ -154,8 +157,8 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
 
     // Track custom events
     const trackCustomEvents = () => {
-      customEvents.forEach(event => {
-        if (typeof window !== 'undefined' && window.gtag) {
+      customEvents.forEach(event => {'
+        if (typeof window !== 'undefined' && window.gtag) {'
           window.gtag('event', event.event, {
             event_category: event.category,
             event_label: event.label,
@@ -176,46 +179,48 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     <Head>
       {/* Google Analytics 4 */}
       <script
-        async
+        async'
         src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
       />
       <script
-        dangerouslySetInnerHTML={{
-          __html: `
+        dangerouslySetInnerHTML={{"
+          __htm,
+    l: `
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments)}
+            function gtag(){dataLayer.push(arguments)}`
             gtag('js', new Date());
-            gtag('config', 'GA_MEASUREMENT_ID', {
-              page_title: '${pageName}', page_location: window.location.href,
+            gtag('config', 'GA_MEASUREMENT_ID', {'
+              page_title: '${pageName}, page_location: window.location.href,
               send_page_view: true
-            })
+            });
           `,
         }}
       />
       {/* Enhanced E-commerce Tracking */}
       <script
-        dangerouslySetInnerHTML={{
+        dangerouslySetInnerHTML={{`
           __html: `
             // Track service interest
-            function trackServiceInterest(serviceName, category) {
-              gtag('event', 'view_item', {
+            function trackServiceInterest(serviceName, category) {`
+              gtag('event', 'view_item', {'
                 event_category: 'service_interest', event_label: serviceName,
                 items: [{
-                  item_id: serviceName, item_name: serviceName,
+                  item_i,
+    d: serviceName, item_name: serviceName,
                   item_category: category, item_brand: 'Zion Tech Group'
                 }]
               })}
 
             // Track contact form submissions
-            function trackContactSubmission(formType) {
-              gtag('event', 'generate_lead', {
+            function trackContactSubmission(formType) {'
+              gtag('event', 'generate_lead', {'
                 event_category: 'contact', event_label: formType,
                 value: 1
               })}
 
             // Track demo requests
-            function trackDemoRequest(demoType) {
-              gtag('event', 'request_demo', {
+            function trackDemoRequest(demoType) {'
+              gtag('event', 'request_demo', {'
                 event_category: 'demo', event_label: demoType,
                 value: 1
               })}
@@ -227,3 +232,4 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
 };
 
 export default AnalyticsTracker;
+`

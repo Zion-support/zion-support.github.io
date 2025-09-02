@@ -3,8 +3,10 @@
 export interface ServiceContact {
   phone: string;
    email: string;
-   website: string;
-   address: string}
+   websit,
+    e: string;
+   addres,
+    s: string}
 export interface MicroSaasService {
   id: string;
    name: string;
@@ -27,8 +29,10 @@ export interface MicroSaasService {
    freeTier: boolean;
    trialPeriod: string;
    innovationLevel: string;
-   marketSize: string;
-   growthRate: string}
+   marketSiz,
+    e: string;
+   growthRat,
+    e: string}
 export interface ITService {
   id: string;
    name: string;
@@ -48,8 +52,10 @@ export interface ITService {
    deliveryTime: string;
    support: string;
    innovationLevel: string;
-   marketSize: string;
-   compliance: string[]}
+   marketSiz,
+    e: string;
+   complianc,
+    e: string[]}
 export interface AIService {
   id: string;
    name: string;
@@ -74,8 +80,10 @@ export interface AIService {
    technicalSpecs?: { technology: string[];
    integrations: string[];
    apiEndpoints: number;
-   uptime: string;
-   security: string[]}
+   uptim,
+    e: string;
+   securit,
+    y: string[]}
   competitors?: string[];
   marketSize?: string;
   aiCapabilities?: string[];
@@ -103,23 +111,27 @@ export interface InnovativeMicroSaasService {
    technicalSpecs?: { technology: string[];
    integrations: string[];
    apiEndpoints: number;
-   uptime: string;
-   security: string[]}
+   uptim,
+    e: string;
+   securit,
+    y: string[]}
   competitors?: string[];
   marketSize?: string}
 // Contact Information;
 export const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  website: 'https://ziontechgroup.com',
+  website: 'http,
+    s://ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'}
 // All Services Combined;
 export const allServices: (
   | InnovativeMicroSaasService;
   | ITService;
   | AIService)[] = [;
-  // AI-Powered Business Intelligence Platform{
-    id: 'ai-business-intelligence-platform',
+  // AI-Powered Business Intelligence Platform{'
+    i,
+    d: 'ai-business-intelligence-platform',
     title: 'AI Business Intelligence Platform',
     description:;
       'Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights, and create actionable reports for business decision-making.',
@@ -169,8 +181,9 @@ export const allServices: (
     roi: '250-400%',
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
-    technicalSpecs: {
-      technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL'],
+    technicalSpecs: {'
+      technolog,
+    y: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL'],
       integrations: [;
         'Salesforce',
         'HubSpot',
@@ -182,7 +195,7 @@ export const allServices: (
       security: ['SOC 2', 'GDPR', 'HIPAA', 'End-to-end encryption']},
     competitors: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
     marketSize: '$29.9 billion by 2025'},
-  // AI-Powered Autonomous DevOps Platform{
+  // AI-Powered Autonomous DevOps Platform{'
     id: 'ai-autonomous-devops-platform',
     title: 'AI Autonomous DevOps Platform',
     description:;
@@ -229,7 +242,8 @@ export const allServices: (
     innovationLevel: 'Cutting-edge',
     contactInfo: contactInfo,
     technicalSpecs: {
-      technology: [;
+      technolog,
+    y: [;
         'Kubernetes',
         'Docker',
         'Terraform',
@@ -241,7 +255,7 @@ export const allServices: (
       security: ['Zero-trust architecture', 'SOC 2 Type II', 'ISO 27001']},
     competitors: ['DataDog', 'New Relic', 'Splunk', 'Elastic'],
     marketSize: '$8.2 billion by 2026'},
-  // Quantum AI Hybrid Platform{
+  // Quantum AI Hybrid Platform{'
     id: 'quantum-ai-hybrid-platform',
     title: 'Quantum AI Hybrid Platform',
     description:;
@@ -288,7 +302,8 @@ export const allServices: (
     innovationLevel: 'Revolutionary',
     contactInfo: contactInfo,
     technicalSpecs: {
-      technology: [;
+      technolog,
+    y: [;
         'Qiskit',
         'TensorFlow',
         'Python',
@@ -311,7 +326,7 @@ export const allServices: (
       'D-Wave Systems',
       'Rigetti Computing'],
     marketSize: '$65 billion by 2030'},
-  // AI-Powered Autonomous Manufacturing Platform{
+  // AI-Powered Autonomous Manufacturing Platform{'
     id: 'ai-autonomous-manufacturing-platform',
     title: 'AI Autonomous Manufacturing Platform',
     description:;
@@ -363,7 +378,8 @@ export const allServices: (
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
     technicalSpecs: {
-      technology: [;
+      technolog,
+    y: [;
         'Computer Vision',
         'Machine Learning',
         'IoT Sensors',
@@ -387,7 +403,7 @@ export const allServices: (
       'PTC ThingWorx',
       'SAP Leonardo'],
     marketSize: '$12.3 billion by 2027'},
-  // Blockchain Supply Chain Transparency Platform{
+  // Blockchain Supply Chain Transparency Platform{'
     id: 'blockchain-supply-chain-transparency',
     title: 'Blockchain Supply Chain Transparency Platform',
     description:;
@@ -439,7 +455,8 @@ export const allServices: (
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
     technicalSpecs: {
-      technology: [;
+      technolog,
+    y: [;
         'Ethereum',
         'Hyperledger Fabric',
         'IPFS',
@@ -458,7 +475,7 @@ export const allServices: (
       'Walmart Blockchain',
       'Maersk TradeLens'],
     marketSize: '$3.3 billion by 2028'},
-  // AI-Powered Cybersecurity Threat Intelligence{
+  // AI-Powered Cybersecurity Threat Intelligence{'
     id: 'ai-cybersecurity-threat-intelligence',
     title: 'AI-Powered Cybersecurity Threat Intelligence',
     description:;
@@ -510,7 +527,8 @@ export const allServices: (
     innovationLevel: 'Cutting-edge',
     contactInfo: contactInfo,
     technicalSpecs: {
-      technology: [;
+      technolog,
+    y: [;
         'TensorFlow',
         'PyTorch',
         'Elasticsearch',
@@ -531,7 +549,7 @@ export const allServices: (
         'GDPR compliance']},
     competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance'],
     marketSize: '$15.8 billion by 2027'},
-  // IoT Edge Computing Platform{
+  // IoT Edge Computing Platform{'
     id: 'iot-edge-computing-platform',
     title: 'IoT Edge Computing Platform',
     description:;
@@ -582,8 +600,9 @@ export const allServices: (
     roi: '250-450%',
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
-    technicalSpecs: {
-      technology: ['Kubernetes', 'Docker', 'TensorFlow Lite', 'MQTT', 'WebRTC'],
+    technicalSpecs: {'
+      technolog,
+    y: ['Kubernetes', 'Docker', 'TensorFlow Lite', 'MQTT', 'WebRTC'],
       integrations: [;
         'AWS IoT',
         'Azure IoT',
@@ -603,7 +622,7 @@ export const allServices: (
       'Google Cloud IoT Edge',
       'FogHorn'],
     marketSize: '$18.7 billion by 2028'},
-  // AI-Powered Customer Experience Optimization{
+  // AI-Powered Customer Experience Optimization{'
     id: 'ai-customer-experience-optimization',
     title: 'AI-Powered Customer Experience Optimization',
     description:;
@@ -654,8 +673,9 @@ export const allServices: (
     roi: '300-500%',
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
-    technicalSpecs: {
-      technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'Redis'],
+    technicalSpecs: {'
+      technolog,
+    y: ['Python', 'TensorFlow', 'React', 'Node.js', 'Redis'],
       integrations: ['Salesforce', 'HubSpot', 'Shopify', 'Zendesk', 'Intercom'],
       apiEndpoints: 200,
       uptime: '99.9%',
@@ -666,7 +686,7 @@ export const allServices: (
         'Privacy by design']},
     competitors: ['Segment', 'Optimizely', 'Dynamic Yield', 'Evergage'],
     marketSize: '$11.8 billion by 2026'},
-  // Quantum Financial Trading Platform{
+  // Quantum Financial Trading Platform{'
     id: 'quantum-financial-trading-platform',
     title: 'Quantum Financial Trading Platform',
     description:;
@@ -718,7 +738,8 @@ export const allServices: (
     innovationLevel: 'Revolutionary',
     contactInfo: contactInfo,
     technicalSpecs: {
-      technology: [;
+      technolog,
+    y: [;
         'Qiskit',
         'Python',
         'C++',
@@ -743,7 +764,7 @@ export const allServices: (
       'Citadel Securities',
       'Two Sigma'],
     marketSize: '$45 billion by 2030'},
-  // AI-Powered Healthcare Analytics Platform{
+  // AI-Powered Healthcare Analytics Platform{'
     id: 'ai-healthcare-analytics-platform',
     title: 'AI-Powered Healthcare Analytics Platform',
     description:;
@@ -795,7 +816,8 @@ export const allServices: (
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
     technicalSpecs: {
-      technology: [;
+      technolog,
+    y: [;
         'TensorFlow',
         'PyTorch',
         'Python',
@@ -820,7 +842,7 @@ export const allServices: (
       'Microsoft Healthcare',
       'Cerner'],
     marketSize: '$36.1 billion by 2027'},
-  // AI-Powered Autonomous Research Assistant{
+  // AI-Powered Autonomous Research Assistant{'
     id: 'ai-autonomous-research-assistant',
     title: 'AI-Powered Autonomous Research Assistant',
     description:;
@@ -871,8 +893,9 @@ export const allServices: (
     roi: '300-500%',
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
-    technicalSpecs: {
-      technology: ['GPT-4', 'BERT', 'Python', 'Elasticsearch', 'PostgreSQL'],
+    technicalSpecs: {'
+      technolog,
+    y: ['GPT-4', 'BERT', 'Python', 'Elasticsearch', 'PostgreSQL'],
       integrations: [;
         'PubMed',
         'Google Scholar',
@@ -888,7 +911,7 @@ export const allServices: (
         'Compliance monitoring']},
     competitors: ['Semantic Scholar', 'ResearchGate', 'Mendeley', 'Zotero'],
     marketSize: '$8.5 billion by 2026'},
-  // Quantum Machine Learning Platform{
+  // Quantum Machine Learning Platform{'
     id: 'quantum-machine-learning-platform',
     title: 'Quantum Machine Learning Platform',
     description:;
@@ -940,7 +963,8 @@ export const allServices: (
     innovationLevel: 'Revolutionary',
     contactInfo: contactInfo,
     technicalSpecs: {
-      technology: [;
+      technolog,
+    y: [;
         'Qiskit',
         'TensorFlow',
         'PyTorch',
@@ -966,7 +990,7 @@ export const allServices: (
       'Rigetti',
       'Xanadu'],
     marketSize: '$75 billion by 2030'},
-  // AI-Powered Content Creation Suite{
+  // AI-Powered Content Creation Suite{'
     id: 'ai-content-creation-suite',
     title: 'AI-Powered Content Creation Suite',
     description:;
@@ -1012,8 +1036,9 @@ export const allServices: (
     roi: '200-400%',
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
-    technicalSpecs: {
-      technology: ['GPT-4', 'Claude', 'Python', 'React', 'Node.js'],
+    technicalSpecs: {'
+      technolog,
+    y: ['GPT-4', 'Claude', 'Python', 'React', 'Node.js'],
       integrations: [;
         'WordPress',
         'Shopify',
@@ -1029,7 +1054,7 @@ export const allServices: (
         'Access control']},
     competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'ContentBot', 'Rytr'],
     marketSize: '$15.2 billion by 2027'},
-  // Blockchain Identity Management Platform{
+  // Blockchain Identity Management Platform{'
     id: 'blockchain-identity-management',
     title: 'Blockchain Identity Management Platform',
     description:;
@@ -1081,7 +1106,8 @@ export const allServices: (
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
     technicalSpecs: {
-      technology: [;
+      technolog,
+    y: [;
         'Ethereum',
         'Hyperledger Indy',
         'DID',
@@ -1102,7 +1128,7 @@ export const allServices: (
         'Compliance standards']},
     competitors: ['Microsoft Identity', 'Okta', 'Auth0', 'Sovrin', 'uPort'],
     marketSize: '$28.1 billion by 2028'},
-  // AI-Powered Predictive Maintenance Platform{
+  // AI-Powered Predictive Maintenance Platform{'
     id: 'ai-predictive-maintenance-platform',
     title: 'AI-Powered Predictive Maintenance Platform',
     description:;
@@ -1149,7 +1175,8 @@ export const allServices: (
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
     technicalSpecs: {
-      technology: [;
+      technolog,
+    y: [;
         'TensorFlow',
         'Python',
         'IoT platforms',
@@ -1174,7 +1201,7 @@ export const allServices: (
       'PTC ThingWorx',
       'IBM Watson IoT'],
     marketSize: '$23.5 billion by 2028'},
-  // Quantum Cryptography Platform{
+  // Quantum Cryptography Platform{'
     id: 'quantum-cryptography-platform',
     title: 'Quantum Cryptography Platform',
     description:;
@@ -1226,7 +1253,8 @@ export const allServices: (
     innovationLevel: 'Revolutionary',
     contactInfo: contactInfo,
     technicalSpecs: {
-      technology: [;
+      technolog,
+    y: [;
         'Quantum hardware',
         'Post-quantum algorithms',
         'Python',
@@ -1260,9 +1288,9 @@ export const itServices = allServices.filter(
   service =>;
     service.category === 'IT Services' ||;
     service.category === 'Quantum Technology');
-export const aiServices = allServices.filter(
+export const aiServices = allServices.filter('
   service => service.category === 'AI Services');
-export const quantumServices = allServices.filter(
+export const quantumServices = allServices.filter('
   service => service.category === 'Quantum Technology');
-export const blockchainServices = allServices.filter(
+export const blockchainServices = allServices.filter('
   service => service.category === 'Blockchain Technology');

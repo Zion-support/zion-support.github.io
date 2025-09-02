@@ -3,7 +3,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { AppLayout } from '@/layout/AppLayout';
 import AIMatcherPage from '@/pages/AIMatcher';
 
-test(
+test('
   'renders single navbar on AIMatcherPage', () => {
   const { container, asFragment } = render(
     <MemoryRouter>
@@ -12,6 +12,6 @@ test(
       </AppLayout>
     </MemoryRouter>
   );
-  expect(container.querySelectorAll(
-  '.navbar')).toHaveLength(1)
+  expect(container.querySelectorAll('
+  '.navbar')).toHaveLength(1);
   expect(asFragment()).toMatchSnapshot()})

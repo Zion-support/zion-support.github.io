@@ -4,3 +4,4 @@ const PerformanceMonitor = dynamic(() => import('./PerformanceMonitor'), {
 });
 
 export default PerformanceMonitor;
+'

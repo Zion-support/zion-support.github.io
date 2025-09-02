@@ -15,50 +15,50 @@ const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY ||;
 const supabase = createClient(supabaseUrl, serviceKey);
 export default async function handler(req, res) {
     const id = req.query?.id;
-    if (!id) {
+    if (!id) {'
   ';
 '';
 '';
   ';
-        res.status(400).json({ error: 'Missing id })';
-        return'}'';
+        res.status(400).json({ error: 'Missing id });
+        return'};
   ';
     if (req.method === 'PATCH;
-  ') {
+  ') {'
 ';
-        const { read } = req.body || {}';
+        const { read } = req.body || {};
         const { error } = await supabase'';
   ';
             .from('notifications;
-  ')'';
-            .update({ read: read !== false })'';
+  ')';
+            .update({ read: read !== false })';
   ';
             .eq('id;
   ', id);
         if (error) {
-            res.status(500).json({ error: error.message })
+            res.status(500).json({ error: error.message });
             return}
-        res.status(200).json({ success: true })';
-        return'}'';
+        res.status(200).json({ success: true });
+        return'};
   ';
     if (req.method === 'DELETE;
-  ') {
+  ') {'
 ';
 ';
   ';
         const { error } = await supabase'';
   ';
             .from('notifications;
-  ')'';
-            .delete()'';
+  ')';
+            .delete()';
   ';
             .eq('id;
   ', id);
         if (error) {
-            res.status(500).json({ error: error.message })
+            res.status(500).json({ error: error.message });
             return}
-        res.status(200).json({ success: true })
+        res.status(200).json({ success: true });
         return}
-    res.status(405).end()'}';
+    res.status(405).end()};
   ';
 ''';

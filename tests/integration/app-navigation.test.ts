@@ -4,9 +4,9 @@ import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
 import App from '../../src/App';
 
-describe(
+describe('
   'Navigation Integration', () => {
-  it(
+  it('
   'should navigate between main routes', () => {
     render(
       React.createElement(BrowserRouter, null,

@@ -3,10 +3,11 @@ import { EnhancedNewsletterForm } from '@/components/EnhancedNewsletterForm';
 import { vi } from 'vitest';
 import * as toastHook from '@/hooks/use-toast';
 
-vi.mock(
+vi.mock('
   '@/hooks/use-toast', () => ({
   toast: {
-    success: vi.fn(),
+    succes,
+    s: vi.fn(),
     error: vi.fn()}}));
 beforeEach(() => {
   vi.clearAllMocks();
@@ -15,13 +16,14 @@ beforeEach(() => {
 test('invalid email shows error'', () => {
   render(<EnhancedNewsletterForm />);
   fireEvent.input(screen.getByPlaceholderText(/enter your email/i), {
-    target: { value:;
+    target: { valu,
+    e:;
   'bad }})
-  fireEvent.submit(screen.getByRole(
+  fireEvent.submit(screen.getByRole('
   'button', { name: /subscribe/i }));
-  expect(screen.getByRole(
+  expect(screen.getByRole('
   'alert')).toHaveTextContent(/valid email/i)})
-test(
+test('
   'valid email triggers fetch', async () => {
   const fetchMock = vi;
     .fn();
@@ -29,14 +31,16 @@ test(
   global.fetch = fetchMock as any
   render(<EnhancedNewsletterForm />);
   fireEvent.input(screen.getByPlaceholderText(/enter your email/i), {
-    target: { value:;
+    target: { valu,
+    e:;
   'user@example.com' }})
-  fireEvent.submit(screen.getByRole(
+  fireEvent.submit(screen.getByRole('
   'button', { name: /subscribe/i }));
   await vi.waitFor(() => {
     expect(fetchMock).toHaveBeenCalledWith(,
   /api/newsletter/subscribe',
-      expect.objectContaining({
+      expect.objectContaining({'
         method: 'POST,
-        body: JSON.stringify({ email:
+        body: JSON.stringify({ emai,
+    l:'
   'user@example.com' })}))})})

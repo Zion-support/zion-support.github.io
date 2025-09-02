@@ -4,23 +4,28 @@ import { User } from 'lucide-react';
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
-  status: number;
+  statu,
+    s: number;
   message?: string;
 }
 
 interface User {
   id: string;
   email: string;
-  name: string;
-  role: 'admin' | 'user' | 'guest';
+  nam,
+    e: string;
+  rol,
+    e: 'admin' | 'user' | 'guest';
 }
 
 interface Service {
   id: string;
   name: string;
   description: string;
-  price: number;
-  category: string;
+  pric,
+    e: number;
+  categor,
+    y: string;
 }
 
 interface FormData {
@@ -46,30 +51,31 @@ const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Only run in browser environment;
     if (typeof window === 'undefined') return;
-    const metrics: PerformanceMetrics = {}
+    const metric,
+    s: PerformanceMetrics = {}
     // First Contentful Paint (FCP);
     const fcpObserver = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
+      for (const entry of list.getEntries()) {'
         if (entry.name === 'first-contentful-paint') {
           metrics.fcp = entry.startTime;
           console.log('FCP: ', entry.startTime)}
       }
     })
-    fcpObserver.observe({ entryTypes: ['paint'] })
+    fcpObserver.observe({ entryTypes: ['paint'] });
     // Largest Contentful Paint (LCP);
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       metrics.lcp = lastEntry.startTime;
       console.log('LCP: ', lastEntry.startTime)})
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     // First Input Delay (FID);
     const fidObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         metrics.fid = (entry as unknown).processingStart - entry.startTime;
         console.log('FID: ', metrics.fid)}
     })
-    fidObserver.observe({ entryTypes: ['first-input'] })
+    fidObserver.observe({ entryTypes: ['first-input'] });
     // Cumulative Layout Shift (CLS);
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
@@ -79,7 +85,7 @@ const PerformanceMonitor: React.FC = () => {
       }
       metrics.cls = clsValue;
       console.log('CLS: ', clsValue)})
-    clsObserver.observe({ entryTypes: ['layout-shift'] })
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
     // Time to First Byte (TTFB);
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
@@ -87,30 +93,32 @@ const PerformanceMonitor: React.FC = () => {
       console.log('TTFB: ', metrics.ttfb)}
     // First Meaningful Paint (FMP) - approximation;
     const fmpObserver = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
+      for (const entry of list.getEntries()) {'
         if (entry.name === 'first-meaningful-paint') {
           metrics.fmp = entry.startTime;
           console.log('FMP: ', entry.startTime)}
       }
     })
-    fmpObserver.observe({ entryTypes: ['paint'] })
+    fmpObserver.observe({ entryTypes: ['paint'] });
     // Send metrics to analytics after page load;
-    const sendMetrics = () => {
+    const sendMetrics = () => {'
       if (typeof window !== 'undefined' && (window as unknown).gtag) {
         // Send to Google Analytics;
-        (window as unknown).gtag('event', 'web_vitals', {
+        (window as unknown).gtag('event', 'web_vitals', {'
           event_category: 'Performance', event_label: 'Core Web Vitals',
-          custom_map: {
-            metric_1: 'fcp', metric_2: 'lcp',
+          custom_map: {'
+            metric_,
+    1: 'fcp', metric_2: 'lcp',
             metric_3: 'fid', metric_4: 'cls',
             metric_5: 'ttfb'}, value: Math.round(metrics.fcp || 0), non_interaction: true})}
       // Send to custom analytics endpoint;
-      if (process.env.NODE_ENV === 'production') {
-        fetch('/api/analytics/performance', {
+      if (process.env.NODE_ENV === 'production') {'
+        fetch('/api/analytics/performance', {'
           method: 'POST',
-          headers: {
+          headers: {'
             'Content-Type': 'application/json'}, body: JSON.stringify({
-            url: window.location.href, timestamp: Date.now(), metrics})}).catch(console.error)}
+            ur,
+    l: window.location.href, timestamp: Date.now(), metrics})}).catch(console.error)}
     }
     // Send metrics when page is about to unload;
     window.addEventListener('beforeunload', sendMetrics);
@@ -127,4 +135,4 @@ const PerformanceMonitor: React.FC = () => {
   }, []);
   return null // This component doesn&apos;t render unknownthing'}
 ;
-export default PerformanceMonitor
+export default PerformanceMonitor'

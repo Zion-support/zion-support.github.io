@@ -10,7 +10,7 @@ import React from;
   Multi-Language Support', description: Support for 50+ programming languages including Python, JavaScript, Java, C++, Go, Rust' }, { icon: GitBranch, title:,
   Git Integration', description: Seamless integration with GitHub, GitLab, Bitbucket, and Azure DevOps' }, { icon: Zap, title:,
   Real-time Analysis', description: Instant feedback on every commit, pull request, and code review,
-   } ]  const benefits = ['Reduce security vulnerabilities by 85%',';Decrease bug density by 60%',';Accelerate code review process by 3x',';Improve code quality and maintainability',';Ensure compliance with security standards',';Reduce technical debt and refactoring costs' ]  const useCases = [ { industry: 'Financial Services, applications: [;
+   } ]  const benefits = ['Reduce security vulnerabilities by 85%',;Decrease bug density by 60%',;Accelerate code review process by 3x',;Improve code quality and maintainability',;Ensure compliance with security standards',;Reduce technical debt and refactoring costs' ]  const useCases = [ { industry: 'Financial Services, applications: [;
   'PCI DSS compliance',
   'Secure coding standards',
   'Fraud prevention',
@@ -30,31 +30,34 @@ import React from;
   'FISMA requirements',
   'National security standards',
   'Public sector security'], icon: Building } ]  const technologies = [,
-  SonarQube Enterprise',';Snyk Security Platform',';Veracode Static Analysis',';Checkmarx SAST',';Fortify Static Code Analyzer',';CodeQL (GitHub)',';Semgrep',';Custom ML Models',';OpenAI Codex Integration',';GitHub Copilot Security' ]  const pricingPlans = [ { name: 'Developer, description:;
-  'Perfect for individual developers and small teams', price: { monthly: 49, annual: 490 }, features: [';Up to 5 repositories',';Basic security scanning',';Code quality metrics',';GitHub integration',';Email support',';Monthly security reports' ], icon: Code, color:;
+  SonarQube Enterprise',;Snyk Security Platform',;Veracode Static Analysis',;Checkmarx SAST',;Fortify Static Code Analyzer',;CodeQL (GitHub),;Semgrep',;Custom ML Models',;OpenAI Codex Integration',;GitHub Copilot Security' ]  const pricingPlans = [ { name: 'Developer, description:;
+  'Perfect for individual developers and small teams', price: { monthl,
+    y: 49, annual: 490 }, features: [';Up to 5 repositories',;Basic security scanning',;Code quality metrics',;GitHub integration',;Email support',;Monthly security reports' ], icon: Code, color:;
   'from-blue-500 to-cyan-500', popular: false, cta:,
   Start Free Trial', link: '/contact }, { name:,
-  Team', description: 'Ideal for development teams and growing companies, price: { monthly: 199, annual: 1990 }, features: [';Up to 25 repositories',';Advanced security scanning',';Custom security rules',';Priority support',';Team collaboration tools',';API access',';Custom integrations',';Training sessions' ], icon: Users, color:;
+  Team', description: 'Ideal for development teams and growing companies, price: { monthl,
+    y: 199, annual: 1990 }, features: [';Up to 25 repositories',;Advanced security scanning',;Custom security rules',;Priority support',;Team collaboration tools',;API access',;Custom integrations',;Training sessions' ], icon: Users, color:;
   'from-purple-500 to-pink-500', popular: true, cta:,
   Get Started', link: '/contact }, { name:,
-  Enterprise', description: 'For large organizations with complex security needs, price: { monthly: 799, annual: 7990 }, features: [';Unlimited repositories',';Custom security policies',';Dedicated security team',';24/7 priority support',';On-premise deployment',';Custom integrations',';White-label solutions',';SLA guarantees',';Compliance reporting' ], icon: Building, color:;
+  Enterprise', description: 'For large organizations with complex security needs, price: { monthl,
+    y: 799, annual: 7990 }, features: [';Unlimited repositories',;Custom security policies',;Dedicated security team',;24/7 priority support',;On-premise deployment',;Custom integrations',;White-label solutions',;SLA guarantees',;Compliance reporting' ], icon: Building, color:;
   'from-orange-500 to-red-500', popular: false, cta:,
   Contact Sales', link: '/contact } ]  const securityFeatures = [ { title:,
-  Static Application Security Testing (SAST)', description: 'Analyze source code for security vulnerabilities without executing the application, benefits: [,
+  Static Application Security Testing (SAST), description: 'Analyze source code for security vulnerabilities without executing the application, benefits: [,
   Early vulnerability detection',
   'Cost-effective security testing',
   'Comprehensive code coverage'] }, { title: 'Dynamic Application Security Testing (DAST), description:,
-  Test running applications for security vulnerabilities from an external perspective', benefits: [
+  Test running applications for security vulnerabilities from an external perspective', benefits: ['
   'Real-world attack simulation,
 ,
   Runtime vulnerability detection',
   'API security testing'] }, { title: 'Software Composition Analysis (SCA), description:,
-  Identify and manage open source dependencies and their associated security risks', benefits: [
+  Identify and manage open source dependencies and their associated security risks', benefits: ['
   'License compliance,
 ,
   Vulnerability tracking',
   'Dependency management'] }, { title: 'Interactive Application Security Testing (IAST), description:,
-  Combine SAST and DAST approaches for comprehensive security analysis', benefits: [
+  Combine SAST and DAST approaches for comprehensive security analysis', benefits: ['
   'Hybrid security testing,
   'Accurate vulnerability detection',
-  'Reduced false positives'] } ]  return ( <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>'' <SEO '';' title='AI-Powered Code Review & Security Analysis | Zion Tech Group'';' description='Advanced AI-powered code review and security analysis service. Detect vulnerabilities, improve code quality, and ensure compliance with industry standards. 50+ languages supported.'';' keywords='AI code review, security analysis, static analysis, dynamic analysis, code quality, vulnerability detection, secure coding, OWASP, CWE, Git integration'';' canonical='https:''';
+  'Reduced false positives'] } ]  return ( <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>' <SEO ''; title='AI-Powered Code Review & Security Analysis | Zion Tech Group''; description='Advanced AI-powered code review and security analysis service. Detect vulnerabilities, improve code quality, and ensure compliance with industry standards. 50+ languages supported.''; keywords='AI code review, security analysis, static analysis, dynamic analysis, code quality, vulnerability detection, secure coding, OWASP, CWE, Git integration''; canonical='https:''';

@@ -9,4 +9,4 @@ import { useEffect } from;
   ' import { toast } from '@/hooks/use-toast;
   ''; import { useDispatch } from 'react-redux;
   ''; import { setLoggedIn } from '@/store/authSlice;
-  '  useEffect ( () => {}';'
+  '  useEffect ( () => {};'

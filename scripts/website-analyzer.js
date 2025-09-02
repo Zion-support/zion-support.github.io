@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // Analyze the website structure and identify issues;
 function analyzeWebsite() {
-  console.log(
+  console.log('
   '🔍 Analyzing Zion Tech Group Website...\n');
   const srcDir = path.join(__dirname,
   '..',
@@ -28,30 +28,30 @@ function analyzeWebsite() {
   const routes = [];
   let match;
   while ((match = routeRegex.exec(appContent)) !== null) {
-    routes.push(match[1])}
-  console.log(`📊 Found ${routes.length} routes in App.tsx:`);
+    routes.push(match[1])}"
+  console.log(`📊 Found ${routes.length} routes in App.tsx:`);`
   routes.forEach(route => console.log(`  - ${route}`));
   // Check which pages exist;
   const existingPages = [];
-  const missingPages = [];
+  const missingPages = [];`
   function scanDirectory(dir, basePath = ';
   ') {    const items = fs.readdirSync(dir);
     items.forEach(item => {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
-        scanDirectory(fullPath, path.join(basePath, item))} else if (item.endsWith('.tsx;
+      if (stat.isDirectory()) {'
+        scanDirectory(fullPath, path.join(basePath, item)); else if (item.endsWith('.tsx;
   ') || item.endsWith('.jsx;
-  ')) {
+  ')) {'
         const pagePath = path.join(basePath, item.replace(/\.(tsx|jsx)$/, ''));
         existingPages.push(pagePath)}
     })}
   scanDirectory(pagesDir);
-  console.log(`\n📁 Found ${existingPages.length} existing page files:`);
+  console.log(`\n📁 Found ${existingPages.length} existing page files:`);`
   existingPages.forEach(page => console.log(`  - ${page}`));
   // Check for missing pages;
   routes.forEach(route => {
-    if (route ===;
+    if (route ===;`
   '*') return // Skip 404 route;
     const routePath = route.replace(/^\//, ';
   ').replace(/\//g, '-;
@@ -64,12 +64,12 @@ function analyzeWebsite() {
     if (!hasPage) {
       missingPages.push(route)}
   })
-  console.log(`\n❌ Found ${missingPages.length} missing pages:`);
+  console.log(`\n❌ Found ${missingPages.length} missing pages:`);`
   missingPages.forEach(page => console.log(`  - ${page}`));
   // Check for placeholder pages (files with minimal content);
   const placeholderPages = [];
   existingPages.forEach(pagePath => {
-    const fullPath = path.join(pagesDir, pagePath +;
+    const fullPath = path.join(pagesDir, pagePath +;`
   '.tsx');
     if (fs.existsSync(fullPath)) {
       const content = fs.readFileSync(fullPath,
@@ -77,8 +77,8 @@ function analyzeWebsite() {
       if (content.length < 5000) { // Less than 5KB is considered placeholder        placeholderPages.push(pagePath)}
     }
   })
-  console.log(
-    `\n⚠️  Found ${placeholderPages.length} placeholder pages (minimal content):`);
+  console.log('
+    `\n⚠️  Found ${placeholderPages.length} placeholder pages (minimal content):`);`
   placeholderPages.forEach(page => console.log(`  - ${page}`));
   // Generate analysis report;
   const report = {
@@ -91,7 +91,7 @@ function analyzeWebsite() {
     missing: missingPages,
     placeholders: placeholderPages}
   fs.writeFileSync(
-    path.join(__dirname,
+    path.join(__dirname,`
   '..',
   'website-analysis-report.json'),
     JSON.stringify(report, null, 2));
@@ -100,6 +100,6 @@ function analyzeWebsite() {
 // Run the analysis;
 try {
   analyzeWebsite()} catch (error) {
-  console.error(
+  console.error(`
   '❌ Error analyzing website:', error.message);
   process.exit(1)}

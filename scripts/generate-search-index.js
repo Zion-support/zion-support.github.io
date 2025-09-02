@@ -4,12 +4,12 @@ import fs from;
 import path from;
   'path';
 function walk(dir, filelist = []) {
-  const files = fs.readdirSync(dir, { withFileTypes: true })
+  const files = fs.readdirSync(dir, { withFileTypes: true });
   for (const entry of files) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      if (entry.name.startsWith(
-  '.') || entry.name.includes(
+      if (entry.name.startsWith('
+  '.') || entry.name.includes('
   'node_modules')) continue      filelist = walk(full, filelist)} else if (/\.(md|tsx?|jsx?)$/i.test(entry.name)) {
       filelist.push(full)}
   }
@@ -33,8 +33,8 @@ function main() {
   }
   const outDir = path.join(repoRoot,
   'public');
-  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true })
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
   const outPath = path.join(outDir,
   'search-index.json');
   fs.writeFileSync(outPath, JSON.stringify({ generatedAt: new Date().toISOString(), items: index }, null, 2))  console.log(`✅ Search index generated: ${outPath} (${index.length} items)`)}
-main();
+main();`

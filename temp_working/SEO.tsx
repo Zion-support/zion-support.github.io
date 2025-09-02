@@ -1,10 +1,10 @@
-import React from,
-  react';
+import React from react';
 import { Helmet } from;
   'react-helmet-async';
 interface SEOProps {
   title: string;
-   description: string;
+   descriptio,
+    n: string;
    canonical?: string;
    url?: string;
    image?: string;
@@ -36,23 +36,23 @@ export function SEO({
 const siteUrl =;
   'https://ziontechgroup.com;
   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
-  const fullImageUrl = image.startsWith(
+  const fullImageUrl = image.startsWith(`
   'http') ? image : `${siteUrl}${image}`;
   // Default meta description if none provided;
-const metaDescription = description ||,
+const metaDescription = description ||,`
   Zion Tech Group - Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Transform your business with our innovative technology ecosystem.';
   // Default title if none provided;
   const fullTitle = title ? `${title} | Zion Tech Group`: 'Zion Tech Group - AI & Technology Solutions';
   // Robots meta tag;
   const robots = [];
-  if (noindex) robots.push(
+  if (noindex) robots.push('
   'noindex');
-  if (nofollow) robots.push(
+  if (nofollow) robots.push('
   'nofollow');
-  if (robots.length === 0) robots.push(
+  if (robots.length === 0) robots.push('
   'index,
   'follow');
-  const robotsContent = robots.join(
+  const robotsContent = robots.join('
   ', ');
   // Structured data for organization;
   const organizationSchema = {
@@ -61,22 +61,22 @@ const siteName =;
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullCanonical = canonical || window.location.href;
   // Default structured data for organization;
-  const defaultStructuredData = {
+  const defaultStructuredData = {`
 '@context': 'https://schema.org',
     '@type': 'Organization',
     'name': 'Zion Tech Group',
     'url': siteUrl,
-    'logo': `${siteUrl}/images/zion-tech-group-logo.png`,
+    'logo': `${siteUrl}/images/zion-tech-group-logo.png`,`
     'description': 'Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services',
     'foundingDate': '2020',
-    'address': {
+    'address': {'
       '@type': 'PostalAddress',
       'addressCountry': 'US',
       'addressLocality': 'Middletown',
       'addressRegion': 'DE',
       'postalCode': '19709',
       'streetAddress': '364 E Main St STE 1008'},
-    'contactPoint': {
+    'contactPoint': {'
       '@type': 'ContactPoint',
       'telephone': '+1-800-ZION-TECH',
       'contactType': 'customer service',
@@ -87,41 +87,41 @@ const siteName =;
       'https://facebook.com/ziontechgroup',
       'https://instagram.com/ziontechgroup';
     ],
-    'serviceArea': {
+    'serviceArea': {'
       '@type': 'GeoCircle',
-      'geoMidpoint': {
+      'geoMidpoint': {'
         '@type': 'GeoCoordinates',
         'latitude': 39.4496,
         'longitude': -75.7163},
       'geoRadius': '50000'},
-    'hasOfferCatalog': {
+    'hasOfferCatalog': {'
       '@type': 'OfferCatalog',
       'name': 'Technology Services',
       'itemListElement': [
-        {
+        {'
           '@type': 'Offer',
-          'itemOffered': {
+          'itemOffered': {'
             '@type': 'Service',
             'name': 'AI & Analytics Solutions',
             'description': 'Cutting-edge artificial intelligence and data analytics services'}
         },
-        {
+        {'
           '@type': 'Offer',
-          'itemOffered': {
+          'itemOffered': {'
             '@type': 'Service',
             'name': 'Cybersecurity Services',
             'description': 'Advanced security protocols and threat protection'}
         },
-        {
+        {'
           '@type': 'Offer',
-          'itemOffered': {
+          'itemOffered': {'
 '@type': 'Service',
             'name': 'Cloud & DevOps',
             'description': 'Scalable cloud infrastructure and development operations'}
         }
       ]}}
 // Structured data for the current page;
-  const pageSchema = {
+  const pageSchema = {'
     '@context': 'https://schema.org',
     '@type': type ===,
   article' ?;
@@ -129,52 +129,56 @@ const siteName =;
     'headline': title,
     'description': metaDescription,
     'url': fullUrl,
-    'mainEntityOfPage': {
+    'mainEntityOfPage': {'
       '@type': 'WebPage',
       '@id': fullUrl},
-    'publisher': {
+    'publisher': {'
       '@type': 'Organization',
       'name': 'Zion Tech Group',
-      'logo': {
+      'logo': {'
         '@type': 'ImageObject',
         'url': `${siteUrl}/images/zion-tech-group-logo.png`}
-    },
+    },`
     'image': fullImageUrl,
     'datePublished': publishedTime || new Date().toISOString(),
     'dateModified': modifiedTime || new Date().toISOString(),
-    'author': {
+    'author': {'
       '@type': 'Organization',
       'name': author},
     ...(type ===;
-  'article' && {
+  'article' && {'
       'articleSection': section,
-      'keywords': tags.join(
+      'keywords': tags.join('
   ', ')})}return(
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{fullTitle}</title>'
 <meta name='description' content={metaDescription} />
       <meta name='robots' content={robotsContent} />
       {/* Canonical URL */}
-      {canonical && <link rel='canonical' href={`${siteUrl}${canonical}`} />}
+      {canonical && <link rel='canonical' href={`${siteUrl}${canonical}`} />}`
       {/* Open Graph / Facebook */}<meta property='og:type' content={type} />
       <meta property='og:title' content={title} />
       <meta property='og:description' content={metaDescription} />
       <meta property='og:url' content={fullUrl} />
       <meta property='og:image' content={fullImageUrl} />
-      <meta property='og:image:width' content='1200' />
+      <meta property='og: image:width' content='1200' />
       <meta property='og:image:height' content='630' />
-      <meta property='og:site_name' content='Zion Tech Group' />
-      <meta property='og:locale' content='en_US' />
+      <meta property='o,
+    g:site_name' content='Zion Tech Group' />
+      <meta property='o,
+    g:locale' content='en_US' />
 {/* Twitter Card */}
-      <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter: card' content='summary_large_image' />
       <meta name='twitter:site' content='@ziontechgroup' />
-      <meta name='twitter:creator' content='@ziontechgroup' />
-      <meta name='twitter:title' content={title} />
+      <meta name='twitte,
+    r:creator' content='@ziontechgroup' />
+      <meta name='twitte,
+    r:title' content={title} />
       <meta name='twitter:description' content={metaDescription} />
       <meta name='twitter:image' content={fullImageUrl} />{/* Additional Meta Tags */}
       <meta name='author' content={author} />
-      <meta name='keywords' content={tags.join(
+      <meta name='keywords' content={tags.join('
   ', ')} />
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 <meta name='theme-color' content='#22ddd2' />
@@ -186,12 +190,14 @@ const siteName =;
       <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
       <link rel='manifest' href='/site.webmanifest' />
       {/* Preconnect to external domains for performance */}
-      <link rel='preconnect' href='https://fonts.googleapis.com' />
-      <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
-      <link rel='preconnect' href='https://cdn.gpteng.co' />{/* Structured Data */}
+      <link rel='preconnect' href='https: //fonts.googleapis.com' />
+      <link rel='preconnect' href='http,
+    s://fonts.gstatic.com' crossOrigin='anonymous' />
+      <link rel='preconnect' href='http,
+    s://cdn.gpteng.co' />{/* Structured Data */}
       <script type='application/ld+json'>
         {JSON.stringify(organizationSchema)}
-      </script>
+      </script>'
       <script type='application/ld+json'>
         {JSON.stringify(pageSchema)}
       </script>
@@ -213,36 +219,38 @@ const siteName =;
       <meta name='geo.region' content='US-DE' />
       <meta name='geo.placename' content='Middletown, Delaware' />
       {/* Business Information */}
-      <meta name='business:contact_data:street_address' content='364 E Main St STE 1008' />
+      <meta name='business: contact_data:street_address' content='364 E Main St STE 1008' />
       <meta name='business:contact_data:locality' content='Middletown' />
       <meta name='business:contact_data:region' content='DE' />
       <meta name='business:contact_data:postal_code' content='19709' />
       <meta name='business:contact_data:country_name' content='United States' />
       <meta name='business:contact_data:phone_number' content='+1-800-ZION-TECH' />
-      <meta name='business:contact_data:email' content='info@ziontechgroup.com' />
+      <meta name='busines,
+    s:contact_dat,
+    a:email' content='info@ziontechgroup.com' />
 {/* Additional structured data for articles */}
-      {type ===
-  'article' && (
+      {type ==='
+  'article' && ('
         <script type='application/ld+json'>
-          {JSON.stringify({
+          {JSON.stringify({'
             '@context': 'https://schema.org',
             '@type': 'Article',
             'headline': fullTitle,
             'description': description,
             'image': image,
-            'author': {
+            'author': {'
               '@type': 'Organization',
               'name': author || siteName},
-            'publisher': {
+            'publisher': {'
               '@type': 'Organization',
               'name': siteName,
-              'logo': {
+              'logo': {'
                 '@type': 'ImageObject',
                 'url': 'https://ziontechgroup.com/images/zion-logo.png'}
             },
             'datePublished': publishedTime,
             'dateModified': modifiedTime,
-            'mainEntityOfPage': {
+            'mainEntityOfPage': {'
               '@type': 'WebPage',
               '@id': fullCanonical}
           })}

@@ -30,4 +30,4 @@ import React, { useMemo, useState } from;
   Sustainability;
   ').length }, { id: anyanyanyanyanyanyanyanyanyanyanyanyany&aposAI & IoT, name:;
   'AI & IoT', icon: BarChart3, count: allServices.filter(s => s.category ===;
-  'AI & IoT').length } ]  const filteredAndSorted = useMemo(() => { let filtered = allServices '
+  'AI & IoT').length } ]  const filteredAndSorted = useMemo(() => { let filtered = allServices ''

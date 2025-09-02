@@ -20,7 +20,7 @@ export const comprehensiveServices = [{
       'Monthly health reports',
       'Quarterly security audits',
       'Annual infrastructure review',
-      'Emergency response (4hr)',
+      'Emergency response (4hr),
       'Remote and on-site support';
     ],
     notIncluded: [;
@@ -210,38 +210,38 @@ export const comprehensiveServices = [{
     sla: '95% first-call resolution'}
 ];
 export const serviceCategories = [
-  {
+  {'
     name: 'Infrastructure',
     description: 'Core IT infrastructure services',
     icon: '🏗️',
     services: comprehensiveServices.filter(s => s.category === 'Infrastructure')},
-  {
+  {'
     name: 'Security',
     description: 'Cybersecurity and compliance services',
     icon: '🛡️',
     services: comprehensiveServices.filter(s => s.category === 'Security')},
-  {
+  {'
     name: 'Cloud',
     description: 'Cloud computing and migration services',
     icon: '☁️',
     services: comprehensiveServices.filter(s => s.category === 'Cloud')},
-  {
+  {'
     name: 'Data',
     description: 'Data management and recovery services',
     icon: '💾',
     services: comprehensiveServices.filter(s => s.category === 'Data')},
-  {
+  {'
     name: 'Networking',
     description: 'Network infrastructure services',
     icon: '🌐',
     services: comprehensiveServices.filter(s => s.category === 'Networking')},
-  {
+  {'
     name: 'Support',
     description: 'Help desk and user support services',
     icon: '🎧',
     services: comprehensiveServices.filter(s => s.category === 'Support')}
 ];
-export const pricingTiers = [{
+export const pricingTiers = [{'
     name: 'Starter',
     description: 'Perfect for small businesses',
     price: 800,
@@ -252,12 +252,12 @@ export const pricingTiers = [{
       'Monthly reports',
       'Phone support';
     ],
-    limitations: [
+    limitations: ['
       'Up to 10 users',
       'Basic monitoring',
       'Standard response time';
     ]},
-  {
+  {'
     name: 'Professional',
     description: 'Ideal for growing businesses',
     price: 2000,
@@ -269,12 +269,12 @@ export const pricingTiers = [{
       'Priority support',
       'Quarterly reviews';
     ],
-    limitations: [
+    limitations: ['
       'Up to 50 users',
       'Business hours support',
       '4-hour response time';
     ]},
-  {
+  {'
     name: 'Enterprise',
     description: 'For large organizations',
     price: 5000,
@@ -286,7 +286,7 @@ export const pricingTiers = [{
       'Advanced analytics',
       'Strategic consulting';
     ],
-    limitations: [
+    limitations: ['
       'Unlimited users',
       'Custom SLAs',
       '1-hour response time';
@@ -304,5 +304,5 @@ export const calculateServiceCost = (serviceId, months = 1, customizations = [])
   let baseCost = service.basePrice * months;
   // Add customization costs;
   customizations.forEach(customization => {
-    baseCost += customization.cost || 0})
+    baseCost += customization.cost || 0});
   return baseCost}

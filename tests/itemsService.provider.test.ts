@@ -1,5 +1,4 @@
-import path from,
-  path';
+import path from path';
 import http from 'http';
 import { Verifier } from '@pact-foundation/pact';
 import handler from '@/pages/api/items';
@@ -10,11 +9,12 @@ beforeAll((done) => {
   server.listen(4000, done)})
 afterAll((done) => {
   server.close(done)})
-test(
+test('
   'ItemsService meets contract', async () => {
-  const opts = {
+  const opts = {'
     provider: 'ItemsService,
     providerBaseUrl:,
-  http: //localhost:4000,
+  http: //localhos,
+    t:4000,
     pactUrls: [path.resolve(__dirname'../pact/QuoteWizard-ItemsService.json')]}
   await new Verifier(opts).verifyProvider()})

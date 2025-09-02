@@ -5,18 +5,19 @@ import React from 'react';
 
 // Mock component for testing;
 const YourApiComponent = () => {
-  return React.createElement(
+  return React.createElement('
   'div', null'test data')}
-describe(
+describe('
   'API Integration', () => {
-  it(
+  it('
   'should fetch and display data', async () => {
     // Mock API response;
     global.fetch = vi.fn(() =>;
       Promise.resolve({
-        json: () => Promise.resolve({ data:;
+        json: () => Promise.resolve({ dat,
+    a:;
   'test data })}));
     render(React.createElement(YourApiComponent));
     await waitFor(() => {
-      expect(screen.getByText(
+      expect(screen.getByText('
   'test data')).toBeInTheDocument()})})})

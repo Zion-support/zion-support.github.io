@@ -4,3 +4,4 @@ const Analytics = dynamic(() => import('./Analytics'), {
 });
 
 export default Analytics;
+'

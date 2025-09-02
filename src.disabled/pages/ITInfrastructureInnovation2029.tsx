@@ -16,6 +16,6 @@ import React, { useState } from;
   'Network & Security', icon: Network, color:,
   from-yellow-500 to-orange-500' }, { id: 'edge-computing, name:;
   'Edge Computing', icon: Cpu, color:,
-  from-gray-500 to-blue-500' }, { id: 'quantum-ready, name:
+  from-gray-500 to-blue-500' }, { id: 'quantum-ready, name:'
   'Quantum Ready', icon: Atom, color:;
-  'from-purple-500 to-indigo-500' } ]  const itInfrastructureServices = ['
+  'from-purple-500 to-indigo-500' } ]  const itInfrastructureServices = [''

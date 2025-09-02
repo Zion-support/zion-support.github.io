@@ -28,10 +28,10 @@ export default function Solutions() {
     {
       icon: Brain,
       title: 'AI Content Creation',
-      description:
+      description:'
         'Automated content generation using advanced AI models for blogs, social media, and marketing materials.',
       href: '/solutions/ai-content-creation',
-      features: [
+      features: ['
         'Blog Post Generation',
         'Social Media Content',
         'SEO Optimization',
@@ -42,10 +42,10 @@ export default function Solutions() {
     {
       icon: Mail,
       title: 'Email Automation',
-      description:
+      description:'
         'Intelligent email marketing automation with personalized campaigns and advanced analytics.',
       href: '/solutions/email-automation',
-      features: [
+      features: ['
         'Drip Campaigns',
         'Personalization',
         'A/B Testing',
@@ -56,10 +56,10 @@ export default function Solutions() {
     {
       icon: Headphones,
       title: 'Customer Support Platform',
-      description:
+      description:'
         'AI-powered customer support system with chatbots, ticket management, and knowledge base.',
       href: '/solutions/customer-support',
-      features: [
+      features: ['
         'AI Chatbots',
         'Ticket Management',
         'Knowledge Base',
@@ -70,10 +70,10 @@ export default function Solutions() {
     {
       icon: Calendar,
       title: 'Event Management',
-      description:
+      description:'
         'Comprehensive event management platform with registration, ticketing, and attendee management.',
       href: '/solutions/event-management',
-      features: [
+      features: ['
         'Event Registration',
         'Ticketing System',
         'Attendee Management',
@@ -84,10 +84,10 @@ export default function Solutions() {
     {
       icon: FolderKanban,
       title: 'Project Management',
-      description:
+      description:'
         'Advanced project management tools with team collaboration, task tracking, and reporting.',
       href: '/solutions/project-management',
-      features: [
+      features: ['
         'Task Management',
         'Team Collaboration',
         'Time Tracking',
@@ -98,10 +98,10 @@ export default function Solutions() {
     {
       icon: Workflow,
       title: 'Workflow Automation',
-      description:
+      description:'
         'Streamline business processes with custom workflow automation and integration capabilities.',
       href: '/solutions/workflow-automation',
-      features: [
+      features: ['
         'Process Automation',
         'Integration APIs',
         'Custom Workflows',
@@ -136,44 +136,48 @@ export default function Solutions() {
 
   return (
     <>
-      <SEO
-        title="Solutions - Zion Tech Group"
-        description="Comprehensive technology solutions for modern businesses. AI-powered tools, automation platforms, and custom software solutions."
+      <SEO'
+        title="Solutions - Zion Tech Group""
+        description="Comprehensive technology solutions for modern businesses. AI-powered tools, automation platforms, and custom software solutions.""
         keywords="solutions, AI tools, automation, software, business solutions, technology"
       />
       <Head>
         <title>Solutions - Zion Tech Group</title>
       </Head>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center">
-            <Badge className="mb-4 bg-blue-500 text-white">
+      {/* Hero Section */}"
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8">"
+          <div className="text-center">"
+            <Badge className="mb-4 bg-blue-500 text-white">"
               <Lightbulb className="w-4 h-4 mr-2" />
               Innovative Solutions
-            </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Technology Solutions for
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+            </Badge>"
+            <h1 className="text-4xl m,
+    d:text-6xl font-bold mb-6">
+              Technology Solutions for"
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">"
                 {' '}
                 Modern Business
               </span>
-            </h1>
+            </h1>'
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our comprehensive suite of AI-powered
               tools, automation platforms, and custom software solutions
               designed to drive growth and efficiency.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            </p>"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                Explore Solutions
+                Explore Solutions"
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-gray-900"
+              <Button"
+                size="lg""
+                variant="outline""
+                className="border-white text-white hove,
+    r:bg-white hove,
+    r:text-gray-900"
               >
                 Schedule Demo
               </Button>
@@ -182,51 +186,53 @@ export default function Solutions() {
         </div>
       </section>
 
-      {/* Solutions Grid */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      {/* Solutions Grid */}"
+      <section className="py-20 bg-gray-50">"
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
+          <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Solutions
-            </h2>
+            </h2>"
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose from our comprehensive range of technology solutions
               designed to address your specific business needs and challenges.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+"
+          <div className="grid grid-cols-1 m,
+    d:grid-cols-2 l,
+    g:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
               <Card
-                key={index}
+                key={index}"
                 className="p-6 hover: shadow-xl transition-shadow duration-300"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-blue-100 rounded-lg mr-4">
+              >"
+                <div className="flex items-center mb-4">"
+                  <div className="p-3 bg-blue-100 rounded-lg mr-4">"
                     <solution.icon className="h-8 w-8 text-blue-600" />
                   </div>
-                  <div>
+                  <div>"
                     <h3 className="text-xl font-semibold text-gray-900">
                       {solution.title}
-                    </h3>
+                    </h3>"
                     <p className="text-sm text-blue-600 font-medium">
                       {solution.pricing}
                     </p>
                   </div>
                 </div>
-
+"
                 <p className="text-gray-600 mb-4">{solution.description}</p>
-
-                <div className="mb-6">
+"
+                <div className="mb-6">"
                   <h4 className="font-semibold text-gray-900 mb-2">
                     Key Features:
-                  </h4>
+                  </h4>"
                   <ul className="space-y-1">
                     {solution.features.map((feature, idx) => (
                       <li
-                        key={idx}
+                        key={idx}"
                         className="flex items-center text-sm text-gray-600"
-                      >
+                      >"
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
@@ -234,9 +240,9 @@ export default function Solutions() {
                   </ul>
                 </div>
 
-                <Link href={solution.href}>
+                <Link href={solution.href}>"
                   <Button className="w-full">
-                    Learn More
+                    Learn More"
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
@@ -246,28 +252,31 @@ export default function Solutions() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      {/* Benefits Section */}"
+      <section className="py-20 bg-white">"
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8">"
+          <div className="text-center mb-16">"
+            <h2 className="text-3xl m,
+    d:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our Solutions?
-            </h2>
+            </h2>"
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We deliver exceptional value through innovative technology, expert
               support, and proven results.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="p-4 bg-blue-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+"
+          <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => ("
+              <div key={index} className="text-center">"
+                <div className="p-4 bg-blue-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">"
                   <benefit.icon className="h-8 w-8 text-blue-600" />
-                </div>
+                </div>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {benefit.title}
-                </h3>
+                </h3>"
                 <p className="text-gray-600">{benefit.description}</p>
               </div>
             ))}
@@ -275,31 +284,33 @@ export default function Solutions() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+      {/* CTA Section */}"
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Transform Your Business?
-          </h2>
+          </h2>"
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Let our experts help you choose the perfect solution for your
             business needs. Get started with a free consultation today.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p>"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link href="/contact">
-              <Button
-                size="lg"
+              <Button"
+                size="lg""
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >
-                Get Free Consultation
+                Get Free Consultation"
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-            </Link>
+            </Link>"
             <Link href="/pricing">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-600"
+              <Button"
+                size="lg""
+                variant="outline""
+                className="border-white text-white hove,
+    r:bg-white hove,
+    r:text-blue-600"
               >
                 View Pricing
               </Button>
@@ -310,3 +321,4 @@ export default function Solutions() {
     </>
   );
 }
+"

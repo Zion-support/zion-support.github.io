@@ -8,4 +8,4 @@ const Component = () => {
       <p>This page is under construction.</p>
     </div>
   )}
-export default Component
+export default Component'

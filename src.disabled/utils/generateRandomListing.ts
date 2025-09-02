@@ -1,5 +1,5 @@
 import { MarketplaceItem } from,
-  @/src/data/marketplaceData' const sampleTitles = [
+  @/src/data/marketplaceData' const sampleTitles = ['
   'AI-Powered Analytics Platform',
   'Cybersecurity Assessment Tool',
   'Cloud Migration Service',
@@ -9,7 +9,7 @@ import { MarketplaceItem } from,
   'Blockchain Development Service',
   'Machine Learning Platform',
   'DevOps Automation Tool',
-  'Network Security Solution' ] const sampleDescriptions = [
+  'Network Security Solution' ] const sampleDescriptions = ['
   'Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.',
   'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.',
   'Professional cloud migration service including planning, execution, and optimization.',

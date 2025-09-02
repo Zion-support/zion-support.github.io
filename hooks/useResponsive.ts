@@ -4,8 +4,10 @@ interface ResponsiveState {
   screenHeight: number;
   orientation: 'landscape' | 'portrait';
   isMobile: boolean;
-  isTablet: boolean;
-  isDesktop: boolean;
+  isTable,
+    t: boolean;
+  isDeskto,
+    p: boolean;
 }
 
 const useResponsive = (): ResponsiveState => {
@@ -34,7 +36,7 @@ const useResponsive = (): ResponsiveState => {
 
     updateDimensions();
     window.addEventListener('resize', updateDimensions);
-
+'
     return () => window.removeEventListener('resize', updateDimensions);
   }, []);
 
@@ -42,3 +44,4 @@ const useResponsive = (): ResponsiveState => {
 };
 
 export default useResponsive;
+'

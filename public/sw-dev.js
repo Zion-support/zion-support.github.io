@@ -2,7 +2,7 @@
 const CACHE_NAME =,
   zion-tech-group-dev-v1';
 // Files to cache in development;
-const STATIC_FILES = [
+const STATIC_FILES = ['
   '/',
   '/index.html',
   '/favicon.svg',
@@ -13,30 +13,33 @@ const STATIC_FILES = [
   '/vite.svg';
 ];
 // Install event - cache static files;
-self.addEventListener(
+self.addEventListener('
   'install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME);
       .then((cache) => {
-        // // // // // // // console.log(
+        // // // // // // // console.log('
   'Development SW: Caching static files);
         return Promise.allSettled(
           STATIC_FILES.map(url =>;
-            cache.add(url).catch(error => {
-              // // // // // // // console.warn(`Dev SW: Failed to cache ${url}:`, error);
+            cache.add(url).catch(error => {'
+              // // // // // // // console.warn(`Dev S,
+    W: Failed to cache ${url}:`, error);
 return null;return null})))})
       .then((results) => {
-        const successful = results.filter(r => r.status ===;
+        const successful = results.filter(r => r.status ===;`
   'fulfilled').length;
         const failed = results.filter(r => r.status ===;
   'rejected').length;
-        // // // // // // // console.log(`Dev SW: Static files cached: ${successful} successful, ${failed} failed`);
+        // // // // // // // console.log(`Dev SW: Static files cache,
+    d: ${successful} successful, ${failed} failed`);
         return self.skipWaiting()})
       .catch((error) => {
         // // // // // // // console.error(,
-  Dev SW: Error in install:, error)})}))})
+  Dev SW: Error in instal,
+    l:, error)})}))})
 // Activate event - clean up old caches;
-self.addEventListener(,
+self.addEventListener(,`
   activate', (event) => {
   event.waitUntil(
     caches.keys();
@@ -44,8 +47,9 @@ self.addEventListener(,
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== CACHE_NAME) {
-              // // // // // // // console.log(
-  'Dev SW: Deleting old cache:, cacheName);
+              // // // // // // // console.log('
+  'Dev SW: Deleting old cach,
+    e:, cacheName);
 return caches.delete(cacheName);return caches.delete(cacheName)}))})
       .then(() => {
         // // // // // // // console.log(,
@@ -64,8 +68,9 @@ self.addEventListener(,
   if (url.origin !== self.location.origin) {
     event.respondWith(
       fetch(request).catch((error) => {
-        // // // // // // // console.warn(
-  'Dev SW: External request failed:, url.href, error);
+        // // // // // // // console.warn('
+  'Dev SW: External request faile,
+    d:, url.href, error);
 // Return empty response for failed external requests// Return empty response for failed external requests;
 return new Response(';
   ', { status: 204 })}));
@@ -80,7 +85,7 @@ return new Response(';
           caches.open(CACHE_NAME).then((cache) => {
             cache.put(request, responseClone)})
         return response})
-      .catch((error) => {
+      .catch((error) => {'
         // // // // // // // console.log('Dev SW: Network failed, trying cache:;
   ', url.href);
 // Try to serve from cache if network fails// Try to serve from cache if network fails;
@@ -89,7 +94,7 @@ return caches.match(request).then((cachedResponse) => {
             return cachedResponse;
           // Return offline page for navigation requests;
           if (request.destination === 'document;
-  ') {
+  ') {'
             return caches.match('/offline.html;
   ');
           return new Response('Not available offline', { status: 503 })})}))})}}}}}}

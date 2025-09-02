@@ -27,16 +27,21 @@ export interface AIFuturisticService {
    variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk';
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
+review,
+    s: number;export const aiFuturisticService,
+    s: AIFuturisticService[] = [;
   // AI-Powered Quantum Blockchain Analytics{
-    id:,
+    i,
+    d:,
   ai-powered-quantum-blockchain-analytics',
     name: 'AI-Powered Quantum Blockchain Analytics,
     tagline:,
@@ -64,7 +69,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     color: 'from-purple-600 to-indigo-700,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/ai-powered-quantum-blockchain-analytics,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-quantum-blockchain-analytics,
     marketPosition:,
   First-to-market quantum AI blockchain analytics platform. Combines quantum computing with AI for blockchain analysis that traditional solutions cannot match.',
     targetAudience: Cryptocurrency exchanges, DeFi platforms, Investment firms, Regulatory agencies, Blockchain companies, Financial institutions',
@@ -106,7 +112,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     variant:,
   quantum-cyberpunk',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -149,7 +156,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     color: 'from-blue-600 to-cyan-700,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/ai-powered-quantum-code-review-copilot,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-quantum-code-review-copilot,
     marketPosition:,
   Advanced quantum AI code review platform. Provides quantum-speed analysis that traditional code review tools cannot match.',
     targetAudience: Software development teams, Tech companies, Startups, Open source projects, Educational institutions, Government agencies',
@@ -191,7 +199,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     variant:,
   ai-futuristic',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -234,7 +243,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     color: 'from-green-600 to-emerald-700,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/ai-powered-quantum-data-analytics,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-quantum-data-analytics,
     marketPosition:,
   Advanced quantum AI data analytics platform. Provides quantum-speed processing that traditional analytics tools cannot match.',
     targetAudience: Data scientists, Business analysts, Research institutions, Government agencies, Healthcare organizations, Financial institutions',
@@ -276,7 +286,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     variant:,
   quantum-matrix',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -319,7 +330,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     color: 'from-orange-600 to-red-700,
     textColor:,
   text-orange-400',
-    link: 'https://ziontechgroup.com/ai-powered-quantum-evaluations,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-quantum-evaluations,
     marketPosition:,
   Advanced quantum AI evaluation platform. Provides quantum-speed assessment that traditional evaluation tools cannot match.',
     targetAudience: HR departments, Educational institutions, Training companies, Government agencies, Healthcare organizations, Professional services',
@@ -359,7 +371,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     variant:,
   neural-quantum',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -402,7 +415,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     color: 'from-red-600 to-pink-700,
     textColor:,
   text-red-400',
-    link: 'https://ziontechgroup.com/ai-powered-quantum-guardrails,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-quantum-guardrails,
     marketPosition:,
   Advanced quantum AI safety platform. Provides quantum-speed monitoring that traditional AI safety tools cannot match.',
     targetAudience: AI companies, Government agencies, Research institutions, Healthcare organizations, Financial institutions, Technology companies',
@@ -442,7 +456,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     variant:,
   quantum-advanced',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -485,7 +500,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     color: 'from-indigo-600 to-purple-700,
     textColor:,
   text-indigo-400',
-    link: 'https://ziontechgroup.com/ai-powered-quantum-hr-recruitment,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-quantum-hr-recruitment,
     marketPosition:,
   Advanced quantum AI recruitment platform. Provides quantum-speed screening that traditional HR tools cannot match.',
     targetAudience: HR departments, Recruitment agencies, Startups, Enterprises, Government agencies, Educational institutions',
@@ -526,7 +542,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     variant:,
   ai-futuristic',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -569,7 +586,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     color: 'from-cyan-600 to-blue-700,
     textColor:,
   text-cyan-400',
-    link: 'https://ziontechgroup.com/ai-powered-quantum-iot-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-quantum-iot-platform,
     marketPosition:,
   Advanced quantum AI IoT platform. Provides quantum-speed management that traditional IoT tools cannot match.',
     targetAudience: IoT device manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT providers, Consumer IoT companies, Government agencies',
@@ -609,7 +627,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     variant:,
   quantum-cyberpunk',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -652,7 +671,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     color: 'from-gray-600 to-slate-700,
     textColor:,
   text-gray-400',
-    link: 'https://ziontechgroup.com/ai-powered-quantum-legal-contract-analyzer,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-quantum-legal-contract-analyzer,
     marketPosition:,
   Advanced quantum AI legal platform. Provides quantum-speed analysis that traditional legal tools cannot match.',
     targetAudience: Law firms, Legal departments, Contractors, Real estate, Healthcare, Financial services',
@@ -692,7 +712,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     variant:,
   quantum-holographic',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -735,7 +756,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     color: 'from-green-600 to-emerald-700,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/ai-powered-quantum-market-research,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-quantum-market-research,
     marketPosition:,
   Advanced quantum AI market research platform. Provides quantum-speed analysis that traditional research tools cannot match.',
     targetAudience: Marketing agencies, Businesses, Startups, Consulting firms, Investment companies, Research institutions',
@@ -776,7 +798,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     variant:,
   holographic-matrix',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -819,7 +842,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     color: 'from-blue-600 to-cyan-700,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/ai-powered-quantum-phone-agent,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-quantum-phone-agent,
     marketPosition:,
   Advanced quantum AI phone agent platform. Provides quantum-speed processing that traditional phone systems cannot match.',
     targetAudience: Customer service, Sales teams, Healthcare providers, Financial services, E-commerce, Government agencies',
@@ -860,7 +884,8 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [;
     variant:,
   neural-quantum-cyberpunk',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',

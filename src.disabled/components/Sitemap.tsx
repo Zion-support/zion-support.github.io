@@ -6,13 +6,17 @@ import React, { useState } from;
    title: string;
    icon: React.ComponentType<any>
    links: Array<{
-   name: string;
-   href: string;
+   nam,
+    e: string;
+   hre,
+    f: string;
    description?: string;
    external?: boolean;
-   featured?: boolean}> } export const Sitemap: React.FC = () => { const [searchQuery, setSearchQuery] = useState('
-  ') const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())  const toggleSection = (sectionTitle: string) => { const newExpanded = new Set(expandedSections) if (newExpanded.has(sectionTitle)) { newExpanded.delete(sectionTitle) } else { newExpanded.add(sectionTitle) } setExpandedSections(newExpanded) }  const sitemapData: SitemapSection[] = [ { title: 'Main Pages;
-  ', icon: Globe, links: [ { name:,
+   featured?: boolean}> } export const Sitemap: React.FC = () => { const [searchQuery, setSearchQuery] = useState(''
+  ') const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())  const toggleSection = (sectionTitle: string) => { const newExpanded = new Set(expandedSections) if (newExpanded.has(sectionTitle)) { newExpanded.delete(sectionTitle) } else { newExpanded.add(sectionTitle) } setExpandedSections(newExpanded) }  const sitemapData: SitemapSection[] = [ { titl,
+    e: 'Main Pages;
+  ', icon: Globe, links: [ { nam,
+    e:,
   Home;
   ', href: '/, description: 'Welcome to Zion Tech Group;
   ', featured: true }, { name:,
@@ -28,7 +32,8 @@ import React, { useState } from;
   ' }, { name: 'Partners, href:,
   /partners;
   ', description: 'Strategic partnerships and alliances } ] }, { title: 'AI Services;
-  ', icon: Brain, links: [ { name:,
+  ', icon: Brain, links: [ { nam,
+    e:,
   AI Business Intelligence;
   ', href: '/services/ai-business-intelligence, description: 'Machine Learning & Data Science Solutions;
   ', featured: true }, { name:,
@@ -44,7 +49,8 @@ import React, { useState } from;
   ' }, { name: 'AI Financial Trading, href:,
   /services/ai-financial-trading;
   ', description: 'AI-powered financial trading solutions } ] }, { title: 'Technology Solutions;
-  ', icon: Code, links: [ { name:,
+  ', icon: Code, links: [ { nam,
+    e:,
   Cloud DevOps;
   ', href: '/services/cloud-devops, description: 'Cloud infrastructure and DevOps automation;
   ', featured: true }, { name:,
@@ -60,7 +66,8 @@ import React, { useState } from;
   ' }, { name: 'Micro SaaS Products, href:,
   /services/micro-saas;
   ', description: 'Custom micro SaaS solutions } ] }, { title: 'Innovation Showcases;
-  ', icon: Star, links: [ { name:,
+  ', icon: Star, links: [ { nam,
+    e:,
   Revolutionary Services 2030;
   ', href: '/revolutionary-services-2030, description: 'Future-ready technology services;
   ', featured: true }, { name:,
@@ -76,7 +83,8 @@ import React, { useState } from;
   ' }, { name: 'Marketplace, href:,
   /marketplace;
   ', description: 'Technology service marketplace } ] }, { title: 'Resources & Support;
-  ', icon: BookOpen, links: [ { name:,
+  ', icon: BookOpen, links: [ { nam,
+    e:,
   Blog;
   ', href: '/blog, description:,
   Latest insights and updates;
@@ -95,7 +103,8 @@ import React, { useState } from;
   ' }, { name: 'FAQ, href:,
   /faq;
   ', description: 'Frequently asked questions } ] }, { title: 'Business Solutions;
-  ', icon: Users, links: [ { name:,
+  ', icon: Users, links: [ { nam,
+    e:,
   Request Quote;
   ', href: '/request-quote, description:,
   Get a custom quote for your project;
@@ -111,7 +120,8 @@ import React, { useState } from;
   Community;
   ', href: '/community, description:,
   Join our technology community;
-  ' } ] }, { title: 'Legal & Compliance, icon: Shield, links: [ { name:,
+  ' } ] }, { title: 'Legal & Compliance, icon: Shield, links: [ { nam,
+    e:,
   Privacy Policy;
   ', href: '/privacy, description:,
   Data privacy and protection;
@@ -133,7 +143,7 @@ import React, { useState } from;
   ' }, { name: 'Developer Portal, href: '/developers;
   ', icon: Code, color:,
   text-purple-500;
-  ' }, { name: 'Partner Program, href: '/partners
+  ' }, { name: 'Partner Program, href: '/partners'
   ', icon: Users, color:,
   text-orange-500;
   ' } ]  const companyInfo = { name: 'Zion Tech Group, description:,
@@ -141,5 +151,8 @@ import React, { useState } from;
   ', address: 123 Innovation Drive, Tech City, CA 90210,
   , phone: '+1-555-123-4567, email:,
   contact@ziontechgroup.com;
-  ', hours: 'Monday - Friday: 9:00 AM - 6:00 PM PST, social: { linkedin:,
-  https: ''
+  ', hours: 'Monday - Friday: ,
+    9:00 AM - ,
+    6:00 PM PST, social: { linkedi,
+    n:,
+  https: '''

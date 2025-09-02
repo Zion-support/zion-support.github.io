@@ -64,12 +64,13 @@ import {
   Award,
   Leaf,
   Sun,
-  Wind
+  Wind'
 } from 'lucide-react';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
   isOpen: boolean;
-  onClose: () => void;
+  onClos,
+    e: () => void;
 }
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
@@ -78,8 +79,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev =>
-      prev.includes(section)
-        ? prev.filter(s => s !== section)
+      prev.includes(section);
+        ? prev.filter(s => s !== section);
         : [...prev, section]
     );
   };
@@ -87,8 +88,10 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const isActive = (path: string) => router.pathname === path;
 
   const navigation = {
-    main: [
-      { name: 'Home', href: '/', icon: Home },
+    mai,
+    n: ['
+      { nam,
+    e: 'Home', href: '/', icon: Home },
       { name: 'About', href: '/about', icon: Building },
       { name: 'Services', href: '/services', icon: Briefcase },
       { name: 'Solutions', href: '/solutions', icon: Target },
@@ -98,41 +101,46 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Contact', href: '/contact', icon: Phone },
     ],
     services: [
-      {
-        name: 'AI & Machine Learning',
+      {'
+        nam,
+    e: 'AI & Machine Learning',
         icon: Brain,
-        children: [
-          { name: 'AI Development', href: '/services/ai-development' },
+        children: ['
+          { nam,
+    e: 'AI Development', href: '/services/ai-development' },
           { name: 'Machine Learning', href: '/services/machine-learning' },
           { name: 'Natural Language Processing', href: '/services/nlp' },
           { name: 'Computer Vision', href: '/services/computer-vision' },
         ]
       },
-      {
+      {'
         name: 'Cloud & Infrastructure',
         icon: Cloud,
-        children: [
-          { name: 'Cloud Migration', href: '/services/cloud-migration' },
+        children: ['
+          { nam,
+    e: 'Cloud Migration', href: '/services/cloud-migration' },
           { name: 'DevOps', href: '/services/devops' },
           { name: 'Microservices', href: '/services/microservices' },
           { name: 'Containerization', href: '/services/containerization' },
         ]
       },
-      {
+      {'
         name: 'Web Development',
         icon: Code,
-        children: [
-          { name: 'Frontend Development', href: '/services/frontend' },
+        children: ['
+          { nam,
+    e: 'Frontend Development', href: '/services/frontend' },
           { name: 'Backend Development', href: '/services/backend' },
           { name: 'Full-Stack Development', href: '/services/fullstack' },
           { name: 'E-commerce Solutions', href: '/services/ecommerce' },
         ]
       },
-      {
+      {'
         name: 'Cybersecurity',
         icon: Shield,
-        children: [
-          { name: 'Security Audits', href: '/services/security-audits' },
+        children: ['
+          { nam,
+    e: 'Security Audits', href: '/services/security-audits' },
           { name: 'Penetration Testing', href: '/services/penetration-testing' },
           { name: 'Compliance', href: '/services/compliance' },
           { name: 'Incident Response', href: '/services/incident-response' },
@@ -140,37 +148,42 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       },
     ],
     solutions: [
-      {
-        name: 'Industry Solutions',
+      {'
+        nam,
+    e: 'Industry Solutions',
         icon: Building2,
-        children: [
-          { name: 'Healthcare', href: '/solutions/healthcare' },
+        children: ['
+          { nam,
+    e: 'Healthcare', href: '/solutions/healthcare' },
           { name: 'Finance', href: '/solutions/finance' },
           { name: 'Education', href: '/solutions/education' },
           { name: 'Manufacturing', href: '/solutions/manufacturing' },
         ]
       },
-      {
+      {'
         name: 'Technology Solutions',
         icon: Cpu,
-        children: [
-          { name: 'IoT Platforms', href: '/solutions/iot' },
+        children: ['
+          { nam,
+    e: 'IoT Platforms', href: '/solutions/iot' },
           { name: 'Blockchain', href: '/solutions/blockchain' },
           { name: 'Quantum Computing', href: '/solutions/quantum' },
           { name: 'AR/VR', href: '/solutions/ar-vr' },
         ]
       },
     ],
-    resources: [
-      { name: 'Documentation', href: '/docs', icon: BookOpen },
+    resources: ['
+      { nam,
+    e: 'Documentation', href: '/docs', icon: BookOpen },
       { name: 'API Reference', href: '/api', icon: Code },
       { name: 'Tutorials', href: '/tutorials', icon: Video },
       { name: 'Case Studies', href: '/case-studies', icon: FileText },
       { name: 'White Papers', href: '/white-papers', icon: FileText },
       { name: 'Webinars', href: '/webinars', icon: Video },
     ],
-    support: [
-      { name: 'Help Center', href: '/help', icon: HelpCircle },
+    support: ['
+      { nam,
+    e: 'Help Center', href: '/help', icon: HelpCircle },
       { name: 'Contact Support', href: '/support', icon: LifeBuoy },
       { name: 'Status Page', href: '/status', icon: Server },
       { name: 'Community', href: '/community', icon: Users },
@@ -182,53 +195,53 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     const isExpanded = expandedSections.includes(item.name);
     const isCurrentActive = isActive(item.href);
 
-    return (
+    return ('
       <div key={item.name} className={`${level > 0 ? 'ml-4' : ''}`}>
         {hasChildren ? (
           <button
-            onClick={() => toggleSection(item.name)}
+            onClick={() => toggleSection(item.name)}`
             className={`w-full flex items-center justify-between px-4 py-3 text-left rounded-lg transition-colors ${
-              isExpanded
-                ? 'bg-blue-50 text-blue-700'
-                : 'text-gray-700 hover:bg-gray-50'
+              isExpanded`
+                ? 'bg-blue-50 text-blue-700''
+                : 'text-gray-700 hover:bg-gray-50''
             }`}
-          >
-            <div className="flex items-center">
-              <item.icon className="w-5 h-5 mr-3" />
+          >`
+            <div className="flex items-center">"
+              <item.icon className="w-5 h-5 mr-3" />"
               <span className="font-medium">{item.name}</span>
             </div>
-            {isExpanded ? (
+            {isExpanded ? ("
               <ChevronDown className="w-4 h-4" />
-            ) : (
+            ) : ("
               <ChevronRight className="w-4 h-4" />
             )}
           </button>
         ) : (
           <Link
             href={item.href}
-            onClick={onClose}
+            onClick={onClose}"
             className={`flex items-center px-4 py-3 rounded-lg transition-colors ${
-              isCurrentActive
-                ? 'bg-blue-100 text-blue-700 font-medium'
-                : 'text-gray-700 hover:bg-gray-50'
+              isCurrentActive`
+                ? 'bg-blue-100 text-blue-700 font-medium''
+                : 'text-gray-700 hover:bg-gray-50''
             }`}
-          >
+          >`
             <item.icon className="w-5 h-5 mr-3" />
             <span>{item.name}</span>
           </Link>
         )}
 
-        {hasChildren && isExpanded && (
+        {hasChildren && isExpanded && ("
           <div className="mt-2 space-y-1">
             {item.children.map((child: any) => (
               <Link
                 key={child.name}
                 href={child.href}
-                onClick={onClose}
+                onClick={onClose}"
                 className={`block px-4 py-2 text-sm rounded-lg transition-colors ${
-                  isActive(child.href)
-                    ? 'bg-blue-50 text-blue-700 font-medium'
-                    : 'text-gray-600 hover:bg-gray-50'
+                  isActive(child.href)`
+                    ? 'bg-blue-50 text-blue-700 font-medium''
+                    : 'text-gray-600 hover:bg-gray-50''
                 }`}
               >
                 {child.name}
@@ -244,118 +257,123 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     <>
       {/* Mobile overlay */}
       {isOpen && (
-        <div
+        <div`
           className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={onClose}
         />
       )}
 
       {/* Sidebar */}
-      <div
-        className={`fixed top-0 left-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0 lg:static lg:shadow-none ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
+      <div"
+        className={`fixed top-0 left-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 lg: translate-x-0 l,
+    g:static l,
+    g:shadow-none ${`
+          isOpen ? 'translate-x-0' : '-translate-x-full''
         }`}
-      >
+      >`
         <div className="flex flex-col h-full">
-          {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200">
-            <div className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+          {/* Header */}"
+          <div className="flex items-center justify-between p-6 border-b border-gray-200">"
+            <div className="flex items-center">"
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">"
                 <span className="text-white font-bold text-sm">Z</span>
-              </div>
+              </div>"
               <span className="ml-3 text-xl font-bold text-gray-900">Zion Tech</span>
             </div>
             <button
-              onClick={onClose}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              onClick={onClose}"
+              className="lg:hidden p-2 rounded-lg hove,
+    r:bg-gray-100"
+            >"
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
 
-          {/* Navigation */}
-          <div className="flex-1 overflow-y-auto p-4">
+          {/* Navigation */}"
+          <div className="flex-1 overflow-y-auto p-4">"
             <div className="space-y-6">
               {/* Main Navigation */}
-              <div>
+              <div>"
                 <h3 className="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
                   Main
-                </h3>
+                </h3>"
                 <div className="space-y-1">
-                  {navigation.main.map(item => renderNavigationItem(item))}
+                  {navigation.main.map(item => renderNavigationItem(item));
                 </div>
               </div>
 
               {/* Services */}
-              <div>
+              <div>"
                 <h3 className="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
                   Services
-                </h3>
+                </h3>"
                 <div className="space-y-1">
-                  {navigation.services.map(item => renderNavigationItem(item))}
+                  {navigation.services.map(item => renderNavigationItem(item));
                 </div>
               </div>
 
               {/* Solutions */}
-              <div>
+              <div>"
                 <h3 className="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
                   Solutions
-                </h3>
+                </h3>"
                 <div className="space-y-1">
-                  {navigation.solutions.map(item => renderNavigationItem(item))}
+                  {navigation.solutions.map(item => renderNavigationItem(item));
                 </div>
               </div>
 
               {/* Resources */}
-              <div>
+              <div>"
                 <h3 className="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
                   Resources
-                </h3>
+                </h3>"
                 <div className="space-y-1">
-                  {navigation.resources.map(item => renderNavigationItem(item))}
+                  {navigation.resources.map(item => renderNavigationItem(item));
                 </div>
               </div>
 
               {/* Support */}
-              <div>
+              <div>"
                 <h3 className="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
                   Support
-                </h3>
+                </h3>"
                 <div className="space-y-1">
-                  {navigation.support.map(item => renderNavigationItem(item))}
+                  {navigation.support.map(item => renderNavigationItem(item));
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Footer */}
-          <div className="p-4 border-t border-gray-200">
+          {/* Footer */}"
+          <div className="p-4 border-t border-gray-200">"
             <div className="flex items-center space-x-4">
-              <a
-                href="https://linkedin.com/company/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
+              <a"
+                href="https: //linkedin.com/company/ziontechgroup""
+                target="_blank""
+                rel="noopener noreferrer""
                 className="p-2 text-gray-400 hover:text-blue-600 transition-colors"
-              >
+              >"
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a
-                href="https://twitter.com/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
+              <a"
+                href="https://twitter.com/ziontechgroup""
+                target="_blank""
+                rel="noopener noreferrer""
                 className="p-2 text-gray-400 hover:text-blue-400 transition-colors"
-              >
+              >"
                 <Twitter className="w-5 h-5" />
               </a>
-              <a
-                href="mailto:info@ziontechgroup.com"
-                className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
-              >
+              <a"
+                href="mailt,
+    o:info@ziontechgroup.com""
+                className="p-2 text-gray-400 hove,
+    r:text-gray-600 transition-colors"
+              >"
                 <Mail className="w-5 h-5" />
               </a>
-            </div>
+            </div>"
             <p className="mt-2 text-xs text-gray-500">
               © 2024 Zion Tech Group. All rights reserved.
             </p>
@@ -366,4 +384,4 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   );
 };
 
-export default MainSidebar;
+export default MainSidebar;"

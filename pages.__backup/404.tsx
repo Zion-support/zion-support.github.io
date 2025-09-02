@@ -6,7 +6,7 @@ const Custom404: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>404 - Zion Tech Solutions</title>
+        <title>404 - Zion Tech Solutions</title>'
         <meta name='description' content='404 page' />
       </Head>
       <main>
@@ -15,4 +15,4 @@ const Custom404: NextPage = () => {
       </main>
     </div>
   )}
-export default Custom404
+export default Custom404'

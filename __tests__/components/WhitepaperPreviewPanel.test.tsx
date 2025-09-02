@@ -5,30 +5,33 @@ import;
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel';
 
 // Mock react-markdown;
-jest.mock(
-  'react-markdown', () => (props: { children: React.ReactNode }) => (
+jest.mock('
+  'react-markdown', () => (props: { childre,
+    n: React.ReactNode }) => ('
   <div data-testid='mock-markdown'>{props.children}</div>
 ));
 // Define a type for Pie props for better type safety
 interface MockPieProps {
-  data: Array<{ name: string
-   value: number }>
+  data: Array<{ nam,
+    e: string
+   valu,
+    e: number }>
   children?: React.ReactNode;
   // Add other props if used by the actual Pie component and needed for the mock}
 // Mock recharts
-jest.mock(
+jest.mock('
   'recharts', () => {
   const MockResponsiveContainer = ({
-    children}: {
+    children}: {'
     children: React.ReactNode}) => <div data-testid='mock-responsive-container'>{children}</div>
-  const MockPieChart = ({ children }: { children: React.ReactNode }) => (
+  const MockPieChart = ({ children }: { children: React.ReactNode }) => ('
     <div data-testid='mock-pie-chart'>{children}</div>
   )
-  const MockPie = (props: MockPieProps) => (
+  const MockPie = (props: MockPieProps) => ('
     <div data-testid='mock-pie' data-data={JSON.stringify(props.data)}>
       {props.children}
     </div>
-  ) // Use MockPieProps
+  ) // Use MockPieProps'
   const MockCell = () => <div data-testid='mock-cell' />
   const MockTooltip = () => <div data-testid='mock-tooltip' />
   const MockLegend = () => <div data-testid='mock-legend' />
@@ -52,13 +55,13 @@ const mockSections = [
     title: 'Token Distribution,
     content:,
   How tokens are distributed.'}];
-const mockDistributionData = [
+const mockDistributionData = ['
   { name: 'Team, value: 20 },
   { name:;
   'Marketing', value: 30 }]
-describe(
+describe('
   'WhitepaperPreviewPanel', () => {
-  test(
+  test('
   'renders token name and supply if provided', () => {
     render(
       <WhitepaperPreviewPanel
@@ -66,9 +69,9 @@ describe(
         distributionChartData={[]}
         tokenName='MyToken';
         tokenSupply='1000000'/>);
-    expect(screen.getByText(/MyToken - Whitepaper Draft/i)).toBeInTheDocument()
+    expect(screen.getByText(/MyToken - Whitepaper Draft/i)).toBeInTheDocument();
     expect(screen.getByText(/Total Supply: 1000000/i)).toBeInTheDocument()})
-  test(
+  test('
   'renders all sections with titles and content using react-markdown', () => {
     render(
       <WhitepaperPreviewPanel
@@ -77,76 +80,76 @@ describe(
       />);
     mockSections.forEach(section => {
       // Check if title is rendered (prepended with ##);
-      expect(screen.getByTestId(
-  'mock-markdown')).toHaveTextContent(
+      expect(screen.getByTestId('
+  'mock-markdown')).toHaveTextContent('
         `## ${section.title}`);
       // Check if content is rendered;
-      expect(screen.getByTestId(
+      expect(screen.getByTestId(`
   'mock-markdown')).toHaveTextContent(
         section.content)})
     // Ensure react-markdown was used multiple times (for title + content per section)
     expect(
-      screen.getAllByTestId(
+      screen.getAllByTestId('
   'mock-markdown').length).toBeGreaterThanOrEqual(mockSections.length * 2)})
-  test(
+  test('
   'renders 'no sections' message if sections array is empty', () => {
-    render(<WhitepaperPreviewPanel sections={[]} distributionChartData={[]} />)
+    render(<WhitepaperPreviewPanel sections={[]} distributionChartData={[]} />);
     expect(
       screen.getByText(/Whitepaper preview will appear here/i)).toBeInTheDocument()})
-  test(
+  test('
   'renders distribution chart in 'Token Distribution' section if data is provided', () => {
     render(
-      <WhitepaperPreviewPanel
+      <WhitepaperPreviewPanel'
         sections={mockSections} // includes 'Token Distribution';
         distributionChartData={mockDistributionData}
       />);
     // Check for chart components within the 'Token Distribution' section;
     const distributionSection = mockSections.find(s =>
-      s.title.toLowerCase().includes(
+      s.title.toLowerCase().includes('
   'token distribution'));
     expect(distributionSection).toBeDefined();
     // Verify chart components are rendered;
-    expect(screen.getByTestId(
+    expect(screen.getByTestId('
   'mock-responsive-container')).toBeInTheDocument();
-    expect(screen.getByTestId(
+    expect(screen.getByTestId('
   'mock-pie-chart')).toBeInTheDocument();
-    const pieElement = screen.getByTestId(
+    const pieElement = screen.getByTestId('
   'mock-pie');
     expect(pieElement).toBeInTheDocument();
-    expect(JSON.parse(pieElement.getAttribute(
+    expect(JSON.parse(pieElement.getAttribute('
   'data-data') ||;
-  '{}')).toEqual(
+  '{})).toEqual(
       mockDistributionData);
-    expect(screen.getAllByTestId(
+    expect(screen.getAllByTestId('
   'mock-cell').length).toBe(
       mockDistributionData.length);
-    expect(screen.getByTestId(
+    expect(screen.getByTestId('
   'mock-tooltip')).toBeInTheDocument();
-    expect(screen.getByTestId(
-  'mock-legend')).toBeInTheDocument()
-    expect(screen.getByText(
+    expect(screen.getByTestId('
+  'mock-legend')).toBeInTheDocument();
+    expect(screen.getByText('
   'Distribution Chart')).toBeInTheDocument()})
-  test(
+  test('
   'does not render distribution chart if data is empty', () => {
     render(
       <WhitepaperPreviewPanel
         sections={mockSections}
         distributionChartData={[]} // Empty data/>);
     expect(
-      screen.queryByTestId(
+      screen.queryByTestId('
   'mock-responsive-container')).not.toBeInTheDocument();
-    expect(screen.queryByText(
+    expect(screen.queryByText('
   'Distribution Chart')).not.toBeInTheDocument()})
-  test(
+  test('
   'does not render distribution chart if 'Token Distribution' section is missing', () => {
     const sectionsWithoutDistribution = mockSections.filter(
-      s => !s.title.toLowerCase().includes(
+      s => !s.title.toLowerCase().includes('
   'token distribution'))
     render(
       <WhitepaperPreviewPanel
         sections={sectionsWithoutDistribution}
         distributionChartData={mockDistributionData}
-      />)
+      />);
     expect(
-      screen.queryByTestId(
+      screen.queryByTestId('
   'mock-responsive-container')).not.toBeInTheDocument()})})

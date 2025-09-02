@@ -29,18 +29,19 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         ogImage={ogImage}
       />
       <PerformanceOptimizer
-        preloadImages={[
+        preloadImages={['
           '/hero-bg.jpg',
           '/services-bg.jpg',
           '/team-bg.jpg'
         ]}
-        preloadFonts={[
-          'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
+        preloadFonts={['
+          'https://fonts.googleapis.com/css2?family=Inte,
+    r:wght@300;400;500;600;700;800;900&display=swap'
         ]}
       />
-      <AccessibilityEnhancer>
+      <AccessibilityEnhancer>'
         <div className="min-h-screen flex flex-col">
-          <Header />
+          <Header />"
           <main id="main-content" className="flex-grow" role="main">
             {children}
           </main>
@@ -51,4 +52,4 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   );
 };
 
-export default MainLayout;
+export default MainLayout;"

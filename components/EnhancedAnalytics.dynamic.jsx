@@ -4,3 +4,4 @@ const EnhancedAnalytics = dynamic(() => import('./EnhancedAnalytics'), {
 });
 
 export default EnhancedAnalytics;
+'

@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-
+'
 console.log('🚀 Deployment Automation Starting...');
 class DeploymentAutomation {
   constructor() {
@@ -10,7 +10,7 @@ class DeploymentAutomation {
     this.errors = [];
     this.warnings = [];
     this.environment = process.env.NODE_ENV || 'development'}
-  async deploy() {
+  async deploy() {'
     console.log(`🌍 Deploying to ${this.environment} environment...`);
     try {
       // 1. Pre-deployment checks;
@@ -19,7 +19,7 @@ class DeploymentAutomation {
       await this.buildApplication();
       // 3. Run tests;
       await this.runDeploymentTests();
-      // 4. Deploy to staging (if applicable);
+      // 4. Deploy to staging (if applicable);`
       if (this.environment === 'staging') {
         await this.deployToStaging()}
       // 5. Deploy to production;
@@ -29,89 +29,90 @@ class DeploymentAutomation {
       await this.runPostDeploymentVerification();
       // 7. Generate deployment report;
       await this.generateDeploymentReport();
-      console.log('✅ Deployment completed successfully!')} catch (error) {
+      console.log('✅ Deployment completed successfully!')} catch (error) {'
       console.error('❌ Deployment failed:', error.message);
       this.errors.push(error.message);
       await this.rollback()}
   }
-  async runPreDeploymentChecks() {
+  async runPreDeploymentChecks() {'
     console.log('🔍 Running pre-deployment checks...');
-    const checks = [
+    const checks = ['
       { name: 'Git status', command: 'git status --porcelain' },
       { name: 'Dependencies', command: 'npm audit --audit-level=high' },
       { name: 'TypeScript', command: 'npx tsc --noEmit' },
       { name: 'Linting', command: 'npm run lint' }
     ];
     for (const check of checks) {
-      try {
-        console.log(`  ✓ Checking ${check.name}...`);
-        execSync(check.command, { stdio: 'pipe' })
-        this.deploymentSteps.push(`✅ ${check.name} check passed`)} catch (error) {
-        console.log(`  ⚠️ ${check.name} check failed:`, error.message);
+      try {'
+        console.log(`  ✓ Checking ${check.name}...`);`
+        execSync(check.command, { stdio: 'pipe' });
+        this.deploymentSteps.push(`✅ ${check.name} check passed`)} catch (error) {`
+        console.log(`  ⚠️ ${check.name} check failed:`, error.message);`
         this.warnings.push(`${check.name} check failed: ${error.message}`)}
     }
   }
-  async buildApplication() {
+  async buildApplication() {`
     console.log('🏗️ Building application...');
     try {
       // Clean previous builds;
-      execSync('rm -rf .next out dist', { stdio: 'pipe' })
+      execSync('rm -rf .next out dist', { stdio: 'pipe' });
       // Install dependencies;
-      execSync('npm ci --only=production', { stdio: 'pipe' })
+      execSync('npm ci --only=production', { stdio: 'pipe' });
       // Build the application;
       const buildCommand = this.environment === 'production';
         ? 'npm run build:production';
-        : 'npm run build:optimized';
-      execSync(buildCommand, { stdio: 'pipe' })
+        : 'npm run buil,
+    d:optimized';
+      execSync(buildCommand, { stdio: 'pipe' });
       this.deploymentSteps.push('✅ Application built successfully');
-      console.log('✅ Build completed')} catch (error) {
+      console.log('✅ Build completed')} catch (error) {'
       throw new Error(`Build failed: ${error.message}`)}
   }
-  async runDeploymentTests() {
+  async runDeploymentTests() {`
     console.log('🧪 Running deployment tests...');
     try {
       // Run critical tests only;
-      execSync('npm test -- --testPathPattern='critical|smoke' --watchAll=false', { stdio: 'pipe' })
+      execSync('npm test -- --testPathPattern='critical|smoke' --watchAll=false', { stdio: 'pipe' });
       this.deploymentSteps.push('✅ Deployment tests passed');
-      console.log('✅ Deployment tests completed')} catch (error) {
+      console.log('✅ Deployment tests completed')} catch (error) {'
       console.log('⚠️ Some deployment tests failed, continuing...');
       this.warnings.push('Some deployment tests failed')}
   }
-  async deployToStaging() {
+  async deployToStaging() {'
     console.log('🚀 Deploying to staging...');
     try {
       // Check if staging environment is configured;
       if (fs.existsSync('.env.staging')) {
         // Deploy to staging (example with Vercel);
-        execSync('vercel --env=staging', { stdio: 'pipe' })
+        execSync('vercel --env=staging', { stdio: 'pipe' });
         this.deploymentSteps.push('✅ Deployed to staging');
-        console.log('✅ Staging deployment completed')} else {
+        console.log('✅ Staging deployment completed')} else {'
         console.log('⚠️ No staging environment configured');
         this.warnings.push('No staging environment configured')}
-    } catch (error) {
+    } catch (error) {'
       throw new Error(`Staging deployment failed: ${error.message}`)}
   }
-  async deployToProduction() {
+  async deployToProduction() {`
     console.log('🚀 Deploying to production...');
     try {
       // Check if production environment is configured;
       if (fs.existsSync('.env.production')) {
         // Deploy to production (example with Vercel);
-        execSync('vercel --prod', { stdio: 'pipe' })
+        execSync('vercel --prod', { stdio: 'pipe' });
         this.deploymentSteps.push('✅ Deployed to production');
         console.log('✅ Production deployment completed')} else {
         // Fallback to manual deployment;
         await this.createDeploymentPackage();
         this.deploymentSteps.push('✅ Deployment package created');
         console.log('✅ Deployment package ready for manual deployment')}
-    } catch (error) {
+    } catch (error) {'
       throw new Error(`Production deployment failed: ${error.message}`)}
   }
-  async createDeploymentPackage() {
+  async createDeploymentPackage() {`
     console.log('📦 Creating deployment package...');
     const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`;
-    // Create deployment package;
-    execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`, { stdio: 'pipe' })
+    // Create deployment package;`
+    execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`, { stdio: 'pipe' });
     // Create deployment instructions;
     const instructions = `# Deployment Instructions;
 ## Package: ${packageName}
@@ -119,56 +120,61 @@ class DeploymentAutomation {
 ## Date: ${new Date().toISOString()}
 ### Steps to deploy:;
 1. Upload the package to your server;
-2. Extract: tar -xzf ${packageName}
+2. Extrac,
+    t: tar -xzf ${packageName}
 3. Install dependencies: npm ci --only=production;
 4. Start the application: npm run start:optimized;
-### Environment Variables:;
-Make sure to set the following environment variables:;
+### Environment Variable,
+    s:;
+Make sure to set the following environment variable,
+    s:;
 - NODE_ENV=${this.environment}
 - PORT=3000;
 - NEXT_PUBLIC_API_URL=your_api_url;
 ### Health Check:;
-After deployment, verify the application is running:;
-curl http://localhost:3000/api/health;
-`;
+After deployment, verify the application is running: ;
+curl htt,
+    p://localhos,
+    t:3000/api/health;`
+`;`
     fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md', instructions);
     this.deploymentSteps.push('✅ Deployment package and instructions created')}
-  async runPostDeploymentVerification() {
+  async runPostDeploymentVerification() {'
     console.log('🔍 Running post-deployment verification...');
-    const verifications = [
+    const verifications = ['
       { name: 'Health check', url: '/api/health' },
       { name: 'Home page', url: '/' },
       { name: 'Services page', url: '/services' }
     ];
     for (const verification of verifications) {
-      try {
+      try {'
         console.log(`  ✓ Verifying ${verification.name}...`);
-        // In a real implementation, you would make HTTP requests to verify endpoints;
-        this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {
-        console.log(`  ⚠️ ${verification.name} verification failed`);
+        // In a real implementation, you would make HTTP requests to verify endpoints;`
+        this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {`
+        console.log(`  ⚠️ ${verification.name} verification failed`);`
         this.warnings.push(`${verification.name} verification failed`)}
     }
   }
-  async rollback() {
+  async rollback() {`
     console.log('🔄 Initiating rollback...');
     try {
       // Get the previous deployment;
       const previousDeployment = await this.getPreviousDeployment();
-      if (previousDeployment) {
+      if (previousDeployment) {'
         console.log(`🔄 Rolling back to ${previousDeployment}`);
-        // Implement rollback logic here;
-        this.deploymentSteps.push('✅ Rollback completed')} else {
+        // Implement rollback logic here;`
+        this.deploymentSteps.push('✅ Rollback completed')} else {'
         console.log('⚠️ No previous deployment found for rollback');
         this.warnings.push('No previous deployment found for rollback')}
-    } catch (error) {
+    } catch (error) {'
       console.error('❌ Rollback failed:', error.message);
       this.errors.push(`Rollback failed: ${error.message}`)}
   }
   async getPreviousDeployment() {
     // In a real implementation, you would query your deployment system;
-    // For now, return a placeholder;
+    // For now, return a placeholder;`
     return 'deployment-123'}
-  async generateDeploymentReport() {
+  async generateDeploymentReport() {'
     console.log('📊 Generating deployment report...');
     const report = {
       timestamp: new Date().toISOString(),
@@ -177,7 +183,7 @@ curl http://localhost:3000/api/health;
       steps: this.deploymentSteps,
       errors: this.errors,
       warnings: this.warnings,
-      recommendations: [
+      recommendations: ['
         'Set up automated rollback procedures',
         'Implement blue-green deployment strategy',
         'Add comprehensive monitoring and alerting',

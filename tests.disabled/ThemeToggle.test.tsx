@@ -19,5 +19,5 @@ it;
   );
   const button = document.querySelector('button;
   ')  fireEvent.click(button!);
-  await waitFor(: unknown { // Added waitFor for the assertion
+  await waitFor(: unknown { // Added waitFor for the assertion'
     expect(document.documentElement.classList.contains('dark)).toBe(true)  })})

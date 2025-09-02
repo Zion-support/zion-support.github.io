@@ -5,9 +5,9 @@ import path from 'path';
 import { glob } from 'glob';
 
 // Extended list of Lucide React icons
-const allIcons = [
-  'ArrowRight', 'CheckCircle', 'Star', 'Users', 'Zap', 'Shield', 'Globe', 
-  'TrendingUp', 'Award', 'Clock', 'Brain', 'Cloud', 'Database', 'Network', 
+const allIcons = ['
+  'ArrowRight', 'CheckCircle', 'Star', 'Users', 'Zap', 'Shield', 'Globe', '
+  'TrendingUp', 'Award', 'Clock', 'Brain', 'Cloud', 'Database', 'Network', '
   'Target', 'Phone', 'Mail', 'MessageSquare', 'FileText', 'Search', 'Menu',
   'X', 'ChevronDown', 'ChevronUp', 'ChevronLeft', 'ChevronRight', 'Plus',
   'Minus', 'Edit', 'Trash', 'Save', 'Download', 'Upload', 'Settings',
@@ -114,12 +114,12 @@ function findAllMissingImports(content, filePath) {
   const missingImports = [];
   
   // Check for each icon
-  allIcons.forEach(icon => {
+  allIcons.forEach(icon => {'
     const iconRegex = new RegExp(`\\b${icon}\\b`, 'g');
     const matches = content.match(iconRegex);
     
     if (matches && matches.length > 0) {
-      // Check if the icon is already imported
+      // Check if the icon is already imported'
       const importRegex = new RegExp(`import.*{.*${icon}.*}.*from.*['"]lucide-react['"]`, 'g');
       const existingImport = content.match(importRegex);
       
@@ -143,25 +143,25 @@ function fixAllMissingImports(content, filePath) {
   let fixedContent = content;
   let changes = 0;
   
-  // Find existing lucide-react import
+  // Find existing lucide-react import'
   const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['"]lucide-react['"];?/g;
   const existingImport = fixedContent.match(existingImportRegex);
   
   if (existingImport) {
-    // Add missing icons to existing import
-    const existingIcons = existingImport[0].match(/{([^}]*)}/)?.[1]?.split(',').map(icon => icon.trim()) || [];
+    // Add missing icons to existing import"
+    const existingIcons = existingImport[0].match(/{([^}]*)}/)?.[1]?.split(',).map(icon => icon.trim()) || [];
     const allIcons = [...new Set([...existingIcons, ...missingImports])].sort();
-    
+    '
     const newImport = `import { ${allIcons.join(', ')} } from 'lucide-react';`;
     fixedContent = fixedContent.replace(existingImportRegex, newImport);
     changes++;
   } else {
-    // Create new import statement
+    // Create new import statement`
     const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;
     
-    // Find the best place to insert the import
+    // Find the best place to insert the import`
     const importIndex = fixedContent.indexOf('import');
-    if (importIndex !== -1) {
+    if (importIndex !== -1) {'
       const nextLineIndex = fixedContent.indexOf('\n', importIndex);
       fixedContent = fixedContent.slice(0, nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex);
     } else {
@@ -175,33 +175,33 @@ function fixAllMissingImports(content, filePath) {
 
 // Process individual file
 function processFile(filePath) {
-  try {
+  try {'
     const content = fs.readFileSync(filePath, 'utf8');
     const result = fixAllMissingImports(content, filePath);
     
-    if (result.changes > 0) {
+    if (result.changes > 0) {'
       fs.writeFileSync(filePath, result.content, 'utf8');
       totalFixes += result.changes;
       console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`);
     }
     
     filesProcessed++;
-  } catch (error) {
+  } catch (error) {`
     console.error(`❌ Error processing ${filePath}:`, error.message);
   }
 }
 
 // Main function
-async function main() {
+async function main() {`
   console.log('🔧 Starting comprehensive missing imports fix...\n');
   
-  const patterns = [
-    'pages/**/*.{tsx,jsx}',
-    'src/**/*.{tsx,jsx}',
-    'components/**/*.{tsx,jsx}'
+  const patterns = ['
+    'pages/**/*.{tsx,jsx},
+    'src/**/*.{tsx,jsx},
+    'components/**/*.{tsx,jsx}
   ];
   
-  const excludeDirs = [
+  const excludeDirs = ['
     'node_modules',
     '.next',
     'build',
@@ -215,20 +215,21 @@ async function main() {
   ];
   
   for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      ignore: excludeDirs.map(dir => `**/${dir}/**`)
+    const files = await glob(pattern, {'
+      ignore: excludeDirs.map(dir => `**/${dir}/**`);
     });
     
     for (const file of files) {
       processFile(file);
     }
   }
-  
-  console.log(`\n📊 Comprehensive Missing Imports Fix Summary:`);
-  console.log(`   Files processed: ${filesProcessed}`);
-  console.log(`   Total import fixes: ${totalFixes}`);
+  `
+  console.log(`\n📊 Comprehensive Missing Imports Fix Summary:`);`
+  console.log(`   Files processe,
+    d: ${filesProcessed}`);`
+  console.log(`   Total import fixes: ${totalFixes}`);`
   console.log(`\n✨ Comprehensive missing imports fix completed!`);
 }
 
 // Run the script
-main().catch(console.error);
+main().catch(console.error);`

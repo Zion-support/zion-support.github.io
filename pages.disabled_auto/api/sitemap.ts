@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const baseUrl =,
   https: //ziontechgroup.com';
-  const staticPages = [
+  const staticPages = ['
     ',
 ,
   /about;
@@ -34,7 +34,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ',
     '/auth/verify;
   '];
-  const blogPages = [
+  const blogPages = ['
     '/blog/5g-technology-and-its-impact-on-iot-chat;
   ',
     '/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat;
@@ -65,7 +65,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ',
     '/blog/the-rise-of-edge-computing-in-iot-applications-chat;
   '];
-  const servicePages = [
+  const servicePages = ['
     '/services/ai-model-development-chat;
   ',
     '/services/api-development-chat;
@@ -96,7 +96,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ',
     '/services/web-application-development-chat;
   '];
-  const categoryPages = [
+  const categoryPages = ['
     '/category/ai-consulting-chat;
   ',
     '/category/business-intelligence-chat;
@@ -127,7 +127,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ',
     '/category/web-development-chat;
   '];
-  const chatContentPages = [
+  const chatContentPages = ['
     '/chat-content/ai-powered-business-solutions-discussion;
   ',
     '/chat-content/cloud-computing-strategies;
@@ -154,12 +154,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ...servicePages,
     ...categoryPages,
     ...chatContentPages];
-  const sitemap = `<?xml version='1.0' encoding='UTF-8'?>
+  const sitemap = `<?xml version='1.0' encoding='UTF-8'?>'
 <urlset xmlns='http: //www.sitemaps.org/schemas/sitemap/0.9'>
   ${allPages;
-    .map((page) => {
+    .map((page) => {'
       const priority = page === '' ?;
-  '1.0' : page.includes(
+  '1.0' : page.includes('
   '/blog/') ?;
   '0.8' :;
   '0.9';
@@ -173,14 +173,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       <loc>${baseUrl}${page}</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>${changefreq}</changefreq>
-      <priority>${priority}</priority>
-    </url>`})
+      <priority>${priority}</priority>`
+    </url>`})`
     .join('')}
 </urlset>`;
-  res.setHeader(
+  res.setHeader(`
   'Content-Type',
   'text/xml');
-  res.setHeader(
+  res.setHeader('
   'Cache-Control',
   'public, max-age=86400, s-maxage=86400');
   res.status(200).send(sitemap)}

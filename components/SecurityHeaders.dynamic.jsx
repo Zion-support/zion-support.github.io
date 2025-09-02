@@ -4,3 +4,4 @@ const SecurityHeaders = dynamic(() => import('./SecurityHeaders'), {
 });
 
 export default SecurityHeaders;
+'

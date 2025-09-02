@@ -6,7 +6,7 @@ import React, { useState, useMemo } from;
   ') const [selectedCategory, setSelectedCategory] = useState('All;
   ') const [selectedPriceRange, setSelectedPriceRange] = useState('All;
   ') const [sortBy, setSortBy] = useState('featured;
-  ')  const categories = ['All
+  ')  const categories = ['All'
   ', 'AI & Legal Tech;
   ', 'Cybersecurity;
   ', 'AI & Healthcare;
@@ -18,8 +18,8 @@ import React, { useState, useMemo } from;
   ', 'AI & Customer Experience;
   ', 'AI & Supply Chain;
   ']  const priceRanges = ['All;
-  ',';Under $500;
-  ',';$500 - $1, 000;
-  ',';$1, 000 - $2,000;
-  ',';$2, 000+;
-  ' ]  const filteredServices = useMemo(() => { let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2032 '
+  ',;Under $500;
+  ',;$500 - $1, 000;
+  ',;$1, 000 - $2,000;
+  ',;$2, 000+;
+  ' ]  const filteredServices = useMemo(() => { let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2032 ''

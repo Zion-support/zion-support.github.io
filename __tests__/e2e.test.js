@@ -1,15 +1,15 @@
 const { test, expect } = require('@playwright/test');
-
-test.describe('E2E Tests', () => {
-  test('homepage loads correctly', async ({ page }) => {
+'
+test.describe('E2E Tests', () => {'
+  test('homepage loads correctly', async ({ page }) => {'
     await page.goto('/');
     await expect(page).toHaveTitle(/Zion Tech Group/);
   });
-
-  test('navigation works', async ({ page }) => {
+'
+  test('navigation works', async ({ page }) => {'
     await page.goto('/');
 
-    // Test navigation links
+    // Test navigation links'
     const navLinks = page.locator('nav a');
     const count = await navLinks.count();
     expect(count).toBeGreaterThan(0);
@@ -20,23 +20,23 @@ test.describe('E2E Tests', () => {
       await page.waitForLoadState('networkidle');
     }
   });
-
-  test('contact form works', async ({ page }) => {
+'
+  test('contact form works', async ({ page }) => {'
     await page.goto('/contact');
 
-    // Fill out contact form
-    await page.fill('input[name="name"]', 'Test User');
-    await page.fill('input[name="email"]', 'test@example.com');
-    await page.fill('textarea[name="message"]', 'Test message');
+    // Fill out contact form'
+    await page.fill('input[name="name"], 'Test User');
+    await page.fill('input[name="email"], 'test@example.com');
+    await page.fill('textarea[name="message"], 'Test message');
 
-    // Submit form
-    await page.click('button[type="submit"]');
+    // Submit form'
+    await page.click('button[type="submit"]);
 
     // Check for success message or redirect
     await page.waitForTimeout(1000);
   });
-
-  test('responsive design', async ({ page }) => {
+'
+  test('responsive design', async ({ page }) => {'
     await page.goto('/');
 
     // Test mobile viewport
@@ -52,3 +52,4 @@ test.describe('E2E Tests', () => {
     await page.waitForLoadState('networkidle');
   });
 });
+'

@@ -1,7 +1,8 @@
 module.exports = {
   apps: [;
     // Main application{
-      name:,
+      nam,
+    e:,
   zion-app',
       script: 'npm,
       args:,
@@ -13,11 +14,13 @@ module.exports = {
       max_memory_restart:,
   1G',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         PORT: 3000},
       env_production: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production',
         PORT: 3000}},
     // AI-Powered Code Analyzer - Intelligent code analysis and auto-fixing{
@@ -30,7 +33,8 @@ module.exports = {
       max_memory_restart:,
   512M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         AI_ANALYSIS_MODE:,
   true'},
@@ -42,7 +46,8 @@ module.exports = {
   './logs/ai-code-analyzer-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Smart Performance Optimizer - Bundle and runtime optimization{
       name:,
   smart-performance-optimizer',
@@ -53,7 +58,8 @@ module.exports = {
       max_memory_restart:,
   1G',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         PERFORMANCE_OPTIMIZATION_MODE:,
   true'},
@@ -65,7 +71,8 @@ module.exports = {
   './logs/smart-performance-optimizer-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Intelligent Dependency Manager - Dependency analysis and management{
       name:,
   intelligent-dependency-manager',
@@ -76,7 +83,8 @@ module.exports = {
       max_memory_restart:,
   512M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         DEPENDENCY_MANAGEMENT_MODE:,
   true'},
@@ -88,7 +96,8 @@ module.exports = {
       out_file: './logs/intelligent-dependency-manager-out.log,
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Smart Deployment Automation - Intelligent deployment management{
       name:,
   smart-deployment-automation',
@@ -99,7 +108,8 @@ module.exports = {
       max_memory_restart:,
   1G',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         DEPLOYMENT_AUTOMATION_MODE:,
   true'},
@@ -111,7 +121,8 @@ module.exports = {
   './logs/smart-deployment-automation-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Enhanced CI/CD Automation - Comprehensive CI/CD pipeline{
       name:,
   enhanced-ci-cd-automation',
@@ -122,7 +133,8 @@ module.exports = {
       max_memory_restart:,
   1G',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         CI_CD_MODE:,
   true'},
@@ -134,7 +146,8 @@ module.exports = {
   './logs/enhanced-ci-cd-automation-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Enhanced Security Automation - Advanced security monitoring{
       name:,
   enhanced-security-automation',
@@ -145,7 +158,8 @@ module.exports = {
       max_memory_restart:,
   512M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         SECURITY_MODE:,
   true'},
@@ -157,7 +171,8 @@ module.exports = {
   './logs/enhanced-security-automation-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Enhanced Testing Automation - Intelligent testing and quality assurance{
       name:,
   enhanced-testing-automation',
@@ -168,7 +183,8 @@ module.exports = {
       max_memory_restart:,
   1G',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         TESTING_MODE:,
   true'},
@@ -180,7 +196,8 @@ module.exports = {
   './logs/enhanced-testing-automation-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Project Health Monitor - Comprehensive project health monitoring{
       name:,
   project-health-monitor',
@@ -191,7 +208,8 @@ module.exports = {
       max_memory_restart:,
   512M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         HEALTH_MONITORING_MODE:,
   true'},
@@ -203,7 +221,8 @@ module.exports = {
   './logs/project-health-monitor-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // PM2 Sync Automation - Core synchronization system{
       name:,
   pm2-sync-automation',
@@ -214,7 +233,8 @@ module.exports = {
       max_memory_restart:,
   1G',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         SYNC_MODE:,
   true'},
@@ -226,7 +246,8 @@ module.exports = {
   './logs/pm2-sync-automation-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // PM2 Sync Monitor - Monitoring and alerting system{
       name:,
   pm2-sync-monitor',
@@ -237,7 +258,8 @@ module.exports = {
       max_memory_restart:,
   512M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         MONITORING_MODE:,
   true'},
@@ -249,7 +271,8 @@ module.exports = {
   './logs/pm2-sync-monitor-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Link Checker Automation - Link integrity monitoring{
       name:,
   link-checker-automation',
@@ -260,7 +283,8 @@ module.exports = {
       max_memory_restart:,
   512M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         LINK_CHECKING_MODE:,
   true'},
@@ -272,7 +296,8 @@ module.exports = {
       out_file: './logs/link-checker-automation-out.log,
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // TypeScript Syntax Fixer - Code quality automation{
       name:,
   typescript-syntax-fixer',
@@ -283,7 +308,8 @@ module.exports = {
       max_memory_restart:,
   256M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         SYNTAX_FIXING_MODE:,
   true'},
@@ -295,7 +321,8 @@ module.exports = {
   './logs/typescript-syntax-fixer-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Console Error Fixer - Runtime error automation{
       name:,
   console-error-fixer',
@@ -306,7 +333,8 @@ module.exports = {
       max_memory_restart:,
   256M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         ERROR_FIXING_MODE:,
   true'},
@@ -318,7 +346,8 @@ module.exports = {
   './logs/console-error-fixer-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Dependency Manager - Advanced dependency management{
       name:,
   dependency-manager',
@@ -329,7 +358,8 @@ module.exports = {
       max_memory_restart:,
   512M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         DEPENDENCY_MANAGEMENT_MODE:,
   true'},
@@ -341,7 +371,8 @@ module.exports = {
       out_file: './logs/dependency-manager-out.log,
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Performance Monitor - Real-time performance monitoring{
       name:,
   performance-monitor',
@@ -352,7 +383,8 @@ module.exports = {
       max_memory_restart:,
   512M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         PERFORMANCE_MONITORING_MODE:,
   true'},
@@ -364,7 +396,8 @@ module.exports = {
   './logs/performance-monitor-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Front Maximizer - Frontend optimization automation{
       name:,
   front-maximizer',
@@ -375,7 +408,8 @@ module.exports = {
       max_memory_restart:,
   512M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         FRONTEND_OPTIMIZATION_MODE:,
   true'},
@@ -387,7 +421,8 @@ module.exports = {
   './logs/front-maximizer-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Sitemap Runner - SEO and sitemap automation{
       name:,
   sitemap-runner',
@@ -398,7 +433,8 @@ module.exports = {
       max_memory_restart:,
   256M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         SITEMAP_MODE:,
   true'},
@@ -410,7 +446,8 @@ module.exports = {
       out_file: './logs/sitemap-runner-out.log,
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Quality Checks - Code quality automation{
       name:,
   quality-checks',
@@ -421,7 +458,8 @@ module.exports = {
       max_memory_restart:,
   256M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         QUALITY_CHECK_MODE:,
   true'},
@@ -433,7 +471,8 @@ module.exports = {
   './logs/quality-checks-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Security Audit - Security scanning automation{
       name:,
   security-audit',
@@ -444,7 +483,8 @@ module.exports = {
       max_memory_restart:,
   512M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         SECURITY_AUDIT_MODE:,
   true'},
@@ -456,7 +496,8 @@ module.exports = {
       out_file: './logs/security-audit-out.log,
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Continuous Improvement - Continuous optimization automation{
       name:,
   continuous-improvement',
@@ -467,7 +508,8 @@ module.exports = {
       max_memory_restart:,
   256M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         CONTINUOUS_IMPROVEMENT_MODE:,
   true'},
@@ -479,7 +521,8 @@ module.exports = {
   './logs/continuous-improvement-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z},
+  YYYY-MM-DD HH: m,
+    m:ss Z},
     // Daily Build Test - Automated build testing{
       name:,
   daily-build-test',
@@ -490,7 +533,8 @@ module.exports = {
       max_memory_restart:,
   512M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         BUILD_TEST_MODE:,
   true'},
@@ -502,15 +546,19 @@ module.exports = {
   './logs/daily-build-test-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z}],
+  YYYY-MM-DD HH: m,
+    m:ss Z}],
   deploy: {
-    production: {
-      user:,
+    productio,
+    n: {
+      use,
+    r:,
   miami2',
       host: 'localhost,
       ref:,
   origin/main',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git,
+      repo: 'http,
+    s://github.com/Zion-Holdings/zion.app.git,
       path:,
   /Users/miami2/zion-app-clone',
   'pre-deploy-local': ',
@@ -521,12 +569,14 @@ module.exports = {
   pre-setup;
   ': '},
     staging: {
-      user:,
+      use,
+    r:,
   miami2',
       host: 'localhost,
       ref:,
   origin/staging',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git,
+      repo: 'http,
+    s://github.com/Zion-Holdings/zion.app.git,
       path:,
   /Users/miami2/zion-app-staging',
   'pre-deploy-local': ',
@@ -537,12 +587,14 @@ module.exports = {
   pre-setup;
   ': '},
     development: {
-      user:,
+      use,
+    r:,
   miami2',
       host: 'localhost,
       ref:,
   origin/develop',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git,
+      repo: 'http,
+    s://github.com/Zion-Holdings/zion.app.git,
       path:,
   /Users/miami2/zion-app-dev',
   'pre-deploy-local': ',

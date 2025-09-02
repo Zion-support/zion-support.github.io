@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react.ts';
 interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<{
 
 }> {
-
+'
         this.color = `hsl(${Math.random() * 60 + 200}, 70%, 60%)`}
       update() {
         this.x += this.vx;
@@ -43,7 +43,8 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
     class Grid {
 
       spacing: number;
-      offset: number;
+      offse,
+    t: number;
       constructor() {
 
         this.spacing = 60;
@@ -54,8 +55,8 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
         this.offset += 0.5}
 
       draw() {
-        if (ctx) {
-          ctx.strokeStyle = 'rgba(100, 200, 255, 0.1)';
+        if (ctx) {`
+          ctx.strokeStyle = 'rgba(100, 200, 255, 0.1);
           ctx.lineWidth = 1;
           // Vertical lines
           for (let x = this.offset % this.spacing; x < canvas.width; x += this.spacing) {
@@ -81,8 +82,10 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
 
       amplitude: number;
       frequency: number;
-      speed: number;
-      offset: number;
+      spee,
+    d: number;
+      offse,
+    t: number;
       constructor() {
 
         this.amplitude = 50;
@@ -95,8 +98,8 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
         this.offset += this.speed}
 
       draw() {
-        if (ctx) {
-          ctx.strokeStyle = 'rgba(150, 100, 255, 0.3)';
+        if (ctx) {'
+          ctx.strokeStyle = 'rgba(150, 100, 255, 0.3);
           ctx.lineWidth = 2;
           ctx.beginPath();
           for (let x = 0; x < canvas.width; x++) {
@@ -115,11 +118,12 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
     // Create instances
     const particles: Particle[] = [];
     const grid = new Grid();
-    const waves: Wave[] = [];
+    const wave,
+    s: Wave[] = [];
     // Initialize particles
     for (let i = 0; i < 100; i++) {
 
-      particles.push(new Particle())}
+      particles.push(new Particle());
 
     // Initialize waves
     for (let i = 0; i < 3; i++) {
@@ -133,7 +137,7 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
     // Animation loop
     let animate = () => {
       // Clear canvas with fade effect;
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1);
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw grid
       grid.update();
@@ -151,8 +155,8 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
 
           particles[index] = new Particle()}
       });
-      // Draw connections between nearby particles
-      ctx.strokeStyle = 'rgba(100, 200, 255, 0.1)';
+      // Draw connections between nearby particles'
+      ctx.strokeStyle = 'rgba(100, 200, 255, 0.1);
       ctx.lineWidth = 1;
       for (let i = 0; i < particles.length; i++) {
 
@@ -175,8 +179,8 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
       ctx.save();
       ctx.translate(canvas.width / 2, canvas.height / 2);
       ctx.rotate(time * 0.1);
-      // Draw rotating hexagon
-      ctx.strokeStyle = 'rgba(255, 100, 200, 0.2)';
+      // Draw rotating hexagon`
+      ctx.strokeStyle = 'rgba(255, 100, 200, 0.2);
       ctx.lineWidth = 2;
       ctx.beginPath();
       for (let i = 0; i < 6; i++) {
@@ -191,8 +195,8 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
       }
       ctx.closePath();
       ctx.stroke();
-      // Draw inner triangle
-      ctx.strokeStyle = 'rgba(100, 255, 200, 0.2)';
+      // Draw inner triangle'
+      ctx.strokeStyle = 'rgba(100, 255, 200, 0.2);
       ctx.lineWidth = 2;
       ctx.beginPath();
       for (let i = 0; i < 3; i++) {
@@ -212,33 +216,34 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
     animate();
     // Cleanup
     return () => {
-
+'
       window.removeEventListener('resize', resizeCanvas);
       if (animationId) {
 
         cancelAnimationFrame(animationId)}
     }}, []);
-  return (
+  return ('
     <div className = {`fixed inset-0 pointer-events-none ${className}`}>
       <canvas
-        ref={canvasRef}
+        ref={canvasRef}`
         className="w-full h-full"
         style = {
 
   {
-
+"
           background: 'radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0,
-  1) 100%)'
+  1) 100%)
 
 }}
       />
 
       {/* Overlay gradients */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-purple-900/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-purple-900/10 to-transparent" />"
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-blue-900/10 to-transparent" />
       
-      {/* Animated orbs */}
-      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" />;
+      {/* Animated orbs */}"
+      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" />;"
       <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />;
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />;
     </div>)}
+'

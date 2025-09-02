@@ -12,7 +12,7 @@ const MIN_QUANTITY = 1;
  * @param {Object} item - Cart item to validate;
  * @returns {boolean} Whether item is valid;
  */;
-export const validateCartItem = (item) => {
+export const validateCartItem = (item) => {'
   if (!item || typeof item !== 'object') {
     return false}
   const requiredFields = ['id', 'name', 'price', 'quantity']
@@ -36,7 +36,7 @@ export const validateCartItem = (item) => {
  * @returns {Array} Updated cart array;
  */;
 export const addToCart = (cart, newItem) => {
-  if (!validateCartItem(newItem)) {
+  if (!validateCartItem(newItem)) {'
     console.warn('Invalid cart item:', newItem);
     return cart}
   const existingItemIndex = cart.findIndex(item => item.id === newItem.id);
@@ -159,10 +159,10 @@ export const calculateCartTotal = (cart, taxRate = DEFAULT_TAX_RATE) => {
  * @param {string} currency - Currency code (default: USD);
  * @returns {string} Formatted price;
  */;
-export const formatPrice = (price, currency = 'USD') => {
-  if (typeof price !== 'number' || isNaN(price)) {
+export const formatPrice = (price, currency = 'USD') => {'
+  if (typeof price !== 'number' || isNaN(price)) {'
     return '$0.00'}
-  return new Intl.NumberFormat('en-US', {
+  return new Intl.NumberFormat('en-US', {'
     style: 'currency',
     currency: currency}).format(price)}
 /**;
@@ -187,9 +187,9 @@ export const getCartSummary = (cart) => {
  */;
 export const exportCartData = (cart) => {
   try {
-    return JSON.stringify(cart, null, 2)} catch (error) {
+    return JSON.stringify(cart, null, 2)} catch (error) {'
     console.error('Error exporting cart data:', error);
-    return '[]'}
+    return '[]}
 }
 /**;
  * Import cart data (useful for restoring from backup);
@@ -200,8 +200,8 @@ export const importCartData = (cartData) => {
   try {
     const parsed = JSON.parse(cartData);
     if (Array.isArray(parsed)) {
-      return parsed.filter(item => validateCartItem(item))}
-    return []} catch (error) {
+      return parsed.filter(item => validateCartItem(item));
+    return []} catch (error) {'
     console.error('Error importing cart data:', error);
     return []}
 }
@@ -211,7 +211,7 @@ export const importCartData = (cartData) => {
  * @returns {string} Cart storage key;
  */;
 export const getCartKey = (userId = null) => {
-  if (userId) {
+  if (userId) {'
     return `zion_cart_${userId}`}
   return CART_STORAGE_KEY}
 /**;
@@ -277,7 +277,7 @@ export const getCartStats = (cart) => {
 }
 /**;
  * Sort cart items by various criteria;
- * @param {Array} cart - Cart array;
+ * @param {Array} cart - Cart array;`
  * @param {string} sortBy - Sort criteria ('name', 'price', 'quantity', 'date');
  * @param {string} sortOrder - Sort order ('asc' or 'desc');
  * @returns {Array} Sorted cart array;
@@ -288,7 +288,7 @@ export const sortCartItems = (cart, sortBy = 'name', sortOrder = 'asc') => {
   const sortedCart = [...cart];
   sortedCart.sort((a, b) => {
     let aValue, bValue;
-    switch (sortBy) {
+    switch (sortBy) {'
       case 'name':;
         aValue = a.name.toLowerCase();
         bValue = b.name.toLowerCase();

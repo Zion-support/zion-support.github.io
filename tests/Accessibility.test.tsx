@@ -4,8 +4,8 @@ import { ModeToggle } from '@/components/ModeToggle';
 import { expect } from 'vitest';
 
 expect.extend(toHaveNoViolations);
-test(
+test('
   'ModeToggle has no accessibility violations', async () => {
   const { container } = render(<ModeToggle />);
-  const results = await axe(container)
+  const results = await axe(container);
   expect(results).toHaveNoViolations()})

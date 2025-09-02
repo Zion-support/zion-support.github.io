@@ -4,21 +4,23 @@ import * as toastHook from '@/hooks/use-toast';
 import api from '@/services/apiClient';
 import { vi, expect, test } from 'vitest';
 
-vi.mock(
+vi.mock('
   '@/hooks/use-toast');
-vi.mock(
+vi.mock('
   '@/services/apiClient', () => ({
-  default: { post: vi.fn() }}))
+  default: { pos,
+    t: vi.fn() }}))
 const mockedApi = api as unknown as { post: any }
 test(,
   shows success toast when subscription succeeds', async () => {
-  mockedApi.post.mockResolvedValue({})
+  mockedApi.post.mockResolvedValue({});
   render(<NewsletterForm />);
   fireEvent.input(screen.getByPlaceholderText(/enter your email/i), {
-    target: { value:;
+    target: { valu,
+    e:;
   'test@example.com }})
-  fireEvent.submit(screen.getByRole(
+  fireEvent.submit(screen.getByRole('
   'button', { name: /subscribe/i }))
   await waitFor(() => {
-    expect(toastHook.toast.success).toHaveBeenCalledWith(
+    expect(toastHook.toast.success).toHaveBeenCalledWith('
   '¡Gracias por suscribirte!')})})

@@ -1,9 +1,9 @@
 #!/usr/bin/env node;
 const fs = require(,
   fs');
-const path = require(
+const path = require('
   'path');
-const { execSync } = require(
+const { execSync } = require('
   'child_process');
 class IntelligentLintFixer {
   constructor() {
@@ -20,17 +20,17 @@ class IntelligentLintFixer {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
   isLintableFile(filePath) {
-    const extensions = [
+    const extensions = [`
   '.js',.jsx;
   ',.ts',.tsx;
   ',.vue'];
-    return extensions.some(ext => filePath.endsWith(ext))}
+    return extensions.some(ext => filePath.endsWith(ext));
   async runPrettier(files) {
-    this.log(
+    this.log('
   '💅 Running Prettier for code formatting...');
     try {
   createSuggestion(message, filePath) {
-    const suggestions = {
+    const suggestions = {'
   'no-console': {
         message:;
   'Replace console.log with proper logging,
@@ -69,7 +69,7 @@ class IntelligentLintFixer {
         priority: suggestions[rule].priority,
         severity: message.severity}
     }
-  async run() {
+  async run() {'
     this.log('🚀 Starting Intelligent Lint Fixer...');
     try {
 }

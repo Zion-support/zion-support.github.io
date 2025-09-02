@@ -9,6 +9,9 @@ import React, { createContext, useContext, useEffect, useState, ReactNode } from
    resetFontSize: () => void;
    showSkipLinks: boolean;
    setShowSkipLinks: (show: boolean) => void;
-   voiceNavigation: boolean
-   toggleVoiceNavigation: () => void} const AccessibilityContext = createContext<AccessibilityContextType | null>(null)  export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider') } return context }  interface AccessibilityProviderProps {
-   children: ReactNode} export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => { const [highContrast, setHighContrast] = useState(false) const [reducedMotion, setReducedMotion] = useState(false) const [fontSize, setFontSize] = useState(16) const [showSkipLinks, setShowSkipLinks] = useState(false) const [voiceNavigation, setVoiceNavigation] = useState(false) ';'
+   voiceNavigatio,
+    n: boolean'
+   toggleVoiceNavigatio,
+    n: () => void} const AccessibilityContext = createContext<AccessibilityContextType | null>(null)  export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider') } return context }  interface AccessibilityProviderProps {'
+   children: ReactNode} export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => { const [highContrast, setHighContrast] = useState(false) const [reducedMotion, setReducedMotion] = useState(false) const [fontSize, setFontSize] = useState(16) const [showSkipLinks, setShowSkipLinks] = useState(false) const [voiceNavigation, setVoiceNavigation] = useState(false) ';
+'

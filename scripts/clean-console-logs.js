@@ -5,14 +5,14 @@ import path from 'path';
 import { glob } from 'glob';
 
 // Directories to clean
-const directories = [
-  'src/**/*.{js,jsx,ts,tsx}',
-  'pages/**/*.{js,jsx,ts,tsx}',
-  'components/**/*.{js,jsx,ts,tsx}'
+const directories = ['
+  'src/**/*.{js,jsx,ts,tsx},
+  'pages/**/*.{js,jsx,ts,tsx},
+  'components/**/*.{js,jsx,ts,tsx}
 ];
 
 // Directories to exclude
-const excludeDirs = [
+const excludeDirs = ['
   'node_modules',
   '.next',
   'build',
@@ -59,7 +59,7 @@ function cleanConsoleLogs(content, filePath) {
     }
   });
   
-  // Clean up empty lines that might be left behind
+  // Clean up empty lines that might be left behind'
   cleanedContent = cleanedContent.replace(/\n\s*\n\s*\n/g, '\n\n');
   
   if (cleanedContent !== originalContent) {
@@ -70,11 +70,11 @@ function cleanConsoleLogs(content, filePath) {
 }
 
 function processFile(filePath) {
-  try {
+  try {'
     const content = fs.readFileSync(filePath, 'utf8');
     const result = cleanConsoleLogs(content, filePath);
     
-    if (result) {
+    if (result) {'
       fs.writeFileSync(filePath, result.content, 'utf8');
       cleanedFiles++;
       totalRemoved += result.removed;
@@ -82,7 +82,7 @@ function processFile(filePath) {
     }
     
     totalFiles++;
-  } catch (error) {
+  } catch (error) {`
     console.error(`❌ Error processing ${filePath}:`, error.message);
   }
 }
@@ -91,12 +91,12 @@ function shouldExcludeFile(filePath) {
   return excludeDirs.some(excludeDir => filePath.includes(excludeDir));
 }
 
-async function main() {
+async function main() {`
   console.log('🧹 Starting console.log cleanup...\n');
   
   for (const pattern of directories) {
-    const files = await glob(pattern, { 
-      ignore: excludeDirs.map(dir => `**/${dir}/**`) 
+    const files = await glob(pattern, { '
+      ignore: excludeDirs.map(dir => `**/${dir}/**`);
     });
     
     for (const file of files) {
@@ -105,15 +105,16 @@ async function main() {
       }
     }
   }
-  
-  console.log(`\n📊 Cleanup Summary:`);
-  console.log(`   Total files processed: ${totalFiles}`);
-  console.log(`   Files cleaned: ${cleanedFiles}`);
-  console.log(`   Console statements removed: ${totalRemoved}`);
+  `
+  console.log(`\n📊 Cleanup Summary:`);`
+  console.log(`   Total files processe,
+    d: ${totalFiles}`);`
+  console.log(`   Files cleaned: ${cleanedFiles}`);`
+  console.log(`   Console statements removed: ${totalRemoved}`);`
   console.log(`\n✨ Console.log cleanup completed!`);
 }
 
 // Run the script
 main().catch(console.error);
 
-export { cleanConsoleLogs, processFile };
+export { cleanConsoleLogs, processFile };`

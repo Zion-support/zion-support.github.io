@@ -4,8 +4,10 @@ import { User } from 'lucide-react';
 
 interface User {
   id: string;
-  email: string;
-  name: string;
+  emai,
+    l: string;
+  nam,
+    e: string;
   avatar?: string}
 
 interface AuthState {
@@ -13,18 +15,22 @@ interface AuthState {
   isAuthenticated: boolean;
   isLoading: boolean;
   user: User | null;
-  token: string | null;
-  error: string | null}
+  toke,
+    n: string | null;
+  erro,
+    r: string | null}
 
 const initialState: AuthState = {
-  isLoggedIn: false, isAuthenticated: false,
+  isLoggedI,
+    n: false, isAuthenticated: false,
   isLoading: false, user: null,
   token: null, error: null
 };
-const authSlice = createSlice({
+const authSlice = createSlice({'
   name: 'auth', initialState,
   reducers: {
-    setLoggedIn: (state, action: PayloadAction<boolean>) => {
+    setLoggedI,
+    n: (state, action: PayloadAction<boolean>) => {
       state.isLoggedIn = action.payload;
     }, setUser: (state, action: PayloadAction<User>) => {
       state.user = action.payload;
@@ -48,4 +54,4 @@ const authSlice = createSlice({
   }
 });
 export const { setLoggedIn, setUser, setToken, logout, setLoading, setError, clearError } = authSlice.actions;
-export default authSlice.reducer;"
+export default authSlice.reducer;""

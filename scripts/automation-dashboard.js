@@ -8,7 +8,7 @@ import path from;
 import { fileURLToPath } from;
   'url';
 const __dirname = path.dirname(__filename);
-// // // // // // // console.log(
+// // // // // // // console.log('
   '🚀 Starting PM2 Automation Dashboard...');
 class AutomationDashboard {
   constructor() {
@@ -17,8 +17,8 @@ class AutomationDashboard {
     this.healthStatus = {}}
   async getPM2Status() {
     try {
-      const output = execSync(
-  'pm2 jlist', { encoding: 'utf8 })
+      const output = execSync('
+  'pm2 jlist', { encoding: 'utf8 });
       const processes = JSON.parse(output);
       this.processes = processes.filter(proc =>;
         proc.name !==;
@@ -27,21 +27,22 @@ class AutomationDashboard {
   'zion-app' &&;
         proc.name !==;
   'zion-backend');
-      // // // // // // // console.error(
+      // // // // // // // console.error('
   '❌ Failed to get PM2 status:', error.message);
       return [];
       return this.processes} catch (error) {
-      console.error(
+      console.error('
   '❌ Failed to get PM2 status:', error.message);
       return []}
   }
   async generateHealthReport() {
-    // // // // // // // console.log(
+    // // // // // // // console.log('
   '📊 Generating automation health report...');
     const report = {
   timestamp: new Date().toISOString(),
       summary: {
-        totalProcesses: this.processes.length,
+        totalProcesse,
+    s: this.processes.length,
         onlineProcesses: this.processes.filter(p => p.pm2_env.status ===,
   online').length,
         erroredProcesses: this.processes.filter(p => p.pm2_env.status ===;
@@ -49,9 +50,10 @@ class AutomationDashboard {
   stoppedProcesses: this.processes.filter(p => p.pm2_env.status ===;
   'stopped').length},
       processes: this.processes.map(proc => ({
-        name: proc.name,
+        nam,
+    e: proc.name,
         status: proc.pm2_env.status,
-        memory: `${Math.round(proc.monit.memory / 1024 / 1024)}MB`,
+        memory: `${Math.round(proc.monit.memory / 1024 / 1024)}MB`,`
         cpu: `${proc.monit.cpu}%`,
         uptime: this.formatUptime(proc.pm2_env.pm_uptime),
         restarts: proc.pm2_env.restart_time,
@@ -59,13 +61,13 @@ class AutomationDashboard {
       recommendations[]}
     // Generate recommendations;
     if (report.summary.erroredProcesses > 0) {
-      report.recommendations.push(
+      report.recommendations.push(`
   '⚠️  Some automation processes have errors. Check logs for details.')}
     if (report.summary.onlineProcesses === 0) {
-      report.recommendations.push(
+      report.recommendations.push('
   '🚨 No automation processes are running. Start the automation system.')}
     if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {
-      report.recommendations.push(
+      report.recommendations.push('
   '⚠️  Some automation processes are not running. Consider restarting failed processes.')}
     // Save report;
     const reportPath = path.join(process.cwd(),
@@ -82,15 +84,15 @@ class AutomationDashboard {
     return `${hours}h ${minutes}m`}
   async displayDashboard() {
     console.clear();
-    // // // // // // // console.log(
+    // // // // // // // console.log(`
   '🚀 PM2 Automation Dashboard');
-    // // // // // // // console.log(
+    // // // // // // // console.log('
   '=' .repeat(50));
     const status = await this.getPM2Status();
     const health = await this.generateHealthReport();
-    // // // // // // // console.log(`📊 Status: ${health.summary.onlineProcesses}/${health.summary.totalProcesses} processes online`);
+    // // // // // // // console.log(`📊 Status: ${health.summary.onlineProcesses}/${health.summary.totalProcesses} processes online`);`
     // // // // // // // console.log(`⏰ Last Updated: ${new Date().toLocaleTimeString()}`);
-    // // // // // // // console.log(,
+    // // // // // // // console.log(,`
   ');
     // Display process table;
     // // // // // // // console.log('🔄 Automation Processes: ');
@@ -105,7 +107,7 @@ class AutomationDashboard {
   ');
     // // // // // // // console.log('─;
   '.repeat(80));
-    health.processes.forEach(proc => {
+    health.processes.forEach(proc => {'
       const statusIcon = proc.status === 'online;
   ' ? '🟢;
   ' : proc.status === 'errored;
@@ -117,14 +119,14 @@ class AutomationDashboard {
         proc.memory.padEnd(10) +;
         proc.cpu.padEnd(8) +;
         proc.uptime.padEnd(15) +;
-        proc.restarts)})
+        proc.restarts)})`
     console.log('');
     // Display recommendations;
     if (health.recommendations.length > 0) {
-      console.log(
+      console.log('
   '💡 Recommendations:,
   );
-      health.recommendations.forEach(rec => console.log(`  ${rec}`));
+      health.recommendations.forEach(rec => console.log(`  ${rec}`));`
       console.log(';
   ')}
     // Display recent logs;
@@ -134,53 +136,54 @@ class AutomationDashboard {
     // // // // // // // console.log('');
     // Display recommendations;
     if (health.recommendations.length > 0) {
-      // // // // // // // console.log(
-  '💡 Recommendations:);
+      // // // // // // // console.log('
+  '💡 Recommendation,
+    s:);
       health.recommendations.forEach(rec => // // // // // // // console.log(`  ${rec}`));
-      // // // // // // // console.log(,
+      // // // // // // // console.log(,`
   ')}
     // Display recent logs;
     // // // // // // // console.log('📝 Recent Activity: ');
     // // // // // // // console.log('─;
   '.repeat(50));
-    try {
+    try {'
       const logs = execSync('pm2 logs --lines 5 --nostream, { encoding:,
   utf8;
-  ' })
+  ' });
       const recentLogs = logs.split('\n;
   ').slice(-5).filter(line => line.trim());
-      recentLogs.forEach(log => {
+      recentLogs.forEach(log => {'
         if (log.includes('ERROR;
   ') || log.includes('error;
-  ')) {
+  ')) {'
           // // // // // // // console.log(`🔴 ${log}`)} else if (log.includes('WARN;
   ') || log.includes('warn;
-  ')) {
-          // // // // // // // console.log(`🟡 ${log}`)} else {
+  ')) {'
+          // // // // // // // console.log(`🟡 ${log}`)} else {`
           // // // // // // // console.log(`ℹ️  ${log}`)}
-      })} catch (error) {
+      })} catch (error) {`
       // // // // // // // console.log('  No recent logs available;
   ')}
     // // // // // // // console.log('');
-    // // // // // // // console.log(
+    // // // // // // // console.log('
   'Commands: ');
-    // // // // // // // console.log(
+    // // // // // // // console.log('
   '  pm2 logs <process-name> - View specific process logs');
-    // // // // // // // console.log(
+    // // // // // // // console.log('
   '  pm2 restart <process-name> - Restart specific process');
-    // // // // // // // console.log(
+    // // // // // // // console.log('
   '  pm2 restart all - Restart all processes');
-    // // // // // // // console.log(
+    // // // // // // // console.log('
   '  pm2 monit - Open PM2 monitoring interface');
-    // // // // // // // console.log(
+    // // // // // // // console.log('
   '  Ctrl+C - Exit dashboard)}
-          console.log(`🔴 ${log}`)} else if (log.includes(,
-  WARN') || log.includes(
-  'warn')) {
-          console.log(`🟡 ${log}`)} else {
+          console.log(`🔴 ${log}`)} else if (log.includes(,`
+  WARN') || log.includes('
+  'warn')) {'
+          console.log(`🟡 ${log}`)} else {`
           console.log(`ℹ️  ${log}`)}
       })} catch (error) {
-      console.log(
+      console.log(`
   '  No recent logs available')}
     console.log(';
   ');
@@ -203,39 +206,42 @@ class AutomationDashboard {
     // Update every 30 seconds;
     setInterval(async () => {
       await this.displayDashboard()}, 30000)}
-  async restartFailedProcesses() {
+  async restartFailedProcesses() {'
     // // // // // // // console.log('🔄 Restarting failed processes...;
   ');
     const failedProcesses = this.processes.filter(p => p.pm2_env.status === 'errored;
   ');
-    if (failedProcesses.length === 0) {
+    if (failedProcesses.length === 0) {'
       // // // // // // // console.log('✅ No failed processes to restart;
   ');
       return;
     failedProcesses.forEach(proc => {
-      try {
-        execSync(`pm2 restart ${proc.pm_id}`, { stdio: 'inherit })
-        // // // // // // // console.log(`✅ Restarted ${proc.name}`)} catch (error) {
+      try {'
+        execSync(`pm2 restart ${proc.pm_id}`, { stdio: 'inherit });
+        // // // // // // // console.log(`✅ Restarted ${proc.name}`)} catch (error) {`
         // // // // // // // console.error(`❌ Failed to restart ${proc.name}:`, error.message)}
     })
-  async generatePerformanceReport() {
+  async generatePerformanceReport() {`
     // // // // // // // console.log('📊 Generating performance report...;
   ');
     const report = {
       timestamp: new Date().toISOString(),
       system: {
-        memory: process.memoryUsage(),
+        memor,
+    y: process.memoryUsage(),
         uptime: process.uptime(),
         platform: process.platform,
         nodeVersion: process.version},
       processes: this.processes.map(proc => ({
-        name: proc.name,
+        nam,
+    e: proc.name,
         memory: proc.monit.memory,
         cpu: proc.monit.cpu,
         status: proc.pm2_env.status,
         restarts: proc.pm2_env.restart_time})),
       summary: {
-        totalMemory: this.processes.reduce((sum, p) => sum + p.monit.memory, 0),
+        totalMemor,
+    y: this.processes.reduce((sum, p) => sum + p.monit.memory, 0),
         averageCPU: this.processes.reduce((sum, p) => sum + p.monit.cpu, 0) / this.processes.length,
         totalRestarts: this.processes.reduce((sum, p) => sum + p.pm2_env.restart_time, 0)}
       console.log(,
@@ -243,14 +249,14 @@ class AutomationDashboard {
   ');
       return}
     failedProcesses.forEach(proc => {
-      try {
-        execSync(`pm2 restart ${proc.pm_id}`, { stdio: 'inherit })
-        console.log(`✅ Restarted ${proc.name}`)} catch (error) {
+      try {'
+        execSync(`pm2 restart ${proc.pm_id}`, { stdio: 'inherit });
+        console.log(`✅ Restarted ${proc.name}`)} catch (error) {`
         console.error(`❌ Failed to restart ${proc.name}:`, error.message)}
     })}
   async generatePerformanceReport() {
     console.log(,
-  📊 Generating performance report...;
+  📊 Generating performance report...;`
   ');
     const reportPath = path.join(process.cwd(), 'automation-performance-report.json;
   ');
@@ -263,7 +269,7 @@ async function main() {
   const dashboard = new AutomationDashboard();
   // Handle graceful shutdown;
   process.on('SIGINT;
-  ', async () => {
+  ', async () => {'
     // // // // // // // console.log('\n🛑 Shutting down automation dashboard...;
   ');
     await dashboard.generatePerformanceReport();
@@ -271,14 +277,14 @@ async function main() {
   ');
     process.exit(0)})
   try {
-    await dashboard.startMonitoring()} catch (error) {
+    await dashboard.startMonitoring()} catch (error) {'
     // // // // // // // console.error('❌ Dashboard failed: , error);
     process.exit(1);
     console.log('✅ Performance report saved;
   ');
     process.exit(0)})
   try {
-    await dashboard.startMonitoring()} catch (error) {
+    await dashboard.startMonitoring()} catch (error) {'
     console.error('❌ Dashboard failed:', error);
     process.exit(1)}
 }

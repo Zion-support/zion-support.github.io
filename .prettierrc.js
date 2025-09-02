@@ -11,3 +11,4 @@ module.exports = {
   jsxSingleQuote: true,
   quoteProps: 'as-needed',
 };
+'

@@ -31,11 +31,12 @@ try {
     Shield: typeof Shield,
     Zap: typeof Zap
   });
-
+'
   console.log('🎉 All core dependencies imported successfully!');
   console.log('📋 Components should be ready for build');
-} catch (error) {
+} catch (error) {'
   console.error('❌ Import error:', error.message);
   process.exit(1);
 }
 console.log('🏁 Build verification complete');
+'

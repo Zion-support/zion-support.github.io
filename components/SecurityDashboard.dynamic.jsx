@@ -4,3 +4,4 @@ const SecurityDashboard = dynamic(() => import('./SecurityDashboard'), {
 });
 
 export default SecurityDashboard;
+'

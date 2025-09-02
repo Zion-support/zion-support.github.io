@@ -4,3 +4,4 @@ const AccessibilityManager = dynamic(() => import('./AccessibilityManager'), {
 });
 
 export default AccessibilityManager;
+'

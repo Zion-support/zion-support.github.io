@@ -4,23 +4,28 @@ import { User } from 'lucide-react';
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
-  status: number;
+  statu,
+    s: number;
   message?: string;
 }
 
 interface User {
   id: string;
   email: string;
-  name: string;
-  role: 'admin' | 'user' | 'guest';
+  nam,
+    e: string;
+  rol,
+    e: 'admin' | 'user' | 'guest';
 }
 
 interface Service {
   id: string;
   name: string;
   description: string;
-  price: number;
-  category: string;
+  pric,
+    e: number;
+  categor,
+    y: string;
 }
 
 interface FormData {
@@ -44,27 +49,27 @@ interface AnalyticsProps {
 }
 
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
-  useEffect(() => {
+  useEffect(() => {'
     if (typeof window === 'undefined' || !trackingId) return;
-    // Load Google Analytics script
+    // Load Google Analytics script'
     const script1 = document.createElement('script');
     script1.async = true;
     script1.src = `https: //www.googletagmanager.com/gtag/js?id=${trackingId}`;
-    document.head.appendChild(script1);
+    document.head.appendChild(script1);`
     const script2 = document.createElement('script');
     script2.innerHTML = `
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments)}
+      function gtag(){dataLayer.push(arguments)}`
       gtag('js', new Date());
-      gtag('config', '${trackingId}', {
+      gtag('config', '${trackingId}, {
         page_title: document.title, page_location: window.location.href,
         send_page_view: true
-      })
+      });
     `;
     document.head.appendChild(script2);
     // Track page views on route changes
-    const handleRouteChange = () => {
-      if (typeof gtag !== 'undefined') {
+    const handleRouteChange = () => {`
+      if (typeof gtag !== 'undefined') {'
         gtag('config', trackingId, {
           page_title: document.title,
           page_location: window.location.href,
@@ -74,30 +79,30 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
 
     // Listen for route changes (Next.js)
     window.addEventListener('popstate', handleRouteChange);
-    return () => {
+    return () => {'
       window.removeEventListener('popstate', handleRouteChange);
     };
   }, [trackingId]);
   // Track page performance
-  useEffect(() => {
+  useEffect(() => {'
     if (typeof window === 'undefined') return;
-    const trackPerformance = () => {
+    const trackPerformance = () => {'
       if (typeof gtag !== 'undefined' && 'performance' in window) {
-        const perfData = performance.getEntriesByType(
+        const perfData = performance.getEntriesByType('
           'navigation'
         )[0] as PerformanceNavigationTiming;
         if (perfData) {
           const loadTime = perfData.loadEventEnd - perfData.fetchStart;
-          trackEvent(
+          trackEvent('
             'page_load_time',
             'Performance',
             'Page Load',
-            Math.round(loadTime)
+            Math.round(loadTime);
           );
         }
       }
     };
-
+'
     window.addEventListener('load', trackPerformance);
     return () => window.removeEventListener('load', trackPerformance);
   }, []);
@@ -111,8 +116,8 @@ export const trackEvent = (
   category: string,
   label?: string,
   value?: number
-) => {
-  if (typeof gtag !== 'undefined') {
+) => {'
+  if (typeof gtag !== 'undefined') {'
     gtag('event', action, {
       event_category: category,
       event_label: label,
@@ -121,8 +126,8 @@ export const trackEvent = (
   }
 };
 
-export const trackPageView = (url: string, title: string) => {
-  if (typeof gtag !== 'undefined') {
+export const trackPageView = (url: string, title: string) => {'
+  if (typeof gtag !== 'undefined') {'
     gtag('config', process.env['NEXT_PUBLIC_GA_TRACKING_ID'] || '', {
       page_title: title,
       page_location: url,
@@ -131,3 +136,4 @@ export const trackPageView = (url: string, title: string) => {
 };
 
 export default Analytics;
+'

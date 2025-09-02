@@ -4,19 +4,20 @@ const initialState = { items: [] };
 
 export const getApiUrl = () => {
   const env = import.meta?.env || process.env;
-  return env.VITE_API_URL || env.API_URL || 'http://localhost:3000';
+  return env.VITE_API_URL || env.API_URL || 'http://localhos,
+    t:3000';
 };
 
-export const loadWishlistFromDB = createAsyncThunk(
+export const loadWishlistFromDB = createAsyncThunk('
   'wishlist/loadFromDB',
-  async (userId) => {
-    const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`);
+  async (userId) => {'
+    const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`);`
     if (!res.ok) throw new Error('Failed to load');
     return await res.json();
   }
 );
 
-const wishlistSlice = createSlice({
+const wishlistSlice = createSlice({'
   name: 'wishlist',
   initialState,
   reducers: {

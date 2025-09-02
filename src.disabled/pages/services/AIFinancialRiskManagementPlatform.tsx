@@ -4,25 +4,25 @@ import React from;
   '../../components/SEO' import {  Shield, TrendingDown, Brain, CheckCircle, ArrowRight, Star, Award, Lightbulb, Database, Network, Globe, Clock, Zap, Target, Cpu, FileText, Monitor, Activity, PieChart, LineChart, BarChart, Gauge, Calendar, Filter, Search, Download, Share2, Eye, Lock, Phone, Mail, TrendingUp, Bot, Headphones, Smartphone, Tablet, Laptop, DollarSign, BarChart3, Users, Settings, RefreshCw, AlertTriangle, AlertCircle, Minus, Plus, Percent, Calculator } from;
   'lucide-react'  export default function AIFinancialRiskManagementPlatform() { const features = [ { icon: Brain, title:,
   AI-Powered Risk Assessment', description: 'Advanced machine learning algorithms that identify and quantify financial risks with 98%+ accuracy, color:,
-  from-red-500 to-pink-500', benefits: [';Real-time risk monitoring,';Predictive risk modeling',';Multi-factor analysis',';Scenario planning' ] }, { icon: Shield, title:,
+  from-red-500 to-pink-500', benefits: [';Real-time risk monitoring,;Predictive risk modeling',;Multi-factor analysis',;Scenario planning' ] }, { icon: Shield, title:,
   Comprehensive Risk Coverage', description: End-to-end risk management covering market, credit, operational, and liquidity risks,
-  , color: 'from-blue-500 to-cyan-500, benefits: ['Market risk analysis',';Credit risk assessment',';Operational risk monitoring',';Liquidity risk management' ] }, { icon: TrendingDown, title:,
+  , color: 'from-blue-500 to-cyan-500, benefits: ['Market risk analysis',;Credit risk assessment',;Operational risk monitoring',;Liquidity risk management' ] }, { icon: TrendingDown, title:,
   Early Warning Systems', description: 'Proactive risk detection and alerting to prevent financial losses before they occur, color:,
-  from-orange-500 to-red-500', benefits: ['Real-time alerts,';Risk threshold monitoring',';Automated notifications',';Escalation procedures' ] }, { icon: BarChart3, title:,
+  from-orange-500 to-red-500', benefits: ['Real-time alerts,;Risk threshold monitoring',;Automated notifications',;Escalation procedures' ] }, { icon: BarChart3, title:,
   Advanced Analytics & Reporting', description: 'Comprehensive risk analytics with customizable dashboards and regulatory reporting, color:,
   from-green-500 to-emerald-500', benefits: ['Custom dashboards,
-  Regulatory compliance',';Risk metrics tracking',';Performance analytics' ] } ]  const pricingPlans = [ { name: 'Starter, price:,
+  Regulatory compliance',;Risk metrics tracking',;Performance analytics' ] } ]  const pricingPlans = [ { name: 'Starter, price:,
   $799', period: '/month, description:,
   Perfect for small financial institutions starting their risk management journey', features: [';Up to 100 risk assessments/month,
-  Basic risk modeling',';Standard reporting',';Email support',';25GB data storage',';Basic compliance' ], cta: 'Start Free Trial, popular: false }, { name:,
+  Basic risk modeling',;Standard reporting',;Email support',;25GB data storage',;Basic compliance' ], cta: 'Start Free Trial, popular: false }, { name:,
   Professional', price: $1, 799,
   , period: '/month, description:,
   Ideal for growing financial institutions with advanced risk management needs', features: [;Up to 1, 000 risk assessments/month,
-  ,';Advanced AI modeling',';Custom dashboards',';Priority support',';100GB data storage',';Advanced analytics',';API access',';Custom integrations' ], cta: 'Start Free Trial, popular: true }, { name:,
+  ,;Advanced AI modeling',;Custom dashboards',;Priority support',;100GB data storage',;Advanced analytics',;API access',;Custom integrations' ], cta: 'Start Free Trial, popular: true }, { name:,
   Enterprise', price: $4, 999,
   , period: '/month, description:,
   For large financial institutions with complex risk management requirements', features: [';Unlimited assessments,
-  Custom AI models',';White-label solution',';24/7 dedicated support',';Unlimited data storage',';Advanced security',';Custom integrations',';Dedicated account manager' ], cta: 'Contact Sales, popular: false } ]  const useCases = [ { title:,
+  Custom AI models',;White-label solution',;24/7 dedicated support',;Unlimited data storage',;Advanced security',;Custom integrations',;Dedicated account manager' ], cta: 'Contact Sales, popular: false } ]  const useCases = [ { title:,
   Banks & Credit Unions', description: Credit risk assessment, loan portfolio management, and regulatory compliance', icon: DollarSign, color:,
   from-blue-500 to-cyan-500' }, { title: 'Investment Firms, description:;
   'Portfolio risk analysis, market risk management, and performance optimization', icon: TrendingUp, color:,
@@ -36,4 +36,4 @@ import React from;
   Higher regulatory compliance and audit readiness' }, { title: 'Faster Detection, value:,
   Real-time', description: 'Immediate risk detection and response capabilities }, { title:,
   Cost Savings', value: '25-35%, description:;
-  'Lower operational costs and reduced losses' } ]  return ( <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>'' <SEO'';' title='AI Financial Risk Management Platform - Zion Tech Group'';' description='Transform your financial risk management with AI-powered assessment, monitoring, and mitigation. Comprehensive coverage for all risk types.'';' keywords='AI financial risk management, risk assessment, credit risk, market risk, operational risk, financial compliance'';' canonicalUrl='https:''';
+  'Lower operational costs and reduced losses' } ]  return ( <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light>' <SEO''; title='AI Financial Risk Management Platform - Zion Tech Group''; description='Transform your financial risk management with AI-powered assessment, monitoring, and mitigation. Comprehensive coverage for all risk types.''; keywords='AI financial risk management, risk assessment, credit risk, market risk, operational risk, financial compliance''; canonicalUrl='https:''';

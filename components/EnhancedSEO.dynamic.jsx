@@ -4,3 +4,4 @@ const EnhancedSEO = dynamic(() => import('./EnhancedSEO'), {
 });
 
 export default EnhancedSEO;
+'

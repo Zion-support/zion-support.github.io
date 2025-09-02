@@ -15,7 +15,7 @@ test;
       <CreatePostButton />
     </MemoryRouter>
   );
-  fireEvent.click(screen.getByRole(
+  fireEvent.click(screen.getByRole('
   'button', { name: /create new post/i }))
-  expect(navigateMock).toHaveBeenCalledWith(
+  expect(navigateMock).toHaveBeenCalledWith('
   '/login?next=%2Fcommunity%2Fcreate')})

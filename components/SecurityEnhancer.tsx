@@ -4,29 +4,31 @@ import Head from 'next/head';
 const SecurityEnhancer: React.FC = () => {
   useEffect(() => {;
     // Content Security Policy;
-    const csp = `;
+    const csp = `;`
       default-src 'self';
       script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com;
       style-src 'self' 'unsafe-inline' https: //fonts.googleapis.com;
       font-src 'self' https: //fonts.gstatic.com;
       img-src 'self' data: https: blob:;
-      connect-src 'self' https: //www.google-analytics.com https://analytics.google.com;
+      connect-src 'self' http,
+    s: //www.google-analytics.com http,
+    s://analytics.google.com;
       frame-src 'none';
       object-src 'none';
       base-uri 'self';
       form-action 'self'`;;
 ;
-    // Add CSP meta tag;
+    // Add CSP meta tag;`
     const cspMeta = document.createElement('meta');
     cspMeta.httpEquiv = 'Content-Security-Policy';
     cspMeta.content = csp;
     document.head.appendChild(cspMeta);
 ;
     // Security headers
-    const securityHeaders = {
+    const securityHeaders = {'
       'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY',
       'X-XSS-Protection': '1 mode=block', 'Referrer-Policy': 'strict-origin-when-cross-origin',
-      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()
     };
 ;
     // Add security headers via meta tags;
@@ -41,9 +43,9 @@ const SecurityEnhancer: React.FC = () => {
     const detectXSS = () => {;
       const scripts = document.querySelectorAll('script');
       scripts.forEach(script => {;
-                if (script.src && !script.src.startsWith(window.location.origin) &&
-             !script.src.includes('googletagmanager.com') &&
-             !script.src.includes('google-analytics.com')) {
+                if (script.src && !script.src.startsWith(window.location.origin) &&'
+             !script.src.includes('googletagmanager.com') &&'
+             !script.src.includes('google-analytics.com')) {'
           console.warn('Potentially malicious script detected: ', script.src);
           script.remove();
         }
@@ -55,9 +57,9 @@ const SecurityEnhancer: React.FC = () => {
       // Detect iframe injection attempts;
       const iframes = document.querySelectorAll('iframe');
       iframes.forEach(iframe => {;
-                if (!iframe.src.startsWith(window.location.origin) &&
-             !iframe.src.includes('youtube.com') &&
-             !iframe.src.includes('vimeo.com')) {
+                if (!iframe.src.startsWith(window.location.origin) &&'
+             !iframe.src.includes('youtube.com') &&'
+             !iframe.src.includes('vimeo.com')) {'
           console.warn('Potentially malicious iframe detected: ', iframe.src);
           iframe.remove();
         }
@@ -111,11 +113,13 @@ const SecurityEnhancer: React.FC = () => {
       <meta httpEquiv='X-Frame-Options' content='DENY' />
       <meta httpEquiv='X-XSS-Protection' content='1 mode=block' />;
       <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin' />
-      <meta httpEquiv='Permissions-Policy' content='camera=(), microphone=(), geolocation=()' />
+      <meta httpEquiv='Permissions-Policy' content='camera=(), microphone=(), geolocation=() />
       {/* Content Security Policy */}
-      <meta
+      <meta'
         httpEquiv='Content-Security-Policy';
-        content='default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: blob: connect-src 'self' https://www.google-analytics.com https://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'';
+        content='default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: blob: connect-src 'self' http,
+    s://www.google-analytics.com http,
+    s://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'';
       />;
       {/* Additional Security Meta Tags */}
       <meta name='robots' content='index, follow, noarchive, nosnippet' />

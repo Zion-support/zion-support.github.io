@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-
+'
 console.log('🔨 Running build optimizations...');
 
 // Clean previous builds
-const cleanBuild = () => {
+const cleanBuild = () => {'
   console.log('🧹 Cleaning previous builds...');
   const dirsToClean = ['.next', 'out', 'dist'];
 
@@ -18,19 +18,19 @@ const cleanBuild = () => {
 };
 
 // Optimize images
-const optimizeImages = () => {
+const optimizeImages = () => {`
   console.log('🖼️ Optimizing images...');
-  // This would typically use a tool like imagemin
+  // This would typically use a tool like imagemin'
   console.log('✅ Images optimized');
 };
 
 // Generate static assets
-const generateStaticAssets = () => {
+const generateStaticAssets = () => {'
   console.log('📄 Generating static assets...');
-  try {
+  try {'
     execSync('npm run build', { stdio: 'inherit' });
     console.log('✅ Static assets generated');
-  } catch (error) {
+  } catch (error) {'
     console.error('❌ Failed to generate static assets:', error.message);
   }
 };
@@ -44,3 +44,4 @@ const runOptimizations = () => {
 };
 
 runOptimizations();
+'

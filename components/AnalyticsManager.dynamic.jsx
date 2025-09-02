@@ -4,3 +4,4 @@ const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {
 });
 
 export default AnalyticsManager;
+'

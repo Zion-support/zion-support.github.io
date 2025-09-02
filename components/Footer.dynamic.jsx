@@ -4,3 +4,4 @@ const Footer = dynamic(() => import('./Footer'), {
 });
 
 export default Footer;
+'

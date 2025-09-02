@@ -16,15 +16,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     // Add skip to content functionality
     if (skipToContent) {
-      const handleSkipToContent = (e: KeyboardEvent) => {
-        if (e.key === 'Tab' && !e.shiftKey) {
+      const handleSkipToContent = (e: KeyboardEvent) => {'
+        if (e.key === 'Tab' && !e.shiftKey) {'
           const skipLink = document.getElementById('skip-to-content');
           if (skipLink && document.activeElement === document.body) {
             skipLink.focus();
           }
         }
       };
-
+'
       document.addEventListener('keydown', handleSkipToContent);
       return () => document.removeEventListener('keydown', handleSkipToContent);
     }
@@ -34,17 +34,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     // Focus management for modals and dynamic content
     if (focusManagement) {
       const handleFocusManagement = () => {
-        // Add focus trap for modals
-        const modals = document.querySelectorAll('[role="dialog"]');
+        // Add focus trap for modals'
+        const modals = document.querySelectorAll('[role="dialog"]);
         modals.forEach(modal => {
-          const focusableElements = modal.querySelectorAll(
-            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          const focusableElements = modal.querySelectorAll('
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);
           );
           if (focusableElements.length > 0) {
             const firstElement = focusableElements[0] as HTMLElement;
             const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
             
-            const handleTabKey = (e: KeyboardEvent) => {
+            const handleTabKey = (e: KeyboardEvent) => {'
               if (e.key === 'Tab') {
                 if (e.shiftKey) {
                   if (document.activeElement === firstElement) {
@@ -59,7 +59,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                 }
               }
             };
-
+'
             modal.addEventListener('keydown', handleTabKey);
           }
         });
@@ -80,28 +80,28 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     // Enhanced keyboard navigation
     if (keyboardNavigation) {
       const handleKeyboardNavigation = (e: KeyboardEvent) => {
-        // Escape key to close modals/dropdowns
-        if (e.key === 'Escape') {
-          const openModal = document.querySelector('[role="dialog"][aria-hidden="false"]');
-          const openDropdown = document.querySelector('[aria-expanded="true"]');
+        // Escape key to close modals/dropdowns'
+        if (e.key === 'Escape') {'
+          const openModal = document.querySelector('[role="dialog"][aria-hidden="false"]);
+          const openDropdown = document.querySelector('[aria-expanded="true"]);
           
-          if (openModal) {
-            const closeButton = openModal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
+          if (openModal) {'
+            const closeButton = openModal.querySelector('[aria-label*="close"], [aria-label*="Close"]) as HTMLElement;
             closeButton?.click();
           } else if (openDropdown) {
             (openDropdown as HTMLElement).click();
           }
         }
 
-        // Arrow keys for menu navigation
-        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-          const menu = document.querySelector('[role="menu"]');
-          if (menu && document.activeElement?.closest('[role="menu"]')) {
+        // Arrow keys for menu navigation'
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {'
+          const menu = document.querySelector('[role="menu"]);
+          if (menu && document.activeElement?.closest('[role="menu"])) {
             e.preventDefault();
-            const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[];
+            const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"])) as HTMLElement[];
             const currentIndex = menuItems.indexOf(document.activeElement as HTMLElement);
             
-            if (currentIndex !== -1) {
+            if (currentIndex !== -1) {'
               const nextIndex = e.key === 'ArrowDown'
                 ? (currentIndex + 1) % menuItems.length
                 : (currentIndex - 1 + menuItems.length) % menuItems.length;
@@ -110,7 +110,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           }
         }
       };
-
+'
       document.addEventListener('keydown', handleKeyboardNavigation);
       return () => document.removeEventListener('keydown', handleKeyboardNavigation);
     }
@@ -119,12 +119,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return (
     <>
       {skipToContent && (
-        <a
-          id="skip-to-content"
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-          onFocus={(e) => {
-            e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        <a'
+          id="skip-to-content""
+          href="#main-content""
+          className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focu,
+    s:ring-offset-2"
+          onFocus={(e) => {"
+            e.currentTarget.scrollIntoView({ behavio,
+    r: 'smooth', block: 'start' });
           }}
         >
           Skip to main content

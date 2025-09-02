@@ -27,15 +27,20 @@ export interface NextGenerationAIService {
    variant: string;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const nextGenerationAIServices: NextGenerationAIService[] = [{
-    id:,
+review,
+    s: number;export const nextGenerationAIService,
+    s: NextGenerationAIService[] = [{
+    i,
+    d:,
   quantum-ai-brain-computer-interface',
     name: 'Quantum AI Brain-Computer Interface,
     tagline:,
@@ -76,7 +81,8 @@ reviews: number;export const nextGenerationAIServices: NextGenerationAIService[]
     textColor:,
   text-purple-400;
   ',
-    link: 'https://ziontechgroup.com/quantum-ai-brain-computer-interface,
+    link: 'http,
+    s://ziontechgroup.com/quantum-ai-brain-computer-interface,
     marketPosition:,
   First-to-market quantum BCI solution. Competes with Neuralink ($10,000+/month) and Kernel ($50,000+/month) with superior quantum processing capabilities.;
   ',
@@ -124,14 +130,16 @@ reviews: number;export const nextGenerationAIServices: NextGenerationAIService[]
   ',
     variant: 'quantum-neural-advanced,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Fully functional quantum BCI platform with FDA approval pathway, quantum encryption, real-time neural processing, and comprehensive research tools.;
@@ -183,7 +191,8 @@ reviews: number;export const nextGenerationAIServices: NextGenerationAIService[]
     textColor:,
   text-yellow-400;
   ',
-    link: 'https://ziontechgroup.com/autonomous-ai-venture-capital,
+    link: 'http,
+    s://ziontechgroup.com/autonomous-ai-venture-capital,
     marketPosition:,
   First autonomous VC platform. Competes with traditional VC firms and hedge funds, offering 24/7 autonomous operation with superior returns.;
   ',
@@ -231,14 +240,16 @@ reviews: number;export const nextGenerationAIServices: NextGenerationAIService[]
   ',
     variant: 'quantum-financial-advanced,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Fully autonomous AI platform with SEC compliance, real-time market analysis, automated investment execution, and comprehensive reporting.;
@@ -290,7 +301,8 @@ reviews: number;export const nextGenerationAIServices: NextGenerationAIService[]
     textColor:,
   text-emerald-400;
   ',
-    link: 'https://ziontechgroup.com/quantum-ai-drug-discovery,
+    link: 'http,
+    s://ziontechgroup.com/quantum-ai-drug-discovery,
     marketPosition:,
   First quantum AI drug discovery platform. Competes with Insitro ($100M+ funding) and Recursion ($2B+ funding) with quantum-level precision.;
   ',
@@ -338,14 +350,16 @@ reviews: number;export const nextGenerationAIServices: NextGenerationAIService[]
   ',
     variant: 'quantum-biotech-advanced,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Fully functional quantum AI platform with FDA collaboration, real-time molecular simulation, automated drug screening, and comprehensive research tools.;
@@ -397,7 +411,8 @@ reviews: number;export const nextGenerationAIServices: NextGenerationAIService[]
     textColor:,
   text-cyan-400;
   ',
-    link: 'https://ziontechgroup.com/quantum-ai-space-mission-control,
+    link: 'http,
+    s://ziontechgroup.com/quantum-ai-space-mission-control,
     marketPosition:,
   First autonomous space mission control platform. Competes with SpaceX ($99/month) and OneWeb ($50/month) with complete mission management capabilities.;
   ',
@@ -445,14 +460,16 @@ reviews: number;export const nextGenerationAIServices: NextGenerationAIService[]
   ',
     variant: 'quantum-space-advanced,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Fully autonomous space mission control platform with regulatory compliance, real-time mission management, automated operations, and comprehensive analytics.;
@@ -504,7 +521,8 @@ reviews: number;export const nextGenerationAIServices: NextGenerationAIService[]
     textColor:,
   text-red-400;
   ',
-    link: 'https://ziontechgroup.com/quantum-ai-cybersecurity-fortress,
+    link: 'http,
+    s://ziontechgroup.com/quantum-ai-cybersecurity-fortress,
     marketPosition:,
   First quantum AI cybersecurity platform. Competes with CrowdStrike ($8.99/month) and Palo Alto Networks ($50+/month) with quantum-level security.;
   ',
@@ -552,14 +570,16 @@ reviews: number;export const nextGenerationAIServices: NextGenerationAIService[]
   ',
     variant: 'quantum-cyberpunk-advanced,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Fully functional quantum cybersecurity platform with regulatory compliance, real-time threat detection, automated response, and comprehensive security analytics.;
@@ -611,7 +631,8 @@ reviews: number;export const nextGenerationAIServices: NextGenerationAIService[]
     textColor:,
   text-green-400;
   ',
-    link: 'https://ziontechgroup.com/quantum-ai-logistics-orchestrator,
+    link: 'http,
+    s://ziontechgroup.com/quantum-ai-logistics-orchestrator,
     marketPosition:,
   First quantum AI logistics platform. Competes with Flexport ($1000+/month) and Convoy ($500+/month) with autonomous optimization capabilities.;
   ',
@@ -659,14 +680,16 @@ reviews: number;export const nextGenerationAIServices: NextGenerationAIService[]
   ',
     variant: 'quantum-logistics-advanced,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Fully autonomous logistics platform with real-time optimization, automated decision making, comprehensive analytics, and regulatory compliance.;

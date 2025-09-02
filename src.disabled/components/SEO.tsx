@@ -8,7 +8,7 @@ interface SEOProps {
    image?: string;
    url?: string;
    type?: string}
-export const SEO: React.FC<SEOProps> = ({
+export const SEO: React.FC<SEOProps> = ({'
   title = 'Zion Tech Group - Leading Technology Solutions',
   description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',
   keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',
@@ -18,7 +18,7 @@ export const SEO: React.FC<SEOProps> = ({
   return(
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
+      <title>{title}</title>'
       <meta name='description' content={description} />
       <meta name='keywords' content={keywords} />
       <meta name='author' content='Zion Tech Group' />
@@ -33,7 +33,8 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property='og:site_name' content='Zion Tech Group' />
       {/* Twitter */}
       <meta property='twitter:card' content='summary_large_image' />
-      <meta property='twitter:url' content={url} />
+      <meta property='twitte,
+    r:url' content={url} />
       <meta property='twitter:title' content={title} />
       <meta property='twitter:description' content={description} />
       <meta property='twitter:image' content={image} />
@@ -42,7 +43,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
       {/* Structured Data */}
       <script type='application/ld+json'>
-        {JSON.stringify({
+        {JSON.stringify({'
           '@context': 'https://schema.org',
           '@type': 'Organization',
           'name': 'Zion Tech Group',
@@ -53,7 +54,7 @@ export const SEO: React.FC<SEOProps> = ({
             'https://linkedin.com/company/zion-tech-group',
             'https://twitter.com/ziontechgroup'
           ],
-          'contactPoint': {
+          'contactPoint': {'
             '@type': 'ContactPoint',
             'telephone': '+1-302-464-0950',
             'contactType': 'customer service'}

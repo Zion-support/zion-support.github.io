@@ -7,21 +7,21 @@ import TalentDetail from '@/pages/TalentDetail';
 function renderWithRouter() {
   return render(
     <QueryClientProvider client={new QueryClient()}>
-      <MemoryRouter initialEntries={[
+      <MemoryRouter initialEntries={['
   '/talent']}>
-        <Routes>
+        <Routes>'
           <Route path='/talent' element={<TalentDirectory />} />
           <Route path='/talent/:id' element={<TalentDetail />} />
         </Routes>
       </MemoryRouter>
     </QueryClientProvider>
   )}
-test(
+test('
   'opens first talent profile from directory', async () => {
   renderWithRouter();
-  const firstCard = await screen.findByText(
+  const firstCard = await screen.findByText('
   'Alexandra Chen');
-  fireEvent.click(firstCard)
-  expect(await screen.findByTestId(
-  'talent-details')).toHaveTextContent(
+  fireEvent.click(firstCard);
+  expect(await screen.findByTestId('
+  'talent-details')).toHaveTextContent('
   'Alexandra Chen')})

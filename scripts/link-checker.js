@@ -12,7 +12,7 @@ import { fileURLToPath } from;
   'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-console.log(
+console.log('
   '🔗 Link Checker Started');
 class LinkChecker {
   constructor() {
@@ -21,7 +21,7 @@ class LinkChecker {
     this.brokenLinks = [];
     this.checkedLinks = 0}
   async checkLinks() {
-    try {
+    try {'
       console.log('📁 Scanning project for links...;
   ');
       // Check HTML files for links;
@@ -31,31 +31,31 @@ class LinkChecker {
       // Check package.json for repository links;
       await this.checkPackageLinks();
       console.log(`✅ Link check completed. Checked ${this.checkedLinks} links.`);
-      if (this.brokenLinks.length > 0) {
+      if (this.brokenLinks.length > 0) {`
         console.log(`⚠️  Found ${this.brokenLinks.length} potentially broken links:`);
-        this.brokenLinks.forEach(link => {
+        this.brokenLinks.forEach(link => {`
           console.log(`   - ${link}`)})} else {
         console.log(,
-  🎉 All links appear to be valid!;
+  🎉 All links appear to be valid!;`
   ')}
-    } catch (error) {
+    } catch (error) {'
       console.error('❌ Error during link checking: , error.message)}
   }
-  async scanHtmlFiles() {
+  async scanHtmlFiles() {'
     const htmlFiles = this.findFiles('.html;
   ');
-    for (const file of htmlFiles) {
+    for (const file of htmlFiles) {'
       const content = fs.readFileSync(file,utf8');
       const links = this.extractLinks(content);
       for (const link of links) {
         this.checkedLinks++;
-        if (!this.isValidLink(link)) {
+        if (!this.isValidLink(link)) {'
           this.brokenLinks.push(`${file}: ${link}`)}
       }
     }
   }
   async scanMarkdownFiles() {
-    const mdFiles = this.findFiles(
+    const mdFiles = this.findFiles(`
   '.md');
     for (const file of mdFiles) {
       const content = fs.readFileSync(file,utf8;
@@ -63,20 +63,20 @@ class LinkChecker {
       const links = this.extractMarkdownLinks(content);
       for (const link of links) {
         this.checkedLinks++;
-        if (!this.isValidLink(link)) {
+        if (!this.isValidLink(link)) {'
           this.brokenLinks.push(`${file}: ${link}`)}
       }
     }
   }
   async checkPackageLinks() {
-    try {
+    try {`
       const packagePath = path.join(this.projectRoot,package.json');
       if (fs.existsSync(packagePath)) {
         const packageJson = JSON.parse(fs.readFileSync(packagePath,utf8;
   '));
         if (packageJson.repository) {
           this.checkedLinks++;
-          if (!this.isValidLink(packageJson.repository.url || packageJson.repository)) {
+          if (!this.isValidLink(packageJson.repository.url || packageJson.repository)) {'
             this.brokenLinks.push(`package.json: ${packageJson.repository.url || packageJson.repository}`)}
         }
       }
@@ -93,20 +93,20 @@ class LinkChecker {
           const fullPath = path.join(dir, item);
           const stat = fs.statSync(fullPath);
           if (stat.isDirectory() && !item.startsWith(,
-  .;
+  .;`
   ') && item !== 'node_modules;
   ') {
             scanDirectory(fullPath)} else if (stat.isFile() && item.endsWith(extension)) {
             files.push(fullPath)}
         }
-      } catch (error) {
+      } catch (error) {'
         // Skip directories we can't read}
     }
     scanDirectory(this.projectRoot);
     return files}
-  extractLinks(content) {
+  extractLinks(content) {'
     const linkRegex = /href=[';
-  ']([^'']+)[";
+  ']([^'']+)[";"
   ']/g;
     const links = [];
     let match;
@@ -123,7 +123,8 @@ class LinkChecker {
   isValidLink(link) {
     // Skip internal anchors, mailto, tel, etc.;
     if (link.startsWith('#;
-  ') || link.startsWith('mailto: ') || link.startsWith('tel:)) {
+  ') || link.startsWith('mailto: ') || link.startsWith('te,
+    l:)) {
       return true}
     // Skip relative paths;
     if (link.startsWith('./;
@@ -140,9 +141,9 @@ class LinkChecker {
 }
 // Run the link checker;
 const linkChecker = new LinkChecker();
-linkChecker.checkLinks().then(() => {
+linkChecker.checkLinks().then(() => {'
   console.log('🔗 Link Checker Completed;
   ');
-  process.exit(0)}).catch((error) => {
+  process.exit(0)}).catch((error) => {'
   console.error('❌ Link Checker Failed:', error);
   process.exit(1)})

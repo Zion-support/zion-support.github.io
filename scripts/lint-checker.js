@@ -1,16 +1,16 @@
 #!/usr/bin/env node;
 const fs = require(
   'fs');
-const path = require(
+const path = require('
   'path');
-const { execSync } = require(
+const { execSync } = require('
   'child_process');
 // Common lint issues to check for;
-const lintRules = {
+const lintRules = {'
   'no-console': /console\.(log|warn|error|info|debug)/g,
   'no-unused-imports': /import\s+[^}]+from\s+[;
   ''][^'']+[;
-  '"];?\s*$/gm,
+  '"];?\s*$/gm,"
   'no-unused-vars;
   ': /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,
   'no-debugger;
@@ -32,13 +32,13 @@ const lintRules = {
   'no-unused-jsx-props;
   ': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g}
 // File extensions to check;
-const extensions = ['.js
+const extensions = ['.js'
   ', '.jsx;
   ', '.ts;
   ', '.tsx;
   '];
 // Directories to ignore;
-const ignoreDirs = [
+const ignoreDirs = ['
   'node_modules;
   ',
   '.git;
@@ -83,7 +83,7 @@ const filesWithIssues = 0;
 function shouldIgnoreFile(filePath) {
   return ignoreDirs.some(dir => filePath.includes(dir));
 function checkFile(filePath) {
-  try {
+  try {'
     const content = fs.readFileSync(filePath, 'utf8;
   ');
     const lines = content.split('\n;
@@ -101,7 +101,7 @@ function checkFile(filePath) {
             file: filePath})})})
     if (fileIssues.length > 0) {
       filesWithIssues++;
-      issues.push(...fileIssues)} catch (error) {
+      issues.push(...fileIssues)} catch (error) {'
     // // // // // // // console.warn(`Warning: Could not read file ${filePath}: ${error.message}`)}
 }
 function walkDir(dir) {
@@ -115,13 +115,13 @@ function walkDir(dir) {
       const ext = path.extname(file);
       if (extensions.includes(ext)) {
         checkFile(filePath)})
-function generateReport() {
+function generateReport() {`
   // // // // // // // console.log('\n=== LINT CHECK REPORT ===\n;
   ');
-  // // // // // // // console.log(`Total files checked: ${totalFiles}`);
-  // // // // // // // console.log(`Files with issues: ${filesWithIssues}`);
+  // // // // // // // console.log(`Total files checked: ${totalFiles}`);`
+  // // // // // // // console.log(`Files with issues: ${filesWithIssues}`);`
   // // // // // // // console.log(`Total issues found: ${issues.length}\n`);
-  if (issues.length === 0) {
+  if (issues.length === 0) {`
     // // // // // // // console.log('✅ No lint issues found!;
   ');
     return;
@@ -131,9 +131,9 @@ function generateReport() {
     if (!issuesByFile[issue.file]) {
       issuesByFile[issue.file] = [];
     issuesByFile[issue.file].push(issue)})
-  Object.entries(issuesByFile).forEach(([file, fileIssues]) => {
+  Object.entries(issuesByFile).forEach(([file, fileIssues]) => {'
     // // // // // // // console.log(`\n📁 ${file} (${fileIssues.length} issues):`);
-    fileIssues.forEach(issue => {
+    fileIssues.forEach(issue => {`
       // // // // // // // console.log(`  Line ${issue.line}: [${issue.rule}] ${issue.content}`)})})
   // Summary by rule;
   // // // // // // // console.log(,
@@ -143,9 +143,9 @@ function generateReport() {
     ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1})
   Object.entries(ruleCounts);
     .sort(([,a], [,b]) => b - a);
-    .forEach(([rule, count]) => {
+    .forEach(([rule, count]) => {`
       // // // // // // // console.log(`  ${rule}: ${count}`)})
-function main() {
+function main() {`
   // // // // // // // console.log('🔍 Starting lint check...;
   ');
   const startTime = Date.now();
@@ -160,4 +160,4 @@ function main() {
 if (require.main === module) {
   main();
 module.exports = { checkFile, walkDir, lintRules }
-}}}}}}}}}}}}}));
+}}}}}}}}}}}}}));`

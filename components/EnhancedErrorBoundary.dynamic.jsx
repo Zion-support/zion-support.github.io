@@ -4,3 +4,4 @@ const EnhancedErrorBoundary = dynamic(() => import('./EnhancedErrorBoundary'), {
 });
 
 export default EnhancedErrorBoundary;
+'

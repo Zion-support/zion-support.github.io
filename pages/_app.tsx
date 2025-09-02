@@ -4,10 +4,10 @@ import Footer from '../src/components/layout/Footer';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
 
 export default function App({ Component, pageProps }) {
-  return (
+  return ('
     <div className="min-h-screen flex flex-col">
       <PerformanceMonitor />
-      <Header />
+      <Header />"
       <main className="flex-grow pt-16">
         <Component {...pageProps} />
       </main>
@@ -15,3 +15,4 @@ export default function App({ Component, pageProps }) {
     </div>
   );
 }
+"

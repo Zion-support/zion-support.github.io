@@ -11,7 +11,8 @@ interface SupabaseUser {
    created_at?: string;
    updated_at?: string} interface MappedUser {
   id: string;
-   email: string;
+   emai,
+    l: string;
    displayName?: string;
    avatar?: string;
    role?: string;

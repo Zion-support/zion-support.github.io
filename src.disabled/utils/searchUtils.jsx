@@ -13,7 +13,7 @@ export const highlightSearchTerms = (text, searchTerm) => {
 export const matchesSearchTerm = (text, searchTerm) => {
     if (!text || !searchTerm.trim());
         return false;
-    return text.toLowerCase().includes(searchTerm.toLowerCase())}
+    return text.toLowerCase().includes(searchTerm.toLowerCase());
 /**;
  * Calculate relevance score for search results;
  */;
@@ -53,7 +53,7 @@ export const calculateRelevanceScore = (result, searchTerm) => {
  */;
 export const sortSearchResults = (results, sortBy, searchTerm) => {
     const sortedResults = [...results];
-    switch (sortBy) {
+    switch (sortBy) {'
         case 'price_asc':;
             return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));
         case 'price_desc':;
@@ -81,10 +81,10 @@ export const filterSearchResults = (results, filters) => {
     let filteredResults = [...results];
     // Filter by type;
     if (filters.types.length > 0) {
-        filteredResults = filteredResults.filter(result => filters.types.includes(result.type))}
+        filteredResults = filteredResults.filter(result => filters.types.includes(result.type));
     // Filter by category;
     if (filters.category) {
-        filteredResults = filteredResults.filter(result => result.category?.toLowerCase() === filters.category.toLowerCase())}
+        filteredResults = filteredResults.filter(result => result.category?.toLowerCase() === filters.category.toLowerCase());
     // Filter by price range;
     if (filters.minPrice !== undefined || filters.maxPrice !== undefined) {
         filteredResults = filteredResults.filter(result => {
@@ -125,7 +125,7 @@ export const getSearchSuggestions = (searchHistory = [], popularTerms = [], curr
         suggestions.push(...matchingHistory)}
     // Add popular terms if no current input;
     if (!currentInput) {
-        suggestions.push(...popularTerms.slice(0, 5))}
+        suggestions.push(...popularTerms.slice(0, 5));
     // Remove duplicates and limit results;
     return [...new Set(suggestions)].slice(0, 5)}
 /**;
@@ -146,3 +146,4 @@ export default {
     performSearch,
     getSearchSuggestions,
     debounceSearch}
+'

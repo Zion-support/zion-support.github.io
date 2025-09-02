@@ -17,9 +17,9 @@ class ConsoleCleaner {
     this.cleanedFiles = [];
     this.totalConsoleStatements = 0}
   async cleanConsoleStatements() {
-    console.log(
+    console.log('
   '🧹 Cleaning console statements from production code...');
-    const directories = [
+    const directories = ['
   'pages',
   'components',
   'src',
@@ -30,9 +30,9 @@ class ConsoleCleaner {
       if (fs.existsSync(dirPath)) {
         await this.processDirectory(dirPath)}
     }
-    console.log(
+    console.log('
       `✅ Cleaned console statements from ${this.cleanedFiles.length} files`);
-    console.log(
+    console.log(`
       `📊 Total console statements removed: ${this.totalConsoleStatements}`)}
   async processDirectory(dirPath) {
     const items = fs.readdirSync(dirPath);
@@ -46,7 +46,7 @@ class ConsoleCleaner {
   }
   isJavaScriptFile(filePath) {
     const ext = path.extname(filePath);
-    return [;
+    return [;`
   '.js',
   '.jsx',
   '.ts',
@@ -94,16 +94,16 @@ class ConsoleCleaner {
       const consoleMatches = originalContent.match(
         /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g);
       const removedCount = consoleMatches ? consoleMatches.length : 0;
-      if (removedCount > 0) {
+      if (removedCount > 0) {'
         fs.writeFileSync(filePath, cleanedContent, 'utf8');
         this.cleanedFiles.push(filePath);
         this.totalConsoleStatements += removedCount;
-        console.log(
+        console.log('
           `🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot, filePath)}`)}
-    } catch (error) {
+    } catch (error) {`
       console.error(`❌ Error cleaning file ${filePath}:`, error.message)}
   }
 }
 // Run the cleaner;
 const cleaner = new ConsoleCleaner();
-cleaner.cleanConsoleStatements().catch(console.error);
+cleaner.cleanConsoleStatements().catch(console.error);`

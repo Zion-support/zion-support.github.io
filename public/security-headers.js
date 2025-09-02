@@ -8,18 +8,22 @@ const securityHeaders = {
     'script-src;
   'self';
   'unsafe-inline';
-  'unsafe-eval' https://cdn.gpteng.co https://www.google-analytics.com',
+  'unsafe-eval' https://cdn.gpteng.co http,
+    s://www.google-analytics.com',
     'style-src;
   'self';
   'unsafe-inline' https://fonts.googleapis.com',
     'font-src;
   'self' https://fonts.gstatic.com',
     'img-src;
-  'self' data: https: blob:',
+  'self' data: http,
+    s: blo,
+    b:',
     'media-src;
   'self' https:',
     'connect-src;
-  'self' https: wss:',
+  'self' https: ws,
+    s:',
     'frame-src,
   self'',
     'object-src;
@@ -63,7 +67,7 @@ const securityHeaders = {
   Origin-Agent-Cluster;
   ': '?1}
 // Function to apply security headers;
-function applySecurityHeaders() {
+function applySecurityHeaders() {'
   if (typeof window !== 'undefined;
   ') {
     // Client-side security measures;
@@ -77,12 +81,12 @@ function applySecurityHeaders() {
       console.error = () => {}
     }
     // Prevent eval usage;
-    window.eval = function () {
+    window.eval = function () {'
       throw new Error('eval() is not allowed for security reasons;
   ')}
     // Prevent Function constructor;
     window.Function = function () {
-      throw new Error(
+      throw new Error('
         'Function constructor is not allowed for security reasons;
   ')}
   }

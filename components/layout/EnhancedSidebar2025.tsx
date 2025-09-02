@@ -7,13 +7,15 @@ import {
   Phone, Mail, MapPin, ChevronRight, ChevronDown, 
   Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
   Award, Clock, Heart, Lightbulb, Users, FileText, 
-  HelpCircle, BookOpen, Target, TrendingUp, Star
+  HelpCircle, BookOpen, Target, TrendingUp, Star'
 } from 'lucide-react';
 
 interface SidebarItem {
   name: string;
-  href: string;
-  icon: React.ReactNode;
+  hre,
+    f: string;
+  ico,
+    n: React.ReactNode;
   description?: string;
   children?: SidebarItem[];
   badge?: string;
@@ -25,18 +27,20 @@ interface SidebarItem {
 }
 
 const sidebarSections = [
-  {
+  {'
     title: 'Revolutionary Services',
     icon: Zap,
     color: 'from-cyan-500 to-blue-600',
     items: [
-      {
-        name: 'AI & Consciousness',
+      {'
+        nam,
+    e: 'AI & Consciousness',
         href: '/ai-services',
         icon: Brain,
         description: 'Advanced AI consciousness and evolution platforms',
-        children: [
-          { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution' },
+        children: ['
+          { nam,
+    e: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution' },
           { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
           { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
           { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
@@ -48,13 +52,14 @@ const sidebarSections = [
           { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' }
         ]
       },
-      {
+      {'
         name: 'Quantum Computing',
         href: '/quantum-services',
         icon: Atom,
         description: 'Next-generation quantum computing solutions',
-        children: [
-          { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' },
+        children: ['
+          { nam,
+    e: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' },
           { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' },
           { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
           { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery' },
@@ -64,13 +69,14 @@ const sidebarSections = [
           { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform' }
         ]
       },
-      {
+      {'
         name: 'Enterprise IT',
         href: '/enterprise-it',
         icon: Shield,
         description: 'Enterprise-grade IT infrastructure and security',
-        children: [
-          { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration' },
+        children: ['
+          { nam,
+    e: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration' },
           { name: 'Zero Trust Security Platform', href: '/zero-trust-network-architecture' },
           { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform' },
           { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
@@ -82,31 +88,34 @@ const sidebarSections = [
       }
     ]
   },
-  {
+  {'
     title: 'Innovation Hub',
     icon: Rocket,
     color: 'from-purple-500 to-pink-600',
     items: [
-      {
-        name: 'Research & Development',
+      {'
+        nam,
+    e: 'Research & Development',
         href: '/research-development',
         icon: Lightbulb,
         description: 'Cutting-edge research and innovation',
-        children: [
-          { name: 'AI Research Lab', href: '/ai-research-lab' },
+        children: ['
+          { nam,
+    e: 'AI Research Lab', href: '/ai-research-lab' },
           { name: 'Quantum Research Center', href: '/quantum-research-center' },
           { name: 'Biotech Innovation Hub', href: '/biotech-innovation-hub' },
           { name: 'Space Technology Lab', href: '/space-technology-lab' },
           { name: 'Green Technology Center', href: '/green-technology-center' }
         ]
       },
-      {
+      {'
         name: 'Future Technologies',
         href: '/future-technologies',
         icon: Sparkles,
         description: 'Emerging technologies and trends',
-        children: [
-          { name: 'Metaverse Platform', href: '/metaverse-platform' },
+        children: ['
+          { nam,
+    e: 'Metaverse Platform', href: '/metaverse-platform' },
           { name: 'Neural Interface Technology', href: '/neural-interface-technology' },
           { name: 'Holographic Computing', href: '/holographic-computing' },
           { name: 'Time Crystal Computing', href: '/time-crystal-computing' },
@@ -115,30 +124,31 @@ const sidebarSections = [
       }
     ]
   },
-  {
+  {'
     title: 'Company',
     icon: Globe,
     color: 'from-green-500 to-teal-600',
     items: [
-      {
-        name: 'About Us',
+      {'
+        nam,
+    e: 'About Us',
         href: '/about',
         icon: Users,
         description: 'Learn about our mission and vision'
       },
-      {
+      {'
         name: 'Leadership',
         href: '/leadership',
         icon: Award,
         description: 'Meet our executive team'
       },
-      {
+      {'
         name: 'Careers',
         href: '/careers',
         icon: Target,
         description: 'Join our innovative team'
       },
-      {
+      {'
         name: 'News & Media',
         href: '/news',
         icon: FileText,
@@ -146,24 +156,25 @@ const sidebarSections = [
       }
     ]
   },
-  {
+  {'
     title: 'Support',
     icon: HelpCircle,
     color: 'from-orange-500 to-red-600',
     items: [
-      {
-        name: 'Documentation',
+      {'
+        nam,
+    e: 'Documentation',
         href: '/docs',
         icon: BookOpen,
         description: 'Technical documentation and guides'
       },
-      {
+      {'
         name: 'Contact',
         href: '/contact',
         icon: Phone,
         description: 'Get in touch with our team'
       },
-      {
+      {'
         name: 'Status',
         href: '/status',
         icon: BarChart3,
@@ -175,7 +186,8 @@ const sidebarSections = [
 
 interface EnhancedSidebar2025Props {
   isOpen: boolean;
-  onClose: () => void;
+  onClos,
+    e: () => void;
 }
 
 const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClose }) => {
@@ -185,16 +197,16 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
 
   const toggleSection = (sectionTitle: string) => {
     setExpandedSections(prev =>
-      prev.includes(sectionTitle)
-        ? prev.filter(title => title !== sectionTitle)
+      prev.includes(sectionTitle);
+        ? prev.filter(title => title !== sectionTitle);
         : [...prev, sectionTitle]
     );
   };
 
   const toggleItem = (itemName: string) => {
     setExpandedItems(prev =>
-      prev.includes(itemName)
-        ? prev.filter(name => name !== itemName)
+      prev.includes(itemName);
+        ? prev.filter(name => name !== itemName);
         : [...prev, itemName]
     );
   };
@@ -215,51 +227,54 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
       )}
 
       {/* Sidebar */}
-      <motion.div
+      <motion.div"
         initial={{ x: '-100%' }}
         animate={{ x: isOpen ? 0 : '-100%' }}
         exit={{ x: '-100%' }}
         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-        className="fixed top-0 left-0 h-full w-80 bg-white shadow-2xl z-50 lg:translate-x-0 lg:static lg:shadow-none"
-      >
+        className="fixed top-0 left-0 h-full w-80 bg-white shadow-2xl z-50 lg: translate-x-0 l,
+    g:static l,
+    g:shadow-none"
+      >"
         <div className="flex flex-col h-full">
-          {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200">
-            <div className="flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+          {/* Header */}"
+          <div className="flex items-center justify-between p-6 border-b border-gray-200">"
+            <div className="flex items-center">"
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">"
                 <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <div className="ml-3">
-                <h1 className="text-xl font-bold text-gray-900">Zion Tech</h1>
+              </div>"
+              <div className="ml-3">"
+                <h1 className="text-xl font-bold text-gray-900">Zion Tech</h1>"
                 <p className="text-sm text-gray-500">2025 Edition</p>
               </div>
             </div>
             <button
-              onClick={onClose}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-            >
+              onClick={onClose}"
+              className="lg:hidden p-2 rounded-lg hove,
+    r:bg-gray-100 transition-colors"
+            >"
               <X className="w-6 h-6" />
             </button>
           </div>
 
-          {/* Navigation */}
-          <div className="flex-1 overflow-y-auto p-4">
+          {/* Navigation */}"
+          <div className="flex-1 overflow-y-auto p-4">"
             <div className="space-y-6">
               {sidebarSections.map((section, sectionIndex) => (
                 <div key={sectionIndex}>
                   <button
-                    onClick={() => toggleSection(section.title)}
+                    onClick={() => toggleSection(section.title)}"
                     className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                  >
-                    <div className="flex items-center">
-                      <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center mr-3`}>
+                  >"
+                    <div className="flex items-center">"
+                      <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center mr-3`}>`
                         <section.icon className="w-4 h-4 text-white" />
-                      </div>
+                      </div>"
                       <span className="font-semibold text-gray-900">{section.title}</span>
                     </div>
-                    {expandedSections.includes(section.title) ? (
+                    {expandedSections.includes(section.title) ? ("
                       <ChevronDown className="w-5 h-5 text-gray-500" />
-                    ) : (
+                    ) : ("
                       <ChevronRight className="w-5 h-5 text-gray-500" />
                     )}
                   </button>
@@ -267,7 +282,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
                   <AnimatePresence>
                     {expandedSections.includes(section.title) && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
+                        initial={{ opacity: 0, height: 0 }}"
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         className="mt-2 space-y-1"
@@ -276,17 +291,17 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
                           <div key={itemIndex}>
                             <Link
                               href={item.href}
-                              onClick={onClose}
+                              onClick={onClose}"
                               className={`flex items-center p-3 rounded-lg transition-colors ${
-                                isActive(item.href)
-                                  ? 'bg-blue-50 text-blue-700 border-l-4 border-blue-600'
-                                  : 'text-gray-700 hover:bg-gray-50'
+                                isActive(item.href)`
+                                  ? 'bg-blue-50 text-blue-700 border-l-4 border-blue-600''
+                                  : 'text-gray-700 hover:bg-gray-50''
                               }`}
-                            >
-                              <item.icon className="w-5 h-5 mr-3" />
-                              <div className="flex-1">
+                            >`
+                              <item.icon className="w-5 h-5 mr-3" />"
+                              <div className="flex-1">"
                                 <div className="font-medium">{item.name}</div>
-                                {item.description && (
+                                {item.description && ("
                                   <div className="text-sm text-gray-500">{item.description}</div>
                                 )}
                               </div>
@@ -295,12 +310,12 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
                                   onClick={(e) => {
                                     e.preventDefault();
                                     toggleItem(item.name);
-                                  }}
+                                  }}"
                                   className="p-1 hover:bg-gray-200 rounded"
                                 >
-                                  {expandedItems.includes(item.name) ? (
+                                  {expandedItems.includes(item.name) ? ("
                                     <ChevronDown className="w-4 h-4" />
-                                  ) : (
+                                  ) : ("
                                     <ChevronRight className="w-4 h-4" />
                                   )}
                                 </button>
@@ -311,7 +326,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
                               <AnimatePresence>
                                 {expandedItems.includes(item.name) && (
                                   <motion.div
-                                    initial={{ opacity: 0, height: 0 }}
+                                    initial={{ opacity: 0, height: 0 }}"
                                     animate={{ opacity: 1, height: 'auto' }}
                                     exit={{ opacity: 0, height: 0 }}
                                     className="ml-8 mt-1 space-y-1"
@@ -320,11 +335,11 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
                                       <Link
                                         key={childIndex}
                                         href={child.href}
-                                        onClick={onClose}
+                                        onClick={onClose}"
                                         className={`block p-2 rounded-lg text-sm transition-colors ${
-                                          isActive(child.href)
-                                            ? 'bg-blue-50 text-blue-700'
-                                            : 'text-gray-600 hover:bg-gray-50'
+                                          isActive(child.href)`
+                                            ? 'bg-blue-50 text-blue-700''
+                                            : 'text-gray-600 hover:bg-gray-50''
                                         }`}
                                       >
                                         {child.name}
@@ -344,24 +359,26 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
             </div>
           </div>
 
-          {/* Footer */}
-          <div className="p-4 border-t border-gray-200">
+          {/* Footer */}`
+          <div className="p-4 border-t border-gray-200">"
             <div className="flex items-center space-x-4">
-              <a
-                href="https://linkedin.com/company/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
+              <a"
+                href="https: //linkedin.com/company/ziontechgroup""
+                target="_blank""
+                rel="noopener noreferrer""
                 className="p-2 text-gray-400 hover:text-blue-600 transition-colors"
-              >
+              >"
                 <Globe className="w-5 h-5" />
               </a>
-              <a
-                href="mailto:info@ziontechgroup.com"
-                className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
-              >
+              <a"
+                href="mailt,
+    o:info@ziontechgroup.com""
+                className="p-2 text-gray-400 hove,
+    r:text-gray-600 transition-colors"
+              >"
                 <Mail className="w-5 h-5" />
               </a>
-            </div>
+            </div>"
             <p className="mt-2 text-xs text-gray-500">
               © 2025 Zion Tech Group. All rights reserved.
             </p>
@@ -372,4 +389,4 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
   );
 };
 
-export default EnhancedSidebar2025;
+export default EnhancedSidebar2025;"

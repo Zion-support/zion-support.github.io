@@ -4,3 +4,4 @@ const AnalyticsTracker = dynamic(() => import('./AnalyticsTracker'), {
 });
 
 export default AnalyticsTracker;
+'

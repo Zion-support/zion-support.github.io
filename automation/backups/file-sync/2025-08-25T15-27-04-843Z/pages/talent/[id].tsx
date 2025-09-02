@@ -5,10 +5,11 @@ import { useParams } from;
 interface TalentProfileWithSocial extends TalentProfile {
   social?: Record<string, string>}
 // Simple error component to replace Next.js ErrorPage
-const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (
-  <div className = 'min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center'>
-    <div className='text-center'>
-      <h1 className='text-6xl font-bold mb-4'>{statusCode}</h1>
+const ErrorPage: React.FC<{ statusCod,
+    e: number }> = ({ statusCode }) => ('
+  <div className = 'min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center>
+    <div className='text-center>
+      <h1 className='text-6xl font-bold mb-4'>{statusCode}</h1>'
       <p className='text-xl'>
 {statusCode === 404 ?,
   Talent not found': 'Something went wrong}
@@ -17,18 +18,19 @@ const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (
   </div>
 );
 // Simple loading component
-const ProfileLoadingState: React.FC = () => (
-  <div className='min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center'>
-    <div className='text-center'>
+const ProfileLoadingState: React.FC = () => ('
+  <div className='min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center>
+    <div className='text-center>
       <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4'></div>
       <p>Loading profile...</p>
     </div>
   </div>
 );
-const TalentProfilePage: React.FC = () => {
-  const { id } = useParams()
+const TalentProfilePag,
+    e: React.FC = () => {
+  const { id } = useParams();
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     const fetchProfile = async () => {
@@ -39,20 +41,21 @@ const TalentProfilePage: React.FC = () => {
         // For now, we;
   'll simulate a profile since we don't have the API;
         // In a real app, this would be: const res = await fetch(`/api/talent/${id}`);
-            skills: [,
+            skills: [,`
   React',
   'TypeScript',
   'Node.js'],
             availability_type: 'Full-time,
             social: {
-              linkedin:,
+              linkedi,
+    n:,
   https: //linkedin.com/in/talent,
               github:,
   https: //github.com/talent}
           }
           setProfile(mockProfile);
           setLoading(false)}, 1000)} catch (err) {
-        setError(
+        setError('
   'Talent not found');
         setLoading(false)}
     }
@@ -60,14 +63,14 @@ const TalentProfilePage: React.FC = () => {
       fetchProfile()}
   }, [id])
   if (loading) return <ProfileLoadingState              />
-  if (error || !profile) return <Navigate to=
+  if (error || !profile) return <Navigate to='
   '/404' replace              />
   return(
-    <main className =
+    <main className ='
   'min-h-screen bg-zion-blue py-8 text-white'>
-      <div className=
+      <div className='
   'container mx-auto px-4 space-y-4'>
-        <h1 className=
+        <h1 className='
   'text-3xl font-bold' data-testid=;
   'profile-name'>{profile.full_name}
         </h1>
@@ -75,10 +78,10 @@ const TalentProfilePage: React.FC = () => {
           <div>
             <h2 className=;
   'font-semibold'>Skills</h2>
-            <ul className=
+            <ul className='
   'list-disc ml-5'>{profile.skills.map(skill => (
                 <li key={skill}>{skill}</li>
-              ))}
+              ));
             </ul>
           </div>
         )}
@@ -89,7 +92,7 @@ const TalentProfilePage: React.FC = () => {
           <div>
             <h2 className=,
   font-semibold'>Social Links</h2>
-            <div className=
+            <div className='
   'space-x-4'>{Object.entries(profile.social).map(([platform, url]) => (
                 <a
                   key={platform}

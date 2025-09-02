@@ -12,26 +12,29 @@ const mockDispatch = jest.fn();
 const mockInfoFnForToast = jest.fn();
 const mockSuccessFnForToast = jest.fn();
 // Mock dependencies;
-jest.mock(
+jest.mock('
   'react-router-dom', () => ({
-  ...jest.requireActual(
+  ...jest.requireActual('
   'react-router-dom'),
   useParams: jest.fn(),
   useNavigate: () => mockNavigate, // This pattern works because mockNavigate is returned by a function;
   useLocation: jest.fn()}));
-jest.mock(
+jest.mock('
   '@/hooks/useAuth', () => ({
   useAuth: jest.fn()}));
-jest.mock(
+jest.mock('
   '@/context/CartContext', () => ({
   useCart: jest.fn()}));
 // Revised mock for use-toast to avoid ReferenceError;
-jest.mock(
+jest.mock('
   '@/hooks/use-toast', () => ({
   toast: {
-    info: (...args: unknown[]) => mockInfoFnForToast(...args), // Changed any[] to unknown[];
-    success: (...args: unknown[]) => mockSuccessFnForToast(...args), // Changed any[] to unknown[]}}));
-describe(
+    inf,
+    o: (...arg,
+    s: unknown[]) => mockInfoFnForToast(...args), // Changed any[] to unknown[];
+    success: (...arg,
+    s: unknown[]) => mockSuccessFnForToast(...args), // Changed any[] to unknown[]}}));
+describe('
   'EquipmentDetail - Add To Cart', () => {
   const testProductId =;
   'pro-camera-x1000';
@@ -72,53 +75,54 @@ describe(
         returnPolicy:;
   '30 days'}
     }
-    require(
+    require('
   'react-router-dom').useParams.mockReturnValue({
-      id: testProductId})
-    require(
-  'react-router-dom').useLocation.mockReturnValue({
+      id: testProductId});
+    require('
+  'react-router-dom').useLocation.mockReturnValue({'
       pathname: `/equipment/${testProductId}`,
-      search:
-  '?from=test'})
-    require(
+      search:`
+  '?from=test'});
+    require('
   '@/context/CartContext').useCart.mockReturnValue({
       items: [],
       dispatch: mockDispatch})})
-  test(
+  test('
   'unauthenticated user clicking 'Add to Cart' is redirected to login and shown a toast', async () => {
-    require(
+    require('
   '@/hooks/useAuth').useAuth.mockReturnValue({
       isAuthenticated: false,
       user: null,
-      isLoading: false})
+      isLoading: false});
     render(<EquipmentDetail />);
-    const addToCartButton = screen.getByRole(
+    const addToCartButton = screen.getByRole('
   'button', {
-      name: /add to cart/i})
+      name: /add to cart/i});
     await act(async () => {
       fireEvent.click(addToCartButton)})
     expect(mockNavigate).toHaveBeenCalledTimes(1);
-    const expectedNextUrl = encodeURIComponent(
+    const expectedNextUrl = encodeURIComponent('
       `/equipment/${testProductId}?from=test`);
-    expect(mockNavigate).toHaveBeenCalledWith(
+    expect(mockNavigate).toHaveBeenCalledWith(`
       `/login?next=${expectedNextUrl}&msg=login_required`);
     expect(mockInfoFnForToast).toHaveBeenCalledTimes(1);
-    expect(mockInfoFnForToast).toHaveBeenCalledWith(
+    expect(mockInfoFnForToast).toHaveBeenCalledWith(`
   'Please log in to add items to your cart.');
     expect(mockDispatch).not.toHaveBeenCalled();
     expect(mockSuccessFnForToast).not.toHaveBeenCalled()})
-  test(
+  test('
   'authenticated user clicking 'Add to Cart' adds item and shows success toast', async () => {
-    require(
+    require('
   '@/hooks/useAuth').useAuth.mockReturnValue({
       isAuthenticated: true,
-      user: { id:
+      user: { i,
+    d:'
   'test-user' },
-      isLoading: false})
+      isLoading: false});
     render(<EquipmentDetail />);
-    const addToCartButton = screen.getByRole(
+    const addToCartButton = screen.getByRole('
   'button', {
-      name: /add to cart/i})
+      name: /add to cart/i});
     await act(async () => {
       fireEvent.click(addToCartButton)})
     const product = SAMPLE_EQUIPMENT[testProductId];
@@ -128,14 +132,15 @@ describe(
       type:;
   'ADD_ITEM',
       payload: {
-        id: product.id,
+        i,
+    d: product.id,
         name: product.name,
         price: product.price,
-        quantity: 1}})
+        quantity: 1}});
     expect(mockSuccessFnForToast).toHaveBeenCalledTimes(1);
-    expect(mockSuccessFnForToast).toHaveBeenCalledWith(
+    expect(mockSuccessFnForToast).toHaveBeenCalledWith('
       `1× ${product.name} added`);
     expect(mockNavigate).not.toHaveBeenCalledWith(
-      expect.stringContaining(
+      expect.stringContaining(`
   '/login'))
     expect(mockInfoFnForToast).not.toHaveBeenCalled()})})

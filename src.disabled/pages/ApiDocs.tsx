@@ -3,7 +3,7 @@ import React from;
   '../components/SEO' import { motion } from;
   'framer-motion' import {  Code, Code2, Search, Copy, CheckCircle, ArrowRight, ExternalLink, Download, Play, Terminal, Database, Globe, Shield, Zap, Clock, User, Star, Bookmark, Share2, ChevronRight, ChevronDown, FileText, Settings, Key, Lock, Server, Cloud, Cpu, Brain, Eye, MessageSquare, Image, FileText as FileTextIcon, BarChart3, TrendingUp, Target, Rocket, GitBranch, Package, Database as DatabaseIcon, Network, Monitor, Smartphone, Tablet, Laptop } from;
   'lucide-react'  export const ApiDocs: React.FC = () => { const [searchQuery, setSearchQuery] = React.useState(,
-  ') const [selectedCategory, setSelectedCategory] = React.useState('all
+  ') const [selectedCategory, setSelectedCategory] = React.useState('all'
   ') const [expandedSections, setExpandedSections] = React.useState<string[]>(['authentication;
   ', 'ai-services;
   '])  const categories = [ { id: 'all, name: 'All APIs;
@@ -25,7 +25,8 @@ import React from;
   authentication;
   ', title: 'Authentication & Security, icon: Shield, color:,
   from-green-500 to-emerald-500;
-  ', description: 'Secure your API calls with authentication and authorization, apis: [ { name:,
+  ', description: 'Secure your API calls with authentication and authorization, apis: [ { nam,
+    e:,
   OAuth 2.0;
   ', description: 'Industry-standard OAuth 2.0 authentication flow, endpoint:,
   /oauth2/authorize;
@@ -50,7 +51,8 @@ import React from;
   ai-services;
   ', title: 'AI & Machine Learning Services, icon: Brain, color:,
   from-purple-500 to-pink-500;
-  ', description: 'Access our cutting-edge AI capabilities through RESTful APIs, apis: [ { name:,
+  ', description: 'Access our cutting-edge AI capabilities through RESTful APIs, apis: [ { nam,
+    e:,
   Natural Language Processing;
   ', description: Text analysis, sentiment analysis, and language understanding,
   , endpoint: '/api/v1/nlp/analyze, method:,
@@ -110,7 +112,8 @@ import React from;
   data-analytics;
   ', title: 'Data Analytics & Business Intelligence, icon: BarChart3, color:,
   from-blue-500 to-cyan-500;
-  ', description: 'Transform raw data into actionable business insights, apis: [ { name:,
+  ', description: 'Transform raw data into actionable business insights, apis: [ { nam,
+    e:,
   Data Processing;
   ', description: 'ETL operations and data transformation, endpoint:,
   /api/v1/data/process;
@@ -149,7 +152,8 @@ import React from;
   cloud-services;
   ', title: 'Cloud & Infrastructure Services, icon: Cloud, color:,
   from-indigo-500 to-purple-500;
-  ', description: 'Manage cloud resources and infrastructure programmatically, apis: [ { name:,
+  ', description: 'Manage cloud resources and infrastructure programmatically, apis: [ { nam,
+    e:,
   Container Orchestration;
   ', description: 'Deploy and manage containerized applications, endpoint:,
   /api/v1/containers/deploy;
@@ -194,4 +198,4 @@ import React from;
   ': return 'bg-yellow-500/20 text-yellow-400 border-yellow-400/30;
   ' case 'DELETE;
   ': return 'bg-red-500/20 text-red-400 border-red-400/30;
-  ' default: return 'bg-gray-500/20 text-gray-400 border-gray-400/30 } } '
+  ' default: return 'bg-gray-500/20 text-gray-400 border-gray-400/30 } } ''

@@ -9,13 +9,14 @@ import {
   Database, 
   Code, 
   Smartphone,
-  ArrowRight
+  ArrowRight'
 } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
   const services = [
     {
-      icon: Brain,
+      ico,
+    n: Brain,
       title: 'AI Services',
       description: 'Machine learning, natural language processing, and AI-powered automation solutions.',
       features: ['Machine Learning Models', 'NLP Solutions', 'AI Automation', 'Predictive Analytics'],
@@ -59,79 +60,86 @@ const ServicesSection: React.FC = () => {
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacit,
+    y: 0 },
     visible: {
-      opacity: 1,
+      opacit,
+    y: 1,
       transition: {
-        staggerChildren: 0.1
+        staggerChildre,
+    n: 0.1
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacit,
+    y: 0, y: 20 },
     visible: {
-      opacity: 1,
+      opacit,
+    y: 1,
       y: 0,
       transition: {
-        duration: 0.5
+        duratio,
+    n: 0.5
       }
     }
   };
 
-  return (
-    <section className="py-20 bg-gray-50">
+  return ('
+    <section className="py-20 bg-gray-50">"
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true }}"
           className="text-center mb-16"
-        >
+        >"
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Our Services
-          </h2>
+          </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We provide comprehensive technology solutions to help your business thrive in the digital age.
           </p>
         </motion.div>
 
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
+          variants={containerVariants}"
+          initial="hidden""
           whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          viewport={{ once: true }}"
+          className="grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-3 gap-8"
         >
           {services.map((service, index) => (
-            <motion.div key={index} variants={itemVariants}>
+            <motion.div key={index} variants={itemVariants}>"
               <Card className="h-full hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <CardHeader>"
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mb-4">"
                     <service.icon className="w-6 h-6 text-white" />
-                  </div>
+                  </div>"
                   <CardTitle className="text-xl font-bold text-gray-900">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent>"
                   <p className="text-gray-600 mb-4">
                     {service.description}
-                  </p>
+                  </p>"
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                    {service.features.map((feature, featureIndex) => ("
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">"
                         <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <Button
-                    variant="outline"
+                  <Button"
+                    variant="outline""
                     className="w-full group"
                     onClick={() => window.location.href = service.link}
                   >
-                    Learn More
+                    Learn More"
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </CardContent>
@@ -144,4 +152,4 @@ const ServicesSection: React.FC = () => {
   );
 };
 
-export default ServicesSection;
+export default ServicesSection;"

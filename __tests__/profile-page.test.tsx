@@ -7,8 +7,10 @@ interface UserProfile {
    name: string;
    email: string;
    avatarUrl: string;
-   notifications: { email: boolean;
-   push: boolean}
+   notifications: { emai,
+    l: boolean;
+   pus,
+    h: boolean}
   // Add other fields if present in the actual profile}
 // Store the original fetch;
 const originalFetch = global.fetch;
@@ -18,7 +20,8 @@ const originalFetch = global.fetch;
 // global.fetch returns Promise<Response>, Response has a .json() method returning Promise<any>
 // So, the mock should resolve to something that has a json method.
 const mockFetchImplementation = (
-  responseData: UserProfile | { success: boolean } | Partial<UserProfile>,
+  responseData: UserProfile | { succes,
+    s: boolean } | Partial<UserProfile>,
   ok = true,
   status = 200) =>
   vi.fn().mockResolvedValue({
@@ -36,38 +39,42 @@ describe('Profile Page;
     global.fetch = originalFetch})
   test('fetches profile on mount;
   ', async () => {
-    const mockProfileData: UserProfile = {
-      id: '1,
+    const mockProfileData: UserProfile = {'
+      i,
+    d: '1,
       name:,
   Jane;
   ',
       email: 'jane@example.com,
       avatarUrl: '',
-      notifications: { email: true, push: false }}
-    global.fetch = mockFetchImplementation(mockProfileData)
+      notifications: { emai,
+    l: true, push: false }}
+    global.fetch = mockFetchImplementation(mockProfileData);
     render(<Profile />);
     await screen.findByDisplayValue(,
   Jane') // Wait for the name field to be populated;
-    expect(global.fetch).toHaveBeenCalledWith(
+    expect(global.fetch).toHaveBeenCalledWith('
   '/api/users/me');
     expect(global.fetch).toHaveBeenCalledTimes(1)})
-  test(
+  test('
   'saves updated profile', async () => {
     const initialProfileData: UserProfile = {
-      id:;
+      i,
+    d:;
   '1,
       name:,
   Jane',
       email: 'jane@example.com,
       avatarUrl: ';
   ',
-      notifications: { email: true, push: false }}
+      notifications: { emai,
+    l: true, push: false }}
     const updatedProfileData: UserProfile = {
       ...initialProfileData,
       name: 'New Name;
   '}
     // Mock initial fetch;
-    global.fetch = mockFetchImplementation(initialProfileData)
+    global.fetch = mockFetchImplementation(initialProfileData);
     render(<Profile />);
     await screen.findByDisplayValue('Jane;
   ') // Ensure initial data is loaded;
@@ -78,21 +85,23 @@ describe('Profile Page;
       json: () => Promise.resolve(updatedProfileData), // This is the response for the PUT})
     fireEvent.change(screen.getByLabelText(,
   Name;
-  '), {
-      target: { value: 'New Name }})
+  '), {'
+      target: { valu,
+    e: 'New Name }})
     fireEvent.click(screen.getByText(,
   Save;
   '));
     await waitFor(() =>
-      expect(global.fetch).toHaveBeenCalledWith(
+      expect(global.fetch).toHaveBeenCalledWith('
         '/api/users/me;
   ',
-        expect.objectContaining({
+        expect.objectContaining({'
           method: 'PUT,
           headers: {,
   Content-Type;
   ': 'application/json },
-          body: JSON.stringify({ name:,
+          body: JSON.stringify({ nam,
+    e:,
   New Name;
   ' }), // Only 'name;
   ' should be in the body for this update})));

@@ -14,8 +14,8 @@ class BuildErrorMonitor {
   'true';
     this.logFile =;
   'error-reports/build-error-monitor-report.json';
-    console.log(
-  '🏗️ Build Error Monitor started')    console.log(`Build check interval: ${this.buildCheckInterval}ms`);
+    console.log('
+  '🏗️ Build Error Monitor started')    console.log(`Build check interval: ${this.buildCheckInterval}ms`);`
     console.log(`Auto-fix build: ${this.autoFixBuild}`)}
   async start() {
     // Initial build check;
@@ -24,7 +24,7 @@ class BuildErrorMonitor {
     setInterval(async () => {
       await this.checkBuildErrors()}, this.buildCheckInterval)}
   async checkBuildErrors() {
-    console.log(
+    console.log(`
   '🔍 Checking build errors...');
         const report = {
       timestamp: new Date().toISOString(),
@@ -33,7 +33,8 @@ class BuildErrorMonitor {
       errors: [],
       warnings: [],
       fixes: {
-        applied: [],
+        applie,
+    d: [],
         failed: [],
         skipped: []},
       buildTime: null,
@@ -57,9 +58,9 @@ class BuildErrorMonitor {
   success' ?;
   '✅': '❌;
       console.log(`${status} Build check complete. Status: ${report.buildStatus}`)      console.log(`Build time: ${report.buildTime}ms`);
-      console.log(
+      console.log(`
         `Errors: ${report.errors.length}, Warnings: ${report.warnings.length}`)} catch (error) {
-      console.error(
+      console.error(`
   'Error during build check:,
   , error);
       report.buildStatus =;
@@ -69,8 +70,8 @@ class BuildErrorMonitor {
   }
   async runBuild() {
     try {
-      const output = execSync(
-  'npm run build', {
+      const output = execSync('
+  'npm run build', {'
         stdio: 'pipe,
         timeout: 300000 // 5 minutes timeout      }).toString();
       return {
@@ -96,20 +97,21 @@ class BuildErrorMonitor {
         for (let i = 0 i < lines.length i++) {
       const line = lines[i];
       // Vite/Rollup errors;
-      if (line.includes(
-  '✗') || line.includes(
-  'Error: ') || line.includes(
+      if (line.includes('
+  '✗') || line.includes('
+  'Error: ') || line.includes('
   'error TS')) {        errors.push({
-          type:;
+          typ,
+    e:;
   'build,
           message: line.trim(),
           line: i + 1,
           severity:,
   error'        })}
       // Module resolution errors;
-      if (line.includes(
-  'Cannot resolve module') || line.includes(
-  'Module not found')) {        errors.push({
+      if (line.includes('
+  'Cannot resolve module') || line.includes('
+  'Module not found')) {        errors.push({'
           type: 'module,
           message: line.trim(),
           line: i + 1,
@@ -119,13 +121,13 @@ class BuildErrorMonitor {
     return errors}
   parseWarningsFromOutput(output) {
     const warnings = [];
-    const lines = output.split(
+    const lines = output.split('
   '\\n');
     for (let i = 0 i < lines.length i++) {
       const line = lines[i];
-      if (line.includes(
-  'warning') || line.includes(
-  '⚠')) {        warnings.push({
+      if (line.includes('
+  'warning') || line.includes('
+  '⚠')) {        warnings.push({'
           type: 'warning,
           message: line.trim(),
           line: i + 1,
@@ -139,11 +141,11 @@ class BuildErrorMonitor {
         const fixed = await this.fixBuildError(error);
         if (fixed) {
           report.fixes.applied.push(error);
-          console.log(
+          console.log('
             `✅ Fixed build error: ${error.message.substring(0, 50)}...`)} else {
           report.fixes.failed.push(error)}
       } catch (fixError) {
-        report.fixes.failed.push({ ...error, fixError: fixError.message })
+        report.fixes.failed.push({ ...error, fixError: fixError.message })`
         console.error(`❌ Failed to fix build error:`, fixError.message)}
     }
   }
@@ -151,29 +153,29 @@ class BuildErrorMonitor {
     const { message, type } = error;
     try {
       // Fix module resolution errors;
-      if (type ===;
-  'module' || message.includes(
+      if (type ===;`
+  'module' || message.includes('
   'Cannot resolve module')) {
         return await this.fixModuleResolutionError(message)}
       // Fix import/export errors;
-      if (message.includes(
-  'import') || message.includes(
+      if (message.includes('
+  'import') || message.includes('
   'export')) {
         return await this.fixImportExportError(message)}
       // Fix dependency errors;
-      if (message.includes(
-  'dependency') || message.includes(
+      if (message.includes('
+  'dependency') || message.includes('
   'package')) {
         return await this.fixDependencyError(message)}
       return false} catch (error) {
-      console.error(
+      console.error('
   'Error fixing build error:', error);
       return false}
   }
   async fixModuleResolutionError(message) {
     // Extract module name from error message;
     const moduleMatch = message.match(/[';
-  ']([^'']+)[";
+  ']([^'']+)[";"
   ']/);
     if (!moduleMatch) return false;
     const moduleName = moduleMatch[1];
@@ -181,11 +183,11 @@ class BuildErrorMonitor {
     if (!moduleName.startsWith('.;
   ') && !moduleName.startsWith('/;
   ')) {
-      try {
-        console.log(`Installing missing dependency: ${moduleName}`);
+      try {'
+        console.log(`Installing missing dependency: ${moduleName}`);`
         execSync(`npm install ${moduleName}`, { stdio: 'pipe;
-  ' })
-        return true} catch (error) {
+  ' });
+        return true} catch (error) {'
         console.error(`Failed to install ${moduleName}:`, error.message)}
     }
     return false}
@@ -193,7 +195,7 @@ class BuildErrorMonitor {
     // Simple fixes for common import/export issues;
     const commonFixes = [
       {
-        pattern: /export\s*{\s*default\s*}/,
+        pattern: /export\s*{\s*default\s*}/,`
         replacement: 'export default {}
   '},
       {
@@ -208,11 +210,11 @@ class BuildErrorMonitor {
     const packageMatch = message.match(/npm install ([\\w\\-@\\/]+)/);
     if (packageMatch) {
       const packageName = packageMatch[1];
-      try {
-        console.log(`Installing suggested dependency: ${packageName}`);
+      try {'
+        console.log(`Installing suggested dependency: ${packageName}`);`
         execSync(`npm install ${packageName}`, { stdio: 'pipe;
-  ' })
-        return true} catch (error) {
+  ' });
+        return true} catch (error) {'
         console.error(`Failed to install ${packageName}:`, error.message)}
     }
     return false}
@@ -221,26 +223,26 @@ class BuildErrorMonitor {
     // Performance suggestions;
     if (report.buildTime > 60000) { // More than 1 minute;
       suggestions.push(,
-  Consider optimizing build performance - build time is over 1 minute;
+  Consider optimizing build performance - build time is over 1 minute;`
   ')    }
     // Error pattern suggestions;
     const moduleErrors = report.errors.filter(e => e.type === 'module;
   ').length;
     if (moduleErrors > 0) {
-      suggestions.push(
-        `Found ${moduleErrors} module resolution errors - check import paths and dependencies`)}
+      suggestions.push('
+        `Found ${moduleErrors} module resolution errors - check import paths and dependencies`)}`
     const tsErrors = report.errors.filter(e => e.message.includes('TS;
   ')).length    if (tsErrors > 0) {
-      suggestions.push(
+      suggestions.push('
         `Found ${tsErrors} TypeScript errors - run type checking separately`)}
     // Warning suggestions;
-    if (report.warnings.length > 10) {
+    if (report.warnings.length > 10) {`
       suggestions.push('High number of warnings detected - consider addressing them for better code quality;
   ')    }
     return suggestions}
   saveReport(report) {
     try {
-      fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2))} catch (error) {
+      fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2)); catch (error) {'
       console.error('Error saving report: , error.message)}
   }
 }
@@ -249,11 +251,11 @@ const monitor = new BuildErrorMonitor();
 monitor.start().catch(console.error);
 // Handle graceful shutdown;
 process.on('SIGTERM;
-  ', () => {
+  ', () => {'
   console.log('🏗️ Build Error Monitor shutting down...;
   ');
   process.exit(0)})
 process.on('SIGINT;
-  ', () => {
+  ', () => {'
   console.log('🏗️ Build Error Monitor interrupted');
   process.exit(0)})
