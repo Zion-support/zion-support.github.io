@@ -1,16 +1,10 @@
 import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import { services, getServicesByCategory } from '../data/services';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock } from 'lucide-react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { InteractiveButton, AnimatedCard, InteractiveStats, FloatingActionButton } from '../components/UI/InteractiveElements';
-
-const Home: NextPage = () => {
-  const microSaasServices = getServicesByCategory('micro-saas');
-  const itServices = getServicesByCategory('it-services');
-  const aiServices = getServicesByCategory('ai-services');
+import { SEO } from '../components/SEO';
+import { Button } from '../components/ui/Button';
+import { Card } from '../components/ui/Card';
+import { Badge } from '../components/ui/Badge';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
 
 const Home: React.FC = () => {
   const stats = [
@@ -115,7 +109,7 @@ const Home: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                <Link to={service.href}>
+                <Link href={service.href}>
                   <Button variant="outline" className="w-full">
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
