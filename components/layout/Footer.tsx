@@ -9,40 +9,40 @@ const Footer: React.FC = () => {
     {
       title: 'Micro SaaS',
       services: [
-        { name: 'AI Meeting Summary Generator', href: '/services/ai-meeting-summary-generator' },
-        { name: 'AI Customer Sentiment Analyzer', href: '/services/ai-customer-sentiment-analyzer' },
+        { name: 'AI Video Content Generator', href: '/services/ai-video-content-generator' },
+        { name: 'Smart Contract Security Auditor', href: '/services/smart-contract-auditor' },
+        { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation' },
+        { name: 'Blockchain Analytics Platform', href: '/services/blockchain-analytics-platform' },
         { name: 'AI Code Review Assistant', href: '/services/ai-code-review-assistant' },
-        { name: 'Smart Digital Marketing Optimizer', href: '/services/smart-digital-marketing-optimizer' },
-        { name: 'AI Content Curation Platform', href: '/services/ai-content-curation-platform' },
-        { name: 'AI Workflow Automation Suite', href: '/services/ai-workflow-automation' },
-        { name: 'AI SEO Optimizer Pro', href: '/services/ai-seo-optimizer' },
-        { name: 'AI Data Visualization Platform', href: '/services/ai-data-visualization-platform' },
+        { name: 'AI Content Generator Pro', href: '/services/ai-content-generator' },
+        { name: 'Social Media Scheduler Pro', href: '/services/social-media-scheduler' },
+        { name: 'Email Marketing Automation', href: '/services/email-marketing-automation' },
       ]
     },
     {
       title: 'IT Services',
       services: [
+        { name: 'Quantum Computing Infrastructure', href: '/services/quantum-computing-infrastructure' },
+        { name: 'Metaverse Development Platform', href: '/services/metaverse-development-platform' },
+        { name: 'IoT Edge Computing Suite', href: '/services/iot-edge-computing-suite' },
+        { name: 'Zero Trust Security Architecture', href: '/services/zero-trust-security-architecture' },
         { name: 'Edge Computing Solutions', href: '/services/edge-computing-solutions' },
         { name: 'Quantum-Ready Security', href: '/services/quantum-ready-security' },
         { name: '5G Network Optimization', href: '/services/5g-network-optimization' },
         { name: 'Blockchain Infrastructure', href: '/services/blockchain-infrastructure' },
-        { name: 'AI Infrastructure & MLOps', href: '/services/ai-infrastructure-setup' },
-        { name: 'Cloud Migration Expert', href: '/services/cloud-migration' },
-        { name: 'Kubernetes Orchestration', href: '/services/kubernetes-orchestration' },
-        { name: 'Microservices Architecture', href: '/services/microservices-architecture' },
       ]
     },
     {
       title: 'AI Services',
       services: [
+        { name: 'AI Robotic Process Automation', href: '/services/ai-robotic-process-automation' },
+        { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance' },
+        { name: 'AI Emotion Recognition System', href: '/services/ai-emotion-recognition-system' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' },
+        { name: 'AI Personalized Learning Platform', href: '/services/ai-personalized-learning-platform' },
         { name: 'AI Drug Discovery Platform', href: '/services/ai-drug-discovery' },
         { name: 'AI Climate Modeling', href: '/services/ai-climate-modeling' },
         { name: 'AI Autonomous Systems', href: '/services/ai-autonomous-systems' },
-        { name: 'AI Personalized Medicine', href: '/services/ai-personalized-medicine' },
-        { name: 'AI Financial Trading System', href: '/services/ai-financial-trading' },
-        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
-        { name: 'Custom AI Model Development', href: '/services/custom-ai-models' },
-        { name: 'Computer Vision Solutions', href: '/services/computer-vision-solutions' },
       ]
     }
   ];
@@ -50,8 +50,8 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="text-2xl font-bold text-blue-400 mb-4">Zion Tech Group</div>
@@ -101,8 +101,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Quick Links */}
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="border-t border-gray-700 mt-12 pt-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Quick Links</h4>
               <ul className="space-y-2">

@@ -24,37 +24,40 @@ const Header: React.FC = () => {
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { name: 'Custom Development', href: '/solutions/custom-development' },
     { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+    { name: 'AI Implementation', href: '/solutions/ai-implementation' },
+    { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
+    { name: 'Blockchain Solutions', href: '/solutions/blockchain-solutions' },
   ];
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50 backdrop-blur-sm bg-white/95">
       {/* Top bar with contact info */}
-      <div className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-2">
+      <div className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-3">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-2 sm:mb-0">
+          <div className="flex flex-col lg:flex-row justify-between items-center text-sm">
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-2 lg:mb-0">
               <div className="flex items-center space-x-2 hover:text-blue-200 transition-colors">
                 <Phone className="w-4 h-4" />
-                <a href="tel:+13024640950" className="hover:underline">+1 302 464 0950</a>
+                <a href="tel:+13024640950" className="hover:underline font-medium">+1 302 464 0950</a>
               </div>
               <div className="flex items-center space-x-2 hover:text-blue-200 transition-colors">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:underline">kleber@ziontechgroup.com</a>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:underline font-medium">kleber@ziontechgroup.com</a>
               </div>
             </div>
             <div className="flex items-center space-x-2 text-xs sm:text-sm">
               <MapPin className="w-4 h-4" />
-              <span className="hidden sm:inline">364 E Main St STE 1008, Middletown DE 19709</span>
-              <span className="sm:hidden">Middletown, DE</span>
+              <span className="hidden md:inline">364 E Main St STE 1008, Middletown DE 19709</span>
+              <span className="md:hidden">Middletown, DE</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Main navigation */}
-      <nav className="bg-white">
+      <nav className="bg-white border-b border-gray-100">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
+          <div className="flex justify-between items-center py-5">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2 group">
               <div className="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition-colors">
@@ -63,7 +66,7 @@ const Header: React.FC = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-6">
+            <div className="hidden lg:flex items-center space-x-8">
               <Link
                 href="/"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
