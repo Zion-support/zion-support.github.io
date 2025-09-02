@@ -1,53 +1,27 @@
-<<<<<<< HEAD
-/** @type {import('next').NextConfig} */
-const path = require('path');
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-=======
-/** @type {import(
-  'next').NextConfig} */
->>>>>>> origin/main
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-<<<<<<< HEAD:next.config.js
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-=======
-eslint: {
-    ignoreDuringBuilds: true,
-  },
->>>>>>> origin/main:next.config.cjs
   experimental: {
     esmExternals: false,
-    newNextLinkBehavior: true,
   },
-<<<<<<< HEAD
-=======
-  typescript: {
-    ignoreBuildErrors: true,
-  },
->>>>>>> origin/main
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
-<<<<<<< HEAD
     ignoreBuildErrors: true,
   },
-=======
-    ignoreBuildErrors: true,},
->>>>>>> origin/main
   images: {
-    domains: [
-  'ziontechgroup.com'],
+    domains: ['ziontechgroup.com'],
     unoptimized: true,
   },
   compiler: {
-    removeConsole: process.env.NODE_ENV ===
-  'production',
+    removeConsole: process.env.NODE_ENV === 'production',
   },
   webpack: (config) => {
     config.module.rules.push({
@@ -57,7 +31,8 @@ eslint: {
         /api-backup/,
         /pages\.disabled/,
         /backup-pages/,
-/\.backup/,
+        /components\//,
+        /\.backup/,
         /\.disabled/,
         /automation\/backups/,
         /automation_backup/,
@@ -82,21 +57,12 @@ eslint: {
 
     return config;
   },
-<<<<<<< HEAD
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-=======
-  // Try to exclude problematic directories at the Next.js level
-  pageExtensions: [
-  'tsx',
-  'ts',
-  'jsx',
-  'js'],
->>>>>>> origin/main
   onDemandEntries: {
     maxInactiveAge: 25 * 1000,
     pagesBufferLength: 2,
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
 
