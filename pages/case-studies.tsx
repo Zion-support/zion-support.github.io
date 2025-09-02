@@ -1,9 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
+import React from
+  'react';
+import { motion } from
+  'framer-motion';
+import { SEO } from
+  '../components/SEO';
+import { Button } from
+  '../components/ui/Button';
+import { Card } from
+  '../components/ui/Card';
+import { Badge } from
+  '../components/ui/Badge';
 import { 
   TrendingUp,
   Users,
@@ -29,7 +35,8 @@ import {
   Share2,
   Filter,
   Search
-} from 'lucide-react';
+} from
+  'lucide-react';
 
 const CaseStudies: React.FC = () => {
   const caseStudies = [
@@ -185,7 +192,8 @@ const CaseStudies: React.FC = () => {
               Case Studies
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Discover how we've helped businesses across industries achieve remarkable results with AI-powered solutions.
+              Discover how we
+  've helped businesses across industries achieve remarkable results with AI-powered solutions.
             </p>
           </motion.div>
         </div>
@@ -358,8 +366,9 @@ const CaseStudies: React.FC = () => {
                         key={industry.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
                           industry.active 
-                            ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white' 
-                            : 'text-gray-300 hover:bg-slate-700'
+                            ?,
+  bg-gradient-to-r from-blue-500 to-purple-600 text-white
+  ': 'text-gray-300 hover:bg-slate-700
                         }`}
                       >
                         <span>{industry.name}</span>

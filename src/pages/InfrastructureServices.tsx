@@ -1,9 +1,10 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
 
+export default function Page() {
+export default function Page() {
 const InfrastructureServices: React.FC = () => {
-  return (
-    <>
+  return (<>
       <SEO title="InfrastructureServices - Zion Tech Group" />
       <div className="min-h-screen bg-white py-20">
         <div className="max-w-4xl mx-auto px-4">

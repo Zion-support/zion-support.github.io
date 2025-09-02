@@ -1,20 +1,29 @@
-import type { NextPage } from 'next';
-import { Helmet } from 'react-helmet-async';
-import { useState, useMemo } from 'react';
+import type { NextPage } from
+  'next';
+import { Helmet } from
+  'react-helmet-async';
+import { useState, useMemo } from
+  'react';
 import { ALL_EXPANDED_SERVICES_2027 } from "../data/expandedInnovativeServices2027";
 
 const ExpandedServicesShowcase2027: NextPage = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
-  const [viewMode, setViewMode] = useState<any>('grid');
+  const [searchTerm, setSearchTerm] = useState(,
+  ');
+  const [selectedCategory, setSelectedCategory] = useState('all
+  ');
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all
+  ');
+  const [viewMode, setViewMode] = useState<any>('grid
+  ');
 
   // Get unique categories and subcategories'
-  const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))];
-  const subcats = ['all', ...Array.from(new Set(
-    (selectedCategory === 'all'
-      ? ALL_EXPANDED_SERVICES_2027
-      : ALL_EXPANDED_SERVICES_2027.filter(s => s.category === selectedCategory)
+  const cats = [
+  'all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))];
+  const subcats = [
+  'all', ...Array.from(new Set(
+    (selectedCategory ===
+  'all'
+      ? ALL_EXPANDED_SERVICES_2027: ALL_EXPANDED_SERVICES_2027.filter(s => s.category === selectedCategory)
     ).map(s => s.subcategory)
   ))];
 
@@ -26,11 +35,14 @@ const ExpandedServicesShowcase2027: NextPage = () => {
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.subcategory.toLowerCase().includes(searchTerm.toLowerCase());
-      '
-      const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
+
+  '
+      const matchesSubcategory = selectedSubcategory === 'all || service.subcategory === selectedSubcategory;
       
-      return matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
+      return matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);const matchesCategory = selectedCategory === 'all
+  ' || service.category === selectedCategory;
+      const matchesSubcategory = selectedSubcategory === 'all
+  ' || service.subcategory === selectedSubcategory;
 
       return matchesSearch && matchesCategory && matchesSubcategory;
     });
@@ -38,8 +50,10 @@ const ExpandedServicesShowcase2027: NextPage = () => {
 
   const resetFilters = () => {
     setSearchTerm('');
-    setSelectedCategory('all');
-    setSelectedSubcategory('all');
+    setSelectedCategory(
+  'all');
+    setSelectedSubcategory(
+  'all');
   };
 
   return ("
@@ -101,13 +115,16 @@ const ExpandedServicesShowcase2027: NextPage = () => {
               value={selectedCategory};
               onChange={(e) => {;
                 setSelectedCategory(e.target.value);
-                setSelectedSubcategory('all');
+                setSelectedSubcategory(
+  'all');
               }}"
               className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
               {categories.map(cat  => ("
                 <option key={cat} value={cat} className="bg-gray-800 text-white">
-                  {cat === 'all' ? 'All Categories' : cat}
+                  {cat ===
+  'all' ?
+  'All Categories' : cat}
                 </option>
               ))}
             </select>
@@ -119,7 +136,9 @@ const ExpandedServicesShowcase2027: NextPage = () => {
             >
               {subcategories.map(subcat  => ("
                 <option key={subcat} value={subcat} className="bg-gray-800 text-white">
-                  {subcat === 'all' ? 'All Subcategories' : subcat}
+                  {subcat ===
+  'all' ?
+  'All Subcategories' : subcat}
                 </option>
               ))}
             </select>
@@ -139,15 +158,22 @@ const ExpandedServicesShowcase2027: NextPage = () => {
 "
             <div className="flex items-center space-x-2">"
               <span className="text-white text-sm">View:</span>
-              <button'
-                onClick={() => setViewMode('grid')}
-                className={`px-3 py-1 rounded ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-white/20 text-white'}`}
+              <button,
+  onClick={() => setViewMode('grid
+  ')}
+                className={`px-3 py-1 rounded ${viewMode === 'grid
+  ' ? 'bg-blue-600 text-white
+  ': 'bg-white/20 text-white}`}
 
                 Grid
               </button>
-              <button'
-                onClick={() => setViewMode('list')}'`
-                className={`px-3 py-1 rounded ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-white/20 text-white'}`}
+              <button,
+  onClick={() => setViewMode(
+  'list')}
+  '`
+                className={`px-3 py-1 rounded ${viewMode === 'list
+  ' ? 'bg-blue-600 text-white
+  ': 'bg-white/20 text-white}`}
 
                 List
               </button>
@@ -156,29 +182,43 @@ const ExpandedServicesShowcase2027: NextPage = () => {
         </div>
 
         {/* Services Grid/List */}'`
-        <div className={`grid gap-6 ${viewMode === 'grid' ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
+        <div className={`grid gap-6 ${viewMode ===,
+  grid' ?
+  'grid-cols-1 md: grid-cols-2 lg:grid-cols-3' :
+  'grid-cols-1}`}>
           {filteredServices.map(service: unknown (
             <div
               key={service.id}`
               className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-blue-400 transition-all duration-300 ${
 
-                viewMode === 'list' ? 'flex items-start space-x-4' : ''`
+                viewMode ===,
+  list' ?
+  'flex items-start space-x-4': '`
               }`}
 
-              {viewMode === 'list' && ("
+              {viewMode ===,
+  list
+  ' && ("
                 <div className="flex-shrink-0 w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center text-white text-2xl font-bold">
                   {service.name.charAt(0)}
                 </div>
               )}
 
-              <div className={viewMode === 'list' ? 'flex-1' : ''}>"
+              <div className={viewMode === 'list
+  ' ? 'flex-1
+  ': '}>"
                 <div className="flex items-start justify-between mb-3">"
                   <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>`
                   <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
 
-                    service.status === 'active' ? 'bg-green-600 text-white' :'
-                    service.status === 'beta' ? 'bg-yellow-600 text-white' :'
-                    'bg-gray-600 text-white'`
+                    service.status ===,
+  active' ?
+  'bg-green-600 text-white': '
+                    service.status === 'beta
+  ' ? 'bg-yellow-600 text-white
+  ' :'
+
+  'bg-gray-600 text-white`
                   }`}>
                     {service.status}
                   </span>
@@ -219,8 +259,9 @@ const ExpandedServicesShowcase2027: NextPage = () => {
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center space-x-2">"
                     <div className="flex text-yellow-400">
-                      {[...Array(5)].map((_, i) => ('
-                        <span key={i} className={i < service.rating ? 'text-yellow-400' : 'text-gray-600'}>
+                      {[...Array(5)].map((_, i) => (,
+  <span key={i} className={i < service.rating ? 'text-yellow-400
+  ': 'text-gray-600}>
                           ★
                         </span>
                       ))}

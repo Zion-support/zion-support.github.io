@@ -1,65 +1,93 @@
 
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
-export default function AIMarketingAutomationPersonalization(...args: any[]): any {
+export default function AIMarketingAutomationPersonalization(...args: any[]): any {,
+  Predictive lead scoring and conversion optimization',;'
+  'Multi-channel campaign orchestration (email, SMS, social, web),;'
 
-    'Predictive lead scoring and conversion optimization',;'
-    'Multi-channel campaign orchestration (email, SMS, social, web),;'
-    'Real-time A/B testing with AI-driven optimization',;'
-    'Customer journey mapping and automated nurturing sequences',;'
-    'Advanced analytics and ROI tracking with attribution modeling',;''Integration with major CRM, e-commerce, and advertising platforms',;
+  'Real-time A/B testing with AI-driven optimization',;'
+  'Customer journey mapping and automated nurturing sequences',;'
+  'Advanced analytics and ROI tracking with attribution modeling',;'
+  'Integration with major CRM, e-commerce, and advertising platforms',;
   ];
 
   '
-    'Increase conversion rates by 40-60% with personalization',;'
-    'Reduce customer acquisition costs by 30-50%',;'
-    'Improve email open rates by 25-40% with AI optimization',;'
-    'Generate 35-50% more qualified leads through automation',;'
-    'Boost customer lifetime value by 20-35%',;'
-    'Achieve 99.9% campaign delivery and tracking accuracy',;
+    'Increase conversion rates by 40-60% with personalization
+  ',;'
+
+  'Reduce customer acquisition costs by 30-50%',;'
+  'Improve email open rates by 25-40% with AI optimization',;'
+  'Generate 35-50% more qualified leads through automation',;'
+  'Boost customer lifetime value by 20-35%',;'
+  'Achieve 99.9% campaign delivery and tracking accuracy',;
   ];
 
   '
-    'Content Marketing',;'
-    'Search Engine Marketing',;'
-    'Influencer Marketing',;'
-    'Video Marketing',;'
-    'Voice & Chatbot Marketing',;'
-    'Location-Based Marketing',;
+    'Content Marketing
+  ',;'
+
+  'Search Engine Marketing',;'
+  'Influencer Marketing',;'
+  'Video Marketing',;'
+  'Voice & Chatbot Marketing',;'
+  'Location-Based Marketing',;
   ];
 
   '
-    'Lead Scoring & Qualification',;'
-    'Campaign Optimization',;'
-    'Personalization Engine',;'
-    'A/B Testing Automation',;'
-    'Performance Prediction',;'
-    'ROI Optimization',;
+    'Lead Scoring & Qualification
+  ',;'
+
+  'Campaign Optimization',;'
+  'Personalization Engine',;'
+  'A/B Testing Automation',;'
+  'Performance Prediction',;'
+  'ROI Optimization',;
   ];
 
   '
-    'Shopify',;'
-    'WooCommerce',;'
-    'Facebook Ads',;'
-    'Google Ads',;'
-    'LinkedIn Ads',;'
-    'TikTok Ads',;
+    'Shopify
+  ',;'
+
+  'WooCommerce',;'
+  'Facebook Ads',;'
+  'Google Ads',;'
+  'LinkedIn Ads',;'
+  'TikTok Ads',;
   ];
 
   '
-    { name: 'Scikit-learn', url: 'https://scikit-learn.org/' },;'
-    { name: 'Apache Spark', url: 'https://spark.apache.org/' },;'
-    { name: 'Kubernetes', url: 'https://kubernetes.io/' },;'
-    { name: 'Redis', url: 'https://redis.io/' },;'
-    { name: 'PostgreSQL', url: 'https://www.postgresql.org/' },;'
-    { name: 'Elasticsearch', url: 'https://www.elastic.co/' },;
-'
-    { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },''
-    { name: 'TensorFlow', url: 'https://www.tensorflow.org/' },;''
-    { name: 'Scikit-learn', url: 'https://scikit-learn.org/' },;''
-    { name: 'Apache Spark', url: 'https://spark.apache.org/' },;''
-    { name: 'Kubernetes', url: 'https://kubernetes.io/' },;''
-    { name: 'Redis', url: 'https://redis.io/' },;''
-    { name: 'PostgreSQL', url: 'https://www.postgresql.org/' },;'    { name: 'Elasticsearch', url: 'https://www.elastic.co/' },;
+    { name: 'Scikit-learn, url:,
+  https: //scikit-learn.org/ },;,
+  { name: 'Apache Spark, url:,
+  https: //spark.apache.org/ },;,
+  { name: 'Kubernetes, url:,
+  https: //kubernetes.io/ },;,
+  { name: 'Redis, url:,
+  https: //redis.io/ },;,
+  { name: 'PostgreSQL, url:,
+  https: //www.postgresql.org/ },;,
+  { name: 'Elasticsearch, url:,
+  https: //www.elastic.co/ },;,
+  { name: 'OpenAI GPT-4, url:,
+  https: //openai.com/gpt-4 },',
+  { name: 'TensorFlow, url:,
+  https: //www.tensorflow.org/ },;,
+  '
+    { name: 'Scikit-learn, url:,
+  https: //scikit-learn.org/ },;,
+  '
+    { name: 'Apache Spark, url:,
+  https: //spark.apache.org/ },;,
+  '
+    { name: 'Kubernetes, url:,
+  https: //kubernetes.io/ },;,
+  '
+    { name: 'Redis, url:,
+  https: //redis.io/ },;,
+  '
+    { name: 'PostgreSQL, url:,
+  https: //www.postgresql.org/ },;,
+  { name: 'Elasticsearch, url:,
+  https: //www.elastic.co/ },;
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx];
 
   return()
@@ -242,4 +270,5 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
       </section>;
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
     </div>;'"
-  )}'"'"
+  )}
+  '"'"

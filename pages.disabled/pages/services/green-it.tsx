@@ -8,7 +8,8 @@ import {}
   CheckCircle,
   Lightbulb,
   Database,
-  Cloud} from 'lucide-react.ts';
+  Cloud} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/green-it.tsx
 export default function GreenIT(...args: any[]): any {
@@ -222,5 +223,6 @@ export default function GreenIT(...args: any[]): any {
       </section>
     </div>
 :pages.disabled/pages/services/green-it.tsx
-  )}'"
+  )}
+  '"
 '"'"

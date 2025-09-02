@@ -14,7 +14,8 @@ afterAll((done) => {
   server.close(done);
 });
 
-test('ItemsService meets contract', async () => {
+test(
+  'ItemsService meets contract', async () => {
   const opts = {
     provider: 'ItemsService',
     providerBaseUrl: 'http://localhost:4000',
