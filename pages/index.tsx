@@ -23,18 +23,23 @@ const Home: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-10"></div>
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.h1 
-            className="text-5xl md:text-6xl font-bold mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             Transform Your Business with
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Zion Tech Group</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 block sm:inline"> Zion Tech Group</span>
           </motion.h1>
           <motion.p 
-            className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200"
+            className="text-lg sm:text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200 leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -49,17 +54,17 @@ const Home: NextPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg">
+            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-base sm:text-lg hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-blue-900">
               Get Started Today
             </Link>
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105">
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-base sm:text-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900">
               Explore Services
             </Link>
           </motion.div>
 
           {/* Enhanced Stats */}
           <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mt-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -69,15 +74,15 @@ const Home: NextPage = () => {
               return (
                 <motion.div 
                   key={stat.label}
-                  className="text-center group"
+                  className="text-center group p-4 rounded-lg bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
                 >
                   <div className="flex justify-center mb-2">
-                    <IconComponent className="w-8 h-8 text-blue-400 group-hover:text-purple-400 transition-colors" />
+                    <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400 group-hover:text-purple-400 transition-colors" />
                   </div>
-                  <div className="text-3xl font-bold text-blue-400 group-hover:text-purple-400 transition-colors">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-blue-400 group-hover:text-purple-400 transition-colors">{stat.number}</div>
+                  <div className="text-sm sm:text-base text-gray-300">{stat.label}</div>
                 </motion.div>
               );
             })}

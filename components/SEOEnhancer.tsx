@@ -8,6 +8,14 @@ interface SEOEnhancerProps {
   ogImage?: string;
   canonicalUrl?: string;
   structuredData?: any;
+  ogType?: string;
+  articleAuthor?: string;
+  articlePublishedTime?: string;
+  articleModifiedTime?: string;
+  articleSection?: string;
+  articleTags?: string[];
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
@@ -16,7 +24,15 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services',
   ogImage = '/og-image.jpg',
   canonicalUrl = 'https://ziontechgroup.com',
-  structuredData
+  structuredData,
+  ogType = 'website',
+  articleAuthor,
+  articlePublishedTime,
+  articleModifiedTime,
+  articleSection,
+  articleTags,
+  noindex = false,
+  nofollow = false
 }) => {
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -65,7 +81,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="language" content="en" />
       <meta name="revisit-after" content="7 days" />
@@ -77,10 +93,27 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={ogType} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
+      
+      {/* Article-specific Open Graph tags */}
+      {ogType === 'article' && articleAuthor && (
+        <meta property="article:author" content={articleAuthor} />
+      )}
+      {ogType === 'article' && articlePublishedTime && (
+        <meta property="article:published_time" content={articlePublishedTime} />
+      )}
+      {ogType === 'article' && articleModifiedTime && (
+        <meta property="article:modified_time" content={articleModifiedTime} />
+      )}
+      {ogType === 'article' && articleSection && (
+        <meta property="article:section" content={articleSection} />
+      )}
+      {ogType === 'article' && articleTags && articleTags.map((tag, index) => (
+        <meta key={index} property="article:tag" content={tag} />
+      ))}
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />

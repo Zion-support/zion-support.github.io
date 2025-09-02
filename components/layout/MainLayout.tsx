@@ -4,6 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
+import Analytics from '../Analytics';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -91,6 +92,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       
       <PerformanceOptimizer />
       <AccessibilityEnhancer />
+      <Analytics />
       
       <div className="min-h-screen flex flex-col">
         <Header />
