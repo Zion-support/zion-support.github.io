@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,
@@ -9,6 +10,7 @@ import {
   Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from 'lucide-react';
 export function EnhancedHeader() {
+  const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [scrolled, setScrolled] = useState(false);
@@ -20,12 +22,13 @@ export function EnhancedHeader() {
     return () => window.removeEventListener('scroll', handleScroll)}, []);
   useEffect(() => {
     // Close mobile menu when route changes;
-    setIsMenuOpen(false);
-    setActiveDropdown(null)}, [location.pathname]);
+    setMobileMenuOpen(false);
+    setActiveDropdown(null)}, []);
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`}
+      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+    }
   }
 ;
   const navigation = [

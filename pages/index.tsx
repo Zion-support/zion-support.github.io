@@ -1,7 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
-import { SEO } from '../components/SEO';
+import { SEO } from '../src/components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
@@ -83,21 +82,20 @@ export default function Home() {
   ];
   return (
     <>
-      <Head>
-        <title>Zion Tech Group - Leading AI, IT & Micro SaaS Solutions Provider</title>
-        <meta name='description' content='Transform your business with Zion Tech Group cutting-edge AI services, enterprise IT solutions, and innovative Micro SaaS platforms. 500+ projects completed, 99.9% uptime guarantee.' />
-        <meta name='keywords' content='AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting, enterprise software' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta property='og:title' content='Zion Tech Group - Leading Technology Solutions Provider' />
-        <meta property='og:description' content='Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.' />
-        <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://ziontechgroup.com' />
-        <meta property='og:image' content='https://ziontechgroup.com/og-image.jpg' />
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='Zion Tech Group - Leading Technology Solutions Provider' />
-        <meta name='twitter:description' content='Transform your business with cutting-edge AI, IT, and Micro SaaS solutions.' />
-        <meta name='twitter:image' content='https://ziontechgroup.com/og-image.jpg' />
-        <link rel='canonical' href='https://ziontechgroup.com' />
+      <SEO
+        title="Zion Tech Group - Leading AI, IT & Micro SaaS Solutions Provider"
+        description="Transform your business with Zion Tech Group's cutting-edge AI services, enterprise IT solutions, and innovative Micro SaaS platforms. 500+ projects completed, 99.9% uptime guarantee."
+        keywords={[
+          'AI services',
+          'IT solutions', 
+          'Micro SaaS',
+          'cloud computing',
+          'cybersecurity',
+          'business automation',
+          'technology consulting',
+          'enterprise software'
+        ]}
+      />
         <script type='application/ld+json'>
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -125,7 +123,6 @@ export default function Home() {
             ]
           })}
         </script>
-      </Head>
       <main className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
         {/* Hero Section */}
         <section className='relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600'>
