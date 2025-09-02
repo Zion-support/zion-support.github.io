@@ -28,6 +28,8 @@ const About = createLazyComponent(() => import('./pages/About'));
 const Contact = createLazyComponent(() => import('./pages/Contact'));
 const Careers = createLazyComponent(() => import('./pages/Careers'));
 const Services = createLazyComponent(() => import('./pages/Services'));
+const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));
+const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
 const Solutions = createLazyComponent(() => import('./pages/Solutions'));
 const News = createLazyComponent(() => import('./pages/News'));
 const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
@@ -91,6 +93,8 @@ function App() {
                 
                 {/* Services */}
                 <Route path="/services" element={<Services />} />
+                <Route path="/enterprise" element={<Enterprise />} />
+                <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/services/ai" element={<AIServices />} />
                 <Route path="/services/cloud" element={<CloudServices />} />
                 <Route path="/services/cybersecurity" element={<CybersecurityServices />} />

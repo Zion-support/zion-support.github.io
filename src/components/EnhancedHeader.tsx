@@ -7,6 +7,8 @@ export const EnhancedHeader: React.FC = () => {
     { label: 'Home', href: '/' },
     { label: 'Services', href: '/services' },
     { label: 'Solutions', href: '/solutions' },
+    { label: 'Enterprise', href: '/enterprise' },
+    { label: 'Request Quote', href: '/request-quote' },
     { label: 'Case Studies', href: '/case-studies' },
     { label: 'Careers', href: '/careers' },
     { label: 'Contact', href: '/contact' }
