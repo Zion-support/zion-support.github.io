@@ -74,12 +74,22 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 "postalCode": "19709",
                 "addressCountry": "US"
               },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
-              },
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+1-302-464-0950",
+                  "contactType": "customer service",
+                  "email": "kleber@ziontechgroup.com",
+                  "availableLanguage": "English"
+                },
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+1-302-464-0950",
+                  "contactType": "sales",
+                  "email": "kleber@ziontechgroup.com",
+                  "availableLanguage": "English"
+                }
+              ],
               "sameAs": [
                 "https://www.linkedin.com/company/zion-tech-group",
                 "https://twitter.com/ziontechgroup"
