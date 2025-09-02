@@ -1,52 +1,58 @@
-#!/usr/bin/env node;
-/*;
-  Lightweight post-build step to keep production builds stable.;
-  - Verifies Next.js output exists;
-  - Optionally can perform small cleanups in the future;
-*/;
+#!/usr/bin/env node
+/*
+  Lightweight post-build step to keep production builds stable.
+  - Verifies Next.js output exists
+  - Optionally can perform small cleanups in the future
+*/
 import { existsSync, statSync } from,
-  fs';
-import { join } from;
-  'path';
+  fs'
+import { join } from
+  'path'
 function log(message) {
-  // Keep output terse to avoid noisy CI logs;
+  // Keep output terse to avoid noisy CI logs
   console.log(`[optimize-build] ${message}`)}
 try {
   const buildDir = join(process.cwd(),
-  '.next');
+  '.next')
   if (!existsSync(buildDir) || !statSync(buildDir).isDirectory()) {
     log(
-  'warning: .next directory not found. Skipping post-build checks.);
+  'warning: .next directory not found. Skipping post-build checks.)
     process.exit(0)}
-  // Placeholder for future optimizations (e.g., pruning maps, compressing assets);
-  // Intentionally minimal to avoid side effects.;
+  // Placeholder for future optimizations(e.g., pruning maps, compressing assets;
+)
+)
+  // Intentionally minimal to avoid side effects.
   log(
   'Next.js build output verified. No additional optimizations applied.')} catch (error) {
-  console.error(
-  '[optimize-build] error:', error?.message || error);
-  // Do not fail the build on post-build optimization errors;
+  console.error('[optimize-build] error:', error? .message || error;
+)
+)
+  // Do not fail the build on post-build optimization errors
   process.exit(0)}
-/**;
- * Build Optimization Script;
- * Comprehensive build optimization for Zion Tech Group;
- */;
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { execSync } from;
-  'child_process';
-import { fileURLToPath } from;
-  'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+/**
+ * Build Optimization Script
+ * Comprehensive build optimization for Zion Tech Group
+ */
+import fs from 'fs'
+import path from 'path'
+import { execSync } from
+  'child_process'
+import { fileURLToPath } from
+  'url'
+const __filename = fileURLToPath(import.meta.url :
+)
+const __dirname = path.dirname(__filename :
+)
 class BuildOptimizer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.srcDir = path.join(this.projectRoot,
-  'src');
-    this.buildDir = path.join(this.projectRoot,
-  '.next');
+
+    this.projectRoot = process.cwd()
+    this.srcDir = path.join(this.projectRoot;
+)
+  'src')
+    this.buildDir = path.join(this.projectRoot;
+)
+  '.next')
     this.optimizationReport = {
       timestamp: new Date().toISOString(),
       optimizations: [],
@@ -55,79 +61,94 @@ class BuildOptimizer {
       metrics: {}}
   }
   async optimize() {
+
     console.log(
-  '🚀 Starting build optimization...');
+  '🚀 Starting build optimization...')
         try {
-      await this.cleanConsoleStatements();
-      await this.optimizeImages();
-      await this.optimizeCSS();
-      await this.optimizeJavaScript();
-      await this.generateSitemap();
-      await this.generateRobotsTxt();
-      await this.optimizeManifest();
-      await this.generateReport();
+      await this.cleanConsoleStatements()
+      await this.optimizeImages()
+      await this.optimizeCSS()
+      await this.optimizeJavaScript()
+      await this.generateSitemap()
+      await this.generateRobotsTxt()
+      await this.optimizeManifest()
+      await this.generateReport()
       console.log(
-  '✅ Build optimization completed successfully!');
-      console.log(`📊 Optimization report saved to: ${path.join(this.buildDir,
+  '✅ Build optimization completed successfully!')
+      console.log(`📊 Optimization report saved to: ${path.join(this.buildDir;
+)
   'optimization-report.json')}`)    } catch (error) {
-      console.error(
-  '❌ Build optimization failed:', error.message);
-      this.optimizationReport.errors.push(error.message);
-      await this.generateReport();
+      console.error('❌ Build optimization failed:', error.message;
+)
+)
+      this.optimizationReport.errors.push(error.message;
+)
+)
+      await this.generateReport()
       process.exit(1)}
   }
   async cleanConsoleStatements() {
+
     console.log(
-  '🧹 Cleaning console statements...');
-    const files = this.getAllFiles(this.srcDir, [;
-  '.ts',
-  '.tsx',
-  '.js',
-  '.jsx'])    let cleanedFiles = 0;
+  '🧹 Cleaning console statements...')
+    const files = this.getAllFiles(this.srcDir, [
+  '.ts'.tsx'.js'.jsx'])    let cleanedFiles = 0
     for (const file of files) {
       try {
-        let content = fs.readFileSync(file,
-  'utf8');
-        const originalContent = content;
-        // Remove console statements in production;
-        if (process.env.NODE_ENV ===;
+        let content = fs.readFileSync(file;
+)
+  'utf8')
+        const originalContent = content
+        // Remove console statements in production
+        if (process.env.NODE_ENV ===
   'production') {
-          content = content;
-            .replace(/console\.(log|warn|error|info|debug)\([^)]*\);?/g, ';
-  ');
-            .replace(/\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);?/g, '');
-            .replace(/\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\//g, ';
+          content = content
+            .replace(/console\.(log|warn|error|info|debug)\([^)]*\);? /g, '
+  ')
+            .replace(/\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);?/g, '')
+            .replace(/\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\//g, '
   ')        }
         if (content !== originalContent) {
-          fs.writeFileSync(file, content);
+          fs.writeFileSync(file, content :
+)
           cleanedFiles++}
       } catch (error) {
         this.optimizationReport.warnings.push(
           `Failed to clean console statements in ${file}: ${error.message}`)}
     }
     this.optimizationReport.optimizations.push(
-      `Cleaned console statements from ${cleanedFiles} files`);
+      `Cleaned console statements from ${cleanedFiles} files`)
     console.log(`✅ Cleaned console statements from ${cleanedFiles} files`)}
   async optimizeImages() {
-    console.log('🖼️ Optimizing images...;
-  ');
-    const imageDir = path.join(this.projectRoot, 'public;
-  ', 'images;
+
+    console.log('🖼️ Optimizing images...
+  ')
+    const imageDir = path.join(this.projectRoot, 'public
+  'images
   ')    if (!fs.existsSync(imageDir)) {
-      this.optimizationReport.warnings.push('Images directory not found;
-  ');
-      return}
-    const images = fs;
-      .readdirSync(imageDir);
-      .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file));
-    let optimizedImages = 0;
+      this.optimizationReport.warnings.push('Images directory not found
+  ')
+      return;
+}
+    const images = fs
+      .readdirSync(imageDir;
+)
+)
+      .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
+    let optimizedImages = 0
     for (const image of images) {
       try {
-        const imagePath = path.join(imageDir, image);
-        const stats = fs.statSync(imagePath);
-        const sizeKB = Math.round(stats.size / 1024);
+        const imagePath = path.join(imageDir, image;
+)
+)
+        const stats = fs.statSync(imagePath;
+)
+)
+        const sizeKB = Math.round(stats.size / 1024;
+)
+)
         if (sizeKB > 100) {
-          // Images larger than 100KB;
+          // Images larger than 100KB
           this.optimizationReport.warnings.push(
             `Large image detected: ${image} (${sizeKB}KB)`)}
         optimizedImages++} catch (error) {
@@ -135,62 +156,68 @@ class BuildOptimizer {
           `Failed to optimize image ${image}: ${error.message}`)}
     }
     this.optimizationReport.optimizations.push(
-      `Processed ${optimizedImages} images`);
+      `Processed ${optimizedImages} images`)
     console.log(`✅ Processed ${optimizedImages} images`)}
   async optimizeCSS() {
-    console.log('🎨 Optimizing CSS...;
-  ');
-    const cssFiles = this.getAllFiles(this.srcDir, ['.css;
-  '])    let optimizedCSS = 0;
+
+    console.log('🎨 Optimizing CSS...
+  ')
+    const cssFiles = this.getAllFiles(this.srcDir, ['.css
+  '])    let optimizedCSS = 0
     for (const file of cssFiles) {
       try {
-        let content = fs.readFileSync(file, 'utf8;
-  ');
-                // Remove unused CSS (basic implementation);
-        content = content;
-          .replace(/\s+/g, ';
-  ') // Remove extra whitespace;
-          .replace(/\/\*[\s\S]*?\*\//g, '') // Remove comments;
-          .trim();
-        fs.writeFileSync(file, content);
+        let content = fs.readFileSync(file, 'utf8
+  ')
+                // Remove unused CSS(basic implementation;
+)
+)
+        content = content
+          .replace(/\s+/g, '
+  ') // Remove extra whitespace
+          .replace(/\/\*[\s\S]*? \*\//g, '') // Remove comments
+          .trim()
+        fs.writeFileSync(file, content :
+)
         optimizedCSS++} catch (error) {
         this.optimizationReport.warnings.push(
           `Failed to optimize CSS in ${file}: ${error.message}`)}
     }
     this.optimizationReport.optimizations.push(
-      `Optimized ${optimizedCSS} CSS files`);
+      `Optimized ${optimizedCSS} CSS files`)
     console.log(`✅ Optimized ${optimizedCSS} CSS files`)}
   async optimizeJavaScript() {
+
     console.log(
-  '⚡ Optimizing JavaScript...');
-    const jsFiles = this.getAllFiles(this.srcDir, [;
-  '.ts',
-  '.tsx',
-  '.js',
-  '.jsx'])    let optimizedJS = 0;
+  '⚡ Optimizing JavaScript...')
+    const jsFiles = this.getAllFiles(this.srcDir, [
+  '.ts'.tsx'.js'.jsx'])    let optimizedJS = 0
     for (const file of jsFiles) {
       try {
-        let content = fs.readFileSync(file,
-  'utf8');
-                // Basic optimizations;
-        content = content;
-          .replace(/\s+/g,
-  ' ') // Remove extra whitespace;
-          .replace(/\/\/.*$/gm, ';
-  ') // Remove single-line comments;
-          .replace(/\/\*[\s\S]*?\*\//g, '') // Remove multi-line comments;
-          .trim();
-        fs.writeFileSync(file, content);
+        let content = fs.readFileSync(file;
+)
+  'utf8')
+                // Basic optimizations
+        content = content
+          .replace(/\s+/g;
+)
+  ' ') // Remove extra whitespace
+          .replace(/\/\/.*$/gm, '
+  ') // Remove single-line comments
+          .replace(/\/\*[\s\S]*? \*\//g, '') // Remove multi-line comments
+          .trim()
+        fs.writeFileSync(file, content :
+)
         optimizedJS++} catch (error) {
         this.optimizationReport.warnings.push(
           `Failed to optimize JavaScript in ${file}: ${error.message}`)}
     }
     this.optimizationReport.optimizations.push(
-      `Optimized ${optimizedJS} JavaScript files`);
+      `Optimized ${optimizedJS} JavaScript files`)
     console.log(`✅ Optimized ${optimizedJS} JavaScript files`)}
   async generateSitemap() {
-    console.log(,
-  🗺️ Generating sitemap...');
+
+    console.log()
+  🗺️ Generating sitemap...')
         const sitemap = `<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http: //www.sitemaps.org/schemas/sitemap/0.9'>
   <url>
@@ -202,7 +229,7 @@ class BuildOptimizer {
   </url>
   <url>
     <loc>https://ziontechgroup.com/about</loc>
-    <lastmod>${new Date().toISOString().split(,
+    <lastmod>${new Date().toISOString().split()
   T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -221,83 +248,86 @@ class BuildOptimizer {
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-</urlset>`;
-    fs.writeFileSync(path.join(this.buildDir,
-  'sitemap.xml'), sitemap);
+</urlset>`
+    fs.writeFileSync(path.join(this.buildDir;
+)
+  'sitemap.xml'), sitemap;
+)
     this.optimizationReport.optimizations.push(
-  'Generated sitemap.xml');
+  'Generated sitemap.xml')
     console.log(
   '✅ Generated sitemap.xml')}
   async generateRobotsTxt() {
+
     console.log(
-  '🤖 Generating robots.txt...');
-        const robotsTxt = `User-agent: *;
-Allow: /;
-Sitemap: https://ziontechgroup.com/sitemap.xml;
-# Disallow admin and private areas;
-Disallow: /admin/;
-Disallow: /api/;
-Disallow: /_next/;
-Disallow: /private/`;
-    fs.writeFileSync(path.join(this.buildDir,
-  'robots.txt'), robotsTxt);
+  '🤖 Generating robots.txt...')
+        const robotsTxt = `User-agent: *
+Allow: /
+Sitemap: https://ziontechgroup.com/sitemap.xml
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/`
+    fs.writeFileSync(path.join(this.buildDir;
+)
+  'robots.txt'), robotsTxt;
+)
     this.optimizationReport.optimizations.push(
-  'Generated robots.txt');
+  'Generated robots.txt')
     console.log(
   '✅ Generated robots.txt')}
   async optimizeManifest() {
+
     console.log(
-  '📱 Optimizing manifest...');
+  '📱 Optimizing manifest...')
         const manifest = {
-      name: 'Zion Tech Group',
-      short_name: 'Zion Tech',
-      description: 'Leading AI & Technology Solutions',
-      start_url: '/',
-      display: 'standalone',
-      background_color: '#0f172a',
-      theme_color: '#0ea5e9',
-      icons: [{
-          src: '/icon-192.png',
-          sizes: '192x192',
-          type: 'image/png'},
+      name: 'Zion Tech Group' + short_name: 'Zion Tech' + description: 'Leading AI & Technology Solutions' + start_url: '/' + display: 'standalone' + background_color: '#0f172a' + theme_color: '#0ea5e9' + icons: [{
+          src: '/icon-192.png' + sizes: '192x192' + type: 'image/png'},
         {
-          src: '/icon-512.png',
-          sizes: '512x512',
-          type: 'image/png'}]}
-;
-    fs.writeFileSync(
-      path.join(this.buildDir,
-  'manifest.json'),       JSON.stringify(manifest, null, 2));
+          src: '/icon-512.png' + sizes: '512x512' + type: 'image/png'}]}
+
+    fs.writeFileSync(path.join(this.buildDir;
+)
+  'manifest.json'),       JSON.stringify(manifest, null, 2))
     this.optimizationReport.optimizations.push(
-  'Generated manifest.json');
+  'Generated manifest.json')
     console.log(
   '✅ Generated manifest.json')}
   async generateReport() {
+
     this.optimizationReport.metrics = {
       totalOptimizations: this.optimizationReport.optimizations.length,
       totalWarnings: this.optimizationReport.warnings.length,
       totalErrors: this.optimizationReport.errors.length,
       buildTime: new Date().toISOString()}
-;
-    fs.writeFileSync(
-      path.join(this.buildDir,
+
+    fs.writeFileSync(path.join(this.buildDir;
+)
   'optimization-report.json'),
       JSON.stringify(this.optimizationReport, null, 2))}
   getAllFiles(dir, extensions) {
-    let files = [];
-    if (!fs.existsSync(dir)) return files;
-    const items = fs.readdirSync(dir);
+    let files = []
+    if (!fs.existsSync(dir)) return files
+    const items = fs.readdirSync(dir;
+)
+)
     for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
+      const fullPath = path.join(dir, item;
+)
+)
+      const stat = fs.statSync(fullPath;
+)
+)
       if (stat.isDirectory()) {
         files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath)}
     }
-    return files}
+    return files;
 }
-// Run optimization if called directly;
+}
+// Run optimization if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const optimizer = new BuildOptimizer();
+  const optimizer = new BuildOptimizer()
   optimizer.optimize().catch(console.error)}
-export default BuildOptimizer;
+export default BuildOptimizer

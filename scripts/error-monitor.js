@@ -1,267 +1,336 @@
-#!/usr/bin/env node;
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { execSync, spawn } from;
-  'child_process';
-import { fileURLToPath } from;
-  'url';
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { execSync, spawn } from 'child_process';
+import { fileURLToPath } from 'url';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
 class ErrorMonitor {
   constructor() {
-    this.logDir = path.join(__dirname,
-  '..',
-  'logs');
-    this.errorReportDir = path.join(__dirname,
-  '..',
-  'error-reports');
-    this.maxLogSize = 10 * 1024 * 1024 // 10MB;
-    this.errorThreshold = 5 // Number of errors before triggering fixes;
+    this.logDir = path.join(__dirname, '..', 'logs');
+    this.errorReportDir = path.join(__dirname, '..', 'error-reports');
+    this.maxLogSize = 10 * 1024 * 1024; // 10MB
+    this.errorThreshold = 5; // Number of errors before triggering fixes
     this.errors = [];
-    this.ensureDirectories()}
+    this.ensureDirectories();
+  }
+
   ensureDirectories() {
     [this.logDir, this.errorReportDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true })}
-    })}
+        fs.mkdirSync(dir, { recursive: true });
+      }
+    });
+  }
+
   log(level, message, error = null) {
     const timestamp = new Date().toISOString();
     const logEntry = {
       timestamp,
       level,
       message,
-      error: error;
-        ? {
-            message: error.message,
-            stack: error.stack}
-        : null}
-;
-    console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`);
-    if (error) {
-      console.error(error)}
-    // Write to log file;
-    const logFile = path.join(this.logDir,
-  'error-monitor.log');
-    fs.appendFileSync(logFile, JSON.stringify(logEntry) +;
-  '\n')}
-  async checkTypeScriptErrors() {
+      error: error ? {
+        message: error.message,
+        stack: error.stack,
+        name: error.name
+      } : null
+    };
+
+    const logFile = path.join(this.logDir, `${level}.log`);
+    const logLine = JSON.stringify(logEntry) + '\n';
+    
     try {
-      this.log(
-  'info',
-  'Checking TypeScript errors...');
-      const result = execSync(
-  'npm run type-check', {
-        cwd: path.join(__dirname,
-,
-  ..'),
-        encoding: 'utf8,
-        timeout: 60000})
-      this.log(
-  'info',
-  'TypeScript check passed')      return { success: true, errors: [] }
-    } catch (error) {
-      const errorOutput = error.stdout || error.message;
-      const errors = this.parseTypeScriptErrors(errorOutput);
-      this.log(
-  'error', `TypeScript check failed with ${errors.length} errors`)      return { success: false, errors }
+      fs.appendFileSync(logFile, logLine);
+    } catch (err) {
+      console.error('Failed to write to log file:', err.message);
     }
   }
-  async checkESLintErrors() {
+
+  async detectErrors() {
+    console.log('🔍 Detecting errors...');
+    
     try {
-      this.log(
-  'info',
-  'Checking ESLint errors...');
-      const result = execSync(
-  'npm run lint', {
-        cwd: path.join(__dirname,
-,
-  ..'),
-        encoding: 'utf8,
-        timeout: 60000})
-      this.log(
-  'info',
-  'ESLint check passed')      return { success: true, errors: [] }
+      // Check for common error patterns in logs
+      const logFiles = fs.readdirSync(this.logDir);
+      const errorPatterns = [
+        'Error:',
+        'TypeError:',
+        'ReferenceError:',
+        'SyntaxError:',
+        'Module not found',
+        'Cannot resolve',
+        'Unexpected token',
+        'Failed to compile',
+        'Build failed'
+      ];
+
+      for (const logFile of logFiles) {
+        if (logFile.endsWith('.log')) {
+          const logPath = path.join(this.logDir, logFile);
+          const content = fs.readFileSync(logPath, 'utf8');
+          
+          for (const pattern of errorPatterns) {
+            if (content.includes(pattern)) {
+              this.errors.push({
+                file: logFile,
+                pattern: pattern,
+                timestamp: new Date().toISOString()
+              });
+            }
+          }
+        }
+      }
+
+      console.log(`📊 Found ${this.errors.length} error patterns`);
+      return this.errors;
     } catch (error) {
-      const errorOutput = error.stdout || error.message;
-      const errors = this.parseESLintErrors(errorOutput);
-      this.log(
-  'error', `ESLint check failed with ${errors.length} errors`)      return { success: false, errors }
+      this.log('ERROR', 'Failed to detect errors', error);
+      return [];
     }
   }
-  async checkBuildErrors() {
-    try {
-      this.log(
-  'info',
-  'Checking build errors...');
-      const result = execSync(
-  'npm run build', {
-        cwd: path.join(__dirname,
-,
-  ..'),
-        encoding: 'utf8,
-        timeout: 300000 // 5 minutes})
-      this.log(
-  'info',
-  'Build check passed')      return { success: true, errors: [] }
-    } catch (error) {
-      const errorOutput = error.stdout || error.message;
-      const errors = this.parseBuildErrors(errorOutput);
-      this.log(
-  'error', `Build check failed with ${errors.length} errors`)      return { success: false, errors }
-    }
-  }
-  parseTypeScriptErrors(output) {
-    const errors = [];
-    const lines = output.split(,
-  \n');
-        for (const line of lines) {
-      if (line.includes(
-  ': error TS)) {
-        const match = line.match(/^(.+?)\((\d+),(\d+)\): error (TS\d+): (.+)$/);
-        if (match) {
-          errors.push({
-            type:;
-  'typescript',
-            file: match[1],
-            line: parseInt(match[2]),
-            column: parseInt(match[3]),
-            code: match[4],
-            message: match[5],
-            raw: line})}
+
+  async fixErrors() {
+    console.log('🔧 Attempting to fix detected errors...');
+    
+    const fixes = [];
+    
+    for (const error of this.errors) {
+      try {
+        const fix = await this.applyFix(error);
+        if (fix) {
+          fixes.push(fix);
+        }
+      } catch (err) {
+        this.log('ERROR', `Failed to fix error: ${error.pattern}`, err);
       }
     }
-    return errors}
-  parseESLintErrors(output) {
-    const errors = [];
-    const lines = output.split(,
-  \n');
-        for (const line of lines) {
-      if (line.includes(
-  'error') || line.includes(
-  'warning')) {
-        errors.push({
-          type: 'eslint,
-          message: line.trim(),
-          raw: line})}
-    }
-    return errors}
-  parseBuildErrors(output) {
-    const errors = [];
-    const lines = output.split(,
-  \n');
-        for (const line of lines) {
-      if (line.includes(
-  'Error: ') || line.includes(
-  'ERROR')) {
-        errors.push({
-          type:;
-  'build,
-          message: line.trim(),
-          raw: line})}
-    }
-    return errors}
-  async triggerAutoFixer(errors) {
-    try {
-      this.log(
-  'info', `Triggering auto-fixer for ${errors.length} errors`);
-            // Write errors to a temporary file for the auto-fixer;
-      const errorFile = path.join(
-        this.errorReportDir,
-        `errors-${Date.now()}.json`);
-      fs.writeFileSync(errorFile, JSON.stringify(errors, null, 2));
-      // Trigger auto-fixer;
-      const autoFixerScript = path.join(__dirname,
-  'auto-fixer.js');
-      spawn(
-  'node', [autoFixerScript, errorFile], {
-        detached: true,
-        stdio:;
-  'ignore'}).unref();
-      this.log(
-  'info',
-  'Auto-fixer triggered successfully')    } catch (error) {
-      this.log(
-  'error',
-  'Failed to trigger auto-fixer', error)}
+
+    console.log(`✅ Applied ${fixes.length} fixes`);
+    return fixes;
   }
+
+  async applyFix(error) {
+    const { pattern, file } = error;
+    
+    switch (pattern) {
+      case 'Module not found':
+        return await this.fixModuleNotFound(error);
+      case 'Cannot resolve':
+        return await this.fixCannotResolve(error);
+      case 'SyntaxError:':
+        return await this.fixSyntaxError(error);
+      case 'TypeError:':
+        return await this.fixTypeError(error);
+      default:
+        return await this.fixGenericError(error);
+    }
+  }
+
+  async fixModuleNotFound(error) {
+    console.log('🔧 Fixing module not found error...');
+    
+    try {
+      // Try to install missing dependencies
+      const result = execSync('npm install', { 
+        cwd: process.cwd(),
+        encoding: 'utf8',
+        timeout: 30000
+      });
+      
+      return {
+        type: 'module_not_found',
+        action: 'npm_install',
+        success: true,
+        output: result
+      };
+    } catch (err) {
+      return {
+        type: 'module_not_found',
+        action: 'npm_install',
+        success: false,
+        error: err.message
+      };
+    }
+  }
+
+  async fixCannotResolve(error) {
+    console.log('🔧 Fixing cannot resolve error...');
+    
+    try {
+      // Try to clear cache and reinstall
+      execSync('npm cache clean --force', { 
+        cwd: process.cwd(),
+        encoding: 'utf8',
+        timeout: 30000
+      });
+      
+      execSync('rm -rf node_modules package-lock.json', { 
+        cwd: process.cwd(),
+        encoding: 'utf8',
+        timeout: 30000
+      });
+      
+      execSync('npm install', { 
+        cwd: process.cwd(),
+        encoding: 'utf8',
+        timeout: 30000
+      });
+      
+      return {
+        type: 'cannot_resolve',
+        action: 'cache_clean_reinstall',
+        success: true
+      };
+    } catch (err) {
+      return {
+        type: 'cannot_resolve',
+        action: 'cache_clean_reinstall',
+        success: false,
+        error: err.message
+      };
+    }
+  }
+
+  async fixSyntaxError(error) {
+    console.log('🔧 Fixing syntax error...');
+    
+    try {
+      // Run syntax fixer
+      const result = execSync('node scripts/comprehensive-syntax-fixer.js', { 
+        cwd: process.cwd(),
+        encoding: 'utf8',
+        timeout: 60000
+      });
+      
+      return {
+        type: 'syntax_error',
+        action: 'syntax_fixer',
+        success: true,
+        output: result
+      };
+    } catch (err) {
+      return {
+        type: 'syntax_error',
+        action: 'syntax_fixer',
+        success: false,
+        error: err.message
+      };
+    }
+  }
+
+  async fixTypeError(error) {
+    console.log('🔧 Fixing type error...');
+    
+    try {
+      // Run type checker
+      const result = execSync('npm run type-check', { 
+        cwd: process.cwd(),
+        encoding: 'utf8',
+        timeout: 30000
+      });
+      
+      return {
+        type: 'type_error',
+        action: 'type_check',
+        success: true,
+        output: result
+      };
+    } catch (err) {
+      return {
+        type: 'type_error',
+        action: 'type_check',
+        success: false,
+        error: err.message
+      };
+    }
+  }
+
+  async fixGenericError(error) {
+    console.log('🔧 Fixing generic error...');
+    
+    try {
+      // Run general error fixer
+      const result = execSync('node scripts/comprehensive-error-fixer.cjs', { 
+        cwd: process.cwd(),
+        encoding: 'utf8',
+        timeout: 60000
+      });
+      
+      return {
+        type: 'generic_error',
+        action: 'comprehensive_fixer',
+        success: true,
+        output: result
+      };
+    } catch (err) {
+      return {
+        type: 'generic_error',
+        action: 'comprehensive_fixer',
+        success: false,
+        error: err.message
+      };
+    }
+  }
+
   async generateReport() {
-    const timestamp = new Date().toISOString();
-    const reportFile = path.join(
-      this.errorReportDir,
-      `error-monitor-report-${Date.now()}.json`);
+    console.log('📊 Generating error report...');
+    
     const report = {
-      timestamp,
+      timestamp: new Date().toISOString(),
       summary: {
         totalErrors: this.errors.length,
-        typescriptErrors: this.errors.filter(e => e.type ===,
-  typescript').length,
-        eslintErrors: this.errors.filter(e => e.type ===;
-  'eslint).length,
-        buildErrors: this.errors.filter(e => e.type ===;
-  'build').length      },
+        errorsByType: this.errors.reduce((acc, error) => {
+          acc[error.pattern] = (acc[error.pattern] || 0) + 1;
+          return acc;
+        }, {}),
+        errorsByFile: this.errors.reduce((acc, error) => {
+          acc[error.file] = (acc[error.file] || 0) + 1;
+          return acc;
+        }, {})
+      },
       errors: this.errors,
-      recommendations: this.generateRecommendations()}
-;
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(
-  'info', `Error report generated: ${reportFile}`);
-        return report}
-  generateRecommendations() {
-    const recommendations = [];
-    if (this.errors.some(e => e.type ===;
-  'typescript')) {
-      recommendations.push(
-  'Run TypeScript auto-fixer to resolve type errors')}
-    if (this.errors.some(e => e.type ===;
-  'eslint')) {
-      recommendations.push(
-  'Run ESLint auto-fix to resolve code quality issues')}
-    if (this.errors.some(e => e.type ===;
-  'build')) {
-      recommendations.push(
-  'Check dependencies and build configuration')    }
-    return recommendations}
+      recommendations: [
+        'Run npm install to ensure all dependencies are installed',
+        'Check for syntax errors in source files',
+        'Verify import paths and module names',
+        'Clear npm cache if experiencing module resolution issues',
+        'Run type checking to identify TypeScript errors'
+      ]
+    };
+
+    const reportPath = path.join(this.errorReportDir, `error-report-${Date.now()}.json`);
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    console.log(`📄 Error report saved to: ${reportPath}`);
+    return report;
+  }
+
   async run() {
+    console.log('🚀 Starting Error Monitor...');
+    
     try {
-      this.log(
-  'info',
-  'Starting error monitoring cycle...');
-            // Check for different types of errors;
-      const checks = await Promise.allSettled([;
-        this.checkTypeScriptErrors(),
-        this.checkESLintErrors(),
-        this.checkBuildErrors()]);
-      this.errors = [];
-      // Collect all errors;
-      checks.forEach((check, index) => {
-        if (check.status ===;
-  'fulfilled' && !check.value.success) {
-          this.errors.push(...check.value.errors)}
-      })
-      // Generate report;
-      const report = await this.generateReport();
-      // Trigger auto-fixer if error threshold is exceeded;
-      if (this.errors.length >= this.errorThreshold) {
-        await this.triggerAutoFixer(this.errors)}
-      this.log(
-  'info', `Error monitoring cycle completed. Found ${this.errors.length} errors.`)} catch (error) {
-      this.log(
-  'error',
-  'Error monitoring cycle failed', error)}
+      await this.detectErrors();
+      
+      if (this.errors.length > 0) {
+        console.log(`⚠️  Found ${this.errors.length} errors`);
+        await this.fixErrors();
+      } else {
+        console.log('✅ No errors detected');
+      }
+      
+      await this.generateReport();
+      console.log('✅ Error monitoring completed!');
+      
+    } catch (error) {
+      this.log('ERROR', 'Error monitor failed', error);
+      console.error('❌ Error monitor failed:', error.message);
+    }
   }
 }
-// Run if called directly;
-const isMainModule = import.meta.url === `file://${process.argv[1]}`;
-if (isMainModule) {
-  const monitor = new ErrorMonitor();
-  // Run once immediately;
-  monitor.run().then(() => {
-    // Set up periodic monitoring (every 10 minutes);
-    setInterval(() => {
-      monitor.run()}, 10 * 60 * 1000)}).catch(error => {
-    console.error(
-  'Failed to start error monitor:', error);
-    process.exit(1)})}
-export default ErrorMonitor;
+
+// Run the error monitor
+const monitor = new ErrorMonitor();
+monitor.run().catch(console.error);

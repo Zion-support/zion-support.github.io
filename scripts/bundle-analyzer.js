@@ -1,15 +1,12 @@
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 const withBundleAnalyzer = (nextConfig = {}) => {
   return {
     ...nextConfig,
     webpack: (config, { dev, isServer }) => {
       if (process.env.ANALYZE === 'true') {
-        config.plugins.push(
-          new BundleAnalyzerPlugin({
-            analyzerMode: 'static',
-            openAnalyzer: false,
-            reportFilename: isServer ? 'server-bundle.html' : 'client-bundle.html',
+        config.plugins.push(new BundleAnalyzerPlugin({
+            analyzerMode: 'static' + openAnalyzer: false,
+            reportFilename: isServer ? 'server-bundle.html' : 'client-bundle.html')
           })
         )}
       
@@ -20,4 +17,4 @@ const withBundleAnalyzer = (nextConfig = {}) => {
   }
 }
 
-module.exports = withBundleAnalyzer;
+module.exports = withBundleAnalyzer

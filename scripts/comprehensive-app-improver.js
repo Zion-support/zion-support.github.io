@@ -1,93 +1,101 @@
 #!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { execSync } from 'child_process';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-console.log('🚀 Comprehensive App Improver Starting...');
-
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+import { execSync } from 'child_process'
+const __filename = fileURLToPath(import.meta.url;
+)
+)
+const __dirname = path.dirname(__filename;
+)
+)
+console.log('🚀 Comprehensive App Improver Starting...')
 class AppImprover {
   constructor() {
-    this.projectRoot = path.resolve(__dirname, '..');
-    this.improvements = [];
+
+    this.projectRoot = path.resolve(__dirname, '..')
+    this.improvements = []
     this.fixes = []}
 
   async runImprovements() {
-    console.log('🔧 Running comprehensive app improvements...');
-    
-    await this.optimizePerformance();
-    await this.improveCodeQuality();
-    await this.enhanceSecurity();
-    await this.optimizeSEO();
-    await this.improveAccessibility();
-    await this.enhanceUserExperience();
-    await this.optimizeBuild();
-    await this.improveDocumentation();
-    
+
+    console.log('🔧 Running comprehensive app improvements...')
+    await this.optimizePerformance()
+    await this.improveCodeQuality()
+    await this.enhanceSecurity()
+    await this.optimizeSEO()
+    await this.improveAccessibility()
+    await this.enhanceUserExperience()
+    await this.optimizeBuild()
+    await this.improveDocumentation()
     this.generateReport()}
 
   async optimizePerformance() {
-    console.log('⚡ Optimizing performance...');
-    
+
+    console.log('⚡ Optimizing performance...')
     // Optimize images
-    await this.optimizeImages();
-    
+    await this.optimizeImages()
     // Add performance optimizations to Next.js config
-    await this.optimizeNextConfig();
-    
+    await this.optimizeNextConfig()
     // Create performance monitoring
-    await this.createPerformanceMonitoring();
-    
+    await this.createPerformanceMonitoring()
     this.improvements.push('Performance optimizations applied')}
 
   async optimizeImages() {
-    const publicDir = path.join(this.projectRoot, 'public');
-    if (!fs.existsSync(publicDir)) return;
-    
+
+    const publicDir = path.join(this.projectRoot, 'public')
+    if (!fs.existsSync(publicDir)) return
     // Create optimized image component
-    const optimizedImageComponent = `import Image from 'next/image';
-import { useState } from 'react';
-
+    const optimizedImageComponent = `import Image from 'next/image'
+import { useState } from 'react'
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  quality?: number}
-
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  quality?: number;
+}
 export default function OptimizedImage({
   src,
   alt,
   width = 800,
   height = 600,
-  className = '',
-  priority = false,
+  className = '' + priority = false;
+)
   quality = 75
 }: OptimizedImageProps) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-
+  const [isLoading, setIsLoading] = useState(true;
+)
+)
+  const [hasError, setHasError] = useState(false;
+)
+)
   return (
     <div className={\`relative overflow-hidden \${className}\`}>
       {isLoading && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse" />
       )}
       <Image
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        priority={priority}
-        quality={quality}
+        src={src;
+}
+        alt={alt;
+}
+        width={width;
+}
+        height={height;
+}
+        priority={priority;
+}
+        quality={quality;
+}
         className={\`transition-opacity duration-300 \${isLoading ? 'opacity-0' : 'opacity-100'}\`}
         onLoad={() => setIsLoading(false)}
         onError={() => {
-          setHasError(true);
+          setHasError(true;
+)
+)
           setIsLoading(false)}}
         placeholder="blur"
         blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
@@ -98,23 +106,21 @@ export default function OptimizedImage({
         </div>
       )}
     </div>
-  )}`;
-
-    const componentsDir = path.join(this.projectRoot, 'src', 'components');
+  )}`
+    const componentsDir = path.join(this.projectRoot, 'src'components')
     if (!fs.existsSync(componentsDir)) {
       fs.mkdirSync(componentsDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(componentsDir, 'OptimizedImage.tsx'),
-      optimizedImageComponent
-    );
-    
+      optimizedImageComponent;
+)
     this.fixes.push('Created OptimizedImage component for better performance')}
 
   async optimizeNextConfig() {
-    const nextConfigPath = path.join(this.projectRoot, 'next.config.js');
-    let nextConfig = '';
-    
+
+    const nextConfigPath = path.join(this.projectRoot, 'next.config.js')
+    let nextConfig = ''
     if (fs.existsSync(nextConfigPath)) {
       nextConfig = fs.readFileSync(nextConfigPath, 'utf8')}
     
@@ -127,7 +133,7 @@ const nextConfig = {
   
   // Optimize images
   images: {
-    formats: ['image/webp', 'image/avif'],
+    formats: ['image/webp'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
@@ -135,19 +141,17 @@ const nextConfig = {
   // Enable experimental features
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+    optimizePackageImports: ['lucide-react'@radix-ui/react-icons'],
   },
   
   // Webpack optimizations
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
+        chunks: 'all' + cacheGroups: {
           vendor: {
             test: /[\\\\/]node_modules[\\\\/]/,
-            name: 'vendors',
-            chunks: 'all',
+            name: 'vendors' + chunks: 'all',
           },
         },
       }
@@ -156,21 +160,18 @@ const nextConfig = {
   
   // Headers for performance
   async headers() {
+
     return [
       {
-        source: '/(.*)',
-        headers: [
+        source: '/(.*)' + headers: [
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
+            key: 'X-Content-Type-Options' + value: 'nosniff',
           },
           {
-            key: 'X-Frame-Options',
-            value: 'DENY',
+            key: 'X-Frame-Options' + value: 'DENY',
           },
           {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
+            key: 'X-XSS-Protection' + value: '1; mode=block',
           },
         ],
       },
@@ -178,148 +179,137 @@ const nextConfig = {
   
   // Redirects for SEO
   async redirects() {
+
     return [
       {
-        source: '/home',
-        destination: '/',
-        permanent: true,
+        source: '/home' + destination: '/' + permanent: true,
       },
     ]},
   
   // Rewrites for API routes
   async rewrites() {
+
     return [
       {
-        source: '/api/:path*',
-        destination: '/api/:path*',
+        source: '/api/:path*' + destination: '/api/:path*',
       },
     ]},
 }
 
-module.exports = nextConfig;`;
-
-    fs.writeFileSync(nextConfigPath, performanceOptimizations);
+module.exports = nextConfig;`
+    fs.writeFileSync(nextConfigPath, performanceOptimizations;
+)
+)
     this.fixes.push('Optimized Next.js configuration for performance')}
 
   async createPerformanceMonitoring() {
-    const performanceMonitor = `import { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
+    const performanceMonitor = `import { useEffect } from 'react'
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals'
 export function usePerformanceMonitoring() {
+
   useEffect(() => {
     const sendToAnalytics = (metric) => {
       // Send to your analytics service
-      console.log('Performance metric:', metric);
-      
+      console.log('Performance metric:', metric;
+)
+)
       // Example: Send to Google Analytics
       if (typeof gtag !== 'undefined') {
         gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          event_label: metric.id,
+          event_category: 'Web Vitals' + event_label: metric.id;
+)
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
           non_interaction: true,
         })}
     }
 
-    getCLS(sendToAnalytics);
-    getFID(sendToAnalytics);
-    getFCP(sendToAnalytics);
-    getLCP(sendToAnalytics);
+    getCLS(sendToAnalytics;
+)
+)
+    getFID(sendToAnalytics;
+)
+)
+    getFCP(sendToAnalytics;
+)
+)
+    getLCP(sendToAnalytics;
+)
+)
     getTTFB(sendToAnalytics)}, [])}
 
 export function reportWebVitals(metric) {
-  console.log('Web Vitals:', metric)}`;
-
-    const hooksDir = path.join(this.projectRoot, 'src', 'hooks');
+  console.log('Web Vitals:', metric)}`
+    const hooksDir = path.join(this.projectRoot, 'src'hooks')
     if (!fs.existsSync(hooksDir)) {
       fs.mkdirSync(hooksDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(hooksDir, 'usePerformanceMonitoring.ts'),
-      performanceMonitor
-    );
-    
+      performanceMonitor;
+)
     this.fixes.push('Created performance monitoring hook')}
 
   async improveCodeQuality() {
-    console.log('📝 Improving code quality...');
-    
+
+    console.log('📝 Improving code quality...')
     // Create ESLint configuration
-    await this.createESLintConfig();
-    
+    await this.createESLintConfig()
     // Create Prettier configuration
-    await this.createPrettierConfig();
-    
+    await this.createPrettierConfig()
     // Create TypeScript strict configuration
-    await this.updateTypeScriptConfig();
-    
+    await this.updateTypeScriptConfig()
     this.improvements.push('Code quality improvements applied')}
 
   async createESLintConfig() {
+
     const eslintConfig = `module.exports = {
   extends: [
-    'next/core-web-vitals',
-    'eslint:recommended',
-    '@typescript-eslint/recommended',
+    'next/core-web-vitals'eslint:recommended'@typescript-eslint/recommended',
   ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  parser: '@typescript-eslint/parser' + plugins: ['@typescript-eslint'],
   rules: {
     // Performance rules
-    'no-console': 'warn',
-    'no-debugger': 'error',
+    'no-console': 'warn'no-debugger': 'error',
     
     // Code quality rules
-    '@typescript-eslint/no-unused-vars': 'error',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/prefer-const': 'error',
+    '@typescript-eslint/no-unused-vars': 'error'@typescript-eslint/no-explicit-any': 'warn'@typescript-eslint/prefer-const': 'error',
     
     // React rules
-    'react-hooks/exhaustive-deps': 'warn',
-    'react/no-unescaped-entities': 'off',
+    'react-hooks/exhaustive-deps': 'warn'react/no-unescaped-entities': 'off',
     
     // Accessibility rules
-    'jsx-a11y/alt-text': 'error',
-    'jsx-a11y/aria-props': 'error',
-    'jsx-a11y/aria-proptypes': 'error',
-    'jsx-a11y/aria-unsupported-elements': 'error',
-    'jsx-a11y/role-has-required-aria-props': 'error',
-    'jsx-a11y/role-supports-aria-props': 'error',
+    'jsx-a11y/alt-text': 'error'jsx-a11y/aria-props': 'error'jsx-a11y/aria-proptypes': 'error'jsx-a11y/aria-unsupported-elements': 'error'jsx-a11y/role-has-required-aria-props': 'error'jsx-a11y/role-supports-aria-props': 'error',
   },
-  ignorePatterns: ['node_modules/', '.next/', 'out/'],
-}`;
-
+  ignorePatterns: ['node_modules/'.next/'out/'],
+}`
     fs.writeFileSync(
       path.join(this.projectRoot, 'eslint.config.js'),
-      eslintConfig
-    );
-    
+      eslintConfig;
+)
     this.fixes.push('Created comprehensive ESLint configuration')}
 
   async createPrettierConfig() {
+
     const prettierConfig = `module.exports = {
   semi: true,
-  trailingComma: 'es5',
-  singleQuote: true,
+  trailingComma: 'es5' + singleQuote: true,
   printWidth: 80,
   tabWidth: 2,
   useTabs: false,
-  endOfLine: 'lf',
-  arrowParens: 'avoid',
-  bracketSpacing: true,
+  endOfLine: 'lf' + arrowParens: 'avoid' + bracketSpacing: true,
   jsxSingleQuote: true,
   quoteProps: 'as-needed',
-}`;
-
+}`
     fs.writeFileSync(
       path.join(this.projectRoot, '.prettierrc.js'),
-      prettierConfig
-    );
-    
+      prettierConfig;
+)
     this.fixes.push('Created Prettier configuration')}
 
   async updateTypeScriptConfig() {
-    const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
+
+    const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json')
     let tsConfig = {}
     
     if (fs.existsSync(tsConfigPath)) {
@@ -338,135 +328,115 @@ export function reportWebVitals(metric) {
       exactOptionalPropertyTypes: true,
     }
     
-    fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
+    fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2))
     this.fixes.push('Updated TypeScript configuration for strict type checking')}
 
   async enhanceSecurity() {
-    console.log('🔒 Enhancing security...');
-    
+
+    console.log('🔒 Enhancing security...')
     // Create security headers middleware
-    await this.createSecurityMiddleware();
-    
+    await this.createSecurityMiddleware()
     // Create environment validation
-    await this.createEnvironmentValidation();
-    
+    await this.createEnvironmentValidation()
     this.improvements.push('Security enhancements applied')}
 
   async createSecurityMiddleware() {
-    const securityMiddleware = `import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
 
+    const securityMiddleware = `import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
 export function middleware(request: NextRequest) {
-  const response = NextResponse.next();
-  
+  const response = NextResponse.next()
   // Security headers
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-XSS-Protection', '1; mode=block');
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
-  
+  response.headers.set('X-Content-Type-Options'nosniff')
+  response.headers.set('X-Frame-Options'DENY')
+  response.headers.set('X-XSS-Protection'1; mode=block')
+  response.headers.set('Referrer-Policy'strict-origin-when-cross-origin')
+  response.headers.set('Permissions-Policy'camera=(), microphone=(), geolocation=()')
   // Content Security Policy
   const csp = [
-    "default-src 'self'",
-    "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
-    "style-src 'self' 'unsafe-inline'",
-    "img-src 'self' data: https:",
-    "font-src 'self'",
-    "connect-src 'self'",
-    "frame-ancestors 'none'",
-  ].join('; ');
-  
-  response.headers.set('Content-Security-Policy', csp);
-  
-  return response}
-
+    "default-src 'self''script-src 'self' 'unsafe-eval' 'unsafe-inline''style-src 'self' 'unsafe-inline''img-src 'self' data: https:'font-src 'self''connect-src 'self''frame-ancestors 'none'",
+  ].join(')
+  response.headers.set('Content-Security-Policy', csp;
+)
+)
+  return response;
+}
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    '/((? !api|_next/static|_next/image|favicon.ico).*)',
   ],
-}`;
-
-    const middlewarePath = path.join(this.projectRoot, 'middleware.ts');
-    fs.writeFileSync(middlewarePath, securityMiddleware);
-    
+}`
+    const middlewarePath = path.join(this.projectRoot, 'middleware.ts')
+    fs.writeFileSync(middlewarePath, securityMiddleware :
+)
     this.fixes.push('Created security middleware with CSP headers')}
 
   async createEnvironmentValidation() {
-    const envValidation = `import { z } from 'zod';
 
+    const envValidation = `import { z } from 'zod'
 const envSchema = z.object({
-  NODE_ENV: z.enum(['development', 'production', 'test']),
+  NODE_ENV: z.enum(['development'production'test']),
   NEXT_PUBLIC_APP_URL: z.string().url(),
   DATABASE_URL: z.string().url().optional(),
   NEXTAUTH_SECRET: z.string().min(32).optional(),
   NEXTAUTH_URL: z.string().url().optional(),
 })
 
-export const env = envSchema.parse(process.env);
-
-export type Env = z.infer<typeof envSchema>;`;
-
-    const libDir = path.join(this.projectRoot, 'src', 'lib');
+export const env = envSchema.parse(process.env;
+)
+)
+export type Env = z.infer<typeof envSchema>;`
+    const libDir = path.join(this.projectRoot, 'src'lib')
     if (!fs.existsSync(libDir)) {
       fs.mkdirSync(libDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(libDir, 'env.ts'),
-      envValidation
-    );
-    
+      envValidation;
+)
     this.fixes.push('Created environment validation schema')}
 
   async optimizeSEO() {
-    console.log('🔍 Optimizing SEO...');
-    
+
+    console.log('🔍 Optimizing SEO...')
     // Create SEO component
-    await this.createSEOComponent();
-    
+    await this.createSEOComponent()
     // Create sitemap generator
-    await this.createSitemapGenerator();
-    
+    await this.createSitemapGenerator()
     // Create robots.txt
-    await this.createRobotsTxt();
-    
+    await this.createRobotsTxt()
     this.improvements.push('SEO optimizations applied')}
 
   async createSEOComponent() {
-    const seoComponent = `import Head from 'next/head';
-import { useRouter } from 'next/router';
 
+    const seoComponent = `import Head from 'next/head'
+import { useRouter } from 'next/router'
 interface SEOProps {
-  title?: string;
-  description?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  keywords?: string[];
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string}
-
+  title?: string
+  description?: string
+  image?: string
+  url?: string
+  type?: string
+  keywords?: string[]
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string;
+}
 export default function SEO({
-  title = 'Zion Tech Group - Advanced Technology Solutions',
-  description = 'Leading provider of cutting-edge technology solutions, AI services, and digital transformation consulting.',
-  image = '/og-image.jpg',
-  url,
-  type = 'website',
-  keywords = ['technology', 'AI', 'digital transformation', 'consulting'],
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
+  title = 'Zion Tech Group - Advanced Technology Solutions' + description = 'Leading provider of cutting-edge technology solutions, AI services, and digital transformation consulting.' + image = '/og-image.jpg' + url,
+  type = 'website' + keywords = ['technology'AI'digital transformation'consulting'],
+  author = 'Zion Tech Group' + publishedTime,
+  modifiedTime;
+)
 }: SEOProps) {
-  const router = useRouter();
-  const canonicalUrl = url || \`https://ziontechgroup.com\${router.asPath}\`;
-  const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`;
-
+  const router = useRouter()
+  const canonicalUrl = url || \`https://ziontechgroup.com\${router.asPath}\`
+  const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`
   return (
     <Head>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="keywords" content={keywords.join(')} />
       <meta name="author" content={author} />
       <link rel="canonical" href={canonicalUrl} />
       
@@ -494,46 +464,35 @@ export default function SEO({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'Zion Tech Group',
-            url: 'https://ziontechgroup.com',
-            logo: 'https://ziontechgroup.com/logo.png',
-            description: description,
+            '@context': 'https://schema.org'@type': 'Organization' + name: 'Zion Tech Group' + url: 'https://ziontechgroup.com' + logo: 'https://ziontechgroup.com/logo.png' + description: description;
+)
             ...(publishedTime && { datePublished: publishedTime }),
             ...(modifiedTime && { dateModified: modifiedTime }),
           }),
         }}
       />
     </Head>
-  )}`;
-
-    const componentsDir = path.join(this.projectRoot, 'src', 'components');
+  )}`
+    const componentsDir = path.join(this.projectRoot, 'src'components')
     if (!fs.existsSync(componentsDir)) {
       fs.mkdirSync(componentsDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(componentsDir, 'SEO.tsx'),
-      seoComponent
-    );
-    
+      seoComponent;
+)
     this.fixes.push('Created comprehensive SEO component')}
 
   async createSitemapGenerator() {
-    const sitemapGenerator = `import fs from 'fs';
-import path from 'path';
 
+    const sitemapGenerator = `import fs from 'fs'
+import path from 'path'
 export async function generateSitemap() {
-  const baseUrl = 'https://ziontechgroup.com';
-  const pages = [
-    '/',
-    '/about',
-    '/services',
-    '/contact',
-    '/blog',
-    '/careers',
-  ];
 
+  const baseUrl = 'https://ziontechgroup.com'
+  const pages = [
+    '/'/about'/services'/contact'/blog'/careers',
+  ]
   const sitemap = \`<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 \${pages
@@ -547,22 +506,21 @@ export async function generateSitemap() {
   </url>\`
   )
   .join('')}
-</urlset>\`;
-
-  fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap);
+</urlset>\`
+  fs.writeFileSync(path.join(process.cwd(), 'public'sitemap.xml'), sitemap;
+)
   console.log('Sitemap generated successfully')}
 
 if (require.main === module) {
-  generateSitemap()}`;
-
+  generateSitemap()}`
     fs.writeFileSync(
-      path.join(this.projectRoot, 'scripts', 'generate-sitemap.js'),
-      sitemapGenerator
-    );
-    
+      path.join(this.projectRoot, 'scripts'generate-sitemap.js'),
+      sitemapGenerator;
+)
     this.fixes.push('Created sitemap generator')}
 
   async createRobotsTxt() {
+
     const robotsTxt = `User-agent: *
 Allow: /
 
@@ -572,70 +530,66 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/`;
-
+Disallow: /private/`
     fs.writeFileSync(
-      path.join(this.projectRoot, 'public', 'robots.txt'),
-      robotsTxt
-    );
-    
+      path.join(this.projectRoot, 'public'robots.txt'),
+      robotsTxt;
+)
     this.fixes.push('Created robots.txt file')}
 
   async improveAccessibility() {
-    console.log('♿ Improving accessibility...');
-    
+
+    console.log('♿ Improving accessibility...')
     // Create accessibility utilities
-    await this.createAccessibilityUtils();
-    
+    await this.createAccessibilityUtils()
     // Create skip link component
-    await this.createSkipLink();
-    
+    await this.createSkipLink()
     this.improvements.push('Accessibility improvements applied')}
 
   async createAccessibilityUtils() {
+
     const accessibilityUtils = `// Accessibility utilities
 export const focusElement = (selector: string) => {
-  const element = document.querySelector(selector);
+  const element = document.querySelector(selector;
+)
   if (element) {
     (element as HTMLElement).focus()}
 }
 
 export const announceToScreenReader = (message: string) => {
-  const announcement = document.createElement('div');
-  announcement.setAttribute('aria-live', 'polite');
-  announcement.setAttribute('aria-atomic', 'true');
-  announcement.className = 'sr-only';
-  announcement.textContent = message;
-  
-  document.body.appendChild(announcement);
-  
+  const announcement = document.createElement('div')
+  announcement.setAttribute('aria-live'polite')
+  announcement.setAttribute('aria-atomic'true')
+  announcement.className = 'sr-only'
+  announcement.textContent = message
+  document.body.appendChild(announcement;
+)
   setTimeout(() => {
     document.body.removeChild(announcement)}, 1000)}
 
 export const trapFocus = (element: HTMLElement) => {
   const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-  );
-  
-  const firstElement = focusableElements[0] as HTMLElement;
-  const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-  
+  )
+  const firstElement = focusableElements[0] as HTMLElement
+  const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
   const handleTabKey = (e: KeyboardEvent) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
-          lastElement.focus();
+          lastElement.focus()
           e.preventDefault()}
       } else {
         if (document.activeElement === lastElement) {
-          firstElement.focus();
+          firstElement.focus()
           e.preventDefault()}
       }
     }
   }
   
-  element.addEventListener('keydown', handleTabKey);
-  
+  element.addEventListener('keydown', handleTabKey;
+)
+)
   return () => {
     element.removeEventListener('keydown', handleTabKey)}
 }
@@ -643,27 +597,25 @@ export const trapFocus = (element: HTMLElement) => {
 export const getContrastRatio = (color1: string, color2: string): number => {
   // Simplified contrast ratio calculation
   // In a real implementation, you'd want to use a proper color library
-  return 4.5; // Placeholder value
+  return 4.5; // Placeholder value;
 }
-
 export const isHighContrast = (color1: string, color2: string): boolean => {
-  return getContrastRatio(color1, color2) >= 4.5}`;
-
-    const utilsDir = path.join(this.projectRoot, 'src', 'utils');
+  return getContrastRatio(color1, color2) >= 4.5}`
+    const utilsDir = path.join(this.projectRoot, 'src'utils')
     if (!fs.existsSync(utilsDir)) {
       fs.mkdirSync(utilsDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(utilsDir, 'accessibility.ts'),
-      accessibilityUtils
-    );
-    
+      accessibilityUtils;
+)
     this.fixes.push('Created accessibility utilities')}
 
   async createSkipLink() {
-    const skipLink = `import Link from 'next/link';
 
+    const skipLink = `import Link from 'next/link'
 export default function SkipLink() {
+
   return (
     <Link
       href="#main-content"
@@ -671,70 +623,59 @@ export default function SkipLink() {
     >
       Skip to main content
     </Link>
-  )}`;
-
-    const componentsDir = path.join(this.projectRoot, 'src', 'components');
+  )}`
+    const componentsDir = path.join(this.projectRoot, 'src'components')
     if (!fs.existsSync(componentsDir)) {
       fs.mkdirSync(componentsDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(componentsDir, 'SkipLink.tsx'),
-      skipLink
-    );
-    
+      skipLink;
+)
     this.fixes.push('Created skip link component')}
 
   async enhanceUserExperience() {
-    console.log('✨ Enhancing user experience...');
-    
+
+    console.log('✨ Enhancing user experience...')
     // Create loading components
-    await this.createLoadingComponents();
-    
+    await this.createLoadingComponents()
     // Create error boundary
-    await this.createErrorBoundary();
-    
+    await this.createErrorBoundary()
     // Create toast notifications
-    await this.createToastSystem();
-    
+    await this.createToastSystem()
     this.improvements.push('User experience enhancements applied')}
 
   async createLoadingComponents() {
-    const loadingSpinner = `import { cn } from '@/lib/utils';
 
+    const loadingSpinner = `import { cn } from '@/lib/utils'
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  className?: string}
-
+  size?: 'sm' | 'md' | 'lg'
+  className?: string;
+}
 export default function LoadingSpinner({ size = 'md', className }: LoadingSpinnerProps) {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12',
+    sm: 'w-4 h-4' + md: 'w-8 h-8' + lg: 'w-12 h-12',
   }
 
   return (
     <div className={cn('flex items-center justify-center', className)}>
       <div
-        className={cn(
-          'animate-spin rounded-full border-2 border-gray-300 border-t-blue-600',
+        className={cn('animate-spin rounded-full border-2 border-gray-300 border-t-blue-600')
           sizeClasses[size]
         )}
       />
     </div>
-  )}`;
-
-    const skeleton = `import { cn } from '@/lib/utils';
-
+  )}`
+    const skeleton = `import { cn } from '@/lib/utils'
 interface SkeletonProps {
-  className?: string;
-  lines?: number}
-
+  className?: string
+  lines?: number;
+}
 export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
   if (lines === 1) {
-    return (
-      <div
+    return(<div
         className={cn(
-          'animate-pulse bg-gray-200 rounded',
+          'animate-pulse bg-gray-200 rounded')
           className
         )}
       />
@@ -744,55 +685,54 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
     <div className="space-y-2">
       {Array.from({ length: lines }).map((_, i) => (
         <div
-          key={i}
-          className={cn(
-            'animate-pulse bg-gray-200 rounded h-4',
+          key={i;
+}
+          className={cn('animate-pulse bg-gray-200 rounded h-4')
             i === lines - 1 ? 'w-3/4' : 'w-full'
           )}
         />
       ))}
     </div>
-  )}`;
-
-    const componentsDir = path.join(this.projectRoot, 'src', 'components');
+  )}`
+    const componentsDir = path.join(this.projectRoot, 'src'components')
     if (!fs.existsSync(componentsDir)) {
       fs.mkdirSync(componentsDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(componentsDir, 'LoadingSpinner.tsx'),
-      loadingSpinner
-    );
-    
+      loadingSpinner;
+)
     fs.writeFileSync(
       path.join(componentsDir, 'Skeleton.tsx'),
-      skeleton
-    );
-    
+      skeleton;
+)
     this.fixes.push('Created loading components (spinner and skeleton)')}
 
   async createErrorBoundary() {
-    const errorBoundary = `import React, { Component, ErrorInfo, ReactNode } from 'react';
 
+    const errorBoundary = `import React, { Component, ErrorInfo, ReactNode } from 'react'
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode}
-
+  children: ReactNode
+  fallback?: ReactNode;
+}
 interface State {
-  hasError: boolean;
-  error?: Error}
-
+  hasError: boolean
+  error?: Error;
+}
 export default class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false,
   }
 
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return { hasError: true, error;
+}
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
+    console.error('ErrorBoundary caught an error:', error, errorInfo;
+)
+)
     // Send error to monitoring service
     if (typeof window !== 'undefined') {
       // Example: Send to Sentry, LogRocket, etc.
@@ -800,6 +740,7 @@ export default class ErrorBoundary extends Component<Props, State> {
   }
 
   public render() {
+
     if (this.state.hasError) {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -833,67 +774,68 @@ export default class ErrorBoundary extends Component<Props, State> {
         </div>
       )}
 
-    return this.props.children}
-}`;
-
-    const componentsDir = path.join(this.projectRoot, 'src', 'components');
+    return this.props.children;
+}
+}`
+    const componentsDir = path.join(this.projectRoot, 'src'components')
     if (!fs.existsSync(componentsDir)) {
       fs.mkdirSync(componentsDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(componentsDir, 'ErrorBoundary.tsx'),
-      errorBoundary
-    );
-    
+      errorBoundary;
+)
     this.fixes.push('Created error boundary component')}
 
   async createToastSystem() {
-    const toastSystem = `import React, { createContext, useContext, useState, useCallback } from 'react';
 
+    const toastSystem = `import React, { createContext, useContext, useState, useCallback } from 'react'
 interface Toast {
-  id: string;
-  type: 'success' | 'error' | 'warning' | 'info';
-  title: string;
-  message?: string;
-  duration?: number}
-
+  id: string
+  type: 'success' | 'error' | 'warning' | 'info'
+  title: string
+  message?: string
+  duration?: number;
+}
 interface ToastContextType {
-  toasts: Toast[];
-  addToast: (toast: Omit<Toast, 'id'>) => void;
-  removeToast: (id: string) => void}
-
-const ToastContext = createContext<ToastContextType | undefined>(undefined);
-
+  toasts: Toast[]
+  addToast: (toast: Omit<Toast, 'id'>) => void
+  removeToast: (id: string) => void;
+}
+const ToastContext = createContext<ToastContextType | undefined>(undefined;
+)
 export function ToastProvider({ children }: { children: React.ReactNode }) {
-  const [toasts, setToasts] = useState<Toast[]>([]);
-
+  const [toasts, setToasts] = useState<Toast[]>([])
   const addToast = useCallback((toast: Omit<Toast, 'id'>) => {
-    const id = Math.random().toString(36).substr(2, 9);
-    const newToast = { ...toast, id }
-    
-    setToasts(prev => [...prev, newToast]);
-    
+    const id = Math.random().toString(36).substr(2, 9;
+)
+)
+    const newToast = { ...toast, id;
+}
+    setToasts(prev => [...prev, newToast])
     // Auto remove after duration
-    const duration = toast.duration || 5000;
+    const duration = toast.duration || 5000
     setTimeout(() => {
-      setToasts(prev => prev.filter(t => t.id !== id))}, duration)}, []);
-
+      setToasts(prev => prev.filter(t => t.id !== id))}, duration)}, [])
   const removeToast = useCallback((id: string) => {
-    setToasts(prev => prev.filter(t => t.id !== id))}, []);
-
-  return (
-    <ToastContext.Provider value={{ toasts, addToast, removeToast }}>
-      {children}
+    setToasts(prev => prev.filter(t => t.id !== id))}, [])
+  return(<ToastContext.Provider value={{ toasts, addToast, removeToast }}>
+      {children;
+)
+}
       <ToastContainer toasts={toasts} removeToast={removeToast} />
     </ToastContext.Provider>
   )}
 
 export function useToast() {
-  const context = useContext(ToastContext);
+
+  const context = useContext(ToastContext;
+)
+)
   if (context === undefined) {
     throw new Error('useToast must be used within a ToastProvider')}
-  return context}
-
+  return context;
+}
 function ToastContainer({ toasts, removeToast }: { toasts: Toast[]; removeToast: (id: string) => void }) {
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
@@ -905,12 +847,8 @@ function ToastContainer({ toasts, removeToast }: { toasts: Toast[]; removeToast:
 
 function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => void }) {
   const bgColor = {
-    success: 'bg-green-500',
-    error: 'bg-red-500',
-    warning: 'bg-yellow-500',
-    info: 'bg-blue-500',
-  }[toast.type];
-
+    success: 'bg-green-500' + error: 'bg-red-500' + warning: 'bg-yellow-500' + info: 'bg-blue-500',
+  }[toast.type]
   return (
     <div className={\`\${bgColor} text-white px-4 py-3 rounded-lg shadow-lg max-w-sm\`}>
       <div className="flex items-start justify-between">
@@ -928,42 +866,36 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
         </button>
       </div>
     </div>
-  )}`;
-
-    const componentsDir = path.join(this.projectRoot, 'src', 'components');
+  )}`
+    const componentsDir = path.join(this.projectRoot, 'src'components')
     if (!fs.existsSync(componentsDir)) {
       fs.mkdirSync(componentsDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(componentsDir, 'Toast.tsx'),
-      toastSystem
-    );
-    
+      toastSystem;
+)
     this.fixes.push('Created toast notification system')}
 
   async optimizeBuild() {
-    console.log('🔨 Optimizing build process...');
-    
+
+    console.log('🔨 Optimizing build process...')
     // Create build optimization script
-    await this.createBuildOptimizer();
-    
+    await this.createBuildOptimizer()
     // Create bundle analyzer
-    await this.createBundleAnalyzer();
-    
+    await this.createBundleAnalyzer()
     this.improvements.push('Build optimizations applied')}
 
   async createBuildOptimizer() {
-    const buildOptimizer = `import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
 
-console.log('🔨 Running build optimizations...');
-
+    const buildOptimizer = `import fs from 'fs'
+import path from 'path'
+import { execSync } from 'child_process'
+console.log('🔨 Running build optimizations...')
 // Clean previous builds
 const cleanBuild = () => {
-  console.log('🧹 Cleaning previous builds...');
-  const dirsToClean = ['.next', 'out', 'dist'];
-  
+  console.log('🧹 Cleaning previous builds...')
+  const dirsToClean = ['.next'out'dist']
   dirsToClean.forEach(dir => {
     if (fs.existsSync(dir)) {
       fs.rmSync(dir, { recursive: true, force: true })
@@ -972,13 +904,13 @@ const cleanBuild = () => {
 
 // Optimize images
 const optimizeImages = () => {
-  console.log('🖼️ Optimizing images...');
+  console.log('🖼️ Optimizing images...')
   // This would typically use a tool like imagemin
   console.log('✅ Images optimized')}
 
 // Generate static assets
 const generateStaticAssets = () => {
-  console.log('📄 Generating static assets...');
+  console.log('📄 Generating static assets...')
   try {
     execSync('npm run build', { stdio: 'inherit' })
     console.log('✅ Static assets generated')} catch (error) {
@@ -987,33 +919,29 @@ const generateStaticAssets = () => {
 
 // Run all optimizations
 const runOptimizations = () => {
-  cleanBuild();
-  optimizeImages();
-  generateStaticAssets();
+  cleanBuild()
+  optimizeImages()
+  generateStaticAssets()
   console.log('🎉 Build optimizations completed!')}
 
-runOptimizations();`;
-
+runOptimizations();`
     fs.writeFileSync(
-      path.join(this.projectRoot, 'scripts', 'build-optimizer.js'),
-      buildOptimizer
-    );
-    
+      path.join(this.projectRoot, 'scripts'build-optimizer.js'),
+      buildOptimizer;
+)
     this.fixes.push('Created build optimization script')}
 
   async createBundleAnalyzer() {
-    const bundleAnalyzer = `import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
+    const bundleAnalyzer = `import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 const withBundleAnalyzer = (nextConfig = {}) => {
   return {
     ...nextConfig,
     webpack: (config, { dev, isServer }) => {
       if (process.env.ANALYZE === 'true') {
-        config.plugins.push(
-          new BundleAnalyzerPlugin({
-            analyzerMode: 'static',
-            openAnalyzer: false,
-            reportFilename: isServer ? 'server-bundle.html' : 'client-bundle.html',
+        config.plugins.push(new BundleAnalyzerPlugin({
+            analyzerMode: 'static' + openAnalyzer: false,
+            reportFilename: isServer ? 'server-bundle.html' : 'client-bundle.html')
           })
         )}
       
@@ -1024,27 +952,24 @@ const withBundleAnalyzer = (nextConfig = {}) => {
   }
 }
 
-module.exports = withBundleAnalyzer;`;
-
+module.exports = withBundleAnalyzer;`
     fs.writeFileSync(
-      path.join(this.projectRoot, 'scripts', 'bundle-analyzer.js'),
-      bundleAnalyzer
-    );
-    
+      path.join(this.projectRoot, 'scripts'bundle-analyzer.js'),
+      bundleAnalyzer;
+)
     this.fixes.push('Created bundle analyzer configuration')}
 
   async improveDocumentation() {
-    console.log('📚 Improving documentation...');
-    
+
+    console.log('📚 Improving documentation...')
     // Create README
-    await this.createREADME();
-    
+    await this.createREADME()
     // Create API documentation
-    await this.createAPIDocumentation();
-    
+    await this.createAPIDocumentation()
     this.improvements.push('Documentation improvements applied')}
 
   async createREADME() {
+
     const readme = `# Zion Tech Group
 
 A modern, high-performance web application built with Next.js, TypeScript, and Tailwind CSS.
@@ -1093,7 +1018,7 @@ npm start
 npm test
 
 # Run tests with coverage
-npm run test:coverage
+npm run test: coverage
 
 # Run tests in watch mode
 npm run test:watch
@@ -1148,7 +1073,8 @@ npm run type-check
 
 The application is optimized for deployment on:
 
-- **Vercel** (recommended)
+- **Vercel** (recommended;
+)
 - **Netlify**
 - **AWS Amplify**
 - **Docker**
@@ -1176,16 +1102,15 @@ This project is licensed under the MIT License.
 
 ## 🆘 Support
 
-For support, email support@ziontechgroup.com or create an issue in the repository.`;
-
+For support, email support@ziontechgroup.com or create an issue in the repository.`
     fs.writeFileSync(
       path.join(this.projectRoot, 'README.md'),
-      readme
-    );
-    
+      readme;
+)
     this.fixes.push('Created comprehensive README')}
 
   async createAPIDocumentation() {
+
     const apiDocs = `# API Documentation
 
 ## Overview
@@ -1219,9 +1144,7 @@ GET /api/health
 **Response:**
 \`\`\`json
 {
-  "status": "healthy",
-  "timestamp": "2024-01-01T00:00:00.000Z",
-  "version": "1.0.0"
+  "status": "healthy'timestamp": "2024-01-01T00:00:00.000Z'version": "1.0.0"
 }
 \`\`\`
 
@@ -1236,9 +1159,7 @@ POST /api/contact
 **Request Body:**
 \`\`\`json
 {
-  "name": "John Doe",
-  "email": "john@example.com",
-  "message": "Hello, I'm interested in your services."
+  "name": "John Doe'email": "john@example.com'message": "Hello, I'm interested in your services."
 }
 \`\`\`
 
@@ -1257,11 +1178,8 @@ All errors follow a consistent format:
 \`\`\`json
 {
   "error": {
-    "code": "VALIDATION_ERROR",
-    "message": "Invalid input data",
-    "details": {
-      "field": "email",
-      "reason": "Invalid email format"
+    "code": "VALIDATION_ERROR'message": "Invalid input data'details": {
+      "field": "email'reason": "Invalid email format"
     }
   }
 }
@@ -1279,20 +1197,19 @@ API requests are rate limited to 100 requests per minute per IP address.
 - \`403\` - Forbidden
 - \`404\` - Not Found
 - \`429\` - Too Many Requests
-- \`500\` - Internal Server Error`;
-
-    const docsDir = path.join(this.projectRoot, 'docs');
+- \`500\` - Internal Server Error`
+    const docsDir = path.join(this.projectRoot, 'docs')
     if (!fs.existsSync(docsDir)) {
       fs.mkdirSync(docsDir, { recursive: true })}
     
     fs.writeFileSync(
       path.join(docsDir, 'API.md'),
-      apiDocs
-    );
-    
+      apiDocs;
+)
     this.fixes.push('Created API documentation')}
 
   generateReport() {
+
     const report = {
       timestamp: new Date().toISOString(),
       improvements: this.improvements,
@@ -1304,19 +1221,17 @@ API requests are rate limited to 100 requests per minute per IP address.
     }
 
     // Save report
-    const reportPath = path.join(this.projectRoot, 'app-improvement-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
+    const reportPath = path.join(this.projectRoot, 'app-improvement-report.json')
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
     // Display summary
-    console.log('\n🎉 App Improvement Summary:');
-    console.log(`Total Improvements: ${this.improvements.length}`);
-    console.log(`Total Fixes: ${this.fixes.length}`);
-    
-    console.log('\n📋 Improvements Applied:');
+    console.log('\n🎉 App Improvement Summary:')
+    console.log(`Total Improvements: ${this.improvements.length}`)
+    console.log(`Total Fixes: ${this.fixes.length}`)
+    console.log('\n📋 Improvements Applied:')
     this.improvements.forEach(improvement => {
       console.log(`✅ ${improvement}`)})
     
-    console.log('\n🔧 Fixes Applied:');
+    console.log('\n🔧 Fixes Applied:')
     this.fixes.forEach(fix => {
       console.log(`✅ ${fix}`)})
     
@@ -1325,7 +1240,10 @@ API requests are rate limited to 100 requests per minute per IP address.
 
 // Run improvements
 async function main() {
-  const improver = new AppImprover();
+
+  const improver = new AppImprover()
   await improver.runImprovements()}
 
-main().catch(console.error);
+main().catch(console.error;
+)
+)
