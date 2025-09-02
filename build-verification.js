@@ -1,6 +1,7 @@
 // Build Verification Script
 // This script checks if our components can be imported without syntax errors
 
+/* eslint-disable no-console */
 console.log('🔍 Starting build verification...');
 
 try {
@@ -8,14 +9,17 @@ try {
   console.log('📦 Testing component imports...');
   
   // Test basic React functionality
+  // eslint-disable-next-line no-unused-vars, no-undef
   const React = require('react');
   console.log('✅ React import successful');
   
   // Test framer-motion
+  // eslint-disable-next-line no-unused-vars, no-undef
   const { motion } = require('framer-motion');
   console.log('✅ Framer Motion import successful');
   
   // Test lucide-react icons
+  // eslint-disable-next-line no-unused-vars, no-undef
   const { ArrowRight, CheckCircle, Brain, Cloud, Shield, Zap } = require('lucide-react');
   console.log('✅ Lucide React icons import successful');
   
