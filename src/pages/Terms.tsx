@@ -1,1 +1,18 @@
-import React from 'react'; import { SEO } from '../components/SEO'; const Terms: React.FC = () => { return ( <> <SEO title="Terms of Service" description="Zion Tech Group's terms of service and usage policies." keywords="terms, service, usage, policies" /> <div className="min-h-screen bg-zion-slate-dark flex items-center justify-center"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1> <p className="text-gray-300">Coming soon...</p> </div> </div> </> ); }; export default Terms;
+import React from 'react';
+import { SEO } from '../components/SEO';
+
+const Terms: React.FC = () => {
+  return (
+    <>
+      <SEO title="Terms - Zion Tech Group" />
+      <div className="min-h-screen bg-white py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms</h1>
+          <p className="text-lg text-gray-600">Content coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Terms;
