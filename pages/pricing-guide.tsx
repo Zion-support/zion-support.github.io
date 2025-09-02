@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {   CheckCircle, Star, 
   Zap, Shield, 
   Users, Globe, 
@@ -14,7 +15,7 @@ import {   CheckCircle, Star,
   Rocket, Heart,
   Sparkles, Calculator,
   BookOpen, Lightbulb,
-  HelpCircle
+  HelpCircle, Network
 } from 'lucide-react';
 
 const PricingGuide: React.FC = () => {
@@ -98,10 +99,10 @@ const PricingGuide: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Pricing Guide - Zion Tech Group" 
-        description="Comprehensive guide to understanding AI solution pricing. Learn about cost factors, get estimates, and find the best pricing strategy for your project."
-      />
+      <Head>
+        <title>Pricing Guide - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive guide to understanding AI solution pricing. Learn about cost factors, get estimates, and find the best pricing strategy for your project." />
+      </Head>
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">
@@ -111,10 +112,10 @@ const PricingGuide: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Badge variant="secondary" className="mb-4">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 mb-4">
               <Calculator className="w-4 h-4 mr-2" />
               Pricing Guide
-            </Badge>
+            </span>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               AI Solution Pricing Guide
             </h1>
@@ -150,7 +151,7 @@ const PricingGuide: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
               >
-                <Card className="p-8 h-full">
+                <div className="p-8 h-full bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
                   <div className="flex items-start mb-6">
                     <div className={`p-3 rounded-lg bg-gradient-to-r ${factor.color} mr-4`}>
                       <factor.icon className="w-6 h-6 text-white" />
@@ -169,7 +170,7 @@ const PricingGuide: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </Card>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -201,7 +202,7 @@ const PricingGuide: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
               >
-                <Card className="p-8 h-full">
+                <div className="p-8 h-full bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-bold text-white mb-2">{example.scenario}</h3>
                     <p className="text-gray-300 text-sm mb-4">{example.description}</p>
@@ -219,12 +220,12 @@ const PricingGuide: React.FC = () => {
                   </ul>
                   
                   <div className="text-center">
-                    <Badge variant="secondary" className="text-green-400">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
                       <TrendingUp className="w-4 h-4 mr-1" />
                       {example.roi}
-                    </Badge>
+                    </span>
                   </div>
-                </Card>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -256,7 +257,7 @@ const PricingGuide: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
               >
-                <Card className="p-6">
+                <div className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
                   <div className="flex items-start">
                     <div className="p-2 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 mr-4">
                       <Lightbulb className="w-5 h-5 text-white" />
@@ -264,12 +265,12 @@ const PricingGuide: React.FC = () => {
                     <div className="flex-1">
                       <h3 className="text-lg font-bold text-white mb-2">{tip.tip}</h3>
                       <p className="text-gray-300 mb-3">{tip.description}</p>
-                      <Badge variant="secondary" className="text-green-400">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
                         {tip.savings}
-                      </Badge>
+                      </span>
                     </div>
                   </div>
-                </Card>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -291,14 +292,14 @@ const PricingGuide: React.FC = () => {
               Ready to get started? Contact us for a personalized quote based on your specific requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 flex items-center justify-center">
                 <Calculator className="w-5 h-5 mr-2" />
                 Get Free Quote
-              </Button>
-              <Button size="lg" variant="outline">
+              </button>
+              <button className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-all duration-200 flex items-center justify-center">
                 <HelpCircle className="w-5 h-5 mr-2" />
                 Ask Questions
-              </Button>
+              </button>
             </div>
           </motion.div>
         </div>

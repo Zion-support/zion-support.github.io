@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import {   Home, ArrowLeft,
   Search, HelpCircle,
@@ -24,10 +23,10 @@ const NotFound: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">
-      <SEO 
-        title="Page Not Found - Zion Tech Group" 
-        description="The page you're looking for doesn't exist. Return to our homepage or explore our services."
-      />      
+      <Head>
+        <title>Page Not Found - Zion Tech Group</title>
+        <meta name="description" content="The page you're looking for doesn't exist. Return to our homepage or explore our services." />
+      </Head>      
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -65,22 +64,20 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             transition={{ duration: 0.6, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+            <button 
+              className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 flex items-center justify-center"
               onClick={() => window.history.back()}
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
+            </button>
+            <button 
+              className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-all duration-200 flex items-center justify-center"
               onClick={() => window.location.href = '/'}
             >
               <Home className="w-5 h-5 mr-2" />
               Go Home
-            </Button>
+            </button>
           </motion.div>
 
           {/* Quick Links */}
@@ -89,7 +86,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <Card className="p-8">
+            <div className="p-8 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-6">Popular Pages</h3>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                 {quickLinks.map((link, index) => (
@@ -108,7 +105,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                   </motion.a>
                 ))}
               </div>
-            </Card>
+            </div>
           </motion.div>
 
           {/* Help Section */}
