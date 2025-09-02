@@ -19,7 +19,8 @@ import {}
   TrendingUp,
   Zap,
   Shield,
-  Calculator} from 'lucide-react.ts';
+  Calculator} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/AIAutonomousFinance.tsx
 const AIAutonomousFinance: React.FC = (): JSX.Element => {
@@ -39,7 +40,9 @@ const AIAutonomousFinance: React.FC = (): JSX.Element => {
 ""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               Transform Your Finance with""
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">'{' '}
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+  '{' 
+  '}
                 AI Intelligence;
               </span>
 :pages.disabled/pages/services/AIAutonomousFinance.tsx
@@ -196,4 +199,4 @@ const AIAutonomousFinance: React.FC = (): JSX.Element => {
 
 :pages.disabled/pages/services/AIAutonomousFinance.tsx
 export default AIAutonomousFinance;'"
-'"'"
+  '"'"

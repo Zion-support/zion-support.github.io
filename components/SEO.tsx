@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+=======
+>>>>>>> main
 
 interface SEOProps {
   title: string;
@@ -11,6 +14,7 @@ interface SEOProps {
   siteName?: string;
 }
 
+<<<<<<< HEAD
 const SEO: React.FC<SEOProps> = ({
   title,
   description,
@@ -104,6 +108,10 @@ const SEO: React.FC<SEOProps> = ({
       </script>
     </Helmet>
   );
+=======
+const SEO: React.FC<SEOProps> = () => {
+  return null;
+>>>>>>> main
 };
 
 export { SEO };

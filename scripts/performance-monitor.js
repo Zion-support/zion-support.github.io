@@ -5,19 +5,25 @@
  * Monitors system and application performance
  */
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { execSync } from 'child_process';
+import fs from
+  'fs';
+import path from
+  'path';
+import { fileURLToPath } from
+  'url';
+import { execSync } from
+  'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('📊 Performance Monitor Started');
+console.log(
+  '📊 Performance Monitor Started');
 
 class PerformanceMonitor {
   constructor() {
-    this.projectRoot = path.resolve(__dirname,..');
+    this.projectRoot = path.resolve(__dirname,..
+  ');
     this.metrics = {
       timestamp: new Date().toISOString(),
       system: {},
@@ -28,7 +34,9 @@ class PerformanceMonitor {
 
   async monitor() {
     try {
-      console.log('🔍 Collecting performance metrics...');
+      console.log(,
+  🔍 Collecting performance metrics...
+  ');
       
       // Collect system metrics
       await this.collectSystemMetrics();
@@ -45,16 +53,18 @@ class PerformanceMonitor {
       // Display summary
       this.displaySummary();
       
-      console.log('✅ Performance monitoring completed');
+      console.log('✅ Performance monitoring completed
+  ');
       
     } catch (error) {
-      console.error('❌ Error during performance monitoring:', error.message);
+      console.error('❌ Error during performance monitoring: , error.message);
     }
   }
 
   async collectSystemMetrics() {
     try {
-      console.log('💻 Collecting system metrics...');
+      console.log('💻 Collecting system metrics...
+  ');
       
       // Memory usage
       const memoryInfo = process.memoryUsage();
@@ -85,13 +95,15 @@ class PerformanceMonitor {
       };
       
     } catch (error) {
-      console.warn('⚠️  Could not collect system metrics:', error.message);
+      console.warn(,
+  ⚠️  Could not collect system metrics: , error.message);
     }
   }
 
   async collectApplicationMetrics() {
     try {
-      console.log('📱 Collecting application metrics...');
+      console.log('📱 Collecting application metrics...
+  ');
       
       // Check file sizes
       const distPath = path.join(this.projectRoot,dist');
@@ -101,7 +113,8 @@ class PerformanceMonitor {
       }
       
       // Check node_modules size
-      const nodeModulesPath = path.join(this.projectRoot,node_modules');
+      const nodeModulesPath = path.join(this.projectRoot,node_modules
+  ');
       if (fs.existsSync(nodeModulesPath)) {
         const nodeModulesSize = this.getDirectorySize(nodeModulesPath);
         this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024); // MB
@@ -116,23 +129,35 @@ class PerformanceMonitor {
       
       // Count files
       this.metrics.application.fileCounts = {
-        source: this.countFiles(srcPath, ['.ts',.tsx',.js',.jsx']),
-        styles: this.countFiles(path.join(this.projectRoot,styles'), ['.css',.scss',.sass']),
-        tests: this.countFiles(path.join(this.projectRoot,tests'), ['.test.js',.test.ts',.spec.js',.spec.ts'])
+        source: this.countFiles(srcPath, [
+  '.ts',.tsx
+  ',.js',.jsx
+  ']),
+        styles: this.countFiles(path.join(this.projectRoot,styles'), [
+  '.css',.scss
+  ',.sass']),
+        tests: this.countFiles(path.join(this.projectRoot,tests
+  '), ['.test.js
+  ',.test.ts',.spec.js
+  ',.spec.ts'])
       };
       
     } catch (error) {
-      console.warn('⚠️  Could not collect application metrics:', error.message);
+      console.warn(
+  '⚠️  Could not collect application metrics:', error.message);
     }
   }
 
   async collectBuildMetrics() {
     try {
-      console.log('🔨 Collecting build metrics...');
+      console.log(
+  '🔨 Collecting build metrics...');
       
       // Check if build artifacts exist
       const buildFiles = [
-        'dist/index.html',dist/css',dist/js',dist/assets'
+  'dist/index.html',dist/css
+  ',dist/js',dist/assets
+  '
       ];
       
       this.metrics.build.artifacts = {};
@@ -144,16 +169,20 @@ class PerformanceMonitor {
       // Check build configuration
       const viteConfigPath = path.join(this.projectRoot,vite.config.ts');
       if (fs.existsSync(viteConfigPath)) {
-        const viteConfig = fs.readFileSync(viteConfigPath,utf8');
+        const viteConfig = fs.readFileSync(viteConfigPath,utf8
+  ');
         this.metrics.build.config = {
           hasVite: true,
-          hasBuildOptimizations: viteConfig.includes('build.rollupOptions'),
-          hasChunkSplitting: viteConfig.includes('build.rollupOptions.output.manualChunks')
+          hasBuildOptimizations: viteConfig.includes(,
+  build.rollupOptions
+  '),
+          hasChunkSplitting: viteConfig.includes('build.rollupOptions.output.manualChunks)
         };
       }
       
     } catch (error) {
-      console.warn('⚠️  Could not collect build metrics:', error.message);
+      console.warn(,
+  ⚠️  Could not collect build metrics: , error.message);
     }
   }
 
@@ -197,34 +226,45 @@ class PerformanceMonitor {
         }
       }
     } catch (error) {
-      // Skip directories we can't read
+      // Skip directories we can
+  't read
     }
     
     return count;
   }
 
   async saveMetrics() {
-    const metricsPath = path.join(this.projectRoot,logs',performance-metrics.json');
+    const metricsPath = path.join(this.projectRoot,logs',performance-metrics.json
+  ');
     try {
       fs.writeFileSync(metricsPath, JSON.stringify(this.metrics, null, 2));
       console.log(`📊 Metrics saved to: ${metricsPath}`);
     } catch (error) {
-      console.warn('⚠️  Could not save metrics:', error.message);
+      console.warn(,
+  ⚠️  Could not save metrics: , error.message);
     }
   }
 
   displaySummary() {
-    console.log('\n📊 Performance Summary:');
-    console.log('─'.repeat(50));
+    console.log(,
+  \n📊 Performance Summary: ');
+    console.log('─
+  '.repeat(50));
     
     // System metrics
-    console.log('💻 System:');
-    console.log(`   Memory: ${this.metrics.system.memory?.heapUsed || 'N/A'}MB used / ${this.metrics.system.memory?.heapTotal || 'N/A'}MB total`);
-    console.log(`   CPU: ${this.metrics.system.cpu?.user || 'N/A'}ms user / ${this.metrics.system.cpu?.system || 'N/A'}ms system`);
-    console.log(`   Uptime: ${this.metrics.system.process?.uptime || 'N/A'}s`);
+    console.log('💻 System:
+  ');
+    console.log(`   Memory: ${this.metrics.system.memory?.heapUsed || 'N/A}MB used / ${this.metrics.system.memory?.heapTotal ||,
+  N/A
+  '}MB total`);
+    console.log(`   CPU: ${this.metrics.system.cpu?.user || 'N/A}ms user / ${this.metrics.system.cpu?.system ||,
+  N/A
+  '}ms system`);
+    console.log(`   Uptime: ${this.metrics.system.process?.uptime || 'N/A}s`);
     
     // Application metrics
-    console.log('\n📱 Application:');
+    console.log(,
+  \n📱 Application: );
     if (this.metrics.application.buildSize) {
       console.log(`   Build size: ${this.metrics.application.buildSize}MB`);
     }
@@ -236,11 +276,13 @@ class PerformanceMonitor {
     }
     
     // Build metrics
-    console.log('\n🔨 Build:');
+    console.log(,
+  \n🔨 Build: );
     const artifactCount = Object.values(this.metrics.build.artifacts || {}).filter(Boolean).length;
     console.log(`   Artifacts: ${artifactCount}/${Object.keys(this.metrics.build.artifacts || {}).length} present`);
     
-    console.log('─'.repeat(50));
+    console.log('─
+  '.repeat(50));
   }
 
   sleep(ms) {
@@ -251,7 +293,8 @@ class PerformanceMonitor {
 // Run the performance monitor
 const monitor = new PerformanceMonitor();
 monitor.monitor().then(() => {
-  console.log('📊 Performance Monitor Completed');
+  console.log('📊 Performance Monitor Completed
+  ');
   process.exit(0);
 }).catch((error) => {
   console.error('❌ Performance Monitor Failed:', error);

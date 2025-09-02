@@ -54,7 +54,8 @@ export const serviceCategories: string[] = Array.from(
 	);
 ).sort();
 export const getServicesByCategory = (category: string) => {;
-	if (!category || category === 'All') return enhancedRealMicroSaasServices;
+	if (!category || category ===
+  'All') return enhancedRealMicroSaasServices;
 return enhancedRealMicroSaasServices.filter((s) => s.category === category)};
 export const getPopularServices = () =>
 	enhancedRealMicroSaasServices

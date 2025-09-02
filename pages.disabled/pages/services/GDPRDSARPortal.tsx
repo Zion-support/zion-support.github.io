@@ -4,7 +4,8 @@ import {}
   ExternalLink,
   CheckCircle,
   Mail,
-  Phone} from 'lucide-react.ts';
+  Phone} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/GDPRDSARPortal.tsx
 export default function GDPRDSARPortal(...args: any[]): any {return()
@@ -24,22 +25,25 @@ export default function GDPRDSARPortal(...args: any[]): any {return()
 ""
             <div className="mt-8 grid gap-4 sm: anygrid-cols-2">
               {[
+                {,
+  title: 'Identity verification & consent,'
+                  desc:,
+  Email/SMS OTP, ID document support.'},
                 {
-'
-                  title: 'Identity verification & consent','
-                  desc: 'Email/SMS OTP, ID document support.'},
+  '
+                  title: 'Workflow automation,'
+                  desc:,
+  Intake, triage, routing, collaboration.'},
                 {
-'
-                  title: 'Workflow automation','
-                  desc: 'Intake, triage, routing, collaboration.'},
+  '
+                  title: 'Data source connectors,'
+                  desc:,
+  CRM, CDP, Data Warehouse lookups.'},
                 {
-'
-                  title: 'Data source connectors','
-                  desc: 'CRM, CDP, Data Warehouse lookups.'},
-                {
-'
-                  title: 'Exports & redaction','
-                  desc: 'PDF/CSV exports with auto‑redaction.'},
+  '
+                  title: 'Exports & redaction,'
+                  desc:
+  'PDF/CSV exports with auto‑redaction.'},
               ].map(f => (
                 <div"key={f.title}""
                   className="rounded-xl border border-white/10 bg-white/5 p-5""
@@ -52,9 +56,12 @@ export default function GDPRDSARPortal(...args: any[]): any {return()
               ))}
             </div>"
 ""
-            <div className="mt-8 text-sm text-slate-300">'"
-              Typical pricing:{' '}'"'"
-              <span className="font-semibold text-cyan-300">$99–$399/mo</span>{' '}
+            <div className="mt-8 text-sm text-slate-300">,
+  "
+              Typical pricing: {'}'"
+  '"
+              <span className="font-semibold text-cyan-300">$99–$399/mo</span>{' 
+  '}
               plus usage. Market comps: OneTrust/Transcend tiers.
             </div>"
 ""
@@ -115,4 +122,4 @@ export default function GDPRDSARPortal(...args: any[]): any {return()
     </div>
 :pages.disabled/pages/services/GDPRDSARPortal.tsx
   )}'"
-'"'"
+  '"'"

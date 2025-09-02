@@ -1,14 +1,19 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync, spawn } = require('child_process');
+const fs = require(
+  'fs');
+const path = require(
+  'path');
+const { execSync, spawn } = require(
+  'child_process');
 
 class GitWorkflowAutomator {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-automator.log');
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json');
+    this.logFile = path.join(this.projectRoot,
+  'logs/pm2/git-workflow-automator.log');
+    this.reportFile = path.join(this.projectRoot,
+  'logs/pm2/git-workflow-report.json');
     this.startTime = Date.now();
     this.config = this.loadConfig();
   }
@@ -25,10 +30,12 @@ class GitWorkflowAutomator {
   }
 
   loadConfig() {
-    const configPath = path.join(this.projectRoot, '.gitworkflow.json');
+    const configPath = path.join(this.projectRoot,
+  '.gitworkflow.json');
     try {
       if (fs.existsSync(configPath)) {
-        return JSON.parse(fs.readFileSync(configPath, 'utf8'));
+        return JSON.parse(fs.readFileSync(configPath,
+  'utf8'));
       }
     } catch (error) {
       this.log(`Error loading config: ${error.message}`);
@@ -37,24 +44,31 @@ class GitWorkflowAutomator {
     // Default configuration
     return {
       autoBranchNaming: true,
-      branchPrefix: 'feature/',
+      branchPrefix:
+  'feature/',
       autoCommit: true,
       autoPush: true,
       createPR: false,
       reviewRequired: true,
-      protectedBranches: ['main', 'master', 'develop'],
+      protectedBranches: [
+  'main',
+  'master',
+  'develop'],
       maxBranchAge: 30, // days
       cleanupOldBranches: true,
       autoMerge: false,
-      mergeStrategy: 'squash'
+      mergeStrategy:
+  'squash'
     };
   }
 
   async getCurrentBranch() {
     try {
-      return execSync('git branch --show-current', {
+      return execSync(
+  'git branch --show-current', {
         cwd: this.projectRoot,
-        encoding: 'utf8'
+        encoding:
+  'utf8'
       }).trim();
     } catch (error) {
       this.log(`Error getting current branch: ${error.message}`);
@@ -65,25 +79,33 @@ class GitWorkflowAutomator {
   async getBranchStatus() {
     try {
       const currentBranch = await this.getCurrentBranch();
-      const status = execSync('git status --porcelain', {
+      const status = execSync(
+  'git status --porcelain', {
         cwd: this.projectRoot,
-        encoding: 'utf8'
+        encoding:
+  'utf8'
       });
 
-      const ahead = execSync('git rev-list --count HEAD..origin/' + currentBranch, {
+      const ahead = execSync(
+  'git rev-list --count HEAD..origin/' + currentBranch, {
         cwd: this.projectRoot,
-        encoding: 'utf8'
+        encoding:
+  'utf8'
       }).trim();
 
-      const behind = execSync('git rev-list --count origin/' + currentBranch + '..HEAD', {
+      const behind = execSync(
+  'git rev-list --count origin/' + currentBranch +
+  '..HEAD', {
         cwd: this.projectRoot,
-        encoding: 'utf8'
+        encoding:
+  'utf8'
       }).trim();
 
       return {
         currentBranch,
         hasChanges: status.length > 0,
-        changes: status.split('\n').filter(Boolean),
+        changes: status.split(
+  '\n').filter(Boolean),
         ahead: parseInt(ahead) || 0,
         behind: parseInt(behind) || 0,
         isClean: status.length === 0
@@ -96,16 +118,22 @@ class GitWorkflowAutomator {
 
   async getRemoteBranches() {
     try {
-      const branches = execSync('git branch -r', {
+      const branches = execSync(
+  'git branch -r', {
         cwd: this.projectRoot,
-        encoding: 'utf8'
+        encoding:
+  'utf8'
       });
 
       return branches
-        .split('\n')
+        .split(
+  '\n')
         .filter(Boolean)
-        .map(branch => branch.trim().replace('origin/', ''))
-        .filter(branch => !branch.includes('HEAD'));
+        .map(branch => branch.trim().replace(
+  'origin/', '
+  '))
+        .filter(branch => !branch.includes('HEAD
+  '));
     } catch (error) {
       this.log(`Error getting remote branches: ${error.message}`);
       return [];
@@ -114,16 +142,21 @@ class GitWorkflowAutomator {
 
   async getLocalBranches() {
     try {
-      const branches = execSync('git branch', {
+      const branches = execSync('git branch
+  ', {
         cwd: this.projectRoot,
-        encoding: 'utf8'
+        encoding: 'utf8
+  '
       });
 
       return branches
-        .split('\n')
+        .split('\n
+  ')
         .filter(Boolean)
-        .map(branch => branch.trim().replace('* ', ''))
-        .filter(branch => branch !== '');
+        .map(branch => branch.trim().replace('*
+  ', ''))
+        .filter(branch => branch !== '
+  ');
     } catch (error) {
       this.log(`Error getting local branches: ${error.message}`);
       return [];
@@ -132,14 +165,20 @@ class GitWorkflowAutomator {
 
   async createFeatureBranch(featureName) {
     try {
-      const branchName = `${this.config.branchPrefix}${featureName.replace(/[^a-zA-Z0-9-]/g, '-')}`;
+      const branchName = `${this.config.branchPrefix}${featureName.replace(/[^a-zA-Z0-9-]/g, '-
+  ')}`;
       
       // Checkout main and pull latest
-      execSync('git checkout main', { cwd: this.projectRoot, stdio: 'pipe' });
-      execSync('git pull origin main', { cwd: this.projectRoot, stdio: 'pipe' });
+      execSync('git checkout main
+  ', { cwd: this.projectRoot, stdio: 'pipe
+  ' });
+      execSync('git pull origin main
+  ', { cwd: this.projectRoot, stdio: 'pipe
+  ' });
       
       // Create and checkout new branch
-      execSync(`git checkout -b ${branchName}`, { cwd: this.projectRoot, stdio: 'pipe' });
+      execSync(`git checkout -b ${branchName}`, { cwd: this.projectRoot, stdio: 'pipe
+  ' });
       
       this.log(`✅ Created feature branch: ${branchName}`);
       return branchName;
@@ -152,19 +191,23 @@ class GitWorkflowAutomator {
   async autoCommit(changes, message) {
     try {
       if (!changes || changes.length === 0) {
-        this.log('No changes to commit');
+        this.log('No changes to commit
+  ');
         return false;
       }
 
       // Add all changes
-      execSync('git add .', { cwd: this.projectRoot, stdio: 'pipe' });
+      execSync('git add .
+  ', { cwd: this.projectRoot, stdio: 'pipe
+  ' });
       
       // Create commit message
       const commitMessage = message || this.generateCommitMessage(changes);
       
       execSync(`git commit -m "${commitMessage}"`, {
         cwd: this.projectRoot,
-        stdio: 'pipe'
+        stdio: 'pipe
+  '
       });
 
       this.log(`✅ Auto-committed: ${commitMessage}`);
@@ -176,17 +219,25 @@ class GitWorkflowAutomator {
   }
 
   generateCommitMessage(changes) {
-    const changeTypes = {
-      'M': 'modified',
-      'A': 'added',
-      'D': 'deleted',
-      'R': 'renamed'
+    const changeTypes = {,
+  M
+  ': 'modified,
+,
+  A
+  ': 'added,
+,
+  D
+  ': 'deleted,
+,
+  R
+  ': 'renamed
     };
 
     const summary = changes.reduce((acc, change) => {
       const type = change.charAt(0);
       const file = change.substring(3);
-      const changeType = changeTypes[type] || 'changed';
+      const changeType = changeTypes[type] || 'changed
+  ';
       
       if (!acc[changeType]) acc[changeType] = [];
       acc[changeType].push(file);
@@ -195,7 +246,8 @@ class GitWorkflowAutomator {
 
     const message = Object.entries(summary)
       .map(([type, files]) => `${type} ${files.length} file(s)`)
-      .join(', ');
+      .join(',
+  ');
 
     return `feat: ${message}`;
   }
@@ -204,7 +256,8 @@ class GitWorkflowAutomator {
     try {
       execSync(`git push -u origin ${branchName}`, {
         cwd: this.projectRoot,
-        stdio: 'pipe'
+        stdio: 'pipe
+  '
       });
 
       this.log(`✅ Pushed branch: ${branchName}`);
@@ -219,9 +272,12 @@ class GitWorkflowAutomator {
     try {
       // Check if gh CLI is available
       try {
-        execSync('gh --version', { stdio: 'pipe' });
+        execSync(,
+  gh --version
+  ', { stdio: 'pipe });
       } catch (error) {
-        this.log('GitHub CLI not available, skipping PR creation');
+        this.log('GitHub CLI not available, skipping PR creation
+  ');
         return false;
       }
 
@@ -230,8 +286,9 @@ class GitWorkflowAutomator {
 
       const result = execSync(`gh pr create --title "${prTitle}" --body "${prDescription}" --base main`, {
         cwd: this.projectRoot,
-        encoding: 'utf8',
-        stdio: 'pipe'
+        encoding:,
+  utf8',
+        stdio: 'pipe
       });
 
       this.log(`✅ Created PR: ${result.trim()}`);
@@ -255,40 +312,53 @@ class GitWorkflowAutomator {
 - [ ] No TODO comments`;
   }
 
-  async mergeBranch(branchName, strategy = 'squash') {
+  async mergeBranch(branchName, strategy =
+  'squash') {
     try {
       // Checkout main
-      execSync('git checkout main', { cwd: this.projectRoot, stdio: 'pipe' });
-      execSync('git pull origin main', { cwd: this.projectRoot, stdio: 'pipe' });
+      execSync(
+  'git checkout main', { cwd: this.projectRoot, stdio:
+  'pipe' });
+      execSync(
+  'git pull origin main', { cwd: this.projectRoot, stdio:
+  'pipe' });
 
       // Merge branch
-      if (strategy === 'squash') {
+      if (strategy ===
+  'squash') {
         execSync(`git merge --squash ${branchName}`, {
           cwd: this.projectRoot,
-          stdio: 'pipe'
+          stdio:
+  'pipe'
         });
         execSync(`git commit -m "feat: merge ${branchName}"`, {
           cwd: this.projectRoot,
-          stdio: 'pipe'
+          stdio:
+  'pipe'
         });
       } else {
         execSync(`git merge ${branchName}`, {
           cwd: this.projectRoot,
-          stdio: 'pipe'
+          stdio:
+  'pipe'
         });
       }
 
       // Push to main
-      execSync('git push origin main', { cwd: this.projectRoot, stdio: 'pipe' });
+      execSync(
+  'git push origin main', { cwd: this.projectRoot, stdio:
+  'pipe' });
 
       // Delete local branch
-      execSync(`git branch -d ${branchName}`, { cwd: this.projectRoot, stdio: 'pipe' });
+      execSync(`git branch -d ${branchName}`, { cwd: this.projectRoot, stdio:
+  'pipe' });
 
       // Delete remote branch
       try {
         execSync(`git push origin --delete ${branchName}`, {
           cwd: this.projectRoot,
-          stdio: 'pipe'
+          stdio:
+  'pipe'
         });
       } catch (error) {
         this.log(`Warning: Could not delete remote branch ${branchName}`);
@@ -315,7 +385,8 @@ class GitWorkflowAutomator {
         // Check branch age
         const lastCommit = execSync(`git log -1 --format=%ct ${branch}`, {
           cwd: this.projectRoot,
-          encoding: 'utf8'
+          encoding:
+  'utf8'
         }).trim();
 
         const branchAge = (Date.now() / 1000 - parseInt(lastCommit)) / (24 * 60 * 60);
@@ -324,7 +395,8 @@ class GitWorkflowAutomator {
           try {
             execSync(`git branch -D ${branch}`, {
               cwd: this.projectRoot,
-              stdio: 'pipe'
+              stdio:
+  'pipe'
             });
             this.log(`🗑️  Deleted old branch: ${branch} (${branchAge.toFixed(1)} days old)`);
           } catch (error) {
@@ -333,7 +405,8 @@ class GitWorkflowAutomator {
         }
       }
 
-      this.log('✅ Cleanup completed');
+      this.log(
+  '✅ Cleanup completed');
     } catch (error) {
       this.log(`❌ Error during cleanup: ${error.message}`);
     }
@@ -341,30 +414,42 @@ class GitWorkflowAutomator {
 
   async resolveMergeConflicts() {
     try {
-      const status = execSync('git status --porcelain', {
+      const status = execSync(
+  'git status --porcelain', {
         cwd: this.projectRoot,
-        encoding: 'utf8'
+        encoding:
+  'utf8'
       });
 
-      if (status.includes('UU')) {
-        this.log('🔧 Merge conflicts detected, attempting resolution...');
+      if (status.includes(
+  'UU')) {
+        this.log(
+  '🔧 Merge conflicts detected, attempting resolution...');
         
         // Get conflicted files
-        const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {
+        const conflictedFiles = execSync(
+  'git diff --name-only --diff-filter=U', {
           cwd: this.projectRoot,
-          encoding: 'utf8'
-        }).split('\n').filter(Boolean);
+          encoding:
+  'utf8'
+        }).split(
+  '\n').filter(Boolean);
 
         for (const file of conflictedFiles) {
           this.log(`Resolving conflicts in: ${file}`);
           
           // Try to auto-resolve common conflicts
-          const content = fs.readFileSync(file, 'utf8');
+          const content = fs.readFileSync(file,
+  'utf8');
           
-if (content.includes('<<<<<<<') && content.includes('') && content.includes('>>>>>>>')) {
+if (content.includes(
+  '<<<<<<<') && content.includes('
+  ') && content.includes('>>>>>>>
+  ')) {
             // Simple conflict resolution - take the incoming change
             const resolved = content.replace(/\n[\s\S]*?fs.writeFileSync(file, resolved);fs.writeFileSync(file, resolved);
-execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
+execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe
+  ' });
             
             this.log(`✅ Auto-resolved conflicts in: ${file}`);
           }
@@ -372,11 +457,14 @@ execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
 
         // Commit the resolution
         try {
-          execSync('git commit -m "fix: resolve merge conflicts"', {
+          execSync(,
+  git commit -m "fix: resolve merge conflicts", {
             cwd: this.projectRoot,
-            stdio: 'pipe'
+            stdio: 'pipe
+  '
           });
-          this.log('✅ Merge conflicts resolved and committed');
+          this.log('✅ Merge conflicts resolved and committed
+  ');
           return true;
         } catch (error) {
           this.log(`Warning: Could not commit conflict resolution: ${error.message}`);
@@ -410,7 +498,8 @@ execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
     }
 
     if (report.branchStatus && report.branchStatus.hasChanges) {
-      report.recommendations.push('Working directory has uncommitted changes. Consider committing or stashing them.');
+      report.recommendations.push('Working directory has uncommitted changes. Consider committing or stashing them.
+  ');
     }
 
     const oldBranches = report.localBranches.filter(branch => 
@@ -440,7 +529,8 @@ execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
   }
 
   async run() {
-    this.log('🚀 Git Workflow Automator starting...');
+    this.log('🚀 Git Workflow Automator starting...
+  ');
 
     try {
       // Generate workflow report
@@ -459,7 +549,8 @@ execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
       this.log(`📊 Workflow report generated for branch: ${report.currentBranch}`);
       
       if (report.recommendations.length > 0) {
-        this.log('💡 Recommendations:');
+        this.log(,
+  💡 Recommendations: );
         report.recommendations.forEach(rec => this.log(`   - ${rec}`));
       }
 
