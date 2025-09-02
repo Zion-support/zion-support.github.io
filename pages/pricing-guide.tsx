@@ -24,6 +24,7 @@ import {
   Cloud,
   Database,
   Lock,
+  Network,
   BarChart3,
   Rocket,
   Heart,
