@@ -36,7 +36,7 @@ export function LanguageSelector() {
     setSelectedLanguage(languageCode);
     setIsOpen(false);
     // Implement language change logic here
-    console.log('Language changed to:', languageCode);
+    
   };
 
   return (

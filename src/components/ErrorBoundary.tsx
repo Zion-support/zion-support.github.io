@@ -24,7 +24,7 @@ export default class ErrorBoundary extends Component<Props, State> {
     // Send error to monitoring service
     if (typeof window !== 'undefined') {
       // Example: Send to Sentry, LogRocket, etc.
-      console.log('Error reported to monitoring service')}
+      }
   }
 
   public render() {

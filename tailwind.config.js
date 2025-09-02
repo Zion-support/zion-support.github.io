@@ -1,18 +1,12 @@
-/** @type {import(,
-  tailwindcss').Config} */;
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-ursor/automate-test-fix-improve-and-merge-code-48f3;
-  ],  theme: {
-    extend: {}},
-  plugins: []}
-/** @type {import(
-  'tailwindcss').Config} */;
-module.exports = {darkMode: ['class'],
-  content: [;
+  darkMode: ['class'],
+  content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/**/*.{js,ts,jsx,tsx,mdx}'],
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     extend: {
       colors: {
@@ -23,45 +17,65 @@ module.exports = {darkMode: ['class'],
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))'},
+          foreground: 'hsl(var(--primary-foreground))',
+        },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))'},
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))'},
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))'},
+          foreground: 'hsl(var(--muted-foreground))',
+        },
         accent: {
           DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))'},
+          foreground: 'hsl(var(--accent-foreground))',
+        },
         popover: {
           DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))'},
+          foreground: 'hsl(var(--popover-foreground))',
+        },
         card: {
           DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))'},
-,
-  zion-blue-dark': '#172d67,
-,
-  zion-blue': '#1e3a8a,
-,
-  zion-blue-light': '#2e73ea,
-,
-  zion-purple': '#8c15e9,
-,
-  zion-purple-dark': '#6b21a8,
-,
-  zion-purple-light': '#a855f7,
-,
-  zion-cyan': '#22ddd2,
-,
-  zion-cyan-dark': '#14b8a6,
-,
-  zion-slate-light': '#94a3b8,
-,
-  zion-slate': '#64748b,
-,
-  zion-slate-dark': '#475569}}},
-  plugins: []}
+          foreground: 'hsl(var(--card-foreground))',
+        },
+        // Zion Tech Group Brand Colors
+        'zion-blue-dark': '#172d67',
+        'zion-blue': '#1e3a8a',
+        'zion-blue-light': '#2e73ea',
+        'zion-purple': '#8c15e9',
+        'zion-purple-dark': '#6b21a8',
+        'zion-purple-light': '#a855f7',
+        'zion-cyan': '#22ddd2',
+        'zion-cyan-dark': '#14b8a6',
+        'zion-slate-light': '#94a3b8',
+        'zion-slate': '#64748b',
+        'zion-slate-dark': '#475569',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-up': 'slideUp 0.3s ease-out',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(10px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
+    },
+  },
+  plugins: [],
+}

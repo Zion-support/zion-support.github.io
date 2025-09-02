@@ -8,16 +8,23 @@ export default function Document() {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#0a0a1a" />
-        {/* Basic SEO */}
+        {/* Enhanced SEO */}
         <meta
           name="description"
-          content="Zion Tech Group delivers AI, Micro SaaS, and IT solutions."
+          content="Zion Tech Group delivers cutting-edge AI services, innovative Micro SaaS solutions, and comprehensive IT services. Transform your business with our expertise in AI development, cloud solutions, and digital transformation."
         />
         <meta
           name="keywords"
-          content="Zion Tech Group, AI services, micro SaaS, IT services, DevOps, cybersecurity"
+          content="Zion Tech Group, AI services, micro SaaS, IT services, DevOps, cybersecurity, machine learning, cloud computing, digital transformation, enterprise solutions, AI development, automation"
         />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="https://ziontechgroup.com/" />
+        
+        {/* Enhanced Open Graph */}
+        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:locale" content="en_US" />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Zion Tech Group" />

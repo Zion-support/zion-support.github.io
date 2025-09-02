@@ -19,7 +19,7 @@ export function UserMenu({ user }) {
 
   const handleLogout = () => {
     // Implement logout logic here
-    console.log('Logging out...');
+    
     setIsOpen(false);
   };
 

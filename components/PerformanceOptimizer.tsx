@@ -1,108 +1,83 @@
-import React, { useEffect } from 'react';
-import Head from 'next/head';
+import React, { useEffect, useState } from 'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
-interface PerformanceOptimizerProps {
-  preloadImages?: string[];
-  preloadFonts?: string[];
-  criticalCSS?: string;
+interface PerformanceMetrics {
+  cls: number | null;
+  fid: number | null;
+  fcp: number | null;
+  lcp: number | null;
+  ttfb: number | null;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  preloadImages = [],
-  preloadFonts = [
-    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
-  ],
-  criticalCSS
-}) => {
+const PerformanceOptimizer: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    cls: null,
+    fid: null,
+    fcp: null,
+    lcp: null,
+    ttfb: null,
+  });
+
   useEffect(() => {
-    // Performance monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP: ', entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
-            console.log('FID: ', (entry as any).processingStart - entry.startTime);
-          }
-          if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
-              console.log('CLS: ', (entry as any).value);
-            }
-          }
-        }
-      });
+    // Collect Web Vitals
+    getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })));
+    getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })));
+    getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
+    getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
+    getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
 
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-      } catch (e) {
-        // Fallback for browsers that don't support all entry types
-        console.log('Performance monitoring not fully supported');
-      }
-
-      // Resource hints for better performance
-      const addResourceHint = (href: string, as: string, type?: string) => {
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      const criticalImages = [
+        '/og-image.svg',
+        '/favicon.ico',
+      ];
+      
+      criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.href = href;
-        link.as = as;
-        if (type) link.type = type;
+        link.as = 'image';
+        link.href = src;
         document.head.appendChild(link);
-      };
-
-      // Preload critical resources
-      preloadImages.forEach(image => {
-        addResourceHint(image, 'image');
       });
+    };
 
-      preloadFonts.forEach(font => {
-        addResourceHint(font, 'style');
+    preloadCriticalResources();
+
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
       });
+    };
+
+    // Run optimization after DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', optimizeImages);
+    } else {
+      optimizeImages();
     }
-  }, [preloadImages, preloadFonts]);
 
-  return (
-    <Head>
-      {/* Critical CSS */}
-      {criticalCSS && (
-        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
-      )}
+    // Cleanup
+    return () => {
+      document.removeEventListener('DOMContentLoaded', optimizeImages);
+    };
+  }, []);
 
-      {/* DNS prefetch for external domains */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+  // Log performance metrics in development
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && metrics.lcp) {
+      
+    }
+  }, [metrics]);
 
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
-      {/* Preload critical fonts */}
-      {preloadFonts.map((font, index) => (
-        <link
-          key={index}
-          rel="preload"
-          href={font}
-          as="style"
-          onLoad="this.onload=null;this.rel='stylesheet'"
-        />
-      ))}
-
-      {/* Preload critical images */}
-      {preloadImages.map((image, index) => (
-        <link
-          key={index}
-          rel="preload"
-          href={image}
-          as="image"
-        />
-      ))}
-
-      {/* Performance hints */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="x-dns-prefetch-control" content="on" />
-    </Head>
-  );
+  return null; // This component doesn't render anything
 };
 
 export default PerformanceOptimizer;

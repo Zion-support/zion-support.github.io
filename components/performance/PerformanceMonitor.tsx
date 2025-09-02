@@ -52,7 +52,7 @@ const PerformanceMonitor: React.FC = () => {
       for (const entry of list.getEntries()) {
         if (entry.name === 'first-contentful-paint') {
           metrics.fcp = entry.startTime;
-          console.log('FCP: ', entry.startTime)}
+          }
       }
     })
     fcpObserver.observe({ entryTypes: ['paint'] })
@@ -61,13 +61,13 @@ const PerformanceMonitor: React.FC = () => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       metrics.lcp = lastEntry.startTime;
-      console.log('LCP: ', lastEntry.startTime)})
+      })
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
     // First Input Delay (FID);
     const fidObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         metrics.fid = (entry as unknown).processingStart - entry.startTime;
-        console.log('FID: ', metrics.fid)}
+        }
     })
     fidObserver.observe({ entryTypes: ['first-input'] })
     // Cumulative Layout Shift (CLS);
@@ -78,19 +78,19 @@ const PerformanceMonitor: React.FC = () => {
           clsValue += (entry as unknown).value}
       }
       metrics.cls = clsValue;
-      console.log('CLS: ', clsValue)})
+      })
     clsObserver.observe({ entryTypes: ['layout-shift'] })
     // Time to First Byte (TTFB);
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
       metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      console.log('TTFB: ', metrics.ttfb)}
+      }
     // First Meaningful Paint (FMP) - approximation;
     const fmpObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (entry.name === 'first-meaningful-paint') {
           metrics.fmp = entry.startTime;
-          console.log('FMP: ', entry.startTime)}
+          }
       }
     })
     fmpObserver.observe({ entryTypes: ['paint'] })
