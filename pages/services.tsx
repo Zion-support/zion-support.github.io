@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Head from 'next/head';
+import Link from 'next/link';
 import {
   ArrowRight,
   Brain,
@@ -17,18 +18,32 @@ import {
   Star,
   TrendingUp,
   Clock,
-  Award,;
+  Award,
+  Phone,
+  Mail,
+  MapPin,
+  DollarSign,
+  Target,
+  Settings,
+  Monitor,
+  Smartphone,
+  Laptop,
+  Tablet,
+  Calendar,
+  Search
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
 
 export default function Services() {
-	const title =
-  'Services — Zion Tech Group'
-	const description =
-  'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
+	const title = 'Services — Zion Tech Group';
+	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 
 	return (
-		<PageTransition>
+		<>
+			<Head>
+				<title>{title}</title>
+				<meta name="description" content={description} />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+			</Head>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -568,6 +583,162 @@ export default function Services() {
 								<Link href="/contact" className="text-red-600 hover:text-red-500">Automate workflows →</Link>
 							</div>
 						</div>
+
+						{/* New Innovative AI Services */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Brain className="h-5 w-5 text-purple-600" />
+								<h3 className="font-semibold text-gray-900">AI-Powered Email Responder</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Intelligent email automation that reads, categorizes, and responds to customer inquiries.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Natural language processing for email understanding</li>
+								<li>• Automated response generation with brand voice</li>
+								<li>• Escalation to human agents when needed</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-purple-600">From $149/mo</span>
+								<Link href="/contact" className="text-purple-600 hover:text-purple-500">Try demo →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Settings className="h-5 w-5 text-blue-600" />
+								<h3 className="font-semibold text-gray-900">AI Content Creation Suite</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Generate high-quality content for blogs, social media, and marketing materials.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• SEO-optimized blog post generation</li>
+								<li>• Social media content with trending hashtags</li>
+								<li>• Brand voice consistency across all content</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-blue-600">From $199/mo</span>
+								<Link href="/contact" className="text-blue-600 hover:text-blue-500">Create content →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Target className="h-5 w-5 text-green-600" />
+								<h3 className="font-semibold text-gray-900">Affiliate Marketing Tracking Platform</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Comprehensive affiliate management with fraud protection and analytics.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Custom referral link generation and tracking</li>
+								<li>• Cross-device attribution and fraud detection</li>
+								<li>• Automated commission calculations and payouts</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-green-600">From $299/mo</span>
+								<Link href="/contact" className="text-green-600 hover:text-green-500">Track affiliates →</Link>
+							</div>
+						</div>
+
+						{/* New IT Services */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Monitor className="h-5 w-5 text-orange-600" />
+								<h3 className="font-semibold text-gray-900">Customer Support & Helpdesk Platform</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Complete customer support solution with AI chatbots and ticket management.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Multi-channel support (email, chat, phone)</li>
+								<li>• AI-powered chatbot with human handoff</li>
+								<li>• Knowledge base and self-service portal</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-orange-600">From $399/mo</span>
+								<Link href="/contact" className="text-orange-600 hover:text-orange-500">Support customers →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Calendar className="h-5 w-5 text-pink-600" />
+								<h3 className="font-semibold text-gray-900">Event Management Dashboard</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Complete event planning and management platform for conferences and webinars.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Ticket sales and attendee management</li>
+								<li>• Live streaming and virtual event hosting</li>
+								<li>• Post-event analytics and feedback collection</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-pink-600">From $199/mo</span>
+								<Link href="/contact" className="text-pink-600 hover:text-pink-500">Manage events →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Search className="h-5 w-5 text-indigo-600" />
+								<h3 className="font-semibold text-gray-900">AI-Powered SEO Content Optimizer</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Automated SEO optimization with AI-driven content suggestions and analysis.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Real-time SEO scoring and recommendations</li>
+								<li>• Competitor analysis and keyword research</li>
+								<li>• Content optimization for search rankings</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-indigo-600">From $149/mo</span>
+								<Link href="/contact" className="text-indigo-600 hover:text-indigo-500">Optimize SEO →</Link>
+							</div>
+						</div>
+
+						{/* New Micro SaaS Solutions */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Smartphone className="h-5 w-5 text-cyan-600" />
+								<h3 className="font-semibold text-gray-900">Mobile App Analytics & Optimization</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Comprehensive mobile app performance monitoring and user behavior analytics.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Real-time crash reporting and performance metrics</li>
+								<li>• User journey mapping and conversion funnels</li>
+								<li>• A/B testing and feature flag management</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-cyan-600">From $99/mo</span>
+								<Link href="/contact" className="text-cyan-600 hover:text-cyan-500">Analyze apps →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Laptop className="h-5 w-5 text-emerald-600" />
+								<h3 className="font-semibold text-gray-900">API Gateway & Management Platform</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Secure, scalable API management with rate limiting and analytics.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• API versioning and lifecycle management</li>
+								<li>• Rate limiting and usage analytics</li>
+								<li>• Developer portal and documentation</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-emerald-600">From $199/mo</span>
+								<Link href="/contact" className="text-emerald-600 hover:text-emerald-500">Manage APIs →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Tablet className="h-5 w-5 text-violet-600" />
+								<h3 className="font-semibold text-gray-900">IoT Device Management Platform</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Centralized management and monitoring for IoT devices and sensors.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Device provisioning and remote updates</li>
+								<li>• Real-time monitoring and alerting</li>
+								<li>• Data visualization and analytics dashboard</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-violet-600">From $299/mo</span>
+								<Link href="/contact" className="text-violet-600 hover:text-violet-500">Manage IoT →</Link>
+							</div>
+						</div>
 					</div>
 
 					<div className="mt-10 text-center text-sm text-gray-500">
@@ -578,6 +749,10 @@ export default function Services() {
 						or call
 						{' '}
 						<a href="tel:+13024640950" className="text-blue-600 hover:text-blue-500">+1 302 464 0950</a>.
+						<br />
+						<span className="text-xs text-gray-400 mt-2 block">
+							Address: 364 E Main St STE 1008, Middletown, DE 19709
+						</span>
 					</div>
 				</div>
 			</section>
@@ -656,6 +831,6 @@ export default function Services() {
 					</div>
 				</div>
 			</section>
-		</PageTransition>
-	)
+		</>
+	);
 }
