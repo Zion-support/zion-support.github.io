@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-01T12:06:12.321Z",
+  "timestamp": "2025-09-01T12:56:12.479Z",
   "summary": {
     "buildSuccess": false,
     "buildDuration": 0,
@@ -15,20 +15,20 @@
       "success": false,
       "errorCount": 0,
       "warningCount": 0,
-      "output": "\n> zion-tech-group@0.1.0 lint\n> next lint\n\nsh: 1: next: not found\n"
+      "output": "\n> zion-tech-group@0.1.0 lint\n> next lint\n\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
     },
     "typeCheck": {
       "success": false,
       "errorCount": 0,
       "output": "\n> zion-tech-group@0.1.0 type-check\n> tsc --noEmit\n\n",
-      "errors": "sh: 1: tsc: not found\n"
+      "errors": "npm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: tsc: not found\n"
     },
     "build": {
       "success": false,
       "duration": 0,
       "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\n",
-      "error": "sh: 1: next: not found\n",
-      "errorMessage": "Command failed: npm run build\nsh: 1: next: not found\n"
+      "error": "npm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n",
+      "errorMessage": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
     },
     "buildSize": {
       "size": 0,
@@ -43,7 +43,7 @@
         "severity": "critical",
         "type": "build_failure",
         "message": "Build is failing",
-        "details": "Command failed: npm run build\nsh: 1: next: not found\n"
+        "details": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
       }
     ],
     "recommendations": [
