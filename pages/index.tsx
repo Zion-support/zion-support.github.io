@@ -46,6 +46,29 @@ const Home: NextPage = () => {
           </motion.p>
           
           <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+              <div className="text-3xl font-bold text-blue-400 mb-2">50+</div>
+              <div className="text-gray-200">Micro SaaS Solutions</div>
+              <div className="text-sm text-gray-300 mt-1">From $12/month</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+              <div className="text-3xl font-bold text-green-400 mb-2">25+</div>
+              <div className="text-gray-200">Advanced IT Services</div>
+              <div className="text-sm text-gray-300 mt-1">Starting at $2,000</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">30+</div>
+              <div className="text-gray-200">AI & Quantum Solutions</div>
+              <div className="text-sm text-gray-300 mt-1">Enterprise-grade</div>
+            </div>
+          </motion.div>
+          
+          <motion.div 
             className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -259,7 +282,7 @@ const Home: NextPage = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Cutting-Edge Technology</h3>
               <p className="text-gray-600">
-                Leveraging the latest in AI, quantum computing, blockchain, and cloud technologies to stay ahead of the curve.
+                Leveraging the latest in AI, quantum computing, blockchain, edge computing, and autonomous systems to deliver next-generation solutions.
               </p>
             </motion.div>
 
@@ -403,7 +426,7 @@ const Home: NextPage = () => {
           >
             <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Join 500+ companies that have already transformed their operations with our cutting-edge AI, quantum computing, and innovative technology solutions. Get started with a free consultation today.
+              Join 500+ companies that have already transformed their operations with our cutting-edge AI, quantum computing, blockchain, and innovative technology solutions. From micro SaaS applications starting at $12/month to enterprise quantum computing solutions, we have the perfect solution for your business needs. Get started with a free consultation today.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/contact" className="group">
