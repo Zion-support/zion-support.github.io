@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-09-02T12:40:49.408Z",
-  "reportId": "2025-09-02T12-40-49-408Z",
+  "timestamp": "2025-09-01T12:49:24.661Z",
+  "reportId": "2025-09-01T12-49-24-661Z",
   "summary": {
     "totalErrors": 0,
     "lintErrors": 0,
@@ -24,7 +24,7 @@
     "build": {
       "hasErrors": true,
       "buildSuccess": false,
-      "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 3.1s\n   Collecting page data ...\n   Generating static pages (0/3) ...\n ✓ Generating static pages (3/3)\n   Finalizing page optimization ...\n   Collecting build traces ...\n[Error: ENOENT: no such file or directory, open '/workspace/.next/server/pages/_app.js.nft.json'] {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: '/workspace/.next/server/pages/_app.js.nft.json'\n}\n"
+      "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 2.6s\n   Collecting page data ...\n\n> Build error occurred\nSyntaxError: Unexpected end of JSON input\n    at JSON.parse (<anonymous>)\n"
     },
     "corruptedFiles": []
   },

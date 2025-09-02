@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-09-02T12:40:49.408Z",
-  "reportId": "2025-09-02T12-40-49-408Z",
+  "timestamp": "2025-09-01T12:24:24.656Z",
+  "reportId": "2025-09-01T12-24-24-656Z",
   "summary": {
     "totalErrors": 0,
     "lintErrors": 0,
@@ -24,7 +24,7 @@
     "build": {
       "hasErrors": true,
       "buildSuccess": false,
-      "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 3.1s\n   Collecting page data ...\n   Generating static pages (0/3) ...\n ✓ Generating static pages (3/3)\n   Finalizing page optimization ...\n   Collecting build traces ...\n[Error: ENOENT: no such file or directory, open '/workspace/.next/server/pages/_app.js.nft.json'] {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: '/workspace/.next/server/pages/_app.js.nft.json'\n}\n"
+      "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ✓ optimizeCss\n     · optimizePackageImports\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\nFailed to compile.\n\nHookWebpackError: ENOENT: no such file or directory, mkdir '/workspace/.next/server'\n    at makeWebpackError (/workspace/node_modules/next/dist/compiled/webpack/bundle5.js:29:315765)\n    at /workspace/node_modules/next/dist/compiled/webpack/bundle5.js:29:106471\n    at eval (eval at create (/workspace/node_modules/next/dist/compiled/webpack/bundle5.js:14:9224), <anonymous>:82:1)\n-- inner error --\nError: ENOENT: no such file or directory, mkdir '/workspace/.next/server'\n    at async Object.mkdir (node:internal/fs/promises:852:10)\n    at async writeMergedManifest (/workspace/node_modules/next/dist/build/webpack/plugins/pages-manifest-plugin.js:100:13)\n    at async PagesManifestPlugin.createAssets (/workspace/node_modules/next/dist/build/webpack/plugins/pages-manifest-plugin.js:110:13)\ncaused by plugins in Compilation.hooks.processAssets\nError: ENOENT: no such file or directory, mkdir '/workspace/.next/server'\n    at async Object.mkdir (node:internal/fs/promises:852:10)\n    at async writeMergedManifest (/workspace/node_modules/next/dist/build/webpack/plugins/pages-manifest-plugin.js:100:13)\n    at async PagesManifestPlugin.createAssets (/workspace/node_modules/next/dist/build/webpack/plugins/pages-manifest-plugin.js:110:13)\n\n\n> Build failed because of webpack errors\n"
     },
     "corruptedFiles": []
   },
