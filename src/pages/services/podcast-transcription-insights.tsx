@@ -1,2 +1,44 @@
- import { Helmet } from 'react-helmet-async' import {  Headphones, FileText, Search, BarChart3, Play, Download, Share2, Zap, CheckCircle, Star, Users, Clock, Target, TrendingUp, Shield, Globe, Smartphone, Database, Cloud, Lock } from 'lucide-react'  export default function PodcastTranscriptionInsights() { return ( <> <Helmet> <title>AI Podcast Transcription & Insights Platform | Zion Tech Group</title> <meta name="description" content="Transform your podcasts into searchable, SEO-optimized content with our AI-powered transcription and insights platform. Get transcripts, chapters, show notes, and more." / / / / / / />"'" <meta name="keywords" content="podcast transcription, AI transcription, podcast insights, SEO optimization, content creation, audio analysis" / / / / / / />"'" <link rel="canonical" href="https:""""
- import { Helmet } from 'react-helmet-async' import {  Headphones, FileText, Search, BarChart3, Play, Download, Share2, Zap, CheckCircle, Star, Users, Clock, Target, TrendingUp, Shield, Globe, Smartphone, Database, Cloud, Lock } from 'lucide-react'  export default function PodcastTranscriptionInsights() { return ( <> <Helmet> <title>AI Podcast Transcription & Insights Platform | Zion Tech Group</title> <meta name='description' content='Transform your podcasts into searchable, SEO-optimized content with our AI-powered transcription and insights platform. Get transcripts, chapters, show notes, and more.' / / / / / / />''' <meta name='keywords' content='podcast transcription, AI transcription, podcast insights, SEO optimization, content creation, audio analysis' / / / / / / />''' <link rel='canonical' href='https:'''";
+import React from 'react';
+import Link from 'next/link';
+import { SEO } from '../../components/SEO';
+
+export default function podcastTranscriptionInsights() {
+  return (
+    <div className="min-h-screen bg-gray-100">
+      <SEO 
+        title="podcast-transcription-insights - Zion Tech Group"
+        description="Professional podcast-transcription-insights services by Zion Tech Group. Expert solutions for your business needs."
+      />
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Podcast Transcription Insights
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Professional podcast-transcription-insights services designed to help your business grow and succeed. 
+            Our expert team provides comprehensive solutions tailored to your specific needs.
+          </p>
+          <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Service Overview</h2>
+            <p className="text-gray-600 mb-6">
+              This service page is currently under development. Our team is working hard to bring you 
+              detailed information about our podcast-transcription-insights offerings.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" 
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Contact Us
+              </Link>
+              <Link href="/services" 
+                className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

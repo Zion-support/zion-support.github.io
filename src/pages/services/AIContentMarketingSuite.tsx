@@ -1,1 +1,44 @@
-import React, { useState } from 'react.ts' import { motion } from 'framer-motion.ts'  const AIContentMarketingSuite: React.FC = (): JSX.Element => { const features = [ { title: 'AI Content Generator', '' description: 'Create high-quality, SEO-optimized content in seconds',' icon: PenTool, '' benefits: ['Multiple content types', 'SEO optimization', 'Brand voice consistency'] }, {';' title: 'Content Calendar & Planning', '' description: 'Intelligent content scheduling and topic ideation',' icon: Calendar, '' benefits: ['AI-powered topic suggestions', 'Optimal publishing times', 'Content gap analysis'] }, {';' title: 'Social Media Automation', '' description: 'Auto-generate and schedule posts across all platforms',' icon: Share2, '' benefits: ['Multi-platform support', 'Trend-based content', 'Engagement optimization'] }, {'' title: 'Performance Analytics', '' description: 'AI-driven insights and optimization recommendations',' icon: BarChart3, '' benefits: ['Real-time tracking', 'Predictive analytics', 'ROI measurement'] } ]  const capabilities = [ {';' name: 'Starter', '' price: '$199', '' period: '/month', '' description: 'Perfect for small businesses',' features: ['';Up to 10 articles/month', '';Basic SEO optimization', '';Social media templates', '';Email support', '';Basic analytics' ], popular: false }, {';' name: 'Professional', '' price: '$499', '' period: '/month', '' description: 'Ideal for growing companies',' features: ['';Up to 50 articles/month', '';Advanced SEO tools', '';Custom content templates', '';Priority support', '';Advanced analytics', '';API access', '';White-label options' ], popular: true }, {'' name: 'Enterprise', '' price: '$1, 299','' period: '/month', '' description: 'For large organizations',' features: ['';Unlimited content', '';Custom AI models', '';Dedicated account manager', '';24/7 support', '';Advanced security', '';Custom training', '';SLA guarantees' ], popular: false } ]  const useCases = [ {';' type: 'Blog Posts', '' description: 'SEO-optimized articles with AI research',' icon: FileText, '' features: ['Keyword research', 'Outline generation', 'SEO optimization'] }, {';' type: 'Social Media', '' description: 'Engaging posts for all platforms',' icon: Share2, '' features: ['Platform-specific content', 'Trend integration', 'Hashtag optimization'] }, {'' type: 'Email Campaigns', '' description: 'Personalized email sequences',' icon: MessageSquare, '' features: ['Segmentation', 'A/B testing', 'Performance tracking'] }, {'' type: 'Video Scripts', '' description: 'Compelling video content scripts',' icon: Eye, '' features: ['Story structure', 'Hook optimization', 'Call-to-action'] } ] ' return ('' <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-purple-dark'>' {}'' <div className='relative overflow-hidden'>' {}'' <div className='absolute inset-0'>'' <div className='absolute inset-0 bg-[linear-gradient(rgba(34, 221,210, 0.1)_1px, transparent_1px), linear-gradient(90deg,rgba(34, 221,210, 0.1)_1px, transparent_1px)] bg-[size: 50px_50px] animate-pulse'></div>' <motion.div '' className='absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full blur-3xl' animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.3, 0.1]}} transition={{ duration: 4,' repeat: Infinity, '' ease: 'easeInOut' }} /> </div>'' <div className='relative container mx-auto px-4 py-24 text-center text-white'> <motion.div initial = { { opacity: 0, y: 20 }} animate = { { opacity: 1, y: 0 }} transition={{ duration: 0.8 }}' >'' <div className='flex items-center justify-center mb-6'>'' <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mr-4'>'' <PenTool className='w-8 h-8 text-white' />' </div>'' <h1 className='text-5xl lg: text-7xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'> AI Content Marketing Suite </h1>' </div>'' <p className='text-xl lg: text-2xl mb-8 max-w-4xl mx-auto text-zion-slate-light'> Revolutionize your content marketing with AI-powered creation, optimization, and automation. Generate engaging content that converts and scales your business.' </p>'' <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'>' <a '' href='https:'''";
+import React from 'react';
+import Link from 'next/link';
+import { SEO } from '../../components/SEO';
+
+export default function AIContentMarketingSuite() {
+  return (
+    <div className="min-h-screen bg-gray-100">
+      <SEO 
+        title="AIContentMarketingSuite - Zion Tech Group"
+        description="Professional AIContentMarketingSuite services by Zion Tech Group. Expert solutions for your business needs."
+      />
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            AIContentMarketingSuite
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Professional AIContentMarketingSuite services designed to help your business grow and succeed. 
+            Our expert team provides comprehensive solutions tailored to your specific needs.
+          </p>
+          <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Service Overview</h2>
+            <p className="text-gray-600 mb-6">
+              This service page is currently under development. Our team is working hard to bring you 
+              detailed information about our AIContentMarketingSuite offerings.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" 
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Contact Us
+              </Link>
+              <Link href="/services" 
+                className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

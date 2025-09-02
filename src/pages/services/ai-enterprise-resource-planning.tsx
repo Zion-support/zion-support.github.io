@@ -1,2 +1,44 @@
- import { motion } from 'framer-motion' import { SEO } from '@/components/SEO'  const AIEnterpriseResourcePlanning: React.FC = () => { const features = ['AI-powered demand forecasting and inventory optimization',';Real-time resource allocation and capacity planning',';Predictive maintenance scheduling and asset management',';Intelligent workforce planning and skill gap analysis',';Automated financial planning and budget optimization',';Multi-tenant cloud architecture with enterprise security',';Real-time analytics dashboard with predictive insights',';Integration with major ERP systems (SAP, Oracle, Microsoft)',';Mobile-first responsive design with offline capabilities',';Advanced reporting with customizable dashboards' ]  const benefits = ['Reduce operational costs by 25-40% through AI optimization',';Improve resource utilization by 30-50%',';Accelerate decision-making with real-time insights',';Enhance compliance and risk management','Scale operations efficiently with predictive analytics' ]  const pricing = [ { plan: 'Starter', price: '$1, 299', period: 'month', features: ['Up to 100 users', 'Basic AI forecasting', 'Standard integrations', 'Email support'], popular: false }, { plan: 'Professional', price: '$2, 999', period: 'month', features: ['Up to 500 users', 'Advanced AI analytics', 'Custom integrations', 'Priority support', 'Advanced reporting'], popular: true }, { plan: 'Enterprise', price: '$5, 999', period: 'month', features: ['Unlimited users', 'Custom AI models', 'White-label solution', 'Dedicated support', 'On-premise deployment'], popular: false } ]  return ( <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">'" <SEO "';" title="AI Enterprise Resource Planning Platform | Zion Tech Group"';" description="Revolutionary AI-powered ERP platform that optimizes resource allocation, demand forecasting, and operational efficiency. Transform your business operations with intelligent automation."';" keywords="AI ERP, enterprise resource planning, AI optimization, resource allocation, demand forecasting, operational efficiency"'/>';" {}"'" <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">"'" <div className="absolute inset-0 bg-black/20"></div>"'" <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24">" <motion.div'; initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}';" transition={{ duration: 0.8 }}"';" className="text-center"';" >"'" <div className="flex justify-center mb-6">"'" <div className="p-3 bg-blue-500/20 rounded-full">"'" <Brain className="w-8 h-8 text-blue-300" />' </div>'" </div>"'" <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">'; AI Enterprise Resource Planning'" </h1>"'" <p className="text-xl md: text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">'; Revolutionize your business operations with AI-powered resource planning, predictive analytics, and intelligent automation'" </p>"'" <div className="flex flex-col sm: flex-row gap-4 justify-center">'" <a"';" href="https:""";
- import { motion } from 'framer-motion' import { SEO } from '@/components/SEO'  const AIEnterpriseResourcePlanning: React.FC = () => { const features = ['AI-powered demand forecasting and inventory optimization',';Real-time resource allocation and capacity planning',';Predictive maintenance scheduling and asset management',';Intelligent workforce planning and skill gap analysis',';Automated financial planning and budget optimization',';Multi-tenant cloud architecture with enterprise security',';Real-time analytics dashboard with predictive insights',';Integration with major ERP systems (SAP, Oracle, Microsoft)',';Mobile-first responsive design with offline capabilities',';Advanced reporting with customizable dashboards' ]  const benefits = ['Reduce operational costs by 25-40% through AI optimization',';Improve resource utilization by 30-50%',';Accelerate decision-making with real-time insights',';Enhance compliance and risk management','Scale operations efficiently with predictive analytics' ]  const pricing = [ { plan: 'Starter', price: '$1, 299', period: 'month', features: ['Up to 100 users', 'Basic AI forecasting', 'Standard integrations', 'Email support'], popular: false }, { plan: 'Professional', price: '$2, 999', period: 'month', features: ['Up to 500 users', 'Advanced AI analytics', 'Custom integrations', 'Priority support', 'Advanced reporting'], popular: true }, { plan: 'Enterprise', price: '$5, 999', period: 'month', features: ['Unlimited users', 'Custom AI models', 'White-label solution', 'Dedicated support', 'On-premise deployment'], popular: false } ]  return ( <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100'>'' <SEO '';' title='AI Enterprise Resource Planning Platform | Zion Tech Group'';' description='Revolutionary AI-powered ERP platform that optimizes resource allocation, demand forecasting, and operational efficiency. Transform your business operations with intelligent automation.'';' keywords='AI ERP, enterprise resource planning, AI optimization, resource allocation, demand forecasting, operational efficiency''/>';' {}''' <section className='relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white'>''' <div className='absolute inset-0 bg-black/20'></div>''' <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24'>' <motion.div'; initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}';' transition={{ duration: 0.8 }}'';' className='text-center'';' >''' <div className='flex justify-center mb-6'>''' <div className='p-3 bg-blue-500/20 rounded-full'>''' <Brain className='w-8 h-8 text-blue-300' />' </div>'' </div>''' <h1 className='text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent'>'; AI Enterprise Resource Planning'' </h1>''' <p className='text-xl md: text-2xl text-blue-100 mb-8 max-w-4xl mx-auto'>'; Revolutionize your business operations with AI-powered resource planning, predictive analytics, and intelligent automation'' </p>''' <div className='flex flex-col sm: flex-row gap-4 justify-center'>'' <a'';' href='https:''";
+import React from 'react';
+import Link from 'next/link';
+import { SEO } from '../../components/SEO';
+
+export default function aiEnterpriseResourcePlanning() {
+  return (
+    <div className="min-h-screen bg-gray-100">
+      <SEO 
+        title="ai-enterprise-resource-planning - Zion Tech Group"
+        description="Professional ai-enterprise-resource-planning services by Zion Tech Group. Expert solutions for your business needs."
+      />
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Ai Enterprise Resource Planning
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Professional ai-enterprise-resource-planning services designed to help your business grow and succeed. 
+            Our expert team provides comprehensive solutions tailored to your specific needs.
+          </p>
+          <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Service Overview</h2>
+            <p className="text-gray-600 mb-6">
+              This service page is currently under development. Our team is working hard to bring you 
+              detailed information about our ai-enterprise-resource-planning offerings.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" 
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Contact Us
+              </Link>
+              <Link href="/services" 
+                className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

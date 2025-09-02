@@ -1,1 +1,44 @@
- import { motion } from 'framer-motion' import {  FileText, Shield, Zap, Users, CheckCircle, ArrowRight, Scale, Clock, DollarSign, Star, Award, Globe, Lock, BarChart3, Target, TrendingUp, Phone, Mail, MapPin } from 'lucide-react'  const AILegalDocumentAutomationPlatform = () => { const features = [ { icon: <FileText className='w-6 h-6' />, '';' title: 'Smart Document Analysis', '';' description: 'AI-powered analysis of legal documents with 99.9% accuracy for contract review, compliance checking, and risk assessment.''},'{''' icon: <Shield className='w-6 h-6' />, '';' title: 'Compliance Automation', '';' description: 'Automated compliance checking against regulatory frameworks including GDPR, SOX, HIPAA, and industry-specific requirements.''},'{''' icon: <Zap className='w-6 h-6' />, '';' title: 'Contract Generation', '';' description: 'Intelligent contract generation with customizable templates, clause libraries, and automated negotiation support.''},'{''' icon: <Users className='w-6 h-6' />, '';' title: 'Collaborative Workflow', '';' description: 'Multi-user collaboration with role-based access control, approval workflows, and audit trails.''},'{''' icon: <CheckCircle className='w-6 h-6' />, '';' title: 'Risk Assessment', '';' description: 'AI-powered risk identification and scoring for contracts, legal documents, and business agreements.''},'{''' icon: <BarChart3 className='w-6 h-6' />, '';' title: 'Analytics Dashboard', '';' description: 'Comprehensive analytics on document processing, compliance status, and legal risk metrics.' } ]';' const pricingPlans = ['{';'' name: 'Starter', '';' price: '$299', '';' period: '/month', '';' description: 'Perfect for small law firms and solo practitioners',';' features: ['';Up to 100 documents/month', '';Basic AI analysis', '';Standard templates', '';Email support', '';Basic compliance checking' ],' popular: false'},'{';'' name: 'Professional', '';' price: '$799', '';' period: '/month', '';' description: 'Ideal for growing law firms and legal departments',';' features: ['';Up to 500 documents/month', '';Advanced AI analysis', '';Custom templates', '';Priority support', '';Full compliance suite', '';Risk assessment tools', '';Collaborative workflows' ],' popular: true'},'{';'' name: 'Enterprise', '';' price: '$1, 999','';' period: '/month', '';' description: 'For large law firms and corporate legal departments',';' features: ['';Unlimited documents', '';Enterprise AI models', '';Custom integrations', '';Dedicated support', '';Advanced analytics', '';API access', '';White-label options', '';Custom training' ], popular: false } ]';' const benefits = ['{''' icon: <Clock className='w-8 h-8' />, '';' title: '90% Time Savings', '';' description: 'Reduce document review time from hours to minutes with AI automation''},'{''' icon: <DollarSign className='w-8 h-8' />, '';' title: 'Cost Reduction', '';' description: 'Cut legal document processing costs by up to 70%''},'{''' icon: <Shield className='w-8 h-8' />, '';' title: 'Risk Mitigation', '';' description: 'Identify and prevent legal risks before they become issues''},'{''' icon: <TrendingUp className='w-8 h-8' />, '';' title: 'Scalability', '';' description: 'Handle increasing document volumes without proportional cost increases'' }'; ]'; ';' return (''' <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';' {}''' <section className='relative py-20 px-4 sm: px-6 lg:px-8'>''' <div className='max-w-7xl mx-auto text-center'> <motion.div' initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}'; transition={{ duration: 0.8 }}';' >''' <div className='flex items-center justify-center mb-6'>''' <Scale className='w-12 h-12 text-blue-500 mr-3' />''' <h1 className='text-4xl md: text-6xl font-bold text-white'>';' AI Legal Document''' <span className='text-blue-500 block'>Automation Platform</span>' </h1>'' </div>''' <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>'; Transform your legal practice with AI-powered document automation.'; Generate, analyze, and manage legal documents with unprecedented speed and accuracy.'' </p>''' <div className='flex flex-col sm: flex-row gap-4 justify-center'>'' <a'';' href='https:'''";
+import React from 'react';
+import Link from 'next/link';
+import { SEO } from '../../components/SEO';
+
+export default function aiLegalDocumentAutomationPlatform() {
+  return (
+    <div className="min-h-screen bg-gray-100">
+      <SEO 
+        title="ai-legal-document-automation-platform - Zion Tech Group"
+        description="Professional ai-legal-document-automation-platform services by Zion Tech Group. Expert solutions for your business needs."
+      />
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Ai Legal Document Automation Platform
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Professional ai-legal-document-automation-platform services designed to help your business grow and succeed. 
+            Our expert team provides comprehensive solutions tailored to your specific needs.
+          </p>
+          <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Service Overview</h2>
+            <p className="text-gray-600 mb-6">
+              This service page is currently under development. Our team is working hard to bring you 
+              detailed information about our ai-legal-document-automation-platform offerings.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" 
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Contact Us
+              </Link>
+              <Link href="/services" 
+                className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

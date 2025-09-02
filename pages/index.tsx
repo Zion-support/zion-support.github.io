@@ -1,37 +1,37 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { SEO } from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
+import React from &apos;react&apos;;
+import Head from &apos;next/head&apos;;
+import Link from &apos;next/link&apos;;
+import { SEO } from &apos;../components/SEO&apos;;
+import { Button } from &apos;../components/ui/Button&apos;;
+import { Card } from &apos;../components/ui/Card&apos;;
+import { Badge } from &apos;../components/ui/Badge&apos;;
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from &apos;lucide-react&apos;;
 
 export default function Home() {
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' }
+    { number: &apos;500+&apos;, label: &apos;Projects Completed&apos; },
+    { number: &apos;50+&apos;, label: &apos;Happy Clients&apos; },
+    { number: &apos;99.9%&apos;, label: &apos;Uptime Guarantee&apos; },
+    { number: &apos;24/7&apos;, label: &apos;Support Available&apos; }
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO, TechCorp',
-      content: 'Zion Tech Group transformed our business with their AI solutions. The results exceeded our expectations.',
+      name: &apos;Sarah Johnson&apos;,
+      role: &apos;CEO, TechCorp&apos;,
+      content: &apos;Zion Tech Group transformed our business with their AI solutions. The results exceeded our expectations.&apos;,
       rating: 5
     },
     {
-      name: 'Michael Chen',
-      role: 'CTO, InnovateLabs',
-      content: 'Outstanding service and cutting-edge technology. They delivered our project on time and within budget.',
+      name: &apos;Michael Chen&apos;,
+      role: &apos;CTO, InnovateLabs&apos;,
+      content: &apos;Outstanding service and cutting-edge technology. They delivered our project on time and within budget.&apos;,
       rating: 5
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Founder, StartupXYZ',
-      content: 'The team at Zion Tech Group is exceptional. Their expertise in cloud infrastructure saved us months of development.',
+      name: &apos;Emily Rodriguez&apos;,
+      role: &apos;Founder, StartupXYZ&apos;,
+      content: &apos;The team at Zion Tech Group is exceptional. Their expertise in cloud infrastructure saved us months of development.&apos;,
       rating: 5
     }
   ];
@@ -39,113 +39,113 @@ export default function Home() {
   const features = [
     {
       icon: Zap,
-      title: 'Lightning Fast',
-      description: 'Optimized performance with cutting-edge technology'
+      title: &apos;Lightning Fast&apos;,
+      description: &apos;Optimized performance with cutting-edge technology&apos;
     },
     {
       icon: Shield,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security with 99.9% uptime guarantee'
+      title: &apos;Secure & Reliable&apos;,
+      description: &apos;Enterprise-grade security with 99.9% uptime guarantee&apos;
     },
     {
       icon: Globe,
-      title: 'Global Reach',
-      description: 'Serving clients worldwide with 24/7 support'
+      title: &apos;Global Reach&apos;,
+      description: &apos;Serving clients worldwide with 24/7 support&apos;
     },
     {
       icon: TrendingUp,
-      title: 'Scalable Solutions',
-      description: 'Grow with confidence using our scalable architecture'
+      title: &apos;Scalable Solutions&apos;,
+      description: &apos;Grow with confidence using our scalable architecture&apos;
     }
   ];
   const services = [
     {
-      title: 'AI Services',
-      description: 'Cutting-edge artificial intelligence solutions and automation tools',
+      title: &apos;AI Services&apos;,
+      description: &apos;Cutting-edge artificial intelligence solutions and automation tools&apos;,
       icon: Brain,
-      href: '/services#ai',
-      features: ['Content Creation', 'Email Automation', 'Customer Support', 'Business Intelligence']
+      href: &apos;/services#ai&apos;,
+      features: [&apos;Content Creation&apos;, &apos;Email Automation&apos;, &apos;Customer Support&apos;, &apos;Business Intelligence&apos;]
     },
     {
-      title: 'IT Services',
-      description: 'Enterprise-grade infrastructure and development services',
+      title: &apos;IT Services&apos;,
+      description: &apos;Enterprise-grade infrastructure and development services&apos;,
       icon: Network,
-      href: '/services#cloud',
-      features: ['DevOps Automation', 'Cloud Migration', 'Security Assessment', 'API Management']
+      href: &apos;/services#cloud&apos;,
+      features: [&apos;DevOps Automation&apos;, &apos;Cloud Migration&apos;, &apos;Security Assessment&apos;, &apos;API Management&apos;]
     },
     {
-      title: 'Micro SaaS',
-      description: 'Specialized software solutions for business challenges',
+      title: &apos;Micro SaaS&apos;,
+      description: &apos;Specialized software solutions for business challenges&apos;,
       icon: Cloud,
-      href: '/services#saas',
-      features: ['Project Management', 'Analytics Dashboard', 'HR Management', 'Financial Tracking']
+      href: &apos;/services#saas&apos;,
+      features: [&apos;Project Management&apos;, &apos;Analytics Dashboard&apos;, &apos;HR Management&apos;, &apos;Financial Tracking&apos;]
     }
   ];
   return (
     <>
       <Head>
         <title>Zion Tech Group - Leading AI, IT & Micro SaaS Solutions Provider</title>
-        <meta name='description' content='Transform your business with Zion Tech Group cutting-edge AI services, enterprise IT solutions, and innovative Micro SaaS platforms. 500+ projects completed, 99.9% uptime guarantee.' />
-        <meta name='keywords' content='AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting, enterprise software' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta property='og:title' content='Zion Tech Group - Leading Technology Solutions Provider' />
-        <meta property='og:description' content='Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.' />
-        <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://ziontechgroup.com' />
-        <meta property='og:image' content='https://ziontechgroup.com/og-image.jpg' />
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='Zion Tech Group - Leading Technology Solutions Provider' />
-        <meta name='twitter:description' content='Transform your business with cutting-edge AI, IT, and Micro SaaS solutions.' />
-        <meta name='twitter:image' content='https://ziontechgroup.com/og-image.jpg' />
-        <link rel='canonical' href='https://ziontechgroup.com' />
-        <script type='application/ld+json'>
+        <meta name=&apos;description&apos; content=&apos;Transform your business with Zion Tech Group cutting-edge AI services, enterprise IT solutions, and innovative Micro SaaS platforms. 500+ projects completed, 99.9% uptime guarantee.&apos; />
+        <meta name=&apos;keywords&apos; content=&apos;AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting, enterprise software&apos; />
+        <meta name=&apos;viewport&apos; content=&apos;width=device-width, initial-scale=1&apos; />
+        <meta property=&apos;og:title&apos; content=&apos;Zion Tech Group - Leading Technology Solutions Provider&apos; />
+        <meta property=&apos;og:description&apos; content=&apos;Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.&apos; />
+        <meta property=&apos;og:type&apos; content=&apos;website&apos; />
+        <meta property=&apos;og:url&apos; content=&apos;https://ziontechgroup.com&apos; />
+        <meta property=&apos;og:image&apos; content=&apos;https://ziontechgroup.com/og-image.jpg&apos; />
+        <meta name=&apos;twitter:card&apos; content=&apos;summary_large_image&apos; />
+        <meta name=&apos;twitter:title&apos; content=&apos;Zion Tech Group - Leading Technology Solutions Provider&apos; />
+        <meta name=&apos;twitter:description&apos; content=&apos;Transform your business with cutting-edge AI, IT, and Micro SaaS solutions.&apos; />
+        <meta name=&apos;twitter:image&apos; content=&apos;https://ziontechgroup.com/og-image.jpg&apos; />
+        <link rel=&apos;canonical&apos; href=&apos;https://ziontechgroup.com&apos; />
+        <script type=&apos;application/ld+json&apos;>
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.png",
-            "description": "Leading provider of AI services, IT solutions, and Micro SaaS platforms",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "364 E Main St STE 1008",
-              "addressLocality": "Middletown",
-              "addressRegion": "DE",
-              "postalCode": "19709",
-              "addressCountry": "US"
+            &quot;@context&quot;: &quot;https://schema.org&quot;,
+            &quot;@type&quot;: &quot;Organization&quot;,
+            &quot;name&quot;: &quot;Zion Tech Group&quot;,
+            &quot;url&quot;: &quot;https://ziontechgroup.com&quot;,
+            &quot;logo&quot;: &quot;https://ziontechgroup.com/logo.png&quot;,
+            &quot;description&quot;: &quot;Leading provider of AI services, IT solutions, and Micro SaaS platforms&quot;,
+            &quot;address&quot;: {
+              &quot;@type&quot;: &quot;PostalAddress&quot;,
+              &quot;streetAddress&quot;: &quot;364 E Main St STE 1008&quot;,
+              &quot;addressLocality&quot;: &quot;Middletown&quot;,
+              &quot;addressRegion&quot;: &quot;DE&quot;,
+              &quot;postalCode&quot;: &quot;19709&quot;,
+              &quot;addressCountry&quot;: &quot;US&quot;
             },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+1-302-464-0950",
-              "contactType": "customer service",
-              "email": "kleber@ziontechgroup.com"
+            &quot;contactPoint&quot;: {
+              &quot;@type&quot;: &quot;ContactPoint&quot;,
+              &quot;telephone&quot;: &quot;+1-302-464-0950&quot;,
+              &quot;contactType&quot;: &quot;customer service&quot;,
+              &quot;email&quot;: &quot;kleber@ziontechgroup.com&quot;
             },
-            "sameAs": [
-              "https://ziontechgroup.com"
+            &quot;sameAs&quot;: [
+              &quot;https://ziontechgroup.com&quot;
             ]
           })}
         </script>
       </Head>
-      <main className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
+      <main className=&apos;min-h-screen bg-gradient-to-br from-slate-50 to-blue-50&apos;>
         {/* Hero Section */}
-        <section className='relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32'>
-            <div className='text-center'>
-              <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6'>
+        <section className=&apos;relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600&apos;>
+          <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32&apos;>
+            <div className=&apos;text-center&apos;>
+              <h1 className=&apos;text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6&apos;>
                 Welcome to Zion Tech Group
               </h1>
-              <p className='text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8'>
+              <p className=&apos;text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8&apos;>
                 Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-                <Link href='/services'>
-                  <Button className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold'>
+              <div className=&apos;flex flex-col sm:flex-row gap-4 justify-center items-center&apos;>
+                <Link href=&apos;/services&apos;>
+                  <Button className=&apos;bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold&apos;>
                     Explore Our Services
-                    <ArrowRight className='w-5 h-5 ml-2' />
+                    <ArrowRight className=&apos;w-5 h-5 ml-2&apos; />
                   </Button>
                 </Link>
-                <Link href='/contact'>
-                  <Button variant='outline' className='border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold'>
+                <Link href=&apos;/contact&apos;>
+                  <Button variant=&apos;outline&apos; className=&apos;border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold&apos;>
                     Get Started Today
                   </Button>
                 </Link>
@@ -155,13 +155,13 @@ export default function Home() {
         </section>
 
         {/* Stats Section */}
-        <section className='py-16 bg-white'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
+        <section className=&apos;py-16 bg-white&apos;>
+          <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&apos;>
+            <div className=&apos;grid grid-cols-2 lg:grid-cols-4 gap-8&apos;>
               {stats.map((stat, index) => (
-                <div key={index} className='text-center'>
-                  <div className='text-3xl sm:text-4xl font-bold text-blue-600 mb-2'>{stat.number}</div>
-                  <div className='text-sm sm:text-base text-gray-600'>{stat.label}</div>
+                <div key={index} className=&apos;text-center&apos;>
+                  <div className=&apos;text-3xl sm:text-4xl font-bold text-blue-600 mb-2&apos;>{stat.number}</div>
+                  <div className=&apos;text-sm sm:text-base text-gray-600&apos;>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -169,39 +169,39 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section className='py-20 sm:py-32'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center mb-16'>
-              <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-6'>
+        <section className=&apos;py-20 sm:py-32&apos;>
+          <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&apos;>
+            <div className=&apos;text-center mb-16&apos;>
+              <h2 className=&apos;text-3xl sm:text-4xl font-bold text-gray-900 mb-6&apos;>
                 Our Core Services
               </h2>
-              <p className='text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto'>
+              <p className=&apos;text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto&apos;>
                 Comprehensive technology solutions designed to transform your business and drive growth.
               </p>
             </div>
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+            <div className=&apos;grid grid-cols-1 lg:grid-cols-3 gap-8&apos;>
               {services.map((service, index) => (
-                <Card key={index} className='p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg'>
-                  <div className='p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6'>
-                    <service.icon className='w-8 h-8 text-white' />
+                <Card key={index} className=&apos;p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg&apos;>
+                  <div className=&apos;p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6&apos;>
+                    <service.icon className=&apos;w-8 h-8 text-white&apos; />
                   </div>
-                  <h3 className='text-2xl font-bold text-gray-900 mb-4 text-center'>{service.title}</h3>
-                  <p className='text-gray-600 mb-6 text-center'>{service.description}</p>
-                  <div className='mb-6'>
-                    <h4 className='text-sm font-semibold text-gray-900 mb-3'>Key Features:</h4>
-                    <div className='grid grid-cols-2 gap-2'>
+                  <h3 className=&apos;text-2xl font-bold text-gray-900 mb-4 text-center&apos;>{service.title}</h3>
+                  <p className=&apos;text-gray-600 mb-6 text-center&apos;>{service.description}</p>
+                  <div className=&apos;mb-6&apos;>
+                    <h4 className=&apos;text-sm font-semibold text-gray-900 mb-3&apos;>Key Features:</h4>
+                    <div className=&apos;grid grid-cols-2 gap-2&apos;>
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className='flex items-center text-sm text-gray-600'>
-                          <CheckCircle className='w-4 h-4 text-green-500 mr-2 flex-shrink-0' />
+                        <div key={featureIndex} className=&apos;flex items-center text-sm text-gray-600&apos;>
+                          <CheckCircle className=&apos;w-4 h-4 text-green-500 mr-2 flex-shrink-0&apos; />
                           {feature}
                         </div>
                       ))}
                     </div>
                   </div>
                   <Link href={service.href}>
-                    <Button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white'>
+                    <Button className=&apos;w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white&apos;>
                       Learn More
-                      <ArrowRight className='w-4 h-4 ml-2' />
+                      <ArrowRight className=&apos;w-4 h-4 ml-2&apos; />
                     </Button>
                   </Link>
                 </Card>
@@ -211,24 +211,24 @@ export default function Home() {
         </section>
 
         {/* Features Section */}
-        <section className='py-20 bg-gray-50'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center mb-16'>
-              <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-6'>
+        <section className=&apos;py-20 bg-gray-50&apos;>
+          <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&apos;>
+            <div className=&apos;text-center mb-16&apos;>
+              <h2 className=&apos;text-3xl sm:text-4xl font-bold text-gray-900 mb-6&apos;>
                 Why Choose Zion Tech Group?
               </h2>
-              <p className='text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto'>
+              <p className=&apos;text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto&apos;>
                 We deliver exceptional results through innovation, expertise, and unwavering commitment to excellence.
               </p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            <div className=&apos;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&apos;>
               {features.map((feature, index) => (
-                <div key={index} className='text-center group'>
-                  <div className='p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
-                    <feature.icon className='w-8 h-8 text-white' />
+                <div key={index} className=&apos;text-center group&apos;>
+                  <div className=&apos;p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6 group-hover:scale-110 transition-transform duration-300&apos;>
+                    <feature.icon className=&apos;w-8 h-8 text-white&apos; />
                   </div>
-                  <h3 className='text-xl font-bold text-gray-900 mb-4'>{feature.title}</h3>
-                  <p className='text-gray-600'>{feature.description}</p>
+                  <h3 className=&apos;text-xl font-bold text-gray-900 mb-4&apos;>{feature.title}</h3>
+                  <p className=&apos;text-gray-600&apos;>{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -236,28 +236,28 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section className='py-20 bg-white'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center mb-16'>
-              <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-6'>
+        <section className=&apos;py-20 bg-white&apos;>
+          <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&apos;>
+            <div className=&apos;text-center mb-16&apos;>
+              <h2 className=&apos;text-3xl sm:text-4xl font-bold text-gray-900 mb-6&apos;>
                 What Our Clients Say
               </h2>
-              <p className='text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto'>
-                Don't just take our word for it. Here's what our satisfied clients have to say about working with us.
+              <p className=&apos;text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto&apos;>
+                Don&apos;t just take our word for it. Here&apos;s what our satisfied clients have to say about working with us.
               </p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            <div className=&apos;grid grid-cols-1 md:grid-cols-3 gap-8&apos;>
               {testimonials.map((testimonial, index) => (
-                <Card key={index} className='p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300'>
-                  <div className='flex items-center mb-4'>
+                <Card key={index} className=&apos;p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300&apos;>
+                  <div className=&apos;flex items-center mb-4&apos;>
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className='w-5 h-5 text-yellow-400 fill-current' />
+                      <Star key={i} className=&apos;w-5 h-5 text-yellow-400 fill-current&apos; />
                     ))}
                   </div>
-                  <p className='text-gray-600 mb-6 italic'>"{testimonial.content}"</p>
-                  <div className='border-t pt-4'>
-                    <div className='font-semibold text-gray-900'>{testimonial.name}</div>
-                    <div className='text-sm text-gray-500'>{testimonial.role}</div>
+                  <p className=&apos;text-gray-600 mb-6 italic&apos;>&quot;{testimonial.content}&quot;</p>
+                  <div className=&apos;border-t pt-4&apos;>
+                    <div className=&apos;font-semibold text-gray-900&apos;>{testimonial.name}</div>
+                    <div className=&apos;text-sm text-gray-500&apos;>{testimonial.role}</div>
                   </div>
                 </Card>
               ))}
@@ -266,33 +266,33 @@ export default function Home() {
         </section>
 
         {/* Contact CTA Section */}
-        <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+        <section className=&apos;py-20 bg-gradient-to-r from-blue-600 to-purple-600&apos;>
+          <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&apos;>
+            <h2 className=&apos;text-3xl sm:text-4xl font-bold text-white mb-6&apos;>
               Ready to Transform Your Business?
             </h2>
-            <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
+            <p className=&apos;text-xl text-blue-100 mb-8 max-w-2xl mx-auto&apos;>
               Contact us today for a free consultation and discover how our solutions can drive your success.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-              <a href='tel:+13024640950' className='flex items-center text-white hover:text-blue-200 transition-colors'>
-                <Phone className='w-5 h-5 mr-2' />
+            <div className=&apos;flex flex-col sm:flex-row gap-4 justify-center items-center&apos;>
+              <a href=&apos;tel:+13024640950&apos; className=&apos;flex items-center text-white hover:text-blue-200 transition-colors&apos;>
+                <Phone className=&apos;w-5 h-5 mr-2&apos; />
                 +1 302 464 0950
-              </a>
-              <a href='mailto:kleber@ziontechgroup.com' className='flex items-center text-white hover:text-blue-200 transition-colors'>
-                <Mail className='w-5 h-5 mr-2' />
+              </Link>
+              <a href=&apos;mailto:kleber@ziontechgroup.com&apos; className=&apos;flex items-center text-white hover:text-blue-200 transition-colors&apos;>
+                <Mail className=&apos;w-5 h-5 mr-2&apos; />
                 kleber@ziontechgroup.com
-              </a>
+              </Link>
             </div>
-            <div className='mt-4 text-center text-blue-100'>
-              <p className='text-sm'>364 E Main St STE 1008, Middletown DE 19709</p>
-              <p className='text-sm mt-1'>Visit us at <a href='https://ziontechgroup.com' className='underline hover:text-white' target='_blank' rel='noreferrer'>ziontechgroup.com</a></p>
+            <div className=&apos;mt-4 text-center text-blue-100&apos;>
+              <p className=&apos;text-sm&apos;>364 E Main St STE 1008, Middletown DE 19709</p>
+              <p className=&apos;text-sm mt-1&apos;>Visit us at <a href=&apos;https://ziontechgroup.com&apos; className=&apos;underline hover:text-white&apos; target=&apos;_blank&apos; rel=&apos;noreferrer&apos;>ziontechgroup.com</Link></p>
             </div>
-            <div className='mt-8'>
-              <Link href='/contact'>
-                <Button className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold'>
+            <div className=&apos;mt-8&apos;>
+              <Link href=&apos;/contact&apos;>
+                <Button className=&apos;bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold&apos;>
                   Get Free Consultation
-                  <ArrowRight className='w-5 h-5 ml-2' />
+                  <ArrowRight className=&apos;w-5 h-5 ml-2&apos; />
                 </Button>
               </Link>
             </div>

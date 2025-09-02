@@ -1,1 +1,44 @@
- import { Link } from 'react-router-dom'; import SEO from '@/components/SEO'; import { motion } from 'framer-motion'; import { ArrowRight } from 'lucide-react'; const DigitalTransformation = () => { const transformationServices = [{ title: 'Process Automation', '';'; description: 'Streamline operations with intelligent automation solutions', '';'; features: ['Workflow Automation', 'RPA Implementation', 'Business Process Optimization', 'Efficiency Metrics'], '';'; icon: '🤖''},'{';''; title: 'Workflow Optimization', '';'; description: 'Redesign and optimize business workflows for maximum efficiency', '';'; features: ['Process Mapping', 'Bottleneck Analysis', 'Workflow Redesign', 'Performance Monitoring'], '';'; icon: '📊''},'{';''; title: 'Change Management', '';'; description: 'Guide your organization through digital transformation with expert change management', '';'; features: ['Stakeholder Engagement', 'Training Programs', 'Communication Strategy', 'Success Metrics'], '';'; icon: '🔄''},'{';''; title: 'Business Process Optimization', '';'; description: 'Streamline operations and improve efficiency through digital workflows', '';'; features: ['Process Mapping', 'Automation', 'Performance Metrics', 'Continuous Improvement'], '';'; icon: '⚡''},'{';''; title: 'Customer Experience Enhancement', '';'; description: 'Create seamless digital experiences that delight your customers', '';'; features: ['User Journey Mapping', 'Digital Touchpoints', 'Personalization', 'Feedback Systems'], '';'; icon: '🎯''},'{';''; title: 'Data & Analytics Strategy', '';'; description: 'Leverage data insights to drive informed business decisions', '';'; features: ['Data Collection', 'Analytics Platforms', 'Business Intelligence', 'Predictive Modeling'], '';'; icon: '📊''},'{';''; title: 'Technology Infrastructure', '';'; description: 'Modernize your technology stack for scalability and performance', '';'; features: ['Cloud Migration', 'API Integration', 'Microservices', 'DevOps Practices'], '';'; icon: '🏗️''}'; ]';'; const benefits = ['';Increased operational efficiency by 50%', '';Enhanced customer experience and satisfaction', '';Reduced operational costs and waste', '';Improved decision-making with real-time data', '';Competitive advantage in the digital marketplace''; ]';'; const transformationApproach = ['';'{ step: 'Assessment', icon: '🔍', description: 'Evaluate current state and identify opportunities' }, '';'{ step: 'Strategy', icon: '📋', description: 'Develop comprehensive transformation roadmap' }, '';'{ step: 'Implementation', icon: '🚀', description: 'Execute changes with agile methodology' }, '';'{ step: 'Optimization', icon: '📈', description: 'Continuous improvement and scaling' }';'; ]';'' return (<div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20'>'';' <SEO title='Digital Transformation - Zion Tech Group' description='Transform your business for the digital age with our comprehensive digital transformation services.' keywords='digital transformation, process automation, digital strategy, change management, performance optimization' canonical='https:'''";
+import React from 'react';
+import Link from 'next/link';
+import { SEO } from '../../components/SEO';
+
+export default function DigitalTransformation() {
+  return (
+    <div className="min-h-screen bg-gray-100">
+      <SEO 
+        title="DigitalTransformation - Zion Tech Group"
+        description="Professional DigitalTransformation services by Zion Tech Group. Expert solutions for your business needs."
+      />
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            DigitalTransformation
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Professional DigitalTransformation services designed to help your business grow and succeed. 
+            Our expert team provides comprehensive solutions tailored to your specific needs.
+          </p>
+          <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Service Overview</h2>
+            <p className="text-gray-600 mb-6">
+              This service page is currently under development. Our team is working hard to bring you 
+              detailed information about our DigitalTransformation offerings.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" 
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Contact Us
+              </Link>
+              <Link href="/services" 
+                className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

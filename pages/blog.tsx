@@ -1,151 +1,151 @@
-import type { NextPage } from 'next';
-import Layout from '../components/Layout';
-import Link from 'next/link';
-import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
+import type { NextPage } from &apos;next&apos;;
+import Layout from &apos;../components/Layout&apos;;
+import Link from &apos;next/link&apos;;
+import { Calendar, User, ArrowRight, Tag, Clock } from &apos;lucide-react&apos;;
 
 const Blog: NextPage = () => {
   const blogPosts = [
     {
       id: 1,
-      title: "The Future of AI in Business: Trends and Predictions for 2024",
-      excerpt: "Explore the latest AI trends that are reshaping how businesses operate, from automation to predictive analytics.",
-      author: "Kleber Santos",
-      date: "2024-01-15",
-      readTime: "5 min read",
-      category: "AI & Machine Learning",
-      image: "/api/placeholder/600/400",
-      slug: "future-of-ai-in-business-2024"
+      title: &quot;The Future of AI in Business: Trends and Predictions for 2024&quot;,
+      excerpt: &quot;Explore the latest AI trends that are reshaping how businesses operate, from automation to predictive analytics.&quot;,
+      author: &quot;Kleber Santos&quot;,
+      date: &quot;2024-01-15&quot;,
+      readTime: &quot;5 min read&quot;,
+      category: &quot;AI & Machine Learning&quot;,
+      image: &quot;/api/placeholder/600/400&quot;,
+      slug: &quot;future-of-ai-in-business-2024&quot;
     },
     {
       id: 2,
-      title: "Cloud Migration Best Practices: A Complete Guide",
-      excerpt: "Learn the essential steps and strategies for successfully migrating your business to the cloud.",
-      author: "Zion Tech Team",
-      date: "2024-01-10",
-      readTime: "8 min read",
-      category: "Cloud Services",
-      image: "/api/placeholder/600/400",
-      slug: "cloud-migration-best-practices"
+      title: &quot;Cloud Migration Best Practices: A Complete Guide&quot;,
+      excerpt: &quot;Learn the essential steps and strategies for successfully migrating your business to the cloud.&quot;,
+      author: &quot;Zion Tech Team&quot;,
+      date: &quot;2024-01-10&quot;,
+      readTime: &quot;8 min read&quot;,
+      category: &quot;Cloud Services&quot;,
+      image: &quot;/api/placeholder/600/400&quot;,
+      slug: &quot;cloud-migration-best-practices&quot;
     },
     {
       id: 3,
-      title: "Building Scalable Web Applications with Modern Technologies",
-      excerpt: "Discover the latest technologies and frameworks for creating robust, scalable web applications.",
-      author: "Development Team",
-      date: "2024-01-05",
-      readTime: "6 min read",
-      category: "Web Development",
-      image: "/api/placeholder/600/400",
-      slug: "scalable-web-applications-modern-tech"
+      title: &quot;Building Scalable Web Applications with Modern Technologies&quot;,
+      excerpt: &quot;Discover the latest technologies and frameworks for creating robust, scalable web applications.&quot;,
+      author: &quot;Development Team&quot;,
+      date: &quot;2024-01-05&quot;,
+      readTime: &quot;6 min read&quot;,
+      category: &quot;Web Development&quot;,
+      image: &quot;/api/placeholder/600/400&quot;,
+      slug: &quot;scalable-web-applications-modern-tech&quot;
     },
     {
       id: 4,
-      title: "Cybersecurity in 2024: Protecting Your Digital Assets",
-      excerpt: "Essential cybersecurity strategies and tools to protect your business from evolving threats.",
-      author: "Security Team",
-      date: "2024-01-01",
-      readTime: "7 min read",
-      category: "Cybersecurity",
-      image: "/api/placeholder/600/400",
-      slug: "cybersecurity-2024-protecting-digital-assets"
+      title: &quot;Cybersecurity in 2024: Protecting Your Digital Assets&quot;,
+      excerpt: &quot;Essential cybersecurity strategies and tools to protect your business from evolving threats.&quot;,
+      author: &quot;Security Team&quot;,
+      date: &quot;2024-01-01&quot;,
+      readTime: &quot;7 min read&quot;,
+      category: &quot;Cybersecurity&quot;,
+      image: &quot;/api/placeholder/600/400&quot;,
+      slug: &quot;cybersecurity-2024-protecting-digital-assets&quot;
     },
     {
       id: 5,
-      title: "Mobile App Development: Native vs Cross-Platform",
-      excerpt: "Compare native and cross-platform development approaches to choose the best solution for your mobile app.",
-      author: "Mobile Team",
-      date: "2023-12-28",
-      readTime: "9 min read",
-      category: "Mobile Development",
-      image: "/api/placeholder/600/400",
-      slug: "mobile-app-development-native-vs-cross-platform"
+      title: &quot;Mobile App Development: Native vs Cross-Platform&quot;,
+      excerpt: &quot;Compare native and cross-platform development approaches to choose the best solution for your mobile app.&quot;,
+      author: &quot;Mobile Team&quot;,
+      date: &quot;2023-12-28&quot;,
+      readTime: &quot;9 min read&quot;,
+      category: &quot;Mobile Development&quot;,
+      image: &quot;/api/placeholder/600/400&quot;,
+      slug: &quot;mobile-app-development-native-vs-cross-platform&quot;
     },
     {
       id: 6,
-      title: "Blockchain Technology: Beyond Cryptocurrency",
-      excerpt: "Explore real-world applications of blockchain technology in various industries beyond digital currencies.",
-      author: "Blockchain Team",
-      date: "2023-12-25",
-      readTime: "6 min read",
-      category: "Blockchain",
-      image: "/api/placeholder/600/400",
-      slug: "blockchain-technology-beyond-cryptocurrency"
+      title: &quot;Blockchain Technology: Beyond Cryptocurrency&quot;,
+      excerpt: &quot;Explore real-world applications of blockchain technology in various industries beyond digital currencies.&quot;,
+      author: &quot;Blockchain Team&quot;,
+      date: &quot;2023-12-25&quot;,
+      readTime: &quot;6 min read&quot;,
+      category: &quot;Blockchain&quot;,
+      image: &quot;/api/placeholder/600/400&quot;,
+      slug: &quot;blockchain-technology-beyond-cryptocurrency&quot;
     }
   ];
 
   const categories = [
-    "All Posts",
-    "AI & Machine Learning",
-    "Cloud Services",
-    "Web Development",
-    "Mobile Development",
-    "Blockchain",
-    "Cybersecurity",
-    "IoT",
-    "Industry Insights"
+    &quot;All Posts&quot;,
+    &quot;AI & Machine Learning&quot;,
+    &quot;Cloud Services&quot;,
+    &quot;Web Development&quot;,
+    &quot;Mobile Development&quot;,
+    &quot;Blockchain&quot;,
+    &quot;Cybersecurity&quot;,
+    &quot;IoT&quot;,
+    &quot;Industry Insights&quot;
   ];
 
   return (
     <Layout
-      title="Blog - Zion Tech Group"
-      description="Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group's expert team."
+      title=&quot;Blog - Zion Tech Group&quot;
+      description=&quot;Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group&apos;s expert team.&quot;
     >
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      <section className=&quot;bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20&quot;>
+        <div className=&quot;container mx-auto px-4 text-center&quot;>
+          <h1 className=&quot;text-5xl md:text-6xl font-bold mb-6&quot;>
             Tech
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Blog</span>
+            <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400&quot;> Blog</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
+          <p className=&quot;text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200&quot;>
             Stay ahead of the curve with insights, trends, and best practices from our technology experts.
           </p>
         </div>
       </section>
 
       {/* Blog Content */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <section className=&quot;py-20 bg-white&quot;>
+        <div className=&quot;container mx-auto px-4&quot;>
+          <div className=&quot;grid grid-cols-1 lg:grid-cols-4 gap-8&quot;>
             {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-8">
+            <div className=&quot;lg:col-span-1&quot;>
+              <div className=&quot;sticky top-8&quot;>
                 {/* Categories */}
-                <div className="bg-gray-50 rounded-lg p-6 mb-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Categories</h3>
-                  <ul className="space-y-2">
+                <div className=&quot;bg-gray-50 rounded-lg p-6 mb-8&quot;>
+                  <h3 className=&quot;text-lg font-semibold text-gray-900 mb-4&quot;>Categories</h3>
+                  <ul className=&quot;space-y-2&quot;>
                     {categories.map((category, index) => (
                       <li key={index}>
                         <a
-                          href="#"
+                          href=&quot;#&quot;
                           className={`block px-3 py-2 rounded-md text-sm transition-colors ${
                             index === 0
-                              ? 'bg-blue-100 text-blue-700 font-medium'
-                              : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
+                              ? &apos;bg-blue-100 text-blue-700 font-medium&apos;
+                              : &apos;text-gray-600 hover:bg-gray-100 hover:text-gray-900&apos;
                           }`}
                         >
                           {category}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 {/* Newsletter Signup */}
-                <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-6 text-white">
-                  <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
-                  <p className="text-sm text-blue-100 mb-4">
+                <div className=&quot;bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-6 text-white&quot;>
+                  <h3 className=&quot;text-lg font-semibold mb-4&quot;>Stay Updated</h3>
+                  <p className=&quot;text-sm text-blue-100 mb-4&quot;>
                     Subscribe to our newsletter for the latest tech insights and updates.
                   </p>
-                  <form className="space-y-3">
+                  <form className=&quot;space-y-3&quot;>
                     <input
-                      type="email"
-                      placeholder="Enter your email"
-                      className="w-full px-3 py-2 rounded-md text-gray-900 text-sm"
+                      type=&quot;email&quot;
+                      placeholder=&quot;Enter your email&quot;
+                      className=&quot;w-full px-3 py-2 rounded-md text-gray-900 text-sm&quot;
                     />
                     <button
-                      type="submit"
-                      className="w-full bg-white text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-md font-semibold text-sm transition-colors"
+                      type=&quot;submit&quot;
+                      className=&quot;w-full bg-white text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-md font-semibold text-sm transition-colors&quot;
                     >
                       Subscribe
                     </button>
@@ -155,49 +155,49 @@ const Blog: NextPage = () => {
             </div>
 
             {/* Blog Posts */}
-            <div className="lg:col-span-3">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className=&quot;lg:col-span-3&quot;>
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
                 {blogPosts.map((post) => (
-                  <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500"></div>
-                    <div className="p-6">
-                      <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
-                        <span className="flex items-center">
-                          <Tag className="w-4 h-4 mr-1" />
+                  <article key={post.id} className=&quot;bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow&quot;>
+                    <div className=&quot;h-48 bg-gradient-to-br from-blue-400 to-purple-500&quot;></div>
+                    <div className=&quot;p-6&quot;>
+                      <div className=&quot;flex items-center space-x-4 text-sm text-gray-500 mb-3&quot;>
+                        <span className=&quot;flex items-center&quot;>
+                          <Tag className=&quot;w-4 h-4 mr-1&quot; />
                           {post.category}
                         </span>
-                        <span className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
+                        <span className=&quot;flex items-center&quot;>
+                          <Clock className=&quot;w-4 h-4 mr-1&quot; />
                           {post.readTime}
                         </span>
                       </div>
                       
-                      <h2 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
+                      <h2 className=&quot;text-xl font-semibold text-gray-900 mb-3 line-clamp-2&quot;>
                         {post.title}
                       </h2>
                       
-                      <p className="text-gray-600 mb-4 line-clamp-3">
+                      <p className=&quot;text-gray-600 mb-4 line-clamp-3&quot;>
                         {post.excerpt}
                       </p>
                       
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-3 text-sm text-gray-500">
-                          <span className="flex items-center">
-                            <User className="w-4 h-4 mr-1" />
+                      <div className=&quot;flex items-center justify-between&quot;>
+                        <div className=&quot;flex items-center space-x-3 text-sm text-gray-500&quot;>
+                          <span className=&quot;flex items-center&quot;>
+                            <User className=&quot;w-4 h-4 mr-1&quot; />
                             {post.author}
                           </span>
-                          <span className="flex items-center">
-                            <Calendar className="w-4 h-4 mr-1" />
+                          <span className=&quot;flex items-center&quot;>
+                            <Calendar className=&quot;w-4 h-4 mr-1&quot; />
                             {new Date(post.date).toLocaleDateString()}
                           </span>
                         </div>
                         
                         <Link
                           href={`/blog/${post.slug}`}
-                          className="text-blue-600 hover:text-blue-700 font-medium flex items-center text-sm"
+                          className=&quot;text-blue-600 hover:text-blue-700 font-medium flex items-center text-sm&quot;
                         >
                           Read More
-                          <ArrowRight className="w-4 h-4 ml-1" />
+                          <ArrowRight className=&quot;w-4 h-4 ml-1&quot; />
                         </Link>
                       </div>
                     </div>
@@ -206,8 +206,8 @@ const Blog: NextPage = () => {
               </div>
 
               {/* Load More Button */}
-              <div className="text-center mt-12">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              <div className=&quot;text-center mt-12&quot;>
+                <button className=&quot;bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors&quot;>
                   Load More Posts
                 </button>
               </div>
@@ -217,17 +217,17 @@ const Blog: NextPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let's discuss how our technology solutions can help you achieve your goals and stay ahead of the competition.
+      <section className=&quot;py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white&quot;>
+        <div className=&quot;container mx-auto px-4 text-center&quot;>
+          <h2 className=&quot;text-4xl font-bold mb-6&quot;>Ready to Transform Your Business?</h2>
+          <p className=&quot;text-xl mb-8 max-w-3xl mx-auto&quot;>
+            Let&apos;s discuss how our technology solutions can help you achieve your goals and stay ahead of the competition.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+          <div className=&quot;flex flex-col sm:flex-row justify-center gap-4&quot;>
+            <Link href=&quot;/contact&quot; className=&quot;bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg&quot;>
               Get Started Today
             </Link>
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+            <Link href=&quot;/services&quot; className=&quot;bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg&quot;>
               View Our Services
             </Link>
           </div>

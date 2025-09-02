@@ -1,1 +1,44 @@
- import { Link } from 'react-router-dom' const DigitalTransformation = () => { return (<div className='min-h-screen bg-gradient-to-br from-slate-50 to-slate-100'>''' <section className='pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white'>''' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>''' <div className='text-center'>''' <h1 className='text-4xl md: text-5xl font-bold mb-6'>Digital Transformation</h1>''' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>Modernize your business processes and operations.</p>' </div>' </div>'' </section>''' <section className='py-16 bg-white'>''' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>''' <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>''' <div className='bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl'>''' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Process Automation</h3>''' <p className='text-slate-600'>Streamline workflows with intelligent automation.</p>'' </div>''' <div className='bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl'>''' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Legacy Modernization</h3>''' <p className='text-slate-600'>Update and integrate legacy systems.</p>'' </div>''' <div className='bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl'>''' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Change Management</h3>''' <p className='text-slate-600'>Guide your team through digital adoption.</p>' </div>' </div>' </div>'' </section>''' <section className='py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white'>''' <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>''' <h2 className='text-3xl font-bold mb-6'>Transform Your Business</h2>''' <Link to='/contact' className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors duration-300'>Get Started</Link> </div> </section>' </div>)'}'; export default DigitalTransformation';'';'"
+import React from 'react';
+import Link from 'next/link';
+import { SEO } from '../../components/SEO';
+
+export default function Transformation() {
+  return (
+    <div className="min-h-screen bg-gray-100">
+      <SEO 
+        title="Transformation - Zion Tech Group"
+        description="Professional Transformation services by Zion Tech Group. Expert solutions for your business needs."
+      />
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Transformation
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Professional Transformation services designed to help your business grow and succeed. 
+            Our expert team provides comprehensive solutions tailored to your specific needs.
+          </p>
+          <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Service Overview</h2>
+            <p className="text-gray-600 mb-6">
+              This service page is currently under development. Our team is working hard to bring you 
+              detailed information about our Transformation offerings.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" 
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Contact Us
+              </Link>
+              <Link href="/services" 
+                className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

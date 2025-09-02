@@ -1,1 +1,44 @@
- import { motion } from 'framer-motion' import {  FileText, Search, Shield, Zap, Brain, CheckCircle, Clock, DollarSign, Users, BarChart3, Lock, Globe, Award, Star, ArrowRight, Phone, Mail, MapPin, ExternalLink } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function AILegalDocumentAnalysis() { const features = [ { icon: <Brain className='w-6 h-6' />, '';' title: 'AI-Powered Contract Analysis', '';' description: 'Advanced NLP algorithms analyze contracts, identify risks, and extract key terms with 99.2% accuracy''},'{''' icon: <Search className='w-6 h-6' />, '';' title: 'Intelligent Document Search', '';' description: 'Semantic search across millions of legal documents with context-aware results and relevance scoring''},'{''' icon: <Shield className='w-6 h-6' />, '';' title: 'Compliance Monitoring', '';' description: 'Real-time compliance tracking with automated alerts for regulatory changes and deadline management''},'{''' icon: <Zap className='w-6 h-6' />, '';' title: 'Automated Risk Assessment', '';' description: 'AI-driven risk scoring and mitigation recommendations for legal documents and contracts''},'{''' icon: <Users className='w-6 h-6' />, '';' title: 'Collaborative Review', '';' description: 'Multi-user document review with version control, comments, and approval workflows''},'{''' icon: <BarChart3 className='w-6 h-6' />, '';' title: 'Analytics Dashboard', '';' description: 'Comprehensive insights into document patterns, risk trends, and compliance metrics' } ]';' const pricing = ['{';'' name: 'Starter', '';' price: '$299', '';' period: '/month',';' features: ['';Up to 100 documents/month', '';Basic AI analysis', '';Standard search', '';Email support', '';Basic compliance alerts' ],' popular: false'},'{';'' name: 'Professional', '';' price: '$799', '';' period: '/month',';' features: ['';Up to 1, 000 documents/month','';Advanced AI analysis', '';Semantic search', '';Priority support', '';Full compliance monitoring', '';Risk assessment', '';API access' ],' popular: true'},'{';'' name: 'Enterprise', '';' price: '$1, 999','';' period: '/month',';' features: ['';Unlimited documents', '';Custom AI models', '';Advanced analytics', '';Dedicated support', '';Custom integrations', '';White-label options', '';SLA guarantees' ], popular: false' }'; ]'; ';' const benefits = ['';Reduce legal review time by 85%', '';Identify contract risks 3x faster', '';Ensure 100% compliance accuracy', '';Save $50, 000+ annually on legal costs','';Improve contract negotiation outcomes', '';Streamline due diligence processes''; ]'; ';' return (''' <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'' <SEO '';' title='AI-Powered Legal Document Analysis Platform - Zion Tech Group'';' description='Advanced AI platform for legal document analysis, contract review, and compliance monitoring. Reduce legal review time by 85% with intelligent automation.''/>';' {}''' <section className='relative overflow-hidden py-20 px-4 sm: px-6 lg:px-8'>''' <div className='max-w-7xl mx-auto text-center'> <motion.div' initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}'; transition={{ duration: 0.8 }}';' >''' <h1 className='text-5xl md: text-6xl font-bold text-white mb-6'>'; AI-Powered Legal Document Analysis'' </h1>''' <p className='text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>'; Transform your legal operations with intelligent document analysis, automated risk assessment, and compliance monitoring.'; Reduce review time by 85% while improving accuracy and reducing costs.'' </p>''' <div className='flex flex-col sm: flex-row gap-4 justify-center'>'' <a'';' href='https:'''";
+import React from 'react';
+import Link from 'next/link';
+import { SEO } from '../../components/SEO';
+
+export default function aiLegalDocumentAnalysis() {
+  return (
+    <div className="min-h-screen bg-gray-100">
+      <SEO 
+        title="ai-legal-document-analysis - Zion Tech Group"
+        description="Professional ai-legal-document-analysis services by Zion Tech Group. Expert solutions for your business needs."
+      />
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Ai Legal Document Analysis
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Professional ai-legal-document-analysis services designed to help your business grow and succeed. 
+            Our expert team provides comprehensive solutions tailored to your specific needs.
+          </p>
+          <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Service Overview</h2>
+            <p className="text-gray-600 mb-6">
+              This service page is currently under development. Our team is working hard to bring you 
+              detailed information about our ai-legal-document-analysis offerings.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" 
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Contact Us
+              </Link>
+              <Link href="/services" 
+                className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
