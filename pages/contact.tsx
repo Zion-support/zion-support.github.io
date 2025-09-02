@@ -70,6 +70,7 @@ const ContactPage: NextPage = () => {
   ];
 
   const services = [
+    // Micro SaaS Services
     'AI Content Generator Pro',
     'Smart Project Manager',
     'Inventory Tracker Pro',
@@ -84,6 +85,23 @@ const ContactPage: NextPage = () => {
     'Business Password Manager',
     'Advanced Form Builder',
     'Screenshot API Service',
+    'AI Meeting Transcriber Pro',
+    'Smart Invoice Generator',
+    'AI Code Reviewer',
+    'Smart Contract Auditor',
+    'AI SEO Optimizer Pro',
+    'Blockchain Analytics Platform',
+    'AI Video Editor Pro',
+    'Smart Document Processor',
+    'AI Customer Insights Platform',
+    'Smart Workflow Automator',
+    'AI Market Research Platform',
+    'Smart Contract Deployer',
+    'AI Content Moderator',
+    'Smart Inventory Predictor',
+    'AI Price Optimizer',
+    
+    // IT Services
     'Cloud Migration Expert',
     'Kubernetes Orchestration',
     'API Gateway & Management',
@@ -96,6 +114,18 @@ const ContactPage: NextPage = () => {
     'Cybersecurity Assessment',
     'DevOps Automation Suite',
     'Data Backup & Recovery',
+    'Zero Trust Security Implementation',
+    'Edge Computing Infrastructure',
+    'Quantum-Ready Security',
+    '5G Network Optimization',
+    'AI Infrastructure Setup',
+    'Blockchain Infrastructure',
+    'Multi-Cloud Orchestration',
+    'IoT Security Audit',
+    'Serverless Architecture Design',
+    'Data Governance Framework',
+    
+    // AI Services
     'Custom AI Model Development',
     'Computer Vision Solutions',
     'Natural Language Processing',
@@ -108,6 +138,17 @@ const ContactPage: NextPage = () => {
     'AI Process Automation',
     'AI Analytics Platform',
     'AI Chatbot Development',
+    'Generative AI Platform',
+    'AI Drug Discovery Platform',
+    'AI Autonomous Systems',
+    'AI Climate Modeling Platform',
+    'AI Financial Modeling Platform',
+    'AI Supply Chain Optimization',
+    'AI Cybersecurity Threat Detection',
+    'AI Personalization Engine',
+    'AI Quality Assurance Platform',
+    'AI Energy Optimization Platform',
+    
     'Other'
   ];
 

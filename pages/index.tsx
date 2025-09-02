@@ -11,8 +11,8 @@ const Home: NextPage = () => {
   const aiServices = getServicesByCategory('ai-services');
 
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
+    { number: '1000+', label: 'Projects Completed' },
+    { number: '150+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' },
   ];
@@ -43,16 +43,16 @@ const Home: NextPage = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400">500+</div>
+              <div className="text-3xl font-bold text-blue-400">1000+</div>
               <div className="text-gray-300">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400">50+</div>
-              <div className="text-gray-300">Team Members</div>
+              <div className="text-3xl font-bold text-purple-400">150+</div>
+              <div className="text-gray-300">Happy Clients</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-indigo-400">98%</div>
-              <div className="text-gray-300">Client Satisfaction</div>
+              <div className="text-3xl font-bold text-indigo-400">99.9%</div>
+              <div className="text-gray-300">Uptime Guarantee</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400">24/7</div>
@@ -118,6 +118,60 @@ const Home: NextPage = () => {
         </div>
       </section>
 
+      {/* Service Portfolio Overview */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Comprehensive Technology Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From innovative micro SaaS applications to enterprise-grade AI solutions, we offer a complete range of technology services.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="text-center p-6">
+              <div className="text-4xl font-bold text-blue-600 mb-2">{microSaasServices.length}+</div>
+              <div className="text-lg font-semibold text-gray-900 mb-2">Micro SaaS Solutions</div>
+              <div className="text-gray-600">Innovative, focused applications solving specific business challenges</div>
+            </div>
+            <div className="text-center p-6">
+              <div className="text-4xl font-bold text-purple-600 mb-2">{itServices.length}+</div>
+              <div className="text-lg font-semibold text-gray-900 mb-2">IT Services</div>
+              <div className="text-gray-600">Enterprise infrastructure, security, and cloud solutions</div>
+            </div>
+            <div className="text-center p-6">
+              <div className="text-4xl font-bold text-indigo-600 mb-2">{aiServices.length}+</div>
+              <div className="text-lg font-semibold text-gray-900 mb-2">AI Services</div>
+              <div className="text-gray-600">Cutting-edge artificial intelligence and machine learning solutions</div>
+            </div>
+          </div>
+
+          {/* Featured Services */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-500">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Meeting Transcriber</h3>
+              <p className="text-gray-600 text-sm mb-3">Real-time transcription with action items extraction</p>
+              <div className="text-blue-600 font-semibold">Starting at $25/month</div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-purple-500">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Zero Trust Security</h3>
+              <p className="text-gray-600 text-sm mb-3">Complete security architecture implementation</p>
+              <div className="text-purple-600 font-semibold">Starting at $12,000</div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-indigo-500">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Generative AI Platform</h3>
+              <p className="text-gray-600 text-sm mb-3">Custom AI for content creation and automation</p>
+              <div className="text-indigo-600 font-semibold">Starting at $15,000</div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-green-500">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Smart Contract Auditor</h3>
+              <p className="text-gray-600 text-sm mb-3">AI-powered blockchain security auditing</p>
+              <div className="text-green-600 font-semibold">Starting at $150/month</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-blue-600">
         <div className="container mx-auto px-4 text-center">
@@ -127,9 +181,14 @@ const Home: NextPage = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Let's discuss how we can help transform your business with cutting-edge technology solutions.
           </p>
-          <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-            Get Started Today
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+              Get Started Today
+            </Link>
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+              View All Services
+            </Link>
+          </div>
         </div>
       </section>
     </MainLayout>
