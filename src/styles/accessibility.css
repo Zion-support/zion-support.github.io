@@ -1,1 +1,121 @@
-.high-contrast { --bg-primary: #000000; --bg-secondary: #ffffff; --text-primary: #ffffff; --text-secondary: #000000; --border-color: #ffffff; } .high-contrast * { background-color: var(--bg-primary) !important; color: var(--text-primary) !important; border-color: var(--border-color) !important; } .high-contrast button, .high-contrast input, .high-contrast select, .high-contrast textarea { background-color: var(--bg-secondary) !important; color: var(--text-secondary) !important; border: 2px solid var(--border-color) !important; } .large-text { font-size: 1.25rem; } .large-text h1 { font-size: 3rem; } .large-text h2 { font-size: 2.5rem; } .large-text h3 { font-size: 2rem; } .large-text h4 { font-size: 1.75rem; } .large-text h5 { font-size: 1.5rem; } .large-text h6 { font-size: 1.25rem; } .large-text p { font-size: 1.25rem; } .large-text button { font-size: 1.25rem; padding: 0.75rem 1.5rem; } .large-text input { font-size: 1.25rem; padding: 0.75rem; } .reduced-motion *, .reduced-motion *::before, .reduced-motion *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } .focus-indicators *:focus { outline: 3px solid #0066cc !important; outline-offset: 2px !important; box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3) !important; } .focus-indicators button:focus, .focus-indicators input:focus, .focus-indicators select:focus, .focus-indicators textarea:focus, .focus-indicators a:focus { outline: 3px solid #0066cc !important; outline-offset: 2px !important; box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3) !important; } .colorblind-friendly { --primary-color: #1f77b4; --secondary-color: #ff7f0e; --success-color: #2ca02c; --warning-color: #d62728; --info-color: #9467bd; } .colorblind-friendly .text-blue-600 { color: var(--primary-color) !important; } .colorblind-friendly .text-orange-600 { color: var(--secondary-color) !important; } .colorblind-friendly .text-green-600 { color: var(--success-color) !important; } .colorblind-friendly .text-red-600 { color: var(--warning-color) !important; } .colorblind-friendly .text-purple-600 { color: var(--info-color) !important; } .dyslexia-friendly { font-family: 'OpenDyslexic', 'Comic Sans MS', cursive, sans-serif !important; line-height: 1.6 !important; letter-spacing: 0.1em !important; word-spacing: 0.2em !important; } .dyslexia-friendly h1, .dyslexia-friendly h2, .dyslexia-friendly h3, .dyslexia-friendly h4, .dyslexia-friendly h5, .dyslexia-friendly h6 { font-weight: bold !important; line-height: 1.4 !important; } .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; } .skip-link { position: absolute; top: -40px; left: 6px; background: #000; color: #fff; padding: 8px; text-decoration: none; z-index: 1000; } .skip-link:focus { top: 6px; } .high-contrast .btn-primary { background-color: #ffffff !important; color: #000000 !important; border: 2px solid #000000 !important; } .high-contrast .btn-secondary { background-color: #000000 !important; color: #ffffff !important; border: 2px solid #ffffff !important; } .high-contrast a { text-decoration: underline !important; text-decoration-thickness: 2px !important; } input:invalid { border-color: #dc2626 !important; } input:valid { border-color: #16a34a !important; } .error-message { color: #dc2626; font-size: 0.875rem; margin-top: 0.25rem; } .success-message { color: #16a34a; font-size: 0.875rem; margin-top: 0.25rem; } .loading { position: relative; pointer-events: none; } .loading::after { content: ''; position: absolute; top: 50%; left: 50%; width: 20px; height: 20px; margin: -10px 0 0 -10px; border: 2px solid #f3f3f3; border-top: 2px solid #3498db; border-radius: 50%; animation: spin 1s linear infinite; } @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } } .reduced-motion .loading::after { animation: none; border-top-color: #3498db; } @media print { .no-print { display: none !important; } body { font-size: 12pt; line-height: 1.4; color: #000; background: #fff; } a { text-decoration: underline; } a[href]:after { content: " (" attr(href) ")"; } }
+/* Accessibility enhancements */
+
+/* Focus indicators */
+*:focus {
+  outline: 2px solid #00d4ff;
+  outline-offset: 2px;
+}
+
+/* Skip link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #00d4ff;
+  color: #0b1220;
+  padding: 8px;
+  z-index: 9999;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --zion-cyan: #00d4ff;
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+  }
+  
+  body {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  a {
+    color: #00d4ff;
+    text-decoration: underline;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Large text support */
+@media (min-resolution: 2dppx) {
+  body {
+    font-weight: 300;
+  }
+}
+
+/* Keyboard navigation */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #00d4ff;
+  outline-offset: 2px;
+}
+
+/* Enhanced contrast for links */
+a {
+  color: #00d4ff;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+
+a:hover {
+  color: #38bdf8;
+}
+
+/* Loading states */
+.loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid #00d4ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

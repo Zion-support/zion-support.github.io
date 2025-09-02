@@ -1,13 +1,20 @@
-import { z } from 'zod';
+import { z } from,
+  zod';
 
 // Environment variable schemas;
 const EnvironmentSchema = z.object({
   NODE_ENV: z
-    .enum(['development',production',test'])
-    .default('development'),
-  NEXT_PUBLIC_APP_URL: z.string().url().default('http://localhost:3000'),
-  NEXT_PUBLIC_APP_NAME: z.string().default('Zion Tech Group'),
-  NEXT_PUBLIC_APP_VERSION: z.string().default('1.0.0'),
+    .enum([
+  'development,production,
+  ,test'])
+    .default(
+  'development'),
+  NEXT_PUBLIC_APP_URL: z.string().url().default(
+  'http://localhost:3000),
+  NEXT_PUBLIC_APP_NAME: z.string().default(,
+  Zion Tech Group'),
+  NEXT_PUBLIC_APP_VERSION: z.string().default(
+  '1.0.0),
 
   // Database
   DATABASE_URL: z.string().optional(),
@@ -47,44 +54,55 @@ const EnvironmentSchema = z.object({
 
   // Monitoring
   SENTRY_DSN: z.string().url().optional(),
-  LOG_LEVEL: z.enum(['error',warn',info',debug']).default('info'),
+  LOG_LEVEL: z.enum([,
+  error',warn
+  ',info',debug
+  ']).default('info
+  '),
 
   // Feature Flags
   NEXT_PUBLIC_ENABLE_ANALYTICS: z
     .string()
-    .transform(val => val === 'true')
+    .transform(val => val === 'true)
     .default(true),
   NEXT_PUBLIC_ENABLE_NOTIFICATIONS: z
     .string()
-    .transform(val => val === 'true')
+    .transform(val => val ===,
+  true
+  ')
     .default(true),
   NEXT_PUBLIC_ENABLE_PWA: z
     .string()
-    .transform(val => val === 'true')
+    .transform(val => val === 'true)
     .default(true),
 
   // Performance
   NEXT_PUBLIC_ENABLE_PERFORMANCE_MONITORING: z
     .string()
-    .transform(val => val === 'true')
+    .transform(val => val ===,
+  true
+  ')
     .default(true),
   NEXT_PUBLIC_ENABLE_ERROR_TRACKING: z
     .string()
-    .transform(val => val === 'true')
+    .transform(val => val === 'true)
     .default(true),
 
   // Security
   NEXT_PUBLIC_ENABLE_CSRF_PROTECTION: z
     .string()
-    .transform(val => val === 'true')
+    .transform(val => val ===,
+  true
+  ')
     .default(true),
   NEXT_PUBLIC_ENABLE_RATE_LIMITING: z
     .string()
-    .transform(val => val === 'true')
+    .transform(val => val === 'true)
     .default(true),
   NEXT_PUBLIC_ENABLE_BOT_PROTECTION: z
     .string()
-    .transform(val => val === 'true')
+    .transform(val => val === 'true
+  ')
     .default(true),
 });
 
@@ -105,7 +123,9 @@ const AppConfigSchema = z.object({
   name: z.string(),
   version: z.string(),
   url: z.string().url(),
-  environment: z.enum(['development',production',test']),
+  environment: z.enum(['development
+  ',production',test
+  ']),
   debug: z.boolean(),
   features: FeatureFlagsSchema
 });
@@ -146,7 +166,8 @@ class Configuration {
     } catch (error) {
       if (error instanceof z.ZodError) {
         const missingVars = error.issues
-          .map(err => err.path.join('.'))
+          .map(err => err.path.join('.
+  '))
           .join(',);
         throw new Error(
           `Environment validation failed. Missing or invalid variables: ${missingVars}`
@@ -164,7 +185,8 @@ class Configuration {
       version: env.NEXT_PUBLIC_APP_VERSION,
       url: env.NEXT_PUBLIC_APP_URL,
       environment: env.NODE_ENV,
-      debug: env.NODE_ENV === 'development',
+      debug: env.NODE_ENV ===
+  'development',
       features: {
         analytics: env.NEXT_PUBLIC_ENABLE_ANALYTICS,
         notifications: env.NEXT_PUBLIC_ENABLE_NOTIFICATIONS,
@@ -179,13 +201,17 @@ class Configuration {
   }
 
   private buildRuntimeConfig(): z.infer<typeof RuntimeConfigSchema> {
-    const isClient = typeof window !== 'undefined';
+    const isClient = typeof window !==,
+  undefined';
     const isServer = !isClient;
 
     return {
-      isProduction: this.config.environment === 'production',
-      isDevelopment: this.config.environment === 'development',
-      isTest: this.config.environment === 'test',
+      isProduction: this.config.environment ===
+  'production,
+      isDevelopment: this.config.environment ===,
+  development',
+      isTest: this.config.environment ===
+  'test,
       isClient,
       isServer
     };
@@ -315,15 +341,19 @@ export function isServer(): boolean {
 }
 
 // Configuration validation on import
-if (typeof window === 'undefined') {
+if (typeof window ===
+  'undefined') {
   // Server-side validation
   try {
     config.validate();
-    console.log('[Config] Configuration validated successfully');
+    console.log(
+  '[Config] Configuration validated successfully');
   } catch (error) {
-    console.error('[Config] Configuration validation failed:', error);
+    console.error(
+  '[Config] Configuration validation failed:', error);
     if (config.isProduction()) {
-      throw new Error('Configuration validation failed in production');
+      throw new Error(
+  'Configuration validation failed in production');
     }
   }
 }
