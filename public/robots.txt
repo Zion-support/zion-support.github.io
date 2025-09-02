@@ -1,10 +1,18 @@
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-# Block access to admin areas
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/
+Disallow: /automation/
+Disallow: /scripts/
+Disallow: /error-reports/
+Disallow: /*.json$
+Disallow: /*.log$

@@ -10,6 +10,8 @@
     "pm2:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env)",
     "pm2:status": "pm2 status",
     "pm2:logs": "pm2 logs --lines 200",
+    "security:audit": "npm audit --audit-level=moderate",
+    "security:fix": "npm audit fix --force",
     "sitemap": "node scripts/generate-sitemap.js",
     "pm2:fastads:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.fast-ads.local.cjs --update-env",
     "pm2:fastads:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.fast-ads.local.cjs || pm2 start ecosystem.fast-ads.local.cjs --update-env)",
@@ -51,7 +53,10 @@
     "type-check:watch": "tsc --noEmit --watch",
     "test:ci": "jest --ci --coverage --watchAll=false",
     "clean": "rm -rf .next node_modules/.cache",
-    "postinstall": "npm run clean"
+    "postinstall": "npm run clean",
+    "prebuild": "npm run security:audit",
+    "postbuild": "npm run analyze:bundle",
+    "analyze:bundle": "ANALYZE=true npm run build"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.2",
