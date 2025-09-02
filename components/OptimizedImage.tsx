@@ -1,9 +1,10 @@
-'use client';''''''import Image from 'next/image';''''interface OptimizedImageProps {src: string;
+'use client'''''''import Image from 'next/image''''interface OptimizedImageProps {
+  src: string;
   alt: string;
   width?: number;
   height?: number;
   className?: string;
-priority?: boolean;'''  quality?: number;'''  placeholder?: 'blur' | 'empty';'  blurDataURL?: string;'  sizes?: string;fill?: boolean;
+priority?: boolean'''  quality?: number'''  placeholder?: 'blur' | 'empty''  blurDataURL?: string  sizes?: string;fill?: boolean;
   style?: React.CSSProperties;
   onClick?: () => void;
   onLoad?: () => void;
@@ -30,7 +31,7 @@ const observer = new IntersectionObserver();([entry]) => {
         if (entry.isIntersecting) {
 
           setIsInView(true);
-          observer.disconnect();
+          observer.disconnect()
         }
 }, {
 ''''''        rootMargin: '50px', // Start loading 50px before the image comes into view'        threshold: 0.1}'    );if (imageRef.current) {
@@ -55,16 +56,16 @@ const handleError = () => {;setHasError(true);
   // Fallback image for errors
   if (hasError) {
 
-return();
+return()
       <div'''        className={`flex items-center justify-center bg-gray-200 dark: bg-gray-700 text-gray-500 dark:text-gray-400 ${className}`}'''        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}'      >'        <div className="text-center">"""          <svg"""            className="mx-auto h-8 w-8 mb-2""""            fill="none""""            viewBox="0 0 24 24""""            stroke="currentColor""          >"""            <path"""              strokeLinecap="round""""              strokeLinejoin="round""""              strokeWidth={2}"""              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z""            />"""          </svg>"""          <p className="text-xs">Image failed to load</p>"        </div>"      </div>`    );}
 
   // Loading skeleton
   if (!isInView) {
 
-return();
+return()
       <div``        ref={imageRef}`'`''        className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}'''        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}'      />'    );`  }
 
-  return();
+  return()
     <div``      ref={imageRef}```      className={`relative ${className}`}`      style={style}
       onClick={onClick}
     >
@@ -80,7 +81,7 @@ width={fill ? undefined : width}``        height={fill ? undefined : height}``` 
         onError={handleError}
         style={{
 ''''''          objectFit: fill ? 'cover' : 'contain'}}'      />'
-      {/* Loading spinner */}"""      {isLoading && ("""        <div className="absolute inset-0 flex items-center justify-center z-20">"""          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>"        </div>"      )}</div>
+      {/* Loading spinner */}"""      {isLoading && ("""        <div className="absolute inset-0 flex items-center justify-center z-20">"""          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>"        </div>"      )}</div>"
   );
 };
 
@@ -91,5 +92,5 @@ export const withImageOptimization = <P extends object>(;Component: React.Compon
   return (props: P) => (
     <Component {...props} />
   );
-};
-'"`'""export default OptimizedImage;'"`'"`""`
+}
+'"`'""export default OptimizedImage'"`'"`""`"

@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 function toCamelCase(str) {
   return str
     .replace(/^[0-9]/, (match) => {
@@ -13,7 +13,7 @@ function toCamelCase(str) {
           '0': 'Zero'
       
 
-};
+}
       return numberWords[match] || match})
   '0': 'Zero'
       
@@ -25,7 +25,7 @@ function toCamelCase(str) {
       return numberWords[match] || match;
     })
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase())
-    .replace(/^(.)/, (match) => match.toUpperCase())};
+    .replace(/^(.)/, (match) => match.toUpperCase())}
 function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath,utf8');
@@ -38,7 +38,7 @@ function fixFile(filePath) {
     let newContent = content.replace(
       new RegExp(`const\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g,\\$&')}\\s*:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,g'),
       `const ${camelCaseName}: NextPage = () => {`
-    );
+    )
 
     // Replace the export statement
     newContent = newContent.replace(
@@ -62,7 +62,7 @@ function fixFile(filePath) {
     newContent = newContent.replace(
       /<h1>.*?<\/h1>/g,
       `<h1>${title}</h1>`
-    );
+    )
 
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent,utf8');
@@ -102,7 +102,7 @@ function fixedCount = 0;
   
   return fixedCount}
 // Start fixing files
-// // // // // // // console.log('Fixing invalid variable names in TypeScript files...');
+// // // // // // // console.log('Fixing invalid variable names in TypeScript files...')
 const fixedCount = findAndFixFiles('./pages');
 // // // // // // // console.log(`Fixed ${fixedCount} files.`);
 console.log(`Fixed ${fixedCount} files.`);

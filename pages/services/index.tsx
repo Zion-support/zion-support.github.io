@@ -1,42 +1,34 @@
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout';
-import { services, getServicesByCategory } from '../../data/services';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from 'lucide-react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react'
+import type { NextPage } from 'next'
+import MainLayout from '../../components/layout/MainLayout'
+import { services, getServicesByCategory } from '../../data/services'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from 'lucide-react'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 const ServicesPage: NextPage = () => {
-  const microSaasServices = getServicesByCategory('micro-saas');
-  const itServices = getServicesByCategory('it-services');
-  const aiServices = getServicesByCategory('ai-services');
+  const microSaasServices = getServicesByCategory('micro-saas')
+  const itServices = getServicesByCategory('it-services')
+  const aiServices = getServicesByCategory('ai-services')
 
   const stats = [
-    { number: '80+', label: 'Micro SaaS Solutions', icon: Zap },
-    { number: '35+', label: 'IT Services', icon: Shield },
-    { number: '30+', label: 'AI Services', icon: Globe },
-    { number: '500+', label: 'Projects Completed', icon: TrendingUp },
-  ];
+    { number: '80+', label: 'Micro SaaS Solutions', icon: Zap }, { number: '35+', label: 'IT Services', icon: Shield },
+    { number: '30+', label: 'AI Services', icon: Globe }, { number: '500+', label: 'Projects Completed', icon: TrendingUp },
+  ]
 
   const benefits = [
     {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: 'Competitive Pricing',
+      icon: <DollarSign className="w-8 h-8" />, title: 'Competitive Pricing',
       description: 'Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.'
     },
     {
-      icon: <Target className="w-8 h-8" />,
-      title: 'Proven Results',
+      icon: <Target className="w-8 h-8" />, title: 'Proven Results',
       description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.'
-    },
-    {
+    }, {
       icon: <Rocket className="w-8 h-8" />,
-      title: 'Fast Implementation',
-      description: 'Rapid deployment and implementation with minimal downtime, getting you up and running quickly.'
-    },
-    {
+      title: 'Fast Implementation', description: 'Rapid deployment and implementation with minimal downtime, getting you up and running quickly.'
+    }, {
       icon: <Award className="w-8 h-8" />,
-      title: 'Expert Support',
-      description: '24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
+      title: 'Expert Support', description: '24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
     }
   ];
 
@@ -50,7 +42,7 @@ const ServicesPage: NextPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h1 
-              className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
+              className="text-5xl md: text-6xl font-bold mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -68,7 +60,7 @@ const ServicesPage: NextPage = () => {
             </motion.p>
             
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+              className="flex flex-col sm: flex-row gap-4 justify-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -126,7 +118,7 @@ const ServicesPage: NextPage = () => {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             {/* Micro SaaS Services */}
             <motion.div 
               className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
@@ -144,7 +136,7 @@ const ServicesPage: NextPage = () => {
                 Innovative, focused software solutions that solve specific business problems with minimal overhead and maximum impact.
               </p>
               <div className="mb-6">
-                <div className="text-sm text-gray-500 mb-2">Popular Services:</div>
+                <div className="text-sm text-gray-500 mb-2">Popular Services: </div>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• AI Content Generator Pro</li>
                   <li>• AI Email Responder</li>
@@ -157,7 +149,7 @@ const ServicesPage: NextPage = () => {
                 <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>
                 <div className="text-lg font-semibold text-green-600">$12 - $9,999/month</div>
               </div>
-              <Link href="/services/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
+              <Link href="/services/micro-saas" className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
                 View All Micro SaaS <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
@@ -179,7 +171,7 @@ const ServicesPage: NextPage = () => {
                 Comprehensive IT infrastructure, cloud migration, cybersecurity, and enterprise solutions for modern businesses.
               </p>
               <div className="mb-6">
-                <div className="text-sm text-gray-500 mb-2">Popular Services:</div>
+                <div className="text-sm text-gray-500 mb-2">Popular Services: </div>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• Cloud Migration Expert</li>
                   <li>• Edge Computing Solutions</li>
@@ -190,9 +182,9 @@ const ServicesPage: NextPage = () => {
               </div>
               <div className="mb-6">
                 <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>
-                <div className="text-lg font-semibold text-green-600">$2,000 - $500,000/project</div>
+                <div className="text-lg font-semibold text-green-600">$2, 000 - $500,000/project</div>
               </div>
-              <Link href="/services/it-services" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
+              <Link href="/services/it-services" className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
                 View All IT Services <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
@@ -214,7 +206,7 @@ const ServicesPage: NextPage = () => {
                 Cutting-edge artificial intelligence solutions to automate processes, gain insights, and achieve competitive advantages.
               </p>
               <div className="mb-6">
-                <div className="text-sm text-gray-500 mb-2">Popular Services:</div>
+                <div className="text-sm text-gray-500 mb-2">Popular Services: </div>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• AI Drug Discovery Platform</li>
                   <li>• AI Climate Modeling</li>
@@ -225,9 +217,9 @@ const ServicesPage: NextPage = () => {
               </div>
               <div className="mb-6">
                 <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>
-                <div className="text-lg font-semibold text-green-600">$4,000 - $2,000,000/project</div>
+                <div className="text-lg font-semibold text-green-600">$4,000 - $2, 000,000/project</div>
               </div>
-              <Link href="/services/ai-services" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
+              <Link href="/services/ai-services" className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
                 View All AI Services <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
@@ -251,7 +243,7 @@ const ServicesPage: NextPage = () => {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div 
                 key={benefit.title}
@@ -280,7 +272,7 @@ const ServicesPage: NextPage = () => {
       {/* Contact and Pricing Guidance */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow">
               <h3 className="text-xl font-semibold mb-2">Talk to an Expert</h3>
               <p className="text-gray-600 mb-4">Get a tailored recommendation and a quote within 24 hours.</p>
@@ -303,7 +295,7 @@ const ServicesPage: NextPage = () => {
             <div className="bg-white p-6 rounded-lg shadow">
               <h3 className="text-xl font-semibold mb-2">Useful Links</h3>
               <ul className="text-sm text-blue-700 space-y-2">
-                <li><a className="underline" href="https://ziontechgroup.com">Website</a></li>
+                <li><a className="underline" href="https: //ziontechgroup.com">Website</a></li>
                 <li><a className="underline" href="https://ziontechgroup.com/services">All Services</a></li>
                 <li><a className="underline" href="https://ziontechgroup.com/contact">Contact</a></li>
                 <li><a className="underline" href="https://ziontechgroup.com/privacy">Privacy</a></li>
@@ -334,7 +326,7 @@ const ServicesPage: NextPage = () => {
             {services.slice(0, 6).map((service, index) => (
               <motion.div 
                 key={service.id}
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+                className="bg-white p-6 rounded-lg shadow-lg hover: shadow-xl transition-all duration-300 group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -394,9 +386,9 @@ const ServicesPage: NextPage = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our comprehensive technology solutions can help your business achieve its goals and stay ahead of the competition.
+              Let&aposs discuss how our comprehensive technology solutions can help your business achieve its goals and stay ahead of the competition.'
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col sm: flex-row justify-center gap-4">
               <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg">
                 Get Started Today
               </Link>

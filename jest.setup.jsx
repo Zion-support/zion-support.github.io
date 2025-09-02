@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom'
 
 // Mock Next.js router
 jest.mock('next/router', () => ({
@@ -22,7 +22,7 @@ jest.mock('next/router', () => ({
       isFallback: false,
     };
   },
-}));
+}))
 
 // Mock Next.js Image component
 jest.mock('next/image', () => ({
@@ -31,7 +31,7 @@ jest.mock('next/image', () => ({
     // eslint-disable-next-line @next/next/no-img-element
     return <img {...props} />;
   },
-}));
+}))
 
 // Mock Next.js Link component
 jest.mock('next/link', () => ({

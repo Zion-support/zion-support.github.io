@@ -14,7 +14,7 @@ function fixUtilsFile(...args: unknown[]): unknown {
       "export const $1 = $2;",
     );
     content = content.replace(
-      /import\s+React\s+from\s*'rea\s*c\s*t';;'/g,
+      /import\s+React\s+from\s*'rea\s*c\s*t';'/g,
       "import React from 'react';",
     );
     content = content.replace(
@@ -25,9 +25,9 @@ function fixUtilsFile(...args: unknown[]): unknown {
     content = content.replace(
       /if\s*\(!\s*([^)]+)\s*\)\s*retu,\s*r,\s*n\s*([^;]+);/g,
       "if (!$1) return $2;",
-    );
+    )
     // Fix string literals
-    content = content.replace(/'([^']+),\s*([^']+)'/g, "'$1 $2'");
+    content = content.replace(/'([^']+),\s*([^']+)'/g, "'$1 $2'")
     content = content.replace(/"([^"]+),\s*([^"]+)"/g,"$1 $2"');
     // Fix variable names
     content = content.replace(/ht,\s*m,\s*l/g, "html");
@@ -107,7 +107,7 @@ function fixUtilsFile(...args: unknown[]): unknown {
     content = content.replace(
       /NEXT_PUBLIC_SUPABASE_ANON_K,\s*E,\s*Y/g,
       "NEXT_PUBLIC_SUPABASE_ANON_KEY",
-    );
+    )
     content = content.replace(
       /placehold,\s*e,\s*r-k,\s*e,\s*y'/g,
       "'placeholder-key'",

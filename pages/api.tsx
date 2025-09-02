@@ -1,57 +1,42 @@
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from 'lucide-react';
-import Link from 'next/link';
+import React from 'react'
+import type { NextPage } from 'next'
+import MainLayout from '../components/layout/MainLayout'
+import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from 'lucide-react'
+import Link from 'next/link'
 
 const API: NextPage = () => {
   const apiEndpoints = [
     {
-      method: 'GET',
-      endpoint: '/api/v1/users',
-      description: 'Retrieve user information',
-      category: 'Users'
+      method: 'GET', endpoint: '/api/v1/users',
+      description: 'Retrieve user information', category: 'Users'
     },
     {
-      method: 'POST',
-      endpoint: '/api/v1/users',
-      description: 'Create a new user',
-      category: 'Users'
+      method: 'POST', endpoint: '/api/v1/users',
+      description: 'Create a new user', category: 'Users'
     },
     {
-      method: 'GET',
-      endpoint: '/api/v1/projects',
-      description: 'List all projects',
-      category: 'Projects'
+      method: 'GET', endpoint: '/api/v1/projects',
+      description: 'List all projects', category: 'Projects'
     },
     {
-      method: 'POST',
-      endpoint: '/api/v1/projects',
-      description: 'Create a new project',
-      category: 'Projects'
+      method: 'POST', endpoint: '/api/v1/projects',
+      description: 'Create a new project', category: 'Projects'
     },
     {
-      method: 'GET',
-      endpoint: '/api/v1/analytics',
-      description: 'Get analytics data',
-      category: 'Analytics'
+      method: 'GET', endpoint: '/api/v1/analytics',
+      description: 'Get analytics data', category: 'Analytics'
     },
     {
-      method: 'POST',
-      endpoint: '/api/v1/webhooks',
-      description: 'Create a webhook',
-      category: 'Webhooks'
+      method: 'POST', endpoint: '/api/v1/webhooks',
+      description: 'Create a webhook', category: 'Webhooks'
     }
-  ];
+  ]
 
   const sdkLanguages = [
-    { name: 'JavaScript', version: '2.1.0', icon: '🟨' },
-    { name: 'Python', version: '1.8.2', icon: '🐍' },
-    { name: 'PHP', version: '1.5.0', icon: '🐘' },
-    { name: 'Java', version: '1.3.0', icon: '☕' },
-    { name: 'Go', version: '1.2.0', icon: '🐹' },
-    { name: 'Ruby', version: '1.1.0', icon: '💎' }
-  ];
+    { name: 'JavaScript', version: '2.1.0', icon: '🟨' }, { name: 'Python', version: '1.8.2', icon: '🐍' },
+    { name: 'PHP', version: '1.5.0', icon: '🐘' }, { name: 'Java', version: '1.3.0', icon: '☕' },
+    { name: 'Go', version: '1.2.0', icon: '🐹' }, { name: 'Ruby', version: '1.1.0', icon: '💎' }
+  ]
 
   return (
     <MainLayout
@@ -61,7 +46,7 @@ const API: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">API Reference</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
@@ -159,7 +144,7 @@ const API: NextPage = () => {
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Rate Limits</h4>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
-                    <li>Free tier: 1,000 requests/hour</li>
+                    <li>Free tier: 1, 000 requests/hour</li>
                     <li>Pro tier: 10,000 requests/hour</li>
                     <li>Enterprise: Custom limits</li>
                     <li>Rate limit headers included</li>
@@ -195,7 +180,7 @@ const API: NextPage = () => {
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
                     {apiEndpoints.map((endpoint, index) => (
-                      <tr key={index} className="hover:bg-gray-50">
+                      <tr key={index} className="hover: bg-gray-50">
                         <td className="px-6 py-4 whitespace-nowrap">
                           <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
                             endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :
@@ -237,7 +222,7 @@ const API: NextPage = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {sdkLanguages.map((sdk, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="flex items-center mb-4">
@@ -248,10 +233,10 @@ const API: NextPage = () => {
                   </div>
                 </div>
                 <div className="flex space-x-3">
-                  <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors">
+                  <button className="flex-1 bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors">
                     Install
                   </button>
-                  <Link href={`/docs/sdk/${sdk.name.toLowerCase()}`} className="flex-1 border border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg font-semibold transition-colors text-center">
+                  <Link href={`/docs/sdk/${sdk.name.toLowerCase()}`} className="flex-1 border border-blue-600 text-blue-600 hover: bg-blue-50 px-4 py-2 rounded-lg font-semibold transition-colors text-center">
                     Docs
                   </Link>
                 </div>
@@ -277,7 +262,7 @@ const API: NextPage = () => {
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Endpoint</label>
-                  <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500">
                     <option>GET /api/v1/users</option>
                     <option>POST /api/v1/users</option>
                     <option>GET /api/v1/projects</option>

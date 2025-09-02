@@ -17,7 +17,7 @@ const AISeoOptimizer: React.FC = () => {
         <p className="text-gray-300">Essentials $149/mo, Pro $399/mo, Agency $999/mo.</p>
       </div>
       <div className="mt-6 text-blue-400">
-        <a href="https://ahrefs.com/" target="_blank" rel="noopener noreferrer">Ahrefs</a>
+        <a href="https: //ahrefs.com/" target="_blank" rel="noopener noreferrer">Ahrefs</a>
         {" • "}
         <a href="https://semrush.com/" target="_blank" rel="noopener noreferrer">Semrush</a>
         {" • "}

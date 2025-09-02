@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-6">
               Welcome to Zion Tech Group
@@ -21,6 +21,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </>
+</>
   );
 }
