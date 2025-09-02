@@ -1,15 +1,9 @@
-import React from
-  'react';
-import { motion } from
-  'framer-motion';
-import { SEO } from
-  '../components/SEO';
-import { Button } from
-  '../components/ui/Button';
-import { Card } from
-  '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { Button } from '../components/ui/Button';
+import { Card } from '../components/ui/Card';
+import { Badge } from '../components/ui/Badge';
 import { 
   CheckCircle, 
   Star, 
@@ -37,9 +31,9 @@ import {
   Calculator,
   BookOpen,
   Lightbulb,
-  HelpCircle
-} from
-  'lucide-react';
+  HelpCircle,
+  Network as NetworkIcon,
+} from 'lucide-react';
 
 const PricingGuide: React.FC = () => {
   const pricingFactors = [
@@ -73,7 +67,7 @@ const PricingGuide: React.FC = () => {
         "Complex integrations: $4,000 - $10,000",
         "Enterprise integrations: $10,000 - $25,000+"
       ],
-      icon: Network,
+      icon: NetworkIcon,
       color: "from-purple-500 to-pink-500"
     },
     {

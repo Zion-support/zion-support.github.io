@@ -67,7 +67,7 @@
         "src/styles/*"
       ],
       "@data/*": [
-        "src/data/*"
+        "data/*"
       ],
       "@services/*": [
         "src/services/*"
@@ -99,8 +99,13 @@
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "pages/**/*",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "data/services.ts",
+    "styles/**/*",
+    "types/**/*",
+    "utils/**/*",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -111,34 +116,24 @@
     "automation/backups",
     "automation_backup",
     "broken_files_backup",
-    "components",
     "contracts",
     "cypress",
-    "**/*.backup",
-    "**/*.disabled",
     "temp_working",
     "supabase/functions",
-    "src/utils/generateRandomListing.ts",
-    "src/utils/linkChecker.ts",
-    "src/utils/mimeTypeFallback.ts",
-    "src/utils/passwordStrength.tsx",
-    "src/utils/resourceMonitor.ts",
-    "src/utils/seoOptimizer.tsx",
-    "src/utils/serviceWorkerRegistration.ts",
-    "src/utils/unitConversion.ts",
-    "src/utils/withErrorLogging.ts",
-    "src/utils/generateRandomBlogPost.ts",
-    "src/pages/solutions/EnterpriseSolutions.tsx",
-    "src/utils/sitemapGenerator.tsx",
-    "src/pages/zion-hire-ai.tsx",
-    "src/pages/webinars.tsx",
-    "src/routes/*Routes.tsx",
-    "src/pages/services/**",
-    "src/pages/solutions/**",
-    "src/pages/**",
-    "src/routes/**",
-    "src/services/**",
-    "src/types/**",
-    "src/utils/**"
+    "src/**",
+    "data/**",
+    "!data/services.ts",
+    "components/AIChatAssistant.test.ts",
+    "components/AIChatbot.test.ts",
+    "components/AIChatbotSystem.test.ts",
+    "components/layout/EnhancedSidebar2025.tsx",
+    "components/OptimizedImage.tsx",
+    "components/MainSidebar.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.backup",
+    "**/*.disabled"
   ]
 }

@@ -1,11 +1,7 @@
-import React from
-  'react';
-import Head from
-  'next/head';
-import EnhancedNavigation from
-  './layout/EnhancedNavigation';
-import EnhancedFooter from
-  './layout/EnhancedFooter';
+import React from 'react';
+import Head from 'next/head';
+import EnhancedNavigation from './layout/EnhancedNavigation';
+import EnhancedFooter from './layout/EnhancedFooter';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -13,12 +9,10 @@ interface LayoutProps {
   description?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ 
-  children, 
-  title =
-  'Zion Tech Group - Leading Technology Solutions Provider',
-  description =
-  'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.'
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  title = 'Zion Tech Group - Leading Technology Solutions Provider',
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
 }) => {
   return (
     <>
