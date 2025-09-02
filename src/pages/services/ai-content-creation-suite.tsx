@@ -2,33 +2,29 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Users, 
+  FileText, 
   CheckCircle, 
   Star, 
+  Users, 
   TrendingUp, 
+  Zap,
   ArrowLeft,
   Phone,
   Mail,
   Globe,
+  Clock,
   Shield,
+  Brain,
+  Search,
+  Palette,
+  Target,
   BarChart3,
   MessageSquare,
   Calendar,
-  Target,
-  Zap,
-  Database,
-  Lock,
-  Eye,
-  Search,
-  Filter,
-  Download,
-  Upload,
-  Settings,
-  Bell,
   Award
 } from 'lucide-react';
 
-const MicroCRM = () => {
+const AIContentCreationSuite = () => {
   const contactInfo = {
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
@@ -38,84 +34,82 @@ const MicroCRM = () => {
 
   const features = [
     {
-      title: "Contact Management",
-      description: "Organize and manage all your customer contacts with detailed profiles and interaction history",
-      icon: Users
+      title: "Multi-Language Support",
+      description: "Generate content in 50+ languages with native fluency and cultural context",
+      icon: Globe
     },
     {
-      title: "Lead Tracking",
-      description: "Track leads through your sales pipeline with automated scoring and qualification",
-      icon: Target
+      title: "SEO Optimization",
+      description: "AI-powered SEO recommendations and keyword optimization for better search rankings",
+      icon: Search
     },
     {
-      title: "Sales Pipeline",
-      description: "Visualize and manage your sales process with customizable stages and workflows",
-      icon: TrendingUp
+      title: "Brand Voice Consistency",
+      description: "Maintain consistent brand voice across all content with AI style matching",
+      icon: Palette
     },
     {
-      title: "Email Integration",
-      description: "Seamlessly integrate with your email provider for automatic contact sync and tracking",
-      icon: Mail
+      title: "Plagiarism Detection",
+      description: "Advanced plagiarism checking with 99.9% accuracy and content originality scoring",
+      icon: Shield
     },
     {
-      title: "Analytics Dashboard",
-      description: "Get insights into your sales performance with real-time analytics and reports",
+      title: "Content Analytics",
+      description: "Track content performance with detailed analytics and engagement metrics",
       icon: BarChart3
     },
     {
-      title: "Mobile Access",
-      description: "Access your CRM on the go with our responsive mobile application",
-      icon: Zap
+      title: "Collaborative Workflow",
+      description: "Team collaboration tools with real-time editing and approval workflows",
+      icon: Users
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$49",
+      price: "$299",
       period: "/month",
       description: "Perfect for small businesses and startups",
       features: [
-        "Up to 1,000 contacts",
-        "Basic lead tracking",
-        "Email integration",
-        "Mobile app access",
+        "Up to 50 articles per month",
+        "5 languages supported",
+        "Basic SEO optimization",
         "Email support",
-        "Basic reporting"
+        "Content analytics dashboard"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$599",
       period: "/month",
-      description: "Ideal for growing businesses and sales teams",
+      description: "Ideal for growing businesses and marketing teams",
       features: [
-        "Up to 10,000 contacts",
-        "Advanced lead scoring",
-        "Sales pipeline management",
-        "Team collaboration",
+        "Up to 200 articles per month",
+        "25 languages supported",
+        "Advanced SEO optimization",
+        "Brand voice training",
         "Priority support",
-        "Advanced analytics",
-        "API access",
-        "Custom fields"
+        "Team collaboration tools",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$1,299",
       period: "/month",
-      description: "For large organizations with complex sales processes",
+      description: "For large organizations with high-volume content needs",
       features: [
-        "Unlimited contacts",
-        "Custom workflows",
-        "Advanced automation",
+        "Unlimited articles",
+        "All 50+ languages",
+        "Custom AI model training",
         "Dedicated account manager",
         "24/7 phone support",
+        "Advanced analytics",
         "Custom integrations",
-        "White-label options",
-        "Advanced security"
+        "White-label options"
       ],
       popular: false
     }
@@ -123,24 +117,24 @@ const MicroCRM = () => {
 
   const testimonials = [
     {
-      name: "David Thompson",
-      role: "Sales Manager",
-      company: "GrowthTech Inc",
-      content: "The Micro CRM has streamlined our sales process completely. We've seen a 40% increase in conversion rates and our team is much more organized.",
+      name: "Sarah Johnson",
+      role: "Marketing Director",
+      company: "TechFlow Solutions",
+      content: "The AI Content Creation Suite has transformed our content marketing. We've seen a 300% increase in organic traffic and our content production time has been reduced by 70%.",
       rating: 5
     },
     {
-      name: "Lisa Chen",
-      role: "Founder",
-      company: "StartupHub",
-      content: "As a startup, we needed something simple but powerful. This CRM fits perfectly and has helped us scale our sales operations efficiently.",
+      name: "Michael Chen",
+      role: "CEO",
+      company: "StartupXYZ",
+      content: "As a startup, we needed to scale our content quickly. This platform has been a game-changer for our growth strategy.",
       rating: 5
     },
     {
-      name: "Robert Martinez",
-      role: "Business Development",
-      company: "Innovation Labs",
-      content: "The lead tracking and pipeline management features are game-changers. We can now track every interaction and optimize our sales process.",
+      name: "Emily Rodriguez",
+      role: "Content Manager",
+      company: "Global Enterprises Inc",
+      content: "The multi-language support and brand voice consistency features are incredible. Our international content strategy has never been stronger.",
       rating: 5
     }
   ];
@@ -157,7 +151,7 @@ const MicroCRM = () => {
           >
             <Link 
               to="/services" 
-              className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors mb-8"
+              className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Services
@@ -165,26 +159,26 @@ const MicroCRM = () => {
             
             <div className="text-center mb-12">
               <div className="flex items-center justify-center mb-6">
-                <Users className="w-16 h-16 text-purple-400 mr-4" />
+                <FileText className="w-16 h-16 text-cyan-400 mr-4" />
                 <h1 className="text-5xl md:text-6xl font-bold text-white">
-                  Micro CRM Platform
+                  AI Content Creation Suite
                 </h1>
               </div>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Lightweight CRM solution for small businesses with essential customer management features, lead tracking, and sales pipeline management.
+                Advanced AI-powered content generation for marketing, blogs, and social media with SEO optimization and brand voice consistency.
               </p>
               
               {/* Contact Info */}
               <div className="flex flex-wrap justify-center gap-6 mb-8">
-                <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors">
+                <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors">
                   <Phone className="w-5 h-5" />
                   <span>{contactInfo.phone}</span>
                 </a>
-                <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors">
+                <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors">
                   <Mail className="w-5 h-5" />
                   <span>{contactInfo.email}</span>
                 </a>
-                <a href={contactInfo.website} className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors">
+                <a href={contactInfo.website} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors">
                   <Globe className="w-5 h-5" />
                   <span>{contactInfo.website}</span>
                 </a>
@@ -193,14 +187,14 @@ const MicroCRM = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href={`tel:${contactInfo.phone}`}
-                  className="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
+                  className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Get Started Today
                 </a>
                 <a
                   href={`mailto:${contactInfo.email}`}
-                  className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
+                  className="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Request Demo
@@ -220,9 +214,9 @@ const MicroCRM = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Essential CRM Features</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">Powerful Features</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Everything you need to manage your customer relationships and grow your business.
+              Everything you need to create, optimize, and manage high-quality content at scale.
             </p>
           </motion.div>
 
@@ -233,10 +227,10 @@ const MicroCRM = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
-                className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
+                className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
-                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
+                  <feature.icon className="w-8 h-8 text-cyan-400 mr-3" />
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
                 <p className="text-gray-300">{feature.description}</p>
@@ -247,7 +241,7 @@ const MicroCRM = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -255,9 +249,9 @@ const MicroCRM = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Simple, Affordable Pricing</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that grows with your business. No hidden fees, no surprises.
+              Choose the plan that best fits your content creation needs and scale as you grow.
             </p>
           </motion.div>
 
@@ -270,13 +264,13 @@ const MicroCRM = () => {
                 transition={{ duration: 0.5, delay: 0.1 * index }}
                 className={`bg-gray-800/50 border rounded-xl p-8 relative ${
                   plan.popular 
-                    ? 'border-purple-500 shadow-lg shadow-purple-500/20' 
+                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
                     : 'border-gray-700'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -304,7 +298,7 @@ const MicroCRM = () => {
                   href={`tel:${contactInfo.phone}`}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center ${
                     plan.popular
-                      ? 'bg-purple-500 hover:bg-purple-600 text-white'
+                      ? 'bg-cyan-500 hover:bg-cyan-600 text-white'
                       : 'bg-gray-700 hover:bg-gray-600 text-white'
                   }`}
                 >
@@ -325,9 +319,9 @@ const MicroCRM = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Trusted by Growing Businesses</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">What Our Clients Say</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See how our Micro CRM platform is helping businesses scale their sales operations.
+              Join hundreds of satisfied customers who have transformed their content strategy.
             </p>
           </motion.div>
 
@@ -349,7 +343,7 @@ const MicroCRM = () => {
                 <div>
                   <p className="text-white font-semibold">{testimonial.name}</p>
                   <p className="text-gray-400 text-sm">{testimonial.role}</p>
-                  <p className="text-purple-400 text-sm">{testimonial.company}</p>
+                  <p className="text-cyan-400 text-sm">{testimonial.company}</p>
                 </div>
               </motion.div>
             ))}
@@ -358,7 +352,7 @@ const MicroCRM = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
             className="text-4xl font-bold text-white mb-6"
@@ -366,7 +360,7 @@ const MicroCRM = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Ready to Streamline Your Sales Process?
+            Ready to Transform Your Content Strategy?
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-300 mb-8"
@@ -374,7 +368,7 @@ const MicroCRM = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Start managing your customer relationships more effectively today.
+            Start creating high-quality, SEO-optimized content at scale today.
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -384,14 +378,14 @@ const MicroCRM = () => {
           >
             <a
               href={`tel:${contactInfo.phone}`}
-              className="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
+              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
             >
               <Phone className="w-5 h-5 mr-2" />
               Call Now
             </a>
             <a
               href={`mailto:${contactInfo.email}`}
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
+              className="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
             >
               <Mail className="w-5 h-5 mr-2" />
               Email Us
@@ -403,4 +397,4 @@ const MicroCRM = () => {
   );
 };
 
-export default MicroCRM;
+export default AIContentCreationSuite;

@@ -1,17 +1,15 @@
-<<<<<<< HEAD
-import React from 'react.ts'
-import ReactDOM from 'react-dom/client.ts'
-import { BrowserRouter as Router  } from 'react-router-dom.ts'
-import { HelmetProvider  } from 'react-helmet-async.ts'
-import App from './App.tsx'
-import './index.css'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
+import App from './App'
 
 // Service worker registration function
 const registerServiceWorker = async () => {
   if ('serviceWorker' in navigator) {
     try {
       const registration = await navigator.serviceWorker.register('/sw.js', {
-        scope: any'/',
+        scope: '/',
       });
       
       if (registration.installing) {
@@ -23,7 +21,7 @@ const registerServiceWorker = async () => {
       }
       
       // Handle updates
-      registration.addEventListener('updatefound', ()  => {
+      registration.addEventListener('updatefound', () => {
         const newWorker = registration.installing;
         if (newWorker) {
           newWorker.addEventListener('statechange', () => {
@@ -47,7 +45,7 @@ const registerServiceWorker = async () => {
 };
 
 // Performance monitoring
-const reportWebVitals = (metric: any)  => {
+const reportWebVitals = (metric: any) => {
   if (process.env.NODE_ENV === 'development') {
     console.log('Web Vitals:', metric);
   }
@@ -99,112 +97,82 @@ class RootErrorBoundary extends React.Component<
   }
 }
 
-// Main render function
-const renderApp = () => {
-  const root = ReactDOM.createRoot(document.getElementById('root')!);
-  
-  root.render(
-    <React.StrictMode>
-      <RootErrorBoundary>
-        <HelmetProvider>
-          <Router>
-            <App />
-          </Router>
-        </HelmetProvider>
-      </RootErrorBoundary>
-    </React.StrictMode>,
-  );
-};
-
 // Initialize the application
-=======
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter as Router } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import App from './App'
-import './index.css'
-import { registerServiceWorker } from './utils/serviceWorker'
-import { ErrorBoundary } from './components/ErrorBoundary'
+const initializeApp = async () => {
+  try {
+    // Register service worker
+    await registerServiceWorker();
+    
+    // Create root element
+    const rootElement = document.getElementById('root');
+    if (!rootElement) {
+      throw new Error('Root element not found');
+    }
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <Router>
-      <HelmetProvider>
-        <ErrorBoundary>
-          <App />
-        </ErrorBoundary>
-      </HelmetProvider>
-    </Router>
-  </React.StrictMode>,
-)
+    // Create React root
+    const root = ReactDOM.createRoot(rootElement);
 
-// Register service worker with error handling
->>>>>>> 0db51c83ec2639597974243032be26f90b238361
-try {
-  renderApp();
-  
-  // Register service worker with error handling
-  registerServiceWorker().catch((error) => {
-    console.warn('Service worker registration failed:', error);
-  });
-  
-  // Report web vitals if available
-  if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-    try {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          reportWebVitals(entry);
-        }
-      });
-      observer.observe({ entryTypes: ['navigation', 'resource', 'paint'] });
-    } catch (error) {
-      console.warn('Performance monitoring failed:', error);
+    // Render the app
+    root.render(
+      <React.StrictMode>
+        <RootErrorBoundary>
+          <HelmetProvider>
+            <Router>
+              <App />
+            </Router>
+          </HelmetProvider>
+        </RootErrorBoundary>
+      </React.StrictMode>
+    );
+
+    // Report web vitals in development
+    if (process.env.NODE_ENV === 'development') {
+      // You can add web vitals reporting here
+      console.log('App initialized successfully');
+    }
+
+  } catch (error) {
+    console.error('Failed to initialize app:', error);
+    
+    // Fallback error display
+    const rootElement = document.getElementById('root');
+    if (rootElement) {
+      rootElement.innerHTML = `
+        <div style="
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+          color: white;
+          font-family: system-ui, -apple-system, sans-serif;
+          padding: 1rem;
+        ">
+          <div style="text-align: center; max-width: 400px;">
+            <h1 style="font-size: 1.5rem; margin-bottom: 1rem;">Application Error</h1>
+            <p style="margin-bottom: 1rem; opacity: 0.8;">
+              Failed to initialize the application. Please refresh the page or contact support.
+            </p>
+            <button 
+              onclick="window.location.reload()"
+              style="
+                background: #06b6d4;
+                color: white;
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                font-size: 0.875rem;
+              "
+            >
+              Refresh Page
+            </button>
+          </div>
+        </div>
+      `;
     }
   }
-  
-} catch (error) {
-<<<<<<< HEAD
-  console.error('Failed to render application:', error);
-  
-  // Fallback error display
-  const rootElement = document.getElementById('root');
-  if (rootElement) {
-    rootElement.innerHTML = `
-      <div style="
-        min-height: 100vh;
-        background: #111827;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem;
-        font-family: system-ui, -apple-system, sans-serif;
-      ">
-        <div style="text-align: center; max-width: 500px;">
-          <h1 style="font-size: 2rem; margin-bottom: 1rem;">Application Failed to Load</h1>
-          <p style="color: #9ca3af; margin-bottom: 1.5rem;">
-            We're sorry, but the application failed to initialize. Please try refreshing the page.
-          </p>
-          <button 
-            onclick="window.location.reload()"
-            style="
-              background: #06b6d4;
-              color: white;
-              border: none;
-              padding: 0.75rem 1.5rem;
-              border-radius: 0.5rem;
-              cursor: pointer;
-              font-size: 1rem;
-            "
-          >
-            Refresh Page
-          </button>
-        </div>
-      </div>
-    `;
-  }
-=======
-  console.warn('Service worker registration error:', error);
->>>>>>> 0db51c83ec2639597974243032be26f90b238361
-}
+};
+
+// Start the application
+initializeApp();
