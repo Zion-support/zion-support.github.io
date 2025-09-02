@@ -1,259 +1,311 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
-import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from 'lucide-react';
+import { TrendingUp, Zap, Users, Shield, ArrowRight, CheckCircle, Star, Clock, Award, Target } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const DigitalTransformation: NextPage = () => {
-  const transformationServices = [
+  const benefits = [
     {
-      icon: Cloud,
-      title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.',
-      benefits: ['Reduced infrastructure costs', 'Improved scalability', 'Enhanced security', 'Better performance']
-    },
-    {
-      icon: Database,
-      title: 'Data Modernization',
-      description: 'Transform your data architecture to support modern analytics and business intelligence.',
-      benefits: ['Real-time analytics', 'Improved data quality', 'Better insights', 'Automated reporting']
-    },
-    {
-      icon: Users,
-      title: 'Process Automation',
-      description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors.',
-      benefits: ['Increased productivity', 'Reduced errors', 'Cost savings', 'Better compliance']
+      icon: TrendingUp,
+      title: 'Increased Efficiency',
+      description: 'Streamline operations and reduce manual processes with automated workflows and intelligent systems.'
     },
     {
       icon: Zap,
-      title: 'AI Integration',
-      description: 'Integrate artificial intelligence into your business processes for enhanced decision making.',
-      benefits: ['Predictive analytics', 'Automated insights', 'Improved accuracy', 'Competitive advantage']
+      title: 'Enhanced Innovation',
+      description: 'Leverage cutting-edge technologies to create new business models and competitive advantages.'
+    },
+    {
+      icon: Users,
+      title: 'Better Customer Experience',
+      description: 'Deliver personalized, seamless experiences across all touchpoints and channels.'
     },
     {
       icon: Shield,
-      title: 'Security Enhancement',
-      description: 'Implement modern security measures to protect your digital assets and ensure compliance.',
-      benefits: ['Enhanced security', 'Compliance assurance', 'Risk reduction', 'Peace of mind']
-    },
-    {
-      icon: Target,
-      title: 'Customer Experience',
-      description: 'Improve customer interactions through digital channels and personalized experiences.',
-      benefits: ['Better customer satisfaction', 'Increased engagement', 'Higher retention', 'Improved loyalty']
+      title: 'Improved Security',
+      description: 'Implement robust security measures and compliance frameworks to protect your digital assets.'
     }
   ];
 
-  const transformationStages = [
+  const services = [
     {
-      stage: 'Assessment',
-      title: 'Current State Analysis',
-      description: 'We analyze your current systems, processes, and technology stack to identify opportunities for improvement.',
-      duration: '2-4 weeks'
+      title: 'Digital Strategy & Planning',
+      description: 'Comprehensive assessment and roadmap development for your digital transformation journey.',
+      features: ['Current state analysis', 'Future state vision', 'Implementation roadmap', 'ROI projections']
     },
     {
-      stage: 'Strategy',
-      title: 'Digital Strategy Development',
-      description: 'We create a comprehensive digital transformation roadmap aligned with your business objectives.',
-      duration: '3-6 weeks'
+      title: 'Process Automation',
+      description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors.',
+      features: ['Workflow automation', 'RPA implementation', 'Business process optimization', 'Integration solutions']
     },
     {
-      stage: 'Implementation',
-      title: 'Solution Implementation',
-      description: 'We implement the digital solutions using agile methodologies and best practices.',
-      duration: '8-24 weeks'
+      title: 'Cloud Migration',
+      description: 'Seamlessly migrate your infrastructure and applications to the cloud for scalability and flexibility.',
+      features: ['Cloud assessment', 'Migration planning', 'Data migration', 'Post-migration support']
     },
     {
-      stage: 'Optimization',
-      title: 'Continuous Improvement',
-      description: 'We monitor performance and continuously optimize your digital solutions for maximum impact.',
-      duration: 'Ongoing'
+      title: 'Data Analytics & AI',
+      description: 'Harness the power of data and artificial intelligence to drive informed decision-making.',
+      features: ['Data strategy', 'Analytics implementation', 'AI model development', 'Predictive insights']
     }
   ];
 
   const industries = [
-    { name: 'Healthcare', description: 'Digital health records, telemedicine, and patient management systems' },
-    { name: 'Finance', description: 'Digital banking, fraud detection, and automated trading systems' },
-    { name: 'Manufacturing', description: 'IoT integration, predictive maintenance, and supply chain optimization' },
-    { name: 'Retail', description: 'E-commerce platforms, inventory management, and customer analytics' },
-    { name: 'Education', description: 'Learning management systems, virtual classrooms, and student analytics' },
-    { name: 'Government', description: 'Citizen services, digital governance, and public safety systems' }
+    { name: 'Healthcare', description: 'Digital health solutions and patient care optimization' },
+    { name: 'Finance', description: 'Fintech innovations and regulatory compliance' },
+    { name: 'Manufacturing', description: 'Industry 4.0 and smart manufacturing' },
+    { name: 'Retail', description: 'E-commerce and omnichannel experiences' },
+    { name: 'Education', description: 'EdTech solutions and learning management' },
+    { name: 'Government', description: 'Digital government and citizen services' }
   ];
 
-  const successMetrics = [
-    { metric: '85%', label: 'Cost Reduction', description: 'Average cost savings achieved through digital transformation' },
-    { metric: '60%', label: 'Efficiency Gain', description: 'Improvement in operational efficiency' },
-    { metric: '90%', label: 'Customer Satisfaction', description: 'Increase in customer satisfaction scores' },
-    { metric: '75%', label: 'Time Savings', description: 'Reduction in time-to-market for new products' }
+  const stats = [
+    { number: '85%', label: 'Average Efficiency Improvement', icon: TrendingUp },
+    { number: '60%', label: 'Cost Reduction Achieved', icon: Target },
+    { number: '95%', label: 'Client Satisfaction Rate', icon: Star },
+    { number: '12', label: 'Months Average ROI', icon: Clock },
   ];
 
   return (
     <MainLayout
       title="Digital Transformation Solutions - Zion Tech Group"
-      description="Transform your business with our comprehensive digital transformation services. Modernize your operations, improve efficiency, and drive growth with cutting-edge technology solutions."
-      keywords="digital transformation, business modernization, cloud migration, process automation, AI integration, digital strategy"
+      description="Transform your business with comprehensive digital transformation solutions. Drive innovation, efficiency, and growth with our expert guidance and cutting-edge technologies."
+      keywords="digital transformation, business transformation, digital strategy, process automation, cloud migration, Zion Tech Group"
     >
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Digital Transformation Solutions</h1>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Transform your business for the digital age with our comprehensive digital transformation services. 
-              Modernize your operations, improve efficiency, and drive sustainable growth.
-            </p>
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="container mx-auto px-4 text-center relative z-10">
+            <motion.h1 
+              className="text-5xl md:text-6xl font-bold mb-6"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Digital
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Transformation</span>
+            </motion.h1>
+            <motion.p 
+              className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Accelerate your business growth with comprehensive digital transformation solutions. 
+              We help organizations modernize operations, enhance customer experiences, and unlock new opportunities through technology.
+            </motion.p>
+            
+            <motion.div 
+              className="flex flex-col sm:flex-row justify-center gap-4"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <Link href="/contact" className="group">
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2">
+                  Start Your Transformation
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
+              <Link href="#services" className="group">
+                <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                  Explore Services
+                </button>
+              </Link>
+            </motion.div>
           </div>
         </section>
 
-        {/* Transformation Services */}
+        {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Transformation Services</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We provide end-to-end digital transformation services to modernize your business operations.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {transformationServices.map((service, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <service.icon className="w-12 h-12 text-blue-600 mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Transformation Process */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Transformation Process</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We follow a structured approach to ensure successful digital transformation.
-              </p>
-            </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {transformationStages.map((stage, index) => (
-                <div key={index} className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-                  <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                    {index + 1}
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                >
+                  <div className="flex justify-center mb-4">
+                    <stat.icon className="w-12 h-12 text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{stage.title}</h3>
-                  <p className="text-gray-600 mb-3">{stage.description}</p>
-                  <span className="text-sm text-blue-600 font-medium">{stage.duration}</span>
-                </div>
+                  <div className="text-4xl font-bold text-gray-900 mb-2">{stat.number}</div>
+                  <div className="text-gray-600">{stat.label}</div>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Industries We Serve */}
-        <section className="py-16 bg-white">
+        {/* Benefits Section */}
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We have experience transforming businesses across various industries.
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Digital Transformation Matters</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Digital transformation is not just about technology—it's about reimagining how your business operates, 
+                serves customers, and creates value in the digital age.
               </p>
             </div>
-            
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                >
+                  <div className="flex items-center mb-4">
+                    <benefit.icon className="w-8 h-8 text-blue-600 mr-3" />
+                    <h3 className="text-xl font-semibold text-gray-900">{benefit.title}</h3>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section id="services" className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Digital Transformation Services</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We provide end-to-end digital transformation solutions tailored to your industry and business objectives.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {services.map((service, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-gray-50 p-8 rounded-lg hover:bg-blue-50 transition-colors duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                >
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                  
+                  <div className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                        <span className="text-gray-700">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Industries Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our digital transformation expertise spans across various industries, helping organizations 
+                adapt to the digital future.
+              </p>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{industry.name}</h3>
-                  <p className="text-gray-600">{industry.description}</p>
-                </div>
+                <motion.div
+                  key={index}
+                  className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                >
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{industry.name}</h3>
+                  <p className="text-gray-600 leading-relaxed">{industry.description}</p>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Success Metrics */}
-        <section className="py-16 bg-blue-900 text-white">
+        {/* Process Section */}
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Proven Results</h2>
-              <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-                Our digital transformation initiatives deliver measurable business value.
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Transformation Approach</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We follow a structured methodology to ensure successful digital transformation outcomes.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {successMetrics.map((metric, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl font-bold text-blue-400 mb-2">{metric.metric}</div>
-                  <h3 className="text-xl font-semibold mb-2">{metric.label}</h3>
-                  <p className="text-blue-200 text-sm">{metric.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Why Choose Us */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We combine deep industry expertise with cutting-edge technology to deliver exceptional results.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center p-6">
-                <TrendingUp className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Track Record</h3>
-                <p className="text-gray-600">We have successfully transformed hundreds of businesses across various industries.</p>
-              </div>
-              
-              <div className="text-center p-6">
-                <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Team</h3>
-                <p className="text-gray-600">Our team of experts brings deep knowledge and experience to every project.</p>
-              </div>
-              
-              <div className="text-center p-6">
-                <Shield className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Risk Mitigation</h3>
-                <p className="text-gray-600">We minimize risks through careful planning and phased implementation.</p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {[
+                {
+                  step: '01',
+                  title: 'Assessment',
+                  description: 'Analyze current state, identify opportunities, and define transformation goals.'
+                },
+                {
+                  step: '02',
+                  title: 'Strategy',
+                  description: 'Develop comprehensive digital strategy and implementation roadmap.'
+                },
+                {
+                  step: '03',
+                  title: 'Implementation',
+                  description: 'Execute transformation initiatives with agile methodologies and best practices.'
+                },
+                {
+                  step: '04',
+                  title: 'Optimization',
+                  description: 'Monitor performance, optimize processes, and ensure continuous improvement.'
+                }
+              ].map((step, index) => (
+                <motion.div
+                  key={index}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                >
+                  <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                    {step.step}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{step.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-white">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help you achieve your digital transformation goals and drive sustainable growth.
+            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Let's discuss your digital transformation goals and create a roadmap for success.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Start Your Transformation
+              <Link href="/contact" className="group">
+                <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                  Get Free Assessment
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
               </Link>
-              <Link
-                href="/solutions"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-              >
-                View All Solutions
+              <Link href="/solutions" className="group">
+                <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                  View All Solutions
+                </button>
               </Link>
             </div>
           </div>

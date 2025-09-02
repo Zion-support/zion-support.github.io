@@ -1,262 +1,248 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from 'lucide-react';
+import { Book, Code, Database, Cloud, Shield, Users, ArrowRight, Search, Download, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const Documentation: NextPage = () => {
-  const docCategories = [
+  const documentationSections = [
     {
-      icon: Book,
       title: 'Getting Started',
-      description: 'Quick start guides and basic setup instructions',
+      icon: Book,
+      description: 'Quick start guides and setup instructions',
       articles: [
-        { title: 'Introduction to Zion Tech Group', href: '/docs/introduction' },
-        { title: 'Account Setup', href: '/docs/account-setup' },
-        { title: 'First Steps', href: '/docs/first-steps' },
-        { title: 'Basic Configuration', href: '/docs/basic-config' }
+        { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },
+        { title: 'Quick Start Tutorial', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },
+        { title: 'Configuration', description: 'Basic configuration and setup', link: '/docs/configuration' },
+        { title: 'First Project', description: 'Create your first project', link: '/docs/first-project' }
       ]
     },
     {
-      icon: Code,
       title: 'API Reference',
+      icon: Code,
       description: 'Complete API documentation and examples',
       articles: [
-        { title: 'Authentication', href: '/docs/api/auth' },
-        { title: 'Endpoints', href: '/docs/api/endpoints' },
-        { title: 'SDKs', href: '/docs/api/sdks' },
-        { title: 'Rate Limits', href: '/docs/api/rate-limits' }
+        { title: 'Authentication', description: 'API authentication and security', link: '/docs/api/auth' },
+        { title: 'Endpoints', description: 'Complete API endpoint reference', link: '/docs/api/endpoints' },
+        { title: 'SDKs', description: 'Software development kits', link: '/docs/api/sdks' },
+        { title: 'Rate Limits', description: 'API rate limiting and quotas', link: '/docs/api/rate-limits' }
       ]
     },
     {
+      title: 'Database',
       icon: Database,
-      title: 'Data Management',
-      description: 'Data handling, storage, and processing guides',
+      description: 'Database setup and management guides',
       articles: [
-        { title: 'Data Models', href: '/docs/data/models' },
-        { title: 'Data Import/Export', href: '/docs/data/import-export' },
-        { title: 'Data Security', href: '/docs/data/security' },
-        { title: 'Backup & Recovery', href: '/docs/data/backup' }
+        { title: 'Database Setup', description: 'Configure your database', link: '/docs/database/setup' },
+        { title: 'Schema Design', description: 'Database schema best practices', link: '/docs/database/schema' },
+        { title: 'Migrations', description: 'Database migration guides', link: '/docs/database/migrations' },
+        { title: 'Backup & Recovery', description: 'Data backup and recovery', link: '/docs/database/backup' }
       ]
     },
     {
-      icon: Cloud,
       title: 'Cloud Services',
-      description: 'Cloud infrastructure and deployment guides',
+      icon: Cloud,
+      description: 'Cloud deployment and management',
       articles: [
-        { title: 'Cloud Setup', href: '/docs/cloud/setup' },
-        { title: 'Deployment', href: '/docs/cloud/deployment' },
-        { title: 'Scaling', href: '/docs/cloud/scaling' },
-        { title: 'Monitoring', href: '/docs/cloud/monitoring' }
+        { title: 'AWS Deployment', description: 'Deploy to Amazon Web Services', link: '/docs/cloud/aws' },
+        { title: 'Azure Deployment', description: 'Deploy to Microsoft Azure', link: '/docs/cloud/azure' },
+        { title: 'Google Cloud', description: 'Deploy to Google Cloud Platform', link: '/docs/cloud/gcp' },
+        { title: 'Docker', description: 'Container deployment with Docker', link: '/docs/cloud/docker' }
       ]
     },
     {
-      icon: Shield,
       title: 'Security',
-      description: 'Security best practices and implementation',
+      icon: Shield,
+      description: 'Security best practices and guidelines',
       articles: [
-        { title: 'Security Overview', href: '/docs/security/overview' },
-        { title: 'Authentication', href: '/docs/security/auth' },
-        { title: 'Authorization', href: '/docs/security/authorization' },
-        { title: 'Compliance', href: '/docs/security/compliance' }
+        { title: 'Security Overview', description: 'Security features and capabilities', link: '/docs/security/overview' },
+        { title: 'Authentication', description: 'User authentication and authorization', link: '/docs/security/auth' },
+        { title: 'Data Protection', description: 'Protecting sensitive data', link: '/docs/security/data-protection' },
+        { title: 'Compliance', description: 'Regulatory compliance guidelines', link: '/docs/security/compliance' }
       ]
     },
     {
-      icon: Zap,
-      title: 'Advanced Features',
-      description: 'Advanced functionality and customization',
+      title: 'User Management',
+      icon: Users,
+      description: 'User roles, permissions, and management',
       articles: [
-        { title: 'Custom Integrations', href: '/docs/advanced/integrations' },
-        { title: 'Workflow Automation', href: '/docs/advanced/automation' },
-        { title: 'Performance Optimization', href: '/docs/advanced/performance' },
-        { title: 'Troubleshooting', href: '/docs/advanced/troubleshooting' }
+        { title: 'User Roles', description: 'Understanding user roles and permissions', link: '/docs/users/roles' },
+        { title: 'Access Control', description: 'Managing access and permissions', link: '/docs/users/access-control' },
+        { title: 'Team Management', description: 'Managing teams and organizations', link: '/docs/users/teams' },
+        { title: 'Single Sign-On', description: 'SSO integration and setup', link: '/docs/users/sso' }
       ]
     }
   ];
 
   const quickLinks = [
-    { title: 'API Playground', href: '/api-playground', icon: Code },
-    { title: 'Status Page', href: '/status', icon: Zap },
-    { title: 'Support', href: '/help', icon: Book },
-    { title: 'Community', href: '/community', icon: ExternalLink }
+    { title: 'API Reference', description: 'Complete API documentation', link: '/docs/api', icon: Code },
+    { title: 'SDKs & Libraries', description: 'Download SDKs for your platform', link: '/docs/sdks', icon: Download },
+    { title: 'Code Examples', description: 'Sample code and tutorials', link: '/docs/examples', icon: Book },
+    { title: 'Status Page', description: 'Service status and uptime', link: '/status', icon: ExternalLink }
   ];
 
   return (
     <MainLayout
       title="Documentation - Zion Tech Group"
-      description="Comprehensive documentation for Zion Tech Group services. Find guides, API references, tutorials, and technical resources to help you succeed."
-      keywords="documentation, API reference, guides, tutorials, technical documentation, developer resources"
+      description="Comprehensive documentation for Zion Tech Group services. Find guides, API references, tutorials, and best practices."
+      keywords="documentation, API reference, guides, tutorials, Zion Tech Group"
     >
       <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        {/* Header */}
+        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Documentation</h1>
+            <div className="flex justify-center mb-6">
+              <Book className="w-16 h-16 text-blue-400" />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Documentation</h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Comprehensive guides, API references, and technical resources to help you 
-              make the most of our services and build amazing solutions.
+              Comprehensive guides, API references, and tutorials to help you get the most out of 
+              our technology solutions and services.
             </p>
+          </div>
+        </section>
+
+        {/* Search Bar */}
+        <section className="py-8 bg-white border-b">
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl mx-auto">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search documentation..."
+                  className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
+                />
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Quick Links */}
-        <section className="py-8 bg-white border-b">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center gap-4">
-              {quickLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  href={link.href}
-                  className="flex items-center px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
-                >
-                  <link.icon className="w-4 h-4 mr-2" />
-                  {link.title}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Documentation Categories */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Documentation Categories</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Browse our documentation organized by topic and complexity level.
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Quick Links</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Jump to the most commonly accessed documentation sections.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {docCategories.map((category, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <category.icon className="w-12 h-12 text-blue-600 mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{category.title}</h3>
-                  <p className="text-gray-600 mb-4">{category.description}</p>
-                  <ul className="space-y-2">
-                    {category.articles.map((article, idx) => (
-                      <li key={idx}>
-                        <Link href={article.href} className="text-blue-600 hover:text-blue-700 text-sm flex items-center">
-                          {article.title}
-                          <ExternalLink className="w-3 h-3 ml-1" />
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {quickLinks.map((link, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-gray-50 p-6 rounded-lg text-center hover:bg-blue-50 transition-colors duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                >
+                  <div className="flex justify-center mb-4">
+                    <link.icon className="w-10 h-10 text-blue-600" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{link.title}</h3>
+                  <p className="text-gray-600 mb-4 text-sm">{link.description}</p>
+                  <Link href={link.link} className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center gap-1">
+                    Access
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Getting Started Section */}
+        {/* Documentation Sections */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Getting Started</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                New to our platform? Start here with our essential guides and tutorials.
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Documentation Sections</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Browse our comprehensive documentation organized by topic and use case.
               </p>
             </div>
-            
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Quick Start Guide</h3>
-                    <p className="text-gray-600 mb-4">
-                      Get up and running in minutes with our step-by-step quick start guide.
-                    </p>
-                    <Link href="/docs/quick-start" className="text-blue-600 font-semibold hover:text-blue-700">
-                      Start Here →
-                    </Link>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {documentationSections.map((section, sectionIndex) => (
+                <motion.div
+                  key={sectionIndex}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: sectionIndex * 0.1 }}
+                >
+                  <div className="p-6 border-b border-gray-200">
+                    <div className="flex items-center mb-4">
+                      <section.icon className="w-8 h-8 text-blue-600 mr-3" />
+                      <h3 className="text-xl font-bold text-gray-900">{section.title}</h3>
+                    </div>
+                    <p className="text-gray-600">{section.description}</p>
                   </div>
                   
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">API Overview</h3>
-                    <p className="text-gray-600 mb-4">
-                      Learn about our API capabilities and how to integrate with our services.
-                    </p>
-                    <Link href="/docs/api/overview" className="text-blue-600 font-semibold hover:text-blue-700">
-                      View API Docs →
-                    </Link>
+                  <div className="p-6">
+                    <div className="space-y-3">
+                      {section.articles.map((article, articleIndex) => (
+                        <Link
+                          key={articleIndex}
+                          href={article.link}
+                          className="block p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+                        >
+                          <h4 className="font-semibold text-gray-900 mb-1">{article.title}</h4>
+                          <p className="text-sm text-gray-600">{article.description}</p>
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Resources Section */}
+        {/* Getting Help */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Additional Resources</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Explore additional resources to enhance your development experience.
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Need More Help?</h2>
+              <p className="text-xl text-gray-600 mb-8">
+                Can't find what you're looking for? Our support team is here to help you succeed.
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="bg-gray-50 rounded-lg p-6 text-center">
-                <Download className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">SDKs & Libraries</h3>
-                <p className="text-gray-600 text-sm mb-4">Download our official SDKs and libraries</p>
-                <Link href="/docs/sdks" className="text-blue-600 font-semibold hover:text-blue-700">
-                  Download →
-                </Link>
-              </div>
               
-              <div className="bg-gray-50 rounded-lg p-6 text-center">
-                <Code className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Code Examples</h3>
-                <p className="text-gray-600 text-sm mb-4">Browse code examples and samples</p>
-                <Link href="/docs/examples" className="text-blue-600 font-semibold hover:text-blue-700">
-                  View Examples →
-                </Link>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Book className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Knowledge Base</h3>
+                  <p className="text-gray-600 mb-4">Search our comprehensive knowledge base for answers to common questions.</p>
+                  <Link href="/help" className="text-blue-600 hover:text-blue-700 font-medium">
+                    Browse Knowledge Base →
+                  </Link>
+                </div>
+                
+                <div className="text-center">
+                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Community Forum</h3>
+                  <p className="text-gray-600 mb-4">Connect with other users and get help from the community.</p>
+                  <Link href="/community" className="text-blue-600 hover:text-blue-700 font-medium">
+                    Join Community →
+                  </Link>
+                </div>
+                
+                <div className="text-center">
+                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <ExternalLink className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Contact Support</h3>
+                  <p className="text-gray-600 mb-4">Get direct help from our technical support team.</p>
+                  <Link href="/contact" className="text-blue-600 hover:text-blue-700 font-medium">
+                    Contact Us →
+                  </Link>
+                </div>
               </div>
-              
-              <div className="bg-gray-50 rounded-lg p-6 text-center">
-                <Book className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Tutorials</h3>
-                <p className="text-gray-600 text-sm mb-4">Step-by-step tutorials and guides</p>
-                <Link href="/docs/tutorials" className="text-blue-600 font-semibold hover:text-blue-700">
-                  Start Learning →
-                </Link>
-              </div>
-              
-              <div className="bg-gray-50 rounded-lg p-6 text-center">
-                <ExternalLink className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Community</h3>
-                <p className="text-gray-600 text-sm mb-4">Join our developer community</p>
-                <Link href="/community" className="text-blue-600 font-semibold hover:text-blue-700">
-                  Join Community →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Support Section */}
-        <section className="py-16 bg-blue-900 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Need Help?</h2>
-            <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-              Can't find what you're looking for? Our support team is here to help.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link
-                href="/help"
-                className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Contact Support
-              </Link>
-              <Link
-                href="/faq"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
-              >
-                View FAQ
-              </Link>
             </div>
           </div>
         </section>
