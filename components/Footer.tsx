@@ -45,15 +45,19 @@ const Footer: React.FC = () => {
             <div className='space-y-3'>
               <div className='flex items-center text-gray-300'>
                 <Mail className='h-5 w-5 mr-3 text-blue-400' />
-                <span>info@ziontechgroup.com</span>
+                <a href='mailto:kleber@ziontechgroup.com' className='hover:text-blue-400 transition-colors'>
+                  kleber@ziontechgroup.com
+                </a>
               </div>
               <div className='flex items-center text-gray-300'>
                 <Phone className='h-5 w-5 mr-3 text-blue-400' />
-                <span>+1 (302) 464-0950</span>
+                <a href='tel:+13024640950' className='hover:text-blue-400 transition-colors'>
+                  +1 302 464 0950
+                </a>
               </div>
               <div className='flex items-center text-gray-300'>
                 <MapPin className='h-5 w-5 mr-3 text-blue-400' />
-                <span>Delaware, USA</span>
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
             {/* Social Links */}
@@ -66,6 +70,9 @@ const Footer: React.FC = () => {
               </a>
               <a href='https://github.com/ziontechgroup' className='text-gray-400 hover:text-blue-400 transition-colors' target='_blank' rel='noopener noreferrer'>
                 <Github className='h-6 w-6' />
+              </a>
+              <a href='https://ziontechgroup.com' className='text-gray-400 hover:text-blue-400 transition-colors' target='_blank' rel='noopener noreferrer'>
+                <span className='text-sm font-medium'>Website</span>
               </a>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, Home, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Utensils, Zap } from 'lucide-react';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -298,6 +298,176 @@ export default function MicroSaaS() {
       pricing: '$199 - $799/month',
       delivery: '3-4 weeks',
       category: 'Customer Success SaaS',
+    },
+    {
+      title: 'AI-Powered Code Review Assistant',
+      description:
+        'Intelligent code analysis and review platform with automated quality checks and security scanning',
+      icon: Code,
+      features: [
+        'Automated code quality analysis',
+        'Security vulnerability detection',
+        'Performance optimization suggestions',
+        'Code style and best practices enforcement',
+        'Integration with Git workflows',
+        'Team collaboration and review tools',
+      ],
+      pricing: '$299 - $1,299/month',
+      delivery: '2-3 weeks',
+      category: 'Development SaaS',
+    },
+    {
+      title: 'Smart Contract Management Platform',
+      description:
+        'AI-powered contract lifecycle management with automated analysis and risk assessment',
+      icon: FileText,
+      features: [
+        'Automated contract analysis and extraction',
+        'Risk assessment and compliance checking',
+        'Contract renewal and expiration tracking',
+        'Digital signature integration',
+        'Template library and customization',
+        'Legal document generation',
+      ],
+      pricing: '$399 - $1,599/month',
+      delivery: '3-5 weeks',
+      category: 'Legal SaaS',
+    },
+    {
+      title: 'AI-Powered Learning Management System',
+      description:
+        'Intelligent e-learning platform with personalized learning paths and progress tracking',
+      icon: Brain,
+      features: [
+        'Personalized learning recommendations',
+        'Adaptive content delivery',
+        'Progress tracking and analytics',
+        'Gamification and engagement tools',
+        'Multi-format content support',
+        'Assessment and certification management',
+      ],
+      pricing: '$199 - $899/month',
+      delivery: '4-6 weeks',
+      category: 'Education SaaS',
+    },
+    {
+      title: 'Smart Fleet Management System',
+      description:
+        'AI-driven fleet optimization with route planning, maintenance scheduling, and fuel efficiency',
+      icon: Network,
+      features: [
+        'Real-time GPS tracking and monitoring',
+        'AI-powered route optimization',
+        'Predictive maintenance scheduling',
+        'Fuel consumption analysis',
+        'Driver behavior monitoring',
+        'Compliance and reporting tools',
+      ],
+      pricing: '$499 - $2,499/month',
+      delivery: '5-8 weeks',
+      category: 'Logistics SaaS',
+    },
+    {
+      title: 'AI-Powered Property Management Platform',
+      description:
+        'Intelligent property management with automated tenant screening and maintenance scheduling',
+      icon: Home,
+      features: [
+        'Automated tenant screening and background checks',
+        'Maintenance request management',
+        'Rent collection and payment processing',
+        'Property performance analytics',
+        'Tenant communication portal',
+        'Financial reporting and accounting',
+      ],
+      pricing: '$299 - $1,199/month',
+      delivery: '4-6 weeks',
+      category: 'Real Estate SaaS',
+    },
+    {
+      title: 'Smart Healthcare Appointment Scheduler',
+      description:
+        'AI-powered medical appointment management with patient matching and resource optimization',
+      icon: Calendar,
+      features: [
+        'Intelligent appointment scheduling',
+        'Patient preference matching',
+        'Resource optimization and allocation',
+        'Automated reminders and notifications',
+        'Telemedicine integration',
+        'Analytics and reporting dashboard',
+      ],
+      pricing: '$199 - $799/month',
+      delivery: '3-4 weeks',
+      category: 'Healthcare SaaS',
+    },
+    {
+      title: 'AI-Powered Restaurant Management System',
+      description:
+        'Intelligent restaurant operations with inventory management, staff scheduling, and customer analytics',
+      icon: Utensils,
+      features: [
+        'Smart inventory and supply chain management',
+        'AI-powered staff scheduling optimization',
+        'Customer behavior analytics',
+        'Menu optimization recommendations',
+        'POS integration and reporting',
+        'Food waste reduction tracking',
+      ],
+      pricing: '$399 - $1,599/month',
+      delivery: '4-6 weeks',
+      category: 'Restaurant SaaS',
+    },
+    {
+      title: 'Smart Energy Management Platform',
+      description:
+        'AI-driven energy optimization for buildings with consumption monitoring and cost reduction',
+      icon: Zap,
+      features: [
+        'Real-time energy consumption monitoring',
+        'AI-powered optimization recommendations',
+        'Predictive maintenance for equipment',
+        'Cost analysis and budgeting tools',
+        'Sustainability reporting and tracking',
+        'Integration with smart building systems',
+      ],
+      pricing: '$599 - $2,999/month',
+      delivery: '5-8 weeks',
+      category: 'Energy SaaS',
+    },
+    {
+      title: 'AI-Powered Insurance Claims Processor',
+      description:
+        'Intelligent insurance claims processing with automated damage assessment and fraud detection',
+      icon: Shield,
+      features: [
+        'Automated claims intake and processing',
+        'AI-powered damage assessment',
+        'Fraud detection and prevention',
+        'Document processing and verification',
+        'Settlement calculation and approval',
+        'Customer communication automation',
+      ],
+      pricing: '$799 - $3,999/month',
+      delivery: '6-10 weeks',
+      category: 'Insurance SaaS',
+    },
+    {
+      title: 'Smart Manufacturing Quality Control',
+      description:
+        'AI-powered quality assurance system with real-time defect detection and process optimization',
+      icon: Settings,
+      features: [
+        'Real-time quality monitoring and detection',
+        'Predictive quality analytics',
+        'Automated defect classification',
+        'Process optimization recommendations',
+        'Supply chain quality tracking',
+        'Compliance and certification management',
+      ],
+      pricing: '$1,999 - $9,999/month',
+      delivery: '8-12 weeks',
+      category: 'Manufacturing SaaS',
     },
     {
       title: 'Intelligent Meeting Scheduler',

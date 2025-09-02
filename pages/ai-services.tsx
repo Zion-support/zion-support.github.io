@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, Building, Car, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Heart, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Satellite, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 export default function AIServices() {
   const title = 'AI Services — Zion Tech Group';
@@ -289,6 +289,142 @@ export default function AIServices() {
       pricing: '$5,000 - $18, 000/month',
       delivery: '6-12 weeks',
       category: 'Market AI',
+    },
+    {
+      title: 'AI-Powered Drug Discovery Platform',
+      description:
+        'Advanced AI system for pharmaceutical research, drug discovery, and molecular design',
+      icon: Brain,
+      features: [
+        'Molecular structure prediction and optimization',
+        'Drug-target interaction modeling',
+        'Clinical trial optimization and patient matching',
+        'Adverse effect prediction and safety assessment',
+        'Biomarker discovery and validation',
+        'Regulatory compliance and documentation',
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '16-32 weeks',
+      category: 'Pharmaceutical AI',
+    },
+    {
+      title: 'AI-Powered Climate & Environmental Analytics',
+      description:
+        'Intelligent environmental monitoring and climate change prediction systems',
+      icon: Globe,
+      features: [
+        'Climate modeling and weather prediction',
+        'Environmental impact assessment',
+        'Carbon footprint tracking and optimization',
+        'Natural disaster prediction and early warning',
+        'Ecosystem monitoring and biodiversity analysis',
+        'Sustainability reporting and compliance',
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Environmental AI',
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Systems',
+      description:
+        'Advanced AI for autonomous vehicle navigation, safety, and fleet management',
+      icon: Car,
+      features: [
+        'Real-time object detection and path planning',
+        'Predictive maintenance and diagnostics',
+        'Fleet optimization and route planning',
+        'Safety monitoring and incident prevention',
+        'Traffic flow optimization',
+        'Regulatory compliance and reporting',
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '20-40 weeks',
+      category: 'Autonomous Vehicle AI',
+    },
+    {
+      title: 'AI-Powered Financial Trading & Risk Management',
+      description:
+        'Intelligent trading algorithms and real-time risk assessment systems',
+      icon: TrendingUp,
+      features: [
+        'Algorithmic trading strategy development',
+        'Real-time market analysis and prediction',
+        'Portfolio optimization and risk management',
+        'Fraud detection and compliance monitoring',
+        'High-frequency trading optimization',
+        'Regulatory reporting and audit trails',
+      ],
+      pricing: '$20,000 - $200,000/month',
+      delivery: '16-32 weeks',
+      category: 'Financial AI',
+    },
+    {
+      title: 'AI-Powered Personalized Medicine',
+      description:
+        'Precision medicine platform with AI-driven treatment recommendations',
+      icon: Heart,
+      features: [
+        'Genomic analysis and interpretation',
+        'Personalized treatment recommendations',
+        'Drug response prediction',
+        'Clinical decision support systems',
+        'Patient monitoring and outcome prediction',
+        'Integration with electronic health records',
+      ],
+      pricing: '$12,000 - $80,000/month',
+      delivery: '20-36 weeks',
+      category: 'Medical AI',
+    },
+    {
+      title: 'AI-Powered Smart City Management',
+      description:
+        'Intelligent urban planning and city management with IoT integration',
+      icon: Building,
+      features: [
+        'Traffic flow optimization and management',
+        'Energy consumption monitoring and optimization',
+        'Public safety and emergency response',
+        'Waste management and environmental monitoring',
+        'Citizen engagement and service delivery',
+        'Infrastructure maintenance and planning',
+      ],
+      pricing: '$30,000 - $200,000/month',
+      delivery: '24-48 weeks',
+      category: 'Smart City AI',
+    },
+    {
+      title: 'AI-Powered Space & Satellite Analytics',
+      description:
+        'Advanced AI for satellite data analysis, space mission planning, and Earth observation',
+      icon: Satellite,
+      features: [
+        'Satellite imagery analysis and interpretation',
+        'Space mission planning and optimization',
+        'Earth observation and environmental monitoring',
+        'Orbital mechanics and trajectory optimization',
+        'Space debris tracking and collision avoidance',
+        'Planetary exploration and data analysis',
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '20-40 weeks',
+      category: 'Space AI',
+    },
+    {
+      title: 'AI-Powered Quantum Computing Optimization',
+      description:
+        'AI algorithms for quantum computing optimization and hybrid quantum-classical systems',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm optimization',
+        'Hybrid quantum-classical computing',
+        'Quantum error correction and mitigation',
+        'Quantum machine learning applications',
+        'Quantum simulation and modeling',
+        'Quantum cryptography and security',
+      ],
+      pricing: '$50,000 - $500,000/month',
+      delivery: '32-64 weeks',
+      category: 'Quantum AI',
     },
     {
       title: 'AI Autonomous Agents Platform',
