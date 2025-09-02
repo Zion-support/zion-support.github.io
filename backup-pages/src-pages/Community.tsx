@@ -265,7 +265,6 @@ return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()'      c
   })
     return category ? category.color :,
   from-gray-500 to-gray-600'}
-;
     return category ? category.name: 'Unknown}
   return ('
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>

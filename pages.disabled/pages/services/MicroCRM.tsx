@@ -124,6 +124,5 @@ const MicroCRM: React.FC = props {
       </section>
     </div>
   )}
-;
 :pages.disabled/pages/services/MicroCRM.tsx;
 export default MicroCRM';''"

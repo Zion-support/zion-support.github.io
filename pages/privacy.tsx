@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import { Shield, Eye, Lock, Database, UserCheck, FileText } from 'lucide-react';
-
 const Privacy: NextPage = () => {
   return (
     <Layout
@@ -11,7 +10,7 @@ const Privacy: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Privacy
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
               {' '}
@@ -38,7 +37,11 @@ const Privacy: NextPage = () => {
                 Introduction
               </h2>
               <p className="text-gray-600 mb-4">
+<<<<<<< HEAD
                 Zion Tech Group ("we," "our," or "us") is committed to
+=======
+                Zion Tech Group ("we," "our, " or "us") is committed to
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 protecting your privacy. This Privacy Policy explains how we
                 collect, use, disclose, and safeguard your information when you
                 visit our website ziontechgroup.com or use our services.
@@ -49,7 +52,6 @@ const Privacy: NextPage = () => {
                 site or use our services.
               </p>
             </div>
-
             {/* Information We Collect */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
@@ -62,7 +64,11 @@ const Privacy: NextPage = () => {
               </h3>
               <p className="text-gray-600 mb-4">
                 We may collect personal information that you voluntarily provide
+<<<<<<< HEAD
                 to us when you:
+=======
+                to us when you:{' '}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Register for an account or use our services</li>
@@ -77,7 +83,11 @@ const Privacy: NextPage = () => {
               </h3>
               <p className="text-gray-600 mb-4">
                 We may automatically collect certain information about your
+<<<<<<< HEAD
                 device and usage patterns, including:
+=======
+                device and usage patterns, including:{' '}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>IP address and location data</li>
@@ -88,7 +98,6 @@ const Privacy: NextPage = () => {
                 <li>Device identifiers</li>
               </ul>
             </div>
-
             {/* How We Use Information */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
@@ -97,7 +106,11 @@ const Privacy: NextPage = () => {
               </h2>
               <p className="text-gray-600 mb-4">
                 We use the information we collect for various purposes,
+<<<<<<< HEAD
                 including:
+=======
+                including:{' '}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Providing and maintaining our services</li>
@@ -109,7 +122,6 @@ const Privacy: NextPage = () => {
                 <li>Complying with legal obligations</li>
               </ul>
             </div>
-
             {/* Information Sharing */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
@@ -119,7 +131,11 @@ const Privacy: NextPage = () => {
               <p className="text-gray-600 mb-4">
                 We do not sell, trade, or otherwise transfer your personal
                 information to third parties without your consent, except in the
+<<<<<<< HEAD
                 following circumstances:
+=======
+                following circumstances:{' '}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>
@@ -133,7 +149,6 @@ const Privacy: NextPage = () => {
                 <li>With your explicit consent</li>
               </ul>
             </div>
-
             {/* Data Security */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
@@ -144,7 +159,11 @@ const Privacy: NextPage = () => {
                 We implement appropriate technical and organizational security
                 measures to protect your personal information against
                 unauthorized access, alteration, disclosure, or destruction.
+<<<<<<< HEAD
                 These measures include:
+=======
+                These measures include:{' '}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>SSL encryption for data transmission</li>
@@ -154,7 +173,6 @@ const Privacy: NextPage = () => {
                 <li>Employee training on data protection</li>
               </ul>
             </div>
-
             {/* Your Rights */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
@@ -163,7 +181,11 @@ const Privacy: NextPage = () => {
               </h2>
               <p className="text-gray-600 mb-4">
                 Depending on your location, you may have certain rights
+<<<<<<< HEAD
                 regarding your personal information:
+=======
+                regarding your personal information:{' '}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Access to your personal information</li>
@@ -175,7 +197,6 @@ const Privacy: NextPage = () => {
                 <li>Withdrawal of consent</li>
               </ul>
             </div>
-
             {/* Cookies */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -187,7 +208,6 @@ const Privacy: NextPage = () => {
                 through your browser preferences.
               </p>
             </div>
-
             {/* Third-Party Links */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -200,19 +220,23 @@ const Privacy: NextPage = () => {
                 policies.
               </p>
             </div>
-
-            {/* Children's Privacy */}
+            {/* Children&apos;s Privacy */}'
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
+<<<<<<< HEAD
                 Children's Privacy
               </h2>
+=======
+                Children&apos;s Privacy'
+              </h2>
+              ''
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               <p className="text-gray-600 mb-4">
                 Our services are not intended for children under 13 years of
                 age. We do not knowingly collect personal information from
                 children under 13.
               </p>
             </div>
-
             {/* Changes to Policy */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -224,7 +248,6 @@ const Privacy: NextPage = () => {
                 this page and updating the "Last updated" date.
               </p>
             </div>
-
             {/* Contact Information */}
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
@@ -233,7 +256,11 @@ const Privacy: NextPage = () => {
               </h2>
               <p className="text-gray-600 mb-4">
                 If you have any questions about this Privacy Policy or our data
+<<<<<<< HEAD
                 practices, please contact us:
+=======
+                practices, please contact us:{' '}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               </p>
               <div className="bg-gray-50 rounded-lg p-6">
                 <p className="text-gray-700 mb-2">
@@ -243,7 +270,11 @@ const Privacy: NextPage = () => {
                   <strong>Phone:</strong> +1 (302) 464-0950
                 </p>
                 <p className="text-gray-700 mb-2">
+<<<<<<< HEAD
                   <strong>Address:</strong> 364 E Main St STE 1008, Middletown,
+=======
+                  <strong>Address: </strong> 364 E Main St STE 1008, Middletown,
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                   DE 19709
                 </p>
               </div>
@@ -259,10 +290,17 @@ const Privacy: NextPage = () => {
             Questions About Your Privacy?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
             We're here to help. Contact us if you have any questions about how
             we handle your personal information.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
+=======
+            We&apos;re here to help. Contact us if you have any questions about
+            how' we handle your personal information.''
+          </p>
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
@@ -281,5 +319,8 @@ const Privacy: NextPage = () => {
     </Layout>
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default Privacy;

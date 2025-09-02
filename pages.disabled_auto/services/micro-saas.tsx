@@ -393,5 +393,4 @@ const MicroSaasPage: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default MicroSaasPage

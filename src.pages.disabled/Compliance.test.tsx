@@ -1,3 +1,0 @@
-:src.pages.disabled/Compliance.test.tsx;
-describe ('Compliance', () => {}' it ('renders without crashing', () => {} render (<Compliance />) '; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<Compliance />) ;
-describe ('Compliance', () => {}' it ('renders without crashing', () => {} render (<Compliance />) '; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<Compliance />) ''

@@ -9,13 +9,16 @@ import {
   Github,
   Facebook,
 } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 const EnhancedFooter: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -31,7 +34,11 @@ const EnhancedFooter: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a
+<<<<<<< HEAD
                 href="https://linkedin.com"
+=======
+                href="https: //linkedin.com"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-blue-400 transition-colors"
@@ -259,7 +266,7 @@ const EnhancedFooter: React.FC = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-500"
               />
               <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-r-lg font-semibold transition-colors">
                 Subscribe
@@ -276,7 +283,11 @@ const EnhancedFooter: React.FC = () => {
             <p className="text-gray-300 text-sm">
               &copy; 2024 Zion Tech Group. All rights reserved.
             </p>
+<<<<<<< HEAD
             <div className="flex space-x-6 mt-4 md:mt-0">
+=======
+            <div className="flex space-x-6 mt-4 md: mt-0">
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               <Link
                 href="/privacy"
                 className="text-gray-300 hover:text-white text-sm transition-colors"
@@ -302,5 +313,8 @@ const EnhancedFooter: React.FC = () => {
     </footer>
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default EnhancedFooter;

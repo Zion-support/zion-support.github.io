@@ -507,5 +507,4 @@ const Blog: NextPage = () => {
       <Footer />
     </div>
   )}
-;
 export default Blog

@@ -50,6 +50,5 @@ const AISeoOptimizer: React.FC = () => {
       </div>
     </div>
   )}
-;
 export default AISeoOptimizer;
 "

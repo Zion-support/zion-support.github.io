@@ -1,10 +1,6 @@
-import React from 'react';
-import { Header } from '../src/components/Header';
-import { Footer } from '../src/components/Footer';
-import { PerformanceMonitor } from '../src/components/PerformanceMonitor';
-import '../src/index.css';
-
+import React, { useEffect } from 'react';
 export default function App({ Component, pageProps }) {
+<<<<<<< HEAD
   return (
     <div className="min-h-screen flex flex-col">
       <PerformanceMonitor />
@@ -15,4 +11,7 @@ export default function App({ Component, pageProps }) {
       <Footer />
     </div>
   );
+=======
+  return <Component {...pageProps} />;
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 }

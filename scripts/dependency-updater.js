@@ -132,7 +132,6 @@ class DependencyUpdater {
       vulnerabilities: this.vulnerabilities,
       updateSuggestions: this.updates,
       recommendations: this.generateRecommendations()}
-;
     // Save report to file;
     const reportPath = path.join(this.projectRoot,logs;
   ',dependency-update-report.json');

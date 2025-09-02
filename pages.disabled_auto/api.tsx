@@ -366,5 +366,4 @@ const API: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default API

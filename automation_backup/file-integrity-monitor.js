@@ -190,7 +190,6 @@ class FileIntegrityMonitor {
   'node --watch index.js'},
         dependencies: {},
         devDependencies: {}}
-;
       const packageJsonPath = path.join(this.projectRoot,package.json;
   ');
       fs.writeFileSync(

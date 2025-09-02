@@ -59,7 +59,6 @@ const CONFIG = {
   ': 'Fix network connectivity,timeout-fix':,
   Increase timeout values',connection-fix;
   ': 'Fix connection issues}
-;
 class BrowserErrorMonitor {
   constructor() {
     this.browser = null;
@@ -72,7 +71,6 @@ class BrowserErrorMonitor {
       fixedErrors: 0,
       failedFixes: 0,
       lastCheck: null}
-;
   async initialize() {
     try {
       // console.log('🚀 Initializing Browser Error Monitor...;
@@ -125,7 +123,6 @@ class BrowserErrorMonitor {
       timestamp: new Date().toISOString(),
       severity: this.assessErrorSeverity(msg.text()),
       location: await this.getErrorLocation()}
-;
     this.errorLog.push(error);
     // console.log(`🔴 Console Error: ${error.message}`);
     // Attempt auto-fix;
@@ -139,7 +136,6 @@ class BrowserErrorMonitor {
       timestamp: new Date().toISOString(),
       severity: this.assessErrorSeverity(error.message),
       location: await this.getErrorLocation()}
-;
     this.errorLog.push(pageError);
     // console.log(`🔴 Page Error: ${pageError.message}`);
     // Attempt auto-fix;
@@ -153,7 +149,6 @@ class BrowserErrorMonitor {
       timestamp: new Date().toISOString(),
       severity: this.assessErrorSeverity(request.failure().errorText),
       location: await this.getErrorLocation()}
-;
     this.errorLog.push(requestError);
     // console.log(`🔴 Request Failed: ${request.url()} - ${request.failure().errorText}`);
     // Attempt auto-fix;
@@ -168,7 +163,6 @@ class BrowserErrorMonitor {
       timestamp: new Date().toISOString(),
       severity: this.assessErrorSeverity(`HTTP ${response.status()}`),
       location: await this.getErrorLocation()}
-;
     this.errorLog.push(responseError);
     // console.log(`🔴 Response Error: ${response.url()} - ${response.status()} ${response.statusText()}`);
     // Attempt auto-fix;
@@ -196,7 +190,6 @@ class BrowserErrorMonitor {
     } catch (error) {
       return { url: 'unknown, title:;
   'unknown' }
-;
   async attemptAutoFix(error) {
     try {
       const fixStrategy = this.identifyFixStrategy(error);
@@ -264,7 +257,6 @@ class BrowserErrorMonitor {
   ' }
 } catch (fixError) {
       return { success: false, reason: fixError.message }
-;
   // Fix implementations;
   async fixNullCheck(error) {
     // Inject null check helper;
@@ -278,7 +270,6 @@ class BrowserErrorMonitor {
 })
     return { success: true, message: 'Null check helper injected
   ' }
-;
   async fixFunctionCheck(error) {
     // Inject function existence checker;
     await this.page.evaluate(() => {
@@ -293,7 +284,6 @@ class BrowserErrorMonitor {
     return { success: true, message:,
   Function check helper injected;
   ' }
-;
   async fixSyntaxError(error) {
     // Try to reload page to clear syntax errors;
     try {
@@ -304,7 +294,6 @@ class BrowserErrorMonitor {
       return { success: false, reason:,
   Failed to reload page;
   ' }
-;
   async fixReferenceError(error) {
     // Inject global error handler;
     await this.page.evaluate(() => {
@@ -317,7 +306,6 @@ class BrowserErrorMonitor {
   ', window.globalErrorHandler)})
     return { success: true, message: 'Global error handler injected
   ' }
-;
   async fixTypeError(error) {
     // Inject type checking helper;
     await this.page.evaluate(() => {
@@ -334,7 +322,6 @@ class BrowserErrorMonitor {
     return { success: true, message:,
   Type checking helper injected;
   ' }
-;
   async fixResourceError(error) {
     // Try to reload failed resources;
     try {
@@ -345,14 +332,12 @@ class BrowserErrorMonitor {
       return { success: false, reason:,
   Failed to reload resources;
   ' }
-;
   async fixMissingResource(error) {
     // Log missing resource for manual review;
     // console.log(`📝 Missing resource detected: ${error.url || 'unknown}`);
     return { success: true, message:,
   Missing resource logged for review;
   ' }
-;
   async fixCorsError(error) {
     // Inject CORS bypass for development (use with caution);
     await this.page.evaluate(() => {
@@ -363,26 +348,22 @@ class BrowserErrorMonitor {
 })
     return { success: true, message: 'CORS bypass helper injected
   ' }
-;
   async fixNetworkError(error) {
     // Wait and retry;
     await new Promise(resolve => setTimeout(resolve, 2000));
     return { success: true, message: 'Network retry delay applied;
   ' }
-;
   async fixTimeoutError(error) {
     // Increase page timeout;
     this.page.setDefaultTimeout(60000);
     return { success: true, message: 'Page timeout increased to 60s;
   ' }
-;
   async fixConnectionError(error) {
     // Wait and retry connection;
     await new Promise(resolve => setTimeout(resolve, 5000));
     return { success: true, message:,
   Connection retry delay applied;
   ' }
-;
   async performHealthCheck() {
     try {
       // console.log('🔍 Performing browser health check...;
@@ -418,7 +399,6 @@ class BrowserErrorMonitor {
           failedFixes: this.stats.failedFixes,
           successRate: this.stats.totalErrors > 0 ?;
             ((this.stats.fixedErrors / this.stats.totalErrors) * 100).toFixed(2) : 100}
-;
       const reportPath = path.join(CONFIG.logDir,browser-error-report.json');
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
       // console.log(`📄 Report generated: ${reportPath}`)} catch (error) {

@@ -253,5 +253,4 @@ const Cookies: NextPage = () => {
       </div>
     </MainLayout>
   )}
-;
 export default Cookies

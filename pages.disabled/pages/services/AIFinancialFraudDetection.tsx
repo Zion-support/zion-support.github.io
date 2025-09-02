@@ -769,5 +769,4 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
     </div>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx)}''`;
 export default AIFinancialFraudDetection}}}''`''`)}
-;
 export default AIFinancialFraudDetection}}}'"`

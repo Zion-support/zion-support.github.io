@@ -350,5 +350,4 @@ const SmallBusiness: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default SmallBusiness

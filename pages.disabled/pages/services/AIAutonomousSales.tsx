@@ -168,6 +168,5 @@ const AIAutonomousSales: React.FC = (): JSX.Element => {
       </section>
     </div>
   )}
-;
 :pages.disabled/pages/services/AIAutonomousSales.tsx;
 export default AIAutonomousSales'';'''

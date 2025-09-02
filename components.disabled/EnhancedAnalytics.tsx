@@ -86,7 +86,6 @@ const formatNumber = (num: number): string => {
     if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M;
   '    if (num >= 1000) return (num / 1000).toFixed(1) +;
   'K'    return num.toString()  }
-;
   const formatDuration = (seconds: number): string => {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = Math.floor(seconds % 60);
@@ -209,5 +208,4 @@ className='bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
       {/* Last Updated */}
       <div className='text-center text-sm text-gray-500 dark: text-gray-400'>'        Last updated: {lastUpdated.toLocaleString()}'      </div></div>
   )}
-;
 export default EnhancedAnalytics

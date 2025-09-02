@@ -11,7 +11,10 @@ import {
   Users,
   Award,
 } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 const WebDevelopment: NextPage = () => {
   return (
     <Layout
@@ -24,7 +27,7 @@ const WebDevelopment: NextPage = () => {
           <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
             <Code className="w-10 h-10 text-white" />
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Web Development
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
               {' '}
@@ -36,7 +39,11 @@ const WebDevelopment: NextPage = () => {
             technologies that deliver exceptional user experiences.
           </p>
 
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+=======
+          <div className="flex flex-col sm: flex-row justify-center gap-4 mb-12">
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <Link
               href="/contact"
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
@@ -66,7 +73,7 @@ const WebDevelopment: NextPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                 <Globe className="w-8 h-8 text-green-600" />
@@ -103,7 +110,7 @@ const WebDevelopment: NextPage = () => {
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                 <Zap className="w-8 h-8 text-purple-600" />
               </div>
@@ -122,7 +129,7 @@ const WebDevelopment: NextPage = () => {
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
                 <Code className="w-8 h-8 text-orange-600" />
               </div>
@@ -195,7 +202,7 @@ const WebDevelopment: NextPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">1</span>
@@ -254,10 +261,17 @@ const WebDevelopment: NextPage = () => {
             Ready to Build Your Web Application?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
             Let's discuss your web development needs and create a solution that
             drives your business forward.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
+=======
+            Let&apos;s discuss your web development needs and create a solution
+            that' drives your business forward.''
+          </p>
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <Link
               href="/contact"
               className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
@@ -276,5 +290,8 @@ const WebDevelopment: NextPage = () => {
     </Layout>
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default WebDevelopment;

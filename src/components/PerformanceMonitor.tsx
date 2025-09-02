@@ -10,10 +10,8 @@ export function PerformanceMonitor() {
       // Send to analytics service
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-          non_interaction: true,
+          event_category: 'Web Vitals', event_label: metric.id,
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,
         });
       }
     };
@@ -33,10 +31,9 @@ export function PerformanceMonitor() {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
-            console.log('Navigation timing:', {
+            console.log('Navigation timing: ', {
               domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-              loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-              totalTime: navEntry.loadEventEnd - navEntry.fetchStart
+              loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart, totalTime: navEntry.loadEventEnd - navEntry.fetchStart
             });
           }
         }

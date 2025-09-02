@@ -115,7 +115,6 @@ async function runPerformanceMonitor() {
     // // // // // // // console.log(
   '📊 Generating performance report...');
   summary: 'Performance monitoring completed}
-;
     console.log(
   '📊 Generating performance report...');
     const reportPath = path.join(process.cwd(),

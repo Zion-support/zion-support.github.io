@@ -5,7 +5,7 @@ import React from,
   ';
   ' md: 'w-8 h-8, ,
   ';
-  ' lg: 'w-12 h-12 } const textSizes = {};
+  ' lg: 'w-12 h-12 } const textSizes = {}
   ';'; sm: 'text-sm, ,
   ';
   ' md: 'text-base, ,

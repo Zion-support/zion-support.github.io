@@ -12,7 +12,6 @@ import {
   Users,
   Award,
 } from 'lucide-react';
-
 export default function Contact() {
   const contactMethods = [
     {
@@ -44,13 +43,11 @@ export default function Contact() {
       href: 'https://ziontechgroup.com',
     },
   ];
-
   const businessHours = [
     { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST' },
     { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST' },
     { day: 'Sunday', hours: 'Emergency Support Only' },
   ];
-
   const services = [
     'AI Services & Solutions',
     'IT Services & Cloud Platforms',
@@ -59,7 +56,6 @@ export default function Contact() {
     'Digital Transformation',
     'DevOps & Automation',
   ];
-
   return (
     <>
       <Head>
@@ -74,7 +70,7 @@ export default function Contact() {
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-50 to-purple-50 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-6">
                 Contact Zion Tech Group
@@ -94,7 +90,11 @@ export default function Contact() {
               {contactMethods.map((method, index) => (
                 <div
                   key={index}
+<<<<<<< HEAD
                   className="text-center p-6 rounded-2xl border border-gray-200 hover:shadow-lg transition-shadow"
+=======
+                  className="text-center p-6 rounded-2xl border border-gray-200 hover: shadow-lg transition-shadow"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 >
                   <div className="p-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-4">
                     <method.icon className="w-6 h-6 text-white" />
@@ -119,7 +119,7 @@ export default function Contact() {
               ))}
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">
               {/* Contact Form */}
               <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
@@ -261,7 +261,11 @@ export default function Contact() {
                     {businessHours.map((schedule, index) => (
                       <div
                         key={index}
+<<<<<<< HEAD
                         className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0"
+=======
+                        className="flex justify-between items-center py-2 border-b border-gray-100 last: border-b-0"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                       >
                         <span className="font-medium text-gray-900">
                           {schedule.day}

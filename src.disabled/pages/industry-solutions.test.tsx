@@ -1,5 +1,4 @@
 describe (
-  'industry - solutions', () => {}' it ('renders without crashing
-  ', () => {} render (<industry - solutions />) '; expect (screen.getByRole (
+  'industry - solutions', () => {}' it('renders without crashing', () => {} render(<industrysolutions />) '; expect (screen.getByRole (
   'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
-  ', () => {} render (<industry - solutions />) ''
+  ', () => {} render(<industrysolutions />) ''

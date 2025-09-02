@@ -47,7 +47,6 @@ const categories = [{
     link: '/zion-hire-ai',
     color: 'from-zion-purple to-zion-purple-dark',
     featured: true}
-;
 ]
 const specialServices = [
   {

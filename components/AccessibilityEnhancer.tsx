@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -10,22 +9,26 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
-
   useEffect(() => {
+<<<<<<< HEAD
     // Check for user's motion preferences
+=======
+    // Check for user&apos;s motion preferences'
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches;
     setReducedMotion(prefersReducedMotion);
-
     // Apply accessibility settings from localStorage
     const savedHighContrast = localStorage.getItem('highContrast') === 'true';
     const savedFontSize = localStorage.getItem('fontSize') || 'normal';
-
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
     setReducedMotion(prefersReducedMotion);
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     // Apply initial styles
     applyAccessibilityStyles(
       savedHighContrast,
@@ -33,14 +36,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       prefersReducedMotion
     );
   }, []);
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const applyAccessibilityStyles = (
     highContrast: boolean,
     fontSize: string,
     reducedMotion: boolean
   ) => {
     const root = document.documentElement;
-
     // High contrast mode
     if (highContrast) {
       root.classList.add('high-contrast');
@@ -56,7 +61,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       'font-extra-large'
     );
     root.classList.add(`font-${fontSize}`);
-
     // Reduced motion
     if (reducedMotion) {
       root.classList.add('reduced-motion');
@@ -64,14 +68,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       root.classList.remove('reduced-motion');
     }
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const toggleHighContrast = () => {
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage.setItem('highContrast', newValue.toString());
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const changeFontSize = (newSize: string) => {
     setFontSize(newSize);
     localStorage.setItem('fontSize', newSize);
@@ -80,7 +90,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return (
     <>
       {/* Accessibility Controls */}
+<<<<<<< HEAD
       <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 border">
+=======
+      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark: bg-gray-800 shadow-lg rounded-lg p-4 border">
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
         <h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">
           Accessibility Options
         </h3>
@@ -120,7 +134,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       {/* Skip to main content link */}
       <a
         href="#main-content"
+<<<<<<< HEAD
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+=======
+        className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       >
         Skip to main content
       </a>
@@ -153,7 +171,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         .high-contrast button, .high-contrast a {
           border: 2px solid black !important}
         
-        .high-contrast button:hover, .high-contrast a:hover {
+        .high-contrast button:hover, .high-contrast a: hover {
           background-color: black !important;
           color: white !important}
 
@@ -171,8 +189,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           font-size: 1.25rem}
 
         /* Reduced motion */
-        .reduced-motion *, .reduced-motion *::before,
-        .reduced-motion *::after {
+        .reduced-motion *, .reduced-motion *: :before,
+        .reduced-motion *: :after {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
@@ -208,5 +226,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     </>
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default AccessibilityEnhancer;

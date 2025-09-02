@@ -124,5 +124,4 @@ import { '  FileText, Scale,
       </section>
     </div>
   )}
-;
 export default Terms

@@ -62,7 +62,6 @@ class BuildOptimizer {
         'tsBuildInfoFile': '.next/tsbuildinfo',
         'skipLibCheck': true,
         'forceConsistentCasingInFileNames': true}
-;
       Object.entries(optimizations).forEach(([key, value]) => {
         if (!(key in config.compilerOptions)) {
           config.compilerOptions[key] = value;
@@ -83,7 +82,6 @@ class BuildOptimizer {
         'build:fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint',
         'dev:optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo',
         'start:optimized': 'NODE_ENV=production next start -p 3000'}
-;
       Object.entries(optimizedScripts).forEach(([key, value]) => {
         if (!(key in pkg.scripts)) {
           pkg.scripts[key] = value;
@@ -148,7 +146,6 @@ fi;
         'Consider using Next.js Image optimization',
         'Implement code splitting for better performance';
       ]}
-;
     fs.writeFileSync('build-optimization-report.json', JSON.stringify(report, null, 2));
     this.optimizations.push('Generated performance report')}
 }

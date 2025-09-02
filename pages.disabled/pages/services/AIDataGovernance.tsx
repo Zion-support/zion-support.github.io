@@ -732,5 +732,4 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
     </div>
 :pages.disabled/pages/services/AIDataGovernance.tsx)}''`;
 export default AIDataGovernance}}}}}}''`''`)}
-;
 export default AIDataGovernance}}}}}}''`

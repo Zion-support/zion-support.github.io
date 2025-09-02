@@ -11,7 +11,10 @@ import {
   Heart,
   Zap,
 } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 const About: NextPage = () => {
   return (
     <Layout
@@ -21,7 +24,7 @@ const About: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             About
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
               {' '}
@@ -71,7 +74,7 @@ const About: NextPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Target className="w-8 h-8 text-blue-600" />
@@ -130,7 +133,7 @@ const About: NextPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-lg p-8 text-center">
               <div className="w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-12 h-12 text-white" />
@@ -178,7 +181,7 @@ const About: NextPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold mb-2">500+</div>
               <div className="text-blue-200">Projects Completed</div>
@@ -206,10 +209,17 @@ const About: NextPage = () => {
             Ready to Work With Us?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
             Let's discuss how we can help transform your business with
             innovative technology solutions.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
+=======
+            Let&apos;s discuss how we can help transform your business with'
+            innovative technology solutions.''
+          </p>
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <Link
               href="/contact"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
@@ -228,5 +238,8 @@ const About: NextPage = () => {
     </Layout>
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default About;

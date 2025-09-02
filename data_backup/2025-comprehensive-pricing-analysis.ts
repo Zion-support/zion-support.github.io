@@ -427,8 +427,7 @@ export const getMarketInsights = () => {
   IoT & Edge Computing',
 highestROI: '1000% (Quantum Neural Network Platform),
   fastestPayback:;
-  '2-4 months (DeFi Trading Platform)';
-}
+  '2-4 months (DeFi Trading Platform)'}
   return insights}
 export const getCompetitiveLandscape = () => {
   return {

@@ -457,5 +457,4 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
     </div>
 :pages.disabled/pages/services/ai-hr-platform.tsx)}'';
 export default AIHRPlatform}}}'''')}
-;
 export default AIHRPlatform}}}'''

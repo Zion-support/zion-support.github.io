@@ -32,7 +32,6 @@ class WebsiteAnalyzer {
       errors: [],
       warnings: [],
       recommendations: []}
-;
     this.checkedUrls = new Set();
     this.linkQueue = []}
   async analyzeWebsite() {

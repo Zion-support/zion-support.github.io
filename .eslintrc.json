@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "extends": ["next/core-web-vitals"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -34,4 +35,7 @@
     "refactoring-reports/",
     "automation-reports/"
   ]
+=======
+  "root": true
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 }

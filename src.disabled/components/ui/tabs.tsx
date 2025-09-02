@@ -19,8 +19,7 @@ export function Tabs(...args: any[]): any {
   return (
     <TabsContext.Provider value = {
   { activeTab,
-  setActiveTab: handleTabChange;
-}}>
+  setActiveTab: handleTabChange}}>
       <div className={className}>
         {children}
       </div>

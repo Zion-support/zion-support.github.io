@@ -2,12 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedFooter from './layout/EnhancedFooter';
-
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
-  description?: string;
-}
+  description?: string}
 
 const Layout: React.FC<LayoutProps> = ({
   children,
@@ -25,7 +23,7 @@ const Layout: React.FC<LayoutProps> = ({
           content="technology solutions, AI development, cloud services, web development, mobile development, blockchain, IoT, cybersecurity"
         />
         <meta name="author" content="Zion Tech Group" />
-        <meta property="og:title" content={title} />
+        <meta property="og: title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
@@ -40,5 +38,8 @@ const Layout: React.FC<LayoutProps> = ({
     </>
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default Layout;

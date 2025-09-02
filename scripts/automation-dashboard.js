@@ -238,7 +238,6 @@ class AutomationDashboard {
         totalMemory: this.processes.reduce((sum, p) => sum + p.monit.memory, 0),
         averageCPU: this.processes.reduce((sum, p) => sum + p.monit.cpu, 0) / this.processes.length,
         totalRestarts: this.processes.reduce((sum, p) => sum + p.pm2_env.restart_time, 0)}
-;
       console.log(,
   ✅ No failed processes to restart;
   ');

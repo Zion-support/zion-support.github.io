@@ -5,8 +5,8 @@ export function middleware(_request: NextRequest) {
   const response = NextResponse.next();
 
   // Security headers
-  response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('X-Frame-Options', 'DENY');
+<<<<<<< HEAD
   response.headers.set('X-XSS-Protection', '1; mode=block');
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set(
@@ -14,6 +14,12 @@ export function middleware(_request: NextRequest) {
     'camera=(), microphone=(), geolocation=()'
   );
 
+=======
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   // Content Security Policy
   const csp = [
     "default-src 'self'",
@@ -22,7 +28,7 @@ export function middleware(_request: NextRequest) {
     "img-src 'self' data: https:",
     "font-src 'self'",
     "connect-src 'self'",
-    "frame-ancestors 'none'",
+    "frame-ancestors 'none'"
   ].join('; ');
 
   response.headers.set('Content-Security-Policy', csp);
@@ -31,5 +37,12 @@ export function middleware(_request: NextRequest) {
 }
 
 export const config = {
+<<<<<<< HEAD
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 };
+=======
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+};
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27

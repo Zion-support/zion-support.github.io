@@ -373,5 +373,4 @@ const CustomDevelopment: NextPage = () => {
       </div>
     </MainLayout>
   )}
-;
 export default CustomDevelopment

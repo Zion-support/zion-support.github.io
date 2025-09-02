@@ -59,6 +59,5 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
       </section>
     </div>
   )}
-;
 :pages.disabled/pages/services/DeveloperProductivityCopilot.tsx;
 export { DeveloperProductivityCopilot }export default DeveloperProductivityCopilot'';'''

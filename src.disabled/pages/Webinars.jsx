@@ -11,7 +11,7 @@ import React from,
   ,'';
   ' duration: '60 minutes, ,
   ';
-  ' speaker: 'Dr. Sarah Chen}, {};
+  ' speaker: 'Dr. Sarah Chen}, {}
   ';'; title: 'Cybersecurity in the Digital Age, ,
   ';
   ' description: '''';Explore the latest cybersecurity threats and best practices for protecting your organization&apos;s digital assets.', ,
@@ -22,7 +22,7 @@ import React from,
   ,'';
   ' duration: '45 minutes, ,
   ';
-  ' speaker: 'Michael Rodriguez}, {};
+  ' speaker: 'Michael Rodriguez}, {}
   ';'; title: 'Cloud Migration Strategies, ,
   ';
   ' description: ''';
@@ -34,7 +34,7 @@ import React from,
   ,'';
   ' duration: '75 minutes, ,
   ';
-  ' speaker: 'Jennifer Kim}, {};
+  ' speaker: 'Jennifer Kim}, {}
   ';'; title: 'Data Analytics for Decision Making, ,
   ';
   ' description: ''';
@@ -46,7 +46,7 @@ import React from,
   ,'';
   ' duration: '60 minutes, ,
   ';
-  ' speaker: 'David Thompson}, {};
+  ' speaker: 'David Thompson}, {}
   ';'; title: 'Digital Transformation Roadmap, ,
   ';
   ' description: ''';
@@ -58,7 +58,7 @@ import React from,
   ,'';
   ' duration: '90 minutes, ,
   ';
-  ' speaker: 'Lisa Wang}, {};
+  ' speaker: 'Lisa Wang}, {}
    title: 'Emerging Technologies in 2025,
 ,
    description: '';Stay ahead of the curve with insights into the most promising emerging technologies and their business applications.,

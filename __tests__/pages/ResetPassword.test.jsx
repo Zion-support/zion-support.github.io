@@ -47,7 +47,6 @@ describe('ResetPassword Page;
         </Routes>
       </MemoryRouter>
     )}
-;
   test('renders password inputs and submit button
   ', () => {
     renderWithRouter(<ResetPassword />);

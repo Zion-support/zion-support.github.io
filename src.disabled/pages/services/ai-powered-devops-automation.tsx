@@ -584,5 +584,4 @@ const AIPoweredDevOpsAutomation = () => {
       </div>
     </div>
   )}
-;
 export default AIPoweredDevOpsAutomation

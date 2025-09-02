@@ -743,7 +743,6 @@ import { Atom,
       </section>
     </div>
   )}
-;
 :pages.disabled/pages/services/QuantumAIPlatform.tsx;
 export { QuantumAIPlatform }export default QuantumAIPlatform''`;
 ''`''`;

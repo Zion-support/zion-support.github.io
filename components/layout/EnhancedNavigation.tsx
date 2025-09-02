@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
-
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
-
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
@@ -24,7 +22,11 @@ const EnhancedNavigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
           <div className="hidden lg:flex items-center space-x-8">
+=======
+          <div className="hidden lg: flex items-center space-x-8">
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <Link
               href="/"
               className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -49,7 +51,11 @@ const EnhancedNavigation: React.FC = () => {
               >
                 <Link
                   href="/services/ai-development"
+<<<<<<< HEAD
                   className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+=======
+                  className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 >
                   AI Development
                 </Link>
@@ -109,7 +115,11 @@ const EnhancedNavigation: React.FC = () => {
               >
                 <Link
                   href="/solutions/enterprise"
+<<<<<<< HEAD
                   className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+=======
+                  className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 >
                   Enterprise Solutions
                 </Link>
@@ -336,5 +346,4 @@ const EnhancedNavigation: React.FC = () => {
     </nav>
   );
 };
-
 export default EnhancedNavigation;

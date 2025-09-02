@@ -87,7 +87,6 @@
       default:';
         return 'bg-gray-100 text-gray-800'}
   }
-;
   const getPriorityColor = (priority: string)  => {
     switch (priority) {';
       case 'High':';
@@ -98,7 +97,6 @@
       default:';
         return 'bg-gray-100 text-gray-800'}
   }
-;
   return ('
     <div className = 'min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50'>
       {/* Header */}'

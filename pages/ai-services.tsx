@@ -35,12 +35,14 @@ import {
   Network,
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
-
 export default function AIServices() {
   const title = 'AI Services — Zion Tech Group';
   const description =
     'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.';
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const aiServices = [
     {
       title: 'AI-Powered Email Responder',
@@ -54,7 +56,7 @@ export default function AIServices() {
         'Integration with CRM and helpdesk systems',
         'Multi-language support and compliance',
       ],
-      pricing: '$2,500 - $8,000/month',
+      pricing: '$2,500 - $8, 000/month',
       delivery: '2-3 weeks',
       category: 'Communication AI',
     },
@@ -70,7 +72,7 @@ export default function AIServices() {
         'Technical documentation creation',
         'SEO-optimized content with keyword integration',
       ],
-      pricing: '$1,500 - $5,000/month',
+      pricing: '$1,500 - $5, 000/month',
       delivery: '1-2 weeks',
       category: 'Content AI',
     },
@@ -86,7 +88,7 @@ export default function AIServices() {
         'Contract analysis and risk assessment',
         'Compliance monitoring and reporting',
       ],
-      pricing: '$3,000 - $12,000/month',
+      pricing: '$3,000 - $12, 000/month',
       delivery: '3-4 weeks',
       category: 'Document AI',
     },
@@ -102,7 +104,7 @@ export default function AIServices() {
         'Bias detection and elimination',
         'Predictive hiring success metrics',
       ],
-      pricing: '$4,000 - $15,000/month',
+      pricing: '$4,000 - $15, 000/month',
       delivery: '4-6 weeks',
       category: 'HR AI',
     },
@@ -118,7 +120,7 @@ export default function AIServices() {
         'Video analytics and monitoring',
         'Custom model training and deployment',
       ],
-      pricing: '$5,000 - $20,000/month',
+      pricing: '$5,000 - $20, 000/month',
       delivery: '6-8 weeks',
       category: 'Vision AI',
     },
@@ -134,7 +136,7 @@ export default function AIServices() {
         'Sentiment analysis and escalation',
         'Continuous learning and improvement',
       ],
-      pricing: '$2,000 - $10,000/month',
+      pricing: '$2,000 - $10, 000/month',
       delivery: '2-4 weeks',
       category: 'Conversational AI',
     },
@@ -150,7 +152,7 @@ export default function AIServices() {
         'Market trend analysis',
         'Real-time dashboard and alerts',
       ],
-      pricing: '$6,000 - $25,000/month',
+      pricing: '$6,000 - $25, 000/month',
       delivery: '8-12 weeks',
       category: 'Analytics AI',
     },
@@ -166,7 +168,7 @@ export default function AIServices() {
         'Multi-language support',
         'Analytics and search optimization',
       ],
-      pricing: '$3,500 - $12,000/month',
+      pricing: '$3,500 - $12, 000/month',
       delivery: '4-6 weeks',
       category: 'Search AI',
     },
@@ -183,7 +185,7 @@ export default function AIServices() {
         'Voice biometric authentication',
         'Audio content analysis and insights',
       ],
-      pricing: '$4,000 - $15,000/month',
+      pricing: '$4,000 - $15, 000/month',
       delivery: '5-8 weeks',
       category: 'Voice AI',
     },
@@ -200,7 +202,7 @@ export default function AIServices() {
         'Multi-channel fraud prevention',
         'Compliance reporting and audit trails',
       ],
-      pricing: '$5,000 - $20,000/month',
+      pricing: '$5,000 - $20, 000/month',
       delivery: '6-10 weeks',
       category: 'Security AI',
     },
@@ -217,7 +219,7 @@ export default function AIServices() {
         'Performance analytics and insights',
         'Custom algorithm development',
       ],
-      pricing: '$3,000 - $12,000/month',
+      pricing: '$3,000 - $12, 000/month',
       delivery: '4-7 weeks',
       category: 'Recommendation AI',
     },
@@ -234,7 +236,7 @@ export default function AIServices() {
         'Automated video editing and optimization',
         'Live streaming analytics',
       ],
-      pricing: '$6,000 - $25,000/month',
+      pricing: '$6,000 - $25, 000/month',
       delivery: '8-12 weeks',
       category: 'Video AI',
     },
@@ -251,7 +253,7 @@ export default function AIServices() {
         'Real-time process monitoring',
         'Predictive process analytics',
       ],
-      pricing: '$8,000 - $30,000/month',
+      pricing: '$8,000 - $30, 000/month',
       delivery: '10-16 weeks',
       category: 'Process AI',
     },
@@ -268,7 +270,7 @@ export default function AIServices() {
         'Supply chain visibility and tracking',
         'Risk mitigation and contingency planning',
       ],
-      pricing: '$10,000 - $40,000/month',
+      pricing: '$10,000 - $40, 000/month',
       delivery: '12-20 weeks',
       category: 'Supply Chain AI',
     },
@@ -285,7 +287,7 @@ export default function AIServices() {
         'Customer journey sentiment mapping',
         'Integration with CRM and support tools',
       ],
-      pricing: '$2,500 - $8,000/month',
+      pricing: '$2,500 - $8, 000/month',
       delivery: '3-5 weeks',
       category: 'Sentiment AI',
     },
@@ -302,7 +304,7 @@ export default function AIServices() {
         'Test case generation and validation',
         'Integration with development workflows',
       ],
-      pricing: '$4,000 - $15,000/month',
+      pricing: '$4,000 - $15, 000/month',
       delivery: '6-10 weeks',
       category: 'Development AI',
     },
@@ -319,10 +321,11 @@ export default function AIServices() {
         'Market opportunity identification',
         'Real-time market intelligence reports',
       ],
-      pricing: '$5,000 - $18,000/month',
+      pricing: '$5,000 - $18, 000/month',
       delivery: '6-12 weeks',
       category: 'Market AI',
     },
+<<<<<<< HEAD
     {
       title: 'AI Autonomous Agents Platform',
       description:
@@ -559,8 +562,9 @@ export default function AIServices() {
       delivery: '14-26 weeks',
       category: 'Blockchain AI',
     },
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   ];
-
   const aiTechnologies = [
     {
       name: 'Machine Learning',
@@ -593,7 +597,6 @@ export default function AIServices() {
       description: 'Content creation and synthesis',
     },
   ];
-
   const benefits = [
     {
       title: 'Increased Efficiency',
@@ -620,14 +623,13 @@ export default function AIServices() {
       stat: '99.9%',
     },
   ];
-
   return (
     <PageTransition>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-services" />
       </Head>
 
       {/* Hero Section */}
@@ -652,7 +654,7 @@ export default function AIServices() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"
-                className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4 inline" />
@@ -699,7 +701,7 @@ export default function AIServices() {
       </section>
 
       {/* AI Technologies */}
-      <section className="py-24 sm:py-32 bg-gray-50">
+      <section className="py-24 sm: py-32 bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -713,7 +715,11 @@ export default function AIServices() {
             {aiTechnologies.map((tech, index) => (
               <div
                 key={index}
+<<<<<<< HEAD
                 className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+=======
+                className="bg-white rounded-2xl p-6 shadow-sm hover: shadow-md transition-shadow"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               >
                 <div className="flex items-center mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
@@ -731,7 +737,7 @@ export default function AIServices() {
       </section>
 
       {/* AI Services Grid */}
-      <section className="py-24 sm:py-32 bg-white">
+      <section className="py-24 sm: py-32 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -742,7 +748,11 @@ export default function AIServices() {
               services include implementation, training, and ongoing support.
               Contact us at{' '}
               <a
+<<<<<<< HEAD
                 href="mailto:kleber@ziontechgroup.com"
+=======
+                href="mailto: kleber@ziontechgroup.com"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 className="text-blue-600 hover:text-blue-500"
               >
                 kleber@ziontechgroup.com
@@ -761,7 +771,11 @@ export default function AIServices() {
             {aiServices.map((service, index) => (
               <div
                 key={index}
+<<<<<<< HEAD
                 className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
+=======
+                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               >
                 <div className="flex items-center gap-x-3 mb-6">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors">
@@ -800,7 +814,7 @@ export default function AIServices() {
                   </div>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group"
+                    className="inline-flex items-center text-sm font-semibold text-blue-600 hover: text-blue-500 transition-colors group"
                   >
                     Get Started
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -813,20 +827,25 @@ export default function AIServices() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 py-16 sm:py-24">
+      <section className="bg-blue-600 py-16 sm: py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Ready to Transform Your Business with AI?
             </h2>
             <p className="mt-6 text-lg leading-8 text-blue-100">
+<<<<<<< HEAD
               Let's discuss how our AI solutions can drive your business
               forward. Get a free consultation and custom proposal.
+=======
+              Let&apos;s discuss how our AI solutions can drive your business'
+              forward. ' Get a free consultation and custom proposal.'
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"
-                className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Schedule Consultation
               </Link>

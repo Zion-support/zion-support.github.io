@@ -580,5 +580,4 @@ const AICustomerInsightsPlatform = () => {
       </div>
     </div>
   )}
-;
 export default AICustomerInsightsPlatform

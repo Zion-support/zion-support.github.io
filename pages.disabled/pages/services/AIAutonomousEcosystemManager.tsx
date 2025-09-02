@@ -170,6 +170,5 @@ const AIAutonomousEcosystemManager: React.FC = (): JSX.Element => {
       </section>
     </div>
   )}
-;
 :pages.disabled/pages/services/AIAutonomousEcosystemManager.tsx;
 export default AIAutonomousEcosystemManager'';'''

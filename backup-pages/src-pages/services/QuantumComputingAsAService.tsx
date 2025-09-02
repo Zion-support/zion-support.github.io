@@ -556,5 +556,4 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       </section>
     </div>
   )}
-;
 export default QuantumComputingAsAService}}}}}''`

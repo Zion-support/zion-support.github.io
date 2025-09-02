@@ -285,5 +285,4 @@ const AIContentGenerator: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default AIContentGenerator

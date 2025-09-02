@@ -165,7 +165,6 @@ async function runQualityChecks() {
     // // // // // // // console.log(
   '📊 Generating quality report...');
   status: 'completed}
-;
     console.log(
   '📊 Generating quality report...');
     const reportPath = path.join(process.cwd(),

@@ -576,5 +576,4 @@ const AISocialMediaScheduler = () => {
       </div>
     </div>
   )}
-;
 export default AISocialMediaScheduler

@@ -9,7 +9,7 @@ import React, { useState, useEffect } from,
    body?: any;
    headers?: Record<string, string>
 } export const useApi = ({ url, method =;
-  'GET', body, headers }: UseApiOptions) => { const [data, setData] = useState(null) const [loading, setLoading] = useState(false) const [error, setError] = useState(null)  const execute = async () => { setLoading(true) setError(null)  try { const response = await fetch(url, { method, headers: {;
+  'GET', body, headers }: UseApiOptions) => { const [data, setData] = useState(null) const [loading, setLoading] = useState(false) const [error, setError] = useState(null)  const execute = async () => { setLoading(true) setError(null)  try { const response = await fetch(url, { method, headers: {
   Content-Type': 'application/json, ...headers, }, body: body ? JSON.stringify(body) : undefined, })  if (!response.ok) { throw new Error(\`HTTP error! status: \${response.status}\`) } const result = await response.json() setData(result) } catch (err) { setError(err instanceof Error ? err.message :,
   An error occurred') } finally { setLoading(false) } }  useEffect(() => { if (method ===;
   'GET') { execute() } }, [url])  return { data, loading, error, execute } }`; tags: [;

@@ -30,16 +30,21 @@ import {
   Phone,
   MapPin,
   TrendingUp,
+<<<<<<< HEAD
   Brain,
   Link2,
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
-
 export default function ITServices() {
   const title = 'IT Services — Zion Tech Group';
   const description =
     'Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and digital transformation solutions.';
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const itServices = [
     {
       title: 'Cloud Infrastructure & Migration',
@@ -54,7 +59,7 @@ export default function ITServices() {
         'Cost optimization and FinOps practices',
         'Disaster recovery and backup solutions',
       ],
-      pricing: '$5,000 - $50,000/month',
+      pricing: '$5,000 - $50, 000/month',
       delivery: '4-12 weeks',
       category: 'Cloud Services',
     },
@@ -71,7 +76,7 @@ export default function ITServices() {
         'Identity and access management (IAM)',
         'Data encryption and privacy protection',
       ],
-      pricing: '$3,000 - $25,000/month',
+      pricing: '$3,000 - $25, 000/month',
       delivery: '3-8 weeks',
       category: 'Security Services',
     },
@@ -88,7 +93,7 @@ export default function ITServices() {
         'VoIP and unified communications',
         'Network documentation and training',
       ],
-      pricing: '$2,000 - $15,000/month',
+      pricing: '$2,000 - $15, 000/month',
       delivery: '2-6 weeks',
       category: 'Network Services',
     },
@@ -104,7 +109,7 @@ export default function ITServices() {
         'User training and documentation',
         'SLA-based response times',
       ],
-      pricing: '$1,500 - $8,000/month',
+      pricing: '$1,500 - $8, 000/month',
       delivery: '1-2 weeks',
       category: 'Support Services',
     },
@@ -121,7 +126,7 @@ export default function ITServices() {
         'Real-time analytics and reporting',
         'Machine learning data preparation',
       ],
-      pricing: '$4,000 - $30,000/month',
+      pricing: '$4,000 - $30, 000/month',
       delivery: '6-16 weeks',
       category: 'Data Services',
     },
@@ -137,7 +142,7 @@ export default function ITServices() {
         'Automated testing and quality gates',
         'DevSecOps and security integration',
       ],
-      pricing: '$3,500 - $20,000/month',
+      pricing: '$3,500 - $20, 000/month',
       delivery: '4-10 weeks',
       category: 'DevOps Services',
     },
@@ -154,7 +159,7 @@ export default function ITServices() {
         'Technology stack evaluation',
         'ROI measurement and optimization',
       ],
-      pricing: '$10,000 - $100,000/month',
+      pricing: '$10,000 - $100, 000/month',
       delivery: '12-24 weeks',
       category: 'Consulting Services',
     },
@@ -170,7 +175,7 @@ export default function ITServices() {
         'Vendor management and procurement',
         'IT strategy and planning',
       ],
-      pricing: '$2,500 - $15,000/month',
+      pricing: '$2,500 - $15, 000/month',
       delivery: '2-4 weeks',
       category: 'Managed Services',
     },
@@ -187,7 +192,7 @@ export default function ITServices() {
         'Tokenomics and governance design',
         'Cross-chain interoperability solutions',
       ],
-      pricing: '$8,000 - $50,000/month',
+      pricing: '$8,000 - $50, 000/month',
       delivery: '8-20 weeks',
       category: 'Blockchain Services',
     },
@@ -204,7 +209,7 @@ export default function ITServices() {
         'Sensor network design and deployment',
         'Edge AI and machine learning integration',
       ],
-      pricing: '$5,000 - $30,000/month',
+      pricing: '$5,000 - $30, 000/month',
       delivery: '6-16 weeks',
       category: 'IoT Services',
     },
@@ -221,7 +226,7 @@ export default function ITServices() {
         'Quantum machine learning applications',
         'Quantum hardware evaluation and selection',
       ],
-      pricing: '$15,000 - $100,000/month',
+      pricing: '$15,000 - $100, 000/month',
       delivery: '12-24 weeks',
       category: 'Quantum Services',
     },
@@ -237,7 +242,7 @@ export default function ITServices() {
         'Network performance monitoring',
         'Edge computing integration',
       ],
-      pricing: '$10,000 - $75,000/month',
+      pricing: '$10,000 - $75, 000/month',
       delivery: '8-20 weeks',
       category: 'Network Services',
     },
@@ -254,7 +259,7 @@ export default function ITServices() {
         'AR/VR hardware integration',
         'Performance optimization and testing',
       ],
-      pricing: '$6,000 - $40,000/month',
+      pricing: '$6,000 - $40, 000/month',
       delivery: '8-16 weeks',
       category: 'AR/VR Services',
     },
@@ -271,7 +276,7 @@ export default function ITServices() {
         'API analytics and monitoring',
         'Microservices architecture design',
       ],
-      pricing: '$3,000 - $20,000/month',
+      pricing: '$3,000 - $20, 000/month',
       delivery: '4-12 weeks',
       category: 'API Services',
     },
@@ -288,7 +293,7 @@ export default function ITServices() {
         'Testing and validation services',
         'Compliance and audit support',
       ],
-      pricing: '$5,000 - $35,000/month',
+      pricing: '$5,000 - $35, 000/month',
       delivery: '6-16 weeks',
       category: 'Recovery Services',
     },
@@ -304,7 +309,7 @@ export default function ITServices() {
         'E-waste management and recycling',
         'Sustainability reporting and compliance',
       ],
-      pricing: '$4,000 - $25,000/month',
+      pricing: '$4,000 - $25, 000/month',
       delivery: '6-14 weeks',
       category: 'Sustainability Services',
     },
@@ -321,10 +326,11 @@ export default function ITServices() {
         'Digital banking solutions',
         'Cryptocurrency integration',
       ],
-      pricing: '$8,000 - $60,000/month',
+      pricing: '$8,000 - $60, 000/month',
       delivery: '10-24 weeks',
       category: 'FinTech Services',
     },
+<<<<<<< HEAD
     {
       title: 'Advanced Blockchain & Web3 Infrastructure',
       description:
@@ -563,8 +569,9 @@ export default function ITServices() {
       delivery: '4-12 weeks',
       category: 'Backup Services',
     },
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   ];
-
   const technologies = [
     {
       name: 'Cloud Platforms',
@@ -597,7 +604,6 @@ export default function ITServices() {
       description: 'Cisco, Fortinet, SD-WAN',
     },
   ];
-
   const benefits = [
     {
       title: 'Reduced Downtime',
@@ -624,14 +630,13 @@ export default function ITServices() {
       stat: 'Unlimited',
     },
   ];
-
   return (
     <PageTransition>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/it-services" />
+        <link rel="canonical" href="https: //ziontechgroup.com/it-services" />
       </Head>
 
       {/* Hero Section */}
@@ -656,7 +661,7 @@ export default function ITServices() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"
-                className="rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+                className="rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4 inline" />
@@ -704,7 +709,7 @@ export default function ITServices() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-24 sm:py-32 bg-gray-50">
+      <section className="py-24 sm: py-32 bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -718,7 +723,11 @@ export default function ITServices() {
             {technologies.map((tech, index) => (
               <div
                 key={index}
+<<<<<<< HEAD
                 className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+=======
+                className="bg-white rounded-2xl p-6 shadow-sm hover: shadow-md transition-shadow"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               >
                 <div className="flex items-center mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
@@ -736,7 +745,7 @@ export default function ITServices() {
       </section>
 
       {/* IT Services Grid */}
-      <section className="py-24 sm:py-32 bg-white">
+      <section className="py-24 sm: py-32 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -747,7 +756,11 @@ export default function ITServices() {
               services include implementation, training, and ongoing support.
               Contact us at{' '}
               <a
+<<<<<<< HEAD
                 href="mailto:kleber@ziontechgroup.com"
+=======
+                href="mailto: kleber@ziontechgroup.com"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 className="text-green-600 hover:text-green-500"
               >
                 kleber@ziontechgroup.com
@@ -766,7 +779,11 @@ export default function ITServices() {
             {itServices.map((service, index) => (
               <div
                 key={index}
+<<<<<<< HEAD
                 className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
+=======
+                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               >
                 <div className="flex items-center gap-x-3 mb-6">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors">
@@ -805,7 +822,7 @@ export default function ITServices() {
                   </div>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group"
+                    className="inline-flex items-center text-sm font-semibold text-green-600 hover: text-green-500 transition-colors group"
                   >
                     Get Started
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -818,17 +835,23 @@ export default function ITServices() {
       </section>
 
       {/* Contact Information Section */}
-      <section className="bg-gray-50 py-16 sm:py-24">
+      <section className="bg-gray-50 py-16 sm: py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
+<<<<<<< HEAD
               Let's discuss how our IT services can optimize your technology
               infrastructure. Get a free consultation and custom proposal.
+=======
+              Let&apos;s discuss how our IT services can optimize your
+              technology' infrastructure. ' Get a free consultation and custom
+              proposal.'
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             </p>
-            <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3">
+            <div className="mt-10 grid grid-cols-1 gap-8 sm: grid-cols-3">
               <div className="text-center">
                 <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">
                   <Phone className="h-6 w-6 text-green-600" />

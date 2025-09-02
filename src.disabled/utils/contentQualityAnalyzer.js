@@ -17,7 +17,6 @@ export class ContentQualityAnalyzer {
       score: 0,
       issues: [],
       recommendations: []}
-;
     // Analyze title;
     if (!title || title.length < 30) {
       analysis.issues.push('Title is too short (minimum 30 characters recommended)')} else if (title.length > 60) {

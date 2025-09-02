@@ -4,7 +4,6 @@ import Footer from './Footer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
 import SEOEnhancer from '../SEOEnhancer';
-
 interface MainLayoutProps {
   children: React.ReactNode;
    title?: string;
@@ -12,8 +11,7 @@ interface MainLayoutProps {
    keywords?: string;
    ogImage?: string}
 const MainLayout: React.FC<MainLayoutProps> = ({
-  children,
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',
+  children, title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services',
   ogImage = '/og-image.jpg'}) => {
@@ -26,12 +24,11 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       />
       <PerformanceOptimizer
         preloadImages={[;
-          '/hero-bg.jpg',
-          '/services-bg.jpg',
+          '/hero-bg.jpg', '/services-bg.jpg',
           '/team-bg.jpg';
         ]}
         preloadFonts={[;
-          'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap';
+          'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap';
         ]}
       />
       <AccessibilityEnhancer>
@@ -43,5 +40,4 @@ const MainLayout: React.FC<MainLayoutProps> = ({
           <Footer />
         </div></AccessibilityEnhancer>
 </>)}
-;
 export default MainLayout

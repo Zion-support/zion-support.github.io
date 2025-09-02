@@ -90,7 +90,6 @@ function analyzeWebsite() {
     routes: routes,
     missing: missingPages,
     placeholders: placeholderPages}
-;
   fs.writeFileSync(
     path.join(__dirname,
   '..',

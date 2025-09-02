@@ -1,27 +1,35 @@
-import { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import { useState, useEffect } from 'react';
 
-export function usePerformanceMonitoring() {
+export const usePerformanceMonitoring = () => {
+  const [metrics, setMetrics] = useState({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0
+  });
+
+
   useEffect(() => {
-    const sendToAnalytics = (metric) => {
-      // Send to your analytics service
-      console.log('Performance metric:', metric);
+    const startTime = performance.now();
+    
+    const measurePerformance = () => {
+      const endTime = performance.now();
+      const loadTime = endTime - startTime;
       
-      // Example: Send to Google Analytics
-      if (typeof gtag !== 'undefined') {
-        gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-          non_interaction: true,
-        })}
-    }
+      if (performance.memory) {
+        setMetrics({
+          loadTime,
+          renderTime: endTime - startTime,
+          memoryUsage: performance.memory.usedJSHeapSize / 1024 / 1024
+        });
+      }
+    };
 
-    getCLS(sendToAnalytics);
-    getFID(sendToAnalytics);
-    getFCP(sendToAnalytics);
-    getLCP(sendToAnalytics);
-    getTTFB(sendToAnalytics)}, [])}
+    measurePerformance();
+    
+    return () => {
+      measurePerformance();
+    };
+  }, []);
 
-export function reportWebVitals(metric) {
-  console.log('Web Vitals:', metric)}
+  return metrics;
+};

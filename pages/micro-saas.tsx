@@ -35,12 +35,14 @@ import {
   Calendar,
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
-
 export default function MicroSaaS() {
   const title = 'Micro SaaS Solutions — Zion Tech Group';
   const description =
     'Custom micro SaaS applications and software solutions tailored to your business needs. Scalable, secure, and innovative.';
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   const microSaaSServices = [
     {
       title: 'AI-Powered Email Responder',
@@ -55,7 +57,7 @@ export default function MicroSaaS() {
         'Multi-language support and compliance',
         'Analytics and performance tracking',
       ],
-      pricing: '$2,500 - $8,000/month',
+      pricing: '$2,500 - $8, 000/month',
       delivery: '2-3 weeks',
       category: 'Communication SaaS',
     },
@@ -72,7 +74,7 @@ export default function MicroSaaS() {
         'Data export and integration',
         'White-label customization',
       ],
-      pricing: '$1,500 - $5,000/month',
+      pricing: '$1,500 - $5, 000/month',
       delivery: '2-4 weeks',
       category: 'Survey SaaS',
     },
@@ -89,7 +91,7 @@ export default function MicroSaaS() {
         'Integration with popular tools',
         'Custom branding and white-labeling',
       ],
-      pricing: '$2,000 - $6,000/month',
+      pricing: '$2,000 - $6, 000/month',
       delivery: '3-5 weeks',
       category: 'Productivity SaaS',
     },
@@ -106,7 +108,7 @@ export default function MicroSaaS() {
         'Payment processing integration',
         'Mobile app for attendees',
       ],
-      pricing: '$3,000 - $10,000/month',
+      pricing: '$3,000 - $10, 000/month',
       delivery: '4-6 weeks',
       category: 'Event SaaS',
     },
@@ -123,7 +125,7 @@ export default function MicroSaaS() {
         'Content scheduling and publishing',
         'Performance analytics and optimization',
       ],
-      pricing: '$2,500 - $8,000/month',
+      pricing: '$2,500 - $8, 000/month',
       delivery: '3-5 weeks',
       category: 'Content SaaS',
     },
@@ -140,7 +142,7 @@ export default function MicroSaaS() {
         'Performance metrics and SLA tracking',
         'Integration with CRM systems',
       ],
-      pricing: '$2,000 - $7,000/month',
+      pricing: '$2,000 - $7, 000/month',
       delivery: '3-4 weeks',
       category: 'Support SaaS',
     },
@@ -157,7 +159,7 @@ export default function MicroSaaS() {
         'Candidate matching algorithms',
         'Analytics and reporting dashboard',
       ],
-      pricing: '$4,000 - $15,000/month',
+      pricing: '$4,000 - $15, 000/month',
       delivery: '5-8 weeks',
       category: 'HR SaaS',
     },
@@ -174,7 +176,7 @@ export default function MicroSaaS() {
         'Compliance monitoring',
         'Workflow automation',
       ],
-      pricing: '$3,500 - $12,000/month',
+      pricing: '$3,500 - $12, 000/month',
       delivery: '4-6 weeks',
       category: 'Document SaaS',
     },
@@ -191,7 +193,7 @@ export default function MicroSaaS() {
         'Mobile-responsive design',
         'API and third-party integrations',
       ],
-      pricing: '$5,000 - $20,000/month',
+      pricing: '$5,000 - $20, 000/month',
       delivery: '6-10 weeks',
       category: 'Analytics SaaS',
     },
@@ -208,7 +210,7 @@ export default function MicroSaaS() {
         'User management and permissions',
         'Audit trails and compliance',
       ],
-      pricing: '$3,000 - $10,000/month',
+      pricing: '$3,000 - $10, 000/month',
       delivery: '4-7 weeks',
       category: 'Automation SaaS',
     },
@@ -225,7 +227,7 @@ export default function MicroSaaS() {
         'Customer satisfaction tracking',
         'Analytics and reporting dashboard',
       ],
-      pricing: '$1,500 - $5,000/month',
+      pricing: '$1,500 - $5, 000/month',
       delivery: '3-5 weeks',
       category: 'E-commerce SaaS',
     },
@@ -242,7 +244,7 @@ export default function MicroSaaS() {
         'Cost optimization recommendations',
         'Integration with ERP and POS systems',
       ],
-      pricing: '$2,500 - $8,000/month',
+      pricing: '$2,500 - $8, 000/month',
       delivery: '4-6 weeks',
       category: 'Inventory SaaS',
     },
@@ -365,6 +367,7 @@ export default function MicroSaaS() {
       delivery: '3-5 weeks',
       category: 'Development SaaS',
     },
+<<<<<<< HEAD
     {
       title: 'AI-Powered Legal Document Analyzer',
       description:
@@ -620,8 +623,9 @@ export default function MicroSaaS() {
       delivery: '5-8 weeks',
       category: 'Supply Chain SaaS',
     },
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
   ];
-
   const technologies = [
     {
       name: 'Frontend',
@@ -650,7 +654,6 @@ export default function MicroSaaS() {
       description: 'React Native, Flutter, PWA',
     },
   ];
-
   const benefits = [
     {
       title: 'Faster Development',
@@ -677,14 +680,13 @@ export default function MicroSaaS() {
       stat: '100%',
     },
   ];
-
   return (
     <PageTransition>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
+        <link rel="canonical" href="https: //ziontechgroup.com/micro-saas" />
       </Head>
 
       {/* Hero Section */}
@@ -709,7 +711,7 @@ export default function MicroSaaS() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"
-                className="rounded-md bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
+                className="rounded-md bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4 inline" />
@@ -737,7 +739,7 @@ export default function MicroSaaS() {
               software solutions
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 sm: grid-cols-2 lg:grid-cols-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">
@@ -757,7 +759,7 @@ export default function MicroSaaS() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-24 sm:py-32 bg-gray-50">
+      <section className="py-24 sm: py-32 bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -768,11 +770,15 @@ export default function MicroSaaS() {
               applications
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 sm: grid-cols-2 lg:grid-cols-3">
             {technologies.map((tech, index) => (
               <div
                 key={index}
+<<<<<<< HEAD
                 className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+=======
+                className="bg-white rounded-2xl p-6 shadow-sm hover: shadow-md transition-shadow"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               >
                 <div className="flex items-center mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100">
@@ -790,7 +796,7 @@ export default function MicroSaaS() {
       </section>
 
       {/* Micro SaaS Services Grid */}
-      <section className="py-24 sm:py-32 bg-white">
+      <section className="py-24 sm: py-32 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -801,7 +807,11 @@ export default function MicroSaaS() {
               applications include design, development, testing, and deployment.
               Contact us at{' '}
               <a
+<<<<<<< HEAD
                 href="mailto:kleber@ziontechgroup.com"
+=======
+                href="mailto: kleber@ziontechgroup.com"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 className="text-orange-600 hover:text-orange-500"
               >
                 kleber@ziontechgroup.com
@@ -820,7 +830,11 @@ export default function MicroSaaS() {
             {microSaaSServices.map((service, index) => (
               <div
                 key={index}
+<<<<<<< HEAD
                 className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
+=======
+                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300"
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               >
                 <div className="flex items-center gap-x-3 mb-6">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors">
@@ -859,7 +873,7 @@ export default function MicroSaaS() {
                   </div>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group"
+                    className="inline-flex items-center text-sm font-semibold text-orange-600 hover: text-orange-500 transition-colors group"
                   >
                     Get Started
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -872,7 +886,7 @@ export default function MicroSaaS() {
       </section>
 
       {/* Development Process Section */}
-      <section className="py-24 sm:py-32 bg-gray-50">
+      <section className="py-24 sm: py-32 bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -933,21 +947,27 @@ export default function MicroSaaS() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-orange-600 py-16 sm:py-24">
+      <section className="bg-orange-600 py-16 sm: py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Ready to Build Your Custom SaaS Solution?
             </h2>
             <p className="mt-6 text-lg leading-8 text-orange-100">
+<<<<<<< HEAD
               Let's discuss your requirements and create a custom solution that
               drives your business forward. Get a free consultation and project
               estimate.
+=======
+              Let&apos;s discuss your requirements and create a custom solution
+              that' drives your business forward. ' Get a free consultation and'
+              project estimate.
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"
-                className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-orange-600 shadow-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-orange-600 shadow-sm hover: bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Start Your Project
               </Link>

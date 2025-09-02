@@ -313,6 +313,5 @@ import {}
       </section>
     </div>
   )}
-;
 :pages.disabled/pages/services/SpaceTech.tsx;
 export { SpaceTech }export default SpaceTech'';'''

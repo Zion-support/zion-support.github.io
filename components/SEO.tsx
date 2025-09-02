@@ -23,11 +23,17 @@ const SEO: React.FC<SEOProps> = ({
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullImage = image || '/images/og-image.jpg';
   const fullUrl = url || 'https://ziontechgroup.com';
+
   return (
     <Head>
       <title>{fullTitle}</title>
+<<<<<<< HEAD
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />};
+=======
+      <meta name='description' content={description} />
+      {keywords && <meta name='keywords' content={keywords} />}
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
       {/* Open Graph */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />

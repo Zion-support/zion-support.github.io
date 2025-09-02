@@ -50,7 +50,6 @@ class MimeTypeFallback {
   ':,
   audio / wav;
   ',.flac': 'audio / flac}
-;
   private fallbackUrls: Map < string, string> = new Map () ;
   private cdnFallbacks = [,
   'https: //cdn.jsdelivr.net,https://unpkg.com,
@@ -167,11 +166,10 @@ class MimeTypeFallback {
 `;
         console.log (`✅ Resource loaded successfully: ${url}`) ;
         resolve () }
-;
       element.onerror = () => {
 `;
         console.error (`❌ Failed to load resource: ${url}`) `;
-        reject (new Error (`Failed to load resource: ${url}`) ) };
+        reject (new Error (`Failed to load resource: ${url}`) ) }
   if (type ===;
   'script') {
         document.head.appendChild (element) } else {document.head.appendChild (element) }

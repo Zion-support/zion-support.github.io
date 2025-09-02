@@ -368,5 +368,4 @@ const Team: React.FC = () => {
       </section>
     </div>
   )}
-;
 export default Team

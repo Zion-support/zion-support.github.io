@@ -170,6 +170,5 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
       </section>
     </div>
   )}
-;
 :pages.disabled/pages/services/AIAutonomousForensics.tsx;
 export default AIAutonomousForensics'';'''

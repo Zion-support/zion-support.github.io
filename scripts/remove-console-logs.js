@@ -27,13 +27,11 @@ const CONFIG = {
   consoleMethods: ['log', 'warn', 'info', 'debug'],
   // Keep console.error in production for debugging;
   keepConsoleError: true}
-;
 // Statistics;
 let stats = {
   filesProcessed: 0,
   consoleStatementsRemoved: 0,
   filesModified: 0}
-;
 /**;
  * Remove console statements from a file;
  */;

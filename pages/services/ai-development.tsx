@@ -11,7 +11,10 @@ import {
   Award,
   Globe,
 } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 const AIDevelopment: NextPage = () => {
   return (
     <Layout
@@ -24,7 +27,7 @@ const AIDevelopment: NextPage = () => {
           <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
             <Brain className="w-10 h-10 text-white" />
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             AI Development
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
               {' '}
@@ -66,7 +69,7 @@ const AIDevelopment: NextPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                 <Brain className="w-8 h-8 text-blue-600" />
@@ -86,7 +89,7 @@ const AIDevelopment: NextPage = () => {
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                 <Zap className="w-8 h-8 text-purple-600" />
               </div>
@@ -105,7 +108,7 @@ const AIDevelopment: NextPage = () => {
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                 <Target className="w-8 h-8 text-green-600" />
               </div>
@@ -248,10 +251,17 @@ const AIDevelopment: NextPage = () => {
             Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
             Let's discuss how AI can solve your specific business challenges and
             drive growth.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
+=======
+            Let&apos;s discuss how AI can solve your specific business
+            challenges and' drive growth.''
+          </p>
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <Link
               href="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
@@ -270,5 +280,8 @@ const AIDevelopment: NextPage = () => {
     </Layout>
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default AIDevelopment;
