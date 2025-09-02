@@ -3,8 +3,7 @@
 echo "Fixing merge conflicts in all source files..."
 
 # Find all files with merge conflicts
-files_with_conflicts=$(find src -name "*.jsx" -o -name "*.tsx" -o -name "*.js" -o -name "*.ts" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
-
+files_with_conflicts=$(find src -name "*.jsx" -o -name "*.tsx" -o -name "*.js" -o -name "*.ts" | xargs grep -l "
 if [ -z "$files_with_conflicts" ]; then
     echo "No merge conflicts found."
     exit 0
@@ -22,13 +21,8 @@ for file in $files_with_conflicts; do
     cp "$file" "$file.backup"
     
     # Remove merge conflict markers and keep the better code
-    # Remove everything between <<<<<<< HEAD and =======
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    
-    # Remove >>>>>>> main and any remaining conflict markers
-    sed -i '/>>>>>>> main/d' "$file"
-    sed -i '/<<<<<<< HEAD/d' "$file"
-    sed -i '/=======/d' "$file"
+    # Remove everything between     
+    # Remove     sed -i '/    sed -i '/    sed -i '/=======/d' "$file"
     
     # Remove empty lines that might be left
     sed -i '/^[[:space:]]*$/d' "$file"

@@ -28,8 +28,7 @@ function findFilesWithMergeConflicts(
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
           if (
-            content.includes('<<<<<<< HEAD') ||
-            content.includes('=======') ||
+            content.includes('            content.includes('=======') ||
             content.includes('>>>>>>>')
           ) {
             files.push(fullPath);
@@ -52,8 +51,7 @@ function fixMergeConflicts(filePath) {
 
     // Check if file has merge conflicts
     if (
-      !content.includes('<<<<<<< HEAD') &&
-      !content.includes('=======') &&
+      !content.includes('      !content.includes('=======') &&
       !content.includes('>>>>>>>')
     ) {
       return false; // No merge conflicts
@@ -70,14 +68,10 @@ function fixMergeConflicts(filePath) {
 
     // Remove all merge conflict sections
     const conflictRegex =
-      /<<<<<<< HEAD\s*([\s\S]*?)\s*=======\s*[\s\S]*?>>>>>>> [^\n]*\s*/g;
-    fixedContent = fixedContent.replace(conflictRegex, '$1');
-
+      /
     // Remove any remaining conflict markers
-    fixedContent = fixedContent.replace(/<<<<<<< HEAD\s*/g, '');
-    fixedContent = fixedContent.replace(/=======\s*/g, '');
-    fixedContent = fixedContent.replace(/>>>>>>> [^\n]*\s*/g, '');
-
+    fixedContent = fixedContent.replace(/    fixedContent = fixedContent.replace(/=======\s*/g, '');
+    fixedContent = fixedContent.replace(/
     // Clean up any double newlines
     fixedContent = fixedContent.replace(/\n\s*\n\s*\n/g, '\n\n');
 

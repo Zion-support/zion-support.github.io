@@ -1,32 +1,32 @@
 #!/usr/bin/env node;
 ;
-const fs = require(
+const fs = require(;
   'fs');
-const path = require(
+const path = require(;
   'path');
-const { execSync, spawn } = require(
+const { execSync, spawn } = require(;
   'child_process');
-const cron = require(
+const cron = require(;
   'node-cron');
-const crypto = require(
+const crypto = require(;
   'crypto');
 ;
-// // // // // // // // console.log(
+// // // // // // // // console.log(;
   '🔒 File Integrity Monitor Starting...\n');
 ;
 class FileIntegrityMonitor {;
   constructor() {;
-
+;
     this.projectRoot = process.cwd();
     this.integrityChecks = 0;
     this.issuesFound = 0;
     this.issuesFixed = 0;
     this.monitoring = false;
-    this.logFile = path.join(this.projectRoot,
-  'logs',
+    this.logFile = path.join(this.projectRoot,;
+  'logs',;
   'file-integrity.log');
-    this.checksumsFile = path.join(this.projectRoot,
-  'logs',
+    this.checksumsFile = path.join(this.projectRoot,;
+  'logs',;
   'file-checksums.json');
 ;
     // Ensure logs directory exists;
@@ -36,13 +36,13 @@ class FileIntegrityMonitor {;
     this.startMonitoring();
 ;
   ensureLogsDirectory() {;
-
+;
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
 ;
 ;
-  log(message, level =
+  log(message, level =;
   'INFO') {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
@@ -52,30 +52,30 @@ class FileIntegrityMonitor {;
     try {;
       fs.appendFileSync(this.logFile, logEntry);
     } catch (error) {;
-      // // // // // // // console.error(
+      // // // // // // // console.error(;
   'Failed to write to log file:', error.message);
     };
   };
 ;
   async startMonitoring() {;
-
-    this.log(
+;
+    this.log(;
   'Starting file integrity monitoring...');
 ;
     // Schedule regular integrity checks;
-    cron.schedule(
+    cron.schedule(;
   '0 */6 * * *', () => {;
       this.performIntegrityCheck();
     });
 ;
     // Schedule daily deep scan;
-    cron.schedule(
+    cron.schedule(;
   '0 3 * * *', () => {;
       this.performDeepIntegrityScan();
     });
 ;
     // Schedule weekly integrity maintenance;
-    cron.schedule(
+    cron.schedule(;
   '0 4 * * 0', () => {;
       this.performWeeklyMaintenance();
     });
@@ -85,15 +85,15 @@ class FileIntegrityMonitor {;
       this.performIntegrityCheck();
     }, 25000);
 ;
-    this.log(
+    this.log(;
   'File integrity monitoring started successfully');
 ;
   async performIntegrityCheck() {;
-
+;
     if (this.monitoring) return;
 ;
     this.monitoring = true;
-    this.log(
+    this.log(;
   'Performing file integrity check...');
 ;
     try {;
@@ -103,15 +103,15 @@ class FileIntegrityMonitor {;
         this.log(`Found ${issues.length} integrity issues, attempting fixes...`);
         await this.autoFixIntegrityIssues(issues);
       } else {;
-        this.log(
+        this.log(;
   'No integrity issues detected, all files are intact');
 ;
       this.integrityChecks++;
 ;
     } catch (error) {;
-
-      this.log(`Integrity check failed: ${error.message}`,
-,
+;
+      this.log(`Integrity check failed: ${error.message}`,;
+,;
   ERROR');
     } finally {;
       this.monitoring = false;
@@ -125,7 +125,7 @@ class FileIntegrityMonitor {;
     if (missingFiles.length > 0) {;
       issues.push({;
         type: 'missing_critical_files,;
-        severity:
+        severity:;
   'high',;
         description: `${missingFiles.length} critical files missing`,;
         details: missingFiles;
@@ -135,7 +135,7 @@ class FileIntegrityMonitor {;
     const corruptedFiles = await this.checkFileCorruption();
     if (corruptedFiles.length > 0) {;
       issues.push({;
-        type:,
+        type:,;
   corrupted_files',;
         severity: 'high,;
         description: `${corruptedFiles.length} files appear corrupted`,;
@@ -146,7 +146,7 @@ class FileIntegrityMonitor {;
     const permissionIssues = await this.checkFilePermissions();
     if (permissionIssues.length > 0) {;
       issues.push({;
-        type:,
+        type:,;
   permission_issues',;
         severity: 'medium,;
         description: `${permissionIssues.length} file permission issues found`,;
@@ -157,7 +157,7 @@ class FileIntegrityMonitor {;
     const structureIssues = await this.checkProjectStructure();
     if (structureIssues.length > 0) {;
       issues.push({;
-        type:,
+        type:,;
   structure_issues',;
         severity: 'medium,;
         description: `${structureIssues.length} project structure issues found`,;
@@ -178,7 +178,7 @@ class FileIntegrityMonitor {;
         missingFiles.push({;
           file,;
           path: filePath,;
-          type:
+          type:;
   'missing';
         });
 ;
@@ -191,7 +191,7 @@ class FileIntegrityMonitor {;
     try {;
       // Check if checksums file exists;
       if (fs.existsSync(this.checksumsFile)) {;
-        const checksums = JSON.parse(fs.readFileSync(this.checksumsFile,
+        const checksums = JSON.parse(fs.readFileSync(this.checksumsFile,;
   'utf8'));
 ;
         for (const [filePath, expectedChecksum] of Object.entries(checksums)) {;
@@ -200,8 +200,8 @@ class FileIntegrityMonitor {;
           if (fs.existsSync(fullPath)) {;
             try {;
               const content = fs.readFileSync(fullPath);
-              const actualChecksum = crypto.createHash(
-  'md5').update(content).digest(
+              const actualChecksum = crypto.createHash(;
+  'md5').update(content).digest(;
   'hex');
 ;
               if (actualChecksum !== expectedChecksum) {;
@@ -210,7 +210,7 @@ class FileIntegrityMonitor {;
                   path: fullPath,;
                   expectedChecksum,;
                   actualChecksum,;
-                  type:
+                  type:;
   'corrupted';
                 });
 ;
@@ -219,7 +219,7 @@ class FileIntegrityMonitor {;
                 file: filePath,;
                 path: fullPath,;
                 error: error.message,;
-                type:
+                type:;
   'unreadable';
               });
 ;
@@ -227,7 +227,7 @@ class FileIntegrityMonitor {;
 ;
 ;
     } catch (error) {;
-      this.log(`Error checking file corruption: ${error.message}`,
+      this.log(`Error checking file corruption: ${error.message}`,;
   'WARN');
 ;
     return corruptedFiles;
@@ -237,7 +237,7 @@ class FileIntegrityMonitor {;
 ;
     try {;
       const criticalFiles = [';package.json',';vite.config.ts',';src/main.tsx';
-
+;
       ];
 ;
       for (const file of criticalFiles) {;
@@ -252,20 +252,20 @@ class FileIntegrityMonitor {;
               permissionIssues.push({;
                 file,;
                 path: filePath,;
-                issue:
+                issue:;
   'not_readable',;
                 mode: mode.toString(8);
               });
 ;
             // Check if file is writable (for critical config files);
-            if (file ===
-  'package.json' || file ===
+            if (file ===;
+  'package.json' || file ===;
   'vite.config.ts') {;
               if (!(mode & fs.constants.W_OK)) {;
                 permissionIssues.push({;
                   file,;
                   path: filePath,;
-                  issue:
+                  issue:;
   'not_writable',;
                   mode: mode.toString(8);
                 });
@@ -275,7 +275,7 @@ class FileIntegrityMonitor {;
             permissionIssues.push({;
               file,;
               path: filePath,;
-              issue:
+              issue:;
   'permission_check_failed',;
               error: error.message;
             });
@@ -283,7 +283,7 @@ class FileIntegrityMonitor {;
 ;
 ;
     } catch (error) {;
-      this.log(`Error checking file permissions: ${error.message}`,
+      this.log(`Error checking file permissions: ${error.message}`,;
   'WARN');
 ;
     return permissionIssues;
@@ -302,14 +302,14 @@ class FileIntegrityMonitor {;
           structureIssues.push({;
             directory: dir,;
             path: dirPath,;
-            issue:
+            issue:;
   'missing_directory';
           });
         } else if (!fs.statSync(dirPath).isDirectory()) {;
           structureIssues.push({;
             directory: dir,;
             path: dirPath,;
-            issue:,
+            issue:,;
   not_a_directory';
           });
 ;
@@ -319,12 +319,12 @@ class FileIntegrityMonitor {;
       if (sourceFiles.length === 0) {;
         structureIssues.push({;
           issue: 'no_source_files,;
-          description:
+          description:;
   'No source files found in src directory';
         });
 ;
     } catch (error) {;
-      this.log(`Error checking project structure: ${error.message}`,
+      this.log(`Error checking project structure: ${error.message}`,;
   'WARN');
 ;
     return structureIssues;
@@ -335,19 +335,19 @@ class FileIntegrityMonitor {;
         this.log(`Attempting to fix: ${issue.type}`);
 ;
         switch (issue.type) {;
-          case,
+          case,;
   missing_critical_files': ;
             await this.fixMissingCriticalFiles(issue.details);
             break;
-          case
+          case;
   'corrupted_files':;
             await this.fixCorruptedFiles(issue.details);
             break;
-          case
+          case;
   'permission_issues':;
             await this.fixFilePermissions(issue.details);
             break;
-          case
+          case;
   'structure_issues:;
             await this.fixProjectStructure(issue.details);
             break;
@@ -356,44 +356,44 @@ class FileIntegrityMonitor {;
         this.log(`Successfully fixed: ${issue.type}`);
 ;
       } catch (error) {;
-        this.log(`Failed to fix ${issue.type}: ${error.message}`,
-,
+        this.log(`Failed to fix ${issue.type}: ${error.message}`,;
+,;
   ERROR');
 ;
 ;
 ;
   async fixMissingCriticalFiles(missingFiles) {;
-    this.log(
+    this.log(;
   'Fixing missing critical files...');
 ;
     for (const missingFile of missingFiles) {;
       try {;
         switch (missingFile.file) {;
-          case
+          case;
   'package.json': ;
             await this.createPackageJson();
             break;
-          case
+          case;
   'vite.config.ts':;
             await this.createViteConfig();
             break;
-          case
+          case;
   'tsconfig.json':;
             await this.createTsConfig();
             break;
-          case
+          case;
   'src/main.tsx':;
             await this.createMainTsx();
             break;
-          case
+          case;
   'index.html':;
             await this.createIndexHtml();
             break;
-          case
+          case;
   'tailwind.config.js':;
             await this.createTailwindConfig();
             break;
-          case
+          case;
   'postcss.config.js:;
             await this.createPostCSSConfig();
             break;
@@ -401,8 +401,8 @@ class FileIntegrityMonitor {;
         this.log(`Created missing file: ${missingFile.file}`);
 ;
       } catch (error) {;
-        this.log(`Failed to create ${missingFile.file}: ${error.message}`,
-,
+        this.log(`Failed to create ${missingFile.file}: ${error.message}`,;
+,;
   ERROR');
 ;
 ;
@@ -411,48 +411,48 @@ class FileIntegrityMonitor {;
     const packageJson = {;
       name: 'zion-app,;
       private: true,;
-      version:,
+      version:,;
   0.0.0',;
       type: 'module,;
-      scripts: {;,
-  dev': 'vite,;,
-  build': 'tsc && vite build,;,
-  lint': eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0,
+      scripts: {;,;
+  dev': 'vite,;,;
+  build': 'tsc && vite build,;,;
+  lint': eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0,;
   ,';preview': 'vite preview;
       },;
-      dependencies: {;,
-  react': '^18.2.0,;,
-  react-dom': '^18.2.0,;,
-  react-router-dom': '^6.8.1,;,
-  react-helmet-async': '^1.3.0,;,
-  framer-motion': '^10.12.16,;,
-  lucide-react': '^0.263.1,;,
-  date-fns': '^2.29.3,;,
-  clsx': '^1.2.1,;,
-  tailwind-merge': '^1.13.2,;,
-  react-hook-form': '^7.43.9,;,
-  @hookform/resolvers': '^2.9.11,;,
+      dependencies: {;,;
+  react': '^18.2.0,;,;
+  react-dom': '^18.2.0,;,;
+  react-router-dom': '^6.8.1,;,;
+  react-helmet-async': '^1.3.0,;,;
+  framer-motion': '^10.12.16,;,;
+  lucide-react': '^0.263.1,;,;
+  date-fns': '^2.29.3,;,;
+  clsx': '^1.2.1,;,;
+  tailwind-merge': '^1.13.2,;,;
+  react-hook-form': '^7.43.9,;,;
+  @hookform/resolvers': '^2.9.11,;,;
   zod': '^3.20.6;
       },;
-      devDependencies: {;,
-  @types/react': '^18.0.28,;,
-  @types/react-dom': '^18.0.11,;,
-  @typescript-eslint/eslint-plugin': '^5.57.1,;,
-  @typescript-eslint/parser': '^5.57.1,;,
-  @vitejs/plugin-react': '^3.1.0,;,
-  autoprefixer': '^10.4.14,;,
-  eslint': '^8.38.0,;,
-  eslint-plugin-react-hooks': '^4.6.0,;,
-  eslint-plugin-react-refresh': '^0.3.4,;,
-  postcss': '^8.4.23,;,
-  tailwindcss': '^3.2.7,;,
-  typescript': '^4.9.3,;,
+      devDependencies: {;,;
+  @types/react': '^18.0.28,;,;
+  @types/react-dom': '^18.0.11,;,;
+  @typescript-eslint/eslint-plugin': '^5.57.1,;,;
+  @typescript-eslint/parser': '^5.57.1,;,;
+  @vitejs/plugin-react': '^3.1.0,;,;
+  autoprefixer': '^10.4.14,;,;
+  eslint': '^8.38.0,;,;
+  eslint-plugin-react-hooks': '^4.6.0,;,;
+  eslint-plugin-react-refresh': '^0.3.4,;,;
+  postcss': '^8.4.23,;,;
+  tailwindcss': '^3.2.7,;,;
+  typescript': '^4.9.3,;,;
   vite': '^4.2.0;
 ;
     };
 ;
     fs.writeFileSync(;
-      path.join(this.projectRoot,
+      path.join(this.projectRoot,;
   'package.json'),;
       JSON.stringify(packageJson, null, 2);
     );
@@ -468,27 +468,27 @@ import { resolve } from;
 export default defineConfig({;
   plugins: [react()],;
   resolve: {;
-    alias: {';@': resolve(__dirname,
-  'src'),';@components': resolve(__dirname,
-  'src/components'),';@pages': resolve(__dirname,
-  'src/pages'),';@layout': resolve(__dirname,
-  'src/layout'),';@utils': resolve(__dirname,
-  'src/utils'),';@hooks': resolve(__dirname,
-  'src/hooks'),';@types': resolve(__dirname,
-  'src/types'),';@assets': resolve(__dirname,
-  'src/assets'),';@styles': resolve(__dirname,
-  'src/styles'),';@data': resolve(__dirname,
-  'src/data'),';@services': resolve(__dirname,
-  'src/services'),';@context': resolve(__dirname,
-  'src/context'),';@constants': resolve(__dirname,
-,
+    alias: {';@': resolve(__dirname,;
+  'src'),';@components': resolve(__dirname,;
+  'src/components'),';@pages': resolve(__dirname,;
+  'src/pages'),';@layout': resolve(__dirname,;
+  'src/layout'),';@utils': resolve(__dirname,;
+  'src/utils'),';@hooks': resolve(__dirname,;
+  'src/hooks'),';@types': resolve(__dirname,;
+  'src/types'),';@assets': resolve(__dirname,;
+  'src/assets'),';@styles': resolve(__dirname,;
+  'src/styles'),';@data': resolve(__dirname,;
+  'src/data'),';@services': resolve(__dirname,;
+  'src/services'),';@context': resolve(__dirname,;
+  'src/context'),';@constants': resolve(__dirname,;
+,;
   src/constants');
 ;
   },;
   build: {;
-    target:
+    target:;
   'esnext,;
-    minify:
+    minify:;
   'terser',;
     sourcemap: false;
   },;
@@ -499,60 +499,60 @@ export default defineConfig({;
 })`;
 ;
     fs.writeFileSync(;
-      path.join(this.projectRoot,
-,
+      path.join(this.projectRoot,;
+,;
   vite.config.ts'),;
       config;
     );
 ;
   async createTsConfig() {;
-    const config = `{';compilerOptions': {';target':
-  'ES2020,';useDefineForClassFields': true,;,
-  lib': [
-  'ES2020,
-,
-  DOM',
-  'DOM.Iterable'],';module': 'ESNext,';skipLibCheck': true,;,
-  moduleResolution': 'bundler,';allowImportingTsExtensions': true,';resolveJsonModule': true,';isolatedModules': true,';noEmit': true,;,
-  jsx': 'react-jsx,';strict': true,';noUnusedLocals': true,';noUnusedParameters': true,';noFallthroughCasesInSwitch': true,;,
-  baseUrl': '.,;,
-  paths': {';@/*': [
-  'src/*],;,
-  @components/*': [
-  'src/components/*],;,
-  @pages/*': [
-  'src/pages/*],;,
-  @layout/*': [
-  'src/layout/*],;,
-  @utils/*': [
-  'src/utils/*],;,
-  @hooks/*': [
-  'src/hooks/*],;,
-  @types/*': [
-  'src/types/*],;,
-  @assets/*': [
-  'src/assets/*],;,
-  @styles/*': [
-  'src/styles/*],;,
-  @data/*': [
-  'src/data/*],;,
-  @services/*': [
-  'src/services/*],;,
-  @context/*': [
-  'src/context/*],;,
-  @constants/*': [
+    const config = `{';compilerOptions': {';target':;
+  'ES2020,';useDefineForClassFields': true,;,;
+  lib': [;
+  'ES2020,;
+,;
+  DOM',;
+  'DOM.Iterable'],';module': 'ESNext,';skipLibCheck': true,;,;
+  moduleResolution': 'bundler,';allowImportingTsExtensions': true,';resolveJsonModule': true,';isolatedModules': true,';noEmit': true,;,;
+  jsx': 'react-jsx,';strict': true,';noUnusedLocals': true,';noUnusedParameters': true,';noFallthroughCasesInSwitch': true,;,;
+  baseUrl': '.,;,;
+  paths': {';@/*': [;
+  'src/*],;,;
+  @components/*': [;
+  'src/components/*],;,;
+  @pages/*': [;
+  'src/pages/*],;,;
+  @layout/*': [;
+  'src/layout/*],;,;
+  @utils/*': [;
+  'src/utils/*],;,;
+  @hooks/*': [;
+  'src/hooks/*],;,;
+  @types/*': [;
+  'src/types/*],;,;
+  @assets/*': [;
+  'src/assets/*],;,;
+  @styles/*': [;
+  'src/styles/*],;,;
+  @data/*': [;
+  'src/data/*],;,;
+  @services/*': [;
+  'src/services/*],;,;
+  @context/*': [;
+  'src/context/*],;,;
+  @constants/*': [;
   'src/constants/*];
 ;
-  },;,
-  include': [
-  'src],;,
-  references': [{
-  'path':
+  },;,;
+  include': [;
+  'src],;,;
+  references': [{;
+  'path':;
   './tsconfig.node.json }];
 }`;
 ;
     fs.writeFileSync(;
-      path.join(this.projectRoot,
+      path.join(this.projectRoot,;
   'tsconfig.json'),;
       config;
     );
@@ -568,10 +568,10 @@ import { HelmetProvider } from;
   'react-helmet-async';
 import App from;
   './App.tsx';
-import
+import;
   './index.css';
 ;
-ReactDOM.createRoot(document.getElementById(
+ReactDOM.createRoot(document.getElementById(;
   'root')!).render(;
   <React.StrictMode>;
     <HelmetProvider>;
@@ -583,52 +583,52 @@ ReactDOM.createRoot(document.getElementById(
 )`;
 ;
     // Ensure src directory exists;
-    const srcDir = path.join(this.projectRoot,
+    const srcDir = path.join(this.projectRoot,;
   'src');
     if (!fs.existsSync(srcDir)) {;
       fs.mkdirSync(srcDir, { recursive: true });
 ;
     fs.writeFileSync(;
-      path.join(this.projectRoot,
-,
-  src',
+      path.join(this.projectRoot,;
+,;
+  src',;
   'main.tsx'),;
       mainTsx;
     );
 ;
   async createIndexHtml() {;
     const indexHtml = `<!doctype html>;
-<html lang=
+<html lang=;
   'en'>;
   <head>;
-    <meta charset=
+    <meta charset=;
   'UTF-8' />;
-    <link rel=
-  'icon' type=
-  'image/svg+xml' href=
+    <link rel=;
+  'icon' type=;
+  'image/svg+xml' href=;
   '/vite.svg' />;
-    <meta name=
-  'viewport' content=
+    <meta name=;
+  'viewport' content=;
   'width=device-width, initial-scale=1.0' />;
     <title>Zion App</title>;
   </head>;
   <body>;
-    <div id=
+    <div id=;
   'root'></div>;
-    <script type=
-  'module' src=
+    <script type=;
+  'module' src=;
   '/src/main.tsx'></script>;
   </body>;
 </html>`;
 ;
     fs.writeFileSync(;
-      path.join(this.projectRoot,
+      path.join(this.projectRoot,;
   'index.html'),;
       indexHtml;
     );
 ;
   async createTailwindConfig() {;
-    const config = `/** @type {import(
+    const config = `/** @type {import(;
   'tailwindcss').Config} */;
 export default {;
   content: [';./index.html,';./src/**/*.{js,ts,jsx,tsx}',;
@@ -640,7 +640,7 @@ export default {;
 }`;
 ;
     fs.writeFileSync(;
-      path.join(this.projectRoot,
+      path.join(this.projectRoot,;
   'tailwind.config.js'),;
       config;
     );
@@ -654,22 +654,22 @@ export default {;
 }`;
 ;
     fs.writeFileSync(;
-      path.join(this.projectRoot,
+      path.join(this.projectRoot,;
   'postcss.config.js'),;
       config;
     );
 ;
   async fixCorruptedFiles(corruptedFiles) {;
-    this.log(
+    this.log(;
   'Fixing corrupted files...');
 ;
     for (const corruptedFile of corruptedFiles) {;
       try {;
-        if (corruptedFile.type ===
+        if (corruptedFile.type ===;
   'corrupted') {;
           // Try to restore from backup or regenerate;
           await this.restoreCorruptedFile(corruptedFile);
-        } else if (corruptedFile.type ===
+        } else if (corruptedFile.type ===;
   'unreadable') {;
           // Try to fix permissions or remove corrupted file;
           await this.fixUnreadableFile(corruptedFile);
@@ -677,14 +677,14 @@ export default {;
         this.log(`Fixed corrupted file: ${corruptedFile.file}`);
 ;
       } catch (error) {;
-        this.log(`Failed to fix corrupted file ${corruptedFile.file}: ${error.message}`,
+        this.log(`Failed to fix corrupted file ${corruptedFile.file}: ${error.message}`,;
   'ERROR');
 ;
 ;
 ;
   async restoreCorruptedFile(corruptedFile) {;
     // Try to restore from backup;
-    const backupPath = corruptedFile.path +
+    const backupPath = corruptedFile.path +;
   '.backup';
 ;
     if (fs.existsSync(backupPath)) {;
@@ -701,7 +701,7 @@ export default {;
       fs.chmodSync(unreadableFile.path, 0o644);
       this.log(`Fixed permissions for ${unreadableFile.file}`);
     } catch (error) {;
-      // If permissions can
+      // If permissions can;
   't be fixed, remove the file;
       fs.unlinkSync(unreadableFile.path);
       this.log(`Removed unreadable file: ${unreadableFile.file}`);
@@ -716,37 +716,37 @@ export default {;
     this.log(`Attempting to regenerate: ${filename}`);
 ;
   async fixFilePermissions(permissionIssues) {;
-    this.log(
+    this.log(;
   'Fixing file permissions...');
 ;
     for (const permissionIssue of permissionIssues) {;
       try {;
-        if (permissionIssue.issue ===
+        if (permissionIssue.issue ===;
   'not_readable') {;
           fs.chmodSync(permissionIssue.path, 0o644);
-        } else if (permissionIssue.issue ===
+        } else if (permissionIssue.issue ===;
   'not_writable') {;
           fs.chmodSync(permissionIssue.path, 0o666);
 ;
         this.log(`Fixed permissions for: ${permissionIssue.file}`);
 ;
       } catch (error) {;
-        this.log(`Failed to fix permissions for ${permissionIssue.file}: ${error.message}`,
+        this.log(`Failed to fix permissions for ${permissionIssue.file}: ${error.message}`,;
   'ERROR');
 ;
 ;
 ;
   async fixProjectStructure(structureIssues) {;
-    this.log(
+    this.log(;
   'Fixing project structure...');
 ;
     for (const structureIssue of structureIssues) {;
       try {;
-        if (structureIssue.issue ===
+        if (structureIssue.issue ===;
   'missing_directory') {;
           fs.mkdirSync(structureIssue.path, { recursive: true });
           this.log(`Created missing directory: ${structureIssue.directory}`);
-        } else if (structureIssue.issue ===
+        } else if (structureIssue.issue ===;
   'not_a_directory') {;
           // Remove the file and create directory;
           fs.unlinkSync(structureIssue.path);
@@ -754,13 +754,13 @@ export default {;
           this.log(`Fixed directory structure: ${structureIssue.directory}`);
 ;
       } catch (error) {;
-        this.log(`Failed to fix structure issue ${structureIssue.directory}: ${error.message}`,
+        this.log(`Failed to fix structure issue ${structureIssue.directory}: ${error.message}`,;
   'ERROR');
 ;
 ;
 ;
   async performDeepIntegrityScan() {;
-    this.log(
+    this.log(;
   'Performing deep integrity scan...');
 ;
     try {;
@@ -774,16 +774,16 @@ export default {;
       await this.checkFileDependencies();
       await this.validateFileContent();
 ;
-      this.log(
+      this.log(;
   'Deep integrity scan completed');
 ;
     } catch (error) {;
-      this.log(`Deep integrity scan failed: ${error.message}`,
+      this.log(`Deep integrity scan failed: ${error.message}`,;
   'ERROR');
 ;
 ;
   async performWeeklyMaintenance() {;
-    this.log(
+    this.log(;
   'Performing weekly integrity maintenance...');
 ;
     try {;
@@ -796,16 +796,16 @@ export default {;
       // Validate project integrity;
       await this.validateProjectIntegrity();
 ;
-      this.log(
+      this.log(;
   'Weekly integrity maintenance completed');
 ;
     } catch (error) {;
-      this.log(`Weekly integrity maintenance failed: ${error.message}`,
+      this.log(`Weekly integrity maintenance failed: ${error.message}`,;
   'ERROR');
 ;
 ;
   async generateFileChecksums() {;
-    this.log(
+    this.log(;
   'Generating file checksums...');
 ;
     try {;
@@ -815,13 +815,13 @@ export default {;
       for (const file of sourceFiles) {;
         try {;
           const content = fs.readFileSync(file);
-          const checksum = crypto.createHash(
-  'md5').update(content).digest(
+          const checksum = crypto.createHash(;
+  'md5').update(content).digest(;
   'hex');
           const relativePath = path.relative(this.projectRoot, file);
           checksums[relativePath] = checksum;
         } catch (error) {;
-          this.log(`Failed to generate checksum for ${file}: ${error.message}`,
+          this.log(`Failed to generate checksum for ${file}: ${error.message}`,;
   'WARN');
 ;
 ;
@@ -830,36 +830,36 @@ export default {;
       this.log(`Generated checksums for ${Object.keys(checksums).length} files`);
 ;
     } catch (error) {;
-      this.log(`Failed to generate file checksums: ${error.message}`,
+      this.log(`Failed to generate file checksums: ${error.message}`,;
   'ERROR');
 ;
 ;
   async checkFileDependencies() {;
-    this.log(
+    this.log(;
   'Checking file dependencies...');
 ;
     // This would check for circular dependencies, missing imports, etc.;
-    // For now, just log that it
+    // For now, just log that it;
   's completed;
-    this.log('File dependency check completed
+    this.log('File dependency check completed;
   ');
 ;
   async validateFileContent() {;
-    this.log('Validating file content...
+    this.log('Validating file content...;
   ');
 ;
     // This would validate file content integrity, syntax, etc.;
     // For now, just log that it's completed;
-    this.log(
+    this.log(;
   'File content validation completed');
 ;
   async cleanupOldFiles() {;
-    this.log(
+    this.log(;
   'Cleaning up old files...');
 ;
     try {;
-
-      const logsDir = path.join(this.projectRoot,
+;
+      const logsDir = path.join(this.projectRoot,;
   'logs');
       if (fs.existsSync(logsDir)) {;
         const files = fs.readdirSync(logsDir);
@@ -867,10 +867,10 @@ export default {;
         const maxAge = 30 * 24 * 60 * 60 * 1000; // 30 days;
 ;
         for (const file of files) {;
-          if (file.includes(
-  '-report.txt') || file.includes(
+          if (file.includes(;
+  '-report.txt') || file.includes(;
   '-audit-report.txt')) {;
-
+;
             const filePath = path.join(logsDir, file);
             const stats = fs.statSync(filePath);
 ;
@@ -882,25 +882,25 @@ export default {;
 ;
 ;
     } catch (error) {;
-      this.log(`File cleanup failed: ${error.message}`,
+      this.log(`File cleanup failed: ${error.message}`,;
   'WARN');
 ;
 ;
   async updateFileChecksums() {;
-    this.log(
+    this.log(;
   'Updating file checksums...');
 ;
     try {;
       await this.generateFileChecksums();
-      this.log(
+      this.log(;
   'File checksums updated');
     } catch (error) {;
-      this.log(`Failed to update file checksums: ${error.message}`,
+      this.log(`Failed to update file checksums: ${error.message}`,;
   'ERROR');
 ;
 ;
   async validateProjectIntegrity() {;
-    this.log(
+    this.log(;
   'Validating project integrity...');
 ;
     try {;
@@ -908,24 +908,24 @@ export default {;
       const issues = await this.detectIntegrityIssues();
 ;
       if (issues.length === 0) {;
-        this.log(
+        this.log(;
   'Project integrity validation passed');
       } else {;
         this.log(`Project integrity validation found ${issues.length} issues`);
 ;
     } catch (error) {;
-      this.log(`Project integrity validation failed: ${error.message}`,
+      this.log(`Project integrity validation failed: ${error.message}`,;
   'ERROR');
 ;
 ;
   findSourceFiles() {;
-    const extensions = [
-  '.ts',
-  '.tsx',
-  '.js',
-  '.jsx',
-  '.json',
-  '.html',
+    const extensions = [;
+  '.ts',;
+  '.tsx',;
+  '.js',;
+  '.jsx',;
+  '.json',;
+  '.html',;
   '.css'];
     const files = [];
 ;
@@ -937,12 +937,12 @@ export default {;
         const stat = fs.statSync(fullPath);
 ;
         if (stat.isDirectory()) {;
-          if (![
-  'node_modules',
-  '.git',
-  'dist',
-  'build',
-  '.next',
+          if (![;
+  'node_modules',;
+  '.git',;
+  'dist',;
+  'build',;
+  '.next',;
   'logs'].includes(item)) {;
             traverse(fullPath);
 ;
@@ -964,40 +964,40 @@ export default {;
     };
 ;
   async stop() {;
-    this.log(
+    this.log(;
   'Stopping file integrity monitor...');
-
+;
     this.monitoring = false;
-    this.log(
+    this.log(;
   'File integrity monitoring stopped');
   }
 }
-
-// Export the class
+;
+// Export the class;
 module.exports = FileIntegrityMonitor;
-
-// If running directly, start the monitor
-if (require.main === module) {
+;
+// If running directly, start the monitor;
+if (require.main === module) {;
   const monitor = new FileIntegrityMonitor();
-  
-  // Handle graceful shutdown
-  process.on(
-  'SIGINT', () => {
-    monitor.log(
+;
+  // Handle graceful shutdown;
+  process.on(;
+  'SIGINT', () => {;
+    monitor.log(;
   'Shutting down File Integrity Monitor...');
     monitor.stop();
     process.exit(0);
 ;
 ;
 // Handle graceful shutdown;
-process.on(
+process.on(;
   'SIGINT', async () => {;
   if (monitor) {;
     await monitor.stop();
 ;
 });
 ;
-process.on(
+process.on(;
   'SIGTERM', async () => {;
   if (monitor) {;
     await monitor.stop();
@@ -1014,4 +1014,4 @@ setInterval(() => {;
   monitor.log(`Monitor heartbeat - Checks: ${stats.integrityChecks}, Issues Found: ${stats.issuesFound}, Issues Fixed: ${stats.issuesFixed}, Uptime: ${Math.round(stats.uptime)}s`);
 }, 1800000); // Every 30 minutes;
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
-
+;

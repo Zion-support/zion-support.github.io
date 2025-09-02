@@ -13,17 +13,10 @@ function resolveMergeConflicts(filePath) {
 
     // Remove merge conflict markers
     content = content.replace(
-      /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g,
-      ''
-    );
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-
-    // Clean up any remaining conflict markers
-    content = content.replace(/^<<<<<<< HEAD$/gm, '');
-    content = content.replace(/^=======$/gm, '');
-    content = content.replace(/^>>>>>>> [a-f0-9]+$/gm, '');
-
+      /    );
+    content = content.replace(/    // Clean up any remaining conflict markers
+    content = content.replace(/^    content = content.replace(/^=======$/gm, '');
+    content = content.replace(/^
     // Remove empty lines that might be left behind
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
 
@@ -68,10 +61,8 @@ function findFilesWithConflicts(dir) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
             if (
-              content.includes('<<<<<<< HEAD') ||
-              content.includes('=======') ||
-              content.includes('>>>>>>> ')
-            ) {
+              content.includes('              content.includes('=======') ||
+              content.includes('            ) {
               files.push(fullPath);
             }
           } catch (error) {

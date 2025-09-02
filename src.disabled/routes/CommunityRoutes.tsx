@@ -6,4 +6,4 @@ import { Route, Routes } from;
   '../pages/ForumPostPage'; import CreatePostPage from;
   '../pages/CreatePostPage'; import EditPostPage from;
   '../pages/EditPostPage'; import CommunityProfilePage from;
-  '../pages/CommunityProfilePage'; ; export default function CommunityRoutes(...args: any[]): any {; return (; <>; <Route path = "" element={<CommunityPage />} />';; </>';; )';"; }"';';""
+  '../pages/CommunityProfilePage'; ; export default function CommunityRoutes(...args: any[]): any {; return (; <>; <Route path = '' element={<CommunityPage />} />';; </>';; )';'; }'';';'';

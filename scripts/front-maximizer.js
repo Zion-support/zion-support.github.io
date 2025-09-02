@@ -1,382 +1,380 @@
-#!/usr/bin/env node
-
-/**
- * Front Maximizer Script
- * Optimizes frontend performance and assets
- */
-
+#!/usr/bin/env node;
+/**;
+ * Front Maximizer Script;
+ * Optimizes frontend performance and assets;
+ */;
 import fs from,;
   fs';
 import path from;
   'path';
 import { fileURLToPath } from;
   'url';
-
+;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-console.log(
+;
+console.log(;
   '🚀 Front Maximizer Started');
-
-class FrontMaximizer {
-  constructor() {
-    this.projectRoot = path.resolve(__dirname,..
+;
+class FrontMaximizer {;
+  constructor() {;
+    this.projectRoot = path.resolve(__dirname,..;
   ');
     this.optimizations = [];
     this.issues = [];
   }
-
-  async maximize() {
-    try {
-      console.log('🔍 Analyzing frontend for optimization opportunities...
+;
+  async maximize() {;
+    try {;
+      console.log('🔍 Analyzing frontend for optimization opportunities...;
   ');
-      
-      // Analyze build configuration
+;
+      // Analyze build configuration;
       await this.analyzeBuildConfig();
-      
-      // Analyze bundle size
+;
+      // Analyze bundle size;
       await this.analyzeBundleSize();
-      
-      // Analyze code splitting
+;
+      // Analyze code splitting;
       await this.analyzeCodeSplitting();
-      
-      // Analyze asset optimization
+;
+      // Analyze asset optimization;
       await this.analyzeAssetOptimization();
-      
-      // Generate optimization report
+;
+      // Generate optimization report;
       await this.generateReport();
-      
-      console.log('✅ Front maximizer analysis completed
+;
+      console.log('✅ Front maximizer analysis completed;
   ');
-      
-    } catch (error) {
+;
+    } catch (error) {;
       console.error('❌ Error during front maximization: , error.message);
     }
   }
-
-  async analyzeBuildConfig() {
-    try {
-      console.log('⚙️  Analyzing build configuration...
+;
+  async analyzeBuildConfig() {;
+    try {;
+      console.log('⚙️  Analyzing build configuration...;
   ');
-      
+;
       const viteConfigPath = path.join(this.projectRoot,vite.config.ts');
-      if (fs.existsSync(viteConfigPath)) {
-        const viteConfig = fs.readFileSync(viteConfigPath,utf8
+      if (fs.existsSync(viteConfigPath)) {;
+        const viteConfig = fs.readFileSync(viteConfigPath,utf8;
   ');
-        
-        // Check for build optimizations
-        if (!viteConfig.includes('build.rollupOptions
-  ')) {
-          this.optimizations.push('Add rollup options for better build optimization
-  ');
-        }
-        
-        if (!viteConfig.includes('build.chunkSizeWarningLimit
-  ')) {
-          this.optimizations.push('Set chunk size warning limits for better monitoring
+;
+        // Check for build optimizations;
+        if (!viteConfig.includes('build.rollupOptions;
+  ')) {;
+          this.optimizations.push('Add rollup options for better build optimization;
   ');
         }
-        
-        if (!viteConfig.includes('build.rollupOptions.output.manualChunks
-  ')) {
-          this.optimizations.push('Implement manual chunk splitting for better caching
+;
+        if (!viteConfig.includes('build.chunkSizeWarningLimit;
+  ')) {;
+          this.optimizations.push('Set chunk size warning limits for better monitoring;
   ');
         }
-        
-        if (!viteConfig.includes('build.rollupOptions.output.assetFileNames
-  ')) {
-          this.optimizations.push('Configure asset file naming for better caching
+;
+        if (!viteConfig.includes('build.rollupOptions.output.manualChunks;
+  ')) {;
+          this.optimizations.push('Implement manual chunk splitting for better caching;
   ');
         }
-        
-        // Check for development optimizations
-        if (!viteConfig.includes('server.hmr
-  ')) {
-          this.optimizations.push('Enable HMR for better development experience
+;
+        if (!viteConfig.includes('build.rollupOptions.output.assetFileNames;
+  ')) {;
+          this.optimizations.push('Configure asset file naming for better caching;
   ');
         }
-        
-        if (!viteConfig.includes('preview.port
-  ')) {
-          this.optimizations.push('Configure preview port for testing
+;
+        // Check for development optimizations;
+        if (!viteConfig.includes('server.hmr;
+  ')) {;
+          this.optimizations.push('Enable HMR for better development experience;
   ');
         }
-        
-      } else {
-        this.issues.push('Vite configuration file not found
+;
+        if (!viteConfig.includes('preview.port;
+  ')) {;
+          this.optimizations.push('Configure preview port for testing;
+  ');
+        }
+;
+      } else {;
+        this.issues.push('Vite configuration file not found;
   ');
       }
-      
-    } catch (error) {
+;
+    } catch (error) {;
       this.issues.push(`Could not analyze build config: ${error.message}`);
     }
   }
-
-  async analyzeBundleSize() {
-    try {
-      console.log('📦 Analyzing bundle size...
+;
+  async analyzeBundleSize() {;
+    try {;
+      console.log('📦 Analyzing bundle size...;
   ');
-      
+;
       const distPath = path.join(this.projectRoot,dist');
-      if (fs.existsSync(distPath)) {
-        const jsFiles = this.findFiles(distPath,.js
+      if (fs.existsSync(distPath)) {;
+        const jsFiles = this.findFiles(distPath,.js;
   ');
         const cssFiles = this.findFiles(distPath,.css');
-        
+;
         let totalJsSize = 0;
         let totalCssSize = 0;
-        
-        // Calculate JavaScript bundle sizes
-        jsFiles.forEach(file => {
+;
+        // Calculate JavaScript bundle sizes;
+        jsFiles.forEach(file => {;
           const stats = fs.statSync(file);
           totalJsSize += stats.size;
-          
+;
           const sizeMB = Math.round(stats.size / 1024 / 1024 * 100) / 100;
-          if (sizeMB > 1) {
+          if (sizeMB > 1) {;
             this.optimizations.push(`Large JS bundle detected: ${path.basename(file)} (${sizeMB}MB) - consider code splitting`);
           }
         });
-        
-        // Calculate CSS bundle sizes
-        cssFiles.forEach(file => {
+;
+        // Calculate CSS bundle sizes;
+        cssFiles.forEach(file => {;
           const stats = fs.statSync(file);
           totalCssSize += stats.size;
-          
+;
           const sizeKB = Math.round(stats.size / 1024 * 100) / 100;
-          if (sizeKB > 100) {
+          if (sizeKB > 100) {;
             this.optimizations.push(`Large CSS bundle detected: ${path.basename(file)} (${sizeKB}KB) - consider purging unused styles`);
           }
         });
-        
-        // Overall bundle analysis
+;
+        // Overall bundle analysis;
         const totalSizeMB = Math.round((totalJsSize + totalCssSize) / 1024 / 1024 * 100) / 100;
-        if (totalSizeMB > 5) {
+        if (totalSizeMB > 5) {;
           this.optimizations.push(`Total bundle size is ${totalSizeMB}MB - consider aggressive optimization`);
         }
-        
+;
         console.log(`📊 Bundle sizes: JS ${Math.round(totalJsSize / 1024)}KB, CSS ${Math.round(totalCssSize / 1024)}KB`);
-        
-      } else {
-        this.optimizations.push(
+;
+      } else {;
+        this.optimizations.push(;
   'Build directory not found - run build first to analyze bundle size');
       }
-      
-    } catch (error) {
+;
+    } catch (error) {;
       this.issues.push(`Could not analyze bundle size: ${error.message}`);
     }
   }
-
-  async analyzeCodeSplitting() {
-    try {
-      console.log(
+;
+  async analyzeCodeSplitting() {;
+    try {;
+      console.log(;
   '🔀 Analyzing code splitting...');
-      
-      const distPath = path.join(this.projectRoot,dist
+;
+      const distPath = path.join(this.projectRoot,dist;
   ');
-      if (fs.existsSync(distPath)) {
+      if (fs.existsSync(distPath)) {;
         const jsFiles = this.findFiles(distPath,.js');
-        
-        if (jsFiles.length <= 2) {
-          this.optimizations.push(
+;
+        if (jsFiles.length <= 2) {;
+          this.optimizations.push(;
   'Consider implementing code splitting to reduce initial bundle size');
-        } else {
+        } else {;
           console.log(`✅ Code splitting detected: ${jsFiles.length} JavaScript chunks`);
         }
-        
-        // Check for vendor chunks
-        const vendorChunks = jsFiles.filter(file => 
-          path.basename(file).includes(
-  'vendor') || 
-          path.basename(file).includes(
-  'chunk')
+;
+        // Check for vendor chunks;
+        const vendorChunks = jsFiles.filter(file =>;
+          path.basename(file).includes(;
+  'vendor') ||;
+          path.basename(file).includes(;
+  'chunk');
         );
-        
-        if (vendorChunks.length === 0) {
-          this.optimizations.push(
+;
+        if (vendorChunks.length === 0) {;
+          this.optimizations.push(;
   'Consider separating vendor dependencies into separate chunks');
         }
-        
+;
       }
-      
-    } catch (error) {
+;
+    } catch (error) {;
       this.issues.push(`Could not analyze code splitting: ${error.message}`);
     }
   }
-
-  async analyzeAssetOptimization() {
-    try {
-      console.log(,
+;
+  async analyzeAssetOptimization() {;
+    try {;
+      console.log(,;
   🖼️  Analyzing asset optimization...');
-      
-      const distPath = path.join(this.projectRoot,dist
+;
+      const distPath = path.join(this.projectRoot,dist;
   ');
-      if (fs.existsSync(distPath)) {
-        const assetFiles = this.findFiles(distPath, ['.png
-  ',.jpg',.jpeg
-  ',.gif',.svg
+      if (fs.existsSync(distPath)) {;
+        const assetFiles = this.findFiles(distPath, ['.png;
+  ',.jpg',.jpeg;
+  ',.gif',.svg;
   ',.webp']);
-        
+;
         let totalAssetSize = 0;
         const largeAssets = [];
-        
-        assetFiles.forEach(file => {
+;
+        assetFiles.forEach(file => {;
           const stats = fs.statSync(file);
           totalAssetSize += stats.size;
-          
+;
           const sizeKB = Math.round(stats.size / 1024 * 100) / 100;
-          if (sizeKB > 500) {
+          if (sizeKB > 500) {;
             largeAssets.push(`${path.basename(file)} (${sizeKB}KB)`);
           }
         });
-        
-        if (largeAssets.length > 0) {
+;
+        if (largeAssets.length > 0) {;
           this.optimizations.push(`Large assets detected: ${largeAssets.join(,)} - consider compression or format conversion`);
         }
-        
-        // Check for image optimization
-        const imageFiles = assetFiles.filter(file => 
-          ['.png
-  ',.jpg',.jpeg
-  ',.gif'].some(ext => file.endsWith(ext))
+;
+        // Check for image optimization;
+        const imageFiles = assetFiles.filter(file =>;
+          ['.png;
+  ',.jpg',.jpeg;
+  ',.gif'].some(ext => file.endsWith(ext));
         );
-        
-        if (imageFiles.length > 0) {
-          this.optimizations.push(
+;
+        if (imageFiles.length > 0) {;
+          this.optimizations.push(;
   'Consider converting images to WebP format for better compression');
-          this.optimizations.push(
+          this.optimizations.push(;
   'Implement lazy loading for images below the fold');
         }
-        
-        // Check for font optimization
-        const fontFiles = this.findFiles(distPath, [
-  '.woff',.woff2
-  ',.ttf',.otf
+;
+        // Check for font optimization;
+        const fontFiles = this.findFiles(distPath, [;
+  '.woff',.woff2;
+  ',.ttf',.otf;
   ']);
-        if (fontFiles.length > 0) {
-          this.optimizations.push('Consider using WOFF2 format for better font compression
+        if (fontFiles.length > 0) {;
+          this.optimizations.push('Consider using WOFF2 format for better font compression;
   ');
-          this.optimizations.push('Implement font display swap for better performance
+          this.optimizations.push('Implement font display swap for better performance;
   ');
         }
-        
+;
       }
-      
-    } catch (error) {
+;
+    } catch (error) {;
       this.issues.push(`Could not analyze asset optimization: ${error.message}`);
     }
   }
-
-  findFiles(dir, extensions) {
+;
+  findFiles(dir, extensions) {;
     const files = [];
     const extArray = Array.isArray(extensions) ? extensions : [extensions];
-    
-    const scanDirectory = (scanDir) => {
-      try {
+;
+    const scanDirectory = (scanDir) => {;
+      try {;
         const items = fs.readdirSync(scanDir);
-        
-        for (const item of items) {
+;
+        for (const item of items) {;
           const fullPath = path.join(scanDir, item);
           const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory()) {
+;
+          if (stat.isDirectory()) {;
             scanDirectory(fullPath);
-          } else if (stat.isFile() && extArray.some(ext => item.endsWith(ext))) {
+          } else if (stat.isFile() && extArray.some(ext => item.endsWith(ext))) {;
             files.push(fullPath);
           }
         }
-      } catch (error) {
-        // Skip directories we can't read
+      } catch (error) {;
+        // Skip directories we can't read;
       }
     };
-    
+;
     scanDirectory(dir);
     return files;
   }
-
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        optimizations: this.optimizations.length,
-        issues: this.issues.length
-      },
-      optimizations: this.optimizations,
-      issues: this.issues,
-      recommendations: this.generateRecommendations()
+;
+  async generateReport() {;
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      summary: {;
+        optimizations: this.optimizations.length,;
+        issues: this.issues.length;
+      },;
+      optimizations: this.optimizations,;
+      issues: this.issues,;
+      recommendations: this.generateRecommendations();
     };
-    
-    // Save report to file
-    const reportPath = path.join(this.projectRoot,logs
+;
+    // Save report to file;
+    const reportPath = path.join(this.projectRoot,logs;
   ',front-maximizer-report.json');
-    try {
+    try {;
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       console.log(`📊 Report saved to: ${reportPath}`);
-    } catch (error) {
-      console.warn(
-  '⚠️  Could not save report:,
+    } catch (error) {;
+      console.warn(;
+  '⚠️  Could not save report:,;
   , error.message);
     }
-    
-    // Display summary
-    console.log(
+;
+    // Display summary;
+    console.log(;
   '\n📋 Front Maximizer Summary: ');
-    console.log(
+    console.log(;
   '─.repeat(50));
-    
-    if (this.optimizations.length > 0) {
+;
+    if (this.optimizations.length > 0) {;
       console.log(`💡 ${this.optimizations.length} optimization opportunities:`);
-      this.optimizations.forEach((optimization, index) => {
+      this.optimizations.forEach((optimization, index) => {;
         console.log(`   ${index + 1}. ${optimization}`);
       });
-    } else {
-      console.log(
+    } else {;
+      console.log(;
   '🎉 No optimization opportunities found!');
     }
-    
-    if (this.issues.length > 0) {
+;
+    if (this.issues.length > 0) {;
       console.log(`\n⚠️  ${this.issues.length} issues encountered:`);
-      this.issues.forEach((issue, index) => {
+      this.issues.forEach((issue, index) => {;
         console.log(`   ${index + 1}. ${issue}`);
       });
     }
-    
-    console.log(
+;
+    console.log(;
   '─'.repeat(50));
   }
-
-  generateRecommendations() {
+;
+  generateRecommendations() {;
     const recommendations = [];
-    
-    if (this.optimizations.length > 0) {
-      recommendations.push(
+;
+    if (this.optimizations.length > 0) {;
+      recommendations.push(;
   'Implement code splitting for better performance');
-      recommendations.push(
+      recommendations.push(;
   'Optimize images and convert to modern formats');
-      recommendations.push(
+      recommendations.push(;
   'Configure build optimizations in Vite');
-      recommendations.push(
+      recommendations.push(;
   'Implement lazy loading for non-critical resources');
-      recommendations.push(
+      recommendations.push(;
   'Consider using a CDN for static assets');
-    } else {
-      recommendations.push(
+    } else {;
+      recommendations.push(;
   'Continue monitoring for optimization opportunities');
-      recommendations.push(
+      recommendations.push(;
   'Regularly review bundle sizes and performance');
     }
-    
+;
     return recommendations;
   }
 }
-
-// Run the front maximizer
+;
+// Run the front maximizer;
 const maximizer = new FrontMaximizer();
-maximizer.maximize().then(() => {
-  console.log(
+maximizer.maximize().then(() => {;
+  console.log(;
   '🚀 Front Maximizer Completed');
   process.exit(0);
-}).catch((error) => {
-  console.error(
+}).catch((error) => {;
+  console.error(;
   '❌ Front Maximizer Failed:', error);
   process.exit(1);
 });

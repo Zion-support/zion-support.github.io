@@ -1,4 +1,4 @@
-export interface EnhancedServiceItem {
+export interface EnhancedServiceItem {;
    id: string;
    title: string;
    description: string;
@@ -25,3 +25,4 @@ export interface EnhancedServiceItem {
    address: string;
    website: string;
 }; badges: string[]; technologyStack: string[]; integrations: string[]; compliance: string[]; scalability: string; security: string[]; }; export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [';;
+;

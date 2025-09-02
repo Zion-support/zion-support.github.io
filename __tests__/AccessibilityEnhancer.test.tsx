@@ -1,102 +1,96 @@
 import React from,;
   react';
-import { render, screen, fireEvent } from;
-  '@testing-library/react';
-import AccessibilityEnhancer from;
-  '../components/AccessibilityEnhancer';
-import { describe, it, expect, vi } from;
-  'vitest';
-
-describe(
-  'AccessibilityEnhancer', () => {
-  it(
-  'renders children correctly', () => {
-    render(
-      <AccessibilityEnhancer>
-        <div data-testid="test-child">Test Content</div>
-      </AccessibilityEnhancer>
+import { render, screen, fireEvent } from '@testing-library/react';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import { describe, it, expect, vi } from 'vitest';
+;
+describe(;
+  'AccessibilityEnhancer', () => {;
+  it(;
+  'renders children correctly', () => {;
+    render(;
+      <AccessibilityEnhancer>;
+        <div data-testid='test-child'>Test Content</div>;
+      </AccessibilityEnhancer>;
     );
-
-    expect(screen.getByTestId(
+;
+    expect(screen.getByTestId(;
   'test-child')).toBeInTheDocument();
-    expect(screen.getByText(
+    expect(screen.getByText(;
   'Test Content')).toBeInTheDocument();
   });
-
-  it(
-  'applies accessibility props correctly', () => {
-    render(
-      <AccessibilityEnhancer
-        role="button"
-        aria-label="Test Button"
+;
+  it(;
+  'applies accessibility props correctly', () => {;
+    render(;
+      <AccessibilityEnhancer;
+        role='button';
+        aria-label='Test Button';
         tabIndex={0}
-      >
-        <span>Button Text</span>
-      </AccessibilityEnhancer>
+      >;
+        <span>Button Text</span>;
+      </AccessibilityEnhancer>;
     );
-
-    const element = screen.getByRole(
+;
+    const element = screen.getByRole(;
   'button');
-    expect(element).toHaveAttribute(
-  'aria-label',
-  'Test Button');
-    expect(element).toHaveAttribute(
-  'tabindex',
-  '0');
+    expect(element).toHaveAttribute(;
+  'aria-label''Test Button');
+    expect(element).toHaveAttribute(;
+  'tabindex''0');
   });
-
-  it(
-  'handles keyboard events correctly', () => {
+;
+  it(;
+  'handles keyboard events correctly', () => {;
     const handleClick = vi.fn();
-    render(
-      <AccessibilityEnhancer role="button" onClick={handleClick} tabIndex={0}>
-        <span>Clickable Element</span>
-      </AccessibilityEnhancer>
+    render(;
+      <AccessibilityEnhancer role='button' onClick={handleClick} tabIndex={0}>;
+        <span>Clickable Element</span>;
+      </AccessibilityEnhancer>;
     );
-
-    const element = screen.getByRole(
+;
+    const element = screen.getByRole(;
   'button');
     fireEvent.keyDown(element, { key: 'Enter });
     expect(handleClick).toHaveBeenCalledTimes(1);
-
-    fireEvent.keyDown(element, { key:,
-  ' });
+;
+    fireEvent.keyDown(element, { key:' });
     expect(handleClick).toHaveBeenCalledTimes(2);
   });
-
-  it(
-  'applies focus styles when focusable', () => {
-    render(
-      <AccessibilityEnhancer
-        role="button"
+;
+  it(;
+  'applies focus styles when focusable', () => {;
+    render(;
+      <AccessibilityEnhancer;
+        role='button';
         tabIndex={0}
-        className="focus: outline-none focus:ring-2 focus:ring-blue-500"
-      >
-        <span>Focusable Element</span>
-      </AccessibilityEnhancer>
+        className='focus: outline-none focus:ring-2 focus:ring-blue-500';
+      >;
+        <span>Focusable Element</span>;
+      </AccessibilityEnhancer>;
     );
-
-    const element = screen.getByRole(
+;
+    const element = screen.getByRole(;
   'button');
-    expect(element).toHaveClass(
-  'focus:outline-none,
-,
-  focus: ring-2,
-,
+    expect(element).toHaveClass(;
+  'focus:outline-none,;
+,;
+  focus: ring-2,;
+,;
   focus: ring-blue-500);  });
-
-  it(
-  'disables focus when not focusable', () => {
-    render(
-      <AccessibilityEnhancer role="button" tabIndex={-1}>
-        <span>Non-focusable Element</span>
-      </AccessibilityEnhancer>
+;
+  it(;
+  'disables focus when not focusable', () => {;
+    render(;
+      <AccessibilityEnhancer role='button' tabIndex={-1}>;
+        <span>Non-focusable Element</span>;
+      </AccessibilityEnhancer>;
     );
-
-    const element = screen.getByRole(
+;
+    const element = screen.getByRole(;
   'button');
-    expect(element).toHaveAttribute(
-  'tabindex',
-  '-1');
+    expect(element).toHaveAttribute(;
+  'tabindex''-1');
   });
 });
+;

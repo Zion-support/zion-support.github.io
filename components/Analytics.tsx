@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-
-// Declare gtag function for TypeScript
-declare global {
+;
+// Declare gtag function for TypeScript;
+declare global {;
   function gtag(...args: any[]): void;
 }
-
-interface AnalyticsProps {
+;
+interface AnalyticsProps {;
   trackingId?: string;
 }
 
@@ -20,7 +20,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
     document.head.appendChild(script1);
 
     const script2 = document.createElement('script');
-    script2.innerHTML = `
+    script2.innerHTML = `;
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -30,44 +30,48 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
         send_page_view: true
       });
     `;
+      gtag('config', '${trackingId}', {;
+        page_title: document.title,;
+        page_location: window.location.href,;
+        send_page_view: true;
+      })`;;
     document.head.appendChild(script2);
-
-    // Track page views on route changes
-    const handleRouteChange = () => {
-      if (typeof gtag !== 'undefined') {
-        gtag('config', trackingId, {
-          page_title: document.title,
-          page_location: window.location.href,
-        });
+;
+    // Track page views on route changes;
+    const handleRouteChange = () => {;
+      if (typeof gtag !== 'undefined') {;
+        gtag('config', trackingId, {;
+          page_title: document.title,;
+          page_location: window.location.href});
       }
     };
-
-    // Listen for route changes (Next.js)
+;
+    // Listen for route changes (Next.js);
     window.addEventListener('popstate', handleRouteChange);
-    
-    return () => {
+;
+    return () => {;
       window.removeEventListener('popstate', handleRouteChange);
     };
   }, [trackingId]);
-
-  // Track page performance
-  useEffect(() => {
+;
+  // Track page performance;
+  useEffect(() => {;
     if (typeof window === 'undefined') return;
-    
-    const trackPerformance = () => {
-      if (typeof gtag !== 'undefined' && 'performance' in window) {
+;
+    const trackPerformance = () => {;
+      if (typeof gtag !== 'undefined' && 'performance' in window) {;
         const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (perfData) {
+        if (perfData) {;
           const loadTime = perfData.loadEventEnd - perfData.fetchStart;
           trackEvent('page_load_time', 'Performance', 'Page Load', Math.round(loadTime));
         }
       }
     };
-
+;
     window.addEventListener('load', trackPerformance);
     return () => window.removeEventListener('load', trackPerformance);
   }, []);
-
+;
   return null;
 };
 
@@ -79,16 +83,23 @@ export const trackEvent = (action: string, category: string, label?: string, val
       event_label: label,
       value: value
     });
+;
+// Export tracking functions for use in components;
+export const trackEvent = (action: string, category: string, label?: string, value?: number) => {;
+  if (typeof gtag !== 'undefined') {;
+    gtag('event', action, {;
+      event_category: category,;
+      event_label: label,;
+      value: value});
   }
 };
-
-export const trackPageView = (url: string, title: string) => {
-  if (typeof gtag !== 'undefined') {
-    gtag('config', process.env['NEXT_PUBLIC_GA_TRACKING_ID'] || '', {
-      page_title: title,
-      page_location: url,
-    });
+;
+export const trackPageView = (url: string, title: string) => {;
+  if (typeof gtag !== 'undefined') {;
+    gtag('config', process.env['NEXT_PUBLIC_GA_TRACKING_ID'] || '', {;
+      page_title: title,;
+      page_location: url});
   }
 };
-
+;
 export default Analytics;

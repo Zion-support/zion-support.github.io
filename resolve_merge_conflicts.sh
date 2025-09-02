@@ -7,11 +7,8 @@ resolve_file() {
     local file="$1"
     echo "Resolving conflicts in: $file"
     
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        # Remove all conflict markers and keep only our version
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> cursor\/analyze-improve-and-deploy-application-663e/d' "$file"
-        echo "  ✓ Resolved conflicts in $file"
+    if grep -q "        # Remove all conflict markers and keep only our version
+        sed -i '/        sed -i '/        echo "  ✓ Resolved conflicts in $file"
     else
         echo "  ✓ No conflicts in $file"
     fi

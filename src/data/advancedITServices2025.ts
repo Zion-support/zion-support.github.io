@@ -1,4 +1,4 @@
-import React from 'react'; export interface AdvancedITService {
+ export interface AdvancedITService {;
   id: string;
    title: string;
    description: string;
@@ -22,3 +22,4 @@ import React from 'react'; export interface AdvancedITService {
    website: string;
    address: string;
 }; technicalSpecs: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors: string[]; marketSize: string; growthRate: string; rating: number; reviews: number; customers: number} ; export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = ['';
+;

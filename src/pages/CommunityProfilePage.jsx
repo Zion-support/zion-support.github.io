@@ -1,2 +1,2 @@
-import React from 'react'; export default function CommunityProfilePage () {
+ export default function CommunityProfilePage () {
 }

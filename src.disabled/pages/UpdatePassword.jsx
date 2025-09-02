@@ -1,2 +1,2 @@
 import React from;
-  'react'; export default function UpdatePassword () {''
+  'react'; export default function UpdatePassword () {'';

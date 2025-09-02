@@ -12,14 +12,10 @@ clean_conflicts() {
         cp "$file" "${file}.cleanup-backup.$(date +%s)"
         
         # Remove all merge conflict markers
-        sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-        sed -i '/^>>>>>>> /d' "$file"
-        
+        sed -i '/^        sed -i '/^        
         # Remove any remaining incomplete markers
-        sed -i '/^<<<<<<< HEAD/d' "$file"
-        sed -i '/^=======/d' "$file"
-        sed -i '/^>>>>>>> /d' "$file"
-        
+        sed -i '/^        sed -i '/^=======/d' "$file"
+        sed -i '/^        
         echo "✅ Cleaned: $file"
     fi
 }
@@ -38,8 +34,7 @@ echo "📁 Cleaning conflicts in source files..."
 
 # Clean source files
 find src -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | while read file; do
-    if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
-        clean_conflicts "$file"
+    if grep -q "        clean_conflicts "$file"
     fi
 done
 
@@ -47,8 +42,7 @@ echo "📁 Cleaning conflicts in page files..."
 
 # Clean page files
 find pages -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" 2>/dev/null | while read file; do
-    if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
-        clean_conflicts "$file"
+    if grep -q "        clean_conflicts "$file"
     fi
 done
 
@@ -56,16 +50,14 @@ echo "📁 Cleaning conflicts in other important files..."
 
 # Clean other important files
 find . -maxdepth 1 -name "*.md" -o -name "*.json" -o -name "*.js" -o -name "*.ts" | while read file; do
-    if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
-        clean_conflicts "$file"
+    if grep -q "        clean_conflicts "$file"
     fi
 done
 
 echo "🔍 Checking for remaining conflicts..."
 
 # Check if there are any remaining conflicts
-remaining_conflicts=$(grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null | wc -l)
-
+remaining_conflicts=$(grep -r "
 if [ "$remaining_conflicts" -eq 0 ]; then
     echo "✅ All conflicts cleaned!"
     
@@ -79,5 +71,4 @@ if [ "$remaining_conflicts" -eq 0 ]; then
 else
     echo "⚠️  Still have $remaining_conflicts conflicts to clean"
     echo "Files with remaining conflicts:"
-    grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null | head -20
-fi
+    grep -r "fi

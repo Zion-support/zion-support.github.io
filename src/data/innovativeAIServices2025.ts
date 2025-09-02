@@ -1,4 +1,4 @@
-export interface InnovativeAIService {
+export interface InnovativeAIService {;
   id: string;
    title: string;
    description: string;

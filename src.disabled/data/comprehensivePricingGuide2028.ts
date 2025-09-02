@@ -1,4 +1,4 @@
-export interface ComprehensivePricingGuide2028 {
+export interface ComprehensivePricingGuide2028 {;
    id: string;
    title: string;
    description: string;

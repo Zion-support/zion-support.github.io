@@ -1,10 +1,10 @@
 
-interface Address {
+interface Address {;
   name: string;
    address: string;
    city: string;
    country: string;
-} interface ShippingRate {
+} interface ShippingRate {;
   id: string;
    carrier: string;
    service: string;
@@ -12,12 +12,13 @@ interface Address {
    currency: string;
    delivery_days?: number | null;
    tax?: string;
-} interface Props {
+} interface Props {;
   toAddress: Address | null;
    onSelect?: (rate: ShippingRate) => void;
-} export /**
- * CheckoutShippingOptions function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function CheckoutShippingOptions ({ toAddress, onSelect }: Props) { const [rates, setRates] = useState < ShippingRate[]> ([]) ; const [loading, setLoading] = useState (false) ; const [selected, setSelected] = useState < string> (") ; useEffect ( () => { if (!toAddress) return; try { if (res.ok) { setRates (data.rates || []) } else {"""";
+} export /**;
+ * CheckoutShippingOptions function;
+ * @param {*} params - Function parameters;
+ * @returns {*} Function return value;
+ */;
+function CheckoutShippingOptions ({ toAddress, onSelect }: Props) { const [rates, setRates] = useState < ShippingRate[]> ([]) ; const [loading, setLoading] = useState (false) ; const [selected, setSelected] = useState < string> (') ; useEffect ( () => { if (!toAddress) return; try { if (res.ok) { setRates (data.rates || []) } else {'''";
+;

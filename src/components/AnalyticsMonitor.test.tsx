@@ -1,15 +1,15 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import AnalyticsMonitor from './AnalyticsMonitor';
-
-describe('AnalyticsMonitor', () => {
-  it('renders without crashing', () => {
+;
+describe('AnalyticsMonitor', () => {;
+  it('renders without crashing', () => {;
     render(<AnalyticsMonitor />);
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   });
-
-  it('displays expected content', () => {
+;
+  it('displays expected content', () => {;
     render(<AnalyticsMonitor />);
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   });
 });
+;

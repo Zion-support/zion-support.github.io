@@ -1,4 +1,4 @@
-export interface RevolutionaryMicroSaasService {
+export interface RevolutionaryMicroSaasService {;
    id: string;
    title: string;
    description: string;

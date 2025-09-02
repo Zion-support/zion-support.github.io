@@ -6,16 +6,11 @@
   "display": "standalone",
   "background_color": "#17072b",
   "theme_color": "#22ddd2",
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en-US",
   "categories": ["business", "productivity", "technology", "education"],
   "icons": [
-<<<<<<< HEAD
     { "src": "/icons/icon-72x72.png", "sizes": "72x72", "type": "image/png", "purpose": "maskable any" },
     { "src": "/icons/icon-96x96.png", "sizes": "96x96", "type": "image/png", "purpose": "maskable any" },
     { "src": "/icons/icon-128x128.png", "sizes": "128x128", "type": "image/png", "purpose": "maskable any" },
@@ -37,7 +32,6 @@
   "prefer_related_applications": false,
   "edge_side_panel": { "preferred_width": 400 },
   "launch_handler": { "client_mode": "navigate-existing" }
-=======
     {
       "src": "/icons/icon-72x72.png",
       "sizes": "72x72",
@@ -70,7 +64,6 @@
     },
     {
       "src": "/icons/icon-192x192.png",
-=======
   "description": "Leading provider of AI-powered business solutions, IT services, and innovative technology solutions for modern enterprises.",
   "start_url": "/",
   "display": "standalone",
@@ -107,7 +100,6 @@
       "src": "/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
     }
   ],
   "shortcuts": [
@@ -132,7 +124,6 @@
         {
           "src": "/images/zion-tech-group-logo-96.png",
           "sizes": "96x96"
-=======
       "name": "Services",
       "short_name": "Services",
       "description": "View our technology services",
@@ -141,13 +132,10 @@
         {
           "src": "/favicon-32x32.png",
           "sizes": "32x32"
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
         }
       ]
     },
     {
-=======
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
       "name": "Contact",
       "short_name": "Contact",
       "description": "Get in touch with us",
@@ -160,7 +148,6 @@
       ]
     },
     {
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
       "name": "About",
       "short_name": "About",
       "description": "Learn about Zion Tech Group",
@@ -169,19 +156,15 @@
         {
           "src": "/images/zion-tech-group-logo-96.png",
           "sizes": "96x96"
-=======
           "src": "/favicon-32x32.png",
           "sizes": "32x32"
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
         }
       ]
     }
   ],
   "screenshots": [
     {
-=======
       "src": "/screenshot-wide.png",
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide"
@@ -194,7 +177,6 @@
     }
   ],
   "related_applications": [],
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
   "prefer_related_applications": false,
   "edge_side_panel": {
     "preferred_width": 400
@@ -202,6 +184,4 @@
   "launch_handler": {
     "client_mode": "navigate-existing"
   }
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 } 

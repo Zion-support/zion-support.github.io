@@ -1,6 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 echo "🔧 Starting systematic merge conflict resolution..."
 
 # Function to resolve conflicts by accepting incoming changes
@@ -76,7 +75,6 @@ git commit -m "Resolve merge conflicts with cursor/fix-project-errors-and-automa
 echo "✅ Merge conflict resolution completed!"
 echo "📊 Status:"
 git status --short
-=======
 # Comprehensive Merge Conflict Resolution Script
 # This script resolves all merge conflicts by accepting our changes for most files
 # and handling specific conflicts appropriately
@@ -180,4 +178,3 @@ log "Next steps:"
 log "1. Review the resolved conflicts: git diff --cached"
 log "2. Complete the merge: git merge --continue"
 log "3. Push to remote: git push origin cursor/fix-project-errors-and-automate-future-fixes-0e7b"
->>>>>>> pr-10728

@@ -1,4 +1,4 @@
-export interface BlockchainWeb3Service {
+export interface BlockchainWeb3Service {;
   id: string;
    title: string;
    description: string;

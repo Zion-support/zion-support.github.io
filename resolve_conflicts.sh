@@ -20,8 +20,7 @@ resolve_conflicts() {
         return
     fi
     
-    if ! grep -q "<<<<<<< HEAD" "$file"; then
-        echo "No conflicts in $file, skipping..."
+    if ! grep -q "        echo "No conflicts in $file, skipping..."
         return
     fi
     
@@ -45,8 +44,7 @@ resolve_conflicts() {
 }
 
 # Get all files with merge conflicts
-conflict_files=$(grep -l "<<<<<<< HEAD" -r . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.json" 2>/dev/null)
-
+conflict_files=$(grep -l "
 echo "Found $(echo "$conflict_files" | wc -l) files with conflicts"
 
 # Resolve conflicts for each file
@@ -57,4 +55,3 @@ while IFS= read -r file; do
 done <<< "$conflict_files"
 
 echo "Merge conflict resolution completed!"
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

@@ -2,4 +2,4 @@ describe (
   'DataAnalytics', () => {}';; it ('renders without crashing
   ', () => {}; render (<DataAnalytics />) ';; expect (screen.getByRole (
   'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ';; it ('displays expected content
-  ', () => {}; render (<DataAnalytics />) ';'
+  ', () => {}; render (<DataAnalytics />) ''

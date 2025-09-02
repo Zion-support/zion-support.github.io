@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
 // List of files with syntax errors that need fixing
 const filesToFix = [
   'components/layout/EnhancedFooter.tsx',
@@ -10,7 +9,6 @@ const filesToFix = [
   'components/ui/Card.tsx',
   'pages/contact.tsx',
   'pages/sitemap.tsx'
-=======
 // Common syntax fixes
 const fixes = [
   // Fix import statements with spaces
@@ -65,13 +63,11 @@ const fixes = [
     pattern: /\$\{\s*([^}]+)\s*\}/g,
     replacement: '${$1}',
   },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
 ];
 
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
     let fixed = false;
     
     // Fix malformed import statements
@@ -201,7 +197,6 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Send, CheckCircle, Loader2 }
       console.log(`Fixed: ${filePath}`);
     } else {
       console.log(`No fixes needed: ${filePath}`);
-=======
     let originalContent = content;
 
     // Apply all fixes
@@ -250,19 +245,16 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Send, CheckCircle, Loader2 }
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     }
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-<<<<<<< HEAD
 // Fix all files
 filesToFix.forEach(fixFile);
 
 console.log('Syntax error fixes completed!');
-=======
 function processDirectory(dirPath) {
   const files = fs.readdirSync(dirPath);
   let fixedCount = 0;
@@ -295,4 +287,3 @@ function processDirectory(dirPath) {
 console.log('Starting syntax fixes...');
 const fixedCount = processDirectory('./src');
 console.log(`Fixed ${fixedCount} files.`);
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1

@@ -1,2 +1,2 @@
-import React from 'react'; export default function ComprehensiveServicesOverview () {
+ export default function ComprehensiveServicesOverview () {
 }

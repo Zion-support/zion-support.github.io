@@ -1,15 +1,15 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import CaseStudies from './CaseStudies';
-
-describe('CaseStudies', () => {
-  it('renders without crashing', () => {
+;
+describe('CaseStudies', () => {;
+  it('renders without crashing', () => {;
     render(<CaseStudies />);
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   });
-
-  it('displays expected content', () => {
+;
+  it('displays expected content', () => {;
     render(<CaseStudies />);
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   });
 });
+;

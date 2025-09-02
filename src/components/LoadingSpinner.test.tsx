@@ -1,15 +1,15 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import LoadingSpinner from './LoadingSpinner';
-
-describe('LoadingSpinner', () => {
-  it('renders without crashing', () => {
+;
+describe('LoadingSpinner', () => {;
+  it('renders without crashing', () => {;
     render(<LoadingSpinner />);
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   });
-
-  it('displays expected content', () => {
+;
+  it('displays expected content', () => {;
     render(<LoadingSpinner />);
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   });
 });
+;

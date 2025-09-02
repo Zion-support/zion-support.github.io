@@ -1,4 +1,4 @@
-export interface AdvancedInnovativeService2032 {
+export interface AdvancedInnovativeService2032 {;
    id: string;
    title: string;
    description: string;

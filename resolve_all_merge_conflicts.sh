@@ -15,21 +15,16 @@ resolve_merge_conflicts() {
         return
     fi
     
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "🔧 Resolving conflicts in: $file"
+    if grep -q "        echo "🔧 Resolving conflicts in: $file"
         
         # Create backup
         cp "$file" "${file}.backup.$(date +%s)"
         
         # Remove merge conflict markers and keep HEAD version
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
-        
+        sed -i '/        sed -i '/        
         # Clean up any remaining markers
-        sed -i '/<<<<<<< HEAD/d' "$file"
-        sed -i '/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
-        
+        sed -i '/        sed -i '/=======/d' "$file"
+        sed -i '/        
         echo "✅ Resolved conflicts in: $file"
     fi
 }
@@ -39,8 +34,7 @@ resolve_all_source_conflicts() {
     echo "🔍 Scanning for merge conflicts in source files..."
     
     # Find all files with merge conflicts
-    local files_with_conflicts=$(grep -l "<<<<<<< HEAD" src/**/*.{js,jsx,ts,tsx} 2>/dev/null || true)
-    
+    local files_with_conflicts=$(grep -l "    
     if [ -n "$files_with_conflicts" ]; then
         echo "Found files with merge conflicts:"
         echo "$files_with_conflicts"
@@ -74,8 +68,7 @@ resolve_config_conflicts() {
     )
     
     for file in "${config_files[@]}"; do
-        if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file"; then
-            echo "🔧 Resolving conflicts in config file: $file"
+        if [ -f "$file" ] && grep -q "            echo "🔧 Resolving conflicts in config file: $file"
             resolve_merge_conflicts "$file"
         fi
     done
@@ -94,8 +87,7 @@ resolve_root_conflicts() {
     )
     
     for file in "${root_files[@]}"; do
-        if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file"; then
-            echo "🔧 Resolving conflicts in root file: $file"
+        if [ -f "$file" ] && grep -q "            echo "🔧 Resolving conflicts in root file: $file"
             resolve_merge_conflicts "$file"
         fi
     done
@@ -118,16 +110,14 @@ cleanup_backups() {
 verify_conflicts_resolved() {
     echo "🔍 Verifying all conflicts are resolved..."
     
-    local remaining_conflicts=$(grep -r "<<<<<<< HEAD" src/ 2>/dev/null | wc -l)
-    
+    local remaining_conflicts=$(grep -r "    
     if [ "$remaining_conflicts" -eq 0 ]; then
         echo "✅ All merge conflicts have been resolved!"
         return 0
     else
         echo "⚠️  Warning: $remaining_conflicts merge conflicts still remain"
         echo "Remaining conflicts:"
-        grep -r "<<<<<<< HEAD" src/ 2>/dev/null || true
-        return 1
+        grep -r "        return 1
     fi
 }
 

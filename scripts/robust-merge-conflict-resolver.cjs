@@ -30,27 +30,17 @@ function resolveMergeConflict(filePath) {
     let fixed = false;
 
     // Strategy 1: Remove all variations of merge conflict markers
-    // Handle corrupted markers like "<<<<<<< HEAD" with extra content
-    if (
-      content.includes('<<<<<<< HEAD') ||
-      content.includes('=======') ||
+    // Handle corrupted markers like "    if (
+      content.includes('      content.includes('=======') ||
       content.includes('>>>>>>>')
     ) {
-      // Remove everything between <<<<<<< HEAD and =======
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\s*\n?/g, '');
-
-      // Remove everything between ======= and >>>>>>> branch-name
-      content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]*\n?/g, '');
-
-      // Remove any remaining <<<<<<< HEAD sections
-      content = content.replace(/<<<<<<< HEAD[\s\S]*/g, '');
-
+      // Remove everything between 
+      // Remove everything between ======= and       content = content.replace(/=======[\s\S]*?
+      // Remove any remaining       content = content.replace(/
       // Remove any remaining ======= sections
       content = content.replace(/=======[\s\S]*/g, '');
 
-      // Remove any remaining >>>>>>> sections
-      content = content.replace(/>>>>>>> [^\n]*[\s\S]*/g, '');
-
+      // Remove any remaining       content = content.replace(/
       fixed = true;
     }
 

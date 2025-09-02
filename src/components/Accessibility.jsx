@@ -4,16 +4,16 @@ import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucid
 ;
 const AccessibilityContext = createContext(null);
 export const useAccessibility = () => {}
-"""
+''';
 ';
 import { motion, AnimatePresence } from 'framer - motion';
-
+;
 const AccessibilityContext = createContext (null) ;
     const context = useContext (AccessibilityContext) ;
     if (!context) {}
-'
-''
-'''
+';
+'';
+''';
         throw new Error('useAccessibility must be used within an AccessibilityProvider')}
     return context};
 // Accessibility Provider Component;
@@ -24,9 +24,9 @@ export const AccessibilityProvider = ({ children }) => {}
     const [colorBlindMode, setColorBlindMode] = useState('none');
     // Load settings from localStorage;
     useEffect(() => {}
-'
-''
-'''
+';
+'';
+''';
         const savedSettings = localStorage.getItem('zion-accessibility-settings');
         if (savedSettings) {}
             const settings = JSON.parse(savedSettings);
@@ -41,3 +41,6 @@ export const AccessibilityProvider = ({ children }) => {}
   highContrast,
             reducedMotion,"""
             fontSize,
+  highContrast,;
+            reducedMotion,''';
+            fontSize,''''';

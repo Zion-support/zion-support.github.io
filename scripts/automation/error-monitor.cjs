@@ -111,9 +111,7 @@ class ErrorMonitor {
                 content.includes('Unterminated string literal') ||
                 content.match(/^'[^']*$/m) ||
                 content.match(/^"[^"]*$/m) ||
-                content.includes('<<<<<<< HEAD') ||
-                content.includes('>>>>>>> ') ||
-                content.includes('Parsing error:') ||
+                content.includes('                content.includes('                content.includes('Parsing error:') ||
                 content.length === 0
               ) {
                 corruptedFiles.push({
@@ -151,9 +149,7 @@ class ErrorMonitor {
     if (content.includes('Unterminated string literal')) issues.push('unterminated_string');
     if (content.match(/^'[^']*$/m)) issues.push('unclosed_single_quote');
     if (content.match(/^"[^"]*$/m)) issues.push('unclosed_double_quote');
-    if (content.includes('<<<<<<< HEAD')) issues.push('merge_conflict');
-    if (content.includes('>>>>>>> ')) issues.push('merge_conflict');
-    if (content.includes('Parsing error:')) issues.push('parsing_error');
+    if (content.includes('    if (content.includes('    if (content.includes('Parsing error:')) issues.push('parsing_error');
     if (content.length === 0) issues.push('empty_file');
     if (content.includes('require is not defined')) issues.push('module_system_error');
     

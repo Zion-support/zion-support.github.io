@@ -61,12 +61,9 @@ resolve_conflicts() {
     local resolved=false
     
     # Resolve package.json conflicts
-    if [ -f "package.json" ] && grep -q "<<<<<<< HEAD" package.json; then
-        echo "Resolving package.json conflicts..."
+    if [ -f "package.json" ] && grep -q "        echo "Resolving package.json conflicts..."
         # Use a simple strategy: keep the main branch version for most conflicts
-        sed -i '/<<<<<<< HEAD/,/>>>>>>> /c\    "resolved": "conflict"' package.json
-        resolved=true
-    fi
+        sed -i '/    fi
     
     # Resolve other common file conflicts
     for file in $(git diff --name-only --diff-filter=U); do

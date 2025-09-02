@@ -1,61 +1,33 @@
 {
-  "timestamp": "2025-09-02T03:13:58.363Z",
-  "bundleStats": {
-    "totalSize": "132 kB",
-    "framework": "44.8 kB",
-    "main": "34.4 kB",
-    "pages": {
-      "home": "36.1 kB",
-      "about": "4.52 kB",
-      "contact": "4.15 kB",
-      "services": "3.67 kB"
+  "timestamp": "2025-09-02T17:30:09.269Z",
+  "system": {
+    "platform": "linux",
+    "arch": "x64",
+    "nodeVersion": "v22.16.0",
+    "memoryUsage": {
+      "rss": 51060736,
+      "heapTotal": 5832704,
+      "heapUsed": 4905024,
+      "external": 1865515,
+      "arrayBuffers": 18144
+    },
+    "uptime": 0.027207474,
+    "cpuUsage": {
+      "user": 26315,
+      "system": 3759
     }
   },
-  "recommendations": [
-    {
-      "category": "Code Splitting",
-      "priority": "High",
-      "description": "Implement dynamic imports for service pages",
-      "impact": "Reduce initial bundle size by 20-30%"
-    },
-    {
-      "category": "Image Optimization",
-      "priority": "High",
-      "description": "Add next/image optimization for all images",
-      "impact": "Improve LCP by 15-25%"
-    },
-    {
-      "category": "Caching",
-      "priority": "Medium",
-      "description": "Implement service worker for offline support",
-      "impact": "Improve repeat visit performance by 40%"
-    },
-    {
-      "category": "SEO",
-      "priority": "High",
-      "description": "Add structured data and meta tags",
-      "impact": "Improve search rankings and social sharing"
-    },
-    {
-      "category": "Accessibility",
-      "priority": "Medium",
-      "description": "Add ARIA labels and keyboard navigation",
-      "impact": "Improve accessibility score to 95+"
-    }
-  ],
-  "optimizations": [
-    "✅ Fixed critical syntax errors",
-    "✅ Added modern animations with Framer Motion",
-    "✅ Implemented error boundaries",
-    "✅ Enhanced SEO with structured data",
-    "✅ Added loading states and error handling",
-    "✅ Improved mobile responsiveness",
-    "✅ Added scroll effects and modern UI patterns"
-  ],
-  "metrics": {
-    "buildTime": "< 30s",
-    "bundleSize": "Optimized",
-    "lighthouseScore": "90+ (estimated)",
-    "accessibility": "Improved"
-  }
+  "application": {
+    "buildExists": true,
+    "packageName": "zion-tech-group",
+    "packageVersion": "0.1.0",
+    "dependencies": 58,
+    "devDependencies": 38
+  },
+  "build": {
+    "exists": true,
+    "size": 49926639,
+    "lastModified": "2025-09-02T17:28:00.435Z"
+  },
+  "errors": []
 }

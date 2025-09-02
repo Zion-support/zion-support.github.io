@@ -36,9 +36,7 @@ for pr_number in "${PR_NUMBERS[@]}"; do
                 echo "🔧 Resolving merge conflicts..."
                 
                 # Use our conflict resolution approach
-                find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" -o -name "*.html" -o -name "*.cjs" -o -name "*.sh" \) -exec sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> [^>]/d' {} \;
-                
-                # Add resolved files
+                find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" -o -name "*.html" -o -name "*.cjs" -o -name "*.sh" \) -exec sed -i '/^                # Add resolved files
                 git add .
                 
                 # Complete the merge

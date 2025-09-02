@@ -1,12 +1,13 @@
-export interface LinkInfo {
+export interface LinkInfo {;
   url: string;
-   status: "working" | "broken" | "missing" | "external";
+   status: 'working' | 'broken' | 'missing' | 'external';
    page: string;
    anchor?: string;
    error?: string;
-} export interface PageInfo {
+} export interface PageInfo {;
   path: string;
    title: string;
    links: LinkInfo[];
    exists: boolean;
-} export class LinkChecker { private baseUrl: string; private visitedUrls: Set < string> = new Set () ; private brokenLinks: LinkInfo[] = []; private missingPages: string[] = []; constructor (baseUrl: string = "https:"""";
+} export class LinkChecker { private baseUrl: string; private visitedUrls: Set < string> = new Set () ; private brokenLinks: LinkInfo[] = []; private missingPages: string[] = []; constructor (baseUrl: string = 'https:'''";
+;

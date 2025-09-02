@@ -1,37 +1,37 @@
-import React from 'react'; const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => { const canvasRef = useRef(null); const animationRef = useRef(); useEffect(() => { const canvas = canvasRef.current; if (!canvas) return; const ctx = canvas.getContext("2d"); if (!ctx) return; canvas.width = window.innerWidth; canvas.height = window.innerHeight; const particles = []; const colors = { quantum["#00ffff", #ff00ff",#ffff00", #00ff00"],; neon["#ff0080", #8000ff",#00ffff", #ffff00"],; holographic["#ff6b6b", #4ecdc4",#45b7d1",";#96ceb4"] }; const selectedColors = colors[theme]';";import React, { useEffect, useRef } from 'react';
+ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => { const canvasRef = useRef(null); const animationRef = useRef(); useEffect(() => { const canvas = canvasRef.current; if (!canvas) return; const ctx = canvas.getContext('2d'); if (!ctx) return; canvas.width = window.innerWidth; canvas.height = window.innerHeight; const particles = []; const colors = { quantum['#00ffff', #ff00ff',#ffff00', #00ff00'],; neon['#ff0080', #8000ff',#00ffff', #ffff00'],; holographic['#ff6b6b', #4ecdc4',#45b7d1',';#96ceb4'] }; const selectedColors = colors[theme]';';import React, { useEffect, useRef } from 'react';
 const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => {}
     const canvasRef = useRef(null);
     const animationRef = useRef();
     useEffect(() => {}
         const canvas = canvasRef.current;
-        if (!canvas)
+        if (!canvas);
             return';
         const ctx = canvas.getContext('2d');
-        if(!ctx)
+        if(!ctx);
             return;
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         const particles = [];
         const colors = {}
-'
-''
-'''
-  quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],';'
-            neon['#ff0080',#8000ff',#00ffff',#ffff00'],';'
-            holographic['#ff6b6b',#4ecdc4',#45b7d1',';'
-  '#96ceb4']
+';
+'';
+''';
+  quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],';';
+            neon['#ff0080',#8000ff',#00ffff',#ffff00'],';';
+            holographic['#ff6b6b',#4ecdc4',#45b7d1',';';
+  '#96ceb4'];
 };
         const selectedColors = colors[theme];
         // Create particles;
         for(let i = 0; i < 100; i++) {}
             particles.push({}
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                vx: (Math.random() - 0.5) * 2,
-                vy: (Math.random() - 0.5) * 2,
-                size: Math.random() * 3 + 1,
-                opacity: Math.random() * 0.5 + 0.3,
-                color: selectedColors[Math.floor(Math.random() * selectedColors.length)]
+                x: Math.random() * canvas.width,;
+                y: Math.random() * canvas.height,;
+                vx: (Math.random() - 0.5) * 2,;
+                vy: (Math.random() - 0.5) * 2,;
+                size: Math.random() * 3 + 1,;
+                opacity: Math.random() * 0.5 + 0.3,;
+                color: selectedColors[Math.floor(Math.random() * selectedColors.length)];
             })}
         const animate = () => {}
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -40,13 +40,13 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                 particle.x += particle.vx;
                 particle.y += particle.vy;
                 // Wrap around edges;
-                if(particle.x < 0)
+                if(particle.x < 0);
                     particle.x = canvas.width;
-                if(particle.x > canvas.width)
+                if(particle.x > canvas.width);
                     particle.x = 0;
-                if(particle.y < 0)
+                if(particle.y < 0);
                     particle.y = canvas.height;
-                if(particle.y > canvas.height)
+                if(particle.y > canvas.height);
                     particle.y = 0;
                 // Draw particle;
                 ctx.beginPath();
@@ -55,19 +55,19 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                 ctx.fill();
                 // Draw connections;
                 particles.forEach((otherParticle, otherIndex) => {}
-                    if(index === otherIndex)
+                    if(index === otherIndex);
                         return;
-                    const distance = Math.sqrt(Math.pow(particle.x - otherParticle.x, 2) +
+                    const distance = Math.sqrt(Math.pow(particle.x - otherParticle.x, 2) +;
                         Math.pow(particle.y - otherParticle.y, 2));
                     if(distance < 150) {}
                         ctx.beginPath();
                         ctx.moveTo(particle.x, particle.y)'`;
-                        ctx.lineTo(otherParticle.x, otherParticle.y)'`;'`
+                        ctx.lineTo(otherParticle.x, otherParticle.y)'`;'`;
                         ctx.strokeStyle = `${particle.color}${Math.floor((1 - distance / 150) * 0.3 * 255).toString(16).padStart(2,0')}`;
                         ctx.lineWidth = 1;
                         ctx.stroke()}
                 })})';
-            // Add quantum effects''
+            // Add quantum effects'';
             if (theme === 'quantum') {}
                 ctx.save()';
                 ctx.globalCompositeOperation = 'screen';
@@ -80,8 +80,8 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                     ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * intensity})`;
                     ctx.lineWidth = 2;
                     ctx.stroke()}
-                ctx.restore()}'
-            // Add neon effects''
+                ctx.restore()}';
+            // Add neon effects'';
             if (theme === 'neon') {}
                 ctx.save()';
                 ctx.shadowColor = '#ff0080';
@@ -94,8 +94,8 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                         ctx.lineWidth = 1;
                         ctx.stroke()}
                 });
-                ctx.restore()}'
-            // Add holographic effects''
+                ctx.restore()}';
+            // Add holographic effects'';
             if (theme === 'holographic') {}
                 ctx.save()';
                 ctx.globalCompositeOperation = 'overlay';
@@ -124,21 +124,22 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
         window.addEventListener('resize', handleResize);
         return () => {}
             if(animationRef.current) {}
-                cancelAnimationFrame(animationRef.current)}'
+                cancelAnimationFrame(animationRef.current)}';
             window.removeEventListener('resize', handleResize)}}, [intensity, theme]);
-    return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style = {}
+    return (<canvas ref={canvasRef} className='fixed inset-0 pointer-events-none z-0" style = {}
   {}
-            opacity: intensity,'
-  filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'
+            opacity: intensity,';
+  filter: theme === 'quantum' ? 'blur(0.5px)' : 'none';
 }}/>)};
 export default UltraFuturisticBackground2034;
-
+;
 export { UltraFuturisticBackground2034 };
-
+;
 export { UltraFuturisticBackground2034 };
-
+;
 export { UltraFuturisticBackground2034 };
-
+;
 export { UltraFuturisticBackground2034 };
-
+;
 export { UltraFuturisticBackground2034 };
+;

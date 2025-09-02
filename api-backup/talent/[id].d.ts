@@ -1,4 +1,4 @@
-interface Req {
+interface Req {;
   method?: string;
    query?: { id?: string;
-}; 
+}; ;

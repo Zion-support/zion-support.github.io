@@ -1,4 +1,4 @@
-export interface ZionService {
+export interface ZionService {;
    id: string;
    title: string;
    description: string;
@@ -15,3 +15,4 @@ export interface ZionService {
    address: string;
    website: string;
 }; ctaLabel: string; href: string; external?: boolean; }; export const zionTechGroup2025Services: ZionService[] = [';;
+;

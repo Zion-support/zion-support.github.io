@@ -1,6 +1,6 @@
 import React from,;
   react'; import { Helmet } from;
-  'react-helmet-async'; ; interface SEOHeadProps {
+  'react-helmet-async'; ; interface SEOHeadProps {;
    title?: string;
    description?: string;
    keywords?: string;
@@ -8,9 +8,9 @@ import React from,;
    url?: string;
    type?: 'website' | 'article' | 'service;
    structuredData?: object;
-}; export function SEOHead({; title =,
-  Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions',; description =
-  'Transform your business with cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000+ companies worldwide.',; keywords =
-  'AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology',; image =
-  '/images/zion-tech-group-og.jpg',; url =
-  'https: ''
+}; export function SEOHead({; title =,;
+  Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions',; description =;
+  'Transform your business with cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000+ companies worldwide.',; keywords =;
+  'AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology',; image =;
+  '/images/zion-tech-group-og.jpg',; url =;
+  'https: '';

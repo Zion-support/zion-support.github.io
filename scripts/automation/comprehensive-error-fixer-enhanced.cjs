@@ -3,16 +3,12 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
-<<<<<<< HEAD
 const crypto = require('crypto');
-=======
 const glob = require('glob');
->>>>>>> pr-10728
 
 class ComprehensiveErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.logsDir = path.join(this.projectRoot, 'automation/logs');
     this.reportsDir = path.join(this.projectRoot, 'automation/reports');
     this.backupDir = path.join(this.projectRoot, 'automation/backups');
@@ -347,7 +343,6 @@ class ComprehensiveErrorFixer {
       } catch (error) {
         this.log(`Error fixing ESLint config: ${error.message}`, 'ERROR');
       }
-=======
     this.reportFile = path.join(this.projectRoot, 'comprehensive-error-fixer-report.json');
     this.errors = [];
     this.fixes = [];
@@ -448,12 +443,10 @@ class ComprehensiveErrorFixer {
         message: error.stdout || error.stderr,
         timestamp: Date.now()
       });
->>>>>>> pr-10728
     }
   }
 
   async fixTypeScriptErrors() {
-<<<<<<< HEAD
     this.log('Fixing TypeScript errors...', 'INFO');
     
     const tsErrors = this.errors.filter(e => e.type === 'typescript');
@@ -533,7 +526,6 @@ class ComprehensiveErrorFixer {
     for (const error of buildErrors) {
       if (error.message.includes('ServicesPage')) {
         await this.fixServicesPageError();
-=======
     this.log('Fixing TypeScript errors...', 'info');
     
     // Find all TypeScript files
@@ -595,12 +587,10 @@ class ComprehensiveErrorFixer {
           timestamp: Date.now()
         });
         this.log(`Fixed TypeScript issues in ${file}`, 'info');
->>>>>>> pr-10728
       }
     }
   }
 
-<<<<<<< HEAD
   async fixServicesPageError() {
     this.log('Fixing ServicesPage import error...', 'INFO');
     
@@ -648,7 +638,6 @@ class ComprehensiveErrorFixer {
         }
       } catch (error) {
         this.log(`Error fixing ServicesPage error: ${error.message}`, 'ERROR');
-=======
   async fixImportExportIssues() {
     this.log('Fixing import/export issues...', 'info');
     
@@ -846,13 +835,11 @@ class ComprehensiveErrorFixer {
           timestamp: Date.now()
         });
         this.log('Fixed tsconfig.json', 'info');
->>>>>>> pr-10728
       }
     }
   }
 
   async fixDependencyIssues() {
-<<<<<<< HEAD
     this.log('Fixing dependency issues...', 'INFO');
     
     try {
@@ -982,7 +969,6 @@ module.exports = nextConfig`;
       this.log('All errors have been fixed!', 'SUCCESS');
     } else {
       this.log(`${remainingErrors} errors remain after fixes`, 'WARN');
-=======
     this.log('Fixing dependency issues...', 'info');
     
     try {
@@ -1069,12 +1055,10 @@ module.exports = nextConfig`;
       this.log('Final build check passed', 'success');
     } catch (error) {
       this.log('Build errors remain after fixes', 'warn');
->>>>>>> pr-10728
     }
   }
 
   async generateReport() {
-<<<<<<< HEAD
     this.log('Phase 4: Generating report...', 'INFO');
     
     const report = {
@@ -1135,7 +1119,6 @@ module.exports = nextConfig`;
         callback(filePath);
       }
     });
-=======
     const endTime = Date.now();
     const duration = endTime - this.startTime;
     
@@ -1157,12 +1140,10 @@ module.exports = nextConfig`;
     this.log(`Total errors: ${this.errors.length}`, 'info');
     this.log(`Total fixes: ${this.fixes.length}`, 'info');
     this.log(`Duration: ${duration}ms`, 'info');
->>>>>>> pr-10728
   }
 }
 
 // Run the error fixer
-<<<<<<< HEAD
 if (require.main === module) {
   const fixer = new ComprehensiveErrorFixer();
   fixer.run().catch(error => {
@@ -1172,7 +1153,5 @@ if (require.main === module) {
 }
 
 module.exports = ComprehensiveErrorFixer;
-=======
 const errorFixer = new ComprehensiveErrorFixer();
 errorFixer.run().catch(console.error);
->>>>>>> pr-10728

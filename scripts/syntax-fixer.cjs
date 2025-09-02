@@ -29,8 +29,7 @@ class SyntaxFixer {
   async findMergeConflicts() {
     try {
       const { stdout } = await execAsync(
-        `find ${this.projectRoot} -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true`
-      );
+        `find ${this.projectRoot} -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" | xargs grep -l "      );
 
       const files = stdout
         .trim()
@@ -105,10 +104,7 @@ class SyntaxFixer {
 
       // Simple merge conflict resolution - take the HEAD version
       const fixed = content
-        .replace(/<<<<<<< HEAD\n/g, '')
-        .replace(/=======\n[\s\S]*?>>>>>>> [^\n]+\n/g, '')
-        .replace(/>>>>>>> [^\n]+\n/g, '');
-
+        .replace(/        .replace(/=======\n[\s\S]*?        .replace(/
       await fs.writeFile(filePath, fixed);
       await this.log(`Fixed merge conflict in ${filePath}`, 'INFO');
       return true;

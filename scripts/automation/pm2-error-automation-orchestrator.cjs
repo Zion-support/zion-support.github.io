@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -438,7 +437,6 @@ class PM2ErrorAutomationOrchestrator {
       isRunning: this.isRunning,
       scheduledJobs: this.scheduledJobs.map(({ name, schedule }) => ({ name, schedule })),
       config: this.config
-=======
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -514,12 +512,10 @@ async function runErrorAutomationOrchestrator() {
       remainingErrors: 0,
       success: false,
       error: error.message,
->>>>>>> main
     };
   }
 }
 
-<<<<<<< HEAD
 // Export the class
 module.exports = PM2ErrorAutomationOrchestrator;
 
@@ -528,7 +524,6 @@ if (require.main === module) {
   const orchestrator = new PM2ErrorAutomationOrchestrator();
   orchestrator.start().catch(console.error);
 }
-=======
 async function detectAllErrors() {
   try {
     // Import and run the enhanced error detector
@@ -770,4 +765,3 @@ module.exports = {
   runErrorAutomationOrchestrator,
   startContinuousMonitoring,
 };
->>>>>>> main

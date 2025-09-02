@@ -29,6 +29,13 @@ class ComprehensiveErrorFixer {
     this.AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes
   }
 
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+  }
+
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
@@ -422,7 +429,7 @@ process.on('SIGTERM', () => {
 });
 
 // Run the fixer
-fixer.run().catch(error => {
+fixer.runContinuous().catch(error => {
   fixer.log(`Unhandled error: ${error.message}`);
   process.exit(1);
 });

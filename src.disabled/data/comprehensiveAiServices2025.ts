@@ -1,4 +1,4 @@
-export interface ComprehensiveAiService {
+export interface ComprehensiveAiService {;
    id: string;
    title: string;
    description: string;

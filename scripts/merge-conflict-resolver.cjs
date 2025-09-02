@@ -37,8 +37,7 @@ class MergeConflictResolver {
 
   async findAllMergeConflicts() {
     try {
-      const { stdout } = await execAsync(`find ${this.projectRoot} -type f \\( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" -o -name "*.md" -o -name "*.css" -o -name "*.scss" \\) -not -path "*/node_modules/*" -not -path "*/.git/*" -not -path "*/dist/*" -not -path "*/out/*" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true`);
-      
+      const { stdout } = await execAsync(`find ${this.projectRoot} -type f \\( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" -o -name "*.md" -o -name "*.css" -o -name "*.scss" \\) -not -path "*/node_modules/*" -not -path "*/.git/*" -not -path "*/dist/*" -not -path "*/out/*" | xargs grep -l "      
       const files = stdout.trim().split('\n').filter(line => line && !line.includes('node_modules'));
       await this.log(`Found ${files.length} files with merge conflicts`, 'INFO');
       return files;
@@ -77,22 +76,19 @@ class MergeConflictResolver {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.startsWith('<<<<<<< HEAD')) {
-        inConflict = true;
+      if (line.startsWith('        inConflict = true;
         conflictStart = i;
         headContent = [];
         branchContent = [];
       } else if (line.startsWith('=======') && inConflict) {
         conflictMiddle = i;
-      } else if (line.startsWith('>>>>>>> ') && inConflict) {
-        conflicts.push({
+      } else if (line.startsWith('        conflicts.push({
           start: conflictStart,
           middle: conflictMiddle,
           end: i,
           headContent: headContent.join('\n'),
           branchContent: branchContent.join('\n'),
-          branchName: line.replace('>>>>>>> ', '')
-        });
+          branchName: line.replace('        });
         inConflict = false;
       } else if (inConflict) {
         if (conflictMiddle === 0) {
@@ -258,4 +254,3 @@ if (require.main === module) {
 }
 
 module.exports = MergeConflictResolver;
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

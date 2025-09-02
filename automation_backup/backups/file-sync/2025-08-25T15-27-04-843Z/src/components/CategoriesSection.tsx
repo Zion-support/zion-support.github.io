@@ -5,71 +5,71 @@ import { Link } from;
 import { Briefcase, HardDrive, Lightbulb, Users const categories = [;
   {;
     title: 'AI Services,;
-    description:,
+    description:,;
   Cutting-edge AI solutions, chatbots, and machine learning',;
-    icon: <Brain className=
+    icon: <Brain className=;
   'w-10 h-10                                                                                                                                                                              />,;
-    link:,
+    link:,;
   /ai-services',;
     color: 'from-purple-500 to-indigo-600,;
-    gradient:,
+    gradient:,;
   from-zion-purple to-zion-purple-dark',;
   },;
   {;
     title: 'Micro SAAS,;
-    description:,
+    description:,;
   Cloud-based software solutions for modern businesses',;
-    icon: <Cloud className=
+    icon: <Cloud className=;
   'w-10 h-10                                                                                                                                                                              />,;
-    link:,
+    link:,;
   /micro-saas',;
     color: 'from-cyan-500 to-blue-600,;
-    gradient:,
+    gradient:,;
   from-zion-cyan to-zion-blue',;
   },;
   {;
     title: 'IT Services,;
-    description:,
+    description:,;
   Infrastructure, security, and technical consulting',;
-    icon: <Zap className=
+    icon: <Zap className=;
   'w-10 h-10                                                                                                                                                                              />,;
-    link:,
+    link:,;
   /all-services',;
     color: 'from-amber-500 to-orange-600,;
-    gradient:,
+    gradient:,;
   from-zion-cyan-light to-zion-cyan',;
   },;
   {;
     title: 'Digital Transformation,;
-    description:,
+    description:,;
   Business modernization and digital strategy',;
-    icon: <TrendingUp className=
+    icon: <TrendingUp className=;
   'w-10 h-10                                                                                                                                                                              />,;
-    link:,
+    link:,;
   /all-services',;
     color: 'from-emerald-500 to-green-600,;
-    gradient:,
+    gradient:,;
   from-zion-purple-light to-zion-purple',;
   },;
 ];
 const specialServices = [;
   {;
     title: 'IT Onsite Services,;
-    link:,
+    link:,;
   /it-onsite-services';
   },;
   {;
     title: 'Comprehensive Services,;
-    link:,
+    link:,;
   /comprehensive-services';
   },;
   {;
     title: 'Services Comparison,;
-    link:
+    link:;
   '/services-comparison';
   };
 ];
-interface CategoriesSectionProps {
+interface CategoriesSectionProps {;
    showTitle?: boolean;
 };
 const containerVariants = {;
@@ -97,23 +97,23 @@ const itemVariants = {;
     opacity: 1,;
     transition: {;
       duration: 0.5,;
-      ease:,
+      ease:,;
   easeOut';
     };
   };
 };
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {;
   return (;
-    <section className=
+    <section className=;
   'py-20 bg-zion-blue relative overflow-hidden>;
       {/* Background pattern */};
-      <div className=
+      <div className=;
   'absolute inset-0 opacity-5'>;
-        <div className=
+        <div className=;
   'absolute inset-0' style = {;
   {;
           backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,;
-  backgroundSize:
+  backgroundSize:;
   '50px 50px';
 ;
 ;
@@ -125,11 +125,11 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 }}></div>;
       </div>;
 ;
-      <div className=
+      <div className=;
   'container mx-auto px-4 relative z-10'>;
         {showTitle && (;
           <motion.div;
-            className=
+            className=;
   'text-center mb-16';
             initial = {;
   { opacity: 0,;
@@ -155,26 +155,26 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             transition={{ duration: 0.6 }};
 ;
             <GradientHeading>Explore Categories</GradientHeading>;
-            <p className=,
+            <p className=,;
   text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>;
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation;
             </p>;
           </motion.div>;
         )};
 ;
-        <div className=
+        <div className=;
   'grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-6>;
           {categories.map((category) => (;
             <Link;
               key={category.title};
               href={category.link};
-              className=,
+              className=,;
   group block';
 ;
-              <div className=
+              <div className=;
   'rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 hover: border-zion-purple/50 hover:translate-y-[-5px]>;
                 <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
-                  <div className=
+                  <div className=;
   'text-white'>;
                     {category.icon};
                   </div>;
@@ -185,7 +185,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </motion.div>;
 ;
         <motion.div;
-          className=
+          className=;
   'mt-12';
           initial = {;
   { opacity: 0,;
@@ -219,24 +219,24 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 ;
 }};
         >;
-          <h3 className=,
+          <h3 className=,;
   text-center text-xl font-bold text-white mb-6'>Featured Services</h3>;
-          <div className=
+          <div className=;
   'flex flex-wrap justify-center gap-4'>;
             {specialServices.map((service) => (;
               <motion.div;
                 key={service.title};
                 href={service.link};
-                className=
+                className=;
   'px-6 py-3 bg-zion-blue-light hover: bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300;
 ;
                 <Link;
                   to={service.link};
-                  className=,
+                  className=,;
   px-6 py-3 bg-zion-blue-light hover: bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 flex items-center gap-2;
 ;
                   {service.title};
-                  <ArrowRight className=
+                  <ArrowRight className=;
   'w-4 h-4'                                                                                                                                                                              />;
                 </Link>;
               </motion.div>;
@@ -245,7 +245,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </motion.div>;
 ;
         <motion.div;
-          className=
+          className=;
   'mt-12 flex justify-center';
           initial = {;
   { opacity: 0,;
@@ -280,18 +280,19 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 }};
         >;
           <Link;
-            href=,
+            href=,;
   /categories';
-            className=
+            className=;
   'text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors';
 ;
             View All Categories;
-            <ArrowRight className=
+            <ArrowRight className=;
   'w-4 h-4 group-hover:translate-x-1 transition-transform duration-300                                                                                                                                                                              />;
-ursor/website-audit-content-update-and-deployment-efec
+ursor/website-audit-content-update-and-deployment-efec;
           </Link>;
         </motion.div>;
       </div>;
     </section>;
   );
 };
+;

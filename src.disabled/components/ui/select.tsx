@@ -1,16 +1,15 @@
 import React from 'react.ts';
-interface SelectProps extends React.PropsWithChildren<{}> {
-
+interface SelectProps extends React.PropsWithChildren<{}> {;
   children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
   className?: string;
   value?: string;
   onChange?: (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLSelectElement>)                => void;
   disabled?: boolean}
-
-export function Select(...args: any[]): any {
+;
+export function Select(...args: any[]): any {;
   const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50';
-  return (
-    <select
+  return (;
+    <select;
       className = {`${baseClasses} ${className}`}
       value={value}
       onChange={onChange};
@@ -22,9 +21,9 @@ export function Select(...args: any[]): any {
 }
   children: React.ReactNode;
   value: string}
-
-export function SelectItem(...args[]: any):  {
-  return (
+;
+export function SelectItem(...args[]: any):  {;
+  return (;
     <option value = {value}>;
       {children};
     </option>;
@@ -32,10 +31,11 @@ export function SelectItem(...args[]: any):  {
 }
   children: React.ReactNode;
   className?: string}
-
+;
 }
-interface SelectValueProps extends React.PropsWithChildren<{}> {
+interface SelectValueProps extends React.PropsWithChildren<{}> {;
   placeholder?: string}
-
-export function SelectContent(...args[]: any):  {
-  return <div className="relative">{children}</div>};
+;
+export function SelectContent(...args[]: any):  {;
+  return <div className='relative'>{children}</div>};
+;

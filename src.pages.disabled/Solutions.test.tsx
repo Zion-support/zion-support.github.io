@@ -1,4 +1,5 @@
-:src.pages.disabled/Solutions.test.tsx
+:src.pages.disabled/Solutions.test.tsx;
 describe ('Solutions', () => {}';; it ('renders without crashing', () => {}; render (<Solutions />) ';; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ';; it ('displays expected content', () => {}; render (<Solutions />) ;
-
-describe ('Solutions', () => {}';; it ('renders without crashing', () => {}; render (<Solutions />) ';; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ';; it ('displays expected content', () => {}; render (<Solutions />) ';';
+;
+describe ('Solutions', () => {}';; it ('renders without crashing', () => {}; render (<Solutions />) ';; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ';; it ('displays expected content', () => {}; render (<Solutions />) '';
+;

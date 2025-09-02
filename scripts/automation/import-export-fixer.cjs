@@ -7,11 +7,8 @@ const glob = require('glob');
 class ImportExportFixer {
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.automationInterval =
       parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes default
-=======
-<<<<<<< HEAD
     this.reportFile = path.join(this.projectRoot, 'import-export-fixer-report.json');
     this.fixes = [];
     this.startTime = Date.now();
@@ -34,9 +31,7 @@ class ImportExportFixer {
       this.log(`Error in Import/Export Fixer: ${error.message}`, 'error');
       await this.generateReport();
       process.exit(1);
-=======
     this.automationInterval = parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes default
->>>>>>> pr-10728
     this.fixesApplied = 0;
   }
 
@@ -54,12 +49,10 @@ class ImportExportFixer {
       );
     } catch (error) {
       this.log(`Error during import/export fixing: ${error.message}`);
->>>>>>> main
     }
   }
 
   async fixImportExportIssues() {
-<<<<<<< HEAD
     this.log('Fixing import/export issues...', 'info');
     
     // Find all JavaScript and TypeScript files
@@ -179,7 +172,6 @@ class ImportExportFixer {
 }
 
 // Run the import/export fixer
-=======
     this.log('Fixing import/export issues...');
 
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
@@ -227,6 +219,5 @@ class ImportExportFixer {
   }
 }
 
->>>>>>> main
 const fixer = new ImportExportFixer();
 fixer.run().catch(console.error);

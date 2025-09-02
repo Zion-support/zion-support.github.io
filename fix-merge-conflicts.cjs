@@ -14,8 +14,7 @@ function findFilesWithConflicts(dir, files = []) {
       findFilesWithConflicts(fullPath, files);
     } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.json'))) {
       const content = fs.readFileSync(fullPath, 'utf8');
-      if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-        files.push(fullPath);
+      if (content.includes('        files.push(fullPath);
       }
     }
   }
@@ -29,13 +28,9 @@ function resolveConflicts(filePath) {
   let content = fs.readFileSync(filePath, 'utf8');
   
   // Remove all merge conflict markers and keep HEAD version
-  content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]*\n?/g, '$1');
-  
-  // Clean up any remaining conflict markers
-  content = content.replace(/<<<<<<< HEAD\n?/g, '');
-  content = content.replace(/=======\n?/g, '');
-  content = content.replace(/>>>>>>> [^\n]*\n?/g, '');
-  
+  content = content.replace(/  // Clean up any remaining conflict markers
+  content = content.replace(/  content = content.replace(/=======\n?/g, '');
+  content = content.replace(/  
   fs.writeFileSync(filePath, content, 'utf8');
 }
 

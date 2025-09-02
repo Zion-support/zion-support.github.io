@@ -161,4 +161,3 @@ class BuildMonitor {
 // Run the build monitor
 const monitor = new BuildMonitor();
 monitor.run().catch(console.error);
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209
