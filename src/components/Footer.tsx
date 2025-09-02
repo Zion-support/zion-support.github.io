@@ -113,12 +113,26 @@ export function Footer(...args: any[]): any {
       icon: Shield,
       category: "Security & Infrastructure",
       services: [
+        { name: "AI-Powered DevOps Automation", href: "/services/ai-powered-devops-automation", badge: "New" },
         { name: "AI-Powered Cybersecurity Suite", href: "/services/ai-powered-cybersecurity-suite", badge: "Security" },
         { name: "Enterprise IT Infrastructure Management", href: "/services/enterprise-it-infrastructure-management", badge: "Infrastructure" },
         { name: "Cloud Migration & Optimization", href: "/services/cloud-migration-and-optimization", badge: "Cloud" },
         { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform", badge: "Analytics" },
         { name: "AI DevOps Automation", href: "/services/ai-devops-automation", badge: "DevOps" },
         { name: "Edge Computing Platform", href: "/services/edge-computing-platform", badge: "Edge" }
+      ]
+    },
+    {
+      title: "Micro SaaS Solutions",
+      icon: Code,
+      category: "Micro SaaS",
+      services: [
+        { name: "AI Email Automation Suite", href: "/services/ai-email-automation-suite", badge: "New" },
+        { name: "AI Social Media Scheduler", href: "/services/ai-social-media-scheduler", badge: "New" },
+        { name: "AI Customer Insights Platform", href: "/services/ai-customer-insights-platform", badge: "New" },
+        { name: "Micro CRM", href: "/services/micro-crm", badge: "Popular" },
+        { name: "Helpdesk Platform", href: "/services/helpdesk-platform", badge: "Support" },
+        { name: "Website Analytics", href: "/services/website-analytics", badge: "Analytics" }
       ]
     },
     {
@@ -207,6 +221,10 @@ export function Footer(...args: any[]): any {
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-zion-cyan transition-colors">
                   kleber@ziontechgroup.com
                 </a>
+              </div>
+              <div className="flex items-center text-zion-slate-light text-sm">
+                <MapPin className="w-4 h-4 mr-2 text-zion-cyan" />
+                <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
               </div>
             </div>
           </div>

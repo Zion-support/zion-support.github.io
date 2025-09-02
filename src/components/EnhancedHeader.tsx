@@ -7,7 +7,7 @@ import {
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, 
   Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, 
   Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, 
-  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car 
+  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 
 } from 'lucide-react';
 
 export function EnhancedHeader() {
@@ -148,17 +148,63 @@ export function EnhancedHeader() {
       icon: Code,
       color: 'from-green-500 to-emerald-500',
       services: [
+        { name: 'AI Email Automation Suite', href: '/services/ai-email-automation-suite', description: 'Intelligent email management & automation' },
+        { name: 'AI Social Media Scheduler', href: '/services/ai-social-media-scheduler', description: 'AI-powered social media automation' },
+        { name: 'AI Customer Insights Platform', href: '/services/ai-customer-insights-platform', description: 'Advanced customer analytics & insights' },
         { name: 'Micro CRM', href: '/services/micro-crm', description: 'Lightweight customer management' },
         { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', description: 'Efficient support system' },
         { name: 'AI Content Marketing', href: '/services/ai-content-marketing-suite', description: 'AI-powered content creation' },
         { name: 'Customer Support Automation', href: '/services/ai-customer-support-automation', description: 'Intelligent support automation' },
         { name: 'Website Analytics', href: '/services/website-analytics', description: 'Performance insights' },
       ]
+    },
+    {
+      title: 'DevOps & Automation',
+      icon: Workflow,
+      color: 'from-blue-500 to-indigo-500',
+      services: [
+        { name: 'AI-Powered DevOps Automation', href: '/services/ai-powered-devops-automation', description: 'Intelligent CI/CD & infrastructure automation' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure automation & scaling' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure solutions' },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Cloud cost optimization' },
+      ]
     }
   ];
 
   // Featured services for quick access
   const services = [
+    {
+      name: 'AI Email Automation Suite',
+      description: 'Intelligent email management & automation',
+      href: '/services/ai-email-automation-suite',
+      icon: Mail,
+      color: 'from-blue-500 to-indigo-500',
+      featured: true
+    },
+    {
+      name: 'AI Social Media Scheduler',
+      description: 'AI-powered social media automation',
+      href: '/services/ai-social-media-scheduler',
+      icon: Share2,
+      color: 'from-purple-500 to-pink-500',
+      featured: true
+    },
+    {
+      name: 'AI Customer Insights Platform',
+      description: 'Advanced customer analytics & insights',
+      href: '/services/ai-customer-insights-platform',
+      icon: Users,
+      color: 'from-green-500 to-emerald-500',
+      featured: true
+    },
+    {
+      name: 'AI-Powered DevOps Automation',
+      description: 'Intelligent CI/CD & infrastructure automation',
+      href: '/services/ai-powered-devops-automation',
+      icon: Workflow,
+      color: 'from-blue-500 to-indigo-500',
+      featured: true
+    },
     {
       name: 'AI Content Creation Studio Pro',
       description: 'Advanced AI-powered content creation platform',

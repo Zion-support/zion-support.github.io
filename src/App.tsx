@@ -148,6 +148,12 @@ const AIDataGovernancePlatform = createLazyComponent(() => import('./pages/servi
 const AICustomerExperienceAnalytics = createLazyComponent(() => import('./pages/services/AICustomerExperienceAnalytics'));
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AISupplyChainOptimization'));
 const AIFinancialRiskManagement = createLazyComponent(() => import('./pages/services/AIFinancialRiskManagement'));
+
+// New Innovative Services 2025
+const AIEmailAutomationSuite = createLazyComponent(() => import('./pages/services/ai-email-automation-suite'));
+const AISocialMediaScheduler = createLazyComponent(() => import('./pages/services/ai-social-media-scheduler'));
+const AIPoweredDevOpsAutomation = createLazyComponent(() => import('./pages/services/ai-powered-devops-automation'));
+const AICustomerInsightsPlatform = createLazyComponent(() => import('./pages/services/ai-customer-insights-platform'));
 const AIHRTalentAcquisition = createLazyComponent(() => import('./pages/services/AIHRTalentAcquisition'));
 const AIIoTEdgeComputing = createLazyComponent(() => import('./pages/services/AIIoTEdgeComputing'));
 const AIPredictiveMaintenance = createLazyComponent(() => import('./pages/services/AIPredictiveMaintenance'));
@@ -381,6 +387,12 @@ function App() {
                     <Route path="/services/quantum-enhanced-cybersecurity-operations-center" element={<QuantumEnhancedCybersecurityOperationsCenter />} />
                     <Route path="/services/ai-driven-sustainability-analytics-platform" element={<AIDrivenSustainabilityAnalyticsPlatform />} />
                     <Route path="/services/autonomous-digital-twin-management-system" element={<AutonomousDigitalTwinManagementSystem />} />
+
+                    {/* New Innovative Services 2025 */}
+                    <Route path="/services/ai-email-automation-suite" element={<AIEmailAutomationSuite />} />
+                    <Route path="/services/ai-social-media-scheduler" element={<AISocialMediaScheduler />} />
+                    <Route path="/services/ai-powered-devops-automation" element={<AIPoweredDevOpsAutomation />} />
+                    <Route path="/services/ai-customer-insights-platform" element={<AICustomerInsightsPlatform />} />
 
                     {/* Additional Service Routes */}
                     <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />

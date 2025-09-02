@@ -52,6 +52,12 @@ const featuredServices: Service[] = [
     learnMoreUrl: '/services/ai-autonomous-business-manager',
   },
   {
+    title: 'AI-Powered DevOps Automation',
+    description: 'Transform your development workflow with intelligent automation, predictive analytics, and self-healing infrastructure.',
+    priceRange: '$299 - $1,999/month',
+    learnMoreUrl: '/services/ai-powered-devops-automation',
+  },
+  {
     title: 'AI Development & MLOps',
     description: 'Custom LLMs, RAG, fine-tuning, and MLOps pipelines on AWS/Azure/GCP.',
     priceRange: '$8,000 - $120,000',
@@ -90,6 +96,24 @@ const featuredServices: Service[] = [
 ];
 
 const microSaaS: Service[] = [
+  {
+    title: 'AI Email Automation Suite',
+    description: 'Transform your email management with intelligent automation, smart responses, and advanced analytics.',
+    priceRange: '$29 - $199/month',
+    learnMoreUrl: '/services/ai-email-automation-suite',
+  },
+  {
+    title: 'AI Social Media Scheduler',
+    description: 'Automate your social media presence with AI-powered content creation, smart scheduling, and advanced analytics.',
+    priceRange: '$19 - $99/month',
+    learnMoreUrl: '/services/ai-social-media-scheduler',
+  },
+  {
+    title: 'AI Customer Insights Platform',
+    description: 'Transform customer data into actionable insights with AI-powered analytics, predictive modeling, and real-time personalization.',
+    priceRange: '$199 - $1,299/month',
+    learnMoreUrl: '/services/ai-customer-insights-platform',
+  },
   {
     title: 'LeadGen AI Microsite',
     description: 'SEO + AI chat, CRM integration, and analytics for B2B lead capture.',
