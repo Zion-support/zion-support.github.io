@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Home, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car } from 'lucide-react';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 export default function AIServices() {
@@ -830,6 +830,342 @@ export default function AIServices() {
       pricing: '$100,000 - $500,000/month',
       delivery: '60-120 weeks',
       category: 'Consciousness AI'
+    },
+    {
+      title: 'AI-Powered Personalized Learning Platform',
+      description: 'Intelligent adaptive learning system with personalized curriculum and real-time assessment',
+      icon: Brain,
+      features: [
+        'Adaptive learning paths based on individual progress',
+        'Real-time knowledge assessment and gap analysis',
+        'Personalized content recommendation and delivery',
+        'Learning style optimization and adaptation',
+        'Progress tracking and performance analytics',
+        'Integration with educational institutions and LMS'
+      ],
+      pricing: '$2,000 - $12,000/month',
+      delivery: '6-12 weeks',
+      category: 'EdTech AI'
+    },
+    {
+      title: 'AI-Powered Smart Home Automation',
+      description: 'Intelligent home automation system with predictive maintenance and energy optimization',
+      icon: Home,
+      features: [
+        'Predictive maintenance for home appliances',
+        'Energy consumption optimization and cost reduction',
+        'Intelligent climate control and comfort optimization',
+        'Security monitoring and threat detection',
+        'Voice and gesture control integration',
+        'Learning user preferences and behavior patterns'
+      ],
+      pricing: '$1,500 - $8,000/month',
+      delivery: '4-8 weeks',
+      category: 'Smart Home AI'
+    },
+    {
+      title: 'AI-Powered Mental Health Companion',
+      description: 'Intelligent mental wellness platform with mood tracking, therapy sessions, and crisis intervention',
+      icon: Heart,
+      features: [
+        'AI-powered mood analysis and tracking',
+        'Personalized therapy and meditation sessions',
+        'Crisis detection and intervention protocols',
+        'Progress monitoring and insights generation',
+        'Integration with wearable devices and health apps',
+        'HIPAA-compliant data protection and privacy'
+      ],
+      pricing: '$1,200 - $6,000/month',
+      delivery: '8-16 weeks',
+      category: 'Mental Health AI'
+    },
+    {
+      title: 'AI-Powered Pet Care Assistant',
+      description: 'Intelligent pet health monitoring and care recommendation system',
+      icon: Heart,
+      features: [
+        'AI-powered health monitoring and diagnostics',
+        'Personalized nutrition and exercise recommendations',
+        'Behavioral analysis and training suggestions',
+        'Veterinary appointment scheduling and reminders',
+        'Emergency detection and alert systems',
+        'Integration with pet wearables and vet records'
+      ],
+      pricing: '$800 - $4,000/month',
+      delivery: '4-8 weeks',
+      category: 'Pet Care AI'
+    },
+    {
+      title: 'AI-Powered Fashion Stylist',
+      description: 'Intelligent fashion recommendation system with virtual try-on and style analysis',
+      icon: Eye,
+      features: [
+        'AI-powered style analysis and recommendations',
+        'Virtual try-on with augmented reality',
+        'Wardrobe organization and outfit planning',
+        'Size prediction and fit optimization',
+        'Trend analysis and personal style evolution',
+        'Integration with fashion retailers and social media'
+      ],
+      pricing: '$1,000 - $5,000/month',
+      delivery: '6-12 weeks',
+      category: 'Fashion AI'
+    },
+    {
+      title: 'AI-Powered Sleep Optimization',
+      description: 'Intelligent sleep analysis and improvement platform with personalized recommendations',
+      icon: Heart,
+      features: [
+        'AI-powered sleep pattern analysis and optimization',
+        'Personalized sleep environment recommendations',
+        'Sleep quality tracking and improvement plans',
+        'Integration with smart home devices and wearables',
+        'Sleep disorder detection and medical referrals',
+        'Circadian rhythm optimization and light therapy'
+      ],
+      pricing: '$600 - $3,000/month',
+      delivery: '4-8 weeks',
+      category: 'Sleep AI'
+    },
+    {
+      title: 'AI-Powered Wine Recommendation Engine',
+      description: 'Intelligent wine discovery platform with taste profiling and food pairing recommendations',
+      icon: Heart,
+      features: [
+        'AI-powered taste profile analysis and matching',
+        'Food pairing recommendations and menu optimization',
+        'Wine cellar management and inventory tracking',
+        'Price optimization and deal alerts',
+        'Social features and community recommendations',
+        'Integration with wine retailers and sommelier databases'
+      ],
+      pricing: '$800 - $4,000/month',
+      delivery: '4-8 weeks',
+      category: 'Wine AI'
+    },
+    {
+      title: 'AI-Powered Personal Finance Coach',
+      description: 'Intelligent financial planning and investment advisory platform with personalized recommendations',
+      icon: TrendingUp,
+      features: [
+        'AI-driven financial goal setting and tracking',
+        'Personalized investment recommendations',
+        'Real-time market analysis and alerts',
+        'Automated budget optimization',
+        'Tax planning and optimization strategies',
+        'Integration with banking and investment accounts'
+      ],
+      pricing: '$1,200 - $6,000/month',
+      delivery: '6-12 weeks',
+      category: 'FinTech AI'
+    },
+    {
+      title: 'AI-Powered Elderly Care Assistant',
+      description: 'Intelligent senior care management system with health monitoring and family communication',
+      icon: Heart,
+      features: [
+        'AI-powered health monitoring and fall detection',
+        'Medication management and reminder systems',
+        'Family communication and care coordination',
+        'Emergency response and medical alert integration',
+        'Cognitive health tracking and stimulation activities',
+        'Integration with medical devices and healthcare providers'
+      ],
+      pricing: '$1,500 - $8,000/month',
+      delivery: '8-16 weeks',
+      category: 'Elderly Care AI'
+    },
+    {
+      title: 'AI-Powered Carbon Footprint Tracker',
+      description: 'Intelligent environmental impact monitoring with reduction strategies and offset recommendations',
+      icon: Globe,
+      features: [
+        'AI-powered carbon footprint calculation and tracking',
+        'Personalized reduction strategies and recommendations',
+        'Carbon offset marketplace and verification',
+        'Sustainability goal setting and progress tracking',
+        'Integration with transportation and energy usage data',
+        'Corporate sustainability reporting and compliance'
+      ],
+      pricing: '$600 - $3,000/month',
+      delivery: '3-6 weeks',
+      category: 'Sustainability AI'
+    },
+    {
+      title: 'AI-Powered Restaurant Management',
+      description: 'Intelligent restaurant operations platform with demand forecasting and inventory optimization',
+      icon: Heart,
+      features: [
+        'AI-powered demand forecasting and menu optimization',
+        'Dynamic pricing and revenue management',
+        'Inventory tracking and waste reduction',
+        'Customer preference analysis and personalization',
+        'Staff scheduling and performance optimization',
+        'Integration with POS systems and delivery platforms'
+      ],
+      pricing: '$1,200 - $8,000/month',
+      delivery: '4-8 weeks',
+      category: 'Restaurant AI'
+    },
+    {
+      title: 'AI-Powered Language Learning Tutor',
+      description: 'Intelligent language learning platform with personalized tutoring and conversation practice',
+      icon: Brain,
+      features: [
+        'AI-powered personalized learning paths',
+        'Real-time pronunciation and accent correction',
+        'Conversational AI practice partners',
+        'Cultural context and immersion experiences',
+        'Progress tracking and adaptive difficulty',
+        'Integration with voice recognition and translation APIs'
+      ],
+      pricing: '$800 - $4,000/month',
+      delivery: '6-12 weeks',
+      category: 'Language Learning AI'
+    },
+    {
+      title: 'AI-Powered Fitness Coach',
+      description: 'Intelligent fitness coaching platform with personalized workout plans and form analysis',
+      icon: Heart,
+      features: [
+        'AI-powered personalized workout and nutrition plans',
+        'Real-time form analysis and correction',
+        'Progress tracking and goal optimization',
+        'Injury prevention and recovery recommendations',
+        'Integration with fitness wearables and equipment',
+        'Virtual personal training sessions'
+      ],
+      pricing: '$1,000 - $5,000/month',
+      delivery: '4-8 weeks',
+      category: 'Fitness AI'
+    },
+    {
+      title: 'AI-Powered Real Estate Investment Analyzer',
+      description: 'Intelligent property investment platform with market analysis and ROI prediction',
+      icon: TrendingUp,
+      features: [
+        'AI-driven property valuation and market analysis',
+        'ROI prediction and investment recommendations',
+        'Neighborhood trend analysis and forecasting',
+        'Rental income optimization strategies',
+        'Risk assessment and portfolio diversification',
+        'Integration with MLS and property databases'
+      ],
+      pricing: '$1,500 - $8,000/month',
+      delivery: '4-8 weeks',
+      category: 'Real Estate AI'
+    },
+    {
+      title: 'AI-Powered Waste Management Optimization',
+      description: 'Intelligent waste optimization system with route planning and recycling analytics',
+      icon: Globe,
+      features: [
+        'Intelligent waste collection route optimization',
+        'Recycling rate tracking and improvement',
+        'Predictive maintenance for waste equipment',
+        'Carbon footprint reduction analytics',
+        'Community engagement and education tools',
+        'Integration with IoT sensors and smart bins'
+      ],
+      pricing: '$2,000 - $12,000/month',
+      delivery: '6-12 weeks',
+      category: 'Waste Management AI'
+    },
+    {
+      title: 'AI-Powered Traffic Optimization',
+      description: 'Intelligent traffic management system with real-time optimization and congestion reduction',
+      icon: Car,
+      features: [
+        'Real-time traffic flow optimization',
+        'Predictive congestion modeling and prevention',
+        'Smart traffic light coordination',
+        'Emergency vehicle priority routing',
+        'Air quality monitoring and pollution reduction',
+        'Integration with city infrastructure and IoT sensors'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '8-16 weeks',
+      category: 'Traffic AI'
+    },
+    {
+      title: 'AI-Powered Parking Management',
+      description: 'Intelligent parking optimization platform with real-time availability and pricing',
+      icon: Car,
+      features: [
+        'Real-time parking space detection and availability',
+        'Dynamic pricing and demand-based optimization',
+        'Reservation system and mobile payments',
+        'Traffic flow optimization and congestion reduction',
+        'Integration with navigation apps and city systems',
+        'Revenue optimization and analytics dashboard'
+      ],
+      pricing: '$2,500 - $15,000/month',
+      delivery: '6-12 weeks',
+      category: 'Parking AI'
+    },
+    {
+      title: 'AI-Powered Music Composition Assistant',
+      description: 'Intelligent music creation platform with AI composition and collaboration tools',
+      icon: Mic,
+      features: [
+        'AI-powered music composition and arrangement',
+        'Style transfer and genre adaptation',
+        'Real-time collaboration and version control',
+        'Lyrics generation and vocal synthesis',
+        'Copyright detection and royalty management',
+        'Integration with DAWs and music streaming platforms'
+      ],
+      pricing: '$1,200 - $6,000/month',
+      delivery: '6-12 weeks',
+      category: 'Music AI'
+    },
+    {
+      title: 'AI-Powered Water Quality Monitoring',
+      description: 'Intelligent water quality analysis platform with contamination detection and treatment optimization',
+      icon: Globe,
+      features: [
+        'Real-time water quality monitoring and analysis',
+        'Contamination detection and early warning systems',
+        'Treatment optimization and chemical dosing',
+        'Predictive maintenance for water infrastructure',
+        'Compliance monitoring and reporting',
+        'Integration with IoT sensors and SCADA systems'
+      ],
+      pricing: '$3,000 - $18,000/month',
+      delivery: '8-16 weeks',
+      category: 'Water Quality AI'
+    },
+    {
+      title: 'AI-Powered Supply Chain Risk Management',
+      description: 'Intelligent supply chain resilience platform with risk prediction and mitigation strategies',
+      icon: Network,
+      features: [
+        'AI-powered risk assessment and prediction',
+        'Supply chain disruption early warning',
+        'Alternative supplier identification and evaluation',
+        'Cost optimization and procurement automation',
+        'Sustainability tracking and carbon footprint analysis',
+        'Integration with ERP and logistics systems'
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '8-16 weeks',
+      category: 'Supply Chain AI'
+    },
+    {
+      title: 'AI-Powered Retail Analytics',
+      description: 'Intelligent retail optimization with customer behavior analysis and inventory management',
+      icon: BarChart3,
+      features: [
+        'AI-powered customer behavior analysis and prediction',
+        'Dynamic pricing and promotion optimization',
+        'Inventory management and demand forecasting',
+        'Store layout optimization and heat mapping',
+        'Customer journey tracking and personalization',
+        'Integration with POS systems and loyalty programs'
+      ],
+      pricing: '$2,500 - $15,000/month',
+      delivery: '6-12 weeks',
+      category: 'Retail AI'
     }
   ];
   const aiTechnologies = [

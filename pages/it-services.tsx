@@ -32,7 +32,9 @@ import {
   TrendingUp,
   Car,
   Brain,
-  Satellite
+  Satellite,
+  Home,
+  Heart
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -632,6 +634,294 @@ export default function ITServices() {
       pricing: '$75,000 - $750,000/month',
       delivery: '32-64 weeks',
       category: 'Space Mission IT Services'
+    },
+    {
+      title: 'AI-Powered IT Operations Center',
+      description: 'Intelligent IT operations with AI-driven automation and predictive maintenance',
+      icon: Brain,
+      features: [
+        'AI-powered incident detection and resolution',
+        'Predictive maintenance and capacity planning',
+        'Automated root cause analysis',
+        'Intelligent alert correlation and prioritization',
+        'Self-healing infrastructure capabilities',
+        'Continuous optimization and learning'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '6-12 weeks',
+      category: 'AIOps Services'
+    },
+    {
+      title: 'Edge AI Computing Infrastructure',
+      description: 'Distributed AI computing infrastructure for real-time processing at the edge',
+      icon: Cpu,
+      features: [
+        'Edge AI model deployment and management',
+        'Real-time inference and decision making',
+        'Federated learning and model updates',
+        'Edge-to-cloud data synchronization',
+        'Low-latency processing optimization',
+        'Integration with IoT and sensor networks'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Edge AI Services'
+    },
+    {
+      title: 'Quantum-Classical Hybrid Computing',
+      description: 'Hybrid quantum-classical computing infrastructure for complex problem solving',
+      icon: Cpu,
+      features: [
+        'Quantum-classical algorithm optimization',
+        'Hybrid computing workflow orchestration',
+        'Quantum error correction and mitigation',
+        'Classical preprocessing and postprocessing',
+        'Quantum advantage identification and utilization',
+        'Integration with existing HPC infrastructure'
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '16-32 weeks',
+      category: 'Hybrid Quantum Services'
+    },
+    {
+      title: 'Autonomous IT Infrastructure Management',
+      description: 'Self-managing IT infrastructure with autonomous operations and optimization',
+      icon: Settings,
+      features: [
+        'Autonomous infrastructure provisioning and scaling',
+        'Self-optimizing performance tuning',
+        'Automated security patching and updates',
+        'Intelligent resource allocation and load balancing',
+        'Predictive failure prevention and recovery',
+        'Continuous compliance monitoring and enforcement'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Autonomous IT Services'
+    },
+    {
+      title: 'Biometric Security Infrastructure',
+      description: 'Advanced biometric authentication and identity management systems',
+      icon: Shield,
+      features: [
+        'Multi-modal biometric authentication (face, voice, fingerprint)',
+        'Behavioral biometrics and continuous authentication',
+        'Biometric data encryption and privacy protection',
+        'Anti-spoofing and liveness detection',
+        'Integration with existing identity systems',
+        'Compliance with biometric data regulations'
+      ],
+      pricing: '$3,000 - $20,000/month',
+      delivery: '6-12 weeks',
+      category: 'Biometric Security Services'
+    },
+    {
+      title: 'Immersive Collaboration Platform',
+      description: 'Next-generation collaboration platform with AR/VR and spatial computing',
+      icon: Globe,
+      features: [
+        'Virtual and augmented reality meeting spaces',
+        'Spatial computing and 3D collaboration tools',
+        'Holographic presentations and data visualization',
+        'Cross-platform compatibility and device support',
+        'Real-time translation and accessibility features',
+        'Integration with productivity and business applications'
+      ],
+      pricing: '$5,000 - $35,000/month',
+      delivery: '10-20 weeks',
+      category: 'Immersive Collaboration Services'
+    },
+    {
+      title: 'Smart Building IoT Infrastructure',
+      description: 'Comprehensive IoT infrastructure for intelligent building management and optimization',
+      icon: Home,
+      features: [
+        'Building automation and control systems',
+        'Energy management and optimization',
+        'Occupancy tracking and space utilization',
+        'Environmental monitoring and air quality control',
+        'Predictive maintenance for building systems',
+        'Integration with smart city infrastructure'
+      ],
+      pricing: '$4,000 - $25,000/month',
+      delivery: '8-16 weeks',
+      category: 'Smart Building Services'
+    },
+    {
+      title: 'Digital Identity & Privacy Infrastructure',
+      description: 'Decentralized identity management with privacy-preserving technologies',
+      icon: Lock,
+      features: [
+        'Self-sovereign identity and verifiable credentials',
+        'Zero-knowledge proof systems',
+        'Privacy-preserving authentication and authorization',
+        'Decentralized identity verification',
+        'GDPR and privacy regulation compliance',
+        'Integration with existing identity providers'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '10-20 weeks',
+      category: 'Digital Identity Services'
+    },
+    {
+      title: 'Autonomous Vehicle IT Infrastructure',
+      description: 'Specialized IT infrastructure for autonomous vehicle operations and fleet management',
+      icon: Car,
+      features: [
+        'Vehicle-to-everything (V2X) communication systems',
+        'Real-time decision making and path planning',
+        'Fleet coordination and traffic optimization',
+        'Safety monitoring and emergency response',
+        'Over-the-air updates and maintenance',
+        'Integration with smart city infrastructure'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '16-32 weeks',
+      category: 'Autonomous Vehicle IT Services'
+    },
+    {
+      title: 'Healthcare IT Infrastructure',
+      description: 'Specialized IT infrastructure for healthcare organizations with HIPAA compliance',
+      icon: Heart,
+      features: [
+        'HIPAA-compliant data storage and processing',
+        'Electronic health record (EHR) integration',
+        'Medical device connectivity and management',
+        'Telemedicine and remote patient monitoring',
+        'Healthcare analytics and population health',
+        'Integration with healthcare information exchanges'
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Healthcare IT Services'
+    },
+    {
+      title: 'Financial Services IT Infrastructure',
+      description: 'High-security IT infrastructure for financial institutions with regulatory compliance',
+      icon: Database,
+      features: [
+        'PCI DSS and SOX compliance infrastructure',
+        'High-frequency trading and market data systems',
+        'Risk management and fraud detection platforms',
+        'Regulatory reporting and audit systems',
+        'Blockchain and cryptocurrency integration',
+        'Real-time transaction processing and settlement'
+      ],
+      pricing: '$20,000 - $150,000/month',
+      delivery: '16-32 weeks',
+      category: 'FinTech IT Services'
+    },
+    {
+      title: 'Manufacturing IT Infrastructure',
+      description: 'Industrial IT infrastructure for smart manufacturing and Industry 4.0',
+      icon: Settings,
+      features: [
+        'Industrial IoT and sensor network integration',
+        'Manufacturing execution systems (MES)',
+        'Predictive maintenance and quality control',
+        'Supply chain visibility and optimization',
+        'Digital twin integration and simulation',
+        'Integration with ERP and PLM systems'
+      ],
+      pricing: '$10,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'Manufacturing IT Services'
+    },
+    {
+      title: 'Retail IT Infrastructure',
+      description: 'Omnichannel retail IT infrastructure with customer experience optimization',
+      icon: BarChart3,
+      features: [
+        'Omnichannel commerce and inventory management',
+        'Customer analytics and personalization engines',
+        'Point-of-sale and payment processing systems',
+        'Supply chain and logistics optimization',
+        'In-store technology and digital signage',
+        'Integration with e-commerce and mobile platforms'
+      ],
+      pricing: '$5,000 - $40,000/month',
+      delivery: '8-20 weeks',
+      category: 'Retail IT Services'
+    },
+    {
+      title: 'Education IT Infrastructure',
+      description: 'Comprehensive IT infrastructure for educational institutions and e-learning platforms',
+      icon: Users,
+      features: [
+        'Learning management systems and virtual classrooms',
+        'Student information systems and analytics',
+        'Digital content delivery and streaming',
+        'Assessment and testing platforms',
+        'Campus network and wireless infrastructure',
+        'Integration with educational technology tools'
+      ],
+      pricing: '$3,000 - $25,000/month',
+      delivery: '6-16 weeks',
+      category: 'Education IT Services'
+    },
+    {
+      title: 'Government IT Infrastructure',
+      description: 'Secure IT infrastructure for government agencies with compliance and security requirements',
+      icon: Shield,
+      features: [
+        'FedRAMP and government compliance infrastructure',
+        'Citizen services and digital government platforms',
+        'Secure data sharing and inter-agency communication',
+        'Cybersecurity and threat monitoring',
+        'Disaster recovery and business continuity',
+        'Integration with legacy government systems'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '16-32 weeks',
+      category: 'Government IT Services'
+    },
+    {
+      title: 'Energy & Utilities IT Infrastructure',
+      description: 'Specialized IT infrastructure for energy companies and utility providers',
+      icon: Zap,
+      features: [
+        'Smart grid and energy management systems',
+        'Renewable energy integration and optimization',
+        'Grid monitoring and control systems',
+        'Customer billing and service management',
+        'Predictive maintenance for energy infrastructure',
+        'Integration with IoT sensors and smart meters'
+      ],
+      pricing: '$12,000 - $80,000/month',
+      delivery: '12-28 weeks',
+      category: 'Energy IT Services'
+    },
+    {
+      title: 'Transportation IT Infrastructure',
+      description: 'Comprehensive IT infrastructure for transportation and logistics companies',
+      icon: Car,
+      features: [
+        'Fleet management and tracking systems',
+        'Route optimization and logistics planning',
+        'Real-time traffic and weather integration',
+        'Passenger information and ticketing systems',
+        'Maintenance scheduling and predictive analytics',
+        'Integration with transportation networks and APIs'
+      ],
+      pricing: '$8,000 - $60,000/month',
+      delivery: '10-24 weeks',
+      category: 'Transportation IT Services'
+    },
+    {
+      title: 'Media & Entertainment IT Infrastructure',
+      description: 'High-performance IT infrastructure for media production and content delivery',
+      icon: Monitor,
+      features: [
+        'Content creation and production workflows',
+        'Media asset management and storage systems',
+        'Content delivery networks and streaming platforms',
+        'Digital rights management and content protection',
+        'Analytics and audience measurement',
+        'Integration with broadcast and OTT platforms'
+      ],
+      pricing: '$10,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'Media IT Services'
     }
   ];
 
