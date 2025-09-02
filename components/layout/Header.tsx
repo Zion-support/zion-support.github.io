@@ -21,6 +21,7 @@ const Header: React.FC = () => {
     { name: 'Services', href: '/services' },
     { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
+    { name: 'Resources', href: '/blog' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -29,6 +30,16 @@ const Header: React.FC = () => {
     { name: 'Micro SaaS', href: '/services/micro-saas' },
     { name: 'IT Services', href: '/services/it-services' },
     { name: 'AI Services', href: '/services/ai-services' },
+  ];
+
+  const resourceCategories = [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Documentation', href: '/documentation' },
+    { name: 'API Reference', href: '/api' },
+    { name: 'Help Center', href: '/help' },
+    { name: 'FAQ', href: '/faq' },
   ];
 
   return (
@@ -104,6 +115,27 @@ const Header: React.FC = () => {
                 </div>
               </div>
 
+              {/* Resources Dropdown */}
+              <div className="relative group">
+                <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
+                  Resources
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  {resourceCategories.map((category) => (
+                    <Link
+                      key={category.name}
+                      href={category.href}
+                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                      {category.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
               {/* CTA Button */}
               <Link
                 href="/contact"
@@ -159,6 +191,21 @@ const Header: React.FC = () => {
                 <div className="border-t border-gray-200 pt-4">
                   <div className="text-gray-700 font-medium mb-2">Services</div>
                   {serviceCategories.map((category) => (
+                    <Link
+                      key={category.name}
+                      href={category.href}
+                      className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {category.name}
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Mobile Resources */}
+                <div className="border-t border-gray-200 pt-4">
+                  <div className="text-gray-700 font-medium mb-2">Resources</div>
+                  {resourceCategories.map((category) => (
                     <Link
                       key={category.name}
                       href={category.href}
