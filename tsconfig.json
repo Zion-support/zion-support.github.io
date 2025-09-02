@@ -121,6 +121,9 @@
     "broken_files_backup",
     "contracts",
     "cypress",
+    "cypress_backup",
+    "data_backup",
+    "lib_backup",
     "temp_working",
     "supabase/functions",
     "**/*.test.ts",
@@ -144,6 +147,12 @@
     "src/pages/zion-hire-ai.tsx",
     "src/pages/webinars.tsx",
     "src/routes/*Routes.tsx",
-    "src/pages/services/**"
+    "src/pages/services/**",
+    "fix_*.ts",
+    "fix_*.js",
+    "fix_*.cjs",
+    "fix-*.ts",
+    "fix-*.js",
+    "fix-*.cjs"
   ]
 }

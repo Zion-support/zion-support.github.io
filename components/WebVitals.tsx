@@ -1,50 +1,52 @@
-<<<<<<< HEAD
-{ useEffect } from
-  'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'lucide-react';
-  'web-vitals';'
-  'interface WebVitalsMetric {name: string;
-=======
-import { useEffect } from 'react';'import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';''interface WebVitalsMetric {name: string;'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  value: number;
-  delta: number;
-  id: string;
+import { useEffect } from 'react';
+
+interface WebVitalsProps {
+  onPerfEntry?: (metric: any) => void;
 }
 
-const sendToAnalytics = (metric: WebVitalsMetric) => {;
-  // Send to your analytics service
-<<<<<<< HEAD
-  if (typeof window !==,
-  undefined
-  ' && 'gtag
-  ' in window) {'    (window as any).gtag(
-  'event', metric.name, {
-  '      event_category: 'Web Vitals, event_label: metric.id,'      value: Math.round(metric.name ===
-  'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,
-,
-  });'  }
-  
-  // Log to console in development
-  if (process.env.NODE_ENV ===
-  'development') {
-  '    console.log('Web Vital: , metric);'  }'};
-=======
-  if (typeof window !== 'undefined' && 'gtag' in window) {'    (window as any).gtag('event', metric.name, {'      event_category: 'Web Vitals', event_label: metric.id,'      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,'    });'  }'
-  
-  // Log to console in development
-  if (process.env.NODE_ENV === 'development') {'    console.log('Web Vital: ', metric);'  }'};'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+const WebVitals: React.FC<WebVitalsProps> = ({ onPerfEntry }) => {
+  useEffect(() => {
+    if (onPerfEntry && typeof window !== 'undefined') {
+      // Basic performance metrics without web-vitals dependency
+      const measurePerformance = () => {
+        if ('PerformanceObserver' in window) {
+          // Measure First Contentful Paint
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.name === 'first-contentful-paint') {
+                onPerfEntry({
+                  name: 'FCP',
+                  value: entry.startTime,
+                  id: 'fcp',
+                });
+              }
+            });
+          });
+          
+          try {
+            observer.observe({ entryTypes: ['paint'] });
+          } catch (error) {
+            console.log('Performance observer not supported');
+          }
+        }
 
-export const WebVitals = () => {;useEffect(() => {
-    getCLS(sendToAnalytics);
-    getFID(sendToAnalytics);
-    getFCP(sendToAnalytics);
-    getLCP(sendToAnalytics);
-    getTTFB(sendToAnalytics);
-  }, []);
+        // Measure page load time
+        window.addEventListener('load', () => {
+          const loadTime = performance.now();
+          onPerfEntry({
+            name: 'Load Time',
+            value: loadTime,
+            id: 'load-time',
+          });
+        });
+      };
 
-  return null;
+      measurePerformance();
+    }
+  }, [onPerfEntry]);
+
+  return null; // This component doesn't render anything
 };
 
 export default WebVitals;

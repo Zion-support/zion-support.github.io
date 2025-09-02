@@ -31,8 +31,10 @@ const PerformanceMonitor: React.FC = () => {
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      metrics.lcp = lastEntry.startTime;
-      console.log('LCP:', lastEntry.startTime);
+      if (lastEntry) {
+        metrics.lcp = lastEntry.startTime;
+        console.log('LCP:', lastEntry.startTime);
+      }
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 

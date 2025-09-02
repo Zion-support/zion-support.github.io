@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   ArrowRight,
   Brain,
@@ -18,8 +18,19 @@ import {
   TrendingUp,
   Clock,
   Award,
+  Phone,
+  Mail,
+  FileText,
+  MessageSquare,
+  ShoppingCart,
+  Calendar,
+  Share,
+  Network,
+  Headphones,
+  HardDrive,
+  Camera,
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
+import { SEO } from '../components/SEO';
 
 export default function Services() {
   const title = 'Services — Zion Tech Group';
@@ -29,23 +40,37 @@ export default function Services() {
   return (
     <PageTransition>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">
+      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <div className="flex items-center justify-center mb-4">
-              <Award className="h-6 w-6 text-blue-600 mr-2" />
-              <span className="text-base font-semibold leading-7 text-blue-600">
+              <Award className="h-6 w-6 text-blue-400 mr-2" />
+              <span className="text-base font-semibold leading-7 text-blue-400">
                 Our Services
               </span>
             </div>
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Our Services
+            <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Comprehensive Technology Solutions
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              From strategy to production, we deliver outcomes fast. Our
-              comprehensive suite of services covers everything you need to
-              transform your business.
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              From AI-powered automation to enterprise IT infrastructure, we deliver cutting-edge solutions 
+              that transform your business. Our comprehensive suite of services covers everything you need 
+              to stay competitive in the digital age.
             </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="tel:+13024640950">
+                <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all">
+                  <Phone className="w-5 h-5 mr-2 inline" />
+                  Call +1 302 464 0950
+                </button>
+              </Link>
+              <Link href="mailto:kleber@ziontechgroup.com">
+                <button className="border border-blue-400 text-blue-400 px-6 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all">
+                  <Mail className="w-5 h-5 mr-2 inline" />
+                  Email Us
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

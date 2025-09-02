@@ -28,6 +28,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.addEventListener('keydown', handleSkipToContent);
       return () => document.removeEventListener('keydown', handleSkipToContent);
     }
+    
+    return undefined;
   }, [skipToContent]);
 
   useEffect(() => {
@@ -45,9 +47,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             const firstElement = focusableElements[0] as HTMLElement;
             const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
             
-            const handleTabKey = (e: KeyboardEvent) => {
-              if (e.key === 'Tab') {
-                if (e.shiftKey) {
+            const handleTabKey = (e: Event) => {
+              const keyEvent = e as KeyboardEvent;
+              if (keyEvent.key === 'Tab') {
+                if (keyEvent.shiftKey) {
                   if (document.activeElement === firstElement) {
                     e.preventDefault();
                     lastElement.focus();
@@ -75,6 +78,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       
       return () => observer.disconnect();
     }
+    
+    return undefined;
   }, [focusManagement]);
 
   useEffect(() => {
@@ -115,6 +120,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.addEventListener('keydown', handleKeyboardNavigation);
       return () => document.removeEventListener('keydown', handleKeyboardNavigation);
     }
+    
+    return undefined;
   }, [keyboardNavigation]);
 
   return (

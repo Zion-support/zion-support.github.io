@@ -1,17 +1,8 @@
-import React, { useEffect, useRef, useState } from
-  'react';
-import { motion, useAnimation, useInView } from 'lucide-react';
-  'framer-motion';
+import React, { useEffect, useRef, useState } from 'react';
+import { motion, useAnimation, useInView } from 'framer-motion';
 
-type ButtonVariant =
-  'primary' |
-  'secondary' |
-  'ghost' |
-  'gradient';
-type ButtonSize =
-  'sm' |
-  'md' |
-  'lg';
+type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'outline';
+type ButtonSize = 'sm' | 'md' | 'lg';
 
 interface InteractiveButtonProps {
   children: React.ReactNode;
@@ -27,93 +18,43 @@ interface InteractiveButtonProps {
 export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
   children,
   onClick,
-  variant =,
-  primary',
-  size =
-  'md',
+  variant = 'primary',
+  size = 'md',
   disabled = false,
   loading = false,
   icon,
-  className = '
-  ',
+  className = '',
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-<<<<<<< HEAD
-  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden;
-  const variantClasses: Record<ButtonVariant, string> = {
-    primary:,
-  bg-blue-600 text-white hover: bg-blue-700 focus:ring-blue-500,
-    secondary:,
-  bg-gray-200 text-gray-900 hover: bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600,
-    ghost:,
-  text-gray-700 hover: bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800,
-    gradient:,
-  bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700 focus:ring-blue-500,
-=======
-  const baseClasses =
-    'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden';
-  const variantClasses: Record<ButtonVariant, string> = {
+  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
+  
+  const variantClasses = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
-    secondary:
-      'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600',
-    ghost:
-      'text-gray-700 hover:bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800',
-    gradient:
-      'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+    secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',
+    ghost: 'bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500',
+    outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-500',
   };
-  const sizeClasses: Record<ButtonSize, string> = {
-    sm:,
-  px-3 py-2 text-sm
-  ',
-    md: 'px-4 py-2 text-base,
-    lg: 'px-6 py-3 text-lg
-  ',
+
+  const sizeClasses = {
+    sm: 'px-3 py-2 text-sm',
+    md: 'px-4 py-2 text-base',
+    lg: 'px-6 py-3 text-lg',
   };
+
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
   return (
     <motion.button
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+      className={classes}
       onClick={onClick}
       disabled={disabled || loading}
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+      whileHover={{ scale: disabled ? 1 : 1.02 }}
+      whileTap={{ scale: disabled ? 1 : 0.98 }}
     >
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0"
-<<<<<<< HEAD
-        animate={{ x: isHovered ? [,
-  -100%
-  ', '100%
-  '] as any: '-100%, opacity: isHovered ? [0, 0.2, 0] as any : 0 }}
-=======
-        animate={{
-          x: isHovered ? (['-100%', '100%'] as any) : '-100%',
-          opacity: isHovered ? ([0, 0.2, 0] as any) : 0,
-        }}
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-        transition={{ duration: 0.6 }}
-      />
-      <div className="relative flex items-center gap-2">
-        {loading ? (
-<<<<<<< HEAD
-          <motion.div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full" animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear
-  ' }} />
-=======
-          <motion.div
-            className="w-4 h-4 border-2 border-current border-t-transparent rounded-full"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-          />
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-        ) : (
-          icon && <span className="flex-shrink-0">{icon}</span>
-        )}
-        <span>{children}</span>
-      </div>
+      {loading && (
+        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current mr-2"></div>
+      )}
+      {icon && <span className="mr-2">{icon}</span>}
+      {children}
     </motion.button>
   );
 };
@@ -122,200 +63,72 @@ interface AnimatedCardProps {
   children: React.ReactNode;
   className?: string;
   delay?: number;
-  direction?: 'up
-  ' | 'down
-  ' | 'left
-  ' | 'right
-  ';
 }
 
-<<<<<<< HEAD
-export const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className = '', delay = 0, direction =
-  'up' }) => {
-=======
 export const AnimatedCard: React.FC<AnimatedCardProps> = ({
   children,
   className = '',
   delay = 0,
-  direction = 'up',
 }) => {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  const ref = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(ref, { once: true, margin:
-  '-100px' });
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
 
   useEffect(() => {
-    if (isInView) controls.start(
-  'visible');
-  }, [isInView, controls]);
-
-  const directionVariants = {
-    up: { hidden: { y: 50, opacity: 0 }, visible: { y: 0, opacity: 1 } },
-    down: { hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } },
-    left: { hidden: { x: 50, opacity: 0 }, visible: { x: 0, opacity: 1 } },
-    right: { hidden: { x: -50, opacity: 0 }, visible: { x: 0, opacity: 1 } },
-  } as const;
+    if (isInView) {
+      controls.start('visible');
+    }
+  }, [controls, isInView]);
 
   return (
     <motion.div
       ref={ref}
-      className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}`}
-      variants={directionVariants[direction]}
-      initial="hidden"
       animate={controls}
+      initial="hidden"
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      }}
       transition={{ duration: 0.6, delay }}
-      whileHover={{ y: -5 }}
+      className={`bg-white rounded-lg shadow-lg p-6 ${className}`}
     >
       {children}
     </motion.div>
   );
 };
 
-interface InteractiveStatsProps {
-  stats: Array<{
-    number: string;
-    label: string;
-    icon: React.ComponentType<any>;
-  }>;
+interface FadeInProps {
+  children: React.ReactNode;
+  direction?: 'up' | 'down' | 'left' | 'right';
+  delay?: number;
+  className?: string;
 }
 
-export const InteractiveStats: React.FC<InteractiveStatsProps> = ({
-  stats,
-}) => (
-  <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
-    {stats.map((stat, index) => (
-      <motion.div
-        key={index}
-        className="text-center"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: index * 0.1 }}
-        viewport={{ once: true }}
-      >
-<<<<<<< HEAD
-        <motion.div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4" whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type:
-  'spring', damping: 10 }}>
-=======
-        <motion.div
-          className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4"
-          whileHover={{ scale: 1.1, rotate: 5 }}
-          transition={{ type: 'spring', damping: 10 }}
-        >
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-          <stat.icon className="w-8 h-8 text-white" />
-        </motion.div>
-        <motion.h3
-          className="text-3xl font-bold text-gray-900 dark:text-white mb-2"
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
-          viewport={{ once: true }}
-        >
-          {stat.number}
-        </motion.h3>
-        <p className="text-gray-600 dark:text-gray-400">{stat.label}</p>
-      </motion.div>
-    ))}
-  </div>
-);
-
-interface FloatingActionButtonProps {
-  icon: React.ReactNode;
-  onClick: () => void;
-  tooltip?: string;
-  position?:,
-  bottom-right' |
-  'bottom-left' |
-  'top-right' |
-  'top-left';
-  color?: 'blue' |
-  'green' |
-  'purple' |
-  'red;
-}
-
-<<<<<<< HEAD
-export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon, onClick, tooltip, position =,
-  bottom-right', color =
-  'blue' }) => {
-  const [showTooltip, setShowTooltip] = useState(false);
-  const positionClasses: Record<NonNullable<FloatingActionButtonProps[
-  'position]>, string> = {,
-  bottom-right': 'bottom-6 right-6,
-,
-  bottom-left': 'bottom-6 left-6,
-,
-  top-right': 'top-6 right-6,
-,
-  top-left': 'top-6 left-6,
-  };
-  const colorClasses: Record<NonNullable<FloatingActionButtonProps[,
-  color']>, string> = {
-    blue: 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500,
-    green:,
-  bg-green-600 hover: bg-green-700 focus:ring-green-500,
-    purple:,
-  bg-purple-600 hover: bg-purple-700 focus:ring-purple-500,
-    red:,
-  bg-red-600 hover: bg-red-700 focus:ring-red-500,
-=======
-export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
-  icon,
-  onClick,
-  tooltip,
-  position = 'bottom-right',
-  color = 'blue',
+export const FadeIn: React.FC<FadeInProps> = ({
+  children,
+  direction = 'up',
+  delay = 0,
+  className = '',
 }) => {
-  const [showTooltip, setShowTooltip] = useState(false);
-  const positionClasses: Record<
-    NonNullable<FloatingActionButtonProps['position']>,
-    string
-  > = {
-    'bottom-right': 'bottom-6 right-6',
-    'bottom-left': 'bottom-6 left-6',
-    'top-right': 'top-6 right-6',
-    'top-left': 'top-6 left-6',
-  };
-  const colorClasses: Record<
-    NonNullable<FloatingActionButtonProps['color']>,
-    string
-  > = {
-    blue: 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500',
-    green: 'bg-green-600 hover:bg-green-700 focus:ring-green-500',
-    purple: 'bg-purple-600 hover:bg-purple-700 focus:ring-purple-500',
-    red: 'bg-red-600 hover:bg-red-700 focus:ring-red-500',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const directionVariants = {
+    up: { y: 50 },
+    down: { y: -50 },
+    left: { x: 50 },
+    right: { x: -50 },
   };
 
   return (
-    <div className={`fixed ${positionClasses[position]} z-50`}>
-      <motion.button
-        className={`w-14 h-14 rounded-full text-white shadow-lg focus: outline-none focus:ring-2 focus:ring-offset-2 ${colorClasses[color]}`}
-        onClick={onClick}
-        onHoverStart={() => setShowTooltip(true)}
-        onHoverEnd={() => setShowTooltip(false)}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ type:
-  'spring', damping: 15, stiffness: 300 }}
-      >
-        {icon}
-      </motion.button>
-      {tooltip && showTooltip && (
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm px-3 py-1 rounded-lg whitespace-nowrap"
-        >
-          {tooltip}
-          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900" />
-        </motion.div>
-      )}
-    </div>
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, ...directionVariants[direction] }}
+      animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
+      transition={{ duration: 0.6, delay }}
+      className={className}
+    >
+      {children}
+    </motion.div>
   );
 };
-
-export default { InteractiveButton, AnimatedCard, InteractiveStats };

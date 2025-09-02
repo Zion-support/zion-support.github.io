@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-import React from
-  'react';
-import { motion } from
-  'framer-motion';
-import { SEO } from
-  '../components/SEO';
-import { Button } from
-  '../components/ui/Button';
-import { Card } from
-  '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';
-import { 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Shield, 
-  Users, 
-  Globe, 
-  Phone, 
-  Mail, 
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -36,7 +13,6 @@ import {
   Globe,
   Phone,
   Mail,
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
   ArrowRight,
   DollarSign,
   TrendingUp,
@@ -55,18 +31,9 @@ import {
   Calculator,
   BookOpen,
   Lightbulb,
-<<<<<<< HEAD
-  HelpCircle
-<<<<<<< HEAD
-=======
   HelpCircle,
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+  Network,
 } from 'lucide-react';
-import { Network } from 'lucide-react';
-=======
-} from
-  'lucide-react';
->>>>>>> origin/main
 
 const PricingGuide: React.FC = () => {
   const pricingFactors = [
@@ -121,46 +88,94 @@ const PricingGuide: React.FC = () => {
 
   const pricingExamples = [
     {
-      scenario: 'Small Business Automation',
-      description:
-        'AI-powered customer service chatbot for a small e-commerce business',
+      scenario: 'Micro SaaS - AI Analytics Dashboard',
+      description: 'AI-powered business intelligence platform for small to medium businesses',
       features: [
-        'Natural language processing',
-        'Basic customer support automation',
-        'Integration with existing CRM',
-        'Monthly maintenance included',
+        'Real-time data visualization',
+        'Predictive analytics and forecasting',
+        'Custom dashboard creation',
+        'API integrations with 100+ tools',
+        'Multi-user collaboration',
+        'Monthly maintenance and updates',
       ],
-      price: '$3,500 - $5, 500',
-      timeline: '4-6 weeks',
-      roi: '300% ROI within 6 months',
+      price: '$299/month',
+      timeline: '2-3 weeks',
+      roi: '400% ROI within 6 months',
     },
     {
-      scenario: 'Enterprise AI Platform',
-      description: 'Comprehensive AI platform for large manufacturing company',
+      scenario: 'IT Services - Cloud Infrastructure',
+      description: 'Complete cloud migration and infrastructure optimization for enterprise',
       features: [
-        'Custom machine learning models',
-        'Predictive maintenance system',
-        'Real-time analytics dashboard',
-        'Multi-site deployment',
-        '24/7 support and monitoring',
+        'AWS/Azure/GCP setup and optimization',
+        'Security hardening and compliance',
+        'Automated monitoring and alerting',
+        'Disaster recovery implementation',
+        'Cost optimization and scaling',
+        '24/7 support and maintenance',
       ],
-      price: '$25,000 - $75, 000',
-      timeline: '12-16 weeks',
+      price: '$2,500 - $15,000',
+      timeline: '4-8 weeks',
+      roi: '300% ROI within 12 months',
+    },
+    {
+      scenario: 'AI Services - Machine Learning Platform',
+      description: 'Custom ML models for predictive analytics and automation',
+      features: [
+        'Custom model development and training',
+        'Data preprocessing and feature engineering',
+        'Model deployment and monitoring',
+        'Integration with existing systems',
+        'Performance optimization',
+        'Ongoing maintenance and updates',
+      ],
+      price: '$10,000 - $50,000',
+      timeline: '8-16 weeks',
       roi: '500% ROI within 12 months',
     },
     {
-      scenario: 'Healthcare AI Solution',
-      description: 'AI-powered diagnostic tool for medical practice',
+      scenario: 'Cybersecurity Assessment',
+      description: 'Comprehensive security audit and vulnerability assessment',
       features: [
-        'Medical image analysis',
-        'Patient data integration',
-        'HIPAA compliance',
-        'Clinical decision support',
-        'Training and certification',
+        'Penetration testing and vulnerability scanning',
+        'Security policy review and recommendations',
+        'Compliance audit (SOC2, HIPAA, PCI-DSS)',
+        'Incident response planning',
+        'Security awareness training',
+        'Ongoing security monitoring',
       ],
-      price: '$15,000 - $35, 000',
-      timeline: '8-12 weeks',
-      roi: '400% ROI within 8 months',
+      price: '$3,000 - $10,000',
+      timeline: '2-4 weeks',
+      roi: 'Prevent potential $100K+ breach costs',
+    },
+    {
+      scenario: 'Document Management System',
+      description: 'AI-driven document processing and intelligent search platform',
+      features: [
+        'Advanced OCR and text extraction',
+        'Intelligent document categorization',
+        'Full-text search capabilities',
+        'Workflow automation',
+        'Integration with existing systems',
+        'Compliance and audit trails',
+      ],
+      price: '$199/month',
+      timeline: '1-2 weeks',
+      roi: '80% reduction in document processing time',
+    },
+    {
+      scenario: 'Customer Support Automation',
+      description: 'AI chatbot with natural language processing for 24/7 support',
+      features: [
+        'Natural conversation capabilities',
+        'Multi-language support (50+ languages)',
+        'Intelligent ticket routing',
+        'CRM and helpdesk integration',
+        'Analytics and performance tracking',
+        'Custom training on your data',
+      ],
+      price: '$149/month',
+      timeline: '1-2 weeks',
+      roi: '60% reduction in support costs',
     },
   ];
 
@@ -191,8 +206,8 @@ const PricingGuide: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
-        title="Pricing Guide - Zion Tech Group"
-        description="Comprehensive guide to understanding AI solution pricing. Learn about cost factors, get estimates, and find the best pricing strategy for your project."
+        title="Pricing Guide - Zion Tech Group | AI, IT & Micro SaaS Solutions"
+        description="Comprehensive pricing guide for AI services, IT solutions, and micro SaaS platforms. Get accurate estimates and find the best pricing strategy. Contact +1 302 464 0950 for custom quotes."
       />
 
       {/* Hero Section */}
@@ -390,7 +405,7 @@ const PricingGuide: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -398,24 +413,73 @@ const PricingGuide: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Get Your Custom Quote
+              Get Your Custom Quote Today
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Ready to get started? Contact us for a personalized quote based on
-              your specific requirements.
+              Ready to transform your business? Contact us for a personalized quote based on
+              your specific requirements. Our experts are standing by to help you succeed.
             </p>
+            
+            {/* Contact Information */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              <div className="text-center">
+                <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+                <p className="text-gray-300">+1 302 464 0950</p>
+                <p className="text-sm text-gray-400">Available 24/7</p>
+              </div>
+              <div className="text-center">
+                <Mail className="w-8 h-8 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                <p className="text-gray-300">kleber@ziontechgroup.com</p>
+                <p className="text-sm text-gray-400">Quick response guaranteed</p>
+              </div>
+              <div className="text-center">
+                <Globe className="w-8 h-8 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Website</h3>
+                <p className="text-gray-300">ziontechgroup.com</p>
+                <p className="text-sm text-gray-400">Visit our full site</p>
+              </div>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white"
-              >
-                <Calculator className="w-5 h-5 mr-2" />
-                Get Free Quote
-              </Button>
-              <Button size="lg" variant="outline">
-                <HelpCircle className="w-5 h-5 mr-2" />
-                Ask Questions
-              </Button>
+              <a href="tel:+13024640950">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:shadow-lg transition-all"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Now for Free Quote
+                </Button>
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com">
+                <Button size="lg" variant="outline" className="hover:bg-blue-400 hover:text-white transition-all">
+                  <Mail className="w-5 h-5 mr-2" />
+                  Email for Consultation
+                </Button>
+              </a>
+            </div>
+            
+            <div className="mt-8 p-6 bg-slate-700/50 rounded-lg">
+              <h3 className="text-lg font-semibold text-white mb-2">Why Choose Zion Tech Group?</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  <span>500+ successful projects completed</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  <span>99.9% uptime guarantee</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  <span>24/7 expert support</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  <span>Competitive pricing with ROI guarantee</span>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

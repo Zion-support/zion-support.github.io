@@ -50,7 +50,7 @@ const PerformanceMonitor: React.FC = () => {
             }
             break;
           case 'navigation':
-            setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }));
+            setMetrics(prev => ({ ...prev, ttfb: (entry as any).responseStart - (entry as any).requestStart }));
             break;
         }
       });
