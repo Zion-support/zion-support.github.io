@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  import Head from 'next/head'; interface SEOProps {;
+=======
+ import Head from 'next/head'; interface SEOProps {
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
   title?: string;
    description?: string;
    keywords?: string;

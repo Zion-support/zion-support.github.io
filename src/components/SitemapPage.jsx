@@ -1,6 +1,11 @@
  export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth) ; const talentRoutes = completeSitemap.filter () route =>';;import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { SEO } from './SEO';
 
+=======
+import { SEO } from "./SEO";
+;
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
 export default function SitemapPage() {
     const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);
     const talentRoutes = completeSitemap.filter(route => route.requiredAuth &&;

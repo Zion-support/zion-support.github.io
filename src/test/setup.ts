@@ -29,7 +29,14 @@ global.scrollTo = jest.fn();
 // Mock console methods to reduce noise in tests;
 // @ts-expect-error override console in test env;
 global.console = {
+<<<<<<< HEAD
   ...console,;
   warn: jest.fn(),;
   error: jest.fn()};
 ;
+=======
+  ...console,
+  warn: jest.fn(),
+  error: jest.fn(),
+};
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a

@@ -19,7 +19,7 @@ import {
   Clock,
   Award
 } from 'lucide-react';
-import PageTransition from '../components/PageTransition';
+import PageTransition from '../src/components/PageTransition';
 
 export default function Services() {
 	const title = 'Services — Zion Tech Group';

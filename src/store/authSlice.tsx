@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  interface User {;
+=======
+ interface User {
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
   id: string;
    email: string;
    name: string;

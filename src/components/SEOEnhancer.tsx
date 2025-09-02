@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  import { Helmet } from 'react - helmet - async'; interface SEOEnhancerProps {;
+=======
+ import { Helmet } from 'react - helmet - async'; interface SEOEnhancerProps {
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
   title?: string;
    description?: string;
    keywords?: string;
