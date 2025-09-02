@@ -1,19 +1,39 @@
 // Performance optimizations
 const nextConfig = {
   reactStrictMode: true,
+  poweredByHeader: false,
+  compress: true,
+  
+  // Enable proper error handling
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuilds: true,
+    dirs: ['pages', 'components', 'lib', 'utils']
   },
   typescript: {
     ignoreBuildErrors: true,
+    tsconfigPath: './tsconfig.json'
   },
+  
+  // Enhanced image optimization
   images: {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  
+  // Enhanced compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+    styledComponents: true,
+  },
+  
+  // Experimental features for better performance
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
 
   // Webpack optimizations
@@ -33,6 +53,15 @@ const nextConfig = {
         /broken_files_backup/,
         /contracts/,
         /hardhat/,
+        /src\.disabled/,
+        /components\.disabled/,
+        /lib\.disabled/,
+        /hooks\.disabled/,
+        /backup-pages/,
+        /pages_backup/,
+        /pages\.__backup/,
+        /lib_backup/,
+        /api\.disabled/,
       ],
     });
 
@@ -44,15 +73,64 @@ const nextConfig = {
       tls: false,
     };
 
+    // Bundle analyzer
+    if (process.env.ANALYZE === 'true') {
+      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'server',
+          analyzerPort: isServer ? 8888 : 8889,
+          openAnalyzer: true,
+        })
+      );
+    }
+
     return config;
   },
-  // Try to exclude problematic directories at the Next.js level
+  
+  // Enhanced page extensions
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  
+  // Performance optimizations
   onDemandEntries: {
-    // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
-    // number of pages that should be kept simultaneously without being disposed
     pagesBufferLength: 2,
+  },
+  
+  // Headers for security and performance
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
+          },
+        ],
+      },
+      {
+        source: '/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
   },
 };
 

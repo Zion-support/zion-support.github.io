@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
+import SEOHead from '../../components/SEOHead';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
@@ -60,7 +60,7 @@ export default function EventManagement() {
 
   return (
     <>
-      <SEO
+      <SEOHead
         title="Event Management Platform - Zion Tech Group"
         description="Comprehensive event management platform with registration, ticketing, and attendee management. Streamline your events."
         keywords="event management, event registration, ticketing, attendee management, event planning"

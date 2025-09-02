@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
+import SEOHead from '../../components/SEOHead';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
@@ -113,7 +113,7 @@ export default function EmailAutomation() {
 
   return (
     <>
-      <SEO
+      <SEOHead
         title="Email Automation - Zion Tech Group"
         description="Intelligent email marketing automation with personalized campaigns and advanced analytics. Boost your email marketing ROI."
         keywords="email automation, email marketing, drip campaigns, personalization, A/B testing"

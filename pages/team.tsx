@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/layout/EnhancedNavigation';
+import Footer from '../components/layout/Footer';
 import { ArrowRight, Award, Brain, Code, Globe, Shield, Users, Zap } from 'lucide-react';
 
 export default function Team() {

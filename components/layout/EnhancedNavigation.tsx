@@ -1,6 +1,12 @@
-ursor/automate-test-fix-improve-and-merge-code-48f3
-  const [servicesOpen, setServicesOpen] = useState(false)
-  const [solutionsOpen, setSolutionsOpen] = useState(false)
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { ChevronDown, Menu, X } from 'lucide-react';
+
+const EnhancedNavigation: React.FC = () => {
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <nav className='bg-white shadow-lg sticky top-0 z-50'>
       <div className='container mx-auto px-4'>
@@ -103,13 +109,13 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
           {/* Mobile menu button */}
           <button
             className='lg:hidden text-gray-600 hover:text-gray-900'
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+            {mobileMenuOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
           </button>
         </div>
         {/* Mobile Navigation */}
-        {isOpen && (
+        {mobileMenuOpen && (
           <div className='lg:hidden border-t border-gray-200 py-4'>
             <div className='space-y-2'>
               <Link href='/' className='block py-2 text-gray-600 hover:text-blue-600'>

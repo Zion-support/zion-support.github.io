@@ -1,9 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import dynamic from 'next/dynamic';
+import Navigation from '../components/layout/EnhancedNavigation';
+import Footer from '../components/layout/Footer';
+import SEOHead from '../components/SEOHead';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
+
+// Dynamically import performance monitor to avoid SSR issues
+const PerformanceMonitor = dynamic(() => import('../components/PerformanceMonitor'), {
+  ssr: false,
+});
 
 export default function Home() {
   const stats = [
@@ -62,12 +69,12 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Zion Tech Group - Leading Technology Solutions Provider</title>
-        <meta name="description" content="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-      </Head>
+      <SEOHead
+        title="Zion Tech Group - AI & Technology Solutions"
+        description="Leading provider of AI-powered solutions, micro SaaS applications, and enterprise IT services. Transform your business with cutting-edge technology."
+        keywords="AI services, micro SaaS, IT services, DevOps, cybersecurity, cloud solutions, digital transformation, enterprise software, automation, machine learning"
+        url="https://ziontechgroup.com/"
+      />
       
       <Navigation />
       
@@ -278,6 +285,7 @@ export default function Home() {
       </main>
       
       <Footer />
+      <PerformanceMonitor />
     </>
   );
 }

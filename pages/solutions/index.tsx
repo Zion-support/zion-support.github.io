@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
+import SEOHead from '../../components/SEOHead';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
@@ -136,7 +136,7 @@ export default function Solutions() {
 
   return (
     <>
-      <SEO
+      <SEOHead
         title="Solutions - Zion Tech Group"
         description="Comprehensive technology solutions for modern businesses. AI-powered tools, automation platforms, and custom software solutions."
         keywords="solutions, AI tools, automation, software, business solutions, technology"
