@@ -1,26 +1,46 @@
-import type { NextPage } from 'next';
-import { Helmet } from 'react-helmet-async';
-import { useState } from 'react';
+import type { NextPage } from
+  'next';
+import { Helmet } from
+  'react-helmet-async';
+import { useState } from
+  'react';
 import { ADVANCED_CYBERSECURITY_SERVICES_2027 } from "../data/advancedCybersecurityServices2027";
 
 const AdvancedCybersecurityServices: NextPage = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState<any>('innovation');
+  const [selectedCategory, setSelectedCategory] = useState<string>(,
+  all');
+  const [searchTerm, setSearchTerm] = useState('
+  ');
+  const [sortBy, setSortBy] = useState<any>('innovation
+  ');
 
   const categories = [;'
-    { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },;'
-    { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },;'
-    { id: 'Quantum Security', name: 'Quantum Security', color: 'from-indigo-500 to-blue-600' },;'
-    { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },;'
-    { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },;'
-const categories = [;
-    { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },;
-    { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },;
-    { id: 'Quantum Security', name: 'Quantum Security', color: 'from-indigo-500 to-blue-600' },;
-    { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },;
-    { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },;
-    { id: 'Cloud Security', name: 'Cloud Security', color: 'from-yellow-500 to-orange-600' };
+    { id: 'all, name:,
+  All Security', color: 'from-blue-500 to-purple-600 },;,
+  { id: 'AI Security, name:,
+  AI Security', color: 'from-purple-500 to-pink-600 },;,
+  { id: 'Quantum Security, name:,
+  Quantum Security', color: 'from-indigo-500 to-blue-600 },;,
+  { id: 'Network Security, name:,
+  Network Security', color: 'from-green-500 to-teal-600 },;,
+  { id: 'Endpoint Security, name:,
+  Endpoint Security', color: 'from-orange-500 to-red-600 },;,
+  const categories = [;
+    { id: 'all, name:,
+  All Security', color: 'from-blue-500 to-purple-600 },;
+    { id:,
+  AI Security', name: 'AI Security, color:,
+  from-purple-500 to-pink-600' },;
+    { id: 'Quantum Security, name:,
+  Quantum Security', color: 'from-indigo-500 to-blue-600 },;
+    { id:,
+  Network Security', name: 'Network Security, color:,
+  from-green-500 to-teal-600' },;
+    { id: 'Endpoint Security, name:,
+  Endpoint Security', color: 'from-orange-500 to-red-600 },;
+    { id:,
+  Cloud Security', name: 'Cloud Security, color:,
+  from-yellow-500 to-orange-600' };
   ];
 
   const filteredServices = ADVANCED_CYBERSECURITY_SERVICES_2027.filter(service => {
@@ -31,25 +51,32 @@ const categories = [;
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
-      case 'price':;
+      case
+  'price': ;
         return a.pricing.monthly - b.pricing.monthly;
-      case 'innovation':'
-        return b.innovationLevel === 'Revolutionary' ? 1 : -1;
-      case 'roi':'
-        return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
+      case
+  'innovation':
+  '
+        return b.innovationLevel === 'Revolutionary
+  ' ? 1 : -1;
+      case 'roi
+  ':'
+        return parseInt(b.roi.split(
+  '%')[0]) - parseInt(a.roi.split(
+  '%)[0]);
       default:
         return 0;
     }
-  });
-
-'
-default: return 'from-gray-500 to-gray-600'}
+  });,
+  default: return 'from-gray-500 to-gray-600}
   };
 
-      default: return 'bg-gradient-to-r from-gray-500 to-gray-600'}
+      default: return,
+  bg-gradient-to-r from-gray-500 to-gray-600
+  '}
   };
 
-      default: return '🛡️'}
+      default: return '🛡️}
   };
 
   return ("
@@ -67,7 +94,16 @@ default: return 'from-gray-500 to-gray-600'}
   {
 "
             backgroundImage: `url("data:image/svg+xml,"`
-  %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+  %3Csvg width=,
+  60
+  ' height='60
+  ' viewBox='0 0 60 60
+  ' xmlns='http: //www.w3.org/2000/svg
+  '%3E%3Cg fill='none
+  ' fill-rule='evenodd
+  '%3E%3Cg fill='%23ffffff
+  ' fill-opacity='0.1
+  '%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
 
 }}></div>
         </div>
@@ -75,7 +111,8 @@ default: return 'from-gray-500 to-gray-600'}
 
       <Helmet>
         <title>Advanced Cybersecurity Services 2027 - Zion Tech Group | Military-Grade Security Solutions</title>'"
-        <meta name="description" content="Protect your digital assets with Zion Tech Group's cutting-edge cybersecurity solutions. From AI-powered threat detection to quantum cryptography, we deliver military-grade security for the modern world." />"
+        <meta name="description" content="Protect your digital assets with Zion Tech Group
+  's cutting-edge cybersecurity solutions. From AI-powered threat detection to quantum cryptography, we deliver military-grade security for the modern world." />"
         <meta name="keywords" content="cybersecurity, AI security, quantum cryptography, zero trust, autonomous SOC, Zion Tech Group" />"
         <meta name="author" content="Zion Tech Group" />"
         <link rel="canonical" href="https://ziontechgroup.com/advanced-cybersecurity" />
@@ -120,11 +157,19 @@ default: return 'from-gray-500 to-gray-600'}
 
         {/* Security Stats */}"
         <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12">
-          {['
-            { icon: '🛡️', label: 'Threats Blocked', value: '99.9%', color: 'from-green-500 to-emerald-600' },
-            { icon: '👁️', label: '24/7 Monitoring', value: 'Always On', color: 'from-blue-500 to-cyan-600' },
-            { icon: '🔒', label: 'Encryption', value: 'AES-256', color: 'from-purple-500 to-indigo-600' },
-            { icon: '🧠', label: 'AI Detection', value: '10x Faster', color: 'from-orange-500 to-red-600' }
+          {[,
+  { icon: '🛡️, label:,
+  Threats Blocked', value: '99.9%, color:,
+  from-green-500 to-emerald-600' },
+            { icon: '👁️, label:,
+  24/7 Monitoring', value: 'Always On, color:,
+  from-blue-500 to-cyan-600' },
+            { icon: '🔒, label:,
+  Encryption', value: 'AES-256, color:,
+  from-purple-500 to-indigo-600' },
+            { icon: '🧠, label:,
+  AI Detection', value: '10x Faster, color:
+  'from-orange-500 to-red-600' }
           ].map(stat: unknown, index: unknown (
             <div
               key={index}"
@@ -200,8 +245,8 @@ default: return 'from-gray-500 to-gray-600'}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
 
                 selectedCategory === category.id`
-                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg`'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'`
+                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
+  : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20`
               }`}
 "
               <span className="mr-2">{getSecurityIcon(category.name)}</span>

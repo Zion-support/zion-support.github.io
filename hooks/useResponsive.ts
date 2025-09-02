@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
+interface ResponsiveState {
+=======
+import { useState, useEffect } from
+  'react';
+>>>>>>> origin/main
 
 interface ResponsiveState {
   screenWidth: number;
@@ -35,11 +41,13 @@ const useResponsive = (): ResponsiveState => {
     };
 
     updateDimensions();
-    window.addEventListener('resize', updateDimensions);
+    window.addEventListener(
+  'resize', updateDimensions);
     
-    return () => window.removeEventListener('resize', updateDimensions);
+    return () => window.removeEventListener(
+  'resize', updateDimensions);
   }, []);
-
+  
   return state;
 };
 

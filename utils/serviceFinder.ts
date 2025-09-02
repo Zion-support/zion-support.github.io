@@ -19,7 +19,8 @@ export function findServicesByCategory(
   
   for (const arr of allServiceArrays) {
     for (const s of arr) {
-      if (s && typeof s.category === 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {
+      if (s && typeof s.category ===
+  'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {
         results.push(s);
       }
     }
@@ -38,7 +39,8 @@ export function findServicesByTag(
     for (const s of arr) {
       if (s && s.tags && Array.isArray(s.tags)) {
         const hasTag = s.tags.some(tag => 
-          typeof tag === 'string' && tag.toLowerCase().includes(tagIncludes.toLowerCase())
+          typeof tag ===
+  'string' && tag.toLowerCase().includes(tagIncludes.toLowerCase())
         );
         if (hasTag) {
           results.push(s);
@@ -59,7 +61,8 @@ export function findServicesByPriceRange(
   
   for (const arr of allServiceArrays) {
     for (const s of arr) {
-      if (s && typeof s.price === 'number' && s.price >= minPrice && s.price <= maxPrice) {
+      if (s && typeof s.price ===
+  'number' && s.price >= minPrice && s.price <= maxPrice) {
         results.push(s);
       }
     }
@@ -69,9 +72,7 @@ export function findServicesByPriceRange(
 }
 
 export function searchServices(
-  allServiceArrays: Service[][],
-  searchTerm: string
-): Service[] {
+allServiceArrays: Service[][], searchTerm: string): Service[] {
   const results: Service[] = [];
   const term = searchTerm.toLowerCase();
   
