@@ -496,6 +496,96 @@ export default function MicroSaaS() {
       category: 'Voice Analytics SaaS'
     },
     {
+      title: 'Smart Invoice Generator Pro',
+      description: 'AI-powered invoice creation with automated data extraction, smart categorization, and payment tracking',
+      icon: FileText,
+      features: [
+        'Automated invoice generation from purchase orders and contracts',
+        'Smart data extraction from emails and documents',
+        'Intelligent categorization and tax calculations',
+        'Automated payment reminders and follow-ups',
+        'Multi-currency support and exchange rate updates',
+        'Integration with accounting software and payment gateways',
+        'Fraud detection and duplicate invoice prevention',
+        'Custom branding and template management'
+      ],
+      pricing: '$199 - $799/month',
+      delivery: '2-3 weeks',
+      category: 'Finance SaaS'
+    },
+    {
+      title: 'Real Estate Analytics Intelligence Platform',
+      description: 'Advanced real estate market analysis with AI-powered predictions and investment insights',
+      icon: Home,
+      features: [
+        'Comprehensive market trend analysis and forecasting',
+        'Property valuation with AI-powered algorithms',
+        'Investment opportunity scoring and risk assessment',
+        'Neighborhood growth prediction and demographic analysis',
+        'Rental yield optimization and cash flow projections',
+        'Integration with MLS, Zillow, and property databases',
+        'Custom market reports and client presentations',
+        'Portfolio performance tracking and optimization'
+      ],
+      pricing: '$399 - $1,999/month',
+      delivery: '4-6 weeks',
+      category: 'Real Estate SaaS'
+    },
+    {
+      title: 'Health Monitoring Dashboard Pro',
+      description: 'Comprehensive health tracking platform with AI insights and predictive health analytics',
+      icon: Heart,
+      features: [
+        'Multi-device health data integration (wearables, medical devices)',
+        'AI-powered health trend analysis and anomaly detection',
+        'Predictive health risk assessment and early warning system',
+        'Personalized health recommendations and goal setting',
+        'Integration with healthcare providers and EHR systems',
+        'Medication tracking and adherence monitoring',
+        'Telehealth appointment scheduling and management',
+        'Family health monitoring and caregiver notifications'
+      ],
+      pricing: '$149 - $699/month',
+      delivery: '3-5 weeks',
+      category: 'Healthcare SaaS'
+    },
+    {
+      title: 'Supply Chain Optimizer AI',
+      description: 'Intelligent supply chain management with predictive analytics and automated optimization',
+      icon: Network,
+      features: [
+        'AI-powered demand forecasting and inventory optimization',
+        'Automated supplier performance monitoring and risk assessment',
+        'Real-time supply chain visibility and tracking',
+        'Predictive maintenance for logistics and transportation',
+        'Cost optimization and route planning algorithms',
+        'Integration with ERP, WMS, and TMS systems',
+        'Sustainability tracking and carbon footprint analysis',
+        'Crisis management and disruption response automation'
+      ],
+      pricing: '$2,999 - $12,999/month',
+      delivery: '6-10 weeks',
+      category: 'Supply Chain SaaS'
+    },
+    {
+      title: 'Social Media Scheduler Pro',
+      description: 'Advanced social media management with AI content creation and optimal posting strategies',
+      icon: Globe,
+      features: [
+        'AI-powered content creation and curation',
+        'Optimal posting time analysis and automation',
+        'Hashtag research and trending topic identification',
+        'Cross-platform content adaptation and optimization',
+        'Engagement prediction and audience targeting',
+        'Influencer collaboration and campaign management',
+        'Brand sentiment monitoring and crisis management',
+        'ROI tracking and performance analytics dashboard'
+      ],
+      pricing: '$299 - $1,299/month',
+      delivery: '3-4 weeks',
+      category: 'Social Media SaaS'
+    },
+    {
       title: 'Smart Learning Management System',
       description: 'AI-powered educational platform with personalized learning paths and progress tracking',
       icon: Brain,

@@ -777,6 +777,96 @@ export default function ITServices() {
       pricing: '$40,000 - $400,000/month',
       delivery: '24-48 weeks',
       category: 'Autonomous Systems Services'
+    },
+    {
+      title: 'DevOps Automation Platform',
+      description: 'Comprehensive DevOps automation with CI/CD pipelines, infrastructure management, and monitoring',
+      icon: Settings,
+      features: [
+        'Automated CI/CD pipeline setup and optimization',
+        'Infrastructure as Code (IaC) with Terraform and Ansible',
+        'Container orchestration with Kubernetes and Docker',
+        'Automated testing and quality assurance gates',
+        'Monitoring and alerting with Prometheus and Grafana',
+        'Security scanning and compliance automation',
+        'Multi-environment deployment management',
+        'Performance optimization and cost management'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'DevOps Services'
+    },
+    {
+      title: 'API Gateway Management',
+      description: 'Enterprise API gateway solution with security, monitoring, and traffic management',
+      icon: Network,
+      features: [
+        'API gateway setup and configuration',
+        'Rate limiting and traffic management',
+        'Authentication and authorization (OAuth, JWT)',
+        'API versioning and lifecycle management',
+        'Real-time monitoring and analytics',
+        'Security policies and threat protection',
+        'Developer portal and documentation',
+        'Microservices orchestration and routing'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '4-8 weeks',
+      category: 'API Services'
+    },
+    {
+      title: 'Database Optimization & Management',
+      description: 'Advanced database performance tuning, optimization, and management services',
+      icon: Database,
+      features: [
+        'Database performance analysis and optimization',
+        'Query optimization and indexing strategies',
+        'Database migration and modernization',
+        'Backup and disaster recovery solutions',
+        'Database security and compliance',
+        'Real-time monitoring and alerting',
+        'Capacity planning and scaling strategies',
+        'Multi-database platform support (SQL, NoSQL)'
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '4-10 weeks',
+      category: 'Database Services'
+    },
+    {
+      title: 'Performance Monitoring & Analytics',
+      description: 'Comprehensive application and infrastructure performance monitoring with AI insights',
+      icon: BarChart3,
+      features: [
+        'Application Performance Monitoring (APM)',
+        'Infrastructure monitoring and alerting',
+        'Real-time performance analytics and dashboards',
+        'User experience monitoring and optimization',
+        'AI-powered anomaly detection and root cause analysis',
+        'Custom metrics and KPI tracking',
+        'Performance testing and load testing',
+        'Capacity planning and resource optimization'
+      ],
+      pricing: '$2,500 - $12,000/month',
+      delivery: '3-6 weeks',
+      category: 'Monitoring Services'
+    },
+    {
+      title: 'Security Auditing & Compliance',
+      description: 'Comprehensive security auditing, vulnerability assessment, and compliance management',
+      icon: Shield,
+      features: [
+        'Security vulnerability assessments and penetration testing',
+        'Compliance auditing (SOC 2, GDPR, HIPAA, PCI DSS)',
+        'Security policy development and implementation',
+        'Risk assessment and mitigation strategies',
+        'Security awareness training and education',
+        'Incident response planning and testing',
+        'Security monitoring and threat detection',
+        'Regular security reviews and updates'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '4-12 weeks',
+      category: 'Security Services'
     }
   ];
 

@@ -974,6 +974,96 @@ export default function AIServices() {
       pricing: '$99 - $499/month',
       delivery: '6-12 weeks',
       category: 'Personal Health AI'
+    },
+    {
+      title: 'Predictive Analytics Engine Pro',
+      description: 'Advanced predictive modeling platform with real-time forecasting and business intelligence',
+      icon: TrendingUp,
+      features: [
+        'Advanced machine learning algorithms for forecasting',
+        'Real-time data processing and model updates',
+        'Multi-variate analysis and correlation detection',
+        'Custom model training and deployment',
+        'Automated feature engineering and selection',
+        'Integration with business intelligence tools',
+        'Predictive maintenance and anomaly detection',
+        'ROI optimization and scenario planning'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '8-12 weeks',
+      category: 'Predictive AI'
+    },
+    {
+      title: 'Voice AI Assistant Enterprise',
+      description: 'Advanced conversational AI with natural language understanding and multi-modal interactions',
+      icon: Mic,
+      features: [
+        'Natural language processing with context awareness',
+        'Multi-modal interactions (voice, text, visual)',
+        'Emotion recognition and response adaptation',
+        'Multi-language support with real-time translation',
+        'Integration with enterprise systems and APIs',
+        'Custom voice training and personality development',
+        'Conversation analytics and optimization',
+        'Scalable deployment across multiple channels'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-10 weeks',
+      category: 'Voice AI'
+    },
+    {
+      title: 'AI-Powered Code Review Intelligence',
+      description: 'Intelligent code analysis platform with automated reviews, security scanning, and optimization',
+      icon: Code,
+      features: [
+        'Automated code quality assessment and scoring',
+        'Security vulnerability detection and remediation',
+        'Performance optimization recommendations',
+        'Code style enforcement and best practices',
+        'Automated test generation and coverage analysis',
+        'Integration with CI/CD pipelines and Git workflows',
+        'Team collaboration and knowledge sharing',
+        'Custom rule creation and policy enforcement'
+      ],
+      pricing: '$2,500 - $12,000/month',
+      delivery: '4-8 weeks',
+      category: 'Development AI'
+    },
+    {
+      title: 'Smart Contract Analyzer AI',
+      description: 'Blockchain smart contract analysis with security auditing and optimization recommendations',
+      icon: Shield,
+      features: [
+        'Automated smart contract security auditing',
+        'Vulnerability detection and risk assessment',
+        'Gas optimization and efficiency analysis',
+        'Compliance checking with blockchain standards',
+        'Code quality metrics and improvement suggestions',
+        'Integration with development environments',
+        'Automated testing and validation',
+        'Audit report generation and documentation'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '5-8 weeks',
+      category: 'Blockchain AI'
+    },
+    {
+      title: 'AI Customer Behavior Predictor',
+      description: 'Advanced customer analytics platform with behavioral prediction and personalization',
+      icon: Users,
+      features: [
+        'Customer journey mapping and behavior analysis',
+        'Predictive customer lifetime value modeling',
+        'Churn prediction and retention strategies',
+        'Personalized recommendation engines',
+        'Real-time behavioral segmentation',
+        'A/B testing and optimization automation',
+        'Cross-channel customer experience tracking',
+        'Integration with CRM and marketing platforms'
+      ],
+      pricing: '$4,000 - $18,000/month',
+      delivery: '6-10 weeks',
+      category: 'Customer AI'
     }
   ];
   const aiTechnologies = [
