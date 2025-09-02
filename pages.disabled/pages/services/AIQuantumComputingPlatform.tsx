@@ -15,7 +15,8 @@ import {}
   Cpu,
   Network,
   Cloud,
-  Zap as Lightning} from 'lucide-react';
+  Zap as Lightning} from
+  'lucide-react';
 
 :pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
 export default function AIQuantumComputingPlatform() {
@@ -166,9 +167,10 @@ export default function AIQuantumComputingPlatform() {
               <div;
                 key={index}
 :pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
-                className={`relative bg-white rounded-2xl shadow-lg border-2 ${
-'`
-                  plan.popular ? 'border-purple-500' : 'border-gray-200'``
+                className={`relative bg-white rounded-2xl shadow-lg border-2 ${,
+  `
+                  plan.popular ? 'border-purple-500
+  ': 'border-gray-200``
                 } p-8`}
               >"{plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -198,11 +200,12 @@ export default function AIQuantumComputingPlatform() {
 :pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
 `
                 <button``
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-'
-                    plan.popular''
-                      ? 'bg-purple-600 text-white hover:bg-purple-700'''`
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'``}`}
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${,
+  plan.popular'
+  '
+                      ? 'bg-purple-600 text-white hover: bg-purple-700''
+  '`
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200``}`}
                 >
                   Get Started;
                 </button>
@@ -284,7 +287,8 @@ export default function AIQuantumComputingPlatform() {
       {/* Contact Section */}""
       <section className="py-16 max-w-4xl mx-auto px-6 text-center">""
         <h2 className="text-3xl font-bold text-gray-900 mb-8">'
-          Questions? We're Here to Help"</h2>""
+          Questions? We
+  're Here to Help"</h2>""
         <div className="grid md:grid-cols-2 gap-8">""
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">""
             <Phone className="w-8 h-8 text-purple-500 mx-auto mb-4"  />""
@@ -336,4 +340,4 @@ export default function AIQuantumComputingPlatform() {
       </section>
     </div>
   )}'"`
-'"`'"`
+  '"`'"`

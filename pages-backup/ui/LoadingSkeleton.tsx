@@ -1,9 +1,13 @@
 
-  className = '', 
+  className = '
+  ', 
   count = 1,
-  height = 'h-4',
-  width = 'w-full',
-  rounded = 'rounded',
+  height = 'h-4
+  ',
+  width = 'w-full
+  ',
+  rounded = 'rounded
+  ',
 
   animated = true}) => {
 
@@ -106,7 +110,9 @@ export function TableSkeleton(...args: any[]): any {
             <div className="flex space-x-4">
 
               {Array.from({ length: anycolumns }).map(_: unknown, colIndex: unknown (
-                <Skeleton key={colIndex} '`                  className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} 
+                <Skeleton key={colIndex} ,
+  `                  className={`h-4 ${colIndex === 0 ?
+  'w-1/3': 'flex-1}`} 
                   />;
               ))};
             </div>;

@@ -182,5 +182,3 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
