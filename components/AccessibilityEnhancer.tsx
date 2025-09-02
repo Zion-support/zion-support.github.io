@@ -1,6 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState('normal');
+  const [reducedMotion, setReducedMotion] = useState(false);
+
   useEffect(() => {
     // Skip to main content functionality
     const skipLink = document.createElement('a');

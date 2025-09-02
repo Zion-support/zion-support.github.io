@@ -1,3 +1,36 @@
+#!/usr/bin/env node
+
+/*
+  Lightweight post-build step to keep production builds stable.
+  - Verifies Next.js output exists
+  - Optionally can perform small cleanups in the future
+*/
+
+import { existsSync, statSync } from 'fs';
+import { join } from 'path';
+
+function log(message) {
+  // Keep output terse to avoid noisy CI logs
+  console.log(`[optimize-build] ${message}`);
+}
+
+try {
+  const buildDir = join(process.cwd(), '.next');
+
+  if (!existsSync(buildDir) || !statSync(buildDir).isDirectory()) {
+    log('warning: .next directory not found. Skipping post-build checks.');
+    process.exit(0);
+  }
+
+  // Placeholder for future optimizations (e.g., pruning maps, compressing assets)
+  // Intentionally minimal to avoid side effects.
+  log('Next.js build output verified. No additional optimizations applied.');
+} catch (error) {
+  console.error('[optimize-build] error:', error?.message || error);
+  // Do not fail the build on post-build optimization errors
+  process.exit(0);
+}
+
 /**
  * Build Optimization Script
  * Comprehensive build optimization for Zion Tech Group

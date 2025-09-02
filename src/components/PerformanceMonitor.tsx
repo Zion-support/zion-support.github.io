@@ -1,1 +1,0 @@
-import React, { useState, useEffect, useCallback } from 'react'; import { motion, AnimatePresence } from 'framer-motion'; import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle, X, Settings, BarChart3, Cpu, Database, Network, Monitor, Smartphone, Globe } from 'lucide-react'; interface PerformanceMetrics { fcp: number;
