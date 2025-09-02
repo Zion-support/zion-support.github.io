@@ -42,26 +42,14 @@ const EnhancedNavigation: React.FC = () => {
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
-                <Link href="/services/ai-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Development
+                <Link href="/services/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Services
                 </Link>
-                <Link href="/services/cloud-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Cloud Services
+                <Link href="/services/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  IT Services
                 </Link>
-                <Link href="/services/web-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Web Development
-                </Link>
-                <Link href="/services/mobile-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Mobile Development
-                </Link>
-                <Link href="/services/blockchain-solutions" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Blockchain Solutions
-                </Link>
-                <Link href="/services/iot-platforms" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  IoT Platforms
-                </Link>
-                <Link href="/services/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Cybersecurity
+                <Link href="/services/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Micro SaaS
                 </Link>
               </div>
             </div>
@@ -145,26 +133,14 @@ const EnhancedNavigation: React.FC = () => {
               <div className="py-2">
                 <div className="text-gray-600 font-semibold mb-2">Services</div>
                 <div className="pl-4 space-y-2">
-                  <Link href="/services/ai-development" className="block py-1 text-gray-500 hover:text-blue-600">
-                    AI Development
+                  <Link href="/services/ai-services" className="block py-1 text-gray-500 hover:text-blue-600">
+                    AI Services
                   </Link>
-                  <Link href="/services/cloud-services" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Cloud Services
+                  <Link href="/services/it-services" className="block py-1 text-gray-500 hover:text-blue-600">
+                    IT Services
                   </Link>
-                  <Link href="/services/web-development" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Web Development
-                  </Link>
-                  <Link href="/services/mobile-development" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Mobile Development
-                  </Link>
-                  <Link href="/services/blockchain-solutions" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Blockchain Solutions
-                  </Link>
-                  <Link href="/services/iot-platforms" className="block py-1 text-gray-500 hover:text-blue-600">
-                    IoT Platforms
-                  </Link>
-                  <Link href="/services/cybersecurity" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Cybersecurity
+                  <Link href="/services/micro-saas" className="block py-1 text-gray-500 hover:text-blue-600">
+                    Micro SaaS
                   </Link>
                 </div>
               </div>

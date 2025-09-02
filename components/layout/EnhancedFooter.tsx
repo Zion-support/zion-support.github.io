@@ -41,38 +41,18 @@ const EnhancedFooter: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services/ai-development" className="text-gray-300 hover:text-white transition-colors">
-                  AI Development
+                <Link href="/services/ai-services" className="text-gray-300 hover:text-white transition-colors">
+                  AI Services
                 </Link>
               </li>
               <li>
-                <Link href="/services/cloud-services" className="text-gray-300 hover:text-white transition-colors">
-                  Cloud Services
+                <Link href="/services/it-services" className="text-gray-300 hover:text-white transition-colors">
+                  IT Services
                 </Link>
               </li>
               <li>
-                <Link href="/services/web-development" className="text-gray-300 hover:text-white transition-colors">
-                  Web Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/mobile-development" className="text-gray-300 hover:text-white transition-colors">
-                  Mobile Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/blockchain-solutions" className="text-gray-300 hover:text-white transition-colors">
-                  Blockchain Solutions
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/iot-platforms" className="text-gray-300 hover:text-white transition-colors">
-                  IoT Platforms
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/cybersecurity" className="text-gray-300 hover:text-white transition-colors">
-                  Cybersecurity
+                <Link href="/services/micro-saas" className="text-gray-300 hover:text-white transition-colors">
+                  Micro SaaS
                 </Link>
               </li>
             </ul>

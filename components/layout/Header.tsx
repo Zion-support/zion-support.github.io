@@ -20,7 +20,6 @@ const Header: React.FC = () => {
     { name: 'Services', href: '/services' },
     { name: 'Solutions', href: '/solutions' },
     { name: 'Products', href: '/products' },
-    { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
@@ -34,8 +33,10 @@ const Header: React.FC = () => {
 
   const solutionCategories = [
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-    { name: 'Custom Development', href: '/solutions/custom-development' },
-    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+    { name: 'Small Business', href: '/solutions/small-business' },
+    { name: 'Startups', href: '/solutions/startups' },
+    { name: 'Healthcare', href: '/solutions/healthcare' },
+    { name: 'Financial Services', href: '/solutions/finance' },
   ];
 
   return (
@@ -47,16 +48,16 @@ const Header: React.FC = () => {
             <div className="flex items-center space-x-4 mb-2 sm:mb-0">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (302) 464-0950</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>info@ziontechgroup.com</span>
+                <span>kleber@ziontechgroup.com</span>
               </div>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="w-4 h-4" />
-              <span>San Francisco, CA</span>
+              <span>Middletown, DE 19709</span>
             </div>
           </div>
         </div>
