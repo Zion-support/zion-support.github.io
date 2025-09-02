@@ -50,12 +50,10 @@ const Header: React.FC = () => {
       href: '/services', 
       icon: Briefcase,
       dropdown: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Artificial Intelligence solutions' },
-        { name: 'IT Services', href: '/it-services', icon: Network, description: 'Information Technology services' },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Micro Software as a Service' },
-        { name: 'Cybersecurity', href: '/services/ai-autonomous-cybersecurity-platform', icon: Shield, description: 'AI-powered security solutions' },
-        { name: 'Customer Experience', href: '/services/ai-customer-experience-platform', icon: Users, description: 'AI-driven customer experience' },
-        { name: 'Healthcare AI', href: '/services/ai-healthcare-diagnostics', icon: Brain, description: 'Medical AI diagnostics' }
+        { name: 'Services Overview', href: '/services', icon: Briefcase, description: 'Explore all services' },
+        { name: 'AI Services', href: '/services/ai-services', icon: Brain, description: 'Artificial Intelligence solutions' },
+        { name: 'IT Services', href: '/services/it-services', icon: Network, description: 'Information Technology services' },
+        { name: 'Micro SaaS', href: '/services/micro-saas', icon: Cloud, description: 'Micro Software as a Service' }
       ]
     },
     { name: 'About', href: '/about', icon: Users },
