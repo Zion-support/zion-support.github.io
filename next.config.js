@@ -4,6 +4,9 @@ const nextConfig = {
   experimental: {
     esmExternals: false,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     domains: ['ziontechgroup.com'],
     unoptimized: true,

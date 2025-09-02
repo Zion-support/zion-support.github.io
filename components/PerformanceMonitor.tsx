@@ -35,7 +35,7 @@ const PerformanceMonitor: React.FC = () => {
             setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
             break;
           case 'first-input':
-            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+            setMetrics(prev => ({ ...prev, fid: ((entry as any).processingStart ?? entry.startTime) - entry.startTime }));
             break;
           case 'layout-shift':
             if (!(entry as any).hadRecentInput) {

@@ -68,7 +68,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               metrics.lcp = Math.round(entry.startTime);
               break;
             case 'first-input':
-              metrics.fid = Math.round(entry.processingStart - entry.startTime);
+              metrics.fid = Math.round(((entry as any).processingStart ?? entry.startTime) - entry.startTime);
               break;
             case 'layout-shift':
               if (!(entry as any).hadRecentInput) {

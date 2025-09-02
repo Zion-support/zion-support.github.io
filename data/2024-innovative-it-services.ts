@@ -18,8 +18,8 @@ export interface InnovativeITService2024 {
   category: string;
   realService: boolean;
   technology: string;
-  integrations: string;
-  useCases: string;
+  integrations: string[] | string;
+  useCases: string[] | string;
   roi: string;
   competitors: string[];
   marketSize: string;
@@ -28,6 +28,7 @@ export interface InnovativeITService2024 {
   contactInfo: {
     mobile: string;
     email: string;
+    address?: string;
     website: string;
   };
   realImplementation: boolean;
@@ -131,9 +132,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     setupTime: '4 hours',
     category: 'Cybersecurity & Network Security',
     realService: true,
-    technology: [
-      'React, Node.js, Python, Zero Trust architecture, PostgreSQL, Redis, AWS',
-    ],
+    technology: 'React, Node.js, Python, Zero Trust architecture, PostgreSQL, Redis, AWS',
     integrations: [
       'Active Directory, LDAP, SAML, OAuth, Okta, Azure AD, Google Workspace',
     ],
@@ -193,9 +192,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     setupTime: '1 hour',
     category: 'Edge Computing & IoT',
     realService: true,
-    technology: [
-      'React, Node.js, Python, Kubernetes, Docker, Edge computing, AWS, Azure',
-    ],
+    technology: 'React, Node.js, Python, Kubernetes, Docker, Edge computing, AWS, Azure',
     integrations: [
       'AWS, Azure, Google Cloud, IoT platforms, CDN services, Analytics tools',
     ],
@@ -255,9 +252,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     setupTime: '3 hours',
     category: 'IT Operations & Management',
     realService: true,
-    technology: [
-      'React, Node.js, Python, Machine Learning, PostgreSQL, Redis, AWS',
-    ],
+    technology: 'React, Node.js, Python, Machine Learning, PostgreSQL, Redis, AWS',
     integrations: [
       'ServiceNow, BMC, SolarWinds, Nagios, Zabbix, Microsoft System Center',
     ],
@@ -317,9 +312,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     setupTime: '2 hours',
     category: 'Database & Data Management',
     realService: true,
-    technology: [
-      'React, Node.js, Python, Post-quantum cryptography, Distributed databases, AWS',
-    ],
+    technology: 'React, Node.js, Python, Post-quantum cryptography, Distributed databases, AWS',
     integrations: [
       'MongoDB, PostgreSQL, MySQL, Redis, Elasticsearch, Apache Kafka',
     ],
@@ -381,9 +374,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     setupTime: '1 hour',
     category: 'API Management & Development',
     realService: true,
-    technology: [
-      'React, Node.js, Python, Machine Learning, PostgreSQL, Redis, AWS',
-    ],
+    technology: 'React, Node.js, Python, Machine Learning, PostgreSQL, Redis, AWS',
     integrations: [
       'GitHub, GitLab, Postman, Swagger, AWS, Azure, Google Cloud',
     ],
@@ -445,9 +436,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     setupTime: '30 minutes',
     category: 'Cloud Management & Optimization',
     realService: true,
-    technology: [
-      'React, Node.js, Python, Machine Learning, PostgreSQL, Redis, AWS, Azure, GCP',
-    ],
+    technology: 'React, Node.js, Python, Machine Learning, PostgreSQL, Redis, AWS, Azure, GCP',
     integrations: [
       'AWS, Azure, Google Cloud, Kubernetes, Docker, Terraform, Ansible',
     ],
@@ -509,9 +498,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     setupTime: '3 hours',
     category: 'Network Security & Threat Protection',
     realService: true,
-    technology: [
-      'React, Node.js, Python, Machine Learning, Network security, PostgreSQL, Redis',
-    ],
+    technology: 'React, Node.js, Python, Machine Learning, Network security, PostgreSQL, Redis',
     integrations: [
       'Palo Alto Networks, Cisco, Fortinet, Check Point, SonicWall, Security tools',
     ],
