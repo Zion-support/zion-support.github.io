@@ -1,10 +1,9 @@
-import type { Config } from 'tailwindcss.ts'
+import type { Config } from 'tailwindcss'
 export default {
   content: [
-    './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{html,js}',
-    './node_modules/tw-elements/dist/js/**/*.js'
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
   theme: {
@@ -41,6 +40,24 @@ export default {
           emerald: '#10b981',
           amber: '#f59e0b',
           rose: '#f43f5e',
+        }
+      },
+      animation: {
+        'gradient': 'gradient 6s ease infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'bounce-slow': 'bounce 3s infinite',
+        'spin-slow': 'spin 8s linear infinite',
+      },
+      keyframes: {
+        gradient: {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          }
         }
       },
       fontFamily: {
