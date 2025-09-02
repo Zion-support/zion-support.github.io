@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Search, Phone, Mail } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const navigationItems = [
     { name: 'Home', href: '/' },
@@ -30,7 +31,7 @@ const Navigation: React.FC = () => {
         { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
       ]
     },
-    { name: 'Pricing', href: '/pricing-guide' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }
@@ -89,6 +90,30 @@ const Navigation: React.FC = () => {
                   )}
                 </div>
               ))}
+            </div>
+          </div>
+          
+          {/* Search and Contact */}
+          <div className='hidden md:flex items-center space-x-4'>
+            <div className='relative'>
+              <input
+                type='text'
+                placeholder='Search...'
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className='bg-white bg-opacity-10 text-white placeholder-gray-300 px-4 py-2 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-300'
+              />
+              <Search className='absolute right-3 top-2.5 h-4 w-4 text-gray-300' />
+            </div>
+            <div className='flex items-center space-x-2 text-sm'>
+              <a href='tel:+13024640950' className='text-white hover:text-blue-300 flex items-center'>
+                <Phone className='h-4 w-4 mr-1' />
+                <span className='hidden lg:inline'>+1 302 464 0950</span>
+              </a>
+              <a href='mailto:kleber@ziontechgroup.com' className='text-white hover:text-blue-300 flex items-center'>
+                <Mail className='h-4 w-4 mr-1' />
+                <span className='hidden lg:inline'>Contact</span>
+              </a>
             </div>
           </div>
           {/* Mobile menu button */}
