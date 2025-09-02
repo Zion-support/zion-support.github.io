@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-export const securityConfig = {
-=======
-<<<<<<< HEAD =======
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-8786
+<<<<<<< HEAD export const securityConfig = { ======= <<<<<<< HEAD ======= >>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-8786
