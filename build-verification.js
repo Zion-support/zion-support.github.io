@@ -8,15 +8,18 @@ try {
   console.log('📦 Testing component imports...');
   
   // Test basic React functionality
-  const React = require('react');
+  // eslint-disable-next-line no-undef
+  require('react');
   console.log('✅ React import successful');
   
   // Test framer-motion
-  const { motion } = require('framer-motion');
+  // eslint-disable-next-line no-undef
+  require('framer-motion');
   console.log('✅ Framer Motion import successful');
   
   // Test lucide-react icons
-  const { ArrowRight, CheckCircle, Brain, Cloud, Shield, Zap } = require('lucide-react');
+  // eslint-disable-next-line no-undef
+  require('lucide-react');
   console.log('✅ Lucide React icons import successful');
   
   console.log('🎉 All core dependencies imported successfully!');
