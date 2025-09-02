@@ -6,12 +6,13 @@ interface PerformanceMetrics {
    fid?: number;
    cls?: number;
    ttfb?: number;
-   fmp?: number}
+   fmp?: number;
+}
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Only run in browser environment;
     if (typeof window === 'undefined') return;
-    const metrics: PerformanceMetrics = {}
+    const metrics: PerformanceMetrics = {};
 ;
     // First Contentful Paint (FCP);
     const fcpObserver = new PerformanceObserver((list) => {
@@ -21,21 +22,21 @@ const PerformanceMonitor: React.FC = () => {
           console.log('FCP: ', entry.startTime)}
       }
     })
-    fcpObserver.observe({ entryTypes: ['paint'] })
+    fcpObserver.observe({ entryTypes: ['paint'] });
     // Largest Contentful Paint (LCP);
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       metrics.lcp = lastEntry.startTime;
       console.log('LCP: ', lastEntry.startTime)})
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     // First Input Delay (FID);
     const fidObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         metrics.fid = (entry as any).processingStart - entry.startTime;
         console.log('FID: ', metrics.fid)}
     })
-    fidObserver.observe({ entryTypes: ['first-input'] })
+    fidObserver.observe({ entryTypes: ['first-input'] });
     // Cumulative Layout Shift (CLS);
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
@@ -45,7 +46,7 @@ const PerformanceMonitor: React.FC = () => {
       }
       metrics.cls = clsValue;
       console.log('CLS: ', clsValue)})
-    clsObserver.observe({ entryTypes: ['layout-shift'] })
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
     // Time to First Byte (TTFB);
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
@@ -59,7 +60,7 @@ const PerformanceMonitor: React.FC = () => {
           console.log('FMP: ', entry.startTime)}
       }
     })
-    fmpObserver.observe({ entryTypes: ['paint'] })
+    fmpObserver.observe({ entryTypes: ['paint'] });
     // Send metrics to analytics after page load;
     const sendMetrics = () => {
       if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -78,7 +79,7 @@ const PerformanceMonitor: React.FC = () => {
             'Content-Type': 'application/json'},
           body: JSON.stringify({
             url: window.location.href, timestamp: Date.now(), metrics})}).catch(console.error)}
-    }
+    };
 ;
     // Send metrics when page is about to unload;
     window.addEventListener('beforeunload', sendMetrics);
@@ -93,6 +94,7 @@ const PerformanceMonitor: React.FC = () => {
       fmpObserver.disconnect();
       window.removeEventListener('beforeunload', sendMetrics)}
   }, []);
-  return null // This component doesn&apos;t render anything'}
-;
-export default PerformanceMonitor
+  return null; // This component doesn&apos;t render anything
+};
+
+export default PerformanceMonitor;
