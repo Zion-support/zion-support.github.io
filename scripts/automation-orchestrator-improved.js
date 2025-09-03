@@ -5,6 +5,7 @@
  */;
 import fs from 'fs';';import path from 'path';';import { fileURLToPath } from 'url';';import { spawn } from 'child_process';';';const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+<<<<<<< HEAD
 console.log('🚀 Improved Automation Orchestrator Started');';class ImprovedAutomationOrchestrator {;';  constructor() {;
     this.projectRoot = path.resolve(__dirname, '..');';    this.results = {;';      "timestamp": new Date().toISOString(),;";      "scripts": [],;";      "summary": {;";        "total": 0,;";        "successful": 0,;";        "failed": 0,;";        "skipped": 0}";    }
     this.logFile = path.join(this.projectRoot, 'automation-orchestrator-report.json')}';  async run() {;';    try {;
@@ -15,6 +16,53 @@ console.log('🚀 Improved Automation Orchestrator Started');';class ImprovedAut
           "name": 'Type Check',';          "script": 'npm run type-check',';          "description": 'Run TypeScript type checking',';          "critical": false},;";        {;
           "name": 'Lint Check',';          "script": 'npm run lint',';          "description": 'Run ESLint code quality checks',';          "critical": false},;";        {;
           "name": 'Test Suite',';          "script": 'npm test -- --passWithNoTests',';          "description": 'Run test suite',';          "critical": false}";      ];
+=======
+console.log('🚀 Improved Automation Orchestrator Started');
+class ImprovedAutomationOrchestrator {
+  constructor() {
+    this.projectRoot = path.resolve(__dirname, '..');
+    this.results = {
+      timestamp: new Date().toISOString(),
+      scripts: [],
+      summary: {
+        total: 0,
+        successful: 0,
+        failed: 0,
+        skipped: 0}
+    }
+    this.logFile = path.join(this.projectRoot, 'automation-orchestrator-report.json')}
+  async run() {
+    try {
+      console.log('🎯 Starting automation orchestration...');
+      // Define automation scripts to run;
+      const automationScripts = [
+  {
+          name: 'Performance Monitor',
+          script: 'scripts/performance-monitor-improved.js',
+          description: 'Monitor system and application performance',
+          critical: false},
+        {
+          name: 'Build Test',
+          script: 'npm run build',
+          description: 'Test application build process',
+          critical: true},
+        {
+          name: 'Type Check',
+          script: 'npm run type-check',
+          description: 'Run TypeScript type checking',
+          critical: false},
+        {
+          name: 'Lint Check',
+          script: 'npm run lint',
+          description: 'Run ESLint code quality checks',
+          critical: false},
+        {
+          name: 'Test Suite',
+          script: 'npm test -- --passWithNoTests',
+          description: 'Run test suite',
+          critical: false}
+      ];
+>>>>>>> main
       // Run each automation script;
       for (const script of automationScripts) {;
         await this.runScript(script)}

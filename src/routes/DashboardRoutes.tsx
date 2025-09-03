@@ -1,9 +1,27 @@
+<<<<<<< HEAD
 import { Route, Routes    } from 'react-router-dom';""
+=======
+<<<<<<< HEAD
+import { Route, Routes    } from 'react-router-dom';
+export default function Page() {
+  import { Suspense, lazy } from 'react';
+  import { ProtectedRoute } from '../components/ProtectedRoute';
+import LoadingSpinner from '../components/LoadingSpinner';
+=======
+import { Route, Routes    } from 'react-router-dom
+>>>>>>> main
 import { Lazy } from 'lucide-react';
+>>>>>>> main
 
+<<<<<<< HEAD
 export default function Page() {""
   import { Suspense, lazy } from 'react';""
   import { ProtectedRoute } from '../components/ProtectedRoute';""
+=======
+export default function Page() {"
+  import { Suspense, lazy } from 'react
+  import { ProtectedRoute } from '../components/ProtectedRoute
+>>>>>>> main
 import LoadingSpinner from '../components/LoadingSpinner';
 // Lazy load dashboard pages;""
 const Dashboard = lazy(() => import('../pages/Dashboard'));""
@@ -14,6 +32,7 @@ const Analytics = lazy(() => import('../pages/Analytics'));""
 const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));""
 const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));""
 const ProjectRoom = lazy(() => import('../pages/ProjectRoom'))
+<<<<<<< HEAD
 const DashboardRoutes: React.FC = () => {""
   return (<Suspense fallback={<LoadingSpinner /"" >}>""
       <Routes>""
@@ -54,11 +73,62 @@ const DashboardRoutes: React.FC = () => {""
 } />""
         <Route path='/project-room' element={""
           <ProtectedRoute"" >""
+=======
+const DashboardRoutes: React.FC = () => {'
+  return (<Suspense fallback={<LoadingSpinner /  >}>'
+      <Routes>"
+        <Route path='/dashboard' element={'
+          <ProtectedRoute  >'
+            <Dashboard /"" >
+          </ProtectedRoute>,",
+} />"
+        <Route path='/client-dashboard' element={'
+          <ProtectedRoute  >'
+            <ClientDashboard /"" >
+          </ProtectedRoute>,",
+} />"
+        <Route path='/talent-dashboard' element={'
+          <ProtectedRoute  >'
+            <TalentDashboard /"" >
+          </ProtectedRoute>,",
+} />"
+        <Route path='/creator-dashboard' element={'
+          <ProtectedRoute  >'
+            <CreatorDashboard /"" >
+          </ProtectedRoute>,",
+} />"
+        <Route path='/analytics' element={'
+          <ProtectedRoute  >'
+            <Analytics /"" >
+          </ProtectedRoute>,",
+} />"
+        <Route path='/project-milestones' element={'
+          <ProtectedRoute  >'
+            <ProjectMilestones /"" >
+          </ProtectedRoute>,",
+} />"
+        <Route path='/project-details' element={'
+          <ProtectedRoute  >'
+            <ProjectDetails /"" >
+          </ProtectedRoute>,",
+} />"
+        <Route path='/project-room' element={'
+          <ProtectedRoute  >'
+>>>>>>> main
             <ProjectRoom /"" >
           </ProtectedRoute>, } />
       </Routes>
     </Suspense>
   )}
+<<<<<<< HEAD
 ;
+=======
+;
+<<<<<<< HEAD
 ""
 }
+=======
+"
+}
+>>>>>>> main
+>>>>>>> main

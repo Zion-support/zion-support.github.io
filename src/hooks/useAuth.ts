@@ -48,17 +48,32 @@ export function useAuth() {
     // In a real app, you would make an API call to your backend
     const mockUser: User = {""
       id: '1',
+<<<<<<< HEAD
       email, ""
       name: 'John Doe',""
       role: 'user', ""
+=======
+      email,"
+      name: 'John Doe,
+      role: 'user,
+>>>>>>> main
       userType: 'creator',
     };
 
     setAuthState({
+<<<<<<< HEAD
       user: mockUser, isAuthenticated: true,
       isLoading: false, });
 ""
     localStorage.setItem('authToken', 'dummy-token');""
+=======
+      user: mockUser,
+      isAuthenticated: true,
+      isLoading: false,
+    });
+"
+    localStorage.setItem('authToken,dummy-token');"
+>>>>>>> main
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
 
     return mockUser;, };
@@ -79,11 +94,21 @@ export function useAuth() {
 };
 
     setAuthState({
+<<<<<<< HEAD
       user: mockUser, isAuthenticated: true,
       isLoading: false, });
 ""
     localStorage.setItem('zion_user', JSON.stringify(mockUser));""
     localStorage.setItem('authToken', 'dummy-token');
+=======
+      user: mockUser,
+      isAuthenticated: true,
+      isLoading: false,
+    });
+"
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));"
+    localStorage.setItem('authToken,dummy-token');
+>>>>>>> main
 
     return mockUser;, };
 

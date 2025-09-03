@@ -3,6 +3,7 @@ const fs = require(,;);  fs');';const path = require(;);  'path');';// // // // 
 function replaceNextImports(content, filePath) {;
   let modified = false;
   // Replace next/link with react-router-dom;
+<<<<<<< HEAD
   if (content.includes(;
   'next/link')) {';    content = content.replace(/import Link from [;);  '']next\/link[''];?/g,';  'import { Link } from 'react-router-dom'');';    modified = true}';  // Replace next/image with regular img tags (or keep as is for now);
   if (content.includes(;
@@ -11,6 +12,36 @@ function replaceNextImports(content, filePath) {;
   'next/router')) {';    content = content.replace(/import.*from [;);  '']next\/router[''];?/g,';  'import { useNavigate, useLocation, useParams } from 'react-router-dom'');';    modified = true}';  // Replace Next.js specific usage patterns;
   if (content.includes(;
   'next/link')) {';    // Replace Next.js Link usage patterns;';    content = content.replace(/<Link href=/g,;);  '<Link to=');';    modified = true}';  return { content, modified }}
+=======
+  if (content.includes(
+  'next/link')) {
+    content = content.replace(/import Link from [;
+  '']next\/link[''];?/g,
+  'import { Link }  from 'react-router-dom);
+    modified = true}
+  // Replace next/image with regular img tags (or keep as is for now);
+  if (content.includes(
+  'next/image')) {
+    content = content.replace(/import Image from [;
+  '']next\/image[''];?/g,
+  '// import Image  from 'next/image';// TODO: Replace with regular img or custom Image component);
+    modified = true}
+  // Replace next/router with react-router-dom hooks;
+  if (content.includes(
+  'next/router')) {
+    content = content.replace(/import.*from [;
+  '']next\/router[''];?/g,
+  'import { useNavigate, useLocation, useParams }  from 'react-router-dom);
+    modified = true}
+  // Replace Next.js specific usage patterns;
+  if (content.includes(
+  'next/link')) {
+    // Replace Next.js Link usage patterns;
+    content = content.replace(/<Link href=/g,
+  '<Link to=');
+    modified = true}
+  return { content, modified }}
+>>>>>>> main
 // Function to process a single file;
 function processFile(filePath) {;
   try {;
@@ -25,7 +56,14 @@ function processFile(filePath) {;
     console.log(`❌ Error processing ${filePath}:`, error.message);`;    return false}
 }
 // Function to walk directory recursively;
+<<<<<<< HEAD
 function walkDir(dir, extensions = [;);  '.jsx',';  '.js',';  '.tsx',';  '.ts']) {';  let filesFixed = 0;';  try {;
+=======
+function walkDir(dir, extensions = [;
+  '.jsx,.js,.tsx,.ts']) {
+  let filesFixed = 0;
+  try {
+>>>>>>> main
     const items = fs.readdirSync(dir);
     items.forEach(item => {;);      const itemPath = path.join(dir, item);
       const stat = fs.statSync(itemPath);

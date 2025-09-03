@@ -20,6 +20,7 @@ function findConflictFiles(dir = 'src') {';  const files = fs.readdirSync(dir);'
 ;
 // Find all conflict files;
 findConflictFiles();
+<<<<<<< HEAD
 ;
 console.log(`📊 Found ${conflictFiles.length} files with merge conflicts`);`;
 if (conflictFiles.length === 0) {;
@@ -28,6 +29,21 @@ if (conflictFiles.length === 0) {;
 // "Strategy": Accept main branch changes for most files, but preserve our key improvements;
 const preserveOurChanges = [;
   'src/components/SEO.tsx',';  'next.config.js',';  'scripts/clean-console-logs.js',';  'scripts/performance-optimizer.js',';  'scripts/typescript-improver.js',';  'scripts/fix-missing-imports.js',';  'scripts/fix-layout-conflicts.js',';  'COMPREHENSIVE_IMPROVEMENTS_REPORT.md'';];';;
+=======
+
+console.log(`📊 Found ${conflictFiles.length} files with merge conflicts`);
+
+if (conflictFiles.length === 0) {
+  console.log('✅ No merge conflicts found!');
+  process.exit(0);
+}
+
+// Strategy: Accept main branch changes for most files, but preserve our key improvements
+const preserveOurChanges = [
+  'src/components/SEO.tsx,next.config.js,scripts/clean-console-logs.js,scripts/performance-optimizer.js,scripts/typescript-improver.js,scripts/fix-missing-imports.js,scripts/fix-layout-conflicts.js,COMPREHENSIVE_IMPROVEMENTS_REPORT.md'
+];
+
+>>>>>>> main
 let resolvedCount = 0;
 let preservedCount = 0;
 ;

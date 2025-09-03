@@ -74,6 +74,7 @@ console.log('🧪 Automated Testing Suite Starting...');';';class AutomatedTesti
       console.log('⚠️ E2E tests "failed":', error.message);';      this.testResults.e2e.failed = 1;';      this.testResults.e2e.total = 1;,
 }
   }
+<<<<<<< HEAD
 ;
   async createE2ETests() {;
     const e2eDir = path.join(this.projectRoot, 'e2e');';    if (!fs.existsSync(e2eDir)) {;';      fs.mkdirSync(e2eDir, { "recursive": true });,";}
@@ -83,6 +84,42 @@ console.log('🧪 Automated Testing Suite Starting...');';';class AutomatedTesti
 test('contact form works', async ({ page }) => {';  await page.goto('/contact');';  await page.fill('input[name="name"]', 'Test User');';  await page.fill('input[name="email"]', 'test@example.com');';  await page.fill('textarea[name="message"]', 'Test message');';  await page.click('button[type="submit"]');';  await expect(page.locator('.success-message')).toBeVisible()})`;';`;    fs.writeFileSync(path.join(e2eDir, 'homepage.spec.ts'), e2eTest);';  }';;
   async runPerformanceTests() {;
     console.log('⚡ Running performance tests...');';    try {;';      // Test page load times;
+=======
+
+  async createE2ETests() {
+    const e2eDir = path.join(this.projectRoot, 'e2e');
+    if (!fs.existsSync(e2eDir)) {
+      fs.mkdirSync(e2eDir, { recursive: true });
+    }
+
+    const e2eTest = `import { test, expect } from '@playwright/test';
+
+test('homepage loads correctly', async ({ page }) => {
+  await page.goto('/');
+  await expect(page).toHaveTitle(/Zion Tech Group/);
+  await expect(page.locator('h1')).toBeVisible()})
+
+test('navigation works', async ({ page }) => {
+  await page.goto('/');
+  await page.click('text=Services');
+  await expect(page).toHaveURL(/.*services/)})
+
+test('contact form works', async ({ page }) => {
+  await page.goto('/contact');
+  await page.fill('input[name="name"],Test User');
+  await page.fill('input[name="email"],test@example.com');
+  await page.fill('textarea[name="message"],Test message');
+  await page.click('button[type="submit"]');
+  await expect(page.locator('.success-message')).toBeVisible()})`;
+
+    fs.writeFileSync(path.join(e2eDir, 'homepage.spec.ts'), e2eTest);
+  }
+
+  async runPerformanceTests() {
+    console.log('⚡ Running performance tests...');
+    try {
+      // Test page load times
+>>>>>>> main
       const performanceResults = await this.testPagePerformance();
 ;
       // Test Core Web Vitals;
@@ -111,7 +148,22 @@ test('contact form works', async ({ page }) => {';  await page.goto('/contact');
         // In a real scenario, this would use Lighthouse or similar;
         const loadTime = Math.random() * 2000; // Simulate load time;
 
+<<<<<<< HEAD
         if (loadTime < 1500) {;
+=======
+  async testPagePerformance() {
+    // Simulate performance testing
+    const pages = ['/,/about,/services,/contact'];
+    let passed = 0;
+    let failed = 0;
+
+    for (const page of pages) {
+      try {
+        // In a real scenario, this would use Lighthouse or similar
+        const loadTime = Math.random() * 2000; // Simulate load time
+
+        if (loadTime < 1500) {
+>>>>>>> main
           passed++;
           console.log(`✅ ${page} loaded in ${loadTime.toFixed(0)}ms`);`;        } else {;
           failed++;
@@ -160,11 +212,32 @@ test('contact form works', async ({ page }) => {';  await page.goto('/contact');
       console.log('⚠️ Accessibility tests "failed":', error.message);';      this.testResults.accessibility.failed = 1;';      this.testResults.accessibility.total = 1;,
 }
   }
+<<<<<<< HEAD
 ;
   async testWCAGCompliance() {;
     // Simulate accessibility testing;
     const checks = [;
       'Color contrast ratios',';      'Keyboard navigation',';      'Screen reader compatibility',';      'Focus indicators',';      'Alt text for images',';      'Heading structure',';      'Form labels',';      'ARIA attributes',';    ];';;
+=======
+
+  async testWCAGCompliance() {
+    // Simulate accessibility testing
+    const checks = [
+<<<<<<< HEAD
+      'Color contrast ratios',
+      'Keyboard navigation',
+      'Screen reader compatibility',
+      'Focus indicators',
+      'Alt text for images',
+      'Heading structure',
+      'Form labels',
+      'ARIA attributes',
+=======
+      'Color contrast ratios,Keyboard navigation,Screen reader compatibility,Focus indicators,Alt text for images,Heading structure,Form labels,ARIA attributes',
+>>>>>>> main
+    ];
+
+>>>>>>> main
     let passed = 0;
     let failed = 0;
 ;
@@ -195,11 +268,32 @@ test('contact form works', async ({ page }) => {';  await page.goto('/contact');
       console.log('⚠️ Security tests "failed":', error.message);';      this.testResults.security.failed = 1;';      this.testResults.security.total = 1;,
 }
   }
+<<<<<<< HEAD
 ;
   async testSecurityVulnerabilities() {;
     // Test for common security issues;
     const securityChecks = [;
       'Dependency vulnerabilities',';      'XSS protection',';      'CSRF protection',';      'SQL injection prevention',';      'Secure headers',';      'Authentication security',';      'Authorization checks',';      'Data validation',';    ];';;
+=======
+
+  async testSecurityVulnerabilities() {
+    // Test for common security issues
+    const securityChecks = [
+<<<<<<< HEAD
+      'Dependency vulnerabilities',
+      'XSS protection',
+      'CSRF protection',
+      'SQL injection prevention',
+      'Secure headers',
+      'Authentication security',
+      'Authorization checks',
+      'Data validation',
+=======
+      'Dependency vulnerabilities,XSS protection,CSRF protection,SQL injection prevention,Secure headers,Authentication security,Authorization checks,Data validation',
+>>>>>>> main
+    ];
+
+>>>>>>> main
     let passed = 0;
     let failed = 0;
 ;

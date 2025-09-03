@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -19,3 +20,25 @@ import enhanced-home from '../pages/enhanced-home';
     render(<enhanced-home />);
     // Test data loading and display;
   })});
+=======
+import React   from 'react''
+import { render, screen }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import enhanced-home   from '../pages/enhanced-home''
+  describe('enhanced-home Integration Tests', () => {'
+  test('page renders correctly', () => {'
+    render(<enhanced-home  />)
+    expect(screen.getByRole('main')).toBeInTheDocument()})'
+  test('navigation works', () => {'
+    render(<enhanced-home  />)
+    // Test navigation elements
+  })
+  test('page content is accessible', () => {'
+    render(<enhanced-home  />)
+    // Test accessibility features
+  })
+  test('page loads with correct data', () => {'
+    render(<enhanced-home  />)
+    // Test data loading and display
+  })})
+>>>>>>> main

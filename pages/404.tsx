@@ -18,7 +18,11 @@ import {
 
 export default function Custom404() {
   const quickLinks = [
+<<<<<<< HEAD
     { name: 'Home', url: '/', icon: Home },
+=======
+  { name: 'Home', url: '/', icon: Home }, 
+>>>>>>> main
     { name: 'Services', url: '/services', icon: Briefcase },
     { name: 'Solutions', url: '/solutions', icon: Award },
     { name: 'About', url: '/about', icon: Users },

@@ -21,8 +21,14 @@ export const PerformanceOptimizer: React.FC = () => {""
         const networkLatency = navigation.responseEnd - navigation.requestStart;
         setMetrics({
           loadTime, renderTime,
+<<<<<<< HEAD
+          memoryUsage, networkLatency
+        });
+
+=======
           memoryUsage, networkLatency,
 });
+>>>>>>> main
         // Check if performance is optimized
         const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50;
         setIsOptimized(isGoodPerformance);, }
@@ -44,6 +50,7 @@ export const PerformanceOptimizer: React.FC = () => {""
     // Implement performance optimizations""
     if (typeof window !== 'undefined') {
       // Preload critical resources
+<<<<<<< HEAD
       const criticalResources = [""
         '/fonts/inter.woff2', '/images/hero-bg.jpg',
 ];
@@ -58,6 +65,34 @@ export const PerformanceOptimizer: React.FC = () => {""
       // Enable service worker for caching""
       if ('serviceWorker' in navigator) {""
         navigator.serviceWorker.register('/sw.js').catch(console.error);, }
+=======
+<<<<<<< HEAD
+      const criticalResources = [
+        '/fonts/inter.woff2', '/images/hero-bg.jpg'
+      ];
+
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link');
+=======
+      const criticalResources = ["
+        '/fonts/inter.woff2,/images/hero-bg.jpg',
+];
+      criticalResources.forEach(resource => {"
+        const link = document.createElement('link');"
+>>>>>>> main
+        link.rel = 'preload';
+        link.href = resource;"
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image
+        if (resource.endsWith('.woff2')) {"
+          link.crossOrigin = 'anonymous';,
+}
+        document.head.appendChild(link);,
+});
+      // Enable service worker for caching"
+      if ('serviceWorker' in navigator) {"
+        navigator.serviceWorker.register('/sw.js').catch(console.error);,
+}
+>>>>>>> main
 
       setIsOptimized(true);, }
   };
@@ -80,10 +115,35 @@ export const PerformanceOptimizer: React.FC = () => {""
           <span className={metrics.loadTime < 3000 ? 'text-green-600' : 'text-red-600'}"" >
             {metrics.loadTime.toFixed(0)}ms
           </span>
+<<<<<<< HEAD
         </div>""
         <div className="flex justify-between">""
           <span className="text-gray-600">Render Time: </span>""
           <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}" >"
+=======
+<<<<<<< HEAD
+        </div>
+        <div className="flex justify-between">
+          <span className="text-gray-600">Render Time: </span>
+          <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}>
+            {metrics.renderTime.toFixed(0)}ms
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-gray-600">Memory: </span>
+          <span className={metrics.memoryUsage < 50 ? 'text-green-600' : 'text-red-600'}>
+            {metrics.memoryUsage.toFixed(1)}MB
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-gray-600">Network: </span>
+          <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}>
+=======
+        </div>"
+        <div className="flex justify-between">"
+          <span className="text-gray-600">Render Time: </span>"
+          <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}" >
+>>>>>>> main
             {metrics.renderTime.toFixed(0)}ms
           </span>
         </div>""
@@ -92,18 +152,38 @@ export const PerformanceOptimizer: React.FC = () => {""
           <span className={metrics.memoryUsage < 50 ? 'text-green-600' : 'text-red-600'}" >"
             {metrics.memoryUsage.toFixed(1)}MB
           </span>
+<<<<<<< HEAD
         </div>""
         <div className="flex justify-between">""
           <span className="text-gray-600">Network: </span>""
           <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >"
+=======
+        </div>"
+        <div className="flex justify-between">"
+          <span className="text-gray-600">Network: </span>"
+          <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >
+>>>>>>> main
+>>>>>>> main
             {metrics.networkLatency.toFixed(0)}ms
           </span>
         </div>
       </div>
 
       {!isOptimized && (
+<<<<<<< HEAD
         <button onClick={optimizePerformance}""
           className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors"" >"
+=======
+<<<<<<< HEAD
+        <button
+          onClick={optimizePerformance}
+          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors"
+        >
+=======
+        <button onClick={optimizePerformance}"
+          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors"" >
+>>>>>>> main
+>>>>>>> main
           Optimize Performance
         </button>
       )}

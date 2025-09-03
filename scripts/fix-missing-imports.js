@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
+
+// Common Lucide React icons that are frequently used
+const commonIcons = [
+  'ArrowRight,CheckCircle,Star,Users,Zap,Shield,Globe,TrendingUp,Award,Clock,Brain,Cloud,Database,Network,Target,Phone,Mail,MessageSquare,FileText,Search,Menu,X,ChevronDown,ChevronUp,ChevronLeft,ChevronRight,Plus,Minus,Edit,Trash,Save,Download,Upload,Settings,User,Lock,Unlock,Eye,EyeOff,Heart,Share,Copy,ExternalLink,Home,Info,AlertCircle,Check,XCircle'
+];
+>>>>>>> main
 
 import fs from 'fs';';import path from 'path';';import { glob } from 'glob';';';// Common Lucide React icons that are frequently used;
 const commonIcons = [;
@@ -33,6 +46,7 @@ function fixMissingImports(content, filePath) {;
 ;
   let fixedContent = content;
   let changes = 0;
+<<<<<<< HEAD
 ;
   // Find existing lucide-react import;
   const existingImportRegex =;
@@ -53,9 +67,41 @@ function fixMissingImports(content, filePath) {;
         '\n' +';        newImport +;';        fixedContent.slice(nextLineIndex);,
 } else {;
       fixedContent = newImport + fixedContent;,
+=======
+  
+  // Find existing lucide-react import
+  const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['"]lucide-react['"];?/g;
+  const existingImport = fixedContent.match(existingImportRegex);
+  
+  if (existingImport) {
+    // Add missing icons to existing import
+    const existingIcons = existingImport[0].match(/{([^}]*)}/)?.[1]?.split(,).map(icon => icon.trim()) || [];
+    const allIcons = [...new Set([...existingIcons, ...missingImports])].sort();
+    
+    const newImport = `import { ${allIcons.join(,)} } from 'lucide-react';`;
+    fixedContent = fixedContent.replace(existingImportRegex, newImport);
+    changes++;
+  } else {
+    // Create new import statement
+    const newImport = `import { ${missingImports.join(,)} } from 'lucide-react';\n`;
+    
+    // Find the best place to insert the import
+    const importIndex = fixedContent.indexOf('import');
+    if (importIndex !== -1) {
+      const nextLineIndex = fixedContent.indexOf('\n', importIndex);
+      fixedContent = fixedContent.slice(0, nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex);
+    } else {
+      fixedContent = newImport + fixedContent;
+    }
+    changes++;
+  }
+  
+  return { content: fixedContent, changes };
+>>>>>>> main
 }
     changes++;,
 }
+<<<<<<< HEAD
 ;
   return { "content": fixedContent, changes };,";}
 ;
@@ -70,6 +116,35 @@ function processFile(filePath) {;
     filesProcessed++;,
 } catch (error) {;
     console.error(`❌ Error processing ${filePath}:`, error.message);`;  }
+=======
+
+// Main function
+async function main() {
+  console.log('🔧 Starting missing imports fix...\n');
+  
+  const patterns = [
+    'pages/**/*.{tsx,jsx},src/**/*.{tsx,jsx},components/**/*.{tsx,jsx}'
+  ];
+  
+  const excludeDirs = [
+    'node_modules,.next,build,dist,scripts,automation,automation_backup,src.disabled,pages.disabled,components.disabled'
+  ];
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, {
+      ignore: excludeDirs.map(dir => `**/${dir}/**`)
+    });
+    
+    for (const file of files) {
+      processFile(file);
+    }
+  }
+  
+  console.log(`\n📊 Missing Imports Fix Summary:`);
+  console.log(`   Files processed: ${filesProcessed}`);
+  console.log(`   Total import fixes: ${totalFixes}`);
+  console.log(`\n✨ Missing imports fix completed!`);
+>>>>>>> main
 }
 ;
 // Main function;

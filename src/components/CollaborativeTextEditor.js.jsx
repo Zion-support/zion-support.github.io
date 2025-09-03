@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import React, { useState, useCallback, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion';""
 import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react'
 ;""
+=======
+import React, { useState, useCallback, useEffect, useRef }  from 'react';import { motion } from 'framer-motion
+import { Users, MessageSquare, Sparkles, Save, Download, Loader2 }  from 'lucide-react';
+;"
+>>>>>>> main
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true,
 })
@@ -56,11 +62,19 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     // Handle cursor movement
     const handleCursorMove = useCallback((event) => {}
         if(!enableCollaboration || !collaboration.isConnected)
+<<<<<<< HEAD
             return""
         const rect = event.currentTarget.getBoundingClientRect()''
         const x = event.clientX - rect.left';"'"
         const y = event.clientY - rect.top';'
         collaboration.updateCursor(x, y,editor')}, [enableCollaboration, collaboration])'
+=======
+            return"
+        const rect = event.currentTarget.getBoundingClientRect()'
+        const x = event.clientX - rect.left
+        const y = event.clientY - rect.top
+        collaboration.updateCursor(x, y,editor')}, [enableCollaboration, collaboration])
+>>>>>>> main
     // Generate AI suggestions
     const generateAISuggestions = useCallback(async () => {}
         if(!enableAI || !editorState.content.trim () ) return
@@ -73,6 +87,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             if (editorState.content.includes('its')) {}
                 suggestions.push({}`
 `
+<<<<<<< HEAD
 ``"`"
                     id: `suggestion_${Date.now()}_1`, ''''
                     type: 'grammar',''''''
@@ -82,10 +97,22 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     reason: 'Consider using 'it&apos;s' (contraction of 'it is') instead of 'its' (possessive)', '''''
                     alternatives['it&apos;s', 'it is']", '"
 })}''
+=======
+``"`
+                    id: `suggestion_${Date.now()}_1`,''''
+                    type: 'grammar,''''
+                    text: 'it's', confidence: 0.95,'
+                    position: editorState.content.indexOf('its'),'''
+                    length: 3,'''''
+                    reason: 'Consider using 'it's' (contraction of 'it is') instead of 'its' (possessive),''''
+                    alternatives['it's,it is']",
+})}'
+>>>>>>> main
             // Style suggestions''
             if (editorState.content.includes('very')) {}
                 suggestions.push({}`
 `
+<<<<<<< HEAD
 ``"`"
                     id: `suggestion_${Date.now()}_2`, ''''
                     type: 'style',''''
@@ -95,10 +122,22 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     reason: 'Consider using a more specific adjective instead of 'very'', ''''
                     alternatives['extremely', 'highly', 'remarkably', 'exceptionally']", "
 })}''
+=======
+``"`
+                    id: `suggestion_${Date.now()}_2`,''''
+                    type: 'style,'''
+                    text: 'extremely', confidence: 0.88,'
+                    position: editorState.content.indexOf('very'),'''
+                    length: 4,'''''
+                    reason: 'Consider using a more specific adjective instead of 'very','''
+                    alternatives['extremely,highly,remarkably,exceptionally']",
+})}'
+>>>>>>> main
             // Completion suggestions''
             if (editorState.content.endsWith('The main benefits')) {}
                 suggestions.push({}`
 `
+<<<<<<< HEAD
 ``"`"
                     id: `suggestion_${Date.now()}_3`, ''''
                     type: 'completion',''''
@@ -108,6 +147,17 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     alternatives[''''
                         ' include improved efficiency, cost savings, and enhanced user experience.',''''
                         ' are numerous and well-documented in industry research.', ''''
+=======
+``"`
+                    id: `suggestion_${Date.now()}_3`,''''
+                    type: 'completion,'''
+                    text: ' include improved efficiency, cost savings, and enhanced user experience.', confidence: 0.92, position: editorState.content.length,'''
+                    length: 0,''''
+                    reason: 'Complete the sentence with common benefit statements,''
+                    alternatives['''
+                        ' include improved efficiency, cost savings, and enhanced user experience.,'''
+                        ' are numerous and well-documented in industry research.,'''
+>>>>>>> main
                         ' can be measured through key performance indicators.''',
 ]
                 })}
@@ -375,11 +425,19 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
   { opacity: 0, scale: 0 ''''
 '''',
 }} className='absolute w-4 h-4' style = {}
+<<<<<<< HEAD
   {}""
                     left: x, top: y,''
                     transform: 'translate(-50%, -50%)';', '
 }}" >';'''"
               <div className='w-full h-full rounded-full border-2 border-white shadow-lg' style={{ backgroundColor: user.color }}" ></div>''''"
+=======
+  {}"
+                    left: x, top: y,'
+                    transform: 'translate(-50%, -50%),
+}}" >'
+              <div className='w-full h-full rounded-full border-2 border-white shadow-lg' style={{ backgroundColor: user.color }}" ></div>''''
+>>>>>>> main
               <div className='absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap'>
                 {user.name}
               </div>

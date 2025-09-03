@@ -7,10 +7,20 @@ import { ArrowRight, Award, Brain, Code, Globe, Shield, Users, Zap } from 'lucid
 
 export default function Team() {
   const teamMembers = [
+<<<<<<< HEAD
     {
       name: 'Kleber Santos', role: 'CEO & Founder',
       expertise: 'AI & Machine Learning', description: 'Visionary leader with 15+ years in AI and technology innovation.',
       icon: Brain, linkedin: 'https://linkedin.com/in/kleber-santos'
+=======
+  {
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      expertise: 'AI & Machine Learning',
+      description: 'Visionary leader with 15+ years in AI and technology innovation.',
+      icon: Brain,
+      linkedin: 'https://linkedin.com/in/kleber-santos'
+>>>>>>> main
     },
     {
       name: 'Sarah Johnson', role: 'CTO',
@@ -40,8 +50,14 @@ export default function Team() {
   ];
 
   const values = [
+<<<<<<< HEAD
     {
       icon: Brain, title: 'Innovation First',
+=======
+  {
+      icon: Brain,
+      title: 'Innovation First',
+>>>>>>> main
       description: 'We push the boundaries of technology to deliver cutting-edge solutions.'
     }, {
       icon: Users,

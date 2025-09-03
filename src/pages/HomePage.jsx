@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';""
+=======
+import React from 'react
+>>>>>>> main
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, Play, 
@@ -12,10 +16,17 @@ import {
 
 export function HomePage() {
   const features = [
+<<<<<<< HEAD
     {
       icon: Brain, ""
       title: 'AI-Powered Solutions',""
       description: 'Cutting-edge artificial intelligence and machine learning services', ""
+=======
+  {
+      icon: Brain,"
+      title: 'AI-Powered Solutions,
+      description: 'Cutting-edge artificial intelligence and machine learning services,
+>>>>>>> main
       color: 'from-purple-500 to-pink-500',
 }, {
       icon: Cloud,""
@@ -23,6 +34,7 @@ export function HomePage() {
       description: 'Scalable cloud infrastructure and migration services',""
       color: 'from-blue-500 to-cyan-500', },
     {
+<<<<<<< HEAD
       icon: Shield, ""
       title: 'Cybersecurity',""
       description: 'Advanced security and compliance solutions', ""
@@ -32,6 +44,25 @@ export function HomePage() {
       title: 'Digital Transformation', ""
       description: 'End-to-end business transformation services',""
       color: 'from-orange-500 to-red-500', }
+=======
+      icon: Cloud,"
+      title: 'Cloud Excellence,
+      description: 'Scalable cloud infrastructure and migration services,
+      color: 'from-blue-500 to-cyan-500',
+},
+    {
+      icon: Shield,"
+      title: 'Cybersecurity,
+      description: 'Advanced security and compliance solutions,
+      color: 'from-green-500 to-emerald-500',
+},
+    {
+      icon: Rocket,"
+      title: 'Digital Transformation,
+      description: 'End-to-end business transformation services,
+      color: 'from-orange-500 to-red-500',
+}
+>>>>>>> main
   ];
 
   const stats = [""
@@ -42,6 +73,7 @@ export function HomePage() {
   ];
 
   const testimonials = [
+<<<<<<< HEAD
     {""
       name: 'Sarah Johnson', ""
       title: 'CTO at TechCorp',""
@@ -55,6 +87,25 @@ export function HomePage() {
       name: 'Emily Rodriguez', ""
       title: 'Operations Director',""
       content: 'Professional, reliable, and innovative. They delivered beyond our expectations.', rating: 5,
+=======
+  {"
+      name: 'Sarah Johnson,
+      title: 'CTO at TechCorp,
+      content: 'Zion Tech Group transformed our infrastructure completely. Their expertise is unmatched.',
+      rating: 5,
+},
+    {"
+      name: 'Michael Chen,
+      title: 'VP Engineering,
+      content: 'The AI solutions they implemented increased our efficiency by 300%. Incredible results!',
+      rating: 5,
+},
+    {"
+      name: 'Emily Rodriguez,
+      title: 'Operations Director,
+      content: 'Professional, reliable, and innovative. They delivered beyond our expectations.',
+      rating: 5,
+>>>>>>> main
 }
   ];
 
@@ -62,6 +113,7 @@ export function HomePage() {
     <div className="min-h-screen bg-zion-blue-dark">
       {/* Hero Section */}""
       <section className="relative overflow-hidden">
+<<<<<<< HEAD
         {/* Background Pattern */}""
         <div className="absolute inset-0 bg-[url('data: image/svg+xml;base64, PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" /" >"
         ""
@@ -73,6 +125,19 @@ export function HomePage() {
                 {' '}Tomorrow
               </span>
             </h1>""
+=======
+        {/* Background Pattern */}"
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" /" >
+        "
+        <div className="container mx-auto px-4 py-20 relative z-10">"
+          <div className="text-center max-w-4xl mx-auto">"
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Innovating"
+              <span className="bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent">'
+                { }Tomorrow
+              </span>
+            </h1>'
+>>>>>>> main
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
               Empowering businesses with cutting-edge technology solutions, AI-driven insights, 
               and transformative digital strategies for the future.
@@ -80,20 +145,34 @@ export function HomePage() {
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link ""
                 to="/services"
+<<<<<<< HEAD
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25 hover:-translate-y-1"" >"
                 Explore Services""
                 <ArrowRight className="ml-2 h-5 w-5" /" >"
+=======
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25 hover:-translate-y-1  >
+                Explore Services'
+                <ArrowRight className="ml-2 h-5 w-5" /" >
+>>>>>>> main
               </Link>
               <Link ""
                 to="/contact"
+<<<<<<< HEAD
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300"" >"
+=======
+                className='inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300  >
+>>>>>>> main
                 Get Started
               </Link>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Floating Elements */}""
+=======
+        {/* Floating Elements */}'
+>>>>>>> main
         <div className="absolute top-20 left-10 w-2 h-2 bg-zion-cyan/30 rounded-full animate-pulse" /" >"
         <div className="absolute top-40 right-20 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-pulse" style={{ animationDelay: '1s' }} /" >"
         <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-zion-cyan/25 rounded-full animate-pulse" style={{ animationDelay: '2s' }} /" >"
@@ -206,9 +285,15 @@ export function HomePage() {
           <div className="text-center mt-12">
             <Link ""
               to="/services"
+<<<<<<< HEAD
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25"" >"
               View All Services""
               <ArrowRight className="ml-2 h-5 w-5" /" >"
+=======
+              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25  >
+              View All Services'
+              <ArrowRight className="ml-2 h-5 w-5" /" >
+>>>>>>> main
             </Link>
           </div>
         </div>
@@ -233,9 +318,14 @@ export function HomePage() {
                   {[...Array(testimonial.rating)].map((_, i) => (""
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" /" >"
                   ))}
+<<<<<<< HEAD
                 </div>""
                 <p className="text-zion-slate-light mb-4 italic">""
                   "{testimonial.content}"
+=======
+                </div>"
+                <p className="text-zion-slate-light mb-4 italic'> {testimonial.content}'
+>>>>>>> main
                 </p>
                 <div>""
                   <div className="font-semibold text-white">{testimonial.name}</div>""
@@ -260,13 +350,23 @@ export function HomePage() {
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link ""
                 to="/contact"
+<<<<<<< HEAD
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25"" >"
                 Get Free Consultation""
                 <ArrowRight className="ml-2 h-5 w-5" /" >"
+=======
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25  >
+                Get Free Consultation'
+                <ArrowRight className="ml-2 h-5 w-5" /" >
+>>>>>>> main
               </Link>
               <Link ""
                 to="/case-studies"
+<<<<<<< HEAD
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300"" >"
+=======
+                className='inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300  >
+>>>>>>> main
                 View Case Studies
               </Link>
             </div>
@@ -275,4 +375,8 @@ export function HomePage() {
       </section>
     </div>
   );,
+<<<<<<< HEAD
 }"`"
+=======
+}'`
+>>>>>>> main

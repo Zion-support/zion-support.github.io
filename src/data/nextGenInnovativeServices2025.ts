@@ -19,5 +19,10 @@
    innovationLevel: string;
    contactInfo: {  phone: string;
    email: string
+<<<<<<< HEAD
    website: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string}  export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = ['';""
 ""
+=======
+   website: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string}  export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = ['
+"
+>>>>>>> main

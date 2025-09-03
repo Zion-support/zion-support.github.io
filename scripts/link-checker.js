@@ -4,7 +4,14 @@
  * Replaces GitHub Actions link-checker workflow;
  * Checks for broken links in the project;
  */;
+<<<<<<< HEAD
 import fs from "fs";";import path from "path";import { fileURLToPath } from "url";const __filename = fileURLToPath(import.meta.url);
+=======
+import fs from "fsfs';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
+const __filename = fileURLToPath(import.meta.url);
+>>>>>>> main
 const __dirname = path.dirname(__filename);
 console.log(;);  '🔗 Link Checker Started');';class LinkChecker {;';  constructor() {;
     this.projectRoot = path.resolve(__dirname, "..";);  ');';    this.brokenLinks = [];';    this.checkedLinks = 0}
@@ -56,9 +63,17 @@ console.log(;);  '🔗 Link Checker Started');';class LinkChecker {;';  construc
       } catch (error) {;
         // Skip directories we can't read}';    }';    scanDirectory(this.projectRoot);
     return files}
+<<<<<<< HEAD
   extractLinks(content) {;
     const linkRegex = /href=[';';  ']([^'']+)[";";  ']/g;';    const links = [];';    let match;
     while ((match = linkRegex.exec(content)) !== null) {;
+=======
+  extractLinks(content) {
+    const linkRegex = /href=[]([^'']+)[]/g;
+    const links = [];
+    let match;
+    while ((match = linkRegex.exec(content)) !== null) {
+>>>>>>> main
       links.push(match[1])}
     return links}
   extractMarkdownLinks(content) {;

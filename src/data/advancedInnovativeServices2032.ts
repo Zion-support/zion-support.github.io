@@ -20,7 +20,20 @@ export interface AdvancedInnovativeService2032 {
    contactInfo: { 
    phone: string;
    email: string;
+<<<<<<< HEAD
    website: string;""
    address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] scalability: string } competitors?: string[] marketSize?: string compliance?: string[] } export const ADVANCED_INNOVATIVE_SERVICES_2032: AdvancedInnovativeService2032[] = [';'
 ;
 ""
+=======
+<<<<<<< HEAD
+   website: string;
+   address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] scalability: string } competitors?: string[] marketSize?: string compliance?: string[] } export const ADVANCED_INNOVATIVE_SERVICES_2032: AdvancedInnovativeService2032[] = [';'
+;
+=======
+   website: string;"
+   address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] scalability: string } competitors?: string[] marketSize?: string compliance?: string[] } export const ADVANCED_INNOVATIVE_SERVICES_2032: AdvancedInnovativeService2032[] = [
+;
+"
+>>>>>>> main
+>>>>>>> main

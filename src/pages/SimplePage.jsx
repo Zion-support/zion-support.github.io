@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';""
 import { useLocation } from 'react-router-dom';""
 import { ArrowRight, Home, ChevronRight } from 'lucide-react';""
+=======
+import React from 'react
+import { useLocation } from 'react-router-dom
+import { ArrowRight, Home, ChevronRight } from 'lucide-react
+>>>>>>> main
 import { Link } from 'react-router-dom';
 
 export default function SimplePage() {
@@ -8,6 +14,7 @@ export default function SimplePage() {
   
   // Generate page title and content based on the current path
   const getPageInfo = (pathname) => {
+<<<<<<< HEAD
     const pathMap = {""
       '/services': {""
         title: 'Our Services', ""
@@ -159,16 +166,214 @@ export default function SimplePage() {
 }, {""
             title: 'Partner Success Stories',""
             description: 'See how our partners have grown with us', ""
+=======
+    const pathMap = {"
+      '/services': {"
+        title: 'Our Services,
+        subtitle: 'Comprehensive technology solutions for modern businesses,
+        description: 'Discover our full range of services designed to accelerate your digital transformation and drive business growth.',
+        sections: [
+          {"
+            title: 'AI & Machine Learning,
+            description: 'Intelligent solutions that learn, adapt, and optimize your business processes,
+            link: '/services/ai',
+},
+          {"
+            title: 'Cloud Solutions,
+            description: 'Scalable cloud infrastructure and migration services for modern businesses,
+            link: '/services/cloud',
+},
+          {"
+            title: 'Cybersecurity,
+            description: 'Advanced security solutions to protect your digital assets and ensure compliance,
+            link: '/services/cybersecurity',
+},
+          {"
+            title: 'Digital Transformation,
+            description: 'End-to-end business transformation services to modernize your operations,
+            link: '/services/transformation',
+}
+        ],
+},"
+      '/solutions': {"
+        title: 'Industry Solutions,
+        subtitle: 'Tailored solutions for your specific industry needs,
+        description: 'We understand that every industry has unique challenges. Our specialized solutions are designed to address the specific needs of your sector.',
+        sections: [
+          {"
+            title: 'Manufacturing,
+            description: 'Smart factory solutions and Industry 4.0 technologies,
+            link: '/solutions/manufacturing',
+},
+          {"
+            title: 'Financial Services,
+            description: 'FinTech solutions for modern banking and financial institutions,
+            link: '/solutions/financial',
+},
+          {"
+            title: 'Healthcare,
+            description: 'Digital health solutions and medical technology innovations,
+            link: '/solutions/healthcare',
+},
+          {"
+            title: 'Retail,
+            description: 'E-commerce and omnichannel retail solutions,
+            link: '/solutions/retail',
+}
+        ],
+},"
+      '/about': {"
+        title: 'About Zion Tech Group,
+        subtitle: 'Innovating tomorrow through technology excellence,
+        description: 'We are a forward-thinking technology company dedicated to transforming businesses through innovative solutions and cutting-edge technology.',
+        sections: [
+          {"
+            title: 'Our Mission,
+            description: 'To empower businesses with transformative technology solutions that drive innovation and growth,
+            link: '/about/mission',
+},
+          {"
+            title: 'Our Team,
+            description: 'Meet the experts behind our innovative solutions and exceptional service,
+            link: '/about/team',
+},
+          {"
+            title: 'Our Values,
+            description: 'Innovation, integrity, excellence, and customer success drive everything we do,
+            link: '/about/values',
+},
+          {"
+            title: 'Our History,
+            description: 'From startup to industry leader - our journey of innovation and growth,
+            link: '/about/history',
+}
+        ],
+},"
+      '/contact': {"
+        title: 'Contact Us,
+        subtitle: 'Let\'s discuss your technology needs,
+        description: 'Ready to transform your business? Get in touch with our team of experts to discuss how we can help you achieve your goals.',
+        sections: [
+          {"
+            title: 'Get a Quote,
+            description: 'Request a customized quote for your specific technology needs,
+            link: '/request-quote',
+},
+          {"
+            title: 'Schedule a Consultation,
+            description: 'Book a free consultation with our technology experts,
+            link: '/consultation',
+},
+          {"
+            title: 'Support,
+            description: 'Get technical support and assistance for existing solutions,
+            link: '/support',
+},
+          {"
+            title: 'Partnership,
+            description: 'Explore partnership opportunities with Zion Tech Group,
+            link: '/partners',
+}
+        ],
+},"
+      '/blog': {"
+        title: 'Blog & Insights,
+        subtitle: 'Latest technology trends and industry insights,
+        description: 'Stay updated with the latest technology trends, industry insights, and expert perspectives from our team.',
+        sections: [
+          {"
+            title: 'Technology Trends,
+            description: 'Explore emerging technologies and their impact on business,
+            link: '/blog/trends',
+},
+          {"
+            title: 'Industry Insights,
+            description: 'Deep dives into specific industry challenges and solutions,
+            link: '/blog/industry',
+},
+          {"
+            title: 'Case Studies,
+            description: 'Real-world examples of our solutions in action,
+            link: '/case-studies',
+},
+          {"
+            title: 'Expert Opinions,
+            description: 'Thought leadership and expert perspectives on technology,
+            link: '/blog/expert',
+}
+        ],
+},"
+      '/careers': {"
+        title: 'Join Our Team,
+        subtitle: 'Build the future with Zion Tech Group,
+        description: 'Join our team of innovators and help us shape the future of technology. We offer exciting opportunities for growth and development.',
+        sections: [
+          {"
+            title: 'Open Positions,
+            description: 'Browse current job openings and opportunities,
+            link: '/careers/positions',
+},
+          {"
+            title: 'Company Culture,
+            description: 'Learn about our values, culture, and work environment,
+            link: '/careers/culture',
+},
+          {"
+            title: 'Benefits & Perks,
+            description: 'Discover the benefits of working at Zion Tech Group,
+            link: '/careers/benefits',
+},
+          {"
+            title: 'Career Growth,
+            description: 'Opportunities for professional development and advancement,
+            link: '/careers/growth',
+}
+        ],
+},"
+      '/partners': {"
+        title: 'Partnerships,
+        subtitle: 'Collaborate with Zion Tech Group,
+        description: 'Join our network of trusted partners and expand your business opportunities through strategic collaboration.',
+        sections: [
+          {"
+            title: 'Become a Partner,
+            description: 'Learn about partnership opportunities and benefits,
+            link: '/partners/join',
+},
+          {"
+            title: 'Partner Programs,
+            description: 'Explore our various partnership programs and tiers,
+            link: '/partners/programs',
+},
+          {"
+            title: 'Partner Resources,
+            description: 'Access tools, training, and support for partners,
+            link: '/partners/resources',
+},
+          {"
+            title: 'Partner Success Stories,
+            description: 'See how our partners have grown with us,
+>>>>>>> main
             link: '/partners/success',
 }
         ], }
     };
 
+<<<<<<< HEAD
     return pathMap[pathname] || {""
       title: 'Page Not Found', ""
       subtitle: 'The page you\'re looking for doesn\'t exist',""
       description: 'We couldn\'t find the page you requested. Please check the URL or navigate back to our homepage.', '
       sections: [], };, };
+=======
+    return pathMap[pathname] || {"
+      title: 'Page Not Found,
+      subtitle: 'The page you\'re looking for doesn\'t exist,
+      description: 'We couldn\'t find the page you requested. Please check the URL or navigate back to our homepage.',
+      sections: [],
+};,
+};
+>>>>>>> main
 
   const pageInfo = getPageInfo(location.pathname);""
   const breadcrumbs = location.pathname.split('/').filter(Boolean);

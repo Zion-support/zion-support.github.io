@@ -24,6 +24,7 @@ class AutomationSyntaxFixer {;
         files.push(fullPath);,
 }
     }
+<<<<<<< HEAD
 ;
     return files;,
 }
@@ -75,6 +76,62 @@ class AutomationSyntaxFixer {;
       let content = fs.readFileSync(filePath, 'utf8');';      const originalContent = content;
 ;
       // Apply all fixes;
+=======
+    
+    return files;
+  }
+
+  fixImportStatements(content) {
+    // Fix incomplete import statements
+    content = content.replace(/import fs from;/g, 'import fs from "fs";');
+    content = content.replace(/import path from;/g, 'import path from "path";');
+    content = content.replace(/import { execSync } from;/g, 'import { execSync } from "child_process";');
+    content = content.replace(/import axios from;/g, 'import axios from "axios";');
+    
+    return content;
+  }
+
+  fixStringLiterals(content) {
+    // Fix malformed string literals
+    content = content.replace(/this\.projectRoot,logs'/g, "this.projectRoot, 'logs'");
+    content = content.replace(/this\.projectRoot,reports'/g, "this.projectRoot, 'reports'");
+    content = content.replace(/this\.projectRoot,automation'/g, "this.projectRoot, 'automation'");
+    content = content.replace(/this\.projectRoot,dir\)/g, "this.projectRoot, dir)");
+    
+    return content;
+  }
+
+  fixRegexPatterns(content) {
+    // Fix malformed regex patterns
+    content = content.replace(/const mergeConflictPattern = \/ {6}changes\+\+;/g, 
+      'const mergeConflictPattern = /<<<<<<< HEAD\\n([\\s\\S]*?)\\n=======\\n([\\s\\S]*?)\\n>>>>>>> [^\\n]+/g;');
+    
+    return content;
+  }
+
+  fixOptionalChaining(content) {
+    // Fix optional chaining syntax issues
+    content = content.replace(/\?\?/g, '?.');
+    content = content.replace(/\.\?\?/g, '?.');
+    
+    return content;
+  }
+
+  fixBracketIssues(content) {
+    // Fix missing brackets and parentheses
+    content = content.replace(/fs\.mkdirSync\(dirPath', \{ recursive: true \}\);/g, 
+      'fs.mkdirSync(dirPath, { recursive: true });');
+    
+    return content;
+  }
+
+  fixFile(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      const originalContent = content;
+      
+      // Apply all fixes
+>>>>>>> main
       content = this.fixImportStatements(content);
       content = this.fixStringLiterals(content);
       content = this.fixRegexPatterns(content);

@@ -4,8 +4,17 @@
  * Replaces GitHub Actions dependencies workflow;
  * Checks and updates project dependencies;
  */;
+<<<<<<< HEAD
 import fs from,;
   fs';';import path from "path";";import { fileURLToPath } from "url";import { execSync } from "child_process";const __filename = fileURLToPath(import.meta.url);
+=======
+import fs from,
+  fs';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
+import { execSync } from "child_processchild_process';
+const __filename = fileURLToPath(import.meta.url);
+>>>>>>> main
 const __dirname = path.dirname(__filename);
 console.log(;);  '📦 Dependency Updater Started');';class DependencyUpdater {;';  constructor() {;
     this.projectRoot = path.resolve(__dirname,..;);  ');';    this.updates = [];';    this.vulnerabilities = [];

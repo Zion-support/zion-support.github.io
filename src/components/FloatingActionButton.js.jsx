@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'''
 import { motion, AnimatePresence } from 'framer-motion';
 import {}""
@@ -19,6 +20,28 @@ const FloatingActionButton = ({ className = '' }) => {}
       icon: EnvelopeIcon, ''
       label: 'Email',''
       action: () => window.open('mailto: info@ziontechgroup.com', _self'), '
+=======
+import React, { useState }  from 'react
+import { motion, AnimatePresence } from 'framer-motion';
+import {}"
+  PlusIcon, XMarkIcon, ChatBubbleLeftRightIcon, PhoneIcon,'
+  EnvelopeIcon}  from '@heroicons/react/24/outline';const FloatingActionButton = ({ className = '' }) => {}
+  const [isOpen, setIsOpen] = useState(false)
+  const toggleMenu = () => setIsOpen(!isOpen)
+  const actionItems = []
+    {}"
+      icon: ChatBubbleLeftRightIcon,'
+      label: 'Live Chat,
+      action: () => window.open('https://ziontechgroup.com/chat',_blank'),'
+      color: 'bg-green-500 hover:bg-green-600'}, {}"
+      icon: PhoneIcon,'
+      label: 'Call Us,
+      action: () => window.open('tel:+1-555-0123',_self'),'
+      color: 'bg-blue-500 hover:bg-blue-600'}, {}"
+      icon: EnvelopeIcon,'
+      label: 'Email,
+      action: () => window.open('mailto:info@ziontechgroup.com',_self'),'
+>>>>>>> main
       color: 'bg-purple-500 hover:bg-purple-600'}
   ]
   return ()
@@ -28,8 +51,13 @@ const FloatingActionButton = ({ className = '' }) => {}
           <motion .div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
             exit={{ opacity: 0, scale: 0.8 }}""
             className='absolute bottom-16 right-0 mb-2 space-y-3''''" >'"
+=======
+            exit={{ opacity: 0, scale: 0.8 }}"
+            className='absolute bottom-16 right-0 mb-2 space-y-3''" >
+>>>>>>> main
             {actionItems.map((item, index) => (
               <motion.div
                 key={item.label}
@@ -59,12 +87,21 @@ const FloatingActionButton = ({ className = '' }) => {}
       </AnimatePresence>""
       <motion .button''''
         onClick={toggleMenu}''''
+<<<<<<< HEAD
         className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110'''
         whileHover={{ scale: 1.1 }}""
         whileTap={{ scale: 0.95 }}''
         aria-label={isOpen ? 'Close quick actions' : 'Open quick actions'}'''" >'''''"
         <AnimatePresence mode='wait'>""
           {isOpen ? (''''
+=======
+        className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110'
+        whileHover={{ scale: 1.1 }}"
+        whileTap={{ scale: 0.95 }}'
+        aria-label={isOpen ? 'Close quick actions' : 'Open quick actions'}'''" >''''
+        <AnimatePresence mode='wait'>"
+          {isOpen ? ('''
+>>>>>>> main
             <motion .div''''
               key='close'''
               initial={{ rotate: -90, opacity: 0 }}

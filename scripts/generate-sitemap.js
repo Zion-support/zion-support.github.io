@@ -16,6 +16,7 @@ function getPages(dir, basePath = '') {';  const pages = [];';  const items = fs
 ;
   return pages;,
 }
+<<<<<<< HEAD
 ;
 // Generate sitemap.xml;
 function generateSitemap() {;
@@ -27,4 +28,37 @@ function generateSitemap() {;
     <priority>${page === '/' ? '1.0' : '0.8'}</priority>';  </url>`;`;    });';    .join('\n')}';</urlset>`;`;';  const outputPath = path.join(__dirname, '..', 'public', 'sitemap.xml');';  fs.writeFileSync(outputPath, sitemap);';;
   console.log(`Generated sitemap with ${pages.length} pages`);`;  console.log(`Sitemap saved "to": ${outputPath}`);`;}
 ;
+=======
+
+// Generate sitemap.xml
+function generateSitemap() {
+  const pagesDir = path.join(__dirname, '..,pages');
+  const pages = getPages(pagesDir);
+
+  const baseUrl = 'https://ziontechgroup.com';
+  const pages = ['/,/about,/services,/contact,/blog,/careers'];
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${pages
+    .map(page => {
+      const url = page === '/' ? baseUrl : `${baseUrl}${page}`;
+      return `  <url>
+    <loc>${url}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>${page === '/' ? '1.0' : '0.8'}</priority>
+  </url>`;
+    })
+    .join('\n')}
+</urlset>`;
+
+  const outputPath = path.join(__dirname, '..,public,sitemap.xml');
+  fs.writeFileSync(outputPath, sitemap);
+
+  console.log(`Generated sitemap with ${pages.length} pages`);
+  console.log(`Sitemap saved to: ${outputPath}`);
+}
+
+>>>>>>> main
 generateSitemap();

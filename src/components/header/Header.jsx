@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';""
 import { Link } from 'react-router-dom';""
 import { Logo } from './Logo';""
@@ -12,19 +13,48 @@ import { generateSearchSuggestions } from '@/data/marketplaceData';""
 import { useNavigate } from 'react-router-dom';""
 import { Button } from '@/components/ui/button';""
 import { Menu, X, Sparkles } from 'lucide-react';""
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react' import { Link } from 'react-router-dom' import { Logo } from './Logo'' import { UserMenu } from './UserMenu'' import { LanguageSelector } from './LanguageSelector'' import { MainNavigation } from '@/layout/MainNavigation'' import { MobileMenu } from './MobileMenu' import { useAuth } from '@/hooks/useAuth'' import { useWhitelabel } from '@/context/WhitelabelContext'' import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput'' import { generateSearchSuggestions } from '@/data/marketplaceData'' import { useNavigate } from 'react-router-dom'' import { Button } from '@/components/ui/button'' import { Menu, X, Sparkles } from 'lucide-react'' import { Search as SearchIcon } from 'lucide-react' export function Header({ hideLogin = false, customLogo, customTheme }) { const { user } = useAuth() const { isWhitelabel, primaryColor } = useWhitelabel()' const navigate = useNavigate()'; const [query, setQuery] = useState(') const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const searchSuggestions = generateSearchSuggestions()';";'"
+=======
+import React, { useState, useEffect } from 'react
+import { Link } from 'react-router-dom
+import { Logo } from './Logo
+import { UserMenu } from './UserMenu
+import { LanguageSelector } from './LanguageSelector
+import { MainNavigation } from '@/layout/MainNavigation
+import { MobileMenu } from './MobileMenu
+import { useAuth } from '@/hooks/useAuth
+import { useWhitelabel } from '@/context/WhitelabelContext
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput
+import { generateSearchSuggestions } from '@/data/marketplaceData
+import { useNavigate } from 'react-router-dom
+import { Button } from '@/components/ui/button
+import { Menu, X, Sparkles } from 'lucide-react
+>>>>>>> main
 import { Search as SearchIcon } from 'lucide-react';
 
 export function Header({ hideLogin = false, customLogo, customTheme }) {
   const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();
+<<<<<<< HEAD
   const navigate = useNavigate();""
   const [query, setQuery] = useState('');
+=======
+  const navigate = useNavigate();'
+  const [query, setQuery] = useState( );
+>>>>>>> main
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const searchSuggestions = generateSearchSuggestions();
   
+<<<<<<< HEAD
   // If we have a white-label tenant and no specific customTheme is provided, ""
   // use the tenant&apos;s primary color'
+=======
+  // If we have a white-label tenant and no specific customTheme is provided,'
+  // use the tenant's primary color
+>>>>>>> main
   const effectiveTheme =
     customTheme ||
     (isWhitelabel
@@ -51,8 +81,14 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
   const handleSubmit = e => {
     e.preventDefault();
     if (query.trim()) {`
+<<<<<<< HEAD
       navigate(`/search?q=${encodeURIComponent(query)}`);""
       setQuery('');, }
+=======
+      navigate(`/search?q=${encodeURIComponent(query)}`);'
+      setQuery( );,
+}
+>>>>>>> main
   };
   
   const toggleMobileMenu = () => {
@@ -60,7 +96,11 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
   
   return (`
     <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+<<<<<<< HEAD
         isScrolled""
+=======
+        isScrolled'
+>>>>>>> main
           ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20'
           : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20', `
 }`}
@@ -126,9 +166,15 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
           <LanguageSelector /" >"
           
           {/* Mobile menu button */}
+<<<<<<< HEAD
           <button onClick={toggleMobileMenu}""
             className="lg: hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors"" >"
             {isMobileMenuOpen ? <X size={24} /" > : <Menu size={24} /" >}
+=======
+          <button onClick={toggleMobileMenu}"
+            className='lg:hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors  >
+            {isMobileMenuOpen ? <X size={24} /' > : <Menu size={24} /" >}
+>>>>>>> main
           </button>
         </div>
       </div>
@@ -143,4 +189,9 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
       />
     </header>
   );,
+<<<<<<< HEAD
 }"`"
+=======
+}"`
+>>>>>>> main
+>>>>>>> main

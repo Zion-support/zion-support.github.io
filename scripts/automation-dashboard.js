@@ -1,6 +1,19 @@
 #!/usr/bin/env node;
+<<<<<<< HEAD
 import { execSync } from,;
   child_process';';import fs from "fs";";import path from "path";import { fileURLToPath } from "url";const __dirname = path.dirname(__filename);";// // // // // // // console.log(;);  '🚀 Starting PM2 Automation Dashboard...');';class AutomationDashboard {;';  constructor() {;
+=======
+import { execSync } from,
+  child_process';
+import fs from "fsfs';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
+const __dirname = path.dirname(__filename);
+// // // // // // // console.log(
+  '🚀 Starting PM2 Automation Dashboard...');
+class AutomationDashboard {
+  constructor() {
+>>>>>>> main
     this.processes = [];
     this.reports = {}
     this.healthStatus = {}}
@@ -30,6 +43,7 @@ import { execSync } from,;
         `${statusIcon} ${proc.status}`.padEnd(10) +;`;        proc.memory.padEnd(10) +;
         proc.cpu.padEnd(8) +;
         proc.uptime.padEnd(15) +;
+<<<<<<< HEAD
         proc.restarts)});
     console.log('');';    // Display recommendations;';    if (health.recommendations.length > 0) {;
       console.log(;);  '💡 "Recommendations":,';  );';      health.recommendations.forEach(rec => console.log(`  ${rec}`));`;      console.log(';';  ')}';    // Display recent logs;';    // // // console.log('📝 Recent "Activity": ');';    // // // console.log('─;';  '.repeat(50));';    // // // // // // // console.log('');';    // Display recommendations;';    if (health.recommendations.length > 0) {;
@@ -37,6 +51,89 @@ import { execSync } from,;
       // // // // // // // console.log('  No recent logs available;';  ')}';    // // // // // // // console.log('');';    // // // // // // // console.log(;);  '"Commands": ');';    // // // // // // // console.log(;);  '  pm2 logs <process-name> - View specific process logs');';    // // // // // // // console.log(;);  '  pm2 restart <process-name> - Restart specific process');';    // // // // // // // console.log(;);  '  pm2 restart all - Restart all processes');';    // // // // // // // console.log(;);  '  pm2 monit - Open PM2 monitoring interface');';    // // // // // // // console.log(;);  '  Ctrl+C - Exit dashboard)}';          console.log(`🔴 ${log}`)} else if (log.includes(,`;  WARN') || log.includes(';  'warn')) {';          console.log(`🟡 ${log}`)} else {`;          console.log(`ℹ️  ${log}`)}`;      })} catch (error) {;
       console.log(;);  '  No recent logs available')}';    console.log(';';  ');';    console.log('"Commands": ');';    console.log('  pm2 logs <process-name> - View specific process logs;';  ');';    console.log('  pm2 restart <process-name> - Restart specific process;';  ');';    console.log('  pm2 restart all - Restart all processes;';  ');';    console.log('  pm2 monit - Open PM2 monitoring interface;';  ');';    console.log('  Ctrl+C - Exit dashboard)}';  async startMonitoring() {;';    // // // // // // // console.log(,;);  🔄 Starting continuous monitoring...;
   ');';    // Initial display;';    await this.displayDashboard();
+=======
+        proc.restarts)})
+    console.log('');
+    // Display recommendations;
+    if (health.recommendations.length > 0) {
+      console.log(
+  '💡 Recommendations:,
+  );
+      health.recommendations.forEach(rec => console.log(`  ${rec}`));
+      console.log()}
+    // Display recent logs;
+    // // // console.log('📝 Recent Activity: ');
+    // // // console.log('─;
+  '.repeat(50));
+    // // // // // // // console.log('');
+    // Display recommendations;
+    if (health.recommendations.length > 0) {
+      // // // // // // // console.log(
+  '💡 Recommendations:);
+      health.recommendations.forEach(rec => // // // // // // // console.log(`  ${rec}`));
+      // // // // // // // console.log(,
+  ')}
+    // Display recent logs;
+    // // // // // // // console.log('📝 Recent Activity: ');
+    // // // // // // // console.log('─;
+  '.repeat(50));
+    try {
+      const logs = execSync('pm2 logs --lines 5 --nostream, { encoding:,
+  utf8;
+  ' })
+      const recentLogs = logs.split('\n;
+  ').slice(-5).filter(line => line.trim());
+      recentLogs.forEach(log => {
+        if (log.includes('ERROR;
+  ') || log.includes('error;
+  ')) {
+          // // // // // // // console.log(`🔴 ${log}`)} else if (log.includes('WARN;
+  ') || log.includes('warn;
+  ')) {
+          // // // // // // // console.log(`🟡 ${log}`)} else {
+          // // // // // // // console.log(`ℹ️  ${log}`)}
+      })} catch (error) {
+      // // // // // // // console.log('  No recent logs available;
+  ')}
+    // // // // // // // console.log('');
+    // // // // // // // console.log(
+  'Commands: ');
+    // // // // // // // console.log(
+  '  pm2 logs <process-name> - View specific process logs');
+    // // // // // // // console.log(
+  '  pm2 restart <process-name> - Restart specific process');
+    // // // // // // // console.log(
+  '  pm2 restart all - Restart all processes');
+    // // // // // // // console.log(
+  '  pm2 monit - Open PM2 monitoring interface');
+    // // // // // // // console.log(
+  '  Ctrl+C - Exit dashboard)}
+          console.log(`🔴 ${log}`)} else if (log.includes(,
+  WARN') || log.includes(
+  'warn')) {
+          console.log(`🟡 ${log}`)} else {
+          console.log(`ℹ️  ${log}`)}
+      })} catch (error) {
+      console.log(
+  '  No recent logs available')}
+    console.log();
+    console.log('Commands: ');
+    console.log('  pm2 logs <process-name> - View specific process logs;
+  ');
+    console.log('  pm2 restart <process-name> - Restart specific process;
+  ');
+    console.log('  pm2 restart all - Restart all processes;
+  ');
+    console.log('  pm2 monit - Open PM2 monitoring interface;
+  ');
+    console.log('  Ctrl+C - Exit dashboard)}
+  async startMonitoring() {
+    // // // // // // // console.log(,
+  🔄 Starting continuous monitoring...;
+  ');
+    // Initial display;
+    await this.displayDashboard();
+>>>>>>> main
     // Update every 30 seconds;
     setInterval(async () => {;
       await this.displayDashboard()}, 30000)}

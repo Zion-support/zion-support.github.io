@@ -13,7 +13,7 @@ import {
 
 export default function IoTSolutions() {
   const features = [
-    {
+  {
       icon: Wifi,
       title: 'Device Connectivity',
       description:
@@ -39,16 +39,20 @@ export default function IoTSolutions() {
   ];
 
   const benefits = [
+<<<<<<< HEAD
     'Real-time monitoring and control',
     'Predictive maintenance capabilities',
     'Improved operational efficiency',
     'Cost reduction through automation',
     'Enhanced customer experiences',
     'Data-driven decision making',
+=======
+    'Real-time monitoring and control,Predictive maintenance capabilities,Improved operational efficiency,Cost reduction through automation,Enhanced customer experiences,Data-driven decision making'
+>>>>>>> main
   ];
 
   const industries = [
-    {
+  {
       title: 'Manufacturing',
       description:
         'Smart factories with connected machines and predictive maintenance',

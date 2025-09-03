@@ -18,10 +18,11 @@ import {
 
 export default function DeveloperPortal() {
   const developerResources = [
-    {
+  {
       title: 'API Documentation',
       description: 'Comprehensive API reference with examples and guides',
       icon: BookOpen,
+<<<<<<< HEAD
       features: [
         'REST API Reference',
         'Authentication Guide',
@@ -29,18 +30,28 @@ export default function DeveloperPortal() {
         'Error Handling',
       ],
       link: '/api',
+=======
+      features: ['REST API Reference,Authentication Guide,Rate Limits,Error Handling'],
+      link: '/api'
+>>>>>>> main
     },
     {
       title: 'SDKs & Libraries',
       description: 'Official SDKs for popular programming languages',
       icon: Code,
+<<<<<<< HEAD
       features: ['Python SDK', 'JavaScript SDK', 'Java SDK', 'C# SDK'],
       link: '/api',
+=======
+      features: ['Python SDK,JavaScript SDK,Java SDK,C# SDK'],
+      link: '/api'
+>>>>>>> main
     },
     {
       title: 'Code Examples',
       description: 'Ready-to-use code samples and tutorials',
       icon: Terminal,
+<<<<<<< HEAD
       features: [
         'Quick Start Guides',
         'Integration Examples',
@@ -48,11 +59,16 @@ export default function DeveloperPortal() {
         'Troubleshooting',
       ],
       link: '/docs',
+=======
+      features: ['Quick Start Guides,Integration Examples,Best Practices,Troubleshooting'],
+      link: '/docs'
+>>>>>>> main
     },
     {
       title: 'Developer Community',
       description: 'Connect with other developers and get support',
       icon: Users,
+<<<<<<< HEAD
       features: [
         'Discord Community',
         'GitHub Discussions',
@@ -61,10 +77,15 @@ export default function DeveloperPortal() {
       ],
       link: '#',
     },
+=======
+      features: ['Discord Community,GitHub Discussions,Stack Overflow,Developer Blog'],
+      link: '#'
+    }
+>>>>>>> main
   ];
 
   const tutorials = [
-    {
+  {
       title: 'Building Your First AI Application',
       description: 'Learn how to integrate AI services into your application',
       duration: '15 min',
@@ -99,43 +120,56 @@ export default function DeveloperPortal() {
   ];
 
   const tools = [
-    {
+  {
       name: 'API Explorer',
       description: 'Interactive API testing tool',
       icon: Zap,
+<<<<<<< HEAD
       features: [
         'Live API Testing',
         'Request Builder',
         'Response Viewer',
         'Code Generation',
       ],
+=======
+      features: ['Live API Testing,Request Builder,Response Viewer,Code Generation']
+>>>>>>> main
     },
     {
       name: 'CLI Tool',
       description: 'Command-line interface for developers',
       icon: Terminal,
+<<<<<<< HEAD
       features: [
         'Project Management',
         'Deployment',
         'Monitoring',
         'Configuration',
       ],
+=======
+      features: ['Project Management,Deployment,Monitoring,Configuration']
+>>>>>>> main
     },
     {
       name: 'VS Code Extension',
       description: 'IDE integration for seamless development',
       icon: Code,
+<<<<<<< HEAD
       features: [
         'Syntax Highlighting',
         'Auto-completion',
         'Debugging',
         'Snippets',
       ],
+=======
+      features: ['Syntax Highlighting,Auto-completion,Debugging,Snippets']
+>>>>>>> main
     },
     {
       name: 'Postman Collection',
       description: 'Pre-configured API collection',
       icon: ExternalLink,
+<<<<<<< HEAD
       features: [
         'All Endpoints',
         'Authentication',
@@ -147,6 +181,14 @@ export default function DeveloperPortal() {
 
   const communityStats = [
     { number: '10, 000+', label: 'Active Developers' },
+=======
+      features: ['All Endpoints,Authentication,Examples,Environment Variables']
+    }
+  ];
+
+  const communityStats = [
+  { number: '10,000+', label: 'Active Developers' },
+>>>>>>> main
     { number: '500+', label: 'GitHub Stars' },
     { number: '50+', label: 'Open Source Projects' },
     { number: '99.9%', label: 'API Uptime' },

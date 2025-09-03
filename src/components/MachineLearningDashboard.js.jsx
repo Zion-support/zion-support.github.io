@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import React, { useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';""
 import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react'
 ;""
+=======
+import React, { useState, useCallback }  from 'react';import { motion, AnimatePresence } from 'framer-motion
+import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 }  from 'lucide-react';
+;"
+>>>>>>> main
 export const MachineLearningDashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true","
 })''
@@ -11,6 +17,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
     const { models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction, exportModel, importModel } = useMachineLearning()
     const [newModelForm, setNewModelForm] = useState({}""
 ''
+<<<<<<< HEAD
 ''
 ''''
         name: '', ''''
@@ -21,6 +28,18 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 ''
 ''''
         modelId: '', ''''
+=======
+'''
+        name: ',''
+        type: 'classification,''
+        framework: 'tensorflow',
+})
+    const [predictionForm, setPredictionForm] = useState({}"
+'
+''
+'''
+        modelId: ',''
+>>>>>>> main
         input: '',
 })
     const handleCreateModel = useCallback(() => {}
@@ -123,6 +142,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
     const getModelTypeIcon = (type) => {}
         switch(type) {}""
 ''''
+<<<<<<< HEAD
 '''''';""
             case 'classification': return <Target className='w-4 h-4'/" >'';''''"
             case 'regression': return <TrendingUp className='w-4 h-4'/" >'';''''"
@@ -133,6 +153,18 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             default: return <Brain className='w-4 h-4'/" >}"
     }""
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}" >''''"
+=======
+'''''
+            case 'classification': return <Target className='w-4 h-4'/" >'''
+            case 'regression': return <TrendingUp className='w-4 h-4'/" >'''
+            case 'clustering': return <Activity className='w-4 h-4'/" >'''
+            case 'nlp': return <Brain className='w-4 h-4'/" >'''
+            case 'computer_vision': return <Eye className='w-4 h-4'/" >'''
+            case 'recommendation': return <Zap className='w-4 h-4'/" >'
+            default: return <Brain className='w-4 h-4'/" >}
+    }"
+    return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}" >'''
+>>>>>>> main
       {/* Header */}''''
       <div className='flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700'>''''
         <div className='flex items-center space-x-3'>''''
@@ -445,10 +477,17 @@ export const MachineLearningDashboard = ({ className = '' }) => {
               <h3 className='text-lg font-semibold text-gray-900 dark: text-white'>Training Jobs</h3>''''
               ''''
               <div className='space-y-4'>
+<<<<<<< HEAD
                 {trainingJobs.map((job) => {}""
 ''''
                 const model = models.find(m => m.id === job.modelId)';'''
                 return (<div key={job.id} className='bg-gray-50 dark: bg-gray-800 p-4 rounded-lg'>''''
+=======
+                {trainingJobs.map((job) => {}"
+'''
+                const model = models.find(m => m.id === job.modelId)'
+                return (<div key={job.id} className='bg-gray-50 dark:bg-gray-800 p-4 rounded-lg'>''''
+>>>>>>> main
                       <div className='flex items-center justify-between mb-3'>''''
                         <div className='flex items-center space-x-3'>''''
                           <div className='p-2 bg-purple-100 dark:bg-purple-900 rounded-lg'>''''
@@ -554,10 +593,17 @@ export const MachineLearningDashboard = ({ className = '' }) => {
               <div className='bg-gray-50 dark:bg-gray-800 p-4 rounded-lg'>''''
                 <h4 className='font-medium text-gray-900 dark:text-white mb-3'>Recent Predictions</h4>''''
                 <div className='space-y-3'>
+<<<<<<< HEAD
                   {predictions.slice(0, 5).map((prediction) => {}""
 ''''
                 const model = models.find(m => m.id === prediction.modelId)';'''
                 return (<div key={prediction.id} className='bg-white dark: bg-gray-700 p-3 rounded-lg'>''''
+=======
+                  {predictions.slice(0, 5).map((prediction) => {}"
+'''
+                const model = models.find(m => m.id === prediction.modelId)'
+                return (<div key={prediction.id} className='bg-white dark:bg-gray-700 p-3 rounded-lg'>''''
+>>>>>>> main
                         <div className='flex items-center justify-between mb-2'>''''
                           <div className='flex items-center space-x-2'>''''
                             <span className='text-sm font-medium text-gray-900 dark:text-white'>'`'

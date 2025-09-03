@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'''
 import { motion, AnimatePresence } from 'framer-motion';""
+=======
+import React, { useState, useEffect }  from 'react
+import { motion, AnimatePresence } from 'framer-motion
+>>>>>>> main
 import { ADVANCED_MICRO_SERVICES } from '../data/advancedMicroServices.jsx';
 const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false)
     return (<motion .div initial = {}
@@ -137,10 +142,16 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
 export const FuturisticServicesShowcase = () => {}""
 ''
 ''
+<<<<<<< HEAD
 ''';"'"
     const [selectedCategory, setSelectedCategory] = useState('all')';'
     const [searchTerm, setSearchTerm] = useState('')''
     const [visibleServices, setVisibleServices] = useState(new Set())';'
+=======
+    const [selectedCategory, setSelectedCategory] = useState('all')
+    const [searchTerm, setSearchTerm] = useState('')'
+    const [visibleServices, setVisibleServices] = useState(new Set())
+>>>>>>> main
     const categories = ['all', ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category))]
     const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {}
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -148,10 +159,17 @@ export const FuturisticServicesShowcase = () => {}""
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
         return matchesCategory && matchesSearch})
     // Set all services as visible initially for better UX
+<<<<<<< HEAD
     useEffect(() => {}""
         const allIndices = new Set(filteredServices.map((_, index) => index))';'
         setVisibleServices(allIndices)}, [filteredServices])';'''
     return (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20'>''''
+=======
+    useEffect(() => {}"
+        const allIndices = new Set(filteredServices.map((_, index) => index))
+        setVisibleServices(allIndices)}, [filteredServices])'
+    return (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20'>'''
+>>>>>>> main
       {/* Animated Background */}''''
       <div className='absolute inset-0 overflow-hidden'>''''
         <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5'></div>''''

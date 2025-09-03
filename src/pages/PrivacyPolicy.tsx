@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';""
 import { SEO } from '../components/SEO';""
 import { Shield, Eye, Lock, Database, Users, Globe } from 'lucide-react';""
+=======
+import { motion } from 'framer-motion
+import { SEO } from '../components/SEO
+import { motion } from 'framer-motion
+import { SEO } from '../components/SEO
+import { Shield, Eye, Lock, Database, Users, Globe } from 'lucide-react
+>>>>>>> main
 import { Shield, Eye, Lock, Database, Users, Globe } from 'lucide-react';
 export default function PrivacyPolicy() {
   return (
@@ -17,17 +25,35 @@ export default function PrivacyPolicy() {
           <div className="container mx-auto px-4">
             <motion .div
               initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
               animate={{ opacity: 1, y: 0 }}""
               transition={{ duration: 0.8 }}""
               className="text-center max-w-4xl mx-auto""" >""
+=======
+              animate={{ opacity: 1, y: 0 }}"
+              transition={{ duration: 0.8 }}"
+              className='text-center max-w-4xl mx-auto' >"
+>>>>>>> main
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Privacy Policy""
               </h1>""
               <p className="text-xl text-gray-300 mb-8">
                 Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.
+<<<<<<< HEAD
               </p>""
               <div className="flex items-center justify-center">""
                 <Shield className="w-16 h-16 text-blue-400" /" >"
+=======
+<<<<<<< HEAD
+              </p>
+              <div className="flex items-center justify-center">
+                <Shield className="w-16 h-16 text-blue-400" />
+=======
+              </p>"
+              <div className="flex items-center justify-center">"
+                <Shield className="w-16 h-16 text-blue-400" /" >
+>>>>>>> main
+>>>>>>> main
               </div>
             </motion.div>
           </div>
@@ -38,11 +64,19 @@ export default function PrivacyPolicy() {
           <div className="container mx-auto px-4 max-w-4xl">
             <motion .div
               initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
               whileInView={{ opacity: 1, y: 0 }}""
               transition={{ duration: 0.8 }}""
               className="prose prose-lg prose-invert max-w-none""" >""
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50">""
                 <h2 className="text-2xl font-bold text-white mb-4">Information We Collect</h2>""
+=======
+              whileInView={{ opacity: 1, y: 0 }}"
+              transition={{ duration: 0.8 }}"
+              className='prose prose-lg prose-invert max-w-none' >"
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50">"
+                <h2 className="text-2xl font-bold text-white mb-4">Information We Collect</h2>"
+>>>>>>> main
                 <p className="text-gray-300 mb-4">
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support.""
@@ -85,7 +119,15 @@ export default function PrivacyPolicy() {
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">""
                 <h2 className="text-2xl font-bold text-white mb-4">Your Rights</h2>""
                 <p className="text-gray-300 mb-4">
+<<<<<<< HEAD
                   You have certain rights regarding your personal information, including: </p>""
+=======
+<<<<<<< HEAD
+                  You have certain rights regarding your personal information, including: </p>
+=======
+                  You have certain rights regarding your personal information, including: </p>"
+>>>>>>> main
+>>>>>>> main
                 <ul className="text-gray-300 space-y-2">
                   <li>• Access to your personal information</li>
                   <li>• Correction of inaccurate information</li>
@@ -97,7 +139,15 @@ export default function PrivacyPolicy() {
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">""
                 <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>""
                 <p className="text-gray-300 mb-4">
+<<<<<<< HEAD
                   If you have any questions about this Privacy Policy, please contact us at: </p>""
+=======
+<<<<<<< HEAD
+                  If you have any questions about this Privacy Policy, please contact us at: </p>
+=======
+                  If you have any questions about this Privacy Policy, please contact us at: </p>"
+>>>>>>> main
+>>>>>>> main
                 <div className="text-gray-300">
                   <p>Email: privacy@ziontechgroup.com</p>
                   <p>Phone: +1 302 464 0950</p>
@@ -109,6 +159,15 @@ export default function PrivacyPolicy() {
         </section>
       </div>
 </>
+<<<<<<< HEAD
+  );
+}
+=======
   );,
 }
+<<<<<<< HEAD
 ""
+=======
+"
+>>>>>>> main
+>>>>>>> main

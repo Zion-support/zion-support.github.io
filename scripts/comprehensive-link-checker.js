@@ -47,6 +47,7 @@ const axios = require(,;);  axios');';const cheerio = require(;);  'cheerio');';
   async checkSitemapUrls() {;
     console.log(;);  '\n=== Checking Sitemap URLs ===');';    const promises = this.sitemapUrls.map(url => this.checkUrl(url, null, 0));
     await Promise.all(promises)}
+<<<<<<< HEAD
   async checkNavigationLinks() {;
     console.log(;);  '\n=== Checking Navigation Links ===');';    const navigationUrls = [;';  '/',';  '/about',';  '/services',';  '/solutions',';  '/pricing',';  '/contact',';  '/blog',';  '/careers',';  '/team',';  '/partners',';  '/case-studies',';  '/news',';  '/help',';  '/faq',';  '/marketplace',';  '/dashboard',';  '/login',';  '/search',';  '/it-consulting',';  '/ai-solutions',';  '/solutions/enterprise',';  '/solutions/healthcare',';  '/research-development',';  '/request-quote',';  '/green-it',';  '/space-tech'    ];';    const promises = navigationUrls.map(url =>;);      this.checkUrl(`${this.baseUrl}${url}`, null, 0));`;    await Promise.all(promises)}
   async checkServicePages() {;
@@ -73,6 +74,105 @@ const axios = require(,;);  axios');';const cheerio = require(;);  'cheerio');';
       recommendations.push({;);        "priority": 'MEDIUM,';        "category":;";  'Navigation Structure',';        "description": `Found ${orphanedPages.length} pages that may be difficult to discover`,`;        "actions": [;";  'Review navigation structure',';  'Add breadcrumbs to deep pages',';  'Improve internal linking strategy';';        ]      })}';    return recommendations}
   async run() {;
     console.log(;);  '🚀 Starting Comprehensive Link Check for Zion Tech Group');';    console.log(`Base "URL": ${this.baseUrl}`);`;    try {;
+=======
+  async checkNavigationLinks() {
+    console.log(
+  '\n=== Checking Navigation Links ===');
+    const navigationUrls = [
+  '/,/about,/services,/solutions,/pricing,/contact,/blog,/careers,/team,/partners,/case-studies,/news,/help,/faq,/marketplace,/dashboard,/login,/search,/it-consulting,/ai-solutions,/solutions/enterprise,/solutions/healthcare,/research-development,/request-quote,/green-it,/space-tech'    ];
+    const promises = navigationUrls.map(url =>;
+      this.checkUrl(`${this.baseUrl}${url}`, null, 0));
+    await Promise.all(promises)}
+  async checkServicePages() {
+    console.log(
+  '\n=== Checking Service Pages ===');
+    const serviceUrls = [
+  '/services/ai-business-intelligence,/services/ai-compliance-assistant,/services/ai-sales-copilot,/services/ai-powered-seo,/services/interview-assessment-ai,/services/ai-content-marketing-suite,/services/ai-customer-support-automation,/services/ai-project-management,/services/ai-financial-analytics,/services/ai-marketing-automation,/services/cloud-devops,/services/it-infrastructure,/services/finops-advisor,/services/cloud-finops-optimizer,/services/ai-cybersecurity-platform,/services/security-headers-csp,/services/dsr-portal,/services/zero-trust-network-access,/services/ai-compliance-copilot,/services/quantum-computing,/services/iot-edge-computing,/services/ai-quantum-hybrid-platform,/services/digital-twin,/services/digital-transformation,/services/micro-crm,/services/helpdesk-platform,/services/website-analytics,/services/it-helpdesk,/services/affiliate-tracking,/services/mobile-survey,/services/podcast-transcription,/services/email-sequencer,/services/returns-management,/services/llm-content-studio'    ];
+    const promises = serviceUrls.map(url =>;
+      this.checkUrl(`${this.baseUrl}${url}`, null, 0));
+    await Promise.all(promises)}
+  generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: {
+        totalUrls: this.visitedUrls.size,
+        workingLinks: this.workingLinks.length,
+        brokenLinks: this.brokenLinks.length,
+        missingPages: this.missingPages.length},
+      workingLinks: this.workingLinks,
+      brokenLinks: this.brokenLinks,
+      missingPages: this.missingPages,
+      recommendations: this.generateRecommendations()}
+    // Save detailed report;
+    fs.writeFileSync(
+      path.join(__dirname,
+  '../reports/comprehensive-link-check-report.json'),
+      JSON.stringify(report, null, 2));
+    // Save summary report;
+    const summaryReport = {
+      timestamp: report.timestamp,
+      summary: report.summary,
+      brokenLinks: this.brokenLinks.map(link => ({
+        url: link.url,
+        status: link.status,
+        error: link.error,
+        parent: link.parent})),
+      recommendations: report.recommendations}
+    fs.writeFileSync(
+      path.join(__dirname,
+,
+  ../reports/link-check-summary.json'),
+      JSON.stringify(summaryReport, null, 2));
+    return report}
+  generateRecommendations() {
+    const recommendations = [];
+    if (this.brokenLinks.length > 0) {
+      recommendations.push({
+        priority: 'HIGH,
+        category:;
+  'Broken Links',
+        description: `Found ${this.brokenLinks.length} broken links that need immediate attention`,
+        actions: [,
+  Fix all broken links identified in the report,Update internal navigation to remove broken links,Implement 301 redirects for moved pages,Add proper error handling for missing content';
+        ]      })}
+    // Check for missing important pages;
+    const importantPages = [
+  '/about,/services,/contact,/pricing,/privacy,/terms'    ];
+    const missingImportant = importantPages.filter(
+      page => !this.workingLinks.some(link => link.url.endsWith(page)));
+    if (missingImportant.length > 0) {
+      recommendations.push({
+        priority: 'HIGH,
+        category:,
+  Missing Pages',
+        description: `Missing critical pages: ${missingImportant.join(, ,
+  )}`,
+        actions: [;
+  'Create missing critical pages,
+,
+  Ensure proper navigation structure,Add SEO meta tags and content';
+        ]      })}
+    // Check for orphaned pages;
+    const orphanedPages = this.workingLinks.filter(
+      link =>;
+        link.depth > 1 &&;
+        !this.brokenLinks.some(broken => broken.parent === link.url));
+    if (orphanedPages.length > 0) {
+      recommendations.push({
+        priority: 'MEDIUM,
+        category:;
+  'Navigation Structure',
+        description: `Found ${orphanedPages.length} pages that may be difficult to discover`,
+        actions: [;
+  'Review navigation structure,Add breadcrumbs to deep pages,Improve internal linking strategy';
+        ]      })}
+    return recommendations}
+  async run() {
+    console.log(
+  '🚀 Starting Comprehensive Link Check for Zion Tech Group');
+    console.log(`Base URL: ${this.baseUrl}`);
+    try {
+>>>>>>> main
       await this.loadSitemap();
       await this.checkSitemapUrls();
       await this.checkNavigationLinks();

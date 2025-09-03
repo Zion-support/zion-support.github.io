@@ -17,7 +17,7 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const services = [
-    {
+  {
       name: 'AI Services',
       href: '/ai-services',
       icon: Brain,
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
     },
   ];
   const navigation = [
-    { name: 'Home', href: '/' },
+  { name: 'Home', href: '/' },
     { name: 'Services', href: '/services', hasDropdown: true },
     { name: 'Pricing', href: '/pricing-guide' },
     { name: 'About', href: '/about' },

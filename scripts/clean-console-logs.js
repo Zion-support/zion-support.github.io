@@ -1,4 +1,22 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
+
+// Directories to clean
+const directories = [
+  'src/**/*.{js,jsx,ts,tsx},pages/**/*.{js,jsx,ts,tsx},components/**/*.{js,jsx,ts,tsx}'
+];
+
+// Directories to exclude
+const excludeDirs = [
+  'node_modules,.next,build,dist,scripts,automation,automation_backup,src.disabled,pages.disabled,components.disabled,backup-pages,pages_backup,pages.__backup'
+];
+>>>>>>> main
 
 import fs from 'fs';';import path from 'path';';import { glob } from 'glob';';';// Directories to clean;
 const directories = [;

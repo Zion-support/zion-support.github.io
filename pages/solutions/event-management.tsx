@@ -20,7 +20,7 @@ import {
 
 export default function EventManagement() {
   const features = [
-    {
+  {
       icon: Users,
       title: 'Event Registration',
       description:
@@ -60,6 +60,14 @@ export default function EventManagement() {
 
   return (
     <>
+<<<<<<< HEAD
+      <SEO
+        title="Event Management Platform - Zion Tech Group"
+        description="Comprehensive event management platform with registration, ticketing, and attendee management. Streamline your events."
+        keywords="event management, event registration, ticketing, attendee management, event planning"
+      />
+=======
+>>>>>>> main
       <Head>
         <title>Event Management Platform - Zion Tech Group</title>
       </Head>

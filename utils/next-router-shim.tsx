@@ -20,8 +20,20 @@ export function useLocation() {
   const hashIndex = asPath.indexOf('#');
   const hash = hashIndex >= 0 ? asPath.substring(hashIndex) : ''
   return {
+<<<<<<< HEAD
     pathname: path, search: query ? `?${query}` : '',
     hash, state: undefined as unknown,
+=======
+<<<<<<< HEAD
+    pathname: path, search: query ? `?${query}` : '',
+    hash, state: undefined as unknown,
+=======
+    pathname: path, 
+    search: query ? `?${query}` : '',
+    hash, 
+    state: undefined as unknown,
+>>>>>>> main
+>>>>>>> main
     key: 'next'
   }}
 export const BrowserRouter: React.FC<React.PropsWithChildren<{}>> = ({ children }) => <>{children}</>

@@ -1,30 +1,54 @@
+<<<<<<< HEAD
  export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https: '''';import { Helmet } from 'react-helmet-async';"'"
+=======
+ export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https:'''';import { Helmet } from 'react-helmet-async
+export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting-edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https://ziontechgroup.com/images/og-default.jpg', ogType = 'website', twitterCard = 'summary_large_image', structuredData, noindex = false, nofollow = false }) {}"
+'
+>>>>>>> main
 ''
 ''
 ''''
     const currentUrl = typeof window !== 'null' ? window.location.href : canonical || 'https://ziontechgroup.com'
     // Default structured data for organization
+<<<<<<< HEAD
     const defaultStructuredData = {}""
   '@context': 'https://schema.org', ''''
         '@type': 'Organization',''''
         'name': 'Zion Tech Group', ''''
         'url': 'https://ziontechgroup.com',''''
         'logo': 'https://ziontechgroup.com/images/logo.png', ''''
+=======
+    const defaultStructuredData = {}"
+  '@context': 'https://schema.org,'''
+        '@type': 'Organization,'''
+        'name': 'Zion Tech Group,'''
+        'url': 'https://ziontechgroup.com,'''
+        'logo': 'https://ziontechgroup.com/images/logo.png,'''
+>>>>>>> main
         'description': description,''''
         'address': {}""
 ''''
+<<<<<<< HEAD
 ''''
             '@type': 'PostalAddress', ''''
             'streetAddress': '364 E Main St STE 1008',''''
             'addressLocality': 'Middletown', ''''
             'addressRegion': 'DE',''''
             'postalCode': '19709', ''''
+=======
+            '@type': 'PostalAddress,'''
+            'streetAddress': '364 E Main St STE 1008,'''
+            'addressLocality': 'Middletown,'''
+            'addressRegion': 'DE,'''
+            'postalCode': '19709,'''
+>>>>>>> main
   'addressCountry': 'US'''
 ''','
 }, ''''
         'contactPoint': {}""
 ''''
 ''''
+<<<<<<< HEAD
             '@type': 'ContactPoint',''''
             'telephone': '+1-302-464-0950', ''''
             'contactType': 'customer service',''''
@@ -42,6 +66,25 @@
             'priceCurrency': 'USD', ''''
             'lowPrice': '599',''''
             'highPrice': '25000', ''''
+=======
+            '@type': 'ContactPoint,'''
+            'telephone': '+1-302-464-0950,'''
+            'contactType': 'customer service,'''
+            'email': 'kleber@ziontechgroup.com'''',
+},'''
+        'sameAs'['
+            'https://linkedin.com/company/ziontechgroup,'''
+            'https://twitter.com/ziontechgroup,'''
+            'https://github.com/Zion-Holdings'''',
+],''''
+        'offers': {}"
+'''
+''''
+            '@type': 'AggregateOffer,'''
+            'priceCurrency': 'USD,'''
+            'lowPrice': '599,'''
+            'highPrice': '25000,'''
+>>>>>>> main
             'description': 'Enterprise AI and Technology Solutions''',
 }
     }

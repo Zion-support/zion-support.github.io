@@ -5,9 +5,17 @@ import { Code, Key, Globe, Database, Shield, Zap, ArrowRight, Copy, CheckCircle,
 
 export default function API() {
   const apiEndpoints = [
+<<<<<<< HEAD
     {
       method: 'GET', endpoint: '/api/v1/ai/models',
       description: 'List all available AI models', category: 'AI Services',
+=======
+  {
+      method: 'GET',
+      endpoint: '/api/v1/ai/models',
+      description: 'List all available AI models',
+      category: 'AI Services',
+>>>>>>> main
       auth: 'Required'
     }, {
       method: 'POST',
@@ -35,6 +43,7 @@ export default function API() {
   ];
 
   const sdkLanguages = [
+<<<<<<< HEAD
     {
       name: 'Python', version: 'v2.1.0',
       description: 'Official Python SDK for Zion Tech Group APIs', icon: '🐍',
@@ -51,12 +60,47 @@ export default function API() {
       name: 'C#',
       version: 'v1.3.0', description: '.NET SDK for Windows applications',
       icon: '🔷', features: ['NuGet package', 'Async/await', 'LINQ support', 'Documentation']
+=======
+  {
+      name: 'Python',
+      version: 'v2.1.0',
+      description: 'Official Python SDK for Zion Tech Group APIs',
+      icon: '🐍',
+      features: ['Async support,Type hints,Error handling,Documentation']
+    },
+    {
+      name: 'JavaScript',
+      version: 'v1.8.0',
+      description: 'Node.js and browser-compatible JavaScript SDK',
+      icon: '🟨',
+      features: ['Promise-based,Browser support,TypeScript,Examples']
+    },
+    {
+      name: 'Java',
+      version: 'v1.5.0',
+      description: 'Java SDK for enterprise applications',
+      icon: '☕',
+      features: ['Maven support,Async operations,Logging,Testing']
+    },
+    {
+      name: 'C#',
+      version: 'v1.3.0',
+      description: '.NET SDK for Windows applications',
+      icon: '🔷',
+      features: ['NuGet package,Async/await,LINQ support,Documentation']
+>>>>>>> main
     }
   ];
 
   const codeExamples = [
+<<<<<<< HEAD
     {
       title: 'AI Model Prediction', language: 'python',
+=======
+  {
+      title: 'AI Model Prediction',
+      language: 'python',
+>>>>>>> main
       code: `import ziontech
 
 # Initialize client
@@ -90,14 +134,20 @@ console.log(deployment.url);`, description: 'Deploy your application to the clou
       code: `curl -X POST "https://api.ziontechgroup.com/v1/security/scan" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
+<<<<<<< HEAD
   -d '{'
     "target": "https://example.com", "scan_type": "vulnerability"
+=======
+  -d '{
+    "target": "https://example.com,scan_type": "vulnerability"
+>>>>>>> main
   }'`,
       description: 'Perform security scans using our API'
     }
   ];
 
   const rateLimits = [
+<<<<<<< HEAD
     {
       plan: 'Free', requests: '1,000/month', burst: '10/minute',
       features: ['Basic API access', 'Community support']
@@ -108,6 +158,25 @@ console.log(deployment.url);`, description: 'Deploy your application to the clou
     }, {
       plan: 'Enterprise',
       requests: 'Unlimited', burst: '1,000/minute', features: ['Unlimited access', 'Dedicated support', 'Custom limits']
+=======
+  {
+      plan: 'Free',
+      requests: '1,000/month',
+      burst: '10/minute',
+      features: ['Basic API access,Community support']
+    },
+    {
+      plan: 'Professional',
+      requests: '100,000/month',
+      burst: '100/minute',
+      features: ['Full API access,Priority support,Webhooks']
+    },
+    {
+      plan: 'Enterprise',
+      requests: 'Unlimited',
+      burst: '1,000/minute',
+      features: ['Unlimited access,Dedicated support,Custom limits']
+>>>>>>> main
     }
   ];
 

@@ -5,6 +5,7 @@ import { HelpCircle, MessageCircle, Phone, Mail, Clock, Search, BookOpen, Users,
 
 export default function Support() {
   const supportOptions = [
+<<<<<<< HEAD
     {
       title: 'Help Center', description: 'Browse our comprehensive knowledge base and FAQ',
       icon: BookOpen, features: ['Searchable articles', 'Step-by-step guides', 'Video tutorials', 'Troubleshooting'], link: '/help'
@@ -20,12 +21,47 @@ export default function Support() {
     {
       title: 'Email Support', description: 'Send us detailed questions and get comprehensive answers',
       icon: Mail, features: ['Detailed responses', 'Documentation', 'Screenshots', 'Case tracking'], link: 'mailto:support@ziontechgroup.com'
+=======
+  {
+      title: 'Help Center',
+      description: 'Browse our comprehensive knowledge base and FAQ',
+      icon: BookOpen,
+      features: ['Searchable articles,Step-by-step guides,Video tutorials,Troubleshooting'],
+      link: '/help'
+    },
+    {
+      title: 'Live Chat',
+      description: 'Get instant help from our support team',
+      icon: MessageCircle,
+      features: ['24/7 availability,Instant responses,Screen sharing,File sharing'],
+      link: '#'
+    },
+    {
+      title: 'Phone Support',
+      description: 'Speak directly with our technical experts',
+      icon: Phone,
+      features: ['Priority support,Technical consultation,Emergency assistance,Follow-up calls'],
+      link: 'tel:+13024640950'
+    },
+    {
+      title: 'Email Support',
+      description: 'Send us detailed questions and get comprehensive answers',
+      icon: Mail,
+      features: ['Detailed responses,Documentation,Screenshots,Case tracking'],
+      link: 'mailto:support@ziontechgroup.com'
+>>>>>>> main
     }
   ];
 
   const faqCategories = [
+<<<<<<< HEAD
     {
       title: 'Getting Started', questions: [
+=======
+  {
+      title: 'Getting Started',
+      questions: [
+>>>>>>> main
         {
           question: 'How do I create an account?',
           answer: 'You can create an account by visiting our sign-up page and providing your email address and basic information. We\'ll send you a verification email to complete the process.'
@@ -67,6 +103,7 @@ export default function Support() {
   ];
 
   const supportTiers = [
+<<<<<<< HEAD
     {
       name: 'Community Support', description: 'Free support through our community forums and knowledge base',
       responseTime: '24-48 hours', features: [
@@ -91,14 +128,52 @@ export default function Support() {
         'Custom integrations', 'SLA guarantees',
         'On-site support'
       ], price: 'Custom Pricing'
+=======
+  {
+      name: 'Community Support',
+      description: 'Free support through our community forums and knowledge base',
+      responseTime: '24-48 hours',
+      features: [
+        'Community forums,Knowledge base access,Basic documentation,Email support'
+      ],
+      price: 'Free'
+    },
+    {
+      name: 'Standard Support',
+      description: 'Professional support for business users',
+      responseTime: '4-8 hours',
+      features: [
+        'Priority email support,Live chat support,Phone support,Advanced documentation,API support'
+      ],
+      price: 'Included with Professional Plan'
+    },
+    {
+      name: 'Premium Support',
+      description: 'Dedicated support for enterprise customers',
+      responseTime: '1-2 hours',
+      features: [
+        'Dedicated support manager,24/7 phone support,Priority ticket handling,Custom integrations,SLA guarantees,On-site support'
+      ],
+      price: 'Custom Pricing'
+>>>>>>> main
     }
   ];
 
   const contactMethods = [
+<<<<<<< HEAD
     {
       title: 'General Inquiries', email: 'info@ziontechgroup.com',
       phone: '+1 302 464 0950', hours: 'Monday - Friday, 9 AM - 6 PM EST'
     }, {
+=======
+  {
+      title: 'General Inquiries',
+      email: 'info@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      hours: 'Monday - Friday, 9 AM - 6 PM EST'
+    },
+    {
+>>>>>>> main
       title: 'Technical Support',
       email: 'support@ziontechgroup.com', phone: '+1 302 464 0951',
       hours: '24/7 for Premium customers'

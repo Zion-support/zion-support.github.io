@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Layout Components""
 import { EnhancedHeader } from './components/EnhancedHeader';""
 import { EnhancedFooter } from './components/EnhancedFooter';""
+=======
+import React, { Suspense, lazy }  from 'react';import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// Layout Components"
+import { EnhancedHeader } from './components/EnhancedHeader
+import { EnhancedFooter } from './components/EnhancedFooter
+>>>>>>> main
 import { Sidebar } from './components/Sidebar';
 // Loading component
 const LoadingSpinner = () => (""
@@ -181,21 +188,170 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
       <p className='text-gray-300 mb-6'>""
         {error.message || 'An unexpected error occurred'}      </p>""
       <div className='space-y-3'>
+<<<<<<< HEAD
         <button onClick={resetErrorBoundary}""
           className='w-full bg-cyan-500 hover: bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors'" >"
+=======
+<<<<<<< HEAD
+        <button
+          onClick={resetErrorBoundary}
+          className='w-full bg-cyan-500 hover: bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors'        >
+          Try again
+        </button>
+        <button;
+          onClick={() => window.location.href = '/'}
+          className='w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors'>
+=======
+        <button onClick={resetErrorBoundary}"
+          className='w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors'" >
+>>>>>>> main
           Try again
         </button>
         <button ""
           onClick={() =" > window.location.href = '/'}"
           className='w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors'
         >
+>>>>>>> main
           Go home
         </button>
       </div>
     </div>
   </div>
+<<<<<<< HEAD
 ), }
                     />""
+=======
+<<<<<<< HEAD
+)}
+                    />
+                    <Route path='/about' element={<About />} />
+                    <Route path='/contact' element={<Contact />} />
+                    <Route path='/blog' element={<Blog />} />
+                    <Route path='/careers' element={<Careers />} />
+                    <Route path='/partners' element={<Partners />} />
+                    <Route path='/services' element={<Services />} />
+                    <Route path='/faq' element={<FAQ />} />
+                    <Route path='/privacy' element={<Privacy />} />
+                    <Route path='/terms' element={<Terms />} />
+                    <Route path='/cookies' element={<Cookies />} />
+                    <Route path='/data-protection' element={<DataProtection />} />
+                    <Route path='/accessibility' element={<Accessibility />} />
+                    <Route path='/sitemap' element={<Sitemap />} />{/* Service Routes */}
+                    <Route path='/services-pricing' element={<ServicesPricingPage />} />
+                    <Route path='/system-status' element={<SystemStatus />} />
+                    <Route path='/search' element={<Search />} />
+                    <Route path='/documentation' element={<Documentation />} />
+                    <Route path='/marketplace' element={<Marketplace />} />
+                    <Route path='/training' element={<Training />} />
+                    <Route path='/webinars' element={<Webinars />} />
+                    <Route path='/api-playground' element={<ApiPlayground />} />
+                    <Route path='/research' element={<Research />} />
+                    <Route path='/categories' element={<Categories />} />
+                    <Route path='/login' element={<Login />} />{/* 2028 Innovative AI Services */}
+                    <Route path='/services/ai-autonomous-vehicle-management-platform' element={<AIAutonomousVehicleManagementPlatform />} />
+                    <Route path='/services/ai-smart-city-infrastructure-management' element={<AISmartCityInfrastructureManagement />} />
+                    <Route path='/services/ai-quantum-financial-trading-platform' element={<AIQuantumFinancialTradingPlatform />} />{/* 2028 Services Showcase */}
+                    <Route path='/innovative-services-showcase-2028' element={<InnovativeServicesShowcase2028 />} />{/* 2025 Innovative Services Showcase and Pricing Guide */}
+                    <Route path='/innovative-services-showcase-2025' element={<InnovativeServicesShowcase2025 />} />
+                    <Route path='/ultimate-innovative-services-showcase-2025' element={<UltimateInnovativeServicesShowcase2025 />} />
+                    <Route path='/new-services-showcase-2025' element={<NewServicesShowcase2025 />} />{/* Service Detail Routes */}
+                    <Route path='/services/ai-business-intelligence' element={<AIBusinessIntelligence />} />
+                    <Route path='/services/ai-compliance-assistant' element={<AIComplianceAssistant />} />
+                    <Route path='/services/ai-sales-copilot' element={<AISalesCopilot />} />
+                    <Route path='/services/ai-seo' element={<AIPoweredSEO />} />
+                    <Route path='/services/interview-assessment' element={<InterviewAssessmentAI />} />
+                    <Route path='/services/ai-content-marketing-suite' element={<AIContentMarketingSuite />} />
+                    <Route path='/services/ai-customer-support-automation' element={<AICustomerSupportAutomation />} />
+                    <Route path='/services/ai-project-management' element={<AIProjectManagement />} />
+                    <Route path='/services/ai-financial-analytics' element={<AIFinancialAnalytics />} />
+                    <Route path='/services/cloud-devops' element={<CloudDevOps />} />
+                    <Route path='/services/it-infrastructure' element={<ITInfrastructure />} />
+                    <Route path='/services/finops-advisor' element={<FinOpsAdvisor />} />
+                    <Route path='/services/cloud-finops-optimizer' element={<CloudFinOpsOptimizer />} />
+                    <Route path='/services/ai-cybersecurity-platform' element={<AICybersecurityPlatform />} />
+                    <Route path='/services/security-headers-csp' element={<SecurityHeadersCSP />} />
+                    <Route path='/services/dsr-portal' element={<DSRPortal />} />
+                    <Route path='/services/zero-trust-network-access' element={<ZeroTrustNetworkAccess />} />
+                    <Route path='/services/digital-twin' element={<DigitalTwin />} />
+                    <Route path='/services/digital-transformation' element={<DigitalTransformation />} />
+                    <Route path='/services/quantum-computing' element={<QuantumComputing />} />
+                    <Route path='/services/iot-edge-computing' element={<IoTEdgeComputing />} />
+                    <Route path='/services/ai-quantum-hybrid-platform' element={<AIQuantumHybridPlatform />} />
+                    <Route path='/services/space-tech' element={<SpaceTech />} />
+                    <Route path='/services/data-analytics' element={<DataAnalytics />} />
+                    <Route path='/services/micro-crm' element={<MicroCRM />} />
+                    <Route path='/services/helpdesk' element={<HelpdeskPlatform />} />
+                    <Route path='/services/website-analytics' element={<WebsiteAnalytics />} />
+                    <Route path='/services/ai-autonomous-research-assistant' element={<AIAutonomousResearchAssistant />} />
+                    <Route path='/services/ai-supply-chain-optimization' element={<AISupplyChainOptimization />} />
+                    <Route path='/services/ai-healthcare-platform' element={<AIHealthcarePlatform />} />{/* AI Service Routes */}
+                    <Route path='/services/ai-legal-document-automation' element={<AILegalDocumentAutomation />} />
+                    <Route path='/services/ai-healthcare-analytics' element={<AIHealthcareAnalytics />} />
+                    <Route path='/services/ai-cybersecurity-threat-intelligence' element={<AICybersecurityThreatIntelligence />} />
+                    <Route path='/services/ai-supply-chain-optimization' element={<AISupplyChainOptimization />} />
+                    <Route path='/services/ai-financial-trading' element={<AIFinancialTrading />} />
+                    <Route path='/services/ai-content-creation-suite' element={<AIContentCreationSuite />} />
+                    <Route path='/services/ai-workflow-orchestrator' element={<AIWorkflowOrchestrator />} />
+                    <Route path='/services/ai-data-governance-platform' element={<AIDataGovernancePlatform />} />
+                    <Route path='/services/ai-customer-experience-analytics' element={<AICustomerExperienceAnalytics />} />
+                    <Route path='/services/ai-financial-risk-management' element={<AIFinancialRiskManagement />} />
+                    <Route path='/services/ai-hr-talent-acquisition' element={<AIHRTalentAcquisition />} />
+                    <Route path='/services/ai-iot-edge-computing' element={<AIIoTEdgeComputing />} />
+                    <Route path='/services/ai-predictive-maintenance' element={<AIPredictiveMaintenance />} />
+                    <Route path='/services/ai-sustainable-technology' element={<AISustainableTechnology />} />
+                    <Route path='/services/ai-quantum-machine-learning' element={<AIQuantumMachineLearning />} />{/* 2025 New Innovative Services */}
+                    <Route path='/services/ai-supply-chain-risk-management' element={<AISupplyChainRiskManagement />} />
+                    <Route path='/services/ai-esg-compliance-platform' element={<AIESGCompliancePlatform />} />
+                    <Route path='/services/ai-digital-twin-platform' element={<AIDigitalTwinPlatform />} />
+                    <Route path='/services/ai-quantum-computing-platform' element={<AIQuantumComputingPlatform />} />
+                    <Route path='/services/ai-edge-computing-platform' element={<AIEdgeComputingPlatform />} />{/* 2025 Additional Innovative Services - New */}
+                    <Route path='/services/ai-customer-journey-orchestration-platform' element={<AICustomerJourneyOrchestrationPlatform />} />
+                    <Route path='/services/quantum-enhanced-cybersecurity-operations-center' element={<QuantumEnhancedCybersecurityOperationsCenter />} />
+                    <Route path='/services/ai-driven-sustainability-analytics-platform' element={<AIDrivenSustainabilityAnalyticsPlatform />} />
+                    <Route path='/services/autonomous-digital-twin-management-system' element={<AutonomousDigitalTwinManagementSystem />} />{/* New Innovative Services 2025 */}
+                    <Route path='/services/ai-email-automation-suite' element={<AIEmailAutomationSuite />} />
+                    <Route path='/services/ai-social-media-scheduler' element={<AISocialMediaScheduler />} />
+                    <Route path='/services/ai-powered-devops-automation' element={<AIPoweredDevOpsAutomation />} />
+                    <Route path='/services/ai-customer-insights-platform' element={<AICustomerInsightsPlatform />} />{/* Additional Service Routes */}
+                    <Route path='/services/ai-cybersecurity' element={<AICybersecurity />} />
+                    <Route path='/services/ai-hr-platform' element={<AIHRPlatform />} />
+                    <Route path='/services/sustainable-technology' element={<SustainableTechnology />} />
+                    <Route path='/services/ai-content-creation' element={<AIContentCreation />} />
+                    <Route path='/services/quantum-machine-learning' element={<QuantumMachineLearning />} />{/* Additional Pages */}
+                    <Route path='/api' element={<API />} />
+                    <Route path='/developer-portal' element={<DeveloperPortal />} />{/* Showcase Routes */}
+                    <Route path='/ultimate-services-2025' element={<UltimateServicesShowcase2025 />} />
+                    <Route path='/ultimate-services-2026' element={<UltimateServicesShowcase2026 />} />
+                    <Route path='/comprehensive-pricing-2026' element={<ComprehensivePricing2026 />} />
+                    <Route path='/comprehensive-pricing-2028' element={<ComprehensivePricing2028 />} />
+                    <Route path='/innovative-services-2025' element={<InnovativeServicesLanding2025 />} />
+                    <Route path='/comprehensive-services-overview-2026' element={<ComprehensiveServicesOverview2026 />} />{/* 2025 Comprehensive Services Showcase - New */}
+                    <Route path='/comprehensive-services-showcase-2025' element={<ComprehensiveServicesShowcase2025 />} />{/* 2029 Cutting-Edge Services */}
+                    <Route path='/zion-cutting-edge-services-2029' element={<ZionCuttingEdgeServices2029 />} />
+                    <Route path='/cutting-edge-services-2029' element={<ZionCuttingEdgeServices2029 />} />{/* 404 Page */}
+                    <Route
+                      path='*';
+                      element={
+                        <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+                          <div className='text-center text-white'>
+                            <h1 className='text-6xl font-bold mb-4'>404</h1>
+                            <h2 className='text-2xl font-semibold mb-4'>Page Not Found</h2>
+                            <p className='text-gray-300 mb-8'>
+                              The page you&apos;re looking for doesn&apos;t exist or has been moved.
+                            </p>
+                            <button;
+                              onClick={() => window.history.back()}
+                              className='px-6 py-3 bg-blue-500 text-white rounded-lg hover: bg-blue-600 transition-colors mr-4'>
+                              Go Back
+                            </button>
+                            <button;
+                              onClick={() => window.location.href = '/'}
+                              className='px-6 py-3 bg-gray-500 text-white rounded-lg hover: bg-gray-600 transition-colors'>
+=======
+),
+}
+                    />"
+>>>>>>> main
                     <Route path='/about' element={<About /" >} />"
                     <Route path='/contact' element={<Contact /" >} />"
                     <Route path='/blog' element={<Blog /" >} />"
@@ -335,6 +491,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
                               onClick={() =" > window.location.href = '/'}"
                               className='px-6 py-3 bg-gray-500 text-white rounded-lg hover: bg-gray-600 transition-colors'
                             >
+>>>>>>> main
                               Go Home
                             </button>
                           </div>
@@ -362,12 +519,20 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
     </HelmetProvider>
   ), }
 
+<<<<<<< HEAD
 export default App""
 import React, { Suspense, lazy, useState } from 'react'
 import { Routes, Route } from 'react-router-dom';""
 import { ErrorBoundary } from 'react-error-boundary';""
 ('')""
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() =" > window.location.reload()} />}>"
+=======
+export default App"
+import React, { Suspense, lazy, useState }  from 'react';import { Routes, Route } from 'react-router-dom
+import { ErrorBoundary } from 'react-error-boundary
+('')"
+      <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() =" > window.location.reload()} />}>
+>>>>>>> main
         <PerformanceOptimizer>
           <SEO /" >"
           <div className='min-h-screen bg-gray-50'>
@@ -376,7 +541,57 @@ import { ErrorBoundary } from 'react-error-boundary';""
               <Sidebar /" >"
               <main className='flex-1'>
                 <Routes>
+<<<<<<< HEAD
                 {/* Core Pages */}""
+=======
+<<<<<<< HEAD
+                {/* Core Pages */}
+                <Route path='/' element={<Home />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/contact' element={<Contact />} />
+                <Route path='/blog' element={<div className='p-8'><h1 className='text-3xl font-bold'>Blog</h1><p className='text-gray-600 mt-2'>Articles and insights from Zion Tech Group.</p></div>} />
+                <Route path='/faq' element={<div className='p-8'><h1 className='text-3xl font-bold'>FAQ</h1><p className='text-gray-600 mt-2'>Frequently asked questions.</p></div>} />
+                <Route path='/careers' element={<Careers />} />
+                <Route path='/partners' element={<div className='p-8'><h1 className='text-3xl font-bold'>Partners</h1><p className='text-gray-600 mt-2'>Our technology and delivery partners.</p></div>} />
+                <Route path='/solutions' element={<Solutions />} />
+                <Route path='/research-development' element={<Solutions />} />
+                <Route path='/case-studies' element={<CaseStudies />} />
+                <Route path='/news' element={<News />} />
+                <Route path='/events' element={<News />} />
+                <Route path='/team' element={<div className='p-8'><h1 className='text-3xl font-bold'>Team</h1><p className='text-gray-600 mt-2'>Meet the people behind Zion Tech Group.</p></div>} />
+                <Route path='/help' element={<div className='p-8'><h1 className='text-3xl font-bold'>Help Center</h1><p className='text-gray-600 mt-2'>How can we help you?</p></div>} />
+                <Route path='/security' element={<div className='p-8'><h1 className='text-3xl font-bold'>Security</h1><p className='text-gray-600 mt-2'>Our commitment to security.</p></div>} />
+                <Route path='/status' element={<div className='p-8'><h1 className='text-3xl font-bold'>Status</h1><p className='text-gray-600 mt-2'>All systems operational.</p></div>} />
+                <Route path='/sitemap' element={<div className='p-8'><h1 className='text-3xl font-bold'>Sitemap</h1><p className='text-gray-600 mt-2'>Browse all pages.</p></div>} />
+                <Route path='/login' element={<div className='p-8'><h1 className='text-3xl font-bold'>Login</h1></div>} />
+                <Route path='/signup' element={<div className='p-8'><h1 className='text-3xl font-bold'>Signup</h1></div>} />
+                <Route path='/request-quote' element={<div className='p-8'><h1 className='text-3xl font-bold'>Request a Quote</h1><p className='text-gray-600 mt-2'>Tell us about your project.</p></div>} />
+                <Route path='/green-it' element={<div className='p-8'><h1 className='text-3xl font-bold'>Green IT</h1><p className='text-gray-600 mt-2'>Sustainable technology initiatives.</p></div>} />
+                <Route path='/marketplace' element={<div className='p-8'><h1 className='text-3xl font-bold'>Marketplace</h1><p className='text-gray-600 mt-2'>Explore products, talent, and services.</p></div>} />
+                <Route path='/marketplace/products' element={<div className='p-8'><h1 className='text-2xl font-semibold'>Products</h1></div>} />
+                <Route path='/marketplace/talent' element={<div className='p-8'><h1 className='text-2xl font-semibold'>Talent</h1></div>} />
+                <Route path='/marketplace/equipment' element={<div className='p-8'><h1 className='text-2xl font-semibold'>Equipment</h1></div>} />
+                <Route path='/micro-saas' element={<div className='p-8'><h1 className='text-3xl font-bold'>Micro SAAS</h1><p className='text-gray-600 mt-2'>Curated micro SaaS solutions.</p></div>} />
+                <Route path='/it-services' element={<div className='p-8'><h1 className='text-3xl font-bold'>IT Services</h1><p className='text-gray-600 mt-2'>Enterprise IT offerings.</p></div>} />{/* Services */}
+                <Route path='/services' element={<Services />} />
+                <Route path='/services/ai' element={<AIServices />} />
+                <Route path='/services/cloud' element={<CloudServices />} />
+                <Route path='/services/cybersecurity' element={<CybersecurityServices />} />
+                <Route path='/services/infrastructure' element={<InfrastructureServices />} />
+                <Route path='/services/transformation' element={<TransformationServices />} />
+                <Route path='/services/consulting' element={<ConsultingServices />} />{/* Legal */}
+                <Route path='/privacy' element={<Privacy />} />
+                <Route path='/terms' element={<Terms />} />
+                <Route path='/cookies' element={<div className='p-8'><h1 className='text-3xl font-bold'>Cookies</h1></div>} />{/* 404 Fallback */}
+                <Route path='*' element={
+                  <div className='min-h-screen flex items-center justify-center'>
+                    <div className='text-center'>
+                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>
+                      <p className='text-gray-600 mb-8'>Page not found</p>
+                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>
+=======
+                {/* Core Pages */}"
+>>>>>>> main
                 <Route path='/' element={<Home /" >} />"
                 <Route path='/about' element={<About /" >} />"
                 <Route path='/contact' element={<Contact /" >} />"
@@ -416,6 +631,7 @@ import { ErrorBoundary } from 'react-error-boundary';""
                 <Route path='/privacy' element={<Privacy /" >} />"
                 <Route path='/terms' element={<Terms /" >} />"
                 <Route path='/cookies' element={<div className='p-8'><h1 className='text-3xl font-bold'>Cookies</h1></div>} />
+<<<<<<< HEAD
                 {/* 404 Fallback */}""
                 <Route path='*' element={""
                   <div className='min-h-screen flex items-center justify-center'>""
@@ -423,6 +639,16 @@ import { ErrorBoundary } from 'react-error-boundary';""
                       <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>""
                       <p className='text-gray-600 mb-8'>Page not found</p>""
                       <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>
+=======
+                {/* 404 Fallback */}"
+                <Route path='*' element={"
+                  <div className='min-h-screen flex items-center justify-center'>"
+                    <div className='text-center'>"
+                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>"
+                      <p className='text-gray-600 mb-8'>Page not found</p>"
+                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
+>>>>>>> main
+>>>>>>> main
                         Go Home
                       </a>
                     </div>
@@ -496,6 +722,18 @@ import { ErrorBoundary } from 'react-error-boundary';""
         </div>
       </div>
     </ErrorBoundary>
+<<<<<<< HEAD
   ), }
 
 ;""
+=======
+<<<<<<< HEAD
+  )}
+=======
+  ),
+}
+
+export default App
+;"
+>>>>>>> main
+>>>>>>> main

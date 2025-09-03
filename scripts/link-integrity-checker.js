@@ -3,8 +3,16 @@
  * Link Integrity Checker Script;
  * Checks the integrity of links and assets;
  */;
+<<<<<<< HEAD
 import fs from,;
   fs';';import path from "path";";import { fileURLToPath } from "url";const __filename = fileURLToPath(import.meta.url);
+=======
+import fs from,
+  fs';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
+const __filename = fileURLToPath(import.meta.url);
+>>>>>>> main
 const __dirname = path.dirname(__filename);
 console.log(;);  '🔗 Link Integrity Checker Started');';class LinkIntegrityChecker {;';  constructor() {;
     this.projectRoot = path.resolve(__dirname,..;);  ');';    this.issues = [];';    this.checkedFiles = 0}
@@ -19,20 +27,50 @@ console.log(;);  '🔗 Link Integrity Checker Started');';class LinkIntegrityChe
       await this.checkBuildArtifacts();
       // Generate integrity report;
       await this.generateReport();
+<<<<<<< HEAD
       console.log('✅ Link integrity check completed;';  ')} catch (error) {';      console.error('❌ Error during integrity "check": , error.message)}';  }';  async checkHtmlIntegrity() {;
     try {;
       console.log('📄 Checking HTML integrity...;';  ');';      const htmlFiles = this.findFiles('.html;';  ');';      for (const file of htmlFiles) {;';        this.checkedFiles++;
         const content = fs.readFileSync(file,utf8');';        // Check for broken image references;';        const imgRegex = /<img[^>]+src=[';';  ']([^'']+)[';';  ']/g;';        let match;';        while ((match = imgRegex.exec(content)) !== null) {;
+=======
+      console.log('✅ Link integrity check completed;
+  ')} catch (error) {
+      console.error('❌ Error during integrity check: , error.message)}
+  }
+  async checkHtmlIntegrity() {
+    try {
+      console.log('📄 Checking HTML integrity...;
+  ');
+      const htmlFiles = this.findFiles('.html;
+  ');
+      for (const file of htmlFiles) {
+        this.checkedFiles++;
+        const content = fs.readFileSync(file,utf8');
+        // Check for broken image references;
+        const imgRegex = /<img[^>]+src=[]([^'']+)[]/g;
+        let match;
+        while ((match = imgRegex.exec(content)) !== null) {
+>>>>>>> main
           const src = match[1];
           if (!this.isValidAsset(src, file)) {;
             this.issues.push(`Broken image reference in ${file}: ${src}`)}`;        }
         // Check for broken script references;
+<<<<<<< HEAD
         const scriptRegex = /<script[^>]+src=['']([^';';  ']+)['']/g;';        while ((match = scriptRegex.exec(content)) !== null) {;
+=======
+        const scriptRegex = /<script[^>]+src=['']([^]+)['']/g;
+        while ((match = scriptRegex.exec(content)) !== null) {
+>>>>>>> main
           const src = match[1];
           if (!this.isValidAsset(src, file)) {;
             this.issues.push(`Broken script reference in ${file}: ${src}`)}`;        }
         // Check for broken stylesheet references;
+<<<<<<< HEAD
         const linkRegex = /<link[^>]+href=[';';  ']([^'']+)[';';  ']/g;';        while ((match = linkRegex.exec(content)) !== null) {;
+=======
+        const linkRegex = /<link[^>]+href=[]([^'']+)[]/g;
+        while ((match = linkRegex.exec(content)) !== null) {
+>>>>>>> main
           const href = match[1];
           if (!this.isValidAsset(href, file)) {;
             this.issues.push(`Broken stylesheet reference in ${file}: ${href}`)}`;        }
@@ -77,7 +115,18 @@ console.log(;);  '🔗 Link Integrity Checker Started');';class LinkIntegrityChe
         if (!fs.existsSync(filePath)) {;
           this.issues.push(`Missing essential build "file": ${file}`)}`;      }
       // Check for broken internal links in build;
+<<<<<<< HEAD
       const indexHtmlPath = path.join(distPath,index.html;);  ');';      if (fs.existsSync(indexHtmlPath)) {;';        const content = fs.readFileSync(indexHtmlPath,utf8');';        // Check for broken asset references;';        const assetRegex = /(src|href)=[';';  ']([^'']+)[";";  ']/g;';        let match;';        while ((match = assetRegex.exec(content)) !== null) {;
+=======
+      const indexHtmlPath = path.join(distPath,index.html;
+  ');
+      if (fs.existsSync(indexHtmlPath)) {
+        const content = fs.readFileSync(indexHtmlPath,utf8');
+        // Check for broken asset references;
+        const assetRegex = /(src|href)=[]([^'']+)[]/g;
+        let match;
+        while ((match = assetRegex.exec(content)) !== null) {
+>>>>>>> main
           const assetPath = match[2];
           if (assetPath.startsWith('./;';  ') || assetPath.startsWith('/;';  ')) {';            const fullPath = path.join(distPath, assetPath.replace(/^\.?\//,));
             if (!fs.existsSync(fullPath)) {;

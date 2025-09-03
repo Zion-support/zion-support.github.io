@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'''
 import { motion } from 'framer-motion'''
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';""
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';'''
 import { Button } from './ui/button'';'''
+=======
+import React, { useState } from 'react''
+import { motion }  from 'framer-motion
+import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react
+import { Card, CardContent, CardHeader, CardTitle }  from './ui/card;''
+import { Button }  from './ui/button;''
+>>>>>>> main
 import { Badge } from './ui/badge';
 const AdvancedServiceRecommendation = () => {}
     const [clientProfile, setClientProfile] = useState({}""
 ''
+<<<<<<< HEAD
 ''
 ''''
         industry: '', ''''
@@ -32,12 +41,40 @@ const AdvancedServiceRecommendation = () => {}
     const primaryGoals = [''''
         'Cost Reduction', Revenue Growth',Operational Efficiency', Digital Transformation',Innovation', Competitive Advantage',Customer Experience', Risk Management',Sustainability''',;
 ]';'
+=======
+'''
+        industry: ',''
+        compSize: ',''
+        budget: ',''
+        timeline: ',''
+        technologyMaturity: '', primaryGoals[], challenges[],
+})"
+    const [recommendations, setRecommendations] = useState([])'
+    const [isAnalyzing, setIsAnalyzing] = useState(false)
+    const [showResults, setShowResults] = useState(false)
+    const industries = [''''
+        'Technology',Healthcare',Financial Services',Manufacturing',Retail',Education',Government',Energy',Transportation',Media''',;
+]
+    const compSizes = [''''
+        'Startup (1-50 employees),Small Business (51-200 employees),Medium Business (201-1000 employees),Enterprise (1000+ employees)'',
+]
+    const budgets = [''''
+        'Under $50K',$50K-$200K',$200K-$500K',$500K-$1M',$1M+''',;
+]
+    const technologyMaturityLevels = [''''
+        'Early Adopter',Growing',Mature',Advanced',Innovation Leader''',;
+]
+    const primaryGoals = [''''
+        'Cost Reduction',Revenue Growth',Operational Efficiency',Digital Transformation',Innovation',Competitive Advantage',Customer Experience',Risk Management',Sustainability''',;
+]
+>>>>>>> main
     const challenges = [''''
         'Legacy Systems', Data Security',Scalability Issues', Talent Shortage',Regulatory Compliance', Integration Complexity',Performance Issues', Cost Management',Technology Debt', 
 ]
     const mockServices = []
         {}""
 ''
+<<<<<<< HEAD
 ''
 ''''
             id: 'ai-crm-platform', ''''
@@ -54,9 +91,27 @@ const AdvancedServiceRecommendation = () => {}
             image: '/images/services/ai-crm.jpg', ''''
             link: 'https://ziontechgroup.com/services/ai-crm-platform',''''
             contactInfo: '+1 302 464 0950', ''''
+=======
+'''
+            id: 'ai-crm-platform,''
+            title: 'AI-Powered CRM Platform,''
+            description: 'Advanced customer relationship management platform with AI-driven insights and automation.,''
+            category: 'ai,''
+            price: '$25,000/month,''
+            duration: '6-12 months,''
+            tags['AI',CRM',Automation',Analytics'],
+            features['AI-powered insights',Automated workflows',Predictive analytics'],
+            benefits['Improved customer retention',Increased sales efficiency',Better decision making'],
+            technology['AI/ML',Cloud Computing',Big Data',Automation'],
+            targetAudience['Enterprise',Financial Services',Healthcare',Technology Companies'],
+            image: '/images/services/ai-crm.jpg,''
+            link: 'https://ziontechgroup.com/services/ai-crm-platform,''
+            contactInfo: '+1 302 464 0950,''
+>>>>>>> main
             email: 'kleber@ziontechgroup.com',
 }, {}""
 ''
+<<<<<<< HEAD
 ''
 ''''
             id: 'quantum-computing-service',''''
@@ -73,9 +128,27 @@ const AdvancedServiceRecommendation = () => {}
             image: '/images/services/quantum-computing.jpg', ''''
             link: 'https://ziontechgroup.com/services/quantum-computing-service',''''
             contactInfo: '+1 302 464 0950', ''''
+=======
+'''
+            id: 'quantum-computing-service,''
+            title: 'Quantum Computing as a Service,''
+            description: 'Enterprise-grade quantum computing platform for complex computational problems.,''
+            category: 'quantum,''
+            price: '$150,000/month,''
+            duration: '12-18 months,''
+            tags['Quantum Computing',Research',Optimization'],
+            features['Quantum processors access',Algorithm development',Research support'],
+            benefits['Solve intractable problems',Research acceleration',Competitive advantage'],
+            technology['Quantum Computing',Quantum Algorithms',Research Tools'],
+            targetAudience['Research Institutions',Pharmaceutical Companies',Financial Services'],
+            image: '/images/services/quantum-computing.jpg,''
+            link: 'https://ziontechgroup.com/services/quantum-computing-service,''
+            contactInfo: '+1 302 464 0950,''
+>>>>>>> main
             email: 'kleber@ziontechgroup.com',
 }, {}""
 ''
+<<<<<<< HEAD
 ''
 ''''
             id: 'blockchain-supply-chain',''''
@@ -92,6 +165,23 @@ const AdvancedServiceRecommendation = () => {}
             image: '/images/services/blockchain-supply-chain.jpg', ''''
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain',''''
             contactInfo: '+1 302 464 0950', ''''
+=======
+'''
+            id: 'blockchain-supply-chain,''
+            title: 'Blockchain Supply Chain Solution,''
+            description: 'Transparent and secure supply chain management using blockchain technology.,''
+            category: 'blockchain,''
+            price: '$75,000/month,''
+            duration: '8-14 months,''
+            tags['Blockchain',Supply Chain',Transparency'],
+            features['End-to-end tracking',Smart contracts',Transparency'],
+            benefits['Enhanced transparency',Reduced fraud',Improved efficiency'],
+            technology['Blockchain',Smart Contracts',IoT',Cloud Computing'],
+            targetAudience['Manufacturing',Retail',Logistics',Food & Beverage'],
+            image: '/images/services/blockchain-supply-chain.jpg,''
+            link: 'https://ziontechgroup.com/services/blockchain-supply-chain,''
+            contactInfo: '+1 302 464 0950,''
+>>>>>>> main
             email: 'kleber@ziontechgroup.com',
 }
     ]
@@ -193,9 +283,15 @@ const AdvancedServiceRecommendation = () => {}
             default: return 'bg-gray-100 text-gray-800'}
     }
     const isFormComplete = () => {}
+<<<<<<< HEAD
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&""
             clientProfile.timeline && clientProfile.technologyMaturity &&''''
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}';'''
+=======
+        return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&"
+            clientProfile.timeline && clientProfile.technologyMaturity &&'''
+            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}'
+>>>>>>> main
     return (<div className='max-w-7xl mx-auto p-6'>
       {/* Header */}
       <motion.div initial = {}
@@ -328,8 +424,14 @@ const AdvancedServiceRecommendation = () => {}
       {/* Recommendations Results */}
       {showResults && (<motion .div initial = {}
   { opacity: 0, y: 20,
+<<<<<<< HEAD
 }} animate = {}""
   { opacity: 1, y: 0';', }} transition={{ delay: 0.2 }}" >''''"
+=======
+}} animate = {}"
+  { opacity: 1, y: 0,
+}} transition={{ delay: 0.2 }}" >''''
+>>>>>>> main
           <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 text-center'>
             Your Personalized Service Recommendations""
           </h2>''''
@@ -337,9 +439,16 @@ const AdvancedServiceRecommendation = () => {}
           <div className='space-y-6'>
             {recommendations.map((rec, index) => (<motion .div key={rec.service.id} initial = {}
   { opacity: 0, x: -20,
+<<<<<<< HEAD
 }} animate = {}""
   { opacity: 1, x: 0';', }} transition={{ delay: 0.1 * index }}" >''''"
                 <Card className='hover:shadow-lg transition-shadow'>''''
+=======
+}} animate = {}"
+  { opacity: 1, x: 0,
+}} transition={{ delay: 0.1 * index }}" >''''
+                <Card className='hover:shadow-lg transition-shadow'>'''
+>>>>>>> main
                   <CardHeader>''''
                     <div className='flex items-start justify-between'>''''
                       <div className='flex-1'>''''

@@ -5,6 +5,7 @@
  */;
 import fs from 'fs';';import path from 'path';';import { fileURLToPath } from 'url';';import { spawn } from 'child_process';';';const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+<<<<<<< HEAD
 console.log('🚀 Improved Deployment Automation Started');';class ImprovedDeploymentAutomation {;';  constructor() {;
     this.projectRoot = path.resolve(__dirname, '..');';    this.deploymentLog = {;';      "timestamp": new Date().toISOString(),;";      "steps": [],;";      "summary": {;";        "total": 0,;";        "successful": 0,;";        "failed": 0,;";        "warnings": 0}";    }
     this.logFile = path.join(this.projectRoot, 'deployment-automation-report.json')}';  async run() {;';    try {;
@@ -16,6 +17,58 @@ console.log('🚀 Improved Deployment Automation Started');';class ImprovedDeplo
           "name": 'Build Application',';          "command": 'npm run build',';          "description": 'Build the application for production',';          "critical": true},;";        {;
           "name": 'Performance Check',';          "command": 'node scripts/performance-monitor-improved.js',';          "description": 'Run performance monitoring',';          "critical": false},;";        {;
           "name": 'Security Audit',';          "command": 'npm audit --audit-level moderate',';          "description": 'Run security audit',';          "critical": false}";      ];
+=======
+console.log('🚀 Improved Deployment Automation Started');
+class ImprovedDeploymentAutomation {
+  constructor() {
+    this.projectRoot = path.resolve(__dirname, '..');
+    this.deploymentLog = {
+      timestamp: new Date().toISOString(),
+      steps: [],
+      summary: {
+        total: 0,
+        successful: 0,
+        failed: 0,
+        warnings: 0}
+    }
+    this.logFile = path.join(this.projectRoot, 'deployment-automation-report.json')}
+  async run() {
+    try {
+      console.log('🎯 Starting deployment automation pipeline...');
+      // Define deployment steps;
+      const deploymentSteps = [
+  {
+          name: 'Pre-deployment Checks',
+          command: 'npm run type-check',
+          description: 'Run TypeScript type checking',
+          critical: true},
+        {
+          name: 'Code Quality Check',
+          command: 'npm run lint',
+          description: 'Run ESLint code quality checks',
+          critical: false},
+        {
+          name: 'Test Suite',
+          command: 'npm test -- --passWithNoTests --watchAll=false',
+          description: 'Run test suite',
+          critical: false},
+        {
+          name: 'Build Application',
+          command: 'npm run build',
+          description: 'Build the application for production',
+          critical: true},
+        {
+          name: 'Performance Check',
+          command: 'node scripts/performance-monitor-improved.js',
+          description: 'Run performance monitoring',
+          critical: false},
+        {
+          name: 'Security Audit',
+          command: 'npm audit --audit-level moderate',
+          description: 'Run security audit',
+          critical: false}
+      ];
+>>>>>>> main
       // Execute each deployment step;
       for (const step of deploymentSteps) {;
         await this.executeStep(step)}

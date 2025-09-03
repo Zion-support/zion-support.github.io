@@ -5,6 +5,7 @@ import { ArrowRight, TrendingUp, Users, Clock, Award, CheckCircle, Star, Buildin
 
 export default function CaseStudies() {
   const caseStudies = [
+<<<<<<< HEAD
     {
       title: 'Enterprise Cloud Migration Success', client: 'Fortune 500 Manufacturing Company',
       industry: 'Manufacturing', challenge: 'Legacy system migration and digital transformation',
@@ -14,61 +15,116 @@ export default function CaseStudies() {
         '50% faster deployment cycles'
       ], duration: '6 months',
       team: '12 specialists', icon: Cloud,
+=======
+  {
+      title: 'Enterprise Cloud Migration Success',
+      client: 'Fortune 500 Manufacturing Company',
+      industry: 'Manufacturing',
+      challenge: 'Legacy system migration and digital transformation',
+      solution: 'Complete cloud migration with AI-powered automation',
+      results: [
+        '60% reduction in operational costs,40% improvement in system performance,99.9% uptime achieved,50% faster deployment cycles'
+      ],
+      duration: '6 months',
+      team: '12 specialists',
+      icon: Cloud,
+>>>>>>> main
       image: '/api/placeholder/600/400'
     }, {
       title: 'AI-Powered Customer Service Revolution',
       client: 'Leading E-commerce Platform', industry: 'E-commerce',
       challenge: 'High customer service volume and response times', solution: 'AI chatbot implementation with natural language processing',
       results: [
+<<<<<<< HEAD
         '80% reduction in response time', '90% customer satisfaction rate',
         '24/7 automated support', '70% cost savings on support staff'
       ], duration: '4 months',
       team: '8 specialists', icon: Target,
+=======
+        '80% reduction in response time,90% customer satisfaction rate,24/7 automated support,70% cost savings on support staff'
+      ],
+      duration: '4 months',
+      team: '8 specialists',
+      icon: Target,
+>>>>>>> main
       image: '/api/placeholder/600/400'
     }, {
       title: 'Cybersecurity Transformation',
       client: 'Financial Services Firm', industry: 'Financial Services',
       challenge: 'Advanced threat protection and compliance', solution: 'Comprehensive security framework with AI monitoring',
       results: [
+<<<<<<< HEAD
         '99.8% threat detection accuracy', 'Zero security breaches',
         'SOC 2 Type II compliance', '50% reduction in security incidents'
       ], duration: '8 months',
       team: '15 specialists', icon: Shield,
+=======
+        '99.8% threat detection accuracy,Zero security breaches,SOC 2 Type II compliance,50% reduction in security incidents'
+      ],
+      duration: '8 months',
+      team: '15 specialists',
+      icon: Shield,
+>>>>>>> main
       image: '/api/placeholder/600/400'
     }, {
       title: 'Data Analytics Platform Development',
       client: 'Healthcare Provider Network', industry: 'Healthcare',
       challenge: 'Patient data analysis and predictive insights', solution: 'Custom analytics platform with machine learning',
       results: [
+<<<<<<< HEAD
         '30% improvement in patient outcomes', '25% reduction in readmission rates',
         'Real-time data insights', 'HIPAA compliance maintained'
       ], duration: '10 months',
       team: '10 specialists', icon: TrendingUp,
+=======
+        '30% improvement in patient outcomes,25% reduction in readmission rates,Real-time data insights,HIPAA compliance maintained'
+      ],
+      duration: '10 months',
+      team: '10 specialists',
+      icon: TrendingUp,
+>>>>>>> main
       image: '/api/placeholder/600/400'
     }, {
       title: 'Micro SaaS Development',
       client: 'Startup Technology Company', industry: 'Technology',
       challenge: 'Rapid product development and market entry', solution: 'Custom micro SaaS platform with scalable architecture',
       results: [
+<<<<<<< HEAD
         '3x faster time to market', '500% user growth in 6 months',
         '99.5% platform reliability', 'Seamless scalability achieved'
       ], duration: '5 months',
       team: '6 specialists', icon: Lightbulb,
+=======
+        '3x faster time to market,500% user growth in 6 months,99.5% platform reliability,Seamless scalability achieved'
+      ],
+      duration: '5 months',
+      team: '6 specialists',
+      icon: Lightbulb,
+>>>>>>> main
       image: '/api/placeholder/600/400'
     }, {
       title: 'Digital Transformation Initiative',
       client: 'Traditional Retail Chain', industry: 'Retail',
       challenge: 'Digital modernization and omnichannel experience', solution: 'End-to-end digital transformation with AI integration',
       results: [
+<<<<<<< HEAD
         '45% increase in online sales', '60% improvement in customer engagement',
         'Unified omnichannel experience', '40% reduction in operational costs'
       ], duration: '12 months',
       team: '20 specialists', icon: Building,
+=======
+        '45% increase in online sales,60% improvement in customer engagement,Unified omnichannel experience,40% reduction in operational costs'
+      ],
+      duration: '12 months',
+      team: '20 specialists',
+      icon: Building,
+>>>>>>> main
       image: '/api/placeholder/600/400'
     }
   ];
 
   const industries = [
+<<<<<<< HEAD
     { name: 'Manufacturing', count: 15, icon: Building }, { name: 'Healthcare', count: 12, icon: Shield },
     { name: 'Financial Services', count: 18, icon: TrendingUp }, { name: 'E-commerce', count: 22, icon: Target },
     { name: 'Technology', count: 25, icon: Lightbulb }, { name: 'Retail', count: 14, icon: Users }
@@ -77,6 +133,19 @@ export default function CaseStudies() {
   const testimonials = [
     {
       quote: "Zion Tech Group transformed our entire IT infrastructure. The results exceeded our expectations, and we&apos;ve seen significant improvements in efficiency and cost savings.",
+=======
+  { name: 'Manufacturing', count: 15, icon: Building },
+    { name: 'Healthcare', count: 12, icon: Shield },
+    { name: 'Financial Services', count: 18, icon: TrendingUp },
+    { name: 'E-commerce', count: 22, icon: Target },
+    { name: 'Technology', count: 25, icon: Lightbulb },
+    { name: 'Retail', count: 14, icon: Users }
+  ];
+
+  const testimonials = [
+  {
+      quote: "Zion Tech Group transformed our entire IT infrastructure. The results exceeded our expectations, and we've seen significant improvements in efficiency and cost savings.",
+>>>>>>> main
       author: "Sarah Johnson",
       title: "CTO", company: "Manufacturing Corp",
       rating: 5

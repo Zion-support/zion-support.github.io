@@ -20,7 +20,7 @@ import {
 
 export default function CustomerSupport() {
   const features = [
-    {
+  {
       icon: Bot,
       title: 'AI Chatbots',
       description:
@@ -60,6 +60,14 @@ export default function CustomerSupport() {
 
   return (
     <>
+<<<<<<< HEAD
+      <SEO
+        title="Customer Support Platform - Zion Tech Group"
+        description="AI-powered customer support system with chatbots, ticket management, and knowledge base. Improve customer satisfaction."
+        keywords="customer support, AI chatbots, ticket management, knowledge base, helpdesk"
+      />
+=======
+>>>>>>> main
       <Head>
         <title>Customer Support Platform - Zion Tech Group</title>
       </Head>

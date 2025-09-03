@@ -9,6 +9,7 @@ function fixSpecificPatterns(content) {
   let modified = false;
 
   // Fix malformed imports with missing commas
+<<<<<<< HEAD
   content = content.replace(
     /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"]/g,
     (match, imports) => {
@@ -18,10 +19,18 @@ function fixSpecificPatterns(content) {
         return match.replace(imports, fixedImports);
       }
       return match;
+=======
+  content = content.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"]/g, (match, imports) => {
+    if (imports.includes(' ') && !imports.includes(,)) {
+      modified = true;
+      const fixedImports = imports.split(/\s+/).join(,);
+      return match.replace(imports, fixedImports);
+>>>>>>> main
     }
   );
 
   // Fix missing semicolons after imports
+<<<<<<< HEAD
   content = content.replace(
     /import\s+{[^}]+}\s+from\s+['"][^'"]+['"]\s*(?!;)/g,
     match => {
@@ -30,6 +39,12 @@ function fixSpecificPatterns(content) {
         return match + ';';
       }
       return match;
+=======
+  content = content.replace(/import\s+{[^}]+}\s+from\s+['"][^'"]+['"]\s*(?!;)/g, (match) => {
+    if (!match.endsWith()) {
+      modified = true;
+      return match + ;
+>>>>>>> main
     }
   );
 
@@ -60,6 +75,7 @@ function fixSpecificPatterns(content) {
 
   // Fix broken object literals and arrays
   content = content.replace(/\[\s*([^\]]*)\s*\]/g, (match, arrayContent) => {
+<<<<<<< HEAD
     if (
       arrayContent &&
       arrayContent.includes("'") &&
@@ -69,9 +85,13 @@ function fixSpecificPatterns(content) {
         .split("'")
         .filter(item => item.trim())
         .map(item => `'${item.trim()}'`);
+=======
+    if (arrayContent && arrayContent.includes("'") && !arrayContent.includes(,)) {
+      const items = arrayContent.split("'").filter(item => item.trim()).map(item => `'${item.trim()}'`);
+>>>>>>> main
       if (items.length > 1) {
         modified = true;
-        return `[${items.join(', ')}]`;
+        return `[${items.join(,)}]`;
       }
     }
     return match;
@@ -84,6 +104,7 @@ function fixSpecificPatterns(content) {
   });
 
   // Fix broken variable declarations
+<<<<<<< HEAD
   content = content.replace(
     /(const|let|var)\s+(\w+)\s*=\s*([^;]+)(?!;)\s*(?=\n|$)/g,
     (match, keyword, varName, value) => {
@@ -92,6 +113,12 @@ function fixSpecificPatterns(content) {
         return `${keyword} ${varName} = ${value};`;
       }
       return match;
+=======
+  content = content.replace(/(const|let|var)\s+(\w+)\s*=\s*([^;]+)(?!;)\s*(?=\n|$)/g, (match, keyword, varName, value) => {
+    if (!match.endsWith()) {
+      modified = true;
+      return `${keyword} ${varName} = ${value};`;
+>>>>>>> main
     }
   );
 
@@ -114,6 +141,7 @@ function fixSpecificPatterns(content) {
   });
 
   // Fix missing commas in function parameters
+<<<<<<< HEAD
   content = content.replace(
     /\(([^)]*)\s+([^)]*)\)/g,
     (match, param1, param2) => {
@@ -127,6 +155,12 @@ function fixSpecificPatterns(content) {
         return `(${param1.trim()}, ${param2.trim()})`;
       }
       return match;
+=======
+  content = content.replace(/\(([^)]*)\s+([^)]*)\)/g, (match, param1, param2) => {
+    if (param1.trim() && param2.trim() && !param1.includes(,) && !param2.includes(,)) {
+      modified = true;
+      return `(${param1.trim()}, ${param2.trim()})`;
+>>>>>>> main
     }
   );
 
@@ -137,7 +171,7 @@ function fixSpecificPatterns(content) {
   content = content.replace(/\{\s*([^}]*)\s*\}\s*\}/g, (match, content) => {
     if (content.includes('{') && !content.includes('}')) {
       modified = true;
-      return match.replace('}}', '}');
+      return match.replace('}},}');
     }
     return match;
   });
@@ -148,9 +182,15 @@ function fixSpecificPatterns(content) {
 // Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
   try {
+<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
     let { content: fixedContent, modified } = fixSpecificPatterns(content);
 
+=======
+    const content = fs.readFileSync(filePath, 'utf8');
+    const { content: fixedContent, modified } = fixSpecificPatterns(content);
+    
+>>>>>>> main
     if (modified) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed syntax errors in: ${filePath}`);
@@ -164,7 +204,7 @@ function fixSyntaxErrors(filePath) {
 }
 
 // Function to find all TypeScript and JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+function findFiles(dir, extensions = ['.ts,.tsx,.js,.jsx']) {
   let files = [];
 
   try {
@@ -199,8 +239,13 @@ function main() {
   const files = findFiles(srcDir);
 
   let fixedCount = 0;
+<<<<<<< HEAD
   let totalCount = files.length;
 
+=======
+  const totalCount = files.length;
+  
+>>>>>>> main
   console.log(`Found ${totalCount} files to check...`);
 
   for (const file of files) {

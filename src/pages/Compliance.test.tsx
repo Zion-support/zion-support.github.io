@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';""
 import { render, screen } from '@testing-library/react';""
 import '@testing-library/jest-dom';""
@@ -12,3 +13,25 @@ describe('Compliance', () => {""
     render(<Compliance /" >);"
     // Add more specific tests here, });, });
 ""
+=======
+<<<<<<< HEAD
+describe('Compliance', () => {}' it('renders without crashing', () => {} render(<Compliance />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<Compliance />) '
+=======
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import Compliance from './Compliance
+describe('Compliance', () => {"
+  it('renders without crashing', () => {
+    render(<Compliance /" >);"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
+"
+  it('displays expected content', () => {
+    render(<Compliance /" >)
+    // Add more specific tests here
+});
+})
+"
+>>>>>>> main
+>>>>>>> main

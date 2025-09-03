@@ -1,9 +1,29 @@
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';""
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';""
 import { AppHeader } from './layout/AppHeader.jsx';""
 import { Footer } from './components/Footer.jsx';""
+=======
+import React, { Suspense, lazy } from 'react
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom
+import { AppHeader } from './layout/AppHeader.jsx
+import { Footer } from './components/Footer.jsx
+>>>>>>> main
 import { ChatAssistant } from './components/ChatAssistant.tsx';
+<<<<<<< HEAD
+('');
+// Home and main pages';'
+const Home = lazy(() => import('./pages/Home.tsx'));
+const About = lazy(() => import('./pages/About.tsx'));
+const Contact = lazy(() => import('./pages/Contact.tsx'));
+const BlogPage = lazy(() => import('./pages/BlogPage.tsx'));
+const PartnersPage = lazy(() => import('./pages/Partners.tsx'));
+const Login = lazy(() => import('./pages/Login.tsx'));
+const FAQ = lazy(() => import('./pages/FAQ.tsx'));
+const Careers = lazy(() => import('./pages/Careers.tsx'));
+=======
 
+<<<<<<< HEAD
 // Home and main pages""
 const Home = lazy(() => import('./pages/Home.tsx'));""
 const About = lazy(() => import('./pages/About.tsx'));""
@@ -13,6 +33,18 @@ const PartnersPage = lazy(() => import('./pages/Partners.tsx'));""
 const Login = lazy(() => import('./pages/Login.tsx'));""
 const FAQ = lazy(() => import('./pages/FAQ.tsx'));""
 const Careers = lazy(() => import('./pages/Careers.tsx'));""
+=======
+// Home and main pages"
+const Home = lazy(() => import('./pages/Home.tsx'));"
+const About = lazy(() => import('./pages/About.tsx'));"
+const Contact = lazy(() => import('./pages/Contact.tsx'));"
+const BlogPage = lazy(() => import('./pages/BlogPage.tsx'));"
+const PartnersPage = lazy(() => import('./pages/Partners.tsx'));"
+const Login = lazy(() => import('./pages/Login.tsx'));"
+const FAQ = lazy(() => import('./pages/FAQ.tsx'));"
+const Careers = lazy(() => import('./pages/Careers.tsx'));"
+>>>>>>> main
+>>>>>>> main
 const Sitemap = lazy(() => import('./pages/Sitemap.jsx'));
 // Services pages
 const ComprehensivePricing = lazy(() =>""
@@ -25,12 +57,30 @@ const LoadingSpinner = () => (""
   </div>
 );
 // Simple Services page component
+<<<<<<< HEAD
 const ServicesPage = () => (""
   <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24'>""
     <div className='container mx-auto px-4 py-16'>""
       <div className='text-center mb-16'>""
         <h1 className='text-4xl md: text-6xl font-bold mb-6'>""
           Our{' '}""
+=======
+<<<<<<< HEAD
+const ServicesPage = () => (
+  <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24'>
+    <div className='container mx-auto px-4 py-16'>
+      <div className='text-center mb-16'>
+        <h1 className='text-4xl md: text-6xl font-bold mb-6'>
+          Our
+=======
+const ServicesPage = () => ("
+  <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24'>"
+    <div className='container mx-auto px-4 py-16'>"
+      <div className='text-center mb-16'>"
+        <h1 className='text-4xl md:text-6xl font-bold mb-6'>'
+          Our{ }'
+>>>>>>> main
+>>>>>>> main
           <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>
             Services
           </span>
@@ -73,8 +123,42 @@ function App() {
       <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>
         <AppHeader /" >"
         <main className='flex-1'>
+<<<<<<< HEAD
           <Suspense fallback={<LoadingSpinner /" >}>"
             <Routes>""
+=======
+<<<<<<< HEAD
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/contact' element={<Contact />} />
+              <Route path='/blog' element={<BlogPage />} />
+              <Route path='/partners' element={<PartnersPage />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/faq' element={<FAQ />} />
+              <Route path='/careers' element={<Careers />} />
+              <Route path='/sitemap' element={<Sitemap />} />
+              <Route path='/pricing' element={<ComprehensivePricing />} />{/* Services routes */}
+              <Route path='/services' element={<ServicesPage />} />{/* Catch-all route for 404 */}
+              <Route
+                path='*'''';'
+                element={}
+                  <div className='flex items-center justify-center min-h-screen'>
+                    <div className='text-center'>
+                      <h1 className='text-4xl font-bold text-zion-cyan mb-4'>
+                        404 - Page Not Found
+                      </h1>
+                      <p className='text-zion-slate-light mb-6'>
+                        The page you&apos;re looking for doesn&apos;t exist.
+                      </p>
+                      <a
+                        href='/'''';'
+                        className='bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors'''">"
+=======
+          <Suspense fallback={<LoadingSpinner /" >}>
+            <Routes>"
+>>>>>>> main
               <Route path='/' element={<Home /" >} />"
               <Route path='/about' element={<About /" >} />"
               <Route path='/contact' element={<Contact /" >} />"
@@ -101,7 +185,12 @@ function App() {
                       </p>
                       <a ""
                         href='/'
+<<<<<<< HEAD
                         className='bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors'" >"
+=======
+                        className='bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors  >
+>>>>>>> main
+>>>>>>> main
                         Go Home
                       </a>
                     </div>
@@ -110,8 +199,13 @@ function App() {
             </Routes>
           </Suspense>
         </main>
+<<<<<<< HEAD
         <Footer /" >"
         <ChatAssistant /" >"
+=======
+        <Footer /' >
+        <ChatAssistant /" >
+>>>>>>> main
       </div>
     </Router>
   ), }

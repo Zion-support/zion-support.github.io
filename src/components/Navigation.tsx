@@ -32,18 +32,40 @@ const Navigation = () => {
     { 
       name: 'Services', href: '/services', 
       dropdown: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI services' },
+        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
         { name: 'IT Services', href: '/it-services', icon: Network, description: 'Comprehensive IT solutions' },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS solutions' },
-        { name: 'Web Development', href: '/services/web-development', icon: Code, description: 'Custom web applications' },
-        { name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud, description: 'Cloud infrastructure' },
-        { name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'AI development services' }
+        { name: 'All Services', href: '/services', icon: Settings, description: 'Complete service overview' }
       ]
+    },
+    { 
+      name: 'Solutions', 
+      href: '/solutions',
+      dropdown: [
+        { name: 'AI Solutions', href: '/solutions/ai', icon: Brain, description: 'AI-powered business solutions' },
+        { name: 'Cloud Solutions', href: '/solutions/cloud', icon: Cloud, description: 'Cloud infrastructure solutions' },
+        { name: 'Security Solutions', href: '/solutions/security', icon: Shield, description: 'Cybersecurity solutions' },
+        { name: 'Digital Transformation', href: '/solutions/digital', icon: Zap, description: 'Digital transformation services' }
+      ]
+<<<<<<< HEAD
     }, { name: 'Solutions', href: '/solutions' }, { name: 'About', href: '/about' }, { name: 'Contact', href: '/contact' }, { name: 'Blog', href: '/blog' }, { name: 'Careers', href: '/careers' }
   ];
 
   const contactInfo = [
     { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' }, { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+=======
+    },
+    { name: 'About', href: '/about' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Careers', href: '/careers' }
+  ];
+
+  const contactInfo = [
+  { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
+    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+>>>>>>> main
     { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
 
@@ -56,8 +78,7 @@ const Navigation = () => {
     setActiveDropdown(null);
   };
 
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+  return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,9 +99,14 @@ const Navigation = () => {
               <div key={item.name} className="relative">
                 {item.dropdown ? (
                   <div className="relative">
+<<<<<<< HEAD
                     <button
                       onClick={() => toggleDropdown(item.name)}
                       className="flex items-center space-x-1 text-gray-300 hover: text-cyan-300 transition-colors duration-200 py-2"
+=======
+                    <button onClick={() => toggleDropdown(item.name)}
+                      className="flex items-center space-x-1 text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2"
+>>>>>>> main
                     >
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
@@ -94,7 +120,7 @@ const Navigation = () => {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 overflow-hidden"
+                          className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 overflow-hidden"
                         >
                           <div className="p-4">
                             {item.dropdown.map((dropdownItem) => (
@@ -160,7 +186,7 @@ const Navigation = () => {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-md border-t border-cyan-400/20"
@@ -187,24 +213,26 @@ const Navigation = () => {
 
               {/* Navigation Links */}
               <div className="space-y-2">
-                {navigationItems.map((item) => (
-                  <div key={item.name}>
+                {navigationItems.map((item) => (<div key={item.name}>
                     {item.dropdown ? (
                       <div>
+<<<<<<< HEAD
                         <button
                           onClick={() => toggleDropdown(item.name)}
                           className="flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover: text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+=======
+                        <button onClick={() => toggleDropdown(item.name)}
+                          className="flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+>>>>>>> main
                         >
                           <span>{item.name}</span>
-                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                            activeDropdown === item.name ? 'rotate-180' : ''
-                          }`} />
+                          <ChevronDown className="w-4 h-4" />
                         </button>
                         <AnimatePresence>
                           {activeDropdown === item.name && (
                             <motion.div
                               initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: 'auto' }}
+                              animate={{ opacity: 1, height: "auto" }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.2 }}
                               className="ml-4 mt-2 space-y-1"

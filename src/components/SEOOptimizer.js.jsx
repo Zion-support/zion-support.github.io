@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {'';import React, { useState, useEffect, useCallback } from 'react'''
+=======
+ const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {'';import React, { useState, useEffect, useCallback }  from 'react
+>>>>>>> main
 import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react';
 const SEOOptimizer = () => {}
     const [isOpen, setIsOpen] = useState (false) 
@@ -12,6 +16,7 @@ const SEOOptimizer = () => {}
             const samplePages = []
                 {}""
 ''
+<<<<<<< HEAD
 ''
 ''''
                     url: '/', ''''
@@ -43,6 +48,38 @@ const SEOOptimizer = () => {}
                     images['/images/ai-solutions.jpg'], ';'
                     links['/services', /about',/contact'], ';'
                     keywords['artificial intelligence', machine learning',predictive analytics', AI automation'], '
+=======
+'''
+                    url: '/,''
+                    title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services,''
+                    metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.,'
+                    headings['AI-Powered Business Solutions',Comprehensive IT Services',Micro-SaaS Solutions'],
+                    images['/images/hero-ai-solutions.jpg',/images/hero-it-services.jpg'],
+                    links['/services',/ai-solutions',/about',/contact'],
+                    keywords['AI solutions',quantum computing',cybersecurity',digital transformation'],
+}, {}"
+'
+''
+'''
+                    url: '/services,''
+                    title: 'Our Services - Comprehensive Technology Solutions,''
+                    metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.,''
+                    headings['AI Solutions',Cloud & DevOps',Cybersecurity',Digital Transformation'],
+                    images['/images/services-overview.jpg'],
+                    links['/ai-solutions',/cloud-devops',/cybersecurity',/about'],
+                    keywords['technology services',AI solutions',cloud infrastructure',cybersecurity'],
+}, {}"
+'
+''
+'''
+                    url: '/ai-solutions,''
+                    title: 'AI Solutions - Artificial Intelligence Services,''
+                    metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.,''
+                    headings['Machine Learning',Predictive Analytics',AI Automation',Business Intelligence'],
+                    images['/images/ai-solutions.jpg'],
+                    links['/services',/about',/contact'],
+                    keywords['artificial intelligence',machine learning',predictive analytics',AI automation'],
+>>>>>>> main
 }
             ]
             const pageAnalyses = samplePages.map(page => {}
@@ -168,6 +205,7 @@ const SEOOptimizer = () => {}
         const recommendations = []''
         if (issues.some(issue => issue.includes('Title'))) {}""
 ''
+<<<<<<< HEAD
             recommendations.push('Optimize page titles with relevant keywords and compelling copy')}''
         if (issues.some(issue => issue.includes('Meta description'))) {}""
 ''
@@ -191,6 +229,12 @@ const SEOOptimizer = () => {}
             recommendations.push('Use SEO-friendly URLs with hyphens and descriptive terms')}''''
         recommendations.push('Ensure content is unique, valuable, and addresses user intent')';'
         recommendations.push('Implement structured data markup for better search engine understanding')';'
+=======
+'''
+            recommendations.push('Use SEO-friendly URLs with hyphens and descriptive terms')}'''
+        recommendations.push('Ensure content is unique, valuable, and addresses user intent')
+        recommendations.push('Implement structured data markup for better search engine understanding')
+>>>>>>> main
         recommendations.push('Optimize page loading speed for better user experience and SEO')
         return recommendations}
     const generateSummary = (pageAnalyses, topIssues) => {}
@@ -228,6 +272,7 @@ const SEOOptimizer = () => {}
         if (!report)""
             return''
         const csvContent = [''
+<<<<<<< HEAD
             ['Page URL', Title',SEO Score', Issues',Recommendations'], ...report.pageAnalyses.map(page => [page.pageUrl,''
                 page.title, ''`
                 page.score.toString(), '''`"`'"
@@ -239,6 +284,19 @@ const SEOOptimizer = () => {}
         const url = window.URL.createObjectURL(blob)';'
         const a = document.createElement('a')''
         a.href = url';'
+=======
+            ['Page URL',Title',SEO Score',Issues',Recommendations'], ...report.pageAnalyses.map(page => [page.pageUrl,'
+                page.title,''`
+                page.score.toString(),'''`"`
+                page.issues.join('),''`'`"`
+                page.recommendations.join(')'`'`'`",`
+])'`'`'`'`",`
+].map(row => row.map(cell => `'${cell}'`).join(',)).join('\n')
+        const blob = new Blob([csvContent], { type: 'text/csv' })'
+        const url = window.URL.createObjectURL(blob)
+        const a = document.createElement('a')'
+        a.href = url
+>>>>>>> main
         a.download = 'seo-optimization-report.csv'
         a.click()
         window.URL.revokeObjectURL(url)}
@@ -255,10 +313,17 @@ const SEOOptimizer = () => {}
             return 'Excellent'
         if (score >= 60)''
             return 'Good'
+<<<<<<< HEAD
         if (score >= 40)''
             return 'Fair'';'
         return 'Poor'}';'''
     return (<div className='fixed bottom-6 right-24 z-50'>''''
+=======
+        if (score >= 40)'
+            return 'Fair'
+        return 'Poor'}'
+    return (<div className='fixed bottom-6 right-24 z-50'>'''
+>>>>>>> main
       {/* Floating Action Button */}''''
       <button onClick={() =" > setIsOpen(!isOpen)} className='bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105' aria-label='Toggle SEO Optimizer'>''''"
         <Search className='w-6 h-6'/" >"

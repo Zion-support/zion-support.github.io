@@ -7,51 +7,83 @@ import {
 } from 'lucide-react';
 export default function Blog() {
   const blogPosts = [
+<<<<<<< HEAD
     {
       id: 1, title: "The Future of AI in Enterprise: 2025 Trends and Predictions",
       excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.", author: "Dr. Sarah Chen",
       date: "2025-01-15", readTime: "8 min read",
       category: "AI & Machine Learning", tags: ["AI", "Enterprise", "Technology"], image: "/api/placeholder/600/400",
+=======
+  {
+      id: 1, title: "The Future of AI in Enterprise: 2025 Trends and Predictions",
+      excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.", author: "Dr. Sarah Chen",
+      date: "2025-01-15", readTime: "8 min read",
+      category: "AI & Machine Learning", tags: ["AI,Enterprise,Technology"], image: "/api/placeholder/600/400",
+>>>>>>> main
       featured: true
     }, {
       id: 2,
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.",
       author: "Prof. Michael Rodriguez", date: "2025-01-12",
       readTime: "12 min read", category: "Quantum Computing",
+<<<<<<< HEAD
       tags: ["Quantum", "Computing", "Innovation"], image: "/api/placeholder/600/400",
+=======
+      tags: ["Quantum,Computing,Innovation"], image: "/api/placeholder/600/400",
+>>>>>>> main
       featured: true
     }, {
       id: 3,
       title: "Micro SaaS Revolution: Building Scalable Solutions", excerpt: "How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.",
       author: "Alex Thompson", date: "2025-01-10",
       readTime: "6 min read", category: "Micro SaaS",
+<<<<<<< HEAD
       tags: ["SaaS", "Software", "Business"], image: "/api/placeholder/600/400",
+=======
+      tags: ["SaaS,Software,Business"], image: "/api/placeholder/600/400",
+>>>>>>> main
       featured: false
     }, {
       id: 4,
       title: "Cybersecurity in the Age of AI: New Threats and Solutions", excerpt: "Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.",
       author: "Lisa Park", date: "2025-01-08",
       readTime: "10 min read", category: "Cybersecurity",
+<<<<<<< HEAD
       tags: ["Security", "AI", "Enterprise"], image: "/api/placeholder/600/400",
+=======
+      tags: ["Security,AI,Enterprise"], image: "/api/placeholder/600/400",
+>>>>>>> main
       featured: false
     }, {
       id: 5,
       title: "Digital Transformation: A Complete Guide for 2025", excerpt: "Comprehensive strategies for successful digital transformation initiatives in modern enterprises.",
       author: "David Kumar", date: "2025-01-05",
       readTime: "15 min read", category: "Digital Transformation",
+<<<<<<< HEAD
       tags: ["Digital", "Transformation", "Strategy"], image: "/api/placeholder/600/400",
+=======
+      tags: ["Digital,Transformation,Strategy"], image: "/api/placeholder/600/400",
+>>>>>>> main
       featured: false
     }, {
       id: 6,
       title: "Cloud Infrastructure Best Practices for Global Enterprises", excerpt: "Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.",
       author: "Maria Santos", date: "2025-01-03",
       readTime: "9 min read", category: "Cloud Computing",
+<<<<<<< HEAD
       tags: ["Cloud", "Infrastructure", "Enterprise"], image: "/api/placeholder/600/400",
+=======
+      tags: ["Cloud,Infrastructure,Enterprise"], image: "/api/placeholder/600/400",
+>>>>>>> main
       featured: false
     }
   ];
   const categories = [
+<<<<<<< HEAD
     { name: "AI & Machine Learning", icon: Brain, count: 15 }, { name: "Quantum Computing", icon: Atom, count: 8 },
+=======
+  { name: "AI & Machine Learning", icon: Brain, count: 15 }, { name: "Quantum Computing", icon: Atom, count: 8 },
+>>>>>>> main
     { name: "Micro SaaS", icon: Rocket, count: 12 }, { name: "Cybersecurity", icon: Shield, count: 10 },
     { name: "Digital Transformation", icon: Globe, count: 7 }, { name: "Cloud Computing", icon: Code, count: 9 }
   ];
@@ -61,8 +93,16 @@ export default function Blog() {
     <>
       <SEO 
         title="Blog - Zion Tech Group | Technology Insights & Industry News"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
         description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group&apos;s expert team."'
         keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news"
+=======
+        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group's expert team. 
+        keywords='technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news"
+>>>>>>> main
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -231,7 +271,11 @@ export default function Blog() {
                     {categories.map((category, index) => (
                       <Link
                         key={category.name}
+<<<<<<< HEAD
+                        to={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+=======
                         to={`/blog/category/${category.name.toLowerCase().replace(/\\s+/g, '-')}`}
+>>>>>>> main
                         className="flex items-center justify-between p-3 rounded-lg hover: bg-slate-700/50 transition-colors group"
                       >
                         <div className="flex items-center">

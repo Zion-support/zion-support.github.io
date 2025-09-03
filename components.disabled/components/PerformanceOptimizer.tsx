@@ -38,6 +38,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       });
 
       try {
+<<<<<<< HEAD
         observer.observe({
           entryTypes: [
             'largest-contentful-paint',
@@ -45,6 +46,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             'layout-shift',
           ],
         });
+=======
+        observer.observe({ entryTypes: ['largest-contentful-paint,first-input,layout-shift'] });
+>>>>>>> main
       } catch (e) {
         // Fallback for browsers that don't support all entry types
         console.log('Performance monitoring not fully supported');

@@ -2,12 +2,32 @@
 import fs from 'fs';';import path from 'path';';import { glob } from 'glob';';';// Configuration;
 const CONFIG = {;
   // Directories to process;
+<<<<<<< HEAD
   "directories": [;";    'src/**/*.{js,jsx,ts,tsx}',';    'pages/**/*.{js,jsx,ts,tsx}',';    'components/**/*.{js,jsx,ts,tsx}',';    'utils/**/*.{js,jsx,ts,tsx}',';    'hooks/**/*.{js,jsx,ts,tsx}',';    'services/**/*.{js,jsx,ts,tsx}';';  ],;';  // Files to exclude;
   "exclude": [;";    '**/*.test.{js,jsx,ts,tsx}',';    '**/*.spec.{js,jsx,ts,tsx}',';    '**/node_modules/**',';    '**/dist/**',';    '**/build/**',';    '**/.next/**';';  ],;';  // Console methods to remove;
   "consoleMethods": ['log', 'warn', 'info', 'debug'],';  // Keep console.error in production for debugging;
   "keepConsoleError": true}";// Statistics;
 let stats = {;
   "filesProcessed": 0,;";  "consoleStatementsRemoved": 0,;";  "filesModified": 0}";/**;
+=======
+  directories: [;
+    'src/**/*.{js,jsx,ts,tsx},pages/**/*.{js,jsx,ts,tsx},components/**/*.{js,jsx,ts,tsx},utils/**/*.{js,jsx,ts,tsx},hooks/**/*.{js,jsx,ts,tsx},services/**/*.{js,jsx,ts,tsx}';
+  ],
+  // Files to exclude;
+  exclude: [;
+    '**/*.test.{js,jsx,ts,tsx},**/*.spec.{js,jsx,ts,tsx},**/node_modules/**,**/dist/**,**/build/**,**/.next/**';
+  ],
+  // Console methods to remove;
+  consoleMethods: ['log,warn,info,debug'],
+  // Keep console.error in production for debugging;
+  keepConsoleError: true}
+// Statistics;
+let stats = {
+  filesProcessed: 0,
+  consoleStatementsRemoved: 0,
+  filesModified: 0}
+/**;
+>>>>>>> main
  * Remove console statements from a file;
  */;
 function removeConsoleStatements(filePath) {;

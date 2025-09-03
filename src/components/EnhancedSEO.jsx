@@ -1,7 +1,26 @@
+<<<<<<< HEAD
  export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https: '''';import { Helmet } from 'react-helmet-async';'
+<<<<<<< HEAD
 ';export default function EnhancedSEO ({' title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions',' description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.',' keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical,' ogImage = 'https: ''';'
+=======
+=======
+ export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https: '''';import { Helmet } from 'react-helmet-async
+';export default function EnhancedSEO ({' title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions, description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services., keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical,' ogImage = 'https:''
+>>>>>>> main
 import { Helmet } from 'react-helmet-async';
 ''
+<<<<<<< HEAD
+=======
+'''
+  title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions,''
+  description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting-edge technology services.,''
+  keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation,'
+  canonical,'''
+  ogImage = 'https://ziontechgroup.com/images/og-default.jpg,''
+  ogType = 'website,''
+  twitterCard = 'summary_large_image', structuredData, noindex = false, nofollow = false}) {}"
+'
+>>>>>>> main
 ''
 ''''
   title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions',''''
@@ -21,6 +40,7 @@ import { Helmet } from 'react-helmet-async';
   // Default structured data for organization
   const defaultStructuredData = {}""
 ''
+<<<<<<< HEAD
 ''
 ''''
     '@context': 'https://schema.org', @type': 'Organization','''
@@ -41,16 +61,45 @@ import { Helmet } from 'react-helmet-async';
       telephone: '+1-302-464-0950',''
       contactType: 'customer service', ''
       email: 'kleber@ziontechgroup.com'},''
+=======
+'''
+    '@context': 'https://schema.org',@type': 'Organization,''
+    name: 'Zion Tech Group,''
+    url: 'https://ziontechgroup.com,''
+    logo: 'https://ziontechgroup.com/images/logo.png', description: description, address: {}"
+'
+''
+'''
+      '@type': 'PostalAddress,''
+      streetAddress: '364 E Main St STE 1008,''
+      addressLocality: 'Middletown,''
+      addressRegion: 'DE,''
+      postalCode: '19709,''
+      addressCountry: 'US'}, contactPoint: {}"
+'
+      '@type': 'ContactPoint,
+      telephone: '+1-302-464-0950,
+      contactType: 'customer service,
+      email: 'kleber@ziontechgroup.com'},'
+>>>>>>> main
     sameAs: [''
       'https://linkedin.com/company/ziontechgroup', https: //twitter.com/ziontechgroup',https: //github.com/Zion-Holdings', 
 ], offers: {}""
 ''
+<<<<<<< HEAD
 ''
 ''''
       '@type': 'AggregateOffer',''''
       priceCurrency: 'USD', ''''
       lowPrice: '599',''''
       highPrice: '25000', ''''
+=======
+'''
+      '@type': 'AggregateOffer,''
+      priceCurrency: 'USD,''
+      lowPrice: '599,''
+      highPrice: '25000,''
+>>>>>>> main
       description: 'Enterprise AI and Technology Solutions'}}
   // Merge with provided structured data
   const finalStructuredData = structuredData
@@ -137,4 +186,9 @@ export { EnhancedSEO }
 export { EnhancedSEO }
 
 export { EnhancedSEO }
+<<<<<<< HEAD
 ;"`"
+=======
+;"`
+>>>>>>> main
+>>>>>>> main

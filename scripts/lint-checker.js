@@ -1,7 +1,71 @@
 #!/usr/bin/env node;
+<<<<<<< HEAD
 const fs = require(;);  'fs');';const path = require(;);  'path');';const { execSync } = require(;);  'child_process');';// Common lint issues to check for;';const lintRules = {;
   'no-console': /console\.(log|warn|error|info|debug)/g,';  'no-unused-imports': /import\s+[^}]+from\s+[;';  ''][^'']+[;';  '"];?\s*$/gm,";  'no-unused-vars;';  ': /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,';  'no-debugger;';  ': /debugger;/g,';  'no-alert;';  ': /alert\(/g,';  'no-eval;';  ': /eval\(/g,';  'no-var;';  ': /var\s+/g,';  'prefer-const;';  ': /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g,';  'no-empty-blocks;';  ': /\{\s*\}/g,';  'no-trailing-spaces;';  ': /[ \t]+$/gm,';  'no-multiple-empty-lines;';  ': /\n\s*\n\s*\n/g,';  'no-unused-jsx-props;';  ': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g}';// File extensions to check;';const extensions = ['.js';  ', '.jsx;';  ', '.ts;';  ', '.tsx;';  '];';// Directories to ignore;';const ignoreDirs = [;
   'node_modules;';  ',';  '.git;';  ',';  'dist;';  ',';  'build;';  ',';  '.next;';  ',';  'out;';  ',';  'coverage;';  ',';  'temp;';  ',';  'tmp;';  ',';  'logs;';  ',';  'reports;';  ',';  'test-reports;';  ',';  'security-reports;';  ',';  'ci-cd-reports;';  ',';  'link-reports;';  ',';  'broken_files_backup;';  ',';  'temp_backup;';  ',';  'temp_working;';  ';';];';// Issues found;
+=======
+const fs = require(
+  'fs');
+const path = require(
+  'path');
+const { execSync } = require(
+  'child_process');
+// Common lint issues to check for;
+const lintRules = {
+  'no-console': /console\.(log|warn|error|info|debug)/g,
+  'no-unused-imports': /import\s+[^}]+from\s+[;
+  ''][^'']+[;
+  '"];?\s*$/gm,
+  'no-unused-vars;
+  ': /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,
+  'no-debugger;
+  ': /debugger;/g,
+  'no-alert;
+  ': /alert\(/g,
+  'no-eval;
+  ': /eval\(/g,
+  'no-var;
+  ': /var\s+/g,
+  'prefer-const;
+  ': /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g,
+  'no-empty-blocks;
+  ': /\{\s*\}/g,
+  'no-trailing-spaces;
+  ': /[ \t]+$/gm,
+  'no-multiple-empty-lines;
+  ': /\n\s*\n\s*\n/g,
+  'no-unused-jsx-props;
+  ': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g}
+// File extensions to check;
+const extensions = ['.js
+  ,.jsx;
+  ,.ts;
+  ,.tsx;
+  '];
+// Directories to ignore;
+const ignoreDirs = [
+  'node_modules;
+  ,.git;
+  ,dist;
+  ,build;
+  ,.next;
+  ,out;
+  ,coverage;
+  ,temp;
+  ,tmp;
+  ,logs;
+  ,reports;
+  ,test-reports;
+  ,security-reports;
+  ,ci-cd-reports;
+  ,link-reports;
+  ,broken_files_backup;
+  ,temp_backup;
+  ,temp_working;
+  ';
+];
+// Issues found;
+>>>>>>> main
 const issues = [];
 const totalFiles = 0;
 const filesWithIssues = 0;

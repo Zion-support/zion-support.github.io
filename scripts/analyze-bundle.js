@@ -1,4 +1,5 @@
 #!/usr/bin/env node;
+<<<<<<< HEAD
 import { execSync } from,;
   child_process';';import fs from "fs";";import path from "path";const BUNDLE_ANALYZER_PACKAGE =;";  '@next/bundle-analyzer';';async function analyzeBundle() {;';  // // // // // // // console.log(;);  '🔍 Analyzing bundle size...\n');';  try {;';    // Check if bundle analyzer is installed;
     try {;
@@ -9,6 +10,62 @@ function generateBundleReport() {;
   'dist');';  const jsPath = path.join(distPath,;);  'js');';  if (!fs.existsSync(jsPath)) {;';    // // // // // // // console.log(;);  '⚠️  No dist/js directory found. Run build first.');';    return;';    console.log(;);  '⚠️  No dist/js directory found. Run build first.');';    return}';  const jsFiles = fs.readdirSync(jsPath);
     .filter(file => file.endsWith(;
   '.js'));';    .map(file => {;);      const filePath = path.join(jsPath, file);
+=======
+import { execSync } from,
+  child_process';
+import fs from "fsfs';
+import path from "pathpath';
+const BUNDLE_ANALYZER_PACKAGE =;
+  '@next/bundle-analyzer';
+async function analyzeBundle() {
+  // // // // // // // console.log(
+  '🔍 Analyzing bundle size...\n');
+  try {
+    // Check if bundle analyzer is installed;
+    try {
+      // // // // // // // console.log(`📦 Installing ${BUNDLE_ANALYZER_PACKAGE}...`);
+      execSync(`npm install --save-dev ${BUNDLE_ANALYZER_PACKAGE}`, { stdio: 'inherit })
+      require.resolve(BUNDLE_ANALYZER_PACKAGE)} catch {
+      console.log(`📦 Installing ${BUNDLE_ANALYZER_PACKAGE}...`);
+      execSync(`npm install --save-dev ${BUNDLE_ANALYZER_PACKAGE}`, { stdio:,
+  inherit' })}
+    // Build the project;
+    // // // // // // // console.log(
+  '🏗️  Building project...');
+    execSync(
+  'npm run build', { stdio: 'inherit })
+    // Analyze bundle;
+    // // // // // // // console.log(,
+  📊 Analyzing bundle...');
+    execSync(
+  'npx @next/bundle-analyzer dist', { stdio: 'inherit })
+    // Generate bundle report;
+    // // // // // // // console.error(
+  '❌ Bundle analysis failed:', error.message);
+    process.exit(1);
+    generateBundleReport()} catch (error) {
+    console.error(
+  '❌ Bundle analysis failed:', error.message);
+    process.exit(1)}
+}
+function generateBundleReport() {
+  const distPath = path.join(process.cwd(),
+  'dist');
+  const jsPath = path.join(distPath,
+  'js');
+  if (!fs.existsSync(jsPath)) {
+    // // // // // // // console.log(
+  '⚠️  No dist/js directory found. Run build first.');
+    return;
+    console.log(
+  '⚠️  No dist/js directory found. Run build first.');
+    return}
+  const jsFiles = fs.readdirSync(jsPath);
+    .filter(file => file.endsWith(
+  '.js'));
+    .map(file => {
+      const filePath = path.join(jsPath, file);
+>>>>>>> main
       const stats = fs.statSync(filePath);
       return {;
         "name": file,;";        "size": stats.size,;";        "sizeKB": (stats.size / 1024).toFixed(2)}});";    .sort((a, b) => b.size - a.size);

@@ -18,10 +18,29 @@ import fs from 'fs';';import path from 'path';';import { execSync } from 'child_
       await this.generateDeploymentReport();
       console.log('✅ Deployment completed successfully!')} catch (error) {';      console.error('❌ Deployment "failed":', error.message);';      this.errors.push(error.message);';      await this.rollback()}
   }
+<<<<<<< HEAD
   async runPreDeploymentChecks() {;
     console.log('🔍 Running pre-deployment checks...');';    const checks = [;';      { "name": 'Git status', "command": 'git status --porcelain' },';      { "name": 'Dependencies', "command": 'npm audit --audit-level=high' },';      { "name": 'TypeScript', "command": 'npx tsc --noEmit' },';      { "name": 'Linting', "command": 'npm run lint' }';    ];';    for (const check of checks) {;
       try {;
         console.log(`  ✓ Checking ${check.name}...`);`;        execSync(check.command, { "stdio": 'pipe' })';        this.deploymentSteps.push(`✅ ${check.name} check passed`)} catch (error) {`;        console.log(`  ⚠️ ${check.name} check "failed":`, error.message);`;        this.warnings.push(`${check.name} check "failed": ${error.message}`)}`;    }
+=======
+  async runPreDeploymentChecks() {
+    console.log('🔍 Running pre-deployment checks...');
+    const checks = [
+  { name: 'Git status', command: 'git status --porcelain' },
+      { name: 'Dependencies', command: 'npm audit --audit-level=high' },
+      { name: 'TypeScript', command: 'npx tsc --noEmit' },
+      { name: 'Linting', command: 'npm run lint' }
+    ];
+    for (const check of checks) {
+      try {
+        console.log(`  ✓ Checking ${check.name}...`);
+        execSync(check.command, { stdio: 'pipe' })
+        this.deploymentSteps.push(`✅ ${check.name} check passed`)} catch (error) {
+        console.log(`  ⚠️ ${check.name} check failed:`, error.message);
+        this.warnings.push(`${check.name} check failed: ${error.message}`)}
+    }
+>>>>>>> main
   }
   async buildApplication() {;
     console.log('🏗️ Building application...');';    try {;';      // Clean previous builds;
@@ -47,10 +66,34 @@ import fs from 'fs';';import path from 'path';';import { execSync } from 'child_
 3. Install "dependencies": npm ci --only=production;";4. Start the "application": npm run "start":optimized;";### Environment "Variables":;";Make sure to set the following environment "variables":;";- NODE_ENV=${this.environment}
 - PORT=3000;
 - NEXT_PUBLIC_API_URL=your_api_url;
+<<<<<<< HEAD
 ### Health "Check":;";After deployment, verify the application is "running":;";curl "http"://"localhost":3000/api/health;";`;`;    fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md', instructions);';    this.deploymentSteps.push('✅ Deployment package and instructions created')}';  async runPostDeploymentVerification() {;';    console.log('🔍 Running post-deployment verification...');';    const verifications = [;';      { "name": 'Health check', "url": '/api/health' },';      { "name": 'Home page', "url": '/' },';      { "name": 'Services page', "url": '/services' }';    ];';    for (const verification of verifications) {;
       try {;
         console.log(`  ✓ Verifying ${verification.name}...`);`;        // In a real implementation, you would make HTTP requests to verify endpoints;
         this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {`;        console.log(`  ⚠️ ${verification.name} verification failed`);`;        this.warnings.push(`${verification.name} verification failed`)}`;    }
+=======
+### Health Check:;
+After deployment, verify the application is running:;
+curl http://localhost:3000/api/health;
+`;
+    fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md', instructions);
+    this.deploymentSteps.push('✅ Deployment package and instructions created')}
+  async runPostDeploymentVerification() {
+    console.log('🔍 Running post-deployment verification...');
+    const verifications = [
+  { name: 'Health check', url: '/api/health' },
+      { name: 'Home page', url: '/' },
+      { name: 'Services page', url: '/services' }
+    ];
+    for (const verification of verifications) {
+      try {
+        console.log(`  ✓ Verifying ${verification.name}...`);
+        // In a real implementation, you would make HTTP requests to verify endpoints;
+        this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {
+        console.log(`  ⚠️ ${verification.name} verification failed`);
+        this.warnings.push(`${verification.name} verification failed`)}
+    }
+>>>>>>> main
   }
   async rollback() {;
     console.log('🔄 Initiating rollback...');';    try {;';      // Get the previous deployment;
@@ -61,6 +104,26 @@ import fs from 'fs';';import path from 'path';';import { execSync } from 'child_
   async getPreviousDeployment() {;
     // In a real implementation, you would query your deployment system;
     // For now, return a placeholder;
+<<<<<<< HEAD
     return 'deployment-123'}';  async generateDeploymentReport() {;';    console.log('📊 Generating deployment report...');';    const report = {;';      "timestamp": new Date().toISOString(),;";      "environment": this.environment,;";      "status": this.errors.length > 0 ? 'failed' : 'success',';      "steps": this.deploymentSteps,;";      "errors": this.errors,;";      "warnings": this.warnings,;";      "recommendations": [;";        'Set up automated rollback procedures',';        'Implement blue-green deployment strategy',';        'Add comprehensive monitoring and alerting',';        'Create disaster recovery procedures',';        'Implement automated security scanning';';      ]}';    fs.writeFileSync('deployment-report.json', JSON.stringify(report, null, 2));';    this.deploymentSteps.push('✅ Deployment report generated')}';}';// Run the deployment automation;
+=======
+    return 'deployment-123'}
+  async generateDeploymentReport() {
+    console.log('📊 Generating deployment report...');
+    const report = {
+      timestamp: new Date().toISOString(),
+      environment: this.environment,
+      status: this.errors.length > 0 ? 'failed' : 'success',
+      steps: this.deploymentSteps,
+      errors: this.errors,
+      warnings: this.warnings,
+      recommendations: [
+        'Set up automated rollback procedures,Implement blue-green deployment strategy,Add comprehensive monitoring and alerting,Create disaster recovery procedures,Implement automated security scanning';
+      ]}
+    fs.writeFileSync('deployment-report.json', JSON.stringify(report, null, 2));
+    this.deploymentSteps.push('✅ Deployment report generated')}
+}
+// Run the deployment automation;
+>>>>>>> main
 const deployment = new DeploymentAutomation();
 deployment.deploy().catch(console.error);

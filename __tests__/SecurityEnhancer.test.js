@@ -1,17 +1,45 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import SecurityEnhancer from '../components/SecurityEnhancer';
+<<<<<<< HEAD
   describe('SecurityEnhancer', () => {
+=======
+
+describe('SecurityEnhancer', () => {
+>>>>>>> main
   test('renders without crashing', () => {
     render(<SecurityEnhancer />);
-    expect(screen.getByTestId('securityenhancer')).toBeInTheDocument();';
+    expect(screen.getByTestId('securityenhancer')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> main
   test('displays correct content', () => {
     render(<SecurityEnhancer />);
-    // Add specific content tests based on component;
+=======
+import React   from 'react''
+import { render, screen, fireEvent }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import SecurityEnhancer   from '../components/SecurityEnhancer''
+  describe('SecurityEnhancer', () => {'
+  test('renders without crashing', () => {'
+    render(<SecurityEnhancer  />)
+    expect(screen.getByTestId('securityenhancer')).toBeInTheDocument();'
+  })
+
+  test('displays correct content', () => {'
+    render(<SecurityEnhancer  />)
+>>>>>>> main
+    // Add specific content tests based on component
   });
+<<<<<<< HEAD
 ;
   test('handles user interactions', () => {
     render(<SecurityEnhancer />);
@@ -21,6 +49,21 @@ import SecurityEnhancer from '../components/SecurityEnhancer';
   test('applies correct styling', () => {
     render(<SecurityEnhancer />);
     // Add styling tests if needed;
+=======
+
+  test('handles user interactions', () => {'
+    render(<SecurityEnhancer  />)
+    // Add interaction tests based on component functionality
+  });
+
+  test('applies correct styling', () => {'
+    render(<SecurityEnhancer  />)
+    // Add styling tests if needed
+<<<<<<< HEAD
+>>>>>>> main
   });
 });
-;
+=======
+  })
+})
+>>>>>>> main

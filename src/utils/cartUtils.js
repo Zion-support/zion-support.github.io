@@ -1,7 +1,11 @@
 // Cart utility functions for managing shopping cart state and operations
 
 // Local storage keys
+<<<<<<< HEAD
 const CART_STORAGE_KEY = 'zion_cart';""
+=======
+const CART_STORAGE_KEY = 'zion_cart
+>>>>>>> main
 const CART_EXPIRY_KEY = 'zion_cart_expiry';
 
 // Cart expiry time (24 hours)
@@ -156,8 +160,13 @@ export const getCartItemById = (cart, itemId) => {
  */
 export const validateCartItem = (item) => {
   if (!item) return false;
+<<<<<<< HEAD
 ""
   const requiredFields = ['id', 'name', 'price'];
+=======
+"
+  const requiredFields = ['id,name,price'];
+>>>>>>> main
   const hasRequiredFields = requiredFields.every(field => item.hasOwnProperty(field));
 
   if (!hasRequiredFields) return false;

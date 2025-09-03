@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import { Link } from 'react - router - dom'''
 
 
 ""
 import { Link } from 'react-router-dom';""
+=======
+import { Link }  from 'react - router - dom
+
+
+"
+import { Link } from 'react-router-dom
+>>>>>>> main
 import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from 'lucide-react';
 export function ContactInfo() {""
     return (<section className='py-20 bg-zion-blue-dark'>""
@@ -249,4 +257,8 @@ export function ContactInfo() {""
   )", "
 }'""",'"
 }''''
+<<<<<<< HEAD
 '''''';""
+=======
+'''''
+>>>>>>> main

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useMemo } from 'react'''
 import { motion, AnimatePresence } from 'framer-motion'''
+=======
+import React, { useState, useEffect, useCallback, useMemo } from 'react''
+import { motion, AnimatePresence }  from 'framer-motion
+>>>>>>> main
 import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
 export const EnterpriseDashboard = () => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true","
@@ -14,6 +19,7 @@ export const EnterpriseDashboard = () => {
     const [systemMetrics] = useState([]
         {}""
 ''
+<<<<<<< HEAD
 ''
 ''''
             id: 'cpu', ''''
@@ -48,18 +54,60 @@ export const EnterpriseDashboard = () => {
             value: 32,''''
             unit: 'Mbps', ''''
             status: 'healthy',''''
+=======
+'''
+            id: 'cpu,''
+            name: 'CPU Usage,'
+            value: 45,'''
+            unit: '%,''
+            status: 'healthy,''
+            trend: 'stable', change: 2, threshold: { warning: 70, critical: 90 }, lastUpdated: new Date () }, {}"
+'
+''
+'''
+            id: 'memory,''
+            name: 'Memory Usage,'
+            value: 78,'''
+            unit: '%,''
+            status: 'warning,''
+            trend: 'up', change: 8, threshold: { warning: 75, critical: 90 }, lastUpdated: new Date () }, {}"
+'
+''
+'''
+            id: 'disk,''
+            name: 'Disk Usage,'
+            value: 65,'''
+            unit: '%,''
+            status: 'healthy,''
+            trend: 'stable', change: 1, threshold: { warning: 80, critical: 95 }, lastUpdated: new Date () }, {}"
+'
+''
+'''
+            id: 'network,''
+            name: 'Network Load,'
+            value: 32,'''
+            unit: 'Mbps,''
+            status: 'healthy,''
+>>>>>>> main
             trend: 'down', change: -5, threshold: { warning: 100, critical: 150 }, lastUpdated: new Date () }
     ]) 
     const [serviceStatuses] = useState ([]
         {}""
 ''
+<<<<<<< HEAD
 ''
 ''''
             id: 'web-server', ''''
             name: 'Web Server',''''
+=======
+'''
+            id: 'web-server,''
+            name: 'Web Server,''
+>>>>>>> main
             status: 'online', uptime: 99.98, responseTime: 45, errorRate: 0.02,
 }, {}""
 ''
+<<<<<<< HEAD
 ''
 ''''
             id: 'database',''''
@@ -70,18 +118,39 @@ export const EnterpriseDashboard = () => {
 ''''
             id: 'api-gateway', ''''
             name: 'API Gateway',''''
+=======
+'''
+            id: 'database,''
+            name: 'Database,''
+            status: 'online', uptime: 99.95, responseTime: 12, errorRate: 0.01,
+}, {}"
+'
+''
+'''
+            id: 'api-gateway,''
+            name: 'API Gateway,''
+>>>>>>> main
             status: 'degraded', uptime: 99.87, responseTime: 89, errorRate: 0.15,
 }, {}""
 ''
+<<<<<<< HEAD
 ''
 ''''
             id: 'cache-server',''''
             name: 'Cache Server', ''''
             status: 'online', uptime: 99.99, responseTime: 2, errorRate: 0.001, }
+=======
+'''
+            id: 'cache-server,''
+            name: 'Cache Server,''
+            status: 'online', uptime: 99.99, responseTime: 2, errorRate: 0.001,
+}
+>>>>>>> main
     ]) 
     const [securityAlerts] = useState ([]
         {}""
 ''
+<<<<<<< HEAD
 ''
 ''''
             id: 'alert-1', ''''
@@ -105,10 +174,37 @@ export const EnterpriseDashboard = () => {
             status: 'resolved',''''
             affected['user-789'], ';'
             source: 'Access Control System', }
+=======
+'''
+            id: 'alert-1,''
+            severity: 'medium,''
+            type: 'anomaly,''
+            title: 'Unusual Login Pattern Detected,''
+            description: 'Multiple login attempts from different locations within short time frame,''
+            timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago''''
+            status: 'investigating,'
+            affected['user-123',user-456'],
+            source: 'Security Monitoring System',
+}, {}"
+'
+''
+'''
+            id: 'alert-2,''
+            severity: 'low,''
+            type: 'access_violation,''
+            title: 'Failed Authentication Attempt,''
+            description: 'User attempted to access restricted resource without proper permissions,''
+            timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago''''
+            status: 'resolved,''
+            affected['user-789'],
+            source: 'Access Control System',
+}
+>>>>>>> main
     ]) 
     const [userActivities] = useState ([]
         {}""
 ''
+<<<<<<< HEAD
 ''
 ''''
             id: 'activity-1', ''''
@@ -119,9 +215,21 @@ export const EnterpriseDashboard = () => {
             timestamp: new Date(Date.now() - 1000 * 60 * 2), ''''
             ipAddress: '192.168.1.100',''''
             userAgent: 'Chrome/91.0.4472.124', ''''
+=======
+'''
+            id: 'activity-1,''
+            userId: 'user-123,''
+            userName: 'John Doe,''
+            action: 'login,''
+            resource: 'dashboard,'
+            timestamp: new Date(Date.now() - 1000 * 60 * 2),'''
+            ipAddress: '192.168.1.100,''
+            userAgent: 'Chrome/91.0.4472.124,''
+>>>>>>> main
             status: 'success',
 }, {}""
 ''
+<<<<<<< HEAD
 ''
 ''''
             id: 'activity-2',''''
@@ -132,6 +240,17 @@ export const EnterpriseDashboard = () => {
             timestamp: new Date(Date.now() - 1000 * 60 * 5), ''''
             ipAddress: '192.168.1.101',''''
             userAgent: 'Firefox/89.0.2', ''''
+=======
+'''
+            id: 'activity-2,''
+            userId: 'user-456,''
+            userName: 'Jane Smith,''
+            action: 'data_export,''
+            resource: 'reports,'
+            timestamp: new Date(Date.now() - 1000 * 60 * 5),'''
+            ipAddress: '192.168.1.101,''
+            userAgent: 'Firefox/89.0.2,''
+>>>>>>> main
             status: 'success',
 }
     ]) 
@@ -213,9 +332,15 @@ export const EnterpriseDashboard = () => {
             case 'low':''
                 return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30'
             default:''
+<<<<<<< HEAD
                 return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}''', '
 }';'''
     return (<div className='bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden'>''''
+=======
+                return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}''',
+}'
+    return (<div className='bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden'>'''
+>>>>>>> main
       {/* Header */}''''
       <div className='bg-gradient-to-r from-indigo-500 to-purple-500 p-6 text-white'>''''
         <div className='flex items-center justify-between'>''''

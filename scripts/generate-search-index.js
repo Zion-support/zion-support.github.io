@@ -1,5 +1,13 @@
 #!/usr/bin/env node;
+<<<<<<< HEAD
 import fs from "fs";";import path from "path";function walk(dir, filelist = []) {;";  const files = fs.readdirSync(dir, { "withFileTypes": true });";  for (const entry of files) {;
+=======
+import fs from "fsfs';
+import path from "pathpath';
+function walk(dir, filelist = []) {
+  const files = fs.readdirSync(dir, { withFileTypes: true })
+  for (const entry of files) {
+>>>>>>> main
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {;
       if (entry.name.startsWith(;

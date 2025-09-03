@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';""
 import { render, screen } from '@testing-library/react';""
 import '@testing-library/jest-dom';""
@@ -12,3 +13,25 @@ describe('AISolutions', () => {""
     render(<AISolutions /" >);"
     // Add more specific tests here, });, });
 ""
+=======
+<<<<<<< HEAD
+describe('AISolutions', () => {}' it('renders without crashing', () => {} render(<AISolutions />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<AISolutions />) '
+=======
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import AiSolutions from './AiSolutions
+describe('AiSolutions', () => {"
+  it('renders without crashing', () => {
+    render(<AiSolutions /" >);"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
+"
+  it('displays expected content', () => {
+    render(<AiSolutions /" >)
+    // Add more specific tests here
+});
+})
+"
+>>>>>>> main
+>>>>>>> main

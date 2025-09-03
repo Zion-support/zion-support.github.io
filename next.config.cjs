@@ -6,8 +6,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   experimental: {
-    esmExternals: false,
-    newNextLinkBehavior: true,
+    // Removed deprecated options
   },
   typescript: {
     ignoreBuildErrors: true,

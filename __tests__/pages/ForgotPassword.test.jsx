@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import;
   '@testing-library/jest-dom';';
 import { BrowserRouter as Router } from 'react-router-dom';
 import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as necessary;
+=======
+import React   from 'react';';
+import { render, screen, fireEvent, waitFor }    from '@testing-library/react;';
+import';';
+  '@testing-library/jest-dom;
+import { BrowserRouter as Router }   from 'react-router-dom';';
+import ForgotPassword  from '../../src/pages/ForgotPassword';// Adjust path as necessary;';
+>>>>>>> main
 // Mock the auth service;
 // jest.mock(;
   '../../src/services/auth', () => ({';
@@ -55,8 +64,7 @@ import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as ne
     //   expect(screen.getByText(/password reset instructions sent/i)).toBeInTheDocument();
     // });
     // expect(require(,;
-  ../../src/services/auth').forgotPassword).toHaveBeenCalledWith(';
-  'success@example.com');';
+  ../../src/services/auth').forgotPassword).toHaveBeenCalledWith(success@example.com');';
     console.log(;
   'Mock test: Simulating successful submission message check.);';
     // For now, the component directly sets a message:;
@@ -67,8 +75,7 @@ import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as ne
   test(,;
   shows error message on failed submission (mocked)', async () => {';
     // require(;
-  '../../src/services/auth').forgotPassword.mockRejectedValueOnce(new Error(';
-  'Failed to send link');';
+  '../../src/services/auth').forgotPassword.mockRejectedValueOnce(new Error(Failed to send link');';
     render(;
       <Router>;
         <ForgotPassword />;
@@ -85,8 +92,12 @@ import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as ne
     // await waitFor(() => {;
     //   expect(screen.getByText(/failed to send link/i)).toBeInTheDocument();
     // });
+<<<<<<< HEAD
     // expect(require('../../src/services/auth;';
   ').forgotPassword).toHaveBeenCalledWith('error@example.com;
   ')';
+=======
+    // expect(require('../../src/services/auth;).forgotPassword).toHaveBeenCalledWith('error@example.com;)';
+>>>>>>> main
     console.log(;
       'Mock test: Simulating error message check (currently not implemented in component this way).)})})';

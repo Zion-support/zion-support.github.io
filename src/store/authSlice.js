@@ -1,8 +1,13 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 // Async thunk for login
+<<<<<<< HEAD
 export const loginUser = createAsyncThunk(""
   'auth/loginUser', async (credentials, { rejectWithValue }) => {
+=======
+export const loginUser = createAsyncThunk( auth/loginUser',
+  async (credentials, { rejectWithValue }) => {
+>>>>>>> main
     try {
       // Simulate API call
       const response = await new Promise((resolve, reject) => {
@@ -10,8 +15,14 @@ export const loginUser = createAsyncThunk(""
           if (credentials.email && credentials.password) {
             resolve({
               user: {
+<<<<<<< HEAD
                 id: 1, email: credentials.email,""
                 name: 'John Doe', ""
+=======
+                id: 1,
+                email: credentials.email,"
+                name: 'John Doe,
+>>>>>>> main
                 role: 'user',
 }, ""
               token: 'mock-jwt-token',
@@ -29,8 +40,13 @@ export const loginUser = createAsyncThunk(""
 );
 
 // Async thunk for signup
+<<<<<<< HEAD
 export const signupUser = createAsyncThunk(""
   'auth/signupUser', async (userData, { rejectWithValue }) => {
+=======
+export const signupUser = createAsyncThunk( auth/signupUser',
+  async (userData, { rejectWithValue }) => {
+>>>>>>> main
     try {
       // Simulate API call
       const response = await new Promise((resolve, reject) => {
@@ -57,8 +73,13 @@ export const signupUser = createAsyncThunk(""
 );
 
 // Async thunk for logout
+<<<<<<< HEAD
 export const logoutUser = createAsyncThunk(""
   'auth/logoutUser', async (_, { rejectWithValue }) => {
+=======
+export const logoutUser = createAsyncThunk( auth/logoutUser',
+  async (_, { rejectWithValue }) => {
+>>>>>>> main
     try {
       // Simulate API call
       await new Promise((resolve) => {
@@ -74,10 +95,17 @@ export const logoutUser = createAsyncThunk(""
 );
 
 // Async thunk for checking auth status
+<<<<<<< HEAD
 export const checkAuthStatus = createAsyncThunk(""
   'auth/checkAuthStatus', async (_, { rejectWithValue }) => {
     try {""
       const token = localStorage.getItem('token');""
+=======
+export const checkAuthStatus = createAsyncThunk( auth/checkAuthStatus',
+  async (_, { rejectWithValue }) => {
+    try {"
+      const token = localStorage.getItem('token');"
+>>>>>>> main
       const user = localStorage.getItem('user');
 
       if (token && user) {

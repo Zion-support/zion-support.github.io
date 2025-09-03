@@ -23,13 +23,20 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
         "status": 'ERROR;';  ',';        parentUrl,;';        "error": error.message,;";        "headers": {}})}";  }
   extractLinks(html, baseUrl) {;
     const links = [];
+<<<<<<< HEAD
     const linkRegex = /href=[']([^';';  ']+)["']/g;';    let match;';    while ((match = linkRegex.exec(html)) !== null) {;
+=======
+    const linkRegex = /href=[']([^]+)["']/g;
+    let match;
+    while ((match = linkRegex.exec(html)) !== null) {
+>>>>>>> main
       const link = match[1];
       if (link && !link.startsWith(;
   '#') && !link.startsWith(';  '"javascript": ') && !link.startsWith(';  '"mailto":)) {        links.push(link)}';    }';    return [...new Set(links)]}
   async analyzeWebsite() {;
     console.log(;);  'Starting comprehensive website analysis...');';        // Start with the main page;';    await this.checkUrl(this.baseUrl);
     // Check common routes;
+<<<<<<< HEAD
     const commonRoutes = [;
   '/about',';  '/services',';  '/solutions',';  '/contact',';  '/pricing',';  '/blog',';  '/careers',';  '/partners',';  '/support',';  '/help',';  '/training',';  '/sitemap',';  '/privacy-policy',';  '/terms-of-service',';  '/cookie-policy',';  '/api',';  '/docs',';  '/research-development',';  '/case-studies',';  '/white-papers',';  '/events',';  '/webinars',';  '/news',';  '/press',';  '/community',';  '/developer',';  '/request-quote',';  '/login',';  '/signup',';  '/dashboard',';  '/admin',';  '/talent',';  '/marketplace',';  '/micro-saas',';  '/ai-services',';  '/cybersecurity',';  '/cloud-devops',';  '/quantum-computing',';  '/space-technology',';  '/digital-transformation',';  '/data-analytics',';  '/iot-edge-computing',';  '/manufacturing-solutions',';  '/financial-solutions',';  '/industry-solutions',';  '/startup-solutions',';  '/supply-chain',';  '/sustainability',';  '/system-status',';  '/testimonials',';  '/faq',';  '/accessibility',';  '/comprehensive-services',';  '/revolutionary-services',';  '/new-services-2025',';  '/enhanced-new-services-2025',';  '/comprehensive-sitemap',';  '/comprehensive-pricing',';  '/services-overview',';  '/services-catalog',';  '/services-comparison',';  '/services-pricing',';  '/ai-solutions',';  '/quantum-ai-platform',';  '/digital-twin',';  '/zero-trust-security',';  '/enterprise-solutions',';  '/ai-business-intelligence'    ];';    for (const route of commonRoutes) {;';      await this.checkUrl(`${this.baseUrl}${route}`)}`;    // Check service sub-routes;
     const serviceRoutes = [;
@@ -43,11 +50,43 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
     const resourceRoutes = [;
   '/blog',';  '/case-studies',';  '/research-development',';  '/docs',';  '/api',';  '/sitemap',';  '/support',';  '/training',';  '/help'    ];';    for (const resourceRoute of resourceRoutes) {;
       await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}`;    console.log(;);  'Analysis completed!')}';  generateReport() {;';    const endTime = Date.now();
+=======
+    const commonRoutes = [
+  '/about,/services,/solutions,/contact,/pricing,/blog,/careers,/partners,/support,/help,/training,/sitemap,/privacy-policy,/terms-of-service,/cookie-policy,/api,/docs,/research-development,/case-studies,/white-papers,/events,/webinars,/news,/press,/community,/developer,/request-quote,/login,/signup,/dashboard,/admin,/talent,/marketplace,/micro-saas,/ai-services,/cybersecurity,/cloud-devops,/quantum-computing,/space-technology,/digital-transformation,/data-analytics,/iot-edge-computing,/manufacturing-solutions,/financial-solutions,/industry-solutions,/startup-solutions,/supply-chain,/sustainability,/system-status,/testimonials,/faq,/accessibility,/comprehensive-services,/revolutionary-services,/new-services-2025,/enhanced-new-services-2025,/comprehensive-sitemap,/comprehensive-pricing,/services-overview,/services-catalog,/services-comparison,/services-pricing,/ai-solutions,/quantum-ai-platform,/digital-twin,/zero-trust-security,/enterprise-solutions,/ai-business-intelligence'    ];
+    for (const route of commonRoutes) {
+      await this.checkUrl(`${this.baseUrl}${route}`)}
+    // Check service sub-routes;
+    const serviceRoutes = [
+  '/ai-solutions,/quantum-computing,/cybersecurity,/cloud-devops,/digital-transformation,/data-analytics,/iot-edge-computing,/space-technology,/ai-business-intelligence,/ai-content-creation,/ai-cybersecurity,/ai-financial-analytics,/ai-healthcare-analytics,/ai-hr-platform,/ai-marketing-automation,/ai-supply-chain-optimization,/ai-workflow-orchestrator,/ai-autonomous-research-assistant,/ai-content-marketing-suite,/ai-quantum-hybrid-platform,/it-infrastructure,/digital-twin,/ai-devops-automation-platform'    ];
+    for (const serviceRoute of serviceRoutes) {
+      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}
+    // Check solution sub-routes;
+    const solutionRoutes = [
+  '/enterprise,/ai-business-intelligence,/quantum-ai-platform,/digital-twin,/zero-trust-security'    ];
+    for (const solutionRoute of solutionRoutes) {
+      await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`)}
+    // Check about sub-routes;
+    const aboutRoutes = [
+  '/story,/team';
+    ];
+    for (const aboutRoute of aboutRoutes) {
+      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}
+    // Check resources sub-routes;
+    const resourceRoutes = [
+  '/blog,/case-studies,/research-development,/docs,/api,/sitemap,/support,/training,/help'    ];
+    for (const resourceRoute of resourceRoutes) {
+      await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}
+    console.log(
+  'Analysis completed!')}
+  generateReport() {
+    const endTime = Date.now();
+>>>>>>> main
     const duration = endTime - this.startTime;
     const report = {;
       "timestamp": new Date().toISOString(),;";      "baseUrl": this.baseUrl,;";      "summary": {;";        "totalLinksChecked": this.checkedUrls.size,;";        "brokenLinks": this.brokenLinks.length,;";        "workingLinks": this.workingLinks.length,;";        "successRate": `${((this.workingLinks.length / this.checkedUrls.size) * 100).toFixed(2)}%`,`;        "duration": `${duration}ms`,`;        "errors": this.errors.length,;";        "warnings": this.warnings.length},;";      "brokenLinks": this.brokenLinks,;";      "workingLinks": this.workingLinks,;";      "missingPages": this.missingPages,;";      "errors": this.errors,;";      "warnings": this.warnings,;";      "recommendations": this.generateRecommendations()}";    return report}
   generateRecommendations() {;
     const recommendations = [];
+<<<<<<< HEAD
     if (this.brokenLinks.length > 0) {;
       recommendations.push({;);        "type":,;";  critical',';        "title": 'Fix Broken Links,';        "description": `Found ${this.brokenLinks.length} broken links that need immediate attention.`,`;        "actions": this.brokenLinks.map(link => ({;";          "url": link.url,;";          "action":,;";  Create missing page or fix redirect',';          "priority": 'high}))      })}';    if (this.workingLinks.length < 50) {;';      recommendations.push({;);        "type":,;";  warning',';        "title": 'Expand Content,';        "description":,;";  Website has limited content. Consider adding more pages and services.',';        "actions": [{ "action":;";  'Add more service pages, "priority":,';  medium' },';          { "action": 'Create blog section, "priority":,';  medium' },';          { "action": 'Add case studies, "priority":,';  medium' }';        ]      })}';    // Check for missing essential pages;
     const essentialPages = [;
@@ -55,6 +94,57 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
     if (missingEssential.length > 0) {;
       recommendations.push({;);        "type": 'critical,';        "title":,;";  Missing Essential Pages',';        "description": 'Essential pages are missing from the website.,';        "actions": missingEssential.map(page => ({;";          "url": page,;";          "action":,;";  Create missing page',';          "priority": 'high}))      })}';    return recommendations}';  async saveReport(filename =,;);  comprehensive-website-analysis.json') {';    const report = this.generateReport();';    await fs.writeFile(filename, JSON.stringify(report, null, 2));
     console.log(`Report saved to ${filename}`);`;    return report}
+=======
+    if (this.brokenLinks.length > 0) {
+      recommendations.push({
+        type:,
+  critical',
+        title: 'Fix Broken Links,
+        description: `Found ${this.brokenLinks.length} broken links that need immediate attention.`,
+        actions: this.brokenLinks.map(link => ({
+          url: link.url,
+          action:,
+  Create missing page or fix redirect',
+          priority: 'high}))      })}
+    if (this.workingLinks.length < 50) {
+      recommendations.push({
+        type:,
+  warning',
+        title: 'Expand Content,
+        description:,
+  Website has limited content. Consider adding more pages and services.',
+        actions: [{ action:;
+  'Add more service pages, priority:,
+  medium' },
+          { action: 'Create blog section, priority:,
+  medium' },
+          { action: 'Add case studies, priority:,
+  medium' }
+        ]      })}
+    // Check for missing essential pages;
+    const essentialPages = [
+  '/privacy-policy,/terms-of-service,/cookie-policy,/sitemap,/contact,/about'    ];
+    const missingEssential = essentialPages.filter(
+      page => !this.workingLinks.some(link => link.url.endsWith(page)));
+    if (missingEssential.length > 0) {
+      recommendations.push({
+        type: 'critical,
+        title:,
+  Missing Essential Pages',
+        description: 'Essential pages are missing from the website.,
+        actions: missingEssential.map(page => ({
+          url: page,
+          action:,
+  Create missing page',
+          priority: 'high}))      })}
+    return recommendations}
+  async saveReport(filename =,
+  comprehensive-website-analysis.json') {
+    const report = this.generateReport();
+    await fs.writeFile(filename, JSON.stringify(report, null, 2));
+    console.log(`Report saved to ${filename}`);
+    return report}
+>>>>>>> main
 }
 // Run the analysis;
 async function main() {;

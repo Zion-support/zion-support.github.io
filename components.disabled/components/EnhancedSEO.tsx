@@ -18,12 +18,16 @@ const defaultSEO = {
   image: '/images/og-image.jpg',
   type: 'website',
   keywords: [
+<<<<<<< HEAD
     'AI solutions',
     'quantum computing',
     'blockchain',
     'cloud infrastructure',
     'software development',
     'technology consulting',
+=======
+    'AI solutions,quantum computing,blockchain,cloud infrastructure,software development,technology consulting'
+>>>>>>> main
   ],
   author: 'Zion Tech Group',
 };
@@ -47,7 +51,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="keywords" content={keywords.join(,)} />
       <meta name="author" content={author} />
 
       {/* Open Graph */}
@@ -74,8 +78,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
+            '@context': 'https://schema.org,@type': 'Organization',
             name: 'Zion Tech Group',
             description: description,
             url: 'https://ziontechgroup.com',

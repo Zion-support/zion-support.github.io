@@ -8,17 +8,14 @@ import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, 
   'lucide-react';
 export default function Revolutionary2025ServicesShowcasePage() {
   // Placeholder data for services;
-  const services = [{
+  const services = [
+  {
       id: 'ai-solutions,
       name:,
   AI Solutions',
       description: 'Revolutionary artificial intelligence and machine learning services,
       features: [,
-  Custom AI Models',
-  'Predictive Analytics',
-  'Natural Language Processing',
-  'Computer Vision',
-  'AI Consulting'],
+  Custom AI Models,Predictive Analytics,Natural Language Processing,Computer Vision,AI Consulting'],
       price: 'Custom,
       rating: 5,
       customers: 50},
@@ -31,10 +28,7 @@ export default function Revolutionary2025ServicesShowcasePage() {
       features: [;
   'Threat Detection,
 ,
-  Zero Trust Architecture',
-  'Security Audits',
-  'Incident Response',
-  'Compliance'],
+  Zero Trust Architecture,Security Audits,Incident Response,Compliance'],
       price: 'Custom,
       rating: 5,
       customers: 75},
@@ -47,10 +41,7 @@ export default function Revolutionary2025ServicesShowcasePage() {
       features: [;
   'Cloud Migration,
 ,
-  DevOps Automation',
-  'Infrastructure as Code',
-  'Monitoring',
-  'Scalability'],
+  DevOps Automation,Infrastructure as Code,Monitoring,Scalability'],
       price: 'Custom,
       rating: 5,
       customers: 60}
@@ -62,9 +53,7 @@ export default function Revolutionary2025ServicesShowcasePage() {
     averageRating: (allRevolutionaryServices.reduce((sum, service) => sum + service.rating, 0) / allRevolutionaryServices.length).toFixed(1),
     totalRevenue: allRevolutionaryServices.reduce((sum, service) => {
       const price = parseInt(service.price.replace(
-  '$', ';
-  ').replace(',
-  ', ''));
+  '$', ).replace(,, ''));
       return sum + (price * service.customers)}, 0)}
 
   return(

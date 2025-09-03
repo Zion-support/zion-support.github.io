@@ -3,8 +3,16 @@
  * Front Maximizer Script;
  * Optimizes frontend performance and assets;
  */;
+<<<<<<< HEAD
 import fs from,;
   fs';';import path from "path";";import { fileURLToPath } from "url";const __filename = fileURLToPath(import.meta.url);
+=======
+import fs from,
+  fs';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
+const __filename = fileURLToPath(import.meta.url);
+>>>>>>> main
 const __dirname = path.dirname(__filename);
 console.log(;);  '🚀 Front Maximizer Started');';class FrontMaximizer {;';  constructor() {;
     this.projectRoot = path.resolve(__dirname,..;);  ');';    this.optimizations = [];';    this.issues = []}

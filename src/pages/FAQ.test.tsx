@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';""
 import { render, screen } from '@testing-library/react';""
 import '@testing-library/jest-dom';""
@@ -12,3 +13,25 @@ describe('FAQ', () => {""
     render(<FAQ /" >);"
     // Add more specific tests here, });, });
 ""
+=======
+<<<<<<< HEAD
+describe('FAQ', () => {}' it('renders without crashing', () => {} render(<FAQ />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<FAQ />) '
+=======
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import FAQ from './FAQ
+describe('FAQ', () => {"
+  it('renders without crashing', () => {
+    render(<FAQ /" >);"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
+"
+  it('displays expected content', () => {
+    render(<FAQ /" >)
+    // Add more specific tests here
+});
+})
+"
+>>>>>>> main
+>>>>>>> main

@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';""
 import { Link } from 'react-router-dom';""
+=======
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect } from 'react' import { Link } from 'react-router-dom' import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react' import { useAuth } from '../../hooks/useAuth' export const UserMenu = () => { const [isOpen, setIsOpen] = useState(false) const menuRef = useRef(null) const { user, logout } = useAuth() useEffect(() => { const handleClickOutside = (event) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener('mousedown', handleClickOutside) return () => document.removeEventListener('mousedown', handleClickOutside)}, []) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {';''"'"
+=======
+import React, { useState, useRef, useEffect } from 'react
+import { Link } from 'react-router-dom
+>>>>>>> main
 import { User, Settings, LogOut, Bell, MessageSquare, Shield, CreditCard, HelpCircle } from 'lucide-react';
 
 export function UserMenu({ user }) {
@@ -21,35 +29,76 @@ export function UserMenu({ user }) {
     setIsOpen(false);, };
 
   const menuItems = [
+<<<<<<< HEAD
     {""
       name: 'Profile', ""
+=======
+  {"
+      name: 'Profile,
+>>>>>>> main
       href: '/profile',
       icon: User, ""
       description: 'Manage your account',
+<<<<<<< HEAD
 }, {""
       name: 'Dashboard',""
       href: '/dashboard', icon: Settings,""
       description: 'View your projects', },
     {""
       name: 'Messages', ""
+=======
+},
+    {"
+      name: 'Dashboard,
+      href: '/dashboard',
+      icon: Settings,"
+      description: 'View your projects',
+},
+    {"
+      name: 'Messages,
+>>>>>>> main
       href: '/messages',
       icon: MessageSquare, ""
       description: 'Check your inbox',
+<<<<<<< HEAD
 }, {""
       name: 'Notifications',""
       href: '/notifications', icon: Bell,""
       description: 'Manage alerts', },
     {""
       name: 'Security', ""
+=======
+},
+    {"
+      name: 'Notifications,
+      href: '/notifications',
+      icon: Bell,"
+      description: 'Manage alerts',
+},
+    {"
+      name: 'Security,
+>>>>>>> main
       href: '/security',
       icon: Shield, ""
       description: 'Privacy & security',
+<<<<<<< HEAD
 }, {""
       name: 'Billing',""
       href: '/billing', icon: CreditCard,""
       description: 'Payment methods', },
     {""
       name: 'Help', ""
+=======
+},
+    {"
+      name: 'Billing,
+      href: '/billing',
+      icon: CreditCard,"
+      description: 'Payment methods',
+},
+    {"
+      name: 'Help,
+>>>>>>> main
       href: '/help',
       icon: HelpCircle, ""
       description: 'Get support',
@@ -111,9 +160,15 @@ export function UserMenu({ user }) {
 
           {/* Logout */}""
           <div className="p-4 border-t border-zion-purple/20">
+<<<<<<< HEAD
             <button onClick={handleLogout}""
               className="flex items-center w-full px-4 py-2 text-red-400 hover: text-red-300 hover:bg-red-500/10 rounded-lg transition-colors"" >"
               <LogOut className="h-4 w-4 mr-3" /" >"
+=======
+            <button onClick={handleLogout}"
+              className='flex items-center w-full px-4 py-2 text-red-400 hover:text-red-300 hover:bg-red-500/10 rounded-lg transition-colors  >'
+              <LogOut className="h-4 w-4 mr-3" /" >
+>>>>>>> main
               <span>Sign Out</span>
             </button>
           </div>
@@ -122,4 +177,9 @@ export function UserMenu({ user }) {
     </div>
   );,
 }
+<<<<<<< HEAD
 ""
+=======
+"
+>>>>>>> main
+>>>>>>> main

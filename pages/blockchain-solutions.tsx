@@ -13,7 +13,7 @@ import {
 
 export default function BlockchainSolutions() {
   const features = [
-    {
+  {
       icon: Shield,
       title: 'Smart Contracts',
       description:
@@ -40,16 +40,20 @@ export default function BlockchainSolutions() {
   ];
 
   const benefits = [
+<<<<<<< HEAD
     'Enhanced security through cryptographic protection',
     'Transparent and immutable transaction records',
     'Reduced costs by eliminating intermediaries',
     'Global accessibility and 24/7 operation',
     'Programmable money and automated processes',
     'Decentralized governance and control',
+=======
+    'Enhanced security through cryptographic protection,Transparent and immutable transaction records,Reduced costs by eliminating intermediaries,Global accessibility and 24/7 operation,Programmable money and automated processes,Decentralized governance and control'
+>>>>>>> main
   ];
 
   const useCases = [
-    {
+  {
       title: 'Supply Chain Management',
       description:
         'Track products from origin to consumer with complete transparency',

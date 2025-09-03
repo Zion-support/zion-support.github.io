@@ -1,5 +1,10 @@
+<<<<<<< HEAD
  const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';'';import React, { useState, useEffect, createContext, useContext } from 'react'''
 import { motion, AnimatePresence } from 'framer-motion';""
+=======
+ const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';import React, { useState, useEffect, createContext, useContext }  from 'react
+import { motion, AnimatePresence } from 'framer-motion
+>>>>>>> main
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
 const AccessibilityContext = createContext(null)
 export const useAccessibility = () => {}
@@ -34,10 +39,17 @@ export const AccessibilityProvider = ({ children }) => {}
   }, [])
   // Save settings to localStorage
   useEffect(() => {}
+<<<<<<< HEAD
     const settings = {}""
       highContrast, reducedMotion,''
       fontSize, '';""
       colorBlindMode}';'
+=======
+    const settings = {}"
+      highContrast, reducedMotion,'
+      fontSize,'
+      colorBlindMode}
+>>>>>>> main
     localStorage.setItem(''''
       'zion-accessibility-settings', JSON.stringify(settings)
     ), }, [highContrast, reducedMotion, fontSize, colorBlindMode])
@@ -119,9 +131,16 @@ export const AccessibilityPanel = () => {}
         event.preventDefault()""
         toggleReducedMotion()', '
 }'',
+<<<<<<< HEAD
 }';'
     window.addEventListener('keydown', handleKeyDown)';'
     return () => window.removeEventListener('keydown', handleKeyDown), }, [isOpen, toggleHighContrast, toggleReducedMotion])
+=======
+}
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown),
+}, [isOpen, toggleHighContrast, toggleReducedMotion])
+>>>>>>> main
   return ()
     <>
       {/* Floating Accessibility Button */}
@@ -129,8 +148,13 @@ export const AccessibilityPanel = () => {}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() =" > setIsOpen(true)}"
+<<<<<<< HEAD
         className='fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300'''''
         aria-label='Open Accessibility Settings'''''
+=======
+        className='fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300''
+        aria-label='Open Accessibility Settings''''
+>>>>>>> main
       >''''
         <Accessibility className='w-6 h-6' /" >"
       </motion.button>
@@ -141,14 +165,19 @@ export const AccessibilityPanel = () => {}
             initial={{ opacity: 0 }}""
             animate={{ opacity: 1 }}''''
             exit={{ opacity: 0 }}''''
+<<<<<<< HEAD
             className='fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4'''
             onClick={() =" > setIsOpen(false)}"
+=======
+            className='fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4'
+            onClick={() =" > setIsOpen(false)}
+>>>>>>> main
           >
             <motion .div
               initial={{ scale: 0.9, opacity: 0 }}""
               animate={{ scale: 1, opacity: 1 }}''''
               exit={{ scale: 0.9, opacity: 0 }}''''
-              className='bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto'''
+              className='bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto'
               onClick={e =" > e.stopPropagation()}"
             >''''
               {/* Header */}''''
@@ -158,10 +187,17 @@ export const AccessibilityPanel = () => {}
                   Accessibility Settings""
                 </h2>''''
                 <Button ''''
+<<<<<<< HEAD
                   variant='ghost'''''
                   size='sm'''''
                   onClick={() =" > setIsOpen(false)}''''"
                   className='text-zion-slate-light hover: text-white'''''
+=======
+                  variant='ghost''''
+                  size='sm''''
+                  onClick={() =" > setIsOpen(false)}''''
+                  className='text-zion-slate-light hover:text-white''
+>>>>>>> main
                 >''''
                   <X className='w-4 h-4' /" >"
                 </Button>
@@ -326,8 +362,13 @@ export const SkipToContent = () => (''''
 )
 // Focus Trap Hook
 export const useFocusTrap = isActive => {}
+<<<<<<< HEAD
   useEffect(() => {}""
     if (!isActive) return'';''
+=======
+  useEffect(() => {}"
+    if (!isActive) return'
+>>>>>>> main
     const focusableElements =''''''
       'button, [href], input, select, textarea, [tabindex]: not([tabindex='-1'])'
     const container = document.activeElement?.closest('[data-focus-trap]')
@@ -347,6 +388,7 @@ export const useFocusTrap = isActive => {}
             firstFocusableElement.focus(), }","
 }', '
 }'',
+<<<<<<< HEAD
 }';'
     document.addEventListener('keydown', handleTabKey)';'
     return () => document.removeEventListener('keydown', handleTabKey), }, [isActive]), }""
@@ -356,3 +398,16 @@ export const SrOnly = ({ children }) => (''''
 )""
 export default AccessibilityPanel'';''
 '''''"'"
+=======
+}
+    document.addEventListener('keydown', handleTabKey)
+    return () => document.removeEventListener('keydown', handleTabKey),
+}, [isActive]),
+}"
+// Screen Reader Only Text'''
+export const SrOnly = ({ children }) => (''''
+  <span className='sr-only'>{children}</span>
+)"
+export default AccessibilityPanel'
+'''''"
+>>>>>>> main

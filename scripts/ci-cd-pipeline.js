@@ -5,6 +5,7 @@
  */;
 import fs from 'fs';';import path from 'path';';import { fileURLToPath } from 'url';';import { spawn } from 'child_process';';';const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+<<<<<<< HEAD
 console.log('🔄 CI/CD Pipeline Started');';class CICDPipeline {;';  constructor() {;
     this.projectRoot = path.resolve(__dirname, '..');';    this.pipelineLog = {;';      "timestamp": new Date().toISOString(),;";      "environment": process.env.NODE_ENV || 'development',';      "branch": process.env.GIT_BRANCH || 'main',';      "commit": process.env.GIT_COMMIT || 'unknown',';      "stages": [],;";      "summary": {;";        "total": 0,;";        "successful": 0,;";        "failed": 0,;";        "skipped": 0}";    }
     this.logFile = path.join(this.projectRoot, 'ci-cd-pipeline-report.json')}';  async run() {;';    try {;
@@ -22,6 +23,91 @@ console.log('🔄 CI/CD Pipeline Started');';class CICDPipeline {;';  constructo
           "name": 'Performance Testing',';          "description": 'Run performance tests',';          "critical": false,;";          "skip": false},;";        {;
           "name": 'Deploy to Staging',';          "description": 'Deploy to staging environment',';          "critical": true,;";          "skip": this.pipelineLog.environment === 'development'},';        {;';          "name": 'Deploy to Production',';          "description": 'Deploy to production environment',';          "critical": true,;";          "skip": this.pipelineLog.environment !== 'production'}';      ];';      // Execute each pipeline stage;
       for (const stage of pipelineStages) {;
+=======
+console.log('🔄 CI/CD Pipeline Started');
+class CICDPipeline {
+  constructor() {
+    this.projectRoot = path.resolve(__dirname, '..');
+    this.pipelineLog = {
+      timestamp: new Date().toISOString(),
+      environment: process.env.NODE_ENV || 'development',
+      branch: process.env.GIT_BRANCH || 'main',
+      commit: process.env.GIT_COMMIT || 'unknown',
+      stages: [],
+      summary: {
+        total: 0,
+        successful: 0,
+        failed: 0,
+        skipped: 0}
+    }
+    this.logFile = path.join(this.projectRoot, 'ci-cd-pipeline-report.json')}
+  async run() {
+    try {
+      console.log('🎯 Starting CI/CD Pipeline...');
+      console.log(`🌍 Environment: ${this.pipelineLog.environment}`);
+      console.log(`🌿 Branch: ${this.pipelineLog.branch}`);
+      console.log(`📝 Commit: ${this.pipelineLog.commit}`);
+      // Define pipeline stages;
+      const pipelineStages = [
+  {
+          name: 'Source Code Checkout',
+          description: 'Checkout source code from repository',
+          critical: true,
+          skip: false},
+        {
+          name: 'Dependency Installation',
+          description: 'Install project dependencies',
+          critical: true,
+          skip: false},
+        {
+          name: 'Code Quality Analysis',
+          description: 'Run code quality checks and linting',
+          critical: false,
+          skip: false},
+        {
+          name: 'Type Checking',
+          description: 'Run TypeScript type checking',
+          critical: true,
+          skip: false},
+        {
+          name: 'Unit Testing',
+          description: 'Run unit tests',
+          critical: false,
+          skip: false},
+        {
+          name: 'Integration Testing',
+          description: 'Run integration tests',
+          critical: false,
+          skip: false},
+        {
+          name: 'Security Scanning',
+          description: 'Run security vulnerability scans',
+          critical: false,
+          skip: false},
+        {
+          name: 'Build Application',
+          description: 'Build application for production',
+          critical: true,
+          skip: false},
+        {
+          name: 'Performance Testing',
+          description: 'Run performance tests',
+          critical: false,
+          skip: false},
+        {
+          name: 'Deploy to Staging',
+          description: 'Deploy to staging environment',
+          critical: true,
+          skip: this.pipelineLog.environment === 'development'},
+        {
+          name: 'Deploy to Production',
+          description: 'Deploy to production environment',
+          critical: true,
+          skip: this.pipelineLog.environment !== 'production'}
+      ];
+      // Execute each pipeline stage;
+      for (const stage of pipelineStages) {
+>>>>>>> main
         await this.executeStage(stage)}
       // Generate pipeline summary;
       this.generateSummary();
@@ -54,11 +140,43 @@ console.log('🔄 CI/CD Pipeline Started');';class CICDPipeline {;';  constructo
     this.pipelineLog.summary.total++}
   async runStageCommand(stage) {;
     // Define commands for each stage;
+<<<<<<< HEAD
     const stageCommands = {;
       'Source Code Checkout': 'git status',';      'Dependency Installation': 'yarn install --frozen-lockfile',';      'Code Quality Analysis': 'npm run lint',';      'Type Checking': 'npm run type-check',';      'Unit Testing': 'npm test -- --passWithNoTests --watchAll=false',';      'Integration Testing': 'npm run "test":ci',';      'Security Scanning': 'npm audit --audit-level moderate',';      'Build Application': 'npm run build',';      'Performance Testing': 'node scripts/performance-monitor-improved.js',';      'Deploy to Staging': 'echo 'Deploying to staging...'',';      'Deploy to Production': 'echo 'Deploying to production...''}';    const command = stageCommands[stage.name] || 'echo 'No command defined'';';    return new Promise((resolve, reject) => {;';      const [cmd, ...args] = command.split(' ');';      const child = spawn(cmd, args, {;);        "cwd": this.projectRoot,;";        "stdio": 'pipe'})';      let output = '';';      let error = '';';      child.stdout.on('data', (data) => {';        output += data.toString()});';      child.stderr.on('data', (data) => {';        error += data.toString()});';      child.on('close', (code) => {';        if (code === 0) {;';          resolve({ output, error })} else {;
           reject(new Error(`Command failed with code ${code}: ${error}`))}`;      });
       child.on('error', (err) => {';        reject(err)})})}';  generateSummary() {;
     console.log('\n📊 CI/CD Pipeline "Summary":');';    console.log('===========================');';    console.log(`📈 Total "Stages": ${this.pipelineLog.summary.total}`);`;    console.log(`✅ "Successful": ${this.pipelineLog.summary.successful}`);`;    console.log(`❌ "Failed": ${this.pipelineLog.summary.failed}`);`;    console.log(`⏭️  "Skipped": ${this.pipelineLog.summary.skipped}`);`;    const successRate = this.pipelineLog.summary.total > 0;
+=======
+    const stageCommands = {
+      'Source Code Checkout': 'git status,Dependency Installation': 'yarn install --frozen-lockfile,Code Quality Analysis': 'npm run lint,Type Checking': 'npm run type-check,Unit Testing': 'npm test -- --passWithNoTests --watchAll=false,Integration Testing': 'npm run test:ci,Security Scanning': 'npm audit --audit-level moderate,Build Application': 'npm run build,Performance Testing': 'node scripts/performance-monitor-improved.js,Deploy to Staging': 'echo 'Deploying to staging...',Deploy to Production': 'echo 'Deploying to production...''}
+    const command = stageCommands[stage.name] || 'echo 'No command defined'';
+    return new Promise((resolve, reject) => {
+      const [cmd, ...args] = command.split(' ');
+      const child = spawn(cmd, args, {
+        cwd: this.projectRoot,
+        stdio: 'pipe'})
+      let output = '';
+      let error = '';
+      child.stdout.on('data', (data) => {
+        output += data.toString()})
+      child.stderr.on('data', (data) => {
+        error += data.toString()})
+      child.on('close', (code) => {
+        if (code === 0) {
+          resolve({ output, error })} else {
+          reject(new Error(`Command failed with code ${code}: ${error}`))}
+      })
+      child.on('error', (err) => {
+        reject(err)})})}
+  generateSummary() {
+    console.log('\n📊 CI/CD Pipeline Summary:');
+    console.log('===========================');
+    console.log(`📈 Total Stages: ${this.pipelineLog.summary.total}`);
+    console.log(`✅ Successful: ${this.pipelineLog.summary.successful}`);
+    console.log(`❌ Failed: ${this.pipelineLog.summary.failed}`);
+    console.log(`⏭️  Skipped: ${this.pipelineLog.summary.skipped}`);
+    const successRate = this.pipelineLog.summary.total > 0;
+>>>>>>> main
       ? Math.round((this.pipelineLog.summary.successful / this.pipelineLog.summary.total) * 100);
       : 0;
     console.log(`📊 Success "Rate": ${successRate}%`);`;    // Show failed stages;

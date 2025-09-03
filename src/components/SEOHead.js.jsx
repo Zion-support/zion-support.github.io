@@ -1,5 +1,11 @@
+<<<<<<< HEAD
  const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https: '''';import { Helmet } from 'react-helmet-async';"'"
 const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https: //ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}""
+=======
+ const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https:'''';import { Helmet } from 'react-helmet-async
+const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}"
+'
+>>>>>>> main
 ''
 ''
 ''''
@@ -47,15 +53,24 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
       <script type='application/ld+json'>
         {JSON.stringify({}""
 ''''
+<<<<<<< HEAD
 ''''
             '@context': 'https://schema.org', ''''
             '@type': 'Organization',''''
             'name': 'Zion Tech Group', ''''
             'url': 'https://ziontechgroup.com',''''
             'logo': 'https://ziontechgroup.com/images/zion-tech-group-logo.png', ''''
+=======
+            '@context': 'https://schema.org,'''
+            '@type': 'Organization,'''
+            'name': 'Zion Tech Group,'''
+            'url': 'https://ziontechgroup.com,'''
+            'logo': 'https://ziontechgroup.com/images/zion-tech-group-logo.png,'''
+>>>>>>> main
             'description': description,''''
             'address': {}""
 ''''
+<<<<<<< HEAD
 ''''
                 '@type': 'PostalAddress', ''''
                 'streetAddress': '364 E Main St STE 1008',''''
@@ -76,6 +91,27 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                 'https: //linkedin.com/company/ziontechgroup', ''''
                 'https: //twitter.com/ziontechgroup',''''
                 'https: //github.com/ziontechgroup''', 
+=======
+                '@type': 'PostalAddress,'''
+                'streetAddress': '364 E Main St STE 1008,'''
+                'addressLocality': 'Middletown,'''
+                'addressRegion': 'DE,'''
+                'postalCode': '19709,'''
+                'addressCountry': 'US'''',
+},''''
+            'contactPoint': {}"
+'''
+''''
+                '@type': 'ContactPoint,'''
+                'telephone': '+1-302-464-0950,'''
+                'contactType': 'customer service,'''
+                'email': 'kleber@ziontechgroup.com'''',
+},''''
+            'sameAs'['''
+                'https://linkedin.com/company/ziontechgroup,'''
+                'https://twitter.com/ziontechgroup,'''
+                'https://github.com/ziontechgroup''',
+>>>>>>> main
 ]
         }) }
       </script>""
@@ -84,27 +120,46 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
       {type === 'article' && publishedTime && (<script type='application/ld+json'>
           {JSON.stringify({}""
 ''''
+<<<<<<< HEAD
 ''''
                 '@context': 'https://schema.org', ''''
                 '@type': 'Article',''''
                 'headline': fullTitle, ''''
+=======
+                '@context': 'https://schema.org,'''
+                '@type': 'Article,'''
+                'headline': fullTitle,''''
+>>>>>>> main
                 'description': description,''''
                 'image': image, ''''
                 'author': {}""
 ''''
 ''''
+<<<<<<< HEAD
                     '@type': 'Organization',''''
                     'name': author''', '
+=======
+                    '@type': 'Organization,'''
+                    'name': author''',
+>>>>>>> main
 },''''
                 'publisher': {}""
 ''''
+<<<<<<< HEAD
 ''''
                     '@type': 'Organization', ''''
+=======
+                    '@type': 'Organization,'''
+>>>>>>> main
                     'name': siteName,''''
                     'logo': {}""
 ''''
+<<<<<<< HEAD
 ''''
                         '@type': 'ImageObject', ''''
+=======
+                        '@type': 'ImageObject,'''
+>>>>>>> main
                         'url': 'https://ziontechgroup.com/images/zion-tech-group-logo.png''',
 }''', '
 },''''
@@ -112,8 +167,12 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                 'dateModified': modifiedTime || publishedTime,''''
                 'mainEntityOfPage': {}""
 ''''
+<<<<<<< HEAD
 ''''
                     '@type': 'WebPage', ''''
+=======
+                    '@type': 'WebPage,'''
+>>>>>>> main
                     '@id': url,
 }
             })}

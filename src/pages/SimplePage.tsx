@@ -1,18 +1,30 @@
 
 ;
+<<<<<<< HEAD
 import { Link, useLocation } from 'react-router-dom';""
 import Header from '../layout/Header';""
+=======
+import { Link, useLocation } from 'react-router-dom
+import Header from '../layout/Header
+>>>>>>> main
 import Footer from '../layout/Footer';
 export default function SimplePage() {
   const location = useLocation();
   const pathname = location.pathname;
+<<<<<<< HEAD
   // Generate a title based on the pathname;""
   const getTitle = () => {""
     const path = pathname.replace('/', '').replace(/-/g, ' ');
+=======
+  // Generate a title based on the pathname;"
+  const getTitle = () => {"
+    const path = pathname.replace('/,').replace(/-/g, ' ');
+>>>>>>> main
     return path.charAt(0).toUpperCase() + path.slice(1)}
   // Generate content based on the pathname;""
   const getContent = () => {""
     if (pathname.includes('pricing')) {
+<<<<<<< HEAD
       return {""
         title: 'Pricing & Plans', description: 'Transparent pricing for our technology solutions and services.',""
         content: 'Our pricing is designed to be transparent and scalable. Contact us for a custom quote tailored to your specific needs and requirements.'}", "
@@ -34,13 +46,62 @@ export default function SimplePage() {
 ""
 import Header from '../layout/Header'
 import Footer from '../layout/Footer'
+=======
+<<<<<<< HEAD
+      return {
+        title: 'Pricing & Plans', description: 'Transparent pricing for our technology solutions and services.',
+        content: 'Our pricing is designed to be transparent and scalable. Contact us for a custom quote tailored to your specific needs and requirements.'}
+    } else if (pathname.includes('case-studies')) {
+      return {
+        title: 'Case Studies', description: 'Real-world examples of how we\'ve helped businesses transform with technology.','
+        content: 'Explore our case studies to see how we\'ve delivered measurable results for clients across various industries.'}'
+    } else if (pathname.includes('blog')) {
+      return {
+        title: 'Blog & Insights', description: 'Latest insights, trends, and thought leadership in technology.',
+        content: 'Stay updated with the latest technology trends, industry insights, and expert perspectives from our team.'}
+    } else {
+      return {
+        title: getTitle(), description: 'Welcome to this page.',
+=======
+      return {"
+        title: 'Pricing & Plans', description: 'Transparent pricing for our technology solutions and services.,
+        content: 'Our pricing is designed to be transparent and scalable. Contact us for a custom quote tailored to your specific needs and requirements.'}",
+} else if (pathname.includes('case-studies')) {
+      return {"
+        title: 'Case Studies', description: 'Real-world examples of how we\\'ve helped businesses transform with technology.,
+        content: 'Explore our case studies to see how we\\'ve delivered measurable results for clients across various industries.'}',
+} else if (pathname.includes('blog')) {
+      return {"
+        title: 'Blog & Insights', description: 'Latest insights, trends, and thought leadership in technology.,
+        content: 'Stay updated with the latest technology trends, industry insights, and expert perspectives from our team.'}
+    } else {
+      return {"
+        title: getTitle(), description: 'Welcome to this page.,
+>>>>>>> main
+        content: 'This page is under development. Please check back soon for updated content.'}
+    }
+  }
+  const pageInfo = getContent()"
+  return ("
+"
+import { Link, useLocation } from 'react-router-dom
+import Header from '../layout/Header'
+import Footer  from '../layout/Footer';export default function SimplePage() {
+>>>>>>> main
   const location = useLocation()
   const pathname = location.pathname
 
   // Generate a title based on the pathname
+<<<<<<< HEAD
   const getTitle = () => {""
     const path = pathname.replace('/', '').replace(/-/g, ' ')
     return path.charAt(0).toUpperCase() + path.slice(1), }
+=======
+  const getTitle = () => {"
+    const path = pathname.replace('/,').replace(/-/g, ' ')
+    return path.charAt(0).toUpperCase() + path.slice(1),
+}
+>>>>>>> main
 
   // Generate content based on the pathname
   const getContent = () => {""
@@ -63,11 +124,27 @@ import Footer from '../layout/Footer'
 
   return (""
     <div className='min-h-screen bg-white'>
+<<<<<<< HEAD
       <Header /" >"
       {/* Hero Section */}""
       <section className='pt-20 pb-16 bg-gradient-to-br from-gray-50 to-blue-50'>""
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>""
           <div className='text-center'>""
+=======
+<<<<<<< HEAD
+      <Header />
+      {/* Hero Section */}
+      <section className='pt-20 pb-16 bg-gradient-to-br from-gray-50 to-blue-50'>
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
+          <div className='text-center'>
+=======
+      <Header /" >
+      {/* Hero Section */}"
+      <section className='pt-20 pb-16 bg-gradient-to-br from-gray-50 to-blue-50'>"
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>"
+          <div className='text-center'>"
+>>>>>>> main
+>>>>>>> main
             <h1 className='text-4xl md:text-6xl font-bold text-gray-900 mb-6'>
               {pageInfo.title}""
             </h1>""
@@ -92,6 +169,7 @@ import Footer from '../layout/Footer'
                 Our team is here to help you find the right solution for your business needs.""
               </p>""
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+<<<<<<< HEAD
                 <Link;""
                   to='/contact';""
                   className='bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>
@@ -99,6 +177,25 @@ import Footer from '../layout/Footer'
                 </Link>
                 <Link""
                   to='/services';""
+=======
+<<<<<<< HEAD
+                <Link
+                  to='/contact';
+                  className='bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>
+                  Contact Us
+                </Link>
+                <Link
+                  to='/services';
+=======
+                <Link;"
+                  to='/contact
+                  className='bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>
+                  Contact Us
+                </Link>
+                <Link"
+                  to='/services
+>>>>>>> main
+>>>>>>> main
                   className='border-2 border-blue-600 text-blue-600 hover: bg-blue-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors'>
                   View Services
                 </Link>
