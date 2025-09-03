@@ -1,8 +1,9 @@
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+import SearchBar from '../components/SearchBar';
 import '../styles/globals.css';
 
 function Header(): any {
@@ -62,6 +63,9 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }}>About</Link>
+          <div className="hidden md:block">
+            <SearchBar />
+          </div>
           <Link href="/contact" style={{ 
             fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
             color: 'white', padding: '8px 16px', borderRadius: 8,
@@ -100,6 +104,9 @@ function Header(): any {
           borderBottom: '1px solid rgba(255,255,255,0.1)',
           padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px'
         }}>
+          <div className="md:hidden mb-4">
+            <SearchBar />
+          </div>
           <Link href="/" style={{ 
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
@@ -180,6 +187,7 @@ function Footer(): any {
             <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Services</Link>
             <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>IT Services</Link>
             <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Services Catalog</Link>
+            <Link href="/docs" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Documentation</Link>
             <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Pricing</Link>
             <div style={{ opacity: 0.8, fontSize: '0.9rem', marginTop: 8 }}>
               <div>• 150+ Micro SaaS Products</div>
@@ -260,6 +268,18 @@ function Footer(): any {
 }
 
 export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, []);
+
   return (
     <ErrorBoundary>
       <PerformanceMonitor />
