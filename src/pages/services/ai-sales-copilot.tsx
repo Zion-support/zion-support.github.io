@@ -5,8 +5,8 @@ import {
   Zap, 
   BarChart3, 
   MessageCircle, 
-  CheckCircle,
-  Shield
+  CheckCircle,;
+  Shield;
 } from 'lucide-react';
 
 export default function AISalesCopilotPage() {

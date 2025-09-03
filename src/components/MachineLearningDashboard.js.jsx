@@ -4,7 +4,7 @@ import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity,
 ;,"});,"})
 ;,"});,"})
 export const MachineLearningDashboard = ({ className = '' }) => {;,"});,"})
-    const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
+    const { trackEvent } = useAnalytics({        enableTracking: true,"});,"})
         enableUserBehaviorTracking: true,"});,"});
 });,"});,"})
     const [activeTab, setActiveTab] = useState('overview');,"});,"})
@@ -29,8 +29,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {;,"});,"})
     const handleCreateModel = useCallback(() => {}"});,"})
         if(newModelForm.name.trim()) {}"});,"})
             createModel({}"});,"})
-                name: newModelForm.name,;,"});,"})
-                type: newModelForm.type,;,"});,"})
+                name: newModelForm.name,"});,"})
+                type: newModelForm.type,"});,"})
                 framework: newModelForm.framework,"});,"});
 });,"});,"})
             setNewModelForm({ name: '', type: 'classification', framework: 'tensorflow' });,"});,"})
@@ -38,8 +38,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {;,"});,"})
             trackEvent('ml',dashboard',model_created')}"});,"});
 }, [newModelForm, createModel, trackEvent]);,"});,"})
     const hyperparameters = {}"});,"})
-  learningRate: 0.001,;,"});,"})
-            batchSize: 32,;,"});,"})
+  learningRate: 0.001,"});,"})
+            batchSize: 32,"});,"})
             epochs: 100,';,"});,"})
   optimizer: 'adam',"});,"});
 };,"});,"})
@@ -189,13 +189,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {;,"});,"})
       <div className="p-4">"'""";,"});,"})
         <AnimatePresence mode="wait">'"'""";,"});,"})
           {activeTab === 'overview' && (<motion.div key="overview" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: -20 ""","});,"})
 """";,"});,"});
 }} className="space-y-6">""";,"});,"})
@@ -295,13 +295,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {;,"});,"})
             </motion.div>)}'""";,"});,"})
 '"'""";,"});,"})
           {activeTab === 'models' && (<motion.div key="models" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: -20 ""","});,"})
 """";,"});,"});
 }} className="space-y-4">"""";,"});,"})
@@ -317,13 +317,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {;,"});,"})
               {/* Create Model Form */}"});,"})
               <AnimatePresence>;,"});,"})
                 {showCreateModel && (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   height: 0,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,';,"});,"})
   height: 'auto',"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   height: 0 ""","});,"})
 """";,"});,"});
 }} className="bg-gray-50 dark: bg-gray-800 p-4 rounded-lg">"""","});,"})
@@ -370,13 +370,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {;,"});,"})
               {/* Import Model */}"});,"})
               <AnimatePresence>;,"});,"})
                 {showImportModel && (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   height: 0,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,';,"});,"})
   height: 'auto',"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   height: 0 ""","});,"})
 """";,"});,"});
 }} className="bg-gray-50 dark: bg-gray-800 p-4 rounded-lg">"""","});,"})
@@ -455,13 +455,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {;,"});,"})
             </motion.div>)}'""";,"});,"})
 '"'""";,"});,"})
           {activeTab === 'training' && (<motion.div key="training" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: -20 ""","});,"})
 """";,"});,"});
 }} className="space-y-4">"""";,"});,"})
@@ -541,13 +541,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {;,"});,"})
             </motion.div>)}'""";,"});,"})
 '"'""";,"});,"})
           {activeTab === 'predictions' && (<motion.div key="predictions" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: -20 ""","});,"})
 """";,"});,"});
 }} className="space-y-4">"""";,"});,"})
@@ -622,13 +622,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {;,"});,"})
             </motion.div>)}'""";,"});,"})
 '"'""";,"});,"})
           {activeTab === 'analytics' && (<motion.div key="analytics" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: -20 ""","});,"})
 """";,"});,"});
 }} className="space-y-4">"""";,"});,"})
@@ -682,12 +682,12 @@ export const MachineLearningDashboard = ({ className = '' }) => {;,"});,"})
       </div>;,"});,"})
     </div>)};'"`;,"});,"})
 '"`'"`;,"});,"})
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';""
-import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react'
+import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';
 ;""
-import React, { useState, useCallback }  from 'react'
-import { motion, AnimatePresence } from 'framer-motion
+import React, { useState, useCallback }  from 'react';
+import { motion, AnimatePresence } from 'framer-motion;
 import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 }  from 'lucide-react';
 ;"
 export const MachineLearningDashboard = ({ className = '' }) => {

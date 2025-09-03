@@ -32,12 +32,12 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
         // Create particles,"});,"})
         for(let i = 0; i < 100; i++) {}"});,"})
             particles.push({}"});,"})
-                x: Math.random() * canvas.width,;,"});,"})
-                y: Math.random() * canvas.height,;,"});,"})
-                vx: (Math.random() - 0.5) * 2,;,"});,"})
-                vy: (Math.random() - 0.5) * 2,;,"});,"})
-                size: Math.random() * 3 + 1,;,"});,"})
-                opacity: Math.random() * 0.5 + 0.3,;,"});,"})
+                x: Math.random() * canvas.width,"});,"})
+                y: Math.random() * canvas.height,"});,"})
+                vx: (Math.random() - 0.5) * 2,"});,"})
+                vy: (Math.random() - 0.5) * 2,"});,"})
+                size: Math.random() * 3 + 1,"});,"})
+                opacity: Math.random() * 0.5 + 0.3,"});,"})
                 color: selectedColors[Math.floor(Math.random() * selectedColors.length)],"});,"});
 })}"});,"})
         const animate = () => {}"});,"})
@@ -152,8 +152,8 @@ export { UltraFuturisticBackground2034 };,"});,"})
  const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum['#00ffff', #ff00ff',#ffff00', #00ff00'], neon['#ff0080', #8000ff',#00ffff', #ffff00'], holographic['#ff6b6b', #4ecdc4',#45b7d1',';#96ceb4'] } const selectedColors = colors[theme]';import React, { useEffect, useRef } from 'react';const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => {}
     const canvasRef = useRef(null);
     const animationRef = useRef();
- const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum['#00ffff', #ff00ff',#ffff00', #00ff00'], neon['#ff0080', #8000ff', #00ffff', #ffff00'], holographic['#ff6b6b', #4ecdc4', #45b7d1',';#96ceb4'] } const selectedColors = colors[theme]';import React, { useEffect, useRef } from 'react'
-const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => {}
+ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum['#00ffff', #ff00ff',#ffff00', #00ff00'], neon['#ff0080', #8000ff', #00ffff', #ffff00'], holographic['#ff6b6b', #4ecdc4', #45b7d1',';#96ceb4'] } const selectedColors = colors[theme]';import React, { useEffect, useRef } from 'react';
+const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => {};
  const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum['#00ffff', #ff00ff',#ffff00', #00ff00'], neon['#ff0080', #8000ff',#00ffff', #ffff00'], holographic['#ff6b6b', #4ecdc4',#45b7d1,;#96ceb4'] } const selectedColors = colors[theme];import React, { useEffect, useRef }  from 'react';const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => {}
     const canvasRef = useRef(null)
     const animationRef = useRef()

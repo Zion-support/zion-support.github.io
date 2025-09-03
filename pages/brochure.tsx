@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link'
+import Link from 'next/link';
 import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer'
+import Footer from '../src/components/Footer';
 import { Download, FileText, Users, Zap, Brain, Cloud, Shield, ArrowRight, CheckCircle, Star, Mail, Phone } from 'lucide-react';
 
 const Brochure = () => {

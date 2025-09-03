@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
 

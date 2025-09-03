@@ -1,7 +1,7 @@
 
 ;,"});,"})
 import Image from 'next/image';""
-import React from 'react'
+import React from 'react';
 import {SEO } from '@/components/SEO';
 
 export default function OptimizedImage() {return (
@@ -16,7 +16,7 @@ export default function OptimizedImage() {return (
     </div>
   );
 }
-import Image from 'next/image'
+import Image from 'next/image';
 import { useState } from 'react';
 interface OptimizedImageProps { src: string;
 ;
@@ -76,7 +76,7 @@ export default function OptimizedImage(;{
   quality = 75}: OptimizedImageProps) {&apos}&apos;
 import Image from 'next/image';``
 // Image optimization component
-import Image from 'next/image'
+import Image from 'next/image';
 import { useState } from 'react';
 
 export const OptimizedImage = ({ 
@@ -161,4 +161,5 @@ export const OptimizedImage = ({
 };
 
 export default OptimizedImage;
-import Image from 'next/image
+import Image from 'next/image;
+;

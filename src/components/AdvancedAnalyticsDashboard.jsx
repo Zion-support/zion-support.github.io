@@ -1,6 +1,6 @@
-import React { useState } from 'react'
+import React { useState } from 'react';
 import { motion } from 'framer-motion';
-import React from 'react'
+import React from 'react';
 import {SEO } from '@/components/SEO';
 
 export default function AdvancedAnalyticsDashboard() {return (
@@ -15,7 +15,7 @@ export default function AdvancedAnalyticsDashboard() {return (
   )}
 import React { useState } from &apos;react&apos;
 import { motion } from &apos;framer-motion';
-import {}
+import {};
   TrendingUp,;
   TrendingDown,;
   Users,;
@@ -30,7 +30,7 @@ import {}
   Shield,';
   Brain,'';
   Rocket} from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 const AdvancedAnalyticsDashboard = () => {}
@@ -53,43 +53,43 @@ const AdvancedAnalyticsDashboard = () => {}
       icon: <Users className='w-6 h-6' />,';
       color: 'from-blue-500 to-cyan-600'}, {}
       title: 'Service Performance',';
-      value: '94.2%',;
+      value: '94.2%'
       change: 2.1,'';
       icon: <Target className='w-6 h-6' />,';
       color: 'from-purple-500 to-pink-600'}, {}
       title: 'Client Satisfaction',';
-      value: '4.8/5',;
+      value: '4.8/5'
       change: 0.3,'';
       icon: <Star className='w-6 h-6' />,';
       color: 'from-yellow-500 to-orange-600'}
   ]
   const servicePerformance = []{}
-      name: 'AI CRM Platform',;
-      performance: 96,;
+      name: 'AI CRM Platform'
+      performance: 96
       growth: 15.2,';
       clients: 89,';
       revenue: 450000,'';
       status: 'trending'}, {}
-      name: 'Quantum Computing',;
-      performance: 92,;
+      name: 'Quantum Computing'
+      performance: 92
       growth: 28.7,';
       clients: 23,';
       revenue: 1200000,'';
-      name: 'Blockchain Solutions',;
-      performance: 88,;
+      name: 'Blockchain Solutions'
+      performance: 88
       growth: 12.4,';
       clients: 156,';
       revenue: 780000,'';
       status: 'stable'}, {}
-      name: 'Cybersecurity Suite',;
-      performance: 94,;
+      name: 'Cybersecurity Suite'
+      performance: 94
       growth: 18.9,';
       clients: 203,';
       revenue: 920000,'';
-      name: 'IoT Platform',;
-      performance: 85,;
-      growth: 8.7,;
-      clients: 67,;
+      name: 'IoT Platform'
+      performance: 85
+      growth: 8.7
+      clients: 67
   Shield,&apos;
   Brain,&apos;&apos;
   Rocket} from &apos;lucide-react&apos;

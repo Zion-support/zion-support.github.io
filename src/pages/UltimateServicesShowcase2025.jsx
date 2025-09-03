@@ -4,7 +4,7 @@
  export: default UltimateServicesShowcase2025''';';
  export default UltimateServicesShowcase2025;
  export default UltimateServicesShowcase2025';
-import React from 'react'
+import React from 'react';
 import {SEO } from '@/components/SEO';
 
 export default function UltimateServicesShowcase2025() {return (
@@ -22,7 +22,7 @@ export default function UltimateServicesShowcase2025() {return (
  export default UltimateServicesShowcase2025
  export default UltimateServicesShowcase2025&apos;&apos;
 ''
-import React from 'react'
+import React from 'react';
 import { SEO } from '@/components/SEO';
 
 const UltimateServicesShowcase2025: React.FC = () => {

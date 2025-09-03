@@ -23,15 +23,15 @@ const EnhancedServicesShowcase = () => {}"});,"})
   const containerVariants = {}"});,"})
     hidden: { opacity: 0 },;,"});,"})
     visible: {}"});,"})
-      opacity: 1,;,"});,"})
+      opacity: 1,"});,"})
       transition: {}"});,"})
-        staggerChildren: 0.1,;,"});,"})
+        staggerChildren: 0.1,"});,"})
         delayChildren: 0.2}}};,"});,"})
   const itemVariants = {}"});,"})
     hidden: { opacity: 0, y: 20 },;,"});,"})
     visible: {}"});,"})
-      opacity: 1,;,"});,"})
-      y: 0,;,"});,"})
+      opacity: 1,"});,"})
+      y: 0,"});,"})
       transition: { duration: 0.5 }}};,"});,"})
   return();,"});,"})
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">""";,"});,"})
@@ -369,8 +369,8 @@ import React, { useState } from 'react'''
 import { Link } from 'react-router-dom'''
 import { motion } from 'framer-motion'''
 import React, { useState } from 'react''
-import { Link } from 'react-router-dom''
-import { motion }  from 'framer-motion
+import { Link } from 'react-router-dom'';
+import { motion }  from 'framer-motion;
 import { enhancedServices2025 } from '../data/enhanced-services-2025';
 const EnhancedServicesShowcase = () => {}""
 ''

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 ;
 export function usePerformanceMonitoring() {;
@@ -10,10 +10,10 @@ export function usePerformanceMonitoring() {;
       // Example: Send to Google Analytics;
       if (typeof gtag !== 'undefined') {;
         gtag('event', metric.name, {;
-          event_category: 'Web Vitals',;
-          event_label: metric.id,;
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),;
-          non_interaction: true,;
+          event_category: 'Web Vitals'
+          event_label: metric.id
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value)
+          non_interaction: true
 export function usePerformanceMonitoring() {
   useEffect(() => {}}
     const sendToAnalytics = (metric) => {

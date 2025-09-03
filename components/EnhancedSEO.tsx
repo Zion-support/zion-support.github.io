@@ -1,6 +1,6 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import { useRouter } from 'next/router'; SEOProps {title?: string;'
-import React from 'react'
+import React from 'react';
 import { useRouter } from 'next/router';
 
 interface SEOProps {
@@ -46,7 +46,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 
   description:
     'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.',
-import Head from 'next/head'
+import Head from 'next/head';
 import { useRouter }  from 'next/router';interface SEOProps {
   title?: string
   description?: string

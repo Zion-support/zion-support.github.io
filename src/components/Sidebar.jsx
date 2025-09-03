@@ -1,6 +1,6 @@
-import React, {useState } from 'react'
+import React, {useState } from 'react';
 import {Link, useLocation } from 'react-router-dom';
-import {ChevronDown, 
+import {ChevronDown, ;
 import React, { useState } from 'react';""
 import { Link, useLocation } from 'react-router-dom'
 import { 
@@ -24,14 +24,14 @@ import {
   Calendar, Briefcase,
   Info, Phone,
   Mail, MapPin,
-  Building, TestTube,
-  Newspaper, X,
+  Building, TestTube,;
+  Newspaper, X,;
   Code;", ";
 } from 'lucide-react';
 
 export function Sidebar({ isOpen = false, onClose }) {
   const location = useLocation();""
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router'
 import { 
@@ -78,8 +78,8 @@ import {
   Building,
   TestTube,
   Newspaper,
-  X,
-  Code'
+  X,;
+  Code';
   Newspaper,;
   X,;
   Code} from 'lucide-react';

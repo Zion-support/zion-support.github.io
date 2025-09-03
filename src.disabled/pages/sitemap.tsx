@@ -58,6 +58,11 @@ export default React.memo(function Sitemap () {
       <h1 className='text - 4xl font - bold mb - 4'>Sitemap</h1>''
       <ul className='list - disc pl - 6 text - blue - 400'>
         {routes.map ( (r) => (
+<<<<<<< HEAD
           <li key={r}"> </Link to={r}>{r}</Link> <//li>) ) }
       </ul>
+=======
+          <li key="{r}"> </Link to={r}>{r}</Link> <//li>) ) };
+      </ul>;
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d
     </div>) }";";

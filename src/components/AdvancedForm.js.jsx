@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';,"});,"})
 import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';,"});,"})
 ;,"});,"})
 export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {;,"});,"})
-    const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,;,"});,"})
+    const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,"});,"})
         enableUserBehaviorTracking: true,"});,"});
 });,"});,"})
     const [formData, setFormData] = useState({});,"});,"})
@@ -22,7 +22,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             initialData[field.name] = field.type === 'checkbox' ? false : '';,"});,"})
             initialValidation[field.name] = {}"});,"})
                 isValid: !field.required,';,"});,"})
-                message: '',;,"});,"})
+                message: '',"});,"})
                 isTouched: false,"});,"});
 }});,"});,"})
         setFormData(initialData);,"});,"})
@@ -103,7 +103,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             ...prev,;,"});,"})
             [name]: {}"});,"})
                 isValid: !error,';,"});,"})
-                message: error || '',;,"});,"})
+                message: error || '',"});,"})
                 isTouched: true,"});,"});
 }"});,"});
 }));,"});,"})
@@ -123,7 +123,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             [name]: {}"});,"})
                 ...prev[name],;,"});,"})
                 isValid: !error,';,"});,"})
-                message: error || '',;,"});,"})
+                message: error || '',"});,"})
                 isTouched: true,"});,"});
 }"});,"});
 }))}, [formData, validateField]);,"});,"})
@@ -197,10 +197,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         const fieldValidation = validation[field.name];,"});,"})
         const isPasswordField = field.name.toLowerCase().includes('password');,"});,"})
         return (<motion.div key={field.name} initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 ""","});,"})
 """";,"});,"});
 }} className="space-y-2">"""";,"});,"})
@@ -267,7 +267,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         </div>;,"});,"})
         {/* Validation Message */}"});,"})
         {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   height: 0,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,';,"});,"})
@@ -279,10 +279,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
       </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]);,"});,"})
     if(isSubmitted) {}"});,"})
         return (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   scale: 0.9,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   scale: 1 ""","});,"})
 """";,"});,"});
 }} className="text-center p-8 bg-green-50 dark: bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">"""","});,"})
@@ -295,10 +295,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         </p>;,"});,"})
       </motion.div>)}"});,"})
     return (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 `,"});,"})
 ``;,"});,`});
 }} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>`"";,"});,"})
@@ -340,13 +340,13 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         {/* Form Status */}"});,"})
         <AnimatePresence>;,"});,"})
           {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   height: 0,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,';,"});,"})
   height: 'auto',"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   height: 0 ""","});,"})
 """";,"});,"});
 }} className="p-3 bg-red-50 dark: bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">"""","});,"})
@@ -403,8 +403,8 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             if (typeof value === 'boolean' && !value) {}""
 ''
                 return 'This field is required'}''
-            if (typeof value === 'string' && value.trim() === '') {}""
-''
+            if (typeof value === 'string' && value.trim() === '') {}"";
+'';
                 return 'This field is required'}", ";
 }''
         // Skip validation for empty non-required fields''

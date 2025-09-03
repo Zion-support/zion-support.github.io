@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   PenTool, 
@@ -19,8 +19,8 @@ import {
   Share2,
   Eye,
   FileText,
-  Image,
-  Video,
+  Image,;
+  Video,;
   Mic} from 'lucide-react';
 
 const AIContentCreationTools: React.FC = () => {

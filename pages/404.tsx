@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import Head from 'next/head'
+import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card'
+import { Card } from '../components/ui/Card';
 import Link from 'next/link';
 import {
   Home,
@@ -16,7 +16,24 @@ import {
   Users,
   BookOpen,
   DollarSign,
+<<<<<<< HEAD
   Calendar,
+=======
+  Calendar,;
+  Award,;
+  Shield} from 'lucide-react';
+const NotFound: React.FC = () => {
+  const quickLinks = [
+    { name: 'Home', url: '/', icon: Home },
+    { name: 'Services', url: '/services', icon: Briefcase },
+    { name: 'About', url: '/about', icon: Users },
+    { name: 'Contact', url: '/contact', icon: Phone },
+    { name: 'Blog', url: '/blog', icon: BookOpen },
+    { name: 'Pricing', url: '/pricing', icon: DollarSign },
+    { name: 'Team', url: '/team', icon: Award },
+    { name: 'Webinars', url: '/webinars', icon: Calendar },
+    { name: 'White Papers', url: '/white-papers', icon: FileText },
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d
   Award,
   Shield,
   Search

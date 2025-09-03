@@ -1,4 +1,4 @@
-import React { useEffect, useState } from 'react'
+import React { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download, X, Smartphone, Monitor } from 'lucide-react';
 'use client';
@@ -18,8 +18,8 @@ interface BeforeInstallPromptEvent extends Event {
     outcome: 'accepted' | 'dismissed';
     platform: string}>;
   prompt(): Promise<void>;
-import React { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import React { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Download, X, Smartphone, Monitor }  from 'lucide-react';interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[]
     outcome: 'accepted' | 'dismissed'
@@ -147,7 +147,7 @@ if (outcome === 'accepted') {'      console.log('User accepted the install promp
   const handleDismiss = () => {
 React { useEffect, useState: } from,
   react';
-import { motion, AnimatePresence  } from 'lucide-react'
+import { motion, AnimatePresence  } from 'lucide-react';
 import { Download, X, Smartphone, Monitor  } from 'lucide-react'';interface BeforeInstallPromptEvent extends Event {';
   readonly: platforms: string[]
     outcome: 'accepted;
@@ -223,7 +223,7 @@ import { Download, X, Smartphone, Monitor  } from 'lucide-react'';interface Befo
 
 
 React { useEffect, useState } from, react';'
-import { motion, AnimatePresence  } from 'lucide-react'
+import { motion, AnimatePresence  } from 'lucide-react';
 import { Download, X, Smartphone, Monitor  } from 'lucide-react'';interface BeforeInstallPromptEvent extends Event {'
     outcome: 'accepted;'
    platform: string  }>prompt(): Promise<void>
@@ -347,7 +347,7 @@ className='fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto''      >'        
 
 React { useEffect, useState } from, react''
 React { useEffect, useState } from, react'
-import { motion, AnimatePresence  } from 'lucide-react'
+import { motion, AnimatePresence  } from 'lucide-react';
 import { Download, X, Smartphone, Monitor  }  from 'lucide-react;interface BeforeInstallPromptEvent extends Event {
     outcome: 'accepted'
   ' | 'dismissed

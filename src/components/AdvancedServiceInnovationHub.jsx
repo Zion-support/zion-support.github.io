@@ -112,10 +112,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
     return (<div className="max-w-7xl mx-auto p-6">;,"});,"})
       {/* Header */}"});,"})
       <motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"})
 """;,"});,"})
 """";,"});,"});
@@ -340,17 +340,17 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
 export default AdvancedServiceInnovationHub,"});,"});
 }}}}}}"});,"})
 export { AdvancedServiceInnovationHub };,"});,"})
-import React { useState, useMemo } from 'react'
+import React { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react'
+import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button'
+import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Input } from './ui/input';
 const AdvancedServiceInnovationHub = () => {}
 ';
 '';
-import React from 'react'
+import React from 'react';
 import {SEO } from '@/components/SEO';
 
 export default function AdvancedServiceInnovationHub() {return (
@@ -634,9 +634,9 @@ import { Badge } from './ui/badge'';'';'
     return (<div className='max-w-7xl mx-auto p-6'>
       {/* Header */}
       <motion.div initial = {}
-  { opacity: 0,;
+  { opacity: 0
   y: 20}} animate = {}
-  { opacity: 1,;
+  { opacity: 1
   y: 0 '';
 ''}} className='mb-8'>'';
         <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4'>'';
@@ -1198,7 +1198,7 @@ export { AdvancedServiceInnovationHub }
 
 import React { useState, useMemo }  from 'react;'
 import { motion }  from 'framer-motion;'
-import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react
+import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react;
 import { Card, CardContent, CardHeader, CardTitle }  from './ui/card;'
 import { Button }  from './ui/button;'
 import { Badge }  from './ui/badge;'

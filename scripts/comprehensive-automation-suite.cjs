@@ -188,7 +188,7 @@ class ComprehensiveAutomationSuite {
       const result = execSync('npm audit --audit-level=moderate', {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 60000;
+        timeout: 60000
 });
       this.log('Security audit completed');
       return { success: true, output: result };
@@ -204,7 +204,7 @@ class ComprehensiveAutomationSuite {
       const result = execSync('npm test', {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 300000;
+        timeout: 300000
 });
       this.log('Tests completed');
       return { success: true, output: result };
@@ -220,7 +220,7 @@ class ComprehensiveAutomationSuite {
       const result = execSync('npm run build', {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 600000;
+        timeout: 600000
 });
       this.log('Build completed');
       return { success: true, output: result };

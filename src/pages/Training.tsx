@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO'
+import { SEO } from '../components/SEO';
 import { ;
   GraduationCap, Video, BookOpen, Users, Clock, ;
   Star, Award, Play, Download, ArrowRight} from 'lucide-react';
@@ -8,71 +8,71 @@ import { ;
 export default function Training() {;
   const courses = [;
     {;
-      id: 1,;
-      title: "AI Fundamentals",;
-      description: "Learn the basics of artificial intelligence and machine learning",;
-      duration: "8 hours",;
-      level: "Beginner",;
-      rating: 4.8,;
-      students: 1250,;
-      price: "$199",;
+      id: 1
+      title: "AI Fundamentals"
+      description: "Learn the basics of artificial intelligence and machine learning"
+      duration: "8 hours"
+      level: "Beginner"
+      rating: 4.8
+      students: 1250
+      price: "$199"
       featured: true},;
     {;
-      id: 2,;
-      title: "Quantum Computing Masterclass",;
-      description: "Advanced quantum computing concepts and applications",;
-      duration: "12 hours",;
-      level: "Advanced",;
-      rating: 4.9,;
-      students: 456,;
-      price: "$399",;
+      id: 2
+      title: "Quantum Computing Masterclass"
+      description: "Advanced quantum computing concepts and applications"
+      duration: "12 hours"
+      level: "Advanced"
+      rating: 4.9
+      students: 456
+      price: "$399"
       featured: true},;
     {;
-      id: 3,;
-      title: "Micro SaaS Development",;
-      description: "Build and launch successful micro SaaS applications",;
-      duration: "10 hours",;
-      level: "Intermediate",;
-      rating: 4.7,;
-      students: 892,;
-      price: "$299",;
+      id: 3
+      title: "Micro SaaS Development"
+      description: "Build and launch successful micro SaaS applications"
+      duration: "10 hours"
+      level: "Intermediate"
+      rating: 4.7
+      students: 892
+      price: "$299"
       featured: false},;
     {;
-      id: 4,;
-      title: "Cybersecurity Essentials",;
-      description: "Essential cybersecurity practices for modern applications",;
-      duration: "6 hours",;
-      level: "Beginner",;
-      rating: 4.6,;
-      students: 678,;
-      price: "$149",;
+      id: 4
+      title: "Cybersecurity Essentials"
+      description: "Essential cybersecurity practices for modern applications"
+      duration: "6 hours"
+      level: "Beginner"
+      rating: 4.6
+      students: 678
+      price: "$149"
       featured: false}
   ]
 ;
   const trainingTypes = [;
     {;
-      title: "Online Courses",;
-      description: "Self-paced learning with video content and exercises",;
-      icon: Video,;
-      count: 25,;
+      title: "Online Courses"
+      description: "Self-paced learning with video content and exercises"
+      icon: Video
+      count: 25
       color: "from-blue-500 to-cyan-500"},;
     {;
-      title: "Live Workshops",;
-      description: "Interactive sessions with expert instructors",;
-      icon: Users,;
-      count: 12,;
+      title: "Live Workshops"
+      description: "Interactive sessions with expert instructors"
+      icon: Users
+      count: 12
       color: "from-green-500 to-emerald-500"},;
     {;
-      title: "Certification Programs",;
-      description: "Comprehensive programs with industry-recognized certificates",;
+      title: "Certification Programs"
+      description: "Comprehensive programs with industry-recognized certificates"
       icon: Award,
-      count: 8,;
+      count: 8
       color: "from-purple-500 to-pink-500"},;
     {;
-      title: "Corporate Training",;
-      description: "Customized training solutions for enterprise teams",;
-      icon: GraduationCap,;
-      count: 15,;
+      title: "Corporate Training"
+      description: "Customized training solutions for enterprise teams"
+      icon: GraduationCap
+      count: 15
       color: "from-orange-500 to-red-500";
 import {SEO } from '@/components/SEO';
 
@@ -90,8 +90,8 @@ export default function Training() {return (
 import React from &apos;react';
 import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
-import { 
-  GraduationCap, Video, BookOpen, Users, Clock, 
+import { ;
+  GraduationCap, Video, BookOpen, Users, Clock, ;
   Star, Award, Play, Download, ArrowRight} from &apos;lucide-react';&apos;&apos;
 
 export default function Training() {}
@@ -105,9 +105,9 @@ export default function Training() {}
       rating: 4.8,
       students: 1250,
       price: &quot;$199&quot,
-import { motion} from 'framer-motion'
+import { motion} from 'framer-motion';
 import { SEO} from '../components/SEO';
-import { 
+import { ;
   GraduationCap, Video, BookOpen, Users, Clock, Star, Award, Play, Download, ArrowRight} from 'lucide-react';
 export default function Training() {
   const courses = [

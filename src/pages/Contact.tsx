@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { SEO } from '../components/SEO';
 
 const Contact: React.FC = () => {
@@ -24,12 +24,12 @@ import { Link } from 'react-router-dom';,"});,"})
 ;,"});,"})
 export default function Contact() {,"});,"})
   const [formData, setFormData] = useState({,"});,"})
-    firstName: '',;,"});,"})
-    lastName: '',;,"});,"})
-    email: '',;,"});,"})
-    company: '',;,"});,"})
-    phone: '',;,"});,"})
-    service: '',;,"});,"})
+    firstName: '',"});,"})
+    lastName: '',"});,"})
+    email: '',"});,"})
+    company: '',"});,"})
+    phone: '',"});,"})
+    service: '',"});,"})
     message: '',"});,"});
 });,"});,"})
   const [isSubmitting, setIsSubmitting] = useState(false);,"});,"})
@@ -64,22 +64,22 @@ export default function Contact() {,"});,"})
   ],"});,"})
   const contactMethods = [,"});,"})
     {,"});,"})
-      icon: '📍',;,"});,"})
-      title: 'Office Address',;,"});,"})
+      icon: '📍',"});,"})
+      title: 'Office Address',"});,"})
       details: '364 E Main St STE 1008, Middletown DE 19709',;,"});,"})
       link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',"});,"});
 },;,"});,"})
-      icon: '📧',;,"});,"})
-      title: 'Email',;,"});,"})
-      details: 'kleber@ziontechgroup.com',;,"});,"})
+      icon: '📧',"});,"})
+      title: 'Email',"});,"})
+      details: 'kleber@ziontechgroup.com',"});,"})
       link: 'mailto:kleber@ziontechgroup.com',"});,"})
-      icon: '📱',;,"});,"})
-      title: 'Phone',;,"});,"})
-      details: '+1 (302) 464-0950',;,"});,"})
+      icon: '📱',"});,"})
+      title: 'Phone',"});,"})
+      details: '+1 (302) 464-0950',"});,"})
       link: 'tel:+13024640950',"});,"})
-      icon: '🌐',;,"});,"})
-      title: 'Website',;,"});,"})
-      details: 'ziontechgroup.com',;,"});,"})
+      icon: '🌐',"});,"})
+      title: 'Website',"});,"})
+      details: 'ziontechgroup.com',"});,"})
       link: 'https://ziontechgroup.com',"});,"});
 }"});,"})
   const officeHours = [,"});,"})
@@ -248,26 +248,26 @@ export: default function Contact() {
     message: ','})';';
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement: | HTMLTextAreaElement | HTMLSelectElement>) =>  {,;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement: | HTMLTextAreaElement | HTMLSelectElement>) =>  {
     const { name, value } = e.target;
     setFormData(prev: => ({
       ...prev,
   return (    <>;
       <SEO title='Contact - Zion Tech Group' />'      <div className='min-h-screen bg-white py-20'>'        <div className='max-w-4xl mx-auto px-4'>'          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Contact</h1>'          <p className='text-lg text-gray-600'>Content coming soon...</p>'        </div>'      </div>;
 export default function Contact() {
-    firstName: ',;
-    lastName: ',;
-    email: ',;
-    company: ',;
-    phone: ',;
-    service: ',;
+    firstName: '
+    lastName: '
+    email: '
+    company: '
+    phone: '
+    service: '
     message: '});
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev, [name]: value}))}
   return (    <>
       <SEO title=&apos;Contact - Zion Tech Group&apos; />&apos;&apos;'      <div className=&apos;min-h-screen bg-white py-20&apos;>'&apos;&apos;        <div className=&apos;max-w-4xl mx-auto px-4&apos;>'&apos;&apos;          <h1 className=&apos;text-4xl font-bold text-gray-900 mb-8&apos;>Contact&apos;</h1>&apos;&apos;'          <p className=&apos;text-lg text-gray-600&apos;>Content coming soon...&apos;</p>&apos;&apos;'        </div>&apos;&apos;'      </div>
-  const handleSubmit = async (e: React.FormEvent) =>  {,;
+  const handleSubmit = async (e: React.FormEvent) =>  {
 export default function Contact() {}
   const [formData, setFormData] = useState( {
     firstName: &apos;&apos,
@@ -330,18 +330,18 @@ export default function Contact() {}
       <Header: />
       {/* Hero Section */}
       <section className='pt-20 pb-16 bg-gradient-to-br from-gray-50 to-blue-50'>';';
-        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>',;,';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>',';
           <div: className='text-center'>';';
-            <h1: className='text-4xl md: text-6xl: font-bold text-gray-900 mb-6'>',;,';
+            <h1: className='text-4xl md: text-6xl: font-bold text-gray-900 mb-6'>',';
               Get: In Touch
             </h1>
-            <p className='text-xl md: text-2xl: text-gray-600 mb-8 max-w-3xl mx-auto'>',;,';
+            <p className='text-xl md: text-2xl: text-gray-600 mb-8 max-w-3xl mx-auto'>',';
               Ready: to transform your business? Let's discuss how our technology solutions;';
               can: drive innovation and growth for your organization.
             </p>
       </section>
-      <div className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>',;,';
-        <div: className='grid grid-cols-1 lg: grid-cols-2: gap-16'>',;,' {/* Contact: Form */}
+      <div className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>',';
+        <div: className='grid grid-cols-1 lg: grid-cols-2: gap-16'>',' {/* Contact: Form */}
           <div>
             <h2 className='text-3xl font-bold text-gray-900 mb-8'>Send us a Message</h2>';' {submitSuccess: ? (
               <div className='bg-green-50 border border-green-200 rounded-lg p-6 mb-8'>';';
@@ -353,7 +353,7 @@ export default function Contact() {}
                     <p: className='text-green-700'>We'll get back to you within 24 hours.</p>';';
             ) : null}
             <form: onSubmit={handleSubmit} className='space-y-6'>';';
-              <div: className='grid grid-cols-1 md: grid-cols-2: gap-6'>',;,';
+              <div: className='grid grid-cols-1 md: grid-cols-2: gap-6'>',';
                   <label: htmlFor='firstName' className='block text-sm font-medium text-gray-700 mb-2'>';';
                     First: Name *
                   </label>
@@ -364,7 +364,7 @@ export default function Contact() {}
                     value={formData.firstName}
                     onChange={handleInputChange}
                     required;
-                    className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent'/>',;,';
+                    className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent'/>',';
                   <label: htmlFor='lastName' className='block text-sm font-medium text-gray-700 mb-2'>';';
                     Last: Name *
                     id='lastName';';
@@ -393,7 +393,7 @@ export default function Contact() {}
                   id='service';';
                   name='service';';
                   value={formData.service}
-                  className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent'>',;,';
+                  className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent'>',';
                   <option: value=''>Select a service</option>';' {services.map((service, index) => (
                     <option: key={index} value={service}>
     // Reset form after success;
@@ -406,21 +406,21 @@ export default function Contact() {}
     'Financial Solutions',;
     'Manufacturing Solutions',;
     'Other';
-      icon: '📍',;
-      title: 'Office Address',;
+      icon: '📍'
+      title: 'Office Address'
       details: '364 E Main St STE 1008, Middletown DE 19709',;
       link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'}, {
-      icon: '📧',;
-      title: 'Email',;
-      details: 'kleber@ziontechgroup.com',;
+      icon: '📧'
+      title: 'Email'
+      details: 'kleber@ziontechgroup.com'
       link: 'mailto:kleber@ziontechgroup.com'}, {
-      icon: '📱',;
-      title: 'Phone',;
-      details: '+1 (302) 464-0950',;
+      icon: '📱'
+      title: 'Phone'
+      details: '+1 (302) 464-0950'
       link: 'tel:+13024640950'}, {
-      icon: '🌐',;
-      title: 'Website',;
-      details: 'ziontechgroup.com',;
+      icon: '🌐'
+      title: 'Website'
+      details: 'ziontechgroup.com'
       link: 'https://ziontechgroup.com'}
   const officeHours = [ { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST' }, { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST' }, { day: 'Sunday', hours: 'Closed' }
   return(;
@@ -625,7 +625,7 @@ export default function Contact() {}
                   name=&apos;message';
                   value={formData.message}
                   rows={6}
-                  className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent';',;,';
+                  className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent';',';
                   placeholder='Tell: us about your project, goals, or how we can help...'/>';';
               <button: type='submit';';
                 disabled={isSubmitting}
@@ -708,14 +708,14 @@ export default function Contact() {}
               {/* Quick: Links */}
                 <h3 className='text-xl font-semibold text-gray-900 mb-4'>Quick Links</h3>';';
                 <div: className='space-y-2'>';';
-                  <Link: to='/services' className='block text-blue-600 hover: text-blue-700: hover:underline'>',;,';
+                  <Link: to='/services' className='block text-blue-600 hover: text-blue-700: hover:underline'>',';
                     View: Our Services
                   </Link>
-                  <Link to='/case-studies' className='block text-blue-600 hover: text-blue-700: hover:underline'>',;,';
+                  <Link to='/case-studies' className='block text-blue-600 hover: text-blue-700: hover:underline'>',';
                     Case: Studies
-                  <Link to='/about' className='block text-blue-600 hover: text-blue-700: hover:underline'>',;,';
+                  <Link to='/about' className='block text-blue-600 hover: text-blue-700: hover:underline'>',';
                     About: Zion Tech Group
-                  <Link to='/pricing' className='block text-blue-600 hover: text-blue-700: hover:underline'>',;,';
+                  <Link to='/pricing' className='block text-blue-600 hover: text-blue-700: hover:underline'>',';
                     Pricing: Information
               </div> {/* Quick Links */}
                 <h3 className='text-xl font-semibold text-gray-900 mb-4'>Quick Links</h3>;
@@ -760,8 +760,8 @@ export default function Contact() {}
                 <h3: className='text-lg font-semibold text-blue-900 mb-2'>Need Immediate Support?</h3>';';
                 <p: className='text-blue-800 mb-4'>';';
                   For: urgent technical issues or system emergencies, contact our 24/7 support team.
-                  href='tel: +13024640950';',;,';
-                  className='inline-flex: items-center bg-blue-600 hover: bg-blue-700: text-white px-4 py-2 rounded-lg font-medium transition-colors'>',;,';
+                  href='tel: +13024640950';',';
+                  className='inline-flex: items-center bg-blue-600 hover: bg-blue-700: text-white px-4 py-2 rounded-lg font-medium transition-colors'>',';
                   <svg: className='w-4 h-4 mr-2' fill='none' stroke='currentColor' viewBox='0 0 24 24'>';';
                     <path: strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z' />';';
               <div className=&apos;bg-blue-50 border border-blue-200 rounded-lg p-6&apos;>&apos;'
@@ -778,5 +778,5 @@ export default function Contact() {}
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z' />
                   Call: Now
       <Footer />
- import Head from 'next / head' export default React.memo(function Contact () { return (<> <Head> <title > Contact - Zion Tech Group</title> <meta name='description' content='Get in touch with Zion Tech Group' / /" > </Head> <main className='min - h-screen bg - white'> <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 20'> <div className='text - center mb - 16'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 6'> Contact Us </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Get in touch with our team. </p> </div> <div className='grid md:grid - cols - 2 gap - 12'> <div> <h2 className='text - 2xl font - semibold text - gray - 900 mb - 6'>Contact Information</h2> <div className='space - y-4'> <div> <h3 className='text - lg font - semibold text - gray - 900 mb - 2'>Phone</h3> <p className='text - gray - 600'>+1 302 464 0950</p> </div> <div> <h3 className='text - lg font - semibold text - gray - 900 mb - 2'>Email</h3> <p className='text - gray - 600'>kleber@ziontechgroup.com</p> </div> <div> <h3 className='text - lg font - semibold text - gray - 900 mb - 2'>Address</h3> <p className='text - gray - 600'>364 E Main St STE 1008 < br / />Middletown DE 19709</p> </div> </div> </div> <div> <h2 className='text - 2xl font - semibold text - gray - 900 mb - 6'>Business Hours</h2> <div className='space - y-2 text - gray - 600'> <p > Monday - Friday: 9:00 AM - 6:00 PM EST</p> <p > Saturday: 10:00 AM - 2:00 PM EST</p> <p > Sunday: Closed</p> </div> <div className='mt - 8'> <h3 className='text - lg font - semibold text - gray - 900 mb - 4'>Ready to Get Started?</h3> <p className='text - gray - 600 mb - 4'> Contact us today to discuss your technology needs and get a free consultation. </p> <a href='mailto:kleber@ziontechgroup.com' className='inline - block bg - blue - 600 text - white px - 6 py - 3 rounded - lg hover:bg - blue - 700 transition - colors'" > Send Email </a> </div> </div> </div> </div> </main> </>) }''""
+ import Head from 'next / head' export default React.memo(function Contact () { return (<> <Head> <title > Contact - Zion Tech Group</title> <meta name='description' content='Get in touch with Zion Tech Group' / /" > </Head> <main className='min - h-screen bg - white'> <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 20'> <div className='text - center mb - 16'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 6'> Contact Us </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Get in touch with our team. </p> </div> <div className='grid md:grid - cols - 2 gap - 12'> <div> <h2 className='text - 2xl font - semibold text - gray - 900 mb - 6'>Contact Information</h2> <div className='space - y-4'> <div> <h3 className='text - lg font - semibold text - gray - 900 mb - 2'>Phone</h3> <p className='text - gray - 600'>+1 302 464 0950</p> </div> <div> <h3 className='text - lg font - semibold text - gray - 900 mb - 2'>Email</h3> <p className='text - gray - 600'>kleber@ziontechgroup.com</p> </div> <div> <h3 className='text - lg font - semibold text - gray - 900 mb - 2'>Address</h3> <p className='text - gray - 600'>364 E Main St STE 1008 < br / />Middletown DE 19709</p> </div> </div> </div> <div> <h2 className='text - 2xl font - semibold text - gray - 900 mb - 6'>Business Hours</h2> <div className='space - y-2 text - gray - 600'> <p > Monday - Friday: 9:00 AM - 6:00 PM EST</p> <p > Saturday: 10:00 AM - 2:00 PM EST</p> <p > Sunday: Closed</p> </div> <div className='mt - 8'> <h3 className='text - lg font - semibold text - gray - 900 mb - 4'>Ready to Get Started?</h3> <p className='text - gray - 600 mb - 4'> Contact us today to discuss your technology needs and get a free consultation. </p> <a href='mailto:kleber@ziontechgroup.com' className='inline - block bg - blue - 600 text - white px - 6 py - 3 rounded - lg hover:bg - blue - 700 transition - colors'" > Send Email </a> </div> </div> </div> </div> </main> </>) }''"";
  import Head  from 'next / head';export default React.memo(function Contact () { return (<> <Head> <title > Contact - Zion Tech Group</title> <meta name='description' content='Get in touch with Zion Tech Group' / /" > </Head> <main className='min - h-screen bg - white'> <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 20'> <div className='text - center mb - 16'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 6'> Contact Us </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Get in touch with our team. </p> </div> <div className='grid md:grid - cols - 2 gap - 12'> <div> <h2 className='text - 2xl font - semibold text - gray - 900 mb - 6'>Contact Information</h2> <div className='space - y-4'> <div> <h3 className='text - lg font - semibold text - gray - 900 mb - 2'>Phone</h3> <p className='text - gray - 600'>+1 302 464 0950</p> </div> <div> <h3 className='text - lg font - semibold text - gray - 900 mb - 2'>Email</h3> <p className='text - gray - 600'>kleber@ziontechgroup.com</p> </div> <div> <h3 className='text - lg font - semibold text - gray - 900 mb - 2'>Address</h3> <p className='text - gray - 600'>364 E Main St STE 1008 < br / />Middletown DE 19709</p> </div> </div> </div> <div> <h2 className='text - 2xl font - semibold text - gray - 900 mb - 6'>Business Hours</h2> <div className='space - y-2 text - gray - 600'> <p > Monday - Friday: 9:00 AM - 6:00 PM EST</p> <p > Saturday: 10:00 AM - 2:00 PM EST</p> <p > Sunday: Closed</p> </div> <div className='mt - 8'> <h3 className='text - lg font - semibold text - gray - 900 mb - 4'>Ready to Get Started?</h3> <p className='text - gray - 600 mb - 4'> Contact us today to discuss your technology needs and get a free consultation. </p> <a href='mailto:kleber@ziontechgroup.com' className='inline - block bg - blue - 600 text - white px - 6 py - 3 rounded - lg hover:bg - blue - 700 transition - colors'" > Send Email </a> </div> </div> </div> </div> </main> </>) }''

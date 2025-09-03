@@ -1,14 +1,37 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import { describe, it, expect, vi } from 'vitest';
+=======
+import { render, screen, fireEvent } from '@testing-library/react';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import { describe, it, expect, vi } from 'vitest';
+describe('AccessibilityEnhancer', () => {'
+  it('renders children correctly', () => {
+    render(
+      <AccessibilityEnhancer>'
+        <div data-testid='test-child'>Test Content</div>
+      </AccessibilityEnhancer>
+    );
+    expect(screen.getByTestId('
+  'test-child')).toBeInTheDocument();
+    expect(screen.getByText('
+  'Test Content')).toBeInTheDocument()})
+  it('
+  'applies accessibility props correctly', () => {
+import React from 'react;
+import { render, screen, fireEvent } from '@testing-library/react';
+import AccessibilityEnhancer from ../components/AccessibilityEnhancer';
+import { describe, it, expect, vi } from 'vitest;
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d
 
 describe('AccessibilityEnhancer', () => {
   it('renders children correctly', () => {
     render(
       <AccessibilityEnhancer>
-        <div data-testid="test-child">Test Content</div>
-      </AccessibilityEnhancer>
+        <div data-testid="test-child">Test Content</div>;
+      </AccessibilityEnhancer>;
     );
     expect(screen.getByTestId('test-child')).toBeInTheDocument();
     expect(screen.getByText('Test Content')).toBeInTheDocument();

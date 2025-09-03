@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {SEO } from '@/components/SEO';
 
 export default function EnhancedLayout() {return (
@@ -13,9 +13,9 @@ export default function EnhancedLayout() {return (
     </div>
   );
 }
-import React, { ReactNode } from 'react'
+import React, { ReactNode } from 'react';
 import Head from 'next/head';
-import { PerformanceOptimizer } from './PerformanceOptimizer'
+import { PerformanceOptimizer } from './PerformanceOptimizer';
 import { SEOOptimizer } from './SEOOptimizer';
 import { OptimizedImage } from './OptimizedImage';
 

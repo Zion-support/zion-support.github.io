@@ -32,8 +32,8 @@ import {
   FileText,
   HelpCircle,
   BookOpen,
-  Target,
-  TrendingUp,
+  Target,;
+  TrendingUp,;
   Star,;
 } from 'lucide-react';
 
@@ -65,7 +65,7 @@ const sidebarSections = [
         children: [
           {
             name: 'AI Consciousness Evolution',
-            href: '/ai-consciousness-evolution',;
+            href: '/ai-consciousness-evolution'
 },
           { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
           { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
@@ -73,23 +73,23 @@ const sidebarSections = [
           { name: 'AI Education Platform', href: '/ai-education-platform' },
           {
             name: 'AI Healthcare Diagnostics',
-            href: '/ai-healthcare-diagnostics',;
+            href: '/ai-healthcare-diagnostics'
 },
           {
             name: 'AI Financial Intelligence',
-            href: '/ai-financial-intelligence',;
+            href: '/ai-financial-intelligence'
 },
           {
             name: 'AI Sustainability Platform',
-            href: '/ai-sustainability-platform',;
+            href: '/ai-sustainability-platform'
 },
           {
             name: 'AI Emotional Intelligence',
-            href: '/ai-emotional-intelligence-platform',;
+            href: '/ai-emotional-intelligence-platform'
 },
           {
             name: 'AI Legal Contract Analyzer',
-            href: '/ai-legal-contract-analyzer',;
+            href: '/ai-legal-contract-analyzer'
 },
         ],;
 },
@@ -101,26 +101,26 @@ const sidebarSections = [
         children: [
           {
             name: 'Quantum Cloud Infrastructure',
-            href: '/quantum-cloud-infrastructure',;
+            href: '/quantum-cloud-infrastructure'
 },
           { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' },
           { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
           {
             name: 'Quantum Materials Discovery',
-            href: '/quantum-materials-discovery',;
+            href: '/quantum-materials-discovery'
 },
           { name: 'Quantum Robotics', href: '/quantum-robotics' },
           {
             name: 'Quantum Internet Security',
-            href: '/quantum-internet-security',;
+            href: '/quantum-internet-security'
 },
           {
             name: 'Quantum Logistics',
-            href: '/quantum-logistics-optimization',;
+            href: '/quantum-logistics-optimization'
 },
           {
             name: 'Quantum Cybersecurity',
-            href: '/quantum-cybersecurity-platform',;
+            href: '/quantum-cybersecurity-platform'
 },
         ],;
 },
@@ -132,21 +132,21 @@ const sidebarSections = [
         children: [
           {
             name: 'Edge Computing Orchestrator',
-            href: '/edge-computing-orchestration',;
+            href: '/edge-computing-orchestration'
 },
           {
             name: 'Zero Trust Security Platform',
-            href: '/zero-trust-network-architecture',;
+            href: '/zero-trust-network-architecture'
 },
           {
             name: 'Blockchain Enterprise Platform',
-            href: '/blockchain-infrastructure-platform',;
+            href: '/blockchain-infrastructure-platform'
 },
           { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
           { name: 'Quantum Networking', href: '/quantum-networking' },
           {
             name: 'Autonomous IT Operations',
-            href: '/autonomous-it-operations',;
+            href: '/autonomous-it-operations'
 },
           { name: 'Quantum Data Center', href: '/quantum-data-center' },
           { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' },
@@ -181,13 +181,13 @@ const sidebarSections = [
           { name: 'Metaverse Platform', href: '/metaverse-platform' },
           {
             name: 'Neural Interface Technology',
-            href: '/neural-interface-technology',;
+            href: '/neural-interface-technology'
 },
           { name: 'Holographic Computing', href: '/holographic-computing' },
           { name: 'Time Crystal Computing', href: '/time-crystal-computing' },
           {
             name: 'Consciousness Upload Platform',
-            href: '/consciousness-upload-platform',;
+            href: '/consciousness-upload-platform'
 },
         ],;
 },
@@ -202,25 +202,25 @@ const sidebarSections = [
         name: 'About Us',
         href: '/about',
         icon: Users,
-        description: 'Learn about our mission and vision',;
+        description: 'Learn about our mission and vision'
 },
       {
         name: 'Leadership',
         href: '/leadership',
         icon: Award,
-        description: 'Meet our executive team',;
+        description: 'Meet our executive team'
 },
       {
         name: 'Careers',
         href: '/careers',
         icon: Target,
-        description: 'Join our innovative team',;
+        description: 'Join our innovative team'
 },
       {
         name: 'News & Media',
         href: '/news',
         icon: FileText,
-        description: 'Latest news and press releases',;
+        description: 'Latest news and press releases'
 },
     ],;
 },
@@ -233,19 +233,19 @@ const sidebarSections = [
         name: 'Documentation',
         href: '/docs',
         icon: BookOpen,
-        description: 'Technical documentation and guides',;
+        description: 'Technical documentation and guides'
 },
       {
         name: 'Contact',
         href: '/contact',
         icon: Phone,
-        description: 'Get in touch with our team',;
+        description: 'Get in touch with our team'
 },
       {
         name: 'Status',
         href: '/status',
         icon: BarChart3,
-        description: 'System status and uptime',;
+        description: 'System status and uptime'
 },
     ],;
 },
@@ -253,7 +253,7 @@ const sidebarSections = [
 
 interface EnhancedSidebar2025Props {
   isOpen: boolean;
-  onClose: () => void;
+  onClose: () => void
 }
 
 const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({

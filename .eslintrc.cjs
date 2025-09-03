@@ -3,8 +3,14 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+<<<<<<< HEAD:.eslintrc.cjs
     node: true,
   },
+=======
+    node: true},
+    node: true
+},
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d:.eslintrc.js
   extends: [
     'next/core-web-vitals',
     'eslint:recommended',

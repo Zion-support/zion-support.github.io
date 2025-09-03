@@ -53,7 +53,7 @@ class AutomatedTestRunner {
       const result = execSync('npm run lint', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        timeout: 60000;
+        timeout: 60000
 });
       
       this.addTestResult('Linting', 'passed', 'No linting errors found');
@@ -71,7 +71,7 @@ class AutomatedTestRunner {
       const result = execSync('npm run type-check', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        timeout: 60000;
+        timeout: 60000
 });
       
       this.addTestResult('Type Checking', 'passed', 'No type errors found');

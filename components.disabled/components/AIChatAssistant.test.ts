@@ -4,8 +4,8 @@ import AIChatAssistant from './AIChatAssistant'
 describe('AIChatAssistant', () => {
 
   it('renders without crashing', () => {
-
-    render(<AIChatAssistant />)
+;
+    render(<AIChatAssistant />);
     expect(screen.getByRole('main')).toBeInTheDocument();
 })
   it('displays correct content', () => {

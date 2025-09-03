@@ -23,7 +23,7 @@ import { Send export function ChatInput({ onSend, disabled = false }) {    const
       </Button>;,"});,"})
     </form>)}'""";,"});,"})
 '"'""";,"});,"})
-import React { useState, useRef, useEffect } from 'react'
+import React { useState, useRef, useEffect } from 'react';
 import { Button } from '../ui/Button.jsx';
 import { Send export function ChatInput({ onSend, disabled = false }) {    const [message, setMessage] = useState('');
     const inputRef = useRef(null);
@@ -55,7 +55,7 @@ import { Send export function ChatInput({ onSend, disabled = false }) {    const
     </form>)}'''';
 '''''';
 import React { useState, useRef, useEffect } from 'react' import { Button } from '../ui/Button'';'' import { Send } from 'lucide-react' export function ChatInput({ onSend, disabled = false }) { const [message, setMessage] = useState('') const inputRef = useRef(null) useEffect(() => {';"";";";
-import React { useState, useRef, useEffect } from 'react' import { Button } from '../ui/Button'';'' import { Send } from 'lucide-react' export function ChatInput({ onSend, disabled = false }) { const [message, setMessage] = useState('') const inputRef = useRef(null) useEffect(() => {'""
+import React { useState, useRef, useEffect } from 'react' import { Button } from '../ui/Button'';'' import { Send } from 'lucide-react' export function ChatInput({ onSend, disabled = false }) { const [message, setMessage] = useState('') const inputRef = useRef(null) useEffect(() => {'"";
 import React { useState, useRef, useEffect } from 'react' import { Button } from '../ui/Button'';' import { Send } from 'lucide-react' export function ChatInput({ onSend, disabled = false }) { const [message, setMessage] = useState('') const inputRef = useRef(null) useEffect(() => {';"""
 import React { useState, useRef, useEffect } from 'react' import { Button } from '../ui/Button';' import { Send } from 'lucide-react' export function ChatInput({ onSend, disabled = false }) { const [message, setMessage] = useState(') const inputRef = useRef(null) useEffect(() => {';"
 import React {useState, useRef, useEffect } from 'react' import {Button } from '../ui/Button'';'' import {Send } from 'lucide-react' export function ChatInput({onSend, disabled = false }) { const [message, setMessage] = useState('') const inputRef = useRef(null) useEffect(() => {';""

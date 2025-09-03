@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {SEO } from '@/components/SEO';
 
 ;,"});,"})
@@ -15,7 +15,7 @@ export default function Marketplace() {return (
 import React from &apos;react';
 import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { ;
   ShoppingCart, Star, Users, Code, Database, ;
@@ -25,52 +25,52 @@ import { ;
 export default function Marketplace() {;
   const products = [;
     {;
-      id: 1,;
-      name: "AI Content Generator Pro",;
-      description: "Advanced AI-powered content creation tool with natural language processing",;
-      price: "$99/month",;
-      category: "AI Tools",;
-      rating: 4.8,;
-      reviews: 124,;
-      image: "/api/placeholder/300/200",;
-      featured: true,;
-      tags: ["AI", "Content", "NLP"];
+      id: 1
+      name: "AI Content Generator Pro"
+      description: "Advanced AI-powered content creation tool with natural language processing"
+      price: "$99/month"
+      category: "AI Tools"
+      rating: 4.8
+      reviews: 124
+      image: "/api/placeholder/300/200"
+      featured: true
+      tags: ["AI", "Content", "NLP"]
     },;
     {;
-      id: 2,;
-      name: "Quantum Analytics Dashboard",;
-      description: "Real-time analytics dashboard powered by quantum computing algorithms",;
-      price: "$299/month",;
-      category: "Analytics",;
-      rating: 4.9,;
-      reviews: 89,;
-      image: "/api/placeholder/300/200",;
-      featured: true,;
-      tags: ["Quantum", "Analytics", "Dashboard"];
+      id: 2
+      name: "Quantum Analytics Dashboard"
+      description: "Real-time analytics dashboard powered by quantum computing algorithms"
+      price: "$299/month"
+      category: "Analytics"
+      rating: 4.9
+      reviews: 89
+      image: "/api/placeholder/300/200"
+      featured: true
+      tags: ["Quantum", "Analytics", "Dashboard"]
     },;
     {;
-      id: 3,;
-      name: "Micro SaaS Starter Kit",;
-      description: "Complete toolkit for building and launching micro SaaS applications",;
-      price: "$199/month",;
-      category: "Development",;
-      rating: 4.7,;
-      reviews: 156,;
-      image: "/api/placeholder/300/200",;
-      featured: false,;
-      tags: ["SaaS", "Development", "Starter"];
+      id: 3
+      name: "Micro SaaS Starter Kit"
+      description: "Complete toolkit for building and launching micro SaaS applications"
+      price: "$199/month"
+      category: "Development"
+      rating: 4.7
+      reviews: 156
+      image: "/api/placeholder/300/200"
+      featured: false
+      tags: ["SaaS", "Development", "Starter"]
     },;
     {;
-      id: 4,;
-      name: "Cybersecurity Suite",;
-      description: "Comprehensive security solution for enterprise applications",;
-      price: "$499/month",;
-      category: "Security",;
-      rating: 4.9,;
-      reviews: 67,;
-      image: "/api/placeholder/300/200",;
-      featured: false,;
-      tags: ["Security", "Enterprise", "Protection"];
+      id: 4
+      name: "Cybersecurity Suite"
+      description: "Comprehensive security solution for enterprise applications"
+      price: "$499/month"
+      category: "Security"
+      rating: 4.9
+      reviews: 67
+      image: "/api/placeholder/300/200"
+      featured: false
+      tags: ["Security", "Enterprise", "Protection"]
     }
   ]
 ;
@@ -132,8 +132,8 @@ export default function Marketplace() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">;
               {categories.map((category, index) => (;
                 <motion.div;
-import { 
-  ShoppingCart, Star, Users, Code, Database, Shield, Rocket, Brain, ArrowRight, Filter,
+import { ;
+  ShoppingCart, Star, Users, Code, Database, Shield, Rocket, Brain, ArrowRight, Filter,;
   Search, Grid, List, Heart, ExternalLink} from &apos;lucide-react';&apos;&apos;
 
 export default function Marketplace() {}
@@ -148,7 +148,7 @@ export default function Marketplace() {}
       reviews: 124,
       image: &quot;/api/placeholder/300/200&quot,
       featured: true,
-      tags: [&quot;AI&quot, &quot;Content&quot, &quot;NLP&quot];
+      tags: [&quot;AI&quot, &quot;Content&quot, &quot;NLP&quot]
 },
     {
       id: 2,
@@ -160,7 +160,7 @@ export default function Marketplace() {}
       reviews: 89,
       image: &quot;/api/placeholder/300/200&quot,
       featured: true,
-      tags: [&quot;Quantum&quot, &quot;Analytics&quot, &quot;Dashboard&quot];
+      tags: [&quot;Quantum&quot, &quot;Analytics&quot, &quot;Dashboard&quot]
 },
     {
       id: 3,
@@ -172,7 +172,7 @@ export default function Marketplace() {}
       reviews: 156,
       image: &quot;/api/placeholder/300/200&quot,
       featured: false,
-      tags: [&quot;SaaS&quot, &quot;Development&quot, &quot;Starter&quot];
+      tags: [&quot;SaaS&quot, &quot;Development&quot, &quot;Starter&quot]
 },
     {
       id: 4,
@@ -184,7 +184,7 @@ export default function Marketplace() {}
       reviews: 67,
       image: &quot;/api/placeholder/300/200&quot,
       featured: false,
-      tags: [&quot;Security&quot, &quot;Enterprise&quot, &quot;Protection&quot];
+      tags: [&quot;Security&quot, &quot;Enterprise&quot, &quot;Protection&quot]
 }
   ]&quot;
 
@@ -212,27 +212,27 @@ export default function Marketplace() {
       description: "Advanced AI-powered content creation tool with natural language processing", price: "$99/month",
       category: "AI Tools", rating: 4.8,
       reviews: 124, image: "/api/placeholder/300/200",
-      featured: true, tags: ["AI", "Content", "NLP"];
+      featured: true, tags: ["AI", "Content", "NLP"]
 }, { id: 2,
-      featured: true, tags: ["AI,Content,NLP"];
+      featured: true, tags: ["AI,Content,NLP"]
 }, {
       id: 2,
       name: "Quantum Analytics Dashboard", description: "Real-time analytics dashboard powered by quantum computing algorithms",
       price: "$299/month", category: "Analytics",
       rating: 4.9, reviews: 89,
       image: "/api/placeholder/300/200", featured: true,
-      tags: ["Quantum", "Analytics", "Dashboard"];
+      tags: ["Quantum", "Analytics", "Dashboard"]
 }, { id: 3,
-      tags: ["Quantum,Analytics,Dashboard"];
+      tags: ["Quantum,Analytics,Dashboard"]
 }, {
       id: 3,
       name: "Micro SaaS Starter Kit", description: "Complete toolkit for building and launching micro SaaS applications",
       price: "$199/month", category: "Development",
       rating: 4.7, reviews: 156,
       image: "/api/placeholder/300/200", featured: false,
-      tags: ["SaaS", "Development", "Starter"];
+      tags: ["SaaS", "Development", "Starter"]
 }, { id: 4,
-      tags: ["SaaS,Development,Starter"];
+      tags: ["SaaS,Development,Starter"]
 }, {
       id: 4,
       name: "Cybersecurity Suite", description: "Comprehensive security solution for enterprise applications",
@@ -240,7 +240,7 @@ export default function Marketplace() {
       rating: 4.9, reviews: 67,
       image: "/api/placeholder/300/200", featured: false,
       tags: ["Security", "Enterprise", "Protection"]
-      tags: ["Security,Enterprise,Protection"];
+      tags: ["Security,Enterprise,Protection"]
 }
   ]
   const categories = [

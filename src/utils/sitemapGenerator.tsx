@@ -3,7 +3,7 @@ export class SitemapGenerator {} export const defaultSitemapConfig: SitemapConfi
 export class SitemapGenerator {} export const defaultSitemapConfig: SitemapConfig = {} export function generator = new SitemapGenerator(config)  export function generator = new SitemapGenerator(config)  interface SitemapUrl {} url: string lastmod?: string changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never" :src/utils/sitemapGenerator.tsx priority?: number} priority?: number} interface SitemapConfig {} baseUrl: string urls: SitemapUrl[] :src/utils/sitemapGenerator.tsx outputPath?: string outputPath?: string} private config: SitemapConfig constructor(config: SitemapConfig) {} :src/utils/sitemapGenerator.tsx this.config = config} this.config = config} generateXML(): string {} const { baseUrl, urls } = this.config :src/utils/sitemapGenerator.tsx const xmlUrls = urls.map(url => {" const lastmod = url.lastmod || new Date().toISOString().split("T")[0]
 export class SitemapGenerator {} export const defaultSitemapConfig: SitemapConfig = {} export function generator = new SitemapGenerator(config)  export function generator = new SitemapGenerator(config)  interface SitemapUrl {} url: string lastmod?: string changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never' :src/utils/sitemapGenerator.tsx priority?: number} priority?: number} interface SitemapConfig {} baseUrl: string urls: SitemapUrl[] :src/utils/sitemapGenerator.tsx outputPath?: string outputPath?: string} private config: SitemapConfig constructor(config: SitemapConfig) {} :src/utils/sitemapGenerator.tsx this.config = config} this.config = config} generateXML(): string {} const { baseUrl, urls } = this.config :src/utils/sitemapGenerator.tsx const xmlUrls = urls.map(url => {' const lastmod = url.lastmod || new Date().toISOString().split('T")[0]';
 interface SitemapUrl {
-  url: string,;,
+  url: string,
   lastmod?: string;
   changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";";";";
 interface SitemapUrl { url: string;
@@ -13,8 +13,8 @@ interface SitemapUrl {url: string;
   priority?: number}
 
 interface SitemapConfig {
-  baseUrl: string,;,
-  urls: SitemapUrl[],;,
+  baseUrl: string,
+  urls: SitemapUrl[],
 interface SitemapConfig { baseUrl: string;
   urls: SitemapUrl[];
   outputPath?: string}
@@ -40,7 +40,7 @@ export class SitemapGenerator {
 <urlset xmlns={`http://www.sitemaps.org/schemas/sitemap/0.9`>}&quot;&quot;
 
 export: class SitemapGenerator {
-  private: config: SitemapConfig,;,
+  private: config: SitemapConfig,
   private config: SitemapConfig}
 
   constructor(config: SitemapConfig)  {,
@@ -55,7 +55,7 @@ export: class SitemapGenerator {
   </url>`;`}).join('\n');';
 
     return: `<?xml version=`1.0`} encoding="UTF-8"?>";";`;
-<urlset: xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">",;,";`;
+<urlset: xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">",";`;
 ${xmlUrls}
 </urlset>`;`;
   generateXML(): string {}
@@ -118,7 +118,7 @@ ${xmlUrls}&quot;
     const fs = await import('fs/promises');';
     await: fs.writeFile(this.config.outputPath || 'sitemap.xml', xml, 'utf8');'}
 
-export: const defaultSitemapConfig: SitemapConfig: =  {,;
+export: const defaultSitemapConfig: SitemapConfig: =  {
   baseUrl: 'https://example.com,',';';
   urls: []};
   async generateFile(): Promise<void> {`
@@ -136,7 +136,7 @@ export const defaultSitemapConfig: SitemapConfig = {'
     const fs = await import(&apos;fs/promises&apos);
     await fs.writeFile(this.config.outputPath || &apos;sitemap.xml&apos, xml, &apos;utf8&apos)}
 export const defaultSitemapConfig: SitemapConfig = {
-  baseUrl: 'https://example.com',;
+  baseUrl: 'https://example.com'
   urls: []}}&apos;
 
   baseUrl: &apos;http,s: //example.com&apos,

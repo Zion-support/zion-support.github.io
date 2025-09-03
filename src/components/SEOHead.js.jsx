@@ -213,8 +213,8 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                 '@type': 'PostalAddress', ''''
                 'streetAddress': '364 E Main St STE 1008',''''
                 'addressLocality': 'Middletown', ''''
-                'addressRegion': 'DE',''''
-                'postalCode': '19709', ''''
+                'addressRegion': 'DE','''';
+                'postalCode': '19709', '''';
                 'addressCountry': 'US'''',';
 }, ''''
             'contactPoint': {}""

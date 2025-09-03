@@ -54,8 +54,8 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
 import Link from 'next/link''
 import { MessageSquare }  from 'lucide-react
 import { Button } from '@/components/ui/button'
-import {}"
-  Tooltip, TooltipContent, TooltipProvider,'
+import {}";
+  Tooltip, TooltipContent, TooltipProvider,';
   TooltipTrigger}  from '@/components/ui/tooltip';const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
   return()"
     <div className='text-center py-16'>''''

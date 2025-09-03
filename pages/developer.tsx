@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import Head from 'next/head'
+import Head from 'next/head';
 import Layout from '../components/Layout';
 import {
   Code,
@@ -11,8 +11,8 @@ import {
   ExternalLink,
   ArrowRight,
   CheckCircle,
-  Zap,
-  Globe,
+  Zap,;
+  Globe,;
   Database} from 'lucide-react';
 
 const Developer: NextPage = () => {
@@ -58,21 +58,21 @@ const Developer: NextPage = () => {
       description: 'Learn how to integrate AI services into your application',
       duration: '15 min read',
       difficulty: 'Beginner',
-      tags: ['AI', 'JavaScript', 'API'];
+      tags: ['AI', 'JavaScript', 'API']
 },
     {
       title: 'Cloud Deployment Best Practices',
       description: 'Deploy your applications to the cloud with confidence',
       duration: '25 min read',
       difficulty: 'Intermediate',
-      tags: ['Cloud', 'DevOps', 'AWS'];
+      tags: ['Cloud', 'DevOps', 'AWS']
 },
     {
       title: 'Building Scalable APIs',
       description: 'Create robust and scalable API endpoints',
       duration: '30 min read',
       difficulty: 'Advanced',
-      tags: ['API', 'Node.js', 'Performance'];
+      tags: ['API', 'Node.js', 'Performance']
 }
   ]
 

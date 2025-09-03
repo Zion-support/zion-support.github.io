@@ -258,8 +258,8 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
             'streetAddress': '364 E Main St STE 1008,'''
             'addressLocality': 'Middletown,'''
             'addressRegion': 'DE,'''
-            'postalCode': '19709,'''
-  'addressCountry': 'US'''
+            'postalCode': '19709,''';
+  'addressCountry': 'US''';
 ''',';
 }, ''''
         'contactPoint': {}""

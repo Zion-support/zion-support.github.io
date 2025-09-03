@@ -1,15 +1,21 @@
 {
+  "timestamp": "2025-09-03T03:21:15.979Z",
+  "securityAudit": {
+    "success": true,
+    "output": "found 0 vulnerabilities\n"
   },
   "performanceCheck": {
     "success": false,
-    "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https: //nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nSyntaxError: Unexpected token ';'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"},
+    "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./components/layout/EnhancedFooter.tsx\nError: \n  \u001b[31mx\u001b[0m Unexpected token `footer`. Expected jsx identifier\n   ,-[\u001b[36;1;4m/workspace/components/layout/EnhancedFooter.tsx\u001b[0m:3:1]\n \u001b[2m3\u001b[0m | \n \u001b[2m4\u001b[0m | const EnhancedFooter = () => {\n \u001b[2m5\u001b[0m |   return (\n \u001b[2m6\u001b[0m |     <footer className=\"bg-gray-800 text-white py-8\">\n   : \u001b[31;1m     ^^^^^^\u001b[0m\n \u001b[2m7\u001b[0m |       <div className=\"container mx-auto px-4\">\n \u001b[2m8\u001b[0m |         <div className=\"grid md:grid-cols-4 gap-8\">\n \u001b[2m9\u001b[0m |           <div>\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/layout/EnhancedFooter.tsx\n./components/Layout.tsx\n./pages/about.tsx\n\n./components/layout/Footer.tsx\nModule not found: Can't resolve 'react-router-dom'\n\nhttps://nextjs.org/docs/messages/module-not-found\n\nImport trace for requested module:\n./components/layout/MainLayout.tsx\n./pages/cookies.tsx\n\n./components/layout/Header.tsx\nError: \n  \u001b[31mx\u001b[0m Unexpected token `header`. Expected jsx identifier\n    ,-[\u001b[36;1;4m/workspace/components/layout/Header.tsx\u001b[0m:88:1]\n \u001b[2m88\u001b[0m |   ];\n \u001b[2m89\u001b[0m | \n \u001b[2m90\u001b[0m |   return (\n \u001b[2m91\u001b[0m |     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${\n    : \u001b[31;1m     ^^^^^^\u001b[0m\n \u001b[2m92\u001b[0m |       isScrolled \n \u001b[2m93\u001b[0m |         ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' \n \u001b[2m94\u001b[0m |         : 'bg-transparent'\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/layout/Header.tsx\n./components/layout/MainLayout.tsx\n./pages/cookies.tsx\n\n./components/ui/Card.tsx\nError: \n  \u001b[31mx\u001b[0m Unexpected token `h3`. Expected jsx identifier\n    ,-[\u001b[36;1;4m/workspace/components/ui/Card.tsx\u001b[0m:32:1]\n \u001b[2m32\u001b[0m |   HTMLParagraphElement,\n \u001b[2m33\u001b[0m |   React.HTMLAttributes<HTMLHeadingElement>\n \u001b[2m34\u001b[0m | >(({ className, ...props }, ref) => (\n \u001b[2m35\u001b[0m |   <h3\n    : \u001b[31;1m   ^^\u001b[0m\n \u001b[2m36\u001b[0m |     ref={ref}\n \u001b[2m37\u001b[0m |     className=\"{cn(\"\n \u001b[2m38\u001b[0m |       'text-2xl font-semibold leading-none tracking-tight',\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/ui/Card.tsx\n./pages/solutions/workflow-automation.tsx\n\n./pages/ai-services.tsx\nError: \n  \u001b[31mx\u001b[0m Unexpected token `;`. Expected identifier, string literal, numeric literal or [ for the computed key\n    ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:56:1]\n \u001b[2m56\u001b[0m |       ],\n \u001b[2m57\u001b[0m |       pricing: '$4,000 - $15, 000/month',\n \u001b[2m58\u001b[0m |       delivery: '4-6 weeks',\n \u001b[2m59\u001b[0m |       category: 'HR AI',;\n    : \u001b[31;1m                        ^\u001b[0m\n \u001b[2m60\u001b[0m | },\n \u001b[2m61\u001b[0m |     {\n \u001b[2m62\u001b[0m |       title: 'Computer Vision Solutions',\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/ai-services.tsx\n\n\n> Build failed because of webpack errors\n"
+  },
   "qualityChecks": [
     {
       "name": "File Structure Check",
       "success": true,
       "result": {
         "missing": [],
-        "isValid": true}
+        "isValid": true
+      }
     },
     {
       "name": "Dependency Check",
@@ -55,13 +61,12 @@
           "openai",
           "path",
           "react",
-          "react-datepicker",
           "react-dom",
+          "react-datepicker",
           "react-error-boundary",
           "react-helmet-async",
           "tailwind-merge",
-          "tailwindcss-animate",
-          "typescript"
+          "tailwindcss-animate"
         ],
         "devDependencies": [
           "@babel/plugin-transform-class-properties",
@@ -92,6 +97,7 @@
           "ts-jest",
           "typescript"
         ],
+        "totalDeps": 72
       }
     },
     {
@@ -100,8 +106,13 @@
       "result": {
         "existing": [
           "next.config.js",
+          "tailwind.config.js",
+          "postcss.config.js",
           "eslint.config.js"
         ],
+        "missing": [],
+        "coverage": 100
+      }
     }
   ]
 }

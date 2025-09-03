@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link'
+import Link from 'next/link';
 import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer'
+import Footer from '../src/components/Footer';
 import { Cloud, Server, GitBranch, Zap, CheckCircle, ArrowRight, Phone, Mail, Users, Award, Clock, Globe } from 'lucide-react';
 
 export default function CloudDevOps() {
@@ -11,25 +11,25 @@ export default function CloudDevOps() {
       icon: Cloud,
       title: 'Cloud Migration',
       description: 'Seamless migration to cloud platforms with zero downtime and optimized performance.',
-      features: ['AWS Migration', 'Azure Migration', 'GCP Migration', 'Hybrid Cloud Solutions'];
+      features: ['AWS Migration', 'Azure Migration', 'GCP Migration', 'Hybrid Cloud Solutions']
 },
     {
       icon: Server,
       title: 'Infrastructure as Code',
       description: 'Automated infrastructure provisioning and management using modern IaC tools.',
-      features: ['Terraform', 'CloudFormation', 'Ansible', 'Kubernetes'];
+      features: ['Terraform', 'CloudFormation', 'Ansible', 'Kubernetes']
 },
     {
       icon: GitBranch,
       title: 'CI/CD Pipelines',
       description: 'Automated build, test, and deployment pipelines for faster and reliable releases.',
-      features: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Azure DevOps'];
+      features: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Azure DevOps']
 },
     {
       icon: Zap,
       title: 'Performance Optimization',
       description: 'Optimize your applications and infrastructure for maximum performance and cost efficiency.',
-      features: ['Auto-scaling', 'Load Balancing', 'Caching Strategies', 'Resource Optimization'];
+      features: ['Auto-scaling', 'Load Balancing', 'Caching Strategies', 'Resource Optimization']
 }
   ]
 

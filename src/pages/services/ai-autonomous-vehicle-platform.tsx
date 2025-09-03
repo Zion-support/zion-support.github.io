@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'
 import { 
@@ -14,8 +14,8 @@ import {
   Activity, TrendingUp,
   Lock, Smartphone,
   Cloud, Server,
-  Database, Workflow,
-  MessageCircle, Phone,
+  Database, Workflow,;
+  MessageCircle, Phone,;
   Mail} from 'lucide-react';
 
 const AIAutonomousVehiclePlatform = () => {
@@ -43,19 +43,19 @@ const AIAutonomousVehiclePlatform = () => {
   const useCases = [
     {
       title: "Autonomous Taxis", description: "Self-driving taxi services for urban transportation",
-      icon: Car, benefits: ["24/7 availability", "Reduced costs", "Improved safety"];
+      icon: Car, benefits: ["24/7 availability", "Reduced costs", "Improved safety"]
 }, {
       title: "Logistics & Delivery",
       description: "Autonomous delivery vehicles for last-mile logistics", icon: Globe,
-      benefits: ["Faster delivery", "Cost efficiency", "Scalable operations"];
+      benefits: ["Faster delivery", "Cost efficiency", "Scalable operations"]
 }, {
       title: "Public Transportation",
       description: "Self-driving buses and shuttles for public transit", icon: Users,
-      benefits: ["Consistent schedules", "Reduced accidents", "Lower operational costs"];
+      benefits: ["Consistent schedules", "Reduced accidents", "Lower operational costs"]
 }, {
       title: "Industrial Applications",
       description: "Autonomous vehicles for mining, construction, and agriculture", icon: Target,
-      benefits: ["Hazardous environment operation", "24/7 productivity", "Precision operations"];
+      benefits: ["Hazardous environment operation", "24/7 productivity", "Precision operations"]
 }
   ]
 

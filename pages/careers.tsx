@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import Head from 'next/head'
+import Head from 'next/head';
 import Layout from '../components/Layout';
 import {
   Users,
@@ -12,7 +12,7 @@ import {
   ArrowRight,
   CheckCircle,
   MapPin,
-  Clock,
+  Clock,;
   DollarSign} from 'lucide-react';
   DollarSign
 } from 'lucide-react';
@@ -24,7 +24,11 @@ const Careers: NextPage = () => {
       icon: Heart,
       title: 'Health & Wellness',
       description: 'Comprehensive health insurance, dental, vision, and wellness programs.'
+<<<<<<< HEAD
     },
+=======
+},
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d
     {
       icon: Home,
       title: 'Remote Work',

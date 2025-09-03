@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {SEO } from '@/components/SEO';
 
 ;,"});,"})
@@ -15,7 +15,7 @@ export default function Team() {return (
 import React from &apos;react';
 import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { ;
   Linkedin, Twitter, Github, Mail, Award, Users, ;
@@ -25,40 +25,40 @@ import { ;
 export default function Team() {;
   const teamMembers = [;
     {;
-      id: 1,;
-      name: "Dr. Sarah Chen",;
-      role: "Chief Executive Officer",;
-      department: "Executive",;
-      bio: "Visionary leader with 15+ years in AI and quantum computing. Former MIT researcher and Google AI pioneer.",;
+      id: 1
+      name: "Dr. Sarah Chen"
+      role: "Chief Executive Officer"
+      department: "Executive"
+      bio: "Visionary leader with 15+ years in AI and quantum computing. Former MIT researcher and Google AI pioneer."
       expertise: ["AI Strategy", "Quantum Computing", "Leadership"],;
-      achievements: ["MIT PhD", "Google AI Research", "50+ Patents"];
+      achievements: ["MIT PhD", "Google AI Research", "50+ Patents"]
     },;
     {;
-      id: 2,;
-      name: "Prof. Michael Rodriguez",;
-      role: "Chief Technology Officer",;
-      department: "Technology",;
-      bio: "Quantum computing expert and former IBM Research scientist. Leading our quantum technology initiatives.",;
+      id: 2
+      name: "Prof. Michael Rodriguez"
+      role: "Chief Technology Officer"
+      department: "Technology"
+      bio: "Quantum computing expert and former IBM Research scientist. Leading our quantum technology initiatives."
       expertise: ["Quantum Computing", "Research", "Innovation"],;
-      achievements: ["IBM Research", "Quantum Pioneer", "Nobel Nominee"];
+      achievements: ["IBM Research", "Quantum Pioneer", "Nobel Nominee"]
     },;
     {;
-      id: 3,;
-      name: "Alex Thompson",;
-      role: "Head of AI Research",;
-      department: "AI & Machine Learning",;
-      bio: "AI researcher and entrepreneur. Former DeepMind engineer with expertise in neural networks and deep learning.",;
+      id: 3
+      name: "Alex Thompson"
+      role: "Head of AI Research"
+      department: "AI & Machine Learning"
+      bio: "AI researcher and entrepreneur. Former DeepMind engineer with expertise in neural networks and deep learning."
       expertise: ["Deep Learning", "Neural Networks", "AI Ethics"],;
-      achievements: ["DeepMind Alumni", "AI Ethics Leader", "30+ Publications"];
+      achievements: ["DeepMind Alumni", "AI Ethics Leader", "30+ Publications"]
     },;
     {;
-      id: 4,;
-      name: "Lisa Park",;
-      role: "Chief Security Officer",;
-      department: "Cybersecurity",;
-      bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Former NSA security analyst.",;
+      id: 4
+      name: "Lisa Park"
+      role: "Chief Security Officer"
+      department: "Cybersecurity"
+      bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Former NSA security analyst."
       expertise: ["Cybersecurity", "Risk Management", "Compliance"],;
-      achievements: ["NSA Experience", "Security Expert", "CISSP Certified"];
+      achievements: ["NSA Experience", "Security Expert", "CISSP Certified"]
     }
   ]
 ;
@@ -98,8 +98,8 @@ export default function Team() {;
                 {stats.map((stat, index) => (;
                   <motion.div;
 import { 
-  Linkedin, Twitter, Github, Mail, Award, Users, 
-  Brain, Atom, Shield, Rocket, Globe, Code, 
+  Linkedin, Twitter, Github, Mail, Award, Users, ;
+  Brain, Atom, Shield, Rocket, Globe, Code, ;
   Star, CheckCircle, TrendingUp, Target} from &apos;lucide-react';&apos;&apos;
 
 export default function Team() {}
@@ -111,7 +111,7 @@ export default function Team() {}
       department: &quot;Executive&quot,
       bio: &quot;Visionary leader with 15+ years in AI and quantum computing. Former MIT researcher and Google AI pioneer.&quot,
       expertise: [&quot;AI Strategy&quot, &quot;Quantum Computing&quot, &quot;Leadership&quot],
-      achievements: [&quot;MIT PhD&quot, &quot;Google AI Research&quot, &quot;50+ Patents&quot];
+      achievements: [&quot;MIT PhD&quot, &quot;Google AI Research&quot, &quot;50+ Patents&quot]
 },
     {
       id: 2,
@@ -120,7 +120,7 @@ export default function Team() {}
       department: &quot;Technology&quot,
       bio: &quot;Quantum computing expert and former IBM Research scientist. Leading our quantum technology initiatives.&quot,
       expertise: [&quot;Quantum Computing&quot, &quot;Research&quot, &quot;Innovation&quot],
-      achievements: [&quot;IBM Research&quot, &quot;Quantum Pioneer&quot, &quot;Nobel Nominee&quot];
+      achievements: [&quot;IBM Research&quot, &quot;Quantum Pioneer&quot, &quot;Nobel Nominee&quot]
 },
     {
       id: 3,
@@ -129,7 +129,7 @@ export default function Team() {}
       department: &quot;AI & Machine Learning&quot,
       bio: &quot;AI researcher and entrepreneur. Former DeepMind engineer with expertise in neural networks and deep learning.&quot,
       expertise: [&quot;Deep Learning&quot, &quot;Neural Networks&quot, &quot;AI Ethics&quot],
-      achievements: [&quot;DeepMind Alumni&quot, &quot;AI Ethics Leader&quot, &quot;30+ Publications&quot];
+      achievements: [&quot;DeepMind Alumni&quot, &quot;AI Ethics Leader&quot, &quot;30+ Publications&quot]
 },
     {
       id: 4,
@@ -138,7 +138,7 @@ export default function Team() {}
       department: &quot;Cybersecurity&quot,
       bio: &quot;Cybersecurity expert with 12+ years protecting enterprise systems. Former NSA security analyst.&quot,
       expertise: [&quot;Cybersecurity&quot, &quot;Risk Management&quot, &quot;Compliance&quot],
-      achievements: [&quot;NSA Experience&quot, &quot;Security Expert&quot, &quot;CISSP Certified&quot];
+      achievements: [&quot;NSA Experience&quot, &quot;Security Expert&quot, &quot;CISSP Certified&quot]
 }
   ]&quot;
 
@@ -154,7 +154,7 @@ export default function Team() {
   const teamMembers = [
     { id: 1, name: "Dr. Sarah Chen",
       role: "Chief Executive Officer", department: "Executive",
-      bio: "Visionary leader with 15+ years in AI and quantum computing. Former MIT researcher and Google AI pioneer.", expertise: ["AI Strategy", "Quantum Computing", "Leadership"], achievements: ["MIT PhD", "Google AI Research", "50+ Patents"];
+      bio: "Visionary leader with 15+ years in AI and quantum computing. Former MIT researcher and Google AI pioneer.", expertise: ["AI Strategy", "Quantum Computing", "Leadership"], achievements: ["MIT PhD", "Google AI Research", "50+ Patents"]
 }, { id: 2,
     {
       id: 1, name: "Dr. Sarah Chen",
@@ -163,27 +163,27 @@ export default function Team() {
   {
       id: 1, name: "Dr. Sarah Chen",
       role: "Chief Executive Officer", department: "Executive",
-      bio: "Visionary leader with 15+ years in AI and quantum computing. Former MIT researcher and Google AI pioneer.", expertise: ["AI Strategy,Quantum Computing,Leadership"], achievements: ["MIT PhD,Google AI Research,50+ Patents"];
+      bio: "Visionary leader with 15+ years in AI and quantum computing. Former MIT researcher and Google AI pioneer.", expertise: ["AI Strategy,Quantum Computing,Leadership"], achievements: ["MIT PhD,Google AI Research,50+ Patents"]
 }, {
       id: 2,
       name: "Prof. Michael Rodriguez", role: "Chief Technology Officer",
       department: "Technology", bio: "Quantum computing expert and former IBM Research scientist. Leading our quantum technology initiatives.",
-      expertise: ["Quantum Computing", "Research", "Innovation"], achievements: ["IBM Research", "Quantum Pioneer", "Nobel Nominee"];
+      expertise: ["Quantum Computing", "Research", "Innovation"], achievements: ["IBM Research", "Quantum Pioneer", "Nobel Nominee"]
 }, { id: 3,
-      expertise: ["Quantum Computing,Research,Innovation"], achievements: ["IBM Research,Quantum Pioneer,Nobel Nominee"];
+      expertise: ["Quantum Computing,Research,Innovation"], achievements: ["IBM Research,Quantum Pioneer,Nobel Nominee"]
 }, {
       id: 3,
       name: "Alex Thompson", role: "Head of AI Research",
       department: "AI & Machine Learning", bio: "AI researcher and entrepreneur. Former DeepMind engineer with expertise in neural networks and deep learning.",
-      expertise: ["Deep Learning", "Neural Networks", "AI Ethics"], achievements: ["DeepMind Alumni", "AI Ethics Leader", "30+ Publications"];
+      expertise: ["Deep Learning", "Neural Networks", "AI Ethics"], achievements: ["DeepMind Alumni", "AI Ethics Leader", "30+ Publications"]
 }, { id: 4,
-      expertise: ["Deep Learning,Neural Networks,AI Ethics"], achievements: ["DeepMind Alumni,AI Ethics Leader,30+ Publications"];
+      expertise: ["Deep Learning,Neural Networks,AI Ethics"], achievements: ["DeepMind Alumni,AI Ethics Leader,30+ Publications"]
 }, {
       id: 4,
       name: "Lisa Park", role: "Chief Security Officer",
       department: "Cybersecurity", bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Former NSA security analyst.",
       expertise: ["Cybersecurity", "Risk Management", "Compliance"], achievements: ["NSA Experience", "Security Expert", "CISSP Certified"]
-      expertise: ["Cybersecurity,Risk Management,Compliance"], achievements: ["NSA Experience,Security Expert,CISSP Certified"];
+      expertise: ["Cybersecurity,Risk Management,Compliance"], achievements: ["NSA Experience,Security Expert,CISSP Certified"]
 }
   ]
   const stats = [

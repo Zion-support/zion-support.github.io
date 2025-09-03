@@ -7,8 +7,8 @@ interface EnhancedLoadingSpinnerProps {
   className?: string}
 
 export default function EnhancedLoadingSpinner({ 
-  size = 'md', 
-  text = 'Loading...',
+  size = 'md', ;
+  text = 'Loading...',;
   className = '';
 }: EnhancedLoadingSpinnerProps) {
   const sizeClasses = {
@@ -56,7 +56,7 @@ export default function EnhancedLoadingSpinner({
             className="w-2 h-2 bg-blue-600 rounded-full"
             animate={{ 
               scale: [1, 1.5, 1],
-              opacity: [0.5, 1, 0.5];
+              opacity: [0.5, 1, 0.5]
 }}
             transition={{ 
               duration: 1.5, 
@@ -96,11 +96,11 @@ export default function EnhancedLoadingSpinner({,"});,"})
   text = 'Loading...',;,"});,"})
   className = '';,"});,"});
 }: EnhancedLoadingSpinnerProps) {,"});,"})
-  const sizeClasses = { sm: 'w-8 h-8',;,"});,"})
-    md: 'w-12 h-12',;,"});,"})
+  const sizeClasses = { sm: 'w-8 h-8',"});,"})
+    md: 'w-12 h-12',"});,"})
     lg: 'w-16 h-16',"});,"})
-  const textSizes = { sm: 'text-sm',;,"});,"})
-    md: 'text-base',;,"});,"})
+  const textSizes = { sm: 'text-sm',"});,"})
+    md: 'text-base',"});,"})
     lg: 'text-lg',"});,`})
   return (<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>;,`});,"})
       <motion.div,"});,`})
@@ -132,11 +132,11 @@ export default function EnhancedLoadingSpinner({,"});,"})
             key={i}"});,"})
             className="w-2 h-2 bg-blue-600 rounded-full";,"});,"})
             animate={{ scale: [1, 1.5, 1],;,"});,"})
-              opacity: [0.5, 1, 0.5];,"});,"});
+              opacity: [0.5, 1, 0.5],"});,"});
 }}"});,"})
-            transition={{ duration: 1.5,;,"});,"})
-              repeat: Infinity,;,"});,"})
-              delay: i * 0.2,;,"});,"})
+            transition={{ duration: 1.5,"});,"})
+              repeat: Infinity,"});,"})
+              delay: i * 0.2,"});,"})
               ease: "easeInOut","});,"})
         ))}"});,"})
       </div>;,"});,"})
@@ -147,11 +147,11 @@ import { motion     } from 'framer-motion';interface EnhancedLoadingSpinnerProps
   size = 'md',;
   text = 'Loading...',;
   className = ''}: EnhancedLoadingSpinnerProps) {
-  const sizeClasses = { sm: 'w-8 h-8',;
-    md: 'w-12 h-12',;
+  const sizeClasses = { sm: 'w-8 h-8'
+    md: 'w-12 h-12'
     lg: 'w-16 h-16'}
   const textSizes = { sm: 'text-sm',
-    md: 'text-base',;
+    md: 'text-base'
     lg: 'text-lg'}
   return (<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
         animate={{ rotate: 360  }}
@@ -199,7 +199,7 @@ export: default function EnhancedLoadingSpinner({
               delay: i: * 0.,2,
               ease: 'easeInOut,'}}';';
 interface EnhancedLoadingSpinnerProps {`"
-import React from 'react'
+import React from 'react';
 import {SEO } from '@/components/SEO';
 
 export default function EnhancedLoadingSpinner() {return (
@@ -211,7 +211,7 @@ export default function EnhancedLoadingSpinner() {return (
           Professional EnhancedLoadingSpinner services to help your business grow.
         </p>
   )}
-import { motion     } from &apos
+import { motion     } from &apos;
 import { motion } from &apos;framer-motion';;framer-motion';
   size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg&apos; text?: string className?: string}&apos;&apos;
 export default function EnhancedLoadingSpinner( {
@@ -227,7 +227,7 @@ export default function EnhancedLoadingSpinner( {
   return (&apos;<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
 import { motion     } from 'framer-motion';
   className = '}: EnhancedLoadingSpinnerProps) {
-  const textSizes = { sm: 'text-sm',;
+  const textSizes = { sm: 'text-sm'
   return (<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>;
       <motion.div;
 
@@ -288,9 +288,9 @@ export default function EnhancedLoadingSpinner({"
             className='w-2 h-2 bg-blue-600 rounded-full';
             animate={{ scale: [1, 1.5, 1],;
               opacity: [0.5, 1, 0.5]}}
-            transition={{ duration: 1.5,;
-              repeat: Infinity,;
-              delay: i * 0.2,;
+            transition={{ duration: 1.5
+              repeat: Infinity
+              delay: i * 0.2
               ease: 'easeInOut'}}
           />))}
       </div>;

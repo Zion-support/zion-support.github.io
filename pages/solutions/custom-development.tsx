@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout'
+import MainLayout from '../../components/layout/MainLayout';
 import { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 
@@ -8,27 +8,27 @@ const CustomDevelopment: NextPage = () => {
   const developmentServices = [
     {
       icon: Code, title: 'Web Application Development',
-      description: 'Custom web applications built with modern frameworks and technologies.', features: ['React, Vue.js, Angular', 'Node.js, Python, PHP', 'Responsive design', 'API integration'];
+      description: 'Custom web applications built with modern frameworks and technologies.', features: ['React, Vue.js, Angular', 'Node.js, Python, PHP', 'Responsive design', 'API integration']
 }, {
       icon: Smartphone,
       title: 'Mobile App Development', description: 'Native and cross-platform mobile applications for iOS and Android.',
-      features: ['React Native, Flutter', 'Swift, Kotlin', 'App Store optimization', 'Push notifications'];
+      features: ['React Native, Flutter', 'Swift, Kotlin', 'App Store optimization', 'Push notifications']
 }, {
       icon: Globe,
       title: 'E-commerce Solutions', description: 'Complete e-commerce platforms with payment integration and inventory management.',
-      features: ['Shopping cart functionality', 'Payment gateway integration', 'Inventory management', 'Order tracking'];
+      features: ['Shopping cart functionality', 'Payment gateway integration', 'Inventory management', 'Order tracking']
 }, {
       icon: Database,
       title: 'Database Design & Management', description: 'Custom database solutions optimized for performance and scalability.',
-      features: ['MySQL, PostgreSQL, MongoDB', 'Data modeling', 'Performance optimization', 'Backup & recovery'];
+      features: ['MySQL, PostgreSQL, MongoDB', 'Data modeling', 'Performance optimization', 'Backup & recovery']
 }, {
       icon: Zap,
       title: 'API Development', description: 'RESTful and GraphQL APIs for seamless integration between systems.',
-      features: ['RESTful APIs', 'GraphQL endpoints', 'Authentication & authorization', 'Rate limiting'];
+      features: ['RESTful APIs', 'GraphQL endpoints', 'Authentication & authorization', 'Rate limiting']
 }, {
       icon: Shield,
       title: 'Security Implementation', description: 'Comprehensive security measures to protect your applications and data.',
-      features: ['SSL/TLS encryption', 'Authentication systems', 'Data validation', 'Security audits'];
+      features: ['SSL/TLS encryption', 'Authentication systems', 'Data validation', 'Security audits']
 }
   ]
 

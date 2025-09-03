@@ -13,7 +13,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})
         compSize: '',''';,"});,"})
         budget: '',''';,"});,"})
         timeline: '',''';,"});,"})
-        technologyMaturity: '',;,"});,"})
+        technologyMaturity: '',"});,"})
         primaryGoals[],;,"});,"})
         challenges[];,"});,"});
 });,"});,"})
@@ -177,7 +177,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})
                     matchScore,;,"});,"})
                     reasoning,;,"});,"})
                     priority,;,"});,"})
-                    implementationComplexity: complexity,;,"});,"})
+                    implementationComplexity: complexity,"});,"})
                     expectedROI,;,"});,"})
                     timeToValue,"});,"});
 }}) .sort((a, b) => b.matchScore - a.matchScore) ;,"});,"})
@@ -211,10 +211,10 @@ const AdvancedServiceRecommendation = () => {}"});,"})
     return (<div className="max-w-7xl mx-auto p-6">;,"});,"})
       {/* Header */}"});,"})
       <motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 ""","});,"})
 """";,"});,"});
 }} className="text-center mb-8">"""";,"});,"})
@@ -226,10 +226,10 @@ const AdvancedServiceRecommendation = () => {}"});,"})
       </motion.div>;,"});,"})
       {/* Client Profile Form */}"});,"})
       <motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 ""","});,"})
 """";,"});,"});
 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"""";,"});,"})
@@ -354,10 +354,10 @@ const AdvancedServiceRecommendation = () => {}"});,"})
       </motion.div>;,"});,"})
       {/* Recommendations Results */}"});,"})
       {showResults && (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"})
 """;,"});,"});
 }} transition={{ delay: 0.2 }}>"""";,"});,"})
@@ -367,10 +367,10 @@ const AdvancedServiceRecommendation = () => {}"});,"})
           """";,"});,"})
           <div className="space-y-6">;,"});,"})
             {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   x: -20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   x: 0,"});,"})
 """;,"});,"});
 }} transition={{ delay: 0.1 * index }}>"""";,"});,"})
@@ -463,10 +463,10 @@ const AdvancedServiceRecommendation = () => {}"});,"})
           </div>;,"});,"})
           {/* CTA Section */}"});,"})
           <motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 ""","});,"})
 """";,"});,"});
 }} transition={{ delay: 0.4 }} className="mt-12 text-center">"""";,"});,"})
@@ -509,14 +509,14 @@ export { AdvancedServiceRecommendation };,"});,"})
 export { AdvancedServiceRecommendation };,"});,"})
 ;,"});,"})
 export { AdvancedServiceRecommendation };,"});,"})
-import React, { useState } from 'react'''
-import { motion } from 'framer-motion'''
+import React, { useState } from 'react''';
+import { motion } from 'framer-motion''';
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';""
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';'''
 import { Button } from './ui/button'';'''
 import React, { useState } from 'react''
-import { motion }  from 'framer-motion
-import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react
+import { motion }  from 'framer-motion;
+import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react;
 import { Card, CardContent, CardHeader, CardTitle }  from './ui/card;''
 import { Button }  from './ui/button;''
 import { Badge } from './ui/badge';

@@ -10,8 +10,8 @@ import {
   CheckCircle,
   ArrowRight,
   ExternalLink,
-  Zap,
-  Shield
+  Zap,;
+  Shield;
 } from 'lucide-react';
 
 ;,"});,"})

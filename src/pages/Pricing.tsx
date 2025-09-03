@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import React from 'react'
+import React from 'react';
 import {SEO } from '@/components/SEO';
 
 ;,"});,"})
@@ -18,8 +18,8 @@ import React from &apos;react';
 import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
 import { 
-  Check, Star, ArrowRight, Users, Zap, Shield, 
-  Brain, Atom, Rocket, Globe, Award,
+  Check, Star, ArrowRight, Users, Zap, Shield, ;
+  Brain, Atom, Rocket, Globe, Award,;
 } from &apos;lucide-react';&apos;&apos;
 
 export default function Pricing() {}
@@ -70,7 +70,7 @@ export default function Pricing() {}
       color: &quot;from-orange-500 to-red-500&quot}
   ]&quot;
 
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { ;
   Check, Star, ArrowRight, Users, Zap, Shield, ;
@@ -80,43 +80,43 @@ import { ;
 export default function Pricing() {;
   const pricingPlans = [;
     {;
-      name: "Starter",;
-      price: "$99",;
-      period: "per month",;
-      description: "Perfect for small businesses getting started with AI",;
+      name: "Starter"
+      price: "$99"
+      period: "per month"
+      description: "Perfect for small businesses getting started with AI"
       features: [;
-        "Basic AI tools and services",;
-        "Email support",;
+        "Basic AI tools and services"
+        "Email support"
         "Up to 5 users",;
         "Standard security features",;
         "Basic analytics dashboard";
       ],;
-      popular: false,;
+      popular: false
       color: "from-blue-500 to-cyan-500"},;
     {;
-      name: "Professional",;
-      price: "$299",;
-      period: "per month",;
-      description: "Ideal for growing businesses with advanced needs",;
+      name: "Professional"
+      price: "$299"
+      period: "per month"
+      description: "Ideal for growing businesses with advanced needs"
       features: [;
-        "Advanced AI and machine learning tools",;
-        "Priority support",;
+        "Advanced AI and machine learning tools"
+        "Priority support"
         "Up to 25 users",;
         "Enhanced security features",;
         "Advanced analytics and reporting",;
         "API access",;
         "Custom integrations";
       ],;
-      popular: true,;
+      popular: true
       color: "from-purple-500 to-pink-500"},;
     {;
-      name: "Enterprise",;
-      price: "$999",;
-      period: "per month",;
-      description: "Comprehensive solution for large organizations",;
+      name: "Enterprise"
+      price: "$999"
+      period: "per month"
+      description: "Comprehensive solution for large organizations"
       features: [;
-        "Full AI and quantum computing suite",;
-        "24/7 dedicated support",;
+        "Full AI and quantum computing suite"
+        "24/7 dedicated support"
         "Unlimited users",;
         "Enterprise-grade security",;
         "Custom analytics and dashboards",;
@@ -124,33 +124,33 @@ export default function Pricing() {;
         "Custom development services",;
         "Dedicated account manager";
       ],;
-      popular: false,;
+      popular: false
       color: "from-orange-500 to-red-500"}
   ]
 ;
   const serviceCategories = [;
     {;
-      title: "AI Services",;
-      icon: Brain,;
-      startingPrice: "$99/month",;
+      title: "AI Services"
+      icon: Brain
+      startingPrice: "$99/month"
       description: "Machine learning, natural language processing, and AI automation";
     },;
     {;
-      title: "Quantum Computing",;
-      icon: Atom,;
-      startingPrice: "$499/month",;
+      title: "Quantum Computing"
+      icon: Atom
+      startingPrice: "$499/month"
       description: "Quantum algorithms, quantum machine learning, and quantum optimization";
     },;
     {;
-      title: "Cybersecurity",;
-      icon: Shield,;
-      startingPrice: "$199/month",;
+      title: "Cybersecurity"
+      icon: Shield
+      startingPrice: "$199/month"
       description: "Advanced threat detection, security monitoring, and compliance";
     },;
     {;
-      title: "Micro SaaS",;
-      icon: Rocket,;
-      startingPrice: "$149/month",;
+      title: "Micro SaaS"
+      icon: Rocket
+      startingPrice: "$149/month"
       description: "Custom software solutions and micro SaaS applications"}
   ]
 ;

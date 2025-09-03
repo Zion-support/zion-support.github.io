@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link'
+import Link from 'next/link';
 import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine } from 'lucide-react';
-import Navigation from '../src/components/Navigation'
+import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 import Head from 'next/head'
 import Link from 'next/link'
@@ -282,6 +282,7 @@ export default function AIServices() {
       pricing: '$18,000 - $60,000/month',
       delivery: '16-28 weeks',
       category: 'Synthetic Biology AI'
+<<<<<<< HEAD
     },
     {
       title: 'AI-Powered Social Media Intelligence Platform',
@@ -382,6 +383,9 @@ export default function AIServices() {
       delivery: '12-24 weeks',
       category: 'Smart City AI'
     },
+=======
+},
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d
     {
       title: 'AI-Powered Fusion Energy Optimization',
       description: 'Intelligent fusion reactor control and plasma optimization',

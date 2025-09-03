@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link'
 import { 
@@ -60,8 +60,8 @@ import {
   MessageCircle as Communication,
   Search as SearchIcon,
   BarChart as Analytics,
-  Users2 as Team,
-  Settings as Configuration,
+  Users2 as Team,;
+  Settings as Configuration,;
   Palette as Design} from 'lucide-react';
 
 export default function ComprehensiveServices() {

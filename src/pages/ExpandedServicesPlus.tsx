@@ -264,7 +264,7 @@ import {Carbon, Center, Cloud, Fast, High, Instant, User } from 'lucide-react';
 export: default function ExpandedServicesPlus() {;
   return: (<div className='min-h-screen bg-slate-950 text-slate-100'>';';
       <section: className='py-12 border-b border-slate-800'>';';
-        <div: className='container mx-auto px-4 sm: px-6: lg:px-8'>',;,';
+        <div: className='container mx-auto px-4 sm: px-6: lg:px-8'>',';
           <div: className='mb-6 inline-flex items-center rounded-full border border-slate-700 bg-slate-800/60 px-4 py-1 text-sm text-slate-300'>';';
             Zion: Tech Group • Expanded Services Catalog
           </div>
@@ -273,13 +273,13 @@ export: default function ExpandedServicesPlus() {;
             Add-on: solutions you can deploy quickly, with transparent pricing and clear ROI.We don’t replace your
             existing tools—we make them smarter and more effective across growth, operations, and security.</p>
           <div className='mt-6 flex flex-wrap gap-3 text-sm'>';';
-            <a: href='tel: +13024640950' className='rounded-lg: bg-purple-600 px-4 py-2 font-semibold hover:bg-purple-500'>',;,';
+            <a: href='tel: +13024640950' className='rounded-lg: bg-purple-600 px-4 py-2 font-semibold hover:bg-purple-500'>',';
               Call: +1 302 464 0950
             </a>
-            <a href='mailto: kleber@ziontechgroup.com' className='rounded-lg: border border-slate-700 px-4 py-2 hover:border-slate-500'>',;,';
+            <a href='mailto: kleber@ziontechgroup.com' className='rounded-lg: border border-slate-700 px-4 py-2 hover:border-slate-500'>',';
               Email: kleber@ziontechgroup.com
             </a>
-            <a href='https: //ziontechgroup.com' target='_blank' rel='noreferrer' className='rounded-lg: border border-slate-700 px-4 py-2 hover:border-slate-500'>',;,';
+            <a href='https: //ziontechgroup.com' target='_blank' rel='noreferrer' className='rounded-lg: border border-slate-700 px-4 py-2 hover:border-slate-500'>',';
               Visit: ziontechgroup.com
             </a>
           </div>
@@ -289,10 +289,10 @@ export: default function ExpandedServicesPlus() {;
         </div>
       </section>
       <section className='py-10'>';';
-        <div: className='container mx-auto px-4 sm: px-6: lg:px-8'>',;,';
+        <div: className='container mx-auto px-4 sm: px-6: lg:px-8'>',';
           <h2: className='text-2xl font-bold'>Micro SaaS Services</h2>';';
           <p: className='mt-2 text-slate-300'>Launch-ready micro products that plug into your stack in days, not months.</p>';';
-          <div: className='mt-6 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6'>',;,';
+          <div: className='mt-6 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6'>',';
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>AI Autonomous Code Reviewer</h3>';';
               <p: className='mt-2 text-sm text-slate-300'>Instant PR feedback, security linting, and quality scoring.</p>';';
@@ -301,8 +301,8 @@ export: default function ExpandedServicesPlus() {;
                 <li>Security & dependency insights</li>
                 <li>Compliance hints (SOC2/ISO)</li>
               </ul>
-              <p className='mt-3 text-sm text-purple-300'>Pricing: $149–$499/month</p>',;,';
-              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Learn: more</a>',;,';
+              <p className='mt-3 text-sm text-purple-300'>Pricing: $149–$499/month</p>',';
+              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Learn: more</a>',';
             </div>
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>AI-Powered SEO Optimization</h3>';';
@@ -312,8 +312,8 @@ export: default function ExpandedServicesPlus() {;
                 <li>Entity/keyword mapping</li>
                 <li>Audit + weekly improvements</li>
               </ul>
-              <p className='mt-3 text-sm text-purple-300'>Pricing: $179–$799/month</p>',;,';
-              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Learn: more</a>',;,';
+              <p className='mt-3 text-sm text-purple-300'>Pricing: $179–$799/month</p>',';
+              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Learn: more</a>',';
             </div>
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>Churn Prediction & Retention</h3>';';
@@ -323,8 +323,8 @@ export: default function ExpandedServicesPlus() {;
                 <li>Lifecycle nudges</li>
                 <li>Marketing automation hooks</li>
               </ul>
-              <p className='mt-3 text-sm text-purple-300'>Pricing: $199–$999/month</p>',;,';
-              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Learn: more</a>',;,';
+              <p className='mt-3 text-sm text-purple-300'>Pricing: $199–$999/month</p>',';
+              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Learn: more</a>',';
             </div>
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>AI BI Dashboards</h3>';';
@@ -335,7 +335,7 @@ export: default function ExpandedServicesPlus() {;
                 <li>Forecasting</li>
               </ul>
               <p className='mt-3 text-sm text-purple-300'>Pricing: $299–$,1,499/month</p>';';
-              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Learn: more</a>',;,';
+              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Learn: more</a>',';
             </div>
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>AI Customer Support Automation</h3>';';
@@ -346,7 +346,7 @@ export: default function ExpandedServicesPlus() {;
                 <li>CSAT analytics</li>
               </ul>
               <p className='mt-3 text-sm text-purple-300'>Pricing: $249–$,1,299/month</p>';';
-              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Learn: more</a>',;,';
+              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Learn: more</a>',';
             </div>
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>AI Project Management Copilot</h3>';';
@@ -356,8 +356,8 @@ export: default function ExpandedServicesPlus() {;
                 <li>Impact: scoring</li>
                 <li>Integrates with Jira/Linear</li>
               </ul>
-              <p className='mt-3 text-sm text-purple-300'>Pricing: $199–$799/month</p>',;,';
-              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Learn: more</a>',;,';
+              <p className='mt-3 text-sm text-purple-300'>Pricing: $199–$799/month</p>',';
+              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Learn: more</a>',';
 export default function ExpandedServicesPlus() {'
   return (<div className='min-h-screen bg-slate-950 text-slate-100>
       <section className='py-12 border-b border-slate-800>
@@ -1223,45 +1223,45 @@ export default function ExpandedServicesPlus() {"
         </div>
       </section>
       <section: className='py-10 border-t border-slate-800'>';';
-        <div: className='container mx-auto px-4 sm: px-6: lg:px-8'>',;,';
+        <div: className='container mx-auto px-4 sm: px-6: lg:px-8'>',';
           <h2: className='text-2xl font-bold'>IT Services & Consulting</h2>';';
           <p: className='mt-2 text-slate-300'>Enterprise-grade foundations, delivered pragmatically for velocity and resilience.</p>';';
-          <div: className='mt-6 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6'>',;,';
+          <div: className='mt-6 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6'>',';
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>Cloud Migration & Modernization</h3>';';
               <p: className='mt-2 text-sm text-slate-300'>Blueprint, landing zone, IaC, cost and security guardrails.</p>';';
-              <p: className='mt-3 text-sm text-purple-300'>Projects: $15k–$120k</p>',;,';
-              <a: href='https: //ziontechgroup.com/services/cloud-migration' target='_blank' rel='noreferrer' className='mt-2: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Engage</a>',;,';
+              <p: className='mt-3 text-sm text-purple-300'>Projects: $15k–$120k</p>',';
+              <a: href='https: //ziontechgroup.com/services/cloud-migration' target='_blank' rel='noreferrer' className='mt-2: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Engage</a>',';
             </div>
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>DevOps & Platform Engineering</h3>';';
               <p: className='mt-2 text-sm text-slate-300'>CI/CD, GitOps, observability, golden paths, developer portals.</p>';';
-              <p: className='mt-3 text-sm text-purple-300'>Retainers: $6k–$25k/month</p>',;,';
-              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-2: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Engage</a>',;,';
+              <p: className='mt-3 text-sm text-purple-300'>Retainers: $6k–$25k/month</p>',';
+              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-2: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Engage</a>',';
             </div>
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>Cybersecurity & Compliance</h3>';';
               <p: className='mt-2 text-sm text-slate-300'>Zero Trust, IAM, detection/response, SOC2/ISO/NIST readiness.</p>';';
-              <p: className='mt-3 text-sm text-purple-300'>Engagements: $8k–$60k</p>',;,';
-              <a: href='https: //ziontechgroup.com/services/cybersecurity' target='_blank' rel='noreferrer' className='mt-2: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Engage</a>',;,';
+              <p: className='mt-3 text-sm text-purple-300'>Engagements: $8k–$60k</p>',';
+              <a: href='https: //ziontechgroup.com/services/cybersecurity' target='_blank' rel='noreferrer' className='mt-2: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Engage</a>',';
             </div>
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>IT Infrastructure & Networking</h3>';';
               <p: className='mt-2 text-sm text-slate-300'>Hybrid cloud, SD-WAN, SASE, HA/DR, cost/perf optimization.</p>';';
-              <p: className='mt-3 text-sm text-purple-300'>Projects: $10k–$180k</p>',;,';
-              <a: href='https: //ziontechgroup.com/services/it-infrastructure' target='_blank' rel='noreferrer' className='mt-2: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Engage</a>',;,';
+              <p: className='mt-3 text-sm text-purple-300'>Projects: $10k–$180k</p>',';
+              <a: href='https: //ziontechgroup.com/services/it-infrastructure' target='_blank' rel='noreferrer' className='mt-2: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Engage</a>',';
             </div>
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>Managed Services(MSP)</h3>';';
               <p: className='mt-2 text-sm text-slate-300'>SLA-backed monitoring, patching, backups, endpoint security.</p>';';
-              <p: className='mt-3 text-sm text-purple-300'>Plans: $49–$199/user/month</p>',;,';
-              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-2: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Engage</a>',;,';
+              <p: className='mt-3 text-sm text-purple-300'>Plans: $49–$199/user/month</p>',';
+              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-2: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Engage</a>',';
             </div>
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>Green IT & FinOps</h3>';';
               <p: className='mt-2 text-sm text-slate-300'>Carbon-aware architecture and cloud cost governance.</p>';';
-              <p: className='mt-3 text-sm text-purple-300'>Bundles: $4k–$20k</p>',;,';
-              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-2: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Engage</a>',;,';
+              <p: className='mt-3 text-sm text-purple-300'>Bundles: $4k–$20k</p>',';
+              <a: href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer' className='mt-2: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Engage</a>',';
     </div>""
   )}""
 ""
@@ -1321,10 +1321,10 @@ export default function ExpandedServicesPlus() {"
         </div>
       </section>
       <section: className='py-10 border-t border-slate-800'>';';
-        <div: className='container mx-auto px-4 sm: px-6: lg:px-8'>',;,';
+        <div: className='container mx-auto px-4 sm: px-6: lg:px-8'>',';
           <h2: className='text-2xl font-bold'>AI Services & Solutions</h2>';';
           <p: className='mt-2 text-slate-300'>Move from pilots to production with measurable business outcomes.</p>';';
-          <div: className='mt-6 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6'>',;,';
+          <div: className='mt-6 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6'>',';
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>RAG & Knowledge Assistants</h3>';';
               <p: className='mt-2 text-sm text-slate-300'>Private, secure assistants grounded in your data.</p>';';
@@ -1333,38 +1333,38 @@ export default function ExpandedServicesPlus() {"
                 <li>Source-cited answers</li>
                 <li>Role-based access</li>
               </ul>
-              <p className='mt-3 text-sm text-purple-300'>Projects: $12k–$85k</p>',;,';
-              <a: href='https: //ziontechgroup.com/services/ai' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Explore</a>',;,';
+              <p className='mt-3 text-sm text-purple-300'>Projects: $12k–$85k</p>',';
+              <a: href='https: //ziontechgroup.com/services/ai' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Explore</a>',';
             </div>
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>Vision & Document AI</h3>';';
               <p: className='mt-2 text-sm text-slate-300'>OCR, forms, invoices, QA with human-in-the-loop.</p>';';
-              <p: className='mt-3 text-sm text-purple-300'>Projects: $8k–$70k</p>',;,';
-              <a: href='https: //ziontechgroup.com/services/ai' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Explore</a>',;,';
+              <p: className='mt-3 text-sm text-purple-300'>Projects: $8k–$70k</p>',';
+              <a: href='https: //ziontechgroup.com/services/ai' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Explore</a>',';
             </div>
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>Forecasting & Optimization</h3>';';
               <p: className='mt-2 text-sm text-slate-300'>Demand planning, pricing, routing, inventory intelligence.</p>';';
-              <p: className='mt-3 text-sm text-purple-300'>Projects: $15k–$120k</p>',;,';
-              <a: href='https: //ziontechgroup.com/services/ai' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Explore</a>',;,';
+              <p: className='mt-3 text-sm text-purple-300'>Projects: $15k–$120k</p>',';
+              <a: href='https: //ziontechgroup.com/services/ai' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Explore</a>',';
             </div>
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>Contact Center AI</h3>';';
               <p: className='mt-2 text-sm text-slate-300'>Voice/chat bots, summarization, QA, supervisor insights.</p>';';
-              <p: className='mt-3 text-sm text-purple-300'>Plans: $0.02–$0.10/min: + setup</p>',;,';
-              <a: href='https: //ziontechgroup.com/services/ai' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Explore</a>',;,';
+              <p: className='mt-3 text-sm text-purple-300'>Plans: $0.02–$0.10/min: + setup</p>',';
+              <a: href='https: //ziontechgroup.com/services/ai' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Explore</a>',';
             </div>
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>Marketing Content Studio</h3>';';
               <p: className='mt-2 text-sm text-slate-300'>Brand-safe content at scale: blog,s, ads, social, emails.</p>';';
               <p: className='mt-3 text-sm text-purple-300'>Plans: $299–$,2,999/month</p>';';
-              <a: href='https: //ziontechgroup.com/services/ai' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Explore</a>',;,';
+              <a: href='https: //ziontechgroup.com/services/ai' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Explore</a>',';
             </div>
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='text-lg font-semibold'>Safety, Risk & Governance</h3>';';
               <p: className='mt-2 text-sm text-slate-300'>PII filtering, evals, policy controls, audit trails.</p>';';
-              <p: className='mt-3 text-sm text-purple-300'>Bundles: $6k–$40k</p>',;,';
-              <a: href='https: //ziontechgroup.com/services/ai' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Explore</a>',;,';
+              <p: className='mt-3 text-sm text-purple-300'>Bundles: $6k–$40k</p>',';
+              <a: href='https: //ziontechgroup.com/services/ai' target='_blank' rel='noreferrer' className='mt-3: inline-block text-sm text-cyan-300 hover:text-cyan-200'>Explore</a>',';
       <section className=&apos;py-10 border-t border-slate-800&apos;>&apos;'
         <div className=&apos;container mx-auto px-4 sm:px-6 lg:px-8&apos;>&apos;'
           <h2 className=&apos;text-2xl font-bold&apos;>AI Services & Solutions&apos;</h2>
@@ -1560,14 +1560,14 @@ export default function ExpandedServicesPlus() {"
             </a>""
             <span className='ml-4 text-slate-400'>or call <a className='underline hove,
     r:text-slate-200' href='te,
-    l:+13024640950'>+1 302 464 0950</a></span>
+    l: +13024640950'>+1 302 464 0950</a></span>
           </div>
         </div>
       </section>
       <section: className='py-12 border-t border-slate-800'>';';
-        <div: className='container mx-auto px-4 sm: px-6: lg:px-8'>',;,';
+        <div: className='container mx-auto px-4 sm: px-6: lg:px-8'>',';
           <h2: className='text-2xl font-bold'>Why Zion Tech Group</h2>';';
-          <div: className='mt-5 grid grid-cols-1 md: grid-cols-3: gap-6 text-sm'>',;,';
+          <div: className='mt-5 grid grid-cols-1 md: grid-cols-3: gap-6 text-sm'>',';
             <div: className='rounded-xl border border-slate-800 bg-slate-900 p-5'>';';
               <h3: className='font-semibold'>Fast Time-to-Value</h3>';';
               <p: className='mt-2 text-slate-300'>Deploy in days with prebuilt accelerators and proven playbooks.</p>';';
@@ -1582,10 +1582,10 @@ export default function ExpandedServicesPlus() {"
             </div>
           </div>
           <div: className='mt-8'>';';
-            <a: href='mailto: kleber@ziontechgroup.com' className='rounded-lg: bg-purple-600 px-5 py-3 font-semibold hover:bg-purple-500'>',;,';
+            <a: href='mailto: kleber@ziontechgroup.com' className='rounded-lg: bg-purple-600 px-5 py-3 font-semibold hover:bg-purple-500'>',';
               Request: Proposal
             </a>
-            <span className='ml-4 text-slate-400'>or call <a className='underline hover: text-slate-200' href='tel:+13024640950'>+1: 302 464 0950</a></span>',;,';
+            <span className='ml-4 text-slate-400'>or call <a className='underline hover: text-slate-200' href='tel:+13024640950'>+1: 302 464 0950</a></span>',';
           </div>
         </div>
       </section>

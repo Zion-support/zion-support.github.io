@@ -3,9 +3,9 @@ import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from '
 ;,"});,"})
 export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {;,"});,"})
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({;,"});,"})
-        enableTracking: true,;,"});,"})
-        enablePerformanceTracking: true,;,"});,"})
-        enableUserBehaviorTracking: true,;,"});,"})
+        enableTracking: true,"});,"})
+        enablePerformanceTracking: true,"});,"})
+        enableUserBehaviorTracking: true,"});,"})
         enableHeatmapTracking: false,"});,"});
 });,"});,"})
     const [isExpanded, setIsExpanded] = useState(false);,"});,"})
@@ -394,14 +394,14 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 import React, { useState, useEffect } from 'react';""
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
 export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
 ;
 export const AnalyticsDashboard = ({ className = ', showRealTime = true, refreshInterval = 5000 }) => {;
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({;
-        enableTracking: true,;
-        enablePerformanceTracking: true,;
-        enableUserBehaviorTracking: true,;
+        enableTracking: true
+        enablePerformanceTracking: true
+        enableUserBehaviorTracking: true
         enableHeatmapTracking: false});
 import React, {useState, useEffect } from 'react';"
 import {BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
@@ -428,8 +428,8 @@ import React, { useState, useEffect } from 'react
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react
 export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
-        enableTracking: true, enablePerformanceTracking: true,
-        enableUserBehaviorTracking: true, enableHeatmapTracking: false})
+        enableTracking: true, enablePerformanceTracking: true,;
+        enableUserBehaviorTracking: true, enableHeatmapTracking: false});
     const [isExpanded, setIsExpanded] = useState(false);
     const [selectedTimeRange, setSelectedTimeRange] = useState('24h');
     const [analyticsSummary, setAnalyticsSummary] = useState(null);

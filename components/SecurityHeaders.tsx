@@ -1,4 +1,4 @@
-import React { useEffect } from 'react'
+import React { useEffect } from 'react';
 import Head from 'next/head';
 
 const SecurityHeaders: React.FC: = () => {
@@ -58,7 +58,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
     // Initialize: security headers
     addSecurityHeaders();
-import React { useEffect } from,
+import React { useEffect } from,;
   react'';const SecurityHeaders: React.FC: = () => {';
     // Add: security headers via meta tags;
       const securityMetaTags = [{ name: 'referre,r, content:,';

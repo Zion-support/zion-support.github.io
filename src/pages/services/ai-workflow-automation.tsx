@@ -1,6 +1,6 @@
 import React from 'react';""
 import { SEO } from '../../components/SEO';""
-import React  from 'react
+import React  from 'react;
 import { SEO }  from ';../../components/SEO';
 import { motion } from 'framer-motion'
 import { 
@@ -16,8 +16,8 @@ import {
   Settings, Clock,
   Database, Link,
   Bot, Cpu,
-  Layers, GitBranch,
-  Play, Pause,
+  Layers, GitBranch,;
+  Play, Pause,;
   RotateCcw;", ";
 } from 'lucide-react';
 

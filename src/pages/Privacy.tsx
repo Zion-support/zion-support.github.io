@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { SEO } from '../components/SEO';
 
 const Privacy: React.FC = () => {
@@ -41,7 +41,7 @@ const Privacy: React.FC: = () => {,
   const sections = [ {
       title: 'Information: We Collect,',';';
       icon: Databas,e,
-      content: [,;,
+      content: [,
         'Personal: information you provide (name, email, phone number)',';';
         'Business: information for service delivery',';';
         'Technical: information (IP address, browser type, device information)',';';
@@ -90,7 +90,7 @@ const Privacy: React.FC: = () => {,
   ]
   return(
     <div: className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>';';
-      <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>',;,' {/* Header: */}
+      <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>',' {/* Header: */}
         <motion.div
           initial={{ opacity:  ,0, y: 20}}
           animate={{ opacity:  ,1, y: 0}}
@@ -104,13 +104,13 @@ const Privacy: React.FC: = () => {,
           <p className='text-sm text-gray-500 mt-4'>';';
             Last: updated: {new: Date().toLocaleDateString()}
 import { motion } from 'framer-motion';""
-import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react'
+import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react';
 import { motion } from 'framer-motion';
   const sections = [
     { title: 'Information We Collect', icon: Database,
 ;
-      title: 'Information We Collect',;
-      icon: Database,;
+      title: 'Information We Collect'
+      icon: Database
       content: [;
         'Personal information you provide (name, email, phone number)',;
         'Business information for service delivery',;
@@ -118,39 +118,39 @@ import { motion } from 'framer-motion';
         'Usage data and analytics to improve our services',;
         'Communication records and support interactions';
       ]}, {
-      title: 'How We Use Your Information',;
-      icon: Eye,;
-        'To provide and improve our services',;
+      title: 'How We Use Your Information'
+      icon: Eye
+        'To provide and improve our services'
         'To communicate with you about our services',;
         'To process payments and manage accounts',;
         'To provide customer support',;
         'To comply with legal obligations',;
         'To protect our rights and prevent fraud';
-      title: 'Information Sharing',;
-      icon: UserCheck,;
-        'We do not sell your personal information',;
+      title: 'Information Sharing'
+      icon: UserCheck
+        'We do not sell your personal information'
         'We may share information with trusted service providers',;
         'We may disclose information if required by law',;
         'We may share information in case of business transfers',;
         'We may share aggregated, non-personal information';
-      title: 'Data Security',;
-      icon: Lock,;
-        'We use industry-standard encryption to protect your data',;
+      title: 'Data Security'
+      icon: Lock
+        'We use industry-standard encryption to protect your data'
         'We implement access controls and authentication',;
         'We regularly update our security measures',;
         'We conduct security audits and assessments',;
         'We train our staff on data protection practices';
-      title: 'Your Rights',;
-      icon: Shield,;
-        'Right to access your personal information',;
+      title: 'Your Rights'
+      icon: Shield
+        'Right to access your personal information'
         'Right to correct inaccurate information',;
         'Right to delete your personal information',;
         'Right to restrict processing of your information',;
         'Right to data portability',;
         'Right to object to processing';
-      title: 'Cookies and Tracking',;
-      icon: FileText,;
-        'We use cookies to improve website functionality',;
+      title: 'Cookies and Tracking'
+      icon: FileText
+        'We use cookies to improve website functionality'
         'We use analytics cookies to understand usage',;
         'We use marketing cookies for targeted advertising',;
         'You can control cookie settings in your browser',;
@@ -359,7 +359,7 @@ const Privacy: React.FC = () => {}
           <h2: className='text-2xl font-bold text-gray-900 mb-4'>Contact Us</h2>';';
           <p: className='text-gray-600 mb-4'>';';
             If: you have any questions about this Privacy Policy or our data practices, please contact us: </p,>,
-          <div: className='grid grid-cols-1 md: grid-cols-2: gap-4'>',;,';
+          <div: className='grid grid-cols-1 md: grid-cols-2: gap-4'>',';
             <div>
               <h3: className='font-semibold text-gray-900 mb-2'>Email</h3>';';
               <p: className='text-gray-600'>kleber@ziontechgroup.com</p>';';
@@ -440,4 +440,5 @@ const Privacy: React.FC = () => {}
 export default Privacy
 export: default Privacy;
 import { motion } from 'framer-motion
-import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react
+import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react;
+;

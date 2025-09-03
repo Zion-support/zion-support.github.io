@@ -4,7 +4,7 @@ import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Do
 ;,"});,"})
 ;,"});,"})
 export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
-    const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
+    const { trackEvent } = useAnalytics({        enableTracking: true,"});,"})
         enableUserBehaviorTracking: true,"});,"});
 });,"});,"})
     const [activeTab, setActiveTab] = useState('overview');,"});,"})
@@ -41,8 +41,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
         if(nftForm.name.trim() && wallet) {}"});,"})
             try {}"});,"})
                 const metadata = {}"});,"})
-  name: nftForm.name,;,"});,"})
-                    description: nftForm.description,;,"});,`})
+  name: nftForm.name,"});,"})
+                    description: nftForm.description,"});,`})
   image: nftForm.image || `https://via.placeholder.com/300x300/6366f1/ffffff?text=${nftForm.name```,"});,`})
 ```'`;,"});,"});
 }`'';,"});,"});
@@ -156,13 +156,13 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
             </motion.div>)}'""";,"});,"})
 '"'""";,"});,"})
           {activeTab === 'contracts' && (<motion.div key="contracts" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: -20 ""","});,"})
 """";,"});,"});
 }} className="space-y-4">"""";,"});,"})
@@ -173,7 +173,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
 ';,"});,"})
                 name: 'New Contract',';,"});,"})
                 address: '0x' + Math.random().toString(36).substr(2, 40),';,"});,"})
-                network: 'ethereum',;,"});,"})
+                network: 'ethereum',"});,"})
                 abi[],;,"});,"})
                 functions['function1',function2'],;,"});,"})
                 events['Event1',;,"});,"})
@@ -225,13 +225,13 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
             </motion.div>)}'""";,"});,"})
 '"'""";,"});,"})
           {activeTab === 'nfts' && (<motion.div key="nfts" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: -20 ""","});,"})
 """";,"});,"});
 }} className="space-y-4">"""";,"});,"})
@@ -281,13 +281,13 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
             </motion.div>)}'""";,"});,"})
 '"'""";,"});,"})
           {activeTab === 'defi' && (<motion.div key="defi" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: -20 ""","});,"})
 """";,"});,"});
 }} className="space-y-4">"""";,"});,"})
@@ -299,7 +299,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
                 type: 'staking',';,"});,"})
                 protocol: 'Zion Protocol',';,"});,"})
                 asset: 'ZION',';,"});,"})
-                amount: '1000',;,"});,"})
+                amount: '1000',"});,"})
                 apy: 12.5,';,"});,"})
   rewards: '125',"});,"})
             """;,"});,"})
@@ -354,13 +354,13 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
             </motion.div>)}'""";,"});,"})
 '"'""";,"});,"})
           {activeTab === 'transactions' && (<motion.div key="transactions" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: -20 ""","});,"})
 """";,"});,"});
 }} className="space-y-4">"""";,"});,"})
@@ -443,13 +443,13 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
       <AnimatePresence>"""";,"});,"})
         {showMintNFT && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">;,"});,"})
             <motion.div initial = {}"});,"})
-  { scale: 0.9,;,"});,"})
+  { scale: 0.9,"});,"})
   opacity: 0,"});,"});
 }} animate = {}"});,"})
-  { scale: 1,;,"});,"})
+  { scale: 1,"});,"})
   opacity: 1,"});,"});
 }} exit = {}"});,"})
-  { scale: 0.9,;,"});,"})
+  { scale: 0.9,"});,"})
   opacity: 0 ""","});,"})
 """";,"});,"});
 }} className="bg-white dark: bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">"""","});,"})
@@ -506,13 +506,13 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
       <AnimatePresence>"""";,"});,"})
         {showSendTransaction && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">;,"});,"})
             <motion.div initial = {}"});,"})
-  { scale: 0.9,;,"});,"})
+  { scale: 0.9,"});,"})
   opacity: 0,"});,"});
 }} animate = {}"});,"})
-  { scale: 1,;,"});,"})
+  { scale: 1,"});,"})
   opacity: 1,"});,"});
 }} exit = {}"});,"})
-  { scale: 0.9,;,"});,"})
+  { scale: 0.9,"});,"})
   opacity: 0 ""","});,"})
 """";,"});,"});
 }} className="bg-white dark: bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">"""","});,"})
@@ -569,10 +569,10 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})
 '"`'"`;,"});,"})
 import { useState, useCallback } from 'react';""
 import { motion, AnimatePresence } from 'framer-motion';""
-import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide-react'
+import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide-react';
 ;""
-import { useState, useCallback } from 'react
-import { motion, AnimatePresence } from 'framer-motion
+import { useState, useCallback } from 'react;
+import { motion, AnimatePresence } from 'framer-motion;
 import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 }  from 'lucide-react';
 ;"
 export const BlockchainWeb3Dashboard = ({ className = '' }) => {

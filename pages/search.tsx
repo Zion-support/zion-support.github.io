@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Search, ArrowRight, FileText, Globe, Users, Zap } from 'lucide-react';
 
@@ -30,34 +30,34 @@ export default function SearchPage() {
           description:
             'Cutting-edge artificial intelligence solutions for your business',
           url: '/services/ai-services',
-          type: 'service',;
+          type: 'service'
 },
         {
           title: 'IT Services',
           description:
             'Comprehensive information technology services and support',
           url: '/services/it-services',
-          type: 'service',;
+          type: 'service'
 },
         {
           title: 'Micro SaaS Solutions',
           description:
             'Scalable software as a service solutions for modern businesses',
           url: '/services/micro-saas',
-          type: 'service',;
+          type: 'service'
 },
         {
           title: 'About Zion Tech Group',
           description: 'Learn more about our company, mission, and team',
           url: '/about',
-          type: 'page',;
+          type: 'page'
 },
         {
           title: 'Contact Us',
           description:
             'Get in touch with our team for consultation and support',
           url: '/contact',
-          type: 'page',;
+          type: 'page'
 },
       ].filter(
         result =>

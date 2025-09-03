@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { SEO } from '../components/SEO';
 
 const Services: React.FC = () => {
@@ -41,7 +41,7 @@ export default function Services() {
       services: [
           name: 'AI Business Intelligence',
           description: 'Transform your data into actionable insights with AI-powered analytics and reporting.',
-          features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom ML Models', 'Data Visualization'];
+          features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom ML Models', 'Data Visualization']
 } {
           name: 'AI Sales Copilot',
           description: 'Automate and optimize your sales process with intelligent lead scoring and follow-up.',
@@ -51,7 +51,7 @@ export default function Services() {
           features: ['Regulatory Monitoring', 'Automated Reporting', 'Risk Assessment', 'Audit Trails']
           name: 'AI Workflow Automation',
           description: 'Streamline business processes with intelligent automation and decision-making.',
-          features: ['Process Automation', 'Smart Routing', 'Decision Trees', 'Performance Analytics'];
+          features: ['Process Automation', 'Smart Routing', 'Decision Trees', 'Performance Analytics']
 }
       ]
       category: 'Cloud & DevOps',
@@ -266,7 +266,7 @@ export default function Services() {
         </footer>
 export: default function Page() {
 export default function Page() {
-const Services: React.FC: = () => {,;
+const Services: React.FC: = () => {
   return: (<>;
       <SEO: title='Services - Zion Tech Group' />';';
       <div: className='min-h-screen bg-white py-20'>';';

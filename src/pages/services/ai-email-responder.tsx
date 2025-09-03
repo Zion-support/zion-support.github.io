@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Mail, 
@@ -13,8 +13,8 @@ import {
   Star,
   TrendingUp,
   MessageSquare,
-  Filter,
-  Target,
+  Filter,;
+  Target,;
   Smartphone} from 'lucide-react';
 
 const AIEmailResponder: React.FC = () => {

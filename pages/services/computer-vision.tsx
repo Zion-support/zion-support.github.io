@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { ArrowRight, CheckCircle, Eye, Camera, Image, Zap, Target, TrendingUp, Star, Shield, Globe, Brain } from 'lucide-react';
 import PageTransition from '../../src/components/PageTransition';
 

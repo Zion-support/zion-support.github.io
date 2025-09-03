@@ -8,7 +8,7 @@ import {
   ArrowRight,
   ExternalLink,
   TrendingUp,
-  Award,
-  Lightbulb
+  Award,;
+  Lightbulb;
 } from 'lucide-react';
 

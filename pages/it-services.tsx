@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link'
 import {
@@ -31,8 +31,8 @@ import {
   MapPin,
   TrendingUp,
   Car,
-  Brain,
-  Satellite,
+  Brain,;
+  Satellite,;
   TreePine} from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 

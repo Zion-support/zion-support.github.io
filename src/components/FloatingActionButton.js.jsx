@@ -132,8 +132,8 @@ const FloatingActionButton = ({ className = '' }) => {}
       action: () => window.open('mailto: info@ziontechgroup.com', _self'), '
 import React, { useState }  from 'react
 import { motion, AnimatePresence } from 'framer-motion'
-import {}"
-  PlusIcon, XMarkIcon, ChatBubbleLeftRightIcon, PhoneIcon,'
+import {}";
+  PlusIcon, XMarkIcon, ChatBubbleLeftRightIcon, PhoneIcon,';
   EnvelopeIcon}  from '@heroicons/react/24/outline';const FloatingActionButton = ({ className = '' }) => {}
   const [isOpen, setIsOpen] = useState(false)
   const toggleMenu = () => setIsOpen(!isOpen)

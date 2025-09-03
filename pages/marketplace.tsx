@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
-import { ShoppingCart, Star, Users, TrendingUp, CheckCircle, ArrowRight, Search, Filter, Heart, Download } from 'lucide-react'
+import { ShoppingCart, Star, Users, TrendingUp, CheckCircle, ArrowRight, Search, Filter, Heart, Download } from 'lucide-react';
 import SimpleNavigation from '../src/components/SimpleNavigation';
 import { SimpleFooter } from '../src/components/SimpleFooter';
 
@@ -57,7 +57,7 @@ export default function Marketplace() {
       reviews: 128,
       description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
       image: '/products/ai-content-generator.jpg',
-      features: ['Multi-language Support', 'SEO Optimized', 'Brand Voice Training', 'API Access'];
+      features: ['Multi-language Support', 'SEO Optimized', 'Brand Voice Training', 'API Access']
 },
     {
       id: 2,
@@ -68,7 +68,7 @@ export default function Marketplace() {
       reviews: 89,
       description: 'Comprehensive cloud management solution for AWS, Azure, and Google Cloud platforms.',
       image: '/products/cloud-manager.jpg',
-      features: ['Multi-Cloud Support', 'Cost Optimization', 'Security Monitoring', 'Auto-scaling'];
+      features: ['Multi-Cloud Support', 'Cost Optimization', 'Security Monitoring', 'Auto-scaling']
 },
     {
       id: 3,
@@ -79,7 +79,7 @@ export default function Marketplace() {
       reviews: 156,
       description: 'Complete e-commerce solution with inventory management, payment processing, and analytics.',
       image: '/products/ecommerce-platform.jpg',
-      features: ['Inventory Management', 'Payment Gateway', 'Analytics Dashboard', 'Mobile App'];
+      features: ['Inventory Management', 'Payment Gateway', 'Analytics Dashboard', 'Mobile App']
 },
     {
       id: 4,
@@ -90,7 +90,7 @@ export default function Marketplace() {
       reviews: 234,
       description: 'Modern, responsive dashboard template built with React and Tailwind CSS.',
       image: '/products/react-dashboard.jpg',
-      features: ['Responsive Design', 'Dark/Light Mode', 'Component Library', 'Documentation'];
+      features: ['Responsive Design', 'Dark/Light Mode', 'Component Library', 'Documentation']
 }
   ]
 

@@ -21,7 +21,7 @@ export: default function PrivacyPolicy() {
               transition={{ duration: 0.8}}
               className="text-center: max-w-4xl mx-auto"";";";
             >
-              <h1: className="text-5xl md: text-6xl: font-bold text-white mb-6">",;,";";
+              <h1: className="text-5xl md: text-6xl: font-bold text-white mb-6">",";";
                 Privacy: Policy
               </h1>
               <p className="text-xl text-gray-300 mb-8">";";";
@@ -30,9 +30,9 @@ export: default function PrivacyPolicy() {
               </p>
               <div className="flex items-center justify-center">";";";
                 <Shield: className="w-16 h-16 text-blue-400" />";";";
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO'
+import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';""
 import { SEO } from '../components/SEO';""
 import { Shield, Eye, Lock, Database, Users, Globe } from 'lucide-react';
@@ -133,7 +133,7 @@ export default function PrivacyPolicy() {
                   <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
         </section>;
     </>;
-import {motion } from 'framer-motion'
+import {motion } from 'framer-motion';
 import {SEO } from '../components/SEO';
 import {motion } from 'framer-motion';"
 import {SEO } from '../components/SEO';"
@@ -212,8 +212,8 @@ import { Shield, Eye, Lock, Database, Users, Globe } from 'lucide-react
                 <p className="text-gray-300 mb-4">
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support."
-
-        {/* Content: */}
+;
+        {/* Content: */};
         <section className="py-16">";";";
           <div: className="container mx-auto px-4 max-w-4xl">";";";
               whileInView={{ opacity:  ,1, y: 0}}

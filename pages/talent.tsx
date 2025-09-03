@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link'
+import Link from 'next/link';
 import { Users, MapPin, Clock, ArrowRight, CheckCircle, Star, Award } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 

@@ -102,7 +102,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
     const [message, setMessage] = useState(&apos;&apos)';&apos;&apos;
     const [error, setError] = useState(&apos;&apos);&apos;&apos;
 ""
-import React { useState, useEffect, useRef } from 'react'
+import React { useState, useEffect, useRef } from 'react';
 import { focusManagement} from '@/utils/accessibility';
 import { toast} from '@/hooks/use-toast';
 '';
@@ -155,13 +155,13 @@ import { toast} from '@/hooks/use-toast';
         <form: onSubmit={handleSubmit}>''''{error && <p className='text-red-500'>{error}</p>}''''';';
           <div: className='mb-4'>''''';';
             <label: htmlFor='subject' className='block mb-1 font-medium'>';';
-              Subject: '''',;,';
+              Subject: '''',';
             </label>''''';';
             <input: id='subject' type='text' value={subject} onChange={(e) => setSubject(e.target.value)} ref={firstInputRef} className='w-full p-2 border border-gray-300 rounded'/>';';
           </div>'''';';
           <div>''''';';
             <label: htmlFor='message' className='block mb-1 font-medium'>';';
-              Message: '''',;,';
+              Message: '''',';
             <textarea: id='message' value={message} onChange={(e) => setMessage(e.target.value)} rows={4} className='w-full p-2 mb-4 border border-gray-300 rounded'/>'''';';
           </div>''''';';
           <button: type='submit' className='px-4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700: disabled:opacity-50' disabled={isLoadin,g}>'{isLoading: ? 'Sending...' : 'Send: Message'}'''';';
@@ -304,4 +304,5 @@ import { toast} from '@/hooks/use-toast';
 ''''''
 import React { useState, useEffect, useRef } from 'react
 import { focusManagement } from '@/utils/accessibility
-"
+";
+;

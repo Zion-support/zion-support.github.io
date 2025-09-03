@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  poweredByHeader: false,
   eslint: {
     ignoreDuringBuilds: true,
+<<<<<<< HEAD
   },:next.config.js
   typescript: {
     // Allow production builds to successfully complete even if
@@ -50,31 +52,33 @@ const nextConfig = {
       tls: false};
 
     return config;
+=======
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d
   },
-  // Try to exclude problematic directories at the Next.js level
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  onDemandEntries: {
-    // period (in ms) where the server will keep pages in the buffer
-    maxInactiveAge: 25 * 1000,
-    // number of pages that should be kept simultaneously without being disposed
-    pagesBufferLength: 2}};
-
-export default nextConfig;
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['@radix-ui/react-icons', 'lucide-react'];
-},
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production';
-},
+    scrollRestoration: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+  },
   images: {
-    domains: ['localhost'],
-    formats: ['image/webp', 'image/avif'];
-},
+    domains: ['images.unsplash.com', 'via.placeholder.com'],
+    formats: ['image/webp', 'image/avif'],
+  },
+  compress: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '@': new URL('./src', import.meta.url).pathname,
+      };
+    }
+    return config},
   async headers() {
     return [
       {
@@ -82,20 +86,20 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'DENY';
-},
+            value: 'DENY',
+          },
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff';
-},
+            value: 'nosniff',
+          },
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin';
-}
-        ]
-}
-    ]
-}
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

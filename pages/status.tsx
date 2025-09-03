@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout'
+import MainLayout from '../components/layout/MainLayout';
 import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Cloud } from 'lucide-react';
 
 const Status: NextPage = () => {

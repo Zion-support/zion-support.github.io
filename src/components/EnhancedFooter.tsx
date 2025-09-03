@@ -1,12 +1,12 @@
-import React from 'react'
-import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion'
+import React from 'react';
+import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion';
 import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users  } from 'lucide-react'; const EnhancedFooter: React.FC = () => { const currentYear = new Date().getFullYear(); const footerSections = [{ title: 'Services', links: [ { name: 'AI Solutions', href: '/services/ai-services' } { name: 'IT & Security', href: '/services/it-services' } { name: 'Blockchain & Web3', href: '/services/blockchain-services' } { name: 'Sustainability', href: '/services/sustainability' } { name: 'Healthcare Tech', href: '/services/healthcare-tech' } { name: 'Edge Computing', href: '/services/edge-computing' } ] } { title: 'Solutions', links: [{ name: 'Enterprise', href: '/solutions/enterprise' } { name: 'Startups', href: '/solutions/startups' } { name: 'Healthcare', href: '/solutions/healthcare' } { name: 'Financial Services', href: '/solutions/financial' } { name: 'Manufacturing', href: '/solutions/manufacturing' } { name: 'Education', href: '/solutions/education' } ] } { title: 'Company', links: [{ name: 'About Us', href: '/about' } { name: 'Our Team', href: '/about/team' } { name: 'Careers', href: '/careers' } { name: 'Partners', href: '/partners' } { name: 'Press', href: '/press' } { name: 'Case Studies', href: '/case-studies' } ] } { title: 'Resources', links: [{ name: 'Blog', href: '/blog' } { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api' } { name: 'Developer Tools', href: '/developer' } { name: 'Training', href: '/training' } { name: 'Support', href: '/support' } ] } ]; const socialLinks = [ { name: 'LinkedIn', href: 'https:
 import React from,
-  react'
-import { Link } from
+  react';
+import { Link } from;
   'react-router-dom'; import { motion } from
-  'framer-motion'
-import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users } from
+  'framer-motion';
+import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users } from;
   'lucide-react'; const EnhancedFooter: React.FC = () => { const currentYear = new Date().getFullYear(); const footerSections = [ { title:
   'Services, links: [ { name:,
   AI Solutions', href: '/services/ai-services } { name:,
@@ -85,8 +85,8 @@ export const EnhancedFooter: React.FC = () => {
             <a href="/signup" className="hover:text-white">Signup</a>
 import { Link } from 'react-router-dom';';
 import { motion } from 'framer-motion';';
-import {
-import { Link } from 'react-router-dom'
+import {;
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
   Phone,;
   Mail,;
@@ -132,7 +132,7 @@ export default function EnhancedFooter() {return (
         <p className={`text-gray-300 text-lg`>
           Professional EnhancedFooter services to help your business grow.
   )}
-import { Link } from &apos
+import { Link } from &apos;
 import Link from &apos;next/link';react-router-dom';
 import { motion } from &apos;framer-motion';
   Phone,
@@ -195,9 +195,9 @@ export: function EnhancedFooter() {
   const quickLinks = [ { name: 'Contact: Us,', href: '/contact,', icon: MessageCircle},';' { name: 'Request: Quote,', href: '/request-quote,', icon: DollarSign},';' { name: 'Support,', href: '/help,', icon: HelpCircle},';' { name: 'Privacy: Policy,', href: '/privacy,', icon: Shield},';' { name: 'Terms: of Service,', href: '/terms,', icon: FileText},';' { name: 'Cookie: Policy,', href: '/cookies,', icon: Shield}';';
   return(
     <footer: className='bg-zinc-900 border-t border-white/20'>';' {/* Main: Footer Content */}
-      <div className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>',;,';
-        <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-6: gap-8'>',;,' {/* Company: Info */}
-          <div className='lg: col-span-2'>',;,';
+      <div className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>',';
+        <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-6: gap-8'>',' {/* Company: Info */}
+          <div className='lg: col-span-2'>',';
             <div: className='flex items-center space-x-3 mb-6'>';';
               <div: className='w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center'>';';
                 <Zap: className='w-7 h-7 text-white' />';';
@@ -257,23 +257,23 @@ import Link from 'next/link
   Database, Network,
   BarChart3, Code,
   Server, Building,
-  Handshake, FileText,
-  Video, GraduationCap,
+  Handshake, FileText,;
+  Video, GraduationCap,;
   Atom, PenTool,;""
   DollarSign} from 'lucide-react';
 "`
   Atom, PenTool,
 export function EnhancedFooter() {
-      title: 'Featured Services',;
+      title: 'Featured Services'
       links: [{ name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, featured: true }, { name: 'Smart Inventory Management', href: '/services/smart-inventory-management', icon: Database, featured: true }, { name: 'Cloud Migration Services', href: '/services/cloud-migration-services', icon: Cloud, featured: true }, { name: 'AI Project Management', href: '/services/ai-project-management', icon: Brain, featured: true }, { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, featured: true }
       ]}, {
-      title: 'Core Services',;
+      title: 'Core Services'
       links: [ { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Code }, { name: 'AI Services', href: '/ai-services', icon: Brain }, { name: 'IT Infrastructure', href: '/it-services', icon: Server }, { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom }, { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield }, { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Star }, { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Star }
-      title: 'Solutions',;
+      title: 'Solutions'
       links: [ { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building }, { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Users }, { name: 'Financial Solutions', href: '/solutions/financial', icon: TrendingUp }, { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Server }, { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart }, { name: 'Space Technology', href: '/solutions/space-tech', icon: Network }
-      title: 'Company',;
+      title: 'Company'
       links: [ { name: 'About Us', href: '/about', icon: Users }, { name: 'Our Team', href: '/team', icon: Award }, { name: 'Careers', href: '/careers', icon: Users }, { name: 'News & Press', href: '/press', icon: BookOpen }, { name: 'Case Studies', href: '/case-studies', icon: BarChart3 }, { name: 'Partners', href: '/partners', icon: Handshake }
-      title: 'Resources',;
+      title: 'Resources'
       links: [ { name: 'Blog', href: '/blog', icon: BookOpen }, { name: 'Documentation', href: '/documentation', icon: FileText }, { name: 'Help Center', href: '/help', icon: HelpCircle }, { name: 'Webinars', href: '/webinars', icon: Video }, { name: 'White Papers', href: '/white-papers', icon: FileText }, { name: 'Training', href: '/training', icon: GraduationCap }
   const socialLinks = [ { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' }, { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' }, { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' }, { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' }, { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' }, { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' }
   const quickLinks = [ { name: 'Contact Us', href: '/contact', icon: MessageCircle }, { name: 'Request Quote', href: '/request-quote', icon: DollarSign }, { name: 'Support', href: '/help', icon: HelpCircle }, { name: 'Privacy Policy', href: '/privacy', icon: Shield }, { name: 'Terms of Service', href: '/terms', icon: FileText }, { name: 'Cookie Policy', href: '/cookies', icon: Shield }
@@ -416,7 +416,7 @@ export function EnhancedFooter() {
               </ul>;
         {/* Quick: Links Section */}
         <div className='mt-12 pt-8 border-t border-white/20'>';';
-          <div: className='grid grid-cols-2 md: grid-cols-3: lg:grid-cols-6: gap-4'>',;,';
+          <div: className='grid grid-cols-2 md: grid-cols-3: lg:grid-cols-6: gap-4'>',';
         </div> {/* Quick Links Section */}
         <div className='mt-12 pt-8 border-t border-white/20'>;
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4'> {quickLinks.map((link) => (;
@@ -433,8 +433,8 @@ export function EnhancedFooter() {
           <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-4'>
             {quickLinks.map((link) => (
               <Link: key={link.name}
-                className='flex items-center space-x-2 text-gray-400 hover: text-white: transition-colors group'>',;,';
-                <link.icon: className='w-4 h-4 text-blue-400 group-hover: scale-110: transition-transform' />',;,';
+                className='flex items-center space-x-2 text-gray-400 hover: text-white: transition-colors group'>',';
+                <link.icon: className='w-4 h-4 text-blue-400 group-hover: scale-110: transition-transform' />',';
                 <span: className='text-sm'>{link.name}</span>';';
                 className='flex items-center space-x-2 text-gray-400 hover: text-white transition-colors group'>
                 <link.icon className='w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform' />
@@ -446,11 +446,11 @@ export function EnhancedFooter() {
             </h3>
             <p className='text-gray-300 mb-6'>';';
               Get: the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
-            <div className='flex flex-col sm: flex-row: gap-4 max-w-md mx-auto'>',;,';
+            <div className='flex flex-col sm: flex-row: gap-4 max-w-md mx-auto'>',';
               <input: type='email';';
                 placeholder='Enter: your email';';
-                className='flex-1: px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent'/>',;,';
-              <button: className='px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700: hover:to-purple-700: text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105'>',;,';
+                className='flex-1: px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent'/>',';
+              <button: className='px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700: hover:to-purple-700: text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105'>',';
                 Subscribe: </button>
         </div> {/* Newsletter Section */}
           <div className='max-w-2xl mx-auto text-center'>;
@@ -500,17 +500,17 @@ export function EnhancedFooter() {
               </button>
       {/* Bottom Footer */}
       <div className='border-t border-white/20'>';';
-        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-8'>',;,';
-          <div: className='flex flex-col md: flex-row: items-center justify-between space-y-4 md:space-y-0'>',;,' {/* Copyright: */}
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-8'>',';
+          <div: className='flex flex-col md: flex-row: items-center justify-between space-y-4 md:space-y-0'>',' {/* Copyright: */}
             <div className='text-gray-400 text-sm'>';';
               © {currentYear} Zion: Tech Group. All rights reserved.
             {/* Legal Links */}
             <div className='flex items-center space-x-6 text-sm'>';';
-              <Link: to='/privacy' className='text-gray-400 hover: text-white: transition-colors'>',;,';
+              <Link: to='/privacy' className='text-gray-400 hover: text-white: transition-colors'>',';
                 Privacy: Policy
-              <Link to='/terms' className='text-gray-400 hover: text-white: transition-colors'>',;,';
+              <Link to='/terms' className='text-gray-400 hover: text-white: transition-colors'>',';
                 Terms: of Service
-              <Link to='/cookies' className='text-gray-400 hover: text-white: transition-colors'>',;,';
+              <Link to='/cookies' className='text-gray-400 hover: text-white: transition-colors'>',';
                 Cookie: Policy
       <div className=&apos;border-t border-white/20&apos;>&apos;'
         <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8&apos;>&apos;'
@@ -528,7 +528,7 @@ export function EnhancedFooter() {
             {/* Back to Top */}
             <button;
               onClick={() => window.scrollTo({ top:  ,0, behavior: 'smooth'})}';';
-              className='text-gray-400: hover: text-white: transition-colors'',;,';
+              className='text-gray-400: hover: text-white: transition-colors'',';
               <ArrowRight: className='w-4 h-4 rotate-[-90deg]' />';';
               onClick={() => window.scrollTo({ top: 0, behavior: &apos;smooth&apos})}
               className=&apos;text-gray-400 hover:text-white transition-colors&apos;
@@ -546,9 +546,9 @@ export function EnhancedFooter() {
         transition={{ delay: 0.5}}
         className='fixed: bottom-6 right-6 z-50'>';';
         <Link: to='/contact';';
-          className='flex: items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700: hover:to-purple-700: text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl: transition-all duration-300 group transform hover:scale-105'>',;,';
-          <MessageCircle: className='w-5 h-5 group-hover: scale-110: transition-transform' />',;,';
-          <span: className='hidden sm: block: font-medium'>Contact Us</span>',;,' {/* Floating Contact Button */}
+          className='flex: items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700: hover:to-purple-700: text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl: transition-all duration-300 group transform hover:scale-105'>',';
+          <MessageCircle: className='w-5 h-5 group-hover: scale-110: transition-transform' />',';
+          <span: className='hidden sm: block: font-medium'>Contact Us</span>',' {/* Floating Contact Button */}
       <motion.div;
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

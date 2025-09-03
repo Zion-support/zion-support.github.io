@@ -265,7 +265,11 @@ class IntelligentPerformanceMonitor {;
         execSync('npm run build', { 
           cwd: this.projectRoot,
           stdio: 'pipe',
+<<<<<<< HEAD
           timeout: 120000;
+=======
+<<<<<<< HEAD          timeout: 120000
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d
         });
         ;
         return {;

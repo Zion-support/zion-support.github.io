@@ -16,8 +16,8 @@
     id: 'local-seo-insights-engine',
     name: 'Local SEO Insights Engine',
     tagline: 'Automated audits, content briefs, and citation fixes for local businesses',
-    price: '$129',;
-    period: '/month',;
+    price: '$129'
+    period: '/month'
     description: 'Continuously audits GMB, citations, and competitors; generates content briefs and tasks; tracks rankings and call leads.',
     features[
       'GMB health scoring',

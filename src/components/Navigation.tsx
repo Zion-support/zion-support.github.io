@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion'
 import { 
@@ -9,8 +9,8 @@ import {
   Cloud, 
   Zap, 
   Users, 
-  Settings,
-  Network,
+  Settings,;
+  Network,;
   Cpu} from 'lucide-react';
 
 const navigation = [

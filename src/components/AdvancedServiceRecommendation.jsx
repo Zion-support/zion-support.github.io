@@ -13,7 +13,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})
         compSize: '',''';,"});,"})
         budget: '',''';,"});,"})
         timeline: '',''';,"});,"})
-        technologyMaturity: '',;,"});,"})
+        technologyMaturity: '',"});,"})
         primaryGoals[],;,"});,"})
         challenges[];,"});,"});
 });,"});,"})
@@ -141,7 +141,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})
                     matchScore,;,"});,"})
                     reasoning,;,"});,"})
                     priority,;,"});,"})
-                    implementationComplexity: complexity,;,"});,"})
+                    implementationComplexity: complexity,"});,"})
                     expectedROI,;,"});,"})
                     timeToValue,"});,"});
 }}) .sort((a, b) => b.matchScore - a.matchScore) ;,"});,"})
@@ -167,10 +167,10 @@ const AdvancedServiceRecommendation = () => {}"});,"})
     return (<div className="max-w-7xl mx-auto p-6">;,"});,"})
       {/* Header */}"});,"})
       <motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"})
 """;,"});,"})
 """";,"});,"});
@@ -227,8 +227,8 @@ const AdvancedServiceRecommendation = () => {}"});,"})
                 <input type="checkbox" checked={clientProfile.primaryGoals.includes(goal)} onChange = {}"});,"})
   (e) => {}"});,"})
                 if(e.target.checked) {}"});,"})
-                    setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals,;,"});,"})
-  goal];,"});,"});
+                    setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals,"});,"})
+  goal],"});,"});
 }) ) ;,"});,"});
 }"});,"})
                 else {}"});,"})
@@ -239,8 +239,8 @@ const AdvancedServiceRecommendation = () => {}"});,"})
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Current Challenges</label>"""";,"});,"})
             {challenges.map(challenge => (<label key={challenge} className="flex items-center gap-2 cursor-pointer">"""";,"});,"})
                 <input type="checkbox" checked={clientProfile.challenges.includes(challenge)} onChange = {}"});,"})
-                    setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges,;,"});,"})
-  challenge];,"});,"})
+                    setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges,"});,"})
+  challenge],"});,"})
                     setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}"""";,"});,"})
                 <span className="text-sm text-zion-slate-light">{challenge}</span>;,"});,"})
         <div className="mt-8 text-center">"""";,"});,"})
@@ -346,11 +346,11 @@ export default AdvancedServiceRecommendation,"});,"});
 }}}}}}}}}"});,"})
 ;,"});,"})
 export { AdvancedServiceRecommendation };,"});,"})
-import React { useState } from 'react'
+import React { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react'
+import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button'
+import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 const AdvancedServiceRecommendation = () => {}
     const [clientProfile, setClientProfile] = useState({}
@@ -360,8 +360,8 @@ const AdvancedServiceRecommendation = () => {}
         compSize: ','';
         budget: ','';
         timeline: ','';
-        technologyMaturity: ',;
-        primaryGoals[],;
+        technologyMaturity: '
+        primaryGoals[]
         challenges[]});
     const [recommendations, setRecommendations] = useState([])';
     const [isAnalyzing, setIsAnalyzing] = useState(false)';
@@ -422,7 +422,7 @@ const AdvancedServiceRecommendation = () => {}
             targetAudience['Manufacturing',Retail',Logistics',Food & Beverage'],';
             image: '/images/services/blockchain-supply-chain.jpg','';
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain','';
-import React from 'react'
+import React from 'react';
 import {SEO } from '@/components/SEO';
 
 export default function AdvancedServiceRecommendation() {return (
@@ -690,8 +690,8 @@ import { Button } from './ui/button'';'';'
                     matchScore,;
                     reasoning,;
                     priority,;
-                    implementationComplexity: complexity,;
-                    expectedROI,;
+                    implementationComplexity: complexity
+                    expectedROI
                     service, matchScore,
                     reasoning, priority,
                     implementationComplexity: complexity, expectedROI,
@@ -739,9 +739,9 @@ import { Button } from './ui/button'';'';'
     return (<div className='max-w-7xl mx-auto p-6'>
       {/* Header */}
       <motion.div initial = {}
-  { opacity: 0,;
+  { opacity: 0
   y: 20}} animate = {}
-  { opacity: 1,;
+  { opacity: 1
   y: 0 '';
 ''}} className='text-center mb-8'>'';
         <h1 className='text-4xl font-bold text-zion-blue-dark mb-4'>;
@@ -1158,7 +1158,7 @@ export { AdvancedServiceRecommendation }
 
 import React { useState }  from 'react;'
 import { motion }  from 'framer-motion;'
-import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react
+import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react;
 import { Card, CardContent, CardHeader, CardTitle }  from './ui/card;'
 import { Button }  from './ui/button;'
 "

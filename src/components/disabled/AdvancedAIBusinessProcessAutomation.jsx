@@ -1,57 +1,57 @@
-import React { useState, useRef } from 'react'; ; export function AdvancedAIBusinessProcessAutomation () { ; import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader  } from 'lucide-react'; ; const mockBusinessProcesses = [ { id: 'bp-001',; name: 'Invoice Processing & Approval',; description: 'Automated invoice processing with AI-powered validation and approval workflows',; category: 'finance',; status: 'active',; priority: 'high',; automationLevel: 'fully-automated',; aiInsights[; 'Pattern detected: 15% of invoices require manual review',Optimization opportunity: Reduce approval time by 40%',Cost savings potential: $12,000/month through automation'; ],; efficiency: 92,; costSavings: 12000,; timeReduction: 65,; stakeholders['Finance Team',AP Department',Vendors'],; lastExecuted: new Date('2024-01-15T10:30:00Z'),; nextExecution: new Date('2024-01-16T09:00:00Z'),; executionHistory[ { id: 'exec-001',; timestamp: new Date('2024-01-15T10:30:00Z'),; status: 'success',; duration: 45,; aiDecisions['Auto-approved 85% of invoices',Flagged 3 suspicious entries'],; manualInterventions: 2,; cost: 150,; efficiency: 94],; rules[ { id: 'rule-001',; name: 'Auto-approve under $1000',; condition: 'amount < 1000 AND vendor_verified = true',; action: 'auto_approve',; priority: 1,; isActive: true,; aiOptimized: true,; lastTriggered: new Date('2024-01-15T10:30:00Z'),; triggerCount: 156],; dependencies['vendor_verification',budget_approval']}, { id: 'bp-002',; name: 'Employee Onboarding',; description: 'Streamlined employee onboarding with automated document processing and task assignment',; category: 'hr',; status: 'active',; priority: 'medium',; automationLevel: 'semi-automated',; aiInsights[; 'Bottleneck identified: IT setup takes 3 days on average',Recommendation: Implement parallel processing for faster onboarding',Success rate: 98% completion within SLA'; ],; efficiency: 87,; costSavings: 8000,; timeReduction: 55,; stakeholders['HR Team',IT Department',New Employees'],; lastExecuted: new Date('2024-01-14T14:15:00Z'),; nextExecution: new Date('2024-01-17T09:00:00Z'),; executionHistory[ { id: 'exec-002',; timestamp: new Date('2024-01-14T14:15:00Z'),; status: 'success',; duration: 120,; aiDecisions['Optimized task sequence',Identified resource conflicts'],; manualInterventions: 1,; cost: 200,; efficiency: 89],; rules[ { id: 'rule-002',; name: 'Auto-assign IT tasks',; condition: 'employee_type = "full_time" AND department != "contractor",; action: 'assign_it_tasks',; priority: 2,; isActive: true,; aiOptimized: true,; lastTriggered: new Date('2024-01-14T14:15:00Z'),; triggerCount: 23],; dependencies['background_check',document_verification']}, { id: 'bp-003',; name: 'Customer Support Ticket Routing',; description: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise',; category: 'operations',; status: 'active',; priority: 'critical',; automationLevel: 'fully-automated',; aiInsights[; 'AI accuracy: 94% correct ticket classification',Response time improved by 60%',Customer satisfaction increased by 25%'; ],; efficiency: 96,; costSavings: 15000,; timeReduction: 70,; stakeholders['Support Team',Customers',Product Team'],; lastExecuted: new Date('2024-01-15T16:45:00Z'),; nextExecution: new Date('2024-01-15T17:00:00Z'),; executionHistory[ { id: 'exec-003',; timestamp: new Date('2024-01-15T16:45:00Z'),; status: 'success',; duration: 15,; aiDecisions['Classified 47 tickets by priority',Assigned to optimal agents'],; manualInterventions: 0,; cost: 50,; efficiency: 98;" ],;";" rules[;";" {"";" id: 'rule-003',";"";" name: 'Priority-based routing',";"";" condition: 'priority = "critical" AND category = "technical",; action: 'route_to_senior_agent',; priority: 1,; isActive: true,; aiOptimized: true,; lastTriggered: new Date('2024-01-15T16:45:00Z'),; triggerCount: 8],; dependencies['ticket_classification',agent_availability']}; ]; export function AdvancedAIBusinessProcessAutomation() { const [isOpen, setIsOpen] = useState(false); const [isMinimized, setIsMinimized] = useState(false); const [isFullscreen, setIsFullscreen] = useState(false); const [activeTab, setActiveTab] = useState('overview'); const [selectedCategory, setSelectedCategory] = useState('all'); const [selectedStatus, setSelectedStatus] = useState('all'); const [searchQuery, setSearchQuery] = useState(''); const [showAIInsights, setShowAIInsights] = useState(true); const [showAutomation, setShowAutomation] = useState(true); const [businessProcesses, setBusinessProcesses] = useState(mockBusinessProcesses); const [selectedProcess, setSelectedProcess] = useState(null); const [isExecuting, setIsExecuting] = useState(false); const containerRef = useRef(null); const getStatusColor = (status) => { switch(status) { case 'active': return 'text-green-500 bg-green-100 dark:bg-green-900/20'; case 'paused': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20'; case 'completed': return 'text-blue-500 bg-blue-100 dark:bg-blue-900/20'; case 'failed': return 'text-red-500 bg-red-100 dark:bg-red-900/20'; case 'draft': return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'; default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'}}; const getPriorityColor = (priority) => { switch(priority) { case 'critical': return 'text-red-600 bg-red-100 dark:bg-red-900/20'; case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20'; case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20'; case 'low': return 'text-green-600 bg-green-100 dark:bg-green-900/20'; default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'}}; const getAutomationLevelColor = (level) => { switch(level) { case 'fully-automated': return 'text-green-600 bg-green-100 dark:bg-green-900/20'; case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20'; case 'manual': return 'text-red-600 bg-red-100 dark:bg-red-900/20'; default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'};" };";" const getCategoryIcon = (category) => {";" switch(category) {";"";" '";"";" case 'finance': return <DollarSign className="w-4 h-4"/>;'";"";" case 'hr': return <Users className="w-4 h-4"/>;'";"";" case 'operations': return <Settings className="w-4 h-4"/>;'";"";" case 'sales': return <TrendingUp className="w-4 h-4"/>;'";"";" case 'marketing': return <Target className="w-4 h-4"/>;'";"";" case 'it': return <Server className="w-4 h-4"/>;";"";" default: return <FileText className={`w-4 h-4`/>}}; const formatPercentage = (value) => { return `${value}%`}; const executeProcess = async(processId) => { setIsExecuting(true);
+import React { useState, useRef } from 'react'; ; export function AdvancedAIBusinessProcessAutomation () { ; import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader  } from 'lucide-react'; ; const mockBusinessProcesses = [ { id: 'bp-001' name: 'Invoice Processing & Approval' description: 'Automated invoice processing with AI-powered validation and approval workflows' category: 'finance' status: 'active' priority: 'high' automationLevel: 'fully-automated' aiInsights[; 'Pattern detected: 15% of invoices require manual review',Optimization opportunity: Reduce approval time by 40%',Cost savings potential: $12,000/month through automation'; ],; efficiency: 92 costSavings: 12000 timeReduction: 65 stakeholders['Finance Team',AP Department',Vendors'],; lastExecuted: new Date('2024-01-15T10:30:00Z') nextExecution: new Date('2024-01-16T09:00:00Z') executionHistory[ { id: 'exec-001' timestamp: new Date('2024-01-15T10:30:00Z') status: 'success' duration: 45 aiDecisions['Auto-approved 85% of invoices',Flagged 3 suspicious entries'],; manualInterventions: 2 cost: 150 efficiency: 94] rules[ { id: 'rule-001' name: 'Auto-approve under $1000' condition: 'amount < 1000 AND vendor_verified = true' action: 'auto_approve' priority: 1 isActive: true aiOptimized: true lastTriggered: new Date('2024-01-15T10:30:00Z') triggerCount: 156] dependencies['vendor_verification',budget_approval']}, { id: 'bp-002' name: 'Employee Onboarding' description: 'Streamlined employee onboarding with automated document processing and task assignment' category: 'hr' status: 'active' priority: 'medium' automationLevel: 'semi-automated' aiInsights[; 'Bottleneck identified: IT setup takes 3 days on average',Recommendation: Implement parallel processing for faster onboarding',Success rate: 98% completion within SLA'; ] efficiency: 87 costSavings: 8000 timeReduction: 55 stakeholders['HR Team',IT Department',New Employees'],; lastExecuted: new Date('2024-01-14T14:15:00Z') nextExecution: new Date('2024-01-17T09:00:00Z') executionHistory[ { id: 'exec-002' timestamp: new Date('2024-01-14T14:15:00Z') status: 'success' duration: 120 aiDecisions['Optimized task sequence',Identified resource conflicts'],; manualInterventions: 1 cost: 200 efficiency: 89] rules[ { id: 'rule-002' name: 'Auto-assign IT tasks' condition: 'employee_type = "full_time" AND department != "contractor" action: 'assign_it_tasks' priority: 2 isActive: true aiOptimized: true lastTriggered: new Date('2024-01-14T14:15:00Z') triggerCount: 23] dependencies['background_check',document_verification']}, { id: 'bp-003' name: 'Customer Support Ticket Routing' description: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise' category: 'operations' status: 'active' priority: 'critical' automationLevel: 'fully-automated' aiInsights[; 'AI accuracy: 94% correct ticket classification',Response time improved by 60%',Customer satisfaction increased by 25%'; ],; efficiency: 96 costSavings: 15000 timeReduction: 70 stakeholders['Support Team',Customers',Product Team'],; lastExecuted: new Date('2024-01-15T16:45:00Z') nextExecution: new Date('2024-01-15T17:00:00Z') executionHistory[ { id: 'exec-003' timestamp: new Date('2024-01-15T16:45:00Z') status: 'success' duration: 15 aiDecisions['Classified 47 tickets by priority',Assigned to optimal agents'],; manualInterventions: 0 cost: 50 efficiency: 98;" ]";" rules[;";" {"";" id: 'rule-003',";"";" name: 'Priority-based routing',";"";" condition: 'priority = "critical" AND category = "technical" action: 'route_to_senior_agent' priority: 1 isActive: true aiOptimized: true lastTriggered: new Date('2024-01-15T16:45:00Z') triggerCount: 8] dependencies['ticket_classification',agent_availability']}; ]; export function AdvancedAIBusinessProcessAutomation() { const [isOpen, setIsOpen] = useState(false); const [isMinimized, setIsMinimized] = useState(false); const [isFullscreen, setIsFullscreen] = useState(false); const [activeTab, setActiveTab] = useState('overview'); const [selectedCategory, setSelectedCategory] = useState('all'); const [selectedStatus, setSelectedStatus] = useState('all'); const [searchQuery, setSearchQuery] = useState(''); const [showAIInsights, setShowAIInsights] = useState(true); const [showAutomation, setShowAutomation] = useState(true); const [businessProcesses, setBusinessProcesses] = useState(mockBusinessProcesses); const [selectedProcess, setSelectedProcess] = useState(null); const [isExecuting, setIsExecuting] = useState(false); const containerRef = useRef(null); const getStatusColor = (status) => { switch(status) { case 'active': return 'text-green-500 bg-green-100 dark:bg-green-900/20'; case 'paused': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20'; case 'completed': return 'text-blue-500 bg-blue-100 dark:bg-blue-900/20'; case 'failed': return 'text-red-500 bg-red-100 dark:bg-red-900/20'; case 'draft': return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'; default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'}}; const getPriorityColor = (priority) => { switch(priority) { case 'critical': return 'text-red-600 bg-red-100 dark:bg-red-900/20'; case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20'; case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20'; case 'low': return 'text-green-600 bg-green-100 dark:bg-green-900/20'; default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'}}; const getAutomationLevelColor = (level) => { switch(level) { case 'fully-automated': return 'text-green-600 bg-green-100 dark:bg-green-900/20'; case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20'; case 'manual': return 'text-red-600 bg-red-100 dark:bg-red-900/20'; default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'};" };";" const getCategoryIcon = (category) => {";" switch(category) {";"";" '";"";" case 'finance': return <DollarSign className="w-4 h-4"/>;'";"";" case 'hr': return <Users className="w-4 h-4"/>;'";"";" case 'operations': return <Settings className="w-4 h-4"/>;'";"";" case 'sales': return <TrendingUp className="w-4 h-4"/>;'";"";" case 'marketing': return <Target className="w-4 h-4"/>;'";"";" case 'it': return <Server className="w-4 h-4"/>;";"";" default: return <FileText className={`w-4 h-4`/>}}; const formatPercentage = (value) => { return `${value}%`}; const executeProcess = async(processId) => { setIsExecuting(true);
 ursor/automate-test-fix-improve-and-merge-code-99d1,`});,`}})
         ],;,"});,"})
-        efficiency: 92,;,"});,"})
-        costSavings: 12000,;,"});,"})
-        timeReduction: 65,;,"});,"})
+        efficiency: 92,"});,"})
+        costSavings: 12000,"});,"})
+        timeReduction: 65,"});,"})
         executionHistory[;,"});,"})
             {,"});,"})
                 id:,;,"});,"})
   exec-001',;,"});,"})
                 timestamp: new Date(,"});,"})
-  '2024-01-15T10:30:00Z),;,"});,"})
+  '2024-01-15T10: 30:00Z),"});,"})
                 status:;,"});,"})
   'success',;,"});,"})
-                duration: 45,;,"});,"})
-                manualInterventions: 2,;,"});,"})
-                cost: 150,;,"});,"})
+                duration: 45,"});,"})
+                manualInterventions: 2,"});,"})
+                cost: 150,"});,"})
                 efficiency: 94,"});,"})
         rules[;,"});,"})
   rule-001,"});,"})
   ',;,"});,"})
-                name: 'Auto-approve under $1000,;,"});,"})
+                name: 'Auto-approve under $1000,"});,"})
                 condition:,;,"});,"})
   amount < 1000 AND vendor_verified = true,"});,"})
-                action: 'auto_approve,;,"});,"})
-                priority: 1,;,"});,"})
-                isActive: true,;,"});,"})
-                aiOptimized: true,;,"});,"})
-                lastTriggered: new Date(,;,"});,"})
-  2024-01-15T10: 30:00Z),;,"});,"})
+                action: 'auto_approve,"});,"})
+                priority: 1,"});,"})
+                isActive: true,"});,"})
+                aiOptimized: true,"});,"})
+                lastTriggered: new Date(,"});,"})
+  2024-01-15T10: 30:00Z),"});,"})
                 triggerCount: 156,"});,"})
-        efficiency: 87,;,"});,"})
-        costSavings: 8000,;,"});,"})
-        timeReduction: 55,;,"});,"})
+        efficiency: 87,"});,"})
+        costSavings: 8000,"});,"})
+        timeReduction: 55,"});,"})
   exec-002',;,"});,"})
-  '2024-01-14T14:15:00Z),;,"});,"})
-                duration: 120,;,"});,"})
-                manualInterventions: 1,;,"});,"})
-                cost: 200,;,"});,"})
+  '2024-01-14T14: 15:00Z),"});,"})
+                duration: 120,"});,"})
+                manualInterventions: 1,"});,"})
+                cost: 200,"});,"})
                 efficiency: 89,"});,"})
   rule-002,"});,"})
-                name: 'Auto-assign IT tasks,;,"});,"})
+                name: 'Auto-assign IT tasks,"});,"})
   employee_type = "full_time" AND department != "contractor";,"});,"})
-                action: 'assign_it_tasks,;,"});,"})
-                priority: 2,;,"});,"})
-  2024-01-14T14: 15:00Z),;,"});,"})
+                action: 'assign_it_tasks,"});,"})
+                priority: 2,"});,"})
+  2024-01-14T14: 15:00Z),"});,"})
                 triggerCount: 23,"});,"})
-        efficiency: 96,;,"});,"})
-        costSavings: 15000,;,"});,"})
-        timeReduction: 70,;,"});,"})
+        efficiency: 96,"});,"})
+        costSavings: 15000,"});,"})
+        timeReduction: 70,"});,"})
   exec-003',;,"});,"})
-  '2024-01-15T16:45:00Z),;,"});,"})
-                duration: 15,;,"});,"})
-  2024-01-15T16: 45:00Z),;,"});,"})
+  '2024-01-15T16: 45:00Z),"});,"})
+                duration: 15,"});,"})
+  2024-01-15T16: 45:00Z),"});,"})
                 triggerCount: 8,"});,"});
 };,"});,"})
 ];,"});,"})
@@ -130,33 +130,33 @@ import React { useState, useRef } from,;
   'react';
 ;
 export function AdvancedAIBusinessProcessAutomation () {const mockBusinessProcesses = [ {
-        id: 'bp-001',;
-        name: 'Invoice Processing & Approval',;
-        description: 'Automated invoice processing with AI-powered validation and approval workflows',;
-        category: 'finance',;
-        status: 'active',;
-        priority: 'high',;
-        automationLevel: 'fully-automated',;
+        id: 'bp-001'
+        name: 'Invoice Processing & Approval'
+        description: 'Automated invoice processing with AI-powered validation and approval workflows'
+        category: 'finance'
+        status: 'active'
+        priority: 'high'
+        automationLevel: 'fully-automated'
         aiInsights[;
             'Pattern detected: 15% of invoices require manual review', Optimization opportunity: Reduce approval time by 40%',Cost savings potential: $12, 000/month through automation';
         ],;
-        efficiency: 92,;
-        costSavings: 12000,;
-        timeReduction: 65,;
+        efficiency: 92
+        costSavings: 12000
+        timeReduction: 65
         stakeholders['Finance Team', AP Department',Vendors'],;
-        lastExecuted: new Date('2024-01-15T10:30:00Z'),;
-        nextExecution: new Date('2024-01-16T09:00:00Z'),;
+        lastExecuted: new Date('2024-01-15T10:30:00Z')
+        nextExecution: new Date('2024-01-16T09:00:00Z')
         executionHistory[;
-        id: 'bp-001,;
-        name:,;
+        id: 'bp-001
+        name:
   Invoice Processing & Approval',;
-        description: 'Automated invoice processing with AI-powered validation and approval workflows,;
-        category:,;
+        description: 'Automated invoice processing with AI-powered validation and approval workflows
+        category:
   finance',;
-        status: 'active,;
-        priority:,;
+        status: 'active
+        priority:
   high',;
-        automationLevel: 'fully-automated,;
+        automationLevel: 'fully-automated
         aiInsights[;;
   Pattern detected: 15% of invoices require manual review,Optimization opportunity: Reduce approval time by 40%;
   ',Cost savings potential: $12,000/month through automation'        ],;
@@ -164,126 +164,126 @@ export function AdvancedAIBusinessProcessAutomation () {const mockBusinessProces
   Finance Team',AP Department;
   ',Vendors'],;
         lastExecuted: new Date(;
-  '2024-01-15T10:30:00Z),;
-        nextExecution: new Date(,;
+  '2024-01-15T10:30:00Z)
+        nextExecution: new Date(
   2024-01-16T09: 00:00Z),        executionHistory[ {
                 id:,;
   exec-001',;
                 timestamp: new Date(;
                 status:;
-  'success',;
-                duration: 45,;
+  'success'
+                duration: 45
                 aiDecisions['Auto-approved 85% of invoices', Flagged 3 suspicious entries'],;
                 aiDecisions['Auto-approved 85% of invoices', Flagged 3 suspicious entries'],;'
-                manualInterventions: 2,;
+                manualInterventions: 2
                 aiDecisions[;
   'Auto-approved 85% of invoices',Flagged 3 suspicious entries;
-  '],                manualInterventions: 2,;
-                cost: 150,;
+  '],                manualInterventions: 2
+                cost: 150
                 efficiency: 94;
         rules[ {
   rule-001;
-  ',;
-                name: 'Auto-approve under $1000,;
-                condition:,;
+  '
+                name: 'Auto-approve under $1000
+                condition:
   amount < 1000 AND vendor_verified = true;
-                action: 'auto_approve,;
-                priority: 1,;
-                isActive: true,;
-                aiOptimized: true,;
-                lastTriggered: new Date(,;
-  2024-01-15T10: 30:00Z),;
+                action: 'auto_approve
+                priority: 1
+                isActive: true
+                aiOptimized: true
+                lastTriggered: new Date(
+  2024-01-15T10: 30:00Z)
                 triggerCount: 156;
         dependencies['vendor_verification', budget_approval'];
         dependencies['vendor_verification', budget_approval'];';
 }, {
-        id: 'bp-002',;
-        name: 'Employee Onboarding',;
-        description: 'Streamlined employee onboarding with automated document processing and task assignment',;
-        category: 'hr',;
-        priority: 'medium',;
-        automationLevel: 'semi-automated',;
+        id: 'bp-002'
+        name: 'Employee Onboarding'
+        description: 'Streamlined employee onboarding with automated document processing and task assignment'
+        category: 'hr'
+        priority: 'medium'
+        automationLevel: 'semi-automated'
             'Bottleneck identified: IT setup takes 3 days on average', Recommendation: Implement parallel processing for faster onboarding',Success rate: 98% completion within SLA';
-        efficiency: 87,;
-        costSavings: 8000,;
-        timeReduction: 55,;
+        efficiency: 87
+        costSavings: 8000
+        timeReduction: 55
         stakeholders['HR Team', IT Department',New Employees'],;
-        lastExecuted: new Date('2024-01-14T14:15:00Z'),;
-        nextExecution: new Date('2024-01-17T09:00:00Z'),;
+        lastExecuted: new Date('2024-01-14T14:15:00Z')
+        nextExecution: new Date('2024-01-17T09:00:00Z')
         dependencies[,
   vendor_verification;
   ',budget_approval']}, {
-        id: 'bp-002,;
-  Employee Onboarding',;
-        description: 'Streamlined employee onboarding with automated document processing and task assignment,;
-  hr',;
+        id: 'bp-002
+  Employee Onboarding'
+        description: 'Streamlined employee onboarding with automated document processing and task assignment
+  hr'
   medium',;
-        automationLevel: 'semi-automated,;
-  Bottleneck identified: IT setup takes 3 days on average,Recommendation: Implement parallel processing for faster onboarding,;
-  ,Success rate: 98% completion within SLA        ],;
+        automationLevel: 'semi-automated
+  Bottleneck identified: IT setup takes 3 days on average,Recommendation: Implement parallel processing for faster onboarding
+  ,Success rate: 98% completion within SLA        ]
   HR Team',IT Department;
   ',New Employees'],;
-  '2024-01-14T14:15:00Z),;
+  '2024-01-14T14: 15:00Z)
   2024-01-17T09: 00:00Z),        executionHistory[ {
   exec-002',;
-                duration: 120,;
+                duration: 120
                 aiDecisions['Optimized task sequence', Identified resource conflicts'],;
                 aiDecisions['Optimized task sequence', Identified resource conflicts'],;'
-                manualInterventions: 1,;
+                manualInterventions: 1
   'Optimized task sequence',Identified resource conflicts;
-  '],                manualInterventions: 1,;
-                cost: 200,;
+  '],                manualInterventions: 1
+                cost: 200
                 efficiency: 89;
   rule-002;
-                name: 'Auto-assign IT tasks,;
+                name: 'Auto-assign IT tasks
   employee_type = 'full_time' AND department != 'contractor';
-                action: 'assign_it_tasks,;
-                priority: 2,;
-  2024-01-14T14: 15:00Z),;
+                action: 'assign_it_tasks
+                priority: 2
+  2024-01-14T14: 15:00Z)
                 triggerCount: 23;
         dependencies['background_check', document_verification'];
         dependencies['background_check', document_verification'];'
-        id: 'bp-003',;
-        name: 'Customer Support Ticket Routing',;
-        description: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise',;
-        category: 'operations',;
-        priority: 'critical',;
+        id: 'bp-003'
+        name: 'Customer Support Ticket Routing'
+        description: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise'
+        category: 'operations'
+        priority: 'critical'
             'AI accuracy: 94% correct ticket classification', Response time improved by 60%',Customer satisfaction increased by 25%';
-        efficiency: 96,;
-        costSavings: 15000,;
-        timeReduction: 70,;
+        efficiency: 96
+        costSavings: 15000
+        timeReduction: 70
         stakeholders['Support Team', Customers',Product Team'],;
-        lastExecuted: new Date('2024-01-15T16:45:00Z'),;
-        nextExecution: new Date('2024-01-15T17:00:00Z'),;
+        lastExecuted: new Date('2024-01-15T16:45:00Z')
+        nextExecution: new Date('2024-01-15T17:00:00Z')
   background_check;
   ',document_verification']}, {
-        id: 'bp-003,;
-  Customer Support Ticket Routing',;
-        description: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise,;
-  operations',;
+        id: 'bp-003
+  Customer Support Ticket Routing'
+        description: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise
+  operations'
   critical',;
   AI accuracy: 94% correct ticket classification,Response time improved by 60%;
   ',Customer satisfaction increased by 25%'        ],;
   Support Team',Customers;
   ',Product Team'],;
-  '2024-01-15T16:45:00Z),;
+  '2024-01-15T16: 45:00Z)
   2024-01-15T17: 00:00Z),        executionHistory[ {
   exec-003',;
-                duration: 15,;
+                duration: 15
                 aiDecisions['Classified 47 tickets by priority', Assigned to optimal agents'],;
-                manualInterventions: 0,;
-                cost: 50,;";
+                manualInterventions: 0
+                cost: 50";
                 efficiency: 98;""";
-        ],;";"";
+        ]";"";
         rules[;";"" {"";""";
                 id: 'rule-003', ";"";"";
                 name: 'Priority-based routing', ";"";"";
-                condition: 'priority = "critical" AND category = "technical",;
-                action: 'route_to_senior_agent',;
+                condition: 'priority = "critical" AND category = "technical"
+                action: 'route_to_senior_agent'
                 aiDecisions['Classified 47 tickets by priority', Assigned to optimal agents'],;'
-                cost: 50,;
+                cost: 50
                 efficiency: 98;""
-        ],;";"
+        ]";"
         rules[;";"
             {"";""
                 id: 'rule-003', ";"";"
@@ -297,8 +297,8 @@ export function AdvancedAIBusinessProcessAutomation () {const mockBusinessProces
   ','';
                 name: 'Priority-based routing,'';
   priority = 'critical' AND category = 'technical';
-                action: 'route_to_senior_agent,                priority: 1,;
-  2024-01-15T16: 45:00Z),;
+                action: 'route_to_senior_agent,                priority: 1
+  2024-01-15T16: 45:00Z)
                 triggerCount: 8;
         dependencies['ticket_classification', agent_availability'];
         dependencies['ticket_classification', agent_availability'];';
@@ -721,7 +721,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             <Maximize2 className='w-4 h-4'/>';
           </button>';;
       </div>)}'`';
-    return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ?,;
+    return (<div className={`fixed bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ?
   inset-4': 'bottom-4 right-4 w-[1400px] h-[900px]}`} ref={containerRef}>'' {/* Header */}'';
       <div className='bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 flex items-center justify-between'>'';
           <div>'';
@@ -904,7 +904,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                   <p className="text-sm text-purple-600 dark: text-purple-300">Continuous optimization</p>;";"";
                 Automation Rules Management";"";"";
               <div className="space-y-4">;";"" {businessProcesses.flatMap(process => process.rules.map(rule => ({";"";
-                ...rule,;"";""";
+                ...rule"";""";
                 processName: process.name, ";"";"";
                 processCategory: process.category";"";""}))).map(rule => (<div key={rule.id} className="flex items-center justify-between p-4 bg-zion-slate-light/10 rounded-lg">";"";"";
                       <div className="p-2 bg-zion-blue/10 rounded-lg">;";"" {getCategoryIcon(rule.processCategory)};"";""";
@@ -989,7 +989,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                     View Details;
                   </button>;
 '"`";"";"'"";
-import React { useState, useRef } from 'react'; ; export function AdvancedAIBusinessProcessAutomation () { ; import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader    } from 'lucide-react'; ; const mockBusinessProcesses = [ { id: 'bp-001',; name: 'Invoice Processing & Approval',; description: 'Automated invoice processing with AI-powered validation and approval workflows',; category: 'finance',; status: 'active',; priority: 'high',; automationLevel: 'fully-automated',; aiInsights[; 'Pattern detected: 15% of invoices require manual review',Optimization opportunity: Reduce approval time by 40%',Cost savings potential: $12,000/month through automation'; ],; efficiency: 92,; costSavings: 12000,; timeReduction: 65,; stakeholders['Finance Team',AP Department',Vendors'],; lastExecuted: new Date('2024-01-15T10:30:00Z'),; nextExecution: new Date('2024-01-16T09:00:00Z'),; executionHistory[ { id: 'exec-001',; timestamp: new Date('2024-01-15T10:30:00Z'),; status: 'success',; duration: 45,; aiDecisions['Auto-approved 85% of invoices',Flagged 3 suspicious entries'],; manualInterventions: 2,; cost: 150,; efficiency: 94],; rules[ { id: 'rule-001',; name: 'Auto-approve under $1000',; condition: 'amount < 1000 AND vendor_verified = true',; action: 'auto_approve',; priority: 1,; isActive: true,; aiOptimized: true,; lastTriggered: new Date('2024-01-15T10:30:00Z'),; triggerCount: 156],; dependencies['vendor_verification',budget_approval']}, { id: 'bp-002',; name: 'Employee Onboarding',; description: 'Streamlined employee onboarding with automated document processing and task assignment',; category: 'hr',; status: 'active',; priority: 'medium',; automationLevel: 'semi-automated',; aiInsights[; 'Bottleneck identified: IT setup takes 3 days on average',Recommendation: Implement parallel processing for faster onboarding',Success rate: 98% completion within SLA'; ],; efficiency: 87,; costSavings: 8000,; timeReduction: 55,; stakeholders['HR Team',IT Department',New Employees'],; lastExecuted: new Date('2024-01-14T14:15:00Z'),; nextExecution: new Date('2024-01-17T09:00:00Z'),; executionHistory[ { id: 'exec-002',; timestamp: new Date('2024-01-14T14:15:00Z'),; status: 'success',; duration: 120,; aiDecisions['Optimized task sequence',Identified resource conflicts'],; manualInterventions: 1,; cost: 200,; efficiency: 89],; rules[ { id: 'rule-002',; name: 'Auto-assign IT tasks',; condition: 'employee_type = "full_time" AND department != "contractor",; action: 'assign_it_tasks',; priority: 2,; isActive: true,; aiOptimized: true,; lastTriggered: new Date('2024-01-14T14:15:00Z'),; triggerCount: 23],; dependencies['background_check',document_verification']}, { id: 'bp-003',; name: 'Customer Support Ticket Routing',; description: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise',; category: 'operations',; status: 'active',; priority: 'critical',; automationLevel: 'fully-automated',; aiInsights[; 'AI accuracy: 94% correct ticket classification',Response time improved by 60%',Customer satisfaction increased by 25%'; ],; efficiency: 96,; costSavings: 15000,; timeReduction: 70,; stakeholders['Support Team',Customers',Product Team'],; lastExecuted: new Date('2024-01-15T16:45:00Z'),; nextExecution: new Date('2024-01-15T17:00:00Z'),; executionHistory[ { id: 'exec-003',; timestamp: new Date('2024-01-15T16:45:00Z'),; status: 'success',; duration: 15,; aiDecisions['Classified 47 tickets by priority',Assigned to optimal agents'],; manualInterventions: 0,; cost: 50,; efficiency: 98;" ],;";" rules[;";" {"";" id: 'rule-003',";"";" name: 'Priority-based routing',";"";" condition: 'priority = "critical" AND category = "technical",; action: 'route_to_senior_agent',; priority: 1,; isActive: true,; aiOptimized: true,; lastTriggered: new Date('2024-01-15T16:45:00Z'),; triggerCount: 8],; dependencies['ticket_classification',agent_availability']}; ]; export function AdvancedAIBusinessProcessAutomation() { const [isOpen, setIsOpen] = useState(false); const [isMinimized, setIsMinimized] = useState(false); const [isFullscreen, setIsFullscreen] = useState(false); const [activeTab, setActiveTab] = useState('overview'); const [selectedCategory, setSelectedCategory] = useState('all'); const [selectedStatus, setSelectedStatus] = useState('all'); const [searchQuery, setSearchQuery] = useState(''); const [showAIInsights, setShowAIInsights] = useState(true); const [showAutomation, setShowAutomation] = useState(true); const [businessProcesses, setBusinessProcesses] = useState(mockBusinessProcesses); const [selectedProcess, setSelectedProcess] = useState(null); const [isExecuting, setIsExecuting] = useState(false); const containerRef = useRef(null); const getStatusColor = (status) => { switch(status) { case 'active': return 'text-green-500 bg-green-100 dark:bg-green-900/20'; case 'paused': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20'; case 'completed': return 'text-blue-500 bg-blue-100 dark:bg-blue-900/20'; case 'failed': return 'text-red-500 bg-red-100 dark:bg-red-900/20'; case 'draft': return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'; default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'}}; const getPriorityColor = (priority) => { switch(priority) { case 'critical': return 'text-red-600 bg-red-100 dark:bg-red-900/20'; case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20'; case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20'; case 'low': return 'text-green-600 bg-green-100 dark:bg-green-900/20'; default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'}}; const getAutomationLevelColor = (level) => { switch(level) { case 'fully-automated': return 'text-green-600 bg-green-100 dark:bg-green-900/20'; case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20'; case 'manual': return 'text-red-600 bg-red-100 dark:bg-red-900/20'; default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'};" };";" const getCategoryIcon = (category) => {";" switch(category) {";"";" '";"";" case 'finance': return <DollarSign className="w-4 h-4"/>;'";"";" case 'hr': return <Users className="w-4 h-4"/>;'";"";" case 'operations': return <Settings className="w-4 h-4"/>;'";"";" case 'sales': return <TrendingUp className="w-4 h-4"/>;'";"";" case 'marketing': return <Target className="w-4 h-4"/>;'";"";" case 'it': return <Server className="w-4 h-4"/>;";"";` default: return <FileText className={`w-4 h-4`/>}}; const formatPercentage = (value) => { return `${value}%`}; const executeProcess = async(processId) => { setIsExecuting(true);
+import React { useState, useRef } from 'react'; ; export function AdvancedAIBusinessProcessAutomation () { ; import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader    } from 'lucide-react'; ; const mockBusinessProcesses = [ { id: 'bp-001' name: 'Invoice Processing & Approval' description: 'Automated invoice processing with AI-powered validation and approval workflows' category: 'finance' status: 'active' priority: 'high' automationLevel: 'fully-automated' aiInsights[; 'Pattern detected: 15% of invoices require manual review',Optimization opportunity: Reduce approval time by 40%',Cost savings potential: $12,000/month through automation'; ],; efficiency: 92 costSavings: 12000 timeReduction: 65 stakeholders['Finance Team',AP Department',Vendors'],; lastExecuted: new Date('2024-01-15T10:30:00Z') nextExecution: new Date('2024-01-16T09:00:00Z') executionHistory[ { id: 'exec-001' timestamp: new Date('2024-01-15T10:30:00Z') status: 'success' duration: 45 aiDecisions['Auto-approved 85% of invoices',Flagged 3 suspicious entries'],; manualInterventions: 2 cost: 150 efficiency: 94] rules[ { id: 'rule-001' name: 'Auto-approve under $1000' condition: 'amount < 1000 AND vendor_verified = true' action: 'auto_approve' priority: 1 isActive: true aiOptimized: true lastTriggered: new Date('2024-01-15T10:30:00Z') triggerCount: 156] dependencies['vendor_verification',budget_approval']}, { id: 'bp-002' name: 'Employee Onboarding' description: 'Streamlined employee onboarding with automated document processing and task assignment' category: 'hr' status: 'active' priority: 'medium' automationLevel: 'semi-automated' aiInsights[; 'Bottleneck identified: IT setup takes 3 days on average',Recommendation: Implement parallel processing for faster onboarding',Success rate: 98% completion within SLA'; ] efficiency: 87 costSavings: 8000 timeReduction: 55 stakeholders['HR Team',IT Department',New Employees'],; lastExecuted: new Date('2024-01-14T14:15:00Z') nextExecution: new Date('2024-01-17T09:00:00Z') executionHistory[ { id: 'exec-002' timestamp: new Date('2024-01-14T14:15:00Z') status: 'success' duration: 120 aiDecisions['Optimized task sequence',Identified resource conflicts'],; manualInterventions: 1 cost: 200 efficiency: 89] rules[ { id: 'rule-002' name: 'Auto-assign IT tasks' condition: 'employee_type = "full_time" AND department != "contractor" action: 'assign_it_tasks' priority: 2 isActive: true aiOptimized: true lastTriggered: new Date('2024-01-14T14:15:00Z') triggerCount: 23] dependencies['background_check',document_verification']}, { id: 'bp-003' name: 'Customer Support Ticket Routing' description: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise' category: 'operations' status: 'active' priority: 'critical' automationLevel: 'fully-automated' aiInsights[; 'AI accuracy: 94% correct ticket classification',Response time improved by 60%',Customer satisfaction increased by 25%'; ],; efficiency: 96 costSavings: 15000 timeReduction: 70 stakeholders['Support Team',Customers',Product Team'],; lastExecuted: new Date('2024-01-15T16:45:00Z') nextExecution: new Date('2024-01-15T17:00:00Z') executionHistory[ { id: 'exec-003' timestamp: new Date('2024-01-15T16:45:00Z') status: 'success' duration: 15 aiDecisions['Classified 47 tickets by priority',Assigned to optimal agents'],; manualInterventions: 0 cost: 50 efficiency: 98;" ]";" rules[;";" {"";" id: 'rule-003',";"";" name: 'Priority-based routing',";"";" condition: 'priority = "critical" AND category = "technical" action: 'route_to_senior_agent' priority: 1 isActive: true aiOptimized: true lastTriggered: new Date('2024-01-15T16:45:00Z') triggerCount: 8] dependencies['ticket_classification',agent_availability']}; ]; export function AdvancedAIBusinessProcessAutomation() { const [isOpen, setIsOpen] = useState(false); const [isMinimized, setIsMinimized] = useState(false); const [isFullscreen, setIsFullscreen] = useState(false); const [activeTab, setActiveTab] = useState('overview'); const [selectedCategory, setSelectedCategory] = useState('all'); const [selectedStatus, setSelectedStatus] = useState('all'); const [searchQuery, setSearchQuery] = useState(''); const [showAIInsights, setShowAIInsights] = useState(true); const [showAutomation, setShowAutomation] = useState(true); const [businessProcesses, setBusinessProcesses] = useState(mockBusinessProcesses); const [selectedProcess, setSelectedProcess] = useState(null); const [isExecuting, setIsExecuting] = useState(false); const containerRef = useRef(null); const getStatusColor = (status) => { switch(status) { case 'active': return 'text-green-500 bg-green-100 dark:bg-green-900/20'; case 'paused': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20'; case 'completed': return 'text-blue-500 bg-blue-100 dark:bg-blue-900/20'; case 'failed': return 'text-red-500 bg-red-100 dark:bg-red-900/20'; case 'draft': return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'; default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'}}; const getPriorityColor = (priority) => { switch(priority) { case 'critical': return 'text-red-600 bg-red-100 dark:bg-red-900/20'; case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20'; case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20'; case 'low': return 'text-green-600 bg-green-100 dark:bg-green-900/20'; default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'}}; const getAutomationLevelColor = (level) => { switch(level) { case 'fully-automated': return 'text-green-600 bg-green-100 dark:bg-green-900/20'; case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20'; case 'manual': return 'text-red-600 bg-red-100 dark:bg-red-900/20'; default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'};" };";" const getCategoryIcon = (category) => {";" switch(category) {";"";" '";"";" case 'finance': return <DollarSign className="w-4 h-4"/>;'";"";" case 'hr': return <Users className="w-4 h-4"/>;'";"";" case 'operations': return <Settings className="w-4 h-4"/>;'";"";" case 'sales': return <TrendingUp className="w-4 h-4"/>;'";"";" case 'marketing': return <Target className="w-4 h-4"/>;'";"";" case 'it': return <Server className="w-4 h-4"/>;";"";` default: return <FileText className={`w-4 h-4`/>}}; const formatPercentage = (value) => { return `${value}%`}; const executeProcess = async(processId) => { setIsExecuting(true);
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(process.priority)}`}>
                     {process.priority};
                   </span>`;``
@@ -1042,7 +1042,7 @@ import React { useState, useRef } from 'react'; ; export function AdvancedAIBusi
                 Automation Rules Management";"";"
               <div className="space-y-4">;";"
                 {businessProcesses.flatMap(process => process.rules.map(rule => ({";"
-                ...rule,;"";""
+                ...rule"";""
                 processName: process.name, ";"";"
                 processCategory: process.category";"";"}))).map(rule => (<div key={rule.id} className="flex items-center justify-between p-4 bg-zion-slate-light/10 rounded-lg">";"";"
                         {getCategoryIcon(rule.processCategory)};"";""
@@ -1304,5 +1304,5 @@ import React { useState, useRef } from 'react' import { Workflow, Brain, Setting
 "``
 import React { useState, useRef } from 'react' import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader } from 'lucide-react'  const mockBusinessProcesses = [ { id: 'bp-001', name: 'Invoice Processing & Approval', description: 'Automated invoice processing with AI-powered validation and approval workflows', category: 'finance', status: 'active', priority: 'high', automationLevel: 'fully-automated', aiInsights: [';Pattern detected: 15% of invoices require manual review', ';Optimization opportunity: Reduce approval time by 40%', ';Cost savings potential: $12, 000/month through automation' ], efficiency: 92, costSavings: 12000, timeReduction: 65, stakeholders: ['Finance Team', 'AP Department', 'Vendors'], lastExecuted: new Date('2024-01-15T10:30:00Z'), nextExecution: new Date('2024-01-16T09:00:00Z'), executionHistory: [ { id: 'exec-001', timestamp: new Date('2024-01-15T10:30:00Z'), status: 'success', duration: 45, aiDecisions: ['Auto-approved 85% of invoices', 'Flagged 3 suspicious entries'], manualInterventions: 2, cost: 150, efficiency: 94 } ], rules: [ { id: 'rule-001', name: 'Auto-approve under $1000', condition: 'amount < 1000 AND vendor_verified = true', action: 'auto_approve', priority: 1, isActive: true, aiOptimized: true, lastTriggered: new Date('2024-01-15T10:30:00Z'), triggerCount: 156 } ], dependencies: ['vendor_verification', 'budget_approval'] } { id: 'bp-002', name: 'Employee Onboarding', description: 'Streamlined employee onboarding with automated document processing and task assignment', category: 'hr', status: 'active', priority: 'medium', automationLevel: 'semi-automated', aiInsights: [';Bottleneck identified: IT setup takes 3 days on average', ';Recommendation: Implement parallel processing for faster onboarding', ';Success rate: 98% completion within SLA' ], efficiency: 87, costSavings: 8000, timeReduction: 55, stakeholders: ['HR Team', 'IT Department', 'New Employees'], lastExecuted: new Date('2024-01-14T14:15:00Z'), nextExecution: new Date('2024-01-17T09:00:00Z'), executionHistory: [ { id: 'exec-002', timestamp: new Date('2024-01-14T14:15:00Z'), status: 'success', duration: 120, aiDecisions: ['Optimized task sequence', 'Identified resource conflicts'], manualInterventions: 1, cost: 200, efficiency: 89 } ], rules: [ { id: 'rule-002', name: 'Auto-assign IT tasks', condition: 'employee_type = 'full_time' AND department != 'contractor'', action: 'assign_it_tasks', priority: 2, isActive: true, aiOptimized: true, lastTriggered: new Date('2024-01-14T14:15:00Z'), triggerCount: 23 } ], dependencies: ['background_check', 'document_verification'] } ]  export const AdvancedAIBusinessProcessAutomation = () => { const [processes, setProcesses] = useState(mockBusinessProcesses) const [selectedProcess, setSelectedProcess] = useState(null) const [isExpanded, setIsExpanded] = useState(false) const [searchTerm, setSearchTerm] = useState('') const [filterCategory, setFilterCategory] = useState('all')  const filteredProcesses = processes.filter(process => { const matchesSearch = process.name.toLowerCase().includes(searchTerm.toLowerCase()) || process.description.toLowerCase().includes(searchTerm.toLowerCase()) const matchesCategory = filterCategory === 'all' || process.category === filterCategory return matchesSearch && matchesCategory })';' const categories = ['all', 'finance', 'hr', 'operations', 'marketing', 'sales']'; ';' return (''' <div className='bg-white dark: bg-gray-900 rounded-lg shadow-lg p-6'>''' <div className='flex items-center justify-between mb-6'>''' <div className='flex items-center gap-3'>''' <Workflow className='w-8 h-8 text-blue-600' />'' <div>''' <h2 className='text-2xl font-bold text-gray-900 dark: text-white'>'; AI Business Process Automation'' </h2>''' <p className='text-gray-600 dark: text-gray-400'> Intelligent automation powered by AI </p>' </div>' </div>' <button';' onClick={() => setIsExpanded(!isExpanded)}'';' className='p-2 hover: bg-gray-100 dark:hover:bg-gray-800 rounded-lg'';' >''' {isExpanded ? <Minimize2 className='w-5 h-5' /> : <Maximize2 className='w-5 h-5' />}' </button>' </div>';' {isExpanded && (''' <div className='space-y-6'>';' {}''' <div className='flex gap-4'>''' <div className='flex-1'>''' <div className='relative'>''' <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />'' <input'';' type='text'';' placeholder='Search processes...''; value={searchTerm}';' onChange={(e) = / / / / / /> setSearchTerm(e.target.value)}''' className='w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white' /> </div>' </div>' <select'; value={filterCategory}';' onChange={(e) => setFilterCategory(e.target.value)}''' className='px-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white' > {categories.map(category => ( <option key={category} value={category}> {category.charAt(0).toUpperCase() + category.slice(1)} </option>' ))}' </select>' </div>';' {}''' <div className='grid gap-4'>'{filteredProcesses.map(process => (' <div';' key={process.id}'';' className='border border-gray-200 dark: border-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer''; onClick={() => setSelectedProcess(process)}';' >''' <div className='flex items-start justify-between'>''' <div className='flex-1'>''' <div className='flex items-center gap-2 mb-2'>''' <h3 className='text-lg font-semibold text-gray-900 dark: text-white'> {process.name} </h3> <span className={`px-2 py-1 text-xs rounded-full ${ process.status === 'active' ? 'bg-green-100 text-green-800 dark: bg-green-900 dark:text-green-200' : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'' }`}>'{process.status}' </span>'' </div>''' <p className='text-gray-600 dark: text-gray-400 mb-3'>'{process.description}'' </p>''' <div className='flex items-center gap-4 text-sm'>''' <div className='flex items-center gap-1'>''' <BarChart3 className='w-4 h-4 text-blue-600' />' <span>{process.efficiency}% efficiency</span>'' </div>''' <div className='flex items-center gap-1'>''' <DollarSign className='w-4 h-4 text-green-600' />' <span>${process.costSavings.toLocaleString()}/month</span>'' </div>''' <div className='flex items-center gap-1'>''' <TrendingUp className='w-4 h-4 text-purple-600' />' <span>{process.timeReduction}% time reduction</span>' </div>' </div>'' </div>''' <button className='p-2 hover: bg-gray-100 dark:hover:bg-gray-800 rounded-lg'>''' <MoreVertical className='w-4 h-4' /> </button> </div> </div>' ))}' </div>'{}';' {selectedProcess && (''' <div className='border border-gray-200 dark: border-gray-700 rounded-lg p-6'>''' <div className='flex items-center justify-between mb-4'>''' <h3 className='text-xl font-bold text-gray-900 dark: text-white'>' {selectedProcess.name}' </h3>' <button';' onClick={() => setSelectedProcess(null)}'';' className='p-2 hover: bg-gray-100 dark:hover:bg-gray-800 rounded-lg'';' >''' <X className='w-5 h-5' />' </button>' </div>''' <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>'' <div>''' <h4 className='font-semibold text-gray-900 dark: text-white mb-2'>AI Insights</h4>''' <ul className='space-y-2'>';' {selectedProcess.aiInsights.map((insight, index) => (''' <li key={index} className='flex items-start gap-2 text-sm text-gray-600 dark: text-gray-400'>''' <Lightbulb className='w-4 h-4 text-yellow-600 mt-0.5 flex-shrink-0' /> <span>{insight}</span> </li>' ))}' </ul>' </div>'' <div>''' <h4 className='font-semibold text-gray-900 dark: text-white mb-2'>Stakeholders</h4>''' <div className='flex flex-wrap gap-2'>'{selectedProcess.stakeholders.map((stakeholder, index) => (' <span'' key={index}'';' className='px-3 py-1 bg-blue-100 dark: bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm' > {stakeholder} </span> ))} </div> </div> </div> </div> )} </div> )}' </div>')'}';'';'``'"
 import React { useState, useRef } from 'react' import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader }  from 'lucide-react';const mockBusinessProcesses = [
-  { id: 'bp-001', name: 'Invoice Processing & Approval', description: 'Automated invoice processing with AI-powered validation and approval workflows', category: 'finance', status: 'active', priority: 'high', automationLevel: 'fully-automated', aiInsights: [';Pattern detected: 15% of invoices require manual review,;Optimization opportunity: Reduce approval time by 40%,;Cost savings potential: $12, 000/month through automation' ], efficiency: 92, costSavings: 12000, timeReduction: 65, stakeholders: ['Finance Team,AP Department,Vendors'], lastExecuted: new Date('2024-01-15T10:30:00Z'), nextExecution: new Date('2024-01-16T09:00:00Z'), executionHistory: [ { id: 'exec-001', timestamp: new Date('2024-01-15T10:30:00Z'), status: 'success', duration: 45, aiDecisions: ['Auto-approved 85% of invoices,Flagged 3 suspicious entries'], manualInterventions: 2, cost: 150, efficiency: 94 } ], rules: [ { id: 'rule-001', name: 'Auto-approve under $1000', condition: 'amount < 1000 AND vendor_verified = true', action: 'auto_approve', priority: 1, isActive: true, aiOptimized: true, lastTriggered: new Date('2024-01-15T10:30:00Z'), triggerCount: 156 } ], dependencies: ['vendor_verification,budget_approval'] } { id: 'bp-002', name: 'Employee Onboarding', description: 'Streamlined employee onboarding with automated document processing and task assignment', category: 'hr', status: 'active', priority: 'medium', automationLevel: 'semi-automated', aiInsights: [';Bottleneck identified: IT setup takes 3 days on average,;Recommendation: Implement parallel processing for faster onboarding,;Success rate: 98% completion within SLA' ], efficiency: 87, costSavings: 8000, timeReduction: 55, stakeholders: ['HR Team,IT Department,New Employees'], lastExecuted: new Date('2024-01-14T14:15:00Z'), nextExecution: new Date('2024-01-17T09:00:00Z'), executionHistory: [ { id: 'exec-002', timestamp: new Date('2024-01-14T14:15:00Z'), status: 'success', duration: 120, aiDecisions: ['Optimized task sequence,Identified resource conflicts'], manualInterventions: 1, cost: 200, efficiency: 89 } ], rules: [ { id: 'rule-002', name: 'Auto-assign IT tasks', condition: 'employee_type = 'full_time' AND department != 'contractor'', action: 'assign_it_tasks', priority: 2, isActive: true, aiOptimized: true, lastTriggered: new Date('2024-01-14T14:15:00Z'), triggerCount: 23 } ], dependencies: ['background_check,document_verification'] } ]  export const AdvancedAIBusinessProcessAutomation = () => { const [processes, setProcesses] = useState(mockBusinessProcesses) const [selectedProcess, setSelectedProcess] = useState(null) const [isExpanded, setIsExpanded] = useState(false) const [searchTerm, setSearchTerm] = useState('') const [filterCategory, setFilterCategory] = useState('all')  const filteredProcesses = processes.filter(process => { const matchesSearch = process.name.toLowerCase().includes(searchTerm.toLowerCase()) || process.description.toLowerCase().includes(searchTerm.toLowerCase()) const matchesCategory = filterCategory === 'all' || process.category === filterCategory return matchesSearch && matchesCategory }) const categories = ['all,finance,hr,operations,marketing,sales'];' return (''' <div className='bg-white dark: bg-gray-900 rounded-lg shadow-lg p-6'>''' <div className='flex items-center justify-between mb-6'>''' <div className='flex items-center gap-3'>''' <Workflow className='w-8 h-8 text-blue-600' /" >'' <div>''' <h2 className='text-2xl font-bold text-gray-900 dark: text-white'>'; AI Business Process Automation'' </h2>''' <p className='text-gray-600 dark: text-gray-400'> Intelligent automation powered by AI </p>' </div>' </div>' <button  onClick={() =" > setIsExpanded(!isExpanded)}' className='p-2 hover: bg-gray-100 dark:hover:bg-gray-800 rounded-lg' >''' {isExpanded ? <Minimize2 className='w-5 h-5' /" > : <Maximize2 className='w-5 h-5' /" >}' </button>' </div> {isExpanded && (''' <div className='space-y-6'> {}''' <div className='flex gap-4'>''' <div className='flex-1'>''' <div className='relative'>''' <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' /" >'' <input ' type='text' placeholder='Search processes...''; value={searchTerm} onChange={(e) = / / / / / /" > setSearchTerm(e.target.value)}''' className='w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white' /> </div>' </div>' <select '; value={filterCategory} onChange={(e) =" > setFilterCategory(e.target.value)}''' className='px-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white' > {categories.map(category => ( <option key={category} value={category}" > {category.charAt(0).toUpperCase() + category.slice(1)} </option>' ))}' </select>' </div> {}''' <div className='grid gap-4'>'{filteredProcesses.map(process => (' <div  key={process.id}' className='border border-gray-200 dark: border-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer''; onClick={() =` > setSelectedProcess(process)} >''' <div className='flex items-start justify-between'>''' <div className='flex-1'>''' <div className='flex items-center gap-2 mb-2'>''' <h3 className='text-lg font-semibold text-gray-900 dark: text-white'> {process.name} </h3> <span className={`px-2 py-1 text-xs rounded-full ${ process.status === 'active' ? 'bg-green-100 text-green-800 dark: bg-green-900 dark:text-green-200' : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'' }`}` >'{process.status}' </span>'' </div>''' <p className='text-gray-600 dark: text-gray-400 mb-3'>'{process.description}'' </p>''' <div className='flex items-center gap-4 text-sm'>''' <div className='flex items-center gap-1'>''' <BarChart3 className='w-4 h-4 text-blue-600' /" >' <span>{process.efficiency}% efficiency</span>'' </div>''' <div className='flex items-center gap-1'>''' <DollarSign className='w-4 h-4 text-green-600' /` >' <span>${process.costSavings.toLocaleString()}/month</span>'' </div>''' <div className='flex items-center gap-1'>''' <TrendingUp className='w-4 h-4 text-purple-600' /` >' <span>{process.timeReduction}% time reduction</span>' </div>' </div>'' </div>''' <button className='p-2 hover: bg-gray-100 dark:hover:bg-gray-800 rounded-lg'>''' <MoreVertical className='w-4 h-4' /" > </button> </div> </div>' ))}' </div>'{} {selectedProcess && (''' <div className='border border-gray-200 dark: border-gray-700 rounded-lg p-6'>''' <div className='flex items-center justify-between mb-4'>''' <h3 className='text-xl font-bold text-gray-900 dark: text-white'>' {selectedProcess.name}' </h3>' <button  onClick={() =" > setSelectedProcess(null)}' className='p-2 hover: bg-gray-100 dark:hover:bg-gray-800 rounded-lg' >''' <X className='w-5 h-5' /" >' </button>' </div>''' <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>'' <div>''' <h4 className='font-semibold text-gray-900 dark: text-white mb-2'>AI Insights</h4>''' <ul className='space-y-2'> {selectedProcess.aiInsights.map((insight, index) => (''' <li key={index} className='flex items-start gap-2 text-sm text-gray-600 dark: text-gray-400'>''' <Lightbulb className='w-4 h-4 text-yellow-600 mt-0.5 flex-shrink-0' /" > <span>{insight}</span> </li>' ))}' </ul>' </div>'' <div>''' <h4 className='font-semibold text-gray-900 dark: text-white mb-2'>Stakeholders</h4>''' <div className='flex flex-wrap gap-2'>'{selectedProcess.stakeholders.map((stakeholder, index) => (' <span '' key={index}' className='px-3 py-1 bg-blue-100 dark: bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm'" > {stakeholder} </span> ))} </div> </div> </div> </div> )} </div> )}' </div>')'}`"'"
+  { id: 'bp-001', name: 'Invoice Processing & Approval', description: 'Automated invoice processing with AI-powered validation and approval workflows', category: 'finance', status: 'active', priority: 'high', automationLevel: 'fully-automated', aiInsights: [';Pattern detected: 15% of invoices require manual reviewOptimization opportunity: Reduce approval time by 40%Cost savings potential: $12, 000/month through automation' ], efficiency: 92, costSavings: 12000, timeReduction: 65, stakeholders: ['Finance Team,AP Department,Vendors'], lastExecuted: new Date('2024-01-15T10:30:00Z'), nextExecution: new Date('2024-01-16T09:00:00Z'), executionHistory: [ { id: 'exec-001', timestamp: new Date('2024-01-15T10:30:00Z'), status: 'success', duration: 45, aiDecisions: ['Auto-approved 85% of invoices,Flagged 3 suspicious entries'], manualInterventions: 2, cost: 150, efficiency: 94 } ], rules: [ { id: 'rule-001', name: 'Auto-approve under $1000', condition: 'amount < 1000 AND vendor_verified = true', action: 'auto_approve', priority: 1, isActive: true, aiOptimized: true, lastTriggered: new Date('2024-01-15T10:30:00Z'), triggerCount: 156 } ], dependencies: ['vendor_verification,budget_approval'] } { id: 'bp-002', name: 'Employee Onboarding', description: 'Streamlined employee onboarding with automated document processing and task assignment', category: 'hr', status: 'active', priority: 'medium', automationLevel: 'semi-automated', aiInsights: [';Bottleneck identified: IT setup takes 3 days on averageRecommendation: Implement parallel processing for faster onboardingSuccess rate: 98% completion within SLA' ], efficiency: 87, costSavings: 8000, timeReduction: 55, stakeholders: ['HR Team,IT Department,New Employees'], lastExecuted: new Date('2024-01-14T14:15:00Z'), nextExecution: new Date('2024-01-17T09:00:00Z'), executionHistory: [ { id: 'exec-002', timestamp: new Date('2024-01-14T14:15:00Z'), status: 'success', duration: 120, aiDecisions: ['Optimized task sequence,Identified resource conflicts'], manualInterventions: 1, cost: 200, efficiency: 89 } ], rules: [ { id: 'rule-002', name: 'Auto-assign IT tasks', condition: 'employee_type = 'full_time' AND department != 'contractor'', action: 'assign_it_tasks', priority: 2, isActive: true, aiOptimized: true, lastTriggered: new Date('2024-01-14T14:15:00Z'), triggerCount: 23 } ], dependencies: ['background_check,document_verification'] } ]  export const AdvancedAIBusinessProcessAutomation = () => { const [processes, setProcesses] = useState(mockBusinessProcesses) const [selectedProcess, setSelectedProcess] = useState(null) const [isExpanded, setIsExpanded] = useState(false) const [searchTerm, setSearchTerm] = useState('') const [filterCategory, setFilterCategory] = useState('all')  const filteredProcesses = processes.filter(process => { const matchesSearch = process.name.toLowerCase().includes(searchTerm.toLowerCase()) || process.description.toLowerCase().includes(searchTerm.toLowerCase()) const matchesCategory = filterCategory === 'all' || process.category === filterCategory return matchesSearch && matchesCategory }) const categories = ['all,finance,hr,operations,marketing,sales'];' return (''' <div className='bg-white dark: bg-gray-900 rounded-lg shadow-lg p-6'>''' <div className='flex items-center justify-between mb-6'>''' <div className='flex items-center gap-3'>''' <Workflow className='w-8 h-8 text-blue-600' /" >'' <div>''' <h2 className='text-2xl font-bold text-gray-900 dark: text-white'>'; AI Business Process Automation'' </h2>''' <p className='text-gray-600 dark: text-gray-400'> Intelligent automation powered by AI </p>' </div>' </div>' <button  onClick={() =" > setIsExpanded(!isExpanded)}' className='p-2 hover: bg-gray-100 dark:hover:bg-gray-800 rounded-lg' >''' {isExpanded ? <Minimize2 className='w-5 h-5' /" > : <Maximize2 className='w-5 h-5' /" >}' </button>' </div> {isExpanded && (''' <div className='space-y-6'> {}''' <div className='flex gap-4'>''' <div className='flex-1'>''' <div className='relative'>''' <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' /" >'' <input ' type='text' placeholder='Search processes...''; value={searchTerm} onChange={(e) = / / / / / /" > setSearchTerm(e.target.value)}''' className='w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white' /> </div>' </div>' <select '; value={filterCategory} onChange={(e) =" > setFilterCategory(e.target.value)}''' className='px-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white' > {categories.map(category => ( <option key={category} value={category}" > {category.charAt(0).toUpperCase() + category.slice(1)} </option>' ))}' </select>' </div> {}''' <div className='grid gap-4'>'{filteredProcesses.map(process => (' <div  key={process.id}' className='border border-gray-200 dark: border-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer''; onClick={() =` > setSelectedProcess(process)} >''' <div className='flex items-start justify-between'>''' <div className='flex-1'>''' <div className='flex items-center gap-2 mb-2'>''' <h3 className='text-lg font-semibold text-gray-900 dark: text-white'> {process.name} </h3> <span className={`px-2 py-1 text-xs rounded-full ${ process.status === 'active' ? 'bg-green-100 text-green-800 dark: bg-green-900 dark:text-green-200' : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'' }`}` >'{process.status}' </span>'' </div>''' <p className='text-gray-600 dark: text-gray-400 mb-3'>'{process.description}'' </p>''' <div className='flex items-center gap-4 text-sm'>''' <div className='flex items-center gap-1'>''' <BarChart3 className='w-4 h-4 text-blue-600' /" >' <span>{process.efficiency}% efficiency</span>'' </div>''' <div className='flex items-center gap-1'>''' <DollarSign className='w-4 h-4 text-green-600' /` >' <span>${process.costSavings.toLocaleString()}/month</span>'' </div>''' <div className='flex items-center gap-1'>''' <TrendingUp className='w-4 h-4 text-purple-600' /` >' <span>{process.timeReduction}% time reduction</span>' </div>' </div>'' </div>''' <button className='p-2 hover: bg-gray-100 dark:hover:bg-gray-800 rounded-lg'>''' <MoreVertical className='w-4 h-4' /" > </button> </div> </div>' ))}' </div>'{} {selectedProcess && (''' <div className='border border-gray-200 dark: border-gray-700 rounded-lg p-6'>''' <div className='flex items-center justify-between mb-4'>''' <h3 className='text-xl font-bold text-gray-900 dark: text-white'>' {selectedProcess.name}' </h3>' <button  onClick={() =" > setSelectedProcess(null)}' className='p-2 hover: bg-gray-100 dark:hover:bg-gray-800 rounded-lg' >''' <X className='w-5 h-5' /" >' </button>' </div>''' <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>'' <div>''' <h4 className='font-semibold text-gray-900 dark: text-white mb-2'>AI Insights</h4>''' <ul className='space-y-2'> {selectedProcess.aiInsights.map((insight, index) => (''' <li key={index} className='flex items-start gap-2 text-sm text-gray-600 dark: text-gray-400'>''' <Lightbulb className='w-4 h-4 text-yellow-600 mt-0.5 flex-shrink-0' /" > <span>{insight}</span> </li>' ))}' </ul>' </div>'' <div>''' <h4 className='font-semibold text-gray-900 dark: text-white mb-2'>Stakeholders</h4>''' <div className='flex flex-wrap gap-2'>'{selectedProcess.stakeholders.map((stakeholder, index) => (' <span '' key={index}' className='px-3 py-1 bg-blue-100 dark: bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm'" > {stakeholder} </span> ))} </div> </div> </div> </div> )} </div> )}' </div>')'}`"'"
 "`

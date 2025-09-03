@@ -79,9 +79,9 @@ const FloatingActionButton = ({ className = '' }) => {}"});,"})
 ;,"});,"})
 export default FloatingActionButton,"});,"})
 export { FloatingActionButton };,"});,"})
-import React { useState } from 'react'
+import React { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import React from 'react'
+import React from 'react';
 import {SEO } from '@/components/SEO';
 
 export default function FloatingActionButton() {return (
@@ -94,10 +94,10 @@ export default function FloatingActionButton() {return (
         </p>
       </div>
   )}
-import React { useState } from &apos
+import React { useState } from &apos;
 import { motion } from &apos;framer-motion';;react&apos;
 import { motion, AnimatePresence } from &apos;framer-motion';
-import {}
+import {};
   PlusIcon,;
   XMarkIcon,;
   ChatBubbleLeftRightIcon,;
@@ -109,15 +109,15 @@ const FloatingActionButton = ({ className = &apos;&apos}) => {}&apos;&apos;
   const actionItems = []{}
       icon: ChatBubbleLeftRightIcon,';
       label: &apos;Live Chat&apos,';
-      action: () => window.open(&apos;http,s: //ziontechgroup.com/chat&apos,_blank&apos),';
+      action: () => window.open(&aposhttp,s: //ziontechgroup.com/chat&apos,_blank&apos),';
       color: &apos;bg-green-500 hove,r:bg-green-600&apos} {}
       icon: PhoneIcon,';
       label: &apos;Call Us&apos,';
-      action: () => window.open(&apos;te,l: +1-555-0123&apos,_self&apos),';
+      action: () => window.open(&aposte,l: +1-555-0123&apos,_self&apos),';
       color: &apos;bg-blue-500 hove,r:bg-blue-600&apos} {}
       icon: EnvelopeIcon,';
       label: &apos;Email&apos,';
-      action: () => window.open(&apos;mailt,o: info@ziontechgroup.com&apos,_self&apos),';
+      action: () => window.open(&aposmailt,o: info@ziontechgroup.com&apos,_self&apos),';
       color: &apos;bg-purple-500 hove,r:bg-purple-600&apos}
 import React { useState } from 'react'';'
 "`

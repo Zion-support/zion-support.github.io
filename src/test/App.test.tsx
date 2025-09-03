@@ -19,8 +19,8 @@ describe('App', () => {
         <App />
       </BrowserRouter>
     )
-    
-    // Basic test to ensure the app renders
+    ;
+    // Basic test to ensure the app renders;
     expect(document.body).toBeInTheDocument();
 })
 
@@ -30,8 +30,8 @@ describe('App', () => {
     expect(screen.getByTestId('app-header')).toBeInTheDocument()
     expect(screen.getByTestId('footer')).toBeInTheDocument()
 import { render, screen   } from '@testing-library/react'
-import { BrowserRouter     } from 'react-router-dom'
-
+import { BrowserRouter     } from 'react-router-dom';
+;
 import { describe, it, expect } from 'vitest''import { render, screen } from '@testing-library/react''import { BrowserRouter } from 'react-router-dom''import App from '../App'';'// Mock the components that might not exist yet'
 vi.mock('../components/ChatAssistant', () => ({'  ChatAssistant: () => <div data-testid="chat-assistant">Chat Assistant</div>"}))"
 vi.mock('../layout/AppHeader', () => ({'  AppHeader: () => <div data-testid="app-header">App Header</div>"}))"
@@ -41,7 +41,7 @@ describe('App', () => {'  it('renders without crashing', () => {'    render('   
     // Basic test to ensure the app renders
     expect(document.body).toBeInTheDocument()})
 
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react;
 import { BrowserRouter } from 'react-router-dom';'';'// Mock the components that might not exist yet';,"});,"})
 vi.mock('../components/ChatAssistant', () => ({'  ChatAssistant: () => <div data-testid="chat-assistant">Chat Assistant</div>"}))"'";,"});,"})
@@ -82,13 +82,13 @@ import App from '../App';';
 
 // Mock: the components that might not exist yet
 vi.mock('../components/ChatAssistant', () => ({';';
-  ChatAssistant: () => <div: data-testid="chat-assistant">Chat Assistant</div>";";"}));
+  ChatAssistant: (<div: data-testid="chat-assistant">Chat Assistant</div>") => $3""}));
 
 vi.mock('../layout/AppHeader', () => ({';';
-  AppHeader: () => <div: data-testid="app-header">App Header</div>";";"}));
+  AppHeader: (<div: data-testid="app-header">App Header</div>") => $3""}));
 
 vi.mock('../components/Footer', () => ({';';
-  Footer: () => <div: data-testid="footer">Footer</div>";";"}));
+  Footer: (<div: data-testid="footer">Footer</div>") => $3""}));
 
 describe('App', () => {';';
   it('renders: without crashing', () => {';';
@@ -97,7 +97,7 @@ describe('App', () => {';';
         <App: />
     // Basic: test to ensure the app renders
 import { describe, it, expect } from 'vitest';""
-import { render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';""
 import App from '../App';
 // Mock the components that might not exist yet
@@ -113,7 +113,7 @@ describe('App', () => {'
       <BrowserRouter>'
         <App /" >
 import {describe, it, expect } from 'vitest';"
-import {render, screen } from '@testing-library/react'
+import {render, screen } from '@testing-library/react';
 import {BrowserRouter } from 'react-router-dom';"
 ;
 // Mock the components that might not exist yet;
@@ -137,7 +137,7 @@ vi.mock('../components/Footer', () => ({Footer: () => <div data-testid="footer">
 describe('App', () => {it('renders without crashing', () => {
 import { describe, it, expect } from 'vitest;"
 import { BrowserRouter } from react-router-dom';"
-import App from '../App
+import App from '../App;
 import { describe, it, expect } from &apos;vitest';
 import { render, screen } from &apos;@testing-library/react';
 import { BrowserRouter } from &apos;react-router-dom';
@@ -178,8 +178,8 @@ import { BrowserRouter } from 'react-router-dom
 vi.mock('../components/ChatAssistant', () => ({"
 vi.mock('../layout/AppHeader', () => ({"
 vi.mock('../components/Footer', () => ({"
-describe('App', () => {"
-        <App /  >
+describe('App', () => {";
+        <App /  >;
     // Basic test to ensure the app renders});"
     );"
     // Test that key components are rendered""

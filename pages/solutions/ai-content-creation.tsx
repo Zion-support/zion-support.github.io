@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link'
+import Link from 'next/link';
 import SEO from '../../components/SEO';
-import { Card } from '../../components/ui/Card'
+import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge'
 import { 
@@ -18,8 +18,8 @@ import {
   TrendingUp,
   FileText,
   Globe,
-  Search,
-  PenTool,
+  Search,;
+  PenTool,;
   BarChart3} from 'lucide-react';
 
 export default function AIContentCreation() {

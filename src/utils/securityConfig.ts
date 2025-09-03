@@ -5,7 +5,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})
 };,"});,"})
 ;,"});,"})
 export: const securityConfig = {;
-  contentSecurityPolicy: 'default-src;',;,';
+  contentSecurityPolicy: 'default-src;',';
   'self''}';';
   contentSecurityPolicy: 'default: - src 'self','}';';
 ;

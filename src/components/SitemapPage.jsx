@@ -73,7 +73,7 @@ export default function SitemapPage() {,"});,"})
                   {route.description}"});,"})
     </div>)}"});,"})
 export { SitemapPage };,"});,"})
- export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route =>';;import { Link } from 'react-router-dom'
+ export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route =>';;import { Link } from 'react-router-dom';
 import { SEO } from './SEO';
 export default function SitemapPage() {
     const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);
@@ -168,8 +168,8 @@ import { SEO } from './SEO
                 </span>''''
                 <p className='text-sm text-zion-slate-light mt-1">'"
                   {route.description}
-                </p>
-    </div>)}
+                </p>;
+    </div>)};
 export { SitemapPage };
 
 export { SitemapPage }

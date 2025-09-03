@@ -1,6 +1,6 @@
-import React from,
+import React from,;
   react';
-import Link from
+import Link from;
   'next/link';
 
 const SitemapPage: React.FC = () => {

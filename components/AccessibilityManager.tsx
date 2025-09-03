@@ -136,7 +136,7 @@ const AccessibilityManager: React.FC = () => {
     // Save settings;
     localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
   const updateSetting = <K extends keyof AccessibilitySettings>(;
-    key: K,;
+    key: K
     value: AccessibilitySettings[K];
       announcement.setAttribute('aria-live,polite');
       announcement.setAttribute('aria-atomic,true');

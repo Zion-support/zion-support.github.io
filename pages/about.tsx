@@ -1,6 +1,6 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 import Layout from '../components/Layout';
-import Link from 'next/link'
+import Link from 'next/link';
 import { Users, Award, Target, CheckCircle, ArrowRight, Globe, Heart, Zap } from 'lucide-react';
 
 const About: NextPage = () => {

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import Head from 'next/head'
+import Head from 'next/head';
 import Layout from '../components/Layout';
 import { Shield, Zap, Globe, Lock, Database, ArrowRight, CheckCircle, Users, Award } from 'lucide-react';
 >>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
@@ -29,7 +29,11 @@ const BlockchainSolutions: NextPage = () => {
       title: 'Security Audits',
       description: 'Comprehensive security audits for smart contracts and blockchain applications',
       features: ['Code review', 'Vulnerability assessment', 'Penetration testing', 'Compliance checks']
+<<<<<<< HEAD
     }
+=======
+}
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d
   ]
 
   return (
