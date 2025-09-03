@@ -44,8 +44,8 @@ class Course(db.Model):
     is_premium_tier = db.Column(db.Boolean, default=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
-    lessons = db.relationship('Lesson', backref='course', lazy='dynamic', cascade="all, delete-orphan")
-    quizzes = db.relationship('Quiz', backref='course', lazy='dynamic', cascade="all, delete-orphan")
+    lessons = db.relationship('Lesson', backref='course', lazy='select', cascade="all, delete-orphan")
+    quizzes = db.relationship('Quiz', backref='course', lazy='select', cascade="all, delete-orphan")
     enrollments = db.relationship('Enrollment', back_populates='course', cascade="all, delete-orphan")
     certificates = db.relationship('Certificate', backref='course', lazy=True) # Corrected from 'user' to 'course' on Certificate's course relationship
 
