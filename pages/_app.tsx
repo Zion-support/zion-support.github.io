@@ -4,23 +4,57 @@ import Link from 'next/link';
 function Header(): any {
   return (
     <header style={{
-      position: 'sticky', top: 0, zIndex: 50, background: '#0b1220', color: 'white',
+      position: 'sticky', top: 0, zIndex: 50, background: 'rgba(11, 18, 32, 0.95)', 
+      backdropFilter: 'blur(10px)', color: 'white',
       borderBottom: '1px solid rgba(255,255,255,0.1)',
     }}>
       <nav style={{
-        maxWidth: 1200, margin: '0 auto', padding: '10px 16px', display: 'flex',
-        alignItems: 'center', justifyContent: 'space-between', gap: 12}}>
-        <Link href="/" style={{ fontWeight: 800, letterSpacing: 0.3 }}>Zion Tech Group</Link>
-        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', }}>
-          <Link href="/" style={{ opacity: 0.9 }}>Home</Link>
-          <Link href="/about" style={{ opacity: 0.9 }}>About</Link>
-          <Link href="/services" style={{ opacity: 0.9 }}>Services</Link>
-          <Link href="/micro-saas" style={{ opacity: 0.9 }}>Micro SaaS</Link>
-          <Link href="/ai-services" style={{ opacity: 0.9 }}>AI Services</Link>
-          <Link href="/it-services" style={{ opacity: 0.9 }}>IT Services</Link>
-          <Link href="/faq" style={{ opacity: 0.9 }}>FAQ</Link>
-          <Link href="/contact" style={{ fontWeight: 600, background: '#22d3ee', color: '#0b1220', padding: '6px 10px', borderRadius: 8 }}>Contact</Link>
+        maxWidth: 1400, margin: '0 auto', padding: '12px 20px', display: 'flex',
+        alignItems: 'center', justifyContent: 'space-between', gap: 16}}>
+        <Link href="/" style={{ 
+          fontWeight: 800, letterSpacing: 0.3, fontSize: '1.25rem',
+          background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
+        }}>Zion Tech Group</Link>
+        
+        <div style={{ 
+          display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center',
+          '@media (max-width: 768px)': { display: 'none' }
+        }}>
+          <Link href="/" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease'
+          }}>Home</Link>
+          <Link href="/services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease'
+          }}>All Services</Link>
+          <Link href="/services-catalog" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease'
+          }}>Catalog</Link>
+          <Link href="/pricing" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease'
+          }}>Pricing</Link>
+          <Link href="/contact" style={{ 
+            fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
+            color: 'white', padding: '8px 16px', borderRadius: 8,
+            transition: 'all 0.2s ease'
+          }}>Contact</Link>
         </div>
+
+        {/* Mobile menu button */}
+        <button style={{
+          display: 'none',
+          '@media (max-width: 768px)': { display: 'block' },
+          background: 'none', border: 'none', color: 'white', fontSize: '1.5rem',
+          cursor: 'pointer', padding: '8px'
+        }}>
+          ☰
+        </button>
       </nav>
     </header>
   );
@@ -28,41 +62,91 @@ function Header(): any {
 
 function Footer(): any {
   return (
-    <footer style={{ background: '#0b1220', color: 'white', marginTop: 40, borderTop: '1px solid rgba(255,255,255,0.1)', }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 16px', display: 'grid', gap: 16 }}>
-        <div style={{ display: 'grid', gap: 8 }}>
-          <strong>Zion Tech Group</strong>
-          <span>Mobile: +1 302 464 0950</span>
-          <span>Email: <a href="mailto:kleber@ziontechgroup.com" style={{ color: '#93c5fd', }}>kleber@ziontechgroup.com</a></span>
-          <span>Address: 364 E Main St STE 1008 Middletown DE 19709</span>
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16 }}>
-          <div>
-            <h4 style={{ fontWeight: 'bold', marginBottom: 8 }}>Company</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-              <Link href="/about" style={{ opacity: 0.9, fontSize: '14px' }}>About Us</Link>
-              <Link href="/contact" style={{ opacity: 0.9, fontSize: '14px' }}>Contact</Link>
-              <Link href="/faq" style={{ opacity: 0.9, fontSize: '14px' }}>FAQ</Link>
-            </div>
-          </div>
-          <div>
-            <h4 style={{ fontWeight: 'bold', marginBottom: 8 }}>Services</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-              <Link href="/services" style={{ opacity: 0.9, fontSize: '14px' }}>All Services</Link>
-              <Link href="/micro-saas" style={{ opacity: 0.9, fontSize: '14px' }}>Micro SaaS</Link>
-              <Link href="/ai-services" style={{ opacity: 0.9, fontSize: '14px' }}>AI Services</Link>
-              <Link href="/it-services" style={{ opacity: 0.9, fontSize: '14px' }}>IT Services</Link>
-            </div>
-          </div>
-          <div>
-            <h4 style={{ fontWeight: 'bold', marginBottom: 8 }}>Legal</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-              <Link href="/privacy" style={{ opacity: 0.9, fontSize: '14px' }}>Privacy Policy</Link>
-              <Link href="/terms" style={{ opacity: 0.9, fontSize: '14px' }}>Terms of Service</Link>
-            </div>
+    <footer style={{ 
+      background: 'linear-gradient(135deg, #0b1220, #1e293b)', 
+      color: 'white', marginTop: 60, 
+      borderTop: '1px solid rgba(255,255,255,0.1)' 
+    }}>
+      <div style={{ 
+        maxWidth: 1400, margin: '0 auto', padding: '40px 20px',
+        display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
+        gap: 32 
+      }}>
+        {/* Company Info */}
+        <div style={{ display: 'grid', gap: 12 }}>
+          <div style={{ 
+            fontWeight: 800, fontSize: '1.25rem',
+            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}>Zion Tech Group</div>
+          <p style={{ opacity: 0.8, lineHeight: 1.6 }}>
+            Leading provider of innovative micro SaaS products, AI services, and IT solutions. 
+            Empowering businesses with cutting-edge technology.
+          </p>
+          <div style={{ display: 'grid', gap: 6, fontSize: '0.9rem' }}>
+            <div>📞 <a href="tel:+13024640950" style={{ color: '#93c5fd' }}>+1 302 464 0950</a></div>
+            <div>✉️ <a href="mailto:kleber@ziontechgroup.com" style={{ color: '#93c5fd' }}>kleber@ziontechgroup.com</a></div>
+            <div>📍 364 E Main St STE 1008, Middletown DE 19709</div>
           </div>
         </div>
-        <small style={{ opacity: 0.7 }}>© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</small>
+
+        {/* Services */}
+        <div style={{ display: 'grid', gap: 12 }}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Services</h3>
+          <div style={{ display: 'grid', gap: 8 }}>
+            <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none' }}>All Services</Link>
+            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none' }}>Services Catalog</Link>
+            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none' }}>Pricing</Link>
+            <div style={{ opacity: 0.8, fontSize: '0.9rem', marginTop: 8 }}>
+              <div>• 60+ Micro SaaS Products</div>
+              <div>• 40+ AI Services</div>
+              <div>• 40+ IT Solutions</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Quick Links */}
+        <div style={{ display: 'grid', gap: 12 }}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Quick Links</h3>
+          <div style={{ display: 'grid', gap: 8 }}>
+            <Link href="/" style={{ opacity: 0.8, textDecoration: 'none' }}>Home</Link>
+            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none' }}>Contact Us</Link>
+            <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none' }}>Privacy Policy</Link>
+            <a href="https://ziontechgroup.com" style={{ opacity: 0.8, textDecoration: 'none' }}>Main Website</a>
+          </div>
+        </div>
+
+        {/* Contact CTA */}
+        <div style={{ display: 'grid', gap: 12 }}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Get Started</h3>
+          <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>
+            Ready to transform your business with our innovative solutions?
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <Link href="/contact" style={{ 
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              color: 'white', padding: '10px 16px', borderRadius: 8,
+              textAlign: 'center', textDecoration: 'none', fontWeight: 600
+            }}>Request Quote</Link>
+            <a href="tel:+13024640950" style={{ 
+              background: 'rgba(255,255,255,0.1)', color: 'white', 
+              padding: '10px 16px', borderRadius: 8,
+              textAlign: 'center', textDecoration: 'none', fontWeight: 600
+            }}>Call Now</a>
+          </div>
+        </div>
+      </div>
+      
+      <div style={{ 
+        borderTop: '1px solid rgba(255,255,255,0.1)', 
+        padding: '20px', textAlign: 'center' 
+      }}>
+        <small style={{ opacity: 0.7 }}>
+          © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
+          <a href="/privacy" style={{ color: '#93c5fd', marginLeft: 8 }}>Privacy Policy</a>
+        </small>
       </div>
     </footer>
   );

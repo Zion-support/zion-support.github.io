@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Head>
         <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 40+ innovative services including cloud optimization, AI automation, and enterprise technology solutions." />
+        <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 140+ innovative services including cloud optimization, AI automation, and enterprise technology solutions." />
         <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity" />
         <link rel="canonical" href={contact.site} />
       </Head>
@@ -29,8 +29,8 @@ export default function Home() {
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              We deliver cutting-edge technology solutions with 40+ micro SaaS products, 
-              advanced AI services, and comprehensive IT solutions. From cloud optimization 
+              We deliver cutting-edge technology solutions with 60+ micro SaaS products, 
+              40+ advanced AI services, and 40+ comprehensive IT solutions. From cloud optimization 
               to AI automation, we help businesses scale efficiently and securely.
             </p>
             
@@ -48,15 +48,15 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-blue-400 mb-2">40+</h3>
+                <h3 className="text-2xl font-bold text-blue-400 mb-2">60+</h3>
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">16+</h3>
+                <h3 className="text-2xl font-bold text-purple-400 mb-2">40+</h3>
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-green-400 mb-2">16+</h3>
+                <h3 className="text-2xl font-bold text-green-400 mb-2">40+</h3>
                 <p className="text-slate-300">IT Solutions</p>
               </div>
             </div>
@@ -79,9 +79,10 @@ export default function Home() {
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
                   <li>• Cloud Cost Guard (FinOps Assistant)</li>
-                  <li>• Customer Churn Predictor</li>
-                  <li>• API Rate Limiter & Analytics</li>
-                  <li>• Smart Document Processing</li>
+                  <li>• Smart Invoice Processing & AP Automation</li>
+                  <li>• AI-Powered Code Review Assistant</li>
+                  <li>• Dynamic Pricing Optimization Engine</li>
+                  <li>• Intelligent Supply Chain Monitor</li>
                 </ul>
                 <Link href="/services" className="text-blue-400 hover:text-blue-300 font-semibold">
                   View All Micro SaaS →
@@ -95,10 +96,11 @@ export default function Home() {
                   natural language processing, fraud detection, and conversational AI platforms.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Computer Vision & Image Analysis</li>
-                  <li>• AI-Powered Fraud Detection</li>
-                  <li>• Conversational AI Platform</li>
-                  <li>• Predictive Analytics & Forecasting</li>
+                  <li>• AI-Powered Cybersecurity Threat Detection</li>
+                  <li>• Smart Manufacturing Quality Control</li>
+                  <li>• AI-Powered Healthcare Diagnostics</li>
+                  <li>• Intelligent Process Mining & Optimization</li>
+                  <li>• AI-Powered Smart City Solutions</li>
                 </ul>
                 <Link href="/services" className="text-purple-400 hover:text-purple-300 font-semibold">
                   View All AI Services →
@@ -112,10 +114,11 @@ export default function Home() {
                   DevOps, Kubernetes orchestration, and data engineering services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Cloud Migration & Modernization</li>
-                  <li>• Kubernetes & Container Orchestration</li>
-                  <li>• Cybersecurity Hardening & SOC</li>
-                  <li>• Data Engineering & Analytics</li>
+                  <li>• Enterprise Application Integration</li>
+                  <li>• Advanced Threat Intelligence Platform</li>
+                  <li>• High-Performance Computing Solutions</li>
+                  <li>• IoT Platform & Device Management</li>
+                  <li>• Enterprise Digital Transformation Consulting</li>
                 </ul>
                 <Link href="/services" className="text-green-400 hover:text-green-300 font-semibold">
                   View All IT Services →
