@@ -1,7 +1,1 @@
-{
-  "/_error": "pages/_error.js",
-  "/_app": "pages/_app.js",
-  "/": "pages/index.html",
-  "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
-}
+{"/_app":"pages/_app.js","/_error":"pages/_error.js","/_document":"pages/_document.js","/NotFound":"pages/NotFound.html","/about":"pages/about.html","/accessibility":"pages/accessibility.html","/api-reference":"pages/api-reference.html","/careers":"pages/careers.html","/contact.route":"pages/contact.route.html","/data-protection":"pages/data-protection.html","/contact":"pages/contact.html","/docs":"pages/docs.html","/events":"pages/events.html","/faq":"pages/faq.html","/index.route":"pages/index.route.html","/":"pages/index.html","/news":"pages/news.html","/partners":"pages/partners.html","/pricing":"pages/pricing.html","/research-development":"pages/research-development.html","/search":"pages/search.html","/services-overview":"pages/services-overview.html","/services/ai-content-generator":"pages/services/ai-content-generator.html","/services/ai-solutions":"pages/services/ai-solutions.html","/services/cloud":"pages/services/cloud.html","/services/data":"pages/services/data.html","/services/index.route":"pages/services/index.route.html","/services":"pages/services.html","/services/transformation":"pages/services/transformation.html","/solutions":"pages/solutions.html","/solutions/smb":"pages/solutions/smb.html","/solutions/startup":"pages/solutions/startup.html","/support":"pages/support.html","/system-status":"pages/system-status.html","/team":"pages/team.html","/404":"pages/404.html"}
