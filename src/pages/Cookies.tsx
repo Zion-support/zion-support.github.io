@@ -8,6 +8,7 @@ import { motion } from "framer - motion",
         "Shopping: cart functionality",";"
         "Security: and fraud prevention",";"
         "Load: balancing and performance",","""
+  );
 export default function Cookies() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="Cookies - Zion Tech Group" description="Professional Cookies services by Zion Tech Group"  />"

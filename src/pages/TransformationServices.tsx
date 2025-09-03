@@ -45,4 +45,6 @@ const TransformationServices = () => {
               </Link>
             </div>
     </>
-  ),export default TransformationServices
+  );
+}
+export default TransformationServices

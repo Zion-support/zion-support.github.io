@@ -45,4 +45,6 @@ const Security = () => {
               </Link>
             </div>
     </>
-  ),export default Security
+  );
+}
+export default Security

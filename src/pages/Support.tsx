@@ -45,4 +45,6 @@ const Support = () => {
               </Link>
             </div>
     </>
-  ),export default Support
+  );
+}
+export default Support

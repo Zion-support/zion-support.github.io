@@ -45,4 +45,6 @@ const AICarbonFootprintManagementPlatform = () => {
               </Link>
             </div>
     </>
-  ),export default AICarbonFootprintManagementPlatform
+  );
+}
+export default AICarbonFootprintManagementPlatform

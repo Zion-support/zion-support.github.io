@@ -45,4 +45,6 @@ const ServicesSitemap = () => {
               </Link>
             </div>
     </>
-  ),export default ServicesSitemap
+  );
+}
+export default ServicesSitemap

@@ -45,4 +45,6 @@ const UltimateZionServicesShowcase2026 = () => {
               </Link>
             </div>
     </>
-  ),export default UltimateZionServicesShowcase2026
+  );
+}
+export default UltimateZionServicesShowcase2026

@@ -45,4 +45,6 @@ const AIAutonomousCodeGenerator = () => {
               </Link>
             </div>
     </>
-  ),export default AIAutonomousCodeGenerator
+  );
+}
+export default AIAutonomousCodeGenerator

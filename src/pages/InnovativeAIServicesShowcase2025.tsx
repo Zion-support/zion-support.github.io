@@ -4,4 +4,6 @@ import React from "react"; Target, Users, BarChart3, MessageSquare, Phone, Mail,
 "",
 ",>
 
+    </div>
+  );
 export default Component

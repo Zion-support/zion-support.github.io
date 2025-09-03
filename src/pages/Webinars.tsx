@@ -45,4 +45,6 @@ const Webinars = () => {
               </Link>
             </div>
     </>
-  ),export default Webinars
+  );
+}
+export default Webinars

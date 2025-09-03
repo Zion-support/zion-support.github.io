@@ -45,4 +45,6 @@ const index = () => {
               </Link>
             </div>
     </>
-  ),export default index
+  );
+}
+export default index

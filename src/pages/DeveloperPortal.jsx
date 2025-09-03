@@ -19,4 +19,6 @@ const apiFeatures = [] const quickStartSteps = [] const resources = [] return ("
     <div className="min - h-screen bg-background"> <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group&apos;s comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical='https:  ,"
 ""
 ",
+    </div>
+  );
 export default Component

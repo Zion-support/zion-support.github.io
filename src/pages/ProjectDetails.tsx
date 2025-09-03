@@ -45,4 +45,6 @@ const ProjectDetails = () => {
               </Link>
             </div>
     </>
-  ),export default ProjectDetails
+  );
+}
+export default ProjectDetails

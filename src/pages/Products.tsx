@@ -45,4 +45,6 @@ const Products = () => {
               </Link>
             </div>
     </>
-  ),export default Products
+  );
+}
+export default Products

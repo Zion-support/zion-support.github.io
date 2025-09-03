@@ -45,4 +45,6 @@ const AIEnergyOptimization = () => {
               </Link>
             </div>
     </>
-  ),export default AIEnergyOptimization
+  );
+}
+export default AIEnergyOptimization

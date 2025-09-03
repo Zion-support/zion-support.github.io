@@ -360,6 +360,7 @@ const LinkHealthMonitor = () => {}"});,"})"
           </motion.div>;,"});,"})"
         </motion.div>)}"});,"})"
     </>)};,"});,"})"
+  </Link>
 export default LinkHealthMonitor,"});,"})"
 ;,"});,"})"
 export { LinkHealthMonitor };,"});,"})"

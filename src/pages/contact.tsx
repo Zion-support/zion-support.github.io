@@ -45,4 +45,6 @@ const contact = () => {
               </Link>
             </div>
     </>
-  ),export default contact
+  );
+}
+export default contact

@@ -1,8 +1,8 @@
 import React from "react"
   BookOpen, Code, FileText, Video, Download,
   Search, ArrowRight, ExternalLink, Star, Users} from "lucide-react
+  );
 export default function Documentation() {;
-
   const docCategories = []
 
   const popularDocs = []&quot

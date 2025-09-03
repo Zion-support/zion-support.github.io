@@ -45,4 +45,6 @@ const ServicesPage = () => {
               </Link>
             </div>
     </>
-  ),export default ServicesPage
+  );
+}
+export default ServicesPage

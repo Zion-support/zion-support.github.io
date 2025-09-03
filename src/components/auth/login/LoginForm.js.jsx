@@ -97,6 +97,9 @@ function LoginForm() {}"});,"})"
       <LoadingOverlay visible="{isLoading" || isSubmitting}       />;,"});,"})"
     </Form>)};,"});,"})"
 export { LoginForm };,"});,"})"
+  } catch (error) {
+    console.error(error);
+  }
 export default LoginForm,"});,"})"
 ;,"});,"})"
 export default LoginForm,"});,"})"

@@ -45,4 +45,6 @@ const AIDataPrivacyCompliancePlatform = () => {
               </Link>
             </div>
     </>
-  ),export default AIDataPrivacyCompliancePlatform
+  );
+}
+export default AIDataPrivacyCompliancePlatform

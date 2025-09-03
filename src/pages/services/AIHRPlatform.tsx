@@ -45,4 +45,6 @@ const AIHRPlatform = () => {
               </Link>
             </div>
     </>
-  ),export default AIHRPlatform
+  );
+}
+export default AIHRPlatform

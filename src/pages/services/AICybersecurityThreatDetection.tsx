@@ -45,4 +45,6 @@ const AICybersecurityThreatDetection = () => {
               </Link>
             </div>
     </>
-  ),export default AICybersecurityThreatDetection
+  );
+}
+export default AICybersecurityThreatDetection

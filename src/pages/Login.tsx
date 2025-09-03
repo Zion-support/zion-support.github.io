@@ -45,4 +45,6 @@ const Login = () => {
               </Link>
             </div>
     </>
-  ),export default Login
+  );
+}
+export default Login

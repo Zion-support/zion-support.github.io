@@ -203,6 +203,7 @@ import React { useState, useEffect } from "react";""";,"});,"})","});,"})","})"
           </motion.div>;,"});,"})"
         </motion.div>)}"});,"})"
     </>)};,"});,"})"
+  </Link>
 export default LinkHealthMonitor,"});,"});"
 }}}}"});,"})"
 ;,"});,"})"

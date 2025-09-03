@@ -45,4 +45,6 @@ const Leadership = () => {
               </Link>
             </div>
     </>
-  ),export default Leadership
+  );
+}
+export default Leadership

@@ -28,4 +28,5 @@ const ITInfrastructure2026: React.FC = () => {
           </div>;,
   )}
 
+);
 export default ITInfrastructure2026;""

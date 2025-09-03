@@ -45,4 +45,6 @@ const SolutionsPage = () => {
               </Link>
             </div>
     </>
-  ),export default SolutionsPage
+  );
+}
+export default SolutionsPage

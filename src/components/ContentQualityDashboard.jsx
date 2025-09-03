@@ -296,6 +296,9 @@ const ContentQualityDashboard = ({ className = "" }) => {}"});,"})"
               Clear Cache,"});,"})"
         </div>)}"});,"})"
     </div>)};,"});,"})"
+  } catch (error) {
+    console.error(error);
+  }
 export default ContentQualityDashboard,"});,"});"
 }}}}}}}}}"});,"})"
 ;,"});,"})"

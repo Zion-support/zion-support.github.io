@@ -45,4 +45,6 @@ const Wishlist = () => {
               </Link>
             </div>
     </>
-  ),export default Wishlist
+  );
+}
+export default Wishlist

@@ -45,4 +45,6 @@ const AICustomerExperienceAnalyticsPlatform = () => {
               </Link>
             </div>
     </>
-  ),export default AICustomerExperienceAnalyticsPlatform
+  );
+}
+export default AICustomerExperienceAnalyticsPlatform

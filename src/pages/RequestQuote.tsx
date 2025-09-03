@@ -45,4 +45,6 @@ const RequestQuote = () => {
               </Link>
             </div>
     </>
-  ),export default RequestQuote
+  );
+}
+export default RequestQuote

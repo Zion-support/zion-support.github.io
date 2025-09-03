@@ -45,4 +45,6 @@ const SearchPage = () => {
               </Link>
             </div>
     </>
-  ),export default SearchPage
+  );
+}
+export default SearchPage

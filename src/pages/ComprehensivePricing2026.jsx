@@ -16,7 +16,8 @@ export default function ComprehensivePricing2026() {return (
       </div>
   )
 }
- export default ComprehensivePricing2026,
+ );
+export default ComprehensivePricing2026,
 export default ComprehensivePricing2026&apos;&apos,
 """
 const ComprehensivePricing2026: React.FC = () => {

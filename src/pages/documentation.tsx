@@ -45,4 +45,6 @@ const documentation = () => {
               </Link>
             </div>
     </>
-  ),export default documentation
+  );
+}
+export default documentation

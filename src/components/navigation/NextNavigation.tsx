@@ -243,4 +243,5 @@ initial="{{" opacity: 0, height: 0 }}"
     </nav>
   )}
 ";
+);
 export default NextNavigation;"

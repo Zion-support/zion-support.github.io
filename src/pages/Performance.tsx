@@ -45,4 +45,6 @@ const Performance = () => {
               </Link>
             </div>
     </>
-  ),export default Performance
+  );
+}
+export default Performance

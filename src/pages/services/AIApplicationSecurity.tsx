@@ -45,4 +45,6 @@ const AIApplicationSecurity = () => {
               </Link>
             </div>
     </>
-  ),export default AIApplicationSecurity
+  );
+}
+export default AIApplicationSecurity

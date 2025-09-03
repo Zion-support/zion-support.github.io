@@ -1,6 +1,5 @@
 import { useEffect } from "react"
 export function usePerformanceMonitoring() {;
-
   useEffect(() => {
     const sendToAnalytics = (metric) => {
       // comment

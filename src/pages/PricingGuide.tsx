@@ -45,4 +45,6 @@ const PricingGuide = () => {
               </Link>
             </div>
     </>
-  ),export default PricingGuide
+  );
+}
+export default PricingGuide

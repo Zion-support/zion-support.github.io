@@ -45,4 +45,6 @@ const AIElasticsearch = () => {
               </Link>
             </div>
     </>
-  ),export default AIElasticsearch
+  );
+}
+export default AIElasticsearch

@@ -45,4 +45,6 @@ const SystemStatus = () => {
               </Link>
             </div>
     </>
-  ),export default SystemStatus
+  );
+}
+export default SystemStatus

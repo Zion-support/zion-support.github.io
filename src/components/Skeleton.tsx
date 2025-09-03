@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils"
 interface SkeletonProps {
   className?: string  lines?: number}
 ;
+  );
 export default function Skeleton() {;
 
   if (lines === 1) {;

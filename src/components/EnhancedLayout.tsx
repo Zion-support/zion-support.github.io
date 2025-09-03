@@ -184,5 +184,6 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
       </SEOOptimizer>
     </PerformanceOptimizer>
   )}
+);
 export default EnhancedLayout;";
 "

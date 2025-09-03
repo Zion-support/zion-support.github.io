@@ -45,4 +45,6 @@ const Services2026 = () => {
               </Link>
             </div>
     </>
-  ),export default Services2026
+  );
+}
+export default Services2026

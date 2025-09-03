@@ -9,4 +9,6 @@ import React { useState, useEffect } from "react" Shield, Heart, DollarSign, Tar
 ""
 ",>
 
+    </div>
+  );
 export default Component

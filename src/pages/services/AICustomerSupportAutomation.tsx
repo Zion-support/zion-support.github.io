@@ -45,4 +45,6 @@ const AICustomerSupportAutomation = () => {
               </Link>
             </div>
     </>
-  ),export default AICustomerSupportAutomation
+  );
+}
+export default AICustomerSupportAutomation

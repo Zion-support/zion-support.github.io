@@ -84,4 +84,5 @@ function App() {
     </ErrorBoundary>"
 "
 
+  );
 export default Component

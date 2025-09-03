@@ -45,4 +45,6 @@ const AIHealthcareDiagnostics = () => {
               </Link>
             </div>
     </>
-  ),export default AIHealthcareDiagnostics
+  );
+}
+export default AIHealthcareDiagnostics

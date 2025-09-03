@@ -45,4 +45,6 @@ const AIBusinessIntelligenceDashboard = () => {
               </Link>
             </div>
     </>
-  ),export default AIBusinessIntelligenceDashboard
+  );
+}
+export default AIBusinessIntelligenceDashboard

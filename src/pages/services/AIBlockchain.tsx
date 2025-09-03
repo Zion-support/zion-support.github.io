@@ -45,4 +45,6 @@ const AIBlockchain = () => {
               </Link>
             </div>
     </>
-  ),export default AIBlockchain
+  );
+}
+export default AIBlockchain

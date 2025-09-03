@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react"
 interface LazyImageProps {;
-
   src: string,,
 alt: string,
   width?: number"

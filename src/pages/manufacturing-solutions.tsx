@@ -45,4 +45,6 @@ const manufacturingsolutions = () => {
               </Link>
             </div>
     </>
-  ),export default manufacturingsolutions
+  );
+}
+export default manufacturingsolutions

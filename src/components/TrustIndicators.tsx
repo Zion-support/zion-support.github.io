@@ -56,4 +56,5 @@ const TrustIndicators: React.FC = () => {
             </div>
     </section>
   )}'
-"export default TrustIndicators;"`""
+");
+export default TrustIndicators;"`""

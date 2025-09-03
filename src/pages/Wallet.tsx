@@ -45,4 +45,6 @@ const Wallet = () => {
               </Link>
             </div>
     </>
-  ),export default Wallet
+  );
+}
+export default Wallet

@@ -589,4 +589,5 @@ Call: +1 302 464 0950,
     </>
   )}
 
-"export default AIServicesPricingComparison2025;"
+");
+export default AIServicesPricingComparison2025;"

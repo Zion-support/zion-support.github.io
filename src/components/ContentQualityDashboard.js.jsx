@@ -347,6 +347,9 @@ const ContentQualityDashboard = ({ className = "" }) => {    const [isOpen, setI
           </div>;,"});,"})"
         </div>)}"});,"})"
     </div>)};,"});,"})"
+  } catch (error) {
+    console.error(error);
+  }
 export default ContentQualityDashboard,"});,"})"
 ;,"});,"})"
 export { ContentQualityDashboard };,"});,"})"

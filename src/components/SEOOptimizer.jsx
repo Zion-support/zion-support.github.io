@@ -264,6 +264,9 @@
               Export,"});,"})"
         </div>)}"});,"})"
     </div>)};,"});,"})"
+  } catch (error) {
+    console.error(error);
+  }
 export default SEOOptimizer,"});,"});"
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"});,"})"
 export { SEOOptimizer };,"});,"})"

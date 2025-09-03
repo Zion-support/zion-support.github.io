@@ -311,4 +311,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
 ";"
 ;"
 
+  } catch (error) {
+    console.error(error);
+  }
 export default Component

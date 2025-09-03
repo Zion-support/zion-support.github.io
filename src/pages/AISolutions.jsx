@@ -8,4 +8,6 @@ import React from "react";""; Brain, Cpu, Shield, Cloud, Zap, Target, Users,"; B
 ">
 "",
 ",,
+    </div>
+  );
 export default Component

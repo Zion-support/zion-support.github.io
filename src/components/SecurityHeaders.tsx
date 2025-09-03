@@ -38,4 +38,5 @@ const securityMetaTags = document.querySelectorAll("meta[http-equiv]")
 }
   return null}
 
-"export default SecurityHeaders;"
+");
+export default SecurityHeaders;"

@@ -45,4 +45,6 @@ const IoTEdgeComputing = () => {
               </Link>
             </div>
     </>
-  ),export default IoTEdgeComputing
+  );
+}
+export default IoTEdgeComputing

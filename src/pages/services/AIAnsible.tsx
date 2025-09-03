@@ -45,4 +45,6 @@ const AIAnsible = () => {
               </Link>
             </div>
     </>
-  ),export default AIAnsible
+  );
+}
+export default AIAnsible

@@ -1,4 +1,5 @@
 import React from "react"
+  );
 export default function Enterpriseroutes() {
   return (
     <div className="min-h-screen bg-white">

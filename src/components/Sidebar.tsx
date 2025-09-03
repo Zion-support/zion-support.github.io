@@ -246,4 +246,5 @@ className="block w-full text-center px-4 py-2 border border-blue-600 text-blue-6
   ChevronRight} from "lucide-react"
 "
 
+  ]
 export default Component

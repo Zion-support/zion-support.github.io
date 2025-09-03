@@ -45,4 +45,6 @@ const AIGrafana = () => {
               </Link>
             </div>
     </>
-  ),export default AIGrafana
+  );
+}
+export default AIGrafana

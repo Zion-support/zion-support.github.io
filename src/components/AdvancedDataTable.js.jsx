@@ -701,4 +701,7 @@ const renderCell = (column, item, index) => {}
 """"""`""
 "
 
+  } catch (error) {
+    console.error(error);
+  }
 export default Component

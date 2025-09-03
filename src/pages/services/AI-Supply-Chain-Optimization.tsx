@@ -45,4 +45,6 @@ const AISupplyChainOptimization = () => {
               </Link>
             </div>
     </>
-  ),export default AISupplyChainOptimization
+  );
+}
+export default AISupplyChainOptimization

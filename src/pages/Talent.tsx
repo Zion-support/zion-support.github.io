@@ -45,4 +45,6 @@ const Talent = () => {
               </Link>
             </div>
     </>
-  ),export default Talent
+  );
+}
+export default Talent

@@ -45,4 +45,6 @@ const AIFinancialRiskManagement = () => {
               </Link>
             </div>
     </>
-  ),export default AIFinancialRiskManagement
+  );
+}
+export default AIFinancialRiskManagement

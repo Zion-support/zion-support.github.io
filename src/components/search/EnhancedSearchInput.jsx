@@ -266,4 +266,5 @@ break;""
 "`""
 "
 
+  ]
 export default Component

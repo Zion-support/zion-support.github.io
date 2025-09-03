@@ -4,6 +4,7 @@ TooltipProvider,
   TooltipProvider,
   TooltipTrigger"
 } from "@/components/ui/tooltip
+  );
 export default function ProductCard(  {product, onBuy, buyDisabled = false }) {const { isAuthenticated } = useAuth()
 }
   const {isWishlisted, toggle } = useWishlist()

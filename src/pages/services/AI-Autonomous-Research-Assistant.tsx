@@ -45,4 +45,6 @@ const AIAutonomousResearchAssistant = () => {
               </Link>
             </div>
     </>
-  ),export default AIAutonomousResearchAssistant
+  );
+}
+export default AIAutonomousResearchAssistant

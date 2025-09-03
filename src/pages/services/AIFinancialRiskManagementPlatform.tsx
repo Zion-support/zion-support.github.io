@@ -45,4 +45,6 @@ const AIFinancialRiskManagementPlatform = () => {
               </Link>
             </div>
     </>
-  ),export default AIFinancialRiskManagementPlatform
+  );
+}
+export default AIFinancialRiskManagementPlatform

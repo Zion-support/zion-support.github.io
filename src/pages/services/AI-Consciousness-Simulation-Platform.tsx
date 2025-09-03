@@ -45,4 +45,6 @@ const AIConsciousnessSimulationPlatform = () => {
               </Link>
             </div>
     </>
-  ),export default AIConsciousnessSimulationPlatform
+  );
+}
+export default AIConsciousnessSimulationPlatform

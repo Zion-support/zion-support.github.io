@@ -3,4 +3,7 @@ const formSchema = z.object({ date: z .date({ required_error: "Please select a d
 )
 }
 "
+  } catch (error) {
+    console.error(error);
+  }
 export default ComponentName;"

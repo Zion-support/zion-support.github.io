@@ -45,4 +45,6 @@ const InterviewAssessmentAI = () => {
               </Link>
             </div>
     </>
-  ),export default InterviewAssessmentAI
+  );
+}
+export default InterviewAssessmentAI

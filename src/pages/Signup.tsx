@@ -45,4 +45,6 @@ const Signup = () => {
               </Link>
             </div>
     </>
-  ),export default Signup
+  );
+}
+export default Signup

@@ -1824,4 +1824,7 @@ modelId: e.target.value &apos,&apos,",
 ";"
 ;"
 
+  } catch (error) {
+    console.error(error);
+  }
 export default Component

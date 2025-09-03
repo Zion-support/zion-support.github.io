@@ -59,4 +59,5 @@ technologies["Polkadot,Cosmos,LayerZero,Wormhole"] } ] const blockchainTechnolog
 ""
 "
 
+  </Link>
 export default Component

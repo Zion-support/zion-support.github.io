@@ -45,4 +45,6 @@ const AIContentCreation = () => {
               </Link>
             </div>
     </>
-  ),export default AIContentCreation
+  );
+}
+export default AIContentCreation

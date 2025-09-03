@@ -45,4 +45,6 @@ const Team = () => {
               </Link>
             </div>
     </>
-  ),export default Team
+  );
+}
+export default Team

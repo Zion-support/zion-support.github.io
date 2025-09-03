@@ -45,4 +45,6 @@ const Status = () => {
               </Link>
             </div>
     </>
-  ),export default Status
+  );
+}
+export default Status

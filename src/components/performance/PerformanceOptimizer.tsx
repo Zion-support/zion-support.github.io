@@ -1,6 +1,5 @@
 import React { useEffect, useState } from "react"
 interface PerformanceMetrics {;
-
   loadTime: number,;
   renderTime: number,;
   memoryUsage: number,;

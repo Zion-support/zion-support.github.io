@@ -1231,4 +1231,7 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
 </>)};"`"
 "
 
+  } catch (error) {
+    console.error(error);
+  }
 export default Component

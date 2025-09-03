@@ -141,6 +141,9 @@ import React { useState, useEffect } from "react";,"});,"})","})"
             Great job! All links are working properly.Your website is in excellent health.</p>;,"});,"})"
         </div>)}"});,"})"
     </div>)};,"});,"})"
+  } catch (error) {
+    console.error(error);
+  }
 export default LinkHealthChecker,"});,"});"
 }}}}}}}}}"});,"})"
 ;,"});,"})"
@@ -156,6 +159,5 @@ export { LinkHealthChecker };,"});,"})"
  const LinkHealthChecker = ({ links, className = " }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {""";""
 ""
 }}}"
- const LinkHealthChecker = ({ links, className=" }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {
-""
+ const LinkHealthChecker = ({ links, className=" }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try { ""
 "

@@ -238,6 +238,9 @@ const ContactForm = () => {;,"});,"})"
           .</p>;,"});,"})"
       </form>;,"});,"})"
     </div>)};,"});,"})"
+  } catch (error) {
+    console.error(error);
+  }
 export default ContactForm,"});,"})"
 ;,"});,"})"
 export { ContactForm };,"});,"})"

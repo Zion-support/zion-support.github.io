@@ -1,5 +1,6 @@
 import React, {useState } from "react"
 "
+  );
 export default function ComprehensivePricing2025() {""
   const [billingCycle, setBillingCycle] = useState()
 }

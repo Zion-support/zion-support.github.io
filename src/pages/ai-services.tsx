@@ -45,4 +45,6 @@ const aiservices = () => {
               </Link>
             </div>
     </>
-  ),export default aiservices
+  );
+}
+export default aiservices

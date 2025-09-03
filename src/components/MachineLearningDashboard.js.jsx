@@ -1354,4 +1354,7 @@ Started: {job.startTime.toLocaleString()}"
 """"'""`""
 "
 
+  } catch (error) {
+    console.error(error);
+  }
 export default Component

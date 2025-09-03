@@ -45,4 +45,6 @@ const comprehensiveservicesshowcase = () => {
               </Link>
             </div>
     </>
-  ),export default comprehensiveservicesshowcase
+  );
+}
+export default comprehensiveservicesshowcase

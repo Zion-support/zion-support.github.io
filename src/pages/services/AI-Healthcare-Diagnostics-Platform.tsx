@@ -45,4 +45,6 @@ const AIHealthcareDiagnosticsPlatform = () => {
               </Link>
             </div>
     </>
-  ),export default AIHealthcareDiagnosticsPlatform
+  );
+}
+export default AIHealthcareDiagnosticsPlatform

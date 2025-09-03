@@ -115,8 +115,7 @@ export function HomePage() {const features = []
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300  >
                 Get Started,
               </Link>
-            </div>
-",
+            </div> ",
         {/* comment */}""
         <div className="absolute top-20 left-10 w-2 h-2 bg-zion-cyan/30 rounded-full animate-pulse"  />""
         <div className="absolute top-40 right-20 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-pulse" style="{{" animationDelay: "1s" }}       />"
@@ -488,4 +487,5 @@ export function HomePage() {const features = []
 }"`"
 "
 
+  );
 export default Component

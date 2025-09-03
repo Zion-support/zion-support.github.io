@@ -741,4 +741,7 @@ const renderField = useCallback((field) => {}""
 """"""`'"
 "
 
+  } catch (error) {
+    console.error(error);
+  }
 export default Component

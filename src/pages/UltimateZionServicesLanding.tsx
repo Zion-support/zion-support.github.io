@@ -45,4 +45,6 @@ const UltimateZionServicesLanding = () => {
               </Link>
             </div>
     </>
-  ),export default UltimateZionServicesLanding
+  );
+}
+export default UltimateZionServicesLanding

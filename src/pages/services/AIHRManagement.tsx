@@ -45,4 +45,6 @@ const AIHRManagement = () => {
               </Link>
             </div>
     </>
-  ),export default AIHRManagement
+  );
+}
+export default AIHRManagement

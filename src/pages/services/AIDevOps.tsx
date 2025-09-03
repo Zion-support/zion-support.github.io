@@ -45,4 +45,6 @@ const AIDevOps = () => {
               </Link>
             </div>
     </>
-  ),export default AIDevOps
+  );
+}
+export default AIDevOps

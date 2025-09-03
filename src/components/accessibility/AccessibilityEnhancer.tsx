@@ -1,6 +1,5 @@
 import React { useEffect, useState } from "react"
 interface AccessibilityMetrics {;
-
   contrastRatio: number,;
   fontSize: number,;
   focusVisible: boolean,;

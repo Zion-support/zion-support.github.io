@@ -45,4 +45,6 @@ const Match = () => {
               </Link>
             </div>
     </>
-  ),export default Match
+  );
+}
+export default Match

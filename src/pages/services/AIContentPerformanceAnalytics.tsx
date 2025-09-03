@@ -45,4 +45,6 @@ const AIContentPerformanceAnalytics = () => {
               </Link>
             </div>
     </>
-  ),export default AIContentPerformanceAnalytics
+  );
+}
+export default AIContentPerformanceAnalytics

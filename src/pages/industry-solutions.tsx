@@ -45,4 +45,6 @@ const industrysolutions = () => {
               </Link>
             </div>
     </>
-  ),export default industrysolutions
+  );
+}
+export default industrysolutions

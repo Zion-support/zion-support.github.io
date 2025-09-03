@@ -45,4 +45,6 @@ const News = () => {
               </Link>
             </div>
     </>
-  ),export default News
+  );
+}
+export default News

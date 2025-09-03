@@ -45,4 +45,6 @@ const blog = () => {
               </Link>
             </div>
     </>
-  ),export default blog
+  );
+}
+export default blog

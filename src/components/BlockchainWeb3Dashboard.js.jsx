@@ -1119,4 +1119,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
 """"'""`""
 "
 
+  } catch (error) {
+    console.error(error);
+  }
 export default Component

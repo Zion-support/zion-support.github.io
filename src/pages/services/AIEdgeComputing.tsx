@@ -45,4 +45,6 @@ const AIEdgeComputing = () => {
               </Link>
             </div>
     </>
-  ),export default AIEdgeComputing
+  );
+}
+export default AIEdgeComputing

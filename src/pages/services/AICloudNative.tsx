@@ -45,4 +45,6 @@ const AICloudNative = () => {
               </Link>
             </div>
     </>
-  ),export default AICloudNative
+  );
+}
+export default AICloudNative

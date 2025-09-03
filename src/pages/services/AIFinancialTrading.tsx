@@ -45,4 +45,6 @@ const AIFinancialTrading = () => {
               </Link>
             </div>
     </>
-  ),export default AIFinancialTrading
+  );
+}
+export default AIFinancialTrading
