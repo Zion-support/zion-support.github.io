@@ -394,9 +394,8 @@ export default function AIServices() {
       ],
       pricing: '$10,000 - $40,000/month',
       delivery: '10-20 weeks',
-      category: 'Energy AI'},
       category: 'Energy AI'
-},
+    },
 
     {
       title: 'AI-Powered Cybersecurity Threat Detection',
@@ -407,9 +406,8 @@ export default function AIServices() {
       ],
       pricing: '$7,000 - $30,000/month',
       delivery: '8-16 weeks',
-      category: 'Cybersecurity AI'},
       category: 'Cybersecurity AI'
-},
+    },
 
     {
       title: 'AI-Powered Autonomous Vehicle Fleet Management',
@@ -420,7 +418,8 @@ export default function AIServices() {
       ],
       pricing: '$12,000 - $50,000/month',
       delivery: '12-24 weeks',
-      category: 'Autonomous AI'},
+      category: 'Autonomous AI'
+    },
       category: 'Autonomous AI'
 },
 
@@ -433,7 +432,8 @@ export default function AIServices() {
       ],
       pricing: '$15,000 - $60,000/month',
       delivery: '16-32 weeks',
-      category: 'Climate AI'},
+      category: 'Climate AI'
+    },
       category: 'Climate AI'
 },
 
@@ -446,7 +446,8 @@ export default function AIServices() {
       ],
       pricing: '$25,000 - $100,000/month',
       delivery: '20-40 weeks',
-      category: 'Quantum ML AI'},
+      category: 'Quantum ML AI'
+    },
       category: 'Quantum ML AI'
 },
 
@@ -459,7 +460,8 @@ export default function AIServices() {
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '12-24 weeks',
-      category: 'Synthetic Media AI'},
+      category: 'Synthetic Media AI'
+    },
       category: 'Synthetic Media AI'
 },
 
@@ -472,7 +474,8 @@ export default function AIServices() {
       ],
       pricing: '$20,000 - $80,000/month',
       delivery: '24-48 weeks',
-      category: 'BCI AI'},
+      category: 'BCI AI'
+    },
       category: 'BCI AI'
 },
 
@@ -485,7 +488,8 @@ export default function AIServices() {
       ],
       pricing: '$15,000 - $60,000/month',
       delivery: '16-32 weeks',
-      category: 'Drone Swarm AI'},
+      category: 'Drone Swarm AI'
+    },
       category: 'Drone Swarm AI'
 },
 
@@ -498,7 +502,8 @@ export default function AIServices() {
       ],
       pricing: '$18,000 - $70,000/month',
       delivery: '20-36 weeks',
-      category: 'Precision Medicine AI'},
+      category: 'Precision Medicine AI'
+    },
       category: 'Precision Medicine AI'
 },
 
@@ -511,7 +516,8 @@ export default function AIServices() {
       ],
       pricing: '$30,000 - $120,000/month',
       delivery: '24-48 weeks',
-      category: 'Space Management AI'},
+      category: 'Space Management AI'
+    },
       category: 'Space Management AI'
 },
 
@@ -524,7 +530,8 @@ export default function AIServices() {
       ],
       pricing: '$40,000 - $150,000/month',
       delivery: '32-64 weeks',
-      category: 'Fusion Energy AI'},
+      category: 'Fusion Energy AI'
+    },
       category: 'Fusion Energy AI'
 },
 
@@ -537,7 +544,8 @@ export default function AIServices() {
       ],
       pricing: '$22,000 - $85,000/month',
       delivery: '24-48 weeks',
-      category: 'Synthetic Biology AI'},
+      category: 'Synthetic Biology AI'
+    },
       category: 'Synthetic Biology AI'
 },
 
@@ -550,7 +558,8 @@ export default function AIServices() {
       ],
       pricing: '$16,000 - $65,000/month',
       delivery: '20-40 weeks',
-      category: 'Neuromorphic AI'},
+      category: 'Neuromorphic AI'
+    },
       category: 'Neuromorphic AI'
 },
 
@@ -563,7 +572,8 @@ export default function AIServices() {
       ],
       pricing: '$18,000 - $75,000/month',
       delivery: '24-48 weeks',
-      category: 'Marine AI'},
+      category: 'Marine AI'
+    },
       category: 'Marine AI'
 },
 
@@ -576,7 +586,8 @@ export default function AIServices() {
       ],
       pricing: '$50,000 - $200,000/month',
       delivery: '40-80 weeks',
-      category: 'Earth Digital Twin AI'},
+      category: 'Earth Digital Twin AI'
+    },
       category: 'Earth Digital Twin AI'
 },
 
@@ -589,7 +600,8 @@ export default function AIServices() {
       ],
       pricing: '$100,000 - $500,000/month',
       delivery: '60-120 weeks',
-      category: 'Consciousness AI'},
+      category: 'Consciousness AI'
+    },
       category: 'Consciousness AI'
 },
 
@@ -602,7 +614,8 @@ export default function AIServices() {
       ],
       pricing: '$5,000 - $25,000/month',
       delivery: '6-12 weeks',
-      category: 'Cybersecurity AI'},
+      category: 'Cybersecurity AI'
+    },
       category: 'Cybersecurity AI'
 },
 
@@ -615,7 +628,8 @@ export default function AIServices() {
       ],
       pricing: '$10,000 - $50,000/month',
       delivery: '8-16 weeks',
-      category: 'FinTech AI'},
+      category: 'FinTech AI'
+    },
       category: 'FinTech AI'
 },
 
@@ -639,7 +653,8 @@ export default function AIServices() {
       ],
       pricing: '$25,000 - $100,000/month',
       delivery: '16-32 weeks',
-      category: 'Autonomous Vehicle AI'},
+      category: 'Autonomous Vehicle AI'
+    },
       category: 'Autonomous Vehicle AI'
 },
 
@@ -652,7 +667,8 @@ export default function AIServices() {
       ],
       pricing: '$20,000 - $80,000/month',
       delivery: '12-24 weeks',
-      category: 'Energy AI'},
+      category: 'Energy AI'
+    },
       category: 'Energy AI'
 },
 
@@ -665,7 +681,8 @@ export default function AIServices() {
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '10-20 weeks',
-      category: 'AgTech AI'},
+      category: 'AgTech AI'
+    },
       category: 'AgTech AI'
 },
 
@@ -678,7 +695,8 @@ export default function AIServices() {
       ],
       pricing: '$30,000 - $150,000/month',
       delivery: '20-40 weeks',
-      category: 'Smart City AI'},
+      category: 'Smart City AI'
+    },
       category: 'Smart City AI'
 },
 
@@ -691,7 +709,8 @@ export default function AIServices() {
       ],
       pricing: '$12,000 - $60,000/month',
       delivery: '10-24 weeks',
-      category: 'Manufacturing AI'},
+      category: 'Manufacturing AI'
+    },
       category: 'Manufacturing AI'
 },
 
@@ -704,7 +723,8 @@ export default function AIServices() {
       ],
       pricing: '$99 - $499/month',
       delivery: '6-12 weeks',
-      category: 'Personal Health AI'},
+      category: 'Personal Health AI'
+    },
       category: 'Personal Health AI'
 },
 
@@ -717,7 +737,8 @@ export default function AIServices() {
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '8-12 weeks',
-      category: 'Predictive AI'},
+      category: 'Predictive AI'
+    },
       category: 'Predictive AI'
 },
 
@@ -730,7 +751,8 @@ export default function AIServices() {
       ],
       pricing: '$5,000 - $25,000/month',
       delivery: '6-10 weeks',
-      category: 'Voice AI'},
+      category: 'Voice AI'
+    },
       category: 'Voice AI'
 },
 
@@ -743,7 +765,8 @@ export default function AIServices() {
       ],
       pricing: '$2,500 - $12,000/month',
       delivery: '4-8 weeks',
-      category: 'Development AI'},
+      category: 'Development AI'
+    },
       category: 'Development AI'
 },
 
@@ -756,7 +779,8 @@ export default function AIServices() {
       ],
       pricing: '$3,000 - $15,000/month',
       delivery: '5-8 weeks',
-      category: 'Blockchain AI'},
+      category: 'Blockchain AI'
+    },
       category: 'Blockchain AI'
 },
 
@@ -769,7 +793,8 @@ export default function AIServices() {
       ],
       pricing: '$4,000 - $18,000/month',
       delivery: '6-10 weeks',
-      category: 'Customer AI'},
+      category: 'Customer AI'
+    },
       category: 'Customer AI'
 },
 
@@ -782,7 +807,8 @@ export default function AIServices() {
       ],
       pricing: '$5,000 - $20,000/month',
       delivery: '6-8 weeks',
-      category: 'MLOps AI'},
+      category: 'MLOps AI'
+    },
       category: 'MLOps AI'
 },
 
@@ -795,7 +821,8 @@ export default function AIServices() {
       ],
       pricing: '$3,000 - $15,000/month',
       delivery: '4-6 weeks',
-      category: 'Industrial AI'},
+      category: 'Industrial AI'
+    },
       category: 'Industrial AI'
 },
 
@@ -808,7 +835,8 @@ export default function AIServices() {
       ],
       pricing: '$2,000 - $10,000/month',
       delivery: '3-5 weeks',
-      category: 'NLP AI'},
+      category: 'NLP AI'
+    },
       category: 'NLP AI'
 },
 
@@ -821,7 +849,8 @@ export default function AIServices() {
       ],
       pricing: '$4,000 - $18,000/month',
       delivery: '5-7 weeks',
-      category: 'FinTech AI'},
+      category: 'FinTech AI'
+    },
       category: 'FinTech AI'
 },
 
@@ -834,7 +863,8 @@ export default function AIServices() {
       ],
       pricing: '$5,000 - $25,000/month',
       delivery: '6-10 weeks',
-      category: 'HealthTech AI'},
+      category: 'HealthTech AI'
+    },
       category: 'HealthTech AI'
 },
 
@@ -847,7 +877,8 @@ export default function AIServices() {
       ],
       pricing: '$3,000 - $12,000/month',
       delivery: '4-6 weeks',
-      category: 'Manufacturing AI'},
+      category: 'Manufacturing AI'
+    },
       category: 'Manufacturing AI'
 },
 
@@ -860,7 +891,8 @@ export default function AIServices() {
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '8-12 weeks',
-      category: 'Smart City AI'},
+      category: 'Smart City AI'
+    },
       category: 'Smart City AI'
 },
 
@@ -873,7 +905,8 @@ export default function AIServices() {
       ],
       pricing: '$2,500 - $10,000/month',
       delivery: '4-6 weeks',
-      category: 'AgTech AI'},
+      category: 'AgTech AI'
+    },
       category: 'AgTech AI'
 },
 
@@ -886,7 +919,8 @@ export default function AIServices() {
       ],
       pricing: '$5,000 - $25,000/month',
       delivery: '6-8 weeks',
-      category: 'Trading AI'},
+      category: 'Trading AI'
+    },
       category: 'Trading AI'
 },
 
@@ -899,7 +933,8 @@ export default function AIServices() {
       ],
       pricing: '$4,000 - $18,000/month',
       delivery: '5-7 weeks',
-      category: 'Cybersecurity AI'},
+      category: 'Cybersecurity AI'
+    },
       category: 'Cybersecurity AI'
 },
 
@@ -912,7 +947,8 @@ export default function AIServices() {
       ],
       pricing: '$3,000 - $12,000/month',
       delivery: '4-6 weeks',
-      category: 'Personalization AI'},
+      category: 'Personalization AI'
+    },
       category: 'Personalization AI'
 },
 
@@ -925,7 +961,8 @@ export default function AIServices() {
       ],
       pricing: '$15,000 - $50,000/month',
       delivery: '12-20 weeks',
-      category: 'Quantum AI'},
+      category: 'Quantum AI'
+    },
       category: 'Quantum AI'
 },
 
@@ -938,7 +975,8 @@ export default function AIServices() {
       ],
       pricing: '$20,000 - $75,000/month',
       delivery: '16-24 weeks',
-      category: 'Autonomous AI'},
+      category: 'Autonomous AI'
+    },
       category: 'Autonomous AI'
 },
 
@@ -951,7 +989,8 @@ export default function AIServices() {
       ],
       pricing: '$25,000 - $100,000/month',
       delivery: '20-32 weeks',
-      category: 'Space AI'},
+      category: 'Space AI'
+    },
       category: 'Space AI'
 },
 
@@ -964,7 +1003,8 @@ export default function AIServices() {
       ],
       pricing: '$10,000 - $40,000/month',
       delivery: '12-20 weeks',
-      category: 'Metaverse AI'},
+      category: 'Metaverse AI'
+    },
       category: 'Metaverse AI'
 },
 
@@ -977,7 +1017,8 @@ export default function AIServices() {
       ],
       pricing: '$8,000 - $30,000/month',
       delivery: '10-16 weeks',
-      category: 'Blockchain AI'},
+      category: 'Blockchain AI'
+    },
       category: 'Blockchain AI'
 },
 
@@ -990,7 +1031,8 @@ export default function AIServices() {
       ],
       pricing: '$12,000 - $45,000/month',
       delivery: '14-22 weeks',
-      category: 'Digital Twin AI'},
+      category: 'Digital Twin AI'
+    },
       category: 'Digital Twin AI'
 },
 
@@ -1003,7 +1045,8 @@ export default function AIServices() {
       ],
       pricing: '$6,000 - $25,000/month',
       delivery: '8-14 weeks',
-      category: 'Edge AI'},
+      category: 'Edge AI'
+    },
       category: 'Edge AI'
 },
 
@@ -1016,7 +1059,8 @@ export default function AIServices() {
       ],
       pricing: '$15,000 - $60,000/month',
       delivery: '12-20 weeks',
-      category: 'Cybersecurity AI'},
+      category: 'Cybersecurity AI'
+    },
       category: 'Cybersecurity AI'
 },
 
@@ -1029,7 +1073,8 @@ export default function AIServices() {
       ],
       pricing: '$20,000 - $80,000/month',
       delivery: '16-24 weeks',
-      category: 'Healthcare AI'},
+      category: 'Healthcare AI'
+    },
       category: 'Healthcare AI'
 },
 
@@ -1042,7 +1087,8 @@ export default function AIServices() {
       ],
       pricing: '$4,500 - $18,000/month',
       delivery: '6-8 weeks',
-      category: 'Cybersecurity AI'},
+      category: 'Cybersecurity AI'
+    },
       category: 'Cybersecurity AI'
 },
 
@@ -1066,7 +1112,8 @@ export default function AIServices() {
       ],
       pricing: '$5,000 - $20,000/month',
       delivery: '8-12 weeks',
-      category: 'Legal AI'},
+      category: 'Legal AI'
+    },
       category: 'Legal AI'
 },
 
@@ -1079,7 +1126,8 @@ export default function AIServices() {
       ],
       pricing: '$6,000 - $25,000/month',
       delivery: '8-14 weeks',
-      category: 'Financial AI'},
+      category: 'Financial AI'
+    },
       category: 'Financial AI'
 },
 
@@ -1092,7 +1140,8 @@ export default function AIServices() {
       ],
       pricing: '$4,000 - $16,000/month',
       delivery: '6-10 weeks',
-      category: 'Environmental AI'},
+      category: 'Environmental AI'
+    },
       category: 'Environmental AI'
 },
 
@@ -1105,7 +1154,8 @@ export default function AIServices() {
       ],
       pricing: '$15,000 - $60,000/month',
       delivery: '16-24 weeks',
-      category: 'Autonomous Vehicle AI'},
+      category: 'Autonomous Vehicle AI'
+    },
       category: 'Autonomous Vehicle AI'
 },
 
@@ -1118,7 +1168,8 @@ export default function AIServices() {
       ],
       pricing: '$7,000 - $28,000/month',
       delivery: '10-16 weeks',
-      category: 'Satellite AI'},
+      category: 'Satellite AI'
+    },
       category: 'Satellite AI'
 },
 
@@ -1131,7 +1182,8 @@ export default function AIServices() {
       ],
       pricing: '$8,000 - $32,000/month',
       delivery: '12-20 weeks',
-      category: 'Energy AI'},
+      category: 'Energy AI'
+    },
       category: 'Energy AI'
 },
 
@@ -1144,7 +1196,8 @@ export default function AIServices() {
       ],
       pricing: '$12,000 - $50,000/month',
       delivery: '16-24 weeks',
-      category: 'Pharmaceutical AI'},
+      category: 'Pharmaceutical AI'
+    },
       category: 'Pharmaceutical AI'
 },
 
@@ -1157,7 +1210,8 @@ export default function AIServices() {
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '8-16 weeks',
-      category: 'Generative AI'},
+      category: 'Generative AI'
+    },
       category: 'Generative AI'
 },
 
@@ -1170,7 +1224,8 @@ export default function AIServices() {
       ],
       pricing: '$25,000 - $100,000/month',
       delivery: '20-40 weeks',
-      category: 'Autonomous Systems AI'},
+      category: 'Autonomous Systems AI'
+    },
       category: 'Autonomous Systems AI'
 },
 
@@ -1183,7 +1238,8 @@ export default function AIServices() {
       ],
       pricing: '$15,000 - $75,000/month',
       delivery: '12-24 weeks',
-      category: 'Financial AI'},
+      category: 'Financial AI'
+    },
       category: 'Financial AI'
 },
 
@@ -1196,7 +1252,8 @@ export default function AIServices() {
       ],
       pricing: '$10,000 - $50,000/month',
       delivery: '8-16 weeks',
-      category: 'Cybersecurity AI'},
+      category: 'Cybersecurity AI'
+    },
       category: 'Cybersecurity AI'
 },
 
@@ -1209,7 +1266,8 @@ export default function AIServices() {
       ],
       pricing: '$20,000 - $100,000/month',
       delivery: '16-32 weeks',
-      category: 'Smart City AI'},
+      category: 'Smart City AI'
+    },
       category: 'Smart City AI'
 },
 
@@ -1233,7 +1291,8 @@ export default function AIServices() {
       ],
       pricing: '$5,000 - $25,000/month',
       delivery: '6-12 weeks',
-      category: 'Content Moderation AI'},
+      category: 'Content Moderation AI'
+    },
       category: 'Content Moderation AI'
 },
 
@@ -1246,7 +1305,8 @@ export default function AIServices() {
       ],
       pricing: '$12,000 - $50,000/month',
       delivery: '10-20 weeks',
-      category: 'Energy AI'},
+      category: 'Energy AI'
+    },
       category: 'Energy AI'
 },
 
@@ -1259,7 +1319,8 @@ export default function AIServices() {
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '8-16 weeks',
-      category: 'Legal AI'},
+      category: 'Legal AI'
+    },
       category: 'Legal AI'
 },
 
@@ -1272,7 +1333,8 @@ export default function AIServices() {
       ],
       pricing: '$6,000 - $30,000/month',
       delivery: '8-16 weeks',
-      category: 'Agricultural AI'},
+      category: 'Agricultural AI'
+    },
       category: 'Agricultural AI'
 },
 
@@ -1285,7 +1347,8 @@ export default function AIServices() {
       ],
       pricing: '$10,000 - $40,000/month',
       delivery: '8-16 weeks',
-      category: 'Retail AI'},
+      category: 'Retail AI'
+    },
       category: 'Retail AI'
 },
 
@@ -1298,7 +1361,8 @@ export default function AIServices() {
       ],
       pricing: '$12,000 - $50,000/month',
       delivery: '10-20 weeks',
-      category: 'Manufacturing AI'},
+      category: 'Manufacturing AI'
+    },
       category: 'Manufacturing AI'
 },
 
@@ -1311,7 +1375,8 @@ export default function AIServices() {
       ],
       pricing: '$5,000 - $25,000/month',
       delivery: '6-14 weeks',
-      category: 'Educational AI'},
+      category: 'Educational AI'
+    },
       category: 'Educational AI'
 },
 
@@ -1324,7 +1389,8 @@ export default function AIServices() {
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '8-16 weeks',
-      category: 'Insurance AI'},
+      category: 'Insurance AI'
+    },
       category: 'Insurance AI'
 },
 
@@ -1337,7 +1403,8 @@ export default function AIServices() {
       ],
       pricing: '$10,000 - $40,000/month',
       delivery: '8-16 weeks',
-      category: 'Logistics AI'},
+      category: 'Logistics AI'
+    },
       category: 'Logistics AI'
 },
 
@@ -1350,7 +1417,8 @@ export default function AIServices() {
       ],
       pricing: '$6,000 - $30,000/month',
       delivery: '6-14 weeks',
-      category: 'HR AI'},
+      category: 'HR AI'
+    },
       category: 'HR AI'
 },
 
@@ -1363,7 +1431,8 @@ export default function AIServices() {
       ],
       pricing: '$5,000 - $25,000/month',
       delivery: '6-12 weeks',
-      category: 'Real Estate AI'},
+      category: 'Real Estate AI'
+    },
       category: 'Real Estate AI'
 },
 
@@ -1376,7 +1445,8 @@ export default function AIServices() {
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '8-16 weeks',
-      category: 'Environmental AI'},
+      category: 'Environmental AI'
+    },
     {
       title: 'AI-Powered Large Language Model Integration',
       description: 'Advanced LLM integration with custom fine-tuning, prompt engineering, and enterprise deployment',
@@ -1386,7 +1456,8 @@ export default function AIServices() {
       ],
       pricing: '$10,000 - $100,000/month',
       delivery: '8-16 weeks',
-      category: 'LLM AI'},
+      category: 'LLM AI'
+    },
     {
       title: 'AI-Powered Multimodal Intelligence Platform',
       description: 'Advanced multimodal AI combining vision, language, and audio processing for comprehensive understanding',
@@ -1396,7 +1467,8 @@ export default function AIServices() {
       ],
       pricing: '$15,000 - $75,000/month',
       delivery: '12-24 weeks',
-      category: 'Multimodal AI'},
+      category: 'Multimodal AI'
+    },
     {
       title: 'AI-Powered Reinforcement Learning Platform',
       description: 'Advanced reinforcement learning for autonomous decision-making and optimization in complex environments',
@@ -1406,7 +1478,8 @@ export default function AIServices() {
       ],
       pricing: '$20,000 - $150,000/month',
       delivery: '16-32 weeks',
-      category: 'Reinforcement Learning AI'},
+      category: 'Reinforcement Learning AI'
+    },
     {
       title: 'AI-Powered Federated Learning Platform',
       description: 'Privacy-preserving distributed machine learning with federated learning and edge computing',
@@ -1416,7 +1489,8 @@ export default function AIServices() {
       ],
       pricing: '$25,000 - $200,000/month',
       delivery: '20-40 weeks',
-      category: 'Federated Learning AI'},
+      category: 'Federated Learning AI'
+    },
     {
       title: 'AI-Powered Neuromorphic Computing Platform',
       description: 'Brain-inspired computing with spiking neural networks and ultra-low power processing',
@@ -1426,7 +1500,8 @@ export default function AIServices() {
       ],
       pricing: '$30,000 - $300,000/month',
       delivery: '24-48 weeks',
-      category: 'Neuromorphic AI'},
+      category: 'Neuromorphic AI'
+    },
     {
       title: 'AI-Powered Quantum Machine Learning',
       description: 'Next-generation machine learning leveraging quantum computing for complex optimization and pattern recognition',
@@ -1436,7 +1511,8 @@ export default function AIServices() {
       ],
       pricing: '$50,000 - $500,000/month',
       delivery: '32-64 weeks',
-      category: 'Quantum ML AI'},
+      category: 'Quantum ML AI'
+    },
     {
       title: 'AI-Powered Synthetic Data Generation',
       description: 'Advanced synthetic data generation for training AI models while preserving privacy and improving performance',
@@ -1446,7 +1522,8 @@ export default function AIServices() {
       ],
       pricing: '$8,000 - $50,000/month',
       delivery: '8-16 weeks',
-      category: 'Synthetic Data AI'},
+      category: 'Synthetic Data AI'
+    },
     {
       title: 'AI-Powered Explainable AI Platform',
       description: 'Comprehensive explainable AI solutions for model interpretability and transparency',
@@ -1456,7 +1533,8 @@ export default function AIServices() {
       ],
       pricing: '$12,000 - $60,000/month',
       delivery: '10-20 weeks',
-      category: 'Explainable AI'},
+      category: 'Explainable AI'
+    },
     {
       title: 'AI-Powered AutoML Platform',
       description: 'Automated machine learning with end-to-end model development and deployment automation',
@@ -1466,7 +1544,8 @@ export default function AIServices() {
       ],
       pricing: '$15,000 - $75,000/month',
       delivery: '12-24 weeks',
-      category: 'AutoML AI'},
+      category: 'AutoML AI'
+    },
     {
       title: 'AI-Powered Edge AI Platform',
       description: 'Intelligent edge computing with AI processing and real-time decision making at the edge',

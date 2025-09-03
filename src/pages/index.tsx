@@ -44,7 +44,11 @@ const index = () => {
                 Contact Us
               </Link>
             </div>
+          </div>
+        </div>
+      </div>
     </>
   );
-}
-export default index
+};
+
+export default index;

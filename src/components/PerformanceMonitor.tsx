@@ -1,45 +1,48 @@
 import React, { useEffect, useState, useCallback } from 'react';
-export const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({
-export default PerformanceMonitor;
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+
+interface PerformanceMonitorProps {
+  className?: string;
+}
+
+export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  className = ''
+}) => {
+  const [metrics, setMetrics] = useState({
+    fps: 0,
+    memory: 0,
+    loadTime: 0
+  });
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+    // Monitor performance metrics
+    const updateMetrics = () => {
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (perfData) {
+          setMetrics(prev => ({
+            ...prev,
+            loadTime: Math.round(perfData.loadEventEnd - perfData.fetchStart)
+          }));
+        }
+      }
+    };
 
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    if(metrics) {
+    updateMetrics();
+    const interval = setInterval(updateMetrics, 1000);
 
-      setPerformanceScore(score)}
-  }, [metrics, calculatePerformanceScore]) ;
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    // Show monitor after 3 seconds
-    
-    return () => clearTimeout(timer) }, []) ;
-  if(!isVisible || !showDetails) return null;
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold">Load Time</h3>
-        <p className="text-2xl font-bold text-blue-600">{metrics.loadTime.toFixed(2)}ms</p>
-      </div>
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold">Memory Usage</h3>
-        <p className="text-2xl font-bold text-orange-600">{metrics.memoryUsage.toFixed(1)}%</p>
-      </div>
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold">CPU Usage</h3>
-        <p className="text-2xl font-bold text-purple-600">{metrics.cpuUsage.toFixed(1)}%</p>
+    <div className={`performance-monitor ${className}`}>
+      <div className="metrics">
+        <div>Load Time: {metrics.loadTime}ms</div>
+        <div>Memory: {metrics.memory}MB</div>
+        <div>FPS: {metrics.fps}</div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default PerformanceMonitor;

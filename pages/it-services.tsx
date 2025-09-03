@@ -31,8 +31,8 @@ import {
   MapPin,
   TrendingUp,
   Car,
-  Brain,;
-  Satellite,;
+  Brain,
+  Satellite,
   TreePine} from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 

@@ -36,8 +36,8 @@ import {
   Home,
   Heart,
   Car,
-  TreePine,;
-  Satellite,;
+  TreePine,
+  Satellite,
   Mic} from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -275,7 +275,6 @@ export default function MicroSaaS() {
       ],
       pricing: '$299 - $1,499/month',
       delivery: '4-6 weeks',
-      category: 'Real Estate SaaS'},
       category: 'Real Estate SaaS'
     },
     {
@@ -377,7 +376,6 @@ export default function MicroSaaS() {
       delivery: '2-3 weeks',
       category: 'Finance SaaS'
     },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'Smart Healthcare Appointment Scheduler',
       description: 'AI-powered healthcare scheduling with patient preference learning and resource optimization',
