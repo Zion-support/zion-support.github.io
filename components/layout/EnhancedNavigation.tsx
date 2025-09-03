@@ -14,10 +14,10 @@ const EnhancedNavigation: React.FC = () => {
   ];
 
   const products = [
+    { name: 'All Products', href: '/products' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Guides', href: '/guides' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
   ];
 
   return (
