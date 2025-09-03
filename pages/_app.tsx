@@ -6,7 +6,7 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 import SearchBar from '../components/SearchBar';
 import '../styles/globals.css';
 
-function Header(): any {
+function Header(): React.ReactElement {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -172,7 +172,7 @@ function Header(): any {
   );
 }
 
-function Footer(): any {
+function Footer(): React.ReactElement {
   return (
     <footer style={{ 
       background: 'linear-gradient(135deg, #0b1220, #1e293b)', 
@@ -300,8 +300,12 @@ function Footer(): any {
       }}>
         <small style={{ opacity: 0.7 }}>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
+<<<<<<< HEAD
           <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Privacy Policy</Link> | 
           <Link href="/terms" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Terms of Service</Link>
+=======
+          <Link href="/privacy">Privacy Policy</Link>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-b684
         </small>
       </div>
     </footer>

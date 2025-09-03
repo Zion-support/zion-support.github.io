@@ -147,39 +147,32 @@ const SearchBar: React.FC = () => {
         )}
       </div>
 
-      {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-slate-800 border border-slate-600 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
-          {results.length > 0 ? (
-            <div role="listbox" aria-label="Search results">
-              {results.map((result, index) => (
-                <Link
-                  key={index}
-                  href={result.url}
-                  onClick={handleResultClick}
-                  className="block px-4 py-3 hover:bg-slate-700 transition-colors border-b border-slate-700 last:border-b-0"
-                  role="option"
-                  aria-selected="false"
-                >
-                  <div className="flex items-start gap-3">
-                    <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${
-                      result.type === 'service' ? 'bg-blue-500' :
-                      result.type === 'category' ? 'bg-purple-500' : 'bg-green-500'
-                    }`} />
-                    <div>
-                      <h3 className="font-semibold text-white">{result.title}</h3>
-                      <p className="text-sm text-slate-300 mt-1">{result.description}</p>
-                      <span className="text-xs text-slate-400 capitalize">{result.type}</span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          ) : query && !isLoading ? (
-            <div className="px-4 py-8 text-center text-slate-400">
-              <p>No results found for "{query}"</p>
-              <p className="text-sm mt-1">Try different keywords or browse our services</p>
-            </div>
-          ) : null}
+      {isOpen && results.length > 0 && (
+        <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-white/20 rounded-lg shadow-xl z-50 max-h-96 overflow-y-auto">
+          {results.map((result, index) => (
+            <Link
+              key={index}
+              href={result.url}
+              onClick={handleResultClick}
+              className="block px-4 py-3 hover:bg-slate-700/50 transition-colors border-b border-white/10 last:border-b-0"
+            >
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <h3 className="text-white font-medium">{result.title}</h3>
+                  <p className="text-slate-300 text-sm mt-1">{result.description}</p>
+                </div>
+                <span className="ml-2 px-2 py-1 bg-blue-600/20 text-blue-400 text-xs rounded">
+                  {result.category}
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
+
+      {isOpen && query.length > 2 && results.length === 0 && (
+        <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-white/20 rounded-lg shadow-xl z-50 p-4">
+          <p className="text-slate-300 text-center">No results found for &quot;{query}&quot;</p>
         </div>
       )}
     </div>
