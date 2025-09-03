@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import Spinner from &apos;./Spinner';
 
@@ -8,3 +9,30 @@ describe(&apos;Spinner&apos;, () => {
   it(&apos;displays expected content&apos;, () => {
     render(&apos;}<Spinner />)
     // Add specific test assertions based on component content})})
+=======
+<<<<<<< HEAD
+import { render, screen } from '@testing-library/react';""
+import Spinner from './Spinner';""
+describe('Spinner', () => {""
+  it('renders without crashing', () => {""
+=======
+import { render, screen } from '@testing-library/react
+import Spinner from './Spinner
+describe('Spinner', () => {"
+  it('renders without crashing', () => {"
+>>>>>>> main
+    render(<Spinner /" >)"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
+  it('displays expected content', () => {
+<<<<<<< HEAD
+    render(<Spinner /" >)"
+    // Add specific test assertions based on component content, });
+""
+=======
+    render(<Spinner /" >)
+    // Add specific test assertions based on component content
+})
+"
+>>>>>>> main
+}}
+>>>>>>> main

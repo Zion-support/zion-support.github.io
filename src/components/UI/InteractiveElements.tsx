@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from &apos;
 import { motion } from &apos;framer-motion';;react&apos; import { motion, useAnimation, useInView } from &apos;framer-motion&apos; import { useRef } from &apos;react&apos; import { ArrowRight, Sparkles, Zap, Star, Heart, ThumbsUp } from &apos;lucide-react&apos; interface InteractiveButtonProps {
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react' import { motion, useAnimation, useInView } from 'framer-motion' import { useRef } from 'react' import { ArrowRight, Sparkles, Zap, Star, Heart, ThumbsUp } from 'lucide-react' interface InteractiveButtonProps {;
+""
+}
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react' import { motion, useAnimation, useInView } from 'framer-motion' import { useRef } from 'react' import { ArrowRight, Sparkles, Zap, Star, Heart, ThumbsUp } from 'lucide-react' interface InteractiveButtonProps {
+>>>>>>> main
   children: React.ReactNode;
    onClick?: () => void;
    variant?: &apos;primary&apos; | &apos;secondary&apos; | &apos;ghost&apos; | &apos;gradient';
@@ -21,4 +31,14 @@ import { motion } from &apos;framer-motion';;react&apos; import { motion, useAni
    label: string;
    ico,n: React.ComponentType}<any>}> } export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => { return (} <;<div className=&apos;grid grid-cols-2 md: grid-cols-4 gap-6&apos;> {stats.map((stat, index) => (&apos;} <motion.div key={index} className=&apos;text-center&apos; initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} >&apos; <motion.div className=&apos;inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4&apos; whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: &apos;spring&apos;, damping: 10 }} >&apos; <stat.icon className=&apos;w-8 h-8 text-white&apos; />&apos; </motion.div> <motion.h3 className=&apos;text-3xl font-bold text-gray-900 dark:text-white mb-2&apos; initial={{ scal,e: 0 }} whileInView={{ scale: 1 }} transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }} viewport={{ once: true }} > {stat.number}&apos; </motion.h3> <p className=&apos;text-gray-600 dark:text-gray-400&apos;>{stat.label}&apos;</p> </motion.div> ))} </div> ) } interface ParticleBackgroundProps {
   particleCount?: number
+<<<<<<< HEAD
    color?: string} export const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ particleCount = 50, color = &apos;#3b82f6&apos;}) => {&apos;} const [particles, setParticles] = useState<Array<{ id: number x: number y: number size: number speedX: number speed,Y: number }>>([]) useEffect(() => {} const newParticles = Array.from({ length: particleCount }, (_, i) => ({ id: i, x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight, size: Math.random() * 3 + 1, speedX: (Math.random() - 0.5) * 0.5, speedY: (Math.random() - 0.5) * 0.5})) setParticles(newParticles) }, [particleCount]) return ( <;<div className=&apos;fixed inset-0 pointer-events-none overflow-hidden&apos;> {particles.map((particle) => (&apos;} <motion.div key={particle.id} className=&apos;absolute rounded-full opacity-20&apos; style={{ backgroundColor: color, width: particle.size, height: particle.size, left: particle.x, top: particle.y}} animate={{ x: [0, particle.speedX * 100, 0], y: [0, particle.speedY * 100, 0]}} transition={{ duration: 20 + Math.random() * 10, repeat: Infinity, ease: &apos;linear&apos;}} /> ))}&apos; <;</div> ) }';`&quot;&quot;"
+=======
+   color?: string} export const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ particleCount = 50, color = '#3b82f6'}) => { const [particles, setParticles] = useState<Array<{ id: number x: number y: number size: number speedX: number speedY: number }>>([]) useEffect(() => { const newParticles = Array.from({ length: particleCount }, (_, i) => ({ id: i, x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight, size: Math.random() * 3 + 1, speedX: (Math.random() - 0.5) * 0.5, speedY: (Math.random() - 0.5) * 0.5})) setParticles(newParticles) }, [particleCount]) return ( <div className='fixed inset-0 pointer-events-none overflow-hidden'> {particles.map((particle) => ( <motion.div key={particle.id} className='absolute rounded-full opacity-20' style={{ backgroundColor: color, width: particle.size, height: particle.size, left: particle.x, top: particle.y}} animate={{ x: [0, particle.speedX * 100, 0], y: [0, particle.speedY * 100, 0]}} transition={{ duration: 20 + Math.random() * 10, repeat: Infinity, ease: 'linear'}} /> ))} </div> ) }';`"'"
+=======
+import React, { useState, useEffect } from 'react' import { motion, useAnimation, useInView } from 'framer-motion' import { useRef } from 'react' import { ArrowRight, Sparkles, Zap, Star, Heart, ThumbsUp }  from 'lucide-react';interface InteractiveButtonProps {;
+"
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

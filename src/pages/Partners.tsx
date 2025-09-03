@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from &apos;react';
 import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
@@ -64,8 +65,79 @@ export default function Partners() {}
     }
   ];&quot;
 
-  const partnershipTypes = [
+=======
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { 
+  Handshake, Globe, Award, Users, Building, Star, CheckCircle, ArrowRight, ExternalLink 
+} from 'lucide-react';
+export default function Partners() {
+  const partners = [
+<<<<<<< HEAD
     {
+      id: 1, name: "Microsoft",
+      category: "Technology Partner", description: "Strategic partnership in cloud computing and AI solutions",
+      logo: "/api/placeholder/200/100", website: "https://microsoft.com",
+      benefits: ["Azure Integration", "AI Services", "Enterprise Solutions"]
+=======
+  {
+      id: 1, name: "Microsoft",
+      category: "Technology Partner", description: "Strategic partnership in cloud computing and AI solutions",
+      logo: "/api/placeholder/200/100", website: "https://microsoft.com",
+      benefits: ["Azure Integration,AI Services,Enterprise Solutions"]
+>>>>>>> main
+    }, {
+      id: 2,
+      name: "Google Cloud", category: "Cloud Partner",
+      description: "Advanced cloud infrastructure and machine learning platforms", logo: "/api/placeholder/200/100",
+<<<<<<< HEAD
+      website: "https://cloud.google.com", benefits: ["GCP Services", "ML Platforms", "Data Analytics"]
+=======
+      website: "https://cloud.google.com", benefits: ["GCP Services,ML Platforms,Data Analytics"]
+>>>>>>> main
+    }, {
+      id: 3,
+      name: "IBM", category: "Quantum Computing Partner",
+      description: "Quantum computing research and development collaboration", logo: "/api/placeholder/200/100",
+<<<<<<< HEAD
+      website: "https://ibm.com", benefits: ["Quantum Systems", "Research Collaboration", "Enterprise AI"]
+=======
+      website: "https://ibm.com", benefits: ["Quantum Systems,Research Collaboration,Enterprise AI"]
+>>>>>>> main
+    }, {
+      id: 4,
+      name: "Amazon Web Services", category: "Cloud Infrastructure Partner",
+      description: "Comprehensive cloud services and infrastructure solutions", logo: "/api/placeholder/200/100",
+<<<<<<< HEAD
+      website: "https://aws.amazon.com", benefits: ["AWS Services", "Infrastructure", "Global Reach"]
+=======
+      website: "https://aws.amazon.com", benefits: ["AWS Services,Infrastructure,Global Reach"]
+>>>>>>> main
+    }, {
+      id: 5,
+      name: "NVIDIA", category: "AI Hardware Partner",
+      description: "Advanced GPU solutions for AI and machine learning workloads", logo: "/api/placeholder/200/100",
+<<<<<<< HEAD
+      website: "https://nvidia.com", benefits: ["GPU Solutions", "AI Acceleration", "Deep Learning"]
+=======
+      website: "https://nvidia.com", benefits: ["GPU Solutions,AI Acceleration,Deep Learning"]
+>>>>>>> main
+    }, {
+      id: 6,
+      name: "Intel", category: "Technology Partner",
+      description: "Advanced processor technologies and AI optimization", logo: "/api/placeholder/200/100",
+<<<<<<< HEAD
+      website: "https://intel.com", benefits: ["Processor Tech", "AI Optimization", "Performance"]
+=======
+      website: "https://intel.com", benefits: ["Processor Tech,AI Optimization,Performance"]
+>>>>>>> main
+    }
+  ];
+>>>>>>> main
+  const partnershipTypes = [
+<<<<<<< HEAD
+    {
+<<<<<<< HEAD
       title: &quot;Technology Partners&quot;,
       description: &quot;Leading technology companies providing cutting-edge solutions&quot;,
       icon: Building,
@@ -105,6 +177,39 @@ export default function Partners() {}
   ];
 
   return (&quot;
+=======
+=======
+  {
+>>>>>>> main
+      title: "Technology Partners", description: "Leading technology companies providing cutting-edge solutions",
+      icon: Building, count: 12,
+      color: "from-blue-500 to-cyan-500"
+    }, {
+      title: "Cloud Partners",
+      description: "Global cloud providers enabling scalable infrastructure", icon: Globe,
+      count: 8, color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Research Partners", description: "Academic institutions and research organizations",
+      icon: Award, count: 15,
+      color: "from-purple-500 to-pink-500"
+    }, {
+      title: "Channel Partners",
+      description: "Distribution and implementation partners worldwide", icon: Handshake,
+      count: 25, color: "from-orange-500 to-red-500"
+    }
+  ];
+  const benefits = [
+<<<<<<< HEAD
+    "Access to cutting-edge technology and platforms", "Joint research and development opportunities",
+    "Global market reach and distribution channels", "Technical support and training programs",
+    "Co-marketing and go-to-market strategies", "Priority access to new features and updates"
+=======
+    "Access to cutting-edge technology and platforms,Joint research and development opportunities,Global market reach and distribution channels,Technical support and training programs,Co-marketing and go-to-market strategies,Priority access to new features and updates"
+>>>>>>> main
+  ];
+  return (
+>>>>>>> main
     <>
       <SEO 
         title=&quot;Partners - Zion Tech Group | Strategic Technology Partnerships&quot;
@@ -151,8 +256,13 @@ export default function Partners() {}
               </p>
             </motion.div>
 
+<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-8&quot;>
               {partnershipTypes.map((type, index) => (&quot;}
+=======
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+              {partnershipTypes.map((type, index) => (
+>>>>>>> main
                 <motion.div
                   key={type.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -223,12 +333,21 @@ export default function Partners() {}
 
                   <a
                     href={partner.website}
+<<<<<<< HEAD
                     target=&quot;_blank&quot;
                     rel=&quot;noopener noreferrer&quot;
                     className=&quot;inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors&quot;
                   >&quot;
                     <span className=&quot;text-sm&quot;>Visit Website&quot;</span>
                     <ExternalLink className=&quot;w-4 h-4 ml-1&quot; />&quot;
+=======
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-400 hover: text-blue-300 transition-colors"
+                  >
+                    <span className="text-sm">Visit Website</span>
+                    <ExternalLink className="w-4 h-4 ml-1" />
+>>>>>>> main
                   </a>
                 </motion.div>
               ))}
@@ -284,9 +403,23 @@ export default function Partners() {}
               </h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Join our network of strategic partners and help shape the future of technology. 
+<<<<<<< HEAD
                 We&apos;re always looking for innovative companies to collaborate with.&apos;
               </p>
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>&quot;"
+=======
+<<<<<<< HEAD
+                We&apos;re always looking for innovative companies to collaborate with.'
+=======
+<<<<<<< HEAD
+                We&apos;re always looking for innovative companies to collaborate with.'
+=======
+                We're always looking for innovative companies to collaborate with.'
+>>>>>>> main
+>>>>>>> main
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+>>>>>>> main
                 <a
                   href=&quot;/contact&quot;
                   className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105&quot;
@@ -306,6 +439,6 @@ export default function Partners() {}
           </div>
         </section>
       </div>
-    </>
+</>
   );
 }

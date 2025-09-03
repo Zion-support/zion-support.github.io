@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from &apos;react';
 import Link from &apos;next/link';
 import Image from &apos;next/image';
@@ -17,6 +18,34 @@ import { useRouter } from &apos;next/router';
 import { useMediaQuery } from &apos;usehooks-ts';
 import { useEnqueueSnackbar } from &apos;@/context/SnackbarContext';
 import { captureException } from &apos;@sentry/nextjs';&apos;&apos;
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';""
+import Link from 'next/link';""
+import Image from 'next/image';""
+import { Heart } from 'lucide-react';""
+import { useWishlist } from '@/hooks/useWishlist';""
+""
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Heart } from 'lucide-react';
+import { useWishlist } from '@/hooks/useWishlist';
+import { Button } from '@/components/ui/button';
+import {
+  Tooltip, TooltipContent,
+  TooltipProvider, TooltipTrigger
+} from '@/components/ui/tooltip';
+import { useDispatch } from 'react-redux';
+import { addItem } from '@/store/cartSlice';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { useRouter } from 'next/router';
+import { useMediaQuery } from 'usehooks-ts';
+import { useEnqueueSnackbar } from '@/context/SnackbarContext';
+import { captureException } from '@sentry/nextjs';
+>>>>>>> main
 
 export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
   const ;{ isAuthenticated } = useAuth();
@@ -58,10 +87,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
       return;
     }
     dispatch(addItem({
-      id: product.id,
-      title: product.title,
-      price: product.price,
-      image: product.image,
+      id: product.id, title: product.title,
+      price: product.price, image: product.image,
       quantity: 1
     }));
     enqueueSnackbar(&apos;Item added to cart&apos;, { variant: &apos;success&apos; });
@@ -73,7 +100,11 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
 
   return (
     <div 
+<<<<<<< HEAD
       className=&quot;relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover:shadow-lg transition-shadow&quot;
+=======
+      className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg transition-shadow"
+>>>>>>> main
       onClick={handleCardClick}
       data-testid=&quot;product-card&quot;
     >&quot;
@@ -133,3 +164,12 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
     </div>
   );
 }
+=======
+import React, { useState } from 'react
+import Link from 'next/link
+import Image from 'next/image
+import { Heart } from 'lucide-react
+import { useWishlist } from '@/hooks/useWishlist
+"
+>>>>>>> main
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from &apos;react';
 import { motion } from &apos;framer-motion';
 import { 
@@ -17,6 +18,30 @@ import {
   Share2
 } from &apos;lucide-react';
 import { SEO } from &apos;../components/SEO';&apos;&apos;
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';""
+=======
+import React, { useState, useEffect } from 'react
+>>>>>>> main
+import { motion } from 'framer-motion';
+import { 
+  Search as SearchIcon, Filter, 
+  Server, Users, 
+  Building, Star,
+  MapPin, Clock,
+  DollarSign, ArrowUpDown,
+  Calendar, Eye,
+<<<<<<< HEAD
+  Bookmark, Share2;", "
+} from 'lucide-react';""
+import { SEO } from '../components/SEO';""
+=======
+<<<<<<< HEAD
+  Bookmark, Share2
+} from 'lucide-react';
+import { SEO } from '../components/SEO';
+>>>>>>> main
 
 const Search: React.FC = () => {}
   const;const;const [searchQuery, setSearchQuery] = useState(&apos;&apos;);&apos;&apos;
@@ -26,12 +51,19 @@ const Search: React.FC = () => {}
   const [loading, setLoading] = useState(false);
 
   const categories = [
+<<<<<<< HEAD
     { id: &apos;all&apos;, name: &apos;All Categories&apos;, count: 0 },
     { id: &apos;services&apos;, name: &apos;Services&apos;, count: 0 },
     { id: &apos;talent&apos;, name: &apos;Talent&apos;, count: 0 },
     { id: &apos;equipment&apos;, name: &apos;Equipment&apos;, count: 0 },
     { id: &apos;companies&apos;, name: &apos;Companies&apos;, count: 0 }
   ];&apos;
+=======
+    { id: 'all', name: 'All Categories', count: 0 }, { id: 'services', name: 'Services', count: 0 },
+    { id: 'talent', name: 'Talent', count: 0 }, { id: 'equipment', name: 'Equipment', count: 0 },
+    { id: 'companies', name: 'Companies', count: 0 }
+  ];
+>>>>>>> main
 
   const sortOptions = [
     { id: &apos;relevance&apos;, name: &apos;Relevance&apos; },
@@ -43,6 +75,7 @@ const Search: React.FC = () => {}
 
   const mockResults = [
     {
+<<<<<<< HEAD
       id: 1,
       title: &apos;AI-Powered Business Intelligence Platform&apos;,
       description: &apos;Advanced analytics and business intelligence solution powered by machine learning algorithms.&apos;,
@@ -97,6 +130,37 @@ const Search: React.FC = () => {}
       tags: [&apos;HPC&apos;, &apos;Computing&apos;, &apos;Data Processing&apos;, &apos;ML&apos;],
       featured: false,
       date: &apos;2024-11-20&apos;
+=======
+      id: 1, title: 'AI-Powered Business Intelligence Platform',
+      description: 'Advanced analytics and business intelligence solution powered by machine learning algorithms.', type: 'services',
+      price: '$5, 000/month',
+      rating: 4.8, reviews: 127,
+      location: 'Remote', company: 'Zion Tech Group',
+      tags: ['AI', 'Analytics', 'Business Intelligence', 'Machine Learning'], featured: true,
+      date: '2024-12-01'
+    }, {
+      id: 2,
+      title: 'Senior Full-Stack Developer', description: 'Experienced developer specializing in React, Node.js, and cloud technologies.',
+      type: 'talent', price: '$120/hour',
+      rating: 4.9, reviews: 89,
+      location: 'Remote', company: 'Zion Tech Group',
+      tags: ['React', 'Node.js', 'Full-Stack', 'Cloud'], featured: false,
+      date: '2024-11-28'
+    }, {
+      id: 3,
+      title: 'Cloud Infrastructure Setup', description: 'Complete cloud infrastructure design and implementation for enterprise applications.',
+      type: 'services', price: '$15,000', rating: 4.7,
+      reviews: 203, location: 'On-site',
+      company: 'Zion Tech Group', tags: ['Cloud', 'Infrastructure', 'AWS', 'Azure'], featured: true,
+      date: '2024-11-25'
+    }, {
+      id: 4,
+      title: 'High-Performance Computing Cluster', description: 'Enterprise-grade computing cluster for data processing and machine learning workloads.',
+      type: 'equipment', price: '$50,000', rating: 4.6,
+      reviews: 45, location: 'On-site',
+      company: 'Zion Tech Group', tags: ['HPC', 'Computing', 'Data Processing', 'ML'], featured: false,
+      date: '2024-11-20'
+>>>>>>> main
     }
   ];
 
@@ -125,6 +189,7 @@ const Search: React.FC = () => {}
     // Sort results
     filteredResults.sort((a, b) => {
       switch (sortBy) {
+<<<<<<< HEAD
         case &apos;newest&apos;:
           return new Date(b.date).getTime() - new Date(a.date).getTime();
         case &apos;rating&apos;:
@@ -135,6 +200,13 @@ const Search: React.FC = () => {}
           return parseFloat(b.price.replace(/[^0-9.]/g, &apos;&apos;)) - parseFloat(a.price.replace(/[^0-9.]/g, &apos;&apos;));
         default:
           return 0;
+=======
+        case 'newest': return new Date(b.date).getTime() - new Date(a.date).getTime();
+        case 'rating': return b.rating - a.rating;
+        case 'price-low': return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+        case 'price-high': return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
+        default: return 0;
+>>>>>>> main
       }
     });
 
@@ -151,6 +223,7 @@ const Search: React.FC = () => {}
 
   const getTypeIcon = (type: string) => {
     switch (type) {
+<<<<<<< HEAD
       case &apos;services&apos;:
         return&apos;}} <;<Server className=&quot;w-5 h-5 text-blue-400&quot; />;
       case &apos;talent&apos;:
@@ -159,11 +232,18 @@ const Search: React.FC = () => {}
         return&apos; <Building className=&quot;w-5 h-5 text-orange-400&quot; />;
       default:
         return&quot; <SearchIcon className=&quot;w-5 h-5 text-gray-400&quot; />;
+=======
+      case 'services': return <Server className="w-5 h-5 text-blue-400" />;
+      case 'talent': return <Users className="w-5 h-5 text-purple-400" />;
+      case 'equipment': return <Building className="w-5 h-5 text-orange-400" />;
+      default: return <SearchIcon className="w-5 h-5 text-gray-400" />;
+>>>>>>> main
     }
   };&quot;
 
   const getTypeLabel = (type: string) => {
     switch (type) {
+<<<<<<< HEAD
       case &apos;services&apos;:
         return &apos;Service';
       case &apos;talent&apos;:
@@ -172,16 +252,29 @@ const Search: React.FC = () => {}
         return &apos;Equipment';
       defaul,t:
         return &apos;Unknown';
+=======
+      case 'services': return 'Service';
+      case 'talent': return 'Talent';
+      case 'equipment': return 'Equipment';
+      default: return 'Unknown';
+>>>>>>> main
     }
   };
 
   return (&apos;&apos;
     <>
       <SEO 
+<<<<<<< HEAD
         title=&quot;Search - Zion Tech Group&quot;
         description=&quot;Search for services, talent, equipment, and companies across Zion Tech Group&apos;s comprehensive technology marketplace.&quot;
         keywords=&quot;search, services, talent, equipment, companies, technology marketplace, Zion Tech Group&quot;
       />&quot;
+=======
+        title="Search - Zion Tech Group"
+        description="Search for services, talent, equipment, and companies across Zion Tech Group&apos;s comprehensive technology marketplace."'
+        keywords="search, services, talent, equipment, companies, technology marketplace, Zion Tech Group"
+      />
+>>>>>>> main
       
       <div className=&quot;min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900&quot;>
         {/* Search Header */}&quot;
@@ -209,9 +302,15 @@ const Search: React.FC = () => {}
                   type=&quot;text&quot;
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
+<<<<<<< HEAD
                   placeholder=&quot;Search for services, talent, equipment, companies...&quot;
                   className=&quot;w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg&quot;
                 />&quot;
+=======
+                  placeholder="Search for services, talent, equipment, companies..."
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
+                />
+>>>>>>> main
                 <button
                   type=&quot;submit&quot;
                   className=&quot;absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-md font-semibold hover:from-blue-600 hove,r:to-purple-600 transition-all duration-300&quot;
@@ -279,11 +378,19 @@ const Search: React.FC = () => {}
               </div>
 
               {/* Results */}
+<<<<<<< HEAD
               <div className=&quot;lg:col-span-3&quot;>
                 {loading ? (&quot;}
                   <div className=&quot;text-center py-12&quot;>&quot;"
                     <div className=&quot;animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4&quot;>&quot;"</div>
                     <p className=&quot;text-gray-400&quot;>Searching...&quot;</p>
+=======
+              <div className="lg: col-span-3">
+                {loading ? (
+                  <div className="text-center py-12">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
+                    <p className="text-gray-400">Searching...</p>
+>>>>>>> main
                   </div>
                 ) : results.length > 0 ? (
                   <div className=&quot;space-y-6&quot;>
@@ -342,9 +449,15 @@ const Search: React.FC = () => {}
                               </span>
                             ))}
                           </div>
+<<<<<<< HEAD
                           <div className=&quot;flex items-center gap-2&quot;>&quot;"
                             <button className=&quot;p-2 text-gray-400 hover:text-white transition-colors&quot;>&quot;"
                               <Bookmark className=&quot;w-4 h-4&quot; />&quot;
+=======
+                          <div className="flex items-center gap-2">
+                            <button className="p-2 text-gray-400 hover: text-white transition-colors">
+                              <Bookmark className="w-4 h-4" />
+>>>>>>> main
                             </button>
                             <button className=&quot;p-2 text-gray-400 hover:text-white transition-colors&quot;>&quot;"
                               <Share2 className=&quot;w-4 h-4&quot; />&quot;
@@ -375,8 +488,14 @@ const Search: React.FC = () => {}
           </div>
         </section>
       </div>
-    </>
+</>
   );
 };
 
 export default Search;
+=======
+  Bookmark, Share2;",
+} from 'lucide-react
+import { SEO } from '../components/SEO
+>>>>>>> main
+>>>>>>> main

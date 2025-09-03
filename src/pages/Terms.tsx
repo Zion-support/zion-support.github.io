@@ -1,9 +1,22 @@
+<<<<<<< HEAD
 import { motion } from &apos;framer-motion';
 import { FileText, Scale, AlertTriangle, CheckCircle, XCircle } from &apos;lucide-react';&apos;&apos;
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';""
+import { FileText, Scale, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+""
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';"
+import { FileText, Scale, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+<<<<<<< HEAD
+>>>>>>> main
 
 const Terms: React.FC = () => {}
   const;const;const sections = [
     {
+<<<<<<< HEAD
       title: &apos;Acceptance of Terms&apos;,
       icon: CheckCircle,
       content: [;
@@ -63,6 +76,48 @@ const Terms: React.FC = () => {}
     <div className=&apos;min-h-screen bg-gradient-to-br from-slate-50 to-blue-50&apos;>&apos;'
       <div className=&apos;max-w-4xl mx-auto px-4 sm:px-6 l,g:px-8 py-16&apos;>
         {/* Header */}&apos;
+=======
+      title: 'Acceptance of Terms', icon: CheckCircle,
+      content: [;
+        'By accessing and using our services, you accept and agree to be bound by these terms',
+        'If you do not agree to these terms, you may not use our services',
+        'We reserve the right to modify these terms at any time', 'Continued use of our services after changes constitutes acceptance of new terms';
+      ]}, {
+      title: 'Service Description',
+      icon: FileText, content: [
+        'We provide AI services, IT solutions, quantum computing, and technology consulting', 'Services are provided on an 'as is' basis with no warranties',
+        'We reserve the right to modify or discontinue services at any time', 'Service availability may vary based on technical and business considerations';
+      ]}, {
+      title: 'User Responsibilities',
+      icon: AlertTriangle, content: [
+        'Provide accurate and complete information when using our services',
+        'Comply with all applicable laws and regulations', 'Not use our services for illegal or unauthorized purposes',
+        'Maintain the confidentiality of any account credentials', 'Notify us immediately of any security breaches or unauthorized access';
+      ]}, {
+      title: 'Intellectual Property',
+      icon: Scale, content: [
+        'All content, trademarks, and intellectual property belong to Zion Tech Group',
+        'Users may not copy, modify, or distribute our proprietary content', 'Any feedback or suggestions become our property without compensation',
+        'Users retain rights to their own data and content';
+      ]}, {
+      title: 'Payment Terms',
+      icon: CheckCircle, content: [
+        'Payment terms are specified in individual service agreements',
+        'All fees are non-refundable unless otherwise specified', 'We may suspend services for non-payment',
+        'Prices may change with 30 days notice to existing customers';
+      ]}, {
+      title: 'Limitation of Liability',
+      icon: XCircle, content: [
+        'Our liability is limited to the amount paid for services',
+        'We are not liable for indirect, incidental, or consequential damages', 'We do not guarantee uninterrupted or error-free service',
+        'Users assume all risks associated with service use';
+      ]}
+  ]
+  return(
+    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
+      <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
+        {/* Header */}
+>>>>>>> main
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -83,10 +138,17 @@ const Terms: React.FC = () => {}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
+<<<<<<< HEAD
           className=&apos;bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8&apos;>&apos;'
           <h2 className=&apos;text-2xl font-bold text-gray-900 mb-4&apos;>Agreement to Terms&apos;</h2>
           <p className=&apos;text-gray-600 leading-relaxed&apos;>
             These Terms of Service (&apos;Terms&apos;) govern your use of Zion Tech Group&apos;s website and services.;
+=======
+          className='bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>
+          <h2 className='text-2xl font-bold text-gray-900 mb-4'>Agreement to Terms</h2>
+          <p className='text-gray-600 leading-relaxed'>
+            These Terms of Service ('Terms') govern your use of Zion Tech Group&apos;s website and services.;'
+>>>>>>> main
             By accessing or using our services, you agree to be bound by these Terms. If you disagree;
             with any part of these terms, then you may not access the service.&apos;
           </p>
@@ -131,10 +193,16 @@ const Terms: React.FC = () => {}
               </p>
             </div>
             <div>
+<<<<<<< HEAD
               <h3 className=&apos;text-lg font-semibold text-gray-900 mb-2&apos;>Governing Law&apos;</h3>
               <p className=&apos;text-gray-600&apos;>
                 These Terms shall be interpreted and governed by the laws of Delaware, United States,
                 without regard to its conflict of law provisions.&apos;
+=======
+              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Governing Law</h3>
+              <p className='text-gray-600'>
+                These Terms shall be interpreted and governed by the laws of Delaware, United States, without regard to its conflict of law provisions.
+>>>>>>> main
               </p>
             </div>
             <div>
@@ -151,12 +219,20 @@ const Terms: React.FC = () => {}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9 }}
+<<<<<<< HEAD
           className=&apos;mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8&apos;>&apos;'
           <h2 className=&apos;text-2xl font-bold text-gray-900 mb-4&apos;>Contact Information&apos;</h2>
           <p className=&apos;text-gray-600 mb-4&apos;>
             If you have any questions about these Terms of Service, please contact us:&apos;
           </p>
           <div className=&apos;grid grid-cols-1 m,d:grid-cols-2 gap-4&apos;>&apos;'
+=======
+          className='mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
+          <h2 className='text-2xl font-bold text-gray-900 mb-4'>Contact Information</h2>
+          <p className='text-gray-600 mb-4'>
+            If you have any questions about these Terms of Service, please contact us: </p>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+>>>>>>> main
             <div>
               <h3 className=&apos;font-semibold text-gray-900 mb-2&apos;>Email&apos;</h3>
               <p className=&apos;text-gray-600&apos;>kleber@ziontechgroup.com&apos;</p>
@@ -178,8 +254,24 @@ const Terms: React.FC = () => {}
             </div>
           </div>
         </motion.div>
+=======
+=======
+import { SEO } from '../components/SEO';
+export default function Page() {
+const Terms: React.FC = () => {"
+  return (<>"
+      <SEO title='Terms - Zion Tech Group' /  >'
+      <div className='min-h-screen bg-white py-20'>"
+        <div className='max-w-4xl mx-auto px-4'>"
+          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Terms</h1>"
+          <p className='text-lg text-gray-600'>Content coming soon...</p>
+        </div>
+>>>>>>> main
       </div>
-    </div>
+</>
   )}
 ;
-export default Terms
+"
+}
+>>>>>>> main
+>>>>>>> main

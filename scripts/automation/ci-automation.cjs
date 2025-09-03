@@ -33,10 +33,10 @@ class CIAutomation {
     console.log(`logEntry);
 
     // Append to log file
-    fs.appendFileSync(this.logFile, logEntry + '\n');
-  }
-
-  async runCommand(command, cwd = this.projectRoot) {
+    fs.appendFileSync(this.logFile, logEntry + '\n');`);
+  }`);
+`);
+  async runCommand(command, cwd = this.projectRoot) {`);
     return new Promise((resolve, reject) => {this.log(Running command: ${command}`);
 
       const child = spawn(command, [], {

@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log(`'🔒 Starting continuous security audit automation...');
+console.log(`🔒 Starting continuous security audit automation...`);
 
 // Get automation interval from environment variable (default: 4 hours)
 const AUTOMATION_INTERVAL =
@@ -12,15 +12,15 @@ const AUTOMATION_INTERVAL =
 
 async function runSecurityAudit() {
   try {
-    console.log(`🔒 Running security audit at ${new Date().toISOString()});
-
-    // Run npm audit
-    console.log(`'🔍 Running npm security audit...');
+    console.log(`🔒 Running security audit at ${new Date().toISOString()});`);
+`);
+    // Run npm audit`);
+    console.log(`🔍 Running npm security audit...`);
     try {
       execSync('npm audit --audit-level=moderate', { stdio: 'inherit' });
       console.log('✅ Security audit completed - no issues found'`);
     } catch (error) {
-      console.log(`'⚠️  Security issues found, attempting auto-fix...');
+      console.log(`⚠️  Security issues found, attempting auto-fix...`);
       try {
         execSync('npm audit fix --audit-level=moderate', { stdio: 'inherit' });
         console.log('✅ Security issues auto-fixed');

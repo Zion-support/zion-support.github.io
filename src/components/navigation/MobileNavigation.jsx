@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from &apos;react';
 import { Link } from &apos;react-router-dom';
 import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from &apos;lucide-react';
@@ -9,6 +10,23 @@ const mobileMenuItems = [
   { name: &apos;Equipment&apos;, icon:&apos;} <HardDrive className=&apos;w-5 h-5&apos;/>, href: &apos;/equipment&apos; },
   { name: &apos;Innovation&apos;, icon:&apos;} <;<Lightbulb className=&apos;w-5 h-5&apos;/>, href: &apos;/category/innovation&apos; },
 ];&apos;
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';""
+import { Link } from 'react-router-dom';""
+import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react';""
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
+const mobileMenuItems = [
+  { name: 'Services', icon: <Briefcase className='w-5 h-5'/>, href: '/services' }, { name: 'Talent', icon: <Users className='w-5 h-5'/>, href: '/talent' },
+  { name: 'Equipment', icon: <HardDrive className='w-5 h-5'/>, href: '/equipment' }, { name: 'Innovation', icon: <Lightbulb className='w-5 h-5'/>, href: '/category/innovation' },
+];
+>>>>>>> main
 
 export function MobileNavigation() {}
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +36,11 @@ export function MobileNavigation() {}
   };
 
   return (
+<<<<<<< HEAD
     <div className=&quot;lg:hidden&quot;>&quot;"
+=======
+    <div className="lg: hidden">
+>>>>>>> main
       <Button
         variant=&quot;ghost&quot;
         size=&quot;sm&quot;
@@ -36,7 +58,11 @@ export function MobileNavigation() {}
               <Link
                 key={item.name}
                 to={item.href}
+<<<<<<< HEAD
                 className=&quot;flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-accent transition-colors&quot;
+=======
+                className="flex items-center space-x-3 px-3 py-2 rounded-md hover: bg-accent transition-colors"
+>>>>>>> main
                 onClick={() => setIsOpen(false)}
               >
                 {item.icon}&quot;
@@ -49,3 +75,9 @@ export function MobileNavigation() {}
     </div>
   );
 }
+=======
+import React, { useState } from 'react
+import { Link } from 'react-router-dom
+import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react
+>>>>>>> main
+>>>>>>> main

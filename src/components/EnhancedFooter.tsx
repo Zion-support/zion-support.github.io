@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link } from &apos;
 import Link from &apos;next/link';react-router-dom';
 import { motion } from &apos;framer-motion';
@@ -88,6 +89,69 @@ export function EnhancedFooter() {}
         { name: &apos;Webinars&apos;, href: &apos;/webinars&apos;, icon: Video },
         { name: &apos;White Papers&apos;, href: &apos;/white-papers&apos;, icon: FileText },
         { name: &apos;Training&apos;, href: &apos;/training&apos;, icon: GraduationCap }
+=======
+<<<<<<< HEAD
+import Link from 'next/link';""
+=======
+import Link from 'next/link
+>>>>>>> main
+import { motion } from 'framer-motion';
+import {
+  Phone, Mail,
+  MapPin, Linkedin,
+  Twitter, Facebook,
+  Instagram, Github,
+  Youtube, ArrowRight,
+  Star, Shield,
+  Zap, Brain,
+  Cloud, Users,
+  Award, TrendingUp,
+  MessageCircle, HelpCircle,
+  BookOpen, ShoppingCart,
+  Database, Network,
+  BarChart3, Code,
+  Server, Building,
+  Handshake, FileText,
+  Video, GraduationCap,
+<<<<<<< HEAD
+  Atom, PenTool,;""
+  DollarSign} from 'lucide-react';
+""
+=======
+<<<<<<< HEAD
+  Atom, PenTool,
+  DollarSign} from 'lucide-react';
+export function EnhancedFooter() {
+  const currentYear = new Date().getFullYear();
+  const footerSections = [
+    {
+      title: 'Featured Services', links: [{ name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, featured: true }, { name: 'Smart Inventory Management', href: '/services/smart-inventory-management', icon: Database, featured: true }, { name: 'Cloud Migration Services', href: '/services/cloud-migration-services', icon: Cloud, featured: true }, { name: 'AI Project Management', href: '/services/ai-project-management', icon: Brain, featured: true }, { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, featured: true }
+      ]}, {
+      title: 'Core Services',
+      links: [
+        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Code }, { name: 'AI Services', href: '/ai-services', icon: Brain },
+        { name: 'IT Infrastructure', href: '/it-services', icon: Server }, { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield }, { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Star },
+        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Star }
+      ]}, {
+      title: 'Solutions',
+      links: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building }, { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Users },
+        { name: 'Financial Solutions', href: '/solutions/financial', icon: TrendingUp }, { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Server },
+        { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart }, { name: 'Space Technology', href: '/solutions/space-tech', icon: Network }
+      ]}, {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about', icon: Users }, { name: 'Our Team', href: '/team', icon: Award },
+        { name: 'Careers', href: '/careers', icon: Users }, { name: 'News & Press', href: '/press', icon: BookOpen },
+        { name: 'Case Studies', href: '/case-studies', icon: BarChart3 }, { name: 'Partners', href: '/partners', icon: Handshake }
+      ]}, {
+      title: 'Resources',
+      links: [
+        { name: 'Blog', href: '/blog', icon: BookOpen }, { name: 'Documentation', href: '/documentation', icon: FileText },
+        { name: 'Help Center', href: '/help', icon: HelpCircle }, { name: 'Webinars', href: '/webinars', icon: Video },
+        { name: 'White Papers', href: '/white-papers', icon: FileText }, { name: 'Training', href: '/training', icon: GraduationCap }
+>>>>>>> main
       ]}
   ];&apos;
   const socialLinks = [
@@ -99,6 +163,7 @@ export function EnhancedFooter() {}
     { name: &apos;YouTube&apos;, href: &apos;http,s://youtube.com/@ziontechgroup&apos;, icon: Youtube, color: &apos;hove,r:text-red-400&apos; }
   ];&apos;
   const quickLinks = [
+<<<<<<< HEAD
     { name: &apos;Contact Us&apos;, href: &apos;/contact&apos;, icon: MessageCircle },
     { name: &apos;Request Quote&apos;, href: &apos;/request-quote&apos;, icon: DollarSign },
     { name: &apos;Support&apos;, href: &apos;/help&apos;, icon: HelpCircle },
@@ -116,6 +181,22 @@ export function EnhancedFooter() {}
             <div className=&apos;flex items-center space-x-3 mb-6&apos;>&apos;'
               <div className=&apos;w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center&apos;>&apos;'
                 <Zap className=&apos;w-7 h-7 text-white&apos; />&apos;
+=======
+    { name: 'Contact Us', href: '/contact', icon: MessageCircle }, { name: 'Request Quote', href: '/request-quote', icon: DollarSign },
+    { name: 'Support', href: '/help', icon: HelpCircle }, { name: 'Privacy Policy', href: '/privacy', icon: Shield },
+    { name: 'Terms of Service', href: '/terms', icon: FileText }, { name: 'Cookie Policy', href: '/cookies', icon: Shield }
+  ];
+  return(
+    <footer className='bg-zinc-900 border-t border-white/20'>
+      {/* Main Footer Content */}
+      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8'>
+          {/* Company Info */}
+          <div className='lg:col-span-2'>
+            <div className='flex items-center space-x-3 mb-6'>
+              <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center'>
+                <Zap className='w-7 h-7 text-white' />
+>>>>>>> main
               </div>
               <div>
                 <h3 className=&apos;text-2xl font-bold text-white&apos;>Zion Tech Group&apos;</h3>
@@ -147,9 +228,15 @@ export function EnhancedFooter() {}
                   <a
                     key={social.name}
                     href={social.href}
+<<<<<<< HEAD
                     target=&apos;_blank';
                     rel=&apos;noopener noreferrer';
                     className={`text-gray-400 ${social.color} transition-colors hover:scale-110 transform`}
+=======
+                    target='_blank';
+                    rel='noopener noreferrer';
+                    className={`text-gray-400 ${social.color} transition-colors hover: scale-110 transform`}
+>>>>>>> main
                     aria-label={social.name}
                   >&apos;&apos;
                     <social.icon className=&apos;w-5 h-5&apos; />&apos;
@@ -167,9 +254,15 @@ export function EnhancedFooter() {}
                   <li key={link.name}>
                     <Link
                       to={link.href}
+<<<<<<< HEAD
                       className={`flex items-center space-x-2 text-gray-300 hover:text-white transition-colors group ${
                         link.featured ? &apos;font-medium text-blue-300 hove,r:text-blue-200&apos; : &apos;&apos;}`}
                     >&apos;&apos;
+=======
+                      className={`flex items-center space-x-2 text-gray-300 hover: text-white transition-colors group ${
+                        link.featured ? 'font-medium text-blue-300 hover:text-blue-200' : ''}`}
+                    >
+>>>>>>> main
                       <link.icon className={`w-4 h-4 transition-transform group-hover:scale-110 ${
                         link.featured ? &apos;text-blue-400&apos; : &apos;text-blue-400&apos;}`} />&apos;
                       <span className=&apos;text-sm&apos;>{link.name}&apos;</span>
@@ -184,6 +277,7 @@ export function EnhancedFooter() {}
           ))}
         </div>
         {/* Quick Links Section */}
+<<<<<<< HEAD
         <div className=&apos;mt-12 pt-8 border-t border-white/20&apos;>&apos;'
           <div className=&apos;grid grid-cols-2 md:grid-cols-3 l,g:grid-cols-6 gap-4&apos;>
             {quickLinks.map((link) => (&apos;}
@@ -193,6 +287,17 @@ export function EnhancedFooter() {}
                 className=&apos;flex items-center space-x-2 text-gray-400 hover:text-white transition-colors group&apos;>&apos;'
                 <link.icon className=&apos;w-4 h-4 text-blue-400 group-hove,r:scale-110 transition-transform&apos; />&apos;
                 <span className=&apos;text-sm&apos;>{link.name}&apos;</span>
+=======
+        <div className='mt-12 pt-8 border-t border-white/20'>
+          <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-4'>
+            {quickLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.href}
+                className='flex items-center space-x-2 text-gray-400 hover: text-white transition-colors group'>
+                <link.icon className='w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform' />
+                <span className='text-sm'>{link.name}</span>
+>>>>>>> main
               </Link>
             ))}
           </div>
@@ -206,6 +311,7 @@ export function EnhancedFooter() {}
             <p className=&apos;text-gray-300 mb-6&apos;>
               Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.&apos;
             </p>
+<<<<<<< HEAD
             <div className=&apos;flex flex-col sm:flex-row gap-4 max-w-md mx-auto&apos;>&apos;'
               <input
                 type=&apos;email';
@@ -213,6 +319,15 @@ export function EnhancedFooter() {}
                 className=&apos;flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent&apos;/>&apos;&apos;
               <button className=&apos;px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 transform hove,r:scale-105&apos;>
                 Subscribe&apos;
+=======
+            <div className='flex flex-col sm: flex-row gap-4 max-w-md mx-auto'>
+              <input
+                type='email';
+                placeholder='Enter your email';
+                className='flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'/>
+              <button className='px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105'>
+                Subscribe
+>>>>>>> main
               </button>
             </div>
           </div>
@@ -240,10 +355,17 @@ export function EnhancedFooter() {}
             </div>
             {/* Back to Top */}
             <button;
+<<<<<<< HEAD
               onClick={() => window.scrollTo({ top: 0, behavior: &apos;smooth&apos; })}
               className=&apos;text-gray-400 hover:text-white transition-colors&apos;
             >&apos;
               <ArrowRight className=&apos;w-4 h-4 rotate-[-90deg]&apos; />&apos;
+=======
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className='text-gray-400 hover: text-white transition-colors'
+            >
+              <ArrowRight className='w-4 h-4 rotate-[-90deg]' />
+>>>>>>> main
             </button>
           </div>
         </div>
@@ -255,11 +377,23 @@ export function EnhancedFooter() {}
         transition={{ delay: 0.5 }}
         className=&apos;fixed bottom-6 right-6 z-50&apos;>&apos;'
         <Link
+<<<<<<< HEAD
           to=&apos;/contact';
           className=&apos;flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:scale-105&apos;>&apos;'
           <MessageCircle className=&apos;w-5 h-5 group-hover:scale-110 transition-transform&apos; />&apos;
           <span className=&apos;hidden s,m:block font-medium&apos;>Contact Us&apos;</span>
+=======
+          to='/contact';
+          className='flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:scale-105'>
+          <MessageCircle className='w-5 h-5 group-hover:scale-110 transition-transform' />
+          <span className='hidden sm:block font-medium'>Contact Us</span>
+>>>>>>> main
         </Link>
       </motion.div>
     </footer>
   )}
+=======
+  Atom, PenTool,;"
+  DollarSign} from 'lucide-react
+>>>>>>> main
+>>>>>>> main

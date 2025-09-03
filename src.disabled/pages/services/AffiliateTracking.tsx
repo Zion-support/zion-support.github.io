@@ -26,16 +26,13 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
       description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.';
   ];
   const plans = [
-    {
+  {
       name: 'Starter',
       price: 49,
       unit: 'month',
       bestFor: 'Founders validating their first affiliate program',
       bullets: [;
-        'Up to 200 partners',
-        'Basic tracking links and coupons',
-        'Manual approvals and payouts',
-        'Email support';
+        'Up to 200 partners,Basic tracking links and coupons,Manual approvals and payouts,Email support';
       ]},
     {
       name: 'Growth',
@@ -43,18 +40,14 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
       unit: 'month',
       bestFor: 'Scaling DTC and SaaS brands with multiple campaigns',
       bullets: [
-        'Up to 2,500 partners',
-        'Attribution across links, QR and coupons',
-        'Fraud prevention + sandbox',
-        'Automated Stripe/PayPal payouts',
-        'Slack alerts and webhooks';
+        'Up to 2,500 partners,Attribution across links, QR and coupons,Fraud prevention + sandbox,Automated Stripe/PayPal payouts,Slack alerts and webhooks';
       ]},
     {
       name: 'Enterprise',
       price: 599,
       unit: 'month',
       bestFor: 'Global programs, agencies and marketplaces',
-      bullets: ['Unlimited partners and campaigns',';SAML SSO and audit trails',';Custom data retention + warehouse sync',';Dedicated CSM and 99.9% SLA';
+      bullets: ['Unlimited partners and campaigns,;SAML SSO and audit trails,;Custom data retention + warehouse sync,;Dedicated CSM and 99.9% SLA';
       ]}
   ];
   return(

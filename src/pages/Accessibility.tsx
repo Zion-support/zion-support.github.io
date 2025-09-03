@@ -1,9 +1,22 @@
+<<<<<<< HEAD
 import { motion } from &apos;framer-motion';
 import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from &apos;lucide-react';&apos;&apos;
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';""
+import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react';
+""
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';"
+import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react';
+<<<<<<< HEAD
+>>>>>>> main
 
 const Accessibility: React.FC = () => {}
   const;const;const features = [
     {
+<<<<<<< HEAD
       title: &apos;Visual Accessibility&apos;,
       icon: Eye,
       description: &apos;Support for users with visual impairments&apos;,
@@ -46,9 +59,38 @@ const Accessibility: React.FC = () => {}
         &apos;Text-based alternatives&apos;,
         &apos;Visual alerts and notifications&apos;,
         &apos;Sign language support where applicable';
+=======
+      title: 'Visual Accessibility', icon: Eye,
+      description: 'Support for users with visual impairments', features: [;
+        'High contrast mode support', 'Screen reader compatibility',
+        'Text scaling and zoom functionality', 'Alternative text for images',
+        'Keyboard navigation support';
+      ]}, {
+      title: 'Motor Accessibility',
+      icon: MousePointer, description: 'Support for users with motor impairments',
+      features: [
+        'Keyboard-only navigation', 'Voice control compatibility',
+        'Large click targets', 'Customizable interaction timeouts',
+        'Switch control support';
+      ]}, {
+      title: 'Cognitive Accessibility',
+      icon: AccessibilityIcon, description: 'Support for users with cognitive differences',
+      features: [
+        'Clear and simple language', 'Consistent navigation patterns',
+        'Error prevention and recovery', 'Progress indicators',
+        'Help and support resources';
+      ]}, {
+      title: 'Auditory Accessibility',
+      icon: Ear, description: 'Support for users with hearing impairments',
+      features: [
+        'Visual indicators for audio content', 'Captions and transcripts',
+        'Text-based alternatives', 'Visual alerts and notifications',
+        'Sign language support where applicable';
+>>>>>>> main
       ]}
   ];&apos;&apos;
   const standards = [
+<<<<<<< HEAD
     &apos;WCAG 2.1 AA compliance&apos;,
     &apos;Section 508 compliance&apos;,
     &apos;ADA compliance&apos;,
@@ -59,6 +101,16 @@ const Accessibility: React.FC = () => {}
     <div className=&apos;min-h-screen bg-gradient-to-br from-slate-50 to-blue-50&apos;>&apos;'
       <div className=&apos;max-w-4xl mx-auto px-4 sm:px-6 l,g:px-8 py-16&apos;>
         {/* Header */}&apos;
+=======
+    'WCAG 2.1 AA compliance', 'Section 508 compliance',
+    'ADA compliance', 'EN 301 549 compliance',
+    'ISO/IEC 40500 compliance';
+  ]
+  return(
+    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
+      <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
+        {/* Header */}
+>>>>>>> main
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -242,9 +294,14 @@ const Accessibility: React.FC = () => {}
           <h2 className=&apos;text-2xl font-bold text-gray-900 mb-4&apos;>Feedback and Support&apos;</h2>
           <p className=&apos;text-gray-600 mb-4&apos;>
             We welcome your feedback on the accessibility of our website. If you encounter any;
+<<<<<<< HEAD
             accessibility barriers or have suggestions for improvement, please contact us:&apos;
           </p>
           <div className=&apos;grid grid-cols-1 m,d:grid-cols-2 gap-4&apos;>&apos;'
+=======
+            accessibility barriers or have suggestions for improvement, please contact us: </p>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+>>>>>>> main
             <div>
               <h3 className=&apos;font-semibold text-gray-900 mb-2&apos;>Accessibility Contact&apos;</h3>
               <p className=&apos;text-gray-600&apos;>accessibility@ziontechgroup.com&apos;</p>
@@ -268,3 +325,10 @@ const Accessibility: React.FC = () => {}
   )}
 ;
 export default Accessibility
+=======
+=======
+import { motion } from 'framer-motion
+import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

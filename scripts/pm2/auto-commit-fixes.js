@@ -25,7 +25,6 @@ class AutoCommitFixes {
   '})
       if (!status.trim()) {
         return { hasChanges: false, files: [] }
-;
       const files = status.split('\n;
   ');
         .filter(line => line.trim());
@@ -33,8 +32,7 @@ class AutoCommitFixes {
           const parts = line.trim().split(/\s+/);
           return {
             status: parts[0],
-            file: parts.slice(1).join(';
-  ')}
+            file: parts.slice(1).join()}
         })
       return { hasChanges: true, files }
     } catch (error) {
@@ -65,8 +63,7 @@ class AutoCommitFixes {
   async stageFiles(files) {
     try {
       if (files.length === 0) return;
-      execSync(`git add ${files.join(';
-  ')}`, {
+      execSync(`git add ${files.join()}`, {
         cwd: this.projectRoot,
         stdio: 'pipe;
   '})
@@ -92,12 +89,11 @@ class AutoCommitFixes {
       deleted: [],
       renamed: [],
       other: []}
-;
     files.forEach(file => {
       const status = file.status;
       const fileName = file.file;
       if (status === 'A;
-  ' || status === '??;
+  ' || status === '?.;
   ') {
         changes.added.push(fileName)} else if (status === 'M;
   ') {

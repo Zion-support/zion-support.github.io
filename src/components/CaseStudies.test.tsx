@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import CaseStudies from &apos;./CaseStudies';
 
@@ -8,3 +9,30 @@ describe(&apos;CaseStudies&apos;, () => {
   it(&apos;displays expected content&apos;, () => {
     render(&apos;}<CaseStudies />)
     // Add specific test assertions based on component content})})
+=======
+<<<<<<< HEAD
+import { render, screen } from '@testing-library/react';""
+import CaseStudies from './CaseStudies';""
+describe('CaseStudies', () => {""
+  it('renders without crashing', () => {""
+=======
+import { render, screen } from '@testing-library/react
+import CaseStudies from './CaseStudies
+describe('CaseStudies', () => {"
+  it('renders without crashing', () => {"
+>>>>>>> main
+    render(<CaseStudies /" >)"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
+  it('displays expected content', () => {
+<<<<<<< HEAD
+    render(<CaseStudies /" >)"
+    // Add specific test assertions based on component content, });
+""
+=======
+    render(<CaseStudies /" >)
+    // Add specific test assertions based on component content
+})
+"
+>>>>>>> main
+}}
+>>>>>>> main

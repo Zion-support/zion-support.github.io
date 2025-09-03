@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from &apos;react';
 import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
@@ -60,8 +61,68 @@ export default function Pricing() {}
     }
   ];&quot;
 
-  const serviceCategories = [
+=======
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { 
+  Check, Star, ArrowRight, Users, Zap, Shield, 
+  Brain, Atom, Rocket, Globe, Award
+} from 'lucide-react';
+export default function Pricing() {
+  const pricingPlans = [
+<<<<<<< HEAD
     {
+      name: "Starter", price: "$99",
+      period: "per month", description: "Perfect for small businesses getting started with AI",
+      features: [
+        "Basic AI tools and services", "Email support",
+        "Up to 5 users", "Standard security features",
+        "Basic analytics dashboard"
+=======
+  {
+      name: "Starter", price: "$99",
+      period: "per month", description: "Perfect for small businesses getting started with AI",
+      features: [
+        "Basic AI tools and services,Email support,Up to 5 users,Standard security features,Basic analytics dashboard"
+>>>>>>> main
+      ], popular: false,
+      color: "from-blue-500 to-cyan-500"
+    }, {
+      name: "Professional",
+      price: "$299", period: "per month",
+      description: "Ideal for growing businesses with advanced needs", features: [
+<<<<<<< HEAD
+        "Advanced AI and machine learning tools",
+        "Priority support", "Up to 25 users",
+        "Enhanced security features", "Advanced analytics and reporting",
+        "API access", "Custom integrations"
+=======
+        "Advanced AI and machine learning tools,Priority support,Up to 25 users,Enhanced security features,Advanced analytics and reporting,API access,Custom integrations"
+>>>>>>> main
+      ], popular: true,
+      color: "from-purple-500 to-pink-500"
+    }, {
+      name: "Enterprise",
+      price: "$999", period: "per month",
+      description: "Comprehensive solution for large organizations", features: [
+<<<<<<< HEAD
+        "Full AI and quantum computing suite",
+        "24/7 dedicated support", "Unlimited users",
+        "Enterprise-grade security", "Custom analytics and dashboards",
+        "Full API access", "Custom development services",
+        "Dedicated account manager"
+=======
+        "Full AI and quantum computing suite,24/7 dedicated support,Unlimited users,Enterprise-grade security,Custom analytics and dashboards,Full API access,Custom development services,Dedicated account manager"
+>>>>>>> main
+      ], popular: false,
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+>>>>>>> main
+  const serviceCategories = [
+<<<<<<< HEAD
+    {
+<<<<<<< HEAD
       title: &quot;AI Services&quot;,
       icon: Brain,
       startingPrice: &quot;$99/month&quot;,
@@ -94,6 +155,42 @@ export default function Pricing() {}
         description=&quot;Explore Zion Tech Group&apos;s transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs.&quot;
         keywords=&quot;pricing, AI services pricing, quantum computing cost, cybersecurity pricing, micro SaaS pricing, Zion Tech Group&quot;
       />&quot;
+=======
+=======
+  {
+>>>>>>> main
+      title: "AI Services", icon: Brain,
+      startingPrice: "$99/month", description: "Machine learning, natural language processing, and AI automation"
+    },
+    {
+      title: "Quantum Computing", icon: Atom,
+      startingPrice: "$499/month", description: "Quantum algorithms, quantum machine learning, and quantum optimization"
+    },
+    {
+      title: "Cybersecurity", icon: Shield,
+      startingPrice: "$199/month", description: "Advanced threat detection, security monitoring, and compliance"
+    },
+    {
+      title: "Micro SaaS", icon: Rocket,
+      startingPrice: "$149/month", description: "Custom software solutions and micro SaaS applications"
+    }
+  ];
+  return (
+    <>
+      <SEO 
+        title="Pricing - Zion Tech Group | Transparent Technology Solutions Pricing"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+        description="Explore Zion Tech Group&apos;s transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs."'
+        keywords="pricing, AI services pricing, quantum computing cost, cybersecurity pricing, micro SaaS pricing, Zion Tech Group"
+=======
+        description="Explore Zion Tech Group's transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs. 
+        keywords='pricing, AI services pricing, quantum computing cost, cybersecurity pricing, micro SaaS pricing, Zion Tech Group"
+>>>>>>> main
+      />
+>>>>>>> main
       
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
         {/* Hero Section */}&quot;
@@ -178,8 +275,13 @@ export default function Pricing() {}
 
                   <button className={`w-full px-6 py-3 font-semibold rounded-lg transition-all duration-200 ${
                     plan.popular
+<<<<<<< HEAD
                       ? &apos;bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700&apos;
                       : &apos;border border-slate-600 text-gray-300 hove,r:bg-slate-700&apos;
+=======
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700'
+                      : 'border border-slate-600 text-gray-300 hover:bg-slate-700'
+>>>>>>> main
                   }`}>
                     Get Started&apos;
                   </button>
@@ -264,6 +366,6 @@ export default function Pricing() {}
           </div>
         </section>
       </div>
-    </>
+</>
   );
 }

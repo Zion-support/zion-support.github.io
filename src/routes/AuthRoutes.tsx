@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Route, Routes    } from &apos;react-router-dom';&apos;&apos;
 export default function Page() {}
 export default function Page() {
@@ -39,11 +40,102 @@ const AuthRoutes: React.FC = () => {
         } />
         <Route path=&apos;/settings&apos; element={&apos;}
           <ProtectedRoute>
+=======
+<<<<<<< HEAD
+import { Route, Routes    } from 'react-router-dom';""
+=======
+<<<<<<< HEAD
+import { Route, Routes    } from 'react-router-dom';
+export default function Page() {
+  import { Suspense, lazy } from 'react';
+  import { ProtectedRoute } from '../components/ProtectedRoute';
+import LoadingSpinner from '../components/LoadingSpinner';
+=======
+import { Route, Routes    } from 'react-router-dom
+>>>>>>> main
+import { Lazy, Settings } from 'lucide-react';
+>>>>>>> main
+
+<<<<<<< HEAD
+export default function Page() {""
+  import { Suspense, lazy } from 'react';""
+  import { ProtectedRoute } from '../components/ProtectedRoute';""
+=======
+export default function Page() {"
+  import { Suspense, lazy } from 'react
+  import { ProtectedRoute } from '../components/ProtectedRoute
+>>>>>>> main
+import LoadingSpinner from '../components/LoadingSpinner';
+// Lazy load auth pages;""
+const Login = lazy(() => import('../pages/Login'));""
+const Signup = lazy(() => import('../pages/Signup'));""
+const ForgotPassword = lazy(() => import('../pages/ForgotPassword'));""
+const UpdatePassword = lazy(() => import('../pages/UpdatePassword'));""
+const Onboarding = lazy(() => import('../pages/Onboarding'));""
+const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));""
+const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'))
+<<<<<<< HEAD
+const AuthRoutes: React.FC = () => {""
+  return (<Suspense fallback={<LoadingSpinner /"" >}>""
+      <Routes>""
+        <Route path='/login' element={<Login /"" >} />""
+        <Route path='/signup' element={<Signup /"" >} />""
+        <Route path='/forgot-password' element={<ForgotPassword /"" >} />""
+        <Route path='/update-password' element={<UpdatePassword /"" >} />""
+        <Route path='/onboarding' element={<Onboarding /"" >} />""
+        <Route path='/talent-onboarding' element={<TalentOnboarding /"" >} />""
+        <Route path='/service-onboarding' element={<ServiceOnboarding /"" >} />""
+        <Route path='/profile' element={""
+          <ProtectedRoute"" >
+            <div>Profile Page</div>
+          </ProtectedRoute>, ","
+} />""
+        <Route path='/dashboard' element={""
+          <ProtectedRoute"" >
+            <div>Dashboard</div>
+          </ProtectedRoute>, ","
+} />""
+        <Route path='/settings' element={""
+          <ProtectedRoute"" >
+=======
+const AuthRoutes: React.FC = () => {'
+  return (<Suspense fallback={<LoadingSpinner /  >}>'
+      <Routes>"
+        <Route path='/login' element={<Login /  >} />'
+        <Route path='/signup' element={<Signup /  >} />'
+        <Route path='/forgot-password' element={<ForgotPassword /  >} />'
+        <Route path='/update-password' element={<UpdatePassword /  >} />'
+        <Route path='/onboarding' element={<Onboarding /  >} />'
+        <Route path='/talent-onboarding' element={<TalentOnboarding /  >} />'
+        <Route path='/service-onboarding' element={<ServiceOnboarding /  >} />'
+        <Route path='/profile' element={'
+          <ProtectedRoute  >
+            <div>Profile Page</div>
+          </ProtectedRoute>,',
+} />"
+        <Route path='/dashboard' element={'
+          <ProtectedRoute  >
+            <div>Dashboard</div>
+          </ProtectedRoute>,',
+} />"
+        <Route path='/settings' element={'
+          <ProtectedRoute  >
+>>>>>>> main
+>>>>>>> main
             <div>Settings</div>
-          </ProtectedRoute>
-        } />
+          </ProtectedRoute>, } />
       </Routes>
     <;</Suspense>
   )}
+<<<<<<< HEAD
 ;
-export default AuthRoutes
+<<<<<<< HEAD
+""
+}
+=======
+=======
+;
+'
+}
+>>>>>>> main
+>>>>>>> main

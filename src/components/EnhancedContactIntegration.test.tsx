@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import EnhancedContactIntegration from &apos;./EnhancedContactIntegration';
 
@@ -8,3 +9,30 @@ describe(&apos;EnhancedContactIntegration&apos;, () => {
   it(&apos;displays expected content&apos;, () => {
     render(&apos;}<EnhancedContactIntegration />)
     // Add specific test assertions based on component content})})
+=======
+<<<<<<< HEAD
+import { render, screen } from '@testing-library/react';""
+import EnhancedContactIntegration from './EnhancedContactIntegration';""
+describe('EnhancedContactIntegration', () => {""
+  it('renders without crashing', () => {""
+=======
+import { render, screen } from '@testing-library/react
+import EnhancedContactIntegration from './EnhancedContactIntegration
+describe('EnhancedContactIntegration', () => {"
+  it('renders without crashing', () => {"
+>>>>>>> main
+    render(<EnhancedContactIntegration /" >)"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
+  it('displays expected content', () => {
+<<<<<<< HEAD
+    render(<EnhancedContactIntegration /" >)"
+    // Add specific test assertions based on component content, });
+""
+=======
+    render(<EnhancedContactIntegration /" >)
+    // Add specific test assertions based on component content
+})
+"
+>>>>>>> main
+}}
+>>>>>>> main

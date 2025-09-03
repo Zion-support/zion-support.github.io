@@ -108,11 +108,16 @@ export interface SEOProps {
    noindex?: boolean}
 export interface PerformanceMetrics {
   fcp?: number;
-   // First Contentful Paint lcp?: number;
-   // Largest Contentful Paint fid?: number;
-   // First Input Delay cls?: number;
-   // Cumulative Layout Shift ttfb?: number;
-   // Time to First Byte}
+  // First Contentful Paint
+  lcp?: number;
+  // Largest Contentful Paint
+  fid?: number;
+  // First Input Delay
+  cls?: number;
+  // Cumulative Layout Shift
+  ttfb?: number;
+  // Time to First Byte
+}
 export interface AccessibilitySettings {
   highContrast: boolean;
    fontSize: number;
@@ -154,7 +159,7 @@ contact: {phone: string;
 export interface ErrorInfo {
   message: string;
    code?: string;
-   details?: any;
+   details?: unknown;
    timestamp: string;
    userAgent?: string;
    url?: string}
@@ -177,7 +182,7 @@ export interface FormField {
     message?: string}
 }
 export interface FormState {
-  values: Record<string, any>
+  values: Record<string, unknown>
    errors: Record<string, string>
    touched: Record<string, boolean>
    isSubmitting: boolean;
@@ -215,12 +220,12 @@ export interface ApiError {
   status: number;
    message: string;
    code?: string;
-   details?: any}
+   details?: unknown}
 export interface ApiRequest {
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   url: string;
-  data?: any;
-  params?: Record<string, any>;
+  data?: unknown;
+  params?: Record<string, unknown>;
   headers?: Record<string, string>}
 // Environment types;
 export interface Environment {

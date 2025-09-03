@@ -2,60 +2,60 @@ import React from;
   'react' import { motion } from;
   'framer-motion' import { Link } from;
   'react-router-dom' import {  Shield, Brain, Zap, Users, BarChart3, Rocket, CheckCircle, Star, ArrowRight, Globe, Cpu, Database, Cloud, Lock, TrendingUp, Target, Heart, Eye, Activity, Code, Server, Network, Phone, Mail, MapPin, DollarSign, Clock, Award, Lightbulb, Sparkles, Link as LinkIcon, Database as DatabaseIcon, Globe as GlobeIcon, Zap as ZapIcon, Users as UsersIcon, Lock as LockIcon, Truck, Package, Factory, ShoppingCart, BarChart, Settings, Monitor, ShieldCheck, } from;
-  'lucide-react'  export function BlockchainSupplyChainPlatform() { const features = [ { icon: LinkIcon, title:,
-  End-to-End Traceability', description: ';Complete visibility of products from source to consumer with immutable blockchain records, benefits: [';Real-time tracking',';Immutable records',';Complete audit trail', ], }, { icon: Shield, title:,
-  Smart Contract Automation', description: ';Automated compliance and quality assurance through blockchain smart contracts, benefits: [';Automated compliance',';Quality verification',';Payment automation', ], }, { icon: Activity, title:,
+  'lucide-react'  export function BlockchainSupplyChainPlatform() { const features = [
+  { icon: LinkIcon, title:,
+  End-to-End Traceability', description: ';Complete visibility of products from source to consumer with immutable blockchain records, benefits: [';Real-time tracking,;Immutable records,;Complete audit trail', ], }, { icon: Shield, title:,
+  Smart Contract Automation', description: ';Automated compliance and quality assurance through blockchain smart contracts, benefits: [';Automated compliance,;Quality verification,;Payment automation', ], }, { icon: Activity, title:,
   Real-Time Monitoring', description: ';Live monitoring of supply chain activities and performance metrics, benefits: [;
-  'Live dashboards',
-  'Performance tracking',
-  'Alert systems'], }, { icon: BarChart3, title:,
-  Advanced Analytics', description: ';Comprehensive supply chain analytics and predictive insights, benefits: [';Predictive analytics',';Performance optimization',';Risk assessment', ], }, { icon: Zap, title:,
-  Automated Compliance', description: ';Automated regulatory compliance and certification management, benefits: [';Regulatory compliance',';Certification tracking',';Audit automation', ], }, { icon: Cloud, title:,
+  'Live dashboards,Performance tracking,Alert systems'], }, { icon: BarChart3, title:,
+  Advanced Analytics', description: ';Comprehensive supply chain analytics and predictive insights, benefits: [';Predictive analytics,;Performance optimization,;Risk assessment', ], }, { icon: Zap, title:,
+  Automated Compliance', description: ';Automated regulatory compliance and certification management, benefits: [';Regulatory compliance,;Certification tracking,;Audit automation', ], }, { icon: Cloud, title:,
   Cloud-Native Platform', description: ';Scalable cloud infrastructure with global deployment capabilities, benefits: [,
-  Global scalability',
-  'High availability',
-  'Auto-scaling'], }, ]  const pricingPlans = [ { name: 'Starter, price:,
+  Global scalability,High availability,Auto-scaling'], }, ]  const pricingPlans = [
+  { name: 'Starter, price:,
   $1, 899', period: '/month, description:,
   Perfect for small to medium businesses', features: [';Up to 100 suppliers,
-  Basic traceability',';Standard compliance',';Email support',';Mobile app access',';Basic analytics',';API access',';Standard integrations', ], cta: 'Start Free Trial, popular: false, }, { name:,
+  Basic traceability,;Standard compliance,;Email support,;Mobile app access,;Basic analytics,;API access,;Standard integrations', ], cta: 'Start Free Trial, popular: false, }, { name:,
   Professional', price: $3, 999,
   , period: '/month, description:,
   For growing businesses with complex supply chains', features: [;Up to 1, 000 suppliers,
-  ,';Advanced traceability',';Smart contract automation',';Priority support',';Advanced analytics',';Custom integrations',';White-label options',';Compliance consulting',';Training programs',';SLA guarantees', ], cta: 'Start Free Trial, popular: true, }, { name:,
+  ,';Advanced traceability,;Smart contract automation,;Priority support,;Advanced analytics,;Custom integrations,;White-label options,;Compliance consulting,;Training programs,;SLA guarantees', ], cta: 'Start Free Trial, popular: true, }, { name:,
   Enterprise', price: 'Custom, period:,
   ', description: 'For large organizations with global supply chains, features: [;
   Unlimited suppliers;
-  ',';Full blockchain capabilities;
-  ',';Custom smart contracts;
-  ',';24/7 dedicated support;
-  ',';Custom development;
-  ',';On-premise options;
-  ',';Advanced security;
-  ',';Compliance certification;
-  ',';Strategic consulting;
-  ',';Implementation services;
-  ', ], cta: 'Contact Sales, popular: false, }, ]  const useCases = [ { title:,
+  ,;Full blockchain capabilities;
+  ,;Custom smart contracts;
+  ,;24/7 dedicated support;
+  ,;Custom development;
+  ,;On-premise options;
+  ,;Advanced security;
+  ,;Compliance certification;
+  ,;Strategic consulting;
+  ,;Implementation services;
+  ', ], cta: 'Contact Sales, popular: false, }, ]  const useCases = [
+  { title:,
   Food & Beverage;
   ', description: 'Ensure food safety and traceability from farm to table, icon: Package, benefits: [;
   Food safety compliance;
-  ',';Origin verification;
-  ',';Quality assurance;
+  ,;Origin verification;
+  ,;Quality assurance;
   ', ], }, { title: 'Pharmaceuticals, description: 'Prevent counterfeit drugs and ensure medication safety;
   ', icon: Heart, benefits: [;
   Drug authentication;
-  ',';Cold chain monitoring;
-  ',';Regulatory compliance;
+  ,;Cold chain monitoring;
+  ,;Regulatory compliance;
   ', ], }, { title: 'Luxury Goods, description: 'Verify authenticity and prevent counterfeiting;
   ', icon: Award, benefits: [;
   Authenticity verification;
-  ',';Brand protection;
-  ',';Consumer trust;
+  ,;Brand protection;
+  ,;Consumer trust;
   ', ], }, { title: 'Manufacturing, description: 'Optimize supply chain efficiency and quality control;
   ', icon: Factory, benefits: [;
   Quality control;
-  ',';Inventory optimization;
-  ',';Supplier management;
-  ', ], }, ]  const stats = [ { number: '100%, label:,
+  ,;Inventory optimization;
+  ,;Supplier management;
+  ', ], }, ]  const stats = [
+  { number: '100%, label:,
   Supply Chain Transparency;
   ' }, { number: '60%, label:,
   Reduction in Compliance Costs;
@@ -66,4 +66,4 @@ import React from;
   border-blue-500;
   ': 'border-gray-700 } relative`} >' {plan.popular && ('' <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'' <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'> Most Popular </span> </div>' )}'' <div className='text-center mb-8'>'' <h3 className='text-2xl font-bold mb-2'>{plan.name}</h3>'' <div className='text-4xl font-bold text-blue-400 mb-2'>' {plan.price}'' <span className='text-lg text-gray-400'>{plan.period}</span>' </div>'' <p className='text-gray-400'>{plan.description}</p>' </div>'' <ul className='space-y-4 mb-8'> {plan.features.map((feature, featureIndex) => ( <li' key={featureIndex}'' className='flex items-center text-gray-300'' >'' <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' /> {feature} </li> ))} </ul>' <Link'' to='/contact' className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${ plan.popular ?,
   bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: from-blue-600 hover:to-purple-700;
-  ' : 'bg-gray-700 text-white hover:bg-gray-600 }`} > {plan.cta} </Link> </motion.div> ))} </div> </div> </section>' {}'' <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-900 to-purple-900'>'' <div className='max-w-4xl mx-auto text-center'> <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}' >'' <h2 className='text-3xl md: text-4xl font-bold mb-4'> Ready to Transform Your Supply Chain?' </h2>'' <p className='text-xl text-gray-300 mb-8'> Join leading organizations that trust our blockchain platform for complete supply chain transparency' </p>'' <div className='flex flex-col sm: flex-row gap-4 justify-center'>' <Link'' to='/contact'' className='inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover: bg-gray-100 transition-all duration-300' >' Start Free Trial'' <ArrowRight className='ml-2 w-5 h-5' /> </Link>' <Link'' to='/contact'' className='inline-flex items-center px-8 py-4 border border-white text-white font-semibold rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300' > Schedule Demo </Link> </div> </motion.div> </div> </section>' {}'' <section className='py-16 px-4 sm: px-6 lg:px-8 bg-gray-800'>'' <div className='max-w-7xl mx-auto'>'' <div className='grid grid-cols-1 md: grid-cols-3 gap-8 text-center'>'' <div className='flex flex-col items-center'>'' <Phone className='w-8 h-8 text-blue-400 mb-4' />'' <h3 className='text-lg font-semibold mb-2'>Phone</h3>'' <p className='text-gray-400'>+1 302 464 0950</p>' </div>'' <div className='flex flex-col items-center'>'' <Mail className='w-8 h-8 text-blue-400 mb-4' />'' <h3 className='text-lg font-semibold mb-2'>Email</h3>'' <p className='text-gray-400'>kleber@ziontechgroup.com</p>' </div>'' <div className='flex flex-col items-center'>'' <MapPin className='w-8 h-8 text-blue-400 mb-4' />'' <h3 className='text-lg font-semibold mb-2'>Address</h3>'' <p className='text-gray-400'> 364 E Main St STE 1008 <br / / /> Middletown DE 19709 </p> </div> </div> </div> </section> </div> ) }';';''`
+  ' : 'bg-gray-700 text-white hover:bg-gray-600 }`} > {plan.cta} </Link> </motion.div> ))} </div> </div> </section>' {}'' <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-900 to-purple-900'>'' <div className='max-w-4xl mx-auto text-center'> <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}' >'' <h2 className='text-3xl md: text-4xl font-bold mb-4'> Ready to Transform Your Supply Chain?' </h2>'' <p className='text-xl text-gray-300 mb-8'> Join leading organizations that trust our blockchain platform for complete supply chain transparency' </p>'' <div className='flex flex-col sm: flex-row gap-4 justify-center'>' <Link'' to='/contact'' className='inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover: bg-gray-100 transition-all duration-300' >' Start Free Trial'' <ArrowRight className='ml-2 w-5 h-5' /> </Link>' <Link'' to='/contact'' className='inline-flex items-center px-8 py-4 border border-white text-white font-semibold rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300' > Schedule Demo </Link> </div> </motion.div> </div> </section>' {}'' <section className='py-16 px-4 sm: px-6 lg:px-8 bg-gray-800'>'' <div className='max-w-7xl mx-auto'>'' <div className='grid grid-cols-1 md: grid-cols-3 gap-8 text-center'>'' <div className='flex flex-col items-center'>'' <Phone className='w-8 h-8 text-blue-400 mb-4' />'' <h3 className='text-lg font-semibold mb-2'>Phone</h3>'' <p className='text-gray-400'>+1 302 464 0950</p>' </div>'' <div className='flex flex-col items-center'>'' <Mail className='w-8 h-8 text-blue-400 mb-4' />'' <h3 className='text-lg font-semibold mb-2'>Email</h3>'' <p className='text-gray-400'>kleber@ziontechgroup.com</p>' </div>'' <div className='flex flex-col items-center'>'' <MapPin className='w-8 h-8 text-blue-400 mb-4' />'' <h3 className='text-lg font-semibold mb-2'>Address</h3>'' <p className='text-gray-400'> 364 E Main St STE 1008 <br / / /> Middletown DE 19709 </p> </div> </div> </div> </section> </div> ) };''`

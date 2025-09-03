@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from &apos;
 import Link from &apos;next/link';react';
 import { Link, useLocation } from &apos;react-router-dom';&apos;&apos;
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';""
+""
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+>>>>>>> main
 
 export default function Header() ;{}
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,6 +24,7 @@ export default function Header() ;{}
     return () => window.removeEventListener(&apos;scroll&apos;, handleScroll)}, []);&apos;
   const navigation = [
     {
+<<<<<<< HEAD
       name: &apos;Home&apos;,
       href: &apos;/&apos;,
       current: location.pathname === &apos;/&apos;},
@@ -65,6 +76,27 @@ export default function Header() ;{}
       name: &apos;Contact&apos;,
       href: &apos;/contact&apos;,
       current: location.pathname === &apos;/contact&apos;}
+=======
+      name: 'Home', href: '/',
+      current: location.pathname === '/'}, {
+      name: 'Services',
+      href: '/services', current: location.pathname.startsWith('/services'), dropdown: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }, { name: 'Industry Solutions', href: '/services/industry-solutions' }
+      ]}, {
+      name: 'Solutions',
+      href: '/solutions', current: location.pathname.startsWith('/solutions'), dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' }, { name: 'Startup Solutions', href: '/solutions/startup' }, { name: 'Space Technology', href: '/solutions/space-tech' }, { name: 'Supply Chain', href: '/solutions/supply-chain' }
+      ]}, {
+      name: 'About',
+      href: '/about', current: location.pathname.startsWith('/about'), dropdown: [
+        { name: 'Our Story', href: '/about/story' }, { name: 'Team', href: '/about/team' }, { name: 'Careers', href: '/careers' }, { name: 'Partners', href: '/partners' }
+      ]}, {
+      name: 'Resources',
+      href: '/resources', current: location.pathname.startsWith('/resources'), dropdown: [
+        { name: 'Blog', href: '/blog' }, { name: 'Case Studies', href: '/case-studies' }, { name: 'White Papers', href: '/white-papers' }, { name: 'Webinars', href: '/webinars' }, { name: 'Training', href: '/training' }, { name: 'Documentation', href: '/docs' }
+      ]}, {
+      name: 'Contact',
+      href: '/contact', current: location.pathname === '/contact'}
+>>>>>>> main
   ]
   return(&apos;&apos;
     <;<header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -104,7 +136,11 @@ export default function Header() ;{}
                           <Link
                             key={subItem.name}
                             to={subItem.href}
+<<<<<<< HEAD
                             className=&apos;block px-4 py-2 text-sm text-gray-700 hover:text-blue-600 hove,r:bg-blue-50 transition-colors&apos;>{subItem.name}&apos;
+=======
+                            className='block px-4 py-2 text-sm text-gray-700 hover: text-blue-600 hover:bg-blue-50 transition-colors'>{subItem.name}
+>>>>>>> main
                           </Link>
                         ))}
                       </div>
@@ -124,20 +160,35 @@ export default function Header() ;{}
             ))}
           </nav>
           {/* CTA Button */}
+<<<<<<< HEAD
           <div className=&apos;hidden lg:block&apos;>&apos;'
             <Link
               to=&apos;/contact';
               className=&apos;bg-blue-600 hove,r:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors&apos;>
               Get Started&apos;&apos;
+=======
+          <div className='hidden lg: block'>
+            <Link
+              to='/contact';
+              className='bg-blue-600 hover: bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors'>
+              Get Started
+>>>>>>> main
             </Link>
           </div>
           {/* Mobile menu button */}
           <button;
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+<<<<<<< HEAD
             className=&apos;lg:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hove,r:bg-gray-100&apos;
           >&apos;
             <svg className=&apos;w-6 h-6&apos; fill=&apos;none&apos; stroke=&apos;currentColor&apos; viewBox=&apos;0 0 24 24&apos;>&apos;'
               <path strokeLinecap=&apos;round&apos; strokeLinejoin=&apos;round&apos; strokeWidth={2} d=&apos;M4 6h16M4 12h16M4 18h16&apos; />&apos;
+=======
+            className='lg: hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100'
+          >
+            <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 6h16M4 12h16M4 18h16' />
+>>>>>>> main
             </svg>
           </button>
         </div>
@@ -156,7 +207,11 @@ export default function Header() ;{}
                         <Link;
                           key={subItem.name}
                           to={subItem.href}
+<<<<<<< HEAD
                           className=&apos;block text-sm text-gray-600 hover:text-blue-600';
+=======
+                          className='block text-sm text-gray-600 hover: text-blue-600';
+>>>>>>> main
                           onClick={() => setMobileMenuOpen(false)}
                         >{subItem.name}&apos;&apos;
                         </Link>
@@ -166,7 +221,11 @@ export default function Header() ;{}
                 ) : (
                   <Link;
                     to={item.href}
+<<<<<<< HEAD
                     className=&apos;block text-sm font-medium text-gray-900 hover:text-blue-600';
+=======
+                    className='block text-sm font-medium text-gray-900 hover: text-blue-600';
+>>>>>>> main
                     onClick={() => setMobileMenuOpen(false)}
                   >{item.name}&apos;&apos;
                   </Link>
@@ -175,8 +234,13 @@ export default function Header() ;{}
             ))}
             <div className=&apos;pt-4&apos;>&apos;'
               <Link;
+<<<<<<< HEAD
                 to=&apos;/contact';
                 className=&apos;block w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors';
+=======
+                to='/contact';
+                className='block w-full bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors';
+>>>>>>> main
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Get Started&apos;&apos;
@@ -187,3 +251,8 @@ export default function Header() ;{}
       )}
     </header>
   )}
+=======
+import React, { useState, useEffect } from 'react
+"
+>>>>>>> main
+>>>>>>> main

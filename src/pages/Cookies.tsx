@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from &apos;framer-motion';
 import { Cookie, Settings, Shield, Eye, BarChart3 } from &apos;lucide-react';&apos;&apos;
 
@@ -51,6 +52,47 @@ const Cookies: React.FC = () => {}
     <div className=&apos;min-h-screen bg-gradient-to-br from-slate-50 to-blue-50&apos;>&apos;'
       <div className=&apos;max-w-4xl mx-auto px-4 sm:px-6 l,g:px-8 py-16&apos;>
         {/* Header */}&apos;
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';""
+import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react';
+""
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react';
+
+const Cookies: React.FC = () => {
+  const cookieTypes = [{
+      name: 'Essential Cookies', icon: Shield,
+      description: 'These cookies are necessary for the website to function properly.', examples: [;
+        'Authentication and login status', 'Shopping cart functionality',
+        'Security and fraud prevention', 'Load balancing and performance';
+      ], required: true},
+    {
+      name: 'Analytics Cookies', icon: BarChart3,
+      description: 'These cookies help us understand how visitors interact with our website.', examples: [;
+        'Page views and user behavior', 'Traffic sources and referrals',
+        'Popular content and features', 'Performance metrics and errors';
+      ], required: false},
+    {
+      name: 'Marketing Cookies', icon: Eye,
+      description: 'These cookies are used to deliver relevant advertisements and track campaign performance.', examples: [;
+        'Ad targeting and personalization', 'Campaign effectiveness measurement',
+        'Social media integration', 'Retargeting and remarketing';
+      ], required: false},
+    {
+      name: 'Preference Cookies', icon: Settings,
+      description: 'These cookies remember your preferences and settings.', examples: [;
+        'Language and region settings', 'Theme and display preferences',
+        'Accessibility options', 'Customized content delivery';
+      ], required: false}
+  ]
+  return(
+    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
+      <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
+        {/* Header */}
+>>>>>>> main
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -108,12 +150,21 @@ const Cookies: React.FC = () => {}
                 </div>
               </div>
               <div>
+<<<<<<< HEAD
                 <h3 className=&apos;text-lg font-semibold text-gray-900 mb-2&apos;>Examples:&apos;</h3>
                 <ul className=&apos;space-y-1&apos;>
                   {cookie.examples.map((example, exampleIndex) => (&apos;}
                     <li key={exampleIndex} className=&apos;flex items-start&apos;>&apos;'
                       <span className=&apos;text-blue-600 mr-2 mt-1&apos;>•&apos;</span>
                       <span className=&apos;text-gray-600&apos;>{example}&apos;</span>
+=======
+                <h3 className='text-lg font-semibold text-gray-900 mb-2'>Examples: </h3>
+                <ul className='space-y-1'>
+                  {cookie.examples.map((example, exampleIndex) => (
+                    <li key={exampleIndex} className='flex items-start'>
+                      <span className='text-blue-600 mr-2 mt-1'>•</span>
+                      <span className='text-gray-600'>{example}</span>
+>>>>>>> main
                     </li>
                   ))}
                 </ul>
@@ -154,9 +205,15 @@ const Cookies: React.FC = () => {}
               </ul>
             </div>
             <div>
+<<<<<<< HEAD
               <h3 className=&apos;text-lg font-semibold text-gray-900 mb-2&apos;>Cookie Consent&apos;</h3>
               <p className=&apos;text-gray-600&apos;>
                 When you first visit our website, you&apos;ll see a cookie consent banner. You can choose;
+=======
+              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Cookie Consent</h3>
+              <p className='text-gray-600'>
+                When you first visit our website, you&apos;ll see a cookie consent banner. You can choose;'
+>>>>>>> main
                 which types of cookies to accept. You can change your preferences at any time by;
                 clicking the cookie settings link in our footer.&apos;
               </p>
@@ -197,12 +254,20 @@ const Cookies: React.FC = () => {}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
+<<<<<<< HEAD
           className=&apos;mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8&apos;>&apos;'
           <h2 className=&apos;text-2xl font-bold text-gray-900 mb-4&apos;>Questions About Cookies?&apos;</h2>
           <p className=&apos;text-gray-600 mb-4&apos;>
             If you have any questions about our use of cookies, please contact us:&apos;
           </p>
           <div className=&apos;grid grid-cols-1 m,d:grid-cols-2 gap-4&apos;>&apos;'
+=======
+          className='mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
+          <h2 className='text-2xl font-bold text-gray-900 mb-4'>Questions About Cookies?</h2>
+          <p className='text-gray-600 mb-4'>
+            If you have any questions about our use of cookies, please contact us: </p>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+>>>>>>> main
             <div>
               <h3 className=&apos;font-semibold text-gray-900 mb-2&apos;>Email&apos;</h3>
               <p className=&apos;text-gray-600&apos;>kleber@ziontechgroup.com&apos;</p>
@@ -218,3 +283,8 @@ const Cookies: React.FC = () => {}
   )}
 ;
 export default Cookies
+=======
+import { motion } from 'framer-motion
+import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react
+>>>>>>> main
+>>>>>>> main

@@ -1,2 +1,15 @@
+<<<<<<< HEAD
  export default function AccountSettings () {} const ;{ user } = useAuth ()  const [displayWeb3, setDisplayWeb3] = useState(false) const;const [didHandle, setDidHandle] = useState(&apos;)&apos;' const [enableBackup, setEnableBackup] = useState(false) const [isSubmitting, setIsSubmitting] = useState(false) useEffect(() => { try {}} const;const saved = localStorage.getItem(&apos;account_settings&apos;)  if(saved) {&apos;} const;const parsed = JSON.parse(saved)  setDisplayWeb3(!!parsed.displayWeb3)  setDidHandle(parsed.didHandle || &apos;) ;
 &apos;'
+=======
+<<<<<<< HEAD
+ export default function AccountSettings () { const { user } = useAuth ()  const [displayWeb3, setDisplayWeb3] = useState(false) const [didHandle, setDidHandle] = useState(') const [enableBackup, setEnableBackup] = useState(false) const [isSubmitting, setIsSubmitting] = useState(false) useEffect(() => { try { const saved = localStorage.getItem('account_settings')  if(saved) { const parsed = JSON.parse(saved)  setDisplayWeb3(!!parsed.displayWeb3)  setDidHandle(parsed.didHandle || ') ;""
+""
+}}}}}}}}
+=======
+ export default function AccountSettings () { const { user } = useAuth ()  const [displayWeb3, setDisplayWeb3] = useState(false) const [didHandle, setDidHandle] = useState(') const [enableBackup, setEnableBackup] = useState(false) const [isSubmitting, setIsSubmitting] = useState(false) useEffect(() => { try { const saved = localStorage.getItem('account_settings')  if(saved) { const parsed = JSON.parse(saved)  setDisplayWeb3(!!parsed.displayWeb3)  setDidHandle(parsed.didHandle ||, ') ;"
+ export default function AccountSettings () { const { user } = useAuth ()  const [displayWeb3, setDisplayWeb3] = useState(false) const [didHandle, setDidHandle] = useState(') const [enableBackup, setEnableBackup] = useState(false) const [isSubmitting, setIsSubmitting] = useState(false) useEffect(() => { try { const saved = localStorage.getItem('account_settings')  if(saved) { const parsed = JSON.parse(saved)  setDisplayWeb3(!!parsed.displayWeb3)  setDidHandle(parsed.didHandle ||, ') 
+"
+}}}}}}};
+>>>>>>> main
+>>>>>>> main

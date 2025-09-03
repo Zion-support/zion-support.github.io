@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import EnhancedImageLoader from &apos;./EnhancedImageLoader';
 
@@ -8,3 +9,30 @@ describe(&apos;EnhancedImageLoader&apos;, () => {
   it(&apos;displays expected content&apos;, () => {
     render(&apos;}<EnhancedImageLoader />)
     // Add specific test assertions based on component content})})
+=======
+<<<<<<< HEAD
+import { render, screen } from '@testing-library/react';""
+import EnhancedImageLoader from './EnhancedImageLoader';""
+describe('EnhancedImageLoader', () => {""
+  it('renders without crashing', () => {""
+=======
+import { render, screen } from '@testing-library/react
+import EnhancedImageLoader from './EnhancedImageLoader
+describe('EnhancedImageLoader', () => {"
+  it('renders without crashing', () => {"
+>>>>>>> main
+    render(<EnhancedImageLoader /" >)"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
+  it('displays expected content', () => {
+<<<<<<< HEAD
+    render(<EnhancedImageLoader /" >)"
+    // Add specific test assertions based on component content, });
+""
+=======
+    render(<EnhancedImageLoader /" >)
+    // Add specific test assertions based on component content
+})
+"
+>>>>>>> main
+}}
+>>>>>>> main

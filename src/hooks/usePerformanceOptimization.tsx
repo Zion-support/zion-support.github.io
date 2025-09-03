@@ -1,4 +1,4 @@
-:src/hooks/usePerformanceOptimization.tsx interface PerformanceMetrics {
+: src/hooks/usePerformanceOptimization.tsx interface PerformanceMetrics {
   loadTime: number;
    renderTime: number;
    memoryUsage: number;
@@ -7,4 +7,12 @@
    enableIntersectionObserver?: boolean;
    enableMemoryManagement?: boolean;
    enableFPSMonitoring?: boolean;
+<<<<<<< HEAD
    :src/hooks/usePerformanceOptimization.tsx threshold?: number}  export threshold?: number} export const { enableLazyLoading = true, enableIntersectionObserver = true, enableMemoryManagement = true, enableFPSMonitoring = true, :src/hooks/usePerformanceOptimization.tsx threshold = 0.1} = options  threshold = 0.1} = options const metricsRef: useRef<;<PerformanceMetrics>({ loadTim,e: 0, renderTime: 0, memoryUsage: 0, fps: 0});
+=======
+<<<<<<< HEAD
+   : src/hooks/usePerformanceOptimization.tsx threshold?: number}  export threshold?: number} export const { enableLazyLoading = true, enableIntersectionObserver = true, enableMemoryManagement = true, enableFPSMonitoring = true, : src/hooks/usePerformanceOptimization.tsx threshold = 0.1} = options  threshold = 0.1} = options const metricsRef: useRef<PerformanceMetrics>({ loadTime: 0, renderTime: 0, memoryUsage: 0, fps: 0})
+=======
+   : src/hooks/usePerformanceOptimization.tsx threshold?: number}  export threshold?: number} export const { enableLazyLoading = true, enableIntersectionObserver = true, enableMemoryManagement = true, enableFPSMonitoring = true, : src/hooks/usePerformanceOptimization.tsx threshold = 0.1} = options  threshold = 0.1} = options const metricsRef: useRef<PerformanceMetrics></PerformanceMetrics>({ loadTime: 0, renderTime: 0, memoryUsage: 0, fps: 0})
+>>>>>>> main
+>>>>>>> main

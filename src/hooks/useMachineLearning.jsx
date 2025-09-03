@@ -1,1 +1,16 @@
+<<<<<<< HEAD
 import { useState, useEffect, useCallback, useRef } from &apos;react&apos; import { useAnalytics } from &apos;./useAnalytics&apos;&apos;' export const useMachineLearning = (_initialConfig) => {} const { trackEvent } = useAnalytics({ enableTracking: true, enableUserBehaviorTracking: true }) const [models, setModels] = useState([]) const [trainingJobs, setTrainingJobs] = useState([]) const [predictions, setPredictions] = useState([]) const [metrics, setMetrics] = useState({ totalModels: 0, activeModels: 0, averageAccuracy: 0, totalPredictions: 0, successfulPredictions: 0, averageResponseTime: 0, trainingJobs: { tota,l: 0, running: 0, completed: 0, failed: 0 } }) const [isTraining, setIsTraining] = useState(false) const [isPredicting, setIsPredicting] = useState(false) const;const;const trainingIntervalsRef = useRef(new Map()) ;const predictionTimeoutsRef = useRef(new Map())';&quot;&quot;"
+=======
+<<<<<<< HEAD
+import { useState, useEffect, useCallback, useRef } from 'react' import { useAnalytics } from './useAnalytics' export const useMachineLearning = (_initialConfig) => { const { trackEvent } = useAnalytics({ enableTracking: true, enableUserBehaviorTracking: true }) const [models, setModels] = useState([]) const [trainingJobs, setTrainingJobs] = useState([]) const [predictions, setPredictions] = useState([]) const [metrics, setMetrics] = useState({ totalModels: 0, activeModels: 0, averageAccuracy: 0, totalPredictions: 0, successfulPredictions: 0, averageResponseTime: 0, trainingJobs: { total: 0, running: 0, completed: 0, failed: 0 } }) const [isTraining, setIsTraining] = useState(false) const [isPredicting, setIsPredicting] = useState(false) const trainingIntervalsRef = useRef(new Map()) const predictionTimeoutsRef = useRef(new Map())';"'"
+<<<<<<< HEAD
+""
+}
+=======
+=======
+import { useState, useEffect, useCallback, useRef } from 'react' import { useAnalytics }  from './useAnalytics';export const useMachineLearning = (_initialConfig) => { const { trackEvent } = useAnalytics({ enableTracking: true, enableUserBehaviorTracking: true }) const [models, setModels] = useState([]) const [trainingJobs, setTrainingJobs] = useState([]) const [predictions, setPredictions] = useState([]) const [metrics, setMetrics] = useState({ totalModels: 0, activeModels: 0, averageAccuracy: 0, totalPredictions: 0, successfulPredictions: 0, averageResponseTime: 0, trainingJobs: { total: 0, running: 0, completed: 0, failed: 0 } }) const [isTraining, setIsTraining] = useState(false) const [isPredicting, setIsPredicting] = useState(false) const trainingIntervalsRef = useRef(new Map()) const predictionTimeoutsRef = useRef(new Map())'"
+"
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

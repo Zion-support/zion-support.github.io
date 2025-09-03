@@ -1,28 +1,54 @@
+<<<<<<< HEAD
 import React, { useState } from &apos;
 import Link from &apos;next/link';react';
 import { Link } from &apos;react-router-dom';
 import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from &apos;lucide-react';&apos;&apos;
 
 export function MainNavigation({ className = &apos;&apos; }) {&apos;}&apos;
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';""
+import { Link } from 'react-router-dom';""
+import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from 'lucide-react';""
+=======
+import React, { useState } from 'react
+import { Link } from 'react-router-dom
+import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from 'lucide-react
+>>>>>>> main
+export function MainNavigation({ className = '' }) {
+>>>>>>> main
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+<<<<<<< HEAD
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   return(
     <nav className={`flex items-center space-x-8 ${className}`}>
       {/* Home */}
       <Link
+<<<<<<< HEAD
         to=&apos;/';
         className=&apos;text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors&apos;>
         Home&apos;&apos;
+=======
+        to='/';
+        className='text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'>
+        Home
+>>>>>>> main
       </Link>
       {/* Services Dropdown */}
       <div className=&apos;relative group&apos;>&apos;'
         <button;
           onMouseEnter={() => setIsServicesOpen(true)}
           onMouseLeave={() => setIsServicesOpen(false)}
+<<<<<<< HEAD
           className=&apos;flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors&apos;
         >&apos;
           <Zap className=&apos;w-4 h-4&apos; />&apos;
+=======
+          className='flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'
+        >
+          <Zap className='w-4 h-4' />
+>>>>>>> main
           <span>Services</span>
           <ChevronDown className=&apos;w-3 h-3&apos; />&apos;
         </button>
@@ -41,8 +67,13 @@ export function MainNavigation({ className = &apos;&apos; }) {&apos;}&apos;
                   </h4>
                   <ul className=&apos;space-y-2 text-sm&apos;>&apos;'
                     <li>
+<<<<<<< HEAD
                       <Link to=&apos;/services&apos; className=&apos;text-zion-slate-light hover:text-zion-cyan transition-colors&apos;>
                         All Services&apos;
+=======
+                      <Link to='/services' className='text-zion-slate-light hover: text-zion-cyan transition-colors'>
+                        All Services
+>>>>>>> main
                       </Link>
                     </li>
                     <li>
@@ -166,10 +197,17 @@ export function MainNavigation({ className = &apos;&apos; }) {&apos;}&apos;
               </div>
               <div className=&apos;mt-4 pt-4 border-t border-zion-purple/20&apos;>&apos;'
                 <Link
+<<<<<<< HEAD
                   to=&apos;/services';
                   className=&apos;text-zion-cyan hove,r:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center&apos;>
                   View All Services&apos;&apos;
                   <TrendingUp className=&apos;w-4 h-4 ml-2&apos; />&apos;
+=======
+                  to='/services';
+                  className='text-zion-cyan hover: text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center'>
+                  View All Services
+                  <TrendingUp className='w-4 h-4 ml-2' />
+>>>>>>> main
                 </Link>
               </div>
             </div>
@@ -181,9 +219,15 @@ export function MainNavigation({ className = &apos;&apos; }) {&apos;}&apos;
         <button;
           onMouseEnter={() => setIsSolutionsOpen(true)}
           onMouseLeave={() => setIsSolutionsOpen(false)}
+<<<<<<< HEAD
           className=&apos;flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors&apos;
         >&apos;
           <Brain className=&apos;w-4 h-4&apos; />&apos;
+=======
+          className='flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'
+        >
+          <Brain className='w-4 h-4' />
+>>>>>>> main
           <span>Solutions</span>
           <ChevronDown className=&apos;w-3 h-3&apos; />&apos;
         </button>
@@ -202,8 +246,13 @@ export function MainNavigation({ className = &apos;&apos; }) {&apos;}&apos;
                   </h4>
                   <ul className=&apos;space-y-2 text-sm&apos;>&apos;'
                     <li>
+<<<<<<< HEAD
                       <Link to=&apos;/talent&apos; className=&apos;text-zion-slate-light hover:text-zion-cyan transition-colors&apos;>
                         Find Experts&apos;
+=======
+                      <Link to='/talent' className='text-zion-slate-light hover: text-zion-cyan transition-colors'>
+                        Find Experts
+>>>>>>> main
                       </Link>
                     </li>
                     <li>
@@ -254,10 +303,17 @@ export function MainNavigation({ className = &apos;&apos; }) {&apos;}&apos;
               </div>
               <div className=&apos;mt-4 pt-4 border-t border-zion-purple/20&apos;>&apos;'
                 <Link
+<<<<<<< HEAD
                   to=&apos;/request-quote';
                   className=&apos;text-zion-cyan hove,r:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center&apos;>
                   Get Custom Quote&apos;&apos;
                   <TrendingUp className=&apos;w-4 h-4 ml-2&apos; />&apos;
+=======
+                  to='/request-quote';
+                  className='text-zion-cyan hover: text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center'>
+                  Get Custom Quote
+                  <TrendingUp className='w-4 h-4 ml-2' />
+>>>>>>> main
                 </Link>
               </div>
             </div>
@@ -269,9 +325,15 @@ export function MainNavigation({ className = &apos;&apos; }) {&apos;}&apos;
         <button;
           onMouseEnter={() => setIsCompanyOpen(true)}
           onMouseLeave={() => setIsCompanyOpen(false)}
+<<<<<<< HEAD
           className=&apos;flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors&apos;
         >&apos;
           <Building2 className=&apos;w-4 h-4&apos; />&apos;
+=======
+          className='flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'
+        >
+          <Building2 className='w-4 h-4' />
+>>>>>>> main
           <span>Company</span>
           <ChevronDown className=&apos;w-3 h-3&apos; />&apos;
         </button>
@@ -284,8 +346,13 @@ export function MainNavigation({ className = &apos;&apos; }) {&apos;}&apos;
             <div className=&apos;p-4&apos;>&apos;'
               <ul className=&apos;space-y-2 text-sm&apos;>&apos;'
                 <li>
+<<<<<<< HEAD
                   <Link to=&apos;/about&apos; className=&apos;text-zion-slate-light hover:text-zion-cyan transition-colors&apos;>
                     About Us&apos;
+=======
+                  <Link to='/about' className='text-zion-slate-light hover: text-zion-cyan transition-colors'>
+                    About Us
+>>>>>>> main
                   </Link>
                 </li>
                 <li>
@@ -325,6 +392,7 @@ export function MainNavigation({ className = &apos;&apos; }) {&apos;}&apos;
       </div>
       {/* Resources */}
       <Link
+<<<<<<< HEAD
         to=&apos;/resources';
         className=&apos;text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors&apos;>
         Resources&apos;&apos;
@@ -340,6 +408,33 @@ export function MainNavigation({ className = &apos;&apos; }) {&apos;}&apos;
         to=&apos;/pricing';
         className=&apos;text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors&apos;>
         Pricing&apos;&apos;
+=======
+        to='/resources';
+        className='text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'>
+        Resources
+      </Link>
+      {/* Blog */}
+      <Link
+        to='/blog';
+        className='text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'>
+        Blog
+      </Link>
+      {/* Pricing */}
+      <Link
+        to='/pricing';
+        className='text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors'>
+        Pricing
+>>>>>>> main
       </Link>
     </nav>
   )}
+=======
+  const [isCompOpen, setIsCompOpen] = useState(false);
+<<<<<<< HEAD
+""
+}
+=======
+"
+}
+>>>>>>> main
+>>>>>>> main

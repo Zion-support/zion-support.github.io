@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 import { motion } from &apos;framer-motion';
 import { ChevronDown, HelpCircle, MessageCircle, Phone, Mail } from &apos;lucide-react';&apos;&apos;
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';""
+import { ChevronDown, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react';
+""
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';"
+import { ChevronDown, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react';
+<<<<<<< HEAD
+>>>>>>> main
 
 const FAQ: React.FC = () => {}
   const [openItems, setOpenItems] = React.useState<;<;<number[]>([]);
@@ -12,6 +24,7 @@ const FAQ: React.FC = () => {}
 ;
   const faqs = [
     {
+<<<<<<< HEAD
       question: &apos;What services does Zion Tech Group offer?&apos;,
       answer: &apos;We offer comprehensive AI services, IT infrastructure solutions, quantum computing services, micro SaaS solutions, cybersecurity, cloud DevOps, and digital transformation services. Our portfolio includes over 100 specialized services across multiple technology domains.&apos;},
     {
@@ -38,14 +51,40 @@ const FAQ: React.FC = () => {}
     {
       question: &apos;What makes Zion Tech Group different?&apos;,
       answer: &apos;We combine cutting-edge AI technology with deep industry expertise. Our focus on autonomous systems, quantum computing, and innovative micro SaaS solutions sets us apart. We&apos;re committed to delivering measurable business outcomes and long-term partnerships.&apos;},
+=======
+      question: 'What services does Zion Tech Group offer?', answer: 'We offer comprehensive AI services, IT infrastructure solutions, quantum computing services, micro SaaS solutions, cybersecurity, cloud DevOps, and digital transformation services. Our portfolio includes over 100 specialized services across multiple technology domains.'},
+    {
+      question: 'How can I get started with your services?', answer: 'You can get started by contacting us through our contact form, calling us at +1 302 464 0950, or emailing us at kleber@ziontechgroup.com. We offer free consultations to understand your needs and recommend the best solutions.'},
+    {
+      question: 'Do you offer custom AI solutions?', answer: 'Yes, we specialize in custom AI solutions tailored to your specific business needs. Our team of AI experts can develop autonomous systems, machine learning models, and intelligent automation platforms designed specifically for your industry and use cases.'}, {
+      question: 'What is your pricing structure?',
+      answer: 'Our pricing varies based on the complexity and scope of the project. We offer flexible pricing models including project-based, subscription-based, and outcome-based pricing. Contact us for a detailed quote tailored to your specific requirements.'}, {
+      question: 'Do you provide ongoing support and maintenance?',
+      answer: 'Yes, we provide comprehensive 24/7 support and maintenance services for all our solutions. Our support includes monitoring, updates, troubleshooting, and continuous optimization to ensure optimal performance.'}, {
+      question: 'What industries do you serve?',
+      answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, government, and technology. Our solutions are designed to be adaptable across different sectors and use cases.'}, {
+      question: 'How long does a typical project take?',
+      answer: 'Project timelines vary depending on complexity and scope. Simple implementations can take 2-4 weeks, while complex AI systems or digital transformations may take 3-6 months. We provide detailed timelines during the consultation phase.'},
+    {
+      question: 'Do you offer training for your solutions?', answer: 'Yes, we provide comprehensive training programs for all our solutions. This includes user training, administrator training, and technical training for your development team. We also offer ongoing educational resources and documentation.'}, {
+      question: 'What makes Zion Tech Group different?',
+      answer: 'We combine cutting-edge AI technology with deep industry expertise. Our focus on autonomous systems, quantum computing, and innovative micro SaaS solutions sets us apart. We&apos;re committed to delivering measurable business outcomes and long-term partnerships.'}, '
+>>>>>>> main
     {
       question: &apos;Do you have case studies or references?&apos;,
       answer: &apos;Yes, we have numerous case studies showcasing successful implementations across various industries. We can provide references from satisfied clients and detailed case studies demonstrating ROI and business impact.&apos;}
   ]
+<<<<<<< HEAD
   return(&apos;
     <div className=&apos;min-h-screen bg-gradient-to-br from-slate-50 to-blue-50&apos;>&apos;'
       <div className=&apos;max-w-4xl mx-auto px-4 sm:px-6 l,g:px-8 py-16&apos;>
         {/* Header */}&apos;
+=======
+  return(
+    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
+      <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
+        {/* Header */}
+>>>>>>> main
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -69,10 +108,17 @@ const FAQ: React.FC = () => {}
               className=&apos;bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden&apos;>&apos;'
               <;<button;
                 onClick={() => toggleItem(index)}
+<<<<<<< HEAD
                 className=&apos;w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors&apos;
               >&apos;
                 <span className=&apos;text-lg font-semibold text-gray-900 pr-4&apos;>
                   {faq.question}&apos;
+=======
+                className='w-full px-6 py-4 text-left flex items-center justify-between hover: bg-gray-50 transition-colors'
+              >
+                <span className='text-lg font-semibold text-gray-900 pr-4'>
+                  {faq.question}
+>>>>>>> main
                 </span>
                 <ChevronDown
                   className={`h-5 w-5 text-gray-500 transition-transform ${
@@ -108,6 +154,7 @@ const FAQ: React.FC = () => {}
             </p>
             <div className=&apos;flex flex-col sm:flex-row gap-4 justify-center&apos;>&apos;'
               <a
+<<<<<<< HEAD
                 href=&apos;/contact';
                 className=&apos;inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors&apos;>&apos;'
                 <MessageCircle className=&apos;h-5 w-5 mr-2&apos; />
@@ -124,6 +171,24 @@ const FAQ: React.FC = () => {}
                 className=&apos;inline-flex items-center px-6 py-3 bg-purple-600 text-white font-medium rounded-lg hove,r:bg-purple-700 transition-colors&apos;>&apos;'
                 <Mail className=&apos;h-5 w-5 mr-2&apos; />
                 Email Us&apos;
+=======
+                href='/contact';
+                className='inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover: bg-blue-700 transition-colors'>
+                <MessageCircle className='h-5 w-5 mr-2' />
+                Contact Us
+              </a>
+              <a
+                href='tel:+13024640950';
+                className='inline-flex items-center px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover: bg-green-700 transition-colors'>
+                <Phone className='h-5 w-5 mr-2' />
+                Call Us
+              </a>
+              <a
+                href='mailto:kleber@ziontechgroup.com';
+                className='inline-flex items-center px-6 py-3 bg-purple-600 text-white font-medium rounded-lg hover: bg-purple-700 transition-colors'>
+                <Mail className='h-5 w-5 mr-2' />
+                Email Us
+>>>>>>> main
               </a>
             </div>
           </div>
@@ -133,3 +198,10 @@ const FAQ: React.FC = () => {}
   )}
 ;
 export default FAQ
+=======
+=======
+import { motion } from 'framer-motion
+import { ChevronDown, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

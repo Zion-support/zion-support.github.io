@@ -80,7 +80,6 @@ const contactInfo = {
 	address: '364 E Main St STE 1008 Middletown DE 19709,
 	website:,
   https: //ziontechgroup.com}
-;
 return enhancedRealMicroSaasServices;
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[]);
 		.concat(newlyAddedServices as unknown as Service[]);
@@ -112,8 +111,7 @@ return enhancedRealMicroSaasServices;
 		.concat(real2027Q3Additions as unknown as Service[]);
 		.concat(real2027Q4Additions as unknown as Service[])}
 return value.toLowerCase().replace(/[^a-z0-9]+/g,
-  '-').replace(/(^-|-$)/g, ';
-  ')}
+  '-').replace(/(^-|-$)/g, )}
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
 		const url = new URL(link);
@@ -136,8 +134,7 @@ export default function ServiceSlugPage({ params }: { params?: { slug: string } 
 		features: [;
   'Feature 1,
 ,
-  Feature 2',
-  'Feature 3'],
+  Feature 2,Feature 3'],
 		price: '$99/month,
 		rating:,
   4.8',
@@ -145,7 +142,6 @@ export default function ServiceSlugPage({ params }: { params?: { slug: string } 
 		description:,
   Detailed service description goes here...',
 		link: '#}
-;
 	return(
 		<>
 			<Head>
@@ -294,7 +290,6 @@ const contactInfo = {
   address:,
   364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com}
-;
 export async function getStaticPaths() {
   // Return empty paths for now to fix build;
   return {

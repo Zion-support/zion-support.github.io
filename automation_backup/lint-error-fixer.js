@@ -15,11 +15,9 @@ const __dirname = dirname(__filename);
 class LintErrorFixer {
   constructor() {
     this.logFile = path.join(__dirname,
-  'logs',
-  'lint-error-fixer.log');
+  'logs,lint-error-fixer.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-;
     this.ensureLogDirectory()}
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
@@ -45,8 +43,7 @@ class LintErrorFixer {
         if (line.trim().startsWith(
   'import ')) {
           inImportBlock = true;
-          imports.push(line)} else if (inImportBlock && line.trim() === ';
-  ') {
+          imports.push(line)} else if (inImportBlock && line.trim() === ) {
           imports.push(line)} else {
           inImportBlock = false;
           otherLines.push(line)}
@@ -58,8 +55,7 @@ class LintErrorFixer {
         // Extract import names;
         const match = importLine.match(/import\s+{([^}]+)}\s+from/);
         if (match) {
-          const importNames = match[1].split(',
-  ').map(name => name.trim());
+          const importNames = match[1].split(,).map(name => name.trim());
           const fileContent = otherLines.join('\n;
   ');
           return importNames.some(name => fileContent.includes(name))}
@@ -132,9 +128,9 @@ class LintErrorFixer {
   🔧 Starting comprehensive lint error fix...;
   ');
     const patterns = ['pages/**/*.{js,jsx,ts,tsx}
-  ',';components/**/*.{js,jsx,ts,tsx}
-  ',';utils/**/*.{js,jsx,ts,tsx}
-  ',';hooks/**/*.{js,jsx,ts,tsx}
+  ,;components/**/*.{js,jsx,ts,tsx}
+  ,;utils/**/*.{js,jsx,ts,tsx}
+  ,;hooks/**/*.{js,jsx,ts,tsx}
   ';
     ];
     let totalFiles = 0;
@@ -153,7 +149,6 @@ class LintErrorFixer {
     const baseDir = parts[0];
     if (fs.existsSync(baseDir)) {
       this.scanDirectory(baseDir, files, pattern)}
-;
     return files.filter(file =>;
       !file.includes('node_modules;
   ') &&;
@@ -184,7 +179,6 @@ switch (command) {
   ': ;
     if (filePath) {
       // // // // // // // // console.log('Usage: node lint-error-fixer.js file <filepath>)}
-;
       fixer.fixFile(filePath)} else {
       console.log(,
   Usage: node lint-error-fixer.js file <filepath>)}
@@ -197,8 +191,6 @@ switch (command) {
   default:;
     // // // // // // // // console.log('Usage: node lint-error-fixer.js [file <filepath>|all]);
     process.exit(1)}}}}}}}}}}}}}}}}}}}}}}}}}}
-;
     console.log(,
   Usage: node lint-error-fixer.js [file <filepath>|all]);
     process.exit(1)}
-;

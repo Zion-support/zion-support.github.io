@@ -1,12 +1,8 @@
 #!/usr/bin/env node;
-import { execSync } from;
-  'child_process';
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+import { execSync } from "child_processchild_process';
+import fs from "fsfs';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log(
   '🔧 Starting continuous console error fixer automation...');
@@ -155,7 +151,6 @@ async function runConsoleErrorFixer() {
   '📊 Generating console error fixer report...');
     // Generate console error fixer report;
   status: 'completed}
-;
     console.log(
   '📊 Generating console error fixer report...');
     const reportPath = path.join(process.cwd(),
@@ -229,20 +224,13 @@ function findErrorPatterns(dir) {
               // Check for common error patterns;
               const patterns = [
                 'throw new Error;
-  ',
-                'throw Error;
-  ',
-                'console.error;
-  ',
-                'console.warn;
-  ',
-                'debugger;
-  ',
-                'alert(
-  ',
-                'confirm(
-  ',
-                'prompt(
+  ,throw Error;
+  ,console.error;
+  ,console.warn;
+  ,debugger;
+  ,alert(
+  ,confirm(
+  ,prompt(
   ';
               ];
               patterns.forEach(pattern => {

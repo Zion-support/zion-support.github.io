@@ -22,7 +22,7 @@ import {
 } from 'lucide-react';
 const Status: NextPage = () => {
   const services = [
-    {
+  {
 :pages.disabled_auto/status.tsx;
       name:;
   'Web Application,
@@ -117,7 +117,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}  }
     switch (status) {
 ursor/automate-test-fix-improve-and-merge-code-48f3}  }
   const incidents = [
-    {
+  {
       id: 1,
 :pages.disabled_auto/status.tsx;
       title:,
@@ -358,5 +358,4 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}  }
       </div>
     </MainLayout>
   )}
-;
 export default Status

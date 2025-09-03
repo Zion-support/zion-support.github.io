@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from &apos;react';
 import { Route, Routes } from &apos;react-router-dom';
 import { ProtectedRoute } from &apos;../components/ProtectedRoute';
@@ -17,6 +18,25 @@ export default function TalentRoutes() ;{
       <Route path=&quot;saved&quot; element={&quot;}<SavedTalentsPage />} />
       <Route path=&quot;create&quot; element={&quot;}<CreateTalentProfile />} />
       <Route path=&quot;profile&quot; element={&quot;}<ProfilePage />} />
+=======
+import { Route, Routes } from 'react-router-dom';
+import { ProtectedRoute, } from '../components/ProtectedRoute';
+import TalentDirectory from '../pages/TalentDirectory';
+import TalentsPage from '../pages/TalentsPage';
+import TalentProfilePage from '../pages/TalentProfilePage';
+import SavedTalentsPage from '../pages/SavedTalentsPage';
+import CreateTalentProfile from '../pages/CreateTalentProfile';
+import ProfilePage from '../pages/ProfilePage';
+export default function TalentRoutes() {
+  return (
+    <Routes>
+      <Route path="directory" element={<TalentDirectory />} />
+      <Route path="list" element={<TalentsPage />} />
+      <Route path="profile/: id" element={<TalentProfilePage />} />
+      <Route path="saved" element={<SavedTalentsPage />} />
+      <Route path="create" element={<CreateTalentProfile />} />
+      <Route path="profile" element={<ProfilePage />} />
+>>>>>>> main
     </Routes>
   );
 }

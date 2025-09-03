@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from &apos;react';
 import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
@@ -17,10 +18,28 @@ export default function Training() {}
       rating: 4.8,
       students: 1250,
       price: &quot;$199&quot;,
-      featured: true
-    },
+=======
+import { motion, } from 'framer-motion';
+import { SEO, } from '../components/SEO';
+import { 
+  GraduationCap, Video, BookOpen, Users, Clock, Star, Award, Play, Download, ArrowRight
+} from 'lucide-react';
+export default function Training() {
+  const courses = [
+<<<<<<< HEAD
     {
+=======
+  {
+>>>>>>> main
+      id: 1, title: "AI Fundamentals",
+      description: "Learn the basics of artificial intelligence and machine learning", duration: "8 hours",
+      level: "Beginner", rating: 4.8,
+      students: 1250, price: "$199",
+>>>>>>> main
+      featured: true
+    }, {
       id: 2,
+<<<<<<< HEAD
       title: &quot;Quantum Computing Masterclass&quot;,
       description: &quot;Advanced quantum computing concepts and applications&quot;,
       duration: &quot;12 hours&quot;,
@@ -39,10 +58,22 @@ export default function Training() {}
       rating: 4.7,
       students: 892,
       price: &quot;$299&quot;,
-      featured: false
+=======
+      title: "Quantum Computing Masterclass", description: "Advanced quantum computing concepts and applications",
+      duration: "12 hours", level: "Advanced",
+      rating: 4.9, students: 456,
+      price: "$399", featured: true
     },
     {
+      id: 3, title: "Micro SaaS Development",
+      description: "Build and launch successful micro SaaS applications", duration: "10 hours",
+      level: "Intermediate", rating: 4.7,
+      students: 892, price: "$299",
+>>>>>>> main
+      featured: false
+    }, {
       id: 4,
+<<<<<<< HEAD
       title: &quot;Cybersecurity Essentials&quot;,
       description: &quot;Essential cybersecurity practices for modern applications&quot;,
       duration: &quot;6 hours&quot;,
@@ -54,8 +85,22 @@ export default function Training() {}
     }
   ];&quot;
 
+=======
+      title: "Cybersecurity Essentials", description: "Essential cybersecurity practices for modern applications",
+      duration: "6 hours", level: "Beginner",
+      rating: 4.6, students: 678,
+      price: "$149", featured: false
+<<<<<<< HEAD
+    }
+=======
+    };
+>>>>>>> main
+  ];
+>>>>>>> main
   const trainingTypes = [
+<<<<<<< HEAD
     {
+<<<<<<< HEAD
       title: &quot;Online Courses&quot;,
       description: &quot;Self-paced learning with video content and exercises&quot;,
       icon: Video,
@@ -82,10 +127,39 @@ export default function Training() {}
       icon: GraduationCap,
       count: 15,
       color: &quot;from-orange-500 to-red-500&quot;
+=======
+=======
+  {
+>>>>>>> main
+      title: "Online Courses", description: "Self-paced learning with video content and exercises",
+      icon: Video, count: 25,
+      color: "from-blue-500 to-cyan-500"
+    }, {
+      title: "Live Workshops",
+      description: "Interactive sessions with expert instructors", icon: Users,
+      count: 12, color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Certification Programs", description: "Comprehensive programs with industry-recognized certificates",
+      icon: Award, count: 8,
+      color: "from-purple-500 to-pink-500"
+    }, {
+      title: "Corporate Training",
+      description: "Customized training solutions for enterprise teams", icon: GraduationCap,
+      count: 15, color: "from-orange-500 to-red-500"
+<<<<<<< HEAD
+>>>>>>> main
     }
+=======
+    };
+>>>>>>> main
   ];
+<<<<<<< HEAD
 
   return (&quot;
+=======
+  return (
+>>>>>>> main
     <>
       <SEO 
         title=&quot;Training - Zion Tech Group | Technology Education & Certification&quot;
@@ -98,6 +172,7 @@ export default function Training() {}
         <section className=&quot;py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -105,6 +180,15 @@ export default function Training() {}
             >&quot;
               <h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>
                 Technology Training&quot;
+=======
+              initial={{ opacity: 0, y: 20 }
+              animate={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
+              className="text-center max-w-4xl mx-auto"
+            ></motion>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Technology Training
+>>>>>>> main
               </h1>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Master cutting-edge technologies with our comprehensive training programs. 
@@ -121,6 +205,7 @@ export default function Training() {}
         <section className=&quot;py-16&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -129,6 +214,16 @@ export default function Training() {}
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Training Programs&quot;</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Choose from various training formats to suit your learning style and schedule&quot;
+=======
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
+              className="text-center mb-12"
+            ></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Training Programs</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose from various training formats to suit your learning style and schedule
+>>>>>>> main
               </p>
             </motion.div>
 
@@ -136,17 +231,31 @@ export default function Training() {}
               {trainingTypes.map((type, index) => (&quot;}
                 <motion.div
                   key={type.title}
+<<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hove,r:scale-105&quot;
                 >&quot;
+=======
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+                ></motion>
+>>>>>>> main
                   <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-4`}>
                     <type.icon className=&quot;w-8 h-8 text-white&quot; />&quot;
                   </div>
+<<<<<<< HEAD
                   <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{type.title}&quot;</h3>
                   <p className=&quot;text-gray-300 text-sm mb-3&quot;>{type.description}&quot;</p>
                   <div className=&quot;text-2xl font-bold text-blue-400&quot;>{type.count}+&quot;</div>
+=======
+                  <h3 className="text-xl font-bold text-white mb-2"></h>{type.title}</h3>
+                  <p className="text-gray-300 text-sm mb-3">{type.description}</p>
+                  <div className="text-2xl font-bold text-blue-400"></di>{type.count}+</div>
+>>>>>>> main
                 </motion.div>
               ))}
             </div>
@@ -157,6 +266,7 @@ export default function Training() {}
         <section className=&quot;py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -165,6 +275,16 @@ export default function Training() {}
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Featured Courses&quot;</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Our most popular and highly-rated training programs&quot;
+=======
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
+              className="text-center mb-12"
+            ></motion>
+              <h2 className="text-4xl font-bold text-white mb-4"></h>Featured Courses</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our most popular and highly-rated training programs
+>>>>>>> main
               </p>
             </motion.div>
 
@@ -172,6 +292,7 @@ export default function Training() {}
               {courses.map((course, index) => (&quot;}
                 <motion.div
                   key={course.id}
+<<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -179,6 +300,15 @@ export default function Training() {}
                 >&quot;
                   <div className=&quot;flex items-start justify-between mb-4&quot;>&quot;"
                     <div className=&quot;flex items-center gap-2&quot;>&quot;"
+=======
+                  initial={{ opacity: 0, y: 20 }
+                  whileInView={{ opacity: 1, y: 0 }
+                  transition={{ duration: 0.8, delay: index * 0.1 }
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300"
+                ></motion>
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-2">
+>>>>>>> main
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                         course.level === &apos;Beginner&apos; ? &apos;bg-green-600/20 text-green-300 border border-green-400/30&apos; :
                         course.level === &apos;Intermediate&apos; ? &apos;bg-yellow-600/20 text-yellow-300 border border-yellow-400/30&apos; :
@@ -192,6 +322,7 @@ export default function Training() {}
                         </span>
                       )}
                     </div>
+<<<<<<< HEAD
                     <div className=&quot;flex items-center text-yellow-400&quot;>&quot;"
                       <Star className=&quot;w-4 h-4 fill-current&quot; />&quot;
                       <span className=&quot;ml-1 text-sm&quot;>{course.rating}&quot;</span>
@@ -200,6 +331,16 @@ export default function Training() {}
 
                   <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{course.title}&quot;</h3>
                   <p className=&quot;text-gray-300 text-sm mb-4&quot;>{course.description}&quot;</p>
+=======
+                    <div className="flex items-center text-yellow-400">
+                      <Star className="w-4 h-4 fill-current" />
+                      <span className="ml-1 text-sm"></spa>{course.rating}</span>
+                    </div>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-white mb-2"></h>{course.title}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{course.description}</p>
+>>>>>>> main
 
                   <div className=&quot;flex items-center justify-between mb-4&quot;>&quot;"
                     <div className=&quot;flex items-center text-gray-400 text-sm&quot;>&quot;"
@@ -212,10 +353,21 @@ export default function Training() {}
                     </div>
                   </div>
 
+<<<<<<< HEAD
                   <div className=&quot;flex items-center justify-between&quot;>&quot;"
                     <span className=&quot;text-2xl font-bold text-white&quot;>{course.price}&quot;</span>
                     <button className=&quot;px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hove,r:to-purple-700 transition-all duration-200&quot;>
                       Enroll Now&quot;
+=======
+                  <div className="flex items-center justify-between">
+<<<<<<< HEAD
+                    <span className="text-2xl font-bold text-white">{course.price}</span>
+=======
+                    <span className="text-2xl font-bold text-white"></spa>{course.price}</span>
+>>>>>>> main
+                    <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-200">
+                      Enroll Now
+>>>>>>> main
                     </button>
                   </div>
                 </motion.div>
@@ -228,6 +380,7 @@ export default function Training() {}
         <section className=&quot;py-20&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -235,6 +388,15 @@ export default function Training() {}
             >&quot;
               <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
                 Ready to Advance Your Career?&quot;
+=======
+              initial={{ opacity: 0, y: 20 }
+              whileInView={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
+              className="text-center max-w-4xl mx-auto"
+            ></motion>
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Advance Your Career?
+>>>>>>> main
               </h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Join thousands of professionals who have enhanced their skills 
@@ -260,6 +422,6 @@ export default function Training() {}
           </div>
         </section>
       </div>
-    </>
+</>
   );
 }

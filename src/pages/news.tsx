@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { SEO } from &apos;../components/SEO';&apos;&apos;
 
 export default function Page() {}
@@ -12,6 +13,48 @@ const News: React.FC = () => ;{
         </div>
       </div>
     <;</>
+=======
+import { SEO } from '../components/SEO';
+export default function Page() {
+<<<<<<< HEAD
+const News: React.FC = () => {""
+  return (<>""
+      <SEO title='News - Zion Tech Group' /"" >""
+      <div className='min-h-screen bg-white py-20'>""
+        <div className='max-w-4xl mx-auto px-4'>""
+          <h1 className='text-4xl font-bold text-gray-900 mb-8'>News</h1>""
+=======
+<<<<<<< HEAD
+const News: React.FC = () => {
+  return (<>
+      <SEO title='News - Zion Tech Group' />
+      <div className='min-h-screen bg-white py-20'>
+        <div className='max-w-4xl mx-auto px-4'>
+          <h1 className='text-4xl font-bold text-gray-900 mb-8'>News</h1>
+=======
+const News: React.FC = () => {"
+  return (<>"
+      <SEO title='News - Zion Tech Group' /  >'
+      <div className='min-h-screen bg-white py-20'>"
+        <div className='max-w-4xl mx-auto px-4'>"
+          <h1 className='text-4xl font-bold text-gray-900 mb-8'>News</h1>"
+>>>>>>> main
+>>>>>>> main
+          <p className='text-lg text-gray-600'>Content coming soon...</p>
+        </div>
+      </div>
+</>
+>>>>>>> main
   )}
+<<<<<<< HEAD
 ;
-export default News
+=======
+;
+<<<<<<< HEAD
+""
+}
+=======
+"
+}
+>>>>>>> main
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import ProductReviews from &apos;./ProductReviews';
 
@@ -8,3 +9,30 @@ describe(&apos;ProductReviews&apos;, () => {
   it(&apos;displays expected content&apos;, () => {
     render(&apos;}<ProductReviews />)
     // Add specific test assertions based on component content})})
+=======
+<<<<<<< HEAD
+import { render, screen } from '@testing-library/react';""
+import ProductReviews from './ProductReviews';""
+describe('ProductReviews', () => {""
+  it('renders without crashing', () => {""
+=======
+import { render, screen } from '@testing-library/react
+import ProductReviews from './ProductReviews
+describe('ProductReviews', () => {"
+  it('renders without crashing', () => {"
+>>>>>>> main
+    render(<ProductReviews /" >)"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
+  it('displays expected content', () => {
+<<<<<<< HEAD
+    render(<ProductReviews /" >)"
+    // Add specific test assertions based on component content, });
+""
+=======
+    render(<ProductReviews /" >)
+    // Add specific test assertions based on component content
+})
+"
+>>>>>>> main
+}}
+>>>>>>> main

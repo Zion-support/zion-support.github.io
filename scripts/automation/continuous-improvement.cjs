@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log(`'🚀 Starting continuous improvement automation...');
+console.log(`🚀 Starting continuous improvement automation...`);
 
 // Get automation interval from environment variable (default: 2 hours)
 const AUTOMATION_INTERVAL =
@@ -12,11 +12,11 @@ const AUTOMATION_INTERVAL =
 
 async function runContinuousImprovement() {
   try {
-    console.log(`🚀 Running continuous improvement at ${new Date().toISOString()}'
+    console.log(`🚀 Running continuous improvement at ${new Date().toISOString()}`);
     );
-
-    // Check for any pending improvements
-    console.log(`'📋 Checking for pending improvements...');
+`);
+    // Check for any pending improvements`);
+    console.log(`📋 Checking for pending improvements...`);
 
     // Run quality checks
     console.log('🔍 Running quality checks...');

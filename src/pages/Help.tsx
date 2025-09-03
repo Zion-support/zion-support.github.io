@@ -1,9 +1,24 @@
+<<<<<<< HEAD
 import React, { useState } from &apos;react';
 import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';""
+import { motion } from 'framer-motion';""
+import { SEO } from '../components/SEO';
+>>>>>>> main
 import { 
-  Search, MessageCircle, Phone, Mail, Clock, 
-  BookOpen, Video, FileText, Users, ChevronDown,
+  Search, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Users, ChevronDown,
+  ChevronUp, HelpCircle, CheckCircle, ArrowRight;", "
+} from 'lucide-react';""
+=======
+import React, { useState } from 'react
+import { motion } from 'framer-motion
+import { SEO } from '../components/SEO';
+import { 
+  Search, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Users, ChevronDown,
+<<<<<<< HEAD
   ChevronUp, HelpCircle, CheckCircle, ArrowRight
 } from &apos;lucide-react';&apos;&apos;
 
@@ -13,6 +28,7 @@ export default function Help() ;{}
 
   const faqs = [
     {
+<<<<<<< HEAD
       id: 1,
       question: &quot;How do I get started with Zion Tech Group services?&quot;,
       answer: &quot;Getting started is easy! Contact our team through our contact form or call us directly. We&apos;ll schedule a consultation to understand your needs and recommend the best solutions for your business.&quot;,
@@ -35,11 +51,29 @@ export default function Help() ;{}
       question: &quot;What is your pricing structure?&quot;,
       answer: &quot;Our pricing varies based on project scope, complexity, and requirements. We offer flexible pricing models including project-based, retainer, and subscription options. Contact us for a customized quote.&quot;,
       category: &quot;Pricing&quot;
+=======
+      id: 1, question: "How do I get started with Zion Tech Group services?",
+      answer: "Getting started is easy! Contact our team through our contact form or call us directly. We&apos;ll schedule a consultation to understand your needs and recommend the best solutions for your business.", '
+      category: "Getting Started"
+    },
+    {
+      id: 2, question: "What AI services do you offer?",
+      answer: "We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, and custom AI solutions tailored to your business needs.", category: "AI Services"
+    },
+    {
+      id: 3, question: "Do you provide quantum computing solutions?",
+      answer: "Yes! We offer quantum computing services including quantum algorithm development, quantum machine learning, and access to quantum computing platforms for research and development.", category: "Quantum Computing"
+    },
+    {
+      id: 4, question: "What is your pricing structure?",
+      answer: "Our pricing varies based on project scope, complexity, and requirements. We offer flexible pricing models including project-based, retainer, and subscription options. Contact us for a customized quote.", category: "Pricing"
+>>>>>>> main
     }
   ];&quot;
 
   const helpCategories = [
     {
+<<<<<<< HEAD
       title: &quot;Getting Started&quot;,
       description: &quot;New to Zion Tech Group? Start here&quot;,
       icon: BookOpen,
@@ -66,11 +100,30 @@ export default function Help() ;{}
       icon: HelpCircle,
       articles: 30,
       color: &quot;from-green-500 to-emerald-500&quot;
+=======
+      title: "Getting Started", description: "New to Zion Tech Group? Start here",
+      icon: BookOpen, articles: 12,
+      color: "from-blue-500 to-cyan-500"
+    }, {
+      title: "AI Services",
+      description: "Learn about our AI and machine learning solutions", icon: MessageCircle,
+      articles: 25, color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Quantum Computing", description: "Explore quantum computing capabilities",
+      icon: Star, articles: 18,
+      color: "from-orange-500 to-red-500"
+    }, {
+      title: "Technical Support",
+      description: "Get help with technical issues", icon: HelpCircle,
+      articles: 30, color: "from-green-500 to-emerald-500"
+>>>>>>> main
     }
   ];&quot;
 
   const contactMethods = [
     {
+<<<<<<< HEAD
       title: &quot;Live Chat&quot;,
       description: &quot;Get instant help from our support team&quot;,
       icon: MessageCircle,
@@ -90,6 +143,20 @@ export default function Help() ;{}
       icon: Mail,
       availability: &quot;24/7 Available&quot;,
       responseTime: &quot;Within 4 hours&quot;
+=======
+      title: "Live Chat", description: "Get instant help from our support team",
+      icon: MessageCircle, availability: "24/7 Available",
+      responseTime: "Immediate"
+    }, {
+      title: "Phone Support",
+      description: "Speak directly with our technical experts", icon: Phone,
+      availability: "Mon-Fri 9AM-6PM EST", responseTime: "Immediate"
+    },
+    {
+      title: "Email Support", description: "Send us your questions and we&apos;ll respond quickly", '
+      icon: Mail,
+      availability: "24/7 Available", responseTime: "Within 4 hours"
+>>>>>>> main
     }
   ];&quot;
 
@@ -131,8 +198,13 @@ export default function Help() ;{}
                     placeholder=&quot;Search for help articles, guides, or FAQs...&quot;
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
+<<<<<<< HEAD
                     className=&quot;w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focu,s:border-transparent&quot;
                   />&quot;
+=======
+                    className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+>>>>>>> main
                 </div>
               </div>
             </motion.div>
@@ -204,12 +276,21 @@ export default function Help() ;{}
                 >&quot;
                   <button
                     onClick={() => toggleFAQ(faq.id)}
+<<<<<<< HEAD
                     className=&quot;w-full p-6 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors&quot;
                   >&quot;
                     <div className=&quot;flex-1&quot;>&quot;"
                       <div className=&quot;flex items-center mb-2&quot;>&quot;"
                         <span className=&quot;px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs mr-3&quot;>
                           {faq.category}&quot;
+=======
+                    className="w-full p-6 text-left flex items-center justify-between hover: bg-slate-700/30 transition-colors"
+                  >
+                    <div className="flex-1">
+                      <div className="flex items-center mb-2">
+                        <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs mr-3">
+                          {faq.category}
+>>>>>>> main
                         </span>
                       </div>
                       <h3 className=&quot;text-lg font-semibold text-white&quot;>{faq.question}&quot;</h3>
@@ -244,6 +325,7 @@ export default function Help() ;{}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className=&quot;text-center mb-12&quot;
             >&quot;
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Contact Support&quot;</h2>
@@ -254,6 +336,18 @@ export default function Help() ;{}
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
               {contactMethods.map((method, index) => (&quot;}
+=======
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">Contact Support</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Can&apos;t find what you&apos;re looking for? Our support team is here to help
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+              {contactMethods.map((method, index) => (
+>>>>>>> main
                 <motion.div
                   key={method.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -285,6 +379,11 @@ export default function Help() ;{}
           </div>
         </section>
       </div>
-    </>
+</>
   );
 }
+=======
+  ChevronUp, HelpCircle, CheckCircle, ArrowRight;",
+} from 'lucide-react
+>>>>>>> main
+>>>>>>> main

@@ -22,7 +22,7 @@ export function EnhancedContact(...args[]: any):  {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const services = [
-    { value: 'general', label: 'General Inquiry' },
+  { value: 'general', label: 'General Inquiry' },
     { value: 'ai-solutions', label: 'AI Solutions' },
     { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },
     { value: 'cybersecurity', label: 'Cybersecurity' },
@@ -41,10 +41,8 @@ export function EnhancedContact(...args[]: any):  {
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required'} else if (formData.message.length < 10) {
       newErrors.message = 'Message must be at least 10 characters long'}
-;
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0}
-;
       // // // // // // // console.error('Error submitting form:', error)} finally {
       setIsSubmitting(false)}
       })} catch (error) {
@@ -52,7 +50,7 @@ export function EnhancedContact(...args[]: any):  {
       setIsSubmitting(false)}
   }
   const contactInfo = [
-    {
+  {
       icon: Mail,
       title: 'Email',
       value: 'kleber@ziontechgroup.com',

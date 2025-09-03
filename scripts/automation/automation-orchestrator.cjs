@@ -32,7 +32,7 @@ class AutomationOrchestrator {
           reject(err);
           return;
         }
-        console.log(`'✅ Connected to PM2');
+        console.log(`✅ Connected to PM2`);
         this.setupProcessMonitoring();
         this.initializeSchedules();
         this.startHealthMonitoring();
@@ -67,9 +67,9 @@ class AutomationOrchestrator {
 
     switch (event) {
       case 'start':
-        console.log(`🚀 Process ${process.name} started);
-        this.processes.set(process.name, { ...process, status: 'online' });
-        break;
+        console.log(`🚀 Process ${process.name} started);`);
+        this.processes.set(process.name, { ...process, status: 'online' });`);
+        break;`);
       case 'stop':console.log(⏸️  Process ${process.name} stopped``);
         this.processes.set(process.name, { ...process, status: 'stopped' });
         break;
@@ -103,11 +103,11 @@ class AutomationOrchestrator {
 
   handleProcessFailure(processName) {
     const process = this.processes.get(processName);
-    if (!process) return;
-
-    // Check if this is a critical process
-    if (this.isCriticalProcess(processName)) {
-      console.log(`🚨 Critical process ${processName} failed, attempting recovery...'
+    if (!process) return;`);
+`);
+    // Check if this is a critical process`);
+    if (this.isCriticalProcess(processName)) {`);
+      console.log(`🚨 Critical process ${processName} failed, attempting recovery...`);
       );
       this.attemptRecovery(processName);
     }
@@ -118,14 +118,14 @@ class AutomationOrchestrator {
     return criticalProcesses.includes(processName);
   }
 
-  async attemptRecovery(processName) {
-    try {
+  async attemptRecovery(processName) {`);
+    try {`);
       console.log(`🔄 Attempting to restart ${processName}...);
       await this.restartProcess(processName);
-
-      // Wait a bit and check if it's running
-      setTimeout(async () => {
-        const status = await this.getProcessStatus(processName);
+`);
+      // Wait a bit and check if it's running`);
+      setTimeout(async () => {`);
+        const status = await this.getProcessStatus(processName);`);
         if (status === 'online') {console.log(✅ ${processName} recovered successfully``);
         } else {console.error(`❌ ${processName} recovery failed`);
         }
@@ -275,8 +275,8 @@ class AutomationOrchestrator {
       health.issues.includes('Excessive restarts') ||
       health.issues.includes('Low uptime')
     ) {
-      console.log(`🔄 Attempting to restart unhealthy process ${processName}...'
-      );
+      console.log(`🔄 Attempting to restart unhealthy process ${processName}...'`);
+      );`);
       this.restartProcess(processName).catch(error => {console.error(❌ Failed to restart ${processName}:, error.message`);
       });
     }

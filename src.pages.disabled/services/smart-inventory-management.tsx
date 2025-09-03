@@ -1,8 +1,6 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-import { Package, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';
-
-const SmartInventoryManagement: React.FC = () => {
+import React from 'react'
+import Layout from '../../components/Layout'
+import { Package, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-react';const SmartInventoryManagement: React.FC = () => {
   return (
     <Layout
       title='Smart Inventory Management - Zion Tech Group';
@@ -267,5 +265,4 @@ const SmartInventoryManagement: React.FC = () => {
       </section>
     </Layout>
   )}
-;
 export default SmartInventoryManagement

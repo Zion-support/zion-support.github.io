@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import ScrollToTop from &apos;./ScrollToTop';
 
@@ -8,3 +9,30 @@ describe(&apos;ScrollToTop&apos;, () => {
   it(&apos;displays expected content&apos;, () => {
     render(&apos;}<ScrollToTop />)
     // Add specific test assertions based on component content})})
+=======
+<<<<<<< HEAD
+import { render, screen } from '@testing-library/react';""
+import ScrollToTop from './ScrollToTop';""
+describe('ScrollToTop', () => {""
+  it('renders without crashing', () => {""
+=======
+import { render, screen } from '@testing-library/react
+import ScrollToTop from './ScrollToTop
+describe('ScrollToTop', () => {"
+  it('renders without crashing', () => {"
+>>>>>>> main
+    render(<ScrollToTop /" >)"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
+  it('displays expected content', () => {
+<<<<<<< HEAD
+    render(<ScrollToTop /" >)"
+    // Add specific test assertions based on component content, });
+""
+=======
+    render(<ScrollToTop /" >)
+    // Add specific test assertions based on component content
+})
+"
+>>>>>>> main
+}}
+>>>>>>> main

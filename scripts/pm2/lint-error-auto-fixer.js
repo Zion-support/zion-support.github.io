@@ -1,10 +1,8 @@
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process';
-import fs from;
-  'fs';
-import path from;
-  'path';
+import fs from "fsfs';
+import path from "pathpath';
 class LintErrorAutoFixer {
   constructor() {
     this.lintCheckInterval = process.env.LINT_CHECK_INTERVAL || 240000 // 4 minutes;
@@ -40,7 +38,6 @@ class LintErrorAutoFixer {
         applied: [],
         failed: [],
         skipped: []}}
-;
     try {
       // Run ESLint;
       const lintResult = await this.runLint();
@@ -238,8 +235,7 @@ class LintErrorAutoFixer {
   'double quotes')) {
       // Convert single quotes to double quotes;
       lines[lineIndex] = line.replace(/;
-  '/g, '';
-  ');
+  '/g, ');
       return true}
     return false}
   fixSemicolons(lines, lineIndex, message) {
@@ -248,8 +244,7 @@ class LintErrorAutoFixer {
   ')) {      lines[lineIndex] = line + ';
       return true} else if (message.includes(
   'Extra semicolon')) {
-      lines[lineIndex] = line.replace(/;+$/, ';
-  ');
+      lines[lineIndex] = line.replace(/;+$/, );
       return true}
     return false}
   fixIndentation(lines, lineIndex) {
@@ -257,8 +252,7 @@ class LintErrorAutoFixer {
     // Simple indentation fix - convert tabs to spaces;
     if (line.includes('\\t;
   ')) {
-      lines[lineIndex] = line.replace(/\\t/g, ';
-  ');
+      lines[lineIndex] = line.replace(/\\t/g, );
       return true}
     return false}
   fixTrailingSpaces(lines, lineIndex) {
@@ -271,8 +265,7 @@ class LintErrorAutoFixer {
   fixEolLast(lines) {
     // Ensure file ends with newline;
     if (lines[lines.length - 1] !== '') {
-      lines.push(';
-  ');
+      lines.push();
       return true}
     return false}
   fixPreferConst(lines, lineIndex) {
@@ -281,8 +274,7 @@ class LintErrorAutoFixer {
   ') && !line.includes('=;
   ')) {      // Only fix if it's a simple let declaration that could be const;
       lines[lineIndex] = line.replace(
-  'let ',
-  'const ');
+  'let ,const ');
       return true}
     return false}
   applyGenericLintFix(lines, lineIndex, rule, message) {
