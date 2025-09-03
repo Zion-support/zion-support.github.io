@@ -1,3 +1,6 @@
+import React from 'react';
+import Link from 'next/link';
+
 type Service = {
   name: string;
   summary: string;
@@ -93,10 +96,10 @@ export default function Services() {
       <Section title="AI Services" items={aiServices} />
       <Section title="IT Services" items={itServices} />
       <section style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 16px' }}>
-        <a href="/contact" style={{
+        <Link href="/contact" style={{
           display: 'inline-block', background: '#22d3ee', color: '#0b1220',
           padding: '10px 14px', borderRadius: 10, fontWeight: 700
-        }}>Request a Quote</a>
+        }}>Request a Quote</Link>
       </section>
     </main>
   );
