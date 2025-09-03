@@ -1,87 +1,42 @@
 {
-  "timestamp": "2025-09-03T20:13:58.059Z",
+  "timestamp": "2025-09-03T20:39:24.988Z",
   "status": "failed",
   "steps": [
     {
-      "timestamp": "2025-09-03T20:13:58.059Z",
+      "timestamp": "2025-09-03T20:39:24.988Z",
       "type": "info",
       "message": "Starting CI/CD Automation Pipeline"
     },
     {
-      "timestamp": "2025-09-03T20:13:58.060Z",
+      "timestamp": "2025-09-03T20:39:24.990Z",
       "type": "info",
       "message": "Installing dependencies..."
     },
     {
-      "timestamp": "2025-09-03T20:13:58.060Z",
+      "timestamp": "2025-09-03T20:39:24.990Z",
       "type": "info",
       "message": "Starting: Installing dependencies"
     },
     {
-      "timestamp": "2025-09-03T20:14:15.436Z",
-      "type": "success",
-      "message": "Completed: Installing dependencies"
-    },
-    {
-      "timestamp": "2025-09-03T20:14:15.437Z",
-      "type": "info",
-      "message": "Running test suite..."
-    },
-    {
-      "timestamp": "2025-09-03T20:14:15.438Z",
-      "type": "info",
-      "message": "Starting: Running tests"
-    },
-    {
-      "timestamp": "2025-09-03T20:14:23.667Z",
+      "timestamp": "2025-09-03T20:39:28.458Z",
       "type": "error",
-      "message": "Failed: Running tests - spawnSync /bin/sh ENOBUFS"
+      "message": "Failed: Installing dependencies - Command failed: npm ci\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOTEMPTY\nnpm error syscall rmdir\nnpm error path /workspace/node_modules/@istanbuljs\nnpm error errno -39\nnpm error ENOTEMPTY: directory not empty, rmdir '/workspace/node_modules/@istanbuljs'\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-03T20_39_25_037Z-debug-0.log\n"
     },
     {
-      "timestamp": "2025-09-03T20:14:23.667Z",
-      "type": "warn",
-      "message": "Tests failed, attempting to fix..."
-    },
-    {
-      "timestamp": "2025-09-03T20:14:23.667Z",
-      "type": "info",
-      "message": "Starting: Reinstalling dependencies"
-    },
-    {
-      "timestamp": "2025-09-03T20:14:25.576Z",
-      "type": "success",
-      "message": "Completed: Reinstalling dependencies"
-    },
-    {
-      "timestamp": "2025-09-03T20:14:25.576Z",
-      "type": "info",
-      "message": "Starting: Retrying tests"
-    },
-    {
-      "timestamp": "2025-09-03T20:14:30.658Z",
+      "timestamp": "2025-09-03T20:39:28.459Z",
       "type": "error",
-      "message": "Failed: Retrying tests - spawnSync /bin/sh ENOBUFS"
-    },
-    {
-      "timestamp": "2025-09-03T20:14:30.659Z",
-      "type": "error",
-      "message": "CI/CD Pipeline failed: Tests failed"
+      "message": "CI/CD Pipeline failed: Failed to install dependencies"
     }
   ],
   "errors": [
     {
-      "step": "Running tests",
-      "error": "spawnSync /bin/sh ENOBUFS",
-      "timestamp": "2025-09-03T20:14:23.667Z"
-    },
-    {
-      "step": "Retrying tests",
-      "error": "spawnSync /bin/sh ENOBUFS",
-      "timestamp": "2025-09-03T20:14:30.659Z"
+      "step": "Installing dependencies",
+      "error": "Command failed: npm ci\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOTEMPTY\nnpm error syscall rmdir\nnpm error path /workspace/node_modules/@istanbuljs\nnpm error errno -39\nnpm error ENOTEMPTY: directory not empty, rmdir '/workspace/node_modules/@istanbuljs'\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-03T20_39_25_037Z-debug-0.log\n",
+      "timestamp": "2025-09-03T20:39:28.458Z"
     }
   ],
   "summary": {
-    "error": "Tests failed",
-    "duration": 32600
+    "error": "Failed to install dependencies",
+    "duration": 3471
   }
 }
