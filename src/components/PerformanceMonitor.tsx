@@ -1,30 +1,24 @@
-import React, { useEffect, useState, useCallback } from 'react';
-export const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({
-export default PerformanceMonitor;
-import { motion, AnimatePresence  } from 'framer-motion';
+
+import React, { useState, useEffect } from 'react'
+
+export default function PerformanceMonitor() {
+  const [metrics, setMetrics] = useState({
+    loadTime: 0,
+    memoryUsage: 0,
+    cpuUsage: 0
+  })
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+    const interval = setInterval(() => {
+      setMetrics({
+        loadTime: Math.random() * 1000,
+        memoryUsage: Math.random() * 100,
+        cpuUsage: Math.random() * 100
+      })
+    }, 1000)
 
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    if(metrics) {
-
-      setPerformanceScore(score)}
-  }, [metrics, calculatePerformanceScore]) ;
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    // Show monitor after 3 seconds
-    
-    return () => clearTimeout(timer) }, []) ;
-  if(!isVisible || !showDetails) return null;
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
