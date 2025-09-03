@@ -4,8 +4,20 @@ const nextConfig = {
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
+<<<<<<< HEAD
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+=======
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
+  eslint: {
+    // Allow production builds to successfully complete even if there are ESLint errors
+    ignoreDuringBuilds: true
+  },
+  typescript: {
+    // Allow production builds to successfully complete even if there are type errors
+    ignoreBuildErrors: true
+  },
+>>>>>>> origin/cursor/add-new-services-and-advertise-them-06ce
   images: {
     domains: ["localhost", "ziontechgroup.com"],
     formats: ['image/webp', 'image/avif'],
