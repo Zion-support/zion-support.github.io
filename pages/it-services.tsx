@@ -815,6 +815,375 @@ export default function ITServices() {
         'Cost-effective compliance management'
       ],
       category: 'Compliance'
+    },
+    // New Innovative IT Services
+    {
+      icon: Cloud,
+      name: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing infrastructure setup, optimization, and hybrid classical-quantum system integration.',
+      features: [
+        'Quantum hardware procurement and setup',
+        'Quantum software development environment',
+        'Hybrid classical-quantum system integration',
+        'Quantum algorithm optimization',
+        'Quantum error correction implementation',
+        'Quantum security and encryption'
+      ],
+      pricing: '$100,000 – $1,000,000/project',
+      projectPricing: '$25,000 – $100,000/month managed',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Exponential computational capabilities',
+        'Future-proof technology investment',
+        'Competitive advantage in research',
+        'Advanced optimization solutions'
+      ],
+      category: 'Quantum Computing'
+    },
+    {
+      icon: Shield,
+      name: 'Zero-Trust Security Architecture',
+      description: 'Complete zero-trust security implementation with identity verification and continuous monitoring.',
+      features: [
+        'Identity and access management (IAM)',
+        'Device trust verification',
+        'Network segmentation and micro-segmentation',
+        'Continuous security monitoring',
+        'Threat detection and response',
+        'Compliance automation'
+      ],
+      pricing: '$50,000 – $300,000/project',
+      projectPricing: '$10,000 – $50,000/month managed',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Reduced security incidents',
+        'Automated compliance',
+        'Improved threat detection'
+      ],
+      category: 'Cybersecurity'
+    },
+    {
+      icon: Database,
+      name: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing infrastructure with real-time processing and low-latency applications.',
+      features: [
+        'Edge infrastructure deployment',
+        'Distributed application orchestration',
+        'Edge-to-cloud synchronization',
+        'Real-time data processing',
+        'Edge security and compliance',
+        'Performance monitoring and optimization'
+      ],
+      pricing: '$75,000 – $500,000/project',
+      projectPricing: '$15,000 – $75,000/month managed',
+      timeline: '10–20 weeks',
+      benefits: [
+        'Reduced latency and improved performance',
+        'Better resource utilization',
+        'Enhanced security and privacy',
+        'Cost-effective distributed computing'
+      ],
+      category: 'Edge Computing'
+    },
+    {
+      icon: Globe,
+      name: '5G Network Infrastructure',
+      description: '5G network design, deployment, and optimization for enterprise and industrial applications.',
+      features: [
+        '5G network architecture design',
+        'Small cell and macro cell deployment',
+        'Network slicing and optimization',
+        'IoT device connectivity',
+        'Edge computing integration',
+        'Performance monitoring and analytics'
+      ],
+      pricing: '$200,000 – $2,000,000/project',
+      projectPricing: '$25,000 – $100,000/month managed',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Ultra-fast connectivity',
+        'Low latency applications',
+        'Massive IoT device support',
+        'Enhanced mobile experiences'
+      ],
+      category: '5G & Networking'
+    },
+    {
+      icon: Cpu,
+      name: 'AI/ML Infrastructure Platform',
+      description: 'Complete AI/ML infrastructure with GPU clusters, model training, and deployment pipelines.',
+      features: [
+        'GPU cluster setup and optimization',
+        'ML model training infrastructure',
+        'Model deployment and serving',
+        'MLOps pipeline automation',
+        'Data pipeline and preprocessing',
+        'Model monitoring and management'
+      ],
+      pricing: '$100,000 – $800,000/project',
+      projectPricing: '$20,000 – $80,000/month managed',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Scalable AI/ML capabilities',
+        'Faster model training and deployment',
+        'Automated ML workflows',
+        'Cost-effective AI infrastructure'
+      ],
+      category: 'AI Infrastructure'
+    },
+    {
+      icon: Shield,
+      name: 'Blockchain Infrastructure & DApps',
+      description: 'Blockchain infrastructure setup, smart contract development, and decentralized application deployment.',
+      features: [
+        'Blockchain network setup and configuration',
+        'Smart contract development and auditing',
+        'DeFi protocol development',
+        'NFT marketplace development',
+        'Blockchain security and compliance',
+        'Integration with existing systems'
+      ],
+      pricing: '$75,000 – $600,000/project',
+      projectPricing: '$15,000 – $60,000/month managed',
+      timeline: '10–20 weeks',
+      benefits: [
+        'Decentralized and secure applications',
+        'Transparent and immutable records',
+        'Reduced intermediary costs',
+        'Enhanced trust and security'
+      ],
+      category: 'Blockchain'
+    },
+    {
+      icon: Cloud,
+      name: 'Multi-Cloud Orchestration Platform',
+      description: 'Comprehensive multi-cloud management with automated workload distribution and cost optimization.',
+      features: [
+        'Multi-cloud workload orchestration',
+        'Automated cost optimization',
+        'Cross-cloud disaster recovery',
+        'Unified monitoring and management',
+        'Cloud governance and compliance',
+        'Performance optimization'
+      ],
+      pricing: '$50,000 – $400,000/project',
+      projectPricing: '$10,000 – $40,000/month managed',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Vendor lock-in avoidance',
+        'Optimized cost and performance',
+        'Enhanced reliability and availability',
+        'Simplified cloud management'
+      ],
+      category: 'Cloud Management'
+    },
+    {
+      icon: Database,
+      name: 'Real-Time Data Streaming Platform',
+      description: 'High-performance real-time data streaming with Apache Kafka, event processing, and analytics.',
+      features: [
+        'Real-time data ingestion and processing',
+        'Event streaming and messaging',
+        'Stream analytics and processing',
+        'Data pipeline automation',
+        'Real-time monitoring and alerting',
+        'Integration with data lakes and warehouses'
+      ],
+      pricing: '$40,000 – $300,000/project',
+      projectPricing: '$8,000 – $30,000/month managed',
+      timeline: '6–12 weeks',
+      benefits: [
+        'Real-time data processing',
+        'Improved decision making',
+        'Enhanced customer experiences',
+        'Reduced data latency'
+      ],
+      category: 'Data Streaming'
+    },
+    {
+      icon: Globe,
+      name: 'IoT Platform & Device Management',
+      description: 'Comprehensive IoT platform with device management, data collection, and analytics.',
+      features: [
+        'IoT device provisioning and management',
+        'Real-time data collection and processing',
+        'Device security and firmware updates',
+        'IoT analytics and insights',
+        'Integration with business systems',
+        'Scalable IoT infrastructure'
+      ],
+      pricing: '$60,000 – $500,000/project',
+      projectPricing: '$12,000 – $50,000/month managed',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Connected device ecosystem',
+        'Real-time operational insights',
+        'Automated device management',
+        'Improved operational efficiency'
+      ],
+      category: 'IoT'
+    },
+    {
+      icon: Shield,
+      name: 'Advanced Threat Intelligence Platform',
+      description: 'Comprehensive threat intelligence with automated detection, analysis, and response capabilities.',
+      features: [
+        'Threat intelligence gathering and analysis',
+        'Automated threat detection and response',
+        'Security orchestration and automation',
+        'Incident response and forensics',
+        'Threat hunting and investigation',
+        'Integration with security tools'
+      ],
+      pricing: '$80,000 – $600,000/project',
+      projectPricing: '$15,000 – $60,000/month managed',
+      timeline: '10–20 weeks',
+      benefits: [
+        'Proactive threat detection',
+        'Automated security response',
+        'Reduced security incidents',
+        'Enhanced security posture'
+      ],
+      category: 'Threat Intelligence'
+    },
+    {
+      icon: Cloud,
+      name: 'Serverless Architecture Platform',
+      description: 'Complete serverless infrastructure with function-as-a-service, event-driven architecture, and auto-scaling.',
+      features: [
+        'Serverless function development and deployment',
+        'Event-driven architecture design',
+        'Auto-scaling and load balancing',
+        'Serverless database and storage',
+        'API gateway and microservices',
+        'Cost optimization and monitoring'
+      ],
+      pricing: '$30,000 – $250,000/project',
+      projectPricing: '$6,000 – $25,000/month managed',
+      timeline: '6–12 weeks',
+      benefits: [
+        'Reduced infrastructure costs',
+        'Automatic scaling',
+        'Simplified deployment',
+        'Improved developer productivity'
+      ],
+      category: 'Serverless'
+    },
+    {
+      icon: Database,
+      name: 'Data Lake & Analytics Platform',
+      description: 'Comprehensive data lake with advanced analytics, machine learning, and business intelligence.',
+      features: [
+        'Data lake architecture and setup',
+        'Data ingestion and ETL pipelines',
+        'Advanced analytics and reporting',
+        'Machine learning model deployment',
+        'Data governance and security',
+        'Real-time and batch processing'
+      ],
+      pricing: '$100,000 – $800,000/project',
+      projectPricing: '$20,000 – $80,000/month managed',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Unified data platform',
+        'Advanced analytics capabilities',
+        'Scalable data processing',
+        'Data-driven decision making'
+      ],
+      category: 'Data Analytics'
+    },
+    {
+      icon: Globe,
+      name: 'Digital Twin Platform',
+      description: 'Digital twin technology for real-time monitoring, simulation, and optimization of physical assets.',
+      features: [
+        'Digital twin creation and modeling',
+        'Real-time data synchronization',
+        'Simulation and predictive analytics',
+        'Asset monitoring and optimization',
+        'Integration with IoT sensors',
+        'Performance analytics and reporting'
+      ],
+      pricing: '$150,000 – $1,200,000/project',
+      projectPricing: '$30,000 – $120,000/month managed',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Real-time asset monitoring',
+        'Predictive maintenance',
+        'Optimized operations',
+        'Reduced downtime and costs'
+      ],
+      category: 'Digital Twin'
+    },
+    {
+      icon: Shield,
+      name: 'Post-Quantum Cryptography Implementation',
+      description: 'Implementation of post-quantum cryptographic algorithms for future-proof security.',
+      features: [
+        'Post-quantum algorithm implementation',
+        'Hybrid classical-quantum security',
+        'Migration planning and execution',
+        'Performance optimization',
+        'Compliance with quantum standards',
+        'Integration with existing systems'
+      ],
+      pricing: '$100,000 – $800,000/project',
+      projectPricing: '$20,000 – $80,000/month managed',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Future-proof security',
+        'Quantum threat protection',
+        'Compliance readiness',
+        'Enhanced data protection'
+      ],
+      category: 'Quantum Security'
+    },
+    {
+      icon: Cloud,
+      name: 'Hyperconverged Infrastructure (HCI)',
+      description: 'Hyperconverged infrastructure deployment with integrated compute, storage, and networking.',
+      features: [
+        'HCI platform selection and deployment',
+        'Virtualization and containerization',
+        'Storage optimization and management',
+        'Network virtualization',
+        'Backup and disaster recovery',
+        'Performance monitoring and optimization'
+      ],
+      pricing: '$200,000 – $1,500,000/project',
+      projectPricing: '$40,000 – $150,000/month managed',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Simplified infrastructure management',
+        'Reduced operational costs',
+        'Improved scalability',
+        'Enhanced performance and reliability'
+      ],
+      category: 'Infrastructure'
+    },
+    {
+      icon: Database,
+      name: 'Graph Database & Knowledge Management',
+      description: 'Graph database implementation with knowledge graphs, relationship analysis, and intelligent search.',
+      features: [
+        'Graph database design and implementation',
+        'Knowledge graph construction',
+        'Relationship analysis and visualization',
+        'Intelligent search and recommendation',
+        'Data integration and synchronization',
+        'Performance optimization'
+      ],
+      pricing: '$60,000 – $500,000/project',
+      projectPricing: '$12,000 – $50,000/month managed',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Enhanced relationship insights',
+        'Intelligent search capabilities',
+        'Better data understanding',
+        'Improved decision making'
+      ],
+      category: 'Graph Databases'
     }
   ];
 
