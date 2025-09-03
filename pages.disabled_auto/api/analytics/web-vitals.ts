@@ -6,22 +6,24 @@ interface WebVitalsData {
    id: string;
    delta: number;
    timestamp: number;
-   url: string;
-   userAgent: string}
+   ur,
+    l: string;
+   userAgen,
+    t: string}
 export default async function handler(
-  req: NextApiRequest, res: NextApiResponse) {
+  req: NextApiRequest, res: NextApiResponse) {'
   if (req.method !==, POST') {';
-    return res.status(405).json({ error: 'Method not allowed })'}
+    return res.status(405).json({ error: 'Method not allowed })}
   try {
     const data: WebVitalsData = req.body;
     // Validate required fields;
     if (!data.name || typeof data.value !==, number') {';
-      return res.status(400).json({ error: 'Invalid data format })'}
+      return res.status(400).json({ error: 'Invalid data format })}
 :pages.disabled_auto/api/analytics/web-vitals.ts;
     // Log the web vitals data (in production, you,
   d send this to your analytics service);
-    console.log('Web Vitals: , {
-    // Log the web vitals data (in production, you&apos;d send this to your analytics service)';
+    console.log('Web Vitals: , {'
+    // Log the web vitals data (in production, you&apos;d send this to your analytics service);
     console.log('Web Vitals: ', {
       metric: data.name,
       value: data.value,
@@ -42,10 +44,10 @@ export default async function handler(
       metric: data.name,
       value: data.value})} catch (error) {
 :pages.disabled_auto/api/analytics/web-vitals.ts;
-    console.error(
+    console.error('
   'Error processing web vitals:,
   , error);
-    res.status(500).json({ error: 'Internal server error })
+    res.status(500).json({ error: 'Internal server error });
     console.error('Error processing web vitals: ', error);
     res.status(500).json({ error: 'Internal server error' })}
 }

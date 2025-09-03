@@ -1,151 +1,258 @@
 #!/usr/bin/env node;
+<<<<<<< HEAD
+const fs = require(;
+=======
+<<<<<<< HEAD
+const fs = require(;);  'fs');';const path = require(;);  'path');';const { execSync } = require(;);  'child_process');';// Common lint issues to check for;';const lintRules = {;
+  'no-console': /console\.(log|warn|error|info|debug)/g,';  'no-unused-imports': /import\s+[^}]+from\s+[;';  ''][^'']+[;';  '"];?\s*$/gm,";  'no-unused-vars;';  ': /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,';  'no-debugger;';  ': /debugger;/g,';  'no-alert;';  ': /alert\(/g,';  'no-eval;';  ': /eval\(/g,';  'no-var;';  ': /var\s+/g,';  'prefer-const;';  ': /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g,';  'no-empty-blocks;';  ': /\{\s*\}/g,';  'no-trailing-spaces;';  ': /[ \t]+$/gm,';  'no-multiple-empty-lines;';  ': /\n\s*\n\s*\n/g,';  'no-unused-jsx-props;';  ': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g}';// File extensions to check;';const extensions = ['.js';  ', '.jsx;';  ', '.ts;';  ', '.tsx;';  '];';// Directories to ignore;';const ignoreDirs = [;
+  'node_modules;';  ',';  '.git;';  ',';  'dist;';  ',';  'build;';  ',';  '.next;';  ',';  'out;';  ',';  'coverage;';  ',';  'temp;';  ',';  'tmp;';  ',';  'logs;';  ',';  'reports;';  ',';  'test-reports;';  ',';  'security-reports;';  ',';  'ci-cd-reports;';  ',';  'link-reports;';  ',';  'broken_files_backup;';  ',';  'temp_backup;';  ',';  'temp_working;';  ';';];';// Issues found;
+=======
 const fs = require(
+>>>>>>> main
   'fs');
-const path = require(
+<<<<<<< HEAD
+const path = require('
   'path');
-const { execSync } = require(
+const { execSync } = require('
   'child_process');
 // Common lint issues to check for;
-const lintRules = {
+const lintRules = {'
   'no-console': /console\.(log|warn|error|info|debug)/g,
   'no-unused-imports': /import\s+[^}]+from\s+[;
   ''][^'']+[;
-  '"];?\s*$/gm,
+  '"];?\s*$/gm,"
+=======
+const path = require(;
+  'path');
+const { execSync } = require(;
+  'child_process');
+// Common lint issues to check for;
+const lintRules = {;
+  'no-console': /console\.(log|warn|error|info|debug)/g,;
+  'no-unused-imports': /import\s+[^}]+from\s+[;
+  '][^']+[;
+  '"];?\s*$/gm,;
+>>>>>>> main
   'no-unused-vars;
-  ': /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,
+  ': /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,;
   'no-debugger;
-  ': /debugger;/g,
+  ': /debugger;/g,;
   'no-alert;
-  ': /alert\(/g,
+  ': /alert\(/g,;
   'no-eval;
-  ': /eval\(/g,
+  ': /eval\(/g,;
   'no-var;
-  ': /var\s+/g,
+  ': /var\s+/g,;
   'prefer-const;
-  ': /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g,
+  ': /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g,;
   'no-empty-blocks;
-  ': /\{\s*\}/g,
+  ': /\{\s*\}/g,;
   'no-trailing-spaces;
-  ': /[ \t]+$/gm,
+  ': /[ \t]+$/gm,;
   'no-multiple-empty-lines;
-  ': /\n\s*\n\s*\n/g,
+  ': /\n\s*\n\s*\n/g,;
   'no-unused-jsx-props;
   ': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g}
 // File extensions to check;
-const extensions = ['.js
+<<<<<<< HEAD
+const extensions = ['.js'
+=======
+<<<<<<< HEAD
+const extensions = ['.js;
+>>>>>>> main
   ', '.jsx;
   ', '.ts;
   ', '.tsx;
+=======
+const extensions = ['.js
+  ,.jsx;
+  ,.ts;
+  ,.tsx;
+>>>>>>> main
   '];
 // Directories to ignore;
-const ignoreDirs = [
+<<<<<<< HEAD
+const ignoreDirs = ['
+=======
+const ignoreDirs = [;
+>>>>>>> main
   'node_modules;
-  ',
+<<<<<<< HEAD
+  ',;
   '.git;
-  ',
+  ',;
   'dist;
-  ',
+  ',;
   'build;
-  ',
+  ',;
   '.next;
-  ',
+  ',;
   'out;
-  ',
+  ',;
   'coverage;
-  ',
+  ',;
   'temp;
-  ',
+  ',;
   'tmp;
-  ',
+  ',;
   'logs;
-  ',
+  ',;
   'reports;
-  ',
+  ',;
   'test-reports;
-  ',
+  ',;
   'security-reports;
-  ',
+  ',;
   'ci-cd-reports;
-  ',
+  ',;
   'link-reports;
-  ',
+  ',;
   'broken_files_backup;
-  ',
+  ',;
   'temp_backup;
-  ',
+  ',;
   'temp_working;
+=======
+  ,.git;
+  ,dist;
+  ,build;
+  ,.next;
+  ,out;
+  ,coverage;
+  ,temp;
+  ,tmp;
+  ,logs;
+  ,reports;
+  ,test-reports;
+  ,security-reports;
+  ,ci-cd-reports;
+  ,link-reports;
+  ,broken_files_backup;
+  ,temp_backup;
+  ,temp_working;
+>>>>>>> main
   ';
 ];
 // Issues found;
+>>>>>>> main
 const issues = [];
 const totalFiles = 0;
 const filesWithIssues = 0;
-function shouldIgnoreFile(filePath) {
+function shouldIgnoreFile(filePath) {;
   return ignoreDirs.some(dir => filePath.includes(dir));
+<<<<<<< HEAD
 function checkFile(filePath) {
-  try {
+  try {'
+=======
+function checkFile(filePath) {;
+  try {;
+<<<<<<< HEAD
+>>>>>>> main
     const content = fs.readFileSync(filePath, 'utf8;
   ');
     const lines = content.split('\n;
   ');
     totalFiles++;
     const fileIssues = [];
+=======
+    const content = fs.readFileSync(filePath, 'utf8;';  ');';    const lines = content.split('\n;';  ');';    totalFiles++;';    const fileIssues = [];
+>>>>>>> main
     // Check each line for issues;
-    lines.forEach((line, lineNum) => {
-      Object.entries(lintRules).forEach(([rule, pattern]) => {
-        if (pattern.test(line)) {
-          fileIssues.push({
-            rule,
-            line: lineNum + 1,
-            content: line.trim(),
-            file: filePath})})})
-    if (fileIssues.length > 0) {
+    lines.forEach((line, lineNum) => {;
+      Object.entries(lintRules).forEach(([rule, pattern]) => {;
+        if (pattern.test(line)) {;
+<<<<<<< HEAD
+          fileIssues.push({;
+            rule,;
+            line: lineNum + 1,;
+            content: line.trim(),;
+            file: filePath})})});
+    if (fileIssues.length > 0) {;
       filesWithIssues++;
-      issues.push(...fileIssues)} catch (error) {
+<<<<<<< HEAD
+      issues.push(...fileIssues)} catch (error) {'
+=======
+      issues.push(...fileIssues)} catch (error) {;
+>>>>>>> main
     // // // // // // // console.warn(`Warning: Could not read file ${filePath}: ${error.message}`)}
 }
-function walkDir(dir) {
+function walkDir(dir) {;
   const files = fs.readdirSync(dir);
-  files.forEach(file => {
+  files.forEach(file => {;
     const filePath = path.join(dir, file);
+=======
+          fileIssues.push({;);            rule,;
+            "line": lineNum + 1,;";            "content": line.trim(),;";            "file": filePath})})});";    if (fileIssues.length > 0) {;
+      filesWithIssues++;
+      issues.push(...fileIssues)} catch (error) {;
+    // // // // // // // console.warn(`"Warning": Could not read file ${filePath}: ${error.message}`)}`;}
+function walkDir(dir) {;
+  const files = fs.readdirSync(dir);
+  files.forEach(file => {;);    const filePath = path.join(dir, file);
+>>>>>>> main
     const stat = fs.statSync(filePath);
-    if (stat.isDirectory()) {
-      if (!shouldIgnoreFile(filePath)) {
-        walkDir(filePath)} else if (stat.isFile()) {
+    if (stat.isDirectory()) {;
+      if (!shouldIgnoreFile(filePath)) {;
+        walkDir(filePath)} else if (stat.isFile()) {;
       const ext = path.extname(file);
+<<<<<<< HEAD
       if (extensions.includes(ext)) {
         checkFile(filePath)})
-function generateReport() {
+function generateReport() {`
+=======
+      if (extensions.includes(ext)) {;
+        checkFile(filePath)});
+function generateReport() {;
+<<<<<<< HEAD
+>>>>>>> main
   // // // // // // // console.log('\n=== LINT CHECK REPORT ===\n;
   ');
-  // // // // // // // console.log(`Total files checked: ${totalFiles}`);
-  // // // // // // // console.log(`Files with issues: ${filesWithIssues}`);
+  // // // // // // // console.log(`Total files checked: ${totalFiles}`);`
+  // // // // // // // console.log(`Files with issues: ${filesWithIssues}`);`
   // // // // // // // console.log(`Total issues found: ${issues.length}\n`);
-  if (issues.length === 0) {
+<<<<<<< HEAD
+  if (issues.length === 0) {`
+=======
+  if (issues.length === 0) {;
+>>>>>>> main
     // // // // // // // console.log('✅ No lint issues found!;
   ');
     return;
   // Group issues by file;
   const issuesByFile = { /* empty */ }
-  issues.forEach(issue => {
-    if (!issuesByFile[issue.file]) {
+  issues.forEach(issue => {;
+    if (!issuesByFile[issue.file]) {;
       issuesByFile[issue.file] = [];
+<<<<<<< HEAD
     issuesByFile[issue.file].push(issue)})
-  Object.entries(issuesByFile).forEach(([file, fileIssues]) => {
+  Object.entries(issuesByFile).forEach(([file, fileIssues]) => {'
     // // // // // // // console.log(`\n📁 ${file} (${fileIssues.length} issues):`);
-    fileIssues.forEach(issue => {
+    fileIssues.forEach(issue => {`
       // // // // // // // console.log(`  Line ${issue.line}: [${issue.rule}] ${issue.content}`)})})
+=======
+    issuesByFile[issue.file].push(issue)});
+  Object.entries(issuesByFile).forEach(([file, fileIssues]) => {;
+    // // // // // // // console.log(`\n📁 ${file} (${fileIssues.length} issues):`);
+    fileIssues.forEach(issue => {;
+      // // // // // // // console.log(`  Line ${issue.line}: [${issue.rule}] ${issue.content}`)})});
+>>>>>>> main
   // Summary by rule;
-  // // // // // // // console.log(,
+  // // // // // // // console.log(,;
   \n📊 Issues by rule: );
   const ruleCounts = { /* empty */ }
-  issues.forEach(issue => {
-    ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1})
+  issues.forEach(issue => {;
+    ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1});
   Object.entries(ruleCounts);
     .sort(([,a], [,b]) => b - a);
-    .forEach(([rule, count]) => {
+<<<<<<< HEAD
+    .forEach(([rule, count]) => {`
       // // // // // // // console.log(`  ${rule}: ${count}`)})
-function main() {
+function main() {`
+=======
+    .forEach(([rule, count]) => {;
+      // // // // // // // console.log(`  ${rule}: ${count}`)});
+function main() {;
+>>>>>>> main
   // // // // // // // console.log('🔍 Starting lint check...;
   ');
   const startTime = Date.now();
@@ -154,10 +261,28 @@ function main() {
   generateReport();
   // // // // // // // console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`);
   // Exit with error code if issues found;
-  if (issues.length > 0) {
+=======
+  // // // // // // // console.log('\n=== LINT CHECK REPORT ===\n;';  ');';  // // // // // // // console.log(`Total files "checked": ${totalFiles}`);`;  // // // // // // // console.log(`Files with "issues": ${filesWithIssues}`);`;  // // // // // // // console.log(`Total issues "found": ${issues.length}\n`);`;  if (issues.length === 0) {;
+    // // // // // // // console.log('✅ No lint issues found!;';  ');';    return;';  // Group issues by file;
+  const issuesByFile = { /* empty */ }
+  issues.forEach(issue => {;);    if (!issuesByFile[issue.file]) {;
+      issuesByFile[issue.file] = [];
+    issuesByFile[issue.file].push(issue)});
+  Object.entries(issuesByFile).forEach(([file, fileIssues]) => {;
+    // // // // // // // console.log(`\n📁 ${file} (${fileIssues.length} issues):`);`;    fileIssues.forEach(issue => {;);      // // // // // // // console.log(`  Line ${issue.line}: [${issue.rule}] ${issue.content}`)})})`;  // Summary by rule;
+  // // // // // // // console.log(,;);  \n📊 Issues by "rule": );";  const ruleCounts = { /* empty */ }
+  issues.forEach(issue => {;);    ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1});
+  Object.entries(ruleCounts);
+    .sort(([,a], [,b]) => b - a);
+    .forEach(([rule, count]) => {;
+      // // // // // // // console.log(`  ${rule}: ${count}`)})`;function main() {;
+  // // // // // // // console.log('🔍 Starting lint check...;';  ');';  const startTime = Date.now();';  walkDir('.');';  const endTime = Date.now();';  generateReport();
+  // // // // // // // console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`);`;  // Exit with error code if issues found;
+>>>>>>> main
+  if (issues.length > 0) {;
     process.exit(1);
 // Run the checker;
-if (require.main === module) {
+if (require.main === module) {;
   main();
 module.exports = { checkFile, walkDir, lintRules }
-}}}}}}}}}}}}}));
+}}}}}}}}}}}}}));`

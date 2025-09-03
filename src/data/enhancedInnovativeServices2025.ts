@@ -1,9 +1,27 @@
- export interface ServiceContact {
+<<<<<<< HEAD
+ export interface ServiceContact {;
   phone: string;
    email: string;
+<<<<<<< HEAD
+   websit,
+    e: string;
+   addres,
+    s: string} export interface MicroSaasService {
+=======
    website: string;
-   address: string} export interface MicroSaasService {
+   address: string} export interface MicroSaasService {;
+=======
+ export interface ServiceContact {phone: string;
+   email: string;
+   website: string;
+<<<<<<< HEAD
+   address: string} export interface MicroSaasService {id: number;
+=======
+   addres,s: string} export interface MicroSaasService {
+>>>>>>> main
+>>>>>>> main
   id: number;
+>>>>>>> main
    name: string;
    category: string;
    pricing: string;
@@ -21,9 +39,24 @@
    roi: string;
    setupTime: string;
    integrations: string[];
+<<<<<<< HEAD
+   freeTie,
+    r: boolean;
+   trialPerio,
+    d: string} export interface ITService {
+=======
    freeTier: boolean;
-   trialPeriod: string} export interface ITService {
+<<<<<<< HEAD
+   trialPeriod: string} export interface ITService {;
+=======
+<<<<<<< HEAD
+   trialPeriod: string} export interface ITService {id: number;
+=======
+   trialPerio,d: string} export interface ITService {
+>>>>>>> main
+>>>>>>> main
   id: number;
+>>>>>>> main
    name: string;
    category: string;
    description: string;
@@ -38,9 +71,24 @@
    responseTime: string;
    sla: string;
    certifications: string[];
+<<<<<<< HEAD
+   deliveryTim,
+    e: string;
+   suppor,
+    t: string} export interface AIService {
+=======
    deliveryTime: string;
-   support: string} export interface AIService {
+<<<<<<< HEAD
+   support: string} export interface AIService {;
+=======
+<<<<<<< HEAD
+   support: string} export interface AIService {id: number;
+=======
+   suppor,t: string} export interface AIService {
+>>>>>>> main
+>>>>>>> main
   id: number;
+>>>>>>> main
    name: string;
    category: string;
    description: string;
@@ -57,5 +105,26 @@
    accuracy: string;
    trainingData: string;
    compliance: string[];
+<<<<<<< HEAD
+   aiScor,
+    e: number;
+   useCase,
+    s: string[]} export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = ['';""
+=======
    aiScore: number;
-   useCases: string[]} export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = ['';
+<<<<<<< HEAD
+   useCases: string[]} export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [';
+=======
+<<<<<<< HEAD
+   useCase,s: string[]} export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [&apos;';&apos;'
+=======
+<<<<<<< HEAD
+   useCases: string[]} export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = ['';""
+""
+=======
+   useCases: string[]} export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = ['
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

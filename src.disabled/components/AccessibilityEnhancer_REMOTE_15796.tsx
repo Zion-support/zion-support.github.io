@@ -9,13 +9,18 @@ import React, { useState, useEffect, useCallback } from;
    keyboardNavigation: boolean;
    colorBlindFriendly: boolean;
    fontSize: number;
-   lineHeight: number;
-   letterSpacing: number} interface AccessibilityFeature {
+   lineHeigh,
+    t: number;
+   letterSpacin,
+    g: number} interface AccessibilityFeature {
    id: string;
    name: string;
-   description: string;
-   enabled: boolean;
-   category:, visual' | 'auditory' | 'motor' | 'cognitive';
+   descriptio,
+    n: string;
+   enable,
+    d: boolean;
+   categor,
+    y:, visual' | 'auditory' | 'motor' | 'cognitive';
    impact: 'high' | 'medium' | 'low} export const AccessibilityEnhancer: React.FC = () => { const [isOpen, setIsOpen] = useState(false) const [settings, setSettings] = useState<AccessibilitySettings>({ highContrast: false, largeText: false, reducedMotion: false, screenReader: false, keyboardNavigation: false, colorBlindFriendly: false, fontSize: 100, lineHeight: 1.5, letterSpacing: 0})  const [features, setFeatures] = useState<AccessibilityFeature[]>([ { id:,
   skip-links', name: 'Skip Links, description:;
   'Quick navigation to main content areas', enabled: true, category:,
@@ -34,4 +39,4 @@ import React, { useState, useEffect, useCallback } from;
   visual', impact: 'high }, { id:,
   keyboard-shortcuts', name: 'Keyboard Shortcuts, description:;
   'Alternative navigation methods', enabled: false, category:,
-  motor', impact: 'medium } ]) '
+  motor', impact: 'medium } ]) ''

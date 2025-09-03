@@ -26,17 +26,22 @@ export interface SpecializedInnovativeService2027 {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
-  reviews: number}
+  ratin,
+    g: number;
+  review,
+    s: number}
 export const specializedInnovativeServices2027: SpecializedInnovativeService2027[] = [;
   // SPACE TECHNOLOGY SERVICES{
-    id: 'satellite-ai-monitoring-platform',
+    i,
+    d: 'satellite-ai-monitoring-platform',
     name: 'Satellite AI Monitoring Platform',
     tagline: 'Intelligent satellite data analysis for global insights',
     price: '$8,999',
@@ -58,7 +63,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     icon: '🛰️',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-300',
-    link: 'https://ziontechgroup.com/satellite-ai-monitoring-platform',
+    link: 'http,
+    s://ziontechgroup.com/satellite-ai-monitoring-platform',
     marketPosition: 'Leading satellite AI platform with access to 100+ satellite constellations',
     targetAudience: 'Government agencies, environmental organizations, agricultural companies, urban planners',
     trialDays: 45,
@@ -72,18 +78,20 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors['Planet Labs', 'Maxar Technologies', 'Airbus Defence and Space'],
     marketSize: '$12B satellite monitoring market',
     growthRate: '35% annual growth',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Satellite data integration, AI model training, and monitoring system setup',
     launchDate: '2027-02-15',
     customers: 6,
     rating: 4.9,
     reviews: 12},
-  // AUGMENTED REALITY & VIRTUAL REALITY{
+  // AUGMENTED REALITY & VIRTUAL REALITY{'
     id: 'ar-vr-enterprise-solutions-platform',
     name: 'AR/VR Enterprise Solutions Platform',
     tagline: 'Immersive technology for business transformation',
@@ -106,7 +114,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     icon: '🥽',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-300',
-    link: 'https://ziontechgroup.com/ar-vr-enterprise-solutions-platform',
+    link: 'http,
+    s://ziontechgroup.com/ar-vr-enterprise-solutions-platform',
     marketPosition: 'Leading enterprise AR/VR platform with 1000+ enterprise deployments',
     targetAudience: 'Manufacturing companies, training organizations, design firms, healthcare providers',
     trialDays: 30,
@@ -120,18 +129,20 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors['Microsoft HoloLens', 'Magic Leap', 'PTC Vuforia'],
     marketSize: '$45B AR/VR market',
     growthRate: '28% annual growth',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Hardware setup, content development, and user training',
     launchDate: '2027-01-28',
     customers: 45,
     rating: 4.7,
     reviews: 89},
-  // ROBOTICS & AUTOMATION{
+  // ROBOTICS & AUTOMATION{'
     id: 'ai-powered-robotics-automation-platform',
     name: 'AI-Powered Robotics Automation Platform',
     tagline: 'Intelligent automation for manufacturing and logistics',
@@ -154,7 +165,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     icon: '🤖',
     color: 'from-gray-600 to-slate-700',
     textColor: 'text-gray-300',
-    link: 'https://ziontechgroup.com/ai-powered-robotics-automation-platform',
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-robotics-automation-platform',
     marketPosition: 'Leading robotics automation platform with 500+ robot deployments',
     targetAudience: 'Manufacturing companies, logistics providers, warehouse operators, automotive industry',
     trialDays: 60,
@@ -168,18 +180,20 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors['ABB Robotics', 'KUKA Robotics', 'FANUC'],
     marketSize: '$75B robotics market',
     growthRate: '20% annual growth',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Robot integration, AI model deployment, and workflow optimization',
     launchDate: '2027-02-05',
     customers: 23,
     rating: 4.8,
     reviews: 34},
-  // GREEN TECHNOLOGY & SUSTAINABILITY{
+  // GREEN TECHNOLOGY & SUSTAINABILITY{'
     id: 'sustainable-energy-optimization-platform',
     name: 'Sustainable Energy Optimization Platform',
     tagline: 'AI-powered energy management for sustainability',
@@ -202,7 +216,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     icon: '🌱',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-300',
-    link: 'https://ziontechgroup.com/sustainable-energy-optimization-platform',
+    link: 'http,
+    s://ziontechgroup.com/sustainable-energy-optimization-platform',
     marketPosition: 'Leading sustainable energy platform with 30% average energy savings',
     targetAudience: 'Energy companies, manufacturing facilities, commercial buildings, government agencies',
     trialDays: 30,
@@ -216,18 +231,20 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors['Schneider Electric', 'Siemens', 'Honeywell'],
     marketSize: '$35B energy management market',
     growthRate: '18% annual growth',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Energy audit, system integration, and optimization strategy development',
     launchDate: '2027-01-18',
     customers: 78,
     rating: 4.7,
     reviews: 145},
-  // SUPPLY CHAIN & LOGISTICS{
+  // SUPPLY CHAIN & LOGISTICS{'
     id: 'ai-powered-supply-chain-optimization',
     name: 'AI-Powered Supply Chain Optimization',
     tagline: 'Intelligent supply chain management and optimization',
@@ -250,7 +267,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     icon: '📦',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-300',
-    link: 'https://ziontechgroup.com/ai-powered-supply-chain-optimization',
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-supply-chain-optimization',
     marketPosition: 'Leading supply chain platform with 25% average cost reduction',
     targetAudience: 'Manufacturing companies, retailers, logistics providers, e-commerce businesses',
     trialDays: 30,
@@ -264,18 +282,20 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors['SAP Ariba', 'Oracle SCM', 'JDA Software'],
     marketSize: '$28B supply chain management market',
     growthRate: '16% annual growth',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Supply chain assessment, system integration, and optimization strategy development',
     launchDate: '2027-02-10',
     customers: 56,
     rating: 4.6,
     reviews: 98},
-  // HUMAN RESOURCES & TALENT MANAGEMENT{
+  // HUMAN RESOURCES & TALENT MANAGEMENT{'
     id: 'ai-powered-hr-talent-platform',
     name: 'AI-Powered HR & Talent Platform',
     tagline: 'Intelligent human resources and talent management',
@@ -298,7 +318,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     icon: '👥',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-300',
-    link: 'https://ziontechgroup.com/ai-powered-hr-talent-platform',
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-hr-talent-platform',
     marketPosition: 'Leading AI HR platform with 40% improvement in hiring efficiency',
     targetAudience: 'HR departments, recruitment agencies, talent management firms, large enterprises',
     trialDays: 30,
@@ -312,18 +333,20 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors['Workday', 'BambooHR', 'Zenefits'],
     marketSize: '$22B HR technology market',
     growthRate: '12% annual growth',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'HR process assessment, system integration, and user training',
     launchDate: '2027-01-25',
     customers: 134,
     rating: 4.7,
     reviews: 267},
-  // LEGAL TECHNOLOGY & COMPLIANCE{
+  // LEGAL TECHNOLOGY & COMPLIANCE{'
     id: 'ai-powered-legal-tech-platform',
     name: 'AI-Powered Legal Technology Platform',
     tagline: 'Intelligent legal research and compliance management',
@@ -346,7 +369,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     icon: '⚖️',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-300',
-    link: 'https://ziontechgroup.com/ai-powered-legal-tech-platform',
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-legal-tech-platform',
     marketPosition: 'Leading legal tech platform with 60% time savings in legal research',
     targetAudience: 'Law firms, corporate legal departments, compliance officers, legal consultants',
     trialDays: 30,
@@ -360,18 +384,20 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors['LexisNexis', 'Westlaw', 'Thomson Reuters'],
     marketSize: '$18B legal technology market',
     growthRate: '15% annual growth',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Legal process assessment, system integration, and user training',
     launchDate: '2027-02-20',
     customers: 45,
     rating: 4.8,
     reviews: 78},
-  // REAL ESTATE & PROPERTY TECHNOLOGY{
+  // REAL ESTATE & PROPERTY TECHNOLOGY{'
     id: 'ai-powered-proptech-platform',
     name: 'AI-Powered PropTech Platform',
     tagline: 'Intelligent real estate technology solutions',
@@ -394,7 +420,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     icon: '🏢',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
-    link: 'https://ziontechgroup.com/ai-powered-proptech-platform',
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-proptech-platform',
     marketPosition: 'Leading PropTech platform with 25% increase in property value',
     targetAudience: 'Property management companies, real estate investors, building owners, facility managers',
     trialDays: 30,
@@ -408,18 +435,20 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors['Yardi', 'RealPage', 'AppFolio'],
     marketSize: '$25B PropTech market',
     growthRate: '20% annual growth',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Property assessment, system integration, and optimization strategy development',
     launchDate: '2027-02-25',
     customers: 67,
     rating: 4.6,
     reviews: 123},
-  // SPORTS TECHNOLOGY & ANALYTICS{
+  // SPORTS TECHNOLOGY & ANALYTICS{'
     id: 'ai-powered-sports-analytics-platform',
     name: 'AI-Powered Sports Analytics Platform',
     tagline: 'Intelligent sports performance and analytics',
@@ -442,7 +471,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     icon: '⚽',
     color: 'from-green-600 to-blue-700',
     textColor: 'text-green-300',
-    link: 'https://ziontechgroup.com/ai-powered-sports-analytics-platform',
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-sports-analytics-platform',
     marketPosition: 'Leading sports analytics platform with 30% improvement in team performance',
     targetAudience: 'Sports teams, athletic organizations, training facilities, sports media',
     trialDays: 30,
@@ -456,18 +486,20 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors['Catapult Sports', 'STATS Perform', 'Second Spectrum'],
     marketSize: '$15B sports analytics market',
     growthRate: '25% annual growth',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'System setup, data integration, and performance optimization',
     launchDate: '2027-03-01',
     customers: 34,
     rating: 4.7,
     reviews: 56},
-  // ENTERTAINMENT & MEDIA TECHNOLOGY{
+  // ENTERTAINMENT & MEDIA TECHNOLOGY{'
     id: 'ai-powered-entertainment-platform',
     name: 'AI-Powered Entertainment Platform',
     tagline: 'Intelligent content creation and distribution',
@@ -490,7 +522,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     icon: '🎬',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-300',
-    link: 'https://ziontechgroup.com/ai-powered-entertainment-platform',
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-entertainment-platform',
     marketPosition: 'Leading entertainment platform with 40% increase in user engagement',
     targetAudience: 'Streaming platforms, content creators, media companies, entertainment brands',
     trialDays: 30,
@@ -504,11 +537,13 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors['Netflix', 'Spotify', 'YouTube'],
     marketSize: '$30B entertainment technology market',
     growthRate: '18% annual growth',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Content analysis, recommendation engine setup, and performance optimization',
     launchDate: '2027-02-28',
@@ -517,14 +552,15 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     reviews: 167;
 ];
 // Helper functions for service management;
-export const getSpecializedServiceById = (id: string) => {
+export const getSpecializedServiceById = (i,
+    d: string) => {
   return specializedInnovativeServices2027.find(service => service.id === id)}
 export const getSpecializedServicesByCategory = (category: string) => {
   return specializedInnovativeServices2027.filter(service => service.category === category)}
 export const getSpecializedPopularServices = () => {
   return specializedInnovativeServices2027.filter(service => service.popular)}
 export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return specializedInnovativeServices2027.filter(service => {
+  return specializedInnovativeServices2027.filter(service => {'
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice})}
 export const searchSpecializedServices = (query: string) => {
@@ -532,5 +568,5 @@ export const searchSpecializedServices = (query: string) => {
   return specializedInnovativeServices2027.filter(service = > ;
     service.name.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
-    service.category.toLowerCase().includes(lowercaseQuery))}
+    service.category.toLowerCase().includes(lowercaseQuery));
 export default specializedInnovativeServices2027}}

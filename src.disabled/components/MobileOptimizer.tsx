@@ -13,8 +13,10 @@ import React, { useState, useEffect, useCallback, useRef } from,
    swipeGestures: boolean;
    orientationLock: 'auto' | 'portrait' | 'landscape';
    fontSize: 'small' | 'medium' | 'large';
-   contrast: 'normal' | 'high' | 'inverted';
-   brightness: 'auto' | 'low' | 'normal' | 'high} interface MobileOptimizerProps {
+   contras,
+    t: 'normal' | 'high' | 'inverted';
+   brightnes,
+    s: 'auto' | 'low' | 'normal' | 'high} interface MobileOptimizerProps {
    enabled?: boolean;
    showPanel?: boolean;
    autoDetect?: boolean} export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ enabled = true, showPanel = false, autoDetect = true }) => { const [isOpen, setIsOpen] = useState(false) const [activeTab, setActiveTab] = useState<;
@@ -22,9 +24,14 @@ import React, { useState, useEffect, useCallback, useRef } from,
   'touch' |;
   'display' |;
   'performance' |;
-  'help'>(
+  'help'>('
   'general') const [settings, setSettings] = useState<MobileSettings>({ touchOptimization: true, gestureSupport: true, pinchZoom: true, rotationSupport: true, hapticFeedback: true, adaptiveLayout: true, mobileNavigation: true, touchTargets: true, swipeGestures: true, orientationLock:,
   auto', fontSize: 'medium, contrast:,
   normal', brightness: 'auto })  const [deviceInfo, setDeviceInfo] = useState({ isMobile: false, isTablet: false, isDesktop: false, orientation:;
-  'portrait', screenSize: { width: 0, height: 0 }, pixelRatio: 1, touchSupport: false, batteryLevel: 0, connectionType:
-  'unknown' })  const [gestureHistory, setGestureHistory] = useState<Array<{ type: string timestamp: Date details: string }>>([])  const [isOptimizing, setIsOptimizing] = useState(false) const touchStartRef = useRef<{ x: number y: number time: number } | null>(null) const gestureRef = useRef<HTMLDivElement>(null) '
+  'portrait', screenSize: { widt,
+    h: 0, height: 0 }, pixelRatio: 1, touchSupport: false, batteryLevel: 0, connectionType:'
+  'unknown' })  const [gestureHistory, setGestureHistory] = useState<Array<{ type: string timestam,
+    p: Date detail,
+    s: string }>>([])  const [isOptimizing, setIsOptimizing] = useState(false) const touchStartRef = useRef<{ x: number ,
+    y: number tim,
+    e: number } | null>(null) const gestureRef = useRef<HTMLDivElement>(null) ''

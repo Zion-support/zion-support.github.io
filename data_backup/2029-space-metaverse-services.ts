@@ -34,9 +34,12 @@ export interface SpaceMetaverseService2029 {
    exit: string;
    contact: { mobile: string;
    email: string;
-   website: string;
-   address: string}export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [{
-    id:,
+   websit,
+    e: string;
+   addres,
+    s: string}export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [{
+    i,
+    d:,
   space-mining-automation-platform',
     name: 'Space Mining Automation Platform,
     description:,
@@ -130,14 +133,15 @@ export interface SpaceMetaverseService2029 {
   Series D funding, $2B valuation',
     exit: 'IPO or space acquisition,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,
   https: //ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709'},
-  {
+  {'
     id: 'metaverse-digital-reality-platform,
     name:,
   Metaverse Digital Reality Platform',
@@ -233,14 +237,15 @@ export interface SpaceMetaverseService2029 {
   Series B funding, $300M valuation',
     exit: 'IPO or tech acquisition,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,
   https: //ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709'},
-  {
+  {'
     id: 'ai-predictive-health-analytics,
     name:,
   AI Predictive Health Analytics',
@@ -337,14 +342,15 @@ export interface SpaceMetaverseService2029 {
   Series C funding, $200M valuation',
     exit: 'IPO or healthcare acquisition,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,
   https: //ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709'},
-  {
+  {'
     id: 'ai-autonomous-business-manager,
     name:,
   AI Autonomous Business Manager',
@@ -441,7 +447,8 @@ export interface SpaceMetaverseService2029 {
   Series B funding, $100M valuation',
     exit: 'IPO or enterprise acquisition,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,

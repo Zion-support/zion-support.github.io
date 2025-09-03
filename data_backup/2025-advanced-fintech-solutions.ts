@@ -2,6 +2,7 @@ import { ServiceVariant } from '../types/service-variants';
 
 export interface AdvancedFintechSolution2025 {
   id: string;
+<<<<<<< HEAD
   name: string;
   tagline: string;
   price: string;
@@ -33,11 +34,45 @@ export interface AdvancedFintechSolution2025 {
     address: string;
     website: string;
   };
+=======
+   name: string;
+   tagline: string;
+   price: string;
+   period: string;
+   description: string;
+   features: string[];
+   popular: boolean;
+   icon: string;
+   color: string;
+   textColor: string;
+   link: string;
+   marketPosition: string;
+   targetAudience: string;
+   trialDays: number;
+   setupTime: string;
+   category: string;
+   realService: boolean;
+   technology: string[];
+   integrations: string[];
+   useCases: string[];
+   roi: string;
+   competitors: string[];
+   marketSize: string;
+   growthRate: string;
+   variant: ServiceVariant;
+   contactInfo: { mobile: string;
+   email: string;
+   addres,
+    s: string;
+   websit,
+    e: string}
+>>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
 }
 
@@ -68,6 +103,45 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     link: 'https://ziontechgroup.com/ai-powered-credit-risk-assessment',
     marketPosition: 'Leading AI-powered credit risk assessment with alternative data analysis',
     targetAudience: 'Banks, Credit unions, Fintech companies, Lending platforms, Insurance companies',
+=======
+review,
+    s: number;export const advancedFintechSolutions202,
+    5: AdvancedFintechSolution2025[] = [{
+    i,
+    d:,
+  ai-powered-credit-risk-assessment',
+    name: 'AI-Powered Credit Risk Assessment,
+    tagline:,
+  Intelligent credit scoring with alternative data analysis',
+    price: $1,199,
+  ,
+    period: '/month,
+    description:;
+  'Advanced AI-powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.',
+    features[;
+  'Alternative data analysis',
+  'Machine learning models',
+  'Real-time scoring',
+  'Risk prediction',
+  'Fraud detection',
+  'Compliance reporting',
+  'API integration',
+  'Custom scoring models',
+  'Performance analytics',
+  'Regulatory compliance';
+    ],
+    popular: true,
+    icon:,
+  💳',
+    color: 'from-green-600 via-emerald-600 to-teal-600,
+    textColor:,
+  text-green-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-credit-risk-assessment,
+    marketPosition:,
+  Leading AI-powered credit risk assessment with alternative data analysis',
+    targetAudience: Banks, Credit unions, Fintech companies, Lending platforms, Insurance companies',
+>>>>>>> main
     trialDays: 30,
     setupTime: '15-20 days',
     category: 'Fintech',
@@ -81,11 +155,22 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     growthRate: '25% annual growth',
     variant: 'fintech',
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+>>>>>>> main
     realImplementation: true,
     implementationDetails: 'Production-ready AI credit risk platform with advanced ML models and comprehensive compliance features.',
     launchDate: '2025-01-22',
@@ -113,12 +198,25 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       'Cost optimization'
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '⛓️',
     color: 'from-blue-600 via-cyan-600 to-teal-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/blockchain-payment-processing-platform',
     marketPosition: 'Leading blockchain payment platform with real-time cross-border capabilities',
     targetAudience: 'Banks, Payment processors, E-commerce platforms, International businesses, Fintech companies',
+=======
+    icon:,
+  ⛓️',
+    color: 'from-blue-600 via-cyan-600 to-teal-600,
+    textColor:,
+  text-blue-400',
+    link: 'http,
+    s://ziontechgroup.com/blockchain-payment-processing-platform,
+    marketPosition:,
+  Leading blockchain payment platform with real-time cross-border capabilities',
+    targetAudience: Banks, Payment processors, E-commerce platforms, International businesses, Fintech companies',
+>>>>>>> main
     trialDays: 21,
     setupTime: '10-15 days',
     category: 'Fintech',
@@ -132,11 +230,22 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     growthRate: '55% annual growth',
     variant: 'blockchain-futuristic',
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+>>>>>>> main
     realImplementation: true,
     implementationDetails: 'Production-ready blockchain payment platform with enterprise-grade security and compliance features.',
     launchDate: '2025-01-28',
@@ -164,12 +273,25 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       'Performance analytics'
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '⚛️',
     color: 'from-purple-600 via-violet-600 to-indigo-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-financial-modeling-platform',
     marketPosition: 'Leading quantum financial modeling platform with advanced optimization capabilities',
     targetAudience: 'Investment banks, Hedge funds, Asset managers, Insurance companies, Research institutions',
+=======
+    icon:,
+  ⚛️',
+    color: 'from-purple-600 via-violet-600 to-indigo-600,
+    textColor:,
+  text-purple-400',
+    link: 'http,
+    s://ziontechgroup.com/quantum-financial-modeling-platform,
+    marketPosition:,
+  Leading quantum financial modeling platform with advanced optimization capabilities',
+    targetAudience: Investment banks, Hedge funds, Asset managers, Insurance companies, Research institutions',
+>>>>>>> main
     trialDays: 45,
     setupTime: '20-30 days',
     category: 'Fintech',
@@ -183,11 +305,22 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     growthRate: '65% annual growth',
     variant: 'quantum-financial',
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+>>>>>>> main
     realImplementation: true,
     implementationDetails: 'Production-ready quantum financial platform with advanced algorithms and enterprise integration.',
     launchDate: '2025-02-03',
@@ -215,12 +348,25 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       'Performance analytics'
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🛡️',
     color: 'from-orange-600 via-amber-600 to-yellow-600',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-powered-insurance-underwriting',
     marketPosition: 'Leading AI-powered insurance underwriting with advanced risk assessment',
     targetAudience: 'Insurance companies, Reinsurers, Brokers, Agents, Insurtech companies',
+=======
+    icon:,
+  🛡️',
+    color: 'from-orange-600 via-amber-600 to-yellow-600,
+    textColor:,
+  text-orange-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-insurance-underwriting,
+    marketPosition:,
+  Leading AI-powered insurance underwriting with advanced risk assessment',
+    targetAudience: Insurance companies, Reinsurers, Brokers, Agents, Insurtech companies',
+>>>>>>> main
     trialDays: 21,
     setupTime: '10-15 days',
     category: 'Fintech',
@@ -234,11 +380,22 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     growthRate: '30% annual growth',
     variant: 'fintech',
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+>>>>>>> main
     realImplementation: true,
     implementationDetails: 'Production-ready AI insurance platform with advanced ML models and comprehensive underwriting capabilities.',
     launchDate: '2025-02-08',
@@ -266,12 +423,25 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       'Performance analytics'
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📋',
     color: 'from-gray-600 via-slate-600 to-zinc-600',
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/regtech-compliance-automation-platform',
     marketPosition: 'Leading RegTech platform with comprehensive compliance automation',
     targetAudience: 'Banks, Credit unions, Investment firms, Insurance companies, Fintech companies',
+=======
+    icon:,
+  📋',
+    color: 'from-gray-600 via-slate-600 to-zinc-600,
+    textColor:,
+  text-gray-400',
+    link: 'http,
+    s://ziontechgroup.com/regtech-compliance-automation-platform,
+    marketPosition:,
+  Leading RegTech platform with comprehensive compliance automation',
+    targetAudience: Banks, Credit unions, Investment firms, Insurance companies, Fintech companies',
+>>>>>>> main
     trialDays: 14,
     setupTime: '7-10 days',
     category: 'Fintech',
@@ -285,11 +455,22 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     growthRate: '40% annual growth',
     variant: 'fintech',
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+>>>>>>> main
     realImplementation: true,
     implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
     launchDate: '2025-02-12',

@@ -1,10 +1,17 @@
 import React, { useState } from;
+<<<<<<< HEAD
   'react' from '; import { Link } from 'react-router-dom;
   ' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react;
-  ' import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025'';' import { EMERGING_TECH_SERVICES_2025 } from '@/data/emergingTechServices2025;
+  ' import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025''; import { EMERGING_TECH_SERVICES_2025 } from '@/data/emergingTechServices2025;
   '  export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any {} const [searchQuery, setSearchQuery] = useState(,
+  ') const [selectedCategory, setSelectedCategory] = useState('
+  'all')  const categories: any = [] { i,
+    d:;
+=======
+  'react' from '; import { Link }  from 'react-router-dom; import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users }  from 'lucide-react; import { ADVANCED_INNOVATIVE_SERVICES_2025 }  from '@/data/advancedInnovativeServices2025;' import { EMERGING_TECH_SERVICES_2025 }  from '@/data/emergingTechServices2025;  export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any {} const [searchQuery, setSearchQuery] = useState(,
   ') const [selectedCategory, setSelectedCategory] = useState(
   'all')  const categories: any = [] { id:;
+>>>>>>> main
   'all, name:;
   'All Services', icon: Zap, color:,
   from-blue-500 to-cyan-500' }, { id: 'ai, name:;
@@ -23,6 +30,10 @@ import React, { useState } from;
   'Finance', icon: DollarSign, color:,
   from-green-500 to-blue-500' }, { id: 'manufacturing, name:;
   'Manufacturing', icon: Server, color:,
-  from-blue-500 to-purple-500' }, { id: 'sustainability, name:
+  from-blue-500 to-purple-500' }, { id: 'sustainability, name:'
   'Sustainability', icon: Globe, color:;
-  'from-orange-500 to-green-500' } ] ';';
+<<<<<<< HEAD
+  'from-orange-500 to-green-500' } ] ';;
+=======
+  'from-orange-500 to-green-500' } ] ;
+>>>>>>> main

@@ -9,9 +9,12 @@ export interface ComprehensiveItSolution {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-   email: string;
-   address: string}export const comprehensiveITSolutions: ComprehensiveItSolution[] = [{
-    id: 'full-stack-development',
+   emai,
+    l: string;
+   addres,
+    s: string}export const comprehensiveITSolutions: ComprehensiveItSolution[] = [{
+    i,
+    d: 'full-stack-development',
     name: 'Full-Stack Development Services',
     tagline: 'End-to-end web application development',
     price: '$80/hour',
@@ -26,8 +29,9 @@ export interface ComprehensiveItSolution {
     link: '/services/full-stack-development',
     category: 'IT Solutions',
     realImplementation: true,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}
