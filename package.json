@@ -2,6 +2,7 @@
   "name": "ziontechgroup.com",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "packageManager": "yarn@1.22.22",
   "scripts": {
     "dev": "next dev",
@@ -100,7 +101,6 @@
     "linting:status": "npm run linting:orchestrator status",
     "linting:check": "npm run linting:orchestrator check",
     "linting:fix": "npm run linting:orchestrator fix",
-
     "linkedin:cron": "ts-node scripts/linkedin-automation.ts cron",
     "linkedin:generate": "ts-node scripts/linkedin-automation.ts generate",
     "linkedin:start": "npm run linkedin:cron",
@@ -166,7 +166,6 @@
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
-
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -214,7 +213,6 @@
     "cron-parser": "^5.3.0",
     "events": "^3.3.0",
     "framer-motion": "^10.16.16",
-
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
@@ -228,9 +226,9 @@
     "postcss": "^8.4.32",
     "postcss-preset-env": "^10.3.1",
     "prettier": "^3.0.3",
-    "react": "^17.0.2",
+    "react": "^18.3.1",
     "react-datepicker": "^8.4.0",
-    "react-dom": "^17.0.2",
+    "react-dom": "^18.3.1",
     "react-error-boundary": "^6.0.0",
     "react-helmet-async": "^2.0.5",
     "tailwind-merge": "^3.3.1",
@@ -238,7 +236,6 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "4.9.5",
     "uuid": "^11.1.0"
-
   },
   "devDependencies": {
     "@babel/plugin-transform-class-properties": "^7.27.1",
