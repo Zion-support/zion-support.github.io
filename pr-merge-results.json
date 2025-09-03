@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-09-03T03:07:03.190Z",
+  "merged": [],
+  "failed": [
+    {
+      "number": 11155,
+      "title": "Website audit, content update, and deployment",
+      "error": "Command failed: gh pr merge 11155 --merge --delete-branch\nX Pull request Zion-Holdings/zion.app#11155 is not mergeable: the merge commit cannot be cleanly created.\nTo have the pull request merged after all the requirements have been met, add the `--auto` flag.\nRun the following to resolve the merge conflicts locally:\n  gh pr checkout 11155 && git fetch origin main && git merge origin/main\n"
+    },
+    {
+      "number": 11154,
+      "title": "Enhance ziontechgroup website with new services and improvements",
+      "error": "Command failed: git checkout --theirs .\nerror: path 'src/components/layout/SimpleFooter.tsx' does not have their version\n"
+    },
+    {
+      "number": 11153,
+      "title": "Fix syntax, push, and merge to main",
+      "error": "Command failed: gh pr merge 11153 --merge --delete-branch\nX Pull request Zion-Holdings/zion.app#11153 is not mergeable: the merge commit cannot be cleanly created.\nTo have the pull request merged after all the requirements have been met, add the `--auto` flag.\nRun the following to resolve the merge conflicts locally:\n  gh pr checkout 11153 && git fetch origin main && git merge origin/main\n"
+    },
+    {
+      "number": 11152,
+      "title": "Automate, test, fix, improve, and merge code",
+      "error": "Command failed: git checkout --theirs .\nerror: path 'package-lock.json' does not have their version\n"
+    },
+    {
+      "number": 11151,
+      "title": "Enhance ziontechgroup website with new services and improvements",
+      "error": "Command failed: git checkout --theirs .\nerror: path 'pages/services-overview.tsx' does not have their version\n"
+    },
+    {
+      "number": 11150,
+      "title": "Fix syntax, push, and merge to main",
+      "error": "Command failed: gh pr merge 11150 --merge --delete-branch\nX Pull request Zion-Holdings/zion.app#11150 is not mergeable: the merge commit cannot be cleanly created.\nTo have the pull request merged after all the requirements have been met, add the `--auto` flag.\nRun the following to resolve the merge conflicts locally:\n  gh pr checkout 11150 && git fetch origin main && git merge origin/main\n"
+    },
+    {
+      "number": 11149,
+      "title": "Website audit, content update, and deployment",
+      "error": "Command failed: gh pr merge 11149 --merge --delete-branch\nX Pull request Zion-Holdings/zion.app#11149 is not mergeable: the merge commit cannot be cleanly created.\nTo have the pull request merged after all the requirements have been met, add the `--auto` flag.\nRun the following to resolve the merge conflicts locally:\n  gh pr checkout 11149 && git fetch origin main && git merge origin/main\n"
+    },
+    {
+      "number": 11148,
+      "title": "Automate, test, fix, improve, and merge code",
+      "error": "Command failed: git checkout --theirs .\nerror: path 'package-lock.json' does not have their version\nerror: path 'yarn.lock' does not have their version\n"
+    },
+    {
+      "number": 11147,
+      "title": "Automate, test, fix, improve, and merge code",
+      "error": "Command failed: git checkout --theirs .\nerror: path '.next/cache/webpack/server-production/index.pack' does not have their version\nerror: path '.next/server/pages-manifest.json' does not have their version\nerror: path '.next/server/pages/_document.js.nft.json' does not have their version\nerror: path '.next/server/pages/_error.js.nft.json' does not have their version\nerror: path '.next/server/pages/index.js.nft.json' does not have their version\nerror: path '.next/trace' does not have their version\nerror: path 'package-lock.json' does not have their version\nerror: path 'tsconfig.tsbuildinfo' does not have their version\nerror: path 'yarn.lock' does not have their version\n"
+    },
+    {
+      "number": 11146,
+      "title": "Enhance ziontechgroup website with new services and improvements",
+      "error": "Command failed: git checkout --theirs .\nerror: path '.next/trace' does not have their version\nerror: path 'package-lock.json' does not have their version\nerror: path 'pages/index.tsx.backup' does not have their version\nerror: path 'yarn.lock' does not have their version\n"
+    },
+    {
+      "number": 11145,
+      "title": "Analyze, improve, and deploy application",
+      "error": "Command failed: git checkout --theirs .\nerror: path '.next/cache/webpack/server-production/index.pack' does not have their version\nerror: path '.next/routes-manifest.json' does not have their version\nerror: path '.next/server/pages-manifest.json' does not have their version\nerror: path '.next/server/pages/_document.js.nft.json' does not have their version\nerror: path '.next/server/pages/_error.js.nft.json' does not have their version\nerror: path '.next/server/pages/index.js.nft.json' does not have their version\nerror: path '.next/trace' does not have their version\nerror: path 'package-lock.json' does not have their version\nerror: path 'tsconfig.tsbuildinfo' does not have their version\nerror: path 'yarn.lock' does not have their version\n"
+    },
+    {
+      "number": 11144,
+      "title": "Website audit, content update, and deployment",
+      "error": "Command failed: git checkout --theirs .\nerror: path '.next/trace' does not have their version\nerror: path 'package-lock.json' does not have their version\nerror: path 'yarn.lock' does not have their version\n"
+    },
+    {
+      "number": 11142,
+      "title": "Automate, test, fix, improve, and merge code",
+      "error": "Command failed: git checkout --theirs .\nerror: path 'package-lock.json' does not have their version\nerror: path 'tsconfig.tsbuildinfo' does not have their version\nerror: path 'yarn.lock' does not have their version\n"
+    },
+    {
+      "number": 11141,
+      "title": "Enhance ziontechgroup website with new services and improvements",
+      "error": "Command failed: git checkout --theirs .\nerror: path 'pages/services-overview.tsx.disabled' does not have their version\n"
+    },
+    {
+      "number": 11140,
+      "title": "Add new services and advertise them",
+      "error": "Command failed: gh pr merge 11140 --merge --delete-branch\nX Pull request Zion-Holdings/zion.app#11140 is not mergeable: the merge commit cannot be cleanly created.\nTo have the pull request merged after all the requirements have been met, add the `--auto` flag.\nRun the following to resolve the merge conflicts locally:\n  gh pr checkout 11140 && git fetch origin main && git merge origin/main\n"
+    },
+    {
+      "number": 11139,
+      "title": "Fix syntax, push, and merge to main",
+      "error": "Command failed: gh pr merge 11139 --merge --delete-branch\nX Pull request Zion-Holdings/zion.app#11139 is not mergeable: the merge commit cannot be cleanly created.\nTo have the pull request merged after all the requirements have been met, add the `--auto` flag.\nRun the following to resolve the merge conflicts locally:\n  gh pr checkout 11139 && git fetch origin main && git merge origin/main\n"
+    },
+    {
+      "number": 11138,
+      "title": "Fix lint, push, and merge to main",
+      "error": "Command failed: gh pr merge 11138 --merge --delete-branch\nX Pull request Zion-Holdings/zion.app#11138 is not mergeable: the merge commit cannot be cleanly created.\nTo have the pull request merged after all the requirements have been met, add the `--auto` flag.\nRun the following to resolve the merge conflicts locally:\n  gh pr checkout 11138 && git fetch origin main && git merge origin/main\n"
+    },
+    {
+      "number": 11137,
+      "title": "Fix syntax, push, and merge to main",
+      "error": "Command failed: gh pr merge 11137 --merge --delete-branch\nX Pull request Zion-Holdings/zion.app#11137 is not mergeable: the merge commit cannot be cleanly created.\nTo have the pull request merged after all the requirements have been met, add the `--auto` flag.\nRun the following to resolve the merge conflicts locally:\n  gh pr checkout 11137 && git fetch origin main && git merge origin/main\n"
+    },
+    {
+      "number": 11136,
+      "title": "Analyze, improve, and deploy application",
+      "error": "Command failed: gh pr merge 11136 --merge --delete-branch\nX Pull request Zion-Holdings/zion.app#11136 is not mergeable: the merge commit cannot be cleanly created.\nTo have the pull request merged after all the requirements have been met, add the `--auto` flag.\nRun the following to resolve the merge conflicts locally:\n  gh pr checkout 11136 && git fetch origin main && git merge origin/main\n"
+    },
+    {
+      "number": 11135,
+      "title": "Website audit, content update, and deployment",
+      "error": "Command failed: gh pr merge 11135 --merge --delete-branch\nX Pull request Zion-Holdings/zion.app#11135 is not mergeable: the merge commit cannot be cleanly created.\nTo have the pull request merged after all the requirements have been met, add the `--auto` flag.\nRun the following to resolve the merge conflicts locally:\n  gh pr checkout 11135 && git fetch origin main && git merge origin/main\n"
+    }
+  ],
+  "summary": {
+    "total": 50,
+    "merged": 0,
+    "failed": 20
+  }
+}

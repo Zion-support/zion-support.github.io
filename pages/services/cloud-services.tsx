@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { Cloud, Server, Shield, Zap, CheckCircle, ArrowRight, Database, Globe, Lock, TrendingUp } from 'lucide-react';
@@ -218,3 +219,15 @@ const CloudServices: NextPage = () => {
 };
 
 export default CloudServices;
+=======
+
+export default function CloudServices() {
+  return (
+    <main className="max-w-4xl mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold mb-4">Cloud Services</h1>
+      <p className="text-gray-700">Architecture, migration, and SRE.</p>
+    </main>
+  );
+}
+
+>>>>>>> main

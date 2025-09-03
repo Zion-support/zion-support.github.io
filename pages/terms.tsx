@@ -1,12 +1,17 @@
 import React from 'react';
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { FileText, Scale, AlertTriangle, Shield, Users, Gavel } from 'lucide-react';
 
 const Terms: NextPage = () => {
   const lastUpdated = "January 1, 2025";
+=======
+>>>>>>> main
 
+export default function TermsPage() {
   return (
+<<<<<<< HEAD
     <MainLayout
       title="Terms of Service - Zion Tech Group"
       description="Read Zion Tech Group's Terms of Service. Our comprehensive terms outline the rules and regulations for using our website and services."
@@ -228,7 +233,12 @@ const Terms: NextPage = () => {
         </div>
       </div>
     </MainLayout>
+=======
+    <main className="max-w-4xl mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold mb-4">Terms of Service</h1>
+      <p className="text-gray-700">These are sample terms for demonstration.</p>
+    </main>
+>>>>>>> main
   );
-};
+}
 
-export default Terms;

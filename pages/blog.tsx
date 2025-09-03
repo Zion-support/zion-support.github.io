@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Calendar, User, ArrowRight, Search, Tag, Clock } from 'lucide-react';
@@ -86,8 +87,12 @@ const Blog: NextPage = () => {
 
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
+=======
+>>>>>>> main
 
+export default function BlogPage() {
   return (
+<<<<<<< HEAD
     <MainLayout
       title="Blog - Zion Tech Group"
       description="Stay updated with the latest insights on technology, AI, cloud computing, cybersecurity, and digital transformation from Zion Tech Group experts."
@@ -283,7 +288,12 @@ const Blog: NextPage = () => {
         </div>
       </div>
     </MainLayout>
+=======
+    <main className="max-w-4xl mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold mb-4">Blog</h1>
+      <p className="text-gray-700">Insights and updates coming soon.</p>
+    </main>
+>>>>>>> main
   );
-};
+}
 
-export default Blog;

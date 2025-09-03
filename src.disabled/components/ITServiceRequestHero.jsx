@@ -1,1 +1,2 @@
-" export function ITServiceRequestHero() { ";""""
+" export: function ITServiceRequestHero () { "";""";";
+" export function ITServiceRequestHero () { "";'";"

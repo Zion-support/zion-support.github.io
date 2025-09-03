@@ -1,12 +1,17 @@
 import React from 'react';
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Shield, Eye, Lock, Database, UserCheck, FileText } from 'lucide-react';
 
 const Privacy: NextPage = () => {
   const lastUpdated = "January 1, 2025";
+=======
+>>>>>>> main
 
+export default function PrivacyPolicyPage() {
   return (
+<<<<<<< HEAD
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Learn how Zion Tech Group protects your privacy and handles your personal information. Our comprehensive privacy policy outlines our data collection, usage, and protection practices."
@@ -219,7 +224,12 @@ const Privacy: NextPage = () => {
         </div>
       </div>
     </MainLayout>
+=======
+    <main className="max-w-4xl mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
+      <p className="text-gray-700">Your privacy matters. This is a placeholder policy.</p>
+    </main>
+>>>>>>> main
   );
-};
+}
 
-export default Privacy;

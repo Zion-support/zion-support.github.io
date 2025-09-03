@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { Brain, Zap, Target, CheckCircle, ArrowRight, Code, Database, Cpu, Eye, TrendingUp } from 'lucide-react';
@@ -222,3 +223,15 @@ const AIDevelopment: NextPage = () => {
 };
 
 export default AIDevelopment;
+=======
+
+export default function AIDevelopment() {
+  return (
+    <main className="max-w-4xl mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold mb-4">AI Development</h1>
+      <p className="text-gray-700">Custom AI solutions for enterprises.</p>
+    </main>
+  );
+}
+
+>>>>>>> main
