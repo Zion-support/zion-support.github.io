@@ -1,34 +1,21 @@
 {
-  "timestamp": "2025-09-03T05:20:46.733Z",
-  "duration": "22346ms",
-  "results": {
-    "syntaxFixes": 1746,
-    "buildSuccess": false,
-    "testsPassed": 0,
-    "optimizations": 1,
-    "errors": [
-      {
-        "command": "npm run lint:fix",
-        "description": "Linting",
-        "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
-      },
-      {
-        "command": "npm run build",
-        "description": "Build",
-        "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ Invalid next.config.js options detected: \n ⚠     Unrecognized key(s) in object: 'optimizePackageImports' at \"compiler\"\n ⚠     Unrecognized key(s) in object: 'ignoreDuringBuilds' at \"typescript\"\n ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config\nFailed to compile.\n\n./pages/NotFound.tsx\nError: \n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/NotFound.tsx\u001b[0m:4:1]\n \u001b[2m 4\u001b[0m | \n \u001b[2m 5\u001b[0m | export default function NotFound() {\n \u001b[2m 6\u001b[0m |   return (\n \u001b[2m 7\u001b[0m |     <>\n    : \u001b[31;1m     ^\u001b[0m\n \u001b[2m 8\u001b[0m |       <Head>\n \u001b[2m 9\u001b[0m |         <title>Page Not Found - Zion Tech Group</title>\n \u001b[2m10\u001b[0m |         <meta name=\"description\" content=\"The page you\"re looking for doesn\"t exist.\"  />\n    `----\n\n  \u001b[31mx\u001b[0m Unexpected token `string literal (t exist., \"t exist.\")`. Expected jsx identifier\n    ,-[\u001b[36;1;4m/workspace/pages/NotFound.tsx\u001b[0m:7:1]\n \u001b[2m 7\u001b[0m |     <>\n \u001b[2m 8\u001b[0m |       <Head>\n \u001b[2m 9\u001b[0m |         <title>Page Not Found - Zion Tech Group</title>\n \u001b[2m10\u001b[0m |         <meta name=\"description\" content=\"The page you\"re looking for doesn\"t exist.\"  />\n    : \u001b[31;1m                                                                           ^^^^^^^^^^\u001b[0m\n \u001b[2m11\u001b[0m |       </Head>\n \u001b[2m12\u001b[0m |       <div className=\"min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center px-4\">\n \u001b[2m13\u001b[0m |         <div className=\"max-w-md w-full text-center\">\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/NotFound.tsx\n\n./pages/_document.tsx\nError: \n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/_document.tsx\u001b[0m:16:1]\n \u001b[2m16\u001b[0m |     </Html>\n \u001b[2m17\u001b[0m |   )\n \u001b[2m18\u001b[0m | }\n \u001b[2m19\u001b[0m | }\n    : \u001b[31;1m^\u001b[0m\n    `----\n\nCaused by:\n    Syntax Error\n\n./pages/about.tsx\nError: \n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/about.tsx\u001b[0m:4:1]\n \u001b[2m 4\u001b[0m | import Link from \"next/link\"\n \u001b[2m 5\u001b[0m | import { Users, Award, Target, CheckCircle, ArrowRight, Globe, Heart, Zap } from \"lucide-react\"\n \u001b[2m 6\u001b[0m | const Layout = dynamic(() => import(\"../components/Layout\"), { ssr: false })\n \u001b[2m 7\u001b[0m | }\n    : \u001b[31;1m^\u001b[0m\n \u001b[2m 8\u001b[0m | const About: NextPage = () => {\n \u001b[2m 9\u001b[0m |   return (\n \u001b[2m10\u001b[0m |     <Layout title=\"About Us - Zion Tech Group\"\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/about.tsx\n\n./pages/ai-services.tsx\nError: \n  \u001b[31mx\u001b[0m Expression expected\n     ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:168:1]\n \u001b[2m168\u001b[0m |     </>\n \u001b[2m169\u001b[0m |   )\n \u001b[2m170\u001b[0m | }\n \u001b[2m171\u001b[0m | }\n     : \u001b[31;1m^\u001b[0m\n     `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/ai-services.tsx\n\n./pages/blockchain-solutions.tsx\nError: \n  \u001b[31mx\u001b[0m Expression expected\n   ,-[\u001b[36;1;4m/workspace/pages/blockchain-solutions.tsx\u001b[0m:3:1]\n \u001b[2m3\u001b[0m | import dynamic from \"next/dynamic\"\n \u001b[2m4\u001b[0m | const Component = () => {\n \u001b[2m5\u001b[0m |   return (\n \u001b[2m6\u001b[0m |     <>\n   : \u001b[31;1m     ^\u001b[0m\n \u001b[2m7\u001b[0m | <Head>\n \u001b[2m8\u001b[0m |         <title>Blockchain Solutions - Zion Tech Group</title>\n \u001b[2m9\u001b[0m |         <meta name=\"description\" content=\"Comprehensive blockchain solutions including smart contracts, DeFi, NFTs, and cross-chain integration services.\"  />\n   `----\n\n  \u001b[31mx\u001b[0m Unterminated string constant\n    ,-[\u001b[36;1;4m/workspace/pages/blockchain-solutions.tsx\u001b[0m:9:1]\n \u001b[2m 9\u001b[0m |         <meta name=\"description\" content=\"Comprehensive blockchain solutions including smart contracts, DeFi, NFTs, and cross-chain integration services.\"  />\n \u001b[2m10\u001b[0m |         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"  />\n \u001b[2m11\u001b[0m |       </Head>\n \u001b[2m12\u001b[0m |       \"\n    : \u001b[31;1m      ^\u001b[0m\n \u001b[2m13\u001b[0m | <Layout title = \"Blockchain Solutions\"\"\n \u001b[2m14\u001b[0m |         description=\"Transform your business with cutting-edge blockchain technology and decentralized solutions\"\n \u001b[2m15\u001b[0m |       >\n    `----\n\n  \u001b[31mx\u001b[0m Expected ',', got 'string literal (, \"\n  \u001b[31m|\u001b[0m )'\n    ,-[\u001b[36;1;4m/workspace/pages/blockchain-solutions.tsx\u001b[0m:9:1]\n \u001b[2m 9\u001b[0m |         <meta name=\"description\" content=\"Comprehensive blockchain solutions including smart contracts, DeFi, NFTs, and cross-chain integration services.\"  />\n \u001b[2m10\u001b[0m |         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"  />\n \u001b[2m11\u001b[0m |       </Head>\n \u001b[2m12\u001b[0m |       \"\n    : \u001b[31;1m      ^\u001b[0m\n \u001b[2m13\u001b[0m | <Layout title = \"Blockchain Solutions\"\"\n \u001b[2m14\u001b[0m |         description=\"Transform your business with cutting-edge blockchain technology and decentralized solutions\"\n \u001b[2m15\u001b[0m |       >\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/blockchain-solutions.tsx\n\n\n> Build failed because of webpack errors\n"
-      },
-      {
-        "command": "npm test",
-        "description": "Tests",
-        "error": "Command failed: npm test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"
-      }
-    ]
-  },
   "summary": {
-    "totalFilesFixed": 1746,
-    "buildSuccess": false,
-    "testsPassed": 0,
-    "optimizations": 1,
-    "totalErrors": 3
-  }
+    "totalDuration": "39 seconds",
+    "prsProcessed": 1,
+    "conflictsResolved": 0,
+    "improvementsMade": 1,
+    "testsRun": 0,
+    "deployments": 0,
+    "totalErrors": 0
+  },
+  "results": {
+    "prsProcessed": 1,
+    "conflictsResolved": 0,
+    "improvementsMade": 1,
+    "testsRun": 0,
+    "deployments": 0,
+    "errors": []
+  },
+  "timestamp": "2025-09-03T05:49:15.135Z",
+  "status": "SUCCESS"
 }
