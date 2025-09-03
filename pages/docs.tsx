@@ -1,486 +1,348 @@
 import React from 'react';
+import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
-<<<<<<< HEAD
-import Navigation from '../components/layout/EnhancedNavigation';
-import Footer from '../components/layout/Footer';
-import { ArrowRight, Book, Code, FileText, HelpCircle, Search, Settings, Users } from 'lucide-react';
-=======
+import Layout from '../components/Layout';
 import {
   BookOpen,
-  Search,
-  FileText,
   Code,
-  Database,
-  Cloud,
-  Shield,
-  Users,
+  Search,
   ArrowRight,
-  Download,
+  CheckCircle,
   ExternalLink,
-  Clock,
+  FileText,
+  Zap,
+  Globe,
+  Database,
+  Shield,
+  Users
 } from 'lucide-react';
->>>>>>> main
 
-export default function Documentation() {
-  const docCategories = [
-  {
+const Docs: NextPage = () => {
+  const quickStart = [
+    {
+      step: 1,
+      title: 'Get Your API Key',
+      description: 'Sign up for a free account and get your API key',
+      icon: Shield
+    },
+    {
+      step: 2,
+      title: 'Install SDK',
+      description: 'Install our SDK in your preferred language',
+      icon: Code
+    },
+    {
+      step: 3,
+      title: 'Make Your First Request',
+      description: 'Start building with our comprehensive API',
+      icon: Zap
+    }
+  ];
+
+  const sections = [
+    {
       title: 'Getting Started',
-      description: 'Quick start guides and setup instructions',
+      description: 'Learn the basics and get up and running quickly',
       icon: BookOpen,
-      docs: [
-        {
-          title: 'Quick Start Guide',
-          description: 'Get up and running in minutes',
-          time: '5 min read',
-        },
-        {
-          title: 'Installation Guide',
-          description: 'Step-by-step installation instructions',
-          time: '10 min read',
-        },
-        {
-          title: 'Configuration',
-          description: 'Configure your environment',
-          time: '15 min read',
-        },
-        {
-          title: 'First Project',
-          description: 'Create your first project',
-          time: '20 min read',
-        },
-      ],
+      items: [
+        'Quick Start Guide',
+        'Authentication',
+        'API Overview',
+        'Rate Limits'
+      ]
     },
     {
       title: 'API Reference',
-      description: 'Complete API documentation and endpoints',
+      description: 'Complete API documentation with examples',
       icon: Code,
-      docs: [
-        {
-          title: 'Authentication',
-          description: 'API authentication and security',
-          time: '8 min read',
-        },
-        {
-          title: 'Endpoints',
-          description: 'All available API endpoints',
-          time: '25 min read',
-        },
-        {
-          title: 'Rate Limits',
-          description: 'API rate limiting and quotas',
-          time: '5 min read',
-        },
-        {
-          title: 'Error Codes',
-          description: 'Common error codes and solutions',
-          time: '10 min read',
-        },
-      ],
-    },
-    {
-      title: 'AI Services',
-      description: 'AI and machine learning service documentation',
-      icon: Database,
-      docs: [
-        {
-          title: 'AI Models',
-          description: 'Available AI models and capabilities',
-          time: '15 min read',
-        },
-        {
-          title: 'Training Data',
-          description: 'Data preparation and training',
-          time: '20 min read',
-        },
-        {
-          title: 'Model Deployment',
-          description: 'Deploy and manage AI models',
-          time: '12 min read',
-        },
-        {
-          title: 'Performance Tuning',
-          description: 'Optimize model performance',
-          time: '18 min read',
-        },
-      ],
-    },
-    {
-      title: 'Cloud Services',
-      description: 'Cloud infrastructure and deployment guides',
-      icon: Cloud,
-      docs: [
-        {
-          title: 'Cloud Setup',
-          description: 'Configure cloud environments',
-          time: '15 min read',
-        },
-        {
-          title: 'Deployment',
-          description: 'Deploy applications to cloud',
-          time: '20 min read',
-        },
-        {
-          title: 'Scaling',
-          description: 'Scale your applications',
-          time: '12 min read',
-        },
-        {
-          title: 'Monitoring',
-          description: 'Monitor cloud resources',
-          time: '10 min read',
-        },
-      ],
-    },
-    {
-      title: 'Security',
-      description: 'Security best practices and guidelines',
-      icon: Shield,
-      docs: [
-        {
-          title: 'Security Overview',
-          description: 'Security architecture and principles',
-          time: '12 min read',
-        },
-        {
-          title: 'Authentication',
-          description: 'User authentication and authorization',
-          time: '15 min read',
-        },
-        {
-          title: 'Data Protection',
-          description: 'Protect sensitive data',
-          time: '18 min read',
-        },
-        {
-          title: 'Compliance',
-          description: 'Meet compliance requirements',
-          time: '20 min read',
-        },
-      ],
-    },
-    {
-      title: 'Support',
-      description: 'Help and support resources',
-      icon: Users,
-      docs: [
-        {
-          title: 'FAQ',
-          description: 'Frequently asked questions',
-          time: '10 min read',
-        },
-        {
-          title: 'Troubleshooting',
-          description: 'Common issues and solutions',
-          time: '15 min read',
-        },
-        {
-          title: 'Contact Support',
-          description: 'Get help from our team',
-          time: '5 min read',
-        },
-        {
-          title: 'Community',
-          description: 'Join our developer community',
-          time: '8 min read',
-        },
-      ],
-    },
-  ];
-
-  const popularDocs = [
-  {
-      title: 'Quick Start Guide',
-      description: 'Get started with Zion Tech Group services in minutes',
-      category: 'Getting Started',
-      views: '12.5k',
-      rating: 4.9,
-    },
-    {
-      title: 'API Authentication',
-      description: 'Learn how to authenticate with our APIs',
-      category: 'API Reference',
-      views: '8.2k',
-      rating: 4.8,
-    },
-    {
-      title: 'AI Model Training',
-      description: 'Train custom AI models for your use case',
-      category: 'AI Services',
-      views: '6.7k',
-      rating: 4.9,
-    },
-    {
-      title: 'Cloud Deployment',
-      description: 'Deploy your applications to the cloud',
-      category: 'Cloud Services',
-      views: '5.9k',
-      rating: 4.7,
-    },
-  ];
-
-  const resources = [
-  {
-      title: 'SDK Downloads',
-      description: 'Download our SDKs for popular programming languages',
-      icon: Download,
-<<<<<<< HEAD
-      items: ['Python SDK', 'JavaScript SDK', 'Java SDK', 'C# SDK'],
-=======
-      items: ['Python SDK,JavaScript SDK,Java SDK,C# SDK']
->>>>>>> main
-    },
-    {
-      title: 'Code Examples',
-      description: 'Ready-to-use code examples and snippets',
-      icon: Code,
-<<<<<<< HEAD
       items: [
-        'REST API Examples',
-        'Webhook Examples',
-        'Integration Examples',
-        'Best Practices',
-      ],
-=======
-      items: ['REST API Examples,Webhook Examples,Integration Examples,Best Practices']
->>>>>>> main
+        'Endpoints',
+        'Request/Response',
+        'Error Handling',
+        'SDKs'
+      ]
     },
     {
-      title: 'Video Tutorials',
-      description: 'Step-by-step video tutorials',
-      icon: ExternalLink,
-<<<<<<< HEAD
+      title: 'Guides',
+      description: 'Step-by-step tutorials and best practices',
+      icon: FileText,
       items: [
-        'Getting Started',
-        'Advanced Features',
-        'Troubleshooting',
-        'Case Studies',
-      ],
+        'Authentication',
+        'Data Processing',
+        'Webhooks',
+        'Security'
+      ]
     },
-=======
-      items: ['Getting Started,Advanced Features,Troubleshooting,Case Studies']
+    {
+      title: 'Advanced Features',
+      description: 'Advanced functionality and customization',
+      icon: Zap,
+      items: [
+        'Custom Models',
+        'Batch Processing',
+        'Real-time Updates',
+        'Analytics'
+      ]
     }
->>>>>>> main
+  ];
+
+  const languages = [
+    { name: 'JavaScript', icon: '🟨', popular: true },
+    { name: 'Python', icon: '🐍', popular: true },
+    { name: 'Java', icon: '☕', popular: false },
+    { name: 'PHP', icon: '🐘', popular: false },
+    { name: 'Go', icon: '🐹', popular: false },
+    { name: 'Ruby', icon: '💎', popular: false }
   ];
 
   return (
     <>
       <Head>
         <title>Documentation - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Comprehensive documentation for Zion Tech Group services. Get started with our APIs, AI services, and cloud solutions."
-        />
+        <meta name="description" content="Comprehensive documentation for Zion Tech Group APIs, SDKs, and services. Get started quickly with our guides and examples." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      
+      <Layout
+        title="Documentation"
+        description="Complete documentation for our APIs and services"
+      >
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
-            <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Documentation
-              </h1>
-              <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
-                Everything you need to get started with Zion Tech Group services
-                and APIs.
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Documentation</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Everything you need to integrate with our APIs and build amazing applications
+            </p>
+            <div className="max-w-2xl mx-auto">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search documentation..."
+                  className="w-full px-6 py-4 pl-12 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-300" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Quick Start */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Quick Start</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Get up and running in minutes with our simple 3-step process
               </p>
-              <div className="max-w-2xl mx-auto">
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search documentation..."
-                    className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {quickStart.map((step) => (
+                <div key={step.step} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 relative">
+                    <step.icon className="w-8 h-8 text-white" />
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                      {step.step}
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
+                  <p className="text-gray-600">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Documentation Sections */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Documentation Sections</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Comprehensive guides and references for all our services
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {sections.map((section, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                      <section.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900">{section.title}</h3>
+                      <p className="text-gray-600 text-sm">{section.description}</p>
+                    </div>
+                  </div>
+                  <ul className="space-y-2">
+                    {section.items.map((item, i) => (
+                      <li key={i} className="flex items-center text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <button className="mt-4 inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+                    Read More
+                    <ArrowRight className="ml-1 w-4 h-4" />
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SDK Languages */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">SDK Languages</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Official SDKs for popular programming languages
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {languages.map((lang, index) => (
+                <div key={index} className="bg-gray-50 rounded-lg p-6 text-center hover:bg-gray-100 transition-colors duration-300">
+                  <div className="text-4xl mb-3">{lang.icon}</div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{lang.name}</h3>
+                  {lang.popular && (
+                    <span className="inline-block px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
+                      Popular
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* API Examples */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">API Examples</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                See our APIs in action with real code examples
+              </p>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-gray-900 rounded-lg p-6 mb-8">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  </div>
+                  <span className="text-gray-400 text-sm">JavaScript</span>
+                </div>
+                <pre className="text-green-400 text-sm overflow-x-auto">
+                  <code>{`// Initialize the SDK
+import { ZionSDK } from '@zion/sdk';
+
+const zion = new ZionSDK({
+  apiKey: 'your-api-key',
+  environment: 'production'
+});
+
+// Make a request
+const result = await zion.ai.process({
+  text: 'Hello, world!',
+  model: 'gpt-4'
+});
+
+console.log(result);`}</code>
+                </pre>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white rounded-lg p-6 shadow-md">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Python Example</h3>
+                  <div className="bg-gray-100 rounded p-4">
+                    <pre className="text-sm text-gray-800">
+                      <code>{`from zion import SDK
+
+zion = SDK(api_key='your-api-key')
+
+result = zion.ai.process(
+    text="Hello, world!",
+    model="gpt-4"
+)
+
+print(result)`}</code>
+                    </pre>
+                  </div>
+                </div>
+                
+                <div className="bg-white rounded-lg p-6 shadow-md">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">cURL Example</h3>
+                  <div className="bg-gray-100 rounded p-4">
+                    <pre className="text-sm text-gray-800">
+                      <code>{`curl -X POST \\
+  https://api.ziontechgroup.com/v1/ai/process \\
+  -H "Authorization: Bearer your-api-key" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "text": "Hello, world!",
+    "model": "gpt-4"
+  }'`}</code>
+                    </pre>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Popular Documentation */}
-        <section className="py-20 sm:py-32">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Popular Documentation
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                Most viewed and highly rated documentation
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {popularDocs.map((doc, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl shadow-lg p-6 hover: shadow-xl transition-shadow"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        {doc.title}
-                      </h3>
-                      <p className="text-gray-600 mb-3">{doc.description}</p>
-                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
-                        {doc.category}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
-                      <div className="flex items-center">
-                        <Users className="w-4 h-4 mr-1" />
-                        {doc.views} views
-                      </div>
-                      <div className="flex items-center">
-                        <span className="text-yellow-400">★</span>
-                        {doc.rating}
-                      </div>
-                    </div>
-                    <Link
-                      href="#"
-                      className="text-blue-600 hover:text-blue-700 font-semibold flex items-center"
-                    >
-                      Read More
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Documentation Categories */}
+        {/* Support */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Documentation Categories
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                Browse documentation by category
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Need Help?</h2>
+              <p className="text-xl text-gray-600 mb-8">
+                Our support team is here to help you succeed
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {docCategories.map((category, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 rounded-xl p-6 hover: shadow-lg transition-shadow"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                    <category.icon className="w-6 h-6 text-white" />
+              <div className="grid md:grid-cols-3 gap-8 mb-12">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {category.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">{category.description}</p>
-                  <div className="space-y-2">
-                    {category.docs.map((doc, docIndex) => (
-                      <div
-                        key={docIndex}
-                        className="flex items-center justify-between p-2 hover: bg-white rounded-lg transition-colors"
-                      >
-                        <div className="flex-1">
-                          <h4 className="text-sm font-semibold text-gray-900">
-                            {doc.title}
-                          </h4>
-                          <p className="text-xs text-gray-600">
-                            {doc.description}
-                          </p>
-                        </div>
-                        <div className="flex items-center text-xs text-gray-500">
-                          <Clock className="w-3 h-3 mr-1" />
-                          {doc.time}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <Link
-                    href="#"
-                    className="text-blue-600 hover: text-blue-700 font-semibold flex items-center mt-4"
-                  >
-                    View All
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Community Support</h3>
+                  <p className="text-gray-600">Get help from our active developer community</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Resources */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Additional Resources
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                Tools and resources to help you succeed
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {resources.map((resource, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl shadow-lg p-6 text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <resource.icon className="w-8 h-8 text-white" />
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <FileText className="w-8 h-8 text-green-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {resource.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">{resource.description}</p>
-                  <ul className="space-y-2 text-left">
-                    {resource.items.map((item, itemIndex) => (
-                      <li
-                        key={itemIndex}
-                        className="flex items-center text-sm text-gray-700"
-                      >
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Documentation</h3>
+                  <p className="text-gray-600">Comprehensive guides and API references</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Need Help?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Can&apos;t find what you&apos;re looking for? Our support team is
-              here to help.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-              <Link href="/contact">
-                <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <ExternalLink className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Contact Support</h3>
+                  <p className="text-gray-600">Direct support from our technical team</p>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
+                  Join Community
+                  <Users className="ml-2 w-5 h-5" />
+                </button>
+                <button className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">
                   Contact Support
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                  <ExternalLink className="ml-2 w-5 h-5" />
                 </button>
-              </Link>
-              <Link href="/help">
-                <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                  Help Center
-                </button>
-              </Link>
+              </div>
             </div>
           </div>
         </section>
-      </main>
+      </Layout>
     </>
   );
-}
+};
+
+export default Docs;
