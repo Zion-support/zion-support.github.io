@@ -541,6 +541,86 @@ const microSaaS: Service[] = [
     name: 'Intelligent Customer Optimization Engine',
     summary: 'End-to-end customer optimization, lifecycle management, and value maximization.',
     pricing: 'Typical: $499–$2,499/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Voice Assistant Builder',
+    summary: 'Create custom voice assistants for businesses with natural language processing and multi-platform deployment.',
+    pricing: 'Typical: $499–$3,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'Blockchain Identity Verification',
+    summary: 'Decentralized identity verification system with privacy-preserving authentication and compliance.',
+    pricing: 'Typical: $299–$2,499/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Market Research Platform',
+    summary: 'Automated market research with sentiment analysis, competitor tracking, and trend prediction.',
+    pricing: 'Typical: $399–$2,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'Edge Computing Analytics Platform',
+    summary: 'Real-time data processing at the edge with low-latency analytics and IoT device management.',
+    pricing: 'Typical: $599–$4,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Learning Management System',
+    summary: 'Intelligent learning platform with personalized content, adaptive assessments, and skill tracking.',
+    pricing: 'Typical: $199–$1,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'Predictive Customer Support Platform',
+    summary: 'AI-driven customer support with issue prediction, proactive outreach, and automated resolution.',
+    pricing: 'Typical: $299–$2,499/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'Zero-Trust Security Framework',
+    summary: 'Comprehensive zero-trust security implementation with continuous verification and access control.',
+    pricing: 'Typical: $799–$5,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Content Moderation',
+    summary: 'Automated content moderation with context understanding, bias detection, and scalable enforcement.',
+    pricing: 'Typical: $199–$1,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'Smart Building Management System',
+    summary: 'IoT-powered building automation with energy optimization, occupancy tracking, and predictive maintenance.',
+    pricing: 'Typical: $499–$3,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Translation Management',
+    summary: 'Enterprise translation management with AI quality assurance, workflow automation, and cost optimization.',
+    pricing: 'Typical: $299–$2,499/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Employee Wellness Platform',
+    summary: 'Comprehensive employee wellness tracking with mental health monitoring, stress detection, and intervention recommendations.',
+    pricing: 'Typical: $199–$1,499/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'Real-Time Fraud Detection Engine',
+    summary: 'Advanced fraud detection with machine learning, behavioral analysis, and real-time transaction monitoring.',
+    pricing: 'Typical: $599–$4,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Data Privacy Manager',
+    summary: 'Automated data privacy compliance with GDPR, CCPA, and other regulations with consent management.',
+    pricing: 'Typical: $399–$2,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Code Generation Platform',
+    summary: 'Intelligent code generation with natural language input, testing, and deployment automation.',
+    pricing: 'Typical: $499–$3,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Supply Chain Optimizer',
+    summary: 'End-to-end supply chain optimization with demand forecasting, route optimization, and risk management.',
+    pricing: 'Typical: $799–$5,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Customer Journey Mapper',
+    summary: 'Intelligent customer journey analysis with touchpoint optimization and conversion prediction.',
+    pricing: 'Typical: $299–$2,499/month',
     link: 'https://ziontechgroup.com/micro-saas'}
 ];
 
@@ -984,6 +1064,66 @@ const aiServices: Service[] = [
     name: 'AI-Powered Advanced Intelligence Platform',
     summary: 'Comprehensive AI solutions, intelligent decision making, and strategic insights.',
     pricing: 'Typical: $75k–$500k project',
+    link: 'https://ziontechgroup.com/ai-services'},
+  {
+    name: 'AI-Powered Autonomous Vehicle Systems',
+    summary: 'Advanced AI systems for autonomous vehicle navigation, safety, and fleet management.',
+    pricing: 'Typical: $100k–$500k setup',
+    link: 'https://ziontechgroup.com/ai-services'},
+  {
+    name: 'AI-Powered Augmented Reality Solutions',
+    summary: 'Intelligent AR applications for training, maintenance, and customer experiences.',
+    pricing: 'Typical: $15k–$75k setup',
+    link: 'https://ziontechgroup.com/ai-services'},
+  {
+    name: 'AI-Powered Climate Change Analytics',
+    summary: 'Advanced climate modeling and environmental impact analysis using machine learning.',
+    pricing: 'Typical: $25k–$125k setup',
+    link: 'https://ziontechgroup.com/ai-services'},
+  {
+    name: 'AI-Powered Quantum Computing Applications',
+    summary: 'Quantum machine learning and optimization solutions for complex problem solving.',
+    pricing: 'Typical: $50k–$250k setup',
+    link: 'https://ziontechgroup.com/ai-services'},
+  {
+    name: 'AI-Powered Mental Health Support',
+    summary: 'Intelligent mental health monitoring, assessment, and intervention systems.',
+    pricing: 'Typical: $10k–$50k setup',
+    link: 'https://ziontechgroup.com/ai-services'},
+  {
+    name: 'AI-Powered Data Fabric Platform',
+    summary: 'Intelligent data integration and management across hybrid cloud environments.',
+    pricing: 'Typical: $20k–$100k setup',
+    link: 'https://ziontechgroup.com/ai-services'},
+  {
+    name: 'AI-Powered Drug Discovery Platform',
+    summary: 'Machine learning-driven pharmaceutical research and drug development acceleration.',
+    pricing: 'Typical: $100k–$500k setup',
+    link: 'https://ziontechgroup.com/ai-services'},
+  {
+    name: 'AI-Powered Space Technology Solutions',
+    summary: 'Advanced AI systems for satellite operations, space exploration, and Earth observation.',
+    pricing: 'Typical: $75k–$375k setup',
+    link: 'https://ziontechgroup.com/ai-services'},
+  {
+    name: 'AI-Powered Energy Grid Optimization',
+    summary: 'Intelligent energy grid management with predictive analytics and renewable integration.',
+    pricing: 'Typical: $30k–$150k setup',
+    link: 'https://ziontechgroup.com/ai-services'},
+  {
+    name: 'AI-Powered Agricultural Intelligence',
+    summary: 'Smart farming solutions with precision agriculture and crop optimization.',
+    pricing: 'Typical: $15k–$75k setup',
+    link: 'https://ziontechgroup.com/ai-services'},
+  {
+    name: 'AI-Powered Digital Twin Technology',
+    summary: 'Virtual replicas of physical systems with real-time monitoring and predictive analytics.',
+    pricing: 'Typical: $25k–$125k setup',
+    link: 'https://ziontechgroup.com/ai-services'},
+  {
+    name: 'AI-Powered Neuromorphic Computing',
+    summary: 'Brain-inspired computing systems for edge AI and real-time processing.',
+    pricing: 'Typical: $50k–$250k setup',
     link: 'https://ziontechgroup.com/ai-services'}
 ];
 
@@ -1477,6 +1617,71 @@ const itServices: Service[] = [
     name: 'Enterprise IT End-to-End Service Management',
     summary: 'Comprehensive IT service management, end-to-end optimization, and service excellence.',
     pricing: 'Typical: $75k–$500k project',
+    link: 'https://ziontechgroup.com/it-services'},
+  {
+    name: '5G Network Infrastructure & Optimization',
+    summary: 'Complete 5G network deployment, optimization, and management services for enterprises and carriers.',
+    pricing: 'Typical: $50k–$500k project',
+    link: 'https://ziontechgroup.com/it-services'},
+  {
+    name: 'Quantum Computing Infrastructure',
+    summary: 'Quantum computing system setup, optimization, and application development for complex problem solving.',
+    pricing: 'Typical: $100k–$1M project',
+    link: 'https://ziontechgroup.com/it-services'},
+  {
+    name: 'Zero-Trust Security Architecture',
+    summary: 'Comprehensive zero-trust security implementation with continuous verification and micro-segmentation.',
+    pricing: 'Typical: $25k–$200k project',
+    link: 'https://ziontechgroup.com/it-services'},
+  {
+    name: 'Multi-Cloud Orchestration Platform',
+    summary: 'Unified multi-cloud management with automated workload placement, cost optimization, and governance.',
+    pricing: 'Typical: $30k–$250k project',
+    link: 'https://ziontechgroup.com/it-services'},
+  {
+    name: 'Edge Computing Infrastructure',
+    summary: 'Distributed edge computing setup with real-time processing, IoT integration, and low-latency applications.',
+    pricing: 'Typical: $20k–$150k project',
+    link: 'https://ziontechgroup.com/it-services'},
+  {
+    name: 'Blockchain Infrastructure & DApps',
+    summary: 'Blockchain network setup, smart contract development, and decentralized application deployment.',
+    pricing: 'Typical: $40k–$300k project',
+    link: 'https://ziontechgroup.com/it-services'},
+  {
+    name: 'IoT Platform & Device Management',
+    summary: 'Comprehensive IoT platform setup with device management, data analytics, and automation.',
+    pricing: 'Typical: $25k–$200k project',
+    link: 'https://ziontechgroup.com/it-services'},
+  {
+    name: 'AI/ML Infrastructure & MLOps',
+    summary: 'Complete AI/ML infrastructure setup with model deployment, monitoring, and continuous learning pipelines.',
+    pricing: 'Typical: $35k–$250k project',
+    link: 'https://ziontechgroup.com/it-services'},
+  {
+    name: 'Serverless Architecture & FaaS',
+    summary: 'Serverless application architecture with Function-as-a-Service deployment and optimization.',
+    pricing: 'Typical: $15k–$100k project',
+    link: 'https://ziontechgroup.com/it-services'},
+  {
+    name: 'Data Mesh Architecture Implementation',
+    summary: 'Decentralized data architecture with domain-oriented data ownership and self-serve data infrastructure.',
+    pricing: 'Typical: $40k–$300k project',
+    link: 'https://ziontechgroup.com/it-services'},
+  {
+    name: 'Web3 Infrastructure & Metaverse Solutions',
+    summary: 'Web3 infrastructure setup with decentralized applications, NFT platforms, and metaverse integration.',
+    pricing: 'Typical: $50k–$400k project',
+    link: 'https://ziontechgroup.com/it-services'},
+  {
+    name: 'Post-Quantum Cryptography Implementation',
+    summary: 'Quantum-resistant cryptography implementation to protect against future quantum computing threats.',
+    pricing: 'Typical: $30k–$200k project',
+    link: 'https://ziontechgroup.com/it-services'},
+  {
+    name: 'Green IT & Sustainable Computing',
+    summary: 'Sustainable IT infrastructure with energy optimization, carbon footprint reduction, and green computing practices.',
+    pricing: 'Typical: $20k–$150k project',
     link: 'https://ziontechgroup.com/it-services'}
 ];
 

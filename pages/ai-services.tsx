@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search, Users } from 'lucide-react';
+import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search, Users, Globe } from 'lucide-react';
 
 export default function AIServices() {
   const contact = {
@@ -1021,6 +1021,270 @@ export default function AIServices() {
         'Increased user engagement and conversion',
         'Personalized user experiences',
         'Better content discovery and recommendations'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Autonomous Vehicle Systems',
+      description: 'Advanced AI systems for autonomous vehicle navigation, safety, and fleet management.',
+      features: [
+        'Real-time object detection and recognition',
+        'Path planning and navigation algorithms',
+        'Predictive maintenance and diagnostics',
+        'Fleet optimization and routing',
+        'Safety monitoring and incident prevention',
+        'Integration with smart city infrastructure'
+      ],
+      pricing: '$100,000 – $500,000 setup',
+      perUnit: '$0.10 – $1.00 per mile',
+      timeline: '24–48 weeks',
+      benefits: [
+        '99.9% safety improvement',
+        'Reduced transportation costs',
+        'Optimized fleet operations',
+        'Enhanced passenger experience'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Augmented Reality Solutions',
+      description: 'Intelligent AR applications for training, maintenance, and customer experiences.',
+      features: [
+        'Real-time object recognition and tracking',
+        'Interactive 3D content generation',
+        'Spatial mapping and navigation',
+        'Hand gesture and voice control',
+        'Multi-user collaboration features',
+        'Integration with IoT devices'
+      ],
+      pricing: '$15,000 – $75,000 setup',
+      perUnit: '$0.50 – $5.00 per session',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Enhanced training effectiveness',
+        'Reduced maintenance time',
+        'Improved customer engagement',
+        'Cost-effective remote assistance'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Climate Change Analytics',
+      description: 'Advanced climate modeling and environmental impact analysis using machine learning.',
+      features: [
+        'Climate pattern prediction and modeling',
+        'Environmental impact assessment',
+        'Carbon footprint tracking and optimization',
+        'Renewable energy optimization',
+        'Disaster prediction and preparedness',
+        'Sustainability reporting and compliance'
+      ],
+      pricing: '$25,000 – $125,000 setup',
+      perUnit: '$0.10 – $1.00 per analysis',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Accurate climate predictions',
+        'Reduced environmental impact',
+        'Cost savings through optimization',
+        'Improved sustainability metrics'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Quantum Computing Applications',
+      description: 'Quantum machine learning and optimization solutions for complex problem solving.',
+      features: [
+        'Quantum machine learning algorithms',
+        'Optimization problem solving',
+        'Cryptographic security enhancement',
+        'Drug discovery and molecular simulation',
+        'Financial modeling and risk analysis',
+        'Supply chain optimization'
+      ],
+      pricing: '$50,000 – $250,000 setup',
+      perUnit: '$1.00 – $10.00 per computation',
+      timeline: '20–40 weeks',
+      benefits: [
+        'Exponential computational speedup',
+        'Breakthrough problem-solving capabilities',
+        'Enhanced security and encryption',
+        'Revolutionary optimization results'
+      ]
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Mental Health Support',
+      description: 'Intelligent mental health monitoring, assessment, and intervention systems.',
+      features: [
+        'Emotional state detection and analysis',
+        'Personalized therapy recommendations',
+        'Crisis intervention and alert systems',
+        'Progress tracking and analytics',
+        'Integration with healthcare providers',
+        'Privacy-preserving data handling'
+      ],
+      pricing: '$10,000 – $50,000 setup',
+      perUnit: '$0.50 – $5.00 per session',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Improved mental health outcomes',
+        'Early intervention capabilities',
+        'Reduced healthcare costs',
+        'Accessible mental health support'
+      ]
+    },
+    {
+      icon: Database,
+      name: 'AI-Powered Data Fabric Platform',
+      description: 'Intelligent data integration and management across hybrid cloud environments.',
+      features: [
+        'Automated data discovery and cataloging',
+        'Real-time data integration and synchronization',
+        'Data quality assessment and improvement',
+        'Privacy-preserving data sharing',
+        'Automated data governance',
+        'Cross-platform data analytics'
+      ],
+      pricing: '$20,000 – $100,000 setup',
+      perUnit: '$0.01 – $0.10 per GB',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Unified data access and management',
+        'Improved data quality and consistency',
+        'Reduced data silos',
+        'Enhanced analytics capabilities'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Drug Discovery Platform',
+      description: 'Machine learning-driven pharmaceutical research and drug development acceleration.',
+      features: [
+        'Molecular structure analysis and design',
+        'Drug-target interaction prediction',
+        'Clinical trial optimization',
+        'Adverse effect prediction',
+        'Drug repurposing identification',
+        'Regulatory compliance assistance'
+      ],
+      pricing: '$100,000 – $500,000 setup',
+      perUnit: '$1.00 – $10.00 per compound',
+      timeline: '24–48 weeks',
+      benefits: [
+        'Faster drug development cycles',
+        'Reduced research and development costs',
+        'Improved success rates',
+        'Enhanced patient safety'
+      ]
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Space Technology Solutions',
+      description: 'Advanced AI systems for satellite operations, space exploration, and Earth observation.',
+      features: [
+        'Satellite constellation management',
+        'Earth observation data analysis',
+        'Space debris tracking and avoidance',
+        'Mission planning and optimization',
+        'Autonomous spacecraft operations',
+        'Real-time space weather monitoring'
+      ],
+      pricing: '$75,000 – $375,000 setup',
+      perUnit: '$0.50 – $5.00 per observation',
+      timeline: '20–40 weeks',
+      benefits: [
+        'Enhanced space mission success',
+        'Improved satellite operations',
+        'Better Earth monitoring capabilities',
+        'Reduced space mission costs'
+      ]
+    },
+    {
+      icon: Zap,
+      name: 'AI-Powered Energy Grid Optimization',
+      description: 'Intelligent energy grid management with predictive analytics and renewable integration.',
+      features: [
+        'Demand forecasting and load balancing',
+        'Renewable energy integration optimization',
+        'Grid stability monitoring and control',
+        'Predictive maintenance for infrastructure',
+        'Energy storage optimization',
+        'Real-time pricing and market analysis'
+      ],
+      pricing: '$30,000 – $150,000 setup',
+      perUnit: '$0.01 – $0.10 per kWh',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Improved grid efficiency and reliability',
+        'Increased renewable energy integration',
+        'Reduced energy costs',
+        'Enhanced grid stability'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Agricultural Intelligence',
+      description: 'Smart farming solutions with precision agriculture and crop optimization.',
+      features: [
+        'Crop health monitoring and analysis',
+        'Precision irrigation and fertilization',
+        'Pest and disease detection',
+        'Yield prediction and optimization',
+        'Weather pattern analysis',
+        'Automated farming equipment control'
+      ],
+      pricing: '$15,000 – $75,000 setup',
+      perUnit: '$0.10 – $1.00 per acre',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Increased crop yields and quality',
+        'Reduced resource consumption',
+        'Improved sustainability',
+        'Enhanced farm profitability'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Digital Twin Technology',
+      description: 'Virtual replicas of physical systems with real-time monitoring and predictive analytics.',
+      features: [
+        'Real-time system modeling and simulation',
+        'Predictive maintenance and optimization',
+        'Performance monitoring and analysis',
+        'Scenario planning and testing',
+        'Integration with IoT sensors',
+        'Automated decision support'
+      ],
+      pricing: '$25,000 – $125,000 setup',
+      perUnit: '$0.50 – $5.00 per simulation',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Improved system performance',
+        'Reduced maintenance costs',
+        'Enhanced operational efficiency',
+        'Better decision-making capabilities'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Neuromorphic Computing',
+      description: 'Brain-inspired computing systems for edge AI and real-time processing.',
+      features: [
+        'Neuromorphic chip design and optimization',
+        'Spiking neural network implementation',
+        'Ultra-low power consumption',
+        'Real-time learning and adaptation',
+        'Edge AI processing capabilities',
+        'Integration with IoT devices'
+      ],
+      pricing: '$50,000 – $250,000 setup',
+      perUnit: '$0.01 – $0.10 per operation',
+      timeline: '20–40 weeks',
+      benefits: [
+        'Ultra-low power consumption',
+        'Real-time processing capabilities',
+        'Enhanced edge AI performance',
+        'Revolutionary computing efficiency'
       ]
     }
   ];
