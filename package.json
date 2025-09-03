@@ -13,7 +13,7 @@
     "build": "next build",
     "export": "next build && next export",
     "start": "next start",
-    "lint": "eslint .",
+    "lint": "eslint . --max-warnings=0",
     "type-check": "tsc --noEmit",
     "prepare": "echo 'Husky prepare script disabled'",
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
