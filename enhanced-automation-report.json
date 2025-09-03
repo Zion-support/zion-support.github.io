@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-09-03T11:57:36.216Z",
+  "duration": 10276,
+  "summary": {
+    "total": 5,
+    "successful": 1,
+    "errors": 3,
+    "warnings": 1
+  },
+  "results": {
+    "success": [
+      "Next.js Build completed successfully"
+    ],
+    "errors": [
+      "ESLint Check failed: Command failed: npx eslint . --ext .ts,.tsx,.js,.jsx\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nInvalid option '--ext' - perhaps you meant '-c'?\nYou're using eslint.config.js, some command line flags are no longer available. Please see https://eslint.org/docs/latest/use/command-line-interface for details.\n",
+      "TypeScript Check failed: spawnSync /bin/sh ENOBUFS",
+      "Security Audit failed: Command failed: npm audit --audit-level=moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+    ],
+    "warnings": [
+      "Jest not available for testing"
+    ]
+  },
+  "recommendations": [
+    "Review and fix any failed operations",
+    "Run automation suite regularly",
+    "Monitor application performance",
+    "Keep dependencies updated",
+    "Consider upgrading React to version 18+ for better compatibility",
+    "Install Jest for comprehensive testing"
+  ]
+}

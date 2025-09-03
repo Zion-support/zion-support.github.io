@@ -15,8 +15,7 @@ async function identifyMissingPages() {
     // Extract page names from files
     const existingPages = pageFiles.map(file => {
       const fileName = path.basename(file, path.extname(file))
-      return fileName.toLowerCase(),
-})
+      return fileName.toLowerCase()})
     console.log("=== ROUTES FROM APP.TSX ===")
     routes.forEach(route => console.log(route))
     console.log("\n=== EXISTING PAGE FILES ===")
@@ -29,7 +28,7 @@ const fs = require("fs").promises;const path = require("path")";async function i
     // Get all page files
     const pagesDir = "src/pages";    const pageFiles = await getAllFiles(pagesDir)
     // Extract page names from files
-    const existingPages = pageFiles.map(file => {);      const fileName = path.basename(file, path.extname(file))
+    const existingPages = pageFiles.map(file => {),const fileName = path.basename(file, path.extname(file))
       return fileName.toLowerCase()})
     console.log("=== ROUTES FROM APP.TSX ===");    routes.forEach(route => console.log(route))
     console.log("\n=== EXISTING PAGE FILES ===");    existingPages.forEach(page => console.log(page))
@@ -43,17 +42,12 @@ const fs = require("fs").promises;const path = require("path")";async function i
           page.includes(routeName) ||
           page.includes(route.replace("/", ").toLowerCase()))
       if (!hasPage) {
-        missingPages.push(route),
-}
+        missingPages.push(route)}
     }
-
     console.log("\n=== MISSING PAGES ===")
     if (missingPages.length === 0) {
-      console.log("No missing pages found!"),
-} else {
-      missingPages.forEach(page => console.log(`❌ ${page}`)),
-}
-
+      console.log("No missing pages found!")} else {
+      missingPages.forEach(page => console.log(`❌ ${page}`))}
     // Generate recommendations
     console.log("\n=== RECOMMENDATIONS ===")
     if (missingPages.length > 0) {console.log(`Create ${missingPages.length} missing page(s):`)
@@ -63,33 +57,23 @@ const fs = require("fs").promises;const path = require("path")";async function i
           .replace(/-/g, " ")
           .replace(/\b\w/g, l => l.toUpperCase())
           .replace(/\s+/g, ")
-        console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}"),
-}),
-}
-
+        console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")})}
     return { routes, existingPages, missingPages }
   } catch (error) {
     console.error("Error identifying missing pages: ', error)
-    return null,
+    return null}
 }
-}
-
 async function getAllFiles(dirPath, arrayOfFiles = []) {
   const files = await fs.readdir(dirPath)
   for (const file of files) {
     const fullPath = path.join(dirPath, file)
     const stat = await fs.stat(fullPath)
     if (stat.isDirectory()) {
-      arrayOfFiles = await getAllFiles(fullPath, arrayOfFiles),
-} else {
-      arrayOfFiles.push(fullPath),
-}
+      arrayOfFiles = await getAllFiles(fullPath, arrayOfFiles)} else {
+      arrayOfFiles.push(fullPath)}
   }
-
-  return arrayOfFiles,
-}
+  return arrayOfFiles}
 // Run the analysis
 if (require.main === module) {
-  identifyMissingPages(),
-}
+  identifyMissingPages()}
 module.exports = { identifyMissingPages }

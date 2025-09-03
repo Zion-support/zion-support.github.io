@@ -8,20 +8,15 @@ class BuildHealthCheck {
   constructor() {
     this.logFile = path.join(__dirname, "../logs/build-health.log")
     this.reportFile = path.join(__dirname, "../logs/build-health-report.json")
-    this.projectRoot = path.join(__dirname, ".."),
-}
-
+    this.projectRoot = path.join(__dirname, "..")}
   async log(message, level = "INFO") {
     const timestamp = new Date().toISOString()
     const logEntry = `[${timestamp}] [${level}] ${message}\n`
     try {
       await fs.appendFile(this.logFile, logEntry)
-      console.log(logEntry.trim()),
-} catch (error) {
-      console.error("Failed to write to log file: ", error),
-}
+      console.log(logEntry.trim())} catch (error) {
+      console.error("Failed to write to log file: ", error)}
   }
-
   async checkDependencies() {
     try {
       await this.log("Checking dependencies health", "INFO")
@@ -29,16 +24,14 @@ class BuildHealthCheck {
       const nodeModulesPath = path.join(this.projectRoot, "node_modules")
       const stats = await fs.stat(nodeModulesPath)
       if (!stats.isDirectory()) {
-        throw new Error("node_modules not found"),
-}
-
+        throw new Error("node_modules not found")}
       // Check package.json vs package-lock.json
       const packageJson = JSON.parse(
         await fs.readFile(path.join(this.projectRoot, "package.json"), "utf8"))
       const totalDeps =
         Object.keys(packageJson.dependencies || {}).length +
         Object.keys(packageJson.devDependencies || {}).length
-      await this.log(Dependencies check passed: ${totalDeps} packages expected",
+      await this.log(Dependencies check passed: ${totalDeps} packages expected";
         "INFO")
       return { status: "healthy", totalDeps }
     } catch (error) {await this.log(`Dependencies check failed: ${error.message}`, "ERROR")
@@ -49,29 +42,24 @@ class BuildHealthCheck {
         await this.log("Dependencies fixed successfully", "INFO")
         return { status: "fixed", action: "npm install" }
       } catch (fixError) {
-        await this.log(Failed to fix dependencies: ${fixError.message}",
+        await this.log(Failed to fix dependencies: ${fixError.message}";
           "ERROR")
         return { status: "failed", error: error.message }
       }
     }
   }
-
   async checkConfigFiles() {
-    const configs = [package.json",
-      "tsconfig.json",vite.config.ts",
-      "eslint.config.js",tailwind.config.js",]
+    const configs = [package.json","tsconfig.json",vite.config.ts","eslint.config.js",tailwind.config.js"]
 const fs = require("fs").promises;const path = require("$1");
 const { exec } = require("$1");
 const util = require("util")";const execAsync = util.promisify(exec)
 class BuildHealthCheck {
-  constructor() {
-    this.logFile = path.join(__dirname, "../logs/build-health.log");    this.reportFile = path.join(__dirname, "../logs/build-health-report.json");    this.projectRoot = path.join(__dirname, "..")}"
+  constructor() {this.logFile = path.join(__dirname, "../logs/build-health.log"),this.reportFile = path.join(__dirname, "../logs/build-health-report.json"),    this.projectRoot = path.join(__dirname, "..")}"
   async log(message, level = "INFO") {";    const timestamp = new Date().toISOString();    const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
     try {
       await fs.appendFile(this.logFile, logEntry)
       console.log(logEntry.trim())} catch (error) {
       console.error("Failed to write to log "file:", error)}"}
-
   async checkDependencies() {
     try {
       await this.log("Checking dependencies health", "INFO");";      // Check if node_modules exists and has packages
@@ -82,10 +70,9 @@ class BuildHealthCheck {
       const packageJson = JSON.parse();        await fs.readFile(path.join(this.projectRoot, "package.json"), "utf8")");      const totalDeps =
         Object.keys(packageJson.dependencies || {}).length +
         Object.keys(packageJson.devDependencies || {}).length
-      await this.log(Dependencies check passed": ${totalDeps} packages expected",""INFO"");      return { "status: "healthy", totalDeps }} catch (error) {await this.log(`Dependencies check failed": ${error.message}`, "ERROR");`;      // Auto-"fix: run npm install;      try {
+      await this.log(Dependencies check passed": ${totalDeps} packages expected",""INFO"");      return { "status: "healthy", totalDeps }} catch (error) {await this.log(`Dependencies check failed": ${error.message}`, "ERROR");`;      // Auto-"fix: run npm install,      try {
         await this.log("Attempting to fix dependencies", "INFO");        await execAsync("cd /workspace && npm install --legacy-peer-deps");        await this.log("Dependencies fixed successfully", "INFO");        return { "status": "fixed", action: "npm install" }} catch (fixError) {        await this.log(Failed to fix "dependencies": ${fixError.message}",""ERROR"");        return { status: "failed", "error": error.message }}"}
   }
-
   async checkConfigFiles() {
     const configs = [package.json",""tsconfig.json",vite.config.ts",""eslint.config.js",tailwind.config.js","]
     const results = []
@@ -95,20 +82,13 @@ class BuildHealthCheck {
         const content = await fs.readFile(filePath, "utf8")
         // Basic syntax check for JSON files
         if (config.endsWith(".json")) {
-          JSON.parse(content),
-}
-
-        results.push({ file: config, status: "valid" }),
-} catch (error) {
-        await this.log(Config file ${config} has issues: ${error.message}",
+          JSON.parse(content)}
+        results.push({ file: config, status: "valid" })} catch (error) {
+        await this.log(Config file ${config} has issues: ${error.message}";
           "ERROR")
-        results.push({ file: config, status: "invalid", error: error.message }),
-}
+        results.push({ file: config, status: "invalid", error: error.message })}
     }
-
-    return results,
-}
-
+    return results}
   async checkBuildAssets() {
     try {
       const distPath = path.join(this.projectRoot, "dist")
@@ -116,34 +96,27 @@ class BuildHealthCheck {
         const stats = await fs.stat(distPath)
         if (stats.isDirectory()) {
           const files = await fs.readdir(distPath)
-          await this.log(Build assets found: ${files.length} files in dist/",
+          await this.log(Build assets found: ${files.length} files in dist/";
             "INFO")
           return { status: "exists", fileCount: files.length }
         }
       } catch {
-        // dist doesn"t exist, that"s okay,
-}
-
+        // dist doesn"t exist, that"s okay}
       // Try to build
       await this.log("Attempting to build project", "INFO")
       const { stdout, stderr } = await execAsync(cd /workspace && npm run build")
-      if (stderr && !stderr.includes("warn")) {throw new Error(`Build failed: ${stderr}`),
-}
-
+      if (stderr && !stderr.includes("warn")) {throw new Error(`Build failed: ${stderr}`)}
       await this.log("Build completed successfully", "INFO")
       return { status: "built", output: stdout }
     } catch (error) {await this.log(`Build check failed: ${error.message}`, "ERROR")
       return { status: "failed", error: error.message }
     }
   }
-
   async performHealthActions(results) {
     const actions = []
     // If dependencies are unhealthy, reinstall
     if (results.dependencies.status === "failed") {
-      actions.push("reinstall-dependencies"),
-}
-
+      actions.push("reinstall-dependencies")}
     // If build assets don"t exist or build failed, try to fix syntax first
     if (results.build.status === "failed") {
       try {
@@ -154,44 +127,28 @@ class BuildHealthCheck {
         setTimeout(async () => {
           try {
             await execAsync("cd /workspace && npm run build")
-            await this.log("Build successful after syntax fixes", "INFO"),
-} catch (error) {
-            await this.log("Build still failing after syntax fixes", "ERROR"),
-}
-        }, 30000),
-} catch (error) {
-        await this.log(Failed to trigger syntax fixer: ${error.message}",
-          "ERROR"),
-}
+            await this.log("Build successful after syntax fixes", "INFO")} catch (error) {
+            await this.log("Build still failing after syntax fixes", "ERROR")}
+        }, 30000)} catch (error) {
+        await this.log(Failed to trigger syntax fixer: ${error.message}";
+          "ERROR")}
     }
-
-    return actions,
-}
-
+    return actions}
   async run() {
     try {
       await this.log("Starting build health check", "INFO")
-      const results = {
-        timestamp: new Date().toISOString(),
-        dependencies: await this.checkDependencies(),
-        configs: await this.checkConfigFiles(),
-        build: await this.checkBuildAssets(),,
-}
-    if (results.dependencies.status === "failed") {";      actions.push("reinstall-dependencies")}"
+      const results = {timestamp: new Date().toISOString(),dependencies: await this.checkDependencies(),configs: await this.checkConfigFiles();
+        build: await this.checkBuildAssets()}
+    if (results.dependencies.status === "failed") {",actions.push("reinstall-dependencies")}"
     // If build assets don"t exist or build failed, try to fix syntax first";    if (results.build.status === "failed") {";      try {        await this.log("Triggering syntax fixer for build issues", "INFO");        exec("pm2 restart syntax-fixer");        actions.push("triggered-syntax-fixer");";        // Wait a bit then try build again
         setTimeout(async () => {
-          try {
-            await execAsync("cd /workspace && npm run build");            await this.log("Build successful after syntax fixes", "INFO")} catch (error) {            await this.log("Build still failing after syntax fixes", "ERROR")}"}, 30000)} catch (error) {
+          try {await execAsync("cd /workspace && npm run build"),await this.log("Build successful after syntax fixes", "INFO")} catch (error) {            await this.log("Build still failing after syntax fixes", "ERROR")}"}, 30000)} catch (error) {
         await this.log(Failed to trigger syntax fixer: ${error.message}",""ERROR""),"}
     }
-
     return actions}
-
   async run() {
     try {
-      await this.log("Starting build health check", "INFO");";      const results = {
-        "timestamp": new Date().toISOString(),;        dependencies": await this.checkDependencies(),";        configs: await this.checkConfigFiles(),""build: await this.checkBuildAssets(),,}
-
+      await this.log("Starting build health check", "INFO");";      const results = {"timestamp": new Date().toISOString(),,dependencies": await this.checkDependencies(),",        configs: await this.checkConfigFiles(),""build: await this.checkBuildAssets()}
       const actions = await this.performHealthActions(results)
       results.actions = actions
       // Calculate overall health score
@@ -209,15 +166,12 @@ class BuildHealthCheck {
             ? "warning"
             : "critical"
       await fs.writeFile(this.reportFile, JSON.stringify(results, null, 2))
-      await this.log(Build health check completed: ${results.status} (${results.healthScore}%)",
-        "INFO"),
-} catch (error) {await this.log(`Build health check failed: ${error.message}`, "ERROR"),
-}
+      await this.log(Build health check completed: ${results.status} (${results.healthScore}%)";
+        "INFO")} catch (error) {await this.log(`Build health check failed: ${error.message}`, "ERROR")}
   }
 }
           ? "healthy"";          : healthScore >= 40;            ? "warning"";            : "critical"";      await fs.writeFile(this.reportFile, JSON.stringify(results, null, 2))
       await this.log(Build health check "completed": ${results.status} (${results.healthScore}%)",""INFO""),"} catch (error) {await this.log(`Build health check "failed": ${error.message}`, "ERROR")}`}"}
-
 // Run if called directly
 if (require.main === module) {
   const checker = new BuildHealthCheck()
@@ -227,7 +181,5 @@ if (require.main === module) {
   // Keep process alive
   process.on("SIGINT", () => {
     checker.log("Build health checker shutting down", "INFO')
-    process.exit(0),
-}),
-}
+    process.exit(0)})}
 module.exports = BuildHealthCheck

@@ -1,0 +1,350 @@
+{
+  "timestamp": "2025-09-03T13:09:32.500Z",
+  "summary": {
+    "vulnerabilities": 0,
+    "securityIssues": 54,
+    "totalIssues": 54
+  },
+  "results": {
+    "vulnerabilities": [],
+    "securityIssues": [
+      {
+        "file": ".env",
+        "line": 1,
+        "issue": "Potential sensitive data exposure",
+        "content": "VITE_SUPABASE_ANON_KEY=***"
+      },
+      {
+        "file": "components/AccessibilityEnhancer.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 2
+      },
+      {
+        "file": "components/AccessibilityManager.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "components/Analytics.tsx",
+        "issue": "Use of innerHTML - potential XSS vulnerability",
+        "severity": "medium",
+        "count": 3
+      },
+      {
+        "file": "components/AnalyticsManager.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "components/AnalyticsManager.tsx",
+        "issue": "Use of sessionStorage - potential data exposure",
+        "severity": "low",
+        "count": 3
+      },
+      {
+        "file": "components.disabled/AccessibilityEnhancer.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 2
+      },
+      {
+        "file": "corrupted-files-backup/src/components/Accessibility/EnhancedAccessibilityProvider.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "public/security-headers.js",
+        "issue": "Use of eval() - potential code injection vulnerability",
+        "severity": "high",
+        "count": 1
+      },
+      {
+        "file": "src/components/Accessibility/EnhancedAccessibilityProvider.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/Accessibility.js.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 3
+      },
+      {
+        "file": "src/components/AccessibilityEnhancer.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/AccessibilityPanel.js.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/AccessibilityPanel.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/AccessibilityProvider.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 6
+      },
+      {
+        "file": "src/components/AdvancedAICodeGenerator.js.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/AdvancedAICodeGenerator.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/AdvancedAnalytics.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/AnalyticsManager.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 2
+      },
+      {
+        "file": "src/components/CategoryListingPage.js.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 2
+      },
+      {
+        "file": "src/components/CategoryListingPage.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 2
+      },
+      {
+        "file": "src/components/EnhancedAccessibility.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/EnhancedAccessibilityEnhancer.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/EnhancedAccessibilityPanel.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/EnhancedNavigation.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/EnhancedNavigationFixed.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/EnhancedSearch.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/ModernUIEnhancer.js.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/ModernUIEnhancer.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/SecurityEnhancer.tsx",
+        "issue": "Use of innerHTML - potential XSS vulnerability",
+        "severity": "medium",
+        "count": 1
+      },
+      {
+        "file": "src/components/ThemeToggle.js.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/ThemeToggle.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 2
+      },
+      {
+        "file": "src/components/header/EnhancedSearchInput.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 2
+      },
+      {
+        "file": "src/components/referral/ReferralMiddleware.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/components/unused/BrokenLinkFixer.jsx",
+        "issue": "Use of innerHTML - potential XSS vulnerability",
+        "severity": "medium",
+        "count": 1
+      },
+      {
+        "file": "src/components/unused/ContentQualityEnhancer.jsx",
+        "issue": "Use of innerHTML - potential XSS vulnerability",
+        "severity": "medium",
+        "count": 1
+      },
+      {
+        "file": "src/components/unused/EnhancedAccessibility.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/context/FavoritesContext.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/hooks/useAuth.ts",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 4
+      },
+      {
+        "file": "src/hooks/useAuth.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 6
+      },
+      {
+        "file": "src/main.jsx",
+        "issue": "Use of innerHTML - potential XSS vulnerability",
+        "severity": "medium",
+        "count": 1
+      },
+      {
+        "file": "src/pages/AccountSettings.js.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/pages/AccountSettings.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/pages/Marketplace.js.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/pages/Wishlist.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src/utils/safeStorage.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 2
+      },
+      {
+        "file": "src.disabled/components/Accessibility/EnhancedAccessibilityProvider.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src.disabled/components/CategoryListingPage.js.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 2
+      },
+      {
+        "file": "src.disabled/components/ThemeProvider.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src.disabled/components/disabled/Accessibility.jsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src.disabled/components/referral/ReferralMiddleware.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 1
+      },
+      {
+        "file": "src.disabled/context/ThemeContext.tsx",
+        "issue": "Use of localStorage - potential data exposure",
+        "severity": "low",
+        "count": 4
+      },
+      {
+        "file": "zion_academy/static/js/script.js",
+        "issue": "Use of innerHTML - potential XSS vulnerability",
+        "severity": "medium",
+        "count": 3
+      },
+      {
+        "file": "zion_academy/static/js/script.jsx",
+        "issue": "Use of innerHTML - potential XSS vulnerability",
+        "severity": "medium",
+        "count": 3
+      }
+    ],
+    "recommendations": []
+  },
+  "recommendations": [
+    "Update vulnerable dependencies immediately",
+    "Use environment variables for sensitive data",
+    "Implement Content Security Policy (CSP)",
+    "Use HTTPS for all communications",
+    "Implement proper input validation",
+    "Use parameterized queries to prevent SQL injection",
+    "Implement rate limiting",
+    "Regular security audits and penetration testing",
+    "Use security headers (HSTS, X-Frame-Options, etc.)",
+    "Implement proper authentication and authorization"
+  ]
+}

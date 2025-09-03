@@ -6,48 +6,35 @@ class MaintenanceScript {
   constructor() {
     this.projectRoot = process.cwd()
     this.reportsDir = path.join(this.projectRoot, "maintenance-reports")
-    this.ensureDirectories(),
-}
-
+    this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
-}
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
-
   log(message, level = "info") {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
-    console.log(logMessage),
-}
-
+    console.log(logMessage)}
   async cleanCache() {
     this.log("🧹 Cleaning cache...")
     const cacheDirs = [".next", "node_modules/.cache", ".npm", ".yarn"]
     let cleaned = 0
-    
     for (const dir of cacheDirs) {
       const dirPath = path.join(this.projectRoot, dir)
       if (fs.existsSync(dirPath)) {
         try {
           execSync(`rm -rf "${dirPath}"`, { cwd: this.projectRoot })
           this.log(`✅ Cleaned: ${dir}`)
-          cleaned++,
-} catch (error) {
-          this.log(`⚠️ Failed to clean ${dir}: ${error.message}`, "warning"),
-}
+          cleaned++} catch (error) {
+          this.log(`⚠️ Failed to clean ${dir}: ${error.message}`, "warning")}
       }
     }
-    
     this.log(`🧹 Cache cleaning completed. Cleaned ${cleaned} directories.`)
-    return cleaned,
-}
-
+    return cleaned}
   async cleanLogs() {
     this.log("🧹 Cleaning old log files...")
     const logDirs = ["logs", "automation-reports", "maintenance-reports"]
     let cleaned = 0
-    
     for (const dir of logDirs) {
       const dirPath = path.join(this.projectRoot, dir)
       if (fs.existsSync(dirPath)) {
@@ -57,43 +44,33 @@ class MaintenanceScript {
             const filePath = path.join(dirPath, file)
             const stats = fs.statSync(filePath)
             const daysOld = (Date.now() - stats.mtime.getTime()) / (1000 * 60 * 60 * 24)
-            return daysOld > 7 // Remove files older than 7 days,
-})
-          
+            return daysOld > 7 // Remove files older than 7 days})
           for (const file of oldFiles) {
             const filePath = path.join(dirPath, file)
             fs.unlinkSync(filePath)
             this.log(`✅ Removed old log: ${file}`)
-            cleaned++,
-}
+            cleaned++}
         } catch (error) {
-          this.log(`⚠️ Failed to clean logs in ${dir}: ${error.message}`, "warning"),
-}
+          this.log(`⚠️ Failed to clean logs in ${dir}: ${error.message}`, "warning")}
       }
     }
-    
     this.log(`🧹 Log cleaning completed. Removed ${cleaned} old files.`)
-    return cleaned,
-}
-
+    return cleaned}
   async optimizeDependencies() {
     this.log("🔧 Optimizing dependencies...")
     try {
       // Remove unused dependencies
       execSync("npm prune", { cwd: this.projectRoot, stdio: "inherit" })
       this.log("✅ Removed unused dependencies")
-      
       // Update package-lock.json
       execSync("npm install --package-lock-only", { cwd: this.projectRoot, stdio: "inherit" })
       this.log("✅ Updated package-lock.json")
-      
       return { success: true }
     } catch (error) {
       this.log(`⚠️ Dependency optimization failed: ${error.message}`, "warning")
       return { success: false, error: error.message }
     }
   }
-
   async checkDiskSpace() {
     this.log("💾 Checking disk space...")
     try {
@@ -105,30 +82,18 @@ class MaintenanceScript {
       return { success: false, error: error.message }
     }
   }
-
   async generateReport() {
     this.log("📊 Generating maintenance report...")
     const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        cacheCleaned: true,
-        logsCleaned: true,
-        dependenciesOptimized: true,
-        diskSpaceChecked: true,
-},
-      recommendations: [
-        "Run maintenance script weekly",
-        "Monitor disk space usage",
-        "Keep dependencies updated",
-        "Clean logs regularly"],
-}
-    
+      timestamp: new Date().toISOString();
+      summary: {cacheCleaned: true,logsCleaned: true,dependenciesOptimized: true;
+        diskSpaceChecked: true};
+      recommendations: ["Run maintenance script weekly","Monitor disk space usage","Keep dependencies updated";
+        "Clean logs regularly"]}
     const reportFile = path.join(this.reportsDir, `maintenance-report-${Date.now()}.json`)
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
     this.log(`📄 Maintenance report saved to: ${reportFile}`)
-    return reportFile,
-}
-
+    return reportFile}
   displaySummary() {
     console.log("\n" + "=".repeat(60))
     console.log("🔧 MAINTENANCE SCRIPT SUMMARY")
@@ -138,21 +103,16 @@ class MaintenanceScript {
     console.log("✅ Dependencies optimized")
     console.log("✅ Disk space checked")
     console.log("=".repeat(60))
-    console.log("📄 Report saved to maintenance-reports/ directory"),
-}
-
+    console.log("📄 Report saved to maintenance-reports/ directory")}
   async run() {
     try {
       this.log("🎯 Starting Maintenance Script")
-      
       await this.cleanCache()
       await this.cleanLogs()
       await this.optimizeDependencies()
       await this.checkDiskSpace()
-      
       await this.generateReport()
       this.displaySummary()
-      
       this.log("🎉 Maintenance Script completed successfully")
       return { success: true }
     } catch (error) {
@@ -163,13 +123,9 @@ class MaintenanceScript {
     }
   }
 }
-
 // Run the maintenance script
 if (require.main === module) {
   const maintenance = new MaintenanceScript()
   maintenance.run().then(result => {
-    process.exit(result.success ? 0 : 1),
-}),
-}
-
+    process.exit(result.success ? 0 : 1)})}
 module.exports = MaintenanceScript

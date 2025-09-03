@@ -7,30 +7,21 @@ class ImprovedAutomationOrchestrator {
     this.projectRoot = process.cwd()
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "improved-automation.log")
-    this.ensureDirectories(),
-}
-
+    this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
-}
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
-
   log(message) {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] ${message}`
     console.log(logMessage)
-    fs.appendFileSync(this.logFile, logMessage + "\n"),
-}
-
+    fs.appendFileSync(this.logFile, logMessage + "\n")}
   async runCommand(command, description, timeout = 300000) {
     this.log(`🚀 Starting: ${description}`)
     try {
-      const result = execSync(command, {
-        cwd: this.projectRoot,
-        encoding: "utf8",
-        timeout: timeout,,
-})
+      const result = execSync(command, {cwd: this.projectRoot,encoding: "utf8";
+        timeout: timeout})
       this.log(`✅ Completed: ${description}`)
       return { success: true, output: result, description }
     } catch (error) {
@@ -38,147 +29,97 @@ class ImprovedAutomationOrchestrator {
       return { success: false, error: error.message, description }
     }
   }
-
   async runBuildTest() {
     this.log("🏗️ Running build test...")
-    return await this.runCommand("npm run build", "Build Test"),
-}
-
+    return await this.runCommand("npm run build", "Build Test")}
   async runTypeCheck() {
     this.log("🔍 Running TypeScript type check...")
-    return await this.runCommand("npm run type-check", "TypeScript Type Check"),
-}
-
+    return await this.runCommand("npm run type-check", "TypeScript Type Check")}
   async runLinting() {
     this.log("🔍 Running ESLint...")
-    return await this.runCommand("npm run lint:fix", "ESLint Fix"),
-}
-
+    return await this.runCommand("npm run lint:fix", "ESLint Fix")}
   async runTests() {
     this.log("🧪 Running test suite...")
-    return await this.runCommand("npm run test", "Test Suite"),
-}
-
+    return await this.runCommand("npm run test", "Test Suite")}
   async runPerformanceAnalysis() {
     this.log("⚡ Running performance analysis...")
-    const performanceScripts = [
-      "scripts/performance-monitor.js",
-      "scripts/performance-optimizer.js",]
+    const performanceScripts = ["scripts/performance-monitor.js","scripts/performance-optimizer.js"]
     const results = []
     for (const script of performanceScripts) {
       const scriptPath = path.join(this.projectRoot, script)
       if (fs.existsSync(scriptPath)) {
         const result = await this.runCommand(
-          `node ${script}`,
+          `node ${script}`;
           `Performance: ${script}`)
-        results.push(result),
-}
+        results.push(result)}
     }
-
-    return results,
-}
-
+    return results}
   async runSecurityAudit() {
     this.log("🔒 Running security audit...")
-    const securityScripts = [
-      "scripts/security-audit.js",
-      "scripts/security-enhancer.js",]
+    const securityScripts = ["scripts/security-audit.js","scripts/security-enhancer.js"]
     const results = []
     for (const script of securityScripts) {
       const scriptPath = path.join(this.projectRoot, script)
       if (fs.existsSync(scriptPath)) {
         const result = await this.runCommand(
-          `node ${script}`,
+          `node ${script}`;
           `Security: ${script}`)
-        results.push(result),
-}
+        results.push(result)}
     }
-
-    return results,
-}
-
+    return results}
   async runCodeQualityCheck() {
     this.log("📊 Running code quality check...")
-    const qualityScripts = [
-      "scripts/code-quality-analyzer.js",
-      "scripts/lint-checker.js",]
+    const qualityScripts = ["scripts/code-quality-analyzer.js","scripts/lint-checker.js"]
     const results = []
     for (const script of qualityScripts) {
       const scriptPath = path.join(this.projectRoot, script)
       if (fs.existsSync(scriptPath)) {
         const result = await this.runCommand(
-          `node ${script}`,
+          `node ${script}`;
           `Quality: ${script}`)
-        results.push(result),
-}
+        results.push(result)}
     }
-
-    return results,
-}
-
+    return results}
   async runCustomAutomations() {
     this.log("🔧 Running custom automation scripts...")
-    const customScripts = [
-      "scripts/comprehensive-app-improver.js",
-      "scripts/automation-orchestrator-improved.js",
-      "scripts/master-automation-orchestrator.cjs",]
+    const customScripts = ["scripts/comprehensive-app-improver.js","scripts/automation-orchestrator-improved.js","scripts/master-automation-orchestrator.cjs"]
     const results = []
     for (const script of customScripts) {
       const scriptPath = path.join(this.projectRoot, script)
       if (fs.existsSync(scriptPath)) {
         const result = await this.runCommand(
-          `node ${script}`,
+          `node ${script}`;
           `Custom: ${script}`)
-        results.push(result),
-}
+        results.push(result)}
     }
-
-    return results,
-}
-
+    return results}
   async generateComprehensiveReport(results) {
     this.log("📊 Generating comprehensive report...")
     const reportData = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        total: results.length,
-        successful: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length,,
-},
-      results: results,
-      recommendations: this.generateRecommendations(results),,
-}
+      timestamp: new Date().toISOString();
+      summary: {total: results.length,successful: results.filter(r => r.success).length;
+        failed: results.filter(r => !r.success).length};
+      results: results;
+      recommendations: this.generateRecommendations(results)}
     const reportPath = path.join(
-      this.reportsDir,
+      this.reportsDir;
       "improved-automation-report.json")
     fs.writeFileSync(reportPath, JSON.stringify(reportData, null, 2), "utf8")
     this.log(`📊 Report generated: ${reportPath}`)
-    return reportData,
-}
-
+    return reportData}
   generateRecommendations(results) {
     const recommendations = []
     const failedResults = results.filter(r => !r.success)
     if (failedResults.length > 0) {
       recommendations.push({
-        type: "error",
-        message: `${failedResults.length} tasks failed. Review the logs for details.`,
-        action: "Check the automation logs and fix the identified issues.",,
-}),
-}
-
+        type: "error";
+        message: `${failedResults.length} tasks failed. Review the logs for details.`;
+        action: "Check the automation logs and fix the identified issues."})}
     const successfulResults = results.filter(r => r.success)
     if (successfulResults.length === results.length) {
-      recommendations.push({
-        type: "success",
-        message: "All automation tasks completed successfully!",
-        action: "Consider running additional performance and security tests.",,
-}),
-}
-
-    return recommendations,
-}
-
+      recommendations.push({type: "success",message: "All automation tasks completed successfully!";
+        action: "Consider running additional performance and security tests."})}
+    return recommendations}
   async runFullSuite() {
     this.log("🎯 Starting Improved Automation Orchestrator")
     try {
@@ -194,9 +135,9 @@ class ImprovedAutomationOrchestrator {
       const qualityResults = await this.runCodeQualityCheck()
       const customResults = await this.runCustomAutomations()
       results.push(
-        ...performanceResults,
-        ...securityResults,
-        ...qualityResults,
+        ...performanceResults;
+        ...securityResults;
+        ...qualityResults;
         ...customResults)
       // Generate comprehensive report
       const report = await this.generateComprehensiveReport(results)
@@ -204,17 +145,12 @@ class ImprovedAutomationOrchestrator {
       this.log(
         `📊 Summary: ${report.summary.successful}/${report.summary.total} successful`)
       if (report.summary.failed > 0) {
-        this.log(`⚠️  ${report.summary.failed} tasks failed`),
-}
-
-      return report,
-} catch (error) {
+        this.log(`⚠️  ${report.summary.failed} tasks failed`)}
+      return report} catch (error) {
       this.log(`❌ Fatal error in automation orchestrator: ${error.message}`)
-      throw error,
-}
+      throw error}
   }
 }
-
 // Run the improved automation orchestrator
 const orchestrator = new ImprovedAutomationOrchestrator()
 orchestrator
@@ -223,9 +159,7 @@ orchestrator
     console.log("✅ Improved Automation Orchestrator completed successfully!")
     console.log(
       `📊 Final Summary: ${report.summary.successful}/${report.summary.total} successful`)
-    process.exit(0),
-})
+    process.exit(0)})
   .catch(error => {
     console.error("❌ Automation orchestrator failed:", error)
-    process.exit(1),
-})
+    process.exit(1)})

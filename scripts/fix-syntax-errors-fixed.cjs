@@ -5,13 +5,9 @@ class SyntaxErrorFixer {
   constructor() {
     this.projectRoot = process.cwd()
     this.fixedFiles = []
-    this.errors = [],
-}
-
+    this.errors = []}
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`),
-}
-
+    console.log(`[${new Date().toISOString()}] ${message}`)}
   fixFile(filePath) {
     try {
       let content = fs.readFileSync(filePath, "utf8")
@@ -33,53 +29,33 @@ class SyntaxErrorFixer {
         fs.writeFileSync(filePath, content, "utf8")
         this.fixedFiles.push(filePath)
         fixed = true
-        this.log(`✅ Fixed syntax errors in ${filePath}`),
-}
-
-      return fixed,
-} catch (error) {
+        this.log(`✅ Fixed syntax errors in ${filePath}`)}
+      return fixed} catch (error) {
       this.errors.push({ file: filePath, error: error.message })
       this.log(`❌ Error fixing ${filePath}: ${error.message}`)
-      return false,
-}
+      return false}
   }
-
   fixAllFiles() {
     this.log("🔧 Starting syntax error fixing...")
-    const filesToFix = [
-      "pages/blog.tsx",
-      "pages/help.tsx", 
-      "pages/pricing-guide.tsx",
-      "pages/pricing.tsx",
+    const filesToFix = ["pages/blog.tsx","pages/help.tsx","pages/pricing-guide.tsx";
+      "pages/pricing.tsx";
       "pages/terms.tsx']
     for (const file of filesToFix) {
       const filePath = path.join(this.projectRoot, file)
       if (fs.existsSync(filePath)) {
-        this.fixFile(filePath),
-} else {
-        this.log(`⚠️ File not found: ${filePath}`),
-}
+        this.fixFile(filePath)} else {
+        this.log(`⚠️ File not found: ${filePath}`)}
     }
-
     this.log(`🎉 Syntax fixing completed. Fixed ${this.fixedFiles.length} files.`)
     if (this.errors.length > 0) {
       this.log(`❌ ${this.errors.length} errors encountered:`)
       this.errors.forEach(err => {
-        this.log(`   - ${err.file}: ${err.error}`),
-}),
-}
-
-    return {
-      fixedFiles: this.fixedFiles,
-      errors: this.errors,
-}
+        this.log(`   - ${err.file}: ${err.error}`)})}
+    return {fixedFiles: this.fixedFiles,errors: this.errors}
   }
 }
-
 // Run the fixer
 if (require.main === module) {
   const fixer = new SyntaxErrorFixer()
-  fixer.fixAllFiles(),
-}
-
+  fixer.fixAllFiles()}
 module.exports = SyntaxErrorFixer
