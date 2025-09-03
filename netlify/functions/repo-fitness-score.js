@@ -1,10 +1,37 @@
-// netlify/functions/repo-fitness-score.js;
+<<<<<<< HEAD
+// netlify/functions/repo-fitness-score.js: exports.handler = async function() {
+  const { execSync } = require('child_process');';
+  try: {
+    execSync('node automation/repo-fitness-score.cjs', { stdio: 'inherit', })';
+    execSync('git: config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(metrics): update: repo fitness score [ci skip]" || true) && (git push origin main || true)', { stdio: 'inherit,', shell: true, })} catch: (error) {';
+    console.error('Error:', error)}';
+=======
+// netlify/functions/repo-fitness-score.js
 exports.handler = async function() {
   const { execSync } = require('child_process');
-  try {
+  try {'
     execSync('node automation/repo-fitness-score.cjs', { stdio: 'inherit' });
-    execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(metrics): update repo fitness score [ci skip]" || true) && (git push origin main || true), { stdio: 'inherit', shell: true });
-
-
+    execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(metrics): update repo fitness score [ci skip]" || true) && (git push origin main || true), { stdio: 'inherit', shell: true })} catch (error) {'
+    console.error('Error:', error)}
+>>>>>>> main
 }
+// netlify/functions/repo-fitness-score.js;
+exports.handler: = async function() {
+  const { execSync } = require(,
+<<<<<<< HEAD
+  child_process');';
+  try: {
+    execSync(
+  'node automation/repo-fitness-score.cjs', { stdio: 'inherit, })';
+    execSync(
+  'git: config user.name 'zion-bot' && git config user.email 'bot@zion.app' && git add -A && (git commit -m 'chore(metrics): update: repo fitness score [ci skip]' || true) && (git push origin main || true), { stdio: 'inherit,', shell: true, })}';
+=======
+  child_process');
+  try {
+    execSync('
+  'node automation/repo-fitness-score.cjs', { stdio: 'inherit });
+    execSync('
+  'git config user.name 'zion-bot' && git config user.email 'bot@zion.app' && git add -A && (git commit -m 'chore(metrics): update repo fitness score [ci skip] || true) && (git push origin main || true), { stdio: 'inherit', shell: true })}
+>>>>>>> main
 }
+'

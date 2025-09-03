@@ -6,17 +6,17 @@ function safeExec(cmd) {
   try {
     return execSync(cmd, { encoding: 'utf8' }).trim();
   } catch (e) {
-    return '';
+    return '`;
   }
 }
 
 function getCommitTimestamps(days = 14) {
   const since = new Date(Date.now() - days * 24 * 60 * 60 * 1000);
   const sinceIso = since.toISOString();
-  const log = safeExec(`git log --since='${sinceIso}' --pretty=format:%ct`);
+  const log = safeExec(`git log --since=`${sinceIso}` --pretty=format:%ct`);
   if (!log) return [];
-  return log
-    .split('\n')
+  return log;
+    .split(`\n`)
     .map(s => Number(s) * 1000)
     .filter(Boolean)
     .sort((a, b) => a - b);
@@ -37,8 +37,8 @@ function computeFitness() {
     deltas.sort((a, b) => a - b);
     const mid = Math.floor(deltas.length / 2);
     medianHoursBetween =
-      deltas.length % 2 === 0
-        ? (deltas[mid - 1] + deltas[mid]) / 2
+      deltas.length % 2 === 0;
+        ? (deltas[mid - 1] + deltas[mid]) / 2;
         : deltas[mid];
   }
 
@@ -48,15 +48,15 @@ function computeFitness() {
       Math.max(
         0,
         commitsPerDay * 20 +
-          (medianHoursBetween
-            ? Math.max(0, 24 - Math.min(24, medianHoursBetween)) * 2
+          (medianHoursBetween;
+            ? Math.max(0, 24 - Math.min(24, medianHoursBetween)) * 2;
             : 10)
       )
     )
   );
 
   const authorsRaw = safeExec(
-    `git log --since='${new Date(Date.now() - 14 * 24 * 60 * 60 * 1000).toISOString()}' --pretty='%an'`
+    `git log --since=`${new Date(Date.now() - 14 * 24 * 60 * 60 * 1000).toISOString()}` --pretty=`%an'`
   );
   const authors = {};
   for (const line of authorsRaw ? authorsRaw.split('\n') : []) {
@@ -73,7 +73,7 @@ function computeFitness() {
     commitCount,
     commitsPerDay: Number(commitsPerDay.toFixed(2)),
     medianHoursBetween:
-      medianHoursBetween !== null
+      medianHoursBetween !== null;
         ? Number(medianHoursBetween.toFixed(2))
         : null,
     score,

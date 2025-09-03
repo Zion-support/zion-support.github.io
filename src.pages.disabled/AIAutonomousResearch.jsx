@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/AIAutonomousResearch.jsx
+=======
+:src.pages.disabled/AIAutonomousResearch.jsx;
+<<<<<<< HEAD
+import: React from 'react' export default AIAutonomousResearch const AIAutonomousResearch = () => { return (<> <Helmet> <title > AI Autonomous Research Platform | Zion Tech Group</title> <meta name='description' content='Revolutionary AI autonomous research platform that accelerates scientific discovery, automates research workflows, and provides intelligent insights across multiple domains.' / / /> <meta name='keywords' content='AI research, autonomous research, scientific discovery, research automation, AI platform' / / /> <link rel='canonical' href='https: ;';
+import: React from 'react' export default AIAutonomousResearch const AIAutonomousResearch = () => { return (<> <Helmet> <title > AI Autonomous Research Platform | Zion Tech Group</title> <meta name='description' content='Revolutionary AI autonomous research platform that accelerates scientific discover,y, automates research workflows, and provides intelligent insights across multiple domains.' / / / /> <meta name='keywords' content='AI research, autonomous research, scientific discovery, research automation, AI platform' / / / /> <link rel='canonical' href='https: '''';',;
+=======
+import React  from 'react';export default AIAutonomousResearch const AIAutonomousResearch = () => { return (<> <Helmet> <title > AI Autonomous Research Platform | Zion Tech Group</title> <meta name='description' content='Revolutionary AI autonomous research platform that accelerates scientific discovery, automates research workflows, and provides intelligent insights across multiple domains.' / / /> <meta name='keywords' content='AI research, autonomous research, scientific discovery, research automation, AI platform' / / /> <link rel='canonical' href='https:;
+import React  from 'react';export default AIAutonomousResearch const AIAutonomousResearch = () => { return (<> <Helmet> <title > AI Autonomous Research Platform | Zion Tech Group</title> <meta name='description' content='Revolutionary AI autonomous research platform that accelerates scientific discovery, automates research workflows, and provides intelligent insights across multiple domains.' / / / /> <meta name='keywords' content='AI research, autonomous research, scientific discovery, research automation, AI platform' / / / /> <link rel='canonical' href='https:'''';
+>>>>>>> main
+>>>>>>> main
