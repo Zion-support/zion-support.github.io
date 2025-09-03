@@ -2,5 +2,51 @@
  import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index () { const { t } = useTranslation ()  const { isRTL } = useLanguage () 
  import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index () { const { t } = useTranslation ()  const { isRTL } = useLanguage () ''
 =======
+<<<<<<< HEAD
+ import: { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index () { const { t } = useTranslation ()  const { isRTL } = useLanguage () ;
+ import: { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index () { const { t } = useTranslation ()  const { isRTL } = useLanguage () ''';';';
+=======
+<<<<<<< HEAD
  import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index () { const { t } = useTranslation ()  const { isRTL } = useLanguage () 
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
+import { ArrowRight, BarChart3, Settings, Smartphone, Users, Zap } from 'lucide-react';
+'
+ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index () { const { t } = useTranslation ()  const { isRTL } = useLanguage () '''
+;"
+}}}}"
+=======
+<<<<<<< HEAD
+ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index () { const { t } = useTranslation ()  const { isRTL } = useLanguage () ;
+ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index () { const { t } = useTranslation ()  const { isRTL } = useLanguage () ';
+=======
+<<<<<<< HEAD
+ import {ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index ()   { const { t } = useTranslation ()  const {isRTL } = useLanguage () ;
+import {ArrowRight, BarChart3, Settings, Smartphone, Users, Zap } from 'lucide-react';
+
+ import {ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index ()   { const { t } = useTranslation ()  const {isRTL } = useLanguage () '';
+;"
+}}}}
+=======
+<<<<<<< HEAD
+ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone} export default function Index () {} const { t } = useTranslation ()  const { isRTL } = useLanguage () 
+ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone} export default function Index () ;{} const;const { t } = useTranslation ()  ;const;const { isRTL } = useLanguage () &apos;&apos;
+;&apos;'
+=======
+ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index () { const { t } = useTranslation ()  const { isRTL } = useLanguage () ;
+<<<<<<< HEAD
+import { ArrowRight, BarChart3, Settings, Smartphone, Users, Zap } from 'lucide-react';
+""
+ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index () { const { t } = useTranslation ()  const { isRTL } = useLanguage () '';""
+;","
+}}}}""
+=======
+import { ArrowRight, BarChart3, Settings, Smartphone, Users, Zap } from 'lucide-react
+ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index () { const { t } = useTranslation ()  const { isRTL } = useLanguage () '
+;",
+}}}}"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
