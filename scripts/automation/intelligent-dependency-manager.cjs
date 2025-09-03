@@ -13,19 +13,19 @@ class IntelligentDependencyManager {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'intelligent-dependency-manager.log'
     );
     this.dependencyAnalysis = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'dependency-analysis.json'
     );
     this.vulnerabilityReport = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'vulnerability-report.json'
     );
     this.updateRecommendations = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'update-recommendations.json'
     );
     this.ensureLogsDirectory();

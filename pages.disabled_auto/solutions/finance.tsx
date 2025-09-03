@@ -82,6 +82,7 @@ export default function FinanceSolutions() {
         </h2>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
           {[
+<<<<<<< HEAD
             'PCI DSS',
             'SOC 2',
             'SOX',
@@ -92,6 +93,9 @@ export default function FinanceSolutions() {
             'Marqeta',
             'Stripe',
             'Adyen',
+=======
+            'PCI DSS,SOC 2,SOX,Open Banking,FDX,ISO 20022,Plaid,Marqeta,Stripe,Adyen',
+>>>>>>> main
           ].map(t => (
             <div
               key={t}

@@ -16,13 +16,13 @@ class ContinuousErrorMonitor {
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}'
+    console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}`);
     );
   }
 
   async start() {
-    this.log(
-      Starting continuous error monitoring with ${this.automationInterval / 1000 / 60} minute intervals
+    this.log(`);
+      Starting continuous error monitoring with ${this.automationInterval / 1000 / 60} minute intervals`);
     `);
 
     // Run initial check

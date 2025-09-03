@@ -1,6 +1,7 @@
-// Performance optimizations
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+<<<<<<< HEAD
   poweredByHeader: false,
   compress: true,
   
@@ -8,17 +9,61 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
     dirs: ['pages', 'components', 'lib', 'utils']
+=======
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
+  
+  eslint: {
+<<<<<<< HEAD
+    ignoreDuringBuilds: true,
+=======
+    ignoreDuringBuilds: process.env.NODE_ENV === 'production',
+>>>>>>> main
+>>>>>>> main
   },
+<<<<<<< HEAD
+  experimental: {},
+  experimental: {
+    esmExternals: false,
+=======
+  
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'framer-motion', '@heroicons/react'],
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
+    optimizeCss: true,
+    scrollRestoration: true,
+>>>>>>> main
+  },
+  
   typescript: {
+<<<<<<< HEAD
     ignoreBuildErrors: true,
+<<<<<<< HEAD
     tsconfigPath: './tsconfig.json'
   },
   
   // Enhanced image optimization
+=======
+=======
+    ignoreBuildErrors: process.env.NODE_ENV === 'production',
+>>>>>>> main
+  },
+  
+>>>>>>> main
   images: {
+    domains: ['ziontechgroup.com'],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+<<<<<<< HEAD
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
@@ -34,11 +79,68 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
+=======
+<<<<<<< HEAD
+=======
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+>>>>>>> main
   },
-
+  
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+<<<<<<< HEAD
+=======
+    styledComponents: true,
+>>>>>>> main
+>>>>>>> main
+  },
+  
+  // Performance optimizations
+  onDemandEntries: {
+    maxInactiveAge: 25 * 1000,
+    pagesBufferLength: 2,
+  },
+  
+  // Security headers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains',
+          },
+        ],
+      },
+    ];
+  },
+  
   // Webpack optimizations
   webpack: (config, { dev, isServer }) => {
-    // Completely exclude problematic directories from the build
+    // Exclude problematic directories
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -53,6 +155,7 @@ const nextConfig = {
         /broken_files_backup/,
         /contracts/,
         /hardhat/,
+<<<<<<< HEAD
         /src\.disabled/,
         /components\.disabled/,
         /lib\.disabled/,
@@ -62,8 +165,38 @@ const nextConfig = {
         /pages\.__backup/,
         /lib_backup/,
         /api\.disabled/,
+=======
+<<<<<<< HEAD
+>>>>>>> main
       ],
     });
+=======
+        /__tests__/,
+        /tests/,
+        /test/,
+      ],
+    });
+
+    // Performance optimizations
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+          common: {
+            name: 'common',
+            minChunks: 2,
+            chunks: 'all',
+            enforce: true,
+          },
+        },
+      };
+    }
+>>>>>>> main
 
     // Add fallback for problematic modules
     config.resolve.fallback = {
@@ -71,6 +204,18 @@ const nextConfig = {
       fs: false,
       net: false,
       tls: false,
+<<<<<<< HEAD
+=======
+      crypto: false,
+      stream: false,
+      url: false,
+      zlib: false,
+      http: false,
+      https: false,
+      assert: false,
+      os: false,
+      path: false,
+>>>>>>> main
     };
 
     // Bundle analyzer
@@ -87,8 +232,13 @@ const nextConfig = {
 
     return config;
   },
+<<<<<<< HEAD
   
   // Enhanced page extensions
+=======
+<<<<<<< HEAD
+  // Try to exclude problematic directories at the Next.js level
+>>>>>>> main
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   
   // Performance optimizations
@@ -96,6 +246,7 @@ const nextConfig = {
     maxInactiveAge: 25 * 1000,
     pagesBufferLength: 2,
   },
+<<<<<<< HEAD
   
   // Headers for security and performance
   async headers() {
@@ -132,6 +283,24 @@ const nextConfig = {
       },
     ];
   },
+=======
+=======
+  
+  // Bundle analyzer
+  ...(process.env.ANALYZE === 'true' && {
+    webpack: (config) => {
+      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'static',
+          openAnalyzer: false,
+        })
+      );
+      return config;
+    },
+  }),
+>>>>>>> main
+>>>>>>> main
 };
 
-export default nextConfig;
+module.exports = nextConfig;

@@ -94,9 +94,9 @@ function App() {
     </HelmetProvider>
   )}
 export default App;
-import React, { Suspense, lazy } from 'react';import { Routes, Route } from 'react-router-dom';import { HelmetProvider } from 'react-helmet-async'';// Core Components;
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';import { SEO } from './components/SEO';import { ErrorBoundary } from './components/ErrorBoundary';import { LoadingSpinner } from './components/ui/loading-spinner'';// Layout Components;
-import { EnhancedHeader } from './components/EnhancedHeader';import { EnhancedFooter } from './components/EnhancedFooter'';// Optimized lazy loading with preloading hints
+import React, { Suspense, lazy } from 'react';import { Routes, Route } from 'react-router-dom';import { HelmetProvider }  from 'react-helmet-async;// Core Components;
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';import { SEO } from './components/SEO';import { ErrorBoundary } from './components/ErrorBoundary';import { LoadingSpinner }  from './components/ui/loading-spinner;// Layout Components;
+import { EnhancedHeader } from './components/EnhancedHeader';import { EnhancedFooter }  from './components/EnhancedFooter;// Optimized lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {const LazyComponent = lazy(importFn)
   return(props: any) => (
     <Suspense fallback={fallback || <LoadingSpinner />}>

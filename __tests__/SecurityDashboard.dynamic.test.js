@@ -1,25 +1,44 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import SecurityDashboarddynamic from "../components/SecurityDashboard.dynamic";
-
-describe('SecurityDashboarddynamic', () => {
+  describe('SecurityDashboarddynamic', () => {
   test('renders without crashing', () => {
     render(<SecurityDashboarddynamic />);
-    expect(screen.getByTestId('securitydashboard.dynamic')).toBeInTheDocument()})
-
+    expect(screen.getByTestId('securitydashboard.dynamic')).toBeInTheDocument()})';
   test('displays correct content', () => {
     render(<SecurityDashboarddynamic />);
-    // Add specific content tests based on component
-  })
-
+    // Add specific content tests based on component;
+  });
   test('handles user interactions', () => {
     render(<SecurityDashboarddynamic />);
-    // Add interaction tests based on component functionality
-  })
-
+    // Add interaction tests based on component functionality;
+  });
   test('applies correct styling', () => {
     render(<SecurityDashboarddynamic />);
+    // Add styling tests if needed;
+  })});
+=======
+import React   from 'react''
+import { render, screen, fireEvent }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import SecurityDashboarddynamic   from '../components/SecurityDashboard.dynamic''
+  describe('SecurityDashboarddynamic', () => {'
+  test('renders without crashing', () => {'
+    render(<SecurityDashboarddynamic  />)
+    expect(screen.getByTestId('securitydashboard.dynamic')).toBeInTheDocument()})'
+  test('displays correct content', () => {'
+    render(<SecurityDashboarddynamic  />)
+    // Add specific content tests based on component
+  })
+  test('handles user interactions', () => {'
+    render(<SecurityDashboarddynamic  />)
+    // Add interaction tests based on component functionality
+  })
+  test('applies correct styling', () => {'
+    render(<SecurityDashboarddynamic  />)
     // Add styling tests if needed
   })})
+>>>>>>> main

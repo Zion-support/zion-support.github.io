@@ -21,6 +21,7 @@
     ],
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
       "@/pages/*": ["./pages/*"],
@@ -29,6 +30,28 @@
       "@/types/*": ["./types/*"],
       "@/styles/*": ["./styles/*"]
     }
+=======
+      "@/*": [
+        "./src/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ]
+    },
+    "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
+>>>>>>> main
   },
   "include": [
     "next-env.d.ts",
@@ -38,6 +61,7 @@
   ],
   "exclude": [
     "node_modules",
+<<<<<<< HEAD
     ".next",
     "out",
     "dist",
@@ -62,5 +86,30 @@
     "components.disabled",
     "lib.disabled",
     "hooks.disabled"
+=======
+<<<<<<< HEAD
+    "api-backup/**/*",
+    "automation/backups/**/*",
+    "automation_backup/**/*",
+    "**/*.backup.*",
+    "**/*.disabled.*",
+    "**/*.old.*"
+=======
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
+    "api-backup",
+    "pages.disabled",
+    "backup-pages",
+    ".backup",
+    ".disabled",
+    "automation/backups",
+    "automation_backup",
+    "broken_files_backup",
+    "contracts",
+    "hardhat"
+>>>>>>> main
+>>>>>>> main
   ]
 }

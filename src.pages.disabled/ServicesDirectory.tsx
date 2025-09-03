@@ -19,7 +19,7 @@ import {
   Star} from 'lucide-react';
 const ServicesDirectory = () => {
   const serviceCategories = [
-    {
+  {
       title: 'Artificial Intelligence & Machine Learning', description: 'Advanced AI solutions to transform your business operations',
       icon: Brain, color: 'from-purple-500 to-indigo-500',
       services: [{
@@ -81,7 +81,7 @@ const ServicesDirectory = () => {
       ]}
   ];
   const stats = [
-    { number: '500+', label: 'Services Delivered' },
+  { number: '500+', label: 'Services Delivered' },
     { number: '99.9%', label: 'Success Rate' },
     { number: '24/7', label: 'Support Available' },
     { number: '150+', label: 'Technologies' }

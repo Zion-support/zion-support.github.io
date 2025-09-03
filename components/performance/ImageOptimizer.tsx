@@ -1,85 +1,149 @@
-import React, { useState, useRef, useEffect } from 'react'
-interface ImageOptimizerProps {
-  src: string
-   alt: string
-   width?: number
-   height?: number
-   className?: string
-   priority?: boolean
-   quality?: number
-   placeholder?: 'blur' | 'empty'
-   blurDataURL?: string
-   sizes?: string
-   fill?: boolean
-   style?: React.CSSProperties
-   onLoad?: () => void
-   onError?: () => void
-}
+import React, { useState, useRef, useEffect } from 'react';
 
+interface ImageOptimizerProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  quality?: number;
+  placeholder?: 'blur' | 'empty';
+  blurDataURL?: string;
+  sizes?: string;
+  fill?: boolean;
+  style?: React.CSSProperties;
+  onLoad?: () => void;
+  onError?: () => void;
+}
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
-  src, alt, width, height, className = '', priority = false, quality = 85, placeholder = 'blur', blurDataURL, sizes, fill = false, style, onLoad, onError
+  src,
+  alt,
+  width,
+  height,
+  className = '',
+  priority = false,
+  quality = 85,
+  placeholder = 'blur',
+  blurDataURL,
+  sizes,
+  fill = false,
+  style,
+  onLoad,
+<<<<<<< HEAD
+  onError,
+=======
+  onError
+>>>>>>> main
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [hasError, setHasError] = useState(false)
-  const imgRef = useRef<HTMLImageElement>(null)
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+<<<<<<< HEAD
+  // Generate a simple blur placeholder if none provided;
+  const defaultBlurDataURL =
+    'data: image/jpeg;base64, /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
+=======
 
   // Generate a simple blur placeholder if none provided
-  const defaultBlurDataURL = 'data: image/jpeg;base64, /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k='
+  const defaultBlurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
 
+>>>>>>> main
   const handleLoad = () => {
-    setIsLoaded(true)
-    onLoad?.()
-  }
+    setIsLoaded(true);
+    onLoad?.();
+  };
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
   const handleError = () => {
-    setHasError(true)
-    onError?.()
-  }
+    setHasError(true);
+    onError?.();
+  };
+<<<<<<< HEAD
+  // Intersection Observer for lazy loading;
+=======
 
   // Intersection Observer for lazy loading
+>>>>>>> main
   useEffect(() => {
-    if (priority || !imgRef.current) return
+    if (priority || !imgRef.current) return;
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
+<<<<<<< HEAD
+            // Image is in viewport, trigger load;
+=======
             // Image is in viewport, trigger load
-            observer.unobserve(entry.target)
+>>>>>>> main
+            observer.unobserve(entry.target);
           }
-        })
-      }, {
-        rootMargin: '50px 0px', threshold: 0.1
+        });
+      },
+      {
+        rootMargin: '50px 0px',
+<<<<<<< HEAD
+        threshold: 0.1,
       }
-    )
+    );
+=======
+        threshold: 0.1
+      }
+    );
 
-    observer.observe(imgRef.current)
+>>>>>>> main
+    observer.observe(imgRef.current);
 
     return () => {
       if (imgRef.current) {
-        observer.unobserve(imgRef.current)
+        observer.unobserve(imgRef.current);
       }
-    }
-  }, [priority])
+    };
+  }, [priority]);
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
   if (hasError) {
     return (
       <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height, ...style }}
+<<<<<<< HEAD
+        role="img"
+=======
+<<<<<<< HEAD
+        role="img"
+=======
         role='img'
+>>>>>>> main
+>>>>>>> main
         aria-label={alt}
       >
-        <span className='text-gray-500 text-sm'>Image failed to load</span>
+        <span className="text-gray-500 text-sm">Image failed to load</span>
       </div>
-    )
+    );
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
   return (
     <div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
-      style={fill ? { position: 'relative', width: '100%', height: '100%' } : { width, height, ...style }}
+      style={
+        fill
+          ? { position: 'relative', width: '100%', height: '100%' }
+          : { width, height, ...style }
+      }
     >
       <img
         src={src}
@@ -92,19 +156,45 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         onLoad={handleLoad}
         onError={handleError}
         style={{
-          objectFit: 'cover', width: fill ? '100%' : width, height: fill ? '100%' : height, ...style
+          objectFit: 'cover',
+          width: fill ? '100%' : width,
+          height: fill ? '100%' : height,
+<<<<<<< HEAD
+          ...style,
         }}
         loading={priority ? 'eager' : 'lazy'}
       />
       {/* Loading skeleton */}
       {!isLoaded && !hasError && (
         <div
-          className='absolute inset-0 bg-gray-200 animate-pulse'
-          aria-hidden='true'
+=======
+          ...style
+        }}
+        loading={priority ? 'eager' : 'lazy'}
+      />
+      
+      {/* Loading skeleton */}
+      {!isLoaded && !hasError && (
+        <div
+<<<<<<< HEAD
+>>>>>>> main
+          className="absolute inset-0 bg-gray-200 animate-pulse"
+          aria-hidden="true"
         />
       )}
+<<<<<<< HEAD
     </div>
-  )
-}
+  );
+};
+export default ImageOptimizer;
+=======
+=======
+          className='absolute inset-0 bg-gray-200 animate-pulse'
+          aria-hidden='true'/>)}
+>>>>>>> main
+    </div>
+  );
+};
 
-export default ImageOptimizer
+export default ImageOptimizer;
+>>>>>>> main

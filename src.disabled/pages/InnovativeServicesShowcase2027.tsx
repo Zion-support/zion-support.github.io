@@ -149,13 +149,14 @@ import {
   Eye,
   Award} from 'lucide-react';
 export default function InnovativeServicesShowcase2027() {
-  const services = [{
+  const services = [
+  {
       title: 'AI Autonomous Financial Advisor',
       description: 'Revolutionary AI-powered financial advice and portfolio optimization with 99.7% accuracy',
       icon: DollarSign,
       color: 'from-green-500 to-cyan-500',
       link: '/services/ai-autonomous-financial-advisor',
-      features: ['Investment Analysis', 'Portfolio Optimization', 'Risk Management', 'Market Prediction'],
+      features: ['Investment Analysis,Portfolio Optimization,Risk Management,Market Prediction'],
       pricing: 'Starting at $99/month'},
     {
       title: 'AI Autonomous Healthcare Diagnostics',
@@ -163,7 +164,7 @@ export default function InnovativeServicesShowcase2027() {
       icon: Heart,
       color: 'from-red-500 to-blue-500',
       link: '/services/ai-autonomous-healthcare-diagnostics',
-      features: ['Medical Imaging', 'Disease Detection', 'Predictive Analytics', 'Clinical Support'],
+      features: ['Medical Imaging,Disease Detection,Predictive Analytics,Clinical Support'],
       pricing: 'Starting at $499/month'},
     {
       title: 'AI Autonomous Cybersecurity Operations',
@@ -171,7 +172,7 @@ export default function InnovativeServicesShowcase2027() {
       icon: Shield,
       color: 'from-orange-500 to-red-500',
       link: '/services/ai-autonomous-cybersecurity-operations',
-      features: ['Threat Detection', 'Autonomous Response', 'Zero Trust', '24/7 Monitoring'],
+      features: ['Threat Detection,Autonomous Response,Zero Trust,24/7 Monitoring'],
       pricing: 'Starting at $299/month'},
     {
       title: 'AI Autonomous Business Operations',
@@ -179,7 +180,7 @@ export default function InnovativeServicesShowcase2027() {
       icon: Brain,
       color: 'from-purple-500 to-blue-500',
       link: '/services/ai-autonomous-business-operations-platform',
-      features: ['Process Automation', 'Decision Making', 'Resource Optimization', 'Performance Analytics'],
+      features: ['Process Automation,Decision Making,Resource Optimization,Performance Analytics'],
       pricing: 'Starting at $1,999/month'},
     {
       title: 'Quantum Edge Computing Solutions',
@@ -187,7 +188,7 @@ export default function InnovativeServicesShowcase2027() {
       icon: Atom,
       color: 'from-cyan-500 to-purple-500',
       link: '/services/quantum-edge-computing-solutions',
-      features: ['Quantum Processing', 'Edge Computing', 'AI Integration', 'Real-time Analytics'],
+      features: ['Quantum Processing,Edge Computing,AI Integration,Real-time Analytics'],
       pricing: 'Starting at $2,999/month'},
     {
       title: 'AI Space Technology Platform',
@@ -195,10 +196,11 @@ export default function InnovativeServicesShowcase2027() {
       icon: Satellite,
       color: 'from-blue-500 to-indigo-500',
       link: '/services/ai-space-technology-platform',
-      features: ['Satellite Analytics', 'Space Data Processing', 'Mission Planning', 'Earth Observation'],
+      features: ['Satellite Analytics,Space Data Processing,Mission Planning,Earth Observation'],
       pricing: 'Starting at $4,999/month'}
   ];
-  const serviceCategories = [{
+  const serviceCategories = [
+  {
       title: 'AI & Automation',
       icon: Brain,
       color: 'text-zion-cyan',
@@ -207,35 +209,35 @@ export default function InnovativeServicesShowcase2027() {
           name: 'AI Autonomous Legal Research Platform',
           description: 'Revolutionary AI-powered legal research platform that autonomously analyzes case law, statutes, and legal documents with unprecedented accuracy and speed.',
           href: '/services/ai-autonomous-legal-research-platform',
-          features: ['90% Time Savings', '99.7% Accuracy Rate', '24/7 Availability', 'Cost Reduction'],
+          features: ['90% Time Savings,99.7% Accuracy Rate,24/7 Availability,Cost Reduction'],
           pricing: 'Starting at $299/month',
           icon: Gavel},
         {
           name: 'AI Autonomous Education Platform',
           description: 'Transform education with AI-powered personalized learning, adaptive curriculum, and autonomous content creation that adapts to every student's unique needs.',
           href: '/services/ai-autonomous-education-platform',
-          features: ['40% Learning Improvement', 'Personalized Learning', '24/7 Availability', 'Reduced Admin Burden'],
+          features: ['40% Learning Improvement,Personalized Learning,24/7 Availability,Reduced Admin Burden'],
           pricing: 'Starting at $199/month',
           icon: GraduationCap},
         {
           name: 'AI Autonomous Creative Studio',
           description: 'Unleash unlimited creativity with AI-powered autonomous content generation for visual arts, videos, music, and digital design.',
           href: '/services/ai-autonomous-creative-studio',
-          features: ['10x Faster Creation', 'Unlimited Possibilities', 'Professional Quality', 'Cost-Effective'],
+          features: ['10x Faster Creation,Unlimited Possibilities,Professional Quality,Cost-Effective'],
           pricing: 'Starting at $99/month',
           icon: Palette},
         {
           name: 'AI Autonomous Cybersecurity Platform',
           description: 'Next-generation AI-powered cybersecurity platform that autonomously detects, prevents, and responds to threats in real-time.',
           href: '/services/ai-autonomous-cybersecurity-platform',
-          features: ['Real-time Threat Detection', 'Automated Response', 'Zero-day Protection', '24/7 Monitoring'],
+          features: ['Real-time Threat Detection,Automated Response,Zero-day Protection,24/7 Monitoring'],
           pricing: 'Starting at $499/month',
           icon: Shield},
         {
           name: 'AI Autonomous Financial Advisor',
           description: 'Intelligent financial advisory platform that provides personalized investment strategies and portfolio management.',
           href: '/services/ai-autonomous-financial-advisor',
-          features: ['Personalized Strategies', 'Risk Management', 'Portfolio Optimization', 'Market Analysis'],
+          features: ['Personalized Strategies,Risk Management,Portfolio Optimization,Market Analysis'],
           pricing: 'Starting at $399/month',
           icon: TrendingUp}
       ]},
@@ -248,21 +250,21 @@ export default function InnovativeServicesShowcase2027() {
           name: 'Quantum Edge Computing Solutions',
           description: 'Cutting-edge quantum computing solutions combined with edge computing for unprecedented processing power and speed.',
           href: '/services/quantum-edge-computing-solutions',
-          features: ['Quantum Processing', 'Edge Computing', 'High Performance', 'Scalable Architecture'],
+          features: ['Quantum Processing,Edge Computing,High Performance,Scalable Architecture'],
           pricing: 'Starting at $1,999/month',
           icon: Atom},
         {
           name: 'AI-Powered DevOps Automation',
           description: 'Streamline development and operations with AI-driven automation, monitoring, and optimization.',
           href: '/services/ai-devops-automation-platform',
-          features: ['Automated Deployment', 'Intelligent Monitoring', 'Performance Optimization', 'CI/CD Pipeline'],
+          features: ['Automated Deployment,Intelligent Monitoring,Performance Optimization,CI/CD Pipeline'],
           pricing: 'Starting at $299/month',
           icon: Workflow},
         {
           name: 'Blockchain Enterprise Solutions',
           description: 'Enterprise-grade blockchain solutions for secure, transparent, and efficient business operations.',
           href: '/services/blockchain-enterprise-solutions',
-          features: ['Smart Contracts', 'Supply Chain Tracking', 'Digital Identity', 'Asset Management'],
+          features: ['Smart Contracts,Supply Chain Tracking,Digital Identity,Asset Management'],
           pricing: 'Starting at $599/month',
           icon: Network}
       ]},
@@ -275,21 +277,21 @@ export default function InnovativeServicesShowcase2027() {
           name: 'AI Customer Success Automation',
           description: 'Automate customer success processes with AI-powered insights, engagement, and retention strategies.',
           href: '/services/ai-customer-success-automation',
-          features: ['Customer Insights', 'Engagement Automation', 'Retention Strategies', 'Success Metrics'],
+          features: ['Customer Insights,Engagement Automation,Retention Strategies,Success Metrics'],
           pricing: 'Starting at $199/month',
           icon: Users},
         {
           name: 'AI Marketing Automation Platform',
           description: 'Comprehensive marketing automation with AI-driven personalization, optimization, and analytics.',
           href: '/services/ai-marketing-automation-platform',
-          features: ['Personalized Campaigns', 'A/B Testing', 'Performance Analytics', 'Lead Scoring'],
+          features: ['Personalized Campaigns,A/B Testing,Performance Analytics,Lead Scoring'],
           pricing: 'Starting at $299/month',
           icon: BarChart3},
         {
           name: 'AI Project Management Platform',
           description: 'Intelligent project management with AI-powered planning, resource allocation, and progress tracking.',
           href: '/services/ai-project-management-platform',
-          features: ['Smart Planning', 'Resource Optimization', 'Progress Tracking', 'Risk Management'],
+          features: ['Smart Planning,Resource Optimization,Progress Tracking,Risk Management'],
           pricing: 'Starting at $199/month',
           icon: Target}
       ]},
@@ -302,21 +304,21 @@ export default function InnovativeServicesShowcase2027() {
           name: 'AI Healthcare Analytics Platform',
           description: 'Advanced healthcare analytics platform providing insights for improved patient care and operational efficiency.',
           href: '/services/ai-healthcare-analytics-platform',
-          features: ['Patient Analytics', 'Operational Insights', 'Predictive Modeling', 'Compliance Monitoring'],
+          features: ['Patient Analytics,Operational Insights,Predictive Modeling,Compliance Monitoring'],
           pricing: 'Starting at $799/month',
           icon: Heart},
         {
           name: 'AI Financial Trading Platform',
           description: 'High-performance AI-powered trading platform with real-time analysis and automated trading strategies.',
           href: '/services/ai-financial-trading-platform',
-          features: ['Real-time Analysis', 'Automated Trading', 'Risk Management', 'Market Prediction'],
+          features: ['Real-time Analysis,Automated Trading,Risk Management,Market Prediction'],
           pricing: 'Starting at $999/month',
           icon: TrendingUp},
         {
           name: 'AI Supply Chain Optimization',
           description: 'Intelligent supply chain optimization with AI-driven forecasting, inventory management, and logistics optimization.',
           href: '/services/ai-supply-chain-optimization',
-          features: ['Demand Forecasting', 'Inventory Optimization', 'Logistics Planning', 'Cost Reduction'],
+          features: ['Demand Forecasting,Inventory Optimization,Logistics Planning,Cost Reduction'],
           pricing: 'Starting at $599/month',
           icon: Truck}
       ]}
@@ -464,7 +466,7 @@ export default function InnovativeServicesShowcase2027() {
                   viewport={{ once: true }}
                   className='bg-zion-blue-dark border border-zion-purple/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300'>
                   <div className='flex items-center space-x-3 mb-6'>
-                    <div className={`w-12 h-12 bg-gradient-to-r ${category.color.replace('text-', 'bg-')}/20 rounded-xl flex items-center justify-center`}>
+                    <div className={`w-12 h-12 bg-gradient-to-r ${category.color.replace('text-,bg-')}/20 rounded-xl flex items-center justify-center`}>
                       <category.icon className={`w-6 h-6 ${category.color}`} />
                     </div>
                     <h3 className={`text-xl font-bold ${category.color}`}>{category.title}</h3>
