@@ -21,16 +21,8 @@
     "baseUrl": "."
   },
   "include": [
-    "next-env.d.ts",
-    "pages/**/*",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "data/services.ts",
-    "styles/**/*",
-    "types/**/*",
-    "utils/**/*",
-    "**/*.ts",
-    "**/*.tsx",
+    "src/pages/**/*.{js,jsx}",
+    "src/components/**/*.{js,jsx}",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -48,10 +40,11 @@
     "cypress",
     "temp_working",
     "supabase/functions",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.d.ts",
+    "**/*.test.*",
+    "**/*.spec.*",
     "**/*.backup",
     "**/*.disabled"
   ]
