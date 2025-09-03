@@ -1337,7 +1337,37 @@ export default function MicroSaaS() {
       ],
       pricing: '$14.99 - $79.99/month',
       delivery: '3-5 weeks',
-      category: 'Pet Care SaaS'}
+      category: 'Pet Care SaaS'},
+    {
+      title: 'AI-Powered Influencer Marketing Platform',
+      description: 'Intelligent influencer discovery and campaign management with ROI optimization',
+      icon: Users,
+      features: [
+        'AI-powered influencer discovery and matching,Campaign performance prediction and optimization,Automated outreach and relationship management,Content collaboration and approval workflows,ROI tracking and analytics dashboard,Integration with social media platforms and analytics tools'
+      ],
+      pricing: '$199 - $1,299/month',
+      delivery: '3-5 weeks',
+      category: 'Marketing SaaS'},
+    {
+      title: 'Smart Event Planning Assistant',
+      description: 'AI-powered event planning with vendor matching, budget optimization, and timeline management',
+      icon: Calendar,
+      features: [
+        'AI-powered vendor discovery and matching,Budget optimization and cost tracking,Timeline management and task automation,Guest management and RSVP tracking,Venue selection and availability checking,Integration with payment processors and event platforms'
+      ],
+      pricing: '$99 - $599/month',
+      delivery: '2-4 weeks',
+      category: 'Event SaaS'},
+    {
+      title: 'AI-Powered Job Matching Platform',
+      description: 'Intelligent job matching with skills assessment and career path recommendations',
+      icon: Users,
+      features: [
+        'AI-powered job matching algorithms,Skills assessment and gap analysis,Career path recommendations and development plans,Resume optimization and interview preparation,Salary negotiation insights and market data,Integration with job boards and HR systems'
+      ],
+      pricing: '$49 - $299/month',
+      delivery: '3-4 weeks',
+      category: 'Career SaaS'}
   ]
 
   const technologies = [

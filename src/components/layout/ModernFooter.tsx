@@ -1,44 +1,216 @@
-import React from 'react'; import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion'; import { ; Globe,; Brain,; Cloud,; Shield,; Zap,; Users,; Phone,; Mail,; MapPin,; Linkedin,; Twitter,; Github,; ArrowUp,; ExternalLink;  } from 'lucide-react'; ; const ModernFooter = () => {; const currentYear = new Date().getFullYear(); ; const footerSections = [; {; title: 'Services' links: [; { name: 'AI Solutions', href: '/ai-services', icon: Brain },; { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },; { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield },; { name: 'Edge & IoT', href: '/services/edge-computing-platform', icon: Zap },; { name: 'Digital Transformation', href: '/it-services', icon: Users }; ] },; {; title: 'Company' links: [; { name: 'About Us', href: '/about' },; { name: 'Our Team', href: '/about#team' },; { name: 'Careers', href: '/careers' },; { name: 'News & Updates', href: '/news' },; { name: 'Case Studies', href: '/case-studies' }; ] },; {; title: 'Resources' links: [; { name: 'Documentation', href: '/docs' },; { name: 'API Reference', href: '/api' },; { name: 'Blog', href: '/blog' },; { name: 'Webinars', href: '/webinars' },; { name: 'Support Center', href: '/support' }; ] },; {; title: 'Legal' links: [; { name: 'Privacy Policy', href: '/privacy' },; { name: 'Terms of Service', href: '/terms' },; { name: 'Cookie Policy', href: '/cookies' },; { name: 'GDPR Compliance', href: '/gdpr' },; { name: 'Security', href: '/security' }; ] }; ]; ; const socialLinks = [; { name: 'LinkedIn', href: 'https:
-import React from 'react'; import { Link    } from 'react-router-dom'; import { motion    } from 'framer-motion'; import { ; Globe,; Brain,; Cloud,; Shield,; Zap,; Users,; Phone,; Mail,; MapPin,; Linkedin,; Twitter,; Github,; ArrowUp,; ExternalLink;    } from 'lucide-react'; ; const ModernFooter = () => {; const currentYear = new Date().getFullYear(); ; const footerSections = [; {; title: 'Services' links: [; { name: 'AI Solutions', href: '/ai-services', icon: Brain },; { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },; { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield },; { name: 'Edge & IoT', href: '/services/edge-computing-platform', icon: Zap },; { name: 'Digital Transformation', href: '/it-services', icon: Users }; ] },; {; title: 'Company' links: [; { name: 'About Us', href: '/about' },; { name: 'Our Team', href: '/about#team' },; { name: 'Careers', href: '/careers' },; { name: 'News & Updates', href: '/news' },; { name: 'Case Studies', href: '/case-studies' }; ] },; {; title: 'Resources' links: [; { name: 'Documentation', href: '/docs' },; { name: 'API Reference', href: '/api' },; { name: 'Blog', href: '/blog' },; { name: 'Webinars', href: '/webinars' },; { name: 'Support Center', href: '/support' }; ] },; {; title: 'Legal' links: [; { name: 'Privacy Policy', href: '/privacy' },; { name: 'Terms of Service', href: '/terms' },; { name: 'Cookie Policy', href: '/cookies' },; { name: 'GDPR Compliance', href: '/gdpr' },; { name: 'Security', href: '/security' }; ] }; ]; ; const socialLinks = [; { name: 'LinkedIn', href: 'https:
-
- import { Link } from 'react-router-dom'; import { motion } from 'framer-motion'; import { ; Globe,; Brain,; Cloud,; Shield,; Zap,; Users,; Phone,; Mail,; MapPin,; Linkedin,; Twitter,; Github,; ArrowUp,; ExternalLink; } from 'lucide-react'; ; const ModernFooter = () => {; const currentYear = new Date().getFullYear(); ; const footerSections = [; {; title: 'Services' links: [; { name: 'AI Solutions', href: '/ai-services', icon: Brain },; { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },; { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield },; { name: 'Edge & IoT', href: '/services/edge-computing-platform', icon: Zap },; { name: 'Digital Transformation', href: '/it-services', icon: Users }; ] },; {; title: 'Company' links: [; { name: 'About Us', href: '/about' },; { name: 'Our Team', href: '/about#team' },; { name: 'Careers', href: '/careers' },; { name: 'News & Updates', href: '/news' },; { name: 'Case Studies', href: '/case-studies' }; ] },; {; title: 'Resources' links: [; { name: 'Documentation', href: '/docs' },; { name: 'API Reference', href: '/api' },; { name: 'Blog', href: '/blog' },; { name: 'Webinars', href: '/webinars' },; { name: 'Support Center', href: '/support' }; ] },; {; title: 'Legal' links: [; { name: 'Privacy Policy', href: '/privacy' },; { name: 'Terms of Service', href: '/terms' },; { name: 'Cookie Policy', href: '/cookies' },; { name: 'GDPR Compliance', href: '/gdpr' },; { name: 'Security', href: '/security' }; ] }; ]; ; const socialLinks = [; { name: 'LinkedIn', href: 'https:''';,"});,"})
-;,"});,"})
- import { Link    } from 'react-router-dom'; import { motion    } from 'framer-motion'; import { ; Globe,; Brain,; Cloud,; Shield,; Zap,; Users,; Phone,; Mail,; MapPin,; Linkedin,; Twitter,; Github,; ArrowUp,; ExternalLink;    } from 'lucide-react'; ; const ModernFooter = () => {; const currentYear = new Date().getFullYear(); ; const footerSections = [; {; title: 'Services' links: [; { name: 'AI Solutions', href: '/ai-services', icon: Brain },; { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },; { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield },; { name: 'Edge & IoT', href: '/services/edge-computing-platform', icon: Zap },; { name: 'Digital Transformation', href: '/it-services', icon: Users }; ] },; {; title: 'Company' links: [; { name: 'About Us', href: '/about' },; { name: 'Our Team', href: '/about#team' },; { name: 'Careers', href: '/careers' },; { name: 'News & Updates', href: '/news' },; { name: 'Case Studies', href: '/case-studies' }; ] },; {; title: 'Resources' links: [; { name: 'Documentation', href: '/docs' },; { name: 'API Reference', href: '/api' },; { name: 'Blog', href: '/blog' },; { name: 'Webinars', href: '/webinars' },; { name: 'Support Center', href: '/support' }; ] },; {; title: 'Legal' links: [; { name: 'Privacy Policy', href: '/privacy' },; { name: 'Terms of Service', href: '/terms' },; { name: 'Cookie Policy', href: '/cookies' },; { name: 'GDPR Compliance', href: '/gdpr' },; { name: 'Security', href: '/security' }; ] }; ]; ; const socialLinks = [; { name: 'LinkedIn', href: 'https:;,"});,"})
- import { Link } from 'react-router-dom' import { motion } from 'framer-motion' import {  Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Linkedin, Twitter, Github, ArrowUp, ExternalLink } from 'lucide-react'  const ModernFooter = () => { const currentYear = new Date().getFullYear()  const footerSections = [ { title: 'Services', links: [ { name: 'AI Solutions', href: '/ai-services', icon: Brain }, { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud }, { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield }, { name: 'Edge & IoT', href: '/services/edge-computing-platform', icon: Zap }, { name: 'Digital Transformation', href: '/it-services', icon: Users } ] }, { title: 'Company', links: [ { name: 'About Us', href: '/about' }, { name: 'Our Team', href: '/about#team' }, { name: 'Careers', href: '/careers' }, { name: 'News & Updates', href: '/news' }, { name: 'Case Studies', href: '/case-studies' } ] }, { title: 'Resources', links: [ { name: 'Documentation', href: '/docs' }, { name: 'API Reference', href: '/api' }, { name: 'Blog', href: '/blog' }, { name: 'Webinars', href: '/webinars' }, { name: 'Support Center', href: '/support' } ] }, { title: 'Legal', links: [ { name: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' }, { name: 'Cookie Policy', href: '/cookies' }, { name: 'GDPR Compliance', href: '/gdpr' }, { name: 'Security', href: '/security' } ] } ]  const socialLinks = [ { name: 'LinkedIn', href: 'https:''';
- import { Link } from 'react-router-dom' import { motion } from 'framer-motion' import {  Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Linkedin, Twitter, Github, ArrowUp, ExternalLink } from 'lucide-react'  const ModernFooter = () => { const currentYear = new Date().getFullYear()  const footerSections = [ { title: 'Services', links: [ { name: 'AI Solutions', href: '/ai-services', icon: Brain }, { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud }, { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield }, { name: 'Edge & IoT', href: '/services/edge-computing-platform', icon: Zap }, { name: 'Digital Transformation', href: '/it-services', icon: Users } ] }, { title: 'Company', links: [ { name: 'About Us', href: '/about' }, { name: 'Our Team', href: '/about#team' }, { name: 'Careers', href: '/careers' }, { name: 'News & Updates', href: '/news' }, { name: 'Case Studies', href: '/case-studies' } ] }, { title: 'Resources', links: [ { name: 'Documentation', href: '/docs' }, { name: 'API Reference', href: '/api' }, { name: 'Blog', href: '/blog' }, { name: 'Webinars', href: '/webinars' }, { name: 'Support Center', href: '/support' } ] }, { title: 'Legal', links: [ { name: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' }, { name: 'Cookie Policy', href: '/cookies' }, { name: 'GDPR Compliance', href: '/gdpr' }, { name: 'Security', href: '/security' } ] } ]  const socialLinks = [ { name: 'LinkedIn', href: 'https:'''
- import { Link } from 'react-router-dom' import { motion } from 'framer-motion' import {  Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Linkedin, Twitter, Github, ArrowUp, ExternalLink } from 'lucide-react'  const ModernFooter = () => { const currentYear = new Date().getFullYear()  const footerSections = [ { title: 'Services', links: [ { nam,
-    e: 'AI Solutions', href: '/ai-services', icon: Brain }, { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud }, { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield }, { name: 'Edge & IoT', href: '/services/edge-computing-platform', icon: Zap }, { name: 'Digital Transformation', href: '/it-services', icon: Users } ] }, { title: 'Company', links: [ { nam,
-    e: 'About Us', href: '/about' }, { name: 'Our Team', href: '/about#team' }, { name: 'Careers', href: '/careers' }, { name: 'News & Updates', href: '/news' }, { name: 'Case Studies', href: '/case-studies' } ] }, { title: 'Resources', links: [ { nam,
-    e: 'Documentation', href: '/docs' }, { name: 'API Reference', href: '/api' }, { name: 'Blog', href: '/blog' }, { name: 'Webinars', href: '/webinars' }, { name: 'Support Center', href: '/support' } ] }, { title: 'Legal', links: [ { nam,
-    e: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' }, { name: 'Cookie Policy', href: '/cookies' }, { name: 'GDPR Compliance', href: '/gdpr' }, { name: 'Security', href: '/security' } ] } ]  const socialLinks = [ { name: 'LinkedIn', href: 'http;
-    s:''';
- import { Link } from 'react-router-dom' import { motion } from 'framer-motion' import {  Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Linkedin, Twitter, Github, ArrowUp, ExternalLink } from 'lucide-react'  const ModernFooter = () => { const currentYear = new Date().getFullYear()  const footerSections = [ { title: 'Services', links: [ { name: 'AI Solutions', href: '/ai-services', icon: Brain }, { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud }, { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield }, { name: 'Edge & IoT', href: '/services/edge-computing-platform', icon: Zap }, { name: 'Digital Transformation', href: '/it-services', icon: Users } ] }, { title: 'Company', links: [ { name: 'About Us', href: '/about' }, { name: 'Our Team', href: '/about#team' }, { name: 'Careers', href: '/careers' }, { name: 'News & Updates', href: '/news' }, { name: 'Case Studies', href: '/case-studies' } ] }, { title: 'Resources', links: [ { name: 'Documentation', href: '/docs' }, { name: 'API Reference', href: '/api' }, { name: 'Blog', href: '/blog' }, { name: 'Webinars', href: '/webinars' }, { name: 'Support Center', href: '/support' } ] }, { title: 'Legal', links: [ { name: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' }, { name: 'Cookie Policy', href: '/cookies' }, { name: 'GDPR Compliance', href: '/gdpr' }, { name: 'Security', href: '/security' } ] } ]  const socialLinks = [ { name: 'LinkedIn', href: 'https:'';
 import React from 'react';
-import {SEO } from '@/components/SEO';
+import Link from 'next/link';
+import { 
+  Globe, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Zap, 
+  Users, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Linkedin, 
+  Twitter, 
+  Github, 
+  ArrowUp,
+  Code,
+  Database,
+  Network,
+  Settings,
+  BarChart3,
+  Lock,
+  Cpu,
+  TreePine,
+  Satellite,
+  Car,
+  Heart,
+  Mic,
+  Eye,
+  FileText,
+  Target,
+  TrendingUp,
+  Calendar,
+  MessageSquare,
+  Smartphone,
+  Monitor,
+  Server
+} from 'lucide-react';
 
-export default function ModernFooter() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <SEO title="ModernFooter - Zion Tech Group" description="Professional ModernFooter services by Zion Tech Group" />
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-white mb-8">ModernFooter</h1>
-        <p className="text-gray-300 text-lg">
-          Professional ModernFooter services to help your business grow.
-        </p>
+const ModernFooter = () => {
+  const currentYear = new Date().getFullYear();
+
+  const footerSections = [
+    {
+      title: 'Services',
+      links: [
+        { name: 'AI Services', href: '/ai-services', icon: Brain },
+        { name: 'IT Services', href: '/it-services', icon: Server },
+        { name: 'Micro SaaS', href: '/micro-saas', icon: Code },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
+        { name: 'Cloud Platforms', href: '/cloud-platforms', icon: Cloud },
+        { name: 'Data Analytics', href: '/data-analytics', icon: BarChart3 },
+        { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: Network },
+        { name: 'IoT Solutions', href: '/iot-solutions', icon: Cpu },
+        { name: 'Emerging Tech', href: '/emerging-tech', icon: Zap },
+        { name: 'DevOps & Automation', href: '/devops', icon: Settings },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp },
+        { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu }
+      ]
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'News & Updates', href: '/press' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Contact', href: '/contact' }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Documentation', href: '/docs' },
+        { name: 'API Reference', href: '/api' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Support Center', href: '/support' },
+        { name: 'Pricing Guide', href: '/pricing-guide' },
+        { name: 'Request Quote', href: '/request-quote' }
+      ]
+    },
+    {
+      title: 'Legal',
+      links: [
+        { name: 'Privacy Policy', href: '/privacy' },
+        { name: 'Terms of Service', href: '/terms' },
+        { name: 'Cookie Policy', href: '/cookies' },
+        { name: 'GDPR Compliance', href: '/gdpr' },
+        { name: 'Security', href: '/security' }
+      ]
+    }
+  ];
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+  ];
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <footer className="bg-gray-900 text-white">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center mb-6">
+              <div className="h-10 w-10 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <span className="text-2xl font-bold">Zion Tech Group</span>
+            </div>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading provider of AI solutions, cloud services, and technology consulting. 
+              We help businesses transform through innovative technology and intelligent automation.
+            </p>
+            
+            {/* Contact Info */}
+            <div className="space-y-3">
+              <div className="flex items-center text-gray-300">
+                <Phone className="h-5 w-5 mr-3 text-blue-400" />
+                <a href="tel:+13024640950" className="hover:text-white transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Mail className="h-5 w-5 mr-3 text-blue-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <MapPin className="h-5 w-5 mr-3 text-blue-400" />
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex space-x-4 mt-6">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors"
+                  aria-label={social.name}
+                >
+                  <social.icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Footer Links */}
+          {footerSections.map((section) => (
+            <div key={section.title}>
+              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
+              <ul className="space-y-3">
+                {section.links.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-300 hover:text-white transition-colors flex items-center"
+                    >
+                      {link.icon && <link.icon className="h-4 w-4 mr-2" />}
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex items-center space-x-6 mt-4 md:mt-0">
+              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Privacy
+              </Link>
+              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Terms
+              </Link>
+              <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Cookies
+              </Link>
+              <button
+                onClick={scrollToTop}
+                className="flex items-center text-gray-400 hover:text-white text-sm transition-colors"
+              >
+                Back to top
+                <ArrowUp className="h-4 w-4 ml-1" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
-}
- import { Link } from &apos;react-router-dom&apos; import { motion } from &apos;framer-motion&apos; import {  Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Linkedin, Twitter, Github, ArrowUp, ExternalLink } from &apos;lucide-react&apos;&apos;'  const ModernFooter = () => {} const currentYear = new Date().getFullYear()  const;const;const footerSections = [ { title: &apos;Services&apos;, links: [ { nam,e: &apos;AI Solutions&apos;, href: &apos;/ai-services&apos;, icon: Brain }, { name: &apos;Cloud & DevOps&apos;, href: &apos;/services/cloud-devops&apos;, icon: Cloud }, { name: &apos;Cybersecurity&apos;, href: &apos;/services/ai-compliance-copilot&apos;, icon: Shield }, { name: &apos;Edge & IoT&apos;, href: &apos;/services/edge-computing-platform&apos;, icon: Zap }, { name: &apos;Digital Transformation&apos;, href: &apos;/it-services&apos;, icon: Users } ] }, { title: &apos;Company&apos;, links: [ { nam,e: &apos;About Us&apos;, href: &apos;/about&apos; }, { name: &apos;Our Team&apos;, href: &apos;/about#team&apos; }, { name: &apos;Careers&apos;, href: &apos;/careers&apos; }, { name: &apos;News & Updates&apos;, href: &apos;/news&apos; }, { name: &apos;Case Studies&apos;, href: &apos;/case-studies&apos; } ] }, { title: &apos;Resources&apos;, links: [ { nam,e: &apos;Documentation&apos;, href: &apos;/docs&apos; }, { name: &apos;API Reference&apos;, href: &apos;/api&apos; }, { name: &apos;Blog&apos;, href: &apos;/blog&apos; }, { name: &apos;Webinars&apos;, href: &apos;/webinars&apos; }, { name: &apos;Support Center&apos;, href: &apos;/support&apos; } ] }, { title: &apos;Legal&apos;, links: [ { nam,e: &apos;Privacy Policy&apos;, href: &apos;/privacy&apos; }, { name: &apos;Terms of Service&apos;, href: &apos;/terms&apos; }, { name: &apos;Cookie Policy&apos;, href: &apos;/cookies&apos; }, { name: &apos;GDPR Compliance&apos;, href: &apos;/gdpr&apos; }, { name: &apos;Security&apos;, href: &apos;/security&apos; } ] } ]  ;&apos;const socialLinks = [ { name: &apos;LinkedIn&apos;, href: &apos;http,s:&apos;&apos;
-&apos;}'
- import { Link } from 'react-router-dom' import { motion } from 'framer-motion' import {  Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Linkedin, Twitter, Github, ArrowUp, ExternalLink } from 'lucide-react'  const ModernFooter = () => { const currentYear = new Date().getFullYear()  const footerSections = [ { title: 'Services', links: [ { name: 'AI Solutions', href: '/ai-services', icon: Brain }, { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud }, { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield }, { name: 'Edge & IoT', href: '/services/edge-computing-platform', icon: Zap }, { name: 'Digital Transformation', href: '/it-services', icon: Users } ] }, { title: 'Company', links: [ { name: 'About Us', href: '/about' }, { name: 'Our Team', href: '/about#team' }, { name: 'Careers', href: '/careers' }, { name: 'News & Updates', href: '/news' }, { name: 'Case Studies', href: '/case-studies' } ] }, { title: 'Resources', links: [ { name: 'Documentation', href: '/docs' }, { name: 'API Reference', href: '/api' }, { name: 'Blog', href: '/blog' }, { name: 'Webinars', href: '/webinars' }, { name: 'Support Center', href: '/support' } ] }, { title: 'Legal', links: [ { name: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' }, { name: 'Cookie Policy', href: '/cookies' }, { name: 'GDPR Compliance', href: '/gdpr' }, { name: 'Security', href: '/security' } ] } ]  const socialLinks = [ { name: 'LinkedIn', href: 'https:''';""
- import { Link } from 'react-router-dom' import { motion } from 'framer-motion' import {  Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Linkedin, Twitter, Github, ArrowUp, ExternalLink } from 'lucide-react'  const ModernFooter = () => { const currentYear = new Date().getFullYear()  const footerSections = [ { title: 'Services', links: [ { name: 'AI Solutions', href: '/ai-services', icon: Brain }, { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud }, { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield }, { name: 'Edge & IoT', href: '/services/edge-computing-platform', icon: Zap }, { name: 'Digital Transformation', href: '/it-services', icon: Users } ] }, { title: 'Company', links: [ { name: 'About Us', href: '/about' }, { name: 'Our Team', href: '/about#team' }, { name: 'Careers', href: '/careers' }, { name: 'News & Updates', href: '/news' }, { name: 'Case Studies', href: '/case-studies' } ] }, { title: 'Resources', links: [ { name: 'Documentation', href: '/docs' }, { name: 'API Reference', href: '/api' }, { name: 'Blog', href: '/blog' }, { name: 'Webinars', href: '/webinars' }, { name: 'Support Center', href: '/support' } ] }, { title: 'Legal', links: [ { name: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' }, { name: 'Cookie Policy', href: '/cookies' }, { name: 'GDPR Compliance', href: '/gdpr' }, { name: 'Security', href: '/security' } ] } ]  const socialLinks = [ { name: 'LinkedIn', href: 'https:''';
-;
-;"";
-}}}}
- import { Link } from 'react-router-dom' import { motion } from 'framer-motion' import {  Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Linkedin, Twitter, Github, ArrowUp, ExternalLink }  from 'lucide-react';const ModernFooter = () => { const currentYear = new Date().getFullYear()  const footerSections = [
-  { title: 'Services', links: [ { name: 'AI Solutions', href: '/ai-services', icon: Brain }, { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud }, { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield }, { name: 'Edge & IoT', href: '/services/edge-computing-platform', icon: Zap }, { name: 'Digital Transformation', href: '/it-services', icon: Users } ] }, { title: 'Company', links: [ { name: 'About Us', href: '/about' }, { name: 'Our Team', href: '/about#team' }, { name: 'Careers', href: '/careers' }, { name: 'News & Updates', href: '/news' }, { name: 'Case Studies', href: '/case-studies' } ] }, { title: 'Resources', links: [ { name: 'Documentation', href: '/docs' }, { name: 'API Reference', href: '/api' }, { name: 'Blog', href: '/blog' }, { name: 'Webinars', href: '/webinars' }, { name: 'Support Center', href: '/support' } ] }, { title: 'Legal', links: [ { name: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' }, { name: 'Cookie Policy', href: '/cookies' }, { name: 'GDPR Compliance', href: '/gdpr' }, { name: 'Security', href: '/security' } ] } ]  const socialLinks = [
-  { name: 'LinkedIn', href: 'https:''
- import { Link } from 'react-router-dom' import { motion } from 'framer-motion' import {  Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Linkedin, Twitter, Github, ArrowUp, ExternalLink }  from 'lucide-react';const ModernFooter = () => { const currentYear = new Date().getFullYear()  const footerSections = [
-  { title: 'Services', links: [ { name: 'AI Solutions', href: '/ai-services', icon: Brain }, { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud }, { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield }, { name: 'Edge & IoT', href: '/services/edge-computing-platform', icon: Zap }, { name: 'Digital Transformation', href: '/it-services', icon: Users } ] }, { title: 'Company', links: [ { name: 'About Us', href: '/about' }, { name: 'Our Team', href: '/about#team' }, { name: 'Careers', href: '/careers' }, { name: 'News & Updates', href: '/news' }, { name: 'Case Studies', href: '/case-studies' } ] }, { title: 'Resources', links: [ { name: 'Documentation', href: '/docs' }, { name: 'API Reference', href: '/api' }, { name: 'Blog', href: '/blog' }, { name: 'Webinars', href: '/webinars' }, { name: 'Support Center', href: '/support' } ] }, { title: 'Legal', links: [ { name: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' }, { name: 'Cookie Policy', href: '/cookies' }, { name: 'GDPR Compliance', href: '/gdpr' }, { name: 'Security', href: '/security' } ] } ]  const socialLinks = [
-  { name: 'LinkedIn', href: 'https:'';
-}}}}
+};
+
+export default ModernFooter;

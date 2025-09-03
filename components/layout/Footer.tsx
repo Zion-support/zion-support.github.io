@@ -23,7 +23,7 @@ import {
   Network,
   Target,
   CheckCircle,
-  ExternalLink;
+  ExternalLink
 } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';

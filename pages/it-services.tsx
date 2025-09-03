@@ -1245,7 +1245,37 @@ export default function ITServices() {
       ],
       pricing: '$40,000 - $400,000/month',
       delivery: '24-48 weeks',
-      category: 'Autonomous Systems Services'}
+      category: 'Autonomous Systems Services'},
+    {
+      title: 'AI-Powered IT Service Management (ITSM)',
+      description: 'Intelligent IT service management with AI-driven automation and predictive analytics',
+      icon: Settings,
+      features: [
+        'AI-powered incident management and resolution,Predictive analytics for IT operations,Automated change management and approval workflows,Service catalog and request management,IT asset management and optimization,Integration with existing IT tools and systems'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '6-14 weeks',
+      category: 'ITSM Services'},
+    {
+      title: 'Cybersecurity Operations Center (SOC)',
+      description: '24/7 security operations center and threat monitoring services',
+      icon: Shield,
+      features: [
+        '24/7 security monitoring and incident response,Threat hunting and intelligence analysis,Security incident management and forensics,Vulnerability management and patching,Security awareness training and testing,Compliance monitoring and reporting'
+      ],
+      pricing: '$3,000 - $20,000/month',
+      delivery: '4-8 weeks',
+      category: 'SOC Services'},
+    {
+      title: 'Quantum-Safe Cryptography Implementation',
+      description: 'Post-quantum cryptography solutions to protect against future quantum computing threats',
+      icon: Lock,
+      features: [
+        'Quantum-resistant encryption algorithms,Post-quantum digital signatures,Quantum key distribution (QKD) systems,Hybrid classical-quantum security protocols,Migration planning and implementation,Compliance with NIST post-quantum standards'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'Quantum Security Services'}
   ]
 
   const technologies = [

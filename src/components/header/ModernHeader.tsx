@@ -24,7 +24,10 @@ export function ModernHeader() {
     { name: 'Data Analytics', href: '/data-analytics', description: 'Business intelligence and insights' },
     { name: 'Blockchain Solutions', href: '/blockchain-solutions', description: 'Blockchain and Web3 solutions' },
     { name: 'IoT Solutions', href: '/iot-solutions', description: 'Internet of Things solutions' },
-    { name: 'Emerging Tech', href: '/emerging-tech', description: 'Cutting-edge technology solutions' }
+    { name: 'Emerging Tech', href: '/emerging-tech', description: 'Cutting-edge technology solutions' },
+    { name: 'DevOps & Automation', href: '/devops', description: 'CI/CD and infrastructure automation' },
+    { name: 'Digital Transformation', href: '/digital-transformation', description: 'Business modernization' },
+    { name: 'Quantum Computing', href: '/quantum-computing', description: 'Quantum solutions and consulting' }
   ]
 
   return (
@@ -93,19 +96,19 @@ export function ModernHeader() {
                 
                 {isServicesOpen && (
                   <div
-                    className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
+                    className="absolute top-full left-0 mt-2 w-[600px] bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                     onMouseEnter={() => setIsServicesOpen(true)}
                     onMouseLeave={() => setIsServicesOpen(false)}
                   >
-                    <div className="grid grid-cols-2 gap-4 px-6">
+                    <div className="grid grid-cols-3 gap-3 px-6">
                       {services.map((service) => (
                         <Link
                           key={service.name}
                           href={service.href}
                           className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
                         >
-                          <div className="font-medium text-gray-900">{service.name}</div>
-                          <div className="text-sm text-gray-600">{service.description}</div>
+                          <div className="font-medium text-gray-900 text-sm">{service.name}</div>
+                          <div className="text-xs text-gray-600 mt-1">{service.description}</div>
                         </Link>
                       ))}
                     </div>
