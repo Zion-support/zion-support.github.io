@@ -1,4 +1,13 @@
 :src.pages.disabled/ExpandedServicesPage.jsx;
+<<<<<<< HEAD
+import: React from 'react' export default function ExpandedServicesPage () { const [searchQuery, setSearchQuery] = useState (')  const [selectedCategory, setSelectedCategory] = useState ('all')  const [filteredServices, setFilteredServices] = useState (EXPANDED_SERVICES)  const [sortBy, setSortBy] = useState ('rating')  useEffect ( () => { let filtered = EXPANDED_SERVICES;';
+import: React from 'react' export default function ExpandedServicesPage () { const [searchQuery, setSearchQuery] = useState (')  const [selectedCategory, setSelectedCategory] = useState ('all')  const [filteredServices, setFilteredServices] = useState (EXPANDED_SERVICES)  const [sortBy, setSortBy] = useState ('rating')  useEffect ( () => { let filtered = EXPANDED_SERVICES';''';
+=======
+<<<<<<< HEAD
 import React from 'react' export default function ExpandedServicesPage () { const [searchQuery, setSearchQuery] = useState (')  const [selectedCategory, setSelectedCategory] = useState ('all')  const [filteredServices, setFilteredServices] = useState (EXPANDED_SERVICES)  const [sortBy, setSortBy] = useState ('rating')  useEffect ( () => { let filtered = EXPANDED_SERVICES;
-import React from 'react' export default function ExpandedServicesPage () { const [searchQuery, setSearchQuery] = useState (')  const [selectedCategory, setSelectedCategory] = useState ('all')  const [filteredServices, setFilteredServices] = useState (EXPANDED_SERVICES)  const [sortBy, setSortBy] = useState ('rating')  useEffect ( () => { let filtered = EXPANDED_SERVICES';'';
-;
+import React from 'react' export default function ExpandedServicesPage () { const [searchQuery, setSearchQuery] = useState (')  const [selectedCategory, setSelectedCategory] = useState ('all')  const [filteredServices, setFilteredServices] = useState (EXPANDED_SERVICES)  const [sortBy, setSortBy] = useState ('rating')  useEffect ( () => { let filtered = EXPANDED_SERVICES'''
+=======
+import React  from 'react';export default function ExpandedServicesPage () { const [searchQuery, setSearchQuery] = useState (')  const [selectedCategory, setSelectedCategory] = useState ('all')  const [filteredServices, setFilteredServices] = useState (EXPANDED_SERVICES)  const [sortBy, setSortBy] = useState ('rating')  useEffect ( () => { let filtered = EXPANDED_SERVICES;
+import React  from 'react';export default function ExpandedServicesPage () { const [searchQuery, setSearchQuery] = useState (')  const [selectedCategory, setSelectedCategory] = useState ('all')  const [filteredServices, setFilteredServices] = useState (EXPANDED_SERVICES)  const [sortBy, setSortBy] = useState ('rating')  useEffect ( () => { let filtered = EXPANDED_SERVICES'
+>>>>>>> main
+>>>>>>> main

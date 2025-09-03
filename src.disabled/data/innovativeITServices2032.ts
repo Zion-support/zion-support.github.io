@@ -1,4 +1,4 @@
-export interface InnovativeITService {
+export: interface InnovativeITService {
    id: string;
    title: string;
    description: string;
@@ -26,7 +26,13 @@ export interface InnovativeITService {
    location: string;
    availability: string;
    author: { name: string;
-   id: string;
+   i,
+    d: string;
    avatarUrl?: string;
-   verified: boolean;
-} images: string[] createdAt: string } export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [;
+<<<<<<< HEAD
+   verified: boolea,n} images: string[] createdAt: string, } export: const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [,;
+=======
+   verifie,
+    d: boolean} images: string[] createdA,
+    t: string } export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [;
+>>>>>>> main
