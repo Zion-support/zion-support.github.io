@@ -12,6 +12,11 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'no-undef': 'off',
   },
+  env: {
+    browser: true,
+    node: true,
+    es2021: true,
+  },
   ignorePatterns: [
     'node_modules/',
     '.next/',
