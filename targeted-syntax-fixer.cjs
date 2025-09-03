@@ -5,6 +5,7 @@ const path = require('path');
 
 class TargetedSyntaxFixer {
   constructor() {
+    // eslint-disable-next-line no-undef
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
     this.errors = [];
@@ -12,6 +13,7 @@ class TargetedSyntaxFixer {
 
   log(message) {
     const timestamp = new Date().toISOString();
+    // eslint-disable-next-line no-console, no-undef
     console.log(`[${timestamp}] ${message}`);
   }
 
@@ -138,10 +140,14 @@ class TargetedSyntaxFixer {
 
 // Run the targeted syntax fixer
 const fixer = new TargetedSyntaxFixer();
-fixer.run().then(report => {
+fixer.run().then(() => {
+  // eslint-disable-next-line no-console, no-undef
   console.log("✅ Targeted syntax fixing completed successfully");
+  // eslint-disable-next-line no-undef
   process.exit(0);
 }).catch(error => {
+  // eslint-disable-next-line no-console, no-undef
   console.error("❌ Targeted syntax fixing failed:", error.message);
+  // eslint-disable-next-line no-undef
   process.exit(1);
 });
