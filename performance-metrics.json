@@ -1,16 +1,22 @@
 {
-  "timestamp": "2025-09-03T16:49:40.012Z",
-  "score": 60,
-  "checks": {
-    "buildSize": true,
-    "bundleAnalysis": false,
-    "lighthouseScore": false,
-    "loadTime": true,
-    "memoryUsage": true
+  "timestamp": "2025-09-03T19:23:16.009Z",
+  "bundleSize": {
+    ".next": {
+      "size": 0,
+      "sizeMB": "0.00"
+    },
+    "node_modules": {
+      "size": 536497019,
+      "sizeMB": "511.64"
+    }
   },
-  "recommendations": [
-    "Consider optimizing build size",
-    "Review bundle composition",
-    "Implement code splitting"
-  ]
+  "fileCounts": {
+    ".tsx": 25,
+    ".ts": 0,
+    ".jsx": 0,
+    ".js": 0,
+    ".css": 2,
+    ".json": 0
+  },
+  "recommendations": []
 }
