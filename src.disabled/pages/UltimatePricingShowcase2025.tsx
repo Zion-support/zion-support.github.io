@@ -5,10 +5,25 @@ import React, { useState, useMemo } from;
   'lucide-react' import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from;
   '../data/innovativeMicroSaasServices2025' import { ADVANCED_INNOVATIVE_SERVICES_2025 } from;
   '../data/advancedInnovativeServices2025' import { SPECIALIZED_INNOVATIVE_SERVICES_2025 } from;
+<<<<<<< HEAD
   '../data/specializedInnovativeServices2025'  const UltimatePricingShowcase2025: React.FC = () => { const [activeCategory, setActiveCategory] = useState(
-  'all') const [searchTerm, setSearchTerm] = useState(';
+  'all') const [searchTerm, setSearchTerm] = useState('
   ') const [sortBy, setSortBy] = useState('price
   ') const [viewMode, setViewMode] = useState<'cards;
   ' | 'table;
-  '>('cards;
+  '>('cards
   ') '
+=======
+<<<<<<< HEAD
+  '../data/specializedInnovativeServices2025'  const UltimatePricingShowcase2025: React.FC = () => { const [activeCategory, setActiveCategory] = useState('
+  'all') const [searchTerm, setSearchTerm] = useState(';
+  ') const [sortBy, setSortBy] = useState('price'
+=======
+  '../data/specializedInnovativeServices2025'  const UltimatePricingShowcase2025: React.FC = () => { const [activeCategory, setActiveCategory] = useState(
+  'all') const [searchTerm, setSearchTerm] = useState() const [sortBy, setSortBy] = useState('price
+>>>>>>> main
+  ') const [viewMode, setViewMode] = useState<'cards;
+  ' | 'table;
+  '>('cards;
+  ') ''
+>>>>>>> main

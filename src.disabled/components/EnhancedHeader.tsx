@@ -4,13 +4,25 @@ import { ChevronDown, Menu, X, Zap, Brain, Cloud, Shield } from 'lucide-react';
 
 export const EnhancedHeader: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+<<<<<<< HEAD
+  const [servicesOpen, setServicesOpen] = useState(false)
   const navLinks = [
+=======
+  const [servicesOpen, setServicesOpen] = useState(false);
+<<<<<<< HEAD
+  const navLinks = ['
+>>>>>>> main
     { label: 'Home', href: '/' },
+    {'
+=======
+  const navLinks = [
+  { label: 'Home', href: '/' },
     {
+>>>>>>> main
       label: 'Services',
       href: '/services',
-      dropdown: [{ label: 'All Services', href: '/comprehensive-services-2025', icon: Zap },
+      dropdown: [{ labe,
+    l: 'All Services', href: '/comprehensive-services-2025', icon: Zap },
         { label: 'Micro SAAS', href: '/services/micro-saas', icon: Zap },
         { label: 'AI Services', href: '/services/ai-services', icon: Brain },
         { label: 'IT Services', href: '/services/it-services', icon: Cloud },
@@ -24,33 +36,36 @@ export const EnhancedHeader: React.FC = () => {
     { label: 'Careers', href: '/careers' },
     { label: 'Contact', href: '/contact' }
   ]
-  return(
-    <header className='sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex justify-between items-center h-16'>
-          <Link to='/' className='text-xl sm:text-2xl font-bold text-blue-900 hover:text-blue-700 transition-colors'>
+  return('
+    <header className='sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm>
+      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+        <div className='flex justify-between items-center h-16>
+          <Link to='/' className='text-xl sm:text-2xl font-bold text-blue-900 hove,
+    r:text-blue-700 transition-colors'>
             Zion Tech Group
-          </Link>
-          <nav className='hidden md:flex items-center gap-6'>
-            {navLinks.map((link) => (
+          </Link>'
+          <nav className='hidden m,
+    d:flex items-center gap-6'>
+            {navLinks.map((link) => ('
               <div key={link.href} className='relative'>
                 {link.dropdown ? (
                   <div;
                     className='relative';
                     onMouseEnter={() => setServicesOpen(true)}
                     onMouseLeave={() => setServicesOpen(false)}
-                  >
+                  >'
                     <button className='flex items-center text-gray-700 hover:text-blue-600 transition-colors'>
                       {link.label}
                       <ChevronDown className='w-4 h-4 ml-1' />
                     </button>
-                    {servicesOpen && (
+                    {servicesOpen && ('
                       <div className='absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50'>
                         {link.dropdown.map((item) => (
                           <Link
                             key={item.href}
                             to={item.href}
-                            className='flex items-center px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors'>
+                            className='flex items-center px-4 py-2 text-gray-700 hover:bg-blue-50 hove,
+    r:text-blue-600 transition-colors>
                             <item.icon className='w-4 h-4 mr-3' />
                             {item.label}
                           </Link>
@@ -58,35 +73,39 @@ export const EnhancedHeader: React.FC = () => {
                       </div>
                     )}
                   </div>
-                ) : (
+                ) : ('
                   <Link to={link.href} className='text-gray-700 hover:text-blue-600 transition-colors'>
                     {link.label}
                   </Link>
                 )}
               </div>
             ))}
-            <Link
+            <Link'
               to='/contact';
-              className='hidden lg:inline-flex bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 font-semibold shadow-lg'>
+              className='hidden lg: inline-flex bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hove,
+    r:from-blue-700 hove,
+    r:to-purple-700 transition-all duration-200 font-semibold shadow-lg'>
               Get Started
             </Link>
           </nav>
           <button;
             aria-label='Toggle navigation';
             onClick={() => setMobileOpen((v) => !v)}
-            className='md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+            className='md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hove,
+    r:text-gray-900 hove,
+    r:bg-gray-100''
           >{mobileOpen ? <X className='h-6 w-6' /> : <Menu className='h-6 w-6' />}
           </button>
         </div>
       </div>
-      {mobileOpen && (
-        <div className='md:hidden border-t border-gray-200 bg-white shadow-lg'>
+      {mobileOpen && ('
+        <div className='md:hidden border-t border-gray-200 bg-white shadow-lg>
           <div className='px-4 py-3 space-y-2'>
             {navLinks.map((link) => (
               <div key={link.href}>
                 {link.dropdown ? (
-                  <div>
-                    <div className='text-gray-500 text-sm font-semibold mb-2'>{link.label}</div>
+                  <div>'
+                    <div className='text-gray-500 text-sm font-semibold mb-2'>{link.label}</div>'
                     <div className='ml-4 space-y-1'>
                       {link.dropdown.map((item) => (
                         <Link;
@@ -94,7 +113,7 @@ export const EnhancedHeader: React.FC = () => {
                           to={item.href}
                           className='flex items-center py-2 text-gray-700 hover:text-blue-600';
                           onClick={() => setMobileOpen(false)}
-                        >
+                        >'
                           <item.icon className='w-4 h-4 mr-3' />
                           {item.label}
                         </Link>
@@ -123,3 +142,4 @@ export const EnhancedHeader: React.FC = () => {
       )}
     </header>
   )}
+'

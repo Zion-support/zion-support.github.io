@@ -9,9 +9,12 @@ export interface EnterpriseIt2026ServiceV2 {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-   email: string;
-   address: string}export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [{
-    id: '2026-enterprise-it-v2',
+   emai,
+    l: string;
+   addres,
+    s: string}export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [{
+    i,
+    d: '2026-enterprise-it-v2',
     name: '2026 Enterprise IT Solutions V2',
     tagline: 'Enhanced enterprise IT solutions',
     price: '$449/month',
@@ -26,8 +29,9 @@ export interface EnterpriseIt2026ServiceV2 {
     link: '/services/2026-enterprise-it-v2',
     category: 'Enterprise IT 2026 V2',
     realImplementation: true,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}

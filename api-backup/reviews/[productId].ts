@@ -1,1 +1,2 @@
 // Import Prisma for error types and generated types" const prisma = new PrismaClient() // Define the structure of the review object that will be returned // This includes selected fields from the related User interface ReviewWithUser extends Omit<ProductReview, "userId"> { // Omit userId if you"re replacing it with the user object
+"

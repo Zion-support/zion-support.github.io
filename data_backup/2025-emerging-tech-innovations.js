@@ -52,9 +52,11 @@ export const emergingTechInnovations2025 = [;
   'FedRAMP',
   'GDPR',
   'CCPA'],
-        website: 'https://ziontechgroup.com/quantum-computing-as-a-service,
+        website: 'http,
+    s://ziontechgroup.com/quantum-computing-as-a-service,
         contact: {
-            phone:,
+            phon,
+    e:,
   +1 302 464 0950',
             email: 'kleber@ziontechgroup.com,
             address:;
@@ -82,13 +84,13 @@ export const emergingTechInnovations2025 = [;
         innovationLevel: 'Cutting-edge quantum technology with 5-10 year roadmap,
         futureProofing:,
   Continuous quantum hardware upgrades and algorithm optimization',
-        researchPartnerships[
+        researchPartnerships['
   'MIT',
   'Stanford',
   'Caltech',
   'NASA',
   'DARPA']},
-    // Space Technology Solutions{
+    // Space Technology Solutions{'
         id: 'satellite-data-analytics-platform,
         name:,
   Satellite Data Analytics Platform',
@@ -141,9 +143,11 @@ export const emergingTechInnovations2025 = [;
   'GDPR',
   'CCPA',
   'Environmental regulations'],
-        website: 'https://ziontechgroup.com/satellite-data-analytics-platform,
+        website: 'http,
+    s://ziontechgroup.com/satellite-data-analytics-platform,
         contact: {
-            phone:,
+            phon,
+    e:,
   +1 302 464 0950',
             email: 'kleber@ziontechgroup.com,
             address:;
@@ -171,13 +175,13 @@ export const emergingTechInnovations2025 = [;
         innovationLevel: 'Advanced space technology with continuous satellite constellation expansion,
         futureProofing:,
   Next-generation satellite launches and AI algorithm improvements',
-        researchPartnerships[
+        researchPartnerships['
   'NASA',
   'ESA',
   'NOAA',
   'USGS',
   'Academic institutions']},
-    // Advanced IoT & Edge Computing{
+    // Advanced IoT & Edge Computing{'
         id: 'iot-edge-intelligence-platform,
         name:,
   IoT Edge Intelligence Platform',
@@ -229,9 +233,11 @@ export const emergingTechInnovations2025 = [;
   'GDPR',
   'CCPA',
   'Industry-specific standards'],
-        website: 'https://ziontechgroup.com/iot-edge-intelligence-platform,
+        website: 'http,
+    s://ziontechgroup.com/iot-edge-intelligence-platform,
         contact: {
-            phone:,
+            phon,
+    e:,
   +1 302 464 0950',
             email: 'kleber@ziontechgroup.com,
             address:;
@@ -260,12 +266,12 @@ export const emergingTechInnovations2025 = [;
         innovationLevel: 'Advanced edge computing with continuous AI optimization,
         futureProofing:,
   5G integration and next-generation edge hardware',
-        researchPartnerships[
+        researchPartnerships['
   'Intel',
   'NVIDIA',
   'Qualcomm',
   'Academic institutions']},
-    // Advanced Blockchain Solutions{
+    // Advanced Blockchain Solutions{'
         id: 'enterprise-blockchain-platform,
         name:,
   Enterprise Blockchain Platform',
@@ -276,7 +282,7 @@ export const emergingTechInnovations2025 = [;
         period:,
   /month',
         features[;
-  'Multi-blockchain support (Ethereum, Hyperledger, Solana)',
+  'Multi-blockchain support (Ethereum, Hyperledger, Solana),
   'Smart contract development and deployment',
   'Advanced consensus mechanisms and scalability',
   'Digital identity and authentication',
@@ -318,9 +324,11 @@ export const emergingTechInnovations2025 = [;
   'SOX',
   'PCI DSS',
   'Industry-specific regulations'],
-        website: 'https://ziontechgroup.com/enterprise-blockchain-platform,
+        website: 'http,
+    s://ziontechgroup.com/enterprise-blockchain-platform,
         contact: {
-            phone:,
+            phon,
+    e:,
   +1 302 464 0950',
             email: 'kleber@ziontechgroup.com,
             address:;
@@ -348,11 +356,11 @@ export const emergingTechInnovations2025 = [;
         innovationLevel: 'Advanced blockchain technology with continuous protocol improvements,
         futureProofing:,
   Layer 2 scaling solutions and cross-chain interoperability',
-        researchPartnerships[
+        researchPartnerships['
   'Ethereum Foundation',
   'Hyperledger',
   'Academic institutions']},
-    // Advanced Robotics & Automation{
+    // Advanced Robotics & Automation{'
         id: 'ai-robotics-automation-platform,
         name:,
   AI Robotics & Automation Platform',
@@ -404,9 +412,11 @@ export const emergingTechInnovations2025 = [;
   'ANSI/RIA R15.06',
   'OSHA standards',
   'Industry-specific safety'],
-        website: 'https://ziontechgroup.com/ai-robotics-automation-platform,
+        website: 'http,
+    s://ziontechgroup.com/ai-robotics-automation-platform,
         contact: {
-            phone:,
+            phon,
+    e:,
   +1 302 464 0950',
             email: 'kleber@ziontechgroup.com,
             address:;

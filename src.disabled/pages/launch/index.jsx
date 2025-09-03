@@ -7,4 +7,4 @@ import React from;
   ''; import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'';
   ' import { Input } from '@/components/ui/input;
   ''; import { Label } from '@/components/ui/label;
-  '';';
+  '';;

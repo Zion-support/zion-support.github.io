@@ -34,9 +34,12 @@ export interface EnterpriseITService2029V2 {
    exit: string;
    contact: { mobile: string;
    email: string;
-   website: string;
-   address: string}export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [{
-    id:,
+   websit,
+    e: string;
+   addres,
+    s: string}export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [{
+    i,
+    d:,
   autonomous-devops-platform',
     name: 'Autonomous DevOps Platform,
     description:,
@@ -133,14 +136,15 @@ export interface EnterpriseITService2029V2 {
   Series B funding, $120M valuation',
     exit: 'IPO or enterprise acquisition,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,
   https: //ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709'},
-  {
+  {'
     id: 'quantum-cloud-infrastructure,
     name:,
   Quantum Cloud Infrastructure',
@@ -236,14 +240,15 @@ export interface EnterpriseITService2029V2 {
   Series C funding, $400M valuation',
     exit: 'IPO or cloud acquisition,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,
   https: //ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709'},
-  {
+  {'
     id: 'ai-powered-enterprise-security,
     name:,
   AI-Powered Enterprise Security',
@@ -340,14 +345,15 @@ export interface EnterpriseITService2029V2 {
   Series C funding, $250M valuation',
     exit: 'IPO or security acquisition,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,
   https: //ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709'},
-  {
+  {'
     id: 'autonomous-it-operations-center,
     name:,
   Autonomous IT Operations Center',
@@ -445,7 +451,8 @@ export interface EnterpriseITService2029V2 {
   Series B funding, $180M valuation',
     exit: 'IPO or enterprise acquisition,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,

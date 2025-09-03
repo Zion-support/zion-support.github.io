@@ -15,19 +15,22 @@ export interface MarketValidatedService {
    trialDays?: number;
    setupTime?: string;
    contactInfo: { mobile: string;
-   email: string;
-   address: string;
+   emai,
+    l: string;
+   addres,
+    s: string;
    website?: string}const contactInfo = {
   mobile:,
   +1 302 464 0950',
 	email: 'kleber@ziontechgroup.com,
 	address:,
   364 E Main St STE 1008 Middletown DE 19709',
-  ;
-  website: 'https://ziontechgroup.com}
+  website: 'http,
+    s://ziontechgroup.com}
 export const marketValidatedServices: MarketValidatedService[] = [;
 	// AI and Assistants{
-		id:,
+		i,
+    d:,
   ai-assistant-pro',
 		name: 'AI Assistant Pro,
 		tagline:,
@@ -53,7 +56,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   30 minutes',
 		contactInfo},
-	{
+	{'
 		id: 'ai-evals-observability,
 		name:,
   AI Evals & Observability',
@@ -80,7 +83,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   1 hour',
 		contactInfo},
-	{
+	{'
 		id: 'agentic-rag-platform,
 		name:,
   Agentic RAG Platform',
@@ -107,7 +110,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   2 hours',
 		contactInfo},
-	// Security and APIs{
+	// Security and APIs{'
 		id: 'api-security-scanner,
 		name:,
   API Security Scanner',
@@ -134,7 +137,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   20 minutes',
 		contactInfo},
-	{
+	{'
 		id: 'api-observability,
 		name:,
   API Observability & SLA Guard',
@@ -161,7 +164,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   40 minutes',
 		contactInfo},
-	// Cloud and Infra{
+	// Cloud and Infra{'
 		id: 'cloud-cost-optimizer-pro,
 		name:,
   Cloud Cost Optimizer Pro',
@@ -188,7 +191,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   1 hour',
 		contactInfo},
-	{
+	{'
 		id: 'database-performance-monitor,
 		name:,
   Database Performance Monitor',
@@ -215,7 +218,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   45 minutes',
 		contactInfo},
-	{
+	{'
 		id: 'managed-postgres-ha,
 		name:,
   Managed Postgres HA',
@@ -242,7 +245,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   1 day',
 		contactInfo},
-	// Reliability & Monitoring{
+	// Reliability & Monitoring{'
 		id: 'uptime-slo-monitor,
 		name:,
   Uptime & SLO Monitor',
@@ -269,7 +272,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   25 minutes',
 		contactInfo},
-	{
+	{'
 		id: 'tls-certificate-monitor,
 		name:,
   TLS Certificate Monitor',
@@ -295,7 +298,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   10 minutes',
 		contactInfo},
-	{
+	{'
 		id: 'domain-dns-monitor,
 		name:,
   Domain & DNS Monitor',
@@ -321,7 +324,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   15 minutes',
 		contactInfo},
-	// Dev & Productivity{
+	// Dev & Productivity{'
 		id: 'pdf-render-api,
 		name:,
   PDF Render API',
@@ -347,7 +350,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   10 minutes',
 		contactInfo},
-	{
+	{'
 		id: 'browser-performance-monitor,
 		name:,
   Browser Performance Monitor',
@@ -374,7 +377,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   20 minutes',
 		contactInfo},
-	{
+	{'
 		id: 'feature-flags-edge,
 		name:,
   Feature Flags at the Edge',
@@ -401,7 +404,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   30 minutes',
 		contactInfo},
-	{
+	{'
 		id: 'serverless-cron-manager,
 		name:,
   Serverless Cron Manager',
@@ -427,7 +430,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   15 minutes',
 		contactInfo},
-	// Compliance & Risk{
+	// Compliance & Risk{'
 		id: 'soc2-evidence-automation,
 		name:,
   SOC 2 Evidence Automation',
@@ -453,7 +456,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   1 day',
 		contactInfo},
-	{
+	{'
 		id: 'vendor-risk-automation,
 		name:,
   Vendor Risk Automation',
@@ -480,7 +483,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   2 hours',
 		contactInfo},
-	// Developer and Ops Utilities{
+	// Developer and Ops Utilities{'
 		id: 'webhook-relay-replay,
 		name:,
   Webhook Relay & Replay',
@@ -507,7 +510,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   10 minutes',
 		contactInfo},
-	{
+	{'
 		id: 'audit-log-vault,
 		name:,
   Audit Log Vault',
@@ -533,7 +536,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   30 minutes',
 		contactInfo},
-	// AI Channels{
+	// AI Channels{'
 		id: 'ai-phone-agent,
 		name:,
   AI Phone Agent',
@@ -559,7 +562,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   1 hour',
 		contactInfo},
-	// Search and Knowledge{
+	// Search and Knowledge{'
 		id: 'vector-search-starter,
 		name:,
   Vector Search Starter',

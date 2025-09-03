@@ -28,16 +28,21 @@ export interface AutonomousSystemsRobotics2025 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [;
+review,
+    s: number;export const autonomousSystemsRobotics202,
+    5: AutonomousSystemsRobotics2025[] = [;
   // Autonomous Manufacturing{
-    id:,
+    i,
+    d:,
   autonomous-manufacturing-ai-platform',
     name: 'Autonomous Manufacturing AI Platform,
     tagline:,
@@ -65,9 +70,11 @@ reviews: number;export const autonomousSystemsRobotics2025: AutonomousSystemsRob
     color: 'from-gray-700 to-slate-800,
     textColor:,
   text-gray-300',
-    link: 'https://ziontechgroup.com/autonomous-manufacturing-ai,
+    link: 'http,
+    s://ziontechgroup.com/autonomous-manufacturing-ai,
     marketPosition:;
-  'Leading autonomous manufacturing platform. Traditional manufacturing systems: $25,000+/month. Our AI platform: $8,999/month with 10x better efficiency.,
+  'Leading autonomous manufacturing platform. Traditional manufacturing system,
+    s: $25,000+/month. Our AI platform: $8,999/month with 10x better efficiency.,
   ,
     targetAudience: Manufacturing companies, Industrial organizations, Automotive companies, Electronics manufacturers, Pharmaceutical companies, Food processing companies',
     trialDays: 21,
@@ -106,12 +113,14 @@ reviews: number;export const autonomousSystemsRobotics2025: AutonomousSystemsRob
   250% annual growth',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Comprehensive autonomous manufacturing platform with equipment integration, predictive analytics, and quality control. Includes custom workflow development and equipment integration services.',
@@ -148,9 +157,11 @@ reviews: number;export const autonomousSystemsRobotics2025: AutonomousSystemsRob
     color: 'from-blue-700 to-indigo-800,
     textColor:,
   text-blue-300',
-    link: 'https://ziontechgroup.com/swarm-robotics-platform,
+    link: 'http,
+    s://ziontechgroup.com/swarm-robotics-platform,
     marketPosition:;
-  'Leading swarm robotics platform. Traditional robotics: $50,000+/month. Our platform: $11,999/month with coordinated swarm capabilities.,
+  'Leading swarm robotics platform. Traditional robotic,
+    s: $50,000+/month. Our platform: $11,999/month with coordinated swarm capabilities.,
   ,
     targetAudience: Warehouse companies, Logistics companies, Agricultural companies, Search and rescue organizations, Industrial companies, Research institutions',
     trialDays: 14,
@@ -189,12 +200,14 @@ reviews: number;export const autonomousSystemsRobotics2025: AutonomousSystemsRob
   300% annual growth',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Enterprise-grade swarm robotics platform with robot coordination, task management, and performance analytics. Includes custom robot programming and integration services.',
@@ -231,9 +244,11 @@ reviews: number;export const autonomousSystemsRobotics2025: AutonomousSystemsRob
     color: 'from-green-600 to-emerald-700,
     textColor:,
   text-green-300',
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform,
+    link: 'http,
+    s://ziontechgroup.com/autonomous-vehicle-ai-platform,
     marketPosition:;
-  'Leading autonomous vehicle platform. Traditional autonomous systems: $75,000+/month. Our AI platform: $16,999/month with advanced capabilities.,
+  'Leading autonomous vehicle platform. Traditional autonomous system,
+    s: $75,000+/month. Our AI platform: $16,999/month with advanced capabilities.,
   ,
     targetAudience: Automotive companies, Trucking companies, Drone companies, Industrial vehicle manufacturers, Transportation companies, Technology companies',
     trialDays: 14,
@@ -272,12 +287,14 @@ reviews: number;export const autonomousSystemsRobotics2025: AutonomousSystemsRob
   280% annual growth',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Comprehensive autonomous vehicle platform with perception systems, decision-making algorithms, and safety protocols. Includes custom vehicle integration and safety certification services.',
@@ -314,9 +331,11 @@ reviews: number;export const autonomousSystemsRobotics2025: AutonomousSystemsRob
     color: 'from-purple-600 to-violet-700,
     textColor:,
   text-purple-300',
-    link: 'https://ziontechgroup.com/advanced-robotics-automation-platform,
+    link: 'http,
+    s://ziontechgroup.com/advanced-robotics-automation-platform,
     marketPosition:;
-  'Leading advanced robotics platform. Traditional robotics: $40,000+/month. Our platform: $13,999/month with advanced capabilities.,
+  'Leading advanced robotics platform. Traditional robotic,
+    s: $40,000+/month. Our platform: $13,999/month with advanced capabilities.,
   ,
     targetAudience: Industrial companies, Healthcare organizations, Service companies, Research institutions, Technology companies, Manufacturing companies',
     trialDays: 21,
@@ -355,12 +374,14 @@ reviews: number;export const autonomousSystemsRobotics2025: AutonomousSystemsRob
   220% annual growth',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Enterprise-grade advanced robotics platform with robot control, safety systems, and integration capabilities. Includes custom robot programming and safety certification services.',
@@ -397,9 +418,11 @@ reviews: number;export const autonomousSystemsRobotics2025: AutonomousSystemsRob
     color: 'from-orange-600 to-red-600,
     textColor:,
   text-orange-300',
-    link: 'https://ziontechgroup.com/autonomous-supply-chain-optimization,
+    link: 'http,
+    s://ziontechgroup.com/autonomous-supply-chain-optimization,
     marketPosition:;
-  'Leading autonomous supply chain platform. Traditional supply chain systems: $20,000+/month. Our platform: $7,999/month with AI optimization.,
+  'Leading autonomous supply chain platform. Traditional supply chain system,
+    s: $20,000+/month. Our platform: $7,999/month with AI optimization.,
   ,
     targetAudience: Retail companies, E-commerce companies, Manufacturing companies, Logistics companies, Distribution companies, Technology companies',
     trialDays: 21,
@@ -438,12 +461,14 @@ reviews: number;export const autonomousSystemsRobotics2025: AutonomousSystemsRob
   200% annual growth',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Comprehensive autonomous supply chain platform with predictive analytics, optimization algorithms, and real-time monitoring. Includes custom optimization development and system integration services.',

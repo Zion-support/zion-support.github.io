@@ -5,8 +5,10 @@ import { NextApiRequest, NextApiResponse } from;
    id: string;
    delta: number;
    timestamp: number;
-   url: string;
-   userAgent: string}
+   ur,
+    l: string;
+   userAgen,
+    t: string}
 export default async function handler(
   req: NextApiRequest, res: NextApiResponse) {
   if (req.method !==,
@@ -17,12 +19,13 @@ export default async function handler(
     const data: WebVitalsData = req.body;
     // Validate required fields;
     if (!data.name || typeof data.value !== 'number;
-  ') {'      return res.status(400).json({ error:;
+  ') {'      return res.status(400).json({ erro,
+    r:;
   'Invalid data format })}
   ';
-    // Log the web vitals data (in production, you&apos;d send this to your analytics service)''    console.log(
-  'Web Vitals: , {
-  '      metric: data.name,'      value: data.value, url: data.url,
+    // Log the web vitals data (in production, you&apos;d send this to your analytics service)'    console.log('
+  'Web Vitals: , {'
+  '      metric: data.name,      value: data.value, url: data.url,
       timestamp: new Date(data.timestamp).toISOString()})
     // Here you would typically send the data to your analytics service;
     // For example: Google Analytics, Mixpanel, or your own analytics database;
@@ -30,6 +33,6 @@ export default async function handler(
   '    res.status(200).json({ '      success: true, message:;
   'Web vitals data received',
   '      metric: data.name, value: data.value})} catch (error) {
-    console.error(
+    console.error('
   'Error processing web vitals: , error);
-  res.status(500).json({ error: 'Internal server error })'  }'}
+  res.status(500).json({ error: 'Internal server error })  }}
