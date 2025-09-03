@@ -1,40 +1,37 @@
 import React from 'react';
-import Layout from '../components/Layout';
 
 const PrivacyPage: React.FC = () => {
   return (
-    <Layout title="Privacy Policy - Zion Tech Group" description="How Zion Tech Group collects, uses, and protects your data.">
-      <section className="bg-white">
-        <div className="container mx-auto px-4 py-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Privacy Policy</h1>
-          <p className="text-gray-700 mb-6">Last updated: 2025-09-03</p>
+    <main style={{ background: '#f8fafc', minHeight: 'calc(100vh - 120px)' }}>
+      <section style={{ background: 'white', maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
+        <h1 style={{ fontSize: 36, fontWeight: 800, marginBottom: 16, color: '#0b1220' }}>Privacy Policy</h1>
+        <p style={{ color: '#64748b', marginBottom: 24 }}>Last updated: 2025-09-03</p>
 
-          <div className="prose max-w-none">
-            <p>We respect your privacy. This policy explains what information we collect and how we use it.</p>
-            <h2>Information We Collect</h2>
-            <ul>
-              <li>Contact details you provide (name, email, phone) via forms</li>
-              <li>Usage analytics (pages visited, approximate location, device/browser)</li>
-              <li>Business information shared to scope projects</li>
+        <div style={{ lineHeight: 1.6, color: '#374151' }}>
+            <p style={{ marginBottom: 24 }}>We respect your privacy. This policy explains what information we collect and how we use it.</p>
+            <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16, color: '#0b1220' }}>Information We Collect</h2>
+            <ul style={{ marginBottom: 24, paddingLeft: 20 }}>
+              <li style={{ marginBottom: 8 }}>Contact details you provide (name, email, phone) via forms</li>
+              <li style={{ marginBottom: 8 }}>Usage analytics (pages visited, approximate location, device/browser)</li>
+              <li style={{ marginBottom: 8 }}>Business information shared to scope projects</li>
             </ul>
-            <h2>How We Use Information</h2>
-            <ul>
-              <li>To respond to inquiries and provide services</li>
-              <li>To improve our website and offerings</li>
-              <li>To comply with legal obligations</li>
+            <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16, color: '#0b1220' }}>How We Use Information</h2>
+            <ul style={{ marginBottom: 24, paddingLeft: 20 }}>
+              <li style={{ marginBottom: 8 }}>To respond to inquiries and provide services</li>
+              <li style={{ marginBottom: 8 }}>To improve our website and offerings</li>
+              <li style={{ marginBottom: 8 }}>To comply with legal obligations</li>
             </ul>
-            <h2>Data Sharing</h2>
-            <p>We do not sell personal data. We may share data with service providers under strict agreements (e.g., hosting, analytics) or when required by law.</p>
-            <h2>Security</h2>
-            <p>We use industry-standard safeguards such as encryption in transit, least-privilege access, and regular security reviews.</p>
-            <h2>Your Rights</h2>
-            <p>You may request access, correction, or deletion of your data. Contact us at <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
-            <h2>Contact</h2>
+            <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16, color: '#0b1220' }}>Data Sharing</h2>
+            <p style={{ marginBottom: 24 }}>We do not sell personal data. We may share data with service providers under strict agreements (e.g., hosting, analytics) or when required by law.</p>
+            <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16, color: '#0b1220' }}>Security</h2>
+            <p style={{ marginBottom: 24 }}>We use industry-standard safeguards such as encryption in transit, least-privilege access, and regular security reviews.</p>
+            <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16, color: '#0b1220' }}>Your Rights</h2>
+            <p style={{ marginBottom: 24 }}>You may request access, correction, or deletion of your data. Contact us at <a href="mailto:kleber@ziontechgroup.com" style={{ color: '#22d3ee' }}>kleber@ziontechgroup.com</a>.</p>
+            <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16, color: '#0b1220' }}>Contact</h2>
             <p>Zion Tech Group, 364 E Main St STE 1008, Middletown DE 19709. Phone: +1 302 464 0950</p>
           </div>
-        </div>
       </section>
-    </Layout>
+    </main>
   );
 };
 
