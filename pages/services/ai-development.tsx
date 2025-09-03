@@ -360,7 +360,7 @@ export default function AIDevelopment() {
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss your AI goals and create a custom solution that drives innovation and growth.
+              Let&apos;s discuss your AI goals and create a custom solution that drives innovation and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
