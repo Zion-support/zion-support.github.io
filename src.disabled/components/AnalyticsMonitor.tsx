@@ -10,18 +10,24 @@ import React, { useEffect, useState, useCallback } from;
    sessionId: string;
    userId?: string;
    pageUrl: string;
-   userAgent: string;
-   referrer: string} interface PerformanceMetrics {
+   userAgen,
+    t: string;
+   referre,
+    r: string} interface PerformanceMetrics {
    fcp: number;
    lcp: number;
    fid: number;
    cls: number;
    ttfb: number;
-   domLoad: number;
-   windowLoad: number} interface UserBehavior {
+   domLoa,
+    d: number;
+   windowLoa,
+    d: number} interface UserBehavior {
    pageViews: number;
    sessionDuration: number;
    bounceRate: number;
    conversionRate: number;
-   topPages: string[];
-   userJourney: string[]} export const AnalyticsMonitor: React.FC = () => { const [events, setEvents] = useState<AnalyticsEvent[]>([]) const [performance, setPerformance] = useState<PerformanceMetrics | null>(null) const [userBehavior, setUserBehavior] = useState<UserBehavior>({ pageViews: 0, sessionDuration: 0, bounceRate: 0, conversionRate: 0, topPages: [], userJourney: [] }) const [isTracking, setIsTracking] = useState(false) const [sessionId] = useState(() => generateSessionId()) '
+   topPage,
+    s: string[];
+   userJourne,
+    y: string[]} export const AnalyticsMonitor: React.FC = () => { const [events, setEvents] = useState<AnalyticsEvent[]>([]) const [performance, setPerformance] = useState<PerformanceMetrics | null>(null) const [userBehavior, setUserBehavior] = useState<UserBehavior>({ pageViews: 0, sessionDuration: 0, bounceRate: 0, conversionRate: 0, topPages: [], userJourney: [] }) const [isTracking, setIsTracking] = useState(false) const [sessionId] = useState(() => generateSessionId()) ''

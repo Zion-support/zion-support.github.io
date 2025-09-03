@@ -15,8 +15,10 @@ export interface ZionEmergingTechService2029 {
    link: string;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   technology: string[];
   integrations: string[];
@@ -27,11 +29,14 @@ export interface ZionEmergingTechService2029 {
   growthRate: string;
   launchDate: string;
   customers: number;
-  rating: number;
-  reviews: number}
+  ratin,
+    g: number;
+  review,
+    s: number}
 export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
-  // Space Technology Solutions{
-    id: 'space-tech-satellite-platform',
+  // Space Technology Solutions{'
+    i,
+    d: 'space-tech-satellite-platform',
     name: 'Space Tech Satellite Platform',
     tagline: 'Revolutionary satellite technology for global connectivity',
     price: '$5,999',
@@ -53,17 +58,20 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Improve climate change monitoring',
       'Enhance disaster response capabilities'],
     marketPrice:;
-      '$5,999/month (Enterprise), $3,999/month (Professional), $1,999/month (Starter)',
+      '$5,999/month (Enterprise), $3,999/month (Professional), $1,999/month (Starter),
     category: 'Space',
     icon: '🚀',
     isPopular: true,
     isNew: true,
-    link: 'https://ziontechgroup.com/services/space-tech-satellite-platform',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    link: 'http,
+    s://ziontechgroup.com/services/space-tech-satellite-platform',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     technology: [;
       'CubeSat technology',
@@ -92,7 +100,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     customers: 23,
     rating: 4.9,
     reviews: 45},
-  // Renewable Energy AI Platform{
+  // Renewable Energy AI Platform{'
     id: 'renewable-energy-ai-platform',
     name: 'Renewable Energy AI Platform',
     tagline: 'AI-powered renewable energy optimization and management',
@@ -115,16 +123,19 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Optimize energy storage utilization',
       'Enable smart grid management'],
     marketPrice:;
-      '$2,199/month (Enterprise), $1,399/month (Professional), $699/month (Starter)',
+      '$2,199/month (Enterprise), $1,399/month (Professional), $699/month (Starter),
     category: 'Energy',
     icon: '⚡',
     isPopular: true,
-    link: 'https://ziontechgroup.com/services/renewable-energy-ai-platform',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    link: 'http,
+    s://ziontechgroup.com/services/renewable-energy-ai-platform',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     technology: [;
       'Machine learning algorithms',
@@ -151,7 +162,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     customers: 89,
     rating: 4.8,
     reviews: 67},
-  // Autonomous Vehicle Technology{
+  // Autonomous Vehicle Technology{'
     id: 'autonomous-vehicle-technology',
     name: 'Autonomous Vehicle Technology Platform',
     tagline: 'Next-generation autonomous vehicle systems and infrastructure',
@@ -174,16 +185,19 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Lower transportation costs by 30%',
       'Enable 24/7 autonomous operations'],
     marketPrice:;
-      '$3,999/month (Enterprise), $2,499/month (Professional), $1,199/month (Starter)',
+      '$3,999/month (Enterprise), $2,499/month (Professional), $1,199/month (Starter),
     category: 'Transportation',
     icon: '🚗',
     isPopular: true,
-    link: 'https://ziontechgroup.com/services/autonomous-vehicle-technology',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    link: 'http,
+    s://ziontechgroup.com/services/autonomous-vehicle-technology',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     technology: [;
       'Computer vision',
@@ -209,7 +223,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     customers: 45,
     rating: 4.7,
     reviews: 78},
-  // Biotechnology AI Platform{
+  // Biotechnology AI Platform{'
     id: 'biotech-ai-platform',
     name: 'Biotechnology AI Platform',
     tagline: 'AI-driven biotechnology research and development',
@@ -232,16 +246,19 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Improve drug success rates',
       'Enable personalized treatments'],
     marketPrice:;
-      '$4,299/month (Enterprise), $2,799/month (Professional), $1,399/month (Starter)',
+      '$4,299/month (Enterprise), $2,799/month (Professional), $1,399/month (Starter),
     category: 'Biotech',
     icon: '🧬',
     isPopular: true,
-    link: 'https://ziontechgroup.com/services/biotech-ai-platform',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    link: 'http,
+    s://ziontechgroup.com/services/biotech-ai-platform',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     technology: [;
       'Deep learning',
@@ -271,7 +288,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     customers: 34,
     rating: 4.9,
     reviews: 56},
-  // Advanced Robotics Platform{
+  // Advanced Robotics Platform{'
     id: 'advanced-robotics-platform',
     name: 'Advanced Robotics Platform',
     tagline: 'Intelligent robotics for industrial and service applications',
@@ -294,19 +311,22 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Improve workplace safety',
       'Enable 24/7 operations'],
     marketPrice:;
-      '$2,799/month (Enterprise), $1,799/month (Professional), $899/month (Starter)',
+      '$2,799/month (Enterprise), $1,799/month (Professional), $899/month (Starter),
     category: 'Robotics',
     icon: '🤖',
     isPopular: true,
-    link: 'https://ziontechgroup.com/services/advanced-robotics-platform',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    link: 'http,
+    s://ziontechgroup.com/services/advanced-robotics-platform',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     technology: [;
-      'ROS (Robot Operating System)',
+      'ROS (Robot Operating System),
       'Computer vision',
       'Machine learning',
       'IoT sensors',
@@ -329,7 +349,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     customers: 78,
     rating: 4.8,
     reviews: 89},
-  // Augmented Reality Enterprise Platform{
+  // Augmented Reality Enterprise Platform{'
     id: 'ar-enterprise-platform',
     name: 'Augmented Reality Enterprise Platform',
     tagline: 'Transform business operations with AR technology',
@@ -352,16 +372,19 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Enhance customer engagement',
       'Enable remote collaboration'],
     marketPrice:;
-      '$1,599/month (Enterprise), $999/month (Professional), $499/month (Starter)',
+      '$1,599/month (Enterprise), $999/month (Professional), $499/month (Starter),
     category: 'AR/VR',
     icon: '🥽',
     isPopular: true,
-    link: 'https://ziontechgroup.com/services/ar-enterprise-platform',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    link: 'http,
+    s://ziontechgroup.com/services/ar-enterprise-platform',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     technology: [;
       'Unity 3D',
@@ -393,7 +416,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     customers: 156,
     rating: 4.7,
     reviews: 123},
-  // Quantum Computing as a Service{
+  // Quantum Computing as a Service{'
     id: 'quantum-computing-service',
     name: 'Quantum Computing as a Service',
     tagline: 'Access quantum computing power through the cloud',
@@ -416,16 +439,19 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Reduce infrastructure costs',
       'Enable quantum research and development'],
     marketPrice:;
-      '$3,999/month (Enterprise), $2,499/month (Professional), $1,199/month (Starter)',
+      '$3,999/month (Enterprise), $2,499/month (Professional), $1,199/month (Starter),
     category: 'Quantum',
     icon: '⚛️',
     isPopular: true,
-    link: 'https://ziontechgroup.com/services/quantum-computing-service',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    link: 'http,
+    s://ziontechgroup.com/services/quantum-computing-service',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     technology: [;
       'IBM Qiskit',
@@ -456,7 +482,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     customers: 23,
     rating: 4.9,
     reviews: 34},
-  // Nanotechnology Manufacturing Platform{
+  // Nanotechnology Manufacturing Platform{'
     id: 'nanotech-manufacturing-platform',
     name: 'Nanotechnology Manufacturing Platform',
     tagline: 'Revolutionary nanoscale manufacturing and materials',
@@ -479,16 +505,19 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Advance medical treatments',
       'Improve energy efficiency'],
     marketPrice:;
-      '$4,999/month (Enterprise), $3,199/month (Professional), $1,599/month (Starter)',
+      '$4,999/month (Enterprise), $3,199/month (Professional), $1,599/month (Starter),
     category: 'Nanotech',
     icon: '🔬',
     isPopular: true,
-    link: 'https://ziontechgroup.com/services/nanotech-manufacturing-platform',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    link: 'http,
+    s://ziontechgroup.com/services/nanotech-manufacturing-platform',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     technology: [;
       'Atomic force microscopy',
@@ -518,7 +547,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     customers: 12,
     rating: 4.8,
     reviews: 23},
-  // Smart Cities Infrastructure Platform{
+  // Smart Cities Infrastructure Platform{'
     id: 'smart-cities-infrastructure',
     name: 'Smart Cities Infrastructure Platform',
     tagline: 'Intelligent urban infrastructure and management',
@@ -541,16 +570,19 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Enhance public safety',
       'Optimize resource utilization'],
     marketPrice:;
-      '$2,999/month (Enterprise), $1,999/month (Professional), $999/month (Starter)',
+      '$2,999/month (Enterprise), $1,999/month (Professional), $999/month (Starter),
     category: 'SmartCities',
     icon: '🏙️',
     isPopular: true,
-    link: 'https://ziontechgroup.com/services/smart-cities-infrastructure',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    link: 'http,
+    s://ziontechgroup.com/services/smart-cities-infrastructure',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     technology: [;
       'IoT sensors',
@@ -582,7 +614,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     customers: 45,
     rating: 4.8,
     reviews: 78},
-  // Digital Twin Technology Platform{
+  // Digital Twin Technology Platform{'
     id: 'digital-twin-platform',
     name: 'Digital Twin Technology Platform',
     tagline: 'Create virtual replicas of physical systems',
@@ -605,16 +637,19 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Enable predictive maintenance',
       'Optimize system performance'],
     marketPrice:;
-      '$1,899/month (Enterprise), $1,199/month (Professional), $599/month (Starter)',
+      '$1,899/month (Enterprise), $1,199/month (Professional), $599/month (Starter),
     category: 'DigitalTwin',
     icon: '🔄',
     isPopular: true,
-    link: 'https://ziontechgroup.com/services/digital-twin-platform',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    link: 'http,
+    s://ziontechgroup.com/services/digital-twin-platform',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     technology: [;
       'IoT sensors',
@@ -646,7 +681,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     customers: 89,
     rating: 4.7,
     reviews: 67},
-  // Metaverse Development Platform{
+  // Metaverse Development Platform{'
     id: 'metaverse-development-platform',
     name: 'Metaverse Development Platform',
     tagline: 'Build immersive virtual worlds and experiences',
@@ -669,16 +704,19 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Build virtual communities',
       'Generate new revenue streams'],
     marketPrice:;
-      '$1,299/month (Enterprise), $799/month (Professional), $399/month (Starter)',
+      '$1,299/month (Enterprise), $799/month (Professional), $399/month (Starter),
     category: 'Metaverse',
     icon: '🌍',
     isPopular: true,
-    link: 'https://ziontechgroup.com/services/metaverse-development-platform',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    link: 'http,
+    s://ziontechgroup.com/services/metaverse-development-platform',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     technology: [;
       'Unity 3D',
@@ -709,7 +747,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     customers: 234,
     rating: 4.6,
     reviews: 156}];
-export const getServicesByCategory = (
+export const getServicesByCategory = ('
   category: ZionEmergingTechService2029['category']) => {
   return zionEmergingTechServices2029.filter(
     service => service.category === category)}

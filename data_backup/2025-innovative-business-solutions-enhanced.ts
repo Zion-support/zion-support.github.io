@@ -28,16 +28,21 @@ export interface InnovativeBusinessSolution {
    variant: string;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution[] = [;
+review,
+    s: number;export const innovativeBusinessSolutionsEnhanced202,
+    5: InnovativeBusinessSolution[] = [;
   // AI-Powered Marketing Automation Platform{
-    id:,
+    i,
+    d:,
   ai-marketing-automation-platform',
     name: 'AI Marketing Automation Platform,
     tagline:,
@@ -64,7 +69,8 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced2025: Innovative
     color: 'from-green-600 to-emerald-600,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/ai-marketing-automation,
+    link: 'http,
+    s://ziontechgroup.com/ai-marketing-automation,
     marketPosition:,
   Competes with HubSpot ($45/month), Marketo ($895/month), Pardot ($1,250/month). Our advantage: AI automation increases conversion rates by 45% and reduces customer acquisition costs by 30%.,
     targetAudience:;
@@ -88,12 +94,14 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced2025: Innovative
   19% annual growth',
     variant: 'ai-marketing-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Enterprise-grade marketing automation platform with AI-powered predictive analytics and campaign optimization.',
@@ -129,7 +137,8 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced2025: Innovative
     color: 'from-yellow-600 to-orange-600,
     textColor:,
   text-yellow-400',
-    link: 'https://ziontechgroup.com/ai-sales-intelligence,
+    link: 'http,
+    s://ziontechgroup.com/ai-sales-intelligence,
     marketPosition:,
   Competes with Salesforce ($25/month), Pipedrive ($15/month), HubSpot Sales ($45/month). Our advantage: AI intelligence increases sales conversion by 50% and reduces sales cycle by 35%.,
     targetAudience:;
@@ -153,12 +162,14 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced2025: Innovative
   21% annual growth',
     variant: 'ai-sales-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Intelligent sales platform with AI-powered lead scoring and sales process optimization.',
@@ -194,7 +205,8 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced2025: Innovative
     color: 'from-blue-600 to-indigo-600,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/ai-hr-management,
+    link: 'http,
+    s://ziontechgroup.com/ai-hr-management,
     marketPosition:,
   Competes with BambooHR ($6.19/month), Workday ($45/month), ADP ($59/month). Our advantage: AI automation reduces hiring time by 60% and improves employee retention by 40%.,
     targetAudience:;
@@ -218,12 +230,14 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced2025: Innovative
   18% annual growth',
     variant: 'ai-hr-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Comprehensive HR management platform with AI-powered automation and people analytics capabilities.',
@@ -259,7 +273,8 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced2025: Innovative
     color: 'from-emerald-600 to-teal-600,
     textColor:,
   text-emerald-400',
-    link: 'https://ziontechgroup.com/ai-financial-analytics,
+    link: 'http,
+    s://ziontechgroup.com/ai-financial-analytics,
     marketPosition:,
   Competes with QuickBooks ($30/month), Xero ($30/month), FreshBooks ($15/month). Our advantage: AI analytics improves financial forecasting accuracy by 70% and reduces financial risks by 50%.,
     targetAudience:;
@@ -283,12 +298,14 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced2025: Innovative
   16% annual growth',
     variant: 'ai-finance-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Enterprise-grade financial analytics platform with AI-powered forecasting and risk management.',
@@ -324,7 +341,8 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced2025: Innovative
     color: 'from-purple-600 to-pink-600,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/ai-supply-chain-optimization,
+    link: 'http,
+    s://ziontechgroup.com/ai-supply-chain-optimization,
     marketPosition:,
   Competes with SAP ($108/month), Oracle ($300/month), Infor ($200/month). Our advantage: AI optimization reduces supply chain costs by 25% and improves delivery times by 40%.,
     targetAudience:;
@@ -348,12 +366,14 @@ reviews: number;export const innovativeBusinessSolutionsEnhanced2025: Innovative
   17% annual growth',
     variant: 'ai-supply-chain-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Comprehensive supply chain optimization platform with AI-powered demand forecasting and inventory management.',

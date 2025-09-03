@@ -6,13 +6,15 @@ const EnvironmentSchema = z.object({
     .enum([;
   'development,production,
   ,test']);
-    .default(
+    .default('
   'development'),
-  NEXT_PUBLIC_APP_URL: z.string().url().default(
-  'http://localhost:3000),
+  NEXT_PUBLIC_APP_URL: z.string().url().default('
+  'htt,
+    p://localhos,
+    t:3000),
   NEXT_PUBLIC_APP_NAME: z.string().default(,
   Zion Tech Group'),
-  NEXT_PUBLIC_APP_VERSION: z.string().default(
+  NEXT_PUBLIC_APP_VERSION: z.string().default('
   '1.0.0),
   // Database;
   DATABASE_URL: z.string().optional(),
@@ -124,8 +126,10 @@ const RuntimeConfigSchema = z.object({
 class Configuration {
   private static instance: Configuration;
   private config: z.infer<typeof AppConfigSchema>
-  private runtime: z.infer<typeof RuntimeConfigSchema>
-  private features: z.infer<typeof FeatureFlagsSchema>
+  private runtim,
+    e: z.infer<typeof RuntimeConfigSchema>
+  private feature,
+    s: z.infer<typeof FeatureFlagsSchema>
 ;
   private constructor() {
     this.validateEnvironment();
@@ -144,7 +148,7 @@ class Configuration {
           .map(err => err.path.join('.;
   '));
           .join(',);
-        throw new Error(
+        throw new Error('
           `Environment validation failed. Missing or invalid variables: ${missingVars}`)}
       throw error}
   }
@@ -155,10 +159,11 @@ class Configuration {
       version: env.NEXT_PUBLIC_APP_VERSION,
       url: env.NEXT_PUBLIC_APP_URL,
       environment: env.NODE_ENV,
-      debug: env.NODE_ENV ===;
+      debug: env.NODE_ENV ===;`
   'development',
       features: {
-        analytics: env.NEXT_PUBLIC_ENABLE_ANALYTICS,
+        analytic,
+    s: env.NEXT_PUBLIC_ENABLE_ANALYTICS,
         notifications: env.NEXT_PUBLIC_ENABLE_NOTIFICATIONS,
         pwa: env.NEXT_PUBLIC_ENABLE_PWA,
         performanceMonitoring: env.NEXT_PUBLIC_ENABLE_PERFORMANCE_MONITORING,
@@ -222,7 +227,8 @@ class Configuration {
   public getSummary(): Record<string, any> {
     return {
       app: {
-        name: this.config.name,
+        nam,
+    e: this.config.name,
         version: this.config.version,
         environment: this.config.environment,
         debug: this.config.debug},
@@ -266,12 +272,12 @@ if (typeof window ===;
   // Server-side validation;
   try {
     config.validate();
-    console.log(
+    console.log('
   '[Config] Configuration validated successfully')} catch (error) {
-    console.error(
+    console.error('
   '[Config] Configuration validation failed:', error);
     if (config.isProduction()) {
-      throw new Error(
+      throw new Error('
   'Configuration validation failed in production')}
   }
 }

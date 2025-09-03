@@ -1,5 +1,9 @@
-export interface InnovativeMicroSaasService2032 {
+<<<<<<< HEAD
+export interface InnovativeMicroSaasService2032 {;
   id: string;
+=======
+export interface InnovativeMicroSaasService2032 {id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -18,5 +22,18 @@ export interface InnovativeMicroSaasService2032 {
    roi: string;
    innovationLevel: string;
    contactInfo: {  phone: string;
+<<<<<<< HEAD
+   emai,
+    l: string
+   websit,
+    e: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
+    e: string securit,
+    y: string[]  } competitors?: string[] marketSize?: string aiCapabilities?: string[] quantumFeatures?: string[] blockchainFeatures?: string[] edgeFeatures?: string[] sustainabilityScore?: number complianceStandards?: string[] deploymentOptions?: string[] apiAccess?: boolean customDevelopment?: boolean trainingIncluded?: boolean freeTrial?: boolean moneyBackGuarantee?: boolean sla?: string responseTime?: string availability?: string location?: string image?: string createdAt?: string featured?: boolean trending?: boolean } export const INNOVATIVE_MICRO_SAAS_SERVICES_2032: InnovativeMicroSaasService2032[] = [;
+=======
    email: string
+<<<<<<< HEAD
+   website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string aiCapabilities?: string[] quantumFeatures?: string[] blockchainFeatures?: string[] edgeFeatures?: string[] sustainabilityScore?: number complianceStandards?: string[] deploymentOptions?: string[] apiAccess?: boolean customDevelopment?: boolean trainingIncluded?: boolean freeTrial?: boolean moneyBackGuarantee?: boolean sla?: string responseTime?: string availability?: string location?: string image?: string createdAt?: string featured?: boolean trending?: boolean } export const INNOVATIVE_MICRO_SAAS_SERVICES_2032: InnovativeMicroSaasService2032[] = [;
+=======
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string aiCapabilities?: string[] quantumFeatures?: string[] blockchainFeatures?: string[] edgeFeatures?: string[] sustainabilityScore?: number complianceStandards?: string[] deploymentOptions?: string[] apiAccess?: boolean customDevelopment?: boolean trainingIncluded?: boolean freeTrial?: boolean moneyBackGuarantee?: boolean sla?: string responseTime?: string availability?: string location?: string image?: string createdAt?: string featured?: boolean trending?: boolean } export const INNOVATIVE_MICRO_SAAS_SERVICES_2032: InnovativeMicroSaasService2032[] = [;
+>>>>>>> main
+>>>>>>> main

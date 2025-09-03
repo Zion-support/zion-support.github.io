@@ -41,7 +41,8 @@ const advancedInnovativeServices2025V3 = [;
   'Executives',
   'Consultants'],
         contactInfo: {
-            mobile:;
+            mobil,
+    e:;
   '+1 302 464 0950,
             email:,
   kleber@ziontechgroup.com',
@@ -94,7 +95,7 @@ const advancedInnovativeServices2025V3 = [;
         marketSize: '$4.8B business intelligence market,
         growthRate:,
   30% annual growth'},
-    // AI-Powered Customer Service Automation{
+    // AI-Powered Customer Service Automation{'
         id: 'ai-customer-service-automation,
         name:,
   AI-Powered Customer Service Automation',
@@ -136,7 +137,8 @@ const advancedInnovativeServices2025V3 = [;
   'Support organizations',
   'Enterprises'],
         contactInfo: {
-            mobile:;
+            mobil,
+    e:;
   '+1 302 464 0950,
             email:,
   kleber@ziontechgroup.com',

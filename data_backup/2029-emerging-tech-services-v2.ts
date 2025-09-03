@@ -34,9 +34,12 @@ export interface EmergingTechService2029V2 {
    exit: string;
    contact: { mobile: string;
    email: string;
-   website: string;
-   address: string}export const emergingTechServices2029V2: EmergingTechService2029V2[] = [{
-    id:,
+   websit,
+    e: string;
+   addres,
+    s: string}export const emergingTechServices2029V2: EmergingTechService2029V2[] = [{
+    i,
+    d:,
   quantum-internet-security-gateway',
     name: 'Quantum Internet Security Gateway,
     description:,
@@ -52,7 +55,7 @@ export interface EmergingTechService2029V2 {
     features[;
   'Quantum-resistant encryption algorithms',
   'Post-quantum cryptography',
-  'Quantum key distribution (QKD)',
+  'Quantum key distribution (QKD),
   'Real-time threat detection',
   'Quantum-safe VPN services',
   'Secure quantum communication channels',
@@ -132,14 +135,15 @@ export interface EmergingTechService2029V2 {
   Series C funding, $300M valuation',
     exit: 'IPO or security acquisition,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,
   https: //ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709'},
-  {
+  {'
     id: 'biotech-dna-computing-platform,
     name:,
   Biotech DNA Computing Platform',
@@ -237,14 +241,15 @@ export interface EmergingTechService2029V2 {
   Series B funding, $150M valuation',
     exit: 'IPO or biotech acquisition,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,
   https: //ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709'},
-  {
+  {'
     id: 'quantum-financial-trading-platform,
     name:,
   Quantum Financial Trading Platform',
@@ -341,14 +346,15 @@ export interface EmergingTechService2029V2 {
   Series C funding, $500M valuation',
     exit: 'IPO or financial acquisition,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,
   https: //ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709'},
-  {
+  {'
     id: 'quantum-creativity-studio,
     name:,
   Quantum Creativity Studio',
@@ -444,7 +450,8 @@ export interface EmergingTechService2029V2 {
   Series A funding, $80M valuation',
     exit: 'Acquisition by major creative platform,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,

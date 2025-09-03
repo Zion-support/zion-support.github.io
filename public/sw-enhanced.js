@@ -2,7 +2,8 @@ const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'static-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
 // Assets to cache immediately;
-const STATIC_ASSETS = [
+<<<<<<< HEAD
+const STATIC_ASSETS = ['
   '/',
   '/about',
   '/services',
@@ -13,37 +14,43 @@ const STATIC_ASSETS = [
   '/apple-touch-icon.png',
   '/favicon-32x32.png',
   '/favicon-16x16.png'];
+=======
+const STATIC_ASSETS = [
+  '/,/about,/services,/contact,/offline.html,/manifest.json,/favicon.ico,/apple-touch-icon.png,/favicon-32x32.png,/favicon-16x16.png'];
+>>>>>>> main
 // Assets to cache on demand;
 const CACHE_PATTERNS = [
   /\.(?:png|jpg|jpeg|svg|gif|webp)$/,
   /\.(?:css|js)$/,
   /\.(?:woff|woff2|ttf|eot)$/];
 // Install event - cache static assets;
-self.addEventListener('install', (event) => {
+self.addEventListener('install', (event) => {'
   console.log('Service Worker: Installing...');
   event.waitUntil(
     caches.open(STATIC_CACHE);
-      .then((cache) => {
-        console.log('Service Worker: Caching static assets');
+      .then((cache) => {'
+        console.log('Service Worke,
+    r: Caching static assets');
         return cache.addAll(STATIC_ASSETS)})
-      .then(() => {
+      .then(() => {'
         console.log('Service Worker: Installation complete');
         return self.skipWaiting()})
-      .catch((error) => {
+      .catch((error) => {'
         console.error('Service Worker: Installation failed', error)}))})
 // Activate event - clean up old caches;
-self.addEventListener('activate', (event) => {
+self.addEventListener('activate', (event) => {'
   console.log('Service Worker: Activating...');
   event.waitUntil(
     caches.keys();
       .then((cacheNames) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
-            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Service Worker: Deleting old cache', cacheName);
+            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {'
+              console.log('Service Worke,
+    r: Deleting old cache', cacheName);
               return caches.delete(cacheName)}
           }))})
-      .then(() => {
+      .then(() => {'
         console.log('Service Worker: Activation complete');
         return self.clients.claim()}))})
 // Fetch event - serve from cache or network;
@@ -58,15 +65,15 @@ self.addEventListener('fetch', (event) => {
     return}
   // Handle different types of requests;
   if (isStaticAsset(request.url)) {
-    event.respondWith(handleStaticAsset(request))} else if (isPageRequest(request)) {
-    event.respondWith(handlePageRequest(request))} else {
-    event.respondWith(handleOtherRequest(request))}
+    event.respondWith(handleStaticAsset(request)); else if (isPageRequest(request)) {
+    event.respondWith(handlePageRequest(request)); else {
+    event.respondWith(handleOtherRequest(request));
 })
 // Check if request is for a static asset;
 function isStaticAsset(url) {
-  return CACHE_PATTERNS.some(pattern => pattern.test(url))}
+  return CACHE_PATTERNS.some(pattern => pattern.test(url));
 // Check if request is for a page;
-function isPageRequest(request) {
+function isPageRequest(request) {'
   return request.headers.get('accept')?.includes('text/html')}
 // Handle static assets (images, CSS, JS, fonts);
 async function handleStaticAsset(request) {
@@ -80,8 +87,8 @@ async function handleStaticAsset(request) {
     if (networkResponse.ok) {
       // Cache the response;
       const cache = await caches.open(STATIC_CACHE);
-      cache.put(request, networkResponse.clone())}
-    return networkResponse} catch (error) {
+      cache.put(request, networkResponse.clone());
+    return networkResponse} catch (error) {'
     console.error('Service Worker: Error handling static asset', error);
     return new Response('Asset not available', { status: 404 })}
 }
@@ -93,8 +100,8 @@ async function handlePageRequest(request) {
     if (networkResponse.ok) {
       // Cache the response;
       const cache = await caches.open(DYNAMIC_CACHE);
-      cache.put(request, networkResponse.clone())}
-    return networkResponse} catch (error) {
+      cache.put(request, networkResponse.clone());
+    return networkResponse} catch (error) {'
     console.log('Service Worker: Network failed, trying cache');
     // Try cache as fallback;
     const cachedResponse = await caches.match(request);
@@ -105,25 +112,26 @@ async function handlePageRequest(request) {
     if (offlineResponse) {
       return offlineResponse}
     // Fallback response;
-    return new Response(
+    return new Response('
       `;
       <!DOCTYPE html>
       <html>
         <head>
-          <title>Offline - Zion Tech Group</title>
+          <title>Offline - Zion Tech Group</title>`
           <meta name='viewport' content='width=device-width, initial-scale=1'>
           <style>
-            body { font-family: Arial, sans-serif text-align: center padding: 50px }
+            body { font-family: Arial, sans-serif text-align: center paddin,
+    g: 50px }
             .offline { color: #666 }
           </style>
         </head>
-        <body>
+        <body>'
           <h1 class='offline'>You're offline</h1>
           <p>Please check your internet connection and try again.</p>
         </body>
-      </html>
+      </html>'
       `,
-      {
+      {`
         headers: { 'Content-Type': 'text/html' }
       })}
 }
@@ -135,7 +143,7 @@ async function handleOtherRequest(request) {
     if (networkResponse.ok) {
       // Cache successful responses;
       const cache = await caches.open(DYNAMIC_CACHE);
-      cache.put(request, networkResponse.clone())}
+      cache.put(request, networkResponse.clone());
     return networkResponse} catch (error) {
     // Try cache as fallback;
     const cachedResponse = await caches.match(request);
@@ -145,27 +153,28 @@ async function handleOtherRequest(request) {
     return new Response('Request failed', { status: 503 })}
 }
 // Background sync for offline actions;
-self.addEventListener('sync', (event) => {
+self.addEventListener('sync', (event) => {'
   if (event.tag === 'background-sync') {
-    event.waitUntil(doBackgroundSync())}
+    event.waitUntil(doBackgroundSync());
 })
 async function doBackgroundSync() {
   try {
     // Handle any pending offline actions;
     console.log('Service Worker: Performing background sync');
-    // Example: Sync form submissions;
+    // Exampl,
+    e: Sync form submissions;
     const pendingSubmissions = await getPendingSubmissions();
     for (const submission of pendingSubmissions) {
-      try {
-        await fetch('/api/contact', {
+      try {'
+        await fetch('/api/contact', {'
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(submission.data)})
         // Remove from pending;
-        await removePendingSubmission(submission.id)} catch (error) {
+        await removePendingSubmission(submission.id)} catch (error) {'
         console.error('Service Worker: Failed to sync submission', error)}
     }
-  } catch (error) {
+  } catch (error) {'
     console.error('Service Worker: Background sync failed', error)}
 }
 // Push notifications;
@@ -178,27 +187,29 @@ self.addEventListener('push', (event) => {
       badge: '/favicon-16x16.png',
       vibrate: [100, 50, 100],
       data: {
-        dateOfArrival: Date.now(),
+        dateOfArriva,
+    l: Date.now(),
         primaryKey: data.primaryKey},
       actions: [
-        {
-          action: 'explore',
+        {'
+          actio,
+    n: 'explore',
           title: 'View Details',
           icon: '/favicon-32x32.png'},
-        {
+        {'
           action: 'close',
           title: 'Close',
           icon: '/favicon-32x32.png'}
       ]}
     event.waitUntil(
-      self.registration.showNotification(data.title, options))}
+      self.registration.showNotification(data.title, options));
 })
 // Notification click;
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
   if (event.action === 'explore') {
-    event.waitUntil(
-      clients.openWindow('/'))}
+    event.waitUntil('
+      clients.openWindow('/'));
 })
 // Helper functions for background sync;
 async function getPendingSubmissions() {
@@ -208,7 +219,7 @@ async function removePendingSubmission(id) {
   // In a real app, you would remove from IndexedDB;
   console.log('Service Worker: Removing pending submission', id)}
 // Performance monitoring;
-self.addEventListener('message', (event) => {
+self.addEventListener('message', (event) => {'
   if (event.data && event.data.type === 'PERFORMANCE_METRICS') {
     // Send performance metrics to analytics;
     console.log('Service Worker: Received performance metrics', event.data.metrics)}

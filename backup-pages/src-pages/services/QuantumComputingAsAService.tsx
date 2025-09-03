@@ -1,24 +1,35 @@
 
 const QuantumComputingAsAService: React.FC = (): JSX.Element => {
     {
-      icon: Target,
+      ico,
+    n: Target,
       title:,
   Quantum Simulation',
       description: Molecular modeling, material science, and chemical reaction simulations,
   ,
       color: 'from-indigo-500 to-purple-500}
   ];
-  On-premise deployment options',';Research partnerships';
-      ],';Unlimited quantum computing hours',
+<<<<<<< HEAD
+  On-premise deployment options',;Research partnerships';
+      ],;Unlimited quantum computing hours',
   ';
         'Custom quantum hardware access;
-  ',';
+  ',;
   'Dedicated quantum team',
   ';
         '24/7 phone support;
-  ',';
-  'Custom integrations',';On-premise deployment options',';Research partnerships';
+  ',;
+  'Custom integrations',;On-premise deployment options',;Research partnerships';
+      ],;
+=======
+  On-premise deployment options,;Research partnerships';
+      ],';Unlimited quantum computing hours',
+  Custom quantum hardware access;
+  ',Dedicated quantum team',
+  24/7 phone support;
+  ',Custom integrations,;On-premise deployment options,;Research partnerships';
       ],';
+>>>>>>> main
       cta: 'Contact Sales,
       popular: false}
   ]},
@@ -30,12 +41,18 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       metrics: [;
   '40% cost reduction,Optimal route planning;
   ',Real-time optimization']}
-  ]';Python',Qiskit;
+  ];Python',Qiskit;
   ',Cirq',PennyLane;
   ',Q#',Julia;
-  ',MATLAB',';AWS Braket',Azure Quantum;
+<<<<<<< HEAD
+  ',MATLAB',;AWS Braket',Azure Quantum;
   ',Google Cloud',IBM Quantum;
-  ',';REST APIs;
+  ',;REST APIs;
+=======
+  ',MATLAB,;AWS Braket',Azure Quantum;
+  ',Google Cloud',IBM Quantum;
+  ,;REST APIs;
+>>>>>>> main
   ',GraphQL',Webhooks;
   ',Docker',Kubernetes;
   ';
@@ -46,13 +63,13 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   Immediate Access;
   ',
       description: 'Start using quantum computing today with our cloud-based platform}  ];
-  return()
+  return();
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
-<=
+<='
       <SEO ';
-        title='Quantum Computing as a Service - Zion Tech Group''        description='Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support.'/>{/* Hero Section */}'
-      <section className='relative overflow-hidden py-20'>'
-        <div className='absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20'></div>'
+        title='Quantum Computing as a Service - Zion Tech Group''        description='Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support.'/>{/* Hero Section */}
+      <section className='relative overflow-hidden py-20>'
+        <div className='absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20'></div>''
         <div className='container mx-auto px-4 relative z-10'>
           <motion.div;
             initial = {
@@ -61,48 +78,61 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
             animate = {
   { opacity: 1,
   y: 0}}
-            transition={{ duration: 0.6 }}';
+<<<<<<< HEAD
+            transition={{ duration: 0.6 }};
             className='text-center max-w-4xl mx-auto';
 ';
+            <div className='flex justify-center mb-6>'
+              <div className='w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center>'
+                <Atom className='w-10 h-10 text-white'  />              </div>'
+            </div>''
+=======
+            transition={{ duration: 0.6 }}';
+            className='text-center max-w-4xl mx-auto;
             <div className='flex justify-center mb-6'>'
               <div className='w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>'
                 <Atom className='w-10 h-10 text-white'  />              </div>
             </div>'
+>>>>>>> main
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
-              Quantum Computing as a Service
-            </h1>'
+              Quantum Computing as a Service'
+            </h1>''
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
               Access the power of quantum computing without the complexity. Solve complex optimization,
-              simulation, and machine learning problems with our enterprise-grade quantum platform.
-            </p>'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              simulation, and machine learning problems with our enterprise-grade quantum platform.'
+            </p>''
+            <div className='flex flex-col sm: flex-row gap-4 justify-center>
               <a';
                 href='/contact';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hove,
+    r:shadow-xl';
                 Start Free Trial';
-                <ArrowRight className='ml-2 w-5 h-5'  />              </a>
-              <a'
+                <ArrowRight className='ml-2 w-5 h-5'  />              </a>'
+              <a''
                 href='#demo';
-                className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600'>
+                className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hove,
+    r:bg-slate-700 transition-all duration-200 border border-slate-600'>
                 Watch Demo
               </a>
             </div>
           </motion.div>
         </div>
-      </section>
-      {/* Key Benefits */}'
-      <section className='py-16 bg-slate-800/50'>'
-        <div className='container mx-auto px-4'>'
-          <div className='text-center mb-16'>'
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-              Transform Your Computing Power
-            </h2>'
+      </section>'
+      {/* Key Benefits */}
+      <section className='py-16 bg-slate-800/50>'
+        <div className='container mx-auto px-4>'
+          <div className='text-center mb-16>'
+            <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
+              Transform Your Computing Power'
+            </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Our quantum computing platform delivers unprecedented performance for complex problems
             </p>
           </div>
 <=;
-          '>          <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'>
+          '>          <div className='grid m,
+    d: grid-cols-2 l,
+    g:grid-cols-4 gap-8'>
             {benefits.map((benefit, index(
               <motion.div;
                 key={index}
@@ -114,31 +144,39 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   y: 0}}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1}}';
+<<<<<<< HEAD
+  delay: index * 0.1}};
                 className='text-center p-6';
 ';
+                <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4>'
+=======
+  delay: index * 0.1}}';
+                className='text-center p-6;
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>'
+>>>>>>> main
                   <benefit.icon className='w-8 h-8 text-white' />
-                </div>'
-                <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>'
+                </div>''
+                <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>''
                 <p className='text-slate-300'>{benefit.description}</p>
               </motion.div>
-            ))}
+            ));
           </div>
         </div>
       </section>
       {/* Features Grid */}
-      <section className='py-16'>
-        <div className='container mx-auto px-4'>
-          <div className='text-center mb-16'>
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
+      <section className='py-16>
+        <div className='container mx-auto px-4>
+          <div className='text-center mb-16>
+            <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
               Advanced Quantum Computing Features
-            </h2>
+            </h2>'
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Everything you need to harness the power of quantum computing for your business
             </p>
-          </div>
-          <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
+          </div>'
+          <div className='grid m,
+    d: grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -152,10 +190,10 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   { duration: 0.6,
   delay: index * 0.1}}
                 className='bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-200';
-                <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
+                <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>`
                   <feature.icon className='w-6 h-6 text-white' />
-                </div>
-                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>
+                </div>'
+                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'
                 <p className='text-slate-300'>{feature.description}</p>
               </motion.div>
             ))}
@@ -163,17 +201,18 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
         </div>
       </section>
       {/* Pricing Section */}
-      <section className='py-16 bg-slate-800/50'>
-        <div className='container mx-auto px-4'>
-          <div className='text-center mb-16'>
+      <section className='py-16 bg-slate-800/50>
+        <div className='container mx-auto px-4>
+          <div className='text-center mb-16>
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
               Transparent Pricing for Quantum Computing
-            </h2>
+            </h2>'
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Choose the plan that fits your quantum computing needs. All plans include a 14-day free trial.
             </p>
-          </div>
-          <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto'>
+          </div>'
+          <div className='grid m,
+    d: grid-cols-3 gap-8 max-w-6xl mx-auto'>
             {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
@@ -189,60 +228,64 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 className={`bg-slate-800 rounded-xl p-8 border-2 ${
                   plan.popular;
                     ?,
-  border-purple-500 relative;
+  border-purple-500 relative;`
   ': 'border-slate-700}`}
-                {plan.popular && (
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+                {plan.popular && (`
+                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>
                     <span className='bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular
                     </span>
                   </div>
                 )}
-                <div className='text-center mb-6'>
-                  <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>
-                  <div className='mb-4'>
-                    <span className='text-4xl font-bold text-white'>{plan.price}</span>
+                <div className='text-center mb-6>
+                  <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
+                  <div className='mb-4>
+                    <span className='text-4xl font-bold text-white'>{plan.price}</span>'
                     <span className='text-slate-400'>{plan.period}</span>
-                  </div>
+                  </div>'
                   <p className='text-slate-300'>{plan.description}</p>
-                </div>
+                </div>'
                 <ul className='space-y-3 mb-8'>
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className='flex items-center text-slate-300'>
+                  {plan.features.map((feature, featureIndex) => ('
+                    <li key={featureIndex} className='flex items-center text-slate-300>
                       <CheckCircle className='w-5 h-5 text-purple-500 mr-3 flex-shrink-0'   />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <a
+                <a'
                   href='/contact';
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular;
                       ?,
-  bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hover:to-pink-600;
+  bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hove,
+    r:to-pink-600;`
   ';
-                      : 'bg-slate-700 text-white hover:bg-slate-600}`}
+                      : 'bg-slate-700 text-white hove,
+    r:bg-slate-600}`}
                   {plan.cta}
                 </a>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
-      {/* Features Grid */}'
-      <section className='py-16'>'
-        <div className='container mx-auto px-4'>'
-          <div className='text-center mb-16'>'
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-              Advanced Quantum Computing Features
-            </h2>'
+      </section>`
+      {/* Features Grid */}
+      <section className='py-16>'
+        <div className='container mx-auto px-4>'
+          <div className='text-center mb-16>'
+            <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
+              Advanced Quantum Computing Features'
+            </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Everything you need to harness the power of quantum computing for your business
             </p>
           </div>
-<=
+<='
           ';
-          <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>{features.map(feature: unknown, index: unknown(
+          <div className='grid md: grid-cols-2 l,
+    g:grid-cols-3 gap-8'>{features.map(featur,
+    e: unknown, index: unknown(
 >              <motion.div;
                 key={index}
                 initial = {
@@ -253,31 +296,33 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   y: 0}}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1}}';
+  delay: index * 0.1}};
                 className='bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-200';
-                <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>'
+                <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>''
                   <feature.icon className='w-6 h-6 text-white' />
-                </div>'
-                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'
+                </div>''
+                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>''
                 <p className='text-slate-300'>{feature.description}</p>
-              </motion.div>            ))}
+              </motion.div>            ));
           </div>
         </div>
-      </section>
-      {/* Pricing Section */}'
-      <section className='py-16 bg-slate-800/50'>'
-        <div className='container mx-auto px-4'>'
-          <div className='text-center mb-16'>'
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-              Transparent Pricing for Quantum Computing
-            </h2>'
+      </section>'
+      {/* Pricing Section */}
+      <section className='py-16 bg-slate-800/50>'
+        <div className='container mx-auto px-4>'
+          <div className='text-center mb-16>'
+            <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
+              Transparent Pricing for Quantum Computing'
+            </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Choose the plan that fits your quantum computing needs. All plans include a 14-day free trial.
             </p>
-          </div>
-          '
-          <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto'>
-            {pricingPlans.map(plan: unknown, index: unknown(
+          </div>'
+          ''
+          <div className='grid m,
+    d: grid-cols-3 gap-8 max-w-6xl mx-auto'>
+            {pricingPlans.map(pla,
+    n: unknown, index: unknown(
               <motion.div;
                 key={index}
                 initial = {
@@ -288,64 +333,74 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   y: 0}}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1}}`;
+  delay: index * 0.1}}`;`
                 className={`bg-slate-800 rounded-xl p-8 border-2 ${
                   plan.popular,
-  ?;
-  'border-purple-500 relative'': 'border-slate-700`}`}
+  ?;`
+  'border-purple-500 relative'': 'border-slate-700`}`}`
                 {plan.popular && (';
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'
+                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>'
                     <span className='bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular
                     </span>
                   </div>
                 )}
-'
-                <div className='text-center mb-6'>'
-                  <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
-                  <div className='mb-4'>'
-                    <span className='text-4xl font-bold text-white'>{plan.price}</span>'
-                    <span className='text-slate-400'>{plan.period}</span>
-                  </div>'
+''
+                <div className='text-center mb-6>'
+                  <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
+                  <div className='mb-4>'
+                    <span className='text-4xl font-bold text-white'>{plan.price}</span>''
+                    <span className='text-slate-400'>{plan.period}</span>'
+                  </div>''
                   <p className='text-slate-300'>{plan.description}</p>
-                </div>
-'
-                <ul className='space-y-3 mb-8'>
-                  {plan.features.map((feature, featureIndex) => ('
-                    <li key={featureIndex} className='flex items-center text-slate-300'>'
+                </div>'
+''
+                <ul className='space-y-3 mb-8>
+                  {plan.features.map((feature, featureIndex) => (''
+                    <li key={featureIndex} className='flex items-center text-slate-300>'
                       <CheckCircle className='w-5 h-5 text-purple-500 mr-3 flex-shrink-0'  />
                       {feature}
                     </li>
                   ))}
-                </ul>
-                <a'
-                  href='/contact'`;
+                </ul>'
+                <a''
+                  href='/contact'`;`
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-                    plan.popular,
-  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hover:to-pink-600';
+<<<<<<< HEAD
+                    plan.popular,`
+  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hove,
+    r:to-pink-600';
   ';
+                      : 'bg-slate-700 text-white hove,
+    r:bg-slate-600`}`}
+=======
+                    plan.popular,
+  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hover:to-pink-600;
                       : 'bg-slate-700 text-white hover:bg-slate-600`}`}
+>>>>>>> main
                 >{plan.cta}
                 </a>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
-      {/* Use Cases */}'
-      <section className='py-16'>'
-        <div className='container mx-auto px-4'>'
-          <div className='text-center mb-16'>'
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-              Proven Results Across Industries
-            </h2>'
+      </section>`
+      {/* Use Cases */}
+      <section className='py-16>'
+        <div className='container mx-auto px-4>'
+          <div className='text-center mb-16>'
+            <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
+              Proven Results Across Industries'
+            </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               See how different industries are leveraging quantum computing for breakthrough results
             </p>
-          </div>
-          '
-          <div className='grid md: grid-cols-3 gap-8'>
-            {useCases.map(useCase: unknown, index: unknown
+          </div>'
+          ''
+          <div className='grid m,
+    d: grid-cols-3 gap-8'>
+            {useCases.map(useCas,
+    e: unknown, index: unknown
               <motion.div;
                 key={index}
                 initial = {
@@ -356,14 +411,24 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   y: 0}}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.1}}';
+<<<<<<< HEAD
+  delay: index * 0.1}};
                 className='bg-slate-800 rounded-xl p-6 border border-slate-700';
 ';
+                <h3 className='text-xl font-semibold text-white mb-3'>{useCase.title}</h3>''
+                <p className='text-slate-300 mb-4'>{useCase.description}</p>''
+                <ul className='space-y-2>
+                  {useCase.metrics.map((metric, metricIndex) => (''
+                    <li key={metricIndex} className='flex items-center text-slate-300>'
+=======
+  delay: index * 0.1}}';
+                className='bg-slate-800 rounded-xl p-6 border border-slate-700;
                 <h3 className='text-xl font-semibold text-white mb-3'>{useCase.title}</h3>'
                 <p className='text-slate-300 mb-4'>{useCase.description}</p>'
                 <ul className='space-y-2'>
                   {useCase.metrics.map((metric, metricIndex) => ('
                     <li key={metricIndex} className='flex items-center text-slate-300'>'
+>>>>>>> main
                       <Star className='w-4 h-4 text-yellow-500 mr-2 flex-shrink-0'  />
                       {metric}
                     </li>
@@ -373,21 +438,23 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
             ))}
           </div>
         </div>
-      </section>
-      {/* Integrations */}'
-      <section className='py-16 bg-slate-800/50'>'
-        <div className='container mx-auto px-4'>'
-          <div className='text-center mb-16'>'
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-              Seamless Integrations
-            </h2>'
+      </section>'
+      {/* Integrations */}
+      <section className='py-16 bg-slate-800/50>'
+        <div className='container mx-auto px-4>'
+          <div className='text-center mb-16>'
+            <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
+              Seamless Integrations'
+            </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Connect with your existing development tools and cloud platforms
             </p>
           </div>
 <=;
-          '>          <div className='grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6'>
-            {integrations.map(integration: unknown, index: unknown(
+          '>          <div className='grid grid-cols-2 md: grid-cols-4 l,
+    g:grid-cols-6 gap-6'>
+            {integrations.map(integratio,
+    n: unknown, index: unknown(
               <motion.div;
                 key={index}
                 initial = {
@@ -398,41 +465,54 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   scale: 1}}
                 transition = {
   { duration: 0.6,
-  delay: index * 0.05}}';
+<<<<<<< HEAD
+  delay: index * 0.05}};
                 className='bg-slate-800 rounded-lg p-4 border border-slate-700 text-center hover:border-slate-600 transition-all duration-200';
 ';
+=======
+  delay: index * 0.05}}';
+                className='bg-slate-800 rounded-lg p-4 border border-slate-700 text-center hover:border-slate-600 transition-all duration-200;
+>>>>>>> main
                 <span className='text-slate-300 font-medium'>{integration}</span>
               </motion.div>
-            ))}
+            ));
           </div>
         </div>
-      </section>
-      {/* Security & Compliance */}'
-      <section className='py-16'>'
-        <div className='container mx-auto px-4'>'
-          <div className='text-center mb-16'>'
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-              Enterprise-Grade Security & Compliance
-            </h2>'
+      </section>'
+      {/* Security & Compliance */}
+      <section className='py-16>'
+        <div className='container mx-auto px-4>'
+          <div className='text-center mb-16>'
+            <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
+              Enterprise-Grade Security & Compliance'
+            </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Your quantum computing workloads are protected with the highest security standards
             </p>
-          </div>
-'
-          <div className='grid md:grid-cols-3 gap-8'>
+          </div>'
+''
+          <div className='grid m,
+    d:grid-cols-3 gap-8'>
             <motion.div;
               initial = {
-  { opacity: 0,
+  { opacit,
+    y: 0,
   y: 20}}
               whileInView = {
   { opacity: 1,
   y: 0}}
-              transition={{ duration: 0.6 }}';
+<<<<<<< HEAD
+              transition={{ duration: 0.6 }};
               className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center';
 ';
+              <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4>'
+=======
+              transition={{ duration: 0.6 }}';
+              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center;
               <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4'>'
+>>>>>>> main
                 <Lock className='w-8 h-8 text-white'  />
-              </div>'
+              </div>''
               <h3 className='text-xl font-semibold text-white mb-2'>Quantum-Safe Security</h3>'              <p className='text-slate-300'>Post-quantum cryptography and quantum-resistant encryption protocols</p>
             </motion.div>
             <motion.div;
@@ -444,12 +524,18 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   y: 0}}
               transition = {
   { duration: 0.6,
-  delay: 0.2}}';
+<<<<<<< HEAD
+  delay: 0.2}};
               className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center';
 ';
+              <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4>'
+=======
+  delay: 0.2}}';
+              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center;
               <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>'
+>>>>>>> main
                 <Shield className='w-8 h-8 text-white'  />
-              </div>'
+              </div>''
               <h3 className='text-xl font-semibold text-white mb-2'>SOC 2 Type II</h3>'              <p className='text-slate-300'>SOC 2 Type II certification for enterprise-grade security and reliability</p>
             </motion.div>
             <motion.div;
@@ -461,19 +547,25 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   y: 0}}
               transition = {
   { duration: 0.6,
-  delay: 0.4}}';
+<<<<<<< HEAD
+  delay: 0.4}};
               className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center';
 ';
+              <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4>'
+=======
+  delay: 0.4}}';
+              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center;
               <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>'
+>>>>>>> main
                 <Activity className='w-8 h-8 text-white'  />
-              </div>'
+              </div>''
               <h3 className='text-xl font-semibold text-white mb-2'>Real-Time Monitoring</h3>'              <p className='text-slate-300'>24/7 quantum system monitoring with automated threat detection</p>
             </motion.div>
           </div>
         </div>
-      </section>
-      {/* CTA Section */}'
-      <section className='py-20'>'
+      </section>'
+      {/* CTA Section */}
+      <section className='py-20>'
         <div className='container mx-auto px-4 text-center'>
           <motion.div
             initial = {
@@ -482,71 +574,87 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
             whileInView = {
   { opacity: 1,
   y: 0}}
-            transition={{ duration: 0.6 }}';
+<<<<<<< HEAD
+            transition={{ duration: 0.6 }};
             className='max-w-4xl mx-auto';
 ';
+            <h2 className='text-3xl md: text-4xl font-bold text-white mb-6'>
+              Ready to Harness Quantum Power?'
+            </h2>''
+=======
+            transition={{ duration: 0.6 }}';
+            className='max-w-4xl mx-auto;
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Ready to Harness Quantum Power?
             </h2>'
+>>>>>>> main
             <p className='text-xl text-slate-300 mb-8'>
               Join forward-thinking companies already using quantum computing to solve impossible problems
-            </p>
-'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+            </p>'
+''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8>
               <a';
                 href='/contact';
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl';
                 Start Free Trial';
-                <ArrowRight className='ml-2 w-5 h-5'  />              </a>
-              <a'
+                <ArrowRight className='ml-2 w-5 h-5'  />              </a>'
+              <a''
                 href='tel:+13024640950';
-                className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600';
+<<<<<<< HEAD
+                className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hove,
+    r:bg-slate-700 transition-all duration-200 border border-slate-600';
 ';
+=======
+                className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600;
+>>>>>>> main
                 <Phone className='w-5 h-5 mr-2'  />
                 Call Us
               </a>
-            </div>
-'
-            <div className='flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400'>'
-              <div className='flex items-center'>'
+            </div>'
+''
+            <div className='flex flex-col s,
+    m:flex-row items-center justify-center gap-6 text-slate-400>'
+              <div className='flex items-center>'
                 <CheckCircle className='w-5 h-5 text-purple-500 mr-2'  />
-                <span>14-day free trial</span>
-              </div>'
-              <div className='flex items-center'>'
+                <span>14-day free trial</span>'
+              </div>''
+              <div className='flex items-center>'
                 <CheckCircle className='w-5 h-5 text-purple-500 mr-2'  />
-                <span>No credit card required</span>
-              </div>'
-              <div className='flex items-center'>'
+                <span>No credit card required</span>'
+              </div>''
+              <div className='flex items-center>'
                 <CheckCircle className='w-5 h-5 text-purple-500 mr-2'  />
                 <span>Cancel anytime</span>              </div>
             </div>
           </motion.div>
         </div>
-      </section>
-      {/* Contact Information */}'
-      <section className='py-16 bg-slate-800/50'>'
-        <div className='container mx-auto px-4'>'
-          <div className='max-w-4xl mx-auto text-center'>'
-            <h2 className='text-3xl font-bold text-white mb-8'>Get in Touch</h2>'
-            <div className='grid md:grid-cols-3 gap-8'>'
-              <div className='flex flex-col items-center'>'
+      </section>'
+      {/* Contact Information */}
+      <section className='py-16 bg-slate-800/50>'
+        <div className='container mx-auto px-4>'
+          <div className='max-w-4xl mx-auto text-center>'
+            <h2 className='text-3xl font-bold text-white mb-8'>Get in Touch</h2>''
+            <div className='grid md: grid-cols-3 gap-8>'
+              <div className='flex flex-col items-center>'
                 <Phone className='w-8 h-8 text-purple-500 mb-4'  />'
-                <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>'
+                <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>''
                 <a href='tel:+13024640950' className='text-slate-300 hover:text-white transition-colors'>
                   +1 302 464 0950
-                </a>
-              </div>'
-              <div className='flex flex-col items-center'>'
+                </a>'
+              </div>''
+              <div className='flex flex-col items-center>'
                 <Mail className='w-8 h-8 text-purple-500 mb-4'  />'
-                <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>'
+                <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>''
                 <a href='mailto:kleber@ziontechgroup.com' className='text-slate-300 hover:text-white transition-colors'>
                   kleber@ziontechgroup.com
-                </a>
-              </div>'
-              <div className='flex flex-col items-center'>'
+                </a>'
+              </div>''
+              <div className='flex flex-col items-center>'
                 <ExternalLink className='w-8 h-8 text-purple-500 mb-4'  />'
-                <h3 className='text-xl font-semibold text-white mb-2'>Website</h3>'
-                <a href='https://ziontechgroup.com' target='_blank' rel='noopener noreferrer' className='text-slate-300 hover:text-white transition-colors'>
+                <h3 className='text-xl font-semibold text-white mb-2'>Website</h3>''
+                <a href='http,
+    s://ziontechgroup.com' target='_blank' rel='noopener noreferrer' className='text-slate-300 hove,
+    r:text-white transition-colors'>
                   ziontechgroup.com
                 </a>
               </div>
@@ -556,4 +664,4 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       </section>
     </div>
   )}
-export default QuantumComputingAsAService}}}}}''`
+export default QuantumComputingAsAService}}}}}``

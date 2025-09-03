@@ -1,5 +1,9 @@
-export interface RevolutionaryService2031 {
+<<<<<<< HEAD
+export interface RevolutionaryService2031 {;
   id: string;
+=======
+export interface RevolutionaryService2031 {id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -19,5 +23,18 @@ export interface RevolutionaryService2031 {
    innovationLevel: string;
    contactInfo: {  phone: string;
    email: string;
+<<<<<<< HEAD
+   websit,
+    e: string
+   addres,
+    s: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
+    e: string securit,
+    y: string[]  } competitors?: string[] marketSize?: string } export const REVOLUTIONARY_SERVICES_2031: RevolutionaryService2031[] = [;
+=======
    website: string
+<<<<<<< HEAD
+   address: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string } export const REVOLUTIONARY_SERVICES_2031: RevolutionaryService2031[] = [;
+=======
    address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string } export const REVOLUTIONARY_SERVICES_2031: RevolutionaryService2031[] = [;
+>>>>>>> main
+>>>>>>> main

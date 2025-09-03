@@ -6,11 +6,11 @@ type LinkProps = React.PropsWithChildren<{
   href?: string;
   className?: string;
   onClick?: React.MouseEventHandler<HTMLAnchorElement>}>
-export const Link: React.FC<LinkProps> = ({ to, href, children, className, onClick }) => {
+export const Link: React.FC<LinkProps> = ({ to, href, children, className, onClick }) => {'
   const resolved = to || href || '/'
   return (
     <NextLink href={resolved} legacyBehavior>
-      <a className={className} onClick={onClick}>{children as any}</a>
+      <a className={className} onClick={onClick}>{children}</a>
     </NextLink>
   )}
 export function useLocation() {
@@ -20,15 +20,32 @@ export function useLocation() {
   const hashIndex = asPath.indexOf('#');
   const hash = hashIndex >= 0 ? asPath.substring(hashIndex) : ''
   return {
+<<<<<<< HEAD
+    pathname: path, '
+=======
+<<<<<<< HEAD
     pathname: path, search: query ? `?${query}` : '',
     hash, state: undefined as unknown,
+=======
+<<<<<<< HEAD
+    pathname: path, search: query ? `?${query}` : '',
+    hash, state: undefined as unknown,
+=======
+    pathname: path, 
+>>>>>>> main
+    search: query ? `?${query}` : '',
+    hash, 
+    state: undefined as unknown,
+>>>>>>> main
+>>>>>>> main
     key: 'next'
-  } as any}
+  }}
 export const BrowserRouter: React.FC<React.PropsWithChildren<{}>> = ({ children }) => <>{children}</>
 export const MemoryRouter = BrowserRouter;
 export const HashRouter = BrowserRouter;
 // No-op hooks to satisfy imports if present;
-export const useHistory = () => ({ push: (url: string) => (window.location.href = url) })
+export const useHistory = () => ({ push: (ur,
+    l: string) => (window.location.href = url) })
 export const useParams = () => ({})
 export const NavLink = Link;
-export default {} as any
+export default {} as Record<string, unknown>

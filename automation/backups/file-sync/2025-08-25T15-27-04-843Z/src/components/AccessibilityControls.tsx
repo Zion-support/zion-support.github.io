@@ -22,7 +22,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
         setIsOpen(false);
         setIsExpanded(false)}
     }
-    if (isOpen) {
+    if (isOpen) {'
       document.addEventListener('mousedown;
   ', handleClickOutside);
       return () => document.removeEventListener('mousedown;
@@ -30,22 +30,22 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   }, [isOpen]);
   const togglePanel = () => {
     setIsOpen(!isOpen);
-    if (!isOpen) {
+    if (!isOpen) {'
       announceToScreenReader('Accessibility controls opened;
   ')}
   }
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded)}
   const handlePreferenceChange = (key: keyof typeof preferences, value: boolean) => {
-    savePreferences({ [key]: value })
+    savePreferences({ [key]: value });
     announceToScreenReader(`${key.replace(/([A-Z])/g, ,
-  $1;
+  $1;`
   ').toLowerCase()} ${value ? 'enabled;
   ': 'disabled}`)}
   const getPositionClasses = () => {
     switch (position) {
       case,
-  top-right;
+  top-right;`
   ': ;
         return 'top-4 right-4;
   ';
@@ -65,3 +65,4 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
       )}
     </div>
   )}
+'

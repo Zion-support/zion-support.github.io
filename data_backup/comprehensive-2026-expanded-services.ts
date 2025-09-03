@@ -10,8 +10,10 @@ export interface ComprehensiveService {
    subcategory: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-   email: string;
-   address: string}
+   emai,
+    l: string;
+   addres,
+    s: string}
   link: string;
   icon: string;
   color: string;
@@ -30,15 +32,18 @@ export interface ComprehensiveService {
   growthRate: string;
   launchDate: string;
   customers: number;
-  rating: number;
-  reviews: number}
+  ratin,
+    g: number;
+  review,
+    s: number}
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'}
 export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   // AI & Machine Learning Services{
-    id:,
+    i,
+    d:,
   ai-autonomous-customer-success',
     name: 'AI Autonomous Customer Success,
     tagline:,
@@ -966,7 +971,7 @@ export const serviceCategories = [
     icon: '🤖,
     color:,
   from-blue-600 to-indigo-700'},
-  {
+  {'
     name: 'Cloud & Infrastructure,
     description:,
   Scalable cloud solutions and infrastructure management',
@@ -984,7 +989,7 @@ export const serviceCategories = [
     icon: '📊,
     color:,
   from-purple-600 to-pink-700'},
-  {
+  {'
     name: 'Developer Tools & DevOps,
     description:,
   Development automation and operational excellence',
@@ -1002,7 +1007,7 @@ export const serviceCategories = [
     icon: '🏢,
     color:,
   from-orange-600 to-red-700'},
-  {
+  {'
     name: 'Emerging Technology,
     description:,
   Cutting-edge technology solutions and platforms',

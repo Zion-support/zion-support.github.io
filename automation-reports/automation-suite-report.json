@@ -1,34 +1,110 @@
 {
-  "timestamp": "2025-09-02T22:05:40.018Z",
+<<<<<<< HEAD
+  "timestamp": "2025-09-02T21:03:59.556Z",
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-02T22:42:56.741Z",
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-02T23:26:41.101Z",
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-02T21:07:54.443Z",
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-02T21:31:20.322Z",
+=======
+  "timestamp": "2025-09-03T00:09:23.133Z",
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
   "summary": {
     "total": 8,
-    "successful": 4,
-    "failed": 4
+    "successful": 5,
+    "failed": 3
   },
   "results": [
     {
       "command": "npm run lint:fix",
       "description": "ESLint Fix",
       "success": false,
+<<<<<<< HEAD
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: eslint: not found\n"
+=======
+<<<<<<< HEAD
       "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+=======
+<<<<<<< HEAD
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n`next lint` is deprecated and will be removed in Next.js 16.\nFor new projects, use create-next-app to choose your preferred linter.\nFor existing projects, migrate to the ESLint CLI:\nnpx @next/codemod@canary next-lint-to-eslint-cli .\n\nInvalid Options:\n- Unknown options: useEslintrc, extensions, resolvePluginsRelativeTo, rulePaths, ignorePath, reportUnusedDisableDirectives\n- 'extensions' has been removed.\n- 'resolvePluginsRelativeTo' has been removed.\n- 'ignorePath' has been removed.\n- 'rulePaths' has been removed. Please define your rules using plugins.\n- 'reportUnusedDisableDirectives' has been removed. Please use the 'overrideConfig.linterOptions.reportUnusedDisableDirectives' option instead.\n"
+=======
+<<<<<<< HEAD
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.34.0\n\nESLint couldn't find an eslint.config.(js|mjs|cjs) file.\n\nFrom ESLint v9.0.0, the default configuration file is now eslint.config.js.\nIf you are using a .eslintrc.* file, please follow the migration guide\nto update your configuration file to the new format:\n\nhttps://eslint.org/docs/latest/use/configure/migration-guide\n\nIf you still have problems after following the migration guide, please stop by\nhttps://eslint.org/chat/help to chat with the team.\n\n"
+=======
+<<<<<<< HEAD
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"lint:fix\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T21_31_05_019Z-debug-0.log\n"
+=======
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n`next lint` is deprecated and will be removed in Next.js 16.\nFor new projects, use create-next-app to choose your preferred linter.\nFor existing projects, migrate to the ESLint CLI:\nnpx @next/codemod@canary next-lint-to-eslint-cli .\n\nInvalid next.config.js options detected: \n    Expected 'image/avif' | 'image/webp', received 'image/webp,image/avif' at \"images.formats[0]\"\nSee more info here: https://nextjs.org/docs/messages/invalid-next-config\n"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
     },
     {
       "command": "npm run type-check",
       "description": "TypeScript Type Check",
       "success": false,
-      "error": "spawnSync /bin/sh ENOBUFS"
+      "error": "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: tsc: not found\n"
     },
     {
       "command": "npm run test",
       "description": "Test Suite",
       "success": false,
+<<<<<<< HEAD
+      "error": "Command failed: npm run test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"
+=======
+<<<<<<< HEAD
       "error": "spawnSync /bin/sh ENOBUFS"
+=======
+<<<<<<< HEAD
+      "error": "spawnSync /bin/sh ENOBUFS"
+=======
+      "error": "Command failed: npm run test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nError: Cannot find module 'msw/node'\nRequire stack:\n- /workspace/jest.config.cjs\n- /workspace/node_modules/jest-util/build/requireOrImportModule.js\n- /workspace/node_modules/jest-util/build/index.js\n- /workspace/node_modules/@jest/core/build/FailedTestsInteractiveMode.js\n- /workspace/node_modules/@jest/core/build/plugins/FailedTestsInteractive.js\n- /workspace/node_modules/@jest/core/build/watch.js\n- /workspace/node_modules/@jest/core/build/cli/index.js\n- /workspace/node_modules/@jest/core/build/index.js\n- /workspace/node_modules/jest-cli/build/run.js\n- /workspace/node_modules/jest-cli/build/index.js\n- /workspace/node_modules/jest-cli/bin/jest.js\n- /workspace/node_modules/jest/bin/jest.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at Function.resolve (node:internal/modules/helpers:145:19)\n    at Object.<anonymous> (/workspace/jest.config.cjs:44:27)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
     },
     {
       "command": "npm run build",
       "description": "Build Application",
+<<<<<<< HEAD
+      "success": true,
+      "output": "\n> bolt.new.zion.app@0.1.0 build\n> next build\n\nAttention: Next.js now collects completely anonymous telemetry regarding usage.\nThis information is used to shape Next.js' roadmap and prioritize features.\nYou can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:\nhttps://nextjs.org/telemetry\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n   Downloading swc package @next/swc-linux-x64-gnu... to /home/ubuntu/.cache/next-swc\n   Downloading swc package @next/swc-linux-x64-musl... to /home/ubuntu/.cache/next-swc\n ✓ Compiled successfully in 4.4s\n   Collecting page data ...\n   Generating static pages (0/37) ...\n   Generating static pages (9/37) \r\n   Generating static pages (18/37) \r\n   Generating static pages (27/37) \r\n ✓ Generating static pages (37/37)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                Size  First Load JS\n┌ ○ /                                      3.6 kB          91 kB\n├   /_app                                     0 B        81.7 kB\n├ ○ /404                                    180 B        81.9 kB\n├ ○ /about                                2.68 kB        87.1 kB\n├ ○ /ai-services                          9.06 kB        93.5 kB\n├ ○ /blog                                 2.74 kB        87.1 kB\n├ ○ /careers                              3.19 kB        87.6 kB\n├ ○ /case-studies                         3.73 kB        91.1 kB\n├ ○ /contact                               3.1 kB        84.8 kB\n├ ○ /cookies                              3.69 kB        95.9 kB\n├ ○ /docs                                 3.43 kB        90.8 kB\n├ ○ /help                                 3.47 kB        91.7 kB\n├ ○ /index.p                              1.46 kB        83.2 kB\n├ ○ /it-services                          9.08 kB        93.5 kB\n├ ○ /micro-saas                           9.53 kB        93.9 kB\n├ ○ /NotFound                             3.99 kB         126 kB\n├ ○ /partners                             4.64 kB        96.9 kB\n├ ○ /pricing                              3.17 kB        87.6 kB\n├ ○ /pricing-guide                        5.65 kB         128 kB\n├ ○ /privacy                              2.16 kB        83.9 kB\n├ ○ /services                             13.6 kB          98 kB\n├ ○ /services/ai-development              2.65 kB        90.8 kB\n├ ○ /services/ai-services                 3.44 kB        87.8 kB\n├ ○ /services/cloud-services              2.54 kB        90.7 kB\n├ ○ /services/it-services                 3.13 kB        87.5 kB\n├ ○ /services/micro-saas                  3.48 kB        87.9 kB\n├ ○ /services/web-development             2.69 kB        90.9 kB\n├ ○ /sitemap                              3.85 kB         126 kB\n├ ○ /solutions                            5.57 kB        97.8 kB\n├ ○ /solutions/ai-content-creation         5.1 kB        97.3 kB\n├ ○ /solutions/customer-support           4.29 kB        96.5 kB\n├ ○ /solutions/email-automation           5.02 kB        97.2 kB\n├ ○ /solutions/event-management           4.23 kB        96.5 kB\n├ ○ /solutions/project-management         4.28 kB        96.5 kB\n├ ○ /solutions/workflow-automation         4.2 kB        96.4 kB\n├ ○ /team                                 2.71 kB        90.1 kB\n└ ○ /terms                                2.58 kB        84.3 kB\n+ First Load JS shared by all             81.7 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js  44.8 kB\n  ├ chunks/main-850da7952efed1f7.js       35.9 kB\n  └ other shared chunks (total)           1.02 kB\n\nƒ Middleware                                34 kB\n\n○  (Static)  prerendered as static content\n\n"
+=======
+<<<<<<< HEAD
+      "success": true,
+      "output": "\n> bolt.new.zion.app@0.1.0 build\n> next build\n\nAttention: Next.js now collects completely anonymous telemetry regarding usage.\nThis information is used to shape Next.js' roadmap and prioritize features.\nYou can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:\nhttps://nextjs.org/telemetry\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ⨯ esmExternals\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n   Downloading swc package @next/swc-linux-x64-gnu... to /home/ubuntu/.cache/next-swc\n   Downloading swc package @next/swc-linux-x64-musl... to /home/ubuntu/.cache/next-swc\n ✓ Compiled successfully in 4.6s\n   Collecting page data ...\n   Generating static pages (0/39) ...\n   Generating static pages (9/39) \r\n   Generating static pages (19/39) \r\n   Generating static pages (29/39) \r\n ✓ Generating static pages (39/39)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                   Size  First Load JS\n┌ ○ /                                        5.09 kB         128 kB\n├   /_app                                        0 B        81.8 kB\n├ ○ /404                                     2.43 kB        86.9 kB\n├ ○ /about                                   3.53 kB        91.1 kB\n├ ○ /ai-services                             10.3 kB         133 kB\n├ ƒ /api                                         0 B        81.8 kB\n├ ƒ /api/health                                  0 B        81.8 kB\n├ ○ /blockchain-solutions                    2.31 kB        89.9 kB\n├ ○ /blog                                    2.74 kB        90.4 kB\n├ ○ /careers                                  4.5 kB          89 kB\n├ ○ /case-studies                            4.34 kB        88.8 kB\n├ ○ /contact                                 2.71 kB        90.3 kB\n├ ○ /cookies                                 4.21 kB         127 kB\n├ ○ /developer                               4.18 kB        88.7 kB\n├ ○ /docs                                     3.8 kB        88.3 kB\n├ ○ /help                                    3.88 kB         126 kB\n├ ○ /iot-solutions                           2.49 kB        90.1 kB\n├ ○ /it-services                             9.36 kB        93.8 kB\n├ ○ /micro-saas                              10.3 kB        94.8 kB\n├ ○ /partners                                3.45 kB        87.9 kB\n├ ○ /press                                    3.7 kB        88.2 kB\n├ ○ /pricing-guide                           3.74 kB        88.2 kB\n├ ○ /privacy                                 3.51 kB        91.1 kB\n├ ○ /search (318 ms)                         2.66 kB        87.1 kB\n├ ○ /services (316 ms)                       13.8 kB         137 kB\n├ ○ /services-overview (316 ms)              13.7 kB        98.1 kB\n├ ○ /services/ai-development (316 ms)        4.63 kB         127 kB\n├ ○ /services/cloud-services (316 ms)        3.83 kB         126 kB\n├ ○ /services/web-development (316 ms)        3.5 kB         126 kB\n├ ○ /sitemap (316 ms)                        2.44 kB         126 kB\n├ ○ /solutions                                4.4 kB        97.1 kB\n├ ○ /solutions/ai-content-creation (316 ms)  3.86 kB        96.6 kB\n├ ○ /solutions/customer-support              3.11 kB        95.8 kB\n├ ○ /solutions/email-automation              3.84 kB        96.5 kB\n├ ○ /solutions/event-management              3.05 kB        95.8 kB\n├ ○ /solutions/project-management            3.07 kB        95.8 kB\n├ ○ /solutions/workflow-automation           3.02 kB        95.7 kB\n├ ○ /support                                  4.3 kB        88.8 kB\n├ ○ /team                                    2.42 kB         126 kB\n├ ○ /terms                                   3.84 kB        91.5 kB\n└ ○ /training                                4.59 kB        89.1 kB\n+ First Load JS shared by all                82.5 kB\n  ├ chunks/framework-f31701c9d93f12a4.js     44.8 kB\n  ├ chunks/main-6933f16f9f49566a.js          35.9 kB\n  └ other shared chunks (total)              1.77 kB\n\nƒ Middleware                                   34 kB\n\n○  (Static)   prerendered as static content\nƒ  (Dynamic)  server-rendered on demand\n\n"
+=======
+<<<<<<< HEAD
+      "success": true,
+      "output": "\n> zion-tech-group@0.1.0 build\n> NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ⨯ esmExternals\n     ✓ newNextLinkBehavior\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 4.0s\n   Collecting page data ...\n   Generating static pages (0/19) ...\n   Generating static pages (4/19) \r\n   Generating static pages (9/19) \r\n   Generating static pages (14/19) \r\n ✓ Generating static pages (19/19)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                Size  First Load JS\n┌ ○ /                                        3 kB        88.4 kB\n├   /_app                                     0 B        82.3 kB\n├ ○ /404                                    180 B        82.4 kB\n├ ○ /about                                2.61 kB        91.6 kB\n├ ○ /ai-services                          6.74 kB        92.1 kB\n├ ○ /blog                                  2.9 kB        91.9 kB\n├ ○ /contact                              2.45 kB        91.4 kB\n├ ○ /help                                  3.6 kB        92.6 kB\n├ ○ /index.p                              1.45 kB        83.7 kB\n├ ○ /it-services                          6.66 kB          92 kB\n├ ○ /micro-saas                           7.01 kB        92.4 kB\n├ ○ /NotFound                             40.4 kB         123 kB\n├ ○ /pricing                              3.77 kB        92.7 kB\n├ ○ /privacy                               3.4 kB        92.4 kB\n├ ○ /services                               13 kB        98.4 kB\n├ ○ /services/ai-development              2.87 kB        91.8 kB\n├ ○ /services/cloud-services              2.75 kB        91.7 kB\n├ ○ /services/web-development             2.84 kB        91.8 kB\n└ ○ /terms                                3.79 kB        92.8 kB\n+ First Load JS shared by all             82.3 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js  44.8 kB\n  ├ chunks/main-1c70fbb5f14855b5.js       36.5 kB\n  └ other shared chunks (total)           1.03 kB\n\nƒ Middleware                                34 kB\n\n○  (Static)  prerendered as static content\n\n"
+=======
+<<<<<<< HEAD
+      "success": true,
+      "output": "\n> bolt.new.zion.app@0.1.0 build\n> next build\n\nAttention: Next.js now collects completely anonymous telemetry regarding usage.\nThis information is used to shape Next.js' roadmap and prioritize features.\nYou can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:\nhttps://nextjs.org/telemetry\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 4.0s\n   Collecting page data ...\n   Generating static pages (0/31) ...\n   Generating static pages (7/31) \r\n   Generating static pages (15/31) \r\n   Generating static pages (23/31) \r\n ✓ Generating static pages (31/31)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                Size  First Load JS\n┌ ○ /                                     4.73 kB        92.7 kB\n├   /_app                                     0 B          88 kB\n├ ○ /404                                    180 B        88.2 kB\n├ ○ /about (337 ms)                       2.74 kB        93.1 kB\n├ ○ /ai-services (336 ms)                 8.35 kB        96.4 kB\n├ ○ /blog (336 ms)                        3.14 kB        93.5 kB\n├ ○ /careers (342 ms)                     4.62 kB         101 kB\n├ ○ /contact (335 ms)                      2.7 kB        90.7 kB\n├ ○ /cookies (335 ms)                     3.39 kB        91.4 kB\n├ ○ /help (335 ms)                        3.72 kB          94 kB\n├ ○ /index.p (335 ms)                     1.45 kB        89.5 kB\n├ ○ /it-services                          7.96 kB          96 kB\n├ ○ /micro-saas                           8.75 kB        96.8 kB\n├ ○ /NotFound                             35.5 kB         124 kB\n├ ○ /partners                             3.76 kB         100 kB\n├ ○ /pricing                              3.75 kB        94.1 kB\n├ ○ /pricing-guide                        3.75 kB         102 kB\n├ ○ /privacy                              3.59 kB        93.9 kB\n├ ○ /services                             13.8 kB         104 kB\n├ ○ /services/ai-development              2.95 kB        93.3 kB\n├ ○ /services/cloud-services              2.84 kB        93.2 kB\n├ ○ /services/web-development             3.01 kB        93.3 kB\n├ ○ /sitemap                              3.08 kB        91.1 kB\n├ ○ /solutions                            4.65 kB         101 kB\n├ ○ /solutions/ai-content-creation        4.18 kB         100 kB\n├ ○ /solutions/customer-support           3.41 kB        99.7 kB\n├ ○ /solutions/email-automation           4.06 kB         100 kB\n├ ○ /solutions/event-management           3.29 kB        99.5 kB\n├ ○ /solutions/project-management         3.41 kB        99.7 kB\n├ ○ /solutions/workflow-automation        3.34 kB        99.6 kB\n└ ○ /terms                                3.98 kB        94.3 kB\n+ First Load JS shared by all             90.6 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js  44.8 kB\n  ├ chunks/main-850da7952efed1f7.js       35.9 kB\n  └ other shared chunks (total)           9.92 kB\n\nƒ Middleware                                34 kB\n\n○  (Static)  prerendered as static content\n\n"
+=======
       "success": false,
-      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./components/ui/Button.tsx\nModule parse failed: Identifier 'Button' has already been declared (10:6)\nFile was processed with these loaders:\n * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js\nYou may need an additional loader to handle the result of these loaders.\n|     });\n| }\n> const Button = /*#__PURE__*/ React.forwardRef(({ className, variant = 'default', size = 'default', asChild = false, ...props }, ref)=>{\n|     return /*#__PURE__*/ _jsx(\"button\", {\n|         className: cn('inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50', {\n\nImport trace for requested module:\n./components/ui/Button.tsx\n./pages/careers.tsx\n\n./pages/NotFound.tsx\nError:   \u001b[31mx\u001b[0m Expected '</', got 'jsx text (\n  \u001b[31m|\u001b[0m                 )'\n     ,-[\u001b[36;1;4m/workspace/pages/NotFound.tsx\u001b[0m:140:1]\n \u001b[2m137\u001b[0m |                     >\n \u001b[2m138\u001b[0m |                       <Phone className=\"w-5 h-5 mr-2\" />\n \u001b[2m139\u001b[0m |                       Contact Support\n \u001b[2m140\u001b[0m | \u001b[35;1m,\u001b[0m\u001b[35;1m-\u001b[0m\u001b[35;1m>\u001b[0m                 </a>\n \u001b[2m141\u001b[0m | \u001b[35;1m`\u001b[0m\u001b[35;1m-\u001b[0m\u001b[35;1m>\u001b[0m                 <a\n \u001b[2m142\u001b[0m |                       href=\"mailto:kleber@ziontechgroup.com\"\n \u001b[2m143\u001b[0m |                       className=\"inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors\"\n \u001b[2m144\u001b[0m |                     >\n     `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/NotFound.tsx\n\n./pages/blog.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n    ,-[\u001b[36;1;4m/workspace/pages/blog.tsx\u001b[0m:96:1]\n \u001b[2m93\u001b[0m |   return (\n \u001b[2m94\u001b[0m |     <Layout\n \u001b[2m95\u001b[0m |       title=\"Blog - Zion Tech Group\"\n \u001b[2m96\u001b[0m |       description=\"Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group&apos;s expert team.\"'\n    : \u001b[35;1m                                                                                                                                         ^\u001b[0m\n \u001b[2m97\u001b[0m |     >\n \u001b[2m98\u001b[0m |       {/* Hero Section */}\n \u001b[2m99\u001b[0m |       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">\n    `----\n  \u001b[31mx\u001b[0m Unexpected token `string literal (, ')`. Expected jsx identifier\n    ,-[\u001b[36;1;4m/workspace/pages/blog.tsx\u001b[0m:96:1]\n \u001b[2m93\u001b[0m |   return (\n \u001b[2m94\u001b[0m |     <Layout\n \u001b[2m95\u001b[0m |       title=\"Blog - Zion Tech Group\"\n \u001b[2m96\u001b[0m |       description=\"Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group&apos;s expert team.\"'\n    : \u001b[35;1m                                                                                                                                         ^\u001b[0m\n \u001b[2m97\u001b[0m |     >\n \u001b[2m98\u001b[0m |       {/* Hero Section */}\n \u001b[2m99\u001b[0m |       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/blog.tsx\n\n./pages/contact.tsx\nError:   \u001b[31mx\u001b[0m Unexpected token. Did you mean `{'}'}` or `&rbrace;`?\n     ,-[\u001b[36;1;4m/workspace/pages/contact.tsx\u001b[0m:151:1]\n \u001b[2m148\u001b[0m |                   </a>\n \u001b[2m149\u001b[0m |                   <p className=\"text-sm text-gray-600\">{method.description}</p>\n \u001b[2m150\u001b[0m |                 </div>\n \u001b[2m151\u001b[0m |               ))}\n     : \u001b[35;1m                ^\u001b[0m\n \u001b[2m152\u001b[0m |             </div>\n \u001b[2m153\u001b[0m | \n \u001b[2m154\u001b[0m |             <div className=\"grid grid-cols-1 lg: grid-cols-2 gap-12\">\n     `----\n  \u001b[31mx\u001b[0m Expected '</', got 'jsx text (\n  \u001b[31m|\u001b[0m               ))}\n  \u001b[31m|\u001b[0m             )'\n     ,-[\u001b[36;1;4m/workspace/pages/contact.tsx\u001b[0m:150:1]\n \u001b[2m147\u001b[0m |                         {method.details}\n \u001b[2m148\u001b[0m |                       </a>\n \u001b[2m149\u001b[0m |                       <p className=\"text-sm text-gray-600\">{method.description}</p>\n \u001b[2m150\u001b[0m | \u001b[35;1m,\u001b[0m\u001b[35;1m-\u001b[0m\u001b[35;1m>\u001b[0m                 </div>\n \u001b[2m151\u001b[0m | \u001b[35;1m|\u001b[0m                 ))}\n \u001b[2m152\u001b[0m | \u001b[35;1m`\u001b[0m\u001b[35;1m-\u001b[0m\u001b[35;1m>\u001b[0m             </div>\n \u001b[2m153\u001b[0m |     \n \u001b[2m154\u001b[0m |                 <div className=\"grid grid-cols-1 lg: grid-cols-2 gap-12\">\n \u001b[2m155\u001b[0m |                   {/* Contact Form */}\n     `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/contact.tsx\n\n./pages/index.tsx\nModule parse failed: Identifier 'ArrowRight' has already been declared (8:9)\nFile was processed with these loaders:\n * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js\nYou may need an additional loader to handle the result of these loaders.\n| import { Button } from '../components/ui/Button';\n| import { Card } from '../components/ui/Card';\n> import { ArrowRight, CheckCircle, Star, Zap, Shield, Globe, TrendingUp, Brain, Cloud, Network, Phone, Mail } from \"__barrel_optimize__?names=ArrowRight,Brain,CheckCircle,Cloud,Globe,Mail,Network,Phone,Shield,Star,TrendingUp,Zap!=!lucide-react\";\n| export default function Home() {\n|     const stats = [\n\nImport trace for requested module:\n./pages/index.tsx\n\n\n> Build failed because of webpack errors\n"
+<<<<<<< HEAD
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+=======
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nInvalid next.config.js options detected: \n    Expected 'image/avif' | 'image/webp', received 'image/webp,image/avif' at \"images.formats[0]\"\nSee more info here: https://nextjs.org/docs/messages/invalid-next-config\n"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
     },
     {
       "name": "Error Detection",
@@ -44,18 +120,54 @@
       "result": {
         "issues": [
           {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
             "file": "/workspace/src/components/PerformanceMonitor.tsx",
             "issue": "Potential infinite re-render"
           },
           {
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
             "file": "/workspace/src/components/PerformanceOptimizer.tsx",
             "issue": "Potential N+1 query problem"
           },
           {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+            "file": "/workspace/src/components/disabled/AdvancedAICodeGenerator.jsx",
+=======
+<<<<<<< HEAD
             "file": "/workspace/src/components/accessibility/AccessibilityEnhancer.tsx",
+=======
+            "file": "/workspace/src/components/SecurityHeaders.tsx",
+>>>>>>> main
             "issue": "Potential N+1 query problem"
           },
           {
+<<<<<<< HEAD
+=======
+            "file": "/workspace/src/components/disabled/AdvancedAICodeGenerator.js.jsx",
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
+            "issue": "Potential infinite re-render"
+          },
+          {
+>>>>>>> main
             "file": "/workspace/src/pages/Checkout.jsx",
             "issue": "Potential infinite re-render"
           },
@@ -64,7 +176,23 @@
             "issue": "Potential infinite re-render"
           }
         ],
+<<<<<<< HEAD
+        "count": 4
+=======
+<<<<<<< HEAD
+        "count": 4
+=======
+<<<<<<< HEAD
         "count": 5
+=======
+<<<<<<< HEAD
+        "count": 4
+=======
+        "count": 5
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
       }
     },
     {
@@ -73,7 +201,22 @@
       "result": {
         "issues": [
           {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            "file": "/workspace/src/components/SEO.tsx",
+            "issue": "Potential XSS vulnerability"
+          },
+          {
+>>>>>>> main
             "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
+=======
+            "file": "/workspace/src/components/SEO/SEOHead.tsx",
+            "issue": "Potential XSS vulnerability"
+          },
+          {
+            "file": "/workspace/src/components/seo/SEOHead.tsx",
+>>>>>>> main
             "issue": "Potential XSS vulnerability"
           },
           {
@@ -90,11 +233,10 @@
       "result": {
         "issues": [
           {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
             "file": "/workspace/src/components/ErrorBoundary.tsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/components/PerformanceMonitor.tsx",
             "issue": "Console.log in production code"
           },
           {
@@ -106,7 +248,124 @@
             "issue": "Console.log in production code"
           }
         ],
-        "count": 4
+        "count": 3
+=======
+<<<<<<< HEAD
+            "file": "/workspace/src/components/AICodeGenerator.js.jsx",
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
+            "file": "/workspace/src/components/AICodeGenerator.jsx",
+>>>>>>> main
+            "issue": "Console.log in production code"
+          },
+          {
+<<<<<<< HEAD
+            "file": "/workspace/src/components/EnterpriseDashboard.jsx",
+            "issue": "Console.log in production code"
+          },
+          {
+            "file": "/workspace/src/components/MachineLearningDashboard.jsx",
+            "issue": "Console.log in production code"
+          },
+          {
+            "file": "/workspace/src/hooks/usePerformanceMonitoring.ts",
+            "issue": "Console.log in production code"
+          },
+          {
+            "file": "/workspace/src/pages/Search.tsx",
+            "issue": "TODO/FIXME comment found"
+          }
+        ],
+        "count": 5
+=======
+            "file": "/workspace/src/components/EnterpriseDashboard.js.jsx",
+            "issue": "Console.log in production code"
+          },
+          {
+            "file": "/workspace/src/components/ErrorBoundary.tsx",
+            "issue": "Console.log in production code"
+          },
+          {
+<<<<<<< HEAD
+            "file": "/workspace/src/components/MachineLearningDashboard.js.jsx",
+            "issue": "Console.log in production code"
+          },
+          {
+            "file": "/workspace/src/components/header/LanguageSelector.jsx",
+            "issue": "Console.log in production code"
+          },
+          {
+            "file": "/workspace/src/components/header/UserMenu.jsx",
+            "issue": "Console.log in production code"
+          },
+          {
+            "file": "/workspace/src/hooks/use-toast.js",
+=======
+<<<<<<< HEAD
+=======
+            "file": "/workspace/src/components/MobileExperienceEnhancer.tsx",
+            "issue": "Console.log in production code"
+          },
+          {
+            "file": "/workspace/src/components/PerformanceMonitor.tsx",
+            "issue": "Console.log in production code"
+          },
+          {
+            "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
+            "issue": "Console.log in production code"
+          },
+          {
+>>>>>>> main
+            "file": "/workspace/src/hooks/usePerformanceMonitoring.ts",
+>>>>>>> main
+            "issue": "Console.log in production code"
+          }
+        ],
+        "count": 7
+<<<<<<< HEAD
+=======
+=======
+            "file": "/workspace/src/components/AICodeGenerator.js.jsx",
+            "issue": "Console.log in production code"
+          },
+          {
+<<<<<<< HEAD
+            "file": "/workspace/src/pages/Search.tsx",
+            "issue": "TODO/FIXME comment found"
+          }
+        ],
+        "count": 5
+=======
+            "file": "/workspace/src/components/EnterpriseDashboard.js.jsx",
+            "issue": "Console.log in production code"
+          },
+          {
+            "file": "/workspace/src/components/MachineLearningDashboard.js.jsx",
+            "issue": "Console.log in production code"
+          },
+          {
+            "file": "/workspace/src/components/header/LanguageSelector.jsx",
+            "issue": "Console.log in production code"
+          },
+          {
+            "file": "/workspace/src/components/header/UserMenu.jsx",
+            "issue": "Console.log in production code"
+          },
+          {
+            "file": "/workspace/src/hooks/use-toast.js",
+            "issue": "Console.log in production code"
+          }
+        ],
+        "count": 6
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
       }
     }
   ]

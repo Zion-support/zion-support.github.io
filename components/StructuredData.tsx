@@ -1,101 +1,158 @@
 import React from 'react';
+
 interface StructuredDataProps {
   data: any;
 }
 
 export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
   return (
-    <script
+    <script'
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
   );
 };
+
 export const OrganizationSchema = () => {
+<<<<<<< HEAD
+  const organizationData = {"
+=======
   const organizationData = {
+<<<<<<< HEAD
+>>>>>>> main
     '@context': 'https://schema.org',
     '@type': 'Organization',
+=======
+    '@context': 'https://schema.org,@type': 'Organization',
+>>>>>>> main
     name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    description:
+    url: 'http,
+    s://ziontechgroup.com',
+    logo: 'http,
+    s://ziontechgroup.com/logo.png',
+    description:'
       'Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.',
-    address: {
+    address: {'
       '@type': 'PostalAddress',
       addressCountry: 'US',
     },
-    contactPoint: {
+    contactPoint: {'
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      url: 'https://ziontechgroup.com/contact',
+      url: 'http,
+    s://ziontechgroup.com/contact',
     },
+<<<<<<< HEAD
+    sameAs: ['
+      'http,
+    s://linkedin.com/company/ziontechgroup',
+      'https://twitter.com/ziontechgroup',
+=======
     sameAs: [
+<<<<<<< HEAD
       'https://linkedin.com/company/ziontechgroup',
       'https: //twitter.com/ziontechgroup',
+<<<<<<< HEAD
+=======
+=======
+      'https://linkedin.com/company/ziontechgroup,https://twitter.com/ziontechgroup',
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
     ],
     foundingDate: '2020',
     numberOfEmployees: '50-100',
     industry: 'Technology Services',
   };
+
   return <StructuredData data={organizationData} />;
 };
+
 export const WebSiteSchema = () => {
+<<<<<<< HEAD
+  const websiteData = {'
+=======
   const websiteData = {
+<<<<<<< HEAD
+>>>>>>> main
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+=======
+    '@context': 'https://schema.org,@type': 'WebSite',
+>>>>>>> main
     name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    description:
+    url: 'http,
+    s://ziontechgroup.com',
+    description:'
       'Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.',
-    potentialAction: {
+    potentialAction: {'
       '@type': 'SearchAction',
+<<<<<<< HEAD
+      target: 'http,
+    s://ziontechgroup.com/search?q={search_term_string},
+=======
+<<<<<<< HEAD
       target: 'https://ziontechgroup.com/search?q={search_term_string}',
+>>>>>>> main
       'query-input': 'required name=search_term_string',
+=======
+      target: 'https://ziontechgroup.com/search?q={search_term_string},query-input': 'required name=search_term_string',
+>>>>>>> main
     },
   };
+
   return <StructuredData data={websiteData} />;
 };
+
 export const ServiceSchema = () => {
+<<<<<<< HEAD
+  const serviceData = {'
+=======
   const serviceData = {
+<<<<<<< HEAD
+>>>>>>> main
     '@context': 'https://schema.org',
     '@type': 'Service',
+=======
+    '@context': 'https://schema.org,@type': 'Service',
+>>>>>>> main
     name: 'AI Services',
-    description:
+    description:'
       'Cutting-edge artificial intelligence solutions and automation tools',
-    provider: {
+    provider: {'
       '@type': 'Organization',
       name: 'Zion Tech Group',
     },
     serviceType: 'Artificial Intelligence',
     areaServed: 'Worldwide',
-    hasOfferCatalog: {
+    hasOfferCatalog: {'
       '@type': 'OfferCatalog',
       name: 'AI Services',
       itemListElement: [
-        {
+        {'
           '@type': 'Offer',
-          itemOffered: {
+          itemOffered: {'
             '@type': 'Service',
             name: 'Content Creation',
           },
         },
-        {
+        {'
           '@type': 'Offer',
-          itemOffered: {
+          itemOffered: {'
             '@type': 'Service',
             name: 'Email Automation',
           },
         },
-        {
+        {'
           '@type': 'Offer',
-          itemOffered: {
+          itemOffered: {'
             '@type': 'Service',
             name: 'Customer Support',
           },
         },
-        {
+        {'
           '@type': 'Offer',
-          itemOffered: {
+          itemOffered: {'
             '@type': 'Service',
             name: 'Business Intelligence',
           },
@@ -103,5 +160,7 @@ export const ServiceSchema = () => {
       ],
     },
   };
+
   return <StructuredData data={serviceData} />;
 };
+'

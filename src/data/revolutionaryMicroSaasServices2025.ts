@@ -1,5 +1,9 @@
-export interface RevolutionaryMicroSaasService {
+<<<<<<< HEAD
+export interface RevolutionaryMicroSaasService {;
   id: string;
+=======
+export interface RevolutionaryMicroSaasService {id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -18,5 +22,20 @@ export interface RevolutionaryMicroSaasService {
    roi: string;
    innovationLevel: string;
    contactInfo: {  phone: string;
+<<<<<<< HEAD
+   emai,
+    l: string
+   websit,
+    e: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string securit,
+    y: string[] complianc,
+    e: string[]  } competitors: string[] marketTrend: string aiModel?: string trainingData?: string marketingContent: { headline: string valueProposition: string keyFeature,
+    s: string[] competitiveAdvantage,
+    s: string[] testimonials?: string[] caseStudies?: string[]  } } export const REVOLUTIONARY_MICRO_SAAS_SERVICES_2025: RevolutionaryMicroSaasService2025[] = [;
+=======
    email: string
+<<<<<<< HEAD
+   website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] compliance: string[]  } competitors: string[] marketTrend: string aiModel?: string trainingData?: string marketingContent: {headline: string valueProposition: string keyFeatures: string[] competitiveAdvantages: string[] testimonials?: string[] caseStudies?: string[]  } } export const REVOLUTIONARY_MICRO_SAAS_SERVICES_2025: RevolutionaryMicroSaasService2025[] = [;
+=======
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] compliance: string[]  } competitors: string[] marketTrend: string aiModel?: string trainingData?: string marketingContent: { headline: string valueProposition: string keyFeatures: string[] competitiveAdvantages: string[] testimonials?: string[] caseStudies?: string[]  } } export const REVOLUTIONARY_MICRO_SAAS_SERVICES_2025: RevolutionaryMicroSaasService2025[] = [;
+>>>>>>> main
+>>>>>>> main

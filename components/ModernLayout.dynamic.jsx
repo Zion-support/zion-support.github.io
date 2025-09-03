@@ -3,3 +3,4 @@ const ModernLayout = dynamic(() => import('./ModernLayout'), {
   loading: () => <p>Loading...</p>,
 });
 export default ModernLayout;
+'

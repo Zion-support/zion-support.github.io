@@ -3,8 +3,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface HelpArticle {
   slug: string;
-  title: string;
-  content: string;
+  titl,
+    e: string;
+  conten,
+    t: string;
   // Or perhaps a summary if content is too large
 }
 
