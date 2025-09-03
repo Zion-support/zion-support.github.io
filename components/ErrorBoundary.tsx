@@ -15,7 +15,9 @@ class ErrorBoundary extends Component<Props, State> {
     hasError: false
   }
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return { hasError: true, error };
+  }
+  
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
@@ -34,17 +36,17 @@ class ErrorBoundary extends Component<Props, State> {
               Something went wrong
             </h1>
             <p className="text-slate-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <div className="space-y-3">
               <button
-                onClick={() => window.location.reload()}
+                onClick={() => typeof window !== 'undefined' && window.location.reload()}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 Refresh Page
               </button>
               <button
-                onClick={() => window.location.href = '/'}
+                onClick={() => typeof window !== 'undefined' && (window.location.href = '/')}
                 className="w-full bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 Go Home
@@ -65,4 +67,6 @@ class ErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
+}
+
 export default ErrorBoundary;
