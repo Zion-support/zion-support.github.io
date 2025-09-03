@@ -3,18 +3,18 @@ module.exports = {
     {
       name: 'ziontechgroup-web',
       script: 'npm',
-      args: 'start',
+      args: 'run dev',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
+        NODE_ENV: 'development',
         PORT: 3000
       },
-      env_development: {
-        NODE_ENV: 'development',
+      env_production: {
+        NODE_ENV: 'production',
         PORT: 3000
       },
       log_file: './logs/web.log',
@@ -25,10 +25,10 @@ module.exports = {
     {
       name: 'automation-health-check',
       script: 'node',
-      args: 'automation/health-check.cjs',
+      args: 'scripts/automation/health-check.cjs',
       cwd: '/workspace',
       instances: 1,
-      autorestart: true,
+      autorestart: false,
       watch: false,
       cron_restart: '*/5 * * * *', // Restart every 5 minutes
       env: {
@@ -41,10 +41,10 @@ module.exports = {
     {
       name: 'automation-security-scanner',
       script: 'node',
-      args: 'automation/security-scanner.cjs',
+      args: 'scripts/automation/security-scanner.cjs',
       cwd: '/workspace',
       instances: 1,
-      autorestart: true,
+      autorestart: false,
       watch: false,
       cron_restart: '0 */6 * * *', // Restart every 6 hours
       env: {
