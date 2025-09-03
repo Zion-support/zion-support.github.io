@@ -2,7 +2,7 @@
   ' id: string';
    user_id: string';
    type: string;
-   // e.g., 'new_message', 'project_update', 'offer_received' message: string;
+   // e.g., 'new_message,project_update,offer_received' message: string;
    read: boolean';
    link_to?: string;
    // Optional link related to the notification' created_at: string';

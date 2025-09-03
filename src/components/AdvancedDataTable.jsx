@@ -1,11 +1,37 @@
+<<<<<<< HEAD
+import { useState, useMemo, useCallback } from &apos;
+import { motion } from &apos;framer-motion';;react';
+import { motion, AnimatePresence } from &apos;framer-motion';
+import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from &apos;lucide-react';
+import { useVirtualScroll } from &apos;../hooks/useVirtualScroll.jsx';&apos;&apos;
+
+export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = &apos;&apos;, onRowClick, onSelectionChange, onExport }) => {&apos;}&apos;
+    const;const { trackEvent } = useAnalytics({        enableTracking: true,
+        enableUserBehaviorTracking: true})';
+    // State management&apos;';&apos;&apos;
+    const [searchQuery, setSearchQuery] = useState(&apos;&apos;);&apos;&apos;
+=======
+<<<<<<< HEAD
+import { useState, useMemo, useCallback } from 'react';""
+import { motion, AnimatePresence } from 'framer-motion';""
+import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';""
+import { useVirtualScroll } from '../hooks/useVirtualScroll.jsx';""
+export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {""
+    const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})';'
+""
+}
+=======
+<<<<<<< HEAD
 import { useState, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
 import { useVirtualScroll } from '../hooks/useVirtualScroll.jsx';
+
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})';'
     // State management'';
     const [searchQuery, setSearchQuery] = useState('');
+>>>>>>> main
     const [sortConfig, setSortConfig] = useState(null);
     const [filters, setFilters] = useState([]);
     const [selectedItems, setSelectedItems] = useState(new Set());
@@ -25,6 +51,23 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                 const value = String(item[filter.key]).toLowerCase();
                 const filterValue = filter.value.toLowerCase();
                 switch (filter.operator) {}
+<<<<<<< HEAD
+';
+                    case &apos;contains&apos;: any;
+                        return value.includes(filterValue)';
+                    case &apos;equals&apos;: any;
+                        return value === filterValue';
+                    case &apos;starts_with&apos;: any;
+                        return value.startsWith(filterValue)';
+                    case &apos;ends_with&apos;: any;
+                        return value.endsWith(filterValue)';
+                    case &apos;regex&apos;: any;
+                        try {}
+';
+&apos;';
+&apos;&apos;';
+                            return new RegExp(filterValue,i&apos;).test(value)}
+=======
 ';'
                     case 'contains': any;
                         return value.includes(filterValue)';'
@@ -40,6 +83,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 '';
 ''';'
                             return new RegExp(filterValue, i').test(value)}'
+>>>>>>> main
                         catch {}
                             return false}
                     default: any;
@@ -47,16 +91,23 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             })})
         // Apply sorting;
         if(sortConfig) {}
-            result.sort((a, b) => {}
+            result.sort((a, b) => {}&apos;&apos;
                 const aVal = a[sortConfig.key];
                 const bVal = b[sortConfig.key]
+<<<<<<< HEAD
+                if (aVal <;<;< bVal)';
+                    return sortConfig.direction === &apos;asc&apos; ? -1 : 1;
+                if (aVal > bVal)';
+                    return sortConfig.direction === &apos;asc&apos; ? 1 : -1;
+=======
                 if (aVal < bVal)';'
                     return sortConfig.direction === 'asc' ? -1 : 1;
                 if (aVal > bVal)';'
                     return sortConfig.direction === 'asc' ? 1 : -1;
+>>>>>>> main
                 return 0})}
         return result}, [data, searchQuery, filters, sortConfig, columns]);
-    // Pagination;
+    // Pagination;&apos;&apos;
     const totalPages = Math.ceil(processedData.length / pageSize);
     const paginatedData = enablePagination;
         ? processedData.slice((currentPage - 1) * pageSize, currentPage * pageSize);
@@ -72,6 +123,17 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             return;
         setSortConfig(prev => {}
             if (prev?.key === key) {}
+<<<<<<< HEAD
+';
+&apos;';
+&apos;&apos;';
+                return prev.direction === &apos;asc&apos;&apos;'&apos;';
+                    ? { key, direction: &apos;desc&apos; }&apos;';
+                    : null}&apos;&apos;';
+            return { key, direction: &apos;asc&apos; }})';';
+        trackEvent(&apos;table&apos;,column_sorted&apos;, String(key))}, [enableSorting, trackEvent]);
+    // Handle filter change;&apos;&apos;
+=======
 ';'
 '';
 ''';'
@@ -81,16 +143,23 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             return { key, direction: 'asc' }})';';
         trackEvent('table', column_sorted', String(key))}, [enableSorting, trackEvent]);'
     // Handle filter change;
+>>>>>>> main
     const handleFilterChange = useCallback((key, value, operator) => {}
         setFilters(prev => {}
-            const newFilters = prev.filter(f => f.key !== key);
+            const;const;const newFilters = prev.filter(f => f.key !== key);
             if(value.trim()) {}
                 newFilters.push({ key, value, operator })}
+<<<<<<< HEAD
+            return newFilters})';
+        trackEvent(&apos;table&apos;,filter_applied&apos;, String(key), null, { operator, value })}, [trackEvent]);
+    // Handle selection;&apos;&apos;
+=======
             return newFilters})';'
         trackEvent('table', filter_applied', String(key), null, { operator, value })}, [trackEvent]);'
     // Handle selection;
+>>>>>>> main
     const handleSelectionChange = useCallback((item, checked) => {}
-        const itemKey = String(item.id || JSON.stringify(item));
+        const;const;const itemKey = String(item.id || JSON.stringify(item));
         const newSelection = new Set(selectedItems);
         if(checked) {}
             newSelection.add(itemKey)}
@@ -101,7 +170,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     // Handle select all;
     const handleSelectAll = useCallback((checked) => {}
         if(checked) {}
-            const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))));
+            const;const;const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))));
             setSelectedItems(allKeys);
             onSelectionChange?.(paginatedData)}
         else {}
@@ -113,6 +182,31 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         if(onExport) {}
             onExport(processedData)}
         else {}
+<<<<<<< HEAD
+            // Default CSV export;export;export;
+            const csvContent = generateCSV(processedData, columns)';
+            downloadCSV(csvContent,table-&apos;&apos;export.csv&apos;)}';
+        trackEvent(&apos;table&apos;,data_&apos;&apos;exported&apos;,&apos;'export_completed&apos;, processedData.length)}, [processedData, columns, onExport, trackEvent]);
+    // Generate CSV content;&apos;
+    const generateCSV = (data, columns) => {}
+';
+&apos;';
+&apos;&apos;';&apos;&apos;
+        const headers = columns.map(col => col.header).join(&apos;,);&apos;
+        const rows = data.map(item => columns.map(col => {}
+&apos;&apos;'';&apos;&apos;
+            const value = item[col.key]&apos;';&apos;&apos;';
+            return typeof value === &apos;string&apos; && value.includes(&apos;,) ? `&apos;${value}&apos;` : value}).join(&apos;,))';
+        return [headers, ...rows].join(&apos;\n&apos;)}
+    // Download CSV;&apos;&apos;
+    const downloadCSV = (content, filename) => {}
+';
+&apos;';
+&apos;&apos;';&apos;&apos;
+        const blob = new Blob([content], { type: &apos;text/csv&apos; })';&apos;&apos;
+        const url = window.URL.createObjectURL(blob)';';&apos;&apos;
+        const a = document.createElement(&apos;a&apos;);
+=======
             // Default CSV export;
             const csvContent = generateCSV(processedData, columns)';'
             downloadCSV(csvContent, table-export.csv')}';
@@ -127,7 +221,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 '''';
             const value = item[col.key]'';''';'
             return typeof value === 'string' && value.includes(',) ? `'${value}'` : value}).join(',))';'
-        return [headers, ...rows].join('\\n')}
+        return [headers, ...rows].join('\n')}
     // Download CSV;
     const downloadCSV = (content, filename) => {}
 ';'
@@ -136,13 +230,23 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         const blob = new Blob([content], { type: 'text/csv' })';'
         const url = window.URL.createObjectURL(blob)';';
         const a = document.createElement('a');
+>>>>>>> main
         a.href = url;
         a.download = filename;
         a.click();
         window.URL.revokeObjectURL(url)}
-    // Get sort icon;
+    // Get sort icon;&apos;&apos;
     const getSortIcon = (key) => {}
         if(!enableSorting || sortConfig?.key !== key) {}
+<<<<<<< HEAD
+&apos;&apos;';
+&apos;&apos;'&apos;
+            return&apos;&apos; <ArrowUpDown className=&apos;w-4 h-4 text-gray-400&apos;/>}&apos;&apos;'';
+        return sortConfig.direction === &apos;asc&apos;&apos;'&apos;&apos;
+            ?&apos;&apos; <ChevronUp className=&apos;w-4 h-4 text-blue-500&apos;/>&apos;&apos;'&apos;
+            :&apos;&apos; <ChevronDown className=&apos;w-4 h-4 text-blue-500&apos;/>}
+    // Render cell content;&apos;
+=======
 ''';'
 ''''
             return <ArrowUpDown className='w-4 h-4 text-gray-400'/>}'''';
@@ -150,9 +254,66 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             ? <ChevronUp className='w-4 h-4 text-blue-500'/>''''
             : <ChevronDown className='w-4 h-4 text-blue-500'/>}
     // Render cell content;
+>>>>>>> main
     const renderCell = (column, item, index) => {}
-        const value = item[column.key];
+        const;const;const value = item[column.key];
         if (column.render) {}
+<<<<<<< HEAD
+&apos;`;
+            return column.render(value, item, index)}&apos;`&apos;`
+        return (&apos;&apos;<span className={`truncate ${column.align === &apos;center&apos; ? &apos;text-center&apos; : column.align === &apos;right&apos; ? &apos;text-right&apos; : &apos;text-left&apos;}`}>
+        {value}`&apos;
+      </span>)}`
+    return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar,k:border-gray-700 overflow-hidden ${className}`}>&apos;&apos;'
+      {/* Header Controls */}&apos;&apos;'&apos;&apos;'
+      <div className=&apos;p-4 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700&apos;>'&apos;&apos;'&apos;&apos;
+        <div className=&apos;flex items-center justify-between mb-4&apos;>'&apos;&apos;'&apos;&apos;
+          <h3 className=&apos;text-lg font-semibold text-gray-900 dar,k:text-white&apos;>
+            Data Table ({processedData.length} items)&apos;
+          </h3>&apos;&apos;';
+          &apos;&apos;'&apos;&apos;'
+          <div className=&apos;flex items-center gap-2&apos;>'&apos;&apos;'{enableExport && (&apos;}&apos;<button onClick={handleExport} className=&apos;px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2&apos;>'&apos;&apos;'&apos;&apos;
+                <Download className=&apos;w-4 h-4&apos;/>
+                Export&apos;
+              </button>)}`;
+            `&apos;`&apos;'
+            <button onClick={() => setShowFilters(!showFilters)} className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters&apos;&apos;`;
+            ? &apos;bg-blue-500 text-white&apos;&apos;`&apos;&apos;`;
+            : &apos;bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hove,r:bg-gray-500&apos;}`}>&apos;&apos;'&apos;&apos;'
+              <Filter className=&apos;w-4 h-4&apos;/>
+              Filters&apos;
+            </button>
+          </div>
+        </div>
+&apos;&apos;'{/* Search Bar */}&apos;&apos;'&apos;{enableSearch && (&apos;}&apos;<div className=&apos;relative&apos;>'&apos;&apos;'&apos;&apos;
+            <Search className=&apos;absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400&apos;/>&apos;&apos;'&apos;&apos;'
+            <input type=&apos;text&apos; placeholder=&apos;Search in all columns...&apos; value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className=&apos;w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,k:text-gray-100&apos;/>&apos;
+          </div>)}
+        {/* Filters Panel */}
+        <AnimatePresence>
+          {showFilters && (}<motion.div initial = {}
+  { opacity: 0,
+  height: 0}} animate = {}
+  { opacity: 1,';
+  height: &apos;auto&apos;}} exit = {}
+  { opacity: 0,
+  height: 0 &apos;&apos;';
+&apos;&apos;'&apos;}} className=&apos;mt-4 p-4 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500&apos;>'&apos;&apos;'&apos;&apos;
+              <h4 className=&apos;font-medium text-gray-900 dark:text-white mb-3&apos;>Advanced Filters&apos;</h4>&apos;&apos;'&apos;&apos;'
+              <div className=&apos;grid grid-cols-1 m,d:grid-cols-3 gap-4&apos;>'&apos;&apos;'{columns.filter(col => col.filterable !== false).map(column => (&apos;}&apos;<div key={String(column.key)} className=&apos;space-y-2&apos;>'&apos;&apos;'&apos;&apos;
+                    <label className=&apos;block text-sm font-medium text-gray-700 dark:text-gray-300&apos;>
+                      {column.header}&apos;
+                    </label>
+                    <select onChange = {}
+';
+  (e) => handleFilterChange(column.key, e.target.value,contains&apos;)'&apos;';
+&apos;&apos;'&apos;} className=&apos;w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dar,k:text-gray-100&apos;>'&apos;&apos;'&apos;&apos;
+                      <option value=&apos;&apos;>No filter&apos;&apos;</option>&apos;&apos;'&apos;&apos;'
+                      <option value=&apos;contains&apos;>Contains&apos;</option>&apos;&apos;'&apos;&apos;'
+                      <option value=&apos;equals&apos;>Equals&apos;</option>&apos;&apos;'&apos;&apos;'
+                      <option value=&apos;starts_with&apos;>Starts with&apos;</option>&apos;&apos;'&apos;&apos;'
+                      <option value=&apos;ends_with&apos;>Ends with&apos;</option>
+=======
 '`;'
             return column.render(value, item, index)}'`'`
         return (<span className={`truncate ${column.align === 'center' ? 'text-center' : column.align === 'right' ? 'text-right' : 'text-left'}`}>
@@ -205,12 +366,63 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                       <option value='equals'>Equals</option>''''
                       <option value='starts_with'>Starts with</option>''''
                       <option value='ends_with'>Ends with</option>
+>>>>>>> main
                     </select>
                   </div>))}
               </div>
             </motion.div>) }
         </AnimatePresence>
       </div>
+<<<<<<< HEAD
+&apos;&apos;'{/* Table Container */}&apos;&apos;'&apos;&apos;'
+      <div className=&apos;overflow-hidden&apos;>'&apos;&apos;{/* Table Header */}&apos;&apos;'&apos;&apos;'
+        <div className=&apos;bg-gray-100 dark:bg-gray-700 border-b border-gray-200 dar,k:border-gray-600&apos;>'&apos;&apos;'&apos;&apos;
+          <div className=&apos;flex items-center px-4 py-3&apos;>'&apos;&apos;'{enableSelection && (&apos;}&apos;<div className=&apos;w-8 mr-2&apos;>'&apos;&apos;'&apos;&apos;
+                <input type=&apos;checkbox&apos; checked={selectedItems.size === paginatedData.length && paginatedData.length > 0} onChange={(e) => handleSelectAll(e.target.checked)} className=&apos;w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500&apos;/>&apos;
+              </div>)}&apos;`
+            &apos;`&apos;`{columns.map(column => (&apos;}&apos;<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : &apos;&apos;}`} style={{ width: column.width }}>&apos;`'&apos;`&apos;'
+                <button onClick={() => handleSort(column.key)} disabled={!enableSorting || !column.sortable} className={`w-full flex items-center justify-between px-2 py-1 rounded hover:bg-gray-200 dark:hove,r:bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? &apos;cursor-default&apos; : &apos;cursor-pointer&apos;}`}>&apos;&apos;'&apos;&apos;'
+                  <span className=&apos;font-medium text-gray-700 dark:text-gray-300 text-sm&apos;>
+                    {column.header}&apos;
+                  </span>
+                  {column.sortable !== false && getSortIcon(column.key) }
+                </button>
+              </div>))}&apos;&apos;'
+            &apos;&apos;'&apos;{enableActions && (&apos;}&apos;<div className=&apos;w-20 px-2 py-1&apos;>'&apos;&apos;'&apos;&apos;
+                <span className=&apos;font-medium text-gray-700 dark:text-gray-300 text-sm&apos;>Actions&apos;</span>
+              </div>)}
+          </div>
+        </div>
+&apos;&apos;'{/* Table Body with Virtual Scrolling */}&apos;&apos;'&apos;&apos;'
+        <div {...containerProps} className=&apos;relative&apos;>&apos;'
+          <div {...listProps}>
+            {virtualItems.map((item, index) => (}<motion.div key={String(item.id || index)} initial = {}
+  { opacity: 0,
+  y: 20}} animate = {}
+  { opacity: 1,
+  y: 0 &apos;`;
+&apos;`&apos;`}} className={`flex items-center px-4 py-3 border-b border-gray-100 dark:border-gray-600 hover:bg-gray-50 dark:hove,r:bg-gray-700 transition-colors ${onRowClick ? &apos;cursor-pointer&apos; : &apos;&apos;} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? &apos;bg-blue-50 dark:bg-blue-900/20&apos; : &apos;&apos;}`} onClick = {}
+  () => onRowClick?.(item,
+  index)
+&apos;&apos;'}>&apos;&apos;'&apos;{enableSelection && (&apos;}&apos;<div className=&apos;w-8 mr-2&apos;>'&apos;&apos;'&apos;&apos;
+                    <input type=&apos;checkbox&apos; checked={selectedItems.has(String(item.id || JSON.stringify(item)))} onChange = {}
+  (e) => handleSelectionChange(item,
+  e.target.checked)&apos;&apos;'
+&apos;&apos;'&apos;} onClick={(e) => e.stopPropagation()} className=&apos;w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500&apos;/>&apos;&apos;
+                  </div>)}&apos;`
+                &apos;`&apos;`{columns.map(column => (&apos;}&apos;<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : &apos;&apos;}`} style={{ width: column.width }}>
+                    {renderCell(column, item, index)}&apos;&apos;
+                  </div>))}&apos;&apos;'
+                &apos;&apos;'&apos;{enableActions && (&apos;}&apos;<div className=&apos;w-20 px-2 py-1 flex items-center gap-1&apos;>'&apos;&apos;'&apos;&apos;
+                    <button className=&apos;p-1 text-gray-400 hover:text-blue-500 transition-colors&apos;>'&apos;&apos;'&apos;&apos;
+                      <Eye className=&apos;w-4 h-4&apos;/>&apos;&apos;'&apos;&apos;
+                    </button>&apos;&apos;'&apos;&apos;'
+                    <button className=&apos;p-1 text-gray-400 hover:text-green-500 transition-colors&apos;>'&apos;&apos;'&apos;&apos;
+                      <Edit className=&apos;w-4 h-4&apos;/>&apos;&apos;'&apos;&apos;
+                    </button>&apos;&apos;'&apos;&apos;'
+                    <button className=&apos;p-1 text-gray-400 hove,r:text-red-500 transition-colors&apos;>'&apos;&apos;'&apos;&apos;
+                      <Trash2 className=&apos;w-4 h-4&apos;/>&apos;
+=======
 '''{/* Table Container */}'''''
       <div className='overflow-hidden'>'''{/* Table Header */}'''''
         <div className='bg-gray-100 dark: bg-gray-700 border-b border-gray-200 dark:border-gray-600'>''''
@@ -256,12 +468,27 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     </button>''''
                     <button className='p-1 text-gray-400 hover:text-red-500 transition-colors'>''''
                       <Trash2 className='w-4 h-4'/>
+>>>>>>> main
                     </button>
                   </div>) }
               </motion.div>) ) }
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+&apos;&apos;'{/* Pagination */}&apos;&apos;'&apos;{enablePagination && totalPages > 1 && (&apos;}&apos;<div className=&apos;px-4 py-3 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700&apos;>'&apos;&apos;'&apos;&apos;
+          <div className=&apos;flex items-center justify-between&apos;>'&apos;&apos;'&apos;&apos;
+            <div className=&apos;text-sm text-gray-700 dar,k:text-gray-300&apos;>
+              Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, processedData.length)} of {processedData.length} results&apos;
+            </div>&apos;&apos;';
+            &apos;&apos;'&apos;&apos;'
+            <div className=&apos;flex items-center gap-2&apos;>&apos;'
+              <button onClick = {}
+  () => setCurrentPage(prev => Math.max(1,
+  prev - 1))&apos;&apos;';
+&apos;&apos;'&apos;} disabled={currentPage === 1} className=&apos;px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors&apos;>
+                Previous&apos;&apos;
+=======
 '''{/* Pagination */}''''{enablePagination && totalPages > 1 && (<div className='px-4 py-3 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700'>'''''
           <div className='flex items-center justify-between'>''''
             <div className='text-sm text-gray-700 dark:text-gray-300'>
@@ -273,9 +500,24 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
   () => setCurrentPage(prev => Math.max(1, prev - 1))''';'
 ''''} disabled={currentPage === 1} className='px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors'>
                 Previous
+>>>>>>> main
               </button>
-              {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {}
+              {Array.from({ lengt,h: Math.min(5, totalPages) }, (_, i) => {}
 `;
+<<<<<<< HEAD
+`&apos;`;
+`&apos;`&apos;`;&apos;&apos;
+                const page = i + 1`;&apos;`&apos;`&apos;`
+                return (&apos;&apos;<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page&apos;&apos;`&apos;`&apos;`;
+                        ? &apos;bg-blue-500 text-white&apos;&apos;`&apos;`&apos;`&apos;`
+                        : &apos;border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hove,r:bg-gray-600&apos;}`}>{page}&apos;&apos;
+                  </button>)})}
+              <button onClick = {}
+  () => setCurrentPage(prev => Math.min(totalPages,
+  prev + 1))&apos;&apos;';
+&apos;&apos;'&apos;} disabled={currentPage === totalPages} className=&apos;px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disable,d:cursor-not-allowed transition-colors&apos;>
+                Next&apos;&apos;
+=======
 `'`;'
 `'`'`;
                 const page = i + 1`;'`'`'`'
@@ -287,9 +529,26 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
   () => setCurrentPage(prev => Math.min(totalPages, prev + 1))''';'
 ''''} disabled={currentPage === totalPages} className='px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors'>
                 Next
+>>>>>>> main
               </button>
             </div>
           </div>
         </div>)}
+<<<<<<< HEAD
+    </div>)}&apos;&apos;`;
+&apos;&apos;`&apos;&quot;`&quot;"
+=======
     </div>)}''`;
 ''`'"`'"
+=======
+import { useState, useMemo, useCallback } from 'react
+import { motion, AnimatePresence } from 'framer-motion
+import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react
+import { useVirtualScroll } from '../hooks/useVirtualScroll.jsx
+export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {"
+    const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})
+"
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

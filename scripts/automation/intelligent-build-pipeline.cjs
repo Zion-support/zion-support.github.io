@@ -14,15 +14,15 @@ class IntelligentBuildPipeline {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'intelligent-build-pipeline.log'
     );
     this.pipelineLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'build-pipeline.json'
     );
     this.optimizationLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'build-optimizations.json'
     );
     this.ensureLogsDirectory();
@@ -46,14 +46,14 @@ class IntelligentBuildPipeline {
   }
 
   loadPipelineConfig() {
-    try {
-      const configPath = path.join(
-        this.projectRoot,build-pipeline.config.json'
+    try {`);
+      const configPath = path.join(`);
+        this.projectRoot,build-pipeline.config.json`);
       );
       if (fs.existsSync(configPath)) {
         return JSON.parse(fs.readFileSync(configPath, 'utf8'));
-      }
-    } catch (error) {
+      }`);
+    } catch (error) {`);
       this.log(`Failed to load pipeline config: ${error.message}`, 'WARN');
     }
 
@@ -1218,7 +1218,7 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
 
     // Save report to file
     const reportPath = path.join(
-      this.projectRoot,logs', `build-pipeline-${Date.now()}.json`
+      this.projectRoot, 'logs', `build-pipeline-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 

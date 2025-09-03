@@ -1,1 +1,0 @@
-' ' ' const stripeSecretKey = process.env.STRIPE_TEST_SECRET_KEY || process.env.STRIPE_SECRET_KEY if (!stripeSecretKey) { const errorMessage = 'CRITICAL: STRIPE_SECRET_KEY is missing. Stripe webhook cannot function." ;

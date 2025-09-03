@@ -61,7 +61,6 @@ export const FuturisticAnimatedBackground: React.FC = () => {
         color: `hsl(${200 + Math.random() * 60}, 70%, 60%)`,
         life: 1,
         maxLife: Math.random() * 100 + 50})}
-;
     // Update and draw particles;
     const animate: React.FC = ($2) => {
       time += 0.01;
@@ -154,7 +153,6 @@ export const FuturisticAnimatedBackground: React.FC = () => {
         ctx.lineTo(waveOffset + 100, waveY);
         ctx.stroke();
       animationId = requestAnimationFrame(animate)}
-;
     animate();
     return () => {
       window.removeEventListener('resize', resizeCanvas);
@@ -166,8 +164,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       className='fixed inset-0 w-full h-full pointer-events-none z-0';
       style = {
   { background: 'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03),
-  transparent 60%)' ;
-}}
+  transparent 60%)' }}
     />)}
 
 export default FuturisticAnimatedBackground}}}}}}

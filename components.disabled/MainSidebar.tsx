@@ -42,10 +42,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         ? prev.filter(s => s !== section);
         : [...prev, section]
     )}
-;
   const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
 const navigation = {
-;
     main: [{ name:,
   Home;
   ', href: '/, icon: Home }, { name:,
@@ -125,7 +123,8 @@ const navigation = {
   ', icon: Quote, description:,
   Media resources;
   ' }]'  }';
-  const quickActions = [{ name: 'Request Quote, href:;
+  const quickActions = [
+  { name: 'Request Quote, href:;
   '/request-quote', icon: Quote, color:,
   from-cyan-500 to-blue-600' },
   '    { name: 'Get Support, href: '/contact;
@@ -138,14 +137,15 @@ const navigation = {
   ', icon: FileText, color: 'from-purple-500 to-pink-600;
   ' },'  ]';
   const contactInfo = [
-    { icon: Phone, text:,
+  { icon: Phone, text:,
   +1 (302) 464-0950', href: 'tel:+13024640950 },
   '    { icon: Mail, text:,
   kleber@ziontechgroup.com;
   ', href: 'mailto:kleber@ziontechgroup.com }, { icon: MapPin, text:,
   Middletown, DE 19709;
   ', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709 }];
-  '  const socialLinks = [{ name: 'LinkedIn, href:,
+  '  const socialLinks = [
+  { name: 'LinkedIn, href:,
   https: //www.linkedin.com/company/zion-tech-group/, icon: Linkedin, color:,
   text-blue-500' },
   '    { name: 'Twitter, href:,
@@ -214,8 +214,7 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
   ')}''          {/* Solutions Section */}
           {renderNavSection(
   'Solutions', navigation.solutions,
-  'solutions')}';
-  '          {/* Resources Section */}
+  'solutions')}          {/* Resources Section */}
           {renderNavSection('Resources;
   ', navigation.resources, 'resources
   ')}''          {/* Comp Section */}
@@ -246,5 +245,4 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
         </div>
       </div>
 </>)}
-;
 export default MainSidebar

@@ -55,7 +55,6 @@ function fixFile(filePath) {
     return false} catch (error) {
     // // // // // // // console.error(`Error fixing ${filePath}:`, error.message);
     return false;
-;
 function findAndFixFiles(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;

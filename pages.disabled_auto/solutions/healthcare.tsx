@@ -81,7 +81,11 @@ export default function HealthcareSolutions() {
           Standards & Platforms
         </h2>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
+<<<<<<< HEAD
           {['FHIR', 'HL7', 'SMART on FHIR', 'EHR APIs', 'HIPAA', 'SOC 2'].map(
+=======
+          {['FHIR,HL7,SMART on FHIR,EHR APIs,HIPAA,SOC 2'].map(
+>>>>>>> main
             t => (
               <div
                 key={t}

@@ -6,6 +6,5 @@ import React, { useState } from;
   '../components/SEO' import { EXPANDED_INNOVATIVE_SERVICES_2031 } from;
   '../data/expandedInnovativeServices2031' import { QUANTUM_SPACE_TECH_SERVICES_2031 } from;
   '../data/quantumSpaceTechServices2031'  export default function ComprehensiveServicesLanding2031() { const [activeCategory, setActiveCategory] = useState(
-  'all') const [searchTerm, setSearchTerm] = useState(';
-  ') const [sortBy, setSortBy] = useState('rating;
+  'all') const [searchTerm, setSearchTerm] = useState() const [sortBy, setSortBy] = useState('rating;
   ') ';

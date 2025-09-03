@@ -17,6 +17,7 @@ const useResponsive = (): ResponsiveState => {
     isTablet: false,
     isDesktop: true,
   });
+
   useEffect(() => {
     const updateDimensions = () => {
       const width = window.innerWidth;
@@ -30,10 +31,14 @@ const useResponsive = (): ResponsiveState => {
         isDesktop: width >= 1024,
       });
     };
+
     updateDimensions();
     window.addEventListener('resize', updateDimensions);
+
     return () => window.removeEventListener('resize', updateDimensions);
   }, []);
+
   return state;
 };
+
 export default useResponsive;

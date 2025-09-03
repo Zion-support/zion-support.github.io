@@ -1,12 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
+<<<<<<< HEAD
+=======
+
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
+>>>>>>> main
 import { Badge } from '../../components/ui/Badge';
-import { 
-  Calendar, 
+import { Button } from '../../components/ui/Button';
+import { Card } from '../../components/ui/Card';
+import {
+  Calendar,
   ArrowRight,
   CheckCircle,
   Users,
@@ -15,57 +20,69 @@ import {
   Clock,
   Globe,
   Mail,
-  Smartphone
+  Smartphone,
 } from 'lucide-react';
 
 export default function EventManagement() {
   const features = [
-    {
+  {
       icon: Users,
       title: 'Event Registration',
-      description: 'Streamlined registration process with custom forms and automated confirmations.'
+      description:
+        'Streamlined registration process with custom forms and automated confirmations.',
     },
     {
       icon: Ticket,
       title: 'Ticketing System',
-      description: 'Sell tickets online with secure payment processing and digital ticket delivery.'
+      description:
+        'Sell tickets online with secure payment processing and digital ticket delivery.',
     },
     {
       icon: Users,
       title: 'Attendee Management',
-      description: 'Track attendees, manage check-ins, and handle special requirements.'
+      description:
+        'Track attendees, manage check-ins, and handle special requirements.',
     },
     {
       icon: BarChart3,
       title: 'Analytics & Reporting',
-      description: 'Comprehensive analytics on attendance, engagement, and event performance.'
+      description:
+        'Comprehensive analytics on attendance, engagement, and event performance.',
     },
     {
       icon: Globe,
       title: 'Multi-platform Support',
-      description: 'Manage events across web, mobile, and social media platforms.'
+      description:
+        'Manage events across web, mobile, and social media platforms.',
     },
     {
       icon: Mail,
       title: 'Communication Tools',
-      description: 'Send updates, reminders, and follow-ups to attendees automatically.'
-    }
+      description:
+        'Send updates, reminders, and follow-ups to attendees automatically.',
+    },
   ];
 
   return (
     <>
-      <SEO 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <SEO
         title="Event Management Platform - Zion Tech Group"
         description="Comprehensive event management platform with registration, ticketing, and attendee management. Streamline your events."
         keywords="event management, event registration, ticketing, attendee management, event planning"
       />
+=======
+>>>>>>> main
+>>>>>>> main
       <Head>
         <title>Event Management Platform - Zion Tech Group</title>
       </Head>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center">
             <Badge className="mb-4 bg-blue-500 text-white">
               <Calendar className="w-4 h-4 mr-2" />
@@ -73,18 +90,26 @@ export default function EventManagement() {
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Event Management
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Platform</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                {' '}
+                Platform
+              </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Streamline your events with our comprehensive platform featuring registration, 
-              ticketing, attendee management, and powerful analytics.
+              Streamline your events with our comprehensive platform featuring
+              registration, ticketing, attendee management, and powerful
+              analytics.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-gray-900"
+              >
                 Schedule Demo
               </Button>
             </div>
@@ -100,18 +125,24 @@ export default function EventManagement() {
               Complete Event Management Features
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to plan, manage, and execute successful events of any size.
+              Everything you need to plan, manage, and execute successful events
+              of any size.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="p-6 hover:shadow-xl transition-shadow duration-300">
+              <Card
+                key={index}
+                className="p-6 hover: shadow-xl transition-shadow duration-300"
+              >
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-blue-100 rounded-lg mr-4">
                     <feature.icon className="h-8 w-8 text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {feature.title}
+                  </h3>
                 </div>
                 <p className="text-gray-600">{feature.description}</p>
               </Card>
@@ -122,21 +153,28 @@ export default function EventManagement() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Streamline Your Events?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join thousands of event organizers already using our platform 
-            to create memorable and successful events.
+            Join thousands of event organizers already using our platform to
+            create memorable and successful events.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+            <Button
+              size="lg"
+              className="bg-white text-blue-600 hover:bg-gray-100"
+            >
               Start Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Link href="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-blue-600"
+              >
                 Contact Sales
               </Button>
             </Link>

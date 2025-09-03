@@ -18,28 +18,21 @@ import {
   MessageCircle,
   BookOpen,
   CheckCircle} from;
-  'lucide-react.ts';All',';
-  'AI & ML',
-  ';
-  'Cybersecurity;
-  ',';
-  'Cloud & DevOps',
-  ';
-  'Data Analytics;
-  ',';
-  'IoT & Edge',
-  ';
-  'Digital Transformation;
+  'lucide-react.ts';All',AI & ML',
+  Cybersecurity;
+  ',Cloud & DevOps',
+  Data Analytics;
+  ',IoT & Edge',
+  Digital Transformation;
   ']';
-export default function Events(...args: any[]): any {
+export default function Events() {
   const [selectedType, setSelectedType] = useState(,
   All');
   const [selectedCategory, setSelectedCategory] = useState(
   'All');
   const [selectedStatus, setSelectedStatus] = useState(
   'All');
-  const [searchTerm, setSearchTerm] = useState(';
-  ');
+  const [searchTerm, setSearchTerm] = useState();
 return matchesType && matchesCategory && matchesStatus && matchesSearch})return date.toLocaleDateString('en-US;
   ', {
       weekday: 'long,
@@ -50,7 +43,6 @@ return matchesType && matchesCategory && matchesStatus && matchesSearch})return 
       day:,
   numeric;
   '})}
-;
 case 'Cybersecurity;
   ': return Shield;
       case 'Cloud & DevOps;
@@ -72,7 +64,6 @@ case 'Cybersecurity;
           Past
         </span>
       )}  }
-;
   return ('
     <div className='min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700'>
       {/* Hero Section */}'
@@ -149,11 +140,8 @@ case 'Cybersecurity;
                 >{statuses.map(status => (
                     <option key={status} value={status}>
                       {status ===,
-  upcoming';
-  ';
-                        ? 'Upcoming';
-  ': status === 'past';
-  ';
+  upcoming;
+                        ? 'Upcoming: status === 'past;
                           ? 'Past
                           : status}
                     </option>

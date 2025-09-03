@@ -4,31 +4,17 @@ const securityHeaders = {
   // Content Security Policy,
   Content-Security-Policy': [;
     'default-src;
-  'self',
-    'script-src;
-  'self';
-  'unsafe-inline';
-  'unsafe-eval' https://cdn.gpteng.co https://www.google-analytics.com',
-    'style-src;
-  'self';
-  'unsafe-inline' https://fonts.googleapis.com',
-    'font-src;
-  'self' https://fonts.gstatic.com',
-    'img-src;
-  'self' data: https: blob:',
-    'media-src;
-  'self' https:',
-    'connect-src;
-  'self' https: wss:',
-    'frame-src,
-  self'',
-    'object-src;
-  'none'',
-    'base-uri;
-  'self'',
-    'form-action;
-  'self'',
-    'frame-ancestors;
+  'self,script-src;
+  'selfunsafe-inlineunsafe-eval' https://cdn.gpteng.co https://www.google-analytics.com,style-src;
+  'selfunsafe-inline' https://fonts.googleapis.com,font-src;
+  'self' https://fonts.gstatic.com,img-src;
+  'self' data: https: blob:,media-src;
+  'self' https:,connect-src;
+  'self' https: wss:,frame-src,
+  self',object-src;
+  'none',base-uri;
+  'self',form-action;
+  'self',frame-ancestors;
   'none'',upgrade-insecure-requests;
   '].join('),
   // X-Frame-Options;
@@ -62,7 +48,6 @@ const securityHeaders = {
   // Origin-Agent-Cluster,
   Origin-Agent-Cluster;
   ': '?1}
-;
 // Function to apply security headers;
 function applySecurityHeaders() {
   if (typeof window !== 'undefined;
@@ -81,7 +66,6 @@ function applySecurityHeaders() {
     window.eval = function () {
       throw new Error('eval() is not allowed for security reasons;
   ')}
-;
     // Prevent Function constructor;
     window.Function = function () {
       throw new Error(

@@ -7,14 +7,11 @@ const { execSync, spawn } = require(
   'child_process');
 class IntelligentOrchestrator {
   constructor() {
-;
     this.automationSystems = new Map();
     this.monitoring = false;
     this.logFile = path.join(__dirname,
-  'logs',
-  'intelligent-orchestrator.log');
+  'logs,intelligent-orchestrator.log');
     this.ensureLogDirectory();
-;
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
@@ -27,14 +24,13 @@ fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logM
       fs.mkdirSync(logDir, { recursive: true })}
   }
   log(message) {
-;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage)}
 loadAutomationSystems() {loadAutomationSystems() {
 const systems = [
-      { name:,
+  { name:,
   lint-monitor', path: 'lint-monitor.js, priority:,
   high' },
       { name: 'lint-fixer, path:,
@@ -114,8 +110,6 @@ this.log(
         const priorityOrder = {
   high: 3, medium: 2,
   low: 1;
-;
-;
 }
         return priorityOrder[b.priority] - priorityOrder[a.priority]})
 const results = [];const results = [];
@@ -157,8 +151,6 @@ const state = {
       hasMissingTests: false,
       lastBuildTime: null,
   codeComplexity: 0;
-;
-;
 }
     try {
       // Check for lint errors;
@@ -200,8 +192,7 @@ const systems = [];
     // Run low-priority systems periodically;
     const now = Date.now();
     const systemsToCheck = [
-  'performance',
-  'content-generator'];
+  'performance,content-generator'];
     for (const system = this.automationSystems.get(systemName);
       if (system && (!system.lastRun || now - system.lastRun.getTime() > 30 * 60 * 1000)) {
         systems.push(systemName)}
@@ -235,10 +226,7 @@ this.log(
   '👀 Starting intelligent file watcher...');
     // Simple file watcher using fs.watch;
     const watchDirectories = [
-  'pages',
-  'components',
-  'utils',
-  'hooks'];
+  'pages,components,utils,hooks'];
     for (const dir of watchDirectories) {
       if (fs.existsSync(dir)) {
         fs.watch(dir, { recursive: true }, (eventType, filename) => {
@@ -252,7 +240,6 @@ this.log(
               this.handleIntelligentFileChange(filePath)}, 3000)}
         })}
     }
-;
     this.log(,
   ✅ Intelligent file watcher started')}
 async handleIntelligentFileChange(filePath) {async handleIntelligentFileChange(filePath) {
@@ -268,7 +255,6 @@ async handleIntelligentFileChange(filePath) {async handleIntelligentFileChange(f
         this.log(`🔧 Auto-fixing issues in: ${filePath}`);
         await this.runSystem(
   'lint-fixer')}
-;
 // If it;
   's a component, consider generating tests;// If it's a component, consider generating tests;
 if (filePath.includes(
@@ -285,8 +271,6 @@ if (filePath.includes(
     const report = {
   timestamp: new Date().toISOString(),
   systems: {
-;
-;
 },
       learningData: {},
       recommendations[]}}
@@ -342,10 +326,7 @@ const status = {
       systemsCount: this.automationSystems.size,
       learningDataSize: this.learningData.size,
   report: this.generateIntelligenceReport();
-;
-;
 }
-;
     this.log(`📊 Status: ${status.running ?,
   Running': 'Stopped}`);
     this.log(`📊 Systems: ${status.systemsCount}`);

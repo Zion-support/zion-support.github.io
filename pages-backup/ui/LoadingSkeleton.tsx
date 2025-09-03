@@ -1,6 +1,5 @@
 :pages-backup/ui/LoadingSkeleton.tsx;
-  className = ';
-  ',
+  className = ,
   count = 1,
   height = 'h-4;
   ',
@@ -32,7 +31,6 @@ if (animated) {
         />))}
     </>
   )}
-;
 export const CardSkeleton: React.FC = (): JSX.Element => ('
   <div className='bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-pulse'>'
     <div className='flex items-center space-x-4 mb-4'>'
