@@ -1,231 +1,285 @@
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import { CheckCircle, ArrowRight, Star, Users, Zap, Shield } from 'lucide-react';
-import Link from 'next/link';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Check, Star, Zap, Shield, Users, Clock, ArrowRight } from 'lucide-react';
 
-const PricingPage: NextPage = () => {
-  const pricingPlans = [
+export default function PricingPage() {
+  const plans = [
     {
-      name: 'Starter',
-      price: '$2,999',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with digital transformation',
+      name: "Starter",
+      description: "Perfect for small businesses and startups",
+      price: "$2,999",
+      period: "/month",
+      icon: Zap,
+      color: "from-green-500 to-emerald-500",
       features: [
-        'Basic website development',
-        'Cloud setup & migration',
-        'Email support',
-        'Monthly performance reports',
-        'Basic security monitoring',
-        'Up to 5 users'
+        "Up to 5 users",
+        "Basic AI automation",
+        "Standard security features",
+        "Email support",
+        "Basic analytics",
+        "Monthly reports"
       ],
-      popular: false,
-      cta: 'Get Started',
-      color: 'from-gray-500 to-gray-600'
+      popular: false
     },
     {
-      name: 'Professional',
-      price: '$7,999',
-      period: '/month',
-      description: 'Ideal for growing businesses that need comprehensive technology solutions',
+      name: "Professional",
+      description: "Ideal for growing businesses",
+      price: "$7,999",
+      period: "/month",
+      icon: Shield,
+      color: "from-cyan-500 to-blue-500",
       features: [
-        'Custom web applications',
-        'Advanced cloud infrastructure',
-        'Priority support',
-        'Weekly performance reports',
-        'Advanced security monitoring',
-        'AI/ML integration',
-        'Up to 25 users',
-        'API development'
+        "Up to 25 users",
+        "Advanced AI & ML solutions",
+        "Enhanced security & compliance",
+        "Priority support",
+        "Advanced analytics",
+        "Weekly reports",
+        "Custom integrations",
+        "Training sessions"
       ],
-      popular: true,
-      cta: 'Most Popular',
-      color: 'from-zion-cyan to-blue-600'
+      popular: true
     },
     {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Tailored solutions for large organizations with complex requirements',
+      name: "Enterprise",
+      description: "For large organizations",
+      price: "Custom",
+      period: "",
+      icon: Users,
+      color: "from-purple-500 to-pink-500",
       features: [
-        'Enterprise-grade applications',
-        'Multi-cloud architecture',
-        '24/7 dedicated support',
-        'Real-time monitoring',
-        'Advanced security & compliance',
-        'Custom AI/ML solutions',
-        'Unlimited users',
-        'Custom integrations',
-        'Dedicated account manager'
+        "Unlimited users",
+        "Full AI & quantum solutions",
+        "Enterprise security",
+        "24/7 dedicated support",
+        "Real-time analytics",
+        "Custom reporting",
+        "Full customization",
+        "Dedicated account manager",
+        "On-site training",
+        "SLA guarantees"
       ],
-      popular: false,
-      cta: 'Contact Sales',
-      color: 'from-purple-500 to-purple-600'
+      popular: false
     }
   ];
 
   const addOnServices = [
     {
-      name: 'AI Development',
-      price: '$5,000',
-      description: 'Custom AI solutions and machine learning models'
+      name: "AI Development",
+      description: "Custom AI models and machine learning solutions",
+      price: "$5,000 - $50,000",
+      icon: "🤖"
     },
     {
-      name: 'Cybersecurity Audit',
-      price: '$3,500',
-      description: 'Comprehensive security assessment and recommendations'
+      name: "Cybersecurity Audit",
+      description: "Comprehensive security assessment and recommendations",
+      price: "$3,000 - $15,000",
+      icon: "🔒"
     },
     {
-      name: 'Data Analytics',
-      price: '$4,000',
-      description: 'Business intelligence and data visualization solutions'
+      name: "Cloud Migration",
+      description: "Complete cloud infrastructure setup and migration",
+      price: "$10,000 - $100,000",
+      icon: "☁️"
     },
     {
-      name: 'Mobile App Development',
-      price: '$8,000',
-      description: 'Native iOS and Android applications'
+      name: "IoT Implementation",
+      description: "Internet of Things device integration and management",
+      price: "$8,000 - $75,000",
+      icon: "🌐"
+    },
+    {
+      name: "Quantum Computing",
+      description: "Quantum algorithm development and implementation",
+      price: "$25,000 - $200,000",
+      icon: "⚛️"
+    },
+    {
+      name: "Blockchain Solutions",
+      description: "Smart contracts and decentralized applications",
+      price: "$15,000 - $150,000",
+      icon: "⛓️"
     }
   ];
 
   const faqs = [
     {
-      question: 'What\'s included in the monthly pricing?',
-      answer: 'Our monthly pricing includes ongoing support, maintenance, monitoring, and updates. It also covers cloud infrastructure costs and security services.'
+      question: "What's included in the monthly pricing?",
+      answer: "Monthly pricing includes all core features, support, updates, and maintenance. Additional services like custom development are billed separately."
     },
     {
-      question: 'Can I change my plan later?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. We\'ll work with you to ensure a smooth transition.'
+      question: "Can I change plans anytime?",
+      answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle."
     },
     {
-      question: 'Do you offer custom solutions?',
-      answer: 'Absolutely! Our Enterprise plan is fully customizable, and we can create tailored solutions for any business size or requirement.'
+      question: "Do you offer custom pricing?",
+      answer: "Yes, we offer custom pricing for enterprise clients with specific requirements. Contact us to discuss your needs."
     },
     {
-      question: 'What about one-time projects?',
-      answer: 'We also offer project-based pricing for specific initiatives. Contact us to discuss your project requirements.'
+      question: "What payment methods do you accept?",
+      answer: "We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients."
+    },
+    {
+      question: "Is there a setup fee?",
+      answer: "Setup fees vary by plan. Starter and Professional plans include basic setup. Enterprise plans may have custom setup requirements."
+    },
+    {
+      question: "What's your refund policy?",
+      answer: "We offer a 30-day money-back guarantee for all plans. Enterprise clients have custom terms based on their agreement."
     }
   ];
 
   return (
-    <MainLayout>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Simple <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Pricing</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Choose the perfect plan for your business needs. All plans include our core services and support.
-          </p>
-        </div>
-      </section>
+    <>
+      <Helmet>
+        <title>Pricing - Zion Tech Group | Transparent Technology Solutions Pricing</title>
+        <meta name="description" content="Explore Zion Tech Group's transparent pricing for AI, cybersecurity, cloud, and technology solutions. Choose the plan that fits your business needs." />
+        <meta name="keywords" content="technology pricing, AI services pricing, cybersecurity pricing, cloud services pricing, enterprise solutions" />
+        <link rel="canonical" href="https://ziontechgroup.com/pricing" />
+      </Helmet>
 
-      {/* Pricing Plans */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-zion-cyan scale-105' : ''}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-zion-cyan text-white px-6 py-2 rounded-full text-sm font-semibold">
-                      {plan.cta}
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className="text-gray-500">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-600">{plan.description}</p>
-                </div>
-                
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <Link 
-                  href="/contact"
-                  className={`w-full bg-gradient-to-r ${plan.color} text-white py-3 px-6 rounded-lg font-semibold text-center block hover:opacity-90 transition-opacity`}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Simple, <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Transparent</span> Pricing
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Choose the plan that fits your business needs. All plans include our core features with no hidden fees.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Plans Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {plans.map((plan, index) => (
+                <div
+                  key={index}
+                  className={`relative bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 ${
+                    plan.popular
+                      ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/20 scale-105'
+                      : 'border-slate-700 hover:border-cyan-500/30'
+                  }`}
                 >
-                  {plan.cta}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
+                        <Star className="w-4 h-4 mr-1" />
+                        Most Popular
+                      </div>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-8">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${plan.color} rounded-full mx-auto mb-4 flex items-center justify-center`}>
+                      <plan.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-400 mb-4">{plan.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
+                    </div>
+                  </div>
 
-      {/* Add-on Services */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Add-on Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Enhance your plan with additional services tailored to your specific needs
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center">
+                        <Check className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    to="/contact"
+                    className={`w-full inline-flex items-center justify-center px-6 py-3 border text-base font-medium rounded-lg transition-all duration-300 ${
+                      plan.popular
+                        ? 'border-transparent text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600'
+                        : 'border-cyan-500 text-cyan-400 bg-transparent hover:bg-cyan-500/10'
+                    }`}
+                  >
+                    Get Started
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Add-on Services Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Additional Services</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Enhance your solution with our specialized services and custom development options.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {addOnServices.map((service, index) => (
+                <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300">
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <div className="text-cyan-400 font-semibold">{service.price}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+              <p className="text-xl text-gray-300">
+                Get answers to common questions about our pricing and services.
+              </p>
+            </div>
+            <div className="space-y-6">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+                  <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-300">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to discuss your needs and get a customized quote for your project.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+              >
+                Get a Custom Quote
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-base font-medium rounded-md text-cyan-400 bg-transparent hover:bg-cyan-500/10 transition-all duration-300"
+              >
+                Explore Services
+              </Link>
+            </div>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {addOnServices.map((service, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold mb-2">{service.name}</h3>
-                <div className="text-2xl font-bold text-zion-cyan mb-3">{service.price}</div>
-                <p className="text-gray-600 text-sm">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get answers to common questions about our pricing and services
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto space-y-8">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan to-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Contact us today to discuss your needs and find the perfect solution for your business
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/contact" className="bg-white text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-              Contact Sales
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link href="/services" className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              View Services
-            </Link>
-          </div>
-        </div>
-      </section>
-    </MainLayout>
+        </section>
+      </div>
+    </>
   );
-};
-
-export default PricingPage;
+}
