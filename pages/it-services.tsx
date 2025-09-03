@@ -822,7 +822,9 @@ export default function ITServices() {
       pricing: '$10,000 - $50,000/month',
       delivery: '10-20 weeks',
       category: 'Threat Intelligence'
-=======
+    },
+    {
+      title: 'Green IT Solutions',
       description: 'Environmentally conscious IT solutions with carbon footprint reduction',
       icon: TreePine,
       features: [
