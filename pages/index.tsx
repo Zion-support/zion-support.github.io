@@ -44,24 +44,30 @@ const Home = memo(() => {
   const services = [
     {
       title: 'AI Services',
-      description: 'Cutting-edge artificial intelligence solutions including autonomous systems, machine learning, and intelligent automation',
+      description: 'Cutting-edge artificial intelligence solutions including autonomous systems, machine learning, quantum computing, and intelligent automation',
       icon: Brain,
       href: '/ai-services',
-      features: ['AI-Powered Email Responder', 'Computer Vision Solutions', 'Predictive Analytics Platform', 'AI Chatbot & Virtual Assistant']
+      features: ['AI-Powered Email Responder', 'Computer Vision Solutions', 'Predictive Analytics Platform', 'AI Chatbot & Virtual Assistant', 'Quantum Computing Solutions', 'Metaverse Development Platform'],
+      pricing: 'Starting from $1,500/month',
+      benefits: ['99.9% accuracy', '24/7 automation', 'Scalable solutions', 'Real-time insights']
     },
     {
       title: 'IT Services',
-      description: 'Comprehensive information technology services including cloud infrastructure, cybersecurity, and network management',
+      description: 'Comprehensive information technology services including cloud infrastructure, cybersecurity, blockchain, and digital transformation',
       icon: Network,
       href: '/it-services',
-      features: ['Cloud Infrastructure & Migration', 'Cybersecurity & Compliance', 'Network Infrastructure', 'IT Support & Helpdesk']
+      features: ['Cloud Infrastructure & Migration', 'Cybersecurity & Compliance', 'Network Infrastructure', 'IT Support & Helpdesk', 'Blockchain Solutions', 'Smart City Technology'],
+      pricing: 'Starting from $2,000/month',
+      benefits: ['Enterprise-grade security', '99.9% uptime', '24/7 support', 'Global scalability']
     },
     {
       title: 'Micro SaaS',
-      description: 'Scalable software as a service solutions tailored to your business needs with rapid deployment',
+      description: 'Scalable software as a service solutions tailored to your business needs with rapid deployment and innovative features',
       icon: Cloud,
       href: '/micro-saas',
-      features: ['AI-Powered Email Responder', 'Mobile-First Survey Platform', 'Event Management Dashboard', 'Customer Support Platform']
+      features: ['AI-Powered Email Responder', 'Mobile-First Survey Platform', 'Event Management Dashboard', 'Customer Support Platform', 'Personal Finance Manager', 'Smart Home Solutions'],
+      pricing: 'Starting from $9.99/month',
+      benefits: ['Quick deployment', 'Custom features', 'Mobile-first design', 'API integrations']
     }
   ];
 
@@ -281,6 +287,54 @@ const Home = memo(() => {
                   <div className="text-blue-100">{stat.label}</div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Information Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+              <p className="text-xl text-gray-600">
+                Ready to start your digital transformation journey? Contact us today.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
+                <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-4 w-fit">
+                  <Phone className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
+                <p className="text-gray-600 mb-4">Call us for immediate assistance</p>
+                <a href="tel:+13024640950" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+
+              <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
+                <div className="p-3 rounded-lg bg-gradient-to-r from-green-500 to-green-600 mx-auto mb-4 w-fit">
+                  <Mail className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-600 mb-4">Send us a message anytime</p>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+
+              <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
+                <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-purple-600 mx-auto mb-4 w-fit">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
+                <p className="text-gray-600 mb-4">Visit our headquarters</p>
+                <address className="text-blue-600 font-semibold not-italic">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </address>
+              </div>
             </div>
           </div>
         </section>

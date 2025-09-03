@@ -33,7 +33,9 @@ import {
   Car,
   Brain,
   Satellite,
-  TreePine
+  TreePine,
+  Building,
+  Heart
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -899,6 +901,105 @@ export default function ITServices() {
       pricing: '$4,500 - $22,000/month',
       delivery: '6-12 weeks',
       category: 'Zero Trust Security'
+    },
+    {
+      title: 'Metaverse Infrastructure & Development',
+      description: 'Complete metaverse platform development with blockchain integration and virtual economies',
+      icon: Globe,
+      features: [
+        '3D virtual world creation and management,Blockchain-based virtual economies,NFT marketplace integration,VR/AR device compatibility,Real-time multiplayer systems,Virtual event hosting and management'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '16-32 weeks',
+      category: 'Metaverse Services'
+    },
+    {
+      title: 'Autonomous Systems & Robotics',
+      description: 'AI-powered autonomous systems and robotics solutions for industrial and commercial applications',
+      icon: Cpu,
+      features: [
+        'Autonomous vehicle fleet management,Industrial robotics automation,Drone delivery and monitoring systems,Smart manufacturing solutions,Predictive maintenance systems,Human-robot collaboration interfaces'
+      ],
+      pricing: '$20,000 - $150,000/month',
+      delivery: '20-40 weeks',
+      category: 'Autonomous Systems'
+    },
+    {
+      title: 'Space Technology & Satellite Solutions',
+      description: 'Satellite communication systems and space technology infrastructure',
+      icon: Satellite,
+      features: [
+        'Satellite constellation management,Ground station network setup,Satellite data processing and analytics,Space-based IoT connectivity,Orbital debris monitoring,Space mission planning and execution'
+      ],
+      pricing: '$25,000 - $200,000/month',
+      delivery: '24-48 weeks',
+      category: 'Space Technology'
+    },
+    {
+      title: 'Biotechnology IT Infrastructure',
+      description: 'Specialized IT solutions for biotechnology, genomics, and pharmaceutical research',
+      icon: Heart,
+      features: [
+        'Genomic data processing and storage,Bioinformatics pipeline automation,Clinical trial management systems,Regulatory compliance automation,Research data management,AI-powered drug discovery platforms'
+      ],
+      pricing: '$18,000 - $80,000/month',
+      delivery: '16-32 weeks',
+      category: 'BioTech IT'
+    },
+    {
+      title: 'Green Technology & Carbon Management',
+      description: 'IT solutions for environmental monitoring, carbon tracking, and sustainability management',
+      icon: TreePine,
+      features: [
+        'Carbon footprint tracking and reporting,Environmental monitoring systems,Smart grid management,Renewable energy optimization,Circular economy platforms,Sustainability compliance automation'
+      ],
+      pricing: '$12,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Green Tech IT'
+    },
+    {
+      title: 'Advanced Cybersecurity & Threat Intelligence',
+      description: 'Next-generation cybersecurity with AI-powered threat detection and response',
+      icon: Shield,
+      features: [
+        'AI-powered threat hunting,Behavioral analytics and UEBA,Zero-trust network access,Quantum-resistant cryptography,Threat intelligence platforms,Automated incident response orchestration'
+      ],
+      pricing: '$10,000 - $60,000/month',
+      delivery: '12-24 weeks',
+      category: 'Advanced Security'
+    },
+    {
+      title: 'Smart City & Urban Technology',
+      description: 'Comprehensive smart city solutions with IoT integration and data analytics',
+      icon: Building,
+      features: [
+        'Smart traffic management systems,Intelligent street lighting,Environmental monitoring networks,Digital citizen services,Urban data analytics platforms,Emergency response optimization'
+      ],
+      pricing: '$30,000 - $200,000/month',
+      delivery: '24-48 weeks',
+      category: 'Smart City IT'
+    },
+    {
+      title: 'Quantum-Safe Cryptography & Security',
+      description: 'Post-quantum cryptography implementation and quantum-safe security solutions',
+      icon: Lock,
+      features: [
+        'Quantum-safe encryption algorithms,Post-quantum key management,Quantum key distribution (QKD),Hybrid classical-quantum security,Quantum random number generation,Quantum-safe certificate management'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '16-32 weeks',
+      category: 'Quantum Security'
+    },
+    {
+      title: 'Digital Twin & Simulation Platforms',
+      description: 'Digital twin technology for industrial processes, buildings, and complex systems',
+      icon: Monitor,
+      features: [
+        '3D digital twin creation and management,Real-time simulation and modeling,Predictive maintenance and optimization,Virtual testing and validation,Integration with IoT sensors,Advanced analytics and insights'
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '20-40 weeks',
+      category: 'Digital Twin Services'
     }
   ];
 
@@ -1056,7 +1157,7 @@ export default function ITServices() {
               for custom pricing.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
             {itServices.map((service, index) => (
               <div key={index} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
                 <div className="flex items-center gap-x-3 mb-6">

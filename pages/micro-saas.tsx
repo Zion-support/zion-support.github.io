@@ -38,7 +38,8 @@ import {
   Car,
   TreePine,
   Satellite,
-  Mic
+  Mic,
+  DollarSign
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -1201,6 +1202,116 @@ export default function MicroSaaS() {
       pricing: '$79 - $399/month',
       delivery: '2-3 weeks',
       category: 'Social Media SaaS'
+    },
+    {
+      title: 'AI-Powered Personal Finance Manager',
+      description: 'Intelligent personal finance tracking with automated budgeting and investment recommendations',
+      icon: DollarSign,
+      features: [
+        'Automated expense categorization,Smart budgeting and savings recommendations,Investment portfolio optimization,Bill payment automation and reminders,Credit score monitoring and improvement tips,Financial goal tracking and planning'
+      ],
+      pricing: '$9.99 - $49.99/month',
+      delivery: '2-4 weeks',
+      category: 'FinTech SaaS'
+    },
+    {
+      title: 'Smart Home Energy Optimizer',
+      description: 'AI-driven energy management system for smart homes with cost optimization',
+      icon: Home,
+      features: [
+        'Real-time energy consumption monitoring,Smart appliance scheduling and control,Energy cost optimization algorithms,Solar panel performance tracking,Peak demand management,Environmental impact reporting'
+      ],
+      pricing: '$19.99 - $99.99/month',
+      delivery: '3-5 weeks',
+      category: 'Smart Home SaaS'
+    },
+    {
+      title: 'AI-Powered Mental Health Companion',
+      description: 'Intelligent mental health tracking and wellness platform with personalized recommendations',
+      icon: Heart,
+      features: [
+        'Mood tracking and analysis,Personalized wellness recommendations,Meditation and mindfulness exercises,Progress tracking and insights,Professional therapist matching,Anonymous community support'
+      ],
+      pricing: '$14.99 - $79.99/month',
+      delivery: '4-6 weeks',
+      category: 'HealthTech SaaS'
+    },
+    {
+      title: 'Blockchain-Based Supply Chain Tracker',
+      description: 'Transparent supply chain management with blockchain verification and real-time tracking',
+      icon: Network,
+      features: [
+        'End-to-end supply chain visibility,Blockchain-based authenticity verification,Real-time shipment tracking,Supplier performance analytics,Sustainability and compliance reporting,Smart contract automation'
+      ],
+      pricing: '$199 - $999/month',
+      delivery: '6-10 weeks',
+      category: 'Blockchain SaaS'
+    },
+    {
+      title: 'AI-Powered Language Learning Platform',
+      description: 'Personalized language learning with AI tutors and immersive conversation practice',
+      icon: Globe,
+      features: [
+        'AI-powered conversation practice,Personalized learning paths,Real-time pronunciation feedback,Immersive VR language experiences,Progress tracking and analytics,Multi-language support and certification'
+      ],
+      pricing: '$29.99 - $149.99/month',
+      delivery: '5-8 weeks',
+      category: 'EdTech SaaS'
+    },
+    {
+      title: 'Smart Agriculture Management System',
+      description: 'IoT-based precision agriculture platform with AI-driven crop optimization',
+      icon: TreePine,
+      features: [
+        'IoT sensor data collection and analysis,AI-powered crop health monitoring,Automated irrigation and fertilization,Weather prediction and planning,Pest and disease detection,Harvest optimization and yield prediction'
+      ],
+      pricing: '$99 - $499/month',
+      delivery: '6-12 weeks',
+      category: 'AgTech SaaS'
+    },
+    {
+      title: 'AI-Powered Legal Document Analyzer',
+      description: 'Intelligent legal document review and contract analysis with risk assessment',
+      icon: FileText,
+      features: [
+        'Automated contract analysis and review,Risk assessment and compliance checking,Legal precedent research and citation,Document comparison and version control,Deadline tracking and reminders,Client communication automation'
+      ],
+      pricing: '$199 - $999/month',
+      delivery: '4-8 weeks',
+      category: 'LegalTech SaaS'
+    },
+    {
+      title: 'Virtual Reality Training Simulator',
+      description: 'Immersive VR training platform for professional skills development and certification',
+      icon: Monitor,
+      features: [
+        'Immersive VR training scenarios,Real-time performance assessment,Progress tracking and analytics,Multi-user collaborative training,Certification and credentialing,Integration with LMS systems'
+      ],
+      pricing: '$299 - $1,999/month',
+      delivery: '8-16 weeks',
+      category: 'VR Training SaaS'
+    },
+    {
+      title: 'AI-Powered Carbon Footprint Tracker',
+      description: 'Personal and corporate carbon footprint monitoring with sustainability recommendations',
+      icon: TreePine,
+      features: [
+        'Automated carbon footprint calculation,Sustainability goal setting and tracking,Green lifestyle recommendations,Carbon offset marketplace integration,Corporate sustainability reporting,Environmental impact analytics'
+      ],
+      pricing: '$9.99 - $99.99/month',
+      delivery: '3-6 weeks',
+      category: 'GreenTech SaaS'
+    },
+    {
+      title: 'Smart Pet Health Monitor',
+      description: 'AI-powered pet health tracking and veterinary care management platform',
+      icon: Heart,
+      features: [
+        'Health monitoring and symptom tracking,Veterinary appointment scheduling,Medication reminders and tracking,Pet activity and behavior analysis,Emergency health alerts,Pet insurance integration'
+      ],
+      pricing: '$14.99 - $79.99/month',
+      delivery: '4-7 weeks',
+      category: 'PetTech SaaS'
     }
   ];
 
@@ -1359,7 +1470,7 @@ export default function MicroSaaS() {
               for custom pricing and free consultation.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
             {microSaaSServices.map((service, index) => (
               <div key={index} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
                 <div className="flex items-center gap-x-3 mb-6">

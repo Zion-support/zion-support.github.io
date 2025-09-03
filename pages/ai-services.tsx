@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine, Building } from 'lucide-react';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 export default function AIServices() {
@@ -249,6 +249,114 @@ export default function AIServices() {
       pricing: '$10,000 - $35,000/month',
       delivery: '10-20 weeks',
       category: 'Climate AI',
+    },
+    {
+      title: 'AI-Powered Quantum Computing Solutions',
+      description:
+        'Quantum machine learning and optimization algorithms for complex problem solving',
+      icon: Cpu,
+      features: [
+        'Quantum machine learning algorithms,Quantum optimization for logistics and finance,Quantum cryptography and security,Quantum simulation for materials science,Hybrid classical-quantum workflows,Quantum error correction and fault tolerance',
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '16-32 weeks',
+      category: 'Quantum AI',
+    },
+    {
+      title: 'AI-Powered Metaverse Development Platform',
+      description:
+        'Intelligent virtual world creation with AI-driven content generation and user interaction',
+      icon: Globe,
+      features: [
+        'AI-generated 3D environments and assets,Intelligent NPCs with natural behavior,Procedural content generation,Real-time physics simulation,Cross-platform metaverse integration,Virtual economy and NFT marketplace',
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '12-24 weeks',
+      category: 'Metaverse AI',
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Systems',
+      description:
+        'Advanced AI for self-driving vehicles with real-time decision making and safety protocols',
+      icon: Car,
+      features: [
+        'Real-time object detection and path planning,Advanced driver assistance systems (ADAS),Vehicle-to-everything (V2X) communication,Autonomous fleet management,Predictive maintenance and diagnostics,Regulatory compliance and safety validation',
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '20-40 weeks',
+      category: 'Autonomous Vehicle AI',
+    },
+    {
+      title: 'AI-Powered Space Technology Solutions',
+      description:
+        'Intelligent systems for satellite operations, space exploration, and orbital mechanics',
+      icon: Satellite,
+      features: [
+        'Satellite constellation management,Orbital debris tracking and avoidance,Space weather prediction and monitoring,Autonomous spacecraft navigation,Earth observation data analysis,Space mission planning and optimization',
+      ],
+      pricing: '$30,000 - $200,000/month',
+      delivery: '24-48 weeks',
+      category: 'Space AI',
+    },
+    {
+      title: 'AI-Powered Biotechnology Platform',
+      description:
+        'Intelligent bioinformatics and genetic analysis for personalized medicine and research',
+      icon: Heart,
+      features: [
+        'Genomic sequence analysis and interpretation,Personalized medicine recommendations,Protein structure prediction,CRISPR gene editing optimization,Biomarker discovery and validation,Drug repurposing and combination therapy',
+      ],
+      pricing: '$18,000 - $80,000/month',
+      delivery: '16-32 weeks',
+      category: 'Bio AI',
+    },
+    {
+      title: 'AI-Powered Green Technology Solutions',
+      description:
+        'Intelligent systems for renewable energy optimization and environmental sustainability',
+      icon: TreePine,
+      features: [
+        'Smart grid optimization and management,Wind and solar energy forecasting,Energy storage optimization,Environmental monitoring and compliance,Green building automation,Circular economy optimization',
+      ],
+      pricing: '$12,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Green AI',
+    },
+    {
+      title: 'AI-Powered Financial Trading Algorithms',
+      description:
+        'Advanced algorithmic trading with machine learning and real-time market analysis',
+      icon: TrendingUp,
+      features: [
+        'High-frequency trading algorithms,Portfolio optimization and risk management,Market sentiment analysis and prediction,Automated trading strategy development,Regulatory compliance and reporting,Real-time market monitoring and alerts',
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '16-32 weeks',
+      category: 'FinTech AI',
+    },
+    {
+      title: 'AI-Powered Cybersecurity Intelligence',
+      description:
+        'Advanced threat detection and response with AI-driven security analytics',
+      icon: Shield,
+      features: [
+        'Zero-day threat detection and prevention,Behavioral analysis and anomaly detection,Automated incident response and remediation,Threat intelligence and attribution,Security orchestration and automation,Compliance monitoring and reporting',
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Cyber AI',
+    },
+    {
+      title: 'AI-Powered Smart City Solutions',
+      description:
+        'Intelligent urban planning and management with IoT integration and data analytics',
+      icon: Building,
+      features: [
+        'Traffic optimization and congestion management,Smart energy grid and resource management,Public safety and emergency response,Environmental monitoring and air quality,Citizen engagement and digital services,Infrastructure maintenance and optimization',
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '20-40 weeks',
+      category: 'Smart City AI',
     },
     {
       title: 'AI-Powered Quantum Computing Interface',
@@ -1259,7 +1367,7 @@ export default function AIServices() {
               for custom pricing.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
             {aiServices.map((service, index) => (
               <div
                 key={index}

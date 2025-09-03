@@ -45,6 +45,9 @@ const Navigation = () => {
         { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
         { name: 'IT Services', href: '/it-services', icon: Network, description: 'Comprehensive IT solutions' },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS solutions' },
+        { name: 'Web Development', href: '/services/web-development', icon: Code, description: 'Custom web applications' },
+        { name: 'Cloud Services', href: '/services/cloud-services', icon: Server, description: 'Cloud infrastructure solutions' },
+        { name: 'AI Development', href: '/services/ai-development', icon: Cpu, description: 'AI development services' },
         { name: 'All Services', href: '/services', icon: Settings, description: 'Complete service overview' }
       ]
     },
@@ -52,10 +55,13 @@ const Navigation = () => {
       name: 'Solutions', 
       href: '/solutions',
       dropdown: [
-        { name: 'AI Solutions', href: '/solutions/ai', icon: Brain, description: 'AI-powered business solutions' },
-        { name: 'Cloud Solutions', href: '/solutions/cloud', icon: Cloud, description: 'Cloud infrastructure solutions' },
-        { name: 'Security Solutions', href: '/solutions/security', icon: Shield, description: 'Cybersecurity solutions' },
-        { name: 'Digital Transformation', href: '/solutions/digital', icon: Zap, description: 'Digital transformation services' }
+        { name: 'AI Content Creation', href: '/solutions/ai-content-creation', icon: Brain, description: 'AI-powered content solutions' },
+        { name: 'Customer Support', href: '/solutions/customer-support', icon: Users, description: 'Customer support automation' },
+        { name: 'Email Automation', href: '/solutions/email-automation', icon: Mail, description: 'Email marketing automation' },
+        { name: 'Event Management', href: '/solutions/event-management', icon: Calendar, description: 'Event planning solutions' },
+        { name: 'Project Management', href: '/solutions/project-management', icon: BarChart3, description: 'Project management tools' },
+        { name: 'Workflow Automation', href: '/solutions/workflow-automation', icon: Zap, description: 'Business process automation' },
+        { name: 'All Solutions', href: '/solutions', icon: Settings, description: 'Complete solutions overview' }
       ]
     },
     { name: 'About', href: '/about' },

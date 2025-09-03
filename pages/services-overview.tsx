@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { Activity, ArrowRight, Award, Back, BarChart3, Bot, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Cpu, CreditCard, Cross, Database, Eye, For, From, Globe, Grid, HardDrive, Home, Image, Link2, Lock, Low, Mail, MessageSquare, Mobile, Monitor, Network, No, Palette, Phone, Secure, Server, Settings, Shield, Smartphone, Snowflake, Star, Terminal, Today, TrendingUp, Typical, Users, Wifi, Zap } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
@@ -9,8 +10,15 @@ export default function Services() {
     'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 
   return (
-    <PageTransition>
-      {/* Hero Section */}
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content="AI services, IT solutions, micro SaaS, technology consulting, digital transformation, cloud services, cybersecurity" />
+        <link rel="canonical" href="https://ziontechgroup.com/services" />
+      </Head>
+      <PageTransition>
+        {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
@@ -2248,6 +2256,7 @@ export default function Services() {
           </div>
         </div>
       </section>
-    </PageTransition>
+      </PageTransition>
+    </>
   );
 }

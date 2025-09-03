@@ -65,7 +65,7 @@ export default function Services() {
 			{/* Services Grid */}
 			<section className='py-16 sm:py-24'>
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
-					<div className='grid gap-6 lg:grid-cols-2'>
+					<div className='grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3'>
 						{/* AI Autonomous Systems */}
 						<div id='ai' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-blue-300'>
 							<div className='flex items-center gap-x-3 mb-6'>

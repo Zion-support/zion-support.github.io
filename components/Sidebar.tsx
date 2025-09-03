@@ -63,12 +63,13 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   ];
 
   const services = [
-  { name: 'AI Services', href: '/ai-services', icon: Brain },
+    { name: 'AI Services', href: '/ai-services', icon: Brain },
     { name: 'IT Services', href: '/it-services', icon: Network },
     { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
     { name: 'Web Development', href: '/services/web-development', icon: Code },
     { name: 'Cloud Services', href: '/services/cloud-services', icon: Server },
-    { name: 'AI Development', href: '/services/ai-development', icon: Cpu }
+    { name: 'AI Development', href: '/services/ai-development', icon: Cpu },
+    { name: 'All Services', href: '/services', icon: Settings }
   ];
 
   const solutions = [
