@@ -155,7 +155,10 @@
     "analyze": "ANALYZE=true npm run build",
     "build:production": "NODE_ENV=production npm run build",
     "dev:fast": "npm run dev -- --turbo",
-    "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0"
+    "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0",
+    "health:check": "node automation/health-check.cjs",
+    "security:scan": "node automation/security-scanner.cjs",
+    "automation:full": "bash scripts/automation-suite.sh"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
