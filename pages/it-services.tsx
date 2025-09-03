@@ -1209,6 +1209,156 @@ export default function ITServices() {"
       pricing: "$40,000 - $400,000/month","
       delivery: "24-48 weeks","
       category: "Autonomous Systems Services"};
+    {"
+      title: "AI-Powered IT Infrastructure Management","
+      description: "Intelligent infrastructure management with AI-driven automation and predictive maintenance"
+      icon: Brain
+      features: ["
+        "AI-powered infrastructure monitoring and optimization,Predictive maintenance and failure prevention,Automated resource allocation and scaling,Intelligent capacity planning and forecasting,Self-healing infrastructure capabilities,Cost optimization through AI-driven decisions,Performance analytics and insights,Integration with existing management tools"
+      ]"
+      pricing: "$8,000 - $40,000/month","
+      delivery: "6-16 weeks","
+      category: "AI Infrastructure Services"};
+    {"
+      title: "Blockchain-Based Supply Chain Transparency","
+      description: "Immutable supply chain tracking and verification platform with smart contracts and IoT integration"
+      icon: Network
+      features: ["
+        "End-to-end supply chain visibility and tracking,Smart contract automation and execution,Product authenticity verification and anti-counterfeiting,Sustainability and compliance tracking,Real-time inventory and logistics management,Integration with IoT sensors and devices,Supplier performance monitoring,Automated compliance reporting"
+      ]"
+      pricing: "$15,000 - $75,000/month","
+      delivery: "12-24 weeks","
+      category: "Blockchain Supply Chain Services"};
+    {"
+      title: "Advanced Threat Intelligence & Hunting Platform","
+      description: "Proactive threat hunting and intelligence-driven security operations with AI-powered analysis"
+      icon: Shield
+      features: ["
+        "Advanced threat hunting and investigation capabilities,AI-powered threat intelligence analysis,Behavioral anomaly detection and analysis,Threat actor profiling and attribution,Automated incident response and remediation,Threat intelligence sharing and collaboration,Compliance monitoring and reporting,Integration with security tools and SIEM systems"
+      ]"
+      pricing: "$12,000 - $60,000/month","
+      delivery: "8-20 weeks","
+      category: "Threat Intelligence Services"};
+    {"
+      title: "Quantum-Enhanced Cybersecurity Solutions","
+      description: "Next-generation cybersecurity leveraging quantum computing for advanced threat detection and encryption"
+      icon: Lock
+      features: ["
+        "Quantum-enhanced threat detection algorithms,Quantum-resistant encryption implementation,Quantum key distribution systems,Hybrid classical-quantum security protocols,Advanced cryptographic solutions,Quantum-safe certificate management,Compliance with quantum security standards,Integration with existing security infrastructure"
+      ]"
+      pricing: "$25,000 - $150,000/month","
+      delivery: "16-32 weeks","
+      category: "Quantum Cybersecurity Services"};
+    {"
+      title: "Intelligent Data Governance & Privacy Platform","
+      description: "AI-powered data governance with automated privacy compliance and data lineage tracking"
+      icon: Database
+      features: ["
+        "Automated data discovery and classification,Privacy compliance automation (GDPR, CCPA, HIPAA)Data lineage tracking and impact analysis,Automated data retention and deletion policies,Consent management and privacy controls,Data quality monitoring and improvement,Cross-border data transfer compliance,Integration with data platforms and tools"
+      ]"
+      pricing: "$10,000 - $50,000/month","
+      delivery: "8-20 weeks","
+      category: "Data Governance Services"};
+    {"
+      title: "Advanced Network Performance Optimization","
+      description: "AI-driven network optimization with real-time performance monitoring and automated tuning"
+      icon: Network
+      features: ["
+        "AI-powered network performance analysis,Automated network optimization and tuning,Real-time traffic analysis and routing optimization,Quality of service (QoS) management,Network capacity planning and forecasting,Automated troubleshooting and issue resolution,Performance monitoring and alerting,Integration with network infrastructure"
+      ]"
+      pricing: "$6,000 - $30,000/month","
+      delivery: "6-16 weeks","
+      category: "Network Optimization Services"};
+    {"
+      title: "Intelligent Cloud Cost Management & FinOps","
+      description: "AI-powered cloud cost optimization with automated resource management and cost allocation"
+      icon: TrendingUp
+      features: ["
+        "AI-driven cost optimization and resource management,Automated resource scaling and rightsizing,Cost allocation and chargeback management,Reserved instance and savings plan optimization,Multi-cloud cost comparison and recommendations,FinOps best practices implementation,Cost forecasting and budgeting,Integration with cloud platforms and tools"
+      ]"
+      pricing: "$5,000 - $25,000/month","
+      delivery: "4-12 weeks","
+      category: "Cloud FinOps Services"};
+    {"
+      title: "Advanced API Security & Management Platform","
+      description: "Comprehensive API security with intelligent threat detection and automated protection"
+      icon: Shield
+      features: ["
+        "AI-powered API threat detection and prevention,Automated API security testing and validation,Rate limiting and DDoS protection,API authentication and authorization,API performance monitoring and optimization,Compliance monitoring and reporting,API documentation and developer portal,Integration with API gateways and management tools"
+      ]"
+      pricing: "$4,000 - $20,000/month","
+      delivery: "4-10 weeks","
+      category: "API Security Services"};
+    {"
+      title: "Intelligent Database Performance Optimization","
+      description: "AI-powered database optimization with automated tuning and performance monitoring"
+      icon: Database
+      features: ["
+        "AI-powered database performance analysis,Automated query optimization and tuning,Database capacity planning and scaling,Real-time performance monitoring and alerting,Automated backup and recovery optimization,Database security and compliance monitoring,Multi-database platform support,Integration with database management tools"
+      ]"
+      pricing: "$5,000 - $25,000/month","
+      delivery: "4-12 weeks","
+      category: "Database Optimization Services"};
+    {"
+      title: "Advanced IoT Security & Management Platform","
+      description: "Comprehensive IoT security with device management and threat protection"
+      icon: Shield
+      features: ["
+        "IoT device security and vulnerability management,Automated device provisioning and management,Real-time threat detection and response,Device firmware management and updates,Network security and segmentation,Compliance monitoring and reporting,Integration with IoT platforms and tools,Edge security and data protection"
+      ]"
+      pricing: "$8,000 - $40,000/month","
+      delivery: "6-16 weeks","
+      category: "IoT Security Services"};
+    {"
+      title: "Intelligent Business Continuity & Disaster Recovery","
+      description: "AI-powered business continuity planning with automated disaster recovery and testing"
+      icon: Shield
+      features: ["
+        "AI-powered disaster recovery planning and optimization,Automated backup and replication management,Real-time disaster recovery testing and validation,Business continuity planning and implementation,Recovery time objective (RTO) optimization,Compliance monitoring and reporting,Integration with infrastructure and applications,Continuous improvement and optimization"
+      ]"
+      pricing: "$10,000 - $50,000/month","
+      delivery: "8-20 weeks","
+      category: "Business Continuity Services"};
+    {"
+      title: "Advanced Container Security & Compliance","
+      description: "Comprehensive container security with automated vulnerability scanning and compliance management"
+      icon: Shield
+      features: ["
+        "Automated container image scanning and vulnerability assessment,Runtime security monitoring and protection,Compliance automation for containerized workloads,Secrets management and encryption,Network security and micro-segmentation,Container registry security and governance,DevSecOps integration and CI/CD security,Compliance reporting and audit trails"
+      ]"
+      pricing: "$6,000 - $30,000/month","
+      delivery: "4-12 weeks","
+      category: "Container Security Services"};
+    {"
+      title: "Intelligent IT Asset Management & Optimization","
+      description: "AI-powered IT asset management with automated lifecycle tracking and optimization"
+      icon: Database
+      features: ["
+        "AI-powered asset discovery and inventory management,Automated asset lifecycle tracking and optimization,Software license management and compliance,Hardware procurement and disposal optimization,Asset performance monitoring and analytics,Cost tracking and budget optimization,Integration with ITSM and procurement systems,Compliance reporting and audit support"
+      ]"
+      pricing: "$4,000 - $20,000/month","
+      delivery: "4-10 weeks","
+      category: "IT Asset Management Services"};
+    {"
+      title: "Advanced Network Security & Zero Trust Implementation","
+      description: "Comprehensive network security with zero trust architecture and AI-powered threat detection"
+      icon: Shield
+      features: ["
+        "Zero trust network architecture implementation,AI-powered network threat detection and response,Micro-segmentation and network isolation,Identity and access management (IAM)Network security monitoring and analytics,Automated security policy enforcement,Compliance monitoring and reporting,Integration with security tools and platforms"
+      ]"
+      pricing: "$15,000 - $75,000/month","
+      delivery: "12-24 weeks","
+      category: "Network Security Services"};
+    {"
+      title: "Intelligent Cloud Migration & Modernization","
+      description: "AI-powered cloud migration with automated assessment and optimization"
+      icon: Cloud
+      features: ["
+        "AI-powered application assessment and migration planning,Automated cloud migration and modernization,Performance optimization and cost reduction,Legacy system integration and API development,Cloud-native application refactoring,Testing and validation automation,Training and change management support,Continuous optimization and monitoring"
+      ]"
+      pricing: "$20,000 - $150,000/month","
+      delivery: "12-32 weeks","
+      category: "Cloud Migration Services"};
   ]
 
   const technologies = ["

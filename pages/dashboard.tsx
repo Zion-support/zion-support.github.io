@@ -1,121 +1,134 @@
-import React { useState } from "react"
-const Head = dynamic(() => import("next/head"), { ssr: false })
-  Code
-  Cloud} from "lucide-react"
+import React, { useState } from "react"
+import dynamic from "next/dynamic"
+import { Code, Cloud } from "lucide-react"
 
-export default function Dashboard() {"
+const Head = dynamic(() => import("next/head"), { ssr: false })
+
+export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("overview")
   const stats = [
-    {"
-      title: "Active Projects","
-      value: "12","
-      change: "+2 this month"
-      icon: BarChart3,"
-      color: "from-blue-500 to-cyan-500"};
-    {"
-      title: "Team Members","
-      value: "8","
-      change: "+1 this week"
-      icon: Users,"
-      color: "from-green-500 to-emerald-500"};
-    {"
-      title: "Completed Tasks","
-      value: "47","
-      change: "+12 this week"
-      icon: CheckCircle,"
-      color: "from-purple-500 to-pink-500"};
-    {"
-      title: "Revenue","
-      value: "$125K","
-      change: "+15% this month"
-      icon: TrendingUp,"
-      color: "from-orange-500 to-red-500"};
+    {
+      title: "Active Projects",
+      value: "12",
+      change: "+2 this month",
+      icon: BarChart3,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Team Members",
+      value: "8",
+      change: "+1 this week",
+      icon: Users,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Completed Tasks",
+      value: "47",
+      change: "+12 this week",
+      icon: CheckCircle,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Revenue",
+      value: "$125K",
+      change: "+15% this month",
+      icon: TrendingUp,
+      color: "from-orange-500 to-red-500"
+    }
   ]
 
   const recentProjects = [
     {
-      id: 1,"
-      name: "AI Chatbot Implementation","
-      status: "In Progress"
-      progress: 75,"
-      dueDate: "2024-02-15","
+      id: 1,
+      name: "AI Chatbot Implementation",
+      status: "In Progress",
+      progress: 75,
+      dueDate: "2024-02-15",
       team: ["John Doe", "Jane Smith", "Mike Johnson"]
-};
+    },
     {
-      id: 2,"
-      name: "Cloud Migration","
-      status: "Planning"
-      progress: 25,"
-      dueDate: "2024-03-01","
+      id: 2,
+      name: "Cloud Migration",
+      status: "Planning",
+      progress: 25,
+      dueDate: "2024-03-01",
       team: ["Sarah Wilson", "David Brown"]
-};
+    },
     {
-      id: 3,"
-      name: "Mobile App Development","
-      status: "Completed"
-      progress: 100,"
-      dueDate: "2024-01-30","
+      id: 3,
+      name: "Mobile App Development",
+      status: "Completed",
+      progress: 100,
+      dueDate: "2024-01-30",
       team: ["Alex Chen", "Lisa Garcia"]
-};
+    }
   ]
 
   const notifications = [
     {
-      id: 1,"
-      title: "New project assigned","
-      message: "You have been assigned to the AI Chatbot project","
-      time: "2 hours ago","
-      type: "info"};
+      id: 1,
+      title: "New project assigned",
+      message: "You have been assigned to the AI Chatbot project",
+      time: "2 hours ago",
+      type: "info"
+    },
     {
-      id: 2,"
-      title: "Meeting reminder","
-      message: "Team standup meeting in 30 minutes","
-      time: "30 minutes ago","
-      type: "warning"};
+      id: 2,
+      title: "Meeting reminder",
+      message: "Team standup meeting in 30 minutes",
+      time: "30 minutes ago",
+      type: "warning"
+    },
     {
-      id: 3,"
-      title: "Project completed","
-      message: "Mobile App Development project has been completed","
-      time: "1 day ago","
-      type: "success"};
+      id: 3,
+      title: "Project completed",
+      message: "Mobile App Development project has been completed",
+      time: "1 day ago",
+      type: "success"
+    }
   ]
 
   const quickActions = [
-    {"
-      title: "Create Project","
-      description: "Start a new project"
-      icon: Plus,"
-      color: "from-blue-500 to-cyan-500","
-      href: "/projects/new"};
-    {"
-      title: "View Reports","
-      description: "Check project analytics"
-      icon: BarChart3,"
-      color: "from-green-500 to-emerald-500","
-      href: "/reports"};
-    {"
-      title: "Team Chat","
-      description: "Communicate with team"
-      icon: MessageCircle,"
-      color: "from-purple-500 to-pink-500","
-      href: "/chat"};
-    {"
-      title: "Download Resources","
-      description: "Access project files"
-      icon: Download,"
-      color: "from-orange-500 to-red-500","
-      href: "/resources"};
+    {
+      title: "Create Project",
+      description: "Start a new project",
+      icon: Plus,
+      color: "from-blue-500 to-cyan-500",
+      href: "/projects/new"
+    },
+    {
+      title: "View Reports",
+      description: "Check project analytics",
+      icon: BarChart3,
+      color: "from-green-500 to-emerald-500",
+      href: "/reports"
+    },
+    {
+      title: "Team Chat",
+      description: "Communicate with team",
+      icon: MessageCircle,
+      color: "from-purple-500 to-pink-500",
+      href: "/chat"
+    },
+    {
+      title: "Download Resources",
+      description: "Access project files",
+      icon: Download,
+      color: "from-orange-500 to-red-500",
+      href: "/resources"
+    }
   ]
 
   const services = [
-    {"
-      title: "AI Services","
-      description: "Explore our AI solutions"
-      icon: Brain,"
-      color: "from-purple-500 to-pink-500","
-      href: "/services/ai-services"};
-    {"
-      title: "Micro SAAS","
+    {
+      title: "AI Services",
+      description: "Explore our AI solutions",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500",
+      href: "/services/ai-services"
+    },
+    {
+      title: "Micro SAAS",
       description: "Business automation tools"
       icon: Code,"
       color: "from-blue-500 to-cyan-500","

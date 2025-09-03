@@ -1,12 +1,15 @@
 import type { NextPage } from "next"
+import dynamic from "next/dynamic"
+
 const MainLayout = dynamic(() => import("../components/layout/MainLayout"), { ssr: false })
 
 const CookiePolicy: NextPage = () => {
   return (
-    <MainLayout title="Cookie Policy - Zion Tech Group""
+    <MainLayout 
+      title="Cookie Policy - Zion Tech Group"
       description="Cookie Policy for Zion Tech Group. Learn about how we use cookies and similar technologies."
-    >"
-      <div className="min-h-screen bg-gray-50 py-16">"
+    >
+      <div className="min-h-screen bg-gray-50 py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8 md:p-12">"
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Cookie Policy</h1>
@@ -57,6 +60,6 @@ already on your computer and set most browsers to prevent them from being placed
       </div>
     </MainLayout>
   )
-};
-"
-export default CookiePolicy;
+}
+
+export default CookiePolicy

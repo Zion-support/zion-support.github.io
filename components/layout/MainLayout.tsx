@@ -1,27 +1,25 @@
 import React from "react"
+
 interface MainLayoutProps {
   children: React.ReactNode
-  title?: string,
+  title?: string
   description?: string
-  keywords?: string};
+  keywords?: string
+}
+
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
-  title = "Zion Tech Group - Leading Technology Solutions Provider","
-  description = "Leading technology solutions and AI services","
+  title = "Zion Tech Group - Leading Technology Solutions Provider",
+  description = "Leading technology solutions and AI services",
   keywords = "technology, AI, software development, consulting"
 }) => {
   return (
-    <div className="min-h-screen flex flex-col">"
-      <SEOEnhancer title="{title}" description="{description}" keywords="{keywords}" />
-      <PerformanceOptimizer />
-      <AccessibilityEnhancer />
-      <Header />"
+    <div className="min-h-screen flex flex-col">
       <main className="flex-grow">
-        {children};
+        {children}
       </main>
-      <Footer />
     </div>
   )
-};
-""
-export default MainLayout;
+}
+
+export default MainLayout
