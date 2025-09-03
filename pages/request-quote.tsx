@@ -1,6 +1,6 @@
 import React from 'react';
 import SEOHead from '../src/components/SEOHead';
-import ContactForm from '../components/ContactForm';
+import ContactForm from '../src/components/ContactForm';
 
 const RequestQuotePage = () => {
   return (

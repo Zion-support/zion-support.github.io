@@ -1,9 +1,9 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-// import '../src/index.css';
+import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
-import ErrorBoundary from '../src/components/ErrorBoundary';
+import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
