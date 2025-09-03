@@ -1,7 +1,7 @@
 import React, { useState } from 'react';'''
 import { Link } from 'react-router-dom';'''
 import { motion } from 'framer-motion';'''
-import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight } from 'lucide-react';
+import { Brain, CheckCircle, ArrowRight } from "lucide-react";
 const AIMatcher = () => {}
     const [currentStep, setCurrentStep] = useState (1) ;
     const [answers, setAnswers] = useState ({}) ;

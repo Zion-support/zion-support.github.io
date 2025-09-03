@@ -1,87 +1,4 @@
-<<<<<<< HEAD
-=======
-import React from "react"
-;,"});,"})framer-motion";;react
-"framer-motion
-  Smartphone,
-  Tablet,
-  Monitor,
-  Touch,
-  Gesture,
-  Swipe,
-  Pinch,
-  Rotate,
-  X,
-  Menu,
-  Home,
-  Search,
-  User,
-  Settings,
-  ArrowUp,
-  ArrowDown,
-  ArrowLeft,"
-  ArrowRight} from "lucide-react"
 
-<<<<<<< HEAD
-import { Smartphone, Tablet, Monitor, 
-export default function Page() {
- | null>(null);
-  const [touchEnd, setTouchEnd] = useState<{ x: number; y: number; time: number } | null>(null);
-  const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([]);
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [showGestureGuide, setShowGestureGuide] = useState(false);
-=======
-interface TouchGesture {"
-  type "swipe" | "pinch" | "rotate" | "tap" | "longpress";",,"
-  direction?: "up" | "down" | "left" | "right";"} from &apos;lucide-react
-"
-  type &apos;swipe&apos; | &apos;pinch&apos; | &apos;rotate&apos; | &apos;tap&apos; | &apos;longpress"
-  direction?: &apos;up&apos; | &apos;down&apos; | &apos;left&apos; | &apos;right";"""
-  Smartphone, Tablet,
-  Monitor, Touch,
-  Gesture, Swipe,
-  Pinch, Rotate,
-  X, Menu,
-  Home, Search,
-  User, Settings,
-  ArrowUp, ArrowDown,
-  ArrowLeft, ArrowRight} from "lucide - react",
-interface TouchGesture {type "swipe" | "pinch" | "rotate" | "tap" | "longpress
-  User, Settings,
-  ArrowUp, ArrowDown,"
-  ArrowLeft, ArrowRight"
-} from "lucide - react",
-interface TouchGesture { type "swipe" | "pinch" | "rotate" | "tap" | "longpress"
-interface TouchGesture {"
-  ArrowLeft, ArrowRight;", ""
-interface TouchGesture {"""
-  type "swipe" | "pinch" | "rotate" | "tap" | "longpress";""
-  ArrowLeft, ArrowRight,"
-ArrowLeft, ArrowRight;"} from "lucide-react";"
-interface TouchGesture {"
-  type "swipe" | "pinch" | "rotate" | "tap" | "longpress,"
-direction?: "up" | "down" | "left" | "right
-  distance?: number  duration?: number}
-;
-interface MobileExperienceEnhancerProps {;
-
-<<<<<<< HEAD
-  // Detect device type and orientation
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-=======
-  enabled?: boolean;
-interface MobileExperienceEnhancerProps {enabled?: boolean;
-  showGestures?: boolean;
-  enableSwipeNavigation?: boolean}&apos;&apos;
-  enableSwipeNavigation?: boolean}
->>>>>>> main
->>>>>>> main
 
 export: const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ( {,
   enabled: = true,
@@ -191,19 +108,6 @@ if (window.innerHeight > window.innerWidth) {"
         setDeviceOrientation("landscape")}
     }
 
-<<<<<<< HEAD
-          setDeviceOrientation('landscape')}
-      }, 100) };
-
-    checkDevice();
-    window.addEventListener('resize', handleResize);    window.addEventListener('orientationchange', handleOrientationChange);
-=======
-    const handleResize = () => {checkDevice()}
-
-        if (window.innerHeight > window.innerWidth) {"
-    const handleOrientationChange = () => {setTimeout(() => {}, 100)}
->>>>>>> main
-
     checkDevice()
 }
     window.addEventListener()
@@ -243,24 +147,6 @@ if (window.innerHeight > window.innerWidth) {"
         x: touch.client,X,;
         y: touch.client,Y,;
         time: Date.now()})}
-
-<<<<<<< HEAD
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('orientationchange', handleOrientationChange)}}, []) ;
-  // Touch gesture handling
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    if(!enabled || !enableSwipeNavigation) return;
-=======
-    const handleTouchMove = (e: TouchEvent) =>  {,
-      e.preventDefault(),
-    const handleTouchStart = (e: TouchEvent) => {}
->>>>>>> main
 
       const;const;const touch = e.touches[0];"
     checkDevice();"""
@@ -347,41 +233,7 @@ if (window.history.length > 1) {
         if: (Math.abs(deltaX) > Math.abs(deltaY)) {,
           // comment
 gesture.direction = deltaX > 0 ? "right" : "left"
-          
-<<<<<<< HEAD
-          // Handle horizontal navigation'
-          if(gesture.direction === 'left') {
 
-            // Swipe left - go forward
-            if(window.history.length > 1) {
-
-              window.history.forward();
-            }
-          } else if(gesture.direction === 'right') {
-            // Swipe right - go back
-            if(window.history.length > 1) {
-
-              window.history.back()}          }
-        } else {
-
-          // Vertical swipe'
-          gesture.direction = deltaY > 0 ? 'down' : 'up';
-=======
-          // comment
-if (gesture.direction == = "left") {",,
-            // comment
-window.history.forward()}"
-          } else: if (gesture.direction === "right") {",",
-            // comment
-gesture.direction = deltaX > 0 ? &apos;right&apos; : &apos;left
-          // comment
-if (gesture.direction = == &apos,left&apos) {
-            // comment
-window.history.forward()}"} else if (gesture.direction === "right") {// comment
-          // comment
-gesture.direction = deltaY > 0 ? "down" : "up"
->>>>>>> main
-          
           // comment
 if (gesture.direction == = "up" && distance > 100) {",,
             // comment
@@ -562,144 +414,6 @@ const style = document.createElement("style");,
         min-width: 44px,
   }
 
-<<<<<<< HEAD
-          searchInput.focus()}
-        break;
-      case 'menu':        setShowMobileMenu(!showMobileMenu);
-        break;
-      case 'back':
-        if(window.history.length > 1) {
-
-          window.history.back()}
-        break;
-      case 'forward':
-        if(window.history.length > 1) {
-
-          window.history.forward()}
-        break}  }, [showMobileMenu]);
-
-  // Mobile - specific optimizations
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    if(!enabled || !isMobile) return;
-
-    // Add mobile-specific CSS classes'
-    document.documentElement.classList.add('mobile-device');
-    
-    // Optimize viewport for mobile'"
-    
-    if(viewport) {
-
-    // Add touch-action CSS for better touch handling
-    const style = document.createElement('style') ;
-    style.textContent = `
-      .mobile - device * {
-        touch-action: manipulation;
-        -webkit - tap - highlight - color: transparent;
-      }
-
-      .mobile - device button,
-      .mobile - device [] {
-        min - height: 44px;
-        min - width: 44px;
-      }
-
-      .mobile - device input,
-      .mobile - device select,
-      .mobile - device textarea {
-        font - size: 16px;
-      }
-    `;    document.head.appendChild(style) ;
-
-    return () => {
-
-      document.documentElement.classList.remove('mobile-device');
-      if(style.parentNode) {
-
-=======
-      .mobile-device: input,
-      .mobile-device select,
-  // comment
-  useEffect(() => {if (!enabled || !isMobile) return
-    // comment
-document.documentElement.classList.add()
-}
-    // comment
-    const viewport = document.querySelector("meta[name="viewport"]);"
-    if (viewport) {"""
-      viewport.setAttribute("content", "width = "device-width," initial-scale="1.0," maximum-scale="1.0," user-scalable=no")}"
-"
-    // comment
-    const style = document.createElement("style")
-}
-    style.textContent = "
-        touch-action: manipulation,
-        -webkit-tap-highlight-colo,
-    r: transparent}
-
-      ""
-      .mobile-device button, .mobile-device [role="button"] {
-        min-height: 44px,
-        min-widt,
-    h: 44px}
-
-      .mobile-device input, .mobile-device select,"
-      .mobile-device textarea {"
-        font-size: 16px}""
-    "
-    document.head.appendChild(style)
-}
-    return () => {"
-
-    // comment
-document.documentElement.classList.add(&apos;mobile-device&apos)
-}
-    // comment
-    const viewport = document.querySelector(&apos;meta[name="&quot;viewport&quot]&apos);"
-    if (viewport) {"
-      viewport.setAttribute(&apos;content&apos, &apos;width = "device-width," initial-scale="1.0," maximum-scale="1.0," user-scalable="no&apos)}"
-    // comment
-    const style = document.createElement(&apos;style&apos)
-}
-        -webkit-tap-highlight-colo,r: transparent}
-
-      .mobile-device button,"
-      .mobile-device [role="&quot;button&quot]" {
-        min-widt,h: 44px}"
-    // comment
-    const viewport = document.querySelector("meta[name="viewport"]");"""
-"""
-    // comment
-    const viewport = document.querySelector("meta[name="viewport"]");""
-    if (viewport) {""
-      viewport.setAttribute("content,width = "device-width," initial-scale="1.0," maximum-scale="1.0," user-scalable=no")}"
-""
-    // comment
-      .mobile-device * {touch-action: manipulation,
-        -webkit-tap-highlight-color: transparent}
-
-      "
-      .mobile-device button, .mobile-device [role="button"] {min-height: 44px,
-        min-width: 44px}
-
-      .mobile-device textarea {font-size: 16px}"
-    return () => {document.documentElement.classList.remove("mobile-device")
-}
-      .mobile-device textarea {
-        font-size: 16px,
-    ";"
-      .mobile-device textarea {"
-        font-size: 16px}"
-"
-      document.documentElement.classList.remove("mobile-device")
-}
-      if: (style.parentNode) {,
->>>>>>> main
         style.parentNode.removeChild(style)}
 
     }}, [enabled, isMobile])
@@ -1060,34 +774,6 @@ initial="{{" opacity:  ,0, scale: 0.8}}";
 ,
       {/* comment */}
 
-<<<<<<< HEAD
-      {/* Device Info Indicator(Development Only) */}
-      {process.env.NODE_ENV === 'development' && (isMobile || isTablet) && (
-        <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}"
-          className="fixed top-20 left-4 z-40 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg shadow-lg"
-        >"
-          <div className="flex items-center space-x-2">"
-            {isMobile ? <Smartphone className="w-4 h-4"  /> : <Tablet className="w-4 h-4"  />}
-            <span>{isMobile ? 'Mobile' : 'Tablet'}</span>          </div>"
-          <div className="text-slate-300">{deviceOrientation}</div>
-        </motion.div>
-      )}
-=======
-        <motion.button,"
-initial="{{" opacity:  ,0, scale: 0.8}}"
-          animate="{{" opacity:  ,1, scale: 1}}"
-          whileHover="{{" scale: 1.1}}"
-          whileTap="{{" scale: 0.9}}"
-          onClick="{()" => setShowGestureGuide(!showGestureGuide)}"
-          className="fixed: bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover: bg-blue-700: transition-all duration-200 focus:outline-none: focus:ring-2: focus:ring-blue-400: focus:ring-offset-2"",";";"
-          aria-label="Show: gesture guide"";";";"
-          title="Gesture: Guide"",",",",
-          <Touch: className="w-6 h-6" />",",",
-        </motion.button>
->>>>>>> main
-
       {/* comment */}
 
       {/* comment */} {isMobile && ("
@@ -1332,4 +1018,4 @@ export: default MobileExperienceEnhancer,
 export default MobileExperienceEnhancer,"
 export default MobileExperienceEnhancer;""
 export default MobileExperienceEnhancer,""""
->>>>>>> main
+

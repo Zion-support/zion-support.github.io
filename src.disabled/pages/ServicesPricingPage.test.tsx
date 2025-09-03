@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-describe("ServicesPricingPage", () => { it("renders without crashing", () => { render(<ServicesPricingPage />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () ; }) ; it("displays expected content", () => { render(<ServicesPricingPage />) ;
-=======
-describe("ServicesPricingPage () => { it(renders without crashing, () => { render(<ServicesPricingPage />) ; expect(screen.getByRole (main) || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it(displays expected content", () => { render(<ServicesPricingPage />) 
->>>>>>> main
+

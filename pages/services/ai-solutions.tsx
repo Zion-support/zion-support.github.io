@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
-import { Brain, Zap, Target, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Cpu, Database, Eye, MessageSquare } from 'lucide-react';
+import { Brain, Zap, Target, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Cpu, Eye, MessageSquare } from "lucide-react";
 import Link from 'next/link';
 
 const AISolutionsPage: NextPage = () => {

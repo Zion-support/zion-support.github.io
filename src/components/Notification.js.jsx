@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, Info, X, AlertTriangle  } from 'lucide-react';
+import { X } from "lucide-react";
 ,
   error: {
 

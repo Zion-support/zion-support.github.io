@@ -1,5 +1,4 @@
 import React from 'react';
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, Users } from 'lucide-react';
 
 export default function Terms() {
   const sections = [
@@ -50,90 +49,4 @@ export default function Terms() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </main>
-      <Footer />
-    </>);
-}
 
-
-export { Terms };
-
-export { Terms };
-
-export { Terms };
-
-export { Terms };
-
-export { Terms };
-=======
-      </div>
-
-      {/* Content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="prose prose-lg max-w-none">
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Introduction</h2>
-            <p className="text-gray-600 leading-relaxed">
-              These Terms of Service ("Terms") govern your use of Zion Tech Group's website and services. 
-              By accessing or using our services, you agree to be bound by these Terms. If you disagree 
-              with any part of these terms, then you may not access the service.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {sections.map((section, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg">
-                <div className="flex items-center mb-4">
-                  <section.icon className="h-8 w-8 text-blue-600 mr-3" />
-                  <h3 className="text-xl font-bold text-gray-900">{section.title}</h3>
-                </div>
-                <p className="text-gray-600 leading-relaxed">{section.content}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Governing Law</h2>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              These terms and conditions are governed by and construed in accordance with the laws of 
-              Delaware, United States, and you irrevocably submit to the exclusive jurisdiction of the 
-              courts in that state or location.
-            </p>
-          </div>
-
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              If you have any questions about these Terms of Service, please contact us:
-            </p>
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <div className="space-y-2">
-                <p><strong>Email:</strong> legal@ziontechgroup.com</p>
-                <p><strong>Phone:</strong> +1 (302) 464-0950</p>
-                <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
-            <div className="flex">
-              <div className="flex-shrink-0">
-                <AlertTriangle className="h-5 w-5 text-yellow-400" />
-              </div>
-              <div className="ml-3">
-                <p className="text-sm text-yellow-700">
-                  <strong>Important:</strong> These terms may be updated from time to time. 
-                  We will notify users of any material changes by posting the new terms on this page. 
-                  Your continued use of our services after any such changes constitutes your acceptance 
-                  of the new terms.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> main

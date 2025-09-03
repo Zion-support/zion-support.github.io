@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, createContext, useContext } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; <<<<<<< HEAD; import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from '../ui/button'; const AccessibilityContext = createContext(undefined); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider'); ; return context; }; =======; import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X  } from 'lucide-react'; import { Button } from "../ui/button"; const AccessibilityContext = createContext(null); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider')}; return context}; >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-=======
+
+
 import React, { useState, useEffect, createContext, useContext } from "react" ; const AccessibilityContext = createContext(undefined); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error("useAccessibility must be used within an AccessibilityProvider"); ; return context}; ; const AccessibilityContext = createContext(null); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error("useAccessibility must be used within an AccessibilityProvider")}; return context}; };""";"
         window.addEventListener("keydown", handleKeyDown);";"";"
         return () => window.removeEventListener("keydown", handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);";"";"
@@ -1098,7 +1097,6 @@ export default AccessibilityPanel";"}}}}}}}}}}}}}}}"";"import React, { useState,
 ;"""
 ;""
 
-
                         e.preventDefault()
 }
                         firstFocusableElement.focus()}
@@ -1143,4 +1141,4 @@ export default AccessibilityPanel}}}}}}}}}}}}}}}"import React, { useState, useEf
 ;"const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if(!context) { throw new Error("useAccessibility must be used within an AccessibilityProvider")} return context};"
 ;"
 }""
->>>>>>> main
+

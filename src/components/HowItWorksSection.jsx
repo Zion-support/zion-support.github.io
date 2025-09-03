@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import {  import { motion, AnimatePresence  } from 'framer-motion';
- from 'lucide-react';
-=======
-import React from 'react';
->>>>>>> main
+
 
 export const HowItWorksSection = () => {
   return (
@@ -32,4 +25,3 @@ export const HowItWorksSection = () => {
 };
   );
 }
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2

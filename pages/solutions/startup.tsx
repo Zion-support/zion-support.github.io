@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
-import { Rocket, Zap, Target, Users, CheckCircle, ArrowRight, DollarSign, Shield, Globe, TrendingUp } from 'lucide-react';
+import { Rocket, Zap, Target, Users, CheckCircle, ArrowRight, DollarSign, Globe, TrendingUp } from "lucide-react";
 import Link from 'next/link';
 
 const StartupPage: NextPage = () => {

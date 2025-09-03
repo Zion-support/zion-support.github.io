@@ -1,37 +1,4 @@
-<<<<<<< HEAD
-import { useState, useCallback, useRef, useEffect } from 'react';
-<<<<<<< HEAD
-;
-export const useAICodeGeneration = () => {
-    const { trackEvent } = useAnalytics({        enableTracking: true,
-        enableUserBehaviorTracking: true;
-    });
-    const [isGenerating, setIsGenerating] = useState(false);
-    const [isAnalyzing, setIsAnalyzing] = useState(false);'
-    const [generatedCode, setGeneratedCode] = useState('');
-    const [codeAnalysis, setCodeAnalysis] = useState(null);
-    const [suggestions, setSuggestions] = useState([]);
-    const [history, setHistory] = useState([]);
-    const generationTimeoutRef = useRef(null);
-    // Generate code using AI;
-    const generateCode = useCallback(async (prompt, options) => {}
-        setIsGenerating(true);
-        try {}
-            // Simulate AI processing - in production, this would call an AI service;
-            await new Promise(resolve => setTimeout(resolve, 3000));'
-            let generatedCode = '';'
-            // Generate code based on options''
-            if (options.language === 'typescript' && options.framework === 'react') {}
-                generatedCode = generateReactTypeScriptCode(prompt, options)}'
-            else if (options.language === 'javascript' && options.framework === 'express') {}
-                generatedCode = generateExpressCode(prompt, options)}'
-            else if (options.language === 'python') {}
-=======
 
-export default function Page() {
-            else if(options.language === 'python') {
-
->>>>>>> main
                 generatedCode = generatePythonCode(prompt, options)}
             else {
 
@@ -470,37 +437,7 @@ if __name__ == "__main__":`
         return issues};
     // Helper functions for code optimization
     const optimizeForAccessibility = (code) => {
-<<<<<<< HEAD
-        return code
-            .replace(/<div>/g, '<div role="main">')
-            .replace(/<button>/g, '<button aria-label="Action button">')
-            .replace(/<img/g, '<img alt="Description"')};
-    // Helper functions for test generation
-    const generateJestTests = (_code) => {
-        return `import { render, screen, fireEvent } from '@testing-library/react';
-;
 
-describe('GeneratedComponent', () => {
-  it('renders without crashing', () => {
-    render(<GeneratedComponent />);    expect(screen.getByText('Generated Component')).toBeInTheDocument()});
-'
-  it('handles user interactions', () => {}
-=======
-
-        return code'"
-            .replace(/<div>/g,<div role="main">)'"
-            .replace(/<button>/g,<button >)'"
-            .replace(/<img/g,<img alt="Description"')};
-    // Helper functions for test generation
-    const generateJestTests = (_code) => {
-'`
-        return `import { render, screen, fireEvent } from '@testing-library/react';"
-import GeneratedComponent from "./GeneratedComponent";
-
-describe('GeneratedComponent', () => {
-
-  it('renders without crashing', () => {
->>>>>>> main
     render(<GeneratedComponent />);
     expect(screen.getByText('Generated Component')).toBeInTheDocument()});
 
@@ -615,5 +552,4 @@ export default with;
 export default with;
 export default with;
 '"`
-=======
->>>>>>> main
+

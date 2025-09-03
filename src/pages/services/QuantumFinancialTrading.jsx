@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "next/link"
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from "lucide-react"
+import { Database, Check, Phone, Mail, ArrowRight, Target, Zap } from "lucide-react";
   );
 export default function Quantumfinancialtrading() {
   const features = [

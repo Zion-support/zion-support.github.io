@@ -1,56 +1,4 @@
-<<<<<<< HEAD
-import { useState } from "react";
-import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
-import CodeBlock from "./CodeBlock.jsx";
-export function ApiDocumentation() {
-    return (<Card className="bg-zinc-900 border-zinc-800 text-white">
-      <CardHeader>
-        <CardTitle className="text-xl flex items-center">
-          <BookOpen className="mr-2" size={20}/> API Documentation
-        </CardTitle>        <CardDescription className="text-zinc-400">
-  ["""
-            { name: "page", type: "integer","""
-  description: "Page number for pagination(default: 1)"""
-},"""
-            { name: "limit", type: "integer", description: "Number of results per page(default: 20, max: 100)" },"""
-            { name: "category", type: "string", description: "Filter by job category" },"""
-            { name: "skills", type: "string[]", description: "Filter by required skills(comma-separated)" },"""
-            { name: "status", type: "string", description: "Filter by job status(new, active, closed)" }
-          Reference documentation for integrating with the Zion Marketplace API.
-        </CardDescription>
-      </CardHeader>"""
-      <CardContent>""""
-        <Alert className="bg-blue-900/30 border-blue-800 mb-6">""""
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { useState } from 'react';
-import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Badge } from '@/components/ui/badge';
- from 'react';"
-import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';"
-import { Alert, AlertDescription } from '@/components/ui/alert';"
-import { Badge } from '@/components/ui/badge';"
-import CodeBlock from "./CodeBlock";
-export function ApiDocumentation() {
-"
-    return (<Card className="bg-zinc-900 border-zinc-800 text-white">
-      <CardHeader>"
-        <CardTitle className="text-xl flex items-center">"
-          <BookOpen className="mr-2" size={20}/> API Documentation
-        </CardTitle>"
-        <CardDescription className="text-zinc-400">
-          Reference documentation for integrating with the Zion Marketplace API.</CardDescription>
-      </CardHeader>
-      <CardContent>"
-        <Alert className="bg-blue-900/30 border-blue-800 mb-6">"
->>>>>>> main
+
           <Terminal className="h-4 w-4"/>
           <AlertDescription>
             Make sure to include your API key in all requests as a Bearer token in the Authorization header.</AlertDescription>
@@ -611,7 +559,7 @@ function verifyWebhookSignature(payload, signature, secret) {
   const expectedSignature = hmac.update(payload).digest('hex');
   return crypto.timingSafeEqual()
     Buffer.from(signature),"`
-=======
+
 import React from "react"
 import { SEO } from "@/components/SEO"
 export default function ApiDocumentation() {return (
@@ -624,4 +572,4 @@ export default function ApiDocumentation() {return (
         </p>
       </div>
   );"}"
->>>>>>> main
+

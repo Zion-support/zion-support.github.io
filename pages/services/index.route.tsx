@@ -1,7 +1,7 @@
 import React from 'react';
 import ModernLayout from '../../../components/layout/ModernLayout';
 import { servicesList } from './_servicesData.route.js';
-import { Zap, Brain, Cloud, Shield, Database, Rocket, ArrowRight, CheckCircle, DollarSign, Clock } from 'lucide-react';
+import { Zap, Brain, Cloud, Shield, Rocket, ArrowRight, CheckCircle, Clock } from "lucide-react";
 
 export default function ServicesPage() {
   const categories = [

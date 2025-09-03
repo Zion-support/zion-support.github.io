@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 export function Notification({ id, type, title, message, duration = 5000, onClose }) {
 export function NotificationContainer({ notifications, onClose }) {
 
-import { CheckCircle, XCircle, Info, X, AlertTriangle  } from 'lucide-react';
+import { X } from "lucide-react";
 ,
     error: {
 

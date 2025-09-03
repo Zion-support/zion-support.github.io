@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { ArrowRight, CheckCircle, Brain, Zap, Users, Shield, TrendingUp, BarChart3, MessageCircle, Star, Clock, Award } from 'lucide-react';
+import { CheckCircle, Brain, MessageCircle } from "lucide-react";
 
 export default function AIContentGeneratorPage() {
   const features = [

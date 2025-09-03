@@ -420,45 +420,6 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
   const [selectedService, setSelectedService] = useState()
 }  const containerVariants = {}
 
-<<<<<<< HEAD
-// Import the new service data
-;
-;
-;
-const serviceCategories = []
-  {}
-'
-    id: 'micro-saas','"""
-    name: 'Micro SAAS Solutions',""""
-    icon: <Rocket className="w-6 h-6" />,'
-    color: 'from-purple-600 to-pink-600',
-    services: revolutionary2027AdvancedMicroSaasServices;
-  },
-  {}
-'
-    id: 'it-infrastructure','"""
-    name: 'IT Infrastructure & Cybersecurity',""""
-    icon: <Shield className="w-6 h-6" />,'
-    color: 'from-red-600 to-orange-600',
-    services: revolutionary2027ITInfrastructureCybersecurityServices;
-  },
-  {}
-'
-    id: 'ai-innovation','"""
-    name: 'AI Innovation Services',""""
-    icon: <Brain className="w-6 h-6" />,'
-    color: 'from-blue-600 to-cyan-600',
-    services: revolutionary2027AIInnovationServices;
-=======
-    hidden: { opacity: 0 }, visible: {}
-
-      opacity: 1, transition: {}
-
-        staggerChildren: 0.1, delayChildren: 0.2}
-
-    }
-
->>>>>>> main
   }
 ;
   const itemVariants = {}

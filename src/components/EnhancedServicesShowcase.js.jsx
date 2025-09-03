@@ -702,33 +702,4 @@ https: // comment
             </p>
           </motion.div>
         </div>
-<<<<<<< HEAD
-      </section>
-    </div>)};
-export default EnhancedServicesShowcase;
 
-
-export { EnhancedServicesShowcase };
-
-export { EnhancedServicesShowcase };
-
-export { EnhancedServicesShowcase };
-
-export { EnhancedServicesShowcase };
-
-export { EnhancedServicesShowcase };
-=======
-      </section>,
-    </div>)}
-
-export default EnhancedServicesShowcase,export { EnhancedServicesShowcase }
-;
-export { EnhancedServicesShowcase }
-;
-export { EnhancedServicesShowcase }
-;
-export { EnhancedServicesShowcase }
-
-"
-export { EnhancedServicesShowcase }"`"""
->>>>>>> main

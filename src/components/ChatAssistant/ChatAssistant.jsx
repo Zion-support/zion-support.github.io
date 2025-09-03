@@ -1,48 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef, useContext } from 'react';
-<<<<<<< HEAD
-import { AuthContext } from "../../context/auth/AuthContext";
-;
-;
-;
-import { ChatInput } from "./ChatInput.jsx";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";import { X import { focusManagement } from '@/utils/accessibility';
-export function ChatAssistant({ isOpen, onClose, recipient, conversationId, initialMessages = [], onSendMessage, contextHeader }) {}
-    const auth = useContext(AuthContext);
-    const isGuest = !auth?.isAuthenticated;
-    // Hooks called unconditionally at the top'
-    const localStorageKey = `chatHistory-${recipient.id}`; // Key is always generated''
-    const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage(isGuest ? localStorageKey : 'dummy-guest-key', // Use a dummy key if not guest to prevent LS write for logged-in users;
-    []);
-    const [displayGuestMessages, setDisplayGuestMessages] = useState([]);
-    const [loggedInMessages, setLoggedInMessages] = useState(initialMessages);
-    const messagesEndRef = useRef(null);
-    const guestModalRef = useRef(null);
-    const [pendingApiCallParams, setPendingApiCallParams] = useState(null);
-    const [showGuestModal, setShowGuestModal] = useState(false);
-    const [guestMessage, setGuestMessage] = useState(null);
-    // Effect for guest user messages;
-    useEffect(() => {}
-        if (isGuest) {}
-            // Priority: initialMessages prop > localStorage > empty array;
-            if (initialMessages && initialMessages.length > 0) {}
-                setDisplayGuestMessages(initialMessages);
-                setStoredGuestMessages(initialMessages); // Persist if initialMessages are provided;
-            else {}
-                setDisplayGuestMessages(storedGuestMessages)}
-        }
-=======
-import { AuthContext } from '../../context/auth/AuthContext';"
-import { useDebounce } from '../../hooks/useDebounce';"
-import { useLocalStorage } from '../../hooks/useLocalStorage';"
-import { ChatMessage } from './ChatMessage';"
-import { ChatInput } from './ChatInput';"
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';"
-import { Button } from '@/components/ui/button';
 
-export default function Page() {
->>>>>>> main
     }, [isGuest, initialMessages, storedGuestMessages, setStoredGuestMessages, recipient.id]);
     // Effect for logged-in user messages
     useEffect(() => {
@@ -191,7 +147,7 @@ export default function Page() {
         </div>
 
         {/* Input */}"
-=======
+
             {contextHeader}"});,"})
 }
           </div>)}})
@@ -221,7 +177,7 @@ export default function Page() {
   })
 }
   })"
->>>>>>> main
+
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
   })
 }

@@ -1,52 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-> {
-
-  maxNotifications?: number;
-  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-  enableSound?: boolean;
-  enableVibration?: boolean;
-  autoDismiss?: boolean;
-  defaultDuration?: number}
-
-interface NotificationSettings {
-  sound: boolean;
-  vibration: boolean;
-  autoDismiss: boolean;
-  position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-  maxNotifications: number;
-  defaultDuration: number}
-
-export const NotificationSystem: React.FC<NotificationSystemProps> = ({
-
-  maxNotifications = 5,
-  position = 'top-right',
-enableSound:  true,;
-  enableVibration = true,;
-  autoDismiss = true,;
-  defaultDuration = 5000}) => {;
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [settings, setSettings] = useState<NotificationSettings>({
-
-    sound: enableSound,
-    vibration: enableVibration,
-    autoDismiss: autoDismiss,
-    position,
-    maxNotifications,
-    defaultDuration
-  }) ;
-  const [showSettings, setShowSettings] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [unreadCount, setUnreadCount] = useState(0);
-  
-<<<<<<< HEAD
-  // Initialize audio for notification sounds
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   useEffect(() => {
   // TODO: Add dependencies if needed
 
@@ -159,18 +111,11 @@ enableSound:  true,;
       case 'top-right':'
         return 'top-4 right-4';
       case 'bottom-left':'
-<<<<<<< HEAD
-        return 'bottom-4 left-4';
-      case 'bottom-right':'
-        return 'bottom-4 right-4';
-=======
-        return 'bottom-4 left-4';'
-      case 'bottom-right':'        return 'bottom-4 right-4';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+
       default:'
-=======
+
   // Initialize audio for notification sounds      default:'
->>>>>>> main
+
         return 'top-4 right-4'}
   };
 
@@ -497,9 +442,6 @@ export
   }
 };
 '"`
-=======
 
 ;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main
+

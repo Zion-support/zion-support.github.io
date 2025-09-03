@@ -1,6 +1,6 @@
 import React from 'react';
 import ModernLayout from '../components/layout/ModernLayout';
-import { Building2, Shield, Zap, Brain, Cloud, Database, Users, ArrowRight, CheckCircle } from 'lucide-react';
+import { CheckCircle } from "lucide-react";
 
 export default function SolutionsPage() {
   const industrySolutions = [

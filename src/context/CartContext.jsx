@@ -26,8 +26,6 @@ function cartReducer(state, action) {"
 
         default: return state}
 
-
-
 const CartContext = createContext(null)
 }
 export function useCart() {
@@ -39,113 +37,7 @@ export function useCart() {
     return ctx}
 
 export function CartProvider({ children }) {
-<<<<<<< HEAD
 
-  const { user } = useAuth();
-  const [state, dispatch] = useReducer(cartReducer, initialState);
-  const cartKey = getCartKey(user?.id);
-
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-    let items = [];
-    const stored = safeStorage.getItem(cartKey);
-
-    if(stored) {
-
-      try {
-        items = JSON.parse(stored);
-      } catch {
-
-        items = [];
-      }
-    }
-
-    // Merge guest cart when user logs in
-    if(user?.id) {
-
-      const guestStored = safeStorage.getItem(getCartKey());
-      if(guestStored) {
-
-        try {
-          const guestItems = JSON.parse(guestStored);
-          items = mergeCartItems(items, guestItems);
-        } catch {
-
-          /* ignore */
-        }
-        safeStorage.removeItem(getCartKey());
-      }
-    }
-
-    dispatch({ type: 'SET_ITEMS', payload: items });
-  }, [cartKey]);
-
-  // Save cart to storage whenever it changes
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-    if(state.items.length > 0) {
-
-      safeStorage.setItem(cartKey, JSON.stringify(state.items));
-    } else {
-
-      safeStorage.removeItem(cartKey);
-    }
-  }, [state.items, cartKey]);
-
-  const addItem = item => {
-
-    dispatch({ type: 'ADD_ITEM', payload: item });
-  };
-
-  const removeItem = id => {
-
-    dispatch({ type: 'REMOVE_ITEM', payload: id });
-  };
-
-  const updateQuantity = (id, quantity) => {
-
-    if(quantity <= 0) {
-
-      removeItem(id);
-    } else {
-
-      dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } });
-    }
-  };
-
-  const clearCart = () => {
-
-    dispatch({ type: 'CLEAR_CART' });
-  };
-
-  const getTotalItems = () => {
-    return state.items.reduce((total, item) => total + item.quantity, 0);
-  };
-
-  const getTotalPrice = () => {
-    return state.items.reduce()
-      (total, item) => total + item.price * item.quantity,
-      0
-    );
-  };
-
-  const value = {
-
-    items: state.items,
-    addItem,
-    removeItem,
-    updateQuantity,
-    clearCart,
-    getTotalItems,
-    getTotalPrice,
-    dispatch};
-
-  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
-=======
-    const { user } = useAuth()
->>>>>>> main
 }
     const [state, dispatch] = useReducer(cartReducer, initialState)
 }

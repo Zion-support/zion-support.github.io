@@ -1,24 +1,8 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef } from 'react';
-export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medium', colorScheme = 'multi' }) => {
 
-    const canvasRef = useRef(null) ;
-    const animationRef = useRef () ;
-<<<<<<< HEAD
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-=======
-    const canvasRef = useRef(null);
-    const animationRef = useRef();
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
->>>>>>> main
         const canvas = canvasRef.current;
-=======
+
     useEffect(() => {        const canvas = canvasRef.current;
->>>>>>> main
+
         if(!canvas)
             return;
         const ctx = canvas.getContext('2d');
@@ -165,5 +149,4 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none ${className}`} style={{ zIndex: -1 }}/>)};
 export default FuturisticAnimatedBackground;
 }}}}}}}}}}}'`
-=======
->>>>>>> main
+

@@ -1,45 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { MainNavigation } from './header/MainNavigation';
-import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
 
-interface HeaderProps {
-  className?: string;
-=======
-import React from "react"
-;,"});,"})
->>>>>>> main
 }
 export function Header() {const router = useRouter()
 }
 export function Header() {
 
-<<<<<<< HEAD
-export function Header({ className = '' }: HeaderProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const [searchQuery, setSearchQuery] = useState('');
-  const location = useLocation();
-
-  useEffect(() => {
-<<<<<<< HEAD
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-<<<<<<< HEAD
-    
-=======
-=======
->>>>>>> main
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
@@ -178,7 +142,7 @@ export function Header({ className = '' }: HeaderProps) {
     </header>
   );
 }
-=======
+
   const router = useRouter()
 }
   const [mobileMenuOpen, setMobileMenuOpen] = useState()"
@@ -407,5 +371,4 @@ export function Header({ className = '' }: HeaderProps) {
 "
 
 export default Component
->>>>>>> main
->>>>>>> main
+

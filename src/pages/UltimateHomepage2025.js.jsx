@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';'''
 import { SEO } from '@/components/SEO';'''
 import { Link } from 'react-router-dom';
-import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide-react';
+import { Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight } from "lucide-react";
 ;
 export default function UltimateHomepage2025() {
     const [currentServiceIndex, setCurrentServiceIndex] = useState(0);

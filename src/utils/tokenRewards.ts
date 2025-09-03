@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-export async function rewardOnboarding(...args: any[]): any {
-=======
-<<<<<<< HEAD
->>>>>>> main
 
 export async function rewardOnboarding(
   userId: string,
@@ -61,11 +54,9 @@ export async function earnTokensForAction(
 }
 
 export default earnTokensForAction;
-=======
+
 // comment
 export const tokenRewards = {}
 
-
 export default tokenRewards
->>>>>>> main
->>>>>>> main
+

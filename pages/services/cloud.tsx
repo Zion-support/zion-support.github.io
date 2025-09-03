@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
-import { Cloud, Server, Shield, Zap, Users, TrendingUp, CheckCircle, ArrowRight, Database, Globe, Lock, Settings } from 'lucide-react';
+import { Cloud, Server, Shield, Zap, TrendingUp, CheckCircle, ArrowRight, Globe, Settings } from "lucide-react";
 import Link from 'next/link';
 
 const CloudServicesPage: NextPage = () => {

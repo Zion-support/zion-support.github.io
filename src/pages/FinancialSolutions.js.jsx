@@ -1,6 +1,6 @@
 import React from 'react';'''
 import { Link } from 'react-router-dom';'''
-import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database, Zap, Lock } from 'lucide-react';
+import { DollarSign, ArrowRight, CheckCircle } from "lucide-react";
 export default function FinancialSolutions() {}
     const solutions = []
         {}

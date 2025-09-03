@@ -1,6 +1,6 @@
 import React from 'react';'''
 import Link from 'next/link';'''
-import { Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin, Sparkles } from "lucide-react";
 export default function NewServicesOverview() {}
     const serviceCategories = []
         {}

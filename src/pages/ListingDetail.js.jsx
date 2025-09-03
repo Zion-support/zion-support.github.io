@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';'''
 import { Badge } from '@/components/ui/badge';'''
 import { Button } from '@/components/ui/button';'''
 import ImageWithRetry from '@/components/ui/ImageWithRetry';'''
-import { Star, MessageSquare, Brain, Shield } from 'lucide-react';'''
+import { MessageSquare, Brain, Shield } from "lucide-react";
 import { cn } from '@/lib/utils';'''
 import Link from 'next/link';'''
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';'''
