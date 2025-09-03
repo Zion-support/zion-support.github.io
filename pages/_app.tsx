@@ -3,10 +3,12 @@ import Link from 'next/link';
 import { useState } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+import Sidebar from '../components/Sidebar';
 import '../styles/globals.css';
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <header className="header">
@@ -17,10 +19,21 @@ function Header(): any {
         
         <div className="header-nav-links">
           <Link href="/" className="header-nav-link">Home</Link>
-          <Link href="/services" className="header-nav-link">All Services</Link>
-          <Link href="/services-catalog" className="header-nav-link">Catalog</Link>
-          <Link href="/pricing" className="header-nav-link">Pricing</Link>
+          <Link href="/services" className="header-nav-link">Services</Link>
+          <Link href="/portfolio" className="header-nav-link">Portfolio</Link>
+          <Link href="/blog" className="header-nav-link">Blog</Link>
+          <Link href="/about" className="header-nav-link">About</Link>
           <Link href="/contact" className="header-nav-cta">Contact</Link>
+        </div>
+
+        <div className="header-actions">
+          <button 
+            className="sidebar-toggle-button"
+            onClick={() => setSidebarOpen(true)}
+            aria-label="Open navigation sidebar"
+          >
+            ☰
+          </button>
         </div>
 
         <button 
@@ -35,11 +48,14 @@ function Header(): any {
       
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-        <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
-        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+        <Link href="/portfolio" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
+        <Link href="/blog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+        <Link href="/about" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
         <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
       </div>
+      
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
     </header>
   );
 }
@@ -63,57 +79,34 @@ function Footer(): any {
         </div>
 
         {/* Services */}
-<<<<<<< HEAD
-        <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Services</h3>
-          <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none' }}>All Services</Link>
-            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none' }}>Micro SaaS Products</Link>
-            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none' }}>AI Services</Link>
-            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none' }}>IT Services</Link>
-            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none' }}>Services Catalog</Link>
-            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none' }}>Pricing</Link>
-            <div style={{ opacity: 0.8, fontSize: '0.9rem', marginTop: 8 }}>
-              <div>• 120+ Micro SaaS Products</div>
-              <div>• 80+ AI Services</div>
-              <div>• 80+ IT Solutions</div>
-            </div>
-=======
         <div className="footer-section">
           <h3>Services</h3>
           <Link href="/services">All Services</Link>
+          <Link href="/micro-saas">Micro SaaS Products</Link>
+          <Link href="/ai-services">AI Services</Link>
+          <Link href="/it-services">IT Services</Link>
           <Link href="/services-catalog">Services Catalog</Link>
           <Link href="/pricing">Pricing</Link>
           <div className="text-sm mt-2 space-y-1">
-            <div>• 39+ Micro SaaS Products</div>
-            <div>• 28+ AI Services</div>
-            <div>• 35+ IT Solutions</div>
->>>>>>> cursor/analyze-improve-and-deploy-application-96c5
+            <div>• 120+ Micro SaaS Products</div>
+            <div>• 80+ AI Services</div>
+            <div>• 80+ IT Solutions</div>
           </div>
         </div>
 
         {/* Quick Links */}
-<<<<<<< HEAD
-        <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Quick Links</h3>
-          <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/" style={{ opacity: 0.8, textDecoration: 'none' }}>Home</Link>
-            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none' }}>About Us</Link>
-            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none' }}>Contact Us</Link>
-            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none' }}>FAQ</Link>
-            <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none' }}>Privacy Policy</Link>
-            <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none' }}>Terms of Service</Link>
-            <a href="https://ziontechgroup.com" style={{ opacity: 0.8, textDecoration: 'none' }}>Main Website</a>
-          </div>
-=======
         <div className="footer-section">
           <h3>Quick Links</h3>
           <Link href="/">Home</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/portfolio">Portfolio</Link>
+          <Link href="/blog">Blog</Link>
+          <Link href="/about">About Us</Link>
           <Link href="/contact">Contact Us</Link>
+          <Link href="/faq">FAQ</Link>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Service</Link>
           <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">Main Website</a>
->>>>>>> cursor/analyze-improve-and-deploy-application-96c5
         </div>
 
         {/* Contact CTA */}

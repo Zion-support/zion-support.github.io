@@ -49,6 +49,12 @@
   align-items: center;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .header-nav-link {
   padding: 8px 12px;
   border-radius: 6px;
@@ -78,6 +84,22 @@
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
+.sidebar-toggle-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-toggle-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
 .mobile-menu-button {
   display: none;
   background: none;
@@ -104,6 +126,35 @@
 
 .mobile-menu.open {
   display: flex;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-nav-links {
+    display: none;
+  }
+  
+  .header-actions {
+    display: none;
+  }
+  
+  .mobile-menu-button {
+    display: block;
+  }
+  
+  .sidebar-toggle-button {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-button {
+    display: none;
+  }
+  
+  .sidebar-toggle-button {
+    display: block;
+  }
 }
 
 /* Footer Styles */
