@@ -38,6 +38,7 @@ export const SEO: React.FC<SEOProps> = ({
   tags = [],
   canonical}: SEOProps) {
 
+<<<<<<< HEAD
   // Structured data for organization
   
   // Structured data for website
@@ -92,6 +93,10 @@ export const SEO: React.FC<SEOProps> = ({
   type = 'website'
 }) => {
   return(<Helmet>
+=======
+  return (
+    <Head>
+>>>>>>> origin/main
       {/* Basic Meta Tags */}
       <title>{title}</title>
 >>>>>>> main
@@ -426,7 +431,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
 
 >>>>>>> main
       </script>
-    </Helmet>
+    </Head>
   );
 }  );"
 };"
