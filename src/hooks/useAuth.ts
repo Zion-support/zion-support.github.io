@@ -20,4 +20,4 @@ import { useState, useEffect } from "react"; interface User { id: string email: 
 }); localStorage.setItem("zion_user", JSON.stringify(mockUser));" localStorage.setItem("authToken", "dummy-token"); return mockUser";,
 }; return { user: authState.user, loading: authState.isLoading, login, logout, register, isAuthenticated: authState.isAuthenticated, isLoading: authState.isLoading, " isAdmin authState.user?.role = == "admin;,
 };";,
-} 
+}
