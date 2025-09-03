@@ -44,7 +44,7 @@ export default function AIServices() {
       ],
       pricing: '$3,000 - $12, 000/month',
       delivery: '3-4 weeks',
-      category: 'Document AI',;
+      category: 'Document AI',
 },
     {
       title: 'AI-Powered Talent Matching',

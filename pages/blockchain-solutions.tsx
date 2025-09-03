@@ -2,29 +2,14 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-<<<<<<< HEAD
-import {
-  Shield,
-  Zap,
-  Globe,
-  Lock,
-  Database,
-  ArrowRight,
-  CheckCircle,
-  Users,
-  Award,
-} from 'lucide-react';
-
-=======
 import { Shield, Zap, Globe, Lock, Database, ArrowRight, CheckCircle, Users, Award } from 'lucide-react';
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 const BlockchainSolutions: NextPage = () => {
   const services = [
     {
       icon: Shield,
       title: 'Smart Contract Development',
       description: 'Secure, audited smart contracts for DeFi, NFTs, and enterprise applications',
-      features: ['Solidity development', 'Security auditing', 'Gas optimization', 'Testing frameworks'];
+      features: ['Solidity development', 'Security auditing', 'Gas optimization', 'Testing frameworks'],
 },
     {
       icon: Zap,

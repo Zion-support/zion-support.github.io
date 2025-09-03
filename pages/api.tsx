@@ -19,7 +19,7 @@ export default function API() {
       endpoint: '/api/user/profile',
       description: 'Get user profile information',
       parameters: ['token'],
-      response: 'User profile data';
+      response: 'User profile data',
 },
     {
       name: 'Services List',
