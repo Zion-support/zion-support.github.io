@@ -205,6 +205,96 @@ const MicroSAAS: React.FC = () => {;
       href: "/services/smart-hr-management",;
       color: "from-indigo-400 to-purple-500",;
       benefits: ["Streamline recruitment by 60%", "Improve employee retention by 40%", "Reduce HR administrative time by 70%", "Enhance performance tracking"];,
+},
+    {;
+      title: "AI-Powered Email Responder",;
+      description: "Intelligent email automation platform that analyzes incoming messages, generates appropriate responses, and flags important communications with 95% accuracy.",;
+      price: "From $49/month",;
+      features: ["Automated Email Responses", "Priority Message Flagging", "Customer Sentiment Analysis", "Response Templates", "Integration APIs", "Analytics Dashboard"],;
+      href: "/services/ai-email-responder",;
+      color: "from-indigo-400 to-blue-500",;
+      benefits: ["Reduce email response time by 80%", "Improve customer engagement by 60%", "Enhance operational efficiency", "Provide actionable insights"];,
+},;
+    {;
+      title: "E-Commerce Return Management SaaS",;
+      description: "Comprehensive return management platform that automates return requests, generates return labels, and tracks return statuses for e-commerce businesses.",;
+      price: "From $99/month",;
+      features: ["Automated Return Processing", "Return Label Generation", "Real-time Status Tracking", "Platform Integration", "Analytics Dashboard", "Customer Portal"],;
+      href: "/services/ecommerce-return-management",;
+      color: "from-green-400 to-emerald-500",;
+      benefits: ["Improve customer satisfaction by 50%", "Reduce manual workload by 70%", "Enhance operational efficiency", "Streamline return processes"];,
+},;
+    {;
+      title: "AI-Powered Video Clip Maker",;
+      description: "Advanced video editing platform that automatically transforms long-form videos into engaging short clips optimized for social media platforms.",;
+      price: "From $59/month",;
+      features: ["Automatic Clip Generation", "Social Media Optimization", "User-friendly Interface", "Multiple Format Support", "Brand Consistency", "Analytics Tracking"],;
+      href: "/services/ai-video-clip-maker",;
+      color: "from-purple-400 to-pink-500",;
+      benefits: ["Save editing time by 85%", "Enhance content reach by 200%", "Maintain content quality", "Increase engagement rates"];,
+},;
+    {;
+      title: "Employee Scheduling Software",;
+      description: "Intelligent workforce management platform that optimizes shift scheduling, allows employee self-service, and provides advanced time tracking capabilities.",;
+      price: "From $69/month",;
+      features: ["Automated Shift Scheduling", "Employee Self-Service Portal", "Advanced Time Clock", "Availability Management", "Shift Swapping", "Analytics Dashboard"],;
+      href: "/services/employee-scheduling",;
+      color: "from-blue-400 to-cyan-500",;
+      benefits: ["Improve scheduling efficiency by 60%", "Enhance employee satisfaction by 45%", "Reduce administrative time by 70%", "Provide insightful analytics"];,
+},;
+    {;
+      title: "Learning Management Software (LMS)",;
+      description: "Comprehensive learning platform that facilitates employee training and development with organized content management and personalized learning experiences.",;
+      price: "From $99/month",;
+      features: ["Course Creation & Management", "Progress Tracking", "Self-paced Learning", "Certification System", "Analytics Dashboard", "Mobile Access"],;
+      href: "/services/lms",;
+      color: "from-orange-400 to-red-500",;
+      benefits: ["Enhance employee skills by 80%", "Reduce training costs by 50%", "Support continuous learning", "Improve retention rates"];,
+},;
+    {;
+      title: "AI-Powered Affiliate Marketing Tracking",;
+      description: "Advanced affiliate marketing platform that manages relationships, tracks attributions, and automates commission calculations with fraud protection.",;
+      price: "From $79/month",;
+      features: ["Affiliate Relationship Management", "Customizable Referral Links", "Attribution Tracking", "Fraud Protection", "Commission Automation", "Payment Workflows"],;
+      href: "/services/affiliate-marketing-tracking",;
+      color: "from-yellow-400 to-orange-500",;
+      benefits: ["Enhance affiliate program efficiency by 70%", "Reduce tracking errors by 90%", "Improve partner relationships", "Optimize referral partnerships"];,
+},;
+    {;
+      title: "Website Analytics for Small Businesses",;
+      description: "User-friendly analytics platform designed for small business owners to track website metrics, visitor behavior, and conversion rates without technical expertise.",;
+      price: "From $49/month",;
+      features: ["User-friendly Dashboard", "Traffic Source Analysis", "Visitor Behavior Tracking", "Conversion Rate Monitoring", "SEO Performance", "Social Media Integration"],;
+      href: "/services/website-analytics",;
+      color: "from-teal-400 to-green-500",;
+      benefits: ["Make data-driven decisions", "Identify growth opportunities", "Simplify data interpretation", "Improve marketing strategies"];,
+},;
+    {;
+      title: "AI-Powered Content Creation Tools",;
+      description: "Revolutionary content creation platform that generates and tests email subject lines, article headlines, and marketing content with AI optimization.",;
+      price: "From $39/month",;
+      features: ["Headline Generation", "Subject Line Testing", "Performance Analytics", "Marketing Platform Integration", "A/B Testing", "Content Optimization"],;
+      href: "/services/ai-content-tools",;
+      color: "from-purple-400 to-indigo-500",;
+      benefits: ["Increase open rates by 40%", "Enhance content effectiveness by 60%", "Save time on content creation", "Improve engagement rates"];,
+},;
+    {;
+      title: "Mobile-First Survey Tool",;
+      description: "Engaging survey platform designed for mobile devices that provides real-time analytics and actionable insights for customer feedback collection.",;
+      price: "From $25/month",;
+      features: ["Mobile-Optimized Surveys", "Real-time Analytics", "CRM Integration", "Customizable Templates", "Response Tracking", "Data Export"],;
+      href: "/services/mobile-survey-tool",;
+      color: "from-cyan-400 to-blue-500",;
+      benefits: ["Increase completion rates by 65%", "Gather valuable customer feedback", "Improve products and services", "Make data-driven decisions"];,
+},;
+    {;
+      title: "Niche Productivity Planner",;
+      description: "Industry-specific productivity platform with tailored dashboards, tools, and recommendations to help businesses manage projects and workflows effectively.",;
+      price: "From $30/month",;
+      features: ["Industry-Specific Dashboards", "Goal Setting & Tracking", "Progress Monitoring", "Data-driven Recommendations", "Custom Workflows", "Team Collaboration"],;
+      href: "/services/niche-productivity-planner",;
+      color: "from-emerald-400 to-teal-500",;
+      benefits: ["Enhance productivity by 50%", "Manage projects effectively", "Adapt to industry trends", "Improve operational efficiency"];,
 }
   ];
 ;
