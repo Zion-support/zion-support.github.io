@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -76,56 +75,30 @@ const Header: React.FC = () => {
     { name: 'Contact', href: '/contact', icon: Phone }
   ];
 
+  const quickLinks = [
+    { name: 'Get Quote', href: '/contact', type: 'primary' },
+    { name: 'Free Consultation', href: '/contact?type=consultation', type: 'secondary' },
+    { name: 'View Portfolio', href: '/portfolio', type: 'link' },
+  ];
+
   const serviceCategories = [
     { name: 'Micro SaaS', href: '/services/micro-saas' },
     { name: 'IT Services', href: '/services/it-services' },
     { name: 'AI Services', href: '/services/ai-services' },
   ];
 
-  const featuredServices = [
-    { name: 'AI Email Responder Pro', href: '/services/ai-email-responder' },
-    { name: 'Quantum Computing Solutions', href: '/services/quantum-computing-solutions' },
-    { name: 'AI Video Generator Studio', href: '/services/ai-video-generator' },
-    { name: 'Smart Contract Auditor', href: '/services/smart-contract-auditor' },
-    { name: 'AI Cybersecurity Defense', href: '/services/ai-cybersecurity-defense' },
-    { name: 'Autonomous Systems Architecture', href: '/services/autonomous-systems-architecture' },
-  ];
-
-  const solutionCategories = [
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-    { name: 'Custom Development', href: '/solutions/custom-development' },
-    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
-  ];
-
   return (
-    <motion.header 
-      className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'shadow-xl' : 'shadow-lg'
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      {/* Top bar with contact info */}
-      <div className="bg-blue-900 text-white py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row justify-between items-center text-sm">
-            <div className="flex flex-col xs:flex-row items-center space-y-1 xs:space-y-0 xs:space-x-4 mb-2 lg:mb-0">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span className="hidden sm:inline">+1 302 464 0950</span>
-                <span className="sm:hidden">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4" />
-                <span className="hidden md:inline">kleber@ziontechgroup.com</span>
-                <span className="md:hidden">kleber@ziontechgroup.com</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4" />
-              <span className="hidden lg:inline">364 E Main St STE 1008, Middletown DE 19709</span>
-              <span className="lg:hidden">Middletown DE 19709</span>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' 
+        : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <Brain className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
@@ -218,57 +191,65 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Main navigation */}
-      <nav className="bg-white">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="text-2xl font-bold text-blue-900">Zion Tech Group</div>
-            </Link>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
-              <Link
-                href="/"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
-                Home
-              </Link>
-              
-              {/* Services Dropdown */}
-              <div className="relative group">
-                <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
-                  Services
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                <div className="absolute top-full left-0 mt-2 w-80 xl:w-96 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="p-4">
-                    <div className="text-sm font-semibold text-gray-500 mb-3">Service Categories</div>
-                    {serviceCategories.map((category) => (
-                      <Link
-                        key={category.name}
-                        href={category.href}
-                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded"
-                      >
-                        {category.name}
-                      </Link>
-                    ))}
-                    <div className="border-t border-gray-200 my-3"></div>
-                    <div className="text-sm font-semibold text-gray-500 mb-3">Featured Services</div>
-                    {featuredServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded"
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-slate-900 border-t border-slate-700"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  {item.dropdown ? (
+                    <div>
+                      <div className="flex items-center space-x-2 text-gray-300 font-medium mb-2">
+                        <item.icon className="w-5 h-5" />
+                        <span>{item.name}</span>
+                      </div>
+                      <div className="ml-7 space-y-2">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.href}
+                            className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <dropdownItem.icon className="w-4 h-4" />
+                            <span>{dropdownItem.name}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      key={category.name}
+                      href={category.href}
+                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                      {category.name}
+                    </Link>
+                  ))}
                 </div>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex items-center space-x-3">
+                <Link
+                  href="/contact"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors hover:scale-105"
+                >
+                  Get Quote
+                </Link>
+                <Link
+                  href="/contact?type=consultation"
+                  className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-medium transition-colors hover:scale-105"
+                >
+                  Free Consultation
+                </Link>
               </div>
             </div>
 
@@ -303,94 +284,48 @@ const Header: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
               <div className="flex flex-col space-y-4">
-                <Link
-                  href="/"
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Home
-                </Link>
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
                 
                 {/* Mobile Services */}
                 <div className="border-t border-gray-200 pt-4">
-                  <div className="text-gray-700 font-medium mb-3">Service Categories</div>
+                  <div className="text-gray-700 font-medium mb-2">Services</div>
                   {serviceCategories.map((category) => (
                     <Link
                       key={category.name}
                       href={category.href}
-                      className="block py-2 pl-4 text-gray-600 hover:text-blue-600 transition-colors"
+                      className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      {category.name}
+                      <item.icon className="w-5 h-5" />
+                      <span>{item.name}</span>
                     </Link>
-                  ))}
-                  <div className="text-gray-700 font-medium mb-3 mt-4">Featured Services</div>
-                  {featuredServices.slice(0, 4).map((service) => (
-                    <Link
-                      key={service.name}
-                      href={service.href}
-                      className="block py-2 pl-4 text-sm text-gray-500 hover:text-blue-600 transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
+                  )}
                 </div>
-
-                {/* Mobile Solutions */}
-                <div className="border-t border-gray-200 pt-4">
-                  <div className="text-gray-700 font-medium mb-3">Solutions</div>
-                  {solutionCategories.map((category) => (
-                    <Link
-                      key={category.name}
-                      href={category.href}
-                      className="block py-2 pl-4 text-gray-600 hover:text-blue-600 transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {category.name}
-                    </Link>
-                  ))}
-                </div>
-
-                <Link
-                  href="/about"
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  About
-                </Link>
-                <Link
-                  href="/careers"
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Careers
-                </Link>
-                <Link
-                  href="/contact"
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Contact
-                </Link>
-
-                {/* Mobile CTA */}
-                <div className="border-t border-gray-200 pt-4">
-                  <Link
-                    href="/contact"
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center block"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Get Quote
-                  </Link>
-                </div>
+              ))}
+              
+              <div className="pt-4 border-t border-slate-700 space-y-3">
+                <Button variant="outline" size="sm" className="w-full">
+                  <Search className="w-4 h-4 mr-2" />
+                  Search
+                </Button>
+                <Button size="sm" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                  Get Started
+                </Button>
               </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </nav>
-    </motion.header>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
   );
 };
 

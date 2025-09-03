@@ -38,12 +38,16 @@ const Footer: React.FC = () => {
       color: "text-blue-400",
       services: [
         { name: 'AI Content Generator', href: '/services/ai-content-generator' },
-        { name: 'AI Email Responder Pro', href: '/services/ai-email-responder' },
-        { name: 'AI Video Generator Studio', href: '/services/ai-video-generator' },
+        { name: 'AI Video Editor Pro', href: '/services/ai-video-editor' },
         { name: 'Smart Contract Auditor', href: '/services/smart-contract-auditor' },
-        { name: 'AI Code Review Assistant', href: '/services/ai-code-reviewer' },
+        { name: 'AI Code Reviewer Pro', href: '/services/ai-code-reviewer' },
         { name: 'AI Customer Insights', href: '/services/ai-customer-insights' },
+        { name: 'AI Translation Platform', href: '/services/ai-translation-platform' },
         { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
+        { name: 'AI Data Visualization', href: '/services/ai-data-visualization' },
+        { name: 'AI Social Listening', href: '/services/ai-social-listening' },
+        { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance' },
+        { name: 'AI Email Responder Pro', href: '/services/ai-email-responder' },
         { name: 'Mobile Survey Platform', href: '/services/mobile-survey-platform' },
         { name: 'Event Management Dashboard', href: '/services/event-management-dashboard' },
         { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer' },
@@ -65,10 +69,15 @@ const Footer: React.FC = () => {
       color: "text-green-400",
       services: [
         { name: 'Cloud Migration', href: '/services/cloud-migration' },
-        { name: 'Quantum Computing Infrastructure', href: '/services/quantum-computing-infrastructure' },
-        { name: 'Autonomous Systems Architecture', href: '/services/autonomous-systems-architecture' },
-        { name: 'Metaverse Infrastructure', href: '/services/metaverse-infrastructure' },
-        { name: 'IoT Ecosystem Management', href: '/services/iot-ecosystem-management' },
+        { name: 'Cloud-Native Transformation', href: '/services/cloud-native-transformation' },
+        { name: 'Cybersecurity Operations Center', href: '/services/cyber-security-operations-center' },
+        { name: 'Data Lake & Analytics', href: '/services/data-lake-architecture' },
+        { name: 'IoT Platform Development', href: '/services/iot-platform-development' },
+        { name: 'API-First Architecture', href: '/services/api-first-architecture' },
+        { name: 'Hybrid Cloud Strategy', href: '/services/hybrid-cloud-strategy' },
+        { name: 'Digital Workplace Solutions', href: '/services/digital-workplace-solutions' },
+        { name: 'Compliance Automation', href: '/services/compliance-automation' },
+        { name: 'Performance Engineering', href: '/services/performance-engineering' },
         { name: 'Edge Computing Solutions', href: '/services/edge-computing-solutions' },
         { name: 'Blockchain Infrastructure', href: '/services/blockchain-infrastructure' },
         { name: 'Zero Trust Security', href: '/services/zero-trust-security' },
@@ -88,11 +97,16 @@ const Footer: React.FC = () => {
       icon: Database,
       color: "text-purple-400",
       services: [
-        { name: 'AI Cybersecurity Defense', href: '/services/ai-cybersecurity-defense' },
-        { name: 'AI Personalized Medicine', href: '/services/ai-personalized-medicine' },
-        { name: 'AI Sustainable Energy', href: '/services/ai-sustainable-energy' },
-        { name: 'AI Education Personalization', href: '/services/ai-education-personalization' },
         { name: 'AI Drug Discovery', href: '/services/ai-drug-discovery' },
+        { name: 'AI Autonomous Systems', href: '/services/ai-autonomous-systems' },
+        { name: 'AI Personalized Medicine', href: '/services/ai-personalized-medicine' },
+        { name: 'AI Cyber Threat Intelligence', href: '/services/ai-cyber-threat-intelligence' },
+        { name: 'AI Energy Optimization', href: '/services/ai-energy-optimization' },
+        { name: 'AI Agricultural Intelligence', href: '/services/ai-agricultural-intelligence' },
+        { name: 'AI Mental Health Support', href: '/services/ai-mental-health-support' },
+        { name: 'AI Educational Personalization', href: '/services/ai-educational-personalization' },
+        { name: 'AI Creative Content Generation', href: '/services/ai-creative-content-generation' },
+        { name: 'AI Legal Document Analysis', href: '/services/ai-legal-document-analysis' },
         { name: 'AI Climate Modeling', href: '/services/ai-climate-modeling' },
         { name: 'AI Space Exploration', href: '/services/ai-space-exploration' },
         { name: 'AI Neuroscience Research', href: '/services/ai-neuroscience-research' },
@@ -159,7 +173,6 @@ const Footer: React.FC = () => {
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered solutions and technology services. 
               We help businesses transform and innovate with cutting-edge artificial intelligence.
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f139
             </p>
 
             <div className="space-y-3 mb-6">
