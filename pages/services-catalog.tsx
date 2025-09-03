@@ -29,6 +29,45 @@ export default function ServicesCatalog() {
             'Executive savings dashboards and benchmarks'
           ],
           link: '/micro-saas'
+        },
+        {
+          name: 'API Rate Limiter & Analytics',
+          blurb: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms with real-time monitoring.',
+          price: '$199 – $999/month',
+          eta: '1–2 weeks',
+          bullets: [
+            'Dynamic rate limiting based on user tiers',
+            'Real-time API usage analytics and reporting',
+            'Revenue tracking and billing integration',
+            'DDoS protection and abuse prevention'
+          ],
+          link: '/micro-saas'
+        },
+        {
+          name: 'Smart Document Processing',
+          blurb: 'AI-powered OCR, data extraction, and document workflow automation for businesses of all sizes.',
+          price: '$399 – $1,999/month',
+          eta: '2–3 weeks',
+          bullets: [
+            'Advanced OCR with 99%+ accuracy',
+            'Intelligent data extraction and validation',
+            'Workflow automation and approval processes',
+            'Integration with existing business systems'
+          ],
+          link: '/micro-saas'
+        },
+        {
+          name: 'Customer Churn Predictor',
+          blurb: 'Machine learning models to predict and prevent customer churn with actionable insights and automated interventions.',
+          price: '$399 – $1,599/month',
+          eta: '2–4 weeks',
+          bullets: [
+            'Real-time churn risk scoring',
+            'Automated retention campaign triggers',
+            'Customer health dashboards',
+            'ROI tracking and success metrics'
+          ],
+          link: '/micro-saas'
         }
       ]
     },
@@ -49,6 +88,45 @@ export default function ServicesCatalog() {
             'PII scrubbers and policy guardrails'
           ],
           link: '/ai-services'
+        },
+        {
+          name: 'Computer Vision & Image Analysis',
+          blurb: 'Advanced object detection, facial recognition, quality control, and medical imaging analysis with custom model training.',
+          price: '$5,000 – $25,000 setup',
+          eta: '6–12 weeks',
+          bullets: [
+            'Custom object detection and classification models',
+            'Real-time image processing and analysis',
+            'Quality control and defect detection systems',
+            'Medical imaging and diagnostic assistance'
+          ],
+          link: '/ai-services'
+        },
+        {
+          name: 'AI-Powered Fraud Detection',
+          blurb: 'Real-time fraud scoring, anomaly detection, and risk assessment for financial transactions with machine learning models.',
+          price: '$8,000 – $40,000 setup',
+          eta: '8–16 weeks',
+          bullets: [
+            'Real-time transaction fraud scoring',
+            'Behavioral anomaly detection',
+            'Risk assessment and decision automation',
+            'Compliance reporting and audit trails'
+          ],
+          link: '/ai-services'
+        },
+        {
+          name: 'Conversational AI Platform',
+          blurb: 'Multi-channel chatbots, voice assistants, and intelligent virtual agents with natural language understanding.',
+          price: '$8,000 – $35,000 setup',
+          eta: '6–14 weeks',
+          bullets: [
+            'Multi-language conversational AI',
+            'Voice and text interaction capabilities',
+            'Integration with existing business systems',
+            'Continuous learning and improvement'
+          ],
+          link: '/ai-services'
         }
       ]
     },
@@ -67,6 +145,45 @@ export default function ServicesCatalog() {
             'Foundational IaC (Terraform/Pulumi)',
             'VPC design, cost and security guardrails',
             'Application assessment and phased migration'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'Kubernetes & Container Orchestration',
+          blurb: 'Production-ready Kubernetes clusters, microservices architecture, and container security hardening.',
+          price: '$8,000 – $40,000 project',
+          eta: '4–8 weeks',
+          bullets: [
+            'EKS/GKE/AKS cluster setup and configuration',
+            'Microservices architecture design',
+            'Container security and compliance',
+            'Auto-scaling and load balancing'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'Cybersecurity Hardening & SOC',
+          blurb: 'Comprehensive security assessment, Zero Trust implementation, and Security Operations Center setup.',
+          price: '$5,000 – $40,000 project',
+          eta: '6–12 weeks',
+          bullets: [
+            'Zero Trust architecture implementation',
+            'Endpoint Detection and Response (EDR)',
+            'Security monitoring and incident response',
+            'Compliance and audit preparation'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'Data Engineering & Analytics',
+          blurb: 'Modern data pipeline development, ETL processes, data warehousing, and analytics platform setup.',
+          price: '$12,000 – $60,000 project',
+          eta: '8–16 weeks',
+          bullets: [
+            'Data pipeline architecture and development',
+            'ETL/ELT process automation',
+            'Data warehouse and lake setup',
+            'Business intelligence and analytics dashboards'
           ],
           link: '/it-services'
         }
