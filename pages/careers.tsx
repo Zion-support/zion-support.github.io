@@ -16,7 +16,6 @@ import {
   DollarSign} from 'lucide-react';
   DollarSign
 } from 'lucide-react';
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
 
 const Careers: NextPage = () => {
   const benefits = [
@@ -41,7 +40,6 @@ const Careers: NextPage = () => {
       description: 'Dedicated time for personal projects and innovation.'}
       description: 'Dedicated time for personal projects and innovation.'
 }
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
   ]
 
   const openPositions = [
@@ -60,7 +58,6 @@ const Careers: NextPage = () => {
       description: 'Develop and deploy machine learning models and AI solutions for our clients.'},
       description: 'Develop and deploy machine learning models and AI solutions for our clients.'
     },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'DevOps Engineer',
       location: 'Remote',
@@ -69,7 +66,6 @@ const Careers: NextPage = () => {
       description: 'Manage cloud infrastructure and implement CI/CD pipelines for scalable applications.'}
       description: 'Manage cloud infrastructure and implement CI/CD pipelines for scalable applications.'
     }
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
   ]
 
   return (

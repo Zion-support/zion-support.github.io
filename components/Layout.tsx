@@ -1,5 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
+import Header from './layout/Header';
+import Footer from './layout/Footer';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -29,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="min-h-screen flex flex-col">
-        <EnhancedNavigation />
+        <Header />
         <main className="flex-grow">
           {children}
         </main>

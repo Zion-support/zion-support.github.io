@@ -63,7 +63,6 @@ const AIServicesPage: NextPage = () => {
               </div>
             </div>
             <div className=flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f139
               <Link href="/contact>
                 <span className=bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
                   Get Free Consultation

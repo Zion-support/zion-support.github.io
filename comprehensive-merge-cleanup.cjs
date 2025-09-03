@@ -6,8 +6,11 @@ function cleanMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove merge conflict markers and duplicate lines
+    // Remove all merge conflict markers
     content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> origin\/cursor[^\n]*\n?/g, '');
+    content = content.replace(/>>>>>>> origin\/cursor[^\n]*\n?/g, '');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
+    content = content.replace(/=======[\s\S]*?>>>>>>> origin\/cursor[^\n]*\n?/g, '');
     
     // Remove duplicate category lines
     content = content.replace(/category: '[^']*'},\s*category: '[^']*'\s*}/g, (match) => {
@@ -21,6 +24,17 @@ function cleanMergeConflicts(filePath) {
     // Clean up any remaining syntax issues
     content = content.replace(/},\s*}/g, '}\n  }');
     content = content.replace(/},\s*]/g, '}\n  ]');
+    content = content.replace(/category: '[^']*'}\s*category: '[^']*'\s*}/g, (match) => {
+      const categoryMatch = match.match(/category: '([^']*)'/);
+      if (categoryMatch) {
+        return `category: '${categoryMatch[1]}'\n    }`;
+      }
+      return match;
+    });
+    
+    // Remove any remaining merge conflict markers
+    content = content.replace(/>>>>>>> origin\/cursor[^\n]*\n?/g, '');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
     
     fs.writeFileSync(filePath, content);
     console.log(`Cleaned merge conflicts in: ${filePath}`);
@@ -39,7 +53,9 @@ const filesToClean = [
   'pages/blog/index.tsx',
   'pages/careers.tsx',
   'pages/brochure.tsx',
-  'pages/case-studies.tsx'
+  'pages/case-studies.tsx',
+  'index.html',
+  'public/offline.html'
 ];
 
 // Clean all files
@@ -49,4 +65,4 @@ filesToClean.forEach(file => {
   }
 });
 
-console.log('Merge conflict cleanup completed!');
+console.log('Comprehensive merge conflict cleanup completed!');
