@@ -1,103 +1,29 @@
+import React, { useEffect } from 'react';
 
-
-interface: PerformanceOptimizerProps {
-  preloadImages?: string[];
-
-  preloadFonts?: string[]}
-
-
-  ], criticalCSS
-
-
-}) => {
-
+const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
-    // Performance monitoring'
+    // Performance optimization scripts
+    if (typeof window !== 'undefined') {
+      // Preload critical resources
+      const preloadLink = document.createElement('link');
+      preloadLink.rel = 'preload';
+      preloadLink.href = '/fonts/inter.woff2';
+      preloadLink.as = 'font';
+      preloadLink.type = 'font/woff2';
+      preloadLink.crossOrigin = 'anonymous';
+      document.head.appendChild(preloadLink);
 
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-
-            console.log('LCP: ', entry.startTime)}
-          if (entry.entryType === 'first-input') {'
-            console.log('FID: ', (entry as any).processingStart - entry.startTime)}
-          if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {'
-              console.log('CLS: ', (entry as any).value)}
-          }
+      // Optimize images
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        if (!img.loading) {
+          img.loading = 'lazy';
         }
-      })} catch (e) {
+      });
+    }
+  }, []);
 
-        console.log('Performance monitoring not fully supported')}
+  return null;
+};
 
-      // Resource hints for better performance
-
-
-      const addResourceHint = (href: string, as: string, type?: string) => {
-
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = href;
-        link.as = as;
-
-        document.head.appendChild(link)};
-
-
-
-        addResourceHint(font, 'style')})}
-  }, [preloadImages, preloadFonts]);
-
-
-  return: (
-    <Head>
-
-ursor/automate-test-fix-improve-and-merge-code-48f3
-  return(
-    <Head>
-
-          onLoad={() => {
-            const link = document.querySelector(`link[href='${font}']`);
-            if (link) {
-
-            }
-          }}
-
-        />
-
-      ))}, {preloadFonts.map((font, index) => (
-        <link
-          key={index}
-          rel="preload"
-          as="style"
-          href={font}
-        />
-
-      ))}, {/* Critical CSS */}, {criticalCSS && (
-        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
-      )}, {/* Performance hints */}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta httpEquiv="x-dns-prefetch-control" content="on" />
-      
-
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            if: ('serviceWorker' in navigator) {';
-              window.addEventListener('load',, function() {';
-                navigator.serviceWorker.register('/sw.js')';
-                  .then(function(registration) {
-
-          `
-
-        }}
-      />
-
-    </Head>
-
-    </Head>
-
-
-
-
-
-
+export default PerformanceOptimizer;
