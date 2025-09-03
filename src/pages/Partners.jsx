@@ -338,7 +338,6 @@ export default function Partners() {}
   );
 }
 
-
 export { Partners };
 
 export { Partners };

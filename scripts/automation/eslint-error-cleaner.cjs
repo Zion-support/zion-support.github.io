@@ -1,5 +1,5 @@
 #!/""usr/bin/env"" node;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -11,15 +11,15 @@ class $1 {
     this.reportsPath = path.join(this.workspacePath, "automation-reports");
     this.ensureDirectories();
     this.errorHistory = new Map();
-    this.fixAttempts = new Map();,
+    this.fixAttempts = new Map();
 }
 ;
   ensureDirectories() {
   ["this.logsPath", `this.reportsPath`].forEach(dir => {
   if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });,
+  fs.mkdirSync(dir, { recursive: true });
 }
-    });,
+    });
 }
 ;
   log(message, level = `INFO`) {
@@ -35,7 +35,7 @@ class $1 {
     console.log(`logMessage);
 
     const logFile = path.join(this.logsPath, "eslint-error-cleaner.log");
-    fs.appendFileSync(logFile, logMessage + "\n");,
+    fs.appendFileSync(logFile, logMessage + "\n");
 }
 ;
   async runESLintCheck() {
@@ -73,19 +73,19 @@ class $1 {
             line: parseInt(match[2]),;
             column: parseInt(match[3]),;
             severity: match[4],;
-            message: match[5].trim(),;,
-});,
+            message: match[5].trim(),;
+});
 }
       }
     }
 ;
-    return errors;,
+    return errors;
 }
 ;
   async fixESLintError(error) {
   const filePath = path.resolve(this.workspacePath, error.file);
     if (!fs.existsSync(filePath)) {this.log(`⚠️ File not found: ${filePath}`, `WARN`);
-      return false;,
+      return false;
 }
 ;
     try {
@@ -94,7 +94,7 @@ class $1 {
       const lineIndex = error.line - 1;
 
       if (lineIndex < 0 || lineIndex >= lines.length) {
-  return false;,
+  return false;
 }
 ;
       const originalLine = lines[lineIndex];
@@ -103,14 +103,14 @@ class $1 {
       // Apply fixes based on error message;
       if (error.message.includes("no-unused-vars")) {
   fixedLine = await this.fixUnusedVariableError(error, lines, lineIndex);
-        fixed = fixedLine !== originalLine;,
+        fixed = fixedLine !== originalLine;
 } else if (error.message.includes("no-console")) {
   fixedLine = await this.fixConsoleStatementError(;
           error,;
           lines,;
           lineIndex;
         );
-        fixed = fixedLine !== originalLine;,
+        fixed = fixedLine !== originalLine;
 } else if (error.message.includes("no-undef")) {
   fixedLine = await this.fixUndefinedVariableError(;
           error,;
@@ -119,53 +119,52 @@ class $1 {
       // Apply fixes based on error message;
       if (error.message.includes("no-unused-vars")) {
   fixedLine = await this.fixUnusedVariableError(error, lines, lineIndex);
-        fixed = fixedLine !== originalLine;,
+        fixed = fixedLine !== originalLine;
 } else if (error.message.includes("no-console")) {
   fixedLine = await this.fixConsoleStatementError(;
           error,;
           lines,;
           lineIndex;
         );
-        fixed = fixedLine !== originalLine;,
+        fixed = fixedLine !== originalLine;
 } else if (error.message.includes("no-undef")) {
   fixedLine = await this.fixUndefinedVariableError(;
           error,;
           lines,;
           lineIndex;
         );
-        fixed = fixedLine !== originalLine;,
+        fixed = fixedLine !== originalLine;
 } else if (error.message.includes("no-extra-semi")) {
   fixedLine = await this.fixExtraSemicolonError(error, lines, lineIndex);
-        fixed = fixedLine !== originalLine;,
+        fixed = fixedLine !== originalLine;
 } else if (error.message.includes("no-prototype-builtins")) {
   fixedLine = await this.fixPrototypeBuiltinsError(;
           error,;
           lines,;
           lineIndex;
         );
-        fixed = fixedLine !== originalLine;,
+        fixed = fixedLine !== originalLine;
 } else if (error.message.includes(`no-useless-escape`)) {
   fixedLine = await this.fixUselessEscapeError(error, lines, lineIndex);
-        fixed = fixedLine !== originalLine;,
+        fixed = fixedLine !== originalLine;
 } else {
-  ,
+  
 } else if (error.message.includes("no-prototype-builtins")) {
   fixedLine = await this.fixPrototypeBuiltinsError(;
           error,;
           lines,;
           lineIndex;
         );
-        fixed = fixedLine !== originalLine;,
+        fixed = fixedLine !== originalLine;
 } else if (error.message.includes("no-useless-escape")) {
   fixedLine = await this.fixUselessEscapeError(error, lines, lineIndex);
-        fixed = fixedLine !== originalLine;,
-} else {
-  // Generic fix attempt;,
+        fixed = fixedLine !== originalLine;
 } else {
   // Generic fix attempt;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-        fixedLine = await this.fixGenericESLintError(error, lines, lineIndex);
-        fixed = fixedLine !== originalLine;,
+} else {
+  // Generic fix attempt;
+fixedLine = await this.fixGenericESLintError(error, lines, lineIndex);
+        fixed = fixedLine !== originalLine;
 }
 ;
       if (fixed) {
@@ -175,19 +174,18 @@ class $1 {
         fs.writeFileSync(filePath, lines.join("\n"));
         this.log(✅ Fixed ESLint error in ${error.file}:${error.line} (${error.message})";
         );
-        return true;,
+        return true;
 }
 ;
-      return false;,
+      return false;
 } catch (fixError) {
-  this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,ERROR`;,
+  this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,ERROR`;
 } catch (fixError) {
   this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}",ERROR";
       );
       this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,ERROR`;
       );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-      return false;,
+return false;
 }
   }
 ;
@@ -200,7 +198,7 @@ class $1 {
       line.includes("let") ||;
       line.includes("var");
     ) {
-  return "// " + line;,
+  return "// " + line;
 }
 ;
     // For function parameters, add underscore prefix;
@@ -214,15 +212,15 @@ class $1 {
       line.includes("let") ||;
       line.includes("var");
     ) {
-  return "// " + line;,
+  return "// " + line;
 }
 ;
     // For function parameters, add underscore prefix;
     if (line.includes("function") || line.includes("=>")) {
-  return line.replace(/(\w+)(?=\s*[", "\)"])/g, "_$1");,
+  return line.replace(/(\w+)(?=\s*[", "\)"])/g, "_$1");
 }
 ;
-    return line;,
+    return line;
 }
 ;
   async fixConsoleStatementError(error, lines, lineIndex) {
@@ -233,10 +231,10 @@ class $1 {
       line.includes("console.error") ||;
       line.includes(`console.warn`);
     ) {
-  return `// ` + line;,
+  return `// ` + line;
 }
 ;
-    return line;,
+    return line;
 }
 ;
   async fixUndefinedVariableError(error, lines, lineIndex) {
@@ -253,7 +251,7 @@ class $1 {
           prevLine.includes(`const ${variable}`) ||prevLine.includes(`let ${variable}`) ||prevLine.includes(`var ${variable}`);
         ) {
   // Variable is defined, this might be a scope issue;
-          return line;,
+          return line;
 }
       }
 ;
@@ -261,11 +259,11 @@ class $1 {
       if (line.includes(`=`)) {return `const ${line}`;
 
       // Variable not found, add declaration;
-      if (line.includes("=")) {return `const ${line}`;,
+      if (line.includes("=")) {return `const ${line}`;
 }
     }
 ;
-    return line;,
+    return line;
 }
 ;
   async fixExtraSemicolonError(error, lines, lineIndex) {
@@ -279,16 +277,16 @@ class $1 {
     if (line.includes(`.hasOwnProperty(`)) {
   // Replace direct prototype access with safer alternatives;
     if (line.includes(".hasOwnProperty(")) {
-  return line.replace(/\.hasOwnProperty\(/g, ".hasOwnProperty.call(this, ");,
+  return line.replace(/\.hasOwnProperty\(/g, ".hasOwnProperty.call(this, ");
 }
 ;
-    return line;,
+    return line;
 }
 ;
   async fixUselessEscapeError(error, lines, lineIndex) {
   const line = lines[lineIndex];
     // Remove unnecessary escape characters;
-    return line.replace(/\\([^\\])/g, "$1");,
+    return line.replace(/\\([^\\])/g, "$1");
 }
 ;
   async fixGenericESLintError(error, lines, lineIndex) {
@@ -302,7 +300,7 @@ class $1 {
       !line.trim().endsWith("{") &&;
       !line.trim().endsWith("}");
     ) {
-  fixedLine = line + ";,
+  fixedLine = line + ";
 }
 ;
     // Fix extra spaces;
@@ -320,7 +318,7 @@ class $1 {
       !line.trim().endsWith("{") &&;
       !line.trim().endsWith("}");
     ) {
-  fixedLine = line + ";,
+  fixedLine = line + ";
 }
 ;
     // Fix extra spaces;
@@ -329,7 +327,7 @@ class $1 {
     // Fix trailing spaces;
     fixedLine = fixedLine.replace(/\s+$/, ");
 
-    return fixedLine;,
+    return fixedLine;
 }
 ;
   async attemptFixes(errors) {this.log(`🔧 Attempting to fix ${errors.length} ESLint errors...`);
@@ -341,19 +339,19 @@ class $1 {
   try {
   const fixed = await this.fixESLintError(error);
         if (fixed) {
-  fixedCount++;,
+  fixedCount++;
 }
 ;
         fixResults.push({
   error,;
           fixed,;
-          timestamp: new Date().toISOString(),;,
+          timestamp: new Date().toISOString(),;
 });
         // Track fix attemptsconst errorKey = `${error.file}:${error.line}:${error.message}`;
         this.fixAttempts.set(;
           errorKey,;
           (this.fixAttempts.get(errorKey) || 0) + 1;
-        );,
+        );
 } catch (fixError) {
   this.log(❌ Error fixing ${error.file}:${error.line}: ${fixError.message}`,;
           `ERROR`;
@@ -362,8 +360,8 @@ class $1 {
   error,;
           fixed: false,;
           error: fixError.message,;
-          timestamp: new Date().toISOString(),;,
-});,
+          timestamp: new Date().toISOString(),;
+});
 }
     }
 ;
@@ -387,7 +385,7 @@ class $1 {
       const result = execSync("npm run lint: fix", {
   cwd: this.workspacePath,;
         encoding: "utf8",;
-        stdio: "pipe",;,
+        stdio: "pipe",;
 });
       this.log("✅ ESLint auto-fix completed");
       return { success: true, output: result }
@@ -416,7 +414,7 @@ class $1 {
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`📄 Report generated: ${reportFile}`);
-    return report;,
+    return report;
 }
 ;
   async run() {
@@ -467,10 +465,10 @@ this.log(`📄 Report generated: ${reportFile}`);
   success: fixResults.fixedCount > 0,;
         errors: checkResult.errors,;
         fixed: fixResults.fixedCount,;
-        report,;,
+        report,;
 }
     } catch (error) {  this.log(`💥 ESLint Error Cleaner failed: ${error.message  }`, `ERROR`);
-      throw error;,
+      throw error;
 }
   }
 }
@@ -478,7 +476,7 @@ this.log(`📄 Report generated: ${reportFile}`);
 // Run the automation if called directly;
 if (require.main === module) {
   const cleaner = new ESLintErrorCleaner();
-  cleaner.run().catch(console.error);,
+  cleaner.run().catch(console.error);
 }
 ;
 module.exports = ESLintErrorCleaner

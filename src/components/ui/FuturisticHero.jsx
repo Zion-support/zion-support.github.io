@@ -183,7 +183,6 @@ export default function FuturisticHero() {}
                 y: Math.random() * window.innerHeight,
                 opacity: Math.random(),
 
-
 export { FuturisticHero };
 
 export { FuturisticHero };

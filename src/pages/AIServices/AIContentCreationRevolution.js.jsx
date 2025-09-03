@@ -206,7 +206,6 @@ export default function AIContentCreationRevolution() {}
       </section>
     </div>)}
 
-
 export { AIContentCreationRevolution, IconComponent };
 
 export { AIContentCreationRevolution, IconComponent };

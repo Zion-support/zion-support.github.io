@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from "./App.tsx";
@@ -20,7 +18,6 @@ import { AuthProvider } from "./context/auth/AuthProvider.jsx";
 ;
 // Import analytics provider
 
-
 ;
 ;
 
@@ -34,9 +31,7 @@ const queryClient = new QueryClient({
     },
 });
 
-
 const rootElement = document.getElementById('root');
-
 
 const renderApp = () => {
     const app = (
@@ -46,7 +41,7 @@ const renderApp = () => {
                         <Router>
                             <AuthProvider>
                                 <NotificationProvider>
-                                    <AnalyticsProvider>
+<AnalyticsProvider>
                                         <LanguageProvider authState={{
                                             isAuthenticated: false,
                                             user: null
@@ -65,8 +60,7 @@ const renderApp = () => {
                 </QueryClientProvider>
             </HelmetProvider>
         </React.StrictMode>
-    );
-
+);
 
     if (rootElement?.hasChildNodes()) {
         hydrateRoot(rootElement, app);
@@ -75,11 +69,9 @@ const renderApp = () => {
     }
 };
 
-
 function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `
-
 
             <div style="padding:20px;text-align:center;font-family:sans-serif;">
                 <h1>Application Error</h1>

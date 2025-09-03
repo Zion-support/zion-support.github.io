@@ -183,7 +183,6 @@ const NotFound = () => {}
     </div>)};
 export default NotFound;
 
-
 export { NotFound };
 
 export { NotFound };

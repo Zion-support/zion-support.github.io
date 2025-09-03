@@ -259,7 +259,7 @@ useEffect(() => {}"
             const { message } = event.detail"""
             if (message.type === "text_change" && message.userId !== userId) {}
 
-            // Default export behavior'
+// Default export behavior'
             const blob = new Blob([exportContent], { type: 'text/plain' });
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -297,7 +297,7 @@ useEffect(() => {}
 }
             return,const autoSaveInterval = setInterval(() => {}
 
-                    // Simple merge strategy - in production, this would use operational transformation
+// Simple merge strategy - in production, this would use operational transformation
                     return {
 
                         ...prev,

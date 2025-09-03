@@ -443,7 +443,7 @@ isTouched: false}})
             initialData[field.name] = field.type === &apos;checkbox&apos; ? false : &apos
             initialValidation[field.name] = {}"
                 isValid: !field.required,
-                message: '',
+message: '',
                 isTouched: false
             }}) ;
         setFormData(initialData) ;

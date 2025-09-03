@@ -65,7 +65,7 @@ if (outcome === "accepted") {"      "    } else {"      "    }"setDeferredPrompt
       } else {"
       }
 
-    deferredPrompt.prompt();
+deferredPrompt.prompt();
 
     const { outcome } = await deferredPrompt.userChoice;
     
@@ -84,7 +84,7 @@ const handleDismiss = () => {;setShowInstallPrompt(false);
 
   return (
     <AnimatePresence>
-      <motion.div
+<motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 100 }}

@@ -205,7 +205,6 @@ export default function AIClimatePrediction() {}
       </section>
     </div>)}
 
-
 export { AIClimatePrediction, IconComponent };
 
 export { AIClimatePrediction, IconComponent };

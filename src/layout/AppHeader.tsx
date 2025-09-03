@@ -15,7 +15,7 @@ export function AppHeader() {
     }
   };
 
-  // Organized Services Categories
+// Organized Services Categories
   const servicesCategories = [{
       title: 'AI & Machine Learning',      icon: Brain,
       color: 'from-zion-cyan to-zion-purple',
@@ -42,7 +42,7 @@ export function AppHeader() {
       ]
     }
   ];
-        setServicesDropdownOpen(true);
+setServicesDropdownOpen(true);
         setSolutionsDropdownOpen(false);
         setCompanyDropdownOpen(false);
         setResourcesDropdownOpen(false)} else if(nav.name === 'Solutions') {

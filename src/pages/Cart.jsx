@@ -149,7 +149,6 @@ import { Link, useNavigate } from 'react-router-dom';
     );
 }
 
-
 export { CartPage };
 
 export { CartPage };

@@ -31,7 +31,6 @@ export default function CodeBlock({}
       </pre>
     </div>)}
 
-
 export { CodeBlock };
 
 export { CodeBlock };

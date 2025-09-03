@@ -103,19 +103,9 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition={{ duration: 0.6 }} className="text-6xl mb-6">
               🚨
@@ -124,28 +114,13 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
 
 }}>
               Intelligent
@@ -157,28 +132,13 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}>
               Comprehensive incident management platform that uses AI to detect, respond to, and analyze 
@@ -190,28 +150,13 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
 
 }}>
               {benefits.map((benefit, index) => (<div key={index} className="text-center">
@@ -224,28 +169,13 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
 
 }}>
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">
@@ -265,19 +195,9 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition={{ duration: 0.6 }}>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -293,28 +213,13 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}>
                   <div className="text-red-400 mb-4">{feature.icon}</div>
@@ -332,19 +237,9 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition={{ duration: 0.6 }}>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -362,28 +257,13 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}>
                   {plan.popular && (<div className="text-center mb-4">
@@ -427,19 +307,9 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }} transition={{ duration: 0.6 }}>
                 <h3 className="text-2xl font-bold text-white mb-6">Security Integrations</h3>
@@ -456,19 +326,9 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { opacity: 0,
   x: 20 
 
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }} transition={{ duration: 0.6 }}>
                 <h3 className="text-2xl font-bold text-white mb-6">Perfect For</h3>
@@ -490,19 +350,9 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition={{ duration: 0.6 }}>
               Ready to Enhance Your Security Posture?
@@ -511,28 +361,13 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
 
 }}>
               Join organizations already using our intelligent incident response platform
@@ -542,28 +377,13 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}>
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">
@@ -579,28 +399,13 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }} transition = {
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
 
 }}>
               <h3 className="text-lg font-semibold text-white mb-4">Why Choose Our Incident Response Platform?</h3>
@@ -627,11 +432,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
             <motion.div className="mt-8 text-sm text-gray-400" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition = {
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
 
 }}>
               <p>Email: kleber@ziontechgroup.com</p>

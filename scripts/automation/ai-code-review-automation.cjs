@@ -3,7 +3,7 @@
  * AI-Powered Code Review Automation - PM2 Automation;
  * Intelligently analyzes code changes and suggests improvements;
  */;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 /**;
  * AI-Powered Code Review Automation - PM2 Automation;
  * Intelligently analyzes code changes and suggests improvements;
@@ -23,13 +23,13 @@ class $1 {
       "ai-suggestions.json";
     );
     this.ensureLogsDirectory();
-    this.reviewHistory = this.loadReviewHistory();,
+    this.reviewHistory = this.loadReviewHistory();
 }
 ;
   ensureLogsDirectory() {
   const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true });,
+  fs.mkdirSync(logsDir, { recursive: true });
 }
   }
 ;
@@ -38,17 +38,17 @@ class $1 {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);,
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
 }
 ;
   loadReviewHistory() {
   try {
   if (fs.existsSync(this.reviewsLog)) {
-  return JSON.parse(fs.readFileSync(this.reviewsLog, `utf8`));,
+  return JSON.parse(fs.readFileSync(this.reviewsLog, `utf8`));
 }
-    } catch (error) {  this.log(`Failed to load review history: ${error.message  }`, `WARN`);,
+    } catch (error) {  this.log(`Failed to load review history: ${error.message  }`, `WARN`);
 }
-    return [];,
+    return [];
 }
 ;
   saveReviewHistory() {
@@ -56,8 +56,8 @@ class $1 {
   fs.writeFileSync(;
         this.reviewsLog,;
         JSON.stringify(this.reviewHistory, null, 2);
-      );,
-} catch (error) {  this.log(`Failed to save review history: ${error.message  }`, `ERROR`);,
+      );
+} catch (error) {  this.log(`Failed to save review history: ${error.message  }`, `ERROR`);
 }
   }
 ;
@@ -118,9 +118,9 @@ class $1 {
       await this.triggerFollowUpActions(reviewReport);
 
       this.log("AI code review completed successfully");
-      return reviewReport;,
+      return reviewReport;
 } catch (error) {  this.log(`AI code review failed: ${error.message  }`, `ERROR`);
-      throw error;,
+      throw error;
 }
   }
 ;
@@ -152,14 +152,14 @@ class $1 {
             lines: content.split("\n").length,;
             lastModified: stats.mtime,;
             extension: path.extname(file),;
-            content: content,;,
-});,
+            content: content,;
+});
 }
       }
 this.log(`Found ${fileStats.length} changed files`);
-      return fileStats;,
+      return fileStats;
 } catch (error) {  this.log(`Failed to get recent changes: ${error.message  }`, `WARN`);
-      return [];,
+      return [];
 }
   }
 ;
@@ -169,7 +169,7 @@ this.log(`Found ${fileStats.length} changed files`);
   overallScore: 0,;
       issues: [],;
       metrics: {},;
-      recommendations: [],;,
+      recommendations: [],;
 }
 ;
     for (const file of files) {
@@ -180,13 +180,13 @@ this.log(`Found ${fileStats.length} changed files`);
       ) {
   const fileAnalysis = await this.analyzeJavaScriptFile(file);
         analysis.issues.push(...fileAnalysis.issues);
-        analysis.metrics[file.path] = fileAnalysis.metrics;,
+        analysis.metrics[file.path] = fileAnalysis.metrics;
 } else if (file.extension === `.css` || file.extension === `.scss`) {
-  ,
+  
 } else if (file.extension === ".css" || file.extension === ".scss") {
   const fileAnalysis = await this.analyzeCSSFile(file);
         analysis.issues.push(...fileAnalysis.issues);
-        analysis.metrics[file.path] = fileAnalysis.metrics;,
+        analysis.metrics[file.path] = fileAnalysis.metrics;
 }
     }
 ;
@@ -194,13 +194,13 @@ this.log(`Found ${fileStats.length} changed files`);
     analysis.overallScore = this.calculateQualityScore(analysis);
     this.log(Code quality analysis completed. Overall score: ${analysis.overallScore}/100`;
     );
-    return analysis;,
+    return analysis;
 }
 ;
   async analyzeJavaScriptFile(file) {
   const analysis = {
   issues: [],;
-      metrics: {},;,
+      metrics: {},;
 }
 ;
     try {
@@ -213,7 +213,7 @@ this.log(`Found ${fileStats.length} changed files`);
   type: `HIGH_COMPLEXITY`,;
           severity: `MEDIUM`,message: `Function complexity is ${complexity} (recommended: <10)`,;
           file: file.path,;
-          line: this.findComplexFunctionLine(content)});,
+          line: this.findComplexFunctionLine(content)});
 }
 ;
       // Code duplication detection;
@@ -223,7 +223,7 @@ this.log(`Found ${fileStats.length} changed files`);
   type: `CODE_DUPLICATION`,;
           severity: `LOW`,message: `${duplication.duplicateLines} lines of duplicate code detected`,;
           file: file.path,;
-          suggestions: [`Extract common functionality into reusable functions`]});,
+          suggestions: [`Extract common functionality into reusable functions`]});
 }
 ;
       // Performance anti-patterns;
@@ -231,7 +231,7 @@ this.log(`Found ${fileStats.length} changed files`);
       analysis.issues.push(...performanceIssues);
       // Security vulnerabilities;
       const securityIssues = this.detectSecurityVulnerabilities(content);
-      analysis.issues.push(...securityIssues);,
+      analysis.issues.push(...securityIssues);
 } catch (error) {
   analysis.issues.push({
   type: `ANALYSIS_ERROR`,;
@@ -247,8 +247,8 @@ this.log(`Found ${fileStats.length} changed files`);
   type: "HIGH_COMPLEXITY",;
           severity: "MEDIUM",message: `Function complexity is ${complexity} (recommended: <10)`,;
           file: file.path,;
-          line: this.findComplexFunctionLine(content),;,
-});,
+          line: this.findComplexFunctionLine(content),;
+});
 }
 ;
       // Code duplication detection;
@@ -258,8 +258,8 @@ this.log(`Found ${fileStats.length} changed files`);
   type: "CODE_DUPLICATION",;
           severity: "LOW",message: `${duplication.duplicateLines} lines of duplicate code detected`,;
           file: file.path,;
-          suggestions: ["Extract common functionality into reusable functions"],;,
-});,
+          suggestions: ["Extract common functionality into reusable functions"],;
+});
 }
 ;
       // Performance anti-patterns;
@@ -268,16 +268,16 @@ this.log(`Found ${fileStats.length} changed files`);
 
       // Security vulnerabilities;
       const securityIssues = this.detectSecurityVulnerabilities(content);
-      analysis.issues.push(...securityIssues);,
+      analysis.issues.push(...securityIssues);
 } catch (error) {
   analysis.issues.push({
   type: "ANALYSIS_ERROR",;
         severity: "LOW",message: `Failed to analyze file: ${error.message}",;
-        file: file.path,;,
-});,
+        file: file.path,;
+});
 }
 ;
-    return analysis;,
+    return analysis;
 }
 ;
   calculateComplexity(content) {
@@ -293,11 +293,11 @@ this.log(`Found ${fileStats.length} changed files`);
   const regex = new RegExp(`\\b${keyword}\\b`, `g`);
       const matches = content.match(regex);
       if (matches) {
-  complexity += matches.length;,
+  complexity += matches.length;
 }
     }
 ;
-    return complexity;,
+    return complexity;
 }
 ;
   detectCodeDuplication(content) {
@@ -319,14 +319,14 @@ this.log(`Found ${fileStats.length} changed files`);
           lines[i].trim() === lines[j].trim() &&;
           lines[i].trim().length > 10;
         ) {
-  duplicateLines.add(lines[i].trim());,
+  duplicateLines.add(lines[i].trim());
 }
       }
     }
 ;
     return {
   duplicateLines: duplicateLines.size,;
-      duplicateContent: Array.from(duplicateLines),;,
+      duplicateContent: Array.from(duplicateLines),;
 }
   }
 ;
@@ -345,12 +345,12 @@ this.log(`Found ${fileStats.length} changed files`);
           severity: antiPattern.severity,;
           message: antiPattern.message,;
           file: file.path,;
-          occurrences: matches.length,;,
-});,
+          occurrences: matches.length,;
+});
 }
     }
 ;
-    return issues;,
+    return issues;
 }
 ;
   detectSecurityVulnerabilities(content) {
@@ -371,19 +371,17 @@ this.log(`Found ${fileStats.length} changed files`);
   pattern: /eval\s*\(/g", "message: "eval() can execute arbitrary code - security risk", "severity: "HIGH", "}", "{
   pattern: /innerHTML\s*=\s*[^;"]*\+/g,;
         message: "Potential XSS vulnerability with innerHTML",;
-        severity: "HIGH",;,
+        severity: "HIGH",;
 },;
       {
   pattern: /localStorage\s*\[\s*[^]]*\+\s*[^]]*\]/g,;
         message: "Potential localStorage injection vulnerability",;
-        severity: "MEDIUM",;,
+        severity: "MEDIUM",;
 },;
     ];
-        severity: "MEDIUM",;,
+        severity: "MEDIUM",;
 },    ];
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-
-    for (const pattern of securityPatterns) {
+for (const pattern of securityPatterns) {
   const matches = content.match(pattern.pattern);
       if (matches) {
   issues.push({
@@ -398,12 +396,12 @@ this.log(`Found ${fileStats.length} changed files`);
           severity: pattern.severity,;
           message: pattern.message,;
           file: file.path,;
-          occurrences: matches.length,;,
-});,
+          occurrences: matches.length,;
+});
 }
     }
 ;
-    return issues;,
+    return issues;
 }
 ;
   calculateQualityScore(analysis) {
@@ -411,7 +409,7 @@ this.log(`Found ${fileStats.length} changed files`);
     // Deduct points for issues;
     for (const issue of analysis.issues) {
   const severityScores = { HIGH: 20, MEDIUM: 10, LOW: 5 }
-      score -= severityScores[issue.severity] || 5;,
+      score -= severityScores[issue.severity] || 5;
 }
 ;
     // Bonus for good practices;
@@ -419,7 +417,7 @@ this.log(`Found ${fileStats.length} changed files`);
     if (analysis.metrics && Object.keys(analysis.metrics).length > 0);
       score += 5;
 
-    return Math.max(0, Math.min(100, score));,
+    return Math.max(0, Math.min(100, score));
 }
 ;
   async generateIntelligentSuggestions(analysis) {
@@ -436,7 +434,7 @@ this.log(`Found ${fileStats.length} changed files`);
     for (const issue of analysis.issues) {
   const suggestion = await this.generateSuggestionForIssue(issue);
       if (suggestion) {
-  suggestions.push(suggestion);,
+  suggestions.push(suggestion);
 }
     }
 ;
@@ -445,7 +443,7 @@ this.log(`Found ${fileStats.length} changed files`);
       await this.generateProactiveSuggestions(analysis);
     suggestions.push(...proactiveSuggestions);
 this.log(`Generated ${suggestions.length} intelligent suggestions`);
-    return suggestions;,
+    return suggestions;
 }
 ;
   async generateSuggestionForIssue(issue) {
@@ -464,7 +462,7 @@ this.log(`Generated ${suggestions.length} intelligent suggestions`);
   title: "Fix Security Vulnerability",;
         description: "Address security concerns to prevent potential attacks",;
         code: "// Use safer alternatives\""n//"" Instead of eval(), use JSON.parse()\""n//"" Instead of innerHTML, use textContent",;
-        priority: "CRITICAL",;,
+        priority: "CRITICAL",;
 },    }
 ;
     const template = suggestionTemplates[issue.type];
@@ -473,11 +471,11 @@ this.log(`Generated ${suggestions.length} intelligent suggestions`);
   ...template,;
         issueType: issue.type,;
         file: issue.file,;
-        line: issue.line,;,
+        line: issue.line,;
 }
     }
 ;
-    return null;,
+    return null;
 }
 ;
   async generateProactiveSuggestions(analysis) {
@@ -488,7 +486,7 @@ this.log(`Generated ${suggestions.length} intelligent suggestions`);
   title: "Code Quality Improvement Plan",;
         description: "Implement comprehensive code quality improvements",;
         priority: "HIGH",;
-        action: "SCHEDULE_REVIEW"});,
+        action: "SCHEDULE_REVIEW"});
 }
 ;
     // Suggest testing improvements;
@@ -505,8 +503,8 @@ this.log(`Generated ${suggestions.length} intelligent suggestions`);
   title: "Code Quality Improvement Plan",;
         description: "Implement comprehensive code quality improvements",;
         priority: "HIGH",;
-        action: "SCHEDULE_REVIEW",;,
-});,
+        action: "SCHEDULE_REVIEW",;
+});
 }
 ;
     // Suggest testing improvements;
@@ -515,11 +513,11 @@ this.log(`Generated ${suggestions.length} intelligent suggestions`);
   title: "Add Unit Tests",;
         description: "Increase test coverage for better code reliability",;
         priority: "MEDIUM",;
-        action: "GENERATE_TESTS",;,
-});,
+        action: "GENERATE_TESTS",;
+});
 }
 ;
-    return suggestions;,
+    return suggestions;
 }
 ;
   async applyAutoFixes(suggestions) {
@@ -533,21 +531,21 @@ this.log(`Generated ${suggestions.length} intelligent suggestions`);
   appliedFixes.push({
   suggestion: suggestion.title,;
               file: suggestion.file,;
-              success: true,;,
-});,
+              success: true,;
+});
 }
         } catch (error) {
   this.log(Failed to apply fix for ${suggestion.title  }: ${error.message}`,;
-            `WARN`;,
+            `WARN`;
 } catch (error) {
   this.log(Failed to apply fix for ${suggestion.title}: ${error.message}",;
             "WARN";
-          );,
+          );
 }
       }
     }
 this.log(`Applied ${appliedFixes.length} auto-fixes`);
-    return appliedFixes;,
+    return appliedFixes;
 }
 ;
   async applyFix(suggestion) {
@@ -567,8 +565,8 @@ this.log(`Applied ${appliedFixes.length} auto-fixes`);
       details: {
   analysis,;
         suggestions,;
-        autoFixes,;,
-},;,
+        autoFixes,;
+},;
 }
 ;
     // Save report to file;
@@ -581,29 +579,29 @@ this.log(`Applied ${appliedFixes.length} auto-fixes`);
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`Review report generated: ${reportPath}`);
-    return report;,
+    return report;
 }
 ;
   generateSummary(analysis, suggestions, autoFixes) {
   const summary = [];
     if (analysis.overallScore >= 80) {
-  summary.push(`✅ Code quality is excellent!`);,
+  summary.push(`✅ Code quality is excellent!`);
 } else if (analysis.overallScore >= 60) {
-  summary.push(`⚠️ Code quality needs improvement`);,
+  summary.push(`⚠️ Code quality needs improvement`);
 } else {
-  summary.push(`❌ Code quality requires immediate attention`);,
+  summary.push(`❌ Code quality requires immediate attention`);
 }
 ;
-    if (analysis.issues.length > 0) {summary.push(`Found ${analysis.issues.length} issues to address`);,
+    if (analysis.issues.length > 0) {summary.push(`Found ${analysis.issues.length} issues to address`);
 }
 ;
-    if (suggestions.length > 0) {summary.push(`Generated ${suggestions.length} improvement suggestions`);,
+    if (suggestions.length > 0) {summary.push(`Generated ${suggestions.length} improvement suggestions`);
 }
 ;
-    if (autoFixes.length > 0) {summary.push(`Automatically applied ${autoFixes.length} fixes`);,
+    if (autoFixes.length > 0) {summary.push(`Automatically applied ${autoFixes.length} fixes`);
 }
 ;
-    return summary.join(`. `);,
+    return summary.join(`. `);
 }
 ;
   async triggerFollowUpActions(report) {
@@ -611,14 +609,14 @@ this.log(`Review report generated: ${reportPath}`);
     // Schedule follow-up review if score is low;
     if (report.overallScore < 70) {
   this.log("Scheduling follow-up review due to low score");
-      // In a real implementation, you"d schedule a follow-up task;,
+      // In a real implementation, you"d schedule a follow-up task;
 }
 ;
     // Trigger additional automations if needed;
     if (report.issuesFound > 10) {
   this.log(`Triggering comprehensive code cleanup automation`);
 
-    return summary.join(". ");,
+    return summary.join(". ");
 }
 ;
   async triggerFollowUpActions(report) {
@@ -627,13 +625,13 @@ this.log(`Review report generated: ${reportPath}`);
     // Schedule follow-up review if score is low;
     if (report.overallScore < 70) {
   this.log("Scheduling follow-up review due to low score");
-      // In a real implementation, you"d schedule a follow-up task;,
+      // In a real implementation, you"d schedule a follow-up task;
 }
 ;
     // Trigger additional automations if needed;
     if (report.issuesFound > 10) {
   this.log("Triggering comprehensive code cleanup automation");
-      // Trigger other PM2 processes;,
+      // Trigger other PM2 processes;
 }
   }
 ;
@@ -641,9 +639,9 @@ this.log(`Review report generated: ${reportPath}`);
   try {
   const report = await this.runAICodeReview();
       this.log(`AI Code Review completed successfully`);
-      return report;,
+      return report;
 } catch (error) {  this.log(`AI Code Review failed: ${error.message  }`, `ERROR`);
-      throw error;,
+      throw error;
 }
   }
 }
@@ -655,12 +653,12 @@ if (require.main === module) {
     .run();
     .then(() => {
   console.log(`✅ AI Code Review Automation completed`);
-      process.exit(0);,
+      process.exit(0);
 });
     .catch(error => {
   console.error("❌ AI Code Review Automation failed: ', error.message);
-      process.exit(1);,
-});,
+      process.exit(1);
+});
 }
 ;
 module.exports = AICodeReviewAutomation

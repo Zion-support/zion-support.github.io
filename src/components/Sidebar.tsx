@@ -197,8 +197,7 @@ export default function Sidebar({ isOpen = true, onClose }: SidebarProps) {
           <span className="font-bold text-lg">Zion Tech</span>
         </div>
       </div>
-
-      {/* Sidebar Content */}
+{/* Sidebar Content */}
       <div className="p-4 space-y-2">
         {sidebarItems.map(renderSidebarItem)}
       </div>

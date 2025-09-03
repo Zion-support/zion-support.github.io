@@ -14,7 +14,7 @@ interface FormData {
 company: string,
   service: string,
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     company: '',
@@ -84,7 +84,7 @@ const ContactForm: React.FC = () => {
     }, 3000);
   };
 
-  const handleChange = (
+const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
@@ -247,7 +247,7 @@ const ContactForm: React.FC = () => {
                   <option key={service} value={service}>{service}</option>                ))}
 
               </select>
-            </div>
+</div>
           </div>
 
           <div>

@@ -1,5 +1,5 @@
 #!/""usr/bin/env"" node;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs").promises;
 const path = require("path");
@@ -9,14 +9,14 @@ class $1 {
   this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, ``automation/logs/build-error-fixer.log``);
     this.fixesApplied = [];
-    this.startTime = new Date();,
+    this.startTime = new Date();
 }
 ;
   async log(message) {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(`logMessage);
-    await fs.appendFile(this.logFile, logMessage + `\n`);,
+    await fs.appendFile(this.logFile, logMessage + `\n`);
 }
 ;
   async runCommand(command, options = {}) {
@@ -25,7 +25,7 @@ class $1 {
   cwd: this.projectRoot,;
         encoding: `utf8`,;
         stdio: options.silent ? "pipe" : "inherit",;
-        ...options;,
+        ...options;
 });
       return { success: true, output: result }
     } catch (error) {
@@ -37,7 +37,7 @@ class $1 {
   cwd: this.projectRoot,;
         encoding: "utf8",;
         stdio: options.silent ? "pipe" : "inherit",;
-        ...options;,
+        ...options;
 });
       return { success: true, output: result }
     } catch (error) {
@@ -61,8 +61,8 @@ class $1 {
       this.fixesApplied.push({
   type: "dependency-reinstall",;
         action: "npm install --legacy-peer-deps",;
-        timestamp: new Date().toISOString();,
-});,
+        timestamp: new Date().toISOString();
+});
 }
   }
 ;
@@ -74,7 +74,7 @@ class $1 {
       let nextConfig = ";
       ;
       if (await fs.access(nextConfigPath).then(() => true).catch(() => false)) {
-  nextConfig = await fs.readFile(nextConfigPath, "utf8");,
+  nextConfig = await fs.readFile(nextConfigPath, "utf8");
 }
       ;
       // Create or update Next.js configconst fixedConfig = /** @type {import("next").NextConfig} */;
@@ -82,13 +82,13 @@ const nextConfig = {
   reactStrictMode: true,;
   swcMinify: true,;
   experimental: {
-  appDir: false;,
+  appDir: false;
 },;
   typescript: {
-  ignoreBuildErrors: false;,
+  ignoreBuildErrors: false;
 },;
   eslint: {
-  ignoreDuringBuilds: false;,
+  ignoreDuringBuilds: false;
 },;
   webpack: (config, { isServer }) => {
   // Create or update Next.js configconst fixedConfig = /** @type {import("next").NextConfig} */;
@@ -96,17 +96,17 @@ const nextConfig = {
   reactStrictMode: true,;
   swcMinify: true,;
   experimental: {
-  appDir: false;,
+  appDir: false;
 },;
   typescript: {
-  ignoreBuildErrors: false;,
+  ignoreBuildErrors: false;
 },;
   eslint: {
-  ignoreDuringBuilds: false;,
+  ignoreDuringBuilds: false;
 },;
   webpack: (config, { isServer }) => {
   // Add any webpack customizations here;
-    return config;,
+    return config;
 }
 }
 ;
@@ -121,9 +121,9 @@ module.exports = nextConfig;
       this.fixesApplied.push({
   type: "next-config-fix",;
         file: "next.config.js",;
-        timestamp: new Date().toISOString();,
-});,
-} catch (error) {  await this.log(`❌ Error fixing Next.js config: ${error.message  }`);,
+        timestamp: new Date().toISOString();
+});
+} catch (error) {  await this.log(`❌ Error fixing Next.js config: ${error.message  }`);
 }
   }
 ;
@@ -155,9 +155,9 @@ module.exports = nextConfig;
         incremental: true,;
         plugins: [
   {
-  name: "next";,
+  name: "next";
 }
-        ];,
+        ];
 }
       ;
       await fs.writeFile(tsConfigPath, JSON.stringify(tsConfig, null, 2));
@@ -169,9 +169,9 @@ module.exports = nextConfig;
       this.fixesApplied.push({
   type: "tsconfig-fix",;
         file: "tsconfig.json",;
-        timestamp: new Date().toISOString();,
-});,
-} catch (error) {  await this.log(`❌ Error fixing TypeScript config: ${error.message  }`);,
+        timestamp: new Date().toISOString();
+});
+} catch (error) {  await this.log(`❌ Error fixing TypeScript config: ${error.message  }`);
 }
   }
 ;
@@ -190,7 +190,7 @@ module.exports = nextConfig;
         dev: "next dev",;
         build: "next build",;
         start: "next start",;
-        lint: "next lint",type-check": "tsc --noEmit";,
+        lint: "next lint",type-check": "tsc --noEmit";
 }
       ;
       await fs.writeFile(packageJsonPath, JSON.stringify(packageJson, null, 2));
@@ -202,9 +202,9 @@ module.exports = nextConfig;
       this.fixesApplied.push({
   type: "package-json-fix",;
         file: "package.json",;
-        timestamp: new Date().toISOString();,
-});,
-} catch (error) {  await this.log(`❌ Error fixing package.json: ${error.message  }`);,
+        timestamp: new Date().toISOString();
+});
+} catch (error) {  await this.log(`❌ Error fixing package.json: ${error.message  }`);
 }
   }
 ;
@@ -216,10 +216,10 @@ module.exports = nextConfig;
       this.fixesApplied.push({
   type: "build-test",;
         result: `success`,;
-        timestamp: new Date().toISOString();,
-});,
+        timestamp: new Date().toISOString();
+});
 } else {
-  await this.log(`❌ Build test failed`);await this.log(`Build error: ${buildResult.output}`);,
+  await this.log(`❌ Build test failed`);await this.log(`Build error: ${buildResult.output}`);
 }
   }
 ;
@@ -239,13 +239,13 @@ module.exports = nextConfig;
       return {
   success: true,;
         fixesApplied: this.fixesApplied.length,;
-        duration: duration.getTime();,
+        duration: duration.getTime();
 }
-      ;,
+      ;
 } catch (error) {  await this.log(`❌ Build Error Fixer failed: ${error.message  }`);
-      ;,
+      ;
 } catch (error) {await this.log(`❌ Build Error Fixer failed: ${error.message}`);
-      throw error;,
+      throw error;
 }
   }
 }
@@ -256,11 +256,11 @@ if (require.main === module) {
   fixer.run();
     .then(result => {
   console.log(`Build error fixer completed successfully`);
-      process.exit(0);,
+      process.exit(0);
 });
     .catch(error => {
-  console.error(`Build error fixer failed: `, error);      process.exit(1);,
-});,
+  console.error(`Build error fixer failed: `, error);      process.exit(1);
+});
 }
 ;
 module.exports = BuildErrorFixer

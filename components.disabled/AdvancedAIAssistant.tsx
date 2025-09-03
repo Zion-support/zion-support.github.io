@@ -476,7 +476,7 @@ const AdvancedAIAssistant: React.FC = () => {
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-sm">
             <div className="flex items-center justify-between mb-4">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                <Bot className="w-6 h-6 text-white" />
+<Bot className="w-6 h-6 text-white" />
               </div>"
               <div className="text-right">"
                 <div className="text-green-400 text-sm font-medium">+18%</div>"

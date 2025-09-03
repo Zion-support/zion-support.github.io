@@ -47,7 +47,6 @@ export default function Page() {
 
 };
 
-
     if(numPrice < 100) return 'Low';
     if(numPrice < 1000) return 'Medium';
     return 'High'};

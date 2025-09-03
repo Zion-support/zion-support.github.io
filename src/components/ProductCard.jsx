@@ -286,7 +286,7 @@ quantity: 1}))
     router.push("/products/${product.id}")}
 
   }
-  const active = isWishlisted(product.id);
+const active = isWishlisted(product.id);
   const dispatch = useDispatch();
   // Title is now guaranteed to be a non-empty string by the check above.const productTitle = product.title;
   const addToCart = () => {}
@@ -383,7 +383,6 @@ quantity: 1}))
         )}
       </div>
     </div>)}
-
 
 export { ProductCard };
 

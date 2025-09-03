@@ -209,7 +209,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   <Phone className = "h - 5 w-5 text-zion-cyan"  />,
                   Contact Details"",
                 </CardTitle>"";"
-                <CardDescription className="text-zion-slate-light">
+<CardDescription className="text-zion-slate-light">
                   Reach out to us through of these channels,
                 </CardDescription>""
               </CardHeader>"";"

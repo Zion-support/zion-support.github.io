@@ -22,7 +22,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({  title = defaultSEO.title, des
   author = defaultSEO.author, publishedTime,
   modifiedTime, section,
   tags, noindex = false,
-  nofollow = false, }) => {
+nofollow = false, }) => {
   const router = useRouter();
 
   const canonicalUrl = url || `https: //ziontechgroup.com${router.asPath};  const fullTitle = title === defaultSEO.title ? title : `${title} | Zion Tech Group`;`

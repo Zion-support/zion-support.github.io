@@ -206,7 +206,6 @@ export default function AIAutonomousHealthcarePhysician() {}
       </section>
     </div>)}
 
-
 export { AIAutonomousHealthcarePhysician, IconComponent };
 
 export { AIAutonomousHealthcarePhysician, IconComponent };

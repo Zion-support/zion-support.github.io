@@ -3,7 +3,7 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require(`path`);
 console.log(``🤖 Starting intelligent error fixer...`);
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
@@ -78,7 +78,7 @@ async function fixAllErrors() {
   timestamp: new Date().toISOString(),;
       totalFixes: totalFixes,;
       status: "completed",;
-      summary: Intelligent error fixer completed with ${totalFixes} fixes applied",;,
+      summary: Intelligent error fixer completed with ${totalFixes} fixes applied",;
 }
 ;
     const reportPath = path.join(;
@@ -89,9 +89,9 @@ async function fixAllErrors() {
     console.log( ✅ Intelligent error fixer completed. Applied ${totalFixes} fixes.;
     );console.log(📊 Report saved to: ${reportPath}``);
 
-    return totalFixes;,
+    return totalFixes;
 } catch (error) {
-  console.error(`❌ Intelligent error fixer failed: `, error.message);    return totalFixes;,
+  console.error(`❌ Intelligent error fixer failed: `, error.message);    return totalFixes;
 }
 }
 ;
@@ -107,12 +107,12 @@ async function fixMissingDependencies() {
 
   for (const dep of missingDeps) {
   try {console.log(`📦 Installing ${dep}...`);execSync(`npm install ${dep}`, { stdio: "pipe" });
-      fixes++;console.log(`✅ Installed ${dep}`);,
-} catch (error) {  console.log(`⚠️  Could not install ${dep  }: ${error.message}`);,
+      fixes++;console.log(`✅ Installed ${dep}`);
+} catch (error) {  console.log(`⚠️  Could not install ${dep  }: ${error.message}`);
 }
   }
 ;
-  return fixes;,
+  return fixes;
 }
 ;
 async function fixTypeScriptErrors() {
@@ -135,19 +135,19 @@ async function fixTypeScriptErrors() {
         for (const fix of commonFixes) {
   if (fix.pattern.test(content)) {
   content = content.replace(fix.pattern, fix.replacement);console.log(`🔧 Applied fix in ${file}: ${fix.description}`);
-            fixes++;,
+            fixes++;
 }
         }
 ;
         if (content !== originalContent) {
-  fs.writeFileSync(file, content);,
+  fs.writeFileSync(file, content);
 }
-      } catch (error) {  console.log(`⚠️  Could not fix ${file  }: ${error.message}`);,
+      } catch (error) {  console.log(`⚠️  Could not fix ${file  }: ${error.message}`);
 }
     }
   }
 ;
-  return fixes;,
+  return fixes;
 }
 ;
 async function fixLintingErrors() {
@@ -184,19 +184,19 @@ async function fixLintingErrors() {
       for (const fix of lintingFixes) {`);
         if (fix.pattern.test(content)) {`);
           content = content.replace(fix.pattern, fix.replacement);console.log(`🔧 Applied linting fix in ${file}: ${fix.description});
-          fixes++;,
+          fixes++;
 }
       }
 ;
       if (content !== originalContent) {
-  fs.writeFileSync(file, content);,
+  fs.writeFileSync(file, content);
 }
-    } catch (error) {  console.log(⚠️  Could not fix ${file  }: ${error.message}``);,
-} catch (error) {console.log(⚠️  Could not fix ${file}: ${error.message}``);,
+    } catch (error) {  console.log(⚠️  Could not fix ${file  }: ${error.message}``);
+} catch (error) {console.log(⚠️  Could not fix ${file}: ${error.message}``);
 }
   }
 ;
-  return fixes;,
+  return fixes;
 }
 ;
 async function fixBuildErrors() {
@@ -208,7 +208,7 @@ async function fixBuildErrors() {
   try {
   execSync("npm install react-error-boundary", "{ stdio: "pipe" });
           console.log(`"✅ Installed react-error-boundary");
-          return 1;,
+          return 1;
 } catch (error) {
   console.log(`"⚠️  Could not install react-error-boundary");
   // Fix common build errors;
@@ -217,59 +217,59 @@ async function fixBuildErrors() {
   try {
   execSync("npm install react-error-boundary"", "{ stdio: "pipe" });
           console.log(`✅ Installed react-error-boundary`);
-          return 1;,
+          return 1;
 } catch (error) {
   console.log(`"⚠️  Could not install react-error-boundary");
-          return 0;,
+          return 0;
 }
       }", "description: "Install missing react-error-boundary"", "}", "{
   pattern: /Cannot find module "react-helmet-async"/g", "action: async () => {
   try {
   execSync("npm install react-helmet-async"", "{ stdio: "pipe" });
           console.log("✅ Installed react-helmet-async");
-          return 1;,
+          return 1;
 } catch (error) {
   console.log("⚠️  Could not install react-helmet-async");
-          return 0;,
+          return 0;
 }
       }", "description: "Install missing react-helmet-async"", "}", ""];
   // Check for build errors by running build;
   try {
-  execSync("npm run build", { stdio: `pipe` });,
+  execSync("npm run build", { stdio: `pipe` });
 } catch (error) {
   const buildOutput = error.stdout || error.stderr || ``;
     for (const fix of buildFixes) {
-  if (fix.pattern.test(buildOutput)) {console.log(🔧 Applying build fix: ${fix.description  });,
+  if (fix.pattern.test(buildOutput)) {console.log(🔧 Applying build fix: ${fix.description  });
 } catch (error) {
   console.log(`⚠️  Could not install react-error-boundary`);
-          return 0;,
+          return 0;
 }
       }", "description: "Install missing react-error-boundary", "}", "{
   pattern: /Cannot find module "react-helmet-async"/g", "action: async () => {
   try {
   execSync("npm install react-helmet-async", "{ stdio: "pipe" });
           console.log("✅ Installed react-helmet-async");
-          return 1;,
+          return 1;
 } catch (error) {
   console.log("⚠️  Could not install react-helmet-async");
-          return 0;,
+          return 0;
 }
       }", "description: "Install missing react-helmet-async", "}", "];
 
   // Check for build errors by running build;
   try {
-  execSync("npm run build", { stdio: "pipe" });,
+  execSync("npm run build", { stdio: "pipe" });
 } catch (error) {
   const buildOutput = error.stdout || error.stderr || ";
 
     for (const fix of buildFixes) {
   if (fix.pattern.test(buildOutput)) {console.log(🔧 Applying build fix: ${fix.description});
-        fixes += await fix.action();,
+        fixes += await fix.action();
 }
     }
   }
 ;
-  return fixes;,
+  return fixes;
 }
 ;
 async function fixSyntaxErrors() {
@@ -294,18 +294,18 @@ async function fixSyntaxErrors() {
       for (const fix of syntaxFixes) {
   if (fix.pattern.test(content)) {
   content = content.replace(fix.pattern, fix.replacement);console.log(🔧 Applied syntax fix in ${file}``);
-          fixes++;,
+          fixes++;
 }
       }
 ;
       if (content !== originalContent) {
-  fs.writeFileSync(file, content);,
+  fs.writeFileSync(file, content);
 }
-    } catch (error) {  console.log(`⚠️  Could not fix ${file  }: ${error.message}`);,
+    } catch (error) {  console.log(`⚠️  Could not fix ${file  }: ${error.message}`);
 }
   }
 ;
-  return fixes;,
+  return fixes;
 }
 ;
 async function runAutoFixCommands() {
@@ -324,12 +324,12 @@ async function runAutoFixCommands() {
     try {`);
       console.log(`🔧 Running: ${command}`);
       execSync(command, { stdio: `pipe` });console.log(`✅ Completed: ${command}`);
-      fixes++;,
-} catch (error) {  console.log(`⚠️  Command failed: ${command  } - ${error.message}`);,
+      fixes++;
+} catch (error) {  console.log(`⚠️  Command failed: ${command  } - ${error.message}`);
 }
   }
 ;
-  return fixes;,
+  return fixes;
 }
 ;
 function getAllSourceFiles() {
@@ -344,17 +344,17 @@ function getAllSourceFiles() {
           const stat = fs.statSync(fullPath);
 
           if (stat.isDirectory()) {
-  traverse(fullPath);,
+  traverse(fullPath);
 } else if (fullPath.match(/\.(tsx?|jsx?)$/)) {
-  files.push(fullPath);,
+  files.push(fullPath);
 }
         }
       }
-      traverse(dir);,
+      traverse(dir);
 }
   }
 ;
-  return files;,
+  return files;
 }
 ;
 // Run the intelligent error fixer;
@@ -363,11 +363,11 @@ if (require.main === module) {
     .then(fixes => {
   console.log(🎉 Intelligent error fixer completed with ${fixes} fixes applied`;
       );
-      process.exit(0);,
+      process.exit(0);
 });
     .catch(error => {
-  console.error(`❌ Intelligent error fixer failed: `, error);      process.exit(1);,
-});,
+  console.error(`❌ Intelligent error fixer failed: `, error);      process.exit(1);
+});
 }
 ;
 module.exports = { fixAllErrors }

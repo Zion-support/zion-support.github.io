@@ -1,5 +1,5 @@
 #!/""usr/bin/env"" node;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -93,7 +93,7 @@ class ErrorPreventionMonitor {
   let fixedLine = line;
     // Replace eval with safer alternatives;
     if (line.includes("eval(")) {
-  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)");,
+  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)");
 }
 ;
     // Replace innerHTML with textContent where possible;
@@ -103,17 +103,17 @@ class ErrorPreventionMonitor {
 
     // Replace eval with safer alternatives;
     if (line.includes("eval(")) {
-  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)");,
+  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)");
 }
 ;
     // Replace innerHTML with textContent where possible;
     if (line.includes(".innerHTML =")) {
   fixedLine = line.replace(;
         /\.innerHTML\s*=\s*([^]+)/g,.textContent = $1";
-      );,
+      );
 }
 ;
-    return fixedLine;,
+    return fixedLine;
 }
 ;
   async fixMemoryLeak(line) {
@@ -122,10 +122,10 @@ class ErrorPreventionMonitor {
     if (line.includes("addEventListener")) {
   fixedLine = line.replace(;
         /addEventListener\s*\((["^", ""]+),\s*(["^", ""]+),\s*false\)/g,addEventListener($1, $2, { once: true })";
-      );,
+      );
 }
 ;
-    return fixedLine;,
+    return fixedLine;
 }
 ;
   async fixAsyncError(line) {
@@ -134,7 +134,7 @@ class ErrorPreventionMonitor {
     if (line.includes(".then(") && !line.includes(".catch(")) {
   fixedLine = line + "\n  .catch(error => console.error("Error: ", error))"}
 ;
-    return fixedLine;,
+    return fixedLine;
 }
 ;
   async fixTypeIssue(line) {
@@ -145,14 +145,14 @@ class ErrorPreventionMonitor {
 
     // Replace any with more specific types;
     if (line.includes(": any")) {
-  fixedLine = line.replace(/: "any/g", ": unknown");,
+  fixedLine = line.replace(/: "any/g", ": unknown");
 }
 ;
     if (line.includes("as any")) {
-  fixedLine = line.replace(/as "any/g", "as unknown");,
+  fixedLine = line.replace(/as "any/g", "as unknown");
 }
 ;
-    return fixedLine;,
+    return fixedLine;
 }
 ;
   async generateReport(fixResults) {
@@ -175,7 +175,7 @@ class ErrorPreventionMonitor {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report generated: ${reportFile}`);
-    return report;,
+    return report;
 }
 ;
   async run() {
@@ -223,12 +223,12 @@ class ErrorPreventionMonitor {
   success: fixResults.fixedCount > 0,;
         issues: potentialErrors,;
         fixed: fixResults.fixedCount,;
-        report,;,
+        report,;
 }
     } catch (error) {  this.log(`💥 Error Prevention Monitor failed: ${error.message  }`, `ERROR`);
-      throw error;,
+      throw error;
 }
-  }
+}
 
   triggerAutoFix() {
     this.log('Triggering auto-fix process...');
@@ -271,7 +271,6 @@ class ErrorPreventionMonitor {
     this.log('Monitoring active - health checks every 15 minutes');
   }
 }
-
 // Start the monitor
 const monitor = new ErrorPreventionMonitor();
 monitor.run();

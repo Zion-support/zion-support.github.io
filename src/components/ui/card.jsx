@@ -63,7 +63,6 @@ const CardFooter = ({ children, className = '' }) => {
 };
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
 
-
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
 
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };

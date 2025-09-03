@@ -16,7 +16,7 @@ export interface Service {
   features: string[];
   technologies: string[];
   deliveryTime: string;
-  support: string;
+support: string;
   image?: string;
   popular?: boolean;
 }
@@ -348,7 +348,7 @@ export interface Notification {
 }
 
 export interface InputProps extends BaseComponentProps {
-  type?:
+type?:
   'text' |
   'email' |
   'password' |

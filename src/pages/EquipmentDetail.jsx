@@ -241,7 +241,6 @@ export default function EquipmentDetail() {}
       <Footer />
     </>)}
 
-
 export { EquipmentDetail };
 
 export { EquipmentDetail };

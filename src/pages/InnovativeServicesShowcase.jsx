@@ -47,7 +47,6 @@ const InnovativeServicesShowcase = () => {
             'Metaverse & VR/AR': <Eye className="h-5 w-5"/>,
             'Green Technology': <Leaf className="h-5 w-5"/>,
 
-
 export { InnovativeServicesShowcase };
 
 export { InnovativeServicesShowcase };

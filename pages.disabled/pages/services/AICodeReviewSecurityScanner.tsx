@@ -1,4 +1,4 @@
-    {;
+{;
       icon: GitBranch,;
       title: 'Git Integration & Workflow',;'
       description: 'Seamless integration with Git workflows, pull request reviews, and automated security checks.',;'

@@ -538,7 +538,6 @@ export default function ProjectDetails() {
       <ProjectDetailsContent />
     </ProtectedRoute>)}
 
-
 export { ProjectDetailsContent, ProjectDetails };
 
 export { ProjectDetailsContent, ProjectDetails };

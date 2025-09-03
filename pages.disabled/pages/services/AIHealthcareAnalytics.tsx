@@ -24,14 +24,7 @@ import {}
 
             AI Healthcare Analytics Platform"</h1>;
 
-  
-  
-  
-  
-  
-  
-  
-  return (""
+return (""
     <div className="min-h-screen bg-white">""
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">""
         <div className="max-w-5xl mx-auto px-6">""

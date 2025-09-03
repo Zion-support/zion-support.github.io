@@ -37,7 +37,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {  const 
         backgroundColor: effectiveTheme.backgroundColor,        color: effectiveTheme.textColor,
         borderColor: "${effectiveTheme.primaryColor}20"}
 
-  // Handle scroll effect
+// Handle scroll effect
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);

@@ -8,14 +8,8 @@ export default function NewProductsPage() {
   { min: 0,
   max: 5000 
 
-
-
-
-
-
 }}/>);
 }
-
 
 export { CATEGORY_FILTERS, NewProductsPage };
 

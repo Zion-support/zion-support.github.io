@@ -208,7 +208,6 @@ export default function AIAutonomousVentureCapitalist() {}
       </section>
     </div>)}
 
-
 export { AIAutonomousVentureCapitalist, IconComponent };
 
 export { AIAutonomousVentureCapitalist, IconComponent };

@@ -1,23 +1,23 @@
 #!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
+const fs = require("child_process");
+const path = require("child_process");
 const { execSync } = require("child_process")
 class CodeQualityEnhancer {
   constructor() {
     this.projectRoot = process.cwd()
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
-    this.ensureDirectories(),
+    this.ensureDirectories()
 }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
+      fs.mkdirSync(this.reportsDir, { recursive: true })
 }
   }
 
   log(message) {
     const timestamp = new Date().toISOString()
-    console.log(`[${timestamp}] ${message}`),
+    console.log(`[${timestamp}] ${message}`)
 }
 
   analyzeCodeComplexity() {
@@ -30,17 +30,17 @@ class CodeQualityEnhancer {
       totalLines: 0,
       averageLinesPerFile: 0,
       largeFiles: [],
-      complexFiles: [],
+      complexFiles: []
 }
     const directories = [srcDir, pagesDir, componentsDir].filter(dir => fs.existsSync(dir))
     directories.forEach(dir => {
-      this.analyzeDirectory(dir, analysis),
+      this.analyzeDirectory(dir, analysis)
 })
     if (analysis.totalFiles > 0) {
-      analysis.averageLinesPerFile = Math.round(analysis.totalLines / analysis.totalFiles),
+      analysis.averageLinesPerFile = Math.round(analysis.totalLines / analysis.totalFiles)
 }
 
-    return analysis,
+    return analysis
 }
 
   analyzeDirectory(dir, analysis) {
@@ -48,16 +48,16 @@ class CodeQualityEnhancer {
     files.forEach(file => {
       const filePath = path.join(dir, file.name)
       if (file.isDirectory()) {
-        this.analyzeDirectory(filePath, analysis),
+        this.analyzeDirectory(filePath, analysis)
 } else if (this.isCodeFile(file.name)) {
-        this.analyzeFile(filePath, analysis),
+        this.analyzeFile(filePath, analysis)
 }
-    }),
+    })
 }
 
   isCodeFile(filename) {
     const codeExtensions = [".js", ".jsx", ".ts", ".tsx", ".css", ".scss"]
-    return codeExtensions.some(ext => filename.endsWith(ext)),
+    return codeExtensions.some(ext => filename.endsWith(ext))
 }
 
   analyzeFile(filePath, analysis) {
@@ -70,8 +70,8 @@ class CodeQualityEnhancer {
       if (lines > 200) {
         analysis.largeFiles.push({
           file: path.relative(this.projectRoot, filePath),
-          lines: lines,
-}),
+          lines: lines
+})
 }
       
       // Identify complex files (high cyclomatic complexity indicators)
@@ -79,11 +79,11 @@ class CodeQualityEnhancer {
       if (complexity > 10) {
         analysis.complexFiles.push({
           file: path.relative(this.projectRoot, filePath),
-          complexity: complexity,
-}),
+          complexity: complexity
+})
 }
     } catch (error) {
-      this.log(`❌ Error analyzing file ${filePath}: ${error.message}`),
+      this.log(`❌ Error analyzing file ${filePath}: ${error.message}`)
 }
   }
 
@@ -106,10 +106,10 @@ class CodeQualityEnhancer {
     complexityIndicators.forEach(pattern => {
       const matches = content.match(pattern)
       if (matches) {
-        complexity += matches.length,
+        complexity += matches.length
 }
     })
-    return complexity,
+    return complexity
 }
 
   checkCodeStandards() {
@@ -119,9 +119,9 @@ class CodeQualityEnhancer {
       hasPrettierConfig: fs.existsSync(".prettierrc") || fs.existsSync("prettier.config.js"),
       hasTypeScriptConfig: fs.existsSync("tsconfig.json"),
       hasJestConfig: fs.existsSync("jest.config.js") || fs.existsSync("jest.config.cjs"),
-      hasBabelConfig: fs.existsSync(".babelrc") || fs.existsSync("babel.config.js"),
+      hasBabelConfig: fs.existsSync(".babelrc") || fs.existsSync("babel.config.js")
 }
-    return standards,
+    return standards
 }
 
   checkDependencies() {
@@ -132,14 +132,14 @@ class CodeQualityEnhancer {
       total: Object.keys(packageJson.dependencies || {}).length,
       devTotal: Object.keys(packageJson.devDependencies || {}).length,
       outdated: [],
-      securityIssues: [],
+      securityIssues: []
 }
     try {
       // Check for outdated packages
       const outdatedOutput = execSync("npm outdated --json", { encoding: "utf8" })
-      dependencies.outdated = Object.keys(JSON.parse(outdatedOutput)),
+      dependencies.outdated = Object.keys(JSON.parse(outdatedOutput))
 } catch (error) {
-      // No outdated packages or error,
+      // No outdated packages or error
 }
 
     try {
@@ -148,10 +148,10 @@ class CodeQualityEnhancer {
       const audit = JSON.parse(auditOutput)
       dependencies.securityIssues = audit.vulnerabilities || {}
     } catch (error) {
-      // No security issues or error,
+      // No security issues or error
 }
 
-    return dependencies,
+    return dependencies
 }
 
   generateRecommendations(analysis, standards, dependencies) {
@@ -163,8 +163,8 @@ class CodeQualityEnhancer {
         type: "code-structure",
         priority: "high",
         message: `Found ${analysis.largeFiles.length} large files (>200 lines). Consider breaking them into smaller components.`,
-        files: analysis.largeFiles.slice(0, 5) // Show first 5,
-}),
+        files: analysis.largeFiles.slice(0, 5) // Show first 5
+})
 }
 
     if (analysis.complexFiles.length > 0) {
@@ -172,8 +172,8 @@ class CodeQualityEnhancer {
         type: "code-complexity",
         priority: "medium",
         message: `Found ${analysis.complexFiles.length} complex files. Consider refactoring to reduce complexity.`,
-        files: analysis.complexFiles.slice(0, 5),
-}),
+        files: analysis.complexFiles.slice(0, 5)
+})
 }
 
     // Standards recommendations
@@ -181,16 +181,16 @@ class CodeQualityEnhancer {
       recommendations.push({
         type: "code-standards",
         priority: "high",
-        message: "ESLint configuration not found. Consider adding ESLint for code quality.",
-}),
+        message: "ESLint configuration not found. Consider adding ESLint for code quality."
+})
 }
 
     if (!standards.hasPrettierConfig) {
       recommendations.push({
         type: "code-standards",
         priority: "medium",
-        message: "Prettier configuration not found. Consider adding Prettier for code formatting.",
-}),
+        message: "Prettier configuration not found. Consider adding Prettier for code formatting."
+})
 }
 
     // Dependencies recommendations
@@ -199,19 +199,19 @@ class CodeQualityEnhancer {
         type: "dependencies",
         priority: "medium",
         message: `Found ${dependencies.outdated.length} outdated packages. Consider updating them.`,
-        packages: dependencies.outdated.slice(0, 10),
-}),
+        packages: dependencies.outdated.slice(0, 10)
+})
 }
 
     if (Object.keys(dependencies.securityIssues).length > 0) {
       recommendations.push({
         type: "security",
         priority: "high",
-        message: "Security vulnerabilities found. Run npm audit fix to resolve them.",
-}),
+        message: "Security vulnerabilities found. Run npm audit fix to resolve them."
+})
 }
 
-    return recommendations,
+    return recommendations
 }
 
   async run() {
@@ -225,7 +225,7 @@ class CodeQualityEnhancer {
       analysis,
       standards,
       dependencies,
-      recommendations,
+      recommendations
 }
     // Generate report
     const reportFile = path.join(this.reportsDir, "code-quality-report.json")
@@ -244,11 +244,11 @@ class CodeQualityEnhancer {
     if (highPriority.length > 0) {
       console.log("\n🚨 High Priority Recommendations:")
       highPriority.forEach(rec => {
-        console.log(`  • ${rec.message}`),
-}),
+        console.log(`  • ${rec.message}`)
+})
 }
     
-    return results,
+    return results
 }
 }
 

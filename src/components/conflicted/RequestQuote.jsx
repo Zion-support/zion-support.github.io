@@ -336,8 +336,6 @@ import React, { useState } from 'react';                <Clock className="w-5 h-
         </div>
       </section>
     </div>)}
-
-
 export { RequestQuote };
 
 export { RequestQuote };

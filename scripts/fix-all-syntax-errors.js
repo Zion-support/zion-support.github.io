@@ -7,7 +7,7 @@ class SyntaxErrorFixer {
     this.projectRoot = process.cwd()
     this.scriptsDir = path.join(this.projectRoot, "scripts")
     this.fixedCount = 0
-    this.errorCount = 0,
+    this.errorCount = 0
 }
   async fixAllScripts() {
 
@@ -15,12 +15,12 @@ class SyntaxErrorFixer {
     const files = fs.readdirSync(this.scriptsDir))
     const jsFiles = files.filter(file => file.endsWith(".js") || file.endsWith(".cjs"))
     for (const file of jsFiles) {
-      await this.fixScript(file)),
+      await this.fixScript(file))
 }
     
     console.log(`\n✅ Syntax fixing completed!`)
     console.log(`📊 Fixed: ${this.fixedCount} files`)
-    console.log(`❌ Errors: ${this.errorCount} files`),
+    console.log(`❌ Errors: ${this.errorCount} files`)
 }
 
   async fixScript(filename) {
@@ -39,14 +39,14 @@ class SyntaxErrorFixer {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content))
         console.log(`✅ Fixed: ${filename}`)
-        this.fixedCount++,
+        this.fixedCount++
 } else {
-        console.log(`✓ No issues: ${filename}`),
+        console.log(`✓ No issues: ${filename}`)
 }
-      ,
+      
 } catch (error) {
       console.log(`❌ Error fixing ${filename}: ${error.message}`)
-      this.errorCount++,
+      this.errorCount++
 }
   }
 
@@ -58,7 +58,7 @@ class SyntaxErrorFixer {
     content = content.replace(/import\s+(\w+)\s+from\s*,\s*\n\s*[""`]([^""`]+)[""`]/g, "import $1 from "$2"")
     // Fix incomplete
     content = content.replace(/import\s+(\w+)\s+from\s*$/gm, "import $1 from "$1"")
-    return content,
+    return content
 }
   fixSemicolonIssues(content) {
     // Fix misplaced semicolons
@@ -69,7 +69,7 @@ class SyntaxErrorFixer {
     // Fix missing semicolons where needed
     content = content.replace(/(\w+)\s*}\s*$/gm, "$1;\n}")
     content = content.replace(/(\w+)\s*\)\s*$/gm, "$1;\n)")
-    return content,
+    return content
 }
   fixStringConcatenation(content) {
     // Fix broken string concatenation
@@ -77,26 +77,26 @@ class SyntaxErrorFixer {
     content = content.replace(/[""`]\s*,\s*\n\s*[""`]/g, """)
     content = content.replace(/[""`]\s*;\s*[""`]/g, """)
     content = content.replace(/[""`]\s*,\s*[""`]/g, """)
-    return content,
+    return content
 }
   fixObjectSyntax(content) {
     // Fix object syntax issues
-    content = content.replace(/(\w+):\s*([^,}]+)\s*;\s*}/g, "$1: $2\n}")
-    content = content.replace(/(\w+):\s*([^,}]+)\s*;\s*\)/g, "$1: $2\n)")
-    content = content.replace(/(\w+):\s*([^,}]+)\s*;\s*]/g, "$1: $2\n]")
-    return content,
+    content = content.replace(/(\w+):\s*([^}]+)\s*;\s*}/g, "$1: $2\n}")
+    content = content.replace(/(\w+):\s*([^}]+)\s*;\s*\)/g, "$1: $2\n)")
+    content = content.replace(/(\w+):\s*([^}]+)\s*;\s*]/g, "$1: $2\n]")
+    return content
 }
   fixFunctionSyntax(content) {
     // Fix function syntax issues
     content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm, "function $1() {\n")
     content = content.replace(/(\w+)\s*\(\s*\)\s*{\s*$/gm, "$1() {\n")
-    return content,
+    return content
 }
   fixConditionalSyntax(content) {
     // Fix conditional syntax issues
     content = content.replace(/\?\s*([^:]+)\s*;\s*$/gm, "? $1 :")
     content = content.replace(/\?\s*([^:]+)\s*;\s*\n/gm, "? $1 :\n")
-    return content,
+    return content
 }
 }
 

@@ -207,7 +207,6 @@ export default function Page() {
       
     </>)}
 
-
 export { TranslationManager };
 
 export { TranslationManager };

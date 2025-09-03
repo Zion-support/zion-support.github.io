@@ -252,10 +252,6 @@ export default function AISupportHelpdesk(...args[]):  {}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300"
   delay: index * 0.1 
 
-
-
-
-
 "
   delay: index * 0.1;
 }}""
@@ -328,10 +324,6 @@ export default function AISupportHelpdesk(...args[]):  {}
 }}"
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300"
   delay: index * 0.1 
-
-
-
-
 
 "
   delay: index * 0.1;
@@ -406,10 +398,6 @@ export default function AISupportHelpdesk(...args[]):  {}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300"
   delay: index * 0.1 
 
-
-
-
-
 "
   delay: index * 0.1;
 }}""
@@ -482,10 +470,6 @@ export default function AISupportHelpdesk(...args[]):  {}
 }}"
                   className="flex items-start space-x-4"
   delay: index * 0.1 
-
-
-
-
 
 "
   delay: index * 0.1;

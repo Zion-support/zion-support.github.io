@@ -32,7 +32,6 @@ const OpenApp = () => {}
     </>)};
 export default OpenApp;
 
-
 export { OpenApp };
 
 export { OpenApp };

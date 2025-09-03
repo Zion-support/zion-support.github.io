@@ -419,7 +419,6 @@ export default function ForumPostPage() {}
       </div>
     </>)}
 
-
 export { ForumPostPage };
 
 export { ForumPostPage };

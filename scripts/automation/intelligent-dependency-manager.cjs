@@ -3,7 +3,7 @@
  * Intelligent Dependency Manager - PM2 Automation;
  * Automatically analyzes dependencies, detects vulnerabilities, suggests updates, and manages conflicts;
  */;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 /**;
  * Intelligent Dependency Manager - PM2 Automation;
  * Automatically analyzes dependencies, detects vulnerabilities, suggests updates, and manages conflicts;
@@ -47,14 +47,14 @@ class $1 {
   LOW: { score: 1, color: "🟢", action: "MONITOR" },;
       MEDIUM: { score: 2, color: "🟡", action: "UPDATE_SOON" },;
       HIGH: { score: 3, color: "🟠", action: "UPDATE_URGENT" },;
-      CRITICAL: { score: 4, color: "🔴", action: "UPDATE_IMMEDIATE" },;,
+      CRITICAL: { score: 4, color: "🔴", action: "UPDATE_IMMEDIATE" },;
 }
   }
 ;
   ensureLogsDirectory() {
   const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true });,
+  fs.mkdirSync(logsDir, { recursive: true });
 }
   }
 ;
@@ -62,7 +62,7 @@ class $1 {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);,
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
 }
 ;
   async analyzeDependencies() {
@@ -95,7 +95,7 @@ class $1 {
         vulnerabilities: await this.scanVulnerabilities(),;
         conflicts: await this.detectConflicts(),;
         outdated: await this.checkOutdated(),;
-        recommendations: [],;,
+        recommendations: [],;
 }
 ;
       // Generate intelligent recommendations;
@@ -107,9 +107,9 @@ class $1 {
       this.log(Dependency analysis completed. Found ${analysis.vulnerabilities.length} vulnerabilities, ${analysis.conflicts.length} conflicts";
       );
 
-      return analysis;,
+      return analysis;
 } catch (error) {  this.log(`Dependency analysis failed: ${error.message  }`, `ERROR`);
-      return null;,
+      return null;
 }
   }
 ;
@@ -124,17 +124,17 @@ class $1 {
   dependencies: {
   count: Object.keys(packageData.dependencies || {}).length,;
           packages: packageData.dependencies || {},;
-          totalSize: 0,;,
+          totalSize: 0,;
 },;
         devDependencies: {
   count: Object.keys(packageData.devDependencies || {}).length,;
           packages: packageData.devDependencies || {},;
-          totalSize: 0,;,
+          totalSize: 0,;
 },;
         scripts: Object.keys(packageData.scripts || {}),;
         engines: packageData.engines || {},;
         hasWorkspaces: !!packageData.workspaces,;
-        hasPrivate: !!packageData.private,;,
+        hasPrivate: !!packageData.private,;
 }
       // Calculate estimated sizes;
       analysis.dependencies.totalSize = this.estimateDependencySize(;
@@ -150,9 +150,9 @@ class $1 {
         analysis.devDependencies.packages;
       );
 
-      return analysis;,
+      return analysis;
 } catch (error) {  this.log(`Package.json analysis failed: ${error.message  }`, `ERROR`);
-      return null;,
+      return null;
 }
   }
 ;
@@ -169,19 +169,19 @@ class $1 {
   name: lockFile`, size: stats.size,;
             sizeKB: Math.round(stats.size / 1024),;
             lastModified: stats.mtime,;
-            exists: true,;,
-});,
+            exists: true,;
+});
 } else {
   lockFiles.push({
   name: lockFile,;
-            exists: false,;,
-});,
+            exists: false,;
+});
 }
       }
 ;
-      return lockFiles;,
+      return lockFiles;
 } catch (error) {  this.log(`Lock file analysis failed: ${error.message  }`, `ERROR`);
-      return [];,
+      return [];
 }
   }
 ;
@@ -208,7 +208,7 @@ class $1 {
         size: stats.size,;
         sizeMB: Math.round(stats.size / (1024 * 1024)),;
         packageCount,;
-        lastModified: stats.mtime,;,
+        lastModified: stats.mtime,;
 }
     } catch (error) {  this.log(`Node modules analysis failed: ${error.message  }`, `ERROR`);
       return { exists: false, size: 0, packageCount: 0 }
@@ -222,7 +222,7 @@ class $1 {
       const auditOutput = execSync("npm audit --json", {
   encoding: "utf8",;
         cwd: this.projectRoot,;
-        stdio: "pipe",;,
+        stdio: "pipe",;
 });
 
       const auditData = JSON.parse(auditOutput);
@@ -261,8 +261,8 @@ class $1 {
                 cvss: vuln.cvss,;
                 recommendation: vuln.recommendation,;
                 riskScore: this.calculateRiskScore(vuln.severity),;
-                action: this.getActionForSeverity(vuln.severity),;,
-});,
+                action: this.getActionForSeverity(vuln.severity),;
+});
 }
           }
         }
@@ -271,9 +271,9 @@ class $1 {
       // Sort by risk score (highest first);
       vulnerabilities.sort((a, b) => b.riskScore - a.riskScore);
 
-      return vulnerabilities;,
+      return vulnerabilities;
 } catch (error) {  this.log(`Vulnerability scan failed: ${error.message  }`, `ERROR`);
-      return [];,
+      return [];
 }
   }
 ;
@@ -285,7 +285,7 @@ class $1 {
       const peerCheckOutput = execSync("npm ls --depth=0", {
   encoding: "utf8",;
         cwd: this.projectRoot,;
-        stdio: "pipe",;,
+        stdio: "pipe",;
 });
 
       const lines = peerCheckOutput.split("\n");
@@ -298,7 +298,7 @@ class $1 {
   type: "PEER_DEPENDENCY",;
             message: line.trim(),;
             severity: `MEDIUM`,;
-            action: `RESOLVE_MANUALLY`});,
+            action: `RESOLVE_MANUALLY`});
 }
       }
 ;
@@ -311,8 +311,8 @@ class $1 {
   type: "PEER_DEPENDENCY",;
             message: line.trim(),;
             severity: "MEDIUM",;
-            action: "RESOLVE_MANUALLY",;,
-});,
+            action: "RESOLVE_MANUALLY",;
+});
 }
       }
 ;
@@ -320,9 +320,9 @@ class $1 {
       const versionConflicts = this.detectVersionConflicts();
       conflicts.push(...versionConflicts);
 
-      return conflicts;,
+      return conflicts;
 } catch (error) {  this.log(`Conflict detection failed: ${error.message  }`, `ERROR`);
-      return [];,
+      return [];
 }
   }
 ;
@@ -332,7 +332,7 @@ class $1 {
   const outdatedOutput = execSync("npm outdated --json", {
   encoding: "utf8",;
         cwd: this.projectRoot,;
-        stdio: "pipe",;,
+        stdio: "pipe",;
 });
 
       const outdatedData = JSON.parse(outdatedOutput);
@@ -357,16 +357,16 @@ class $1 {
           major,;
           updateType,;
           priority,;
-          action: this.getActionForUpdateType(updateType),;,
-});,
+          action: this.getActionForUpdateType(updateType),;
+});
 }
 ;
       // Sort by priority (highest first);
       outdated.sort((a, b) => b.priority - a.priority);
 
-      return outdated;,
+      return outdated;
 } catch (error) {  this.log(`Outdated check failed: ${error.message  }`, `ERROR`);
-      return [];,
+      return [];
 }
   }
 ;
@@ -400,9 +400,9 @@ class $1 {
             lockData.dependencies;
           )) {
   if (!packageVersions[packageName]) {
-  packageVersions[packageName] = [];,
+  packageVersions[packageName] = [];
 }
-            packageVersions[packageName].push(packageData.version);,
+            packageVersions[packageName].push(packageData.version);
 }
         }
 ;
@@ -413,15 +413,15 @@ class $1 {
               package: packageName,;
               versions: [...new Set(versions)],;
               severity: `HIGH`,;
-              action: `RESOLVE_VERSIONS`,;,
-});,
+              action: `RESOLVE_VERSIONS`,;
+});
 }
         }
       }
-    } catch (error) {  this.log(`Version conflict detection failed: ${error.message  }`, `WARN`);,
+    } catch (error) {  this.log(`Version conflict detection failed: ${error.message  }`, `WARN`);
 }
 ;
-    return conflicts;,
+    return conflicts;
 }
 ;
   determineUpdateType(current, latest, major) {
@@ -435,7 +435,7 @@ class $1 {
     if (majorParts[0] > currentParts[0]) return "MAJOR";
     if (latestParts[1] > currentParts[1]) return "MINOR";
     if (latestParts[2] > currentParts[2]) return "PATCH";
-    return "NONE";,
+    return "NONE";
 }
 ;
   calculateUpdatePriority(updateType, current, latest) {
@@ -443,7 +443,7 @@ class $1 {
   MAJOR: 100,;
       MINOR: 50,;
       PATCH: 25,;
-      NONE: 0,;,
+      NONE: 0,;
 }
 ;
     let priority = basePriority[updateType];
@@ -454,7 +454,7 @@ class $1 {
     );
     priority += Math.abs(daysSinceUpdate) * 0.1;
 
-    return Math.round(priority);,
+    return Math.round(priority);
 }
 ;
   calculateRiskScore(severity) {
@@ -462,10 +462,10 @@ class $1 {
   low: 1,;
       moderate: 2,;
       high: 3,;
-      critical: 4,;,
+      critical: 4,;
 }
 ;
-    return scores[severity.toLowerCase()] || 0;,
+    return scores[severity.toLowerCase()] || 0;
 }
 ;
   getActionForSeverity(severity) {
@@ -473,10 +473,10 @@ class $1 {
   low: "MONITOR",;
       moderate: "UPDATE_SOON",;
       high: "UPDATE_URGENT",;
-      critical: "UPDATE_IMMEDIATE",;,
+      critical: "UPDATE_IMMEDIATE",;
 }
 ;
-    return actions[severity.toLowerCase()] || "MONITOR";,
+    return actions[severity.toLowerCase()] || "MONITOR";
 }
 ;
   getActionForUpdateType(updateType) {
@@ -484,19 +484,19 @@ class $1 {
   MAJOR: "REVIEW_AND_UPDATE",;
       MINOR: "UPDATE_SAFE",;
       PATCH: "UPDATE_AUTO",;
-      NONE: "NO_ACTION",;,
+      NONE: "NO_ACTION",;
 }
-    return actions[updateType] || "NO_ACTION`;,
+    return actions[updateType] || "NO_ACTION`;
 }
 ;
   estimateDependencySize(packages) {
-  return actions[updateType] || "NO_ACTION";,
+  return actions[updateType] || "NO_ACTION";
 }
 ;
   estimateDependencySize(packages) {
   // Rough estimation based on package count;
     const packageCount = Object.keys(packages).length;
-    return packageCount * 1024 * 1024; // 1MB per package estimate;,
+    return packageCount * 1024 * 1024; // 1MB per package estimate;
 }
 ;
   countPackagesInNodeModules(nodeModulesPath) {
@@ -511,14 +511,14 @@ class $1 {
   // Check if it`s a package (has package.json);
           const packageJsonPath = path.join(itemPath, `package.json`);
           if (fs.existsSync(packageJsonPath)) {
-  count++;,
+  count++;
 }
         }
       }
-    } catch (error) {  this.log(`Error counting packages: ${error.message  }`, `WARN`);,
+    } catch (error) {  this.log(`Error counting packages: ${error.message  }`, `WARN`);
 }
 ;
-    return count;,
+    return count;
 }
 ;
   generateRecommendations(analysis) {
@@ -541,7 +541,7 @@ class $1 {
   priority: `CRITICAL`,;
           type: `SECURITY`,message: `Immediate action required: ${criticalVulns.length} critical vulnerabilities detected`,;
           action: `UPDATE_IMMEDIATE`,;
-          packages: criticalVulns.map(v => v.package)});,
+          packages: criticalVulns.map(v => v.package)});
 }
 ;
       if (highVulns.length > 0) {
@@ -549,7 +549,7 @@ class $1 {
   priority: `HIGH`,;
           type: `SECURITY`,message: `Urgent action required: ${highVulns.length} high-severity vulnerabilities detected`,;
           action: `UPDATE_URGENT`,;
-          packages: highVulns.map(v => v.package)});,
+          packages: highVulns.map(v => v.package)});
 }
     }
 ;
@@ -566,7 +566,7 @@ class $1 {
   priority: `MEDIUM`,;
           type: `UPDATES`,message: `${majorUpdates.length} major updates available. Review for breaking changes.`,;
           action: `REVIEW_AND_UPDATE`,;
-          packages: majorUpdates.map(p => p.package)});,
+          packages: majorUpdates.map(p => p.package)});
 }
 ;
       if (minorUpdates.length > 0) {
@@ -574,7 +574,7 @@ class $1 {
   priority: `LOW`,;
           type: `UPDATES`,message: `${minorUpdates.length} minor updates available. Safe to update.`,;
           action: `UPDATE_SAFE`,;
-          packages: minorUpdates.map(p => p.package)});,
+          packages: minorUpdates.map(p => p.package)});
 }
     }
 ;
@@ -591,8 +591,8 @@ class $1 {
   priority: "MEDIUM",;
           type: "UPDATES",message: `${majorUpdates.length} major updates available. Review for breaking changes.`,;
           action: "REVIEW_AND_UPDATE",;
-          packages: majorUpdates.map(p => p.package),;,
-});,
+          packages: majorUpdates.map(p => p.package),;
+});
 }
 ;
       if (minorUpdates.length > 0) {
@@ -600,8 +600,8 @@ class $1 {
   priority: "LOW",;
           type: "UPDATES",message: `${minorUpdates.length} minor updates available. Safe to update.`,;
           action: "UPDATE_SAFE",;
-          packages: minorUpdates.map(p => p.package),;,
-});,
+          packages: minorUpdates.map(p => p.package),;
+});
 }
     }
 ;
@@ -611,11 +611,11 @@ class $1 {
   priority: "HIGH",;
         type: "CONFLICTS",message: `${analysis.conflicts.length} dependency conflicts detected. Resolve to prevent issues.`,;
         action: "RESOLVE_CONFLICTS",;
-        conflicts: analysis.conflicts,;,
-});,
+        conflicts: analysis.conflicts,;
+});
 }
 ;
-    return recommendations;,
+    return recommendations;
 }
 ;
   async saveDependencyAnalysis(analysis) {
@@ -624,8 +624,8 @@ class $1 {
         this.dependencyAnalysis,;
         JSON.stringify(analysis, null, 2);
       );
-      this.log(`Dependency analysis saved`);,
-} catch (error) {  this.log(`Failed to save dependency analysis: ${error.message  }`, `ERROR`);,
+      this.log(`Dependency analysis saved`);
+} catch (error) {  this.log(`Failed to save dependency analysis: ${error.message  }`, `ERROR`);
 }
   }
 ;
@@ -642,20 +642,20 @@ class $1 {
         vulnerabilities: analysis.vulnerabilities.length,;
         conflicts: analysis.conflicts.length,;
         outdated: analysis.outdated.length,;
-        riskLevel: this.calculateOverallRiskLevel(analysis),;,
+        riskLevel: this.calculateOverallRiskLevel(analysis),;
 },;
       recommendations: analysis.recommendations,;
-      actions: this.generateActionPlan(analysis),;,
+      actions: this.generateActionPlan(analysis),;
 }
 ;
-    return report;,
+    return report;
 }
 ;
   calculateOverallRiskLevel(analysis) {
   let riskScore = 0;
     // Add vulnerability risk;
     for (const vuln of analysis.vulnerabilities) {
-  riskScore += vuln.riskScore;,
+  riskScore += vuln.riskScore;
 }
 ;
     // Add conflict risk;
@@ -664,7 +664,7 @@ class $1 {
     for (const pkg of analysis.outdated) {
   // Add vulnerability risk;
     for (const vuln of analysis.vulnerabilities) {
-  riskScore += vuln.riskScore;,
+  riskScore += vuln.riskScore;
 }
 ;
     // Add conflict risk;
@@ -673,14 +673,14 @@ class $1 {
     // Add outdated risk;
     for (const pkg of analysis.outdated) {
   if (pkg.updateType === "MAJOR") riskScore += 3;
-      else if (pkg.updateType === "MINOR") riskScore += 1;,
+      else if (pkg.updateType === "MINOR") riskScore += 1;
 }
 ;
     if (riskScore >= 20) return "CRITICAL";
     if (riskScore >= 15) return "HIGH";
     if (riskScore >= 10) return "MEDIUM";
     if (riskScore >= 5) return "LOW";
-    return "SAFE";,
+    return "SAFE";
 }
 ;
   generateActionPlan(analysis) {
@@ -694,8 +694,8 @@ class $1 {
   priority: "IMMEDIATE",;
         action: "npm audit fix",;
         description: "Fix critical vulnerabilities",;
-        packages: criticalVulns.map(v => v.package),;,
-});,
+        packages: criticalVulns.map(v => v.package),;
+});
 }
 ;
     // High priority actions;
@@ -711,8 +711,8 @@ class $1 {
   priority: "HIGH",;
         action: "npm audit fix",;
         description: "Fix high-severity vulnerabilities",;
-        packages: highVulns.map(v => v.package),;,
-});,
+        packages: highVulns.map(v => v.package),;
+});
 }
 ;
     // Medium priority actions;
@@ -720,11 +720,11 @@ class $1 {
   actions.push({
   priority: "MEDIUM",;
         action: "npm update",;
-        description: `Update patch versions safely`,;,
-});,
+        description: `Update patch versions safely`,;
+});
 }
 ;
-    return actions;,
+    return actions;
 }
 ;
   async run() {
@@ -743,18 +743,18 @@ class $1 {
         const topRecommendations = report.recommendations.slice(0, 3);
         if (topRecommendations.length > 0) {
   this.log(`Top Recommendations: `);
-          topRecommendations.forEach((rec, index) => {this.log(`  ${index + 1}. ${rec.message} (${rec.priority})`);,
-});,
+          topRecommendations.forEach((rec, index) => {this.log(`  ${index + 1}. ${rec.message} (${rec.priority})`);
+});
 }
       }
 ;
       // Schedule next analysis;
-      setTimeout(() => this.run(), 7200000); // 2 hours;,
+      setTimeout(() => this.run(), 7200000); // 2 hours;
 } catch (error) {
   this.log(Intelligent Dependency Manager failed: ${error.message  }`,;
         `ERROR`;
       );
-      setTimeout(() => this.run(), 1800000); // 30 minutes on error;,
+      setTimeout(() => this.run(), 1800000); // 30 minutes on error;
 }
   }
 }

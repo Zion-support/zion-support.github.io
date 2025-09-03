@@ -135,7 +135,6 @@ export default function Page() {
       
     </>)}
 
-
 export { UpdatePassword };
 
 export { UpdatePassword };

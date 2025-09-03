@@ -206,7 +206,6 @@ export default function AIAutonomousVehiclePlatform() {}
       </section>
     </div>)}
 
-
 export { AIAutonomousVehiclePlatform, IconComponent };
 
 export { AIAutonomousVehiclePlatform, IconComponent };

@@ -7,28 +7,13 @@ const ServiceCard = ({ service, index, isVisible }) => {
   { opacity: 0, y: 50,
   scale: 0.9 
 
-
-
-
-
-
 }} animate = {
   isVisible ? { opacity: 1, y: 0,
   scale: 1 
 
-
-
-
-
-
 } : {}} transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>
       {/* Animated Background */}      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
@@ -354,7 +339,7 @@ delay: index * 0.1 "",">
 """{/* comment */}"""""
           <motion.div className = "absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" initial="{false}/">    </motion.div>)}
 
-  const ServiceCard = ({ service, index, isVisible }) => {
+const ServiceCard = ({ service, index, isVisible }) => {
     const [isHovered, setIsHovered] = useState(false);
     return (<motion.div
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -415,7 +400,7 @@ Advanced: Micro SAAS"
                 : "bg-black/50: border border-cyan-500/30 text-cyan-400 hover: bg-cyan-500/20,"}"}>"{category: === "all" ? "All Services" : category}";"
 export const FuturisticServicesShowcase = () => {}
 
-              {/* Benefits */}
+{/* Benefits */}
               <div className="mb-4">
                 <h4 className="text-sm font - semibold text-cyan - 400 mb-2">
                   Key Benefits

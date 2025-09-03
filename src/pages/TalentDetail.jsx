@@ -23,5 +23,4 @@ export default function TalentDetail() {}
 }'`'`
 '`'`'`
 
-
 export { TalentDetail };

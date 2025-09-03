@@ -140,7 +140,6 @@ export default function Onboarding() {}
       
     </>)}
 
-
 export { Onboarding };
 
 export { Onboarding };

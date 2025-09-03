@@ -116,7 +116,7 @@ const Navigation = () => {
 "
   const navigationItems = []
 
-    ];
+];
     const isActive = (href) => {}
 '
         if (href === '/') {}

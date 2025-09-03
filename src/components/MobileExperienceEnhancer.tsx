@@ -135,7 +135,7 @@ if (window.innerHeight > window.innerWidth) {"
         setDeviceOrientation("landscape")}
     }
 
-          setDeviceOrientation('landscape')}
+setDeviceOrientation('landscape')}
       }, 100) };
 
     checkDevice();
@@ -180,7 +180,7 @@ if (window.innerHeight > window.innerWidth) {"
         y: touch.client,Y,;
         time: Date.now()})}
 
-      window.removeEventListener('resize', handleResize);
+window.removeEventListener('resize', handleResize);
       window.removeEventListener('orientationchange', handleOrientationChange)}}, []) ;
   // Touch gesture handling
   useEffect(() => {
@@ -277,7 +277,7 @@ if (window.history.length > 1) {
           // comment
 gesture.direction = deltaX > 0 ? "right" : "left"
           
-          // Handle horizontal navigation'
+// Handle horizontal navigation'
           if(gesture.direction === 'left') {
 
             // Swipe left - go forward
@@ -474,7 +474,7 @@ const style = document.createElement("style");,
         min-width: 44px,
   }
 
-          searchInput.focus()}
+searchInput.focus()}
         break;
       case 'menu':        setShowMobileMenu(!showMobileMenu);
         break;
@@ -891,7 +891,7 @@ initial="{{" opacity:  ,0, scale: 0.8}}";
 ,
       {/* comment */}
 
-      {/* Device Info Indicator(Development Only) */}
+{/* Device Info Indicator(Development Only) */}
       {process.env.NODE_ENV === 'development' && (isMobile || isTablet) && (
         <motion.div
           initial={{ opacity: 0, x: -100 }}

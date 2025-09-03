@@ -147,7 +147,6 @@ export default FuturisticAnimatedBackground;
       ctx.restore () ;
 
       // Floating circle
-      
 
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.5);      ctx.beginPath();
       ctx.arc(circleX, circleY, circleSize, 0, Math.PI * 2);

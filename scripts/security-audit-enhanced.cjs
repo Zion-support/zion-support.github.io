@@ -1,13 +1,13 @@
 #!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
+const fs = require("child_process");
+const path = require("child_process");
 const { execSync } = require("child_process")
 class SecurityAuditEnhanced {
   constructor() {
     this.projectRoot = process.cwd()
     this.vulnerabilities = []
     this.recommendations = []
-    this.securityScore = 100,
+    this.securityScore = 100
 }
 
   async runSecurityAudit() {
@@ -23,9 +23,9 @@ class SecurityAuditEnhanced {
       await this.checkInsecureConfigurations()
       // Generate security report
       this.generateSecurityReport()
-      console.log("✅ Security audit completed"),
+      console.log("✅ Security audit completed")
 } catch (error) {
-      console.error("❌ Security audit failed:", error.message),
+      console.error("❌ Security audit failed:", error.message)
 }
   }
 
@@ -35,7 +35,7 @@ class SecurityAuditEnhanced {
       const result = execSync("npm audit --json", {
         cwd: this.projectRoot, 
         encoding: "utf8",
-        timeout: 60000,
+        timeout: 60000
 })
       const auditData = JSON.parse(result)
       if (auditData.vulnerabilities) {
@@ -45,7 +45,7 @@ class SecurityAuditEnhanced {
             package: packageName,
             severity: vuln.severity,
             description: vuln.description,
-            recommendation: `Update ${packageName} to version ${vuln.fixAvailable?.version || "latest"}`,
+            recommendation: `Update ${packageName} to version ${vuln.fixAvailable?.version || "latest"}`
 })
           // Deduct points based on severity
           switch (vuln.severity) {
@@ -60,14 +60,14 @@ class SecurityAuditEnhanced {
               break
             case "low":
               this.securityScore -= 5
-              break,
+              break
 }
-        }),
+        })
 }
       
-      console.log(`✅ Found ${this.vulnerabilities.length} dependency vulnerabilities`),
+      console.log(`✅ Found ${this.vulnerabilities.length} dependency vulnerabilities`)
 } catch (error) {
-      console.log("⚠️  Could not check dependency vulnerabilities"),
+      console.log("⚠️  Could not check dependency vulnerabilities")
 }
   }
 
@@ -80,7 +80,7 @@ class SecurityAuditEnhanced {
     // Check for insecure HTTP usage
     this.checkInsecureHTTP()
     // Check for missing security headers
-    this.checkSecurityHeaders(),
+    this.checkSecurityHeaders()
 }
 
   checkConsoleLogs() {
@@ -98,12 +98,12 @@ class SecurityAuditEnhanced {
             line: index + 1,
             severity: "low",
             description: "Console.log statement found in production code",
-            recommendation: "Remove or comment out console.log statements for production",
+            recommendation: "Remove or comment out console.log statements for production"
 })
-          this.securityScore -= 1,
+          this.securityScore -= 1
 }
-      }),
-}),
+      })
+})
 }
 
   checkHardcodedSecrets() {
@@ -124,15 +124,15 @@ class SecurityAuditEnhanced {
               file: path.relative(this.projectRoot, file),
               severity: "high",
               description: "Potential hardcoded secret found",
-              recommendation: "Move secrets to environment variables",
+              recommendation: "Move secrets to environment variables"
 })
-            this.securityScore -= 10,
+            this.securityScore -= 10
 }
-        }),
+        })
 } catch (error) {
-        // Skip files that can"t be read,
+        // Skip files that can"t be read
 }
-    }),
+    })
 }
 
   checkInsecureHTTP() {
@@ -146,14 +146,14 @@ class SecurityAuditEnhanced {
             file: path.relative(this.projectRoot, file),
             severity: "moderate",
             description: "Insecure HTTP protocol used",
-            recommendation: "Use HTTPS instead of HTTP for production",
+            recommendation: "Use HTTPS instead of HTTP for production"
 })
-          this.securityScore -= 5,
+          this.securityScore -= 5
 }
       } catch (error) {
-        // Skip files that can"t be read,
+        // Skip files that can"t be read
 }
-    }),
+    })
 }
 
   checkSecurityHeaders() {
@@ -167,7 +167,7 @@ class SecurityAuditEnhanced {
       const configPath = fs.existsSync(nextConfigPath) ? nextConfigPath : nextConfigCjsPath
       const configContent = fs.readFileSync(configPath, "utf8")
       if (configContent.includes("securityHeaders") || configContent.includes("headers")) {
-        hasSecurityHeaders = true,
+        hasSecurityHeaders = true
 }
     }
     
@@ -175,9 +175,9 @@ class SecurityAuditEnhanced {
       this.recommendations.push({
         type: "configuration",
         description: "Add security headers to Next.js configuration",
-        recommendation: "Configure security headers like X-Frame-Options, X-Content-Type-Options, etc.",
+        recommendation: "Configure security headers like X-Frame-Options, X-Content-Type-Options, etc."
 })
-      this.securityScore -= 5,
+      this.securityScore -= 5
 }
   }
 
@@ -186,7 +186,7 @@ class SecurityAuditEnhanced {
     // Check for exposed API endpoints
     this.checkExposedEndpoints()
     // Check for debug information in production
-    this.checkDebugInformation(),
+    this.checkDebugInformation()
 }
 
   checkExposedEndpoints() {
@@ -200,14 +200,14 @@ class SecurityAuditEnhanced {
             file: path.relative(this.projectRoot, file),
             severity: "moderate",
             description: "Environment variables might be logged",
-            recommendation: "Remove console.log statements that might expose sensitive data",
+            recommendation: "Remove console.log statements that might expose sensitive data"
 })
-          this.securityScore -= 5,
+          this.securityScore -= 5
 }
       } catch (error) {
-        // Skip files that can"t be read,
+        // Skip files that can"t be read
 }
-    }),
+    })
 }
 
   checkDebugInformation() {
@@ -221,14 +221,14 @@ class SecurityAuditEnhanced {
             file: path.relative(this.projectRoot, file),
             severity: "low",
             description: "Debug information found in code",
-            recommendation: "Remove debug statements for production",
+            recommendation: "Remove debug statements for production"
 })
-          this.securityScore -= 2,
+          this.securityScore -= 2
 }
       } catch (error) {
-        // Skip files that can"t be read,
+        // Skip files that can"t be read
 }
-    }),
+    })
 }
 
   checkInsecureConfigurations() {
@@ -236,7 +236,7 @@ class SecurityAuditEnhanced {
     // Check package.json for insecure configurations
     this.checkPackageJsonSecurity()
     // Check for missing .gitignore entries
-    this.checkGitignoreSecurity(),
+    this.checkGitignoreSecurity()
 }
 
   checkPackageJsonSecurity() {
@@ -252,11 +252,11 @@ class SecurityAuditEnhanced {
               script: scriptName,
               severity: "high",
               description: "Insecure script configuration found",
-              recommendation: "Remove unsafe flags from scripts",
+              recommendation: "Remove unsafe flags from scripts"
 })
-            this.securityScore -= 15,
+            this.securityScore -= 15
 }
-        }),
+        })
 }
     }
   }
@@ -271,11 +271,11 @@ class SecurityAuditEnhanced {
           this.recommendations.push({
             type: "gitignore",
             description: `Add ${entry} to .gitignore`,
-            recommendation: `Ensure ${entry} is not committed to version control`,
+            recommendation: `Ensure ${entry} is not committed to version control`
 })
-          this.securityScore -= 3,
+          this.securityScore -= 3
 }
-      }),
+      })
 }
   }
 
@@ -287,12 +287,12 @@ class SecurityAuditEnhanced {
       const fullPath = path.join(dir, item)
       const stat = fs.statSync(fullPath)
       if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
-        files = files.concat(this.getAllFiles(fullPath, extensions)),
+        files = files.concat(this.getAllFiles(fullPath, extensions))
 } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath),
+        files.push(fullPath)
 }
     })
-    return files,
+    return files
 }
 
   generateSecurityReport() {
@@ -306,7 +306,7 @@ class SecurityAuditEnhanced {
         critical: this.vulnerabilities.filter(v => v.severity === "critical").length,
         high: this.vulnerabilities.filter(v => v.severity === "high").length,
         moderate: this.vulnerabilities.filter(v => v.severity === "moderate").length,
-        low: this.vulnerabilities.filter(v => v.severity === "low").length,
+        low: this.vulnerabilities.filter(v => v.severity === "low").length
 }
     }
     const reportPath = path.join(this.projectRoot, "security-audit-report.json")
@@ -320,7 +320,7 @@ class SecurityAuditEnhanced {
     console.log(`Moderate: ${report.summary.moderate}`)
     console.log(`Low: ${report.summary.low}`)
     console.log("=".repeat(50))
-    console.log(`\n📄 Detailed report saved to: ${reportPath}`),
+    console.log(`\n📄 Detailed report saved to: ${reportPath}`)
 }
 }
 
@@ -328,5 +328,5 @@ class SecurityAuditEnhanced {
 const securityAudit = new SecurityAuditEnhanced()
 securityAudit.runSecurityAudit().catch(error => {
   console.error("Fatal error:", error.message)
-  process.exit(1),
+  process.exit(1)
 })

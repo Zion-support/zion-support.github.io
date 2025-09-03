@@ -299,7 +299,6 @@ export default function Events(...args: unknown[]): unknown {
       month: 'long',       day: 'numeric' 
     }) };
 
-
   const getCategoryIcon = (category: unknownstring)  => {
     switch (category) {
       case 'AI & ML': return Brain;
@@ -454,7 +453,6 @@ export default function Events(...args: unknown[]): unknown {
               </p>
             </motion.div>
 
-
             <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">
               {upcomingEvents.map((event, index)  => {
                 const CategoryIcon = getCategoryIcon(event.category);
@@ -573,7 +571,6 @@ export default function Events(...args: unknown[]): unknown {
                     ))}
                   </div>
                 </div>
-
 
             <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">
               {pastEvents.map((event, index)  => {

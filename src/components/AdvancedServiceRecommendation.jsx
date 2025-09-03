@@ -443,7 +443,7 @@ y: 0 "",">
               <option value="&apos;&apos;">Select Industry&apos;&apos;</option>"
               {industries.map(industry = > (}<option key="{industry}" value="{industry}">{industry}</option>) ) }
 
-  { opacity: 0,
+{ opacity: 0,
   y: 20
 
 }} animate = {

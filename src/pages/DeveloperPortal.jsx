@@ -395,7 +395,6 @@ export default function DeveloperPortal() {}
       </div>
     </div>)}
 
-
 export { DeveloperPortal, IconComponent, IconComponent };
 
 export { DeveloperPortal, IconComponent, IconComponent };

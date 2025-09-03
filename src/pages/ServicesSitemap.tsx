@@ -438,7 +438,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
               </Link>
             </div>
     </>
-  )};
+)};
 
 export default ServicesSitemap;
 

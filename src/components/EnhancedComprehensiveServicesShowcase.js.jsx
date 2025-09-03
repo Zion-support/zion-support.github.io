@@ -444,7 +444,7 @@ enterprise-level reliability,
 
                       </a>
                     </div>
-                  </div>
+</div>
                 </div>
               </div>
             </div>
@@ -452,7 +452,6 @@ enterprise-level reliability,
         </div>)}
     </div>)};
 export default EnhancedComprehensiveServicesShowcase;
-
 
 export { EnhancedComprehensiveServicesShowcase };
 

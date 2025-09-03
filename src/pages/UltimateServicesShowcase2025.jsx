@@ -88,7 +88,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
               Get Started,
             </a>
           </div>
-        </div>
+</div>
 """
         {/* Filters and Search */}""""
         <div className="bg-gray-800/50 rounded-xl p-6 mb-8 border border-gray-600/30">""""

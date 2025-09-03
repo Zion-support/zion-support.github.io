@@ -461,7 +461,7 @@ if __name__ == "__main__":`
         return issues};
     // Helper functions for code optimization
     const optimizeForAccessibility = (code) => {
-        return code
+return code
             .replace(/<div>/g, '<div role="main">')
             .replace(/<button>/g, '<button aria-label="Action button">')
             .replace(/<img/g, '<img alt="Description"')};

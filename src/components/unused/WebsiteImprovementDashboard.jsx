@@ -56,7 +56,6 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         // Mock SEO analysis
         const mockSEO = {
 
-
 export { WebsiteImprovementDashboard };
 
 export { WebsiteImprovementDashboard };

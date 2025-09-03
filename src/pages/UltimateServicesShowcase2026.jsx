@@ -137,7 +137,7 @@ const UltimateServicesShowcase2026: React.FC = () => {
               Get Started,
             </a>
           </div>
-        </div>
+</div>
       </section>
 """
       {/* Filters Section */}""""

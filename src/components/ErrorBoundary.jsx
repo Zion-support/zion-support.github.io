@@ -32,7 +32,6 @@ import { Link, useNavigate  } from 'react-router-dom';
     </div>
   )
 }
-
 export function ErrorBoundary({ children, fallback, onError }) {
 
   const [hasError, setHasError] = useState(false);

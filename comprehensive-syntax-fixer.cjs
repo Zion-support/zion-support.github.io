@@ -501,7 +501,6 @@ class $1 {
     if (problematicFiles.length === 0) {
   this.log("✅ No files with syntax issues found");
       return { fixed: 0, errors: [] }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
     this.log(`📋 Found ${problematicFiles.length} files with syntax issues`);
@@ -559,9 +558,7 @@ class $1 {
 },;
   ignorePatterns: ["node_modules/", ".next/", "out/"];,
 };`;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-
-    try {
+try {
   fs.writeFileSync(".eslintrc.js", eslintConfig);
       this.log("✅ Created clean ESLint configuration");,
 } catch (error) {

@@ -33,7 +33,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+// TODO: Add dependencies if needed
 
   return () => {
     // Cleanup function

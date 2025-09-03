@@ -36,7 +36,6 @@ import { Shield,
 export { function };
 export default function AICybersecurityThreatDetection(...args: []):  {
 
-  
     },;
     {;
       icon: Zap,;
@@ -44,7 +43,6 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       description: 'Live threat intelligence feeds and global attack pattern recognition'};
   ];
 
-  
         'On-premise options',;
         'SLA guarantees',;
         'Custom integrations';

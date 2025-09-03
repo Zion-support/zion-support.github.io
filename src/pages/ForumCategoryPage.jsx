@@ -148,7 +148,6 @@ function CategoryContent({ categoryId, category, IconComponent, user}) {}
       </Suspense>
     </>)}
 
-
 export { CategoryContent, ForumCategoryPage, IconComponent };
 
 export { CategoryContent, ForumCategoryPage, IconComponent };

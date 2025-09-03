@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide
 
 const EnhancedFooter = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+<footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -50,7 +50,7 @@ const EnhancedFooter = () => {
 
           {/* Solutions */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
+<h3 className="text-lg font-semibold mb-4">Solutions</h3>
             <ul className="space-y-2">
               <li><Link href="/solutions/enterprise" className="text-gray-300 hover:text-white transition-colors">Enterprise</Link></li>
               <li><Link href="/solutions/smb" className="text-gray-300 hover:text-white transition-colors">SMB</Link></li>

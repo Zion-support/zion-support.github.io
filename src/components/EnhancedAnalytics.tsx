@@ -195,7 +195,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 }, []);, []);
     if(!enabled) return;
 
-
         trackEvent('performance_metrics', {
           load_time: loadTime,
           fcp: fcp,
@@ -219,7 +218,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 }, []);, []);
     if(!enabled) return;
-
 
       trackEvent('session_end', {
         session_duration: sessionDuration,

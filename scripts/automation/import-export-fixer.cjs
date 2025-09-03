@@ -6,7 +6,7 @@ const glob = require("glob");
 class $1 {
   constructor() {
   this.projectRoot = process.cwd();
-    this.reportFile = path.join(this.projectRoot, 'import-export-fixer-report.json');
+this.reportFile = path.join(this.projectRoot, 'import-export-fixer-report.json');
     this.fixes = [];
     this.startTime = Date.now();
   }
@@ -219,14 +219,14 @@ class $1 {
       fixes: this.fixes,;
       summary: {
   totalFixes: this.fixes.length,;
-        success: true;,
+        success: true;
 }
     }
 ;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`, `info`);
     this.log(`Total fixes: ${this.fixes.length}`, `info`);
-    this.log(`Duration: ${duration}ms`, `info`);,
+    this.log(`Duration: ${duration}ms`, `info`);
 }
 }
 ;
@@ -237,15 +237,15 @@ class $1 {
     ;
     this.log(`Report generated: ${this.reportFile}`, "info");
     this.log(`Total fixes: ${this.fixes.length}`, "info");
-    this.log(`Duration: ${duration}ms`, "info");,
+    this.log(`Duration: ${duration}ms`, "info");
 }
 }
 ;
 // Run the import/export fixer;
     this.log("Fixing import/export issues...");
 
-  async fixImportExportIssues() {
-    this.log('Fixing import/export issues...', 'info');
+async fixImportExportIssues() {
+this.log('Fixing import/export issues...', 'info');
     
     // Find all JavaScript and TypeScript files
     const files = glob.sync('src/**/*.{js,jsx,ts,tsx}', { cwd: this.projectRoot });
@@ -378,7 +378,7 @@ class $1 {
                 `export default ${componentName}`,;
                 `export { ${componentName} }\nexport default ${componentName}`;
               );
-              modified = true;,
+              modified = true;
 }
           }
         }
@@ -388,15 +388,15 @@ class $1 {
   // Fix React import issues;
         if (content.includes("React.") && !content.includes("import React")) {
   newContent = "import React from "react";\n" + newContent;
-          modified = true;,
+          modified = true;
 }
 ;
         if (modified) {
   fs.writeFileSync(file, newContent);
-          this.fixesApplied++;,
+          this.fixesApplied++;
 }
       } catch (error) {
-  this.log(`Error fixing import/export in ${file  }: ${error.message}`);,
+  this.log(`Error fixing import/export in ${file  }: ${error.message}`);
 }
     }
   }

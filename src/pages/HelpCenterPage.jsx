@@ -236,7 +236,6 @@ export default function HelpCenterPage() {}
       </main>
     </>)}
 
-
 export { HelpCenterPage };
 
 export { HelpCenterPage };

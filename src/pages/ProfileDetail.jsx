@@ -220,7 +220,6 @@ export default function ProfileDetail() {}
       
     </>)}
 
-
 export { ProfileDetail };
 
 export { ProfileDetail };

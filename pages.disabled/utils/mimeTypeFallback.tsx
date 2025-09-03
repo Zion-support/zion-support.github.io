@@ -40,7 +40,6 @@ class MimeTypeFallback {
     try {
       if (!response.ok) {
 
-
 interface MimeTypeMapping {}
   [key: string]: string}
 
@@ -79,7 +78,6 @@ class MimeTypeFallback {}
         console.warn (`Resource not found: ${url}`) ;
         return false}
 
-      
 :pages.disabled/utils/mimeTypeFallback.tsx
       if (!contentType) {
 `
@@ -87,7 +85,6 @@ class MimeTypeFallback {}
         console.warn (`No content - type header for: ${url}`) ;
         return false}
 
-      
 :pages.disabled/utils/mimeTypeFallback.tsx
       if (contentType.includes (expectedType) ||'
         contentType.includes ('application / octet - stream') ) {
@@ -228,7 +225,6 @@ class MimeTypeFallback {}
       if (type === 'script') {
 
         document.head.appendChild (element) } else {
-
 
   injectResource (url: anystring, type: 'script' | 'stylesheet': any): Promise < any> {}
     return new Promise ( (resolve, reject) => {}

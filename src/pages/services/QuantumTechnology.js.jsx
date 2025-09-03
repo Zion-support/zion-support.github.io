@@ -463,7 +463,6 @@ const QuantumTechnology = () => {}
 };
 export default QuantumTechnology;
 
-
 export { QuantumTechnology };
 
 export { QuantumTechnology };

@@ -107,7 +107,7 @@ const industries = ['"
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>"
 
-  { opacity: 0,
+{ opacity: 0,
   y: 20
 
 }} whileInView = {

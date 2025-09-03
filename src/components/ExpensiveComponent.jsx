@@ -1,6 +1,6 @@
 import React from "react"; export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {}
 
-  const [data, setData] = useState([]);
+const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -27,8 +27,7 @@ import React from "react"; export default function ExpensiveComponent() { const 
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>"
         <p className="text-zion-slate-light">Computing expensive data...</p>
       </div>
-    </div>)}
-
+</div>)}
 
 export { ExpensiveComponent };
 

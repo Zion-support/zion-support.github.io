@@ -1,5 +1,5 @@
 #!/""usr/bin/env"" node;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
@@ -15,16 +15,16 @@ class $1 {
       this.projectRoot,link-reports",;
       "link-checker-report.json";
     );
-    this.ensureDirectories();,
+    this.ensureDirectories();
 }
 ;
   ensureDirectories() {
   const dirs = [""this."projectRoot/link-reports"", ""this."projectRoot/link-check-results"", ``];
     dirs.forEach(dir => {
   if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });,
+  fs.mkdirSync(dir, { recursive: true });
 }
-    });,
+    });
 }
 ;
   log(message, level = `INFO`) {
@@ -40,12 +40,12 @@ class $1 {
     console.log(`logEntry);
 
     // Append to log file;
-    fs.appendFileSync(this.logFile, logEntry + "\n");,
+    fs.appendFileSync(this.logFile, logEntry + "\n");
 }
 ;
   async runCommand(command, cwd = this.projectRoot) {
   // Append to log file;
-    fs.appendFileSync(this.logFile, logEntry + "\n");`);,
+    fs.appendFileSync(this.logFile, logEntry + "\n");`);
 }`);
 `);
   async runCommand(command, cwd = this.projectRoot) {`);
@@ -57,23 +57,23 @@ class $1 {
       let stdout = "";
       let stderr = ``;
       child.stdout.on(`data`, data => {
-  stdout += data.toString();this.log(`STDOUT: ${data.toString().trim()}`);,
+  stdout += data.toString();this.log(`STDOUT: ${data.toString().trim()}`);
 });
       child.stderr.on(`data`, data => {
-  stderr += data.toString();this.log(`STDERR: ${data.toString().trim()}`);,
+  stderr += data.toString();this.log(`STDERR: ${data.toString().trim()}`);
 });
       child.on(`close`, code => {
   if (code === 0) {this.log(`Command completed successfully with code ${code}`);
-          resolve({ code, stdout, stderr });,
-} else {this.log(`Command failed with code ${code}`, `ERROR`);reject(new Error(`Command failed with code ${code}: ${stderr}`));,
+          resolve({ code, stdout, stderr });
+} else {this.log(`Command failed with code ${code}`, `ERROR`);reject(new Error(`Command failed with code ${code}: ${stderr}`));
 }
       });
       child.on(`error`, error => {this.log(`Command error: ${error.message}`, `ERROR`);
 
       child.on("error", error => {this.log(`Command error: ${error.message}`, "ERROR");
-        reject(error);,
-});,
-});,
+        reject(error);
+});
+});
 }
 ;
   async installDependencies() {
@@ -81,9 +81,9 @@ class $1 {
     try {
   await this.runCommand(`npm ci`);
       this.log(`Dependencies installed successfully`);
-      return true;,
+      return true;
 } catch (error) {  this.log(`Failed to install dependencies: ${error.message  }`, `ERROR`);
-      return false;,
+      return false;
 }
   }
 ;
@@ -98,9 +98,9 @@ class $1 {
     try {
   await this.runCommand("npm install -g linkinator");
       this.log("Linkinator installed successfully");
-      return true;,
+      return true;
 } catch (error) {  this.log(`Failed to install linkinator: ${error.message  }`, `ERROR`);
-      return false;,
+      return false;
 }
   }
 ;
@@ -109,9 +109,9 @@ class $1 {
     try {
   await this.runCommand(`npm run build`);
       this.log(`Build completed successfully`);
-      return true;,
+      return true;
 } catch (error) {  this.log(`Build failed: ${error.message  }`, `ERROR`);
-      return false;,
+      return false;
 }
   }
 ;
@@ -153,7 +153,7 @@ class $1 {
         {
   shell: true,;
           cwd: this.projectRoot,;
-          stdio: "pipe",;,
+          stdio: "pipe",;
 }
       );
 
@@ -179,7 +179,7 @@ class $1 {
   success: brokenLinks.length === 0,;
         totalLinks: linkData.links?.length || 0,;
         brokenLinks: brokenLinks,;
-        allLinks: linkData.links || [],;,
+        allLinks: linkData.links || [],;
 }
     } catch (error) {  this.log(`Internal link check failed: ${error.message  }`, `ERROR`);
       return {
@@ -191,11 +191,11 @@ class $1 {
   async checkExternalLinks() {
   this.log(`Checking external links...");
     try {
-  const distPath = path.join(this.projectRoot, `dist`);,
+  const distPath = path.join(this.projectRoot, `dist`);
 } catch (error) {this.log(`Internal link check failed: ${error.message}`, "ERROR");
       return {
   success: false,;
-        error: error.message,;,
+        error: error.message,;
 }
     }
   }
@@ -207,20 +207,19 @@ class $1 {
 
       // Extract external URLs from HTML files;
       // Extract external URLs from HTML files;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-      const externalUrls = [];
+const externalUrls = [];
 
       const htmlFiles = this.findHtmlFiles(distPath);
       for (const file of htmlFiles) {
   const content = fs.readFileSync(file, `utf8`);
         const urlMatches = content.match(/https?:\/\/[^\s<>]+/g) || [];
-        externalUrls.push(...urlMatches);,
+        externalUrls.push(...urlMatches);
 }
 ;
       for (const file of htmlFiles) {
   const content = fs.readFileSync(file, "utf8");
         const urlMatches = content.match(/https?:\/\/[^\s"<>]+/g) || [];
-        externalUrls.push(...urlMatches);,
+        externalUrls.push(...urlMatches);
 }
 ;
       // Remove duplicates;
@@ -231,7 +230,7 @@ class $1 {
   success: true,;
           totalLinks: 0,;
           brokenLinks: [],;
-          allLinks: [],;,
+          allLinks: [],;
 }
       }
 ;
@@ -254,7 +253,7 @@ class $1 {
   success: brokenLinks.length === 0,;
         totalLinks: linkData.links?.length || 0,;
         brokenLinks: brokenLinks,;
-        allLinks: linkData.links || [],;,
+        allLinks: linkData.links || [],;
 }
     } catch (error) {  this.log(`External link check failed: ${error.message  }`, `ERROR`);
       return {
@@ -272,13 +271,13 @@ class $1 {
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
-  files.push(...this.findHtmlFiles(fullPath));,
+  files.push(...this.findHtmlFiles(fullPath));
 } else if (item.endsWith(".html")) {
-  files.push(fullPath);,
+  files.push(fullPath);
 }
     }
 ;
-    return files;,
+    return files;
 }
 ;
   async generateLinkReport(internalResult, externalResult) {
@@ -299,15 +298,15 @@ class $1 {
         brokenLinks: brokenLinks.length,;
         workingLinks: allLinks.length - brokenLinks.length,;
         internalLinks: internalResult.totalLinks || 0,;
-        externalLinks: externalResult.totalLinks || 0,;,
+        externalLinks: externalResult.totalLinks || 0,;
 },;
       brokenLinks: brokenLinks.map(link => ({
   source: link.parent || "unknown",;
         target: link.url || "unknown",;
         status: link.status || "unknown",;
-        type: link.url?.startsWith("http") ? "external" : "internal",;,
+        type: link.url?.startsWith("http") ? "external" : "internal",;
 })),;
-      recommendations: [],;,
+      recommendations: [],;
 }
     // Generate recommendations;
     if (brokenLinks.length > 0) {
@@ -321,7 +320,7 @@ class $1 {
   report.recommendations.push({
   priority: "HIGH",;
         action: "Fix broken internal links",;
-        details: "Broken internal links affect user experience",;,
+        details: "Broken internal links affect user experience",;
 });
 
       const externalBroken = brokenLinks.filter(link =>;
@@ -330,7 +329,7 @@ class $1 {
       if (externalBroken.length > 0) {
   report.recommendations.push({
   priority: `MEDIUM`,;
-          action: `Update or remove broken external links`,details: `${externalBroken.length} external links are broken`});,
+          action: `Update or remove broken external links`,details: `${externalBroken.length} external links are broken`});
 }
     }
 ;
@@ -349,7 +348,7 @@ class $1 {
     fs.writeFileSync(markdownFile, markdownReport);
 this.log(`Link report generated: ${this.reportFile}`);this.log(`Markdown report generated: ${markdownFile}`);
 
-    return report;,
+    return report;
 }
 ;
   generateMarkdownReport(report) {
@@ -359,17 +358,17 @@ let markdown = `# Link Check Report - ${new Date().toLocaleDateString()}\n\n`;ma
     if (brokenLinks.length > 0) {markdown += `## Broken Links\n\n`;markdown += `| Source | Target | Status | Type |\n`;markdown += `|--------|--------|--------|------|\n`;
       brokenLinks.forEach(link => {markdown += `| ${link.source || "unknown"} | ${link.target || `unknown`} | ${link.status || `unknown`} | ${link.type || `unknown`} |\n`;
 
-      brokenLinks.forEach(link => {markdown += `| ${link.source || "unknown"} | ${link.target || "unknown"} | ${link.status || "unknown"} | ${link.type || "unknown"} |\n`;,
+      brokenLinks.forEach(link => {markdown += `| ${link.source || "unknown"} | ${link.target || "unknown"} | ${link.status || "unknown"} | ${link.type || "unknown"} |\n`;
 });
 markdown += `\n## Recommendations\n\n`;
-      recommendations.forEach(rec => {markdown += `- **[${rec.priority}]** ${rec.action}: ${rec.details}\n`;,
-});,
+      recommendations.forEach(rec => {markdown += `- **[${rec.priority}]** ${rec.action}: ${rec.details}\n`;
+});
 } else {markdown += `## ✅ No Broken Links Found!\n\n`;markdown += `All links are working correctly.\n\n`;markdown += `## Recommendations\n\n`;
-      recommendations.forEach(rec => {markdown += `- **[${rec.priority}]** ${rec.action}: ${rec.details}\n`;,
-});,
+      recommendations.forEach(rec => {markdown += `- **[${rec.priority}]** ${rec.action}: ${rec.details}\n`;
+});
 }
 ;
-    return markdown;,
+    return markdown;
 }
 ;
   async run() {
@@ -380,7 +379,7 @@ markdown += `\n## Recommendations\n\n`;
   this.log(Skipping link check due to dependency installation failure`,;
         `ERROR";
       );
-      return;,
+      return;
 }
 ;
     // Install linkinator;
@@ -389,14 +388,14 @@ markdown += `\n## Recommendations\n\n`;
   this.log(Skipping link check due to linkinator installation failure",;
         "ERROR";
       );
-      return;,
+      return;
 }
 ;
     // Run build;
     const buildResult = await this.runBuild();
     if (!buildResult) {
   this.log(`Skipping link check due to build failure`, `ERROR`);
-      return;,
+      return;
 }
 ;
     // Check internal links;
@@ -412,8 +411,8 @@ this.log(`Link checker automation completed.`);this.log(`Total links: ${report.s
     if (report.summary.brokenLinks > 0) {
   this.log(`Broken links detected. Check the report for details.`, `WARN`);
       this.log(`Recommendations:`);
-      report.recommendations.forEach(rec => {this.log(`  [${rec.priority}] ${rec.action}: ${rec.details}`);,
-});,
+      report.recommendations.forEach(rec => {this.log(`  [${rec.priority}] ${rec.action}: ${rec.details}`);
+});
 } else {
   this.log(No broken links found. All links are working correctly!`,;
         `INFO`;
@@ -422,7 +421,7 @@ this.log(`Link checker automation completed.`);this.log(`Total links: ${report.s
     const buildResult = await this.runBuild();
     if (!buildResult) {
   this.log("Skipping link check due to build failure", "ERROR");
-      return;,
+      return;
 }
 ;
     // Check internal links;
@@ -441,12 +440,12 @@ this.log(`Link checker automation completed.`);this.log(`Total links: ${report.s
     if (report.summary.brokenLinks > 0) {
   this.log("Broken links detected. Check the report for details.", "WARN");
       this.log("Recommendations:");
-      report.recommendations.forEach(rec => {this.log(`  [${rec.priority}] ${rec.action}: ${rec.details}");,
-});,
+      report.recommendations.forEach(rec => {this.log(`  [${rec.priority}] ${rec.action}: ${rec.details}");
+});
 } else {
   this.log(No broken links found. All links are working correctly!",;
         "INFO";
-      );,
+      );
 }
   }
 }
@@ -456,8 +455,8 @@ if (require.main === module) {
   const linkChecker = new LinkCheckerAutomation();
   linkChecker.run().catch(error => {
   console.error("Link checker automation failed: ", error);
-    process.exit(1);,
-});,
+    process.exit(1);
+});
 }
 ;
 module.exports = LinkCheckerAutomation

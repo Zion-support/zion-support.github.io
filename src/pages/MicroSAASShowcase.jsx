@@ -372,7 +372,6 @@ export default function MicroSAASShowcase() {}
       </section>
     </div>)}
 
-
 export { MicroSAASShowcase };
 
 export { MicroSAASShowcase };

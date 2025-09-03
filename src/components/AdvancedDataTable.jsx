@@ -847,7 +847,7 @@ y: 0 "","
 ";"
 ;"
 
-                const page = i + 1;`
+const page = i + 1;`
                 return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page'
                         ? 'bg-blue-500 text-white''`
                         : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>

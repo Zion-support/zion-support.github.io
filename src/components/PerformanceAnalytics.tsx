@@ -18,7 +18,6 @@ export default function Page() {
       'Error rate spike detected in last 5 minutes';
     ];
 
-    
       'Consider implementing lazy loading for images',;
       'Optimize database queries for better performance',;
       'Enable CDN for static assets delivery';    ];

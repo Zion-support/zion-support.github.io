@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const { execSync, spawn } = require("$1");
-const fs = require("$1");
+const { execSync, spawn } = require("child_process");
+const fs = require("child_process");
 const path = require("path")
 class MasterAutomationSuite {
   constructor() {
@@ -13,20 +13,20 @@ class MasterAutomationSuite {
       testsPassed: 0,
       buildSuccess: false,
       performanceScore: 0,
-      securityIssues: 0,
+      securityIssues: 0
 }
   }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
+      fs.mkdirSync(this.reportsDir, { recursive: true })
 }
   }
 
   log(message, level = "INFO") {
     const timestamp = new Date().toISOString()
     const emoji = level === "SUCCESS" ? "✅" : level === "ERROR" ? "❌" : level === "WARN" ? "⚠️" : "ℹ️"
-    console.log(`[${timestamp}] ${emoji} ${message}`),
+    console.log(`[${timestamp}] ${emoji} ${message}`)
 }
 
   async runCommand(command, description, options = {}) {
@@ -36,7 +36,7 @@ class MasterAutomationSuite {
         cwd: this.projectRoot,
         encoding: "utf8",
         timeout: options.timeout || 300000,
-        stdio: options.stdio || "pipe",
+        stdio: options.stdio || "pipe"
 })
       this.log(`✅ ${description} completed`, "SUCCESS")
       return { success: true, output: result }
@@ -50,8 +50,8 @@ class MasterAutomationSuite {
     this.log("🔧 Fixing syntax errors...", "INFO")
     // Create a comprehensive syntax fixer
     const syntaxFixer = `
-      const fs = require("$1");
-const path = require("$1");
+      const fs = require("child_process");
+const path = require("child_process");
 const files = [
         "pages/api.tsx",
         "pages/careers.tsx",
@@ -79,10 +79,10 @@ const files = [
             if (content !== fixed) {
               fs.writeFileSync(filePath, fixed)
               console.log("Fixed:", file)
-              fixedCount++,
+              fixedCount++
 }
           } catch (error) {
-            console.log("Error fixing", file, ":", error.message),
+            console.log("Error fixing", file, ":", error.message)
 }
         }
       })
@@ -91,12 +91,12 @@ const files = [
     try {
       const result = execSync(`node -e "${syntaxFixer}"`, {
         cwd: this.projectRoot, 
-        encoding: "utf8" ,
+        encoding: "utf8" 
 })
       this.results.syntaxFixes = parseInt(result.toString().match(/Fixed (\d+) files/)?.[1] || "0")
-      this.log(`Fixed ${this.results.syntaxFixes} syntax errors`, "SUCCESS"),
+      this.log(`Fixed ${this.results.syntaxFixes} syntax errors`, "SUCCESS")
 } catch (error) {
-      this.log(`Syntax fixing failed: ${error.message}`, "ERROR"),
+      this.log(`Syntax fixing failed: ${error.message}`, "ERROR")
 }
   }
 
@@ -105,7 +105,7 @@ const files = [
     const testResult = await this.runCommand("npm run test", "Test Suite")
     if (testResult.success) {
       this.results.testsRun = 1
-      this.results.testsPassed = 1,
+      this.results.testsPassed = 1
 }
   }
 
@@ -114,9 +114,9 @@ const files = [
     const buildResult = await this.runCommand("npm run build", "Production Build")
     this.results.buildSuccess = buildResult.success
     if (buildResult.success) {
-      this.log("Build completed successfully!", "SUCCESS"),
+      this.log("Build completed successfully!", "SUCCESS")
 } else {
-      this.log("Build failed - checking for remaining issues", "WARN"),
+      this.log("Build failed - checking for remaining issues", "WARN")
 }
   }
 
@@ -129,10 +129,10 @@ const files = [
         const stats = this.getDirectorySize(buildDir)
         const sizeMB = (stats.size / 1024 / 1024).toFixed(2)
         this.log(`Bundle size: ${sizeMB}MB`, "INFO")
-        this.results.performanceScore = Math.max(0, 100 - (stats.size / 1024 / 1024) * 10),
+        this.results.performanceScore = Math.max(0, 100 - (stats.size / 1024 / 1024) * 10)
 }
     } catch (error) {
-      this.log(`Performance check failed: ${error.message}`, "WARN"),
+      this.log(`Performance check failed: ${error.message}`, "WARN")
 }
   }
 
@@ -146,14 +146,14 @@ const files = [
           const fullPath = path.join(dir, item)
           const stat = fs.statSync(fullPath)
           if (stat.isDirectory()) {
-            scanDirectory(fullPath),
+            scanDirectory(fullPath)
 } else {
             totalSize += stat.size
-            fileCount++,
+            fileCount++
 }
         }
       } catch (error) {
-        // Skip directories we can"t read,
+        // Skip directories we can"t read
 }
     }
     scanDirectory(dirPath)
@@ -164,11 +164,11 @@ const files = [
     this.log("🔒 Running security audit...", "INFO")
     const securityResult = await this.runCommand("npm audit", "Security Audit")
     if (securityResult.success) {
-      this.results.securityIssues = 0,
+      this.results.securityIssues = 0
 } else {
       // Count security issues from output
       const issues = (securityResult.output || "").match(/found (\d+) vulnerabilities/g)
-      this.results.securityIssues = issues ? parseInt(issues[0].match(/\d+/)[0]) : 0,
+      this.results.securityIssues = issues ? parseInt(issues[0].match(/\d+/)[0]) : 0
 }
   }
 
@@ -182,44 +182,44 @@ const files = [
         testsPassed: this.results.testsPassed,
         buildSuccess: this.results.buildSuccess,
         performanceScore: this.results.performanceScore,
-        securityIssues: this.results.securityIssues,
+        securityIssues: this.results.securityIssues
 },
       recommendations: this.generateRecommendations(),
       nextSteps: [
         "Review and test the application",
         "Deploy to staging environment",
         "Run user acceptance tests",
-        "Deploy to production"],
+        "Deploy to production"]
 }
     const reportPath = path.join(this.reportsDir, "master-automation-report.json")
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
     this.log(`📄 Report saved to: ${reportPath}`, "SUCCESS")
-    return report,
+    return report
 }
 
   generateRecommendations() {
     const recommendations = []
     if (this.results.syntaxFixes > 0) {
-      recommendations.push("Syntax errors have been fixed - review changes before deployment"),
+      recommendations.push("Syntax errors have been fixed - review changes before deployment")
 }
     
     if (!this.results.buildSuccess) {
-      recommendations.push("Build failed - address remaining compilation errors"),
+      recommendations.push("Build failed - address remaining compilation errors")
 }
     
     if (this.results.performanceScore < 70) {
-      recommendations.push("Performance could be improved - consider code splitting and optimization"),
+      recommendations.push("Performance could be improved - consider code splitting and optimization")
 }
     
     if (this.results.securityIssues > 0) {
-      recommendations.push("Security vulnerabilities found - run npm audit fix"),
+      recommendations.push("Security vulnerabilities found - run npm audit fix")
 }
 
     if (recommendations.length === 0) {
-      recommendations.push("All checks passed! Application is ready for deployment."),
+      recommendations.push("All checks passed! Application is ready for deployment.")
 }
 
-    return recommendations,
+    return recommendations
 }
 
   printSummary() {
@@ -235,7 +235,7 @@ const files = [
       (this.results.testsPassed / Math.max(this.results.testsRun, 1)) * 30 +
       (this.results.performanceScore / 100) * 20 +
       (this.results.securityIssues === 0 ? 10 : 0))
-    this.log(`\n🎯 Overall Score: ${overallScore.toFixed(1)}/100`, "INFO"),
+    this.log(`\n🎯 Overall Score: ${overallScore.toFixed(1)}/100`, "INFO")
 }
 
   async run() {
@@ -250,10 +250,10 @@ const files = [
       const report = await this.generateReport()
       this.printSummary()
       this.log("🎉 Master Automation Suite completed!", "SUCCESS")
-      return report,
+      return report
 } catch (error) {
       this.log(`💥 Automation failed: ${error.message}`, "ERROR")
-      throw error,
+      throw error
 }
   }
 }
@@ -261,7 +261,7 @@ const files = [
 // Run the master automation suite
 if (require.main === module) {
   const suite = new MasterAutomationSuite()
-  suite.run().catch(console.error),
+  suite.run().catch(console.error)
 }
 
 module.exports = MasterAutomationSuite

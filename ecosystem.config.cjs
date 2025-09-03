@@ -90,9 +90,9 @@ module.exports = {
       cron_restart: '0 */4 * * *' // Restart every 4 hours
     },
 
-    // Auto Fix and Build - Automated build testing
+// Auto Fix and Build - Automated build testing
     {
-      name: 'security-audit',
+name: 'security-audit',
       script: 'scripts/automation-wrapper.js',
       args: 'security',
       instances: 1,
@@ -227,7 +227,7 @@ module.exports = {
       name: 'auto-fix-and-build',
       script: 'bash',
       args: '-lc "npm install --silent && npm run lint || true && npm run type-check || true && npm run build"',
-      instances: 1,
+instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
@@ -235,7 +235,7 @@ module.exports = {
       log_file: 'logs/auto-fix-and-build.log',
       out_file: 'logs/auto-fix-and-build-out.log',
       error_file: 'logs/auto-fix-and-build-error.log'
-    },
+},
 
     // AI Code Review - Runs AI-powered code review
     {
@@ -304,18 +304,18 @@ module.exports = {
       error_file: './logs/intelligent-build-pipeline-error.log',
       out_file: './logs/intelligent-build-pipeline-out.log'    },
 
-    // Syntax error fixing automation
+// Syntax error fixing automation
     {
       name: 'syntax-fixer',
       script: './scripts/syntax-fixer.js',      instances: 1,
       watch: ['src', 'public', 'postcss.config.js', 'vite.config.ts'],
       ignore_watch: ['dist', 'node_modules', 'logs'],
       max_memory_restart: '1G',
-      env: { 
+env: { 
         NODE_ENV: 'development',
         PATH: '/home/ubuntu/.nvm/versions/node/v22.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
       },
-      error_file: './logs/syntax-fixer-error.log',
+error_file: './logs/syntax-fixer-error.log',
       out_file: './logs/syntax-fixer-out.log',
       log_file: './logs/syntax-fixer-combined.log',
       time: true,
@@ -478,7 +478,7 @@ module.exports = {
       user: 'deploy',
       host: 'localhost',
       ref: 'origin/main',
-      repo: 'git@github.com:username/repo.git',
+repo: 'git@github.com:username/repo.git',
       path: '/var/www/production',
       'post-deploy': 'npm install && pm2 reload ecosystem.config.cjs --env production'    }
 },;
@@ -521,7 +521,7 @@ module.exports = {
       error_file: ./automation/logs/pm2-error-prevention-error.log,;
       out_file: ./automation/logs/pm2-error-prevention-out.log";,
 },;
-    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY);
+// Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY);
     {
   name: "console-error-fixer;
       script: ./scripts/automation/console-error-fixer.cjs,;
@@ -790,7 +790,7 @@ module.exports = {
       "post-deploy": npm install && npm run build && pm2 reload ecosystem.config.cjs --env production,;
       "pre-setup": ;,
 }
-  }
+}
 }
     {
   name: "zion-website",;
@@ -1090,7 +1090,7 @@ module.exports = {
   }
 }
   ],;
-  deploy: {
+deploy: {
   production: {
   user: "deploy",;
       host: "localhost",;

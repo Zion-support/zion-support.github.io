@@ -64,11 +64,7 @@ export { function };
 :pages.disabled/pages/services/QuantumComputingSolutions.tsx
 export default function QuantumComputingSolutions(...args: unknown[]): unknown {
 :pages.disabled/pages/services/QuantumComputingSolutions.tsx
-  
-  
-  
-  
-  
+
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
 <:pages.disabled/pages/services/QuantumComputingSolutions.tsx

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';import { 
   Brain, 
   Shield, 
-  Zap, 
+Zap, 
   BarChart3,
   Rocket,
   Lock,

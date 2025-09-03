@@ -19,20 +19,20 @@ class $1 {
     this.ensureLogDirectory();
     this.deploymentSteps = [];
     this.startTime = Date.now();
-    this.environment = process.env.NODE_ENV || `development`;,
+    this.environment = process.env.NODE_ENV || `development`;
 }
 ;
   ensureLogDirectory() {
   const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-  fs.mkdirSync(logDir, { recursive: true });,
+  fs.mkdirSync(logDir, { recursive: true });
 }
   }
 ;
   log(message) {
   const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);
-    fs.appendFileSync(this.logFile, `[${timestamp}] ${message}\n`);,
+    fs.appendFileSync(this.logFile, `[${timestamp}] ${message}\n`);
 }
 ;
   async runStep(stepName, stepFunction) {
@@ -45,19 +45,19 @@ class $1 {
       this.deploymentSteps.push({
   name: stepName,;
         status: `success`,;
-        duration: duration;,
+        duration: duration;
 });
-      this.log(`✅ Step completed: ${stepName} (${duration}ms)`);,
+      this.log(`✅ Step completed: ${stepName} (${duration}ms)`);
 } catch (error) {
   const duration = Date.now() - stepStartTime;
       this.deploymentSteps.push({
   name: stepName,;
         status: `failed`,;
         duration: duration,;
-        error: error.message;,
+        error: error.message;
 });
       this.log(`❌ Step failed: ${stepName} - ${error.message}`);
-      throw error;,
+      throw error;
 }
   }
 ;
@@ -67,24 +67,24 @@ class $1 {
     try {
   const gitStatus = execSync(`git status --porcelain`, { encoding: `utf8` });
       if (gitStatus.trim()) {
-  throw new Error(`Git working directory is not clean. Please commit or stash changes.`);,
+  throw new Error(`Git working directory is not clean. Please commit or stash changes.`);
 }
     } catch (error) {
-  throw new Error(`Git check failed: ${error.message  }`);,
+  throw new Error(`Git check failed: ${error.message  }`);
 }
 ;
     // Check if tests pass;
     try {
-  execSync(`npm run test: ci`, { stdio: `pipe` });,
+  execSync(`npm run test: ci`, { stdio: `pipe` });
 } catch (error) {
-  throw new Error("Tests are failing. Please fix tests before deployment.");,
+  throw new Error("Tests are failing. Please fix tests before deployment.");
 }
 ;
     // Check if build succeeds;
     try {
-  execSync("npm run build", { stdio: "pipe" });,
+  execSync("npm run build", { stdio: "pipe" });
 } catch (error) {
-  throw new Error("Build is failing. Please fix build issues before deployment.");,
+  throw new Error("Build is failing. Please fix build issues before deployment.");
 }
 ;
 
@@ -95,61 +95,61 @@ class $1 {
     try {
   const gitStatus = execSync("git status --porcelain", { encoding: "utf8" });
       if (gitStatus.trim()) {
-  throw new Error("Git working directory is not clean. Please commit or stash changes.");,
+  throw new Error("Git working directory is not clean. Please commit or stash changes.");
 }
     } catch (error) {
-  throw new Error(`Git check failed: ${error.message}`);,
+  throw new Error(`Git check failed: ${error.message}`);
 }
 ;
     // Check if tests pass;
     try {
-  execSync("npm run test: ci", { stdio: "pipe" });,
+  execSync("npm run test: ci", { stdio: "pipe" });
 } catch (error) {
-  throw new Error("Tests are failing. Please fix tests before deployment.");,
+  throw new Error("Tests are failing. Please fix tests before deployment.");
 }
 ;
     // Check if build succeeds;
     try {
-  execSync("npm run build", { stdio: "pipe" });,
+  execSync("npm run build", { stdio: "pipe" });
 } catch (error) {
-  throw new Error("Build is failing. Please fix build issues before deployment.");,
+  throw new Error("Build is failing. Please fix build issues before deployment.");
 }
 ;
-    this.log("✅ Pre-deployment checks passed");,
+    this.log("✅ Pre-deployment checks passed");
 }
 ;
   async backupCurrentDeployment() {
   this.log("💾 Creating backup of current deployment...");
     const backupDir = path.join(this.projectRoot, `deployment-backups`);
     if (!fs.existsSync(backupDir)) {
-  fs.mkdirSync(backupDir, { recursive: true });,
+  fs.mkdirSync(backupDir, { recursive: true });
 }
 ;
     const timestamp = new Date().toISOString().replace(/[:.]/g, `-`);
     const backupPath = path.join(backupDir, `backup-${timestamp}`);
     // Create backup of current build;
     if (fs.existsSync(`.next`)) {
-  execSync(`cp -r .next ${backupPath}`, { stdio: `pipe` });,
+  execSync(`cp -r .next ${backupPath}`, { stdio: `pipe` });
 }
 ;
     this.log(`✅ Backup created at: ${backupPath}`);
-    return backupPath;,
+    return backupPath;
 }
 ;
   async runSecurityAudit() {
   this.log(`🔒 Running security audit...`);
     try {
   execSync(`npm audit --audit-level high`, { stdio: "pipe" });
-      this.log("✅ Security audit passed");,
+      this.log("✅ Security audit passed");
 } catch (error) {
   async runSecurityAudit() {
   this.log("🔒 Running security audit...");
     ;
     try {
   execSync("npm audit --audit-level high", { stdio: "pipe" });
-      this.log("✅ Security audit passed");,
+      this.log("✅ Security audit passed");
 } catch (error) {
-  this.log("⚠️ Security audit found issues, but continuing deployment");,
+  this.log("⚠️ Security audit found issues, but continuing deployment");
 }
   }
 ;
@@ -160,7 +160,7 @@ class $1 {
     process.env.NEXT_TELEMETRY_DISABLED = "1";
     // Run production build;
     execSync("npm run build: production", { stdio: `pipe` });
-    this.log(`✅ Production optimization completed`);,
+    this.log(`✅ Production optimization completed`);
 }
 ;
   async deployToEnvironment() {
@@ -169,21 +169,21 @@ class $1 {
   // Production deployment logic;
       this.log(`Deploying to production...`);
       // Add your production deployment commands here;
-      // Example: execSync("vercel --prod", { stdio: "pipe" });,
+      // Example: execSync("vercel --prod", { stdio: "pipe" });
 } else {
   if (this.environment === "production") {
   // Production deployment logic;
       this.log("Deploying to production...");
       // Add your production deployment commands here;
-      // Example: execSync("vercel --prod", { stdio: "pipe" });,
+      // Example: execSync("vercel --prod", { stdio: "pipe" });
 } else {
   // Development/staging deployment logic;
       this.log("Deploying to staging...");
       // Add your staging deployment commands here;
-      // Example: execSync("vercel", { stdio: "pipe" });,
+      // Example: execSync("vercel", { stdio: "pipe" });
 }
     ;
-    this.log("✅ Deployment completed");,
+    this.log("✅ Deployment completed");
 }
 ;
   async postDeploymentChecks() {
@@ -192,17 +192,17 @@ class $1 {
     try {
   // Add your health check logic here;
       // Example: fetch(`https://your-app.com/health`);
-      this.log(`✅ Health check passed`);,
+      this.log(`✅ Health check passed`);
 } catch (error) {
-  throw new Error(`Health check failed: ${error.message  }`);,
+  throw new Error(`Health check failed: ${error.message  }`);
 }
 ;
     // Performance check;
     try {
   // Add your performance check logic here;
-      this.log(`✅ Performance check passed`);,
+      this.log(`✅ Performance check passed`);
 } catch (error) {
-  this.log(`⚠️ Performance check failed, but deployment is functional`);,
+  this.log(`⚠️ Performance check failed, but deployment is functional`);
 }
   }
 ;
@@ -211,12 +211,12 @@ class $1 {
     try {
   if (fs.existsSync(backupPath)) {
   execSync(`rm -rf .next && cp -r ${backupPath} .next`, { stdio: `pipe` });
-        this.log(`✅ Rollback completed`);,
+        this.log(`✅ Rollback completed`);
 } else {
-  this.log(`❌ Backup not found, cannot rollback`);,
+  this.log(`❌ Backup not found, cannot rollback`);
 }
     } catch (error) {
-  this.log(`❌ Rollback failed: ${error.message  }`);,
+  this.log(`❌ Rollback failed: ${error.message  }`);
 }
   }
 ;
@@ -227,12 +227,12 @@ class $1 {
       environment: this.environment,;
       steps: this.deploymentSteps,;
       totalDuration: Date.now() - this.startTime,;
-      success: this.deploymentSteps.every(step => step.status === `success`);,
+      success: this.deploymentSteps.every(step => step.status === `success`);
 }
     const reportPath = path.join(this.projectRoot, `automation/logs`, `deployment-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Report saved to: ${reportPath}`);
-    return report;,
+    return report;
 }
 ;
   async deploy() {
@@ -255,18 +255,18 @@ class $1 {
       const report = await this.generateDeploymentReport();
       this.log(`✅ Smart deployment completed successfully!`);
       this.log(`Total deployment time: ${report.totalDuration}ms`);
-      ;,
+      ;
 } catch (error) {
   this.log(`❌ Deployment failed: ${error.message  }`);
       if (backupPath) {
-  await this.rollback(backupPath);,
+  await this.rollback(backupPath);
 }
       ;
       const report = await this.generateDeploymentReport();
       this.log(`❌ Deployment failed and rollback attempted`);
       this.log("❌ Deployment failed and rollback attempted");
       ;
-      process.exit(1);,
+      process.exit(1);
 }
   }
 }
@@ -275,8 +275,8 @@ class $1 {
 if (require.main === module) {
   const deployment = new SmartDeploymentAutomation();
   deployment.deploy().catch(error => {
-  console.error(`❌ Deployment failed: `, error);    process.exit(1);,
-});,
+  console.error(`❌ Deployment failed: `, error);    process.exit(1);
+});
 }
 ;
 module.exports = SmartDeploymentAutomation

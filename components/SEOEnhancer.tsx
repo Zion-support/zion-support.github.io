@@ -25,7 +25,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",
 }) => {"
   const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group"
   return (
-    <Head>
+<Head>
       {/* Basic Meta Tags */}
       <title>{title}</title>
 <meta name="description" content={description} />"      <meta name="keywords" content={keywords} />"      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />"      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />'      <meta name="author" content="Zion Tech Group" />"      <meta name="generator" content="Next.js" />"      "      {/* Canonical URL */}`      <link rel="canonical" href={canonicalUrl} />"      "      {/* Open Graph Meta Tags */}

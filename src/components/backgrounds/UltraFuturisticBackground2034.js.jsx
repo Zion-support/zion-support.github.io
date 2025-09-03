@@ -147,7 +147,7 @@ for(let x = 0 x < canvas.width x += gridSize) {}
 }        return () => {}
 
             if(animationRef.current) {}
-                cancelAnimationFrame(animationRef.current)}'
+cancelAnimationFrame(animationRef.current)}'
             window.removeEventListener('resize', handleResize)}}, [intensity, theme]);
     return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style = {}
   {}
@@ -155,7 +155,6 @@ for(let x = 0 x < canvas.width x += gridSize) {}
   filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'
 }}/>)};
 export default UltraFuturisticBackground2034;
-
 
 export { UltraFuturisticBackground2034 };
 

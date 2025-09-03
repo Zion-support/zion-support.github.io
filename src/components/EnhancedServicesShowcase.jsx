@@ -647,7 +647,7 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,"
               </div>
             </div>
           </motion.div>
-        </div>
+</div>
       </section>
     </div>)};
 export default EnhancedServicesShowcase;

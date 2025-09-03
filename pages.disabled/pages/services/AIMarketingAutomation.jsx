@@ -284,9 +284,6 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 =
   y: 0 
 
-
-
-
 "
 :pages.disabled/pages/services/AIMarketingAutomation.jsx
 }} transition={{ duration: 0.8 }} className="text-center">"
@@ -405,9 +402,6 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 =
   y: 0 
 
-
-
-
 "
 :pages.disabled/pages/services/AIMarketingAutomation.jsx
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"
@@ -452,9 +446,6 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
                   <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mr-4">
 =
   delay: index * 0.1 
-
-
-
 
 "
 :pages.disabled/pages/services/AIMarketingAutomation.jsx
@@ -518,9 +509,6 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 =
   y: 0 
 
-
-
-
 "
 :pages.disabled/pages/services/AIMarketingAutomation.jsx
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"
@@ -564,9 +552,6 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
               <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
 =
   delay: index * 0.1 
-
-
-
 
 "
 :pages.disabled/pages/services/AIMarketingAutomation.jsx
@@ -620,9 +605,6 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 =
   y: 0 
 
-
-
-
 "
 :pages.disabled/pages/services/AIMarketingAutomation.jsx
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"
@@ -666,9 +648,6 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
 =
   delay: index * 0.1 
-
-
-
 
 "
 :pages.disabled/pages/services/AIMarketingAutomation.jsx
@@ -720,9 +699,6 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
 =
   y: 0 
-
-
-
 
 "
 :pages.disabled/pages/services/AIMarketingAutomation.jsx

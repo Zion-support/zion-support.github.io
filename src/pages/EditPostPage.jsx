@@ -55,7 +55,7 @@ export default function Page() {
             // Redirect back to the post
             router(`/community / post/${postId}`) ;
         }
-        catch(error) {}
+catch(error) {}
             toast({}
 """
 """"
@@ -83,7 +83,6 @@ export default function Page() {
 
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>
       </div>)}
-
 
 export { EditPostPage };
 

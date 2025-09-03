@@ -208,7 +208,6 @@ export default function AIBiomedicalResearch() {}
       </section>
     </div>)}
 
-
 export { AIBiomedicalResearch, IconComponent };
 
 export { AIBiomedicalResearch, IconComponent };

@@ -145,10 +145,6 @@ const ITSolutions = () => {}
 }}>"
   delay: 0.4 
 
-
-
-
-
 "
 }}>""
   y: 20;
@@ -202,10 +198,6 @@ const ITSolutions = () => {}
                 </div>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>"
   delay: index * 0.1 
-
-
-
-
 
 "
 }} viewport={{ once: true }}>""
@@ -272,10 +264,6 @@ const ITSolutions = () => {}
                     <TrendingUp className="w-4 h-4 text-teal-600"/>
                   </div>"
   delay: index * 0.1 
-
-
-
-
 
 "
 }} viewport={{ once: true }}>""

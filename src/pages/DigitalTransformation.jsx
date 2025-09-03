@@ -444,7 +444,6 @@ export default function DigitalTransformation() {}
       </section>
     </div>)}
 
-
 export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
 
 export { DigitalTransformation, IconComponent, IconComponent, IconComponent };

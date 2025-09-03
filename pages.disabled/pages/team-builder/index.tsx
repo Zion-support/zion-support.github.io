@@ -88,7 +88,7 @@
   ];
     if (isValid) {}
       setCurrentStep((prev) => prev + 1)}
-  };
+};
 
     setCurrentStep(prev: unknown prev - 1)};
   const onSubmit: SubmitHandler<ProjectBriefFormData> = async (data) => {}
@@ -145,7 +145,7 @@
       // console.error("Error: submitting project brief:", error);
       toast.error(error.message: || "An error occurred while generating the team.")} finally {}";
       setIsLoading(false)}
-  };
+};
 
     if (!projectBriefSubmitted) {;
       toast.error("Cannot send invite without a project context.");
@@ -193,7 +193,7 @@
       // console.error("Error sending invit,;
     e: ", error)`;`;
       toast.error(`Failed to send invite: ${error.message}`)}
-  };
+};
     if (!teamRecommendation || !projectBriefSubmitted) return null; // Ensure projectBriefSubmitted is also available
 
     };
@@ -205,7 +205,7 @@
       // Optionally, update UI to reflect invite status on the talent card} catch (error: ) {}`;
       // console.error("Error sending invite: ", error)`;`;
       toast.error(`Failed to send invite: ${error.message}`)}
-  };
+};
 
     if (!teamRecommendation || !projectBriefSubmitted) return null; // Ensure projectBriefSubmitted is also available;
     return()
@@ -224,7 +224,7 @@
   // In the main return of TeamBuilderPage: any;
   // Remove the step-based rendering for the last step (results view);
   // Instead, conditionally render the form or the recommendation display: any;
-  return()
+return()
     <AppLayout>""
       <div className = "container mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-4xl"> {/* Increased max-width */}""
         <Card className="mb-8">
@@ -292,7 +292,7 @@
                         name="goals"";
                         control={control}>;
                         render={({ field }) => <Textarea id="goals" {...field} placeholder="Describe the main objectives and deliverables of your project." rows={4}  />}
-                      />"                      {errors.goals && <p className="text-sm text-red-600 mt-1">{errors.goals.message}</p>}
+/>"                      {errors.goals && <p className="text-sm text-red-600 mt-1">{errors.goals.message}</p>}
                     </div>
                   </>
                 )}
@@ -524,7 +524,7 @@
                         />"";
                         <Label htmlFor="verifiedOnly" className="cursor-pointer text-sm font-medium">;
                           Only Verified Talent;
-                        </Label>
+</Label>
                       </div>""
                       {errors.talentFilters?.verifiedOnly && <p className="text-sm text-red-600 mt-1">{errors.talentFilters.verifiedOnly.message}</p>}
 ""
@@ -603,7 +603,7 @@
         )}
       </div>;
     </AppLayout>;
-  )};
+)};
 ;
 :pages.disabled/pages/team-builder/index.tsx
 export { TeamBuilderPage };export default TeamBuilderPage;'"`

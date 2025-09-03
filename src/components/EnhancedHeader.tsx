@@ -277,7 +277,7 @@ function EnhancedHeader () {export function EnhancedHeader() {
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
-                  )}
+)}
                 </a>
                 {link.submenu && servicesOpen && (
                   <div 
@@ -299,7 +299,24 @@ function EnhancedHeader () {export function EnhancedHeader() {
               </div>
             ))}
             <a href="/contact" className="hidden lg:inline-flex bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">Get Started</a>
-          </nav>
+return(<header className="bg-white shadow-lg">
+"
+  return (<header className="bg-white shadow-lg">"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+        <div className="flex justify-between items-center py-6">"
+          <div className="flex items-center">"
+            <a href="/" className="text-2xl font-bold text-blue-900">
+              Zion Tech Group,
+            </a>
+          </div>"
+          <nav className="hidden md: flex space-x-8">"
+          <nav className="hidden md:flex space-x-6">"
+            <a href="/" className="text-gray-700 hover:text-blue-600">Home</a>"
+            <a href="/about" className="text-gray-700 hover:text-blue-600">About</a>"
+            <a href="/services" className="text-gray-700 hover:text-blue-600">Services</a>"
+            <a href="/solutions" className="text-gray-700 hover:text-blue-600">Solutions</a>"
+            <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact</a>
+</nav>
     </header>"
             <a href="/micro-saas" className="text-gray-700 hover:text-blue-600">Micro SAAS</a>"
             <a href="/it-services" className="text-gray-700 hover:text-blue-600">IT Services</a>"
@@ -706,7 +723,7 @@ aria-label = "Toggle navigation>
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16"  />
             </svg>
           </button>
-        </div>
+</div>
       </div>
 
       {mobileOpen && (

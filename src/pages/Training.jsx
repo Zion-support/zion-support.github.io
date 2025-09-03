@@ -38,12 +38,11 @@ export default function Training() {
             Get Started
           </Link>
         </div>
-      </section>
+</section>
     </div>) ;
 };
 
 export default Training;
-
 
 export { Training };
 

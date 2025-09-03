@@ -1,5 +1,4 @@
-
- * SEO function
+* SEO function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
  */
@@ -18,7 +17,7 @@ export const SEO: React.FC<SEOProps> = ({
   keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',
   image = '/og-image.svg',
   url = 'https://ziontechgroup.com',
-  type = 'website',
+type = 'website',
   author = 'Zion Tech Group',
   publishedTime,
   modifiedTime,

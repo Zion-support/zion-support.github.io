@@ -14,7 +14,7 @@ class: ErrorBoundary extends Component<Props, State> {public state: State: = {ha
     return { hasError: tru,e, error: }
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 console.error('ErrorBoundary caught an error: ', error, errorInfo);
 '  }'private handleRetry = () => {
     this.setState({ hasError: false, error: undefined });
@@ -26,7 +26,7 @@ console.error('ErrorBoundary caught an error: ', error, errorInfo);
 class ErrorBoundary extends Component<Props, State> {;
 public state: State = {hasError: false}
 
-      return (
+return (
 <div className="min-h-screen flex items-center justify-center bg-gray-50>          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">"            <div className="flex justify-center mb-4>              <AlertTriangle className="w-12 h-12 text-red-500" />"            </div>"            <h2 className="text-xl font-semibold text-gray-900 mb-2>              Something went wrong"            </h2>
             <p className="text-gray-600 mb-6>              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
             </p>'            <button

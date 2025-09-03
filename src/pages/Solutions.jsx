@@ -35,7 +35,6 @@ const Solutions = () => {}
     </>)};
 export default Solutions;
 
-
 export { Solutions };
 
 export { Solutions };

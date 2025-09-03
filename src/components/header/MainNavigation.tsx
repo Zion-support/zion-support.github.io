@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';import {
   FileText, 
   HelpCircle, 
   BarChart3,
-  Rocket,
+Rocket,
   Server,
   Cloud,
   Lock,
@@ -59,7 +59,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {  const
         </button>
         
         {isServicesOpen && (
-          <div 
+<div 
             onMouseEnter={() => setIsServicesOpen(true)} 
             onMouseLeave={() => setIsServicesOpen(false)}
             className="absolute top-full left-0 mt-2 w-96 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
@@ -123,7 +123,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {  const
                       </Link>
                     </li>
                     <li>
-                      <Link to="/services/enhanced-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+<Link to="/services/enhanced-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                         Enhanced Services
                       </Link>
                     </li>
@@ -161,7 +161,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {  const
                         AI Supply Chain
                       </Link>
                     </li>
-                    <li>
+<li>
                       <Link to="/services/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                         AI Quantum Hybrid                      </Link>
                     </li>
@@ -178,13 +178,13 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {  const
                 </Link>
               </div>
             </div>
-          </div>
+</div>
         )}
       </div>
 
       {/* Solutions Dropdown */}
       <div className="relative group">
-        <button
+<button
           onMouseEnter={() => setIsSolutionsOpen(true)}
           onMouseLeave={() => setIsSolutionsOpen(false)}
           className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
@@ -268,14 +268,14 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {  const
                   <TrendingUp className="w-4 h-4 ml-2" />
                 </Link>
               </div>
-            </div>
+</div>
           </div>
         )}
       </div>
 
       {/* Company Dropdown */}
       <div className="relative group">
-        <button
+<button
           onMouseEnter={() => setIsCompanyOpen(true)}
           onMouseLeave={() => setIsCompanyOpen(false)}
           className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"        >
@@ -327,19 +327,19 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {  const
                   </Link>
                 </li>
               </ul>
-            </div>
+</div>
           </div>
         )}
       </div>
 
-      {/* Resources */}
+{/* Resources */}
       <Link 
         to="/resources" 
         className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"      >
         Resources
       </Link>
 
-      {/* Blog */}
+{/* Blog */}
       <Link 
         to="/blog" 
         className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
@@ -356,4 +356,4 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {  const
       </Link>
     </nav>
   );
-} 
+}

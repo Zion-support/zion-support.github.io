@@ -73,7 +73,6 @@ export default function CheckoutPage() {}
         </p>)}
     </div>)}
 
-
 export { CheckoutPage };
 
 export { CheckoutPage };

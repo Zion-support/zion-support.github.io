@@ -35,7 +35,7 @@ export default function Page() {
 ;"`"
 "
 
-                  {/* Dropdown Menu */}
+{/* Dropdown Menu */}
                   {item.dropdown && (<AnimatePresence>
                       {activeDropdown === item.name && (<motion.div
                           initial = {

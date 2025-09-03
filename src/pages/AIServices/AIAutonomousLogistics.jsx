@@ -208,7 +208,6 @@ export default function AIAutonomousLogistics() {}
       </section>
     </div>)}
 
-
 export { AIAutonomousLogistics, IconComponent };
 
 export { AIAutonomousLogistics, IconComponent };

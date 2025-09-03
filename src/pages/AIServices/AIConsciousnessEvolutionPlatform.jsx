@@ -208,7 +208,6 @@ export default function AIConsciousnessEvolutionPlatform() {}
       </section>
     </div>)}
 
-
 export { AIConsciousnessEvolutionPlatform, IconComponent };
 
 export { AIConsciousnessEvolutionPlatform, IconComponent };

@@ -45,10 +45,6 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             status: 'pending_review',
             requirements: ['Requirement 1', 'Requirement 2'],
   violations: []
-        
-
-
-
 
 };
         addComplianceRule(newRule);

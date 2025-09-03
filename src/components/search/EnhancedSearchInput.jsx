@@ -30,7 +30,7 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
 }
       setIsOpen(false)}
 
-    const [query, setQuery] = useState('');
+const [query, setQuery] = useState('');
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [filteredSuggestions, setFilteredSuggestions] = useState([]);
     const [selectedIndex, setSelectedIndex] = useState(-1);

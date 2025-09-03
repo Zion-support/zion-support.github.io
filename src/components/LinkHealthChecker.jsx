@@ -181,7 +181,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
           <p className="text-sm text-red-300">
             {brokenCount} link{brokenCount !== 1 ? 's' : ''} {brokenCount !== 1 ? 'are' : 'is'} broken and need attention.Please review and fix these links to improve user experience.</p>
         </div>)}
-    </div>)};
+</div>)};
 export default LinkHealthChecker;
 }}}}}}}}}
 

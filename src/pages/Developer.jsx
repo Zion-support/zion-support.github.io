@@ -34,7 +34,6 @@ const Developer = () => {}
     </>)};
 export default Developer;
 
-
 export { Developer };
 
 export { Developer };

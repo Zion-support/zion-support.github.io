@@ -1,7 +1,7 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
 
- from 'lucide - react';
+from 'lucide - react';
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
@@ -262,7 +262,102 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
               >
                 Get Started
               </a>
-            </div>
+import { motion } from 'framer-motion';
+import { 
+  ArrowRight, 
+  Zap, 
+  Shield, 
+  Brain, 
+  Cloud, 
+  Globe, 
+  Users, 
+  TrendingUp,
+  CheckCircle,
+  Star,
+  Award,
+  Rocket
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const Home: React.FC = () => {
+  const features = [
+    {
+      icon: <Zap className="w-8 h-8 text-zion-cyan" />,
+      title: "AI-Powered Solutions",
+      description: "Cutting-edge artificial intelligence for business transformation"
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-zion-purple" />,
+      title: "Enterprise Security",
+      description: "Military-grade cybersecurity and compliance solutions"
+    },
+    {
+      icon: <Brain className="w-8 h-8 text-zion-green" />,
+      title: "Machine Learning",
+      description: "Advanced ML algorithms for predictive analytics"
+    },
+    {
+      icon: <Cloud className="w-8 h-8 text-zion-cyan-light" />,
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud solutions for modern businesses"
+    }
+  ];
+
+  const stats = [
+    { number: "500+", label: "Global Clients" },
+    { number: "99.9%", label: "Uptime SLA" },
+    { number: "24/7", label: "Support" },
+    { number: "50+", label: "Countries" }
+  ];
+
+  const services = [
+    {
+      title: "AI Autonomous Systems",
+      description: "Self-learning AI platforms for business automation",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/ai-services"
+    },
+    {
+      title: "Cybersecurity Solutions",
+      description: "Advanced threat detection and prevention",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/cybersecurity"
+    },
+    {
+      title: "Cloud & DevOps",
+      description: "Scalable infrastructure and deployment automation",
+      icon: <Cloud className="w-6 h-6" />,
+      link: "/cloud-devops"
+    },
+    {
+      title: "Digital Transformation",
+      description: "End-to-end business modernization services",
+      icon: <Rocket className="w-6 h-6" />,
+      link: "/digital-transformation"    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 via-zion-purple/20 to-zion-cyan/20"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <motion.h1 
+            className="futuristic-heading mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Zion Tech Group
+          </motion.h1>
+          <motion.p 
+            className="futuristic-text text-xl md:text-2xl mb-8 max-w-3xl mx-auto"              >
+                Our Services,
+              </a>"
+                href="/contact" "
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
+                Get Started,
+</div>
           </motion.div>
         </div>
       </section>
@@ -332,7 +427,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
               </motion.div>
             ))}
           </div>
-        </section>
+</section>
       </div>
     </>  );
 };

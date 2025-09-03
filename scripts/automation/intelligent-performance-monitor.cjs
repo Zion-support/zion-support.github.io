@@ -3,7 +3,7 @@
  * Intelligent Performance Monitor - PM2 Automation;
  * Monitors application performance, identifies bottlenecks, and suggests optimizations;
  */;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 /**;
  * Intelligent Performance Monitor - PM2 Automation;
  * Monitors application performance, identifies bottlenecks, and suggests optimizations;
@@ -28,7 +28,7 @@ class $1 {
       loadTime: 0,;
       memoryUsage: 0,;
       cpuUsage: 0,;
-      errorRate: 0;,
+      errorRate: 0;
 }
     this.thresholds = {
   this.metrics = {
@@ -37,7 +37,7 @@ class $1 {
       loadTime: 0,;
       memoryUsage: 0,;
       cpuUsage: 0,;
-      errorRate: 0;,
+      errorRate: 0;
 }
     this.thresholds = {
   buildTime: 30000, // 30 seconds;
@@ -45,7 +45,7 @@ class $1 {
       loadTime: 3000, // 3 seconds;
       memoryUsage: 512 * 1024 * 1024, // 512MB;
       cpuUsage: 80, // 80%;
-      errorRate: 5 // 5%;,
+      errorRate: 5 // 5%;
 }
   }
 ;
@@ -54,13 +54,13 @@ class $1 {
     this.ensureLogDirectory();
     this.loadPerformanceHistory();
         // Start continuous monitoring;
-    this.startContinuousMonitoring();,
+    this.startContinuousMonitoring();
 }
 ;
   ensureLogDirectory() {
   const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-  fs.mkdirSync(logDir, { recursive: true });,
+  fs.mkdirSync(logDir, { recursive: true });
 }
   }
 ;
@@ -68,7 +68,7 @@ class $1 {
   try {
   if (fs.existsSync(this.performanceHistory)) {
   const data = fs.readFileSync(this.performanceHistory, "utf8");
-        this.history = JSON.parse(data);,
+        this.history = JSON.parse(data);
 } else {
   this.history = {
   totalMeasurements: 0,;
@@ -77,7 +77,7 @@ class $1 {
           averageLoadTime: 0,;
           performanceTrends: [],;
           bottlenecks: [],;
-          optimizations: [];,
+          optimizations: [];
 }
       }
     } catch (error) {
@@ -89,7 +89,7 @@ class $1 {
         averageLoadTime: 0,;
         performanceTrends: [],;
         bottlenecks: [],;
-        optimizations: [];,
+        optimizations: [];
 }
     } catch (error) {
   console.error("Error loading performance history: ", error);
@@ -100,7 +100,7 @@ class $1 {
         averageLoadTime: 0,;
         performanceTrends: [],;
         bottlenecks: [],;
-        optimizations: [];,
+        optimizations: [];
 }
     }
   }
@@ -113,14 +113,14 @@ class $1 {
     ;
     // Set up periodic monitoring;
     setInterval(() => {
-  this.measurePerformance();,
+  this.measurePerformance();
 }, 5 * 60 * 1000); // Every 5 minutes;
     ;
     // Set up build monitoring;
     this.monitorBuilds();
     ;
     // Set up runtime monitoring;
-    this.monitorRuntime();,
+    this.monitorRuntime();
 }
 ;
   async measurePerformance() {
@@ -138,7 +138,7 @@ class $1 {
       memoryUsage: 0,;
       cpuUsage: 0,;
       errorRate: 0,;
-      recommendations: [];,
+      recommendations: [];
 }
     try {
   // Measure build performance;
@@ -155,17 +155,17 @@ class $1 {
       this.logPerformanceResults(measurement);
       ;
       console.log(✅ Performance measurement completed in ${Date.now() - startTime}ms);
-      ;,
-} catch (error) {
-  console.error(`❌ Error during performance measurement: `, error);,
+      ;
 } catch (error) {
   console.error(`❌ Error during performance measurement: `, error);
-      this.logError(`Performance measurement failed`, error);,
+} catch (error) {
+  console.error(`❌ Error during performance measurement: `, error);
+this.logError(`Performance measurement failed`, error);
 }
-      ;,
+      ;
 } catch (error) {
   console.error("❌ Error during performance measurement: ", error);
-      this.logError("Performance measurement failed", error);,
+      this.logError("Performance measurement failed", error);
 }
   }
 ;
@@ -185,10 +185,10 @@ class $1 {
   measurement.recommendations.push({
   type: `build`,;
           severity: `warning`,message: Build time (${measurement.buildTime}ms) exceeds threshold (${this.thresholds.buildTime}ms),;
-          suggestion: `Consider optimizing build configuration, using build caching, or parallel builds`;,
-}`);,
+          suggestion: `Consider optimizing build configuration, using build caching, or parallel builds`;
+}`);
 }
-      ;,
+      ;
 } catch (error) {
   console.error(`Error measuring build performance: `, error);
       ;
@@ -197,16 +197,16 @@ class $1 {
   measurement.recommendations.push({
   type: "build",;
           severity: "warning",message: Build time (${measurement.buildTime}ms) exceeds threshold (${this.thresholds.buildTime}ms),;
-          suggestion: "Consider optimizing build configuration, using build caching, or parallel builds";,
-}`);,
+          suggestion: "Consider optimizing build configuration, using build caching, or parallel builds";
+}`);
 }
-      ;,
+      ;
 } catch (error) {
   console.error("Error measuring build performance: ", error);
-      measurement.buildTime = -1;,
+      measurement.buildTime = -1;
 } catch (error) {
   console.error(`Error measuring build performance: `, error);      measurement.buildTime = -1;
-      measurement.buildSuccess = false;,
+measurement.buildSuccess = false;
 }
   }
 ;
@@ -230,13 +230,13 @@ class $1 {
         execSync("npm run build", {
   cwd: this.projectRoot,;
           stdio: "pipe",;
-          timeout: 120000 // 2 minutes timeout;,
+          timeout: 120000 // 2 minutes timeout;
 });
         ;
         return {
   success: true,;
           duration: Date.now() - buildStart,;
-          errors: [];,
+          errors: [];
 }
       }
       ;
@@ -251,12 +251,14 @@ class $1 {
           timeout: 120000;
 ;
           timeout: 120000;
+;
+timeout: 120000;
 });
         ;
         return {
   success: true,;
           duration: Date.now() - buildStart,;
-          errors: [];,
+          errors: [];
 }
       }
       ;
@@ -264,28 +266,28 @@ class $1 {
       return {
   success: true,;
         duration: 0,;
-        errors: [];,
+        errors: [];
 }
-      ;,
+      ;
 } catch (error) {
   return {
   success: false,;
         duration: 0,;
-        errors: [error.message];,
+        errors: [error.message];
 }
       ;
       // Generic build check;
       return {
   success: true,;
         duration: 0,;
-        errors: [];,
+        errors: [];
 }
-      ;,
+      ;
 } catch (error) {
   return {
   success: false,;
         duration: 0,;
-        errors: [error.message];,
+        errors: [error.message];
 }
     }
   }
@@ -301,7 +303,7 @@ class $1 {
       for (const dir of buildDirs) {
   if (fs.existsSync(dir)) {
   const size = this.calculateDirectorySize(dir);
-          totalSize += size;,
+          totalSize += size;
 }
       }
       ;
@@ -311,10 +313,10 @@ class $1 {
   measurement.recommendations.push({
   type: `bundle`,;
           severity: `warning`,message: Bundle size (${this.formatBytes(totalSize)}) exceeds threshold (${this.formatBytes(this.thresholds.bundleSize)}),;
-          suggestion: `Consider code splitting, tree shaking, or removing unused dependencies`;,
-}`);,
+          suggestion: `Consider code splitting, tree shaking, or removing unused dependencies`;
+}`);
 }
-      ;,
+      ;
 } catch (error) {
   console.error(`Error measuring bundle size: `, error);
       ;
@@ -323,13 +325,13 @@ class $1 {
   measurement.recommendations.push({
   type: "bundle",;
           severity: "warning",message: Bundle size (${this.formatBytes(totalSize)}) exceeds threshold (${this.formatBytes(this.thresholds.bundleSize)}),;
-          suggestion: "Consider code splitting, tree shaking, or removing unused dependencies";,
-}`);,
+          suggestion: "Consider code splitting, tree shaking, or removing unused dependencies";
+}`);
 }
-      ;,
+      ;
 } catch (error) {
   console.error("Error measuring bundle size: ", error);
-      measurement.bundleSize = -1;,
+      measurement.bundleSize = -1;
 } catch (error) {
   console.error(`Error measuring bundle size: `, error);      measurement.bundleSize = -1;
 }
@@ -348,15 +350,15 @@ class $1 {
         const stat = fs.statSync(fullPath);
         ;
         if (stat.isDirectory()) {
-  totalSize += this.calculateDirectorySize(fullPath);,
+  totalSize += this.calculateDirectorySize(fullPath);
 } else {
-  totalSize += stat.size;,
+  totalSize += stat.size;
 }
       }
-    } catch (error) {  console.error(`Error calculating size for ${dirPath  }:``, error);,
+    } catch (error) {  console.error(`Error calculating size for ${dirPath  }:``, error);
 }
     ;
-    return totalSize;,
+    return totalSize;
 }
 ;
   formatBytes(bytes) {
@@ -365,7 +367,7 @@ class $1 {
     const sizes = ["Bytes", "KB", "MB", "GB"];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     ;
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];,
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
 }
 ;
   async measureRuntimePerformance(measurement) {
@@ -387,8 +389,8 @@ class $1 {
   measurement.recommendations.push({
   type: `memory`,;
           severity: `warning`,message: Memory usage (${this.formatBytes(systemMetrics.memory)}) exceeds threshold (${this.formatBytes(this.thresholds.memoryUsage)}),;
-          suggestion: `Check for memory leaks, optimize data structures, or increase memory limits`;,
-}`);,
+          suggestion: `Check for memory leaks, optimize data structures, or increase memory limits`;
+}`);
 }
       ;
       // Check CPU usage;
@@ -396,10 +398,10 @@ class $1 {
   measurement.recommendations.push({
   type: `cpu`,;
           severity: `warning`,message: `CPU usage (${systemMetrics.cpu}%) exceeds threshold (${this.thresholds.cpuUsage}%)`,;
-          suggestion: `Optimize algorithms, implement caching, or use worker threads for heavy operations`;,
-});,
+          suggestion: `Optimize algorithms, implement caching, or use worker threads for heavy operations`;
+});
 }
-      ;,
+      ;
 } catch (error) {
   console.error(`Error measuring runtime performance: `, error);
       ;
@@ -408,8 +410,8 @@ class $1 {
   measurement.recommendations.push({
   type: "memory",;
           severity: "warning",message: Memory usage (${this.formatBytes(systemMetrics.memory)}) exceeds threshold (${this.formatBytes(this.thresholds.memoryUsage)}),;
-          suggestion: "Check for memory leaks, optimize data structures, or increase memory limits";,
-}`);,
+          suggestion: "Check for memory leaks, optimize data structures, or increase memory limits";
+}`);
 }
       ;
       // Check CPU usage;
@@ -417,16 +419,16 @@ class $1 {
   measurement.recommendations.push({
   type: "cpu",;
           severity: "warning",message: `CPU usage (${systemMetrics.cpu}%) exceeds threshold (${this.thresholds.cpuUsage}%)`,;
-          suggestion: "Optimize algorithms, implement caching, or use worker threads for heavy operations";,
-});,
+          suggestion: "Optimize algorithms, implement caching, or use worker threads for heavy operations";
+});
 }
-      ;,
+      ;
 } catch (error) {
   console.error("Error measuring runtime performance: ", error);
-      measurement.memoryUsage = -1;,
+      measurement.memoryUsage = -1;
 } catch (error) {
   console.error(`Error measuring runtime performance: `, error);      measurement.memoryUsage = -1;
-      measurement.cpuUsage = -1;,
+measurement.cpuUsage = -1;
 }
   }
 ;
@@ -442,10 +444,10 @@ class $1 {
       const cpuUsage = process.cpuUsage();
       const cpu = Math.round((cpuUsage.user + cpuUsage.system) / 1000000); // Convert to percentage approximation;
       return { memory, cpu }
-      ;,
+      ;
 } catch (error) {
   return { memory, cpu }
-      ;,
+      ;
 } catch (error) {
   console.error("Error getting system metrics: ", error);
       return { memory: 0, cpu: 0   }
@@ -468,7 +470,7 @@ class $1 {
     this.identifyBottlenecks(measurement);
     ;
     // Generate optimization suggestions;
-    this.generateOptimizationSuggestions(measurement);,
+    this.generateOptimizationSuggestions(measurement);
 }
 ;
   analyzePerformanceTrends(measurement) {
@@ -485,8 +487,8 @@ class $1 {
   type: "trend",;
             severity: "info",;
             message: "Build time is trending upward",;
-            suggestion: "Investigate recent changes that may be affecting build performance";,
-});,
+            suggestion: "Investigate recent changes that may be affecting build performance";
+});
 }
       }
       ;
@@ -501,8 +503,8 @@ class $1 {
   type: "trend",;
             severity: "info",;
             message: "Bundle size is trending upward",;
-            suggestion: "Review recent dependencies and code changes for size impact";,
-});,
+            suggestion: "Review recent dependencies and code changes for size impact";
+});
 }
       }
     }
@@ -512,7 +514,7 @@ class $1 {
   if (historicalValues.length === 0) return 0;
     ;
     const average = historicalValues.reduce((a, b) => a + b, 0) / historicalValues.length;
-    return (currentValue - average) / average;,
+    return (currentValue - average) / average;
 }
 ;
   identifyBottlenecks(measurement) {
@@ -533,8 +535,8 @@ class $1 {
         severity: "critical",;
         message: "Build time is critically slow",;
         impact: "High",;
-        suggestion: "Immediate investigation required - check build configuration and dependencies";,
-});,
+        suggestion: "Immediate investigation required - check build configuration and dependencies";
+});
 }
     ;
     if (measurement.bundleSize > this.thresholds.bundleSize * 2) {
@@ -543,8 +545,8 @@ class $1 {
         severity: "critical",;
         message: "Bundle size is critically large",;
         impact: "High",;
-        suggestion: "Immediate optimization required - implement code splitting and tree shaking";,
-});,
+        suggestion: "Immediate optimization required - implement code splitting and tree shaking";
+});
 }
     ;
     if (measurement.memoryUsage > this.thresholds.memoryUsage * 1.5) {
@@ -553,11 +555,11 @@ class $1 {
         severity: "high",;
         message: "Memory usage is significantly high",;
         impact: "Medium",;
-        suggestion: "Investigate memory leaks and optimize data handling";,
-});,
+        suggestion: "Investigate memory leaks and optimize data handling";
+});
 }
     ;
-    measurement.bottlenecks = bottlenecks;,
+    measurement.bottlenecks = bottlenecks;
 }
 ;
   generateOptimizationSuggestions(measurement) {
@@ -568,15 +570,15 @@ class $1 {
   category: "build",;
         priority: "high",;
         suggestion: "Implement build caching using tools like Turborepo or Nx",;
-        expectedImpact: "20-40% reduction in build time";,
+        expectedImpact: "20-40% reduction in build time";
 });
       ;
       optimizations.push({
   category: "build",;
         priority: "medium",;
         suggestion: "Use parallel builds for independent modules",;
-        expectedImpact: "15-25% reduction in build time";,
-});,
+        expectedImpact: "15-25% reduction in build time";
+});
 }
     ;
     // Bundle optimizations;
@@ -593,15 +595,15 @@ class $1 {
   category: "bundle",;
         priority: "high",;
         suggestion: "Implement dynamic imports and code splitting",;
-        expectedImpact: "30-50% reduction in initial bundle size";,
+        expectedImpact: "30-50% reduction in initial bundle size";
 });
       ;
       optimizations.push({
   category: "bundle",;
         priority: "medium",;
         suggestion: "Remove unused dependencies and implement tree shaking",;
-        expectedImpact: "10-20% reduction in bundle size";,
-});,
+        expectedImpact: "10-20% reduction in bundle size";
+});
 }
     ;
     // Runtime optimizations;
@@ -610,11 +612,11 @@ class $1 {
   category: "runtime",;
         priority: "high",;
         suggestion: "Implement memory pooling and object reuse",;
-        expectedImpact: "25-40% reduction in memory usage";,
-});,
+        expectedImpact: "25-40% reduction in memory usage";
+});
 }
     ;
-    measurement.optimizations = optimizations;,
+    measurement.optimizations = optimizations;
 }
 ;
   updatePerformanceHistory(measurement) {
@@ -625,11 +627,11 @@ class $1 {
       bundleSize: measurement.bundleSize,;
       loadTime: measurement.loadTime,;
       memoryUsage: measurement.memoryUsage,;
-      cpuUsage: measurement.cpuUsage;,
+      cpuUsage: measurement.cpuUsage;
 });
     // Keep only last 100 measurements;
     if (this.history.performanceTrends.length > 100) {
-  this.history.performanceTrends = this.history.performanceTrends.slice(-100);,
+  this.history.performanceTrends = this.history.performanceTrends.slice(-100);
 }
     ;
     // Update averages;
@@ -649,13 +651,13 @@ class $1 {
     this.history.optimizations.push(...measurement.optimizations);
     // Save updated history;
     try {
-  fs.writeFileSync(this.performanceHistory, JSON.stringify(this.history, null, 2));,
+  fs.writeFileSync(this.performanceHistory, JSON.stringify(this.history, null, 2));
 } catch (error) {
   console.error("Error saving performance history: ", error)}
   }
 ;
   calculateRunningAverage(currentAverage, newValue, count) {
-  return (currentAverage * (count - 1) + newValue) / count;,
+  return (currentAverage * (count - 1) + newValue) / count;
 }
 ;
   logPerformanceResults(measurement) {
@@ -666,7 +668,7 @@ class $1 {
         bundleSize: measurement.bundleSize,;
         loadTime: measurement.loadTime,;
         memoryUsage: measurement.memoryUsage,;
-        cpuUsage: measurement.cpuUsage;,
+        cpuUsage: measurement.cpuUsage;
 },;
       recommendations: measurement.recommendations,;
       bottlenecks: measurement.bottlenecks,;
@@ -679,19 +681,19 @@ class $1 {
         bundleSize: measurement.bundleSize,;
         loadTime: measurement.loadTime,;
         memoryUsage: measurement.memoryUsage,;
-        cpuUsage: measurement.cpuUsage;,
+        cpuUsage: measurement.cpuUsage;
 },;
       recommendations: measurement.recommendations,;
       bottlenecks: measurement.bottlenecks,;
-      optimizations: measurement.optimizations;,
+      optimizations: measurement.optimizations;
 }
     ;
     try {
-  fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + "\n");,
+  fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + "\n");
 } catch (error) {
-  ,
+  
 } catch (error) {
-  console.error("Error logging performance results: ", error);,
+  console.error("Error logging performance results: ", error);
 }
     } catch (error) {
   console.error("Error logging performance results: ", error)}
@@ -708,15 +710,15 @@ class $1 {
   timestamp: new Date().toISOString(),;
       message,;
       error: error.message,;
-      stack: error.stack;,
+      stack: error.stack;
 }
     ;
     try {
-  fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + "\n");,
+  fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + "\n");
 } catch (error) {
-  ,
+  
 } catch (error) {
-  console.error("Error logging error: ", error);,
+  console.error("Error logging error: ", error);
 }
     } catch (error) {
   console.error("Error logging error: ", error)}
@@ -730,45 +732,45 @@ class $1 {
   // Monitor for build commands;
     process.on("message", (message) => {
   if (message && message.type === "build") {
-  this.onBuildStart();,
+  this.onBuildStart();
 }
-    });,
+    });
 }
 ;
   onBuildStart() {
   console.log("🚀 Build started - monitoring performance...");
-    this.measurePerformance();,
+    this.measurePerformance();
 }
 ;
   monitorRuntime() {
   console.log("⚡ Setting up runtime monitoring...");
     // Monitor process events;
     process.on("exit", () => {
-  this.onProcessExit();,
+  this.onProcessExit();
 });
     // Monitor uncaught exceptions;
     process.on("uncaughtException", (error) => {
-  this.onUncaughtException(error);,
+  this.onUncaughtException(error);
 });
     // Monitor unhandled rejections;
     process.on("unhandledRejection", (reason, promise) => {
-  this.onUnhandledRejection(reason, promise);,
-});,
+  this.onUnhandledRejection(reason, promise);
+});
 }
 ;
   onProcessExit() {
   console.log("🔄 Process exiting - saving final performance data...");
-    this.measurePerformance();,
+    this.measurePerformance();
 }
 ;
   onUncaughtException(error) {
   console.error("💥 Uncaught exception: ", error);
-    this.logError("Uncaught exception", error);,
+    this.logError("Uncaught exception", error);
 }
 ;
   onUnhandledRejection(reason, promise) {
   console.error("💥 Unhandled rejection: ", reason);
-    this.logError("Unhandled rejection", { reason, promise });,
+    this.logError("Unhandled rejection", { reason, promise });
 }
 }
 ;

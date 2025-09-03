@@ -32,7 +32,6 @@ import { TrendingUp,
 export { function };
 export default function AIFinancialTradingRiskManagement(...args[]):  {
 
-  
     },;
     {;
       icon: Eye,;"

@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-const fs = require("$1");
+const fs = require("child_process");
 const path = require("path")
 class AccessibilityEnhancer {
   constructor() {
     this.projectRoot = process.cwd()
-    this.accessibilityEnhancements = [],
+    this.accessibilityEnhancements = []
 }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`),
+    console.log(`[${new Date().toISOString()}] ${message}`)
 }
 
   async createAccessibilityConfig() {
@@ -29,20 +29,20 @@ export const accessibilityConfig = {
     loading: "Loading",
     error: "Error",
     success: "Success",
-    warning: "Warning",
+    warning: "Warning"
 },
   
   // Focus management
   focusManagement: {
     skipToContent: true,
     focusTrap: true,
-    focusVisible: true,
+    focusVisible: true
 },
   
   // Color contrast
   colorContrast: {
     minimumRatio: 4.5,
-    enhancedRatio: 7.0,
+    enhancedRatio: 7.0
 },
   
   // Keyboard navigation
@@ -51,7 +51,7 @@ export const accessibilityConfig = {
     arrowKeys: true,
     escapeKey: true,
     enterKey: true,
-    spaceKey: true,
+    spaceKey: true
 }
 }
 // Accessibility utilities
@@ -62,7 +62,7 @@ export const accessibilityUtils = {
   // Check if element is visible
   isVisible: (element) => {
     const style = window.getComputedStyle(element)
-    return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0",
+    return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"
 },
   
   // Announce to screen readers
@@ -74,20 +74,20 @@ export const accessibilityUtils = {
     announcement.textContent = message
     document.body.appendChild(announcement)
     setTimeout(() => {
-      document.body.removeChild(announcement),
-}, 1000),
+      document.body.removeChild(announcement)
+}, 1000)
 }
 };`
       const configDir = path.join(this.projectRoot, "lib")
       if (!fs.existsSync(configDir)) {
-        fs.mkdirSync(configDir, { recursive: true }),
+        fs.mkdirSync(configDir, { recursive: true })
 }
       
       fs.writeFileSync(path.join(configDir, "accessibility.ts"), accessibilityConfig)
       this.accessibilityEnhancements.push("accessibility configuration created")
-      this.log("✅ Accessibility configuration created successfully"),
+      this.log("✅ Accessibility configuration created successfully")
 } catch (error) {
-      this.log(`❌ Failed to create accessibility config: ${error.message}`),
+      this.log(`❌ Failed to create accessibility config: ${error.message}`)
 }
   }
 
@@ -104,7 +104,7 @@ export const accessibilityUtils = {
   overflow: hidden
   clip: rect(0, 0, 0, 0)
   white-space: nowrap
-  border: 0,
+  border: 0
 }
 
 .sr-only-focusable:focus {
@@ -115,24 +115,24 @@ export const accessibilityUtils = {
   margin: inherit
   overflow: visible
   clip: auto
-  white-space: normal,
+  white-space: normal
 }
 
 /* Focus styles */
 .focus-visible {
   outline: 2px solid #3b82f6
-  outline-offset: 2px,
+  outline-offset: 2px
 }
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
   .text-gray-600 {
-    color: #000000,
+    color: #000000
 }
   
   .bg-gray-100 {
     background-color: #ffffff
-    border: 1px solid #000000,
+    border: 1px solid #000000
 }
 }
 
@@ -143,7 +143,7 @@ export const accessibilityUtils = {
   *::after {
     animation-duration: 0.01ms !important
     animation-iteration-count: 1 !important
-    transition-duration: 0.01ms !important,
+    transition-duration: 0.01ms !important
 }
 }
 
@@ -156,16 +156,16 @@ export const accessibilityUtils = {
   color: #fff
   padding: 8px
   text-decoration: none
-  z-index: 1000,
+  z-index: 1000
 }
 
 .skip-to-content:focus {
-  top: 6px,
+  top: 6px
 }
 
 /* Focus trap */
 .focus-trap {
-  position: relative,
+  position: relative
 }
 
 .focus-trap::before,
@@ -175,7 +175,7 @@ export const accessibilityUtils = {
   width: 1px
   height: 1px
   opacity: 0
-  pointer-events: none,
+  pointer-events: none
 }
 
 /* ARIA live regions */
@@ -184,18 +184,18 @@ export const accessibilityUtils = {
   left: -10000px
   width: 1px
   height: 1px
-  overflow: hidden,
+  overflow: hidden
 }`
       const stylesDir = path.join(this.projectRoot, "styles")
       if (!fs.existsSync(stylesDir)) {
-        fs.mkdirSync(stylesDir, { recursive: true }),
+        fs.mkdirSync(stylesDir, { recursive: true })
 }
       
       fs.writeFileSync(path.join(stylesDir, "accessibility.css"), accessibilityStyles)
       this.accessibilityEnhancements.push("accessibility styles created")
-      this.log("✅ Accessibility styles created successfully"),
+      this.log("✅ Accessibility styles created successfully")
 } catch (error) {
-      this.log(`❌ Failed to create accessibility styles: ${error.message}`),
+      this.log(`❌ Failed to create accessibility styles: ${error.message}`)
 }
   }
 
@@ -203,7 +203,7 @@ export const accessibilityUtils = {
     this.log("♿ Starting accessibility enhancement...")
     await this.createAccessibilityConfig()
     await this.createAccessibilityStyles()
-    this.log(`✅ Accessibility enhancement completed. Enhancements: ${this.accessibilityEnhancements.join(", ")}`),
+    this.log(`✅ Accessibility enhancement completed. Enhancements: ${this.accessibilityEnhancements.join(", ")}`)
 }
 }
 

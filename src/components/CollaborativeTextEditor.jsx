@@ -478,7 +478,7 @@ ${editorState.content}"}
 
             onExport(exportContent, format)}
 
-            // Default export behavior'
+// Default export behavior'
             const blob = new Blob([exportContent], { type: 'text/plain' });
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -595,7 +595,7 @@ version: Math.max(prev.version, message.payload.version)}})"
     // comment
     useEffect(() => {}
 
-            window.removeEventListener('collaborationTextChange', handleCollaborationTextChange)}}, [userId, trackEvent]);
+window.removeEventListener('collaborationTextChange', handleCollaborationTextChange)}}, [userId, trackEvent]);
     // Auto-save functionality
     useEffect(() => {
   // TODO: Add dependencies if needed

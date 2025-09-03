@@ -210,8 +210,7 @@ export default function Page() {
             </Tabs>
           </div>
         </div>
-      </div>)}
-
+</div>)}
 
 export { CommunityProfilePage };
 

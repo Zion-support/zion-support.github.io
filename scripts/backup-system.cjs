@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
+const fs = require("child_process");
+const path = require("child_process");
 const { execSync } = require("child_process")
 class BackupSystem {
   constructor() {
     this.projectRoot = process.cwd()
     this.backupDir = path.join(this.projectRoot, "backups")
-    this.maxBackups = 10,
+    this.maxBackups = 10
 }
 
   async createBackup() {
@@ -14,7 +14,7 @@ class BackupSystem {
     try {
       // Create backup directory
       if (!fs.existsSync(this.backupDir)) {
-        fs.mkdirSync(this.backupDir, { recursive: true }),
+        fs.mkdirSync(this.backupDir, { recursive: true })
 }
       
       const timestamp = new Date().toISOString().replace(/[:.]/g, "-")
@@ -22,15 +22,15 @@ class BackupSystem {
       const backupPath = path.join(this.backupDir, backupName)
       // Create backup
       execSync(`tar -czf ${backupPath}.tar.gz --exclude=node_modules --exclude=.git --exclude=backups .`, {
-        cwd: this.projectRoot,
+        cwd: this.projectRoot
 })
       // Clean old backups
       this.cleanOldBackups()
       console.log(`✅ Backup created: ${backupName}.tar.gz`)
-      return backupPath,
+      return backupPath
 } catch (error) {
       console.error("❌ Backup failed:", error.message)
-      throw error,
+      throw error
 }
   }
 
@@ -40,15 +40,15 @@ class BackupSystem {
       .map(file => ({
         name: file,
         path: path.join(this.backupDir, file),
-        stats: fs.statSync(path.join(this.backupDir, file)),
+        stats: fs.statSync(path.join(this.backupDir, file))
 }))
       .sort((a, b) => b.stats.mtime - a.stats.mtime)
     if (backups.length > this.maxBackups) {
       const toDelete = backups.slice(this.maxBackups)
       toDelete.forEach(backup => {
         fs.unlinkSync(backup.path)
-        console.log(`🗑️  Deleted old backup: ${backup.name}`),
-}),
+        console.log(`🗑️  Deleted old backup: ${backup.name}`)
+})
 }
   }
 
@@ -57,22 +57,22 @@ class BackupSystem {
     try {
       const backupPath = path.join(this.backupDir, backupName)
       if (!fs.existsSync(backupPath)) {
-        throw new Error(`Backup not found: ${backupName}`),
+        throw new Error(`Backup not found: ${backupName}`)
 }
       
       // Extract backup
       execSync(`tar -xzf ${backupPath} -C ${this.projectRoot}`)
-      console.log("✅ Backup restored successfully"),
+      console.log("✅ Backup restored successfully")
 } catch (error) {
       console.error("❌ Restore failed:", error.message)
-      throw error,
+      throw error
 }
   }
 
   listBackups() {
     if (!fs.existsSync(this.backupDir)) {
       console.log("No backups found")
-      return [],
+      return []
 }
     
     const backups = fs.readdirSync(this.backupDir)
@@ -82,17 +82,17 @@ class BackupSystem {
         return {
           name: file,
           size: Math.round(stats.size / 1024 / 1024 * 100) / 100, // MB
-          created: stats.mtime,
+          created: stats.mtime
 }
       })
       .sort((a, b) => b.created - a.created)
     console.log("\n📋 Available Backups:")
     console.log("=".repeat(50))
     backups.forEach(backup => {
-      console.log(`${backup.name} (${backup.size}MB) - ${backup.created.toLocaleString()}`),
+      console.log(`${backup.name} (${backup.size}MB) - ${backup.created.toLocaleString()}`)
 })
     console.log("=".repeat(50))
-    return backups,
+    return backups
 }
 }
 
@@ -107,7 +107,7 @@ switch (command) {
   case "restore":
     if (!arg) {
       console.error("Please specify backup name to restore")
-      process.exit(1),
+      process.exit(1)
 }
     backupSystem.restoreBackup(arg)
     break
@@ -115,5 +115,5 @@ switch (command) {
     backupSystem.listBackups()
     break
   default:
-    console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]"),
+    console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
 }

@@ -1,5 +1,5 @@
 #!/""usr/bin/env"" node;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
@@ -16,19 +16,19 @@ class $1 {
       documentationCoverage: 0,;
       missingDocs: [],;
       documentationSuggestions: [],;
-      docPatterns: new Map(),;,
+      docPatterns: new Map(),;
 }
     this.reportDir = path.join(process.cwd(), `documentation-reports`);
     this.docsDir = path.join(process.cwd(), `docs`);
-    this.ensureDirectories();,
+    this.ensureDirectories();
 }
 ;
   ensureDirectories() {
   if (!fs.existsSync(this.reportDir)) {
-  fs.mkdirSync(this.reportDir, { recursive: true });,
+  fs.mkdirSync(this.reportDir, { recursive: true });
 }
     if (!fs.existsSync(this.docsDir)) {
-  fs.mkdirSync(this.docsDir, { recursive: true });,
+  fs.mkdirSync(this.docsDir, { recursive: true });
 }
   }
 ;
@@ -78,7 +78,7 @@ class $1 {
       // Generate report;
       await this.generateReport();
 
-      console.log(`"✅ Smart documentation generation completed successfully");,
+      console.log(`"✅ Smart documentation generation completed successfully");
 } catch (error) {
   console.error("❌ Smart documentation generation failed: ", error.message)}
   }
@@ -89,7 +89,7 @@ class $1 {
     const srcPath = path.join(process.cwd(), "src");
     if (!fs.existsSync(srcPath)) {
   console.log("⚠️ Source directory not found");
-      return;,
+      return;
 }
 ;
     const structure = {
@@ -99,7 +99,7 @@ class $1 {
       services: [],;
       types: [],;
       pages: [],;
-      configs: [],;,
+      configs: [],;
 }
 ;
     const allFiles = this.findFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]);
@@ -116,8 +116,8 @@ class $1 {
   structure.components.push({
   path: relativePath,;
           name: this.extractComponentName(content),;
-          hasDocs: this.hasExistingDocs(file),;,
-});,
+          hasDocs: this.hasExistingDocs(file),;
+});
 } else if (;
         relativePath.includes("utils/") ||;
         relativePath.includes("helpers/") ||;
@@ -127,14 +127,14 @@ class $1 {
   structure.utilities.push({
   path: relativePath,;
           name: this.extractFunctionName(content),;
-          hasDocs: this.hasExistingDocs(file),;,
-});,
+          hasDocs: this.hasExistingDocs(file),;
+});
 } else if (content.includes("use") && content.includes("export")) {
   structure.hooks.push({
   path: relativePath,;
           name: this.extractHookName(content),;
-          hasDocs: this.hasExistingDocs(file),;,
-});,
+          hasDocs: this.hasExistingDocs(file),;
+});
 } else if (;
         relativePath.includes("services/") ||;
         content.includes("api") ||;
@@ -143,8 +143,8 @@ class $1 {
   structure.services.push({
   path: relativePath,;
           name: this.extractServiceName(content),;
-          hasDocs: this.hasExistingDocs(file),;,
-});,
+          hasDocs: this.hasExistingDocs(file),;
+});
 } else if (;
         relativePath.includes("types/") ||;
         content.includes("interface") ||;
@@ -152,13 +152,13 @@ class $1 {
       ) {
   structure.types.push({
   path: relativePath,;
-          name: this.extractTypeName(content),;,
-});,
+          name: this.extractTypeName(content),;
+});
 } else if (relativePath.includes("pages/") || content.includes("Route")) {
   structure.pages.push({
   path: relativePath,;
-          name: this.extractPageName(content),;,
-});,
+          name: this.extractPageName(content),;
+});
 }
     }
 ;
@@ -172,13 +172,13 @@ class $1 {
       if (fs.existsSync(configPath)) {
   structure.configs.push({
   path: configFile", name: configFile,;
-          hasDocs: this.hasExistingDocs(configPath),;,
-});,
+          hasDocs: this.hasExistingDocs(configPath),;
+});
 }
     }
 ;
     this.documentationMetrics.docPatterns.set("structure", structure);
-    console.log("📊 Codebase structure analysis completed");,
+    console.log("📊 Codebase structure analysis completed");
 }
 ;
   async identifyMissingDocumentation() {
@@ -196,8 +196,8 @@ class $1 {
   missingDocs.push({
   type: "component",;
         items: undocumentedComponents,;
-        priority: "high",;,
-});,
+        priority: "high",;
+});
 }
 ;
     // Check for missing utility documentation;
@@ -211,8 +211,8 @@ class $1 {
   missingDocs.push({
   type: "utility",;
         items: undocumentedUtilities,;
-        priority: "medium",;,
-});,
+        priority: "medium",;
+});
 }
 ;
     // Check for missing hook documentation;
@@ -221,8 +221,8 @@ class $1 {
   missingDocs.push({
   type: "hook",;
         items: undocumentedHooks,;
-        priority: "medium",;,
-});,
+        priority: "medium",;
+});
 }
 ;
     // Check for missing service documentation;
@@ -243,13 +243,13 @@ class $1 {
   missingDocs.push({
   type: "service",;
         items: undocumentedServices,;
-        priority: "high",;,
-});,
+        priority: "high",;
+});
 }
 ;
     this.documentationMetrics.missingDocs = missingDocs;
     console.log(📊 Found ${missingDocs.length} categories of missing documentation`;
-    );,
+    );
 }
 ;
   async generateAPIDocumentation() {
@@ -286,7 +286,7 @@ class $1 {
         // Ensure API docs directory exists;
         const apiDocsDir = path.dirname(docPath);
         if (!fs.existsSync(apiDocsDir)) {
-  fs.mkdirSync(apiDocsDir, { recursive: true });,
+  fs.mkdirSync(apiDocsDir, { recursive: true });
 }
 ;
         fs.writeFileSync(docPath, apiDoc);
@@ -295,11 +295,11 @@ class $1 {
           path: docPath,;
           service: service.name,;
           timestamp: new Date().toISOString()});
-console.log(✅ Generated API documentation for ${service.name}`);,
+console.log(✅ Generated API documentation for ${service.name}`);
 } catch (error) {
   console.log(⚠️ Failed to generate API docs for ${service.name  }:`,;
           error.message;
-        `);,
+        `);
 }
     }
   }
@@ -326,7 +326,7 @@ console.log(✅ Generated API documentation for ${service.name}`);,
         // Ensure components docs directory exists;
         const componentsDocsDir = path.dirname(docPath);
         if (!fs.existsSync(componentsDocsDir)) {
-  fs.mkdirSync(componentsDocsDir, { recursive: true });,
+  fs.mkdirSync(componentsDocsDir, { recursive: true });
 }
 ;
         fs.writeFileSync(docPath, componentDoc);
@@ -340,15 +340,15 @@ console.log(✅ Generated API documentation for ${service.name}`);,
   type: "component",;
           path: docPath,;
           component: component.name,;
-          timestamp: new Date().toISOString(),;,
+          timestamp: new Date().toISOString(),;
 });
 
         console.log(`✅ Generated component documentation for ${component.name}";
-        );,
+        );
 } catch (error) {
   console.log( ⚠️ Failed to generate component docs for ${component.name}:,;
           error.message;
-        `);,
+        `);
 }
     }
   }
@@ -380,23 +380,23 @@ console.log(✅ Generated API documentation for ${service.name}`);,
   type: "guide",;
         path: installPath,;
         name: "Installation Guide",;
-        timestamp: new Date().toISOString(),;,
+        timestamp: new Date().toISOString(),;
 },;
       {
   type: "guide",;
         path: devPath,;
         name: "Development Guide",;
-        timestamp: new Date().toISOString(),;,
+        timestamp: new Date().toISOString(),;
 },;
       {
   type: "guide",;
         path: deployPath,;
         name: "Deployment Guide",;
-        timestamp: new Date().toISOString(),;,
+        timestamp: new Date().toISOString(),;
 }
     );
 
-    console.log("✅ Generated setup guides"`);,
+    console.log("✅ Generated setup guides"`);
 }
 ;
   async updateREADME() {
@@ -407,7 +407,7 @@ console.log(✅ Generated API documentation for ${service.name}`);,
       let readmeContent = ";
 
       if (fs.existsSync(readmePath)) {
-  readmeContent = fs.readFileSync(readmePath, "utf8");,
+  readmeContent = fs.readFileSync(readmePath, "utf8");
 }
 ;
       const updatedREADME = this.generateUpdatedREADME(readmeContent);
@@ -417,18 +417,17 @@ console.log(✅ Generated API documentation for ${service.name}`);,
   type: "readme",;
         path: readmePath,;
         name: "README.md",;
-        timestamp: new Date().toISOString(),;,
+        timestamp: new Date().toISOString(),;
 });
 
-      console.log("✅ Updated README");,
+      console.log("✅ Updated README");
 } catch (error) {
-  ,
+  
 } catch (error) {
-  console.log("⚠️ Failed to update README: ", error.message);,
+  console.log("⚠️ Failed to update README: ", error.message);
 }
     } catch (error) {
   console.log("⚠️ Failed to update README: ", error.message)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async calculateDocumentationCoverage() {
@@ -456,7 +455,7 @@ console.log(✅ Generated API documentation for ${service.name}`);,
     this.documentationMetrics.documentationCoverage =;
       totalItems > 0 ? (documentedItems / totalItems) * 100 : 0;
     console.log(📊 Documentation coverage: ${this.documentationMetrics.documentationCoverage.toFixed(1)}%`;
-    );,
+    );
 }
 ;
   async generateReport() {
@@ -486,7 +485,7 @@ console.log(✅ Generated API documentation for ${service.name}`);,
       `documentation-report.json`;
     );
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
-console.log(📊 Documentation report saved to ${reportPath});,
+console.log(📊 Documentation report saved to ${reportPath});
 }
 ;
   findFiles(dir, extensions) {
@@ -501,21 +500,21 @@ console.log(📊 Documentation report saved to ${reportPath});,
           const stat = fs.statSync(fullPath);
 
           if (stat.isDirectory()) {
-  scanDirectory(fullPath);,
+  scanDirectory(fullPath);
 } else if (extensions.some(ext => item.endsWith(ext))) {
-  files.push(fullPath);,
+  files.push(fullPath);
 }
         }
       } catch (error) {
-  // Skip directories that can`t be accessed;,
+  // Skip directories that can`t be accessed;
 }
       } catch (error) {
-  // Skip directories that can"t be accessed;,
+  // Skip directories that can"t be accessed;
 }
     }
 ;
     scanDirectory(dir);
-    return files;,
+    return files;
 }
 ;
   hasExistingDocs(filePath) {
@@ -523,42 +522,42 @@ console.log(📊 Documentation report saved to ${reportPath});,
     const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, "");
     return docExtensions.some(ext => {
   const docPath = basePath + ext;
-      return fs.existsSync(docPath);,
-});,
+      return fs.existsSync(docPath);
+});
 }
 ;
   extractComponentName(content) {
   const match = content.match(;
       /export\s+(?:default\s+)?(?:function|const)\s+(\w+)/;
     );
-    return match ? match[1] : "UnknownComponent";,
+    return match ? match[1] : "UnknownComponent";
 }
 ;
   extractFunctionName(content) {
   const match = content.match(/export\s+(?:function|const)\s+(\w+)/);
-    return match ? match[1] : "UnknownFunction";,
+    return match ? match[1] : "UnknownFunction";
 }
 ;
   extractHookName(content) {
   const match = content.match(/export\s+(?:function|const)\s+(\w+)/);
-    return match ? match[1] : "UnknownHook";,
+    return match ? match[1] : "UnknownHook";
 }
 ;
   extractServiceName(content) {
   const match = content.match(/export\s+(?:function|const|class)\s+(\w+)/);
-    return match ? match[1] : "UnknownService";,
+    return match ? match[1] : "UnknownService";
 }
 ;
   extractTypeName(content) {
   const match = content.match(/(?:interface|type)\s+(\w+)/);
-    return match ? match[1] : `UnknownType`;,
+    return match ? match[1] : `UnknownType`;
 }
 ;
   extractPageName(content) {
   const match = content.match(;
       /export\s+(?:default\s+)?(?:function|const)\s+(\w+)/;
     );
-    return match ? match[1] : `UnknownPage`;,
+    return match ? match[1] : `UnknownPage`;
 }
 ;
   generateServiceDocumentation(service, content) {return # ${service.name}
@@ -599,7 +598,7 @@ ${this.extractServiceErrors(content)}
 ${this.generateServiceExamples(service.name)}
 ;
 ---;
-*Generated automatically by Smart Documentation Generator*;,
+*Generated automatically by Smart Documentation Generator*;
 }
 ;
   generateComponentDoc(component, content) {
@@ -619,7 +618,7 @@ function $1() {
     <${component.name} ;
       // Add your props here;
     />;
-  );,
+  );
 }\`\`\`;
 ## Examples;
 ${this.generateComponentExamples(component.name)}
@@ -630,7 +629,7 @@ ${this.generateComponentExamples(component.name)}
 ${this.extractComponentStyling(content)}
 ;
 ---;
-*Generated automatically by Smart Documentation Generator*;,
+*Generated automatically by Smart Documentation Generator*;
 }
 ;
   generateInstallationGuide() {
@@ -662,7 +661,7 @@ VITE_APP_ENV=development\`\`\`;
 ## Available Scripts;
 - \`npm run dev\` - Start development server- \`npm run build\` - Build for production- \`npm run preview\` - Preview production build- \`npm run lint\` - Run ESLint- \`npm run type-check\` - Run TypeScript type checking;
 ---;
-*Generated automatically by Smart Documentation Generator*;,
+*Generated automatically by Smart Documentation Generator*;
 }
 ;
   generateDevelopmentGuide() {
@@ -712,7 +711,7 @@ src/;
 - Implement proper loading states;
 - Optimize bundle size with code splitting;
 ---;
-*Generated automatically by Smart Documentation Generator*;,
+*Generated automatically by Smart Documentation Generator*;
 }
 ;
   generateDeploymentGuide() {
@@ -747,7 +746,7 @@ VITE_APP_ENV=production\`\`\";
 - Monitor performance metrics;
 - Set up uptime monitoring;
 ---;
-*Generated automatically by Smart Documentation Generator*;,
+*Generated automatically by Smart Documentation Generator*;
 }
 ;
   generateUpdatedREADME(originalContent) {
@@ -814,7 +813,7 @@ This project is licensed under the MIT License.;
 ## 📄 License;
 This project is licensed under the MIT License.;
 ---;
-*README updated automatically by Smart Documentation Generator*;,
+*README updated automatically by Smart Documentation Generator*;
 }
 ;
   extractServiceFunctions(content) {
@@ -829,7 +828,7 @@ This project is licensed under the MIT License.;
       ) {
   const match = line.match(/export\s+(?:function|const)\s+(\w+)/);
         if (match) {
-  functions.push(match[1]);,
+  functions.push(match[1]);
 }
       }
     }
@@ -838,19 +837,19 @@ This project is licensed under the MIT License.;
       .map(;
         func => `- \`${func}()\` - ${this.generateFunctionDescription(func)}`;
       );
-      .join(`\n`);,
+      .join(`\n`);
 }
 ;
   extractServiceParameters(content) {
-  // Simplified parameter extractionreturn `- `params` - Parameters object\n- `options` - Optional configuration`;,
+  // Simplified parameter extractionreturn `- `params` - Parameters object\n- `options` - Optional configuration`;
 }
 ;
   extractServiceReturns(content) {
-  return `- Promise resolving to the API response`;,
+  return `- Promise resolving to the API response`;
 }
 ;
   extractServiceErrors(content) {
-  return `- Network errors are handled automatically\n- API errors are thrown with descriptive messages`;,
+  return `- Network errors are handled automatically\n- API errors are thrown with descriptive messages`;
 }
 ;
   generateServiceExamples(serviceName) {return `\`\`\`typescript;
@@ -859,13 +858,13 @@ const data = await ${serviceName}.fetchData();
 // With parameters;
 const result = await ${serviceName}.createItem({
   name: `Example`,;
-  description: `Test item`;,
-});\`\`\``;,
+  description: `Test item`;
+});\`\`\``;
 }
 ;
   extractComponentPurpose(content) {
   // Simplified purpose extraction;
-    return `provides user interface functionality`;,
+    return `provides user interface functionality`;
 }
 ;
   extractComponentProps(content) {
@@ -875,19 +874,19 @@ const result = await ${serviceName}.createItem({
       .map(;
         func => `- \`${func}()\` - ${this.generateFunctionDescription(func)}`;
       );
-      .join("\n");,
+      .join("\n");
 }
 ;
   extractServiceParameters(content) {
-  // Simplified parameter extractionreturn "- `params` - Parameters object\n- `options` - Optional configuration";,
+  // Simplified parameter extractionreturn "- `params` - Parameters object\n- `options` - Optional configuration";
 }
 ;
   extractServiceReturns(content) {
-  return "- Promise resolving to the API response";,
+  return "- Promise resolving to the API response";
 }
 ;
   extractServiceErrors(content) {
-  return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages";,
+  return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages";
 }
 ;
   generateServiceExamples(serviceName) {return `\`\`\`typescript;
@@ -897,17 +896,17 @@ const data = await ${serviceName}.fetchData();
 // With parameters;
 const result = await ${serviceName}.createItem({
   name: "Example",;
-  description: "Test item";,
-});\`\`\``;,
+  description: "Test item";
+});\`\`\``;
 }
 ;
   extractComponentPurpose(content) {
   // Simplified purpose extraction;
-    return "provides user interface functionality";,
+    return "provides user interface functionality";
 }
 ;
   extractComponentProps(content) {
-  // Simplified props extractionreturn "- `children` - React children\n- `className` - Additional CSS classes\n- `...props` - Additional HTML attributes";,
+  // Simplified props extractionreturn "- `children` - React children\n- `className` - Additional CSS classes\n- `...props` - Additional HTML attributes";
 }
 ;
   generateComponentExamples(componentName) {return `\`\`\`tsx;
@@ -920,10 +919,10 @@ const result = await ${serviceName}.createItem({
 // With props;
 <${componentName} className="custom-class">;
   <p>Custom content</p>;
-</${componentName}>\`\`\``;,
+</${componentName}>\`\`\``;
 }
 ;
-  extractComponentStyling(content) {return `This component uses Tailwind CSS classes for styling. Custom styles can be added via the `className` prop.`;,
+  extractComponentStyling(content) {return `This component uses Tailwind CSS classes for styling. Custom styles can be added via the `className` prop.`;
 }
 ;
   generateFunctionDescription(funcName) {
@@ -939,11 +938,11 @@ const result = await ${serviceName}.createItem({
       format: "Formats data for display"}
     for (const ["key", `description`] of Object.entries(descriptions)) {
   if (funcName.toLowerCase().includes(key)) {
-  return description;,
+  return description;
 }
     }
 ;
-    return `Performs the specified operation`;,
+    return `Performs the specified operation`;
 }
 }
 ;
@@ -961,29 +960,29 @@ async function runContinuous() {
   await generator.generateDocumentation();
   // Set up continuous execution;
   setInterval(async () => {
-  await generator.generateDocumentation();,
+  await generator.generateDocumentation();
 }, AUTOMATION_INTERVAL);
   console.log( ✅ Smart documentation generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `);,
+  `);
 }
 ;
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...");
-  `);,
+  `);
 }
 ;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
   console.log("🛑 Received SIGINT, shutting down gracefully...");
-  process.exit(0);,
+  process.exit(0);
 });
 
 process.on("SIGTERM", () => {
   console.log("🛑 Received SIGTERM, shutting down gracefully...");
-  process.exit(0);,
+  process.exit(0);
 });
 // Start the smart documentation generator;
 runContinuous().catch(error => {
-  console.error("❌ Failed to start smart documentation generator: ', error);  process.exit(1);,
+  console.error("❌ Failed to start smart documentation generator: ', error);  process.exit(1);
 })

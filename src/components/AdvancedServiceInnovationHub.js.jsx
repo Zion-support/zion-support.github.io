@@ -1238,9 +1238,8 @@ const innovationTrends = []"
             </Button>
           </div>
       </motion.div>
-    </div>)};
+</div>)};
 export default AdvancedServiceInnovationHub;
-
 
 export { AdvancedServiceInnovationHub };
 

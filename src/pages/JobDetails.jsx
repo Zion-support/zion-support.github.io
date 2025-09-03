@@ -161,7 +161,6 @@ export default function JobDetails() {}
                 comp_name: job.comp_name || "Comp",
                 budget: job.budget,
 
-
 export { JobDetails };
 
 export { JobDetails };

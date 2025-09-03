@@ -207,9 +207,6 @@ const AICodeReviewAssistant = () => {}
 =
   y: 0 
 
-
-
-
 "
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx
 >""
@@ -312,10 +309,6 @@ const AICodeReviewAssistant = () => {}
                   <div className="text-3xl font-bold text-blue-400 mb-2">{benefit.metric}</div>"
   delay: 0.6 
 
-
-
-
-
 "
 }}>""
               {benefits.map((benefit, index) => (<div key={index} className="text-center">""
@@ -342,10 +335,6 @@ const AICodeReviewAssistant = () => {}
 
 }}>"
   delay: 0.8 
-
-
-
-
 
 "
 }}>""
@@ -407,10 +396,6 @@ const AICodeReviewAssistant = () => {}
 }} transition={{ duration: 0.6 }}>"
   y: 0 
 
-
-
-
-
 "
 }} transition={{ duration: 0.6 }}>""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -457,10 +442,6 @@ const AICodeReviewAssistant = () => {}
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
   delay: index * 0.1 
 
-
-
-
-
 "
 }}>""
                   <div className="text-blue-400 mb-4">{feature.icon}</div>""
@@ -503,10 +484,6 @@ const AICodeReviewAssistant = () => {}
 
 }} transition={{ duration: 0.6 }}>"
   y: 0 
-
-
-
-
 
 "
 }} transition={{ duration: 0.6 }}>""
@@ -554,10 +531,6 @@ const AICodeReviewAssistant = () => {}
 }}>"
                   {plan.popular && (<div className="text-center mb-4">"
   delay: index * 0.1 
-
-
-
-
 
 "
 }}>""
@@ -645,10 +618,6 @@ const AICodeReviewAssistant = () => {}
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3"/>"
   x: 0 
 
-
-
-
-
 "
   x: -20;
 }} whileInView = {}
@@ -683,10 +652,6 @@ const AICodeReviewAssistant = () => {}
                   {useCases.map((useCase, index) => (<div key={index} className="flex items-center bg-white/10 rounded-lg p-3">"
                       <Star className="w-5 h-5 text-yellow-400 mr-3"/>"
   x: 0 
-
-
-
-
 
 "
   x: 20;
@@ -809,10 +774,6 @@ const AICodeReviewAssistant = () => {}
               </Link>"
   delay: 0.4 
 
-
-
-
-
 "
 }}>""
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">"
@@ -847,10 +808,6 @@ const AICodeReviewAssistant = () => {}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">"
                 <div className="flex items-center">"
   delay: 0.6 
-
-
-
-
 
 "
             </motion.div>

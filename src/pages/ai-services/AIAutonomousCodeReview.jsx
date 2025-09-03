@@ -350,7 +350,6 @@ export default function AIAutonomousCodeReview() {}
       </section>
     </div>)}
 
-
 export { AIAutonomousCodeReview, IconComponent, IconComponent };
 
 export { AIAutonomousCodeReview, IconComponent, IconComponent };

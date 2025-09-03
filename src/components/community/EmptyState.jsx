@@ -104,7 +104,7 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"
 
         </Tooltip>
       </TooltipProvider>
-    </div>)};
+</div>)};
 export default EmptyState;
 }
 

@@ -206,7 +206,6 @@ export default function AIBrainComputerInterface() {}
       </section>
     </div>)}
 
-
 export { AIBrainComputerInterface, IconComponent };
 
 export { AIBrainComputerInterface, IconComponent };

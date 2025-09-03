@@ -739,7 +739,6 @@ const ContentQualityDashboardJs = () => {
     </div>)};
 export default ContentQualityDashboard;
 
-
 export { ContentQualityDashboard };
 
 export { ContentQualityDashboard };

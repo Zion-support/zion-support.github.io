@@ -5,7 +5,7 @@ export function BackToTopButton () {
 
     const [visible, setVisible] = useState(false);
     const { t } = useTranslation () ;
-    useEffect(() => {
+useEffect(() => {
   // TODO: Add dependencies if needed
 
   return () => {

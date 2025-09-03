@@ -702,10 +702,9 @@ https: // comment
             </p>
           </motion.div>
         </div>
-      </section>
+</section>
     </div>)};
 export default EnhancedServicesShowcase;
-
 
 export { EnhancedServicesShowcase };
 

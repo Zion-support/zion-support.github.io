@@ -179,7 +179,6 @@ export default function BlogPost() {
 :src/pages/BlogPost.js.jsx
     </>)}
 
-
 export { BlogPost };
 
 export { BlogPost };

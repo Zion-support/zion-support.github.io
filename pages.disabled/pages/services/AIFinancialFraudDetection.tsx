@@ -265,7 +265,6 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 =
   x: 0 
 
-
   x: 0 "
   x: 0;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -696,7 +695,6 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 }}
 =
   y: 0 
-
 
   y: 0 "
   y: 0;

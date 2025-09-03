@@ -380,13 +380,12 @@ export default function Page() {
                     <li>• Add proper heading structure</li>
                   </ul>
                 </div>
-              </div>
+</div>
             </div>
           </motion.div>
         </motion.div>)}
     </>)};
 export default ContentQualityAnalyzer;
-
 
 export { ContentQualityAnalyzer };
 

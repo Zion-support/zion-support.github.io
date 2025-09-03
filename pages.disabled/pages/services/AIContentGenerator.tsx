@@ -329,10 +329,6 @@ export default function AIContentGenerator(...args[]):  {}
                   className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group"
   delay: index * 0.1 
 
-
-
-
-
 "
   delay: index * 0.1;
 }}""
@@ -591,10 +587,6 @@ export default function AIContentGenerator(...args[]):  {}
 }}"
                   className="flex items-start space-x-3"
   delay: index * 0.1 
-
-
-
-
 
 "
   delay: index * 0.1;

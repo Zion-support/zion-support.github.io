@@ -55,7 +55,6 @@ export default function OrdersPage() {}
         </Table>)}
     </div>)}
 
-
 export { OrdersPage };
 
 export { OrdersPage };

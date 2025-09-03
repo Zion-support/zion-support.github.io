@@ -481,7 +481,7 @@ useEffect(() => {}"
     const settings = {}"
       highContrast, reducedMotion,""
       fontSize,
-      colorBlindMode};
+colorBlindMode};
     localStorage.setItem('
       'zion-accessibility-settings',
       JSON.stringify(settings)
@@ -550,7 +550,7 @@ if (reducedMotion) {}""
     </AccessibilityContext.Provider>
   )}
 
-    highContrast,
+highContrast,
     reducedMotion,
     fontSize,
     colorBlindMode,
@@ -853,7 +853,7 @@ const firstFocusableElement = focusableContent[0]
       if (e.key === "Tab") {}
         if(e.shiftKey) {}
 
-  useEffect(() => {
+useEffect(() => {
   // TODO: Add dependencies if needed
 
   return () => {

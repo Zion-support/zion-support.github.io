@@ -439,7 +439,7 @@ issues,
         finally {}
 
             setIsAnalyzing(false)}
-    }, []);
+}, []);
     useEffect(() => {
   // TODO: Add dependencies if needed
 

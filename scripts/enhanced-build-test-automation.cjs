@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const { execSync, spawn } = require("$1");
-const fs = require("$1");
+const { execSync, spawn } = require("child_process");
+const fs = require("child_process");
 const path = require("path")
 class EnhancedBuildTestAutomation {
   constructor() {
@@ -12,12 +12,12 @@ class EnhancedBuildTestAutomation {
       steps: [],
       summary: { total: 0, passed: 0, failed: 0, warnings: 0 }
     }
-    this.ensureDirectories(),
+    this.ensureDirectories()
 }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
+      fs.mkdirSync(this.reportsDir, { recursive: true })
 }
   }
 
@@ -25,7 +25,7 @@ class EnhancedBuildTestAutomation {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
     console.log(logMessage)
-    fs.appendFileSync(this.logFile, logMessage + "\n"),
+    fs.appendFileSync(this.logFile, logMessage + "\n")
 }
 
   async runCommand(command, description) {
@@ -34,14 +34,14 @@ class EnhancedBuildTestAutomation {
       name: description,
       command,
       startTime: Date.now(),
-      status: "running",
+      status: "running"
 }
     
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: "utf8",
-        timeout: 300000 // 5 minutes timeout,
+        timeout: 300000 // 5 minutes timeout
 })
       
       step.endTime = Date.now()
@@ -72,23 +72,23 @@ class EnhancedBuildTestAutomation {
 
   async runLinting() {
     this.log("🔍 Running linting checks...")
-    return await this.runCommand("npm run lint", "ESLint Check"),
+    return await this.runCommand("npm run lint", "ESLint Check")
 }
 
   async runTypeChecking() {
     this.log("🔍 Running TypeScript type checking...")
-    return await this.runCommand("npm run type-check", "TypeScript Type Check"),
+    return await this.runCommand("npm run type-check", "TypeScript Type Check")
 }
 
   async runBuild() {
     this.log("🏗️ Running build process...")
-    return await this.runCommand("npm run build", "Next.js Build"),
+    return await this.runCommand("npm run build", "Next.js Build")
 }
 
   async runTests() {
     this.log("🧪 Running tests...")
     try {
-      return await this.runCommand("npm test", "Jest Tests"),
+      return await this.runCommand("npm test", "Jest Tests")
 } catch (error) {
       this.log("⚠️ Tests not configured or failed, continuing...", "warning")
       this.results.summary.warnings++
@@ -98,7 +98,7 @@ class EnhancedBuildTestAutomation {
 
   async runSecurityAudit() {
     this.log("🔒 Running security audit...")
-    return await this.runCommand("npm audit --audit-level=moderate", "Security Audit"),
+    return await this.runCommand("npm audit --audit-level=moderate", "Security Audit")
 }
 
   async generateReport() {
@@ -106,7 +106,7 @@ class EnhancedBuildTestAutomation {
     const reportFile = path.join(this.reportsDir, `enhanced-build-test-report-${Date.now()}.json`)
     fs.writeFileSync(reportFile, JSON.stringify(this.results, null, 2))
     this.log(`📄 Report saved to: ${reportFile}`)
-    return reportFile,
+    return reportFile
 }
 
   displaySummary() {
@@ -124,8 +124,8 @@ class EnhancedBuildTestAutomation {
     if (summary.failed > 0) {
       console.log("\n❌ FAILED STEPS:")
       this.results.steps.filter(s => s.status === "failed").forEach((step, index) => {
-        console.log(`${index + 1}. ${step.name}: ${step.error}`),
-}),
+        console.log(`${index + 1}. ${step.name}: ${step.error}`)
+})
 }
   }
 
@@ -157,8 +157,8 @@ class EnhancedBuildTestAutomation {
 if (require.main === module) {
   const automation = new EnhancedBuildTestAutomation()
   automation.run().then(result => {
-    process.exit(result.success ? 0 : 1),
-}),
+    process.exit(result.success ? 0 : 1)
+})
 }
 
 module.exports = EnhancedBuildTestAutomation

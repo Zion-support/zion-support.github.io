@@ -21,7 +21,6 @@ if (typeof window === 'undefined') return;
 
     const observer = new PerformanceObserver((list) => {;const entries = list.getEntries();
 
-      
       entries.forEach((entry) => {
         switch (entry.entryType) {
 case 'paint': if (entry.name === 'first-contentful-paint') {'              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));'            }

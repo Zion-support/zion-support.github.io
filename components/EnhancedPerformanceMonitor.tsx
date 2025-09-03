@@ -97,8 +97,7 @@ interface PerformanceAlert {"
 ;
 const EnhancedPerformanceMonitor: React.FC = () => {,,;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-
-  const [isLoading, setIsLoading] = useState(true);
+const [isLoading, setIsLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
   const [alerts, setAlerts] = useState<string[]>([]);
 const EnhancedPerformanceMonitor: React.FC = () => {,,
@@ -157,7 +156,7 @@ metrics.tti = Math.round(performance.now())
 }
 const finalMetrics = {}
 
-        finalMetrics.score = calculateOverallScore(finalMetrics);
+finalMetrics.score = calculateOverallScore(finalMetrics);
 
         resolve(finalMetrics);
       });
@@ -229,7 +228,7 @@ message: "Cumulative Layout Shift is high","
     updateMetrics()
 }
     if (autoRefresh) {
-      const interval = setInterval(updateMetrics, refreshInterval);
+const interval = setInterval(updateMetrics, refreshInterval);
       return () => clearInterval(interval);
 
     }
@@ -253,7 +252,7 @@ const getScoreColor = (score: number): string => {;
             )}
           </div>        </motion.div>
 
-  return (
+return (
 <div className="bg-white dark: bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700>      <div className="flex items-center justify-between mb-4">"        <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center>          <Activity className="w-5 h-5 mr-2 text-blue-500" />"          Performance Monitor"        </h3>
         <div className="flex items-center space-x-2>          <button"            onClick={updateMetrics}
             disabled={isLoading}

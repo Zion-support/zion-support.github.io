@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
+const fs = require("child_process");
+const path = require("child_process");
 const { execSync } = require("child_process")
 class IntelligentErrorDetectorFixer {
   constructor() {
@@ -10,12 +10,12 @@ class IntelligentErrorDetectorFixer {
     this.fixes = []
     this.errors = []
     this.patterns = this.initializeErrorPatterns()
-    this.ensureDirectories(),
+    this.ensureDirectories()
 }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
+      fs.mkdirSync(this.reportsDir, { recursive: true })
 }
   }
 
@@ -23,7 +23,7 @@ class IntelligentErrorDetectorFixer {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
     console.log(logMessage)
-    fs.appendFileSync(this.logFile, logMessage + "\n"),
+    fs.appendFileSync(this.logFile, logMessage + "\n")
 }
 
   initializeErrorPatterns() {
@@ -41,7 +41,7 @@ class IntelligentErrorDetectorFixer {
       typeErrors: [
         { pattern: /TypeError: Cannot read property/, fix: "Add null check" },
         { pattern: /TypeError: Cannot read properties/, fix: "Add property check" }
-      ],
+      ]
 }
   }
 
@@ -53,7 +53,7 @@ class IntelligentErrorDetectorFixer {
       // Run ESLint to find errors
       const lintResult = execSync("npm run lint 2>&1 || true", {
         cwd: this.projectRoot,
-        encoding: "utf8",
+        encoding: "utf8"
 })
       
       if (lintResult.includes("error")) {
@@ -61,18 +61,18 @@ class IntelligentErrorDetectorFixer {
         this.errors.push({
           type: "lint",
           message: "ESLint errors found",
-          details: lintResult,
-}),
+          details: lintResult
+})
 }
     } catch (error) {
-      this.log(`ESLint scan failed: ${error.message}`, "warning"),
+      this.log(`ESLint scan failed: ${error.message}`, "warning")
 }
 
     try {
       // Run TypeScript check
       const typeResult = execSync("npm run type-check 2>&1 || true", {
         cwd: this.projectRoot,
-        encoding: "utf8",
+        encoding: "utf8"
 })
       
       if (typeResult.includes("error")) {
@@ -80,14 +80,14 @@ class IntelligentErrorDetectorFixer {
         this.errors.push({
           type: "typescript",
           message: "TypeScript errors found",
-          details: typeResult,
-}),
+          details: typeResult
+})
 }
     } catch (error) {
-      this.log(`TypeScript check failed: ${error.message}`, "warning"),
+      this.log(`TypeScript check failed: ${error.message}`, "warning")
 }
 
-    return errorFiles,
+    return errorFiles
 }
 
   async fixSyntaxErrors() {
@@ -112,16 +112,16 @@ class IntelligentErrorDetectorFixer {
           this.fixes.push({
             file,
             type: "syntax",
-            description: "Fixed common syntax issues",
-}),
+            description: "Fixed common syntax issues"
+})
 }
       } catch (error) {
-        this.log(`Failed to fix ${file}: ${error.message}`, "error"),
+        this.log(`Failed to fix ${file}: ${error.message}`, "error")
 }
     }
     
     this.log(`Fixed syntax errors in ${fixedCount} files`)
-    return fixedCount,
+    return fixedCount
 }
 
   fixCommonSyntaxIssues(content) {
@@ -134,12 +134,12 @@ class IntelligentErrorDetectorFixer {
     fixed = fixed.replace(/"([^"]*)"/g, ""$1"")
     
     // Fix missing commas in objects
-    fixed = fixed.replace(/([^,}])\n\s*}/g, "$1,\n}")
+    fixed = fixed.replace(/([^}])\n\s*}/g, "$1,\n}")
     
     // Fix malformed imports
     fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+[""]([^""]+)[""];?/g, "import { $1  } from "$2"")
     
-    return fixed,
+    return fixed
 }
 
   findSourceFiles() {
@@ -154,21 +154,21 @@ class IntelligentErrorDetectorFixer {
           const stat = fs.statSync(fullPath)
           
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
-            scanDir(fullPath),
+            scanDir(fullPath)
 } else if (stat.isFile()) {
             const ext = path.extname(item)
             if (extensions.includes(ext)) {
-              files.push(fullPath),
+              files.push(fullPath)
 }
           }
         }
       } catch (error) {
-        // Skip directories we can"t read,
+        // Skip directories we can"t read
 }
     }
     
     scanDir(this.projectRoot)
-    return files,
+    return files
 }
 
   async generateReport() {
@@ -178,17 +178,17 @@ class IntelligentErrorDetectorFixer {
       summary: {
         errorsFound: this.errors.length,
         fixesApplied: this.fixes.length,
-        filesScanned: this.findSourceFiles().length,
+        filesScanned: this.findSourceFiles().length
 },
       errors: this.errors,
       fixes: this.fixes,
-      recommendations: this.generateRecommendations(),
+      recommendations: this.generateRecommendations()
 }
     
     const reportFile = path.join(this.reportsDir, `intelligent-error-detector-report-${Date.now()}.json`)
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
     this.log(`📄 Report saved to: ${reportFile}`)
-    return reportFile,
+    return reportFile
 }
 
   generateRecommendations() {
@@ -197,23 +197,23 @@ class IntelligentErrorDetectorFixer {
     if (this.errors.length > 0) {
       recommendations.push({
         type: "error",
-        message: `${this.errors.length} errors found. Review and fix manually.`,
-}),
+        message: `${this.errors.length} errors found. Review and fix manually.`
+})
 }
     
     if (this.fixes.length > 0) {
       recommendations.push({
         type: "success",
-        message: `${this.fixes.length} automatic fixes applied.`,
-}),
+        message: `${this.fixes.length} automatic fixes applied.`
+})
 }
     
     recommendations.push({
       type: "improvement",
-      message: "Consider adding pre-commit hooks to catch errors early.",
+      message: "Consider adding pre-commit hooks to catch errors early."
 })
     
-    return recommendations,
+    return recommendations
 }
 
   displaySummary() {
@@ -228,15 +228,15 @@ class IntelligentErrorDetectorFixer {
     if (this.errors.length > 0) {
       console.log("\n❌ ERRORS FOUND:")
       this.errors.forEach((error, index) => {
-        console.log(`${index + 1}. ${error.type}: ${error.message}`),
-}),
+        console.log(`${index + 1}. ${error.type}: ${error.message}`)
+})
 }
     
     if (this.fixes.length > 0) {
       console.log("\n✅ FIXES APPLIED:")
       this.fixes.forEach((fix, index) => {
-        console.log(`${index + 1}. ${fix.file}: ${fix.description}`),
-}),
+        console.log(`${index + 1}. ${fix.file}: ${fix.description}`)
+})
 }
   }
 
@@ -265,8 +265,8 @@ class IntelligentErrorDetectorFixer {
 if (require.main === module) {
   const detector = new IntelligentErrorDetectorFixer()
   detector.run().then(result => {
-    process.exit(result.success ? 0 : 1),
-}),
+    process.exit(result.success ? 0 : 1)
+})
 }
 
 module.exports = IntelligentErrorDetectorFixer

@@ -529,7 +529,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
                 Contact Us
               </Link>
             </div>
-          </motion.div>
+</motion.div>
 """
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {microSaaSServices.map((service, index) => (
@@ -630,7 +630,6 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
     </div>
   );
 }
-
 
 export { InnovativeServicesShowcase2028 };
 

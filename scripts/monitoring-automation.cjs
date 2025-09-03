@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
-const http = require("$1");
+const fs = require("child_process");
+const path = require("child_process");
+const http = require("child_process");
 const { execSync } = require("child_process")
 class MonitoringAutomation {
   constructor() {
@@ -16,14 +16,14 @@ class MonitoringAutomation {
       disk: 90, // Disk usage percentage
       responseTime: 5000, // Response time in ms
       errorRate: 5, // Error rate percentage
-      uptimeMinimum: 99.5 // Minimum uptime percentage,
+      uptimeMinimum: 99.5 // Minimum uptime percentage
 }
     // Ensure directories exist
     [this.logDir, this.alertsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true }),
+        fs.mkdirSync(dir, { recursive: true })
 }
-    }),
+    })
 }
 
   log(message, level = "INFO") {
@@ -32,7 +32,7 @@ class MonitoringAutomation {
     console.log(logMessage)
     // Write to log file
     const logFile = path.join(this.logDir, "monitoring.log")
-    fs.appendFileSync(logFile, logMessage + "\n"),
+    fs.appendFileSync(logFile, logMessage + "\n")
 }
 
   async collectSystemMetrics() {
@@ -49,7 +49,7 @@ class MonitoringAutomation {
       metrics.system.cpu = {
         user: cpuUsage.user,
         system: cpuUsage.system,
-        usage: Math.round((cpuUsage.user + cpuUsage.system) / 10000) // Rough percentage,
+        usage: Math.round((cpuUsage.user + cpuUsage.system) / 10000) // Rough percentage
 }
       // Memory Usage
       const memUsage = process.memoryUsage()
@@ -63,7 +63,7 @@ class MonitoringAutomation {
         usage: Math.round((usedMem / totalMem) * 100), // Percentage
         heap: {
           used: Math.round(memUsage.heapUsed / 1024 / 1024), // MB
-          total: Math.round(memUsage.heapTotal / 1024 / 1024) // MB,
+          total: Math.round(memUsage.heapTotal / 1024 / 1024) // MB
 }
       }
       // Disk Usage
@@ -74,10 +74,10 @@ class MonitoringAutomation {
           total: diskLines[1],
           used: diskLines[2],
           available: diskLines[3],
-          usage: parseInt(diskLines[4].replace("%", "")),
+          usage: parseInt(diskLines[4].replace("%", ""))
 }
       } catch (error) {
-        this.log("Could not collect disk metrics", "WARN"),
+        this.log("Could not collect disk metrics", "WARN")
 }
       
       // Load Average
@@ -85,20 +85,20 @@ class MonitoringAutomation {
       metrics.system.loadAverage = {
         "1min": loadAvg[0],
         "5min": loadAvg[1],
-        "15min": loadAvg[2],
+        "15min": loadAvg[2]
 }
       // Network connections (if possible)
       try {
         const netstat = execSync("netstat -an | grep :3000 | wc -l", { encoding: "utf8" })
-        metrics.system.connections = parseInt(netstat.trim()),
+        metrics.system.connections = parseInt(netstat.trim())
 } catch (error) {
-        metrics.system.connections = 0,
+        metrics.system.connections = 0
 }
       
-      return metrics,
+      return metrics
 } catch (error) {
       this.log(`Error collecting system metrics: ${error.message}`, "ERROR")
-      return metrics,
+      return metrics
 }
   }
 
@@ -124,19 +124,19 @@ class MonitoringAutomation {
           cpu: proc.monit.cpu,
           memory: Math.round(proc.monit.memory / 1024 / 1024), // MB
           uptime: proc.pm2_env.pm_uptime,
-          restarts: proc.pm2_env.restart_time,
-})),
+          restarts: proc.pm2_env.restart_time
+}))
 } catch (error) {
-        this.log("PM2 metrics not available", "WARN"),
+        this.log("PM2 metrics not available", "WARN")
 }
       
       // Error log analysis
       const errorMetrics = await this.analyzeErrorLogs()
       metrics.errors = errorMetrics
-      return metrics,
+      return metrics
 } catch (error) {
       this.log(`Error collecting application metrics: ${error.message}`, "ERROR")
-      return metrics,
+      return metrics
 }
   }
 
@@ -148,25 +148,25 @@ class MonitoringAutomation {
         resolve({
           status: res.statusCode === 200 ? "healthy" : "unhealthy",
           responseTime,
-          statusCode: res.statusCode,
-}),
+          statusCode: res.statusCode
+})
 })
       req.on("error", (error) => {
         resolve({
           status: "unhealthy",
           responseTime: Date.now() - startTime,
-          error: error.message,
-}),
+          error: error.message
+})
 })
       req.setTimeout(5000, () => {
         req.destroy()
         resolve({
           status: "unhealthy",
           responseTime: Date.now() - startTime,
-          error: "timeout",
-}),
-}),
-}),
+          error: "timeout"
+})
+})
+})
 }
 
   async analyzeErrorLogs() {
@@ -174,7 +174,7 @@ class MonitoringAutomation {
       recentErrors: 0,
       errorRate: 0,
       criticalErrors: 0,
-      warnings: 0,
+      warnings: 0
 }
     try {
       // Analyze error logs from the last hour
@@ -194,39 +194,39 @@ class MonitoringAutomation {
               if (timestamp && timestamp > oneHourAgo) {
                 errorAnalysis.recentErrors++
                 if (line.includes("CRITICAL") || line.includes("FATAL")) {
-                  errorAnalysis.criticalErrors++,
+                  errorAnalysis.criticalErrors++
 }
               }
             } else if (line.includes("[WARN]")) {
               const timestamp = this.extractTimestamp(line)
               if (timestamp && timestamp > oneHourAgo) {
-                errorAnalysis.warnings++,
+                errorAnalysis.warnings++
 }
             }
-          }),
+          })
 }
       }
       
       // Calculate error rate (errors per minute)
       errorAnalysis.errorRate = Math.round((errorAnalysis.recentErrors / 60) * 100) / 100
-      ,
+      
 } catch (error) {
-      this.log(`Error analyzing logs: ${error.message}`, "ERROR"),
+      this.log(`Error analyzing logs: ${error.message}`, "ERROR")
 }
     
-    return errorAnalysis,
+    return errorAnalysis
 }
 
   extractTimestamp(logLine) {
     const timestampMatch = logLine.match(/\[([\d-T:.Z]+)\]/)
     if (timestampMatch) {
       try {
-        return new Date(timestampMatch[1]),
+        return new Date(timestampMatch[1])
 } catch (error) {
-        return null,
+        return null
 }
     }
-    return null,
+    return null
 }
 
   async checkThresholds(metrics) {
@@ -239,8 +239,8 @@ class MonitoringAutomation {
         level: "warning",
         message: `CPU usage is ${metrics.system.cpu.usage}% (threshold: ${this.thresholds.cpu}%)`,
         value: metrics.system.cpu.usage,
-        threshold: this.thresholds.cpu,
-}),
+        threshold: this.thresholds.cpu
+})
 }
     
     // Memory threshold
@@ -250,8 +250,8 @@ class MonitoringAutomation {
         level: "warning",
         message: `Memory usage is ${metrics.system.memory.usage}% (threshold: ${this.thresholds.memory}%)`,
         value: metrics.system.memory.usage,
-        threshold: this.thresholds.memory,
-}),
+        threshold: this.thresholds.memory
+})
 }
     
     // Disk threshold
@@ -261,8 +261,8 @@ class MonitoringAutomation {
         level: "critical",
         message: `Disk usage is ${metrics.system.disk.usage}% (threshold: ${this.thresholds.disk}%)`,
         value: metrics.system.disk.usage,
-        threshold: this.thresholds.disk,
-}),
+        threshold: this.thresholds.disk
+})
 }
     
     // Response time threshold
@@ -273,8 +273,8 @@ class MonitoringAutomation {
         level: "warning",
         message: `Response time is ${metrics.application.health.responseTime}ms (threshold: ${this.thresholds.responseTime}ms)`,
         value: metrics.application.health.responseTime,
-        threshold: this.thresholds.responseTime,
-}),
+        threshold: this.thresholds.responseTime
+})
 }
     
     // Application health
@@ -285,8 +285,8 @@ class MonitoringAutomation {
         level: "critical",
         message: `Application is ${metrics.application.health.status}`,
         value: metrics.application.health.status,
-        threshold: "healthy",
-}),
+        threshold: "healthy"
+})
 }
     
     // Error rate threshold
@@ -297,17 +297,17 @@ class MonitoringAutomation {
         level: "warning",
         message: `Error rate is ${metrics.application.errors.errorRate} errors/min (threshold: ${this.thresholds.errorRate})`,
         value: metrics.application.errors.errorRate,
-        threshold: this.thresholds.errorRate,
-}),
+        threshold: this.thresholds.errorRate
+})
 }
     
-    return alerts,
+    return alerts
 }
 
   async sendAlerts(alerts) {
     if (alerts.length === 0) {
       this.log("No alerts to send")
-      return,
+      return
 }
     
     this.log(`Sending ${alerts.length} alerts...`)
@@ -315,27 +315,27 @@ class MonitoringAutomation {
     let existingAlerts = []
     if (fs.existsSync(this.alertsFile)) {
       try {
-        existingAlerts = JSON.parse(fs.readFileSync(this.alertsFile, "utf8")),
+        existingAlerts = JSON.parse(fs.readFileSync(this.alertsFile, "utf8"))
 } catch (error) {
-        existingAlerts = [],
+        existingAlerts = []
 }
     }
     
     const newAlerts = alerts.map(alert => ({
       ...alert,
       timestamp: new Date().toISOString(),
-      id: `${alert.type}_${Date.now()}`,
+      id: `${alert.type}_${Date.now()}`
 }))
     existingAlerts.push(...newAlerts)
     // Keep only last 100 alerts
     if (existingAlerts.length > 100) {
-      existingAlerts = existingAlerts.slice(-100),
+      existingAlerts = existingAlerts.slice(-100)
 }
     
     fs.writeFileSync(this.alertsFile, JSON.stringify(existingAlerts, null, 2))
     // Log alerts
     alerts.forEach(alert => {
-      this.log(`ALERT [${alert.level.toUpperCase()}]: ${alert.message}`, "ALERT"),
+      this.log(`ALERT [${alert.level.toUpperCase()}]: ${alert.message}`, "ALERT")
 })
     // In a real system, you would send these to:
     // - Slack/Discord webhooks
@@ -343,33 +343,33 @@ class MonitoringAutomation {
     // - PagerDuty/OpsGenie
     // - SMS alerts
     
-    this.log(`${alerts.length} alerts processed`),
+    this.log(`${alerts.length} alerts processed`)
 }
 
   async saveMetrics(systemMetrics, applicationMetrics) {
     const combinedMetrics = {
       timestamp: new Date().toISOString(),
       system: systemMetrics.system,
-      application: applicationMetrics,
+      application: applicationMetrics
 }
     // Save to metrics file
     let existingMetrics = []
     if (fs.existsSync(this.metricsFile)) {
       try {
-        existingMetrics = JSON.parse(fs.readFileSync(this.metricsFile, "utf8")),
+        existingMetrics = JSON.parse(fs.readFileSync(this.metricsFile, "utf8"))
 } catch (error) {
-        existingMetrics = [],
+        existingMetrics = []
 }
     }
     
     existingMetrics.push(combinedMetrics)
     // Keep only last 1000 metrics (roughly 16 hours at 1-minute intervals)
     if (existingMetrics.length > 1000) {
-      existingMetrics = existingMetrics.slice(-1000),
+      existingMetrics = existingMetrics.slice(-1000)
 }
     
     fs.writeFileSync(this.metricsFile, JSON.stringify(existingMetrics, null, 2))
-    this.log("Metrics saved"),
+    this.log("Metrics saved")
 }
 
   async generateReport() {
@@ -383,19 +383,19 @@ class MonitoringAutomation {
           totalMetrics: metrics.length,
           recentAlerts: alerts.filter(a => 
             new Date(a.timestamp) > new Date(Date.now() - 24 * 60 * 60 * 1000)).length,
-          criticalAlerts: alerts.filter(a => a.level === "critical").length,
+          criticalAlerts: alerts.filter(a => a.level === "critical").length
 },
         latestMetrics: metrics.slice(-1)[0] || {},
-        recentAlerts: alerts.slice(-10) || [],
+        recentAlerts: alerts.slice(-10) || []
 }
       const reportFile = path.join(this.logDir, "monitoring-report.json")
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
       this.log(`Monitoring report saved to: ${reportFile}`)
       return report
-      ,
+      
 } catch (error) {
       this.log(`Error generating report: ${error.message}`, "ERROR")
-      return null,
+      return null
 }
   }
 
@@ -418,12 +418,12 @@ class MonitoringAutomation {
       return {
         metrics: combinedMetrics,
         alerts,
-        report,
+        report
 }
-      ,
+      
 } catch (error) {
       this.log(`❌ Monitoring automation failed: ${error.message}`, "ERROR")
-      throw error,
+      throw error
 }
   }
 }
@@ -436,14 +436,14 @@ if (require.main === module) {
       console.log("\n✅ Monitoring automation completed successfully")
       if (results.alerts.length > 0) {
         console.log(`⚠️ ${results.alerts.length} alerts generated`)
-        process.exit(1); // Exit with error code if there are alerts,
+        process.exit(1); // Exit with error code if there are alerts
 }
-      process.exit(0),
+      process.exit(0)
 })
     .catch(error => {
       console.error("\n❌ Monitoring automation failed:", error.message)
-      process.exit(1),
-}),
+      process.exit(1)
+})
 }
 
 module.exports = MonitoringAutomation

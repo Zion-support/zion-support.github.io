@@ -5,7 +5,7 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
 
   const handleNavigation = (path) => {onNavigate(path)}
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+const toggleMenu = () => setIsOpen(!isOpen);
 
   const navigationItems = [  
   const navigationItems = ['
@@ -60,7 +60,7 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
                     </summary>",
                         <Link key="{child.name}" to="{child.href}" className="flex items-center px-4 py-2 text-sm text-zion-slate-light hover: text-zion-cyan hover:bg-zion-purple/10 transition-colors" onClick="{()" => handleNavigation(child.href)}
 
-                const Icon = item.icon;
+const Icon = item.icon;
                 const isActive = item.matches(location.pathname);
                 return (<Link
                     key={item.href}
@@ -143,7 +143,7 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
 }""
 "
 
-            {/* User section */}"
+{/* User section */}"
             <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-zion-purple/20">
               {isAuthenticated ? ("
                 <div className="space-y-3">"
@@ -190,5 +190,5 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
         </div>;
       )}
     </div>
-  );
+);
 export default Component

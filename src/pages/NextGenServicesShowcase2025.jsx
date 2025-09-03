@@ -478,7 +478,6 @@ export default function NextGenServicesShowcase2025() {}
       </section>
     </div>)}
 
-
 export { NextGenServicesShowcase2025 };
 
 export { NextGenServicesShowcase2025 };

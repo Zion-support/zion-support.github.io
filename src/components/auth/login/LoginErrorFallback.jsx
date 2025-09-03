@@ -136,7 +136,7 @@ const LoginErrorFallback = memo(({error, resetErrorBoundary }) => {}
                 {error.message}
 
               </pre>
-            </details>
+</details>
           )}
           <button"""
             onClick={resetErrorBoundary}""""
@@ -148,7 +148,6 @@ const LoginErrorFallback = memo(({error, resetErrorBoundary }) => {}
     </div>
   )};
 export default LoginErrorFallback;
-
 
 export { LoginErrorFallback };
 

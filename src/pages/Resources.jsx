@@ -32,7 +32,6 @@ const Resources = () => {}
     </>)};
 export default Resources;
 
-
 export { Resources };
 
 export { Resources };

@@ -292,10 +292,9 @@ export default function Page() {
               </div>
             </div>
           </motion.div>
-        </motion.div>)}
+</motion.div>)}
     </>)};
 export default LinkHealthMonitor;
-
 
 export { LinkHealthMonitor };
 

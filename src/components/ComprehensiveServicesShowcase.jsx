@@ -56,14 +56,13 @@ const ComprehensiveServicesShowcase = () => {    const [selectedCategory, setSel
         { id: 'enterprise-workflow-automation', name: 'Enterprise Workflow & Automation', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Workflow') || s.category.includes('Automation'))).length },'        { id: 'enterprise-digital-twin-iot', name: 'Enterprise Digital Twin & IoT', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Digital Twin') || s.category.includes('IoT'))).length }
     ];
     const filteredServices = selectedCategory === 'all'
-        ? allServices;
+? allServices;
         : allServices.filter(service => {}
             const category = categories.find(c => c.id === selectedCategory);
             if(!category)
                 return true;
             // Handle special category mappings
             const categoryMappings = {
-
 
 export { ComprehensiveServicesShowcase };
 

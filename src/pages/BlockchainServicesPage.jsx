@@ -236,7 +236,6 @@ export default function BlockchainServicesPage() {}
       <TrustedBySection />
     </div>)}
 
-
 export { BlockchainServicesPage };
 
 export { BlockchainServicesPage };

@@ -1,6 +1,6 @@
 
 export default function CommunityRoutes(function CommunityRoutes() {): any {}
-  return()
+return()
     <>;""
       <Route path = "" element={<CommunityPage  />} />;
 :pages.disabled/routes/CommunityRoutes.tsx

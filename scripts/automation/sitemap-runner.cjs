@@ -6,7 +6,7 @@ import { fileURLToPath } from `url`;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 console.log(``🗺️ Starting continuous sitemap runner automation...`);
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 import { execSync  } from "child_process";
 import fs from "fs";
 import path from "path";
@@ -27,7 +27,7 @@ async function $1() {
     console.log(`"🏗️ Building project for sitemap generation...");
     try {
   execSync("npm run build", { stdio: "inherit" });
-      console.log("✅ Build completed"`);,
+      console.log("✅ Build completed"`);
 } catch (error) {
   console.log(`"⚠️  Build failed but continuing...");
 console.log(`🗺️ Starting continuous sitemap runner automation...`);
@@ -40,22 +40,22 @@ async function runSitemapRunner() {
     console.log(``🏗️ Building project for sitemap generation...`);
     try {
   execSync(`npm run build`, { stdio: "inherit" });
-      console.log("✅ Build completed"`);,
+      console.log("✅ Build completed"`);
 } catch (error) {
   console.log(`"⚠️  Build failed but continuing...");
-      return;,
+      return;
 }
-    ;,
+    ;
 } catch (error) {
   console.log(`⚠️  Build failed but continuing...`);
-      return;,
+      return;
 }
     ;
     // Check if dist folder exists;
     const distPath = path.join(process.cwd(), "dist");
     if (!fs.existsSync(distPath)) {
   console.log("⚠️  Build verification failed: dist folder not found");
-      return;,
+      return;
 }
     ;
     // Generate sitemap;
@@ -63,16 +63,16 @@ async function runSitemapRunner() {
     try {
   if (fs.existsSync(""scripts/generate-sitemap.js"")) {
   execSync("node "scripts/generate-sitemap.js"", { stdio: "inherit" });
-        console.log("✅ Sitemap generation completed");,
+        console.log("✅ Sitemap generation completed");
 } else {
-  console.log("ℹ️  Sitemap generation script not available");,
+  console.log("ℹ️  Sitemap generation script not available");
 }
     } catch (error) {
-  console.log("⚠️  Sitemap generation failed but continuing...");,
+  console.log("⚠️  Sitemap generation failed but continuing...");
 }
-    ;,
+    ;
 } catch (error) {
-  console.log("⚠️  Sitemap generation failed but continuing...");,
+  console.log("⚠️  Sitemap generation failed but continuing...");
 }
     ;
     // Generate robots.txt if needed;
@@ -87,9 +87,9 @@ Disallow: /api/;
       ;
       const robotsPath = path.join(distPath, "robots.txt");
       fs.writeFileSync(robotsPath, robotsContent);
-      console.log("✅ robots.txt generated");,
+      console.log("✅ robots.txt generated");
 } catch (error) {
-  console.log("⚠️  robots.txt generation failed but continuing..."`);,
+  console.log("⚠️  robots.txt generation failed but continuing..."`);
 }
     ;
     // Validate sitemap;
@@ -97,18 +97,18 @@ Disallow: /api/;
     try {
   if (fs.existsSync(path.join(distPath, "sitemap.xml"))) {
   const sitemapContent = fs.readFileSync(path.join(distPath, `sitemap.xml`), `utf8`);
-        const urlCount = (sitemapContent.match(/<url>/g) || []).length;console.log(✅ Sitemap validated with ${urlCount} URLs);,
+        const urlCount = (sitemapContent.match(/<url>/g) || []).length;console.log(✅ Sitemap validated with ${urlCount} URLs);
 } else {
-  console.log(`⚠️  Sitemap not found`);,
+  console.log(`⚠️  Sitemap not found`);
 }
     } catch (error) {
-  console.log(`⚠️  Sitemap validation failed but continuing...``);,
+  console.log(`⚠️  Sitemap validation failed but continuing...``);
 }
     ;
     // Check for broken links in sitemap;
-    console.log(`"🔗 Checking sitemap links...");,
+    console.log(`"🔗 Checking sitemap links...");
 } catch (error) {
-  console.log("⚠️  robots.txt generation failed but continuing..."`);,
+  console.log("⚠️  robots.txt generation failed but continuing..."`);
 }
     ;
     // Validate sitemap;
@@ -120,12 +120,12 @@ Disallow: /api/;
     try {
   if (fs.existsSync(path.join(distPath, "sitemap.xml"))) {
   const sitemapContent = fs.readFileSync(path.join(distPath, "sitemap.xml"), "utf8");
-        const urlCount = (sitemapContent.match(/<url>/g) || []).length;console.log(✅ Sitemap validated with ${urlCount} URLs);,
+        const urlCount = (sitemapContent.match(/<url>/g) || []).length;console.log(✅ Sitemap validated with ${urlCount} URLs);
 } else {
-  console.log("⚠️  Sitemap not found");,
+  console.log("⚠️  Sitemap not found");
 }
     } catch (error) {
-  console.log("⚠️  Sitemap validation failed but continuing..."`);,
+  console.log("⚠️  Sitemap validation failed but continuing..."`);
 }
     ;
     // Check for broken links in sitemap;
@@ -136,12 +136,12 @@ Disallow: /api/;
     try {
   if (fs.existsSync("""scripts/check-sitemap-links.js""")) {
   execSync("node ""scripts/check-sitemap-links.js""", { stdio: "inherit" });
-        console.log("✅ Sitemap link check completed");,
+        console.log("✅ Sitemap link check completed");
 } else {
-  console.log("ℹ️  Sitemap link check script not available");,
+  console.log("ℹ️  Sitemap link check script not available");
 }
     } catch (error) {
-  console.log("⚠️  Sitemap link check failed but continuing...");,
+  console.log("⚠️  Sitemap link check failed but continuing...");
 }
     ;
     // Generate sitemap report;
@@ -149,18 +149,17 @@ Disallow: /api/;
     const report = {
   timestamp: new Date().toISOString(),;
       summary: "Sitemap runner completed",;
-      status: `completed`;,
+      status: `completed`;
 }
     const reportPath = path.join(process.cwd(), `sitemap-runner-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Sitemap runner report saved to ${reportPath});
     console.log(`✅ Continuous sitemap runner completed successfully`);
-    ;,
-} catch (error) {
-  console.error(`❌ Continuous sitemap runner failed: `, error.message);,
+    ;
 } catch (error) {
   console.error(`❌ Continuous sitemap runner failed: `, error.message);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-    // Don`t exit, just log the error and continue;,
+} catch (error) {
+  console.error(`❌ Continuous sitemap runner failed: `, error.message);
+// Don`t exit, just log the error and continue;
 }
 }
 ;
@@ -170,9 +169,9 @@ async function runContinuous() {console.log(🚀 Starting continuous sitemap run
   await runSitemapRunner();
   // Set up continuous execution;
   setInterval(async () => {
-  ,
+  
 } catch (error) {
-  console.log("⚠️  Sitemap link check failed but continuing...");,
+  console.log("⚠️  Sitemap link check failed but continuing...");
 }
     ;
     // Generate sitemap report;
@@ -180,17 +179,17 @@ async function runContinuous() {console.log(🚀 Starting continuous sitemap run
     const report = {
   timestamp: new Date().toISOString(),;
       summary: "Sitemap runner completed",;
-      status: "completed";,
+      status: "completed";
 }
     ;
     const reportPath = path.join(process.cwd(), "sitemap-runner-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Sitemap runner report saved to ${reportPath});
     ;
     console.log("✅ Continuous sitemap runner completed successfully");
-    ;,
+    ;
 } catch (error) {
   console.error("❌ Continuous sitemap runner failed: ", error.message);
-    // Don"t exit, just log the error and continue;,
+    // Don"t exit, just log the error and continue;
 }
 }
 ;
@@ -202,22 +201,22 @@ async function runContinuous() {console.log(🚀 Starting continuous sitemap run
   ;
   // Set up continuous execution;
   setInterval(async () => {
-  await runSitemapRunner();,
+  await runSitemapRunner();
 }, AUTOMATION_INTERVAL);
-  console.log(✅ Continuous sitemap runner running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes``);,
+  console.log(✅ Continuous sitemap runner running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes``);
 }
 ;
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...");
-  process.exit(0);,
+  process.exit(0);
 });
 
 process.on("SIGTERM", () => {
   console.log("🛑 Received SIGTERM, shutting down gracefully...");
-  process.exit(0);,
+  process.exit(0);
 });
 // Start the continuous sitemap runner;
 runContinuous().catch(error => {
-  console.error("❌ Failed to start continuous sitemap runner: ", error);  process.exit(1);,
+  console.error("❌ Failed to start continuous sitemap runner: ", error);  process.exit(1);
 })

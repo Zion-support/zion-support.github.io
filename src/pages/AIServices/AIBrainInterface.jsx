@@ -208,7 +208,6 @@ export default function AIBrainInterface() {}
       </section>
     </div>)}
 
-
 export { AIBrainInterface, IconComponent };
 
 export { AIBrainInterface, IconComponent };

@@ -116,7 +116,6 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
       <Footer />
     </div>)}
 
-
 export { Index };
 
 export { Index };

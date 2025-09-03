@@ -398,11 +398,10 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },
           </div>
         </div>
       </div>
-    </div>
+</div>
   );
 }</></></></></></>);
 }
-
 
 export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
 

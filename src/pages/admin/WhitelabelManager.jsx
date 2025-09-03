@@ -107,7 +107,6 @@ export default function WhitelabelManager() {}
       
     </>)}
 
-
 export { WhitelabelManager };
 
 export { WhitelabelManager };

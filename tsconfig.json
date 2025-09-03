@@ -13,6 +13,7 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
+    "useDefineForClassFields": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -63,7 +64,11 @@
     "utils/**/*",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/main.tsx",
+    "src/App.tsx",
+    "tailwind.config.js",
+    "postcss.config.js"
   ],
   "exclude": [
     "node_modules",

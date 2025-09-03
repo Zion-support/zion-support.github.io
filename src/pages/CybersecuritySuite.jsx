@@ -294,7 +294,6 @@ export default function CybersecuritySuite() {}
       </section>
     </div>)}
 
-
 export { CybersecuritySuite };
 
 export { CybersecuritySuite };

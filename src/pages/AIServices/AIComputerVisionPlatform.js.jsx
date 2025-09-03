@@ -206,7 +206,6 @@ export default function AIComputerVisionPlatform() {}
       </section>
     </div>)}
 
-
 export { AIComputerVisionPlatform, IconComponent };
 
 export { AIComputerVisionPlatform, IconComponent };

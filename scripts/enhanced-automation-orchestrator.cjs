@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const { execSync, spawn } = require("$1");
-const fs = require("$1");
+const { execSync, spawn } = require("child_process");
+const fs = require("child_process");
 const path = require("path")
 class EnhancedAutomationOrchestrator {
   constructor() {
@@ -19,7 +19,7 @@ class EnhancedAutomationOrchestrator {
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
+      fs.mkdirSync(this.reportsDir, { recursive: true })
 }
   }
 
@@ -27,7 +27,7 @@ class EnhancedAutomationOrchestrator {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level}] ${message}`
     console.log(logMessage)
-    fs.appendFileSync(this.logFile, logMessage + "\n"),
+    fs.appendFileSync(this.logFile, logMessage + "\n")
 }
 
   async runCommand(command, description, category = "general") {
@@ -37,7 +37,7 @@ class EnhancedAutomationOrchestrator {
         cwd: this.projectRoot,
         encoding: "utf8",
         timeout: 300000, // 5 minutes timeout
-        stdio: "pipe",
+        stdio: "pipe"
 })
       this.log(`✅ Completed: ${description}`, "SUCCESS")
       this.results[category] = { success: true, output: result, errors: [] }
@@ -57,7 +57,7 @@ class EnhancedAutomationOrchestrator {
       { cmd: "npm run type-check", desc: "TypeScript Type Check" }
     ]
     for (const { cmd, desc } of lintCommands) {
-      await this.runCommand(cmd, desc, "linting"),
+      await this.runCommand(cmd, desc, "linting")
 }
   }
 
@@ -68,7 +68,7 @@ class EnhancedAutomationOrchestrator {
       { cmd: "npm run test:coverage", desc: "Test Coverage" }
     ]
     for (const { cmd, desc } of testCommands) {
-      await this.runCommand(cmd, desc, "testing"),
+      await this.runCommand(cmd, desc, "testing")
 }
   }
 
@@ -79,7 +79,7 @@ class EnhancedAutomationOrchestrator {
       { cmd: "npm run build:analyze", desc: "Build Analysis" }
     ]
     for (const { cmd, desc } of buildCommands) {
-      await this.runCommand(cmd, desc, "building"),
+      await this.runCommand(cmd, desc, "building")
 }
   }
 
@@ -90,13 +90,13 @@ class EnhancedAutomationOrchestrator {
       const buildDir = path.join(this.projectRoot, ".next")
       if (fs.existsSync(buildDir)) {
         const stats = fs.statSync(buildDir)
-        this.log(`Build directory size: ${(stats.size / 1024 / 1024).toFixed(2)}MB`, "INFO"),
+        this.log(`Build directory size: ${(stats.size / 1024 / 1024).toFixed(2)}MB`, "INFO")
 }
 
       // Run performance audit if available
-      await this.runCommand("npm run perf:audit", "Performance Audit", "performance"),
+      await this.runCommand("npm run perf:audit", "Performance Audit", "performance")
 } catch (error) {
-      this.log(`Performance check failed: ${error.message}`, "WARN"),
+      this.log(`Performance check failed: ${error.message}`, "WARN")
 }
   }
 
@@ -107,7 +107,7 @@ class EnhancedAutomationOrchestrator {
       { cmd: "npm audit fix", desc: "Security Fix" }
     ]
     for (const { cmd, desc } of securityCommands) {
-      await this.runCommand(cmd, desc, "security"),
+      await this.runCommand(cmd, desc, "security")
 }
   }
 
@@ -118,40 +118,40 @@ class EnhancedAutomationOrchestrator {
       summary: {
         total: Object.keys(this.results).length,
         successful: Object.values(this.results).filter(r => r.success).length,
-        failed: Object.values(this.results).filter(r => !r.success).length,
+        failed: Object.values(this.results).filter(r => !r.success).length
 },
       results: this.results,
-      recommendations: this.generateRecommendations(),
+      recommendations: this.generateRecommendations()
 }
     const reportPath = path.join(this.reportsDir, "enhanced-automation-report.json")
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
     this.log(`📄 Report saved to: ${reportPath}`, "SUCCESS")
-    return report,
+    return report
 }
 
   generateRecommendations() {
     const recommendations = []
     if (!this.results.linting.success) {
-      recommendations.push("Fix linting errors before deployment"),
+      recommendations.push("Fix linting errors before deployment")
 }
     
     if (!this.results.testing.success) {
-      recommendations.push("Ensure all tests pass before merging"),
+      recommendations.push("Ensure all tests pass before merging")
 }
     
     if (!this.results.building.success) {
-      recommendations.push("Fix build errors before deployment"),
+      recommendations.push("Fix build errors before deployment")
 }
     
     if (!this.results.security.success) {
-      recommendations.push("Address security vulnerabilities"),
+      recommendations.push("Address security vulnerabilities")
 }
 
     if (recommendations.length === 0) {
-      recommendations.push("All checks passed! Ready for deployment."),
+      recommendations.push("All checks passed! Ready for deployment.")
 }
 
-    return recommendations,
+    return recommendations
 }
 
   printSummary() {
@@ -159,12 +159,12 @@ class EnhancedAutomationOrchestrator {
     this.log("=".repeat(50), "INFO")
     Object.entries(this.results).forEach(([category, result]) => {
       const status = result.success ? "✅" : "❌"
-      this.log(`${status} ${category.toUpperCase()}: ${result.success ? "PASSED" : "FAILED"}`, "INFO"),
+      this.log(`${status} ${category.toUpperCase()}: ${result.success ? "PASSED" : "FAILED"}`, "INFO")
 })
     const total = Object.keys(this.results).length
     const successful = Object.values(this.results).filter(r => r.success).length
     const successRate = ((successful / total) * 100).toFixed(1)
-    this.log(`\n🎯 Success Rate: ${successRate}% (${successful}/${total})`, "INFO"),
+    this.log(`\n🎯 Success Rate: ${successRate}% (${successful}/${total})`, "INFO")
 }
 
   async run() {
@@ -179,10 +179,10 @@ class EnhancedAutomationOrchestrator {
       const report = await this.generateReport()
       this.printSummary()
       this.log("🎉 Enhanced automation completed successfully!", "SUCCESS")
-      return report,
+      return report
 } catch (error) {
       this.log(`💥 Automation failed: ${error.message}`, "ERROR")
-      throw error,
+      throw error
 }
   }
 }
@@ -190,7 +190,7 @@ class EnhancedAutomationOrchestrator {
 // Run the orchestrator
 if (require.main === module) {
   const orchestrator = new EnhancedAutomationOrchestrator()
-  orchestrator.run().catch(console.error),
+  orchestrator.run().catch(console.error)
 }
 
 module.exports = EnhancedAutomationOrchestrator

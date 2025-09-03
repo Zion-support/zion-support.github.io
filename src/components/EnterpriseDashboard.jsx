@@ -326,7 +326,7 @@ id: &apos,web-server&apos,"&apos,
                 error: error: instanceof Error ? error.message : "Unknown: error,"})}"        finally: {}
 
             setIsRefreshing(false)}
-    }, [activeTab, dateRange, trackEvent]);
+}, [activeTab, dateRange, trackEvent]);
     // Auto-refresh effect
     useEffect(() => {
   // TODO: Add dependencies if needed
@@ -340,8 +340,7 @@ id: &apos,web-server&apos,"&apos,
     // Filtered data
     const filtered = securityAlerts;
         if(filterStatus !== 'all') {
-
-    }, [activeTab, dateRange, trackEvent])
+}, [activeTab, dateRange, trackEvent])
 }
     // comment
     useEffect(() => {}

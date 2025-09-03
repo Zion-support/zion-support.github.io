@@ -46,7 +46,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                     "How can I get a quote?", "What technologies do you use?","
                     "Contact information"
                 ]
-            })}
+})}
     }, [isOpen, messages.length, welcomeMessage]);
     // Auto-scroll to bottom
     useEffect(() => {
@@ -262,7 +262,7 @@ return &quot;I understand you&apos;re asking about &apos;&quot; + userInput + "&
         // comment
 trackChatbotInteraction(&apos;user_input&apos, {
             messageId: userMessage.id,
-            inputLength: input.length;
+inputLength: input.length;
         });'
         // Clear input''
         setInputValue('');

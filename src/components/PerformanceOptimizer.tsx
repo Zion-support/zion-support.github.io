@@ -78,7 +78,7 @@ export default function Page() {
     setHistory(prev => [...prev.slice (-9) , newMetrics]) }, []) ;
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
-  // TODO: Add dependencies if needed
+// TODO: Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -127,7 +127,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
     };
   }, []);
 
-  return ("
+return ("
     <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"
       <div className="flex items-center justify-between mb-6">"
         <div className="flex items-center gap-3">"

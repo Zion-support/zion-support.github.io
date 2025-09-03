@@ -164,7 +164,6 @@ export default function AIResearchAssistant() {}
       </div>
     </div>)}
 
-
 export { AIResearchAssistant };
 
 export { AIResearchAssistant };

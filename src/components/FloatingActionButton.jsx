@@ -154,7 +154,6 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;"
 
 export default FloatingActionButton;
 
-
 export { FloatingActionButton };
 
 export { FloatingActionButton };

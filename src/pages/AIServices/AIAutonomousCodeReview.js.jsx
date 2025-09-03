@@ -243,7 +243,6 @@ export default function AIAutonomousCodeReview() {}
       </section>
     </div>)}
 
-
 export { AIAutonomousCodeReview, IconComponent };
 
 export { AIAutonomousCodeReview, IconComponent };

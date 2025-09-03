@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 
 console.log('🚀 Comprehensive App Improvements System')
-console.log('========================================')
+console.log('=====')
 
 class ComprehensiveAppImprovements {
   constructor() {
@@ -686,7 +686,7 @@ export default function SystemHealthMonitor() {
 
     // Display summary
     console.log('\n🎉 Comprehensive App Improvements Complete!')
-    console.log('==========================================')
+    console.log('')
     console.log(`Total improvements: ${this.improvements.length}`)
     console.log(`Total errors: ${this.errors.length}`)
     console.log(`Duration: ${duration} seconds`)

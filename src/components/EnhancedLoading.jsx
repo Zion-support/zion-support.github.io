@@ -6,7 +6,6 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
         md: 'w-8 h-8','
         lg: 'w-12 h-12',
 
-
 export { EnhancedLoading };
 
 export { EnhancedLoading };

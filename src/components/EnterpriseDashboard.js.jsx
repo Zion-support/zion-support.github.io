@@ -195,7 +195,7 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
         finally {}
 
             setIsRefreshing(false)}
-    }, [activeTab, dateRange, trackEvent]);
+}, [activeTab, dateRange, trackEvent]);
     // Auto-refresh effect
     useEffect(() => {
   // TODO: Add dependencies if needed
@@ -209,8 +209,7 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
     // Filtered data
     const filtered = securityAlerts;
         if(filterStatus !== 'all') {
-
-    }, [activeTab, dateRange, trackEvent])
+}, [activeTab, dateRange, trackEvent])
 }
     // comment
 useEffect(() => {}

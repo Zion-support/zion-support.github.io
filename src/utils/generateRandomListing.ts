@@ -1,6 +1,4 @@
-
-
-  'Quantum Computing Hardware',;
+'Quantum Computing Hardware',;
   'Data Science Consulting',;
   'Blockchain Development Service',;
   'Machine Learning Platform',;

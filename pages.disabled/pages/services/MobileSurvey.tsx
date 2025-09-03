@@ -1,4 +1,3 @@
-
 :pages.disabled/pages/services/MobileSurvey.tsx
 export default function MobileSurvey() {
     'Mobile-first NPS/CSAT/CES templates',;'

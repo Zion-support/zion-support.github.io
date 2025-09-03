@@ -217,7 +217,7 @@ modals.forEach(modal:  > {;
 
   // Skip to main content link
   useEffect(() => {
-  // TODO: Add dependencies if needed
+// TODO: Add dependencies if needed
 
   return () => {
     // Cleanup function

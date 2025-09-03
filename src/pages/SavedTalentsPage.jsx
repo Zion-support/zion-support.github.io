@@ -202,7 +202,6 @@ export default function Page() {}
       
     </>)}
 
-
 export { SavedTalentsPage };
 
 export { SavedTalentsPage };

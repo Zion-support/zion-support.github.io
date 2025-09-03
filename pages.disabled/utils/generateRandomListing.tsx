@@ -11,7 +11,6 @@ const sampleTitles = [
   'Cloud Migration Service',
   'IoT Edge Computing Solution',;
 
-
 export function generateRandomListing () : MarketplaceItem {}
 export function generateRandomListings (count: number) : MarketplaceItem[] {}
   'Quantum Computing Hardware',;
@@ -77,11 +76,6 @@ const categories: Array < any> = []
   'FutureTech Systems';
 ];
 
-  
-  
-  
-  
-  
 :pages.disabled/utils/generateRandomListing.tsx
   return {
 

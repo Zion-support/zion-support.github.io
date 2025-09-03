@@ -3,7 +3,7 @@
  * Smart Dependency Intelligence System - PM2 Automation;
  * Predicts dependency issues and automatically optimizes package management;
  */;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 /**;
  * Smart Dependency Intelligence System - PM2 Automation;
  * Predicts dependency issues and automatically optimizes package management;
@@ -30,13 +30,13 @@ class $1 {
     );
     this.ensureLogsDirectory();
     this.intelligenceData = this.loadIntelligenceData();
-    this.dependencyPatterns = this.loadDependencyPatterns();,
+    this.dependencyPatterns = this.loadDependencyPatterns();
 }
 ;
   ensureLogsDirectory() {
   const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true });,
+  fs.mkdirSync(logsDir, { recursive: true });
 }
   }
 ;
@@ -45,21 +45,21 @@ class $1 {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);,
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
 }
 ;
   loadIntelligenceData() {
   try {
   if (fs.existsSync(this.intelligenceLog)) {
-  return JSON.parse(fs.readFileSync(this.intelligenceLog, `utf8`));,
+  return JSON.parse(fs.readFileSync(this.intelligenceLog, `utf8`));
 }
-    } catch (error) {  this.log(`Failed to load intelligence data: ${error.message  }`, `WARN`);,
+    } catch (error) {  this.log(`Failed to load intelligence data: ${error.message  }`, `WARN`);
 }
     return {
   dependencyHistory: [],;
       issuePatterns: [],;
       optimizationHistory: [],;
-      predictions: [],;,
+      predictions: [],;
 }
   }
 ;
@@ -68,8 +68,8 @@ class $1 {
   fs.writeFileSync(;
         this.intelligenceLog,;
         JSON.stringify(this.intelligenceData, null, 2);
-      );,
-} catch (error) {  this.log(`Failed to save intelligence data: ${error.message  }`, `ERROR`);,
+      );
+} catch (error) {  this.log(`Failed to save intelligence data: ${error.message  }`, `ERROR`);
 }
   }
 ;
@@ -139,7 +139,7 @@ class $1 {
         appliedOptimizations;
       );
       this.log(`Smart Dependency Intelligence analysis completed successfully`);
-      return report;,
+      return report;
 } catch (error) {
   this.log(Smart Dependency Intelligence failed: ${error.message  }`,;
         `ERROR`;
@@ -151,44 +151,44 @@ class $1 {
   lodash: {
   versions: ["<4.17.21"],;
           risk: "HIGH",;
-          description: "Prototype pollution vulnerability",;,
+          description: "Prototype pollution vulnerability",;
 },;
         axios: {
   versions: ["<1.6.0"],;
           risk: "MEDIUM",;
-          description: "SSRF vulnerability",;,
+          description: "SSRF vulnerability",;
 },;
         moment: {
   versions: ["<2.29.4"],;
           risk: "LOW",;
-          description: "ReDoS vulnerability",;,
-},;,
+          description: "ReDoS vulnerability",;
+},;
 },;
       // Performance impact patterns;
       performance: {
   moment: {
   impact: "HIGH",;
-          description: "Large bundle size, consider alternatives",;,
+          description: "Large bundle size, consider alternatives",;
 },;
         lodash: {
   impact: "MEDIUM",;
-          description: "Tree-shaking issues in some versions",;,
+          description: "Tree-shaking issues in some versions",;
 },;
-        jquery: { impact: "HIGH", description: "Consider modern alternatives" },;,
+        jquery: { impact: "HIGH", description: "Consider modern alternatives" },;
 },;
       // Compatibility patterns;
       compatibility: {
   react: {
   versions: ["^18.0.0"],;
           compatibility: "MODERN",;
-          description: "Requires React 18+",;,
+          description: "Requires React 18+",;
 },;
         typescript: {
   versions: ["^5.0.0"],;
           compatibility: "MODERN",;
-          description: "Modern TypeScript features",;,
-},;,
-},;,
+          description: "Modern TypeScript features",;
+},;
+},;
 }
   }
 ;
@@ -228,12 +228,12 @@ class $1 {
       );
 
       this.log("Smart Dependency Intelligence analysis completed successfully");
-      return report;,
+      return report;
 } catch (error) {
   this.log(Smart Dependency Intelligence failed: ${error.message}",;
         "ERROR";
       );
-      throw error;,
+      throw error;
 }
   }
 ;
@@ -244,25 +244,25 @@ class $1 {
       const packageLockPath = path.join(this.projectRoot, "package-lock.json");
 
       if (!fs.existsSync(packagePath)) {
-  throw new Error("package.json not found");,
+  throw new Error("package.json not found");
 }
 ;
       const packageJson = JSON.parse(fs.readFileSync(packagePath, "utf8"));
       const dependencies = {
   ...packageJson.dependencies,;
-        ...packageJson.devDependencies,;,
+        ...packageJson.devDependencies,;
 }
 ;
       const analysis = {
   totalDependencies: Object.keys(dependencies).length,;
         dependencies: {},;
         packageLockExists: fs.existsSync(packageLockPath),;
-        lastUpdated: new Date().toISOString(),;,
+        lastUpdated: new Date().toISOString(),;
 }
       // Analyze each dependency;
       for (const [`name`, `version`] of Object.entries(dependencies)) {
   const depAnalysis = await this.analyzeDependency(name, version);
-        analysis.dependencies[name] = depAnalysis;,
+        analysis.dependencies[name] = depAnalysis;
 }
 ;
       // Check for outdated packages;
@@ -272,7 +272,7 @@ class $1 {
       // Analyze each dependency;
       for (const ["name", "version"] of Object.entries(dependencies)) {
   const depAnalysis = await this.analyzeDependency(name, version);
-        analysis.dependencies[name] = depAnalysis;,
+        analysis.dependencies[name] = depAnalysis;
 }
 ;
       // Check for outdated packages;
@@ -283,9 +283,9 @@ class $1 {
       const securityAudit = await this.runSecurityAudit();
       analysis.securityAudit = securityAudit;
 this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
-      return analysis;,
+      return analysis;
 } catch (error) {  this.log(`Failed to analyze dependencies: ${error.message  }`, `ERROR`);
-      throw error;,
+      throw error;
 }
   }
 ;
@@ -320,31 +320,31 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
       analysis.compatibilityIssues = compatibilityIssues;
       // Generate recommendations;
       analysis.recommendations =;
-        this.generateDependencyRecommendations(analysis);,
-} catch (error) {  analysis.recommendations.push(`Failed to analyze: ${error.message  }`);,
+        this.generateDependencyRecommendations(analysis);
+} catch (error) {  analysis.recommendations.push(`Failed to analyze: ${error.message  }`);
 }
 ;
-    return analysis;,
+    return analysis;
 }
 ;
   async getLatestVersion(packageName) {
   try {const result = execSync(`npm view ${packageName} version`, {
   encoding: `utf8`});
-      return result.trim();,
+      return result.trim();
 } catch (error) {
   this.log(Failed to get latest version for ${packageName  }: ${error.message}`,;
         `WARN`;
 
   async getLatestVersion(packageName) {
   try {const result = execSync(`npm view ${packageName} version`, {
-  encoding: "utf8",;,
+  encoding: "utf8",;
 });
-      return result.trim();,
+      return result.trim();
 } catch (error) {
   this.log(Failed to get latest version for ${packageName}: ${error.message}",;
         "WARN";
       );
-      return null;,
+      return null;
 }
   }
 ;
@@ -364,14 +364,14 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
         const latestPart = parseInt(latestParts[i] || "0");
 
         if (latestPart > currentPart) return true;
-        if (latestPart < currentPart) return false;,
+        if (latestPart < currentPart) return false;
 }
 ;
-      return false;,
+      return false;
 } catch (error) {
-  ,
+  
 } catch (error) {
-  return false;,
+  return false;
 }
   }
 ;
@@ -387,12 +387,12 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
           severity: pattern.risk,;
           description: pattern.description,;
           affectedVersion: version,;
-          recommendedAction: "Update to latest version",;,
-});,
+          recommendedAction: "Update to latest version",;
+});
 }
     }
 ;
-    return issues;,
+    return issues;
 }
 ;
   isVersionVulnerable(version, vulnerableVersions) {
@@ -404,21 +404,21 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
       ) {
   const versionNumber = vulnerableVersion.substring(1);
         if (this.isVersionOutdated(version, versionNumber)) {
-  return true;,
+  return true;
 }
       }
     }
-    return false;,
+    return false;
 }
 ;
   analyzePerformanceImpact(packageName, version) {
   const patterns = this.dependencyPatterns.performance;
 
     if (patterns[packageName]) {
-  return patterns[packageName].impact;,
+  return patterns[packageName].impact;
 }
 ;
-    return "LOW";,
+    return "LOW";
 }
 ;
   analyzeCompatibilityIssues(packageName, version) {
@@ -433,12 +433,12 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
           severity: "MEDIUM",;
           description: pattern.description,;
           affectedVersion: version,;
-          recommendedAction: "Update to compatible version",;,
-});,
+          recommendedAction: "Update to compatible version",;
+});
 }
     }
 ;
-    return issues;,
+    return issues;
 }
 ;
   generateDependencyRecommendations(analysis) {
@@ -447,7 +447,7 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
   recommendations.push({
   type: `UPDATE_DEPENDENCY`,;
         priority: `MEDIUM`,description: `Update ${analysis.name} from ${analysis.currentVersion} to ${analysis.latestVersion}`,;
-        action: `npm update`});,
+        action: `npm update`});
 }
 ;
     if (analysis.securityIssues.length > 0) {
@@ -461,8 +461,8 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
   recommendations.push({
   type: "UPDATE_DEPENDENCY",;
         priority: "MEDIUM",description: `Update ${analysis.name} from ${analysis.currentVersion} to ${analysis.latestVersion}`,;
-        action: "npm update",;,
-});,
+        action: "npm update",;
+});
 }
 ;
     if (analysis.securityIssues.length > 0) {
@@ -470,8 +470,8 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
   type: "SECURITY_UPDATE",;
         priority: "HIGH",;
         description: Security vulnerabilities detected - immediate update required",;
-        action: "npm audit fix",;,
-});,
+        action: "npm audit fix",;
+});
 }
 ;
     if (analysis.performanceImpact === "HIGH") {
@@ -479,34 +479,33 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
   type: "PERFORMANCE_OPTIMIZATION",;
         priority: "LOW",;
         description: "Consider alternatives for better performance",;
-        action: "research_alternatives",;,
-});,
+        action: "research_alternatives",;
+});
 }
 ;
-    return recommendations;,
+    return recommendations;
 }
 ;
   async checkOutdatedPackages() {
   try {
   const result = execSync("npm outdated --json", { encoding: "utf8" });
-      return JSON.parse(result);,
+      return JSON.parse(result);
 } catch (error) {
   // npm outdated returns non-zero exit code when there are outdated packages;
       if (error.status === 1) {
   try {
-  return JSON.parse(error.stdout || "{  }");,
+  return JSON.parse(error.stdout || "{  }");
 } catch (parseError) {
-  ,
+  
 } catch (error) {
   // npm outdated returns non-zero exit code when there are outdated packages;
       if (error.status === 1) {
   try {
-  return JSON.parse(error.stdout || "{}");,
+  return JSON.parse(error.stdout || "{}");
 } catch (parseError) {
   return {}
         } catch (parseError) {
   return {}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
       }
       return {}
@@ -516,19 +515,19 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
   async runSecurityAudit() {
   try {
   const result = execSync("npm audit --json", { encoding: "utf8" });
-      return JSON.parse(result);,
+      return JSON.parse(result);
 } catch (error) {
   // npm audit returns non-zero exit code when vulnerabilities are found;
       if (error.status === 1) {
   try {
-  return JSON.parse(error.stdout || "{  }");,
+  return JSON.parse(error.stdout || "{  }");
 } catch (parseError) {
-  ,
+  
 } catch (error) {
   // npm audit returns non-zero exit code when vulnerabilities are found;
       if (error.status === 1) {
   try {
-  return JSON.parse(error.stdout || "{}");,
+  return JSON.parse(error.stdout || "{}");
 } catch (parseError) {
   return { vulnerabilities: {} }
         }
@@ -552,7 +551,7 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
           probability: "HIGH",;
           timeframe: "IMMEDIATE",;
           description: "Security vulnerability detected",;
-          recommendedAction: "Update immediately"});,
+          recommendedAction: "Update immediately"});
 }
 ;
       // Predict compatibility issues;
@@ -563,7 +562,7 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
           probability: "MEDIUM",;
           timeframe: "NEXT_UPDATE",;
           description: "Potential compatibility issues with future updates",;
-          recommendedAction: "Plan for migration"});,
+          recommendedAction: "Plan for migration"});
 }
 ;
       // Predict performance issues;
@@ -574,7 +573,7 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
           probability: "MEDIUM",;
           timeframe: "ONGOING",;
           description: `Performance impact detected`,;
-          recommendedAction: `Monitor and consider alternatives`});,
+          recommendedAction: `Monitor and consider alternatives`});
 }
     }
 ;
@@ -582,7 +581,7 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
     const patternPredictions = this.predictBasedOnPatterns(currentDeps);
     predictions.push(...patternPredictions);
 this.log(`Generated ${predictions.length} predictions`);
-    return predictions;,
+    return predictions;
 }
 ;
   predictBasedOnPatterns(currentDeps) {
@@ -598,7 +597,7 @@ this.log(`Generated ${predictions.length} predictions`);
         probability: `HIGH`,;
         timeframe: "BUILD_TIME",;
         description: "Potential version conflicts detected",;
-        recommendedAction: "Review and align versions"});,
+        recommendedAction: "Review and align versions"});
 }
 ;
     // Check for large dependency trees;
@@ -622,8 +621,8 @@ this.log(`Generated ${predictions.length} predictions`);
         probability: "HIGH",;
         timeframe: "BUILD_TIME",;
         description: "Potential version conflicts detected",;
-        recommendedAction: "Review and align versions",;,
-});,
+        recommendedAction: "Review and align versions",;
+});
 }
 ;
     // Check for large dependency trees;
@@ -633,11 +632,11 @@ this.log(`Generated ${predictions.length} predictions`);
         probability: "MEDIUM",;
         timeframe: "ONGOING",;
         description: "Large number of dependencies may impact build times",;
-        recommendedAction: "Audit and remove unused dependencies",;,
-});,
+        recommendedAction: "Audit and remove unused dependencies",;
+});
 }
 ;
-    return predictions;,
+    return predictions;
 }
 ;
   async generateOptimizationRecommendations(currentDeps, predictions) {
@@ -655,8 +654,8 @@ this.log(`Generated ${predictions.length} predictions`);
         description: prediction.description,;
         action: prediction.recommendedAction,;
         estimatedImpact: "HIGH",;
-        risk: "LOW",;,
-});,
+        risk: "LOW",;
+});
 }
 ;
     // Medium priority optimizations;
@@ -674,8 +673,8 @@ this.log(`Generated ${predictions.length} predictions`);
         description: prediction.description,;
         action: prediction.recommendedAction,;
         estimatedImpact: "MEDIUM",;
-        risk: "LOW",;,
-});,
+        risk: "LOW",;
+});
 }
 ;
     // Performance optimizations;
@@ -688,11 +687,11 @@ this.log(`Generated ${predictions.length} predictions`);
         priority: `LOW`,description: `Optimize ${dep.name} for better performance`,;
         action: `research_alternatives`,;
         estimatedImpact: `MEDIUM`,;
-        risk: `MEDIUM`,;,
-});,
+        risk: `MEDIUM`,;
+});
 }
 this.log(`Generated ${optimizations.length} optimization recommendations`);
-    return optimizations;,
+    return optimizations;
 }
 ;
   async applyIntelligentOptimizations(optimizations) {
@@ -714,24 +713,23 @@ this.log(`Generated ${optimizations.length} optimization recommendations`);
   appliedOptimizations.push({
   ...optimization,;
               appliedAt: new Date().toISOString(),;
-              result,;,
-});,
+              result,;
+});
 }
         } catch (error) {
   this.log(Failed to apply optimization ${optimization.type  }: ${error.message}`,;
-            `WARN`;,
+            `WARN`;
 } catch (error) {
   this.log(Failed to apply optimization ${optimization.type}: ${error.message}",;
             "WARN";
           );
             `WARN`;
           );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
       }
     }
 this.log(`Applied ${appliedOptimizations.length} optimizations`);
-    return appliedOptimizations;,
+    return appliedOptimizations;
 }
 ;
   async applyOptimization(optimization) {
@@ -742,9 +740,9 @@ this.log(`Applied ${appliedOptimizations.length} optimizations`);
   switch (optimization.type) {
   case "IMMEDIATE_OPTIMIZATION":;
         if (optimization.action.includes("npm audit fix")) {
-  return await this.runNpmAuditFix();,
+  return await this.runNpmAuditFix();
 } else if (optimization.action.includes("npm update")) {
-  return await this.runNpmUpdate();,
+  return await this.runNpmUpdate();
 }
         break;
 
@@ -764,7 +762,7 @@ this.log(`Applied ${appliedOptimizations.length} optimizations`);
       return {
   success: true,;
         message: "Security audit fix completed",;
-        output: result,;,
+        output: result,;
 }
     } catch (error) {
   return { success: false, message: error.message   }
@@ -796,7 +794,7 @@ this.log(`Applied ${appliedOptimizations.length} optimizations`);
     // Keep only last 10 entries;
     if (this.intelligenceData.dependencyHistory.length > 10) {
   this.intelligenceData.dependencyHistory =;
-        this.intelligenceData.dependencyHistory.slice(-10);,
+        this.intelligenceData.dependencyHistory.slice(-10);
 }
 ;
     // Update issue patterns;
@@ -805,7 +803,7 @@ this.log(`Applied ${appliedOptimizations.length} optimizations`);
     // Update optimization history;
     this.intelligenceData.optimizationHistory.push({
   timestamp: new Date().toISOString(),;
-      optimizations: appliedOptimizations});,
+      optimizations: appliedOptimizations});
 } catch (error) {
   return { success: false, message: error.message }
     }
@@ -824,13 +822,13 @@ this.log(`Applied ${appliedOptimizations.length} optimizations`);
   timestamp: new Date().toISOString(),;
       dependencies: currentDeps,;
       predictions: predictions,;
-      optimizations: appliedOptimizations,;,
+      optimizations: appliedOptimizations,;
 });
 
     // Keep only last 10 entries;
     if (this.intelligenceData.dependencyHistory.length > 10) {
   this.intelligenceData.dependencyHistory =;
-        this.intelligenceData.dependencyHistory.slice(-10);,
+        this.intelligenceData.dependencyHistory.slice(-10);
 }
 ;
     // Update issue patterns;
@@ -840,11 +838,11 @@ this.log(`Applied ${appliedOptimizations.length} optimizations`);
     // Update optimization history;
     this.intelligenceData.optimizationHistory.push({
   timestamp: new Date().toISOString(),;
-      optimizations: appliedOptimizations,;,
+      optimizations: appliedOptimizations,;
 });
 
     // Save updated data;
-    this.saveIntelligenceData();,
+    this.saveIntelligenceData();
 }
 ;
   extractNewPatterns(currentDeps, predictions) {
@@ -856,12 +854,12 @@ this.log(`Applied ${appliedOptimizations.length} optimizations`);
           package: prediction.package,;
           description: prediction.description,;
           firstSeen: new Date().toISOString(),;
-          occurrences: 1,;,
-});,
+          occurrences: 1,;
+});
 }
     }
 ;
-    return patterns;,
+    return patterns;
 }
 ;
   async generateIntelligenceReport(;
@@ -906,19 +904,19 @@ this.log(`Applied ${appliedOptimizations.length} optimizations`);
         securityIssues: this.countSecurityIssues(currentDeps),;
         predictionsGenerated: predictions.length,;
         optimizationsRecommended: optimizations.length,;
-        optimizationsApplied: appliedOptimizations.length,;,
+        optimizationsApplied: appliedOptimizations.length,;
 },;
       details: {
   currentDependencies: currentDeps,;
         predictions: predictions,;
         optimizations: optimizations,;
-        appliedOptimizations: appliedOptimizations,;,
+        appliedOptimizations: appliedOptimizations,;
 },;
       recommendations: this.generateReportRecommendations(;
         currentDeps,;
         predictions,;
         optimizations;
-      ),;,
+      ),;
 }
 ;
     // Save report to file;
@@ -927,15 +925,15 @@ this.log(`Applied ${appliedOptimizations.length} optimizations`);
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`Intelligence report generated: ${reportPath}`);
-    return report;,
+    return report;
 }
 ;
   countSecurityIssues(currentDeps) {
   let count = 0;
     for (const dep of Object.values(currentDeps.dependencies)) {
-  count += dep.securityIssues.length;,
+  count += dep.securityIssues.length;
 }
-    return count;,
+    return count;
 }
 ;
   generateReportRecommendations(currentDeps, predictions, optimizations) {
@@ -948,7 +946,7 @@ this.log(`Intelligence report generated: ${reportPath}`);
   recommendations.push({
   priority: `HIGH`,;
         action: "Address security vulnerabilities immediately",;
-        timeframe: "IMMEDIATE"});,
+        timeframe: "IMMEDIATE"});
 }
 ;
     // Medium priority recommendations;
@@ -963,8 +961,8 @@ this.log(`Intelligence report generated: ${reportPath}`);
   recommendations.push({
   priority: "HIGH",;
         action: "Address security vulnerabilities immediately",;
-        timeframe: "IMMEDIATE",;,
-});,
+        timeframe: "IMMEDIATE",;
+});
 }
 ;
     // Medium priority recommendations;
@@ -975,8 +973,8 @@ this.log(`Intelligence report generated: ${reportPath}`);
   recommendations.push({
   priority: "MEDIUM",;
         action: "Plan dependency updates and optimizations",;
-        timeframe: "NEXT_SPRINT",;,
-});,
+        timeframe: "NEXT_SPRINT",;
+});
 }
 ;
     // Long-term recommendations;
@@ -984,26 +982,26 @@ this.log(`Intelligence report generated: ${reportPath}`);
   recommendations.push({
   priority: "LOW",;
         action: Consider dependency consolidation and tree-shaking optimization",;
-        timeframe: `ONGOING`,;,
-});,
+        timeframe: `ONGOING`,;
+});
 }
 ;
-    return recommendations;,
+    return recommendations;
 }
 ;
   async run() {
   try {
   const report = await this.runSmartDependencyIntelligence();
       this.log(`Smart Dependency Intelligence completed successfully`);
-      return report;,
+      return report;
 } catch (error) {
   this.log(Smart Dependency Intelligence failed: ${error.message  }`,;
-        `ERROR`;,
+        `ERROR`;
 } catch (error) {
   this.log(Smart Dependency Intelligence failed: ${error.message}",;
         "ERROR";
       );
-      throw error;,
+      throw error;
 }
   }
 }
@@ -1015,12 +1013,12 @@ if (require.main === module) {
     .run();
     .then(() => {
   console.log(`✅ Smart Dependency Intelligence completed");
-      process.exit(0);,
+      process.exit(0);
 });
     .catch(error => {
   console.error("❌ Smart Dependency Intelligence failed: ", error.message);
-      process.exit(1);,
-});,
+      process.exit(1);
+});
 }
 ;
 module.exports = SmartDependencyIntelligence

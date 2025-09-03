@@ -208,7 +208,6 @@ export default function AIAutonomousDecisionPlatform() {}
       </section>
     </div>)}
 
-
 export { AIAutonomousDecisionPlatform, IconComponent };
 
 export { AIAutonomousDecisionPlatform, IconComponent };

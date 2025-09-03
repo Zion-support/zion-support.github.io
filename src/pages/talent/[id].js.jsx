@@ -82,7 +82,6 @@ export default function TalentProfilePage() {}
     </>);
 }
 
-
 export { TalentProfilePage };
 
 export { TalentProfilePage };

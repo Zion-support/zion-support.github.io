@@ -1,5 +1,3 @@
-
-
 // Placeholder ABIs - these should be generated from compiled contracts
 const SIMPLE_AGREEMENT_ABI: ethers.InterfaceAbi = ["constructor(address client, address talent, string projectDetailsIPFSHash)",
   "function client() view returns(address)",

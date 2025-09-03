@@ -25,7 +25,6 @@ const ThemeToggle = () => {
     </button>)};
 export default ThemeToggle;
 
-
 export { ThemeToggle };
 
 export { ThemeToggle };

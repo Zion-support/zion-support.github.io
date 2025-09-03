@@ -208,7 +208,6 @@ export default function AIAutonomousScientificResearcher() {}
       </section>
     </div>)}
 
-
 export { AIAutonomousScientificResearcher, IconComponent };
 
 export { AIAutonomousScientificResearcher, IconComponent };

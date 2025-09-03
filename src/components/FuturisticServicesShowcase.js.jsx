@@ -161,7 +161,7 @@ export const FuturisticServicesShowcase = () => {}""
 
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         return matchesCategory && matchesSearch});
     // Set all services as visible initially for better UX
     useEffect(() => {

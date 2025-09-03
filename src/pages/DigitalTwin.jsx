@@ -681,7 +681,6 @@ export default function DigitalTwin() {}
     </div>
   )}
 
-
 export { DigitalTwin };
 
 export { DigitalTwin };

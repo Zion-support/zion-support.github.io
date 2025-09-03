@@ -149,7 +149,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Intelligent Dependency Manager - Dependency analysis and management
+// Intelligent Dependency Manager - Dependency analysis and management
     {
       name: 'intelligent-dependency-manager',
       script: './scripts/automation/intelligent-dependency-manager.cjs',
@@ -282,7 +282,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Enhanced Testing Automation - Comprehensive testing strategies
+// Enhanced Testing Automation - Comprehensive testing strategies
     {
       name: 'enhanced-testing-automation',
       script: './scripts/automation/enhanced-testing-automation.cjs',      instances: 1,
@@ -291,7 +291,7 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        TESTING_AUTOMATION_MODE: 'true',
+TESTING_AUTOMATION_MODE: 'true',
         PARALLEL_TESTING: 'true',
         COVERAGE_ANALYSIS: 'true',
         PERFORMANCE_TESTING: 'true',
@@ -358,7 +358,7 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PM2_SYNC_MODE: 'true',
+PM2_SYNC_MODE: 'true',
         PROCESS_MONITORING: 'true',
         AUTO_RECOVERY: 'true',
         CLUSTER_MANAGEMENT: 'true',
@@ -370,7 +370,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Link Checker Automation - Link validation and monitoring
+// Link Checker Automation - Link validation and monitoring
     {
       name: 'link-checker-automation',
       script: './scripts/automation/link-checker-automation.cjs',
@@ -544,7 +544,7 @@ module.exports = {
     staging: {
       user: 'node',
       host: 'localhost',
-      ref: 'origin/develop',
+ref: 'origin/develop',
       repo: 'git@github.com:Zion-Holdings/zion.app.git',
       path: '/var/www/staging',
       'post-deploy': 'npm install && pm2 reload ecosystem.enhanced.cjs --env staging',    },

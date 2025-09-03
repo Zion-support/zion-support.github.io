@@ -205,7 +205,6 @@ export default function AIContentFactory() {}
       </section>
     </div>)}
 
-
 export { AIContentFactory, IconComponent };
 
 export { AIContentFactory, IconComponent };

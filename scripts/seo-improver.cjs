@@ -1,9 +1,9 @@
 
-const fs = require("$1");
+const fs = require("child_process");
 const path = require("path")
 class SEOImprover {
   constructor() {
-    this.projectRoot = process.cwd(),
+    this.projectRoot = process.cwd()
 }
 
   async generateSitemap() {
@@ -36,7 +36,7 @@ class SEOImprover {
   </url>
 </urlset>`
     fs.writeFileSync(path.join(this.projectRoot, "public/sitemap.xml"), sitemapContent)
-    console.log("✅ Sitemap generated"),
+    console.log("✅ Sitemap generated")
 }
 
   async generateRobotsTxt() {
@@ -55,7 +55,7 @@ Allow: /about
 Allow: /services
 Allow: /contact`
     fs.writeFileSync(path.join(this.projectRoot, "public/robots.txt"), robotsContent)
-    console.log("✅ robots.txt generated"),
+    console.log("✅ robots.txt generated")
 }
 
   async addMetaTags() {
@@ -74,26 +74,26 @@ export const metaTags = {
     description: "Professional web development services with cutting-edge technology and innovative solutions.",
     type: "website",
     url: "https://bolt.new.zion.app",
-    image: "https://bolt.new.zion.app/og-image.jpg",
+    image: "https://bolt.new.zion.app/og-image.jpg"
 },
   twitter: {
     card: "summary_large_image",
     title: "Bolt.new Zion App - Advanced Web Development Solutions",
     description: "Professional web development services with cutting-edge technology and innovative solutions.",
-    image: "https://bolt.new.zion.app/og-image.jpg",
+    image: "https://bolt.new.zion.app/og-image.jpg"
 }
 }
 export default metaTags
 `
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js"), metaConfig)
-    console.log("✅ Meta tags configuration created"),
+    console.log("✅ Meta tags configuration created")
 }
 
   async run() {
     await this.generateSitemap()
     await this.generateRobotsTxt()
     await this.addMetaTags()
-    console.log("✅ SEO improvement completed!"),
+    console.log("✅ SEO improvement completed!")
 }
 }
 

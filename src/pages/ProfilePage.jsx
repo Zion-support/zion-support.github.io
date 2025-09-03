@@ -165,7 +165,6 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
       
     </>)}
 
-
 export { ProfilePage };
 
 export { ProfilePage };

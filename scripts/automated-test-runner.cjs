@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const { execSync } = require("$1");
-const fs = require("$1");
+const { execSync } = require("child_process");
+const fs = require("child_process");
 const path = require("path")
 class AutomatedTestRunner {
   constructor() {
@@ -12,7 +12,7 @@ class AutomatedTestRunner {
         total: 0,
         passed: 0,
         failed: 0,
-        skipped: 0,
+        skipped: 0
 }
     }
   }
@@ -30,11 +30,11 @@ class AutomatedTestRunner {
       await this.runUnitTests()
       // Generate report
       this.generateReport()
-      console.log("✅ Test suite completed successfully"),
+      console.log("✅ Test suite completed successfully")
 } catch (error) {
       console.error("❌ Test suite failed:", error.message)
       this.generateReport()
-      process.exit(1),
+      process.exit(1)
 }
   }
 
@@ -44,13 +44,13 @@ class AutomatedTestRunner {
       const result = execSync("npm run lint", {
         cwd: this.projectRoot, 
         encoding: "utf8",
-        timeout: 60000,
+        timeout: 60000
 })
       this.addTestResult("Linting", "passed", "No linting errors found")
-      console.log("✅ Linting tests passed"),
+      console.log("✅ Linting tests passed")
 } catch (error) {
       this.addTestResult("Linting", "failed", error.message)
-      console.log("❌ Linting tests failed"),
+      console.log("❌ Linting tests failed")
 }
   }
 
@@ -60,13 +60,13 @@ class AutomatedTestRunner {
       const result = execSync("npm run type-check", {
         cwd: this.projectRoot, 
         encoding: "utf8",
-        timeout: 60000,
+        timeout: 60000
 })
       this.addTestResult("Type Checking", "passed", "No type errors found")
-      console.log("✅ Type checking passed"),
+      console.log("✅ Type checking passed")
 } catch (error) {
       this.addTestResult("Type Checking", "failed", error.message)
-      console.log("❌ Type checking failed"),
+      console.log("❌ Type checking failed")
 }
   }
 
@@ -76,13 +76,13 @@ class AutomatedTestRunner {
       const result = execSync("npm run build", {
         cwd: this.projectRoot, 
         encoding: "utf8",
-        timeout: 300000 // 5 minutes,
+        timeout: 300000 // 5 minutes
 })
       this.addTestResult("Build", "passed", "Build completed successfully")
-      console.log("✅ Build tests passed"),
+      console.log("✅ Build tests passed")
 } catch (error) {
       this.addTestResult("Build", "failed", error.message)
-      console.log("❌ Build tests failed"),
+      console.log("❌ Build tests failed")
 }
   }
 
@@ -92,13 +92,13 @@ class AutomatedTestRunner {
       const result = execSync("npm run test", {
         cwd: this.projectRoot, 
         encoding: "utf8",
-        timeout: 120000 // 2 minutes,
+        timeout: 120000 // 2 minutes
 })
       this.addTestResult("Unit Tests", "passed", "All unit tests passed")
-      console.log("✅ Unit tests passed"),
+      console.log("✅ Unit tests passed")
 } catch (error) {
       this.addTestResult("Unit Tests", "failed", error.message)
-      console.log("❌ Unit tests failed"),
+      console.log("❌ Unit tests failed")
 }
   }
 
@@ -107,10 +107,10 @@ class AutomatedTestRunner {
       name,
       status,
       message,
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString()
 })
     this.results.summary.total++
-    this.results.summary[status]++,
+    this.results.summary[status]++
 }
 
   generateReport() {
@@ -123,7 +123,7 @@ class AutomatedTestRunner {
     console.log(`Failed: ${this.results.summary.failed}`)
     console.log(`Skipped: ${this.results.summary.skipped}`)
     console.log("=".repeat(50))
-    console.log(`\n📄 Detailed report saved to: ${reportPath}`),
+    console.log(`\n📄 Detailed report saved to: ${reportPath}`)
 }
 }
 
@@ -131,5 +131,5 @@ class AutomatedTestRunner {
 const testRunner = new AutomatedTestRunner()
 testRunner.runTests().catch(error => {
   console.error("Fatal error:", error.message)
-  process.exit(1),
+  process.exit(1)
 })

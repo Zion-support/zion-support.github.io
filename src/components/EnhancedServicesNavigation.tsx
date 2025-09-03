@@ -483,7 +483,7 @@ export { EnhancedServicesNavigation };,"});,"})
           description: "90% latency reduction","",
           pricing: "From $299/month""}
 
-        {                            key={service.title}
+{                            key={service.title}
                             initial = {
   { opacity: 0>
 x: -10}}
@@ -771,7 +771,7 @@ Need: help choosing the right service?"""",,",
             </div>,
           </motion.div>) }
 
-      {/* Backdrop */}
+{/* Backdrop */}
       {isOpen && (<motion.div;
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}"""

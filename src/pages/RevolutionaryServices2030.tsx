@@ -311,7 +311,7 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
                   <li>• Custom Development</li>
                 </ul>
               </div>
-            </div>
+</div>
           </motion.div>
         </div>
       </div>
@@ -375,13 +375,12 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
                 Contact Us
               </Link>
             </div>
-          </motion.div>
+</motion.div>
         </div>
       </section>
     </div>
   );
 }
-
 
 export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
 

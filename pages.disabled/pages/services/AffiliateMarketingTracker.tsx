@@ -235,10 +235,6 @@ export default function AffiliateMarketingTracker(...args[]):  {}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
   delay: index * 0.1 
 
-
-
-
-
 "
   delay: index * 0.1;
 }}""
@@ -311,10 +307,6 @@ export default function AffiliateMarketingTracker(...args[]):  {}
 }}"
                   className="flex items-start space-x-4"
   delay: index * 0.1 
-
-
-
-
 
 "
   delay: index * 0.1;

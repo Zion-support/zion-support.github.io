@@ -206,7 +206,6 @@ export default function AIAutonomousLegalCounsel() {}
       </section>
     </div>)}
 
-
 export { AIAutonomousLegalCounsel, IconComponent };
 
 export { AIAutonomousLegalCounsel, IconComponent };

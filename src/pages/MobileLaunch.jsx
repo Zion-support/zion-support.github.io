@@ -34,7 +34,6 @@ const MobileLaunch = () => {}
     </>)};
 export default MobileLaunch;
 
-
 export { MobileLaunch };
 
 export { MobileLaunch };

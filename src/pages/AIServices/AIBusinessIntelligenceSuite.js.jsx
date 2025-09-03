@@ -206,7 +206,6 @@ export default function AIBusinessIntelligenceSuite() {}
       </section>
     </div>)}
 
-
 export { AIBusinessIntelligenceSuite, IconComponent };
 
 export { AIBusinessIntelligenceSuite, IconComponent };

@@ -60,7 +60,6 @@ const [timeRange, setTimeRange] = useState<'24h' | '7d' | '30d' | '90d'>('24h');
   const generateMockAnalytics = useCallback((): AnalyticsData => {;const baseViews = Math.floor(Math.random() * 1000) + 500;
     const baseVisitors = Math.floor(baseViews * 0.7);
 
-    
     return {
 pageViews: baseViews, uniqueVisitors: baseVisitors,;
       bounceRate: Math.random() * 30 + 20, // 20-50%
@@ -117,7 +116,7 @@ await new Promise(resolve => setTimeout(resolve, 1000))
     fetchAnalytics()
 }
     if (autoRefresh) {
-      const interval = setInterval(fetchAnalytics, refreshInterval);
+const interval = setInterval(fetchAnalytics, refreshInterval);
       return () => clearInterval(interval);
 
     }
@@ -163,7 +162,7 @@ const formatNumber = (num: number): string => {;
       {/* comment */}
 
       {showRealTime && (
-        <motion.div
+<motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 rounded-lg        >"          <div className="flex items-center justify-between>            <div>"              <h3 className="text-lg font-semibold>Real-time Users</h3>              <p className="text-blue-100">Currently active on the site</p>"            </div>"            <div className="text-3xl font-bold>{analytics.realTimeUsers}</div>          </div>"        </motion.div>
@@ -207,7 +206,7 @@ className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow border border-gray-20
                   <span className="text-sm text-gray-700 dark:text-gray-300>                    {page.page === '/' ? 'Home' : page.page}'                  </span>'                </div>                <span className="text-sm font-semibold text-gray-900 dark:text-white">"                  {formatNumber(page.views)}"                </span></div>
             ))}
 
-        {/* Traffic Sources */}
+{/* Traffic Sources */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

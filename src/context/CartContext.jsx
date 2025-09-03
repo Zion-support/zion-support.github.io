@@ -37,8 +37,7 @@ export function useCart() {
     return ctx}
 
 export function CartProvider({ children }) {
-
-  const { user } = useAuth();
+const { user } = useAuth();
   const [state, dispatch] = useReducer(cartReducer, initialState);
   const cartKey = getCartKey(user?.id);
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
+const fs = require("child_process");
+const path = require("child_process");
 const { execSync } = require("child_process")
 class AutoFixer {
   constructor() {
@@ -10,7 +10,7 @@ class AutoFixer {
     this.startTime = new Date()
     // Ensure logs directory exists
     if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true }),
+      fs.mkdirSync(this.logDir, { recursive: true })
 }
   }
 
@@ -20,7 +20,7 @@ class AutoFixer {
     console.log(logMessage)
     // Write to log file
     const logFile = path.join(this.logDir, "auto-fixer.log")
-    fs.appendFileSync(logFile, logMessage + "\n"),
+    fs.appendFileSync(logFile, logMessage + "\n")
 }
 
   getAllSourceFiles() {
@@ -32,16 +32,16 @@ class AutoFixer {
         const filePath = path.join(dir, file)
         const stat = fs.statSync(filePath)
         if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {
-          scanDirectory(filePath),
+          scanDirectory(filePath)
 } else if (file.match(/\.(ts|tsx|js|jsx)$/)) {
-          sourceFiles.push(filePath),
+          sourceFiles.push(filePath)
 }
-      }),
+      })
 }
     scanDirectory(path.join(this.projectRoot, "src"))
     scanDirectory(path.join(this.projectRoot, "pages"))
     scanDirectory(path.join(this.projectRoot, "scripts"))
-    return sourceFiles,
+    return sourceFiles
 }
 
   async fixMergeConflicts() {
@@ -60,16 +60,16 @@ class AutoFixer {
           this.fixesApplied.push({
             file,
             type: "merge_conflicts",
-            timestamp: new Date().toISOString(),
-}),
+            timestamp: new Date().toISOString()
+})
 }
       } catch (error) {
-        this.log("warn", `Error processing ${file}: ${error.message}`),
+        this.log("warn", `Error processing ${file}: ${error.message}`)
 }
     }
     
     this.log("info", `Fixed merge conflicts in ${fixedFiles} files`)
-    return fixedFiles,
+    return fixedFiles
 }
 
   async fixSyntaxErrors() {
@@ -83,8 +83,7 @@ class AutoFixer {
       // Fix missing quotes
       { pattern: /([^""])\s*$/gm replacement: "$1, description: "Add missing quotes" },
       { pattern: /([^"])\s*$/gm, replacement: "$1", description: "Add missing quotes" },
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
-      // Fix missing brackets
+// Fix missing brackets
       { pattern: /([^}])\s*$/gm, replacement: "$1}", description: "Add missing brackets" },
       // Fix missing parentheses
       { pattern: /([^)])\s*$/gm, replacement: "$1)", description: "Add missing parentheses" }]
@@ -97,7 +96,7 @@ class AutoFixer {
         for (const fix of syntaxFixes) {
           if (fix.pattern.test(content)) {
             content = content.replace(fix.pattern, fix.replacement)
-            fileFixes++,
+            fileFixes++
 }
         }
         
@@ -109,16 +108,16 @@ class AutoFixer {
             file,
             type: "syntax_fixes",
             count: fileFixes,
-            timestamp: new Date().toISOString(),
-}),
+            timestamp: new Date().toISOString()
+})
 }
       } catch (error) {
-        this.log("warn", `Error processing ${file}: ${error.message}`),
+        this.log("warn", `Error processing ${file}: ${error.message}`)
 }
     }
     
     this.log("info", `Applied syntax fixes to ${fixedFiles} files`)
-    return fixedFiles,
+    return fixedFiles
 }
 
   async fixImportErrors() {
@@ -140,16 +139,16 @@ class AutoFixer {
           this.fixesApplied.push({
             file,
             type: "import_fixes",
-            timestamp: new Date().toISOString(),
-}),
+            timestamp: new Date().toISOString()
+})
 }
       } catch (error) {
-        this.log("warn", `Error processing ${file}: ${error.message}`),
+        this.log("warn", `Error processing ${file}: ${error.message}`)
 }
     }
     
     this.log("info", `Fixed import errors in ${fixedFiles} files`)
-    return fixedFiles,
+    return fixedFiles
 }
 
   async fixTypeScriptErrors() {
@@ -158,10 +157,10 @@ class AutoFixer {
       // Try to run TypeScript compiler to get errors
       execSync("npx tsc --noEmit", {
         cwd: this.projectRoot,
-        stdio: "pipe",
+        stdio: "pipe"
 })
       this.log("info", "No TypeScript errors found")
-      return 0,
+      return 0
 } catch (error) {
       this.log("warn", "TypeScript errors found, attempting to fix...")
       // Try to fix common TypeScript issues
@@ -183,16 +182,16 @@ class AutoFixer {
             this.fixesApplied.push({
               file,
               type: "typescript_fixes",
-              timestamp: new Date().toISOString(),
-}),
+              timestamp: new Date().toISOString()
+})
 }
         } catch (error) {
-          this.log("warn", `Error processing ${file}: ${error.message}`),
+          this.log("warn", `Error processing ${file}: ${error.message}`)
 }
       }
       
       this.log("info", `Fixed TypeScript errors in ${fixedFiles} files`)
-      return fixedFiles,
+      return fixedFiles
 }
   }
 
@@ -205,7 +204,7 @@ class AutoFixer {
       importErrors: await this.fixImportErrors(),
       typescriptErrors: await this.fixTypeScriptErrors(),
       totalFixes: 0,
-      duration: 0,
+      duration: 0
 }
     results.totalFixes = results.mergeConflicts + results.syntaxErrors + results.importErrors + results.typescriptErrors
     results.duration = Date.now() - this.startTime.getTime()
@@ -215,9 +214,9 @@ class AutoFixer {
     const resultsFile = path.join(this.logDir, "auto-fixer-results.json")
     fs.writeFileSync(resultsFile, JSON.stringify({
       ...results,
-      fixesApplied: this.fixesApplied,
+      fixesApplied: this.fixesApplied
 }, null, 2))
-    return results,
+    return results
 }
 }
 
@@ -233,12 +232,12 @@ if (require.main === module) {
       console.log(`TypeScript Errors Fixed: ${results.typescriptErrors}`)
       console.log(`Total Fixes: ${results.totalFixes}`)
       console.log(`Duration: ${results.duration}ms`)
-      process.exit(0),
+      process.exit(0)
 })
     .catch(error => {
       console.error("Auto-fixer failed: ", error)
-      process.exit(1),
-}),
+      process.exit(1)
+})
 }
 
 module.exports = AutoFixer

@@ -253,10 +253,6 @@ export default function SOC2ComplianceTracker(...args: []):  {}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-indigo-500 transition-all duration-300"
   delay: index * 0.1 
 
-
-
-
-
 "
   delay: index * 0.1;
 }}""
@@ -329,10 +325,6 @@ export default function SOC2ComplianceTracker(...args: []):  {}
 }}"
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
   delay: index * 0.1 
-
-
-
-
 
 "
   delay: index * 0.1;
@@ -407,10 +399,6 @@ export default function SOC2ComplianceTracker(...args: []):  {}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-indigo-500 transition-all duration-300"
   delay: index * 0.1 
 
-
-
-
-
 "
   delay: index * 0.1;
 }}""
@@ -483,10 +471,6 @@ export default function SOC2ComplianceTracker(...args: []):  {}
 }}"
                   className="flex items-start space-x-4"
   delay: index * 0.1 
-
-
-
-
 
 "
   delay: index * 0.1;

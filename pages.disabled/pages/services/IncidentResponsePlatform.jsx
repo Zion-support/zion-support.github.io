@@ -208,9 +208,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 =
   y: 0 
 
-
-
-
 "
 :pages.disabled/pages/services/IncidentResponsePlatform.jsx
 >""
@@ -280,10 +277,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                   <div className="text-3xl font-bold text-red-400 mb-2">{benefit.metric}</div>"
   delay: 0.6 
 
-
-
-
-
 "
 }}>""
               {benefits.map((benefit, index) => (<div key={index} className="text-center">""
@@ -310,10 +303,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 
 }}>"
   delay: 0.8 
-
-
-
-
 
 "
 }}>""
@@ -411,10 +400,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }} transition={{ duration: 0.6 }}>"
   y: 0 
 
-
-
-
-
 "
 }} transition={{ duration: 0.6 }}>""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -461,10 +446,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
   delay: index * 0.1 
 
-
-
-
-
 "
 }}>""
                   <div className="text-red-400 mb-4">{feature.icon}</div>""
@@ -508,10 +489,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }} transition={{ duration: 0.6 }}>"
   y: 0 
 
-
-
-
-
 "
 }} transition={{ duration: 0.6 }}>""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -544,10 +521,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }}>"
                   {plan.popular && (<div className="text-center mb-4">"
   delay: index * 0.1 
-
-
-
-
 
 "
 }}>""
@@ -652,10 +625,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3"/>"
   x: 0 
 
-
-
-
-
 "
   x: -20;
 }} whileInView = {}
@@ -690,10 +659,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                   {useCases.map((useCase, index) => (<div key={index} className="flex items-center bg-white/10 rounded-lg p-3">"
                       <Target className="w-5 h-5 text-yellow-400 mr-3"/>"
   x: 0 
-
-
-
-
 
 "
   x: 20;
@@ -816,10 +781,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
               </Link>"
   delay: 0.4 
 
-
-
-
-
 "
 }}>""
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">"
@@ -854,10 +815,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">"
                 <div className="flex items-center">"
   delay: 0.6 
-
-
-
-
 
 "
             </motion.div>

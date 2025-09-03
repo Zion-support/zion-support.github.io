@@ -259,7 +259,7 @@ className:  '',;
   const [isScrolled, setIsScrolled] = useState(false);
   
   useEffect(() => {
-  // TODO: Add dependencies if needed
+// TODO: Add dependencies if needed
 
   return () => {
     // Cleanup function

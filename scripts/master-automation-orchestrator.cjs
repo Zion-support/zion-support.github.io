@@ -4,7 +4,7 @@ const path = require('path')
 const { execSync } = require('child_process')
 
 console.log('🚀 Master Automation Orchestrator')
-console.log('==================================')
+console.log('======')
 
 class MasterAutomationOrchestrator {
   constructor() {

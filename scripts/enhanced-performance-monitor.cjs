@@ -17,7 +17,7 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
         "success": true,""buildTime": buildTime,""status":;";          buildTime < 60000
             ? "excellent"";            : buildTime < 120000;";              ? "good"";              : "needs_optimization","},"} catch (error) {
       return {
-        "success": false,""error": error.message,""buildTime": Date.now() - startTime,,"},,
+        "success": false,""error": error.message,""buildTime": Date.now() - startTime,,"},
 }
   }
 
@@ -31,13 +31,13 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
           const filePath = path.join(dir, file)
           const stat = fs.statSync(filePath)
           if (stat.isDirectory()) {
-            size += getDirSize(filePath),,
+            size += getDirSize(filePath),
 } else {
-            size += stat.size,,
+            size += stat.size,
 }
         }
 
-        return size,,
+        return size,
 }
 
       const bundleSize = getDirSize(buildDir)
@@ -52,7 +52,7 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
     this.log("📋 Checking dependencies");"";    try {
       const packageJson = JSON.parse();        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8")");";      const dependencies = {
         ...packageJson.dependencies,
-        ...packageJson.devDependencies,,,
+        ...packageJson.devDependencies,,
 }
 
       const outdatedDeps = []
@@ -63,27 +63,27 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
       for (const [dep, version] of Object.entries(knownIssues)) {
         if (dependencies[dep] && dependencies[dep] !== version) {
           outdatedDeps.push({);            dep,
-            "current": dependencies[dep],""recommended": version,,"}),,
+            "current": dependencies[dep],""recommended": version,,"}),
 }
       }
 
       return {
         "totalDeps": Object.keys(dependencies).length,";        outdatedDeps,
-        securityIssues,,,
-},,
+        securityIssues,,
+},
 } catch (error) {
       return { "error": error.message },"}
   }
 
   generateReport(results) {
     const report = {
-      "timestamp": new Date().toISOString(),""performance": results.build,""bundle": results.bundle,""dependencies": results.dependencies,""summary": {""buildStatus": results.build?.status || "unknown",""bundleStatus": results.bundle?.status || "unknown",""totalDependencies": results.dependencies?.totalDeps || 0,""outdatedDependencies": results.dependencies?.outdatedDeps?.length || 0,,,
-},,,
+      "timestamp": new Date().toISOString(),""performance": results.build,""bundle": results.bundle,""dependencies": results.dependencies,""summary": {""buildStatus": results.build?.status || "unknown",""bundleStatus": results.bundle?.status || "unknown",""totalDependencies": results.dependencies?.totalDeps || 0,""outdatedDependencies": results.dependencies?.outdatedDeps?.length || 0,,
+},,
 }
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))
     this.log(`📊 Performance report "generated": ${this.reportFile}`);`
-    return report,,
+    return report,
 }
 
   async run() {
@@ -93,7 +93,7 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
       const depResults = await this.checkDependencies()
       const report = this.generateReport({);        "build": buildResults,""bundle": bundleResults,""dependencies": depResults,,"})
       this.log("✅ Performance monitoring completed");";      return report,"} catch (error) {
-      this.log(`❌ Performance monitoring "failed": ${error.message}`);`;      throw error,,
+      this.log(`❌ Performance monitoring "failed": ${error.message}`);`;      throw error,
 }
   }
 }

@@ -119,7 +119,6 @@ function InterviewsContent() {}
       <InterviewsContent />
     </ProtectedRoute>)}
 
-
 export { InterviewsContent, Interviews };
 
 export { InterviewsContent, Interviews };

@@ -36,7 +36,6 @@ export default function ProductPage() {}
       </Button>
     </div>)}
 
-
 export { ProductPage };
 
 export { ProductPage };

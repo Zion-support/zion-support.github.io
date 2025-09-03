@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
+const fs = require("child_process");
+const path = require("child_process");
 const { execSync } = require("child_process")
 class ComprehensiveAutomationSuite {
   constructor() {
@@ -15,7 +15,7 @@ class ComprehensiveAutomationSuite {
       errors: [],
       fixes: [],
       improvements: [],
-      newScripts: [],
+      newScripts: []
 }
 
   ensureDirectories() {
@@ -23,9 +23,9 @@ class ComprehensiveAutomationSuite {
     dirs.forEach(dir => {
       const dirPath = path.join(this.projectRoot, dir)
       if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true }),
+        fs.mkdirSync(dirPath, { recursive: true })
 }
-    }),
+    })
 }
 
   log(message, level = "INFO") {
@@ -33,9 +33,9 @@ class ComprehensiveAutomationSuite {
     const logMessage = `[${timestamp}] [${level}] ${message}`
     console.log(logMessage)
     try {
-      fs.appendFileSync(this.logFile, logMessage + "\n"),
+      fs.appendFileSync(this.logFile, logMessage + "\n")
 } catch (error) {
-      console.error("Failed to write to log file: ", error.message),
+      console.error("Failed to write to log file: ", error.message)
 }
 
   async runStep(stepName, stepFunction) {
@@ -49,10 +49,10 @@ class ComprehensiveAutomationSuite {
         name: stepName,
         status: "completed",
         duration: duration,
-        result: result,
+        result: result
 })
       this.log(`Completed step: ${stepName} (${duration}ms)`)
-      return result,
+      return result
 } catch (error) {
       const stepEnd = Date.now()
       const duration = stepEnd - stepStart
@@ -60,15 +60,15 @@ class ComprehensiveAutomationSuite {
         name: stepName,
         status: "failed",
         duration: duration,
-        error: error.message,
+        error: error.message
 })
       this.results.errors.push({
         step: stepName,
         error: error.message,
-        timestamp: new Date().toISOString(),
+        timestamp: new Date().toISOString()
 })
       this.log(`Failed step: ${stepName} - ${error.message}`, "ERROR")
-      throw error,
+      throw error
 }
 
   async fixSyntaxErrors() {
@@ -78,7 +78,7 @@ class ComprehensiveAutomationSuite {
     let fixedCount = 0
     for (const file of files) {
       if (this.fixFile(file)) {
-        fixedCount++,
+        fixedCount++
 }
     
     this.log(`Fixed ${fixedCount} files with syntax errors`)
@@ -123,13 +123,13 @@ class ComprehensiveAutomationSuite {
       content = content.replace(/  \];/g, "  ]")
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, "utf8")
-        return true,
+        return true
 }
       
-      return false,
+      return false
 } catch (error) {
       this.log(`Error fixing ${filePath}: ${error.message}`, "ERROR")
-      return false,
+      return false
 }
 
   getAllFiles(dir, extensions) {
@@ -140,17 +140,17 @@ class ComprehensiveAutomationSuite {
         const fullPath = path.join(dir, item)
         const stat = fs.statSync(fullPath)
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
-          files = files.concat(this.getAllFiles(fullPath, extensions)),
+          files = files.concat(this.getAllFiles(fullPath, extensions))
 } else if (stat.isFile()) {
           const ext = path.extname(item)
           if (extensions.includes(ext)) {
-            files.push(fullPath),
+            files.push(fullPath)
 }
     } catch (error) {
-      this.log(`Error reading directory ${dir}: ${error.message}`, "ERROR"),
+      this.log(`Error reading directory ${dir}: ${error.message}`, "ERROR")
 }
     
-    return files,
+    return files
 }
 
   async runSecurityAudit() {
@@ -159,7 +159,7 @@ class ComprehensiveAutomationSuite {
       const result = execSync("npm audit --audit-level=moderate", {
         cwd: this.projectRoot,
         encoding: "utf8",
-        timeout: 60000,
+        timeout: 60000
 })
       this.log("Security audit completed")
       return { success: true, output: result }
@@ -174,7 +174,7 @@ class ComprehensiveAutomationSuite {
       const result = execSync("npm test", {
         cwd: this.projectRoot,
         encoding: "utf8",
-        timeout: 300000,
+        timeout: 300000
 })
       this.log("Tests completed")
       return { success: true, output: result }
@@ -189,7 +189,7 @@ class ComprehensiveAutomationSuite {
       const result = execSync("npm run build", {
         cwd: this.projectRoot,
         encoding: "utf8",
-        timeout: 600000,
+        timeout: 600000
 })
       this.log("Build completed")
       return { success: true, output: result }
@@ -204,64 +204,64 @@ class ComprehensiveAutomationSuite {
       {
         name: "performance-monitor.cjs",
         content: `#!/usr/bin/env node
-const fs = require("$1");
+const fs = require("child_process");
 const path = require("path")
 class PerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd()
-    this.logFile = path.join(this.projectRoot, "automation-reports", "performance.log"),
+    this.logFile = path.join(this.projectRoot, "automation-reports", "performance.log")
 }
 
   log(message) {
     const timestamp = new Date().toISOString()
     const logMessage = \`[\${timestamp}] \${message}\`
     console.log(logMessage)
-    fs.appendFileSync(this.logFile, logMessage + "\\n"),
+    fs.appendFileSync(this.logFile, logMessage + "\\n")
 }
 
   async monitor() {
     this.log("Starting performance monitoring...")
     // Add performance monitoring logic here
-    this.log("Performance monitoring completed"),
+    this.log("Performance monitoring completed")
 }
 
 if (require.main === module) {
   const monitor = new PerformanceMonitor()
-  monitor.monitor().catch(console.error),
+  monitor.monitor().catch(console.error)
 }
 
-module.exports = PerformanceMonitor`,
+module.exports = PerformanceMonitor`
 },
       {
         name: "error-detector.cjs",
         content: `#!/usr/bin/env node
-const fs = require("$1");
+const fs = require("child_process");
 const path = require("path")
 class ErrorDetector {
   constructor() {
     this.projectRoot = process.cwd()
-    this.logFile = path.join(this.projectRoot, "automation-reports", "error-detection.log"),
+    this.logFile = path.join(this.projectRoot, "automation-reports", "error-detection.log")
 }
 
   log(message) {
     const timestamp = new Date().toISOString()
     const logMessage = \`[\${timestamp}] \${message}\`
     console.log(logMessage)
-    fs.appendFileSync(this.logFile, logMessage + "\\n"),
+    fs.appendFileSync(this.logFile, logMessage + "\\n")
 }
 
   async detect() {
     this.log("Starting error detection...")
     // Add error detection logic here
-    this.log("Error detection completed"),
+    this.log("Error detection completed")
 }
 
 if (require.main === module) {
   const detector = new ErrorDetector()
-  detector.detect().catch(console.error),
+  detector.detect().catch(console.error)
 }
 
-module.exports = ErrorDetector`,
+module.exports = ErrorDetector`
 }
     ]
     let createdCount = 0
@@ -271,7 +271,7 @@ module.exports = ErrorDetector`,
         fs.writeFileSync(scriptPath, script.content, "utf8")
         fs.chmodSync(scriptPath, "755")
         createdCount++
-        this.log(`Created script: ${script.name}`),
+        this.log(`Created script: ${script.name}`)
 }
 
     return { createdCount, totalScripts: scripts.length }
@@ -308,11 +308,11 @@ module.exports = ErrorDetector`,
       // Merge the feature branch
       const currentBranch = execSync("git branch --show-current", {
         cwd: this.projectRoot, 
-        encoding: "utf8" ,
+        encoding: "utf8" 
 }).trim()
       if (currentBranch !== "main") {
         execSync(`git merge ${currentBranch}`, { cwd: this.projectRoot })
-        this.log("Merged feature branch"),
+        this.log("Merged feature branch")
 }
 
       // Push to main
@@ -343,18 +343,18 @@ module.exports = ErrorDetector`,
       await this.runStep("Merge to Main", () => this.mergeToMain())
       this.results.status = "completed"
       this.log("Comprehensive Automation Suite completed successfully!")
-      ,
+      
 } catch (error) {
       this.results.status = "failed"
-      this.log(`Comprehensive Automation Suite failed: ${error.message}`, "ERROR"),
+      this.log(`Comprehensive Automation Suite failed: ${error.message}`, "ERROR")
 } finally {
       // Save results
       const resultsFile = path.join(this.reportsDir, "comprehensive-automation-report.json")
       fs.writeFileSync(resultsFile, JSON.stringify(this.results, null, 2))
-      this.log(`Results saved to ${resultsFile}`),
+      this.log(`Results saved to ${resultsFile}`)
 }
     
-    return this.results,
+    return this.results
 }
 
 // Run the suite
@@ -362,11 +362,11 @@ if (require.main === module) {
   const suite = new ComprehensiveAutomationSuite()
   suite.run().then(results => {
     console.log("Final results: ", results)
-    process.exit(results.status === "completed" ? 0 : 1),
+    process.exit(results.status === "completed" ? 0 : 1)
 }).catch(error => {
     console.error("Suite failed: ', error)
-    process.exit(1),
-}),
+    process.exit(1)
+})
 }
 
 module.exports = ComprehensiveAutomationSuite

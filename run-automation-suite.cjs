@@ -81,8 +81,7 @@ class $1 {
         description: "Build Application";,
 }
     ];
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-    const results = [];
+const results = [];
     for (const script of scripts) {
   const result = await this.runCommand(script.command, script.description);
       results.push({ ...script, ...result });,
@@ -326,7 +325,6 @@ class $1 {
   await this.runCommand("npm run type-check", "TypeScript Error Detection");,
 } catch (error) {
   this.log(`TypeScript errors found: ${error.message}`);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
     // Check for linting errors;

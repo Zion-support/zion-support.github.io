@@ -49,11 +49,10 @@ export default function Terms() {
             </div>
           </div>
         </div>
-      </main>
+</main>
       <Footer />
     </>);
 }
-
 
 export { Terms };
 

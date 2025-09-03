@@ -22,7 +22,6 @@ const ServiceCategory = ({ category, services }) => {}
             'Real Estate & Property': <Home className="w-6 h-6"/>,
             'Legal & Compliance': <Lock className="w-6 h-6"/>,
 
-
 export { ServiceCategory };
 
 export { ServiceCategory };

@@ -29,7 +29,7 @@ const fs = require("fs")";const path = require("path")"";class SecurityAuditor {
       }
     }
 
-    return results,,
+    return results,
 }
 
   async checkCodeSecurity() {
@@ -52,7 +52,7 @@ const fs = require("fs")";const path = require("path")"";class SecurityAuditor {
         results.issues.push(`Error reading ${file}: ${error.message}`);`}
     }
 
-    return results,,
+    return results,
 }
 
   async checkDependencies() {
@@ -62,7 +62,7 @@ const fs = require("fs")";const path = require("path")"";class SecurityAuditor {
     try {
       const packageJson = JSON.parse();        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8")");";      const dependencies = {
         ...packageJson.dependencies,
-        ...packageJson.devDependencies,,,
+        ...packageJson.devDependencies,,
 }
 
       // Check for known vulnerable packages
@@ -70,13 +70,13 @@ const fs = require("fs")";const path = require("path")"";class SecurityAuditor {
         "lodash": "< 4.17.21",""axios": "< 0.21.1",""moment": "< 2.29.1","};"
       for (const [pkg, minVersion] of Object.entries(vulnerablePackages)) {
         if (dependencies[pkg]) {
-          results.issues.push(`Potentially vulnerable "package": ${pkg}`);`;          results.recommendations.push();            `Update ${pkg} to version ${minVersion} or higher``),,
+          results.issues.push(`Potentially vulnerable "package": ${pkg}`);`;          results.recommendations.push();            `Update ${pkg} to version ${minVersion} or higher``),
 }
       }
     } catch (error) {
       results.issues.push(`Error reading package."json": ${error.message}`);`}
 
-    return results,,
+    return results,
 }
 
   getAllFiles(dir, extensions) {
@@ -86,13 +86,13 @@ const fs = require("fs")";const path = require("path")"";class SecurityAuditor {
       const fullPath = path.join(dir, item)
       const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
-        files = files.concat(this.getAllFiles(fullPath, extensions)),,
+        files = files.concat(this.getAllFiles(fullPath, extensions)),
 } else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath),,
+        files.push(fullPath),
 }
     }
 
-    return files,,
+    return files,
 }
 
   generateReport(results) {
@@ -108,7 +108,7 @@ const fs = require("fs")";const path = require("path")"";class SecurityAuditor {
       report.summary.overall = "vulnerable"";      report.summary.riskLevel = "high""}"
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))
     this.log(`📊 Security audit report "generated": ${this.reportFile}`);`
-    return report,,
+    return report,
 }
 
   async run() {
@@ -118,10 +118,10 @@ const fs = require("fs")";const path = require("path")"";class SecurityAuditor {
       const dependencies = await this.checkDependencies()
       const report = this.generateReport({);        environment,
         code,
-        dependencies,,,
+        dependencies,,
 })
       this.log("✅ Security audit completed");";      return report,"} catch (error) {
-      this.log(`❌ Security audit "failed": ${error.message}`);`;      throw error,,
+      this.log(`❌ Security audit "failed": ${error.message}`);`;      throw error,
 }
   }
 }

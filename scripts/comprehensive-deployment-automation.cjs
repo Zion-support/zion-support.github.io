@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const { execSync, spawn } = require("$1");
-const fs = require("$1");
+const { execSync, spawn } = require("child_process");
+const fs = require("child_process");
 const path = require("path")
 class ComprehensiveDeploymentAutomation {
   constructor() {
@@ -9,12 +9,12 @@ class ComprehensiveDeploymentAutomation {
     this.logFile = path.join(this.reportsDir, "deployment-automation.log")
     this.deploymentSteps = []
     this.environment = process.env.NODE_ENV || "production"
-    this.ensureDirectories(),
+    this.ensureDirectories()
 }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
+      fs.mkdirSync(this.reportsDir, { recursive: true })
 }
   }
 
@@ -22,7 +22,7 @@ class ComprehensiveDeploymentAutomation {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
     console.log(logMessage)
-    fs.appendFileSync(this.logFile, logMessage + "\n"),
+    fs.appendFileSync(this.logFile, logMessage + "\n")
 }
 
   async runDeploymentStep(stepName, command, description) {
@@ -32,14 +32,14 @@ class ComprehensiveDeploymentAutomation {
       command,
       description,
       startTime: Date.now(),
-      status: "running",
+      status: "running"
 }
     
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: "utf8",
-        timeout: 600000 // 10 minutes timeout,
+        timeout: 600000 // 10 minutes timeout
 })
       
       step.endTime = Date.now()
@@ -78,7 +78,7 @@ class ComprehensiveDeploymentAutomation {
     await this.runDeploymentStep(
       "Security Audit",
       "npm audit --audit-level=moderate",
-      "Check for security vulnerabilities"),
+      "Check for security vulnerabilities")
 }
 
   async buildApplication() {
@@ -92,7 +92,7 @@ class ComprehensiveDeploymentAutomation {
     await this.runDeploymentStep(
       "Build App",
       "npm run build",
-      "Build the Next.js application"),
+      "Build the Next.js application")
 }
 
   async runTests() {
@@ -102,9 +102,9 @@ class ComprehensiveDeploymentAutomation {
       await this.runDeploymentStep(
         "Unit Tests",
         "npm test",
-        "Run unit tests"),
+        "Run unit tests")
 } catch (error) {
-      this.log("⚠️ Tests not configured or failed, continuing...", "warning"),
+      this.log("⚠️ Tests not configured or failed, continuing...", "warning")
 }
   }
 
@@ -119,7 +119,7 @@ class ComprehensiveDeploymentAutomation {
     await this.runDeploymentStep(
       "Generate Manifest",
       "npm run netlify:manifest",
-      "Generate Netlify functions manifest"),
+      "Generate Netlify functions manifest")
 }
 
   async postDeploymentTasks() {
@@ -128,7 +128,7 @@ class ComprehensiveDeploymentAutomation {
     await this.runDeploymentStep(
       "Health Check",
       "curl -f http://localhost:3000/api/health || echo "Health check skipped"",
-      "Verify deployment health"),
+      "Verify deployment health")
 }
 
   async generateReport() {
@@ -145,16 +145,16 @@ class ComprehensiveDeploymentAutomation {
         successfulSteps: successfulSteps.length,
         failedSteps: failedSteps.length,
         successRate: ((successfulSteps.length / this.deploymentSteps.length) * 100).toFixed(2),
-        totalDuration: totalDuration,
+        totalDuration: totalDuration
 },
       steps: this.deploymentSteps,
-      recommendations: this.generateRecommendations(),
+      recommendations: this.generateRecommendations()
 }
     
     const reportFile = path.join(this.reportsDir, `deployment-report-${Date.now()}.json`)
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
     this.log(`📄 Deployment report saved to: ${reportFile}`)
-    return reportFile,
+    return reportFile
 }
 
   generateRecommendations() {
@@ -164,29 +164,29 @@ class ComprehensiveDeploymentAutomation {
     if (failedSteps.length > 0) {
       recommendations.push({
         type: "error",
-        message: `${failedSteps.length} deployment steps failed. Review and fix issues.`,
+        message: `${failedSteps.length} deployment steps failed. Review and fix issues.`
 })
       failedSteps.forEach(step => {
         recommendations.push({
           type: "fix",
-          message: `Fix ${step.name}: ${step.error}`,
-}),
-}),
+          message: `Fix ${step.name}: ${step.error}`
+})
+})
 }
 
     const successRate = (this.deploymentSteps.filter(s => s.status === "success").length / this.deploymentSteps.length) * 100
     if (successRate < 100) {
       recommendations.push({
         type: "warning",
-        message: `Deployment success rate is ${successRate.toFixed(1)}%. Consider improving reliability.`,
-}),
+        message: `Deployment success rate is ${successRate.toFixed(1)}%. Consider improving reliability.`
+})
 }
 
     recommendations.push({
       type: "improvement",
-      message: "Consider adding automated rollback mechanisms.",
+      message: "Consider adding automated rollback mechanisms."
 })
-    return recommendations,
+    return recommendations
 }
 
   displaySummary() {
@@ -208,8 +208,8 @@ class ComprehensiveDeploymentAutomation {
     if (failedSteps.length > 0) {
       console.log("\n❌ FAILED STEPS:")
       failedSteps.forEach((step, index) => {
-        console.log(`${index + 1}. ${step.name}: ${step.error}`),
-}),
+        console.log(`${index + 1}. ${step.name}: ${step.error}`)
+})
 }
   }
 
@@ -241,8 +241,8 @@ class ComprehensiveDeploymentAutomation {
 if (require.main === module) {
   const deployment = new ComprehensiveDeploymentAutomation()
   deployment.run().then(result => {
-    process.exit(result.success ? 0 : 1),
-}),
+    process.exit(result.success ? 0 : 1)
+})
 }
 
 module.exports = ComprehensiveDeploymentAutomation

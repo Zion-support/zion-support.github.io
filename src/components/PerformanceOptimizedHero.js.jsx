@@ -218,11 +218,10 @@ future.""
       )}
 
     </section>
-  );
+);
 });'
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
 export default PerformanceOptimizedHero;
-
 
 export { HeroStats, PerformanceOptimizedHero };
 

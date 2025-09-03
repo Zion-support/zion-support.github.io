@@ -23,7 +23,7 @@ const pricingTiers = [{
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         {/* comment */}
 
-  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
+return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <div className="max - w-7xl mx - auto px-6">
         <motion.div
           className="text-center mb-16"          initial = {
@@ -182,7 +182,7 @@ whileHover="{{" scale: 1.02 }}"
         </div>
         {/* comment */}
 
-        <motion.div
+<motion.div
           className="mt-16 text-center"          initial = {
 
   { opacity: 0,

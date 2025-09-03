@@ -925,7 +925,7 @@ opacity: 1}} exit = {}"
 
   { scale: 1,
   { scale: 0.9,
-  opacity: 0
+opacity: 0
 
 }} className="bg-white dark:bg-gray - 800 rounded-lg p - 6 w-full max - w-md mx -4">
               <h3 className="text-lg font - semibold text-gray - 900 dark:text-white mb-4">Mint New NFT</h3>

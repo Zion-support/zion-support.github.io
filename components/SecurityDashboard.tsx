@@ -40,7 +40,7 @@ const SecurityDashboard: React.FC: = () => {,
   const [securit,y, setSecurity] = useState<SecurityMetrics | null>(null)
 }
   useEffect(() => {
-    // Mock security data
+// Mock security data
 const mockData: SecurityMetrics = {;
       overallScore: Math.floor(Math.random() * 20) + 80, vulnerabilities: {;
         critical: Math.floor(Math.random() * 2), high: Math.floor(Math.random() * 5), medium: Math.floor(Math.random() * 8), low: Math.floor(Math.random() * 15)

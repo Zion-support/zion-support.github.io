@@ -37,7 +37,6 @@ const Tabs = ({ tabs, activeTab, onTabChange }) => {}
 
 export default Tabs;
 
-
 export { Tabs };
 
 export { Tabs };

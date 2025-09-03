@@ -1,5 +1,5 @@
 #!/""usr/bin/env"" node;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
@@ -33,9 +33,9 @@ class BuildMonitor {
     const result = await this.runCommand("npm run build");
     if (result.success) {
   this.log(`Build completed successfully`, `success`);
-      return true;,
+      return true;
 } else {this.log(`Build failed: ${result.output}`, `error`);this.errorsFound.push(`Build failed: ${result.output}`);
-      return false;,
+      return false;
 }
   }
 ;
@@ -44,11 +44,11 @@ class BuildMonitor {
     // Try to install dependencies first;
     const installResult = await this.runCommand(`npm install`);
     if (installResult.success) {
-  this.fixesApplied.push("Installed missing dependencies");,
+  this.fixesApplied.push("Installed missing dependencies");
 }
     ;
 
-  setupSignalHandlers() {
+setupSignalHandlers() {
     process.on('SIGTERM', () => this.shutdown());
     process.on('SIGINT', () => this.shutdown());
   }

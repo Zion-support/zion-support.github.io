@@ -778,7 +778,7 @@ y: 0}} exit = {}"
               <AnimatePresence>
                 {showCreateModel && (<motion.div initial = {}
 
-  { opacity: 0,
+{ opacity: 0,
   height: 0
 
 }} animate = {
@@ -1020,7 +1020,7 @@ y: 0}} exit = {}"
                             <XCircle className = "w-4 h-4 mr-2"  />,
                             Training failed,
                           </div>) }
-                      </div>
+</div>
                     </div>) }) }
 
                 {trainingJobs.length === 0 && (<div className="text-center py-8 text-gray - 500 dark:text-gray -400">
@@ -1133,7 +1133,7 @@ y: 0}} exit = {}"
                       </option>))}""""
                   <button onClick="{handleMakePrediction}" disabled="{!predictionForm.modelId" || !predictionForm.input.trim() || isPredicting} className="px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700 disabled:opacity-50">""""{isPredicting ? (<Loader2 className="w-4 h-4 inline mr-2 animate-spin"  />) : (<Target className="w-4 h-4 inline mr-2"  />)}
 
-                const model = models.find(m => m.id === prediction.modelId);"
+const model = models.find(m => m.id === prediction.modelId);"
                 return (<div key={prediction.id} className="bg-white dark:bg-gray-700 p-3 rounded-lg">"
                         <div className="flex items-center justify-between mb-2">"
                           <div className="flex items-center space-x-2">"

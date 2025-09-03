@@ -1,5 +1,5 @@
 #!/""usr/bin/env"" node;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
@@ -10,17 +10,17 @@ class $1 {
     this.logFile = path.join(this.projectRoot, "error-reports", `security-monitor-report.json`);
     this.fixesApplied = [];
     this.errorsFound = [];
-    this.startTime = Date.now();,
+    this.startTime = Date.now();
 }
 ;
   log(message, type = `info`) {
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);,
+    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);
 }
 ;
   async ensureDirectoryExists(dirPath) {
   if (!fs.existsSync(dirPath)) {
-  fs.mkdirSync(dirPath, { recursive: true });,
+  fs.mkdirSync(dirPath, { recursive: true });
 }
   }
 ;
@@ -30,7 +30,7 @@ class $1 {
   encoding: `utf8`, ;
         cwd: this.projectRoot,;
         stdio: `pipe`,;
-        ...options;,
+        ...options;
 });
       return { success: true, output: result }
     } catch (error) {
@@ -46,7 +46,7 @@ class $1 {
   const auditData = JSON.parse(result.output);
         if (auditData.vulnerabilities) {
   const vulnCount = Object.keys(auditData.vulnerabilities).length;this.log(`Found ${vulnCount} security vulnerabilities`, `warn`);
-          for (const [`packageName`, `vuln`] of Object.entries(auditData.vulnerabilities)) {this.errorsFound.push(`Security vulnerability in ${packageName}: ${vuln.title} (${vuln.severity})`);,
+          for (const [`packageName`, `vuln`] of Object.entries(auditData.vulnerabilities)) {this.errorsFound.push(`Security vulnerability in ${packageName}: ${vuln.title} (${vuln.severity})`);
 }
         } else {
   this.log(`No security vulnerabilities found`, `success`);
@@ -57,7 +57,7 @@ class $1 {
   encoding: "utf8", ;
         cwd: this.projectRoot,;
         stdio: "pipe",;
-        ...options ;,
+        ...options ;
 });
       return { success: true, output: result }
     } catch (error) {
@@ -77,19 +77,19 @@ class $1 {
         if (auditData.vulnerabilities) {
   const vulnCount = Object.keys(auditData.vulnerabilities).length;this.log(`Found ${vulnCount} security vulnerabilities`, "warn");
           ;
-          for (const ["packageName", "vuln"] of Object.entries(auditData.vulnerabilities)) {this.errorsFound.push(`Security vulnerability in ${packageName}: ${vuln.title} (${vuln.severity})`);,
+          for (const ["packageName", "vuln"] of Object.entries(auditData.vulnerabilities)) {this.errorsFound.push(`Security vulnerability in ${packageName}: ${vuln.title} (${vuln.severity})`);
 }
         } else {
-  this.log("No security vulnerabilities found", "success");,
+  this.log("No security vulnerabilities found", "success");
 }
         ;
-        return auditData;,
-} catch (error) {  this.log(`Error parsing audit data: ${error.message  }`, `error`);,
+        return auditData;
+} catch (error) {  this.log(`Error parsing audit data: ${error.message  }`, `error`);
 }
-    } else {this.log(`npm audit failed: ${result.output}`, `error`);,
+    } else {this.log(`npm audit failed: ${result.output}`, `error`);
 }
     ;
-    return null;,
+    return null;
 }
 ;
   async checkOutdatedDependencies() {
@@ -99,19 +99,19 @@ class $1 {
   try {
   const outdatedData = JSON.parse(result.output);
         if (Object.keys(outdatedData).length > 0) {this.log(`Found ${Object.keys(outdatedData).length} outdated dependencies`, `warn`);
-          for (const [`packageName`, `info`] of Object.entries(outdatedData)) {this.errorsFound.push(`Outdated dependency: ${packageName} (current: ${info.current}, latest: ${info.latest})`);,
+          for (const [`packageName`, `info`] of Object.entries(outdatedData)) {this.errorsFound.push(`Outdated dependency: ${packageName} (current: ${info.current}, latest: ${info.latest})`);
 }
         } else {
-  this.log(`All dependencies are up to date`, `success`);,
+  this.log(`All dependencies are up to date`, `success`);
 }
         ;
-        return outdatedData;,
-} catch (error) {  this.log(`Error parsing outdated data: ${error.message  }`, `error`);,
+        return outdatedData;
+} catch (error) {  this.log(`Error parsing outdated data: ${error.message  }`, `error`);
 }
-    } else {this.log(`npm outdated failed: ${result.output}`, `error`);,
+    } else {this.log(`npm outdated failed: ${result.output}`, `error`);
 }
     ;
-    return null;,
+    return null;
 }
 ;
   async checkLicenseCompliance() {
@@ -132,32 +132,32 @@ class $1 {
   for (const [`name`, `info`] of Object.entries(deps)) {
   if (info.license) {
   for (const license of problematicLicenses) {
-  if (info.license.includes(license)) {licenseIssues.push(`${name}: ${info.license}`);,
+  if (info.license.includes(license)) {licenseIssues.push(`${name}: ${info.license}`);
 }
               }
             }
             if (info.dependencies) {
-  checkLicenses(info.dependencies);,
+  checkLicenses(info.dependencies);
 }
           }
         }
         ;
         checkLicenses(depsData.dependencies || {});
-        if (licenseIssues.length > 0) {this.log(`Found ${licenseIssues.length} potential license compliance issues`, `warn`);this.errorsFound.push(...licenseIssues.map(issue => `License issue: ${issue}`));,
+        if (licenseIssues.length > 0) {this.log(`Found ${licenseIssues.length} potential license compliance issues`, `warn`);this.errorsFound.push(...licenseIssues.map(issue => `License issue: ${issue}`));
 } else {
   this.log(`No license compliance issues found`, `success`);
         ;
-        if (licenseIssues.length > 0) {this.log(`Found ${licenseIssues.length} potential license compliance issues`, "warn");this.errorsFound.push(...licenseIssues.map(issue => `License issue: ${issue}`));,
+        if (licenseIssues.length > 0) {this.log(`Found ${licenseIssues.length} potential license compliance issues`, "warn");this.errorsFound.push(...licenseIssues.map(issue => `License issue: ${issue}`));
 } else {
-  this.log("No license compliance issues found", "success");,
+  this.log("No license compliance issues found", "success");
 }
         ;
-        return licenseIssues;,
-} catch (error) {  this.log(`Error parsing dependencies data: ${error.message  }`, `error`);,
+        return licenseIssues;
+} catch (error) {  this.log(`Error parsing dependencies data: ${error.message  }`, `error`);
 }
     }
     ;
-    return [];,
+    return [];
 }
 ;
   async checkEnvironmentVariables() {
@@ -186,7 +186,7 @@ class $1 {
                   key.toLowerCase().includes("password") || ;
                   key.toLowerCase().includes("key") ||;
                   key.toLowerCase().includes("token")) {
-  if (value.length < 10) {securityIssues.push(`Weak ${key} in ${envFile}`);,
+  if (value.length < 10) {securityIssues.push(`Weak ${key} in ${envFile}`);
 }
               }
             }
@@ -196,12 +196,12 @@ class $1 {
     }
     ;
     if (securityIssues.length > 0) {this.log(`Found ${securityIssues.length} potential environment variable security issues`, `warn`);
-      this.errorsFound.push(...securityIssues);,
+      this.errorsFound.push(...securityIssues);
 } else {
-  this.log(`No environment variable security issues found`, "success");,
+  this.log(`No environment variable security issues found`, "success");
 }
     ;
-    return securityIssues;,
+    return securityIssues;
 }
 ;
   async fixSecurityIssues() {
@@ -210,20 +210,20 @@ class $1 {
     // Try to fix vulnerabilities;
     const fixResult = await this.runCommand("npm audit fix");
     if (fixResult.success) {
-  this.fixesApplied.push("Auto-fixed security vulnerabilities with npm audit fix");,
+  this.fixesApplied.push("Auto-fixed security vulnerabilities with npm audit fix");
 }
     ;
     // Try to fix vulnerabilities with force;
     const fixForceResult = await this.runCommand("npm audit fix --force");
     if (fixForceResult.success) {
-  this.fixesApplied.push("Auto-fixed security vulnerabilities with npm audit fix --force");,
+  this.fixesApplied.push("Auto-fixed security vulnerabilities with npm audit fix --force");
 }
     ;
     ;
     // Update outdated packages;
     const updateResult = await this.runCommand("npm update");
     if (updateResult.success) {
-  this.fixesApplied.push("Updated outdated dependencies");,
+  this.fixesApplied.push("Updated outdated dependencies");
 }
   }
 ;
@@ -239,13 +239,13 @@ class $1 {
         totalOutdated: this.errorsFound.filter(e => e.includes("Outdated")).length,;
         totalLicenseIssues: this.errorsFound.filter(e => e.includes(`License`)).length,;
         totalEnvIssues: this.errorsFound.filter(e => e.includes(`environment`)).length,;
-        autoFixed: this.fixesApplied.length;,
+        autoFixed: this.fixesApplied.length;
 }
     }
 ;
     await this.ensureDirectoryExists(path.dirname(this.logFile));
     fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
-    this.log(`Security report generated: ${this.logFile}`);this.log(`Found ${this.errorsFound.length} issues, applied ${this.fixesApplied.length} fixes`);,
+    this.log(`Security report generated: ${this.logFile}`);this.log(`Found ${this.errorsFound.length} issues, applied ${this.fixesApplied.length} fixes`);
 }
 ;
   async run() {
@@ -261,13 +261,13 @@ class $1 {
       await this.checkEnvironmentVariables();
       ;
       if (this.errorsFound.length > 0) {
-  await this.fixSecurityIssues();,
+  await this.fixSecurityIssues();
 }
       ;
       await this.generateReport();
-      this.log(`Security monitoring completed`, `success`);,
+      this.log(`Security monitoring completed`, `success`);
 } catch (error) {  this.log(`Error during security monitoring: ${error.message  }`, `error`);this.errorsFound.push(`Process error: ${error.message}`);
-      await this.generateReport();,
+      await this.generateReport();
 }
   }
 }

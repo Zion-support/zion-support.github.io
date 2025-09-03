@@ -1,5 +1,3 @@
-
-
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
   size?: 'sm' | 'md' | 'lg';
@@ -31,7 +29,7 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
           <div className="w-2 h-2 bg-blue-600 rounded-full" />
         </motion.div>
       </motion.div>
-    )};
+)};
 
     if(!config) return null}}};
 

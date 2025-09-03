@@ -206,7 +206,6 @@ export default function AIAutonomousEducationProfessor() {}
       </section>
     </div>)}
 
-
 export { AIAutonomousEducationProfessor, IconComponent };
 
 export { AIAutonomousEducationProfessor, IconComponent };

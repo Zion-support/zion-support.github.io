@@ -318,7 +318,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
                 Contact Us
               </Link>
             </div>
-          </div>
+</div>
         </div>
       </section>"""
       {/* Filters and Search */}""""
@@ -588,7 +588,6 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
     </div>
   );
 }
-
 
 export { InnovativeServicesShowcase2025 };
 

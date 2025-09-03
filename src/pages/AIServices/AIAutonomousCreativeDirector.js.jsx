@@ -206,7 +206,6 @@ export default function AIAutonomousCreativeDirector() {}
       </section>
     </div>)}
 
-
 export { AIAutonomousCreativeDirector, IconComponent };
 
 export { AIAutonomousCreativeDirector, IconComponent };

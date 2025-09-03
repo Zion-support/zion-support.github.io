@@ -159,7 +159,6 @@ function ClientDashboardContent() {}
       <ClientDashboardContent />
     </ProtectedRoute>)}
 
-
 export { ClientDashboardContent, ClientDashboard };
 
 export { ClientDashboardContent, ClientDashboard };

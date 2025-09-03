@@ -402,11 +402,10 @@ a.download = "seo-optimization-report.csv
               <Download className="w-4 h-4"/" >"
               Export,
             </button>
-          </div>
+</div>
         </div>)}
     </div>)};
 export default SEOOptimizer;
-
 
 export { SEOOptimizer };
 

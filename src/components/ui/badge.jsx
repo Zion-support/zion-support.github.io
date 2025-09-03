@@ -1,6 +1,6 @@
 import React from 'react';
 
-  return()
+return()
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {children}
     </div>
@@ -8,7 +8,6 @@ import React from 'react';
 };
 
 export { Badge };
-
 
 export { Badge };
 

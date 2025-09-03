@@ -10,10 +10,6 @@ function toCamelCase(str) {
 };
       return numberWords[match] || match})
   '0': 'Zero'
-      
-
-
-
 
 };
       return numberWords[match] || match;

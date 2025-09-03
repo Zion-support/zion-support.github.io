@@ -1,5 +1,5 @@
 #!/""usr/bin/env"" node;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
@@ -10,17 +10,17 @@ class $1 {
     this.logFile = path.join(this.projectRoot, "error-reports", `dependency-monitor-report.json`);
     this.fixesApplied = [];
     this.errorsFound = [];
-    this.startTime = Date.now();,
+    this.startTime = Date.now();
 }
 ;
   log(message, type = `info`) {
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);,
+    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);
 }
 ;
   async ensureDirectoryExists(dirPath) {
   if (!fs.existsSync(dirPath)) {
-  fs.mkdirSync(dirPath, { recursive: true });,
+  fs.mkdirSync(dirPath, { recursive: true });
 }
   }
 ;
@@ -30,7 +30,7 @@ class $1 {
   encoding: `utf8`, ;
         cwd: this.projectRoot,;
         stdio: `pipe`,;
-        ...options;,
+        ...options;
 });
       return { success: true, output: result }
     } catch (error) {
@@ -45,12 +45,12 @@ class $1 {
     if (outdatedResult.success) {
   try {
   const outdatedData = JSON.parse(outdatedResult.output);
-        if (Object.keys(outdatedData).length > 0) {this.log(`Found ${Object.keys(outdatedData).length} outdated dependencies`, `warn`);this.errorsFound.push(`Outdated dependencies: ${Object.keys(outdatedData).join(", ")}`);,
+        if (Object.keys(outdatedData).length > 0) {this.log(`Found ${Object.keys(outdatedData).length} outdated dependencies`, `warn`);this.errorsFound.push(`Outdated dependencies: ${Object.keys(outdatedData).join(", ")}`);
 } else {
-  this.log(`All dependencies are up to date`, `success`);,
+  this.log(`All dependencies are up to date`, `success`);
 }
       } catch (error) {
-  this.log("No outdated dependencies found", `success`);,
+  this.log("No outdated dependencies found", `success`);
 }
     }
     ;
@@ -60,9 +60,9 @@ class $1 {
   try {
   const auditData = JSON.parse(auditResult.output);
         if (auditData.vulnerabilities) {
-  const vulnCount = Object.keys(auditData.vulnerabilities).length;this.log(`Found ${vulnCount} security vulnerabilities`, `warn`);this.errorsFound.push(`Security vulnerabilities: ${vulnCount} found`);,
+  const vulnCount = Object.keys(auditData.vulnerabilities).length;this.log(`Found ${vulnCount} security vulnerabilities`, `warn`);this.errorsFound.push(`Security vulnerabilities: ${vulnCount} found`);
 } else {
-  this.log(`No security vulnerabilities found`, `success`);,
+  this.log(`No security vulnerabilities found`, `success`);
 }
       } catch (error) {
   async runCommand(command, options = {}) {
@@ -71,7 +71,7 @@ class $1 {
   encoding: "utf8", ;
         cwd: this.projectRoot,;
         stdio: "pipe",;
-        ...options ;,
+        ...options ;
 });
       return { success: true, output: result }
     } catch (error) {
@@ -87,12 +87,12 @@ class $1 {
     if (outdatedResult.success) {
   try {
   const outdatedData = JSON.parse(outdatedResult.output);
-        if (Object.keys(outdatedData).length > 0) {this.log(`Found ${Object.keys(outdatedData).length} outdated dependencies`, "warn");this.errorsFound.push(`Outdated dependencies: ${Object.keys(outdatedData).join(", ")}`);,
+        if (Object.keys(outdatedData).length > 0) {this.log(`Found ${Object.keys(outdatedData).length} outdated dependencies`, "warn");this.errorsFound.push(`Outdated dependencies: ${Object.keys(outdatedData).join(", ")}`);
 } else {
-  this.log("All dependencies are up to date", "success");,
+  this.log("All dependencies are up to date", "success");
 }
       } catch (error) {
-  this.log("No outdated dependencies found", "success");,
+  this.log("No outdated dependencies found", "success");
 }
     }
     ;
@@ -102,12 +102,12 @@ class $1 {
   try {
   const auditData = JSON.parse(auditResult.output);
         if (auditData.vulnerabilities) {
-  const vulnCount = Object.keys(auditData.vulnerabilities).length;this.log(`Found ${vulnCount} security vulnerabilities`, "warn");this.errorsFound.push(`Security vulnerabilities: ${vulnCount} found`);,
+  const vulnCount = Object.keys(auditData.vulnerabilities).length;this.log(`Found ${vulnCount} security vulnerabilities`, "warn");this.errorsFound.push(`Security vulnerabilities: ${vulnCount} found`);
 } else {
-  this.log("No security vulnerabilities found", "success");,
+  this.log("No security vulnerabilities found", "success");
 }
       } catch (error) {
-  this.log("No security vulnerabilities found", "success");,
+  this.log("No security vulnerabilities found", "success");
 }
     }
     ;
@@ -115,7 +115,7 @@ class $1 {
     const lsResult = await this.runCommand("npm ls --depth=0");
     if (!lsResult.success) {
   this.log("Missing dependencies detected", "warn");
-      this.errorsFound.push(`Missing dependencies detected`);,
+      this.errorsFound.push(`Missing dependencies detected`);
 }
   }
 ;
@@ -141,13 +141,13 @@ class $1 {
       summary: {
   dependenciesHealthy: this.errorsFound.length === 0,;
         totalIssues: this.errorsFound.length,;
-        totalFixes: this.fixesApplied.length;,
+        totalFixes: this.fixesApplied.length;
 }
     }
 ;
     await this.ensureDirectoryExists(path.dirname(this.logFile));
     fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
-    this.log(`Dependency monitor report generated: ${this.logFile}`);,
+    this.log(`Dependency monitor report generated: ${this.logFile}`);
 }
 ;
   async run() {
@@ -155,9 +155,9 @@ class $1 {
     try {
   await this.checkDependencies();
       await this.generateReport();
-      this.log(`Dependency monitoring completed`, `success`);,
+      this.log(`Dependency monitoring completed`, `success`);
 } catch (error) {  this.log(`Error during dependency monitoring: ${error.message  }`, `error`);this.errorsFound.push(`Process error: ${error.message}`);
-      await this.generateReport();,
+      await this.generateReport();
 }
   }
 }

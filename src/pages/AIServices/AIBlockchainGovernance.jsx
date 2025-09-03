@@ -208,7 +208,6 @@ export default function AIBlockchainGovernance() {}
       </section>
     </div>)}
 
-
 export { AIBlockchainGovernance, IconComponent };
 
 export { AIBlockchainGovernance, IconComponent };

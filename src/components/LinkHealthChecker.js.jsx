@@ -211,12 +211,11 @@ export default function Page() {
             ✅ All Links Healthy
           </h4>"
           <p className="text-sm text-green-300">
-            Great job! All links are working properly. Your website is in excellent health.
+Great job! All links are working properly. Your website is in excellent health.
           </p>
         </div>)}
     </div>)};
 export default LinkHealthChecker;
-
 
 export { LinkHealthChecker };
 

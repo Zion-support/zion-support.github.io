@@ -324,7 +324,6 @@ export default function IoTEdgeComputingServices() {
     </div>);
 }
 
-
 export { IoTEdgeComputingServices };
 
 export { IoTEdgeComputingServices };

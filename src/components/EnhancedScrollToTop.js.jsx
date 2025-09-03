@@ -6,7 +6,7 @@ const EnhancedScrollToTop = () => {
         const toggleVisibility = () => {
             if (window.pageYOffset > 300) {
                 setIsVisible(true)}
-            else {
+else {
                 setIsVisible(false)}
         };
         window.addEventListener('scroll', toggleVisibility);
@@ -34,7 +34,6 @@ const EnhancedScrollToTop = () => {
         </motion.button>)}
     </AnimatePresence>)};
 export default EnhancedScrollToTop;
-
 
 export { EnhancedScrollToTop };
 

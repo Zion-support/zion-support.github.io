@@ -9,7 +9,6 @@ export default function AdminDashboard() {}
       </div>
     </AdminLayout>)}
 
-
 export { AdminDashboard };
 
 export { AdminDashboard };

@@ -3,11 +3,7 @@ export { function };
 :pages.disabled/pages/services/AIDataAnalytics.tsx
 export default function AIDataAnalytics(...args: unknown[]): unknown {
 :pages.disabled/pages/services/AIDataAnalytics.tsx
-  
-  
-  
-  
-  
+
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 <:pages.disabled/pages/services/AIDataAnalytics.tsx

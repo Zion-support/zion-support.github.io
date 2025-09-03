@@ -156,7 +156,6 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
             message: 'Accessibility settings reset to defaults',
             type: 'info',
 
-
 export { AccessibilityPanel };
 
 export { AccessibilityPanel };

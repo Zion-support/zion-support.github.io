@@ -1,5 +1,5 @@
 #!/""usr/bin/env"" node;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -12,13 +12,13 @@ class $1 {
     this.cleanupStats = {
   conflictsResolved: 0,;
       filesCleaned: 0,;
-      errors: 0,;,
+      errors: 0,;
 }
   }
 ;
   ensureDirectories() {
   if (!fs.existsSync(this.logsDir)) {
-  fs.mkdirSync(this.logsDir, { recursive: true });,
+  fs.mkdirSync(this.logsDir, { recursive: true });
 }
   }
 ;
@@ -27,7 +27,7 @@ class $1 {
     const logEntry = `[${timestamp}] [${level}] ${message}`;
     console.log(`logEntry);
     const logFile = path.join(this.logsDir, `conflict-cleanup.log`);
-    fs.appendFileSync(logFile, logEntry + `\n`);,
+    fs.appendFileSync(logFile, logEntry + `\n`);
 }
 ;
   async run() {
@@ -46,18 +46,18 @@ class $1 {
       // Step 3: Clean up duplicate files;
       await this.cleanupDuplicateFiles();
       // Step 4: Finalize the merge;
-      await this.finalizeMerge();,
+      await this.finalizeMerge();
 } catch (error) {  this.log(❌ Fatal error: ${error.message  }, `ERROR``);
       // Step 3: Clean up duplicate files;
       await this.cleanupDuplicateFiles();`);
 `);
       // Step 4: Finalize the merge`);
-      await this.finalizeMerge();`);,
+      await this.finalizeMerge();`);
 } catch (error) {this.log(❌ Fatal error: ${error.message}, "ERROR"`);
-      this.cleanupStats.errors++;,
+      this.cleanupStats.errors++;
 }
 ;
-    this.generateReport();,
+    this.generateReport();
 }
 ;
   async cleanupBackupFiles() {
@@ -67,25 +67,25 @@ class $1 {
       const backupPatterns = ["**/*.backup.*"", "**/*.cleanup-backup.*", "**/*.backup.1756*"", `**/*.cleanup-backup.1756*`, ``];
       for (const pattern of backupPatterns) {
   try {const files = execSync(`find . -name "${pattern} -type f`, {
-  encoding: `utf8`,;,
+  encoding: `utf8`,;
 })            .split(`\n`);
             .filter(f => f);
           for (const file of files) {
   try {
   fs.unlinkSync(file);this.log(`🗑️ Removed backup file: ${file}`);
-              this.cleanupStats.filesCleaned++;,
+              this.cleanupStats.filesCleaned++;
 } catch (error) {
   this.log(⚠️ Failed to remove backup file ${file  }: ${error.message}`,;
                 `WARN`;
-              );,
+              );
 }
           }
         } catch (error) {
-  // No files found with this pattern;,
+  // No files found with this pattern;
 }
       }
     } catch (error) {
-  this.log(`❌ Error cleaning up backup files: ${error.message  }`, `ERROR`);,
+  this.log(`❌ Error cleaning up backup files: ${error.message  }`, `ERROR`);
 }
   }
 ;
@@ -101,7 +101,7 @@ class $1 {
 
       for (const pattern of backupPatterns) {
   try {const files = execSync(`find . -name ${pattern} -type f`, {
-  encoding: "utf8",;,
+  encoding: "utf8",;
 });
             .split("\n");
             .filter(f => f);
@@ -109,19 +109,19 @@ class $1 {
           for (const file of files) {
   try {
   fs.unlinkSync(file);this.log(`🗑️ Removed backup file: ${file}");
-              this.cleanupStats.filesCleaned++;,
+              this.cleanupStats.filesCleaned++;
 } catch (error) {
   this.log(⚠️ Failed to remove backup file ${file}: ${error.message}",;
                 "WARN";
-              );,
+              );
 }
           }
         } catch (error) {
-  // No files found with this pattern;,
+  // No files found with this pattern;
 }
       }
     } catch (error) {
-  this.log(`❌ Error cleaning up backup files: ${error.message}`, "ERROR");,
+  this.log(`❌ Error cleaning up backup files: ${error.message}`, "ERROR");
 }
   }
 ;
@@ -133,9 +133,9 @@ class $1 {
       const conflictedFiles = this.getConflictedFiles();this.log(`Found ${conflictedFiles.length} conflicted files`);
 
       for (const file of conflictedFiles) {
-  await this.resolveFileConflict(file);,
+  await this.resolveFileConflict(file);
 }
-    } catch (error) {  this.log(`❌ Error resolving merge conflicts: ${error.message  }`, `ERROR`);,
+    } catch (error) {  this.log(`❌ Error resolving merge conflicts: ${error.message  }`, `ERROR`);
 }
   }
 ;
@@ -151,16 +151,16 @@ class $1 {
             line.startsWith(`AA `) ||;
             line.startsWith(`DD `);
         );
-        .map(line => line.substring(3));,
+        .map(line => line.substring(3));
 } catch (error) {
-  return [];,
+  return [];
 }
   }
 ;
   async resolveFileConflict(filePath) {this.log(`🔧 Resolving conflict in: ${filePath}`);
     try {
   if (!fs.existsSync(filePath)) {this.log(`⚠️ File does not exist: ${filePath}`, `WARN`);
-        return;,
+        return;
 }
 ;
       const content = fs.readFileSync(filePath, `utf8`);
@@ -170,7 +170,7 @@ class $1 {
         !content.includes(``) &&;
         !content.includes(`>>>>>>>`);
       ) {this.log(`✅ No conflicts in: ${filePath}`);
-        return;,
+        return;
 }
 ;
       // Apply conflict resolution strategy;
@@ -178,7 +178,7 @@ class $1 {
 
     try {
   if (!fs.existsSync(filePath)) {this.log(`⚠️ File does not exist: ${filePath}`, "WARN");
-        return;,
+        return;
 }
 ;
       const content = fs.readFileSync(filePath, "utf8");
@@ -189,7 +189,7 @@ class $1 {
         !content.includes("") &&;
         !content.includes(">>>>>>>");
       ) {this.log(`✅ No conflicts in: ${filePath}`);
-        return;,
+        return;
 }
 ;
       // Apply conflict resolution strategy;
@@ -198,18 +198,17 @@ class $1 {
       // Write resolved content;
       fs.writeFileSync(filePath, resolvedContent);
 this.log(`✅ Resolved conflicts in: ${filePath}`);
-      this.cleanupStats.conflictsResolved++;,
+      this.cleanupStats.conflictsResolved++;
 } catch (error) {
   this.log(❌ Failed to resolve conflicts in ${filePath  }: ${error.message}`,;
-        `ERROR`;,
+        `ERROR`;
 } catch (error) {
   this.log(❌ Failed to resolve conflicts in ${filePath}: ${error.message}",;
         "ERROR";
       );
         `ERROR`;
       );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-      this.cleanupStats.errors++;,
+this.cleanupStats.errors++;
 }
   }
 ;
@@ -238,21 +237,21 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
     const fileExt = path.extname(filePath).toLowerCase();
 
     if (fileExt === ".json") {
-  resolvedContent = this.cleanupJson(resolvedContent);,
+  resolvedContent = this.cleanupJson(resolvedContent);
 } else if ([".js", ".jsx", ".ts", ".tsx"].includes(fileExt)) {
-  resolvedContent = this.cleanupCode(resolvedContent);,
+  resolvedContent = this.cleanupCode(resolvedContent);
 } else if (fileExt === ".md") {
-  resolvedContent = this.cleanupMarkdown(resolvedContent);,
+  resolvedContent = this.cleanupMarkdown(resolvedContent);
 }
 ;
-    return resolvedContent;,
+    return resolvedContent;
 }
 ;
   cleanupJson(content) {
   try {
   // Try to parse as JSON to validate;
       JSON.parse(content);
-      return content;,
+      return content;
 } catch (error) {
   // If invalid, try to fix common issues;
       let fixed = content;
@@ -261,10 +260,10 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
       // Try parsing again;
       try {
   JSON.parse(fixed);
-        return fixed;,
+        return fixed;
 } catch (e) {
   // If still invalid, return original content;
-        return content;,
+        return content;
 }
     }
   }
@@ -284,21 +283,21 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
       ) {
   if (!seenImports.has(trimmedLine)) {
   seenImports.add(trimmedLine);
-          cleanedLines.push(line);,
+          cleanedLines.push(line);
 }
       } else {
-  cleanedLines.push(line);,
+  cleanedLines.push(line);
 }
     }
 ;
-    return cleanedLines.join("\n");,
+    return cleanedLines.join("\n");
 }
 ;
   cleanupMarkdown(content) {
   // For markdown files, combine content intelligently;
     return content.replace(;
       /([\s\S]*?)      `$1`;
-    );,
+    );
 }
 ;
   async cleanupDuplicateFiles() {
@@ -312,18 +311,18 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
   if (fs.existsSync(file)) {
   fs.unlinkSync(file);
             this.log(`🗑️ Removed deleted file: ${file}`);
-            this.cleanupStats.filesCleaned++;,
+            this.cleanupStats.filesCleaned++;
 }
         } catch (error) {
   this.log(⚠️ Failed to remove deleted file ${file  }: ${error.message}`,;
             `WARN`;
-          );,
+          );
 }
       }
     } catch (error) {
   this.log(❌ Error cleaning up duplicate files: ${error.message  }`,;
         `ERROR`;
-      );,
+      );
 }
   }
 ;
@@ -334,33 +333,33 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
       return statusOutput;
         .split("\n");
         .filter(line => line.startsWith("DD "));
-        .map(line => line.substring(3));,
+        .map(line => line.substring(3));
 } catch (error) {
-  ,
+  
 } catch (error) {
   this.log(⚠️ Failed to remove deleted file ${file}: ${error.message}",;
             "WARN";
-          );,
+          );
 }
       }
     } catch (error) {
   this.log(❌ Error cleaning up duplicate files: ${error.message}",;
         "ERROR";
-      );,
+      );
 }
   }
 ;
   getDeletedFiles() {
   try {
   const statusOutput = execSync("git status --porcelain", {
-  encoding: "utf8",;,
+  encoding: "utf8",;
 });
       return statusOutput;
         .split("\n");
         .filter(line => line.startsWith("DD "));
-        .map(line => line.substring(3));,
+        .map(line => line.substring(3));
 } catch (error) {
-  return [];,
+  return [];
 }
   }
 ;
@@ -375,15 +374,13 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
   stdio: "pipe"});
       this.log("✅ Committed merge resolution");
       execSync("git commit -m Auto-resolve merge conflicts and cleanup", {
-  stdio: "pipe",;,
+  stdio: "pipe",;
 });      this.log("✅ Committed merge resolution");
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-
-      // Push changes;
+// Push changes;
       execSync("git push origin main", { stdio: `inherit` });
-      this.log(`✅ Successfully pushed merged changes to remote`);,
+      this.log(`✅ Successfully pushed merged changes to remote`);
 } catch (error) {  this.log(`❌ Failed to finalize merge: ${error.message  }`, `ERROR`);
-      this.cleanupStats.errors++;,
+      this.cleanupStats.errors++;
 }
   }
 ;
@@ -399,7 +396,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
     const reportPath = path.join(this.logsDir, "conflict-cleanup-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📋 Conflict Cleanup Summary:`);this.log(`   Conflicts Resolved: ${report.summary.conflictsResolved}`);this.log(`   Files Cleaned: ${report.summary.filesCleaned}`);this.log(`   Errors: ${report.summary.errors}`);
-this.log(`📄 Detailed report saved to: ${reportPath}`);,
+this.log(`📄 Detailed report saved to: ${reportPath}`);
 }
 }
 ;
@@ -416,15 +413,15 @@ if (require.main === module) {
 
       // Commit the merge;
       execSync("git commit -m Auto-resolve merge conflicts and cleanup", {
-  stdio: "pipe",;,
+  stdio: "pipe",;
 });
       this.log("✅ Committed merge resolution");
 
       // Push changes;
       execSync("git push origin main", { stdio: "inherit" });
-      this.log("✅ Successfully pushed merged changes to remote");,
+      this.log("✅ Successfully pushed merged changes to remote");
 } catch (error) {this.log(`❌ Failed to finalize merge: ${error.message}`, "ERROR");
-      this.cleanupStats.errors++;,
+      this.cleanupStats.errors++;
 }
   }
 ;
@@ -436,8 +433,8 @@ if (require.main === module) {
       summary: {
   conflictsResolved: this.cleanupStats.conflictsResolved,;
         filesCleaned: this.cleanupStats.filesCleaned,;
-        errors: this.cleanupStats.errors,;,
-},;,
+        errors: this.cleanupStats.errors,;
+},;
 }
 ;
     // Write report to file;
@@ -445,7 +442,7 @@ if (require.main === module) {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
     this.log("📋 Conflict Cleanup Summary:");this.log(`   Conflicts Resolved: ${report.summary.conflictsResolved}`);this.log(`   Files Cleaned: ${report.summary.filesCleaned}`);this.log(`   Errors: ${report.summary.errors}`);
-this.log(`📄 Detailed report saved to: ${reportPath}`);,
+this.log(`📄 Detailed report saved to: ${reportPath}`);
 }
 }
 ;
@@ -456,8 +453,7 @@ if (require.main === module) {
   console.error("❌ Fatal error: ', error);
     process.exit(1);
     console.error(`❌ Fatal error: `, error);    process.exit(1);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
-});,
+});
 }
 ;
 module.exports = ConflictCleanupResolver

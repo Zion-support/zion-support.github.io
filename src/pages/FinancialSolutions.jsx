@@ -226,7 +226,6 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
       </section>
     </div>)}
 
-
 export { FinancialSolutions };
 
 export { FinancialSolutions };

@@ -1,5 +1,3 @@
-
-
 const AuthRoutes: any = () => {}
   return()
     <Routes>""
@@ -26,7 +24,6 @@ const AuthRoutes: any = () => {}
       <Route""
         path="/dashboard"
         element={
-
 
       <Route""
         path="/dashboard""

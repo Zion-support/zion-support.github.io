@@ -23,7 +23,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     setFontSize(savedFontSize);
     }
 
-  const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
+const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
     const root = document.documentElement;
     
     // High contrast mode

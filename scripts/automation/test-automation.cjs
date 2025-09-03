@@ -1,5 +1,5 @@
 #!/""usr/bin/env"" node;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
@@ -15,16 +15,16 @@ class $1 {
       this.projectRoot, "test-reports",;
       "test-report.json";
     );
-    this.ensureDirectories();,
+    this.ensureDirectories();
 }
 ;
   ensureDirectories() {
   const dirs = [""this."projectRoot/test-reports"", ""this."projectRoot/test-results"", ``];
     dirs.forEach(dir => {
   if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });,
+  fs.mkdirSync(dir, { recursive: true });
 }
-    });,
+    });
 }
 ;
   log(message, level = `INFO`) {
@@ -40,12 +40,12 @@ class $1 {
     console.log(`logEntry);
 
     // Append to log file;
-    fs.appendFileSync(this.logFile, logEntry + "\n");,
+    fs.appendFileSync(this.logFile, logEntry + "\n");
 }
 ;
   async runCommand(command, cwd = this.projectRoot) {
   // Append to log file;
-    fs.appendFileSync(this.logFile, logEntry + "\n");`);,
+    fs.appendFileSync(this.logFile, logEntry + "\n");`);
 }`);
 `);
   async runCommand(command, cwd = this.projectRoot) {`);
@@ -57,23 +57,23 @@ class $1 {
       let stdout = "";
       let stderr = ``;
       child.stdout.on(`data`, data => {
-  stdout += data.toString();this.log(`STDOUT: ${data.toString().trim()}`);,
+  stdout += data.toString();this.log(`STDOUT: ${data.toString().trim()}`);
 });
       child.stderr.on(`data`, data => {
-  stderr += data.toString();this.log(`STDERR: ${data.toString().trim()}`);,
+  stderr += data.toString();this.log(`STDERR: ${data.toString().trim()}`);
 });
       child.on(`close`, code => {
   if (code === 0) {this.log(`Command completed successfully with code ${code}`);
-          resolve({ code, stdout, stderr });,
-} else {this.log(`Command failed with code ${code}`, `ERROR`);reject(new Error(`Command failed with code ${code}: ${stderr}`));,
+          resolve({ code, stdout, stderr });
+} else {this.log(`Command failed with code ${code}`, `ERROR`);reject(new Error(`Command failed with code ${code}: ${stderr}`));
 }
       });
       child.on(`error`, error => {this.log(`Command error: ${error.message}`, `ERROR`);
 
       child.on("error", error => {this.log(`Command error: ${error.message}`, "ERROR");
-        reject(error);,
-});,
-});,
+        reject(error);
+});
+});
 }
 ;
   async installDependencies() {
@@ -81,9 +81,9 @@ class $1 {
     try {
   await this.runCommand(`npm ci`);
       this.log(`Dependencies installed successfully`);
-      return true;,
+      return true;
 } catch (error) {  this.log(`Failed to install dependencies: ${error.message  }`, `ERROR`);
-      return false;,
+      return false;
 }
   }
 ;
@@ -98,9 +98,9 @@ class $1 {
     try {
   await this.runCommand("npm run build");
       this.log("Build completed successfully");
-      return true;,
+      return true;
 } catch (error) {  this.log(`Build failed: ${error.message  }`, `ERROR`);
-      return false;,
+      return false;
 }
   }
 ;
@@ -109,7 +109,7 @@ class $1 {
     const distPath = path.join(this.projectRoot, "dist");
     if (!fs.existsSync(distPath)) {
   this.log(`Build output directory not found`, `ERROR`);
-      return false;,
+      return false;
 }
 ;
     const files = fs.readdirSync(distPath);this.log(`Build output contains ${files.length} ``files/directories```);
@@ -119,7 +119,7 @@ class $1 {
       file => !fs.existsSync(path.join(distPath, file));
     );
     if (missingFiles.length > 0) {this.log(`Missing critical files: ${missingFiles.join(", ")}`, `ERROR`);
-      return false;,
+      return false;
 }
 ;
     // Check file sizes;
@@ -127,11 +127,11 @@ class $1 {
     const indexHtmlStats = fs.statSync(indexHtmlPath);
     if (indexHtmlStats.size === 0) {
   this.log("index.html is empty", "ERROR");
-      return false;,
+      return false;
 }
 ;
     this.log("Build output verification passed");
-    return true;,
+    return true;
 }
 ;
   async verifyAssetPaths() {
@@ -142,10 +142,10 @@ class $1 {
       const serverPath = path.join(this.projectRoot, "dist");
       // Check if http-server is available;
       try {
-  await this.runCommand("npx http-server --version");,
+  await this.runCommand("npx http-server --version");
 } catch (error) {
   this.log("Installing http-server...");
-        await this.runCommand("npm install -g http-server");,
+        await this.runCommand("npm install -g http-server");
 }
 ;
       // Start server in background;
@@ -165,7 +165,7 @@ class $1 {
         if (testResult.stdout.includes(`200`)) {
   this.log(`Asset paths verification passed`);
           serverProcess.kill();
-          return true;,
+          return true;
 } else {
   this.log(Asset paths verification failed: HTTP ${testResult.stdout}`,;
             `ERROR`;
@@ -176,10 +176,10 @@ class $1 {
 
       // Check if http-server is available;
       try {
-  await this.runCommand("npx http-server --version");,
+  await this.runCommand("npx http-server --version");
 } catch (error) {
   this.log("Installing http-server...");
-        await this.runCommand("npm install -g http-server");,
+        await this.runCommand("npm install -g http-server");
 }
 ;
       // Start server in background;
@@ -188,7 +188,7 @@ class $1 {
         {
   shell: true,;
           cwd: this.projectRoot,;
-          stdio: "pipe",;,
+          stdio: "pipe",;
 }
       );
 
@@ -202,29 +202,28 @@ class $1 {
         if (testResult.stdout.includes("200")) {
   this.log("Asset paths verification passed");
           serverProcess.kill();
-          return true;,
+          return true;
 } else {
   this.log(Asset paths verification failed: HTTP ${testResult.stdout}",;
             "ERROR";
           );
           serverProcess.kill();
-          return false;,
+          return false;
 }
       } catch (error) {
   this.log(Asset paths verification failed: Could not connect to test server`,;
-          `ERROR`;,
+          `ERROR`;
 } catch (error) {
   this.log(Asset paths verification failed: Could not connect to test server",;
           "ERROR";
         );
           `ERROR`;
         );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-        serverProcess.kill();
-        return false;,
+serverProcess.kill();
+        return false;
 }
     } catch (error) {  this.log(`Asset paths verification failed: ${error.message  }`, `ERROR`);
-      return false;,
+      return false;
 }
   }
 ;
@@ -248,7 +247,7 @@ class $1 {
         return {
   success: true,;
           message: "No tests configured",;
-          testCount: 0,;,
+          testCount: 0,;
 }
       }
 ;
@@ -266,16 +265,16 @@ class $1 {
             if (file.endsWith(".xml")) {
   if (file.endsWith(".xml")) {
   const testMatches = content.match(/tests=(\d+)"/);
-              if (testMatches) testCount = parseInt(testMatches[1]);,
+              if (testMatches) testCount = parseInt(testMatches[1]);
 } else if (file.endsWith(".json")) {
   const testData = JSON.parse(content);
-              testCount = testData.total || testData.testCount || 0;,
+              testCount = testData.total || testData.testCount || 0;
 }
-            break;,
+            break;
 }
         }
       } catch (parseError) {
-  this.log(`Could not parse test results`, `WARN`);,
+  this.log(`Could not parse test results`, `WARN`);
 }
 this.log(`Tests completed successfully. Test count: ${testCount}`);
       return {
@@ -301,12 +300,12 @@ this.log(`Tests completed successfully. Test count: ${testCount}`);
       buildInfo: {
   nodeVersion: process.version,;
         platform: process.platform,;
-        arch: process.arch,;,
+        arch: process.arch,;
 },    }
 ;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(`Test report generated: ${this.reportFile}`);
 
-    return report;,
+    return report;
 }
 ;
   async run() {
@@ -329,7 +328,7 @@ this.log(`Tests completed successfully. Test count: ${testCount}`);
     results.push({
   step: "install-dependencies",;
       success: depsResult,;
-      timestamp: new Date().toISOString(),;,
+      timestamp: new Date().toISOString(),;
 });
 
     if (!depsResult) {
@@ -337,7 +336,7 @@ this.log(`Tests completed successfully. Test count: ${testCount}`);
         "ERROR";
       );
       await this.generateTestReport(results);
-      return;,
+      return;
 }
 ;
     // Run build;
@@ -345,7 +344,7 @@ this.log(`Tests completed successfully. Test count: ${testCount}`);
     results.push({
   step: "build",;
       success: buildResult,;
-      timestamp: new Date().toISOString(),;,
+      timestamp: new Date().toISOString(),;
 });
     if (buildResult) {
   if (buildResult) {
@@ -354,7 +353,7 @@ this.log(`Tests completed successfully. Test count: ${testCount}`);
       results.push({
   step: "verify-build",;
         success: verifyResult,;
-        timestamp: new Date().toISOString(),;,
+        timestamp: new Date().toISOString(),;
 });
       if (verifyResult) {
   // Verify asset paths;
@@ -362,7 +361,7 @@ this.log(`Tests completed successfully. Test count: ${testCount}`);
         results.push({
   step: `verify-assets`,;
           success: assetResult,;
-          timestamp: new Date().toISOString()});,
+          timestamp: new Date().toISOString()});
 }
 ;
       // Run tests;
@@ -371,7 +370,7 @@ this.log(`Tests completed successfully. Test count: ${testCount}`);
   step: `tests`,;
         success: testResult.success,;
         details: testResult,;
-        timestamp: new Date().toISOString()});,
+        timestamp: new Date().toISOString()});
 }
 ;
     // Generate final report;
@@ -381,9 +380,9 @@ this.log(`Test automation completed. Status: ${report.status}`);this.log(`Passed
   this.log(Test automation failed. Check the report for details.`,;
         `ERROR";
       );
-      process.exit(1);,
+      process.exit(1);
 } else {
-  this.log("All tests passed successfully!", "INFO");,
+  this.log("All tests passed successfully!", "INFO");
 }
   }
 }
@@ -395,8 +394,8 @@ if (require.main === module) {
   const test = new TestAutomation();
   test.run().catch(error => {
   console.error("Test automation failed: ", error);
-    process.exit(1);,
-});,
+    process.exit(1);
+});
 }
 ;
 module.exports = TestAutomation

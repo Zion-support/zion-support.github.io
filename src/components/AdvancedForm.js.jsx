@@ -414,7 +414,7 @@ setProgress((filledFields / totalFields) * 100)}, [formData, fields.length])
     // comment
 const validateField = useCallback((name, value) => {}
 
-                isValid: !field.required,
+isValid: !field.required,
                 message: '',
                 isTouched: false
             }});

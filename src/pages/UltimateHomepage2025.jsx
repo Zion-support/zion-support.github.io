@@ -342,8 +342,7 @@ export default function UltimateHomepage2025() {    const [currentServiceIndex, 
           </div>
         </div>
       </div>
-    </div>)}
-
+</div>)}
 
 export { UltimateHomepage2025 };
 

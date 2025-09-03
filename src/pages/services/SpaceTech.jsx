@@ -27,7 +27,6 @@ const SpaceTech = () => {
 
 export default SpaceTech;
 
-
 export { SpaceTech };
 
 export { SpaceTech };

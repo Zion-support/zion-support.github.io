@@ -139,7 +139,7 @@ export function EnhancedAccessibilityPanel() {
 
   // Load settings from localStorage
   useEffect(() => {
-  // TODO: Add dependencies if needed
+// TODO: Add dependencies if needed
 
   return () => {
     // Cleanup function

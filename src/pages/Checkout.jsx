@@ -108,7 +108,6 @@ export default function CheckoutPage() {}
       </div>
     </div>)}
 
-
 export { CheckoutPage };
 
 export { CheckoutPage };

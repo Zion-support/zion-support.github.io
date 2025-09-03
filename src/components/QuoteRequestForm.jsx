@@ -32,7 +32,7 @@ import {}
   const budgetRanges = []";&apos;&apos
   const urgencyLevels = []&apos;&apos;"""""""""""""""""""
 ""import { Checkbox } from "./ui/checkbox"
-  Mail,
+Mail,
   Phone,
   Building,"
   Send,"

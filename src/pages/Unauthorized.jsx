@@ -26,7 +26,6 @@ import { ShieldAlert export default function Unauthorized() {
       
     </>)}
 
-
 export { Unauthorized };
 
 export { Unauthorized };

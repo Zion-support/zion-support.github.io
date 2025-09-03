@@ -141,7 +141,7 @@ const formatNumber = () => {
         return num.toString()}"
     return ("
     <div className="{"bg-white" dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}"}" >      {/* comment */}""
-      <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-4 text-white">""""
+<div className="bg-gradient-to-r from-purple-500 to-pink-500 p-4 text-white">""""
         <div className="flex items-center justify-between">""""
           <h3 className="text-lg font-semibold flex items-center gap-2">""""
             <BarChart3 className="w-5 h-5" /" >"

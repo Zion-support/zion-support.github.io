@@ -20,7 +20,6 @@ export default function PricingGuide() {
             'Digital Transformation': <TrendingUp className="w-6 h-6"/>,
             'Emerging Tech': <Globe className="w-6 h-6"/>,
 
-
 export { PricingGuide };
 
 export { PricingGuide };

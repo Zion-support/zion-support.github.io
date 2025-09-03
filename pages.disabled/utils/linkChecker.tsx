@@ -59,7 +59,6 @@ export interface PageInfo {}
   // Extract all links from a page
   extractLinks (pageContent: string, pagePath: string) : LinkInfo[] {
 
-
   constructor (baseUrl: string = 'https://ziontechgroup.com') {}
     this.baseUrl = baseUrl}
 

@@ -205,7 +205,6 @@ export default function AIConsciousnessSimulator() {}
       </section>
     </div>)}
 
-
 export { AIConsciousnessSimulator, IconComponent };
 
 export { AIConsciousnessSimulator, IconComponent };

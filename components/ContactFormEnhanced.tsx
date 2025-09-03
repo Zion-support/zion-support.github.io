@@ -67,7 +67,7 @@ type="submit""            disabled={isSubmitting}"            whileHover={{ scal
               <>
                 <Send className="w-4 h-4 />                <span>Send Message</span>"</>            )}
 
-          {submitStatus === 'success' && ('            <motion.div'              initial={{ opacity: 0, y: 20 }}
+{submitStatus === 'success' && ('            <motion.div'              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2            >"              <CheckCircle className="w-5 h-5 />              <span>Message sent successfully!</span>"            </motion.div>)}        </form>
 export: default ContactFormEnhanced,

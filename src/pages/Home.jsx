@@ -46,7 +46,7 @@ export default function Home() {
     }
   ];
 
-      <HeroSection />
+<HeroSection />
       <QuickAccess />
       <FeatureCTAs />
       <FeatureHighlights />
@@ -61,7 +61,6 @@ export default function Home() {
     </>
   );
 }
-
 
 export { Home };
 
