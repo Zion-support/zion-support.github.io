@@ -1,17 +1,18 @@
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-
+<<<<<<< HEAD
+import React from 'react'; import { SEO } from '../../components/SEO'; export default function AIFinancialTradingAlgorithm() { return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center"> <SEO title="AI Financial Trading Algorithm - Zion Tech Group" description="AI-powered financial trading algorithm platform." /> <div className="text-center text-white"> <h1 className="text-4xl font-bold mb-4">AI Financial Trading Algorithm</h1> <p className="text-xl text-gray-300">Coming Soon</p> </div> </div> ); }
+=======
+import React from "react"
+import Link from "next/link"
+import Head from "next/head"
 const AIFinancialTradingAlgorithm = () => {
   return (
     <>
       <Head>
         <title>Financial Trading Algorithm - AI Services</title>
-        <meta name="description" content="Professional Financial Trading Algorithm services powered by AI" />
+        <meta name="description" content="Professional Financial Trading Algorithm services powered by AI"  />
       </Head>
-      
       <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
               Financial Trading Algorithm
@@ -19,7 +20,6 @@ const AIFinancialTradingAlgorithm = () => {
             <p className="text-xl text-gray-600 mb-12">
               Professional Financial Trading Algorithm services powered by artificial intelligence
             </p>
-            
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
@@ -30,7 +30,6 @@ const AIFinancialTradingAlgorithm = () => {
                   <li>• Expert Consultation</li>
                 </ul>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
                 <ul className="text-gray-600 space-y-2">
@@ -40,8 +39,6 @@ const AIFinancialTradingAlgorithm = () => {
                   <li>• Competitive Pricing</li>
                 </ul>
               </div>
-            </div>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 View Pricing
@@ -50,11 +47,8 @@ const AIFinancialTradingAlgorithm = () => {
                 Contact Us
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
     </>
   );
-};
-
-export default AIFinancialTradingAlgorithm;
+}
+export default AIFinancialTradingAlgorithm
+>>>>>>> main

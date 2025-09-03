@@ -1,6 +1,8 @@
-import React from 'react';
-
-
+<<<<<<< HEAD
+import { Route, Routes  } from 'react-router-dom'; import EnterprisePlans from '../pages/EnterprisePlans'; import EnterpriseAdmin from '../pages/EnterpriseAdmin'; import CompWorkspace from '../pages/CompWorkspace'; import EnterpriseBilling from '../pages/EnterpriseBilling'; import EnterpriseDemo from '../pages/EnterpriseDemo'; ; export default function EnterpriseRoutes() {; return (; <Routes>; {}; <Route path = "/enterprise" element={<EnterprisePlans />} />";"";" <Route path="/plans/enterprise" element={<EnterprisePlans />} />;";"";"
+=======
+import React from "react"
+  );
 export default function Enterpriseroutes() {
   return (
     <div className="min-h-screen bg-white">
@@ -9,8 +11,7 @@ export default function Enterpriseroutes() {
         <p className="text-lg text-gray-600 mb-8">
           This is a placeholder component for enterpriseroutes.
         </p>
-        
       </div>
-    </div>
-  );
+  )
 }
+>>>>>>> main

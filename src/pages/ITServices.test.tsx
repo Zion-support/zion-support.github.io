@@ -1,13 +1,25 @@
-describe('ITServices', () => {}; '; it('renders without crashing', () => {}; render(<ITServices / >) ,; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<ITServices />) ;
-    render();
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+describe('ITServices', () => {}; '; it('renders without crashing', () => {}; render(<ITServices />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<ITServices />) ;
+=======
+describe("ITServices", () => {}; "; it("renders without crashing", () => {}; render(<ITServices / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<ITServices  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
   })
-''
-  it('displays expected content', () => {
-    render(<ITServices /" >);
-    // Add more specific tests here,
-  });
+}
+""
+  it("displays expected content", () => {
+    render(<ITServices /" >)
+}
+    // comment
+  })
+}
   });"
 "
-});"
-'
+});""
+>>>>>>> main
+>>>>>>> main

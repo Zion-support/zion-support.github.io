@@ -1,120 +1,116 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 
-const fs = require('fs');
-const path = require('path');
-
-class TargetedSyntaxFixer {
+const fs = require("fs");
+const path = require("path");
+class $1 {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
-  }
-
+  this.projectRoot = process.cwd();
+    this.fixedFiles = [];,
+}
+;
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-
+  console.log(`[${new Date().toISOString()}] ${message}`);,
+}
+;
   fixSpecificErrors(filePath) {
-    try {
-      if (!fs.existsSync(filePath)) {
-        return false;
-      }
-
-      let content = fs.readFileSync(filePath, 'utf8');
+  try {
+  if (!fs.existsSync(filePath)) {
+  return false;,
+}
+;
+      let content = fs.readFileSync(filePath, "utf8");
       let originalContent = content;
       let changes = 0;
-
-      // Fix specific syntax errors found
+      // Fix specific syntax errors found;
       const fixes = [
-        // Fix broken template literals in catch blocks
+  // Fix broken template literals in catch blocks;
         {
-          pattern: /} catch \(error\) \{ {2}this\.log\(❌ Fatal error in orchestrator: \$\{error\.message\}, `ERROR``\);/g,
-          replacement: '} catch (error) { this.log(`❌ Fatal error in orchestrator: ${error.message}`, \'ERROR\');'
-        },
-        
-        // Fix broken console.log statements
+  pattern: /} catch \(error\) \{ {2}this\.log\(❌ Fatal error in orchestrator: \$\{error\.message\}, `ERROR``\);/g,;
+          replacement: "} catch (error) { this.log(`❌ Fatal error in orchestrator: ${error.message}`, \"ERROR\");";,
+},;
+        ;
+        // Fix broken console.log statements;
         {
-          pattern: /console\.log\(🎯 Automations to run: \$\{automationsToRun\.join\(', `\)\}\`\);/g,
-          replacement: 'console.log(`🎯 Automations to run: ${automationsToRun.join(\', \')}`);';
-},
-        
-        // Fix broken template literals with backticks
+  pattern: /console\.log\(🎯 Automations to run: \$\{automationsToRun\.join\(", `\)\}\`\);/g,;
+          replacement: "console.log(`🎯 Automations to run: ${automationsToRun.join(\", \")}`);";,
+},;
+        ;
+        // Fix broken template literals with backticks;
         {
-          pattern: /`([^`]*)\$\{([^}]*)\}([^`]*)`/g,
-          replacement: '`$1${$2}$3`';
-},
-        
-        // Fix missing closing backticks
+  pattern: /`([^`]*)\$\{([^}]*)\}([^`]*)`/g,;
+          replacement: "`$1${$2}$3`";,
+},;
+        ;
+        // Fix missing closing backticks;
         {
-          pattern: /console\.log\(`([^`]*)\$\{([^}]*)\}([^`]*)\`\);/g,
-          replacement: 'console.log(`$1${$2}$3`);';
-},
-        
-        // Fix broken string concatenation
+  pattern: /console\.log\(`([^`]*)\$\{([^}]*)\}([^`]*)\`\);/g,;
+          replacement: "console.log(`$1${$2}$3`);";,
+},;
+        ;
+        // Fix broken string concatenation;
         {
-          pattern: /'([^']*)\$\{([^}]*)\}([^']*)'/g,
-          replacement: '`$1${$2}$3`';
-},
-        
-        // Fix missing semicolons after template literals
+  pattern: /"([^"]*)\$\{([^}]*)\}([^"]*)"/g,;
+          replacement: "`$1${$2}$3`";,
+},;
+        ;
+        // Fix missing semicolons after template literals;
         {
-          pattern: /`([^`]*)\$\{([^}]*)\}([^`]*)`\)/g,
-          replacement: '`$1${$2}$3`);';
+  pattern: /`([^`]*)\$\{([^}]*)\}([^`]*)`\)/g,;
+          replacement: "`$1${$2}$3`);";,
 }
-      ]
+      ];
 
       fixes.forEach(fix => {
-        const newContent = content.replace(fix.pattern, fix.replacement);
+  const newContent = content.replace(fix.pattern, fix.replacement);
         if (newContent !== content) {
-          content = newContent;
-          changes++;
-        }
+  content = newContent;
+          changes++;,
+}
       });
-
       if (changes > 0) {
-        fs.writeFileSync(filePath, content, 'utf8');
+  fs.writeFileSync(filePath, content, "utf8");
         this.fixedFiles.push({ file: filePath, changes });
         this.log(`✅ Fixed ${changes} issues in ${filePath}`);
-        return true;
-      }
-
-      return false;
-    } catch (error) {
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;
-    }
+        return true;,
+}
+;
+      return false;,
+} catch (error) {
+  this.log(`❌ Error fixing ${filePath}: ${error.message}`);
+      return false;,
+}
   }
-
+;
   async fixAllFiles() {
-    this.log('🔧 Starting targeted syntax fixes...');
-
+  this.log("🔧 Starting targeted syntax fixes...");
     const filesToFix = [
-      'scripts/automation/master-automation-orchestrator.cjs',
-      'scripts/automation/intelligent-automation-orchestrator.cjs',
-      'scripts/automation/comprehensive-error-fixer.cjs',
-      'scripts/automation/syntax-fixer.cjs'
-    ]
+  "scripts/automation/master-automation-orchestrator.cjs",;
+      "scripts/automation/intelligent-automation-orchestrator.cjs",;
+      "scripts/automation/comprehensive-error-fixer.cjs",;
+      "scripts/automation/syntax-fixer.cjs";
+    ];
 
     let fixedCount = 0;
     for (const file of filesToFix) {
-      const fullPath = path.join(this.projectRoot, file);
+  const fullPath = path.join(this.projectRoot, file);
       if (this.fixSpecificErrors(fullPath)) {
-        fixedCount++;
-      }
+  fixedCount++;,
+}
     }
-
+;
     this.log(`🎉 Fixed ${fixedCount} files with targeted syntax errors`);
-    return { fixed: this.fixedFiles };
+    return { fixed: this.fixedFiles }
   }
 }
-
-// Run the fixer
+;
+// Run the fixer;
 const fixer = new TargetedSyntaxFixer();
-fixer.fixAllFiles()
+fixer.fixAllFiles();
   .then(result => {
-    console.log('\n🎯 Targeted syntax fixing completed!');
-    process.exit(0);
-  })
+  console.log("\n🎯 Targeted syntax fixing completed!");
+    process.exit(0);,
+});
   .catch(error => {
-    console.error('❌ Fatal error:', error);
-    process.exit(1);
-  });
+  console.error("❌ Fatal error:', error);
+    process.exit(1);,
+})

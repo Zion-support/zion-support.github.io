@@ -1,1 +1,1 @@
-import React from 'react' export default AIAnalyticsCopilot
+import React from "react" export default AIAnalyticsCopilot

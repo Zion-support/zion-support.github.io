@@ -1,6 +1,20 @@
-import React from 'react';
+import React from "react"
+  );
+<<<<<<< HEAD
+};
+export default ContentRoutes;
 
 
+export { ContentRoutes };
+
+export { ContentRoutes };
+
+export { ContentRoutes };
+
+export { ContentRoutes };
+
+export { ContentRoutes };
+=======
 export default function Contentroutes() {
   return (
     <div className="min-h-screen bg-white">
@@ -9,8 +23,7 @@ export default function Contentroutes() {
         <p className="text-lg text-gray-600 mb-8">
           This is a placeholder component for contentroutes.
         </p>
-        
       </div>
-    </div>
-  );
+  )
 }
+>>>>>>> main

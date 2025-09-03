@@ -1,13 +1,25 @@
-describe('UltimateZionServicesShowcase2025', () => {}; '; it('renders without crashing', () => {}; render(<UltimateZionServicesShowcase2025 / >) ,; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<UltimateZionServicesShowcase2025 />) ;
-    render();
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+describe('UltimateZionServicesShowcase2025', () => {}; '; it('renders without crashing', () => {}; render(<UltimateZionServicesShowcase2025 />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<UltimateZionServicesShowcase2025 />) ;
+=======
+describe("UltimateZionServicesShowcase2025", () => {}; "; it("renders without crashing", () => {}; render(<UltimateZionServicesShowcase2025 / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<UltimateZionServicesShowcase2025  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
   })
-''
-  it('displays expected content', () => {
-    render(<UltimateZionServicesShowcase2025 /" >);
-    // Add more specific tests here,
-  });
+}
+""
+  it("displays expected content", () => {
+    render(<UltimateZionServicesShowcase2025 /" >)
+}
+    // comment
+  })
+}
   });"
 "
-});"
-'
+});""
+>>>>>>> main
+>>>>>>> main

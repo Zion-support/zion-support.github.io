@@ -1,52 +1,44 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
+export function ModernHeader() {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+}
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+}
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+}
 
-export function ModernHeader() {
-
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-
-  const toggleMobileMenu = () => {;
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {;
-    setIsMobileMenuOpen(false);
-    setIsServicesOpen(false);
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false)
+}
+    setIsServicesOpen(false)
+}
   }'
 
-  const services = ['
-    { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions and automation' },'
-    { name: 'IT Services', href: '/it-services', description: 'Infrastructure and cloud solutions' },'
-    { name: 'Micro SaaS', href: '/micro-saas', description: 'Custom software solutions' },'
-    { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security and compliance' },'
-    { name: 'Cloud Platforms', href: '/cloud-platforms', description: 'Scalable cloud infrastructure' },'
-    { name: 'Data Analytics', href: '/data-analytics', description: 'Business intelligence and insights' },'
-    { name: 'Blockchain Solutions', href: '/blockchain-solutions', description: 'Blockchain and Web3 solutions' },'
-    { name: 'IoT Solutions', href: '/iot-solutions', description: 'Internet of Things solutions' },'
-    { name: 'Emerging Tech', href: '/emerging-tech', description: 'Cutting-edge technology solutions' }
-  ]
+  const services = []
 
   return (
     <>
-      {/*   */}
+      {/* comment */}
+
       <div className="bg-blue-900 text-white py-2">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="flex items-center justify-between text-sm">"
             <div className="flex items-center space-x-6">"
               <div className="flex items-center space-x-2">"
-                <Phone className="h-4 w-4" />"
+                <Phone className="h-4 w-4"  />"
                 <a href="tel:+13024640950" className="hover:text-blue-200 transition-colors">
                   +1 302 464 0950,
                 </a>
               </div>"
               <div className="flex items-center space-x-2">"
-                <Mail className="h-4 w-4" />"
+                <Mail className="h-4 w-4"  />"
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-200 transition-colors">
                   kleber@ziontechgroup.com,
                 </a>
               </div>"
               <div className="hidden md:flex items-center space-x-2">"
-                <MapPin className="h-4 w-4" />,
+                <MapPin className="h-4 w-4"  />,
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>"
@@ -55,15 +47,12 @@ export function ModernHeader() {
               <Link href="/careers" className="hover:text-blue-200 transition-colors">Careers</Link>"
               <Link href="/support" className="hover:text-blue-200 transition-colors">Support</Link>
             </div>
-          </div>
-        </div>
-      </div>
 ,
-      {/*   */}"
+      {/* comment */}"
       <header className="bg-white shadow-lg sticky top-0 z-50">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="flex items-center justify-between h-16">,
-            {/*   */}"
+            {/* comment */}"
             <div className="flex-shrink-0">"
               <Link href="/" className="flex items-center">"
                 <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center mr-3">"
@@ -72,27 +61,27 @@ export function ModernHeader() {
                 <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
               </Link>
             </div>
-
-            {/*   */}"
+            {/* comment */}"
             <nav className="hidden lg: flex items-center space-x-8">"
               <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Home,
               </Link>
               ,
-              {/*   */}"
+              {/* comment */}"
               <div className="relative">"
                 <button className="flex items-center text-gray-700 hover: text-blue-600 transition-colors font-medium"">
                   onMouseEnter="{()" => setIsServicesOpen(true)}"
                   onMouseLeave="{()" => setIsServicesOpen(false)}
+
                 >
                   Services"
-                  <ChevronDown className="ml-1 h-4 w-4" />
+                  <ChevronDown className="ml-1 h-4 w-4"  />
                 </button>
-                
                 {isServicesOpen && ("
                   <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4""
                     onMouseEnter="{()" => setIsServicesOpen(true)}"
                     onMouseLeave="{()" => setIsServicesOpen(false)}
+
                   >"
                     <div className="grid grid-cols-2 gap-4 px-6">
                       {services.map((service) => ("
@@ -104,6 +93,7 @@ export function ModernHeader() {
                           <div className="text-sm text-gray-600">{service.description}</div>
                         </Link>
                       ))}
+
                     </div>"
                     <div className="mt-4 pt-4 border-t border-gray-200 px-6">"
                       <Link href="/services""
@@ -114,6 +104,7 @@ export function ModernHeader() {
                     </div>
                   </div>,
                 )}
+
               </div>
 "
               <Link href="/about" className="text-gray-700 hover: text-blue-600 transition-colors font-medium">
@@ -136,7 +127,7 @@ export function ModernHeader() {
               </Link>
             </nav>
 ,
-            {/*   */}"
+            {/* comment */}"
             <div className="hidden lg: flex items-center space-x-4">"
               <Link href="/contact""
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
@@ -145,18 +136,17 @@ export function ModernHeader() {
               </Link>
             </div>
 ,
-            {/*   */}"
+            {/* comment */}"
             <div className="lg: hidden">",
               <button onClick="{toggleMobileMenu}""
                 className="text-gray-700 hover: text-blue-600 transition-colors"
               >",
-                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isMobileMenuOpen ? <X className="h-6 w-6"  /> : <Menu className="h-6 w-6"  />}
+
               </button>
             </div>
-          </div>
-        </div>
+        {/* comment */}
 
-        {/*   */}
         {isMobileMenuOpen && ("
           <div className="lg: hidden bg-white border-t border-gray-200">"
             <div className="px-4 py-6 space-y-4">"
@@ -176,6 +166,7 @@ export function ModernHeader() {
                     onClick="{closeMobileMenu}"
                   >
                     {service.name}
+
                   </Link>
                 ))}"
                 <Link href="/services""
@@ -231,10 +222,11 @@ export function ModernHeader() {
                   Get Started,
                 </Link>
               </div>
-            </div>
-          </div>;
-        )};
-      </header>;
+        )}
+
+      </header>
     </>
   );"
 }"
+
+export default Component

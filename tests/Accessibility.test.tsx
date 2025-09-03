@@ -1,1 +1,1 @@
-import { render } from '@testing-library/react'; expect.extend(toHaveNoViolations); test(' 'ModeToggle has no accessibility violations', async () => { const { container } = render(<ModeToggle />) const results = await axe(container) expect(results).toHaveNoViolations()});
+import { render  } from "@testing-library/react"; expect.extend(toHaveNoViolations); test(" "ModeToggle has no accessibility violations', async () => { const { container } = render(<ModeToggle />) const results = await axe(container) expect(results).toHaveNoViolations()})

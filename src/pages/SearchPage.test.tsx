@@ -1,13 +1,25 @@
-describe('SearchPage', () => {}; '; it('renders without crashing', () => {}; render(<SearchPage / >) ,; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<SearchPage />) ;
-    render();
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+describe('SearchPage', () => {}; '; it('renders without crashing', () => {}; render(<SearchPage />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<SearchPage />) ;
+=======
+describe("SearchPage", () => {}; "; it("renders without crashing", () => {}; render(<SearchPage / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<SearchPage  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
   })
-''
-  it('displays expected content', () => {
-    render(<SearchPage /" >);
-    // Add more specific tests here,
-  });
+}
+""
+  it("displays expected content", () => {
+    render(<SearchPage /" >)
+}
+    // comment
+  })
+}
   });"
 "
-});"
-'
+});""
+>>>>>>> main
+>>>>>>> main

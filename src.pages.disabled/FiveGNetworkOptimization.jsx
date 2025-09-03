@@ -1,1 +1,1 @@
-import React from 'react' export default FiveGNetworkOptimization
+import React from "react" export default FiveGNetworkOptimization

@@ -1,9 +1,5 @@
-// cartUtils utility
-export const cartUtils = {
-  // Placeholder utility functions
-  init: () => {
-    console.log('cartUtils initialized');
-  }
-};
+// comment
+export const cartUtils = {}
 
-export default cartUtils;
+
+export default cartUtils

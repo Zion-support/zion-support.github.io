@@ -1,6 +1,5 @@
-import React from 'react';
-
-
+import React from "react"
+  );
 export default function Authslice() {
   return (
     <div className="min-h-screen bg-white">
@@ -9,8 +8,6 @@ export default function Authslice() {
         <p className="text-lg text-gray-600 mb-8">
           This is a placeholder component for authslice.
         </p>
-        
       </div>
-    </div>
-  );
+  )
 }

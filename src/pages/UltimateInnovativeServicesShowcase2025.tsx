@@ -1,17 +1,18 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
+<<<<<<< HEAD
+import React, { useState, useMemo } from 'react'; import { motion  } from 'framer-motion'; import { Link  } from 'react-router-dom'; import { Brain,; Cloud,; Shield,; Zap,; Globe,; Database,; Smartphone,; Rocket,; Cpu,; Network,; Lock,; BarChart3,; Users,; Target,; Award,; Star,; CheckCircle,; ArrowRight,; Phone,; Mail,; MapPin,; ExternalLink,; Search,; Filter,; TrendingUp,; DollarSign,; Clock,; Shield as ShieldIcon;  } from 'lucide-react'; import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from '../data/ultimateInnovativeServices2025'; ; export default function UltimateInnovativeServicesShowcase2025(...args[]: any): { const [selectedCategory, setSelectedCategory] = useState<any>('all'); const [selectedSubcategory, setSelectedSubcategory] = useState<any>('all'); const [searchTerm, setSearchTerm] = useState<any>(''); const [sortBy, setSortBy] = useState<any>('innovation'); ; const filtered = ULTIMATE_INNOVATIVE_SERVICES_2025; ; if(selectedCategory !== 'all') {; filtered = filtered.filter(service => service.category === selectedCategory)}; if(selectedSubcategory !== 'all') {; filtered = filtered.filter(service => service.subcategory === selectedSubcategory)}; if(searchTerm) {; filtered = filtered.filter(service =>; service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||; service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||; service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())); ); };
+=======
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
 const UltimateInnovativeServicesShowcase2025 = () => {
   return (
     <>
       <Head>
         <title>Ultimate Innovative Services Showcase2025 - Zion Tech Group</title>
-        <meta name="description" content="Professional Ultimate Innovative Services Showcase2025 services" />
+        <meta name="description" content="Professional Ultimate Innovative Services Showcase2025 services"  />
       </Head>
-      
       <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
               Ultimate Innovative Services Showcase2025
@@ -19,7 +20,6 @@ const UltimateInnovativeServicesShowcase2025 = () => {
             <p className="text-xl text-gray-600 mb-12">
               Professional Ultimate Innovative Services Showcase2025 services and solutions
             </p>
-            
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
@@ -30,7 +30,6 @@ const UltimateInnovativeServicesShowcase2025 = () => {
                   <li>• Custom Development</li>
                 </ul>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
                 <ul className="text-gray-600 space-y-2">
@@ -40,8 +39,6 @@ const UltimateInnovativeServicesShowcase2025 = () => {
                   <li>• Competitive Pricing</li>
                 </ul>
               </div>
-            </div>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 View Pricing
@@ -50,11 +47,8 @@ const UltimateInnovativeServicesShowcase2025 = () => {
                 Contact Us
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
     </>
   );
-};
-
-export default UltimateInnovativeServicesShowcase2025;
+}
+export default UltimateInnovativeServicesShowcase2025
+>>>>>>> main

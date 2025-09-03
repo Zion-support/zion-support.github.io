@@ -1,13 +1,25 @@
-describe('Services', () => {}; '; it('renders without crashing', () => {}; render(<Services / >) ,; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Services />) ;
-    render();
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+describe('Services', () => {}; '; it('renders without crashing', () => {}; render(<Services />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Services />) ;
+=======
+describe("Services", () => {}; "; it("renders without crashing", () => {}; render(<Services / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<Services  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
   })
-''
-  it('displays expected content', () => {
-    render(<Services /" >);
-    // Add more specific tests here,
-  });
+}
+""
+  it("displays expected content", () => {
+    render(<Services /" >)
+}
+    // comment
+  })
+}
   });"
 "
-});"
-'
+});""
+>>>>>>> main
+>>>>>>> main

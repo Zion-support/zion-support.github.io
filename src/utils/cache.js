@@ -1,9 +1,5 @@
-// cache utility
-export const cache = {
-  // Placeholder utility functions
-  init: () => {
-    console.log('cache initialized');
-  }
-};
+// comment
+export const cache = {}
 
-export default cache;
+
+export default cache

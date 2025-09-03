@@ -1,59 +1,48 @@
-import React from 'react';
-import Link from 'next/link';
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
+<<<<<<< HEAD
+import React from 'react'; import { motion  } from 'framer-motion'; import { Atom, Cpu, Zap, Shield, CheckCircle, Star, Users, Globe, Lock, Database, Network, BarChart3, ArrowRight, Sparkles, Target, Rocket, TrendingUp, Activity, Microscope, Brain, CircuitBoard, Layers, Workflow, Settings, Play  } from 'lucide-react'; import { SEO } from '../../components/SEO'; const AIQuantumComputingSolutions = () => { const features = [{ icon: Atom, title: 'Quantum Algorithm Development', description: 'Advanced quantum algorithm design and optimization for complex computational problems' }, { icon: Cpu, title: 'Quantum Simulation Platform', description: 'High-performance quantum simulation environment for research and development' }, { icon: Zap, title: 'Quantum Machine Learning', description: 'AI-powered quantum computing solutions for enhanced machine learning capabilities' }, { icon: Shield, title: 'Quantum Cryptography', description: 'Quantum-safe encryption and security protocols for next-generation protection' }, { icon: Database, title: 'Quantum Database Optimization', description: 'Quantum-enhanced database operations for exponential performance improvements' }, { icon: Network, title: 'Quantum Network Protocols', description: 'Advanced quantum networking and communication protocols' } ]; const quantumCapabilities = [{ category: 'Quantum Computing', services: ['Quantum Algorithm Design', 'Quantum Circuit Optimization', 'Quantum Error Correction', 'Quantum State Preparation'], accuracy: '99.7%', icon: Atom }, { category: 'Quantum Simulation', services: ['Molecular Simulation', 'Material Science', 'Quantum Chemistry', 'Physics Modeling'], accuracy: '98.9%', icon: Microscope }, { category: 'Quantum AI', services: ['Quantum Neural Networks', 'Quantum Optimization', 'Quantum Machine Learning', 'Quantum Pattern Recognition'], accuracy: '97.8%', icon: Brain }, { category: 'Quantum Security', services: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Quantum Random Number Generation', 'Quantum Authentication'], accuracy: '99.9%', icon: Shield } ]; const benefits = ['Exponential computational speedup for complex problems', 'Revolutionary breakthroughs in drug discovery and materials science', 'Unbreakable quantum encryption for ultimate security', 'Advanced AI capabilities with quantum machine learning', 'Optimized financial modeling and risk analysis', 'Next-generation optimization for logistics and supply chains' ]; const pricing = [{ name: 'Research', price: '$12,999', period: '/month', description: 'Perfect for academic research and development', features: [ 'Up to 50 quantum operations/day', 'Basic quantum algorithms', 'Standard simulation tools', 'Email support', 'Research documentation' ], cta: 'Start Research Trial', popular: false }, { name: 'Enterprise', price: '$24,999', period: '/month', description: 'Ideal for commercial quantum applications', features: ['Up to 500 quantum operations/day', 'Advanced quantum algorithms', 'Custom quantum circuits', 'Priority support', 'API access', 'Custom integrations', 'Quantum optimization tools' ], cta: 'Start Enterprise Trial', popular: true }, { name: 'Ultimate', price: '$49,999', period: '/month', description: 'For large-scale quantum computing needs', features: ['Unlimited quantum operations', 'Full quantum computing suite', 'Custom quantum hardware access', '24/7 dedicated support', 'White-label solutions', 'On-premise deployment', 'Custom quantum development' ], cta: 'Contact Sales', popular: false } ]; const useCases = [{ industry: 'Pharmaceutical Research', description: 'Quantum-accelerated drug discovery and molecular simulation for faster medical breakthroughs' }, { industry: 'Financial Services', description: 'Quantum optimization for portfolio management, risk analysis, and fraud detection' }, { industry: 'Materials Science', description: 'Quantum simulation for advanced materials discovery and optimization' }, { industry: 'Cybersecurity', description: 'Quantum-safe encryption and post-quantum cryptography for ultimate security' } ]; return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"> <SEO title="AI Quantum Computing Solutions - Zion Tech Group" description="Revolutionary AI-powered quantum computing platform for advanced research, simulation, and commercial applications with exponential computational capabilities." /> {} <section className="relative py-20 overflow-hidden"> <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10"></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8   }} > <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6"> <Atom className="w-4 h-4 mr-2" /> Quantum Computing Revolution </div> <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"> AI Quantum Computing <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent"> Solutions</span> </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"> Unlock the power of quantum computing with AI-enhanced algorithms, simulation platforms, and quantum machine learning for revolutionary breakthroughs.</p> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center"> <Play className="w-5 h-5 mr-2" /> Start Quantum Trial </button> <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200 flex items-center justify-center"> <Settings className="w-5 h-5 mr-2" /> Schedule Demo </button> </div> </motion.div> </div> </section> {} <section className="py-20"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8   }} className="text-center mb-16" > <h2 className="text-4xl font-bold text-white mb-4"> Quantum Computing Capabilities </h2> <p className="text-xl text-gray-300 max-w-2xl mx-auto"> Our AI-powered quantum platform provides cutting-edge quantum computing solutions for research, simulation, and commercial applications.</p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {features.map((feature, index) => ( <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200" > <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center mb-4"> <feature.icon className="w-6 h-6 text-white" /> </div> <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3> <p className="text-gray-300">{feature.description}</p> </motion.div> ))} </div> </div> </section> {} <section className="py-20 bg-slate-800/30"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8   }} className="text-center mb-16" > <h2 className="text-4xl font-bold text-white mb-4"> Advanced Quantum Solutions </h2> <p className="text-xl text-gray-300 max-w-2xl mx-auto"> Comprehensive quantum computing services across all major application areas with industry-leading accuracy rates.</p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> {quantumCapabilities.map((capability, index) => ( <motion.div key={index} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200" > <div className="flex items-start space-x-4"> <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0"> <capability.icon className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-xl font-semibold text-white mb-2">{capability.category}</h3> <div className="flex items-center mb-3"> <span className="text-purple-400 font-semibold text-lg">{capability.accuracy}</span> <span className="text-gray-400 ml-2">accuracy</span> </div> <ul className="space-y-2"> {capability.services.map((service, serviceIndex) => ( <li key={serviceIndex} className="flex items-center"> <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" /> <span className="text-gray-300 text-sm">{service}</span> </li> ))} </ul> </div> </div> </motion.div> ))} </div> </div> </section> {} <section className="py-20"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8   }} className="text-center mb-16" > <h2 className="text-4xl font-bold text-white mb-4"> Transform Your Research & Business </h2> <p className="text-xl text-gray-300 max-w-2xl mx-auto"> Experience the revolutionary power of quantum computing with AI-enhanced capabilities for unprecedented breakthroughs.</p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> <div className="space-y-6"> {benefits.slice(0, 3).map((benefit, index) => ( <motion.div key={index} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} className="flex items-start space-x-3" > <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" /> <span className="text-gray-300 text-lg">{benefit}</span> </motion.div> ))} </div> <div className="space-y-6"> {benefits.slice(3).map((benefit, index) => ( <motion.div key={index + 3} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} className="flex items-start space-x-3" > <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" /> <span className="text-gray-300 text-lg">{benefit}</span> </motion.div> ))} </div> </div> </div> </section> {} <section className="py-20 bg-slate-800/30"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8   }} className="text-center mb-16" > <h2 className="text-4xl font-bold text-white mb-4"> Quantum Computing Pricing </h2> <p className="text-xl text-gray-300 max-w-2xl mx-auto"> Choose the quantum computing plan that fits your research and business needs.All plans include access to our quantum simulation platform.</p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> {pricing.map((plan, index) => ( <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} className={`relative bg-slate-800/50 border rounded-xl p-8 ${plan.popular ? 'border-purple-500/50 bg-purple-500/5' : 'border-slate-700/50' }`} > {plan.popular && ( <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"> <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold"> Most Popular </span> </div> )} <div className="text-center mb-8"> <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3> <p className="text-gray-400 mb-4">{plan.description}</p> <div className="mb-4"> <span className="text-4xl font-bold text-white">{plan.price}</span> <span className="text-gray-400">{plan.period}</span> </div> </div> <ul className="space-y-3 mb-8"> {plan.features.map((feature, featureIndex) => ( <li key={featureIndex} className="flex items-center space-x-3"> <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" /> <span className="text-gray-300">{feature}</span> </li> ))} </ul> <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${plan.popular ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600' : 'bg-slate-700 text-white hover:bg-slate-600' }`}> {plan.cta} </button> </motion.div> ))} </div> </div> </section> {} <section className="py-20"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8   }} className="text-center mb-16" > <h2 className="text-4xl font-bold text-white mb-4"> Quantum Computing Market & ROI </h2> <p className="text-xl text-gray-300 max-w-2xl mx-auto"> Understand the quantum computing market landscape and potential return on investment for early adopters.</p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"> <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center" > <BarChart3 className="w-12 h-12 text-purple-400 mx-auto mb-4" /> <h3 className="text-2xl font-bold text-white mb-2">$65.2B</h3> <p className="text-gray-300">Quantum Market by 2030</p> </motion.div> <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center" > <TrendingUp className="w-12 h-12 text-green-400 mx-auto mb-4" /> <h3 className="text-2xl font-bold text-white mb-2">38.2%</h3> <p className="text-gray-300">Annual Growth Rate</p> </motion.div> <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center" > <Rocket className="w-12 h-12 text-blue-400 mx-auto mb-4" /> <h3 className="text-2xl font-bold text-white mb-2">1000x</h3> <p className="text-gray-300">Computational Speedup</p> </motion.div> <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center" > <Target className="w-12 h-12 text-yellow-400 mx-auto mb-4" /> <h3 className="text-2xl font-bold text-white mb-2">500%</h3> <p className="text-gray-300">Average ROI</p> </motion.div> </div> </div> </section> {} <section className="py-20 bg-gradient-to-r from-purple-500/10 to-blue-500/10"> <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8   }} > <h2 className="text-4xl font-bold text-white mb-4"> Start Your Quantum Computing Journey Today </h2> <p className="text-xl text-gray-300 mb-8"> Join the quantum revolution with our AI-enhanced quantum computing platform.Experience exponential computational power for your research and business needs.</p> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center"> Start Quantum Trial <ArrowRight className="w-5 h-5 ml-2" /> </button> <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"> Contact Sales </button> </div> <div className="mt-8 text-center"> <p className="text-gray-400 mb-4">Ready to get started? Contact our quantum computing experts:</p> <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300"> <div className="flex items-center justify-center space-x-2"> <span>📱</span> <span>+1 302 464 0950</span> </div> <div className="flex items-center justify-center space-x-2"> <span>✉️</span> <span>kleber@ziontechgroup.com</span> </div> <div className="flex items-center justify-center space-x-2"> <span>🌐</span> <span>https:
+=======
+import React from "react"
+import Link from "next/link"
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from "lucide-react"
+  );
 export default function Aiquantumcomputingsolutions() {
   const features = [
-    'AI-powered aiquantumcomputingsolutions optimization',
-    'Automated aiquantumcomputingsolutions management',
-    'Real-time aiquantumcomputingsolutions analytics',
-    'Predictive aiquantumcomputingsolutions insights',
-    'Custom AI models for aiquantumcomputingsolutions',
-    'Enterprise-grade security and compliance'
-  ];
-
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ]
   const benefits = [
-    'Improve aiquantumcomputingsolutions performance by 50-80%',
-    'Reduce operational costs by 35-65%',
-    'Enhance scalability and reliability',
-    'Optimize resource utilization',
-    'Scale operations efficiently',
-    'Maximize ROI and efficiency'
-  ];
-
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]
   const useCases = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
-  ];
-
+    "Use Case 1",
+    "Use Case 2",
+    "Use Case 3"
+  ]
   const pricing = [
+      }
+];
     {
-      name: 'Starter',
-      price: '$299/mo',
-      details: ['Up to 10 users', 'Basic features', 'Email support', 'Standard SLA']
-    },
+      name: "Professional",
+      price: "$799/mo",
+      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"]
+    }
+  ];
     {
-      name: 'Professional',
-      price: '$799/mo',
-      details: ['Up to 50 users', 'Advanced features', 'Priority support', '99.9% SLA']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,999/mo',
-      details: ['Unlimited users', 'Custom AI models', 'Full aiquantumcomputingsolutions suite', '24/7 dedicated support']
+      name: "Enterprise",
+      price: "$1,999/mo",
     }
   ];
 
+  ]
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Database className="w-4 h-4 mr-2" />
+            <Database className="w-4 h-4 mr-2"  />
             AI-Powered Aiquantumcomputingsolutions Intelligence
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Aiquantumcomputingsolutions Platform</h1>
@@ -62,7 +51,6 @@ export default function Aiquantumcomputingsolutions() {
           </p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -70,15 +58,15 @@ export default function Aiquantumcomputingsolutions() {
             <ul className="space-y-3">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start">
-                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                   <span className="text-gray-700">{feature}</span>
                 </li>
               ))}
+
             </ul>
             <div className="mt-6 text-sm text-gray-600">
               Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
             </div>
-          </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
             <div className="grid md:grid-cols-3 gap-4">
@@ -90,22 +78,21 @@ export default function Aiquantumcomputingsolutions() {
                     {tier.details.map((detail, detailIndex) => (
                       <li key={detailIndex}>{detail}</li>
                     ))}
+
                   </ul>
                 </div>
               ))}
+
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">
-                View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />
+                View Full Pricing <ArrowRight className="w-4 h-4 ml-2"  />
               </Link>
               <Link href="/contact" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">
-                Contact Sales <Phone className="w-4 h-4 ml-2" />
+                Contact Sales <Phone className="w-4 h-4 ml-2"  />
               </Link>
             </div>
-          </div>
-        </div>
       </section>
-
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Key Benefits</h2>
@@ -113,16 +100,15 @@ export default function Aiquantumcomputingsolutions() {
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="flex items-center mb-3">
-                  <Zap className="w-6 h-6 text-indigo-600 mr-3" />
+                  <Zap className="w-6 h-6 text-indigo-600 mr-3"  />
                   <h3 className="text-lg font-semibold text-gray-900">Performance</h3>
                 </div>
                 <p className="text-gray-600">{benefit}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
 
+          </div>
+      </section>
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industries We Serve</h2>
@@ -130,32 +116,30 @@ export default function Aiquantumcomputingsolutions() {
             {useCases.map((industry, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-3">
-                  <Target className="w-5 h-5 text-indigo-600 mr-3" />
+                  <Target className="w-5 h-5 text-indigo-600 mr-3"  />
                   <h3 className="text-lg font-semibold text-gray-900">{industry}</h3>
                 </div>
                 <p className="text-gray-600">Comprehensive aiquantumcomputingsolutions solutions tailored for {industry.toLowerCase()}.</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
 
+          </div>
+      </section>
       <section className="py-16 bg-indigo-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Aiquantumcomputingsolutions?</h2>
           <p className="text-indigo-100 text-xl mb-8">
             Get started with our AI-powered aiquantumcomputingsolutions platform today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link href="/contact" className="px-8 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center">
-              Get Started <ArrowRight className="w-4 h-4 ml-2" />
+              Get Started <ArrowRight className="w-4 h-4 ml-2"  />
             </Link>
             <Link href="/demo" className="px-8 py-3 border border-white text-white rounded-lg hover:bg-white/10 transition-colors inline-flex items-center">
-              Schedule Demo <Mail className="w-4 h-4 ml-2" />
+              Schedule Demo <Mail className="w-4 h-4 ml-2"  />
             </Link>
           </div>
-        </div>
       </section>
     </div>
-  );
-}
+  ),
+>>>>>>> main

@@ -1,9 +1,18 @@
-// apiErrorHandler utility
-export const apiErrorHandler = {
-  // Placeholder utility functions
-  init: () => {
-    console.log('apiErrorHandler initialized');
-  }
-};
+<<<<<<< HEAD
+=======
+// comment
+export const apiErrorHandler = {}
 
-export default apiErrorHandler;
+<<<<<<< HEAD
+    variant: 'destructive',
+    error?.message || fallbackMessage || 'An unexpected error occurred';  toast({
+'
+    variant: 'destructive','
+    title: 'Error',
+    description: message});
+  // Log error for debugging
+=======
+>>>>>>> main
+
+export default apiErrorHandler
+>>>>>>> main

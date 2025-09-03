@@ -1,13 +1,25 @@
-describe('EnhancedHome', () => {}; '; it('renders without crashing', () => {}; render(<EnhancedHome / >) ,; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<EnhancedHome />) ;
-    render();
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+describe('EnhancedHome', () => {}; '; it('renders without crashing', () => {}; render(<EnhancedHome />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<EnhancedHome />) ;
+=======
+describe("EnhancedHome", () => {}; "; it("renders without crashing", () => {}; render(<EnhancedHome / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<EnhancedHome  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
   })
-''
-  it('displays expected content', () => {
-    render(<EnhancedHome /" >);
-    // Add more specific tests here,
-  });
+}
+""
+  it("displays expected content", () => {
+    render(<EnhancedHome /" >)
+}
+    // comment
+  })
+}
   });"
 "
-});"
-'
+});""
+>>>>>>> main
+>>>>>>> main

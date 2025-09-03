@@ -1,2 +1,2 @@
 import React from;
-  'react' export: default function HiringTracker () {'';
+  "react" export: default function HiringTracker () {""

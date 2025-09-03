@@ -1,6 +1,8 @@
-import React from 'react';
-
-
+<<<<<<< HEAD
+import { Route, Routes  } from 'react-router-dom'; import { ProtectedRoute } from '../components/ProtectedRoute'; import CommunityPage from '../pages/CommunityPage'; import ForumCategoryPage from '../pages/ForumCategoryPage'; import ForumPostPage from '../pages/ForumPostPage'; import CreatePostPage from '../pages/CreatePostPage'; import EditPostPage from '../pages/EditPostPage'; import CommunityProfilePage from '../pages/CommunityProfilePage'; ; export default function CommunityRoutes() {; return(; <>; <Route path = "" element={<CommunityPage />} />;";" </>;";" );"";" }";"";"
+=======
+import React from "react"
+  );
 export default function Communityroutes() {
   return (
     <div className="min-h-screen bg-white">
@@ -9,8 +11,7 @@ export default function Communityroutes() {
         <p className="text-lg text-gray-600 mb-8">
           This is a placeholder component for communityroutes.
         </p>
-        
       </div>
-    </div>
-  );
+  )
 }
+>>>>>>> main

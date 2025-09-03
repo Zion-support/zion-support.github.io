@@ -1,13 +1,25 @@
-describe('manufacturing - solutions', () => {}; '; it('renders without crashing', () => {}; render(<manufacturing - solutions />) ,; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<manufacturing - solutions />) ;
-    render();
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+describe('manufacturing - solutions', () => {}; '; it('renders without crashing', () => {}; render(<manufacturing - solutions />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<manufacturing - solutions />) ;
+=======
+describe("manufacturing - solutions", () => {}; "; it("renders without crashing", () => {}; render(<manufacturing - solutions       />) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<manufacturing - solutions       />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
   })
-''
-  it('displays expected content', () => {
-    render(<manufacturing -solutions /" >);
-    // Add more specific tests here,
-  });
+}
+""
+  it("displays expected content", () => {
+    render(<manufacturing -solutions /" >)
+}
+    // comment
+  })
+}
   });"
 "
-});"
-'
+});""
+>>>>>>> main
+>>>>>>> main

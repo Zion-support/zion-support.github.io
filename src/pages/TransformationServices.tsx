@@ -1,17 +1,34 @@
+<<<<<<< HEAD
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import { SEO } from '../components/SEO';
 
+const TransformationServices: React.FC = () => {
+  return(<>
+      <SEO title="TransformationServices - Zion Tech Group" />
+      <div className="min-h-screen bg-white py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">TransformationServices</h1>
+          <p className="text-lg text-gray-600">Content coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default TransformationServices;
+=======
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
 const TransformationServices = () => {
   return (
     <>
       <Head>
         <title>Transformation Services - Zion Tech Group</title>
-        <meta name="description" content="Professional Transformation Services services" />
+        <meta name="description" content="Professional Transformation Services services"  />
       </Head>
-      
       <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
               Transformation Services
@@ -19,7 +36,6 @@ const TransformationServices = () => {
             <p className="text-xl text-gray-600 mb-12">
               Professional Transformation Services services and solutions
             </p>
-            
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
@@ -30,7 +46,6 @@ const TransformationServices = () => {
                   <li>• Custom Development</li>
                 </ul>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
                 <ul className="text-gray-600 space-y-2">
@@ -40,8 +55,6 @@ const TransformationServices = () => {
                   <li>• Competitive Pricing</li>
                 </ul>
               </div>
-            </div>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 View Pricing
@@ -50,11 +63,8 @@ const TransformationServices = () => {
                 Contact Us
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
     </>
   );
-};
-
-export default TransformationServices;
+}
+export default TransformationServices
+>>>>>>> main

@@ -1,18 +1,54 @@
-import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react','';,"});,"})"
+<<<<<<< HEAD
+import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react';'''
+import React from 'react';
+;
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
+import {}
+  COMPREHENSIVE_SERVICES,'
+  CONTACT_INFO} from '@/data/comprehensiveServices';
+export function ServicesComparisonTable() {}
+'
+''
+'''
+  const serviceCategories = ['AI Services',IT Services',Micro SAAS'];
+  const getFeatureIcon = hasFeature => {}
+    return hasFeature ? (
+      <Check className="w-4 h-4 text-green-500" />"""
+    ) : (""""
+      <X className="w-4 h-4 text-red-500" />
+    );
+  };"""
+  return (""""
+    <div className="py-16 bg-slate-50 dark:bg-slate-900">""""
+      <div className="container mx-auto px-4">""""
+        <div className="text-center mb-12">""""
+          <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+            Services Comparison"""
+          </h2>""""
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+            Compare our comprehensive service offerings to find the perfect;
+            solution for your business needs;
+          </p>
+        </div>
+=======
+import React from "react"
+import { Check, X, Star, Clock, Phone, Mail } from "lucide - react","";,"});,"})"
 ,"});,"})"
 ;,"});,"})","});,"})","});,"})"","});,"})","})"
-  COMPREHENSIVE_SERVICES,';,"});,"})"
-  CONTACT_INFO} from '@/data/comprehensiveServices';,"});,"})"
+  COMPREHENSIVE_SERVICES,";,"});,"})"
+  CONTACT_INFO} from "@/data/comprehensiveServices";,"});,"})"
 export function ServicesComparisonTable() {}"});,"})"
-';,"});,"})"
-'';,"});,"})"
-''';,"});,"})"
-  const serviceCategories = ['AI Services',IT Services',Micro SAAS'];,"});,"})"
+";,"});,"})"
+"";,"});,"})"
+""";,"});,"})"
+  const serviceCategories = [];,"});,"})"
   const getFeatureIcon = hasFeature => {}"});,"})"
     return hasFeature ? (;,"});,"})"
-      <Check className="w-4 h-4 text-green-500" />""";,"});,"})"
+      <Check className="w-4 h-4 text-green-500"  />""";,"});,"})"
     ) : ("""";,"});,"})"
-      <X className="w-4 h-4 text-red-500" />;,"});,"})"
+      <X className="w-4 h-4 text-red-500"  />;,"});,"})"
     );,"});,"});"
 };""";,"});,"})"
   return ("""";,"});,"})"
@@ -28,7 +64,7 @@ export function ServicesComparisonTable() {}"});,"})"
           </p>;,"});,"})"
         </div>;,"});,"})"
 """;,"});,"})"
-        {/*   */}"""";,"});,"})"
+        {/* comment */}"""";,"});,"})"
         <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-12">,"});,"})"
           {serviceCategories.map(category => {}"});,"})"
             const services = getCategoryServices(category);,"});,"})"
@@ -49,8 +85,8 @@ export function ServicesComparisonTable() {}"});,"})"
                   </CardDescription>""";,"});,"})"
                 </CardHeader>"""";,"});,"})"
                 <CardContent className="text-center">"""";,"});,"})"
-                  <div className="text-3xl font-bold text-blue-600 dark: text-blue-400 mb-2">,"});,`})"
-                    ${Math.round(avgPrice).toLocaleString()}`"";,"});,"})"
+                  <div className="text-3xl font-bold text-blue-600 dark: text-blue-400 mb-2">,"});,"})"
+                    ${Math.round(avgPrice).toLocaleString()}""";,"});,"})"
                   </div>"""";,"});,"})"
                   <p className="text-sm text-slate-500 dark: text-slate-400 mb-4">,"});,"})"
                     Average starting price,"});,"})"
@@ -64,7 +100,7 @@ export function ServicesComparisonTable() {}"});,"})"
                 </CardContent>;,"});,"})"
               </Card>;,"});,"});"
 })}"});,"})"
-        {/*   */}"""";,"});,"})"
+        {/* comment */}"""";,"});,"})"
         <div className="bg-white dark: bg-slate-800 rounded-xl shadow-lg overflow-hidden">"""","});,"})"
           <div className="overflow-x-auto">;,"});,"})"
             <Table>""";,"});,"})"
@@ -106,7 +142,7 @@ export function ServicesComparisonTable() {}"});,"})"
                   <TableCell className="font-medium">Scalability</TableCell>"""";,"});,"})"
               </TableBody>;,"});,"})"
             </Table>;,"});,"})"
-        {/*   */}"""";,"});,"})"
+        {/* comment */}"""";,"});,"})"
         <div className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 dark: from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-8 border border-blue-200 dark:border-blue-800">"""","});,"})"
           <div className="text-center mb-8">"""";,"});,"})"
             <h3 className="text-2xl font-bold text-slate-900 dark: text-white mb-4">,"});,"})"
@@ -119,24 +155,24 @@ export function ServicesComparisonTable() {}"});,"})"
 """";,"});,"})"
           <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-6">"""","});,"})"
             <div className="text-center">"""";,"});,"})"
-              <Phone className="w-8 h-8 text-blue-600 dark: text-blue-400 mx-auto mb-2" />"""","});,"})"
+              <Phone className="w-8 h-8 text-blue-600 dark: text-blue-400 mx-auto mb-2"  />"""","});,"})"
               <h4 className="font-semibold text-slate-900 dark: text-white mb-1">,"});,"})"
                 Call Us""";,"});,"})"
               </h4>"""";,"});,"})"
               <p className="text-blue-600 dark: text-blue-400">,"});,"})"
                 {CONTACT_INFO.mobile}"});,"})"
-              <Mail className="w-8 h-8 text-blue-600 dark: text-blue-400 mx-auto mb-2" />"""","});,"})"
+              <Mail className="w-8 h-8 text-blue-600 dark: text-blue-400 mx-auto mb-2"  />"""","});,"})"
                 Email Us""";,"});,"})"
                 {CONTACT_INFO.email}"});,"})"
-              <Clock className="w-8 h-8 text-blue-600 dark: text-blue-400 mx-auto mb-2" />"""","});,"})"
+              <Clock className="w-8 h-8 text-blue-600 dark: text-blue-400 mx-auto mb-2"  />"""","});,"})"
                 Response Time""";,"});,"})"
                 {CONTACT_INFO.responseTime}"});,"})"
           <div className="text-center">""";,"});,"})"
               size="lg"""";,"});,"})"
               className="bg-gradient-to-r from-blue-600 to-indigo-600 hover: from-blue-700 hover:to-indigo-700"""","});,"})"
-              <Phone className="w-4 h-4 mr-2" />;,"});,"})"
+              <Phone className="w-4 h-4 mr-2"  />;,"});,"})"
               Schedule Free Consultation,"});,"})"
-        {/*   */}"""";,"});,"})"
+        {/* comment */}"""";,"});,"})"
         <div className="mt-16">"""";,"});,"})"
           <h3 className="text-3xl font-bold text-slate-900 dark: text-white text-center mb-12">,"});,"})"
             Service Highlights""";,"});,"})"
@@ -151,7 +187,7 @@ export function ServicesComparisonTable() {}"});,"})"
                         Featured""";,"});,"})"
                       </Badge>"""";,"});,"})"
                       <div className="flex items-center gap-1">"""";,"});,"})"
-                        <Star className="w-4 h-4 text-yellow-500 fill-current" />"""";,"});,"})"
+                        <Star className="w-4 h-4 text-yellow-500 fill-current"  />"""";,"});,"})"
                         <span className="text-sm font-medium">;,"});,"})"
                           {service.rating}"});,"})"
                         </span>;,"});,"})"
@@ -171,176 +207,181 @@ export function ServicesComparisonTable() {}"});,"})"
                     <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover: from-blue-700 hover:to-indigo-700">,"});,"})"
                       Learn More,"});,"})"
             )}"});,"});"
-}'"";,"});,"})"
-'"'"";,"});,"})'import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react'lucide - react&apos'
-'./ui / badge',./ui / button',./ui/card';import { Check, X, Star, Clock, Phone, Mail } from &apos;lucide - react',
+}""";,"});,"})"
+""""";,"});,"})"import { Check, X, Star, Clock, Phone, Mail } from "lucide-react"lucide - react&apos"
+"./ui / badge",./ui / button",./ui/card";import { Check, X, Star, Clock, Phone, Mail } from &apos;lucide - react",
 &apos,"""""""
 """"
 export function ServicesComparisonTable() {}"""
-  CONTACT_INFO}  from '@/data/comprehensiveServices';export function ServicesComparisonTable() {}"'
-''
-'''
-'''''
-  const serviceCategories = ['AI Services', IT Services',Micro SAAS']
+  CONTACT_INFO}  from "@/data/comprehensiveServices";export function ServicesComparisonTable() {}""
+""
+>>>>>>> main
+"""
+"""""
+  const serviceCategories = []
   const getFeatureIcon = hasFeature => {}"
-    return hasFeature ? (""";
-      <Check className="w-4 h-4 text-green-500" /" >'''';
-    ) : ('''';
-      <X className="w-4 h-4 text-red-500" /" >"";
+    return hasFeature ? ("""
+      <Check className="w-4 h-4 text-green-500" /" >""""
+    ) : (""""
+      <X className="w-4 h-4 text-red-500" /" >""
     );", "
-}'
-      <X className = "w-4 h-4 text-red-500" /" >";
-    );"}'
-  return();
+}"
+      <X className = "w-4 h-4 text-red-500" /" >"
+    );"}"
+  return()
+}
             const avgPrice = services.reduce((sum, service) => sum + (service.price || 0), 0) /
               services.length,"
 return()""
-              <Card '''''
-                key={category}'''''
-                className="border-2 border-slate-200 dark: border-slate-700"'' >'''''"
-                className="border-2 border-slate-200 dark:border-slate-700"" >''''
-                <CardHeader className="text-center">''''
+              <Card """""
+                key={category}"""""
+                className="border-2 border-slate-200 dark: border-slate-700""" >""""""
+                className="border-2 border-slate-200 dark:border-slate-700"" >""""
+                <CardHeader className="text-center">""""
                   <CardTitle className="text-slate-900 dark:text-white">"",
-                    {category}'''''
-                  </CardTitle>''''
+                    {category}"""""
+                  </CardTitle>""""
                   <CardDescription className="text-slate-600 dark: text-slate-300">",
                     {services.length} services available""
-                  </CardDescription>'''''
-                </CardHeader>'''''
-                <CardContent className="text-center">''''
-                  <div className="text-3xl font-bold text-blue-600 dark: text-blue-400 mb-2">"`',
-                    ${Math.round(avgPrice).toLocaleString()}'''''
-                  </div>''''
+                  </CardDescription>"""""
+                </CardHeader>"""""
+                <CardContent className="text-center">""""
+                  <div className="text-3xl font-bold text-blue-600 dark: text-blue-400 mb-2">""",
+                    ${Math.round(avgPrice).toLocaleString()}"""""
+                  </div>""""
                   <p className="text-sm text-slate-500 dark: text-slate-400 mb-4">"
-                    Average starting price`"
-                  </p>'''''
-                  <Button'''''
-                    variant='outline'''''
+                    Average starting price""
+                  </p>"""""
+                  <Button"""""
+                    variant="outline"""""
                     className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white ">,
                     View {category}
+
                   </Button>
                 </CardContent>
               </Card>
-            )})}'
-        {/*   */}''''
-        <div className="bg-white dark: bg-slate-800 rounded-xl shadow-lg overflow-hidden">''''
+            )})}"
+        {/* comment */}""""
+        <div className="bg-white dark: bg-slate-800 rounded-xl shadow-lg overflow-hidden">""""
           <div className="overflow-x-auto">""
-            <Table>'''''
-              <TableHeader>'''''
-                <TableRow className="bg-slate-100 dark:bg-slate-700">''''
+            <Table>"""""
+              <TableHeader>"""""
+                <TableRow className="bg-slate-100 dark:bg-slate-700">""""
                   <TableHead className="text-slate-900 dark:text-white font-semibold">""
-                    Service Features'''''
-                  </TableHead>''''
+                    Service Features"""""
+                  </TableHead>""""
                   <TableHead className="text-center text-slate-900 dark:text-white font-semibold">""
-                    AI Services'''''
-                    IT Services''''
+                    AI Services"""""
+                    IT Services""""
                   <TableHead className="text-center text-slate-900 dark:text-white font-semibold">
                     Micro SAAS,
                   </TableHead>
                 </TableRow>"
               </TableHeader>""
-              <TableBody>'''''
-                <TableRow>''''
+              <TableBody>"""""
+                <TableRow>""""
                   <TableCell className="font-medium">""
-                    Starting Price Range'''''
-                  </TableCell>''''',
-                  <TableCell className="text-center">$299 - $8, 999</TableCell>''''
+                    Starting Price Range"""""
+                  </TableCell>""""",
+                  <TableCell className="text-center">$299 - $8, 999</TableCell>""""
                   <TableCell className="text-center">""
-                    $4,499 - $12, 999''''
+                    $4,499 - $12, 999""""
                   <TableCell className="text-center">$199 - $799</TableCell>""
-                </TableRow>'''''
-                    Implementation Time'''''
-                  <TableCell className="text-center">1-6 weeks</TableCell>''''
-                  <TableCell className="text-center">2-6 weeks</TableCell>''''
+                </TableRow>"""""
+                    Implementation Time"""""
+                  <TableCell className="text-center">1-6 weeks</TableCell>""""
+                  <TableCell className="text-center">2-6 weeks</TableCell>""""
                   <TableCell className="text-center">
                     Immediate - 3 weeks"
                   </TableCell>"""
-                  <TableCell className="font-medium">24/7 Support</TableCell>'''''
-                    {getFeatureIcon(true)}''''
-                    {getFeatureIcon(false)}'
-                    Custom Development''''
-                  <TableCell className="font-medium">API Access</TableCell>''''
-                    {getFeatureIcon(true)}'
-                    Training & Documentation'''''
-                    Compliance Certifications''''
-                  <TableCell className="font-medium">Scalability</TableCell>''''
+                  <TableCell className="font-medium">24/7 Support</TableCell>"""""
+                    {getFeatureIcon(true)}""""
+                    {getFeatureIcon(false)}"
+                    Custom Development""""
+                  <TableCell className="font-medium">API Access</TableCell>""""
+                    {getFeatureIcon(true)}"
+                    Training & Documentation"""""
+                    Compliance Certifications""""
+                  <TableCell className="font-medium">Scalability</TableCell>""""
                   </TableCell>
               </TableBody>
             </Table>
-          </div>'
-        {/*   */}''''
-        <div className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 dark: from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-8 border border-blue-200 dark:border-blue-800">''''
-          <div className="text-center mb-8">''''
+          </div>"
+        {/* comment */}""""
+        <div className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 dark: from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-8 border border-blue-200 dark:border-blue-800">""""
+          <div className="text-center mb-8">""""
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">""
-              Need Help Choosing?'''''
-            </h3>''''
+              Need Help Choosing?"""""
+            </h3>""""
             <p className="text-slate-600 dark:text-slate-300">,
               Our expert team is here to help you select the perfect service for,
 your business needs"
             </p>"""
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-6">''''
-            <div className="text-center">''''
-              <Phone className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2" /" >''''"
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-6">""""
+            <div className="text-center">""""
+              <Phone className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2" /" >"""""
               <h4 className="font-semibold text-slate-900 dark:text-white mb-1">""
-                Call Us'''''
-              </h4>''''
+                Call Us"""""
+              </h4>""""
               <p className="text-blue-600 dark:text-blue-400">",
                 {CONTACT_INFO.mobile}"""
-              <Mail className="w-8 h-8 text-blue-600 dark: text-blue-400 mx-auto mb-2" /" >''''
-                Email Us'''',
+              <Mail className="w-8 h-8 text-blue-600 dark: text-blue-400 mx-auto mb-2" /" >""""
+                Email Us"""",
                 {CONTACT_INFO.email}"""
-              <Clock className="w-8 h-8 text-blue-600 dark: text-blue-400 mx-auto mb-2" /" >''''
-                Response Time'''',
-                {CONTACT_INFO.responseTime}'
-            <Button '''''
-              size='lg''''''
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover: from-blue-700 hover:to-indigo-700"'' >'''''"
+              <Clock className="w-8 h-8 text-blue-600 dark: text-blue-400 mx-auto mb-2" /" >""""
+                Response Time"""",
+                {CONTACT_INFO.responseTime}"
+            <Button """""
+              size="lg""""""
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover: from-blue-700 hover:to-indigo-700""" >""""""
               <Phone className="w-4 h-4 mr-2" /" >"
-              size='lg'''''
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"" >''''
+              size="lg"""""
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"" >""""
               <Phone className="w-4 h-4 mr-2" /" >
-              Schedule Free Consultation',
-        {/*   */}''''
-        <div className="mt-16">''''
+              Schedule Free Consultation",
+        {/* comment */}""""
+        <div className="mt-16">""""
           <h3 className="text-3xl font-bold text-slate-900 dark: text-white text-center mb-12">""
-            Service Highlights''''
+            Service Highlights""""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {COMPREHENSIVE_SERVICES.filter(service => service.featured).map()"
               service => ("",
-                  key={service.id}'''''
-                  className="border-2 border-blue-200 dark: border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-colors"'' >'''''"
-                  className="border-2 border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-colors"" >''''
-                  <CardHeader className="pb-3">''''
-                    <div className="flex items-center justify-between mb-2">''''
+                  key={service.id}"""""
+                  className="border-2 border-blue-200 dark: border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-colors""" >""""""
+                  className="border-2 border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-colors"" >""""
+                  <CardHeader className="pb-3">""""
+                    <div className="flex items-center justify-between mb-2">""""
                       <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white">""
-                        Featured'''''
-                      </Badge>'''''
-                      <div className="flex items-center gap-1">''''
-                        <Star className="w-4 h-4 text-yellow-500 fill-current" /" >''''"
+                        Featured"""""
+                      </Badge>"""""
+                      <div className="flex items-center gap-1">""""
+                        <Star className="w-4 h-4 text-yellow-500 fill-current" /" >"""""
                         <span className="text-sm font-medium">,
                           {service.rating}"
                         </span>"""
                     <CardTitle className="text-slate-900 dark: text-white text-lg">"",
-                      {service.title}''''
+                      {service.title}""""
                     <CardDescription className="text-slate-600 dark: text-slate-300 text-sm">",
                       {service.description.substring(0, 100)}..."""
-                  <CardContent className="pt-0">''''
-                    <div className="flex items-center justify-between mb-4">''''
+                  <CardContent className="pt-0">""""
+                    <div className="flex items-center justify-between mb-4">""""
                       <div className="text-2xl font-bold text-blue-600 dark: text-blue-400">,
                         {service.currency}"
                         {service.price?.toLocaleString()}""
-                      <Badge''''
+                      <Badge""""
                         className="border-blue-500 text-blue-600 ">"
                         {service.category}"""
                     <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover: from-blue-700 hover:to-indigo-700">
-                      Learn More,;
+                      Learn More,
               );,
-            )}";
-  )}'"""
-}''''
-'''''';"
+            )}"
+  )}""""
+}""""
+"""""";"
   )", ";"
-}'"",'"
-}'''''
-''''''
+}""",""
+}"""""
+""""""
 "
+
+export default Component

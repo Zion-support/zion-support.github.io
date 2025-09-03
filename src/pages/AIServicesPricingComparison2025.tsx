@@ -1,40 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
   Search,
-  Filter} from 'lucide-react'
+  Filter} from "lucide-react"
 
-const AIServicesPricingComparison2025: React.FC = () => {',,
-  const [activeCategory, setActiveCategory] = useState();
-  const [searchTerm, setSearchTerm] = useState('');
+const AIServicesPricingComparison2025: React.FC = () => {",,
+  const [activeCategory, setActiveCategory] = useState()
+}
+  const [searchTerm, setSearchTerm] = useState("")
+}
+  const categories = []
 
-  const categories = ['
-    { id: 'all', name: 'All Services', icon: '🚀' },'
-    { id: 'Legal Technology', name: 'Legal Technology', icon: '⚖️' },'
-    { id: 'Human Resources', name: 'Human Resources', icon: '👥' },'
-    { id: 'Digital Marketing', name: 'Digital Marketing', icon: '📱' },'
-    { id: 'Sales Technology', name: 'Sales Technology', icon: '💼' },'
-    { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' },'
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: '🛡️' },'
-    { id: 'Data Analytics', name: 'Data Analytics', icon: '📈' },'
-    { id: 'DevOps', name: 'DevOps', icon: '⚙️' },'
-    { id: 'Cloud Computing', name: 'Cloud Computing', icon: '☁️' },'
-    { id: 'Blockchain', name: 'Blockchain', icon: '🔗' },'
-    { id: 'Quantum Computing', name: 'Quantum Computing', icon: '⚛️' }
-  ]
-
-  const pricingComparison = [
-    {
-      id: "ai-autonomous-legal-counsel","
-      service: "AI Autonomous Legal Counsel","
-      category: "Legal Technology",
-      zionPrice: 5999,
-      zionFeatures: [",
-        "Contract Analysis & Risk Assessment","
-        "Legal Automation & Compliance","
-        "70% Cost Reduction","
-        "24/7 AI Legal Support","
-        "Custom Legal Templates","
-        "Integration with Legal Tools"
-      ],
+  const pricingComparison = [],
       competitors: [,
         {,"
 name: "DoNotPay",
@@ -47,11 +22,11 @@ name: "DoNotPay",
           price: 15000,"
           features: ["Document Templates", "Basic Legal Advice", "Standard Support", "Limited AI"],"
           missing: ["AI Automation", "Risk Analysis", "Cost Optimization"]
-}
+
       ],"
       roi: "600% within 8 months","
       setupTime: "4-5 weeks","
-      website: "https://ziontechgroup.com/ai-legal-counsel"},
+      website: "https:// comment
     {"
       id: "ai-autonomous-hr-platform","
       service: "AI Autonomous HR Platform","
@@ -77,11 +52,11 @@ name: "Workday",
           price: 18000,"
           features: ["HR Database", "Basic Reporting", "Standard Support", "No AI"],"
           missing: ["AI Features", "Automation", "Intelligence"]
-}
+
       ],"
       roi: "450% within 7 months","
       setupTime: "3-4 weeks","
-      website: "https://ziontechgroup.com/ai-hr-platform"},
+      website: "https:// comment
     {"
       id: "ai-autonomous-marketing-platform","
       service: "AI Autonomous Marketing Platform","
@@ -107,11 +82,11 @@ name: "HubSpot",
           price: 45000,"
           features: ["Marketing Automation", "Basic Reporting", "Standard Support", "Limited Intelligence"],"
           missing: ["AI Optimization", "ROI Focus", "Advanced Analytics"]
-}
+
       ],"
       roi: "500% within 6 months","
       setupTime: "4-5 weeks","
-      website: "https://ziontechgroup.com/ai-marketing-platform"},
+      website: "https:// comment
     {"
       id: "ai-autonomous-sales-platform","
       service: "AI Autonomous Sales Platform","
@@ -137,11 +112,11 @@ name: "Salesforce",
           price: 24000,"
           features: ["Basic CRM", "Standard Tools", "Limited Intelligence", "Basic Support"],"
           missing: ["AI Features", "Advanced Analytics", "Process Optimization"]
-}
+
       ],"
       roi: "400% within 6 months","
       setupTime: "3-4 weeks","
-      website: "https://ziontechgroup.com/ai-sales-platform"},
+      website: "https:// comment
     {"
       id: "ai-autonomous-finance-platform","
       service: "AI Autonomous Finance Platform","
@@ -167,11 +142,11 @@ name: "QuickBooks Enterprise",
           price: 12000,"
           features: ["Cloud Accounting", "Basic Tools", "Standard Support", "Limited Features"],"
           missing: ["AI Features", "Automation", "Advanced Analytics"]
-}
+
       ],"
       roi: "550% within 8 months","
       setupTime: "4-5 weeks","
-      website: "https://ziontechgroup.com/ai-finance-platform"},
+      website: "https:// comment
     {"
       id: "ai-autonomous-cybersecurity-platform","
       service: "AI Autonomous Cybersecurity Platform","
@@ -197,11 +172,11 @@ name: "CrowdStrike",
           price: 45000,"
           features: ["Security Tools", "Basic AI", "Standard Features", "Limited Intelligence"],"
           missing: ["Advanced AI", "Autonomous Operations", "Intelligent Insights"]
-}
+
       ],"
       roi: "700% within 10 months","
       setupTime: "6-7 weeks","
-      website: "https://ziontechgroup.com/ai-cybersecurity"},
+      website: "https:// comment
     {"
       id: "ai-autonomous-data-analytics-platform","
       service: "AI Autonomous Data Analytics Platform","
@@ -227,11 +202,11 @@ name: "Tableau",
           price: 25000,"
           features: ["Microsoft Integration", "Basic BI", "Standard Tools", "Limited Intelligence"],"
           missing: ["Advanced AI", "Predictive Features", "Autonomous Analytics"]
-}
+
       ],"
       roi: "550% within 8 months","
       setupTime: "4-5 weeks","
-      website: "https://ziontechgroup.com/ai-data-analytics"},
+      website: "https:// comment
     {"
       id: "ai-autonomous-devops-platform","
       service: "AI Autonomous DevOps Platform","
@@ -257,11 +232,11 @@ name: "Jenkins Enterprise",
           price: 30000,"
           features: ["Git Integration", "Basic CI/CD", "Standard Features", "Limited Intelligence"],"
           missing: ["AI Features", "Advanced Analytics", "Autonomous Operations"]
-}
+
       ],"
       roi: "600% within 9 months","
       setupTime: "5-6 weeks","
-      website: "https://ziontechgroup.com/ai-devops"},
+      website: "https:// comment
     {"
       id: "ai-autonomous-cloud-management-platform","
       service: "AI Autonomous Cloud Management Platform","
@@ -287,11 +262,11 @@ name: "AWS CloudFormation",
           price: 45000,"
           features: ["Infrastructure as Code", "Basic Tools", "Standard Features", "Limited Intelligence"],"
           missing: ["AI Features", "Advanced Analytics", "Autonomous Management"]
-}
+
       ],"
       roi: "650% within 10 months","
       setupTime: "6-7 weeks","
-      website: "https://ziontechgroup.com/ai-cloud-management"},
+      website: "https:// comment
     {"
       id: "ai-autonomous-blockchain-platform","
       service: "AI Autonomous Blockchain Platform","
@@ -317,11 +292,11 @@ name: "Ethereum Enterprise",
           price: 80000,"
           features: ["Enterprise Blockchain", "Basic Features", "Standard Tools", "Limited Intelligence"],"
           missing: ["AI Features", "Advanced Analytics", "Intelligent Management"]
-}
+
       ],"
       roi: "800% within 12 months","
       setupTime: "8-9 weeks","
-      website: "https://ziontechgroup.com/ai-blockchain-platform"},
+      website: "https:// comment
     {"
       id: "ai-autonomous-quantum-platform","
       service: "AI Autonomous Quantum Platform","
@@ -347,50 +322,52 @@ name: "IBM Quantum",
           price: 180000,"
           features: ["Quantum Computing", "Basic Features", "Standard Tools", "Limited Intelligence"],"
           missing: ["AI Features", "Advanced Analytics", "Intelligent Management"]
-}
+
       ],"
       roi: "1000% within 15 months","
       setupTime: "10-12 weeks","
-      website: "https://ziontechgroup.com/ai-quantum-platform"}
-  ];
-;
-  const filteredServices = pricingComparison.filter(service => {;
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = service.service.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch});
+      website: "https:// comment
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  ]
+
+  const filteredServices = pricingComparison.filter(service => {
+    const matchesCategory = activeCategory === "all" || service.category === activeCategory
+    const matchesSearch = service.service.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase())
+}
+    return matchesCategory && matchesSearch})
+}
+  const containerVariants = {},
     visible: {,
 opacity: 1,
-      transition: {,;
-staggerChildren: 0.1};
-    };
-  };
+      transition: {,staggerChildren: 0.1}
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    }
+
+  }
+
+  const itemVariants = {},
     visible: {,
 y: 0,
       opacity: 1,
       transition: {,
-duration: 0.5,";
-        ease: "easeOut"};
-    };
-  };
+duration: 0.5,"        ease: "easeOut"}
+
+    }
+
+  }
 
   return (
     <>
       <Helmet>
         <title>AI Services Pricing Comparison 2025 | Zion Tech Group</title>"
-        <meta name = "description" content="Compare Zion Tech Group's AI autonomous services pricing with competitors. See how our advanced AI solutions offer better value and ROI than traditional alternatives." />"
-        <meta name="keywords" content="AI services pricing, pricing comparison, ROI comparison, cost analysis, AI automation pricing" />"
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-services-pricing-comparison-2025" />
+        <meta name = "description" content="Compare Zion Tech Group"s AI autonomous services pricing with competitors. See how our advanced AI solutions offer better value and ROI than traditional alternatives."  />"
+        <meta name="keywords" content="AI services pricing, pricing comparison, ROI comparison, cost analysis, AI automation pricing"  />"
+        <link rel="canonical" href="https: // comment
       </Helmet>
 "
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
-        {/*   */}"
+        {/* comment */}"
         <section className="relative py-20 px-4 overflow-hidden">"
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>"
           <div className="relative max-w-7xl mx-auto text-center">
@@ -410,14 +387,13 @@ initial="{{" opacity: 0, y: 30 }}"
               animate="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8, delay: 0.2 }}"
               className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-            >',
-              See how Zion Tech Group's AI autonomous platforms deliver superior value, 
+            >",
+              See how Zion Tech Group"s AI autonomous platforms deliver superior value,
               better ROI, and advanced features compared to traditional solutions.
             </motion.p>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="bg-gradient-to-r from-green-600 to-blue-600 py-8 px-4">"
           <div className="max-w-7xl mx-auto text-center text-white">"
             <h2 className="text-2xl font-bold mb-4">Get Expert Pricing Analysis</h2>"
@@ -431,24 +407,21 @@ initial="{{" opacity: 0, y: 30 }}"
               <div className="flex items-center gap-2">
                 <span>📍 364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
-            </div>
-          </div>
         </section>
 ,
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 px-4">"
           <div className="max-w-7xl mx-auto">
-            {/*   */}"
+            {/* comment */}"
             <div className="mb-12">"
               <div className="flex flex-col md: flex-row gap-4 mb-8">"
                 <div className="flex-1 relative">"
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />"
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />"
                   <input type="text""
                     placeholder="Search services..."">
                     value="{searchTerm}""
                     onChange="{(e)" => setSearchTerm(e.target.value)}"
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-green-500"
-                  />
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-green-500" />
                 </div>",
                 <select value="{activeCategory}""
                   onChange="{(e)" => setActiveCategory(e.target.value)}"
@@ -457,13 +430,14 @@ initial="{{" opacity: 0, y: 30 }}"
                   {categories.map((category) => (",
                     <option key="{category.id}" value="{category.id}">
                       {category.icon} {category.name}
+
                     </option>
                   ))}
+
                 </select>
               </div>
-            </div>
+            {/* comment */}
 
-            {/*   */}
             <motion.div,"
 variants="{containerVariants}""
               initial="hidden""
@@ -482,27 +456,29 @@ key="{service.id}""
                   </div>
 "
                   <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">,
-                    {/*   */}"
+                    {/* comment */}"
                     <div className="bg-gradient-to-br from-green-500/20 to-blue-500/20 border border-green-500/50 rounded-lg p-6">"
                       <div className="text-center mb-6">"
                         <h4 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h4>"
-                        <div className="{`text-4xl" font-bold text-green-400 mb-2`>
+                        <div className="{"text-4xl" font-bold text-green-400 mb-2">
                           ${service.zionPrice.toLocaleString()}
+
                         </div>"
-                        <div className="`text-sm" text-gray-300 mb-4`}>One-time setup</div>"
+                        <div className=""text-sm" text-gray-300 mb-4"}>One-time setup</div>"
                         <div className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">
                           {service.roi}
+
                         </div>
-                      </div>
 "
                       <div className="space-y-3 mb-6">"
                         <h5 className="font-semibold text-white mb-3">Features: </h5>,
                         {service.zionFeatures.map((feature, index) => ("
                           <div key="{index}" className="flex items-center gap-2">"
-                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />"
+                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"  />"
                             <span className="text-gray-300 text-sm">{feature}</span>
                           </div>
                         ))}
+
                       </div>
 "
                       <div className="text-center">"
@@ -514,43 +490,45 @@ key="{service.id}""
                           Learn More,
                         </a>
                       </div>
-                    </div>
 ,
-                    {/*   */}
+                    {/* comment */}
+
                     {service.competitors.map((competitor, index) => ("
                       <div key="{index}" className="bg-white/5 border border-gray-600 rounded-lg p-6">"
                         <div className="text-center mb-6">"
                           <h4 className="text-xl font-bold text-white mb-2">{competitor.name}</h4>"
-                          <div className="{`text-3xl" font-bold text-red-400 mb-2`>
+                          <div className="{"text-3xl" font-bold text-red-400 mb-2">
                             ${competitor.price.toLocaleString()}
+
                           </div>"
-                          <div className="`text-sm" text-gray-300 mb-4`}>Annual subscription</div>"
+                          <div className=""text-sm" text-gray-300 mb-4"}>Annual subscription</div>"
                           <div className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm font-semibold">
                             Higher Cost,
                           </div>
-                        </div>
 "
                         <div className="space-y-3 mb-6">"
                           <h5 className="font-semibold text-white mb-3">Limited Features: </h5>,
                           {competitor.features.map((feature, index) => ("
                             <div key="{index}" className="flex items-center gap-2">"
-                              <CheckCircle className="w-4 h-4 text-gray-500 flex-shrink-0" />"
+                              <CheckCircle className="w-4 h-4 text-gray-500 flex-shrink-0"  />"
                               <span className="text-gray-400 text-sm">{feature}</span>
                             </div>
                           ))}
+
                         </div>
 "
                         <div className="space-y-3 mb-6">"
                           <h5 className="font-semibold text-red-400 mb-3">Missing: </h5>,
                           {competitor.missing.map((feature, index) => ("
                             <div key="{index}" className="flex items-center gap-2">"
-                              <XCircle className="w-4 h-4 text-red-400 flex-shrink-0" />"
+                              <XCircle className="w-4 h-4 text-red-400 flex-shrink-0"  />"
                               <span className="text-gray-400 text-sm">{feature}</span>
                             </div>
                           ))}
+
                         </div>
-                      </div>
                     ))}
+
                   </div>
 "
                   <div className="mt-8 text-center">"
@@ -558,27 +536,24 @@ key="{service.id}""
                       <h4 className="text-xl font-bold text-white mb-3">Why Choose Zion Tech Group?</h4>"
                       <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">"
                         <div className="flex items-center gap-2 justify-center">"
-                          <TrendingUp className="w-4 h-4 text-green-400" />",
+                          <TrendingUp className="w-4 h-4 text-green-400"  />",
                           <span className="text-gray-300">Better ROI: {service.roi}</span>
                         </div>"
                         <div className="flex items-center gap-2 justify-center">"
-                          <Zap className="w-4 h-4 text-blue-400" />"
+                          <Zap className="w-4 h-4 text-blue-400"  />"
                           <span className="text-gray-300">Faster Setup: {service.setupTime}</span>
                         </div>"
                         <div className="flex items-center gap-2 justify-center">"
-                          <Shield className="w-4 h-4 text-purple-400" />"
+                          <Shield className="w-4 h-4 text-purple-400"  />"
                           <span className="text-gray-300">Advanced AI Features</span>
                         </div>
-                      </div>
-                    </div>
-                  </div>
                 </motion.div>
               ))}
+
             </motion.div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 px-4">"
           <div className="max-w-4xl mx-auto text-center">
             <motion.div,"
@@ -586,6 +561,7 @@ initial="{{" opacity: 0, y: 30 }}"
               whileInView="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8 }}"
               viewport="{{" once: true }}
+
             >"
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Save Money & Get Better Results?
@@ -609,8 +585,9 @@ Call: +1 302 464 0950,
             </motion.div>
           </div>
         </section>
-      </div>;
+      </div>
     </>
-  )};
-"
+  )}
+
+");
 export default AIServicesPricingComparison2025;"

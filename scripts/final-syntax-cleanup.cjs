@@ -1,236 +1,246 @@
 #!/usr/bin/env node
+const fs = require('fs')
+const path = require('path')
 
-/**
- * Final Syntax Cleanup
- * Final cleanup of syntax issues before deployment
- */
-
-const fs = require('fs');
-const path = require('path');
+console.log('🧹 Final Syntax Cleanup')
+console.log('======================')
 
 class FinalSyntaxCleanup {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.fixes = [];
-    this.errors = [];
+    this.fixedFiles = []
+    this.errors = []
   }
 
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry);
-  }
-
-  async cleanupSyntaxIssues() {
+  async fixFile(filePath) {
     try {
-      this.log('Starting final syntax cleanup...');
-      
-      // Find all source files
-      const sourceFiles = this.findSourceFiles();
-      
-      for (const file of sourceFiles) {
-        try {
-          await this.cleanupFile(file);
-        } catch (error) {
-          this.log(`Failed to cleanup ${file}: ${error.message}`, 'error');
-          this.errors.push({ file, error: error.message });
+      const content = fs.readFileSync(filePath, 'utf8')
+      let fixedContent = content
+      let hasChanges = false
+
+      // Fix specific patterns that are still causing issues
+      const patterns = [
+        // Fix corrupted meta descriptions
+        {
+          pattern: /content="The page you"re looking for doesn"t exist."/g,
+          replacement: 'content="The page you\'re looking for doesn\'t exist."'
+        },
+        // Fix extra closing braces
+        {
+          pattern: /\n}\s*$/gm,
+          replacement: '\n}'
+        },
+        // Fix corrupted JSX attributes
+        {
+          pattern: /<(\w+)\s+([^>]*)\s*\/>/g,
+          replacement: '<$1 $2 />'
+        },
+        // Fix corrupted string literals
+        {
+          pattern: /content="([^"]*)"\s*\/>/g,
+          replacement: 'content="$1" />'
+        },
+        // Fix corrupted quotes
+        {
+          pattern: /"([^"]*)"\s*\/>/g,
+          replacement: '"$1" />'
+        },
+        // Fix corrupted closing tags
+        {
+          pattern: /<\/(\w+)>\s*$/gm,
+          replacement: '</$1>'
+        },
+        // Fix corrupted self-closing tags
+        {
+          pattern: /<(\w+)\s+([^>]*)\s*\/>/g,
+          replacement: '<$1 $2 />'
+        },
+        // Fix corrupted comments
+        {
+          pattern: /\/\*([^*]|\*[^/])*\*\//g,
+          replacement: '/* comment */'
+        },
+        // Fix corrupted semicolons
+        {
+          pattern: /;\s*$/gm,
+          replacement: ';'
+        },
+        // Fix corrupted commas
+        {
+          pattern: /,\s*$/gm,
+          replacement: ','
+        },
+        // Fix corrupted parentheses
+        {
+          pattern: /\(\s*\)/g,
+          replacement: '()'
+        },
+        // Fix corrupted brackets
+        {
+          pattern: /\[\s*\]/g,
+          replacement: '[]'
+        },
+        // Fix corrupted braces
+        {
+          pattern: /\{\s*\}/g,
+          replacement: '{}'
+        },
+        // Fix corrupted quotes
+        {
+          pattern: /'([^']*)'/g,
+          replacement: '"$1"'
+        },
+        // Fix corrupted double quotes
+        {
+          pattern: /"([^"]*)"/g,
+          replacement: '"$1"'
+        },
+        // Fix corrupted backticks
+        {
+          pattern: /`([^`]*)`/g,
+          replacement: '"$1"'
+        },
+        // Fix corrupted escape sequences
+        {
+          pattern: /\\n/g,
+          replacement: '\n'
+        },
+        {
+          pattern: /\\t/g,
+          replacement: '\t'
+        },
+        {
+          pattern: /\\r/g,
+          replacement: '\r'
+        },
+        {
+          pattern: /\\"/g,
+          replacement: '"'
+        },
+        {
+          pattern: /\\'/g,
+          replacement: "'"
+        },
+        {
+          pattern: /\\\\/g,
+          replacement: '\\'
         }
+      ]
+
+      for (const { pattern, replacement } of patterns) {
+        const before = fixedContent
+        fixedContent = fixedContent.replace(pattern, replacement)
+        if (before !== fixedContent) {
+          hasChanges = true
+        }
+
+      // Additional specific fixes
+      fixedContent = this.applySpecificFixes(fixedContent, filePath)
+
+      if (hasChanges) {
+        fs.writeFileSync(filePath, fixedContent, 'utf8')
+        this.fixedFiles.push(filePath)
+        console.log(`✅ Fixed: ${filePath}`)
+        return true
       }
-      
-      this.log('Final syntax cleanup completed', 'success');
+      return false
     } catch (error) {
-      this.log(`Final syntax cleanup failed: ${error.message}`, 'error');
+      this.errors.push({ file: filePath, error: error.message })
+      console.log(`❌ Error fixing ${filePath}: ${error.message}`)
+      return false
     }
-  }
 
-  findSourceFiles() {
-    const sourceDirs = ['pages', 'src'];
-    const extensions = ['.js', '.jsx', '.ts', '.tsx'];
-    const files = [];
+  applySpecificFixes(content, filePath) {
+    let fixedContent = content
 
-    for (const dir of sourceDirs) {
-      if (fs.existsSync(dir)) {
-        this.findFilesRecursively(dir, extensions, files);
+    // Fix specific file types
+    if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) {
+      // Fix React component structure
+      if (!fixedContent.includes('import React') && fixedContent.includes('return (')) {
+        fixedContent = 'import React from "react"\n' + fixedContent
       }
-    }
-    return files;
-  }
-
-  findFilesRecursively(dir, extensions, files) {
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory()) {
-        this.findFilesRecursively(fullPath, extensions, files);
-      } else if (stat.isFile()) {
-        const ext = path.extname(item);
-        if (extensions.includes(ext)) {
-          files.push(fullPath);
-        }
+      // Fix missing export default
+      if (fixedContent.includes('return (') && !fixedContent.includes('export default')) {
+        fixedContent += '\n\nexport default Component'
       }
-    }
+      
+      // Fix missing function declaration
+      if (fixedContent.includes('return (') && !fixedContent.includes('const ') && !fixedContent.includes('function ')) {
+        fixedContent = 'const Component = () => {\n' + fixedContent
+      }
+
+    if (filePath.endsWith('.ts') || filePath.endsWith('.js')) {
+      // Fix missing imports
+      if (fixedContent.includes('React.') && !fixedContent.includes('import React')) {
+        fixedContent = 'import React from "react"\n' + fixedContent
+      }
+
+    return fixedContent
   }
 
-  async cleanupFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      let modified = false;
-
-      // Fix unterminated strings
-      const fixes = [
-        // Fix unterminated strings with single quotes
-        { pattern: /';$/gm, replacement: ';' },
-        // Fix unterminated strings with double quotes
-        { pattern: /";$/gm, replacement: '";' },
-        // Fix malformed imports
-        { pattern: /import\s+(\w+)\s+from\s+['"]([^'"]+)['"];'/g, replacement: 'import $1 from "$2";' },
-        // Fix malformed exports
-        { pattern: /export\s+default\s+(\w+);'/g, replacement: 'export default $1;' },
-        // Fix malformed function declarations
-        { pattern: /function\s+(\w+)\s*\(\s*\)\s*{;'/g, replacement: 'function $1() {' },
-        // Fix malformed return statements
-        { pattern: /return\s+([^;]+);'/g, replacement: 'return $1;' },
-        // Fix malformed JSX
-        { pattern: /<(\w+)\s*,\s*(\w+)=/g, replacement: '<$1 $2=' },
-        // Fix malformed object properties
-        { pattern: /(\w+):\s*([^,}]+);'/g, replacement: '$1: $2,' },
-        // Fix malformed array elements
-        { pattern: /(\w+);'/g, replacement: '$1,' },
-        // Fix malformed variable declarations
-        { pattern: /(const|let|var)\s+(\w+)\s*=\s*([^;]+);'/g, replacement: '$1 $2 = $3;' },
-        // Fix malformed function calls
-        { pattern: /(\w+)\s*\(\s*[^)]*\s*\);'/g, replacement: '$1();' },
-        // Fix malformed class declarations
-        { pattern: /class\s+(\w+)\s*{;'/g, replacement: 'class $1 {' },
-        // Fix malformed interface declarations
-        { pattern: /interface\s+(\w+)\s*{;'/g, replacement: 'interface $1 {' },
-        // Fix malformed type declarations
-        { pattern: /type\s+(\w+)\s*=\s*([^;]+);'/g, replacement: 'type $1 = $2;' },
-        // Fix malformed enum declarations
-        { pattern: /enum\s+(\w+)\s*{;'/g, replacement: 'enum $1 {' },
-        // Fix malformed const declarations
-        { pattern: /const\s+(\w+)\s*=\s*([^;]+);'/g, replacement: 'const $1 = $2;' },
-        // Fix malformed let declarations
-        { pattern: /let\s+(\w+)\s*=\s*([^;]+);'/g, replacement: 'let $1 = $2;' },
-        // Fix malformed var declarations
-        { pattern: /var\s+(\w+)\s*=\s*([^;]+);'/g, replacement: 'var $1 = $2;' },
-        // Fix malformed JSX attributes
-        { pattern: /(\w+)=\s*([^"'\s>]+)(\s|>)/g, replacement: '$1="$2"$3' },
-        // Fix malformed JSX closing tags
-        { pattern: /<\/(\w+)>/g, replacement: '</$1>' },
-        // Fix malformed JSX self-closing tags
-        { pattern: /<(\w+)\s*\/>/g, replacement: '<$1 />' },
-        // Fix malformed JSX opening tags
-        { pattern: /<(\w+)\s*>/g, replacement: '<$1>' },
-        // Fix malformed JSX fragments
-        { pattern: /<>/g, replacement: '<>' },
-        { pattern: /<\/>/g, replacement: '</>' },
-        // Fix malformed JSX comments
-        { pattern: /{\/\*([^*]|\*[^/])*\*\/}/g, replacement: '{/* $1 */}' },
-        // Fix malformed JSX expressions
-        { pattern: /{([^}]+)}/g, replacement: '{$1}' },
-        // Fix malformed JSX strings
-        { pattern: /"([^"]*)"'/g, replacement: '"$1"' },
-        { pattern: /'([^']*)'"/g, replacement: "'$1'" },
-        // Fix malformed JSX numbers
-        { pattern: /(\d+);'/g, replacement: '$1,' },
-        // Fix malformed JSX booleans
-        { pattern: /(true|false);'/g, replacement: '$1,' },
-        // Fix malformed JSX null/undefined
-        { pattern: /(null|undefined);'/g, replacement: '$1,' },
-        // Fix malformed JSX arrays
-        { pattern: /\[([^\]]*)\];'/g, replacement: '[$1],' },
-        // Fix malformed JSX objects
-        { pattern: /{([^}]*)};'/g, replacement: '{$1},' },
-        // Fix malformed JSX functions
-        { pattern: /function\s*\(\s*\)\s*{;'/g, replacement: 'function() {' },
-        // Fix malformed JSX arrow functions
-        { pattern: /\(\s*\)\s*=>\s*{;'/g, replacement: '() => {' },
-        // Fix malformed JSX ternary operators
-        { pattern: /(\w+)\s*\?\s*([^:]+)\s*:\s*([^;]+);'/g, replacement: '$1 ? $2 : $3,' },
-        // Fix malformed JSX logical operators
-        { pattern: /(\w+)\s*&&\s*([^;]+);'/g, replacement: '$1 && $2,' },
-        { pattern: /(\w+)\s*\|\|\s*([^;]+);'/g, replacement: '$1 || $2,' },
-        // Fix malformed JSX comparison operators
-        { pattern: /(\w+)\s*==\s*([^;]+);'/g, replacement: '$1 == $2,' },
-        { pattern: /(\w+)\s*!=\s*([^;]+);'/g, replacement: '$1 != $2,' },
-        { pattern: /(\w+)\s*===\s*([^;]+);'/g, replacement: '$1 === $2,' },
-        { pattern: /(\w+)\s*!==\s*([^;]+);'/g, replacement: '$1 !== $2,' },
-        // Fix malformed JSX arithmetic operators
-        { pattern: /(\w+)\s*\+\s*([^;]+);'/g, replacement: '$1 + $2,' },
-        { pattern: /(\w+)\s*-\s*([^;]+);'/g, replacement: '$1 - $2,' },
-        { pattern: /(\w+)\s*\*\s*([^;]+);'/g, replacement: '$1 * $2,' },
-        { pattern: /(\w+)\s*\/\s*([^;]+);'/g, replacement: '$1 / $2,' },
-        // Fix malformed JSX assignment operators
-        { pattern: /(\w+)\s*=\s*([^;]+);'/g, replacement: '$1 = $2,' },
-        { pattern: /(\w+)\s*\+=\s*([^;]+);'/g, replacement: '$1 += $2,' },
-        { pattern: /(\w+)\s*-=\s*([^;]+);'/g, replacement: '$1 -= $2,' },
-        { pattern: /(\w+)\s*\*=\s*([^;]+);'/g, replacement: '$1 *= $2,' },
-        { pattern: /(\w+)\s*\/=\s*([^;]+);'/g, replacement: '$1 /= $2,' }
-      ];
-
-      for (const fix of fixes) {
-        const newContent = content.replace(fix.pattern, fix.replacement);
-        if (newContent !== content) {
-          content = newContent;
-          modified = true;
-        }
-      }
-
-      if (modified) {
-        fs.writeFileSync(filePath, content);
-        this.log(`Cleaned up syntax issues in ${filePath}`, 'success');
-        this.fixes.push(`cleaned_${path.basename(filePath)}`);
-      }
-    } catch (error) {
-      this.log(`Error cleaning up ${filePath}: ${error.message}`, 'error');
-      this.errors.push({ file: filePath, error: error.message });
-    }
-  }
-
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        totalFixes: this.fixes.length,
-        totalErrors: this.errors.length
-      },
-      fixes: this.fixes,
-      errors: this.errors
-    };
-
-    const reportPath = path.join(this.projectRoot, 'final-syntax-cleanup-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Report saved to ${reportPath}`, 'success');
+  async fixDirectory(dirPath) {
+    const files = fs.readdirSync(dirPath, { withFileTypes: true })
     
-    return report;
+    for (const file of files) {
+      const fullPath = path.join(dirPath, file.name)
+      
+      if (file.isDirectory()) {
+        await this.fixDirectory(fullPath)
+      } else if (file.isFile() && this.shouldFixFile(fullPath)) {
+        await this.fixFile(fullPath)      }
+    }
+
+  shouldFixFile(filePath) {
+    const ext = path.extname(filePath)
+    return ['.tsx', '.jsx', '.ts', '.js'].includes(ext) && 
+           !filePath.includes('node_modules') &&
+           !filePath.includes('.next') &&
+           !filePath.includes('dist')
   }
 
   async run() {
-    this.log('Starting Final Syntax Cleanup');
+    console.log('🔍 Starting final syntax cleanup...')
     
-    try {
-      await this.cleanupSyntaxIssues();
-      const report = await this.generateReport();
-      
-      this.log('Final Syntax Cleanup completed');
-      this.log(`Summary: ${report.summary.totalFixes} fixes applied, ${report.summary.totalErrors} errors found`);
-      
-      return report;
-    } catch (error) {
-      this.log(`Final syntax cleanup failed: ${error.message}`, 'error');
-      throw error;
+    const directories = [
+      'pages',
+      'components',
+      'src'
+    ]
+
+    for (const dir of directories) {
+      if (fs.existsSync(dir)) {
+        console.log(`📁 Processing directory: ${dir}`)
+        await this.fixDirectory(dir)
+      }
+
+    console.log('\n📊 Summary:')
+    console.log(`✅ Files fixed: ${this.fixedFiles.length}`)
+    console.log(`❌ Errors: ${this.errors.length}`)
+    
+    if (this.fixedFiles.length > 0) {
+      console.log('\n📝 Fixed files:')
+      this.fixedFiles.forEach(file => console.log(`  - ${file}`))
     }
+    
+    if (this.errors.length > 0) {
+      console.log('\n🚨 Errors:')
+      this.errors.forEach(({ file, error }) => console.log(`  - ${file}: ${error}`))
+    }
+
+    // Save report
+    const report = {
+      timestamp: new Date().toISOString(),
+      fixedFiles: this.fixedFiles,
+      errors: this.errors,
+      summary: {
+        totalFixed: this.fixedFiles.length,
+        totalErrors: this.errors.length
+      }
+
+    fs.writeFileSync('final-syntax-cleanup-report.json', JSON.stringify(report, null, 2))
+    console.log('\n📄 Report saved to: final-syntax-cleanup-report.json')
   }
-}
 
-// Run the final syntax cleanup
-if (require.main === module) {
-  const cleanup = new FinalSyntaxCleanup();
-  cleanup.run().catch(console.error);
-}
-
-module.exports = FinalSyntaxCleanup;
+// Run the cleanup
+const cleanup = new FinalSyntaxCleanup()
+cleanup.run().catch(console.error)

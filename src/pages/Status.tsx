@@ -1,17 +1,18 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import { ; CheckCircle,; AlertTriangle,; XCircle,; Clock,; Activity,; Server,; Database,; Globe,; Zap,; RefreshCw,; TrendingUp,; BarChart3,; Calendar,; AlertCircle,; Info,; ExternalLink;  } from 'lucide-react'; ; export default function Status() {; const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false); ;
+=======
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
 const Status = () => {
   return (
     <>
       <Head>
         <title>Status - Zion Tech Group</title>
-        <meta name="description" content="Professional Status services" />
+        <meta name="description" content="Professional Status services"  />
       </Head>
-      
       <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
               Status
@@ -19,7 +20,6 @@ const Status = () => {
             <p className="text-xl text-gray-600 mb-12">
               Professional Status services and solutions
             </p>
-            
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
@@ -30,7 +30,6 @@ const Status = () => {
                   <li>• Custom Development</li>
                 </ul>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
                 <ul className="text-gray-600 space-y-2">
@@ -40,8 +39,6 @@ const Status = () => {
                   <li>• Competitive Pricing</li>
                 </ul>
               </div>
-            </div>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 View Pricing
@@ -50,11 +47,8 @@ const Status = () => {
                 Contact Us
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
     </>
   );
-};
-
-export default Status;
+}
+export default Status
+>>>>>>> main

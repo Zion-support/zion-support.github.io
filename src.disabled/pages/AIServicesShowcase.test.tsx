@@ -1,1 +1,5 @@
-describe("AIServicesShowcase () => { it(renders without crashing, () => { render(<AIServicesShowcase />) ; expect(screen.getByRole (main) || screen.getByText(/.*/) ) .toBeInTheDocument () ; }) ; it(displays expected content", () => { render(<AIServicesShowcase />) ; 
+<<<<<<< HEAD
+describe("AIServicesShowcase", () => { it("renders without crashing", () => { render(<AIServicesShowcase />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () ; }) ; it("displays expected content", () => { render(<AIServicesShowcase />) ;
+=======
+describe("AIServicesShowcase () => { it(renders without crashing, () => { render(<AIServicesShowcase />) ; expect(screen.getByRole (main) || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it(displays expected content", () => { render(<AIServicesShowcase />) 
+>>>>>>> main

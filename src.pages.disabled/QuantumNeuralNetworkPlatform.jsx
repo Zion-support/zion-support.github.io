@@ -1,1 +1,1 @@
-import React from 'react' export default QuantumNeuralNetworkPlatform
+import React from "react" export default QuantumNeuralNetworkPlatform

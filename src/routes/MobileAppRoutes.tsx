@@ -1,6 +1,8 @@
-import React from 'react';
-
-
+<<<<<<< HEAD
+import React from 'react'; import { Route, Routes  } from 'react-router-dom'; import MobileAppPage from '../pages/MobileAppPage'; import MobileLaunchPage from '../pages/MobileLaunchPage'; import OpenAppRedirect from '../pages/OpenAppRedirect'; ; export default function MobileAppRoutes() {; return(; <>; <Route path = "launch" element={<MobileLaunchPage />} />;";" </>;";" );"";" }";"";"
+=======
+import React from "react"
+  );
 export default function Mobileapproutes() {
   return (
     <div className="min-h-screen bg-white">
@@ -9,8 +11,7 @@ export default function Mobileapproutes() {
         <p className="text-lg text-gray-600 mb-8">
           This is a placeholder component for mobileapproutes.
         </p>
-        
       </div>
-    </div>
-  );
+  )
 }
+>>>>>>> main

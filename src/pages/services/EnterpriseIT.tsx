@@ -1,59 +1,48 @@
-import React from 'react';
-import Link from 'next/link';
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
+<<<<<<< HEAD
+import React from 'react'; import { motion  } from 'framer-motion'; import { Link  } from 'react-router-dom'; import { SEO } from '@/components/SEO'; import { ; Building,; Server,; Shield,; Cloud,; Users,; Globe,; Lock,; TrendingUp,; CheckCircle,; ArrowRight;  } from 'lucide-react'; ; export default function EnterpriseIT() {; const enterpriseServices = [; {; title: "Infrastructure Design",";"";" description: "Scalable enterprise infrastructure architecture and planning",;"";" icon: Building,";"";" features: ["Network architecture", "Server infrastructure", "Storage solutions", "Security framework"];";" },;";" {;";"";" title: "Server Management",";"";" description: "Comprehensive server administration and optimization",;"";" icon: Server,";"";" features: ["Performance monitoring", "Capacity planning", "Backup management", "Disaster recovery"];";" },;";" {;";"";" title: "Storage Solutions",";"";" description: "Enterprise storage infrastructure and data management",;"";" icon: Cloud,";"";" features: ["SAN/NAS systems", "Cloud storage", "Data archiving", "Backup solutions"];";" },;";" {;";"";" title: "Security Infrastructure",";"";" description: "Multi-layered security and compliance solutions",;"";" icon: Shield,";"";" features: ["Firewall management", "Intrusion detection", "Access control", "Compliance monitoring"];" };";" ];";" ;"";" const benefits = [";"Improved operational efficiency and productivity",";"Enhanced security and compliance",";"Scalable infrastructure for business growth",";"Reduced IT costs and complexity",";"Better disaster recovery and business continuity",";"24/7 monitoring and proactive support"; ];" ;";" const industries = [;";" {;";"";" title: "Financial Services",";"";" description: "Secure, compliant IT infrastructure for banks, insurance, and fintech companies",;" icon: TrendingUp;";" },;";" {;";"";" title: "Healthcare",";"";" description: "HIPAA-compliant systems for hospitals, clinics, and medical research",;" icon: Shield;";" },;";" {;";"";" title: "Manufacturing",";"";" description: "Industrial IT solutions for smart factories and supply chain management",;" icon: Building;";" },;";" {;";"";" title: "Retail",";"";" description: "E-commerce platforms and retail management systems",;" icon: Users;";" },;";" {;";"";" title: "Education",";"";" description: "Learning management systems and campus IT infrastructure",;" icon: Globe;";" },;";" {;";"";" title: "Government",";"";" description: "Secure, compliant systems for public sector organizations",; icon: Lock;" };";" ];";" ;"";" return (";"";" <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;"";" <SEO ";"";" title="Enterprise IT Solutions - Zion Tech Group";"";" description="Comprehensive enterprise IT services that provide the foundation for business success, from infrastructure design to ongoing management and support.";"";" keywords="enterprise IT, infrastructure, server management, storage solutions, security infrastructure";"";" canonical="https:
+=======
+import React from "react"
+import Link from "next/link"
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from "lucide-react"
+  );
 export default function Enterpriseit() {
   const features = [
-    'AI-powered enterpriseit optimization',
-    'Automated enterpriseit management',
-    'Real-time enterpriseit analytics',
-    'Predictive enterpriseit insights',
-    'Custom AI models for enterpriseit',
-    'Enterprise-grade security and compliance'
-  ];
-
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ]
   const benefits = [
-    'Improve enterpriseit performance by 50-80%',
-    'Reduce operational costs by 35-65%',
-    'Enhance scalability and reliability',
-    'Optimize resource utilization',
-    'Scale operations efficiently',
-    'Maximize ROI and efficiency'
-  ];
-
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]
   const useCases = [
-    'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
-  ];
-
+    "Use Case 1",
+    "Use Case 2",
+    "Use Case 3"
+  ]
   const pricing = [
+      }
+];
     {
-      name: 'Starter',
-      price: '$299/mo',
-      details: ['Up to 10 users', 'Basic features', 'Email support', 'Standard SLA']
-    },
+      name: "Professional",
+      price: "$799/mo",
+      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"]
+    }
+  ];
     {
-      name: 'Professional',
-      price: '$799/mo',
-      details: ['Up to 50 users', 'Advanced features', 'Priority support', '99.9% SLA']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,999/mo',
-      details: ['Unlimited users', 'Custom AI models', 'Full enterpriseit suite', '24/7 dedicated support']
+      name: "Enterprise",
+      price: "$1,999/mo",
     }
   ];
 
+  ]
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Database className="w-4 h-4 mr-2" />
+            <Database className="w-4 h-4 mr-2"  />
             AI-Powered Enterpriseit Intelligence
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Enterpriseit Platform</h1>
@@ -62,7 +51,6 @@ export default function Enterpriseit() {
           </p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -70,15 +58,15 @@ export default function Enterpriseit() {
             <ul className="space-y-3">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start">
-                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                   <span className="text-gray-700">{feature}</span>
                 </li>
               ))}
+
             </ul>
             <div className="mt-6 text-sm text-gray-600">
               Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
             </div>
-          </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
             <div className="grid md:grid-cols-3 gap-4">
@@ -90,22 +78,21 @@ export default function Enterpriseit() {
                     {tier.details.map((detail, detailIndex) => (
                       <li key={detailIndex}>{detail}</li>
                     ))}
+
                   </ul>
                 </div>
               ))}
+
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">
-                View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />
+                View Full Pricing <ArrowRight className="w-4 h-4 ml-2"  />
               </Link>
               <Link href="/contact" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">
-                Contact Sales <Phone className="w-4 h-4 ml-2" />
+                Contact Sales <Phone className="w-4 h-4 ml-2"  />
               </Link>
             </div>
-          </div>
-        </div>
       </section>
-
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Key Benefits</h2>
@@ -113,16 +100,15 @@ export default function Enterpriseit() {
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="flex items-center mb-3">
-                  <Zap className="w-6 h-6 text-indigo-600 mr-3" />
+                  <Zap className="w-6 h-6 text-indigo-600 mr-3"  />
                   <h3 className="text-lg font-semibold text-gray-900">Performance</h3>
                 </div>
                 <p className="text-gray-600">{benefit}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
 
+          </div>
+      </section>
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industries We Serve</h2>
@@ -130,32 +116,30 @@ export default function Enterpriseit() {
             {useCases.map((industry, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-3">
-                  <Target className="w-5 h-5 text-indigo-600 mr-3" />
+                  <Target className="w-5 h-5 text-indigo-600 mr-3"  />
                   <h3 className="text-lg font-semibold text-gray-900">{industry}</h3>
                 </div>
                 <p className="text-gray-600">Comprehensive enterpriseit solutions tailored for {industry.toLowerCase()}.</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
 
+          </div>
+      </section>
       <section className="py-16 bg-indigo-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Enterpriseit?</h2>
           <p className="text-indigo-100 text-xl mb-8">
             Get started with our AI-powered enterpriseit platform today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link href="/contact" className="px-8 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center">
-              Get Started <ArrowRight className="w-4 h-4 ml-2" />
+              Get Started <ArrowRight className="w-4 h-4 ml-2"  />
             </Link>
             <Link href="/demo" className="px-8 py-3 border border-white text-white rounded-lg hover:bg-white/10 transition-colors inline-flex items-center">
-              Schedule Demo <Mail className="w-4 h-4 ml-2" />
+              Schedule Demo <Mail className="w-4 h-4 ml-2"  />
             </Link>
           </div>
-        </div>
       </section>
     </div>
-  );
-}
+  ),
+>>>>>>> main
