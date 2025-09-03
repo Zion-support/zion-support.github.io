@@ -1,40 +1,39 @@
 import React from 'react';
 import Head from 'next/head';
-import EnhancedNavigation from './layout/EnhancedNavigation';
-import EnhancedFooter from './layout/EnhancedFooter';
 
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
-  keywords?: string;
-  ogImage?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ 
-  children, 
+const Layout: React.FC<LayoutProps> = ({
+  children,
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
-  keywords = 'technology solutions, AI development, cloud services, blockchain, data analytics, web development, mobile development, IoT platforms, cybersecurity',
-  ogImage = '/images/og-image.jpg'
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses.'
 }) => {
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:image" content={ogImage} />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="min-h-screen flex flex-col">
-        <EnhancedNavigation />
-        <main className="flex-1 pt-16">{children}</main>
-        <EnhancedFooter />
+        <header className="w-full bg-white border-b">
+          <div className="max-w-7xl mx-auto px-4 py-4">
+            <div className="font-bold text-gray-800">Zion Tech Group</div>
+          </div>
+        </header>
+        <main className="flex-grow">{children}</main>
+        <footer className="w-full bg-gray-50 border-t">
+          <div className="max-w-7xl mx-auto px-4 py-6 text-sm text-gray-500">
+            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+          </div>
+        </footer>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

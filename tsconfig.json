@@ -22,15 +22,10 @@
   },
   "include": [
     "next-env.d.ts",
-    "pages/**/*",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "data/services.ts",
+    "pages/_app.tsx",
+    "pages/index.tsx",
+    "components/Layout.tsx",
     "styles/**/*",
-    "types/**/*",
-    "utils/**/*",
-    "**/*.ts",
-    "**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -58,7 +53,7 @@
     "temp_backup/**",
     "temp_broken_components",
     "temp_broken_components/**",
-    "src/utils/**",
+    "src/**",
     "utils/**",
     "types/**",
     "tailwind.config.ts",
