@@ -189,4 +189,3 @@ const EnhancedNavigation: React.FC = () => {
 };
 ;
 export default EnhancedNavigation;
-}

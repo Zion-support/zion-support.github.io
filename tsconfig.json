@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
-      "es6"
+      "esnext"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -16,53 +16,14 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "baseUrl": "."
+    "jsx": "preserve"
   },
   "include": [
     "next-env.d.ts",
-    "pages/**/*",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "data/services.ts",
-    "styles/**/*",
-    "types/**/*",
-    "utils/**/*",
     "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+    "**/*.tsx"
   ],
   "exclude": [
-    "node_modules",
-    ".next",
-    "out",
-    "dist",
-    "api-backup",
-    "pages.disabled",
-    "backup-pages",
-    "automation/backups",
-    "automation_backup",
-    "broken_files_backup",
-    "contracts",
-    "cypress",
-    "temp_working",
-    "supabase/functions",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.backup",
-    "**/*.disabled",
-    "temp_backup",
-    "temp_backup/**",
-    "temp_broken_components",
-    "temp_broken_components/**",
-    "src/utils/**",
-    "utils/**",
-    "types/**",
-    "tailwind.config.ts",
-    "vite.config.ts",
-    "vitest.config.ts"
+    "node_modules"
   ]
 }
