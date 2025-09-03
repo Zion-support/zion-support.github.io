@@ -1,52 +1,40 @@
 {
-  "timestamp": "2025-09-03T16:33:01.444Z",
-  "status": "healthy",
-  "checks": [
-    {
-      "name": "Node.js Version",
-      "status": "pass",
-      "message": "Node.js v22.16.0 is supported"
+  "timestamp": "2025-09-03T16:52:41.411Z",
+  "checks": {
+    "Node.js Version": {
+      "status": "passed",
+      "message": "Node.js v22.16.0"
     },
-    {
-      "name": "Package.json",
-      "status": "pass",
-      "message": "Package.json is valid"
+    "Package.json": {
+      "status": "passed",
+      "message": "package.json exists"
     },
-    {
-      "name": "Build Script",
-      "status": "pass",
-      "message": "Build script exists"
+    "Dependencies": {
+      "status": "passed",
+      "message": "Dependencies installed"
     },
-    {
-      "name": "Dependencies",
-      "status": "pass",
-      "message": "node_modules directory exists"
-    },
-    {
-      "name": "File: next.config.js",
-      "status": "pass",
-      "message": "File exists"
-    },
-    {
-      "name": "File: pages/_app.tsx",
-      "status": "pass",
-      "message": "File exists"
-    },
-    {
-      "name": "File: pages/index.tsx",
-      "status": "pass",
-      "message": "File exists"
-    },
-    {
-      "name": "Disk Space",
-      "status": "pass",
+    "Disk Space": {
+      "status": "passed",
       "message": "Disk usage: 12%"
     },
-    {
-      "name": "Memory Usage",
-      "status": "pass",
+    "Memory Usage": {
+      "status": "passed",
       "message": "Memory usage: 9%"
+    },
+    "Build Test": {
+      "status": "passed",
+      "message": "Build successful"
+    },
+    "Linting": {
+      "status": "warning",
+      "warning": true,
+      "message": "Linting errors found"
     }
-  ],
-  "recommendations": []
+  },
+  "summary": {
+    "total": 7,
+    "passed": 6,
+    "failed": 0,
+    "warnings": 1
+  }
 }
