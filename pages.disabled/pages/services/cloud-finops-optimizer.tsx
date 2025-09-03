@@ -1,4 +1,4 @@
-import {}
+import: {}
   BarChart3,
   TrendingUp,
   DollarSign,
@@ -40,14 +40,15 @@ import {}
   Calculator,
   PieChart,
   Target,
+<<<<<<< HEAD
   AlertTriangle} from
   'lucide-react';
 
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
 export default function CloudFinOpsOptimizer() {
-<<<<<<< HEAD
+
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">"{/* Hero Section */}""
-=======
+
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">"
 export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {): any {}
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
@@ -58,9 +59,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -74,9 +75,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
 ""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Cloud FinOps Optimizer
-<<<<<<< HEAD
+
             </h1>"""
-=======
+
             </h1>"
             </div>
 ""
@@ -86,10 +87,72 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
 ""
 >>>>>>> pr-10728
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+=======
+  AlertTriangle} from;
+  'lucide-react';';
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
+<<<<<<< HEAD
+export: default function CloudFinOpsOptimizer() {
+  return()    <div className='min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple'>'{/* Hero Section */}''      <section className='relative overflow-hidden pt-32 pb-20'>''';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
+          <motion.div;
+            initial={{ opacity: ,0, y: 20, }}
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
+            animate={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center''>''';
+            <div: className='inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6'>''';
+              <Cloud: className='w-4 h-4'  />              <span>Cloud Financial Operations</span>';
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: </div>';';
+''';
+            <h1: className='text-4xl md: text-6xl: font-bold text-white mb-6'>';
+              Cloud: FinOps Optimizer
+            </h1>'''            <p className='text-xl text-zion-slate-light max-w-3xl mx-auto mb-8'>';
+              Master: cloud cost management with intelligent FinOps automatio,n,
+              real-time monitoring, and AI-driven optimization strategies that;
+              maximize: your cloud investment.;
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: </p>';';
+''';
+            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
+              <motion.button;
+                whileHover={{ scale: 1.05, }}';';
+                whileTap={{ scale: 0.95, }}'';';
+                className='bg-gradient-to-r: from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover: shadow-xl: hover:shadow-zion-cyan/40: transition-all duration-300'>';';
+                Start: Free Trial''';
+                <ArrowRight: className='inline ml-2 w-5 h-5'  />              </motion.button>';
+              <motion.button;
+                whileHover={{ scale: 1.05, }}';';
+                whileTap={{ scale: 0.95, }}'';';
+                className='border: border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover: bg-zion-cyan: hover:text-white: transition-all duration-300'>                Schedule Demo';
+=======
+export default function CloudFinOpsOptimizer() {'
+  return()    <div className='min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple>{/* Hero Section */}      <section className='relative overflow-hidden pt-32 pb-20>''
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8'>
+          <motion.div;
+            initial={{ opacit,
+    y: 0, y: 20 }}
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
+            animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center>'
+            <div className='inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6>''
+              <Cloud className='w-4 h-4'  />              <span>Cloud Financial Operations</span>
+<<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx
+            </div>'
+''
+=======
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+            </div>';
+'''
+>>>>>>> main
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
+              Cloud FinOps Optimizer'
+            </h1>'''            <p className='text-xl text-zion-slate-light max-w-3xl mx-auto mb-8'>
+>>>>>>> main
               Master cloud cost management with intelligent FinOps automation,
               real-time monitoring, and AI-driven optimization strategies that;
+<<<<<<< HEAD
               maximize your cloud investment.
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
+<<<<<<< HEAD
             </p>"
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -104,36 +167,54 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                 className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
-=======
+
                 className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
             </p>
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+=======
+            </p>'
+''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}""
-                className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300""
-              >
-                Start Free Trial""
-                <ArrowRight className="inline ml-2 w-5 h-5"  />              </motion.button>
-
+                whileHover={{ scale: 1.05 }}';
+                whileTap={{ scale: 0.95 }}'';
+                className='bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300'>'
+                Start Free Trial''
+=======
+              maximize your cloud investment.;
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+            </p>';
+'''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+>>>>>>> main
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}""
-                className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300""
-              >
->>>>>>> pr-10728
-                Schedule Demo;
+                whileHover={{ scal,
+    e: 1.05 }};
+                whileTap={{ scale: 0.95 }};
+                className='bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover: shadow-xl hove,
+    r:shadow-zion-cyan/40 transition-all duration-300>;
+                Start Free Trial'''
+>>>>>>> main
+                <ArrowRight className='inline ml-2 w-5 h-5'  />              </motion.button>
+              <motion.button;
+                whileHover={{ scal,
+    e: 1.05 }};
+                whileTap={{ scale: 0.95 }};
+                className='border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hove,
+    r:text-white transition-all duration-300'>                Schedule Demo
+>>>>>>> main
               </motion.button>
             </div>
           </motion.div>
         </div>
-:pages.disabled/pages/services/cloud-finops-optimizer.tsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx
+
 "{/* Background Elements */}""
-=======
+
 "
 
         {/* Background Elements */}""
@@ -144,9 +225,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
         </div>
       </section>
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -156,9 +237,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -167,9 +248,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
               Comprehensive FinOps Features"</h2>""
-=======
+
               Comprehensive FinOps Features"
               Comprehensive FinOps Features;
             </h2>""
@@ -186,30 +267,86 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </motion.div>
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index (
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: '{/* Background Elements *,/}''        <div className='absolute inset-0 overflow-hidden'>''';
+          <div: className='absolute -top-40 -right-40 w-80 h-80 bg-zion-cyan/10 rounded-full blur-3xl'></div>''';
+          <div: className='absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple/10 rounded-full blur-3xl'></div>';
+        </div>
+      </section>
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: '{/* Features Section */}''      <section className='py-20 relative'>''';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
+          <motion.div;
+            initial={{ opacity: ,0, y: 20, }}
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
+            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: Comprehensive FinOps Features'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>';
+              Everything: you need to optimize cloud costs and maximize financial;
+              efficiency: </p>
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: </motion.div>';';
+''';
+          <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
+            {features.map((featur,e, index()
+              <motion.div;
+                key={index}
+                initial={{ opacity:  ,0, y: 20, }}
+                whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover: border-zion-cyan/50: transition-all duration-300 group''>''';
+                <div: className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110: transition-transform duration-300'>'';';
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: <feature.icon className='w-6 h-6 text-white' />'';
+                </div>''';
+                <h3: className='text-xl font-semibold text-white mb-3'>';
+                  {feature.titl,e}'</h3>''                <p: className='text-zion-slate-light'>{feature.description}</p>';
+=======
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+'{/* Background Elements */}        <div className='absolute inset-0 overflow-hidden>''
+          <div className='absolute -top-40 -right-40 w-80 h-80 bg-zion-cyan/10 rounded-full blur-3xl'></div>'''
+          <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple/10 rounded-full blur-3xl'></div>
+        </div>
+      </section>
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+'{/* Features Section */}      <section className='py-20 relative>''
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8'>
+          <motion.div;
+            initial={{ opacit,
+    y: 0, y: 20 }}
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
+            whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
+            <h2 className='text-3xl md: text-4xl font-bold text-white mb-6'>
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+              Comprehensive FinOps Features'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
+              Everything you need to optimize cloud costs and maximize financial
+              efficiency
+            </p>
+<<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx
+          </motion.div>'
+''
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {features.map((feature, index()
+>>>>>>> main
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 group""
-              >""
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">""
+                whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 group''>''
+                <div className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
+<<<<<<< HEAD
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>""
@@ -218,15 +355,39 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
                 </h3>""
 >>>>>>> pr-10728
                 <p className="text-zion-slate-light">{feature.description}</p>
+=======
+=======
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+          </motion.div>';
+'''
+          <div className='grid grid-cols-1 m,
+    d:grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+            {features.map((feature, index();
+              <motion.div;
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 group>'
+                <div className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hove,
+    r:scale-110 transition-transform duration-300>';
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+>>>>>>> main
+                  <feature.icon className='w-6 h-6 text-white' />'
+                </div>'''
+                <h3 className='text-xl font-semibold text-white mb-3>
+                  {feature.title}</h3>''                <p className='text-zion-slate-light'>{feature.description}</p>
+>>>>>>> main
+>>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/cloud-finops-optimizer.tsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -236,9 +397,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -247,9 +408,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
               Transform Your Cloud Economics"</h2>""
-=======
+
               Transform Your Cloud Economics"
               Transform Your Cloud Economics;
             </h2>""
@@ -266,28 +427,43 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
-<<<<<<< HEAD
+
                   whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                   whileInView={{ opacity: 1, x: 0 }}"
           </motion.div>
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""
             <div className="space-y-6">
               {benefits.slice(0, 3).map(benefit: unknown, index: unknown (
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: '{/* Benefits Section */}''      <section className='py-20 bg-zion-blue-dark/30 relative'>''';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
+          <motion.div;
+            initial={{ opacity: ,0, y: 20, }}
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
+            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: Transform Your Cloud Economics'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>';
+              Experience: significant cost savings and improved financial control
+            </p>
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: </motion.div>';';
+''';
+          <div: className='grid grid-cols-1 md:grid-cols-2: gap-8'>''';
+            <div: className='space-y-6'>';
+              {benefits.slice(,0, 3).map(benefit: unknow,n, index: unknown()
+>>>>>>> main
                 <motion.div;
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                  className="flex items-start space-x-4""
-                >""
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"  />""
-                  <span className="text-zion-slate-light text-lg">
+                  key={inde,x}
+                  initial={{ opacity:  ,0, x: -20, }}
+                  whileInView={{ opacity:  ,1, x: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                  className='flex items-start space-x-4''>''';
+                  <CheckCircle: className='w-6 h-6 text-zion-cyan mt-1 flex-shrink-0'  />''';
+                  <span: className='text-zion-slate-light text-lg'>';
                     {benefit}
                   </span>                </motion.div>
               ))}
+<<<<<<< HEAD
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
             </div>"
 ""
@@ -296,24 +472,82 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
                 <motion.div
                   key={index + 3}
                   initial={{ opacity: 0, x: 20 }}
-<<<<<<< HEAD
+
                   whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                   whileInView={{ opacity: 1, x: 0 }}"
             </div>
 ""
             <div className="space-y-6">
               {benefits.slice(3).map(benefit: unknown, index: unknown (
+=======
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: </div>';';
+''';
+            <div: className='space-y-6'>';
+              {benefits.slice(3).map(benefit: unknow,n, index: unknown()
+                <motion.div;
+                  key={index: + ,3}
+                  initial={{ opacity:  ,0, x: 20, }}
+                  whileInView={{ opacity:  ,1, x: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                  className='flex items-start space-x-4''>''';
+                  <CheckCircle: className='w-6 h-6 text-zion-cyan mt-1 flex-shrink-0'  />''';
+                  <span: className='text-zion-slate-light text-lg'>';
+=======
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+'{/* Benefits Section */}      <section className='py-20 bg-zion-blue-dark/30 relative>''
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8'>
+          <motion.div;
+            initial={{ opacit,
+    y: 0, y: 20 }}
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
+            whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+              Transform Your Cloud Economics'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
+              Experience significant cost savings and improved financial control
+            </p>
+<<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx
+          </motion.div>'
+''
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>''
+=======
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+          </motion.div>';
+'''
+          <div className='grid grid-cols-1 m,
+    d:grid-cols-2 gap-8>''
+>>>>>>> main
+            <div className='space-y-6'>
+              {benefits.slice(0, 3).map(benefit: unknown, index: unknown();
+                <motion.div;
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                  className='flex items-start space-x-4>'
+                  <CheckCircle className='w-6 h-6 text-zion-cyan mt-1 flex-shrink-0'  />''
+                  <span className='text-zion-slate-light text-lg'>
+                    {benefit}
+                  </span>                </motion.div>
+              ))}
+<<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx
+            </div>'
+''
+=======
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+            </div>';
+'''
+>>>>>>> main
+            <div className='space-y-6'>
+              {benefits.slice(3).map(benefit: unknown, index: unknown();
+>>>>>>> main
                 <motion.div;
                   key={index + 3}
                   initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                  className="flex items-start space-x-4""
-                >""
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"  />""
-                  <span className="text-zion-slate-light text-lg">
+                  whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                  className='flex items-start space-x-4>'
+                  <CheckCircle className='w-6 h-6 text-zion-cyan mt-1 flex-shrink-0'  />''
+                  <span className='text-zion-slate-light text-lg'>
+>>>>>>> main
                     {benefit}
                   </span>                </motion.div>
               ))}
@@ -321,10 +555,11 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/cloud-finops-optimizer.tsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx
+
 "{/* Optimization Strategies Section */}""
-=======
+
 "
 
       {/* Optimization Strategies Section */}""
@@ -334,9 +569,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -345,9 +580,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
               Intelligent Optimization Strategies"</h2>""
-=======
+
               Intelligent Optimization Strategies"
               Intelligent Optimization Strategies;
             </h2>""
@@ -364,31 +599,77 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </motion.div>
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {optimizationStrategies.map(strategy: unknown, index: unknown (
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: '{/* Optimization Strategies Section */}''      <section className='py-20 relative'>''';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
+          <motion.div;
+            initial={{ opacity: ,0, y: 20, }}
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
+            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: Intelligent Optimization Strategies'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>';
+              AI-powered: strategies that automatically optimize your cloud;
+              infrastructure: </p>
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: </motion.div>';';
+''';
+          <div: className='grid grid-cols-1 md:grid-cols-2: gap-8'>';
+            {optimizationStrategies.map(strategy: unknow,n, index: unknown()
+              <motion.div;
+                key={inde,x}
+                initial={{ opacity:  ,0, y: 20, }}
+                whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover: border-zion-cyan/50: transition-all duration-300''>''';
+                <div: className='flex items-start space-x-4'>''';
+                  <div: className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0'>'';';
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: <Target className='w-6 h-6 text-white'  />                  </div>'';
+                  <div>''';
+                    <h3: className='text-xl font-semibold text-white mb-2'>';
+                      {strategy.titl,e}'</h3>''                    <p: className='text-zion-slate-light'>';
+=======
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+'{/* Optimization Strategies Section */}      <section className='py-20 relative>''
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8'>
+          <motion.div;
+            initial={{ opacit,
+    y: 0, y: 20 }}
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
+            whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
+            <h2 className='text-3xl md: text-4xl font-bold text-white mb-6'>
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+              Intelligent Optimization Strategies'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
+              AI-powered strategies that automatically optimize your cloud
+              infrastructure
+            </p>
+<<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx
+          </motion.div>'
+''
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            {optimizationStrategies.map(strategy: unknown, index: unknown()
+>>>>>>> main
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300""
-              >""
-                <div className="flex items-start space-x-4">""
-                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">""
+                whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300''>''
+                <div className='flex items-start space-x-4'>''
+                  <div className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0'>''
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
+<<<<<<< HEAD
                     <Target className="w-6 h-6 text-white"  />                  </div>"
                   <div>""
                     <h3 className="text-xl font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                       {strategy.title}"</h3>""
-=======
+
                       {strategy.title}"
                     <Target className="w-6 h-6 text-white"  />                  </div>
                   <div>""
@@ -397,6 +678,33 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
                     </h3>""
 >>>>>>> pr-10728
                     <p className="text-zion-slate-light">
+=======
+                    <Target className='w-6 h-6 text-white'  />                  </div>'
+                  <div>''
+                    <h3 className='text-xl font-semibold text-white mb-2'>
+                      {strategy.title}'</h3>''                    <p className='text-zion-slate-light'>
+=======
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+          </motion.div>';
+'''
+          <div className='grid grid-cols-1 m,
+    d:grid-cols-2 gap-8'>
+            {optimizationStrategies.map(strateg,
+    y: unknown, index: unknown();
+              <motion.div;
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300>'
+                <div className='flex items-start space-x-4>''
+                  <div className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0>';
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+                    <Target className='w-6 h-6 text-white'  />                  </div>''
+                  <div>'''
+                    <h3 className='text-xl font-semibold text-white mb-2>
+                      {strategy.title}</h3>''                    <p className='text-zion-slate-light'>
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
                       {strategy.description}
                     </p>
                   </div>
@@ -406,10 +714,11 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/cloud-finops-optimizer.tsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
       {/* Use Cases Section */}""
@@ -419,9 +728,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -429,13 +738,63 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: '{/* Use Cases Section */}''      <section className='py-20 bg-zion-blue-dark/30 relative'>''';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
+          <motion.div;
+            initial={{ opacity: ,0, y: 20, }}
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
+            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
+              Perfect: For Your Organization'';
+            </h2>''';
+            <p: className='text-xl text-zion-slate-light max-w-2xl mx-auto'>';
+  ';';
+              Whether: you're a startup or enterpris,e, our FinOps solution scales;';
+              with: your needs
+            </p>
+          </motion.div>';';
+''';
+          <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-6'>';
+            {useCases.map(useCase: unknow,n, index: unknown()
+              <motion.div;
+                key={inde,x}
+                initial={{ opacity:  ,0, y: 20, }}
+                whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 text-center hover: border-zion-cyan/50: transition-all duration-300''>''';
+                <div: className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4'>'';';
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: <Cloud className='w-8 h-8 text-white'  />'';
+                </div>''';
+                <h3: className='text-lg font-semibold text-white mb-2'>';
+                  {useCase.titl,e}'</h3>''                <p: className='text-zion-slate-light text-sm'>';
+=======
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+'{/* Use Cases Section */}      <section className='py-20 bg-zion-blue-dark/30 relative>''
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8'>
+          <motion.div;
+            initial={{ opacit,
+    y: 0, y: 20 }}
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
+            whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
+>>>>>>> main
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-              Perfect For Your Organization"
-            </h2>""
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-  '
+              Perfect For Your Organization'
+            </h2>''
+            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
+=======
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
+              Perfect For Your Organization''
+            </h2>'''
+            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto>
+>>>>>>> main
+  ';
               Whether you're a startup or enterprise, our FinOps solution scales
               with your needs
+<<<<<<< HEAD
             </p>
           </motion.div>"
 ""
@@ -444,36 +803,36 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
               Perfect For Your Organization;
             </h2>""
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Whether you're a startup or enterprise, our FinOps solution scales;
               with your needs;
+=======
+<<<<<<< HEAD
+>>>>>>> main
             </p>
-          </motion.div>
-""
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map(useCase: unknown, index: unknown (
+          </motion.div>'
+''
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {useCases.map(useCase: unknown, index: unknown()
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300""
-              >""
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">""
+                whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300''>''
+                <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
+<<<<<<< HEAD
                   <Cloud className="w-8 h-8 text-white"  />"
                 </div>""
                 <h3 className="text-lg font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                   {useCase.title}"</h3>""
-=======
+
                   {useCase.title}"
                   <Cloud className="w-8 h-8 text-white"  />
                 </div>""
@@ -482,34 +841,92 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
                 </h3>""
 >>>>>>> pr-10728
                 <p className="text-zion-slate-light text-sm">
+=======
+=======
+            </p>'
+          </motion.div>';
+'''
+          <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-4 gap-6'>
+            {useCases.map(useCas,
+    e: unknown, index: unknown();
+              <motion.div;
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300>'
+                <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4>';
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+>>>>>>> main
+                  <Cloud className='w-8 h-8 text-white'  />'
+                </div>'''
+                <h3 className='text-lg font-semibold text-white mb-2>
+                  {useCase.title}</h3>''                <p className='text-zion-slate-light text-sm'>
+>>>>>>> main
+>>>>>>> main
                   {useCase.description}
                 </p>              </motion.div>
             ))}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/cloud-finops-optimizer.tsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
 >>>>>>> pr-10728
       <section className="py-20 bg-gradient-to-r from-zion-purple to-zion-purple-dark relative">""
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx: '{/* CTA Section */}''      <section className='py-20 bg-gradient-to-r from-zion-purple to-zion-purple-dark relative'>''';
+        <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: text-center'>';
+>>>>>>> main
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: ,0, y: 20, }}
+            whileInView={{ opacity:  ,1, y: 0, }}
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
+            transition={{ duration: 0.8, }}'>''';
+            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
+              Ready: to Optimize Your Cloud Costs?'';
+            </h2>''';
+            <p: className='text-xl text-zion-slate-light mb-8'>';
+              Join: organizations already saving millions with intelligent FinOps;
+              automation: </p>';';
+''';
+            <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>';
+              <motion.button;
+                whileHover={{ scale: 1.05, }}';';
+                whileTap={{ scale: 0.95, }}'';';
+                className='bg-zion-cyan: text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover: shadow-xl: hover:shadow-zion-cyan/40: transition-all duration-300'>';';
+                Start: Optimizing Today''';
+                <Rocket: className='inline ml-2 w-5 h-5'  />              </motion.button>';
+              <motion.button;
+                whileHover={{ scale: 1.05, }}';';
+                whileTap={{ scale: 0.95, }}'';';
+                className='border: border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white: hover:text-zion-purple: transition-all duration-300'>'Contact Sales''                <MessageCircle className='inline ml-2 w-5 h-5'  />              </motion.button>';
+=======
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx'
+'{/* CTA Section */}      <section className='py-20 bg-gradient-to-r from-zion-purple to-zion-purple-dark relative>''
+        <div className='max-w-4xl mx-auto px-4 sm: px-6 l,
+    g:px-8 text-center'>
+          <motion.div;
+            initial={{ opacit,
+    y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/cloud-finops-optimizer.tsx
-            transition={{ duration: 0.8 }}"
-          >""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Cloud Costs?"
-            </h2>""
-            <p className="text-xl text-zion-slate-light mb-8">
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
+            transition={{ duration: 0.8 }}>'''
+            <h2 className='text-3xl md: text-4xl font-bold text-white mb-6>
+              Ready to Optimize Your Cloud Costs?''
+            </h2>'''
+            <p className='text-xl text-zion-slate-light mb-8'>
+<<<<<<< HEAD
               Join organizations already saving millions with intelligent FinOps
               automation
+<<<<<<< HEAD
             </p>"
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -525,9 +942,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
                 className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-zion-purple transition-all duration-300"
-<<<<<<< HEAD
+
               >"Contact Sales""
-=======
+
               >"
             transition={{ duration: 0.8 }}
           >""
@@ -535,40 +952,69 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
               Ready to Optimize Your Cloud Costs?
             </h2>""
             <p className="text-xl text-zion-slate-light mb-8">
+=======
+            </p>'
+''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <motion.button;
+                whileHover={{ scale: 1.05 }}';
+                whileTap={{ scale: 0.95 }}'';
+                className='bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300'>'
+                Start Optimizing Today''
+=======
+>>>>>>> main
               Join organizations already saving millions with intelligent FinOps;
-              automation;
-            </p>
-""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              automation'
+            </p>';
+'''
+            <div className='flex flex-col s,
+    m:flex-row gap-4 justify-center'>
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}""
-                className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300""
-              >
-                Start Optimizing Today""
-                <Rocket className="inline ml-2 w-5 h-5"  />              </motion.button>
-
+                whileHover={{ scal,
+    e: 1.05 }};
+                whileTap={{ scale: 0.95 }};
+                className='bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover: shadow-xl hove,
+    r:shadow-zion-cyan/40 transition-all duration-300>;
+                Start Optimizing Today'''
+>>>>>>> main
+                <Rocket className='inline ml-2 w-5 h-5'  />              </motion.button>
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}""
-                className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-zion-purple transition-all duration-300""
-              >
-                Contact Sales""
->>>>>>> pr-10728
-                <MessageCircle className="inline ml-2 w-5 h-5"  />              </motion.button>
+                whileHover={{ scal,
+    e: 1.05 }};
+                whileTap={{ scale: 0.95 }};
+                className='border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hove,
+    r:text-zion-purple transition-all duration-300>Contact Sales''                <MessageCircle className='inline ml-2 w-5 h-5'  />              </motion.button>
+>>>>>>> main
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/cloud-finops-optimizer.tsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx
+
   )}
   '"
 '"'"
-=======
+
   )}'"
 '"'"
   )}
 '""
 >>>>>>> pr-10728
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx,)}
+  '';';
+''''';
+=======
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx)}
+<<<<<<< HEAD
+  ''
+''''
+=======
+  '';
+'''''
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

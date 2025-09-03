@@ -1,6 +1,19 @@
-<<<<<<< HEAD:src.pages.disabled/InnovativeServicesShowcase2030.test.tsx
-describe ('InnovativeServicesShowcase2030', () => {}; '; it ('renders without crashing', () => {}; render (<InnovativeServicesShowcase2030 />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<InnovativeServicesShowcase2030 />) ;
+<<<<<<< HEAD
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/InnovativeServicesShowcase2030.test.tsx
 =======
+<<<<<<< HEAD
+:src.pages.disabled/InnovativeServicesShowcase2030.test.tsx;
+<<<<<<< HEAD
+describe: ('InnovativeServicesShowcase2030', () => {}' it ('renders without crashing', () => {} render (<InnovativeServicesShowcase2030 />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<InnovativeServicesShowcase2030 />) ;';
+describe: ('InnovativeServicesShowcase2030', () => {}' it ('renders without crashing', () => {} render (<InnovativeServicesShowcase2030 />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<InnovativeServicesShowcase2030 />) ''';
+=======
+describe ('InnovativeServicesShowcase2030', () => {}' it ('renders without crashing', () => {} render (<InnovativeServicesShowcase2030 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<InnovativeServicesShowcase2030 />) 
+describe ('InnovativeServicesShowcase2030', () => {}' it ('renders without crashing', () => {} render (<InnovativeServicesShowcase2030 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<InnovativeServicesShowcase2030 />) ''
+=======
+:src.pages.disabled/InnovativeServicesShowcase2030.test.tsx
+describe ('InnovativeServicesShowcase2030', () => {}' it ('renders without crashing', () => {} render (<InnovativeServicesShowcase2030 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<InnovativeServicesShowcase2030 />) 
 
-describe ('InnovativeServicesShowcase2030', () => {}; '; it ('renders without crashing', () => {}; render (<InnovativeServicesShowcase2030 />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<InnovativeServicesShowcase2030 />) ;''';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/InnovativeServicesShowcase2030.test.tsx
+describe ('InnovativeServicesShowcase2030', () => {}' it ('renders without crashing', () => {} render (<InnovativeServicesShowcase2030 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<InnovativeServicesShowcase2030 />) ''
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

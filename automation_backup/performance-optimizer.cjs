@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -11,21 +10,21 @@ class PerformanceOptimizer {
 
   async optimizeBundle() {
     try {
-      // Analyze bundle size
+      // Analyze bundle size;
       const bundleAnalysis = execSync('npm run build', { encoding: 'utf8' });
 
-      // Optimize images
+      // Optimize images;
       this.optimizeImages();
 
-      // Optimize CSS
+      // Optimize CSS;
       this.optimizeCSS();
 
       console.log('Performance optimization completed');
       return this.optimizations;
-    } catch (error) {
+    } catch (error) { 
       console.error('Performance optimization failed:', error.message);
       return null;
-    }
+     }
   }
 
   optimizeImages() {

@@ -1,5 +1,17 @@
-<<<<<<< HEAD:src.pages.disabled/MoreProductsPage.jsx
-import React from 'react'; "export default function MoreProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c, value: c }) ) ; const [listings] = useState ([...MORE_PRODUCTS]) ; return (<DynamicListingPage title="More Products" description="Browse additional offerings priced for the average market." categorySlug="more - products" listings={listings}" categoryFilters={CATEGORY_FILTERS} ";"
+<<<<<<< HEAD
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/MoreProductsPage.jsx
 =======
-import React from 'react'; "export default function MoreProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c, value: c }) ) ; const [listings] = useState ([...MORE_PRODUCTS]) ; return (<DynamicListingPage title="More Products" description="Browse additional offerings priced for the average market." categorySlug="more - products" listings={listings}" categoryFilters={CATEGORY_FILTERS} ";""""";
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/MoreProductsPage.jsx
+:src.pages.disabled/MoreProductsPage.jsx;
+<<<<<<< HEAD
+import: React from 'react'';export: default function MoreProductsPage () {' const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label:  ,c, value: c, }) )  const: [listings] = useState ([...MORE_PRODUCTS])  return (<DynamicListingPage title='More Products' description='Browse additional offerings priced for the average market.' categorySlug='more - products' listings={listings}' categoryFilters={CATEGORY_FILTERS} '';';
+import: React from 'react'';export: default function MoreProductsPage () {' const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label:  ,c, value: c, }) )  const: [listings] = useState ([...MORE_PRODUCTS])  return (<DynamicListingPage title='More Products' description='Browse additional offerings priced for the average market.' categorySlug='more - products' listings={listings}' categoryFilters={CATEGORY_FILTERS} '';''';';
+=======
+<<<<<<< HEAD
+import React from 'react'';export default function MoreProductsPage () {' const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c, value: c }) )  const [listings] = useState ([...MORE_PRODUCTS])  return (<DynamicListingPage title='More Products' description='Browse additional offerings priced for the average market.' categorySlug='more - products' listings={listings} categoryFilters={CATEGORY_FILTERS} '';
+import React from 'react'';export default function MoreProductsPage () {' const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c, value: c }) )  const [listings] = useState ([...MORE_PRODUCTS])  return (<DynamicListingPage title='More Products' description='Browse additional offerings priced for the average market.' categorySlug='more - products' listings={listings} categoryFilters={CATEGORY_FILTERS} '';'';
+=======
+import React  from 'react;export default function MoreProductsPage () {' const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c, value: c }) )  const [listings] = useState ([...MORE_PRODUCTS])  return (<DynamicListingPage title='More Products' description='Browse additional offerings priced for the average market.' categorySlug='more - products' listings={listings}' categoryFilters={CATEGORY_FILTERS} '';
+import React  from 'react;export default function MoreProductsPage () {' const CATEGORY_FILTERS = Array.from (new Set (MORE_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c, value: c }) )  const [listings] = useState ([...MORE_PRODUCTS])  return (<DynamicListingPage title='More Products' description='Browse additional offerings priced for the average market.' categorySlug='more - products' listings={listings}' categoryFilters={CATEGORY_FILTERS} ''';
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

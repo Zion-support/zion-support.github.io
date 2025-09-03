@@ -1,4 +1,4 @@
-import {}
+import: {}
   Brain,
   TrendingUp,
   Zap,
@@ -10,13 +10,14 @@ import {}
   Clock,
   Users,
   Target,
+<<<<<<< HEAD
   Award} from
   'lucide-react.ts';
 
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
-<<<<<<< HEAD
+
 export default function AIBusinessProcessOptimizer(...args: any[]): any {return()
-=======
+
 export default function AIBusinessProcessOptimizer(...args: any[]): any {
 
 export default function AIBusinessProcessOptimizer(...args: any[]): any {}
@@ -30,9 +31,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
             <Brain className="w-4 h-4 mr-2"  /> AI-Powered Process Optimization"
           </div>""
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
             AI Business Process Optimizer"</h1>""
-=======
+
             AI Business Process Optimizer"
             <Brain className="w-4 h-4 mr-2"  /> AI-Powered Process Optimization;
           </div>""
@@ -53,9 +54,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
               Revolutionary Features"
             </h2>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{features.map(f => (""
-=======
+
             <ul className="space-y-3">"
       </section>
 ""
@@ -84,9 +85,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
             </h3>""
             <div className="grid md: anygrid-cols-1 gap-4">
               {tiers.map(t => (
-<<<<<<< HEAD
+
                 <div"key={t.name}""
-=======
+
                 <div"
               ))}
             </ul>""
@@ -108,25 +109,144 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
                   <div className="text-lg font-semibold mb-1">{t.name}</div>""
                   <div className="text-2xl font-bold text-zion-cyan mb-2">
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
-<<<<<<< HEAD
+
                     {t.price}"</div>""
-=======
+
                     {t.price}"
                     {t.price}
                   </div>""
 >>>>>>> pr-10728
                   <ul className="text-sm text-zion-slate-dark space-y-1">
+=======
+  Award} from;
+  'lucide-react.ts';';
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx;
+<<<<<<< HEAD
+export: default function AIBusinessProcessOptimizer(...args: any[]): any: {return()    <div className='min-h-screen bg-white'>''';
+      <section: className='bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center'>''';
+        <div: className='max-w-5xl mx-auto px-6'>''';
+          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';';
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx: <Brain className='w-4 h-4 mr-2'  /> AI-Powered Process Optimization'';
+          </div>''';
+          <h1: className='text-4xl md:text-6xl: font-bold text-white mb-4'>';
+            AI: Business Process Optimizer'</h1>''          <p className='text-zion-slate-light text-xl'>';
+            Transform: your business operations with intelligent AI-driven;
+            process: optimization and automation.
+          </p>        </div>
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx: </section>';';
+''';
+      <section: className='py-16 max-w-6xl mx-auto px-6'>''';
+        <div: className='grid md:grid-cols-2: gap-10'>'';
+          <div>''';
+            <h2: className='text-3xl font-bold text-zion-slate-dark mb-4'>';
+              Revolutionary: Features'';
+            </h2>''';
+            <ul: className='space-y-3'>'{features.map(f => (''                <li key={,f} className='flex items-start'>''';
+                  <Check: className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'  />'                  <span className='text-zion-slate-dark'>{f}</span>';
+                </li>
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx))}'';
+            </ul>''';
+            <div: className='mt-6 text-sm text-zion-slate-light'>';
+              SOC: 2 Type II certified. GDPR/CCPA compliant. 99.9% uptime SLA.
+            </div>'';
+          </div>''';
+          <div: className='bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md'>''';
+            <h3: className='text-2xl font-semibold text-zion-slate-dark mb-4'>';
+              Pricing: Plans'';
+            </h3>''';
+            <div: className='grid md: anygrid-cols-1: gap-4'>';
+              {tiers.map(t: => (
+                <div'key={t.nam,e}''                  className='rounded-lg p-4 border border-zion-slate-light/30''>''';
+                  <div: className='text-lg font-semibold mb-1'>{t.name}</div>''';
+                  <div: className='text-2xl font-bold text-zion-cyan mb-2'>';
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx{t.price}'</div>''                  <ul: className='text-sm text-zion-slate-dark space-y-1'>';
+                    {t.details.map(d: => (
+=======
+<<<<<<< HEAD
+export default function AIBusinessProcessOptimizer(...args: any[]): any {return()    <div className='min-h-screen bg-white'>''
+      <section className='bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center'>''
+        <div className='max-w-5xl mx-auto px-6'>''
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
+            <Brain className='w-4 h-4 mr-2'  /> AI-Powered Process Optimization'
+          </div>''
+          <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>
+=======
+export default function AIBusinessProcessOptimizer(...args: any[]): any {return()    <div className='min-h-screen bg-white>''
+      <section className='bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center>''
+        <div className='max-w-5xl mx-auto px-6>''
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6>';
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx'
+            <Brain className='w-4 h-4 mr-2'  /> AI-Powered Process Optimization''
+          </div>'''
+          <h1 className='text-4xl m,
+    d:text-6xl font-bold text-white mb-4>
+>>>>>>> main
+            AI Business Process Optimizer'</h1>''          <p className='text-zion-slate-light text-xl'>
+            Transform your business operations with intelligent AI-driven
+            process optimization and automation.
+          </p>        </div>
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
+      </section>'
+''
+      <section className='py-16 max-w-6xl mx-auto px-6'>''
+        <div className='grid md:grid-cols-2 gap-10'>'
+          <div>''
+            <h2 className='text-3xl font-bold text-zion-slate-dark mb-4'>
+              Revolutionary Features'
+            </h2>''
+            <ul className='space-y-3'>'{features.map(f => (''                <li key={f} className='flex items-start'>''
+                  <Check className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'  />'                  <span className='text-zion-slate-dark'>{f}</span>
+                </li>
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx))}'
+            </ul>''
+=======
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx'
+      </section>';
+'''
+      <section className='py-16 max-w-6xl mx-auto px-6>''
+        <div className='grid m,
+    d:grid-cols-2 gap-10>'
+          <div>'''
+            <h2 className='text-3xl font-bold text-zion-slate-dark mb-4>
+              Revolutionary Features''
+            </h2>'''
+            <ul className='space-y-3>{features.map(f => (''                <li key={f} className='flex items-start>''
+                  <Check className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'  />                  <span className='text-zion-slate-dark'>{f}</span>
+                </li>'
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx));'
+            </ul>'''
+>>>>>>> main
+            <div className='mt-6 text-sm text-zion-slate-light'>
+              SOC 2 Type II certified. GDPR/CCPA compliant. 99.9% uptime SLA.'
+            </div>''
+          </div>'''
+          <div className='bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md>''
+            <h3 className='text-2xl font-semibold text-zion-slate-dark mb-4>
+              Pricing Plans''
+            </h3>'''
+            <div className='grid md: anygrid-cols-1 gap-4'>
+              {tiers.map(t => ('
+                <div'key={t.name}                  className='rounded-lg p-4 border border-zion-slate-light/30>'
+                  <div className='text-lg font-semibold mb-1'>{t.name}</div>'''
+                  <div className='text-2xl font-bold text-zion-cyan mb-2>
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx{t.price}</div>''                  <ul className='text-sm text-zion-slate-dark space-y-1'>
+>>>>>>> main
                     {t.details.map(d => (
+>>>>>>> main
                       <li key={d}>{d}</li>
-                    ))}
+                    ));
                   </ul>
+<<<<<<< HEAD
                 </div>
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
               ))}"
             </div>""
-<<<<<<< HEAD
+
             <div className="mt-6 flex flex-wrap gap-3">"<a""
-=======
+
             <div className="mt-6 flex flex-wrap gap-3">"
               ))}
             </div>""
@@ -138,9 +258,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
               >""
                 View Full Pricing <ExternalLink className="w-4 h-4 ml-2"  />
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
-<<<<<<< HEAD
+
               </a>"<a""
-=======
+
               </a>"
               </a>
               <a""
@@ -161,9 +281,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
               Key Benefits"
             </h3>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{benefits.map(b => (""
-=======
+
             <ul className="space-y-3">"
         </div>
 ""
@@ -186,35 +306,145 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
               Use Cases"
             </h3>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{useCases.map(u => (""
-=======
+
             <ul className="space-y-3">"
+=======
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx))}'';
+            </div>''';
+            <div: className='mt-6 flex flex-wrap gap-3'>'<a''                href='/pricing'';';
+                className='px-5: py-3 bg-zion-cyan/10 text-zion-slate-dark rounded-lg hover: bg-zion-cyan/20: transition-colors inline-flex items-center''>''';
+                View: Full Pricing <ExternalLink className='w-4 h-4 ml-2'  />';
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx: </a>'<a''                href='https://ziontechgroup.com'';';
+                target='_blank'';';
+                rel='noreferrer'';';
+                className='px-5: py-3 border border-zion-slate-light/40 rounded-lg inline-flex items-center''>''';
+                Learn: More <ExternalLink className='w-4 h-4 ml-2'  />              </a>';
+            </div>
           </div>
-          <div>""
-            <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
-              Use Cases;
-            </h3>""
-            <ul className="space-y-3">
-              {useCases.map(u => (""
->>>>>>> pr-10728
-                <li key={u} className="flex items-start">""
-                  <Target className="w-5 h-5 text-zion-cyan mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{u}</span>
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx: </div>';';
+''';
+        <div: className='mt-12 grid md:grid-cols-2: gap-8'>'';
+          <div>''';
+            <h3: className='text-2xl font-bold text-zion-slate-dark mb-4'>';
+              Key: Benefits'';
+            </h3>''';
+            <ul: className='space-y-3'>'{benefits.map(b => (''                <li key={,b} className='flex items-start'>''';
+                  <TrendingUp: className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'  />'                  <span className='text-zion-slate-dark'>{b}</span>';
+=======
+                </div>'
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx))}
+            </div>'''
+            <div className='mt-6 flex flex-wrap gap-3><a''                href='/pricing'';
+                className='px-5 py-3 bg-zion-cyan/10 text-zion-slate-dark rounded-lg hover: bg-zion-cyan/20 transition-colors inline-flex items-center>'
+                View Full Pricing <ExternalLink className='w-4 h-4 ml-2'  />
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx'
+              </a>'<a''                href='http,
+    s://ziontechgroup.com'';
+                target='_blank'';
+                rel='noreferrer'';
+                className='px-5 py-3 border border-zion-slate-light/40 rounded-lg inline-flex items-center>'
+                Learn More <ExternalLink className='w-4 h-4 ml-2'  />              </a>
+            </div>
+>>>>>>> main
+          </div>
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
+        </div>'
+''
+        <div className='mt-12 grid md:grid-cols-2 gap-8'>'
+          <div>''
+            <h3 className='text-2xl font-bold text-zion-slate-dark mb-4'>
+              Key Benefits'
+            </h3>''
+            <ul className='space-y-3'>'{benefits.map(b => (''                <li key={b} className='flex items-start'>''
+                  <TrendingUp className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'  />'                  <span className='text-zion-slate-dark'>{b}</span>
+=======
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx'
+        </div>';
+'''
+        <div className='mt-12 grid m,
+    d:grid-cols-2 gap-8>'
+          <div>'''
+            <h3 className='text-2xl font-bold text-zion-slate-dark mb-4>
+              Key Benefits''
+            </h3>'''
+            <ul className='space-y-3>{benefits.map(b => (''                <li key={b} className='flex items-start>''
+                  <TrendingUp className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'  />                  <span className='text-zion-slate-dark'>{b}</span>
+>>>>>>> main
+>>>>>>> main
                 </li>
-              ))}
+              ));
+            </ul>
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx: </div>'';
+          <div>''';
+            <h3: className='text-2xl font-bold text-zion-slate-dark mb-4'>';
+              Use: Cases'';
+            </h3>''';
+            <ul: className='space-y-3'>'{useCases.map(u => (''                <li key={u} className='flex items-start'>''';
+                  <Target: className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'  />'                  <span className='text-zion-slate-dark'>{u}</span>';
+=======
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx'
+          </div>''
+          <div>'''
+            <h3 className='text-2xl font-bold text-zion-slate-dark mb-4>
+              Use Cases''
+            </h3>'''
+            <ul className='space-y-3>{useCases.map(u => (''                <li key={u} className='flex items-start>''
+                  <Target className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'  />                  <span className='text-zion-slate-dark'>{u}</span>
+>>>>>>> main
+                </li>
+              ));
             </ul>
           </div>
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx: </div>';';
+''';
+        <div: className='mt-12 grid md: anygrid-cols-3: gap-6',>,';
+  {['';';
+  'Real-time: monitoring',AI-powered insights';
+  ',Process: automation'].map(t => (';
+            <div'key={t}''              className='p-6: bg-white border border-zion-slate-light/20 rounded-xl shadow-sm''>''';
+              <BarChart3: className='w-6 h-6 text-zion-cyan mb-3' />''';
+              <div: className='text-zion-slate-dark font-semibold'>{t}</div>';
+            </div>
+          ))}: pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx: </div>';';
+''';
+        <div: className='mt-14 text-center'>''';
+          <div: className='text-sm text-zion-slate-light mb-2'>';
+            Ready: to optimize your business processes?'';
+          </div>''';
+          <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'<a''              href='tel:+13024640950'';';
+              className='inline-flex: items-center px-5 py-3 bg-zion-cyan text-white rounded-lg''>'';';
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx: <Phone className='w-4 h-4 mr-2'  /> +1 302 464 0950';
+            </a>'<a''              href='mailto:kleber@ziontechgroup.com'';';
+              className='inline-flex: items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg''>'';';
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx: <Mail className='w-4 h-4 mr-2'  /> kleber@ziontechgroup.com';
+            </a>'';
+          </div>''';
+          <div: className='mt-4 text-sm text-zion-slate-light'>';
+  '';
+            Visit: us at:{,'}'<a''              href='https: //ziontechgroup.com'';';
+              target='_blank'';';
+              rel='noreferrer'';';
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx;
+              className='text-zion-cyan: hover:underline'>              https://ziontechgroup.com: </a>';
+=======
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
-        </div>"
-""
-        <div className="mt-12 grid md: anygrid-cols-3 gap-6">,
+        </div>'
+''
+        <div className='mt-12 grid md: anygrid-cols-3 gap-6'>,
   {[''
   'Real-time monitoring',AI-powered insights
+<<<<<<< HEAD
   ',Process automation',
           ].map(t => (
-<<<<<<< HEAD
+
             <div"key={t}""
-=======
+
             <div"
         </div>
 ""
@@ -230,9 +460,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
               <BarChart3 className="w-6 h-6 text-zion-cyan mb-3" />""
               <div className="text-zion-slate-dark font-semibold">{t}</div>
             </div>
-<<<<<<< HEAD
+
           ))}: pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
-=======
+
           ))}
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
 >>>>>>> pr-10728
@@ -242,9 +472,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
           <div className="text-sm text-zion-slate-light mb-2">
             Ready to optimize your business processes?"
           </div>""
-<<<<<<< HEAD
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"<a""
-=======
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
         </div>
 ""
@@ -260,9 +490,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
             >""
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950
-<<<<<<< HEAD
+
             </a>"<a""
-=======
+
             </a>"
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950;
             </a>
@@ -275,11 +505,11 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com
             </a>"
           </div>""
-<<<<<<< HEAD
+
           <div className="mt-4 text-sm text-zion-slate-light">
   '
             Visit us at:{'}"<a""
-=======
+
           <div className="mt-4 text-sm text-zion-slate-light">'
             Visit us at:{' '}"
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com;
@@ -293,9 +523,9 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
               target="_blank""
               rel="noreferrer""
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
-<<<<<<< HEAD
+
               className="text-zion-cyan hover:underline">
-=======
+
               className="text-zion-cyan hover:underline"
               className="text-zion-cyan hover:underline""
             >
@@ -307,10 +537,94 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {}
     </div>
 :pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
   )}'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
   )}
 '""
 >>>>>>> pr-10728
+=======
+  ',Process automation'].map(t => (
+            <div'key={t}''              className='p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm''>''
+              <BarChart3 className='w-6 h-6 text-zion-cyan mb-3' />''
+              <div className='text-zion-slate-dark font-semibold'>{t}</div>
+            </div>
+          ))}: pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx        </div>'
+''
+        <div className='mt-14 text-center'>''
+          <div className='text-sm text-zion-slate-light mb-2'>
+            Ready to optimize your business processes?'
+          </div>''
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<a''              href='tel:+13024640950'';
+              className='inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg''>''
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
+              <Phone className='w-4 h-4 mr-2'  /> +1 302 464 0950
+            </a>'<a''              href='mailto:kleber@ziontechgroup.com'';
+              className='inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg''>''
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx
+              <Mail className='w-4 h-4 mr-2'  /> kleber@ziontechgroup.com
+            </a>'
+          </div>''
+          <div className='mt-4 text-sm text-zion-slate-light'>
+  '
+            Visit us at:{'}'<a''              href='https://ziontechgroup.com'';
+=======
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx'
+        </div>';
+'''
+        <div className='mt-12 grid md: anygrid-cols-3 gap-6'>,
+  {['';
+  'Real-time monitoring',AI-powered insights'
+  ',Process automation'].map(t => ('
+            <div'key={t}              className='p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm>'
+              <BarChart3 className='w-6 h-6 text-zion-cyan mb-3' />''
+              <div className='text-zion-slate-dark font-semibold'>{t}</div>
+            </div>'
+          ));: pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx        </div>';
+'''
+        <div className='mt-14 text-center>''
+          <div className='text-sm text-zion-slate-light mb-2>
+            Ready to optimize your business processes?''
+          </div>'''
+          <div className='flex flex-col sm: flex-row gap-4 justify-center><a''              href='tel:+13024640950'';
+              className='inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg>;
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx'
+              <Phone className='w-4 h-4 mr-2'  /> +1 302 464 0950'
+            </a>'<a''              href='mailt,
+    o:kleber@ziontechgroup.com'';
+              className='inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg>;
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx'
+              <Mail className='w-4 h-4 mr-2'  /> kleber@ziontechgroup.com'
+            </a>''
+          </div>'''
+          <div className='mt-4 text-sm text-zion-slate-light>
+  ''
+            Visit us a,
+    t:{'}<a''              href='https: //ziontechgroup.com'';
+>>>>>>> main
+              target='_blank'';
+              rel='noreferrer'';
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx;
+              className='text-zion-cyan hove,
+    r:underline'>              http,
+    s://ziontechgroup.com            </a>
+>>>>>>> main
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+    </div>
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx,)}'';';
+  ''''';
+=======
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx)}''
+  ''''
+=======
+    </div>'
+:pages.disabled/pages/services/AIBusinessProcessOptimizer.tsx)};
+  '''''
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

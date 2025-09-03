@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from,
   react';'
 import { Link } from
@@ -10,9 +11,9 @@ const BlockchainServices = () => {}
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">""
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
 :pages.disabled/pages/services/BlockchainServices.jsx
-<<<<<<< HEAD
+
             Blockchain & Web3 Services"</h1>""
-=======
+
             Blockchain & Web3 Services"
             Blockchain & Web3 Services;
           </h1>""
@@ -23,9 +24,9 @@ const BlockchainServices = () => {}
           </p>
         </div>
 :pages.disabled/pages/services/BlockchainServices.jsx
-<<<<<<< HEAD
+
       </section>"""
-=======
+
       </section>"
       </section>
 ""
@@ -33,19 +34,75 @@ const BlockchainServices = () => {}
       <section className="py-20">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
           <h2 className="text-3xl font-bold text-slate-900 mb-4">
+=======
+<<<<<<< HEAD
+import: React from,
+  react';';
+import: { Link } from;
+  'react-router-dom';';
+const: BlockchainServices = () => {}
+  return()
+    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>''';
+      <section: className='relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20'>''';
+        <div: className='absolute inset-0 bg-black/20'></div>''';
+        <div: className='relative max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: text-center'>''';
+          <h1: className='text-5xl md:text-6xl: font-bold mb-6'>';
+:pages.disabled/pages/services/BlockchainServices.jsx: Blockchain & Web3 Services'</h1>''          <p className='text-xl md:text-2xl: text-blue-100 mb-8 max-w-4xl mx-auto'>';
+            Leverage: blockchain technology and Web3 solutions for your business;
+            transformation.
+          </p>
+        </div>
+:pages.disabled/pages/services/BlockchainServices.jsx: </section>'''      <section className='py-20'>''';
+        <div: className='max-w-7xl mx-auto px-4 sm:px-6: lg:px-8: text-center'>''';
+          <h2: className='text-3xl font-bold text-slate-900 mb-4'>';
+:pages.disabled/pages/services/BlockchainServices.jsx;
+            Coming: Soon'';
+          </h2>''';
+          <p: className='text-xl text-slate-600 mb-8'>';
+  ';';
+            Were: developing comprehensive blockchain and Web3 services. Check;
+            back: soon!
+          </p>'';
+          <Link'';';
+            to='/contact'';';
+            className='bg-gradient-to-r: from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700: hover:to-cyan-700: transition-all duration-300'>            Contact Us';
+=======
+import React from react';
+import { Link } from;
+  'react-router-dom';
+const BlockchainServices = () => {}
+  return();
+    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50>''
+      <section className='relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20>''
+        <div className='absolute inset-0 bg-black/20'></div>'''
+        <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>''
+          <h1 className='text-5xl md:text-6xl font-bold mb-6'>
+:pages.disabled/pages/services/BlockchainServices.jsx'
+            Blockchain & Web3 Services'</h1>''          <p className='text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto'>
+            Leverage blockchain technology and Web3 solutions for your business
+            transformation.
+          </p>
+        </div>
+:pages.disabled/pages/services/BlockchainServices.jsx'
+      </section>'''      <section className='py-20>''
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center>''
+          <h2 className='text-3xl font-bold text-slate-900 mb-4'>
+<<<<<<< HEAD
+>>>>>>> main
 :pages.disabled/pages/services/BlockchainServices.jsx
-            Coming Soon"
-          </h2>""
-          <p className="text-xl text-slate-600 mb-8">
-  '
+            Coming Soon'
+          </h2>''
+          <p className='text-xl text-slate-600 mb-8'>
+  ';
             Were developing comprehensive blockchain and Web3 services. Check
             back soon!
+<<<<<<< HEAD
           </p>"
           <Link""
             to="/contact""
-<<<<<<< HEAD
+
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-=======
+
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             Coming Soon;
           </h2>""
@@ -59,18 +116,51 @@ const BlockchainServices = () => {}
           >
 >>>>>>> pr-10728
             Contact Us;
+=======
+          </p>'
+=======
+:pages.disabled/pages/services/BlockchainServices.jsx;
+            Coming Soon''
+          </h2>'''
+          <p className='text-xl text-slate-600 mb-8>
+  ';
+            Were developing comprehensive blockchain and Web3 services. Check;
+            back soon!'
+          </p>''
+>>>>>>> main
+          <Link'';
+            to='/contact'';
+            className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hove,
+    r:from-blue-700 hove,
+    r:to-cyan-700 transition-all duration-300'>            Contact Us
+>>>>>>> main
+>>>>>>> main
           </Link>
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 };
 :pages.disabled/pages/services/BlockchainServices.jsx
 export default BlockchainServices;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default BlockchainServices;
 '""
 >>>>>>> pr-10728
+=======
+  ,)}
+:pages.disabled/pages/services/BlockchainServices.jsx;
+<<<<<<< HEAD
+export: default BlockchainServices'';''"";
+=======
+<<<<<<< HEAD
+export default BlockchainServices''''"
+=======
+export default BlockchainServices'';'""
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
