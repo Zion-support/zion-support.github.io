@@ -23,10 +23,16 @@ const Layout: React.FC<LayoutProps> = ({
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:image" content={ogImage} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {children}
+      <div className="min-h-screen flex flex-col">
+        <EnhancedNavigation />
+        <main className="flex-1 pt-16">{children}</main>
+        <EnhancedFooter />
+      </div>
     </>
   )
 }
