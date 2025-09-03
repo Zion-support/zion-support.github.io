@@ -1,4 +1,8 @@
 import js from '@eslint/js';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
 
 export default [
   js.configs.recommended,
@@ -13,6 +17,34 @@ export default [
         ecmaVersion: 12,
         sourceType: 'module',
       },
+      globals: {
+        // Node.js globals
+        process: 'readonly',
+        console: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+        // Test globals
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        jest: 'readonly',
+        // Browser globals
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+      },
     },
     plugins: {
       '@typescript-eslint': typescript,
@@ -24,6 +56,7 @@ export default [
       '@typescript-eslint/no-explicit-any': 'warn',
       'react-hooks/exhaustive-deps': 'warn',
       'react/react-in-jsx-scope': 'off',
+      'no-undef': 'off', // TypeScript handles this
     },
     settings: {
       react: {
@@ -32,6 +65,65 @@ export default [
     },
   },
   {
-    ignores: ['node_modules/', '.next/', 'out/', 'dist/'],
+    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}', '**/tests/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      globals: {
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        jest: 'readonly',
+        vi: 'readonly',
+      },
+    },
+  },
+  {
+    ignores: [
+      'node_modules/',
+      '.next/',
+      'out/',
+      'dist/',
+      'build/',
+      'coverage/',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'fix-critical-files.js',
+      'fix-*.js',
+      'fix-*.cjs',
+      '*.report.json',
+      'temp_*/',
+      'test_build/',
+      'tests.disabled/',
+      'pages.disabled/',
+      'src.disabled/',
+      'components.disabled/',
+      'hooks.disabled/',
+      'types.disabled/',
+      'contracts.disabled/',
+      'solutions.disabled/',
+      'zion-os.disabled/',
+      'zion_academy/',
+      'automation_backup/',
+      'lib_backup/',
+      'data_backup/',
+      'styles_backup/',
+      'api-backup/',
+      'temp_backup/',
+      'corrupted_files_backup_2/',
+      'ai-optimization-backups/',
+      'optimization-reports/',
+      'test-generation-reports/',
+      'test-reports/',
+      'test-results/',
+      'security-reports/',
+      'pages.__backup/',
+      'pages-disabled/',
+      'pages.disabled_auto/',
+    ],
   },
 ];
