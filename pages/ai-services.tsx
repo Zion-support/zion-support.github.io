@@ -863,6 +863,160 @@ export default function AIServices() {
       pricing: '$3,000 - $12,000/month',
       delivery: '4-6 weeks',
       category: 'Personalization AI'
+    },
+    {
+      title: 'AI-Powered Cybersecurity Threat Intelligence',
+      description: 'Advanced threat detection and response with behavioral analysis and automated incident response',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis,Behavioral anomaly detection and user profiling,Automated incident response and containment,Threat intelligence integration and correlation,Compliance monitoring and reporting,Integration with SIEM and security tools'
+      ],
+      pricing: '$5,000 - $20,000/month',
+      delivery: '6-10 weeks',
+      category: 'Cybersecurity AI'
+    },
+    {
+      title: 'AI-Powered Quantum Machine Learning',
+      description: 'Quantum-enhanced machine learning algorithms for complex optimization and pattern recognition',
+      icon: Cpu,
+      features: [
+        'Quantum machine learning algorithm development,Quantum neural network optimization,Quantum feature selection and dimensionality reduction,Quantum clustering and classification,Hybrid quantum-classical model training,Integration with quantum computing hardware'
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '12-24 weeks',
+      category: 'Quantum ML AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Drone Swarm',
+      description: 'Intelligent drone swarm coordination for surveillance, delivery, and emergency response',
+      icon: Network,
+      features: [
+        'Swarm coordination and formation flying,Autonomous mission planning and execution,Real-time obstacle avoidance and navigation,Distributed decision making and communication,Payload optimization and delivery coordination,Emergency response and search and rescue operations'
+      ],
+      pricing: '$20,000 - $80,000/month',
+      delivery: '16-32 weeks',
+      category: 'Drone Swarm AI'
+    },
+    {
+      title: 'AI-Powered Personalized Medicine Platform',
+      description: 'Intelligent personalized treatment recommendations based on genetic and clinical data',
+      icon: Heart,
+      features: [
+        'Genomic analysis and variant interpretation,Personalized drug selection and dosing,Adverse reaction prediction and prevention,Treatment response monitoring and optimization,Clinical trial matching and enrollment,Integration with electronic health records'
+      ],
+      pricing: '$12,000 - $45,000/month',
+      delivery: '12-24 weeks',
+      category: 'Personalized Medicine AI'
+    },
+    {
+      title: 'AI-Powered Smart City Management',
+      description: 'Intelligent urban infrastructure management with real-time optimization and citizen services',
+      icon: Globe,
+      features: [
+        'Traffic flow optimization and congestion management,Energy grid optimization and demand response,Public safety monitoring and emergency response,Environmental monitoring and pollution control,Citizen service automation and optimization,Infrastructure maintenance and predictive analytics'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '20-40 weeks',
+      category: 'Smart City AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Manufacturing',
+      description: 'Intelligent manufacturing process optimization with predictive maintenance and quality control',
+      icon: Settings,
+      features: [
+        'Autonomous production line optimization,Predictive maintenance and equipment monitoring,Quality control and defect detection,Supply chain integration and optimization,Energy efficiency and waste reduction,Real-time production analytics and reporting'
+      ],
+      pricing: '$18,000 - $70,000/month',
+      delivery: '16-32 weeks',
+      category: 'Manufacturing AI'
+    },
+    {
+      title: 'AI-Powered Financial Risk Management',
+      description: 'Advanced financial risk assessment and portfolio optimization with real-time market analysis',
+      icon: TrendingUp,
+      features: [
+        'Real-time market risk assessment and monitoring,Credit risk modeling and default prediction,Portfolio optimization and asset allocation,Liquidity risk management and stress testing,Regulatory compliance and reporting automation,Integration with trading and banking systems'
+      ],
+      pricing: '$10,000 - $40,000/month',
+      delivery: '10-20 weeks',
+      category: 'Financial Risk AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Agriculture',
+      description: 'Intelligent precision agriculture with automated farming operations and crop optimization',
+      icon: TreePine,
+      features: [
+        'Autonomous farming equipment operation,Crop health monitoring and disease detection,Precision irrigation and fertilization,Weather prediction and climate adaptation,Harvest optimization and yield prediction,Supply chain integration and market analysis'
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '12-28 weeks',
+      category: 'Agriculture AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Underwater Vehicles',
+      description: 'Intelligent underwater exploration and monitoring with autonomous navigation and data collection',
+      icon: Network,
+      features: [
+        'Autonomous underwater navigation and mapping,Marine life monitoring and ecosystem analysis,Underwater infrastructure inspection and maintenance,Search and rescue operations,Environmental monitoring and pollution detection,Data collection and real-time transmission'
+      ],
+      pricing: '$20,000 - $75,000/month',
+      delivery: '16-32 weeks',
+      category: 'Underwater AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Space Mining',
+      description: 'Intelligent space resource extraction and processing with autonomous operations',
+      icon: Satellite,
+      features: [
+        'Autonomous asteroid and planetary resource identification,Automated mining equipment operation and control,Resource processing and refinement optimization,Transportation and logistics coordination,Environmental impact assessment and mitigation,Integration with space infrastructure and communication systems'
+      ],
+      pricing: '$50,000 - $200,000/month',
+      delivery: '32-64 weeks',
+      category: 'Space Mining AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Ocean Cleanup',
+      description: 'Intelligent ocean waste detection and removal with autonomous marine vehicles',
+      icon: Network,
+      features: [
+        'Autonomous waste detection and classification,Automated collection and processing systems,Route optimization for maximum efficiency,Environmental impact monitoring and assessment,Integration with recycling and waste management systems,Real-time progress tracking and reporting'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '20-40 weeks',
+      category: 'Ocean Cleanup AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Emergency Response',
+      description: 'Intelligent emergency response coordination with autonomous vehicles and drones',
+      icon: Shield,
+      features: [
+        'Autonomous emergency vehicle dispatch and routing,Real-time situation assessment and resource allocation,Automated search and rescue operations,Emergency communication and coordination,Disaster response planning and execution,Integration with emergency services and infrastructure'
+      ],
+      pricing: '$30,000 - $120,000/month',
+      delivery: '24-48 weeks',
+      category: 'Emergency Response AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Energy Grid',
+      description: 'Intelligent energy grid management with autonomous optimization and renewable integration',
+      icon: Zap,
+      features: [
+        'Autonomous grid balancing and load management,Renewable energy integration and optimization,Demand response and energy storage management,Grid stability monitoring and control,Predictive maintenance and fault detection,Integration with smart meters and IoT devices'
+      ],
+      pricing: '$35,000 - $150,000/month',
+      delivery: '28-56 weeks',
+      category: 'Energy Grid AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Transportation Network',
+      description: 'Intelligent transportation system coordination with autonomous vehicles and infrastructure',
+      icon: Car,
+      features: [
+        'Autonomous vehicle coordination and traffic management,Dynamic routing and congestion optimization,Public transportation integration and optimization,Infrastructure monitoring and maintenance,Passenger safety and comfort optimization,Integration with smart city systems'
+      ],
+      pricing: '$40,000 - $160,000/month',
+      delivery: '32-64 weeks',
+      category: 'Transportation AI'
     }
   ];
   const aiTechnologies = [

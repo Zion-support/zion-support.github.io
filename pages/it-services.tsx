@@ -723,6 +723,193 @@ export default function ITServices() {
       pricing: '$3,000 - $15,000/month',
       delivery: '3-6 weeks',
       category: 'Network Security'
+    },
+    {
+      title: 'AI-Powered IT Operations (AIOps)',
+      description: 'Intelligent IT operations with AI-driven monitoring, automation, and incident response',
+      icon: Brain,
+      features: [
+        'AI-powered anomaly detection and root cause analysis,Automated incident response and remediation,Intelligent capacity planning and resource optimization,Predictive maintenance and proactive issue resolution,Self-healing infrastructure and automated recovery,Integration with existing monitoring and management tools'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'AIOps Services'
+    },
+    {
+      title: 'Quantum-Safe Cryptography Implementation',
+      description: 'Post-quantum cryptography solutions and quantum-resistant security implementation',
+      icon: Shield,
+      features: [
+        'Quantum-safe cryptographic algorithm implementation,Post-quantum key exchange and digital signatures,Quantum-resistant encryption for data at rest and in transit,Hybrid classical-quantum security solutions,Compliance with NIST post-quantum standards,Legacy system migration and compatibility'
+      ],
+      pricing: '$12,000 - $60,000/month',
+      delivery: '12-24 weeks',
+      category: 'Quantum Security Services'
+    },
+    {
+      title: 'Autonomous IT Infrastructure Management',
+      description: 'Self-managing IT infrastructure with autonomous optimization and self-healing capabilities',
+      icon: Settings,
+      features: [
+        'Autonomous infrastructure provisioning and scaling,Self-healing systems with automatic recovery,Intelligent resource allocation and optimization,Automated performance tuning and optimization,Predictive capacity planning and scaling,Integration with cloud and on-premises environments'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '16-32 weeks',
+      category: 'Autonomous Infrastructure Services'
+    },
+    {
+      title: 'Neuromorphic Computing Infrastructure',
+      description: 'Brain-inspired computing systems and neuromorphic hardware integration',
+      icon: Cpu,
+      features: [
+        'Neuromorphic chip integration and optimization,Spiking neural network deployment,Edge AI processing with low power consumption,Real-time learning and adaptation systems,Neuromorphic algorithm development and optimization,Integration with traditional computing infrastructure'
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '20-40 weeks',
+      category: 'Neuromorphic Computing Services'
+    },
+    {
+      title: 'Space-Based Computing Infrastructure',
+      description: 'Satellite-based computing and edge processing for space and terrestrial applications',
+      icon: Satellite,
+      features: [
+        'Satellite computing platform deployment,Space-based edge processing and analytics,Low-latency communication and data processing,Orbital computing resource management,Satellite constellation coordination,Integration with terrestrial cloud infrastructure'
+      ],
+      pricing: '$50,000 - $250,000/month',
+      delivery: '32-64 weeks',
+      category: 'Space Computing Services'
+    },
+    {
+      title: 'Autonomous Cybersecurity Operations',
+      description: 'Self-defending cybersecurity systems with autonomous threat detection and response',
+      icon: Shield,
+      features: [
+        'Autonomous threat hunting and detection,Self-adapting security policies and configurations,Automated incident response and containment,Intelligent security orchestration and automation,Autonomous vulnerability assessment and patching,Integration with existing security infrastructure'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Autonomous Security Services'
+    },
+    {
+      title: 'Biometric Security & Identity Management',
+      description: 'Advanced biometric authentication and identity verification systems',
+      icon: Users,
+      features: [
+        'Multi-modal biometric authentication (fingerprint, face, voice, iris),Behavioral biometrics and continuous authentication,Identity verification and fraud prevention,Privacy-preserving biometric systems,Integration with existing identity management,Compliance with biometric data regulations'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '8-16 weeks',
+      category: 'Biometric Security Services'
+    },
+    {
+      title: 'Autonomous Data Center Management',
+      description: 'Self-managing data center infrastructure with autonomous optimization and maintenance',
+      icon: Server,
+      features: [
+        'Autonomous cooling and power management,Self-optimizing server allocation and load balancing,Automated maintenance scheduling and execution,Predictive hardware failure detection and replacement,Energy efficiency optimization and sustainability,Integration with existing data center infrastructure'
+      ],
+      pricing: '$25,000 - $125,000/month',
+      delivery: '20-40 weeks',
+      category: 'Autonomous Data Center Services'
+    },
+    {
+      title: 'Quantum Internet & Communication Networks',
+      description: 'Quantum communication networks and quantum internet infrastructure',
+      icon: Network,
+      features: [
+        'Quantum key distribution (QKD) network implementation,Quantum internet protocol development,Quantum repeater and entanglement distribution,Quantum secure communication systems,Integration with classical communication networks,Quantum network monitoring and management'
+      ],
+      pricing: '$30,000 - $150,000/month',
+      delivery: '24-48 weeks',
+      category: 'Quantum Communication Services'
+    },
+    {
+      title: 'Autonomous Software Development Platform',
+      description: 'AI-powered software development with autonomous coding and testing capabilities',
+      icon: Code,
+      features: [
+        'Autonomous code generation and optimization,AI-powered testing and quality assurance,Automated software architecture design,Self-healing and self-optimizing applications,Intelligent code review and refactoring,Integration with existing development workflows'
+      ],
+      pricing: '$12,000 - $60,000/month',
+      delivery: '16-32 weeks',
+      category: 'Autonomous Development Services'
+    },
+    {
+      title: 'Holographic Computing & Display Systems',
+      description: 'Holographic computing platforms and 3D display technology integration',
+      icon: Monitor,
+      features: [
+        'Holographic display system implementation,3D holographic user interface development,Holographic data visualization and interaction,Real-time holographic rendering and processing,Integration with existing computing systems,Holographic collaboration and communication platforms'
+      ],
+      pricing: '$18,000 - $90,000/month',
+      delivery: '20-40 weeks',
+      category: 'Holographic Computing Services'
+    },
+    {
+      title: 'Autonomous Network Management',
+      description: 'Self-managing network infrastructure with autonomous optimization and security',
+      icon: Network,
+      features: [
+        'Autonomous network configuration and optimization,Self-healing network infrastructure,Intelligent traffic routing and load balancing,Automated network security and threat response,Predictive network maintenance and upgrades,Integration with existing network infrastructure'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '12-24 weeks',
+      category: 'Autonomous Network Services'
+    },
+    {
+      title: 'Molecular Computing Infrastructure',
+      description: 'DNA and molecular computing systems for specialized computational tasks',
+      icon: Cpu,
+      features: [
+        'DNA computing algorithm development,Molecular data storage and processing,Biomolecular circuit design and implementation,Hybrid molecular-classical computing systems,Integration with traditional computing infrastructure,Specialized molecular computing applications'
+      ],
+      pricing: '$25,000 - $125,000/month',
+      delivery: '24-48 weeks',
+      category: 'Molecular Computing Services'
+    },
+    {
+      title: 'Autonomous Cloud Management Platform',
+      description: 'Self-managing cloud infrastructure with autonomous optimization and cost management',
+      icon: Cloud,
+      features: [
+        'Autonomous cloud resource provisioning and scaling,Self-optimizing cost management and FinOps,Automated cloud security and compliance,Intelligent workload placement and migration,Predictive cloud capacity planning,Integration with multi-cloud environments'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Autonomous Cloud Services'
+    },
+    {
+      title: 'Brain-Computer Interface Infrastructure',
+      description: 'Neural interface systems and brain-computer communication infrastructure',
+      icon: Brain,
+      features: [
+        'Neural signal processing and interpretation,Brain-computer interface hardware integration,Real-time neural data analysis and processing,Secure neural data transmission and storage,Integration with assistive technologies,Medical and research application development'
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '20-40 weeks',
+      category: 'BCI Infrastructure Services'
+    },
+    {
+      title: 'Autonomous Database Management',
+      description: 'Self-managing database systems with autonomous optimization and maintenance',
+      icon: Database,
+      features: [
+        'Autonomous database performance tuning,Self-healing database systems,Automated backup and recovery optimization,Intelligent query optimization and indexing,Predictive database maintenance and scaling,Integration with existing database infrastructure'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '12-24 weeks',
+      category: 'Autonomous Database Services'
+    },
+    {
+      title: 'Synthetic Biology Computing Systems',
+      description: 'Biological computing systems and synthetic biology infrastructure',
+      icon: Cpu,
+      features: [
+        'Biological circuit design and implementation,Synthetic biology computing platform development,Biomolecular data processing and analysis,Integration with traditional computing systems,Biological system simulation and modeling,Specialized biological computing applications'
+      ],
+      pricing: '$30,000 - $150,000/month',
+      delivery: '24-48 weeks',
+      category: 'Synthetic Biology Computing Services'
     }
   ];
 
