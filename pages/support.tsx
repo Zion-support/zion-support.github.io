@@ -5,38 +5,38 @@ import { HelpCircle, MessageCircle, Phone, Mail, Clock, Search, BookOpen, Users,
 
 export default function Support() {
   const supportOptions = [
-    {
+  {
       title: 'Help Center',
       description: 'Browse our comprehensive knowledge base and FAQ',
       icon: BookOpen,
-      features: ['Searchable articles', 'Step-by-step guides', 'Video tutorials', 'Troubleshooting'],
+      features: ['Searchable articles,Step-by-step guides,Video tutorials,Troubleshooting'],
       link: '/help'
     },
     {
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       icon: MessageCircle,
-      features: ['24/7 availability', 'Instant responses', 'Screen sharing', 'File sharing'],
+      features: ['24/7 availability,Instant responses,Screen sharing,File sharing'],
       link: '#'
     },
     {
       title: 'Phone Support',
       description: 'Speak directly with our technical experts',
       icon: Phone,
-      features: ['Priority support', 'Technical consultation', 'Emergency assistance', 'Follow-up calls'],
+      features: ['Priority support,Technical consultation,Emergency assistance,Follow-up calls'],
       link: 'tel:+13024640950'
     },
     {
       title: 'Email Support',
       description: 'Send us detailed questions and get comprehensive answers',
       icon: Mail,
-      features: ['Detailed responses', 'Documentation', 'Screenshots', 'Case tracking'],
+      features: ['Detailed responses,Documentation,Screenshots,Case tracking'],
       link: 'mailto:support@ziontechgroup.com'
     }
   ];
 
   const faqCategories = [
-    {
+  {
       title: 'Getting Started',
       questions: [
         {
@@ -90,15 +90,12 @@ export default function Support() {
   ];
 
   const supportTiers = [
-    {
+  {
       name: 'Community Support',
       description: 'Free support through our community forums and knowledge base',
       responseTime: '24-48 hours',
       features: [
-        'Community forums',
-        'Knowledge base access',
-        'Basic documentation',
-        'Email support'
+        'Community forums,Knowledge base access,Basic documentation,Email support'
       ],
       price: 'Free'
     },
@@ -107,11 +104,7 @@ export default function Support() {
       description: 'Professional support for business users',
       responseTime: '4-8 hours',
       features: [
-        'Priority email support',
-        'Live chat support',
-        'Phone support',
-        'Advanced documentation',
-        'API support'
+        'Priority email support,Live chat support,Phone support,Advanced documentation,API support'
       ],
       price: 'Included with Professional Plan'
     },
@@ -120,19 +113,14 @@ export default function Support() {
       description: 'Dedicated support for enterprise customers',
       responseTime: '1-2 hours',
       features: [
-        'Dedicated support manager',
-        '24/7 phone support',
-        'Priority ticket handling',
-        'Custom integrations',
-        'SLA guarantees',
-        'On-site support'
+        'Dedicated support manager,24/7 phone support,Priority ticket handling,Custom integrations,SLA guarantees,On-site support'
       ],
       price: 'Custom Pricing'
     }
   ];
 
   const contactMethods = [
-    {
+  {
       title: 'General Inquiries',
       email: 'info@ziontechgroup.com',
       phone: '+1 302 464 0950',

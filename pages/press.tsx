@@ -5,7 +5,7 @@ import { Calendar, ExternalLink, FileText, Award, Users, TrendingUp, ArrowRight,
 
 export default function Press() {
   const pressReleases = [
-    {
+  {
       title: 'Zion Tech Group Launches Revolutionary AI-Powered Business Automation Platform',
       date: '2024-01-15',
       summary: 'New platform combines machine learning with business process automation to help enterprises achieve unprecedented efficiency gains.',
@@ -36,7 +36,7 @@ export default function Press() {
   ];
 
   const mediaCoverage = [
-    {
+  {
       outlet: 'TechCrunch',
       title: 'How Zion Tech Group is Revolutionizing Business Automation',
       date: '2024-01-10',
@@ -67,7 +67,7 @@ export default function Press() {
   ];
 
   const awards = [
-    {
+  {
       title: 'Top AI Company 2024',
       organization: 'TechCrunch',
       date: '2024-01-15',
@@ -88,7 +88,7 @@ export default function Press() {
   ];
 
   const teamQuotes = [
-    {
+  {
       name: 'Kleber Santos',
       title: 'CEO & Founder',
       quote: 'We\'re not just building technology; we\'re building the future of how businesses operate. Our AI solutions are designed to empower organizations to achieve unprecedented levels of efficiency and innovation.',

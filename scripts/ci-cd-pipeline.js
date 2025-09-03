@@ -35,7 +35,7 @@ class CICDPipeline {
       console.log(`📝 Commit: ${this.pipelineLog.commit}`);
       // Define pipeline stages;
       const pipelineStages = [
-        {
+  {
           name: 'Source Code Checkout',
           description: 'Checkout source code from repository',
           critical: true,
@@ -155,17 +155,7 @@ class CICDPipeline {
   async runStageCommand(stage) {
     // Define commands for each stage;
     const stageCommands = {
-      'Source Code Checkout': 'git status',
-      'Dependency Installation': 'yarn install --frozen-lockfile',
-      'Code Quality Analysis': 'npm run lint',
-      'Type Checking': 'npm run type-check',
-      'Unit Testing': 'npm test -- --passWithNoTests --watchAll=false',
-      'Integration Testing': 'npm run test:ci',
-      'Security Scanning': 'npm audit --audit-level moderate',
-      'Build Application': 'npm run build',
-      'Performance Testing': 'node scripts/performance-monitor-improved.js',
-      'Deploy to Staging': 'echo 'Deploying to staging...'',
-      'Deploy to Production': 'echo 'Deploying to production...''}
+      'Source Code Checkout': 'git status,Dependency Installation': 'yarn install --frozen-lockfile,Code Quality Analysis': 'npm run lint,Type Checking': 'npm run type-check,Unit Testing': 'npm test -- --passWithNoTests --watchAll=false,Integration Testing': 'npm run test:ci,Security Scanning': 'npm audit --audit-level moderate,Build Application': 'npm run build,Performance Testing': 'node scripts/performance-monitor-improved.js,Deploy to Staging': 'echo 'Deploying to staging...',Deploy to Production': 'echo 'Deploying to production...''}
     const command = stageCommands[stage.name] || 'echo 'No command defined'';
     return new Promise((resolve, reject) => {
       const [cmd, ...args] = command.split(' ');

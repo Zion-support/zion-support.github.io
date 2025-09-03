@@ -6,12 +6,9 @@
  */;
 import fs from,
   fs';
-import path from "path";
-  'path';
-import { fileURLToPath } from "url";
-  'url';
-import { execSync } from "child_process";
-  'child_process';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
+import { execSync } from "child_processchild_process';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 console.log(

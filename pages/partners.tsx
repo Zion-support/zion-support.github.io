@@ -5,15 +5,12 @@ import { Handshake, Award, Users, Globe, ArrowRight, CheckCircle, Star, Building
 
 export default function Partners() {
   const partnerTypes = [
-    {
+  {
       title: 'Technology Partners',
       description: 'Leading technology companies that provide the tools and platforms we use to deliver exceptional solutions.',
       icon: Cloud,
       benefits: [
-        'Access to cutting-edge technology',
-        'Joint go-to-market opportunities',
-        'Technical support and training',
-        'Co-marketing initiatives'
+        'Access to cutting-edge technology,Joint go-to-market opportunities,Technical support and training,Co-marketing initiatives'
       ]
     },
     {
@@ -21,10 +18,7 @@ export default function Partners() {
       description: 'Specialized service providers that complement our offerings and expand our capabilities.',
       icon: Target,
       benefits: [
-        'Expanded service portfolio',
-        'Cross-referral opportunities',
-        'Joint solution development',
-        'Shared expertise and resources'
+        'Expanded service portfolio,Cross-referral opportunities,Joint solution development,Shared expertise and resources'
       ]
     },
     {
@@ -32,16 +26,13 @@ export default function Partners() {
       description: 'Resellers and integrators who help us reach new markets and deliver solutions to clients worldwide.',
       icon: Globe,
       benefits: [
-        'Market expansion opportunities',
-        'Local market expertise',
-        'Sales and marketing support',
-        'Training and certification programs'
+        'Market expansion opportunities,Local market expertise,Sales and marketing support,Training and certification programs'
       ]
     }
   ];
 
   const currentPartners = [
-    {
+  {
       name: 'Microsoft',
       category: 'Cloud Platform',
       description: 'Azure cloud services and enterprise solutions',
@@ -86,7 +77,7 @@ export default function Partners() {
   ];
 
   const partnershipBenefits = [
-    {
+  {
       title: 'Revenue Growth',
       description: 'Access to new markets and revenue streams through partner channels',
       icon: Target
@@ -109,7 +100,7 @@ export default function Partners() {
   ];
 
   const partnershipProcess = [
-    {
+  {
       step: '1',
       title: 'Initial Discussion',
       description: 'We discuss your business goals and how we can work together to achieve mutual success.'

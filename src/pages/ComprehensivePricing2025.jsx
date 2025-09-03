@@ -1,5 +1,5 @@
-import React, { useState } from 'react';"
-import { Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe } from 'lucide-react';"
+import React, { useState } from 'react
+import { Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe } from 'lucide-react
 import { Link } from 'react-router-dom';
 
 export default function ComprehensivePricing2025() {"
@@ -7,17 +7,17 @@ export default function ComprehensivePricing2025() {"
   const [selectedPlan, setSelectedPlan] = useState('professional');
 
   const plans = [
-    {"
-      id: 'starter',"
-      name: 'Starter',"
+  {"
+      id: 'starter,
+      name: 'Starter,
       description: 'Perfect for small businesses and startups',
       price: { monthly: 99, yearly: 990 },
       features: ["
-        'Basic AI Consultation',"
-        'Cloud Migration Assessment',"
-        'Security Audit Report',"
-        'Email Support',"
-        'Basic Analytics Dashboard',"
+        'Basic AI Consultation,
+        'Cloud Migration Assessment,
+        'Security Audit Report,
+        'Email Support,
+        'Basic Analytics Dashboard,
         'Up to 5 Team Members',
 ],
       icon: Zap,"
@@ -25,19 +25,19 @@ export default function ComprehensivePricing2025() {"
       popular: false,
 },
     {"
-      id: 'professional',"
-      name: 'Professional',"
+      id: 'professional,
+      name: 'Professional,
       description: 'Ideal for growing businesses and enterprises',
       price: { monthly: 299, yearly: 2990 },
       features: ["
-        'Advanced AI Solutions',"
-        'Full Cloud Migration',"
-        'Cybersecurity Implementation',"
-        'Priority Support',"
-        'Advanced Analytics',"
-        'Up to 25 Team Members',"
-        'Custom Integrations',"
-        'Performance Monitoring',"
+        'Advanced AI Solutions,
+        'Full Cloud Migration,
+        'Cybersecurity Implementation,
+        'Priority Support,
+        'Advanced Analytics,
+        'Up to 25 Team Members,
+        'Custom Integrations,
+        'Performance Monitoring,
         'Compliance Reporting',
 ],
       icon: Shield,"
@@ -45,22 +45,22 @@ export default function ComprehensivePricing2025() {"
       popular: true,
 },
     {"
-      id: 'enterprise',"
-      name: 'Enterprise',"
+      id: 'enterprise,
+      name: 'Enterprise,
       description: 'Comprehensive solutions for large organizations',
       price: { monthly: 799, yearly: 7990 },
       features: ["
-        'Full AI Suite Implementation',"
-        'Multi-Cloud Strategy',"
-        'Advanced Security Framework',"
-        '24/7 Dedicated Support',"
-        'Custom AI Models',"
-        'Unlimited Team Members',"
-        'White-label Solutions',"
-        'Advanced Analytics & ML',"
-        'Compliance & Governance',"
-        'Custom Development',"
-        'Training & Certification',"
+        'Full AI Suite Implementation,
+        'Multi-Cloud Strategy,
+        'Advanced Security Framework,
+        '24/7 Dedicated Support,
+        'Custom AI Models,
+        'Unlimited Team Members,
+        'White-label Solutions,
+        'Advanced Analytics & ML,
+        'Compliance & Governance,
+        'Custom Development,
+        'Training & Certification,
         'Strategic Consulting',
 ],
       icon: Building,"
@@ -70,26 +70,26 @@ export default function ComprehensivePricing2025() {"
   ];
 
   const addOns = [
-    {"
-      name: 'AI Model Training',"
+  {"
+      name: 'AI Model Training,
       description: 'Custom AI model development and training',
       price: { monthly: 199, yearly: 1990 },
       icon: Brain,
 },
     {"
-      name: 'Cloud Optimization',"
+      name: 'Cloud Optimization,
       description: 'Advanced cloud cost optimization and management',
       price: { monthly: 149, yearly: 1490 },
       icon: Cloud,
 },
     {"
-      name: 'Security Enhancement',"
+      name: 'Security Enhancement,
       description: 'Advanced security features and compliance',
       price: { monthly: 179, yearly: 1790 },
       icon: Shield,
 },
     {"
-      name: 'Digital Transformation',"
+      name: 'Digital Transformation,
       description: 'End-to-end business transformation consulting',
       price: { monthly: 299, yearly: 2990 },
       icon: Rocket,
@@ -250,23 +250,23 @@ export default function ComprehensivePricing2025() {"
           <div className="max-w-4xl mx-auto space-y-6">
             {[
               {"
-                question: 'Can I change my plan at any time?',"
+                question: 'Can I change my plan at any time?,
                 answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.',
 },
               {"
-                question: 'Do you offer custom pricing for enterprise clients?',"
+                question: 'Do you offer custom pricing for enterprise clients?,
                 answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.',
 },
               {"
-                question: 'What payment methods do you accept?',"
+                question: 'What payment methods do you accept?,
                 answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.',
 },
               {"
-                question: 'Is there a setup fee?',"
+                question: 'Is there a setup fee?,
                 answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.',
 },
               {"
-                question: 'What happens if I exceed my plan limits?',"
+                question: 'What happens if I exceed my plan limits?,
                 answer: 'We\'ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed.',
 }
             ].map((faq, index) => ("

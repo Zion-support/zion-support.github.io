@@ -3,8 +3,7 @@ describe(
   it(
   'loads profile from API', () => {
     cy.intercept(
-  'GET',
-  '/api/talent/t-123', {
+  'GET,/api/talent/t-123', {
       statusCode: 200,
       body: {
         id:,
@@ -21,5 +20,4 @@ describe(
   '@getTalent');
     cy.get(
   '[data-testid='talent-name']').should(
-  'contain',
-  'Cypress Talent')})})
+  'contain,Cypress Talent')})})

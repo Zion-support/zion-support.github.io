@@ -48,13 +48,13 @@ export const PerformanceOptimizer: React.FC = () => {"
     if (typeof window !== 'undefined') {
       // Preload critical resources
       const criticalResources = ["
-        '/fonts/inter.woff2', '/images/hero-bg.jpg',
+        '/fonts/inter.woff2,/images/hero-bg.jpg',
 ];
       criticalResources.forEach(resource => {"
         const link = document.createElement('link');"
         link.rel = 'preload';
         link.href = resource;"
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';"
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image
         if (resource.endsWith('.woff2')) {"
           link.crossOrigin = 'anonymous';,
 }

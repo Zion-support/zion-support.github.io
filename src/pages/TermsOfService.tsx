@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';"
-import { SEO } from '../components/SEO';"
-import { motion } from 'framer-motion';"
-import { SEO } from '../components/SEO';"
-import { FileText, Scale, Shield, Users, Globe } from 'lucide-react';"
+import { motion } from 'framer-motion
+import { SEO } from '../components/SEO
+import { motion } from 'framer-motion
+import { SEO } from '../components/SEO
+import { FileText, Scale, Shield, Users, Globe } from 'lucide-react
 import { FileText, Scale, Shield, Users, Globe } from 'lucide-react';
 export default function TermsOfService() {
   return (
@@ -21,7 +21,7 @@ export default function TermsOfService() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}"
               transition={{ duration: 0.8 }}"
-              className="text-center max-w-4xl mx-auto""" >"
+              className='text-center max-w-4xl mx-auto' >"
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Terms of Service"
               </h1>"

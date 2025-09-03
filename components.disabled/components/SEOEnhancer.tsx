@@ -23,51 +23,21 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   nofollow = false
 }) => {
   const defaultStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    'name': 'Zion Tech Group',
-    'url': 'https://ziontechgroup.com',
-    'logo': 'https://ziontechgroup.com/logo.png',
-    'description': description,
+    '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,url': 'https://ziontechgroup.com,logo': 'https://ziontechgroup.com/logo.png,description': description,
     'address': {
-      '@type': 'PostalAddress',
-      'streetAddress': '364 E Main St STE 1008',
-      'addressLocality': 'Middletown',
-      'addressRegion': 'DE',
-      'postalCode': '19709',
-      'addressCountry': 'US'
+      '@type': 'PostalAddress,streetAddress': '364 E Main St STE 1008,addressLocality': 'Middletown,addressRegion': 'DE,postalCode': '19709,addressCountry': 'US'
     },
     'contactPoint': {
-      '@type': 'ContactPoint',
-      'telephone': '+1-302-464-0950',
-      'contactType': 'customer service',
-      'email': 'kleber@ziontechgroup.com'
+      '@type': 'ContactPoint,telephone': '+1-302-464-0950,contactType': 'customer service,email': 'kleber@ziontechgroup.com'
     },
     'sameAs': [
-      'https://www.linkedin.com/company/zion-tech-group',
-      'https://github.com/Zion-Technologies'
+      'https://www.linkedin.com/company/zion-tech-group,https://github.com/Zion-Technologies'
     ],
-    'foundingDate': '2020',
-    'numberOfEmployees': '50-100',
-    'services': [
-      'AI Development',
-      'Cloud Architecture',
-      'Cybersecurity',
-      'Blockchain Solutions',
-      'Micro SaaS Development',
-      'Enterprise IT Services',
-      'Digital Transformation'
+    'foundingDate': '2020,numberOfEmployees': '50-100,services': [
+      'AI Development,Cloud Architecture,Cybersecurity,Blockchain Solutions,Micro SaaS Development,Enterprise IT Services,Digital Transformation'
     ],
-    'areaServed': 'Worldwide',
-    'knowsAbout': [
-      'Artificial Intelligence',
-      'Machine Learning',
-      'Cloud Computing',
-      'Cybersecurity',
-      'Blockchain Technology',
-      'Quantum Computing',
-      'DevOps',
-      'Data Analytics'
+    'areaServed': 'Worldwide,knowsAbout': [
+      'Artificial Intelligence,Machine Learning,Cloud Computing,Cybersecurity,Blockchain Technology,Quantum Computing,DevOps,Data Analytics'
     ]
   };
 

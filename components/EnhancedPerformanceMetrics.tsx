@@ -17,9 +17,15 @@ interface PerformanceMetric {
   value: number;
   unit: string;
   change: number;
+<<<<<<< HEAD
+  changeType: "increase" | "decrease";
+  target: number;
+  status: "excellent" | "good" | "warning" | "critical";
+=======
   changeType: 'increase' | 'decrease';
   target: number;
   status: 'excellent' | 'good' | 'warning' | 'critical';
+>>>>>>> main
   icon: React.ComponentType<any>;
   description: string;
 }
@@ -32,13 +38,90 @@ interface PerformanceMetricsProps {
 }
 
 const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
+<<<<<<< HEAD
+  title = "Real-Time Performance Metrics",
+  subtitle = "Monitor your system's performance with live data and intelligent insights",
+=======
   title = 'Real-Time Performance Metrics',
   subtitle = 'Monitor your system\'s performance with live data and intelligent insights',
+>>>>>>> main
   showCharts = true,
   autoRefresh = true
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetric[]>([
     {
+<<<<<<< HEAD
+      id: "response-time",
+      name: "Response Time",
+      value: 127,
+      unit: "ms",
+      change: -12.5,
+      changeType: "decrease",
+      target: 150,
+      status: "excellent",
+      icon: Clock,
+      description: "Average API response time across all endpoints"
+    },
+    {
+      id: "throughput",
+      name: "Throughput",
+      value: 15420,
+      unit: "req/s",
+      change: 8.3,
+      changeType: "increase",
+      target: 12000,
+      status: "excellent",
+      icon: Zap,
+      description: "Requests processed per second"
+    },
+    {
+      id: "error-rate",
+      name: "Error Rate",
+      value: 0.23,
+      unit: "%",
+      change: -15.2,
+      changeType: "decrease",
+      target: 1.0,
+      status: "excellent",
+      icon: Activity,
+      description: "Percentage of failed requests"
+    },
+    {
+      id: "cpu-usage",
+      name: "CPU Usage",
+      value: 67.8,
+      unit: "%",
+      change: 5.1,
+      changeType: "increase",
+      target: 80,
+      status: "good",
+      icon: BarChart3,
+      description: "Current CPU utilization across all cores"
+    },
+    {
+      id: "memory-usage",
+      name: "Memory Usage",
+      value: 82.3,
+      unit: "%",
+      change: 2.8,
+      changeType: "increase",
+      target: 85,
+      status: "warning",
+      icon: Database,
+      description: "RAM utilization percentage"
+    },
+    {
+      id: "active-users",
+      name: "Active Users",
+      value: 1247,
+      unit: "",
+      change: 12.4,
+      changeType: "increase",
+      target: 1000,
+      status: "excellent",
+      icon: Users,
+      description: "Concurrent users currently online"
+=======
       id: 'response-time',
       name: 'Response Time',
       value: 127,
@@ -109,11 +192,16 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
       status: 'excellent',
       icon: Users,
       description: 'Concurrent users currently online'
+>>>>>>> main
     }
   ]);
 
   const [selectedMetric, setSelectedMetric] = useState<string | null>(null);
+<<<<<<< HEAD
+  const [timeRange, setTimeRange] = useState<"1h" | "6h" | "24h" | "7d">("1h");
+=======
   const [timeRange, setTimeRange] = useState<'1h' | '6h' | '24h' | '7d'>('1h');
+>>>>>>> main
 
   useEffect(() => {
     if (!autoRefresh) return;
@@ -133,6 +221,18 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
 
   const getStatusColor = (status: string) => {
     switch (status) {
+<<<<<<< HEAD
+      case "excellent":
+        return "text-green-500 bg-green-100";
+      case "good":
+        return "text-blue-500 bg-blue-100";
+      case "warning":
+        return "text-yellow-500 bg-yellow-100";
+      case "critical":
+        return "text-red-500 bg-red-100";
+      default:
+        return "text-gray-500 bg-gray-100";
+=======
       case 'excellent':
         return 'text-green-500 bg-green-100';
       case 'good':
@@ -143,15 +243,24 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
         return 'text-red-500 bg-red-100';
       default:
         return 'text-gray-500 bg-gray-100';
+>>>>>>> main
     }
   };
 
   const getChangeIcon = (changeType: string) => {
+<<<<<<< HEAD
+    return changeType === "increase" ? ArrowUpRight : ArrowDownRight;
+  };
+
+  const getChangeColor = (changeType: string) => {
+    return changeType === "increase" ? "text-green-600" : "text-red-600";
+=======
     return changeType === 'increase' ? ArrowUpRight : ArrowDownRight;
   };
 
   const getChangeColor = (changeType: string) => {
     return changeType === 'increase' ? 'text-green-600' : 'text-red-600';
+>>>>>>> main
   };
 
   const containerVariants = {
@@ -172,7 +281,11 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
       opacity: 1,
       transition: {
         duration: 0.5,
+<<<<<<< HEAD
+        ease: "easeOut"
+=======
         ease: 'easeOut'
+>>>>>>> main
       }
     }
   };
@@ -204,14 +317,23 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
           className="flex justify-center mb-12"
         >
           <div className="bg-white rounded-2xl shadow-lg p-2 border border-gray-200">
-            {(['1h', '6h', '24h', '7d'] as const).map((range) => (
+<<<<<<< HEAD
+            {(["1h", "6h", "24h", "7d"] as const).map((range) => (
+=======
+            {(['1h,6h,24h,7d'] as const).map((range) => (
+>>>>>>> main
               <button
                 key={range}
                 onClick={() => setTimeRange(range)}
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-200 ${
                   timeRange === range
+<<<<<<< HEAD
+                    ? "bg-blue-600 text-white shadow-lg"
+                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+=======
                     ? 'bg-blue-600 text-white shadow-lg'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+>>>>>>> main
                 }`}
               >
                 {range}
@@ -255,7 +377,11 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
 
                 <div className="flex items-end gap-2 mb-3">
                   <span className="text-3xl font-bold text-gray-900">
+<<<<<<< HEAD
+                    {typeof metric.value === "number" && metric.value % 1 !== 0
+=======
                     {typeof metric.value === 'number' && metric.value % 1 !== 0
+>>>>>>> main
                       ? metric.value.toFixed(1)
                       : Math.round(metric.value)
                     }
@@ -287,10 +413,17 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
                     <div
                       className={`h-2 rounded-full transition-all duration-500 ${
                         metric.value / metric.target > 0.9
+<<<<<<< HEAD
+                          ? "bg-red-500"
+                          : metric.value / metric.target > 0.7
+                          ? "bg-yellow-500"
+                          : "bg-green-500"
+=======
                           ? 'bg-red-500'
                           : metric.value / metric.target > 0.7
                           ? 'bg-yellow-500'
                           : 'bg-green-500'
+>>>>>>> main
                       }`}
                       style={{ width: `${Math.min((metric.value / metric.target) * 100, 100)}%` }}
                     />
@@ -302,7 +435,11 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
                   {selectedMetric === metric.id && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
+                      animate={{ opacity: 1, height: "auto" }}
+=======
                       animate={{ opacity: 1, height: 'auto' }}
+>>>>>>> main
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
                       className="mt-4 pt-4 border-t border-gray-200"
@@ -319,7 +456,11 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
                         <div className="flex justify-between text-sm">
                           <span className="text-gray-600">Trend</span>
                           <span className={`font-medium ${getChangeColor(metric.changeType)}`}>
+<<<<<<< HEAD
+                            {metric.changeType === "increase" ? "↗" : "↘"}
+=======
                             {metric.changeType === 'increase' ? '↗' : '↘'}
+>>>>>>> main
                           </span>
                         </div>
                       </div>
@@ -343,13 +484,21 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
               <div className="text-3xl font-bold mb-2">
+<<<<<<< HEAD
+                {metrics.filter(m => m.status === "excellent").length}
+=======
                 {metrics.filter(m => m.status === 'excellent').length}
+>>>>>>> main
               </div>
               <div className="text-blue-100">Excellent Metrics</div>
             </div>
             <div>
               <div className="text-3xl font-bold mb-2">
+<<<<<<< HEAD
+                {metrics.filter(m => m.changeType === "decrease").length}
+=======
                 {metrics.filter(m => m.changeType === 'decrease').length}
+>>>>>>> main
               </div>
               <div className="text-blue-100">Improving</div>
             </div>

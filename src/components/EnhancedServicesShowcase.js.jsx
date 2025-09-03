@@ -1,6 +1,6 @@
 import React, { useState } from 'react''
 import { Link } from 'react-router-dom''
-import { motion } from 'framer-motion''
+import { motion }  from 'framer-motion
 import { enhancedServices2025 } from '../data/enhanced-services-2025';
 const EnhancedServicesShowcase = () => {}"
 '
@@ -33,7 +33,7 @@ const EnhancedServicesShowcase = () => {}"
       <section className='py-20 px-4 sm:px-6 lg:px-8'>''''
         <div className='max-w-7xl mx-auto text-center'>'''
           <motion .h1''''
-            className='text-4xl md:text-6xl font-bold mb-6'''
+            className='text-4xl md:text-6xl font-bold mb-6'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}"" >'''
@@ -44,7 +44,7 @@ const EnhancedServicesShowcase = () => {}"
             </span>"
           </motion.h1>'''
           <motion .p''''
-            className='text-xl text-gray-300 mb-8 max-w-4xl mx-auto'''
+            className='text-xl text-gray-300 mb-8 max-w-4xl mx-auto'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}" >
@@ -52,7 +52,7 @@ const EnhancedServicesShowcase = () => {}"
             technology solutions designed to transform your business.</motion.p>"
           {/* Contact Information */}'''
           <motion .div''''
-            className='bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto'''
+            className='bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}"
             transition={{ duration: 0.6, delay: 0.4 }}'''" >''''
@@ -73,7 +73,7 @@ const EnhancedServicesShowcase = () => {}"
           </motion.div>"
           {/* Search and Filter */}'''
           <motion .div''''
-            className='flex flex-col md:flex-row gap-4 justify-center items-center mb-12'''
+            className='flex flex-col md:flex-row gap-4 justify-center items-center mb-12'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}"" >'''
@@ -82,7 +82,7 @@ const EnhancedServicesShowcase = () => {}"
               placeholder='Search services...'''
               value={searchTerm}'''
               onChange={e =" > setSearchTerm(e.target.value)}''''
-              className='px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80''''
+              className='px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80''
             />''''
             <div className='flex flex-wrap gap-2'>
               {categories.map(category => (
@@ -108,7 +108,7 @@ const EnhancedServicesShowcase = () => {}"
       <section className='py-20 px-4 sm:px-6 lg:px-8'>''''
         <div className='max-w-7xl mx-auto'>'''
           <motion .div''''
-            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8''''
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8''
             variants={containerVariants}''''
             initial='hidden''''
             whileInView='visible'''
@@ -158,7 +158,7 @@ const EnhancedServicesShowcase = () => {}"
                     {service.features.slice(0, 4).map((feature, idx) => ("
                       <li '''
                         key={idx}''''
-                        className='text-xs text-gray-300 flex items-center''''" >''''
+                        className='text-xs text-gray-300 flex items-center''" >''''
                         <span className='w-1.5 h-1.5 bg-blue-400 rounded-full mr-2'></span>
                         {feature}
                       </li>
@@ -175,7 +175,7 @@ const EnhancedServicesShowcase = () => {}"
                     {service.benefits.slice(0, 3).map((benefit, idx) => ("
                       <li '''
                         key={idx}''''
-                        className='text-xs text-gray-300 flex items-center''''" >''''
+                        className='text-xs text-gray-300 flex items-center''" >''''
                         <span className='w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2'></span>
                         {benefit}
                       </li>
@@ -204,7 +204,7 @@ const EnhancedServicesShowcase = () => {}"
                     className='inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm '>"
                     Learn More'''
                     <svg ''''
-                      className='ml-2 h-4 w-4''''
+                      className='ml-2 h-4 w-4''
                       fill='none''''
                       stroke='currentColor''''
                       viewBox='0 0 24 24'''" >'''
@@ -223,15 +223,15 @@ const EnhancedServicesShowcase = () => {}"
           {/* No Results Message */}"
           {filteredServices.length === 0 && ('''
             <motion .div''''
-              className='text-center py-12'''
+              className='text-center py-12'
               initial={{ opacity: 0 }}"
               animate={{ opacity: 1 }}'''" >''''
               <p className='text-gray-400 text-lg'>
                 No services found matching your criteria.</p>
               <button onClick={() =" > {}"
 '
-                  setSelectedCategory('all')';"
-                  setSearchTerm('')';',
+                  setSelectedCategory('all')
+                  setSearchTerm(''),
 }}''''
                 className='mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 '>
                 View All Services
@@ -245,14 +245,14 @@ const EnhancedServicesShowcase = () => {}"
       <section className='py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50'>''''
         <div className='max-w-4xl mx-auto text-center'>'''
           <motion .h2''''
-            className='text-3xl md:text-4xl font-bold text-white mb-6'''
+            className='text-3xl md:text-4xl font-bold text-white mb-6'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}" >
             Ready to Transform Your Business?"
           </motion.h2>'''
           <motion .p''''
-            className='text-xl text-gray-300 mb-8'''
+            className='text-xl text-gray-300 mb-8'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}"" >'
@@ -261,7 +261,7 @@ const EnhancedServicesShowcase = () => {}"
           </motion.p>"
 '''
           <motion .div''''
-            className='flex flex-col sm:flex-row gap-4 justify-center mb-8'''
+            className='flex flex-col sm:flex-row gap-4 justify-center mb-8'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}"" >'''
@@ -278,7 +278,7 @@ const EnhancedServicesShowcase = () => {}"
           </motion.div>"
 '''
           <motion .div''''
-            className='bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto'''
+            className='bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}"
             transition={{ duration: 0.6, delay: 0.6 }}'''" >''''
@@ -306,7 +306,7 @@ const EnhancedServicesShowcase = () => {}"
           </motion.div>"
 '''
           <motion .div''''
-            className='mt-8 text-sm text-gray-400'''
+            className='mt-8 text-sm text-gray-400'
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}" >
