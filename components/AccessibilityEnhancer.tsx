@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -20,11 +21,48 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
+=======
+import React, { useEffect } from "react"
+const AccessibilityEnhancer: React.FC = () => {
+  useEffect(() => {"
+    if (typeof window !== "undefined") {,
+      // comment
+const handleKeyDown = (event: KeyboardEvent) => {"
+        if (event.key === "Tab") {",
+          document.body.classList.add("keyboard-navigation"),
+        }
 
-    // Apply initial styles
-    applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
-  }, []);
+      }
 
+      const handleMouseDown = () => {"
+        document.body.classList.remove("keyboard-navigation")
+}
+
+"
+      document.addEventListener("keydown", handleKeyDown)
+}
+      document.addEventListener("mousedown", handleMouseDown)
+}
+      // comment
+const style = document.createElement("style")
+}
+      style.textContent = "
+        .keyboard-navigation *:focus {
+          outline: 2px solid #3B82F6 !important,
+          outline-offset: 2px !important,
+      "
+      document.head.appendChild(style)
+}
+      return () => {"
+        document.removeEventListener("keydown", handleKeyDown)
+}
+        document.removeEventListener("mousedown", handleMouseDown)
+}
+>>>>>>> main
+
+    }
+
+<<<<<<< HEAD
   const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
     const root = document.documentElement;
     
@@ -34,11 +72,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     } else {
       root.classList.remove('high-contrast');
     }
-    
+
     // Font size adjustments
     root.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large');
     root.classList.add(`font-${fontSize}`);
-    
+
     // Reduced motion
     if (reducedMotion) {
       root.classList.add('reduced-motion');
@@ -119,92 +157,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         </p>
       </div>
 
-      {/* Main content wrapper with accessibility attributes */}
-      <main id="main-content" role="main" aria-label="Main content">
+      {/* Main content */}
+      <div id="main-content">
         {children}
-      </main>
-
-      {/* Accessibility styles */}
-      <style jsx global>{`
-        /* High contrast mode */
-        .high-contrast {
-          --tw-bg-opacity: 1;
-          --tw-text-opacity: 1;
-        }
-        
-        .high-contrast * {
-          background-color: white !important;
-          color: black !important;
-          border-color: black !important;
-        }
-        
-        .high-contrast button, .high-contrast a {
-          border: 2px solid black !important;
-        }
-        
-        .high-contrast button:hover, .high-contrast a:hover {
-          background-color: black !important;
-          color: white !important;
-        }
-
-        /* Font size adjustments */
-        .font-small {
-          font-size: 0.875rem;
-        }
-        
-        .font-normal {
-          font-size: 1rem;
-        }
-        
-        .font-large {
-          font-size: 1.125rem;
-        }
-        
-        .font-extra-large {
-          font-size: 1.25rem;
-        }
-
-        /* Reduced motion */
-        .reduced-motion *, .reduced-motion *::before,
-        .reduced-motion *::after {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-          scroll-behavior: auto !important;
-        }
-
-        /* Focus indicators */
-        *:focus {
-          outline: 2px solid #3b82f6 !important;
-          outline-offset: 2px !important;
-        }
-
-        /* Screen reader only content */
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-
-        .focus\\:not-sr-only:focus {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: inherit;
-          margin: inherit;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
-        }
-      `}</style>
+      </div>
     </>
   );
 };
 
 export default AccessibilityEnhancer;
+=======
+  }, [])
+}
+  return null
+
+
+'export default AccessibilityEnhancer
+>>>>>>> main
