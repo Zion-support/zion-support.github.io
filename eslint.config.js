@@ -67,74 +67,6 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-<<<<<<< HEAD
-=======
-      'no-console': 'warn',
-    },
-    settings: {
-      react: {
-        version: '18.2.0',
-      },
-    },
-  },
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: 'module',
-      parser: tsparser,
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        navigator: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        console: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly',
-        requestAnimationFrame: 'readonly',
-        cancelAnimationFrame: 'readonly',
-        fetch: 'readonly',
-        URL: 'readonly',
-        URLSearchParams: 'readonly',
-        Blob: 'readonly',
-        CustomEvent: 'readonly',
-        Intl: 'readonly',
-        performance: 'readonly',
-        caches: 'readonly',
-        Notification: 'readonly',
-        ServiceWorker: 'readonly',
-        ServiceWorkerRegistration: 'readonly',
-        PushSubscription: 'readonly',
-        NotificationPermission: 'readonly',
-        process: 'readonly',
-        global: 'readonly',
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        vi: 'readonly',
-        Deno: 'readonly',
-        React: 'readonly',
-      },
-    },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      '@typescript-eslint': tseslint,
-    },
-    rules: {
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-c473
       '@typescript-eslint/no-unused-vars': [
         'warn',
         { argsIgnorePattern: '^_' }
@@ -154,38 +86,6 @@ export default [
   },
   {
     ignores: [
-<<<<<<< HEAD
-=======
-      'src/**',
-      'components/**',
-      'backup-pages/**',
-      'pages-backup/**',
-      'pages.__backup/**',
-      'broken_files_backup/**',
-      'api/**',
-      'api-backup/**',
-      'automation_backup/**',
-      'ai-optimization-backups/**',
-      'ai-optimization-reports/**',
-      'ai-analysis-reports/**',
-      '__tests__/**',
-      'tests/**',
-      '*.test.*',
-      '.eslintrc.*',
-      'mcp*.*',
-      'fix_*.*',
-      'fix-*.js',
-      'fix-*.jsx',
-      'fix-variable-names.jsx',
-      'health-endpoint.js',
-      'services/**',
-      'data/**',
-      'data_backup/**',
-      'temp_working/**',
-      'supabase/**',
-      'ecosystem*.js',
-      'jest.*',
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-c473
       'node_modules/',
       '.next/',
       'out/',
@@ -325,7 +225,6 @@ export default [
       'test*.js',
       'test*.ts',
       'test*.tsx',
-<<<<<<< HEAD
       '**/data_backup/**',
       '**/pages.disabled_auto/**',
       '**/test_build/**',
@@ -344,10 +243,8 @@ export default [
       '*.md',
       '*.txt',
       '*.yml',
-      '*.yaml'
-=======
+      '*.yaml',
       '.prettierrc.js'
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-c473
     ]
   }
 ];
