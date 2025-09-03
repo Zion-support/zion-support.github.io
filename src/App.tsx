@@ -17,6 +17,11 @@ const ServicesOverview = lazy(() => import('./pages/services-overview'));
 const AIContentGenerationSuite = lazy(() => import('./pages/services/ai-content-generation-suite'));
 const CloudMigrationServices = lazy(() => import('./pages/services/cloud-migration-services'));
 const SmartCRMPlatform = lazy(() => import('./pages/services/smart-crm-platform'));
+
+// New comprehensive service pages;
+const RealMicroSaaSServices = lazy(() => import('./pages/real-micro-saas-services'));
+const ComprehensiveITServices = lazy(() => import('./pages/comprehensive-it-services'));
+const InnovativeAIServices = lazy(() => import('./pages/innovative-ai-services'));
 ;
 // Simple Header component;
 const Header = () => (;
@@ -27,6 +32,9 @@ const Header = () => (;
         <a href="/" className="mr-4 hover:text-cyan-400">Home</a>;
         <a href="/about" className="mr-4 hover:text-cyan-400">About</a>;
         <a href="/services" className="mr-4 hover:text-cyan-400">Services</a>;
+        <a href="/real-micro-saas-services" className="mr-4 hover:text-cyan-400">Micro SAAS</a>;
+        <a href="/comprehensive-it-services" className="mr-4 hover:text-cyan-400">IT Services</a>;
+        <a href="/innovative-ai-services" className="mr-4 hover:text-cyan-400">AI Services</a>;
         <a href="/contact" className="hover:text-cyan-400">Contact</a>;
       </nav>;
       <div className="mt-2 text-sm text-gray-300">;
@@ -69,6 +77,11 @@ function App() {;
             <Route path="/services/ai-content-generation-suite" element={<AIContentGenerationSuite />} />;
             <Route path="/services/cloud-migration-services" element={<CloudMigrationServices />} />;
             <Route path="/services/smart-crm-platform" element={<SmartCRMPlatform />} />;
+            
+            {/* New comprehensive service pages */}
+            <Route path="/real-micro-saas-services" element={<RealMicroSaaSServices />} />;
+            <Route path="/comprehensive-it-services" element={<ComprehensiveITServices />} />;
+            <Route path="/innovative-ai-services" element={<InnovativeAIServices />} />;
             <Route path="*" element={<HomePage />} />;
           </Routes>;
         </Suspense>;
