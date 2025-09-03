@@ -702,20 +702,43 @@ const Home = memo(() => {
       title: "AI Services",
       description: "Cutting-edge artificial intelligence solutions including chatbots, predictive analytics, and computer vision",
       icon: Brain,
+<<<<<<< HEAD
+      href: '/ai-services',
+      features: ['AI-Powered Email Responder', 'Computer Vision Solutions', 'Predictive Analytics Platform', 'AI Chatbot & Virtual Assistant'],
+      pricing: 'Starting at $2,500/month',
+      delivery: '2-8 weeks',
+      benefits: ['Increased efficiency by 40%', 'Reduced operational costs', '24/7 intelligent automation', 'Scalable AI solutions']
+=======
       href: "/services#ai",
       features: ["AI Chatbots", "Predictive Analytics", "Computer Vision", "NLP Services"]
+>>>>>>> main
     },
     {
       title: "IT Services", 
       description: "Comprehensive information technology services from cloud migration to DevOps automation",
       icon: Network,
+<<<<<<< HEAD
+      href: '/it-services',
+      features: ['Cloud Infrastructure & Migration', 'Cybersecurity & Compliance', 'Network Infrastructure', 'IT Support & Helpdesk'],
+      pricing: 'Starting at $1,500/month',
+      delivery: '1-12 weeks',
+      benefits: ['99.9% uptime guarantee', '24/7 expert support', 'Enterprise-grade security', 'Scalable infrastructure']
+=======
       href: "/services#it",
       features: ["Cloud Migration", "DevOps Automation", "API Development", "Database Optimization"]
+>>>>>>> main
     },
     {
       title: "SaaS Solutions",
       description: "Scalable software as a service solutions including CRM, project management, and e-commerce platforms",
       icon: Cloud,
+<<<<<<< HEAD
+      href: '/micro-saas',
+      features: ['AI-Powered Email Responder', 'Mobile-First Survey Platform', 'Event Management Dashboard', 'Customer Support Platform'],
+      pricing: 'Starting at $1,200/month',
+      delivery: '2-6 weeks',
+      benefits: ['Rapid deployment', 'Custom solutions', 'Scalable architecture', 'Ongoing support']
+=======
       href: "/services#saas",
       features: ["Custom CRM", "Project Management", "E-commerce Platform", "HR Management"]
     },
@@ -739,6 +762,7 @@ const Home = memo(() => {
       icon: Link2,
       href: "/services#blockchain",
       features: ["Smart Contracts", "DApp Development", "Token Development", "DeFi Solutions"]
+>>>>>>> main
     }
   ];
 
@@ -1772,12 +1796,43 @@ const Home = memo(() => {
                   <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
+<<<<<<< HEAD
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{service.title}</h3>
+                  <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                  
+                  {/* Pricing and Delivery */}
+                  <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-sm font-medium text-gray-700">Starting Price:</span>
+                      <span className="text-lg font-bold text-blue-600">{service.pricing}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium text-gray-700">Delivery Time:</span>
+                      <span className="text-sm text-gray-600">{service.delivery}</span>
+                    </div>
+                  </div>
+
+                  {/* Key Benefits */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Benefits:</h4>
+                    <ul className="space-y-2">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+=======
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 mb-6 text-center">
                     {service.description}
                   </p>
+>>>>>>> main
                   <Link href={service.href} className="block">
                     <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center flex items-center justify-center">
 >>>>>>> main
