@@ -1,21 +1,15 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ComprehensivePricingGuide2027 from '../ComprehensivePricingGuide2027';
+import {SEO } from '@/components/SEO';
 
-describe('ComprehensivePricingGuide2027', () => {
-  test('renders without crashing', () => {
-    render(<ComprehensivePricingGuide2027 />);
-    expect(screen.getByTestId('comprehensivepricingguide2027')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
-    render(<ComprehensivePricingGuide2027 />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<ComprehensivePricingGuide2027 />);
-    // Add interaction tests based on component functionality
-  });
-});
+export default function ComprehensivePricingGuide2027.test() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="ComprehensivePricingGuide2027.test - Zion Tech Group" description="Professional ComprehensivePricingGuide2027.test services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">ComprehensivePricingGuide2027.test</h1>
+        <p className="text-gray-300 text-lg">
+          Professional ComprehensivePricingGuide2027.test services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}

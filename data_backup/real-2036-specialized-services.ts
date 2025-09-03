@@ -6,8 +6,10 @@ export type Real2036SpecializedService = {
   category: string;
   price: string;
   period?: string;
-  features: string[];
-  link: string;
+  feature,
+    s: string[];
+  lin,
+    k: string;
   launchDate?: string;
   rating?: number;
   marketSize?: string;
@@ -18,7 +20,8 @@ export type Real2036SpecializedService = {
   technology?: string[]}
 export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   // Neuromorphic Computing Platform{
-    id:,
+    i,
+    d:,
   neuromorphic-computing-platform',
     name: 'Neuromorphic Computing Platform,
     tagline:,
@@ -39,7 +42,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Performance benchmarking',
   'Expert consultation';
     ],
-    link: 'https://ziontechgroup.com/services/neuromorphic-computing-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/neuromorphic-computing-platform,
     launchDate:;
   '2036-04-01',
     rating: 4.9,
@@ -59,12 +63,12 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Autonomous systems',
   'Cognitive computing',
   'Energy-efficient AI'],
-    technology[
+    technology['
   'Neuromorphic chips',
   'Spiking neural networks',
   'Analog computing',
   'Bio-inspired algorithms']},
-  // Synthetic Biology Platform{
+  // Synthetic Biology Platform{'
     id: 'synthetic-biology-platform,
     name:,
   Synthetic Biology Platform',
@@ -85,7 +89,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Custom organism design',
   'Expert consultation';
     ],
-    link: 'https://ziontechgroup.com/services/synthetic-biology-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/synthetic-biology-platform,
     launchDate:;
   '2036-04-05',
     rating: 4.8,
@@ -105,12 +110,12 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Biofuel production',
   'Environmental remediation',
   'Agricultural optimization'],
-    technology[
+    technology['
   'CRISPR',
   'Gene editing',
   'DNA synthesis',
   'Bioinformatics']},
-  // Quantum Internet Protocol Suite{
+  // Quantum Internet Protocol Suite{'
     id: 'quantum-internet-protocol-suite,
     name:,
   Quantum Internet Protocol Suite',
@@ -131,7 +136,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Custom protocol development',
   'Expert consultation';
     ],
-    link: 'https://ziontechgroup.com/services/quantum-internet-protocol-suite,
+    link: 'http,
+    s://ziontechgroup.com/services/quantum-internet-protocol-suite,
     launchDate:;
   '2036-04-10',
     rating: 4.9,
@@ -151,12 +157,12 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Secure communications',
   'Internet infrastructure',
   'Government networks'],
-    technology[
+    technology['
   'Quantum protocols',
   'Network standards',
   'Security frameworks',
   'Interoperability']},
-  // Brain-Computer Interface Platform{
+  // Brain-Computer Interface Platform{'
     id: 'brain-computer-interface-platform,
     name:,
   Brain-Computer Interface Platform',
@@ -177,7 +183,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Custom applications',
   'Expert consultation';
     ],
-    link: 'https://ziontechgroup.com/services/brain-computer-interface-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/brain-computer-interface-platform,
     launchDate:;
   '2036-04-15',
     rating: 4.7,
@@ -197,12 +204,12 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Medical research',
   'Gaming and entertainment',
   'Human augmentation'],
-    technology[
+    technology['
   'EEG',
   'Neural implants',
   'Signal processing',
   'Machine learning']},
-  // Metaverse Development Studio Pro{
+  // Metaverse Development Studio Pro{'
     id: 'metaverse-development-studio-pro,
     name:,
   Metaverse Development Studio Pro',
@@ -223,7 +230,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Custom development',
   'Expert consultation';
     ],
-    link: 'https://ziontechgroup.com/services/metaverse-development-studio-pro,
+    link: 'http,
+    s://ziontechgroup.com/services/metaverse-development-studio-pro,
     launchDate:;
   '2036-04-20',
     rating: 4.6,
@@ -243,12 +251,12 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Digital real estate',
   'Educational experiences',
   'Social platforms'],
-    technology[
+    technology['
   '3D graphics',
   'Virtual reality',
   'Augmented reality',
   'Blockchain']},
-  // Autonomous Vehicle AI Platform{
+  // Autonomous Vehicle AI Platform{'
     id: 'autonomous-vehicle-ai-platform,
     name:,
   Autonomous Vehicle AI Platform',
@@ -269,7 +277,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Custom vehicle integration',
   'Expert consultation';
     ],
-    link: 'https://ziontechgroup.com/services/autonomous-vehicle-ai-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/autonomous-vehicle-ai-platform,
     launchDate:;
   '2036-04-25',
     rating: 4.8,
@@ -289,12 +298,12 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Autonomous trucks',
   'Delivery robots',
   'Public transportation'],
-    technology[
+    technology['
   'Computer vision',
   'Machine learning',
   'Sensor fusion',
   'Control systems']},
-  // Quantum Materials Discovery Platform{
+  // Quantum Materials Discovery Platform{'
     id: 'quantum-materials-discovery-platform,
     name:,
   Quantum Materials Discovery Platform',
@@ -315,7 +324,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Expert consultation',
   'Research collaboration';
     ],
-    link: 'https://ziontechgroup.com/services/quantum-materials-discovery-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/quantum-materials-discovery-platform,
     launchDate:;
   '2036-04-30',
     rating: 4.9,
@@ -335,12 +345,12 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Energy storage',
   'Electronics',
   'Manufacturing'],
-    technology[
+    technology['
   'Quantum computing',
   'Machine learning',
   'Materials science',
   'Simulation']},
-  // AI-Powered Climate Modeling Platform{
+  // AI-Powered Climate Modeling Platform{'
     id: 'ai-climate-modeling-platform,
     name:,
   AI Climate Modeling Platform',
@@ -361,7 +371,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Expert consultation',
   'Research collaboration';
     ],
-    link: 'https://ziontechgroup.com/services/ai-climate-modeling-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/ai-climate-modeling-platform,
     launchDate:;
   '2036-05-05',
     rating: 4.7,
@@ -381,12 +392,12 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Policy planning',
   'Environmental research',
   'Risk assessment'],
-    technology[
+    technology['
   'Machine learning',
   'Climate models',
   'Data analysis',
   'Simulation']},
-  // Quantum Neural Network Platform{
+  // Quantum Neural Network Platform{'
     id: 'quantum-neural-network-platform,
     name:,
   Quantum Neural Network Platform',
@@ -407,7 +418,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Research collaboration',
   'Training and support';
     ],
-    link: 'https://ziontechgroup.com/services/quantum-neural-network-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/quantum-neural-network-platform,
     launchDate:;
   '2036-05-10',
     rating: 4.8,
@@ -427,12 +439,12 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Research applications',
   'Commercial AI',
   'Scientific computing'],
-    technology[
+    technology['
   'Quantum computing',
   'Neural networks',
   'Machine learning',
   'Optimization']},
-  // Space Tourism Platform{
+  // Space Tourism Platform{'
     id: 'space-tourism-platform,
     name:,
   Space Tourism Platform',
@@ -453,7 +465,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Custom development',
   'Expert consultation';
     ],
-    link: 'https://ziontechgroup.com/services/space-tourism-platform,
+    link: 'http,
+    s://ziontechgroup.com/services/space-tourism-platform,
     launchDate:;
   '2036-05-15',
     rating: 4.6,
@@ -475,7 +488,7 @@ integration: [;
   Training programs',
   'Safety management',
   'Customer experience'],
-    technology: [
+    technology: ['
   'Space systems,
   'Safety protocols',
   'Training technology',

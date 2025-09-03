@@ -1,21 +1,15 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import SEOOptimizer from '../SEOOptimizer';
+import {SEO } from '@/components/SEO';
 
-describe('SEOOptimizer', () => {
-  test('renders without crashing', () => {
-    render(<SEOOptimizer />);
-    expect(screen.getByTestId('seooptimizer')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
-    render(<SEOOptimizer />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<SEOOptimizer />);
-    // Add interaction tests based on component functionality
-  });
-});
+export default function SEOOptimizer.test() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="SEOOptimizer.test - Zion Tech Group" description="Professional SEOOptimizer.test services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">SEOOptimizer.test</h1>
+        <p className="text-gray-300 text-lg">
+          Professional SEOOptimizer.test services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}

@@ -1,7 +1,8 @@
 module.exports = {
   apps: [;
     // Main application{
-      name:,
+      nam,
+    e:,
   zion-app',
       script: 'npm,
       args:,
@@ -13,11 +14,13 @@ module.exports = {
       max_memory_restart:,
   1G',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         PORT: 3000},
       env_production: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production',
         PORT: 3000},
       error_file:,
@@ -27,7 +30,8 @@ module.exports = {
   './logs/app-combined.log',
       time: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z,
+  YYYY-MM-DD HH: m,
+    m:ss Z,
       merge_logs: true,
       max_restarts: 10,
       min_uptime:;
@@ -54,7 +58,8 @@ module.exports = {
       max_memory_restart:,
   500M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production      },
       error_file:,
   ./logs/error-monitor-error.log',
@@ -63,7 +68,8 @@ module.exports = {
   './logs/error-monitor-combined.log',
       time: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z,
+  YYYY-MM-DD HH: m,
+    m:ss Z,
       merge_logs: true,
       max_restarts: 5,
       min_uptime:;
@@ -71,7 +77,7 @@ module.exports = {
       restart_delay: 2000,
       cron_restart:,
   */5 * * * *'    },
-    {
+    {'
       name: 'syntax-fixer,
       script:;
   './scripts/syntax-fixer.cjs',
@@ -81,7 +87,8 @@ module.exports = {
       max_memory_restart:,
   500M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production      },
       error_file:,
   ./logs/syntax-fixer-error.log',
@@ -90,7 +97,8 @@ module.exports = {
   './logs/syntax-fixer-combined.log',
       time: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z,
+  YYYY-MM-DD HH: m,
+    m:ss Z,
       merge_logs: true,
       max_restarts: 3,
       min_uptime:;
@@ -98,7 +106,7 @@ module.exports = {
       restart_delay: 2000,
       cron_restart:,
   */10 * * * *'    },
-    {
+    {'
       name: 'build-health-check,
       script:;
   './scripts/build-health-check.cjs',
@@ -108,7 +116,8 @@ module.exports = {
       max_memory_restart:,
   300M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production      },
       error_file:,
   ./logs/build-health-error.log',
@@ -117,7 +126,8 @@ module.exports = {
   './logs/build-health-combined.log',
       time: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z,
+  YYYY-MM-DD HH: m,
+    m:ss Z,
       merge_logs: true,
       max_restarts: 5,
       min_uptime:;
@@ -125,7 +135,7 @@ module.exports = {
       restart_delay: 1000,
       cron_restart:,
   */15 * * * *'    },
-    {
+    {'
       name: 'merge-conflict-resolver,
       script:;
   './scripts/merge-conflict-resolver.cjs',
@@ -135,7 +145,8 @@ module.exports = {
       max_memory_restart:,
   500M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production      },
       error_file:,
   ./logs/merge-resolver-error.log',
@@ -144,7 +155,8 @@ module.exports = {
   './logs/merge-resolver-combined.log',
       time: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z,
+  YYYY-MM-DD HH: m,
+    m:ss Z,
       merge_logs: true,
       max_restarts: 3,
       min_uptime:;
@@ -152,7 +164,7 @@ module.exports = {
       restart_delay: 5000,
       cron_restart:,
   */30 * * * *'    },
-    // Enhanced automation processes{
+    // Enhanced automation processes{'
       name: 'ai-code-analyzer,
       script:;
   './scripts/automation/ai-code-analyzer.cjs',
@@ -162,7 +174,8 @@ module.exports = {
       max_memory_restart:,
   512M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         AI_ANALYSIS_MODE:,
   true'},
@@ -174,18 +187,21 @@ module.exports = {
   './logs/ai-code-analyzer-out.log',
       merge_logs: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z}  ],
+  YYYY-MM-DD HH: m,
+    m:ss Z}  ],
   deploy: {
-    production: {
-      user:,
+    productio,
+    n: {
+      use,
+    r:,
   ubuntu',
       host: 'localhost,
       ref:,
   origin/main',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git,
+      repo: 'http,
+    s://github.com/Zion-Holdings/zion.app.git,
       path:,
-  /workspace',
-  'pre-deploy-local': ',
+  /workspace,pre-deploy-local': ',
 ,
   post-deploy;
   ': 'npm install && npm run build && pm2 reload ecosystem.working.js --env production,

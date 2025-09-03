@@ -11,17 +11,18 @@ export default function ErrorBoundaryFallback({
       resetError();
     }
   };
-  return (
-    <div className="max-w-xl mx-auto p-6 text-white">
+  return ('
+    <div className="max-w-xl mx-auto p-6 text-white">"
       <h2 className="text-2xl font-bold mb-2">Something went wrong</h2>
-      {error && (
+      {error && ("
         <pre className="text-red-300 whitespace-pre-wrap text-sm mb-4">
           {String(error)}
         </pre>
-      )}
+      )}"
       <button onClick={handleRetry} className="px-4 py-2 bg-blue-600 rounded">
         Retry
       </button>
     </div>
-  );
+  )
 }
+"

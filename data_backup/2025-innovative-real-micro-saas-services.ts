@@ -26,22 +26,29 @@ export interface InnovativeMicroSaasService {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
-reviews: number;const contact = {
-  mobile:,
+  ratin,
+    g: number;
+review,
+    s: number;const contact = {
+  mobil,
+    e:,
   +1 302 464 0950',
   email: 'kleber@ziontechgroup.com,
   address:,
   364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com}
+  website: 'http,
+    s://ziontechgroup.com}
 export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] = [{
-    id:,
+    i,
+    d:,
   ai-autonomous-decision-engine',
     name: 'AI Autonomous Decision Engine,
     tagline:,
@@ -68,7 +75,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-purple-600 to-indigo-700,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-decision-engine,
+    link: 'http,
+    s://ziontechgroup.com/ai-autonomous-decision-engine,
     marketPosition:,
   Competes with Palantir Foundry and C3.ai more accessible for mid-market companies.',
     targetAudience: Operations managers, business analysts, C-suite executives',
@@ -125,7 +133,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-blue-600 to-cyan-700,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/quantum-crm-suite,
+    link: 'http,
+    s://ziontechgroup.com/quantum-crm-suite,
     marketPosition:,
   Competes with Salesforce, HubSpot, and Pipedrive adds quantum computing capabilities.',
     targetAudience: Sales teams, marketing professionals, customer success managers',
@@ -165,7 +174,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
   /month',
     description: An enterprise-grade content creation platform that produces engaging, SEO-optimized content across multiple formats while maintaining brand voice and consistency.',
     features[;
-  'Multi-format content generation (blogs, social, emails)',
+  'Multi-format content generation (blogs, social, emails),
   'Brand voice customization and consistency',
   'SEO optimization and keyword research',
   'Plagiarism detection and originality scoring',
@@ -182,7 +191,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-green-600 to-emerald-700,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/ai-content-factory-pro,
+    link: 'http,
+    s://ziontechgroup.com/ai-content-factory-pro,
     marketPosition:,
   Competes with Jasper, Copy.ai, and Writesonic more enterprise-focused with better collaboration.',
     targetAudience: Content marketers, copywriters, digital agencies',
@@ -239,7 +249,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-red-600 to-pink-700,
     textColor:,
   text-red-400',
-    link: 'https://ziontechgroup.com/ai-legal-contract-analyzer,
+    link: 'http,
+    s://ziontechgroup.com/ai-legal-contract-analyzer,
     marketPosition:,
   Competes with DocuSign, ContractPodAi, and Evisort more affordable for mid-market companies.',
     targetAudience: Legal teams, contract managers, business development',
@@ -296,7 +307,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-yellow-600 to-orange-700,
     textColor:,
   text-yellow-400',
-    link: 'https://ziontechgroup.com/ai-financial-intelligence,
+    link: 'http,
+    s://ziontechgroup.com/ai-financial-intelligence,
     marketPosition:,
   Competes with Bloomberg Terminal, FactSet, and Refinitiv more accessible for mid-market companies.',
     targetAudience: CFOs, financial analysts, investment managers',
@@ -336,7 +348,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
   /month',
     description: A cutting-edge healthcare platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnostic suggestions.',
     features[;
-  'Medical image analysis (X-rays, MRIs, CT scans)',
+  'Medical image analysis (X-rays, MRIs, CT scans),
   'Symptom analysis and diagnosis suggestions',
   'Patient data integration and management',
   'Clinical decision support system',
@@ -353,7 +365,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-teal-600 to-cyan-700,
     textColor:,
   text-teal-400',
-    link: 'https://ziontechgroup.com/ai-healthcare-diagnostics,
+    link: 'http,
+    s://ziontechgroup.com/ai-healthcare-diagnostics,
     marketPosition:,
   Competes with IBM Watson Health, Google Health, and Microsoft Healthcare more specialized for diagnostic imaging.',
     targetAudience: Radiologists, pathologists, healthcare providers',
@@ -410,7 +423,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-emerald-600 to-green-700,
     textColor:,
   text-emerald-400',
-    link: 'https://ziontechgroup.com/ai-sustainability-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-sustainability-platform,
     marketPosition:,
   Competes with Sphera, Benchmark ESG, and Sustainalytics more affordable for mid-market companies.',
     targetAudience: Sustainability managers, ESG officers, corporate responsibility teams',
@@ -467,7 +481,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-yellow-600 to-orange-600,
     textColor:,
   text-yellow-400',
-    link: 'https://ziontechgroup.com/quantum-ai-trading-platform,
+    link: 'http,
+    s://ziontechgroup.com/quantum-ai-trading-platform,
     marketPosition:,
   Competes with Alpaca ($0/month), Interactive Brokers ($0/month). Our advantage: Quantum computing provides 1000x faster market analysis.,
     targetAudience:;
@@ -490,7 +505,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     growthRate:,
   28% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -532,7 +548,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-blue-600 to-indigo-600,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/space-technology-ai-platform,
+    link: 'http,
+    s://ziontechgroup.com/space-technology-ai-platform,
     marketPosition:,
   Competes with Maxar ($custom), Planet Labs ($custom). Our advantage: AI automation reduces operational costs by 60%.,
     targetAudience:;
@@ -555,7 +572,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     growthRate:,
   40% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -598,7 +616,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-pink-600 to-purple-600,
     textColor:,
   text-pink-400',
-    link: 'https://ziontechgroup.com/brain-computer-interface-devkit,
+    link: 'http,
+    s://ziontechgroup.com/brain-computer-interface-devkit,
     marketPosition:,
   Competes with OpenBCI ($2,000 one-time), Emotiv ($1,500 one-time). Our advantage: AI-powered signal processing and comprehensive development tools.,
     targetAudience:;
@@ -621,7 +640,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     growthRate:,
   45% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -663,7 +683,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-green-600 to-blue-600,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/autonomous-vehicle-fleet-management,
+    link: 'http,
+    s://ziontechgroup.com/autonomous-vehicle-fleet-management,
     marketPosition:,
   Competes with Samsara ($10/month), Geotab ($15/month). Our advantage: AI-powered autonomous vehicle optimization and safety features.,
     targetAudience:;
@@ -686,7 +707,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     growthRate:,
   20% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -728,7 +750,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-cyan-600 to-blue-600,
     textColor:,
   text-cyan-400',
-    link: 'https://ziontechgroup.com/quantum-internet-security-platform,
+    link: 'http,
+    s://ziontechgroup.com/quantum-internet-security-platform,
     marketPosition:,
   Competes with Cloudflare ($20/month), AWS Shield ($3,000/month). Our advantage: Quantum-resistant encryption and future-proof security.,
     targetAudience:;
@@ -751,7 +774,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     growthRate:,
   30% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -781,7 +805,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
   'Symptom analysis and diagnosis',
   'Patient data integration',
   'Clinical decision support',
-  'Regulatory compliance (FDA, CE)',
+  'Regulatory compliance (FDA, CE),
   'Multi-modality imaging support',
   'Real-time analysis',
   'Performance analytics',
@@ -794,7 +818,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-red-600 to-pink-600,
     textColor:,
   text-red-400',
-    link: 'https://ziontechgroup.com/ai-powered-healthcare-diagnostics,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-healthcare-diagnostics,
     marketPosition:,
   Competes with IBM Watson Health ($custom), Google Health ($custom). Our advantage: Specialized AI models and comprehensive diagnostic tools.,
     targetAudience:;
@@ -817,7 +842,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     growthRate:,
   38% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -860,7 +886,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-emerald-500 to-teal-600,
     textColor:,
   text-emerald-400',
-    link: 'https://ziontechgroup.com/ai-customer-success-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-customer-success-platform,
     marketPosition:,
   Leading AI-powered customer success platform with advanced predictive analytics and automation capabilities.',
     targetAudience: SaaS companies, B2B businesses, Customer success teams, Growth marketers, Product managers',
@@ -901,7 +928,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     growthRate:,
   25% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -944,7 +972,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-blue-500 to-indigo-600,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/intelligent-supply-chain-optimization,
+    link: 'http,
+    s://ziontechgroup.com/intelligent-supply-chain-optimization,
     marketPosition:,
   Leading AI-powered supply chain optimization platform with advanced machine learning algorithms and real-time optimization capabilities.',
     targetAudience: Manufacturing companies, Retail chains, Logistics providers, E-commerce businesses, Distribution centers',
@@ -986,7 +1015,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     growthRate:,
   20% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1029,7 +1059,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-green-500 to-emerald-600,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/ai-financial-planning-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-financial-planning-platform,
     marketPosition:,
   Innovative AI-powered financial planning platform with advanced predictive analytics and automated financial intelligence.',
     targetAudience: Small businesses, Medium enterprises, Financial advisors, CFOs, Business consultants',
@@ -1070,7 +1101,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     growthRate:,
   18% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1113,7 +1145,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-purple-500 to-pink-600,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/intelligent-hr-analytics-platform,
+    link: 'http,
+    s://ziontechgroup.com/intelligent-hr-analytics-platform,
     marketPosition:,
   Leading AI-powered HR analytics platform with advanced people intelligence and predictive workforce analytics.',
     targetAudience: HR departments, People operations teams, CHROs, HR consultants, Recruitment agencies',
@@ -1154,7 +1187,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     growthRate:,
   22% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1197,7 +1231,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-orange-500 to-red-600,
     textColor:,
   text-orange-400',
-    link: 'https://ziontechgroup.com/ai-sales-intelligence-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-sales-intelligence-platform,
     marketPosition:,
   Advanced AI-powered sales intelligence platform with predictive analytics and automated sales optimization capabilities.',
     targetAudience: Sales teams, Sales managers, Revenue operations, Business development, Sales consultants',
@@ -1238,7 +1273,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     growthRate:,
   24% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1281,7 +1317,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-indigo-500 to-purple-600,
     textColor:,
   text-indigo-400',
-    link: 'https://ziontechgroup.com/ai-powered-decision-engine,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-decision-engine,
     marketPosition:,
   Revolutionary AI decision engine with advanced machine learning algorithms and automated decision optimization capabilities.',
     targetAudience: Executives, Business analysts, Operations managers, Strategic planners, Consultants',
@@ -1320,7 +1357,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     growthRate:,
   35% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1363,7 +1401,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-teal-500 to-cyan-600,
     textColor:,
   text-teal-400',
-    link: 'https://ziontechgroup.com/intelligent-content-automation-platform,
+    link: 'http,
+    s://ziontechgroup.com/intelligent-content-automation-platform,
     marketPosition:,
   Innovative AI-powered content automation platform with advanced content generation and optimization capabilities.',
     targetAudience: Marketing teams, Content creators, Social media managers, SEO specialists, Digital marketers',
@@ -1404,7 +1443,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     growthRate:,
   28% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -1447,7 +1487,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     color: 'from-blue-500 to-cyan-600,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/smart-crm-intelligence-suite,
+    link: 'http,
+    s://ziontechgroup.com/smart-crm-intelligence-suite,
     marketPosition:,
   Advanced AI-enhanced CRM platform with intelligent automation and predictive customer analytics.',
     targetAudience: Sales teams, Customer success teams, Marketing teams, Business development, Customer service',
@@ -1488,7 +1529,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     growthRate:,
   26% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',

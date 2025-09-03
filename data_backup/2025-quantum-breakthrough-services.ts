@@ -11,33 +11,37 @@ export const quantumBreakthroughServices2025 = [{
   'Real-time quantum threat detection and response',
   'Multi-node quantum network architecture',
   'Quantum-resistant encryption and VPN tunnels',
-  'Government compliance (FIPS 140-3, NIST standards)',
+  'Government compliance (FIPS 140-3, NIST standards),
   'Quantum network monitoring and analytics',
   'API for enterprise integration and automation',
   '24/7 quantum security operations center';
     ],
     pricing: {
-starter: {
-        price: 12999,
+starte,
+    r: {
+        pric,
+    e: 12999,
         period:,
   month',
-        features: [
+        features: ['
   'Basic quantum security,
   'Up to 1000 secure connections',
   'Standard monitoring',
   'Email support']},
       professional: {
-        price: 24999,
+        pric,
+    e: 24999,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced quantum security,
   'Unlimited connections',
   'Custom protocols',
   'Priority support',
   'API access']},
       enterprise: {
-        price: 49999,
+        pric,
+    e: 49999,
         period:,
   month',
         features: [;
@@ -54,9 +58,11 @@ starter: {
   'Cryptography',
   'Network Security',
   'Government Compliance'],
-    website: 'https://ziontechgroup.com/quantum-internet-security-platform,
+    website: 'http,
+    s://ziontechgroup.com/quantum-internet-security-platform,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -78,13 +84,13 @@ starter: {
   'Financial platforms',
   'Healthcare systems',
   'Energy grids'],
-    compliance[
+    compliance['
   'FIPS 140-3',
   'NIST standards',
   'SOC2',
   'ISO 27001',
   'Government security standards']},
-  {
+  {'
     id: 'quantum-bio-computing-platform,
     name:,
   Quantum Bio-Computing Platform',
@@ -102,27 +108,31 @@ starter: {
   'API access for research institutions';
     ],
     pricing: {
-starter: {
-        price: 8999,
+starte,
+    r: {
+        pric,
+    e: 8999,
         period:,
   month',
-        features: [
+        features: ['
   'Basic bio-computing,
   'Up to 100 simulations/month',
   'Standard models',
   'Email support']},
       professional: {
-        price: 19999,
+        pric,
+    e: 19999,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced bio-computing,
   'Unlimited simulations',
   'Custom models',
   'Priority support',
   'API access']},
       enterprise: {
-        price: 39999,
+        pric,
+    e: 39999,
         period:,
   month',
         features: [;
@@ -139,9 +149,11 @@ starter: {
   'Drug Discovery',
   'Medical Research',
   'Protein Folding'],
-    website: 'https://ziontechgroup.com/quantum-bio-computing-platform,
+    website: 'http,
+    s://ziontechgroup.com/quantum-bio-computing-platform,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -163,13 +175,13 @@ starter: {
   'Laboratory systems',
   'Clinical trial platforms',
   'Genetic databases'],
-    compliance[
+    compliance['
   'HIPAA',
   'FDA regulations',
   'SOC2',
   'ISO 27001',
   'Medical research standards']},
-  {
+  {'
     id: 'brain-computer-interface-platform,
     name:,
   Brain-Computer Interface Platform',
@@ -187,27 +199,31 @@ starter: {
   'API for custom applications';
     ],
     pricing: {
-starter: {
-        price: 15999,
+starte,
+    r: {
+        pric,
+    e: 15999,
         period:,
   month',
-        features: [
+        features: ['
   'Basic neural interface,
   'Up to 10 users',
   'Standard monitoring',
   'Email support']},
       professional: {
-        price: 29999,
+        pric,
+    e: 29999,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced neural interface,
   'Up to 100 users',
   'Custom development',
   'Priority support',
   'API access']},
       enterprise: {
-        price: 59999,
+        pric,
+    e: 59999,
         period:,
   month',
         features: [;
@@ -224,9 +240,11 @@ starter: {
   'AI',
   'Medical Technology',
   'Human-AI Collaboration'],
-    website: 'https://ziontechgroup.com/brain-computer-interface-platform,
+    website: 'http,
+    s://ziontechgroup.com/brain-computer-interface-platform,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -248,13 +266,13 @@ starter: {
   'Research tools',
   'Monitoring systems',
   'Safety protocols'],
-    compliance[
+    compliance['
   'FDA regulations',
   'Medical device standards',
   'SOC2',
   'ISO 27001',
   'Research ethics standards']},
-  {
+  {'
     id: 'space-mining-platform,
     name:,
   Space Mining Platform',
@@ -272,27 +290,31 @@ starter: {
   'API for space operations';
     ],
     pricing: {
-starter: {
-        price: 19999,
+starte,
+    r: {
+        pric,
+    e: 19999,
         period:,
   month',
-        features: [
+        features: ['
   'Basic space mining,
   'Up to 5 mining missions',
   'Standard monitoring',
   'Email support']},
       professional: {
-        price: 39999,
+        pric,
+    e: 39999,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced space mining,
   'Unlimited missions',
   'Custom planning',
   'Priority support',
   'API access']},
       enterprise: {
-        price: 79999,
+        pric,
+    e: 79999,
         period:,
   month',
         features: [;
@@ -309,9 +331,11 @@ starter: {
   'AI',
   'Robotics',
   'Resource Extraction'],
-    website: 'https://ziontechgroup.com/space-mining-platform,
+    website: 'http,
+    s://ziontechgroup.com/space-mining-platform,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -333,13 +357,13 @@ starter: {
   'Ground control systems',
   'AI platforms',
   'Robotic systems'],
-    compliance[
+    compliance['
   'Space regulations',
   'International space law',
   'SOC2',
   'ISO 27001',
   'Space safety standards']},
-  {
+  {'
     id: 'quantum-energy-platform,
     name:,
   Quantum Energy Platform',
@@ -357,27 +381,31 @@ starter: {
   'API for energy management systems';
     ],
     pricing: {
-starter: {
-        price: 7999,
+starte,
+    r: {
+        pric,
+    e: 7999,
         period:,
   month',
-        features: [
+        features: ['
   'Basic energy optimization,
   'Up to 1000 connections',
   'Standard monitoring',
   'Email support']},
       professional: {
-        price: 15999,
+        pric,
+    e: 15999,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced energy optimization,
   'Unlimited connections',
   'Custom models',
   'Priority support',
   'API access']},
       enterprise: {
-        price: 29999,
+        pric,
+    e: 29999,
         period:,
   month',
         features: [;
@@ -394,9 +422,11 @@ starter: {
   'Smart Grid',
   'Renewable Energy',
   'Optimization'],
-    website: 'https://ziontechgroup.com/quantum-energy-platform,
+    website: 'http,
+    s://ziontechgroup.com/quantum-energy-platform,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -419,7 +449,7 @@ integrations: [;
   'Renewable energy systems',
   'Utility platforms',
   'Monitoring systems'],
-    compliance: [
+    compliance: ['
   'Energy regulations,
   'Grid standards',
   'SOC2',

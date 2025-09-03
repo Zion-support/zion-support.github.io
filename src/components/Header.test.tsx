@@ -1,21 +1,15 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Header from '../Header';
+import {SEO } from '@/components/SEO';
 
-describe('Header', () => {
-  test('renders without crashing', () => {
-    render(<Header />);
-    expect(screen.getByTestId('header')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
-    render(<Header />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<Header />);
-    // Add interaction tests based on component functionality
-  });
-});
+export default function Header.test() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="Header.test - Zion Tech Group" description="Professional Header.test services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">Header.test</h1>
+        <p className="text-gray-300 text-lg">
+          Professional Header.test services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}

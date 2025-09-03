@@ -1,22 +1,31 @@
-import { render, screen, waitFor } from,
-  @testing-library/react';
-import { describe, it, expect, vi } from 'vitest';
-import React from 'react';
-
-// Mock component for testing;
+import { render, screen, waitFor } from
+  @testing-library/react'
+import { describe, it, expect, vi } from 'vitest'
+import React from 'react'
+// Mock component for testing
 const YourApiComponent = () => {
-  return React.createElement(
+  return React.createElement('
   'div', null'test data')}
-describe(
+describe('
   'API Integration', () => {
-  it(
+  it('
   'should fetch and display data', async () => {
-    // Mock API response;
-    global.fetch = vi.fn(() =>;
+    // Mock API response
+    global.fetch = vi.fn(() =>
       Promise.resolve({
-        json: () => Promise.resolve({ data:;
+<<<<<<< HEAD
+        json: () => Promise.resolve({ dat,
+    a:;
   'test data })}));
     render(React.createElement(YourApiComponent));
     await waitFor(() => {
+      expect(screen.getByText('
+  'test data')).toBeInTheDocument()})})})
+=======
+        json: () => Promise.resolve({ data:
+  'test data })}))
+    render(React.createElement(YourApiComponent))
+    await waitFor(() => {
       expect(screen.getByText(
   'test data')).toBeInTheDocument()})})})
+>>>>>>> main

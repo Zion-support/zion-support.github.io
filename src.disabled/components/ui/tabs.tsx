@@ -1,18 +1,26 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react.ts';
 interface TabsContextType {
   activeTab: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
-   setActiveTab: anyanyanyanyanyanyanyanyanyanyanyanyanyany(tab: string) => void}
+   setActiveTa,
+    b: anyanyanyanyanyanyanyanyanyanyanyanyanyany(ta,
+    b: string) => void}
 const TabsContext = createContext<TabsContextType | null>(null)
 interface TabsProps extends React.PropsWithChildren<{}> {
   children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReactNode;
   defaultValue?: string;
   value?: string;
-  onValueChange?: (value: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => void;
+  onValueChange?: (valu,
+    e: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => void;
   className?: string}
+<<<<<<< HEAD
 export function Tabs(...args: any[]): any {
+  const [activeTab, setActiveTab] = useState(value || defaultValue || '')
+=======
+export function Tabs(...args: any[]): any {'
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
+>>>>>>> main
   const handleTabChange = (tab: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
-    setActiveTab(tab)
+    setActiveTab(tab);
     if (onValueChange) {
       onValueChange(tab)}
   }
@@ -28,20 +36,32 @@ export function Tabs(...args: any[]): any {
   children: ReactNode;
   className?: string}
 }
-  children: ReactNode;
+<<<<<<< HEAD
+  children: ReactNode
   value: string
+=======
+  children: ReactNode;
+  valu,
+    e: string
+>>>>>>> main
   className?: string}
       } ${className}`}
       onClick={() => context.setActiveTab(value)}
     >{children}
     </button>
   )}
-  children: ReactNode;
+<<<<<<< HEAD
+  children: ReactNode
   value: string
+=======
+  children: ReactNode;
+  valu,
+    e: string
+>>>>>>> main
   className?: string}
     return null}
-  return (
+  return (`
     <div className = {`mt-4 ${className}`}>
       {children}
     </div>
-  )}
+  )}`

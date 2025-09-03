@@ -11,7 +11,7 @@ export const PASSWORD_STRENGTH = {
 /**;
  * Password strength colors;
  */;
-export const PASSWORD_COLORS = {
+export const PASSWORD_COLORS = {'
   [PASSWORD_STRENGTH.VERY_WEAK]: 'bg-red-500',
   [PASSWORD_STRENGTH.WEAK]: 'bg-orange-500',
   [PASSWORD_STRENGTH.MEDIUM]: 'bg-yellow-500',
@@ -20,7 +20,7 @@ export const PASSWORD_COLORS = {
 /**;
  * Password strength labels;
  */;
-export const PASSWORD_LABELS = {
+export const PASSWORD_LABELS = {'
   [PASSWORD_STRENGTH.VERY_WEAK]: 'Very Weak',
   [PASSWORD_STRENGTH.WEAK]: 'Weak',
   [PASSWORD_STRENGTH.MEDIUM]: 'Medium',
@@ -52,8 +52,8 @@ export const hasNumbers = (password) => {
  * @param {string} password - Password to check;
  * @returns {boolean} True if contains special characters;
  */;
-export const hasSpecialChars = (password) => {
-  return /[!@#$%^&*()_+\-=[\]{}';:"\\|,.<>/?]/.test(password)}
+export const hasSpecialChars = (password) => {'
+  return /[!@#$%^&*()_+\-=[\]{};:"\\|,.<>/?]/.test(password)}
 /**;
  * Check password length;
  * @param {string} password - Password to check;
@@ -84,7 +84,7 @@ export const calculatePasswordScore = (password) => {
   const uniqueChars = new Set(password).size;
   if (uniqueChars > 8) score += 10;
   if (uniqueChars > 12) score += 10;
-  return Math.min(100, Math.round(score))}
+  return Math.min(100, Math.round(score));
 /**;
  * Get password strength level;
  * @param {string} password - Password to check;
@@ -104,20 +104,20 @@ export const getPasswordStrength = (password) => {
  */;
 export const getPasswordFeedback = (password) => {
   const feedback = [];
-  if (!password) {
+  if (!password) {"
     feedback.push('Enter a password');
     return feedback}
-  if (password.length < 8) {
+  if (password.length < 8) {'
     feedback.push('Password should be at least 8 characters long')}
-  if (!hasLowercase(password)) {
+  if (!hasLowercase(password)) {'
     feedback.push('Include lowercase letters')}
-  if (!hasUppercase(password)) {
+  if (!hasUppercase(password)) {'
     feedback.push('Include uppercase letters')}
-  if (!hasNumbers(password)) {
+  if (!hasNumbers(password)) {'
     feedback.push('Include numbers')}
-  if (!hasSpecialChars(password)) {
+  if (!hasSpecialChars(password)) {'
     feedback.push('Include special characters')}
-  if (feedback.length === 0) {
+  if (feedback.length === 0) {'
     feedback.push('Password is strong!')}
   return feedback}
 /**;

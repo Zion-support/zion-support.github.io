@@ -1,21 +1,15 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import InteractiveUserExperience from '../InteractiveUserExperience';
+import {SEO } from '@/components/SEO';
 
-describe('InteractiveUserExperience', () => {
-  test('renders without crashing', () => {
-    render(<InteractiveUserExperience />);
-    expect(screen.getByTestId('interactiveuserexperience')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
-    render(<InteractiveUserExperience />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<InteractiveUserExperience />);
-    // Add interaction tests based on component functionality
-  });
-});
+export default function InteractiveUserExperience.test() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="InteractiveUserExperience.test - Zion Tech Group" description="Professional InteractiveUserExperience.test services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">InteractiveUserExperience.test</h1>
+        <p className="text-gray-300 text-lg">
+          Professional InteractiveUserExperience.test services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}

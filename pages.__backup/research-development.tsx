@@ -8,4 +8,9 @@ const Component = () => {
       <p>This page is under construction.</p>
     </div>
   )}
+<<<<<<< HEAD
+
 export default Component
+=======
+export default Component'
+>>>>>>> main

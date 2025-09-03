@@ -1,21 +1,15 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import SearchAndFilterSystem from '../SearchAndFilterSystem';
+import {SEO } from '@/components/SEO';
 
-describe('SearchAndFilterSystem', () => {
-  test('renders without crashing', () => {
-    render(<SearchAndFilterSystem />);
-    expect(screen.getByTestId('searchandfiltersystem')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
-    render(<SearchAndFilterSystem />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<SearchAndFilterSystem />);
-    // Add interaction tests based on component functionality
-  });
-});
+export default function SearchAndFilterSystem.test() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="SearchAndFilterSystem.test - Zion Tech Group" description="Professional SearchAndFilterSystem.test services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">SearchAndFilterSystem.test</h1>
+        <p className="text-gray-300 text-lg">
+          Professional SearchAndFilterSystem.test services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}

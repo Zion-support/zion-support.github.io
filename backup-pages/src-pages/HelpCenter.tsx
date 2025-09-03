@@ -1,17 +1,21 @@
 
 interface FAQItem {
   question: string;
-   answer: string;
-   category: string}
+   answe,
+    r: string;
+   categor,
+    y: string}
 const helpSections: HelpSection[] = [
   {
-    title:;
+    titl,
+    e:;
   'Getting Started',
     icon: Zap,
     description:,
   Essential information to begin using our services',
     articles: [{
-        title:;
+        titl,
+    e:;
   'Welcome to Zion Tech Group,
         description:,
   Introduction to our platform and services',
@@ -28,7 +32,7 @@ const helpSections: HelpSection[] = [
         difficulty: 'Beginner,
         readTime:,
   10 min'},
-      {
+      {'
         title: 'First Steps with AI Services,
         description:,
   Quick start guide for AI-powered solutions',
@@ -46,7 +50,7 @@ const helpSections: HelpSection[] = [
         readTime:,
   8 min'}
     ]},
-  {
+  {'
     id: 'ai-services,
     title:;
   'AI Services',
@@ -55,7 +59,8 @@ const helpSections: HelpSection[] = [
   Artificial Intelligence and Machine Learning solutions',
     articles: [
       {
-        title:;
+        titl,
+    e:;
   'AI Business Intelligence Guide,
         description:,
   How to leverage AI for business insights',
@@ -72,7 +77,7 @@ const helpSections: HelpSection[] = [
         difficulty: 'Intermediate,
         readTime:,
   25 min'},
-      {
+      {'
         title: 'AI Sales Copilot Integration,
         description:,
   Integrating AI sales optimization tools',
@@ -90,7 +95,7 @@ const helpSections: HelpSection[] = [
         readTime:,
   12 min'}
     ]},
-  {
+  {'
     id: 'cloud-infrastructure,
     title:;
   'Cloud & Infrastructure',
@@ -99,7 +104,8 @@ const helpSections: HelpSection[] = [
   Cloud computing and infrastructure services',
     articles: [
       {
-        title:;
+        titl,
+    e:;
   'Cloud DevOps Best Practices,
         description:,
   DevOps implementation in cloud environments',
@@ -116,7 +122,7 @@ const helpSections: HelpSection[] = [
         difficulty: 'Advanced,
         readTime:,
   35 min'},
-      {
+      {'
         title: 'FinOps Cost Optimization,
         description:,
   Managing and optimizing cloud costs',
@@ -134,7 +140,7 @@ const helpSections: HelpSection[] = [
         readTime:,
   40 min'}
     ]},
-  {
+  {'
     id: 'cybersecurity,
     title:;
   'Cybersecurity',
@@ -143,7 +149,8 @@ const helpSections: HelpSection[] = [
   Security and compliance solutions',
     articles: [
       {
-        title:;
+        titl,
+    e:;
   'AI Cybersecurity Platform,
         description:,
   AI-powered security threat detection',
@@ -160,7 +167,7 @@ const helpSections: HelpSection[] = [
         difficulty: 'Intermediate,
         readTime:,
   20 min'},
-      {
+      {'
         title: 'Zero Trust Network Architecture,
         description:,
   Implementing modern security frameworks',
@@ -178,7 +185,7 @@ const helpSections: HelpSection[] = [
         readTime:,
   25 min'}
     ]},
-  {
+  {'
     id: 'micro-saas,
     title:;
   'Micro SaaS Solutions',
@@ -187,7 +194,8 @@ const helpSections: HelpSection[] = [
   Niche software solutions and platforms',
     articles: [
       {
-        title:;
+        titl,
+    e:;
   'Micro SaaS Platform Overview,
         description:,
   Understanding our micro SaaS ecosystem',
@@ -204,7 +212,7 @@ const helpSections: HelpSection[] = [
         difficulty: 'Intermediate,
         readTime:,
   20 min'},
-      {
+      {'
         title: 'Helpdesk Platform Setup,
         description:,
   Customer support system configuration',
@@ -222,7 +230,7 @@ const helpSections: HelpSection[] = [
         readTime:,
   12 min'}
     ]},
-  {
+  {'
     id: 'emerging-tech,
     title:;
   'Emerging Technologies',
@@ -231,7 +239,8 @@ const helpSections: HelpSection[] = [
   Cutting-edge and future technologies',
     articles: [
       {
-        title:;
+        titl,
+    e:;
   'Quantum Computing Primer,
         description:,
   Introduction to quantum computing concepts',
@@ -248,7 +257,7 @@ const helpSections: HelpSection[] = [
         difficulty: 'Intermediate,
         readTime:,
   25 min'},
-      {
+      {'
         title: 'AI Quantum Hybrid Platform,
         description:,
   Combining AI and quantum computing',
@@ -269,7 +278,8 @@ const helpSections: HelpSection[] = [
 ];
 const faqData: FAQItem[] = [
   {
-    question:;
+    questio,
+    n:;
   'What services does Zion Tech Group offer?,
     answer:,
   We offer a comprehensive range of technology services including AI and machine learning solutions, cloud infrastructure, cybersecurity, emerging technologies like quantum computing, and micro SaaS platforms. Our services are designed to help businesses of all sizes leverage cutting-edge technology.',
@@ -310,21 +320,32 @@ const faqData: FAQItem[] = [
   ,
     category: 'Security}
 ];
-export function HelpCenter() {
+export function HelpCenter() {'
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set([;
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set([
   'getting-started']))
-  const [selectedCategory, setSelectedCategory] = useState<string>(
+  const [selectedCategory, setSelectedCategory] = useState<string>('
   'All');
+<<<<<<< HEAD
     if (query.trim() === ';
+  ') {'
+setSearchQuery(query)    if (query.trim() === ';
   ') {
-setSearchQuery(query)'    if (query.trim() === ';
-  ') {
+=======
+    if (query.trim() === ) {
+setSearchQuery(query)'    if (query.trim() === ) {
+>>>>>>> main
       setFilteredFAQs(faqData);
       return;
     setFilteredFAQs (filtered) }
+<<<<<<< HEAD
+
   return()
     <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24'>'      <div className='container-responsive'>
+=======
+  return();
+    <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24>      <div className='container-responsive'>
+>>>>>>> main
         {/* Header */}
         <motion.div';
           className='text-center mb-12';
@@ -332,25 +353,32 @@ setSearchQuery(query)'    if (query.trim() === ';
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
 ';
-          <h1 className='text-4xl font-bold text-white mb-4'>Help Center</h1>'
+          <h1 className='text-4xl font-bold text-white mb-4'>Help Center</h1>''
           <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>
             Find answers to your questions, learn how to use our services, and get the support you need to succeed with Zion Tech Group.
           </p>
         </motion.div>
         {/* Search Bar */}
-        <motion.div'
+        <motion.div''
           className='max-w-2xl mx-auto mb-12';
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
 ';
-          <div className='relative'>
+          <div className='relative>
             <input';
               type='text';
               placeholder='Search for help articles, FAQs, or guides...';
               value={searchQuery}
-              onChange={(e) => handleSearch(e.target.value)}';
+<<<<<<< HEAD
+              onChange={(e) => handleSearch(e.target.value)}'
               className='w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl px-6 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 text-lg'/>'
+=======
+              onChange={(e) => handleSearch(e.target.value)};
+              className='w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl px-6 py-4 text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focu,
+    s:ring-zion-cyan focu,
+    s:border-transparent transition-all duration-300 text-lg'/>'
+>>>>>>> main
             <Search className='absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-6 w-6'  />          </div>
         </motion.div>
         {/* Help Categories */}
@@ -360,8 +388,9 @@ setSearchQuery(query)'    if (query.trim() === ';
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
 ';
-          <h2 className='text-2xl font-bold text-white mb-8 text-center'>Browse Help Topics</h2>'
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+          <h2 className='text-2xl font-bold text-white mb-8 text-center'>Browse Help Topics</h2>''
+          <div className='grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-3 gap-6'>
             {helpCategories.map((category, index) => (
               <motion.div;
                 key={category.id}
@@ -369,15 +398,16 @@ setSearchQuery(query)'    if (query.trim() === ';
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                 <Link;
-                  to={category.path}';
-                  className='block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 group';
-                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>'
+                  to={category.path};
+                  className='block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hove,
+    r:border-zion-cyan/40 transition-all duration-300 group';
+                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>''
                     <category.icon className='h-8 w-8 text-white' />
-                  </div>'
-                  <h3 className='text-white font-semibold text-lg mb-2 text-center'>{category.title}</h3>'
-                  <p className='text-zion-slate-light text-sm mb-4 text-center'>{category.description}</p>'
-                  <div className='flex items-center justify-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors'>'
-                    <span className='text-sm font-medium'>{category.articleCount} articles</span>'
+                  </div>''
+                  <h3 className='text-white font-semibold text-lg mb-2 text-center'>{category.title}</h3>''
+                  <p className='text-zion-slate-light text-sm mb-4 text-center'>{category.description}</p>''
+                  <div className='flex items-center justify-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors>'
+                    <span className='text-sm font-medium'>{category.articleCount} articles</span>''
                     <ArrowRight className='h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300'  />                  </div>
                 </Link>
               </motion.div>) ) }
@@ -390,8 +420,9 @@ setSearchQuery(query)'    if (query.trim() === ';
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
 ';
-          <h2 className='text-2xl font-bold text-white mb-8 text-center'>Get Support</h2>'
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+          <h2 className='text-2xl font-bold text-white mb-8 text-center'>Get Support</h2>''
+          <div className='grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-4 gap-6'>
             {supportOptions.map((option, index) => (
               <motion.div;
                 key={option.title}
@@ -399,15 +430,17 @@ setSearchQuery(query)'    if (query.trim() === ';
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
                 <Link;
-                  to={option.path}';
-                  className='block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 text-center group';
-`;
-                  <div className={`w-16 h-16 bg-gradient-to-br ${option.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>'
+                  to={option.path};
+                  className='block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hove,
+    r:border-zion-cyan/40 transition-all duration-300 text-center group';
+`;`
+                  <div className={`w-16 h-16 bg-gradient-to-br ${option.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>''
                     <option.icon className='h-8 w-8 text-white' />
-                  </div>'
-                  <h3 className='text-white font-semibold text-lg mb-2'>{option.title}</h3>'
-                  <p className='text-zion-slate-light text-sm mb-4'>{option.description}</p>'
-                  <div className='inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg text-sm font-medium group-hover:from-zion-cyan-dark group-hover:to-zion-purple-dark transition-all duration-300'>
+                  </div>''
+                  <h3 className='text-white font-semibold text-lg mb-2'>{option.title}</h3>''
+                  <p className='text-zion-slate-light text-sm mb-4'>{option.description}</p>''
+                  <div className='inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg text-sm font-medium group-hover:from-zion-cyan-dark group-hove,
+    r:to-zion-purple-dark transition-all duration-300'>
                     {option.action}
                   </div>
                 </Link>
@@ -421,70 +454,86 @@ setSearchQuery(query)'    if (query.trim() === ';
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
 ';
-          <div className='max-w-4xl mx-auto'>'
-            <h2 className='text-2xl font-bold text-white mb-8 text-center'>Frequently Asked Questions</h2>
-            {/* Category Filter */}'
+          <div className='max-w-4xl mx-auto>'
+            <h2 className='text-2xl font-bold text-white mb-8 text-center'>Frequently Asked Questions</h2>'
+            {/* Category Filter */}
             <div className='flex flex-wrap justify-center gap-3 mb-8'>
               <button,
-  onClick={() => setSelectedCategory(
-  'all')}`;
+  onClick={() => setSelectedCategory('
+  'all')}`;`
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  selectedCategory ===;
+                  selectedCategory ===;`
   'all'';
-                    ?;
+                    ?
   'bg-zion-cyan text-white'': 'bg-white/10 text-zion-slate-light hover:bg-white/20`}`}
                 All Categories
               </button>
               {helpCategories.map(category => (
                 <button;
+<<<<<<< HEAD
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}`;
+                  onClick={() => setSelectedCategory(category.id)}`
+=======
+                  key={category.id}`
+                  onClick={() => setSelectedCategory(category.id)}`;`
+>>>>>>> main
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category.id,
-  ? 'bg-zion-cyan text-white'
+                    selectedCategory === category.id,`
+  ? 'bg-zion-cyan text-white''
   ': 'bg-white/10 text-zion-slate-light hover:bg-white/20`}`}
                   {category.title}
                 </button>) ) }
             </div>
           </motion.div>
         </div>
-      </div>
-      {/* Main Content */}'
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>'
-        <div className='grid lg:grid-cols-3 gap-8'>
-          {/* Help Sections */}'
+      </div>`
+      {/* Main Content */}
+      <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8 py-12>'
+        <div className='grid l,
+    g:grid-cols-3 gap-8>
+          {/* Help Sections */}
           <div className='lg:col-span-2'>
             <motion.div;
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacit,
+    y: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-            >'
-              <h2 className='text-2xl font-bold text-white mb-6'>Help Articles & Tutorials</h2>
-              '
+            >''
+              <h2 className='text-2xl font-bold text-white mb-6'>Help Articles & Tutorials</h2>'
+              ''
               <div className='space-y-6'>
                 {helpSections.map((section, index) => (
                   <motion.div
                     key={section.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}';
+                    transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }};
                     className='bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl overflow-hidden'>
                     <button;
-                      onClick={() => toggleSection(section.id)}';
+<<<<<<< HEAD
+                      onClick={() => toggleSection(section.id)}'
                       className='w-full p-6 text-left hover:bg-zion-slate-dark/70 transition-colors'>'
                       <div className='flex items-center justify-between'>'
                         <div className='flex items-center space-x-4'>'
                           <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg'>'
+=======
+                      onClick={() => toggleSection(section.id)};
+                      className='w-full p-6 text-left hover:bg-zion-slate-dark/70 transition-colors>'
+                      <div className='flex items-center justify-between>'
+                        <div className='flex items-center space-x-4>'
+                          <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg>'
+>>>>>>> main
                             <section.icon className='w-6 h-6 text-white' />
-                          </div>
-                          <div>'
-                            <h3 className='text-xl font-semibold text-white'>{section.title}</h3>'
+                          </div>'
+                          <div>''
+                            <h3 className='text-xl font-semibold text-white'>{section.title}</h3>''
                             <p className='text-cyan-300'>{section.description}</p>
                           </div>
-                        </div>
-                        {expandedSections.has(section.id) ? ('
+                        </div>'
+                        {expandedSections.has(section.id) ? (''
                           <ChevronDown className='w-5 h-5 text-cyan-400'  />
-                        ) : ('
+                        ) : (''
                           <ChevronRight className='w-5 h-5 text-cyan-400'  />                        )}
                       </div>
                     </button>
@@ -495,62 +544,76 @@ setSearchQuery(query)'    if (query.trim() === ';
                           animate={{ opacity: 1, height: 'auto;
   ' }}
                           exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.3 }}';
-                          className='border-t border-cyan-400/20'>'
+                          transition={{ duration: 0.3 }};
+                          className='border-t border-cyan-400/20>'
                           <div className='p-6 space-y-4'>
                             {section.articles.map((article, articleIndex) => (
                               <motion.div
                                 key={article.title}
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.3, delay: articleIndex * 0.1 }}';
+                                transition={{ duration: 0.3, delay: articleIndex * 0.1 }};
                                 className='group'>{article.path ? (
                                   <Link;
-                                    to={article.path}';
-                                    className='block p-4 bg-zion-slate-dark/30 hover:bg-zion-slate-dark/50 border border-cyan-400/10 hover:border-cyan-400/30 rounded-lg transition-all duration-300'>'
-                                    <div className='flex items-start justify-between'>'
-                                      <div className='flex-1'>'
-                                        <h4 className='font-semibold text-white group-hover:text-cyan-300 transition-colors'>
+                                    to={article.path};
+                                    className='block p-4 bg-zion-slate-dark/30 hover: bg-zion-slate-dark/50 border border-cyan-400/10 hove,
+    r:border-cyan-400/30 rounded-lg transition-all duration-300>'
+                                    <div className='flex items-start justify-between>'
+                                      <div className='flex-1>'
+                                        <h4 className='font-semibold text-white group-hove,
+    r:text-cyan-300 transition-colors'>
                                           {article.title}
-                                        </h4>'
-                                        <p className='text-gray-400 mt-1'>{article.description}</p>'
-                                        <div className='flex items-center space-x-4 mt-3'>`
+                                        </h4>''
+                                        <p className='text-gray-400 mt-1'>{article.description}</p>''
+                                        <div className='flex items-center space-x-4 mt-3'>``
                                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                                             article.difficulty ===,
-  Beginner;
+  Beginner;`
   ' ? 'bg-green-500/20 text-green-400;
   ': ';
                                             article.difficulty ===;
   'Intermediate' ?;
   'bg-yellow-500/20 text-yellow-400' :;
+<<<<<<< HEAD
   ';
-                                            'bg-red-500/20 text-red-400`}`}>{article.difficulty}
+                                            'bg-red-500/20 text-red-400`}`}>{article.difficulty}`
+                                          </span>''
+                                          <span className='text-gray-500 text-sm flex items-center>'
+=======
+  bg-red-500/20 text-red-400`}`}>{article.difficulty}
                                           </span>'
                                           <span className='text-gray-500 text-sm flex items-center'>'
+>>>>>>> main
                                             <Clock className='w-4 h-4 mr-1'  />
                                             {article.readTime}
                                           </span>
-                                        </div>
-                                      </div>'
+                                        </div>'
+                                      </div>''
                                       <ChevronRight className='w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform'  />                                    </div>
-                                  </Link>
-                                ) : ('
-                                  <div className='p-4 bg-zion-slate-dark/30 border border-cyan-400/10 rounded-lg'>'
-                                    <h4 className='font-semibold text-white'>{article.title}</h4>'
-                                    <p className='text-gray-400 mt-1'>{article.description}</p>'
-                                    <div className='flex items-center space-x-4 mt-3'>`
+                                  </Link>'
+                                ) : (''
+                                  <div className='p-4 bg-zion-slate-dark/30 border border-cyan-400/10 rounded-lg>'
+                                    <h4 className='font-semibold text-white'>{article.title}</h4>''
+                                    <p className='text-gray-400 mt-1'>{article.description}</p>''
+                                    <div className='flex items-center space-x-4 mt-3'>``
                                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                                         article.difficulty ===,
-  Beginner;
+  Beginner;`
   ' ? 'bg-green-500/20 text-green-400;
   ': ';
                                         article.difficulty ===;
   'Intermediate' ?;
   'bg-yellow-500/20 text-yellow-400' :;
+<<<<<<< HEAD
   ';
-                                        'bg-red-500/20 text-red-400`}`}>{article.difficulty}
+                                        'bg-red-500/20 text-red-400`}`}>{article.difficulty}`
+                                      </span>''
+                                      <span className='text-gray-500 text-sm flex items-center>'
+=======
+  bg-red-500/20 text-red-400`}`}>{article.difficulty}
                                       </span>'
                                       <span className='text-gray-500 text-sm flex items-center'>'
+>>>>>>> main
                                         <Clock className='w-4 h-4 mr-1'  />                                        {article.readTime}
                                       </span>
                                     </div>
@@ -568,24 +631,24 @@ setSearchQuery(query)'    if (query.trim() === ';
           className='text-center';
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}';
-          className='mt-16'>'
-          <h2 className='text-2xl font-bold text-white mb-6'>Frequently Asked Questions</h2>
-          '
+          transition={{ duration: 0.6, delay: 0.7 }};
+          className='mt-16>'
+          <h2 className='text-2xl font-bold text-white mb-6'>Frequently Asked Questions</h2>'
+          ''
           <div className='grid gap-4'>
             {filteredFAQ.map((faq, index) => (
               <motion.div;
                 key={faq.question}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}';
-                className='bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6'>'
-                <div className='flex items-start space-x-4'>'
-                  <div className='p-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg'>'
+                transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }};
+                className='bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6>'
+                <div className='flex items-start space-x-4>'
+                  <div className='p-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg>'
                     <HelpCircle className='w-5 h-5 text-cyan-400'  />
-                  </div>'
-                  <div className='flex-1'>'
-                    <h3 className='text-lg font-semibold text-white mb-2'>{faq.question}</h3>'
+                  </div>''
+                  <div className='flex-1>'
+                    <h3 className='text-lg font-semibold text-white mb-2'>{faq.question}</h3>''
                     <p className='text-gray-300'>{faq.answer}</p>'                    <span className='inline-block mt-3 px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full'>
                       {faq.category}
                     </span>
@@ -596,4 +659,4 @@ setSearchQuery(query)'    if (query.trim() === ';
         </motion.div>
       </div>
     </div>) }
-export default HelpCenter'"`
+export default HelpCenter'"``

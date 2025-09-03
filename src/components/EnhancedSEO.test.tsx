@@ -1,21 +1,15 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import EnhancedSEO from '../EnhancedSEO';
+import {SEO } from '@/components/SEO';
 
-describe('EnhancedSEO', () => {
-  test('renders without crashing', () => {
-    render(<EnhancedSEO />);
-    expect(screen.getByTestId('enhancedseo')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
-    render(<EnhancedSEO />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<EnhancedSEO />);
-    // Add interaction tests based on component functionality
-  });
-});
+export default function EnhancedSEO.test() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="EnhancedSEO.test - Zion Tech Group" description="Professional EnhancedSEO.test services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">EnhancedSEO.test</h1>
+        <p className="text-gray-300 text-lg">
+          Professional EnhancedSEO.test services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}

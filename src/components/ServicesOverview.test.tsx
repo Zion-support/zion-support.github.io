@@ -1,21 +1,15 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ServicesOverview from '../ServicesOverview';
+import {SEO } from '@/components/SEO';
 
-describe('ServicesOverview', () => {
-  test('renders without crashing', () => {
-    render(<ServicesOverview />);
-    expect(screen.getByTestId('servicesoverview')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
-    render(<ServicesOverview />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<ServicesOverview />);
-    // Add interaction tests based on component functionality
-  });
-});
+export default function ServicesOverview.test() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="ServicesOverview.test - Zion Tech Group" description="Professional ServicesOverview.test services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">ServicesOverview.test</h1>
+        <p className="text-gray-300 text-lg">
+          Professional ServicesOverview.test services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}

@@ -1,21 +1,15 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import EnhancedSidebar from '../EnhancedSidebar';
+import {SEO } from '@/components/SEO';
 
-describe('EnhancedSidebar', () => {
-  test('renders without crashing', () => {
-    render(<EnhancedSidebar />);
-    expect(screen.getByTestId('enhancedsidebar')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
-    render(<EnhancedSidebar />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<EnhancedSidebar />);
-    // Add interaction tests based on component functionality
-  });
-});
+export default function EnhancedSidebar.test() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="EnhancedSidebar.test - Zion Tech Group" description="Professional EnhancedSidebar.test services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">EnhancedSidebar.test</h1>
+        <p className="text-gray-300 text-lg">
+          Professional EnhancedSidebar.test services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}

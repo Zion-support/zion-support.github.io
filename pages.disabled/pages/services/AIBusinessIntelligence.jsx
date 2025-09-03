@@ -20,8 +20,8 @@ import {}
   ';
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx;
 const AIBusinessIntelligence = () => {
-  const features = [{
-      icon: Brain,';
+  const features = [{'
+      icon: Brain,;
       title:,
   AI-Powered Analytics',
   ';
@@ -32,8 +32,8 @@ const AIBusinessIntelligence = () => {
   'Predictive modeling,Anomaly detection;
   ',Pattern recognition',Automated insights;
   ']},
-    {
-      icon: BarChart3,';
+    {'
+      icon: BarChart3,;
       title:,
   Real-time Dashboards',
   ';
@@ -44,8 +44,8 @@ const AIBusinessIntelligence = () => {
   'Live data updates,Customizable views;
   ',Role-based access',Mobile responsive;
   ']},
-    {
-      icon: TrendingUp,';
+    {'
+      icon: TrendingUp,;
       title:,
   Predictive Analytics',
   ';
@@ -56,8 +56,8 @@ const AIBusinessIntelligence = () => {
   'Sales forecasting,Demand planning;
   ',Risk assessment',Trend prediction;
   ']},
-    {
-      icon: Target,';
+    {'
+      icon: Target,;
       title:,
   Performance Tracking',
   ';
@@ -68,7 +68,7 @@ const AIBusinessIntelligence = () => {
   'KPI monitoring,Goal tracking,
   ,Benchmarking',Performance alerts;
   ']}];
-  const solutions = [{
+  const solutions = [{'
 ';
       category: 'Sales & Marketing,
       icon: Users,
@@ -77,17 +77,17 @@ const AIBusinessIntelligence = () => {
   'Customer behavior analysis,Lead scoring and qualification,
   ,Campaign performance optimization',Market trend analysis;
   ',Customer lifetime value prediction']},
-    {
+    {'
   ';
       category: 'Operations & Supply Chain,
-      icon: Activity,';
+      icon: Activity,;
       solutions: [,
   ';
         'Inventory optimization;
   ',Supply chain risk assessment',Operational efficiency analysis;
   ',Quality control monitoring',Resource allocation optimization;
   ']},
-    {
+    {'
 ';
       category: 'Financial Analytics,
       icon: TrendingUp,
@@ -96,10 +96,10 @@ const AIBusinessIntelligence = () => {
   'Revenue forecasting,Cost analysis and optimization,
   ,Profitability analysis',Cash flow prediction;
   ',Investment decision support']},
-    {
+    {'
   ';
       category: 'Human Resources,
-      icon: Users,';
+      icon: Users,;
       solutions: [,
   ';
         'Employee performance analytics;
@@ -107,7 +107,7 @@ const AIBusinessIntelligence = () => {
   ',Employee retention prediction',Training effectiveness analysis;
   ']}];
   const technologies = [
-    {
+    {'
 ';
       name: 'Machine Learning,
 ,
@@ -115,31 +115,32 @@ const AIBusinessIntelligence = () => {
   'Advanced ML algorithms for pattern recognition and prediction,
       icon: Brain},
     {,
-  name: 'Big Data Processing,';
+  name: 'Big Data Processing,;
       description:;
   'Scalable data processing for large datasets',
       icon: Database},
     {,
-  name: 'Real-time Analytics,';
+  name: 'Real-time Analytics,;
       description:;
   'Instant data processing and insights delivery',
       icon: Zap},
     {,
-  name: 'Cloud Infrastructure,';
+  name: 'Cloud Infrastructure,;
       description:;
   'Scalable cloud-based BI platform',
       icon: Globe},
     {,
-  name: 'Data Security,';
+  name: 'Data Security,;
       description:;
   'Enterprise-grade security and compliance',
       icon: Shield},
     {,
-  name: '24/7 Monitoring,'description:;
+  name: '24/7 Monitoring,description:;
   'Continuous monitoring and alerting',      icon: Clock}
   ];
   const containerVariants = {}
-    hidden: { opacity: 0 },
+    hidden: { opacit,
+    y: 0 },
     visible: {}
       opacity: 1,
       transition: {}
@@ -153,85 +154,135 @@ const AIBusinessIntelligence = () => {
       opacity: 1,
       transition: {}
         duration: 0.5}}}
-  return();
+<<<<<<< HEAD
+  return()
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'{/* Hero Section */}''
       <div className='relative overflow-hidden'>''
         <div className='absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]' />'''        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20'>
+=======
+  return();
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx'
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>{/* Hero Section */}'
+      <div className='relative overflow-hidden>''
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size: 50px_50px] />''        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 l,
+    g:px-8 pt-32 pb-20'>
+>>>>>>> main
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx;
+<<<<<<< HEAD
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center''>''
-            <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mb-6'>'';
+            <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mb-6'>''
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
+=======
+            animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center>'
+            <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mb-6>';
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx'
+>>>>>>> main
               <TrendingUp className='w-10 h-10 text-white' />'
-            </div>''
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>''
+            </div>'''
+            <h1 className='text-5xl md: text-6xl font-bold text-white mb-6>''
               <span className='bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent'>
-                AI Business Intelligence
-              </span>'
-            </h1>''
+                AI Business Intelligence'
+              </span>''
+            </h1>'''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Transform your business data into actionable insights with our;
               AI-powered business intelligence platform. Make data-driven;
-              decisions with confidence using advanced analytics and predictive;
+<<<<<<< HEAD
+              decisions with confidence using advanced analytics and predictive
               modeling.'
             </p>''
             <div className='flex flex-wrap justify-center gap-4'>'
               <Link''
+=======
+              decisions with confidence using advanced analytics and predictive;
+              modeling.''
+            </p>'''
+            <div className='flex flex-wrap justify-center gap-4>'
+              <Link'''
+>>>>>>> main
                 to='/contact'';
                 className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300'>
-                Get Started
-              </Link>'
+                Get Started'
+              </Link>''
               <Link'';
                 to='/services-showcase'';
-                className='border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300'>                View All Services
+                className='border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hove,
+    r:bg-blue-400 hove,
+    r:text-white transition-all duration-300'>                View All Services
               </Link>
             </div>
           </motion.div>
         </div>
       </div>
-:pages.disabled/pages/services/AIBusinessIntelligence.jsx;
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx
 '{/* Features Section */}''
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20'>
         <motion.div'variants={containerVariants}''          initial='hidden'';
+=======
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx;
+'{/* Features Section */}'
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
+    g:px-8 pb-20>
+        <motion.div'variants={containerVariants}          initial='hidden'';
+>>>>>>> main
           whileInView='visible'';
-          viewport={{ once: true }}'';
-          className='text-center mb-16''>''
-          <h2 className='text-4xl font-bold text-white mb-6'>Key Features</h2>''
+          viewport={{ once: true }};
+          className='text-center mb-16>'
+          <h2 className='text-4xl font-bold text-white mb-6'>Key Features</h2>'''
           <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
             Our AI Business Intelligence platform combines cutting-edge;
-            technology with intuitive design to deliver powerful insights that;
+            technology with intuitive design to deliver powerful insights that
             drive business growth.
           </p>
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-        </motion.div>';
+        </motion.div>'
 ''
+=======
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx'
+        </motion.div>';
+'''
+>>>>>>> main
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
           {features.map((feature, index) => (
             <motion.div;
-              key={feature.title}'variants={itemVariants}''              className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-blue-500/50 transition-all duration-300''>''
-              <div className='flex items-start mb-4'>''
-                <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0'>''
+              key={feature.title}variants={itemVariants}              className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-blue-500/50 transition-all duration-300>'
+              <div className='flex items-start mb-4>''
+                <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0>''
                   <feature.icon className='w-6 h-6 text-white' />
-:pages.disabled/pages/services/AIBusinessIntelligence.jsx
-                </div>'
-                <div>''
-                  <h3 className='text-xl font-semibold text-white mb-2'>
-                    {feature.title}'</h3>''                  <p className='text-gray-400 text-sm leading-relaxed'>
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx'
+                </div>''
+                <div>'''
+                  <h3 className='text-xl font-semibold text-white mb-2>
+                    {feature.title}</h3>''                  <p className='text-gray-400 text-sm leading-relaxed'>
                     {feature.description}
                   </p>
                 </div>
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-              </div>';
+              </div>'
 ''
               <div className='ml-16'>''
                 <h4 className='text-sm font-medium text-gray-300 mb-3'>
                   Key Benefits:'
                 </h4>''
+=======
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx'
+              </div>';
+'''
+              <div className='ml-16>''
+                <h4 className='text-sm font-medium text-gray-300 mb-3>
+                  Key Benefits:''
+                </h4>'''
+>>>>>>> main
                 <ul className='space-y-2'>
-                  {feature.benefits.map((benefit, idx) => (
-                    <li'key={idx}''                      className='flex items-center text-sm text-gray-400''>''
+                  {feature.benefits.map((benefit, idx) => ('
+                    <li'key={idx}                      className='flex items-center text-sm text-gray-400>'
                       <div className='w-2 h-2 bg-blue-500 rounded-full mr-3'></div>
                       {benefit}
                     </li>
@@ -242,21 +293,23 @@ const AIBusinessIntelligence = () => {
           ))}
         </div>
       </div>
-:pages.disabled/pages/services/AIBusinessIntelligence.jsx
-'{/* Solutions by Industry */}''      <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20'>''
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx'
+'{/* Solutions by Industry */}      <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20>''
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8 py-20'>
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx;
-            viewport={{ once: true }}'transition={{ duration: 0.8 }}''            className='text-center mb-16''>''
+            viewport={{ once: true }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIBusinessIntelligence.jsx
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx'
               Solutions by Industry'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Tailored AI Business Intelligence solutions designed to address;
+              Tailored AI Business Intelligence solutions designed to address
               the unique challenges and opportunities in your industry.
             </p>
-:pages.disabled/pages/services/AIBusinessIntelligence.jsx
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx'
           </motion.div>'''          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {solutions.map((category, index) => (
               <motion.div;
@@ -264,19 +317,32 @@ const AIBusinessIntelligence = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx;
+<<<<<<< HEAD
                 viewport={{ once: true }}'transition={{ duration: 0.5, delay: index * 0.1 }}''                className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6''>''
                 <div className='flex items-center mb-6'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4'>''
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
                     <category.icon className='w-6 h-6 text-white' />'</div>''                  <h3 className='text-xl font-semibold text-white'>
                     {category.category}
                   </h3>
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-                </div>';
+                </div>'
 ''
+=======
+                viewport={{ once: true }}transition={{ duration: 0.5, delay: index * 0.1 }}                className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6>'
+                <div className='flex items-center mb-6>''
+                  <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4>';
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx'
+                    <category.icon className='w-6 h-6 text-white' /></div>''                  <h3 className='text-xl font-semibold text-white'>
+                    {category.category}
+                  </h3>
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx'
+                </div>';
+'''
+>>>>>>> main
                 <ul className='space-y-3'>
-                  {category.solutions.map((solution, idx) => (
-                    <li'key={idx}''                      className='flex items-center text-sm text-gray-400''>''
+                  {category.solutions.map((solution, idx) => ('
+                    <li'key={idx}                      className='flex items-center text-sm text-gray-400>'
                       <div className='w-2 h-2 bg-blue-500 rounded-full mr-3'></div>
                       {solution}
                     </li>
@@ -287,65 +353,91 @@ const AIBusinessIntelligence = () => {
           </div>
         </div>
       </div>
-:pages.disabled/pages/services/AIBusinessIntelligence.jsx
-'{/* Technology Stack */}''      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx'
+'{/* Technology Stack */}      <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8 py-20'>
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacit,
+    y: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx;
-          viewport={{ once: true }}'transition={{ duration: 0.8 }}''          className='text-center mb-16''>''
+          viewport={{ once: true }}transition={{ duration: 0.8 }}          className='text-center mb-16>'
           <h2 className='text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIBusinessIntelligence.jsx
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx'
             Technology Stack'</h2>''          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
             Built on cutting-edge technologies to ensure scalability,
-            performance, and reliability for enterprise-grade business;
+            performance, and reliability for enterprise-grade business
             intelligence.
           </p>
-:pages.disabled/pages/services/AIBusinessIntelligence.jsx
-        </motion.div>'''        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx'
+        </motion.div>'''        <div className='grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
           {technologies.map((tech, index) => (
             <motion.div;
               key={tech.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx;
+<<<<<<< HEAD
               viewport={{ once: true }}'transition={{ duration: 0.5, delay: index * 0.1 }}''              className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-blue-500/50 transition-all duration-300''>''
-              <div className='w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
+              <div className='w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
+=======
+              viewport={{ once: true }}transition={{ duration: 0.5, delay: index * 0.1 }}              className='bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-blue-500/50 transition-all duration-300>'
+              <div className='w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4>';
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx'
+>>>>>>> main
                 <tech.icon className='w-8 h-8 text-white' />'
-              </div>''
-              <h3 className='text-lg font-semibold text-white mb-2'>
-                {tech.name}'</h3>''              <p className='text-gray-400 text-sm'>{tech.description}</p>
+              </div>'''
+              <h3 className='text-lg font-semibold text-white mb-2>
+                {tech.name}</h3>''              <p className='text-gray-400 text-sm'>{tech.description}</p>
             </motion.div>
           ))}
         </div>
       </div>
-:pages.disabled/pages/services/AIBusinessIntelligence.jsx
-'{/* CTA Section */}''      <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20'>''
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx'
+'{/* CTA Section */}      <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20>''
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8 py-20'>
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx;
-            viewport={{ once: true }}'transition={{ duration: 0.8 }}''            className='text-center''>''
+            viewport={{ once: true }}transition={{ duration: 0.8 }}            className='text-center>'
             <h2 className='text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIBusinessIntelligence.jsx;
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx
               Ready to Transform Your Business Intelligence?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
               Let our AI experts help you implement a comprehensive business;
-              intelligence solution that will drive growth and competitive;
+              intelligence solution that will drive growth and competitive
               advantage.'
             </p>''
             <div className='flex flex-wrap justify-center gap-4'>'
               <Link''
+=======
+:pages.disabled/pages/services/AIBusinessIntelligence.jsx;
+              Ready to Transform Your Business Intelligence?''
+            </h2>'''
+            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
+              Let our AI experts help you implement a comprehensive business;
+              intelligence solution that will drive growth and competitive;
+              advantage.''
+            </p>'''
+            <div className='flex flex-wrap justify-center gap-4>'
+              <Link'''
+>>>>>>> main
                 to='/contact'';
-                className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300'>
-                Schedule Consultation
-              </Link>'
+                className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-blue-700 hover:to-cyan-700 transition-all duration-300'>
+                Schedule Consultation'
+              </Link>''
               <Link'';
                 to='/case-studies'';
-                className='border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300'>                View Case Studies
+                className='border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hove,
+    r:bg-blue-400 hove,
+    r:text-white transition-all duration-300'>                View Case Studies
               </Link>
             </div>
           </motion.div>
@@ -354,4 +446,4 @@ const AIBusinessIntelligence = () => {
     </div>
   )}
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx;
-export default AIBusinessIntelligence'';'''
+export default AIBusinessIntelligence'''''

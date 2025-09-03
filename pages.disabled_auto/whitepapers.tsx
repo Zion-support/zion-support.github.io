@@ -1,6 +1,5 @@
 :pages.disabled_auto/whitepapers.tsx;
-import React from,
-  react';
+import React from react';
 import type { NextPage } from;
   'next';
 import MainLayout from;
@@ -25,9 +24,10 @@ import Link from 'next/link';
 
 const Whitepapers: NextPage = () => {
   const whitepapers = [
-    {
+  {
 :pages.disabled_auto/whitepapers.tsx;
-      id:;
+      i,
+    d:;
   'ai-business-transformation,
       title:,
   AI-Powered Business Transformation: A Comprehensive Guide,
@@ -38,7 +38,8 @@ const Whitepapers: NextPage = () => {
   2024-01-20',
       category: 'Artificial Intelligence,
       id: 'ai-business-transformation',
-      title: 'AI-Powered Business Transformation: A Comprehensive Guide',
+      title: 'AI-Powered Business Transformatio,
+    n: A Comprehensive Guide',
       description:;
         'Explore how artificial intelligence is reshaping business operations and driving digital transformation across industries.',
       author: 'Dr. Sarah Johnson',
@@ -51,11 +52,16 @@ const Whitepapers: NextPage = () => {
       featured: true,
 :pages.disabled_auto/whitepapers.tsx;
       topics: [,
+<<<<<<< HEAD
   Machine Learning',
   'Business Strategy',
   'Digital Transformation',
   'ROI Analysis']},
+    {'
+=======
+  Machine Learning,Business Strategy,Digital Transformation,ROI Analysis']},
     {
+>>>>>>> main
       id: 'cloud-migration-strategies,
       title:,
   Cloud Migration Strategies for Enterprise Success',
@@ -66,11 +72,16 @@ const Whitepapers: NextPage = () => {
       category:;
   'Cloud Computing',
       topics: [;
+<<<<<<< HEAD
         'Machine Learning',
         'Business Strategy',
         'Digital Transformation',
         'ROI Analysis']},
+    {'
+=======
+        'Machine Learning,Business Strategy,Digital Transformation,ROI Analysis']},
     {
+>>>>>>> main
       id: 'cloud-migration-strategies',
       title: 'Cloud Migration Strategies for Enterprise Success',
       description:;
@@ -85,11 +96,16 @@ const Whitepapers: NextPage = () => {
       featured: true,
 :pages.disabled_auto/whitepapers.tsx;
       topics: [,
+<<<<<<< HEAD
   Cloud Architecture',
   'Migration Planning',
   'Cost Optimization',
   'Security']},
+    {'
+=======
+  Cloud Architecture,Migration Planning,Cost Optimization,Security']},
     {
+>>>>>>> main
       id: 'cybersecurity-framework,
       title:,
   Modern Cybersecurity Framework for Digital Businesses',
@@ -100,11 +116,16 @@ const Whitepapers: NextPage = () => {
       category:;
   'Cybersecurity',
       topics: [;
+<<<<<<< HEAD
         'Cloud Architecture',
         'Migration Planning',
         'Cost Optimization',
         'Security']},
+    {'
+=======
+        'Cloud Architecture,Migration Planning,Cost Optimization,Security']},
     {
+>>>>>>> main
       id: 'cybersecurity-framework',
       title: 'Modern Cybersecurity Framework for Digital Businesses',
       description:;
@@ -119,11 +140,16 @@ const Whitepapers: NextPage = () => {
       featured: false,
 :pages.disabled_auto/whitepapers.tsx;
       topics: [,
+<<<<<<< HEAD
   Threat Detection',
   'Risk Management',
   'Compliance',
   'Incident Response']},
+    {'
+=======
+  Threat Detection,Risk Management,Compliance,Incident Response']},
     {
+>>>>>>> main
       id: 'microservices-architecture,
       title:,
   Microservices Architecture: Design Patterns and Best Practices,
@@ -134,13 +160,19 @@ const Whitepapers: NextPage = () => {
   2024-01-05',
       category: 'Software Architecture,
       topics: [;
+<<<<<<< HEAD
         'Threat Detection',
         'Risk Management',
         'Compliance',
         'Incident Response']},
+    {'
+=======
+        'Threat Detection,Risk Management,Compliance,Incident Response']},
     {
+>>>>>>> main
       id: 'microservices-architecture',
-      title: 'Microservices Architecture: Design Patterns and Best Practices',
+      title: 'Microservices Architectur,
+    e: Design Patterns and Best Practices',
       description:;
         'Complete guide to designing and implementing microservices architecture for scalable applications.',
       author: 'Emily Watson',
@@ -153,11 +185,16 @@ const Whitepapers: NextPage = () => {
       featured: false,
 :pages.disabled_auto/whitepapers.tsx;
       topics: [,
+<<<<<<< HEAD
   Service Design',
   'API Management',
   'Scalability',
   'DevOps']},
+    {'
+=======
+  Service Design,API Management,Scalability,DevOps']},
     {
+>>>>>>> main
       id: 'data-analytics-insights,
       title:,
   Data Analytics for Business Intelligence: From Insights to Action,
@@ -167,11 +204,17 @@ const Whitepapers: NextPage = () => {
       date:,
   2023-12-28',
       category: 'Data Analytics,
+<<<<<<< HEAD
       topics: ['Service Design', 'API Management', 'Scalability', 'DevOps']},
+    {'
+=======
+      topics: ['Service Design,API Management,Scalability,DevOps']},
     {
+>>>>>>> main
       id: 'data-analytics-insights',
       title:;
-        'Data Analytics for Business Intelligence: From Insights to Action',
+        'Data Analytics for Business Intelligenc,
+    e: From Insights to Action',
       description:;
         'How to leverage data analytics to drive informed business decisions and competitive advantage.',
       author: 'Alex Thompson',
@@ -184,11 +227,16 @@ const Whitepapers: NextPage = () => {
       featured: false,
 :pages.disabled_auto/whitepapers.tsx;
       topics: [,
+<<<<<<< HEAD
   Business Intelligence',
   'Data Visualization',
   'Predictive Analytics',
   'KPIs']},
+    {'
+=======
+  Business Intelligence,Data Visualization,Predictive Analytics,KPIs']},
     {
+>>>>>>> main
       id: 'mobile-app-development,
       title:,
   Mobile App Development: Native vs Cross-Platform Strategies,
@@ -199,13 +247,19 @@ const Whitepapers: NextPage = () => {
   2023-12-20',
       category: 'Mobile Development,
       topics: [;
+<<<<<<< HEAD
         'Business Intelligence',
         'Data Visualization',
         'Predictive Analytics',
         'KPIs']},
+    {'
+=======
+        'Business Intelligence,Data Visualization,Predictive Analytics,KPIs']},
     {
+>>>>>>> main
       id: 'mobile-app-development',
-      title: 'Mobile App Development: Native vs Cross-Platform Strategies',
+      title: 'Mobile App Developmen,
+    t: Native vs Cross-Platform Strategies',
       description:;
         'Comprehensive comparison of mobile development approaches and their impact on business outcomes.',
       author: 'Lisa Park',
@@ -217,13 +271,14 @@ const Whitepapers: NextPage = () => {
       rating: 4.5,
       featured: false,
 :pages.disabled_auto/whitepapers.tsx;
-      topics: [
+<<<<<<< HEAD
+      topics: ['
   'React Native',
   'Flutter',
   'Performance',
   'User Experience']}
   ];
-  const categories = [
+  const categories = ['
   'All',
   'Artificial Intelligence',
   'Cloud Computing',
@@ -231,8 +286,13 @@ const Whitepapers: NextPage = () => {
   'Software Architecture',
   'Data Analytics',
   'Mobile Development'];
-      topics: ['React Native', 'Flutter', 'Performance', 'User Experience']}];
+<<<<<<< HEAD
+      topics: ['React Native', 'Flutter', 'Performance', 'User Experience']}]
   const categories = [
+=======
+      topics: ['React Native', 'Flutter', 'Performance', 'User Experience']}];
+  const categories = ['
+>>>>>>> main
     'All',
     'Artificial Intelligence',
     'Cloud Computing',
@@ -240,79 +300,97 @@ const Whitepapers: NextPage = () => {
     'Software Architecture',
     'Data Analytics',
     'Mobile Development']
+=======
+      topics: [
+  'React Native,Flutter,Performance,User Experience']}
+  ];
+  const categories = [
+  'All,Artificial Intelligence,Cloud Computing,Cybersecurity,Software Architecture,Data Analytics,Mobile Development'];
+      topics: ['React Native,Flutter,Performance,User Experience']}];
+  const categories = [
+    'All,Artificial Intelligence,Cloud Computing,Cybersecurity,Software Architecture,Data Analytics,Mobile Development']
+>>>>>>> main
   return (
-    <MainLayout
+    <MainLayout'
       title='Whitepapers - Zion Tech Group';
       description='Download our comprehensive whitepapers and research reports on technology trends and best practices.'>{/* Hero Section */}
-      <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>
-        <div className='container mx-auto px-4 text-center'>
-          <h1 className='text-5xl md: text-6xl font-bold mb-6'>
+      <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>
+        <div className='container mx-auto px-4 text-center>
+          <h1 className='text-5xl md: text-6xl font-bold mb-6>
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'>
               Whitepapers
             </span>
-          </h1>
-          <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
+          </h1>'
+          <p className='text-xl m,
+    d:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
             In-depth research and insights on technology trends, best practices,
             and industry innovations.
           </p>
           {/* Search Bar */}
-          <div className='max-w-2xl mx-auto'>
-            <div className='relative'>
+          <div className='max-w-2xl mx-auto>
+            <div className='relative>
               <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
-              <input
+              <input'
                 type='text';
                 placeholder='Search whitepapers...';
-                className='w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-400'/>
+                className='w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 focus: outline-none focu,
+    s:ring-2 focu,
+    s:ring-blue-400'/>
             </div>
           </div>
         </div>
       </section>
       {/* Featured Whitepapers */}
-      <section className='py-16 bg-white'>
-        <div className='container mx-auto px-4'>
-          <div className='text-center mb-12'>
+      <section className='py-16 bg-white>
+        <div className='container mx-auto px-4>
+          <div className='text-center mb-12>
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>
               Featured Research
-            </h2>
+            </h2>'
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               Our most popular and highly-rated whitepapers.
             </p>
-          </div>
+          </div>'
           <div className='space-y-12'>
-            {whitepapers;
+<<<<<<< HEAD
+            {whitepapers
               .filter(paper => paper.featured)
+=======
+            {whitepapers;
+              .filter(paper => paper.featured);
+>>>>>>> main
               .map(paper => (
                 <div
                   key={paper.id}
-                  className='bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8'>
+                  className='bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8>
                   <div className='grid md: grid-cols-2 gap-8 items-center'>
-                    <div>
-                      <div className='flex items-center space-x-4 mb-4'>
+                    <div>'
+                      <div className='flex items-center space-x-4 mb-4>
                         <span className='bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold'>
                           {paper.category}
-                        </span>
+                        </span>'
                         <span className='text-gray-600 text-sm'>
                           {paper.pages} pages
-                        </span>
-                        <div className='flex items-center text-yellow-500'>
+                        </span>'
+                        <div className='flex items-center text-yellow-500>
                           <span className='text-sm font-semibold mr-1'>
                             {paper.rating}
-                          </span>
+                          </span>'
                           <span className='text-sm text-gray-500'>
-                            ({paper.downloads} downloads)
+                            ({paper.downloads} downloads);
                           </span>
                         </div>
-                      </div>
+                      </div>'
                       <h3 className='text-3xl font-bold text-gray-900 mb-4'>
                         {paper.title}
-                      </h3>
+                      </h3>'
                       <p className='text-lg text-gray-600 mb-6'>
                         {paper.description}
-                      </p>
-                      <div className='mb-6'>
-                        <h4 className='font-semibold text-gray-900 mb-3'>
+                      </p>'
+                      <div className='mb-6>
+                        <h4 className='font-semibold text-gray-900 mb-3>
                           Key Topics Covered:{' '}
-                        </h4>
+                        </h4>'
                         <div className='flex flex-wrap gap-2'>
                           {paper.topics.map((topic, index) => (
                             <span
@@ -321,30 +399,30 @@ const Whitepapers: NextPage = () => {
                             </span>
                           ))}
                         </div>
-                      </div>
-                      <div className='flex items-center space-x-6 text-sm text-gray-500 mb-6'>
-                        <div className='flex items-center space-x-2'>
+                      </div>'
+                      <div className='flex items-center space-x-6 text-sm text-gray-500 mb-6>
+                        <div className='flex items-center space-x-2>
                           <User className='w-4 h-4' />
                           <span>{paper.author}</span>
-                        </div>
-                        <div className='flex items-center space-x-2'>
+                        </div>'
+                        <div className='flex items-center space-x-2>
                           <Calendar className='w-4 h-4' />
                           <span>
                             {new Date(paper.date).toLocaleDateString()}
                           </span>
-                        </div>
-                        <div className='flex items-center space-x-2'>
+                        </div>'
+                        <div className='flex items-center space-x-2>
                           <Eye className='w-4 h-4' />
                           <span>{paper.downloads} downloads</span>
                         </div>
-                      </div>
-                      <button className='inline-flex items-center bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>
+                      </div>'
+                      <button className='inline-flex items-center bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors>
                         <Download className='w-4 h-4 mr-2' />
                         Download Whitepaper
                       </button>
-                    </div>
-                    <div className='bg-gray-200 rounded-lg h-80 flex items-center justify-center'>
-                      <div className='text-center'>
+                    </div>'
+                    <div className='bg-gray-200 rounded-lg h-80 flex items-center justify-center>
+                      <div className='text-center>
                         <FileText className='w-16 h-16 text-gray-400 mx-auto mb-4' />
                         <span className='text-gray-500'>
                           Whitepaper Preview
@@ -358,43 +436,51 @@ const Whitepapers: NextPage = () => {
         </div>
       </section>
       {/* All Whitepapers Grid */}
-      <section className='py-16 bg-gray-50'>
-        <div className='container mx-auto px-4'>
-          <div className='text-center mb-12'>
+      <section className='py-16 bg-gray-50>
+        <div className='container mx-auto px-4>
+          <div className='text-center mb-12>
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>
               All Whitepapers
-            </h2>
+            </h2>'
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               Browse our complete collection of research and insights.
             </p>
+<<<<<<< HEAD
           </div>
           <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
-            {whitepapers;
+            {whitepapers
               .filter(paper => !paper.featured)
+=======
+          </div>'
+          <div className='grid md: grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+            {whitepapers;
+              .filter(paper => !paper.featured);
+>>>>>>> main
               .map(paper => (
                 <div
                   key={paper.id}
-                  className='bg-white rounded-lg shadow-lg overflow-hidden hover: shadow-xl transition-shadow'>
-                  <div className='bg-gray-200 h-48 flex items-center justify-center'>
-                    <div className='text-center'>
+                  className='bg-white rounded-lg shadow-lg overflow-hidden hover: shadow-xl transition-shadow>
+                  <div className='bg-gray-200 h-48 flex items-center justify-center>
+                    <div className='text-center>
                       <FileText className='w-12 h-12 text-gray-400 mx-auto mb-2' />
                       <span className='text-gray-500 text-sm'>Whitepaper</span>
                     </div>
-                  </div>
-                  <div className='p-6'>
-                    <div className='flex items-center space-x-4 mb-3'>
+                  </div>'
+                  <div className='p-6>
+                    <div className='flex items-center space-x-4 mb-3>
                       <span className='bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs font-semibold'>
                         {paper.category}
-                      </span>
+                      </span>'
                       <span className='text-gray-500 text-sm'>
                         {paper.pages} pages
                       </span>
-                    </div>
+                    </div>'
                     <h3 className='text-xl font-bold text-gray-900 mb-3'>
                       {paper.title}
-                    </h3>
-                    <p className='text-gray-600 mb-4'>{paper.description}</p>
-                    <div className='mb-4'>
+                    </h3>'
+                    <p className='text-gray-600 mb-4'>{paper.description}</p>'
+                    <div className='mb-4>
                       <div className='flex flex-wrap gap-1'>
                         {paper.topics.slice(0, 3).map((topic, index) => (
                           <span
@@ -402,41 +488,41 @@ const Whitepapers: NextPage = () => {
                             className='bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs'>{topic}
                           </span>
                         ))}
-                        {paper.topics.length > 3 && (
+                        {paper.topics.length > 3 && ('
                           <span className='text-gray-500 text-xs'>
                             +{paper.topics.length - 3} more
                           </span>
                         )}
                       </div>
-                    </div>
-                    <div className='flex items-center justify-between mb-4'>
-                      <div className='flex items-center space-x-4 text-sm text-gray-500'>
-                        <div className='flex items-center space-x-1'>
+                    </div>'
+                    <div className='flex items-center justify-between mb-4>
+                      <div className='flex items-center space-x-4 text-sm text-gray-500>
+                        <div className='flex items-center space-x-1>
                           <User className='w-3 h-3' />
                           <span>{paper.author}</span>
-                        </div>
-                        <div className='flex items-center space-x-1'>
+                        </div>'
+                        <div className='flex items-center space-x-1>
                           <Calendar className='w-3 h-3' />
                           <span>
                             {new Date(paper.date).toLocaleDateString()}
                           </span>
                         </div>
-                      </div>
-                      <div className='flex items-center text-yellow-500'>
+                      </div>'
+                      <div className='flex items-center text-yellow-500>
                         <span className='text-sm font-semibold'>
                           {paper.rating}
                         </span>
                       </div>
-                    </div>
-                    <div className='flex items-center justify-between'>
-                      <button className='flex items-center bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors'>
+                    </div>'
+                    <div className='flex items-center justify-between>
+                      <button className='flex items-center bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors>
                         <Download className='w-4 h-4 mr-2' />
                         Download
                       </button>
-                      <Link
-                        href={`/whitepapers/${paper.id}`}
+                      <Link'
+                        href={`/whitepapers/${paper.id}`}`
                         className='flex items-center text-blue-600 hover:text-blue-700 font-semibold'>
-                        Preview
+                        Preview'
                         <ArrowRight className='w-4 h-4 ml-1' />
                       </Link>
                     </div>
@@ -447,21 +533,23 @@ const Whitepapers: NextPage = () => {
         </div>
       </section>
       {/* Newsletter Signup */}
-      <section className='py-16 bg-blue-600'>
-        <div className='container mx-auto px-4 text-center'>
+      <section className='py-16 bg-blue-600>
+        <div className='container mx-auto px-4 text-center>
           <h2 className='text-3xl font-bold text-white mb-6'>
             Stay Updated with Latest Research
-          </h2>
+          </h2>'
           <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
-            Subscribe to receive our latest whitepapers and research insights;
+            Subscribe to receive our latest whitepapers and research insights
             directly in your inbox.
-          </p>
+          </p>'
           <div className='max-w-md mx-auto flex'>
-            <input
+            <input'
               type='email';
               placeholder='Enter your email';
-              className='flex-1 px-4 py-3 rounded-l-lg border-0 focus: outline-none focus:ring-2 focus:ring-blue-300'/>
-            <button className='bg-white text-blue-600 px-6 py-3 rounded-r-lg font-semibold hover:bg-gray-100 transition-colors'>
+              className='flex-1 px-4 py-3 rounded-l-lg border-0 focus: outline-none focus:ring-2 focu,
+    s:ring-blue-300'/>
+            <button className='bg-white text-blue-600 px-6 py-3 rounded-r-lg font-semibold hove,
+    r:bg-gray-100 transition-colors'>
               Subscribe
             </button>
           </div>
@@ -469,4 +557,9 @@ const Whitepapers: NextPage = () => {
       </section>
     </MainLayout>
   )}
+<<<<<<< HEAD
+
 export default Whitepapers
+=======
+export default Whitepapers'
+>>>>>>> main

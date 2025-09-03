@@ -4,20 +4,22 @@ import type { ReactNode } from;
   'react';
 import { Navigation } from;
   '@/components/Navigation';
-export const metadata = {
+export const metadata = {'
   title: 'Zion OS - Sovereign AI-Powered Digital Economies,
   description:,
   Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.',
   keywords: AI, digital economy, blockchain, governance, marketplace, deployment, Zion,
   ,
-  authors: [{ name:;
+  authors: [{ nam,
+    e:;
   'Zion Tech Group }],
   viewport:,
   width=device-width, initial-scale=1',
   robots: index, follow,
   ,
   openGraph: {
-    title:;
+    titl,
+    e:;
   'Zion OS - Sovereign AI-Powered Digital Economies,
     description:,
   Launch sovereign AI-powered digital economies with one click',
@@ -26,98 +28,102 @@ export const metadata = {
   'en_US'}}
 export { function }
 export default function RootLayout(...args: unknown[]): unknown {
-  return(
+  return('
     <html lang='en' className='scroll-smooth'>
-      <head>
+      <head>'
         <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link
+        <link'
           rel='preconnect';
           href='https://fonts.gstatic.com';
           crossOrigin='anonymous'/>
-        <link
+        <link'
           href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
           rel='stylesheet'/>
-      </head>
-      <body className='min-h-screen bg-[var(--bg)] text-[var(--fg)] antialiased'>
-        <nav className='border-b border-white/10 sticky top-0 z-50 bg-zinc-900/50 backdrop-blur'>
-          <div className='max-w-6xl mx-auto px-4 py-3 flex items-center gap-4'>
+      </head>'
+      <body className='min-h-screen bg-[var(--bg)] text-[var(--fg)] antialiased>
+        <nav className='border-b border-white/10 sticky top-0 z-50 bg-zinc-900/50 backdrop-blur>
+          <div className='max-w-6xl mx-auto px-4 py-3 flex items-center gap-4>
             <a href='/' className='font-semibold'>
               Zion OS
             </a>
-            <a
+            <a'
               href='/services';
               className='text-sm opacity-80 hover:opacity-100'>
               Services
             </a>
-            <a
+            <a'
               href='/solutions';
               className='text-sm opacity-80 hover:opacity-100'>
               Solutions
-            </a>
+            </a>'
             <a href='/about' className='text-sm opacity-80 hover:opacity-100'>
               About
-            </a>
+            </a>'
             <a href='/contact' className='text-sm opacity-80 hover:opacity-100'>
               Contact
             </a>
-            <a
+            <a'
               href='/multiverse/launch';
               className='text-sm opacity-80 hover:opacity-100'>
               Launch
             </a>
-            <a
+            <a'
               href='/admin/os-deploy';
-              className='text-sm opacity-80 hover:opacity-100'>
+              className='text-sm opacity-80 hove,
+    r:opacity-100'>
               Admin Deploy
             </a>
-            <a
+            <a'
               href='/admin/instances';
-              className='text-sm opacity-80 hover:opacity-100'>
+              className='text-sm opacity-80 hove,
+    r:opacity-100'>
               Instances
             </a>
           </div>
-        </nav>
-        <main className='pt-20'>{children}</main>
-        <footer className='border-t border-white/10 bg-black/20 backdrop-blur-sm mt-20'>
-          <div className='max-w-7xl mx-auto px-4 py-8'>
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
-              <div>
+        </nav>'
+        <main className='pt-20'>{children}</main>'
+        <footer className='border-t border-white/10 bg-black/20 backdrop-blur-sm mt-20>
+          <div className='max-w-7xl mx-auto px-4 py-8>
+            <div className='grid grid-cols-1 md: grid-cols-4 gap-8'>
+              <div>'
                 <h3 className='text-xl font-bold gradient-text mb-4'>
                   Zion OS
-                </h3>
+                </h3>'
                 <p className='text-sm text-gray-400'>
-                  Unified deployment protocol for sovereign AI-powered digital;
+                  Unified deployment protocol for sovereign AI-powered digital
                   economies.
                 </p>
               </div>
-              <div>
-                <h4 className='font-semibold mb-3'>Platform</h4>
+              <div>'
+                <h4 className='font-semibold mb-3'>Platform</h4>'
                 <ul className='space-y-2 text-sm text-gray-400'>
                   <li>
-                    <a
+                    <a'
                       href='/multiverse/launch';
                       className='hover:text-white transition-colors'>
                       Launch Wizard
                     </a>
                   </li>
                   <li>
-                    <a
+                    <a'
                       href='/admin/instances';
-                      className='hover:text-white transition-colors'>
+                      className='hove,
+    r:text-white transition-colors'>
                       Instances
                     </a>
                   </li>
                   <li>
-                    <a
+                    <a'
                       href='/admin/os-deploy';
-                      className='hover:text-white transition-colors'>
+                      className='hove,
+    r:text-white transition-colors'>
                       Admin Deploy
                     </a>
                   </li>
                 </ul>
               </div>
-              <div>
-                <h4 className='font-semibold mb-3'>Features</h4>
+              <div>'
+                <h4 className='font-semibold mb-3'>Features</h4>'
                 <ul className='space-y-2 text-sm text-gray-400'>
                   <li>Marketplace & Jobs</li>
                   <li>AI Governance</li>
@@ -125,8 +131,8 @@ export default function RootLayout(...args: unknown[]): unknown {
                   <li>Identity & KYC</li>
                 </ul>
               </div>
-              <div>
-                <h4 className='font-semibold mb-3'>Support</h4>
+              <div>'
+                <h4 className='font-semibold mb-3'>Support</h4>'
                 <ul className='space-y-2 text-sm text-gray-400'>
                   <li>Documentation</li>
                   <li>API Reference</li>
@@ -134,7 +140,7 @@ export default function RootLayout(...args: unknown[]): unknown {
                   <li>Contact</li>
                 </ul>
               </div>
-            </div>
+            </div>'
             <div className='border-t border-white/10 mt-8 pt-8 text-center text-sm text-gray-400'>
               <p>&copy 2024 Zion Tech Group. All rights reserved.</p>
             </div>

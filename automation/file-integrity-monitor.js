@@ -1,15 +1,15 @@
 #!/usr/bin/env node;
 const fs = require(
   'fs');
-const path = require(
+const path = require('
   'path');
-const { execSync, spawn } = require(
+const { execSync, spawn } = require('
   'child_process');
-const cron = require(
+const cron = require('
   'node-cron');
-const crypto = require(
+const crypto = require('
   'crypto');
-// // // // // // // // console.log(
+// // // // // // // // console.log('
   '🔒 File Integrity Monitor Starting...\n');
 class FileIntegrityMonitor {
   constructor() {
@@ -19,11 +19,9 @@ class FileIntegrityMonitor {
     this.issuesFixed = 0;
     this.monitoring = false;
     this.logFile = path.join(this.projectRoot,
-  'logs',
-  'file-integrity.log');
+  'logs,file-integrity.log');
     this.checksumsFile = path.join(this.projectRoot,
-  'logs',
-  'file-checksums.json');
+  'logs,file-checksums.json');
     // Ensure logs directory exists;
     this.ensureLogsDirectory();
     // Initialize monitoring;
@@ -31,95 +29,148 @@ class FileIntegrityMonitor {
   ensureLogsDirectory() {
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true })
+      fs.mkdirSync(logsDir, { recursive: true });
   log(message, level =;
-  'INFO') {
+  `INFO`) {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     // // // // // // // // console.log(logEntry.trim());
     try {
-      fs.appendFileSync(this.logFile, logEntry)} catch (error) {
+<<<<<<< HEAD
+      fs.appendFileSync(this.logFile, logEntry)} catch (error) { 
       // // // // // // // console.error(
+  `Failed to write to log file:`, error.message) }
+=======
+      fs.appendFileSync(this.logFile, logEntry)} catch (error) {
+      // // // // // // // console.error(`
   'Failed to write to log file:', error.message)}
+>>>>>>> main
   }
   async startMonitoring() {
-    this.log(
+    this.log('
   'Starting file integrity monitoring...');
     // Schedule regular integrity checks;
-    cron.schedule(
+    cron.schedule('
   '0 */6 * * *', () => {
       this.performIntegrityCheck()})
     // Schedule daily deep scan;
-    cron.schedule(
+    cron.schedule('
   '0 3 * * *', () => {
       this.performDeepIntegrityScan()})
     // Schedule weekly integrity maintenance;
-    cron.schedule(
+    cron.schedule('
   '0 4 * * 0', () => {
       this.performWeeklyMaintenance()})
     // Initial integrity check;
     setTimeout(() => {
       this.performIntegrityCheck()}, 25000);
-    this.log(
+    this.log('
   'File integrity monitoring started successfully');
   async performIntegrityCheck() {
     if (this.monitoring) return;
     this.monitoring = true;
+<<<<<<< HEAD
     this.log(
+  `Performing file integrity check...`);
+=======
+    this.log('
   'Performing file integrity check...');
+>>>>>>> main
     try {
       const issues = await this.detectIntegrityIssues();
-      if (issues.length > 0) {
+      if (issues.length > 0) {'
         this.log(`Found ${issues.length} integrity issues, attempting fixes...`);
         await this.autoFixIntegrityIssues(issues)} else {
+<<<<<<< HEAD
         this.log(
-  'No integrity issues detected, all files are intact');
-      this.integrityChecks++} catch (error) {
-      this.log(`Integrity check failed: ${error.message}`,
+  `No integrity issues detected, all files are intact`);
+      this.integrityChecks++} catch (error) { 
+;
+      this.log(`Integrity check failed: ${error.message }`,
 ,
+  ERROR`)} finally {
+=======
+        this.log(`
+  'No integrity issues detected, all files are intact');
+      this.integrityChecks++} catch (error) {'
+      this.log(`Integrity check failed: ${error.message}`,
+,`
   ERROR')} finally {
+>>>>>>> main
       this.monitoring = false;
   async detectIntegrityIssues() {
     const issues = [];
     // Check for missing critical files;
     const missingFiles = await this.checkMissingCriticalFiles();
     if (missingFiles.length > 0) {
+<<<<<<< HEAD
       issues.push({
+        type: `missing_critical_files,
+=======
+      issues.push({'
         type: 'missing_critical_files,
+>>>>>>> main
         severity:;
-  'high',
+  `high`,
         description: `${missingFiles.length} critical files missing`,
-        details: missingFiles})
+        details: missingFiles});
     // Check for corrupted files;
     const corruptedFiles = await this.checkFileCorruption();
     if (corruptedFiles.length > 0) {
       issues.push({
+<<<<<<< HEAD
         type:,
+  corrupted_files`,
+        severity: `high,
+=======
+        type:,`
   corrupted_files',
         severity: 'high,
+>>>>>>> main
         description: `${corruptedFiles.length} files appear corrupted`,
-        details: corruptedFiles})
+        details: corruptedFiles});
     // Check for file permission issues;
     const permissionIssues = await this.checkFilePermissions();
     if (permissionIssues.length > 0) {
       issues.push({
+<<<<<<< HEAD
         type:,
+  permission_issues`,
+        severity: `medium,
+=======
+        type:,`
   permission_issues',
         severity: 'medium,
+>>>>>>> main
         description: `${permissionIssues.length} file permission issues found`,
-        details: permissionIssues})
+        details: permissionIssues});
     // Check for project structure integrity;
     const structureIssues = await this.checkProjectStructure();
     if (structureIssues.length > 0) {
       issues.push({
+<<<<<<< HEAD
         type:,
+  structure_issues`,
+        severity: `medium,
+=======
+        type:,`
   structure_issues',
         severity: 'medium,
+>>>>>>> main
         description: `${structureIssues.length} project structure issues found`,
-        details: structureIssues})
+        details: structureIssues});
     return issues;
+<<<<<<< HEAD
+  async checkMissingCriticalFiles() {`
+    const criticalFiles = ['package.json',;vite.config.ts',;tsconfig.json',;src/main.tsx',;index.html',;tailwind.config.js',;postcss.config.js';
+=======
   async checkMissingCriticalFiles() {
-    const criticalFiles = ['package.json',';vite.config.ts',';tsconfig.json',';src/main.tsx',';index.html',';tailwind.config.js',';postcss.config.js';
+<<<<<<< HEAD
+    const criticalFiles = [`package.json`,';vite.config.ts',';tsconfig.json',';src/main.tsx',';index.html',';tailwind.config.js',';postcss.config.js';
+=======
+    const criticalFiles = ['package.json,;vite.config.ts,;tsconfig.json,;src/main.tsx,;index.html,;tailwind.config.js,;postcss.config.js';
+>>>>>>> main
+>>>>>>> main
     ];
     const missingFiles = [];
     for (const file of criticalFiles) {
@@ -129,7 +180,7 @@ class FileIntegrityMonitor {
           file,
           path: filePath,
           type:;
-  'missing'})
+  'missing'});
     return missingFiles;
   async checkFileCorruption() {
     const corruptedFiles = [];
@@ -143,8 +194,8 @@ class FileIntegrityMonitor {
           if (fs.existsSync(fullPath)) {
             try {
               const content = fs.readFileSync(fullPath);
-              const actualChecksum = crypto.createHash(
-  'md5').update(content).digest(
+              const actualChecksum = crypto.createHash('
+  'md5').update(content).digest('
   'hex');
               if (actualChecksum !== expectedChecksum) {
                 corruptedFiles.push({
@@ -153,20 +204,33 @@ class FileIntegrityMonitor {
                   expectedChecksum,
                   actualChecksum,
                   type:;
-  'corrupted'})} catch (error) {
+  'corrupted'})} catch (error) { 
               corruptedFiles.push({
                 file: filePath,
                 path: fullPath,
                 error: error.message,
                 type:;
-  'unreadable'})} catch (error) {
-      this.log(`Error checking file corruption: ${error.message}`,
+<<<<<<< HEAD
+  `unreadable` })
+;
+} catch (error) { 
+      this.log(`Error checking file corruption: ${error.message }`,
+  `WARN`);
+=======
+  'unreadable'})} catch (error) {'
+      this.log(`Error checking file corruption: ${error.message}`,`
   'WARN');
+>>>>>>> main
     return corruptedFiles;
   async checkFilePermissions() {
     const permissionIssues = [];
+<<<<<<< HEAD
+    try {'
+      const criticalFiles = ['package.json',;vite.config.ts',;src/main.tsx';
+=======
     try {
-      const criticalFiles = ['package.json',';vite.config.ts',';src/main.tsx';
+      const criticalFiles = ['package.json,;vite.config.ts,;src/main.tsx';
+>>>>>>> main
       ];
       for (const file of criticalFiles) {
         const filePath = path.join(this.projectRoot, file);
@@ -192,21 +256,32 @@ class FileIntegrityMonitor {
                   path: filePath,
                   issue:;
   'not_writable',
-                  mode: mode.toString(8)})} catch (error) {
+                  mode: mode.toString(8)})} catch (error) { 
             permissionIssues.push({
               file,
               path: filePath,
               issue:;
+<<<<<<< HEAD
+  `permission_check_failed`,
+              error: error.message })} catch (error) { 
+      this.log(`Error checking file permissions: ${error.message }`,
+  `WARN`);
+=======
   'permission_check_failed',
-              error: error.message})} catch (error) {
-      this.log(`Error checking file permissions: ${error.message}`,
+              error: error.message})} catch (error) {'
+      this.log(`Error checking file permissions: ${error.message}`,`
   'WARN');
+>>>>>>> main
     return permissionIssues;
   async checkProjectStructure() {
     const structureIssues = [];
     try {
       // Check for essential directories;
-      const essentialDirs = ['src',';src/components',';src/pages',';src/utils',';public',';logs';
+<<<<<<< HEAD
+      const essentialDirs = ['src',;src/components',;src/pages',;src/utils',;public',;logs';
+=======
+      const essentialDirs = ['src,;src/components,;src/pages,;src/utils,;public,;logs';
+>>>>>>> main
       ];
       for (const dir of essentialDirs) {
         const dirPath = path.join(this.projectRoot, dir);
@@ -220,46 +295,69 @@ class FileIntegrityMonitor {
             directory: dir,
             path: dirPath,
             issue:,
-  not_a_directory'})
+  not_a_directory'});
       // Check for essential source files;
       const sourceFiles = this.findSourceFiles();
       if (sourceFiles.length === 0) {
-        structureIssues.push({
+        structureIssues.push({'
           issue: 'no_source_files,
           description:;
-  'No source files found in src directory'})} catch (error) {
-      this.log(`Error checking project structure: ${error.message}`,
+<<<<<<< HEAD
+  `No source files found in src directory`})} catch (error) { 
+      this.log(`Error checking project structure: ${error.message }`,
+  `WARN`);
+=======
+  'No source files found in src directory'})} catch (error) {'
+      this.log(`Error checking project structure: ${error.message}`,`
   'WARN');
+>>>>>>> main
     return structureIssues;
   async autoFixIntegrityIssues(issues) {
     for (const issue of issues) {
-      try {
+      try {'
         this.log(`Attempting to fix: ${issue.type}`);
         switch (issue.type) {
+<<<<<<< HEAD
           case,
+  missing_critical_files`: ;
+=======
+          case,`
   missing_critical_files': ;
+>>>>>>> main
             await this.fixMissingCriticalFiles(issue.details);
             break;
           case;
-  'corrupted_files':;
+  `corrupted_files':;
             await this.fixCorruptedFiles(issue.details);
             break;
           case;
-  'permission_issues':;
+  'permission_issues`:;
             await this.fixFilePermissions(issue.details);
             break;
           case;
-  'structure_issues:;
+  `structure_issues:;
             await this.fixProjectStructure(issue.details);
             break;
         this.issuesFixed++;
-        this.log(`Successfully fixed: ${issue.type}`)} catch (error) {
-        this.log(`Failed to fix ${issue.type}: ${error.message}`,
+<<<<<<< HEAD
+        this.log(`Successfully fixed: ${issue.type}`)} catch (error) { 
+        this.log(`Failed to fix ${issue.type }: ${error.message}`,
 ,
-  ERROR');
+  ERROR`);
+;
   async fixMissingCriticalFiles(missingFiles) {
     this.log(
+  `Fixing missing critical files...');
+=======
+        this.log(`Successfully fixe,
+    d: ${issue.type}`)} catch (error) {`
+        this.log(`Failed to fix ${issue.type}: ${error.message}`,
+,`
+  ERROR');
+  async fixMissingCriticalFiles(missingFiles) {
+    this.log('
   'Fixing missing critical files...');
+>>>>>>> main
     for (const missingFile of missingFiles) {
       try {
         switch (missingFile.file) {
@@ -284,30 +382,42 @@ class FileIntegrityMonitor {
             await this.createIndexHtml();
             break;
           case;
-  'tailwind.config.js':;
+  'tailwind.config.js`:;
             await this.createTailwindConfig();
             break;
           case;
-  'postcss.config.js:;
+  `postcss.config.js:;
             await this.createPostCSSConfig();
             break;
-        this.log(`Created missing file: ${missingFile.file}`)} catch (error) {
-        this.log(`Failed to create ${missingFile.file}: ${error.message}`,
+<<<<<<< HEAD
+        this.log(`Created missing file: ${missingFile.file}`)} catch (error) { 
+        this.log(`Failed to create ${missingFile.file }: ${error.message}`,
 ,
-  ERROR');
+  ERROR`);
+;
   async createPackageJson() {
     const packageJson = {
+      name: `zion-app,
+=======
+        this.log(`Created missing fil,
+    e: ${missingFile.file}`)} catch (error) {`
+        this.log(`Failed to create ${missingFile.file}: ${error.message}`,
+,`
+  ERROR');
+  async createPackageJson() {
+    const packageJson = {'
       name: 'zion-app,
+>>>>>>> main
       private: true,
       version:,
   0.0.0',
       type: 'module,
-      scripts: {
+      scripts: {'
   dev': 'vite,
   build': 'tsc && vite build,
   lint': eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0,
-  ,';preview': 'vite preview},
-      dependencies: {
+  ,;preview': 'vite preview},
+      dependencies: {'
   react': '^18.2.0,
   react-dom': '^18.2.0,
   react-router-dom': '^6.8.1,
@@ -338,8 +448,8 @@ class FileIntegrityMonitor {
       path.join(this.projectRoot,
   'package.json'),
       JSON.stringify(packageJson, null, 2));
-  async createViteConfig() {
-    const config = `import { defineConfig } from;
+  async createViteConfig() {'
+    const config = `import { defineConfig } from;`
   'vite';
 import react from;
   '@vitejs/plugin-react';
@@ -347,46 +457,55 @@ import { resolve } from;
   'path';
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {';@': resolve(__dirname,
-  'src'),';@components': resolve(__dirname,
-  'src/components'),';@pages': resolve(__dirname,
-  'src/pages'),';@layout': resolve(__dirname,
-  'src/layout'),';@utils': resolve(__dirname,
-  'src/utils'),';@hooks': resolve(__dirname,
-  'src/hooks'),';@types': resolve(__dirname,
-  'src/types'),';@assets': resolve(__dirname,
-  'src/assets'),';@styles': resolve(__dirname,
-  'src/styles'),';@data': resolve(__dirname,
-  'src/data'),';@services': resolve(__dirname,
-  'src/services'),';@context': resolve(__dirname,
-  'src/context'),';@constants': resolve(__dirname,
+  resolve: {'
+    alia,
+    s: {';@': resolve(__dirname,
+  'src'),;@components': resolve(__dirname,
+  'src/components'),;@pages': resolve(__dirname,
+  'src/pages'),;@layout': resolve(__dirname,
+  'src/layout'),;@utils': resolve(__dirname,
+  'src/utils'),;@hooks': resolve(__dirname,
+  'src/hooks'),;@types': resolve(__dirname,
+  'src/types'),;@assets': resolve(__dirname,
+  'src/assets'),;@styles': resolve(__dirname,
+  'src/styles'),;@data': resolve(__dirname,
+  'src/data'),;@services': resolve(__dirname,
+  'src/services'),;@context': resolve(__dirname,
+  'src/context'),;@constants': resolve(__dirname,
 ,
   src/constants')},
   build: {
-    target:;
+    targe,
+    t:;
   'esnext,
     minify:;
   'terser',
     sourcemap: false},
   server: {
-    port: 3000,
+    por,
+    t: 3000,
     host: true})`;
     fs.writeFileSync(
       path.join(this.projectRoot,
-,
+,`
   vite.config.ts'),
       config);
-  async createTsConfig() {
+  async createTsConfig() {'
     const config = `{';compilerOptions': {';target':;
-  'ES2020,';useDefineForClassFields': true,
+  'ES2020,;useDefineForClassFields': true,
   lib': [;
   'ES2020,
 ,
+<<<<<<< HEAD
   DOM',
-  'DOM.Iterable'],';module': 'ESNext,';skipLibCheck': true,
+  'DOM.Iterable'],;module': 'ESNext,;skipLibCheck': true,
+  moduleResolution': 'bundler,;allowImportingTsExtensions': true,;resolveJsonModule': true,;isolatedModules': true,;noEmit': true,
+  jsx': 'react-jsx,;strict': true,;noUnusedLocals': true,;noUnusedParameters': true,;noFallthroughCasesInSwitch': true,
+=======
+  DOM,DOM.Iterable'],';module': 'ESNext,';skipLibCheck': true,
   moduleResolution': 'bundler,';allowImportingTsExtensions': true,';resolveJsonModule': true,';isolatedModules': true,';noEmit': true,
   jsx': 'react-jsx,';strict': true,';noUnusedLocals': true,';noUnusedParameters': true,';noFallthroughCasesInSwitch': true,
+>>>>>>> main
   baseUrl': '.,
   paths': {';@/*': [;
   'src/*],
@@ -416,15 +535,15 @@ export default defineConfig({
   'src/constants/*]},
   include': [;
   'src],
-  references': [{
+  references': [{'
   'path':;
   './tsconfig.node.json }]}`;
     fs.writeFileSync(
-      path.join(this.projectRoot,
+      path.join(this.projectRoot,`
   'tsconfig.json'),
       config);
-  async createMainTsx() {
-    const mainTsx = `import React from;
+  async createMainTsx() {'
+    const mainTsx = `import React from;`
   'react';
 import ReactDOM from;
   'react-dom/client';
@@ -436,7 +555,7 @@ import App from;
   './App.tsx';
 import;
   './index.css';
-ReactDOM.createRoot(document.getElementById(
+ReactDOM.createRoot(document.getElementById('
   'root')!).render(
   <React.StrictMode>
     <HelmetProvider>
@@ -447,28 +566,27 @@ ReactDOM.createRoot(document.getElementById(
   </React.StrictMode>,
 )`;
     // Ensure src directory exists;
-    const srcDir = path.join(this.projectRoot,
+    const srcDir = path.join(this.projectRoot,`
   'src');
     if (!fs.existsSync(srcDir)) {
-      fs.mkdirSync(srcDir, { recursive: true })
+      fs.mkdirSync(srcDir, { recursive: true });
     fs.writeFileSync(
       path.join(this.projectRoot,
 ,
-  src',
-  'main.tsx'),
+  src,main.tsx'),
       mainTsx);
-  async createIndexHtml() {
+  async createIndexHtml() {'
     const indexHtml = `<!doctype html>
-<html lang=
+<html lang=`
   'en'>;
   <head>
-    <meta charset=
+    <meta charset='
   'UTF-8' />;
-    <link rel=
+    <link rel='
   'icon' type=;
   'image/svg+xml' href=;
   '/vite.svg' />;
-    <meta name=
+    <meta name='
   'viewport' content=;
   'width=device-width, initial-scale=1.0' />;
     <title>Zion App</title>
@@ -479,40 +597,42 @@ ReactDOM.createRoot(document.getElementById(
     <script type=;
   'module' src=;
   '/src/main.tsx'></script>
-  </body>
+  </body>'
 </html>`;
     fs.writeFileSync(
-      path.join(this.projectRoot,
+      path.join(this.projectRoot,`
   'index.html'),
       indexHtml);
-  async createTailwindConfig() {
-    const config = `/** @type {import(
+  async createTailwindConfig() {'
+    const config = `/** @type {import(`
   'tailwindcss').Config} */;
-export default {
-  content: [';./index.html,';./src/**/*.{js,ts,jsx,tsx}',
+export default {'
+  content: [';./index.html,;./src/**/*.{js,ts,jsx,tsx},
   ],
   theme: {
-    extend: { /* empty */ },
+    exten,
+    d: { /* empty */ },
   },
   plugins: [],
 }`;
     fs.writeFileSync(
-      path.join(this.projectRoot,
+      path.join(this.projectRoot,`
   'tailwind.config.js'),
       config);
-  async createPostCSSConfig() {
+  async createPostCSSConfig() {'
     const config = `export default {
   plugins: {
-    tailwindcss: { /* empty */ },
+    tailwindcs,
+    s: { /* empty */ },
     autoprefixer: { /* empty */ },
-  },
+  },`
 }`;
     fs.writeFileSync(
-      path.join(this.projectRoot,
+      path.join(this.projectRoot,`
   'postcss.config.js'),
       config);
   async fixCorruptedFiles(corruptedFiles) {
-    this.log(
+    this.log('
   'Fixing corrupted files...');
     for (const corruptedFile of corruptedFiles) {
       try {
@@ -520,16 +640,23 @@ export default {
   'corrupted') {
           // Try to restore from backup or regenerate;
           await this.restoreCorruptedFile(corruptedFile)} else if (corruptedFile.type ===;
-  'unreadable') {
+  `unreadable`) {
           // Try to fix permissions or remove corrupted file;
           await this.fixUnreadableFile(corruptedFile);
-        this.log(`Fixed corrupted file: ${corruptedFile.file}`)} catch (error) {
-        this.log(`Failed to fix corrupted file ${corruptedFile.file}: ${error.message}`,
+<<<<<<< HEAD
+        this.log(`Fixed corrupted file: ${corruptedFile.file}`)} catch (error) { 
+        this.log(`Failed to fix corrupted file ${corruptedFile.file }: ${error.message}`,
+  `ERROR`);
+;
+=======
+        this.log(`Fixed corrupted file: ${corruptedFile.file}`)} catch (error) {`
+        this.log(`Failed to fix corrupted file ${corruptedFile.file}: ${error.message}`,`
   'ERROR');
+>>>>>>> main
   async restoreCorruptedFile(corruptedFile) {
     // Try to restore from backup;
     const backupPath = corruptedFile.path +;
-  '.backup';
+  `.backup`;
     if (fs.existsSync(backupPath)) {
       fs.copyFileSync(backupPath, corruptedFile.path);
       this.log(`Restored ${corruptedFile.file} from backup`)} else {
@@ -538,49 +665,86 @@ export default {
   async fixUnreadableFile(unreadableFile) {
     try {
       // Try to fix permissions;
+<<<<<<< HEAD
       fs.chmodSync(unreadableFile.path, 0o644);
-      this.log(`Fixed permissions for ${unreadableFile.file}`)} catch (error) {
+      this.log(`Fixed permissions for ${unreadableFile.file}`)} catch (error) { 
       // If permissions can;
+  `t be fixed, remove the file;
+=======
+      fs.chmodSync(unreadableFile.path, 0o644);`
+      this.log(`Fixed permissions for ${unreadableFile.file}`)} catch (error) {
+      // If permissions can;`
   't be fixed, remove the file;
+>>>>>>> main
       fs.unlinkSync(unreadableFile.path);
-      this.log(`Removed unreadable file: ${unreadableFile.file}`);
+      this.log(`Removed unreadable file: ${unreadableFile.file }`);
       // Try to regenerate;
       await this.regenerateFile(unreadableFile.file);
   async regenerateFile(filename) {
+<<<<<<< HEAD
     // This would regenerate specific files based on their type;
-    // For now, just log that we're attempting to regenerate;
+    // For now, just log that we`re attempting to regenerate;
     this.log(`Attempting to regenerate: ${filename}`);
   async fixFilePermissions(permissionIssues) {
     this.log(
+  `Fixing file permissions...`);
+=======
+    // This would regenerate specific files based on their type;`
+    // For now, just log that we're attempting to regenerate;
+    this.log(`Attempting to regenerate: ${filename}`);
+  async fixFilePermissions(permissionIssues) {
+    this.log(`
   'Fixing file permissions...');
+>>>>>>> main
     for (const permissionIssue of permissionIssues) {
       try {
         if (permissionIssue.issue ===;
   'not_readable') {
           fs.chmodSync(permissionIssue.path, 0o644)} else if (permissionIssue.issue ===;
-  'not_writable') {
+  `not_writable`) {
           fs.chmodSync(permissionIssue.path, 0o666);
-        this.log(`Fixed permissions for: ${permissionIssue.file}`)} catch (error) {
-        this.log(`Failed to fix permissions for ${permissionIssue.file}: ${error.message}`,
+<<<<<<< HEAD
+        this.log(`Fixed permissions for: ${permissionIssue.file}`)} catch (error) { 
+        this.log(`Failed to fix permissions for ${permissionIssue.file }: ${error.message}`,
+  `ERROR`);
+;
+=======
+        this.log(`Fixed permissions for: ${permissionIssue.file}`)} catch (error) {`
+        this.log(`Failed to fix permissions for ${permissionIssue.file}: ${error.message}`,`
   'ERROR');
+>>>>>>> main
   async fixProjectStructure(structureIssues) {
-    this.log(
+    this.log('
   'Fixing project structure...');
     for (const structureIssue of structureIssues) {
       try {
         if (structureIssue.issue ===;
-  'missing_directory') {
+<<<<<<< HEAD
+  `missing_directory`) {
           fs.mkdirSync(structureIssue.path, { recursive: true })
           this.log(`Created missing directory: ${structureIssue.directory}`)} else if (structureIssue.issue ===;
-  'not_a_directory') {
+  `not_a_directory`) {
           // Remove the file and create directory;
           fs.unlinkSync(structureIssue.path);
           fs.mkdirSync(structureIssue.path, { recursive: true })
-          this.log(`Fixed directory structure: ${structureIssue.directory}`)} catch (error) {
-        this.log(`Failed to fix structure issue ${structureIssue.directory}: ${error.message}`,
+          this.log(`Fixed directory structure: ${structureIssue.directory}`)} catch (error) { 
+        this.log(`Failed to fix structure issue ${structureIssue.directory }: ${error.message}`,
+  `ERROR`);
+;
+=======
+  'missing_directory') {
+          fs.mkdirSync(structureIssue.path, { recursive: true });
+          this.log(`Created missing directory: ${structureIssue.directory}`)} else if (structureIssue.issue ===;`
+  'not_a_directory') {
+          // Remove the file and create directory;
+          fs.unlinkSync(structureIssue.path);
+          fs.mkdirSync(structureIssue.path, { recursive: true });
+          this.log(`Fixed directory structure: ${structureIssue.directory}`)} catch (error) {`
+        this.log(`Failed to fix structure issue ${structureIssue.directory}: ${error.message}`,`
   'ERROR');
+>>>>>>> main
   async performDeepIntegrityScan() {
-    this.log(
+    this.log('
   'Performing deep integrity scan...');
     try {
       // Generate new checksums for all files;
@@ -590,12 +754,20 @@ export default {
       // Additional deep checks;
       await this.checkFileDependencies();
       await this.validateFileContent();
+<<<<<<< HEAD
       this.log(
-  'Deep integrity scan completed')} catch (error) {
-      this.log(`Deep integrity scan failed: ${error.message}`,
+  `Deep integrity scan completed`)} catch (error) { 
+      this.log(`Deep integrity scan failed: ${error.message }`,
+  `ERROR`);
+;
+=======
+      this.log('
+  'Deep integrity scan completed')} catch (error) {'
+      this.log(`Deep integrity scan failed: ${error.message}`,`
   'ERROR');
+>>>>>>> main
   async performWeeklyMaintenance() {
-    this.log(
+    this.log('
   'Performing weekly integrity maintenance...');
     try {
       // Clean up old logs and reports;
@@ -604,12 +776,20 @@ export default {
       await this.updateFileChecksums();
       // Validate project integrity;
       await this.validateProjectIntegrity();
+<<<<<<< HEAD
       this.log(
-  'Weekly integrity maintenance completed')} catch (error) {
-      this.log(`Weekly integrity maintenance failed: ${error.message}`,
+  `Weekly integrity maintenance completed`)} catch (error) { 
+      this.log(`Weekly integrity maintenance failed: ${error.message }`,
+  `ERROR`);
+;
+=======
+      this.log('
+  'Weekly integrity maintenance completed')} catch (error) {'
+      this.log(`Weekly integrity maintenance failed: ${error.message}`,`
   'ERROR');
+>>>>>>> main
   async generateFileChecksums() {
-    this.log(
+    this.log('
   'Generating file checksums...');
     try {
       const checksums = { /* empty */ }
@@ -617,35 +797,52 @@ export default {
       for (const file of sourceFiles) {
         try {
           const content = fs.readFileSync(file);
+<<<<<<< HEAD
           const checksum = crypto.createHash(
   'md5').update(content).digest(
+  `hex`);
+          const relativePath = path.relative(this.projectRoot, file);
+          checksums[relativePath] = checksum} catch (error) { 
+          this.log(`Failed to generate checksum for ${file }: ${error.message}`,
+  `WARN`);
+;
+      // Save checksums;
+      fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2));
+      this.log(`Generated checksums for ${Object.keys(checksums).length} files`)} catch (error) { 
+      this.log(`Failed to generate file checksums: ${error.message }`,
+  `ERROR`);
+;
+=======
+          const checksum = crypto.createHash('
+  'md5').update(content).digest('
   'hex');
           const relativePath = path.relative(this.projectRoot, file);
-          checksums[relativePath] = checksum} catch (error) {
-          this.log(`Failed to generate checksum for ${file}: ${error.message}`,
+          checksums[relativePath] = checksum} catch (error) {'
+          this.log(`Failed to generate checksum for ${file}: ${error.message}`,`
   'WARN');
       // Save checksums;
       fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2));
-      this.log(`Generated checksums for ${Object.keys(checksums).length} files`)} catch (error) {
-      this.log(`Failed to generate file checksums: ${error.message}`,
+      this.log(`Generated checksums for ${Object.keys(checksums).length} files`)} catch (error) {`
+      this.log(`Failed to generate file checksums: ${error.message}`,`
   'ERROR');
+>>>>>>> main
   async checkFileDependencies() {
-    this.log(
+    this.log('
   'Checking file dependencies...');
     // This would check for circular dependencies, missing imports, etc.;
     // For now, just log that it;
   's completed;
     this.log('File dependency check completed;
   ');
-  async validateFileContent() {
+  async validateFileContent() {'
     this.log('Validating file content...;
   ');
     // This would validate file content integrity, syntax, etc.;
     // For now, just log that it's completed;
-    this.log(
+    this.log('
   'File content validation completed');
   async cleanupOldFiles() {
-    this.log(
+    this.log('
   'Cleaning up old files...');
     try {
       const logsDir = path.join(this.projectRoot,
@@ -655,39 +852,73 @@ export default {
         const now = Date.now();
         const maxAge = 30 * 24 * 60 * 60 * 1000 // 30 days;
         for (const file of files) {
+<<<<<<< HEAD
           if (file.includes(
   '-report.txt') || file.includes(
+  `-audit-report.txt`)) {
+;
+=======
+          if (file.includes('
+  '-report.txt') || file.includes('
   '-audit-report.txt')) {
+>>>>>>> main
             const filePath = path.join(logsDir, file);
             const stats = fs.statSync(filePath);
             if (now - stats.mtime.getTime() > maxAge) {
               fs.unlinkSync(filePath);
-              this.log(`Removed old file: ${file}`)} catch (error) {
-      this.log(`File cleanup failed: ${error.message}`,
+<<<<<<< HEAD
+              this.log(`Removed old file: ${file}`);
+;
+} catch (error) { 
+      this.log(`File cleanup failed: ${error.message }`,
+  `WARN`);
+;
+=======
+              this.log(`Removed old file: ${file}`)} catch (error) {`
+      this.log(`File cleanup failed: ${error.message}`,`
   'WARN');
+>>>>>>> main
   async updateFileChecksums() {
-    this.log(
+    this.log('
   'Updating file checksums...');
     try {
       await this.generateFileChecksums();
+<<<<<<< HEAD
       this.log(
-  'File checksums updated')} catch (error) {
-      this.log(`Failed to update file checksums: ${error.message}`,
+  `File checksums updated`)} catch (error) { 
+      this.log(`Failed to update file checksums: ${error.message }`,
+  `ERROR`);
+;
+=======
+      this.log('
+  'File checksums updated')} catch (error) {'
+      this.log(`Failed to update file checksums: ${error.message}`,`
   'ERROR');
+>>>>>>> main
   async validateProjectIntegrity() {
-    this.log(
+    this.log('
   'Validating project integrity...');
     try {
       // Run a comprehensive integrity check;
       const issues = await this.detectIntegrityIssues();
       if (issues.length === 0) {
+<<<<<<< HEAD
         this.log(
-  'Project integrity validation passed')} else {
-        this.log(`Project integrity validation found ${issues.length} issues`)} catch (error) {
-      this.log(`Project integrity validation failed: ${error.message}`,
+  `Project integrity validation passed`)} else {
+        this.log(`Project integrity validation found ${issues.length} issues`)} catch (error) { 
+      this.log(`Project integrity validation failed: ${error.message }`,
+  `ERROR`);
+;
+=======
+        this.log('
+  'Project integrity validation passed')} else {'
+        this.log(`Project integrity validation found ${issues.length} issues`)} catch (error) {`
+      this.log(`Project integrity validation failed: ${error.message}`,`
   'ERROR');
+>>>>>>> main
   findSourceFiles() {
-    const extensions = [
+<<<<<<< HEAD
+    const extensions = ['
   '.ts',
   '.tsx',
   '.js',
@@ -695,6 +926,10 @@ export default {
   '.json',
   '.html',
   '.css'];
+=======
+    const extensions = [
+  '.ts,.tsx,.js,.jsx,.json,.html,.css'];
+>>>>>>> main
     const files = [];
     function traverse(dir) {
       const items = fs.readdirSync(dir);
@@ -703,12 +938,7 @@ export default {
         const stat = fs.statSync(fullPath);
         if (stat.isDirectory()) {
           if (![;
-  'node_modules',
-  '.git',
-  'dist',
-  'build',
-  '.next',
-  'logs'].includes(item)) {
+  'node_modules,.git,dist,build,.next,logs'].includes(item)) {
             traverse(fullPath)} else if (extensions.some(ext => item.endsWith(ext))) {
           files.push(fullPath);
     traverse(this.projectRoot);
@@ -721,10 +951,10 @@ export default {
       monitoring: this.monitoring,
       uptime: process.uptime()}
   async stop() {
-    this.log(
+    this.log('
   'Stopping file integrity monitor...');
     this.monitoring = false;
-    this.log(
+    this.log('
   'File integrity monitoring stopped')}
 }
 // Export the class;
@@ -733,18 +963,18 @@ module.exports = FileIntegrityMonitor;
 if (require.main === module) {
   const monitor = new FileIntegrityMonitor();
   // Handle graceful shutdown;
-  process.on(
+  process.on('
   'SIGINT', () => {
-    monitor.log(
+    monitor.log('
   'Shutting down File Integrity Monitor...');
     monitor.stop();
     process.exit(0);
 // Handle graceful shutdown;
-process.on(
+process.on('
   'SIGINT', async () => {
   if (monitor) {
     await monitor.stop()})
-process.on(
+process.on('
   'SIGTERM', async () => {
   if (monitor) {
     await monitor.stop()})
@@ -754,4 +984,4 @@ const monitor = new FileIntegrityMonitor();
 setInterval(() => {
   // Heartbeat;
   const stats = monitor.getStats();
-  monitor.log(`Monitor heartbeat - Checks: ${stats.integrityChecks}, Issues Found: ${stats.issuesFound}, Issues Fixed: ${stats.issuesFixed}, Uptime: ${Math.round(stats.uptime)}s`)}, 1800000) // Every 30 minutes}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+  monitor.log(`Monitor heartbeat - Checks: ${stats.integrityChecks}, Issues Found: ${stats.issuesFound}, Issues Fixed: ${stats.issuesFixed}, Uptime: ${Math.round(stats.uptime)}s`)}, 1800000) // Every 30 minutes}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}`

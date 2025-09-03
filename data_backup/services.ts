@@ -6,16 +6,21 @@ export interface Service {
    features: string[];
    pricing: { starter: number;
    professional: number;
-   enterprise: number;
-   currency: string}
+   enterpris,
+    e: number;
+   currenc,
+    y: string}
   benefits: string[];
   useCases: string[];
   technologies: string[];
-  link: string;
-  icon: string}
+  lin,
+    k: string;
+  ico,
+    n: string}
 export const services: Service[] = [;
-  // Micro SaaS Services{
-    id: 'ai-sales-copilot',
+  // Micro SaaS Services{'
+    i,
+    d: 'ai-sales-copilot',
     name: 'AI Sales Copilot',
     category: 'ai-services',
     description: 'Context-aware AI assistant that drafts emails, qualifies leads, and updates CRM with verifiable sources.',
@@ -27,51 +32,57 @@ export const services: Service[] = [;
       'Governed prompt library',
       'SOC2-ready logging';
     ],
-    pricing: { starter: 999, professional: 2999, enterprise: 7999, currency: 'USD' },
+    pricing: { starte,
+    r: 999, professional: 2999, enterprise: 7999, currency: 'USD' },
     benefits: ['Shorter sales cycles', 'Higher reply rates', 'Better CRM hygiene'],
     useCases: ['B2B outbound', 'Account management', 'Customer success'],
     technologies: ['OpenAI', 'Vector DB', 'OAuth', 'HubSpot/Salesforce APIs'],
-    link: 'https://ziontechgroup.com/services/ai-sales-copilot',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-sales-copilot',
     icon: '🤝'},
-  {
+  {'
     id: 'finops-cost-optimizer',
     name: 'Cloud FinOps Cost Optimizer',
     category: 'it-services',
     description: 'Continuous cloud spend optimization with rightsizing, RI/SP recommendations, and anomaly detection.',
     features: [;
-      'Multi-cloud ingest (AWS, GCP, Azure)',
+      'Multi-cloud ingest (AWS, GCP, Azure),
       'Rightsizing recommendations',
       'RI/SP planning and coverage',
       'Kubernetes cost allocation',
       'Anomaly detection alerts',
       'Weekly savings reports';
     ],
-    pricing: { starter: 2000, professional: 6500, enterprise: 18000, currency: 'USD' },
+    pricing: { starte,
+    r: 2000, professional: 6500, enterprise: 18000, currency: 'USD' },
     benefits: ['15–35% cost reduction', 'Fewer surprise bills', 'Tagging hygiene'],
     useCases: ['Multi-account orgs', 'Kubernetes clusters', 'Data platforms'],
     technologies: ['Cloud billing APIs', 'Timeseries DB', 'Python/Node'],
-    link: 'https://ziontechgroup.com/services/cloud-finops-cost-optimizer',
+    link: 'http,
+    s://ziontechgroup.com/services/cloud-finops-cost-optimizer',
     icon: '💸'},
-  {
+  {'
     id: 'gdpr-dsar-automation',
     name: 'GDPR/CCPA DSAR Automation',
     category: 'micro-saas',
     description: 'Automate data subject access requests with secure identity verification and system-of-record connectors.',
     features: [;
-      'Identity verification (KYC)',
+      'Identity verification (KYC),
       'System discovery & connectors',
       'Automated data packaging',
       'Deletion and rectification flows',
       'Deadline SLA tracking',
       'Audit trails and exports';
     ],
-    pricing: { starter: 99, professional: 299, enterprise: 999, currency: 'USD' },
+    pricing: { starte,
+    r: 99, professional: 299, enterprise: 999, currency: 'USD' },
     benefits: ['Lower legal risk', 'Faster DSAR turnaround', 'Reduced manual work'],
     useCases: ['B2C apps', 'Marketplaces', 'SaaS platforms'],
     technologies: ['OAuth', 'Encryption at rest', 'Queue workers'],
-    link: 'https://ziontechgroup.com/services/gdpr-dsar-automation',
+    link: 'http,
+    s://ziontechgroup.com/services/gdpr-dsar-automation',
     icon: '🛡️'},
-  {
+  {'
     id: 'ai-data-labeling-studio',
     name: 'AI Data Labeling Studio',
     category: 'micro-saas',
@@ -84,13 +95,15 @@ export const services: Service[] = [;
       'Webhooks and SDK',
       'S3/GCS integrations';
     ],
-    pricing: { starter: 49, professional: 199, enterprise: 799, currency: 'USD' },
+    pricing: { starte,
+    r: 49, professional: 199, enterprise: 799, currency: 'USD' },
     benefits: ['Higher label quality', 'Lower cost per label', 'Faster model cycles'],
     useCases: ['Computer vision', 'NLP', 'Speech analytics'],
     technologies: ['React', 'WebSockets', 'CUDA optional', 'Cloud storage'],
-    link: 'https://ziontechgroup.com/services/ai-data-labeling-studio',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-data-labeling-studio',
     icon: '🏷️'},
-  {
+  {'
     id: 'ml-observability-suite',
     name: 'ML Observability Suite',
     category: 'ai-services',
@@ -103,13 +116,15 @@ export const services: Service[] = [;
       'Batch and real-time support',
       'PagerDuty/Slack alerts';
     ],
-    pricing: { starter: 1500, professional: 4500, enterprise: 12000, currency: 'USD' },
+    pricing: { starte,
+    r: 1500, professional: 4500, enterprise: 12000, currency: 'USD' },
     benefits: ['Reduced incidents', 'Faster RCA', 'Higher model reliability'],
     useCases: ['Production ML', 'LLM apps', 'Realtime analytics'],
     technologies: ['Python', 'Prometheus', 'Kafka', 'dbt'],
-    link: 'https://ziontechgroup.com/services/ml-observability-suite',
+    link: 'http,
+    s://ziontechgroup.com/services/ml-observability-suite',
     icon: '📈'},
-  {
+  {'
     id: 'zero-trust-sase-rollout',
     name: 'Zero Trust SASE Rollout',
     category: 'it-services',
@@ -122,11 +137,13 @@ export const services: Service[] = [;
       'Logging and SIEM integration',
       'Runbooks and training';
     ],
-    pricing: { starter: 25000, professional: 65000, enterprise: 150000, currency: 'USD' },
+    pricing: { starte,
+    r: 25000, professional: 65000, enterprise: 150000, currency: 'USD' },
     benefits: ['Lower breach risk', 'Better user experience', 'Compliance-ready'],
     useCases: ['Remote workforce', 'Contractor access', 'M&A consolidations'],
     technologies: ['IdP', 'SASE', 'MDM', 'SIEM'],
-    link: 'https://ziontechgroup.com/services/zero-trust-sase-rollout',
+    link: 'http,
+    s://ziontechgroup.com/services/zero-trust-sase-rollout',
     icon: '🔒'},
     id: 'ai-content-generator',
     name: 'AI Content Generator Pro',
@@ -143,7 +160,8 @@ export const services: Service[] = [;
       'Content templates library';
     ],
     pricing: {
-      starter: 29,
+      starte,
+    r: 29,
       professional: 79,
       enterprise: 199,
       currency: 'USD'},
@@ -162,9 +180,10 @@ export const services: Service[] = [;
       'Marketing copywriting';
     ],
     technologies: ['OpenAI GPT-4', 'React', 'Node.js', 'PostgreSQL', 'Stripe'],
-    link: 'https://ziontechgroup.com/services/ai-content-generator',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-content-generator',
     icon: '📝'},
-  {
+  {'
     id: 'ai-meeting-notes-assistant',
     name: 'AI Meeting Notes Assistant',
     category: 'micro-saas',
@@ -174,12 +193,13 @@ export const services: Service[] = [;
       'Accurate multilingual transcription',
       'Key-point and decision summaries',
       'Action items with owners and due dates',
-      'CRM and task manager sync (HubSpot, Jira, Asana)',
+      'CRM and task manager sync (HubSpot, Jira, Asana),
       'Speaker diarization',
       'Secure storage and search',
       'Compliance-friendly redaction';
     ],
-    pricing: { starter: 19, professional: 49, enterprise: 149, currency: 'USD' },
+    pricing: { starte,
+    r: 19, professional: 49, enterprise: 149, currency: 'USD' },
     benefits: [;
       'Save 4+ hours per week per employee',
       'Never miss decisions or follow-ups',
@@ -193,9 +213,10 @@ export const services: Service[] = [;
       'Client discovery and requirement gathering';
     ],
     technologies: ['Whisper/ASR', 'OpenAI', 'React', 'Node.js', 'PostgreSQL'],
-    link: 'https://ziontechgroup.com/services/ai-meeting-notes-assistant',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-meeting-notes-assistant',
     icon: '📝'},
-  {
+  {'
     id: 'whatsapp-crm-inbox',
     name: 'WhatsApp CRM Inbox',
     category: 'micro-saas',
@@ -206,11 +227,12 @@ export const services: Service[] = [;
       'AI reply suggestions',
       'Contact enrichment and tagging',
       'Campaign broadcasts with opt-in',
-      'CRM sync (HubSpot, Pipedrive)',
+      'CRM sync (HubSpot, Pipedrive),
       'Metrics and SLA tracking',
       'Role-based permissions';
     ],
-    pricing: { starter: 29, professional: 79, enterprise: 199, currency: 'USD' },
+    pricing: { starte,
+    r: 29, professional: 79, enterprise: 199, currency: 'USD' },
     benefits: [;
       'Faster first-response times',
       'Higher conversion from chat-to-deal',
@@ -219,9 +241,10 @@ export const services: Service[] = [;
     ],
     useCases: ['Inbound sales', 'Customer support', 'Abandoned cart recovery', 'Local services intake'],
     technologies: ['Meta WhatsApp API', 'React', 'Node.js', 'Redis'],
-    link: 'https://ziontechgroup.com/services/whatsapp-crm-inbox',
+    link: 'http,
+    s://ziontechgroup.com/services/whatsapp-crm-inbox',
     icon: '💬'},
-  {
+  {'
     id: 'local-seo-audit-suite',
     name: 'Local SEO Audit Suite',
     category: 'micro-saas',
@@ -236,13 +259,15 @@ export const services: Service[] = [;
       'Backlink discovery',
       'Actionable checklist';
     ],
-    pricing: { starter: 12, professional: 35, enterprise: 99, currency: 'USD' },
+    pricing: { starte,
+    r: 12, professional: 35, enterprise: 99, currency: 'USD' },
     benefits: ['Higher local rankings', 'Increased foot traffic and calls', 'Quick, actionable fixes', 'Benchmark vs competitors'],
     useCases: ['Local services', 'Restaurants', 'Clinics', 'Home services'],
     technologies: ['SEO APIs', 'React', 'Node.js', 'PostgreSQL'],
-    link: 'https://ziontechgroup.com/services/local-seo-audit-suite',
+    link: 'http,
+    s://ziontechgroup.com/services/local-seo-audit-suite',
     icon: '📍'},
-  {
+  {'
     id: 'ai-rfp-proposal-writer',
     name: 'AI RFP & Proposal Writer',
     category: 'micro-saas',
@@ -257,13 +282,15 @@ export const services: Service[] = [;
       'Export to DOCX/PDF',
       'Red teaming and accuracy guardrails';
     ],
-    pricing: { starter: 59, professional: 149, enterprise: 399, currency: 'USD' },
+    pricing: { starte,
+    r: 59, professional: 149, enterprise: 399, currency: 'USD' },
     benefits: ['Win more bids', 'Cut drafting time by 70%', 'Ensure compliance', 'Consistent branding'],
     useCases: ['Government contracts', 'Enterprise RFPs', 'Agency proposals', 'Vendor questionnaires'],
     technologies: ['RAG', 'OpenAI', 'Vector DB', 'React', 'Node.js'],
-    link: 'https://ziontechgroup.com/services/ai-rfp-proposal-writer',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-rfp-proposal-writer',
     icon: '📄'},
-  {
+  {'
     id: 'ecommerce-image-optimizer',
     name: 'E‑commerce Image Optimizer',
     category: 'micro-saas',
@@ -278,13 +305,15 @@ export const services: Service[] = [;
       'CDN delivery',
       'Accessibility contrast checks';
     ],
-    pricing: { starter: 15, professional: 49, enterprise: 129, currency: 'USD' },
+    pricing: { starte,
+    r: 15, professional: 49, enterprise: 129, currency: 'USD' },
     benefits: ['Higher conversion rates', 'Improved Core Web Vitals', 'Brand-consistent visuals', 'Reduced design costs'],
     useCases: ['D2C stores', 'Marketplaces', 'Wholesale catalogs', 'Dropshipping'],
     technologies: ['Computer Vision', 'FFmpeg', 'CDN', 'React', 'Node.js'],
-    link: 'https://ziontechgroup.com/services/ecommerce-image-optimizer',
+    link: 'http,
+    s://ziontechgroup.com/services/ecommerce-image-optimizer',
     icon: '🛍️'},
-  {
+  {'
     id: 'soc2-readiness-and-automation',
     name: 'SOC 2 Readiness & Automation',
     category: 'it-services',
@@ -299,13 +328,15 @@ export const services: Service[] = [;
       'Ticketing and workflows',
       'Reporting and dashboards';
     ],
-    pricing: { starter: 8000, professional: 25000, enterprise: 65000, currency: 'USD' },
+    pricing: { starte,
+    r: 8000, professional: 25000, enterprise: 65000, currency: 'USD' },
     benefits: ['Faster audit timelines', 'Lower compliance costs', 'Reduced manual effort', 'Audit-ready anytime'],
     useCases: ['SaaS startups', 'FinTech', 'HealthTech', 'Enterprise vendor programs'],
     technologies: ['GRC', 'SIEM', 'IDP', 'Cloud APIs', 'Automation'],
-    link: 'https://ziontechgroup.com/services/soc2-readiness-and-automation',
+    link: 'http,
+    s://ziontechgroup.com/services/soc2-readiness-and-automation',
     icon: '✅'},
-  {
+  {'
     id: 'lakehouse-architecture-deployment',
     name: 'Data Lakehouse Architecture & Deployment',
     category: 'it-services',
@@ -320,13 +351,15 @@ export const services: Service[] = [;
       'BI and semantic layer setup',
       'Security and compliance';
     ],
-    pricing: { starter: 30000, professional: 90000, enterprise: 250000, currency: 'USD' },
+    pricing: { starte,
+    r: 30000, professional: 90000, enterprise: 250000, currency: 'USD' },
     benefits: ['Unified storage and compute', 'Lower TCO vs legacy DW', 'Governed self-serve analytics', 'Future-proof architecture'],
     useCases: ['Enterprise analytics', 'IoT telemetry', 'Marketing data hubs', 'Financial reporting'],
     technologies: ['Delta Lake', 'Iceberg', 'Apache Spark', 'dbt', 'Airflow', 'AWS/Azure/GCP'],
-    link: 'https://ziontechgroup.com/services/lakehouse-architecture-deployment',
+    link: 'http,
+    s://ziontechgroup.com/services/lakehouse-architecture-deployment',
     icon: '🏗️'},
-  {
+  {'
     id: 'finops-cloud-cost-optimization',
     name: 'FinOps Cloud Cost Optimization',
     category: 'it-services',
@@ -341,13 +374,15 @@ export const services: Service[] = [;
       'Dashboards and KPIs',
       'Stakeholder enablement';
     ],
-    pricing: { starter: 6000, professional: 18000, enterprise: 75000, currency: 'USD' },
+    pricing: { starte,
+    r: 6000, professional: 18000, enterprise: 75000, currency: 'USD' },
     benefits: ['Reduce cloud spend 20–40%', 'Faster budgeting cycles', 'Predictable unit economics', 'No vendor lock-in'],
     useCases: ['SaaS platforms', 'Data platforms', 'Microservices estates', 'Seasonal workloads'],
     technologies: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Cloud APIs', 'Automation'],
-    link: 'https://ziontechgroup.com/services/finops-cloud-cost-optimization',
+    link: 'http,
+    s://ziontechgroup.com/services/finops-cloud-cost-optimization',
     icon: '💸'},
-  {
+  {'
     id: 'sre-reliability-retainer',
     name: 'SRE Reliability Retainer',
     category: 'it-services',
@@ -362,17 +397,20 @@ export const services: Service[] = [;
       'Reliability roadmap',
       'Monthly executive reporting';
     ],
-    pricing: { starter: 12000, professional: 35000, enterprise: 120000, currency: 'USD' },
+    pricing: { starte,
+    r: 12000, professional: 35000, enterprise: 120000, currency: 'USD' },
     benefits: ['Lower downtime risk', 'Faster MTTR', 'Predictable reliability', 'Happier engineers and users'],
     useCases: ['Payments and checkout', 'Core APIs', 'Real-time apps', 'Multi-tenant SaaS'],
     technologies: ['Terraform', 'Kubernetes', 'Prometheus', 'Grafana', 'OpenTelemetry', 'PagerDuty'],
-    link: 'https://ziontechgroup.com/services/sre-reliability-retainer',
+    link: 'http,
+    s://ziontechgroup.com/services/sre-reliability-retainer',
     icon: '🛠️'},
-  {
+  {'
     id: 'rag-enterprise-search',
     name: 'RAG Enterprise Search',
     category: 'ai-services',
-    description: 'Retrieval-Augmented Generation for enterprise knowledge: private, secure question answering over documents, tickets, and wikis.',
+    description: 'Retrieval-Augmented Generation for enterprise knowledg,
+    e: private, secure question answering over documents, tickets, and wikis.',
     features: [;
       'Document ingestion and chunking',
       'Embeddings and vector indexing',
@@ -383,13 +421,15 @@ export const services: Service[] = [;
       'Usage analytics and guardrails',
       'Multi-tenant isolation';
     ],
-    pricing: { starter: 10000, professional: 35000, enterprise: 120000, currency: 'USD' },
+    pricing: { starte,
+    r: 10000, professional: 35000, enterprise: 120000, currency: 'USD' },
     benefits: ['Reduce search time by 80%', 'Trustworthy answers with citations', 'Protect sensitive data', 'Scale across departments'],
     useCases: ['Support deflection', 'Policy Q&A', 'Sales playbooks', 'Engineering runbooks'],
     technologies: ['RAG', 'Vector DB', 'OpenAI', 'Azure OpenAI', 'LangChain', 'Next.js'],
-    link: 'https://ziontechgroup.com/services/rag-enterprise-search',
+    link: 'http,
+    s://ziontechgroup.com/services/rag-enterprise-search',
     icon: '🔎'},
-  {
+  {'
     id: 'mlops-platform-and-ops',
     name: 'MLOps Platform & Operations',
     category: 'ai-services',
@@ -404,13 +444,15 @@ export const services: Service[] = [;
       'Shadow deployments',
       'Incident and rollback playbooks';
     ],
-    pricing: { starter: 20000, professional: 60000, enterprise: 180000, currency: 'USD' },
+    pricing: { starte,
+    r: 20000, professional: 60000, enterprise: 180000, currency: 'USD' },
     benefits: ['Faster model velocity', 'Reduced production risk', 'Traceable lineage', 'Operational excellence'],
     useCases: ['Personalization', 'Fraud detection', 'Forecasting', 'NLP pipelines'],
     technologies: ['MLflow', 'Kubeflow', 'Vertex AI', 'SageMaker', 'Airflow', 'dbt'],
-    link: 'https://ziontechgroup.com/services/mlops-platform-and-ops',
+    link: 'http,
+    s://ziontechgroup.com/services/mlops-platform-and-ops',
     icon: '🧪'},
-  {
+  {'
     id: 'synthetic-data-generation',
     name: 'Synthetic Data Generation',
     category: 'ai-services',
@@ -425,13 +467,15 @@ export const services: Service[] = [;
       'Versioning and governance',
       'Regulatory documentation';
     ],
-    pricing: { starter: 15000, professional: 45000, enterprise: 150000, currency: 'USD' },
+    pricing: { starte,
+    r: 15000, professional: 45000, enterprise: 150000, currency: 'USD' },
     benefits: ['Accelerate AI safely', 'Reduce privacy risk', 'Balance rare classes', 'Share data across teams'],
     useCases: ['Healthcare analytics', 'Financial modeling', 'CV pretraining', 'Anomaly detection'],
     technologies: ['GANs', 'Diffusion', 'DP-SGD', 'Python', 'TensorFlow', 'PyTorch'],
-    link: 'https://ziontechgroup.com/services/synthetic-data-generation',
+    link: 'http,
+    s://ziontechgroup.com/services/synthetic-data-generation',
     icon: '🧬'},
-  {
+  {'
     id: 'llm-evaluation-red-teaming',
     name: 'LLM Evaluation & Red-Teaming',
     category: 'ai-services',
@@ -446,13 +490,15 @@ export const services: Service[] = [;
       'Incident response runbooks',
       'Reporting for compliance teams';
     ],
-    pricing: { starter: 12000, professional: 35000, enterprise: 100000, currency: 'USD' },
+    pricing: { starte,
+    r: 12000, professional: 35000, enterprise: 100000, currency: 'USD' },
     benefits: ['Reduce production incidents', 'Meet regulatory expectations', 'Improve answer quality', 'Strengthen brand trust'],
     useCases: ['Customer support agents', 'Internal copilots', 'Content generation', 'Healthcare/finance assistants'],
     technologies: ['Eval frameworks', 'OpenAI', 'Azure OpenAI', 'Guardrails', 'Vector search'],
-    link: 'https://ziontechgroup.com/services/llm-evaluation-red-teaming',
+    link: 'http,
+    s://ziontechgroup.com/services/llm-evaluation-red-teaming',
     icon: '🛡️'},
-  {
+  {'
     id: 'social-media-scheduler',
     name: 'Social Media Scheduler Pro',
     category: 'micro-saas',
@@ -468,7 +514,8 @@ export const services: Service[] = [;
       'Engagement tracking';
     ],
     pricing: {
-      starter: 19,
+      starte,
+    r: 19,
       professional: 49,
       enterprise: 129,
       currency: 'USD'},
@@ -485,9 +532,10 @@ export const services: Service[] = [;
       'E-commerce brands';
     ],
     technologies: ['React', 'Node.js', 'MongoDB', 'Social APIs', 'Redis'],
-    link: 'https://ziontechgroup.com/services/social-media-scheduler',
+    link: 'http,
+    s://ziontechgroup.com/services/social-media-scheduler',
     icon: '📱'},
-  {
+  {'
     id: 'email-marketing-automation',
     name: 'Email Marketing Automation Suite',
     category: 'micro-saas',
@@ -503,7 +551,8 @@ export const services: Service[] = [;
       'Template library';
     ],
     pricing: {
-      starter: 25,
+      starte,
+    r: 25,
       professional: 65,
       enterprise: 179,
       currency: 'USD'},
@@ -520,9 +569,10 @@ export const services: Service[] = [;
       'Non-profit organizations';
     ],
     technologies: ['React', 'Node.js', 'PostgreSQL', 'SendGrid', 'Redis'],
-    link: 'https://ziontechgroup.com/services/email-marketing-automation',
+    link: 'http,
+    s://ziontechgroup.com/services/email-marketing-automation',
     icon: '📧'},
-  {
+  {'
     id: 'invoice-management-system',
     name: 'Smart Invoice Management',
     category: 'micro-saas',
@@ -538,7 +588,8 @@ export const services: Service[] = [;
       'Payment reminders';
     ],
     pricing: {
-      starter: 15,
+      starte,
+    r: 15,
       professional: 39,
       enterprise: 99,
       currency: 'USD'},
@@ -555,9 +606,10 @@ export const services: Service[] = [;
       'Service providers';
     ],
     technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'PDF.js'],
-    link: 'https://ziontechgroup.com/services/invoice-management',
+    link: 'http,
+    s://ziontechgroup.com/services/invoice-management',
     icon: '🧾'},
-  {
+  {'
     id: 'time-tracking-productivity',
     name: 'Time Tracking & Productivity Suite',
     category: 'micro-saas',
@@ -573,7 +625,8 @@ export const services: Service[] = [;
       'Mobile apps';
     ],
     pricing: {
-      starter: 12,
+      starte,
+    r: 12,
       professional: 29,
       enterprise: 79,
       currency: 'USD'},
@@ -590,9 +643,10 @@ export const services: Service[] = [;
       'Software development';
     ],
     technologies: ['React', 'Node.js', 'MongoDB', 'WebRTC', 'Chart.js'],
-    link: 'https://ziontechgroup.com/services/time-tracking',
+    link: 'http,
+    s://ziontechgroup.com/services/time-tracking',
     icon: '⏱️'},
-  {
+  {'
     id: 'crm-sales-pipeline',
     name: 'CRM & Sales Pipeline Manager',
     category: 'micro-saas',
@@ -608,7 +662,8 @@ export const services: Service[] = [;
       'Team collaboration';
     ],
     pricing: {
-      starter: 22,
+      starte,
+    r: 22,
       professional: 55,
       enterprise: 149,
       currency: 'USD'},
@@ -625,9 +680,10 @@ export const services: Service[] = [;
       'B2B companies';
     ],
     technologies: ['React', 'Node.js', 'PostgreSQL', 'AI/ML', 'Email APIs'],
-    link: 'https://ziontechgroup.com/services/crm-sales-pipeline',
+    link: 'http,
+    s://ziontechgroup.com/services/crm-sales-pipeline',
     icon: '📊'},
-  {
+  {'
     id: 'appointment-booking-system',
     name: 'Smart Appointment Booking',
     category: 'micro-saas',
@@ -643,7 +699,8 @@ export const services: Service[] = [;
       'Mobile optimization';
     ],
     pricing: {
-      starter: 18,
+      starte,
+    r: 18,
       professional: 45,
       enterprise: 119,
       currency: 'USD'},
@@ -660,9 +717,10 @@ export const services: Service[] = [;
       'Fitness trainers';
     ],
     technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Calendar APIs'],
-    link: 'https://ziontechgroup.com/services/appointment-booking',
+    link: 'http,
+    s://ziontechgroup.com/services/appointment-booking',
     icon: '📅'},
-  {
+  {'
     id: 'inventory-pos-system',
     name: 'Inventory & POS System',
     category: 'micro-saas',
@@ -678,7 +736,8 @@ export const services: Service[] = [;
       'Staff management';
     ],
     pricing: {
-      starter: 35,
+      starte,
+    r: 35,
       professional: 85,
       enterprise: 229,
       currency: 'USD'},
@@ -695,9 +754,10 @@ export const services: Service[] = [;
       'Boutique stores';
     ],
     technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Barcode APIs'],
-    link: 'https://ziontechgroup.com/services/inventory-pos',
+    link: 'http,
+    s://ziontechgroup.com/services/inventory-pos',
     icon: '🛒'},
-  {
+  {'
     id: 'document-management-system',
     name: 'Document Management & Collaboration',
     category: 'micro-saas',
@@ -713,7 +773,8 @@ export const services: Service[] = [;
       'Audit trails';
     ],
     pricing: {
-      starter: 20,
+      starte,
+    r: 20,
       professional: 50,
       enterprise: 139,
       currency: 'USD'},
@@ -730,9 +791,10 @@ export const services: Service[] = [;
       'Consulting companies';
     ],
     technologies: ['React', 'Node.js', 'MongoDB', 'AWS S3', 'AI Search'],
-    link: 'https://ziontechgroup.com/services/document-management',
+    link: 'http,
+    s://ziontechgroup.com/services/document-management',
     icon: '📄'},
-  {
+  {'
     id: 'survey-feedback-platform',
     name: 'Survey & Feedback Platform',
     category: 'micro-saas',
@@ -748,7 +810,8 @@ export const services: Service[] = [;
       'Mobile optimization';
     ],
     pricing: {
-      starter: 16,
+      starte,
+    r: 16,
       professional: 42,
       enterprise: 109,
       currency: 'USD'},
@@ -765,9 +828,10 @@ export const services: Service[] = [;
       'Event feedback';
     ],
     technologies: ['React', 'Node.js', 'PostgreSQL', 'AI/ML', 'Chart.js'],
-    link: 'https://ziontechgroup.com/services/survey-feedback',
+    link: 'http,
+    s://ziontechgroup.com/services/survey-feedback',
     icon: '📋'},
-  {
+  {'
     id: 'expense-management-system',
     name: 'Expense Management & Reimbursement',
     category: 'micro-saas',
@@ -783,7 +847,8 @@ export const services: Service[] = [;
       'Integration with accounting';
     ],
     pricing: {
-      starter: 14,
+      starte,
+    r: 14,
       professional: 35,
       enterprise: 89,
       currency: 'USD'},
@@ -800,9 +865,10 @@ export const services: Service[] = [;
       'Sales teams';
     ],
     technologies: ['React', 'Node.js', 'PostgreSQL', 'OCR', 'Stripe'],
-    link: 'https://ziontechgroup.com/services/expense-management',
+    link: 'http,
+    s://ziontechgroup.com/services/expense-management',
     icon: '💰'},
-  {
+  {'
     id: 'project-management-suite',
     name: 'Smart Project Manager',
     category: 'micro-saas',
@@ -816,7 +882,8 @@ export const services: Service[] = [;
       'Mobile app';
     ],
     pricing: {
-      starter: 19,
+      starte,
+    r: 19,
       professional: 49,
       enterprise: 129,
       currency: 'USD'},
@@ -833,9 +900,10 @@ export const services: Service[] = [;
       'Event planning';
     ],
     technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
-    link: 'https://ziontechgroup.com/services/project-management',
+    link: 'http,
+    s://ziontechgroup.com/services/project-management',
     icon: '📊'},
-  {
+  {'
     id: 'inventory-management',
     name: 'Inventory Tracker Pro',
     category: 'micro-saas',
@@ -849,7 +917,8 @@ export const services: Service[] = [;
       'Integration APIs';
     ],
     pricing: {
-      starter: 39,
+      starte,
+    r: 39,
       professional: 89,
       enterprise: 249,
       currency: 'USD'},
@@ -866,9 +935,10 @@ export const services: Service[] = [;
       'Warehouse management';
     ],
     technologies: ['React Native', 'Python', 'PostgreSQL', 'TensorFlow'],
-    link: 'https://ziontechgroup.com/services/inventory-management',
+    link: 'http,
+    s://ziontechgroup.com/services/inventory-management',
     icon: '📦'},
-  {
+  {'
     id: 'customer-support-platform',
     name: 'AI Support Assistant',
     category: 'micro-saas',
@@ -882,7 +952,8 @@ export const services: Service[] = [;
       'Integration capabilities';
     ],
     pricing: {
-      starter: 25,
+      starte,
+    r: 25,
       professional: 65,
       enterprise: 179,
       currency: 'USD'},
@@ -899,9 +970,10 @@ export const services: Service[] = [;
       'Educational institutions';
     ],
     technologies: ['Next.js', 'OpenAI', 'Redis', 'PostgreSQL'],
-    link: 'https://ziontechgroup.com/services/customer-support',
+    link: 'http,
+    s://ziontechgroup.com/services/customer-support',
     icon: '🤖'},
-  // IT Services{
+  // IT Services{'
     id: 'cloud-migration',
     name: 'Cloud Migration Expert',
     category: 'it-services',
@@ -917,7 +989,8 @@ export const services: Service[] = [;
       '24/7 monitoring';
     ],
     pricing: {
-      starter: 5000,
+      starte,
+    r: 5000,
       professional: 15000,
       enterprise: 50000,
       currency: 'USD'},
@@ -935,9 +1008,10 @@ export const services: Service[] = [;
       'Application scaling';
     ],
     technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Terraform'],
-    link: 'https://ziontechgroup.com/services/cloud-migration',
+    link: 'http,
+    s://ziontechgroup.com/services/cloud-migration',
     icon: '☁️'},
-  {
+  {'
     id: 'multi-cloud-strategy',
     name: 'Multi-Cloud Strategy & Management',
     category: 'it-services',
@@ -953,7 +1027,8 @@ export const services: Service[] = [;
       'Compliance auditing';
     ],
     pricing: {
-      starter: 8000,
+      starte,
+    r: 8000,
       professional: 25000,
       enterprise: 75000,
       currency: 'USD'},
@@ -970,9 +1045,10 @@ export const services: Service[] = [;
       'Compliance requirements';
     ],
     technologies: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Terraform', 'Ansible'],
-    link: 'https://ziontechgroup.com/services/multi-cloud-strategy',
+    link: 'http,
+    s://ziontechgroup.com/services/multi-cloud-strategy',
     icon: '🌐'},
-  {
+  {'
     id: 'container-orchestration',
     name: 'Container Orchestration & Kubernetes',
     category: 'it-services',
@@ -988,7 +1064,8 @@ export const services: Service[] = [;
       'Security hardening';
     ],
     pricing: {
-      starter: 6000,
+      starte,
+    r: 6000,
       professional: 18000,
       enterprise: 55000,
       currency: 'USD'},
@@ -1005,9 +1082,10 @@ export const services: Service[] = [;
       'Legacy application modernization';
     ],
     technologies: ['Kubernetes', 'Docker', 'Istio', 'Helm', 'Prometheus', 'Grafana'],
-    link: 'https://ziontechgroup.com/services/container-orchestration',
+    link: 'http,
+    s://ziontechgroup.com/services/container-orchestration',
     icon: '📦'},
-  {
+  {'
     id: 'serverless-architecture',
     name: 'Serverless Architecture Implementation',
     category: 'it-services',
@@ -1023,7 +1101,8 @@ export const services: Service[] = [;
       'Auto-scaling configuration';
     ],
     pricing: {
-      starter: 4000,
+      starte,
+    r: 4000,
       professional: 12000,
       enterprise: 35000,
       currency: 'USD'},
@@ -1040,9 +1119,10 @@ export const services: Service[] = [;
       'IoT applications';
     ],
     technologies: ['AWS Lambda', 'Azure Functions', 'GCP Functions', 'API Gateway', 'EventBridge'],
-    link: 'https://ziontechgroup.com/services/serverless-architecture',
+    link: 'http,
+    s://ziontechgroup.com/services/serverless-architecture',
     icon: '⚡'},
-  {
+  {'
     id: 'network-security-audit',
     name: 'Network Security & Infrastructure Audit',
     category: 'it-services',
@@ -1058,7 +1138,8 @@ export const services: Service[] = [;
       'Incident response planning';
     ],
     pricing: {
-      starter: 3500,
+      starte,
+    r: 3500,
       professional: 9500,
       enterprise: 28000,
       currency: 'USD'},
@@ -1075,9 +1156,10 @@ export const services: Service[] = [;
       'Government agencies';
     ],
     technologies: ['Cisco', 'Fortinet', 'Palo Alto', 'Wireshark', 'Nmap', 'Snort'],
-    link: 'https://ziontechgroup.com/services/network-security-audit',
+    link: 'http,
+    s://ziontechgroup.com/services/network-security-audit',
     icon: '🛡️'},
-  {
+  {'
     id: 'database-optimization',
     name: 'Database Optimization & Migration',
     category: 'it-services',
@@ -1093,7 +1175,8 @@ export const services: Service[] = [;
       'Monitoring & alerting';
     ],
     pricing: {
-      starter: 3000,
+      starte,
+    r: 3000,
       professional: 8500,
       enterprise: 25000,
       currency: 'USD'},
@@ -1110,9 +1193,10 @@ export const services: Service[] = [;
       'High-availability setup';
     ],
     technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'AWS RDS', 'Azure SQL'],
-    link: 'https://ziontechgroup.com/services/database-optimization',
+    link: 'http,
+    s://ziontechgroup.com/services/database-optimization',
     icon: '🗄️'},
-  {
+  {'
     id: 'api-gateway-management',
     name: 'API Gateway & Microservices Management',
     category: 'it-services',
@@ -1128,7 +1212,8 @@ export const services: Service[] = [;
       'Security policies';
     ],
     pricing: {
-      starter: 2500,
+      starte,
+    r: 2500,
       professional: 7500,
       enterprise: 22000,
       currency: 'USD'},
@@ -1145,9 +1230,10 @@ export const services: Service[] = [;
       'Mobile app backends';
     ],
     technologies: ['Kong', 'AWS API Gateway', 'Azure API Management', 'Istio', 'Nginx'],
-    link: 'https://ziontechgroup.com/services/api-gateway-management',
+    link: 'http,
+    s://ziontechgroup.com/services/api-gateway-management',
     icon: '🔗'},
-  {
+  {'
     id: 'disaster-recovery-planning',
     name: 'Disaster Recovery & Business Continuity',
     category: 'it-services',
@@ -1163,7 +1249,8 @@ export const services: Service[] = [;
       'Regular audits';
     ],
     pricing: {
-      starter: 4000,
+      starte,
+    r: 4000,
       professional: 12000,
       enterprise: 35000,
       currency: 'USD'},
@@ -1180,9 +1267,10 @@ export const services: Service[] = [;
       'E-commerce platforms';
     ],
     technologies: ['Veeam', 'Commvault', 'AWS DR', 'Azure Site Recovery', 'VMware SRM'],
-    link: 'https://ziontechgroup.com/services/disaster-recovery-planning',
+    link: 'http,
+    s://ziontechgroup.com/services/disaster-recovery-planning',
     icon: '🔄'},
-  {
+  {'
     id: 'it-infrastructure-monitoring',
     name: 'IT Infrastructure Monitoring & Management',
     category: 'it-services',
@@ -1198,7 +1286,8 @@ export const services: Service[] = [;
       'Regular reporting';
     ],
     pricing: {
-      starter: 2000,
+      starte,
+    r: 2000,
       professional: 6000,
       enterprise: 18000,
       currency: 'USD'},
@@ -1215,11 +1304,12 @@ export const services: Service[] = [;
       'Critical applications';
     ],
     technologies: ['Nagios', 'Zabbix', 'Prometheus', 'Grafana', 'ELK Stack', 'Splunk'],
-    link: 'https://ziontechgroup.com/services/it-infrastructure-monitoring',
+    link: 'http,
+    s://ziontechgroup.com/services/it-infrastructure-monitoring',
     icon: '📊'},
-  {
+  {'
     id: 'identity-access-management',
-    name: 'Identity & Access Management (IAM)',
+    name: 'Identity & Access Management (IAM),
     category: 'it-services',
     description: 'Comprehensive identity and access management solutions with single sign-on, multi-factor authentication, and role-based access control.',
     features: [;
@@ -1233,7 +1323,8 @@ export const services: Service[] = [;
       'Integration with existing systems';
     ],
     pricing: {
-      starter: 3000,
+      starte,
+    r: 3000,
       professional: 9000,
       enterprise: 27000,
       currency: 'USD'},
@@ -1250,9 +1341,10 @@ export const services: Service[] = [;
       'Government agencies';
     ],
     technologies: ['Okta', 'Azure AD', 'AWS IAM', 'Auth0', 'SAML', 'OAuth'],
-    link: 'https://ziontechgroup.com/services/identity-access-management',
+    link: 'http,
+    s://ziontechgroup.com/services/identity-access-management',
     icon: '🔐'},
-  {
+  {'
     id: 'cybersecurity-audit',
     name: 'Cybersecurity Assessment',
     category: 'it-services',
@@ -1266,7 +1358,8 @@ export const services: Service[] = [;
       'Security training';
     ],
     pricing: {
-      starter: 3000,
+      starte,
+    r: 3000,
       professional: 8000,
       enterprise: 25000,
       currency: 'USD'},
@@ -1283,9 +1376,10 @@ export const services: Service[] = [;
       'Government agencies';
     ],
     technologies: ['Nmap', 'Metasploit', 'Burp Suite', 'OWASP ZAP'],
-    link: 'https://ziontechgroup.com/services/cybersecurity',
+    link: 'http,
+    s://ziontechgroup.com/services/cybersecurity',
     icon: '🔒'},
-  {
+  {'
     id: 'devops-automation',
     name: 'DevOps Automation Suite',
     category: 'it-services',
@@ -1299,7 +1393,8 @@ export const services: Service[] = [;
       'Deployment automation';
     ],
     pricing: {
-      starter: 4000,
+      starte,
+    r: 4000,
       professional: 12000,
       enterprise: 35000,
       currency: 'USD'},
@@ -1316,9 +1411,10 @@ export const services: Service[] = [;
       'Microservices architecture';
     ],
     technologies: ['Jenkins', 'GitLab CI', 'Terraform', 'Kubernetes', 'Prometheus'],
-    link: 'https://ziontechgroup.com/services/devops',
+    link: 'http,
+    s://ziontechgroup.com/services/devops',
     icon: '⚙️'},
-  {
+  {'
     id: 'data-backup-recovery',
     name: 'Data Backup & Recovery',
     category: 'it-services',
@@ -1332,7 +1428,8 @@ export const services: Service[] = [;
       'Recovery time objectives';
     ],
     pricing: {
-      starter: 2000,
+      starte,
+    r: 2000,
       professional: 6000,
       enterprise: 18000,
       currency: 'USD'},
@@ -1349,9 +1446,10 @@ export const services: Service[] = [;
       'Cloud applications';
     ],
     technologies: ['Veeam', 'Commvault', 'AWS S3', 'Azure Backup'],
-    link: 'https://ziontechgroup.com/services/backup-recovery',
+    link: 'http,
+    s://ziontechgroup.com/services/backup-recovery',
     icon: '💾'},
-  // AI Services{
+  // AI Services{'
     id: 'custom-ai-models',
     name: 'Custom AI Model Development',
     category: 'ai-services',
@@ -1367,7 +1465,8 @@ export const services: Service[] = [;
       'Performance monitoring';
     ],
     pricing: {
-      starter: 10000,
+      starte,
+    r: 10000,
       professional: 30000,
       enterprise: 100000,
       currency: 'USD'},
@@ -1386,9 +1485,10 @@ export const services: Service[] = [;
       'Fraud detection';
     ],
     technologies: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'Python', 'Docker', 'MLflow'],
-    link: 'https://ziontechgroup.com/services/custom-ai-models',
+    link: 'http,
+    s://ziontechgroup.com/services/custom-ai-models',
     icon: '🧠'},
-  {
+  {'
     id: 'computer-vision-solutions',
     name: 'Computer Vision & Image Recognition',
     category: 'ai-services',
@@ -1404,7 +1504,8 @@ export const services: Service[] = [;
       'API integration';
     ],
     pricing: {
-      starter: 8000,
+      starte,
+    r: 8000,
       professional: 25000,
       enterprise: 75000,
       currency: 'USD'},
@@ -1422,11 +1523,12 @@ export const services: Service[] = [;
       'Autonomous vehicles';
     ],
     technologies: ['OpenCV', 'TensorFlow', 'PyTorch', 'YOLO', 'ResNet', 'CUDA'],
-    link: 'https://ziontechgroup.com/services/computer-vision-solutions',
+    link: 'http,
+    s://ziontechgroup.com/services/computer-vision-solutions',
     icon: '👁️'},
-  {
+  {'
     id: 'natural-language-processing',
-    name: 'Natural Language Processing (NLP)',
+    name: 'Natural Language Processing (NLP),
     category: 'ai-services',
     description: 'Advanced NLP solutions for text analysis, sentiment analysis, language translation, and conversational AI.',
     features: [;
@@ -1440,7 +1542,8 @@ export const services: Service[] = [;
       'Document processing';
     ],
     pricing: {
-      starter: 7000,
+      starte,
+    r: 7000,
       professional: 22000,
       enterprise: 65000,
       currency: 'USD'},
@@ -1458,9 +1561,10 @@ export const services: Service[] = [;
       'Social media monitoring';
     ],
     technologies: ['BERT', 'GPT', 'Transformers', 'spaCy', 'NLTK', 'Hugging Face'],
-    link: 'https://ziontechgroup.com/services/natural-language-processing',
+    link: 'http,
+    s://ziontechgroup.com/services/natural-language-processing',
     icon: '💬'},
-  {
+  {'
     id: 'predictive-analytics-platform',
     name: 'Predictive Analytics & Forecasting',
     category: 'ai-services',
@@ -1476,7 +1580,8 @@ export const services: Service[] = [;
       'Real-time predictions';
     ],
     pricing: {
-      starter: 9000,
+      starte,
+    r: 9000,
       professional: 28000,
       enterprise: 85000,
       currency: 'USD'},
@@ -1494,9 +1599,10 @@ export const services: Service[] = [;
       'Energy demand forecasting';
     ],
     technologies: ['Python', 'R', 'TensorFlow', 'Prophet', 'ARIMA', 'XGBoost'],
-    link: 'https://ziontechgroup.com/services/predictive-analytics-platform',
+    link: 'http,
+    s://ziontechgroup.com/services/predictive-analytics-platform',
     icon: '📈'},
-  {
+  {'
     id: 'ai-powered-recommendation-engine',
     name: 'AI Recommendation Engine',
     category: 'ai-services',
@@ -1512,7 +1618,8 @@ export const services: Service[] = [;
       'Scalable architecture';
     ],
     pricing: {
-      starter: 6000,
+      starte,
+    r: 6000,
       professional: 18000,
       enterprise: 55000,
       currency: 'USD'},
@@ -1530,9 +1637,10 @@ export const services: Service[] = [;
       'Job matching platforms';
     ],
     technologies: ['TensorFlow', 'PyTorch', 'Apache Spark', 'Redis', 'Kafka', 'Elasticsearch'],
-    link: 'https://ziontechgroup.com/services/ai-powered-recommendation-engine',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-powered-recommendation-engine',
     icon: '🎯'},
-  {
+  {'
     id: 'ai-automation-workflows',
     name: 'AI-Powered Workflow Automation',
     category: 'ai-services',
@@ -1548,7 +1656,8 @@ export const services: Service[] = [;
       'Continuous improvement';
     ],
     pricing: {
-      starter: 8000,
+      starte,
+    r: 8000,
       professional: 25000,
       enterprise: 75000,
       currency: 'USD'},
@@ -1566,9 +1675,10 @@ export const services: Service[] = [;
       'Compliance monitoring';
     ],
     technologies: ['UiPath', 'Automation Anywhere', 'Python', 'OCR', 'RPA', 'ML'],
-    link: 'https://ziontechgroup.com/services/ai-automation-workflows',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-automation-workflows',
     icon: '⚙️'},
-  {
+  {'
     id: 'ai-data-analytics-platform',
     name: 'AI Data Analytics & Business Intelligence',
     category: 'ai-services',
@@ -1584,7 +1694,8 @@ export const services: Service[] = [;
       'Real-time analytics';
     ],
     pricing: {
-      starter: 6000,
+      starte,
+    r: 6000,
       professional: 18000,
       enterprise: 55000,
       currency: 'USD'},
@@ -1602,9 +1713,10 @@ export const services: Service[] = [;
       'Performance tracking';
     ],
     technologies: ['Tableau', 'Power BI', 'Python', 'Apache Spark', 'TensorFlow', 'D3.js'],
-    link: 'https://ziontechgroup.com/services/ai-data-analytics-platform',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-data-analytics-platform',
     icon: '📊'},
-  {
+  {'
     id: 'ai-chatbot-voice-assistant',
     name: 'AI Chatbot & Voice Assistant Development',
     category: 'ai-services',
@@ -1620,7 +1732,8 @@ export const services: Service[] = [;
       '24/7 availability';
     ],
     pricing: {
-      starter: 5000,
+      starte,
+    r: 5000,
       professional: 15000,
       enterprise: 45000,
       currency: 'USD'},
@@ -1638,9 +1751,10 @@ export const services: Service[] = [;
       'Voice commands';
     ],
     technologies: ['OpenAI GPT', 'Dialogflow', 'Amazon Lex', 'Azure Bot', 'WebRTC', 'Speech APIs'],
-    link: 'https://ziontechgroup.com/services/ai-chatbot-voice-assistant',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-chatbot-voice-assistant',
     icon: '🤖'},
-  {
+  {'
     id: 'ai-fraud-detection',
     name: 'AI Fraud Detection & Security',
     category: 'ai-services',
@@ -1656,7 +1770,8 @@ export const services: Service[] = [;
       'Automated response';
     ],
     pricing: {
-      starter: 10000,
+      starte,
+    r: 10000,
       professional: 30000,
       enterprise: 90000,
       currency: 'USD'},
@@ -1674,9 +1789,10 @@ export const services: Service[] = [;
       'Gaming platforms';
     ],
     technologies: ['TensorFlow', 'PyTorch', 'Apache Kafka', 'Redis', 'Elasticsearch', 'MLflow'],
-    link: 'https://ziontechgroup.com/services/ai-fraud-detection',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-fraud-detection',
     icon: '🛡️'},
-  {
+  {'
     id: 'ai-content-moderation',
     name: 'AI Content Moderation & Safety',
     category: 'ai-services',
@@ -1692,7 +1808,8 @@ export const services: Service[] = [;
       'Human review integration';
     ],
     pricing: {
-      starter: 4000,
+      starte,
+    r: 4000,
       professional: 12000,
       enterprise: 35000,
       currency: 'USD'},
@@ -1710,9 +1827,10 @@ export const services: Service[] = [;
       'Gaming communities';
     ],
     technologies: ['OpenAI', 'Google Vision API', 'AWS Rekognition', 'TensorFlow', 'NLP', 'Computer Vision'],
-    link: 'https://ziontechgroup.com/services/ai-content-moderation',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-content-moderation',
     icon: '🔍'},
-  {
+  {'
     id: 'ai-supply-chain-optimization',
     name: 'AI Supply Chain Optimization',
     category: 'ai-services',
@@ -1728,7 +1846,8 @@ export const services: Service[] = [;
       'Predictive maintenance';
     ],
     pricing: {
-      starter: 12000,
+      starte,
+    r: 12000,
       professional: 35000,
       enterprise: 100000,
       currency: 'USD'},
@@ -1746,9 +1865,10 @@ export const services: Service[] = [;
       'Pharmaceutical companies';
     ],
     technologies: ['Python', 'TensorFlow', 'Apache Spark', 'Optimization algorithms', 'IoT', 'Blockchain'],
-    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-supply-chain-optimization',
     icon: '🚚'},
-  {
+  {'
     id: 'ai-process-automation',
     name: 'AI Process Automation',
     category: 'ai-services',
@@ -1762,7 +1882,8 @@ export const services: Service[] = [;
       'Performance monitoring';
     ],
     pricing: {
-      starter: 8000,
+      starte,
+    r: 8000,
       professional: 25000,
       enterprise: 75000,
       currency: 'USD'},
@@ -1779,9 +1900,10 @@ export const services: Service[] = [;
       'Report generation';
     ],
     technologies: ['UiPath', 'Automation Anywhere', 'Python', 'OCR'],
-    link: 'https://ziontechgroup.com/services/ai-automation',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-automation',
     icon: '🤖'},
-  {
+  {'
     id: 'ai-analytics-platform',
     name: 'AI Analytics Platform',
     category: 'ai-services',
@@ -1795,7 +1917,8 @@ export const services: Service[] = [;
       'Custom alerts';
     ],
     pricing: {
-      starter: 6000,
+      starte,
+    r: 6000,
       professional: 18000,
       enterprise: 55000,
       currency: 'USD'},
@@ -1812,9 +1935,10 @@ export const services: Service[] = [;
       'Performance monitoring';
     ],
     technologies: ['Tableau', 'Power BI', 'Python', 'Apache Spark', 'TensorFlow'],
-    link: 'https://ziontechgroup.com/services/ai-analytics',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-analytics',
     icon: '📈'},
-  {
+  {'
     id: 'ai-chatbot-development',
     name: 'AI Chatbot Development',
     category: 'ai-services',
@@ -1828,7 +1952,8 @@ export const services: Service[] = [;
       '24/7 availability';
     ],
     pricing: {
-      starter: 5000,
+      starte,
+    r: 5000,
       professional: 15000,
       enterprise: 45000,
       currency: 'USD'},
@@ -1845,9 +1970,10 @@ export const services: Service[] = [;
       'FAQ handling';
     ],
     technologies: ['OpenAI GPT', 'Dialogflow', 'React', 'Node.js', 'MongoDB'],
-    link: 'https://ziontechgroup.com/services/ai-chatbot',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-chatbot',
     icon: '💬'},
-  // Additional Micro SaaS Services{
+  // Additional Micro SaaS Services{'
     id: 'social-media-scheduler',
     name: 'Social Media Scheduler Pro',
     category: 'micro-saas',
@@ -1861,7 +1987,8 @@ export const services: Service[] = [;
       'Content calendar';
     ],
     pricing: {
-      starter: 15,
+      starte,
+    r: 15,
       professional: 45,
       enterprise: 120,
       currency: 'USD'},
@@ -1878,9 +2005,10 @@ export const services: Service[] = [;
       'E-commerce brands';
     ],
     technologies: ['React', 'Node.js', 'MongoDB', 'Social APIs'],
-    link: 'https://ziontechgroup.com/services/social-media-scheduler',
+    link: 'http,
+    s://ziontechgroup.com/services/social-media-scheduler',
     icon: '📱'},
-  {
+  {'
     id: 'expense-tracker',
     name: 'Smart Expense Tracker',
     category: 'micro-saas',
@@ -1894,7 +2022,8 @@ export const services: Service[] = [;
       'Mobile app';
     ],
     pricing: {
-      starter: 12,
+      starte,
+    r: 12,
       professional: 35,
       enterprise: 95,
       currency: 'USD'},
@@ -1911,9 +2040,10 @@ export const services: Service[] = [;
       'Remote workers';
     ],
     technologies: ['React Native', 'Python', 'PostgreSQL', 'OCR'],
-    link: 'https://ziontechgroup.com/services/expense-tracker',
+    link: 'http,
+    s://ziontechgroup.com/services/expense-tracker',
     icon: '💰'},
-  {
+  {'
     id: 'lead-scoring-platform',
     name: 'AI Lead Scoring Platform',
     category: 'micro-saas',
@@ -1927,7 +2057,8 @@ export const services: Service[] = [;
       'Performance analytics';
     ],
     pricing: {
-      starter: 49,
+      starte,
+    r: 49,
       professional: 129,
       enterprise: 349,
       currency: 'USD'},
@@ -1944,9 +2075,10 @@ export const services: Service[] = [;
       'Lead generation services';
     ],
     technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-    link: 'https://ziontechgroup.com/services/lead-scoring',
+    link: 'http,
+    s://ziontechgroup.com/services/lead-scoring',
     icon: '🎯'},
-  {
+  {'
     id: 'time-tracking-analytics',
     name: 'Time Tracking Analytics Pro',
     category: 'micro-saas',
@@ -1960,7 +2092,8 @@ export const services: Service[] = [;
       'Mobile time tracking';
     ],
     pricing: {
-      starter: 8,
+      starte,
+    r: 8,
       professional: 25,
       enterprise: 65,
       currency: 'USD'},
@@ -1977,9 +2110,10 @@ export const services: Service[] = [;
       'Project-based businesses';
     ],
     technologies: ['React', 'Node.js', 'MongoDB', 'Analytics'],
-    link: 'https://ziontechgroup.com/services/time-tracking',
+    link: 'http,
+    s://ziontechgroup.com/services/time-tracking',
     icon: '⏱️'},
-  {
+  {'
     id: 'email-marketing-automation',
     name: 'Email Marketing Automation Suite',
     category: 'micro-saas',
@@ -1993,7 +2127,8 @@ export const services: Service[] = [;
       'Analytics & reporting';
     ],
     pricing: {
-      starter: 29,
+      starte,
+    r: 29,
       professional: 79,
       enterprise: 199,
       currency: 'USD'},
@@ -2010,9 +2145,10 @@ export const services: Service[] = [;
       'Content creators';
     ],
     technologies: ['React', 'Node.js', 'Redis', 'Email APIs'],
-    link: 'https://ziontechgroup.com/services/email-marketing',
+    link: 'http,
+    s://ziontechgroup.com/services/email-marketing',
     icon: '📧'},
-  {
+  {'
     id: 'website-speed-optimizer',
     name: 'Website Speed Optimizer',
     category: 'micro-saas',
@@ -2026,7 +2162,8 @@ export const services: Service[] = [;
       'One-click optimization';
     ],
     pricing: {
-      starter: 19,
+      starte,
+    r: 19,
       professional: 49,
       enterprise: 129,
       currency: 'USD'},
@@ -2043,9 +2180,10 @@ export const services: Service[] = [;
       'Content websites';
     ],
     technologies: ['AI Optimization', 'CDN', 'React', 'Node.js'],
-    link: 'https://ziontechgroup.com/services/speed-optimizer',
+    link: 'http,
+    s://ziontechgroup.com/services/speed-optimizer',
     icon: '⚡'},
-  {
+  {'
     id: 'api-monitoring-platform',
     name: 'API Monitoring Platform',
     category: 'micro-saas',
@@ -2059,7 +2197,8 @@ export const services: Service[] = [;
       'SLA monitoring';
     ],
     pricing: {
-      starter: 25,
+      starte,
+    r: 25,
       professional: 65,
       enterprise: 175,
       currency: 'USD'},
@@ -2076,9 +2215,10 @@ export const services: Service[] = [;
       'Enterprise applications';
     ],
     technologies: ['Node.js', 'MongoDB', 'Monitoring APIs', 'React'],
-    link: 'https://ziontechgroup.com/services/api-monitoring',
+    link: 'http,
+    s://ziontechgroup.com/services/api-monitoring',
     icon: '🔍'},
-  {
+  {'
     id: 'password-manager-business',
     name: 'Business Password Manager',
     category: 'micro-saas',
@@ -2092,7 +2232,8 @@ export const services: Service[] = [;
       'Mobile apps';
     ],
     pricing: {
-      starter: 3,
+      starte,
+    r: 3,
       professional: 8,
       enterprise: 20,
       currency: 'USD'},
@@ -2109,9 +2250,10 @@ export const services: Service[] = [;
       'Security-conscious organizations';
     ],
     technologies: ['Encryption', 'React', 'Node.js', 'PostgreSQL'],
-    link: 'https://ziontechgroup.com/services/password-manager',
+    link: 'http,
+    s://ziontechgroup.com/services/password-manager',
     icon: '🔐'},
-  {
+  {'
     id: 'form-builder-platform',
     name: 'Advanced Form Builder',
     category: 'micro-saas',
@@ -2125,7 +2267,8 @@ export const services: Service[] = [;
       'API access';
     ],
     pricing: {
-      starter: 15,
+      starte,
+    r: 15,
       professional: 45,
       enterprise: 120,
       currency: 'USD'},
@@ -2142,9 +2285,10 @@ export const services: Service[] = [;
       'Order processing';
     ],
     technologies: ['React', 'Node.js', 'MongoDB', 'Payment APIs'],
-    link: 'https://ziontechgroup.com/services/form-builder',
+    link: 'http,
+    s://ziontechgroup.com/services/form-builder',
     icon: '📋'},
-  {
+  {'
     id: 'screenshot-api-service',
     name: 'Screenshot API Service',
     category: 'micro-saas',
@@ -2158,7 +2302,8 @@ export const services: Service[] = [;
       'API integration';
     ],
     pricing: {
-      starter: 20,
+      starte,
+    r: 20,
       professional: 60,
       enterprise: 160,
       currency: 'USD'},
@@ -2175,9 +2320,10 @@ export const services: Service[] = [;
       'Social media automation';
     ],
     technologies: ['Puppeteer', 'Node.js', 'AWS', 'React'],
-    link: 'https://ziontechgroup.com/services/screenshot-api',
+    link: 'http,
+    s://ziontechgroup.com/services/screenshot-api',
     icon: '📸'},
-  // Additional IT Services{
+  // Additional IT Services{'
     id: 'kubernetes-orchestration',
     name: 'Kubernetes Orchestration',
     category: 'it-services',
@@ -2191,7 +2337,8 @@ export const services: Service[] = [;
       'Disaster recovery';
     ],
     pricing: {
-      starter: 8000,
+      starte,
+    r: 8000,
       professional: 25000,
       enterprise: 75000,
       currency: 'USD'},
@@ -2208,9 +2355,10 @@ export const services: Service[] = [;
       'Enterprise applications';
     ],
     technologies: ['Kubernetes', 'Docker', 'Helm', 'Prometheus', 'Istio'],
-    link: 'https://ziontechgroup.com/services/kubernetes',
+    link: 'http,
+    s://ziontechgroup.com/services/kubernetes',
     icon: '☸️'},
-  {
+  {'
     id: 'api-gateway-setup',
     name: 'API Gateway & Management',
     category: 'it-services',
@@ -2224,7 +2372,8 @@ export const services: Service[] = [;
       'Developer portal';
     ],
     pricing: {
-      starter: 6000,
+      starte,
+    r: 6000,
       professional: 18000,
       enterprise: 55000,
       currency: 'USD'},
@@ -2241,9 +2390,10 @@ export const services: Service[] = [;
       'Enterprise systems';
     ],
     technologies: ['Kong', 'AWS API Gateway', 'Azure API Management', 'Nginx'],
-    link: 'https://ziontechgroup.com/services/api-gateway',
+    link: 'http,
+    s://ziontechgroup.com/services/api-gateway',
     icon: '🚪'},
-  {
+  {'
     id: 'database-optimization',
     name: 'Database Performance Optimization',
     category: 'it-services',
@@ -2257,7 +2407,8 @@ export const services: Service[] = [;
       'Scaling strategies';
     ],
     pricing: {
-      starter: 4000,
+      starte,
+    r: 4000,
       professional: 12000,
       enterprise: 35000,
       currency: 'USD'},
@@ -2274,9 +2425,10 @@ export const services: Service[] = [;
       'Analytics systems';
     ],
     technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch'],
-    link: 'https://ziontechgroup.com/services/database-optimization',
+    link: 'http,
+    s://ziontechgroup.com/services/database-optimization',
     icon: '🗄️'},
-  {
+  {'
     id: 'network-security-audit',
     name: 'Network Security Audit',
     category: 'it-services',
@@ -2290,7 +2442,8 @@ export const services: Service[] = [;
       'Security recommendations';
     ],
     pricing: {
-      starter: 5000,
+      starte,
+    r: 5000,
       professional: 15000,
       enterprise: 45000,
       currency: 'USD'},
@@ -2307,9 +2460,10 @@ export const services: Service[] = [;
       'Government agencies';
     ],
     technologies: ['Nmap', 'Nessus', 'Metasploit', 'Wireshark', 'Burp Suite'],
-    link: 'https://ziontechgroup.com/services/network-security',
+    link: 'http,
+    s://ziontechgroup.com/services/network-security',
     icon: '🛡️'},
-  {
+  {'
     id: 'disaster-recovery-planning',
     name: 'Disaster Recovery Planning',
     category: 'it-services',
@@ -2323,7 +2477,8 @@ export const services: Service[] = [;
       'Documentation & training';
     ],
     pricing: {
-      starter: 7000,
+      starte,
+    r: 7000,
       professional: 20000,
       enterprise: 60000,
       currency: 'USD'},
@@ -2340,9 +2495,10 @@ export const services: Service[] = [;
       'Cloud infrastructure';
     ],
     technologies: ['AWS', 'Azure', 'VMware', 'Veeam', 'Commvault'],
-    link: 'https://ziontechgroup.com/services/disaster-recovery',
+    link: 'http,
+    s://ziontechgroup.com/services/disaster-recovery',
     icon: '🔄'},
-  {
+  {'
     id: 'microservices-architecture',
     name: 'Microservices Architecture Design',
     category: 'it-services',
@@ -2356,7 +2512,8 @@ export const services: Service[] = [;
       'Monitoring setup';
     ],
     pricing: {
-      starter: 15000,
+      starte,
+    r: 15000,
       professional: 45000,
       enterprise: 120000,
       currency: 'USD'},
@@ -2373,9 +2530,10 @@ export const services: Service[] = [;
       'Cloud-native applications';
     ],
     technologies: ['Docker', 'Kubernetes', 'Istio', 'gRPC', 'Redis'],
-    link: 'https://ziontechgroup.com/services/microservices',
+    link: 'http,
+    s://ziontechgroup.com/services/microservices',
     icon: '🏗️'},
-  {
+  {'
     id: 'performance-monitoring',
     name: 'Application Performance Monitoring',
     category: 'it-services',
@@ -2389,7 +2547,8 @@ export const services: Service[] = [;
       'Performance optimization';
     ],
     pricing: {
-      starter: 3000,
+      starte,
+    r: 3000,
       professional: 9000,
       enterprise: 25000,
       currency: 'USD'},
@@ -2406,15 +2565,16 @@ export const services: Service[] = [;
       'Enterprise systems';
     ],
     technologies: ['New Relic', 'Datadog', 'Prometheus', 'Grafana', 'ELK Stack'],
-    link: 'https://ziontechgroup.com/services/apm',
+    link: 'http,
+    s://ziontechgroup.com/services/apm',
     icon: '📊'},
-  {
+  {'
     id: 'identity-access-management',
     name: 'Identity & Access Management',
     category: 'it-services',
     description: 'Enterprise IAM solution with SSO, multi-factor authentication, and role-based access control.',
     features: [;
-      'Single Sign-On (SSO)',
+      'Single Sign-On (SSO),
       'Multi-factor authentication',
       'Role-based access control',
       'User provisioning',
@@ -2422,7 +2582,8 @@ export const services: Service[] = [;
       'API security';
     ],
     pricing: {
-      starter: 5000,
+      starte,
+    r: 5000,
       professional: 15000,
       enterprise: 40000,
       currency: 'USD'},
@@ -2439,9 +2600,10 @@ export const services: Service[] = [;
       'Government agencies';
     ],
     technologies: ['Okta', 'Azure AD', 'Auth0', 'SAML', 'OAuth'],
-    link: 'https://ziontechgroup.com/services/iam',
+    link: 'http,
+    s://ziontechgroup.com/services/iam',
     icon: '👤'},
-  // Additional AI Services{
+  // Additional AI Services{'
     id: 'computer-vision-solutions',
     name: 'Computer Vision Solutions',
     category: 'ai-services',
@@ -2455,7 +2617,8 @@ export const services: Service[] = [;
       'Real-time processing';
     ],
     pricing: {
-      starter: 12000,
+      starte,
+    r: 12000,
       professional: 35000,
       enterprise: 100000,
       currency: 'USD'},
@@ -2472,9 +2635,10 @@ export const services: Service[] = [;
       'Medical imaging';
     ],
     technologies: ['TensorFlow', 'OpenCV', 'YOLO', 'PyTorch', 'CUDA'],
-    link: 'https://ziontechgroup.com/services/computer-vision',
+    link: 'http,
+    s://ziontechgroup.com/services/computer-vision',
     icon: '👁️'},
-  {
+  {'
     id: 'natural-language-processing',
     name: 'Natural Language Processing',
     category: 'ai-services',
@@ -2488,7 +2652,8 @@ export const services: Service[] = [;
       'Question answering';
     ],
     pricing: {
-      starter: 8000,
+      starte,
+    r: 8000,
       professional: 25000,
       enterprise: 75000,
       currency: 'USD'},
@@ -2505,9 +2670,10 @@ export const services: Service[] = [;
       'Chatbot enhancement';
     ],
     technologies: ['BERT', 'GPT', 'spaCy', 'NLTK', 'Transformers'],
-    link: 'https://ziontechgroup.com/services/nlp',
+    link: 'http,
+    s://ziontechgroup.com/services/nlp',
     icon: '📝'},
-  {
+  {'
     id: 'predictive-analytics',
     name: 'Predictive Analytics Platform',
     category: 'ai-services',
@@ -2521,7 +2687,8 @@ export const services: Service[] = [;
       'Real-time predictions';
     ],
     pricing: {
-      starter: 10000,
+      starte,
+    r: 10000,
       professional: 30000,
       enterprise: 90000,
       currency: 'USD'},
@@ -2538,9 +2705,10 @@ export const services: Service[] = [;
       'Maintenance scheduling';
     ],
     technologies: ['Scikit-learn', 'XGBoost', 'Prophet', 'Python', 'Apache Spark'],
-    link: 'https://ziontechgroup.com/services/predictive-analytics',
+    link: 'http,
+    s://ziontechgroup.com/services/predictive-analytics',
     icon: '🔮'},
-  {
+  {'
     id: 'recommendation-engine',
     name: 'AI Recommendation Engine',
     category: 'ai-services',
@@ -2554,7 +2722,8 @@ export const services: Service[] = [;
       'Performance analytics';
     ],
     pricing: {
-      starter: 15000,
+      starte,
+    r: 15000,
       professional: 45000,
       enterprise: 120000,
       currency: 'USD'},
@@ -2571,9 +2740,10 @@ export const services: Service[] = [;
       'Social media';
     ],
     technologies: ['TensorFlow', 'Apache Spark', 'Redis', 'Python', 'MLlib'],
-    link: 'https://ziontechgroup.com/services/recommendation-engine',
+    link: 'http,
+    s://ziontechgroup.com/services/recommendation-engine',
     icon: '🎯'},
-  {
+  {'
     id: 'ai-powered-search',
     name: 'AI-Powered Search Engine',
     category: 'ai-services',
@@ -2587,7 +2757,8 @@ export const services: Service[] = [;
       'Search analytics';
     ],
     pricing: {
-      starter: 6000,
+      starte,
+    r: 6000,
       professional: 18000,
       enterprise: 55000,
       currency: 'USD'},
@@ -2604,9 +2775,10 @@ export const services: Service[] = [;
       'Content platforms';
     ],
     technologies: ['Elasticsearch', 'BERT', 'Vector Search', 'Python', 'React'],
-    link: 'https://ziontechgroup.com/services/ai-search',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-search',
     icon: '🔍'},
-  {
+  {'
     id: 'ai-content-moderation',
     name: 'AI Content Moderation',
     category: 'ai-services',
@@ -2620,7 +2792,8 @@ export const services: Service[] = [;
       'Human review integration';
     ],
     pricing: {
-      starter: 5000,
+      starte,
+    r: 5000,
       professional: 15000,
       enterprise: 45000,
       currency: 'USD'},
@@ -2637,9 +2810,10 @@ export const services: Service[] = [;
       'Marketplace platforms';
     ],
     technologies: ['Computer Vision', 'NLP', 'TensorFlow', 'OpenCV', 'Python'],
-    link: 'https://ziontechgroup.com/services/content-moderation',
+    link: 'http,
+    s://ziontechgroup.com/services/content-moderation',
     icon: '🛡️'},
-  {
+  {'
     id: 'ai-fraud-detection',
     name: 'AI Fraud Detection System',
     category: 'ai-services',
@@ -2653,7 +2827,8 @@ export const services: Service[] = [;
       'False positive reduction';
     ],
     pricing: {
-      starter: 8000,
+      starte,
+    r: 8000,
       professional: 25000,
       enterprise: 75000,
       currency: 'USD'},
@@ -2670,9 +2845,10 @@ export const services: Service[] = [;
       'Insurance companies';
     ],
     technologies: ['Machine Learning', 'Anomaly Detection', 'Python', 'Apache Spark', 'TensorFlow'],
-    link: 'https://ziontechgroup.com/services/fraud-detection',
+    link: 'http,
+    s://ziontechgroup.com/services/fraud-detection',
     icon: '🚨'},
-  {
+  {'
     id: 'ai-voice-assistant',
     name: 'AI Voice Assistant Development',
     category: 'ai-services',
@@ -2686,7 +2862,8 @@ export const services: Service[] = [;
       'Analytics dashboard';
     ],
     pricing: {
-      starter: 10000,
+      starte,
+    r: 10000,
       professional: 30000,
       enterprise: 90000,
       currency: 'USD'},
@@ -2703,9 +2880,10 @@ export const services: Service[] = [;
       'Automotive systems';
     ],
     technologies: ['Speech Recognition', 'NLP', 'WebRTC', 'Python', 'Node.js'],
-    link: 'https://ziontechgroup.com/services/voice-assistant',
+    link: 'http,
+    s://ziontechgroup.com/services/voice-assistant',
     icon: '🎤'},
-  // Additional Innovative Micro SaaS Services{
+  // Additional Innovative Micro SaaS Services{'
     id: 'ai-email-responder',
     name: 'AI Email Responder Pro',
     category: 'micro-saas',
@@ -2721,7 +2899,8 @@ export const services: Service[] = [;
       'Analytics dashboard';
     ],
     pricing: {
-      starter: 35,
+      starte,
+    r: 35,
       professional: 89,
       enterprise: 249,
       currency: 'USD'},
@@ -2739,9 +2918,10 @@ export const services: Service[] = [;
       'Freelancers and consultants';
     ],
     technologies: ['OpenAI GPT-4', 'React', 'Node.js', 'PostgreSQL', 'Email APIs'],
-    link: 'https://ziontechgroup.com/services/ai-email-responder',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-email-responder',
     icon: '📧'},
-  {
+  {'
     id: 'mobile-survey-platform',
     name: 'Mobile-First Survey Platform',
     category: 'micro-saas',
@@ -2757,7 +2937,8 @@ export const services: Service[] = [;
       'Integration APIs';
     ],
     pricing: {
-      starter: 25,
+      starte,
+    r: 25,
       professional: 65,
       enterprise: 179,
       currency: 'USD'},
@@ -2775,9 +2956,10 @@ export const services: Service[] = [;
       'Event feedback collection';
     ],
     technologies: ['React Native', 'Node.js', 'MongoDB', 'AI/ML', 'Analytics'],
-    link: 'https://ziontechgroup.com/services/mobile-survey-platform',
+    link: 'http,
+    s://ziontechgroup.com/services/mobile-survey-platform',
     icon: '📱'},
-  {
+  {'
     id: 'niche-productivity-planner',
     name: 'Industry-Specific Productivity Planner',
     category: 'micro-saas',
@@ -2793,7 +2975,8 @@ export const services: Service[] = [;
       'Mobile app';
     ],
     pricing: {
-      starter: 22,
+      starte,
+    r: 22,
       professional: 55,
       enterprise: 149,
       currency: 'USD'},
@@ -2811,9 +2994,10 @@ export const services: Service[] = [;
       'Consulting firms';
     ],
     technologies: ['React', 'Node.js', 'PostgreSQL', 'AI/ML', 'Analytics'],
-    link: 'https://ziontechgroup.com/services/niche-productivity-planner',
+    link: 'http,
+    s://ziontechgroup.com/services/niche-productivity-planner',
     icon: '📋'},
-  {
+  {'
     id: 'event-management-dashboard',
     name: 'Smart Event Management Dashboard',
     category: 'micro-saas',
@@ -2829,7 +3013,8 @@ export const services: Service[] = [;
       'Post-event surveys';
     ],
     pricing: {
-      starter: 45,
+      starte,
+    r: 45,
       professional: 119,
       enterprise: 299,
       currency: 'USD'},
@@ -2847,9 +3032,10 @@ export const services: Service[] = [;
       'Community organizations';
     ],
     technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Analytics'],
-    link: 'https://ziontechgroup.com/services/event-management-dashboard',
+    link: 'http,
+    s://ziontechgroup.com/services/event-management-dashboard',
     icon: '🎪'},
-  {
+  {'
     id: 'ai-seo-optimizer',
     name: 'AI SEO Content Optimizer',
     category: 'micro-saas',
@@ -2865,7 +3051,8 @@ export const services: Service[] = [;
       'Automated reports';
     ],
     pricing: {
-      starter: 39,
+      starte,
+    r: 39,
       professional: 99,
       enterprise: 249,
       currency: 'USD'},
@@ -2883,9 +3070,10 @@ export const services: Service[] = [;
       'Blog owners';
     ],
     technologies: ['AI/ML', 'React', 'Node.js', 'SEO APIs', 'Analytics'],
-    link: 'https://ziontechgroup.com/services/ai-seo-optimizer',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-seo-optimizer',
     icon: '🔍'},
-  {
+  {'
     id: 'ai-talent-matching',
     name: 'AI Talent Matching Platform',
     category: 'micro-saas',
@@ -2901,7 +3089,8 @@ export const services: Service[] = [;
       'Analytics dashboard';
     ],
     pricing: {
-      starter: 199,
+      starte,
+    r: 199,
       professional: 499,
       enterprise: 1299,
       currency: 'USD'},
@@ -2919,9 +3108,10 @@ export const services: Service[] = [;
       'Startups';
     ],
     technologies: ['AI/ML', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms'],
-    link: 'https://ziontechgroup.com/services/ai-talent-matching',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-talent-matching',
     icon: '👥'},
-  {
+  {'
     id: 'ai-recruiting-platform',
     name: 'AI Recruiting Platform',
     category: 'micro-saas',
@@ -2937,7 +3127,8 @@ export const services: Service[] = [;
       'Integration with ATS systems';
     ],
     pricing: {
-      starter: 149,
+      starte,
+    r: 149,
       professional: 399,
       enterprise: 999,
       currency: 'USD'},
@@ -2955,9 +3146,10 @@ export const services: Service[] = [;
       'Growing startups';
     ],
     technologies: ['AI/ML', 'React', 'Node.js', 'PostgreSQL', 'Video Analysis'],
-    link: 'https://ziontechgroup.com/services/ai-recruiting-platform',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-recruiting-platform',
     icon: '🎯'},
-  {
+  {'
     id: 'quantum-computing-solutions',
     name: 'Quantum Computing Solutions',
     category: 'micro-saas',
@@ -2973,7 +3165,8 @@ export const services: Service[] = [;
       'Research collaboration tools';
     ],
     pricing: {
-      starter: 999,
+      starte,
+    r: 999,
       professional: 2999,
       enterprise: 9999,
       currency: 'USD'},
@@ -2991,9 +3184,10 @@ export const services: Service[] = [;
       'Government agencies';
     ],
     technologies: ['Quantum Computing', 'Python', 'Qiskit', 'Cirq', 'Quantum Algorithms'],
-    link: 'https://ziontechgroup.com/services/quantum-computing-solutions',
+    link: 'http,
+    s://ziontechgroup.com/services/quantum-computing-solutions',
     icon: '⚛️'},
-  // Additional Advanced IT Services{
+  // Additional Advanced IT Services{'
     id: 'edge-computing-solutions',
     name: 'Edge Computing Solutions',
     category: 'it-services',
@@ -3009,7 +3203,8 @@ export const services: Service[] = [;
       'Performance monitoring';
     ],
     pricing: {
-      starter: 12000,
+      starte,
+    r: 12000,
       professional: 35000,
       enterprise: 100000,
       currency: 'USD'},
@@ -3027,9 +3222,10 @@ export const services: Service[] = [;
       'Smart cities';
     ],
     technologies: ['Kubernetes', 'Docker', 'Edge Computing', '5G', 'IoT'],
-    link: 'https://ziontechgroup.com/services/edge-computing-solutions',
+    link: 'http,
+    s://ziontechgroup.com/services/edge-computing-solutions',
     icon: '🌐'},
-  {
+  {'
     id: 'blockchain-infrastructure',
     name: 'Blockchain Infrastructure & Development',
     category: 'it-services',
@@ -3045,7 +3241,8 @@ export const services: Service[] = [;
       'Compliance consulting';
     ],
     pricing: {
-      starter: 15000,
+      starte,
+    r: 15000,
       professional: 45000,
       enterprise: 120000,
       currency: 'USD'},
@@ -3063,9 +3260,10 @@ export const services: Service[] = [;
       'Asset tokenization';
     ],
     technologies: ['Ethereum', 'Solidity', 'Web3', 'IPFS', 'Blockchain'],
-    link: 'https://ziontechgroup.com/services/blockchain-infrastructure',
+    link: 'http,
+    s://ziontechgroup.com/services/blockchain-infrastructure',
     icon: '⛓️'},
-  {
+  {'
     id: 'zero-trust-security',
     name: 'Zero Trust Security Architecture',
     category: 'it-services',
@@ -3081,7 +3279,8 @@ export const services: Service[] = [;
       'Incident response planning';
     ],
     pricing: {
-      starter: 20000,
+      starte,
+    r: 20000,
       professional: 60000,
       enterprise: 150000,
       currency: 'USD'},
@@ -3099,9 +3298,10 @@ export const services: Service[] = [;
       'Government agencies';
     ],
     technologies: ['Zero Trust', 'SIEM', 'SOAR', 'Identity Management', 'Network Security'],
-    link: 'https://ziontechgroup.com/services/zero-trust-security',
+    link: 'http,
+    s://ziontechgroup.com/services/zero-trust-security',
     icon: '🔒'},
-  {
+  {'
     id: '5g-network-implementation',
     name: '5G Network Implementation & Optimization',
     category: 'it-services',
@@ -3117,7 +3317,8 @@ export const services: Service[] = [;
       'Compliance management';
     ],
     pricing: {
-      starter: 50000,
+      starte,
+    r: 50000,
       professional: 150000,
       enterprise: 500000,
       currency: 'USD'},
@@ -3135,9 +3336,10 @@ export const services: Service[] = [;
       'Telecommunications';
     ],
     technologies: ['5G', 'Network Infrastructure', 'IoT', 'Edge Computing', 'Telecommunications'],
-    link: 'https://ziontechgroup.com/services/5g-network-implementation',
+    link: 'http,
+    s://ziontechgroup.com/services/5g-network-implementation',
     icon: '📡'},
-  {
+  {'
     id: 'hyperautomation-platform',
     name: 'Hyperautomation Platform',
     category: 'it-services',
@@ -3153,7 +3355,8 @@ export const services: Service[] = [;
       'Change management';
     ],
     pricing: {
-      starter: 25000,
+      starte,
+    r: 25000,
       professional: 75000,
       enterprise: 200000,
       currency: 'USD'},
@@ -3171,9 +3374,10 @@ export const services: Service[] = [;
       'Government agencies';
     ],
     technologies: ['RPA', 'AI/ML', 'Process Mining', 'Workflow Automation', 'Integration'],
-    link: 'https://ziontechgroup.com/services/hyperautomation-platform',
+    link: 'http,
+    s://ziontechgroup.com/services/hyperautomation-platform',
     icon: '🤖'},
-  // Additional Advanced AI Services{
+  // Additional Advanced AI Services{'
     id: 'ai-drug-discovery',
     name: 'AI Drug Discovery Platform',
     category: 'ai-services',
@@ -3189,7 +3393,8 @@ export const services: Service[] = [;
       'Regulatory compliance support';
     ],
     pricing: {
-      starter: 100000,
+      starte,
+    r: 100000,
       professional: 300000,
       enterprise: 1000000,
       currency: 'USD'},
@@ -3207,9 +3412,10 @@ export const services: Service[] = [;
       'Government health agencies';
     ],
     technologies: ['Deep Learning', 'Molecular AI', 'Bioinformatics', 'Python', 'TensorFlow'],
-    link: 'https://ziontechgroup.com/services/ai-drug-discovery',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-drug-discovery',
     icon: '💊'},
-  {
+  {'
     id: 'ai-climate-modeling',
     name: 'AI Climate Modeling & Prediction',
     category: 'ai-services',
@@ -3225,7 +3431,8 @@ export const services: Service[] = [;
       'Risk assessment tools';
     ],
     pricing: {
-      starter: 50000,
+      starte,
+    r: 50000,
       professional: 150000,
       enterprise: 500000,
       currency: 'USD'},
@@ -3243,9 +3450,10 @@ export const services: Service[] = [;
       'Energy sector';
     ],
     technologies: ['Climate AI', 'Machine Learning', 'Satellite Data', 'Python', 'TensorFlow'],
-    link: 'https://ziontechgroup.com/services/ai-climate-modeling',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-climate-modeling',
     icon: '🌍'},
-  {
+  {'
     id: 'ai-space-exploration',
     name: 'AI Space Exploration Solutions',
     category: 'ai-services',
@@ -3261,7 +3469,8 @@ export const services: Service[] = [;
       'Resource management';
     ],
     pricing: {
-      starter: 200000,
+      starte,
+    r: 200000,
       professional: 600000,
       enterprise: 2000000,
       currency: 'USD'},
@@ -3279,9 +3488,10 @@ export const services: Service[] = [;
       'Defense organizations';
     ],
     technologies: ['Space AI', 'Orbital Mechanics', 'Machine Learning', 'Python', 'Satellite Data'],
-    link: 'https://ziontechgroup.com/services/ai-space-exploration',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-space-exploration',
     icon: '🚀'},
-  {
+  {'
     id: 'ai-neuroscience-research',
     name: 'AI Neuroscience Research Platform',
     category: 'ai-services',
@@ -3297,7 +3507,8 @@ export const services: Service[] = [;
       'Clinical trial support';
     ],
     pricing: {
-      starter: 75000,
+      starte,
+    r: 75000,
       professional: 225000,
       enterprise: 750000,
       currency: 'USD'},
@@ -3315,9 +3526,10 @@ export const services: Service[] = [;
       'Neuroscience laboratories';
     ],
     technologies: ['Neural Networks', 'Brain Imaging', 'Machine Learning', 'Python', 'Medical AI'],
-    link: 'https://ziontechgroup.com/services/ai-neuroscience-research',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-neuroscience-research',
     icon: '🧠'},
-  {
+  {'
     id: 'ai-robotics-automation',
     name: 'AI Robotics & Automation',
     category: 'ai-services',
@@ -3333,7 +3545,8 @@ export const services: Service[] = [;
       'Custom robot programming';
     ],
     pricing: {
-      starter: 100000,
+      starte,
+    r: 100000,
       professional: 300000,
       enterprise: 1000000,
       currency: 'USD'},
@@ -3351,9 +3564,10 @@ export const services: Service[] = [;
       'Agricultural operations';
     ],
     technologies: ['Robotics', 'Computer Vision', 'Machine Learning', 'ROS', 'AI Control Systems'],
-    link: 'https://ziontechgroup.com/services/ai-robotics-automation',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-robotics-automation',
     icon: '🤖'},
-  {
+  {'
     id: 'ai-financial-trading',
     name: 'AI Financial Trading Platform',
     category: 'ai-services',
@@ -3369,7 +3583,8 @@ export const services: Service[] = [;
       'Regulatory compliance';
     ],
     pricing: {
-      starter: 50000,
+      starte,
+    r: 50000,
       professional: 150000,
       enterprise: 500000,
       currency: 'USD'},
@@ -3387,9 +3602,10 @@ export const services: Service[] = [;
       'Individual traders';
     ],
     technologies: ['Financial AI', 'Machine Learning', 'Quantitative Analysis', 'Python', 'Trading APIs'],
-    link: 'https://ziontechgroup.com/services/ai-financial-trading',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-financial-trading',
     icon: '📈'},
-  // Additional Innovative Micro SaaS Services{
+  // Additional Innovative Micro SaaS Services{'
     id: 'ai-video-editor',
     name: 'AI Video Editor Pro',
     category: 'micro-saas',
@@ -3405,7 +3621,8 @@ export const services: Service[] = [;
       'Cloud storage integration';
     ],
     pricing: {
-      starter: 29,
+      starte,
+    r: 29,
       professional: 79,
       enterprise: 199,
       currency: 'USD'},
@@ -3423,9 +3640,10 @@ export const services: Service[] = [;
       'Social media managers';
     ],
     technologies: ['AI Video Processing', 'React', 'Node.js', 'FFmpeg', 'Cloud Storage'],
-    link: 'https://ziontechgroup.com/services/ai-video-editor',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-video-editor',
     icon: '🎬'},
-  {
+  {'
     id: 'smart-contract-auditor',
     name: 'Smart Contract Security Auditor',
     category: 'micro-saas',
@@ -3441,7 +3659,8 @@ export const services: Service[] = [;
       'Continuous monitoring';
     ],
     pricing: {
-      starter: 199,
+      starte,
+    r: 199,
       professional: 499,
       enterprise: 1299,
       currency: 'USD'},
@@ -3459,9 +3678,10 @@ export const services: Service[] = [;
       'Crypto startups';
     ],
     technologies: ['AI Code Analysis', 'Solidity', 'React', 'Node.js', 'Blockchain APIs'],
-    link: 'https://ziontechgroup.com/services/smart-contract-auditor',
+    link: 'http,
+    s://ziontechgroup.com/services/smart-contract-auditor',
     icon: '🔍'},
-  {
+  {'
     id: 'ai-code-reviewer',
     name: 'AI Code Review Assistant',
     category: 'micro-saas',
@@ -3477,7 +3697,8 @@ export const services: Service[] = [;
       'Custom rule configuration';
     ],
     pricing: {
-      starter: 49,
+      starte,
+    r: 49,
       professional: 129,
       enterprise: 349,
       currency: 'USD'},
@@ -3495,9 +3716,10 @@ export const services: Service[] = [;
       'Open source projects';
     ],
     technologies: ['AI Code Analysis', 'React', 'Node.js', 'Git APIs', 'Static Analysis'],
-    link: 'https://ziontechgroup.com/services/ai-code-reviewer',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-code-reviewer',
     icon: '👨‍💻'},
-  {
+  {'
     id: 'ai-translation-platform',
     name: 'AI Translation Platform',
     category: 'micro-saas',
@@ -3513,7 +3735,8 @@ export const services: Service[] = [;
       'Bulk translation processing';
     ],
     pricing: {
-      starter: 39,
+      starte,
+    r: 39,
       professional: 99,
       enterprise: 249,
       currency: 'USD'},
@@ -3531,9 +3754,10 @@ export const services: Service[] = [;
       'Software companies';
     ],
     technologies: ['AI Translation', 'React', 'Node.js', 'Translation APIs', 'NLP'],
-    link: 'https://ziontechgroup.com/services/ai-translation-platform',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-translation-platform',
     icon: '🌐'},
-  {
+  {'
     id: 'ai-customer-insights',
     name: 'AI Customer Insights Platform',
     category: 'micro-saas',
@@ -3549,7 +3773,8 @@ export const services: Service[] = [;
       'Integration with CRM systems';
     ],
     pricing: {
-      starter: 79,
+      starte,
+    r: 79,
       professional: 199,
       enterprise: 499,
       currency: 'USD'},
@@ -3567,9 +3792,10 @@ export const services: Service[] = [;
       'Subscription services';
     ],
     technologies: ['AI Analytics', 'Machine Learning', 'React', 'Node.js', 'Analytics APIs'],
-    link: 'https://ziontechgroup.com/services/ai-customer-insights',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-customer-insights',
     icon: '👥'},
-  {
+  {'
     id: 'ai-workflow-automation',
     name: 'AI Workflow Automation Suite',
     category: 'micro-saas',
@@ -3585,7 +3811,8 @@ export const services: Service[] = [;
       'Analytics and reporting';
     ],
     pricing: {
-      starter: 45,
+      starte,
+    r: 45,
       professional: 119,
       enterprise: 299,
       currency: 'USD'},
@@ -3603,9 +3830,10 @@ export const services: Service[] = [;
       'Customer service';
     ],
     technologies: ['AI Automation', 'Workflow Engine', 'React', 'Node.js', 'Integration APIs'],
-    link: 'https://ziontechgroup.com/services/ai-workflow-automation',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-workflow-automation',
     icon: '⚙️'},
-  {
+  {'
     id: 'ai-data-privacy',
     name: 'AI Data Privacy Compliance',
     category: 'micro-saas',
@@ -3621,7 +3849,8 @@ export const services: Service[] = [;
       'Integration with existing systems';
     ],
     pricing: {
-      starter: 99,
+      starte,
+    r: 99,
       professional: 249,
       enterprise: 599,
       currency: 'USD'},
@@ -3639,9 +3868,10 @@ export const services: Service[] = [;
       'E-commerce platforms';
     ],
     technologies: ['AI Compliance', 'Privacy Analytics', 'React', 'Node.js', 'Compliance APIs'],
-    link: 'https://ziontechgroup.com/services/ai-data-privacy',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-data-privacy',
     icon: '🔒'},
-  {
+  {'
     id: 'ai-performance-monitoring',
     name: 'AI Performance Monitoring',
     category: 'micro-saas',
@@ -3657,7 +3887,8 @@ export const services: Service[] = [;
       'Automated scaling recommendations';
     ],
     pricing: {
-      starter: 35,
+      starte,
+    r: 35,
       professional: 89,
       enterprise: 229,
       currency: 'USD'},
@@ -3675,9 +3906,10 @@ export const services: Service[] = [;
       'Cloud infrastructure';
     ],
     technologies: ['AI Monitoring', 'Performance Analytics', 'React', 'Node.js', 'Monitoring APIs'],
-    link: 'https://ziontechgroup.com/services/ai-performance-monitoring',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-performance-monitoring',
     icon: '📊'},
-  {
+  {'
     id: 'ai-content-moderation-advanced',
     name: 'AI Content Moderation Pro',
     category: 'micro-saas',
@@ -3693,7 +3925,8 @@ export const services: Service[] = [;
       'Compliance monitoring';
     ],
     pricing: {
-      starter: 25,
+      starte,
+    r: 25,
       professional: 65,
       enterprise: 175,
       currency: 'USD'},
@@ -3711,9 +3944,10 @@ export const services: Service[] = [;
       'Educational platforms';
     ],
     technologies: ['AI Content Analysis', 'Computer Vision', 'NLP', 'React', 'Node.js'],
-    link: 'https://ziontechgroup.com/services/ai-content-moderation-pro',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-content-moderation-pro',
     icon: '🛡️'},
-  {
+  {'
     id: 'ai-financial-forecasting',
     name: 'AI Financial Forecasting',
     category: 'micro-saas',
@@ -3729,7 +3963,8 @@ export const services: Service[] = [;
       'Real-time financial insights';
     ],
     pricing: {
-      starter: 59,
+      starte,
+    r: 59,
       professional: 149,
       enterprise: 399,
       currency: 'USD'},
@@ -3747,9 +3982,10 @@ export const services: Service[] = [;
       'Accounting firms';
     ],
     technologies: ['AI Forecasting', 'Financial Analytics', 'React', 'Node.js', 'Financial APIs'],
-    link: 'https://ziontechgroup.com/services/ai-financial-forecasting',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-financial-forecasting',
     icon: '💰'},
-  // Additional Advanced IT Services{
+  // Additional Advanced IT Services{'
     id: 'cloud-native-architecture',
     name: 'Cloud-Native Architecture Design',
     category: 'it-services',
@@ -3765,7 +4001,8 @@ export const services: Service[] = [;
       'Cost optimization strategies';
     ],
     pricing: {
-      starter: 25000,
+      starte,
+    r: 25000,
       professional: 75000,
       enterprise: 200000,
       currency: 'USD'},
@@ -3783,25 +4020,27 @@ export const services: Service[] = [;
       'Startup scaling';
     ],
     technologies: ['Kubernetes', 'Docker', 'AWS', 'Azure', 'GCP', 'Istio', 'Prometheus'],
-    link: 'https://ziontechgroup.com/services/cloud-native-architecture',
+    link: 'http,
+    s://ziontechgroup.com/services/cloud-native-architecture',
     icon: '☁️'},
-  {
+  {'
     id: 'cybersecurity-operations-center',
-    name: 'Cybersecurity Operations Center (SOC)',
+    name: 'Cybersecurity Operations Center (SOC),
     category: 'it-services',
     description: '24/7 cybersecurity operations center with advanced threat detection, incident response, and security monitoring to protect your organization from cyber threats.',
     features: [;
       '24/7 security monitoring',
       'Advanced threat detection',
       'Incident response and forensics',
-      'Security information and event management (SIEM)',
+      'Security information and event management (SIEM),
       'Threat intelligence integration',
       'Vulnerability management',
       'Compliance monitoring',
       'Security awareness training';
     ],
     pricing: {
-      starter: 15000,
+      starte,
+    r: 15000,
       professional: 45000,
       enterprise: 120000,
       currency: 'USD'},
@@ -3819,9 +4058,10 @@ export const services: Service[] = [;
       'Government agencies';
     ],
     technologies: ['SIEM', 'SOAR', 'EDR', 'XDR', 'Threat Intelligence', 'Forensics Tools'],
-    link: 'https://ziontechgroup.com/services/cybersecurity-operations-center',
+    link: 'http,
+    s://ziontechgroup.com/services/cybersecurity-operations-center',
     icon: '🛡️'},
-  {
+  {'
     id: 'data-lake-architecture',
     name: 'Data Lake & Analytics Architecture',
     category: 'it-services',
@@ -3837,7 +4077,8 @@ export const services: Service[] = [;
       'Cost optimization';
     ],
     pricing: {
-      starter: 30000,
+      starte,
+    r: 30000,
       professional: 90000,
       enterprise: 250000,
       currency: 'USD'},
@@ -3855,9 +4096,10 @@ export const services: Service[] = [;
       'Data-driven organizations';
     ],
     technologies: ['AWS S3', 'Apache Spark', 'Hadoop', 'Kafka', 'Elasticsearch', 'Tableau'],
-    link: 'https://ziontechgroup.com/services/data-lake-architecture',
+    link: 'http,
+    s://ziontechgroup.com/services/data-lake-architecture',
     icon: '🏞️'},
-  {
+  {'
     id: 'iot-platform-development',
     name: 'IoT Platform Development',
     category: 'it-services',
@@ -3873,7 +4115,8 @@ export const services: Service[] = [;
       'Predictive maintenance';
     ],
     pricing: {
-      starter: 40000,
+      starte,
+    r: 40000,
       professional: 120000,
       enterprise: 300000,
       currency: 'USD'},
@@ -3891,9 +4134,10 @@ export const services: Service[] = [;
       'Industrial automation';
     ],
     technologies: ['IoT Platforms', 'MQTT', 'CoAP', 'Edge Computing', 'Time Series DB', 'Machine Learning'],
-    link: 'https://ziontechgroup.com/services/iot-platform-development',
+    link: 'http,
+    s://ziontechgroup.com/services/iot-platform-development',
     icon: '🌐'},
-  {
+  {'
     id: 'api-first-architecture',
     name: 'API-First Architecture Design',
     category: 'it-services',
@@ -3909,7 +4153,8 @@ export const services: Service[] = [;
       'Integration with existing systems';
     ],
     pricing: {
-      starter: 20000,
+      starte,
+    r: 20000,
       professional: 60000,
       enterprise: 150000,
       currency: 'USD'},
@@ -3927,9 +4172,10 @@ export const services: Service[] = [;
       'Mobile app development';
     ],
     technologies: ['API Gateway', 'OpenAPI', 'GraphQL', 'REST', 'OAuth', 'Rate Limiting'],
-    link: 'https://ziontechgroup.com/services/api-first-architecture',
+    link: 'http,
+    s://ziontechgroup.com/services/api-first-architecture',
     icon: '🔗'},
-  {
+  {'
     id: 'hybrid-cloud-strategy',
     name: 'Hybrid Cloud Strategy & Implementation',
     category: 'it-services',
@@ -3945,7 +4191,8 @@ export const services: Service[] = [;
       'Governance and policy management';
     ],
     pricing: {
-      starter: 35000,
+      starte,
+    r: 35000,
       professional: 100000,
       enterprise: 250000,
       currency: 'USD'},
@@ -3963,9 +4210,10 @@ export const services: Service[] = [;
       'Multi-cloud environments';
     ],
     technologies: ['AWS', 'Azure', 'VMware', 'Kubernetes', 'Terraform', 'Cloud Management'],
-    link: 'https://ziontechgroup.com/services/hybrid-cloud-strategy',
+    link: 'http,
+    s://ziontechgroup.com/services/hybrid-cloud-strategy',
     icon: '🌩️'},
-  {
+  {'
     id: 'devsecops-implementation',
     name: 'DevSecOps Implementation',
     category: 'it-services',
@@ -3981,7 +4229,8 @@ export const services: Service[] = [;
       'Security training and awareness';
     ],
     pricing: {
-      starter: 25000,
+      starte,
+    r: 25000,
       professional: 75000,
       enterprise: 200000,
       currency: 'USD'},
@@ -3999,9 +4248,10 @@ export const services: Service[] = [;
       'Government agencies';
     ],
     technologies: ['Jenkins', 'GitLab CI', 'SonarQube', 'OWASP', 'SAST', 'DAST'],
-    link: 'https://ziontechgroup.com/services/devsecops-implementation',
+    link: 'http,
+    s://ziontechgroup.com/services/devsecops-implementation',
     icon: '🔐'},
-  {
+  {'
     id: 'observability-platform',
     name: 'Observability Platform Implementation',
     category: 'it-services',
@@ -4017,7 +4267,8 @@ export const services: Service[] = [;
       'Integration with existing tools';
     ],
     pricing: {
-      starter: 15000,
+      starte,
+    r: 15000,
       professional: 45000,
       enterprise: 120000,
       currency: 'USD'},
@@ -4035,9 +4286,10 @@ export const services: Service[] = [;
       'Enterprise applications';
     ],
     technologies: ['Prometheus', 'Grafana', 'ELK Stack', 'Jaeger', 'OpenTelemetry', 'AlertManager'],
-    link: 'https://ziontechgroup.com/services/observability-platform',
+    link: 'http,
+    s://ziontechgroup.com/services/observability-platform',
     icon: '👁️'},
-  // Additional Cutting-Edge AI Services{
+  // Additional Cutting-Edge AI Services{'
     id: 'ai-generative-design',
     name: 'AI Generative Design Platform',
     category: 'ai-services',
@@ -4053,7 +4305,8 @@ export const services: Service[] = [;
       'Patent and IP protection';
     ],
     pricing: {
-      starter: 50000,
+      starte,
+    r: 50000,
       professional: 150000,
       enterprise: 500000,
       currency: 'USD'},
@@ -4071,9 +4324,10 @@ export const services: Service[] = [;
       'Aerospace engineering';
     ],
     technologies: ['Generative AI', 'CAD Integration', 'Simulation Software', 'Machine Learning', '3D Modeling'],
-    link: 'https://ziontechgroup.com/services/ai-generative-design',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-generative-design',
     icon: '🎨'},
-  {
+  {'
     id: 'ai-autonomous-systems',
     name: 'AI Autonomous Systems Development',
     category: 'ai-services',
@@ -4089,7 +4343,8 @@ export const services: Service[] = [;
       'Regulatory compliance support';
     ],
     pricing: {
-      starter: 100000,
+      starte,
+    r: 100000,
       professional: 300000,
       enterprise: 1000000,
       currency: 'USD'},
@@ -4107,9 +4362,10 @@ export const services: Service[] = [;
       'Smart city infrastructure';
     ],
     technologies: ['Computer Vision', 'Reinforcement Learning', 'ROS', 'Edge Computing', 'Sensor Fusion'],
-    link: 'https://ziontechgroup.com/services/ai-autonomous-systems',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-autonomous-systems',
     icon: '🚗'},
-  {
+  {'
     id: 'ai-digital-twin',
     name: 'AI Digital Twin Platform',
     category: 'ai-services',
@@ -4125,7 +4381,8 @@ export const services: Service[] = [;
       'Collaborative platform';
     ],
     pricing: {
-      starter: 75000,
+      starte,
+    r: 75000,
       professional: 225000,
       enterprise: 750000,
       currency: 'USD'},
@@ -4143,9 +4400,10 @@ export const services: Service[] = [;
       'Transportation networks';
     ],
     technologies: ['IoT', 'Machine Learning', '3D Modeling', 'Simulation', 'Real-time Analytics'],
-    link: 'https://ziontechgroup.com/services/ai-digital-twin',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-digital-twin',
     icon: '🔄'},
-  {
+  {'
     id: 'ai-meta-learning',
     name: 'AI Meta-Learning Systems',
     category: 'ai-services',
@@ -4161,7 +4419,8 @@ export const services: Service[] = [;
       'Performance monitoring';
     ],
     pricing: {
-      starter: 80000,
+      starte,
+    r: 80000,
       professional: 240000,
       enterprise: 800000,
       currency: 'USD'},
@@ -4179,9 +4438,10 @@ export const services: Service[] = [;
       'Dynamic business requirements';
     ],
     technologies: ['Meta-Learning', 'Few-Shot Learning', 'Transfer Learning', 'Neural Architecture Search', 'Python'],
-    link: 'https://ziontechgroup.com/services/ai-meta-learning',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-meta-learning',
     icon: '🧠'},
-  {
+  {'
     id: 'ai-federated-learning',
     name: 'AI Federated Learning Platform',
     category: 'ai-services',
@@ -4197,7 +4457,8 @@ export const services: Service[] = [;
       'Compliance management';
     ],
     pricing: {
-      starter: 60000,
+      starte,
+    r: 60000,
       professional: 180000,
       enterprise: 600000,
       currency: 'USD'},
@@ -4215,9 +4476,10 @@ export const services: Service[] = [;
       'Privacy-sensitive applications';
     ],
     technologies: ['Federated Learning', 'Cryptography', 'Privacy-Preserving ML', 'Distributed Systems', 'Blockchain'],
-    link: 'https://ziontechgroup.com/services/ai-federated-learning',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-federated-learning',
     icon: '🔐'},
-  {
+  {'
     id: 'ai-explainable-ai',
     name: 'Explainable AI (XAI) Platform',
     category: 'ai-services',
@@ -4233,7 +4495,8 @@ export const services: Service[] = [;
       'Human-AI collaboration interfaces';
     ],
     pricing: {
-      starter: 40000,
+      starte,
+    r: 40000,
       professional: 120000,
       enterprise: 400000,
       currency: 'USD'},
@@ -4251,9 +4514,10 @@ export const services: Service[] = [;
       'Critical infrastructure';
     ],
     technologies: ['Explainable AI', 'Interpretability Methods', 'Bias Detection', 'Fairness Metrics', 'Python'],
-    link: 'https://ziontechgroup.com/services/ai-explainable-ai',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-explainable-ai',
     icon: '🔍'},
-  {
+  {'
     id: 'ai-edge-intelligence',
     name: 'AI Edge Intelligence Platform',
     category: 'ai-services',
@@ -4269,7 +4533,8 @@ export const services: Service[] = [;
       'Security and privacy protection';
     ],
     pricing: {
-      starter: 35000,
+      starte,
+    r: 35000,
       professional: 105000,
       enterprise: 350000,
       currency: 'USD'},
@@ -4287,9 +4552,10 @@ export const services: Service[] = [;
       'Real-time surveillance';
     ],
     technologies: ['Edge Computing', 'Model Compression', 'TensorRT', 'OpenVINO', 'Edge AI Frameworks'],
-    link: 'https://ziontechgroup.com/services/ai-edge-intelligence',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-edge-intelligence',
     icon: '⚡'},
-  {
+  {'
     id: 'ai-multimodal-learning',
     name: 'AI Multimodal Learning Systems',
     category: 'ai-services',
@@ -4305,7 +4571,8 @@ export const services: Service[] = [;
       'Custom multimodal models';
     ],
     pricing: {
-      starter: 70000,
+      starte,
+    r: 70000,
       professional: 210000,
       enterprise: 700000,
       currency: 'USD'},
@@ -4323,9 +4590,10 @@ export const services: Service[] = [;
       'Creative AI applications';
     ],
     technologies: ['Multimodal AI', 'Transformer Models', 'Cross-Modal Learning', 'Computer Vision', 'NLP'],
-    link: 'https://ziontechgroup.com/services/ai-multimodal-learning',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-multimodal-learning',
     icon: '🎭'},
-  {
+  {'
     id: 'ai-neuromorphic-computing',
     name: 'AI Neuromorphic Computing Solutions',
     category: 'ai-services',
@@ -4341,7 +4609,8 @@ export const services: Service[] = [;
       'Research and development support';
     ],
     pricing: {
-      starter: 200000,
+      starte,
+    r: 200000,
       professional: 600000,
       enterprise: 2000000,
       currency: 'USD'},
@@ -4359,9 +4628,10 @@ export const services: Service[] = [;
       'Research and development';
     ],
     technologies: ['Neuromorphic Hardware', 'Spiking Neural Networks', 'Event-Driven Processing', 'Low-Power AI', 'Research Tools'],
-    link: 'https://ziontechgroup.com/services/ai-neuromorphic-computing',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-neuromorphic-computing',
     icon: '🧬'},
-  {
+  {'
     id: 'ai-legal-contract-review-pro',
     name: 'AI Legal Contract Review Pro',
     category: 'micro-saas',
@@ -4377,7 +4647,8 @@ export const services: Service[] = [;
       'API for DMS/CLM integration';
     ],
     pricing: {
-      starter: 49,
+      starte,
+    r: 49,
       professional: 129,
       enterprise: 499,
       currency: 'USD'},
@@ -4395,9 +4666,10 @@ export const services: Service[] = [;
       'Policy compliance checks';
     ],
     technologies: ['RAG', 'LLMs', 'NLP', 'Node.js', 'Next.js', 'PostgreSQL'],
-    link: 'https://ziontechgroup.com/services/ai-legal-contract-review-pro',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-legal-contract-review-pro',
     icon: '⚖️'},
-  {
+  {'
     id: 'ecommerce-repricing-optimizer',
     name: 'eCommerce Repricing Optimizer',
     category: 'micro-saas',
@@ -4413,7 +4685,8 @@ export const services: Service[] = [;
       'CSV and API imports';
     ],
     pricing: {
-      starter: 39,
+      starte,
+    r: 39,
       professional: 99,
       enterprise: 299,
       currency: 'USD'},
@@ -4430,9 +4703,10 @@ export const services: Service[] = [;
       'Promo and seasonal pricing';
     ],
     technologies: ['TypeScript', 'Next.js', 'Queues', 'Redis', 'PostgreSQL', 'Playwright'],
-    link: 'https://ziontechgroup.com/services/ecommerce-repricing-optimizer',
+    link: 'http,
+    s://ziontechgroup.com/services/ecommerce-repricing-optimizer',
     icon: '💹'},
-  {
+  {'
     id: 'customer-feedback-mining',
     name: 'Customer Feedback Mining',
     category: 'micro-saas',
@@ -4448,7 +4722,8 @@ export const services: Service[] = [;
       'Slack/MS Teams integration';
     ],
     pricing: {
-      starter: 29,
+      starte,
+    r: 29,
       professional: 79,
       enterprise: 249,
       currency: 'USD'},
@@ -4465,9 +4740,10 @@ export const services: Service[] = [;
       'C-suite customer health';
     ],
     technologies: ['Python', 'NLP', 'Vector DB', 'Next.js', 'Airflow/Temporal'],
-    link: 'https://ziontechgroup.com/services/customer-feedback-mining',
+    link: 'http,
+    s://ziontechgroup.com/services/customer-feedback-mining',
     icon: '🗣️'},
-  {
+  {'
     id: 'cloud-migration-accelerator',
     name: 'Cloud Migration Accelerator',
     category: 'it-services',
@@ -4483,7 +4759,8 @@ export const services: Service[] = [;
       'Knowledge transfer and docs';
     ],
     pricing: {
-      starter: 15000,
+      starte,
+    r: 15000,
       professional: 65000,
       enterprise: 250000,
       currency: 'USD'},
@@ -4500,16 +4777,17 @@ export const services: Service[] = [;
       'Global scalability needs';
     ],
     technologies: ['AWS', 'Azure', 'GCP', 'Terraform', 'Kubernetes', 'Datadog'],
-    link: 'https://ziontechgroup.com/services/cloud-migration-accelerator',
+    link: 'http,
+    s://ziontechgroup.com/services/cloud-migration-accelerator',
     icon: '☁️'},
-  {
+  {'
     id: 'kubernetes-platform-engineering',
     name: 'Kubernetes Platform Engineering',
     category: 'it-services',
     description: 'Enterprise-grade Kubernetes platform with golden paths, GitOps, self-service environments, and security by default.',
     features: [;
       'Cluster design and hardening',
-      'GitOps (Argo CD/Flux)',
+      'GitOps (Argo CD/Flux),
       'Golden paths and templates',
       'Service mesh and policies',
       'CI/CD and artifact supply chain',
@@ -4518,7 +4796,8 @@ export const services: Service[] = [;
       'Runbooks and training';
     ],
     pricing: {
-      starter: 12000,
+      starte,
+    r: 12000,
       professional: 48000,
       enterprise: 180000,
       currency: 'USD'},
@@ -4535,9 +4814,10 @@ export const services: Service[] = [;
       'Edge and on-prem clusters';
     ],
     technologies: ['Kubernetes', 'Helm', 'Argo CD', 'Istio/Linkerd', 'OPA/Gatekeeper'],
-    link: 'https://ziontechgroup.com/services/kubernetes-platform-engineering',
+    link: 'http,
+    s://ziontechgroup.com/services/kubernetes-platform-engineering',
     icon: '🐳'},
-  {
+  {'
     id: 'soc2-compliance-implementation',
     name: 'SOC 2 Compliance Implementation',
     category: 'it-services',
@@ -4553,7 +4833,8 @@ export const services: Service[] = [;
       'Audit coordination';
     ],
     pricing: {
-      starter: 8000,
+      starte,
+    r: 8000,
       professional: 35000,
       enterprise: 120000,
       currency: 'USD'},
@@ -4570,9 +4851,10 @@ export const services: Service[] = [;
       'Continuous compliance';
     ],
     technologies: ['GRC Platforms', 'CIS Benchmarks', 'SIEM', 'CSPM', 'IaC'],
-    link: 'https://ziontechgroup.com/services/soc2-compliance-implementation',
+    link: 'http,
+    s://ziontechgroup.com/services/soc2-compliance-implementation',
     icon: '🔒'},
-  {
+  {'
     id: 'ragt-knowledge-bot',
     name: 'RAG Knowledge Bot',
     category: 'ai-services',
@@ -4588,7 +4870,8 @@ export const services: Service[] = [;
       'SDK and API access';
     ],
     pricing: {
-      starter: 7000,
+      starte,
+    r: 7000,
       professional: 18000,
       enterprise: 120000,
       currency: 'USD'},
@@ -4605,9 +4888,10 @@ export const services: Service[] = [;
       'Policy and compliance Q&A';
     ],
     technologies: ['RAG', 'Vector DB', 'OpenAI/Azure OpenAI', 'LangChain', 'Next.js'],
-    link: 'https://ziontechgroup.com/services/rag-knowledge-bot',
+    link: 'http,
+    s://ziontechgroup.com/services/rag-knowledge-bot',
     icon: '🤖'},
-  {
+  {'
     id: 'computer-vision-inspection',
     name: 'Computer Vision Quality Inspection',
     category: 'ai-services',
@@ -4623,7 +4907,8 @@ export const services: Service[] = [;
       'Secure on-prem deployment';
     ],
     pricing: {
-      starter: 20000,
+      starte,
+    r: 20000,
       professional: 90000,
       enterprise: 400000,
       currency: 'USD'},
@@ -4640,9 +4925,10 @@ export const services: Service[] = [;
       'Food and beverage lines';
     ],
     technologies: ['PyTorch', 'ONNX/TensorRT', 'Edge AI', 'OpenCV', 'MLOps'],
-    link: 'https://ziontechgroup.com/services/computer-vision-inspection',
+    link: 'http,
+    s://ziontechgroup.com/services/computer-vision-inspection',
     icon: '📷'},
-  {
+  {'
     id: 'ai-sales-forecasting-suite',
     name: 'AI Sales Forecasting Suite',
     category: 'ai-services',
@@ -4658,7 +4944,8 @@ export const services: Service[] = [;
       'API for ERP/CRM integration';
     ],
     pricing: {
-      starter: 10000,
+      starte,
+    r: 10000,
       professional: 35000,
       enterprise: 150000,
       currency: 'USD'},
@@ -4675,7 +4962,8 @@ export const services: Service[] = [;
       'Manufacturing S&OP';
     ],
     technologies: ['Python', 'Prophet', 'NeuralForecast', 'dbt', 'Snowflake/BigQuery'],
-    link: 'https://ziontechgroup.com/services/ai-sales-forecasting-suite',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-sales-forecasting-suite',
     icon: '📈'}
 ];
 export const getServicesByCategory = (category: Service['category']) => {

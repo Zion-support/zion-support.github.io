@@ -3,7 +3,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
 jest.mock(
   'next/router', () => ({
   useRouter() {
-    return {
+    return {'
       route: '/,
       pathname:;
   '/',
@@ -17,21 +17,27 @@ jest.mock(
       prefetch: jest.fn().mockResolvedValue(undefined),
       beforePopState: jest.fn(),
       events: {
-        on: jest.fn(),
+        o,
+    n: jest.fn(),
         off: jest.fn(),
         emit: jest.fn()},
       isFallback: false}
   }}));
-// Mock Next.js Image component;
+<<<<<<< HEAD
+// Mock Next.js Image component
 jest.mock(
+=======
+// Mock Next.js Image component;
+jest.mock('
+>>>>>>> main
   'next/image', () => ({
   __esModule: true,
   default: props => {
     // eslint-disable-next-line @next/next/no-img-element
     return <img {...props} />
-  }}));
+  }}))
 // Mock Next.js Link component
-jest.mock(
+jest.mock('
   'next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {
@@ -44,7 +50,7 @@ jest.mock(
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
-  disconnect: jest.fn()}));
+  disconnect: jest.fn()}))
 global.matchMedia = jest.fn().mockImplementation(query => ({
   matches: false,
   media: query,

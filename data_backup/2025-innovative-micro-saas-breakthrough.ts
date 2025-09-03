@@ -17,27 +17,31 @@ export const innovativeMicroSaasBreakthrough2025 = [{
   'Custom AI model training for industry-specific content';
     ],
     pricing: {
-starter: {
-        price: 99,
+starte,
+    r: {
+        pric,
+    e: 99,
         period:,
   month',
-        features: [
+        features: ['
   '20 articles/month,
   'Basic AI templates',
   'SEO suggestions',
   'Email support']},
       professional: {
-        price: 299,
+        pric,
+    e: 299,
         period:,
   month',
-        features: [
+        features: ['
   '100 articles/month,
   'Advanced AI models',
   'Full SEO suite',
   'Team collaboration',
   'Priority support']},
       enterprise: {
-        price: 899,
+        pric,
+    e: 899,
         period:,
   month',
         features: [;
@@ -55,9 +59,11 @@ starter: {
   'Marketing Automation',
   'NLP',
   'Enterprise'],
-    website: 'https://ziontechgroup.com/ai-content-factory-enterprise,
+    website: 'http,
+    s://ziontechgroup.com/ai-content-factory-enterprise,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -80,12 +86,12 @@ starter: {
   'Mailchimp',
   'Google Analytics',
   'SEMrush'],
-    compliance[
+    compliance['
   'GDPR',
   'CCPA',
   'SOC2',
   'ISO 27001']},
-  {
+  {'
     id: 'quantum-crm-suite-enterprise,
     name:,
   Quantum CRM Suite Enterprise',
@@ -103,8 +109,10 @@ starter: {
   'Mobile-first responsive design and applications';
     ],
     pricing: {
-starter: {
-        price: 149,
+starte,
+    r: {
+        pric,
+    e: 149,
         period:,
   month',
         features: [Up to 5,000 contacts',
@@ -112,7 +120,8 @@ starter: {
   'Email campaigns',
   'Standard support']},
       professional: {
-        price: 399,
+        pric,
+    e: 399,
         period:,
   month',
         features: [Up to 50,000 contacts',
@@ -121,7 +130,8 @@ starter: {
   'Custom workflows',
   'Priority support']},
       enterprise: {
-        price: 999,
+        pric,
+    e: 999,
         period:,
   month',
         features: [;
@@ -139,9 +149,11 @@ starter: {
   'Sales Automation',
   'Predictive Analytics',
   'Enterprise'],
-    website: 'https://ziontechgroup.com/quantum-crm-suite-enterprise,
+    website: 'http,
+    s://ziontechgroup.com/quantum-crm-suite-enterprise,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -164,13 +176,13 @@ starter: {
   'Zapier',
   'Slack',
   'Microsoft Teams'],
-    compliance[
+    compliance['
   'GDPR',
   'CCPA',
   'SOC2',
   'ISO 27001',
   'Sales compliance standards']},
-  {
+  {'
     id: 'ai-autonomous-decision-engine,
     name:,
   AI Autonomous Decision Engine',
@@ -188,27 +200,31 @@ starter: {
   'API access for custom integrations';
     ],
     pricing: {
-starter: {
-        price: 799,
+starte,
+    r: {
+        pric,
+    e: 799,
         period:,
   month',
-        features: [
+        features: ['
   'Basic decision engine,
   'Up to 1000 decisions/month',
   'Standard analytics',
   'Email support']},
       professional: {
-        price: 1999,
+        pric,
+    e: 1999,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced decision engine,
   'Unlimited decisions',
   'Custom models',
   'Priority support',
   'API access']},
       enterprise: {
-        price: 4999,
+        pric,
+    e: 4999,
         period:,
   month',
         features: [;
@@ -226,9 +242,11 @@ starter: {
   'Machine Learning',
   'Automation',
   'Enterprise'],
-    website: 'https://ziontechgroup.com/ai-autonomous-decision-engine,
+    website: 'http,
+    s://ziontechgroup.com/ai-autonomous-decision-engine,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -250,12 +268,12 @@ starter: {
   'Analytics tools',
   'Business intelligence tools',
   'API gateways'],
-    compliance[
+    compliance['
   'SOC2',
   'ISO 27001',
   'Industry-specific regulations',
   'Data privacy standards']},
-  {
+  {'
     id: 'ai-legal-contract-analyzer,
     name:,
   AI Legal Contract Analyzer',
@@ -273,27 +291,31 @@ starter: {
   'API access for legal software integration';
     ],
     pricing: {
-starter: {
-        price: 299,
+starte,
+    r: {
+        pric,
+    e: 299,
         period:,
   month',
-        features: [
+        features: ['
   'Basic contract analysis,
   'Up to 50 contracts/month',
   'Standard templates',
   'Email support']},
       professional: {
-        price: 799,
+        pric,
+    e: 799,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced contract analysis,
   'Unlimited contracts',
   'Custom templates',
   'Priority support',
   'API access']},
       enterprise: {
-        price: 1999,
+        pric,
+    e: 1999,
         period:,
   month',
         features: [;
@@ -311,9 +333,11 @@ starter: {
   'Legal Analysis',
   'Compliance',
   'Enterprise'],
-    website: 'https://ziontechgroup.com/ai-legal-contract-analyzer,
+    website: 'http,
+    s://ziontechgroup.com/ai-legal-contract-analyzer,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -335,13 +359,13 @@ starter: {
   'E-signature tools',
   'Legal research databases',
   'Enterprise systems'],
-    compliance[
+    compliance['
   'Legal industry standards',
   'Data privacy regulations',
   'SOC2',
   'ISO 27001',
   'Legal compliance requirements']},
-  {
+  {'
     id: 'ai-healthcare-diagnostics-pro,
     name:,
   AI Healthcare Diagnostics Pro',
@@ -359,27 +383,31 @@ starter: {
   'HIPAA compliance and security';
     ],
     pricing: {
-starter: {
-        price: 599,
+starte,
+    r: {
+        pric,
+    e: 599,
         period:,
   month',
-        features: [
+        features: ['
   'Basic diagnostics,
   'Up to 100 patients/month',
   'Standard models',
   'Email support']},
       professional: {
-        price: 1499,
+        pric,
+    e: 1499,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced diagnostics,
   'Unlimited patients',
   'Custom models',
   'Priority support',
   'API access']},
       enterprise: {
-        price: 3999,
+        pric,
+    e: 3999,
         period:,
   month',
         features: [;
@@ -397,9 +425,11 @@ starter: {
   'Patient Care',
   'Medical Technology',
   'Enterprise'],
-    website: 'https://ziontechgroup.com/ai-healthcare-diagnostics-pro,
+    website: 'http,
+    s://ziontechgroup.com/ai-healthcare-diagnostics-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -422,7 +452,7 @@ integrations: [;
   'Laboratory systems',
   'Patient monitoring devices',
   'Healthcare platforms'],
-    compliance: [
+    compliance: ['
   'HIPAA,
   'FDA regulations',
   'Medical device standards',

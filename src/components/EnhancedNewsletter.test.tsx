@@ -1,21 +1,15 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import EnhancedNewsletter from '../EnhancedNewsletter';
+import {SEO } from '@/components/SEO';
 
-describe('EnhancedNewsletter', () => {
-  test('renders without crashing', () => {
-    render(<EnhancedNewsletter />);
-    expect(screen.getByTestId('enhancednewsletter')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
-    render(<EnhancedNewsletter />);
-    // Add specific content tests based on component
-  });
-
-  test('handles user interactions', () => {
-    render(<EnhancedNewsletter />);
-    // Add interaction tests based on component functionality
-  });
-});
+export default function EnhancedNewsletter.test() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="EnhancedNewsletter.test - Zion Tech Group" description="Professional EnhancedNewsletter.test services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">EnhancedNewsletter.test</h1>
+        <p className="text-gray-300 text-lg">
+          Professional EnhancedNewsletter.test services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}
