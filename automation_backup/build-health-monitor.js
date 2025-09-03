@@ -222,7 +222,8 @@ class BuildHealthMonitor {
     this.log(,
   Running inline Next.js import fixes...');
 
-    const replacements = [{
+    const replacements = [
+  {
         pattern: /import\s+Link\s+from\s+[;
   '']next\/link['];?/g,
         replacement:;
@@ -307,12 +308,9 @@ class BuildHealthMonitor {
       throw new Error(`Build config fix failed: ${error.message}`)}
   }
   generateCleanViteConfig() {
-    return `import { defineConfig } from 'vite;
-  ';
-import react from '@vitejs/plugin-react;
-  ';
-import { resolve } from 'path;
-  ';
+    return `import { defineConfig }  from 'vite;;
+import react  from '@vitejs/plugin-react;;
+import { resolve }  from 'path;;
 export { defineConfig }
 export default defineConfig({
   plugins: [react()],

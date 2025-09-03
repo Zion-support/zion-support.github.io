@@ -1,17 +1,41 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
+<<<<<<< HEAD
+describe(&apos;SearchPage&apos;, () => {}&apos; it(&apos;renders without crashing&apos;, () => {} render(&apos;<SearchPage />) '; expect(screen.getByRole (&apos;main&apos;) || screen.getByText(/.*/) ) .toBeInTheDocument () }) &apos; it(&apos;displays expected content&apos;, () => {} render(&apos;&apos;<SearchPage />) 
+=======
+<<<<<<< HEAD
+import React from 'react';""
+import { render, screen } from '@testing-library/react';""
+import '@testing-library/jest-dom';""
 import SearchPage from './SearchPage';
-"
+""
+describe('SearchPage', () => {""
+  it('renders without crashing', () => {
+    render(<SearchPage /" >);"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();, });
+""
+  it('displays expected content', () => {
+    render(<SearchPage /" >);"
+    // Add more specific tests here, });, });
+""
+=======
+<<<<<<< HEAD
+describe('SearchPage', () => {}' it('renders without crashing', () => {} render(<SearchPage />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<SearchPage />) '
+=======
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import SearchPage from './SearchPage
 describe('SearchPage', () => {"
   it('renders without crashing', () => {
     render(<SearchPage /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 "
   it('displays expected content', () => {
-    render(<SearchPage /" >);
-    // Add more specific tests here,
-});,
+    render(<SearchPage /" >)
+    // Add more specific tests here
 });
+})
 "
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

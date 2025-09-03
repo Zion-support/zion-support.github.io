@@ -203,10 +203,8 @@ class BrowserErrorFixer {
   async fixUnexpectedToken(token, filePath) {
     const commonFixes = {
   '(': ),[':]',{
-  ': },';
-  ':,
-  ';
-  ',
+  ': },:,
+  ,
       ''': '',`':,
   `'}
     if (commonFixes[token]) {
@@ -302,7 +300,7 @@ if (require.main === module) {
   const fixer = new BrowserErrorFixer();
   // Example usage;
   const sampleErrors = [
-    { message: 'Cannot read property;
+  { message: 'Cannot read property;
   'length of null' },
     { message: 'ReferenceError: userData is not defined' },
     { message: 'TypeError: Cannot read properties of undefined' }

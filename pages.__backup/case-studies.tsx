@@ -15,7 +15,8 @@ const CaseStudies: NextPage = () => {
   All');
   const [selectedService, setSelectedService] = useState(
   'All');
-  const caseStudies = [{
+  const caseStudies = [
+  {
       id: 'fintech-ai-fraud-detection,
       title:,
   FinTech Revolution: AI-Powered Fraud Detection System,
@@ -41,9 +42,7 @@ const CaseStudies: NextPage = () => {
       technologies: [;
   'Machine Learning,
 ,
-  Real-time Analytics',
-  'Behavioral Analysis',
-  'Pattern Recognition'],
+  Real-time Analytics,Behavioral Analysis,Pattern Recognition'],
       metrics: [{ label:
   'Fraud Detection Rate, value:,
   99.2%', improvement: '+89% },
@@ -95,9 +94,7 @@ const CaseStudies: NextPage = () => {
       technologies: [;
   'Computer Vision,
 ,
-  Deep Learning',
-  'Medical Imaging',
-  'Predictive Analytics'],
+  Deep Learning,Medical Imaging,Predictive Analytics'],
       metrics: [{ label:;
   'Diagnostic Accuracy, value:,
   96.7%', improvement: '+94% },
@@ -156,9 +153,9 @@ const CaseStudies: NextPage = () => {
   ',
       technologies: ['AWS, ,
   Kubernetes;
-  ', 'Auto-scaling;
-  ', 'Load Balancing;
-  ', 'CDN;
+  ,Auto-scaling;
+  ,Load Balancing;
+  ,CDN;
   '],
       metrics: [{ label: 'Uptime, value:,
   99.97%;
@@ -222,8 +219,8 @@ const CaseStudies: NextPage = () => {
   ',
       technologies: ['IoT Sensors, ,
   Edge Computing;
-  ', 'Predictive Maintenance;
-  ', 'Real-time Analytics;
+  ,Predictive Maintenance;
+  ,Real-time Analytics;
   '],
       metrics: [{ label: 'Production Efficiency, value:,
   +42%;
@@ -287,9 +284,9 @@ const CaseStudies: NextPage = () => {
   ',
       technologies: ['CI/CD Pipeline, ,
   Docker;
-  ', 'Kubernetes;
-  ', 'Monitoring;
-  ', 'Infrastructure as Code;
+  ,Kubernetes;
+  ,Monitoring;
+  ,Infrastructure as Code;
   '],
       metrics: [{ label: 'Deployment Speed, value:,
   < 5 min;
@@ -324,18 +321,18 @@ const CaseStudies: NextPage = () => {
       teamSize: '5 experts}
   ];
   const industries = ['All
-  ', 'Financial Services;
-  ', 'Healthcare;
-  ', 'E-commerce;
-  ', 'Manufacturing;
-  ', 'Technology;
+  ,Financial Services;
+  ,Healthcare;
+  ,E-commerce;
+  ,Manufacturing;
+  ,Technology;
   '];
   const services = ['All
-  ', 'AI & Machine Learning;
-  ', 'Cloud & Infrastructure;
-  ', 'DevOps & Infrastructure;
-  ', 'IoT & Automation;
-  ', 'Cybersecurity;
+  ,AI & Machine Learning;
+  ,Cloud & Infrastructure;
+  ,DevOps & Infrastructure;
+  ,IoT & Automation;
+  ,Cybersecurity;
   '];
   const filteredCaseStudies = caseStudies.filter(study => {
     const matchesIndustry = selectedIndustry === 'All;

@@ -1,43 +1,86 @@
+<<<<<<< HEAD
+ const EnhancedHero = () => {} const [currentSlide, setCurrentSlide] = useState (0)  const [isPlaying, setIsPlaying] = useState (true)  const [isMuted, setIsMuted] = useState (false)  const [isAutoPlaying, setIsAutoPlaying] = useState (true)  const;const heroSlides = [ { id: 1, title: &apos;Transform Your Business&apos;,&apos; subtitle: &apos;With Zion Tech Group&apos;, &apos; description: &apos;Discover our cutting - edge micro SAAS solutions designed to scale your business operations and drive growth.&apos;,&apos; ctaText: &apos;Explore Services&apos;, &apos; ctaLink: &apos;/micro - saas - services&apos;,&apos; background: &apos;linear - gradient (135deg, #667eea 0%, #764ba2 100%) &apos;, &apos; icon: &apos; }, { id: 2, &apos; title: &apos;AI - Powered Solutions&apos;,&apos; subtitle: &apos;For Modern Enterprises&apos;, &apos; description: &apos;Leverage artificial intelligence to automate workflows, enhance productivity, and gain competitive advantages.&apos;,&apos; ctaText: &apos;Learn More&apos;, &apos; ctaLink: &apos;/ai - solutions&apos;,&apos; background: &apos;linear - gradient (135deg, #f093fb 0%, #f5576c 100%) &apos;, &apos; icon: &apos; }, { id: 3, &apos; title: &apos;Cloud - Native Architecture&apos;,&apos; subtitle: &apos;Built for Scale&apos;, &apos; description: &apos;Enterprise - grade cloud solutions that grow with your business, ensuring reliability and performance.&apos;, &apos; ctaText: &apos;Get Started&apos;,&apos; ctaLink: &apos;/cloud - solutions&apos;, &apos; background: &apos;linear - gradient (135deg, #4facfe 0%, #00f2fe 100%) &apos;, &apos; icon: &apos; } ] useEffect ( () => { if (!isAutoPlaying) return&apos;}&apos; const interval = setInterval ( () => { if (isPlaying) { setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) } }, 5000)  return () => clearInterval (interval) }, [isPlaying, isAutoPlaying, heroSlides.length])  const nextSlide = () => { setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) } const prevSlide = () => { setCurrentSlide ( (prev) => (prev - 1 + heroSlides.length) % heroSlides.length) } const goToSlide = (index) => { setCurrentSlide (index) } const;const toggleAutoPlay = () => { setIsAutoPlaying (!isAutoPlaying)  if (!isAutoPlaying) { setIsPlaying (true) } }&apos; return (&apos;<div className=&apos;relative w - full h - screen overflow - hidden&apos;> {}&apos;&apos;' <div className=&apos;absolute inset - 0 bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900&apos;>'&apos;&apos; <div className=&apos;absolute inset - 0 bg - black / 50&apos;/>&apos; </div> {}&apos;&apos;' <div className=&apos;relative z - 10 flex items - center justify - center h - full px - 4 sm: px - 6 l,g:px - 8&apos;>'&apos;&apos; <div className=&apos;text - center max - w-6xl mx - auto&apos;>'&apos;&apos; <AnimatePresence mode=&apos;wait&apos;>&apos;' <motion.div key={currentSlide} initial = { { opacity: 0, y: 20 }} animate = { { opacity: 1, y: 0 }} exit = { { opacity: 0, y: -20 &apos; }} transition={{ duration: 0.5 }} className=&apos;space - y-6&apos;> {}&apos; <motion.div initial = { { scale: 0, rotate: -180 }} animate = { { scale: 1, rotate: 0 }} transition = { { duration: 0.6, delay: 0.2 &apos; }} className=&apos;text - 8xl mb - 6&apos;> {heroSlides[currentSlide].icon}&apos; </motion.div> {} <motion.h1 initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.3 &apos; }} className=&apos;text - 4xl sm:text - 5xl l,g:text - 7xl font - bold text - white leading - tight&apos;> {heroSlides[currentSlide].title}&apos; </motion.h1> {} <motion.h2 initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.4 &apos; }} className=&apos;text - 2xl sm:text - 3xl l,g:text - 4xl font - semibold text - blue - 300 leading - tight&apos;> {heroSlides[currentSlide].subtitle}&apos; </motion.h2> {} <motion.p initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.5 &apos; }} className=&apos;text - lg sm:text - xl l,g:text - 2xl text - gray - 300 max - w-3xl mx - auto leading - relaxed&apos;> {heroSlides[currentSlide].description}&apos; </motion.p> {} <motion.div initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.6 &apos; }} className=&apos;pt - 6&apos;>'&apos;&apos; <a href={heroSlides[currentSlide].ctaLink} className=&apos;inline - flex items - center px - 8 py - 4 text - lg font - semibold text - white bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full hover: from - blue - 700 hover:to - purple - 700 transform hover:scale - 105 transition - all duration - 300 shadow - 2xl hove,r:shadow - blue - 500 / 25&apos;> {heroSlides[currentSlide].ctaText}&apos; <motion.div animate = { { x[0, 5, 0] }} transition = { { duration: 1.5, repeat: Infinity &apos; }} className=&apos;ml - 2&apos;>&apos;' </motion.div> </a> </motion.div> </motion.div> </AnimatePresence> </div> </div> {}&apos;&apos;' <div className=&apos;absolute bottom - 8 left - 1/2 transform - translate - x-1 / 2 z - 20&apos;>'&apos;&apos; <div className=&apos;flex items - center space - x-4&apos;> {}&apos;&apos;' <button onClick={togglePlayPause} className=&apos;p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300&apos; aria - label={isPlaying ? &apos;Pause slideshow&apos; : &apos;Play slideshow&apos;}>&apos; {isPlaying ?&apos;} <Pause className=&apos;w - 5 h - 5 text - white&apos;/> :&apos; <Play className=&apos;w - 5 h - 5 text - white&apos;/>}&apos; </button> {}&apos;&apos;' <button onClick={toggleMute} className=&apos;p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300&apos; aria - label={isMuted ? &apos;Unmute&apos; : &apos;Mute&apos;}>&apos; {isMuted ?&apos;} <VolumeX className=&apos;w - 5 h - 5 text - white&apos;/> :&apos; <Volume2 className=&apos;w - 5 h - 5 text - white&apos;/>}&apos; </button> {} <button onClick={toggleAutoPlay} className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all duration - 300 ${isAutoPlaying&apos; ? &apos;bg - green - 500 / 20 text - green - 300 border border - green - 500 / 30&apos;` : &apos;bg - white / 10 text - white border border - white / 20&apos;}`}>&apos; Auto - play {isAutoPlaying ? &apos;ON&apos; : &apos;OFF&apos;}&apos;' </button> </div> </div> {}&apos;&apos;' <div className=&apos;absolute bottom - 24 left - 1/2 transform - translate - x-1 / 2 z - 20&apos;>'&apos;&apos; <div className=&apos;flex space - x-2&apos;>` {heroSlides.map ( (_, index) => (&apos;}<button key={index} onClick={ () => goToSlide (index) } className={`w - 3 h - 3 rounded - full transition - all duration - 300 ${index === currentSlide&apos; ? &apos;bg - white scale - 125&apos;` : &apos;bg - white / 30 hover:bg - white / 50&apos;}`} aria - label={`Go to slide ${index + 1}`}/>) ) }&apos; </div> </div> {}&apos;&apos;' <button onClick={prevSlide} className=&apos;absolute left - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover: bg - white / 20 transition - colors duration - 300&apos; aria - label=&apos;Previous slide&apos;>'&apos;&apos; <ChevronLeft className=&apos;w - 6 h - 6 text - white&apos;/>&apos; </button> &apos;&apos;' <button onClick={nextSlide} className=&apos;absolute right - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300&apos; aria - label=&apos;Next slide&apos;>'&apos;&apos; <ChevronRight className=&apos;w - 6 h - 6 text - white&apos;/>&apos; </button> {}&apos;&apos;' <div className=&apos;absolute top - 4 right - 4 z - 20&apos;>'&apos;&apos; <div className=&apos;text - xs text - white / 60 bg - black / 20 backdrop - blur - sm px - 3 py - 2 rounded - lg&apos;>&apos;' <p > Use keys or click to navigate</p> </div> </div> </div>) } export;export default EnhancedHero&apos;` &apos;';&apos;&apos;`';import React, { useState, useEffect } from &apos;
+import { motion } from &apos;framer-motion';;react&apos;&apos;
+;&apos;'
+=======
+<<<<<<< HEAD
  const EnhancedHero = () => { const [currentSlide, setCurrentSlide] = useState (0)  const [isPlaying, setIsPlaying] = useState (true)  const [isMuted, setIsMuted] = useState (false)  const [isAutoPlaying, setIsAutoPlaying] = useState (true)  const heroSlides = [ { id: 1, title: 'Transform Your Business',' subtitle: 'With Zion Tech Group', ' description: 'Discover our cutting - edge micro SAAS solutions designed to scale your business operations and drive growth.',' ctaText: 'Explore Services', ' ctaLink: '/micro - saas - services',' background: 'linear - gradient (135deg, #667eea 0%, #764ba2 100%) ', ' icon: ' }, { id: 2, ' title: 'AI - Powered Solutions',' subtitle: 'For Modern Enterprises', ' description: 'Leverage artificial intelligence to automate workflows, enhance productivity, and gain competitive advantages.',' ctaText: 'Learn More', ' ctaLink: '/ai - solutions',' background: 'linear - gradient (135deg, #f093fb 0%, #f5576c 100%) ', ' icon: ' }, { id: 3, ' title: 'Cloud - Native Architecture',' subtitle: 'Built for Scale', ' description: 'Enterprise - grade cloud solutions that grow with your business, ensuring reliability and performance.', ' ctaText: 'Get Started',' ctaLink: '/cloud - solutions', ' background: 'linear - gradient (135deg, #4facfe 0%, #00f2fe 100%) ', ' icon: ' } ] useEffect ( () => { if (!isAutoPlaying) return const interval = setInterval ( () => { if (isPlaying) { setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) } }, 5000)  return () => clearInterval (interval) }, [isPlaying, isAutoPlaying, heroSlides.length])  const nextSlide = () => { setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) } const prevSlide = () => { setCurrentSlide ( (prev) => (prev - 1 + heroSlides.length) % heroSlides.length) } const goToSlide = (index) => { setCurrentSlide (index) } const toggleAutoPlay = () => { setIsAutoPlaying (!isAutoPlaying)  if (!isAutoPlaying) { setIsPlaying (true) } }' return (<div className='relative w - full h - screen overflow - hidden'> {}' <div className='absolute inset - 0 bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900'>' <div className='absolute inset - 0 bg - black / 50'/" > </div> {}' <div className='relative z - 10 flex items - center justify - center h - full px - 4 sm: px - 6 lg:px - 8'>' <div className='text - center max - w-6xl mx - auto'>' <AnimatePresence mode='wait'> <motion.div key={currentSlide} initial = { { opacity: 0, y: 20 }} animate = { { opacity: 1, y: 0 }} exit = { { opacity: 0, y: -20 ' }} transition={{ duration: 0.5 }} className='space - y-6'> {} <motion.div initial = { { scale: 0, rotate: -180 }} animate = { { scale: 1, rotate: 0 }} transition = { { duration: 0.6, delay: 0.2 ' }} className='text - 8xl mb - 6'> {heroSlides[currentSlide].icon} </motion.div> {} <motion.h1 initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.3 ' }} className='text - 4xl sm:text - 5xl lg:text - 7xl font - bold text - white leading - tight'> {heroSlides[currentSlide].title} </motion.h1> {} <motion.h2 initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.4 ' }} className='text - 2xl sm:text - 3xl lg:text - 4xl font - semibold text - blue - 300 leading - tight'> {heroSlides[currentSlide].subtitle} </motion.h2> {} <motion.p initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.5 ' }} className='text - lg sm:text - xl lg:text - 2xl text - gray - 300 max - w-3xl mx - auto leading - relaxed'> {heroSlides[currentSlide].description} </motion.p> {} <motion.div initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.6 ' }} className='pt - 6'>' <a href={heroSlides[currentSlide].ctaLink} className='inline - flex items - center px - 8 py - 4 text - lg font - semibold text - white bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full hover: from - blue - 700 hover:to - purple - 700 transform hover:scale - 105 transition - all duration - 300 shadow - 2xl hover:shadow - blue - 500 / 25'> {heroSlides[currentSlide].ctaText} <motion.div animate = { { x[0, 5, 0] }} transition = { { duration: 1.5, repeat: Infinity ' }} className='ml - 2'> </motion.div> </a> </motion.div> </motion.div> </AnimatePresence> </div> </div> {}' <div className='absolute bottom - 8 left - 1/2 transform - translate - x-1 / 2 z - 20'>' <div className='flex items - center space - x-4'> {}' <button onClick={togglePlayPause} className='p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}" >' {isPlaying ? <Pause className='w - 5 h - 5 text - white'/" > : <Play className='w - 5 h - 5 text - white'/" >} </button> {}' <button onClick={toggleMute} className='p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label={isMuted ? 'Unmute' : 'Mute'}" >' {isMuted ? <VolumeX className='w - 5 h - 5 text - white'/" > : <Volume2 className='w - 5 h - 5 text - white'/" >} </button> {} <button onClick={toggleAutoPlay} className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all duration - 300 ${isAutoPlaying' ? 'bg - green - 500 / 20 text - green - 300 border border - green - 500 / 30'` : 'bg - white / 10 text - white border border - white / 20'}`}" >' Auto - play {isAutoPlaying ? 'ON' : 'OFF'} </button> </div> </div> {}' <div className='absolute bottom - 24 left - 1/2 transform - translate - x-1 / 2 z - 20'>' <div className='flex space - x-2'>` {heroSlides.map ( (_, index) => (<button key={index} onClick={ () =" > goToSlide (index) } className={`w - 3 h - 3 rounded - full transition - all duration - 300 ${index === currentSlide' ? 'bg - white scale - 125'` : 'bg - white / 30 hover:bg - white / 50'}`} aria - label={`Go to slide ${index + 1}`}/>) ) } </div> </div> {}' <button onClick={prevSlide} className='absolute left - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover: bg - white / 20 transition - colors duration - 300' aria - label='Previous slide'>' <ChevronLeft className='w - 6 h - 6 text - white'/" > </button> ' <button onClick={nextSlide} className='absolute right - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label='Next slide'>' <ChevronRight className='w - 6 h - 6 text - white'/" > </button> {}' <div className='absolute top - 4 right - 4 z - 20'>' <div className='text - xs text - white / 60 bg - black / 20 backdrop - blur - sm px - 3 py - 2 rounded - lg'> <p > Use keys or click to navigate</p> </div> </div> </div>) } export default EnhancedHero'` '';''`';import React, { useState, useEffect } from 'react''';"`
- const [currentSlide, setCurrentSlide] = useState (0)  const [isPlaying, setIsPlaying] = useState (true)  const [isMuted, setIsMuted] = useState (false)  const [isAutoPlaying, setIsAutoPlaying] = useState (true)  const heroSlides = [ { id: 1, title: 'Transform Your Business',' subtitle: 'With Zion Tech Group', ' description: 'Discover our cutting - edge micro SAAS solutions designed to scale your business operations and drive growth.',' ctaText: 'Explore Services', ' ctaLink: '/micro - saas - services',' background: 'linear - gradient (135deg, #667eea 0%, #764ba2 100%) ', ' icon: ' }, { id: 2, ' title: 'AI - Powered Solutions',' subtitle: 'For Modern Enterprises', ' description: 'Leverage artificial intelligence to automate workflows, enhance productivity, and gain competitive advantages.',' ctaText: 'Learn More', ' ctaLink: '/ai - solutions',' background: 'linear - gradient (135deg, #f093fb 0%, #f5576c 100%) ', ' icon: ' }, { id: 3, ' title: 'Cloud - Native Architecture',' subtitle: 'Built for Scale', ' description: 'Enterprise - grade cloud solutions that grow with your business, ensuring reliability and performance.', ' ctaText: 'Get Started',' ctaLink: '/cloud - solutions', ' background: 'linear - gradient (135deg, #4facfe 0%, #00f2fe 100%) ', ' icon: ' ] useEffect ( () => { if (!isAutoPlaying) return const interval = setInterval ( () => { if (isPlaying) { setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) } }, 5000)  return () => clearInterval (interval) }, [isPlaying, isAutoPlaying, heroSlides.length])  const nextSlide = () => { setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) } const prevSlide = () => { setCurrentSlide ( (prev) => (prev - 1 + heroSlides.length) % heroSlides.length) } const goToSlide = (index) => { setCurrentSlide (index) } const toggleAutoPlay = () => { setIsAutoPlaying (!isAutoPlaying)  if (!isAutoPlaying) { setIsPlaying (true) } }' return (<div className='relative w - full h - screen overflow - hidden'> {}' <div className='absolute inset - 0 bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900'>' <div className='absolute inset - 0 bg - black / 50'/" > </div> {}' <div className='relative z - 10 flex items - center justify - center h - full px - 4 sm: px - 6 lg:px - 8'>' <div className='text - center max - w-6xl mx - auto'>' <AnimatePresence mode='wait'> <motion.div key={currentSlide} initial = { { opacity: 0, y: 20 }} animate = { { opacity: 1, y: 0 }} exit = { { opacity: 0, y: -20 ' }} transition={{ duration: 0.5 }} className='space - y-6'> {} <motion.div initial = { { scale: 0, rotate: -180 }} animate = { { scale: 1, rotate: 0 }} transition = { { duration: 0.6, delay: 0.2 ' }} className='text - 8xl mb - 6'> {heroSlides[currentSlide].icon} </motion.div> {} <motion.h1 initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.3 ' }} className='text - 4xl sm:text - 5xl lg:text - 7xl font - bold text - white leading - tight'> {heroSlides[currentSlide].title} </motion.h1> {} <motion.h2 initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.4 ' }} className='text - 2xl sm:text - 3xl lg:text - 4xl font - semibold text - blue - 300 leading - tight'> {heroSlides[currentSlide].subtitle} </motion.h2> {} <motion.p initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.5 ' }} className='text - lg sm:text - xl lg:text - 2xl text - gray - 300 max - w-3xl mx - auto leading - relaxed'> {heroSlides[currentSlide].description} </motion.p> {} <motion.div initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.6 ' }} className='pt - 6'>' <a href={heroSlides[currentSlide].ctaLink} className='inline - flex items - center px - 8 py - 4 text - lg font - semibold text - white bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full hover: from - blue - 700 hover:to - purple - 700 transform hover:scale - 105 transition - all duration - 300 shadow - 2xl hover:shadow - blue - 500 / 25'> {heroSlides[currentSlide].ctaText} <motion.div animate = { { x: [0, 5, 0] }} transition = { { duration: 1.5, repeat: Infinity ' }} className='ml - 2'> </motion.div> </a> </motion.div> </motion.div> </AnimatePresence> </div> </div> {}' <div className='absolute bottom - 8 left - 1/2 transform - translate - x-1 / 2 z - 20'>' <div className='flex items - center space - x-4'> {}' <button onClick={togglePlayPause} className='p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}" >' {isPlaying ? <Pause className='w - 5 h - 5 text - white'/" > : <Play className='w - 5 h - 5 text - white'/" >} </button> {}' <button onClick={toggleMute} className='p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label={isMuted ? 'Unmute' : 'Mute'}" >' {isMuted ? <VolumeX className='w - 5 h - 5 text - white'/" > : <Volume2 className='w - 5 h - 5 text - white'/" >} </button> {} <button onClick={toggleAutoPlay} className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all duration - 300 ${isAutoPlaying' ? 'bg - green - 500 / 20 text - green - 300 border border - green - 500 / 30'` : 'bg - white / 10 text - white border border - white / 20'}`}" >' Auto - play {isAutoPlaying ? 'ON' : 'OFF'} </button> </div> </div> {}' <div className='absolute bottom - 24 left - 1/2 transform - translate - x-1 / 2 z - 20'>' <div className='flex space - x-2'>` {heroSlides.map ( (_, index) => (<button key={index} onClick={ () =" > goToSlide (index) } className={`w - 3 h - 3 rounded - full transition - all duration - 300 ${index === currentSlide' ? 'bg - white scale - 125'` : 'bg - white / 30 hover:bg - white / 50'}`} aria - label={`Go to slide ${index + 1}`}/>) ) } </div> </div> {}' <button onClick={prevSlide} className='absolute left - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover: bg - white / 20 transition - colors duration - 300' aria - label='Previous slide'>' <ChevronLeft className='w - 6 h - 6 text - white'/" > </button> ' <button onClick={nextSlide} className='absolute right - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label='Next slide'>' <ChevronRight className='w - 6 h - 6 text - white'/" > </button> {}' <div className='absolute top - 4 right - 4 z - 20'>' <div className='text - xs text - white / 60 bg - black / 20 backdrop - blur - sm px - 3 py - 2 rounded - lg'> <p > Use keys or click to navigate</p> </div> </div> </div>) } export default EnhancedHero }}}}'` '';''`';import React, { useState, useEffect } from 'react''
+ const [currentSlide, setCurrentSlide] = useState (0)  const [isPlaying, setIsPlaying] = useState (true)  const [isMuted, setIsMuted] = useState (false)  const [isAutoPlaying, setIsAutoPlaying] = useState (true)  const heroSlides = [ { id: 1, title: 'Transform Your Business',' subtitle: 'With Zion Tech Group', ' description: 'Discover our cutting - edge micro SAAS solutions designed to scale your business operations and drive growth.',' ctaText: 'Explore Services', ' ctaLink: '/micro - saas - services',' background: 'linear - gradient (135deg, #667eea 0%, #764ba2 100%) ', ' icon: ' }, { id: 2, ' title: 'AI - Powered Solutions',' subtitle: 'For Modern Enterprises', ' description: 'Leverage artificial intelligence to automate workflows, enhance productivity, and gain competitive advantages.',' ctaText: 'Learn More', ' ctaLink: '/ai - solutions',' background: 'linear - gradient (135deg, #f093fb 0%, #f5576c 100%) ', ' icon: ' }, { id: 3, ' title: 'Cloud - Native Architecture',' subtitle: 'Built for Scale', ' description: 'Enterprise - grade cloud solutions that grow with your business, ensuring reliability and performance.', ' ctaText: 'Get Started',' ctaLink: '/cloud - solutions', ' background: 'linear - gradient (135deg, #4facfe 0%, #00f2fe 100%) ', ' icon: ' ] useEffect ( () => { if (!isAutoPlaying) return const interval = setInterval ( () => { if (isPlaying) { setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) } }, 5000)  return () => clearInterval (interval) }, [isPlaying, isAutoPlaying, heroSlides.length])  const nextSlide = () => { setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) } const prevSlide = () => { setCurrentSlide ( (prev) => (prev - 1 + heroSlides.length) % heroSlides.length) } const goToSlide = (index) => { setCurrentSlide (index) } const toggleAutoPlay = () => { setIsAutoPlaying (!isAutoPlaying)  if (!isAutoPlaying) { setIsPlaying (true) } }' return (<div className='relative w - full h - screen overflow - hidden'> {}' <div className='absolute inset - 0 bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900'>' <div className='absolute inset - 0 bg - black / 50'/" > </div> {}' <div className='relative z - 10 flex items - center justify - center h - full px - 4 sm: px - 6 lg:px - 8'>' <div className='text - center max - w-6xl mx - auto'>' <AnimatePresence mode='wait'> <motion.div key={currentSlide} initial = { { opacity: 0, y: 20 }} animate = { { opacity: 1, y: 0 }} exit = { { opacity: 0, y: -20 ' }} transition={{ duration: 0.5 }} className='space - y-6'> {} <motion.div initial = { { scale: 0, rotate: -180 }} animate = { { scale: 1, rotate: 0 }} transition = { { duration: 0.6, delay: 0.2 ' }} className='text - 8xl mb - 6'> {heroSlides[currentSlide].icon} </motion.div> {} <motion.h1 initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.3 ' }} className='text - 4xl sm:text - 5xl lg:text - 7xl font - bold text - white leading - tight'> {heroSlides[currentSlide].title} </motion.h1> {} <motion.h2 initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.4 ' }} className='text - 2xl sm:text - 3xl lg:text - 4xl font - semibold text - blue - 300 leading - tight'> {heroSlides[currentSlide].subtitle} </motion.h2> {} <motion.p initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.5 ' }} className='text - lg sm:text - xl lg:text - 2xl text - gray - 300 max - w-3xl mx - auto leading - relaxed'> {heroSlides[currentSlide].description} </motion.p> {} <motion.div initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.6 ' }} className='pt - 6'>' <a href={heroSlides[currentSlide].ctaLink} className='inline - flex items - center px - 8 py - 4 text - lg font - semibold text - white bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full hover: from - blue - 700 hover:to - purple - 700 transform hover:scale - 105 transition - all duration - 300 shadow - 2xl hover:shadow - blue - 500 / 25'> {heroSlides[currentSlide].ctaText} <motion.div animate = { { x: [0, 5, 0] }} transition = { { duration: 1.5, repeat: Infinity ' }} className='ml - 2'> </motion.div> </a> </motion.div> </motion.div> </AnimatePresence> </div> </div> {}' <div className='absolute bottom - 8 left - 1/2 transform - translate - x-1 / 2 z - 20'>' <div className='flex items - center space - x-4'> {}' <button onClick={togglePlayPause} className='p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}" >' {isPlaying ? <Pause className='w - 5 h - 5 text - white'/" > : <Play className='w - 5 h - 5 text - white'/" >} </button> {}' <button onClick={toggleMute} className='p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label={isMuted ? 'Unmute' : 'Mute'}" >' {isMuted ? <VolumeX className='w - 5 h - 5 text - white'/" > : <Volume2 className='w - 5 h - 5 text - white'/" >} </button> {} <button onClick={toggleAutoPlay} className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all duration - 300 ${isAutoPlaying' ? 'bg - green - 500 / 20 text - green - 300 border border - green - 500 / 30'` : 'bg - white / 10 text - white border border - white / 20'}`}" >' Auto - play {isAutoPlaying ? 'ON' : 'OFF'} </button> </div> </div> {}' <div className='absolute bottom - 24 left - 1/2 transform - translate - x-1 / 2 z - 20'>' <div className='flex space - x-2'>` {heroSlides.map ( (_, index) => (<button key={index} onClick={ () =" > goToSlide (index) } className={`w - 3 h - 3 rounded - full transition - all duration - 300 ${index === currentSlide' ? 'bg - white scale - 125'` : 'bg - white / 30 hover:bg - white / 50'}`} aria - label={`Go to slide ${index + 1}`}/>) ) } </div> </div> {}' <button onClick={prevSlide} className='absolute left - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover: bg - white / 20 transition - colors duration - 300' aria - label='Previous slide'>' <ChevronLeft className='w - 6 h - 6 text - white'/" > </button> ' <button onClick={nextSlide} className='absolute right - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label='Next slide'>' <ChevronRight className='w - 6 h - 6 text - white'/" > </button> {}' <div className='absolute top - 4 right - 4 z - 20'>' <div className='text - xs text - white / 60 bg - black / 20 backdrop - blur - sm px - 3 py - 2 rounded - lg'> <p > Use keys or click to navigate</p> </div> </div> </div>) } export default EnhancedHero }}}}'` '';''`';import React, { useState, useEffect } from 'react'''"
+=======
+<<<<<<< HEAD
+ const EnhancedHero = () => { const [currentSlide, setCurrentSlide] = useState (0)  const [isPlaying, setIsPlaying] = useState (true)  const [isMuted, setIsMuted] = useState (false)  const [isAutoPlaying, setIsAutoPlaying] = useState (true)  const heroSlides = [ { id: 1, title: 'Transform Your Business',' subtitle: 'With Zion Tech Group', ' description: 'Discover our cutting - edge micro SAAS solutions designed to scale your business operations and drive growth.',' ctaText: 'Explore Services', ' ctaLink: '/micro - saas - services',' background: 'linear - gradient (135deg, #667eea 0%, #764ba2 100%) ', ' icon: ' }, { id: 2, ' title: 'AI - Powered Solutions',' subtitle: 'For Modern Enterprises', ' description: 'Leverage artificial intelligence to automate workflows, enhance productivity, and gain competitive advantages.',' ctaText: 'Learn More', ' ctaLink: '/ai - solutions',' background: 'linear - gradient (135deg, #f093fb 0%, #f5576c 100%) ', ' icon: ' }, { id: 3, ' title: 'Cloud - Native Architecture',' subtitle: 'Built for Scale', ' description: 'Enterprise - grade cloud solutions that grow with your business, ensuring reliability and performance.', ' ctaText: 'Get Started',' ctaLink: '/cloud - solutions', ' background: 'linear - gradient (135deg, #4facfe 0%, #00f2fe 100%) ', ' icon: ' } ] useEffect ( () => { if (!isAutoPlaying) return const interval = setInterval ( () => { if (isPlaying) { setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) } }, 5000)  return () => clearInterval (interval) }, [isPlaying, isAutoPlaying, heroSlides.length])  const nextSlide = () => { setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) } const prevSlide = () => { setCurrentSlide ( (prev) => (prev - 1 + heroSlides.length) % heroSlides.length) } const goToSlide = (index) => { setCurrentSlide (index) } const toggleAutoPlay = () => { setIsAutoPlaying (!isAutoPlaying)  if (!isAutoPlaying) { setIsPlaying (true) } }' return (<div className='relative w - full h - screen overflow - hidden'> {}' <div className='absolute inset - 0 bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900'>' <div className='absolute inset - 0 bg - black / 50'/> </div> {}' <div className='relative z - 10 flex items - center justify - center h - full px - 4 sm: px - 6 lg:px - 8'>' <div className='text - center max - w-6xl mx - auto'>' <AnimatePresence mode='wait'> <motion.div key={currentSlide} initial = { { opacity: 0, y: 20 }} animate = { { opacity: 1, y: 0 }} exit = { { opacity: 0, y: -20 ' }} transition={{ duration: 0.5 }} className='space - y-6'> {} <motion.div initial = { { scale: 0, rotate: -180 }} animate = { { scale: 1, rotate: 0 }} transition = { { duration: 0.6, delay: 0.2 ' }} className='text - 8xl mb - 6'> {heroSlides[currentSlide].icon} </motion.div> {} <motion.h1 initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.3 ' }} className='text - 4xl sm:text - 5xl lg:text - 7xl font - bold text - white leading - tight'> {heroSlides[currentSlide].title} </motion.h1> {} <motion.h2 initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.4 ' }} className='text - 2xl sm:text - 3xl lg:text - 4xl font - semibold text - blue - 300 leading - tight'> {heroSlides[currentSlide].subtitle} </motion.h2> {} <motion.p initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.5 ' }} className='text - lg sm:text - xl lg:text - 2xl text - gray - 300 max - w-3xl mx - auto leading - relaxed'> {heroSlides[currentSlide].description} </motion.p> {} <motion.div initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.6 ' }} className='pt - 6'>' <a href={heroSlides[currentSlide].ctaLink} className='inline - flex items - center px - 8 py - 4 text - lg font - semibold text - white bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full hover: from - blue - 700 hover:to - purple - 700 transform hover:scale - 105 transition - all duration - 300 shadow - 2xl hover:shadow - blue - 500 / 25'> {heroSlides[currentSlide].ctaText} <motion.div animate = { { x[0, 5, 0] }} transition = { { duration: 1.5, repeat: Infinity ' }} className='ml - 2'> </motion.div> </a> </motion.div> </motion.div> </AnimatePresence> </div> </div> {}' <div className='absolute bottom - 8 left - 1/2 transform - translate - x-1 / 2 z - 20'>' <div className='flex items - center space - x-4'> {}' <button onClick={togglePlayPause} className='p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}>' {isPlaying ? <Pause className='w - 5 h - 5 text - white'/> : <Play className='w - 5 h - 5 text - white'/>} </button> {}' <button onClick={toggleMute} className='p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label={isMuted ? 'Unmute' : 'Mute'}>' {isMuted ? <VolumeX className='w - 5 h - 5 text - white'/> : <Volume2 className='w - 5 h - 5 text - white'/>} </button> {} <button onClick={toggleAutoPlay} className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all duration - 300 ${isAutoPlaying' ? 'bg - green - 500 / 20 text - green - 300 border border - green - 500 / 30'` : 'bg - white / 10 text - white border border - white / 20'}`}>' Auto - play {isAutoPlaying ? 'ON' : 'OFF'} </button> </div> </div> {}' <div className='absolute bottom - 24 left - 1/2 transform - translate - x-1 / 2 z - 20'>' <div className='flex space - x-2'>` {heroSlides.map ( (_, index) => (<button key={index} onClick={ () => goToSlide (index) } className={`w - 3 h - 3 rounded - full transition - all duration - 300 ${index === currentSlide' ? 'bg - white scale - 125'` : 'bg - white / 30 hover:bg - white / 50'}`} aria - label={`Go to slide ${index + 1}`}/>) ) } </div> </div> {}' <button onClick={prevSlide} className='absolute left - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover: bg - white / 20 transition - colors duration - 300' aria - label='Previous slide'>' <ChevronLeft className='w - 6 h - 6 text - white'/> </button> ' <button onClick={nextSlide} className='absolute right - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label='Next slide'>' <ChevronRight className='w - 6 h - 6 text - white'/> </button> {}' <div className='absolute top - 4 right - 4 z - 20'>' <div className='text - xs text - white / 60 bg - black / 20 backdrop - blur - sm px - 3 py - 2 rounded - lg'> <p > Use keys or click to navigate</p> </div> </div> </div>) } export default EnhancedHero'` '';''`';import React, { useState, useEffect } from 'react'''
+=======
+ const EnhancedHero = () => { const [currentSlide, setCurrentSlide] = useState (0)  const [isPlaying, setIsPlaying] = useState (true)  const [isMuted, setIsMuted] = useState (false)  const [isAutoPlaying, setIsAutoPlaying] = useState (true)  const heroSlides = [
+  { id: 1, title: 'Transform Your Business, subtitle: 'With Zion Tech Group, description: 'Discover our cutting - edge micro SAAS solutions designed to scale your business operations and drive growth., ctaText: 'Explore Services, ctaLink: '/micro - saas - services, background: 'linear - gradient (135deg, #667eea 0%, #764ba2 100%) , icon: ' }, { id: 2, ' title: 'AI - Powered Solutions, subtitle: 'For Modern Enterprises, description: 'Leverage artificial intelligence to automate workflows, enhance productivity, and gain competitive advantages., ctaText: 'Learn More, ctaLink: '/ai - solutions, background: 'linear - gradient (135deg, #f093fb 0%, #f5576c 100%) , icon: ' }, { id: 3, ' title: 'Cloud - Native Architecture, subtitle: 'Built for Scale, description: 'Enterprise - grade cloud solutions that grow with your business, ensuring reliability and performance., ctaText: 'Get Started, ctaLink: '/cloud - solutions, background: 'linear - gradient (135deg, #4facfe 0%, #00f2fe 100%) , icon: ' } ] useEffect ( () => { if (!isAutoPlaying) return const interval = setInterval ( () => { if (isPlaying) { setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) } }, 5000)  return () => clearInterval (interval) }, [isPlaying, isAutoPlaying, heroSlides.length])  const nextSlide = () => { setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) } const prevSlide = () => { setCurrentSlide ( (prev) => (prev - 1 + heroSlides.length) % heroSlides.length) } const goToSlide = (index) => { setCurrentSlide (index) } const toggleAutoPlay = () => { setIsAutoPlaying (!isAutoPlaying)  if (!isAutoPlaying) { setIsPlaying (true) } }' return (<div className='relative w - full h - screen overflow - hidden'> {}' <div className='absolute inset - 0 bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900'>' <div className='absolute inset - 0 bg - black / 50'/" > </div> {}' <div className='relative z - 10 flex items - center justify - center h - full px - 4 sm: px - 6 lg:px - 8'>' <div className='text - center max - w-6xl mx - auto'>' <AnimatePresence mode='wait'> <motion.div key={currentSlide} initial = { { opacity: 0, y: 20 }} animate = { { opacity: 1, y: 0 }} exit = { { opacity: 0, y: -20 ' }} transition={{ duration: 0.5 }} className='space - y-6'> {} <motion.div initial = { { scale: 0, rotate: -180 }} animate = { { scale: 1, rotate: 0 }} transition = { { duration: 0.6, delay: 0.2 ' }} className='text - 8xl mb - 6'> {heroSlides[currentSlide].icon} </motion.div> {} <motion.h1 initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.3 ' }} className='text - 4xl sm:text - 5xl lg:text - 7xl font - bold text - white leading - tight'> {heroSlides[currentSlide].title} </motion.h1> {} <motion.h2 initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.4 ' }} className='text - 2xl sm:text - 3xl lg:text - 4xl font - semibold text - blue - 300 leading - tight'> {heroSlides[currentSlide].subtitle} </motion.h2> {} <motion.p initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.5 ' }} className='text - lg sm:text - xl lg:text - 2xl text - gray - 300 max - w-3xl mx - auto leading - relaxed'> {heroSlides[currentSlide].description} </motion.p> {} <motion.div initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.6 ' }} className='pt - 6'>' <a href={heroSlides[currentSlide].ctaLink} className='inline - flex items - center px - 8 py - 4 text - lg font - semibold text - white bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full hover: from - blue - 700 hover:to - purple - 700 transform hover:scale - 105 transition - all duration - 300 shadow - 2xl hover:shadow - blue - 500 / 25'> {heroSlides[currentSlide].ctaText} <motion.div animate = { { x[0, 5, 0] }} transition = { { duration: 1.5, repeat: Infinity ' }} className='ml - 2'> </motion.div> </a> </motion.div> </motion.div> </AnimatePresence> </div> </div> {}' <div className='absolute bottom - 8 left - 1/2 transform - translate - x-1 / 2 z - 20'>' <div className='flex items - center space - x-4'> {}' <button onClick={togglePlayPause} className='p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}" >' {isPlaying ? <Pause className='w - 5 h - 5 text - white'/" > : <Play className='w - 5 h - 5 text - white'/" >} </button> {}' <button onClick={toggleMute} className='p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label={isMuted ? 'Unmute' : 'Mute'}" >' {isMuted ? <VolumeX className='w - 5 h - 5 text - white'/" > : <Volume2 className='w - 5 h - 5 text - white'/" >} </button> {} <button onClick={toggleAutoPlay} className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all duration - 300 ${isAutoPlaying' ? 'bg - green - 500 / 20 text - green - 300 border border - green - 500 / 30'` : 'bg - white / 10 text - white border border - white / 20'}`}" >' Auto - play {isAutoPlaying ? 'ON' : 'OFF'} </button> </div> </div> {}' <div className='absolute bottom - 24 left - 1/2 transform - translate - x-1 / 2 z - 20'>' <div className='flex space - x-2'>` {heroSlides.map ( (_, index) => (<button key={index} onClick={ () =" > goToSlide (index) } className={`w - 3 h - 3 rounded - full transition - all duration - 300 ${index === currentSlide' ? 'bg - white scale - 125'` : 'bg - white / 30 hover:bg - white / 50'}`} aria - label={`Go to slide ${index + 1}`}/>) ) } </div> </div> {}' <button onClick={prevSlide} className='absolute left - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover: bg - white / 20 transition - colors duration - 300' aria - label='Previous slide'>' <ChevronLeft className='w - 6 h - 6 text - white'/" > </button> ' <button onClick={nextSlide} className='absolute right - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label='Next slide'>' <ChevronRight className='w - 6 h - 6 text - white'/" > </button> {}' <div className='absolute top - 4 right - 4 z - 20'>' <div className='text - xs text - white / 60 bg - black / 20 backdrop - blur - sm px - 3 py - 2 rounded - lg'> <p > Use keys or click to navigate</p> </div> </div> </div>) } export default EnhancedHero'` ''`';import React, { useState, useEffect }  from 'react`
+ const [currentSlide, setCurrentSlide] = useState (0)  const [isPlaying, setIsPlaying] = useState (true)  const [isMuted, setIsMuted] = useState (false)  const [isAutoPlaying, setIsAutoPlaying] = useState (true)  const heroSlides = [
+  { id: 1, title: 'Transform Your Business, subtitle: 'With Zion Tech Group, description: 'Discover our cutting - edge micro SAAS solutions designed to scale your business operations and drive growth., ctaText: 'Explore Services, ctaLink: '/micro - saas - services, background: 'linear - gradient (135deg, #667eea 0%, #764ba2 100%) , icon: ' }, { id: 2, ' title: 'AI - Powered Solutions, subtitle: 'For Modern Enterprises, description: 'Leverage artificial intelligence to automate workflows, enhance productivity, and gain competitive advantages., ctaText: 'Learn More, ctaLink: '/ai - solutions, background: 'linear - gradient (135deg, #f093fb 0%, #f5576c 100%) , icon: ' }, { id: 3, ' title: 'Cloud - Native Architecture, subtitle: 'Built for Scale, description: 'Enterprise - grade cloud solutions that grow with your business, ensuring reliability and performance., ctaText: 'Get Started, ctaLink: '/cloud - solutions, background: 'linear - gradient (135deg, #4facfe 0%, #00f2fe 100%) , icon: ' ] useEffect ( () => { if (!isAutoPlaying) return const interval = setInterval ( () => { if (isPlaying) { setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) } }, 5000)  return () => clearInterval (interval) }, [isPlaying, isAutoPlaying, heroSlides.length])  const nextSlide = () => { setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) } const prevSlide = () => { setCurrentSlide ( (prev) => (prev - 1 + heroSlides.length) % heroSlides.length) } const goToSlide = (index) => { setCurrentSlide (index) } const toggleAutoPlay = () => { setIsAutoPlaying (!isAutoPlaying)  if (!isAutoPlaying) { setIsPlaying (true) } }' return (<div className='relative w - full h - screen overflow - hidden'> {}' <div className='absolute inset - 0 bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900'>' <div className='absolute inset - 0 bg - black / 50'/" > </div> {}' <div className='relative z - 10 flex items - center justify - center h - full px - 4 sm: px - 6 lg:px - 8'>' <div className='text - center max - w-6xl mx - auto'>' <AnimatePresence mode='wait'> <motion.div key={currentSlide} initial = { { opacity: 0, y: 20 }} animate = { { opacity: 1, y: 0 }} exit = { { opacity: 0, y: -20 ' }} transition={{ duration: 0.5 }} className='space - y-6'> {} <motion.div initial = { { scale: 0, rotate: -180 }} animate = { { scale: 1, rotate: 0 }} transition = { { duration: 0.6, delay: 0.2 ' }} className='text - 8xl mb - 6'> {heroSlides[currentSlide].icon} </motion.div> {} <motion.h1 initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.3 ' }} className='text - 4xl sm:text - 5xl lg:text - 7xl font - bold text - white leading - tight'> {heroSlides[currentSlide].title} </motion.h1> {} <motion.h2 initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.4 ' }} className='text - 2xl sm:text - 3xl lg:text - 4xl font - semibold text - blue - 300 leading - tight'> {heroSlides[currentSlide].subtitle} </motion.h2> {} <motion.p initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.5 ' }} className='text - lg sm:text - xl lg:text - 2xl text - gray - 300 max - w-3xl mx - auto leading - relaxed'> {heroSlides[currentSlide].description} </motion.p> {} <motion.div initial = { { opacity: 0, y: 30 }} animate = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: 0.6 ' }} className='pt - 6'>' <a href={heroSlides[currentSlide].ctaLink} className='inline - flex items - center px - 8 py - 4 text - lg font - semibold text - white bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full hover: from - blue - 700 hover:to - purple - 700 transform hover:scale - 105 transition - all duration - 300 shadow - 2xl hover:shadow - blue - 500 / 25'> {heroSlides[currentSlide].ctaText} <motion.div animate = { { x: [0, 5, 0] }} transition = { { duration: 1.5, repeat: Infinity ' }} className='ml - 2'> </motion.div> </a> </motion.div> </motion.div> </AnimatePresence> </div> </div> {}' <div className='absolute bottom - 8 left - 1/2 transform - translate - x-1 / 2 z - 20'>' <div className='flex items - center space - x-4'> {}' <button onClick={togglePlayPause} className='p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}" >' {isPlaying ? <Pause className='w - 5 h - 5 text - white'/" > : <Play className='w - 5 h - 5 text - white'/" >} </button> {}' <button onClick={toggleMute} className='p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label={isMuted ? 'Unmute' : 'Mute'}" >' {isMuted ? <VolumeX className='w - 5 h - 5 text - white'/" > : <Volume2 className='w - 5 h - 5 text - white'/" >} </button> {} <button onClick={toggleAutoPlay} className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all duration - 300 ${isAutoPlaying' ? 'bg - green - 500 / 20 text - green - 300 border border - green - 500 / 30'` : 'bg - white / 10 text - white border border - white / 20'}`}" >' Auto - play {isAutoPlaying ? 'ON' : 'OFF'} </button> </div> </div> {}' <div className='absolute bottom - 24 left - 1/2 transform - translate - x-1 / 2 z - 20'>' <div className='flex space - x-2'>` {heroSlides.map ( (_, index) => (<button key={index} onClick={ () =" > goToSlide (index) } className={`w - 3 h - 3 rounded - full transition - all duration - 300 ${index === currentSlide' ? 'bg - white scale - 125'` : 'bg - white / 30 hover:bg - white / 50'}`} aria - label={`Go to slide ${index + 1}`}/>) ) } </div> </div> {}' <button onClick={prevSlide} className='absolute left - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover: bg - white / 20 transition - colors duration - 300' aria - label='Previous slide'>' <ChevronLeft className='w - 6 h - 6 text - white'/" > </button> ' <button onClick={nextSlide} className='absolute right - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300' aria - label='Next slide'>' <ChevronRight className='w - 6 h - 6 text - white'/" > </button> {}' <div className='absolute top - 4 right - 4 z - 20'>' <div className='text - xs text - white / 60 bg - black / 20 backdrop - blur - sm px - 3 py - 2 rounded - lg'> <p > Use keys or click to navigate</p> </div> </div> </div>) } export default EnhancedHero }}}}'` ''`';import React, { useState, useEffect }  from 'react
+>>>>>>> main
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const EnhancedHero = () => {}"
-'
+import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const EnhancedHero = () => {}""
 ''
-'''
+''
+''''
 import { motion, AnimatePresence } from 'framer - motion';
     const [currentSlide, setCurrentSlide] = useState (0) 
     const [isPlaying, setIsPlaying] = useState (true) 
     const [isMuted, setIsMuted] = useState (false) 
     const [isAutoPlaying, setIsAutoPlaying] = useState (true) 
     const heroSlides = []
-        {}"
+<<<<<<< HEAD
+        {}""
             id: 1, title: 'Transform Your Business',''''
-            subtitle: 'With Zion Tech Group',''''
+            subtitle: 'With Zion Tech Group', ''''
             description: 'Discover our cutting-edge micro SAAS solutions designed to scale your business operations and drive growth.',''''
-            ctaText: 'Explore Services',''''
+            ctaText: 'Explore Services', ''''
             ctaLink: '/micro-saas-services',''''
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',''''
+            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', ''''
+=======
+        {}"
+            id: 1, title: 'Transform Your Business,'''
+            subtitle: 'With Zion Tech Group,'''
+            description: 'Discover our cutting-edge micro SAAS solutions designed to scale your business operations and drive growth.,'''
+            ctaText: 'Explore Services,'''
+            ctaLink: '/micro-saas-services,'''
+            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%),'''
+>>>>>>> main
             icon: '🚀''',
-}, {}"
-'''
+}, {}""
+''''
             id: 2,''''
-            title: 'AI-Powered Solutions',''''
+<<<<<<< HEAD
+            title: 'AI-Powered Solutions', ''''
             subtitle: 'For Modern Enterprises',''''
-            description: 'Leverage artificial intelligence to automate workflows, enhance productivity, and gain competitive advantages.',''''
+            description: 'Leverage artificial intelligence to automate workflows, enhance productivity, and gain competitive advantages.', ''''
             ctaText: 'Learn More',''''
-            ctaLink: '/ai-solutions',''''
-            background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',''''
+            ctaLink: '/ai-solutions', ''''
+            background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', ''''
+=======
+            title: 'AI-Powered Solutions,'''
+            subtitle: 'For Modern Enterprises,'''
+            description: 'Leverage artificial intelligence to automate workflows, enhance productivity, and gain competitive advantages.,'''
+            ctaText: 'Learn More,'''
+            ctaLink: '/ai-solutions,'''
+            background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%),'''
+>>>>>>> main
             icon: '🤖''',
-}, {}"
-'''
+}, {}""
+''''
             id: 3,''''
-            title: 'Cloud-Native Architecture',''''
+<<<<<<< HEAD
+            title: 'Cloud-Native Architecture', ''''
             subtitle: 'Built for Scale',''''
             description: 'Enterprise-grade cloud solutions that grow with your business, ensuring reliability and performance.',''''
-            ctaText: 'Get Started',''''
+            ctaText: 'Get Started', ''''
             ctaLink: '/cloud-solutions',''''
-            background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',''''
+            background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', ''''
+=======
+            title: 'Cloud-Native Architecture,'''
+            subtitle: 'Built for Scale,'''
+            description: 'Enterprise-grade cloud solutions that grow with your business, ensuring reliability and performance.,'''
+            ctaText: 'Get Started,'''
+            ctaLink: '/cloud-solutions,'''
+            background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%),'''
+>>>>>>> main
             icon: '☁️''',
 ]
     useEffect ( () => {}
@@ -55,26 +98,44 @@ import { motion, AnimatePresence } from 'framer - motion';
         setCurrentSlide(index)}
     const toggleAutoPlay = () => {}
         setIsAutoPlaying(!isAutoPlaying) 
+<<<<<<< HEAD
+        if(!isAutoPlaying) {}""
+            setIsPlaying(true)}''';", '"
+}';'''
+    return (<div className='relative w-full h-screen overflow-hidden'>''''
+=======
         if(!isAutoPlaying) {}"
-            setIsPlaying(true)}''';",
-}';''
+            setIsPlaying(true)}'',
+}'
     return (<div className='relative w-full h-screen overflow-hidden'>'''
+>>>>>>> main
       {/* Background Video/Image Placeholder */}''''
       <div className='absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900'>''''
-        <div className='absolute inset-0 bg-black/50'/" >
-      </div>"
-'''
+        <div className='absolute inset-0 bg-black/50'/" >"
+      </div>""
+''''
       {/* Hero Content */}''''
-      <div className='relative z-10 flex items-center justify-center h-full px-4 sm:px-6 lg:px-8'>''''
+      <div className='relative z-10 flex items-center justify-center h-full px-4 sm: px-6 lg:px-8'>''''
         <div className='text-center max-w-6xl mx-auto'>''''
           <AnimatePresence mode='wait'>
             <motion.div key={currentSlide} initial = {}
-  { opacity: 0,
-  y: 20,
+  { opacity: 0, y: 20,
 }} animate = {}
   { opacity: 1, y: 0,
-}} exit = {}"
+<<<<<<< HEAD
+}} exit = {}""
   { opacity: 0, y: -20';'
+'''', }} transition={{ duration: 0.5 }} className='space-y-6'>
+              {/* Icon */}
+              <motion.div initial = {}
+  { scale: 0,
+  rotate: -180, }} animate = {}
+  { scale: 1, rotate: 0, }} transition = {}""
+  { duration: 0.6, delay: 0.2';'
+'''', }} className='text-8xl mb-6'>
+=======
+}} exit = {}"
+  { opacity: 0, y: -20
 '''',
 }} transition={{ duration: 0.5 }} className='space-y-6'>
               {/* Icon */}
@@ -84,45 +145,61 @@ import { motion, AnimatePresence } from 'framer - motion';
 }} animate = {}
   { scale: 1, rotate: 0,
 }} transition = {}"
-  { duration: 0.6, delay: 0.2';'
+  { duration: 0.6, delay: 0.2
 '''',
 }} className='text-8xl mb-6'>
+>>>>>>> main
                 {heroSlides[currentSlide].icon}
               </motion.div>
               {/* Title */}
               <motion.h1 initial = {}
-  { opacity: 0,
-  y: 30,
+  { opacity: 0, y: 30,
 }} animate = {}
   { opacity: 1, y: 0,
-}} transition = {}"
+<<<<<<< HEAD
+}} transition = {}""
   { duration: 0.6, delay: 0.3';'
+'''', }} className='text-4xl sm: text-5xl lg:text-7xl font-bold text-white leading-tight'>
+=======
+}} transition = {}"
+  { duration: 0.6, delay: 0.3
 '''',
 }} className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight'>
+>>>>>>> main
                 {heroSlides[currentSlide].title}
               </motion.h1>
               {/* Subtitle */}
               <motion.h2 initial = {}
-  { opacity: 0,
-  y: 30,
+  { opacity: 0, y: 30,
 }} animate = {}
   { opacity: 1, y: 0,
-}} transition = {}"
+<<<<<<< HEAD
+}} transition = {}""
   { duration: 0.6, delay: 0.4';'
+'''', }} className='text-2xl sm: text-3xl lg:text-4xl font-semibold text-blue-300 leading-tight'>
+=======
+}} transition = {}"
+  { duration: 0.6, delay: 0.4
 '''',
 }} className='text-2xl sm:text-3xl lg:text-4xl font-semibold text-blue-300 leading-tight'>
+>>>>>>> main
                 {heroSlides[currentSlide].subtitle}
               </motion.h2>
               {/* Description */}
               <motion.p initial = {}
-  { opacity: 0,
-  y: 30,
+  { opacity: 0, y: 30,
 }} animate = {}
   { opacity: 1, y: 0,
-}} transition = {}"
+<<<<<<< HEAD
+}} transition = {}""
   { duration: 0.6, delay: 0.5';'
+'''', }} className='text-lg sm: text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
+=======
+}} transition = {}"
+  { duration: 0.6, delay: 0.5
 '''',
 }} className='text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
+>>>>>>> main
                 {heroSlides[currentSlide].description}
               </motion.p>
               {/* CTA Button */}
@@ -130,8 +207,20 @@ import { motion, AnimatePresence } from 'framer - motion';
   { opacity: 0, y: 30,
 }} animate = {}
   { opacity: 1, y: 0,
-}} transition = {}"
+<<<<<<< HEAD
+}} transition = {}""
   { duration: 0.6, delay: 0.6';'
+'''', }} className='pt-6'>''''
+                <a href={heroSlides[currentSlide].ctaLink} className='inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover: from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25'>
+                  {heroSlides[currentSlide].ctaText}
+                  <motion.div animate = {}
+  { x: [0, 5,
+  0], }} transition = {}""
+  { duration: 1.5, repeat: Infinity';'
+'''', }} className='ml-2'>
+=======
+}} transition = {}"
+  { duration: 0.6, delay: 0.6
 '''',
 }} className='pt-6'>''''
                 <a href={heroSlides[currentSlide].ctaLink} className='inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25'>
@@ -140,9 +229,10 @@ import { motion, AnimatePresence } from 'framer - motion';
   { x: [0, 5,
   0],
 }} transition = {}"
-  { duration: 1.5, repeat: Infinity';'
+  { duration: 1.5, repeat: Infinity
 '''',
 }} className='ml-2'>
+>>>>>>> main
                     →
                   </motion.div>
                 </a>
@@ -150,47 +240,47 @@ import { motion, AnimatePresence } from 'framer - motion';
             </motion.div>
           </AnimatePresence>
         </div>
-      </div>"
-'''
+      </div>""
+''''
       {/* Navigation Controls */}''''
       <div className='absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20'>''''
-        <div className='flex items-center space-x-4'>'''
+        <div className='flex items-center space-x-4'>''''
           {/* Play/Pause Button */}''''
-          <button onClick={togglePlayPause} className='p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300' aria-label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}" >''''
+          <button onClick={togglePlayPause} className='p-3 bg-white/10 backdrop-blur-sm rounded-full hover: bg-white/20 transition-colors duration-300' aria-label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}" >''''"
             {isPlaying ? <Pause className='w-5 h-5 text-white'/" > : <Play className='w-5 h-5 text-white'/" >}
-          </button>"
-'''
+          </button>""
+''''
           {/* Mute Button */}''''
-          <button onClick={toggleMute} className='p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300' aria-label={isMuted ? 'Unmute' : 'Mute'}" >''''
+          <button onClick={toggleMute} className='p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300' aria-label={isMuted ? 'Unmute' : 'Mute'}" >''''"
             {isMuted ? <VolumeX className='w-5 h-5 text-white'/" > : <Volume2 className='w-5 h-5 text-white'/" >}
-          </button>"
-          {/* Auto-play Toggle */}'''`
-          <button onClick={toggleAutoPlay} className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isAutoPlaying''`"`
-            ? 'bg-green-500/20 text-green-300 border border-green-500/30''`'`"`
-            : 'bg-white/10 text-white border border-white/20'}`}" >''''
+          </button>""
+          {/* Auto-play Toggle */}'''`'
+          <button onClick={toggleAutoPlay} className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isAutoPlaying''`"`"
+            ? 'bg-green-500/20 text-green-300 border border-green-500/30''`'`"`"
+            : 'bg-white/10 text-white border border-white/20'}`}" >''''"
             Auto-play {isAutoPlaying ? 'ON' : 'OFF'}
           </button>
         </div>
-      </div>"
-'''
+      </div>""
+''''
       {/* Slide Indicators */}''''`
-      <div className='absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20'>''`"`
-        <div className='flex space-x-2'>`'`"`
+      <div className='absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20'>''`"`"
+        <div className='flex space-x-2'>`'`"`'"
           {heroSlides.map((_, index) => (<button key={index} onClick={() =" > goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide''`"`
-                ? 'bg-white scale-125''`'`"`
+                ? 'bg-white scale-125''`'`"`"
                 : 'bg-white/30 hover:bg-white/50'}`} aria-label={`Go to slide ${index + 1}`}/>))}
         </div>
-      </div>"
-'''
+      </div>""
+''''
       {/* Navigation Arrows */}''''
-      <button onClick={prevSlide} className='absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300' aria-label='Previous slide'>''''
+      <button onClick={prevSlide} className='absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/10 backdrop-blur-sm rounded-full hover: bg-white/20 transition-colors duration-300' aria-label='Previous slide'>''''
         <ChevronLeft className='w-6 h-6 text-white'/" >"
-      </button>'''
+      </button>''''
 ''''
       <button onClick={nextSlide} className='absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300' aria-label='Next slide'>''''
-        <ChevronRight className='w-6 h-6 text-white'/" >
-      </button>"
-'''
+        <ChevronRight className='w-6 h-6 text-white'/" >"
+      </button>""
+''''
       {/* Keyboard Navigation Instructions */}''''
       <div className='absolute top-4 right-4 z-20'>''''
         <div className='text-xs text-white/60 bg-black/20 backdrop-blur-sm px-3 py-2 rounded-lg'>
@@ -210,4 +300,10 @@ export { EnhancedHero }
 export { EnhancedHero }
 
 export { EnhancedHero }
+<<<<<<< HEAD
+"`"
+=======
 "`
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

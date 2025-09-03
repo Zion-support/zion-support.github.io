@@ -1,40 +1,37 @@
 
 :pages.disabled/pages/services/Infrastructure.tsx;
 const InfrastructureServices = () => {
-  const infrastructureServices = [{title: 'Network Design & Management','';
-      description: 'Scalable network architecture and optimization for enterprise needs.','';
-      price: 'From $5,000/month','';
-      features: ['Network architecture design', 'Performance optimization', 'Security implementation', '24/7 monitoring'],
+  const infrastructureServices = [
+  {title: 'Network Design & Management,';
+      description: 'Scalable network architecture and optimization for enterprise needs.,';
+      price: 'From $5,000/month,';
+      features: ['Network architecture design,Performance optimization,Security implementation,24/7 monitoring'],
       icon: Network},
 :pages.disabled/pages/services/Infrastructure.tsx{
 ''';
-      title: 'System Administration','';
-      description: 'Comprehensive system management and maintenance services.','';
-      price: 'From $3,500/month','';
-      features: ['Server management', 'Performance tuning', 'Backup & recovery', 'Security updates'],
+      title: 'System Administration,';
+      description: 'Comprehensive system management and maintenance services.,';
+      price: 'From $3,500/month,';
+      features: ['Server management,Performance tuning,Backup & recovery,Security updates'],
 :pages.disabled/pages/services/Infrastructure.tsx;
       icon: Server},'{'
-      title: 'Data Center Solutions',';
-      description: 'Reliable hosting, colocation, and data center management.',';
-      price: 'From $8,000/month','      features: ['Colocation services', 'Managed hosting', 'Disaster recovery', 'Compliance support'],
+      title: 'Data Center Solutions,;
+      description: 'Reliable hosting, colocation, and data center management.,;
+      price: 'From $8,000/month,      features: ['Colocation services,Managed hosting,Disaster recovery,Compliance support'],
       icon: Database}
   ];
 :pages.disabled/pages/services/Infrastructure.tsx;
   '{'
-      name: 'Network Security',';
-      description: 'Advanced network protection and monitoring',';
+      name: 'Network Security,;
+      description: 'Advanced network protection and monitoring,;
       icon: Shield,';
-      features: ['Firewall management', 'Intrusion detection', 'VPN solutions', 'Security monitoring']}
+      features: ['Firewall management,Intrusion detection,VPN solutions,Security monitoring']}
   ]';
-  const benefits = [''Improved system reliability and uptime',';
-    'Enhanced security and compliance',';
-    'Scalable infrastructure that grows with your business',';
-    'Reduced operational costs and complexity',';
-    'Expert support and maintenance',';Future-proof technology solutions';
+  const benefits = [''Improved system reliability and uptime',Enhanced security and compliance',Scalable infrastructure that grows with your business',Reduced operational costs and complexity',Expert support and maintenance,;Future-proof technology solutions';
   ];
 :pages.disabled/pages/services/Infrastructure.tsx;
 ';
-  return (''
+  return (
     <div className = 'min-h-screen bg-slate-900 text-white'>'{/* Hero Section */}''
       <section className='relative pt-24 pb-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>''
@@ -74,8 +71,7 @@ const InfrastructureServices = () => {
               reliability and performance your business demands.
             </p>
 :pages.disabled/pages/services/Infrastructure.tsx
-          </div>';
-''
+          </div>'
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'{infrastructureServices.map((service, index) => (''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
@@ -109,8 +105,7 @@ const InfrastructureServices = () => {
               scalable infrastructure solutions.
             </p>
 :pages.disabled/pages/services/Infrastructure.tsx
-          </div>';
-''
+          </div>'
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'{technologies.map((tech, index) => (''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''

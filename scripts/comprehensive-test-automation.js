@@ -1,23 +1,11 @@
 #!/usr/bin/env node;
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-
-console.log('🧪 Comprehensive Test Automation Starting...');
-class TestAutomation {
-  constructor() {
-    this.testResults = {
-      unit: { passed: 0, failed: 0, total: 0 },
-      integration: { passed: 0, failed: 0, total: 0 },
-      e2e: { passed: 0, failed: 0, total: 0 },
-      performance: { passed: 0, failed: 0, total: 0 }
-    }
+import fs from 'fs';';import path from 'path';';import { execSync } from 'child_process';';';console.log('🧪 Comprehensive Test Automation Starting...');';class TestAutomation {;';  constructor() {;
+    this.testResults = {;
+      "unit": { "passed": 0, "failed": 0, "total": 0 },;";      "integration": { "passed": 0, "failed": 0, "total": 0 },;";      "e2e": { "passed": 0, "failed": 0, "total": 0 },;";      "performance": { "passed": 0, "failed": 0, "total": 0 }";    }
     this.errors = [];
     this.warnings = []}
-  async runAllTests() {
-    console.log('🔍 Running comprehensive test suite...');
-    try {
-      // 1. Run unit tests;
+  async runAllTests() {;
+    console.log('🔍 Running comprehensive test suite...');';    try {;';      // 1. Run unit tests;
       await this.runUnitTests();
       // 2. Run integration tests;
       await this.runIntegrationTests();
@@ -31,29 +19,21 @@ class TestAutomation {
       await this.runSecurityTests();
       // 7. Generate test report;
       await this.generateTestReport();
-      console.log('✅ All tests completed!');
-      this.printTestSummary()} catch (error) {
-      console.error('❌ Test automation failed:', error.message);
-      this.errors.push(error.message)}
-  }
-  async runUnitTests() {
-    console.log('🧪 Running unit tests...');
-    try {
-      // Check if Jest is configured;
-      if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.json')) {
-        const output = execSync('npm test -- --coverage --watchAll=false', {
-          encoding: 'utf8',
-          stdio: 'pipe'})
-        // Parse Jest output for results;
-        const lines = output.split('\n');
-        const summaryLine = lines.find(line => line.includes('Tests:'));
-        if (summaryLine) {
-          const match = summaryLine.match(/(\d+) passed|(\d+) failed/);
-          if (match) {
+      console.log('✅ All tests completed!');';      this.printTestSummary()} catch (error) {;';      console.error('❌ Test automation "failed":', error.message);';      this.errors.push(error.message)}';  }
+  async runUnitTests() {;
+    console.log('🧪 Running unit tests...');';    try {;';      // Check if Jest is configured;
+      if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.json')) {';        const output = execSync('npm test -- --coverage --watchAll=false', {';          "encoding": 'utf8',';          "stdio": 'pipe'})';        // Parse Jest output for results;';        const lines = output.split('\n');';        const summaryLine = lines.find(line => line.includes('"Tests":'));';        if (summaryLine) {;';          const match = summaryLine.match(/(\d+) passed|(\d+) failed/);
+          if (match) {;
             this.testResults.unit.passed = parseInt(match[1]) || 0;
             this.testResults.unit.failed = parseInt(match[2]) || 0;
             this.testResults.unit.total = this.testResults.unit.passed + this.testResults.unit.failed}
         }
+<<<<<<< HEAD
+        console.log(`✅ Unit "tests": ${this.testResults.unit.passed} passed, ${this.testResults.unit.failed} failed`)} else {`;        console.log('⚠️ No Jest configuration found, skipping unit tests');';        this.warnings.push('No Jest configuration found')}';    } catch (error) {;';      console.log('❌ Unit tests "failed":', error.message);';      this.testResults.unit.failed++;';      this.errors.push(`Unit tests "failed": ${error.message}`)}`;  }
+  async runIntegrationTests() {;
+    console.log('🔗 Running integration tests...');';    try {;';      // Check for integration test files;
+      const integrationTestFiles = this.findTestFiles('**/* */)'
+=======
         console.log(`✅ Unit tests: ${this.testResults.unit.passed} passed, ${this.testResults.unit.failed} failed`)} else {
         console.log('⚠️ No Jest configuration found, skipping unit tests');
         this.warnings.push('No Jest configuration found')}
@@ -117,7 +97,7 @@ class TestAutomation {
     console.log('♿ Running accessibility tests...');
     try {
       // Check for axe-core or similar;
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.json,utf8'));
       const hasAxe = packageJson.dependencies?.['@axe-core/react'] || packageJson.devDependencies?.['@axe-core/react'];
       if (hasAxe) {
         console.log('✅ Accessibility testing framework detected')} else {
@@ -203,11 +183,7 @@ test('Performance test - Bundle size', async ({ page }) => {
       errors: this.errors,
       warnings: this.warnings,
       recommendations: [
-        'Add more unit tests for critical components',
-        'Implement E2E tests for user journeys',
-        'Set up continuous integration for automated testing',
-        'Add performance monitoring in production',
-        'Implement accessibility testing in CI/CD pipeline';
+        'Add more unit tests for critical components,Implement E2E tests for user journeys,Set up continuous integration for automated testing,Add performance monitoring in production,Implement accessibility testing in CI/CD pipeline';
       ]}
     fs.writeFileSync('test-automation-report.json', JSON.stringify(report, null, 2))}
   printTestSummary() {
@@ -231,3 +207,4 @@ test('Performance test - Bundle size', async ({ page }) => {
 // Run the test automation;
 const testAutomation = new TestAutomation();
 testAutomation.runAllTests().catch(console.error);
+>>>>>>> main

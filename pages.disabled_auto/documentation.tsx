@@ -26,7 +26,7 @@ import Link from 'next/link';
 
 const Documentation: NextPage = () => {
   const docCategories = [
-    {
+  {
       icon: Book,
       title:,
   Getting Started',

@@ -1,21 +1,44 @@
 
-import React from 'react';';
-import { render, screen, fireEvent } from '@testing-library/react';';
-import '@testing-library/jest-dom';';
-import ImageOptimizerdynamic from "../components/ImageOptimizer.dynamic";";
-  describe('ImageOptimizerdynamic', () => {';
-  test('renders without crashing', () => {';
+<<<<<<< HEAD
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import ImageOptimizerdynamic from "../components/ImageOptimizer.dynamic";
+  describe('ImageOptimizerdynamic', () => {
+  test('renders without crashing', () => {
     render(<ImageOptimizerdynamic />);
     expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()})';
-  test('displays correct content', () => {';
+  test('displays correct content', () => {
     render(<ImageOptimizerdynamic />);
     // Add specific content tests based on component;
   });
-  test('handles user interactions', () => {';
+  test('handles user interactions', () => {
     render(<ImageOptimizerdynamic />);
     // Add interaction tests based on component functionality;
   });
-  test('applies correct styling', () => {';
+  test('applies correct styling', () => {
     render(<ImageOptimizerdynamic />);
     // Add styling tests if needed;
   })});
+=======
+import React   from 'react''
+import { render, screen, fireEvent }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import ImageOptimizerdynamic   from '../components/ImageOptimizer.dynamic''
+  describe('ImageOptimizerdynamic', () => {'
+  test('renders without crashing', () => {'
+    render(<ImageOptimizerdynamic  />)
+    expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()})'
+  test('displays correct content', () => {'
+    render(<ImageOptimizerdynamic  />)
+    // Add specific content tests based on component
+  })
+  test('handles user interactions', () => {'
+    render(<ImageOptimizerdynamic  />)
+    // Add interaction tests based on component functionality
+  })
+  test('applies correct styling', () => {'
+    render(<ImageOptimizerdynamic  />)
+    // Add styling tests if needed
+  })})
+>>>>>>> main

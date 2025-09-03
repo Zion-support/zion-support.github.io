@@ -39,7 +39,7 @@ import { Button } from '../ui/Button';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const serviceCategories = [
-    {
+  {
       title: 'AI & Automation',
       icon: Brain,
       color: 'text-blue-400',
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
     },
   ];
   const quickLinks = [
-    { name: 'About Us', href: '/about' },
+  { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
@@ -84,13 +84,13 @@ const Footer: React.FC = () => {
     { name: 'Pricing Guide', href: '/pricing-guide' },
   ];
   const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy' },
+  { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Cookie Policy', href: '/cookies' },
     { name: 'Sitemap', href: '/sitemap' },
   ];
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/compunknown/ziontechgroup', icon: Linkedin },
+  { name: 'LinkedIn', href: 'https://linkedin.com/compunknown/ziontechgroup', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
     {

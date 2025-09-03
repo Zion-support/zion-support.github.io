@@ -10,8 +10,7 @@ class IntelligentOrchestrator {
     this.automationSystems = new Map();
     this.monitoring = false;
     this.logFile = path.join(__dirname,
-  'logs',
-  'intelligent-orchestrator.log');
+  'logs,intelligent-orchestrator.log');
     this.ensureLogDirectory();
   log(message) {
     const timestamp = new Date().toISOString();
@@ -31,7 +30,7 @@ fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logM
     fs.appendFileSync(this.logFile, logMessage)}
 loadAutomationSystems() {loadAutomationSystems() {
 const systems = [
-      { name:,
+  { name:,
   lint-monitor', path: 'lint-monitor.js, priority:,
   high' },
       { name: 'lint-fixer, path:,
@@ -193,8 +192,7 @@ const systems = [];
     // Run low-priority systems periodically;
     const now = Date.now();
     const systemsToCheck = [
-  'performance',
-  'content-generator'];
+  'performance,content-generator'];
     for (const system = this.automationSystems.get(systemName);
       if (system && (!system.lastRun || now - system.lastRun.getTime() > 30 * 60 * 1000)) {
         systems.push(systemName)}
@@ -228,10 +226,7 @@ this.log(
   '👀 Starting intelligent file watcher...');
     // Simple file watcher using fs.watch;
     const watchDirectories = [
-  'pages',
-  'components',
-  'utils',
-  'hooks'];
+  'pages,components,utils,hooks'];
     for (const dir of watchDirectories) {
       if (fs.existsSync(dir)) {
         fs.watch(dir, { recursive: true }, (eventType, filename) => {
