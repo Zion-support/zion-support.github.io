@@ -1,6 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowUp, Globe, Shield, FileText, HelpCircle } from 'lucide-react';
+import {
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowUp,
+  Globe,
+  Shield,
+  FileText,
+  HelpCircle} from 'lucide-react';
 
 export default function EnhancedFooter() {
   const scrollToTop = () => {
@@ -16,46 +28,56 @@ export default function EnhancedFooter() {
       { name: 'Micro SaaS', href: '/services/micro-saas' },
       { name: 'Web Development', href: '/services/web-development' },
       { name: 'Cloud Services', href: '/services/cloud-services' },
-      { name: 'AI Development', href: '/services/ai-development' }
-    ],
+      { name: 'AI Development', href: '/services/ai-development' }],
     solutions: [
       { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
       { name: 'Customer Support', href: '/solutions/customer-support' },
       { name: 'Email Automation', href: '/solutions/email-automation' },
       { name: 'Event Management', href: '/solutions/event-management' },
       { name: 'Project Management', href: '/solutions/project-management' },
-      { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
-    ],
+      { name: 'Workflow Automation', href: '/solutions/workflow-automation' }],
     company: [
       { name: 'About Us', href: '/about' },
       { name: 'Careers', href: '/careers' },
       { name: 'Partners', href: '/partners' },
       { name: 'Contact', href: '/contact' },
-      { name: 'Blog', href: '/blog' }
-    ],
+      { name: 'Blog', href: '/blog' }],
     resources: [
       { name: 'Help Center', href: '/help' },
       { name: 'Pricing Guide', href: '/pricing-guide' },
       { name: 'Search', href: '/search' },
-      { name: 'Sitemap', href: '/sitemap' }
-    ],
+      { name: 'Sitemap', href: '/sitemap' }],
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' }
-    ]
-  };
+      { name: 'Cookie Policy', href: '/cookies' }]};
 
   const socialLinks = [
+    {
+      name: 'Facebook',
+      icon: Facebook,
+      href: 'https://facebook.com/ziontechgroup'},
+    {
+      name: 'Twitter',
+      icon: Twitter,
+      href: 'https://twitter.com/ziontechgroup'},
+    {
+      name: 'LinkedIn',
+      icon: Linkedin,
+      href: 'https://linkedin.com/company/ziontechgroup'},
+    {
+      name: 'Instagram',
+      icon: Instagram,
+      href: 'https://instagram.com/ziontechgroup'},
   { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup' },
     { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup' },
     { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup' },
     { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup' }
-  ];
+  ]
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
@@ -65,24 +87,33 @@ export default function EnhancedFooter() {
               </div>
               <div>
                 <span className="text-xl font-bold">Zion Tech Group</span>
-                <div className="text-xs text-gray-400">Technology Solutions</div>
+                <div className="text-xs text-gray-400">
+                  Technology Solutions
+                </div>
               </div>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              Leading technology solutions provider specializing in AI, cybersecurity, 
-              cloud infrastructure, and digital transformation services. We help businesses 
-              innovate, scale, and succeed in the digital age.
+              Leading technology solutions provider specializing in AI,
+              cybersecurity, cloud infrastructure, and digital transformation
+              services. We help businesses innovate, scale, and succeed in the
+              digital age.
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-400">
                 <Phone className="w-4 h-4" />
-                <a href="tel:+13024640950" className="hover:text-white transition-colors">
+                <a
+                  href="tel: +13024640950"
+                  className="hover:text-white transition-colors"
+                >
                   +1 (302) 464-0950
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+                <a
+                  href="mailto: kleber@ziontechgroup.com"
+                  className="hover:text-white transition-colors"
+                >
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -100,11 +131,11 @@ export default function EnhancedFooter() {
               Services
             </h3>
             <ul className="space-y-2">
-              {footerLinks.services.map((link) => (
+              {footerLinks.services.map(link => (
                 <li key={link.name}>
-                  <Link 
-                    href={link.href} 
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover: text-white transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -120,11 +151,11 @@ export default function EnhancedFooter() {
               Solutions
             </h3>
             <ul className="space-y-2">
-              {footerLinks.solutions.map((link) => (
+              {footerLinks.solutions.map(link => (
                 <li key={link.name}>
-                  <Link 
-                    href={link.href} 
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover: text-white transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -140,11 +171,11 @@ export default function EnhancedFooter() {
               Company
             </h3>
             <ul className="space-y-2">
-              {footerLinks.company.map((link) => (
+              {footerLinks.company.map(link => (
                 <li key={link.name}>
-                  <Link 
-                    href={link.href} 
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover: text-white transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -160,11 +191,11 @@ export default function EnhancedFooter() {
               Resources
             </h3>
             <ul className="space-y-2 mb-6">
-              {footerLinks.resources.map((link) => (
+              {footerLinks.resources.map(link => (
                 <li key={link.name}>
-                  <Link 
-                    href={link.href} 
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover: text-white transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -173,11 +204,11 @@ export default function EnhancedFooter() {
             </ul>
             <h4 className="text-md font-semibold mb-3 text-gray-300">Legal</h4>
             <ul className="space-y-2">
-              {footerLinks.legal.map((link) => (
+              {footerLinks.legal.map(link => (
                 <li key={link.name}>
-                  <Link 
-                    href={link.href} 
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover: text-white transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -192,9 +223,10 @@ export default function EnhancedFooter() {
           <div className="max-w-2xl mx-auto text-center mb-8">
             <h3 className="text-xl font-semibold mb-2">Stay Updated</h3>
             <p className="text-gray-400 mb-4">
-              Subscribe to our newsletter for the latest technology insights and company updates.
+              Subscribe to our newsletter for the latest technology insights and
+              company updates.
             </p>
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <form className="flex flex-col sm: flex-row gap-3 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -218,13 +250,13 @@ export default function EnhancedFooter() {
             </div>
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-4">
-                {socialLinks.map((social) => (
+                {socialLinks.map(social => (
                   <a
                     key={social.name}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover: text-white transition-colors"
                     aria-label={social.name}
                   >
                     <social.icon className="w-5 h-5" />
@@ -239,7 +271,7 @@ export default function EnhancedFooter() {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50"
+        className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50"
         aria-label="Scroll to top"
       >
         <ArrowUp className="w-5 h-5" />

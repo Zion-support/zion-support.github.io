@@ -1,211 +1,205 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
-import SEOHead from '../src/components/SEOHead';
-import { Download, ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, FileText, Eye } from 'lucide-react';
+import { Download, FileText, Users, Zap, Brain, Cloud, Shield, ArrowRight, CheckCircle, Star, Mail, Phone } from 'lucide-react';
 
 const Brochure = () => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Product Brochure - Zion Tech Group",
-    "url": "https://ziontechgroup.com/brochure",
-    "description": "Download our comprehensive product brochure featuring AI services, IT solutions, and micro SaaS platforms",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com"
-    }
-  };
-
   const brochures = [
     {
-      title: 'AI Services Brochure',
-      description: 'Comprehensive guide to our AI solutions and capabilities',
-      pages: 24,
-      size: '2.4 MB',
+      title: 'AI Services Overview',
+      description: 'Comprehensive guide to our artificial intelligence solutions and capabilities',
+      pages: '24 pages',
       format: 'PDF',
-      category: 'AI Services',
-      features: [
+      size: '2.4 MB',
+      icon: Brain,
+      downloadUrl: '/brochures/ai-services-brochure.pdf',
+      preview: [
+        'AI Strategy & Consulting',
+        'Machine Learning Solutions',
         'Natural Language Processing',
         'Computer Vision',
         'Predictive Analytics',
-        'Machine Learning Models',
         'AI Integration Services'
-      ],
-      downloadUrl: '#',
-      previewUrl: '#'
-    },
+      ]
+},
     {
-      title: 'IT Solutions Brochure',
-      description: 'Complete overview of our IT services and infrastructure solutions',
-      pages: 32,
+      title: 'IT Services Portfolio',
+      description: 'Complete overview of our information technology services and infrastructure solutions',
+      pages: '32 pages',
+      format: 'PDF',
       size: '3.1 MB',
-      format: 'PDF',
-      category: 'IT Services',
-      features: [
-        'Cloud Migration',
-        'DevOps Automation',
-        'Security Services',
-        'Network Management',
-        'Data Management'
-      ],
-      downloadUrl: '#',
-      previewUrl: '#'
-    },
+      icon: Cloud,
+      downloadUrl: '/brochures/it-services-brochure.pdf',
+      preview: [
+        'Cloud Migration & Management',
+        'Network Security & Monitoring',
+        'System Administration',
+        'Backup & Disaster Recovery',
+        'Performance Optimization',
+        '24/7 Technical Support'
+      ]
+},
     {
-      title: 'Micro SaaS Platform',
-      description: 'Detailed information about our SaaS development and platform services',
-      pages: 28,
-      size: '2.8 MB',
+      title: 'Micro SaaS Solutions',
+      description: 'Detailed information about our software-as-a-service development and deployment services',
+      pages: '28 pages',
       format: 'PDF',
-      category: 'Micro SaaS',
-      features: [
-        'SaaS Development',
-        'Platform Architecture',
-        'API Management',
-        'User Management',
-        'Analytics & Reporting'
-      ],
-      downloadUrl: '#',
-      previewUrl: '#'
-    },
+      size: '2.8 MB',
+      icon: Zap,
+      downloadUrl: '/brochures/micro-saas-brochure.pdf',
+      preview: [
+        'Custom SaaS Development',
+        'API Design & Integration',
+        'User Management Systems',
+        'Payment Processing',
+        'Analytics & Reporting',
+        'Scalability Solutions'
+      ]
+},
     {
       title: 'Complete Solutions Guide',
-      description: 'All-in-one brochure covering all our services and solutions',
-      pages: 48,
-      size: '4.2 MB',
+      description: 'Comprehensive overview of all our services, case studies, and success stories',
+      pages: '48 pages',
       format: 'PDF',
-      category: 'Complete Guide',
-      features: [
-        'All AI Services',
-        'Complete IT Solutions',
-        'SaaS Development',
-        'Case Studies',
-        'Pricing Information'
-      ],
-      downloadUrl: '#',
-      previewUrl: '#'
-    }
-  ];
+      size: '4.2 MB',
+      icon: FileText,
+      downloadUrl: '/brochures/complete-solutions-guide.pdf',
+      preview: [
+        'All Service Offerings',
+        'Industry Case Studies',
+        'Client Success Stories',
+        'Technology Stack',
+        'Implementation Process',
+        'Support & Maintenance'
+      ]
+}
+  ]
 
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' }
-  ];
+  const benefits = [
+    {
+      title: 'Detailed Service Information',
+      description: 'Comprehensive details about our offerings, capabilities, and methodologies',
+      icon: FileText;
+},
+    {
+      title: 'Case Studies & Success Stories',
+      description: 'Real-world examples of how we\'ve helped businesses achieve their goals',
+      icon: Star;
+},
+    {
+      title: 'Technical Specifications',
+      description: 'In-depth technical details about our solutions and implementation processes',
+      icon: Shield;
+},
+    {
+      title: 'Pricing & Package Information',
+      description: 'Transparent pricing information and service packages to help you plan your budget',
+      icon: Zap;
+}
+  ]
+
+  const testimonials = [
+    {
+      name: 'Jennifer Martinez',
+      company: 'InnovateTech Solutions',
+      role: 'CEO',
+      content: 'The brochures provided excellent detail about the services. It helped us make an informed decision about partnering with Zion Tech Group.',
+      rating: 5;
+},
+    {
+      name: 'David Thompson',
+      company: 'Global Enterprises',
+      role: 'CTO',
+      content: 'Very comprehensive and well-organized. The case studies were particularly helpful in understanding the potential impact.',
+      rating: 5;
+},
+    {
+      name: 'Lisa Wang',
+      company: 'StartupHub',
+      role: 'Founder',
+      content: 'The technical specifications in the brochures gave us confidence in their expertise. Highly recommended!',
+      rating: 5;
+}
+  ]
 
   return (
     <>
-      <SEOHead 
-        title="Product Brochure - Zion Tech Group"
-        description="Download our comprehensive product brochures featuring AI services, IT solutions, and micro SaaS platforms. Get detailed information about our capabilities."
-        keywords="brochure, product brochure, AI services brochure, IT solutions brochure, micro SaaS brochure, download"
-        structuredData={structuredData}
-      />
+      <Head>
+        <title>Download Brochures - Zion Tech Group</title>
+        <meta name="description" content="Download our comprehensive brochures to learn more about our AI services, IT solutions, and micro SaaS development capabilities." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://ziontechgroup.com/brochure" />
+      </Head>
+      
       <Navigation />
       
-      <main className="min-h-screen bg-gray-900 text-white">
+      <main className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="pt-24 pb-16 bg-gradient-to-b from-gray-900 to-gray-800">
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Product
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"> Brochures</span>
+              <h1 className="text-5xl font-bold text-gray-900 mb-6">
+                Download Our <span className="text-blue-600">Brochures</span>
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Download our comprehensive brochures to learn more about our AI services, 
-                IT solutions, and micro SaaS platforms. Get detailed information about our capabilities and success stories.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                Get detailed information about our services, case studies, and success stories. Download our comprehensive brochures to learn more about how we can help your business.
               </p>
-              <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
-                <div className="flex items-center">
-                  <Download className="w-4 h-4 text-cyan-400 mr-2" />
-                  Free downloads
-                </div>
-                <div className="flex items-center">
-                  <FileText className="w-4 h-4 text-cyan-400 mr-2" />
-                  Detailed information
-                </div>
-                <div className="flex items-center">
-                  <Eye className="w-4 h-4 text-cyan-400 mr-2" />
-                  Preview available
-                </div>
-              </div>
             </div>
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-16 bg-gray-800">
+        {/* Brochures Grid */}
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Brochures Section */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Available Brochures</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Choose the brochure that best matches your interests and download it instantly
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Available Brochures</h2>
+              <p className="text-lg text-gray-600">
+                Choose the brochure that best fits your information needs
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {brochures.map((brochure, index) => (
-                <div key={index} className="bg-gray-800 rounded-2xl p-8">
-                  <div className="flex items-start justify-between mb-6">
-                    <div>
-                      <span className="inline-block bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-semibold mb-3">
-                        {brochure.category}
-                      </span>
-                      <h3 className="text-2xl font-bold mb-3">{brochure.title}</h3>
-                      <p className="text-gray-300 mb-4">{brochure.description}</p>
+                <div key={index} className="bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="p-8">
+                    <div className="flex items-start mb-6">
+                      <div className="p-4 bg-blue-100 rounded-lg mr-4">
+                        <brochure.icon className="w-8 h-8 text-blue-600" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{brochure.title}</h3>
+                        <p className="text-gray-600 mb-4">{brochure.description}</p>
+                        <div className="flex items-center space-x-4 text-sm text-gray-500">
+                          <span>{brochure.pages}</span>
+                          <span>•</span>
+                          <span>{brochure.format}</span>
+                          <span>•</span>
+                          <span>{brochure.size}</span>
+                        </div>
+                      </div>
                     </div>
-                    <div className="text-right">
-                      <div className="text-sm text-gray-400">{brochure.pages} pages</div>
-                      <div className="text-sm text-gray-400">{brochure.size}</div>
-                      <div className="text-sm text-gray-400">{brochure.format}</div>
+
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-gray-900 mb-3">What's Included:</h4>
+                      <ul className="space-y-2">
+                        {brochure.preview.map((item, itemIndex) => (
+                          <li key={itemIndex} className="flex items-center text-gray-600">
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  </div>
 
-                  <div className="mb-6">
-                    <h4 className="font-semibold mb-3">What's included:</h4>
-                    <ul className="space-y-2">
-                      {brochure.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                          <span className="text-gray-300 text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex space-x-4">
                     <a
                       href={brochure.downloadUrl}
-                      className="flex-1 bg-gradient-to-r from-cyan-400 to-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 flex items-center justify-center"
+                      download
+                      className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download
-                    </a>
-                    <a
-                      href={brochure.previewUrl}
-                      className="flex-1 border border-gray-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-600 transition-colors flex items-center justify-center"
-                    >
-                      <Eye className="w-5 h-5 mr-2" />
-                      Preview
+                      Download Brochure
                     </a>
                   </div>
                 </div>
@@ -214,96 +208,82 @@ const Brochure = () => {
           </div>
         </section>
 
-        {/* Additional Resources */}
-        <section className="py-16 bg-gray-800">
+        {/* Benefits Section */}
+        <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Additional Resources</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Explore more resources to learn about our solutions and services
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Download Our Brochures?</h2>
+              <p className="text-lg text-gray-600">
+                Get comprehensive information to make informed decisions about your technology needs
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                    <benefit.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+              <p className="text-lg text-gray-600">
+                Hear from businesses that have used our brochures to make informed decisions
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-gray-700 rounded-lg p-6 text-center">
-                <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-8 h-8 text-cyan-400" />
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-gray-50 rounded-lg p-6">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-4">"{testimonial.content}"</p>
+                  <div>
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Case Studies</h3>
-                <p className="text-gray-300 mb-4">
-                  Read about successful implementations and client success stories
-                </p>
-                <Link
-                  href="/case-studies"
-                  className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center justify-center"
-                >
-                  View Case Studies
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </div>
-
-              <div className="bg-gray-700 rounded-lg p-6 text-center">
-                <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-cyan-400" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Team & Expertise</h3>
-                <p className="text-gray-300 mb-4">
-                  Meet our expert team and learn about our technical capabilities
-                </p>
-                <Link
-                  href="/team"
-                  className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center justify-center"
-                >
-                  Meet Our Team
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </div>
-
-              <div className="bg-gray-700 rounded-lg p-6 text-center">
-                <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-8 h-8 text-cyan-400" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Contact Us</h3>
-                <p className="text-gray-300 mb-4">
-                  Get in touch with our experts for personalized consultation
-                </p>
-                <Link
-                  href="/contact"
-                  className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center justify-center"
-                >
-                  Contact Sales
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600">
+        {/* Contact Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-4">Need More Information?</h2>
-            <p className="text-xl mb-8 text-cyan-100">
-              Our team is ready to provide personalized consultation and answer any questions
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Need More Information?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Our team is ready to answer your questions and provide additional details about our services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Contact Sales
+              <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
+                <Mail className="w-5 h-5 mr-2" />
+                Contact Us
               </Link>
-              <Link
-                href="/demo"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
-              >
-                Schedule Demo
-              </Link>
+              <a href="tel:+13024640950" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center">
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now
+              </a>
             </div>
           </div>
         </section>
       </main>
-
+      
       <Footer />
     </>
   );

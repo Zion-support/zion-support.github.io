@@ -1,7 +1,19 @@
+<<<<<<< HEAD
 import React from 'react';
 export default function UltraFuturisticFooter2034() {
-  return (
+  return ('
     <footer className="py-8 text-center text-sm text-gray-400">
       <span>© {new Date().getFullYear()} Zion Tech Group</span>
     </footer>
+:components/layout/UltraFuturisticFooter2034.tsx
+  )
+:components/layout/UltraFuturisticFooter2034.tsx
   )}
+"
+  );
+:components.disabled/components/layout/UltraFuturisticFooter2034.tsx;
+}
+:components.disabled/components/layout/UltraFuturisticFooter2034.tsx
+=======
+import React from 'react'; export default function UltraFuturisticFooter2034() { return (' <footer className="py-8 text-center text-sm text-gray-400"> <span>© {new Date().getFullYear()} Zion Tech Group</span> </footer> components/layout/UltraFuturisticFooter2034.tsx ) components/layout/UltraFuturisticFooter2034.tsx )} " ); :components.disabled/components/layout/UltraFuturisticFooter2034.tsx } :components.disabled/components/layout/UltraFuturisticFooter2034.tsx 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

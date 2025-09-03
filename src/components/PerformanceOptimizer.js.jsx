@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+ export const PerformanceOptimizer = ({ children }) => { const location = useLocation () ;'';,"});,"})
+;,"});,"})
+ export const PerformanceOptimizer = ({ children }) => { const location = useLocation () ''
+
+"";
+}
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -30,3 +37,7 @@ const PerformanceOptimizer.Js: React.FC = () => {
 };
 
 export default PerformanceOptimizer.Js;
+=======
+ export const PerformanceOptimizer = ({ children }) => { const location = useLocation () ;'';,"});,})
+;,});,"})
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

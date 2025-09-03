@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ES6"
-    ],
+    "lib": ["dom", "dom.iterable", "es6"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -21,30 +17,19 @@
     "plugins": [
       {
         "name": "next"
-      }
+}
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/pages/*": [
-        "./src/pages/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*"
-      ],
-      "@/hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@/types/*": [
-        "./src/types/*"
-      ]
-    },
-    "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/services/*": ["./src/services/*"],
+      "@/store/*": ["./src/store/*"]
+}
   },
   "include": [
     "next-env.d.ts",
@@ -54,19 +39,8 @@
   ],
   "exclude": [
     "node_modules",
-    "node_modules",
     ".next",
     "out",
-    "dist",
-    "api-backup",
-    "pages.disabled",
-    "backup-pages",
-    ".backup",
-    ".disabled",
-    "automation/backups",
-    "automation_backup",
-    "broken_files_backup",
-    "contracts",
-    "hardhat"
+    "dist"
   ]
 }
