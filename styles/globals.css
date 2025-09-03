@@ -52,6 +52,12 @@
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .header-nav-links {
+    display: none;
+  }
+}
+
 .header-nav-link {
   padding: 8px 12px;
   border-radius: 6px;
@@ -92,6 +98,12 @@
   padding: 8px;
 }
 
+@media (max-width: 768px) {
+  .mobile-menu-button {
+    display: block;
+  }
+}
+
 .mobile-menu {
   display: none;
   position: absolute;
@@ -104,6 +116,8 @@
   padding: 20px;
   flex-direction: column;
   gap: 12px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .mobile-menu.open {
