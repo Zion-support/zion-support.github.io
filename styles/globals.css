@@ -47,24 +47,26 @@
 
 .header-nav-links {
   display: flex;
-  gap: 8px;
+  gap: 4px;
   flex-wrap: wrap;
   align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .header-nav-links {
     display: none;
   }
 }
 
 .header-nav-link {
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 6px;
   opacity: 0.9;
   transition: all 0.2s ease;
   text-decoration: none;
   color: white;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .header-nav-link:hover {
@@ -96,6 +98,18 @@
   font-size: 1.5rem;
   cursor: pointer;
   padding: 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-menu-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .mobile-menu-button {
+    display: block;
+  }
 }
 
 @media (max-width: 768px) {
