@@ -1,7 +1,1 @@
-
-<<<<<<< HEAD
-const: mockSystemMetrics = [ {
-=======
-const mockSystemMetrics = [
-  {
->>>>>>> main
+ const mockSystemMetrics = [ { 

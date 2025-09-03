@@ -1,25 +1,13 @@
-<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
-=======
-/** @type {import(
-  'next').NextConfig} */
->>>>>>> main
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
-<<<<<<< HEAD
-<<<<<<< HEAD:next.config.js
+:next.config.js
   typescript: {
     // Allow production builds to successfully complete even if
     // there are type errors.
-=======
-  experimental: {
-    // Removed deprecated options
-  },
-  typescript: {
->>>>>>> main
     ignoreBuildErrors: true,
   },
   images: {
@@ -31,33 +19,8 @@ const nextConfig = {
   },
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
-<<<<<<< HEAD
-<<<<<<< HEAD:next.config.js
+:next.config.js
     // Keep default TS/JS handling; we already ignore build errors via config
-=======
->>>>>>> main
-    config.module.rules.push({
-      test: /\.(ts|tsx)$/,
-      exclude: [
-        /node_modules/,
-        /api-backup/,
-        /pages\.disabled/,
-        /backup-pages/,
-        /\.backup/,
-        /\.disabled/,
-        /automation\/backups/,
-        /automation_backup/,
-        /broken_files_backup/,
-        /contracts/,
-        /hardhat/,
-        /^components\//, // Exclude root components directory
-      ],
-    });
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> main
     // Add fallback for problematic modules
     config.resolve.fallback = {
       ...config.resolve.fallback,
@@ -78,7 +41,6 @@ const nextConfig = {
   },
 };
 
-<<<<<<< HEAD
 export default nextConfig;
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -118,6 +80,4 @@ const nextConfig = {
   }
 };
 
-=======
->>>>>>> main
 module.exports = nextConfig;

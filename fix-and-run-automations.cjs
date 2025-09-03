@@ -14,13 +14,13 @@ class AutomationScriptFixer {;
   fixMergeConflicts(filePath) {;
     try {;
       const content = fs.readFileSync(filePath, 'utf8');';
-      if(;);        content.includes('<<<<<<< HEAD') ||';        content.includes('=======') ||';        content.includes('>>>>>>>')';      ) {;
-        this.log(`Fixing merge conflicts "in": ${filePath}`);`;
+      if(;);        content.includes('') ||';        content.includes('') ||';        content.includes('>>>>>>>')';      ) {;
+        this.log(`Fixing merge conflicts "in: ${filePath}`);`;
         // Simple merge conflict resolution - take the HEAD version;
         let fixedContent = content;
-          .replace(;);            /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]*\n/g,;
+          .replace(;);            /\n([\s\S]*?)\n\n([\s\S]*?)\n>>>>>>> [^\n]*\n/g,;
             '$1'';          );
-          .replace(;);            /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]*/g,;
+          .replace(;);            /\n([\s\S]*?)\n\n([\s\S]*?)\n>>>>>>> [^\n]*/g,;
             '$1'';          );
 ;
         fs.writeFileSync(filePath, fixedContent);
@@ -29,7 +29,7 @@ class AutomationScriptFixer {;
 }
       return false;,
 } catch (error) {;
-      this.errors.push({ "file": filePath, "error": error.message });
+      this.errors.push({ file": filePath, "error: error.message });
       return false;,
 }
   }
@@ -39,7 +39,7 @@ class AutomationScriptFixer {;
       const content = fs.readFileSync(filePath, 'utf8');';      let fixedContent = content;
 ;
       // Fix common syntax errors;
-      if (content.includes("console.log(`"Checking": ${url}');")) {";        fixedContent = content.replace(`;          "console.log(`"Checking": ${url}');",";          'console.log(`"Checking": ${url}`);'';        );`;      }
+      if (content.includes(console.log(`"Checking": ${url}');)) {;        fixedContent = content.replace(`;          "console.log(`"Checking: ${url}');,";          'console.log(`"Checking: ${url}`);'';        );`;      }
 ;
       if (fixedContent !== content) {;
         fs.writeFileSync(filePath, fixedContent);
@@ -48,7 +48,7 @@ class AutomationScriptFixer {;
 }
       return false;,
 } catch (error) {;
-      this.errors.push({ "file": filePath, "error": error.message });
+      this.errors.push({ file": filePath, "error: error.message });
       return false;,
 }
   }
@@ -73,10 +73,10 @@ class AutomationScriptFixer {;
 ;
   async runScript(scriptPath) {;
     try {;
-      this.log(`Running "script": ${scriptPath}`);`;      const result = execSync(`node "${scriptPath}"`, {";        "cwd": this.projectRoot,`;        "encoding": 'utf8',';        "timeout": 60000, // 1 minute timeout;,);});
-      this.log(`✅ Successfully "ran": ${scriptPath}`);`;      return { "success": true, "output": result };,
+      this.log(`Running script": ${scriptPath}`);`;      const result = execSync(`node "${scriptPath}`, {;        "cwd": this.projectRoot,`;        encoding: 'utf8',';        "timeout": 60000, // 1 minute timeout;,);});
+      this.log(`✅ Successfully ran: ${scriptPath}`);`;      return { "success": true, output: result };,
 } catch (error) {;
-      this.log(`❌ Failed to "run": ${scriptPath} - ${error.message}`);`;      return { "success": false, "error": error.message };,
+      this.log(`❌ Failed to "run": ${scriptPath} - ${error.message}`);`;      return { success: false, "error": error.message };,
 }
   }
 ;
@@ -108,23 +108,23 @@ class AutomationScriptFixer {;
 ;
       // Create a comprehensive automation report;
       const report = {;
-        "timestamp": new Date().toISOString(),;
+        timestamp: new Date().toISOString(),;
         "summary": {;
-          "totalScripts": scriptFiles.length,;
+          totalScripts: scriptFiles.length,;
           "fixedScripts": this.fixedCount,;
-          "runScripts": results.length,;
+          runScripts: results.length,;
           "successfulRuns": results.filter(r => r.success).length,;
-          "failedRuns": results.filter(r => !r.success).length,;,
+          failedRuns: results.filter(r => !r.success).length,;,
 },;
         "results": results,;
-        "errors": this.errors,;,
+        errors: this.errors,;,
 };
 ;
       const reportFile = path.join(;);        this.projectRoot,;
         'automation-scripts-report.json'';      );
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;
-      this.log(`📊 Report "generated": ${reportFile}`);`;      this.log(`🎉 Automation Script Fixer and Runner Completed`);`;      this.log(;);        `📊 "Summary": ${report.summary.successfulRuns}/${report.summary.runScripts} scripts ran successfully``;      );
+      this.log(`📊 Report "generated": ${reportFile}`);`;      this.log(`🎉 Automation Script Fixer and Runner Completed`);`;      this.log(;);        `📊 Summary: ${report.summary.successfulRuns}/${report.summary.runScripts} scripts ran successfully``;      );
 ;
       return report;,
 } catch (error) {;

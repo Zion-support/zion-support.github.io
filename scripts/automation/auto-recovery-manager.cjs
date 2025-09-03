@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
-#!/'usr/bin/env' node;
-
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -17,22 +12,14 @@ class AutoRecoveryManager {;
     this.recoveryHistory = new Map();
     this.recoveryStrategies = new Map();
   }
-<<<<<<< HEAD
 
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-=======
-;
-  ensureDirectories() {;
-    ['this.logsPath', 'this.reportsPath'].forEach(dir => {;
-      if (!fs.existsSync(dir)) {;
->>>>>>> main
         fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
-<<<<<<< HEAD
 
   log(message, level = `INFO`) {
     const timestamp = new Date().toISOString();
@@ -41,23 +28,12 @@ class AutoRecoveryManager {;
 
     const logFile = path.join(this.logsPath, `auto-recovery-manager.log`);
     fs.appendFileSync(logFile, logMessage + `\n`);
-=======
-;
-  log(message, level = 'INFO') {;
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(`logMessage);
-;
-    const logFile = path.join(this.logsPath, 'auto-recovery-manager.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
->>>>>>> main
   }
 ;
   async detectSystemIssues() {;
     this.log('🔍 Detecting system issues...');
 ;
     const issues = [];
-<<<<<<< HEAD
 
     // Check for common system issues;
     const checks = ['{ name: 'npm'', 'command: 'npm --version'', 'issue: 'npm not available' }', '{
@@ -80,47 +56,19 @@ class AutoRecoveryManager {;
       }
     }
 
-=======
-;
-    // Check for common system issues;
-    const checks = ['{ name: 'npm', 'command: 'npm --version', 'issue: 'npm not available' }', '{;
-        name: 'node', 'command: 'node --version', 'issue: 'Node.js not available', '}', '{ name: 'git', 'command: 'git --version', 'issue: 'Git not available' }', '{ name: 'disk-space', 'command: 'df -h .', 'issue: 'Low disk space' }', '{ name: 'memory', 'command: 'free -h', 'issue: 'Low memory' }', '];
-;
-    for (const check of checks) {;
-      try {;
-        execSync(check.command, {;
-          cwd: this.workspacePath,;
-          stdio: 'pipe',;
-          timeout: 10000,;
-        });
-      } catch (error) {;
-        issues.push({;
-          type: 'system',;
-          name: check.name,;
-          description: check.issue,;
-          severity: 'high',;
-        });
-      }
-    }
-<<<<<<< HEAD
-;
->>>>>>> main
     // Check for project-specific issues;
     const projectIssues = await this.checkProjectIssues();
     issues.push(...projectIssues);
-=======
 `);
     // Check for project-specific issues`);
     const projectIssues = await this.checkProjectIssues();`);
     issues.push(...projectIssues);`);
->>>>>>> main
 this.log(Found ${issues.length} system issues`);
     return issues;
   }
 ;
   async checkProjectIssues() {;
     const issues = [];
-<<<<<<< HEAD
 
     // Check if package.json exists;
     if (!fs.existsSync(path.join(this.workspacePath, `package.json`))) {
@@ -142,29 +90,6 @@ this.log(Found ${issues.length} system issues`);
       });
     }
 
-=======
-;
-    // Check if package.json exists;
-    if (!fs.existsSync(path.join(this.workspacePath, 'package.json'))) {;
-      issues.push({;
-        type: 'project',;
-        name: 'missing-package-json',;
-        description: 'package.json file is missing',;
-        severity: 'critical',;
-      });
-    }
-;
-    // Check if node_modules exists;
-    if (!fs.existsSync(path.join(this.workspacePath, 'node_modules'))) {;
-      issues.push({;
-        type: 'project',;
-        name: 'missing-dependencies',;
-        description: 'node_modules directory is missing',;
-        severity: 'high',;
-      });
-    }
-;
->>>>>>> main
     // Check for corrupted files;
     const corruptedFiles = await this.findCorruptedFiles();
     issues.push(...corruptedFiles);
@@ -179,7 +104,6 @@ this.log(Found ${issues.length} system issues`);
     for (const filePath of sourceFiles) {;
       try {;
         const content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
 
         // Check for common corruption patterns;
         if (
@@ -208,36 +132,6 @@ this.log(Found ${issues.length} system issues`);
           name: `unreadable-file`,description: `Cannot read file ${filePath  }`,
           severity: `high`,
           file: filePath,
-=======
-;
-        // Check for common corruption patterns;
-        if (;
-          content.includes(') ||;
-          content.includes('>>>>>>>');
-        ) {;
-          corruptedFiles.push({;
-            type: 'corruption',;
-            name: 'merge-conflicts',description: `Merge conflicts detected in ${filePath}`,;
-            severity: 'high',;
-            file: filePath,;
-          });
-        }
-;
-        if (content.includes(') || content.includes(')) {;
-          corruptedFiles.push({;
-            type: 'corruption',;
-            name: 'encoding-issues',description: `Encoding issues detected in ${filePath}`,;
-            severity: 'medium',;
-            file: filePath,;
-          });
-        }
-      } catch (error) {;
-        corruptedFiles.push({;
-          type: 'corruption',;
-          name: 'unreadable-file',description: `Cannot read file ${filePath}`,;
-          severity: 'high',;
-          file: filePath,;
->>>>>>> main
         });
       }
     }
@@ -253,21 +147,12 @@ this.log(Found ${issues.length} system issues`);
       files.forEach(file => {;
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
-<<<<<<< HEAD
 
         if (
           stat.isDirectory() &&
           !file.startsWith(`.`) &&
           !file.startsWith(`node_modules`)
         ) {
-=======
-;
-        if (;
-          stat.isDirectory() &&;
-          !file.startsWith('.') &&;
-          !file.startsWith('node_modules');
-        ) {;
->>>>>>> main
           scanDirectory(filePath);
         } else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(file)) {;
           sourceFiles.push(filePath);
@@ -278,15 +163,9 @@ this.log(Found ${issues.length} system issues`);
     scanDirectory(this.workspacePath);
     return sourceFiles;
   }
-<<<<<<< HEAD
 
   async applyRecoveryStrategies(issues) {this.log(`🔧 Applying recovery strategies for ${issues.length} issues...`);
 
-=======
-;
-  async applyRecoveryStrategies(issues) {this.log(`🔧 Applying recovery strategies for ${issues.length} issues...');
-;
->>>>>>> main
     let recoveredCount = 0;
     const recoveryResults = [];
 ;
@@ -302,15 +181,9 @@ this.log(Found ${issues.length} system issues`);
           recovered,;
           timestamp: new Date().toISOString(),;
         });
-<<<<<<< HEAD
       } catch (recoveryError) {
         this.log(❌ Error applying recovery strategy: ${recoveryError.message}`,
           `ERROR`
-=======
-      } catch (recoveryError) {;
-        this.log(❌ Error applying recovery strategy: ${recoveryError.message}',;
-          'ERROR';
->>>>>>> main
         );
         recoveryResults.push({;
           issue,;
@@ -320,13 +193,8 @@ this.log(Found ${issues.length} system issues`);
         });
       }
     }
-<<<<<<< HEAD
 
     this.log(✅ Recovered from ${recoveredCount} out of ${issues.length} issues`
-=======
-;
-    this.log(✅ Recovered from ${recoveredCount} out of ${issues.length} issues';
->>>>>>> main
     );
     return {;
       recoveredCount,;
@@ -334,21 +202,12 @@ this.log(Found ${issues.length} system issues`);
       results: recoveryResults,;
     };
   }
-<<<<<<< HEAD
 
   async applyRecoveryStrategy(issue) {
     switch (issue.type) {
       case `system`:
         return await this.recoverSystemIssue(issue);
       case `project':
-=======
-;
-  async applyRecoveryStrategy(issue) {;
-    switch (issue.type) {;
-      case 'system':;
-        return await this.recoverSystemIssue(issue);
-      case 'project':;
->>>>>>> main
         return await this.recoverProjectIssue(issue);
       case 'corruption':;
         return await this.recoverCorruptedFile(issue);
@@ -401,7 +260,6 @@ this.log(Found ${issues.length} system issues`);
   async recoverNpm() {;
     try {;
       this.log('🔧 Recovering npm...');
-<<<<<<< HEAD
 
       // Try to reinstall npm globally;
       execSync('npm install -g npm@latest', {
@@ -426,39 +284,12 @@ this.log(Found ${issues.length} system issues`);
       // For now, we`ll just log the issue;
       this.log(⚠️ Node.js recovery requires system-level intervention`,
         `WARN`
-=======
-;
-      // Try to reinstall npm globally;
-      execSync('npm install -g npm@latest', {;
-        cwd: this.workspacePath,;
-        stdio: 'pipe',;
-        timeout: 300000,;
-      });
-;
-      this.log('✅ npm recovered successfully');
-      return true;
-    } catch (error) {;
-      this.log(`❌ Failed to recover npm: ${error.message}`, 'ERROR');
-      return false;
-    }
-  }
-;
-  async recoverNode() {;
-    try {;
-      this.log('🔧 Recovering Node.js...');
-;
-      // This would typically require system-level intervention;
-      // For now, we'll just log the issue;
-      this.log(⚠️ Node.js recovery requires system-level intervention',;
-        'WARN';
->>>>>>> main
       );
       return false;
     } catch (error) {  this.log(`❌ Failed to recover Node.js: ${error.message  }`, `ERROR`);
       return false;
     }
   }
-<<<<<<< HEAD
 
   async recoverGit() {
     try {
@@ -472,27 +303,11 @@ this.log(Found ${issues.length} system issues`);
       });
 
       this.log(`✅ Git recovered successfully`);
-=======
-;
-  async recoverGit() {;
-    try {;
-      this.log('🔧 Recovering Git...');
-;
-      // Try to reinstall git;
-      execSync('sudo apt-get update && sudo apt-get install -y git', {;
-        cwd: this.workspacePath,;
-        stdio: 'pipe',;
-        timeout: 300000,;
-      });
-;
-      this.log('✅ Git recovered successfully');
->>>>>>> main
       return true;
     } catch (error) {  this.log(`❌ Failed to recover Git: ${error.message  }`, `ERROR`);
       return false;
     }
   }
-<<<<<<< HEAD
 
   async recoverDiskSpace() {
     try {
@@ -507,28 +322,11 @@ this.log(Found ${issues.length} system issues`);
       );
 
       this.log(`✅ Disk space recovered successfully`);
-=======
-;
-  async recoverDiskSpace() {;
-    try {;
-      this.log('🔧 Recovering disk space...');
-;
-      // Clear temporary files and caches;
-      execSync(rm -rf /tmp/* ~/.cache/* 'node_modules/.cache' dist build .next',;
-        {;
-          cwd: this.workspacePath,;
-          stdio: 'pipe',;
-        }
-      );
-;
-      this.log('✅ Disk space recovered successfully');
->>>>>>> main
       return true;
     } catch (error) {  this.log(`❌ Failed to recover disk space: ${error.message  }`, `ERROR`);
       return false;
     }
   }
-<<<<<<< HEAD
 
   async recoverMemory() {
     try {
@@ -541,26 +339,11 @@ this.log(Found ${issues.length} system issues`);
       });
 
       this.log(`✅ Memory recovered successfully`);
-=======
-;
-  async recoverMemory() {;
-    try {;
-      this.log('🔧 Recovering memory...');
-;
-      // Clear memory caches;
-      execSync('sync && echo 3 > /'proc/sys/vm/drop_caches'', {;
-        cwd: this.workspacePath,;
-        stdio: 'pipe',;
-      });
-;
-      this.log('✅ Memory recovered successfully');
->>>>>>> main
       return true;
     } catch (error) {  this.log(`❌ Failed to recover memory: ${error.message  }`, `ERROR`);
       return false;
     }
   }
-<<<<<<< HEAD
 
   async recoverPackageJson() {
     try {
@@ -573,7 +356,7 @@ this.log(Found ${issues.length} system issues`);
         description: 'Recovered project',
         main: 'index.js',
         scripts: {
-          test: 'echo "Error: no test specified" && exit 1',
+          test: 'echo "Error: no test specified && exit 1',
         },
         keywords: [],
         author: '',
@@ -586,39 +369,11 @@ this.log(Found ${issues.length} system issues`);
       );
 
       this.log(`✅ package.json recovered successfully`);
-=======
-;
-  async recoverPackageJson() {;
-    try {;
-      this.log('🔧 Recovering package.json...');
-;
-      // Create a basic package.json if it's missing;
-      const basicPackageJson = {;
-        name: 'recovered-project',;
-        version: '1.0.0',;
-        description: 'Recovered project',;
-        main: 'index.js',;
-        scripts: {;
-          test: 'echo "Error: no test specified" && exit 1',;
-        },;
-        keywords: [],;
-        author: ',;
-        license: 'ISC',;
-      };
-;
-      fs.writeFileSync(;
-        path.join(this.workspacePath, 'package.json'),;
-        JSON.stringify(basicPackageJson, null, 2);
-      );
-;
-      this.log('✅ package.json recovered successfully');
->>>>>>> main
       return true;
     } catch (error) {  this.log(`❌ Failed to recover package.json: ${error.message  }`, `ERROR`);
       return false;
     }
   }
-<<<<<<< HEAD
 
   async recoverDependencies() {
     try {
@@ -632,21 +387,6 @@ this.log(Found ${issues.length} system issues`);
       });
 
       this.log(`✅ Dependencies recovered successfully`);
-=======
-;
-  async recoverDependencies() {;
-    try {;
-      this.log('🔧 Recovering dependencies...');
-;
-      // Reinstall dependencies;
-      execSync('npm install', {;
-        cwd: this.workspacePath,;
-        stdio: 'pipe',;
-        timeout: 300000,;
-      });
-;
-      this.log('✅ Dependencies recovered successfully');
->>>>>>> main
       return true;
     } catch (error) {  this.log(`❌ Failed to recover dependencies: ${error.message  }`, `ERROR`);
       return false;
@@ -655,7 +395,6 @@ this.log(Found ${issues.length} system issues`);
 ;
   async recoverMergeConflicts(filePath) {;
     try {this.log(`🔧 Recovering merge conflicts in ${filePath}...`);
-<<<<<<< HEAD
 
       let content = fs.readFileSync(filePath, `utf8`);
 
@@ -667,31 +406,12 @@ this.log(Found ${issues.length} system issues`);
       // Clean up any remaining markers;
       content = content.replace(/\n?/g, ``);
       content = content.replace(/
-=======
-;
-      let content = fs.readFileSync(filePath, 'utf8');
-;
-      // Remove merge conflict markers and keep HEAD version;
-      content = content.replace(;
-        /\n[\s\S]*?\n        '$1';
-      );
-;
-      // Clean up any remaining markers;
-      content = content.replace(/\n?/g, ');
-      content = content.replace(/;
->>>>>>> main
       fs.writeFileSync(filePath, content);
 this.log(`✅ Merge conflicts recovered in ${filePath}`);
       return true;
-<<<<<<< HEAD
     } catch (error) {  
       this.log(❌ Failed to recover merge conflicts in ${filePath  }: ${error.message}`,
         `ERROR`
-=======
-    } catch (error) {;
-      this.log(❌ Failed to recover merge conflicts in ${filePath}: ${error.message}',;
-        'ERROR';
->>>>>>> main
       );
       return false;
     }
@@ -700,7 +420,6 @@ this.log(`✅ Merge conflicts recovered in ${filePath}`);
   async recoverEncodingIssues(filePath) {;
     try {;
       this.log(`🔧 Recovering encoding issues in ${filePath}...`);
-<<<<<<< HEAD
 
       // Try to read with different encodings;
       const encodings = [`utf8`, `latin1`, `cp1252`];
@@ -711,18 +430,6 @@ this.log(`✅ Merge conflicts recovered in ${filePath}`);
           // Write back with proper UTF-8 encoding;
           fs.writeFileSync(filePath, content, `utf8`);
           this.log(✅ Encoding issues recovered in ${filePath} using ${encoding}`
-=======
-;
-      // Try to read with different encodings;
-      const encodings = ['utf8', 'latin1', 'cp1252'];
-;
-      for (const encoding of encodings) {;
-        try {;
-          const content = fs.readFileSync(filePath, encoding);
-          // Write back with proper UTF-8 encoding;
-          fs.writeFileSync(filePath, content, 'utf8');
-          this.log(✅ Encoding issues recovered in ${filePath} using ${encoding}';
->>>>>>> main
           );
           return true;
         } catch (readError) {;
@@ -731,15 +438,9 @@ this.log(`✅ Merge conflicts recovered in ${filePath}`);
       }
 this.log(`❌ Could not recover encoding issues in ${filePath}`);
       return false;
-<<<<<<< HEAD
     } catch (error) {  
       this.log(❌ Failed to recover encoding issues in ${filePath  }: ${error.message}`,
         `ERROR`
-=======
-    } catch (error) {;
-      this.log(❌ Failed to recover encoding issues in ${filePath}: ${error.message}',;
-        'ERROR';
->>>>>>> main
       );
       return false;
     }
@@ -748,7 +449,6 @@ this.log(`❌ Could not recover encoding issues in ${filePath}`);
   async recoverUnreadableFile(filePath) {;
     try {;
       this.log(`🔧 Recovering unreadable file ${filePath}...`);
-<<<<<<< HEAD
 
       // Try to backup and recreate the file;
       const backupPath = filePath + `.backup`;
@@ -761,7 +461,7 @@ this.log(`❌ Could not recover encoding issues in ${filePath}`);
       switch (extension) {
         case '.js':
         case '.jsx':
-          content = '// Recovered file\nconsole.log(`"File recovered");\n';
+          content = '// Recovered file\nconsole.log(`File recovered");\n';
           break;
         case '.ts':
         case '.tsx':
@@ -769,48 +469,14 @@ this.log(`❌ Could not recover encoding issues in ${filePath}`);
           break;
         default:
           content = `// Recovered file\n`;
-=======
-;
-      // Try to backup and recreate the file;
-      const backupPath = filePath + '.backup';
-      fs.renameSync(filePath, backupPath);
-;
-      // Create a minimal replacement file;
-      const extension = path.extname(filePath);
-      let content = ';
-;
-      switch (extension) {;
-        case '.js':;
-        case '.jsx':;
-          content = '// Recovered file\nconsole.log(`"File recovered");\n';
-          break;
-        case '.ts':;
-        case '.tsx':;
-          content = '// Recovered file\nexport {};\n';
-          break;
-        default:;
-          content = '// Recovered file\n';
->>>>>>> main
       }
 ;
       fs.writeFileSync(filePath, content);
 this.log(✅ Unreadable file recovered: ${filePath}`);
       return true;
-<<<<<<< HEAD
     } catch (error) {  
       this.log(❌ Failed to recover unreadable file ${filePath  }: ${error.message}`,
         `ERROR`
-=======
-<<<<<<< HEAD
-    } catch (error) {;
-      this.log(❌ Failed to recover unreadable file ${filePath}: ${error.message}',;
-        'ERROR';
-=======
-    } catch (error) {`);
-      this.log(❌ Failed to recover unreadable file ${filePath}: ${error.message}',`);
-        'ERROR`);
->>>>>>> main
->>>>>>> main
       );
       return false;
     }
@@ -818,15 +484,13 @@ this.log(✅ Unreadable file recovered: ${filePath}`);
 ;
   async generateReport(recoveryResults) {;
     this.log('📊 Generating auto-recovery report...');
-<<<<<<< HEAD
 
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
         totalIssues: recoveryResults.totalIssues,
         recoveredIssues: recoveryResults.recoveredCount,
-        recoveryRate:
-          recoveryResults.totalIssues > 0;
+        recoveryRate: recoveryResults.totalIssues > 0;
             ? (
                 (recoveryResults.recoveredCount / recoveryResults.totalIssues) *
                 100;
@@ -839,44 +503,18 @@ this.log(✅ Unreadable file recovered: ${filePath}`);
 
     const reportFile = path.join(
       this.reportsPath,auto-recovery-manager-report.json`
-=======
-;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: {;
-        totalIssues: recoveryResults.totalIssues,;
-        recoveredIssues: recoveryResults.recoveredCount,;
-        recoveryRate:;
-          recoveryResults.totalIssues > 0;
-            ? (;
-                (recoveryResults.recoveredCount / recoveryResults.totalIssues) *;
-                100;
-              ).toFixed(2);
-            : 100,;
-      },;
-      recoveryResults: recoveryResults.results,;
-      recommendations: ['Review recovered files to ensure they meet your requirements', 'Consider implementing backup strategies for critical files', 'Monitor system resources regularly', 'Implement automated testing to catch issues early', '],;
-    };
-<<<<<<< HEAD
-;
-    const reportFile = path.join(;
-      this.reportsPath,auto-recovery-manager-report.json';
->>>>>>> main
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;
-=======
 
     const reportFile = path.join(
       this.reportsPath,auto-recovery-manager-report.json`);
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));`);
 `);
->>>>>>> main
     this.log(📄 Report generated: ${reportFile}``);
     return report;
   }
-<<<<<<< HEAD
 
   async run() {
     this.log(`🚀 Starting Auto Recovery Manager...`);
@@ -898,29 +536,6 @@ this.log(✅ Unreadable file recovered: ${filePath}`);
 
       this.log(`🎉 Auto Recovery Manager completed!`);
       this.log(📊 Recovered from ${recoveryResults.recoveredCount} out of ${recoveryResults.totalIssues} issues`
-=======
-;
-  async run() {;
-    this.log('🚀 Starting Auto Recovery Manager...');
-;
-    try {;
-      // Detect system issues;
-      const issues = await this.detectSystemIssues();
-;
-      if (issues.length === 0) {;
-        this.log('🎉 No system issues detected!');
-        return { success: true, issues: [], recovered: 0 };
-      }
-;
-      // Apply recovery strategies;
-      const recoveryResults = await this.applyRecoveryStrategies(issues);
-;
-      // Generate report;
-      const report = await this.generateReport(recoveryResults);
-;
-      this.log('🎉 Auto Recovery Manager completed!');
-      this.log(📊 Recovered from ${recoveryResults.recoveredCount} out of ${recoveryResults.totalIssues} issues';
->>>>>>> main
       );
 ;
       return {;
@@ -934,15 +549,9 @@ this.log(✅ Unreadable file recovered: ${filePath}`);
     }
   }
 }
-<<<<<<< HEAD
 
 // Run the automation if called directly;
 if (require.main === module) {
-=======
-;
-// Run the automation if called directly;
-if (require.main === module) {;
->>>>>>> main
   const manager = new AutoRecoveryManager();
   manager.run().catch(console.error);
 }

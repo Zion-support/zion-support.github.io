@@ -1,13 +1,1 @@
-<<<<<<< HEAD
-describe("IoTEdgeComputing", () => { it("renders without crashing", () => { render(<IoTEdgeComputing />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () ; }) ; it("displays expected content", () => { render(<IoTEdgeComputing />) ;
-=======
-<<<<<<< HEAD
-describe('IoTEdgeComputing', () => { it('renders: without crashing', () => { render(<IoTEdgeComputing />)  expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument ()  })  it('displays expected content', () => { render(<IoTEdgeComputing />) ';
-=======
-<<<<<<< HEAD
-describe('IoTEdgeComputing', () => { it('renders without crashing', () => { render(<IoTEdgeComputing />)  expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument ()  })  it('displays expected content', () => { render(<IoTEdgeComputing />) '
-=======
-describe('IoTEdgeComputing, () => { it('renders without crashing', () => { render(<IoTEdgeComputing />)  expect(screen.getByRole (main') || screen.getByText(/.*/) ) .toBeInTheDocument ()  })  it('displays expected content', () => { render(<IoTEdgeComputing />) 
->>>>>>> main
->>>>>>> main
->>>>>>> main
+describe("IoTEdgeComputing () => { it(renders without crashing, () => { render(<IoTEdgeComputing />) ; expect(screen.getByRole (main) || screen.getByText(/.*/) ) .toBeInTheDocument () ; }) ; it(displays expected content", () => { render(<IoTEdgeComputing />) ; 

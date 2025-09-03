@@ -4,21 +4,8 @@ A modern, high-performance website built with Next.js, showcasing AI services, I
 
 ## 🚀 Features
 
-<<<<<<< HEAD
 ## ✨ Features
-=======
-- **Modern Tech Stack**: Next.js 15, React 18, TypeScript, Tailwind CSS
-- **Performance Optimized**: Bundle analysis, lazy loading, image optimization
-- **SEO Enhanced**: Comprehensive meta tags, structured data, sitemap generation
-- **Security First**: Security headers, dependency auditing, XSS protection
-- **Accessibility**: WCAG compliant, semantic HTML, keyboard navigation
-- **Mobile Responsive**: Optimized for all device sizes
-- **Error Handling**: Comprehensive error boundaries and monitoring
 
-## 🛠️ Tech Stack
->>>>>>> main
-
-<<<<<<< HEAD
 - **AI-Powered Solutions**: Advanced artificial intelligence and machine learning capabilities
 - **Cloud Infrastructure**: Scalable and secure cloud computing solutions
 - **Digital Transformation**: Complete digital transformation services
@@ -37,96 +24,9 @@ A modern, high-performance website built with Next.js, showcasing AI services, I
 - **Testing**: Jest, React Testing Library
 - **CI/CD**: GitHub Actions, Docker
 
-<<<<<<< HEAD
-=======
-## 🏗️ Project Structure
-
-```
-src/
-├── components/          # Reusable UI components
-│   ├── header/         # Header components (Logo, Navigation, Search)
-│   ├── layout/         # Layout components (Sidebar, etc.)
-│   ├── ui/            # Basic UI components
-│   └── search/        # Search functionality components
-├── pages/              # Page components
-│   ├── HomePage.jsx   # Main landing page
-│   ├── SimplePage.jsx # Template for various routes
-│   ├── Sitemap.jsx    # Site navigation page
-│   └── ...            # Other page components
-├── data/               # Static data and content
-│   └── marketplaceData.js # Search suggestions and service data
-├── styles/             # CSS and styling files
-└── utils/              # Utility functions and helpers
-```
-
-## 🎨 Design System
-
-### Color Palette
-
-- **Primary**: Zion Purple (`#8B5CF6`)
-- **Secondary**: Zion Cyan (`#22DDD2`)
-- **Background**: Zion Blue Dark (`#0F172A`)
-- **Text**: White, Zion Slate Light (`#94A3B8`)
-
-### Typography
-
-- **Headings**: Bold, large text for hierarchy
-- **Body**: Clean, readable text with proper contrast
-- **Accents**: Zion Cyan for highlights and CTAs
-
-### Components
-
-- **Cards**: Rounded corners with subtle borders and hover effects
-- **Buttons**: Gradient backgrounds with hover animations
-- **Navigation**: Dropdown menus with smooth transitions
-- **Forms**: Clean input fields with focus states
-
-## 📱 Responsive Design
-
-The website is built with a mobile-first approach:
-
-- **Mobile**: Stacked layouts with touch-friendly interactions
-- **Tablet**: Adjusted grid layouts for medium screens
-- **Desktop**: Full-featured layouts with hover effects and advanced navigation
-
-## 🧭 Navigation Structure
-
-### Main Navigation
-
-- **Home** (`/`) - Landing page with hero section and service overview
-- **Services** (`/services`) - AI, Cloud, Cybersecurity, Digital Transformation
-- **Solutions** (`/solutions`) - Industry-specific solutions
-- **About** (`/about`) - Company information and team
-- **Resources** - Case studies, research, blog, webinars
-- **Support** - Help center, training, contact
-- **Contact** (`/contact`) - Get in touch and request quotes
-
-### Footer Navigation
-
-- Organized into logical sections (Services, Solutions, Company, Resources, Support)
-- Social media links and contact information
-- Newsletter signup and trust indicators
-
-## 🔧 Technical Implementation
-
-### Frontend Framework
-
-- **Next.js 15.5.2** - React framework with SSR capabilities
-- **React 18.2.0** - Modern React with hooks and functional components
-- **TypeScript** - Type-safe development
-
-### Styling
-
-=======
-### Frontend
-- **Next.js 15** - React framework with SSR/SSG
-- **React 18** - UI library with concurrent features
-- **TypeScript** - Type-safe JavaScript
->>>>>>> main
 - **Tailwind CSS** - Utility-first CSS framework
 - **Framer Motion** - Animation library
 
-<<<<<<< HEAD
 ### State Management
 
 - **React Hooks** - useState, useEffect for local state
@@ -139,22 +39,15 @@ The website is built with a mobile-first approach:
 - **Image Optimization** - Next.js image optimization
 - **Code Splitting** - Automatic bundle splitting
 
->>>>>>> main
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-<<<<<<< HEAD
 - Node.js 18+ 
 - npm or yarn
 - Git
-=======
-- Node.js 18+
-- npm or yarn package manager
->>>>>>> main
 
 ### Installation
-=======
 ### Development Tools
 - **ESLint** - Code linting
 - **Prettier** - Code formatting
@@ -167,11 +60,8 @@ The website is built with a mobile-first approach:
 - **Sentry** - Error monitoring
 
 ## 📦 Installation
->>>>>>> main
 
-<<<<<<< HEAD
-1. Clone the repository:
-```bash
+1. Clone the repository: ```bash
 git clone https://github.com/your-org/zion-tech-group.git
 cd zion-tech-group
 ```
@@ -192,34 +82,6 @@ npm run dev
 ```
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser.
-=======
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/Zion-Technologies/Website.git
-   cd Website
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-<<<<<<< HEAD
-3. **Start development server**
-
-=======
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env.local
-   # Edit .env.local with your configuration
-   ```
-
-4. **Run the development server**
->>>>>>> main
    ```bash
    npm run dev
    # or
@@ -243,7 +105,6 @@ npm run build
 npm run start
 ```
 
-<<<<<<< HEAD
 ### Header Component (`src/components/header/Header.jsx`)
 
 - Logo with Zion Tech Group branding
@@ -274,42 +135,10 @@ npm run start
 - Statistics and social proof
 - Service preview cards
 - Testimonials and CTA sections
-=======
-### Performance Analysis
-```bash
-npm run analyze
-npm run perf:lighthouse
-```
-
-## 📁 Project Structure
-
-```
-├── pages/                 # Next.js pages
-│   ├── api/              # API routes
-│   ├── _app.tsx          # App wrapper
-│   ├── _document.tsx     # Document structure
-│   └── index.tsx         # Homepage
-├── src/
-│   ├── components/       # React components
-│   │   ├── ui/          # UI components
-│   │   ├── layout/      # Layout components
-│   │   └── seo/         # SEO components
-│   ├── hooks/           # Custom React hooks
-│   ├── lib/             # Utility libraries
-│   ├── styles/          # Global styles
-│   └── types/           # TypeScript types
-├── public/              # Static assets
-├── scripts/             # Build and utility scripts
-└── automation/          # Automation scripts
-```
-
-## 🎯 Key Components
->>>>>>> main
 
 ### SEOHead
 Comprehensive SEO component with meta tags, Open Graph, Twitter Cards, and structured data.
 
-<<<<<<< HEAD
 ### Service Data (`src/data/marketplaceData.js`)
 
 - Search suggestions and keywords
@@ -322,18 +151,10 @@ Comprehensive SEO component with meta tags, Open Graph, Twitter Cards, and struc
 - **SimplePage.jsx** - Template for various routes with dynamic content
 - **ComprehensivePricing2025.jsx** - Pricing page with plans and add-ons
 - **Sitemap.jsx** - Complete site navigation structure
-=======
-### ErrorBoundary
-Robust error handling with fallback UI and error reporting.
-
-### LazyImage
-Performance-optimized image component with lazy loading and intersection observer.
->>>>>>> main
 
 ### LoadingSpinner
 Accessible loading component with smooth animations.
 
-<<<<<<< HEAD
 ### Enhanced Search Input
 
 - Real-time search suggestions
@@ -377,12 +198,8 @@ Accessible loading component with smooth animations.
 - Configure environment variables in `.env.local`
 - Set production URLs and API endpoints
 - Configure analytics and monitoring
->>>>>>> main
 
 ## 📜 Available Scripts
-=======
-## 🔧 Scripts
->>>>>>> main
 
 ### Development
 - `npm run dev` - Start development server
@@ -393,7 +210,7 @@ Accessible loading component with smooth animations.
 
 ### Performance
 - `npm run analyze` - Bundle analysis
-- `npm run perf:lighthouse` - Lighthouse audit
+- `npm run perf: lighthouse` - Lighthouse audit
 - `npm run perf:monitor` - Performance monitoring
 
 ### Security
@@ -449,75 +266,19 @@ zion-tech-group/
 
 ## 🤝 Contributing
 
-<<<<<<< HEAD
 This is a proprietary project for Zion Tech Group. For feature requests or bug reports, please contact the development team.
 
 ---
 
 **Zion Tech Group** - Transforming businesses through innovative technology solutions.
-=======
-<<<<<<< HEAD
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
-=======
-<<<<<<< HEAD
-### Development Workflow
-
-1. Create a feature branch
-2. Make your changes
-3. Test thoroughly
-4. Submit a pull request
-5. Code review and approval
-
-### Code Standards
-
-- Follow React best practices
-- Use TypeScript for type safety
-- Maintain consistent styling with Tailwind CSS
-- Write meaningful component names and props
-=======
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Code Standards
-- Follow TypeScript best practices
-- Use ESLint and Prettier
-- Write tests for new features
-- Follow accessibility guidelines
-- Optimize for performance
->>>>>>> main
 
 ## 📝 License
 
-<<<<<<< HEAD
-For technical support or questions about the website:
-
-- **Email**: contact@ziontechgroup.com
+For technical support or questions about the website: - **Email**: contact@ziontechgroup.com
 - **Documentation**: Check the `/docs` section
 - **Issues**: Use the GitHub issues page
-=======
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
->>>>>>> main
->>>>>>> main
 
-<<<<<<< HEAD
 For support, email support@ziontechgroup.com or create an issue in the repository.
-=======
-## 📞 Support
-
-<<<<<<< HEAD
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-=======
-- **Email**: support@ziontechgroup.com
-- **Website**: [https://ziontechgroup.com](https://ziontechgroup.com)
-- **Documentation**: [https://docs.ziontechgroup.com](https://docs.ziontechgroup.com)
->>>>>>> main
 
 ## 🏢 About Zion Tech Group
 
@@ -529,20 +290,7 @@ Zion Tech Group is a leading provider of revolutionary AI services, IT solutions
 - **Micro SaaS**: Scalable software solutions, API development
 - **Consulting**: Technology strategy, digital transformation
 
-<<<<<<< HEAD
 - [Website](https://ziontechgroup.com)
 - [Documentation](https://docs.ziontechgroup.com)
 - [API Reference](https://api.ziontechgroup.com/docs)
 - [Community](https://community.ziontechgroup.com)
-=======
-### Contact
-- **Address**: 364 E Main St STE 1008, Middletown, DE 19709
-- **Phone**: +1-302-464-0950
-- **Email**: kleber@ziontechgroup.com
-
----
-
-Built with ❤️ by the Zion Tech Group team
->>>>>>> main
->>>>>>> main
->>>>>>> main

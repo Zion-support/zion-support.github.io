@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -16,26 +15,6 @@ const colors = {
 };
 
 function log(message, color = `reset`) {
-=======
-
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-;
-// ANSI color codes for better output;
-const colors = {;
-  reset: '\x1b[0m',;
-  red: '\x1b[31m',;
-  green: '\x1b[32m',;
-  yellow: '\x1b[33m',;
-  blue: '\x1b[34m',;
-  magenta: '\x1b[35m',;
-  cyan: '\x1b[36m',;
-};
-;
-function log(message, color = 'reset') {;
->>>>>>> main
   console.log(`${colors[color]}${message}${colors.reset}`);
 }
 ;
@@ -44,7 +23,6 @@ function resolveMergeConflict(filePath) {;
     if (!fs.existsSync(filePath)) {;
       return false;
     }
-<<<<<<< HEAD
 
     let content = fs.readFileSync(filePath, `utf8`);
     let originalContent = content;
@@ -52,14 +30,14 @@ function resolveMergeConflict(filePath) {;
 
     // Strategy 1: Remove all variations of merge conflict markers;
     if (
-      content.includes('      content.includes('=======') ||
+      content.includes('      content.includes('') ||
       content.includes('>>>>>>>')
     ) {
       // Remove everything between;
-      // Remove everything between ======= and       content = content.replace(/=======[\s\S]*?
+      // Remove everything between  and       content = content.replace(/[\s\S]*?
       // Remove any remaining       content = content.replace(/
-      // Remove any remaining ======= sections;
-      content = content.replace(/=======[\s\S]*/g, '');
+      // Remove any remaining  sections;
+      content = content.replace(/[\s\S]*/g, '');
 
       // Remove any remaining       content = content.replace(/
       fixed = true;
@@ -68,60 +46,23 @@ function resolveMergeConflict(filePath) {;
     // Strategy 2: Clean up malformed imports and exports;
     // Remove broken import statements;
     content = content.replace(
-      /import\s+[^;]*?from\s+['"][^'"]*['"]\s*;?\s*/g,
+      /import\s+[^;]*?from\s+['"][^']*[']\s*;?\s*/g,
       ''
-=======
-;
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    let fixed = false;
-;
-    // Strategy 1: Remove all variations of merge conflict markers;
-    if (;
-      content.includes('      content.includes('=======') ||;
-      content.includes('>>>>>>>');
-    ) {;
-      // Remove everything between ;
-      // Remove everything between ======= and       content = content.replace(/=======[\s\S]*?;
-      // Remove any remaining       content = content.replace(/;
-      // Remove any remaining ======= sections;
-      content = content.replace(/=======[\s\S]*/g, ');
-;
-      // Remove any remaining       content = content.replace(/;
-      fixed = true;
-    }
-;
-    // Strategy 2: Clean up malformed imports and exports;
-    // Remove broken import statements;
-    content = content.replace(;
-      /import\s+[^;]*?from\s+['"][^'"]*['"]\s*;?\s*/g,;
-      ';
->>>>>>> main
     );
     content = content.replace(;
-      /export\s+[^;]*?from\s+['"][^'"]*['"]\s*;?\s*/g,;
+      /export\s+[^;]*?from\s+['"][^'"]*[']\s*;?\s*/g,;
       ';
     );
-<<<<<<< HEAD
 
     // Remove malformed React imports;
     content = content.replace(
-      /import\s+React[^;]*?from\s+['"]react['']\s*;?\s*/g,import React from 'react';\n"
+      /import\s+React[^;]*?from\s+[']react['']\s*;?\s*/g,import React from 'react';\n"
     );
 
-=======
-;
-    // Remove malformed React imports;
-    content = content.replace(;
-      /import\s+React[^;]*?from\s+['"]react[']\s*;?\s*/g,import React from 'react';\n";
-    );
-;
->>>>>>> main
     // Strategy 3: Fix common syntax issues;
     // Remove duplicate semicolons and quotes;
     content = content.replace(/;+/, ';');
-    content = content.replace(/['"]+/g, '"');
-<<<<<<< HEAD
+    content = content.replace(/['"]+/g, '');
 
     // Remove empty lines and normalize spacing;
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
@@ -132,7 +73,7 @@ function resolveMergeConflict(filePath) {;
       content.includes('export default') &&
       !content.includes('import React')
     ) {
-      content = "import React from 'react';\n\n" + content;
+      content = import React from 'react';\n\n" + content;
     }
 
     if (fixed && content !== originalContent) {
@@ -140,27 +81,6 @@ function resolveMergeConflict(filePath) {;
       content = content.replace(/[^\x00-\x7F]/g, ''); // Remove non-ASCII characters;
       content = content.replace(/\s+/g, ' '); // Normalize whitespace;
       fs.writeFileSync(filePath, content, `utf8`);
-=======
-;
-    // Remove empty lines and normalize spacing;
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^\s+$/gm, ');
-;
-    // Strategy 4: Ensure basic React component structure;
-    if (;
-      content.includes('export default') &&;
-      !content.includes('import React');
-    ) {;
-      content = "import React from 'react';\n\n" + content;
-    }
-;
-    if (fixed && content !== originalContent) {;
-      // Additional cleanup: remove any remaining corrupted content;
-      content = content.replace(/[^\x00-\x7F]/g, '); // Remove non-ASCII characters;
-      content = content.replace(/\s+/g, ' '); // Normalize whitespace;
-
-      fs.writeFileSync(filePath, content, 'utf8');
->>>>>>> main
       return true;
     }
 ;
@@ -169,44 +89,27 @@ function resolveMergeConflict(filePath) {;
     return false;
   }
 }
-<<<<<<< HEAD
 
 function findConflictedFiles() {
   try {
-=======
-;
-function findConflictedFiles() {;
-  try {;
->>>>>>> main
     // Use a simpler approach to find conflicted files;
     const result = execSync('git status --porcelain', { encoding: 'utf8' });
     const lines = result.trim().split('\n');
     const conflictedFiles = [];
-<<<<<<< HEAD
 
     for (const line of lines) {
       if (line.startsWith('UU ')) {
-=======
-;
-    for (const line of lines) {;
-      if (line.startsWith('UU ')) {;
->>>>>>> main
-        const filePath = line.substring(3); // Remove "UU " prefix;
+        const filePath = line.substring(3); // Remove "UU  prefix;
         conflictedFiles.push(filePath);
       }
     }
 ;
     return conflictedFiles;
-<<<<<<< HEAD
   } catch (error) { 
-=======
-  } catch (error) {;
->>>>>>> main
     log('Error finding conflicted files', 'red');
     return [];
    }
 }
-<<<<<<< HEAD
 
 function main() {
   log('🚀 Starting direct merge conflict resolution...', `cyan`);
@@ -215,22 +118,11 @@ function main() {
 
   if (conflictedFiles.length === 0) {
     log('✅ No merge conflicts found!', `green`);
-=======
-;
-function main() {;
-  log('🚀 Starting direct merge conflict resolution...', 'cyan');
-;
-  const conflictedFiles = findConflictedFiles();log(`Found ${conflictedFiles.length} files with merge conflicts`, 'yellow');
-;
-  if (conflictedFiles.length === 0) {;
-    log('✅ No merge conflicts found!', 'green');
->>>>>>> main
     return;
   }
-=======
 const fs = require('fs');';const path = require('path');';const { execSync } = require('child_process');';';// ANSI color codes for better output;
 const colors = {;
-  "reset": '\x1b[0m',';  "red": '\x1b[31m',';  "green": '\x1b[32m',';  "yellow": '\x1b[33m',';  "blue": '\x1b[34m',';  "magenta": '\x1b[35m',';  "cyan": '\x1b[36m',';};';;
+  reset": '\x1b[0m',';  "red: '\x1b[31m',';  green": '\x1b[32m',';  "yellow: '\x1b[33m',';  blue": '\x1b[34m',';  "magenta: '\x1b[35m',';  cyan": '\x1b[36m',';};';
 function log(message, color = 'reset') {';  console.log(`${colors[color]}${message}${colors.reset}`);`;}
 ;
 function resolveMergeConflict(filePath) {;
@@ -241,21 +133,21 @@ function resolveMergeConflict(filePath) {;
 ;
     let content = fs.readFileSync(filePath, 'utf8');';    let originalContent = content;';    let fixed = false;
 ;
-    // Strategy "1": Remove all variations of merge conflict markers;
-    if(;);      content.includes('      content.includes('=======') ||';      content.includes('>>>>>>>')';    ) {;';      // Remove everything between ;
-      // Remove everything between ======= and       content = content.replace(/=======[\s\S]*?;);      // Remove any remaining       content = content.replace(/;);      // Remove any remaining ======= sections;
-      content = content.replace(/=======[\s\S]*/g, '');';';      // Remove any remaining       content = content.replace(/;);      fixed = true;,
+    // Strategy "1: Remove all variations of merge conflict markers;
+    if(;);      content.includes('      content.includes('') ||';      content.includes('>>>>>>>')';    ) {;';      // Remove everything between ;
+      // Remove everything between  and       content = content.replace(/[\s\S]*?;);      // Remove any remaining       content = content.replace(/;);      // Remove any remaining  sections;
+      content = content.replace(/[\s\S]*/g, '');';';      // Remove any remaining       content = content.replace(/;);      fixed = true;,
 }
 ;
-    // Strategy "2": Clean up malformed imports and exports;";    // Remove broken import statements;
-    content = content.replace(;);      /import\s+[^;]*?from\s+['"][^'"]*['"]\s*;?\s*/g,";      ''';    );';    content = content.replace(;);      /export\s+[^;]*?from\s+['"][^'"]*['"]\s*;?\s*/g,";      ''';    );';;
+    // Strategy 2": Clean up malformed imports and exports;";    // Remove broken import statements;
+    content = content.replace(;);      /import\s+[^;]*?from\s+['][^']*['"]\s*;?\s*/g,";      ''';    );';    content = content.replace(;);      /export\s+[^;]*?from\s+['][^']*['"]\s*;?\s*/g,";      ''';    );';
     // Remove malformed React imports;
-    content = content.replace(;);      /import\s+React[^;]*?from\s+['"]react['']\s*;?\s*/g,import React from 'react';\n"";    );";;
-    // Strategy "3": Fix common syntax issues;";    // Remove duplicate semicolons and quotes;
-    content = content.replace(/;+/, ';');';    content = content.replace(/['"]+/g, '"');';';    // Remove empty lines and normalize spacing;
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');';    content = content.replace(/^\s+$/gm, '');';';    // Strategy "4": Ensure basic React component structure;";    if(;);      content.includes('export default') &&';      !content.includes('import React')';    ) {;';      content = "import React from 'react';\n\n" + content;";    }";;
+    content = content.replace(;);      /import\s+React[^;]*?from\s+[']react['']\s*;?\s*/g,import React from 'react';\n";    );";
+    // Strategy 3: Fix common syntax issues;";    // Remove duplicate semicolons and quotes;
+    content = content.replace(/;+/, ';');';    content = content.replace(/['"]+/g, '');';';    // Remove empty lines and normalize spacing;
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');';    content = content.replace(/^\s+$/gm, '');';';    // Strategy 4": Ensure basic React component structure;";    if(;);      content.includes('export default') &&';      !content.includes('import React')';    ) {;';      content = import React from 'react';\n\n + content;";    }";
     if (fixed && content !== originalContent) {;
-      // Additional "cleanup": remove any remaining corrupted content;";      content = content.replace(/[^\x00-\x7F]/g, ''); // Remove non-ASCII characters';      content = content.replace(/\s+/g, ' '); // Normalize whitespace';';      fs.writeFileSync(filePath, content, 'utf8');';      return true;,';}
+      // Additional cleanup: remove any remaining corrupted content;";      content = content.replace(/[^\x00-\x7F]/g, ''); // Remove non-ASCII characters';      content = content.replace(/\s+/g, ' '); // Normalize whitespace';';      fs.writeFileSync(filePath, content, 'utf8');';      return true;,';}
 ;
     return false;,
 } catch (error) {log(`Error processing ${filePath}: ${error.message}`, 'red');';    return false;`;  }';}
@@ -263,9 +155,9 @@ function resolveMergeConflict(filePath) {;
 function findConflictedFiles() {;
   try {;
     // Use a simpler approach to find conflicted files;
-    const result = execSync('git status --porcelain', { "encoding": 'utf8' });';    const lines = result.trim().split('\n');';    const conflictedFiles = [];';;
+    const result = execSync('git status --porcelain', { "encoding: 'utf8' });';    const lines = result.trim().split('\n');';    const conflictedFiles = [];';
     for (const line of lines) {;
-      if (line.startsWith('UU ')) {';        const filePath = line.substring(3); // Remove "UU " prefix";        conflictedFiles.push(filePath);,";}
+      if (line.startsWith('UU ')) {';        const filePath = line.substring(3); // Remove UU " prefix";        conflictedFiles.push(filePath);,;}
     }
 ;
     return conflictedFiles;,
@@ -275,11 +167,9 @@ function findConflictedFiles() {;
 ;
 function main() {;
   log('🚀 Starting direct merge conflict resolution...', 'cyan');';';  const conflictedFiles = findConflictedFiles();log(`Found ${conflictedFiles.length} files with merge conflicts`, 'yellow');';`;  if (conflictedFiles.length === 0) {;';    log('✅ No merge conflicts found!', 'green');';    return;,';}
->>>>>>> main
 ;
   let resolvedCount = 0;
   let errorCount = 0;
-<<<<<<< HEAD
 
   for (const filePath of conflictedFiles) {
     try {
@@ -292,31 +182,13 @@ function main() {;
     }
   }
 
-  log('\n📊 Resolution Summary:', `cyan`);log(`Total conflicted files: ${conflictedFiles.length}`, `blue`);log(`Successfully resolved: ${resolvedCount}`, `green`);log(`Errors encountered: ${errorCount}`, `red`);
+  log('\n📊 Resolution Summary: ', `cyan`);log(`Total conflicted files: ${conflictedFiles.length}`, `blue`);log(`Successfully resolved: ${resolvedCount}`, `green`);log(`Errors encountered: ${errorCount}`, `red`);
 
   if (resolvedCount > 0) {
-=======
-;
-  for (const filePath of conflictedFiles) {;
-    try {;
-      if (resolveMergeConflict(filePath)) {;
-<<<<<<< HEAD
-        resolvedCount++;log(`✅ Resolved: ${filePath}`, 'green');
-      } else {log(`⚠️  No changes needed: ${filePath}`, 'yellow');
-      }
-    } catch (error) {;
-      errorCount++;log(`❌ Error processing ${filePath}: ${error.message}`, 'red');
-    }
-  }
-;
-  log('\n📊 Resolution Summary:', 'cyan');log(`Total conflicted files: ${conflictedFiles.length}`, 'blue');log(`Successfully resolved: ${resolvedCount}`, 'green');log(`Errors encountered: ${errorCount}`, 'red');
-;
-  if (resolvedCount > 0) {;
->>>>>>> main
-    log('\n🎯 Next steps:', 'cyan');
+    log('\n🎯 Next steps: ', 'cyan');
     log('1. Review the resolved files', 'blue');
     log('2. Run: git add .', 'blue');
-    log('3. Run: git commit -m "Resolve merge conflicts"', 'blue');
+    log('3. Run: git commit -m Resolve merge conflicts"', 'blue');
     log('4. Continue with your workflow', 'blue');
   }
 }
@@ -325,13 +197,11 @@ if (require.main === module) {;
   main();
 }
 ;
-=======
-        resolvedCount++;log(`✅ "Resolved": ${filePath}`, 'green');';      } else {log(`⚠️  No changes "needed": ${filePath}`, 'yellow');';      }`;    } catch (error) {;';      errorCount++;log(`❌ Error processing ${filePath}: ${error.message}`, 'red');';    }`;  }';;
-  log('\n📊 Resolution "Summary":', 'cyan');log(`Total conflicted "files": ${conflictedFiles.length}`, 'blue');log(`Successfully "resolved": ${resolvedCount}`, 'green');log(`Errors "encountered": ${errorCount}`, 'red');';`;  if (resolvedCount > 0) {;';    log('\n🎯 Next "steps":', 'cyan');';    log('1. Review the resolved files', 'blue');';    log('2. "Run": git add .', 'blue');';    log('3. "Run": git commit -m "Resolve merge conflicts"', 'blue');';    log('4. Continue with your workflow', 'blue');';  }';}
+        resolvedCount++;log(`✅ "Resolved: ${filePath}`, 'green');';      } else {log(`⚠️  No changes needed": ${filePath}`, 'yellow');';      }`;    } catch (error) {;';      errorCount++;log(`❌ Error processing ${filePath}: ${error.message}`, 'red');';    }`;  }';
+  log('\n📊 Resolution "Summary:', 'cyan');log(`Total conflicted files": ${conflictedFiles.length}`, 'blue');log(`Successfully "resolved: ${resolvedCount}`, 'green');log(`Errors encountered": ${errorCount}`, 'red');';`;  if (resolvedCount > 0) {;';    log('\n🎯 Next "steps:', 'cyan');';    log('1. Review the resolved files', 'blue');';    log('2. Run": git add .', 'blue');';    log('3. "Run: git commit -m Resolve merge conflicts"', 'blue');';    log('4. Continue with your workflow', 'blue');';  }';}
 ;
 if (require.main === module) {;
   main();,
 }
 ;
->>>>>>> main
 module.exports = { resolveMergeConflict, findConflictedFiles };

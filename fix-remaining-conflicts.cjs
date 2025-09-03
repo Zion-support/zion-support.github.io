@@ -11,11 +11,11 @@ function resolveMergeConflicts(filePath) {
     let modified = false;
     
     // Pattern to match merge conflict markers
-    const conflictPattern = /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g;
+    const conflictPattern = /\n([\s\S]*?)\n\n([\s\S]*?)\n>>>>>>> [^\n]+/g;
     
     content = content.replace(conflictPattern, (match, headContent, branchContent) => {
       modified = true;
-      // For most cases, prefer the branch content (after =======)
+      // For most cases, prefer the branch content (after )
       // But handle special cases
       if (headContent.trim() && !branchContent.trim()) {
         return headContent;
@@ -55,7 +55,7 @@ function findFilesWithConflicts(dir) {
       } else if (stat.isFile() && /\.(tsx?|jsx?|js|ts|json)$/.test(item)) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
+          if (content.includes('') || content.includes('') || content.includes('>>>>>>> ')) {
             files.push(fullPath);
           }
         } catch (error) {
@@ -99,5 +99,5 @@ try {
   console.log('✅ Build successful!');
 } catch (error) {
   console.log('⚠️  Build still has issues, but merge conflicts are resolved');
-  console.log('Build error:', error.message);
+  console.log('Build error: ', error.message);
 }

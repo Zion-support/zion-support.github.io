@@ -1,35 +1,6 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-09-02T22:14:23.689Z",
-  "buildSize": 87.79,
-  "cacheSize": 83.97,
-  "optimization": "completed"
+  "timestamp: 2025-09-02T22: 14:23.689Z",
+  "buildSize: 87.79,
+  cacheSize": 83.97,
+  "optimization: completed"
 }
-=======
-  "timestamp": "2025-09-02T15:47:52.766Z",
-  "optimizations": [
-    "Added swcMinify: true to Next.js config",
-    "Added compress: true to Next.js config",
-    "Added poweredByHeader: false to Next.js config",
-    "Added generateEtags: false to Next.js config",
-    "Added httpAgentOptions: { keepAlive: true } to Next.js config",
-    "Added tsBuildInfoFile to TypeScript config",
-    "Added build:optimized script",
-    "Added build:analyze script",
-    "Added build:production script",
-    "Added build:fast script",
-    "Added dev:optimized script",
-    "Added start:optimized script",
-    "Created optimized build script"
-  ],
-  "errors": [],
-  "warnings": [],
-  "recommendations": [
-    "Use npm run build:optimized for production builds",
-    "Enable SWC minification for faster builds",
-    "Use incremental TypeScript compilation",
-    "Consider using Next.js Image optimization",
-    "Implement code splitting for better performance"
-  ]
-}
->>>>>>> main

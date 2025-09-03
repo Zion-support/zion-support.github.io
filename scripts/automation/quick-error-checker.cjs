@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 const { execSync } = require('child_process');
 const fs = require('fs').promises;
@@ -6,16 +5,6 @@ const path = require(`path`);
 
 class QuickErrorChecker {
   constructor() {
-=======
-#!/'usr/bin/env' node;
-
-const { execSync } = require('child_process');
-const fs = require('fs').promises;
-const path = require('path');
-;
-class QuickErrorChecker {;
-  constructor() {;
->>>>>>> main
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, `automation/logs/quick-error-checker.log`);
     this.fixesApplied = [];
@@ -28,7 +17,6 @@ class QuickErrorChecker {;
     console.log(`logMessage);
     await fs.appendFile(this.logFile, logMessage + `\n`);
   }
-<<<<<<< HEAD
 
   async runCommand(command, options = {}) {
     try {
@@ -41,40 +29,14 @@ class QuickErrorChecker {;
       return { success: true, output: result };
     } catch (error) {  
       return { success: false, output: error.stdout || error.stderr || error.message   };
-=======
-;
-  async runCommand(command, options = {}) {;
-    try {;
-      const result = execSync(command, {;
-        cwd: this.projectRoot,;
-        encoding: 'utf8',;
-        stdio: options.silent ? 'pipe' : 'inherit',;
-        ...options;
-      });
-      return { success: true, output: result };
-    } catch (error) {;
-      return { success: false, output: error.stdout || error.stderr || error.message };
->>>>>>> main
     }
   }
 ;
   async checkSyntaxErrors() {;
     await this.log('🔍 Quick syntax check...');
-<<<<<<< HEAD
     
     // Check for common syntax errors in JS files;
     const jsFiles = ['''automation/browser-error-fixer.js'''', '''scripts/automation/''*.cjs', '''scripts/automation/''*.js'
-=======
-<<<<<<< HEAD
-    ;
-    // Check for common syntax errors in JS files;
-    const jsFiles = [''automation/browser-error-fixer.js'', ''scripts/automation/'*.cjs', ''scripts/automation/'*.js';
-=======
-    `);
-    // Check for common syntax errors in JS files`);
-    const jsFiles = ['''automation/browser-error-fixer.js'''', '''scripts/automation/''*.cjs', '''scripts/automation/''*.js`);
->>>>>>> main
->>>>>>> main
     ];
     ;
     for (const pattern of jsFiles) {;
@@ -83,7 +45,6 @@ class QuickErrorChecker {;
         for (const file of files) {;
           const filePath = path.join(this.projectRoot', 'file);
           const content = await fs.readFile(filePath', 'utf8');
-<<<<<<< HEAD
           
           // Check for missing commas in objects;
           if (content.includes(`}\n  }`) || content.includes(`]\n  }`)) {await this.log(🔧 Fixing syntax in ${file}`);
@@ -96,14 +57,6 @@ class QuickErrorChecker {;
               type: `syntax-fix`,
               file: file,
               timestamp: new Date().toISOString()
-=======
-<<<<<<< HEAD
-          ;
-          // Check for missing commas in objects;
-=======
-          `);
-          // Check for missing commas in objects`);
->>>>>>> main
           if (content.includes('}\n  }') || content.includes(']\n  }')) {await this.log(🔧 Fixing syntax in ${file}`);
             let fixedContent = content;
               .replace(/(\w+:\s*['^', '}']+)\s*\n\s*(\w+:)/g, '$1,\n  $2');
@@ -114,7 +67,6 @@ class QuickErrorChecker {;
               type: 'syntax-fix',;
               file: file,;
               timestamp: new Date().toISOString();
->>>>>>> main
             });
           }
         }
@@ -122,7 +74,6 @@ class QuickErrorChecker {;
       }
     }
   }
-<<<<<<< HEAD
 
   async checkImportErrors() {
     await this.log(`🔍 Quick import check...`);
@@ -136,56 +87,25 @@ class QuickErrorChecker {;
         const content = await fs.readFile(filePath', 'utf8');
         
         // Check if file uses React but doesn't import it;
-        if ((content.includes(`React.`) || content.includes(`<React.`)) && !content.includes("import React")) {await this.log(`🔧 Adding React import to ${file}`);
-          const fixedContent = "import React from `react`;\n" + content;
+        if ((content.includes(`React.`) || content.includes(`<React.`)) && !content.includes("import React)) {await this.log(`🔧 Adding React import to ${file}`);
+          const fixedContent = import React from `react`;\n" + content;
           await fs.writeFile(filePath, fixedContent);
           this.fixesApplied.push({
             type: `import-fix`,
             file: file,
             timestamp: new Date().toISOString()
-=======
-;
-  async checkImportErrors() {;
-    await this.log('🔍 Quick import check...');
-    ;
-    // Check for missing React imports in JSX files;
-    const jsxFiles = require('glob').sync('src/**/*.{jsx,tsx}', { cwd: this.projectRoot });
-    ;
-    for (const file of jsxFiles) {;
-      try {;
-        const filePath = path.join(this.projectRoot, 'file);
-        const content = await fs.readFile(filePath', 'utf8');
-        ;
-        // Check if file uses React but doesn't import it;
-        if ((content.includes('React.') || content.includes('<React.')) && !content.includes("import React")) {await this.log(`🔧 Adding React import to ${file}`);
-          const fixedContent = "import React from 'react';\n" + content;
-          await fs.writeFile(filePath, fixedContent);
-          this.fixesApplied.push({;
-            type: 'import-fix',;
-            file: file,;
-            timestamp: new Date().toISOString();
->>>>>>> main
           });
         }
       } catch (error) {  await this.log(`❌ Error checking ${file  }: ${error.message}`);
       }
     }
   }
-<<<<<<< HEAD
 
   async checkESLintConfig() {
     await this.log(`🔍 Quick ESLint config check...`);
     
     try {
       const eslintPath = path.join(this.projectRoot, `.eslintrc.js`);
-=======
-;
-  async checkESLintConfig() {;
-    await this.log('🔍 Quick ESLint config check...');
-    ;
-    try {;
-      const eslintPath = path.join(this.projectRoot, '.eslintrc.js');
->>>>>>> main
       const content = await fs.readFile(eslintPath, 'utf8');
       ;
       if (!content.includes('module.exports')) {;
@@ -197,35 +117,20 @@ class QuickErrorChecker {;
 };`;
         ;
         await fs.writeFile(eslintPath, fixedConfig);
-<<<<<<< HEAD
         this.fixesApplied.push({
           type: `eslint-config-fix`,
           file: `.eslintrc.js`,
           timestamp: new Date().toISOString()
-=======
-        this.fixesApplied.push({;
-          type: 'eslint-config-fix',;
-          file: '.eslintrc.js',;
-          timestamp: new Date().toISOString();
->>>>>>> main
         });
       }
     } catch (error) {  await this.log(`❌ Error checking ESLint config: ${error.message  }`);
     }
   }
-<<<<<<< HEAD
 
   async run() {
     try {
       await this.log(`🚀 Starting Quick Error Check`);
       
-=======
-;
-  async run() {;
-    try {;
-      await this.log('🚀 Starting Quick Error Check');
-      ;
->>>>>>> main
       await this.checkSyntaxErrors();
       await this.checkImportErrors();
       await this.checkESLintConfig();
@@ -239,18 +144,12 @@ class QuickErrorChecker {;
         fixesApplied: this.fixesApplied.length,;
         duration: duration.getTime();
       };
-<<<<<<< HEAD
       
     } catch (error) {  await this.log(`❌ Quick Error Check failed: ${error.message  }`);
-=======
-      ;
-    } catch (error) {await this.log(`❌ Quick Error Check failed: ${error.message}`);
->>>>>>> main
       throw error;
     }
   }
 }
-<<<<<<< HEAD
 
 // Run the checker if called directly;
 if (require.main === module) {
@@ -261,20 +160,7 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch(error => {
-      console.error(`Quick error check failed:`, error);
-=======
-;
-// Run the checker if called directly;
-if (require.main === module) {;
-  const checker = new QuickErrorChecker();
-  checker.run();
-    .then(result => {;
-      console.log('Quick error check completed successfully');
-      process.exit(0);
-    });
-    .catch(error => {;
-      console.error('Quick error check failed:', error);
->>>>>>> main
+      console.error(`Quick error check failed: `, error);
       process.exit(1);
     });
 }

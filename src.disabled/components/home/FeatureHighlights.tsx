@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-}, {' icon:  ,',' title: 'Real-Time: Analytics,',' description: 'Comprehensive: insights and reporting to make data-driven decisions instantly,'} ]}}}}}}}}}';''";";
-=======
-<<<<<<< HEAD
-}, {' icon: ', title: 'Real-Time Analytics', description: 'Comprehensive insights and reporting to make data-driven decisions instantly'} ]}}}}}}}}};'";"
-=======
-}, {' icon: , title: 'Real-Time Analytics, description: 'Comprehensive insights and reporting to make data-driven decisions instantly'} ]}}}}}}}}}'";
->>>>>>> main
->>>>>>> main
+}, {' icon: ,',' title: 'Real-Time Analytics,',' description: 'Comprehensive insights and reporting to make data-driven decisions instantly,'} ]}}}}}}}}}';''""; 

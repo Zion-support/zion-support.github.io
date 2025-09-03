@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 /**
  * Enhanced TypeScript Error Fixer;
  * Specialized automation to fix TypeScript errors in the Zion Tech Group project;
  */
-=======
-#!/'usr/bin/env' node;
-
-/**;
- * Enhanced TypeScript Error Fixer;
- * Specialized automation to fix TypeScript errors in the Zion Tech Group project;
- */;
->>>>>>> main
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -31,7 +22,6 @@ class TypeScriptErrorFixer {;
     if (!fs.existsSync(this.logDir)) {;
       fs.mkdirSync(this.logDir, { recursive: true });
     }
-<<<<<<< HEAD
     
     console.log(``🔧 Enhanced TypeScript Error Fixer Started`);
   }
@@ -60,14 +50,6 @@ class TypeScriptErrorFixer {;
         error: error.message, 
         output: error.stdout || error.stderr || ''
         };
-=======
-<<<<<<< HEAD
-    ;
-    console.log(`'🔧 Enhanced TypeScript Error Fixer Started');
-=======
-    
-    console.log(`🔧 Enhanced TypeScript Error Fixer Started`);
->>>>>>> main
   }
 ;
   async log(message, type = 'INFO') {;
@@ -88,68 +70,25 @@ class TypeScriptErrorFixer {;
         ...options;
       });
       return { success: true, output: result };
-<<<<<<< HEAD
     } catch (error) {;
       return { ;
         success: false, ;
         error: error.message, ;
         output: error.stdout || error.stderr || ';
-=======
-    } catch (error) {
-      return { 
-        success: false, `);
-        error: error.message, `);
-        output: error.stdout || error.stderr || '`);
->>>>>>> main
       };
->>>>>>> main
     }
   }
 ;
   async fixImportErrors() {;
     await this.log('🔧 Fixing import errors...');
-<<<<<<< HEAD
     ;
     // Common import fixes;
     const importFixes = [;
       {;
-        pattern: /from ['"]\.\/pages\/([^'"]+)['"]/g,;
+        pattern: /from ['"]\.\/pages\/([^']+)[']/g,;
         replacement: (match, pageName) => {;
           // Check if file exists with .tsx extensionconst tsxPath = path.join(this.projectRoot, ''src/pages', ${pageName}.tsx``);const jsxPath = path.join(this.projectRoot, 'src/pages'', `${pageName}.jsx`);
           ;
-=======
-    
-    // Common import fixes;
-    const importFixes = [
-      {
-<<<<<<< HEAD
-        pattern: /from ['"]\.\/pages\/([^'"]+)['"]/g,
-        replacement: (match, pageName) => {
-          // Check if file exists with .tsx extensionconst tsxPath = path.join(this.projectRoot, '``src/pages``, ${pageName}.tsx``);const jsxPath = path.join(this.projectRoot, ``src/pages```, `${pageName}.jsx`);
-          
-          if (fs.existsSync(tsxPath)) {return `from `./pages/${pageName}.tsx``;
-          } else if (fs.existsSync(jsxPath)) {return `from `./pages/${pageName}.jsx``;
-          }
-          return match; // Keep original if file doesn`t exist;
-        }
-      },
-      {
-        pattern: /import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]\.\/components\/([^'"]+)['"]/g, 'replacement: (match', 'imports', 'componentName) => {const tsxPath = path.join(this.projectRoot', '`src/components``, ``${componentName}.tsx`);const jsxPath = path.join(this.projectRoot`, ``src/components``, ``${componentName}.jsx`);
-          
-          if (fs.existsSync(tsxPath)) {return `import { ${imports} } from `./components/${componentName}.tsx``;
-          } else if (fs.existsSync(jsxPath)) {return `import { ${imports} } from `./components/${componentName}.jsx``;
-          }
-          return match;
-        }
-      }`];
-
-    // Find all `'TypeScript/JavaScript'' files;
-=======
-        pattern: /from ['"]\.\/pages\/([^'"]+)['"]/g,`);
-        replacement: (match, pageName) => {`);
-          // Check if file exists with .tsx extensionconst tsxPath = path.join(this.projectRoot, '''src/pages'', ${pageName}.tsx``);const jsxPath = path.join(this.projectRoot, ''src/pages''', `${pageName}.jsx`);
-          
->>>>>>> main
           if (fs.existsSync(tsxPath)) {return `from './pages/${pageName}.tsx'`;
           } else if (fs.existsSync(jsxPath)) {return `from './pages/${pageName}.jsx'`;
           }
@@ -167,7 +106,6 @@ class TypeScriptErrorFixer {;
       }'];
 ;
     // Find all 'TypeScript/JavaScript' files;
->>>>>>> main
     const files = await this.findFiles('src', ['.ts', '.tsx', '.js', '.jsx']);
     ;
     for (const file of files) {;
@@ -192,7 +130,6 @@ class TypeScriptErrorFixer {;
       }
     }
   }
-<<<<<<< HEAD
 
   async fixTypeErrors() {
     await this.log(`🔧 Fixing type errors...`);
@@ -205,20 +142,6 @@ class TypeScriptErrorFixer {;
       }', '{
         pattern: /:\s*any\s*\[\']/g,
         replacement: ': unknown[]'
-=======
-;
-  async fixTypeErrors() {;
-    await this.log('🔧 Fixing type errors...');
-    ;
-    // Common type fixes;
-    const typeFixes = ['{;
-        pattern: /const\s+(\w+):\s*any\s*=/g', 'replacement: 'const $1: unknown =';
-      }', '{;
-        pattern: /function\s+(\w+)\s*\(\s*\)\s*:\s*any\s*{/g', 'replacement: 'function $1(): unknown {';
-      }', '{;
-        pattern: /:\s*any\s*\[\']/g,;
-        replacement: ': unknown[]';
->>>>>>> main
       }
     ];
 ;
@@ -246,7 +169,6 @@ class TypeScriptErrorFixer {;
       }
     }
   }
-<<<<<<< HEAD
 
   async fixComponentErrors() {
     await this.log(`🔧 Fixing component errors...`);
@@ -268,29 +190,6 @@ class TypeScriptErrorFixer {;
     
     for (const file of files) {
       try {
-=======
-;
-  async fixComponentErrors() {;
-    await this.log('🔧 Fixing component errors...');
-    ;
-    // Fix common React component issues;
-    const componentFixes = ['{;
-        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*null;\s*}/g', 'replacement: (match', 'componentName) => {return `export default function ${componentName}() {;
-  return <div>${componentName}</div>;
-}`;
-        }
-      }', '{;
-        pattern: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*null;\s*}/g', 'replacement: (match', 'componentName) => {return `const ${componentName} = () => {;
-  return <div>${componentName}</div>;
-}`;
-        }
-      }'];
-;
-    const files = await this.findFiles('src', ['.tsx', '.jsx']);
-    ;
-    for (const file of files) {;
-      try {;
->>>>>>> main
         const content = await readFile(file, 'utf8');
         let modified = false;
         let newContent = content;
@@ -311,7 +210,6 @@ class TypeScriptErrorFixer {;
       }
     }
   }
-<<<<<<< HEAD
 
   async fixMissingExports() {
     await this.log(`🔧 Fixing missing exports...`);
@@ -325,21 +223,6 @@ class TypeScriptErrorFixer {;
         
         // Check if file has a default export;
         if (!content.includes(`export default`) && !content.includes(`module.exports`)) {
-=======
-;
-  async fixMissingExports() {;
-    await this.log('🔧 Fixing missing exports...');
-    ;
-    // Find files that might be missing default exports;
-    const files = await this.findFiles(''src/pages'', ['.tsx', '.jsx']);
-    ;
-    for (const file of files) {;
-      try {;
-        const content = await readFile(file, 'utf8');
-        ;
-        // Check if file has a default export;
-        if (!content.includes('export default') && !content.includes('module.exports')) {;
->>>>>>> main
           const fileName = path.basename(file, path.extname(file));
           const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
           ;
@@ -361,7 +244,6 @@ export default function ${componentName}() {;
       }
     }
   }
-<<<<<<< HEAD
 
   async fixServicesPageError() {
     await this.log(`🔧 Fixing ServicesPage specific error...`);
@@ -373,33 +255,13 @@ export default function ${componentName}() {;
         
         // Fix the ServicesPage import;
         content = content.replace(/const ServicesPage = lazy\(\(\) => import\('\.\/pages\/ServicesPage'\)\.then\(module => \(\{ default: module\.ServicesPage \}\)\)\);/g,const ServicesPage = lazy(() => import('./''pages/ServicesPage''').then(module => ({ default: module.default })));`
-=======
-;
-  async fixServicesPageError() {;
-    await this.log('🔧 Fixing ServicesPage specific error...');
-    ;
-    const appFile = path.join(this.projectRoot, 'src/App.tsx');
-    if (fs.existsSync(appFile)) {;
-      try {;
-        let content = await readFile(appFile, 'utf8');
-        ;
-        // Fix the ServicesPage import;
-        content = content.replace(/const ServicesPage = lazy\(\(\) => import\('\.\/pages\/ServicesPage'\)\.then\(module => \(\{ default: module\.ServicesPage \}\)\)\);/g,const ServicesPage = lazy(() => import('./'pages/ServicesPage'').then(module => ({ default: module.default })));`;
->>>>>>> main
         );
         ;
         await writeFile(appFile, content);
-<<<<<<< HEAD
         this.fixes.push({ file: appFile, type: 'import', description: `Fixed ServicesPage import` });
         await this.log(`Fixed ServicesPage import in App.tsx`);
       } catch (error) {  
         await this.log(`Error fixing ServicesPage: ${error.message  }`, `ERROR`);
-=======
-        this.fixes.push({ file: appFile, type: 'import', description: 'Fixed ServicesPage import' });
-        await this.log('Fixed ServicesPage import in App.tsx');
-      } catch (error) {;
-        await this.log(`Error fixing ServicesPage: ${error.message}`, 'ERROR');
->>>>>>> main
       }
     }
   }
@@ -411,15 +273,9 @@ export default function ${componentName}() {;
       if (!fs.existsSync(currentDir)) return;
       ;
       const items = fs.readdirSync(currentDir);
-<<<<<<< HEAD
       
       for (const item of items) {
         const fullPath = path.join(currentDir, `item);
-=======
-      ;
-      for (const item of items) {;
-        const fullPath = path.join(currentDir, 'item);
->>>>>>> main
         const stat = fs.statSync(fullPath);
         ;
         if (stat.isDirectory()) {;
@@ -436,7 +292,6 @@ export default function ${componentName}() {;
     walkDir(dir);
     return files;
   }
-<<<<<<< HEAD
 
   async generateReport() {
     const report = {
@@ -446,17 +301,6 @@ export default function ${componentName}() {;
         acc[fix.type] = (acc[fix.type] || 0) + 1;
         return acc;
       }, {}),
-=======
-;
-  async generateReport() {;
-    const report = {;
-      timestamp: this.startTime.toISOString()', duration: Date.now() - this.startTime.getTime(),;
-      totalFixes: this.fixes.length,;
-      fixesByType: this.fixes.reduce((acc, fix) => {;
-        acc[fix.type] = (acc[fix.type] || 0) + 1;
-        return acc;
-      }, {}),;
->>>>>>> main
       fixes: this.fixes;
     };
     const reportFile = path.join(this.logDir, ``typescript-fixes-${Date.now()}.json`);
@@ -464,19 +308,11 @@ export default function ${componentName}() {;
     await this.log(`📊 Report generated: ${reportFile}`);
     return report;
   }
-<<<<<<< HEAD
 
   async run() {
     try {
       await this.log(`🚀 Starting TypeScript error fixing...`);
       
-=======
-;
-  async run() {;
-    try {;
-      await this.log('🚀 Starting TypeScript error fixing...');
-      ;
->>>>>>> main
       await this.fixImportErrors();
       await this.fixTypeErrors();
       await this.fixComponentErrors();
@@ -487,13 +323,8 @@ export default function ${componentName}() {;
       await this.log(`✅ TypeScript error fixing completed!`);await this.log(`📊 Total fixes applied: ${report.totalFixes}`);
       ;
       return report;
-<<<<<<< HEAD
       
     } catch (error) {  await this.log(`❌ Error in TypeScript fixer: ${error.message  }`, `ERROR`);
-=======
-      ;
-    } catch (error) {await this.log(`❌ Error in TypeScript fixer: ${error.message}`, 'ERROR');
->>>>>>> main
       throw error;
     }
   }
@@ -504,25 +335,15 @@ export default function ${componentName}() {;
       try {;
         await this.run();await this.log(`⏰ Waiting ${interval}ms before next check...`);
         await new Promise(resolve => setTimeout(resolve, interval));
-<<<<<<< HEAD
       } catch (error) {  await this.log(`❌ Error in continuous run: ${error.message  }`, `ERROR`);
-=======
-      } catch (error) {await this.log(`❌ Error in continuous run: ${error.message}`, 'ERROR');
->>>>>>> main
         await new Promise(resolve => setTimeout(resolve, 60000)); // Wait 1 minute on error;
       }
     }
   }
 }
-<<<<<<< HEAD
 
 // Main execution;
 if (require.main === module) {
-=======
-;
-// Main execution;
-if (require.main === module) {;
->>>>>>> main
   const fixer = new TypeScriptErrorFixer();
   ;
   const args = process.argv.slice(2);
@@ -535,7 +356,7 @@ if (require.main === module) {;
     fixer.run().then(() => {;
       process.exit(0);
     }).catch((error) => {;
-      console.error('Error:', error);
+      console.error('Error: ', error);
       process.exit(1);
     });
   }

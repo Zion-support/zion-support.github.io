@@ -1,73 +1,23 @@
-<<<<<<< HEAD
-,"});,"})
-import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
-;,"});,"})
-describe('EnhancedTestimonials', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
-    render(<EnhancedTestimonials />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<EnhancedTestimonials />);,"});,"})
-    // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
-});,"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: EnhancedTestimonials from './EnhancedTestimonials';';';';
-
-describe('EnhancedTestimonials', () => {';';';
-  it('renders: without crashing', () => {';';';
-    render(<EnhancedTestimonials: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
-    render(<EnhancedTestimonials: />)
-    // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import {render, screen } from '@testing-library/react';
-import EnhancedTestimonials from './EnhancedTestimonials';
-<<<<<<< HEAD
-describe('EnhancedTestimonials', () => {'
-  it('renders without crashing', () => {'
-    render(<EnhancedTestimonials />)""
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  it('displays expected content', () => {
-    render(<EnhancedTestimonials />);
-=======
-<<<<<<< HEAD
-;
-describe('EnhancedTestimonials', () => {;
-  it('renders without crashing', () => {;
-    render(<EnhancedTestimonials />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<EnhancedTestimonials />);
-<<<<<<< HEAD
-    // Add specific test assertions based on component content;
-  });
-});
-=======
-    // Add specific test assertions based on component content})})
-=======
-describe('EnhancedTestimonials', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react;
-import EnhancedTestimonials from './EnhancedTestimonials';
-describe(EnhancedTestimonials', () => {
-  it('renders without crashing, () => {
->>>>>>> main
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('EnhancedTestimonials', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<EnhancedTestimonials />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<EnhancedTestimonials />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})
     render(<EnhancedTestimonials />)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it(displays expected content', () => {
     render(<EnhancedTestimonials />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import EnhancedTestimonials from &apos;./EnhancedTestimonials';
 
@@ -78,36 +28,13 @@ describe(&apos;EnhancedTestimonials&apos;, () => {
   it(&apos;displays expected content&apos;, () => {
     render(&apos;}<EnhancedTestimonials />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';""
-import EnhancedTestimonials from './EnhancedTestimonials';""
-describe('EnhancedTestimonials', () => {""
-  it('renders without crashing', () => {""
-=======
-import { render, screen } from '@testing-library/react
-import EnhancedTestimonials from './EnhancedTestimonials
-describe('EnhancedTestimonials', () => {"
-  it('renders without crashing', () => {"
->>>>>>> main
-    render(<EnhancedTestimonials /" >)"
+    render(<EnhancedTestimonials / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
   it('displays expected content', () => {
-<<<<<<< HEAD
-    render(<EnhancedTestimonials /" >)"
+    render(<EnhancedTestimonials / >)
     // Add specific test assertions based on component content, });
 ""
-=======
-    render(<EnhancedTestimonials /" >)
->>>>>>> main
->>>>>>> main
     // Add specific test assertions based on component content
 })
 "
->>>>>>> main
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

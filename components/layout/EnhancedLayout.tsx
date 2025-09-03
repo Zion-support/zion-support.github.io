@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
-import { ReactNode } from "react";
-=======
-import React, { ReactNode } from "react";
->>>>>>> main
+import { ReactNode } from "react;
 
 interface EnhancedLayoutProps {
   children: ReactNode;
@@ -11,7 +7,7 @@ interface EnhancedLayoutProps {
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen" bg-gradient-to-br from-blue-50 to-indigo-100">
       <main className="container mx-auto px-4 py-8">
         {children}
       </main>

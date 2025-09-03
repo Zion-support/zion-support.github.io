@@ -193,9 +193,9 @@ const TermsOfService: NextPage = () => {
                   If you have any questions about these Terms of Service, please contact us:
                 </p>
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <p className="text-gray-700"><strong>Email:</strong> kleber@ziontechgroup.com</p>
-                  <p className="text-gray-700"><strong>Phone:</strong> +1 302 464 0950</p>
-                  <p className="text-gray-700"><strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
+                  <p className="text-gray-700"> </strong>Email:</strong> kleber@ziontechgroup.com</p>
+                  <p className="text-gray-700"> </strong>Phone:</strong> +1 302 464 0950</p>
+                  <p className="text-gray-700"> </strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
                 </div>
               </div>
             </div>

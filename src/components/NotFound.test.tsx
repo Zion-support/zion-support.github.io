@@ -1,73 +1,23 @@
-<<<<<<< HEAD
-,"});,"})
-import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
-;,"});,"})
-describe('NotFound', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
-    render(<NotFound />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<NotFound />);,"});,"})
-    // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
-});,"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: NotFound from './NotFound';';';';
-
-describe('NotFound', () => {';';';
-  it('renders: without crashing', () => {';';';
-    render(<NotFound: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
-    render(<NotFound: />)
-    // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import {render, screen } from '@testing-library/react';
-import NotFound from './NotFound';
-<<<<<<< HEAD
-describe('NotFound', () => {'
-  it('renders without crashing', () => {'
-    render(<NotFound />)""
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  it('displays expected content', () => {
-    render(<NotFound />);
-=======
-<<<<<<< HEAD
-;
-describe('NotFound', () => {;
-  it('renders without crashing', () => {;
-    render(<NotFound />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<NotFound />);
-<<<<<<< HEAD
-    // Add specific test assertions based on component content;
-  });
-});
-=======
-    // Add specific test assertions based on component content})})
-=======
-describe('NotFound', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react;
-import NotFound from './NotFound';
-describe(NotFound', () => {
-  it('renders without crashing, () => {
->>>>>>> main
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('NotFound', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<NotFound />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<NotFound />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})
     render(<NotFound />)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it(displays expected content', () => {
     render(<NotFound />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import NotFound from &apos;./NotFound';
 
@@ -78,36 +28,13 @@ describe(&apos;NotFound&apos;, () => {
   it(&apos;displays expected content&apos;, () => {
     render(&apos;}<NotFound />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';""
-import NotFound from './NotFound';""
-describe('NotFound', () => {""
-  it('renders without crashing', () => {""
-=======
-import { render, screen } from '@testing-library/react
-import NotFound from './NotFound
-describe('NotFound', () => {"
-  it('renders without crashing', () => {"
->>>>>>> main
-    render(<NotFound /" >)"
+    render(<NotFound / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
   it('displays expected content', () => {
-<<<<<<< HEAD
-    render(<NotFound /" >)"
+    render(<NotFound / >)
     // Add specific test assertions based on component content, });
 ""
-=======
-    render(<NotFound /" >)
->>>>>>> main
->>>>>>> main
     // Add specific test assertions based on component content
 })
 "
->>>>>>> main
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

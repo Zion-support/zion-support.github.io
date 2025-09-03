@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
-#!/'usr/bin/env' node;
-
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
 ;
 const exts = new Set(['.js', '.jsx', '.ts', '.tsx']);
-<<<<<<< HEAD
 
 /**
  * Returns true if the file should be processed;
@@ -29,32 +23,9 @@ function cleanContent(content) {
       .replace(/([;)}\]>])\s*'\s*$/u, '$1')
       .replace(/>\s*'\s*$/u, '>')
       .replace(/^'\s*$/u, '')
-=======
-;
-/**;
- * Returns true if the file should be processed;
- */;
-function shouldProcess(filePath) {;
-  const ext = path.extname(filePath);
-  return exts.has(ext);
-}
-;
-/**;
- * Clean content by removing stray trailing apostrophes introduced at EOL;
- */;
-function cleanContent(content) {;
-  // Line-level fixes;
-  const lines = content.split(/\r?\n/).map(line =>;
-    line;
-      // Remove a single trailing apostrophe after common closing tokens;
-      .replace(/([;)}\]>])\s*'\s*$/u, '$1');
-      .replace(/>\s*'\s*$/u, '>');
-      .replace(/^'\s*$/u, ');
->>>>>>> main
   );
 ;
   let out = lines.join('\n');
-<<<<<<< HEAD
 
   // In-line fixes across the whole file;
   out = out;
@@ -63,16 +34,6 @@ function cleanContent(content) {;
     // Remove apostrophe after closing tokens if followed by punctuation or end;
     .replace(/([)}>])\s*'\s*(?=\s*['', ';)}\]']|\s*$)/g, '$1')
     // JSX: >'< to ><
-=======
-;
-  // In-line fixes across the whole file;
-  out = out;
-    // Comma followed by stray apostrophe (e.g., "Shield,'");
-    .replace(/,\s*'/g, ',');
-    // Remove apostrophe after closing tokens if followed by punctuation or end;
-    .replace(/([)}>])\s*'\s*(?=\s*[', ';)}\]']|\s*$)/g, '$1');
-    // JSX: >'< to ><;
->>>>>>> main
     .replace(/>\s*'\s*</g, '><');
 ;
   return out;
@@ -104,11 +65,7 @@ function main() {;
         fs.writeFileSync(f, updated, 'utf8');
         changed += 1;
       }
-<<<<<<< HEAD
     } catch (e) {
-=======
-    } catch (e) {;
->>>>>>> main
       // ignore file-level errors;
     }
   }

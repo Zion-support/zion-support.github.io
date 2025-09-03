@@ -1,73 +1,23 @@
-<<<<<<< HEAD
-,"});,"})
-import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
-;,"});,"})
-describe('ComprehensiveSEOEnhancer', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
-    render(<ComprehensiveSEOEnhancer />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<ComprehensiveSEOEnhancer />);,"});,"})
-    // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
-});,"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: ComprehensiveSEOEnhancer from './ComprehensiveSEOEnhancer';';';';
-
-describe('ComprehensiveSEOEnhancer', () => {';';';
-  it('renders: without crashing', () => {';';';
-    render(<ComprehensiveSEOEnhancer: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
-    render(<ComprehensiveSEOEnhancer: />)
-    // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import {render, screen } from '@testing-library/react';
-import ComprehensiveSEOEnhancer from './ComprehensiveSEOEnhancer';
-<<<<<<< HEAD
-describe('ComprehensiveSEOEnhancer', () => {'
-  it('renders without crashing', () => {'
-    render(<ComprehensiveSEOEnhancer />)""
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  it('displays expected content', () => {
-    render(<ComprehensiveSEOEnhancer />);
-=======
-<<<<<<< HEAD
-;
-describe('ComprehensiveSEOEnhancer', () => {;
-  it('renders without crashing', () => {;
-    render(<ComprehensiveSEOEnhancer />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<ComprehensiveSEOEnhancer />);
-<<<<<<< HEAD
-    // Add specific test assertions based on component content;
-  });
-});
-=======
-    // Add specific test assertions based on component content})})
-=======
-describe('ComprehensiveSEOEnhancer', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react;
-import ComprehensiveSEOEnhancer from './ComprehensiveSEOEnhancer';
-describe(ComprehensiveSEOEnhancer', () => {
-  it('renders without crashing, () => {
->>>>>>> main
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('ComprehensiveSEOEnhancer', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<ComprehensiveSEOEnhancer />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<ComprehensiveSEOEnhancer />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})
     render(<ComprehensiveSEOEnhancer />)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it(displays expected content', () => {
     render(<ComprehensiveSEOEnhancer />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import ComprehensiveSEOEnhancer from &apos;./ComprehensiveSEOEnhancer';
 
@@ -78,36 +28,13 @@ describe(&apos;ComprehensiveSEOEnhancer&apos;, () => {
   it(&apos;displays expected content&apos;, () => {
     render(&apos;}<ComprehensiveSEOEnhancer />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';""
-import ComprehensiveSEOEnhancer from './ComprehensiveSEOEnhancer';""
-describe('ComprehensiveSEOEnhancer', () => {""
-  it('renders without crashing', () => {""
-=======
-import { render, screen } from '@testing-library/react
-import ComprehensiveSEOEnhancer from './ComprehensiveSEOEnhancer
-describe('ComprehensiveSEOEnhancer', () => {"
-  it('renders without crashing', () => {"
->>>>>>> main
-    render(<ComprehensiveSEOEnhancer /" >)"
+    render(<ComprehensiveSEOEnhancer / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
   it('displays expected content', () => {
-<<<<<<< HEAD
-    render(<ComprehensiveSEOEnhancer /" >)"
+    render(<ComprehensiveSEOEnhancer / >)
     // Add specific test assertions based on component content, });
 ""
-=======
-    render(<ComprehensiveSEOEnhancer /" >)
->>>>>>> main
->>>>>>> main
     // Add specific test assertions based on component content
 })
 "
->>>>>>> main
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

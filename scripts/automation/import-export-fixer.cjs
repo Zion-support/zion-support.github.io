@@ -1,8 +1,5 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
-=======
 
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
@@ -10,7 +7,6 @@ const glob = require('glob');
 class ImportExportFixer {;
   constructor() {;
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.automationInterval =
       parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes default;
     this.reportFile = path.join(this.projectRoot, `import-export-fixer-report.json`);
@@ -33,30 +29,6 @@ class ImportExportFixer {;
       this.log(`Import/Export Fixer completed successfully!`, `success`);
     } catch (error) {  
       this.log(`Error in Import/Export Fixer: ${error.message  }`, `error`);
-=======
-    this.automationInterval =;
-      parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes default;
-    this.reportFile = path.join(this.projectRoot, 'import-export-fixer-report.json');
-    this.fixes = [];
-    this.startTime = Date.now();
-  }
-;
-  log(message, level = 'info') {;
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`);
-  }
-;
-  async run() {;
-    this.log('Starting Import/Export Fixer...', 'info');
-    ;
-    try {;
-      await this.fixImportExportIssues();
-      await this.generateReport();
-      ;
-      this.log('Import/Export Fixer completed successfully!', 'success');
-    } catch (error) {;
-      this.log(`Error in Import/Export Fixer: ${error.message}`, 'error');
->>>>>>> main
       await this.generateReport();
       process.exit(1);
     this.automationInterval = parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes default;
@@ -66,24 +38,15 @@ class ImportExportFixer {;
   log(message) {;
     console.log(`[${new Date().toISOString()}] [ImportExportFixer] ${message}`);
   }
-<<<<<<< HEAD
 
   async run() {
     this.log(`Starting import/export fixing automation...`);
 
     try {
-=======
-;
-  async run() {;
-    this.log('Starting import/export fixing automation...');
-;
-    try {;
->>>>>>> main
       await this.fixImportExportIssues();
       this.log(;
         `Import/export fixing completed. Applied ${this.fixesApplied} fixes.`;
       );
-<<<<<<< HEAD
     } catch (error) {  
       this.log(`Error during import/export fixing: ${error.message  }`);
     }
@@ -92,16 +55,6 @@ class ImportExportFixer {;
   async fixImportExportIssues() {
     this.log(`Fixing import/export issues...`, `info`);
     
-=======
-    } catch (error) {;
-      this.log(`Error during import/export fixing: ${error.message}`);
-    }
-  }
-;
-  async fixImportExportIssues() {;
-    this.log('Fixing import/export issues...', 'info');
-    ;
->>>>>>> main
     // Find all JavaScript and TypeScript files;
     const files = glob.sync('src/**/*.{js,jsx,ts,tsx}', { cwd: this.projectRoot });
     ;
@@ -110,18 +63,13 @@ class ImportExportFixer {;
       const content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
       let newContent = content;
-<<<<<<< HEAD
 
-=======
-;
->>>>>>> main
       // Fix relative imports;
-      const importRegex = /import\s+.*\s+from\s+['"]([^'"]+)['"]/g;
+      const importRegex = /import\s+.*\s+from\s+['"]([^']+)[']/g;
       let match;
       ;
       while ((match = importRegex.exec(newContent)) !== null) {;
         const importPath = match[1];
-<<<<<<< HEAD
         
         // Fix relative imports that don't exist;
         if (importPath.startsWith('./') || importPath.startsWith('../')) {
@@ -131,17 +79,6 @@ class ImportExportFixer {;
           if (!fs.existsSync(resolvedPath) && !fs.existsSync(resolvedPath + '.js') && 
               !fs.existsSync(resolvedPath + '.ts') && !fs.existsSync(resolvedPath + '.tsx')) {
             
-=======
-        ;
-        // Fix relative imports that don't exist;
-        if (importPath.startsWith('./') || importPath.startsWith('../')) {;
-          const resolvedPath = path.resolve(path.dirname(filePath), importPath);
-          ;
-          // Check if file exists;
-          if (!fs.existsSync(resolvedPath) && !fs.existsSync(resolvedPath + '.js') && ;
-              !fs.existsSync(resolvedPath + '.ts') && !fs.existsSync(resolvedPath + '.tsx')) {;
-            ;
->>>>>>> main
             // Try to find the correct path;
             const possibleExtensions = ['.js', '.ts', '.tsx', '.jsx'];
             let found = false;
@@ -156,24 +93,16 @@ class ImportExportFixer {;
                 break;
               }
             }
-<<<<<<< HEAD
             
             if (!found) {
               // Remove the import if file doesn't exist;
               newContent = newContent.replace(match[0], '');
-=======
-            ;
-            if (!found) {;
-              // Remove the import if file doesn't exist;
-              newContent = newContent.replace(match[0], ');
->>>>>>> main
             }
             ;
             modified = true;
           }
         }
       }
-<<<<<<< HEAD
 
       // Fix missing exports;
       const hasDefaultExport = /export\s+default/.test(newContent);
@@ -181,15 +110,6 @@ class ImportExportFixer {;
 
       // If file has components but no exports, add default export;
       if (!hasDefaultExport && !hasNamedExports && newContent.includes(`function`) && file.endsWith(`.tsx`)) {
-=======
-;
-      // Fix missing exports;
-      const hasDefaultExport = /export\s+default/.test(newContent);
-      const hasNamedExports = /export\s+(const|function|class|interface|type)/.test(newContent);
-;
-      // If file has components but no exports, add default export;
-      if (!hasDefaultExport && !hasNamedExports && newContent.includes('function') && file.endsWith('.tsx')) {;
->>>>>>> main
         const componentMatch = newContent.match(/function\s+(\w+)/);
         if (componentMatch) {;
           const componentName = componentMatch[1];
@@ -197,11 +117,7 @@ class ImportExportFixer {;
           modified = true;
         }
       }
-<<<<<<< HEAD
 
-=======
-;
->>>>>>> main
       // Add named exports for components;
       const componentRegex = /(?:export\s+)?(?:function|const)\s+(\w+)(?:\s*[:=]\s*(?:React\.)?(?:FC|FunctionComponent))?/g;
       let componentMatch;
@@ -222,19 +138,11 @@ class ImportExportFixer {;
 ;
       if (modified) {;
         fs.writeFileSync(filePath, newContent);
-<<<<<<< HEAD
         this.fixes.push({
           type: `import-export`,
           file,
           description: `Fixed import/export issues`,
           timestamp: Date.now()
-=======
-        this.fixes.push({;
-          type: 'import-export',;
-          file,;
-          description: 'Fixed import/export issues',;
-          timestamp: Date.now();
->>>>>>> main
         });
         this.log(`Fixed import/export issues in ${file}`, `info`);
       }
@@ -244,7 +152,6 @@ class ImportExportFixer {;
   async generateReport() {;
     const endTime = Date.now();
     const duration = endTime - this.startTime;
-<<<<<<< HEAD
     
     const report = {
       timestamp: new Date().toISOString(),
@@ -252,21 +159,11 @@ class ImportExportFixer {;
       fixes: this.fixes,
       summary: {
         totalFixes: this.fixes.length,
-=======
-    ;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      duration: duration,;
-      fixes: this.fixes,;
-      summary: {;
-        totalFixes: this.fixes.length,;
->>>>>>> main
         success: true;
       }
     };
 ;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-<<<<<<< HEAD
     
     this.log(`Report generated: ${this.reportFile}`, `info`);
     this.log(`Total fixes: ${this.fixes.length}`, `info`);
@@ -279,20 +176,6 @@ class ImportExportFixer {;
 
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
       ignore: ['node_modules/**', '.git/**', 'dist/**', 'build/**', 'out/**'],
-=======
-    ;
-    this.log(`Report generated: ${this.reportFile}`, 'info');
-    this.log(`Total fixes: ${this.fixes.length}`, 'info');
-    this.log(`Duration: ${duration}ms`, 'info');
-  }
-}
-;
-// Run the import/export fixer;
-    this.log('Fixing import/export issues...');
-;
-    const files = glob.sync('**/*.{js,jsx,ts,tsx}', {;
-      ignore: ['node_modules/**', '.git/**', 'dist/**', 'build/**', 'out/**'],;
->>>>>>> main
     });
 ;
     for (const file of files) {;
@@ -300,21 +183,12 @@ class ImportExportFixer {;
         const content = fs.readFileSync(file, 'utf8');
         let modified = false;
         let newContent = content;
-<<<<<<< HEAD
 
         // Fix default export issues;
         if (
           content.includes(`export default`) &&
           !content.includes(`export {`)
         ) {
-=======
-;
-        // Fix default export issues;
-        if (;
-          content.includes('export default') &&;
-          !content.includes('export {');
-        ) {;
->>>>>>> main
           const exportMatch = content.match(/export default\s+(\w+)/);
           if (exportMatch) {;
             const componentName = exportMatch[1];
@@ -327,15 +201,9 @@ class ImportExportFixer {;
             }
           }
         }
-<<<<<<< HEAD
 
         // Fix React import issues;
         if (content.includes(`React.`) && !content.includes(`import React`)) {
-=======
-;
-        // Fix React import issues;
-        if (content.includes('React.') && !content.includes('import React')) {;
->>>>>>> main
           newContent = "import React from 'react';\n" + newContent;
           modified = true;
         }
@@ -344,13 +212,8 @@ class ImportExportFixer {;
           fs.writeFileSync(file, newContent);
           this.fixesApplied++;
         }
-<<<<<<< HEAD
       } catch (error) {  
         this.log(`Error fixing import/export in ${file  }: ${error.message}`);
-=======
-      } catch (error) {;
-        this.log(`Error fixing import/export in ${file}: ${error.message}`);
->>>>>>> main
       }
     }
   }

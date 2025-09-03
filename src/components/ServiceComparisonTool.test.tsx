@@ -1,73 +1,23 @@
-<<<<<<< HEAD
-,"});,"})
-import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
-;,"});,"})
-describe('ServiceComparisonTool', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
-    render(<ServiceComparisonTool />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<ServiceComparisonTool />);,"});,"})
-    // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
-});,"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: ServiceComparisonTool from './ServiceComparisonTool';';';';
-
-describe('ServiceComparisonTool', () => {';';';
-  it('renders: without crashing', () => {';';';
-    render(<ServiceComparisonTool: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
-    render(<ServiceComparisonTool: />)
-    // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import {render, screen } from '@testing-library/react';
-import ServiceComparisonTool from './ServiceComparisonTool';
-<<<<<<< HEAD
-describe('ServiceComparisonTool', () => {'
-  it('renders without crashing', () => {'
-    render(<ServiceComparisonTool />)""
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  it('displays expected content', () => {
-    render(<ServiceComparisonTool />);
-=======
-<<<<<<< HEAD
-;
-describe('ServiceComparisonTool', () => {;
-  it('renders without crashing', () => {;
-    render(<ServiceComparisonTool />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<ServiceComparisonTool />);
-<<<<<<< HEAD
-    // Add specific test assertions based on component content;
-  });
-});
-=======
-    // Add specific test assertions based on component content})})
-=======
-describe('ServiceComparisonTool', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react;
-import ServiceComparisonTool from './ServiceComparisonTool';
-describe(ServiceComparisonTool', () => {
-  it('renders without crashing, () => {
->>>>>>> main
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('ServiceComparisonTool', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<ServiceComparisonTool />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<ServiceComparisonTool />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})
     render(<ServiceComparisonTool />)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it(displays expected content', () => {
     render(<ServiceComparisonTool />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import ServiceComparisonTool from &apos;./ServiceComparisonTool';
 
@@ -78,36 +28,13 @@ describe(&apos;ServiceComparisonTool&apos;, () => {
   it(&apos;displays expected content&apos;, () => {
     render(&apos;}<ServiceComparisonTool />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';""
-import ServiceComparisonTool from './ServiceComparisonTool';""
-describe('ServiceComparisonTool', () => {""
-  it('renders without crashing', () => {""
-=======
-import { render, screen } from '@testing-library/react
-import ServiceComparisonTool from './ServiceComparisonTool
-describe('ServiceComparisonTool', () => {"
-  it('renders without crashing', () => {"
->>>>>>> main
-    render(<ServiceComparisonTool /" >)"
+    render(<ServiceComparisonTool / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
   it('displays expected content', () => {
-<<<<<<< HEAD
-    render(<ServiceComparisonTool /" >)"
+    render(<ServiceComparisonTool / >)
     // Add specific test assertions based on component content, });
 ""
-=======
-    render(<ServiceComparisonTool /" >)
->>>>>>> main
->>>>>>> main
     // Add specific test assertions based on component content
 })
 "
->>>>>>> main
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,73 +1,23 @@
-<<<<<<< HEAD
-,"});,"})
-import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
-;,"});,"})
-describe('NewsletterForm', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
-    render(<NewsletterForm />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<NewsletterForm />);,"});,"})
-    // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
-});,"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: NewsletterForm from './NewsletterForm';';';';
-
-describe('NewsletterForm', () => {';';';
-  it('renders: without crashing', () => {';';';
-    render(<NewsletterForm: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
-    render(<NewsletterForm: />)
-    // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import {render, screen } from '@testing-library/react';
-import NewsletterForm from './NewsletterForm';
-<<<<<<< HEAD
-describe('NewsletterForm', () => {'
-  it('renders without crashing', () => {'
-    render(<NewsletterForm />)""
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  it('displays expected content', () => {
-    render(<NewsletterForm />);
-=======
-<<<<<<< HEAD
-;
-describe('NewsletterForm', () => {;
-  it('renders without crashing', () => {;
-    render(<NewsletterForm />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<NewsletterForm />);
-<<<<<<< HEAD
-    // Add specific test assertions based on component content;
-  });
-});
-=======
-    // Add specific test assertions based on component content})})
-=======
-describe('NewsletterForm', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react;
-import NewsletterForm from './NewsletterForm';
-describe(NewsletterForm', () => {
-  it('renders without crashing, () => {
->>>>>>> main
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('NewsletterForm', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<NewsletterForm />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<NewsletterForm />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})
     render(<NewsletterForm />)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it(displays expected content', () => {
     render(<NewsletterForm />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import NewsletterForm from &apos;./NewsletterForm';
 
@@ -78,36 +28,13 @@ describe(&apos;NewsletterForm&apos;, () => {
   it(&apos;displays expected content&apos;, () => {
     render(&apos;}<NewsletterForm />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';""
-import NewsletterForm from './NewsletterForm';""
-describe('NewsletterForm', () => {""
-  it('renders without crashing', () => {""
-=======
-import { render, screen } from '@testing-library/react
-import NewsletterForm from './NewsletterForm
-describe('NewsletterForm', () => {"
-  it('renders without crashing', () => {"
->>>>>>> main
-    render(<NewsletterForm /" >)"
+    render(<NewsletterForm / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
   it('displays expected content', () => {
-<<<<<<< HEAD
-    render(<NewsletterForm /" >)"
+    render(<NewsletterForm / >)
     // Add specific test assertions based on component content, });
 ""
-=======
-    render(<NewsletterForm /" >)
->>>>>>> main
->>>>>>> main
     // Add specific test assertions based on component content
 })
 "
->>>>>>> main
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

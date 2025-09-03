@@ -1,28 +1,13 @@
-<<<<<<< HEAD
-const React = dynamic(() => import('react'), { ssr: false });;
-const Head = dynamic(() => import('next/head'), { ssr: false });;
-const Link = dynamic(() => import('next/link'), { ssr: false });;
-=======
-import React from 'react';
-<<<<<<< HEAD
-import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, Eye, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, Home, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Utensils, Zap } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
->>>>>>> main
->>>>>>> main
+const React = dynamic(() => import('react'), { ssr: false });
+const Head = dynamic(() => import('next/head'), { ssr: false });
+const Link = dynamic(() => import('next/link'), { ssr: false });
 
 import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
-=======
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> main
 import {
   Code,
   Cloud,
@@ -55,26 +40,15 @@ import {
   Network,
   Terminal,
   Calendar,
-<<<<<<< HEAD
-=======
   Home,
   Heart,
   Car,
   TreePine,
   Satellite,
   Mic,
-<<<<<<< HEAD
-=======
-  ShoppingCart,
-  Search,
-  Package,
-  Share2
->>>>>>> main
->>>>>>> main
 } from 'lucide-react';
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false });;
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false });
 
->>>>>>> main
 export default function MicroSaaS() {
   const title = 'Micro SaaS Solutions — Zion Tech Group';
   const description =
@@ -83,23 +57,15 @@ export default function MicroSaaS() {
   const microSaaSServices = [
   {
       title: 'AI-Powered Email Responder',
-      description:
-        'Intelligent email automation with sentiment analysis and smart categorization',
+      description: 'Intelligent email automation with sentiment analysis and smart categorization',
       icon: MessageSquare,
       features: [
-<<<<<<< HEAD
         'Automated email responses with personalization',
         'Smart categorization and priority handling',
         'Sentiment analysis and escalation triggers',
         'CRM and helpdesk integration',
         'Multi-language support and compliance',
         'Analytics and performance tracking',
-<<<<<<< HEAD
-=======
-=======
-        'Automated email responses with personalization,Smart categorization and priority handling,Sentiment analysis and escalation triggers,CRM and helpdesk integration,Multi-language support and compliance,Analytics and performance tracking'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$2,500 - $8, 000/month',
       delivery: '2-3 weeks',
@@ -107,23 +73,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Mobile-First Survey Platform',
-      description:
-        'Responsive survey tool optimized for mobile devices with real-time analytics',
+      description: 'Responsive survey tool optimized for mobile devices with real-time analytics',
       icon: Smartphone,
       features: [
-<<<<<<< HEAD
         'Mobile-optimized survey creation',
         'Real-time response analytics',
         'Adaptive questioning and branching',
         'Multi-channel distribution',
         'Data export and integration',
         'White-label customization',
-<<<<<<< HEAD
-=======
-=======
-        'Mobile-optimized survey creation,Real-time response analytics,Adaptive questioning and branching,Multi-channel distribution,Data export and integration,White-label customization'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$1,500 - $5, 000/month',
       delivery: '2-4 weeks',
@@ -131,23 +89,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Niche Productivity Planner',
-      description:
-        'Industry-specific productivity tools with customized workflows and templates',
+      description: 'Industry-specific productivity tools with customized workflows and templates',
       icon: Target,
       features: [
-<<<<<<< HEAD
         'Industry-specific templates and workflows',
         'Project management and task tracking',
         'Team collaboration features',
         'Performance analytics and reporting',
         'Integration with popular tools',
         'Custom branding and white-labeling',
-<<<<<<< HEAD
-=======
-=======
-        'Industry-specific templates and workflows,Project management and task tracking,Team collaboration features,Performance analytics and reporting,Integration with popular tools,Custom branding and white-labeling'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$2,000 - $6, 000/month',
       delivery: '3-5 weeks',
@@ -155,23 +105,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Event Management Dashboard',
-      description:
-        'Comprehensive event planning and management platform with ticketing and analytics',
+      description: 'Comprehensive event planning and management platform with ticketing and analytics',
       icon: Calendar,
       features: [
-<<<<<<< HEAD
         'Event creation and management',
         'Ticketing and registration system',
         'Attendee engagement tools',
         'Real-time analytics and reporting',
         'Payment processing integration',
         'Mobile app for attendees',
-<<<<<<< HEAD
-=======
-=======
-        'Event creation and management,Ticketing and registration system,Attendee engagement tools,Real-time analytics and reporting,Payment processing integration,Mobile app for attendees'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$3,000 - $10, 000/month',
       delivery: '4-6 weeks',
@@ -179,23 +121,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI Content Creation Suite',
-      description:
-        'AI-powered content generation platform for marketing and documentation',
+      description: 'AI-powered content generation platform for marketing and documentation',
       icon: FileText,
       features: [
-<<<<<<< HEAD
         'Automated content generation',
         'SEO optimization and keyword integration',
         'Multi-format content creation',
         'Brand voice consistency',
         'Content scheduling and publishing',
         'Performance analytics and optimization',
-<<<<<<< HEAD
-=======
-=======
-        'Automated content generation,SEO optimization and keyword integration,Multi-format content creation,Brand voice consistency,Content scheduling and publishing,Performance analytics and optimization'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$2,500 - $8, 000/month',
       delivery: '3-5 weeks',
@@ -203,23 +137,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Customer Support Platform',
-      description:
-        'Comprehensive helpdesk solution with AI chatbots and ticket management',
+      description: 'Comprehensive helpdesk solution with AI chatbots and ticket management',
       icon: Users,
       features: [
-<<<<<<< HEAD
         'Multi-channel ticket management',
         'AI-powered chatbot integration',
         'Knowledge base and FAQ system',
         'Live chat and video support',
         'Performance metrics and SLA tracking',
         'Integration with CRM systems',
-<<<<<<< HEAD
-=======
-=======
-        'Multi-channel ticket management,AI-powered chatbot integration,Knowledge base and FAQ system,Live chat and video support,Performance metrics and SLA tracking,Integration with CRM systems'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$2,000 - $7, 000/month',
       delivery: '3-4 weeks',
@@ -227,23 +153,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI Recruiting Platform',
-      description:
-        'Intelligent recruitment system with automated screening and matching',
+      description: 'Intelligent recruitment system with automated screening and matching',
       icon: Brain,
       features: [
-<<<<<<< HEAD
         'Resume parsing and skill extraction',
         'Automated candidate screening',
         'Interview scheduling and management',
         'Bias detection and elimination',
         'Candidate matching algorithms',
         'Analytics and reporting dashboard',
-<<<<<<< HEAD
-=======
-=======
-        'Resume parsing and skill extraction,Automated candidate screening,Interview scheduling and management,Bias detection and elimination,Candidate matching algorithms,Analytics and reporting dashboard'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$4,000 - $15, 000/month',
       delivery: '5-8 weeks',
@@ -251,23 +169,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Document Processing Automation',
-      description:
-        'AI-powered document analysis and processing for business automation',
+      description: 'AI-powered document analysis and processing for business automation',
       icon: FileText,
       features: [
-<<<<<<< HEAD
         'Automated data extraction',
         'Document classification and routing',
         'OCR with high accuracy',
         'Contract analysis and risk assessment',
         'Compliance monitoring',
         'Workflow automation',
-<<<<<<< HEAD
-=======
-=======
-        'Automated data extraction,Document classification and routing,OCR with high accuracy,Contract analysis and risk assessment,Compliance monitoring,Workflow automation'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$3,500 - $12, 000/month',
       delivery: '4-6 weeks',
@@ -275,29 +185,19 @@ export default function MicroSaaS() {
     },
     {
       title: 'Analytics Dashboard Platform',
-      description:
-        'Custom business intelligence and analytics platform with real-time insights',
+      description: 'Custom business intelligence and analytics platform with real-time insights',
       icon: BarChart3,
       features: [
-<<<<<<< HEAD
         'Real-time data visualization',
         'Custom dashboard creation',
         'Data integration and ETL',
         'Predictive analytics and forecasting',
         'Mobile-responsive design',
         'API and third-party integrations',
-<<<<<<< HEAD
-=======
-=======
-        'Real-time data visualization,Custom dashboard creation,Data integration and ETL,Predictive analytics and forecasting,Mobile-responsive design,API and third-party integrations'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$5,000 - $20, 000/month',
       delivery: '6-10 weeks',
       category: 'Analytics SaaS',
-<<<<<<< HEAD
-=======
     },
     {
       title: 'AI-Powered E-Commerce Returns Manager',
@@ -353,27 +253,18 @@ export default function MicroSaaS() {
       pricing: '$1,200 - $4,500/month',
       delivery: '2-3 weeks',
       category: 'Social Media SaaS'
->>>>>>> main
     },
     {
       title: 'Workflow Automation Engine',
-      description:
-        'No-code workflow automation platform for business process optimization',
+      description: 'No-code workflow automation platform for business process optimization',
       icon: Settings,
       features: [
-<<<<<<< HEAD
         'Visual workflow builder',
         'API integrations and webhooks',
         'Conditional logic and branching',
         'Task automation and scheduling',
         'User management and permissions',
         'Audit trails and compliance',
-<<<<<<< HEAD
-=======
-=======
-        'Visual workflow builder,API integrations and webhooks,Conditional logic and branching,Task automation and scheduling,User management and permissions,Audit trails and compliance'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$3,000 - $10, 000/month',
       delivery: '4-7 weeks',
@@ -381,23 +272,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered E-commerce Return Manager',
-      description:
-        'Intelligent return processing system with automated decision making and fraud detection',
+      description: 'Intelligent return processing system with automated decision making and fraud detection',
       icon: ArrowRight,
       features: [
-<<<<<<< HEAD
         'Automated return request processing',
         'AI-powered fraud detection and prevention',
         'Smart return label generation',
         'Real-time inventory updates',
         'Customer satisfaction tracking',
         'Analytics and reporting dashboard',
-<<<<<<< HEAD
-=======
-=======
-        'Automated return request processing,AI-powered fraud detection and prevention,Smart return label generation,Real-time inventory updates,Customer satisfaction tracking,Analytics and reporting dashboard'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$1,500 - $5, 000/month',
       delivery: '3-5 weeks',
@@ -405,8 +288,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Blockchain-Based Supply Chain Tracker',
-      description:
-        'Transparent supply chain management with blockchain verification and smart contracts',
+      description: 'Transparent supply chain management with blockchain verification and smart contracts',
       icon: Network,
       features: [
         'End-to-end supply chain visibility',
@@ -422,8 +304,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'IoT Fleet Management Platform',
-      description:
-        'Comprehensive fleet tracking and management with predictive maintenance and route optimization',
+      description: 'Comprehensive fleet tracking and management with predictive maintenance and route optimization',
       icon: Globe,
       features: [
         'Real-time vehicle tracking and monitoring',
@@ -439,8 +320,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Fintech Payment Orchestration',
-      description:
-        'Advanced payment processing platform with multi-currency support and fraud prevention',
+      description: 'Advanced payment processing platform with multi-currency support and fraud prevention',
       icon: Shield,
       features: [
         'Multi-currency payment processing',
@@ -456,8 +336,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'HealthTech Patient Management System',
-      description:
-        'HIPAA-compliant patient management with telemedicine and AI diagnostics',
+      description: 'HIPAA-compliant patient management with telemedicine and AI diagnostics',
       icon: Users,
       features: [
         'HIPAA-compliant patient records',
@@ -473,8 +352,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'EdTech Learning Management Platform',
-      description:
-        'AI-powered educational platform with personalized learning paths and progress tracking',
+      description: 'AI-powered educational platform with personalized learning paths and progress tracking',
       icon: Brain,
       features: [
         'Personalized learning algorithms',
@@ -490,8 +368,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'PropTech Property Management Suite',
-      description:
-        'Comprehensive property management with smart building integration and tenant portals',
+      description: 'Comprehensive property management with smart building integration and tenant portals',
       icon: Monitor,
       features: [
         'Property portfolio management',
@@ -507,8 +384,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AgriTech Farm Management System',
-      description:
-        'IoT-powered agricultural management with precision farming and yield optimization',
+      description: 'IoT-powered agricultural management with precision farming and yield optimization',
       icon: Target,
       features: [
         'IoT sensor data integration',
@@ -524,8 +400,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'RetailTech Inventory Intelligence',
-      description:
-        'AI-powered retail inventory management with demand forecasting and automated reordering',
+      description: 'AI-powered retail inventory management with demand forecasting and automated reordering',
       icon: BarChart3,
       features: [
         'AI demand forecasting',
@@ -541,8 +416,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'LegalTech Document Automation',
-      description:
-        'AI-powered legal document generation and contract analysis with compliance monitoring',
+      description: 'AI-powered legal document generation and contract analysis with compliance monitoring',
       icon: FileText,
       features: [
         'Automated legal document generation',
@@ -558,23 +432,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Inventory Optimization Platform',
-      description:
-        'AI-driven inventory management with demand forecasting and automated reordering',
+      description: 'AI-driven inventory management with demand forecasting and automated reordering',
       icon: BarChart3,
       features: [
-<<<<<<< HEAD
         'Demand forecasting with machine learning',
         'Automated reorder point calculations',
         'Multi-location inventory tracking',
         'Supplier performance analytics',
         'Cost optimization recommendations',
         'Integration with ERP and POS systems',
-<<<<<<< HEAD
-=======
-=======
-        'Demand forecasting with machine learning,Automated reorder point calculations,Multi-location inventory tracking,Supplier performance analytics,Cost optimization recommendations,Integration with ERP and POS systems'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$2,500 - $8, 000/month',
       delivery: '4-6 weeks',
@@ -582,23 +448,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered SEO Content Optimizer',
-      description:
-        'Intelligent content optimization platform that enhances web page performance and rankings',
+      description: 'Intelligent content optimization platform that enhances web page performance and rankings',
       icon: TrendingUp,
       features: [
-<<<<<<< HEAD
         'Real-time SEO analysis and recommendations',
         'Content optimization suggestions',
         'Keyword research and competitor analysis',
         'Technical SEO audits and fixes',
         'Performance tracking and reporting',
         'Multi-language SEO support',
-<<<<<<< HEAD
-=======
-=======
-        'Real-time SEO analysis and recommendations,Content optimization suggestions,Keyword research and competitor analysis,Technical SEO audits and fixes,Performance tracking and reporting,Multi-language SEO support'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$199 - $799/month',
       delivery: '1-2 weeks',
@@ -606,23 +464,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Intelligent Lead Scoring Platform',
-      description:
-        'AI-powered lead qualification and scoring system with behavioral analysis',
+      description: 'AI-powered lead qualification and scoring system with behavioral analysis',
       icon: Target,
       features: [
-<<<<<<< HEAD
         'Behavioral lead scoring algorithms',
         'Multi-channel lead tracking',
         'Automated lead qualification',
         'CRM integration and synchronization',
         'Predictive analytics and insights',
         'Custom scoring model creation',
-<<<<<<< HEAD
-=======
-=======
-        'Behavioral lead scoring algorithms,Multi-channel lead tracking,Automated lead qualification,CRM integration and synchronization,Predictive analytics and insights,Custom scoring model creation'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$299 - $1,200/month',
       delivery: '2-4 weeks',
@@ -630,23 +480,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Social Media Manager',
-      description:
-        'Comprehensive social media management with AI content creation and scheduling',
+      description: 'Comprehensive social media management with AI content creation and scheduling',
       icon: Globe,
       features: [
-<<<<<<< HEAD
         'AI-generated social media content',
         'Optimal posting time recommendations',
         'Hashtag research and optimization',
         'Engagement analytics and insights',
         'Multi-platform scheduling',
         'Brand voice consistency monitoring',
-<<<<<<< HEAD
-=======
-=======
-        'AI-generated social media content,Optimal posting time recommendations,Hashtag research and optimization,Engagement analytics and insights,Multi-platform scheduling,Brand voice consistency monitoring'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$149 - $599/month',
       delivery: '2-3 weeks',
@@ -654,23 +496,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Expense Management System',
-      description:
-        'AI-powered expense tracking and approval workflow with receipt processing',
+      description: 'AI-powered expense tracking and approval workflow with receipt processing',
       icon: FileText,
       features: [
-<<<<<<< HEAD
         'Automated receipt scanning and processing',
         'Expense categorization with AI',
         'Approval workflow automation',
         'Policy compliance checking',
         'Real-time expense reporting',
         'Integration with accounting software',
-<<<<<<< HEAD
-=======
-=======
-        'Automated receipt scanning and processing,Expense categorization with AI,Approval workflow automation,Policy compliance checking,Real-time expense reporting,Integration with accounting software'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$99 - $399/month',
       delivery: '2-3 weeks',
@@ -678,11 +512,9 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Customer Onboarding Platform',
-      description:
-        'Intelligent customer onboarding with personalized journey mapping and automation',
+      description: 'Intelligent customer onboarding with personalized journey mapping and automation',
       icon: Users,
       features: [
-<<<<<<< HEAD
         'Personalized onboarding workflows',
         'Progress tracking and analytics',
         'Automated email sequences',
@@ -693,25 +525,10 @@ export default function MicroSaaS() {
       pricing: '$199 - $799/month',
       delivery: '3-4 weeks',
       category: 'Customer Success SaaS',
-<<<<<<< HEAD
-=======
-=======
-        'Personalized onboarding workflows,Progress tracking and analytics,Automated email sequences,Interactive tutorials and guides,Success metrics and optimization,Integration with CRM and support tools'
-      ],
-      pricing: '$199 - $799/month',
-      delivery: '3-4 weeks',
-<<<<<<< HEAD
-      category: 'Customer Success SaaS',
-=======
-      category: 'Customer Success SaaS'
->>>>>>> main
->>>>>>> main
->>>>>>> main
     },
     {
       title: 'AI-Powered Code Review Assistant',
-      description:
-        'Intelligent code analysis and review platform with automated quality checks and security scanning',
+      description: 'Intelligent code analysis and review platform with automated quality checks and security scanning',
       icon: Code,
       features: [
         'Automated code quality analysis',
@@ -727,8 +544,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Contract Management Platform',
-      description:
-        'AI-powered contract lifecycle management with automated analysis and risk assessment',
+      description: 'AI-powered contract lifecycle management with automated analysis and risk assessment',
       icon: FileText,
       features: [
         'Automated contract analysis and extraction',
@@ -744,8 +560,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Learning Management System',
-      description:
-        'Intelligent e-learning platform with personalized learning paths and progress tracking',
+      description: 'Intelligent e-learning platform with personalized learning paths and progress tracking',
       icon: Brain,
       features: [
         'Personalized learning recommendations',
@@ -761,8 +576,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Fleet Management System',
-      description:
-        'AI-driven fleet optimization with route planning, maintenance scheduling, and fuel efficiency',
+      description: 'AI-driven fleet optimization with route planning, maintenance scheduling, and fuel efficiency',
       icon: Network,
       features: [
         'Real-time GPS tracking and monitoring',
@@ -778,8 +592,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Property Management Platform',
-      description:
-        'Intelligent property management with automated tenant screening and maintenance scheduling',
+      description: 'Intelligent property management with automated tenant screening and maintenance scheduling',
       icon: Home,
       features: [
         'Automated tenant screening and background checks',
@@ -795,8 +608,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Healthcare Appointment Scheduler',
-      description:
-        'AI-powered medical appointment management with patient matching and resource optimization',
+      description: 'AI-powered medical appointment management with patient matching and resource optimization',
       icon: Calendar,
       features: [
         'Intelligent appointment scheduling',
@@ -812,8 +624,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Restaurant Management System',
-      description:
-        'Intelligent restaurant operations with inventory management, staff scheduling, and customer analytics',
+      description: 'Intelligent restaurant operations with inventory management, staff scheduling, and customer analytics',
       icon: Utensils,
       features: [
         'Smart inventory and supply chain management',
@@ -829,8 +640,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Energy Management Platform',
-      description:
-        'AI-driven energy optimization for buildings with consumption monitoring and cost reduction',
+      description: 'AI-driven energy optimization for buildings with consumption monitoring and cost reduction',
       icon: Zap,
       features: [
         'Real-time energy consumption monitoring',
@@ -846,8 +656,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Insurance Claims Processor',
-      description:
-        'Intelligent insurance claims processing with automated damage assessment and fraud detection',
+      description: 'Intelligent insurance claims processing with automated damage assessment and fraud detection',
       icon: Shield,
       features: [
         'Automated claims intake and processing',
@@ -863,8 +672,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Manufacturing Quality Control',
-      description:
-        'AI-powered quality assurance system with real-time defect detection and process optimization',
+      description: 'AI-powered quality assurance system with real-time defect detection and process optimization',
       icon: Settings,
       features: [
         'Real-time quality monitoring and detection',
@@ -880,23 +688,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Intelligent Meeting Scheduler',
-      description:
-        'AI-powered meeting scheduling with time zone optimization and conflict resolution',
+      description: 'AI-powered meeting scheduling with time zone optimization and conflict resolution',
       icon: Calendar,
       features: [
-<<<<<<< HEAD
         'Smart time zone handling',
         'Automatic conflict detection and resolution',
         'Meeting room and resource booking',
         'Calendar integration across platforms',
         'Meeting preparation automation',
         'Follow-up task generation',
-<<<<<<< HEAD
-=======
-=======
-        'Smart time zone handling,Automatic conflict detection and resolution,Meeting room and resource booking,Calendar integration across platforms,Meeting preparation automation,Follow-up task generation'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$49 - $199/month',
       delivery: '1-2 weeks',
@@ -904,8 +704,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Blockchain-Based Supply Chain Tracker',
-      description:
-        'Transparent supply chain management with blockchain verification and real-time tracking',
+      description: 'Transparent supply chain management with blockchain verification and real-time tracking',
       icon: Network,
       features: [
         'End-to-end supply chain visibility',
@@ -921,8 +720,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered IoT Device Management',
-      description:
-        'Intelligent IoT device monitoring and management with predictive maintenance',
+      description: 'Intelligent IoT device monitoring and management with predictive maintenance',
       icon: Settings,
       features: [
         'Real-time device monitoring and analytics',
@@ -938,8 +736,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AR/VR Training Simulation Platform',
-      description:
-        'Immersive training and simulation platform with AR/VR technology for corporate learning',
+      description: 'Immersive training and simulation platform with AR/VR technology for corporate learning',
       icon: Monitor,
       features: [
         'Immersive 3D training environments',
@@ -955,8 +752,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Fintech Risk Assessment',
-      description:
-        'Advanced financial risk analysis platform with machine learning and real-time monitoring',
+      description: 'Advanced financial risk analysis platform with machine learning and real-time monitoring',
       icon: Shield,
       features: [
         'Real-time credit risk assessment',
@@ -972,8 +768,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Health Monitoring Platform',
-      description:
-        'AI-powered health monitoring with wearable integration and predictive health analytics',
+      description: 'AI-powered health monitoring with wearable integration and predictive health analytics',
       icon: Heart,
       features: [
         'Real-time health data monitoring',
@@ -989,8 +784,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered EdTech Learning Platform',
-      description:
-        'Intelligent educational platform with personalized learning and adaptive assessments',
+      description: 'Intelligent educational platform with personalized learning and adaptive assessments',
       icon: Brain,
       features: [
         'Adaptive learning algorithms',
@@ -1006,8 +800,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Quantum Computing Simulation Platform',
-      description:
-        'Advanced quantum computing simulation and optimization platform for complex problem solving',
+      description: 'Advanced quantum computing simulation and optimization platform for complex problem solving',
       icon: Cpu,
       features: [
         'Quantum algorithm development and testing',
@@ -1023,33 +816,23 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Code Review Assistant',
-      description:
-        'Intelligent code analysis and review platform with automated quality checks',
+      description: 'Intelligent code analysis and review platform with automated quality checks',
       icon: Code,
       features: [
-<<<<<<< HEAD
         'Automated code quality analysis',
         'Security vulnerability detection',
         'Performance optimization suggestions',
         'Code style and best practices enforcement',
         'Integration with Git and CI/CD',
         'Team collaboration and feedback tools',
-<<<<<<< HEAD
-=======
-=======
-        'Automated code quality analysis,Security vulnerability detection,Performance optimization suggestions,Code style and best practices enforcement,Integration with Git and CI/CD,Team collaboration and feedback tools'
->>>>>>> main
->>>>>>> main
       ],
       pricing: '$299 - $1,200/month',
       delivery: '3-5 weeks',
       category: 'Development SaaS',
     },
     {
-<<<<<<< HEAD
       title: 'AI-Powered Legal Document Analyzer',
-      description:
-        'Intelligent contract analysis and legal document processing with risk assessment',
+      description: 'Intelligent contract analysis and legal document processing with risk assessment',
       icon: FileText,
       features: [
         'Automated contract review and analysis',
@@ -1065,8 +848,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Healthcare Appointment Scheduler',
-      description:
-        'AI-powered healthcare scheduling with patient preference learning and optimization',
+      description: 'AI-powered healthcare scheduling with patient preference learning and optimization',
       icon: Calendar,
       features: [
         'Intelligent appointment optimization',
@@ -1082,8 +864,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Real Estate Valuation Platform',
-      description:
-        'Intelligent property valuation with market analysis and investment insights',
+      description: 'Intelligent property valuation with market analysis and investment insights',
       icon: TrendingUp,
       features: [
         'Automated property valuation using ML models',
@@ -1094,22 +875,6 @@ export default function MicroSaaS() {
         'ROI and cash flow projections',
       ],
       pricing: '$1,500 - $5, 000/month',
-=======
-      title: 'Affiliate Marketing Tracking Platform',
-      description:
-        'Comprehensive affiliate program management with fraud detection and automated payouts',
-      icon: TrendingUp,
-      features: [
-<<<<<<< HEAD
-        'Custom referral link generation and tracking',
-        'Cross-device attribution and fraud detection',
-        'Automated commission calculations and payouts',
-        'Real-time performance analytics and reporting',
-        'Multi-tier affiliate program support',
-        'Integration with e-commerce platforms and payment systems',
-=======
-        'Custom referral link generation and tracking,Cross-device attribution and fraud detection,Automated commission calculations and payouts,Real-time performance analytics and reporting,Multi-tier affiliate program support,Integration with e-commerce platforms and payment systems'
->>>>>>> main
       ],
       pricing: '$199 - $999/month',
       delivery: '3-4 weeks',
@@ -1117,20 +882,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Email Follow-up Automation',
-      description:
-        'Intelligent email sequence automation with personalization and engagement tracking',
+      description: 'Intelligent email sequence automation with personalization and engagement tracking',
       icon: Mail,
       features: [
-<<<<<<< HEAD
         'Smart follow-up sequence creation and management',
         'AI-powered personalization and timing optimization',
         'Engagement tracking and response analysis',
         'A/B testing for email campaigns',
         'CRM integration and lead scoring',
         'Compliance with email regulations (CAN-SPAM, GDPR)',
-=======
-        'Smart follow-up sequence creation and management,AI-powered personalization and timing optimization,Engagement tracking and response analysis,A/B testing for email campaigns,CRM integration and lead scoring,Compliance with email regulations (CAN-SPAM, GDPR)'
->>>>>>> main
       ],
       pricing: '$99 - $499/month',
       delivery: '2-3 weeks',
@@ -1138,20 +898,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Intelligent Helpdesk & Support Platform',
-      description:
-        'AI-powered customer support system with ticket management and chatbot integration',
+      description: 'AI-powered customer support system with ticket management and chatbot integration',
       icon: MessageSquare,
       features: [
-<<<<<<< HEAD
         'Smart ticket routing and prioritization',
         'AI chatbot with natural language processing',
         'Knowledge base creation and management',
         'Multi-channel support (email, chat, phone)',
         'Customer satisfaction tracking and analytics',
         'Integration with CRM and business tools',
-=======
-        'Smart ticket routing and prioritization,AI chatbot with natural language processing,Knowledge base creation and management,Multi-channel support (email, chat, phone),Customer satisfaction tracking and analytics,Integration with CRM and business tools'
->>>>>>> main
       ],
       pricing: '$149 - $799/month',
       delivery: '3-4 weeks',
@@ -1445,20 +1200,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Content Creation Suite',
-      description:
-        'Comprehensive content generation platform for blogs, social media, and marketing materials',
+      description: 'Comprehensive content generation platform for blogs, social media, and marketing materials',
       icon: FileText,
       features: [
-<<<<<<< HEAD
         'AI-generated blog posts, articles, and web content',
         'Social media content creation and scheduling',
         'Marketing copy and email templates',
         'SEO optimization and keyword integration',
         'Brand voice consistency and tone matching',
         'Content calendar and publishing automation',
-=======
-        'AI-generated blog posts, articles, and web content,Social media content creation and scheduling,Marketing copy and email templates,SEO optimization and keyword integration,Brand voice consistency and tone matching,Content calendar and publishing automation'
->>>>>>> main
       ],
       pricing: '$199 - $899/month',
       delivery: '2-3 weeks',
@@ -1466,20 +1216,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Project Management Dashboard',
-      description:
-        'AI-enhanced project management with predictive analytics and resource optimization',
+      description: 'AI-enhanced project management with predictive analytics and resource optimization',
       icon: Target,
       features: [
-<<<<<<< HEAD
         'AI-powered project timeline prediction',
         'Resource allocation and workload optimization',
         'Risk assessment and mitigation recommendations',
         'Team collaboration and communication tools',
         'Progress tracking and milestone management',
         'Integration with popular development and design tools',
-=======
-        'AI-powered project timeline prediction,Resource allocation and workload optimization,Risk assessment and mitigation recommendations,Team collaboration and communication tools,Progress tracking and milestone management,Integration with popular development and design tools'
->>>>>>> main
       ],
       pricing: '$299 - $1,299/month',
       delivery: '4-5 weeks',
@@ -1487,20 +1232,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Intelligent Financial Analytics Platform',
-      description:
-        'AI-powered financial analysis and forecasting with automated reporting',
+      description: 'AI-powered financial analysis and forecasting with automated reporting',
       icon: BarChart3,
       features: [
-<<<<<<< HEAD
         'Automated financial data analysis and insights',
         'Predictive cash flow and revenue forecasting',
         'Expense categorization and budget optimization',
         'Investment portfolio analysis and recommendations',
         'Compliance reporting and audit preparation',
         'Integration with accounting software and banks',
-=======
-        'Automated financial data analysis and insights,Predictive cash flow and revenue forecasting,Expense categorization and budget optimization,Investment portfolio analysis and recommendations,Compliance reporting and audit preparation,Integration with accounting software and banks'
->>>>>>> main
       ],
       pricing: '$399 - $1,599/month',
       delivery: '4-6 weeks',
@@ -1508,20 +1248,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered HR Management System',
-      description:
-        'Comprehensive human resources platform with recruitment automation and employee analytics',
+      description: 'Comprehensive human resources platform with recruitment automation and employee analytics',
       icon: Users,
       features: [
-<<<<<<< HEAD
         'AI-powered resume screening and candidate matching',
         'Employee performance tracking and analytics',
         'Automated onboarding and training workflows',
         'Payroll processing and benefits management',
         'Employee engagement surveys and feedback',
         'Compliance tracking and reporting',
-=======
-        'AI-powered resume screening and candidate matching,Employee performance tracking and analytics,Automated onboarding and training workflows,Payroll processing and benefits management,Employee engagement surveys and feedback,Compliance tracking and reporting'
->>>>>>> main
       ],
       pricing: '$199 - $999/month',
       delivery: '4-5 weeks',
@@ -1529,20 +1264,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Quantum-Enhanced Data Analytics Platform',
-      description:
-        'Next-generation analytics platform leveraging quantum computing for complex data processing and insights',
+      description: 'Next-generation analytics platform leveraging quantum computing for complex data processing and insights',
       icon: Cpu,
       features: [
-<<<<<<< HEAD
         'Quantum-powered data processing and analysis',
         'Real-time complex pattern recognition',
         'Advanced predictive modeling and forecasting',
         'Multi-dimensional data visualization',
         'Quantum machine learning algorithms',
         'Integration with classical computing systems',
-=======
-        'Quantum-powered data processing and analysis,Real-time complex pattern recognition,Advanced predictive modeling and forecasting,Multi-dimensional data visualization,Quantum machine learning algorithms,Integration with classical computing systems'
->>>>>>> main
       ],
       pricing: '$15,000 - $75, 000/month',
       delivery: '12-20 weeks',
@@ -1550,20 +1280,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Cybersecurity Threat Intelligence',
-      description:
-        'Advanced threat detection and response platform with AI-driven security analytics',
+      description: 'Advanced threat detection and response platform with AI-driven security analytics',
       icon: Shield,
       features: [
-<<<<<<< HEAD
         'Real-time threat detection and analysis',
         'AI-powered behavioral anomaly detection',
         'Automated incident response and remediation',
         'Zero-day vulnerability identification',
         'Threat intelligence and attribution',
         'Compliance monitoring and reporting',
-=======
-        'Real-time threat detection and analysis,AI-powered behavioral anomaly detection,Automated incident response and remediation,Zero-day vulnerability identification,Threat intelligence and attribution,Compliance monitoring and reporting'
->>>>>>> main
       ],
       pricing: '$5,000 - $25, 000/month',
       delivery: '8-12 weeks',
@@ -1571,20 +1296,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Blockchain-Based Supply Chain Transparency',
-      description:
-        'Immutable supply chain tracking and verification platform with smart contracts',
+      description: 'Immutable supply chain tracking and verification platform with smart contracts',
       icon: Network,
       features: [
-<<<<<<< HEAD
         'End-to-end supply chain visibility',
         'Smart contract automation and execution',
         'Product authenticity verification',
         'Sustainability and compliance tracking',
         'Real-time inventory and logistics management',
         'Integration with IoT sensors and devices',
-=======
-        'End-to-end supply chain visibility,Smart contract automation and execution,Product authenticity verification,Sustainability and compliance tracking,Real-time inventory and logistics management,Integration with IoT sensors and devices'
->>>>>>> main
       ],
       pricing: '$8,000 - $35, 000/month',
       delivery: '10-16 weeks',
@@ -1592,20 +1312,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Voice Commerce Platform',
-      description:
-        'Voice-activated e-commerce solution with natural language processing and personalization',
+      description: 'Voice-activated e-commerce solution with natural language processing and personalization',
       icon: Mic,
       features: [
-<<<<<<< HEAD
         'Voice-activated shopping and ordering',
         'Natural language product search and recommendations',
         'Voice-based payment processing',
         'Multi-language voice recognition',
         'Personalized shopping experiences',
         'Integration with smart home devices',
-=======
-        'Voice-activated shopping and ordering,Natural language product search and recommendations,Voice-based payment processing,Multi-language voice recognition,Personalized shopping experiences,Integration with smart home devices'
->>>>>>> main
       ],
       pricing: '$3,500 - $15, 000/month',
       delivery: '6-10 weeks',
@@ -1613,20 +1328,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Metaverse Business Platform',
-      description:
-        'Virtual business environment with 3D spaces, avatars, and immersive collaboration tools',
+      description: 'Virtual business environment with 3D spaces, avatars, and immersive collaboration tools',
       icon: Globe,
       features: [
-<<<<<<< HEAD
         '3D virtual office spaces and meeting rooms',
         'Avatar-based collaboration and networking',
         'Virtual product demonstrations and showrooms',
         'Immersive training and onboarding experiences',
         'Virtual events and conferences',
         'Integration with VR/AR devices',
-=======
-        '3D virtual office spaces and meeting rooms,Avatar-based collaboration and networking,Virtual product demonstrations and showrooms,Immersive training and onboarding experiences,Virtual events and conferences,Integration with VR/AR devices'
->>>>>>> main
       ],
       pricing: '$10,000 - $50, 000/month',
       delivery: '12-24 weeks',
@@ -1634,20 +1344,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Personal Finance Coach',
-      description:
-        'Intelligent financial planning and investment advisory platform with personalized recommendations',
+      description: 'Intelligent financial planning and investment advisory platform with personalized recommendations',
       icon: TrendingUp,
       features: [
-<<<<<<< HEAD
         'AI-driven financial goal setting and tracking',
         'Personalized investment recommendations',
         'Real-time market analysis and alerts',
         'Automated budget optimization',
         'Tax planning and optimization',
         'Integration with banking and investment accounts',
-=======
-        'AI-driven financial goal setting and tracking,Personalized investment recommendations,Real-time market analysis and alerts,Automated budget optimization,Tax planning and optimization,Integration with banking and investment accounts'
->>>>>>> main
       ],
       pricing: '$99 - $499/month',
       delivery: '4-6 weeks',
@@ -1655,20 +1360,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Home Automation Hub',
-      description:
-        'AI-powered home automation platform with predictive maintenance and energy optimization',
+      description: 'AI-powered home automation platform with predictive maintenance and energy optimization',
       icon: Home,
       features: [
-<<<<<<< HEAD
         'Intelligent device control and automation',
         'Predictive maintenance and diagnostics',
         'Energy consumption optimization',
         'Security monitoring and alerts',
         'Voice and gesture control',
         'Integration with 500+ smart devices',
-=======
-        'Intelligent device control and automation,Predictive maintenance and diagnostics,Energy consumption optimization,Security monitoring and alerts,Voice and gesture control,Integration with 500+ smart devices'
->>>>>>> main
       ],
       pricing: '$199 - $999/month',
       delivery: '6-8 weeks',
@@ -1676,20 +1376,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Mental Health Companion',
-      description:
-        'Intelligent mental wellness platform with mood tracking, therapy sessions, and crisis intervention',
+      description: 'Intelligent mental wellness platform with mood tracking, therapy sessions, and crisis intervention',
       icon: Heart,
       features: [
-<<<<<<< HEAD
         'AI-powered mood analysis and tracking',
         'Personalized therapy and meditation sessions',
         'Crisis detection and intervention',
         'Progress monitoring and insights',
         'Integration with wearable devices',
         'HIPAA-compliant data protection',
-=======
-        'AI-powered mood analysis and tracking,Personalized therapy and meditation sessions,Crisis detection and intervention,Progress monitoring and insights,Integration with wearable devices,HIPAA-compliant data protection'
->>>>>>> main
       ],
       pricing: '$149 - $699/month',
       delivery: '8-12 weeks',
@@ -1697,20 +1392,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Autonomous Fleet Management System',
-      description:
-        'AI-driven fleet optimization platform for autonomous and traditional vehicle management',
+      description: 'AI-driven fleet optimization platform for autonomous and traditional vehicle management',
       icon: Car,
       features: [
-<<<<<<< HEAD
         'Autonomous vehicle coordination and routing',
         'Predictive maintenance and diagnostics',
         'Real-time traffic optimization',
         'Fuel efficiency and cost optimization',
         'Driver behavior analysis and coaching',
         'Integration with telematics and sensors',
-=======
-        'Autonomous vehicle coordination and routing,Predictive maintenance and diagnostics,Real-time traffic optimization,Fuel efficiency and cost optimization,Driver behavior analysis and coaching,Integration with telematics and sensors'
->>>>>>> main
       ],
       pricing: '$5,000 - $30, 000/month',
       delivery: '10-16 weeks',
@@ -1718,20 +1408,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Legal Document Analyzer',
-      description:
-        'Intelligent legal document processing platform with contract analysis and risk assessment',
+      description: 'Intelligent legal document processing platform with contract analysis and risk assessment',
       icon: FileText,
       features: [
-<<<<<<< HEAD
         'Automated contract analysis and review',
         'Legal risk assessment and recommendations',
         'Compliance monitoring and alerts',
         'Document generation and templating',
         'Case law research and citation',
         'Integration with legal databases and systems',
-=======
-        'Automated contract analysis and review,Legal risk assessment and recommendations,Compliance monitoring and alerts,Document generation and templating,Case law research and citation,Integration with legal databases and systems'
->>>>>>> main
       ],
       pricing: '$2,500 - $12, 000/month',
       delivery: '6-10 weeks',
@@ -1739,20 +1424,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Agriculture Management Platform',
-      description:
-        'AI-driven agricultural optimization platform with precision farming and yield prediction',
+      description: 'AI-driven agricultural optimization platform with precision farming and yield prediction',
       icon: TreePine,
       features: [
-<<<<<<< HEAD
         'Precision farming and crop monitoring',
         'AI-powered yield prediction and optimization',
         'Weather and climate analysis',
         'Pest and disease detection',
         'Automated irrigation and fertilization',
         'Integration with IoT sensors and drones',
-=======
-        'Precision farming and crop monitoring,AI-powered yield prediction and optimization,Weather and climate analysis,Pest and disease detection,Automated irrigation and fertilization,Integration with IoT sensors and drones'
->>>>>>> main
       ],
       pricing: '$3,000 - $15, 000/month',
       delivery: '8-12 weeks',
@@ -1760,20 +1440,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Energy Trading Platform',
-      description:
-        'Intelligent energy market platform with automated trading and grid optimization',
+      description: 'Intelligent energy market platform with automated trading and grid optimization',
       icon: Zap,
       features: [
-<<<<<<< HEAD
         'AI-driven energy price prediction',
         'Automated trading and arbitrage',
         'Grid optimization and load balancing',
         'Renewable energy integration',
         'Carbon credit trading',
         'Real-time market analysis and alerts',
-=======
-        'AI-driven energy price prediction,Automated trading and arbitrage,Grid optimization and load balancing,Renewable energy integration,Carbon credit trading,Real-time market analysis and alerts'
->>>>>>> main
       ],
       pricing: '$10,000 - $100, 000/month',
       delivery: '12-20 weeks',
@@ -1781,20 +1456,15 @@ export default function MicroSaaS() {
     },
     {
       title: 'Virtual Reality Training Simulator',
-      description:
-        'Immersive VR training platform for complex skills and emergency response scenarios',
+      description: 'Immersive VR training platform for complex skills and emergency response scenarios',
       icon: Eye,
       features: [
-<<<<<<< HEAD
         'Immersive VR training environments',
         'Realistic scenario simulation',
         'Performance tracking and analytics',
         'Multi-user collaborative training',
         'Custom scenario creation tools',
         'Integration with learning management systems',
-=======
-        'Immersive VR training environments,Realistic scenario simulation,Performance tracking and analytics,Multi-user collaborative training,Custom scenario creation tools,Integration with learning management systems'
->>>>>>> main
       ],
       pricing: '$5,000 - $25, 000/month',
       delivery: '10-16 weeks',
@@ -1802,24 +1472,18 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Space Mission Planning',
-      description:
-        'Advanced space mission optimization platform with trajectory planning and resource management',
+      description: 'Advanced space mission optimization platform with trajectory planning and resource management',
       icon: Satellite,
       features: [
-<<<<<<< HEAD
         'Orbital mechanics and trajectory optimization',
         'Mission planning and resource allocation',
         'Satellite constellation management',
         'Space debris tracking and avoidance',
         'Launch window optimization',
         'Integration with space agency APIs',
-=======
-        'Orbital mechanics and trajectory optimization,Mission planning and resource allocation,Satellite constellation management,Space debris tracking and avoidance,Launch window optimization,Integration with space agency APIs'
->>>>>>> main
       ],
       pricing: '$25,000 - $500, 000/month',
       delivery: '16-32 weeks',
-<<<<<<< HEAD
       category: 'SpaceTech SaaS',
     },
   ];
@@ -1830,26 +1494,12 @@ export default function MicroSaaS() {
       icon: Monitor,
       description: 'React, Next.js, Vue.js, Angular',
     },
-=======
-      category: 'SpaceTech SaaS'
-    },
-    {
-      title: 'AI-Powered Real Estate Investment Analyzer',
-      description: 'Intelligent property investment platform with market analysis and ROI prediction',
-      icon: TrendingUp,
-      features: [
-        'AI-driven property valuation and market analysis,ROI prediction and investment recommendations,Neighborhood trend analysis and forecasting,Rental income optimization strategies,Risk assessment and portfolio diversification,Integration with MLS and property databases'
-      ],
-      pricing: '$299 - $1,499/month',
->>>>>>> main
       delivery: '4-6 weeks',
       category: 'PropTech SaaS',
     },
     {
-<<<<<<< HEAD
       title: 'Smart Restaurant Inventory Manager',
-      description:
-        'AI-driven restaurant inventory optimization with waste reduction and cost control',
+      description: 'AI-driven restaurant inventory optimization with waste reduction and cost control',
       icon: BarChart3,
       features: [
         'Predictive inventory management',
@@ -1865,8 +1515,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Fitness Coach Platform',
-      description:
-        'Personalized fitness coaching with AI-driven workout optimization and nutrition planning',
+      description: 'Personalized fitness coaching with AI-driven workout optimization and nutrition planning',
       icon: Target,
       features: [
         'Personalized workout plan generation',
@@ -1875,243 +1524,14 @@ export default function MicroSaaS() {
         'Progress monitoring and goal setting',
         'Injury prevention and recovery guidance',
         'Social features and community building',
-=======
-      title: 'Smart Waste Management Platform',
-      description: 'AI-powered waste optimization system with route planning and recycling analytics',
-      icon: TreePine,
-      features: [
-        'Intelligent waste collection route optimization,Recycling rate tracking and improvement,Predictive maintenance for waste equipment,Carbon footprint reduction analytics,Community engagement and education tools,Integration with IoT sensors and smart bins'
-      ],
-      pricing: '$1,500 - $8,000/month',
-      delivery: '6-8 weeks',
-      category: 'CleanTech SaaS'
-    },
-    {
-      title: 'AI-Powered Language Learning Platform',
-      description: 'Personalized language learning with AI tutors and real-time conversation practice',
-      icon: Brain,
-      features: [
-        'AI-powered personalized learning paths,Real-time pronunciation and accent correction,Conversational AI practice partners,Cultural context and immersion experiences,Progress tracking and adaptive difficulty,Integration with voice recognition and translation APIs'
-      ],
-      pricing: '$99 - $499/month',
-      delivery: '6-10 weeks',
-      category: 'EdTech SaaS'
-    },
-    {
-      title: 'Intelligent Restaurant Management System',
-      description: 'AI-driven restaurant operations platform with demand forecasting and inventory optimization',
-      icon: Heart,
-      features: [
-        'AI-powered demand forecasting and menu optimization,Dynamic pricing and revenue management,Inventory tracking and waste reduction,Customer preference analysis and personalization,Staff scheduling and performance optimization,Integration with POS systems and delivery platforms'
-      ],
-      pricing: '$199 - $1,299/month',
-      delivery: '4-6 weeks',
-      category: 'FoodTech SaaS'
-    },
-    {
-      title: 'AI-Powered Pet Care Platform',
-      description: 'Comprehensive pet health and wellness platform with AI diagnostics and care recommendations',
-      icon: Heart,
-      features: [
-        'AI-powered health monitoring and diagnostics,Personalized nutrition and exercise plans,Veterinary appointment scheduling and reminders,Behavioral analysis and training recommendations,Emergency detection and alert system,Integration with wearable pet devices and vet records'
-      ],
-      pricing: '$49 - $299/month',
-      delivery: '4-6 weeks',
-      category: 'PetTech SaaS'
-    },
-    {
-      title: 'Smart City Traffic Optimization Platform',
-      description: 'AI-driven urban traffic management with real-time optimization and congestion reduction',
-      icon: Car,
-      features: [
-        'Real-time traffic flow optimization,Predictive congestion modeling and prevention,Smart traffic light coordination,Emergency vehicle priority routing,Air quality monitoring and pollution reduction,Integration with city infrastructure and IoT sensors'
-      ],
-      pricing: '$10,000 - $100,000/month',
-      delivery: '12-20 weeks',
-      category: 'Smart City SaaS'
-    },
-    {
-      title: 'AI-Powered Personal Stylist Platform',
-      description: 'Intelligent fashion and style recommendation system with virtual try-on capabilities',
-      icon: Eye,
-      features: [
-        'AI-powered style analysis and recommendations,Virtual try-on with AR technology,Wardrobe organization and outfit planning,Size prediction and fit optimization,Trend analysis and personal style evolution,Integration with fashion retailers and social media'
-      ],
-      pricing: '$99 - $599/month',
-      delivery: '6-8 weeks',
-      category: 'FashionTech SaaS'
-    },
-    {
-      title: 'Intelligent Home Security System',
-      description: 'AI-powered home security platform with facial recognition and behavioral analysis',
-      icon: Shield,
-      features: [
-        'AI-powered facial recognition and access control,Behavioral anomaly detection and alerts,Smart camera analytics and object recognition,Automated emergency response coordination,Integration with smart home devices,Privacy-focused local processing and storage'
-      ],
-      pricing: '$199 - $999/month',
-      delivery: '4-6 weeks',
-      category: 'Security SaaS'
-    },
-    {
-      title: 'AI-Powered Music Composition Platform',
-      description: 'Intelligent music creation platform with AI composition and collaboration tools',
-      icon: Mic,
-      features: [
-        'AI-powered music composition and arrangement,Style transfer and genre adaptation,Real-time collaboration and version control,Lyrics generation and vocal synthesis,Copyright detection and royalty management,Integration with DAWs and music streaming platforms'
-      ],
-      pricing: '$149 - $799/month',
-      delivery: '6-10 weeks',
-      category: 'MusicTech SaaS'
-    },
-    {
-      title: 'Smart Water Quality Monitoring System',
-      description: 'AI-driven water quality analysis platform with contamination detection and treatment optimization',
-      icon: TreePine,
-      features: [
-        'Real-time water quality monitoring and analysis,Contamination detection and early warning systems,Treatment optimization and chemical dosing,Predictive maintenance for water infrastructure,Compliance monitoring and reporting,Integration with IoT sensors and SCADA systems'
-      ],
-      pricing: '$2,500 - $15,000/month',
-      delivery: '8-12 weeks',
-      category: 'WaterTech SaaS'
-    },
-    {
-      title: 'AI-Powered Personal Trainer Platform',
-      description: 'Intelligent fitness coaching platform with personalized workout plans and form analysis',
-      icon: Heart,
-      features: [
-        'AI-powered personalized workout and nutrition plans,Real-time form analysis and correction,Progress tracking and goal optimization,Injury prevention and recovery recommendations,Integration with fitness wearables and equipment,Virtual personal training sessions'
-      ],
-      pricing: '$99 - $499/month',
-      delivery: '4-6 weeks',
-      category: 'FitnessTech SaaS'
-    },
-    {
-      title: 'Intelligent Supply Chain Risk Management',
-      description: 'AI-powered supply chain resilience platform with risk prediction and mitigation strategies',
-      icon: Network,
-      features: [
-        'AI-powered risk assessment and prediction,Supply chain disruption early warning,Alternative supplier identification and evaluation,Cost optimization and procurement automation,Sustainability tracking and carbon footprint analysis,Integration with ERP and logistics systems'
-      ],
-      pricing: '$5,000 - $30,000/month',
-      delivery: '8-12 weeks',
-      category: 'Supply Chain SaaS'
-    },
-    {
-      title: 'AI-Powered Sleep Optimization Platform',
-      description: 'Intelligent sleep analysis and improvement platform with personalized recommendations',
-      icon: Heart,
-      features: [
-        'AI-powered sleep pattern analysis and optimization,Personalized sleep environment recommendations,Sleep quality tracking and improvement plans,Integration with smart home devices and wearables,Sleep disorder detection and medical referrals,Circadian rhythm optimization and light therapy'
-      ],
-      pricing: '$49 - $299/month',
-      delivery: '4-6 weeks',
-      category: 'HealthTech SaaS'
-    },
-    {
-      title: 'Smart Parking Management System',
-      description: 'AI-driven parking optimization platform with real-time availability and pricing',
-      icon: Car,
-      features: [
-        'Real-time parking space detection and availability,Dynamic pricing and demand-based optimization,Reservation system and mobile payments,Traffic flow optimization and congestion reduction,Integration with navigation apps and city systems,Revenue optimization and analytics dashboard'
-      ],
-      pricing: '$1,500 - $10,000/month',
-      delivery: '6-8 weeks',
-      category: 'Smart City SaaS'
-    },
-    {
-      title: 'AI-Powered Wine Recommendation Engine',
-      description: 'Intelligent wine discovery platform with taste profiling and food pairing recommendations',
-      icon: Heart,
-      features: [
-        'AI-powered taste profile analysis and matching,Food pairing recommendations and menu optimization,Wine cellar management and inventory tracking,Price optimization and deal alerts,Social features and community recommendations,Integration with wine retailers and sommelier databases'
-      ],
-      pricing: '$99 - $599/month',
-      delivery: '4-6 weeks',
-      category: 'FoodTech SaaS'
-    },
-    {
-      title: 'Intelligent Elderly Care Platform',
-      description: 'AI-powered senior care management system with health monitoring and family communication',
-      icon: Heart,
-      features: [
-        'AI-powered health monitoring and fall detection,Medication management and reminder systems,Family communication and care coordination,Emergency response and medical alert integration,Cognitive health tracking and stimulation activities,Integration with medical devices and healthcare providers'
-      ],
-      pricing: '$199 - $999/month',
-      delivery: '6-8 weeks',
-      category: 'HealthTech SaaS'
-    },
-    {
-      title: 'AI-Powered Carbon Footprint Tracker',
-      description: 'Intelligent environmental impact monitoring with reduction strategies and offset recommendations',
-      icon: TreePine,
-      features: [
-        'AI-powered carbon footprint calculation and tracking,Personalized reduction strategies and recommendations,Carbon offset marketplace and verification,Sustainability goal setting and progress tracking,Integration with transportation and energy usage data,Corporate sustainability reporting and compliance'
-      ],
-      pricing: '$49 - $299/month',
-      delivery: '3-4 weeks',
-      category: 'CleanTech SaaS'
-    },
-    {
-      title: 'Smart Retail Analytics Platform',
-      description: 'AI-driven retail optimization with customer behavior analysis and inventory management',
-      icon: BarChart3,
-      features: [
-        'AI-powered customer behavior analysis and prediction,Dynamic pricing and promotion optimization,Inventory management and demand forecasting,Store layout optimization and heat mapping,Customer journey tracking and personalization,Integration with POS systems and loyalty programs'
-      ],
-      pricing: '$2,500 - $15,000/month',
-      delivery: '6-8 weeks',
-      category: 'RetailTech SaaS'
-    },
-    {
-      title: 'AI-Powered Customer Success Platform',
-      description: 'Intelligent customer success management with predictive churn prevention and automated engagement',
-      icon: Users,
-      features: [
-        'Predictive churn analysis and prevention,Automated customer health scoring,Personalized engagement campaigns,Success milestone tracking and alerts,Integration with CRM and support systems,Advanced analytics and reporting dashboard'
-      ],
-      pricing: '$3,000 - $12,000/month',
-      delivery: '4-6 weeks',
-      category: 'Customer Success SaaS'
-    },
-    {
-      title: 'Smart Contract Management Platform',
-      description: 'AI-powered contract lifecycle management with automated review and compliance monitoring',
-      icon: FileText,
-      features: [
-        'Automated contract review and risk assessment,Smart clause extraction and analysis,Compliance monitoring and alerts,Contract renewal and expiration tracking,Digital signature integration,Advanced search and analytics'
-      ],
-      pricing: '$2,000 - $8,000/month',
-      delivery: '3-5 weeks',
-      category: 'LegalTech SaaS'
-    },
-    {
-      title: 'Intelligent Inventory Forecasting System',
-      description: 'AI-driven inventory optimization with demand prediction and automated reordering',
-      icon: BarChart3,
-      features: [
-        'Demand forecasting with 95%+ accuracy,Automated reorder point optimization,Seasonal trend analysis and adjustment,Multi-location inventory synchronization,Supplier performance tracking,Cost optimization recommendations'
-      ],
-      pricing: '$1,500 - $6,000/month',
-      delivery: '2-4 weeks',
-      category: 'Supply Chain SaaS'
-    },
-    {
-      title: 'AI-Powered Sales Coaching Platform',
-      description: 'Intelligent sales performance optimization with real-time coaching and analytics',
-      icon: Target,
-      features: [
-        'Real-time sales call analysis and feedback,Performance benchmarking and improvement suggestions,Automated coaching recommendations,Sales pipeline optimization,Team performance analytics,Integration with CRM and communication tools'
->>>>>>> main
       ],
       pricing: '$2,500 - $10,000/month',
       delivery: '3-5 weeks',
-<<<<<<< HEAD
       category: 'Fitness SaaS',
     },
     {
       title: 'Smart Energy Management System',
-      description:
-        'AI-powered energy optimization for buildings with cost reduction and sustainability tracking',
+      description: 'AI-powered energy optimization for buildings with cost reduction and sustainability tracking',
       icon: Zap,
       features: [
         'Real-time energy consumption monitoring',
@@ -2124,50 +1544,12 @@ export default function MicroSaaS() {
       pricing: '$1,000 - $3, 500/month',
       delivery: '4-6 weeks',
       category: 'Energy SaaS',
-=======
-      category: 'SalesTech SaaS'
-    },
-    {
-      title: 'Smart Employee Wellness Platform',
-      description: 'Comprehensive employee wellness tracking with AI insights and personalized recommendations',
-      icon: Heart,
-      features: [
-        'Health and wellness tracking dashboard,AI-powered wellness recommendations,Mental health monitoring and support,Team wellness challenges and gamification,Integration with fitness trackers and health apps,Privacy-compliant analytics and reporting'
-      ],
-      pricing: '$1,000 - $4,000/month',
-      delivery: '2-3 weeks',
-      category: 'HRTech SaaS'
-    },
-    {
-      title: 'AI-Powered Content Moderation Platform',
-      description: 'Intelligent content moderation with real-time detection and automated action',
-      icon: Shield,
-      features: [
-        'Real-time content analysis and flagging,Multi-language content moderation,Custom moderation rule configuration,Automated action and escalation workflows,Detailed analytics and reporting,API integration for seamless deployment'
-      ],
-      pricing: '$2,000 - $8,000/month',
-      delivery: '3-4 weeks',
-      category: 'Content Safety SaaS'
-    },
-    {
-      title: 'Smart Energy Management Platform',
-      description: 'AI-driven energy optimization for buildings and facilities with cost reduction',
-      icon: Zap,
-      features: [
-        'Real-time energy consumption monitoring,Predictive energy usage optimization,Automated demand response management,Cost analysis and savings recommendations,Integration with smart building systems,Sustainability reporting and compliance'
-      ],
-      pricing: '$1,500 - $6,000/month',
-      delivery: '3-5 weeks',
-      category: 'EnergyTech SaaS'
->>>>>>> main
     },
     {
       title: 'AI-Powered Learning Management System',
-      description:
-        'Intelligent educational platform with personalized learning paths and progress tracking',
+      description: 'Intelligent educational platform with personalized learning paths and progress tracking',
       icon: Brain,
       features: [
-<<<<<<< HEAD
         'Personalized learning path generation',
         'Adaptive content delivery and assessment',
         'Student progress analytics and insights',
@@ -2181,8 +1563,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Fleet Management Platform',
-      description:
-        'AI-driven fleet optimization with route planning, maintenance scheduling, and cost control',
+      description: 'AI-driven fleet optimization with route planning, maintenance scheduling, and cost control',
       icon: Network,
       features: [
         'Intelligent route optimization and planning',
@@ -2198,8 +1579,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Insurance Claims Processor',
-      description:
-        'Intelligent insurance claims processing with fraud detection and automated settlement',
+      description: 'Intelligent insurance claims processing with fraud detection and automated settlement',
       icon: Shield,
       features: [
         'Automated claims processing and validation',
@@ -2215,8 +1595,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Agriculture Monitoring System',
-      description:
-        'AI-powered agricultural monitoring with crop health analysis and yield optimization',
+      description: 'AI-powered agricultural monitoring with crop health analysis and yield optimization',
       icon: Globe,
       features: [
         'Crop health monitoring using satellite imagery',
@@ -2232,8 +1611,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Mental Health Companion',
-      description:
-        'Intelligent mental health support platform with mood tracking and therapeutic interventions',
+      description: 'Intelligent mental health support platform with mood tracking and therapeutic interventions',
       icon: Users,
       features: [
         'Mood tracking and pattern analysis',
@@ -2249,8 +1627,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Waste Management System',
-      description:
-        'AI-driven waste optimization with collection scheduling and recycling analytics',
+      description: 'AI-driven waste optimization with collection scheduling and recycling analytics',
       icon: Globe,
       features: [
         'Intelligent waste collection scheduling',
@@ -2266,8 +1643,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Personal Finance Manager',
-      description:
-        'Intelligent personal finance platform with budgeting, investment advice, and goal tracking',
+      description: 'Intelligent personal finance platform with budgeting, investment advice, and goal tracking',
       icon: TrendingUp,
       features: [
         'Automated expense categorization and tracking',
@@ -2283,8 +1659,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Home Automation Platform',
-      description:
-        'AI-powered home automation with energy optimization and security management',
+      description: 'AI-powered home automation with energy optimization and security management',
       icon: Settings,
       features: [
         'Intelligent device control and automation',
@@ -2300,8 +1675,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Supply Chain Visibility Platform',
-      description:
-        'End-to-end supply chain monitoring with risk assessment and optimization recommendations',
+      description: 'End-to-end supply chain monitoring with risk assessment and optimization recommendations',
       icon: Network,
       features: [
         'Real-time supply chain visibility and tracking',
@@ -2317,8 +1691,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Cybersecurity Threat Detection',
-      description:
-        'Advanced threat detection and response system with machine learning-powered security analytics',
+      description: 'Advanced threat detection and response system with machine learning-powered security analytics',
       icon: Shield,
       features: [
         'Real-time threat detection and analysis',
@@ -2334,8 +1707,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Manufacturing Quality Control',
-      description:
-        'AI-driven quality control system with computer vision and predictive maintenance',
+      description: 'AI-driven quality control system with computer vision and predictive maintenance',
       icon: Target,
       features: [
         'Real-time quality inspection using computer vision',
@@ -2351,8 +1723,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Customer Churn Prediction',
-      description:
-        'Intelligent customer retention platform with churn prediction and intervention strategies',
+      description: 'Intelligent customer retention platform with churn prediction and intervention strategies',
       icon: TrendingUp,
       features: [
         'Advanced churn prediction algorithms',
@@ -2368,8 +1739,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Logistics Route Optimization',
-      description:
-        'AI-powered logistics optimization with dynamic routing and delivery management',
+      description: 'AI-powered logistics optimization with dynamic routing and delivery management',
       icon: Network,
       features: [
         'Dynamic route optimization with real-time traffic data',
@@ -2385,8 +1755,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Content Moderation Platform',
-      description:
-        'Intelligent content moderation with automated detection of inappropriate content',
+      description: 'Intelligent content moderation with automated detection of inappropriate content',
       icon: Eye,
       features: [
         'Automated content analysis and classification',
@@ -2402,8 +1771,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Retail Inventory Optimization',
-      description:
-        'AI-driven retail inventory management with demand forecasting and automated reordering',
+      description: 'AI-driven retail inventory management with demand forecasting and automated reordering',
       icon: BarChart3,
       features: [
         'Demand forecasting with seasonal adjustments',
@@ -2419,8 +1787,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Fraud Detection System',
-      description:
-        'Advanced fraud detection with machine learning and real-time transaction monitoring',
+      description: 'Advanced fraud detection with machine learning and real-time transaction monitoring',
       icon: Shield,
       features: [
         'Real-time transaction fraud detection',
@@ -2436,8 +1803,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Energy Trading Platform',
-      description:
-        'AI-powered energy trading with market analysis and automated trading strategies',
+      description: 'AI-powered energy trading with market analysis and automated trading strategies',
       icon: Zap,
       features: [
         'Real-time energy market analysis',
@@ -2453,8 +1819,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Medical Diagnosis Assistant',
-      description:
-        'Intelligent medical diagnosis support with image analysis and symptom assessment',
+      description: 'Intelligent medical diagnosis support with image analysis and symptom assessment',
       icon: Brain,
       features: [
         'Medical image analysis and interpretation',
@@ -2470,8 +1835,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Construction Project Management',
-      description:
-        'AI-driven construction management with progress tracking and resource optimization',
+      description: 'AI-driven construction management with progress tracking and resource optimization',
       icon: Settings,
       features: [
         'Real-time project progress monitoring',
@@ -2487,8 +1851,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Language Learning Platform',
-      description:
-        'Intelligent language learning with personalized curriculum and speech recognition',
+      description: 'Intelligent language learning with personalized curriculum and speech recognition',
       icon: Globe,
       features: [
         'Personalized learning path generation',
@@ -2504,8 +1867,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Water Management System',
-      description:
-        'AI-powered water resource management with leak detection and consumption optimization',
+      description: 'AI-powered water resource management with leak detection and consumption optimization',
       icon: Globe,
       features: [
         'Real-time water consumption monitoring',
@@ -2521,8 +1883,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'AI-Powered Investment Portfolio Manager',
-      description:
-        'Intelligent investment management with automated rebalancing and risk optimization',
+      description: 'Intelligent investment management with automated rebalancing and risk optimization',
       icon: TrendingUp,
       features: [
         'Automated portfolio rebalancing',
@@ -2538,8 +1899,7 @@ export default function MicroSaaS() {
     },
     {
       title: 'Smart Parking Management System',
-      description:
-        'AI-powered parking optimization with space utilization and revenue maximization',
+      description: 'AI-powered parking optimization with space utilization and revenue maximization',
       icon: Target,
       features: [
         'Real-time parking space availability',
@@ -2561,162 +1921,6 @@ export default function MicroSaaS() {
       icon: Monitor,
       description: 'React, Next.js, Vue.js, Angular',
     },
-=======
-        'Personalized learning path generation,Adaptive content delivery and assessment,Progress tracking and performance analytics,Gamification and engagement features,Multi-modal content support,Integration with existing educational tools'
-      ],
-      pricing: '$2,000 - $7,000/month',
-      delivery: '4-6 weeks',
-      category: 'EdTech SaaS'
-    },
-    {
-      title: 'Intelligent Property Management Platform',
-      description: 'AI-powered property management with automated maintenance and tenant services',
-      icon: Home,
-      features: [
-        'Automated maintenance scheduling and tracking,Tenant communication and service requests,Property performance analytics,Financial management and reporting,Integration with IoT devices and sensors,Mobile app for tenants and managers'
-      ],
-      pricing: '$1,500 - $5,000/month',
-      delivery: '3-4 weeks',
-      category: 'PropTech SaaS'
-    },
-    {
-      title: 'AI-Powered Compliance Monitoring System',
-      description: 'Automated compliance tracking and reporting with regulatory change management',
-      icon: Shield,
-      features: [
-        'Real-time compliance monitoring and alerts,Automated regulatory change detection,Compliance reporting and documentation,Risk assessment and mitigation recommendations,Integration with existing business systems,Audit trail and evidence management'
-      ],
-      pricing: '$3,000 - $12,000/month',
-      delivery: '4-6 weeks',
-      category: 'Compliance SaaS'
-    },
-    {
-      title: 'Smart Fleet Maintenance Platform',
-      description: 'Predictive fleet maintenance with IoT integration and cost optimization',
-      icon: Car,
-      features: [
-        'Predictive maintenance scheduling,Real-time vehicle health monitoring,Maintenance cost optimization,Driver behavior analysis and coaching,Route optimization and fuel efficiency,Integration with fleet management systems'
-      ],
-      pricing: '$2,000 - $8,000/month',
-      delivery: '3-5 weeks',
-      category: 'FleetTech SaaS'
-    },
-    {
-      title: 'AI-Powered Podcast Transcription Service',
-      description: 'High-accuracy podcast transcription with speaker identification and SEO optimization',
-      icon: Mic,
-      features: [
-        '99%+ accuracy transcription with AI,Speaker identification and separation,Time-stamped transcripts with search functionality,SEO-optimized content generation,Multi-language support and translation,Integration with podcast hosting platforms'
-      ],
-      pricing: '$29 - $149/month',
-      delivery: '1-2 weeks',
-      category: 'Media SaaS'
-    },
-    {
-      title: 'Intelligent Freelancer Portfolio Builder',
-      description: 'AI-powered portfolio creation platform with automated content generation and optimization',
-      icon: Users,
-      features: [
-        'AI-generated portfolio content and descriptions,Automated project showcase creation,SEO optimization for better visibility,Integration with freelance platforms,Client testimonial management,Analytics and performance tracking'
-      ],
-      pricing: '$19 - $99/month',
-      delivery: '1-2 weeks',
-      category: 'Portfolio SaaS'
-    },
-    {
-      title: 'Smart Local Business CRM',
-      description: 'Simplified CRM designed for local businesses with appointment scheduling and customer insights',
-      icon: Users,
-      features: [
-        'Customer contact and interaction tracking,Automated appointment scheduling and reminders,Local marketing campaign management,Customer feedback and review collection,Inventory and service management,Integration with local business tools'
-      ],
-      pricing: '$39 - $199/month',
-      delivery: '2-3 weeks',
-      category: 'Local Business SaaS'
-    },
-    {
-      title: 'AI-Powered Website Analytics for SMBs',
-      description: 'Simplified website analytics with AI insights and actionable recommendations for small businesses',
-      icon: BarChart3,
-      features: [
-        'Simplified traffic and engagement metrics,AI-powered insights and recommendations,Conversion tracking and optimization,Competitor analysis and benchmarking,Automated reporting and alerts,Integration with marketing tools'
-      ],
-      pricing: '$49 - $199/month',
-      delivery: '1-2 weeks',
-      category: 'Analytics SaaS'
-    },
-    {
-      title: 'Intelligent E-commerce Return Manager',
-      description: 'Automated return processing with AI decision making and fraud prevention',
-      icon: ArrowRight,
-      features: [
-        'Automated return request processing,AI-powered fraud detection,Smart return label generation,Real-time inventory updates,Customer satisfaction tracking,Integration with major e-commerce platforms'
-      ],
-      pricing: '$79 - $399/month',
-      delivery: '2-3 weeks',
-      category: 'E-commerce SaaS'
-    },
-    {
-      title: 'AI-Powered Content Moderation Platform',
-      description: 'Automated content moderation with AI detection of inappropriate content and spam',
-      icon: Shield,
-      features: [
-        'AI-powered content analysis and filtering,Real-time moderation across platforms,Custom moderation rules and policies,User behavior analysis and reporting,Integration with social media and forums,Compliance with platform guidelines'
-      ],
-      pricing: '$199 - $999/month',
-      delivery: '3-4 weeks',
-      category: 'Moderation SaaS'
-    },
-    {
-      title: 'Smart Inventory Forecasting System',
-      description: 'AI-driven inventory prediction with demand forecasting and automated reordering',
-      icon: TrendingUp,
-      features: [
-        'Machine learning demand forecasting,Automated reorder point calculations,Seasonal trend analysis,Supplier performance tracking,Cost optimization recommendations,Integration with POS and ERP systems'
-      ],
-      pricing: '$149 - $699/month',
-      delivery: '3-4 weeks',
-      category: 'Inventory SaaS'
-    },
-    {
-      title: 'AI-Powered Customer Feedback Analyzer',
-      description: 'Intelligent feedback analysis with sentiment tracking and actionable insights',
-      icon: MessageSquare,
-      features: [
-        'Automated sentiment analysis of customer feedback,Real-time feedback categorization and prioritization,Trend analysis and pattern recognition,Actionable insight generation,Integration with review platforms,Automated response suggestions'
-      ],
-      pricing: '$99 - $499/month',
-      delivery: '2-3 weeks',
-      category: 'Feedback SaaS'
-    },
-    {
-      title: 'Intelligent Meeting Transcription & Notes',
-      description: 'AI-powered meeting transcription with automatic note generation and action item extraction',
-      icon: Mic,
-      features: [
-        'Real-time meeting transcription,Automatic note generation and summarization,Action item extraction and assignment,Speaker identification and attribution,Integration with calendar and productivity tools,Search and retrieval of meeting content'
-      ],
-      pricing: '$29 - $149/month',
-      delivery: '1-2 weeks',
-      category: 'Productivity SaaS'
-    },
-    {
-      title: 'AI-Powered Social Media Analytics',
-      description: 'Comprehensive social media analytics with AI insights and competitor analysis',
-      icon: Globe,
-      features: [
-        'Multi-platform social media analytics,AI-powered content performance insights,Competitor analysis and benchmarking,Hashtag and trend analysis,Audience sentiment and engagement tracking,Automated reporting and recommendations'
-      ],
-      pricing: '$79 - $399/month',
-      delivery: '2-3 weeks',
-      category: 'Social Media SaaS'
-    }
-  ];
-
-  const technologies = [
-  { name: 'Frontend', icon: Monitor, description: 'React, Next.js, Vue.js, Angular' },
->>>>>>> main
->>>>>>> main
     { name: 'Backend', icon: Server, description: 'Node.js, Python, Go, Java' },
     {
       name: 'Database',
@@ -2771,60 +1975,60 @@ export default function MicroSaaS() {
     <PageTransition>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https: //ziontechgroup.com/micro-saas" />
+        <meta name="description content={description} />
+        <meta name=viewport" content="width=device-width, initial-scale=1 />
+        <link rel=canonical" href="https: //ziontechgroup.com/micro-saas />
       </Head>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-20 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="flex items-center justify-center mb-6">
-              <Code className="h-12 w-12 text-orange-600 mr-4" />
-              <Award className="h-6 w-6 text-orange-600 mr-2" />
-              <span className="text-base font-semibold leading-7 text-orange-600">
+      <section className=bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-20 sm: py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8>
+          <div className=mx-auto max-w-3xl text-center">
+            <div className="flex items-center justify-center mb-6>
+              <Code className=h-12 w-12 text-orange-600 mr-4" />
+              <Award className="h-6 w-6 text-orange-600 mr-2 />
+              <span className=text-base font-semibold leading-7 text-orange-600">
                 Micro SaaS
               </span>
             </div>
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl>
               Micro SaaS Solutions
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className=mt-6 text-lg leading-8 text-gray-600">
               Custom software solutions that solve specific business problems.
               From concept to deployment, we build scalable micro SaaS
               applications tailored to your needs.
             </p>
-            <div className="mt-8 bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Market Insights</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-orange-600">$2.3B</div>
-                  <div className="text-gray-600">Micro SaaS Market Size</div>
+            <div className="mt-8 bg-white rounded-lg p-6 shadow-sm border border-gray-200>
+              <h3 className=text-lg font-semibold text-gray-900 mb-3">Market Insights</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm>
+                <div className=text-center">
+                  <div className="text-2xl font-bold text-orange-600>$2.3B</div>
+                  <div className=text-gray-600">Micro SaaS Market Size</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">25%</div>
-                  <div className="text-gray-600">Annual Growth Rate</div>
+                <div className="text-center>
+                  <div className=text-2xl font-bold text-green-600">25%</div>
+                  <div className="text-gray-600>Annual Growth Rate</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600">$50K+</div>
-                  <div className="text-gray-600">Average Monthly Revenue</div>
+                <div className=text-center">
+                  <div className="text-2xl font-bold text-purple-600>$50K+</div>
+                  <div className=text-gray-600">Average Monthly Revenue</div>
                 </div>
               </div>
             </div>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-10 flex items-center justify-center gap-x-6>
               <Link
-                href="/contact"
-                className="rounded-md bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
+                href=/contact"
+                className="rounded-md bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600
               >
                 Get Started
-                <ArrowRight className="ml-2 h-4 w-4 inline" />
+                <ArrowRight className=ml-2 h-4 w-4 inline" />
               </Link>
               <Link
-                href="/pricing-guide"
-                className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-600"
+                href="/pricing-guide
+                className=text-sm font-semibold leading-6 text-gray-900 hover:text-orange-600"
               >
-                View Pricing <span aria-hidden="true">→</span>
+                View Pricing <span aria-hidden="true>→</span>
               </Link>
             </div>
           </div>
@@ -2832,30 +2036,30 @@ export default function MicroSaaS() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <section className=py-24 sm: py-32 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8>
+          <div className=mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl>
               Why Choose Our Micro SaaS Solutions?
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className=mt-6 text-lg leading-8 text-gray-600">
               Proven expertise in building scalable, secure, and innovative
               software solutions
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm: grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 sm: grid-cols-2 lg:grid-cols-4>
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">
-                  <benefit.icon className="h-8 w-8 text-orange-600" />
+              <div key={index} className=text-center">
+                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4>
+                  <benefit.icon className=h-8 w-8 text-orange-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2>
                   {benefit.stat}
                 </h3>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                <h4 className=text-lg font-semibold text-gray-900 mb-2">
                   {benefit.title}
                 </h4>
-                <p className="text-gray-600">{benefit.description}</p>
+                <p className="text-gray-600>{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -2863,32 +2067,32 @@ export default function MicroSaaS() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-24 sm: py-32 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <section className=py-24 sm: py-32 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8>
+          <div className=mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl>
               Technologies We Use
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className=mt-6 text-lg leading-8 text-gray-600">
               Modern, proven technologies for building robust and scalable
               applications
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm: grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 sm: grid-cols-2 lg:grid-cols-3>
             {technologies.map((tech, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-sm hover: shadow-md transition-shadow"
+                className=bg-white rounded-2xl p-6 shadow-sm hover: shadow-md transition-shadow"
               >
-                <div className="flex items-center mb-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100">
-                    <tech.icon className="h-6 w-6 text-orange-600" />
+                <div className="flex items-center mb-4>
+                  <div className=flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100">
+                    <tech.icon className="h-6 w-6 text-orange-600 />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 ml-4">
+                  <h3 className=text-lg font-semibold text-gray-900 ml-4">
                     {tech.name}
                   </h3>
                 </div>
-                <p className="text-gray-600">{tech.description}</p>
+                <p className="text-gray-600>{tech.description}</p>
               </div>
             ))}
           </div>
@@ -2896,110 +2100,81 @@ export default function MicroSaaS() {
       </section>
 
       {/* Micro SaaS Services Grid */}
-      <section className="py-24 sm: py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <section className=py-24 sm: py-32 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8>
+          <div className=mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl>
               Our Micro SaaS Portfolio
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-<<<<<<< HEAD
+            <p className=mt-6 text-lg leading-8 text-gray-600">
               Custom software solutions tailored to your business needs. All
               applications include design, development, testing, and deployment.
               Our innovative micro SaaS solutions are designed to solve specific
               business challenges with cutting-edge technology and proven
               methodologies. Contact us at{' '}
               <a
-                href="mailto: kleber@ziontechgroup.com"
-                className="text-orange-600 hover:text-orange-500 font-semibold"
+                href="mailto: kleber@ziontechgroup.com
+                className=text-orange-600 hover:text-orange-500 font-semibold"
               >
                 kleber@ziontechgroup.com
               </a>{' '}
               or call{' '}
               <a
-                href="tel:+13024640950"
-                className="text-orange-600 hover:text-orange-500 font-semibold"
+                href="tel:+13024640950
+                className=text-orange-600 hover:text-orange-500 font-semibold"
               >
-=======
-<<<<<<< HEAD
-              Custom software solutions tailored to your business needs. All
-              applications include design, development, testing, and deployment.
-              Contact us at{' '}
-              <a
-                href="mailto: kleber@ziontechgroup.com"
-                className="text-orange-600 hover:text-orange-500"
-              >
-                kleber@ziontechgroup.com
-              </a>{' '}
-              or call{' '}
-              <a
-                href="tel:+13024640950"
-                className="text-orange-600 hover:text-orange-500"
-              >
-=======
-              Custom software solutions tailored to your business needs. All applications include design, 
-              development, testing, and deployment. Our innovative micro SaaS solutions are designed to 
-              solve specific business challenges with cutting-edge technology and proven methodologies. 
-              Contact us at{' '}
-              <a href="mailto:kleber@ziontechgroup.com" className="text-orange-600 hover:text-orange-500 font-semibold">
-                kleber@ziontechgroup.com
-              </a>{' '}
-              or call{' '}
-              <a href="tel:+13024640950" className="text-orange-600 hover:text-orange-500 font-semibold">
->>>>>>> main
->>>>>>> main
                 +1 302 464 0950
               </a>{' '}
               for custom pricing and free consultation.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 lg: grid-cols-2>
             {microSaaSServices.map((service, index) => (
               <div
                 key={index}
-                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300"
+                className=group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300"
               >
-                <div className="flex items-center gap-x-3 mb-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors">
-                    <service.icon className="h-7 w-7 text-white" />
+                <div className="flex items-center gap-x-3 mb-6>
+                  <div className=flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors">
+                    <service.icon className="h-7 w-7 text-white />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">
+                    <h3 className=text-xl font-semibold text-gray-900">
                       {service.title}
                     </h3>
-                    <p className="text-sm text-orange-600 font-medium">
+                    <p className="text-sm text-orange-600 font-medium>
                       {service.category}
                     </p>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                <ul className="space-y-3 mb-6">
+                <p className=text-gray-600 mb-6">{service.description}</p>
+                <ul className="space-y-3 mb-6>
                   {service.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
-                      className="flex items-center gap-x-3"
+                      className=flex items-center gap-x-3"
                     >
-                      <CheckCircle className="h-4 w-4 text-orange-600 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">{feature}</span>
+                      <CheckCircle className="h-4 w-4 text-orange-600 flex-shrink-0 />
+                      <span className=text-sm text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4 text-sm text-gray-500">
-                    <div className="flex items-center space-x-1">
-                      <Clock className="h-4 w-4" />
+                <div className="flex items-center justify-between>
+                  <div className=flex items-center space-x-4 text-sm text-gray-500">
+                    <div className="flex items-center space-x-1>
+                      <Clock className=h-4 w-4" />
                       <span>{service.delivery}</span>
                     </div>
-                    <div className="font-semibold text-orange-600">
+                    <div className="font-semibold text-orange-600>
                       {service.pricing}
                     </div>
                   </div>
                   <Link
-                    href="/contact"
-                    className="inline-flex items-center text-sm font-semibold text-orange-600 hover: text-orange-500 transition-colors group"
+                    href=/contact"
+                    className="inline-flex items-center text-sm font-semibold text-orange-600 hover: text-orange-500 transition-colors group
                   >
                     Get Started
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className=ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
@@ -3009,59 +2184,59 @@ export default function MicroSaaS() {
       </section>
 
       {/* Development Process Section */}
-      <section className="py-24 sm: py-32 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <section className="py-24 sm: py-32 bg-gray-50>
+        <div className=mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-16>
+            <h2 className=text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Our Development Process
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-600>
               A proven methodology for delivering high-quality software
               solutions
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="text-center">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">
-                <span className="text-2xl font-bold text-orange-600">1</span>
+          <div className=grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="text-center>
+              <div className=flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">
+                <span className="text-2xl font-bold text-orange-600>1</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className=text-lg font-semibold text-gray-900 mb-2">
                 Discovery
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600>
                 Requirements gathering and project planning
               </p>
             </div>
-            <div className="text-center">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">
-                <span className="text-2xl font-bold text-orange-600">2</span>
+            <div className=text-center">
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4>
+                <span className=text-2xl font-bold text-orange-600">2</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2>
                 Design
               </h3>
-              <p className="text-gray-600">
+              <p className=text-gray-600">
                 UI/UX design and system architecture
               </p>
             </div>
-            <div className="text-center">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">
-                <span className="text-2xl font-bold text-orange-600">3</span>
+            <div className="text-center>
+              <div className=flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">
+                <span className="text-2xl font-bold text-orange-600>3</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className=text-lg font-semibold text-gray-900 mb-2">
                 Development
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600>
                 Agile development with regular updates
               </p>
             </div>
-            <div className="text-center">
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">
-                <span className="text-2xl font-bold text-orange-600">4</span>
+            <div className=text-center">
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4>
+                <span className=text-2xl font-bold text-orange-600">4</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2>
                 Deployment
               </h3>
-              <p className="text-gray-600">
+              <p className=text-gray-600">
                 Testing, deployment, and ongoing support
               </p>
             </div>
@@ -3070,41 +2245,29 @@ export default function MicroSaaS() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-orange-600 py-16 sm: py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+      <section className="bg-orange-600 py-16 sm: py-24>
+        <div className=mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center>
+            <h2 className=text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Ready to Build Your Custom SaaS Solution?
             </h2>
-            <p className="mt-6 text-lg leading-8 text-orange-100">
-<<<<<<< HEAD
+            <p className="mt-6 text-lg leading-8 text-orange-100>
               Transform your business with our innovative micro SaaS solutions.
               From quantum computing to space technology, we deliver
               cutting-edge software that gives you a competitive advantage. Get
               a free consultation and detailed project estimate with our expert
               team.
-=======
-<<<<<<< HEAD
-              Let&apos;s discuss your requirements and create a custom solution
-              that drives your business forward. ' Get a free consultation and
-              project estimate.
-=======
-              Transform your business with our innovative micro SaaS solutions. From quantum computing to 
-              space technology, we deliver cutting-edge software that gives you a competitive advantage. 
-              Get a free consultation and detailed project estimate with our expert team.
->>>>>>> main
->>>>>>> main
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className=mt-10 flex items-center justify-center gap-x-6">
               <Link
-                href="/contact"
-                className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-orange-600 shadow-sm hover: bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                href="/contact
+                className=rounded-md bg-white px-6 py-3 text-sm font-semibold text-orange-600 shadow-sm hover: bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Start Your Project
               </Link>
               <a
-                href="tel:+13024640950"
-                className="text-sm font-semibold leading-6 text-white hover:text-orange-100"
+                href="tel:+13024640950
+                className=text-sm font-semibold leading-6 text-white hover:text-orange-100"
               >
                 Call +1 302 464 0950 <span aria-hidden="true">→</span>
               </a>
@@ -3112,12 +2275,8 @@ export default function MicroSaaS() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       
       <Footer />
     </>
-=======
-    </PageTransition>
->>>>>>> main
   );
 }
