@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe } from 'lucide-react';
+import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain } from 'lucide-react';
 
 export default function MicroSaaS() {
   const contact = {
@@ -539,6 +539,336 @@ export default function MicroSaaS() {
         'Reduced compliance costs'
       ],
       category: 'Compliance'
+    },
+    {
+      icon: Zap,
+      name: 'Smart Invoice Processing & AP Automation',
+      description: 'AI-powered accounts payable automation with intelligent invoice processing and approval workflows.',
+      features: [
+        'OCR and intelligent data extraction from invoices',
+        'Automated 3-way matching and validation',
+        'Smart approval routing and workflows',
+        'Exception handling and discrepancy resolution',
+        'Integration with ERP and accounting systems',
+        'Real-time AP analytics and reporting'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '80% reduction in invoice processing time',
+        'Automated approval workflows',
+        'Improved accuracy and compliance',
+        'Better cash flow management'
+      ],
+      category: 'Financial Automation'
+    },
+    {
+      icon: Code,
+      name: 'AI-Powered Code Review Assistant',
+      description: 'Intelligent code review automation with security scanning, performance analysis, and best practice recommendations.',
+      features: [
+        'Automated code quality analysis',
+        'Security vulnerability detection',
+        'Performance bottleneck identification',
+        'Best practice recommendations',
+        'Custom rule configuration',
+        'Integration with CI/CD pipelines'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '60% faster code review process',
+        'Reduced security vulnerabilities',
+        'Improved code quality',
+        'Automated best practice enforcement'
+      ],
+      category: 'Development Tools'
+    },
+    {
+      icon: TrendingUp,
+      name: 'Dynamic Pricing Optimization Engine',
+      description: 'AI-driven dynamic pricing with real-time market analysis and competitor monitoring.',
+      features: [
+        'Real-time market price analysis',
+        'Competitor pricing monitoring',
+        'Demand-based price optimization',
+        'A/B testing for pricing strategies',
+        'Revenue impact forecasting',
+        'Automated price adjustment rules'
+      ],
+      pricing: '$599 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '15% increase in revenue',
+        'Automated pricing optimization',
+        'Competitive advantage insights',
+        'Data-driven pricing decisions'
+      ],
+      category: 'Revenue Optimization'
+    },
+    {
+      icon: Shield,
+      name: 'Intelligent Supply Chain Monitor',
+      description: 'AI-powered supply chain risk assessment and disruption prediction with automated mitigation strategies.',
+      features: [
+        'Supply chain risk assessment',
+        'Disruption prediction and early warning',
+        'Vendor performance monitoring',
+        'Alternative supplier recommendations',
+        'Cost impact analysis',
+        'Automated mitigation workflows'
+      ],
+      pricing: '$799 – $4,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '40% reduction in supply chain disruptions',
+        'Proactive risk management',
+        'Improved supplier relationships',
+        'Cost optimization opportunities'
+      ],
+      category: 'Supply Chain Intelligence'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Customer Sentiment Analyzer',
+      description: 'Real-time customer sentiment analysis across all touchpoints with actionable insights and automated responses.',
+      features: [
+        'Multi-channel sentiment monitoring',
+        'Real-time sentiment scoring',
+        'Automated response recommendations',
+        'Trend analysis and reporting',
+        'Customer journey sentiment mapping',
+        'Integration with CRM and support systems'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '50% improvement in customer satisfaction',
+        'Proactive issue identification',
+        'Automated response workflows',
+        'Data-driven customer insights'
+      ],
+      category: 'Customer Intelligence'
+    },
+    {
+      icon: Globe,
+      name: 'Smart Content Localization Platform',
+      description: 'AI-powered content localization with cultural adaptation, SEO optimization, and compliance management.',
+      features: [
+        'Intelligent content translation',
+        'Cultural adaptation and localization',
+        'SEO optimization for target markets',
+        'Compliance and regulatory checking',
+        'Brand voice consistency maintenance',
+        'Multi-language content management'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '300% faster content localization',
+        'Improved global market penetration',
+        'Consistent brand messaging',
+        'Reduced localization costs'
+      ],
+      category: 'Content Management'
+    },
+    {
+      icon: BarChart3,
+      name: 'Predictive Maintenance Analytics',
+      description: 'AI-driven equipment maintenance prediction with failure forecasting and optimization recommendations.',
+      features: [
+        'Equipment failure prediction',
+        'Maintenance scheduling optimization',
+        'Cost-benefit analysis for repairs',
+        'Spare parts inventory optimization',
+        'Performance degradation monitoring',
+        'Maintenance history analytics'
+      ],
+      pricing: '$499 – $3,499/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '30% reduction in maintenance costs',
+        'Prevented equipment failures',
+        'Optimized maintenance schedules',
+        'Improved equipment uptime'
+      ],
+      category: 'Industrial IoT'
+    },
+    {
+      icon: Users,
+      name: 'Intelligent Talent Acquisition Platform',
+      description: 'AI-powered recruitment automation with candidate matching, interview scheduling, and bias reduction.',
+      features: [
+        'AI-powered candidate screening',
+        'Skills and culture fit matching',
+        'Automated interview scheduling',
+        'Bias detection and reduction',
+        'Candidate pipeline management',
+        'Recruitment analytics and reporting'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '50% faster hiring process',
+        'Improved candidate quality',
+        'Reduced hiring bias',
+        'Better candidate experience'
+      ],
+      category: 'HR Technology'
+    },
+    {
+      icon: Mail,
+      name: 'Smart Email Campaign Optimizer',
+      description: 'AI-driven email marketing optimization with send time prediction, subject line testing, and engagement analysis.',
+      features: [
+        'Optimal send time prediction',
+        'Subject line A/B testing',
+        'Engagement pattern analysis',
+        'Audience segmentation optimization',
+        'Content personalization',
+        'Deliverability optimization'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '35% increase in email engagement',
+        'Automated campaign optimization',
+        'Improved deliverability rates',
+        'Data-driven email strategies'
+      ],
+      category: 'Email Marketing'
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Compliance Monitor',
+      description: 'Automated compliance monitoring with regulatory change tracking and risk assessment.',
+      features: [
+        'Regulatory change monitoring',
+        'Compliance gap analysis',
+        'Risk assessment and scoring',
+        'Automated compliance reporting',
+        'Policy management and updates',
+        'Audit trail and documentation'
+      ],
+      pricing: '$599 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '90% reduction in compliance violations',
+        'Automated regulatory monitoring',
+        'Proactive risk management',
+        'Reduced compliance costs'
+      ],
+      category: 'Compliance Management'
+    },
+    {
+      icon: Zap,
+      name: 'Smart Energy Management System',
+      description: 'AI-powered energy optimization for buildings and facilities with cost reduction and sustainability tracking.',
+      features: [
+        'Energy consumption monitoring',
+        'Predictive energy optimization',
+        'Cost reduction recommendations',
+        'Sustainability tracking and reporting',
+        'Integration with smart devices',
+        'Carbon footprint analysis'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '25% reduction in energy costs',
+        'Improved sustainability metrics',
+        'Automated energy optimization',
+        'Better environmental compliance'
+      ],
+      category: 'Sustainability Tech'
+    },
+    {
+      icon: Globe,
+      name: 'Intelligent Website Personalization Engine',
+      description: 'AI-driven website personalization with real-time content adaptation and user experience optimization.',
+      features: [
+        'Real-time content personalization',
+        'User behavior analysis',
+        'A/B testing automation',
+        'Conversion rate optimization',
+        'Dynamic pricing display',
+        'Personalized recommendations'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '40% increase in conversion rates',
+        'Improved user engagement',
+        'Automated personalization',
+        'Better customer experience'
+      ],
+      category: 'Web Personalization'
+    },
+    {
+      icon: BarChart3,
+      name: 'Smart Financial Planning Assistant',
+      description: 'AI-powered financial planning and budgeting with expense tracking and investment recommendations.',
+      features: [
+        'Automated expense categorization',
+        'Budget planning and tracking',
+        'Investment opportunity analysis',
+        'Financial goal setting and monitoring',
+        'Tax optimization recommendations',
+        'Financial health scoring'
+      ],
+      pricing: '$99 – $799/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '30% improvement in financial health',
+        'Automated financial planning',
+        'Better investment decisions',
+        'Reduced financial stress'
+      ],
+      category: 'FinTech'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Learning Management System',
+      description: 'Intelligent learning platform with personalized content delivery and progress tracking.',
+      features: [
+        'Personalized learning paths',
+        'Adaptive content delivery',
+        'Progress tracking and analytics',
+        'Skill gap identification',
+        'Automated assessment and grading',
+        'Learning outcome prediction'
+      ],
+      pricing: '$199 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '50% improvement in learning outcomes',
+        'Personalized learning experience',
+        'Automated progress tracking',
+        'Better skill development'
+      ],
+      category: 'EdTech'
+    },
+    {
+      icon: Shield,
+      name: 'Smart Identity Verification Platform',
+      description: 'AI-powered identity verification with document authentication and fraud prevention.',
+      features: [
+        'Document authentication and verification',
+        'Biometric identity verification',
+        'Fraud detection and prevention',
+        'Compliance with KYC/AML regulations',
+        'Multi-factor authentication',
+        'Real-time risk assessment'
+      ],
+      pricing: '$0.10 – $2.00 per verification',
+      timeline: '2–3 weeks',
+      benefits: [
+        '99.9% verification accuracy',
+        'Reduced fraud incidents',
+        'Automated compliance',
+        'Improved user onboarding'
+      ],
+      category: 'Identity Management'
     }
   ];
 
