@@ -31,6 +31,18 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease'
           }}>All Services</Link>
+          <Link href="/micro-saas" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease'
+          }}>Micro SaaS</Link>
+          <Link href="/ai-services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease'
+          }}>AI Services</Link>
+          <Link href="/it-services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease'
+          }}>IT Services</Link>
           <Link href="/services-catalog" style={{ 
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease'
@@ -39,6 +51,10 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease'
           }}>Pricing</Link>
+          <Link href="/about" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease'
+          }}>About</Link>
           <Link href="/contact" style={{ 
             fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
             color: 'white', padding: '8px 16px', borderRadius: 8,
@@ -97,12 +113,15 @@ function Footer(): any {
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Services</h3>
           <div style={{ display: 'grid', gap: 8 }}>
             <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none' }}>All Services</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none' }}>Micro SaaS Products</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none' }}>AI Services</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none' }}>IT Services</Link>
             <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none' }}>Services Catalog</Link>
             <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none' }}>Pricing</Link>
             <div style={{ opacity: 0.8, fontSize: '0.9rem', marginTop: 8 }}>
-              <div>• 60+ Micro SaaS Products</div>
-              <div>• 40+ AI Services</div>
-              <div>• 40+ IT Solutions</div>
+              <div>• 120+ Micro SaaS Products</div>
+              <div>• 80+ AI Services</div>
+              <div>• 80+ IT Solutions</div>
             </div>
           </div>
         </div>
@@ -112,8 +131,11 @@ function Footer(): any {
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Quick Links</h3>
           <div style={{ display: 'grid', gap: 8 }}>
             <Link href="/" style={{ opacity: 0.8, textDecoration: 'none' }}>Home</Link>
+            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none' }}>About Us</Link>
             <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none' }}>Contact Us</Link>
+            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none' }}>FAQ</Link>
             <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none' }}>Privacy Policy</Link>
+            <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none' }}>Terms of Service</Link>
             <a href="https://ziontechgroup.com" style={{ opacity: 0.8, textDecoration: 'none' }}>Main Website</a>
           </div>
         </div>

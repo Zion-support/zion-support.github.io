@@ -29,9 +29,9 @@ export default function Home() {
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              We deliver cutting-edge technology solutions with 39+ micro SaaS products, 
-              28+ advanced AI services, and 35+ comprehensive IT solutions. From cloud optimization 
-              to AI automation, we help businesses scale efficiently and securely with proven results.
+              We deliver cutting-edge technology solutions with 120+ micro SaaS products, 
+              80+ advanced AI services, and 80+ comprehensive IT solutions. From cloud optimization 
+              to AI automation, we help businesses scale efficiently and securely.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -48,15 +48,15 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-blue-400 mb-2">39+</h3>
+                <h3 className="text-2xl font-bold text-blue-400 mb-2">120+</h3>
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">28+</h3>
+                <h3 className="text-2xl font-bold text-purple-400 mb-2">80+</h3>
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-green-400 mb-2">35+</h3>
+                <h3 className="text-2xl font-bold text-green-400 mb-2">80+</h3>
                 <p className="text-slate-300">IT Solutions</p>
               </div>
             </div>
