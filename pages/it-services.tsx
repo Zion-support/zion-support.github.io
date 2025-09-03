@@ -725,7 +725,6 @@ export default function ITServices() {
       category: 'Network Security'
     },
     {
-<<<<<<< HEAD
       title: 'AI-Powered IT Operations (AIOps)',
       description: 'Intelligent IT operations with AI-driven automation and predictive analytics',
       icon: Brain,
@@ -757,41 +756,20 @@ export default function ITServices() {
       pricing: '$15,000 - $75,000/month',
       delivery: '12-24 weeks',
       category: 'Quantum Security'
-=======
-      title: 'AI-Powered IT Operations Management',
-      description: 'Intelligent IT operations with AI-driven automation and predictive maintenance',
-      icon: Brain,
-      features: [
-        'AI-powered incident detection and resolution,Automated root cause analysis,Predictive maintenance and capacity planning,Intelligent alert correlation and noise reduction,Automated remediation and self-healing systems,Performance optimization recommendations'
-      ],
-      pricing: '$4,000 - $20,000/month',
-      delivery: '4-8 weeks',
-      category: 'AI Operations'
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-68a5
     },
     {
       title: 'Edge Computing Infrastructure',
       description: 'Distributed edge computing solutions for low-latency applications and IoT',
-<<<<<<< HEAD
       icon: Cpu,
       features: [
         'Edge computing platform design and deployment,Distributed data processing and analytics,Edge AI and machine learning deployment,5G network integration and optimization,Edge security and device management,Multi-cloud edge orchestration'
       ],
       pricing: '$6,000 - $30,000/month',
       delivery: '8-16 weeks',
-=======
-      icon: Satellite,
-      features: [
-        'Edge server deployment and management,Edge-to-cloud data synchronization,Low-latency application hosting,Edge AI and machine learning inference,Edge security and access control,Edge monitoring and analytics'
-      ],
-      pricing: '$2,500 - $12,000/month',
-      delivery: '3-6 weeks',
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-68a5
       category: 'Edge Computing'
     },
     {
       title: 'Green IT & Sustainability Solutions',
-<<<<<<< HEAD
       description: 'Environmentally conscious IT infrastructure and carbon footprint reduction',
       icon: TreePine,
       features: [
@@ -919,7 +897,6 @@ export default function ITServices() {
       pricing: '$4,500 - $22,000/month',
       delivery: '6-12 weeks',
       category: 'Zero Trust Security'
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-68a5
     }
   ];
 

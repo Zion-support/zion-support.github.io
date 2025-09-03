@@ -865,7 +865,6 @@ export default function AIServices() {
       category: 'Personalization AI'
     },
     {
-<<<<<<< HEAD
       title: 'AI-Powered Quantum Computing Simulator',
       description: 'Advanced quantum computing simulation and optimization platform for complex problem solving',
       icon: Cpu,
@@ -1061,7 +1060,6 @@ export default function AIServices() {
       pricing: '$12,000 - $50,000/month',
       delivery: '16-24 weeks',
       category: 'Pharmaceutical AI'
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-68a5
     }
   ];
   const aiTechnologies = [

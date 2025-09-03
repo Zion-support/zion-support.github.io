@@ -67,8 +67,6 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-<<<<<<< HEAD
-=======
       'no-console': 'warn',
     },
     settings: {
@@ -82,7 +80,7 @@ export default [
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
-      parser: tsparser,
+      parser: typescriptParser,
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
@@ -129,12 +127,11 @@ export default [
     plugins: {
       react,
       'react-hooks': reactHooks,
-      '@typescript-eslint': tseslint,
+      '@typescript-eslint': typescript,
     },
     rules: {
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-c473
       '@typescript-eslint/no-unused-vars': [
         'warn',
         { argsIgnorePattern: '^_' }
@@ -154,8 +151,6 @@ export default [
   },
   {
     ignores: [
-<<<<<<< HEAD
-=======
       'src/**',
       'components/**',
       'backup-pages/**',
@@ -185,7 +180,6 @@ export default [
       'supabase/**',
       'ecosystem*.js',
       'jest.*',
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-c473
       'node_modules/',
       '.next/',
       'out/',
@@ -325,7 +319,6 @@ export default [
       'test*.js',
       'test*.ts',
       'test*.tsx',
-<<<<<<< HEAD
       '**/data_backup/**',
       '**/pages.disabled_auto/**',
       '**/test_build/**',
@@ -344,10 +337,8 @@ export default [
       '*.md',
       '*.txt',
       '*.yml',
-      '*.yaml'
-=======
+      '*.yaml',
       '.prettierrc.js'
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-c473
     ]
   }
 ];
