@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import PrivacyPolicy from './PrivacyPolicy';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import PrivacyPolicy from './PrivacyPolicy
 describe('PrivacyPolicy', () => {"
   it('renders without crashing', () => {
     render(<PrivacyPolicy /" >);"

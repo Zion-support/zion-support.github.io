@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-interface PerformanceMetrics {
+import React, { useEffect }  from 'react';interface PerformanceMetrics {
   fcp?: number
    lcp?: number
    fid?: number
@@ -79,7 +78,7 @@ const PerformanceMonitor: React.FC = () => {
     const sendMetrics = () => {
       if (typeof window !== 'undefined' && (window as any).gtag) {
         // Send to Google Analytics
-        (window as any).gtag('event', 'web_vitals', {
+        (window as any).gtag('event,web_vitals', {
           event_category: 'Performance', event_label: 'Core Web Vitals', custom_map: {
             metric_1: 'fcp', metric_2: 'lcp', metric_3: 'fid', metric_4: 'cls', metric_5: 'ttfb'
           }, value: Math.round(metrics.fcp || 0), non_interaction: true

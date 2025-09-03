@@ -6,14 +6,14 @@ import { Users, Award, Target, Globe, Brain, Shield, Zap, CheckCircle, ArrowRigh
 
 export default function About() {
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
+  { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
   ];
 
   const values = [
-    {
+  {
       icon: Brain,
       title: 'Innovation',
       description: 'We stay at the forefront of technology, constantly exploring new ways to solve complex problems and deliver cutting-edge solutions.'
@@ -36,7 +36,7 @@ export default function About() {
   ];
 
   const team = [
-    {
+  {
       name: 'Kleber Santos',
       role: 'Founder & CEO',
       description: 'Technology visionary with over 15 years of experience in AI, cloud computing, and digital transformation.',
@@ -63,12 +63,7 @@ export default function About() {
   ];
 
   const achievements = [
-    'Microsoft Azure Certified Partner',
-    'AWS Advanced Consulting Partner',
-    'Google Cloud Premier Partner',
-    'ISO 27001 Certified',
-    'SOC 2 Type II Compliant',
-    'GDPR Compliant'
+    'Microsoft Azure Certified Partner,AWS Advanced Consulting Partner,Google Cloud Premier Partner,ISO 27001 Certified,SOC 2 Type II Compliant,GDPR Compliant'
   ];
 
   return (

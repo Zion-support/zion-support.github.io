@@ -32,8 +32,7 @@ class AutoCommitFixes {
           const parts = line.trim().split(/\s+/);
           return {
             status: parts[0],
-            file: parts.slice(1).join(';
-  ')}
+            file: parts.slice(1).join()}
         })
       return { hasChanges: true, files }
     } catch (error) {
@@ -64,8 +63,7 @@ class AutoCommitFixes {
   async stageFiles(files) {
     try {
       if (files.length === 0) return;
-      execSync(`git add ${files.join(';
-  ')}`, {
+      execSync(`git add ${files.join()}`, {
         cwd: this.projectRoot,
         stdio: 'pipe;
   '})

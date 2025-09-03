@@ -38,42 +38,35 @@ import {
 const Privacy: React.FC = () => {
   const lastUpdated = '2025-01-15';
   const sections = [
-    {
+  {
       id: 'information-we-collect', title: 'Information We Collect',
       icon: Database, content: [;
-        'Personal Information: Name, email address, phone number, company information', 'Usage Data: Website interactions, service usage patterns, and performance metrics',
-        'Technical Data: IP address, browser type, device information, and cookies',
-        'Communication Data: Messages, emails, and other communications with us';
+        'Personal Information: Name, email address, phone number, company information,Usage Data: Website interactions, service usage patterns, and performance metrics,Technical Data: IP address, browser type, device information, and cookies,Communication Data: Messages, emails, and other communications with us';
       ]}, {
       id: 'how-we-use-information',
       title: 'How We Use Your Information', icon: Settings,
       content: [
-        'Provide and improve our AI services and solutions', 'Communicate with you about our services and updates',
-        'Process transactions and manage your account', 'Comply with legal obligations and protect our rights';
+        'Provide and improve our AI services and solutions,Communicate with you about our services and updates,Process transactions and manage your account,Comply with legal obligations and protect our rights';
       ]}, {
       id: 'information-sharing',
       title: 'Information Sharing', icon: Users,
       content: [
-        'We do not sell your personal information to third parties', 'We may share information with trusted service providers who assist in our operations',
-        'We may disclose information when required by law or to protect our rights', 'We may share aggregated, non-personal information for research and analytics';
+        'We do not sell your personal information to third parties,We may share information with trusted service providers who assist in our operations,We may disclose information when required by law or to protect our rights,We may share aggregated, non-personal information for research and analytics';
       ]}, {
       id: 'data-security',
       title: 'Data Security', icon: Lock,
       content: [
-        'We implement industry-standard security measures to protect your data', 'All data transmission is encrypted using SSL/TLS protocols',
-        'Access to personal information is restricted to authorized personnel only', 'We regularly audit our security practices and update them as needed';
+        'We implement industry-standard security measures to protect your data,All data transmission is encrypted using SSL/TLS protocols,Access to personal information is restricted to authorized personnel only,We regularly audit our security practices and update them as needed';
       ]}, {
       id: 'your-rights',
       title: 'Your Rights', icon: CheckCircle,
       content: [
-        'Access: Request access to your personal information', 'Correction: Request correction of inaccurate information',
-        'Deletion: Request deletion of your personal information', 'Portability: Request transfer of your data to another service';
+        'Access: Request access to your personal information,Correction: Request correction of inaccurate information,Deletion: Request deletion of your personal information,Portability: Request transfer of your data to another service';
       ]}, {
       id: 'cookies',
       title: 'Cookies and Tracking', icon: Eye,
       content: [
-        'We use cookies to improve your browsing experience', 'Essential cookies are required for website functionality',
-        'Analytics cookies help us understand website usage', 'You can manage cookie preferences in your browser settings';
+        'We use cookies to improve your browsing experience,Essential cookies are required for website functionality,Analytics cookies help us understand website usage,You can manage cookie preferences in your browser settings';
       ]}
   ];
   const contactInfo = {

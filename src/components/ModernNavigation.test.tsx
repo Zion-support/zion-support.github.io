@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import ModernNavigation from './ModernNavigation';"
+import { render, screen } from '@testing-library/react
+import ModernNavigation from './ModernNavigation
 describe('ModernNavigation', () => {"
   it('renders without crashing', () => {"
     render(<ModernNavigation /" >)"

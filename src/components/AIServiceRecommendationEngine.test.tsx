@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import AIServiceRecommendationEngine from './AIServiceRecommendationEngine';"
+import { render, screen } from '@testing-library/react
+import AIServiceRecommendationEngine from './AIServiceRecommendationEngine
 describe('AIServiceRecommendationEngine', () => {"
   it('renders without crashing', () => {"
     render(<AIServiceRecommendationEngine /" >)"

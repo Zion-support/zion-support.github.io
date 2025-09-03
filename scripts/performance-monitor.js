@@ -93,9 +93,9 @@ class PerformanceMonitor {
       }
       // Count files
       this.metrics.application.fileCounts = {
-        source: this.countFiles(srcPath, ['.ts', '.tsx', '.js', '.jsx']),
-        styles: this.countFiles(path.join(this.projectRoot, 'styles'), ['.css', '.scss', '.sass']),
-        tests: this.countFiles(path.join(this.projectRoot, 'tests'), ['.test.js', '.test.ts', '.spec.js', '.spec.ts'])
+        source: this.countFiles(srcPath, ['.ts,.tsx,.js,.jsx']),
+        styles: this.countFiles(path.join(this.projectRoot, 'styles'), ['.css,.scss,.sass']),
+        tests: this.countFiles(path.join(this.projectRoot, 'tests'), ['.test.js,.test.ts,.spec.js,.spec.ts'])
       };
     } catch (error) {
       console.warn('⚠️  Could not collect application metrics:', error.message);
@@ -106,10 +106,7 @@ class PerformanceMonitor {
       console.log('🔨 Collecting build metrics...');
       // Check if build artifacts exist
       const buildFiles = [
-        'dist/index.html',
-        'dist/css',
-        'dist/js',
-        'dist/assets'
+        'dist/index.html,dist/css,dist/js,dist/assets'
       ];
       this.metrics.build.artifacts = {};
       buildFiles.forEach(file => {
@@ -167,7 +164,7 @@ class PerformanceMonitor {
     return count;
   }
   async saveMetrics() {
-    const metricsPath = path.join(this.projectRoot, 'logs', 'performance-metrics.json');
+    const metricsPath = path.join(this.projectRoot, 'logs,performance-metrics.json');
     try {
       fs.writeFileSync(metricsPath, JSON.stringify(this.metrics, null, 2));
       console.log(`📊 Metrics saved to: ${metricsPath}`);

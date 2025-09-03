@@ -1,7 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import zion-hire-ai from './zion-hire-ai'
-describe('zion-hire-ai', () => {
+import zion-hire-ai  from './zion-hire-ai';describe('zion-hire-ai', () => {
   it('renders without crashing', () => {
     render(<zion-hire-ai />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

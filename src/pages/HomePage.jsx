@@ -1,4 +1,4 @@
-import React from 'react';"
+import React from 'react
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -19,28 +19,28 @@ import {
 
 export function HomePage() {
   const features = [
-    {
+  {
       icon: Brain,"
-      title: 'AI-Powered Solutions',"
-      description: 'Cutting-edge artificial intelligence and machine learning services',"
+      title: 'AI-Powered Solutions,
+      description: 'Cutting-edge artificial intelligence and machine learning services,
       color: 'from-purple-500 to-pink-500',
 },
     {
       icon: Cloud,"
-      title: 'Cloud Excellence',"
-      description: 'Scalable cloud infrastructure and migration services',"
+      title: 'Cloud Excellence,
+      description: 'Scalable cloud infrastructure and migration services,
       color: 'from-blue-500 to-cyan-500',
 },
     {
       icon: Shield,"
-      title: 'Cybersecurity',"
-      description: 'Advanced security and compliance solutions',"
+      title: 'Cybersecurity,
+      description: 'Advanced security and compliance solutions,
       color: 'from-green-500 to-emerald-500',
 },
     {
       icon: Rocket,"
-      title: 'Digital Transformation',"
-      description: 'End-to-end business transformation services',"
+      title: 'Digital Transformation,
+      description: 'End-to-end business transformation services,
       color: 'from-orange-500 to-red-500',
 }
   ];
@@ -53,21 +53,21 @@ export function HomePage() {
   ];
 
   const testimonials = [
-    {"
-      name: 'Sarah Johnson',"
-      title: 'CTO at TechCorp',"
+  {"
+      name: 'Sarah Johnson,
+      title: 'CTO at TechCorp,
       content: 'Zion Tech Group transformed our infrastructure completely. Their expertise is unmatched.',
       rating: 5,
 },
     {"
-      name: 'Michael Chen',"
-      title: 'VP Engineering',"
+      name: 'Michael Chen,
+      title: 'VP Engineering,
       content: 'The AI solutions they implemented increased our efficiency by 300%. Incredible results!',
       rating: 5,
 },
     {"
-      name: 'Emily Rodriguez',"
-      title: 'Operations Director',"
+      name: 'Emily Rodriguez,
+      title: 'Operations Director,
       content: 'Professional, reliable, and innovative. They delivered beyond our expectations.',
       rating: 5,
 }

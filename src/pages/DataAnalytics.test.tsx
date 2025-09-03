@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import DataAnalytics from './DataAnalytics';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import DataAnalytics from './DataAnalytics
 describe('DataAnalytics', () => {"
   it('renders without crashing', () => {
     render(<DataAnalytics /" >);"

@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import events from './events';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import events from './events
 describe('events', () => {"
   it('renders without crashing', () => {
     render(<events /" >);"

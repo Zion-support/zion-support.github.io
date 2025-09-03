@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import NewInnovativeServices2025 from './NewInnovativeServices2025';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import NewInnovativeServices2025 from './NewInnovativeServices2025
 describe('NewInnovativeServices2025', () => {"
   it('renders without crashing', () => {
     render(<NewInnovativeServices2025 /" >);"

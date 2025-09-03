@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import NotFoundPage from './NotFoundPage';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import NotFoundPage from './NotFoundPage
 describe('NotFoundPage', () => {"
   it('renders without crashing', () => {
     render(<NotFoundPage /" >);"

@@ -49,7 +49,7 @@ export default function Contact() {
   };
 
   const contactInfo = [
-    {
+  {
       icon: Phone,
       title: 'Phone',
       details: '+1 (302) 464-0950',
@@ -76,14 +76,7 @@ export default function Contact() {
   ];
 
   const services = [
-    'AI Solutions',
-    'IT Services',
-    'Micro SaaS',
-    'Cloud Solutions',
-    'Cybersecurity',
-    'Digital Transformation',
-    'Consulting',
-    'Other'
+    'AI Solutions,IT Services,Micro SaaS,Cloud Solutions,Cybersecurity,Digital Transformation,Consulting,Other'
   ];
 
   return (

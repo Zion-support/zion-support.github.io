@@ -19,7 +19,7 @@ class DependencyMonitor {
     this.vulnerabilitiesFound = 0
     this.dependenciesUpdated = 0
     this.monitoring = false
-    this.logFile = path.join(this.projectRoot, 'logs', 'dependency.log')
+    this.logFile = path.join(this.projectRoot, 'logs,dependency.log')
 
     // Ensure logs directory exists
     this.ensureLogsDirectory()
@@ -183,7 +183,7 @@ class DependencyMonitor {
       // Check if key dependencies exist
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'))
       const requiredDeps = [
-  'vite', '@vitejs/plugin-react', 'react', 'react-dom']
+  'vite,@vitejs/plugin-react,react,react-dom']
 
       for (const dep of requiredDeps) {
         if (packageJson.dependencies && packageJson.dependencies[dep]) {

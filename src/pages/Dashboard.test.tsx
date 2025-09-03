@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import Dashboard from './Dashboard';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import Dashboard from './Dashboard
 describe('Dashboard', () => {"
   it('renders without crashing', () => {
     render(<Dashboard /" >);"

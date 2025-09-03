@@ -23,7 +23,7 @@ const Categories: React.FC = () => {
                 {category.count} services available in this category
               </p>
               <a"
-                href={`/services?category=${category.name.toLowerCase().replace(' ', '-')}`}"
+                href={`/services?category=${category.name.toLowerCase().replace(' ,-')}`}"
                 className='text-blue-600 hover: text-blue-700 font-medium'>
                 View Services →
               </a>

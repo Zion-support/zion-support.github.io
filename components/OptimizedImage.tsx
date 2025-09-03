@@ -95,7 +95,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       >
         <div className="text-center">"
           <svg""
-            className="mx-auto h-8 w-8 mb-2"""
+            className='mx-auto h-8 w-8 mb-2'
             fill="none"""
             viewBox="0 0 24 24"""
             stroke="currentColor"

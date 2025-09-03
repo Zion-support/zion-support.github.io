@@ -1,5 +1,4 @@
-import React from 'react'
-interface StatItem {
+import React  from 'react';interface StatItem {
   label: string
    value: string | number
    description?: string

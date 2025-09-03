@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import EnhancedHero from './EnhancedHero';"
+import { render, screen } from '@testing-library/react
+import EnhancedHero from './EnhancedHero
 describe('EnhancedHero', () => {"
   it('renders without crashing', () => {"
     render(<EnhancedHero /" >)"

@@ -1,7 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import trust-appeal from './trust-appeal'
-describe('trust-appeal', () => {
+import trust-appeal  from './trust-appeal';describe('trust-appeal', () => {
   it('renders without crashing', () => {
     render(<trust-appeal />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

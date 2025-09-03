@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import Index from './Index';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import Index from './Index
 describe('Index', () => {"
   it('renders without crashing', () => {
     render(<Index /" >);"

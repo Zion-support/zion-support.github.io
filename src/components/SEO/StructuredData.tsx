@@ -50,8 +50,7 @@ interface WebSiteStructuredData {
 }
 
 export const organizationStructuredData: OrganizationStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
+  "@context": "https://schema.org,@type": "Organization",
   name: "Zion Tech Group",
   url: "https://ziontechgroup.com",
   logo: "https://ziontechgroup.com/logo.png",
@@ -71,35 +70,25 @@ export const organizationStructuredData: OrganizationStructuredData = {
     email: "info@ziontechgroup.com"
   },
   sameAs: [
-    "https://linkedin.com/company/zion-tech-group",
-    "https://twitter.com/ziontechgroup",
-    "https://github.com/zion-tech-group"
+    "https://linkedin.com/company/zion-tech-group,https://twitter.com/ziontechgroup,https://github.com/zion-tech-group"
   ],
   services: [
-    "AI Services",
-    "IT Services", 
-    "Micro SaaS Development",
-    "DevOps Solutions",
-    "Cybersecurity Services",
-    "Digital Transformation"
+    "AI Services,IT Services,Micro SaaS Development,DevOps Solutions,Cybersecurity Services,Digital Transformation"
   ]
 };
 
 export const websiteStructuredData: WebSiteStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
+  "@context": "https://schema.org,@type": "WebSite",
   name: "Zion Tech Group",
   url: "https://ziontechgroup.com",
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://ziontechgroup.com/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
+    target: "https://ziontechgroup.com/search?q={search_term_string},query-input": "required name=search_term_string"
   }
 };
 
 export const createServiceStructuredData = (serviceName: string, description: string): ServiceStructuredData => ({
-  "@context": "https://schema.org",
-  "@type": "Service",
+  "@context": "https://schema.org,@type": "Service",
   name: serviceName,
   description: description,
   provider: {
@@ -112,8 +101,7 @@ export const createServiceStructuredData = (serviceName: string, description: st
 });
 
 export const createBreadcrumbStructuredData = (items: Array<{name: string, url: string}>): object => ({
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
+  "@context": "https://schema.org,@type": "BreadcrumbList",
   itemListElement: items.map((item, index) => ({
     "@type": "ListItem",
     position: index + 1,

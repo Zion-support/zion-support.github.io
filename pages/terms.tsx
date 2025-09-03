@@ -8,64 +8,42 @@ export default function Terms() {
   const lastUpdated = 'January 1, 2024';
 
   const sections = [
-    {
+  {
       title: 'Acceptance of Terms',
       icon: FileText,
       content: [
-        'By accessing and using our services, you accept and agree to be bound by these Terms of Service.',
-        'If you do not agree to these terms, you may not access or use our services.',
-        'We reserve the right to modify these terms at any time without prior notice.',
-        'Your continued use of our services after changes constitutes acceptance of the new terms.'
+        'By accessing and using our services, you accept and agree to be bound by these Terms of Service.,If you do not agree to these terms, you may not access or use our services.,We reserve the right to modify these terms at any time without prior notice.,Your continued use of our services after changes constitutes acceptance of the new terms.'
       ]
     },
     {
       title: 'Service Description',
       icon: Scale,
       content: [
-        'Zion Tech Group provides AI services, IT solutions, and micro SaaS development.',
-        'We offer consulting, development, implementation, and support services.',
-        'Service availability may vary and is subject to our capacity and resources.',
-        'We reserve the right to modify or discontinue services with reasonable notice.'
+        'Zion Tech Group provides AI services, IT solutions, and micro SaaS development.,We offer consulting, development, implementation, and support services.,Service availability may vary and is subject to our capacity and resources.,We reserve the right to modify or discontinue services with reasonable notice.'
       ]
     },
     {
       title: 'User Responsibilities',
       icon: Shield,
       content: [
-        'Provide accurate and complete information when engaging our services.',
-        'Comply with all applicable laws and regulations.',
-        'Respect intellectual property rights and confidentiality agreements.',
-        'Use our services only for lawful purposes and in accordance with these terms.',
-        'Maintain the security of any credentials or access provided to you.'
+        'Provide accurate and complete information when engaging our services.,Comply with all applicable laws and regulations.,Respect intellectual property rights and confidentiality agreements.,Use our services only for lawful purposes and in accordance with these terms.,Maintain the security of any credentials or access provided to you.'
       ]
     },
     {
       title: 'Payment Terms',
       icon: AlertTriangle,
       content: [
-        'Payment terms are specified in individual service agreements.',
-        'Invoices are due within 30 days of receipt unless otherwise specified.',
-        'Late payments may incur additional fees and interest charges.',
-        'We reserve the right to suspend services for non-payment.',
-        'Refunds are subject to our refund policy and service agreement terms.'
+        'Payment terms are specified in individual service agreements.,Invoices are due within 30 days of receipt unless otherwise specified.,Late payments may incur additional fees and interest charges.,We reserve the right to suspend services for non-payment.,Refunds are subject to our refund policy and service agreement terms.'
       ]
     }
   ];
 
   const limitations = [
-    'Services are provided "as is" without warranties of any kind',
-    'We are not liable for indirect, incidental, or consequential damages',
-    'Our liability is limited to the amount paid for the specific service',
-    'We do not guarantee specific results or outcomes',
-    'Third-party services and integrations are subject to their own terms'
+    'Services are provided "as is" without warranties of any kind,We are not liable for indirect, incidental, or consequential damages,Our liability is limited to the amount paid for the specific service,We do not guarantee specific results or outcomes,Third-party services and integrations are subject to their own terms'
   ];
 
   const intellectualProperty = [
-    'We retain all rights to our proprietary technology and methodologies',
-    'Client retains rights to their data and business processes',
-    'Work product ownership is specified in individual service agreements',
-    'We respect third-party intellectual property rights',
-    'Unauthorized use of our intellectual property is prohibited'
+    'We retain all rights to our proprietary technology and methodologies,Client retains rights to their data and business processes,Work product ownership is specified in individual service agreements,We respect third-party intellectual property rights,Unauthorized use of our intellectual property is prohibited'
   ];
 
   return (

@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import NewsletterForm from './NewsletterForm';"
+import { render, screen } from '@testing-library/react
+import NewsletterForm from './NewsletterForm
 describe('NewsletterForm', () => {"
   it('renders without crashing', () => {"
     render(<NewsletterForm /" >)"

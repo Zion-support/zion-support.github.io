@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 export default function Sitemap() {
   const siteStructure = [
-    {
+  {
       title: "Main Pages", pages: [
         { name: "Home", url: "/", description: "Welcome to Zion Tech Group" },
         { name: "About", url: "/about", description: "Learn about our company and mission" }, { name: "Services", url: "/services", description: "Our comprehensive technology services" },
@@ -59,7 +59,7 @@ export default function Sitemap() {
     }
   ];
   const quickLinks = [
-    { name: "Get Started", url: "/contact", icon: ArrowRight }, { name: "View Services", url: "/services", icon: Code },
+  { name: "Get Started", url: "/contact", icon: ArrowRight }, { name: "View Services", url: "/services", icon: Code },
     { name: "Meet Our Team", url: "/team", icon: Users }, { name: "Read Our Blog", url: "/blog", icon: Brain }
   ];
   return (

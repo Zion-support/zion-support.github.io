@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState, useCallback } from 'react';"
+import React, { useEffect, useState, useCallback } from 'react
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Smartphone, Tablet, 
@@ -13,7 +13,7 @@ import {
   ArrowLeft, ArrowRight;",
 } from 'lucide-react';
 interface TouchGesture {"
-  type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress';"
+  type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress
   direction?: 'up' | 'down' | 'left' | 'right';
   distance?: number;
   duration?: number}
@@ -110,7 +110,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           if (gesture.direction === 'left') {
             // Swipe left - go forward
             if (window.history.length > 1) {"
-              window.history.forward()}",",
+              window.history.forward()},,
 } else if (gesture.direction === 'right') {
             // Swipe right - go back
             if (window.history.length > 1) {
@@ -175,7 +175,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     // Optimize viewport for mobile"
     const viewport = document.querySelector('meta[name="viewport"]');"
     if (viewport) {"
-      viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')}
+      viewport.setAttribute('content,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')}
 "
     // Add touch-action CSS for better touch handling"
     const style = document.createElement('style');
@@ -207,7 +207,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         <motion .div
           initial={{ y: -100 }}"
           animate={{ y: 0 }}"
-          className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 shadow-lg""" >"
+          className='fixed top-0 left-0 right-0 z-50 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 shadow-lg' >"
           <div className="flex items-center justify-between px-4 py-3">"
             <div className="flex items-center space-x-3">
               <button "
@@ -253,7 +253,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             initial={{ opacity: 0, x: '100%' }}"
             animate={{ opacity: 1, x: 0 }}"
             exit={{ opacity: 0, x: '100%' }}"
-            className="fixed top-0 right-0 bottom-0 w-80 bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50""" >"
+            className='fixed top-0 right-0 bottom-0 w-80 bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50' >"
             <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">"
               <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Menu</h3>
               <button onClick={() =" > setShowMobileMenu(false)}"
@@ -394,7 +394,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         <motion .div
           initial={{ opacity: 0, x: -100 }}"
           animate={{ opacity: 1, x: 0 }}"
-          className="fixed top-20 left-4 z-40 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg shadow-lg""" >"
+          className='fixed top-20 left-4 z-40 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg shadow-lg' >"
           <div className="flex items-center space-x-2">"
             {isMobile ? <Smartphone className="w-4 h-4" /"" > : <Tablet className="w-4 h-4" /"" >}"
             <span>{isMobile ? 'Mobile' : 'Tablet'}</span>"
@@ -408,7 +408,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         <motion .div
           initial={{ opacity: 0, y: 100 }}"
           animate={{ opacity: 1, y: 0 }}"
-          className="fixed bottom-20 left-4 z-40 bg-slate-800 text-white text-xs rounded-lg shadow-lg p-3 max-w-xs""" >"
+          className='fixed bottom-20 left-4 z-40 bg-slate-800 text-white text-xs rounded-lg shadow-lg p-3 max-w-xs' >"
           <div className="font-medium mb-2">Recent Gestures</div>"
           <div className="space-y-1">"
             {gestureHistory.slice(0, 5).map((gesture, index) => ("

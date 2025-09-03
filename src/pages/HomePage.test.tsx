@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import HomePage from './HomePage';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import HomePage from './HomePage
 describe('HomePage', () => {"
   it('renders without crashing', () => {
     render(<HomePage /" >);"

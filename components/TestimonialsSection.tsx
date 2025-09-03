@@ -38,7 +38,7 @@ import { Star, User } from 'lucide-react';
 
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
-    {
+  {
       name: 'Sarah Johnson',
       role: 'CEO',
       compunknown: 'TechStart Inc.',

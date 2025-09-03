@@ -5,7 +5,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    optimizePackageImports: ['lucide-react,framer-motion'],
     turbo: {
       rules: {
         '*.svg': {
@@ -20,7 +20,7 @@ const nextConfig = {
   },
   images: {
     domains: ['ziontechgroup.com'],
-    formats: ['image/webp', 'image/avif'],
+    formats: ['image/webp,image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
@@ -82,7 +82,7 @@ const nextConfig = {
     return config;
   },
   // Try to exclude problematic directories at the Next.js level
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  pageExtensions: ['tsx,ts,jsx,js'],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,

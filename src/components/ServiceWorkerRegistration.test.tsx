@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import ServiceWorkerRegistration from './ServiceWorkerRegistration';"
+import { render, screen } from '@testing-library/react
+import ServiceWorkerRegistration from './ServiceWorkerRegistration
 describe('ServiceWorkerRegistration', () => {"
   it('renders without crashing', () => {"
     render(<ServiceWorkerRegistration /" >)"

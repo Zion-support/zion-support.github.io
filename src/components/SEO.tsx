@@ -11,27 +11,27 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({"
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',"
-  description = 'Leading technology solutions provider offering AI services, IT services, and micro SaaS solutions. Enterprise-grade infrastructure and development services.',"
-  keywords = 'technology solutions, AI services, IT services, micro SaaS, enterprise software, cloud services, cybersecurity',"
-  image = 'https://ziontechgroup.com/og-image.jpg',"
-  url = 'https://ziontechgroup.com',"
+  title = 'Zion Tech Group - Leading Technology Solutions Provider,
+  description = 'Leading technology solutions provider offering AI services, IT services, and micro SaaS solutions. Enterprise-grade infrastructure and development services.,
+  keywords = 'technology solutions, AI services, IT services, micro SaaS, enterprise software, cloud services, cybersecurity,
+  image = 'https://ziontechgroup.com/og-image.jpg,
+  url = 'https://ziontechgroup.com,
   type = 'website',
 }) => {
   const structuredData = {"
-    '@context': 'https://schema.org',"
-    '@type': 'Organization',"
-    'name': 'Zion Tech Group',"
-    'url': 'https://ziontechgroup.com',"
-    'logo': 'https://ziontechgroup.com/logo.svg',"
+    '@context': 'https://schema.org,
+    '@type': 'Organization,
+    'name': 'Zion Tech Group,
+    'url': 'https://ziontechgroup.com,
+    'logo': 'https://ziontechgroup.com/logo.svg,
     'description': description,"
     'sameAs': ["
-      'https://linkedin.com/compunknown/zion-tech-group',"
+      'https://linkedin.com/compunknown/zion-tech-group,
       'https://twitter.com/ziontechgroup',
 ],"
     'contactPoint': {"
-      '@type': 'ContactPoint',"
-      'telephone': '+1-555-ZION-TECH',"
+      '@type': 'ContactPoint,
+      'telephone': '+1-555-ZION-TECH,
       'contactType': 'customer service',
 }
   };
@@ -72,11 +72,11 @@ export const SEO: React.FC<SEOProps> = ({"
     </Helmet>
   );,
 };"
-  title = 'Zion Tech Group - Advanced AI Solutions',"
-  description = 'Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.',"
-  keywords = 'AI, artificial intelligence, cloud computing, digital transformation, automation',"
-  image = '/og-image.jpg',"
-  url = 'https://ziontechgroup.com',"
+  title = 'Zion Tech Group - Advanced AI Solutions,
+  description = 'Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.,
+  keywords = 'AI, artificial intelligence, cloud computing, digital transformation, automation,
+  image = '/og-image.jpg,
+  url = 'https://ziontechgroup.com,
   type = 'website',
 }) => {
   return (

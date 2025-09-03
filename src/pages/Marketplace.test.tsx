@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import Marketplace from './Marketplace';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import Marketplace from './Marketplace
 describe('Marketplace', () => {"
   it('renders without crashing', () => {
     render(<Marketplace /" >);"

@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import EnhancedPerformanceOptimizer from './EnhancedPerformanceOptimizer';"
+import { render, screen } from '@testing-library/react
+import EnhancedPerformanceOptimizer from './EnhancedPerformanceOptimizer
 describe('EnhancedPerformanceOptimizer', () => {"
   it('renders without crashing', () => {"
     render(<EnhancedPerformanceOptimizer /" >)"

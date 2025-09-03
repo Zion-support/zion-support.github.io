@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import EnhancedPerformanceMonitor from './EnhancedPerformanceMonitor';"
+import { render, screen } from '@testing-library/react
+import EnhancedPerformanceMonitor from './EnhancedPerformanceMonitor
 describe('EnhancedPerformanceMonitor', () => {"
   it('renders without crashing', () => {"
     render(<EnhancedPerformanceMonitor /" >)"

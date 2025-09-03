@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import Spinner from './Spinner';"
+import { render, screen } from '@testing-library/react
+import Spinner from './Spinner
 describe('Spinner', () => {"
   it('renders without crashing', () => {"
     render(<Spinner /" >)"

@@ -6,7 +6,7 @@ import { Shield, Zap, Globe, Lock, ArrowRight, CheckCircle } from 'lucide-react'
 
 export default function BlockchainSolutions() {
   const features = [
-    {
+  {
       icon: Shield,
       title: 'Smart Contracts',
       description: 'Automated, secure, and transparent contract execution without intermediaries'
@@ -29,16 +29,11 @@ export default function BlockchainSolutions() {
   ];
 
   const benefits = [
-    'Enhanced security through cryptographic protection',
-    'Transparent and immutable transaction records',
-    'Reduced costs by eliminating intermediaries',
-    'Global accessibility and 24/7 operation',
-    'Programmable money and automated processes',
-    'Decentralized governance and control'
+    'Enhanced security through cryptographic protection,Transparent and immutable transaction records,Reduced costs by eliminating intermediaries,Global accessibility and 24/7 operation,Programmable money and automated processes,Decentralized governance and control'
   ];
 
   const useCases = [
-    {
+  {
       title: 'Supply Chain Management',
       description: 'Track products from origin to consumer with complete transparency'
     },

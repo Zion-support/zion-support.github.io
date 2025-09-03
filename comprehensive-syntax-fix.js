@@ -10,9 +10,9 @@ function fixSpecificPatterns(content) {
 
   // Fix malformed imports with missing commas
   content = content.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"]/g, (match, imports) => {
-    if (imports.includes(' ') && !imports.includes(',')) {
+    if (imports.includes(' ') && !imports.includes(,)) {
       modified = true;
-      const fixedImports = imports.split(/\s+/).join(', ');
+      const fixedImports = imports.split(/\s+/).join(,);
       return match.replace(imports, fixedImports);
     }
     return match;
@@ -20,9 +20,9 @@ function fixSpecificPatterns(content) {
 
   // Fix missing semicolons after imports
   content = content.replace(/import\s+{[^}]+}\s+from\s+['"][^'"]+['"]\s*(?!;)/g, (match) => {
-    if (!match.endsWith(';')) {
+    if (!match.endsWith()) {
       modified = true;
-      return match + ';';
+      return match + ;
     }
     return match;
   });
@@ -45,11 +45,11 @@ function fixSpecificPatterns(content) {
 
   // Fix broken object literals and arrays
   content = content.replace(/\[\s*([^\]]*)\s*\]/g, (match, arrayContent) => {
-    if (arrayContent && arrayContent.includes("'") && !arrayContent.includes(',')) {
+    if (arrayContent && arrayContent.includes("'") && !arrayContent.includes(,)) {
       const items = arrayContent.split("'").filter(item => item.trim()).map(item => `'${item.trim()}'`);
       if (items.length > 1) {
         modified = true;
-        return `[${items.join(', ')}]`;
+        return `[${items.join(,)}]`;
       }
     }
     return match;
@@ -63,7 +63,7 @@ function fixSpecificPatterns(content) {
 
   // Fix broken variable declarations
   content = content.replace(/(const|let|var)\s+(\w+)\s*=\s*([^;]+)(?!;)\s*(?=\n|$)/g, (match, keyword, varName, value) => {
-    if (!match.endsWith(';')) {
+    if (!match.endsWith()) {
       modified = true;
       return `${keyword} ${varName} = ${value};`;
     }
@@ -87,7 +87,7 @@ function fixSpecificPatterns(content) {
 
   // Fix missing commas in function parameters
   content = content.replace(/\(([^)]*)\s+([^)]*)\)/g, (match, param1, param2) => {
-    if (param1.trim() && param2.trim() && !param1.includes(',') && !param2.includes(',')) {
+    if (param1.trim() && param2.trim() && !param1.includes(,) && !param2.includes(,)) {
       modified = true;
       return `(${param1.trim()}, ${param2.trim()})`;
     }
@@ -101,7 +101,7 @@ function fixSpecificPatterns(content) {
   content = content.replace(/\{\s*([^}]*)\s*\}\s*\}/g, (match, content) => {
     if (content.includes('{') && !content.includes('}')) {
       modified = true;
-      return match.replace('}}', '}');
+      return match.replace('}},}');
     }
     return match;
   });
@@ -128,7 +128,7 @@ function fixSyntaxErrors(filePath) {
 }
 
 // Function to find all TypeScript and JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+function findFiles(dir, extensions = ['.ts,.tsx,.js,.jsx']) {
   let files = [];
   
   try {

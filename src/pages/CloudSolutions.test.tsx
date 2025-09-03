@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import CloudSolutions from './CloudSolutions';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import CloudSolutions from './CloudSolutions
 describe('CloudSolutions', () => {"
   it('renders without crashing', () => {
     render(<CloudSolutions /" >);"

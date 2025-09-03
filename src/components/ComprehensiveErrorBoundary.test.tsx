@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import ComprehensiveErrorBoundary from './ComprehensiveErrorBoundary';"
+import { render, screen } from '@testing-library/react
+import ComprehensiveErrorBoundary from './ComprehensiveErrorBoundary
 describe('ComprehensiveErrorBoundary', () => {"
   it('renders without crashing', () => {"
     render(<ComprehensiveErrorBoundary /" >)"

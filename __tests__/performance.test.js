@@ -18,7 +18,7 @@ test.describe('Performance Tests', () => {';
         if (typeof window.lighthouse !== 'undefined') {';
           window;
             .lighthouse(window.location.href, {;
-              output: 'json',';
+              output: 'json,;
             });
             .then(resolve);
         } else {;

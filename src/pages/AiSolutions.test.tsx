@@ -1,8 +1,7 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import AiSolutions from './AiSolutions';
-"
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import AiSolutions from './AiSolutions
 describe('AiSolutions', () => {"
   it('renders without crashing', () => {
     render(<AiSolutions /" >);"

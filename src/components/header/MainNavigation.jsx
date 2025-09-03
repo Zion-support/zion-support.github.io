@@ -1,5 +1,5 @@
-import React, { useState } from 'react';"
-import { Link, useLocation } from 'react-router-dom';"
+import React, { useState } from 'react
+import { Link, useLocation } from 'react-router-dom
 import { ChevronDown } from 'lucide-react';
 
 export function MainNavigation() {
@@ -7,14 +7,14 @@ export function MainNavigation() {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const navigationItems = [
-    {"
-      name: 'Home',"
-      href: '/',"
+  {"
+      name: 'Home,
+      href: '/,
       current: location.pathname === '/',
 },
     {"
-      name: 'Services',"
-      href: '/services',"
+      name: 'Services,
+      href: '/services,
       current: location.pathname.startsWith('/services'),
       children: ["
         { name: 'AI Services', href: '/services/ai' },"
@@ -26,8 +26,8 @@ export function MainNavigation() {
       ],
 },
     {"
-      name: 'Solutions',"
-      href: '/solutions',"
+      name: 'Solutions,
+      href: '/solutions,
       current: location.pathname.startsWith('/solutions'),
       children: ["
         { name: 'Industry Solutions', href: '/solutions/industry' },"
@@ -38,8 +38,8 @@ export function MainNavigation() {
       ],
 },
     {"
-      name: 'About',"
-      href: '/about',"
+      name: 'About,
+      href: '/about,
       current: location.pathname.startsWith('/about'),
       children: ["
         { name: 'Company', href: '/about' },"
@@ -49,7 +49,7 @@ export function MainNavigation() {
       ],
 },
     {"
-      name: 'Resources',"
+      name: 'Resources,
       href: '#',
       current: false,
       children: ["
@@ -63,8 +63,8 @@ export function MainNavigation() {
       ],
 },
     {"
-      name: 'Support',"
-      href: '/support',"
+      name: 'Support,
+      href: '/support,
       current: location.pathname.startsWith('/support'),
       children: ["
         { name: 'Help Center', href: '/support' },"

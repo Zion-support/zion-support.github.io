@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';"
-import SimpleNavigation from './SimpleNavigation';"
+import { render, screen } from '@testing-library/react
+import SimpleNavigation from './SimpleNavigation
 describe('SimpleNavigation', () => {"
   it('renders without crashing', () => {"
     render(<SimpleNavigation /" >)"

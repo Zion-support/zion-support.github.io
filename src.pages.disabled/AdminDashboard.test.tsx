@@ -1,7 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import AdminDashboard from './AdminDashboard'
-describe('AdminDashboard', () => {
+import AdminDashboard  from './AdminDashboard';describe('AdminDashboard', () => {
   it('renders without crashing', () => {
     render(<AdminDashboard />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

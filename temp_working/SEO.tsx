@@ -53,7 +53,7 @@ const metaDescription = description ||,
   'index,
   'follow');
   const robotsContent = robots.join(
-  ', ');
+  ,);
   // Structured data for organization;
   const organizationSchema = {
 const siteName =;
@@ -62,94 +62,59 @@ const siteName =;
   const fullCanonical = canonical || window.location.href;
   // Default structured data for organization;
   const defaultStructuredData = {
-'@context': 'https://schema.org',
-    '@type': 'Organization',
-    'name': 'Zion Tech Group',
-    'url': siteUrl,
+'@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,url': siteUrl,
     'logo': `${siteUrl}/images/zion-tech-group-logo.png`,
-    'description': 'Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services',
-    'foundingDate': '2020',
-    'address': {
-      '@type': 'PostalAddress',
-      'addressCountry': 'US',
-      'addressLocality': 'Middletown',
-      'addressRegion': 'DE',
-      'postalCode': '19709',
-      'streetAddress': '364 E Main St STE 1008'},
+    'description': 'Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services,foundingDate': '2020,address': {
+      '@type': 'PostalAddress,addressCountry': 'US,addressLocality': 'Middletown,addressRegion': 'DE,postalCode': '19709,streetAddress': '364 E Main St STE 1008'},
     'contactPoint': {
-      '@type': 'ContactPoint',
-      'telephone': '+1-800-ZION-TECH',
-      'contactType': 'customer service',
-      'email': 'info@ziontechgroup.com'},
+      '@type': 'ContactPoint,telephone': '+1-800-ZION-TECH,contactType': 'customer service,email': 'info@ziontechgroup.com'},
     'sameAs': [;
-      'https://linkedin.com/company/ziontechgroup',
-      'https://twitter.com/ziontechgroup',
-      'https://facebook.com/ziontechgroup',
-      'https://instagram.com/ziontechgroup';
+      'https://linkedin.com/company/ziontechgroup,https://twitter.com/ziontechgroup,https://facebook.com/ziontechgroup,https://instagram.com/ziontechgroup';
     ],
     'serviceArea': {
-      '@type': 'GeoCircle',
-      'geoMidpoint': {
-        '@type': 'GeoCoordinates',
-        'latitude': 39.4496,
+      '@type': 'GeoCircle,geoMidpoint': {
+        '@type': 'GeoCoordinates,latitude': 39.4496,
         'longitude': -75.7163},
       'geoRadius': '50000'},
     'hasOfferCatalog': {
-      '@type': 'OfferCatalog',
-      'name': 'Technology Services',
-      'itemListElement': [
+      '@type': 'OfferCatalog,name': 'Technology Services,itemListElement': [
         {
-          '@type': 'Offer',
-          'itemOffered': {
-            '@type': 'Service',
-            'name': 'AI & Analytics Solutions',
-            'description': 'Cutting-edge artificial intelligence and data analytics services'}
+          '@type': 'Offer,itemOffered': {
+            '@type': 'Service,name': 'AI & Analytics Solutions,description': 'Cutting-edge artificial intelligence and data analytics services'}
         },
         {
-          '@type': 'Offer',
-          'itemOffered': {
-            '@type': 'Service',
-            'name': 'Cybersecurity Services',
-            'description': 'Advanced security protocols and threat protection'}
+          '@type': 'Offer,itemOffered': {
+            '@type': 'Service,name': 'Cybersecurity Services,description': 'Advanced security protocols and threat protection'}
         },
         {
-          '@type': 'Offer',
-          'itemOffered': {
-'@type': 'Service',
-            'name': 'Cloud & DevOps',
-            'description': 'Scalable cloud infrastructure and development operations'}
+          '@type': 'Offer,itemOffered': {
+'@type': 'Service,name': 'Cloud & DevOps,description': 'Scalable cloud infrastructure and development operations'}
         }
       ]}}
 // Structured data for the current page;
   const pageSchema = {
-    '@context': 'https://schema.org',
-    '@type': type ===,
+    '@context': 'https://schema.org,@type': type ===,
   article' ?;
   'Article': 'WebPage,
     'headline': title,
     'description': metaDescription,
     'url': fullUrl,
     'mainEntityOfPage': {
-      '@type': 'WebPage',
-      '@id': fullUrl},
+      '@type': 'WebPage,@id': fullUrl},
     'publisher': {
-      '@type': 'Organization',
-      'name': 'Zion Tech Group',
-      'logo': {
-        '@type': 'ImageObject',
-        'url': `${siteUrl}/images/zion-tech-group-logo.png`}
+      '@type': 'Organization,name': 'Zion Tech Group,logo': {
+        '@type': 'ImageObject,url': `${siteUrl}/images/zion-tech-group-logo.png`}
     },
     'image': fullImageUrl,
     'datePublished': publishedTime || new Date().toISOString(),
     'dateModified': modifiedTime || new Date().toISOString(),
     'author': {
-      '@type': 'Organization',
-      'name': author},
+      '@type': 'Organization,name': author},
     ...(type ===;
   'article' && {
       'articleSection': section,
       'keywords': tags.join(
-  ', ')})}return(
+  ,)})}return(
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -175,7 +140,7 @@ const siteName =;
       <meta name='twitter:image' content={fullImageUrl} />{/* Additional Meta Tags */}
       <meta name='author' content={author} />
       <meta name='keywords' content={tags.join(
-  ', ')} />
+  ,)} />
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 <meta name='theme-color' content='#22ddd2' />
       <meta name='msapplication-TileColor' content='#22ddd2' />
@@ -225,26 +190,20 @@ const siteName =;
   'article' && (
         <script type='application/ld+json'>
           {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            'headline': fullTitle,
+            '@context': 'https://schema.org,@type': 'Article,headline': fullTitle,
             'description': description,
             'image': image,
             'author': {
-              '@type': 'Organization',
-              'name': author || siteName},
+              '@type': 'Organization,name': author || siteName},
             'publisher': {
-              '@type': 'Organization',
-              'name': siteName,
+              '@type': 'Organization,name': siteName,
               'logo': {
-                '@type': 'ImageObject',
-                'url': 'https://ziontechgroup.com/images/zion-logo.png'}
+                '@type': 'ImageObject,url': 'https://ziontechgroup.com/images/zion-logo.png'}
             },
             'datePublished': publishedTime,
             'dateModified': modifiedTime,
             'mainEntityOfPage': {
-              '@type': 'WebPage',
-              '@id': fullCanonical}
+              '@type': 'WebPage,@id': fullCanonical}
           })}
         </script>
       )}

@@ -1,5 +1,5 @@
- const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';'';import React, { useState, useEffect, createContext, useContext } from 'react''
-import { motion, AnimatePresence } from 'framer-motion';"
+ const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';import React, { useState, useEffect, createContext, useContext }  from 'react
+import { motion, AnimatePresence } from 'framer-motion
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
 const AccessibilityContext = createContext(null)
 export const useAccessibility = () => {}
@@ -38,8 +38,8 @@ export const AccessibilityProvider = ({ children }) => {}
   useEffect(() => {}
     const settings = {}"
       highContrast, reducedMotion,'
-      fontSize,'';"
-      colorBlindMode}';'
+      fontSize,'
+      colorBlindMode}
     localStorage.setItem(''''
       'zion-accessibility-settings', JSON.stringify(settings)
     ),
@@ -128,8 +128,8 @@ export const AccessibilityPanel = () => {}
         event.preventDefault()"
         toggleReducedMotion()',
 }'',
-}';'
-    window.addEventListener('keydown', handleKeyDown)';'
+}
+    window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown),
 }, [isOpen, toggleHighContrast, toggleReducedMotion])
   return ()
@@ -139,7 +139,7 @@ export const AccessibilityPanel = () => {}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() =" > setIsOpen(true)}"
-        className='fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300''''
+        className='fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300''
         aria-label='Open Accessibility Settings''''
       >''''
         <Accessibility className='w-6 h-6' /" >
@@ -151,14 +151,14 @@ export const AccessibilityPanel = () => {}
             initial={{ opacity: 0 }}"
             animate={{ opacity: 1 }}'''
             exit={{ opacity: 0 }}''''
-            className='fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4'''
+            className='fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4'
             onClick={() =" > setIsOpen(false)}
           >
             <motion .div
               initial={{ scale: 0.9, opacity: 0 }}"
               animate={{ scale: 1, opacity: 1 }}'''
               exit={{ scale: 0.9, opacity: 0 }}''''
-              className='bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto'''
+              className='bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto'
               onClick={e =" > e.stopPropagation()}"
             >'''
               {/* Header */}''''
@@ -171,7 +171,7 @@ export const AccessibilityPanel = () => {}
                   variant='ghost''''
                   size='sm''''
                   onClick={() =" > setIsOpen(false)}''''
-                  className='text-zion-slate-light hover:text-white''''
+                  className='text-zion-slate-light hover:text-white''
                 >''''
                   <X className='w-4 h-4' /" >
                 </Button>
@@ -342,7 +342,7 @@ export const SkipToContent = () => ('''
 // Focus Trap Hook
 export const useFocusTrap = isActive => {}
   useEffect(() => {}"
-    if (!isActive) return'';'
+    if (!isActive) return'
     const focusableElements =''''''
       'button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])'
     const container = document.activeElement?.closest('[data-focus-trap]')
@@ -364,8 +364,8 @@ export const useFocusTrap = isActive => {}
 }",
 }',
 }'',
-}';'
-    document.addEventListener('keydown', handleTabKey)';'
+}
+    document.addEventListener('keydown', handleTabKey)
     return () => document.removeEventListener('keydown', handleTabKey),
 }, [isActive]),
 }"
@@ -373,5 +373,5 @@ export const useFocusTrap = isActive => {}
 export const SrOnly = ({ children }) => (''''
   <span className='sr-only'>{children}</span>
 )"
-export default AccessibilityPanel'';'
+export default AccessibilityPanel'
 '''''"
