@@ -17,6 +17,8 @@ const ServicesOverview = lazy(() => import('./pages/services-overview'));
 const AIContentGenerationSuite = lazy(() => import('./pages/services/ai-content-generation-suite'));
 const CloudMigrationServices = lazy(() => import('./pages/services/cloud-migration-services'));
 const SmartCRMPlatform = lazy(() => import('./pages/services/smart-crm-platform'));
+const AIPoweredEmailAutomation = lazy(() => import('./pages/services/ai-powered-email-automation'));
+const MobileFirstSurveyPlatform = lazy(() => import('./pages/services/mobile-first-survey-platform'));
 
 // Simple Header component
 const Header = () => (
@@ -69,6 +71,8 @@ function App() {
             <Route path="/services/ai-content-generation-suite" element={<AIContentGenerationSuite />} />
             <Route path="/services/cloud-migration-services" element={<CloudMigrationServices />} />
             <Route path="/services/smart-crm-platform" element={<SmartCRMPlatform />} />
+            <Route path="/services/ai-powered-email-automation" element={<AIPoweredEmailAutomation />} />
+            <Route path="/services/mobile-first-survey-platform" element={<MobileFirstSurveyPlatform />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
         </Suspense>
