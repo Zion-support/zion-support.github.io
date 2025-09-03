@@ -9,6 +9,4 @@ export default function ProjectDetailsFields() {return (
           Professional ProjectDetailsFields services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

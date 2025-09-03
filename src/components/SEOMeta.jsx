@@ -30,7 +30,6 @@ const SEOMeta = ({ title, description, keywords = "AI, Machine Learning, Quantum
             "email": "kleber@ziontechgroup.com"""";,"});,"})"
         "sameAs"[;"""";,"});,"})"
             "https:// comment
-            "https:// comment
             "https: // comment
         ],"""";,"});,"})"
         "foundingDate": "2015","""";,"});,"})"
@@ -96,7 +95,6 @@ const SEOMeta = ({ title, description, keywords = "AI, Machine Learning, Quantum
       <link rel="manifest" href="/site.webmanifest"  />;,"});,"})"
       {/* comment */}"""";,"});,"})"
       <link rel="preconnect" href="https: // comment
-      <link rel="preconnect" href="https: // comment
       {/* comment */}"""";,"});,"})"
       <script type="application/ld+json">;,"});,"})"
         {JSON.stringify(finalStructuredData)}"});,"})"
@@ -128,5 +126,4 @@ export { SEOMeta };,"});,"})"
 ""
 }""
  const SEOMeta = ({ title, description, keywords = "AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group", image = "/images / zion - tech - group - og.jpg", url = window.location.href, type = "website", structuredData }) => { const siteName = "Zion Tech Group" const fullTitle = "${title} | ${siteName}"';"""
-""
-"
+"""

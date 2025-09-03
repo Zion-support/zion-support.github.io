@@ -11,8 +11,6 @@ export default function BlockchainEnterpriseSolutions() {return ("
           Professional BlockchainEnterpriseSolutions services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

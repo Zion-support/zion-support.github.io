@@ -25,8 +25,6 @@ import type { NextPage } from "next"
                 View Pricing,
               </a></Link>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -49,7 +47,6 @@ import type { NextPage } from "next"
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gray-50">"
@@ -88,10 +85,6 @@ that resonates with your audience and drives results.
                   <span className="font-medium">Time Savings</span>"
                   <span className="text-purple-600 font-bold">Up to 80%</span>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
       {/* comment */}"
       <section id="pricing" className="py-20 bg-white">"
@@ -144,7 +137,6 @@ that resonates with your audience and drives results.
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className=""py-20" bg-gradient-to-r from-blue-600 to-purple-600 text-white"}>"
@@ -161,10 +153,8 @@ that resonates with your audience and drives results.
               Call +1 302 464 0950,
             </a></Link>
           </div>
-        </div>
       </section>
     </Layout>;,
   )}
 
-"
-export default AIContentCreation
+"export default AIContentCreation

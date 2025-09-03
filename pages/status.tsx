@@ -68,8 +68,6 @@ const Component = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">0</h3>"
                 <p className="text-gray-600">Active Incidents</p>
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -141,9 +139,6 @@ const Component = () => {
                     </tbody>
                   </table>
                 </div>
-              </div>
-            </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-16 bg-white">"
@@ -174,14 +169,9 @@ const Component = () => {
                             {incident.impact} impact,
                           </span>
                         </div>
-                      </div>
-                    </div>
-                  </div>
                 ))}
 
               </div>
-            </div>
-          </div>
         </section>
         {/* comment */}"
         <section className = ""py-16" bg-gray-50"}>"
@@ -217,8 +207,6 @@ const Component = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">SLA Compliance</h3>"
                 <p className="text-gray-600 text-sm">99.9% uptime guarantee</p>
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -236,11 +224,9 @@ const Component = () => {
                 Subscribe,
               </button>
             </div>
-          </div>
         </section>
       </div>
     </MainLayout>;,
   )}
 
-"
-export default Status
+"export default Status

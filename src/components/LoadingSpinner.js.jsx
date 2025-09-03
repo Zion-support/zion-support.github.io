@@ -112,7 +112,6 @@ export { LoadingSpinner };,"});,"})"
   className = ""}) => {}"
   const sizeClasses = {}""
 """
-"""
 """""
     sm: "w-4 h-4", """""
     md: "w-8 h-8","""""
@@ -121,7 +120,6 @@ export { LoadingSpinner };,"});,"})"
     md: "w-8 h-8,"""
     lg: "w-12 h-12"}"
   const colorClasses = {}"""
-"""
 """
 """""
     blue: "text-blue-500", """""
@@ -157,34 +155,31 @@ export { LoadingSpinner };,"});,"})"
             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"""
           /" >"
         </svg>"
-      </div>"""
-      {text && (<p className="mt-3 text-sm text-gray-500 animate-pulse">{text}</p>)}
+      </div>"""      {text && (<p className="mt-3 text-sm text-gray-500 animate-pulse">{text}</p>)}
 
     </div>)}
 
 export default LoadingSpinner
-
 export { LoadingSpinner }
-
+;
 export { LoadingSpinner }
-
+;
 export { LoadingSpinner }
-
+;
 export { LoadingSpinner }
-
+;
 export { LoadingSpinner }
 
     </div>)}
 
-export default LoadingSpinner,
+export default LoadingSpinner,export { LoadingSpinner }
+;
 export { LoadingSpinner }
-
+;
 export { LoadingSpinner }
-
+;
 export { LoadingSpinner }
-
-export { LoadingSpinner }
-
-export { LoadingSpinner }"
-"`""
+;
+export { LoadingSpinner }";
+"`"";
 "

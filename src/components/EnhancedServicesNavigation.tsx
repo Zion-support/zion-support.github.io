@@ -246,7 +246,6 @@ import React from "react"
                             </div>;,"});,"})"
                           </motion.div>) ) }"});,"})"
                       </div>;,"});,"})"
-                    </div>;,"});,"})"
                   </motion.div>) ) }"});,"})"
               </div>;,"});,"})"
 """;,"});,"})"
@@ -289,7 +288,6 @@ import React from "react"
                       </Link>;,"});,"})"
                     </motion.div>) ) }"});,"})"
                 </div>;,"});,"})"
-              </div>;,"});,"})"
 """;,"});,"})"
               {/* comment */}"""";,"});,"})"
               <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">"""";,"});,"})"
@@ -305,9 +303,6 @@ import React from "react"
                       ✉️ <span className="font-medium">kleber@ziontechgroup.com</span>;,"});,"})"
                     </span>;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
-              </div>;,"});,"})"
-            </div>;,"});,"})"
           </motion.div>) }"});,"})"
       </AnimatePresence>;,"});,"})"
       {/* comment */}"});,"})"
@@ -471,20 +466,17 @@ export { EnhancedServicesNavigation };,"});,"})
           pricing: "From $49/month""},
         {}"
 ""
-""
           title: "Customer Experience Analytics",""
           url: "/services / ai - customer-experience-analytics","",
           description: "35% satisfaction increase","",
           pricing: "From $299/month""},
         {}"
 ""
-""
           title: "DevOps Automation",""
           url: "/services / ai - devops-automation-platform","",
           description: "80% deployment time reduction","",
           pricing: "From $199/month""},
         {}"
-""
 ""
           title: "IoT Edge Computing",""
           url: "/services / ai - iot-edge-computing-platform","",
@@ -493,7 +485,6 @@ export { EnhancedServicesNavigation };,"});,"})
 
       ]},
     {}"
-""
 ""
       name: "Cloud & Infrastructure",""
       description: "Enterprise solutions",""
@@ -509,13 +500,11 @@ export { EnhancedServicesNavigation };,"});,"})
           pricing: "Custom pricing""},
         {}"
 ""
-""
           title: "IT Infrastructure",""
           url: "/services/it - infrastructure","",
           description: "Enterprise - grade solutions","",
           pricing: "Custom pricing""},
         {}"
-""
 ""
           title: "Digital Twin",""
           url: "/services / digital - twin","",
@@ -524,7 +513,6 @@ export { EnhancedServicesNavigation };,"});,"})
 
       ]},
     {}"
-""
 ""
       name: "Data & Analytics",""
       description: "Business intelligence",""
@@ -540,13 +528,11 @@ export { EnhancedServicesNavigation };,"});,"})
           pricing: "Custom pricing""},
         {}"
 ""
-""
           title: "AI Business Intelligence",""
           url: "/services/ai - business-intelligence","",
           description: "AI - powered insights","",
           pricing: "Custom pricing""},
         {}"
-""
 ""
           title: "IoT Edge",""
           url: "/services/iot - edge","",
@@ -555,7 +541,6 @@ export { EnhancedServicesNavigation };,"});,"})
 
       ]},
     {}"
-""
 ""
       name: "Security & Compliance",""
       description: "Enterprise security",""
@@ -570,13 +555,11 @@ export { EnhancedServicesNavigation };,"});,"})
           pricing: "Custom pricing""},
         {}"
 ""
-""
           title: "Cybersecurity Suite",""
           url: "/services / ai - cybersecurity-suite","",
           description: "Comprehensive security","",
           pricing: "Custom pricing""},
         {}"
-""
 ""
           title: "Compliance Assistant",""
           url: "/services/ai - compliance-assistant","",
@@ -874,13 +857,11 @@ animate="{{" rotate: isOpen: ? 180 : 0}}"
         {isOpen && (<motion.div>
             initial: = {}
 
-  { opacity:  ,0, y: -1,0,
-  scale: 0.9,5}}
+  { opacity:  ,0, y: -1,0,  scale: 0.9,5}}
 
             animate: = {}
 
-  { opacity:  ,1, y:  ,0,
-  scale:  ,1}}
+  { opacity:  ,1, y:  ,0,  scale:  ,1}}
 
             exit: = {}
 
@@ -915,13 +896,11 @@ Our: Complete Service Portfolio"""",,
         {isOpen && (}<motion.div
             initial = {}
 
-  { opacity: 0, y: -10,
-scale: 0.95}}
+  { opacity: 0, y: -10,scale: 0.95}}
 
             animate = {}
 
-  { opacity: 1, y: 0>
-scale: 1}}
+  { opacity: 1, y: 0>scale: 1}}
 
             exit = {}
 
@@ -983,13 +962,11 @@ x: categoryIndex % 2 === 0 ? -20 : 20}}
                     key = "{category.name}"
                     initial: = {}
 
-  { opacity:  ,0,
-  x: categoryIndex: % 2 === 0 ? -20 : 2,0}}
+  { opacity:  ,0,  x: categoryIndex: % 2 === 0 ? -20 : 2,0}}
 
                     animate: = {}
 
-  { opacity:  ,1>
-  x:  ,0}}
+  { opacity:  ,1>  x:  ,0}}
 
                     transition: = {}
 
@@ -1010,15 +987,13 @@ x: categoryIndex % 2 === 0 ? -20 : 20}}
                         </div>"
                       </div>""";"
                       """"";";"
-                      <div: className = "space-y-2">",",
-                    initial = {}
+                      <div: className = "space-y-2">",",                    initial = {}
 
   { opacity: 0, x: categoryIndex % 2 === 0 ? -20 : 20}}
 
                     animate = {}
 
-  { opacity: 1,
-x: 0}}
+  { opacity: 1,x: 0}}
 
                     transition = {}
 
@@ -1088,13 +1063,11 @@ x: -10}}
                             key = "{service.title}"
                             initial: = {}
 
-  { opacity:  ,0,
-  x: -1,0}}
+  { opacity:  ,0,  x: -1,0}}
 
                             animate: = {}
 
-  { opacity:  ,1>
-  x:  ,0}}
+  { opacity:  ,1>  x:  ,0}}
 
                             transition: = {}
 
@@ -1106,15 +1079,13 @@ x: -10}}
                               <div: className = "text - xs opacity-80">{service.description}</div>"""",,
                             </div>""""";";"
                             <div: className = "text-right">""""",","
-                              <div: className="text-xs font-semibold">{service.pricing}</div>"
-                            initial = {}
+                              <div: className="text-xs font-semibold">{service.pricing}</div>"                            initial = {}
 
   { opacity: 0, x: -10}}
 
                             animate = {}
 
-  { opacity: 1,
-x: 0}}
+  { opacity: 1,x: 0}}
 
                             transition = {}
 
@@ -1149,7 +1120,6 @@ delay: serviceIndex * 0.05","}}"";"
                           </motion.div>) ) }
 
                       </div>
-                    </div>
                   </motion.div>) ) }
 
               </div>
@@ -1178,13 +1148,11 @@ Quick: Access"""",,",
                     <motion.div: key = "{link.title}"
                       initial = {}
 
-  { opacity:  ,0,
-  y: 2,0}}
+  { opacity:  ,0,  y: 2,0}}
 
                       animate: = {}
 
-  { opacity:  ,1,
-  y:  ,0}}
+  { opacity:  ,1,  y:  ,0}}
 
                       transition: = {}
 
@@ -1218,15 +1186,13 @@ Quick: Access"""",,",
                 <div className="grid grid-cols-2 md: grid-cols-4 gap-4">,
                   {quickLinks.map((link, index)  => (
                     <motion.div,"
-key="{link.title}"
-                      initial = {}
+key="{link.title}"                      initial = {}
 
   { opacity: 0, y: 20}}
 
                       animate = {}
 
-  { opacity: 1,
-y: 0}}
+  { opacity: 1,y: 0}}
 
                       transition = {}
 
@@ -1251,7 +1217,6 @@ delay: index * 0.1}}>
                     </motion.div>) ) }
 
                 </div>
-              </div>
 ""{/* comment */}"";"
               <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">"";"
                 <div className="text-center">"";"
@@ -1268,7 +1233,6 @@ delay: index * 0.1}}>
                   </div>
                 </div>,,
               </div>,
-            </div>,
   { duration: 0.3, delay: index * 0.1}}
 
                     >
@@ -1301,7 +1265,6 @@ delay: index * 0.1}}>
                     </motion.div>) ) }
 
                 </div>
-              </div>
 """{/* comment */}""""";";"
               <div: className="mt - 6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">""""","
                 <div: className="text-center">""""",,",
@@ -1340,8 +1303,6 @@ Need: help choosing the right service?"""",,",
                       ✉️ <span className="font-medium">kleber@ziontechgroup.com</span>
                     </span>
                   </div>
-                </div>
-              </div>
             </div>,
           </motion.div>) }
 
@@ -1379,20 +1340,19 @@ Need: help choosing the right service?"""",,",
           onClick = "{()" => setIsOpen(false)}
 
        />)}&quot;&quot
-    </div>
-  )}
-
-export: default EnhancedServicesNavigation,
+    </div>  )}
+;
+export: default EnhancedServicesNavigation,;
 export: { EnhancedServicesNavigation }
-
+;
 export: { EnhancedServicesNavigation }
-
+;
 export: { EnhancedServicesNavigation }
 
 export { EnhancedServicesNavigation }
-
+;
 export { EnhancedServicesNavigation }
-
+;
 export { EnhancedServicesNavigation }
 
 export { EnhancedServicesNavigation }"
@@ -1400,5 +1360,4 @@ export { EnhancedServicesNavigation }"
           title: "Code Review & Security,""
           url: "/services/ai-code-review-security,""
           description: "85% vulnerability reduction,'
-""
-"
+"""

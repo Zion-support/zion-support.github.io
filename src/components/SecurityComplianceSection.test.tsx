@@ -9,6 +9,4 @@ export default function SecurityComplianceSection.test() {return (
           Professional SecurityComplianceSection.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

@@ -9,6 +9,4 @@ export default function ComprehensiveServicesShowcase2030() {return (
           Professional ComprehensiveServicesShowcase2030 services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

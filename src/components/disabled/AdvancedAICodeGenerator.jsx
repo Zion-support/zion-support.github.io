@@ -13,6 +13,4 @@ import React { useState, useRef } from "react" const mockCodeSnippets = [] = use
   { id: "1", title: "React Custom Hook for API Calls", description: "A reusable hook for making API calls with loading and error states", language: "typescript", code: "import { useState, useEffect }  from "react';interface UseApiOptions {
 
 ""
-""
 "
-

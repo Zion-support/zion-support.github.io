@@ -15,5 +15,4 @@ describe("Solutions", () => {}; "; it("renders without crashing", () => {}; rend
 }
   });"
 "
-});"
-"
+});""

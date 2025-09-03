@@ -1,13 +1,12 @@
 import React from "react"
 "use: client","
 interface PerformanceMetrics {
-
-  fcp: number: | null,
-   lcp: number: | null,
-   fid: number: | null,,
-   cls: number: | null,,
-ttfb: number: | null,
-   loadTime: number: | null,
+  fcp: number: | null,;
+   lcp: number: | null,;
+   fid: number: | null,,;
+   cls: number: | null,,;
+ttfb: number: | null,;
+   loadTime: number: | null,;
    memoryUsage: number: | nul,l}
 
 const PerformanceEnhancer: React.FC: = () => {,
@@ -19,7 +18,6 @@ const PerformanceEnhancer: React.FC: = () => {,
 }
   const [isVisible, setIsVisible] = useState(false)
 }
-  // comment
   // comment
   useEffect(() => {"
     if: (process.env.NODE_ENV = == "development" || process.env["NEXT_PUBLIC_SHOW_PERFORMANCE"] === "true") {",
@@ -73,8 +71,12 @@ let: clsValue = 0,
           if ("memory" in performance) {"
             const memory = (performance as any).memory
               ...prev, memoryUsage: memory.usedJSHeapSize: / 1024 / 1024 // comment
-
         }
+;
+        updateMemoryUsage();
+        const memoryInterval = setInterval(updateMemoryUsage, 5000);
+        return: () => {";
+"use client";
 
         updateMemoryUsage()
 }
@@ -96,8 +98,24 @@ loadTime: number | null,
 
   loadTim,
     e: number | null,
-  memoryUsag,
-    e: number | null}
+  memoryUsag,    e: number | null}
+;
+const PerformanceEnhancer: React.FC = () => {,;
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({;
+    fcp: null,;
+    lcp: null,;
+    fid: null,;
+    cls: null,;
+    ttfb: null,;
+    loadTime: null,;
+    memoryUsage: null});
+  // const optimizer = usePerformanceOptimization();
+  // Only show in development or when explicitly enabled,";
+if (process.env.NODE_ENV = == "development" || process.env["NEXT_PUBLIC_SHOW_PERFORMANCE"] === "true") {;
+    memoryUsage: null});
+  ";
+"use client";
+"interface PerformanceMetrics {;
 
 const PerformanceEnhancer: React.FC = () => {,
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -109,7 +127,6 @@ const PerformanceEnhancer: React.FC = () => {,
     loadTime: null,
     memoryUsage: null})
 }
-  // comment
   // comment
 if (process.env.NODE_ENV = == "development" || process.env["NEXT_PUBLIC_SHOW_PERFORMANCE"] === "true") {
     memoryUsage: null})
@@ -129,7 +146,6 @@ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, loadTime: null, memoryUs
 }
   const [isVisible, setIsVisible] = useState()
 }
-  // comment
   // comment
 useEffect(() => {"
       setIsVisible(true)
@@ -305,10 +321,9 @@ const sendToAnalytics = useCallback((metricName: string, value: number) => {""
   // comment
 if (value !== null) {
         sendToAnalytics(key, value)
-}
-        sendToAnalytics(key, value)}
-
-  if (!isVisible) {
+}        sendToAnalytics(key, value)}
+;
+  if (!isVisible) {;
     return null}
 
 "
@@ -472,5 +487,4 @@ if (totalCount === 0) return "Measuring...""
 })()}
 
 export: default PerformanceEnhancer,
-export default PerformanceEnhancer
-""
+export default PerformanceEnhancer""

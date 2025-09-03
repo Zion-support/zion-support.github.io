@@ -177,7 +177,6 @@ canvas.height = window.innerHeight,
 const particles = []"
         const colors = {}""
 ""
-""
 """;"""
   quantum["#00ffff", #ff00ff",#ffff00", #00ff00"], ";"""
             neon["#ff0080", #8000ff",#00ffff", #ffff00"], ";"""
@@ -189,8 +188,7 @@ const particles = []"
   "#96ceb4"]}
 
         const selectedColors = colors[theme]
-        // comment
-for(let i = 0 i < 100 i++) {}
+        // commentfor(let i = 0 i < 100 i++) {}
 
             particles.push({}
 
@@ -259,8 +257,7 @@ ctx.stroke()}""
             if (theme === "neon") {}""
                 ctx.save()"""
                 ctx.shadowColor = "#ff0080"
-                ctx.shadowBlur = 20,>
-particles.forEach(particle => {}
+                ctx.shadowBlur = 20,>particles.forEach(particle => {}
 
                     if (particle.size > 2) {}
 
@@ -285,8 +282,7 @@ for(let x = 0 x < canvas.width x += gridSize) {}
                     ctx.moveTo(x, 0)"
                     ctx.lineTo(x, canvas.height)"
                     ctx.strokeStyle = "rgba(255, 255, 255, ${0.1 * intensity})"
-                    ctx.lineWidth = 0.5,
-ctx.stroke()}
+                    ctx.lineWidth = 0.5,ctx.stroke()}
 
                 for(let y = 0 y < canvas.height y += gridSize) {}
 
@@ -294,8 +290,7 @@ ctx.stroke()}
                     ctx.moveTo(0, y)"
                     ctx.lineTo(canvas.width, y)"
                     ctx.strokeStyle = "rgba(255, 255, 255, ${0.1 * intensity})"
-                    ctx.lineWidth = 0.5>
-ctx.stroke()}
+                    ctx.lineWidth = 0.5>ctx.stroke()}
 
                 ctx.restore()}
 
@@ -306,8 +301,7 @@ ctx.stroke()}
             canvas.width = window.innerWidth""
             canvas.height = window.innerHeight}""
         window.addEventListener()
-}
-        return () => {}
+}        return () => {}
 
             if(animationRef.current) {}
 
@@ -320,13 +314,12 @@ ctx.stroke()}
   filter: theme === "quantum" ? "blur(0.5px)" : "none"}}/>)}
 
 export default UltraFuturisticBackground2034
-
 export { UltraFuturisticBackground2034 }
-
+;
 export { UltraFuturisticBackground2034 }
-
+;
 export { UltraFuturisticBackground2034 }
-
+;
 export { UltraFuturisticBackground2034 }
 
 export { UltraFuturisticBackground2034 };"
@@ -337,15 +330,13 @@ export { UltraFuturisticBackground2034 };"
   {}""
             opacity: intensity, """
   filter: theme === "quantum" ? "blur(0.5px)" : "none"}}/" >)}"
-export default UltraFuturisticBackground2034,
+export default UltraFuturisticBackground2034,export { UltraFuturisticBackground2034 }
+;
 export { UltraFuturisticBackground2034 }
-
+;
 export { UltraFuturisticBackground2034 }
-
-export { UltraFuturisticBackground2034 }
-
+;
 export { UltraFuturisticBackground2034 }
 
 export { UltraFuturisticBackground2034 }"
-""""
-"
+"""""

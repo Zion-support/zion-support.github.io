@@ -9,20 +9,18 @@ export default function EnhancedLayout() {return (
           Professional EnhancedLayout services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
 }"
 interface EnhancedLayoutProps {
-
-  children: ReactNode
-  title?: string
-  description?: string
-  keywords?: string,
-  ogImage?: string,
-  canonical?: string,,
-  noindex?: boolean,
-  showPerformanceMetrics?: boolean,
+  children: ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string,;
+  ogImage?: string,;
+  canonical?: string,,;
+  noindex?: boolean,;
+  showPerformanceMetrics?: boolean,;
   showSEOAnalysis?: boolean}
 
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
@@ -106,11 +104,8 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
           {/* comment */}"
           <link rel="preconnect" href="https: // comment
           <link rel="preconnect" href="https:// comment
-          <link rel="preconnect" href="https:// comment
           ,
           {/* comment */}"
-          <link rel="dns-prefetch" href="// comment
-          <link rel="dns-prefetch" href="// comment
           <link rel="dns-prefetch" href="// comment
           
           {/* comment */}"
@@ -188,7 +183,6 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
         </div>
       </SEOOptimizer>
     </PerformanceOptimizer>
-  )
-}
-export default EnhancedLayout;"
+  )}
+export default EnhancedLayout;";
 "

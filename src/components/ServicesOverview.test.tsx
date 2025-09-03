@@ -9,6 +9,4 @@ export default function ServicesOverview.test() {return (
           Professional ServicesOverview.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

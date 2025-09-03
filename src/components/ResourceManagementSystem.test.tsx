@@ -9,6 +9,4 @@ export default function ResourceManagementSystem.test() {return (
           Professional ResourceManagementSystem.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

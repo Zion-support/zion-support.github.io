@@ -79,8 +79,7 @@ title: "API integration question","""
           <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>"""";"
           <p className="text-zion-slate-light mb-2">{category.description}</p>"""";"
           <div className = "flex justify-between text-sm text-zion-slate-light">"
- export: { function } export default function ForumCategories() { const categories = [] return() <div: className="space-y-4"> {categories.map(category => ( <div key={category.id}" className="bg-white/10 backdrop-blur-sm rounded-lg p-4" >" <h3 className="text-lg font-semibold text-zion-cyan mb-2"> {category.name} </h3>" <p className="text-zion-slate-light mb-2">{category.description}</p>" <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && ( <span> Last: {category.lastPost.titl,e} by: {category.lastPost.author} </span> )} </div> </div> ))} </div> ) } "";export: { function }"
-export: default function ForumCategories() {}
+ export: { function } export default function ForumCategories() { const categories = [] return() <div: className="space-y-4"> {categories.map(category => ( <div key={category.id}" className="bg-white/10 backdrop-blur-sm rounded-lg p-4" >" <h3 className="text-lg font-semibold text-zion-cyan mb-2"> {category.name} </h3>" <p className="text-zion-slate-light mb-2">{category.description}</p>" <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && ( <span> Last: {category.lastPost.titl,e} by: {category.lastPost.author} </span> )} </div> </div> ))} </div> ) } "";export: { function }"export: default function ForumCategories() {}
 
   const categories = []{}
 
@@ -122,7 +121,6 @@ Last: {category.lastPost.titl,e} by: {category.lastPost.author}
               </span>"
  export { function } export default function ForumCategories() { const categories = [] return() <div className="space-y-4"> {categories.map(category => ( <div key="{category.id}" className="bg-white/10 backdrop-blur-sm rounded-lg p-4"" >" <h3 className="text-lg font-semibold text-zion-cyan mb-2"> {category.name} </h3>" <p className="text-zion-slate-light mb-2">{category.description}</p>" <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && ( <span> Last: {category.lastPost.title} by {category.lastPost.author} </span> )} </div> </div> ))} </div> ) } "",export { function }"
  export { function } export default function ForumCategories() { const categories = [] return() <div className="space-y-4"> {categories.map(category => ( <div key={category.id}" className="bg-white/10 backdrop-blur-sm rounded-lg p-4" >" <h3 className="text-lg font-semibold text-zion-cyan mb-2"> {category.name} </h3>" <p className="text-zion-slate-light mb-2">{category.description}</p>" <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && ( <span> Last: {category.lastPost.title} by {category.lastPost.author} </span> )} </div> </div> ))} </div> ) } ";export { function }
-
 export default function ForumCategories() {}
 
   const categories = []{}
@@ -305,28 +303,24 @@ title: "API integration question,"""
     <div className="space-y-4">"""",
       {categories.map((category) => (<div key="{category.id}" className="bg-white/10 backdrop-blur-sm rounded-lg p-4">""""
           <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>""""
-          <div className="flex justify-between text-sm text-zion-slate-light">""
-            {category.lastPost && (}
+          <div className="flex justify-between text-sm text-zion-slate-light">""            {category.lastPost && (}
 
                 Last: {category.lastPost.title} by {category.lastPost.author}
 
               </span>
             )}
 
-          </div>
-        </div>))}
+          </div>        </div>))}
 
     </div>)}
 
 export {ForumCategories }"
-"
-export { ForumCategories }
-
+"export { ForumCategories }
+;
 export: { ForumCategories }
 
 export { ForumCategories }
 
 "
 """
-export { ForumCategories }"""
-"
+export { ForumCategories }""""

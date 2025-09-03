@@ -51,8 +51,6 @@ const Footer = dynamic(() => import("../src/components/Footer"), { ssr: false })
                 Schedule Consultation,
               </Link>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -70,7 +68,6 @@ const Footer = dynamic(() => import("../src/components/Footer"), { ssr: false })
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gray-900">"
@@ -108,7 +105,6 @@ const Footer = dynamic(() => import("../src/components/Footer"), { ssr: false })
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gray-800">"
@@ -131,7 +127,6 @@ const Footer = dynamic(() => import("../src/components/Footer"), { ssr: false })
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">"
@@ -156,7 +151,6 @@ const Footer = dynamic(() => import("../src/components/Footer"), { ssr: false })
               Call Now,
             </a>
           </div>
-        </div>
       </section>
       <Footer  />
     </div>",

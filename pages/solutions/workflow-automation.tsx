@@ -2,8 +2,7 @@ import Head from "next/head"
 import React from "react"
   Globe,
   Clock} from "lucide-react"
-
-export default function WorkflowAutomation() {
+export default function WorkflowAutomation() {;
 
   const features = []
 
@@ -41,8 +40,6 @@ export default function WorkflowAutomation() {
                 Schedule Demo,
               </Button>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -71,7 +68,6 @@ export default function WorkflowAutomation() {
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
@@ -94,7 +90,6 @@ to increase efficiency and reduce manual work.
               </Button>
             </Link>
           </div>
-        </div>
       </section>
     </>",
   )}

@@ -15,5 +15,4 @@ describe("ComprehensivePricing2029", () => {}; "; it("renders without crashing",
 }
   });"
 "
-});"
-"
+});""

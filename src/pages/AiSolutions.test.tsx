@@ -15,5 +15,4 @@ describe("AiSolutions", () => {}; "; it("renders without crashing", () => {}; re
 }
   });"
 "
-});"
-"
+});""

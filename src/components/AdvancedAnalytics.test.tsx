@@ -9,6 +9,4 @@ export default function AdvancedAnalytics.test() {return (
           Professional AdvancedAnalytics.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

@@ -2,8 +2,7 @@ import Head from "next/head"
 import React from "react"
   Mail,
   Smartphone} from "lucide-react"
-
-export default function EventManagement() {
+export default function EventManagement() {;
 
   const features = []
 
@@ -41,8 +40,6 @@ export default function EventManagement() {
                 Schedule Demo,
               </Button>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -71,7 +68,6 @@ export default function EventManagement() {
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
@@ -94,7 +90,6 @@ to create memorable and successful events.
               </Button>
             </Link>
           </div>
-        </div>
       </section>
     </>",
   )}

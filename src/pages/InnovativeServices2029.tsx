@@ -22,5 +22,4 @@ enterprise: string  } features: string[] benefits: string[] targetMarket: string
 }
    icon: React.ComponentType<>",
 ""}"
-""
-"
+"""

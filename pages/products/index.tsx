@@ -18,7 +18,6 @@ import React from "react"
               Innovative technology products designed to solve complex business challenges and drive digital transformation.
             </p>
           </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -37,7 +36,6 @@ import React from "react"
                       <h3 className="text-2xl font-bold text-gray-900 mb-3">{product.title}</h3>"
                       <p className="text-gray-600 text-lg">{product.description}</p>
                     </div>
-                  </div>
                   "
                   <div className="mb-6">"
                     <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features: </h4>"
@@ -66,7 +64,6 @@ import React from "react"
               )})}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gray-50">"
@@ -110,8 +107,6 @@ import React from "react"
               <h3 className="text-lg font-semibold mb-2">Security</h3>"
               <p className="text-gray-600">OAuth 2.0, JWT, Encryption</p>
             </div>
-          </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-blue-600 text-white">"
@@ -129,10 +124,8 @@ import React from "react"
               View Services,
             </Link>
           </div>
-        </div>
       </section>
     </MainLayout>;,
   )}
 
-"
-export default ProductsIndex
+"export default ProductsIndex

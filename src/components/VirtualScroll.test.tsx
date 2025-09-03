@@ -9,6 +9,4 @@ export default function VirtualScroll.test() {return (
           Professional VirtualScroll.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

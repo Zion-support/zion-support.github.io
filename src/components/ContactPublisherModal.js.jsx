@@ -54,7 +54,6 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             // comment
             toast.error();"";,"});,"})"
             // comment
-            // comment
         finally {}"});,"})"
             setIsLoading(false); // comment
 }""";,"});,"});"
@@ -90,7 +89,6 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
 """"";,"});,"})""""";"
 export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {}""
 """
-"""
 """;"""
     const [subject, setSubject] = useState("")";""
     const [message, setMessage] = useState("")";""
@@ -123,13 +121,11 @@ function handleKeyDown(e) {}""
         document.addEventListener("keydown", handleKeyDown)"
         return () => {}""
 ""
-""
 """"
             document.removeEventListener()
 }
             removeTrap && removeTrap()}}, [isOpen, onClose])
-}
-    if (!isOpen) {}
+}    if (!isOpen) {}
 
         return null}
 
@@ -137,7 +133,6 @@ function handleKeyDown(e) {}""
 
         e.preventDefault()"
         if (!subject.trim() || !message.trim()) {}""
-"""
 """
 """"
             setError("Subject and message are required.")""
@@ -153,11 +148,9 @@ try {}""
             setMessage("") // comment
         catch (err) {}""
 """
-"""
 """"
             // comment
             toast.error("Failed to send message. Please try again.")";""
-            // comment
             // comment
 
         finally {}"
@@ -172,7 +165,6 @@ try {}""
 """"
             // comment
             toast.error("Failed to send message. Please try again.")"
-            // comment
             // comment
 
         finally {}""

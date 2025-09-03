@@ -9,6 +9,4 @@ export default function Layout.test() {return (
           Professional Layout.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

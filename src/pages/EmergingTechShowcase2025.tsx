@@ -11,8 +11,6 @@ export default function EmergingTechShowcase2025() {return ("
           Professional EmergingTechShowcase2025 services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

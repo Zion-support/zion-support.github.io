@@ -15,5 +15,4 @@ describe("ApiPlayground", () => {}; "; it("renders without crashing", () => {}; 
 }
   });"
 "
-});"
-"
+});""

@@ -132,7 +132,6 @@ class FinalSyntaxCleanup {
         if (before !== fixedContent) {
           hasChanges = true
         }
-      }
 
       // Additional specific fixes
       fixedContent = this.applySpecificFixes(fixedContent, filePath)
@@ -149,7 +148,6 @@ class FinalSyntaxCleanup {
       console.log(`❌ Error fixing ${filePath}: ${error.message}`)
       return false
     }
-  }
 
   applySpecificFixes(content, filePath) {
     let fixedContent = content
@@ -170,14 +168,12 @@ class FinalSyntaxCleanup {
       if (fixedContent.includes('return (') && !fixedContent.includes('const ') && !fixedContent.includes('function ')) {
         fixedContent = 'const Component = () => {\n' + fixedContent
       }
-    }
 
     if (filePath.endsWith('.ts') || filePath.endsWith('.js')) {
       // Fix missing imports
       if (fixedContent.includes('React.') && !fixedContent.includes('import React')) {
         fixedContent = 'import React from "react"\n' + fixedContent
       }
-    }
 
     return fixedContent
   }
@@ -191,10 +187,8 @@ class FinalSyntaxCleanup {
       if (file.isDirectory()) {
         await this.fixDirectory(fullPath)
       } else if (file.isFile() && this.shouldFixFile(fullPath)) {
-        await this.fixFile(fullPath)
-      }
+        await this.fixFile(fullPath)      }
     }
-  }
 
   shouldFixFile(filePath) {
     const ext = path.extname(filePath)
@@ -218,7 +212,6 @@ class FinalSyntaxCleanup {
         console.log(`📁 Processing directory: ${dir}`)
         await this.fixDirectory(dir)
       }
-    }
 
     console.log('\n📊 Summary:')
     console.log(`✅ Files fixed: ${this.fixedFiles.length}`)
@@ -243,12 +236,10 @@ class FinalSyntaxCleanup {
         totalFixed: this.fixedFiles.length,
         totalErrors: this.errors.length
       }
-    }
 
     fs.writeFileSync('final-syntax-cleanup-report.json', JSON.stringify(report, null, 2))
     console.log('\n📄 Report saved to: final-syntax-cleanup-report.json')
   }
-}
 
 // Run the cleanup
 const cleanup = new FinalSyntaxCleanup()

@@ -82,8 +82,7 @@ delayChildren: 0.2}
 """,
     hidden: { opacity: 0 }, visible: {}
 
-      opacity: 1,
-        staggerChildren: 0.1, delayChildren: 0.2}
+      opacity: 1,        staggerChildren: 0.1, delayChildren: 0.2}
 
     }
 
@@ -138,8 +137,7 @@ y: 30}}
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",,
         {/* comment */}""""
         <motion.div """";"
-          className="text-center mb-16"
-  { opacity: 0, y: 30}}
+          className="text-center mb-16"  { opacity: 0, y: 30}}
 
           animate = {}
 
@@ -230,8 +228,7 @@ designed to transform your business and drive exponential growth.
         <motion.div &apos;&apos,&apos;"
           className="&apos;flex" flex-wrap justify-center gap-4 mb-12&apos;&apos {/* comment */}"""""
         <motion.div """"
-          className="flex flex-wrap justify-center gap-4 mb-12"
-  { opacity: 0, y: 20}}
+          className="flex flex-wrap justify-center gap-4 mb-12"  { opacity: 0, y: 20}}
 
           transition = {}
 
@@ -277,8 +274,7 @@ designed to transform your business and drive exponential growth.
             >&apos;&apos,&apos;&apos,
               <motion.div&apos;&apos,";"
                 className="&apos;bg-zion-slate-dark/80" backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/40 transition-all duration-300 h-full&apos,&apos,"
-                variants = "{cardVariants}"
-                whileHover = {}
+                variants = "{cardVariants}"                whileHover = {}
 
   {}
 

@@ -148,8 +148,6 @@ with cutting-edge technology solutions.
                   </button>
                 </Link>
               </div>
-            </div>
-          </div>
         </section>
 ",
       {/* comment */}""
@@ -190,7 +188,6 @@ partners succeed and grow their business.
             ))}
 
           </div>
-        </div>
       </section>
 "
       {/* comment */}""
@@ -249,7 +246,6 @@ partners succeed and grow their business.
               ))}
 
             </div>
-          </div>
         </section>
       {/* comment */}"
       <section className="py-20 bg-white">"
@@ -356,7 +352,6 @@ and goals.
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-16 bg-blue-900 text-white">"
@@ -377,7 +372,6 @@ and goals.
                 Apply Now,
               </Link>
             </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -444,7 +438,6 @@ and goals.
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
@@ -470,7 +463,6 @@ and innovation.
                 partners@ziontechgroup.com,
               </a>
             </div>
-          </div>
 "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
             {partnerTypes.map((type, index) => ("
@@ -500,7 +492,6 @@ and innovation.
             ))}
 
           </div>
-        </div>
       </section>
 "
       {/* comment */}""
@@ -533,14 +524,11 @@ Zion Tech Group. Our team is ready to help you succeed."
               Download Partner Kit,
             </Button>
           </div>
-        </div>
       </section>
-        </section>
       </main>
     </>
   )}
 
   )
 }
-}"
-""
+}"""

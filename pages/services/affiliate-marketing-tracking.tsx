@@ -114,8 +114,6 @@ import React from "react"
                 Get Demo <ArrowRight className="inline h-4 w-4 ml-1"  />
               </Link>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -155,7 +153,6 @@ import React from "react"
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section id="pricing" className="py-24 sm: py-32 bg-gray-50">"
@@ -201,11 +198,9 @@ import React from "react"
                     Get Started,
                   </Link>
                 </div>
-              </div>
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className=""py-24" sm:py-32"}>"
@@ -241,8 +236,6 @@ import React from "react"
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-time Analytics</h3>"
               <p className="text-gray-600">Get instant insights into your affiliate program performance with live dashboards</p>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -263,8 +256,6 @@ import React from "react"
                 Call +1 302 464 0950 <ArrowRight className="inline h-4 w-4 ml-1"  />
               </Link>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -285,9 +276,6 @@ import React from "react"
                 <MapPin className="h-4 w-4 mr-2"  />,
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
-            </div>
-          </div>
-        </div>
       </section>
     </PageTransition>
   );"

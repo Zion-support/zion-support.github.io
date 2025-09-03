@@ -8,6 +8,5 @@ export default function Communityroutes() {
           This is a placeholder component for communityroutes.
         </p>
       </div>
-    </div>
   )
 }

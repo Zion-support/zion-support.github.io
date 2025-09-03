@@ -11,8 +11,6 @@ export default function EnhancedServicesPage() {return ("
           Professional EnhancedServicesPage services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

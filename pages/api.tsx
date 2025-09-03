@@ -16,7 +16,6 @@ export default function API() {
             <h1 className="text-4xl font-bold mb-4">API Documentation</h1>
             <p className="text-xl">Comprehensive API documentation for Zion Tech Group services</p>
           </div>
-        </div>
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8">Available APIs</h2>
@@ -35,10 +34,5 @@ export default function API() {
                   Contact Us →
                 </Link>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
-  )
-}
+  )}

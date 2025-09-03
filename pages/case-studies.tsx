@@ -6,7 +6,6 @@ const Component = () => {
   Zap} from "lucide-react"
   Zap"
 } from "lucide-react"
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb,
 const CaseStudies: NextPage = () => {
   const caseStudies = [],"
       duration: "4 months","
@@ -82,7 +81,6 @@ description="Real-world" success stories from our technology solutions"
                 Start Your Project,
               </button>
             </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -150,7 +148,6 @@ description="Real-world" success stories from our technology solutions"
                           {study.teamSize}
 
                         </div>
-                      </div>
 "
                       <div className="flex flex-wrap gap-2>
                         {study.technologies.map((tech, index) => ("
@@ -161,13 +158,9 @@ description="Real-world" success stories from our technology solutions"
                         ))}
 
                       </div>
-                    </div>
-                  </div>
-                </div>
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50>"
@@ -212,7 +205,6 @@ description="Real-world" success stories from our technology solutions"
                         {study.teamSize}
 
                       </div>
-                    </div>
 "
                     <button className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: shadow-lg transition-all duration-300>
                       View Details"
@@ -223,7 +215,6 @@ description="Real-world" success stories from our technology solutions"
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white>"
@@ -263,8 +254,6 @@ description="Real-world" success stories from our technology solutions"
                 <h3 className="text-3xl font-bold text-gray-900 mb-2>50%</h3>"
                 <p className=text-gray-600">Average Cost Reduction</p>
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"

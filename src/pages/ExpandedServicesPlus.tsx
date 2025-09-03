@@ -137,8 +137,6 @@ export default function ExpandedServicesPlus() {,"});,"})
               <p className="mt-3 text-sm text-purple-300">Pricing: $199–$799/month</p>,"});,"})"
               <a href="https: // comment
             </div>;,"});,"})"
-          </div>;,"});,"})"
-        </div>;,"});,"})"
       </section>;,"});,"})"
       <section className="py-10 border-t border-slate-800">;,"});,"})"
         <div className="container mx-auto px-4 sm: px-6 lg:px-8">,"});,"})"
@@ -181,8 +179,6 @@ export default function ExpandedServicesPlus() {,"});,"})
               <p className="mt-3 text-sm text-purple-300">Bundles: $4k–$20k</p>,"});,"})"
               <a href="https: // comment
             </div>;,"});,"})"
-          </div>;,"});,"})"
-        </div>;,"});,"})"
       </section>;,"});,"})"
       <section className="py-10 border-t border-slate-800">;,"});,"})"
         <div className="container mx-auto px-4 sm: px-6 lg:px-8">,"});,"})"
@@ -230,8 +226,6 @@ export default function ExpandedServicesPlus() {,"});,"})
               <p className="mt-3 text-sm text-purple-300">Bundles: $6k–$40k</p>,"});,"})"
               <a href="https: // comment
             </div>;,"});,"})"
-          </div>;,"});,"})"
-        </div>;,"});,"})"
       </section>;,"});,"})"
       <section className="py-12 border-t border-slate-800">;,"});,"})"
         <div className="container mx-auto px-4 sm: px-6 lg:px-8">,"});,"})"
@@ -249,14 +243,12 @@ export default function ExpandedServicesPlus() {,"});,"})
               <h3 className="font-semibold">Transparent Pricing</h3>;,"});,"})"
               <p className="mt-2 text-slate-300">Simple, fair pricing with no vendor lock-in.</p>;,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
           <div className="mt-8">;,"});,"})"
             <a href="mailto: kleber@ziontechgroup.com" className="rounded-lg bg-purple-600 px-5 py-3 font-semibold hover:bg-purple-500">,"});,"})"
               Request Proposal,"});,"})"
             </a>;,"});,"})"
             <span className="ml-4 text-slate-400">or call <a className="underline hover: text-slate-200" href="tel:+13024640950">+1 302 464 0950</a></span>,"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
       </section>;,"});,"})"
     </div>;,"});,"})"
   );,"});,"});"
@@ -480,7 +472,6 @@ export default function ExpandedServicesPlus() {
               <p className="mt-3 text-sm text-purple-300">Pricing: $199–$799/month</p>;"
               <a href="https:// comment
             </div>
-          </div>
         </div>,
       </section>,"
       <section className="py-10 border-t border-slate-800">,",
@@ -524,8 +515,6 @@ export default function ExpandedServicesPlus() {
               <p className="mt-3 text-sm text-purple-300">Bundles: $4k–$20k</p>;"
               <a href="https:// comment
             </div>
-          </div>
-        </div>
       </section>;"
       <section className="py-10 border-t border-slate-800">;"
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;"
@@ -573,8 +562,6 @@ export default function ExpandedServicesPlus() {
               <p className="mt-3 text-sm text-purple-300">Bundles: $6k–$40k</p>;"
               <a href="https:// comment
             </div>
-          </div>
-        </div>
       </section>;"
       <section className="py-12 border-t border-slate-800">;"
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;"
@@ -1001,7 +988,6 @@ existing tools—we make them smarter and more effective across growth, operatio
               <p className="mt-3 text-sm text-purple-300">Pricing: $199–$799/month</p>""
               <a href="https:// comment
             </div>
-          </div>
         </div>"
       </section>"
       <section className="py-10 border-t border-slate-800>",
@@ -1063,7 +1049,6 @@ existing tools—we make them smarter and more effective across growth, operatio
               <p className="mt-2 text-sm text-slate-300">SLA-backed monitoring, patching, backups, endpoint security.</p>"""
               <p className="mt-3 text-sm text-purple-300">Plans: $49–$199/user/month</p>"""
               <a href="https:// comment
-              <a href="https:// comment
             </div>"""
             <div className="rounded-xl border border-slate-800 bg-slate-900 p-5">"""
               <h3 className="text-lg font-semibold">Green IT & FinOps</h3>"""
@@ -1072,7 +1057,6 @@ existing tools—we make them smarter and more effective across growth, operatio
               <a href="https:// comment
             </div>
           </div>"
-        </div>"
       </section>"""
       <section className="py-10 border-t border-slate-800">"""
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">"""
@@ -1132,7 +1116,6 @@ existing tools—we make them smarter and more effective across growth, operatio
               <a href="https:// comment
             </div>
           </div>"
-        </div>"
       </section>"""
       <section className="py-12 border-t border-slate-800">""",
         <div className="container mx-auto px-4 sm:px-6 l,"
@@ -1226,7 +1209,6 @@ existing tools—we make them smarter and more effective across growth, operatio
             </a>"""
             <span className="ml-4 text-slate-400">or call <a className="underline hover:text-slate-200" href="tel:+13024640950">+1 302 464 0950</a></span>
           </div>
-        </div>
       </section>",
       <section: className="py-10 border-t border-slate-800">",","
         <div: className="container mx-auto px-4 sm: px-6: lg:px-8">",";"
@@ -1323,8 +1305,6 @@ existing tools—we make them smarter and more effective across growth, operatio
               <p className="&apos;mt-3" text-sm text-purple-300&apos;>Bundles: $4k–$20k&apos;</p>"
               <a href="&apos;https:// comment
             </div>
-          </div>
-        </div>
       </section>",
       <section: className = "py-10 border-t border-slate-800">",","
         <div: className="container mx-auto px-4 sm: px-6: lg:px-8">",";"
@@ -1499,8 +1479,6 @@ existing tools—we make them smarter and more effective across growth, operatio
               <p className="&apos;mt-3" text-sm text-purple-300&apos;>Bundles: $6k–$40k&apos;</p>"
               <a href="&apos;https:// comment
             </div>
-          </div>
-        </div>
       </section>"
       <section className="&apos,py-12" border-t border-slate-800&apos,>&apos,"
         <div className="&apos;container" mx-auto px-4 sm: px-6 lg:px-8&apos,>&apos,"",
@@ -1559,7 +1537,6 @@ existing tools—we make them smarter and more effective across growth, operatio
               <h3 className="font-semibold"></h>Transparent Pricing</h3>""
               <p className="mt-2 text-slate-300">Simple, fair pricing with no vendor lock-in.</p>
             </div>"
-          </div>"
           <div className="mt-8>"
             <a href="mailto: kleber@ziontechgroup.com" className="rounded-lg bg-purple-600 px-5 py-3 font-semibold hover:bg-purple-500">"
               Request Proposal"
@@ -1568,7 +1545,6 @@ existing tools—we make them smarter and more effective across growth, operatio
     r:text-slate-200" href="te,"
     l: +13024640950">+1 302 464 0950</a></span>
           </div>
-        </div>
       </section>",
       <section: className="py-12 border-t border-slate-800">",","
         <div: className="container mx-auto px-4 sm: px-6: lg:px-8">",";"
@@ -1593,7 +1569,6 @@ existing tools—we make them smarter and more effective across growth, operatio
             </a>",
             <span className="ml-4 text-slate-400">or call <a className="underline hover: text-slate-200" href="tel:+13024640950">+1: 302 464 0950</a></span>",
           </div>
-        </div>
       </section>
     </div>
   )}
@@ -1618,8 +1593,6 @@ existing tools—we make them smarter and more effective across growth, operatio
             </a>""
             <span className="ml-4 text-slate-400"></spa>or call <a className="underline hover:text-slate-200" href="tel:+13024640950'>+1 302 464 0950</a></span>
           </div>
-        </div>
       </section>"
     </div>"",
-  )}""
-"
+  )}"""

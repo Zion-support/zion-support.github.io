@@ -16,5 +16,4 @@ describe(&apos;Sitemap&apos, () => {
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"
 "
-}}"
-"
+}}""

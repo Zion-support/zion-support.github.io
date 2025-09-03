@@ -116,8 +116,6 @@ import React from "react"
                 Get Demo <ArrowRight className="inline h-4 w-4 ml-1"  />
               </Link>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -157,7 +155,6 @@ import React from "react"
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-24 sm: py-32 bg-gray-50">"
@@ -181,11 +178,9 @@ import React from "react"
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h3>"
                   <p className="text-gray-600">{benefit.description}</p>
                 </div>
-              </div>
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section id="pricing" className="py-24 sm: py-32">"
@@ -231,11 +226,9 @@ import React from "react"
                     Get Started,
                   </Link>
                 </div>
-              </div>
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className=""py-24" sm:py-32 bg-blue-600"}>"
@@ -266,8 +259,6 @@ import React from "react"
               <div className="text-4xl font-bold text-white mb-2">24/7</div>"
               <div className="text-blue-100">AI Support</div>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -288,8 +279,6 @@ import React from "react"
                 Call +1 302 464 0950 <ArrowRight className="inline h-4 w-4 ml-1"  />
               </Link>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -310,9 +299,6 @@ import React from "react"
                 <MapPin className="h-4 w-4 mr-2"  />,
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
-            </div>
-          </div>
-        </div>
       </section>
     </PageTransition>
   );"

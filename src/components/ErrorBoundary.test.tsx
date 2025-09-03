@@ -9,6 +9,4 @@ export default function ErrorBoundary.test() {return (
           Professional ErrorBoundary.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

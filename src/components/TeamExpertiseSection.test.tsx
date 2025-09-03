@@ -9,6 +9,4 @@ export default function TeamExpertiseSection.test() {return (
           Professional TeamExpertiseSection.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

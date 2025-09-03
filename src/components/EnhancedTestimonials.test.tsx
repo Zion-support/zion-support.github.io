@@ -16,5 +16,4 @@ describe(&apos;EnhancedTestimonials&apos, () => {
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"
 "
-}}"
-"
+}}""

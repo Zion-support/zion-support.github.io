@@ -16,5 +16,4 @@ describe(&apos;AIServiceRecommendationEngine&apos, () => {
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"
 "
-}}"
-"
+}}""

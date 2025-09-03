@@ -40,7 +40,6 @@ try {
     } finally {
       setIsSubmitting(false)
 }
-  }
 
   const services = []
 
@@ -67,8 +66,53 @@ initial="{{" opacity: 0, scale: 0.9 }}"
         >
           Send Another Message,
         </button>
-      </motion.div>,
-    )}
+      </motion.div>,    )}
+;
+  return (";
+    <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">";
+      <div className="text-center mb-8">";
+        <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>";
+        <p className="text-zion-slate-light">;
+          Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals."";
+        </p>;
+      </div>;
+";
+      <div className = "grid grid-cols-1 lg: grid-cols-2 gap-8 mb-8">,;
+        {/*   */}";
+        <div className="space-y-6">";
+          <div className="flex items-center gap-4">";
+            <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">";
+              <Mail className="w-6 h-6 text-zion-cyan" />;
+            </div>;
+            <div>";
+              <div className="text-white font-semibold">Email</div>";
+              <div className="text-zion-slate-light">kleber@ziontechgroup.com</div>;
+            </div>;
+";
+          <div className="flex items-center gap-4">";
+            <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">";
+              <Phone className="w-6 h-6 text-zion-cyan" />;
+            </div>;
+            <div>";
+              <div className="text-white font-semibold">Phone</div>";
+              <div className="text-zion-slate-light">+1 (302) 464-0950</div>;
+            </div>;
+";
+          <div className="flex items-center gap-4">";
+            <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">";
+              <MapPin className="w-6 h-6 text-zion-cyan" />;
+            </div>;
+            <div>";
+              <div className="text-white font-semibold">Location</div>";
+              <div className="text-zion-slate-light">Delaware, United States</div>;
+            </div>;
+";
+          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 rounded-lg p-4">";
+            <h4 className="text-white font-semibold mb-2">Response Time</h4>";
+            <p className="text-zion-slate-light text-sm">;
+              We typically respond to all inquiries within 2 hours during business hours.;
+            </p>;
+          </div>;
 
   return ("
     <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">"
@@ -90,7 +134,6 @@ initial="{{" opacity: 0, scale: 0.9 }}"
               <div className="text-white font-semibold">Email</div>"
               <div className="text-zion-slate-light">kleber@ziontechgroup.com</div>
             </div>
-          </div>
 "
           <div className="flex items-center gap-4">"
             <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">"
@@ -100,7 +143,6 @@ initial="{{" opacity: 0, scale: 0.9 }}"
               <div className="text-white font-semibold">Phone</div>"
               <div className="text-zion-slate-light">+1 (302) 464-0950</div>
             </div>
-          </div>
 "
           <div className="flex items-center gap-4">"
             <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">"
@@ -110,7 +152,6 @@ initial="{{" opacity: 0, scale: 0.9 }}"
               <div className="text-white font-semibold">Location</div>"
               <div className="text-zion-slate-light">Delaware, United States</div>
             </div>
-          </div>
 "
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 rounded-lg p-4">"
             <h4 className="text-white font-semibold mb-2">Response Time</h4>"
@@ -118,7 +159,6 @@ initial="{{" opacity: 0, scale: 0.9 }}"
               We typically respond to all inquiries within 2 hours during business hours.
             </p>
           </div>
-        </div>
         {/* comment */}"
         <form onSubmit="{handleSubmit}" className="space-y-4">"
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
@@ -148,7 +188,6 @@ className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 r
 className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:border-zion-cyan/50 transition-colors""
                 placeholder="Enter your last name" />
             </div>
-          </div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>"
@@ -176,7 +215,6 @@ className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 r
                 className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:border-zion-cyan/50 transition-colors""
                 placeholder="Enter your phone number" />
             </div>
-          </div>
           <div>"
             <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
               Company,
@@ -226,7 +264,6 @@ className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 r
 
               </select>
             </div>
-          </div>
           <div>"
             <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2">
               Project Timeline,
@@ -287,7 +324,6 @@ type="submit""
           </motion.button>
         </form>
       </div>
-    </div>
   );"
 };"
 

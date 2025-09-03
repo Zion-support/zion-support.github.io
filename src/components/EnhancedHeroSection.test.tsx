@@ -9,6 +9,4 @@ export default function EnhancedHeroSection.test() {return (
           Professional EnhancedHeroSection.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

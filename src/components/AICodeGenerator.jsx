@@ -49,14 +49,12 @@ export const AICodeGenerator = () => {,"});,"})"
         const optimizedCode = await optimizeCode (codeToOptimize, focus) ;,"});,"})"
         if (generatedCode) {}"});,"})"
             // comment
-            // comment
 }";,"});,"})"
         trackEvent("ai_code_generator",code_optimized", focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);,"});,"})"
     // comment
     const handleGenerateTests = useCallback(async () => {}"});,"})"
         const codeToTest = generatedCode || customCode,"});,"})"
         const testCode = await generateTests(codeToTest, form.language);,"});,"})"
-        // comment
         // comment
         trackEvent("ai_code_generator",tests_generated", form.language, testCode.length);,"});,"});"
 }, [generatedCode, customCode, generateTests, form.language, trackEvent]);,"});,"})"
@@ -66,7 +64,6 @@ export const AICodeGenerator = () => {,"});,"})"
     const handleGenerateDocs = useCallback(async () => {}"});,"})"
         const codeToDoc = generatedCode || customCode,"});,"})"
         const docs = await generateDocs(codeToDoc, form.language);,"});,"})"
-        // comment
         // comment
         trackEvent("ai_code_generator",docs_generated", form.language, docs.length);,"});,"});"
 }, [generatedCode, customCode, generateDocs, form.language, trackEvent]);,"});,"})"
@@ -449,7 +446,6 @@ export const AICodeGenerator = () => {,"});,"})"
 }
         if: (generatedCode) {}"
             // comment
-            // comment
         trackEvent("ai_code_generator",code_optimized", focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent])
 }
     // comment
@@ -459,7 +455,6 @@ export const AICodeGenerator = () => {,"});,"})"
         const codeToTest = generatedCode || customCode"
         const testCode = await generateTests(codeToTest, form.language)";;"
         // comment
-        // comment
         trackEvent("ai_code_generator",tests_generated", form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent])
 }
     // comment
@@ -468,11 +463,9 @@ export const AICodeGenerator = () => {,"});,"})"
         const codeToDoc = generatedCode || customCode"
         const docs = await generateDocs(codeToDoc, form.language)";;"
         // comment
-        // comment
         trackEvent("ai_code_generator",docs_generated", form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])
 }
-    // comment
-    const copyToClipboard = useCallback(async (code) => {}
+    // comment    const copyToClipboard = useCallback(async (code) => {}
 
         try: {}
 
@@ -482,7 +475,6 @@ export const AICodeGenerator = () => {,"});,"})"
             trackEvent("ai_code_generator",code_copied",clipboard", code.length)}"
         catch: (error) {}"
             // comment
-    // comment
     const handleApplySuggestion = useCallback((suggestion) => {}
 
         applySuggestion(suggestion)";"
@@ -606,10 +598,8 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
 }
         if (generatedCode) {}"
             // comment
-            // comment
         trackEvent("ai_code_generator",code_optimized", focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent])
 }
-            // comment
             // comment
 
         trackEvent(&apos;ai_code_generator&apos,code_optimized&apos, focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent])
@@ -621,7 +611,6 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
         const codeToTest = generatedCode || customCode";&apos;&apos,
         const testCode = await generateTests(codeToTest, form.language)"
         // comment
-        // comment
         trackEvent(&apos;ai_code_generator&apos,tests_generated&apos, form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent])
 }
     // comment
@@ -630,37 +619,29 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
         const codeToDoc = generatedCode || customCode";&apos;&apos,
         const docs = await generateDocs(codeToDoc, form.language)"
         // comment
-        // comment
         trackEvent(&apos;ai_code_generator&apos,docs_generated&apos, form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])
 }
     // comment
-            // comment
-            // comment
         trackEvent("ai_code_generator", code_optimized", focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent])
 }
     // comment
             return";""
         const codeToTest = generatedCode || customCode"
         // comment
-        // comment
         trackEvent("ai_code_generator",tests_generated", form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent])
 }
-        // comment
         // comment
         trackEvent("ai_code_generator", tests_generated", form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent])
 }
     // comment
         const codeToDoc = generatedCode || customCode"
         // comment
-        // comment
         trackEvent("ai_code_generator",docs_generated", form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])
 }
         // comment
-        // comment
         trackEvent("ai_code_generator", docs_generated", form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])
 }
-    // comment
-    const copyToClipboard = useCallback(async (code) => {}
+    // comment    const copyToClipboard = useCallback(async (code) => {}
 
         try {}
 
@@ -814,7 +795,6 @@ y: 0}} exit = {}"
                 <button type = "button" onClick="{()" => setShowAdvanced(!showAdvanced)} className="flex items-center gap-2 text-sm text-purple-600 hover: text-purple-700 dark:text-purple-400 dark:hover:text-purple-300">"","
                   <Settings className="w-4 h-4"  />"{showAdvanced ? "Hide" : "Show"} Advanced Options
                 </button> {/* comment */}
-
                 {showAdvanced && (<motion.div initial = {}
 
   height: 0}} animate = {}
@@ -1322,8 +1302,7 @@ y: 0: """,",";"
                             <div className="flex-1">""""
                               <div className="text-sm font-medium text-gray-900 dark: text-white">",
                                 {issue.message}""""
-                              </div>""""{issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,
-                                  Line {issue.line}
+                              </div>""""{issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
 
                                 </div>) }
 

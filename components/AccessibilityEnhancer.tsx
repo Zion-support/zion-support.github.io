@@ -13,7 +13,6 @@ const handleKeyDown = (event: KeyboardEvent) => {"
       const handleMouseDown = () => {"
         document.body.classList.remove("keyboard-navigation")
 }
-      }
 
 "
       document.addEventListener("keydown", handleKeyDown)
@@ -35,7 +34,6 @@ const style = document.createElement("style")
 }
         document.removeEventListener("mousedown", handleMouseDown)
 }
-      }
 
     }
 
@@ -44,5 +42,4 @@ const style = document.createElement("style")
   return null
 
 
-'
-export default AccessibilityEnhancer
+'export default AccessibilityEnhancer

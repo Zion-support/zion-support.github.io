@@ -15,5 +15,4 @@ describe("UltimateServicesShowcase2026", () => {}; "; it("renders without crashi
 }
   });"
 "
-});"
-"
+});""

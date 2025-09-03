@@ -9,6 +9,4 @@ export default function TestimonialsSection.test() {return (
           Professional TestimonialsSection.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

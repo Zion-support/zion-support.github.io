@@ -58,8 +58,6 @@ import React { useState, useEffect, useRef } from "react";""";,"});,"})","});,"}
     const handleSearch = (e) => {}"});,"})"
         e.preventDefault();,"});,"})"
         // comment
-        // comment
-        // comment
     const menuVariants = {}"});,"})"
   closed: {}"});,"})"
             x: "100%","});,"})"
@@ -168,5 +166,4 @@ export { MobileNavigation };,"});,"})"
 ""
 }"
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ""
-""
-"
+"""

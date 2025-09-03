@@ -25,8 +25,6 @@ import type { NextPage } from "next"
                 View Pricing,
               </a></Link>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -49,7 +47,6 @@ import type { NextPage } from "next"
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gray-50">"
@@ -88,10 +85,6 @@ exceptional customer experiences while optimizing your support operations.
                   <span className="font-medium">Support Efficiency</span>"
                   <span className="text-blue-600 font-bold">+200%</span>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
       {/* comment */}"
       <section id="pricing" className="py-20 bg-white">"
@@ -144,7 +137,6 @@ exceptional customer experiences while optimizing your support operations.
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className=""py-20" bg-gradient-to-r from-orange-600 to-red-600 text-white"}>"
@@ -161,10 +153,8 @@ exceptional customer experiences while optimizing your support operations.
               Call +1 302 464 0950,
             </a></Link>
           </div>
-        </div>
       </section>
     </Layout>;,
   )}
 
-"
-export default CustomerSupport
+"export default CustomerSupport

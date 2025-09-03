@@ -85,8 +85,6 @@ with cutting-edge AI, cloud architecture, and innovative development services.
                 <MapPin className="h-5 w-5 mr-3 text-blue-400"  />,
                 <span>San Francisco, CA</span>
               </div>
-            </div>
-          </div>
           {/* comment */}
 
           <div>"
@@ -163,7 +161,6 @@ with cutting-edge AI, cloud architecture, and innovative development services.
 
             </ul>
           </div>
-        </div>
         {/* comment */}"
         <div className="mt-12 pt-8 border-t border-gray-700">"
           <div className="max-w-md">"
@@ -179,9 +176,6 @@ with cutting-edge AI, cloud architecture, and innovative development services.
                 Subscribe,
               </button>
             </div>
-          </div>
-        </div>
-      </div>
 ,
       {/* comment */}"
       <div className="border-t border-gray-700">"
@@ -221,11 +215,7 @@ with cutting-edge AI, cloud architecture, and innovative development services.
               ))}
 
             </div>
-          </div>
-        </div>
-      </div>
     </footer>
   )
 }
-""
-export default ImprovedFooter
+""export default ImprovedFooter

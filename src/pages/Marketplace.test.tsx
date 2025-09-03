@@ -15,5 +15,4 @@ describe("Marketplace", () => {}; "; it("renders without crashing", () => {}; re
 }
   });"
 "
-});"
-"
+});""

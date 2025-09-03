@@ -19,8 +19,7 @@ export default function Blog() {}
       image: &quot,/api/placeholder/600/400&quot,"
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp,
   Brain, Atom, Rocket, Shield, Globe, Code} from "lucide-react
-
-export default function Blog() {
+export default function Blog() {;
 
   const blogPosts = [],"
       image: "/api/placeholder/600/400",
@@ -351,7 +350,6 @@ key = "{post.id}""
 
                             </span>
                           </div>
-                        </div>
                       </motion.article>;"
                         className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hove,r: scale-105&quot
                       >&quot;"
@@ -391,7 +389,6 @@ key = "{post.id}""
                               {post.readTime}&quot
                             </span>
                           </div>
-                        </div>
                       </motion.article>
                     ))}
 
@@ -467,8 +464,6 @@ key = "{post.id}""
                               <ArrowRight className="w-4 h-4 ml-1"  />
                             </Link>
                           </div>
-                        </div>
-                      </div>
                     </motion.article>;"
                       className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300&quot,
                     >&quot,",
@@ -517,8 +512,6 @@ key = "{post.id}""
                               <ArrowRight className="&quot;w-4" h-4 ml-1&quot,       />&quot,
                             </Link>
                           </div>
-                        </div>
-                      </div>
                     </motion.article>
                   ))}
 
@@ -573,7 +566,6 @@ key = "{post.id}""
                     ))}
 
                   </div>
-                </div>
                 {/* comment */}"
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30">;"
                   <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>;"
@@ -590,12 +582,6 @@ key = "{post.id}""
                       Subscribe
                     </button>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </>"
                 <div className="&quot;bg-gradient-to-br" from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30&quot;>&quot;""
                   <h3 className="&quot;text-xl" font-bold text-white mb-4&quot;>Stay Updated&quot;</h3>"
@@ -616,13 +602,6 @@ key = "{post.id}""
                       Subscribe,
                     </button>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 </>
   ),
-  )}"
-"
+  )}""

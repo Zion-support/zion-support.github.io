@@ -9,6 +9,4 @@ export default function ApiDocumentation() {return (
           Professional ApiDocumentation services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

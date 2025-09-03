@@ -9,6 +9,4 @@ export default function BundleAnalyzer() {return (
           Professional BundleAnalyzer services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

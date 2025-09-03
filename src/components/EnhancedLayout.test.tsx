@@ -9,6 +9,4 @@ export default function EnhancedLayout.test() {return (
           Professional EnhancedLayout.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

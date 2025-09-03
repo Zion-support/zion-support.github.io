@@ -11,8 +11,6 @@ export default function CompanyWorkspace() {return ("
           Professional CompanyWorkspace services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

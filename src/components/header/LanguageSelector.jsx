@@ -30,7 +30,6 @@ export function LanguageSelector() {const [isOpen, setIsOpen] = useState()"react
     setIsOpen()
 }
     // comment
-        // comment
 
 
 "

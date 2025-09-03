@@ -15,5 +15,4 @@ describe("ComprehensiveImprovements2025", () => {}; "; it("renders without crash
 }
   });"
 "
-});"
-"
+});""

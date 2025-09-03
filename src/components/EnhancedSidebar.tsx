@@ -9,6 +9,4 @@ export default function EnhancedSidebar() {return (
           Professional EnhancedSidebar services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

@@ -54,10 +54,6 @@ const TrustIndicators: React.FC = () => {
               <CheckCircle className="w-5 h-5 text-green-500" /" >""
               <span className="text-sm">HIPAA Compliant</span>
             </div>
-          </div>
-        </div>
-      </div>
     </section>
   )}'
-"
-export default TrustIndicators;"`""
+"export default TrustIndicators;"`""

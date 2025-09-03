@@ -177,8 +177,6 @@ name: "Healthcare Technology Solutions","
                   Email Us,
                 </a>
               </div>
-            </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white">"
@@ -192,7 +190,6 @@ name: "Healthcare Technology Solutions","
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50">"
@@ -216,8 +213,6 @@ name: "Healthcare Technology Solutions","
                         <h3 className="text-2xl font-bold text-white">{category.title}</h3>"
                         <p className="text-white/80">Innovative solutions for modern businesses</p>
                       </div>
-                    </div>
-                  </div>
 "
                   <div className="p-8">"
                     <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
@@ -235,7 +230,6 @@ name: "Healthcare Technology Solutions","
                               <span className="text-sm font-medium text-gray-500">Delivery: </span>",
                               <span className="text-sm text-blue-600 font-medium">{service.delivery}</span>
                             </div>
-                          </div>
 "
                           <div className="mb-6">"
                             <h5 className="text-sm font-semibold text-gray-700 mb-2">Key Features: </h5>"
@@ -264,16 +258,12 @@ name: "Healthcare Technology Solutions","
                               Learn More,
                             </a>
                           </div>
-                        </div>
                       ))}
 
                     </div>
-                  </div>
-                </div>
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
@@ -313,7 +303,6 @@ can drive your success.
                   <h3 className="text-lg font-semibold mb-2">Visit Us</h3>"
                   <p className="text-blue-200">{contactInfo.address}</p>
                 </div>
-              </div>
 "
               <div className="{"flex" flex-col sm: flex-row gap-4 justify-center">",
                 <a href="{"tel:${contactInfo.phone}"}""
@@ -331,8 +320,6 @@ can drive your success.
                   Send Email Inquiry,
                 </a>
               </div>
-            </div>
-          </div>
         </section>
       </main>
     </>"

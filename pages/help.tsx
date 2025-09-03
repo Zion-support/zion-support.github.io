@@ -28,7 +28,6 @@ const Help: NextPage = () => {
                 placeholder="Search for help...""
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"  />
             </div>
-          </div>
 ,
           {/* comment */}"
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-12">,
@@ -60,11 +59,9 @@ const Help: NextPage = () => {
                   <div className="px-6 pb-4">"
                     <p className="text-gray-600">{faq.answer}</p>
                   </div>
-                </div>
               ))}
 
             </div>
-          </div>
           {/* comment */}"
           <div className="max-w-4xl mx-auto mt-12 bg-blue-600 rounded-lg p-8 text-white text-center">"
             <h2 className="text-2xl font-bold mb-4">Still need help?</h2>"
@@ -83,11 +80,7 @@ const Help: NextPage = () => {
                 View Pricing,
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
     </Layout>;,
   )}
 
-"
-export default Help'
+"export default Help'

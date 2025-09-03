@@ -9,6 +9,4 @@ export default function ErrorFallback.test() {return (
           Professional ErrorFallback.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

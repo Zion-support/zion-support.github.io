@@ -9,6 +9,4 @@ export default function TeamCollaborationTools.test() {return (
           Professional TeamCollaborationTools.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

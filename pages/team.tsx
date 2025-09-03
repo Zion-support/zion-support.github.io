@@ -187,7 +187,6 @@ key="{member.id}""
                         Leadership,
                       </Badge>
                     </div>
-                  </div>
                   "
                   <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>"
                   <div className="text-blue-400 font-semibold mb-4">{member.title}</div>
@@ -205,7 +204,6 @@ key="{member.id}""
                       ))}
 
                     </div>
-                  </div>
                   "
                   <div className="mb-6 text-sm text-gray-400">"
                     <div className="flex items-center justify-center mb-1">"
@@ -218,7 +216,6 @@ key="{member.id}""
                       {member.experience}
 
                     </div>
-                  </div>
                   "
                   <div className="flex justify-center gap-4">"
                     <Button variant="outline" size="sm" asChild>"
@@ -242,7 +239,6 @@ key="{member.id}""
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">"
@@ -290,7 +286,6 @@ key="{member.id}""
                       ))}
 
                     </div>
-                  </div>
                   "
                   <div className="flex justify-center gap-2">"
                     <Button variant="outline" size="sm" asChild>"
@@ -309,7 +304,6 @@ key="{member.id}""
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 px-4 sm: px-6 lg:px-8">"
@@ -346,7 +340,6 @@ key="{value.title}""
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">"
@@ -388,7 +381,6 @@ initial="{{" opacity: 0, y: 20 }}"
 in AI, cloud computing, cybersecurity, and software development.
               </p>
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white">"
@@ -424,7 +416,6 @@ in AI, cloud computing, cybersecurity, and software development.
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50">"
@@ -448,7 +439,6 @@ in AI, cloud computing, cybersecurity, and software development.
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
@@ -467,7 +457,6 @@ in AI, cloud computing, cybersecurity, and software development.
                 Join Our Team,
               </Link>
             </div>
-          </div>
         </section>
       </main>
       <Footer  />

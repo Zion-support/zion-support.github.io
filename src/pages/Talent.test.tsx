@@ -15,5 +15,4 @@ describe("Talent", () => {}; "; it("renders without crashing", () => {}; render(
 }
   });"
 "
-});"
-"
+});""

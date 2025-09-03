@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "react - router - dom","";,"});,"})"
 ,"});,"})"
 ;,"});,"})"
-;,"});,"})"
 ;,"});,"})","});,"})","});,"})"
 export function ContactInfo() {,"});,"})"
     return (<section className="py-20 bg-zion-blue-dark">;,"});,"})"
@@ -80,7 +79,6 @@ export function ContactInfo() {,"});,"})"
                       <ExternalLink className="h-4 w-4"  />;,"});,"})"
                     </a>;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
               </CardContent>;,"});,"})"
             </Card>""";,"});,"})"
 """";,"});,"})"
@@ -124,8 +122,6 @@ export function ContactInfo() {,"});,"})"
                         Available,"});,"})"
                       </Badge>;,"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
-                </div>;,"});,"})"
               </CardContent>;,"});,"})"
             </Card>;,"});,"})"
           </div>;,"});,"})"
@@ -177,7 +173,6 @@ export function ContactInfo() {,"});,"})"
                       Call us now: +1 302 464 0950,"});,"})"
                     </span>;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
               </CardContent>;,"});,"})"
             </Card>""";,"});,"})"
 """";,"});,"})"
@@ -213,11 +208,9 @@ export function ContactInfo() {,"});,"})"
                     <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>;,"});,"})"
                     <span>Proven track record</span>;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
               </CardContent>;,"});,"})"
             </Card>;,"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
 """;,"});,"})"
         {/* comment */}"""";,"});,"})"
         <div className="text-center mt-16">"""";,"});,"})"
@@ -248,9 +241,6 @@ export function ContactInfo() {,"});,"})"
                 </Button>;,"});,"})"
               </a>;,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
-        </div>;,"});,"})"
-      </div>;,"});,"})"
     </section>;,"});,"})"
   );,"});,"});"
 }""";,"});,"})"
@@ -375,8 +365,6 @@ export function ContactInfo() {"""
                         Available,
                       </Badge>
                     </div>
-                  </div>
-                </div>
               </CardContent>
             </Card>"
           </div>""
@@ -462,7 +450,6 @@ export function ContactInfo() {"""
                     <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
                     <span>Proven track record</span>
                   </div>
-                </div>
               </CardContent>
             </Card>
           </div>"
@@ -495,9 +482,6 @@ export function ContactInfo() {"""
                 </Button>
               </a>
             </div>
-          </div>
-        </div>
-      </div>
     </section>";,
   )}""""
 }""""

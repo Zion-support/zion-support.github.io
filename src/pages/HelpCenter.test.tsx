@@ -15,5 +15,4 @@ describe("HelpCenter", () => {}; "; it("renders without crashing", () => {}; ren
 }
   });"
 "
-});"
-"
+});""

@@ -15,5 +15,4 @@ describe("manufacturing - solutions", () => {}; "; it("renders without crashing"
 }
   });"
 "
-});"
-"
+});""

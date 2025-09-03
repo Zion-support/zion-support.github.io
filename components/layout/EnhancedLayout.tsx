@@ -1,6 +1,6 @@
-import React from "react"
-import { ReactNode } from "react
-interface EnhancedLayoutProps {
+import React from "react";
+import { ReactNode  } from "react;
+interface EnhancedLayoutProps {;
 
   children: ReactNode,
 export default function EnhancedLayout() {

@@ -1,6 +1,5 @@
 import React { Suspense, lazy } from "react"
 // comment
-// comment
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
 
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
@@ -56,8 +55,6 @@ return ("
   "react-router-dom";"""""""
   "react-helmet-async
 // comment
-// comment
-// comment
   const LazyComponent = lazy(importFn)
 }
   return(props: any) => (
@@ -67,7 +64,6 @@ return ("
     </Suspense>
   )}
 
-// comment
 // comment
 const Home = createLazyComponent(() => import("./pages/Home"))
 }
@@ -93,7 +89,6 @@ const Privacy = createLazyComponent(() => import("./pages/Privacy"))
 }
 const Terms = createLazyComponent(() => import("./pages/Terms"))
 }
-// comment
 // comment
 const AIServices = createLazyComponent(() => import("./pages/AIServices"))
 }
@@ -162,7 +157,6 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 <Suspense fallback="{fallback" || <LoadingSpinner       />}><LazyComponent {...props}      />
 export default function Page()   {// comment
 // comment
-// comment
 const createLazyComponent = (importFn: () => Promise<>, fallback?: React.ReactNode) => {const LazyComponent = lazy()
 }
   return (props: ) => (",
@@ -208,14 +202,11 @@ export default function Page() {}
 export default function Page() {
 
 // comment
-// comment
-// comment
 
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {}  const LazyComponent = lazy(importFn)"
 <Suspense fallback="{fallback" ||} <LoadingSpinner       />}><LazyComponent {...props}      />
     <;<;</Suspense>  )}
 
-// comment
 // comment
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void }) => (;"
   <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4">;"
@@ -311,14 +302,10 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
   "react",""",
   "react-router-dom","""
 // comment
-// comment
   "react,""
   "react-router-dom,""
 // comment
-// comment
 "
-// comment
-// comment
 // comment
 const createLazyComponent = (importFn: () => Promise<>, fallback?: React.ReactNode) => {  const LazyComponent = lazy(importFn)"
   return (props: ) => (""",,
@@ -339,7 +326,6 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
       <div className="text-red-400 text-6xl mb-4">⚠️</div>"""
       <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>"""
       <p className="text-gray-300 mb-6">""
-        {error.message ||, An unexpected error occurred. Please try again."}"
         {error.message ||, An unexpected error occurred. Please try again."}"
       </p>"""
       <div className="space-y-3">"""

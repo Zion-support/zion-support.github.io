@@ -11,8 +11,6 @@ export default function AdminDashboard() {return ("
           Professional AdminDashboard services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

@@ -11,8 +11,6 @@ export default function ComprehensivePricing() {return ("
           Professional ComprehensivePricing services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

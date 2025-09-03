@@ -39,7 +39,6 @@ export default function Index() {,"});,"})"
                 "url": "https: // comment
               "sameAs": [;,"});,"})"
                 "https: // comment
-                "https: // comment
               ],"});,"});"
 });,"});,"});"
 }}"});,"})"  />;,"});,"})"
@@ -105,8 +104,7 @@ export default function Index() {,"});,"})"
     </>"});,"})"
   );,"});,"});"
 }"});,"})"
-
-export default function Index() {
+export default function Index() {;
 
   return ("
 const React = dynamic(() => import("react") { ssr: false })
@@ -324,5 +322,4 @@ border: "2px solid #00d4ff", transition: "all 0.2s"}}"
 
             Get Started
         </div>
-    </>
-  )}"
+    </>  )}"

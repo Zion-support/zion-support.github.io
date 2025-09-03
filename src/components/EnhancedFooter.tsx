@@ -106,5 +106,4 @@ initial="{{" opacity:  ,0, y: 20}}"
   )}
 
   Atom, PenTool,`"
-  DollarSign} from 'lucide-react"
-"
+  DollarSign} from 'lucide-react""

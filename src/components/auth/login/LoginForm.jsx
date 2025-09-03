@@ -136,7 +136,6 @@ function LoginForm() {}"});,"})"
               Forgot your password?;,"});,"})"
             </Link>;,"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
 """;,"});,"})"
         <Button"""";,"});,"})"
           type="submit"""";,"});,"})"
@@ -194,7 +193,6 @@ export default function LoginForm() {return ("
           Professional LoginForm services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
 }"
@@ -203,5 +201,4 @@ export default function LoginForm() {return ("
 " " " " " " """;"""
 """
 " " " " " " """"
-""
-"
+"""

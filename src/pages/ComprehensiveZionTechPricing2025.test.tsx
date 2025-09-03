@@ -15,5 +15,4 @@ describe("ComprehensiveZionTechPricing2025", () => {}; "; it("renders without cr
 }
   });"
 "
-});"
-"
+});""

@@ -35,10 +35,7 @@ const Cart: React.FC = () => {
               Get Started,
             </a>
           </div>
-        </div>
-      </div>
     </div>;,
   )}
 
-export default Cart;"
-"
+export default Cart;""

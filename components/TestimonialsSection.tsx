@@ -3,10 +3,18 @@ import React from "react"
 interface ApiResponse<T = unknown> {
   data: T,
   statu,
-    s: number,
-  message?: string}
+    s: number,  message?: string}
+;
+interface User {;
 
-interface User {
+  id: string,;
+  email: string,;
+  nam,;
+    e: string,;
+  rol,";
+    e: "admin" | "user" | "guest"}
+;
+interface Service {;
 
   id: string,
   email: string,
@@ -21,15 +29,14 @@ interface Service {
   description: string,
   pric,
     e: number,
-  categor,
-    y: string}
-
-interface FormData {
+  categor,    y: string}
+;
+interface FormData {;
 
   [key: string]: string | number | boolean | File}
-
-interface ComponentProps {
-  className?: string
+;
+interface ComponentProps {;
+  className?: string;
   children?: React.ReactNode [key: string]: unknown}
 
 "
@@ -154,10 +161,9 @@ clients have to say about working with us."
                       <div className="text-sm text-gray-500">{testimonial.role} {testimonial.compunknown}</div>
                 </CardContent>
               </Card>
-    </section>
-  )}
-
-export: default TestimonialsSection,
+    </section>  )}
+;
+export: default TestimonialsSection,;
   )}
 
 export default TestimonialsSection,

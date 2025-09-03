@@ -11,8 +11,6 @@ export default function InnovativeAIServicesShowcase() {return ("
           Professional InnovativeAIServicesShowcase services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

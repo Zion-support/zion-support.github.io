@@ -170,7 +170,6 @@ export const QuoteRequestForm = () => {}"});,"})"
                 <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>;,"});,"})"
               )}"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
 """;,"});,"})"
           {/* comment */}"""";,"});,"})"
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">""","});,"})"
@@ -198,7 +197,6 @@ export const QuoteRequestForm = () => {}"});,"})"
                 onChange="{e" => handleChange("phone", e.target.value)}"""";,"});,"})"
                 placeholder="+1 (555) 123-4567""";,"});,"})" />;,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
           {/* comment */}""";,"});,"})"
           <div>"""";,"});,"})"
             <label className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})"
@@ -304,7 +302,6 @@ export const QuoteRequestForm = () => {}"});,"})"
                 </SelectContent>;,"});,"})"
               </Select>;,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
           {/* comment */}""";,"});,"})"
           <div>"""";,"});,"})"
             <label className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})"
@@ -343,7 +340,6 @@ export const QuoteRequestForm = () => {}"});,"})"
                 </SelectContent>;,"});,"})"
               </Select>;,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
 """;,"});,"})"
           {/* comment */}"""";,"});,"})"
           <div className="space-y-4">"""";,"});,"})"
@@ -377,7 +373,6 @@ export const QuoteRequestForm = () => {}"});,"})"
                 I agree to receive marketing communications from Zion Tech Group,"});,"})"
               </label>;,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
 """;,"});,"})"
           {/* comment */}"""";,"});,"})"
           <div className="text-center">""";,"});,"})"
@@ -447,7 +442,6 @@ export const QuoteRequestForm = () => {}
 
   const [formData, setFormData] = useState({}"
 "
-"
 ""
     firstName: ",""
     lastName: ",""
@@ -480,8 +474,7 @@ agreeToMarketing: false})
   const serviceTypes = []";""
   const timelineOptions = []";""
   const budgetRanges = []";""
-  const urgencyLevels = []
-  const handleChange = (field, value) => {}
+  const urgencyLevels = []  const handleChange = (field, value) => {}
 
     setFormData(prev => ({}
 
@@ -490,8 +483,7 @@ agreeToMarketing: false})
 }
       ...prev, [field]: value}))
 }
-    // comment
-    if(errors[field]) {}
+    // comment    if(errors[field]) {}
 
       setErrors(prev = > ({}
 
@@ -504,8 +496,7 @@ agreeToMarketing: false})
 
   }
 
-;&apos;&apos
-  const validateForm = () => {}
+;&apos;&apos  const validateForm = () => {}
 
     const;const;const newErrors = {}
 
@@ -541,8 +532,7 @@ agreeToMarketing: false})
   const handleSubmit = async e => {}
 
     e.preventDefault()
-}
-    if(!validateForm()) {}
+}    if(!validateForm()) {}
 
       return}
 
@@ -593,7 +583,6 @@ agreeToMarketing: false})
 agreeToTerms: false,
 agreeToMarketing: false})} catch (error) {}"
 "
-"
 ""
       // comment
 """;""
@@ -613,11 +602,10 @@ agreeToMarketing: false})} catch (error) {}"
 ""
 """;""
       // comment
-
       setIsSubmitting(false)}
 
   }
-
+;
   if(isSubmitted) {}
 
     return();"
@@ -678,7 +666,6 @@ agreeToMarketing: false})} catch (error) {}"
               )}
 
             </div>
-          </div>
 ""{/* comment */}"";"
           <div className="grid grid - cols-1 md: grid-cols-2 gap-4">"",
             <div>"";"
@@ -707,7 +694,6 @@ agreeToMarketing: false})} catch (error) {}"
                 onChange = "{e" => handleChange("phone", e.target.value)}"",
                 placeholder="+1 (555) 123-4567" />
             </div>
-          </div>
           {/* comment */}""
           <div>"";"
             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -942,8 +928,7 @@ get back to you within 24 hours.&apos,</p>"
                 </SelectTrigger>
                 <SelectContent>
                   {serviceTypes.map(service => (;"
-                    <SelectItem key="{service.value}" value="{service.value}">
-                      {service.label}
+                    <SelectItem key="{service.value}" value="{service.value}">                      {service.label}
 
                     </SelectItem>) ) }
 
@@ -957,8 +942,7 @@ get back to you within 24 hours.&apos,</p>"
                 </SelectTrigger>
                 <SelectContent>
                   {serviceTypes.map(service => (}"
-                    <SelectItem key="{service.value}" value="{service.value}">
-                      {service.label}
+                    <SelectItem key="{service.value}" value="{service.value}">                      {service.label}
 
                     </SelectItem>) ) }
 
@@ -1010,8 +994,7 @@ get back to you within 24 hours.&apos,</p>"
                 </SelectTrigger>
                 <SelectContent>
                   {timelineOptions.map(timeline => (;"
-                    <SelectItem key="{timeline.value}" value="{timeline.value}">
-                      {timeline.label}
+                    <SelectItem key="{timeline.value}" value="{timeline.value}">                      {timeline.label}
 
                     </SelectItem>) ) }
 
@@ -1031,8 +1014,7 @@ get back to you within 24 hours.&apos,</p>"
                 </SelectTrigger>
                 <SelectContent>
                   {timelineOptions.map(timeline => (}"
-                    <SelectItem key="{timeline.value}" value="{timeline.value}">
-                      {timeline.label}
+                    <SelectItem key="{timeline.value}" value="{timeline.value}">                      {timeline.label}
 
                     </SelectItem>) ) }
 
@@ -1068,8 +1050,7 @@ get back to you within 24 hours.&apos,</p>"
                 </SelectTrigger>
                 <SelectContent>
                   {budgetRanges.map(budget => (;"
-                    <SelectItem key="{budget.value}" value="{budget.value}">
-                      {budget.label}
+                    <SelectItem key="{budget.value}" value="{budget.value}">                      {budget.label}
 
                     </SelectItem>) ) }
 
@@ -1087,8 +1068,7 @@ get back to you within 24 hours.&apos,</p>"
                 </SelectTrigger>
                 <SelectContent>
                   {budgetRanges.map(budget => (}"
-                    <SelectItem key="{budget.value}" value="{budget.value}">
-                      {budget.label}
+                    <SelectItem key="{budget.value}" value="{budget.value}">                      {budget.label}
 
                     </SelectItem>) ) }
 
@@ -1120,15 +1100,13 @@ get back to you within 24 hours.&apos,</p>"
                 </SelectTrigger>
                 <SelectContent>
                   {urgencyLevels.map(urgency => (;"
-                    <SelectItem key="{urgency.value}" value="{urgency.value}">
-                      {urgency.label}
+                    <SelectItem key="{urgency.value}" value="{urgency.value}">                      {urgency.label}
 
                     </SelectItem>) ) }
 
                 </SelectContent>
               </Select>
             </div>
-          </div>
           {/* comment */}""
           <div>"";"
             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -1149,15 +1127,13 @@ get back to you within 24 hours.&apos,</p>"
                 </SelectTrigger>
                 <SelectContent>
                   {urgencyLevels.map(urgency = > (}"
-                    <SelectItem key="{urgency.value}" value="{urgency.value}">
-                      {urgency.label}
+                    <SelectItem key="{urgency.value}" value="{urgency.value}">                      {urgency.label}
 
                     </SelectItem>) ) }
 
                 </SelectContent>
               </Select>
             </div>
-          </div>
           {/* comment */}&apos;&apos,&apos;&apos,
           <div>&apos;&apos,&apos;&apos,"
             <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos;>
@@ -1237,7 +1213,6 @@ get back to you within 24 hours.&apos,</p>"
                 </SelectContent>
               </Select>
             </div>
-          </div>
 ""{/* comment */}"";"
           <div className="space-y-4">"";"
             <div className = "flex items - center space-x-2">"",
@@ -1268,7 +1243,6 @@ get back to you within 24 hours.&apos,</p>"
                 I agree to receive marketing communications from Zion Tech Group
               </label>
             </div>
-          </div>
 ""{/* comment */}"";"
           <div className = "text - center">"",
             <Button"",
@@ -1303,7 +1277,6 @@ get back to you within 24 hours.&apos,</p>"
                 </SelectContent>
               </Select>
             </div>
-          </div>
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
           <div className="&apos;space-y-4&apos;">"&apos;&apos,&apos;&apos;"
             <div className="&apos;flex" items-center space-x-2&apos;>"&apos;&apos,""

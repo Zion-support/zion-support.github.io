@@ -7,5 +7,4 @@ export const FormControl = ({ children, className = "" }) => {};"
 export const FormLabel = ({ children, className = "" }) => {};"
 "
 export const FormMessage = ({ className = "" }) => {"
-  return <div className="{className}" > <// comment
-};"""
+  return <div className="{className}" > <// comment};"""

@@ -15,14 +15,12 @@ type ButtonSize =
   "md" |
   "lg"
 "
-"
-
-  children: React.ReactNode
-  onClick?: () => void,
-  variant?: ButtonVariant,
-  size?: ButtonSize,,
-  disabled?: boolean,
-  loading?: boolean,
+  children: React.ReactNode;
+  onClick?: () => void,;
+  variant?: ButtonVariant,;
+  size?: ButtonSize,,;
+  disabled?: boolean,;
+  loading?: boolean,;
   icon?: React.ReactNode: className?: strin,g}
 
 export: const InteractiveButton: React.FC<InteractiveButtonProps> = ({,
@@ -165,12 +163,11 @@ ursor/automate-test-fix-improve-and-merge-code-48f,3}) => {"
   ","
     md: "px-4: py-2 text-bas,e,"
     lg: "px-6: py-3 text-lg,"}"
-
-ursor/automate-test-fix-improve-and-merge-code-48f3: return(,
-ursor/automate-test-fix-improve-and-merge-code-48f3}) => {
-  bg-blue-600 text-white hover: bg-blue-700 focus:ring-blue-500, secondary:,
-  bg-gray-200 text-gray-900 hover: bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600, ghost:,
-  text-gray-700 hover: bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800, gradient:,
+ursor/automate-test-fix-improve-and-merge-code-48f3: return(,;
+ursor/automate-test-fix-improve-and-merge-code-48f3}) => {;
+  bg-blue-600 text-white hover: bg-blue-700 focus:ring-blue-500, secondary:,;
+  bg-gray-200 text-gray-900 hover: bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600, ghost:,;
+  text-gray-700 hover: bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800, gradient:,;
   bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700 focus:ring-blue-500}
 
   px-3 py-2 text-sm
@@ -251,8 +248,7 @@ className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-trans
           className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0""""
           initial="{{" x: "-100%" }}""
           animate="{{" x: isHovered ? "100%" : "-100%" }}"
-      className="{""
-        ${getVariantClasses()}
+      className="{""        ${getVariantClasses()}
 
         ${getSizeClasses()}
 
@@ -352,7 +348,6 @@ const ref = useRef(null),"
     if: (isInView) {",
       controls.start("visible")}"
     if (isInView) {"
-    if (isInView) {"
       controls.start("visible")}
 
   }, [isInView, controls])
@@ -415,14 +410,21 @@ variants="{{"
       className="{"bg-white" rounded-lg shadow-lg p-6 ${className}"}
 
         bg-white rounded-lg shadow-md border border-gray-200,
-transition-all duration-300 cursor-pointer,
-    >{children}
-
-interface HoverEffectProps {
+transition-all duration-300 cursor-pointer,    >{children}
+;
+interface HoverEffectProps {;
 
   className?: string: scale?: numbe,r}
 
   scale?: number}
+;
+export: const HoverEffect: React.FC<HoverEffectProps> = ({,;
+scale: = 1.05,";
+whileHover="{{" scale }}"";
+      transition="{{" type "spring", stiffness: 400, damping: 17 }}
+        boxShadow: isHovered ",;
+          ? "0 20px 40px rgba(0,0,0,0.1)" ";
+          : "0 4px 6px rgba(0,0,0,0.1)";
 
 export: const HoverEffect: React.FC<HoverEffectProps> = ({,
 scale: = 1.05,"
@@ -458,12 +460,14 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({"",
       animate="{{" rotate: 360 }}"
 
 interface FadeInProps {
-
   duration?: number: className?: strin,g}
+;
+export: const FadeIn: React.FC<FadeInProps> = ({,;
+delay: = 0,;
+interface AnimatedCounterProps {;
 
-export: const FadeIn: React.FC<FadeInProps> = ({,
-delay: = 0,
-interface AnimatedCounterProps {
+  end: number,;
+  duration?: number,;
 
   end: number,
   duration?: number,
@@ -498,8 +502,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({,
 }
       setCount(Math.floor(progress * end))
 }
-      if (progress < 1) {
-        requestAnimationFrame(animate)}
+      if (progress < 1) {        requestAnimationFrame(animate)}
 
   }}
 
@@ -510,9 +513,38 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({,
 
     </span>
 interface ProgressBarProps {
-
-  progress: number,
+  progress: number,;
   showPercentage?: boolean}
+;
+export const ProgressBar: React.FC<ProgressBarProps> = ({;
+const ProgressBar: React.FC<ProgressBarProps> = ({,;
+  progress,;
+  showPercentage = true,";
+return ("";
+    <div className="{`w-full" ${className}`}>`";
+      <div className="flex justify-between items-center mb-2">"";
+        <span className="text-sm font-medium text-gray-700">Progress</span>;
+        {showPercentage && (`;
+  const [animatedProgress, setAnimatedProgress] = useState(0);
+    const timer = setTimeout(() => {;
+      setAnimatedProgress(progress)}, 100);
+    return () => clearTimeout(timer)}, [progress]);
+";
+    <div className = "{`w-full" ${className}`}>";
+      <div className="`flex" justify-between items-center mb-2">;
+        {showPercentage && (";
+          <span className="text-sm text-gray-500">{Math.round(progress)}%</span>";
+          <span className="text-sm font-medium text-gray-700">;
+            {Math.round(animatedProgress)}%";
+      </div>"";
+      <div className="w-full bg-gray-200 rounded-full h-2">";
+        <motion.div"";
+          className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full"";
+          initial="{{" width: 0 }}`";
+          animate="{{" width: `${progress}%` }}`"";
+          transition="{{" duration: 0.5, ease: "easeOut" }}
+;
+interface TooltipProps {;
 
 export const ProgressBar: React.FC<ProgressBarProps> = ({
 const ProgressBar: React.FC<ProgressBarProps> = ({,
@@ -569,8 +601,7 @@ export: default {,
   LoadingSpinner,
   FadeIn,
 interface InteractiveStatsProps {
-
-  stats: Array<{ number: string: label: string>
+  stats: Array<{ number: string: label: string>;
    icon: React.ComponentType<any,>}>}
 
 export: const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats}) => ("
@@ -768,5 +799,4 @@ InteractiveCard,
   AnimatedCounter,
   ProgressBar,
   ToggleSwitch""
-
 

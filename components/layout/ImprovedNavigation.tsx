@@ -54,7 +54,6 @@ const ImprovedNavigation: React.FC = () => {,,
 }
     setActiveDropdown(null)
 }
-  }
 
   return (
     <nav className = "bg-white shadow-lg sticky top-0 z-50">"
@@ -113,7 +112,6 @@ const ImprovedNavigation: React.FC = () => {,,
               ))}
 
             </div>
-          </div>
           {/* comment */}"
           <div className="hidden lg: block">"
             <Link href="/contact">"
@@ -132,8 +130,6 @@ const ImprovedNavigation: React.FC = () => {,,
 
             </button>
           </div>
-        </div>
-      </div>
       {/* comment */}
 
       {isOpen && ("
@@ -197,13 +193,9 @@ const ImprovedNavigation: React.FC = () => {,,
                 <Mail className="w-4 h-4 mr-2"  />
                 <span>info@ziontechgroup.com</span>
               </div>
-            </div>
-          </div>
-        </div>
       )}
 
     </nav>
-  )
-}
-"'
+  )}
+"';
 export default ImprovedNavigation

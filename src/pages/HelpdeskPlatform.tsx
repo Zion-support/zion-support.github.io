@@ -11,8 +11,6 @@ export default function HelpdeskPlatform() {return ("
           Professional HelpdeskPlatform services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

@@ -9,6 +9,4 @@ export default function ProjectManagementTimeline.test() {return (
           Professional ProjectManagementTimeline.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

@@ -14,7 +14,6 @@ const Header: React.FC = () => {,,
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
 }
-    }
 
     window.addEventListener("scroll", handleScroll)
 }
@@ -150,7 +149,6 @@ initial="{{" opacity: 0, y: 10 }}"
 
           </button>
         </div>
-      </div>
       {/* comment */}
 
       <AnimatePresence>
@@ -185,7 +183,6 @@ initial="{{" opacity: 0, height: 0 }}""
                         ))}
 
                       </div>
-                    </div>
                   ) : ("
                     <Link key="{category.name}""
                       href="{category.href}""
@@ -197,7 +194,6 @@ initial="{{" opacity: 0, height: 0 }}""
                   ))}
 
                 </div>
-              </div>
               {/* comment */}"
               <div className="flex items-center space-x-3">"
                 <Link href="/contact""
@@ -211,7 +207,6 @@ initial="{{" opacity: 0, height: 0 }}""
                   Free Consultation,
                 </Link>
               </div>
-            </div>
 ,
             {/* comment */}"
             <button className="lg: hidden p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"">
@@ -286,7 +281,6 @@ className="lg: hidden border-t border-gray-200 py-4"">
                   Get Started,
                 </Button>
               </div>
-            </div>
           </motion.div>
         )}
 
@@ -294,5 +288,4 @@ className="lg: hidden border-t border-gray-200 py-4"">
     </header>
   )
 }
-""
-export default Header
+""export default Header

@@ -527,8 +527,7 @@ export default function AdvancedServiceInnovationHub() {return ("
             technologies["Neural Interfaces", Signal Processing",AI / ML"], ",
             status: "Emerging"}
 
-    ]
-    const filteredTrends = useMemo(() => {}
+    ]    const filteredTrends = useMemo(() => {}
 
         return innovationTrends.filter(trend => {}
 
@@ -536,8 +535,7 @@ export default function AdvancedServiceInnovationHub() {return ("
                 trend.description.toLowerCase().includes(searchTerm.toLowerCase())
 }
             return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm])
-}
-    const getImpactColor = (impact) => {}
+}    const getImpactColor = (impact) => {}
 
         switch (impact) {}
 
@@ -549,16 +547,14 @@ export default function AdvancedServiceInnovationHub() {return ("
             case &apos;Low&apos;: return &apos;bg-green-100 text-green-800&apos
             default: return &apos,bg-gray-100 text-gray-800&apos}
 
-    }&apos;&apos
-    const getStatusColor = (status) => {}
+    }&apos;&apos    const getStatusColor = (status) => {}
 
         switch (status) {}
 
             case &apos;Emerging&apos;: return &apos;bg-blue-100 text-blue-800&apos
             case &apos;Growing&apos;: return &apos;bg-green-100 text-green-800&apos
             case &apos;Mature&apos;: return &apos;bg-orange-100 text-orange-800&apos
-            case &apos;Disruptive&apos;: return &apos;bg-purple-100 text-purple-800&apos
-    const getCategoryIcon = (category) => {}
+            case &apos;Disruptive&apos;: return &apos;bg-purple-100 text-purple-800&apos    const getCategoryIcon = (category) => {}
 
         switch(category) {}
 
@@ -634,7 +630,6 @@ y: 0 "",">
             </p>
           </div>"";"
           <div className = "flex gap-2">"""{["trends",roadmap",insights"].map((mode) => (<Button key="{mode}" variant="{viewMode" === mode ? "default" : "outline"} size="sm" onClick="{()" => setViewMode(mode)}>"""{mode === "trends" && <TrendingUp className="w-4 h-4 mr-2"  />}"""{mode === "roadmap" && <Rocket className="w-4 h-4 mr-2"  />}"""{mode === "insights" && <Lightbulb className="w-4 h-4 mr-2"  />}
-
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
 
               </Button>))}
@@ -644,8 +639,7 @@ y: 0 "",">
 "{/* comment */}""{viewMode = == "trends" && (<>{/* comment */}"
 ""}} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"";"
             <div className = "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">"","
-                <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>"","
-                <select value="{selectedCategory}" onChange="{(e)" => setSelectedCategory(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">{categories.map(category => (<option key="{category.id}" value="{category.id}"> {category.name}
+                <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>"","                <select value="{selectedCategory}" onChange="{(e)" => setSelectedCategory(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">{categories.map(category => (<option key="{category.id}" value="{category.id}"> {category.name}
 
                     </option>) ) }
 
@@ -889,8 +883,7 @@ y: 0 "",">
                         <CheckCircle className="w-4 h-4 text-green-500"  />,",
                         Key Milestones"","
                       </h4>"","
-                      <ul className="space-y-2">""{roadmap.milestones.map((milestone, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";"
-                            <div className = "w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div> {milestone}
+                      <ul className="space-y-2">""{roadmap.milestones.map((milestone, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";"                            <div className = "w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div> {milestone}
 
                           </li>) ) }
 
@@ -1212,5 +1205,4 @@ import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCir
 import { Card, CardContent, CardHeader, CardTitle }  from "./ui/card,"
 import { Button }  from "./ui/button,"
 import { Badge }  from "./ui/badge,"
-""
-"
+"""

@@ -326,8 +326,7 @@ export const BlockchainWeb3Dashboard = ({ className = "" }) => {
         image: &apos,&apos})&apos;&apos
         to: &apos,&apos,&apos;&apos
         value: &apos,&apos,&apos;&apos
-        data: &apos,&apos})&apos;&apos
-    const handleConnectWallet = useCallback(async () => {}
+        data: &apos,&apos})&apos;&apos    const handleConnectWallet = useCallback(async () => {}
 
         try {}
 
@@ -340,8 +339,7 @@ export const BlockchainWeb3Dashboard = ({ className = "" }) => {
 
             // comment
 
-    }, [connectWallet, trackEvent]);&apos;&apos
-    const handleMintNFT = useCallback(async () => {}
+    }, [connectWallet, trackEvent]);&apos;&apos    const handleMintNFT = useCallback(async () => {}
 
         if(nftForm.name.trim() && wallet) {}
 
@@ -463,7 +461,6 @@ image: nftForm.image || "https:// comment
                 setNftForm({ name: "", description: "", image: "" })";""
                 trackEvent("blockchain", dashboard",nft_minted")}"
                 // comment
-                // comment
 
     }, [nftForm, wallet, contracts, mintNFT, trackEvent]);&apos;&apos
         if(transactionForm.to.trim() && transactionForm.value && wallet) {}"
@@ -483,8 +480,7 @@ image: nftForm.image || "https:// comment
                 trackEvent("blockchain", dashboard",transaction_sent")}"
                 // comment
 
-    }, [transactionForm, wallet, sendTransaction, trackEvent]) ;&apos;&apos
-    const getStatusColor = (status) => {}
+    }, [transactionForm, wallet, sendTransaction, trackEvent]) ;&apos;&apos    const getStatusColor = (status) => {}
 
         switch (status) {}
 
@@ -649,8 +645,7 @@ Network""""
   y: -20: """,",";"
 """"}} className="space - y-4">""""","
               <div: className = "flex items-center justify-between">""""",","
-                <h3: className="text-lg font-semibold text-gray-900 dark: text-white">Smart: Contracts</h3>",
-                <button: onClick = {}
+                <h3: className="text-lg font-semibold text-gray-900 dark: text-white">Smart: Contracts</h3>",                <button: onClick = {}
 
   () => addContract({}
 
@@ -1092,8 +1087,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
                           <span className="text-gray-500 dark: text-gray-400">Gas Price:</span>"""",
                           <p className="text-gray-900 dark:text-white">{tx.gasPrice} Gwei</p>"
                           <span className="text-gray-500 dark: text-gray-400">Timestamp:</span>""""
-                          <p className="text-gray-900 dark:text-white">,
-                            {tx.timestamp.toLocaleString()}
+                          <p className="text-gray-900 dark:text-white">,                            {tx.timestamp.toLocaleString()}
 
             </motion.div>) }
 

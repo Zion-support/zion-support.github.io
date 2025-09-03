@@ -31,7 +31,6 @@ description="Join" our team of innovative developers and technology experts"
                 Learn About Our Culture,
               </button>
             </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -55,7 +54,6 @@ description="Join" our team of innovative developers and technology experts"
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50>"
@@ -88,7 +86,6 @@ description="Join" our team of innovative developers and technology experts"
                           {position.experience}
 
                         </div>
-                      </div>
                     </div>"
                     <button className="mt-4 md: mt-0 inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300>
                       Apply Now"
@@ -100,7 +97,6 @@ description="Join" our team of innovative developers and technology experts"
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20" bg-white">"
@@ -133,8 +129,6 @@ description="Join" our team of innovative developers and technology experts"
                 <h3 className="text-xl font-semibold text-gray-900 mb-2>Collaborative Team</h3>"
                 <p className=text-gray-600">Work with talented professionals in a supportive environment</p>
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"

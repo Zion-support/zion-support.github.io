@@ -11,8 +11,6 @@ export default function AIWorkflowAutomation() {return ("
           Professional AIWorkflowAutomation services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

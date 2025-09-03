@@ -9,6 +9,4 @@ export default function ApiDemo.test() {return (
           Professional ApiDemo.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

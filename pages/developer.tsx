@@ -83,7 +83,6 @@ const Developer: NextPage = () => {
                 View Documentation,
               </button>
             </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -121,7 +120,6 @@ const Developer: NextPage = () => {
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50">"
@@ -166,7 +164,6 @@ const Developer: NextPage = () => {
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white">"
@@ -193,7 +190,6 @@ const Developer: NextPage = () => {
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50">"
@@ -236,8 +232,6 @@ const Developer: NextPage = () => {
                   <Github className="ml-2 w-5 h-5"  />
                 </button>
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -257,5 +251,4 @@ const Developer: NextPage = () => {
     </>,
   )}
 
-"
-export default Developer
+"export default Developer

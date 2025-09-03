@@ -15,5 +15,4 @@ describe("PricingGuide", () => {}; "; it("renders without crashing", () => {}; r
 }
   });"
 "
-});"
-"
+});""

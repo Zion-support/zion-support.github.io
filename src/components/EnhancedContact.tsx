@@ -9,6 +9,4 @@ export default function EnhancedContact() {return (
           Professional EnhancedContact services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

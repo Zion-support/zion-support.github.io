@@ -91,7 +91,6 @@ export const EnhancedServicesShowcase: React.FC = () => {,"});,"})"
       transition: {,"});,"})"
         staggerChildren: 0.1,"});,"});"
 };,"});,"});"
-};,"});,"});"
 };,"});,"})"
 ;,"});,"})"
 const categories = [];,"});,"})"
@@ -110,7 +109,6 @@ export default function EnhancedServicesShowcase() {return ("
           Professional EnhancedServicesShowcase services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
 }""
@@ -192,8 +190,7 @@ glowColor: "pink"}
   const containerVariants = {},
     visible: {,
       opacity: 1,
-transition: {,
-        staggerChildren: 0.1}
+transition: {,        staggerChildren: 0.1}
 
     }
 
@@ -273,8 +270,7 @@ export const EnhancedServicesShowcase: React.FC = () => {}
   const containerVariants = {},
     visible: {,
       opacit,y: 1,
-      transition: {,
-        staggerChildre,n: 0.1}
+      transition: {,        staggerChildre,n: 0.1}
 
     }
 
@@ -345,8 +341,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
   ]
 
   const containerVariants = {}, visible: {,
-opacity: 1, transition: {,
-staggerChildren: 0.1}
+opacity: 1, transition: {,staggerChildren: 0.1}
 
     }
 
@@ -354,8 +349,7 @@ staggerChildren: 0.1}
 ""
 const categories = []
 "
-""
-        staggerChildren: 0.1}
+""        staggerChildren: 0.1}
 
     }
 
@@ -366,5 +360,4 @@ const categories = []"
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState("All')"
   const [hoveredService, setHoveredService] = useState<string | null" >(null)""
 ;""
-}}"
-"
+}}""

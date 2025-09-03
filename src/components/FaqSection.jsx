@@ -46,10 +46,7 @@ const FaqSection = () => {
               Get Started,
             </a>
           </div>
-        </div>
-      </div>
     </div>;,
   )}
 
-export default FaqSection;"
-"
+export default FaqSection;""

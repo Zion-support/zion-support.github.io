@@ -152,8 +152,7 @@ Shield,&apos
               <Button,
                 key={range}"";"
                 variant="{timeRange" === range ? "default"  : "outline"}"">
-                size="sm"";"
-                onClick = "{()" => setTimeRange(range)}
+                size="sm"";"                onClick = "{()" => setTimeRange(range)}
 
               >{range}
 
@@ -321,8 +320,7 @@ business intelligence"
                         <span className="font-medium">
                           ${(service.revenue / 1000).toFixed(0)}K,
                         </span>"";"
-                        <Badge className="{getStatusColor(service.status)}">"";"
-                          <div className = "flex items-center gap-1"> {getStatusIcon(service.status)}
+                        <Badge className="{getStatusColor(service.status)}">"";"                          <div className = "flex items-center gap-1"> {getStatusIcon(service.status)}
 
                             {service.status}
 
@@ -604,5 +602,4 @@ export default AdvancedAnalyticsDashboard
 export { AdvancedAnalyticsDashboard }
 
 "
-import React { useState }  from "react,"
-"
+import React { useState }  from "react,""

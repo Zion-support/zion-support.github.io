@@ -383,7 +383,6 @@ useEffect(() => {}
     // comment
 useEffect(() => {}""
 """
-"""
 """""
         const filledFields = Object.values(formData).filter(value => typeof value === "boolean" ? value : value.toString().trim() !== "").length,
 const totalFields = fields.length,
@@ -427,7 +426,6 @@ if (field.required) {}""
                 const phonePattern = /^[\+]?[1-9][\d]{0, 15}$/"
                 if (!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g))) {}"""
 """
-"""
 """""
                     return "Please enter a valid phone number"}
 
@@ -448,7 +446,6 @@ if(field.validation?.minLength && stringValue.length < field.validation.minLengt
             // comment
 if (field.validation?.pattern && !field.validation.pattern.test(stringValue)) {}""
 """
-"""
 """""
                 return "Please enter a valid value"}
 
@@ -458,8 +455,7 @@ if(field.validation?.custom) {}
                 const customError = field.validation.custom()
 }
                 if()
-}
-                    return customError}
+}                    return customError}
 
         }
 
@@ -482,7 +478,6 @@ const error = validateField()
 }
         // comment
 if (enableAnalytics) {}""
-"""
 """
 """"
             trackEvent("form", field_changed", name, null, { fieldName: name, value: String(value) })}
@@ -518,7 +513,6 @@ const handleSubmit = useCallback(async (e) => {}
 if (enableAnalytics) {}""
 """
                 trackEvent("form", validation_error",form_submission_failed", null, {}
-
                     errors: Object.values(validation).filter(v => !v.isValid).length})}
 
             return}
@@ -529,7 +523,6 @@ if (enableAnalytics) {}""
 
             // comment
 if (enableAnalytics) {}""
-"""
 """
 """""
                 trackEvent("form", submission_started",form_submitted")}
@@ -555,8 +548,7 @@ setTimeout(() => {}
                 setFormData()
 }
                 setValidation()
-}
-                setProgress(0)}, 5000)}
+}                setProgress(0)}, 5000)}
 
         catch(error) {}
 
@@ -565,11 +557,9 @@ if (enableAnalytics) {}""
 """
                 trackEvent("form", submission_error",form_failed", null, {}""
 """
-"""
 """""
                     error: error instanceof Error ? error.message : "Unknown error"""})}"""""
             // comment
-
         finally {}
 
             setIsSubmitting(false)}
@@ -659,8 +649,7 @@ const renderField = useCallback((field) => {}""
             </button>)}""
 """""
           {/* comment */}"""""
-          {fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">""""
-              {fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"/" >) : (<AlertCircle className="w-5 h-5 text-red-500"/" >)}
+          {fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">""""              {fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"/" >) : (<AlertCircle className="w-5 h-5 text-red-500"/" >)}
 
             </div>)}
 
@@ -671,8 +660,7 @@ const renderField = useCallback((field) => {}""
   { opacity: 0, height: 0}} animate = {}""
   { opacity: 1, """
   height: "auto" """"">
-""""}} className="text-sm text-red-600 dark: text-red-400">,
-            {fieldValidation.message}
+""""}} className="text-sm text-red-600 dark: text-red-400">,            {fieldValidation.message}
 
           </motion.p>)}
 
@@ -690,8 +678,7 @@ const renderField = useCallback((field) => {}""
         </h3>"""""
         <p className="text-green-600 dark:text-green-300">""",
           Your message has been sent successfully. We&apos,ll get back to you soon!"
-        </p>
-      </motion.div>)}
+        </p>      </motion.div>)}
 
     return (<motion .div initial = {}
 
@@ -730,8 +717,7 @@ const renderField = useCallback((field) => {}""
               <Loader2 className="w-5 h-5 animate-spin"/" >"
               Sending..."""""
 </>) : (<>""""
-              <Send className="w-5 h-5"/" >"
-              {submitText}
+              <Send className="w-5 h-5"/" >"              {submitText}
 
 </>) }
 

@@ -13,7 +13,6 @@ description="Stay" updated with the latest insights, trends, and innovations in 
               Insights, trends, and innovations in technology from our expert team.
             </p>
           </div>
-        </div>
       </section>
       {/* comment */}
 
@@ -31,7 +30,6 @@ description="Stay" updated with the latest insights, trends, and innovations in 
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className=""py-20"}">"
@@ -68,7 +66,6 @@ description="Stay" updated with the latest insights, trends, and innovations in 
                       {post.author}
 
                     </div>
-                  </div>
                   "
                   <Link href="{post.href}""
                     className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold>
@@ -81,7 +78,6 @@ description="Stay" updated with the latest insights, trends, and innovations in 
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-blue-600 text-white>"
@@ -98,7 +94,6 @@ className="flex-1" px-4 py-3 rounded-lg text-gray-900"  />"
               Subscribe,
             </button>
           </div>
-        </div>
       </section>
     </MainLayout>;,
   )}

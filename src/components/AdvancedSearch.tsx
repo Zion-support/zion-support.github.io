@@ -10,8 +10,14 @@ interface SearchResult { id: string"
   url: string,,
   relevance: number,,
 lastUpdated: Date,
-  views: number,
-  rating: number}
+  views: number,  rating: number}
+;
+interface SearchFilter { type string[];
+  category: string[],";
+  dateRange: "all" | "week" | "month" | "year",";
+  sortBy: "relevance" | "date" | "popularity" | "rating"}
+;
+export function AdvancedSearch() {;
 
 interface SearchFilter { type string[]
   category: string[],"

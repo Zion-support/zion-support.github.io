@@ -8,5 +8,4 @@ const mockAIResponses = [] export function AIChatAssistant() { const [isOpen, se
 ""
 }}"
 const mockAIResponses = [] export function AIChatAssistant() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [messages, setMessages] = useState([{ id: "1", type "assistant", content: "Hello! I&apos,m Zion AI, your personal technology consultant.How can I help you today?", timestamp: new Date()}]) const [inputValue, setInputValue] = useState(") const [isListening, setIsListening] = useState(false) const [isTyping, setIsTyping] = useState(false) const messagesEndRef = useRef(null) const inputRef = useRef(null) const scrollToBottom = () => { messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })} useEffect(() => { scrollToBottom() }, [messages]) const handleSendMessage = async () => { if(!inputValue.trim()) return const userMessage = {} setMessages(prev => [...prev, userMessage]) setInputValue(") setIsTyping(true)""
-""
-"
+"""

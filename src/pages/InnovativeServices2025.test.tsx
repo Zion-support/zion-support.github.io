@@ -15,5 +15,4 @@ describe("InnovativeServices2025", () => {}; "; it("renders without crashing", (
 }
   });"
 "
-});"
-"
+});""

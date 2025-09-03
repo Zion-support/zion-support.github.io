@@ -9,6 +9,4 @@ export default function EnhancedMainPage() {return (
           Professional EnhancedMainPage services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

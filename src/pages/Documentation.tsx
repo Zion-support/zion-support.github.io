@@ -1,8 +1,7 @@
 import React from "react"
   BookOpen, Code, FileText, Video, Download,
   Search, ArrowRight, ExternalLink, Star, Users} from "lucide-react
-
-export default function Documentation() {
+export default function Documentation() {;
 
   const docCategories = []
 
@@ -50,7 +49,6 @@ export default function Documentation() {
                     className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                  />
                 </div>,
-              </div>,
             </motion.div>,,
           </div>,
         </section>,
@@ -116,7 +114,6 @@ to help you build amazing solutions with our platform&quot
                     placeholder="Search documentation...""
                     className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                 </div>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -190,7 +187,6 @@ key = "{category.title}""
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;"
@@ -253,7 +249,6 @@ key = "{doc.title}""
                       {doc.views}
 
                     </div>
-                  </div>
                   ;"
                   <h3 className="text-xl font-bold text-white mb-2">{doc.title}</h3>;"
                   <p className="text-gray-300 text-sm mb-4">{doc.description}</p>
@@ -285,7 +280,6 @@ key = "{doc.title}""
                       <Users className="&quot;w-4" h-4 mr-1&quot;       />
                       {doc.views}&quot
                     </div>
-                  </div>
                   "
                   <h3 className="&quot;text-xl" font-bold text-white mb-2&quot;>{doc.title}&quot;</h3>"
                   <p className="&quot;text-gray-300" text-sm mb-4&quot;>{doc.description}&quot;</p>
@@ -309,7 +303,6 @@ key = "{doc.title}""
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-16">;"
@@ -534,7 +527,6 @@ initial = "{{" opacit,y: 0, y: 20 }}"
                 </button>
               </motion.div>
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="&quot;py-20" bg-gradient-to-r from-slate-800/50 to-slate-700/50&quot;>&quot;""
@@ -587,5 +579,4 @@ you get the most out of our platform.
 </>
   )
 }
-  )}"
-"
+  )}""

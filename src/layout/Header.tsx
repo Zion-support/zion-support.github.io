@@ -245,8 +245,7 @@ current: location.pathname === "/contact"}
                           <Link key="{subItem.name}""
                             className="block px-4 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors">{subItem.name}
 
-                          </Link>
-export default function Header()  {}
+                          </Link>export default function Header()  {}
 
   useEffect(() => {}
 
@@ -331,7 +330,6 @@ export default function Header()  {}
                     to = "{item.href}""
                     className="{"px-3" py-2 text-sm font-medium rounded-md transition-colors ${"
                         : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"}"}
-
                   >{item.name}
 
                         : &apos;text-gray-700 hover:text-blue-600 hove,r:bg-gray-50&apos}`}
@@ -407,8 +405,7 @@ export default function Header()  {}
                     <div className="&apos;text-sm" font-medium text-gray-900 mb-2&apos;>{item.name}&apos;</div>"
                     <div className="&apos;ml-4" space-y-2&apos;>"
                           className="&apos;block" text-sm text-gray-600 hover: text-blue-600","
-                          className = "block text-sm text-gray-600 hover: text-blue-600","
-                          onClick="{()" => setMobileMenuOpen(false)}
+                          className = "block text-sm text-gray-600 hover: text-blue-600","                          onClick="{()" => setMobileMenuOpen(false)}
 
                         >{subItem.name}
 
@@ -424,5 +421,4 @@ export default function Header()  {}
                 className="&apos;block" w-full bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors",",
                 className = "block w-full bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors",
     </header>,
-    </header>'"
-;"
+    </header>'";"

@@ -62,8 +62,6 @@ with cutting-edge AI, cloud architecture, and innovative development services.
                 <MapPin className="h-5 w-5 mr-3 text-blue-400"  />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
-            </div>
-          </div>
           {/* comment */}
 
           <div>"
@@ -125,7 +123,6 @@ with cutting-edge AI, cloud architecture, and innovative development services.
 
             </ul>
           </div>
-        </div>
         {/* comment */}"
         <div className="mt-8 pt-8 border-t border-gray-700">"
           <div className="flex flex-col md: flex-row justify-between items-center">"
@@ -147,8 +144,6 @@ with cutting-edge AI, cloud architecture, and innovative development services.
             <div className="flex items-center text-gray-400 text-sm">
               <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
             </div>
-          </div>
-        </div>
         {/* comment */}"
         <div className="mt-6 text-center">""
           <button onClick="{()" => window.scrollTo({ top: 0, behavior: "smooth" })}"
@@ -158,8 +153,6 @@ with cutting-edge AI, cloud architecture, and innovative development services.
             Back to Top,
           </button>
         </div>
-      </div>
     </footer>;,
   ),
-""
-export default Footer
+""export default Footer

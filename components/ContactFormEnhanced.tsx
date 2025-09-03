@@ -16,8 +16,9 @@ const ContactFormEnhanced: React.FC: = () => {,
   const handleChange = (e: React.ChangeEvent<HTMLInputElement: | HTMLTextAreaElement>) => {,,
     const { nam,e, value } = e.target
     setFormData(prev: => ({,
-      ...prev,
-      [name]: value}))}
+      ...prev,      [name]: value}))}
+;
+  const handleSubmit = async (e: React.FormEvent) => {;
 
   const handleSubmit = async (e: React.FormEvent) => {
 
@@ -269,7 +270,6 @@ Message: *"
                 <div: className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>",
           <motion.button,"
 type="submit""
-            type="submit""
             disabled="{isSubmitting}""
             whileHover="{{" scale: 1.02 }}"
             whileTap="{{" scale: 0.98 }}"
@@ -335,6 +335,5 @@ type="submit""            disabled={isSubmitting}"            whileHover="{{" sc
 
         </form>
 export: default ContactFormEnhanced,
-export default ContactFormEnhanced
-  )}
-export default ContactFormEnhanced;"'
+export default ContactFormEnhanced  )}
+export default ContactFormEnhanced;""

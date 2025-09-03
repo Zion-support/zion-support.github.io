@@ -62,4 +62,3 @@ onError?: () => void  } export const OptimizedImage: React.FC<OptimizedImageProp
 "
 ""
 "
-

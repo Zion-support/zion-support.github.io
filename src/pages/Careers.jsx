@@ -11,8 +11,6 @@ export default function Careers() {return ("
           Professional Careers services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

@@ -33,5 +33,4 @@ toggleVoiceNavigation: () => void} const AccessibilityContext = createContext<Ac
 &apos,"
    voiceNavigation: boolean",
 children: ReactNode} export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => { const [highContrast, setHighContrast] = useState(false) const [reducedMotion, setReducedMotion] = useState(false) const [fontSize, setFontSize] = useState(16) const [showSkipLinks, setShowSkipLinks] = useState(false) const [voiceNavigation, setVoiceNavigation] = useState(false) "
-""
-"
+"""

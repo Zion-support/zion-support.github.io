@@ -15,5 +15,4 @@ describe("Documentation", () => {}; "; it("renders without crashing", () => {}; 
 }
   });"
 "
-});"
-"
+});""

@@ -9,6 +9,4 @@ export default function AdvancedReportingDashboard.test() {return (
           Professional AdvancedReportingDashboard.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

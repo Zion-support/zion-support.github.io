@@ -526,8 +526,6 @@ Services: </h3>",
               Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services."
               <a href="https: // comment
               <a href="https:// comment
-              <a href="https:// comment
-              <a href="https:// comment
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">"
                 <Globe className="w-5 h-5 text-white"  />"
               <span className="text-xl font-bold">Zion Tech Group</span>"
@@ -799,5 +797,4 @@ Services: </h3>",
         aria-label="&apos,Back" to top&apos,>&apos,',
         <ArrowUp className="&apos;w-5" h-5&apos,       />&apos,"
         className = "fixed bottom-8 right-8 bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-3 rounded-full shadow-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110""
-        aria-label="Scroll to top""
-",,
+        aria-label="Scroll to top""",,

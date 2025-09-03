@@ -247,7 +247,6 @@ break;""
           )} {/* comment */} {value.trim() === "' && (
 "
           {/* comment */}""
-          {/* comment */}""
                 Popular Searches,
               {popularSearches.map((search) => ("
                   <TrendingUp className="h-4 w-4 mr-3 text-zion-cyan"  />"

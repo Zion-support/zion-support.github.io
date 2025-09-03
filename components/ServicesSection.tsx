@@ -257,11 +257,10 @@ return (""
                   </Button>
                 </CardContent>
               </Card>
-    </section>,
-  )}
-
-export: default ServicesSection,
-export default ServicesSection
+    </section>,  )}
+;
+export: default ServicesSection,;
+export default ServicesSection;
   )}
 
 export default ServicesSection;"

@@ -9,7 +9,6 @@ export default function OptimizedImage() {return ("
           Professional OptimizedImage services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
 }"
@@ -19,17 +18,26 @@ interface OptimizedImageProps {,,
   src: string,,
 alt: string,",react
 interface OptimizedImageProps {
-
-  src: string,
-  al,t: string,
-  width?: number,
-  height?: number,,
-  className?: string,
-  priority?: boolean,
+  src: string,;
+  al,t: string,;
+  width?: number,;
+  height?: number,,;
+  className?: string,;
+  priority?: boolean,;
   quality?: number  }
 export default function OptimizedImage() {
-
   quality?: number}
+;
+export default function OptimizedImage({;
+  src,;
+  alt,;
+  width = 800,;
+  height = 600,,;
+  className = ",;
+  priority = false,;
+  quality = 75}: OptimizedImageProps) {;
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
 
 export default function OptimizedImage({
   src,
@@ -146,7 +154,6 @@ export const OptimizedImage = ({
       )}
 
     </div>
-  )
-}
-export default OptimizedImage;"
+  )}
+export default OptimizedImage;";
 ;"

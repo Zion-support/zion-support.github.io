@@ -52,12 +52,7 @@ of the use or inability to use the materials on our website.
                   <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709,
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </MainLayout>
-  )
-}
-"
+  )}
+";
 export default TermsOfService

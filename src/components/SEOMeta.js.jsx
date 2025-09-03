@@ -37,7 +37,6 @@ const SEOMeta = ({ title, description, keywords = "AI, Machine Learning, Quantum
 },"""";,"});,"})"
         "sameAs"[;"""";,"});,"})"
             "https:// comment
-            "https:// comment
             "https: // comment
         ],"""";,"});,"})"
         "foundingDate": "2015","""";,"});,"})"
@@ -126,7 +125,6 @@ const SEOMeta = ({ title, description, keywords = "AI, Machine Learning, Quantum
       """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       <link rel="preconnect" href="https: // comment
-      <link rel="preconnect" href="https: // comment
       """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       <script type="application/ld+json">;,"});,"})"
@@ -182,10 +180,7 @@ const SEOMetaJs = () => {
               Get Started,
             </a>
           </div>
-        </div>
-      </div>
     </div>;,
   )}
 
-export default SEOMetaJs;"
-"
+export default SEOMetaJs;""

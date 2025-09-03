@@ -9,6 +9,4 @@ export default function UserExperienceOptimizer.test() {return (
           Professional UserExperienceOptimizer.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

@@ -15,5 +15,4 @@ describe("Zion2026AIMarketplaceShowcase", () => {}; "; it("renders without crash
 }
   });"
 "
-});"
-"
+});""

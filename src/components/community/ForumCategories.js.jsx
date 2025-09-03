@@ -114,7 +114,6 @@ export default function ForumCategories() {}
   const categories = []"
     {}""
 """
-"""
 """""
       id: "1", """""
       name: "General Discussion","""""
@@ -127,12 +126,10 @@ export default function ForumCategories() {}
       adminOnly: false, """""
       icon: "message-circle", lastPost: {}""
 """
-"""
 """""
         title: "Welcome to the community!", """""
         author: "Admin","""""
         date: "2024-01-15"}}, {}""
-"""
 """
 """""
       id: "2","""""
@@ -185,29 +182,28 @@ export default function ForumCategories() {}
               </span>
             )}
 
-          </div>
-        </div>))}
+          </div>        </div>))}
 
     </div>)}
-
+;
+export { ForumCategories }
+;
+export { ForumCategories }
+;
+export { ForumCategories }
+;
+export { ForumCategories }
+;
 export { ForumCategories }
 
 export { ForumCategories }
-
+;
 export { ForumCategories }
-
+;
 export { ForumCategories }
-
+;
 export { ForumCategories }
-
-export { ForumCategories }
-
-export { ForumCategories }
-
-export { ForumCategories }
-
-export { ForumCategories }
-
-export { ForumCategories }"
-"""
+;
+export { ForumCategories }";
+""";
 "

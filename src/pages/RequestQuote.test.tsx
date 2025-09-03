@@ -15,5 +15,4 @@ describe("RequestQuote", () => {}; "; it("renders without crashing", () => {}; r
 }
   });"
 "
-});"
-"
+});""

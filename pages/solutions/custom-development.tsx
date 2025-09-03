@@ -16,11 +16,9 @@ import React from "react"
                 View All Solutions,
               </Link>
             </div>
-          </div>
         </section>
       </div>
     </MainLayout>;,
   )}
 
-"
-export default CustomDevelopment
+"export default CustomDevelopment

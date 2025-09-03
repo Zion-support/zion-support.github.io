@@ -166,7 +166,6 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})"
               </Button>;,"});,"})"
             ))}"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
       </motion.div>;,"});,"})"
       {/* comment */}"});,"})"
       <motion.div,"});,"})"
@@ -202,7 +201,6 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})"
                       {metric.change}%;,"});,"})"
                     </span>;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
               </CardHeader>""";,"});,"})"
               <CardContent>"""";,"});,"})"
                 <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;,"});,"})"
@@ -406,8 +404,6 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})"
                     Client satisfaction reached 4.8/5, highest in comp history,"});,"})"
                   </p>;,"});,"})"
                 </div>;,"});,"})"
-              </div>;,"});,"})"
-            </div>;,"});,"})"
           </CardContent>;,"});,"})"
         </Card>;,"});,"})"
       </motion.div>;,"});,"})"
@@ -446,7 +442,6 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})"
               Schedule Demo,"});,"})"
             </Button>;,"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
       </motion.div>;,"});,"})"
     </div>)};,"});,"})"
 export default AdvancedAnalyticsDashboard,"});,"})"
@@ -462,7 +457,6 @@ export { AdvancedAnalyticsDashboard };,"});,"})"
 export { AdvancedAnalyticsDashboard };,"});,"})"";"
 const AdvancedAnalyticsDashboard = () => {}""
 ""
-""
 """;"""
   const [timeRange, setTimeRange] = useState("30d")";""
   const [timeRange, setTimeRange] = useState("30d")"
@@ -471,7 +465,6 @@ const AdvancedAnalyticsDashboard = () => {}""
   // comment
 const metrics = []"
     {}""
-"""
 """
 """""
       title: "Total Revenue", """""
@@ -527,13 +520,11 @@ const metrics = []"
   const servicePerformance = []"
     {}""
 """
-"""
 """""
       name: "AI CRM Platform", performance: 96, growth: 15.2, """
       clients: 89,"""
       revenue: 450000, """""
       status: "trending"}, {}""
-"""
 """
 """""
       name: "Quantum Computing", performance: 92, growth: 28.7, """
@@ -541,20 +532,17 @@ const metrics = []"
       revenue: 1200000, """""
       status: "trending"}, {}""
 """
-"""
 """""
       name: "Blockchain Solutions", performance: 88, growth: 12.4, """
       clients: 156,"""
       revenue: 780000, """""
       status: "stable"}, {}""
 """
-"""
 """""
       name: "Cybersecurity Suite", performance: 94, growth: 18.9, """
       clients: 203,"""
       revenue: 920000, """""
       status: "trending"}, {}""
-"""
 """
 """""
       name: "IoT Platform", performance: 85, growth: 8.7, clients: 67, revenue: 340000, """
@@ -578,8 +566,7 @@ const metrics = []"
         return <Activity className="w-4 h-4 text-blue-500" /" >""
       case "declining":""""
         return <TrendingDown className="w-4 h-4 text-red-500" /" >"
-      default: """",
-        return <Activity className="w-4 h-4 text-gray-500" /" >}
+      default: """",        return <Activity className="w-4 h-4 text-gray-500" /" >}
 
   }
 
@@ -630,7 +617,6 @@ business intelligence"
             ))}
 
           </div>
-        </div>
       </motion.div>
       {/* comment */}
 
@@ -758,8 +744,7 @@ key="{index}""
                       </td>"""""
                       <td className="py-3 px-4">""""
                         <Badge className={getStatusColor(service.status)}" >"""""
-                          <div className="flex items-center gap-1">
-                            {getStatusIcon(service.status)}
+                          <div className="flex items-center gap-1">                            {getStatusIcon(service.status)}
 
                             {service.status}
 
@@ -868,8 +853,6 @@ category,
                     Client satisfaction reached 4.8/5, highest in comp history,
                   </p>
                 </div>
-              </div>
-            </div>
           </CardContent>
         </Card>
       </motion.div>
@@ -913,19 +896,16 @@ insights to optimize your business performance and make data-driven""
               Schedule Demo,
             </Button>
           </div>
-        </div>
       </motion.div>
     </div>)}
 
-export default AdvancedAnalyticsDashboard,
+export default AdvancedAnalyticsDashboard,export { AdvancedAnalyticsDashboard }
+;
 export { AdvancedAnalyticsDashboard }
-
+;
 export { AdvancedAnalyticsDashboard }
-
-export { AdvancedAnalyticsDashboard }
-
+;
 export { AdvancedAnalyticsDashboard }
 
 "
-export { AdvancedAnalyticsDashboard }""""
-"
+export { AdvancedAnalyticsDashboard }"""""

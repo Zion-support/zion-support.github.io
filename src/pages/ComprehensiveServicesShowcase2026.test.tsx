@@ -15,5 +15,4 @@ describe("ComprehensiveServicesShowcase2026", () => {}; "; it("renders without c
 }
   });"
 "
-});"
-"
+});""

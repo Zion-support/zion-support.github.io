@@ -1,6 +1,5 @@
 ,"});,"})"
 ;,"});,"})"
-;,"});,"})"
 ;import { MessageCircle, Calendar, Star } from "lucide-react";,"});,"})"
 export const HireNowCTA = ({}"});,"})"
   hourlyRate,,"});,"})"
@@ -233,7 +232,6 @@ export const HireNowCTA = ({}
           </div>"""
               className = "{}"
 "
-"
 ""
                 availability == = "available""",
                   ? "bg - green-100 text-green-800""",
@@ -334,12 +332,10 @@ export const HireNowCTA = ({}
     </Card>
   );"
 }"";"
-}"";"
 """""
   )}&apos;&quot}&apos,
 &apos;&apos,&apos,&quot;"
 &quot;""
   )}"";""
 }"";""
-"""""'""
-"
+"""""'"""

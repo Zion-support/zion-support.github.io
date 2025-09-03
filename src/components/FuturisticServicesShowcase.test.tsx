@@ -9,6 +9,4 @@ export default function FuturisticServicesShowcase.test() {return (
           Professional FuturisticServicesShowcase.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

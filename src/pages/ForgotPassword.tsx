@@ -11,8 +11,6 @@ export default function ForgotPassword() {return ("
           Professional ForgotPassword services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

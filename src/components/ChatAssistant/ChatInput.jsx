@@ -35,7 +35,6 @@ import React { useState, useRef, useEffect } from "react";,"});,"})","});,"})","
         if (message.trim() && !disabled) {}"
             onSend(message)"
             setMessage("")}
-
     }
 
     const handleKeyPress = (e) => {}

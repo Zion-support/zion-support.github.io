@@ -3,8 +3,7 @@ import React from "react"
         if (this.y > canvas.height) this.y = 0
         // comment
 draw() {
-
-        if (ctx) {
+        if (ctx) {;
 
           const alpha = this.life / this.maxLife
           ctx.save()
@@ -18,13 +17,18 @@ draw() {
           ctx.fill()
 }
           // comment
-ctx.shadowColor = this.color
-          ctx.restore()}
+ctx.shadowColor = this.color          ctx.restore()}
 
       }
+;
+      isDead() {;
 
-      isDead() {
+;
+    // Grid system,;
+class Grid {;
 
+      spacing: number,;
+      offset: number,;
 
     // comment
 class Grid {
@@ -38,8 +42,10 @@ for (let x = this.offset % this.spacing; x < canvas.width; x += this.spacing) {
             ctx.moveTo(x, 0)
 }
             ctx.lineTo(x, canvas.height)
-}
-            ctx.stroke()}
+}            ctx.stroke()}
+;
+    // Wave system,;
+class Wave {;
 
     // comment
 class Wave {
@@ -56,7 +62,6 @@ frequency: number,
 for (let i = 0; i < 3; i++) {"
       ctx.fillStyle = "rgba(0, 0, 0, 0.1)"
       // comment
-      // comment
 particles[index] = new Particle()}
 
       })
@@ -71,8 +76,9 @@ const time = Date.now() * 0.001
     // comment
 return () => {
         
+;
 
-
+;
 
 
 

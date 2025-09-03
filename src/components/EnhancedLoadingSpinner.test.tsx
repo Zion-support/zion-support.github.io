@@ -9,6 +9,4 @@ export default function EnhancedLoadingSpinner.test() {return (
           Professional EnhancedLoadingSpinner.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

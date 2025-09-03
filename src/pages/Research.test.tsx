@@ -15,5 +15,4 @@ describe("Research", () => {}; "; it("renders without crashing", () => {}; rende
 }
   });"
 "
-});"
-"
+});""

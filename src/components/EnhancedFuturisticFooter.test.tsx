@@ -9,6 +9,4 @@ export default function EnhancedFuturisticFooter.test() {return (
           Professional EnhancedFuturisticFooter.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

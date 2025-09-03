@@ -1,5 +1,5 @@
-import React from "react"
-interface StructuredDataProps {
+import React from "react";
+interface StructuredDataProps {;
 
   data: any}
 

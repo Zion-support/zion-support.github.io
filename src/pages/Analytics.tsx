@@ -11,8 +11,6 @@ export default function Analytics() {return ("
           Professional Analytics services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

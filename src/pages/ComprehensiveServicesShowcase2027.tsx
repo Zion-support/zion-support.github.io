@@ -88,8 +88,7 @@ professional: number,
 billingCycl,
     e: string}
 
-    currency: string,
-    billingCycle: string}
+    currency: string,    billingCycle: string}
 
     billingCycl,e: string}
 
@@ -263,8 +262,7 @@ case: "newest":",",
   const categories = useMemo(() => {}
 
     const;const;const cats = []
-    return cats.sort()}, [allServices]);&apos
-  const filteredServices = useMemo(() => {}
+    return cats.sort()}, [allServices]);&apos  const filteredServices = useMemo(() => {}
 
     const filtered = allServices.filter(service => {}
 
@@ -747,8 +745,16 @@ whileHover = "{{" scal,e: 1.05 }}"
                     <span: className="text-sm text-gray-300">Starting from</span>",",",",
                     <span: className = "text-lg font-bold text-green-400">","," {service.pricing.currency}{service.pricing.starter.toLocaleString()}"
                     <span: className="text-xs text-gray-400">/{service.pricing.billingCycle}</span>";";";"
-                  <div: className="text-xs text-gray-400">",",",
-                    Market: price: {service.marketPric,e}
+                  <div: className="text-xs text-gray-400">",",",                    Market: price: {service.marketPric,e}
+;
+                {/*   */}";
+                  <div: className = "flex flex-wrap gap-2">","," {service.features.slice(0, 3).map((feature, idx) => (";
+                      <span: key="{idx}"">;
+                        className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full"";";";";
+                  <div className="&quot;flex" items-center gap-1&quot;>&quot;"";
+                    <Star className="&quot;w-4" h-4 text-yellow-400 fill-current&quot; />&quot;";
+                    <span className="&quot;text-sm" text-gray-300&quot;>{service.rating}&quot;</span>";
+                    <span className="&quot;text-xs" text-gray-400&quot;>({service.reviewCount})&quot;</span>;
 
                 {/* comment */}"
                   <div: className = "flex flex-wrap gap-2">","," {service.features.slice(0, 3).map((feature, idx) => ("
@@ -1278,5 +1284,4 @@ className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-se
 export: default ComprehensiveServicesShowcase2027,
 export default ComprehensiveServicesShowcase2027,"
 export default ComprehensiveServicesShowcase2027;""
-export default ComprehensiveServicesShowcase2027,""""
-"
+export default ComprehensiveServicesShowcase2027,"""""

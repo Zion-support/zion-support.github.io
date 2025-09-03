@@ -26,7 +26,6 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };"
 export default function Page() {,"});,"})"
 export default function Page() {,"});,"})","});,"})"
 export default function Page() {,"});,"})"
-export default function Page() {,"});,"})"
 const Accordion = AccordionPrimitive.Root,"});,"})"
 const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (<AccordionPrimitive.Item ref="{ref}" className={cn("border-b", className)} {...props} />));,"});,"})"
 AccordionItem.displayName = "AccordionItem";,"});,"})"
@@ -48,8 +47,7 @@ export default function Page() {
 
 export default function Page() {"
 export default function Page() {
-
-export default function Page() {
+export default function Page() {;
 
 const Accordion = AccordionPrimitive.Root;"
 const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (<AccordionPrimitive.Item ref="{ref}" className={cn("border-b", className)} {...props} />))
@@ -75,8 +73,7 @@ const AccordionContent = React.forwardRef(({ className, children, ...props }, re
 export default function Page() {}
 
 export default function Page() {"
-  import ;{ cn } from &apos;@/lib/utils";&apos;&apos
-export default function Page() {}
+  import ;{ cn } from &apos;@/lib/utils";&apos;&aposexport default function Page() {}
 
 export default function Page() ;{}
 
@@ -147,5 +144,4 @@ export {Accordion, AccordionItem, AccordionTrigger, AccordionContent }"
 }}}}
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent } }}}}"
-'
-"
+'"

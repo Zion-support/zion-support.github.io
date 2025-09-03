@@ -8,6 +8,5 @@ export default function Authslice() {
           This is a placeholder component for authslice.
         </p>
       </div>
-    </div>
   )
 }

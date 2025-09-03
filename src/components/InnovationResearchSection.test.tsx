@@ -9,6 +9,4 @@ export default function InnovationResearchSection.test() {return (
           Professional InnovationResearchSection.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

@@ -74,8 +74,6 @@ export default function AIContentCreation() {
                 Schedule Demo,
               </Button>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -104,7 +102,6 @@ export default function AIContentCreation() {
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-white">"
@@ -137,7 +134,6 @@ export default function AIContentCreation() {
                     <span className="text-4xl font-bold text-gray-900">{plan.price}</span>"
                     <span className="text-gray-600 ml-1">{plan.period}</span>
                   </div>
-                </div>
 "
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => ("
@@ -159,7 +155,6 @@ export default function AIContentCreation() {
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className=""py-20" bg-gradient-to-r from-blue-600 to-purple-600 text-white"}>"
@@ -182,7 +177,6 @@ to scale their content marketing efforts.
               </Button>
             </Link>
           </div>
-        </div>
       </section>
     </>",
   )}

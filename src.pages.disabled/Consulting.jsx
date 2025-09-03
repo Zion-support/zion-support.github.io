@@ -1,1 +1,1 @@
-import React from 'react' export default Consulting
+import React from "react" export default Consulting

@@ -22,7 +22,6 @@ const EnhancedFooter = () => {
                 </svg>
               </a>
             </div>
-          </div>
           <div>"
             <h3 className="text-lg font-semibold mb-4">Services</h3>"
             <ul className="space-y-2">"
@@ -48,13 +47,10 @@ const EnhancedFooter = () => {
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008<br  />Middletown DE 19709</p>
             </div>
-          </div>
         </div>"
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">,
           <p>&copy, 2024 Zion Tech Group. All rights reserved.</p>
         </div>
-      </div>
     </footer>
   ),
-"'
-export default EnhancedFooter
+"'export default EnhancedFooter

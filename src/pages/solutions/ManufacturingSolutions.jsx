@@ -17,6 +17,4 @@ export default function Manufacturingsolutions() {
             Go Home <Phone className="w-4 h-4 ml-2"  />
           </Link>
         </div>
-      </div>
-    </div>
   ),

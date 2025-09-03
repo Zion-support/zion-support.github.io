@@ -9,6 +9,4 @@ export default function HowItWorksSection.test() {return (
           Professional HowItWorksSection.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

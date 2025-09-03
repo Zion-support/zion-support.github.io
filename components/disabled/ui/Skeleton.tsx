@@ -1,9 +1,9 @@
-import React from "react"
-interface SkeletonProps {
+import React from "react";
+interface SkeletonProps {;
 
-  className?: string
-  width?: string | number
-  height?: string | number
+  className?: string;
+  width?: string | number;
+  height?: string | number;
   rounded?: boolean}
 
 "
@@ -29,7 +29,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({"",
 export const CardSkeleton: React.FC = () => (`"
   <div className="bg-white rounded-lg shadow-md p-6">"",
     <Skeleton height="{20}" className="mb-4"  />""
-    <Skeleton height="{16}" className="mb-2"  />""
     <Skeleton height="{16}" className="mb-2"  />""
     <Skeleton height="{16}" width="60%"  />
   </div>

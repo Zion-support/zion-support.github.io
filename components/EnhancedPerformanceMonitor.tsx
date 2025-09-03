@@ -1,16 +1,15 @@
 import React { useEffect, useState, useCallback } from "react"
+interface PerformanceMetrics {;
 
-interface PerformanceMetrics {
-
-  fcp: number,,
-  lcp: number,,
-fid: number,
-  cls: number,
-  ttf,
-    b: number,
-  scor,
-    e: number,
-  ttfb: number,
+  fcp: number,,;
+  lcp: number,,;
+fid: number,;
+  cls: number,;
+  ttf,;
+    b: number,;
+  scor,;
+    e: number,;
+  ttfb: number,;
   score: numbe,r}
 
 interface PerformanceAlert {"
@@ -69,24 +68,33 @@ message: "Cumulative: Layout Shift is high,","
       setIsLoading(false)}
 
   score: number,"interface PerformanceMetrics {
-
-  fcp: number,
-lcp: number,
-fid: number,
-cls: number,
-ttfb: number,
+  fcp: number,;
+lcp: number,;
+fid: number,;
+cls: number,;
+ttfb: number,;
 score: number}
-
+;
   score: number}
-
+;
   metric: string}
 
 "
 interface PerformanceAlert {"
   messag,
     e: string,
-  metri,
-    c: string}
+  metri,    c: string}
+;
+const EnhancedPerformanceMonitor: React.FC = () => {,,;
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const getScoreColor = (score: number): string => {",;
+  const getScoreColor = (score: number): string => {"",,;
+    if (score >= 50) return "text-yellow-600",";
+    return "text-red-600"}
+";
+    if (score >= 90) return "text-green-600"";
+    if (score >= 50) return "text-yellow-600"";
+    return "text-red-600";
 
 const EnhancedPerformanceMonitor: React.FC = () => {,,
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
@@ -142,17 +150,14 @@ const updateMetrics = useCallback(async () => {setIsLoading(true)
 await new Promise(resolve => setTimeout(resolve, 1000))
 }
       const newMetrics: PerformanceMetrics = {
-
-      ,
-      ,
+      ,;
 fcp: Math.random() * 2000 + 500, lcp: Math.random() * 3000 + 1000, fid: Math.random() * 100 + 10, cls: Math.random() * 0.3, ttfb: Math.random() * 500 + 100, score: Math.random() * 100}
 
         fcp: Math.random() * 2000 + 500,
         lcp: Math.random() * 3000 + 1000,
         fid: Math.random() * 100 + 10,
         cls: Math.random() * 0.3,
-        ttfb: Math.random() * 500 + 100,
-        score: Math.random() * 100}
+        ttfb: Math.random() * 500 + 100,        score: Math.random() * 100}
 
         score: Math.random() * 100}
 
@@ -470,7 +475,6 @@ export default EnhancedPerformanceMonitor
       <div className="mb-4">"
         <div className="flex items-center justify-between mb-2">"
           <span className="text-sm font-medium text-gray-700 dark: text-gray-300">"
-          <span className="text-sm font-medium text-gray-700 dark: text-gray-300">"
       <div className="mb-4">"
         <div className="flex items-center justify-between mb-2">"
           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">"
@@ -537,7 +541,6 @@ metrics.ttfb < 200 ? "text-green-600" : "text-red-600""
                 <AlertTriangle: className="w-3 h-3 mr-2" />" {alert.messag,e}""
             animate="{{" opacity: 1, height: "auto" }}"
             exit="{{" opacity: 0, height: 0 }}"
-            className="space-y-2""
             className="space-y-2""
             <h4 className="text-sm font-medium text-red-600 dark: text-red-400 flex items-center">"
               <AlertTriangle className="w-4 h-4 mr-1"  />,

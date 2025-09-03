@@ -237,8 +237,7 @@ export: { LoadingSpinner }
             className="opacity-75""
             fill="currentColor"""'
           /" >"
-      </div>"""
-      {text && (<p className="mt-3 text-sm text-gray-500 animate-pulse">{text}</p>)}
+      </div>"""      {text && (<p className="mt-3 text-sm text-gray-500 animate-pulse">{text}</p>)}
 
     </div>)}
 
@@ -249,5 +248,4 @@ export default LoadingSpinner,
 export { LoadingSpinner }
 
 "
-""""
-"
+"""""

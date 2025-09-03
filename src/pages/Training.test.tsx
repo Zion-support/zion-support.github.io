@@ -15,5 +15,4 @@ describe("Training", () => {}; "; it("renders without crashing", () => {}; rende
 }
   });"
 "
-});"
-"
+});""

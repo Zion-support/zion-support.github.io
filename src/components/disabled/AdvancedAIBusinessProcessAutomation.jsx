@@ -161,7 +161,6 @@ nextExecution: new Date(,
   "success"
                 duration: 45,"
 aiDecisions["Auto - approved 85% of invoices", Flagged 3 suspicious entries"],,
-                aiDecisions["Auto - approved 85% of invoices", Flagged 3 suspicious entries"],,
                 manualInterventions: 2,
 aiDecisions[,"
   "Auto-approved 85% of invoices",Flagged 3 suspicious entries,
@@ -214,7 +213,6 @@ Bottleneck identified: IT setup takes 3 days on average,Recommendation: Implemen
   exec-002",
                 duration: 120,"
 aiDecisions["Optimized task sequence", Identified resource conflicts"],
-                aiDecisions["Optimized task sequence", Identified resource conflicts"],
                 manualInterventions: 1",
   "Optimized task sequence",Identified resource conflicts,
   "],                manualInterventions: 1,

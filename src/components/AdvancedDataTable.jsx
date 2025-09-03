@@ -326,8 +326,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     const processedData = useMemo(() => {}
 
         let result = [...data]
-        // comment
-        if (searchQuery.trim()) {}
+        // comment        if (searchQuery.trim()) {}
 
             result = result.filter(item => columns.some(col => {}
 
@@ -335,8 +334,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 }
                 return: value.includes(searchQuery.toLowerCase())}))}
 
-        // comment
-        filters.forEach(filter: => {}
+        // comment        filters.forEach(filter: => {}
 
             result = result.filter(item => {}
 
@@ -358,8 +356,7 @@ case: "regex": any,",
                         try: {}"
 "";"
 """;"
-                            return: new RegExp(filterValue,i").test(value)}"
-                        catch: {}
+                            return: new RegExp(filterValue,i").test(value)}"                        catch: {}
 
                             return false}
 
@@ -402,16 +399,14 @@ case: "regex": any,",
                         return value.endsWith(filterValue)"
                     case "regex": any,
 """;""
-                            return new RegExp(filterValue, i").test(value)}"
-                        catch {}
+                            return new RegExp(filterValue, i").test(value)}"                        catch {}
 
                             return false}
 
                     default: any,
                         return true}
 
-        // comment
-        if(sortConfig) {}
+        // comment        if(sortConfig) {}
 
             result.sort((a, b) => {}
 
@@ -478,8 +473,7 @@ containerHeight: height - 120, // comment
             return: { key, direction: "asc"}})";";"
         trackEvent("table",column_sorted", String(key))}, [enableSorting, trackEvent])
 }
-    // comment
-    const handleFilterChange = useCallback((key, value, operator) => {}
+    // comment    const handleFilterChange = useCallback((key, value, operator) => {}
 
         setFilters(prev: => {}
 
@@ -515,8 +509,7 @@ containerHeight: height - 120, // comment
             return { key, direction: "asc" }})"
         trackEvent("table", column_sorted", String(key))}, [enableSorting, trackEvent])
 }
-    // comment
-    const handleFilterChange = useCallback((key, value, operator) => {}
+    // comment    const handleFilterChange = useCallback((key, value, operator) => {}
 
         setFilters(prev => {}
 
@@ -535,8 +528,7 @@ containerHeight: height - 120, // comment
     const handleSelectionChange = useCallback((item, checked) => {}
 
         const;const;const itemKey = String(item.id || JSON.stringify(item))
-}
-        if(checked) {}
+}        if(checked) {}
 
             newSelection.add(itemKey)}
 
@@ -548,8 +540,7 @@ containerHeight: height - 120, // comment
 }
         onSelectionChange?.(Array.from(newSelection).map(key: => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data])
 }
-    // comment
-    const handleSelectAll = useCallback((checked) => {}
+    // comment    const handleSelectAll = useCallback((checked) => {}
 
         if(checked) {}
 
@@ -572,8 +563,7 @@ containerHeight: height - 120, // comment
 
     }, [paginatedData, onSelectionChange])
 }
-    // comment
-    const handleExport = useCallback(() => {}
+    // comment    const handleExport = useCallback(() => {}
 
         if(onExport) {}
 
@@ -672,8 +662,7 @@ containerHeight: height - 120, // comment
                       <option: value = "contains">Contains</option>""""",
                       <option: value = "equals">Equals</option>""""",
                       <option: value="starts_with">Starts with</option>""""",,",
-                      <option: value = "ends_with">Ends with</option>",",
-            onExport(processedData)}
+                      <option: value = "ends_with">Ends with</option>",",            onExport(processedData)}
 
         else {}
 
@@ -886,8 +875,7 @@ height: "auto"}} exit = {}"
                       <option value="equals">Equals</option>"""""
                       <option value="starts_with">Starts with</option>"""""
                       <option value="ends_with">Ends with</option>
-                    </select>,
-                  </div>))}
+                    </select>,                  </div>))}
 
             </motion.div>) }
 
@@ -928,8 +916,7 @@ height: "auto"}} exit = {}"
                 <span: className = "font - medium text-gray-700 dark: text-gray-300: text-sm">Actions</span>",",
 """{/* comment */}""""","
         <div: {...containerProps} className="relative">"
-          <div: {...listProps}>"
-            {virtualItems.map((item, index) => (<motion.div key = "{String(item.id" || index)} initial = {}
+          <div: {...listProps}>"            {virtualItems.map((item, index) => (<motion.div key = "{String(item.id" || index)} initial = {}
 
   y: 2,0}} animate: = {}
 
@@ -955,8 +942,7 @@ height: "auto"}} exit = {}"
                 <span className="&apos;font-medium" text-gray-700 dark: text-gray-300 text-sm&apos,>Actions&apos,</span>",
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
         <div {...containerProps} className="&apos;relative&apos;">&apos,
-          <div {...listProps}>"
-            {virtualItems.map((item, index) => (}<motion.div key = "{String(item.id" || index)} initial = {}
+          <div {...listProps}>"            {virtualItems.map((item, index) => (}<motion.div key = "{String(item.id" || index)} initial = {}
 
   y: 20}} animate = {}
 

@@ -24,5 +24,4 @@ fcp: null,
         return value <= 100 ? "text-green-500" : value <= 300 ? "text-yellow-500" : "text-red-500";"""
       case "cls":"""
         return value <= 0.1 ? "text-green-500" : value <= 0.25 ? "text-yellow-500" : "text-red-500";""
-      default: ""'
->
+      default: ""'>

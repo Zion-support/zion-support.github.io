@@ -11,8 +11,6 @@ export default function GreenIT() {return ("
           Professional GreenIT services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

@@ -15,5 +15,4 @@ describe("BlogPost", () => {}; "; it("renders without crashing", () => {}; rende
 }
   });"
 "
-});"
-"
+});""

@@ -15,5 +15,4 @@ describe("RevolutionaryServicesShowcase2030", () => {}; "; it("renders without c
 }
   });"
 "
-});"
-"
+});""

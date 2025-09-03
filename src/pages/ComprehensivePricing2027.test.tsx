@@ -15,5 +15,4 @@ describe("ComprehensivePricing2027", () => {}; "; it("renders without crashing",
 }
   });"
 "
-});"
-"
+});""

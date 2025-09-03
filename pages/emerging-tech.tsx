@@ -87,7 +87,6 @@ to IoT and quantum computing, we help you leverage tomorrow"s technologies today
 innovative solutions and gain competitive advantages.
               </p>
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-16 sm: py-24">"
@@ -121,7 +120,6 @@ innovative solutions and gain competitive advantages.
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-16 sm: py-24 bg-gray-50">"
@@ -146,7 +144,6 @@ innovative solutions and gain competitive advantages.
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-16 sm: py-24">"
@@ -171,11 +168,9 @@ innovative solutions and gain competitive advantages.
                     ))}
 
                   </div>
-                </div>
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-16 sm: py-24 bg-gray-50">"
@@ -264,8 +259,6 @@ innovative solutions and gain competitive advantages.
                   </li>
                 </ul>
               </div>
-            </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-16 sm: py-24 bg-gradient-to-br from-orange-600 to-red-600">"
@@ -290,8 +283,6 @@ innovative solutions and gain competitive advantages.
                   View All Services,
                 </a>
               </div>
-            </div>
-          </div>
         </section>
       </main>
       <SimpleFooter  />

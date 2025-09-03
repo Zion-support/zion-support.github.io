@@ -26,5 +26,4 @@ export default SEO
       <link rel="canonical" href="{canonical}" /  >"
     </Helmet>  )}'
 export default SEO""
-""
-"
+"""

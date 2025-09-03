@@ -15,5 +15,4 @@ describe("NotFoundPage", () => {}; "; it("renders without crashing", () => {}; r
 }
   });"
 "
-});"
-"
+});""

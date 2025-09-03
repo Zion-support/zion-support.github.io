@@ -114,5 +114,4 @@ className="mt-2 text-sm text-gray-600""
         </motion.p>
       )}"
   )};"
-export default LoadingSpinner;"
-"
+export default LoadingSpinner;""

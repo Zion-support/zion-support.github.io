@@ -39,5 +39,4 @@ keywords="main," technology, services" />"
           </div>;,
   )}
 
-export default Main;"
-"
+export default Main;""

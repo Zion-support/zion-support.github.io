@@ -16,5 +16,4 @@ describe(&apos;ROICalculator&apos, () => {
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"
 "
-}}"
-"
+}}""

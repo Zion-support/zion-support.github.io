@@ -11,8 +11,6 @@ export default function EnhancedHomePage() {return ("
           Professional EnhancedHomePage services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

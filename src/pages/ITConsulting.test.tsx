@@ -15,5 +15,4 @@ describe("ITConsulting", () => {}; "; it("renders without crashing", () => {}; r
 }
   });"
 "
-});"
-"
+});""

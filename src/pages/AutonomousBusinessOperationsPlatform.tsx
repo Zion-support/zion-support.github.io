@@ -11,8 +11,6 @@ export default function AutonomousBusinessOperationsPlatform() {return ("
           Professional AutonomousBusinessOperationsPlatform services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

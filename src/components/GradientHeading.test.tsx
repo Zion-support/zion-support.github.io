@@ -9,6 +9,4 @@ export default function GradientHeading.test() {return (
           Professional GradientHeading.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

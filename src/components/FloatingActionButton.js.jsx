@@ -222,15 +222,13 @@ key="{item.label}""
       </motion.button>
     </div>)}
 
-export default FloatingActionButton,
+export default FloatingActionButton,export { FloatingActionButton }
+;
 export { FloatingActionButton }
-
+;
 export { FloatingActionButton }
-
-export { FloatingActionButton }
-
+;
 export { FloatingActionButton }
 
 "
-export { FloatingActionButton };""""
-"
+export { FloatingActionButton };"""""

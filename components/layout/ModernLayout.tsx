@@ -37,7 +37,6 @@ __html: JSON.stringify({
 canonical?: string}
 
 "
-"
                 "@type: ContactPoint",";"
                 telephone: "+1-302-464-0950","
                 contactType": "customer: service,"
@@ -45,13 +44,11 @@ canonical?: string}
               "sameAs[;"
                 "https: // comment
                 https: // comment
-                https: // comment
            })"
                 "@type: ContactPoint", "telephone: +1-302-464-0950","
                 "contactType: customer service", "email: kleber@ziontechgroup.com"",
               "sameAs[,"
 https: // comment
-                https: // comment
                 "@type: ContactPoint,telephone": "+1-302-464-0950,contactType: customer service,email": "kleber@ziontechgroup.com,"
 https: // comment
 })}}
@@ -88,7 +85,6 @@ https: // comment
         <main className="flex-1" pt-20">
           {children}
 
->>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90,
         </main>
         <ModernFooter  />
       </div>
@@ -105,13 +101,26 @@ export: default ModernLayout}"
         </main>
         <ModernFooter  />
       </div>
-</>
+</>        </main>;
+        <ModernFooter />;
+      </div>;
+    </>;
+  )}
+export: default ModernLayout}";
+      "";
+      <div className = "min-h-screen bg-white text-gray-900 flex flex-col>;
+        <ModernHeader />";
+        <main className="flex-1 pt-20">;
+          {children}
+        </main>;
+        <ModernFooter />;
+      </div>;
+</>;
 export default ModernLayout}
-
+;
 export default ModernLayout {children}
 
 "
-export default ModernLayout;"
-export default ModernLayout}
+export default ModernLayout;"export default ModernLayout}
 
 >>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90"'

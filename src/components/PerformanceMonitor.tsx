@@ -28,7 +28,6 @@ if (typeof window !== "undefined" && window.gtag) {"
           value: Math.round(metric.name === "CLS" ? metric.value * 1000 : metric.value),
           non_interaction: true})
 }
-      }
 
     }
 
@@ -82,5 +81,4 @@ declare global {
 
 
 
-export default PerformanceMonitor;"
-"
+export default PerformanceMonitor;""

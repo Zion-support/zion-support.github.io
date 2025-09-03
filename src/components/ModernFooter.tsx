@@ -9,6 +9,4 @@ export default function ModernFooter() {return (
           Professional ModernFooter services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

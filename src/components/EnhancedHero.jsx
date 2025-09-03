@@ -245,8 +245,7 @@ export { EnhancedHero };,"});,"})"
             icon: "☁️"""],
     useEffect ( () => {}
 
-        if (!isAutoPlaying) return,
-const interval = setInterval ( () => {}
+        if (!isAutoPlaying) return,const interval = setInterval ( () => {}
 
             if (isPlaying) {}
 
@@ -255,8 +254,7 @@ const interval = setInterval ( () => {}
         }, 5000)
 }
         return () => clearInterval(interval)}, [isPlaying, isAutoPlaying, heroSlides.length])
-}
-    const nextSlide = () => {}
+}    const nextSlide = () => {}
 
         setCurrentSlide((prev) => (prev + 1) % heroSlides.length) }
 
@@ -346,8 +344,7 @@ const interval = setInterval ( () => {}
               {/* comment */}"
   { duration: 0.6, delay: 0.6","
 """"}} className="pt-6">""""
-                <a href="{heroSlides[currentSlide].ctaLink}" className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover: from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">,
-                  {heroSlides[currentSlide].ctaText}
+                <a href="{heroSlides[currentSlide].ctaLink}" className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover: from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">,                  {heroSlides[currentSlide].ctaText}
 
                   <motion.div animate = {}
 
@@ -395,16 +392,14 @@ const interval = setInterval ( () => {}
       {/* comment */}"""""
       <div className="absolute top-4 right-4 z-20">""""
         <div className="text-xs text-white/60 bg-black/20 backdrop-blur-sm px-3 py-2 rounded-lg">
-          <p>Use ← → keys or click to navigate</p>
-    </div>)}
+          <p>Use ← → keys or click to navigate</p>    </div>)}
 
 export default EnhancedHero}}}}
-
+;
 export { EnhancedHero }
 
 export { EnhancedHero }
 
 "
 """"
-"`"
-"
+"`""

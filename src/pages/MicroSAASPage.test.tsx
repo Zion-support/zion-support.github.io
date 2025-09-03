@@ -15,5 +15,4 @@ describe("MicroSAASPage", () => {}; "; it("renders without crashing", () => {}; 
 }
   });"
 "
-});"
-"
+});""

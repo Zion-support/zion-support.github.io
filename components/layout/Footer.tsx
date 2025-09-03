@@ -106,7 +106,6 @@ const Footer: React.FC = () => {,
                 <MapPin className="w-4 h-4 mr-3 text-blue-400"  />
                 <span>{contactInfo.address}</span>
               </div>
-            </div>
             {/* comment */}"
             <div className="flex space-x-4">
               {socialLinks.map((social) => ("
@@ -122,7 +121,6 @@ const Footer: React.FC = () => {,
               ))}
 
             </div>
-          </div>
           {/* comment */}"
           <div className="lg: col-span-2">"
             <h3 className="text-xl font-bold text-white mb-6">Our Services</h3>"
@@ -151,7 +149,6 @@ const Footer: React.FC = () => {,
               ))}
 
             </div>
-          </div>
           {/* comment */}"
           <div className="lg: col-span-1">"
             <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>"
@@ -181,10 +178,6 @@ const Footer: React.FC = () => {,
                   Subscribe,
                 </Button>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
 ,
       {/* comment */}"
       <div className="border-t border-slate-700 py-8">"
@@ -206,9 +199,6 @@ const Footer: React.FC = () => {,
               <div className="text-3xl font-bold text-white mb-2">24/7</div>"
               <div className="text-gray-400 text-sm">Support Available</div>
             </div>
-          </div>
-        </div>
-      </div>
 ,
       {/* comment */}"
       <div className="border-t border-slate-700 py-6">"
@@ -230,18 +220,13 @@ const Footer: React.FC = () => {,
                 ))}
 
               </div>
-            </div>
             "
             <div className="flex items-center space-x-2 text-gray-400 text-sm">
               <span>Made with</span>"
               <Heart className="w-4 h-4 text-red-500"  />
               <span>by Zion Tech Group</span>
             </div>
-          </div>
-        </div>
-      </div>
     </footer>
   )
 }
-""
-export default Footer
+""export default Footer

@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from "react";,"});,"})","});,"})","});,"})"
 ;,"});,"})"
-;,"});,"})"
 export const MachineLearningDashboard = ({ className = "" }) => {;,"});,"})"
     const { trackEvent } = useAnalytics({        enableTracking: true,"});,"})"
         enableUserBehaviorTracking: true,"});,"});"
@@ -167,7 +166,6 @@ export const MachineLearningDashboard = ({ className = "" }) => {;,"});,"})"
             <span>New Model</span>;,"});,"})"
           </button>;,"});,"})"
         </div>;,"});,"})"
-      </div>;,"});,"})"
 """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       <div className="flex border-b border-gray-200 dark: border-gray-700">","});,"})"
@@ -239,8 +237,6 @@ export const MachineLearningDashboard = ({ className = "" }) => {;,"});,"})"
                     </div>"""";,"});,"})"
                     <Zap className="w-8 h-8 text-orange-500"  />;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
-              </div>;,"});,"})"
 """;,"});,"})"
               {/* comment */}"""";,"});,"})"
               <div className="bg-gray-50 dark: bg-gray-800 p-4 rounded-lg">"""","});,"})"
@@ -262,8 +258,6 @@ export const MachineLearningDashboard = ({ className = "" }) => {;,"});,"})"
                     <p className="text-2xl font-bold text-red-600">{metrics.trainingJobs.failed}</p>"""";,"});,"})"
                     <p className="text-sm text-gray-600 dark: text-gray-400">Failed</p>,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
-              </div>;,"});,"})"
 """;,"});,"})"
               {/* comment */}"""";,"});,"})"
               <div className="bg-gray-50 dark: bg-gray-800 p-4 rounded-lg">"""","});,"})"
@@ -280,7 +274,6 @@ export const MachineLearningDashboard = ({ className = "" }) => {;,"});,"})"
                             {model.type} • {model.framework}"});,"})"
                           </p>;,"});,"})"
                         </div>""";,"});,"})"
-                      </div>""";,"});,"})"
                       <div className="flex items-center space-x-2">"";,"});,"})"
                         <span className="{"px-2" py-1 text-xs font-medium rounded-full ${getStatusColor(model.status)}"}>;,"});,"})"
                           {model.status}""";,"});,"})"
@@ -291,7 +284,6 @@ export const MachineLearningDashboard = ({ className = "" }) => {;,"});,"})"
                       </div>;,"});,"})"
                     </div>) ) }"});,"})"
                 </div>;,"});,"})"
-              </div>;,"});,"})"
             </motion.div>)}""";,"});,"})"
 """"";,"});,"})"
           {activeTab === "models" && (<motion.div key="models" initial = {}"});,"})"
@@ -313,7 +305,6 @@ export const MachineLearningDashboard = ({ className = "" }) => {;,"});,"})"
                     New Model,"});,"})"
                   </button>;,"});,"})"
                 </div>;,"});,"})"
-              </div>;,"});,"})"
               {/* comment */}"});,"})"
               <AnimatePresence>;,"});,"})"
                 {showCreateModel && (<motion.div initial = {}"});,"})"
@@ -622,7 +613,6 @@ export const MachineLearningDashboard = ({ className = "" }) => {;,"});,"})"
                       <p>No predictions yet</p>;,"});,"})"
                     </div>)}"});,"})"
                 </div>;,"});,"})"
-              </div>;,"});,"})"
             </motion.div>)}""";,"});,"})"
 """"";,"});,"})"
           {activeTab === "analytics" && (<motion.div key="analytics" initial = {}"});,"})"
@@ -651,7 +641,6 @@ export const MachineLearningDashboard = ({ className = "" }) => {;,"});,"})"
                           <div className="w-20 bg-gray-200 dark: bg-gray-700 rounded-full h-2">"""","});,"})"
                             <div className="{"bg-purple-600" h-2 rounded-full" style="{{" width: "${model.accuracy * 100}%" }}       />;,"});,"}})"
                           </div>;,"});,"})"
-                        </div>;,"});,"})"
                       </div>) ) }"});,"})"
                   </div>;,"});,"})"
                 </div>""";,"});,"})"
@@ -678,9 +667,6 @@ export const MachineLearningDashboard = ({ className = "" }) => {;,"});,"})"
                         {metrics.totalPredictions}"});,"})"
                       </span>;,"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
-                </div>;,"});,"})"
-              </div>;,"});,"})"
             </motion.div>) }"});,"})"
         </AnimatePresence>;,"});,"})"
       </div>;,"});,"})"
@@ -700,13 +686,11 @@ export const MachineLearningDashboard = ({ className = "" }) => {"
     const { models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction, exportModel, importModel } = useMachineLearning()"
     const [newModelForm, setNewModelForm] = useState({}""
 """
-"""
 """""
         name: "", """""
         type: "classification","""""
         framework: "tensorflow"})"
     const [predictionForm, setPredictionForm] = useState({}""
-"""
 """
 """""
         modelId: "", """""
@@ -715,8 +699,7 @@ export const MachineLearningDashboard = ({ className = "" }) => {"
         type: "classification,"""
         framework: "tensorflow"})"
     const [predictionForm, setPredictionForm] = useState()
-}
-    const handleCreateModel = useCallback(() => {}
+}    const handleCreateModel = useCallback(() => {}
 
         if(newModelForm.name.trim()) {}
 
@@ -736,7 +719,6 @@ export const MachineLearningDashboard = ({ className = "" }) => {"
             trackEvent("ml", dashboard",training_started")}"
         catch (error) {}""
 """
-"""
 """""
             // comment
 
@@ -750,8 +732,7 @@ export const MachineLearningDashboard = ({ className = "" }) => {"
     const handleArchiveModel = useCallback((modelId) => {}""
         archiveModel(modelId)"""
         trackEvent("ml", dashboard",model_archived")}, [archiveModel, trackEvent])
-}
-    const handleMakePrediction = useCallback(async () => {}
+}    const handleMakePrediction = useCallback(async () => {}
 
         if(predictionForm.modelId && predictionForm.input.trim()) {}
 
@@ -762,7 +743,6 @@ export const MachineLearningDashboard = ({ className = "" }) => {"
                 setPredictionForm({ modelId: "", input: "" })"""
                 trackEvent("ml", dashboard",prediction_made")}"
             catch (error) {}""
-"""
 """
 """""
                 // comment
@@ -779,7 +759,6 @@ export const MachineLearningDashboard = ({ className = "" }) => {"
             trackEvent("ml", dashboard",model_exported")}"
         catch (error) {}""
 """
-"""
 """""
             // comment
 
@@ -791,8 +770,7 @@ export const MachineLearningDashboard = ({ className = "" }) => {"
         if(file) {}
 
             const reader = new FileReader()
-}
-            reader.onload = (e) => {}
+}            reader.onload = (e) => {}
 
                 try {}
 
@@ -802,10 +780,8 @@ importModel(modelData)""
                     trackEvent("ml", dashboard",model_imported")}"
                 catch (error) {}""
 """
-"""
 """""
                     // comment
-
             }
 
             reader.readAsText(file) }
@@ -814,7 +790,6 @@ importModel(modelData)""
 }
     const getStatusColor = (status) => {}"
         switch (status) {}""
-"""
 """
 """""
             case "deployed": return "text-green-600 bg-green-100""""
@@ -827,7 +802,6 @@ importModel(modelData)""
 
     const getJobStatusColor = (status) => {}"
         switch (status) {}""
-"""
 """
 """""
             case "running": return "text-blue-600 bg-blue-100""""
@@ -1345,7 +1319,6 @@ Started: {job.startTime.toLocaleString()}"
                           <div className="w-20 bg-gray-200 dark: bg-gray-700 rounded-full h-2">"""""""",
                             <div className="bg-purple-600 h-2 rounded-full" style="{{" width: "${model.accuracy * 100}%" }}/" >"
                           </div>
-                        </div>
                       </div>) ) }"
                   </div>""
                 </div>"""""
@@ -1373,9 +1346,6 @@ Started: {job.startTime.toLocaleString()}"
 
                       </span>
                     </div>
-                  </div>
-                </div>
-              </div>
             </motion.div>) }
 
         </AnimatePresence>"

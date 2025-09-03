@@ -8,6 +8,5 @@ export default function Talentroutes() {
           This is a placeholder component for talentroutes.
         </p>
       </div>
-    </div>
   )
 }

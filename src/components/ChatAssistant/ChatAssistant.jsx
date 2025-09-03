@@ -33,5 +33,4 @@
   })"
           <ChatInput onSend="{handleSendMessage}/">)
 }
-"
-export default ComponentName;"
+"export default ComponentName;"

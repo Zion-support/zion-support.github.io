@@ -279,7 +279,6 @@ export const AccessibilityPanel = () => {}"});,"})"
                       </Button>;,"});,"})"
                     ))}"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
                 {/* comment */}""";,"});,"})"
                 <div>"""";,"});,"})"
                   <h3 className="text-white font-medium mb-3">;,"});,"})"
@@ -310,7 +309,6 @@ export const AccessibilityPanel = () => {}"});,"})"
                       );,"});,"})"
                     )}"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
 """;,"});,"})"
                 {/* comment */}"""";,"});,"})"
                 <div className="bg-zion-blue-dark/50 rounded-lg p-4">"""";,"});,"})"
@@ -337,9 +335,6 @@ export const AccessibilityPanel = () => {}"});,"})"
                         Ctrl/Cmd + Shift + M,"});,"})"
                       </kbd>;,"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
-                </div>;,"});,"})"
-              </div>;,"});,"})"
 """;,"});,"})"
               {/* comment */}"""";,"});,"})"
               <div className="mt-6 pt-4 border-t border-zion-cyan/20">"""";,"});,"})"
@@ -348,7 +343,6 @@ export const AccessibilityPanel = () => {}"});,"})"
                   sessions.</p>;,"});,"})"
               </div>;,"});,"})"
             </motion.div>;,"});,"})"
-          </motion.div>;,"});,"})"
         )}"});,"})"
       </AnimatePresence>;,"});,"})"
     </>"});,"})"
@@ -407,11 +401,9 @@ export const useAccessibility = () => {}
   const context = useContext(AccessibilityContext)"
   if (!context) {}""
 """
-"""
 """""
     throw new Error("""""
-      "useAccessibility must be used within an AccessibilityProvider"
-    )}
+      "useAccessibility must be used within an AccessibilityProvider"    )}
 
   return context}
 
@@ -424,7 +416,6 @@ export const AccessibilityProvider = ({ children }) => {}"
 }
   // comment
 useEffect(() => {}""
-"""
 """
 """""
     const savedSettings = localStorage.getItem()
@@ -461,10 +452,8 @@ useEffect(() => {}
     // comment
 if (highContrast) {}""
 """
-"""
 """""
       root.classList.add("high-contrast")} else {}""
-"""
 """
 """""
       root.classList.remove("high-contrast")}
@@ -472,10 +461,8 @@ if (highContrast) {}""
     // comment
 if (reducedMotion) {}""
 """
-"""
 """""
       root.classList.add("reduced-motion")} else {}""
-""
 ""
 """"
       root.classList.remove("reduced - motion")", ",
@@ -495,8 +482,7 @@ if (reducedMotion) {}""
 }, [highContrast, reducedMotion, fontSize, colorBlindMode])
 }
   const toggleReducedMotion = () => setReducedMotion()
-}
-  const value = {}
+}  const value = {}
 
     highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode}
 
@@ -516,8 +502,7 @@ export const AccessibilityPanel = () => {}
 
     highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode} = useAccessibility()
 }
-  // comment
-useEffect(() => {}
+  // commentuseEffect(() => {}
 
     const handleKeyDown = event => {}
 
@@ -685,7 +670,6 @@ initial="{{" scale: 0.9, opacity: 0 }}"""
                         onClick="{()" =" > setFontSize(size)}""
                         className={}""
 """
-"""
 """""
                           fontSize === size"""""
                             ? "bg-zion-cyan text-white""""""
@@ -715,7 +699,6 @@ initial="{{" scale: 0.9, opacity: 0 }}"""
                           size = "sm"""
                           onClick="{()" =" > setColorBlindMode(mode)}""
                           className={}""
-"""
 """
 """""
                             colorBlindMode === mode"""""
@@ -758,7 +741,6 @@ initial="{{" scale: 0.9, opacity: 0 }}"""
                         Ctrl/Cmd + Shift + M,
                       </kbd>
                     </div>
-                  </div>
                 </div>"
               </div>""
 """"",
@@ -769,7 +751,6 @@ initial="{{" scale: 0.9, opacity: 0 }}"""
 sessions.</p>
               </div>
             </motion.div>
-          </motion.div>
         )}
 
       </AnimatePresence>
@@ -799,14 +780,12 @@ const firstFocusableElement = focusableContent[0]
     const handleTabKey = e => {}""
 """
       if (e.key === "Tab") {}
-
         if(e.shiftKey) {}
 
           if(document.activeElement === firstFocusableElement) {}
 
             e.preventDefault()
-}
-            lastFocusableElement.focus()}
+}            lastFocusableElement.focus()}
 
         } else {}
 
@@ -832,5 +811,4 @@ export const SrOnly = ({ children }) => (""""
   <span className="sr-only">{children}</span>"
 )"
 export default AccessibilityPanel""
-""""'"
-"
+""""'""

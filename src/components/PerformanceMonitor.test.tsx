@@ -9,6 +9,4 @@ export default function PerformanceMonitor.test() {return (
           Professional PerformanceMonitor.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

@@ -13,7 +13,6 @@ const ContentQualityDashboard = ({ className = "" }) => {    const [isOpen, setI
         setIsLoading(true);,"});,"})"
         try {}"});,"})"
             // comment
-            // comment
             const samplePages = [];,"});,"})"
                 {}"});,"})"
 ";,"});,"})"
@@ -277,7 +276,6 @@ const ContentQualityDashboard = ({ className = "" }) => {    const [isOpen, setI
                       </tbody>;,"});,"})"
                     </table>;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
 """;,"});,"})"
                 {/* comment */}"""";,"});,"})"
                 {selectedPage && (<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">"""";,"});,"})"
@@ -309,7 +307,6 @@ const ContentQualityDashboard = ({ className = "" }) => {    const [isOpen, setI
                             <div className="text-sm text-gray-500 dark: text-gray-400">Links</div>"""","});,"})"
                             <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.linkCount}</div>;,"});,"})"
                           </div>;,"});,"})"
-                        </div>;,"});,"})"
 """;,"});,"})"
                         {selectedPage.issues.length > 0 && (<div>"""";,"});,"})"
                             <h4 className="font-medium text-red-600 dark: text-red-400 mb-2">Issues Found</h4>"""","});,"})"
@@ -385,10 +382,7 @@ const ContentQualityDashboardJs = () => {
               Get Started,
             </a>
           </div>
-        </div>
-      </div>
     </div>;,
   )}
 
-export default ContentQualityDashboardJs;"
-"
+export default ContentQualityDashboardJs;""

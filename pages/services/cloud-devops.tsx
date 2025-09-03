@@ -36,8 +36,6 @@ import React from "react"
                   View Solutions,
                 </Link>
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -53,7 +51,6 @@ import React from "react"
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50">"
@@ -90,7 +87,6 @@ import React from "react"
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white">"
@@ -114,7 +110,6 @@ import React from "react"
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50">"
@@ -147,8 +142,6 @@ import React from "react"
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Optimization</h3>"
                 <p className="text-gray-600">Optimize performance and costs for maximum efficiency</p>
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -183,8 +176,6 @@ import React from "react"
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Scalability</h3>"
                 <p className="text-gray-600">Scale your infrastructure automatically based on demand</p>
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -204,12 +195,10 @@ import React from "react"
                 View Case Studies,
               </Link>
             </div>
-          </div>
         </section>
       </main>
       <Footer  />
     </>
   )}
 
-"
-export default CloudDevOps
+"export default CloudDevOps

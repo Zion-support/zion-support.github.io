@@ -9,6 +9,4 @@ export default function AnalyticsManager.test() {return (
           Professional AnalyticsManager.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

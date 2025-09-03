@@ -34,7 +34,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
           </motion.div>;,"});,"})"
         </div>;,"});,"})"
-      </div>;,"});,"})"
     </>"});,"})"
 const Sitemap: React.FC = () => {,"});,"})"
   const links = [],"});,"})"
@@ -402,7 +401,6 @@ name: "Privacy Policy","
                 Navigate our website easily. Find all our pages, services, and resources organized by category.
               </p>
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white">"
@@ -634,10 +632,8 @@ key="{section.category}""
                   Middletown DE 19709,
                 </p>
               </div>
-            </div>
           </motion.div>
         </div>
-      </div>
     </>
   )
 }
@@ -734,7 +730,6 @@ initial="{{" opacity: 0, y: 20 }}"
                     className="bg-blue-600 text-white px-6 py-3 rounded-lg hove,"
     r: bg-blue-700 transition-colors flex items-center justify-center""
                   >"
-          >"
             <Card className="max-w-2xl mx-auto">"
               <CardContent className="p-8">"
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -765,7 +760,6 @@ initial="{{" opacity: 0, y: 20 }}"
               ))}
 
             </div>
-          </div>
           {/* comment */}"
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-12">"
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">"
@@ -795,7 +789,6 @@ initial="{{" opacity: 0, y: 20 }}"
                 ))}
 
               </div>
-            </div>
             {/* comment */}"
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">"
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center">"
@@ -824,8 +817,6 @@ initial="{{" opacity: 0, y: 20 }}"
                 ))}
 
               </div>
-            </div>
-          </div>
           {/* comment */}"
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-12">"
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">"
@@ -855,7 +846,6 @@ initial="{{" opacity: 0, y: 20 }}"
                 ))}
 
               </div>
-            </div>
             {/* comment */}"
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">"
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center">"
@@ -884,8 +874,6 @@ initial="{{" opacity: 0, y: 20 }}"
                 ))}
 
               </div>
-            </div>
-          </div>
           {/* comment */}"
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">"
             <h2 className="text-2xl font-bold text-white mb-6 flex items-center">"
@@ -914,7 +902,6 @@ initial="{{" opacity: 0, y: 20 }}"
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50">"
@@ -957,12 +944,26 @@ initial="{{" opacity: 0, y: 20 }}"
                 <ArrowRight className="h-4 w-4 text-orange-600 mx-auto mt-2 group-hover:translate-x-1 transition-transform"  />
               </Link>
             </div>
-          </div>
         </section>
       </main>
       <SimpleFooter  />
-    </>
-  )}
+    </>  )}
+;
+          {/*   */}";
+          <div className="text-center mt-12">";
+            <p className="text-gray-400 text-sm">";
+              Last updated:{" "}";
+              {new Date().toLocaleDateString("en-US", {";
+                year: "numeric",";
+                month: "long",";
+                day: "numeric"})}
+            </p>;
+          </div>;
+              </CardContent>;
+            </Card>;
+          </motion.div>;
+        </div>;
+    </>;
 
           {/* comment */}"
           <div className="text-center mt-12">"
@@ -979,7 +980,6 @@ initial="{{" opacity: 0, y: 20 }}"
             </Card>
           </motion.div>
         </div>
-      </div>
     </>
 
 const Sitemap: React.FC = () => {
@@ -1000,9 +1000,8 @@ const Sitemap: React.FC = () => {
 
       </ul>
     </div>
-  )
-}
-  )
+  )}
+  );,
 }
 export default SitemapPage}
 

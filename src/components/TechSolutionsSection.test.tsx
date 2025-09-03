@@ -9,6 +9,4 @@ export default function TechSolutionsSection.test() {return (
           Professional TechSolutionsSection.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

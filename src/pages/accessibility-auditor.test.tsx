@@ -15,5 +15,4 @@ describe("accessibility - auditor", () => {}; "; it("renders without crashing", 
 }
   });"
 "
-});"
-"
+});""

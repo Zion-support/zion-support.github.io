@@ -134,8 +134,7 @@ bg: "bg-indigo-600","
 bg: "bg-gray-600","
         hover: "hover:bg-gray-700","
         text: "text-gray-600","
-        hoverText: "hover:text-gray-500","
-        border: "hover:border-gray-300"}
+        hoverText: "hover:text-gray-500","        border: "hover:border-gray-300"}
 
     }
 
@@ -161,7 +160,6 @@ bg: "bg-gray-600","
 that transform your business operations and drive growth.
             </p>
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-24 sm: py-32">"
@@ -223,11 +221,9 @@ that transform your business operations and drive growth.
                       <ArrowRight className=""ml-2" h-4 w-4 group-hover: translate-x-1 transition-transform"}       />
                     </Link>
                   </div>
-                </div>
               )})}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-24 sm: py-32 bg-gray-50">"
@@ -287,7 +283,6 @@ that transform your business operations and drive growth.
               )})}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-24 sm: py-32 bg-blue-600">"
@@ -317,8 +312,6 @@ that transform your business operations and drive growth.
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
             </div>
-          </div>
-        </div>
       </section>
     </PageTransition>",,
   )}

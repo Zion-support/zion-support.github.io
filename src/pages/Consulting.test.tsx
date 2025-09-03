@@ -15,5 +15,4 @@ describe("Consulting", () => {}; "; it("renders without crashing", () => {}; ren
 }
   });"
 "
-});"
-"
+});""

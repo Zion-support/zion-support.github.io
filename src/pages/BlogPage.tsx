@@ -11,8 +11,6 @@ export default function BlogPage() {return ("
           Professional BlogPage services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

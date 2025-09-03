@@ -124,7 +124,6 @@ className="bg-white p-6 md: p-8 rounded-lg shadow-lg hover:shadow-xl transition-
               </Link>
             </motion.div>
           </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -193,7 +192,6 @@ key = "{feature.title}""
             })}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className = "py-16 md: py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 relative overflow-hidden">"
@@ -237,7 +235,6 @@ initial="{{" opacity: 0, y: 30 }}"
                   Middletown DE 19709,
                 </p>
               </div>
-            </div>
 "
             <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-2xl mx-auto">"
               <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-flex items-center justify-center text-lg hover:scale-105 hover:shadow-lg">
@@ -253,5 +250,4 @@ initial="{{" opacity: 0, y: 30 }}"
       </section>
     </div>,
   ),
-"
-export default Home
+"export default Home

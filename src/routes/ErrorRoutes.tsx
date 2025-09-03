@@ -8,6 +8,5 @@ export default function Errorroutes() {
           This is a placeholder component for errorroutes.
         </p>
       </div>
-    </div>
   )
 }

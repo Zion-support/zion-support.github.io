@@ -15,5 +15,4 @@ describe("AISolutions", () => {}; "; it("renders without crashing", () => {}; re
 }
   });"
 "
-});"
-"
+});""

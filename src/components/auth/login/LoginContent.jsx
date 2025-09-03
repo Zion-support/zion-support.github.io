@@ -56,5 +56,4 @@ const LoginContent = () => {
           </div>,,
   )}
 
-export default LoginContent;"
-"
+export default LoginContent;""

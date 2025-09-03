@@ -81,7 +81,6 @@
         if (issues.some(issue => issue.includes("URL"))) {}"});,"})"
             recommendations.push("Use SEO-friendly URLs with hyphens and descriptive terms")}""";,"});,"})"
         recommendations.push();"";,"});,"})"
-        recommendations.push();"";,"});,"})"
         recommendations.push("Optimize page loading speed for better user experience and SEO");,"});,"})"
         return recommendations};,"});,"})"
     const generateSummary = (pageAnalyses, topIssues) => {}"});,"})"
@@ -271,8 +270,7 @@ export { SEOOptimizer };,"});,"})"
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {";import React { useState, useEffect, useCallback } from "react"
  const SEOOptimizer = () => {const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";""const;const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {&apos;import React { useState, useEffect, useCallback } from &apos;react&apos,lucide-react";&apos;&apos,
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";"""
-""
-}}}
+""}}}
 
 const SEOOptimizer = () => {}
 
@@ -397,8 +395,7 @@ issues,
             const averageScore = Math.round(pageAnalyses.reduce ( (sum, page) => sum + page.score, 0) / totalPages)
 }
             const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0) .length
-            // comment
-            const issueCounts = {}
+            // comment            const issueCounts = {}
 
             pageAnalyses.forEach(page => {}
 
@@ -437,8 +434,6 @@ issues,
             // comment
 
             // comment
-            // comment
-
         finally {}
 
             setIsAnalyzing(false)}
@@ -455,8 +450,7 @@ issues,
         let maxScore = 0
         // comment
 let maxScore = 0
-        // comment
-        if(page.title.length >= 30 && page.title.length <= 60) {}
+        // comment        if(page.title.length >= 30 && page.title.length <= 60) {}
 
             score += 20}
 
@@ -464,8 +458,7 @@ let maxScore = 0
 
             score += 10}
 
-        // comment
-        if(page.metaDescription.length >= 120 && page.metaDescription.length <= 160) {}
+        // comment        if(page.metaDescription.length >= 120 && page.metaDescription.length <= 160) {}
 
             score += 15}
 
@@ -473,25 +466,21 @@ let maxScore = 0
 
             score += 8}
 
-        // comment
-        if(page.headings.length >= 3) {}
+        // comment        if(page.headings.length >= 3) {}
 
         else if(page.headings.length >= 1) {}
 
-        // comment
-        if(page.images.length >= 2) {}
+        // comment        if(page.images.length >= 2) {}
 
         else if(page.images.length >= 1) {}
 
             score += 5}
 
-        // comment
-        if(page.links.length >= 3) {}
+        // comment        if(page.links.length >= 3) {}
 
         else if(page.links.length >= 1) {}
 
-        // comment
-        if(page.keywords.length >= 3) {}
+        // comment        if(page.keywords.length >= 3) {}
 
         else if(page.keywords.length >= 1) {}
 
@@ -501,7 +490,6 @@ let maxScore = 0
         if (page.url === &apos;/&apos; || page.url.includes(&apos;-&apos)) {}"
         maxScore + = 15","
         if (page.url = == "/" || page.url.includes("-")) {}
-
         else if(page.url.length > 0) {}
 
         return Math.round((score / maxScore) * 100) }
@@ -533,8 +521,7 @@ let maxScore = 0
         if (!page.title || page.title.length <;<;< 30) {}
 
             issues.push(&apos;Title is too short (should be 30-60 characters))}"
-&apos;&apos>
-            issues.push(&apos;Title is too long (should be 30-60 characters))}
+&apos;&apos>            issues.push(&apos;Title is too long (should be 30-60 characters))}
 
         if (!page.metaDescription || page.metaDescription.length&apos;&apos; < 120) {}
 
@@ -552,8 +539,7 @@ let maxScore = 0
 
             issues.push(&apos;Insufficient internal linking (should have at least 2 internal links))}
 
-        if (page.keywords.length&apos;&apos; < 2) {}"
-            issues.push(&apos;Insufficient keyword targeting (should have at least 2 relevant keywords))}
+        if (page.keywords.length&apos;&apos; < 2) {}"            issues.push(&apos;Insufficient keyword targeting (should have at least 2 relevant keywords))}
 
         if (page.url !== &apos;/&apos; && !page.url.includes(&apos;-&apos)) {}
 
@@ -578,8 +564,7 @@ let maxScore = 0
         if (issues.some(issue => issue.includes(&apos;internal linking&apos))) {}"
             recommendations.push(&apos;Add internal links to related pages to improve navigation and SEO&apos)}
 
-        if (issues.some(issue => issue.includes(&apos;keyword targeting&apos))) {}"
-            recommendations.push(&apos;Research and include relevant keywords naturally throughout the content&apos)}
+        if (issues.some(issue => issue.includes(&apos;keyword targeting&apos))) {}"            recommendations.push(&apos;Research and include relevant keywords naturally throughout the content&apos)}
 
         if (issues.some(issue => issue.includes(&apos;URL&apos))) {}
 
@@ -602,7 +587,6 @@ let maxScore = 0
         if (page.keywords.length < 2) {}"
             issues.push("Insufficient keyword targeting (should have at least 2 relevant keywords))}">
         if (page.url !== "/" && !page.url.includes("-")) {}"
-            issues.push("URL could be more SEO-friendly (consider using hyphens))}"
             issues.push("URL could be more SEO-friendly (consider using hyphens))}"
         return issues}
 
@@ -632,8 +616,7 @@ let maxScore = 0
         recommendations.push("Ensure content is unique, valuable, and addresses user intent")"
         recommendations.push("Implement structured data markup for better search engine understanding")"
         recommendations.push("Optimize page loading speed for better user experience and SEO")
-}
-        return recommendations}
+}        return recommendations}
 
     const generateSummary = (pageAnalyses, topIssues) => {}
 
@@ -652,7 +635,6 @@ const;const;const totalPages = pageAnalyses.length
 """
 """"
             summary += "${excellentPages} pages have excellent SEO. "}
-
         if (goodPages > 0) {}
 
             summary += "${goodPages} pages have good SEO. "}
@@ -1063,11 +1045,9 @@ const;const;const totalPages = pageAnalyses.length
               Export,
         </div>)}
 
-export default SEOOptimizer
-export { SEOOptimizer }
-
+export default SEOOptimizerexport { SEOOptimizer }
+;
 export { SEOOptimizer }
 
 "
- const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback }  from "react,""
-;"
+ const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback }  from "react,"";"

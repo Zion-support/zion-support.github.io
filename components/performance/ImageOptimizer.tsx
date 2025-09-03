@@ -65,7 +65,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   style,
   onLoad,
   onError,
-onError,
 }) => {
   const [hasError, setHasError] = useState(false)
 }
@@ -74,19 +73,15 @@ onError,
     "data: image/jpeg,base64, /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
 "
   // comment
-  const defaultBlurDataURL = "data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-    onLoad?.()}
+  const defaultBlurDataURL = "data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="    onLoad?.()}
 
     onError?.()}
 
-  // comment
-  // comment
   // comment
 if (priority || !imgRef.current) return
       entries = > {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // comment
             // comment
             observer.unobserve(entry.target)}
 
@@ -106,11 +101,10 @@ rootMargin: "50px 0px",
         threshold: 0.1}
 
     )
-}
-        threshold: 0.1}
-
-    return () => {
-      if (imgRef.current) {
+}        threshold: 0.1}
+;
+    return () => {;
+      if (imgRef.current) {;
         observer.unobserve(imgRef.current)}
 
     }}, [priority])
@@ -194,5 +188,4 @@ export default ImageOptimizer;"
           className="absolute inset-0 bg-gray-200 animate-pulse""
           aria-hidden="true" />)}
 
-"
-export default ImageOptimizer;"""
+"export default ImageOptimizer;"""

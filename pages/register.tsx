@@ -4,8 +4,7 @@ const Head = dynamic(() => import("next/head"), { ssr: false })
 }
   Zap,
   Star} from "lucide-react"
-
-export default function Register() {
+export default function Register() {;
 
   const [formData, setFormData] = useState({"
     firstName: "","
@@ -42,7 +41,6 @@ await new Promise(resolve => setTimeout(resolve, 2000))
 }
     setIsRegistered(true)
 }
-  }
 
   const benefits = []
 
@@ -102,8 +100,32 @@ initial="{{" scale: 0 }}"
             </div>
           </motion.div>
         </div>
-      </>
-    )}
+      </>    )}
+;
+  return (;
+    <>;
+<Head>;
+        <title>Create Account - Zion Tech Group</title>";
+        <meta name = "description" content="Create your account to access our platform, services, and expert network." />;
+      </Head>;
+";
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">;
+        {/*   */}";
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">";
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,;
+            <motion.div,";
+initial="{{" opacity: 0, y: 20 }}";
+              animate="{{" opacity: 1, y: 0 }}";
+              className="text-center";
+            >";
+              <h1 className="text-4xl md: text-5xl font-bold mb-6">;
+                Join Zion Tech Group,;
+              </h1>";
+              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">,;
+                Create your account to access our platform, connect with experts, and explore our technology solutions.;
+              </p>;
+            </motion.div>;
+          </div>;
 
   return (
     <>
@@ -129,7 +151,6 @@ initial="{{" opacity: 0, y: 20 }}"
               </p>
             </motion.div>
           </div>
-        </div>
         {/* comment */}"
         <div className="py-16 bg-white">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
@@ -166,8 +187,6 @@ key="{index}""
               ))}
 
             </div>
-          </div>
-        </div>
         {/* comment */}"
         <div className="py-16">"
           <div className="max-w-2xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -202,7 +221,6 @@ value="{formData.firstName}""
                         className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
                         placeholder="Your first name" />
                     </div>
-                  </div>
                   <div>"
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
                       Last Name *
@@ -218,8 +236,6 @@ value="{formData.lastName}""
                         className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
                         placeholder="Your last name" />
                     </div>
-                  </div>
-                </div>
                 <div>"
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
@@ -235,7 +251,6 @@ value="{formData.email}""
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
                       placeholder="your@email.com" />
                   </div>
-                </div>
                 <div>"
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                     Company Name,
@@ -282,7 +297,6 @@ value="{formData.password}""
 
                     </button>
                   </div>
-                </div>
                 <div>"
                   <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-2">
                     Confirm Password *
@@ -305,7 +319,6 @@ value="{formData.confirmPassword}""
 
                     </button>
                   </div>
-                </div>
 "
                 <div className="space-y-4">"
                   <div className="flex items-start">"
@@ -339,7 +352,6 @@ checked="{formData.agreeToTerms}""
                       Subscribe to our newsletter for updates and insights,
                     </label>
                   </div>
-                </div>
 "
                 <div className="text-center">"
                   <button type="submit"">
@@ -372,7 +384,5 @@ checked="{formData.agreeToTerms}""
               </div>
             </motion.div>
           </div>
-        </div>
-      </div>
     </>",
   )}

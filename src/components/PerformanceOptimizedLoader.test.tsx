@@ -9,6 +9,4 @@ export default function PerformanceOptimizedLoader.test() {return (
           Professional PerformanceOptimizedLoader.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

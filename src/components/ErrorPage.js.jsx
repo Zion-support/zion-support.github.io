@@ -12,8 +12,6 @@
             <Link to="/contact">Contact Support</Link>
           </Button>
         </div>
-      </div>
-    </div>
   )
 }
 };""
@@ -25,6 +23,4 @@ export default ErrorPage"";"""
 """"""""
   )};"
 export default ErrorPage""
-export default ErrorPage""
-""""'"
-"
+""""'""

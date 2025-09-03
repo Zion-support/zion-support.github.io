@@ -9,6 +9,4 @@ export default function enhancedServices() {return (
           Professional enhancedServices services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

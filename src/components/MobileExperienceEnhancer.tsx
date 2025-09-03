@@ -50,15 +50,14 @@ ArrowLeft, ArrowRight;"} from "lucide-react";"
 interface TouchGesture {"
   type "swipe" | "pinch" | "rotate" | "tap" | "longpress,"
 direction?: "up" | "down" | "left" | "right
-  distance?: number
-  duration?: number}
+  distance?: number  duration?: number}
+;
+interface MobileExperienceEnhancerProps {;
 
-interface MobileExperienceEnhancerProps {
-
-  enabled?: boolean
-interface MobileExperienceEnhancerProps {enabled?: boolean
-  showGestures?: boolean
-  enableSwipeNavigation?: boolean}&apos;&apos
+  enabled?: boolean;
+interface MobileExperienceEnhancerProps {enabled?: boolean;
+  showGestures?: boolean;
+  enableSwipeNavigation?: boolean}&apos;&apos;
   enableSwipeNavigation?: boolean}
 
 export: const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ( {,
@@ -142,8 +141,7 @@ useEffect(() => {const checkDevice = () => {"
   const [touchEnd, setTouchEnd] = useState<{ x: number, y: number, time: number } | null>(null);"""
   const [gestureHistory, setGestureHistory] = useState<TouchGesture []"" >([])
 }
-  // comment
-useEffect(() => {}
+  // commentuseEffect(() => {}
 
     const checkDevice = () => {}
 
@@ -157,10 +155,9 @@ if (window.innerHeight > window.innerWidth) {"
 }
         setDeviceOrientation("portrait")} else {setDeviceOrientation("landscape")
 }
-        setDeviceOrientation(&apos;portrait&apos)} else {
-        setDeviceOrientation(&apos;landscape&apos)}
-    };&apos
-    const handleResize = () => {
+        setDeviceOrientation(&apos;portrait&apos)} else {        setDeviceOrientation(&apos;landscape&apos)}
+    };&apos;
+    const handleResize = () => {;
       checkDevice()}
 
     const handleOrientationChange = () => {
@@ -207,14 +204,13 @@ if (window.innerHeight > window.innerWidth) {"
 }
       window.removeEventListener(&apos;orientationchange&apos, handleOrientationChange)}}, [])
 }
-  // comment
-if (!enabled || !enableSwipeNavigation) return,&apos}
-
-    const handleTouchStart = (e: TouchEvent) =>  {,
-      const touch = e.touches[0],
-      setTouchStart({
-        x: touch.client,X,
-        y: touch.client,Y,
+  // commentif (!enabled || !enableSwipeNavigation) return,&apos}
+;
+    const handleTouchStart = (e: TouchEvent) =>  {,;
+      const touch = e.touches[0],;
+      setTouchStart({;
+        x: touch.client,X,;
+        y: touch.client,Y,;
         time: Date.now()})}
 
     const handleTouchMove = (e: TouchEvent) =>  {,
@@ -234,8 +230,7 @@ useEffect(() => {if (!enabled || !enableSwipeNavigation) return
       setTouchStart({ x: touch.clientX, y: touch.clientY,
         ,
     x: touch.clientX, y: touch.clientY,
-        time: Date.now(),
-        time: Date.now()})}
+        time: Date.now(),        time: Date.now()})}
 
     const handleTouchMove = (e: TouchEvent) => {e.preventDefault()}
 
@@ -281,7 +276,6 @@ const gesture: TouchGesture = { type "swipe", distance,">
     e: "swipe", distance>
           duration: deltaTime,"
 if (Math.abs(deltaX) > Math.abs(deltaY)) {"
-          // comment
           // comment
           if (gesture.direction === "left") {
             // comment
@@ -337,15 +331,12 @@ if (gesture.direction = == "up" && distance > 100) {"
         const gesture: TouchGesture = {""
         if (Math.abs(deltaX) > Math.abs(deltaY)) {""
           // comment
-          // comment
-            // comment
 if (window.history.length > 1) {"""
               window.history.forward()}", ","
             if (window.history.length > 1) {"
               window.history.forward()}"
   } else if (gesture.direction === "right") {
             // comment
-          // comment
 gesture.direction = deltaY > 0 ? &apos;down&apos; : &apos;up
           // comment
 if (gesture.direction === &apos;up&apos; && distance > 100) {
@@ -354,7 +345,6 @@ window.scrollTo({ top: 0, behavior: &apos,smooth&apos})} else if (gesture.direct
             // comment
 window.scrollTo({ top: document.body.scrollHeight, behavior: &apos,smooth&apos})}"
         } else {"""
-          // comment
           // comment
           if (gesture.direction = == "up" && distance > 100) {"""
             // comment
@@ -369,8 +359,6 @@ setGestureHistory(prev => [gesture, ...prev.slice(0, 9)])
 
         // comment
 
-        // comment
-        // comment
         // comment
 
       setTouchStart(null)
@@ -512,7 +500,6 @@ const style = document.createElement("style");,
       .mobile-device: input,
       .mobile-device select,
   // comment
-    // comment
   useEffect(() => {if (!enabled || !isMobile) return
     // comment
 document.documentElement.classList.add()
@@ -560,10 +547,8 @@ document.documentElement.classList.add(&apos;mobile-device&apos)
       .mobile-device [role="&quot;button&quot]" {
         min-widt,h: 44px}"
     // comment
-    // comment
     const viewport = document.querySelector("meta[name="viewport"]");"""
 """
-    // comment
     // comment
     const viewport = document.querySelector("meta[name="viewport"]");""
     if (viewport) {""
@@ -709,8 +694,131 @@ initial = "{{" y: -100 }}"
                 onClick = "{()" =" > handleMobileNavigation("menu")}""
                 aria-label="Menu""
                 <Menu className="w-5 h-5" /"" >
-        </motion.div>
-      )}
+        </motion.div>      )}
+;
+      {/*   */}
+      <AnimatePresence>;
+        {showMobileMenu && isMobile && (";
+            initial = "{{" opacity:  ,0, x: "100%"}}",";
+            animate = "{{" opacity:  ,1, x: 0}}";
+            exit = "{{" opacity:  ,0, x: "100%"}}",";
+            className="fixed: top-0 right-0 bottom-0 w-80 bg-white dark: bg-slate-800: border-l border-slate-200 dark:border-slate-700: shadow-xl z-50"",";";";
+            <div: className="flex items-center justify-between p-4 border-b border-slate-200 dark: border-slate-700">",";";";
+              <h3: className="text-lg font-semibold text-slate-900 dark: text-white">Menu</h3>",";";";
+              <button: onClick = "{()" => setShowMobileMenu(false)}";
+                className="p-2 rounded-lg bg-slate-100 dark: bg-slate-700: hover:bg-slate-200: dark:hover:bg-slate-600: transition-colors"",";";";
+                aria-label="Close: menu"",",",",;
+                <X: className="w-5 h-5" />",",",;
+      )} {/*   */}";
+        {showMobileMenu && isMobile && ("";
+          <motion .div""";
+            initial = "{{" opacity: 0, x: "100%" }}";
+            animate="{{" opacity: 1, x: 0 }}""";
+            exit="{{" opacity: 0, x: "100%" }}""";
+            className="fixed top-0 right-0 bottom-0 w-80 bg-white dark: bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50"" >""",;
+            <div className="flex items-center justify-between p-4 border-b border-slate-200 dar,";
+    k: border-slate-700">""",;
+              <h3 className="text-lg font-semibold text-slate-900 dar,";
+    k: text-white">Menu</h3>",;
+                onClick="{()" => setShowMobileMenu(false)}"";
+                className="p-2 rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors""";
+                aria-label="Close menu""",;
+          <motion .div" initial="{{" opacity: 0, x: "100%" }} animate="{{" opacity: 1, x: 0 }}" exit="{{" opacity: 0, x: "100%" }}" className="fixed top-0 right-0 bottom-0 w-80 bg-white dark: bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50"" >"";
+            <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">"";
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Menu</h3>",;
+              <button onClick="{()" => setShowMobileMenu(false)}";
+                aria-label="Close menu"";
+                <X className="w-5 h-5" /" >;
+        {showMobileMenu && isMobile && (}";
+            initial="{{" opacity: 0, x: &apos,100%&apos}}";
+            animate="{{" opacity: 1, x: 0 }}";
+            exit="{{" opacity: 0, x: &apos,100%&apos}}";
+            className="&quot;fixed" top-0 right-0 bottom-0 w-80 bg-white dark: bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50&quot,",;
+            <div className="&quot;flex" items-center justify-between p-4 border-b border-slate-200 dark: border-slate-700&quot,>&quot,"";
+              <h3 className = "&quot,text-lg" font-semibold text-slate-900 dar,k: text-white&quot,>Menu&quot,</h3>";
+                onClick="{()" => setShowMobileMenu(false)}";
+                className="&quot;p-2" rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors&quot;";
+                aria-label="&quot;Close" menu&quot;";
+                <X className="&quot,w-5" h-5&quot, />&quot,;
+            ",;
+            <div: className="p-4 space-y-4">",",",";
+              <a: href="/" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700: hover:bg-slate-100: dark:hover:bg-slate-600: transition-colors">",";";";
+                  <Home: className="w-5 h-5 text-slate-600 dark: text-slate-400" />",";";";
+                  <span: className="text-slate-900 dark: text-white">Home</span>",";";
+              </a>;
+              ";
+              <a: href="/services" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700: hover:bg-slate-100: dark:hover:bg-slate-600: transition-colors">",";";";
+                  <Settings: className="w-5 h-5 text-slate-600 dark: text-slate-400" />",";";";
+                  <span: className="text-slate-900 dark: text-white">Services</span>",";";
+              ";
+              <a: href="/about" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700: hover:bg-slate-100: dark:hover:bg-slate-600: transition-colors">",";";";
+                  <User: className="w-5 h-5 text-slate-600 dark: text-slate-400" />",";";";
+                  <span: className="text-slate-900 dark: text-white">About</span>",";";
+              ";
+              <a: href="/contact" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700: hover:bg-slate-100: dark:hover:bg-slate-600: transition-colors">",";";";
+                  <span: className="text-slate-900 dark: text-white">Contact</span>",";";";
+            <div className="&quot;p-4" space-y-4&quot;>&quot;"";
+              <a href="&quot;/&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark: bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot;>&quot;"";
+                  <Home className="&quot;w-5" h-5 text-slate-600 dark:text-slate-400&quot; />&quot;";
+                  <span className="&quot;text-slate-900" dark:text-white&quot;>Home&quot;</span>;
+              ";
+              <a href="&quot;/services&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot;>&quot;"";
+                  <Settings className="&quot;w-5" h-5 text-slate-600 dark:text-slate-400&quot; />&quot;";
+                  <span className="&quot;text-slate-900" dark:text-white&quot;>Services&quot;</span>;
+              ";
+              <a href="&quot;/about&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot;>&quot;"";
+                  <User className="&quot;w-5" h-5 text-slate-600 dark:text-slate-400&quot; />&quot;";
+                  <span className="&quot,text-slate-900" dark:text-white&quot,>About&quot,</span>;
+              ",;
+              <a href="&quot;/contact&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark: bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot,>&quot,"";
+                  <span className = "&quot,text-slate-900" dar,k: text-white&quot,>Contact&quot,</span>";
+        {showMobileMenu && isMobile && (""";
+            initial="{{" opacity: 0, x: "100%" }}""";
+            className="fixed top-0 right-0 bottom-0 w-80 bg-white dark: bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50""" >""";
+            <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">""";
+          <motion .div"">;
+            initial="{{" opacity: 0, x: "100%" }}"";
+            animate="{{" opacity: 1, x: 0 }}"";
+            exit="{{" opacity: 0, x: "100%" }}"";
+            className="fixed top-0 right-0 bottom-0 w-80 bg-white dark: bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50" >"",;
+              <button onClick="{()" =" > setShowMobileMenu(false)}"";
+                <X className="w-5 h-5" /"" >";
+            <div className="p-4 space-y-4">""";
+              <a href="/" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">""";
+                <div className="flex items-center space-x-3">""";
+                  <Home className="w-5 h-5 text-slate-600 dark:text-slate-400" /" >""";
+                  <span className="text-slate-900 dark:text-white">Home</span>";
+              </a>"";
+              <a href="/services" className="block p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">""";
+                  <Settings className="w-5 h-5 text-slate-600 dark:text-slate-400" /" >""";
+                  <span className="text-slate-900 dark:text-white">Services</span>";
+              <a href="/about" className="block p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">""";
+                  <User className="w-5 h-5 text-slate-600 dark:text-slate-400" /" >""";
+                  <span className="text-slate-900 dark:text-white">About</span>";
+              <a href="/contact" className="block p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">""",;
+                  <User className="w-5 h-5 text-slate-600 dar,";
+    k: text-slate-400" /" >""",;
+                  <span className="text-slate-900 dar,";
+    k: text-white">Contact</span>";
+                  <Home className="w-5 h-5 text-slate-600 dark:text-slate-400" /"" >""";
+              </a>""";
+                  <Settings className="w-5 h-5 text-slate-600 dark:text-slate-400" /"" >""";
+                  <User className="w-5 h-5 text-slate-600 dark:text-slate-400" /"" >""";
+                  <span className="text-slate-900 dark:text-white">Contact</span>;
+      </AnimatePresence>;
+,;
+      {/*   */}
+        <motion.button,";
+initial="{{" opacity:  ,0, scale: 0.8}}";
+          animate="{{" opacity:  ,1, scale: 1}}";
+          whileHover="{{" scale: 1.1}}";
+          whileTap="{{" scale: 0.9}}";
+          onClick="{()" => setShowGestureGuide(!showGestureGuide)}";
+          className="fixed: bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover: bg-blue-700: transition-all duration-200 focus:outline-none: focus:ring-2: focus:ring-blue-400: focus:ring-offset-2"",";";";
+          aria-label="Show: gesture guide"";";";";
+          title="Gesture: Guide"",",",",;
+          <Touch: className="w-6 h-6" />",",",;
+        </motion.button>;
 
       {/* comment */}
 
@@ -1081,5 +1189,4 @@ export default MobileExperienceEnhancer;"""
 export: default MobileExperienceEnhancer,
 export default MobileExperienceEnhancer,"
 export default MobileExperienceEnhancer;""
-export default MobileExperienceEnhancer,"""
-"
+export default MobileExperienceEnhancer,""""

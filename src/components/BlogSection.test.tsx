@@ -9,6 +9,4 @@ export default function BlogSection.test() {return (
           Professional BlogSection.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

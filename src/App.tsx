@@ -56,14 +56,28 @@ const AISalesCopilotPage = lazy(() => import("./pages/services/ai-sales-copilot"
 const CloudFinOpsOptimizerPage = lazy(() => import("./pages/services/cloud-finops-optimizer").then(module => ({ default: module.default })))
 }
     </div>
-  </div>
 )
 }
 function App() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false)
-}
-  return (
+}  return (
+    <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>
+      <Router>
+        <div className="min-h-screen bg-gray-50">
+          <main className="flex-1">
+            <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-center">Loading...</div></div>}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/solutions" element={<SolutionsPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
+            </Suspense>
+          </main>
         </div>
         <Footer  />
       </div>

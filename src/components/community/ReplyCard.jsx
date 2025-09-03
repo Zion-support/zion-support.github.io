@@ -62,5 +62,4 @@ import React from "react"; export default function ReplyCard({ reply, className 
             <span className="font-medium text-zion-cyan>"
               {reply.author.name}""""
             </span>""""'
-}}""
-"
+}}"""

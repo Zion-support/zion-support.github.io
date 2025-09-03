@@ -11,8 +11,6 @@ export default function Community() {return ("
           Professional Community services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

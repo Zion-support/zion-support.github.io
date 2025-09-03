@@ -52,12 +52,7 @@ unauthorized access, alteration, disclosure, or destruction.
                   <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709,
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </MainLayout>
-  )
-}
-"
+  )}
+";
 export default PrivacyPolicy

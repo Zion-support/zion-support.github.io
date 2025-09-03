@@ -15,5 +15,4 @@ describe("Webinars", () => {}; "; it("renders without crashing", () => {}; rende
 }
   });"
 "
-});"
-"
+});""

@@ -1,5 +1,5 @@
-import React from "react"
-export function SiteFooter() {
+import React from "react";
+export function SiteFooter() {;
 
   const currentYear = new Date().getFullYear()"
 
@@ -68,7 +68,6 @@ export function SiteFooter() {
               <div>364 E Main St STE 1008</div>
               <div>Middletown DE 19709</div>
             </div>
-          </div>
           {/* comment */}
 
           {navSections.map((section) => ("
@@ -111,11 +110,7 @@ export function SiteFooter() {
               ))}
 
             </div>
-          </div>
-        </div>
-      </div>
     </footer>
-  )
-}
-"
+  )}
+";
 export default SiteFooter;"

@@ -16,5 +16,4 @@ describe(&apos;AccessibilityEnhancer_BASE_15796&apos, () => {
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"
 "
-}}"
-"
+}}""

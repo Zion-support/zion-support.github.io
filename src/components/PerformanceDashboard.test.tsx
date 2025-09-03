@@ -16,5 +16,4 @@ describe(&apos;PerformanceDashboard&apos, () => {
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"
 "
-}}"
-"
+}}""

@@ -139,7 +139,6 @@ key="{index}""
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50">"
@@ -183,7 +182,6 @@ key="{index}""
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
@@ -210,7 +208,6 @@ key="{index}""
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white">"
@@ -250,5 +247,4 @@ whileHover="{{" scale: 1.05 }}"
     </>
   )}
 
-"
-export default EnhancedHome
+"export default EnhancedHome

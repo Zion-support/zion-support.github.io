@@ -9,6 +9,4 @@ export default function AccessibilityEnhancer.test() {return (
           Professional AccessibilityEnhancer.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

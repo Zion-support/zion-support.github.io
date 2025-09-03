@@ -9,6 +9,4 @@ export default function comprehensiveServicesIndex2030() {return (
           Professional comprehensiveServicesIndex2030 services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

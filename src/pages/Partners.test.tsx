@@ -15,5 +15,4 @@ describe("Partners", () => {}; "; it("renders without crashing", () => {}; rende
 }
   });"
 "
-});"
-"
+});""

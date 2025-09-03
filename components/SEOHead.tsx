@@ -1,20 +1,19 @@
 import Head from "next/head"
 import React from "react"
+interface SEOHeadProps {;
 
-interface SEOHeadProps {
-
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: string
-  publishedTime?: string
-  modifiedTime?: string
-  author?: string
-  section?: string
-  tags?: string[]
-  noindex?: boolean
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
+  noindex?: boolean;
   nofollow?: boolean}
 
 const SEOHead: React.FC<SEOHeadProps> = ({",
@@ -41,7 +40,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({",
       logo: {",
         "@type": "ImageObject","
         url: "https:// comment
-},
 },
     datePublished: publishedTime,
     dateModified: modifiedTime,
@@ -105,5 +103,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({",
     </Head>
   )
 }
-""
-export default SEOHead
+""export default SEOHead

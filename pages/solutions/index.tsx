@@ -2,8 +2,7 @@ import Head from "next/head"
 import React from "react"
   Lightbulb,
   TrendingUp} from "lucide-react"
-
-export default function Solutions() {
+export default function Solutions() {;
 
   const solutions = [],"
       pricing: "Starting at $299/month"},
@@ -76,7 +75,6 @@ export default function Solutions() {
               View All Services,
             </Link>
           </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -171,8 +169,6 @@ export default function Solutions() {
                 Schedule Demo,
               </Button>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -199,7 +195,6 @@ your specific business needs and challenges.
                     <h3 className="text-xl font-semibold text-gray-900">{solution.title}</h3>"
                     <p className="text-sm text-blue-600 font-medium">{solution.pricing}</p>
                   </div>
-                </div>
                 "
                 <p className="text-gray-600 mb-4">{solution.description}</p>
                 "
@@ -227,7 +222,6 @@ your specific business needs and challenges.
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-white">"
@@ -324,8 +318,6 @@ your specific business needs and challenges.
                 <li>• Data Analytics</li>
               </ul>
             </div>
-          </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gray-50">"
@@ -377,8 +369,6 @@ your specific business needs and challenges.
                 Continuous support, monitoring, and optimization for long-term success.
               </p>
             </div>
-          </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-white">"
@@ -443,7 +433,6 @@ your specific business needs and challenges.
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gray-900 text-white">"
@@ -477,7 +466,6 @@ your specific business needs and challenges.
               </Button>
             </Link>
           </div>
-        </div>
       </section>
     </>",
   )}

@@ -14,7 +14,6 @@ export default function UltimateServicesShowcase2026() {return (
           Professional UltimateServicesShowcase2026 services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
  export default UltimateServicesShowcase2026,
@@ -39,10 +38,7 @@ const UltimateServicesShowcase2026: React.FC = () => {
               Get Started,
             </a>
           </div>
-        </div>
-      </div>
     </div>;,
   )}
 
-export default UltimateServicesShowcase2026;"
-"
+export default UltimateServicesShowcase2026;""

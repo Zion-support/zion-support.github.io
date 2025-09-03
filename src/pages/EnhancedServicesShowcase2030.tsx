@@ -2,5 +2,4 @@ import React { useState } from "react" Filter, Star, ArrowRight, ChevronDown, Br
 }""""
 }"react&apos;framer-motion&apos;react-router-dom&apos;lucide-react&apos;../data/enhancedInnovativeServices2030&apos;../data/specializedMicroSaasServices2030&apos;../data/comprehensivePricingGuide2030&apos;../components/SEO&apos;&apos,  const EnhancedServicesShowcase2030: React.FC = () => {} const [activeCategory, setActiveCategory] = useState(&apos;all&apos)&apos, const [searchTerm, setSearchTerm] = useState(&apos;&apos)&apos;&apos; const [sortBy, setSortBy] = useState(&apos;rating&apos)&apos, const [viewMode, setViewMode] = useState<;<&apos;grid&apos; | &apos;list&apos;>(&apos;grid&apos)&apos, const [selectedService, setSelectedService] = useState<any>(null) const;const;const [showModal, setShowModal] = useState(false) ;"",""
 """const EnhancedServicesShowcase2030: React.FC = () => { const [activeCategory, setActiveCategory] = useState("all") const [searchTerm, setSearchTerm] = useState("") const [sortBy, setSortBy] = useState("rating") const [viewMode, setViewMode] = useState<"grid" | "list">("grid') const [selectedService, setSelectedService] = useState<>(null) const [showModal, setShowModal] = useState(false) ;"}"
-""
-"
+"""

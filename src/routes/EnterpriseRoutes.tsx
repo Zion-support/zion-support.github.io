@@ -8,6 +8,5 @@ export default function Enterpriseroutes() {
           This is a placeholder component for enterpriseroutes.
         </p>
       </div>
-    </div>
   )
 }

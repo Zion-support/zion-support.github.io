@@ -15,5 +15,4 @@ describe("Leadership", () => {}; "; it("renders without crashing", () => {}; ren
 }
   });"
 "
-});"
-"
+});""

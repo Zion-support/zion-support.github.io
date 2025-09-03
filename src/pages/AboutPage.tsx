@@ -11,8 +11,6 @@ export default function AboutPage() {return ("
           Professional AboutPage services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

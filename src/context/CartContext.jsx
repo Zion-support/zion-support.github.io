@@ -51,8 +51,7 @@ export function CartProvider({ children }) {
 }
         if (stored) {
             try {
-                items = JSON.parse(stored)} catch {
-                items = []}
+                items = JSON.parse(stored)} catch {                items = []}
 
         }
 
@@ -83,5 +82,4 @@ if (user?.id) {
 
 "
     return <CartContext .Provider value={value}" >{children}</CartContext.Provider>;,"
-}"
-"""
+}""""

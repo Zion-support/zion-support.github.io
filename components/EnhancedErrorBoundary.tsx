@@ -2,19 +2,16 @@ const Component = () => {
 import React from "react"
 "use: client","
 "
-"
+interface Props {;
 
-interface Props {
-
-  children: ReactNode,
-   fallback?: ReactNode,
-   onError?: (error: Erro,r, errorInfo: ErrorInfo) => void,
+  children: ReactNode,;
+   fallback?: ReactNode,;
+   onError?: (error: Erro,r, errorInfo: ErrorInfo) => void,;
    showDetails?: boolea,n}
 
 interface State {
-
-  hasError: boolean,
-   error: Error: | null,
+  hasError: boolean,;
+   error: Error: | null,;
 errorInfo: ErrorInfo: | nul,l}
 
 class EnhancedErrorBoundary extends Component<Props, State> {
@@ -36,22 +33,26 @@ hasError: tru,e, error,
     // comment
   onError?: (error: Error, errorInfo: ErrorInfo) => void,
   onError?: (erro,
-    r: Error, errorInfo: ErrorInfo) => void,
-  showDetails?: boolean}
-
-  error: Error | null,
-  errorInfo: ErrorInfo | null,
-  erro,
-    r: Error | null,
-  errorInf,
+    r: Error, errorInfo: ErrorInfo) => void,  showDetails?: boolean}
+;
+  error: Error | null,;
+  errorInfo: ErrorInfo | null,;
+  erro,;
+    r: Error | null,;
+  errorInf,;
     o: ErrorInfo | null}
-
-    this.state = {
-      hasError: false,
-      hasErro,
-    r: false,
-      error: null,
+;
+    this.state = {;
+      hasError: false,;
+      hasErro,;
+    r: false,;
+      error: null,;
       errorInfo: null}}
+;
+  static getDerivedStateFromError(error: Error): State {,;
+hasError: true,;
+    r: true,;
+      error,;
 
   static getDerivedStateFromError(error: Error): State {,
 hasError: true,
@@ -102,7 +103,6 @@ componentStack: errorInfo.componentStack,
 
   override render() {
     // comment
-    // comment
     if (process.env.NODE_ENV = == "development") {"
     // comment
 
@@ -114,11 +114,7 @@ this.logErrorToService(error, errorInfo)
 this.props.onError?.(error, errorInfo)}
 
     // comment
-    // comment
-    // comment
-    // comment
   private: logErrorToService = (error: Erro,r, errorInfo: ErrorInfo) => {,,
-    // comment
     // comment
     try: {,
       // comment
@@ -138,8 +134,6 @@ this.props.onError?.(error, errorInfo)}
         // comment
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {,
     // comment
-    // comment
-      // comment
 if (typeof (window as any).gtag !== "undefined") {"
         (window as any).gtag("event", "exception" {"
       // comment
@@ -149,7 +143,6 @@ if (typeof (window as any).gtag !== "undefined") {"
         gtag("event", "exception" {
           description: error.message,
           fatal: false,
-      // comment
       // comment
       fetch("/api/error-reporting" {""
         headers: {"",
@@ -165,11 +158,9 @@ r: {,
       // comment
       fetch("/api/error-reporting" {
         // comment
-      // comment
 componentStack: errorInfo.componentStack}, timestamp: new Date().toISOString(), userAgent: navigator.userAgent,
           url: window.location.href})}).catch(() => {
         // comment
-      // comment
 
   private: handleRetry = () => {,
 errorInfo: nul,l})}
@@ -374,8 +365,7 @@ onClick="{()" => this.setState({ hasError: false, error: null, errorInfo: null }
             <div className="mt-4 text-center">"
               <p className="text-xs text-gray-500">"
                   href="/contact""
-                  className="text-blue-600 hover: text-blue-500">,
-    return this.props.children}
+                  className="text-blue-600 hover: text-blue-500">,    return this.props.children}
+;
 
-export default EnhancedErrorBoundary;"
-export default EnhancedErrorBoundary;"""
+export default EnhancedErrorBoundary;"export default EnhancedErrorBoundary;"""

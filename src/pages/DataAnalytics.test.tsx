@@ -15,5 +15,4 @@ describe("DataAnalytics", () => {}; "; it("renders without crashing", () => {}; 
 }
   });"
 "
-});"
-"
+});""

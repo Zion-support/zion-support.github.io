@@ -11,8 +11,6 @@ export default function ITServices() {return ("
           Professional ITServices services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

@@ -90,18 +90,16 @@ export default function ProductCard(  {product, onBuy, buyDisabled = false }) {c
             )}
 
           </div>
-        </div>
-      </div>
-    </div>)}
-
+      </div>    </div>)}
+;
 export { ProductCard }
-
+;
 export { ProductCard }
-
+;
 export { ProductCard }
-
+;
 export { ProductCard }
-
+;
 export { ProductCard }
 
 "
@@ -120,5 +118,4 @@ export { ProductCard }
       </Button>
     </div>
   )}"
-"`""
-"
+"`"""

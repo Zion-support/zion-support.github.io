@@ -4,8 +4,7 @@ const Head = dynamic(() => import("next/head"), { ssr: false })
 }
   Zap,
   Star} from "lucide-react"
-
-export default function Login() {
+export default function Login() {;
 
   const [formData, setFormData] = useState({"
     email: "","
@@ -60,7 +59,6 @@ initial="{{" opacity: 0, y: 20 }}"
               </p>
             </motion.div>
           </div>
-        </div>
         {/* comment */}"
         <div className="py-16 bg-white">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
@@ -97,8 +95,6 @@ key="{index}""
               ))}
 
             </div>
-          </div>
-        </div>
         {/* comment */}"
         <div className="py-16">"
           <div className="max-w-md mx-auto px-4 sm: px-6 lg:px-8">,
@@ -138,7 +134,6 @@ value="{formData.email}""
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
                       placeholder="your@email.com"  />
                   </div>
-                </div>
                 <div>"
                   <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
                     Password,
@@ -161,7 +156,6 @@ value="{formData.password}""
 
                     </button>
                   </div>
-                </div>
 "
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center">"
@@ -207,7 +201,5 @@ value="{formData.password}""
               </div>
             </motion.div>
           </div>
-        </div>
-      </div>
     </>",
   )}

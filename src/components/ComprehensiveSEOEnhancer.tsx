@@ -11,8 +11,6 @@ export default function ComprehensiveSEOEnhancer() {return ("
           Professional ComprehensiveSEOEnhancer services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

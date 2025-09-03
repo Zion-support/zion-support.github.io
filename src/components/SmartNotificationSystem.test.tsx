@@ -9,6 +9,4 @@ export default function SmartNotificationSystem.test() {return (
           Professional SmartNotificationSystem.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

@@ -17,8 +17,6 @@ import React, { useState } from "react";""";,"});,"})","});,"})","})"
 ;,"});,"})"
 // comment
 ;,"});,"})"
-;,"});,"})"
-;,"});,"})"
 const serviceCategories = [];,"});,"})"
   {}"});,"})"
 ";,"});,"})"
@@ -61,7 +59,6 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
         staggerChildren: 0.1,"});,"})"
         delayChildren: 0.2,"});,"});"
 }"});,"});"
-}"});,"});"
 };,"});,"})"
 ;,"});,"})"
   const itemVariants = {}"});,"})"
@@ -76,7 +73,6 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
         duration: 0.5,"""";,"});,"})"
         ease: "easeOut""","});,"});"
 }"});,"});"
-}"});,"});"
 };,"});,"})"
 ;,"});,"})"
   const cardVariants = {}"});,"})"
@@ -90,7 +86,6 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
 """;,"});,"})"
         duration: 0.4,"""";,"});,"})"
         ease: "easeOut""","});,"});"
-}"});,"});"
 }"});,"});"
 };,"});,"})"
 """;,"});,"})"
@@ -143,7 +138,6 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
                 364 E Main St STE 1008 Middletown DE 19709,"});,"})"
               </p>;,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
         </motion.div>;,"});,"})"
         {/* comment */}""";,"});,"})"
         <motion.div """";,"});,"})"
@@ -232,7 +226,6 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
                     <span className="text-white text-sm">{service.rating}</span>"""";,"});,"})"
                     <span className="text-zion-cyan-light text-sm">({service.reviews})</span>;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
 """;,"});,"})"
                 {/* comment */}"""";,"});,"})"
                 <div className="mb-4">"""";,"});,"})"
@@ -250,7 +243,6 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
                         +{service.features.length-3} more,"});,"})"
                       </span>) }"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
 """;,"});,"})"
                 {/* comment */}"""";,"});,"})"
                 <div className="mb-4 p-3 bg-zion-slate/30 rounded-lg">"""";,"});,"})"
@@ -262,7 +254,6 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
                     <span className="text-zion-cyan-light">Growth Rate: </span>"""","});,"})"
                     <span className="text-green-400 font-medium">{service.growthRate}</span>;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
 """;,"});,"})"
                 {/* comment */}"""";,"});,"})"
                 <div className="flex items-center justify-between">;,"});,"})"
@@ -276,7 +267,6 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
                   <div className="text-xs text-zion-cyan-light">;,"});,"})"
                     {service.trialDays} day trial,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
               </motion.div>;,"});,"})"
             </motion.div>) ) }"});,"})"
         </motion.div>;,"});,"})"
@@ -318,7 +308,6 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
                 Call Now: +1 302 464 0950,"});,"})"
               </a>;,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
         </motion.div>;,"});,"})"
       </div>;,"});,"})"
       {/* comment */}"});,"})"
@@ -402,7 +391,6 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
                     <h4 className="text-lg font-semibold text-white mb-2">ROI</h4>"""";,"});,"})"
                     <p className="text-zion-cyan-light text-sm">{selectedService.roi}</p>;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
               </div>""";,"});,"})"
 """";,"});,"})"
               <div className="mt-8 pt-6 border-t border-zion-cyan/20">"""";,"});,"})"
@@ -420,7 +408,6 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
                     Call for Consultation,"});,"})"
                   </a>;,"});,"})"
                 </div>;,"});,"})"
-              </div>;,"});,"})"
             </motion.div>;,"});,"})"
           </motion.div>) }"});,"})"
       </AnimatePresence>;,"});,"})"
@@ -431,8 +418,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
   const [selectedCategory, setSelectedCategory] = useState()
 }
   const [selectedService, setSelectedService] = useState()
-}
-  const containerVariants = {}
+}  const containerVariants = {}
 
     hidden: { opacity: 0 }, visible: {}
 
@@ -443,7 +429,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
     }
 
   }
-
+;
   const itemVariants = {}
 
   hidden: { y: 20, opacity: 0}, visible: {}"
@@ -451,11 +437,10 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
 """""
         duration: 0.5,"""""
         ease: "easeOut"""}
-
     }
 
   }
-
+;
   const cardVariants = {}
 
   hidden: { scale: 0.95, opacity: 0}, visible: {}"
@@ -471,8 +456,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"",
         {/* comment */}"""""
         <motion .div """"
-          className="text-center mb-16"
-          initial = {}
+          className="text-center mb-16"          initial = {}
 
   { opacity: 0, y: 30}}
 
@@ -503,7 +487,6 @@ designed to transform your business and drive exponential growth."
                 <Award className="w-5 h-5 text-zion-cyan" /" >"""""
                 <span className="text-white">Proven Results</span>""
               </div>"""""
-            </div>"""""
             <div className="mt-4 text-center">""""
               <p className="text-zion-cyan-light">""
                 <strong>Contact:</strong> +1 302 464 0950 | kleber@ziontechgroup.com"""""
@@ -516,8 +499,7 @@ designed to transform your business and drive exponential growth."
         </motion.div>"",
         {/* comment */}"""""
         <motion .div """"
-          className="flex flex-wrap justify-center gap-4 mb-12"
-          initial = {}
+          className="flex flex-wrap justify-center gap-4 mb-12"          initial = {}
 
   { opacity: 0, y: 20}}
 
@@ -641,14 +623,12 @@ designed to transform your business and drive exponential growth."
                   <div className="text-xs text-zion-cyan-light">,
                     {service.trialDays} day trial,
                   </div>
-                </div>
               </motion.div>
             </motion.div>) ) }"
         </motion.div>""
         {/* comment */}"""""
         <motion .div """"
-          className="text-center mt-16"
-          initial = {}
+          className="text-center mt-16"          initial = {}
 
   { opacity: 0, y: 30}}
 
@@ -679,7 +659,6 @@ designed to transform your business and drive exponential growth."
                 Call Now: +1 302 464 0950,
               </a>
             </div>
-          </div>
         </motion.div>
       </div>,
       {/* comment */}"
@@ -693,8 +672,7 @@ designed to transform your business and drive exponential growth."
             onClick="{" () =" > setSelectedService (null) }"
           >"""""
             <motion .div""""
-              className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              initial = {}
+              className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"              initial = {}
 
   { scale: 0.9, opacity: 0}}
 
@@ -777,7 +755,6 @@ designed to transform your business and drive exponential growth."
                     Call for Consultation,
                   </a>
                 </div>
-              </div>
             </motion.div>,
           </motion.div>) }
 

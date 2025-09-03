@@ -9,6 +9,4 @@ export default function Sidebar.test() {return (
           Professional Sidebar.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

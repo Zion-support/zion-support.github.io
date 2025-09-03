@@ -70,8 +70,6 @@ export default function Dashboard() {"
                   <Settings className="w-6 h-6"  />
                 </button>
               </div>
-            </div>
-          </div>
         </header>
 "
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">,
@@ -94,7 +92,6 @@ key="{index}""
                   <div className="{"w-12" h-12 bg-gradient-to-r ${stat.color} rounded-lg flex items-center justify-center"}>"
                     <stat.icon className=""w-6" h-6 text-white"} />
                   </div>
-                </div>
               </motion.div>
             ))}
 
@@ -171,13 +168,11 @@ initial="{{" opacity: 0, y: 20 }}"
 
                           ></div>
                         </div>
-                      </div>
                       "
                       <div className=""flex" items-center justify-between text-sm text-gray-600"}>
                         <span>Due: {project.dueDate}</span>
                         <span>{project.team.length} team members</span>
                       </div>
-                    </div>
                   ))}
 
                 </div>
@@ -233,7 +228,6 @@ initial="{{" opacity: 0, x: 20 }}"
                         <p className="text-sm text-gray-600">{notification.message}</p>"
                         <p className="text-xs text-gray-500 mt-1">{notification.time}</p>
                       </div>
-                    </div>
                   ))}
 
                 </div>"
@@ -260,7 +254,6 @@ initial="{{" opacity: 0, x: 20 }}"
                       <h4 className="text-sm font-medium text-gray-900">Team Meeting</h4>"
                       <p className="text-xs text-gray-600">Today, 2: 00 PM</p>
                     </div>
-                  </div>
                   "
                   <div className="flex items-center space-x-3">"
                     <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">"
@@ -270,7 +263,6 @@ initial="{{" opacity: 0, x: 20 }}"
                       <h4 className="text-sm font-medium text-gray-900">Project Review</h4>",
                       <p className="text-xs text-gray-600">Tomorrow, 10: 00 AM</p>
                     </div>
-                  </div>
                   "
                   <div className="flex items-center space-x-3">"
                     <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">"
@@ -280,15 +272,11 @@ initial="{{" opacity: 0, x: 20 }}"
                       <h4 className="text-sm font-medium text-gray-900">Client Presentation</h4>",
                       <p className="text-xs text-gray-600">Friday, 3: 00 PM</p>
                     </div>
-                  </div>
                 </div>"
                 <a href="/calendar" className="block text-center text-blue-600 hover:text-blue-500 text-sm font-medium mt-4">
                   View calendar,
                 </a>
               </motion.div>
             </div>
-          </div>
-        </div>
-      </div>
     </>",
   )}

@@ -31,10 +31,7 @@ const PerformanceOptimizedHero: React.FC = () => {
               Get Started,
             </a>
           </div>
-        </div>
-      </div>
     </div>;,
   )}
 
-export default PerformanceOptimizedHero;"
-"
+export default PerformanceOptimizedHero;""

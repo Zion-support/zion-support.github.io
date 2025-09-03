@@ -9,6 +9,4 @@ export default function SEOOptimizer.test() {return (
           Professional SEOOptimizer.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

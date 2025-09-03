@@ -9,6 +9,4 @@ export default function AccessibilityEnhancerLOCAL15796() {return (
           Professional AccessibilityEnhancerLOCAL15796 services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

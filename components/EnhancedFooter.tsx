@@ -54,7 +54,6 @@ export default function EnhancedFooter() {
                 <div className="text-xs text-gray-400">
                   Technology Solutions,
                 </div>
-              </div>
             </div>"
             <p className="text-gray-400 mb-6 max-w-md">,
               Leading technology solutions provider specializing in AI,
@@ -83,8 +82,6 @@ digital age.
                 <MapPin className="w-4 h-4"  />,
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
-            </div>
-          </div>
           {/* comment */}
 
           <div>"
@@ -183,7 +180,6 @@ digital age.
 
             </ul>
           </div>
-        </div>
         {/* comment */}"
         <div className="border-t border-gray-800 mt-12 pt-8">"
           <div className="max-w-2xl mx-auto text-center mb-8">"
@@ -203,7 +199,6 @@ company updates.
               </button>
             </form>
           </div>
-        </div>
 ,
         {/* comment */}"
         <div className="border-t border-gray-800 pt-8">"
@@ -226,10 +221,6 @@ company updates.
                 ))}
 
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
       {/* comment */}"
       <button onClick="{scrollToTop}""
         className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50""

@@ -11,8 +11,6 @@ export default function BlogPost() {return ("
           Professional BlogPost services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

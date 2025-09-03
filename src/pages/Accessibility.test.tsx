@@ -15,5 +15,4 @@ describe("Accessibility", () => {}; "; it("renders without crashing", () => {}; 
 }
   });"
 "
-});"
-"
+});""

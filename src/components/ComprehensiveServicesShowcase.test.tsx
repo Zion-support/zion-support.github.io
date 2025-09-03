@@ -9,6 +9,4 @@ export default function ComprehensiveServicesShowcase.test() {return (
           Professional ComprehensiveServicesShowcase.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

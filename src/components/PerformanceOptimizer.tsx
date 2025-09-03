@@ -1,10 +1,9 @@
 import React from "react"
 import { useEffect } from "react"
 interface PerformanceOptimizerProps {
-
   children: React.ReactNode}
-
-export default function Page() {
+;
+export default function Page() {;
 
 interface PerformanceOptimizerProps { children: React.ReactNode}
 
@@ -225,5 +224,4 @@ target.style.backgroundImage = "url (${target.dataset.src}) "              targe
 target.style.backgroundImage = "url (${target.dataset.src}) "              target.removeAttribute ("data - src") "              observer.unobserve (target) "            }"}"
   })} { rootMargin: "50px" }") ";// comment
   return <>{children}</>}""""
-"`""
-"
+"`"""

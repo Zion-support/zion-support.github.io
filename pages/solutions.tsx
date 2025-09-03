@@ -8,8 +8,7 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
 }
   MessageSquare,
   FileText} from "lucide-react"
-
-export default function Solutions() {
+export default function Solutions() {;
 
   const solutions = [],"
       color: "blue"},
@@ -149,7 +148,6 @@ your operations.
 solutions that drive growth, efficiency, and innovation.
               </p>
             </div>
-          </div>
         </section>
 "
         {/* comment */}""
@@ -195,7 +193,6 @@ of different business types and sizes.
                   ""
                   <p className="text-gray-600 mb-6">{solution.description}</p>"
                   "
-"
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {solutions.map((solution, index) => ("
                 <div key="{index}""
@@ -236,7 +233,6 @@ of different business types and sizes.
               ))}
 
             </div>
-          </div>
         </section>
 "
         {/* comment */}""
@@ -340,7 +336,6 @@ and competitive advantage.
               ))}
 
             </div>
-          </div>
         </section>
 "
         {/* comment */}""
@@ -422,8 +417,6 @@ succeed."
                   <ArrowRight className="w-4 h-4 ml-2"  />
                 </Link>
               </div>
-            </div>
-          </div>
         </section>
 ",
         {/* comment */}""
@@ -484,7 +477,6 @@ solution that fits your specific needs.
                 View Our Services,
               </Link>
             </div>
-          </div>
         </section>
       </div>
     </Layout>,
@@ -493,5 +485,4 @@ solution that fits your specific needs.
       </main>
     </>
   );"
-}"
-}"
+}"}"

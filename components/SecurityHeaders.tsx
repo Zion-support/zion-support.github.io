@@ -41,10 +41,9 @@ const addCSPForInlineStyles = () => {"
 
 export: default SecurityHeaders"
   "style")"      style.setAttribute("",
-  "nonce", "csp-nonce-" + Math.random().toString(36).substr(2, 9))"      document.head.appendChild(style)"    }// comment
-  return null}
-
-export default SecurityHeaders,
+  "nonce", "csp-nonce-" + Math.random().toString(36).substr(2, 9))"      document.head.appendChild(style)"    }// comment  return null}
+;
+export default SecurityHeaders,;
 return null}
 
 export default SecurityHeaders
@@ -64,7 +63,6 @@ export default SecurityHeaders
       {/* comment */}"
       <meta httpEquiv="Content-Security-Policy" "">
         content="default-src "self"; script-src "self" "unsafe-inline" "unsafe-eval"; style-src "self" "unsafe-inline"; img-src "self" data: https:, font-src "self" https:// comment
-    </Head>
-  )}
+    </Head>  )}
 
 ""

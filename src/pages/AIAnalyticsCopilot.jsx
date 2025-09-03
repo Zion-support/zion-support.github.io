@@ -20,5 +20,4 @@ e: "10x Faster Analysis", description: "Reduce analysis time from days to minute
  export default AIAnalyticsCopilot,
 export default AIAnalyticsCopilot
 "
-";"
-;"
+";";"

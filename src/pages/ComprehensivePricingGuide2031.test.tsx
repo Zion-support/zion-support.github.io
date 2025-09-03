@@ -15,5 +15,4 @@ describe("ComprehensivePricingGuide2031", () => {}; "; it("renders without crash
 }
   });"
 "
-});"
-"
+});""

@@ -15,5 +15,4 @@ describe("WhitePapers", () => {}; "; it("renders without crashing", () => {}; re
 }
   });"
 "
-});"
-"
+});""

@@ -26,4 +26,3 @@ relevance: number} export function GlobalSearch() { const [isOpen, setIsOpen] = 
 "
 ""
 "
-

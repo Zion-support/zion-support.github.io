@@ -9,6 +9,4 @@ export default function AIChatbotSystem.test() {return (
           Professional AIChatbotSystem.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

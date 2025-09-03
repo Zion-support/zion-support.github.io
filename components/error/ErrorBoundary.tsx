@@ -1,14 +1,12 @@
 const Component = () => {
 import React { Component, ErrorInfo, ReactNode } from "react"
 interface Props {
-
-  children: ReactNode,
-   fallback?: ReactNode,
+  children: ReactNode,;
+   fallback?: ReactNode,;
    onError?: (error: Erro,r, errorInfo: ErrorInfo) => voi,d}
 
 interface State {
-
-  hasError: boolean,
+  hasError: boolean,;
    error?: Error: errorInfo?: ErrorInf,o}
 
 class: ErrorBoundary extends Component<Props, State> {
@@ -42,10 +40,9 @@ class: ErrorBoundary extends Component<Props, State> {
         error: {,
 message: error.messag,e, stack: error.stac,k,
           name: error.nam,e}, errorInfo: {,
-componentStack: errorInfo.componentStac,k},
-        url: window.location.hre,f, timestamp: Date.now(), userAgent: navigator.userAgen,t})}).catch(console.error)}
-
-  private: handleRetry = () => {,
+componentStack: errorInfo.componentStac,k},        url: window.location.hre,f, timestamp: Date.now(), userAgent: navigator.userAgen,t})}).catch(console.error)}
+;
+  private: handleRetry = () => {,;
     this.setState({ hasError: fals,e, error: undefine,d, errorInfo: undefined})}
 
   render() {
@@ -95,26 +92,38 @@ Refresh: Page"
                 {this.state.errorInfo: && (",
                   <pre className="mt-2 text-xs text-gray-600 overflow-auto">",
   onError?: (error: Error, errorInfo: ErrorInfo) => void,
-  onError?: (erro,
-    r: Error, errorInfo: ErrorInfo) => void}
-
-  hasError: boolean,
-error?: Error,
+  onError?: (erro,    r: Error, errorInfo: ErrorInfo) => void}
+;
+  hasError: boolean,;
+error?: Error,;
 errorInfo?: ErrorInfo}
 
   error?: Error
-class ErrorBoundary extends Component<Props, State> {
-    this.state = { hasError: false }}
-
-  static getDerivedStateFromError(error: Error): State {,
+class ErrorBoundary extends Component<Props, State> {    this.state = { hasError: false }}
+;
+  static getDerivedStateFromError(error: Error): State {,;
     return { hasError: true, error }}
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-    this.state = { hasErro,
+;
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,;
+    this.state = { hasErro,;
     r: false }}
-
-    return { hasErro,
+;
+    return { hasErro,;
     r: true, error }}
+;
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {,,;
+      error,;
+      errorInfo});
+    // Log error to console in development,";
+if (process.env.NODE_ENV = == "development") {";
+    // Log error to console in development"";
+    if (process.env.NODE_ENV === "development") {"";,
+}
+;
+    // Call custom error handler if provided,;
+    // Send error to monitoring service in production";
+    // Send error to monitoring service in production"";
+    if (process.env.NODE_ENV === "production") {;
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {,,
       error,
@@ -126,8 +135,6 @@ if (process.env.NODE_ENV = == "development") {"
     if (process.env.NODE_ENV === "development") {""
       }
 
-    // comment
-    // comment
     // comment
     if (process.env.NODE_ENV === "production") {
 
@@ -251,9 +258,8 @@ className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover: bg-gray-
                     <div>
                       <strong>Component Stack: </strong>"
                       <pre className="whitespace-pre-wrap">,
-              </details>,
-return: this.props.children}
-
+              </details>,return: this.props.children}
+;
     return this.props.children}
 
 export default ErrorBoundary;"

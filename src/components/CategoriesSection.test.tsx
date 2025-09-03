@@ -9,6 +9,4 @@ export default function CategoriesSection.test() {return (
           Professional CategoriesSection.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

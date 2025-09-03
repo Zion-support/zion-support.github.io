@@ -15,5 +15,4 @@ describe("Equipment", () => {}; "; it("renders without crashing", () => {}; rend
 }
   });"
 "
-});"
-"
+});""

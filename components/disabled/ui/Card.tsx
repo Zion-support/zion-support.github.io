@@ -84,7 +84,6 @@ export {
   CardFooter,
   CardTitle,
   CardDescription,
-  CardContent,
-};export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+  CardContent,};export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 
 :components/disabled/ui/Card.tsx"'

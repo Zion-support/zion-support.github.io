@@ -9,6 +9,4 @@ export default function EnhancedServicesShowcase.test() {return (
           Professional EnhancedServicesShowcase.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

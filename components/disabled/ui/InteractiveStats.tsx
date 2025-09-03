@@ -1,30 +1,27 @@
 import React  from "react";interface StatItem {
-
-  label: string,
-value: string | number,
+  label: string,;
+value: string | number,;
 description?: string}
+;
+:components/ui/InteractiveStats.tsx,;
+interface StatItem {;
 
-:components/ui/InteractiveStats.tsx,
-interface StatItem {
-
-  label: string,
-  value: string | number,
+  label: string,;
+  value: string | number,;
   description?: string}
 
 interface InteractiveStatsProps {
-
-  stats: StatItem[],
+  stats: StatItem[],;
   className?: string}
 
 export default function InteractiveStats() {
-
-  return (
-    <div className="{className}">
-      {stats.map((stat, index) => ("
-        <div key="{index}""
-          className="text-center p-6 bg-white rounded-lg shadow-md"
-        >"
-          <div className="text-3xl font-bold text-blue-600 mb-2">
+  return (;
+    <div className="{className}">;
+      {stats.map((stat, index) => (";
+        <div key="{index}"";
+          className="text-center p-6 bg-white rounded-lg shadow-md";
+        >";
+          <div className="text-3xl font-bold text-blue-600 mb-2">;
             {stat.value}
 
           </div>"
@@ -44,5 +41,4 @@ export default function InteractiveStats() {
   )
 }
   )
-}
-:components/disabled/ui/InteractiveStats.tsx}"'
+}:components/disabled/ui/InteractiveStats.tsx}"'

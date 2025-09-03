@@ -9,6 +9,4 @@ export default function ProductListingCard() {return (
           Professional ProductListingCard services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

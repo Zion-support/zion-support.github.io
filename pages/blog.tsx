@@ -23,7 +23,6 @@ const Blog: NextPage = () => {
                 Stay ahead with the latest trends in AI, cloud technology, micro SaaS, and digital transformation.
               </p>
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-16 md: py-24">"
@@ -59,7 +58,6 @@ const Blog: NextPage = () => {
                           <Calendar className="w-4 h-4"  />
                           <span>{new Date(post.date).toLocaleDateString()}</span>
                         </div>
-                      </div>
                       "
                       <Link href="{"/blog/${post.id}"}" className="inline-flex items-center text-blue-600 hover: text-blue-700 font-medium">
                         Read More"
@@ -70,8 +68,6 @@ const Blog: NextPage = () => {
                 ))}
 
               </div>
-            </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-16 bg-white">"
@@ -91,10 +87,8 @@ const Blog: NextPage = () => {
                 Explore Services,
               </Link>
             </div>
-          </div>
         </section>
       </div>
     </MainLayout>;,
   ),
-"
-export default Blog
+"export default Blog

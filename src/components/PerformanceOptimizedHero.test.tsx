@@ -9,6 +9,4 @@ export default function PerformanceOptimizedHero.test() {return (
           Professional PerformanceOptimizedHero.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

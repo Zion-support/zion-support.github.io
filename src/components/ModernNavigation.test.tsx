@@ -16,5 +16,4 @@ describe(&apos;ModernNavigation&apos, () => {
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"
 "
-}}"
-"
+}}""

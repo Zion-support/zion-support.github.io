@@ -12,7 +12,6 @@ const ContentQualityDashboard = ({ className = "" }) => {,"});,"})"
         setIsLoading(true);,"});,"})"
         try {,"});,"})"
             // comment
-            // comment
             const samplePages = [],,"});,"})"
                     links["/services", "/ai-solutions", "/about", "/contact"];,"});,"});"
 },,"});,"})"
@@ -46,7 +45,6 @@ const ContentQualityDashboard = ({ className = "" }) => {}"});,"})"
     const [searchTerm, setSearchTerm] = useState();"";,"});,"})"
     const analyzeAllPages = useCallback(async () => {}"});,"})"
         try {}"});,"})"
-            // comment
             // comment
             const samplePages = [];,"});,"})"
 "";,"});,"})"
@@ -316,6 +314,4 @@ export { ContentQualityDashboard, ContentQualityDashboard };,"});,"})"
 }}}"
  const ContentQualityDashboard = ({ className = " }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (")  const [filterStatus, setFilterStatus] = useState ("all")  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {
 ""
-""
 "
-

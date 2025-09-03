@@ -241,5 +241,4 @@ className="inline-flex items-center px-6 py-3 bg-purple-600 text-white font-medi
                 <Mail className="h-5 w-5 mr-2"  />,
                 Email Us,
 export default FAQ,
-export: default FAQ,"
-;"
+export: default FAQ,";"

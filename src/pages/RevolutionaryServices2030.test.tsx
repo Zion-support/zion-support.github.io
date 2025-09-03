@@ -15,5 +15,4 @@ describe("RevolutionaryServices2030", () => {}; "; it("renders without crashing"
 }
   });"
 "
-});"
-"
+});""

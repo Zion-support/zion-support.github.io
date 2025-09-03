@@ -15,5 +15,4 @@ describe("News", () => {}; "; it("renders without crashing", () => {}; render(<N
 }
   });"
 "
-});"
-"
+});""

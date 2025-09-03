@@ -9,6 +9,4 @@ export default function ServiceWorker.test() {return (
           Professional ServiceWorker.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

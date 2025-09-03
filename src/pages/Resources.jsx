@@ -1,4 +1,3 @@
 import React from "react")
 }
-'
-export default ComponentName;"
+'export default ComponentName;"

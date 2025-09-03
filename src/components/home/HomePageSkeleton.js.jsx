@@ -24,10 +24,7 @@ const HomePageSkeletonJs = () => {
               Get Started,
             </a>
           </div>
-        </div>
-      </div>
     </div>;,
   )}
 
-export default HomePageSkeletonJs;"
-"
+export default HomePageSkeletonJs;""

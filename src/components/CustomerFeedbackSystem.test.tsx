@@ -9,6 +9,4 @@ export default function CustomerFeedbackSystem.test() {return (
           Professional CustomerFeedbackSystem.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

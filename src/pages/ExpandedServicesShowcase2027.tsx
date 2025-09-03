@@ -11,8 +11,6 @@ export default function ExpandedServicesShowcase2027() {return ("
           Professional ExpandedServicesShowcase2027 services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

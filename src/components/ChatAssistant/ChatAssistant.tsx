@@ -9,6 +9,4 @@ export default function ChatAssistant() {return (
           Professional ChatAssistant services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

@@ -2,8 +2,7 @@ import Head from "next/head"
 import React from "react"
   Aperture,
   Clock} from "lucide-react"
-
-export default function EmailAutomation() {
+export default function EmailAutomation() {;
 
   const features = []
 
@@ -75,8 +74,6 @@ export default function EmailAutomation() {
                 Schedule Demo,
               </Button>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -105,7 +102,6 @@ export default function EmailAutomation() {
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-white">"
@@ -138,7 +134,6 @@ export default function EmailAutomation() {
                     <span className="text-4xl font-bold text-gray-900">{plan.price}</span>"
                     <span className="text-gray-600 ml-1">{plan.period}</span>
                   </div>
-                </div>
 "
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => ("
@@ -160,7 +155,6 @@ export default function EmailAutomation() {
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className=""py-20" bg-gradient-to-r from-blue-600 to-purple-600 text-white"}>"
@@ -183,7 +177,6 @@ to increase engagement and drive conversions.
               </Button>
             </Link>
           </div>
-        </div>
       </section>
     </>",
   )}

@@ -6,8 +6,7 @@ const Head = dynamic(() => import("next/head"), { ssr: false })
 }
   ArrowRight,
   CheckCircle} from "lucide-react"
-
-export default function IoTSolutions() {
+export default function IoTSolutions() {;
 
   const features = []
   const benefits = []
@@ -37,7 +36,6 @@ export default function IoTSolutions() {
 Internet of Things solutions and smart device integration.
               </p>
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white">"
@@ -66,7 +64,6 @@ Internet of Things solutions and smart device integration.
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50">"
@@ -91,7 +88,6 @@ Internet of Things solutions and smart device integration.
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white">"
@@ -117,7 +113,6 @@ Internet of Things solutions and smart device integration.
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
@@ -142,7 +137,6 @@ and drive growth."
                 View All Services,
               </a>
             </div>
-          </div>
         </section>
       </main>
       <Footer  />

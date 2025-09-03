@@ -16,5 +16,4 @@ describe(&apos;EnhancedNewsletterForm&apos, () => {
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"
 "
-}}"
-"
+}}""

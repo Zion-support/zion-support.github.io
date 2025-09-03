@@ -77,7 +77,6 @@ initial="{{" opacity: 0, y: 10, scale: 0.95 }}"
                                 ))}
 
                               </div>
-                            </div>
                           </motion.div>
                         )}
 
@@ -96,7 +95,6 @@ initial="{{" opacity: 0, y: 10, scale: 0.95 }}"
               ))}
 
             </div>
-          </div>
           {/* comment */}"
           <div className="hidden md: block">"
             <Link href="/contact""
@@ -115,8 +113,6 @@ initial="{{" opacity: 0, y: 10, scale: 0.95 }}"
 
             </button>
           </div>
-        </div>
-      </div>
       {/* comment */}
 
       <AnimatePresence>
@@ -189,13 +185,11 @@ initial="{{" opacity: 0, height: 0 }}"
                   Get Started,
                 </Link>
               </div>
-            </div>
           </motion.div>
         )}
 
       </AnimatePresence>
     </nav>
-  )
-}
-"
+  )}
+";
 export default Navigation;"

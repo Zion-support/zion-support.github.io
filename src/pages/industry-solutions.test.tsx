@@ -15,5 +15,4 @@ describe("industry - solutions", () => {}; "; it("renders without crashing", () 
 }
   });"
 "
-});"
-"
+});""

@@ -76,8 +76,6 @@ const Demo = () => {"
                   Schedule Live Demo,
                 </Link>
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -144,9 +142,6 @@ const Demo = () => {"
                     Request Custom Demo,
                   </Link>
                 </div>
-              </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -173,11 +168,9 @@ const Demo = () => {"
                     <p className="font-semibold text-gray-900">{testimonial.name}</p>"
                     <p className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</p>
                   </div>
-                </div>
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section id="schedule" className="py-20 bg-white">"
@@ -222,14 +215,10 @@ const Demo = () => {"
                     <ArrowRight className="w-4 h-4 ml-2"  />
                   </Link>
                 </div>
-              </div>
-            </div>
-          </div>
         </section>
       </main>
       <Footer  />
     </>,
   )}
 
-"
-export default Demo
+"export default Demo

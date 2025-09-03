@@ -393,8 +393,6 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
                         <div className="text-sm text-zion-slate-light">;,"});,"})"
                           {rec.service.duration}"});,"})"
                         </div>;,"});,"})"
-                      </div>;,"});,"})"
-                    </div>;,"});,"})"
                   </CardHeader>;,"});,"})"
                   """;,"});,"})"
                   <CardContent>"""";,"});,"})"
@@ -443,8 +441,6 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
                             <ArrowRight className="w-4 h-4 ml-2"  />;,"});,"})"
                           </Button>;,"});,"})"
                         </div>;,"});,"})"
-                      </div>;,"});,"})"
-                    </div>;,"});,"})"
                   </CardContent>;,"});,"})"
                 </Card>;,"});,"})"
               </motion.div>) ) }"});,"})"
@@ -482,7 +478,6 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
                   Call Now,"});,"})"
                 </Button>;,"});,"})"
               </div>;,"});,"})"
-            </div>;,"});,"})"
           </motion.div>;,"});,"})"
         </motion.div>)}"});,"})"
     </div>)};,"});,"})"
@@ -499,7 +494,6 @@ export { AdvancedServiceRecommendation };,"});,"})"
 export { AdvancedServiceRecommendation };,"});,"})"""""
 const AdvancedServiceRecommendation = () => {}"
     const [clientProfile, setClientProfile] = useState({}""
-"""
 """
 """""
         industry: "", """""
@@ -534,7 +528,6 @@ const AdvancedServiceRecommendation = () => {}"
     const mockServices = []"
         {}""
 """
-"""
 """""
             id: "ai-crm-platform", """""
             title: "AI-Powered CRM Platform","""""
@@ -567,7 +560,6 @@ const AdvancedServiceRecommendation = () => {}"
             contactInfo: "+1 302 464 0950,"""
             email: "kleber@ziontechgroup.com"}, {}""
 """
-"""
 """""
             id: "quantum-computing-service","""""
             title: "Quantum Computing as a Service", """""
@@ -599,7 +591,6 @@ const AdvancedServiceRecommendation = () => {}"
             link: "https:// comment
             contactInfo: "+1 302 464 0950,"""
             email: "kleber@ziontechgroup.com"}, {}""
-"""
 """
 """""
             id: "blockchain-supply-chain","""""
@@ -675,15 +666,13 @@ if(service.targetAudience?.some((audience) => audience.toLowerCase().includes(pr
             score += 20,
         // comment
 const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some ( (benefit) => benefit.toLowerCase () .includes(goal.toLowerCase () ) ) ) .length,
-score += (goalMatches / profile.primaryGoals.length) * 20,
-return Math.min(100, score) }
+score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, score) }
 
     const generateRecommendations = () => {}
 
         setIsAnalyzing()
 }
-        // comment
-setTimeout(() => {}
+        // commentsetTimeout(() => {}
 
             const recs = mockServices.map(service => {}
 
@@ -725,7 +714,6 @@ setTimeout(() => {}
     const getPriorityColor = (priority) => {}"
         switch (priority) {}""
 """
-"""
 """""
             case "High": return "bg-red-100 text-red-800""""
             case "Medium": return "bg-yellow-100 text-yellow-800""""
@@ -736,7 +724,6 @@ setTimeout(() => {}
 
     const getComplexityColor = (complexity) => {}"
         switch (complexity) {}""
-"""
 """
 """""
             case "Complex": return "bg-red-100 text-red-800""""
@@ -929,7 +916,6 @@ setTimeout(() => {}
                           {rec.service.duration}
 
                         </div>
-                      </div>
                     </div>"
                   </CardHeader>""
                   """""
@@ -942,8 +928,7 @@ setTimeout(() => {}
                         </h4>"""""
                         <ul className="space-y-2">"""",
                           {rec.reasoning.map((reason, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">""""
-                              <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"/" >"
-                              {reason}
+                              <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"/" >"                              {reason}
 
                             </li>) ) }
 
@@ -982,8 +967,6 @@ setTimeout(() => {}
                             <ArrowRight className = "w-4 h-4 ml-2"/" >"
                           </Button>
                         </div>
-                      </div>
-                    </div>
                   </CardContent>
                 </Card>
               </motion.div>) ) }
@@ -1019,21 +1002,17 @@ setTimeout(() => {}
                   Call Now,
                 </Button>
               </div>
-            </div>
-          </motion.div>
-        </motion.div>)}
+          </motion.div>        </motion.div>)}
 
     </div>)}
 
-export default AdvancedServiceRecommendation,
+export default AdvancedServiceRecommendation,export { AdvancedServiceRecommendation }
+;
 export { AdvancedServiceRecommendation }
-
+;
 export { AdvancedServiceRecommendation }
-
-export { AdvancedServiceRecommendation }
-
+;
 export { AdvancedServiceRecommendation }
 
 "
-export { AdvancedServiceRecommendation }"`""
-"
+export { AdvancedServiceRecommendation }"`"""

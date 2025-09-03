@@ -8,6 +8,5 @@ export default function Contentroutes() {
           This is a placeholder component for contentroutes.
         </p>
       </div>
-    </div>
   )
 }

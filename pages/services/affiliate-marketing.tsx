@@ -25,8 +25,6 @@ import type { NextPage } from "next"
                 View Pricing,
               </a></Link>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -49,7 +47,6 @@ import type { NextPage } from "next"
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gray-50">"
@@ -88,10 +85,6 @@ and performance-based marketing. Scale your reach while maintaining control.
                   <span className="font-medium">Cost Reduction</span>"
                   <span className="text-purple-600 font-bold">60%</span>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
       {/* comment */}"
       <section id="pricing" className="py-20 bg-white">"
@@ -144,7 +137,6 @@ and performance-based marketing. Scale your reach while maintaining control.
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className=""py-20" bg-gradient-to-r from-green-600 to-blue-600 text-white"}>"
@@ -161,10 +153,8 @@ and performance-based marketing. Scale your reach while maintaining control.
               Call +1 302 464 0950,
             </a></Link>
           </div>
-        </div>
       </section>
     </Layout>;,
   )}
 
-"
-export default AffiliateMarketing
+"export default AffiliateMarketing

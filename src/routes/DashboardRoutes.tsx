@@ -8,6 +8,5 @@ export default function Dashboardroutes() {
           This is a placeholder component for dashboardroutes.
         </p>
       </div>
-    </div>
   )
 }

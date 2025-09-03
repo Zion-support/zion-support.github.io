@@ -561,7 +561,6 @@ export default function AdvancedServiceRecommendation() {return ("
         else if (profile.timeline == = "Medium-term (6-12 months)" && serviceDuration <= 12)>
         else if (profile.timeline == = "Long-term (12 + months)" && serviceDuration > 12),
         // comment
-        // comment
         if()
 }
         else if (profile.technologyMaturity == = "Advanced" && ["ai", blockchain"].includes(service.category)),"
@@ -571,15 +570,13 @@ export default function AdvancedServiceRecommendation() {return ("
             score += 20
         // comment
         const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some ( (benefit) => benefit.toLowerCase () .includes(goal.toLowerCase () ) ) ) .length
-        score += (goalMatches / profile.primaryGoals.length) * 20
-        return Math.min(100, score) }
+        score += (goalMatches / profile.primaryGoals.length) * 20        return Math.min(100, score) }
 
     const generateRecommendations = () => {}
 
         setIsAnalyzing(true)
 }
-        // comment
-        setTimeout(() => {}
+        // comment        setTimeout(() => {}
 
             const recs = mockServices.map(service => {}
 
@@ -643,8 +640,7 @@ service, matchScore,
 }
             setIsAnalyzing(false)
 }
-            setShowResults(true) }, 2000) }&apos;&apos
-    const getPriorityColor = (priority) => {}
+            setShowResults(true) }, 2000) }&apos;&apos    const getPriorityColor = (priority) => {}
 
         switch (priority) {}
 
@@ -656,8 +652,7 @@ service, matchScore,
             case &apos;Low&apos;: return &apos;bg-green-100 text-green-800&apos
             default: return &apos,bg-gray-100 text-gray-800&apos}
 
-    }&apos;&apos
-    const getComplexityColor = (complexity) => {}
+    }&apos;&apos    const getComplexityColor = (complexity) => {}
 
         switch (complexity) {}
 
@@ -839,7 +834,6 @@ y: 0 "",">
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>""""
           <div className="grid grid-cols-2 md: grid-cols-3 gap-2">""""{primaryGoals.map(goal => (<label key="{goal}" className="flex items-center gap-2 cursor-pointer">""""
                 <input type="checkbox" checked="{clientProfile.primaryGoals.includes(goal)}" onChange = {}
-
   (e) => {}
 
                 if(e.target.checked) {}
@@ -1132,8 +1126,7 @@ for your business needs. Contact us today for a personalized consultation.""""
                 <Button variant="outline" className="border-white text-white hover: bg-white hover:text-zion-purple" onClick = {}"
   () => window.open("tel: +13024640950", _blank")"
                   <Zap className="w-5 h-5 mr-2"  />""
-                  Call Now,
-        </motion.div>)}
+                  Call Now,        </motion.div>)}
 
     </div>)}
 
@@ -1146,5 +1139,4 @@ import { motion }  from "framer-motion,"
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from "lucide-react,
 import { Card, CardContent, CardHeader, CardTitle }  from "./ui/card,"
 import { Button }  from './ui/button,"
-""
-"
+"""

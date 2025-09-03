@@ -170,10 +170,8 @@ const EnhancedHero = () => {}"});,"})"
                   </motion.div>;,"});,"})"
                 </a>;,"});,"})"
               </motion.div>;,"});,"})"
-            </motion.div>;,"});,"})"
           </AnimatePresence>;,"});,"})"
         </div>;,"});,"})"
-      </div>;,"});,"})"
 """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">"""";,"});,"})"
@@ -194,7 +192,6 @@ const EnhancedHero = () => {}"});,"})"
             Auto-play {isAutoPlaying ? "ON" : "OFF"}"});,"})"
           </button>;,"});,"})"
         </div>;,"});,"})"
-      </div>;,"});,"})"
 """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20">""";,"});,"})"
@@ -203,7 +200,6 @@ const EnhancedHero = () => {}"});,"})"
                 ? "bg-white scale-125""""";,"});,"})"
                 : "bg-white/30 hover:bg-white/50"}"} aria-label="{"Go" to slide ${index + 1}"}/>))}"});,"})"
         </div>;,"});,"})"
-      </div>;,"});,"})"
 """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       <button onClick="{prevSlide}" className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/10 backdrop-blur-sm rounded-full hover: bg-white/20 transition-colors duration-300" aria-label="Previous slide">"""","});,"})"
@@ -219,7 +215,6 @@ const EnhancedHero = () => {}"});,"})"
         <div className="text-xs text-white/60 bg-black/20 backdrop-blur-sm px-3 py-2 rounded-lg">;,"});,"})"
           <p>Use ← → keys or click to navigate</p>;,"});,"})"
         </div>;,"});,"})"
-      </div>;,"});,"})"
     </div>)};,"});,"})"
 export default EnhancedHero,"});,"})"
 ;,"});,"})"
@@ -296,8 +291,7 @@ const EnhancedHero = () => {}
     ]
     useEffect ( () => {}
 
-        if (!isAutoPlaying) return,
-const interval = setInterval ( () => {}
+        if (!isAutoPlaying) return,const interval = setInterval ( () => {}
 
             if (isPlaying) {}
 
@@ -306,8 +300,7 @@ const interval = setInterval ( () => {}
         }, 5000)
 }
         return () => clearInterval(interval)}, [isPlaying, isAutoPlaying, heroSlides.length])
-}
-    const nextSlide = () => {}
+}    const nextSlide = () => {}
 
         setCurrentSlide((prev) => (prev + 1) % heroSlides.length) }
 
@@ -398,8 +391,7 @@ const interval = setInterval ( () => {}
   { opacity: 1, y: 0}} transition = {}""
   { duration: 0.6, delay: 0.6 """"">
 """"}} className="pt-6">""""
-                <a href="{heroSlides[currentSlide].ctaLink}" className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover: from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">,
-                  {heroSlides[currentSlide].ctaText}
+                <a href="{heroSlides[currentSlide].ctaLink}" className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover: from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">,                  {heroSlides[currentSlide].ctaText}
 
                   <motion.div animate = {}
 
@@ -411,7 +403,6 @@ const interval = setInterval ( () => {}
                   </motion.div>
                 </a>
               </motion.div>
-            </motion.div>
           </AnimatePresence>
         </div>"
       </div>""
@@ -462,32 +453,29 @@ const interval = setInterval ( () => {}
         <div className="text-xs text-white/60 bg-black/20 backdrop-blur-sm px-3 py-2 rounded-lg">
           <p>Use ← → keys or click to navigate</p>
         </div>
-      </div>
     </div>)}
 
 export default EnhancedHero
-
 export { EnhancedHero }
-
+;
 export { EnhancedHero }
-
+;
 export { EnhancedHero }
-
+;
 export { EnhancedHero }
-
+;
 export { EnhancedHero }
 
     </div>)}
 
-export default EnhancedHero,
+export default EnhancedHero,export { EnhancedHero }
+;
 export { EnhancedHero }
-
+;
 export { EnhancedHero }
-
+;
 export { EnhancedHero }
-
-export { EnhancedHero }
-
-export { EnhancedHero }"
-"`""
+;
+export { EnhancedHero }";
+"`"";
 "

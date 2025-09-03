@@ -15,5 +15,4 @@ describe("Security", () => {}; "; it("renders without crashing", () => {}; rende
 }
   });"
 "
-});"
-"
+});""

@@ -15,5 +15,4 @@ describe("Profile", () => {}; "; it("renders without crashing", () => {}; render
 }
   });"
 "
-});"
-"
+});""

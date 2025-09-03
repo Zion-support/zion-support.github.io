@@ -15,5 +15,4 @@ describe("ExpandedServicesShowcase2027", () => {}; "; it("renders without crashi
 }
   });"
 "
-});"
-"
+});""

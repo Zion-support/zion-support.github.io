@@ -64,8 +64,6 @@ import React from "react"
                 View Case Studies,
               </Link>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -99,7 +97,6 @@ that scale with your business needs.
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-white">"
@@ -131,7 +128,6 @@ that scale with your business needs.
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gradient-to-br from-gray-900 to-blue-900">"
@@ -176,9 +172,6 @@ that scale with your business needs.
                 <h3 className="text-xl font-semibold text-white mb-2">Support</h3>"
                 <p className="text-gray-300 text-sm">24/7 monitoring and expert support</p>
               </div>
-            </div>
-          </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gray-50">"
@@ -203,7 +196,6 @@ the perfect database solution for your business.
               View Pricing,
             </Link>
           </div>
-        </div>
       </section>
       <Footer  />
     </ErrorBoundary>";,

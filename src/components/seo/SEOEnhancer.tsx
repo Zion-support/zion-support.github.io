@@ -79,8 +79,7 @@ title = "Zion Tech Group - Leading Technology Solutions Provider", description =
 if (typeof document !== &apos;undefined&apos) {
       document.title = title}
 
-    // comment
-if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window) {&apos}
+    // commentif (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window) {&apos}
 
       const observer = new PerformanceObserver((list) => {}
 
@@ -101,7 +100,6 @@ if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window
 }
       observer.observe({entryTypes: ["navigation"] })
 }
-    }
 
   }, [title])
 }
@@ -300,8 +298,7 @@ export default SEOEnhancer;""
       <meta httpEquiv="&quot;X-Frame-Options&quot;" content="&quot;DENY&quot;"  />&quot;"
       <meta httpEquiv="&quot;X-XSS-Protection&quot;" content="&quot;1;" mode="block&quot;"  />&quot
     </Head>
-  )
-}
-export default SEOEnhancer,
-export default SEOEnhancer;"
+  )}
+export default SEOEnhancer,;
+export default SEOEnhancer;";
 "

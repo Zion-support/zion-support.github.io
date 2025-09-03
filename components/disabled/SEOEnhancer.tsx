@@ -1,14 +1,13 @@
 import Head from "next/head"
 import React from "react"
+interface SEOEnhancerProps {;
 
-interface SEOEnhancerProps {
-
-  title?: string
-  description?: string
-  keywords?: string
-  ogImage?: string
-  url?: string
-  type?: string
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  url?: string;
+  type?: string;
   siteName?: string}
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",
@@ -55,7 +54,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"  />"
       <link rel="manifest" href="/site.webmanifest"  />
     </Head>
-  )
-}
-"'
+  )}
+"';
 export default SEOEnhancer

@@ -138,7 +138,6 @@ const ServiceCategory = ({ category, services }) => {}"});,"})"
                     <Clock className="w-4 h-4"  />;,"});,"})"
                     <span>{service.availability}</span>;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
 """;,"});,"})"
                 {/* comment */}"""";,"});,"})"
                 <div className="flex items-center justify-between">"""";,"});,"})"
@@ -169,12 +168,10 @@ const ServiceCategory = ({ category, services }) => {}"});,"})"
                   <Globe className="w-4 h-4"  />;,"});,"})"
                   <span>{service.location}</span>;,"});,"})"
                 </div>;,"});,"})"
-              </div>;,"});,"})"
             </CardContent>;,"});,"})"
           </Card>;,"});,"})"
         ))}"});,"})"
       </div>;,"});,"})"
-    </div>;,"});,"})"
   );,"});,"});"
 };""";,"});,"})"
 const BenefitsSection = () => ("""";,"});,"})"
@@ -264,8 +261,6 @@ const BenefitsSection = () => ("""";,"});,"})"
             Trusted by thousands of businesses worldwide with proven track,"});,"})"
             records of improving efficiency and reducing costs.</p>;,"});,"})"
         </div>;,"});,"})"
-      </div>;,"});,"})"
-    </div>;,"});,"})"
   </section>;,"});,"})"
 );""";,"});,"})"
 const ContactSection = () => ("""";,"});,"})"
@@ -316,7 +311,6 @@ const ContactSection = () => ("""";,"});,"})"
               Middletown DE 19709,"});,"})"
             </p>;,"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
       </div>""";,"});,"})"
 """";,"});,"})"
       <div className="flex flex-wrap justify-center gap-4">""";,"});,"})"
@@ -347,7 +341,6 @@ const ContactSection = () => ("""";,"});,"})"
           </Button>;,"});,"})"
         </Link>;,"});,"})"
       </div>;,"});,"})"
-    </div>;,"});,"})"
   </section>;,"});,"})"
 );,"});,"})"
 export default function EnhancedServicesOverview() {}"});,"})"
@@ -382,7 +375,6 @@ export default function EnhancedServicesOverview() {}"});,"})"
             </Button>;,"});,"})"
           </Link>;,"});,"})"
         </div>;,"});,"})"
-      </div>;,"});,"})"
 """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       <div className="space-y-16">;,"});,"})"
@@ -439,8 +431,7 @@ export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverv
       "Education & Training": <GraduationCap className="w-6 h-6" /" >,"""""
       "Supply Chain & Logistics": <Truck className="w-6 h-6" /" >,"""""
       "Real Estate & Property": <Home className="w-6 h-6" /" >,""""
-      "Legal & Compliance": <Lock className="w-6 h-6" /" >}"
-    return iconMap[categoryName] || <Briefcase className="w-6 h-6" /" >}
+      "Legal & Compliance": <Lock className="w-6 h-6" /" >}"    return iconMap[categoryName] || <Briefcase className="w-6 h-6" /" >}
 
   const getCategoryColor = categoryName => {}
 
@@ -518,7 +509,6 @@ export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverv
                       <Brain className="w-4 h-4 text-zion-cyan" /" >""
                       <span>{service.aiScore}%</span>""
                     </div>"""""
-                  </div>"""""
                   <div className="flex items-center space-x-1">""""
                     <Clock className="w-4 h-4" /" >"
                     <span>{service.availability}</span>
@@ -558,7 +548,6 @@ export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverv
                   <Globe className="w-4 h-4" /" >"
                   <span>{service.location}</span>
                 </div>
-              </div>
             </CardContent>
           </Card>
         ))}
@@ -655,7 +644,6 @@ enterprise, with flexible pricing options."
             Trusted by thousands of businesses worldwide with proven track,
 records of improving efficiency and reducing costs.</p>
         </div>
-      </div>
     </div>"
   </section>""
 )"
@@ -751,7 +739,6 @@ solution for your business transformation journey.""
           </Button>
         </Link>
       </div>
-    </div>
   </section>
 )",
 export default function EnhancedServicesOverview() {}""
@@ -804,27 +791,25 @@ solutions, AI-powered services, and cutting-edge IT solutions. From""
       {/* comment */}"
       <BenefitsSection /" >"
       {/* comment */}"
-      <ContactSection /" >"
-    </div>)}
-
+      <ContactSection /" >"    </div>)}
+;
+export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview }
+;
+export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview }
+;
+export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview }
+;
+export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview }
+;
 export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview }
 
 export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview }
-
+;
 export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview }
-
+;
 export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview }
-
-export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview }
-
-export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview }
-
-export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview }
-
-export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview }
-
+;
 export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview }
 
 export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview }"
-""""
-"
+"""""

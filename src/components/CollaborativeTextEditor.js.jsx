@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from "react";,"});,"})","});,"})","});,"})"
 ;,"});,"})"
-;,"});,"})"
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = "", enableAI = true, enableCollaboration = true, enableVersioning = true, className = "", onSave, onExport }) => {;,"});,"})"
     const { trackEvent } = useAnalytics({        enableTracking: true,"});,"})"
         enableUserBehaviorTracking: true,"});,"});"
@@ -289,8 +288,6 @@ ${editorState.content}"}"});,"})"
               Save,"});,"})"
             </button>;,"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
-      </div>;,"});,"})"
 """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       <div className="flex h-96">""";,"});,"})"
@@ -308,7 +305,6 @@ ${editorState.content}"}"});,"})"
               {lastSaved && " • Last saved ${lastSaved.toLocaleTimeString()}"}"});,"})"
             </span>;,"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
 """;,"});,"})"
         {/* comment */}"""";,"});,"})"
         <div className="w-80 border-l border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">""","});,"})"
@@ -405,9 +401,6 @@ ${editorState.content}"}"});,"})"
                 Export as HTML,"});,"})"
               </button>;,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
-        </div>;,"});,"})"
-      </div>;,"});,"})"
 """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       {enableCollaboration && (<div ref="{collaborationRef}" className="absolute inset-0 pointer-events-none" style="{{" zIndex: 10 }}>;,"});,"})"
@@ -478,7 +471,6 @@ const selectedText = newContent.slice()
 if(enableCollaboration && collaboration.isConnected) {}"
             collaboration.syncTextChange({}""
 ""
-""
 """"
                 type: "text_change", content: newContent, selection: { start: selectionStart, end: selectionEnd }, version: editorState.version + 1", ",
 })}"""
@@ -492,15 +484,13 @@ const handleSelectionChange = useCallback((event) => {}
 const start = target.selectionStart,
 const end = target.selectionEnd,
 const text = target.value.slice()
-}
-        setEditorState(prev => ({}
+}        setEditorState(prev => ({}
 
             ...prev, selection: { start, end, text }
 
         }) )
 }
-        // comment
-if(enableCollaboration && collaboration.isConnected) {}
+        // commentif(enableCollaboration && collaboration.isConnected) {}
 
             collaboration.updateSelection(start, end, text)}
 
@@ -611,10 +601,8 @@ await new Promise (resolve => setTimeout (resolve, 2000) ) ""
             // comment
             trackEvent("editor", ai_suggestions_failed",generation_error", null, {}""
 """
-"""
 """""
                 error: error instanceof Error ? error.message : "Unknown error"}) }
-
         finally {}
 
             setIsProcessing(false)}
@@ -631,8 +619,7 @@ const applySuggestion = useCallback((suggestion) => {}"
 
                 // comment
 const searchText = editorState.content.slice()
-}
-                newContent = newContent.replace(searchText, suggestion.text) }
+}                newContent = newContent.replace(searchText, suggestion.text) }
 
             return {}
 
@@ -672,7 +659,6 @@ ${editorState.content}"}
             onExport(exportContent, format)}"
         else {}""
 ""
-""
 """"
             // comment
             const blob = new Blob([exportContent], { type: "text/plain" })";"""""
@@ -702,7 +688,6 @@ return {}"
         window.addEventListener("collaborationTextChange", handleCollaborationTextChange)"
         return () => {}""
 """
-"""
 """""
             window.removeEventListener("collaborationTextChange", handleCollaborationTextChange)}}, [userId, trackEvent])
 }
@@ -711,8 +696,7 @@ useEffect(() => {}
 
         if()
 }
-            return,
-const autoSaveInterval = setInterval(() => {}
+            return,const autoSaveInterval = setInterval(() => {}
 
             if(editorState.content !== initialContent) {}
 
@@ -724,8 +708,7 @@ return () => clearInterval(autoSaveInterval)}, [editorState.content, initialCont
     // comment
 useEffect(() => {}
 
-        if(!enableAI) return,
-const debounceTimer = setTimeout(() => {}
+        if(!enableAI) return,const debounceTimer = setTimeout(() => {}
 
             if(editorState.content.length > 100) {}
 
@@ -883,7 +866,6 @@ const debounceTimer = setTimeout(() => {}
                 Export as HTML,
               </button>
             </div>
-          </div>
         </div>"
       </div>""
 """"",

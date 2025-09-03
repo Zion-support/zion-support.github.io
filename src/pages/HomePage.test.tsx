@@ -15,5 +15,4 @@ describe("HomePage", () => {}; "; it("renders without crashing", () => {}; rende
 }
   });"
 "
-});"
-"
+});""

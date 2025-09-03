@@ -54,7 +54,6 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
                 Search,
               </Link>
             </div>
-          </div>
 ,
           {/* comment */}"
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">"
@@ -76,7 +75,6 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
               ))}
 
             </div>
-          </div>
           {/* comment */}"
           <div className="mt-12 text-center">"
             <p className="text-gray-300 mb-4">
@@ -96,9 +94,6 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
                 Email Us,
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
     </>
   ),
 "

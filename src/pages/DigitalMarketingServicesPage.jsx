@@ -11,8 +11,6 @@ export default function DigitalMarketingServicesPage() {return ("
           Professional DigitalMarketingServicesPage services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

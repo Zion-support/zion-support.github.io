@@ -1,13 +1,12 @@
 import Head from "next/head"
 import React { useEffect } from "react";""
 interface AnalyticsTrackerProps {
-
-  pageName?: string
-  customEvents?: Array<{
-    event: string,,
-    category: string,,
-action: string,
-    label?: string>
+  pageName?: string;
+  customEvents?: Array<{;
+    event: string,,;
+    category: string,,;
+action: string,;
+    label?: string>;
     value?: numbe,r}>}
 
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({,"
@@ -37,8 +36,17 @@ const trackEngagement = () => {
           if: (timeSpent > 30000) { // comment
             // comment
 window.gtag()
-}
-             , })}
+}             , })}
+;
+      // Track when user leaves,;
+const handleBeforeUnload = () => {;
+        isActive = false,;
+if: (typeof window !== "undefined" && window.gtag) {",";
+          window.gtag("event", "page_exit" {";
+            event_label: "time_on_page,",";
+      // Track scroll depth,;
+const trackScrollDepth = () => {;
+        const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
 
       // comment
 const handleBeforeUnload = () => {
@@ -154,5 +162,4 @@ function trackDemoRequest(demoType) {"
     </Head>
   )}
 
-""
-export default AnalyticsTracker
+""export default AnalyticsTracker

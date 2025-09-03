@@ -1,16 +1,15 @@
 import Head from "next/head"
 import React from "react"
+interface SEOHeadProps {;
 
-interface SEOHeadProps {
-
-  title?: string
-   description?: string
-   keywords?: string
-   canonical?: string
-   ogImage?: string
-   ogType?: string
-   twitterCard?: string
-   noindex?: boolean
+  title?: string;
+   description?: string;
+   keywords?: string;
+   canonical?: string;
+   ogImage?: string;
+   ogType?: string;
+   twitterCard?: string;
+   noindex?: boolean;
    structuredData?: object}
 
 const SEOHead: React.FC<SEOHeadProps> = ({,"
@@ -57,7 +56,6 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
       <link: rel="manifest" href="/manifest.json" />" {/* comment */}"
       <link rel="preconnect" href="https: // comment
       <link: rel = "preconnect" href="https:// comment
-      <link: rel="preconnect" href="https:// comment
       <link: rel="preconnect" href="https:// comment
 
       {structuredData && ("
@@ -130,12 +128,8 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
       {/* comment */}"
       <link rel="preconnect" href="https: // comment
       <link rel="preconnect" href="https:// comment
-      <link rel="preconnect" href="https:// comment
-      <link rel="preconnect" href="https:// comment
       ,
       {/* comment */}"
-      <link rel="dns-prefetch" href="// comment
-      <link rel="dns-prefetch" href="// comment
       <link rel="dns-prefetch" href="// comment
       
       {/* comment */}"
@@ -175,7 +169,6 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
 }
     </Head>
 export: default SEOHead,
-export default SEOHead
-  )}
+export default SEOHead  )}
 
 export default SEOHead;"'

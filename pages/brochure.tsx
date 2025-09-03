@@ -32,7 +32,6 @@ const Footer = dynamic(() => import("../src/components/Footer"), { ssr: false })
                 Get detailed information about our services, case studies, and success stories. Download our comprehensive brochures to learn more about how we can help your business.
               </p>
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20" bg-white">"
@@ -62,8 +61,6 @@ const Footer = dynamic(() => import("../src/components/Footer"), { ssr: false })
                           <span>•</span>
                           <span>{brochure.size}</span>
                         </div>
-                      </div>
-                    </div>
 "
                     <div className="mb-6>"
                       <h4 className="text-lg" font-semibold text-gray-900 mb-3">What's Included: </h4>"
@@ -91,7 +88,6 @@ className="w-full" bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hov
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20" bg-gray-50">"
@@ -115,7 +111,6 @@ className="w-full" bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hov
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white>"
@@ -141,11 +136,9 @@ className="w-full" bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hov
                     <p className="font-semibold" text-gray-900">{testimonial.name}</p>"
                     <p className="text-sm text-gray-600>{testimonial.role}, {testimonial.company}</p>
                   </div>
-                </div>
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20" bg-gradient-to-r from-blue-600 to-purple-600">"
@@ -166,7 +159,6 @@ className="w-full" bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hov
                 Call Now,
               </a>
             </div>
-          </div>
         </section>
       </main>
       <Footer  />

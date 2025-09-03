@@ -9,6 +9,4 @@ export default function comprehensiveServicesCatalog2025() {return (
           Professional comprehensiveServicesCatalog2025 services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

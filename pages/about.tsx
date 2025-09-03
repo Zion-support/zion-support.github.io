@@ -30,7 +30,6 @@ through innovative AI, cloud architecture, and cutting-edge development services
                 <ArrowRight className="w-5 h-5 ml-2"  />
               </Link>
             </div>
-          </div>
         </section>
         {/* comment */}
 
@@ -53,8 +52,6 @@ through innovative AI, cloud architecture, and cutting-edge development services
 every business can thrive through intelligent automation and innovation.
                 </p>
               </div>
-            </div>
-          </div>
         </section>
         {/* comment */}
 
@@ -83,8 +80,6 @@ every business can thrive through intelligent automation and innovation.
                   We strive for excellence in everything we do, from code to customer service.
                 </p>
               </div>
-            </div>
-          </div>
         </section>
         {/* comment */}
 
@@ -111,12 +106,9 @@ every business can thrive through intelligent automation and innovation.
                 <div className="text-3xl font-bold mb-2">99%</div>
                 <div className="text-blue-100">Client Satisfaction</div>
               </div>
-            </div>
-          </div>
         </section>
       </div>
     </Layout>
   )
 }
-}
-export default About
+}export default About

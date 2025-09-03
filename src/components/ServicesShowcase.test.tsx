@@ -9,6 +9,4 @@ export default function ServicesShowcase.test() {return (
           Professional ServicesShowcase.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

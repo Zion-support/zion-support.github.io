@@ -9,6 +9,4 @@ export default function CategoriesSection() {return (
           Professional CategoriesSection services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

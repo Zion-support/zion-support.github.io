@@ -73,7 +73,6 @@ export function Sidebar({ isOpen = false, onClose }) {
 
     )
 }
-  }
 
   const navigationSections = []
 },"
@@ -213,7 +212,6 @@ export function Sidebar({ isOpen = false, onClose }) {
 
     return router.pathname.startsWith(href)
 }
-  }
 
   return (
     <>
@@ -407,7 +405,6 @@ transform transition-transform duration-300 ease-in-out z-50"
                 ))}
 
               </div>
-            </div>
           ))}
 
         </div>
@@ -448,13 +445,10 @@ transform transition-transform duration-300 ease-in-out z-50"
               Get Support,
             </Link>
           </div>
-        </div>
-      </div>
 </>"
   )}"""
     </>
   );"
-}"
 }"
 "
 

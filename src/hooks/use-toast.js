@@ -5,7 +5,6 @@ export const toast = ({ title, description, variant = "default" }) => {  // comm
   console.log(""Toast [${variant}]: ${title} -, ${description}"")
 }
   // comment
-  // comment
 return Date.now()}
 
 export const useToast = () => {
@@ -32,5 +31,4 @@ setTimeout(() => {
   }, [])
 }
   return {
-    toast, dismiss,
-    toasts}};"`""
+    toast, dismiss,    toasts}};"`""

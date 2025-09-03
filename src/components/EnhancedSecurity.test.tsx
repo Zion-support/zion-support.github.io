@@ -16,5 +16,4 @@ describe(&apos;EnhancedSecurity&apos, () => {
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"
 "
-}}"
-"
+}}""

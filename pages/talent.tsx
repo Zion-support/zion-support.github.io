@@ -66,7 +66,6 @@ cutting-edge technology. We"re looking for talented individuals who share our,
 vision of creating meaningful impact.
             </p>
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-24 sm: py-32">"
@@ -110,8 +109,6 @@ vision of creating meaningful impact.
                 Advance your career with continuous learning opportunities and mentorship programs.
               </p>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -135,7 +132,6 @@ vision of creating meaningful impact.
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-24 sm: py-32">"
@@ -178,7 +174,6 @@ vision of creating meaningful impact.
 
                       </span>
                     </div>
-                  </div>
                   "
                   <div className="{"mt-4" lg: mt-0 lg:ml-6">",
                     <Link href="{"/talent/${position.id}"}""
@@ -189,12 +184,9 @@ vision of creating meaningful impact.
                       <ArrowRight className="h-4 w-4 ml-2"  />
                     </Link>
                   </div>
-                </div>
-              </div>
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">"

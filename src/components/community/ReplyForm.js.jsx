@@ -52,7 +52,6 @@ onSubmit,"
   placeholder = "Write your reply..."}) {}""
 ""
 """
-"""
 """""
   const [content, setContent] = useState()
 }
@@ -77,23 +76,22 @@ onSubmit,"
         <Button type="submit" disabled={!content.trim()}" >
           Post Reply
         </Button>
-      </div>
-    </form>)}
-
+      </div>    </form>)}
+;
+export { ReplyForm }
+;
+export { ReplyForm }
+;
+export { ReplyForm }
+;
 export { ReplyForm }
 
 export { ReplyForm }
-
+;
 export { ReplyForm }
-
+;
 export { ReplyForm }
-
-export { ReplyForm }
-
-export { ReplyForm }
-
-export { ReplyForm }
-
-export { ReplyForm }"
-;"""
+;
+export { ReplyForm }";
+;""";
 "

@@ -32,9 +32,8 @@ url?: string""
 } export function SEOHead ({ title = "Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions", description = "Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.", keywords = "AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology", image = "/images / zion - tech - group - og.jpg", url = "https: """,
 ,"""
 interface SEOHeadProps {
-
-  type?: string
-  noindex?: boolean
+  type?: string;
+  noindex?: boolean;
   structuredData?: object}
 
 const SEOHead: React.FC<SEOHeadProps> = ({",
@@ -102,5 +101,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({",
     </Head>,
   )}
 
-export default SEOHead;"
-"
+export default SEOHead;""

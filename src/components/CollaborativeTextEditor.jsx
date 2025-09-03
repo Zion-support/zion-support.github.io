@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from "react";,"});,"})","});,"})","});,"})"
 ;,"});,"})"
-;,"});,"})"
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = "", enableAI = true, enableCollaboration = true, enableVersioning = true, className = "", onSave, onExport }) => {;,"});,"})"
     const { trackEvent } = useAnalytics({        enableTracking: true,"});,"})"
         enableUserBehaviorTracking: true,"});,"});"
@@ -307,8 +306,6 @@ ${editorState.content}"}"});,"})"
               Save,"});,"})"
             </button>;,"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
-      </div>;,"});,"})"
 """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       <div className="flex h-96">""";,"});,"})"
@@ -326,7 +323,6 @@ ${editorState.content}"}"});,"})"
               {lastSaved && " • Last saved ${lastSaved.toLocaleTimeString()}"}"});,"})"
             </span>;,"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
 """;,"});,"})"
         {/* comment */}"""";,"});,"})"
         <div className="w-80 border-l border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">""","});,"})"
@@ -424,9 +420,6 @@ ${editorState.content}"}"});,"})"
                 Export as HTML,"});,"})"
               </button>;,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
-        </div>;,"});,"})"
-      </div>;,"});,"})"
 """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       {enableCollaboration && (<div ref="{collaborationRef}" className="absolute inset-0 pointer-events-none" style="{{" zIndex: 10 }}>;,"});,"})"
@@ -472,7 +465,6 @@ export default function CollaborativeTextEditor() {return ("
           Professional CollaborativeTextEditor services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
 }"""""""
@@ -546,8 +538,7 @@ messageRetention: 1000})
 
         const;const;const newContent = event.target.value
         const selectedText = newContent.slice(selectionStart, selectionEnd)
-}
-        setEditorState(prev = > {}
+}        setEditorState(prev = > {}
 
             const change = {}
 
@@ -557,8 +548,7 @@ position: Math.min(selectionStart, prev.content.length) ,
                 text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : null,
 length: Math.abs(newContent.length-prev.content.length) ,
 timestamp: new Date(),,
-                userId,
-version: prev.version + 1}
+                userId,version: prev.version + 1}
 
             return {}
 
@@ -574,8 +564,7 @@ changes[...prev.changes, change]
                 text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : null,
                 length: Math.abs(newContent.length-prev.content.length) ,
                 timestamp: new Date () ,
-                userId,
-                version: prev.version + 1}
+                userId,                version: prev.version + 1}
 
             return {}
 
@@ -584,8 +573,7 @@ changes[...prev.changes, change]
                 selection: { star,t: selectionStart, end: selectionEnd, text: selectedText },
                 version: prev.version + 1,
                 id: "change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}", ";""
-                type: newContent.length > prev.content.length ? "insert" : "delete", position: Math.min(selectionStart, prev.content.length) , text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : null, length: Math.abs(newContent.length-prev.content.length) , timestamp: new Date () , userId,
-                version: prev.version + 1}
+                type: newContent.length > prev.content.length ? "insert" : "delete", position: Math.min(selectionStart, prev.content.length) , text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : null, length: Math.abs(newContent.length-prev.content.length) , timestamp: new Date () , userId,                version: prev.version + 1}
 
             return {}
 
@@ -638,15 +626,13 @@ selection: { start: selectionStart, end: selectionEnd },
 }
         setEditorState(prev = > ({}
 
-            ...prev,
-            selection: { start, end, text }
+            ...prev,            selection: { start, end, text }
 
             ...prev, selection: { start, end, text }
 
         }) )
 }
-        // comment
-        if(enableCollaboration && collaboration.isConnected) {}
+        // comment        if(enableCollaboration && collaboration.isConnected) {}
 
             collaboration.updateSelection(start, end, text)}
 
@@ -730,8 +716,7 @@ position: editorState.content.length,""
                         " include improved efficiency, cost savings, and enhanced user experience.",""
                         " are numerous and well - documented in industry research.","",
                         " can be measured through key performance indicators."
-            // comment
-            if (editorState.content.includes(&apos;its&apos)) {}
+            // comment            if (editorState.content.includes(&apos;its&apos)) {}
 
                 suggestions.push({}
 
@@ -747,8 +732,7 @@ position: editorState.content.length,""
                     alternatives[&apos;it&apos;s&apos, &apos;it is&apos],
 })}
 
-            // comment
-            if (editorState.content.includes(&apos;very&apos)) {}
+            // comment            if (editorState.content.includes(&apos;very&apos)) {}
 
                 suggestions.push({}
 
@@ -764,8 +748,7 @@ position: editorState.content.length,""
                     alternatives[&apos;extremely&apos, &apos;highly&apos, &apos;remarkably&apos, &apos;exceptionally&apos],
 })}
 
-            // comment
-            if (editorState.content.endsWith(&apos;The main benefits&apos)) {}
+            // comment            if (editorState.content.endsWith(&apos;The main benefits&apos)) {}
 
                 suggestions.push({}
 
@@ -780,8 +763,7 @@ position: editorState.content.length,""
                     reason: &apos,Complete the sentence with common benefit statements&apos,"&apos
                     alternatives[&apos;&apos,
                         &apos; include improved efficiency, cost savings, and enhanced user experience.&apos,"&apos;&apos,
-                        &apos; are numerous and well-documented in industry research.&apos,"&apos;&apos
-                        &apos; can be measured through key performance indicators.&apos;&apos]})}
+                        &apos; are numerous and well-documented in industry research.&apos,"&apos;&apos                        &apos; can be measured through key performance indicators.&apos;&apos]})}
 
             setEditorState(prev = > ({}
 
@@ -795,8 +777,6 @@ position: editorState.content.length,""
 "
             // comment
             trackEvent(&apos;editor&apos,ai_suggestions_failed&apos,generation_error&apos, null, {}"
-"
-"
 "
 &apos
 &apos;&apos
@@ -849,8 +829,7 @@ position: editorState.content.length,""
                     alternatives[""";""
                         " include improved efficiency, cost savings, and enhanced user experience.", """"
                         " are numerous and well - documented in industry research.", """",
-                        " can be measured through key performance indicators.""
-                    ]})}
+                        " can be measured through key performance indicators.""                    ]})}
 
             setEditorState(prev = > ({}
 
@@ -866,21 +845,18 @@ position: editorState.content.length,""
 ""
 """;""
                 error: error instanceof Error ? error.message : "Unknown error"})}
-
         finally {}
 
             setIsProcessing(false)}
 
     }, [enableAI, editorState.content, trackEvent])
 }
-    // comment
-    const applySuggestion = useCallback((suggestion) => {}
+    // comment    const applySuggestion = useCallback((suggestion) => {}
 
         setEditorState(prev => {}
 
             let newContent = prev.content
-            if (suggestion.type === &apos;completion&apos) {}"
-                newContent = newContent.slice(0, suggestion.position) + suggestion.text + newContent.slice(suggestion.position)}
+            if (suggestion.type === &apos;completion&apos) {}"                newContent = newContent.slice(0, suggestion.position) + suggestion.text + newContent.slice(suggestion.position)}
 
             else if (suggestion.type === &apos;grammar&apos; || suggestion.type === &apos;style&apos) {}
 
@@ -893,8 +869,7 @@ position: editorState.content.length,""
 
                 // comment
                 const searchText = editorState.content.slice(suggestion.position, suggestion.position + suggestion.length)
-}
-                newContent = newContent.replace(searchText, suggestion.text) }
+}                newContent = newContent.replace(searchText, suggestion.text) }
 
             return {}
 
@@ -952,7 +927,6 @@ suggestions: prev.suggestions.filter(s => s.id !== suggestion.id) }})
         if (format = == "html") {}
 
 "
-"
 ""
             exportContent = "<html><body><pre>${editorState.content}</pre></body></html>"}
 
@@ -967,14 +941,12 @@ suggestions: prev.suggestions.filter(s => s.id !== suggestion.id) }})
             exportContent = "# Document"
 
 ${editorState.content}"}
-
         if(onExport) {}
 
             onExport(exportContent, format)}
 
         else {}
 
-"
 "
 ""
             // comment
@@ -1049,8 +1021,6 @@ version: Math.max(prev.version, message.payload.version)}})"
         return () => {}
 
 "
-"
-"
 &apos
 &apos;&apos
             window.removeEventListener(&apos;collaborationTextChange&apos, handleCollaborationTextChange)}}, [userId, trackEvent])
@@ -1076,8 +1046,7 @@ version: Math.max(prev.version, message.payload.version)}})"
 
         if(!enableVersioning)
 }
-            return
-        const autoSaveInterval = setInterval(() => {}
+            return        const autoSaveInterval = setInterval(() => {}
 
             if(editorState.content !== initialContent) {}
 
@@ -1089,15 +1058,13 @@ version: Math.max(prev.version, message.payload.version)}})"
     // comment
     useEffect(() => {}
 
-        if(!enableAI) return
-        const debounceTimer = setTimeout(() => {}
+        if(!enableAI) return        const debounceTimer = setTimeout(() => {}
 
             if(editorState.content.length > 100) {}
 
                 generateAISuggestions()}
 
         }, 3000)"
-}, 3000)"
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])"
     return ("
     <div className="{"bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}"}>""{/* comment */}"";"
@@ -1142,7 +1109,6 @@ version: Math.max(prev.version, message.payload.version)}})"
 
             </span>
           </div>
-        </div>
 ""{/* comment */}"";"
         <div className="w-80 border-l border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">""{/* comment */}""{enableAI && showSuggestions && (<div className="p-4 border-b border-gray-200 dark: border-gray-600">"";"
               <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">"","
@@ -1236,7 +1202,6 @@ x: 0 "",">
               Save,
             </button>
           </div>
-        </div>
       </div>";,
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
       <div className="&apos;flex" h-96&apos;>"&apos;&apos;{/* comment */}&apos;&apos,&apos;&apos,"
@@ -1258,7 +1223,6 @@ x: 0 "",">
 
             </span>
           </div>
-        </div>
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
         <div className="&apos;w-80" border-l border-gray-200 dark:border-gray-700 bg-gray-50 dar,k: bg-gray-700&apos,>"&apos,&apos,{/* comment */}&apos;&apos,&apos;{enableAI && showSuggestions && (&apos}&apos;<div className="&apos;p-4" border-b border-gray-200 dark: border-gray-600&apos,>"&apos,&apos,&apos,&apos,"
               <h4 className="&apos,font-medium" text-gray-900 dar,k: text-white mb-3 flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos;"
@@ -1329,8 +1293,7 @@ x: 0 "",">
                 AI Suggestions"
               </h4>"""""
               """"
-              <div className="space-y-3">",
-                {editorState.suggestions.map(suggestion => (<motion.div key="{suggestion.id}" initial = {}
+              <div className="space-y-3">",                {editorState.suggestions.map(suggestion => (<motion.div key="{suggestion.id}" initial = {}
 
   { opacity: 0, x: 20}} animate = {}
 
@@ -1478,8 +1441,6 @@ x: 0 "",">
                 Export as HTML,
               </button>
             </div>
-          </div>
-        </div>
       </div>";,
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;{enableCollaboration && (&apos}&apos;<div ref="{collaborationRef}" className="&apos;absolute" inset-0 pointer-events-none&apos; style = "{{" zIndex: 10 }}>"
           {collaboration.activeCursors.map(({ x, y, user }) => (&apos;<motion.div key = "{user.id}" initial = {}
@@ -1511,15 +1472,13 @@ top: y,"
               <div className="&apos;w-full" h-full rounded-full border-2 border-white shadow-lg&apos; style="{{" backgroundColor: user.color }}>&apos;</div>&apos;&apos,&apos;&apos,"
               <div className="&apos;absolute" top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap&apos;>
                 {user.name}&apos
-              </div>
-            </motion.div>))}
+              </div>            </motion.div>))}
 
         </div>)}
 
     </div>)}&apos;&apos;"
 &apos;&apos;"&apos;&apos;"""
-"""{/* comment */}""""{enableCollaboration && (<div ref = "{collaborationRef}" className="absolute inset-0 pointer-events-none" style="{{" zIndex: 10 }}>"
-          {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key="{user.id}" initial = {}
+"""{/* comment */}""""{enableCollaboration && (<div ref = "{collaborationRef}" className="absolute inset-0 pointer-events-none" style="{{" zIndex: 10 }}>"          {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key="{user.id}" initial = {}
 
   { opacity: 0, scale: 0}} animate = {}
 
@@ -1547,5 +1506,4 @@ top: y,"
     </div>)}"""
 """"'"
 `
-}"
-"
+}""

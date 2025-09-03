@@ -1,1 +1,1 @@
-import React, { useState, useEffect } from; 'react''; 'framer-motion''; '../components/SEO''; 'lucide-react' export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()) const [isRefreshing, setIsRefreshing] = useState(false) ';'
+import React, { useState, useEffect } from; "react""; "framer-motion""; "../components/SEO""; "lucide-react" export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()) const [isRefreshing, setIsRefreshing] = useState(false) ";'

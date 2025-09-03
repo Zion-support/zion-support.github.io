@@ -16,5 +16,4 @@ describe(&apos;EnhancedSEOAccessibility&apos, () => {
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"
 "
-}}"
-"
+}}""

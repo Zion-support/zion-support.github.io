@@ -11,8 +11,6 @@ export default function CommunityProfilePage() {return ("
           Professional CommunityProfilePage services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

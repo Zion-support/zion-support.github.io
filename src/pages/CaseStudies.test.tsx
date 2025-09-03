@@ -15,5 +15,4 @@ describe("CaseStudies", () => {}; "; it("renders without crashing", () => {}; re
 }
   });"
 "
-});"
-"
+});""

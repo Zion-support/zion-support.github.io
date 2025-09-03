@@ -9,6 +9,4 @@ export default function ProductActions() {return (
           Professional ProductActions services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

@@ -18,10 +18,8 @@ import React from "react"
               </span>
             </Link>
           </div>
-        </div>
       </section>
     </MainLayout>;,
   )}
 
-"
-export default ITServicesPage
+"export default ITServicesPage

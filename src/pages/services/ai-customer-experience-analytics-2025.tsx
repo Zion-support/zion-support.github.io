@@ -48,7 +48,6 @@ export default function AiCustomerExperienceAnalytics2025() {
             <div className="mt-6 text-sm text-gray-600">
               Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
             </div>
-          </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
             <div className="grid md:grid-cols-3 gap-4">
@@ -74,8 +73,6 @@ export default function AiCustomerExperienceAnalytics2025() {
                 Contact Sales <Phone className="w-4 h-4 ml-2"  />
               </Link>
             </div>
-          </div>
-        </div>
       </section>
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
@@ -92,7 +89,6 @@ export default function AiCustomerExperienceAnalytics2025() {
             ))}
 
           </div>
-        </div>
       </section>
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-6">
@@ -109,7 +105,6 @@ export default function AiCustomerExperienceAnalytics2025() {
             ))}
 
           </div>
-        </div>
       </section>
       <section className="py-16 bg-indigo-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -125,7 +120,6 @@ export default function AiCustomerExperienceAnalytics2025() {
               Schedule Demo <Mail className="w-4 h-4 ml-2"  />
             </Link>
           </div>
-        </div>
       </section>
     </div>
   ),

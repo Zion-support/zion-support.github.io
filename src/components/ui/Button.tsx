@@ -1,5 +1,5 @@
-import React from "react"
-interface ButtonProps {
+import React from "react";
+interface ButtonProps {;
 
   children: React.ReactNode,
   variant?: "default" | "outline" | "ghost" | "link",
@@ -37,7 +37,17 @@ export const Button: React.FC<ButtonProps> = ({ children,"
       {children}
 
     </button>
-  )
+  )}
+;
+  return (";
+    <button type = "{type}"";
+      className="{classes}"";
+      onClick="{onClick}"";
+      disabled="{disabled}";
+    >;
+      {children}
+    </button>;
+  );,
 }
-"
+";
 export default Button;"

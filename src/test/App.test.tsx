@@ -8,6 +8,5 @@ export default function App.test() {
           This is a placeholder component for app.test.
         </p>
       </div>
-    </div>
   )
 }

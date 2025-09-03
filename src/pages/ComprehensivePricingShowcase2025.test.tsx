@@ -15,5 +15,4 @@ describe("ComprehensivePricingShowcase2025", () => {}; "; it("renders without cr
 }
   });"
 "
-});"
-"
+});""

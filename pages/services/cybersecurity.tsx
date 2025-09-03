@@ -37,8 +37,6 @@ import React from "react"
                   View Solutions,
                 </Link>
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -54,7 +52,6 @@ import React from "react"
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50">"
@@ -91,7 +88,6 @@ import React from "react"
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white">"
@@ -115,7 +111,6 @@ import React from "react"
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50">"
@@ -148,8 +143,6 @@ import React from "react"
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Monitoring</h3>"
                 <p className="text-gray-600">Continuous monitoring and maintenance of security systems</p>
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -169,12 +162,10 @@ import React from "react"
                 View Case Studies,
               </Link>
             </div>
-          </div>
         </section>
       </main>
       <Footer  />
     </>
   )}
 
-"
-export default Cybersecurity
+"export default Cybersecurity

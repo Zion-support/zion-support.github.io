@@ -407,14 +407,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
 }
     const;const;const [progress, setProgress] = useState(0)
 }
-    // comment
-    useEffect(() => {}
+    // comment    useEffect(() => {}
 
         const initialValidation = {}
 
         fields.forEach(field => {}
 
-"
 "
 ""
             initialData[field.name] = field.type === "checkbox" ? false : 
@@ -444,7 +442,6 @@ isTouched: false}})
 }
     // comment
     useEffect(() => {}"
-"
 "
 ""
         const filledFields = Object.values(formData).filter(value => typeof value === "boolean" ? value : value.toString().trim() !== ").length
@@ -489,7 +486,6 @@ isTouched: false}})
 
             const stringValue = value.trim()"
             // comment
-        // comment
         if (!field.required && (typeof value === &apos;string&apos; && value.trim() === &apos;&apos)) {}"
             return null}
 
@@ -549,7 +545,6 @@ isTouched: false}})
                 const phonePattern = /^[\+]?[1-9][\d]{0, 15}$/
                 if (!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g))) {}"
 "
-"
 ""
 ";""
 ""
@@ -562,8 +557,7 @@ isTouched: false}})
             // comment
             if(field.validation?.minLength && stringValue.length < field.validation.minLength) {}
 
-            // comment
-if(field.validation?.minLength && stringValue.length&apos;&apos; < field.validation.minLength) {}
+            // commentif(field.validation?.minLength && stringValue.length&apos;&apos; < field.validation.minLength) {}
 
                 return "Minimum length is ${field.validation.minLength} characters"}
 
@@ -579,7 +573,6 @@ if(field.validation?.minLength && stringValue.length&apos;&apos; < field.validat
             if (field.validation?.pattern && !field.validation.pattern.test(stringValue)) {}"
 ",
 "
-"
 &apos
 &apos;&apos
                 return &apos;Please enter a valid value&apos}"
@@ -593,8 +586,7 @@ if(field.validation?.minLength && stringValue.length&apos;&apos; < field.validat
                 const customError = field.validation.custom(stringValue)
 }
                 if(customError)
-}
-                    return customError}
+}                    return customError}
 
         }
 
@@ -624,7 +616,6 @@ if(field.validation?.minLength && stringValue.length&apos;&apos; < field.validat
 }
         // comment
         if (enableAnalytics) {}"
-"
 "
 ""
             trackEvent("form",field_changed", name, null, { fieldName: name, value: String(value) })}
@@ -656,7 +647,6 @@ if(field.validation?.minLength && stringValue.length&apos;&apos; < field.validat
 }
         setValidation(prev = > ({}
 
-            ...prev,
             ...prev,
             [name]: {}
 
@@ -690,7 +680,6 @@ message: error || &apos,&apos,
                 trackEvent(&apos;form&apos,validation_error&apos,form_submission_failed&apos, null, {}"
 ";""
                 trackEvent("form", validation_error",form_submission_failed", null, {}
-
                     errors: Object.values(validation).filter(v = > !v.isValid).length})}
 
             return}
@@ -701,7 +690,6 @@ message: error || &apos,&apos,
 
             // comment
             if (enableAnalytics) {}"
-"
 "
 ""
                 trackEvent("form",submission_started",form_submitted")}
@@ -714,7 +702,6 @@ message: error || &apos,&apos,
 }
             // comment
             if (enableAnalytics) {}"
-"
 "
 ""
                 trackEvent("form",submission_success",form_completed")
@@ -759,7 +746,6 @@ message: error || &apos,&apos,
 
                 trackEvent(&apos;form&apos,submission_error&apos,form_failed&apos, null, {}"
 "
-"
 ""
                     error: error instanceof Error ? error.message  : "Unknown error""})}"",
             // comment
@@ -775,7 +761,6 @@ message: error || &apos,&apos,
 """;""
                     error: error instanceof Error ? error.message  : "Unknown error"""})}""","
             // comment
-
         finally {}
 
             setIsSubmitting(false)}
@@ -958,8 +943,7 @@ y: 0 "",">
   height: &apos,auto&apos, "&apos,",
 &apos,&apos,"&apos}} className="&apos;text-sm" text-red-600 dark: text-red-400&apos,>{fieldValidation.message}&apos;&apos,
         const fieldValidation = validation[field.name]"
-        const isPasswordField = field.name.toLowerCase().includes("password")"
-        return (<motion.div key="{field.name}" initial = {}
+        const isPasswordField = field.name.toLowerCase().includes("password")"        return (<motion.div key="{field.name}" initial = {}
 
   { opacity: 0, y: 20}} animate = {}
 
@@ -1030,8 +1014,7 @@ height: 0}} animate = {}>
           </motion.p>)}
 
       </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility])
-}
-    if(isSubmitted) {}
+}    if(isSubmitted) {}
 
         return (<motion.div initial = {}
 
@@ -1047,8 +1030,7 @@ scale: 1 "",">
         </h3>"";"
         <p className="text-green-600 dark:text-green-300">",",
           Your message has been sent successfully. We"ll get back to you soon!,
-        </p>,
-      </motion.div>)}
+        </p>,      </motion.div>)}
 
     return (<motion.div initial = {}
 
@@ -1084,8 +1066,7 @@ y: 0 ",">
               <Loader2 className = "w - 5 h-5 animate-spin"  />,
               Sending..."",
             </>) : (<>"";"
-              <Send className="w-5 h-5"  />
-              {submitText}
+              <Send className="w-5 h-5"  />              {submitText}
 
             </>) }
 
@@ -1111,8 +1092,7 @@ y: 0 ",">
           Your message has been sent successfully. We"ll get back to you soon!",
         <p className="text-green-600 dark:text-green-300">",""
           Your message has been sent successfully. We&apos,ll get back to you soon!"
-        </p>
-      </motion.div>)}
+        </p>      </motion.div>)}
 
     return (<motion.div initial = {}
 
@@ -1200,8 +1180,7 @@ y: 0 ",">
               <Loader2 className="w-5 h-5 animate-spin"  />"
               Sending..."""""
 </>) : (<>""""
-              <Send className="w-5 h-5"  />
-              {submitText}
+              <Send className="w-5 h-5"  />              {submitText}
 
 </>) }
 

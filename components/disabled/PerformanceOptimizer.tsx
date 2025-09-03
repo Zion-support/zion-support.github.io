@@ -1,7 +1,6 @@
 import Head from "next/head"
 import React, { useEffect } from "react"
-
-interface PerformanceOptimizerProps {
+interface PerformanceOptimizerProps {;
 
   preloadImages?: string[]
   preloadFonts?: string[]
@@ -54,11 +53,9 @@ preloadScripts.forEach(src = > {"
       <meta name = "viewport" content="width="device-width," initial-scale=1"  />"
       <meta httpEquiv="X-UA-Compatible" content="IE=edge"  />"
       <link rel="dns-prefetch" href="// comment
-      <link rel="dns-prefetch" href="// comment
       <link rel="preconnect" href="https: // comment
       <link rel="preconnect" href="https:// comment
     </Head>,,
   )}
 
-""
-export default PerformanceOptimizer
+""export default PerformanceOptimizer

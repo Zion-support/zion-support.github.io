@@ -11,8 +11,6 @@ export default function EquipmentPage() {return ("
           Professional EquipmentPage services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

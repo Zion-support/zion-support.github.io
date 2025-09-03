@@ -15,5 +15,4 @@ describe("Events", () => {}; "; it("renders without crashing", () => {}; render(
 }
   });"
 "
-});"
-"
+});""

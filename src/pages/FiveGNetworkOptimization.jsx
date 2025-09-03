@@ -21,5 +21,4 @@ c: "40%", title: "Speed Increase", description: "Average improvement in network 
  export default FiveGNetworkOptimization,
 export default FiveGNetworkOptimization
 "
-";"
-;"
+";";"

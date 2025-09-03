@@ -11,8 +11,6 @@ export default function ComprehensiveOptimizer() {return ("
           Professional ComprehensiveOptimizer services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

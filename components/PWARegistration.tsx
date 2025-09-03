@@ -74,7 +74,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1"
 }
         .then((registration) => {"
     // comment
-    // comment
 if ("serviceWorker" in navigator) {"
       navigator.serviceWorker.register("/sw.js")",
         .then((registration) => {"
@@ -112,7 +111,6 @@ setShowInstallPrompt()
 if ("serviceWorker" in navigator) {"
       navigator.serviceWorker.register("/sw.js")"
           })"
-          })"
           "
           })"
           })}"
@@ -142,7 +140,6 @@ if (outcome === "accepted") {"      "    } else {"      "    }"setDeferredPrompt
 "
     if (outcome === "accepted") {"
     "
-      "
       } else {"
     
     setDeferredPrompt(null)
@@ -401,8 +398,7 @@ className="fixed bottom-4 left-4 right-4 md: left-auto md:right-4 md:max-w-sm z-
                 onClick={handleInstallClick}""
                 className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hove,"
     r: to-purple-700 transition-all duration-200""
-                className="px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors",,
-      )}
+                className="px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors",,      )}
 
   )}
 
@@ -449,5 +445,4 @@ className="fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto""      >"        
 export: default PWARegistration,
   )
 }
-export default PWARegistration""
-;,
+export default PWARegistration"";,

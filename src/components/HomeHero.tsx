@@ -7,5 +7,4 @@ import React { useState, useEffect } from "react" Shield, Rocket, Cpu, Globe, Za
 ;&apos," transition: {"," duration: 6, "";" repeat: Infinity, ";"";" ease: "easeInOut" } } }  const pulseVariants = {} } }"
 ""
 }"export function HomeHero() { const [isVideoPlaying, setIsVideoPlaying] = useState(false) const [isMuted, setIsMuted] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [currentStatIndex, setCurrentStatIndex] = useState(0)  const heroStats = []  const containerVariants = {}, visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.3 } } }  const itemVariants = {}, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }  const floatingVariants = {} } }  const pulseVariants = {} } }"
-""
-"
+"""

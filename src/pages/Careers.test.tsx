@@ -15,5 +15,4 @@ describe("Careers", () => {}; "; it("renders without crashing", () => {}; render
 }
   });"
 "
-});"
-"
+});""

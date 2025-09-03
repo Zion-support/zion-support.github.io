@@ -15,5 +15,4 @@ describe("About", () => {}; "; it("renders without crashing", () => {}; render(<
 }
   });"
 "
-});"
-"
+});""

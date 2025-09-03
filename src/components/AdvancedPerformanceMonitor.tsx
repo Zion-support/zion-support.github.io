@@ -9,6 +9,4 @@ export default function AdvancedPerformanceMonitor() {return (
           Professional AdvancedPerformanceMonitor services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

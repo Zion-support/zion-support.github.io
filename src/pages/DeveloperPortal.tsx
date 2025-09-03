@@ -11,8 +11,6 @@ export default function DeveloperPortal() {return ("
           Professional DeveloperPortal services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

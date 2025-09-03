@@ -6,5 +6,4 @@ export default function StarRating({ value }) {}"});,"})
     const idx = i + 1,"});,"})"
 }"});,"})"
 ';,"});,})"
-export { StarRating };,});,"})"
->>>>>>> pr-10728,"});,"})"
+export { StarRating };,});,"})">>>>>>> pr-10728,"});,"})"

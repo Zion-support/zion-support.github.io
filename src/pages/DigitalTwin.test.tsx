@@ -15,5 +15,4 @@ describe("DigitalTwin", () => {}; "; it("renders without crashing", () => {}; re
 }
   });"
 "
-});"
-"
+});""

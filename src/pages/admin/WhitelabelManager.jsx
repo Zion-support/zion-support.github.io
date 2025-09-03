@@ -1,3 +1,2 @@
 import React, { useState } from "react";""
-'
-export default ComponentName;"
+'export default ComponentName;"

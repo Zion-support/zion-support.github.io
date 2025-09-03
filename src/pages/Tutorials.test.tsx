@@ -15,5 +15,4 @@ describe("Tutorials", () => {}; "; it("renders without crashing", () => {}; rend
 }
   });"
 "
-});"
-"
+});""

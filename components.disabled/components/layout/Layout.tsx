@@ -1,7 +1,7 @@
-import React from 'react'
-type LayoutProps = {
-  children: React.ReactNode
+import React from "react";
+type LayoutProps = {;
+  children: React.ReactNode;,
 }
-export default function Layout({ children }: LayoutProps) {
-  return <div>{children}</div>
+export default function Layout({ children }: LayoutProps) {;
+  return <div>{children}</div>;,
 }

@@ -15,5 +15,4 @@ describe("Team", () => {}; "; it("renders without crashing", () => {}; render(<T
 }
   });"
 "
-});"
-"
+});""

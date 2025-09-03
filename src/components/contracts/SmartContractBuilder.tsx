@@ -9,6 +9,4 @@ export default function SmartContractBuilder() {return (
           Professional SmartContractBuilder services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

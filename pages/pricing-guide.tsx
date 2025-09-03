@@ -28,7 +28,6 @@ const Component = () => {} from"
                 No hidden fees, no surprises.
               </p>
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white">"
@@ -64,7 +63,6 @@ const Component = () => {} from"
                       <span className="text-4xl font-bold text-gray-900">{tier.price}</span>"
                       <span className="text-gray-600 ml-1">{tier.period}</span>
                     </div>
-                  </div>
                   "
                   <ul className="space-y-4 mb-8">
                     {tier.features.map((feature, featureIndex) => ("
@@ -89,7 +87,6 @@ const Component = () => {} from"
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className=""py-20" bg-gray-50"}>"
@@ -277,7 +274,6 @@ const PricingGuide: React.FC = () => {,"});,"})"
                       </h3>;,"});,"})"
                       <p className="text-gray-300">{factor.description}</p>;,"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
                   <ul className="space-y-3">;,"});,"})"
                     {factor.details.map((detail, detailIndex) => (;,"});,"})"
                       <li,"});,"})"
@@ -293,7 +289,6 @@ const PricingGuide: React.FC = () => {,"});,"})"
               </motion.div>;,"});,"})"
             ))}"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
       </section>;,"});,"})"
       {/* comment */}"});,"})"
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">,"});,"})"
@@ -333,7 +328,6 @@ const PricingGuide: React.FC = () => {,"});,"})"
                     <div className="text-sm text-gray-400">;,"});,"})"
                       Timeline: {example.timeline}"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
                   <ul className="space-y-3 mb-6">;,"});,"})"
                     {example.features.map((feature, featureIndex) => (;,"});,"})"
                       <li,"});,"})"
@@ -355,7 +349,6 @@ const PricingGuide: React.FC = () => {,"});,"})"
               </motion.div>;,"});,"})"
             ))}"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
       </section>;,"});,"})"
       {/* comment */}"});,"})"
       <section className="py-20 px-4 sm: px-6 lg:px-8">,"});,"})"
@@ -395,12 +388,10 @@ const PricingGuide: React.FC = () => {,"});,"})"
                         {tip.savings}"});,"})"
                       </Badge>;,"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
                 </Card>;,"});,"})"
               </motion.div>;,"});,"})"
             ))}"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
       </section>;,"});,"})"
       {/* comment */}"});,"})"
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">,"});,"})"
@@ -572,7 +563,6 @@ key="{factor.factor}""
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className=""py-20" px-4 sm: px-6 lg:px-8 bg-slate-800/50"}>"
@@ -630,7 +620,6 @@ key="{example.scenario}""
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 px-4 sm: px-6 lg:px-8">"
@@ -689,7 +678,6 @@ key="{tip.tip}""
               })}
 
             </div>
-          </div>
         </section>
       {/* comment */}"
       <section className = "py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">"
@@ -753,8 +741,7 @@ initial="{{" opacit>
   Shield,
   Clock,
   Award} from "lucide-react"
-
-export default function PricingGuide() {
+export default function PricingGuide() {;
 
   const plans = [], popular: false,"
       cta: "Start Free Trial"}, {"
@@ -866,9 +853,6 @@ export default function PricingGuide() {
                   <Clock className="w-5 h-5 mr-2"  />
                   <span>Cancel anytime</span>
                 </div>
-              </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -921,7 +905,6 @@ export default function PricingGuide() {
                       </span>"
                       <span className="text-gray-600 ml-1">{tier.period}</span>
                     </div>
-                  </div>
 "
                   <ul className="space-y-4 mb-8">
                     {tier.features.map((feature, featureIndex) => ("
@@ -948,7 +931,6 @@ export default function PricingGuide() {
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white">"
@@ -997,11 +979,9 @@ export default function PricingGuide() {
                     <p className="text-2xl font-bold text-blue-600 mb-2">{service.price}</p>"
                     <p className="text-gray-600 text-sm">{service.description}</p>
                   </div>
-                </div>
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20">"
@@ -1061,8 +1041,6 @@ requirements.
 accommodate enterprise billing arrangements.
                 </p>
               </div>
-            </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
@@ -1099,7 +1077,6 @@ to your needs.
                 </button>
               </Link>
             </div>
-          </div>
         </section>
       </main>
       <SimpleFooter  />
@@ -1113,5 +1090,4 @@ to your needs.
       </main>
     </>
   )
-}
-}"
+}}"

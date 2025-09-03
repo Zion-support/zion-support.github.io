@@ -9,6 +9,4 @@ export default function FeaturedListingsSection() {return (
           Professional FeaturedListingsSection services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

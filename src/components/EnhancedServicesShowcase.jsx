@@ -207,8 +207,7 @@ const EnhancedServicesShowcase = () => {}
       opacity: 1,
 transition: {}
 
-        staggerChildren: 0.1,
-delayChildren: 0.2}}}
+        staggerChildren: 0.1,delayChildren: 0.2}}}
 
   const itemVariants = {}
 
@@ -768,11 +767,9 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,"
 https: // comment
     </div>)}
 
-export default EnhancedServicesShowcase
-export { EnhancedServicesShowcase }
-
+export default EnhancedServicesShowcaseexport { EnhancedServicesShowcase }
+;
 export { EnhancedServicesShowcase }
 
 '"
-`"
-"
+`""

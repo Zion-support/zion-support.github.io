@@ -15,5 +15,4 @@ describe("Resources", () => {}; "; it("renders without crashing", () => {}; rend
 }
   });"
 "
-});"
-"
+});""

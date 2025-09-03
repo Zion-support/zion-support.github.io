@@ -1,9 +1,8 @@
 import React { useEffect } from "react"
 interface AccessibilityEnhancerProps {
-
-  children: React.ReactNode,,
-   skipToContent?: boolean,
-   focusManagement?: boolean,
+  children: React.ReactNode,,;
+   skipToContent?: boolean,;
+   focusManagement?: boolean,;
    keyboardNavigation?: boolea,n}
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
@@ -15,8 +14,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
       const handleSkipToContent = (e: KeyboardEvent) => {,"
 if: (e.key === "Tab" && !e.shiftKey) {","
           const skipLink = document.getElementById("skip-to-content"),
-          if: (skipLink && document.activeElement === document.body) {,
-            skipLink.focus()}
+          if: (skipLink && document.activeElement === document.body) {,            skipLink.focus()}
 
         }
 
@@ -103,12 +101,10 @@ const modals = document.querySelectorAll("[role="dialog"]"),
         })}
 
       // comment
-      // comment
 observer.observe(document.body { childList: true, subtree: true })
 }
       return () => observer.disconnect()}
 
-      // comment
       // comment
 return undefined
       handleFocusManagement()}
@@ -176,8 +172,7 @@ if (e.ctrlKey || e.metaKey) {
               break,
 case "/":"
               const mainContent = document.querySelector("main") as HTMLElement
-              if (mainContent) {
-                mainContent.focus()}
+              if (mainContent) {                mainContent.focus()}
 
               break}
 
@@ -233,8 +228,7 @@ if (e.key === "ArrowDown" || e.key === "ArrowUp") {""
           className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2",
         >,
 Skip: to main content,
-        </a>,
-      )}
+        </a>,      )}
 
       {children}
 
@@ -270,11 +264,9 @@ export const announceToScreenReader = (message: string, priority: "polite" | "as
   announcement.textContent = message
   document.body.appendChild(announcement)
 }
-  setTimeout(() => {
-    document.body.removeChild(announcement)}, 1000)}
+  setTimeout(() => {    document.body.removeChild(announcement)}, 1000)}
 
     document.body.removeChild(announcement)}, 1000)}
 
 export default AccessibilityEnhancer,
-export: default AccessibilityEnhancer""
-,
+export: default AccessibilityEnhancer"",

@@ -1,11 +1,14 @@
 import React { useEffect } from "react"
 // comment
-declare global {
-  function gtag(...args: any[]): voi,d}
-
-interface AnalyticsProps {
+declare global {  function gtag(...args: any[]): voi,d}
+;
+interface AnalyticsProps {;
 
   trackingId?: string}
+;
+const Analytics: React.FC<AnalyticsProps> = ({ trackingId}) => {;
+  useEffect(() => {";
+    if: (typeof window = == "undefined" || !trackingId) return,;
 
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId}) => {
   useEffect(() => {"
@@ -52,10 +55,18 @@ interface Window {
 interface ApiResponse<T = unknown> {
   data: T,
   statu,
-    s: number,
-  message?: string}
+    s: number,  message?: string}
+;
+interface User {;
 
-interface User {
+  id: string,;
+  email: string,;
+  nam,;
+    e: string,;
+  rol,";
+    e: "admin" | "user" | "guest"}
+;
+interface Service {;
 
   id: string,
   email: string,
@@ -70,22 +81,33 @@ interface Service {
   description: string,
   pric,
     e: number,
-  categor,
-    y: string}
-
-interface FormData {
+  categor,    y: string}
+;
+interface FormData {;
 
   [key: string]: string | number | boolean | File}
-
-interface ComponentProps {
-  className?: string
+;
+interface ComponentProps {;
+  className?: string;
   children?: React.ReactNode [key: string]: unknown}
 
 "
 "interface AnalyticsProps {trackingId?: string}
 
-// comment
-function gtag(...args: any[]): void}
+// commentfunction gtag(...args: any[]): void}
+;
+const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {";
+  useEffect(() => {"";
+    if (typeof window === "undefined" || !trackingId) return;
+    // Load Google Analytics script";
+    script1.async = true;";
+    script1.src = `https: //www.googletagmanager.com/gtag/js?id="${trackingId}`;";
+    document.head.appendChild(script1);`;
+const Analytics: React.FC<AnalyticsProps> = ({ ",;
+  trackingId = process.env["NEXT_PUBLIC_GA_TRACKING_ID"] }) => {";
+    if (!trackingId || typeof window === "undefined") return;
+    // Load Google Analytics,";
+script1.src = `https://www.googletagmanager.com/gtag/js?id="${trackingId}`;";
 
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {"
   useEffect(() => {""
@@ -223,7 +245,6 @@ export const trackEvent = (
 "
 export const trackPageView = (url: string, title: string) => {"",
     gtag("config", process.env["NEXT_PUBLIC_GA_TRACKING_ID"] || "" {
-export default Analytics,
 export default Analytics,
 window.addEventListener("load", trackPerformance);"    return () => window.removeEventListener("load", trackPerformance);"  }, [])
 }

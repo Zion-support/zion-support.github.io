@@ -9,6 +9,4 @@ export default function LanguageDetectionPopup() {return (
           Professional LanguageDetectionPopup services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

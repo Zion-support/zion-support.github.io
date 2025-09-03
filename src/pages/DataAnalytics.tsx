@@ -11,8 +11,6 @@ export default function DataAnalytics() {return ("
           Professional DataAnalytics services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

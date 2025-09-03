@@ -340,8 +340,7 @@ name: "IBM Quantum",
   const containerVariants = {},
     visible: {,
 opacity: 1,
-      transition: {,
-staggerChildren: 0.1}
+      transition: {,staggerChildren: 0.1}
 
     }
 
@@ -352,8 +351,7 @@ staggerChildren: 0.1}
 y: 0,
       opacity: 1,
       transition: {,
-duration: 0.5,"
-        ease: "easeOut"}
+duration: 0.5,"        ease: "easeOut"}
 
     }
 
@@ -409,8 +407,6 @@ initial="{{" opacity: 0, y: 30 }}"
               <div className="flex items-center gap-2">
                 <span>📍 364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -440,7 +436,6 @@ initial="{{" opacity: 0, y: 30 }}"
 
                 </select>
               </div>
-            </div>
             {/* comment */}
 
             <motion.div,"
@@ -474,7 +469,6 @@ key="{service.id}""
                           {service.roi}
 
                         </div>
-                      </div>
 "
                       <div className="space-y-3 mb-6">"
                         <h5 className="font-semibold text-white mb-3">Features: </h5>,
@@ -496,7 +490,6 @@ key="{service.id}""
                           Learn More,
                         </a>
                       </div>
-                    </div>
 ,
                     {/* comment */}
 
@@ -512,7 +505,6 @@ key="{service.id}""
                           <div className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm font-semibold">
                             Higher Cost,
                           </div>
-                        </div>
 "
                         <div className="space-y-3 mb-6">"
                           <h5 className="font-semibold text-white mb-3">Limited Features: </h5>,
@@ -535,7 +527,6 @@ key="{service.id}""
                           ))}
 
                         </div>
-                      </div>
                     ))}
 
                   </div>
@@ -556,9 +547,6 @@ key="{service.id}""
                           <Shield className="w-4 h-4 text-purple-400"  />"
                           <span className="text-gray-300">Advanced AI Features</span>
                         </div>
-                      </div>
-                    </div>
-                  </div>
                 </motion.div>
               ))}
 
@@ -601,5 +589,4 @@ Call: +1 302 464 0950,
     </>
   )}
 
-"
-export default AIServicesPricingComparison2025;"
+"export default AIServicesPricingComparison2025;"

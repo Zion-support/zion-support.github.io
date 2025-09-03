@@ -199,7 +199,6 @@ export function Footer() {const currentYear = new Date().getFullYear()"
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 m,"
     d: space-y-0">",
             {/* comment */}"
-      {/* comment */}"
       <div className="border-t border-zion-purple/20">"
         <div className="container mx-auto px-4 py-6">"
           <div className="flex flex-col md: flex-row justify-between items-center space-y-4 md:space-y-0">,
@@ -253,7 +252,6 @@ export function Footer() {const currentYear = new Date().getFullYear()"
                   <social .icon className="h-5 w-5" /" >"
                 </a>
     </footer>"
-  )}"
   )}"
 "
 

@@ -51,8 +51,6 @@ advanced security assessments, data protection, and 24/7 monitoring to keep your
                 Schedule Consultation,
               </Link>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -70,7 +68,6 @@ advanced security assessments, data protection, and 24/7 monitoring to keep your
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gray-900">"
@@ -108,7 +105,6 @@ advanced security assessments, data protection, and 24/7 monitoring to keep your
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gray-800">"
@@ -131,7 +127,6 @@ advanced security assessments, data protection, and 24/7 monitoring to keep your
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gradient-to-r from-red-900/20 to-orange-900/20">"
@@ -156,7 +151,6 @@ advanced security assessments, data protection, and 24/7 monitoring to keep your
               Call Now,
             </a>
           </div>
-        </div>
       </section>
       <Footer  />
     </div>",

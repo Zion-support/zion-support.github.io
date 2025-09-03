@@ -26,10 +26,7 @@ const FaqSectionJs = () => {
               Get Started,
             </a>
           </div>
-        </div>
-      </div>
     </div>;,
   )}
 
-export default FaqSectionJs;"
-"
+export default FaqSectionJs;""

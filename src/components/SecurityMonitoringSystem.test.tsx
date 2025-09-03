@@ -9,6 +9,4 @@ export default function SecurityMonitoringSystem.test() {return (
           Professional SecurityMonitoringSystem.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

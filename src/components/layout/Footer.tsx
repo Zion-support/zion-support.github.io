@@ -117,5 +117,4 @@ e: "Blog", href: "/blog" } { name: "Documentation", href: "/docs" } { name: "API
   { name: "Facebook", icon: Facebook, href: "https:""',
 "
 "",
-}}"
-"
+}}""

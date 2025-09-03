@@ -9,6 +9,4 @@ export default function EnhancedMobileNavigation.test() {return (
           Professional EnhancedMobileNavigation.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

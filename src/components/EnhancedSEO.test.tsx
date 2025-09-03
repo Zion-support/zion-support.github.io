@@ -9,6 +9,4 @@ export default function EnhancedSEO.test() {return (
           Professional EnhancedSEO.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

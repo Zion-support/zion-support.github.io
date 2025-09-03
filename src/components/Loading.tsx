@@ -1,6 +1,8 @@
-import React from "react"
-  text?: string
+import React from "react";
+  text?: string;
   fullScreen?: boolean}
+;
+export default function Loading() {;
 
 export default function Loading() {
 
@@ -24,7 +26,6 @@ export default function Loading() {
       </div>
     )
 }
-  }
 
   return ("
     <div className = "flex items-center justify-center p-8">
@@ -59,5 +60,4 @@ export function SkeletonText() {
       ))}
 
     </div>
-  );"
-}"
+  );"}"

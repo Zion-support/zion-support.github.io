@@ -17,7 +17,6 @@ export default function SearchPage() {
 }
       performSearch(router.query.q as string)
 }
-    }
 
   }, [router.query.q])
 }
@@ -25,7 +24,6 @@ export default function SearchPage() {
     if (!query.trim()) return,
     setIsLoading(true),
     try {
-      // comment
       // comment
 const mockResults = [].filter(
         result =>
@@ -40,8 +38,6 @@ const mockResults = [].filter(
           } finally {
       setIsLoading(false)
 }
-    }
-  }
 
   const handleSearch = (e: React.FormEvent) => {,
     e.preventDefault(),
@@ -104,22 +100,21 @@ const mockResults = [].filter(
                   : "Found ${searchResults.length} results for "${router.query.q}"}"}
 
               </p>
-            </div>
-          )}
-
-          {isLoading ? ("
-            <div className="text-center py-12">"
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>"
-              <p className="mt-4 text-gray-600">Searching...</p>
-            </div>
-          ) : searchResults.length > 0 ? ("
-            <div className="space-y-6">
-              {searchResults.map((result, index) => ("
-                <div key="{index}""
-                  className="bg-white rounded-lg p-6 shadow-sm hover: shadow-md transition-shadow"
-                >"
-                  <div className="flex items-start space-x-4">"
-                    <div className="flex-shrink-0 mt-1">,
+            </div>          )}
+;
+          {isLoading ? (";
+            <div className="text-center py-12">";
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>";
+              <p className="mt-4 text-gray-600">Searching...</p>;
+            </div>;
+          ) : searchResults.length > 0 ? (";
+            <div className="space-y-6">;
+              {searchResults.map((result, index) => (";
+                <div key="{index}"";
+                  className="bg-white rounded-lg p-6 shadow-sm hover: shadow-md transition-shadow";
+                >";
+                  <div className="flex items-start space-x-4">";
+                    <div className="flex-shrink-0 mt-1">,;
                       {getIconForType(result.type)}
 
                     </div>"
@@ -138,7 +133,6 @@ const mockResults = [].filter(
                         <ArrowRight className="w-4 h-4 ml-1"  />
                       </Link>
                     </div>
-                  </div>
                 </div>,
               ))}
 
@@ -165,7 +159,6 @@ different keywords or browse our services."
                   View Solutions,
                 </Link>
               </div>
-            </div>
           ) : ("
             <div className="text-center py-12">"
               <Search className="w-16 h-16 text-gray-400 mx-auto mb-4"  />"
@@ -202,13 +195,9 @@ resources.
                     Blog, help, and documentation,
                   </p>
                 </div>
-              </div>
-            </div>
           )}
 
         </div>
-      </div>
     </>
   )
-}
-}"
+}}"

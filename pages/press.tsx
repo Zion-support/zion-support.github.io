@@ -36,8 +36,6 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
                   press@ziontechgroup.com,
                 </a>
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -89,12 +87,10 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
                         </svg>
                       </button>
                     </div>
-                  </div>
                 </div>,
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white">"
@@ -132,7 +128,6 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50">"
@@ -160,11 +155,9 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
                     {new Date(award.date).toLocaleDateString()}
 
                   </div>
-                </div>
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white">"
@@ -193,13 +186,9 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
                         <p className="font-semibold text-gray-900">{member.name}</p>"
                         <p className="text-gray-600">{member.title}</p>
                       </div>
-                    </div>
-                  </div>
-                </div>
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
@@ -219,7 +208,6 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
                 press@ziontechgroup.com,
               </a>
             </div>
-          </div>
         </section>
       </main>
 </>",

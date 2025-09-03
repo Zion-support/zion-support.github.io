@@ -54,7 +54,6 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
                     {service.subcategory}"});,"})"
                   </span>;,"});,"})"
                 </div>;,"});,"})"
-              </div>;,"});,"})"
               """;,"});,"})"
               {/* comment */}"""";,"});,"})"
               {service.aiScore && (<div className="relative">"""";,"});,"})"
@@ -88,7 +87,6 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
                     <span>{benefit}</span>;,"});,"})"
                   </div>) ) }"});,"})"
               </div>;,"});,"})"
-            </div>;,"});,"})"
 """;,"});,"})"
             {/* comment */}"""";,"});,"})"
             <div className="flex items-center justify-between pt-4 border-t border-gray-700/50">""";,"});,"})"
@@ -132,14 +130,10 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
                     {service.contactInfo.website}"});,"})"
                   </a>;,"});,"})"
                 </div>;,"});,"})"
-              </div>;,"});,"})"
-            </div>;,"});,"})"
-          </div>;,"});,"})"
 """;,"});,"})"
           {/* comment */}"""";,"});,"})"
           <motion.div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" initial="{false}/">;,"});,"})"
         </div>;,"});,"})"
-      </div>;,"});,"})"
     </motion.div>)};,"});,"})"
 export const FuturisticServicesShowcase = () => {}"});,"})"
 ";,"});,"})"
@@ -203,7 +197,6 @@ export const FuturisticServicesShowcase = () => {}"});,"})"
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-cyan-400">;,"});,"})"
                 🔍;,"});,"})"
               </div>;,"});,"})"
-            </div>;,"});,"})"
 """;,"});,"})"
             {/* comment */}""";,"});,"})"
             <div className="flex flex-wrap justify-center gap-2">""";,"});,"})"
@@ -213,7 +206,6 @@ export const FuturisticServicesShowcase = () => {}"});,"})"
                   {category === "all" ? "All Services" : category}"});,"})"
                 </button>) ) }"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
         </motion.div>;,"});,"})"
 """;,"});,"})"
         {/* comment */}"""";,"});,"})"
@@ -249,7 +241,6 @@ export const FuturisticServicesShowcase = () => {}"});,"})"
                 View All Services,"});,"})"
               </button>;,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
         </motion.div>;,"});,"})"
       </div>;,"});,"})"
     </div>)};"";,"});,"})"
@@ -269,8 +260,7 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
             : "bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30"}"}" >"""""
         <div className="relative bg-black/90 backdrop-blur-xl rounded-2xl p-6 h-full">"""""
           {/* comment */}""""
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">""""
-            {[...Array(8)].map((_, i) => (<motion .div key="{i}" className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate = {}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">""""            {[...Array(8)].map((_, i) => (<motion .div key="{i}" className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate = {}
 
   {}
 
@@ -358,8 +348,7 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
             {service.technologyStack && (<div className="mt-4 pt-4 border-t border-gray-700/50">""""
                 <h4 className="text-sm font-semibold text-purple-400 mb-2">Tech Stack</h4>""""
                 <div className="flex flex-wrap gap-1">""""
-                  {service.technologyStack.slice(0, 4).map((tech, idx) => (<span key="{idx}" className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded border border-purple-500/30">
-                      {tech}
+                  {service.technologyStack.slice(0, 4).map((tech, idx) => (<span key="{idx}" className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded border border-purple-500/30">                      {tech}
 
                     </span>) ) }
 
@@ -384,17 +373,14 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
 
                   </a>
                 </div>
-              </div>
             </div>"
           </div>""
 """""
           {/* comment */}""""
           <motion .div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" initial={false}/" >"
         </div>
-      </div>
     </motion.div>)}"
 export const FuturisticServicesShowcase = () => {}""
-""
 ""
 """;"""
     const [selectedCategory, setSelectedCategory] = useState("all")";""
@@ -503,7 +489,6 @@ useEffect(() => {}""
                 View All Services,
               </button>
             </div>
-          </div>
         </motion.div>"
       </div>"""",
     </div>)}"""""""

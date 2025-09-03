@@ -18,7 +18,6 @@ export default function EnhancedHeader() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
 }
-    }
 
     window.addEventListener("scroll", handleScroll)
 }
@@ -77,7 +76,6 @@ export default function EnhancedHeader() {
                 <div className="text-xs text-gray-500">
                   Technology Solutions,
                 </div>
-              </div>
             </Link>
           </div>
 ,
@@ -157,7 +155,6 @@ export default function EnhancedHeader() {
                 <span className="hidden lg:inline">Contact</span>
               </a>
             </div>
-          </div>
 ,
           {/* comment */}"
           <button onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}"
@@ -255,7 +252,6 @@ export default function EnhancedHeader() {
                   <span>kleber@ziontechgroup.com</span>
                 </a>
               </div>
-            </div>
           </div>,
         )}
 

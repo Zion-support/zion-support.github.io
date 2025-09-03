@@ -15,5 +15,4 @@ describe("Analytics", () => {}; "; it("renders without crashing", () => {}; rend
 }
   });"
 "
-});"
-"
+});""

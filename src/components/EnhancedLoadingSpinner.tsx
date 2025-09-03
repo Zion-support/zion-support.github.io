@@ -1,10 +1,19 @@
 import React from "react""
 interface EnhancedLoadingSpinnerProps {"
   size?: "sm" | "md" | "lg"
-  text?: string,
-className?: string}
+  text?: string,className?: string}
+;
+export default function EnhancedLoadingSpinner() {;
 
-export default function EnhancedLoadingSpinner() {
+  const sizeClasses = {";
+    sm: "w-8 h-8",";
+    md: "w-12 h-12",";
+    lg: "w-16 h-16";
+,;
+  const textSizes = {,";
+sm: "text-sm",";
+    md: "text-base",";
+    lg: "text-lg";
 
   const sizeClasses = {}"}>
       <motion.div,"
@@ -266,5 +275,4 @@ key={i}"""
 
 "
 ;"">
-}""
-"
+}"""

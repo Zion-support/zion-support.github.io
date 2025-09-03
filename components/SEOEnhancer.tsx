@@ -1,13 +1,12 @@
 import Head from "next/head"
 import React from "react"
+interface SEOEnhancerProps {;
 
-interface SEOEnhancerProps {
-
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
   type?: string}
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",
@@ -45,5 +44,4 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",
     </Head>
   )
 }
-""
-export default SEOEnhancer
+""export default SEOEnhancer

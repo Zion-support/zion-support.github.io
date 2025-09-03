@@ -1,8 +1,7 @@
 {
   "timestamp": "2025-09-03T05:20:46.282Z",
   "metrics": {
-    "bundleSize": "16M",
-    "buildTime": 0,
+    "bundleSize": "16M",    "buildTime": 0,
     "pageLoadTime": 0,
     "memoryUsage": 0
   },

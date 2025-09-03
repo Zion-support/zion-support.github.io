@@ -35,7 +35,6 @@ import React from "react"
 individuals who want to make a difference.
             </p>
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20">"
@@ -63,7 +62,6 @@ individuals who want to make a difference.
             })}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className = "py-20 bg-gray-50">"
@@ -97,7 +95,6 @@ individuals who want to make a difference.
                         {job.department}
 
                       </div>
-                    </div>
                   </div>"
                   <button className="mt-4 lg: mt-0 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center">
                     Apply Now"
@@ -119,11 +116,9 @@ individuals who want to make a difference.
 
                   </ul>
                 </div>
-              </div>
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20">"
@@ -156,14 +151,10 @@ that make a real difference in the world.
                   <div className="text-3xl font-bold text-blue-600 mb-2">4.8/5</div>"
                   <div className="text-gray-600">Employee Rating</div>
                 </div>
-              </div>
-            </div>
             "
             <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">"
               <p className="text-gray-500">Team Photo Placeholder</p>
             </div>
-          </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-blue-600 text-white">"
@@ -181,5 +172,4 @@ that make a real difference in the world.
     </MainLayout>,,
   )}
 
-"
-export default TalentIndex
+"export default TalentIndex

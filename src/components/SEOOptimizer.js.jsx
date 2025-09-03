@@ -210,7 +210,6 @@ const SEOOptimizer = () => {}"});,"})"
 """;,"});,"})"
             recommendations.push("Use SEO-friendly URLs with hyphens and descriptive terms")}""";,"});,"})"
         recommendations.push();"";,"});,"})"
-        recommendations.push();"";,"});,"})"
         recommendations.push("Optimize page loading speed for better user experience and SEO");,"});,"})"
         return recommendations};,"});,"})"
     const generateSummary = (pageAnalyses, topIssues) => {}"});,"})"
@@ -381,7 +380,6 @@ const SEOOptimizer = () => {}"});,"})"
                       </tbody>;,"});,"})"
                     </table>;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
 """;,"});,"})"
                 {/* comment */}"""";,"});,"})"
                 {selectedPage && (<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">"""";,"});,"})"
@@ -413,7 +411,6 @@ const SEOOptimizer = () => {}"});,"})"
                             <div className="text-sm text-gray-500 dark: text-gray-400">Links</div>"""","});,"})"
                             <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.links.length}</div>;,"});,"})"
                           </div>;,"});,"})"
-                        </div>;,"});,"})"
 """;,"});,"})"
                         {selectedPage.issues.length > 0 && (<div>"""";,"});,"})"
                             <h4 className="font-medium text-red-600 dark: text-red-400 mb-2">SEO Issues Found</h4>"""","});,"})"
@@ -487,7 +484,6 @@ const SEOOptimizer = () => {}
 const samplePages = []"
                 {}""
 """
-"""
 """"
                     url: "/", """"
                     title: "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",""""
@@ -498,7 +494,6 @@ const samplePages = []"
                     keywords["AI solutions", quantum computing",cybersecurity", digital transformation"], ";"
 }, {}""
 """
-"""
 """""
                     url: "/services", """""
                     title: "Our Services - Comprehensive Technology Solutions","""""
@@ -508,7 +503,6 @@ const samplePages = []"
                     links["/ai - solutions", /cloud-devops",/cybersecurity", /about"], ",""
                     keywords["technology services", AI solutions",cloud infrastructure", cybersecurity"], ";"
 }, {}""
-"""
 """
 """""
                     url: "/ai - solutions", """""
@@ -562,8 +556,7 @@ const samplePages = []"
 const averageScore = Math.round(pageAnalyses.reduce ( (sum, page) => sum + page.score, 0) / totalPages)
 }
             const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0) .length,
-            // comment
-const issueCounts = {}
+            // commentconst issueCounts = {}
 
             pageAnalyses.forEach(page => {}
 
@@ -586,10 +579,8 @@ const issueCounts = {}
                 totalPages, averageScore, pagesWithIssues, topIssues, pageAnalyses, summary}) }"
         catch (error) {}""
 """
-"""
 """""
             // comment
-
         finally {}
 
             setIsAnalyzing(false)}
@@ -605,8 +596,7 @@ analyzeSEO()}, [analyzeSEO])
 
         let score = 0,
 let maxScore = 0,
-        // comment
-if(page.title.length >= 30 && page.title.length <= 60) {}
+        // commentif(page.title.length >= 30 && page.title.length <= 60) {}
 
             score += 20}
 
@@ -614,8 +604,7 @@ if(page.title.length >= 30 && page.title.length <= 60) {}
 
             score += 10}
 
-        // comment
-if(page.metaDescription.length >= 120 && page.metaDescription.length <= 160) {}
+        // commentif(page.metaDescription.length >= 120 && page.metaDescription.length <= 160) {}
 
             score += 15}
 
@@ -623,8 +612,7 @@ if(page.metaDescription.length >= 120 && page.metaDescription.length <= 160) {}
 
             score += 8}
 
-        // comment
-if(page.headings.length >= 3) {}
+        // commentif(page.headings.length >= 3) {}
 
             score += 15}
 
@@ -632,8 +620,7 @@ if(page.headings.length >= 3) {}
 
             score += 10}
 
-        // comment
-if(page.images.length >= 2) {}
+        // commentif(page.images.length >= 2) {}
 
             score += 10}
 
@@ -641,8 +628,7 @@ if(page.images.length >= 2) {}
 
             score += 5}
 
-        // comment
-if(page.links.length >= 3) {}
+        // commentif(page.links.length >= 3) {}
 
             score += 15}
 
@@ -650,8 +636,7 @@ if(page.links.length >= 3) {}
 
             score += 10}
 
-        // comment
-if(page.keywords.length >= 3) {}
+        // commentif(page.keywords.length >= 3) {}
 
             score += 10}
 
@@ -661,7 +646,6 @@ if(page.keywords.length >= 3) {}
         // comment
         maxScore += 15"""
         if (page.url === "/" || page.url.includes("-")) {}
-
             score += 15}
 
         else if(page.url.length > 0) {}
@@ -673,36 +657,29 @@ if(page.keywords.length >= 3) {}
     const issues = []"
         if (!page.title || page.title.length < 30) {}""
 """
-"""
 """""
             issues.push("Title is too short (should be 30-60 characters))}"
         else if (page.title.length > 60) {}""
-"""
 """
 """""
             issues.push("Title is too long (should be 30-60 characters))}"
         if (!page.metaDescription || page.metaDescription.length < 120) {}""
 """
-"""
 """""
             issues.push("Meta description is too short (should be 120-160 characters))}"
         else if (page.metaDescription.length > 160) {}""
-"""
 """
 """""
             issues.push("Meta description is too long (should be 120-160 characters))}"
         if (page.headings.length < 2) {}""
 """
-"""
 """""
             issues.push("Insufficient heading structure (should have at least 2 headings))}"
         if (page.images.length === 0) {}""
 """
-"""
 """""
             issues.push("No images found (consider adding relevant images with alt text))}"
         if (page.links.length < 2) {}""
-"""
 """
 """""
             issues.push("Insufficient internal linking (should have at least 2 internal links))}"
@@ -710,7 +687,6 @@ if(page.keywords.length >= 3) {}
 """
             issues.push("Insufficient keyword targeting (should have at least 2 relevant keywords))}""
         if (page.url !== "/" && !page.url.includes("-")) {}""
-"""
 """
 """""
             issues.push("URL could be more SEO-friendly (consider using hyphens))}"
@@ -737,7 +713,6 @@ if(page.keywords.length >= 3) {}
             recommendations.push("Research and include relevant keywords naturally throughout the content")}"""
         if (issues.some(issue => issue.includes("URL"))) {}""
 ""
-""
 """"
             recommendations.push("Use SEO-friendly URLs with hyphens and descriptive terms")}""""
         recommendations.push("Ensure content is unique, valuable, and addresses user intent")";""
@@ -747,8 +722,7 @@ if(page.keywords.length >= 3) {}
         recommendations.push("Ensure content is unique, valuable, and addresses user intent")"
         recommendations.push("Implement structured data markup for better search engine understanding")"
         recommendations.push()
-}
-        return recommendations}
+}        return recommendations}
 
     const generateSummary = (pageAnalyses, topIssues) => {}
 
@@ -888,8 +862,7 @@ a.download = "seo-optimization-report.csv
                       Top SEO Issues to Address"""""
                     </h4>"""""
                     <div className="space-y-1">"""",
-                      {report.topIssues.slice(0, 3).map((issue, index) => (<div key="{index}" className="text-sm text-yellow-700 dark: text-yellow-300">,
-                          • {issue}
+                      {report.topIssues.slice(0, 3).map((issue, index) => (<div key="{index}" className="text-sm text-yellow-700 dark: text-yellow-300">,                          • {issue}
 
                         </div>) ) }
 
@@ -1015,34 +988,30 @@ a.download = "seo-optimization-report.csv
               <Download className="w-4 h-4"/" >"
               Export,
             </button>
-          </div>;,
-        </div>)}
+          </div>;,        </div>)}
 
     </div>)}
 
 export default SEOOptimizer
-
 export { SEOOptimizer }
-
+;
 export { SEOOptimizer }
-
+;
 export { SEOOptimizer }
-
+;
 export { SEOOptimizer }
-
+;
 export { SEOOptimizer }
 
     </div>)}
 
-export default SEOOptimizer,
+export default SEOOptimizer,export { SEOOptimizer }
+;
 export { SEOOptimizer }
-
+;
 export { SEOOptimizer }
-
-export { SEOOptimizer }
-
+;
 export { SEOOptimizer }
 
 export { SEOOptimizer }"
-""""
-"
+"""""

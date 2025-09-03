@@ -56,10 +56,9 @@ links: [ { name: "Help Center", href: "/help" }, { name: "FAQ", href: "/faq" }, 
   const legalLinks = []: string | number | boolean | File}
 
 interface FormData {
-
   [key: string]: string | number | boolean | File}
-
-interface ComponentProps {className?: string
+;
+interface ComponentProps {className?: string;
   children?: React.ReactNode [key: string]: unknown}
 
 export default function Footer()   {const currentYear = new Date().getFullYear()
@@ -345,5 +344,4 @@ e: "About Us", href: "/about" } {""
     </footer>"
   )}"""
     </footer>"""
-"""
-"
+""""

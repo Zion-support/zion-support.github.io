@@ -15,5 +15,4 @@ describe("case - studies", () => {}; "; it("renders without crashing", () => {};
 }
   });"
 "
-});"
-"
+});""

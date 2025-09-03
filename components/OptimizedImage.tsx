@@ -1,5 +1,5 @@
 
-interface OptimizedImageProps {
+interface OptimizedImageProps {;
 
   src: string,,
 alt: string
@@ -45,8 +45,7 @@ useEffect(() => {
     const observer = new IntersectionObserver()
 }
       ([entry]) => {
-
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting) {;
 
           setIsInView(true)
 }

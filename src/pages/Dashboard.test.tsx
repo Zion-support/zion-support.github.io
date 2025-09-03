@@ -15,5 +15,4 @@ describe("Dashboard", () => {}; "; it("renders without crashing", () => {}; rend
 }
   });"
 "
-});"
-"
+});""

@@ -15,5 +15,4 @@ describe("MobileLaunch", () => {}; "; it("renders without crashing", () => {}; r
 }
   });"
 "
-});"
-"
+});""

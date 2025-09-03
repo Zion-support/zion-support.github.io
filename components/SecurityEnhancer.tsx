@@ -49,7 +49,6 @@ const detectXSS = () => {"
       img-src "self" data: https: blob:,"
       connect-src "self" http,
     s: // comment
-    s: // comment
 frame-src "none"
       object-src "none"
       base-uri "self"
@@ -77,8 +76,7 @@ const securityHeaders = {}
                 if (script.src && !script.src.startsWith(window.location.origin) &&""
              !script.src.includes("googletagmanager.com") &&""
              !script.src.includes("google-analytics.com")) {""
-             !script.src.includes("google-analytics.com")) {"
-                    script.remove()}
+             !script.src.includes("google-analytics.com")) {"                    script.remove()}
 
       })}
 
@@ -109,7 +107,6 @@ iframes.forEach(iframe => {
           !iframe.src.includes("vimeo.com")
 }
     // comment
-      // comment
                 if (!iframe.src.startsWith(window.location.origin) &&""
              !iframe.src.includes("youtube.com") &&""
              !iframe.src.includes("vimeo.com")) {""
@@ -140,8 +137,7 @@ iframes.forEach(iframe => {
                                     alert("
                     "Suspicious content detected. Please check your input."
                   )
-}
-                  return}
+}                  return}
 
               })}
 
@@ -164,7 +160,6 @@ iframes.forEach(iframe => {
            />
       {/* comment */}""
       <meta httpEquiv="Strict-Transport-Security" content="max-age="31536000" includeSubDomains preload"  />"
-    // comment
     // comment
       monitorSuspiciousActivity()}, 30000); // comment
     return () => {

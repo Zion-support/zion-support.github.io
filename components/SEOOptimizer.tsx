@@ -1,15 +1,14 @@
 import React from "react"
+interface SEOOptimizerProps {;
 
-interface SEOOptimizerProps {
-
-  title?: string
-   description?: string
-   keywords?: string
-   ogImage?: string
-   ogType?: string
-   canonicalUrl?: string
-   structuredData?: any
-   noindex?: boolean
+  title?: string;
+   description?: string;
+   keywords?: string;
+   ogImage?: string;
+   ogType?: string;
+   canonicalUrl?: string;
+   structuredData?: any;
+   noindex?: boolean;
    nofollow?: boolean}
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,"
@@ -54,7 +53,6 @@ const defaultStructuredData = {},"
       <link rel="preconnect" href="https: // comment
       <link: rel = "preconnect" href="https:// comment
       <link: rel="preconnect" href="https:// comment
-      <link: rel="preconnect" href="https:// comment
       <script type="application/ld+json"";"
         dangerouslySetInnerHTML = "{{"
           __html: JSON.stringify(finalStructuredDat,a, null, 2)>
@@ -88,7 +86,6 @@ const defaultStructuredData = {},"
 
   const finalStructuredData = structuredData || defaultStructuredData,
 return (
-  return (
       <title>{fullTitle}</title>"""
       <meta name = "description" content="{fullDescription}"  />""
       <meta name="keywords" content="{keywords}"  />""
@@ -135,9 +132,7 @@ r: creator" content="@ziontechgroup" />,
       <link rel="preconnect" href="https:// comment
       <link rel="preconnect" href="http,"
     s: // comment
-s: // comment
       {/* comment */}"
-      <link rel="dns-prefetch" href="// comment
       <link rel="dns-prefetch" href="// comment
       {/* comment */}"
       <script""

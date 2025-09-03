@@ -11,8 +11,6 @@ export default function PerformanceOptimizations() {return ("
           Professional PerformanceOptimizations services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

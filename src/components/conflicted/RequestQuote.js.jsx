@@ -383,7 +383,6 @@ export default function RequestQuote() {}"});,"})"
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus: outline-none focus:border-cyan-400 transition-colors"""","});,"})"
                         placeholder="Enter your phone number""";,"});,"})" />;,"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
 """;,"});,"})"
                   <div>"""";,"});,"})"
                     <label className="block text-white font-medium mb-2">;,"});,"})"
@@ -431,12 +430,9 @@ export default function RequestQuote() {}"});,"})"
                               <div className="text-white/60 text-sm">;,"});,"})"
                                 {type.description}"});,"})"
                               </div>;,"});,"})"
-                            </div>;,"});,"})"
-                          </div>;,"});,"})"
                         </label>;,"});,"})"
                       ))}"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
 """;,"});,"})"
                   {/* comment */}"""";,"});,"})"
                   <div className="grid grid-cols-1 md: grid-cols-2 gap-6">""","});,"})"
@@ -476,7 +472,6 @@ export default function RequestQuote() {}"});,"})"
                         ))}"});,"})"
                       </select>;,"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
                   {/* comment */}""";,"});,"})"
                   <div>"""";,"});,"})"
                     <label className="block text-white font-medium mb-4">;,"});,"})"
@@ -507,11 +502,9 @@ export default function RequestQuote() {}"});,"})"
                             <div className="text-white/60 text-xs">;,"});,"})"
                               {level.description}"});,"})"
                             </div>;,"});,"})"
-                          </div>;,"});,"})"
                         </label>;,"});,"})"
                       ))}"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
                   {/* comment */}""";,"});,"})"
                   <div>"""";,"});,"})"
                     <label className="block text-white font-medium mb-2">;,"});,"})"
@@ -616,7 +609,6 @@ export default function RequestQuote() {}"});,"})"
                     <MapPin className="w-5 h-5 mr-3 text-green-400 mt-1"  />;,"});,"})"
                     <span>Delaware, United States</span>;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
               </motion.div>;,"});,"})"
               {/* comment */}"});,"})"
               <motion.div,"});,"})"
@@ -670,9 +662,6 @@ export default function RequestQuote() {}"});,"})"
                       <div className="text-white/60 text-sm">;,"});,"})"
                         100% satisfaction,"});,"})"
                       </div>;,"});,"})"
-                    </div>;,"});,"})"
-                  </div>;,"});,"})"
-                </div>;,"});,"})"
               </motion.div>;,"});,"})"
               {/* comment */}"});,"})"
               <motion.div,"});,"})"
@@ -734,13 +723,8 @@ export default function RequestQuote() {}"});,"})"
                       <div className="text-white/60 text-sm">;,"});,"})"
                         Begin development,"});,"})"
                       </div>;,"});,"})"
-                    </div>;,"});,"})"
-                  </div>;,"});,"})"
-                </div>;,"});,"})"
               </motion.div>;,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
-        </div>;,"});,"})"
       </section>;,"});,"})"
     </div>)}"});,"})"
 ;,"});,"})"
@@ -912,13 +896,11 @@ icon: Briefcase,"
   const projectTypes = []"
     {}""
 """
-"""
 """""
       value: "web-development", """""
       label: "Web Development","""
       icon: Globe, """""
       description: "Custom websites and web applications"}, {}""
-"""
 """
 """""
       value: "mobile-app", """""
@@ -926,13 +908,11 @@ icon: Briefcase,"
       icon: Smartphone, """""
       description: "iOS and Android applications"}, {}""
 """
-"""
 """""
       value: "ai-ml", """""
       label: "AI & Machine Learning","""
       icon: Brain, """""
       description: "Intelligent automation and analytics"}, {}""
-"""
 """
 """""
       value: "cloud-infrastructure", """""
@@ -940,13 +920,11 @@ icon: Briefcase,"
       icon: Cloud, """""
       description: "AWS, Azure, GCP solutions"}, {}""
 """
-"""
 """""
       value: "cybersecurity", """""
       label: "Cybersecurity","""
       icon: Shield, """""
       description: "Security audits and implementation"}, {}""
-"""
 """
 """""
       value: "data-analytics", """""
@@ -954,13 +932,11 @@ icon: Briefcase,"
       icon: BarChart3, """""
       description: "Business intelligence and reporting"}, {}""
 """
-"""
 """""
       value: "ui-ux-design", """""
       label: "UI/UX Design","""
       icon: Palette, """""
       description: "User interface and experience design"}, {}""
-"""
 """
 """""
       value: "software-development", """""
@@ -968,20 +944,17 @@ icon: Briefcase,"
       icon: Code, """""
       description: "Enterprise software solutions"}, {}""
 """
-"""
 """""
       value: "devops", """""
       label: "DevOps & CI/CD","""
       icon: Server, """""
       description: "Automation and deployment pipelines"}, {}""
 """
-"""
 """""
       value: "network-infrastructure", """""
       label: "Network Infrastructure","""
       icon: Wifi, """""
       description: "Network design and setup"}, {}""
-"""
 """
 """""
       value: "database-design", """""
@@ -1075,30 +1048,25 @@ icon: Briefcase,"
   const budgetRanges = []"
     {}""
 """
-"""
 """""
       value: "under-10k", """""
       label: "Under $10,000", """""
       description: "Small projects and MVPs"}, {}""
-"""
 """
 """""
       value: "10k-25k", """""
       label: "$10,000 - $25, 000","""""
       description: "Medium-sized applications"}, {}""
 """
-"""
 """""
       value: "25k-50k","""""
       label: "$25, 000 - $50,000", """""
       description: "Complex applications"}, {}""
 """
-"""
 """""
       value: "50k-100k", """""
       label: "$50,000 - $100, 000","""""
       description: "Enterprise solutions"}, {}""
-"""
 """
 """""
       value: "100k-plus","""""
@@ -1145,20 +1113,17 @@ icon: Briefcase,"
   const urgencyLevels = []"
     {}""
 """
-"""
 """""
       value: "low", """""
       label: "Low","""""
       description: "No immediate deadline", """""
       color: "text-green-400"}, {}""
 """
-"""
 """""
       value: "medium", """""
       label: "Medium","""""
       description: "Standard project timeline", """""
       color: "text-yellow-400"}, {}""
-"""
 """
 """""
       value: "high", """""
@@ -1208,14 +1173,12 @@ setFormData(prev => ({}
     // comment
 setTimeout(() => {}""
 """
-"""
 """""
       setSubmissionStatus()
 }
       // comment
 setTimeout(() => {}"
         setFormData({}""
-"""
 """
 """""
           firstName: "", """""
@@ -1442,8 +1405,6 @@ initial="{{" opacity: 0, x: -30 }}"
                                 {type.description}
 
                               </div>
-                            </div>
-                          </div>
                         </label>
                       ))}
 
@@ -1524,7 +1485,6 @@ initial="{{" opacity: 0, x: -30 }}"
                               {level.description}
 
                             </div>
-                          </div>
                         </label>
                       ))}
 
@@ -1649,7 +1609,6 @@ initial="{{" opacity: 0, x: 30 }}"
                     <MapPin className="w-5 h-5 mr-3 text-green-400 mt-1" /" >",
                     <span>Delaware, United States</span>
                   </div>
-                </div>
               </motion.div>
               {/* comment */}
 
@@ -1674,7 +1633,6 @@ initial="{{" opacity: 0, x: 30 }}"
                         Certified professionals"
                       </div>""
                     </div>"""""
-                  </div>"""""
                   <div className="flex items-start">""""
                     <Users className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" /" >""""
                     <div>""""
@@ -1685,7 +1643,6 @@ initial="{{" opacity: 0, x: 30 }}"
                         500+ successful projects"
                       </div>""
                     </div>"""""
-                  </div>"""""
                   <div className="flex items-start">""""
                     <Zap className="w-5 h-5 text-purple-400 mr-3 mt-1 flex-shrink-0" /" >""""
                     <div>""""
@@ -1696,7 +1653,6 @@ initial="{{" opacity: 0, x: 30 }}"
                         Quick turnaround times"
                       </div>""
                     </div>"""""
-                  </div>"""""
                   <div className="flex items-start">""""
                     <Shield className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" /" >""""
                     <div>""""
@@ -1706,9 +1662,6 @@ initial="{{" opacity: 0, x: 30 }}"
                       <div className="text-white/60 text-sm">
                         100% satisfaction,
                       </div>
-                    </div>
-                  </div>
-                </div>
               </motion.div>
               {/* comment */}
 
@@ -1737,7 +1690,6 @@ initial="{{" opacity: 0, x: 30 }}"
                         Submit your requirements"
                       </div>""
                     </div>"""""
-                  </div>"""""
                   <div className="flex items-start">""""
                     <div className="w-6 h-6 bg-purple-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">"
                       2""
@@ -1748,7 +1700,6 @@ initial="{{" opacity: 0, x: 30 }}"
                         We review your needs"
                       </div>""
                     </div>"""""
-                  </div>"""""
                   <div className="flex items-start">""""
                     <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">"
                       3""
@@ -1761,7 +1712,6 @@ initial="{{" opacity: 0, x: 30 }}"
                         Get comprehensive estimate"
                       </div>""
                     </div>"""""
-                  </div>"""""
                   <div className="flex items-start">""""
                     <div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">"
                       4""
@@ -1773,34 +1723,27 @@ initial="{{" opacity: 0, x: 30 }}"
                       <div className="text-white/60 text-sm">
                         Begin development,
                       </div>
-                    </div>
-                  </div>
-                </div>
               </motion.div>
             </div>
-          </div>
-        </div>
-      </section>
-    </div>)}
-
+      </section>    </div>)}
+;
+export { RequestQuote }
+;
+export { RequestQuote }
+;
+export { RequestQuote }
+;
+export { RequestQuote }
+;
 export { RequestQuote }
 
 export { RequestQuote }
-
+;
 export { RequestQuote }
-
+;
 export { RequestQuote }
-
-export { RequestQuote }
-
-export { RequestQuote }
-
-export { RequestQuote }
-
-export { RequestQuote }
-
+;
 export { RequestQuote }
 
 export { RequestQuote }"
-""""
-"
+"""""

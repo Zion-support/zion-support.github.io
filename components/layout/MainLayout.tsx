@@ -1,6 +1,5 @@
 import React from "react"
-
-interface MainLayoutProps {
+interface MainLayoutProps {;
 
   children: React.ReactNode,
   title?: string,,
@@ -25,5 +24,4 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children,"
     </div>
   )
 }
-""
-export default MainLayout
+""export default MainLayout

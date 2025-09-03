@@ -53,10 +53,7 @@ const HomePageSkeleton = () => {
               Get Started,
             </a>
           </div>
-        </div>
-      </div>
     </div>;,
   )}
 
-export default HomePageSkeleton;"
-"
+export default HomePageSkeleton;""

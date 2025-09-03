@@ -1,7 +1,6 @@
 import React from "react"
 import { useState, useCallback } from "react";,"});,"})","});,"})","});,"})"
 ;,"});,"})"
-;,"});,"})"
 export const BlockchainWeb3Dashboard = ({ className = "" }) => {;,"});,"})"
     const { trackEvent } = useAnalytics({        enableTracking: true,"});,"})"
         enableUserBehaviorTracking: true,"});,"});"
@@ -112,7 +111,6 @@ export const BlockchainWeb3Dashboard = ({ className = "" }) => {;,"});,"})"
                             <Download className="w-4 h-4"  />;,"});,"})"
                           </button>;,"});,"})"
                         </div>;,"});,"})"
-                      </div>;,"});,"})"
                       """;,"});,"})"
                       <div>"""";,"});,"})"
                         <label className="block text-sm font-medium text-gray-700 dark: text-gray-300 mb-1">,"});,"})"
@@ -136,7 +134,6 @@ export const BlockchainWeb3Dashboard = ({ className = "" }) => {;,"});,"})"
                         </label>"""";,"});,"})"
                         <p className="text-lg text-gray-900 dark:text-white">{wallet.chainId}</p>;,"});,"})"
                       </div>;,"});,"})"
-                    </div>;,"});,"})"
                   </div>""";,"});,"})"
 """";,"});,"})"
                   <div className="bg-gray-50 dark: bg-gray-800 p-6 rounded-lg">"""","});,"})"
@@ -152,7 +149,6 @@ export const BlockchainWeb3Dashboard = ({ className = "" }) => {;,"});,"})"
                         <span>Mint NFT</span>;,"});,"})"
                       </button>;,"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
                 </div>)}"});,"})"
             </motion.div>)}""";,"});,"})"
 """"";,"});,"})"
@@ -220,7 +216,6 @@ export const BlockchainWeb3Dashboard = ({ className = "" }) => {;,"});,"})"
                           {contract.lastInteraction.toLocaleDateString()}"});,"})"
                         </span>;,"});,"})"
                       </div>;,"});,"})"
-                    </div>;,"});,"})"
                   </div>) ) }"});,"})"
               </div>;,"});,"})"
             </motion.div>)}""";,"});,"})"
@@ -276,7 +271,6 @@ export const BlockchainWeb3Dashboard = ({ className = "" }) => {;,"});,"})"
                             <span className="text-green-600 font-medium">{nft.price} ETH</span>;,"});,"})"
                           </div>)}"});,"})"
                       </div>;,"});,"})"
-                    </div>;,"});,"})"
                   </div>) ) }"});,"})"
               </div>;,"});,"})"
             </motion.div>)}""";,"});,"})"
@@ -349,7 +343,6 @@ export const BlockchainWeb3Dashboard = ({ className = "" }) => {;,"});,"})"
                           {position.startDate.toLocaleDateString()}"});,"})"
                         </span>;,"});,"})"
                       </div>;,"});,"})"
-                    </div>;,"});,"})"
                   </div>) ) }"});,"})"
               </div>;,"});,"})"
             </motion.div>)}""";,"});,"})"
@@ -433,8 +426,6 @@ export const BlockchainWeb3Dashboard = ({ className = "" }) => {;,"});,"})"
                             {tx.timestamp.toLocaleString()}"});,"})"
                           </p>;,"});,"})"
                         </div>;,"});,"})"
-                      </div>;,"});,"})"
-                    </div>;,"});,"})"
                   </div>) ) }"});,"})"
               </div>;,"});,"})"
             </motion.div>) }"});,"})"
@@ -582,13 +573,11 @@ export const BlockchainWeb3Dashboard = ({ className = "" }) => {"
     const { wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition } = useBlockchainWeb3()"
     const [nftForm, setNftForm] = useState({}""
 """
-"""
 """""
         name: "", """""
         description: "","""""
         image: ""})"
     const [transactionForm, setTransactionForm] = useState({}""
-"""
 """
 """""
         to: "", """""
@@ -607,13 +596,11 @@ export const BlockchainWeb3Dashboard = ({ className = "" }) => {"
 
         catch (error) {}"""
 """
-"""
 """""
             // comment
 
     }, [connectWallet, trackEvent])
-}
-    const handleMintNFT = useCallback(async () => {}
+}    const handleMintNFT = useCallback(async () => {}
 
         if(nftForm.name.trim() && wallet) {}
 
@@ -640,7 +627,6 @@ export const BlockchainWeb3Dashboard = ({ className = "" }) => {"
             catch (error) {}""
 ""
 """
-"""
 """""
                 // comment
 
@@ -657,7 +643,6 @@ export const BlockchainWeb3Dashboard = ({ className = "" }) => {"
                 setShowSendTransaction(false)"""
                 trackEvent("blockchain", dashboard",transaction_sent")}"
             catch (error) {}""
-"""
 """
 """""
                 // comment
@@ -816,7 +801,6 @@ export const BlockchainWeb3Dashboard = ({ className = "" }) => {"
 
                         </span>
                       </div>
-                    </div>
                   </div>) ) }"
               </div>""
             </motion.div>)}"""""
@@ -868,7 +852,6 @@ export const BlockchainWeb3Dashboard = ({ className = "" }) => {"
                           </div>)}
 
                       </div>
-                    </div>
                   </div>) ) }"
               </div>""
             </motion.div>)}"""""
@@ -940,7 +923,6 @@ export const BlockchainWeb3Dashboard = ({ className = "" }) => {"
 
                         </span>
                       </div>
-                    </div>
                   </div>) ) }"
               </div>""
             </motion.div>)}"""""
@@ -1022,8 +1004,6 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}"
 
                           </p>
                         </div>
-                      </div>
-                    </div>
                   </div>) ) }
 
               </div>

@@ -15,5 +15,4 @@ describe("ServicesPage", () => {}; "; it("renders without crashing", () => {}; r
 }
   });"
 "
-});"
-"
+});""

@@ -9,6 +9,4 @@ export default function ErrorFallback() {return (
           Professional ErrorFallback services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

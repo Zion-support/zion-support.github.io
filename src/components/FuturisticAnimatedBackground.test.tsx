@@ -9,6 +9,4 @@ export default function FuturisticAnimatedBackground.test() {return (
           Professional FuturisticAnimatedBackground.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

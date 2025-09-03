@@ -19,10 +19,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}      />
     )
 }
-  }
 
 )"
 Button.displayName = "Button"
->>>>>>> 92e970263e01302a6ec9ed9848ce724c6698ab78"
 
 export default Component

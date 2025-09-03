@@ -58,10 +58,7 @@ const ThemeToggleJs = () => {
               Get Started,
             </a>
           </div>
-        </div>
-      </div>
     </div>;,
   )}
 
-export default ThemeToggleJs;"
-"
+export default ThemeToggleJs;""

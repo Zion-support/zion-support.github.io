@@ -15,5 +15,4 @@ describe("AIPoweredSEO", () => {}; "; it("renders without crashing", () => {}; r
 }
   });"
 "
-});"
-"
+});""

@@ -19,7 +19,6 @@ import React { useState, useEffect } from "react";,"});,"})","})"
             if (url.startsWith("/") || url.includes("ziontechgroup.com")) {}"});,"})"
                     responseTime: Date.now () - startTime,"});,"})"
             // comment
-            // comment
 }}"});,"})"
         catch(error) {}"});,"})"
                 status: "broken","});,"})"
@@ -120,7 +119,6 @@ import React { useState, useEffect } from "react";,"});,"})","})"
                   <div className="text-sm text-gray-400">{link.url}</div>"""";,"});,"})"
                   {status.error && (<div className="text-xs text-red-400 mt-1">{status.error}</div>)}"});,"})"
                 </div>""";,"});,"})"
-              </div>""";,"});,"})"
               <div className="text-right">"";,"});,"})"
                 <div className="{"text-sm" font-medium ${getStatusColor(status.status)}"}>;,`});,"})"
                   {getStatusText(status.status)}""";,"});,"})"
@@ -160,6 +158,4 @@ export { LinkHealthChecker };,"});,"})"
 }}}"
  const LinkHealthChecker = ({ links, className=" }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {
 ""
-""
 "
-

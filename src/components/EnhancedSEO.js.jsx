@@ -38,7 +38,6 @@ export default function EnhancedSEO({ title = "Zion Tech Group - Advanced AI, Qu
 },"""";,"});,"})"
         "sameAs"[;"""";,"});,"})"
             "https:// comment
-            "https:// comment
             "https: // comment
         ],"""";,"});,"})"
         "offers": {}"});,"})"
@@ -103,11 +102,8 @@ export default function EnhancedSEO({ title = "Zion Tech Group - Advanced AI, Qu
       """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       <link rel="preconnect" href="https: // comment
-      <link rel="preconnect" href="https: // comment
-      <link rel="preconnect" href="https: // comment
       """;,"});,"})"
       {/* comment */}"""";,"});,"})"
-      <link rel="dns-prefetch" href="https: // comment
       <link rel="dns-prefetch" href="https: // comment
       """;,"});,"})"
       {/* comment */}"""";,"});,"})"
@@ -161,7 +157,6 @@ export { EnhancedSEO };,"});,"})"
             "email": "kleber@ziontechgroup.com""""
         },""""
         "sameAs"[";""
-            "https:// comment
             "https:// comment
             "https: // comment
         ],"""",
@@ -229,7 +224,6 @@ export { EnhancedSEO };,"});,"})"
 export default function EnhancedSEO({ title = "Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions", description = "Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting-edge technology services.", keywords = "AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation", canonical, ogImage = "https:// comment
 ""
 """
-"""
 """""
     const currentUrl = typeof window !== "null" ? window.location.href : canonical || "https: // comment
     // comment
@@ -248,7 +242,6 @@ const defaultStructuredData = {}""
         "description": description,"""""
         "address": {}""
 """""
-"""""
             "@type": "PostalAddress", """""
             "streetAddress": "364 E Main St STE 1008","""""
             "addressLocality": "Middletown", """""
@@ -264,7 +257,6 @@ const defaultStructuredData = {}""
 }, """""
         "contactPoint": {}""
 """""
-"""""
             "@type": "ContactPoint","""""
             "telephone": "+1-302-464-0950", """""
             "contactType": "customer service","""""
@@ -272,11 +264,8 @@ const defaultStructuredData = {}""
 },"""";""
         "sameAs"[";""""
             "https: // comment
-            "https: // comment
-            "https: // comment
 ], """""
         "offers": {}""
-"""""
 """""
             "@type": "AggregateOffer","""""
             "priceCurrency": "USD", """""
@@ -287,8 +276,6 @@ const defaultStructuredData = {}""
             "contactType": "customer service,""""
             "email": "kleber@ziontechgroup.com""""},""""
         "sameAs"[""
-            "https:// comment
-            "https:// comment
             "https:// comment
         "offers": {}"
 """"
@@ -354,7 +341,6 @@ return (<Helmet>""
       {/* comment */}"""""
       <link rel="preconnect" href="https: // comment
       <link rel="preconnect" href="https:// comment
-      <link rel="preconnect" href="https:// comment
       """"",
       {/* comment */}"""""
       <link rel="dns-prefetch" href="https: // comment
@@ -364,27 +350,26 @@ return (<Helmet>""
       <meta httpEquiv="X-Content-Type-Options" content="nosniff"/" >"""""
       <meta httpEquiv="X-Frame-Options" content="DENY"/" >"""""
       <meta httpEquiv="X-XSS-Protection" content="1 mode=block"/" >"""""
-      <meta httpEquiv="Referrer-Policy" content='strict-origin-when-cross-origin"/" >
-    </Helmet>)}
-
+      <meta httpEquiv="Referrer-Policy" content='strict-origin-when-cross-origin"/" >    </Helmet>)}
+;
+export { EnhancedSEO }
+;
+export { EnhancedSEO }
+;
+export { EnhancedSEO }
+;
+export { EnhancedSEO }
+;
 export { EnhancedSEO }
 
 export { EnhancedSEO }
-
+;
 export { EnhancedSEO }
-
+;
 export { EnhancedSEO }
-
+;
 export { EnhancedSEO }
-
-export { EnhancedSEO }
-
-export { EnhancedSEO }
-
-export { EnhancedSEO }
-
-export { EnhancedSEO }
-
-export { EnhancedSEO }"
-"`""
+;
+export { EnhancedSEO }";
+"`"";
 "

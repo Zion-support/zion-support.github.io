@@ -14,13 +14,27 @@ const AccessibilityManager: React.FC: = () => {,
     reducedMotion: fals,e,
     focusVisible: fals,e,
     screenReader: false: })
-}
-  screenReader: boolean}
-
-   focusVisibl,
-    e: boolean,
-   screenReade,
+}  screenReader: boolean}
+;
+   focusVisibl,;
+    e: boolean,;
+   screenReade,;
     r: boolean}
+;
+const AccessibilityManager: React.FC = () => {,;
+  const [settings, setSettings] = useState<AccessibilitySettings>({";
+    highContrast: false, fontSize: "normal",;
+    reducedMotion: false, focusVisible: false,;
+    highContrast: false,";
+    fontSize: "normal",;
+    reducedMotion: false,;
+    focusVisible: false,;
+    screenReader: false});
+  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {;
+    // Check: for user preferences,";
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches,",;
+    const prefersHighContrast = window.matchMedia("(prefers-contrast: high)").matches,;
 
 const AccessibilityManager: React.FC = () => {,
   const [settings, setSettings] = useState<AccessibilitySettings>({"
@@ -60,8 +74,14 @@ const prefersReducedMotion = window.matchMedia("
 ,
     // comment
 if (savedSettings) {
-        reducedMotion: prefersReducedMotion,
-        highContrast: prefersHighContrast}))}
+        reducedMotion: prefersReducedMotion,        highContrast: prefersHighContrast}))}
+;
+    // Detect screen reader,;
+const hasScreenReader =;
+      window.speechSynthesis && window.speechSynthesis.getVoices().length > 0;
+    setSettings(prev => ({ ...prev, screenReader: hasScreenReader }))}, []);
+    // Apply: accessibility settings,;
+const root = document.documentElement,;
 
     // comment
 const hasScreenReader =
@@ -131,12 +151,6 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
         highContrast: prefersHighContrast}))}
 
     // comment
-    // comment
-    // comment
-    // comment
-    // comment
-    // comment
-    // comment
 localStorage.setItem("accessibility-settings", JSON.stringify(settings))}, [settings])
 }
   const updateSetting = <K extends keyof AccessibilitySettings>(
@@ -150,8 +164,7 @@ value: AccessibilitySettings[K],"
       announcement.textContent = message
       document.body.appendChild(announcement)
 }
-      setTimeout(() => {
-        document.body.removeChild(announcement)}, 1000)}
+      setTimeout(() => {        document.body.removeChild(announcement)}, 1000)}
 
   }
 

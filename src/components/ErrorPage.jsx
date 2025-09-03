@@ -18,8 +18,6 @@ export const ErrorPage = ({}""
             <Link to="/contact">Contact Support</Link>
           </Button>
         </div>
-      </div>
-    </div>
   )
 }
 };"
@@ -31,5 +29,4 @@ export default ErrorPage"";"
   )}"
 export default ErrorPage&apos,&quot;&quot,
 export default ErrorPage&apos,"
-&apos;&apos,&apos,&quot;"
-&quot;""
+&apos;&apos,&apos,&quot;"&quot;""

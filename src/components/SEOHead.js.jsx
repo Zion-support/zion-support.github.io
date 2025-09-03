@@ -78,7 +78,6 @@ const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & 
 },"""";,"});,"})"
             "sameAs"[;"""";,"});,"})"
                 "https:// comment
-                "https:// comment
                 "https: // comment
             ],"});,"});"
 }) }"});,"})"
@@ -147,7 +146,6 @@ const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & 
 const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & Services", description = "Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.", keywords = "AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation", image = "/images/zion-tech-group-og.jpg", url = "https:// comment
 ""
 """
-"""
 """""
     const siteName = "Zion Tech Group"
     const fullTitle = title === siteName ? title : "${title} | ${siteName}"
@@ -193,7 +191,6 @@ const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & 
       <script type="application/ld+json">"
         {JSON.stringify({}""
 """""
-"""""
             "@context": "https:// comment
             "@type": "Organization","""""
             "name": "Zion Tech Group", """""
@@ -217,15 +214,12 @@ const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & 
 }, """""
             "contactPoint": {}""
 """""
-"""""
                 "@type": "ContactPoint","""""
                 "telephone": "+1 - 302-464-0950", """""
                 "contactType": "customer service","""""
                 "email": "kleber@ziontechgroup.com"""", ",
 },"""""
             "sameAs"["""""
-                "https: // comment
-                "https: // comment
                 "https: // comment
                 "@type": "PostalAddress,""""
                 "streetAddress": "364 E Main St STE 1008,""""
@@ -242,14 +236,12 @@ const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & 
                 "email": "kleber@ziontechgroup.com""""},"""""
             "sameAs"[""""
                 "https:// comment
-                "https:// comment
                 "https: // comment
       </script>""
       """""
       {/* comment */}"""""""
       {type = == "article" && publishedTime && (<script type="application/ld+json">"
           {JSON.stringify({}""
-"""""
 """""
                 "@context": "https:// comment
                 "@type": "Article","""""
@@ -261,19 +253,16 @@ const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & 
                 "image": image, """""
                 "author": {}""
 """""
-"""""
                     "@type": "Organization","""""
                     "name": author""", ""
                     "@type": "Organization,""""
                     "name": author"""},"""""
                 "publisher": {}""
 """""
-"""""
                     "@type": "Organization", """""
                     "@type": "Organization,""""
                     "name": siteName,"""""
                     "logo": {}""
-"""""
 """""
                         "@type": "ImageObject", """""
                         "@type": "ImageObject,"""
@@ -283,11 +272,9 @@ const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & 
                 "dateModified": modifiedTime || publishedTime,"""""
                 "mainEntityOfPage": {}""
 """""
-"""""
                     "@type": "WebPage", """""
                     "@type": "WebPage,""""
                     "@id': url}
-
             })}
 
         </script>)}
@@ -295,28 +282,26 @@ const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & 
     </Helmet>)}
 
 export default SEOHead
-
 export { SEOHead }
-
+;
 export { SEOHead }
-
+;
 export { SEOHead }
-
+;
 export { SEOHead }
-
+;
 export { SEOHead }
 
     </Helmet>)}
 
-export default SEOHead,
+export default SEOHead,export { SEOHead }
+;
 export { SEOHead }
-
+;
 export { SEOHead }
-
+;
 export { SEOHead }
-
-export { SEOHead }
-
-export { SEOHead }"
-;"`""
+;
+export { SEOHead }";
+;"`"";
 "

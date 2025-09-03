@@ -7,4 +7,3 @@ export default function handler(req, res) {
     healthCheck.message = "ERROR";
     res.status(503).json(healthCheck);
   }
-

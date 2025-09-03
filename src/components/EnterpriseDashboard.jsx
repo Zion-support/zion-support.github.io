@@ -864,8 +864,7 @@ id: &apos,web-server&apos,"&apos,
         catch: (error) {}"
             // comment
             trackEvent("enterprise_dashboard",refresh_failed",error", null {}";"
-                error: error: instanceof Error ? error.message : "Unknown: error,"})}"
-        finally: {}
+                error: error: instanceof Error ? error.message : "Unknown: error,"})}"        finally: {}
 
             setIsRefreshing(false)}
 
@@ -920,7 +919,6 @@ id: &apos,web-server&apos,"&apos,
         if (filterStatus !== &apos;all&apos) {}"
     const filtered = securityAlerts"
         if (filterStatus !== "all") {}
-
             filtered = filtered.filter(alert => alert.status === filterStatus)}
 
         if(searchQuery) {}
@@ -983,8 +981,7 @@ case: "failure":"""",","
               <Icon: className = "w-4 h-4" />",",
         return filtered}, [userActivities, searchQuery])
 }
-    // comment
-    const getStatusColor = (status) => {}
+    // comment    const getStatusColor = (status) => {}
 
         switch (status) {}
 
@@ -1041,8 +1038,7 @@ default: &apos,&apos,"",
 
     }
 
-    // comment
-    const getSeverityColor = (severity) => {}
+    // comment    const getSeverityColor = (severity) => {}
 
         switch (severity) {}
 
@@ -1119,8 +1115,7 @@ y: 0}} exit = {}"
                     metric.trend === "down" ? "text-green-600" : "text-gray-600"}"}>"""{metric.trend === "up" ? <TrendingUp className="w-4 h-4"  /> :""";"
                     metric.trend === "down" ? <TrendingDown className="w-4 h-4"  /> :"";"
                         <Clock3 className="w-4 h-4"  />}"{metric.change > 0 ?   : "}{metric.change}%"",
-                      </span>"";"
-                      <span className = "text-gray-500"> {metric.lastUpdated.toLocaleTimeString()}
+                      </span>"";"                      <span className = "text-gray-500"> {metric.lastUpdated.toLocaleTimeString()}
 
                   </motion.div>) ) }
 

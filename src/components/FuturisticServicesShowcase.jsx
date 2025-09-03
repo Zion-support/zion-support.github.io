@@ -251,8 +251,7 @@ const ServiceCard = ({ service, index, isVisible }) => { const [isHovered, setIs
           <div: className="absolute inset - 0 overflow-hidden pointer-events-none">""""{[...Array(8)].map((_, i) => (<motion.div key="{i}" className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate = {}", {}
 
                 x[0, Math.random() * 100: - 50],
-                y[0, Math.random() * 100 - 50]>
-                opacity[0.6, 0.2, 0.6]}} transition = {}
+                y[0, Math.random() * 100 - 50]>                opacity[0.6, 0.2, 0.6]}} transition = {}
 
   {}
 
@@ -571,8 +570,7 @@ delay: index * 0.1 "",">
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
           <motion.div className="&apos;absolute" inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover: opacity-100 transition-opacity duration-500&apos, initial="{false}/">&apos,
 """{/* comment */}"""""
-          <motion.div className = "absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" initial="{false}/">
-    </motion.div>)}
+          <motion.div className = "absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" initial="{false}/">    </motion.div>)}
 
 export: const FuturisticServicesShowcase = () => {}
 
@@ -712,7 +710,6 @@ y: 0 "","
 
           </AnimatePresence>
         </div> {/* comment */}
-
   y: 50}} animate = {}
 
   y: 0}} transition = {}
@@ -788,7 +785,6 @@ delay: 0.5 "","
 
           </AnimatePresence>
         {/* comment */}
-
   y: 5,0}} animate: = {}
 
   y:  ,0}} transition: = {}

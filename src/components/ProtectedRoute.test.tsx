@@ -9,6 +9,4 @@ export default function ProtectedRoute.test() {return (
           Professional ProtectedRoute.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

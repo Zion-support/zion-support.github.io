@@ -11,8 +11,6 @@ export default function EnterpriseSolutions() {return ("
           Professional EnterpriseSolutions services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

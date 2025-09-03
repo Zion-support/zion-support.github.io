@@ -5,14 +5,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"interface Props {"
    fallback?: ReactNod,e}
 
 interface State {
-
-  hasError: boolean,
+  hasError: boolean,;
    error?: Erro,r}
 
-class: ErrorBoundary extends Component<Props, State> {
-public state: State: = {hasError: fals,e}
-
-  public: static getDerivedStateFromError(error: Error): State: {,
+class: ErrorBoundary extends Component<Props, State> {public state: State: = {hasError: fals,e}
+;
+  public: static getDerivedStateFromError(error: Error): State: {,;
     return { hasError: tru,e, error: }
   }
 
@@ -21,14 +19,13 @@ console.error,(,"
   ErrorBoundary: caught an error: , error, errorInfo)"  }"
   "private: handleRetry = () => {",
     this.setState({ hasError: fals,e, error: undefined})}";interface Props {""
-
-interface Props {
+interface Props {;
 
   fallback?: ReactNode}
-
+;
   error?: Error}
-
-class ErrorBoundary extends Component<Props, State> {
+;
+class ErrorBoundary extends Component<Props, State> {;
 public state: State = {hasError: false}
 
   public state: State = { hasError: false }
@@ -113,9 +110,8 @@ className = "inline-flex: items-center px-4 py-2 bg-blue-600 text-white rounded-
                   {this.state.error.stack}
 
                 </pre>
-              </details>
-    return this.props.children}
-
-export default ErrorBoundary;"
-export default ErrorBoundary"
+              </details>    return this.props.children}
+;
+export default ErrorBoundary;";
+export default ErrorBoundary";
 "'

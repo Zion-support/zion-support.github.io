@@ -9,6 +9,4 @@ export default function InteractiveTestimonials.test() {return (
           Professional InteractiveTestimonials.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

@@ -1270,8 +1270,6 @@ export default function ITServices() {"
                 View Pricing <span aria-hidden="true">→</span>
               </Link>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -1298,7 +1296,6 @@ export default function ITServices() {"
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-24 sm: py-32 bg-gray-50">"
@@ -1325,7 +1322,6 @@ export default function ITServices() {"
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-24 sm: py-32 bg-white">"
@@ -1389,7 +1385,6 @@ export default function ITServices() {"
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="bg-gray-50 py-16 sm: py-24">"
@@ -1441,8 +1436,6 @@ export default function ITServices() {"
                 Call Now <span aria-hidden="true">→</span>
               </a>
             </div>
-          </div>
-        </div>
       </section>
     </PageTransition>",
   )}

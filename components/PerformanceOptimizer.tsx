@@ -21,10 +21,8 @@ const images = document.querySelectorAll("img"),
 
       })
 }
-    }
   }, [])
 }
   return null}
 
-"
-export default PerformanceOptimizer
+"export default PerformanceOptimizer

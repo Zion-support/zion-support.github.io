@@ -70,7 +70,6 @@ const EnhancedServicesShowcase = () => {}"});,"})"
                 <div className="text-blue-400 font-semibold">🌐 Website</div>"""";,"});,"})"
                 <div className="text-gray-300">ziontechgroup.com</div>;,"});,"})"
               </div>;,"});,"})"
-            </div>;,"});,"})"
           </motion.div>;,"});,"})"
           {/* comment */}""";,"});,"})"
           <motion.div"""";,"});,"})"
@@ -152,7 +151,6 @@ const EnhancedServicesShowcase = () => {}"});,"})"
                     <div>Yearly: {service.pricing.yearly}</div>;,"});,"})"
                     <div>Setup: {service.pricing.setup}</div>;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
 """;,"});,"})"
                 {/* comment */}"""";,"});,"})"
                 <div className="mb-4">"""";,"});,"})"
@@ -201,8 +199,6 @@ const EnhancedServicesShowcase = () => {}"});,"})"
                       <span className="text-blue-400 font-medium">Setup:</span>{" "}"});,"})"
                       {service.setupTime}"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
-                </div>;,"});,"})"
 """;,"});,"})"
                 {/* comment */}"""";,"});,"})"
                 <div className="text-center">;,"});,"})"
@@ -319,7 +315,6 @@ const EnhancedServicesShowcase = () => {}"});,"})"
                 <span className="text-green-400 mr-2">✓</span>;,"});,"})"
                 Custom Solutions & Integration,"});,"})"
               </div>;,"});,"})"
-            </div>;,"});,"})"
           </motion.div>;,"});,"})"
 """;,"});,"})"
           <motion.div"""";,"});,"})"
@@ -367,8 +362,7 @@ const EnhancedServicesShowcase = () => {}""
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
 }
     return matchesCategory && matchesSearch})
-}
-  const containerVariants = {}
+}  const containerVariants = {}
 
     hidden: { opacity: 0 }, visible: {}
 
@@ -711,15 +705,13 @@ https: // comment
       </section>,
     </div>)}
 
-export default EnhancedServicesShowcase,
+export default EnhancedServicesShowcase,export { EnhancedServicesShowcase }
+;
 export { EnhancedServicesShowcase }
-
+;
 export { EnhancedServicesShowcase }
-
-export { EnhancedServicesShowcase }
-
+;
 export { EnhancedServicesShowcase }
 
 "
-export { EnhancedServicesShowcase }"`""
-"
+export { EnhancedServicesShowcase }"`"""

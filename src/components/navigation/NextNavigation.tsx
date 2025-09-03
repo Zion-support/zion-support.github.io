@@ -29,8 +29,7 @@ const NextNavigation = () => {
   ]
 
   const contactInfo = []
-
-  const toggleDropdown = (name: string) => {,,
+  const toggleDropdown = (name: string) => {,,;
     setActiveDropdown(activeDropdown === name ? null : name)}
 
   const closeMobileMenu = () => {
@@ -38,7 +37,6 @@ const NextNavigation = () => {
 }
     setActiveDropdown(null)
 }
-  }
 
   return (
     <nav className = "{"fixed" top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -142,7 +140,6 @@ initial="{{" opacity: 0, y: 10, scale: 0.95 }}"
 
           </button>
         </div>
-      </div>
       {/* comment */}
 
       <AnimatePresence>
@@ -172,7 +169,6 @@ initial="{{" opacity: 0, height: 0 }}"
                   ))}
 
                 </div>
-              </div>
               {/* comment */}"
               <div className="space-y-2">
                 {navigationItems.map((item) => ("
@@ -240,13 +236,11 @@ initial="{{" opacity: 0, height: 0 }}"
                   Get Started Today,
                 </Link>
               </div>
-            </div>
           </motion.div>,
         )}
 
       </AnimatePresence>
     </nav>
-  )
-}
-"
+  )}
+";
 export default NextNavigation;"

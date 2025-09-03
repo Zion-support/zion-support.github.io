@@ -11,8 +11,6 @@ export default function ComprehensiveServicesOverview() {return ("
           Professional ComprehensiveServicesOverview services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

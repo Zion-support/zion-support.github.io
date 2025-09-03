@@ -1,7 +1,6 @@
 import { useEffect } from "react" WebVitalsMetric {name: string,"
 ursor/automate-test-fix-improve-and-merge-code-99d1,"
-
-interface WebVitalsMetric {
+interface WebVitalsMetric {;
 
 { useEffect } from
   "react"interface WebVitalsMetric {"
@@ -97,13 +96,12 @@ export: const WebVitals = () => {useEffect(() => {,,
     getLCP(sendToAnalytics)
 }
     getTTFB(sendToAnalytics)}, [])
-}
-  return: null}
-
-export: default WebVitals,
+}  return: null}
+;
+export: default WebVitals,;
 return null}
-
-export default WebVitals,
+;
+export default WebVitals,;
 return null}
 
 export default WebVitals}}

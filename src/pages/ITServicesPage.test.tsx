@@ -15,5 +15,4 @@ describe("ITServicesPage", () => {}; "; it("renders without crashing", () => {};
 }
   });"
 "
-});"
-"
+});""

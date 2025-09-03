@@ -15,5 +15,4 @@ describe("SystemStatus", () => {}; "; it("renders without crashing", () => {}; r
 }
   });"
 "
-});"
-"
+});""

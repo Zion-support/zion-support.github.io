@@ -8,6 +8,5 @@ export default function Authroutes() {
           This is a placeholder component for authroutes.
         </p>
       </div>
-    </div>
   )
 }

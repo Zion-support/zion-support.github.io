@@ -40,7 +40,6 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
     r: bg-zion-purple/10 rounded-lg transition-colors""
           >"",
       {/* comment */}"""
-        {/* comment */}"""
         <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">"""
           <div className="flex items-center space-x-2">"""
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center">"""

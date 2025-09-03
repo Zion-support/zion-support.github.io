@@ -6,7 +6,6 @@ import React from "react"
 							Unlock the power of language with advanced NLP technology. From sentiment analysis to language translation, transform text into actionable insights.
 						</p>
 					</div>
-				</div>
 			</section>
 			{/* comment */}"
 			<section className="py-24 sm: py-32">"
@@ -124,8 +123,6 @@ import React from "react"
 								</li>
 							</ul>
 						</div>
-					</div>
-				</div>
 			</section>
 ,
 			{/* comment */}"
@@ -167,7 +164,6 @@ import React from "react"
 									<h3 className="text-lg font-semibold text-gray-900">Question Answering</h3>"
 									<p className="mt-2 text-gray-600">Build intelligent Q&A systems that can answer questions from large document collections.</p>
 								</div>
-							</div>
 						</div>"
 						<div className="space-y-8">"
 							<div className="flex items-start gap-x-4">"
@@ -196,10 +192,6 @@ import React from "react"
 									<h3 className="text-lg font-semibold text-gray-900">Conversational AI</h3>"
 									<p className="mt-2 text-gray-600">Build intelligent chatbots and virtual assistants with natural conversation capabilities.</p>
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 			</section>
 			{/* comment */}"
 			<section className="py-24 sm: py-32">"
@@ -245,8 +237,6 @@ import React from "react"
 							<h3 className="text-lg font-semibold text-gray-900 mb-2">Healthcare</h3>"
 							<p className="text-sm text-gray-600">Medical record analysis and clinical documentation</p>
 						</div>
-					</div>
-				</div>
 			</section>
 			{/* comment */}"
 			<section className="py-24 sm: py-32 bg-gray-50">"
@@ -358,8 +348,6 @@ import React from "react"
 								</li>
 							</ul>
 						</div>
-					</div>
-				</div>
 			</section>
 			{/* comment */}"
 			<section className="py-24 sm: py-32">"
@@ -400,7 +388,6 @@ import React from "react"
 									<h3 className="text-lg font-semibold text-gray-900">State-of-the-Art Models</h3>"
 									<p className="mt-2 text-gray-600">Latest transformer models with continuous updates and performance improvements.</p>
 								</div>
-							</div>
 						</div>"
 						<div className="space-y-8">"
 							<div className="flex items-start gap-x-4">"
@@ -429,10 +416,6 @@ import React from "react"
 									<h3 className="text-lg font-semibold text-gray-900">Multi-Language Support</h3>"
 									<p className="mt-2 text-gray-600">Process text in 100+ languages with native-level accuracy and cultural awareness.</p>
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 			</section>
 ,
 			{/* comment */}"
@@ -460,8 +443,6 @@ import React from "react"
 								Email kleber@ziontechgroup.com <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform inline-block">→</span>
 							</a>
 						</div>
-					</div>
-				</div>
 			</section>
 		</PageTransition>",
 	)}

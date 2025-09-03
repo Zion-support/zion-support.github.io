@@ -9,6 +9,4 @@ export default function ModernUIEnhancer.test() {return (
           Professional ModernUIEnhancer.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

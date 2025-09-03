@@ -156,18 +156,16 @@ className="px-8" py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white ro
               Get Started,
             </a>
           </div>
-        </div>
-      </div>;,
-    </div>)}
-
+      </div>;,    </div>)}
+;
 export { ExpensiveComponent }
-
+;
 export { ExpensiveComponent }
-
+;
 export { ExpensiveComponent }
-
+;
 export { ExpensiveComponent }
-
+;
 export { ExpensiveComponent }
 
 export { ExpensiveComponent }
@@ -176,7 +174,6 @@ export { ExpensiveComponent }
 export { ExpensiveComponent }""
 ""
 "    </div>
-  )
-}
-export default ExpensiveComponent;"
+  )}
+export default ExpensiveComponent;";
 "

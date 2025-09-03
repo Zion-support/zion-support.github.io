@@ -58,5 +58,4 @@ resetSettings: () => void} const AccessibilityContext = createContext<Accessibil
    updateSettings: (settings: Partial<AccessibilitySettings>) => void","
 resetSettings: () => void} const AccessibilityContext = createContext<AccessibilityContextType | undefined  >(undefined) const defaultSettings: AccessibilitySettings = { highContrast: false, reducedMotion: false, fontSize: "medium", focusVisible: true, screenReader: false} export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => { const [settings, setSettings] = useState<AccessibilitySettings>(() => { if (typeof window === "undefined") return defaultSettings const saved = localStorage.getItem("accessibility-settings") return saved ? { ...defaultSettings, ...JSON.parse(saved) } : defaultSettings }) const updateSettings = (newSettings: Partial<AccessibilitySettings>) => { setSettings(prev => { const updated = {} localStorage.setItem("accessibility-settings", JSON.stringify(updated)) return updated })} const resetSettings = () => { setSettings(defaultSettings) localStorage.removeItem("accessibility-settings") } useEffect(() => {}}
 
-'
-"
+'"

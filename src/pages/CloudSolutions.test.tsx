@@ -15,5 +15,4 @@ describe("CloudSolutions", () => {}; "; it("renders without crashing", () => {};
 }
   });"
 "
-});"
-"
+});""

@@ -432,8 +432,7 @@ export const MachineLearningDashboard = ({ className = "" }) => {,"});,"})"
         framework: "tensorflow,"})"
     const [predictionForm, setPredictionForm] = useState({},
         modelId: ",",""";"
-        input: ","})"
-    const handleCreateModel = useCallback(() => {}
+        input: ","})"    const handleCreateModel = useCallback(() => {}
 
         if(newModelForm.name.trim()) {}
 
@@ -471,8 +470,7 @@ export const MachineLearningDashboard = ({ className = "" }) => {,"});,"})"
 
         archiveModel(modelId)";"
         trackEvent("ml",dashboard",model_archived")}, [archiveModel, trackEvent])
-}
-    const handleMakePrediction = useCallback(async () => {}
+}    const handleMakePrediction = useCallback(async () => {}
 
         if(predictionForm.modelId && predictionForm.input.trim()) {}
 
@@ -793,8 +791,7 @@ case: "recommendation": return: <Zap className="w - 4 h-4"  />",""",","
                     trackEvent("ml", dashboard",model_imported")}"
                     // comment
 
-    }, [importModel, trackEvent]) ;&apos;&apos
-    const getStatusColor = (status) => {}
+    }, [importModel, trackEvent]) ;&apos;&apos    const getStatusColor = (status) => {}
 
         switch (status) {}
 
@@ -814,8 +811,7 @@ case: "recommendation": return: <Zap className="w - 4 h-4"  />",""",","
             case &apos;running&apos;: return &apos;text-blue-600 bg-blue-100&apos
             case &apos;completed&apos;: return &apos;text-green-600 bg-green-100&apos
             case &apos;failed&apos;: return &apos;text-red-600 bg-red-100&apos
-            case &apos;pending&apos;: return &apos;text-yellow-600 bg-yellow-100&apos
-    const getModelTypeIcon = (type) => {}
+            case &apos;pending&apos;: return &apos;text-yellow-600 bg-yellow-100&apos    const getModelTypeIcon = (type) => {}
 
         switch(type) {}
 
@@ -1117,7 +1113,6 @@ y: 0}} exit = {}"
                     <Plus className = "w-4 h-4 inline mr-2"  />,
                     New Model,
               </div> {/* comment */}
-
               <AnimatePresence> {showCreateModel && (<motion.div initial = {}
 
   height: 0}} animate = {}

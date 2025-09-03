@@ -9,6 +9,4 @@ export default function WebsiteAnalyzer.test() {return (
           Professional WebsiteAnalyzer.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

@@ -9,6 +9,4 @@ export default function UltimateServicesShowcase.test() {return (
           Professional UltimateServicesShowcase.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

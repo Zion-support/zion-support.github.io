@@ -100,7 +100,6 @@ export { LoginForm };,"});,"})"
 export default LoginForm,"});,"})"
 ;,"});,"})"
 export default LoginForm,"});,"})"
-export default LoginForm,"});,"})"
 ;,"});,"})"
 export { LoginForm };,"});,"})"
 ;,"});,"})"
@@ -136,10 +135,7 @@ const LoginForm.Js: React.FC = () => {
               Get Started,
             </a>
           </div>
-        </div>
-      </div>
     </div>;,
   )}
 
-export default LoginForm.Js;"
-"
+export default LoginForm.Js;""

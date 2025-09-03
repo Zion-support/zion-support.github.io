@@ -36,7 +36,6 @@ const SolutionsPage = () => {
                   <li>• Competitive Pricing</li>
                 </ul>
               </div>
-            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 View Pricing
@@ -45,9 +44,5 @@ const SolutionsPage = () => {
                 Contact Us
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
     </>
-  ),
-export default SolutionsPage
+  ),export default SolutionsPage

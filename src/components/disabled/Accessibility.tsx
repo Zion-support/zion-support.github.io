@@ -28,7 +28,6 @@ highContrast: false,
 reducedMotion: false,
 soundEnabled: true,"
 theme: "auto"})  useEffect(() => {"
-   theme: "auto"})  useEffect(() => {"
    them,e: &apos;light&apos, | &apos,dark&apos, | &apos,auto",&apos}&apos
    export function Accessibility(...args: any[]): any {}
 
@@ -45,4 +44,3 @@ theme: "auto"})  useEffect(() => {"
 "
 ""
 "
-

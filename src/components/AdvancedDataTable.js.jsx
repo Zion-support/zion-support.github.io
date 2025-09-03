@@ -184,7 +184,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
               Filters,"});,"})"
             </button>;,"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
 """;,"});,"})"
         {/* comment */}"""";,"});,"})"
         {enableSearch && (<div className="relative">"""";,"});,"})"
@@ -250,7 +249,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                 <span className="font-medium text-gray-700 dark: text-gray-300 text-sm">Actions</span>,"});,"})"
               </div>)}"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
 """;,"});,"})"
         {/* comment */}"""";,"});,"})"
         <div {...containerProps} className="relative">;,"});,"})"
@@ -292,8 +290,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                   </div>) }"});,"})"
               </motion.div>) ) }"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
-      </div>;,"});,"})"
 """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       {enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">"""","});,"})"
@@ -329,7 +325,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                 Next,"});,"})"
               </button>;,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
         </div>)}"});,"})"
     </div>)};"";,"});,"})"
 """"";,"});,"})"""""""""""""
@@ -353,8 +348,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 const processedData = useMemo(() => {}
 
         let result = [...data]
-        // comment
-if (searchQuery.trim()) {}
+        // commentif (searchQuery.trim()) {}
 
             result = result.filter(item => columns.some(col => {}
 
@@ -362,8 +356,7 @@ if (searchQuery.trim()) {}
 }
                 return value.includes(searchQuery.toLowerCase())}))}
 
-        // comment
-filters.forEach(filter => {}
+        // commentfilters.forEach(filter => {}
 
             result = result.filter(item => {}
 
@@ -383,10 +376,8 @@ filters.forEach(filter => {}
                     case "regex": any,"
 try {}""
 """
-"""
 """""
-                            return new RegExp(filterValue, i").test(value)}"
-                        catch {}
+                            return new RegExp(filterValue, i").test(value)}"                        catch {}
 
                             return false}
 
@@ -395,8 +386,7 @@ return true}
 
             })})
 }
-        // comment
-if(sortConfig) {}
+        // commentif(sortConfig) {}
 
             result.sort((a, b) => {}
 
@@ -429,7 +419,6 @@ const handleSort = useCallback((key) => {}
 setSortConfig(prev => {}"
             if (prev?.key === key) {}""
 """
-"""
 """""
                 return prev.direction === "asc"""""
                     ? { key, direction: "desc" }""
@@ -455,8 +444,7 @@ const handleSelectionChange = useCallback((item, checked) => {}
         const itemKey = String(item.id || JSON.stringify(item))
 }
         const newSelection = new Set()
-}
-        if(checked) {}
+}        if(checked) {}
 
             newSelection.add(itemKey)}
 
@@ -468,16 +456,14 @@ const handleSelectionChange = useCallback((item, checked) => {}
 }
         onSelectionChange?.(Array.from(newSelection).map(key => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data])
 }
-    // comment
-const handleSelectAll = useCallback((checked) => {}
+    // commentconst handleSelectAll = useCallback((checked) => {}
 
         if(checked) {}
 
             const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))))
 }
             setSelectedItems()
-}
-            onSelectionChange?.(paginatedData)}
+}            onSelectionChange?.(paginatedData)}
 
         else {}
 
@@ -487,8 +473,7 @@ const handleSelectAll = useCallback((checked) => {}
 
     }, [paginatedData, onSelectionChange])
 }
-    // comment
-const handleExport = useCallback(() => {}
+    // commentconst handleExport = useCallback(() => {}
 
         if(onExport) {}
 
@@ -503,7 +488,6 @@ const handleExport = useCallback(() => {}
     // comment
 const generateCSV = (data, columns) => {}""
 """
-"""
 """""
         const headers = columns.map(col => col.header).join(")"
         const rows = data.map(item => columns.map(col => {}""
@@ -517,7 +501,6 @@ const generateCSV = (data, columns) => {}""
 
     // comment
 const downloadCSV = (content, filename) => {}""
-""
 ""
 """"
         const blob = new Blob([content], { type: "text/csv" })""
@@ -538,7 +521,6 @@ a.click()
     // comment
 const getSortIcon = (key) => {}"
         if(!enableSorting || sortConfig?.key !== key) {}""
-"""""
 """""
             return <ArrowUpDown className="w-4 h-4 text-gray-400"/" >}""""
         return sortConfig.direction === "asc""""""
@@ -674,8 +656,7 @@ const renderCell = (column, item, index) => {}
                     </button>"""""
                     <button className="p-1 text-gray-400 hover:text-red-500 transition-colors">""""
                       <Trash2 className="w-4 h-4"/" >"
-                    </button>,
-                  </div>) }
+                    </button>,                  </div>) }
 
               </motion.div>) ) }
 
@@ -703,8 +684,7 @@ const renderCell = (column, item, index) => {}
                 const page = i + 1";"""""""""
                 return (<button key = "{page}" onClick="{()" =" > setCurrentPage(page)} className="{"px-3" py-1 text-sm rounded transition-colors ${currentPage === page""""""""""
                         ? "bg-blue-500 text-white""""""""""""
-                        : "border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600"}"}>
-                    {page}
+                        : "border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600"}"}>                    {page}
 
                   </button>)})}
 

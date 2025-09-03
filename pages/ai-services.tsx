@@ -38,7 +38,6 @@ export default function AIServices() {
                 View All Services
               </Link>
             </div>
-          </div>
         </section>
         {/* comment */}
 
@@ -130,8 +129,6 @@ export default function AIServices() {
                   <li>• Security Automation</li>
                 </ul>
               </div>
-            </div>
-          </div>
         </section>
         {/* comment */}
 
@@ -160,12 +157,9 @@ export default function AIServices() {
                   Our AI implementations have delivered measurable business value.
                 </p>
               </div>
-            </div>
-          </div>
         </section>
       </div>
       <Footer  />
     </>
   )
-}
-}
+}}

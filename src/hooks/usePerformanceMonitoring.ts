@@ -1,6 +1,5 @@
 import { useEffect } from "react"
-
-export function usePerformanceMonitoring() {
+export function usePerformanceMonitoring() {;
 
   useEffect(() => {
     const sendToAnalytics = (metric) => {
@@ -26,7 +25,6 @@ console.log(&apos;Performance metric: &apos, metric)
           loadTime, renderTime: endTime - startTime,
           memoryUsage: performance.memory.usedJSHeapSize / 1024 / 1024})
 }
-      }
 
     }
 
@@ -35,11 +33,9 @@ console.log(&apos;Performance metric: &apos, metric)
     return () => {
       measurePerformance()
 }
-    }
 
   }, [])
-}
-  return metrics}
+}  return metrics}
 
         })}    }
 
@@ -50,8 +46,7 @@ console.log(&apos;Performance metric: &apos, metric)
     getFCP(sendToAnalytics)
 }
     getLCP(sendToAnalytics)
-}
-    getTTFB(sendToAnalytics)}, [])}
-
-export function reportWebVitals(metric) {
+}    getTTFB(sendToAnalytics)}, [])}
+;
+export function reportWebVitals(metric) {;
 "

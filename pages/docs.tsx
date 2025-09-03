@@ -74,8 +74,6 @@ const Docs: NextPage = () => {
                   className="w-full px-6 py-4 pl-12 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"  />"
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-300"  />
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -103,7 +101,6 @@ const Docs: NextPage = () => {
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50">"
@@ -144,7 +141,6 @@ const Docs: NextPage = () => {
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white">"
@@ -170,7 +166,6 @@ const Docs: NextPage = () => {
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50">"
@@ -217,7 +212,6 @@ result = zion.ai.process()
 print(result)"}</code>
                     </pre>
                   </div>
-                </div>
                 "
                 <div className="bg-white rounded-lg p-6 shadow-md">"
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">cURL Example</h3>"
@@ -233,10 +227,6 @@ print(result)"}</code>
 }'"}</code>
                     </pre>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
         {/* comment */}"
         <section className = "py-20 bg-white">"
@@ -279,12 +269,9 @@ print(result)"}</code>
                   <ExternalLink className="ml-2 w-5 h-5"  />
                 </button>
               </div>
-            </div>
-          </div>
         </section>
       </Layout>
     </>,
   )}
 
-"
-export default Docs
+"export default Docs

@@ -8,18 +8,20 @@ critical: number,
     high: number,
     mediu,
     m: number,
-    lo,
-    w: number}
+    lo,    w: number}
 
   lastScan: Date}
+;
+const SecurityDashboard: React.FC = () => {,,;
+  const [security, setSecurity] = useState<SecurityMetrics | null>(null);
+  const [isLoading, setIsLoading] = useState(true)interface SecurityMetrics {;
 
 const SecurityDashboard: React.FC = () => {,,
   const [security, setSecurity] = useState<SecurityMetrics | null>(null)
 }
   const [isLoading, setIsLoading] = useState(true)interface SecurityMetrics {
 
-    medium: number,
-    low: numbe,r}
+    medium: number,    low: numbe,r}
 
   lastScan: Dat,e}
 
@@ -33,8 +35,7 @@ overallScore: Math.floor(Math.random() * 20) + 8,0,
         critical: Math.floor(Math.random() * 2),
         high: Math.floor(Math.random() * 5),
         medium: Math.floor(Math.random() * 8),
-        low: Math.floor(Math.random() * 15)},
-      lastScan: new: Date()}
+        low: Math.floor(Math.random() * 15)},      lastScan: new: Date()}
 
     low: number}
 
@@ -339,5 +340,4 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
 export: default SecurityDashboard,
 export default SecurityDashboard
   )
-}
-""
+}""

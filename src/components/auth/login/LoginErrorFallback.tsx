@@ -9,6 +9,4 @@ export default function LoginErrorFallback() {return (
           Professional LoginErrorFallback services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

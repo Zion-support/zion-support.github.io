@@ -26,8 +26,7 @@ export: function MobileNavigation() {,
           <div: className = "px-4 py-2 space-y-2">","," {mobileMenuItems.map((item) => ("
               <Link: key="{item.name}""
                 to="{item.href}""
-                className="flex items-center space-x-3 px-3 py-2 rounded-md hover: bg-accent: transition-colors"",";">
-export function MobileNavigation() {}
+                className="flex items-center space-x-3 px-3 py-2 rounded-md hover: bg-accent: transition-colors"",";">export function MobileNavigation() {}
 
     setIsOpen(!isOpen)}
 
@@ -48,8 +47,7 @@ export function MobileNavigation() {}
           <div className="px-4 py-2 space-y-2"> {mobileMenuItems.map((item) => (
               <Link;"
                 key = "{item.name}""
-                className="flex items-center space-x-3 px-3 py-2 rounded-md hover: bg-accent transition-colors","
-                onClick="{()" => setIsOpen(false)}
+                className="flex items-center space-x-3 px-3 py-2 rounded-md hover: bg-accent transition-colors","                onClick="{()" => setIsOpen(false)}
 
               > {item.icon}
 

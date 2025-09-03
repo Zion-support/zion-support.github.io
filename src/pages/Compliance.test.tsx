@@ -15,5 +15,4 @@ describe("Compliance", () => {}; "; it("renders without crashing", () => {}; ren
 }
   });"
 "
-});"
-"
+});""

@@ -15,5 +15,4 @@ describe("OnsiteSupport", () => {}; "; it("renders without crashing", () => {}; 
 }
   });"
 "
-});"
-"
+});""

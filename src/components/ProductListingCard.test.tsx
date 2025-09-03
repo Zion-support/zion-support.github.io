@@ -9,6 +9,4 @@ export default function ProductListingCard.test() {return (
           Professional ProductListingCard.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

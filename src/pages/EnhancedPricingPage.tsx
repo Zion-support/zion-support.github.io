@@ -11,8 +11,6 @@ export default function EnhancedPricingPage() {return ("
           Professional EnhancedPricingPage services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

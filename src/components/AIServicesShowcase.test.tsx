@@ -9,6 +9,4 @@ export default function AIServicesShowcase.test() {return (
           Professional AIServicesShowcase.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

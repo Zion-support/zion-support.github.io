@@ -106,13 +106,12 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"
       </TooltipProvider>
     </div>)}
 
-export;export default EmptyState
+export;export default EmptyStateexport { EmptyState }
+;
 export { EmptyState }
-
+;
 export { EmptyState }
-
-export { EmptyState }
-
+;
 export { EmptyState }
 
 export { EmptyState }'
@@ -135,10 +134,7 @@ const EmptyState: React.FC = () => {
               Get Started,
             </a>
           </div>
-        </div>
-      </div>
     </div>;,
   )}
 
-export default EmptyState;"
-"
+export default EmptyState;""

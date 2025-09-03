@@ -9,6 +9,4 @@ export default function LoginForm() {return (
           Professional LoginForm services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

@@ -9,6 +9,4 @@ export default function EnhancedPricingComparison.test() {return (
           Professional EnhancedPricingComparison.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

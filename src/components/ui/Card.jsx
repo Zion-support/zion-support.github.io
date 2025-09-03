@@ -160,8 +160,7 @@ const CardContent = () => {
     <div className="{"p-6" pt-0 ${className}"}>
 const CardFooter = () => {
     return ("
-    <div className="{"flex" items-center p-6 pt-0 ${className}"}>
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
+    <div className="{"flex" items-center p-6 pt-0 ${className}"}>export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 
     const t = {}
 
@@ -209,8 +208,7 @@ const CardContent = React.forwardRef((_a, ref) => {""
     return (_jsx("div", Object.assign({ref: ref, className: cn("p-6 pt-0", className) }, props)))})""
 const CardFooter = React.forwardRef((_a, ref) => {""
     return (_jsx("div", Object.assign({ref: ref, className: cn("flex items-center p-6 pt-0", className) }, props)))})"
-CardFooter.displayName = "CardFooter
-export {Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+CardFooter.displayName = "CardFooterexport {Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 
     <;</div>)}
 
@@ -227,8 +225,7 @@ const CardDescription = ({ children, className = &apos;&apos}) => {"
 const CardContent = ({ children, className = &apos;&apos}) => {"
     return (&apos}&apos;<div className = "{"p-6" pt-0 ${className}"}>
 const CardFooter = ({ children, className = &apos;&apos}) => {"
-    return (&apos}&apos;<div className = "{"flex" items-center p-6 pt-0 ${className}"}>
-const __rest = (this && this.__rest) || function (s, e) {}
+    return (&apos}&apos;<div className = "{"flex" items-center p-6 pt-0 ${className}"}>const __rest = (this && this.__rest) || function (s, e) {}
 
     const;const;const t = {}
 

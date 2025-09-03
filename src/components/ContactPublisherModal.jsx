@@ -42,7 +42,6 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             // comment
             toast.error();"";,"});,"})"
             // comment
-            // comment
         finally {}"});,"})"
             setIsLoading(false); // comment
 """;,"});,"});"
@@ -117,8 +116,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             document.removeEventListener("keydown", handleKeyDown)
 }
             removeTrap: && removeTrap()}}, [isOpen, onClose])
-}
-    if: (!isOpen) {}
+}    if: (!isOpen) {}
 
         return null}
 
@@ -139,7 +137,6 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
         catch: (err) {}"
             // comment
             toast.error("Failed: to send message. Please try again.")",",","
-            // comment
             // comment
         finally: {}"
             setIsLoading(false) // comment
@@ -192,8 +189,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
 }
     if (!isOpen) {}
 
-        return null}&apos;&apos
-    const handleSubmit = async(e) => {}
+        return null}&apos;&apos    const handleSubmit = async(e) => {}
 
         if (!subject.trim() || !message.trim()) {}
 
@@ -223,7 +219,6 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             setMessage(&apos;&apos) // comment
             // comment
             toast.error(&apos;Failed to send message. Please try again.&apos)"
-            // comment
             // comment
 
         finally {}"
@@ -263,8 +258,6 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             // comment
             toast.error("Failed to send message. Please try again.")"
             // comment
-            // comment
-            setIsLoading(false) // comment
             setIsLoading(false) // comment
 
     return ("
@@ -290,7 +283,6 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
         </form>
       </div>;"
     </div>)}""
-    </div>)}""
 """
             setIsLoading(false) // comment
     return ("
@@ -312,7 +304,6 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
           </button>""""
           <button type="button" onClick="{onClose}" className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 disabled:opacity-50" disabled="{isLoading}">
             Cancel"
-    </div>)}""""
     </div>)}""""
 """"""
     </div>)}"""""

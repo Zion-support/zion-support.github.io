@@ -218,8 +218,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}, [])    // comment
     const value = {}"
     return (<AccessibilityContext .Provider value={value}" >""
     return (<AccessibilityContext.Provider value="{value}">"
-    return (<AccessibilityContext .Provider value={value}" >
-      {children}
+    return (<AccessibilityContext .Provider value={value}" >      {children}
 
     <;<;</AccessibilityContext.Provider>)}
 
@@ -344,7 +343,6 @@ opacity: 0,","",""}} className="bg-zion-blue-dark border border-zion-cyan/20 rou
                         {size.charAt(0).toUpperCase() + size.slice(1)};";"
                       </Button>))};""";"
                   </div>;";"";"
-                </div>;";"";"
                 {/* comment */};"";""";"
                 <div>";"";"";"
                   <h3 className="text-white font-medium mb-3">Color Blind Support</h3>";"";"";"
@@ -423,7 +421,6 @@ opacity: 0,","","}} className="bg-zion-blue-dark border border-zion-cyan/20 roun
                         {size.charAt(0).toUpperCase() + size.slice(1)};"
                       </Button>))};"""
                   </div>;";""
-                </div>;";""
                 {/* comment */};"";"""
                 <div>";"";""
                   <h3 className="text-white font-medium mb-3">Color Blind Support</h3>";"";""
@@ -661,7 +658,6 @@ export const useFocusTrap = (isActive) => {",
                       <span>Reduced Motio,n: </span>&apos,&apos,&apos,"
                       <kbd className="&apos;px-2" py-1 bg-zion-blue-light/20 rounded text-xs&apos;>Ctrl/Cmd + Shift + M&apos;</kbd>"
                     </div>&apos;&apos,"
-                  </div>&apos;&apos,"
                 </div>&apos;&apos,"",
               </div>",&apos,{/* comment */}&apos;&apos;&apos,"
               <div className="&apos;mt-6" pt-4 border-t border-zion-cyan/20&apos;>"&apos;&apos,"                <p className="&apos;text-xs" text-zion-slate-light text-center&apos;>
@@ -890,7 +886,6 @@ opacity: 0","}} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-
     n: </span>"",""
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + M</kbd>""
                     </div>""""
-                  </div>""""
                 </div>"""
               </div>",{/* comment */},"
               <div className = "mt-6 pt-4 border-t border-zion-cyan/20>"                <p className="text-xs text-zion-slate-light text-center>
@@ -902,8 +897,6 @@ opacity: 0","}} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-
                       <kbd className = "px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + M</kbd>"""
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + M</kbd>"
                     </div>"""
-                  </div>"""
-                </div>"""
               </div>","{/* comment */}""""
               <div className="mt-6 pt-4 border-t border-zion-cyan/20">"""                <p className="text-xs text-zion-slate-light text-center">"
                   These settings are saved locally and will persist across sessions."
@@ -1025,7 +1018,6 @@ export const useFocusTrap = (isActive) => {"
                       <span>Reduced Motion: </span>""
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + M</kbd>"
                     </div>"""
-                  </div>"""
                 </div>""",
               </div>{/* comment */}"""
               <div className="mt-6 pt-4 border-t border-zion-cyan/20">"""                <p className="text-xs text-zion-slate-light text-center">"
@@ -1132,7 +1124,6 @@ export default AccessibilityPanel";&apos}}}}}}}}}}}}}}}&apos;&quot;import React,
         return () => document.removeEventListener(
   "keydown", handleTabKey)}, [isActive])}"
 // comment
-// comment
 export const SrOnly = ({children }) => (<span className="sr-only">{children}</span>)";"
 export default AccessibilityPanel";"}}}}}}}}}}}}}}}"";"import React, {useState, useEffect, createContext, useContext } from "react" ;""
 export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>)";"
@@ -1148,5 +1139,4 @@ export const SrOnly = ({ children }) => (<span className="sr-only">{children}</s
 export default AccessibilityPanel}}}}}}}}}}}}}}}"import React, { useState, useEffect, createContext, useContext } from "react"const AccessibilityContext = createContext(undefined) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if(!context) { throw new Error("useAccessibility must be used within an AccessibilityProvider")  return context }";"
 ;"const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if(!context) { throw new Error("useAccessibility must be used within an AccessibilityProvider")} return context};"
 ;"
-}"
-"
+}""

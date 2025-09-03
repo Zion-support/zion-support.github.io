@@ -11,8 +11,6 @@ export default function EmergingTech2030() {return ("
           Professional EmergingTech2030 services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

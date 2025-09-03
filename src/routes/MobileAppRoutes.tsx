@@ -8,6 +8,5 @@ export default function Mobileapproutes() {
           This is a placeholder component for mobileapproutes.
         </p>
       </div>
-    </div>
   )
 }

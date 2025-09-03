@@ -9,6 +9,4 @@ export default function NotFound() {return (
           Professional NotFound services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

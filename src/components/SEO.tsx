@@ -4,10 +4,9 @@ import { Helmet  } from "react - helmet-async", SEOProps {title?: string;descrip
 export const SEO: React.FC < SEOProps> = ({,
 "
 export default function Page() {
+export default function Page() {;
 
-export default function Page() {
-
-interface SEOProps {
+interface SEOProps {;
 
   title?: string
   description?: string
@@ -29,7 +28,6 @@ title = "Zion Tech Group - Leading Technology Solutions", description = "Leading
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})","});,"})"
 ;,"});,"})"
 export default function Page() {,"});,"})"
-export default function Page() {,"});,"})"
 interface SEOProps {;,"});,"})"
   title?: string,"});,"})"
   description?: string,"});,"})"
@@ -41,15 +39,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})interface SEOProps {
   title?: string
   description?: string,
 export default function Page() {
+export default function Page() {;
 
-export default function Page() {
-
-interface SEOProps {
-  title?: string
-   description?: string
-   keywords?: string
-   image?: string
-   url?: string
+interface SEOProps {;
+  title?: string;
+   description?: string;
+   keywords?: string;
+   image?: string;
+   url?: string;
    type?: string}
 
 export const SEO: React.FC<SEOProps> = ({,
@@ -72,9 +69,8 @@ export default function Page() {}
 export default function Page() {
 
 interface SEOProps ;{"
-
-interface SEOProps {title?: string
-interface SEOProps {
+interface SEOProps {title?: string;
+interface SEOProps {;
 
   title?: string
   description?: string
@@ -255,7 +251,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       <meta httpEquiv="X-UA-Compatible" content="IE=edge"  />
       "
       {/* comment */}"
-      {/* comment */}"
       <meta name="twitter: card" content="summary_large_image"  />",
       <meta name="twitter:url" content="{url}"  />"
       <meta name="twitter:title" content="{title}"  />"
@@ -420,10 +415,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
   )}
 
 "
-"
 export default SEO;"
 ""
-  )
-}
-};"
+  )}
+};";
 "

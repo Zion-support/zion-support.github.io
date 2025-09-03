@@ -281,8 +281,6 @@ export const EnterpriseDashboard = () => {;,"});,"})"
               Refresh,"});,"})"
             </button>;,"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
-      </div>;,"});,"})"
 """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       <div className="border-b border-gray-200 dark: border-gray-700">"""","});,"})"
@@ -381,10 +379,8 @@ export const EnterpriseDashboard = () => {;,"});,"})"
                         <div className="text-xs text-gray-500">;,"});,"})"
                           {service.errorRate}% errors,"});,"})"
                         </div>;,"});,"})"
-                      </div>;,"});,"})"
                     </div>) ) }"});,"})"
                 </div>;,"});,"})"
-              </div>;,"});,"})"
 """;,"});,"})"
               {/* comment */}"""";,"});,"})"
               <div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">"""","});,"})"
@@ -421,10 +417,8 @@ export const EnterpriseDashboard = () => {;,"});,"})"
                             {alert.status}"});,"})"
                           </span>;,"});,"})"
                         </div>;,"});,"})"
-                      </div>;,"});,"})"
                     </div>) ) }"});,"})"
                 </div>;,"});,"})"
-              </div>;,"});,"})"
             </motion.div>)}""";,"});,"})"
 """"";,"});,"})"
           {activeTab === "performance" && (<motion.div key="performance" initial = {}"});,"})"
@@ -457,7 +451,6 @@ export const EnterpriseDashboard = () => {;,"});,"})"
                       <LineChart className="w-12 h-12 mx-auto mb-2"  />;,"});,"})"
                       <p>Performance Chart</p>;,"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
                 </div>""";,"});,"})"
                 """";,"});,"})"
                 <div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">"""","});,"})"
@@ -467,9 +460,6 @@ export const EnterpriseDashboard = () => {;,"});,"})"
                       <BarChart3 className="w-12 h-12 mx-auto mb-2"  />;,"});,"})"
                       <p>Performance Chart</p>;,"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
-                </div>;,"});,"})"
-              </div>;,"});,"})"
             </motion.div>)}""";,"});,"})"
 """"";,"});,"})"
           {activeTab === "security" && (<motion.div key="security" initial = {}"});,"})"
@@ -546,7 +536,6 @@ export const EnterpriseDashboard = () => {;,"});,"})"
                           {Math.round((Date.now() - alert.timestamp.getTime()) / (1000 * 60))}m ago,"});,"})"
                         </span>;,"});,"})"
                       </div>;,"});,"})"
-                    </div>;,"});,"})"
                   </motion.div>) ) }"});,"})"
               </div>;,"});,"})"
             </motion.div>)}""";,"});,"})"
@@ -598,7 +587,6 @@ export const EnterpriseDashboard = () => {;,"});,"})"
                             {activity.action} • {activity.resource}"});,"})"
                           </div>;,"});,"})"
                         </div>""";,"});,"})"
-                      </div>""";,"});,"})"
                       <div className="text-right">"";,"});,"})"
                         <span className="{"px-2" py-1 text-xs rounded-full ${getStatusColor(activity.status)}"}>;,"});,"})"
                           {activity.status}""";,"});,"})"
@@ -606,7 +594,6 @@ export const EnterpriseDashboard = () => {;,"});,"})"
                         <div className="text-sm text-gray-500 mt-1">;,"});,"})"
                           {activity.timestamp.toLocaleTimeString()}"});,"})"
                         </div>;,"});,"})"
-                      </div>;,"});,"})"
                     </div>""";,"});,"})"
                     """";,"});,"})"
                     <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm text-gray-600 dark:text-gray-400">""","});,"})"
@@ -619,7 +606,6 @@ export const EnterpriseDashboard = () => {;,"});,"})"
                       <div>"""";,"});,"})"
                         <span className="font-medium">Time:</span> {activity.timestamp.toLocaleString()}"});,"})"
                       </div>;,"});,"})"
-                    </div>;,"});,"})"
                   </motion.div>) ) }"});,"})"
               </div>;,"});,"})"
             </motion.div>)}""";,"});,"})"
@@ -727,7 +713,6 @@ export const EnterpriseDashboard = () => {;,"});,"})"
                       <PieChart className="w-12 h-12 mx-auto mb-2"  />;,"});,"})"
                       <p>Analytics Chart</p>;,"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
                 </div>""";,"});,"})"
                 """";,"});,"})"
                 <div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">"""","});,"})"
@@ -737,9 +722,6 @@ export const EnterpriseDashboard = () => {;,"});,"})"
                       <LineChart className="w-12 h-12 mx-auto mb-2"  />;,"});,"})"
                       <p>Analytics Chart</p>;,"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
-                </div>;,"});,"})"
-              </div>;,"});,"})"
             </motion.div>) }"});,"})"
         </AnimatePresence>;,"});,"})"
       </div>;,"});,"})"
@@ -759,7 +741,6 @@ export const EnterpriseDashboard = () => {""
 const [systemMetrics] = useState([]"
         {}""
 """
-"""
 """""
             id: "cpu", """""
             name: "CPU Usage","""
@@ -767,7 +748,6 @@ const [systemMetrics] = useState([]"
             unit: "%","""""
             status: "healthy", """""
             trend: "stable", change: 2, threshold: { warning: 70, critical: 90 }, lastUpdated: new Date () }, {}""
-"""
 """
 """""
             id: "memory","""""
@@ -777,7 +757,6 @@ const [systemMetrics] = useState([]"
             status: "warning","""""
             trend: "up", change: 8, threshold: { warning: 75, critical: 90 }, lastUpdated: new Date () }, {}""
 """
-"""
 """""
             id: "disk","""""
             name: "Disk Usage", """
@@ -785,7 +764,6 @@ const [systemMetrics] = useState([]"
             unit: "%", """""
             status: "healthy","""""
             trend: "stable", change: 1, threshold: { warning: 80, critical: 95 }, lastUpdated: new Date () }, {}""
-"""
 """
 """""
             id: "network","""""
@@ -835,7 +813,6 @@ const [systemMetrics] = useState([]"
     const [securityAlerts] = useState ([]"
         {}""
 """
-"""
 """""
             id: "alert-1", """""
             severity: "medium","""""
@@ -846,7 +823,6 @@ const [systemMetrics] = useState([]"
             status: "investigating",""";"""
             affected["user - 123", user-456"], ","
             source: "Security Monitoring System"}, {}""
-"""
 """
 """""
             id: "alert - 2", """""
@@ -886,7 +862,6 @@ const [systemMetrics] = useState([]"
     const [userActivities] = useState ([]"
         {}""
 """
-"""
 """""
             id: "activity-1", """""
             userId: "user-123","""""
@@ -906,7 +881,6 @@ const [systemMetrics] = useState([]"
             ipAddress: "192.168.1.100,"""
             userAgent: "Chrome/91.0.4472.124,"""
             status: "success"}, {}""
-"""
 """
 """""
             id: "activity-2","""""
@@ -950,10 +924,8 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
             // comment
             trackEvent("enterprise_dashboard", refresh_failed",error", null, {}""
 """
-"""
 """""
                 error: error instanceof Error ? error.message : "Unknown error"}) }
-
         finally {}
 
             setIsRefreshing(false)}
@@ -969,7 +941,6 @@ useEffect(() => {}
     // comment
     const filtered = securityAlerts"""
         if (filterStatus !== "all") {}
-
             filtered = filtered.filter(alert => alert.status === filterStatus)}
 
         if(searchQuery) {}
@@ -992,7 +963,6 @@ if(searchQuery) {}
     // comment
 const getStatusColor = (status) => {}"
         switch (status) {}""
-"""
 """
 """""
             case "healthy": """""
@@ -1076,8 +1046,7 @@ default: """,,
 ].map(({ id, label, icon: Icon }) => (<button key="{id}" onClick="{()" =" > setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id""""""
                 ? "border-indigo-500 text-indigo-600 dark: text-indigo-400""""""""",
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>""""
-              <Icon className="w-4 h-4"/" >"
-              {label}
+              <Icon className="w-4 h-4"/" >"              {label}
 
             </button>) ) }
 
@@ -1146,7 +1115,6 @@ default: """,,
                         <div className="text-sm text-gray-600 dark: text-gray-400">",
                           {service.uptime}% uptime""
                         </div>"""""
-                      </div>"""""
                       <div className="text-right">""""
                         <div className="text-sm font-medium text-gray-900 dark: text-white">"",
                           {service.responseTime}ms"""""
@@ -1154,7 +1122,6 @@ default: """,,
                         <div className="text-xs text-gray-500">
                           {service.errorRate}% errors,
                         </div>
-                      </div>
                     </div>) ) }
 
                 </div>"
@@ -1196,7 +1163,6 @@ default: """,,
 
                           </span>
                         </div>
-                      </div>
                     </div>) ) }
 
                 </div>"
@@ -1238,7 +1204,6 @@ default: """,,
                       <BarChart3 className="w-12 h-12 mx-auto mb-2"/" >"
                       <p>Performance Chart</p>
                     </div>
-                  </div>
                 </div>"
               </div>"",
             </motion.div>)}"""""
@@ -1308,7 +1273,6 @@ default: """,,
                           {Math.round((Date.now() - alert.timestamp.getTime()) / (1000 * 60))}m ago,
                         </span>
                       </div>
-                    </div>
                   </motion.div>) ) }"
               </div>""
             </motion.div>)}"""""
@@ -1374,7 +1338,6 @@ default: """,,
                         <span className="font-medium">Time: </span> {activity.timestamp.toLocaleString()}
 
                       </div>
-                    </div>
                   </motion.div>) ) }"
               </div>""
             </motion.div>)}"""""
@@ -1480,8 +1443,6 @@ default: """,,
                       <LineChart className="w-12 h-12 mx-auto mb-2"/" >"
                       <p>Analytics Chart</p>
                     </div>
-                  </div>
-                </div>
               </div>,
             </motion.div>) }
 

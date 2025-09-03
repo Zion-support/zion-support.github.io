@@ -8,8 +8,7 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
 }
   Target,
   Lightbulb} from "lucide-react"
-
-export default function Training() {
+export default function Training() {;
 
   const trainingPrograms = [],"
       instructor: "Dr. Sarah Johnson","
@@ -191,8 +190,6 @@ cutting-edge technologies.
                   </button>
                 </Link>
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -236,7 +233,6 @@ cutting-edge technologies.
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section id="programs" className="py-20 bg-white">"
@@ -284,7 +280,6 @@ cutting-edge technologies.
 
                       </p>
                     </div>
-                  </div>
 "
                   <div className="flex items-center justify-between mb-6">"
                     <div className="flex items-center space-x-6 text-sm text-gray-500">"
@@ -312,8 +307,6 @@ cutting-edge technologies.
                         {program.format}
 
                       </div>
-                    </div>
-                  </div>
 "
                   <div className="mb-6">"
                     <h4 className="text-lg font-semibold text-gray-900 mb-3">
@@ -353,7 +346,6 @@ cutting-edge technologies.
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50">"
@@ -431,7 +423,6 @@ cutting-edge technologies.
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white">"
@@ -473,12 +464,9 @@ cutting-edge technologies.
 
                       </p>
                     </div>
-                  </div>
-                </div>
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
@@ -503,7 +491,6 @@ with our training programs.
                 </button>
               </Link>
             </div>
-          </div>
         </section>
       </main>
     </>

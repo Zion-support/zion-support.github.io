@@ -116,7 +116,6 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
 transformation and drive business growth.
             </p>
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-8 bg-white border-b">"
@@ -136,7 +135,6 @@ transformation and drive business growth.
             ))}
 
           </div>
-        </div>
       </section>
           {/* comment */}"
           <div className=""grid" md: grid-cols-2 lg:grid-cols-3 gap-8"}>
@@ -169,7 +167,6 @@ transformation and drive business growth.
 
                       </span>
                     </div>
-                  </div>
                   "
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{product.name}</h3>"
                   <p className="text-gray-600 mb-6">{product.description}</p>
@@ -204,12 +201,10 @@ transformation and drive business growth.
                       <ArrowRight className="h-4 w-4 ml-1"  />
                     </Link>
                   </div>
-                </div>
               </div>,
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="bg-gray-50 py-24 sm: py-32">"
@@ -255,8 +250,6 @@ transformation and drive business growth.
                 Round-the-clock expert support to ensure your systems run smoothly at all times.
               </p>
             </div>
-          </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">"

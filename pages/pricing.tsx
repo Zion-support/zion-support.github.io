@@ -693,5 +693,4 @@ export default Pricing;"
                 View Detailed Pricing Guide,
       <Footer  />
 export default Pricing
-"
-,
+",

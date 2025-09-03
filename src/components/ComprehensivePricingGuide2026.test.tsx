@@ -16,5 +16,4 @@ describe(&apos;ComprehensivePricingGuide2026&apos, () => {
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"
 "
-}}"
-"
+}}""

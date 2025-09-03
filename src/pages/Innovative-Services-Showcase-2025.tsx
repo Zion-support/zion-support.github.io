@@ -7,5 +7,4 @@ import React from "react"; Rocket, Brain, Shield, Heart, Link, Network, FileText
 ",
 ""}}}}"export default React.memo(function InnovativeServicesShowcase2025 () { const featuredServices = [], " benefits: ["80% faster document creation,99.9% compliance accuracy,Save $50K + annually,24 / 7 legal assistance"], " marketPrice: "$2, 500 - 6,000, roi: "500% within 6 months, link: "https:"""",,export default React.memo(function InnovativeServicesShowcase2025 () { const featuredServices = [], " benefits: ["80% faster document creation,99.9% compliance accuracy,Save $50K + annually,24 / 7 legal assistance"], " marketPrice: "$2, 500 - 6,000, roi: "500% within 6 months, link: "https:""'
 ",
-"}}}}"
-"
+"}}}}""

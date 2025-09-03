@@ -16,5 +16,4 @@ describe(&apos;CommunityVerifiedBadge&apos, () => {
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"
 "
-}}"
-"
+}}""

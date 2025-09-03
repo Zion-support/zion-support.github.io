@@ -31,7 +31,6 @@ const Component = () => {
                 View Portfolio,
               </button>
             </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -65,7 +64,6 @@ const Component = () => {
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20" bg-gray-50">"
@@ -98,8 +96,6 @@ const Component = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2>Security First</h3>"
                 <p className=text-gray-600">Comprehensive security audits and best practices</p>
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"

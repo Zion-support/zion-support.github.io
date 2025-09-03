@@ -11,8 +11,6 @@ export default function HealthcareSolutions() {return ("
           Professional HealthcareSolutions services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

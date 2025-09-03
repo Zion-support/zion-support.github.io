@@ -9,6 +9,4 @@ export default function GlobalSpinner() {return (
           Professional GlobalSpinner services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

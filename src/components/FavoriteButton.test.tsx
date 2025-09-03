@@ -9,6 +9,4 @@ export default function FavoriteButton.test() {return (
           Professional FavoriteButton.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

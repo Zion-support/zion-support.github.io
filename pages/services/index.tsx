@@ -142,7 +142,6 @@ key = "{stat.label}""
 
             </motion.div>
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className = "py-20 bg-gray-50">"
@@ -278,7 +277,6 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
               Comprehensive technology solutions designed to transform your business and drive growth in the digital age.
             </p>
           </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -316,7 +314,6 @@ key="{benefit.title}""
                       {benefit.icon}
 
                     </div>
-                  </div>
                 </div>"
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>"
                 <p className="text-gray-600">{benefit.description}</p>
@@ -324,7 +321,6 @@ key="{benefit.title}""
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-16 bg-gray-50">"
@@ -354,13 +350,8 @@ key="{benefit.title}""
               <ul className="text-sm text-blue-700 space-y-2">"
                 <li><a className="underline" href="https: // comment
                 <li><a className="underline" href="https:// comment
-                <li><a className="underline" href="https:// comment
-                <li><a className="underline" href="https:// comment
-                <li><a className="underline" href="https:// comment
               </ul>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -436,7 +427,6 @@ key="{service.id}""
               )})}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20 bg-gray-50">"
@@ -480,8 +470,6 @@ key="{service.id}""
               <h3 className="text-lg font-semibold mb-2">Deployment</h3>"
               <p className="text-gray-600">We deploy and provide ongoing support.</p>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -525,5 +513,4 @@ initial="{{" opacity: 0, y: 30 }}"
     </MainLayout>,,
   )}
 
-"
-export default ServicesIndex
+"export default ServicesIndex

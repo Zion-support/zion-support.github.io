@@ -9,6 +9,4 @@ export default function EnhancedFuturisticNavigation.test() {return (
           Professional EnhancedFuturisticNavigation.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

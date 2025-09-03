@@ -9,6 +9,4 @@ export default function ErrorModal() {return (
           Professional ErrorModal services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

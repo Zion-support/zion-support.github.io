@@ -15,5 +15,4 @@ describe("InnovativeServicesShowcase2028", () => {}; "; it("renders without cras
 }
   });"
 "
-});"
-"
+});""

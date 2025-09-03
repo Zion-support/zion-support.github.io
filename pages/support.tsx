@@ -116,9 +116,6 @@ name: "Community Support","
                     placeholder="Search for help...""
                     className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus: outline-none focus:ring-2 focus:ring-blue-500"  />
                 </div>
-              </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -160,7 +157,6 @@ name: "Community Support","
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-white">"
@@ -187,11 +183,9 @@ name: "Community Support","
                     ))}
 
                   </div>
-                </div>
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gray-50">"
@@ -247,7 +241,6 @@ name: "Community Support","
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className=""py-20" bg-white"}>"
@@ -284,12 +277,9 @@ name: "Community Support","
                       <Clock className="w-5 h-5 text-gray-500 mr-2"  />"
                       <span className="text-gray-600 text-sm">{method.hours}</span>
                     </div>
-                  </div>
-                </div>
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
@@ -313,7 +303,6 @@ name: "Community Support","
                 </button>
               </a>
             </div>
-          </div>
         </section>
       </main>
 </>",

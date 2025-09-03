@@ -16,5 +16,4 @@ describe(&apos;SimpleFooter&apos, () => {
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"
 "
-}}"
-"
+}}""

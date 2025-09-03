@@ -18,11 +18,9 @@ const Component = () => {
                 View FAQ,
               </Link>
             </div>
-          </div>
         </section>
       </div>
     </MainLayout>;,
   )}
 
-"
-export default Documentation
+"export default Documentation

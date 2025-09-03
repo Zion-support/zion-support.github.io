@@ -9,6 +9,4 @@ export default function ClientSuccessStoriesSection.test() {return (
           Professional ClientSuccessStoriesSection.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

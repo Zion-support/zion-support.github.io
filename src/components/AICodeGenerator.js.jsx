@@ -52,7 +52,6 @@ export const AICodeGenerator = () => {;,"});,"})"
         if (generatedCode) {}"});,"})"
 ";,"});,"})"
             // comment
-            // comment
 }";,"});,"})"
         trackEvent("ai_code_generator",code_optimized", focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);,"});,"})"
     // comment
@@ -62,7 +61,6 @@ export const AICodeGenerator = () => {;,"});,"})"
         const codeToTest = generatedCode || customCode,";,"});,"})"
         const testCode = await generateTests();;,"});,"})"
         // comment
-        // comment
         trackEvent("ai_code_generator",tests_generated", form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);,"});,"})"
     // comment
     const handleGenerateDocs = useCallback(async () => {}"});,"})"
@@ -70,7 +68,6 @@ export const AICodeGenerator = () => {;,"});,"})"
             return,"});,"})"
         const codeToDoc = generatedCode || customCode,";,"});,"})"
         const docs = await generateDocs();;,"});,"})"
-        // comment
         // comment
         trackEvent("ai_code_generator",docs_generated", form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);,"});,"})"
     // comment
@@ -118,8 +115,6 @@ export const AICodeGenerator = () => {;,"});,"})"
               Export,"});,"})"
             </button>;,"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
-      </div>;,"});,"})"
 """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       <div className="border-b border-gray-200 dark: border-gray-700">"""","});,"})"
@@ -239,7 +234,6 @@ export const AICodeGenerator = () => {;,"});,"})"
                       <option value="production">Production</option>;,"});,"})"
                     </select>;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
 """;,"});,"})"
                 {/* comment */}"""";,"});,"})"
                 <button type="button" onClick="{()" => setShowAdvanced(!showAdvanced)} className="flex items-center gap-2 text-sm text-purple-600 hover: text-purple-700 dark:text-purple-400 dark:hover:text-purple-300">"""","});,"})"
@@ -390,7 +384,6 @@ export const AICodeGenerator = () => {;,"});,"})"
                           </div>;,"});,"})"
                         </div>))}"});,"})"
                     </div>;,"});,"})"
-                  </div>;,"});,"})"
 """;,"});,"})"
                   {/* comment */}"""";,"});,"})"
                   {codeAnalysis.issues.length > 0 && (<div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-4">"""","});,"})"
@@ -630,7 +623,6 @@ export const AICodeGenerator = () => {""
     const { isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode } = useAICodeGeneration()"
     const [form, setForm] = useState({}""
 """
-"""
 """""
         prompt: "", """""
         language: "typescript","""""
@@ -675,7 +667,6 @@ const optimizedCode = await optimizeCode(codeToOptimize, focus)"
         if (generatedCode) {}""
 ""
             // comment
-            // comment
 }"""
         trackEvent("ai_code_generator",code_optimized", focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent])"
     // comment
@@ -685,7 +676,6 @@ const handleGenerateTests = useCallback(async () => {}"
         const codeToTest = generatedCode || customCode";"""
         const testCode = await generateTests(codeToTest, form.language)"
         // comment
-        // comment
         trackEvent("ai_code_generator", tests_generated", form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent])"
     // comment
 const handleGenerateDocs = useCallback(async () => {}"
@@ -694,13 +684,11 @@ const handleGenerateDocs = useCallback(async () => {}"
         const codeToDoc = generatedCode || customCode""
         const docs = await generateDocs(codeToDoc, form.language)"
         // comment
-        // comment
         trackEvent("ai_code_generator", docs_generated", form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])"
         if(!generatedCode && !customCode)"
             return"
         const codeToTest = generatedCode || customCode,
 const testCode = await generateTests(codeToTest, form.language)"
-        // comment
         // comment
         trackEvent("ai_code_generator",tests_generated", form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent])
 }
@@ -711,11 +699,9 @@ const handleGenerateDocs = useCallback(async () => {}"
         const codeToDoc = generatedCode || customCode"
         const docs = await generateDocs(codeToDoc, form.language)"
         // comment
-        // comment
         trackEvent("ai_code_generator",docs_generated", form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])
 }
-    // comment
-const copyToClipboard = useCallback(async (code) => {}
+    // commentconst copyToClipboard = useCallback(async (code) => {}
 
         try {}
 
@@ -724,7 +710,6 @@ const copyToClipboard = useCallback(async (code) => {}
             setTimeout(() => setCopied(false), 2000)"""
             trackEvent("ai_code_generator", code_copied",clipboard", code.length)}"
         catch (error) {}""
-"""
 """
 """""
             // comment
@@ -781,8 +766,7 @@ const handleClearHistory = useCallback(() => {}""
 ].map(({ id, label, icon: Icon }) => (<button key="{id}" onClick="{()" =" > setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id""""""
                 ? "border-purple-500 text-purple-600 dark: text-purple-400""""""""",
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>""""
-              <Icon className="w-4 h-4"/" >"
-              {label}
+              <Icon className="w-4 h-4"/" >"              {label}
 
             </button>) ) }
 
@@ -985,7 +969,6 @@ const handleClearHistory = useCallback(() => {}""
                     const value = codeAnalysis[key]"""
                     if (typeof value === "number") {}""
 """"""
-""""""
                         return ("
     <div key="{key}" className="text-center p-4 bg-gray-50 dark: bg-gray-700 rounded-lg">"""""""",
                             <Icon className="{"w-8" h-8 mx-auto mb-2 text-${color}-500"}/" >"""""
@@ -1024,8 +1007,7 @@ const handleClearHistory = useCallback(() => {}""
                               <div className="text-sm font-medium text-gray-900 dark: text-white">"",
                                 {issue.message}"""""
                               </div>""""
-                              {issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,
-                                  Line {issue.line}
+                              {issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
 
                                 </div>) }
 

@@ -60,17 +60,13 @@ export { MockIndex, MockAbout, MockContact };,"});,"})"
 ;,"});,"})"
 export { MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact };,"});,"})""""""""
 // comment
-// comment
-// comment
-// comment
 jest.mock(&apos;../pages/Index&apos, () => {}
 
   return&apos;&apos; function MockIndex() {}"
     return <div data-testid="&apos;index-page&apos;">Index Page&apos;</div>
 }"
 })
-}
-jest.mock(&apos;../pages/About&apos, () => {}
+}jest.mock(&apos;../pages/About&apos, () => {}
 
   return&apos;&apos; function MockAbout() {}
 
@@ -79,8 +75,7 @@ jest.mock(&apos;../pages/About&apos, () => {}
     return&apos;&apos; <div data-testid="&apos;about-page&apos;">About Page&apos;</div>
 }"
 })
-}
-jest.mock(&apos;../pages/Contact&apos, () => {}
+}jest.mock(&apos;../pages/Contact&apos, () => {}
 
   return&apos;&apos; function MockContact() {}
 
@@ -117,7 +112,6 @@ jest.mock("../pages/About", () => {}
   return function MockAbout() {}
 
 ""
-""
     return <div data-testid="about-page">About Page</div>
 """;""
 """"""
@@ -128,7 +122,6 @@ jest.mock("../pages/Contact", () => {}
 
   return function MockContact() {}
 
-""
 ""
     return <div data-testid="contact-page">Contact Page</div>
   }
@@ -162,13 +155,12 @@ describe("App Component", () => {
     renderWithRouter()
 }
     expect(screen.getByTestId("index-page")).toBeInTheDocument()})})
-}
+}export { MockIndex, MockAbout, MockContact }
+;
 export { MockIndex, MockAbout, MockContact }
-
+;
 export { MockIndex, MockAbout, MockContact }
-
-export { MockIndex, MockAbout, MockContact }
-
+;
 export { MockIndex, MockAbout, MockContact }
 
 export { MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact }"
@@ -247,11 +239,10 @@ describe("App Component", () => {""
   test("renders without crashing", () => {"
     renderWithRouter(<App /" >);""
     expect(screen.getByTestId("index-page")).toBeInTheDocument()})})
-}
+}export { MockIndex, MockAbout, MockContact }
+;
 export { MockIndex, MockAbout, MockContact }
-
-export { MockIndex, MockAbout, MockContact }
-
+;
 export { MockIndex, MockAbout, MockContact }
 
 export { MockIndex, MockAbout, MockContact }"
@@ -260,8 +251,7 @@ describe("App Component", () => {""
   test("renders without crashing", () => {"
     renderWithRouter(<App /" >);"
     expect(screen.getByTestId("index-page")).toBeInTheDocument()})})
-}
-export {MockIndex, MockAbout, MockContact }
+}export {MockIndex, MockAbout, MockContact }
 
 export {MockIndex, MockAbout, MockContact }
 
@@ -283,8 +273,7 @@ describe("App Component", () => {"""
   test("renders without crashing", () => {"""
     renderWithRouter(<App /"" >);""
     expect(screen.getByTestId("index-page")).toBeInTheDocument()})})
-}
-export { MockIndex, MockAbout, MockContact }
+}export { MockIndex, MockAbout, MockContact }
 
 export { MockIndex, MockAbout, MockContact }
 
@@ -295,5 +284,4 @@ export { MockIndex, MockAbout, MockContact }"
 export { MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact }"""
 """
 export { MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact }"""
-"""
-"
+""""

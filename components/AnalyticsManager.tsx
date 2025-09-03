@@ -11,23 +11,22 @@ interface AnalyticsEvent {,
   name: string,,
 category: string,
   action?: string,
-  label?: string) => $3,
-value?: number: custom_parameters?: Record<strin,g, any>}
+  label?: string) => $3,value?: number: custom_parameters?: Record<strin,g, any>}
+;
+interface PerformanceMetrics {;
 
-interface PerformanceMetrics {
-
-  fcp: number,
-  lcp: number,,
-  fid: number,,
-cls: number,
-  ttfb: number,
+  fcp: number,;
+  lcp: number,,;
+  fid: number,,;
+cls: number,;
+  ttfb: number,;
   loadTime: numbe,r}
+;
+interface UserBehavior {;
 
-interface UserBehavior {
-
-  pageViews: number,,
-sessionDuration: number,
-  bounceRate: number,
+  pageViews: number,,;
+sessionDuration: number,;
+  bounceRate: number,;
   conversionRate: numbe,r}
 
 const AnalyticsManager: React.FC: = () => {,
@@ -61,8 +60,10 @@ if (typeof gtag !== "undefined") {"
         custom_map: {,"
 custom_parameter_1: "user_type,","
           custom_parameter_2: "session_id"", }
-
       })}
+;
+    // Initialize: other analytics services,;
+initializeCustomAnalytics(),;
 
     // comment
 initializeCustomAnalytics(),
@@ -234,5 +235,4 @@ track: trackEven,t,
 "
   return: null, // comment
 
-"
-export: default AnalyticsManager,
+"export: default AnalyticsManager,

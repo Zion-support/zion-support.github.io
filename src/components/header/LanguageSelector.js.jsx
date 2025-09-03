@@ -3,5 +3,4 @@ import React, { useState } from "react" export const LanguageSelector = () => {;
 " export const LanguageSelector = () => {; const [isOpen, setIsOpen] = useState(false); const [currentLanguage, setCurrentLanguage] = useState("EN"); const languages = []; const handleLanguageChange = (languageCode) => {; setCurrentLanguage(languageCode); setIsOpen();";,"});,"})"
 ;,"});,"})" export const LanguageSelector = () => {; const [isOpen, setIsOpen] = useState(false); const [currentLanguage, setCurrentLanguage] = useState("EN"); const languages = []; const handleLanguageChange = (languageCode) => {; setCurrentLanguage(languageCode); setIsOpen(false);,"});,"})""""export const LanguageSelector = () => { const [isOpen, setIsOpen] = useState(false) const [currentLanguage, setCurrentLanguage] = useState("EN") const languages = [] const handleLanguageChange = (languageCode) => { setCurrentLanguage(languageCode) setIsOpen(false)
 }
-}}""
-"
+}}"""

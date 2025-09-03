@@ -1,9 +1,10 @@
 import React from "react"
 interface InteractiveSearchProps {
-
-  placeholder?: string
-  onSearch?: (query: string) => void,
+  placeholder?: string;
+  onSearch?: (query: string) => void,;
   className?: string}
+;
+export default function InteractiveSearch() {;
 
 export default function InteractiveSearch() {
 
@@ -30,5 +31,4 @@ export default function InteractiveSearch() {
       </div>
     </form>
   )
-}
-}""
+}}""

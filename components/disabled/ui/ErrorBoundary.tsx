@@ -1,7 +1,6 @@
 const Component = () => {
 import React, { Component, ErrorInfo, ReactNode } from "react"
-
-  public static getDerivedStateFromError(error: Error): State {,
+  public static getDerivedStateFromError(error: Error): State {,;
     return { hasError: true, error }
 
 
@@ -9,7 +8,6 @@ import React, { Component, ErrorInfo, ReactNode } from "react"
 "  }"private handleRetry = () => {
     this.setState({ hasError: false, error: undefined })
 }
-  }
 
   public render() {
     if (this.state.hasError) {
@@ -25,14 +23,11 @@ import React, { Component, ErrorInfo, ReactNode } from "react"
             )}
 
           </div>
-        </div>
       )
 }
-    }
 
     return this.props.children}
 
 
 
-""
-export default ErrorBoundary
+""export default ErrorBoundary

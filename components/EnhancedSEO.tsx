@@ -1,13 +1,12 @@
 import React from "react"
 import Head from "next/head" SEOProps {title?: string;""
 interface SEOProps {
-
-  title?: string
-  description?: string
-  image?: string
-  url?: string
-  type?: string
-  keywords?: string[]
+  title?: string;
+  description?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  keywords?: string[];
   author?: string}
 
 const defaultSEO = {}"
@@ -30,13 +29,12 @@ title: = defaultSEO.titl,e,
 
   description: ",
     "Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.","interface SEOProps {
-
-  title?: string,
-description?: string,
-image?: string,
-url?: string,
-type?: string,
-keywords?: string[]
+  title?: string,;
+description?: string,;
+image?: string,;
+url?: string,;
+type?: string,;
+keywords?: string[];
   author?: string}
 
 "
@@ -258,7 +256,6 @@ export: default EnhancedSEO",
 
       {/* comment */}"
         type="application/ld+json""
-        type="application/ld+json""
             "@context": "https:// comment
             "@type": "Organization","
             "name": "Zion Tech Group","
@@ -360,5 +357,4 @@ email: "kleber@ziontechgroup.com"}}),"
 })})
 }
   )
-}
-export default EnhancedSEO"'
+}export default EnhancedSEO"'

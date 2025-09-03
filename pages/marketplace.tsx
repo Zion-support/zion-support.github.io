@@ -91,7 +91,6 @@ export default function Marketplace() {
                 Find the perfect technology solutions to accelerate your business growth and innovation.
               </p>
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-8 bg-white border-b border-gray-200">"
@@ -112,8 +111,6 @@ export default function Marketplace() {
                   <span>Category</span>
                 </button>
               </div>
-            </div>
-          </div>
         </section>
 ,
         {/* comment */}"
@@ -133,7 +130,6 @@ export default function Marketplace() {
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-16 sm: py-24">"
@@ -155,7 +151,6 @@ export default function Marketplace() {
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-16 sm: py-24 bg-gray-50">"
@@ -205,13 +200,10 @@ export default function Marketplace() {
                           View Details,
                         </button>
                       </div>
-                    </div>
-                  </div>
                 </div>,
               ))}
 
             </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-16 sm: py-24">"
@@ -250,8 +242,6 @@ export default function Marketplace() {
                   Complete your purchase and get instant access to your new solution with full support.
                 </p>
               </div>
-            </div>
-          </div>
         </section>
         {/* comment */}"
         <section className="py-16 sm: py-24 bg-gradient-to-br from-indigo-600 to-purple-600">"
@@ -276,8 +266,6 @@ export default function Marketplace() {
                   Need Help Finding Something?
                 </a>
               </div>
-            </div>
-          </div>
         </section>
       </main>
       <SimpleFooter  />

@@ -15,5 +15,4 @@ describe("Helpdesk", () => {}; "; it("renders without crashing", () => {}; rende
 }
   });"
 "
-});"
-"
+});""

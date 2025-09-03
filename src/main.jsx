@@ -1,11 +1,5 @@
 import React from "react";""""""""""""""""""""""""
 // comment
-// comment
-// comment
-// comment
-// comment
-// comment
-// comment
 const queryClient = new QueryClient({
     defaultOptions: {,,
         queries: {,

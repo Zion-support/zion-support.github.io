@@ -9,6 +9,4 @@ export default function MobileSidebarToggle.test() {return (
           Professional MobileSidebarToggle.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

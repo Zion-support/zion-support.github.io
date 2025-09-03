@@ -30,8 +30,6 @@ and streamline your operations with cutting-edge technology.
                 </span>
               </Link>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -53,7 +51,6 @@ and streamline your operations with cutting-edge technology.
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-16 md: py-24 bg-gray-50">"
@@ -120,7 +117,6 @@ and streamline your operations with cutting-edge technology.
                     ))}
 
                   </div>
-                </div>
 "
                 <div className="flex flex-col sm: flex-row gap-3 pt-4 border-t border-gray-200">",
                   <Link href="{service.link}" className="flex-1">"
@@ -139,7 +135,6 @@ and streamline your operations with cutting-edge technology.
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section id="pricing" className="py-16 md: py-24 bg-white">"
@@ -257,8 +252,6 @@ and streamline your operations with cutting-edge technology.
                 </span>
               </Link>
             </div>
-          </div>
-        </div>
       </section>
 ,
       {/* comment */}"
@@ -292,35 +285,26 @@ and streamline your operations with cutting-edge technology.
                 <tr className="border-b border-gray-100">"
                   <td className="p-6 font-medium text-gray-900">API Access</td>"
                   <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto"  /></td>"
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto"  /></td>"
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto"  /></td>"
                   <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto"  /></td>
                 </tr>"
                 <tr className="border-b border-gray-100">"
                   <td className="p-6 font-medium text-gray-900">Mobile App</td>"
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto"  /></td>"
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto"  /></td>"
                   <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto"  /></td>"
                   <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto"  /></td>
                 </tr>"
                 <tr className="border-b border-gray-100">"
                   <td className="p-6 font-medium text-gray-900">Analytics Dashboard</td>"
                   <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto"  /></td>"
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto"  /></td>"
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto"  /></td>"
                   <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto"  /></td>
                 </tr>
                 <tr>"
                   <td className="p-6 font-medium text-gray-900">24/7 Support</td>"
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto"  /></td>"
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto"  /></td>"
                   <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto"  /></td>"
                   <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto"  /></td>
                 </tr>
               </tbody>
             </table>
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-16 md: py-24 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">"
@@ -356,7 +340,6 @@ and streamline your operations with cutting-edge technology.
                 Middletown DE 19709,
               </p>
             </div>
-          </div>
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">"
             <Link href="/contact">"
@@ -371,9 +354,7 @@ and streamline your operations with cutting-edge technology.
               </span>
             </Link>
           </div>
-        </div>
       </section>
     </MainLayout>;,
   ),
-"
-export default MicroSaasPage
+"export default MicroSaasPage

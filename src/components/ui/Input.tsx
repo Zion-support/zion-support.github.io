@@ -2,5 +2,4 @@ import React from "react"; interface InputProps extends React.InputHTMLAttribute
 
 "
 &apos,"
- interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> { className?: string} }"""""
-;"""
+ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> { className?: string} }""""";"""

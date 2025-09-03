@@ -9,6 +9,4 @@ export default function ModernUIEnhancer() {return (
           Professional ModernUIEnhancer services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

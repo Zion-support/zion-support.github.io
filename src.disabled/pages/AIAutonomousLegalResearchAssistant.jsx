@@ -1,1 +1,1 @@
-import React from; 'react' export default AIAutonomousLegalResearchAssistant'`
+import React from; "react" export default AIAutonomousLegalResearchAssistant'`

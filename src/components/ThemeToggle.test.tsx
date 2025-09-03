@@ -9,6 +9,4 @@ export default function ThemeToggle.test() {return (
           Professional ThemeToggle.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

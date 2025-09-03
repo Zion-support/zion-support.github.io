@@ -253,8 +253,6 @@ with flexible options to scale as you grow.
 
               </span>
             </div>
-          </div>
-        </div>
       </section>
 "
       {/* comment */}""
@@ -295,7 +293,6 @@ with flexible options to scale as you grow.
                     <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular,
                     </div>
-                  </div>
                 )}"
 ""
                 <div className="text-center mb-8">""
@@ -380,11 +377,9 @@ with flexible options to scale as you grow.
                   ))}
 
                 </div>
-              </div>
             ))}
 
           </div>
-        </div>
       </section>
 "
       {/* comment */}""
@@ -450,11 +445,9 @@ with flexible options to scale as you grow.
 
                   </span>
                 </div>
-              </div>
             ))}
 
           </div>
-        </div>
       </section>
       {/* comment */}"
       <section className="py-20">""
@@ -553,7 +546,6 @@ with flexible options to scale as you grow.
             ))}
 
           </div>
-        </div>
       </section>
 "
       {/* comment */}""
@@ -607,10 +599,7 @@ with flexible options to scale as you grow.
                 Learn More,
               </Link>
             </div>
-          </div>
-        </div>
       </section>
     </div>",
   )}""
-  )}""""
-"
+  )}"""""

@@ -15,5 +15,4 @@ describe("Categories", () => {}; "; it("renders without crashing", () => {}; ren
 }
   });"
 "
-});"
-"
+});""

@@ -13,8 +13,7 @@ class MasterAutomationOrchestrator {
       buildSuccess: false,
       testsPassed: 0,
       optimizations: 0,
-      errors: []
-    }
+      errors: []    }
     this.startTime = Date.now()
   }
 
@@ -37,8 +36,7 @@ class MasterAutomationOrchestrator {
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'error')
       this.results.errors.push({ command, description, error: error.message })
-      throw error
-    }
+      throw error    }
   }
 
   async fixSyntaxErrors() {
@@ -186,7 +184,6 @@ class MasterAutomationOrchestrator {
                 if (before !== fixedContent) {
                   hasChanges = true
                 }
-              }
 
               // Additional specific fixes
               fixedContent = this.applySpecificFixes(fixedContent, file)
@@ -199,10 +196,6 @@ class MasterAutomationOrchestrator {
             } catch (error) {
               this.log(`Error fixing ${file}: ${error.message}`, 'error')
             }
-          }
-        }
-      }
-    }
 
     this.results.syntaxFixes = totalFixed
     this.log(`✅ Fixed ${totalFixed} files`, 'success')
@@ -227,14 +220,12 @@ class MasterAutomationOrchestrator {
       if (fixedContent.includes('return (') && !fixedContent.includes('const ') && !fixedContent.includes('function ')) {
         fixedContent = 'const Component = () => {\n' + fixedContent
       }
-    }
 
     if (filePath.endsWith('.ts') || filePath.endsWith('.js')) {
       // Fix missing imports
       if (fixedContent.includes('React.') && !fixedContent.includes('import React')) {
         fixedContent = 'import React from "react"\n' + fixedContent
       }
-    }
 
     return fixedContent
   }
@@ -250,7 +241,6 @@ class MasterAutomationOrchestrator {
       } else if (item.isFile()) {
         files.push(fullPath)
       }
-    }
     
     return files
   }
@@ -273,7 +263,6 @@ class MasterAutomationOrchestrator {
       this.log('❌ Build failed', 'error')
       this.results.buildSuccess = false
     }
-  }
 
   async runTests() {
     this.log('🧪 Running tests...')
@@ -285,7 +274,6 @@ class MasterAutomationOrchestrator {
       this.log('❌ Tests failed', 'error')
       this.results.testsPassed = 0
     }
-  }
 
   async runLinting() {
     this.log('🔍 Running linting...')
@@ -295,7 +283,6 @@ class MasterAutomationOrchestrator {
     } catch (error) {
       this.log('❌ Linting failed', 'error')
     }
-  }
 
   async runPerformanceOptimization() {
     this.log('⚡ Running performance optimization...')
@@ -306,7 +293,6 @@ class MasterAutomationOrchestrator {
     } catch (error) {
       this.log('❌ Performance optimization failed', 'error')
     }
-  }
 
   async runSecurityAudit() {
     this.log('🔒 Running security audit...')
@@ -316,12 +302,10 @@ class MasterAutomationOrchestrator {
     } catch (error) {
       this.log('❌ Security audit failed', 'error')
     }
-  }
 
   async generateReport() {
     const endTime = Date.now()
     const duration = endTime - this.startTime
-
     const report = {
       timestamp: new Date().toISOString(),
       duration: `${duration}ms`,
@@ -333,11 +317,9 @@ class MasterAutomationOrchestrator {
         optimizations: this.results.optimizations,
         totalErrors: this.results.errors.length
       }
-    }
 
     fs.writeFileSync('master-automation-report.json', JSON.stringify(report, null, 2))
-    this.log('📄 Report saved to: master-automation-report.json')
-  }
+    this.log('📄 Report saved to: master-automation-report.json')  }
 
   async run() {
     this.log('🚀 Starting Master Automation Orchestrator...')
@@ -368,10 +350,8 @@ class MasterAutomationOrchestrator {
       
     } catch (error) {
       this.log(`💥 Master Automation Orchestrator failed: ${error.message}`, 'error')
-      await this.generateReport()
-    }
+      await this.generateReport()    }
   }
-}
 
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator()

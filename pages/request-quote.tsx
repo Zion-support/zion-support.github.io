@@ -4,8 +4,7 @@ const Head = dynamic(() => import("next/head"), { ssr: false })
 }
   Mail,
   MapPin} from "lucide-react"
-
-export default function RequestQuote() {
+export default function RequestQuote() {;
 
   const [formData, setFormData] = useState({"
     name: "","
@@ -39,7 +38,6 @@ await new Promise(resolve => setTimeout(resolve, 2000))
 }
     setIsSubmitted(true)
 }
-  }
 
   const serviceTypes = []
 
@@ -132,7 +130,6 @@ initial="{{" opacity: 0, y: 20 }}"
               </p>
             </motion.div>
           </div>
-        </div>
 ,
         {/* comment */}"
         <div className="py-16 bg-white">"
@@ -161,8 +158,6 @@ key="{index}""
               ))}
 
             </div>
-          </div>
-        </div>
         {/* comment */}"
         <div className="py-16">"
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -232,7 +227,6 @@ value="{formData.email}""
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
                       placeholder="+1 (555) 123-4567" />
                   </div>
-                </div>
 "
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>"
@@ -276,7 +270,6 @@ value="{formData.serviceType}""
 
                     </select>
                   </div>
-                </div>
 "
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
                   <div>"
@@ -311,7 +304,6 @@ value="{formData.serviceType}""
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"">
                       placeholder="e.g., $10,000 - $50,000" />
                   </div>
-                </div>
                 <div>"
                   <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
                     Project Description *
@@ -360,7 +352,6 @@ rows="{4}""
               </form>
             </motion.div>
           </div>
-        </div>
         {/* comment */}"
         <div className="py-16 bg-gray-50">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
@@ -397,9 +388,5 @@ rows="{4}""
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>"
                 <p className="text-gray-600">364 E Main St STE 1008<br  />Middletown DE 19709</p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </>",
   )}

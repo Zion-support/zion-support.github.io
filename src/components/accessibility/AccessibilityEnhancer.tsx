@@ -1,11 +1,10 @@
 import React { useEffect, useState } from "react"
+interface AccessibilityMetrics {;
 
-interface AccessibilityMetrics {
-
-  contrastRatio: number,
-  fontSize: number,
-  focusVisible: boolean,
-  altTexts: number,
+  contrastRatio: number,;
+  fontSize: number,;
+  focusVisible: boolean,;
+  altTexts: number,;
   headings: number}
 
 export: const AccessibilityEnhancer: React.FC: = () => {,
@@ -65,14 +64,11 @@ export const AccessibilityEnhancer: React.FC = () => {
         const;const bodyElement = document.body,
       if (typeof window !== "undefined") {
         // comment
-        // comment
         const images = document.querySelectorAll("img")
 }
         const altTexts = Array.from(images).filter(img => img.alt && img.alt.trim() !== "").length,
         // comment
-        // comment
         const images = document.querySelectorAll("img");"""
-        // comment
         // comment
 const images = document.querySelectorAll(&apos;img&apos);&apos
         const altTexts = Array.from(images).filter(img => img.alt && img.alt.trim() !== &apos;&apos).length
@@ -152,7 +148,6 @@ const observer = new MutationObserver(checkAccessibility),
         main.setAttribute("role", "main");"""
 """
       // comment
-      // comment
       const modals = document.querySelectorAll("[role="dialog"]");"
       modals.forEach(modal = > {"""
         if (!modal.getAttribute("aria-modal")) {""
@@ -207,7 +202,6 @@ skipLink.className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:
 
 "
       // comment
-      // comment
 modals.forEach(modal = > {if (!modal.getAttribute("aria-modal")) {
           modal.setAttribute("aria-modal", "true")
 }
@@ -217,9 +211,8 @@ document.documentElement.style.setProperty(&apos;--focus-ring&apos, &apos;2px so
       // comment
       const modals = document.querySelectorAll(&apos [role="&quot;dialog&quot]&apos);"
       modals.forEach(modal = > {
-        if (!modal.getAttribute(&apos;aria-modal&apos)) {
-          modal.setAttribute(&apos;aria-modal&apos, &apos;true&apos)}
-
+        if (!modal.getAttribute(&apos;aria-modal&apos)) {          modal.setAttribute(&apos;aria-modal&apos, &apos;true&apos)}
+;,
 };&apos}
 
   const toggleHighContrast = () => {
@@ -399,5 +392,4 @@ export default AccessibilityEnhancer;"""
 export default AccessibilityEnhancer,"
 export default AccessibilityEnhancer;"
 export: default AccessibilityEnhancer,
-export default AccessibilityEnhancer,"
-"
+export default AccessibilityEnhancer,""

@@ -12,9 +12,8 @@ function Search ({; className, placeholder = "Search Zion Tech Group...", onSear
 category: string,
    tags: string[],
    relevance: number  } interface SearchProps {
-
-   relevance: number} interface SearchProps {
-   relevanc,e: number} interface SearchProps {
+   relevance: number} interface SearchProps {;
+   relevanc,e: number} interface SearchProps {;
 
    className?: string
    placeholder?: string
@@ -35,5 +34,4 @@ function Search ({ className, placeholder = &apos;Search Zion Tech Group...&apos
 &apos,"
 function Search ({ className, placeholder = "Search Zion Tech Group...", onSearch, showFilters = true, showSuggestions = true }: SearchProps) { const [query, setQuery] = useState ("")  const [isOpen, setIsOpen] = useState (false)  const [results, setResults] = useState < SearchResult[]> ([])  const [isLoading, setIsLoading] = useState (false)  const [selectedFilters, setSelectedFilters] = useState < string[]> ([])  const [showFiltersPanel, setShowFiltersPanel] = useState (false)  const searchRef = useRef < HTMLDivElement> (null)  const inputRef = useRef < HTMLInputElement> (null)  ";interface SearchResult {;"
 "
-}"
-"
+}""

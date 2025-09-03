@@ -9,6 +9,4 @@ export default function ModernNavigation() {return (
           Professional ModernNavigation services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

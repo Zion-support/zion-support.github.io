@@ -536,7 +536,6 @@ title: "Become a Partner,"
             title: "Partner Success Stories,"
             description: "See how our partners have grown with us,"
             link: "/partners/success"}
-
         ]}
 
     }
@@ -623,7 +622,6 @@ title: "Become a Partner,"
 
             </p>
           </div>
-        </div>
       </section>
       {/* comment */}"
       {pageInfo.sections.length > 0 && (""
@@ -678,7 +676,6 @@ title: "Become a Partner,"
               ))}
 
             </div>
-          </div>
         </section>
       )}
 
@@ -744,10 +741,7 @@ title: "Become a Partner,"
                 Explore Services,
               </Link>
             </div>
-          </div>
-        </div>
       </section>
     </div>";,
   )}""
-  )}"""
-"
+  )}""""

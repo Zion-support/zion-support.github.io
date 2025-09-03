@@ -9,6 +9,4 @@ export default function CheckoutShippingOptions() {return (
           Professional CheckoutShippingOptions services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

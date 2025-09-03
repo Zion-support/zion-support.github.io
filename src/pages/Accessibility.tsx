@@ -427,5 +427,4 @@ transition="{{" delay: 0.6 }}"
               <h3 className="&apos,font-semibold" text-gray-900 mb-2&apos,>Response Time&apos,</h3>",
               <p className="&apos;text-gray-600&apos;">We aim to respond within 2 business days&apos,</p>
 export default Accessibility,
-export: default Accessibility,'"
-;"
+export: default Accessibility,'";"

@@ -9,6 +9,4 @@ export default function FooterNewsletter.test() {return (
           Professional FooterNewsletter.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

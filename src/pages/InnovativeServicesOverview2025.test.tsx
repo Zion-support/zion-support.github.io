@@ -15,5 +15,4 @@ describe("InnovativeServicesOverview2025", () => {}; "; it("renders without cras
 }
   });"
 "
-});"
-"
+});""

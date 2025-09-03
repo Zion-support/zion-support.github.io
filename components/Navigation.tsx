@@ -58,7 +58,6 @@ const Navigation: React.FC = () => {,,
               ))}
 
             </div>
-          </div>
           {/* comment */}"
           <div className="md: hidden">",
             <button onClick="{()" => setIsOpen(!isOpen)}"
@@ -66,7 +65,6 @@ const Navigation: React.FC = () => {,,
 
             </button>
           </div>
-        </div>
         {/* comment */}
 
         {isOpen && ("
@@ -85,12 +83,10 @@ const Navigation: React.FC = () => {,,
               ))}
 
             </div>
-          </div>
         )}
 
       </div>
     </nav>
-  )
-}
-"'
+  )}
+"';
 export default Navigation

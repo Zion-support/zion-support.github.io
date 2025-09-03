@@ -11,8 +11,6 @@ export default function BlockchainServicesPage() {return ("
           Professional BlockchainServicesPage services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

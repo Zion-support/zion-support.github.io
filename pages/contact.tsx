@@ -4,7 +4,6 @@ const Component = () => {
 const Contact: NextPage = () => {
   return (
     <>,
-  )
-}
-"
+  )}
+";
 export default Contact

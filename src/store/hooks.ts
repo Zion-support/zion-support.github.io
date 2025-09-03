@@ -8,6 +8,5 @@ export default function Hooks() {
           This is a placeholder component for hooks.
         </p>
       </div>
-    </div>
   )
 }

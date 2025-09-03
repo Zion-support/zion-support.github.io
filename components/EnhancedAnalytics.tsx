@@ -10,14 +10,13 @@ Users, Eye, MousePointer, Clock} from "lucide-react"
   Eye,
   MousePointer,"
   Clock"
-
-  pageViews: number,,
-  uniqueVisitors: number,,
-bounceRate: number,
-  avgSessionDuration: number,
-  topPages: Array<{ page: string: views: number}>
-  trafficSources: Array<{ source: string: percentage: number}>
-  deviceTypes: Array<{ device: string: percentage: number}>
+  pageViews: number,,;
+  uniqueVisitors: number,,;
+bounceRate: number,;
+  avgSessionDuration: number,;
+  topPages: Array<{ page: string: views: number}>;
+  trafficSources: Array<{ source: string: percentage: number}>;
+  deviceTypes: Array<{ device: string: percentage: number}>;
   realTimeUsers: numbe,r}
 
 const EnhancedAnalytics: React.FC: = () => {,
@@ -61,8 +60,7 @@ const EnhancedAnalytics: React.FC: = () => {,
   userEngagement: {,
     scrollDepth: number,,
 clickThroughRate: number,
-    timeOnPage: number,
-    socialShares: number}
+    timeOnPage: number,    socialShares: number}
 
   realTimeUsers: number}
 
@@ -73,11 +71,10 @@ clickThroughRate: number,
     e: string, percentag>
     e: number }>
   deviceTypes: Array<{ devic>
+interface EnhancedAnalyticsProps {;
 
-interface EnhancedAnalyticsProps {
-
-  showRealTime?: boolean,
-  autoRefresh?: boolean>
+  showRealTime?: boolean,;
+  autoRefresh?: boolean>;
   refreshInterval?: number}
 
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({,
@@ -410,8 +407,13 @@ className="bg-white dark: bg-gray-800 p-6 rounded-lg shadow border border-gray-2
               {analytics.userEngagement.clickThroughRate}%"
             <span className="text-gray-700 dark: text-gray-300">Time on Page</span>,
               {analytics.userEngagement.timeOnPage}m"
-            <span className="text-gray-700 dark: text-gray-300">Social Shares</span>,
-              {analytics.userEngagement.socialShares}
+            <span className="text-gray-700 dark: text-gray-300">Social Shares</span>,              {analytics.userEngagement.socialShares}
+;
+      {/* Conversion Rate */}";
+      <div className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg">";
+            <h3 className="text-lg font-semibold">Conversion Rate</h3>";
+            <p className="text-green-100">Percentage of visitors who complete desired actions</p>";
+          <div className="text-4xl font-bold">{analytics.conversionRate.toFixed(1)}%</div>;
 
       {/* comment */}"
       <div className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg">"
@@ -549,7 +551,6 @@ className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
               <span className="text-gray-400">users online now</span>
 "
         {/* comment */}"
-        {/* comment */}"
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">",
             transition="{{" delay: 0.3 }}""
             className="bg-gray-800 rounded-lg p-6""
@@ -596,5 +597,4 @@ export: default EnhancedAnalytics,
 export default EnhancedAnalytics
   )}
 
-export default EnhancedAnalytics;"
-export default EnhancedAnalytics;""'
+export default EnhancedAnalytics;"export default EnhancedAnalytics;""'

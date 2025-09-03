@@ -251,8 +251,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I"m Zion Tech Group"s AI as
                     <X className="w-4 h-4"  />;,"});,"})"
                   </button>;,"});,"})"
                 </div>;,"});,"})"
-              </div>;,"});,"})"
-            </div>;,"});,"})"
             {/* comment */}"});,"})"
             {!isMinimized && (<>""";,"});,"})"
                 {/* comment */}"""";,"});,"})"
@@ -287,7 +285,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I"m Zion Tech Group"s AI as
                           {/* comment */}""";,"});,"})"
                           {message.type === "bot" && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions="{message.metadata.suggestions}/">)}"});,"})"
                         </div>;,"});,"})"
-                      </div>;,"});,"})"
                     </motion.div>) ) }"});,"})"
 ;,"});,"})"
                   {/* comment */}"});,"})"
@@ -313,7 +310,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I"m Zion Tech Group"s AI as
                     </button>;,"});,"})"
                     <span>{messages.length} messages</span>;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
               </>) }"});,"})"
           </motion.div>) }"});,"})"
       </AnimatePresence>;,"});,"})"
@@ -904,8 +900,7 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
           {suggestion}&quot}} className = "flex flex-wrap gap-2 mt-3">"
       {suggestions.map((suggestion, index) => (<button key="{index}" onClick="{()" => handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark: bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">",
 "}} className="flex flex-wrap gap-2 mt-3">""
-      {suggestions.map((suggestion, index) => (<button key="{index}" onClick="{()" =" > handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark: bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">,
-          {suggestion}
+      {suggestions.map((suggestion, index) => (<button key="{index}" onClick="{()" =" > handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark: bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">,          {suggestion}
 
         </button>))}
 
@@ -931,8 +926,7 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
       {/* comment */}""
       <motion.button onClick="{toggleChatbot}" className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover="{{" scale: 1.1 }} whileTap="{{" scale: 0.9 }} aria-label="Open AI chatbot">""
         <MessageCircle className="w-6 h-6"/" >""
-        {messages.length > 0 && (<div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
-            {Math.min(messages.length, 9)}
+        {messages.length > 0 && (<div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">            {Math.min(messages.length, 9)}
 
           </div>)}
 
@@ -1030,8 +1024,6 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
                     <X className="w-4 h-4"/" >
                   </button>
                 </div>
-              </div>
-            </div>
 ,
             {/* comment */}"
             {!isMinimized && (<>""
@@ -1112,8 +1104,7 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
                         : &apos;bg-gray-100 dark:bg-gray-700 text-gray-800 dar,k: text-gray-200&apos}"}>&apos;"
                           <p className="&quot;text-sm" whitespace-pre-wrap&quot;>{message.content}&quot;</p>
                           {/* comment */}"
-                          {message.metadata && (}<div className="&quot;mt-2" text-xs opacity-70&quot;>"
-                              {message.metadata.confidence && (&quot}<span className="&quot;mr-2&quot;">Confidence: {Math.round(message.metadata.confidence * 100)}%&quot;</span>)}
+                          {message.metadata && (}<div className="&quot;mt-2" text-xs opacity-70&quot;>"                              {message.metadata.confidence && (&quot}<span className="&quot;mr-2&quot;">Confidence: {Math.round(message.metadata.confidence * 100)}%&quot;</span>)}
 
                               {message.metadata.intent && (}<span>Intent: {message.metadata.intent}</span>)}
 
@@ -1137,8 +1128,7 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
                           <p className="text-sm whitespace-pre-wrap">{message.content}</p>"
 """
                           {/* comment */}"""
-                          {message.metadata && (<div className="mt-2 text-xs opacity-70">"""
-                              {message.metadata.confidence && (<span className="mr-2">Confidence: {Math.round(message.metadata.confidence * 100)}%</span>)}
+                          {message.metadata && (<div className="mt-2 text-xs opacity-70">"""                              {message.metadata.confidence && (<span className="mr-2">Confidence: {Math.round(message.metadata.confidence * 100)}%</span>)}
 
                               {message.metadata.intent && (<span>Intent: {message.metadata.intent}</span>)}
 
@@ -1151,7 +1141,6 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
                           {message.type === "bot" && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/"" >)}
 
                         </div>
-                      </div>
                     </motion.div>))}
 
 "
@@ -1230,8 +1219,7 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
                     </button>,
                     <span>{messages.length} messages</span>
                   </div>
-                </div>
-</>)}
+                </div></>)}
 
           </motion.div>)}
 

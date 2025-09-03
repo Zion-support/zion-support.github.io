@@ -27,7 +27,6 @@ export default function BreadcrumbNavigation() {return ("
           Professional BreadcrumbNavigation services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
 }react-router-dom&apos;lucide-react&apos;framer-motion&apos;  interface BreadcrumbItem {"interface BreadcrumbItem {
@@ -38,10 +37,9 @@ export default function BreadcrumbNavigation() {return ("
    items?: BreadcrumbItem[];"
    className?: string""
    showHome?: boolean} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = "", showHome = true }) => { const location = useLocation() ";interface BreadcrumbItem {
-
-   label: string,
-path: string,
-isCurrent?: boolean} interface BreadcrumbNavigationProps {
+   label: string,;
+path: string,;
+isCurrent?: boolean} interface BreadcrumbNavigationProps {;
 
    items?: BreadcrumbItem[]
    className?: string,"
@@ -54,5 +52,4 @@ showHome?: boolean}&apos; export const BreadcrumbNavigation: React.FC<Breadcrumb
    showHome?: boolean} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = "", showHome = true }) => { const location = useLocation() ";"
    showHome?: boolean"} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = "', showHome = true }) => { const location = useLocation()
 }
-}}"
-"
+}}""

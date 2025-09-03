@@ -9,6 +9,4 @@ export default function CaseStudiesSection() {return (
           Professional CaseStudiesSection services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

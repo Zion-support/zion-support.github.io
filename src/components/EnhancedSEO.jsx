@@ -101,10 +101,7 @@ export default function EnhancedSEO({}"});,"})"
       </script>;,"});,"})"
       {/* comment */}"""";,"});,"})"
       <link rel="preconnect" href="https: // comment
-      <link rel="preconnect" href="https: // comment
-      <link rel="preconnect" href="https: // comment
       {/* comment */}"""";,"});,"})"
-      <link rel="dns-prefetch" href="https: // comment
       <link rel="dns-prefetch" href="https: // comment
       {/* comment */}"""";,"});,"})"
       <meta httpEquiv="X-Content-Type-Options" content="nosniff"  />"""";,"});,"})"
@@ -228,7 +225,6 @@ return()
       {/* comment */}"""""
       <link rel="preconnect" href="https: // comment
       <link rel="preconnect" href="https:// comment
-      <link rel="preconnect" href="https:// comment
       {/* comment */}"""""
       <link rel="dns-prefetch" href="https: // comment
       <link rel="dns-prefetch" href="https:// comment
@@ -239,14 +235,11 @@ return()
       <meta """""
         httpEquiv="Referrer-Policy""""""
         content="strict-origin-when-cross-origin""'
-    </Helmet>
-  )}
-
+    </Helmet>  )}
+;
 export { EnhancedSEO }
 
 export { EnhancedSEO }
 
 "
 ;""""
-;"""
-"

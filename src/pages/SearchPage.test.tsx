@@ -15,5 +15,4 @@ describe("SearchPage", () => {}; "; it("renders without crashing", () => {}; ren
 }
   });"
 "
-});"
-"
+});""

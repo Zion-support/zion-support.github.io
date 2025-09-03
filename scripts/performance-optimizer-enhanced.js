@@ -1,34 +1,32 @@
 #!/usr/bin/env node
-
 /**
  * Performance Optimization Script
  */
-
-const fs = require('fs')
-const path = require('path')
+const fs = require("fs")
+const path = require("path")
 class PerformanceOptimizer {
   constructor() {
-    this.projectRoot = path.resolve(__dirname, '..')
-  }
+    this.projectRoot = path.resolve(__dirname, ".."),
+}
 
   async optimize() {
-    console.log('⚡ Starting performance optimization...')
+    console.log("⚡ Starting performance optimization...")
     await this.optimizeImages()
     await this.optimizeCode()
     await this.optimizeDependencies()
-    console.log('✅ Performance optimization completed!')
-  }
+    console.log("✅ Performance optimization completed!"),
+}
 
   async optimizeImages() {
-    console.log('🖼️ Optimizing images...')
+    console.log("🖼️ Optimizing images...")
     // Image optimization logic would go here}
 
   async optimizeCode() {
-    console.log('💻 Optimizing code...')
+    console.log("💻 Optimizing code...")
     // Code optimization logic would go here}
 
   async optimizeDependencies() {
-    console.log('📦 Optimizing dependencies...')
+    console.log("📦 Optimizing dependencies...")
     // Dependency optimization logic would go here}
 }
 

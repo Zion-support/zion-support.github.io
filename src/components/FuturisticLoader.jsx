@@ -61,5 +61,4 @@ import React from "react"; export const FuturisticLoader = ({ size = "medium", t
     <div className="{"${sizeClasses[size]}" relative"}" >" <div className="absolute inset - 0 rounded - full border - 4 border - cyan - 500 / 30 border - t-cyan - 500 animate - spin"></div>" <div className="absolute inset - 0 rounded - full border - 4 border - blue - 500 / 20 border - t-blue - 500 animate - spin" style = { { animationDirection: "reverse", animationDuration: "2s" }}" ></div> </div>) } }" return ("
     <div className="flex flex - col items - center justify - center space - y-4"> {renderLoader () }" {text && (<div className="{"text" - center ${textSizes[size]}"}" >" <p className="text - cyan - 400 font - medium animate - neon - pulse">{text}</p>" <div className="flex space - x-1 mt - 2 justify - center">" <div className="w - 1 h - 1 bg - cyan - 400 rounded - full animate - pulse"></div>" <div className="w - 1 h - 1 bg - cyan - 400 rounded - full animate - pulse animation - delay - 200"></div>" <div className="w - 1 h - 1 bg - cyan - 400 rounded - full animate - pulse animation - delay - 400"></div> </div> </div>) } </div>) } export default FuturisticLoader }"" """
 "
-"`"
-"
+"`""

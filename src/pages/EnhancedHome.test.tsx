@@ -15,5 +15,4 @@ describe("EnhancedHome", () => {}; "; it("renders without crashing", () => {}; r
 }
   });"
 "
-});"
-"
+});""

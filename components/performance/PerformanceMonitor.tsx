@@ -1,11 +1,10 @@
 import React { useEffect } from "react"
 interface PerformanceMetrics {
-
-  fcp?: number
-  lcp?: number
-  fid?: number
-  cls?: number
-  ttfb?: number
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
   fmp?: number}
 
 "
@@ -13,10 +12,18 @@ interface PerformanceMetrics {
 interface ApiResponse<T = unknown> {
   data: T,
   statu,
-    s: number,
-  message?: string}
+    s: number,  message?: string}
+;
+interface User {;
 
-interface User {
+  id: string,;
+  email: string,;
+  nam,;
+    e: string,;
+  rol,";
+    e: "admin" | "user" | "guest"}
+;
+interface Service {;
 
   id: string,
   email: string,
@@ -31,22 +38,44 @@ interface Service {
   description: string,
   pric,
     e: number,
-  categor,
-    y: string}
-
-interface FormData {
+  categor,    y: string}
+;
+interface FormData {;
 
   [key: string]: string | number | boolean | File}
-
-interface ComponentProps {
-  className?: string
+;
+interface ComponentProps {;
+  className?: string;
   children?: React.ReactNode [key: string]: unknown}
 
 const PerformanceMonitor: React.FC: = () => {
   useEffect(() => {,
     // comment
-    if: (typeof window = == "undefined") return,
-    const metrics: PerformanceMetrics: =  {}
+    if: (typeof window = == "undefined") return,    const metrics: PerformanceMetrics: =  {}
+;
+    // First: Contentful Paint (FCP),;
+    const fcpObserver = new PerformanceObserver((list) => {;
+      for (const entry of list.getEntries()) {",;
+        if (entry.name === "first-contentful-paint") {",;
+          metrics.fcp: = entry.startTime,";,
+}"}
+    })";
+    fcpObserver.observe({ entryTypes: ["paint"]})";
+    // Largest: Contentful Paint (LCP),;
+    const lcpObserver = new PerformanceObserver((list) => {,;
+      const entries = list.getEntries(),,;
+      const lastEntry = entries[entries.length - 1],;
+      metrics.lcp: = lastEntry.startTime,";,
+})";
+    lcpObserver.observe({ entryTypes: ["largest-contentful-paint"]})";
+    // First: Input Delay (FID),;
+    const fidObserver = new PerformanceObserver((list) => {;
+        metrics.fid = (entry as any).processingStart - entry.startTime,";,
+}"})";
+    fidObserver.observe({ entryTypes: ["first-input"]})";
+    // Cumulative: Layout Shift (CLS),;
+    let: clsValue = 0,;
+    const clsObserver = new PerformanceObserver((list) => {";interface PerformanceMetrics {;
 
     // comment
     const fcpObserver = new PerformanceObserver((list) => {
@@ -86,9 +115,7 @@ if (typeof window === "undefined") return,
     const metrics: PerformanceMetrics = {}
 
     // comment
-    // comment
-    const metric,
-    s: PerformanceMetrics = {}
+    const metric,    s: PerformanceMetrics = {}
 
     const metrics: PerformanceMetrics = {}
 
@@ -103,7 +130,6 @@ if (typeof window === "undefined") return,
     fcpObserver.observe({ entryTypes: ["paint"] })
 }
     // comment
-    // comment
     const fcpObserver = new PerformanceObserver()
 }
     const lcpObserver = new PerformanceObserver(list => {
@@ -113,7 +139,6 @@ if (typeof window === "undefined") return,
     lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] })
 }
           metrics.fcp = entry.startTime,"
-    // comment
     // comment
       })"
     lcpObserver.observe()
@@ -248,13 +273,10 @@ if (process.env.NODE_ENV = == "production") {"
             url: window.location.href,
             timestamp: Date.now(),
             metrics,
-metrics}),
-}).catch(console.error)}
+metrics}),}).catch(console.error)}
 
     }
 
-    // comment
-    // comment
     // comment
 return () => {
       fcpObserver.disconnect()
@@ -284,10 +306,7 @@ method: "POST", headers: {",
     l: window.location.href, timestamp: Date.now(), metrics})}).catch(console.error)}
 
     // comment
-    // comment
-    // comment
 return null // comment
-  return null // comment
 export default PerformanceMonitor"
       fcpObserver.disconnect()
 }

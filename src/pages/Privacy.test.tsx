@@ -15,5 +15,4 @@ describe("Privacy", () => {}; "; it("renders without crashing", () => {}; render
 }
   });"
 "
-});"
-"
+});""

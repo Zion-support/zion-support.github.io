@@ -1,10 +1,14 @@
 import React from "react"
 import { cn } from "@/lib/utils"
 interface SkeletonProps {
-  className?: string
-  lines?: number}
+  className?: string  lines?: number}
+;
+export default function Skeleton() {;
 
-export default function Skeleton() {
+  if (lines === 1) {;
+    return (";
+    <div className={cn(";
+          "animate-pulse bg-gray-200 rounded", className;
 
   if (lines === 1) {
     return ("
@@ -19,15 +23,25 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
           "animate-pulse bg-gray-200 rounded",>
           className)}
 
-     />
-    )}
-
-  return ("
-    <div className="space-y-2">
-      {Array.from({ length: lines }).map((_, i) => (
-        <div>
-interface SkeletonProps {className?: string>
+     />    )}
+;
+  return (";
+    <div className="space-y-2">;
+      {Array.from({ length: lines }).map((_, i) => (;
+        <div>;
+interface SkeletonProps {className?: string>;
   lines?: number}
+;
+export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {if (lines === 1) {;
+    return (";
+    <div className="{cn(" "animate-pulse bg-gray-200 rounded", className )} /" >;
+    )}";
+"";
+  return (""";
+    <div className="space-y-2">;
+      {Array.from({ length: lines }).map((_, i) => (";
+        <div key="{i}" className="{cn(" "animate-pulse bg-gray-200 rounded h-4", i === lines - 1 ? "w-3/4" : "w-full" )} /" >;@/lib/utils;
+interface SkeletonProps {;
 
 export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {if (lines === 1) {
     return ("
@@ -39,16 +53,11 @@ export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {if (
       {Array.from({ length: lines }).map((_, i) => ("
         <div key="{i}" className="{cn(" "animate-pulse bg-gray-200 rounded h-4", i === lines - 1 ? "w-3/4" : "w-full" )} /" >;@/lib/utils
 interface SkeletonProps {
-
-  className?: string
-  lines?: number}&apos;&apos
-export default function Skeleton() {
-
-  if (lines === 1) {
-    return (}}"
-      <div className=";{cn("
-          &apos;animate-pulse bg-gray-200 rounded&apos,
-          className>
+  if (lines === 1) {;
+    return (}}";
+      <div className=";{cn(";
+          &apos;animate-pulse bg-gray-200 rounded&apos,;
+          className>;
         )}
 
      />
@@ -132,5 +141,4 @@ export default function Skeleton() {
         /  >
       ))}"
     </div>"
-  )}""
-"
+  )}"""

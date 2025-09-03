@@ -1,6 +1,5 @@
 import React, { useState } from "react"
-
-export function ModernHeader() {
+export function ModernHeader() {;
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 }
@@ -9,7 +8,6 @@ export function ModernHeader() {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
 }
-  }
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false)
@@ -50,9 +48,6 @@ export function ModernHeader() {
               <Link href="/careers" className="hover:text-blue-200 transition-colors">Careers</Link>"
               <Link href="/support" className="hover:text-blue-200 transition-colors">Support</Link>
             </div>
-          </div>
-        </div>
-      </div>
 ,
       {/* comment */}"
       <header className="bg-white shadow-lg sticky top-0 z-50">"
@@ -151,8 +146,6 @@ export function ModernHeader() {
 
               </button>
             </div>
-          </div>
-        </div>
         {/* comment */}
 
         {isMobileMenuOpen && ("
@@ -230,8 +223,6 @@ export function ModernHeader() {
                   Get Started,
                 </Link>
               </div>
-            </div>
-          </div>
         )}
 
       </header>

@@ -13,10 +13,11 @@ if (this.x < 0) this.x = canvas.width>
         if (this.x > canvas.width) this.x = 0
         if (this.y < 0) this.y = canvas.height>
         if (this.y > canvas.height) this.y = 0
-        // comment
-this.vy += 0.01}
+        // commentthis.vy += 0.01}
+;
+      draw() {;
 
-      draw() {
+        if (ctx) {;
 
         if (ctx) {
 
@@ -35,31 +36,34 @@ this.vy += 0.01}
 ctx.shadowColor = this.color
           ctx.shadowBlur = 10
           ctx.fill()
-}
-          ctx.restore()}
+}          ctx.restore()}
 
       }
-
-      isDead() {
+;
+      isDead() {;
 
         return this.life <= 0}
 
     }
+;
+    // Grid system,;
+class Grid {;
 
     // comment
 class Grid {
-
-
-      spacing: number,,
-offset: number,
-      constructor() {
-
-        this.spacing = 60,
+        this.spacing = 60,;
         this.offset = 0}
-
-      update() {
+;
+      update() {;
 
         this.offset += 0.5}
+;
+      draw() {;
+        if (ctx) {";
+          ctx.strokeStyle = "rgba(100, 200, 255, 0.1)";
+          ctx.lineWidth = 1;
+          // Vertical lines,;
+for (let x = this.offset % this.spacing; x < canvas.width; x += this.spacing) {;
 
       draw() {
         if (ctx) {"
@@ -73,8 +77,10 @@ for (let x = this.offset % this.spacing; x < canvas.width; x += this.spacing) {
             ctx.moveTo(x, 0)
 }
             ctx.lineTo(x, canvas.height)
-}
-            ctx.stroke()}
+}            ctx.stroke()}
+;
+          // Horizontal lines,;
+for (let y = this.offset % this.spacing; y < canvas.height; y += this.spacing) {;
 
           // comment
 for (let y = this.offset % this.spacing; y < canvas.height; y += this.spacing) {
@@ -84,32 +90,34 @@ for (let y = this.offset % this.spacing; y < canvas.height; y += this.spacing) {
             ctx.moveTo(0, y)
 }
             ctx.lineTo(canvas.width, y)
-}
-            ctx.stroke()}
+}            ctx.stroke()}
 
         }
 
       }
 
     }
+;
+    // Wave system,;
+class Wave {;
 
     // comment
 class Wave {
-
-      amplitude: number,
-      frequency: number,,
-      speed: number,,
-offset: number,
-      constructor() {
-
-        this.amplitude = 50,,
-        this.frequency = 0.02,
-        this.speed = 0.02,
+        this.amplitude = 50,,;
+        this.frequency = 0.02,;
+        this.speed = 0.02,;
         this.offset = 0}
-
-      update() {
+;
+      update() {;
 
         this.offset += this.speed}
+;
+      draw() {;
+        if (ctx) {";
+          ctx.strokeStyle = "rgba(150, 100, 255, 0.3)";
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          for (let x = 0; x < canvas.width; x++) {;
 
       draw() {
         if (ctx) {"
@@ -122,11 +130,10 @@ offset: number,
             const y = Math.sin(x * this.frequency + this.offset) * this.amplitude + canvas.height / 2
             if (x = == 0) {
               ctx.moveTo(x, y)} else {
-
               ctx.lineTo(x, y)}
 
           }
-
+;
           ctx.stroke()}
 
       }
@@ -139,8 +146,10 @@ const particles: Particle[] = [],
     const waves: Wave[] = [],
     // comment
 for (let i = 0; i < 100, i++) {
-
       particles.push(new Particle())}
+;
+    // Initialize waves>;
+for (let i = 0; i < 3; i++) {;
 
     // comment
 for (let i = 0; i < 3; i++) {
@@ -149,8 +158,22 @@ for (let i = 0; i < 3; i++) {
 }
       wave.amplitude = 30 + i * 20
       wave.frequency = 0.01 + i * 0.005
-      wave.speed = 0.01 + i * 0.005>
-      waves.push(wave)}
+      wave.speed = 0.01 + i * 0.005>      waves.push(wave)}
+;
+    // Animation loop,;
+let animate = () => {;
+      // Clear canvas with fade effect,;
+ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Update and draw grid,;
+grid.update();
+      grid.draw();
+      // Update and draw waves,;
+waves.forEach(wave = > {;
+        wave.update();
+        wave.draw()});
+      // Update and draw particles,;
+particles.forEach((particle, index) => {;
 
     // comment
 let animate = () => {
@@ -186,8 +209,7 @@ particles.forEach((particle, index) => {
 ctx.strokeStyle = "rgba(100, 200, 255, 0.1)"
       ctx.lineWidth = 1
       for (let i = 0; i < particles.length; i++) {
-
-        for (let j = i + 1; j < particles.length; j++) {
+        for (let j = i + 1; j < particles.length; j++) {;
 
           const distance = Math.sqrt(dx * dx + dy * dy)
 }
@@ -200,12 +222,22 @@ ctx.strokeStyle = "rgba(100, 200, 255, 0.1)"
             ctx.moveTo(particles[i].x, particles[i].y)
 }
             ctx.lineTo(particles[j].x, particles[j].y)
-}
-            ctx.stroke()}
+}            ctx.stroke()}
 
         }
 
       }
+;
+      // Add floating geometric shapes>;
+const time = Date.now() * 0.001;
+      ctx.save();
+      ctx.translate(canvas.width / 2, canvas.height / 2);
+      ctx.rotate(time * 0.1);
+      // Draw rotating hexagon,";
+ctx.strokeStyle = "rgba(255, 100, 200, 0.2)";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      for (let i = 0; i < 6; i++) {;
 
       // comment
 const time = Date.now() * 0.001
@@ -227,7 +259,6 @@ ctx.strokeStyle = "rgba(255, 100, 200, 0.2)"
         const y = Math.sin(angle) * 150
         if (i = == 0) {
           ctx.moveTo(x, y)} else {
-
           ctx.lineTo(x, y)}
 
       }
@@ -242,12 +273,11 @@ ctx.strokeStyle = "rgba(100, 255, 200, 0.2)"
       ctx.beginPath()
 }
       for (let i = 0; i < 3; i++) {
-
-        const angle = (i * Math.PI * 2) / 3 + time * 0.5
-        const x = Math.cos(angle) * 100
-        const y = Math.sin(angle) * 100
-        if (i = == 0) {
-          ctx.moveTo(x, y)} else {
+        const angle = (i * Math.PI * 2) / 3 + time * 0.5;
+        const x = Math.cos(angle) * 100;
+        const y = Math.sin(angle) * 100;
+        if (i = == 0) {;
+          ctx.moveTo(x, y)} else {;
 
           ctx.lineTo(x, y)}
 

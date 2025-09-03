@@ -97,7 +97,6 @@ export function Header() {
                 value="{searchQuery}""
                 onChange="{(e)" => setSearchQuery(e.target.value)}"
                 className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
                 className="w-64 px-4 py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"  />
             </form>"
@@ -116,7 +115,6 @@ export function Header() {
               <Phone className="h-4 w-4"  />
               <span>+1 (555) 123-4567</span>
             </div>
-          </div>
 ,
           {/* comment */}"
           <button onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}"
@@ -223,7 +221,6 @@ export function Header() {
                 <Phone className="h-4 w-4"  />
                 <span>+1 (555) 123-4567</span>
               </div>
-            </div>
           </div>,
         )}
 
@@ -232,7 +229,6 @@ export function Header() {
   )
 }
   );"
-}"
 }"
 "
 

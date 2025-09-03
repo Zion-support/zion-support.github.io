@@ -9,6 +9,4 @@ export default function comprehensivePricingGuide2030() {return (
           Professional comprehensivePricingGuide2030 services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

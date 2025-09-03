@@ -9,6 +9,4 @@ export default function EnhancedNewsletterForm() {return (
           Professional EnhancedNewsletterForm services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

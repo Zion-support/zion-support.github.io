@@ -116,8 +116,6 @@ export function HomePage() {const features = []
                 Get Started,
               </Link>
             </div>
-          </div>
-        </div>
 ",
         {/* comment */}""
         <div className="absolute top-20 left-10 w-2 h-2 bg-zion-cyan/30 rounded-full animate-pulse"  />""
@@ -185,7 +183,6 @@ export function HomePage() {const features = []
             ))}
 
           </div>
-        </div>
       </section>
 "
       {/* comment */}""
@@ -225,11 +222,9 @@ export function HomePage() {const features = []
                   {stat.label}
 
                 </div>
-              </div>
             ))}
 
           </div>
-        </div>
       </section>
 "
       {/* comment */}""
@@ -362,7 +357,6 @@ export function HomePage() {const features = []
               <ArrowRight className="ml-2 h-5 w-5" /" >
             </Link>
           </div>
-        </div>
       </section>
 ",
       {/* comment */}""
@@ -421,11 +415,9 @@ export function HomePage() {const features = []
                   <div className="font-semibold text-white">{testimonial.name}</div>"""
                   <div className="text-zion-cyan text-sm">{testimonial.title}</div>
                 </div>
-              </div>
             ))}
 
           </div>
-        </div>
       </section>
 "
       {/* comment */}""
@@ -489,8 +481,6 @@ export function HomePage() {const features = []
                 View Case Studies,
               </Link>
             </div>
-          </div>
-        </div>
       </section>
     </div>",
   )}""

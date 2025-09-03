@@ -15,5 +15,4 @@ describe("SpaceTech", () => {}; "; it("renders without crashing", () => {}; rend
 }
   });"
 "
-});"
-"
+});""

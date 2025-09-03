@@ -15,5 +15,4 @@ describe("ServicesComparisonMatrix2025", () => {}; "; it("renders without crashi
 }
   });"
 "
-});"
-"
+});""

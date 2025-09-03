@@ -15,5 +15,4 @@ describe("MicroSaaS", () => {}; "; it("renders without crashing", () => {}; rend
 }
   });"
 "
-});"
-"
+});""

@@ -7,8 +7,7 @@ Smartphone,
   Leaf,
 } from "lucide-react.ts"
 interface SidebarProps extends React.PropsWithChildren<{}> {
-
-  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean,
+  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean,;
   onClose: ()               => void}
 
   const router = useRouter()

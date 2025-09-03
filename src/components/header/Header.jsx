@@ -22,9 +22,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
   const searchSuggestions = generateSearchSuggestions()"
   "
   // comment
-  // comment
-  // comment
-  // comment
 const effectiveTheme = customTheme ||
     (isWhitelabel,
       ? {
@@ -60,7 +57,6 @@ useEffect(() => {const handleScroll = () => {
     if (query.trim()) {"
       navigate("/search?q="${encodeURIComponent(query)}");"
       setQuery("")}
-
   }
 
   const toggleMobileMenu = () => {setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -142,7 +138,6 @@ useEffect(() => {
 
   return (""
     <header className = "{"sticky" top-0 z-50 w-full transition-all duration-300 ${"
-        isScrolled""
         isScrolled""
           ? "bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20""
           : "bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20", ""

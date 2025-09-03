@@ -9,6 +9,4 @@ export default function AdvancedAIServicesHub.test() {return (
           Professional AdvancedAIServicesHub.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

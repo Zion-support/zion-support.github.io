@@ -15,5 +15,4 @@ describe("EmergingTechShowcase2025", () => {}; "; it("renders without crashing",
 }
   });"
 "
-});"
-"
+});""

@@ -11,8 +11,6 @@ export default function Helpdesk() {return ("
           Professional Helpdesk services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

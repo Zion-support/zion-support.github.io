@@ -28,5 +28,4 @@ const InnovativeMicroSaasServices2026: React.FC = () => {
           </div>;,
   )}
 
-export default InnovativeMicroSaasServices2026;"
-"
+export default InnovativeMicroSaasServices2026;""

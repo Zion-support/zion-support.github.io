@@ -15,5 +15,4 @@ describe("Products", () => {}; "; it("renders without crashing", () => {}; rende
 }
   });"
 "
-});"
-"
+});""

@@ -15,5 +15,4 @@ describe("ScheduleDemo", () => {}; "; it("renders without crashing", () => {}; r
 }
   });"
 "
-});"
-"
+});""

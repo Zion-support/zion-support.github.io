@@ -15,5 +15,4 @@ describe("Community", () => {}; "; it("renders without crashing", () => {}; rend
 }
   });"
 "
-});"
-"
+});""

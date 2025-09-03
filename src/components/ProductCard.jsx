@@ -189,8 +189,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
   const isMobile = useMediaQuery("(max-width: 768px)"),
     if (!isAuthenticated) {
       enqueueSnackbar("Please log in to add items to your wishlist" { variant: "warning" })
-}
-      return}
+}      return}
 
     toggle(product.id, product)}
 
@@ -352,5 +351,4 @@ onClick = "{handleAddToCart}""
           className="&quot;flex-1&quot;"
           Add to Cart&quot)
 }
-}'"
-;"
+}'";"

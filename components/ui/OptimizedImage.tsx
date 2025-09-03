@@ -56,5 +56,4 @@ className = "object-cover transition-transform duration-300 hover: scale-105" />
   )}
 
 export default OptimizedImage
-export default OptimizedImage,"
-export default OptimizedImage""'
+export default OptimizedImage,"export default OptimizedImage""'

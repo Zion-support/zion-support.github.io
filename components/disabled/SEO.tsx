@@ -1,15 +1,27 @@
 import Head from "next/head"
 import React from "react"
+interface SEOProps {;
 
-interface SEOProps {
-
-  title: string,,
-description: string,
-  keywords?: string,
-  image?: string,,
-  url?: string,
-  type?: string,
+  title: string,,;
+description: string,;
+  keywords?: string,;
+  image?: string,,;
+  url?: string,;
+  type?: string,;
   siteName?: string}
+;
+const SEO: React.FC<SEOProps> = ({,;
+  title,;
+  description,;
+  keywords,;
+  image,;
+  url,";
+  type = "website",";
+  siteName = "Zion Tech Group";,
+}) => {;
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullImage = image || "/images/og-image.jpg";
+  const fullUrl = url || "https: //ziontechgroup.com",;
 
 const SEO: React.FC<SEOProps> = ({,
   title,
@@ -72,7 +84,6 @@ const SEO: React.FC<SEOProps> = ({,
 },"
             "sameAs": ["
               "https:// comment
-              "https:// comment
               "https: // comment
             ]>
 })>
@@ -80,7 +91,6 @@ const SEO: React.FC<SEOProps> = ({,
 
      />
     </Head>
-  )
-}
-"'
+  )}
+"';
 export default SEO

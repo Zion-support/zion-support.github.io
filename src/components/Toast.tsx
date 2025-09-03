@@ -1,6 +1,5 @@
 import React { createContext, useContext, useState, useCallback } from "react"
-
-interface Toast {
+interface Toast {;
 
   id: string,"
   type "success" | "error" | "warning" | "info";",,
@@ -11,14 +10,16 @@ interface Toast {
 interface Toast {"",
   type "success" | "error" | "warning" | "info";,
 title: string,
-  message?: string,
-  duration?: number  }
+  message?: string,  duration?: number  }
+;
+interface ToastContextType {;
 
 interface ToastContextType {
 
   toasts: Toast[],"
-  addToast: (void",") => $3,
-removeToast: (id: string) => voi,d}
+  addToast: (void",") => $3,removeToast: (id: string) => voi,d}
+;
+const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
 const ToastContext = createContext<ToastContextType | undefined>(undefined)
 }
@@ -47,17 +48,15 @@ duration?: number}
   toasts: Toast[],
   addToas,
     t: (void) => $3,
-removeToast: (i,
-    d: string) => void}
-
-  addToast: (void) => $3,
+removeToast: (i,    d: string) => void}
+;
+  addToast: (void) => $3,;
 removeToast: (id: string) => void}
 
 const ToastContext = createContext<ToastContextType | undefined>(undefined)
 }
 export function ToastProvider() {
-
-export function ToastProvider() {
+export function ToastProvider() {;
 
   const [toasts, setToasts] = useState<Toast[]>([])
 }
@@ -72,7 +71,13 @@ setToasts(prev = > prev.filter(t => t.id !== id))}, duration)}, [])
 }
   const removeToast = useCallback((id: string) => {,
     setToasts(prev => prev.filter(t => t.id !== id))}, [])"
-
+;
+interface ToastContextType {toasts: Toast[],;
+  addToast: (toas,t: Omit&apos}&apos;<Toast, &apos;id&apos;>) => void,;
+removeToast: (i,d: string) => void}&apos;";
+  toasts: Toast[],"";
+";
+const ToastContext = createContext<ToastContextType | undefined" >(undefined),";
 
 interface ToastContextType {toasts: Toast[],
   addToast: (toas,t: Omit&apos}&apos;<Toast, &apos;id&apos;>) => void,
@@ -81,9 +86,8 @@ removeToast: (i,d: string) => void}&apos;"
 "
 const ToastContext = createContext<ToastContextType | undefined" >(undefined),"
 export function ToastProvider({children }: {children: React.ReactNode }) {const [toasts, setToasts] = useState<Toast[]>([])
-}
-export function ToastProvider({ children }: { children: React.ReactNode }) {}
-
+}export function ToastProvider({ children }: { children: React.ReactNode }) {}
+;
   const addToast = useCallback((toast: Omit<,<Toast, &apos;id&apos;>) => {&apos}
 
     const;const id = Math.random().toString(36).substr(2, 9)
@@ -117,13 +121,23 @@ function ToastContainer({ toasts, removeToast }: { toasts: Toast[] removeToast: 
         <Toast key="{toast.id}" toast="{toast}" onRemove="{removeToast}"  />
       ))}
 
-    </div>
-  )}
+    </div>  )}
+;
+function Toast({ toast, onRemove }: { toast: Toast, onRemove: (id: string) => void}) {;
+  const bgColor = {;
+    success: "bg - green-500,",",;
+    error: "bg - red-500,",",;
+    warning: "bg - yellow-500,",",;
+    info: "bg-blue-500,",";
+export function useToast() {;
 
 function Toast({ toast, onRemove }: { toast: Toast, onRemove: (id: string) => void}) {
   const bgColor = {}
-
   return context}
+;
+function ToastContainer({ toasts, removeToast }: { toasts: Toast[] removeToast: (id: string) => void   }) {";
+  const context = useContext(ToastContext);"";
+  if (context = == undefined) {"";
 
 function ToastContainer({ toasts, removeToast }: { toasts: Toast[] removeToast: (id: string) => void   }) {"
   const context = useContext(ToastContext);""

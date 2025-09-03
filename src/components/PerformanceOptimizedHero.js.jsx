@@ -177,7 +177,6 @@ const PerformanceOptimizedHero = memo(() => {}"});,"})"
           {/* comment */}"});,"})"
           <HeroStats stats="{stats}"  />;,"});,"})"
         </div>;,"});,"})"
-      </div>;,"});,"})"
       {/* comment */}"});,"})"
       {isLoaded && (;,"});,"})"
         <>""";,"});,"})"
@@ -306,20 +305,17 @@ const PerformanceOptimizedHero = memo(() => {}
   const stats = []"
     {}""
 """
-"""
 """""
       number: "100+", """""
       label: "AI Services","""""
       icon: "🤖", """""
       color: "from-cyan-400 to-blue-400"}, {}""
 """
-"""
 """""
       number: "150+", """""
       label: "Micro SAAS Solutions","""""
       icon: "💻", """""
       color: "from-blue-400 to-purple-400"}, {}""
-"""
 """
 """""
       number: "24/7", """""
@@ -476,7 +472,6 @@ future.""
           {/* comment */}"
           <HeroStats stats="{stats}" /" >"
         </div>
-      </div>
       {/* comment */}"
       {isLoaded && (""
         <>"""""
@@ -513,28 +508,26 @@ future.""
 })"
 PerformanceOptimizedHero.displayName = "PerformanceOptimizedHero
 export default PerformanceOptimizedHero
-
 export { HeroStats, PerformanceOptimizedHero }
-
+;
 export { HeroStats, PerformanceOptimizedHero }
-
+;
 export { HeroStats, PerformanceOptimizedHero }
-
+;
 export { HeroStats, PerformanceOptimizedHero }
 
 export { HeroStats, PerformanceOptimizedHero };"
   )", "
 })"""
 PerformanceOptimizedHero.displayName = "PerformanceOptimizedHero"
-export default PerformanceOptimizedHero,
+export default PerformanceOptimizedHero,export { HeroStats, PerformanceOptimizedHero }
+;
 export { HeroStats, PerformanceOptimizedHero }
-
+;
 export { HeroStats, PerformanceOptimizedHero }
-
+;
 export { HeroStats, PerformanceOptimizedHero }
-
-export { HeroStats, PerformanceOptimizedHero }
-
-export { HeroStats, PerformanceOptimizedHero }"
-;"`""
+;
+export { HeroStats, PerformanceOptimizedHero }";
+;"`"";
 "

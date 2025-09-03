@@ -11,8 +11,6 @@ export default function HelpCenter() {return ("
           Professional HelpCenter services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

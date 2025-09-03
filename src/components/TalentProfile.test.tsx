@@ -16,5 +16,4 @@ describe(&apos;TalentProfile&apos, () => {
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"
 "
-}}"
-"
+}}""

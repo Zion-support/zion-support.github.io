@@ -15,5 +15,4 @@ describe("MicroSAASServices2028", () => {}; "; it("renders without crashing", ()
 }
   });"
 "
-});"
-"
+});""

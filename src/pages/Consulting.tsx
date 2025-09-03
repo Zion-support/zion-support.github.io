@@ -11,8 +11,6 @@ export default function Consulting() {return ("
           Professional Consulting services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

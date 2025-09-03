@@ -9,6 +9,4 @@ export default function InteractiveUserExperience.test() {return (
           Professional InteractiveUserExperience.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

@@ -16,5 +16,4 @@ describe(&apos;EnhancedHero&apos, () => {
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"
 "
-}}"
-"
+}}""

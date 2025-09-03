@@ -11,8 +11,6 @@ export default function Privacy() {return ("
           Professional Privacy services to help your business grow.
         </p>
       </div>
-    </div>
   )
 }
-}"
-"
+}""

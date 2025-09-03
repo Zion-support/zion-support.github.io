@@ -15,5 +15,4 @@ describe("GreenIT", () => {}; "; it("renders without crashing", () => {}; render
 }
   });"
 "
-});"
-"
+});""

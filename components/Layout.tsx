@@ -1,7 +1,6 @@
 import React from "react"
 import Head from "next/head"
-
-interface LayoutProps {
+interface LayoutProps {;
 
   children: React.ReactNode,
   title?: string,
@@ -41,7 +40,6 @@ const Component: React.FC<LayoutProps> = ({ children, "
         <Footer  />
       </div>
     </>
-  )
-}
-"'
+  )}
+"';
 export default Layout

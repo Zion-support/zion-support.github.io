@@ -9,6 +9,4 @@ export default function LoadingOverlay.test() {return (
           Professional LoadingOverlay.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

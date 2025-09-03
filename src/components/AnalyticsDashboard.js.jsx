@@ -120,8 +120,6 @@ export const AnalyticsDashboard = ({ className = "", showRealTime = true, refres
               {isExpanded ? "−" : }"});,"})"
             </button>;,"});,"})"
           </div>;,"});,"})"
-        </div>;,"});,"})"
-      </div>;,"});,"})"
 """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       <div className="p-4 border-b border-gray-200 dark: border-gray-700">"""","});,"})"
@@ -139,7 +137,6 @@ export const AnalyticsDashboard = ({ className = "", showRealTime = true, refres
             <div className="text-xs text-gray-600 dark: text-gray-400">,"});,"})"
               Session Duration,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
 """;,"});,"})"
           {/* comment */}"""";,"});,"})"
           <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">"""","});,"})"
@@ -152,7 +149,6 @@ export const AnalyticsDashboard = ({ className = "", showRealTime = true, refres
             <div className="text-xs text-gray-600 dark: text-gray-400">,"});,"})"
               Page Views,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
 """;,"});,"})"
           {/* comment */}"""";,"});,"})"
           <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">"""","});,"})"
@@ -165,7 +161,6 @@ export const AnalyticsDashboard = ({ className = "", showRealTime = true, refres
             <div className="text-xs text-gray-600 dark: text-gray-400">,"});,"})"
               Total Events,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
 """;,"});,"})"
           {/* comment */}"""";,"});,"})"
           <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">"""","});,"})"
@@ -178,9 +173,6 @@ export const AnalyticsDashboard = ({ className = "", showRealTime = true, refres
             <div className="text-xs text-gray-600 dark: text-gray-400">,"});,"})"
               Performance,"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
-        </div>;,"});,"})"
-      </div>;,"});,"})"
 """;,"});,"})"
       {/* comment */}"""";,"});,"})"
       <div className="p-4 border-b border-gray-200 dark: border-gray-700">"""","});,"})"
@@ -233,7 +225,6 @@ export const AnalyticsDashboard = ({ className = "", showRealTime = true, refres
             </div>;,"});,"})"
           )}"});,"})"
         </div>;,"});,"})"
-      </div>;,"});,"})"
       {/* comment */}""";,"});,"})"
       {isExpanded && ("""";,"});,"})"
         <div className="border-t border-gray-200 dark: border-gray-700 p-4 bg-gray-50 dark:bg-gray-800">"""","});,"})"
@@ -279,8 +270,6 @@ export const AnalyticsDashboard = ({ className = "", showRealTime = true, refres
                     {performanceMetrics.cumulativeLayoutShift.toFixed(3)}"});,"})"
                   </span>;,"});,"})"
                 </div>;,"});,"})"
-              </div>;,"});,"})"
-            </div>;,"});,"})"
           )}"});,"})"
 """;,"});,"})"
           {/* comment */}"""";,"});,"})"
@@ -311,10 +300,8 @@ export const AnalyticsDashboard = ({ className = "", showRealTime = true, refres
                       {item.count}"});,"})"
                     </span>;,"});,"})"
                   </div>;,"});,"})"
-                </div>;,"});,"})"
               ))}"});,"})"
             </div>;,"});,"})"
-          </div>;,"});,"})"
           {/* comment */}""";,"});,"})"
           {currentSession && ("""";,"});,"})"
             <div className="mb-4 p-3 bg-purple-50 dark: bg-purple-900/20 rounded-lg">"""","});,"})"
@@ -355,8 +342,6 @@ export const AnalyticsDashboard = ({ className = "", showRealTime = true, refres
                     {currentSession.referrer || "Direct"}"});,"})"
                   </span>;,"});,"})"
                 </div>;,"});,"})"
-              </div>;,"});,"})"
-            </div>;,"});,"})"
           )}"});,"})"
         </div>;,"});,"})"
       )}"});,"})"
@@ -386,8 +371,6 @@ export const AnalyticsDashboard = ({ className = "", showRealTime = true, refres
             Track Goal,"});,"})"
           </button>;,"});,"})"
         </div>;,"});,"})"
-      </div>;,"});,"})"
-    </div>;,"});,"})"
   );,"});,"});"
 };"";,"});,"})"
 """"";,"});,"})""""
@@ -410,8 +393,7 @@ const interval = setInterval(() => {
 const updateAnalyticsSummary = () => {
         const summary = getAnalyticsSummary()
 }
-        if (summary) {
-            setAnalyticsSummary(summary)}
+        if (summary) {            setAnalyticsSummary(summary)}
 
     }
 
@@ -524,7 +506,6 @@ const formatNumber = () => {
               aria-label={}"
 ""
 """
-"""
 """"
                 isExpanded ? "Collapse dashboard"  : "Expand dashboard"", ",
 }"""
@@ -591,7 +572,6 @@ const formatNumber = () => {
             <div className="text-xs text-gray-600 dark: text-gray-400">
               Performance,
             </div>
-          </div>
         </div>"
       </div>""
 """"",
@@ -695,7 +675,6 @@ const formatNumber = () => {
 
                   </span>
                 </div>
-              </div>
             </div>"
           )}""
 """""
@@ -730,7 +709,6 @@ const formatNumber = () => {
 
                     </span>
                   </div>
-                </div>
               ))}
 
             </div>"
@@ -776,8 +754,6 @@ Referrer: """""
 
                   </span>
                 </div>
-              </div>
-            </div>
           )}
 
         </div>"
@@ -811,7 +787,6 @@ Referrer: """""
             Track Goal,
           </button>
         </div>
-      </div>
     </div>";,
   )","";"
 }"""""""

@@ -9,6 +9,4 @@ export default function StatsSection.test() {return (
           Professional StatsSection.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"

@@ -9,6 +9,4 @@ export default function FeaturedListingsSection.test() {return (
           Professional FeaturedListingsSection.test services to help your business grow.
         </p>
       </div>
-    </div>
-  );"
-}"
+  );"}"
