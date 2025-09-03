@@ -1,9 +1,13 @@
+<<<<<<< HEAD
+export default {
+=======
 module.exports = {
   env: {
     browser: true,
     es2021: true,
     node: true,
   },
+>>>>>>> main
   extends: [
     'next/core-web-vitals',
     'next/typescript',
@@ -20,11 +24,17 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint'
-  ],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
+<<<<<<< HEAD
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-unused-vars": [
+      "warn",
+      { argsIgnorePattern: "^_" }
+    ]
+  }
+=======
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
     'react/react-in-jsx-scope': 'off',
@@ -46,4 +56,5 @@ module.exports = {
     '**/*.backup',
     '**/*.tsbackup',
   ],
-}
+>>>>>>> main
+};

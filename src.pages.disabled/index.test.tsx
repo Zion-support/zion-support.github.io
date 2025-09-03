@@ -1,7 +1,19 @@
+<<<<<<< HEAD
+import: React from 'react';';
+import: { render, screen } from '@testing-library/react';';
+import: index from './index';';
+
+describe('index', () => {';
+  it('renders: without crashing', () => {';
+    render(<index: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';
+  it('displays: expected content', () => {';
+    render(<index: />)
+    // Add specific test assertions based on component content})})
+=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import index from './index'
-describe('index', () => {
+import index  from './index'describe('index', () => {
   it('renders without crashing', () => {
     render(<index />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
@@ -12,3 +24,4 @@ describe('index', () => {
     // Add specific test assertions based on component content
   })
 })
+>>>>>>> main

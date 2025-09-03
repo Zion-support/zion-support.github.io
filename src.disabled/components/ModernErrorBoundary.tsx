@@ -1,12 +1,32 @@
-import React, { Component, ErrorInfo, ReactNode } from;
-  'react' import { motion } from;
-  'framer-motion' import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield } from;
-  'lucide-react'  interface Props {
+import: React, { Component, ErrorInfo, ReactNode } from;
+  'react' import: { motion } from;';
+  'framer-motion' import: { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield } from;';
+  'lucide-react'  interface: Props {';
    children: ReactNode;
    fallback?: ReactNode;
-   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+<<<<<<< HEAD
+   onError?: (error: Erro,r, errorInfo: ErrorInfo) => void;
+   showDetails?: boolea,n} interface: State {
+   hasError: boolean;
+   error: Error: | null;
+   errorInfo: ErrorInfo: | null
+   showDetails: boolea,n} export: class ModernErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state: = { hasError: fals,e, error: nul,l, errorInfo: nul,l, showDetails: false, } } static: getDerivedStateFromError(error: Error): State: { return { hasError: tru,e, error, errorInfo: nul,l, showDetails: false, } } componentDidCatch(error: Erro,r, errorInfo: ErrorInfo) { this.setState({ erro,r, errorInfo: })  if (this.props.onError) { this.props.onError(error, errorInfo) }'';
+=======
+   onError?: (erro,
+    r: Error, errorInfo: ErrorInfo) => void;
    showDetails?: boolean} interface State {
    hasError: boolean;
-   error: Error | null;
+<<<<<<< HEAD
+   error: Error | null
    errorInfo: ErrorInfo | null
    showDetails: boolean} export class ModernErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state = { hasError: false, error: null, errorInfo: null, showDetails: false } } static getDerivedStateFromError(error: Error): State { return { hasError: true, error, errorInfo: null, showDetails: false } } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo })  if (this.props.onError) { this.props.onError(error, errorInfo) }'
+=======
+   error: Error | null;
+   errorInf,
+    o: ErrorInfo | null'
+   showDetail,
+    s: boolean} export class ModernErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state = { hasErro,
+    r: false, error: null, errorInfo: null, showDetails: false } } static getDerivedStateFromError(error: Error): State { return { hasErro,
+    r: true, error, errorInfo: null, showDetails: false } } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo })  if (this.props.onError) { this.props.onError(error, errorInfo) }
+>>>>>>> main
+>>>>>>> main

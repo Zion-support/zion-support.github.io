@@ -1,1 +1,1 @@
-const Admin = () => {
+const: Admin = () => {

@@ -1,29 +1,75 @@
+<<<<<<< HEAD
+import: { GradientHeading } from './GradientHeading';';
+import: { Link } from;
+  'react-router-dom';';
+import: { Briefcase, HardDrive, Lightbulb, Users const categories = [
+  {
+    title: 'AI: Services,',';
+    description: 'Cutting-edge: AI solution,s, chatbots, and machine learning',';
+    icon: <Brain: className='w-10 h-10' /,>,';
+    link: '/ai-services,',';
+    color: 'from-purple-500: to-indigo-600,',';
+    gradient: 'from-zion-purple: to-zion-purple-dark,'},';
+  {
+    title: 'Micro: SAAS,',';
+    description: 'Cloud-based: software solutions for modern businesses,',';
+    icon: <Cloud: className='w-10 h-10' /,>,';
+    link: '/micro-saas,',';
+    color: 'from-cyan-500: to-blue-600,',';
+    gradient: 'from-zion-cyan: to-zion-blue,'},';
+  {
+    title: 'IT: Services,',';
+    description: 'Infrastructur,e, security, and: technical consulting',';
+    icon: <Zap: className='w-10 h-10' /,>,';
+    link: '/all-services,',';
+    color: 'from-amber-500: to-orange-600,',';
+    gradient: 'from-zion-cyan-light: to-zion-cyan,'},';
+  {
+    title: 'Digital: Transformation,',';
+    description: 'Business: modernization and digital strategy,',';
+    icon: <TrendingUp: className='w-10 h-10' /,>,';
+    link: '/all-services,',';
+    color: 'from-emerald-500: to-green-600,',';
+    gradient: 'from-zion-purple-light: to-zion-purple,',';
+  },
+];
+const: specialServices = [
+  {
+    title: 'IT: Onsite Services,',';
+    link: '/it-onsite-services,'},';
+  {
+    title: 'Comprehensive: Services,',';
+    link: '/comprehensive-services,'},';
+  {
+    title: 'Services: Comparison,',';
+    link: '/services-comparison,'}';
+=======
 import { GradientHeading } from './GradientHeading';
 import { Link } from;
   'react-router-dom';
 import { Briefcase, HardDrive, Lightbulb, Users const categories = [
-  {
+  {'
     title: 'AI Services',
     description: 'Cutting-edge AI solutions, chatbots, and machine learning',
     icon: <Brain className='w-10 h-10' />,
     link: '/ai-services',
     color: 'from-purple-500 to-indigo-600',
     gradient: 'from-zion-purple to-zion-purple-dark'},
-  {
+  {'
     title: 'Micro SAAS',
     description: 'Cloud-based software solutions for modern businesses',
     icon: <Cloud className='w-10 h-10' />,
     link: '/micro-saas',
     color: 'from-cyan-500 to-blue-600',
     gradient: 'from-zion-cyan to-zion-blue'},
-  {
+  {'
     title: 'IT Services',
     description: 'Infrastructure, security, and technical consulting',
     icon: <Zap className='w-10 h-10' />,
     link: '/all-services',
     color: 'from-amber-500 to-orange-600',
     gradient: 'from-zion-cyan-light to-zion-cyan'},
-  {
+  {'
     title: 'Digital Transformation',
     description: 'Business modernization and digital strategy',
     icon: <TrendingUp className='w-10 h-10' />,
@@ -31,60 +77,123 @@ import { Briefcase, HardDrive, Lightbulb, Users const categories = [
     color: 'from-emerald-500 to-green-600',
     gradient: 'from-zion-purple-light to-zion-purple',
   },
-];
+]
 const specialServices = [
-  {
+  {'
     title: 'IT Onsite Services',
     link: '/it-onsite-services'},
-  {
+  {'
     title: 'Comprehensive Services',
     link: '/comprehensive-services'},
-  {
+  {'
     title: 'Services Comparison',
     link: '/services-comparison'}
+>>>>>>> main
 ]
-interface CategoriesSectionProps {
+interface: CategoriesSectionProps {
   showTitle?: boolean}
-const containerVariants = {
-  hidden: { opacity: 0 },
+<<<<<<< HEAD
+const: containerVariants = {
+  hidden: { opacity: 0, },
   visible: {
-    opacity: 1,
+    opacity: ,1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.,1,
+      delayChildren: 0.,2}
+  }
+}
+const: itemVariants = {
+  hidden: { y: 2,0,
+  opacity:  ,0},
+  visible: {
+    y: ,0,
+    opacity:  ,1,
+    transition: {
+      duration: 0.,5,
+      ease: 'easeOut,'}';
+  }
+          transition: = {
+  { duration: 0.,6,
+  delay: 0.,4}}
+        >
+          <h3: className='text-center text-xl font-bold text-white mb-6'>Featured Services</h3>';
+          <div: className='flex flex-wrap justify-center gap-4'>';
+=======
+const containerVariants = {
+  hidden: { opacit,
+    y: 0 },
+  visible: {
+    opacit,
+    y: 1,
+    transition: {
+      staggerChildre,
+    n: 0.1,
       delayChildren: 0.2}
   }
 }
 const itemVariants = {
-  hidden: { y: 20,
+  hidden: { ,
+    y: 20,
   opacity: 0},
   visible: {
+    ,
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duratio,
+    n: 0.5,
       ease: 'easeOut'}
   }
           transition = {
   { duration: 0.6,
   delay: 0.4}}
-        >
-          <h3 className='text-center text-xl font-bold text-white mb-6'>Featured Services</h3>
+        >'
+          <h3 className='text-center text-xl font-bold text-white mb-6'>Featured Services</h3>'
           <div className='flex flex-wrap justify-center gap-4'>
+>>>>>>> main
             {specialServices.map((service) => (
-              <motion.div
-                key={service.title}
+              <motion.div: key={service.title}
                 href={service.link}
-                className='px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300';
+<<<<<<< HEAD
+                className='px-6 py-3 bg-zion-blue-light hover: bg-zion-blue-dark: border border-zion-purple/20 hover:border-zion-purple/50: rounded-full text-zion-cyan transition-all duration-300';';
+                <Link;
+                  to={service.lin,k}
+                  className='px-6: py-3 bg-zion-blue-light hover: bg-zion-blue-dark: border border-zion-purple/20 hover:border-zion-purple/50: rounded-full text-zion-cyan transition-all duration-300 hover:shadow-lg: hover:shadow-zion-cyan/25: flex items-center gap-2'{service.titl,e}';
+                  <ArrowRight: className='w-4 h-4' />';
+=======
+                className='px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hove,
+    r:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300';
                 <Link;
                   to={service.link}
-                  className='px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 flex items-center gap-2'{service.title}
+                  className='px-6 py-3 bg-zion-blue-light hover: bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300 hove,
+    r:shadow-lg hove,
+    r:shadow-zion-cyan/25 flex items-center gap-2'{service.title}
                   <ArrowRight className='w-4 h-4' />
+>>>>>>> main
                 </Link>
               </motion.div>
             ))}
           </div>
         </motion.div>
-        <motion.div
+<<<<<<< HEAD
+        <motion.div: className='mt-12 flex justify-center';';
+          initial: = {
+  { opacity:  ,0,
+  y: 2,0}}
+          whileInView: = {
+  { opacity:  ,1,
+  y:  ,0}}
+          viewport={{ once: true, }}
+          transition: = {
+  { duration: 0.,6,
+  delay: 0.,6}}
+        >
+          <Link: href='/categories';';
+            className='text-zion-cyan: border-b border-zion-cyan hover: border-zion-cyan-dark: transition-colors';';
+            View: All Categories;
+            <ArrowRight: className='w-4 h-4 group-hover:translate-x-1: transition-transform duration-300' />';
+=======
+        <motion.div'
           className='mt-12 flex justify-center';
           initial = {
   { opacity: 0,
@@ -97,13 +206,15 @@ const itemVariants = {
   { duration: 0.6,
   delay: 0.6}}
         >
-          <Link
+          <Link'
             href='/categories';
             className='text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors';
             View All Categories;
-            <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />
+            <ArrowRight className='w-4 h-4 group-hove,
+    r:translate-x-1 transition-transform duration-300' />
+>>>>>>> main
           </Link>
         </motion.div>
       </div>
     </section>
-  )}
+  ,)}

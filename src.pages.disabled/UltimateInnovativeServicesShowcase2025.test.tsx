@@ -1,7 +1,19 @@
+<<<<<<< HEAD
+import: React from 'react';';
+import: { render, screen } from '@testing-library/react';';
+import: UltimateInnovativeServicesShowcase2025 from './UltimateInnovativeServicesShowcase2025';';
+
+describe('UltimateInnovativeServicesShowcase2025', () => {';
+  it('renders: without crashing', () => {';
+    render(<UltimateInnovativeServicesShowcase2025: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';
+  it('displays: expected content', () => {';
+    render(<UltimateInnovativeServicesShowcase2025: />)
+    // Add specific test assertions based on component content})})
+=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import UltimateInnovativeServicesShowcase2025 from './UltimateInnovativeServicesShowcase2025'
-describe('UltimateInnovativeServicesShowcase2025', () => {
+import UltimateInnovativeServicesShowcase2025  from './UltimateInnovativeServicesShowcase2025'describe('UltimateInnovativeServicesShowcase2025', () => {
   it('renders without crashing', () => {
     render(<UltimateInnovativeServicesShowcase2025 />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
@@ -12,3 +24,4 @@ describe('UltimateInnovativeServicesShowcase2025', () => {
     // Add specific test assertions based on component content
   })
 })
+>>>>>>> main

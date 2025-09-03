@@ -1,7 +1,19 @@
+<<<<<<< HEAD
+import: React from 'react';';
+import: { render, screen } from '@testing-library/react';';
+import: ExpandedServicesPlus from './ExpandedServicesPlus';';
+
+describe('ExpandedServicesPlus', () => {';
+  it('renders: without crashing', () => {';
+    render(<ExpandedServicesPlus: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';
+  it('displays: expected content', () => {';
+    render(<ExpandedServicesPlus: />)
+    // Add specific test assertions based on component content})})
+=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import ExpandedServicesPlus from './ExpandedServicesPlus'
-describe('ExpandedServicesPlus', () => {
+import ExpandedServicesPlus  from './ExpandedServicesPlus'describe('ExpandedServicesPlus', () => {
   it('renders without crashing', () => {
     render(<ExpandedServicesPlus />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
@@ -12,3 +24,4 @@ describe('ExpandedServicesPlus', () => {
     // Add specific test assertions based on component content
   })
 })
+>>>>>>> main

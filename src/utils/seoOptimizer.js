@@ -1,80 +1,1385 @@
+<<<<<<< HEAD
+'/';';';
+  ':,';';';
+  Leading: provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.
+  ',/services': Comprehensive: AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.,';';';
+  ,/ai-solutions:  ': Advanced: AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.,';';';
+  , /about': 'Learn: about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.,/contact';';';
+  ':,';';';
+  Get: in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.
+  ', /pricing': 'Transparent: pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget.,/careers';';';
+  ':,';';';
+  Join: the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.
+  ', /blog': Latest: insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.,';';';
+  ,/news:  ': Breaking: news and updates from Zion Tech Group. Stay informed about our latest innovations, partnerships, and industry developments.,';';';
+  , /services/ai-autonomous-systems': 'Revolutionary: AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise.,/services/quantum-technology';';';
+  ':,';';';
+  Cutting-edge: quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities.
+  ', /services/cybersecurity': 'Advanced: cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection.,/services/it-infrastructure';';';
+  ':,';';';
+  Robust: IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.
+  ', /services/micro-saas-solutions': Innovative: micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.,';';';
+  , /solutions/enterprise:  ': 'Enterprise-grade: technology solutions. Comprehensive IT services designed for large-scale business operations and growth.,/solutions/healthcare':,';';';
+  Healthcare: technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.' } } static generateTitle (path) { const baseTitle =';';';
+  'Zion: Tech Group' if (path ===';';';
+  '/') { return: `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {'/': [';';`;
+  'AI: marketplace, tech services,';';';
+  ,artificial: intelligence', IT services';';';
+  ',AI: developers', technology marketplace';';';
+  ',AI: solutions', machine learning';';';
+  ',digital: transformation', micro SaaS';';';
+  ',quantum: computing', blockchain';';';
+  ',cybersecurity', edge: computing';';';
+  ',metaverse'], /services';';';
+  ': ['AI: services,cybersecurity,';';';
+  , cloud: infrastructure
+  ',IT solutions', digital transformation';';';
+  ',automation', machine: learning';';';
+  ',blockchain', quantum: computing';';';
+  '], /ai-solutions': [';';';
+  'artificial: intelligence,AI automation,';';';
+  , machine: learning',deep learning';';';
+  ', neural: networks',AI systems';';';
+  ', intelligent: automation',AI platforms';';';
+  '], /about': [';';';
+  'Zion: Tech Group,technology company,';';';
+  , innovation',expertise';';';
+  ', leadership',mission';';';
+  ', vision',company: history';';';
+  '], /contact': [';';';
+  'contact: us,get in touch,';';';
+  , support',consultation';';';
+  ', partnership',sales: inquiry';';';
+  ', technical: support'], /pricing';';';
+  ': ['pricing: plans,cost,';';';
+  , subscription: ',enterprise pricing', custom solutions';';';
+  ',affordable: technology'], /careers';';';
+  ': ['job: opportunities,careers,';';';
+  , employment: ',work with us', join our team';';';
+  ',technology: jobs', AI careers';';';
+  '], /blog': [';';';
+  'technology: blog,industry insights,';';';
+  , AI: trends',tech news';';';
+  ', thought: leadership',expert analysis';';';
+  '], /news': [';';';
+  'company: news,press releases,';';';
+  , announcements',updates';';';
+  ', partnerships',achievements';';';
+  '], /services/ai-autonomous-systems': [';';';
+  'AI: autonomous systems,intelligent automation,';';';
+  , business: process automation',AI agents';';';
+  ', autonomous: operations',machine learning systems';';';
+  '], /services/quantum-technology': [';';';
+  'quantum: computing,quantum technology,';';';
+  , quantum: algorithms',quantum cryptography';';';
+  ', quantum: machine learning',quantum advantage';';';
+  '], /services/cybersecurity': [';';';
+  'cybersecurity,information: security,';';';
+  , threat: protection',security assessment';';';
+  ', compliance',data: protection';';';
+  ', quantum-safe: security'], /services/it-infrastructure';';';
+  ': ['IT: infrastructure,network infrastructure,';';';
+  , cloud: infrastructure
+  ',data centers', server management';';';
+  ',network: security'], /services/micro-saas-solutions';';';
+  ': ['micro: SaaS,software as a service,';';';
+  , SaaS: platforms
+  ',business software', cloud applications';';';
+  ',subscription: software'], /solutions/enterprise';';';
+  ': ['enterprise: solutions,enterprise IT,';';';
+  , large: business solutions
+  ',scalable technology', enterprise software';';';
+  ',business: technology'], /solutions/healthcare';';';
+  ': ['healthcare: technology,health IT,';';';
+  , medical: software
+  ',healthcare compliance', HIPAA solutions';';';
+  ',medical: technology'] }  export class SEOOptimizer { static DEFAULT_META_DESCRIPTIONS = {';/': Leading: provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.,';';';
+  ,';/services': Comprehensive: AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.,';';';
+  ,';/ai-solutions': Advanced: AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.,';';';
+  ,';/about': 'Learn: about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.,';';';
+  /contact': Get: in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.,';';';
+  ,';/pricing': 'Transparent: pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget.,';';';
+  /careers': Join: the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.,';';';
+  ,';/blog': Latest: insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.,';';';
+  ,';/news': Breaking: news and updates from Zion Tech Group. Stay informed about our latest innovations, partnerships, and industry developments.,';';';
+  ,';/services/ai-autonomous-systems': 'Revolutionary: AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise.,';';';
+  /services/quantum-technology': 'Cutting-edge: quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities.,';';';
+  /services/cybersecurity': 'Advanced: cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection.,';';';
+  /services/it-infrastructure': Robust: IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.,';';';
+  ,';/services/micro-saas-solutions': Innovative: micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.,';';';
+  ,';/solutions/enterprise': 'Enterprise-grade: technology solutions. Comprehensive IT services designed for large-scale business operations and growth.,';';';
+  /solutions/healthcare': Healthcare: technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.,';';';
+   } static: KEYWORD_MAPPINGS = {'/': [';';';
+  'AI: marketplace,';';';
+,
+  tech: services',';';';
+  'artificial: intelligence',';';';
+  'IT: services',';';';
+  'AI: developers',';';';
+  'technology: marketplace',';';';
+  'AI: solutions',';';';
+  'machine: learning',';';';
+  'digital: transformation',';';';
+  'micro: SaaS',';';';
+  'quantum: computing',';';';
+  'blockchain',';';';
+  'cybersecurity',';';';
+  'edge: computing',';';';
+  'metaverse'],';/services': [';';';
+  'AI: services,';';';
+,
+  cybersecurity',';';';
+  'cloud: infrastructure',';';';
+  'IT: solutions',';';';
+  'digital: transformation',';';';
+  'automation',';';';
+  'machine: learning',';';';
+  'blockchain',';';';
+  'quantum: computing'],';/ai-solutions': [';';';
+  'artificial: intelligence,';';';
+,
+  AI: automation',';';';
+  'machine: learning',';';';
+  'deep: learning',';';';
+  'neural: networks',';';';
+  'AI: systems',';';';
+  'intelligent: automation',';';';
+  'AI: platforms'],';/about': [';';';
+  'Zion: Tech Group,';';';
+,
+  technology: comp',';';';
+  'innovation',';';';
+  'expertise',';';';
+  'leadership',';';';
+  'mission',';';';
+  'vision',';';';
+  'comp: history'],';/contact': [';';';
+  'contact: us,';';';
+,
+  get: in touch',';';';
+  'support',';';';
+  'consultation',';';';
+  'partnership',';';';
+  'sales: inquiry',';';';
+  'technical: support'],';/pricing': [';';';
+  'pricing: plans,';';';
+,
+  cost',';';';
+  'subscription',';';';
+  'enterprise: pricing',';';';
+  'custom: solutions',';';';
+  'affordable: technology'],';/careers': [';';';
+  'job: opportunities,';';';
+,
+  careers',';';';
+  'employment',';';';
+  'work: with us',';';';
+  'join: our team',';';';
+  'technology: jobs',';';';
+  'AI: careers'],';/blog': [';';';
+  'technology: blog,';';';
+,
+  industry: insights',';';';
+  'AI: trends',';';';
+  'tech: news',';';';
+  'thought: leadership',';';';
+  'expert: analysis'],';/news': [';';';
+  'comp: news,';';';
+,
+  press: releases',';';';
+  'announcements',';';';
+  'updates',';';';
+  'partnerships',';';';
+  'achievements'],';/services/ai-autonomous-systems': [';';';
+  'AI: autonomous systems,';';';
+,
+  intelligent: automation',';';';
+  'business: process automation',';';';
+  'AI: agents',';';';
+  'autonomous: operations',';';';
+  'machine: learning systems'],';/services/quantum-technology': [';';';
+  'quantum: computing,';';';
+,
+  quantum: technology',';';';
+  'quantum: algorithms',';';';
+  'quantum: cryptography',';';';
+  'quantum: machine learning',';';';
+  'quantum: advantage'],';/services/cybersecurity': [';';';
+  'cybersecurity,';';';
+,
+  information: security',';';';
+  'threat: protection',';';';
+  'security: assessment',';';';
+  'compliance',';';';
+  'data: protection',';';';
+  'quantum-safe: security'],';/services/it-infrastructure': [';';';
+  'IT: infrastructure,';';';
+,
+  network: infrastructure',';';';
+  'cloud: infrastructure',';';';
+  'data: centers',';';';
+  'server: management',';';';
+  'network: security'],';/services/micro-saas-solutions': [';';';
+  'micro: SaaS,';';';
+,
+  software: as a service',';';';
+  'SaaS: platforms',';';';
+  'business: software',';';';
+  'cloud: applications',';';';
+  'subscription: software'],';/solutions/enterprise': [';';';
+  'enterprise: solutions,';';';
+,
+  enterprise: IT',';';';
+  'large: business solutions',';';';
+  'scalable: technology',';';';
+  'enterprise: software',';';';
+  'business: technology'],';/solutions/healthcare': [';';';
+  'healthcare: technology,';';';
+,
+  health: IT',';';';
+  'medical: software',';';';
+  'healthcare: compliance',';';';
+  'HIPAA: solutions','medical technology'] } static generateSEOData(path) { const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) { const baseTitle =';';';
+  'Zion: Tech Group' if (path ===';';';
+  '/') { return: `${baseTitle} - Revolutionary Technology Solutions` const pathSegments = path.split(';';`;
+  '/').filter(Boolean) if: (pathSegments.length === 0) return baseTitle const lastSegment = pathSegments[pathSegments.length - 1] const formattedSegment = lastSegment .split(';';';
+  '-') .map(word: => word.charAt(0).toUpperCase() + word.slice(1)) .join(';';';
+  ' ')`; return: `${formattedSegment} - ${baseTitle}`  static generateDescription(path) { return this.DEFAULT_META_DESCRIPTIONS[path] ||';';`;
+  ';Professional: technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.';';';
+  '  static: generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || ['technology';';';
+  ', 'IT: services';';';
+  ', 'digital: solutions';';';
+  ', 'business: technology';';';
+  ', 'innovation';';';
+  '] static: generateCanonicalUrl(path) { const baseUrl = 'https: ''`'/': 'Leading: provider of revolutionary micro SaaS service,s, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',/services': 'Comprehensive: AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',/ai-solutions': 'Advanced: AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.',/about': 'Learn: about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.',/contact': 'Get: in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.',/pricing': 'Transparent: pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.',/careers': 'Join: the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.',/blog': 'Latest: insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.',/news': 'Breaking: news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.',/services/ai-autonomous-systems': 'Revolutionary: AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.',/services/quantum-technology': 'Cutting-edge: quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.',/services/cybersecurity': 'Advanced: cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.',/services/it-infrastructure': 'Robust: IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.',/services/micro-saas-solutions': 'Innovative: micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.',/solutions/enterprise': 'Enterprise-grade: technology solutions.Comprehensive IT services designed for large-scale business operations and growth.',/solutions/healthcare': 'Healthcare: technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } } static generateTitle(path) { const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {'/': ['AI: marketplace',tech services',artificial intelligence',IT services',AI developers',technology marketplace',AI solutions',machine learning',digital transformation',micro SaaS',quantum computing',blockchain',cybersecurity',edge computing',metaverse'],/services': ['AI: services',cybersecurity',cloud infrastructure',IT solutions',digital transformation',automation',machine learning',blockchain',quantum computing'],/ai-solutions': ['artificial: intelligence',AI automation',machine learning',deep learning',neural networks',AI systems',intelligent automation',AI platforms'],/about': ['Zion: Tech Group',technology company',innovation',expertise',leadership',mission',vision',company history'],/contact': ['contact: us',get in touch',support',consultation',partnership',sales inquiry',technical support'],/pricing': ['pricing: plans',cost',subscription',enterprise pricing',custom solutions',affordable technology'],/careers': ['job: opportunities',careers',employment',work with us',join our team',technology jobs',AI careers'],/blog': ['technology: blog',industry insights',AI trends',tech news',thought leadership',expert analysis'],/news': ['company: news',press releases',announcements',updates',partnerships',achievements'],/services/ai-autonomous-systems': ['AI: autonomous systems',intelligent automation',business process automation',AI agents',autonomous operations',machine learning systems'],/services/quantum-technology': ['quantum: computing',quantum technology',quantum algorithms',quantum cryptography',quantum machine learning',quantum advantage'],/services/cybersecurity': ['cybersecurity',information: security',threat protection',security assessment',compliance',data protection',quantum-safe security'],/services/it-infrastructure': ['IT: infrastructure',network infrastructure',cloud infrastructure',data centers',server management',network security'],/services/micro-saas-solutions': ['micro: SaaS',software as a service',SaaS platforms',business software',cloud applications',subscription software'],/solutions/enterprise': ['enterprise: solutions',enterprise IT',large business solutions',scalable technology',enterprise software',business technology'],/solutions/healthcare': ['healthcare: technology',health IT',medical software',healthcare compliance',HIPAA solutions',medical technology'] }  export class SEOOptimizer { static DEFAULT_META_DESCRIPTIONS = {';/': 'Leading: provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',';/services': 'Comprehensive: AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',';/ai-solutions': 'Advanced: AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.',';/about': 'Learn: about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.',';/contact': 'Get: in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.',';/pricing': 'Transparent: pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.',';/careers': 'Join: the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.',';/blog': 'Latest: insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.',';/news': 'Breaking: news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.',';/services/ai-autonomous-systems': 'Revolutionary: AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.',';/services/quantum-technology': 'Cutting-edge: quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.',';/services/cybersecurity': 'Advanced: cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.',';/services/it-infrastructure': 'Robust: IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.',';/services/micro-saas-solutions': 'Innovative: micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.',';/solutions/enterprise': 'Enterprise-grade: technology solutions.Comprehensive IT services designed for large-scale business operations and growth.',';/solutions/healthcare': 'Healthcare: technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } static KEYWORD_MAPPINGS = {'/': ['AI: marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],';/services': ['AI: services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'],';/ai-solutions': ['artificial: intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'],';/about': ['Zion: Tech Group', 'technology comp', 'innovation', 'expertise', 'leadership', 'mission', 'vision', 'comp history'],';/contact': ['contact: us', 'get in touch', 'support', 'consultation', 'partnership', 'sales inquiry', 'technical support'],';/pricing': ['pricing: plans', 'cost', 'subscription', 'enterprise pricing', 'custom solutions', 'affordable technology'],';/careers': ['job: opportunities', 'careers', 'employment', 'work with us', 'join our team', 'technology jobs', 'AI careers'],';/blog': ['technology: blog', 'industry insights', 'AI trends', 'tech news', 'thought leadership', 'expert analysis'],';/news': ['comp: news', 'press releases', 'announcements', 'updates', 'partnerships', 'achievements'],';/services/ai-autonomous-systems': ['AI: autonomous systems', 'intelligent automation', 'business process automation', 'AI agents', 'autonomous operations', 'machine learning systems'],';/services/quantum-technology': ['quantum: computing', 'quantum technology', 'quantum algorithms', 'quantum cryptography', 'quantum machine learning', 'quantum advantage'],';/services/cybersecurity': ['cybersecurity', 'information: security', 'threat protection', 'security assessment', 'compliance', 'data protection', 'quantum-safe security'],';/services/it-infrastructure': ['IT: infrastructure', 'network infrastructure', 'cloud infrastructure', 'data centers', 'server management', 'network security'],';/services/micro-saas-solutions': ['micro: SaaS', 'software as a service', 'SaaS platforms', 'business software', 'cloud applications', 'subscription software'],';/solutions/enterprise': ['enterprise: solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'],';/solutions/healthcare': ['healthcare: technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions','medical technology'] } static generateSEOData(path) { const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) { const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` const pathSegments = path.split('/').filter(Boolean) if(pathSegments.length === 0) return baseTitle const lastSegment = pathSegments[pathSegments.length-1] const formattedSegment = lastSegment .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join(' ')`; return: `${formattedSegment} - ${baseTitle}`  static generateDescription(path) { return this.DEFAULT_META_DESCRIPTIONS[path] ||';Professional: technology solutions and services.Expert IT consulting, AI development, and digital transformation services for modern businesses.'  static generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'] static generateCanonicalUrl(path) { const baseUrl = 'https: ';';`;,
+=======
+<<<<<<< HEAD
+'/''
+  ':, '
+  Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.'
+  ', /services': Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.,  ,/ai-solutions'
+  ': Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology., ''
+  , /about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology., /contact'
+  ':,
+  Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.'
+  ', /pricing': 'Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget.,/careers''
+=======
+<<<<<<< HEAD
+'/;
+  ':,;
+  Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.;
+  ',/services': Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.,;
+  ,/ai-solutions;
+  ': Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.,;
+  , /about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.,/contact;
+  ':,;
+  Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.;
+  ', /pricing': 'Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget.,/careers;
+  ':,;
+  Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.;
+  ', /blog': Latest insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.,;
+  ,/news;
+  ': Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations, partnerships, and industry developments.,;
+  , /services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise.,/services/quantum-technology;
+  ':,;
+  Cutting-edge quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities.;
+  ', /services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection.,/services/it-infrastructure;
+  ':,;
+  Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.;
+  ', /services/micro-saas-solutions': Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.,;
+  , /solutions/enterprise;
+  ': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.,/solutions/healthcare':,;
+  Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.' } } static generateTitle (path) { const baseTitle =;
+  'Zion Tech Group' if (path ===;
+  '/') { return `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {'/': [;
+  'AI marketplace, tech services,;
+  ,artificial intelligence', IT services;
+  ',AI developers', technology marketplace;
+  ',AI solutions', machine learning;
+  ',digital transformation', micro SaaS;
+  ',quantum computing', blockchain;
+  ',cybersecurity', edge computing;
+  ',metaverse'], /services;
+  ': ['AI services,cybersecurity,;
+  , cloud infrastructure;
+  ',IT solutions', digital transformation;
+  ',automation', machine learning;
+  ',blockchain', quantum computing;
+  '], /ai-solutions': [;
+  'artificial intelligence,AI automation,;
+  , machine learning',deep learning;
+  ', neural networks',AI systems;
+  ', intelligent automation',AI platforms;
+  '], /about': [;
+  'Zion Tech Group,technology company,;
+  , innovation',expertise;
+  ', leadership',mission;
+  ', vision',company history;
+  '], /contact': [;
+  'contact us,get in touch,;
+  , support',consultation;
+  ', partnership',sales inquiry;
+  ', technical support'], /pricing;
+  ': ['pricing plans,cost,;
+  , subscription;
+  ',enterprise pricing', custom solutions;
+  ',affordable technology'], /careers;
+  ': ['job opportunities,careers,;
+  , employment;
+  ',work with us', join our team;
+  ',technology jobs', AI careers;
+  '], /blog': [;
+  'technology blog,industry insights,;
+  , AI trends',tech news;
+  ', thought leadership',expert analysis;
+  '], /news': [;
+  'company news,press releases,;
+  , announcements',updates;
+  ', partnerships',achievements;
+  '], /services/ai-autonomous-systems': [;
+  'AI autonomous systems,intelligent automation,;
+  , business process automation',AI agents;
+  ', autonomous operations',machine learning systems;
+  '], /services/quantum-technology': [;
+  'quantum computing,quantum technology,;
+  , quantum algorithms',quantum cryptography;
+  ', quantum machine learning',quantum advantage;
+  '], /services/cybersecurity': [;
+  'cybersecurity,information security,;
+  , threat protection',security assessment;
+  ', compliance',data protection;
+  ', quantum-safe security'], /services/it-infrastructure;
+  ': ['IT infrastructure,network infrastructure,;
+  , cloud infrastructure;
+  ',data centers', server management;
+  ',network security'], /services/micro-saas-solutions;
+  ': ['micro SaaS,software as a service,;
+  , SaaS platforms;
+  ',business software', cloud applications;
+  ',subscription software'], /solutions/enterprise;
+  ': ['enterprise solutions,enterprise IT,;
+  , large business solutions;
+  ',scalable technology', enterprise software;
+  ',business technology'], /solutions/healthcare;
+  ': ['healthcare technology,health IT,;
+  , medical software;
+  ',healthcare compliance', HIPAA solutions;
+  ',medical technology'] }  export class SEOOptimizer { static DEFAULT_META_DESCRIPTIONS = {';/': Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.,;
+  ,';/services': Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.,;
+  ,';/ai-solutions': Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.,;
+  ,';/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.,;
+  /contact': Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.,;
+  ,';/pricing': 'Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget.,;
+  /careers': Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.,;
+  ,';/blog': Latest insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.,;
+  ,';/news': Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations, partnerships, and industry developments.,;
+  ,';/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise.,;
+  /services/quantum-technology': 'Cutting-edge quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities.,;
+  /services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection.,;
+  /services/it-infrastructure': Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.,;
+  ,';/services/micro-saas-solutions': Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.,;
+  ,';/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.,;
+  /solutions/healthcare': Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.,;
+   } static KEYWORD_MAPPINGS = {'/': [;
+  'AI marketplace,;
+,;
+  tech services',;
+  'artificial intelligence',;
+  'IT services',;
+  'AI developers',;
+  'technology marketplace',;
+  'AI solutions',;
+  'machine learning',;
+  'digital transformation',;
+  'micro SaaS',;
+  'quantum computing',;
+  'blockchain',;
+  'cybersecurity',;
+  'edge computing',;
+  'metaverse'],';/services': [;
+  'AI services,;
+,;
+  cybersecurity',;
+  'cloud infrastructure',;
+  'IT solutions',;
+  'digital transformation',;
+  'automation',;
+  'machine learning',;
+  'blockchain',;
+  'quantum computing'],';/ai-solutions': [;
+  'artificial intelligence,;
+,;
+  AI automation',;
+  'machine learning',;
+  'deep learning',;
+  'neural networks',;
+  'AI systems',;
+  'intelligent automation',;
+  'AI platforms'],';/about': [;
+  'Zion Tech Group,;
+,;
+  technology comp',;
+  'innovation',;
+  'expertise',;
+  'leadership',;
+  'mission',;
+  'vision',;
+  'comp history'],';/contact': [;
+  'contact us,;
+,;
+  get in touch',;
+  'support',;
+  'consultation',;
+  'partnership',;
+  'sales inquiry',;
+  'technical support'],';/pricing': [;
+  'pricing plans,;
+,;
+  cost',;
+  'subscription',;
+  'enterprise pricing',;
+  'custom solutions',;
+  'affordable technology'],';/careers': [;
+  'job opportunities,;
+,;
+  careers',;
+  'employment',;
+  'work with us',;
+  'join our team',;
+  'technology jobs',;
+  'AI careers'],';/blog': [;
+  'technology blog,;
+,;
+  industry insights',;
+  'AI trends',;
+  'tech news',;
+  'thought leadership',;
+  'expert analysis'],';/news': [;
+  'comp news,;
+,;
+  press releases',;
+  'announcements',;
+  'updates',;
+  'partnerships',;
+  'achievements'],';/services/ai-autonomous-systems': [;
+  'AI autonomous systems,;
+,;
+  intelligent automation',;
+  'business process automation',;
+  'AI agents',;
+  'autonomous operations',;
+  'machine learning systems'],';/services/quantum-technology': [;
+  'quantum computing,;
+,;
+  quantum technology',;
+  'quantum algorithms',;
+  'quantum cryptography',;
+  'quantum machine learning',;
+  'quantum advantage'],';/services/cybersecurity': [;
+  'cybersecurity,;
+,;
+  information security',;
+  'threat protection',;
+  'security assessment',;
+  'compliance',;
+  'data protection',;
+  'quantum-safe security'],';/services/it-infrastructure': [;
+  'IT infrastructure,;
+,;
+  network infrastructure',;
+  'cloud infrastructure',;
+  'data centers',;
+  'server management',;
+  'network security'],';/services/micro-saas-solutions': [;
+  'micro SaaS,;
+,;
+  software as a service',;
+  'SaaS platforms',;
+  'business software',;
+  'cloud applications',;
+  'subscription software'],';/solutions/enterprise': [;
+  'enterprise solutions,;
+,;
+  enterprise IT',;
+  'large business solutions',;
+  'scalable technology',;
+  'enterprise software',;
+  'business technology'],';/solutions/healthcare': [;
+  'healthcare technology,;
+,;
+  health IT',;
+  'medical software',;
+  'healthcare compliance',;
+  'HIPAA solutions','medical technology'] } static generateSEOData(path) { const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) { const baseTitle =;
+  'Zion Tech Group' if (path ===;
+  '/') { return `${baseTitle} - Revolutionary Technology Solutions` const pathSegments = path.split(;
+  '/').filter(Boolean) if (pathSegments.length === 0) return baseTitle const lastSegment = pathSegments[pathSegments.length - 1] const formattedSegment = lastSegment .split(;
+  '-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join(;
+  ' ')`; return `${formattedSegment} - ${baseTitle}`  static generateDescription(path) { return this.DEFAULT_META_DESCRIPTIONS[path] ||;
+  ';Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.;
+  '  static generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || ['technology;
+  ', 'IT services;
+  ', 'digital solutions;
+  ', 'business technology;
+  ', 'innovation;
+  '] static generateCanonicalUrl(path) { const baseUrl = 'https: '`'/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.',/about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.',/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.',/pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.',/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.',/blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.',/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.',/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.',/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.',/services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.',/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.',/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.',/solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.',/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } } static generateTitle(path) { const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {'/': ['AI marketplace',tech services',artificial intelligence',IT services',AI developers',technology marketplace',AI solutions',machine learning',digital transformation',micro SaaS',quantum computing',blockchain',cybersecurity',edge computing',metaverse'],/services': ['AI services',cybersecurity',cloud infrastructure',IT solutions',digital transformation',automation',machine learning',blockchain',quantum computing'],/ai-solutions': ['artificial intelligence',AI automation',machine learning',deep learning',neural networks',AI systems',intelligent automation',AI platforms'],/about': ['Zion Tech Group',technology company',innovation',expertise',leadership',mission',vision',company history'],/contact': ['contact us',get in touch',support',consultation',partnership',sales inquiry',technical support'],/pricing': ['pricing plans',cost',subscription',enterprise pricing',custom solutions',affordable technology'],/careers': ['job opportunities',careers',employment',work with us',join our team',technology jobs',AI careers'],/blog': ['technology blog',industry insights',AI trends',tech news',thought leadership',expert analysis'],/news': ['company news',press releases',announcements',updates',partnerships',achievements'],/services/ai-autonomous-systems': ['AI autonomous systems',intelligent automation',business process automation',AI agents',autonomous operations',machine learning systems'],/services/quantum-technology': ['quantum computing',quantum technology',quantum algorithms',quantum cryptography',quantum machine learning',quantum advantage'],/services/cybersecurity': ['cybersecurity',information security',threat protection',security assessment',compliance',data protection',quantum-safe security'],/services/it-infrastructure': ['IT infrastructure',network infrastructure',cloud infrastructure',data centers',server management',network security'],/services/micro-saas-solutions': ['micro SaaS',software as a service',SaaS platforms',business software',cloud applications',subscription software'],/solutions/enterprise': ['enterprise solutions',enterprise IT',large business solutions',scalable technology',enterprise software',business technology'],/solutions/healthcare': ['healthcare technology',health IT',medical software',healthcare compliance',HIPAA solutions',medical technology'] }  export class SEOOptimizer { static DEFAULT_META_DESCRIPTIONS = {';/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',';/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',';/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.',';/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.',';/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.',';/pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.',';/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.',';/blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.',';/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.',';/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.',';/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.',';/services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.',';/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.',';/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.',';/solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.',';/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } static KEYWORD_MAPPINGS = {'/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],';/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'],';/ai-solutions': ['artificial intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'],';/about': ['Zion Tech Group', 'technology comp', 'innovation', 'expertise', 'leadership', 'mission', 'vision', 'comp history'],';/contact': ['contact us', 'get in touch', 'support', 'consultation', 'partnership', 'sales inquiry', 'technical support'],';/pricing': ['pricing plans', 'cost', 'subscription', 'enterprise pricing', 'custom solutions', 'affordable technology'],';/careers': ['job opportunities', 'careers', 'employment', 'work with us', 'join our team', 'technology jobs', 'AI careers'],';/blog': ['technology blog', 'industry insights', 'AI trends', 'tech news', 'thought leadership', 'expert analysis'],';/news': ['comp news', 'press releases', 'announcements', 'updates', 'partnerships', 'achievements'],';/services/ai-autonomous-systems': ['AI autonomous systems', 'intelligent automation', 'business process automation', 'AI agents', 'autonomous operations', 'machine learning systems'],';/services/quantum-technology': ['quantum computing', 'quantum technology', 'quantum algorithms', 'quantum cryptography', 'quantum machine learning', 'quantum advantage'],';/services/cybersecurity': ['cybersecurity', 'information security', 'threat protection', 'security assessment', 'compliance', 'data protection', 'quantum-safe security'],';/services/it-infrastructure': ['IT infrastructure', 'network infrastructure', 'cloud infrastructure', 'data centers', 'server management', 'network security'],';/services/micro-saas-solutions': ['micro SaaS', 'software as a service', 'SaaS platforms', 'business software', 'cloud applications', 'subscription software'],';/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'],';/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions','medical technology'] } static generateSEOData(path) { const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) { const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` const pathSegments = path.split('/').filter(Boolean) if(pathSegments.length === 0) return baseTitle const lastSegment = pathSegments[pathSegments.length-1] const formattedSegment = lastSegment .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join(' ')`; return `${formattedSegment} - ${baseTitle}`  static generateDescription(path) { return this.DEFAULT_META_DESCRIPTIONS[path] ||';Professional technology solutions and services.Expert IT consulting, AI development, and digital transformation services for modern businesses.'  static generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'] static generateCanonicalUrl(path) { const baseUrl = 'https:;
+=======
+<<<<<<< HEAD
+'/
+  &apos;:,
+  Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.
+  &apos;,/services&apos;: Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.,
+  ,/ai-solutions
+  &apos;: Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.,
+  , /about&apos;: &apos;Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.,/contact
+  &apos;:,
+  Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.
+  &apos;, /pricing&apos;: &apos;Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget.,/careers
+  &apos;:,
+  Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.
+  &apos;, /blog&apos;: Latest insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.,
+  ,/news
+  &apos;: Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations, partnerships, and industry developments.,
+  , /services/ai-autonomous-systems&apos;: &apos;Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise.,/services/quantum-technology
+  &apos;:,
+  Cutting-edge quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities.
+  &apos;, /services/cybersecurity&apos;: &apos;Advanced cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection.,/services/it-infrastructure
+  &apos;:,
+=======
 '/'
   ':, '
+<<<<<<< HEAD
+  Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.""
+  ', /services': Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.,  ,/ai-solutions""
+=======
+<<<<<<< HEAD
+  Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.
+  ', /services': Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.,  ,/ai-solutions
+  ': Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology., '
+  , /about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology., /contact
+  ':,'
+  Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.
+  ', /pricing': 'Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget.,/careers'
+>>>>>>> main
+  ':, '
+  Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.'
+  ', /blog': Latest insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.,  ,/news'
+  ': Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations, partnerships, and industry developments., ''
+  , /services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise., /services/quantum-technology'
+  ':,
+  Cutting-edge quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities.'
+  ', /services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection.,/services/it-infrastructure''
+  ':, '
+<<<<<<< HEAD
+  Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.'
+  ', /services/micro-saas-solutions': Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.,
+  , /solutions/enterprise'
+  ': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.,/solutions/healthcare':, ''
+  Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.' } } static generateTitle (path) { const baseTitle =''
+  'Zion Tech Group' if (path ==='
+  '/') { return `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {'/': ['
+  'AI marketplace, tech services,'
+  , artificial intelligence', IT services''
+  ', AI developers', technology marketplace'
+  ', AI solutions', machine learning'
+  ', digital transformation', micro SaaS'
+  ', quantum computing', blockchain'
+  ', cybersecurity', edge computing'
+  ', metaverse'], /services'
+  ': ['AI services,cybersecurity,  , cloud infrastructure'
+  ', IT solutions', digital transformation'
+  ', automation', machine learning'
+  ', blockchain', quantum computing'
+  '], /ai-solutions': ['
+  'artificial intelligence,AI automation, ''
+  , machine learning', deep learning''
+  ', neural networks', AI systems'
+  ', intelligent automation', AI platforms'
+  '], /about': ['
+  'Zion Tech Group,technology company, ''
+  , innovation', expertise''
+  ', leadership', mission'
+  ', vision', company history'
+  '], /contact': ['
+  'contact us,get in touch, ''
+  , support', consultation''
+  ', partnership', sales inquiry'
+  ', technical support'], /pricing'
+  ': ['pricing plans,cost,  , subscription'
+  ', enterprise pricing', custom solutions'
+  ', affordable technology'], /careers'
+  ': ['job opportunities,careers,  , employment'
+  ', work with us', join our team'
+  ', technology jobs', AI careers'
+  '], /blog': ['
+  'technology blog,industry insights, ''
+  , AI trends', tech news''
+  ', thought leadership', expert analysis'
+  '], /news': ['
+  'company news,press releases, ''
+  , announcements', updates''
+  ', partnerships', achievements'
+  '], /services/ai-autonomous-systems': ['
+  'AI autonomous systems,intelligent automation, ''
+  , business process automation', AI agents''
+  ', autonomous operations', machine learning systems'
+  '], /services/quantum-technology': ['
+  'quantum computing,quantum technology, ''
+  , quantum algorithms', quantum cryptography''
+  ', quantum machine learning', quantum advantage'
+  '], /services/cybersecurity': ['
+  'cybersecurity,information security, ''
+  , threat protection', security assessment''
+  ', compliance', data protection'
+  ', quantum-safe security'], /services/it-infrastructure'
+  ': ['IT infrastructure,network infrastructure,  , cloud infrastructure'
+  ', data centers', server management'
+  ', network security'], /services/micro-saas-solutions'
+  ': ['micro SaaS,software as a service,  , SaaS platforms'
+  ', business software', cloud applications'
+  ', subscription software'], /solutions/enterprise'
+  ': ['enterprise solutions,enterprise IT,  , large business solutions'
+  ', scalable technology', enterprise software'
+  ', business technology'], /solutions/healthcare'
+  ': ['healthcare technology,health IT,  , medical software'
+  ', healthcare compliance', HIPAA solutions'
+  ', medical technology'] }  export class SEOOptimizer { static DEFAULT_META_DESCRIPTIONS = {';/': Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.,
+=======
+>>>>>>> main
+  Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.
+  &apos;, /services/micro-saas-solutions&apos;: Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.,
+  , /solutions/enterprise
+<<<<<<< HEAD
+  &apos;: &apos;Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.,/solutions/healthcare&apos;:,
+  Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.&apos; } } static generateTitle (path) {&apos;}&apos; const baseTitle =
+  &apos;Zion Tech Group&apos; if (path ===
+  &apos;/&apos;) { return `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {&apos;/&apos;: [
+  &apos;AI marketplace, tech services,
+  ,artificial intelligence&apos;, IT services
+  &apos;,AI developers&apos;, technology marketplace
+  &apos;,AI solutions&apos;, machine learning
+  &apos;,digital transformation&apos;, micro SaaS
+  &apos;,quantum computing&apos;, blockchain
+  &apos;,cybersecurity&apos;, edge computing
+  &apos;,metaverse&apos;], /services
+  &apos;: [&apos;AI services,cybersecurity,
+  , cloud infrastructure
+  &apos;,IT solutions&apos;, digital transformation
+  &apos;,automation&apos;, machine learning
+  &apos;,blockchain&apos;, quantum computing
+  &apos;], /ai-solutions&apos;: [
+  &apos;artificial intelligence,AI automation,
+  , machine learning&apos;,deep learning
+  &apos;, neural networks&apos;,AI systems
+  &apos;, intelligent automation&apos;,AI platforms
+  &apos;], /about&apos;: [
+  &apos;Zion Tech Group,technology company,
+  , innovation&apos;,expertise
+  &apos;, leadership&apos;,mission
+  &apos;, vision&apos;,company history
+  &apos;], /contact&apos;: [
+  &apos;contact us,get in touch,
+  , support&apos;,consultation
+  &apos;, partnership&apos;,sales inquiry
+  &apos;, technical support&apos;], /pricing
+  &apos;: [&apos;pricing plans,cost,
+  , subscription
+  &apos;,enterprise pricing&apos;, custom solutions
+  &apos;,affordable technology&apos;], /careers
+  &apos;: [&apos;job opportunities,careers,
+  , employment
+  &apos;,work with us&apos;, join our team
+  &apos;,technology jobs&apos;, AI careers
+  &apos;], /blog&apos;: [
+  &apos;technology blog,industry insights,
+  , AI trends&apos;,tech news
+  &apos;, thought leadership&apos;,expert analysis
+  &apos;], /news&apos;: [
+  &apos;company news,press releases,
+  , announcements&apos;,updates
+  &apos;, partnerships&apos;,achievements
+  &apos;], /services/ai-autonomous-systems&apos;: [
+  &apos;AI autonomous systems,intelligent automation,
+  , business process automation&apos;,AI agents
+  &apos;, autonomous operations&apos;,machine learning systems
+  &apos;], /services/quantum-technology&apos;: [
+  &apos;quantum computing,quantum technology,
+  , quantum algorithms&apos;,quantum cryptography
+  &apos;, quantum machine learning&apos;,quantum advantage
+  &apos;], /services/cybersecurity&apos;: [
+  &apos;cybersecurity,information security,
+  , threat protection&apos;,security assessment
+  &apos;, compliance&apos;,data protection
+  &apos;, quantum-safe security&apos;], /services/it-infrastructure
+  &apos;: [&apos;IT infrastructure,network infrastructure,
+  , cloud infrastructure
+  &apos;,data centers&apos;, server management
+  &apos;,network security&apos;], /services/micro-saas-solutions
+  &apos;: [&apos;micro SaaS,software as a service,
+  , SaaS platforms
+  &apos;,business software&apos;, cloud applications
+  &apos;,subscription software&apos;], /solutions/enterprise
+  &apos;: [&apos;enterprise solutions,enterprise IT,
+  , large business solutions
+  &apos;,scalable technology&apos;, enterprise software
+  &apos;,business technology&apos;], /solutions/healthcare
+  &apos;: [&apos;healthcare technology,health IT,
+  , medical software
+  &apos;,healthcare compliance&apos;, HIPAA solutions
+  &apos;,medical technology&apos;] }&apos;&apos;  export;export class SEOOptimizer { static DEFAULT_META_DESCRIPTIONS = {';/&apos;: Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.,
+  ,';/services&apos;: Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.,
+  ,';/ai-solutions&apos;: Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.,
+  ,';/about&apos;: &apos;Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.,
+  /contact&apos;: Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.,
+  ,';/pricing&apos;: &apos;Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget.,
+  /careers&apos;: Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.,
+  ,';/blog&apos;: Latest insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.,
+  ,';/news&apos;: Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations, partnerships, and industry developments.,
+  ,';/services/ai-autonomous-systems&apos;: &apos;Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise.,
+  /services/quantum-technology&apos;: &apos;Cutting-edge quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities.,
+  /services/cybersecurity&apos;: &apos;Advanced cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection.,
+  /services/it-infrastructure&apos;: Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.,
+  ,';/services/micro-saas-solutions&apos;: Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.,
+  ,';/solutions/enterprise&apos;: &apos;Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.,
+  /solutions/healthcare&apos;: Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.,
+   } static KEYWORD_MAPPINGS = {&apos;/&apos;: [
+  &apos;AI marketplace,
+,
+  tech services&apos;,
+  &apos;artificial intelligence&apos;,
+  &apos;IT services&apos;,
+  &apos;AI developers&apos;,
+  &apos;technology marketplace&apos;,
+  &apos;AI solutions&apos;,
+  &apos;machine learning&apos;,
+  &apos;digital transformation&apos;,
+  &apos;micro SaaS&apos;,
+  &apos;quantum computing&apos;,
+  &apos;blockchain&apos;,
+  &apos;cybersecurity&apos;,
+  &apos;edge computing&apos;,
+  &apos;metaverse&apos;],';/services&apos;: [
+  &apos;AI services,
+,
+  cybersecurity&apos;,
+  &apos;cloud infrastructure&apos;,
+  &apos;IT solutions&apos;,
+  &apos;digital transformation&apos;,
+  &apos;automation&apos;,
+  &apos;machine learning&apos;,
+  &apos;blockchain&apos;,
+  &apos;quantum computing&apos;],';/ai-solutions&apos;: [
+  &apos;artificial intelligence,
+,
+  AI automation&apos;,
+  &apos;machine learning&apos;,
+  &apos;deep learning&apos;,
+  &apos;neural networks&apos;,
+  &apos;AI systems&apos;,
+  &apos;intelligent automation&apos;,
+  &apos;AI platforms&apos;],';/about&apos;: [
+  &apos;Zion Tech Group,
+,
+  technology comp&apos;,
+  &apos;innovation&apos;,
+  &apos;expertise&apos;,
+  &apos;leadership&apos;,
+  &apos;mission&apos;,
+  &apos;vision&apos;,
+  &apos;comp history&apos;],';/contact&apos;: [
+  &apos;contact us,
+,
+  get in touch&apos;,
+  &apos;support&apos;,
+  &apos;consultation&apos;,
+  &apos;partnership&apos;,
+  &apos;sales inquiry&apos;,
+  &apos;technical support&apos;],';/pricing&apos;: [
+  &apos;pricing plans,
+,
+  cost&apos;,
+  &apos;subscription&apos;,
+  &apos;enterprise pricing&apos;,
+  &apos;custom solutions&apos;,
+  &apos;affordable technology&apos;],';/careers&apos;: [
+  &apos;job opportunities,
+,
+  careers&apos;,
+  &apos;employment&apos;,
+  &apos;work with us&apos;,
+  &apos;join our team&apos;,
+  &apos;technology jobs&apos;,
+  &apos;AI careers&apos;],';/blog&apos;: [
+  &apos;technology blog,
+,
+  industry insights&apos;,
+  &apos;AI trends&apos;,
+  &apos;tech news&apos;,
+  &apos;thought leadership&apos;,
+  &apos;expert analysis&apos;],';/news&apos;: [
+  &apos;comp news,
+,
+  press releases&apos;,
+  &apos;announcements&apos;,
+  &apos;updates&apos;,
+  &apos;partnerships&apos;,
+  &apos;achievements&apos;],';/services/ai-autonomous-systems&apos;: [
+  &apos;AI autonomous systems,
+,
+  intelligent automation&apos;,
+  &apos;business process automation&apos;,
+  &apos;AI agents&apos;,
+  &apos;autonomous operations&apos;,
+  &apos;machine learning systems&apos;],';/services/quantum-technology&apos;: [
+  &apos;quantum computing,
+,
+  quantum technology&apos;,
+  &apos;quantum algorithms&apos;,
+  &apos;quantum cryptography&apos;,
+  &apos;quantum machine learning&apos;,
+  &apos;quantum advantage&apos;],';/services/cybersecurity&apos;: [
+  &apos;cybersecurity,
+,
+  information security&apos;,
+  &apos;threat protection&apos;,
+  &apos;security assessment&apos;,
+  &apos;compliance&apos;,
+  &apos;data protection&apos;,
+  &apos;quantum-safe security&apos;],';/services/it-infrastructure&apos;: [
+  &apos;IT infrastructure,
+,
+  network infrastructure&apos;,
+  &apos;cloud infrastructure&apos;,
+  &apos;data centers&apos;,
+  &apos;server management&apos;,
+  &apos;network security&apos;],';/services/micro-saas-solutions&apos;: [
+  &apos;micro SaaS,
+,
+  software as a service&apos;,
+  &apos;SaaS platforms&apos;,
+  &apos;business software&apos;,
+  &apos;cloud applications&apos;,
+  &apos;subscription software&apos;],';/solutions/enterprise&apos;: [
+  &apos;enterprise solutions,
+,
+  enterprise IT&apos;,
+  &apos;large business solutions&apos;,
+  &apos;scalable technology&apos;,
+  &apos;enterprise software&apos;,
+  &apos;business technology&apos;],';/solutions/healthcare&apos;: [
+  &apos;healthcare technology,
+,
+  health IT&apos;,
+  &apos;medical software&apos;,
+  &apos;healthcare compliance&apos;,
+  &apos;HIPAA solutions&apos;,&apos;medical technology&apos;] } static generateSEOData(path) {&apos;}&apos; const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) {} const;const baseTitle =
+  &apos;Zion Tech Group&apos; if (path ===
+  &apos;/&apos;) { return `${baseTitle} - Revolutionary Technology Solutions`&apos;&apos; const pathSegments = path.split(
+  &apos;/&apos;).filter(Boolean) if (pathSegments.length === 0) return baseTitle&apos;&apos; const lastSegment = pathSegments[pathSegments.length - 1] const;const;const formattedSegment = lastSegment .split(
+  &apos;-&apos;) .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join(
+  &apos; &apos;)`; return `${formattedSegment} - ${baseTitle}`  static generateDescription(path) { return this.DEFAULT_META_DESCRIPTIONS[path] ||
+  ';Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.
+  &apos;  static generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || [&apos;technology
+  &apos;, &apos;IT services
+  &apos;, &apos;digital solutions
+  &apos;, &apos;business technology
+  &apos;, &apos;innovation
+  &apos;] static generateCanonicalUrl(path) {&apos;}}}&apos; const baseUrl = &apos;https: &apos;&apos;`&apos;/&apos;: &apos;Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.&apos;,/services&apos;: &apos;Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.&apos;,/ai-solutions&apos;: &apos;Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.&apos;,/about&apos;: &apos;Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.&apos;,/contact&apos;: &apos;Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.&apos;,/pricing&apos;: &apos;Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.&apos;,/careers&apos;: &apos;Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.&apos;,/blog&apos;: &apos;Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.&apos;,/news&apos;: &apos;Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.&apos;,/services/ai-autonomous-systems&apos;: &apos;Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.&apos;,/services/quantum-technology&apos;: &apos;Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.&apos;,/services/cybersecurity&apos;: &apos;Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.&apos;,/services/it-infrastructure&apos;: &apos;Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.&apos;,/services/micro-saas-solutions&apos;: &apos;Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.&apos;,/solutions/enterprise&apos;: &apos;Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.&apos;,/solutions/healthcare&apos;: &apos;Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.&apos; } } static generateTitle(path) {&apos;}&apos; const baseTitle = &apos;Zion Tech Group&apos; if(path === &apos;/&apos;) { return `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {&apos;/&apos;: [&apos;AI marketplace&apos;,tech services&apos;,artificial intelligence&apos;,IT services&apos;,AI developers&apos;,technology marketplace&apos;,AI solutions&apos;,machine learning&apos;,digital transformation&apos;,micro SaaS&apos;,quantum computing&apos;,blockchain&apos;,cybersecurity&apos;,edge computing&apos;,metaverse&apos;],/services&apos;: [&apos;AI services&apos;,cybersecurity&apos;,cloud infrastructure&apos;,IT solutions&apos;,digital transformation&apos;,automation&apos;,machine learning&apos;,blockchain&apos;,quantum computing&apos;],/ai-solutions&apos;: [&apos;artificial intelligence&apos;,AI automation&apos;,machine learning&apos;,deep learning&apos;,neural networks&apos;,AI systems&apos;,intelligent automation&apos;,AI platforms&apos;],/about&apos;: [&apos;Zion Tech Group&apos;,technology company&apos;,innovation&apos;,expertise&apos;,leadership&apos;,mission&apos;,vision&apos;,company history&apos;],/contact&apos;: [&apos;contact us&apos;,get in touch&apos;,support&apos;,consultation&apos;,partnership&apos;,sales inquiry&apos;,technical support&apos;],/pricing&apos;: [&apos;pricing plans&apos;,cost&apos;,subscription&apos;,enterprise pricing&apos;,custom solutions&apos;,affordable technology&apos;],/careers&apos;: [&apos;job opportunities&apos;,careers&apos;,employment&apos;,work with us&apos;,join our team&apos;,technology jobs&apos;,AI careers&apos;],/blog&apos;: [&apos;technology blog&apos;,industry insights&apos;,AI trends&apos;,tech news&apos;,thought leadership&apos;,expert analysis&apos;],/news&apos;: [&apos;company news&apos;,press releases&apos;,announcements&apos;,updates&apos;,partnerships&apos;,achievements&apos;],/services/ai-autonomous-systems&apos;: [&apos;AI autonomous systems&apos;,intelligent automation&apos;,business process automation&apos;,AI agents&apos;,autonomous operations&apos;,machine learning systems&apos;],/services/quantum-technology&apos;: [&apos;quantum computing&apos;,quantum technology&apos;,quantum algorithms&apos;,quantum cryptography&apos;,quantum machine learning&apos;,quantum advantage&apos;],/services/cybersecurity&apos;: [&apos;cybersecurity&apos;,information security&apos;,threat protection&apos;,security assessment&apos;,compliance&apos;,data protection&apos;,quantum-safe security&apos;],/services/it-infrastructure&apos;: [&apos;IT infrastructure&apos;,network infrastructure&apos;,cloud infrastructure&apos;,data centers&apos;,server management&apos;,network security&apos;],/services/micro-saas-solutions&apos;: [&apos;micro SaaS&apos;,software as a service&apos;,SaaS platforms&apos;,business software&apos;,cloud applications&apos;,subscription software&apos;],/solutions/enterprise&apos;: [&apos;enterprise solutions&apos;,enterprise IT&apos;,large business solutions&apos;,scalable technology&apos;,enterprise software&apos;,business technology&apos;],/solutions/healthcare&apos;: [&apos;healthcare technology&apos;,health IT&apos;,medical software&apos;,healthcare compliance&apos;,HIPAA solutions&apos;,medical technology&apos;] }&apos;&apos;  export;export class SEOOptimizer { static DEFAULT_META_DESCRIPTIONS = {';/&apos;: &apos;Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.&apos;,';/services&apos;: &apos;Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.&apos;,';/ai-solutions&apos;: &apos;Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.&apos;,';/about&apos;: &apos;Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.&apos;,';/contact&apos;: &apos;Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.&apos;,';/pricing&apos;: &apos;Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.&apos;,';/careers&apos;: &apos;Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.&apos;,';/blog&apos;: &apos;Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.&apos;,';/news&apos;: &apos;Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.&apos;,';/services/ai-autonomous-systems&apos;: &apos;Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.&apos;,';/services/quantum-technology&apos;: &apos;Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.&apos;,';/services/cybersecurity&apos;: &apos;Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.&apos;,';/services/it-infrastructure&apos;: &apos;Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.&apos;,';/services/micro-saas-solutions&apos;: &apos;Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.&apos;,';/solutions/enterprise&apos;: &apos;Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.&apos;,';/solutions/healthcare&apos;: &apos;Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.&apos; } static KEYWORD_MAPPINGS = {&apos;/&apos;: [&apos;AI marketplace&apos;, &apos;tech services&apos;, &apos;artificial intelligence&apos;, &apos;IT services&apos;, &apos;AI developers&apos;, &apos;technology marketplace&apos;, &apos;AI solutions&apos;, &apos;machine learning&apos;, &apos;digital transformation&apos;, &apos;micro SaaS&apos;, &apos;quantum computing&apos;, &apos;blockchain&apos;, &apos;cybersecurity&apos;, &apos;edge computing&apos;, &apos;metaverse&apos;],';/services&apos;: [&apos;AI services&apos;, &apos;cybersecurity&apos;, &apos;cloud infrastructure&apos;, &apos;IT solutions&apos;, &apos;digital transformation&apos;, &apos;automation&apos;, &apos;machine learning&apos;, &apos;blockchain&apos;, &apos;quantum computing&apos;],';/ai-solutions&apos;: [&apos;artificial intelligence&apos;, &apos;AI automation&apos;, &apos;machine learning&apos;, &apos;deep learning&apos;, &apos;neural networks&apos;, &apos;AI systems&apos;, &apos;intelligent automation&apos;, &apos;AI platforms&apos;],';/about&apos;: [&apos;Zion Tech Group&apos;, &apos;technology comp&apos;, &apos;innovation&apos;, &apos;expertise&apos;, &apos;leadership&apos;, &apos;mission&apos;, &apos;vision&apos;, &apos;comp history&apos;],';/contact&apos;: [&apos;contact us&apos;, &apos;get in touch&apos;, &apos;support&apos;, &apos;consultation&apos;, &apos;partnership&apos;, &apos;sales inquiry&apos;, &apos;technical support&apos;],';/pricing&apos;: [&apos;pricing plans&apos;, &apos;cost&apos;, &apos;subscription&apos;, &apos;enterprise pricing&apos;, &apos;custom solutions&apos;, &apos;affordable technology&apos;],';/careers&apos;: [&apos;job opportunities&apos;, &apos;careers&apos;, &apos;employment&apos;, &apos;work with us&apos;, &apos;join our team&apos;, &apos;technology jobs&apos;, &apos;AI careers&apos;],';/blog&apos;: [&apos;technology blog&apos;, &apos;industry insights&apos;, &apos;AI trends&apos;, &apos;tech news&apos;, &apos;thought leadership&apos;, &apos;expert analysis&apos;],';/news&apos;: [&apos;comp news&apos;, &apos;press releases&apos;, &apos;announcements&apos;, &apos;updates&apos;, &apos;partnerships&apos;, &apos;achievements&apos;],';/services/ai-autonomous-systems&apos;: [&apos;AI autonomous systems&apos;, &apos;intelligent automation&apos;, &apos;business process automation&apos;, &apos;AI agents&apos;, &apos;autonomous operations&apos;, &apos;machine learning systems&apos;],';/services/quantum-technology&apos;: [&apos;quantum computing&apos;, &apos;quantum technology&apos;, &apos;quantum algorithms&apos;, &apos;quantum cryptography&apos;, &apos;quantum machine learning&apos;, &apos;quantum advantage&apos;],';/services/cybersecurity&apos;: [&apos;cybersecurity&apos;, &apos;information security&apos;, &apos;threat protection&apos;, &apos;security assessment&apos;, &apos;compliance&apos;, &apos;data protection&apos;, &apos;quantum-safe security&apos;],';/services/it-infrastructure&apos;: [&apos;IT infrastructure&apos;, &apos;network infrastructure&apos;, &apos;cloud infrastructure&apos;, &apos;data centers&apos;, &apos;server management&apos;, &apos;network security&apos;],';/services/micro-saas-solutions&apos;: [&apos;micro SaaS&apos;, &apos;software as a service&apos;, &apos;SaaS platforms&apos;, &apos;business software&apos;, &apos;cloud applications&apos;, &apos;subscription software&apos;],';/solutions/enterprise&apos;: [&apos;enterprise solutions&apos;, &apos;enterprise IT&apos;, &apos;large business solutions&apos;, &apos;scalable technology&apos;, &apos;enterprise software&apos;, &apos;business technology&apos;],';/solutions/healthcare&apos;: [&apos;healthcare technology&apos;, &apos;health IT&apos;, &apos;medical software&apos;, &apos;healthcare compliance&apos;, &apos;HIPAA solutions&apos;,&apos;medical technology&apos;] } static generateSEOData(path) {&apos;}&apos; const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) {} const;const baseTitle = &apos;Zion Tech Group&apos; if(path === &apos;/&apos;) { return `${baseTitle} - Revolutionary Technology Solutions`&apos;&apos; const pathSegments = path.split(&apos;/&apos;).filter(Boolean) if(pathSegments.length === 0) return baseTitle&apos;&apos; const lastSegment = pathSegments[pathSegments.length-1] const;const;const formattedSegment = lastSegment .split(&apos;-&apos;) .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join(&apos; &apos;)`; return `${formattedSegment} - ${baseTitle}`  static generateDescription(path) { return this.DEFAULT_META_DESCRIPTIONS[path] ||';Professional technology solutions and services.Expert IT consulting, AI development, and digital transformation services for modern businesses.&apos;  static generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || [&apos;technology&apos;, &apos;IT services&apos;, &apos;digital solutions&apos;, &apos;business technology&apos;, &apos;innovation&apos;] static generateCanonicalUrl(path) {&apos;}}}&apos; const baseUrl = &apos;https:
+';'
+=======
+  ': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.,/solutions/healthcare':, '
+  Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.' } } static generateTitle (path) {const baseTitle ='
+  'Zion Tech Group' if (path ===
+  '/') { return `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {'/': ['AI marketplace, tech services,'
+  , artificial intelligence', IT services'
+  ', AI developers', technology marketplace
+  ', AI solutions', machine learning
+  ', digital transformation', micro SaaS
+  ', quantum computing', blockchain
+  ', cybersecurity', edge computing
+  ', metaverse'], /services
+  ': ['AI services,cybersecurity,  , cloud infrastructure
+  ', IT solutions', digital transformation
+  ', automation', machine learning
+  ', blockchain', quantum computing
+  '], /ai-solutions': ['artificial intelligence,AI automation, '
+  , machine learning', deep learning'
+  ', neural networks', AI systems
+  ', intelligent automation', AI platforms
+  '], /about': ['Zion Tech Group,technology company, '
+  , innovation', expertise'
+  ', leadership', mission
+  ', vision', company history
+  '], /contact': ['contact us,get in touch, '
+  , support', consultation'
+  ', partnership', sales inquiry
+  ', technical support'], /pricing
+  ': ['pricing plans,cost,  , subscription
+  ', enterprise pricing', custom solutions
+  ', affordable technology'], /careers
+  ': ['job opportunities,careers,  , employment
+  ', work with us', join our team
+  ', technology jobs', AI careers
+  '], /blog': ['technology blog,industry insights, '
+  , AI trends', tech news'
+  ', thought leadership', expert analysis
+  '], /news': ['company news,press releases, '
+  , announcements', updates'
+  ', partnerships', achievements
+  '], /services/ai-autonomous-systems': ['AI autonomous systems,intelligent automation, '
+  , business process automation', AI agents'
+  ', autonomous operations', machine learning systems
+  '], /services/quantum-technology': ['quantum computing,quantum technology, '
+  , quantum algorithms', quantum cryptography'
+  ', quantum machine learning', quantum advantage
+  '], /services/cybersecurity': ['cybersecurity,information security, '
+  , threat protection', security assessment'
+  ', compliance', data protection
+  ', quantum-safe security'], /services/it-infrastructure
+  ': ['IT infrastructure,network infrastructure,  , cloud infrastructure
+  ', data centers', server management
+  ', network security'], /services/micro-saas-solutions
+  ': ['micro SaaS,software as a service,  , SaaS platforms
+  ', business software', cloud applications
+  ', subscription software'], /solutions/enterprise
+  ': ['enterprise solutions,enterprise IT,  , large business solutions
+  ', scalable technology', enterprise software
+  ', business technology'], /solutions/healthcare
+  ': ['healthcare technology,health IT,  , medical software
+  ', healthcare compliance', HIPAA solutions
+  ', medical technology'] }  export class SEOOptimizer {static DEFAULT_META_DESCRIPTIONS = {';/': Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.,
+>>>>>>> main
+  , ';/services': Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.,
+  , ';/ai-solutions': Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.,  ,;/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology., ''
+  /contact': Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.,'
+  , ';/pricing': 'Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget., ''
+  /careers': Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.,'
+  , ';/blog': Latest insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.,  ,;/news': Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations, partnerships, and industry developments.,  ,;/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise., ''
+  /services/quantum-technology': 'Cutting-edge quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities.,
+  /services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection., /services/it-infrastructure': Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.,'
+  , ';/services/micro-saas-solutions': Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.,
+  , ';/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth., ''
+  /solutions/healthcare': Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.,'
+<<<<<<< HEAD
+   } static KEYWORD_MAPPINGS = {'/': ['
+  'AI marketplace, '
+=======
+   } static KEYWORD_MAPPINGS = {'/': ['AI marketplace, '
+>>>>>>> main
+,
+  tech services', ''
+  'artificial intelligence',
+  'IT services', 'AI developers',
+  'technology marketplace', 'AI solutions',
+  'machine learning', 'digital transformation',
+  'micro SaaS', 'quantum computing',
+  'blockchain', 'cybersecurity',
+<<<<<<< HEAD
+  'edge computing', 'metaverse'], ';/services': ['
+  'AI services, '
+=======
+  'edge computing', 'metaverse'], ';/services': ['AI services, '
+>>>>>>> main
+,
+  cybersecurity', ''
+  'cloud infrastructure',
+  'IT solutions', 'digital transformation',
+  'automation', 'machine learning',
+<<<<<<< HEAD
+  'blockchain', 'quantum computing'], ';/ai-solutions': ['
+  'artificial intelligence, '
+=======
+  'blockchain', 'quantum computing'], ';/ai-solutions': ['artificial intelligence, '
+>>>>>>> main
+,
+  AI automation', ''
+  'machine learning',
+  'deep learning', 'neural networks',
+  'AI systems', 'intelligent automation',
+<<<<<<< HEAD
+  'AI platforms'], ';/about': ['
+  'Zion Tech Group, '
+=======
+  'AI platforms'], ';/about': ['Zion Tech Group, '
+>>>>>>> main
+,
+  technology comp', ''
+  'innovation',
+  'expertise', 'leadership',
+  'mission', 'vision',
+<<<<<<< HEAD
+  'comp history'], ';/contact': ['
+  'contact us, '
+=======
+  'comp history'], ';/contact': ['contact us, '
+>>>>>>> main
+,
+  get in touch', ''
+  'support',
+  'consultation', 'partnership',
+<<<<<<< HEAD
+  'sales inquiry', 'technical support'], ';/pricing': ['
+  'pricing plans, '
+=======
+  'sales inquiry', 'technical support'], ';/pricing': ['pricing plans, '
+>>>>>>> main
+,
+  cost', ''
+  'subscription',
+  'enterprise pricing', 'custom solutions',
+<<<<<<< HEAD
+  'affordable technology'], ';/careers': ['
+  'job opportunities, '
+=======
+  'affordable technology'], ';/careers': ['job opportunities, '
+>>>>>>> main
+,
+  careers', ''
+  'employment',
+  'work with us', 'join our team',
+<<<<<<< HEAD
+  'technology jobs', 'AI careers'], ';/blog': ['
+  'technology blog, '
+=======
+  'technology jobs', 'AI careers'], ';/blog': ['technology blog, '
+>>>>>>> main
+,
+  industry insights', ''
+  'AI trends',
+  'tech news', 'thought leadership',
+<<<<<<< HEAD
+  'expert analysis'], ';/news': ['
+  'comp news, '
+=======
+  'expert analysis'], ';/news': ['comp news, '
+>>>>>>> main
+,
+  press releases', ''
+  'announcements',
+  'updates', 'partnerships',
+<<<<<<< HEAD
+  'achievements'], ';/services/ai-autonomous-systems': ['
+  'AI autonomous systems, '
+=======
+  'achievements'], ';/services/ai-autonomous-systems': ['AI autonomous systems, '
+>>>>>>> main
+,
+  intelligent automation', ''
+  'business process automation',
+  'AI agents', 'autonomous operations',
+<<<<<<< HEAD
+  'machine learning systems'], ';/services/quantum-technology': ['
+  'quantum computing, '
+=======
+  'machine learning systems'], ';/services/quantum-technology': ['quantum computing, '
+>>>>>>> main
+,
+  quantum technology', ''
+  'quantum algorithms',
+  'quantum cryptography', 'quantum machine learning',
+<<<<<<< HEAD
+  'quantum advantage'], ';/services/cybersecurity': ['
+  'cybersecurity, '
+=======
+  'quantum advantage'], ';/services/cybersecurity': ['cybersecurity, '
+>>>>>>> main
+,
+  information security', ''
+  'threat protection',
+  'security assessment', 'compliance',
+<<<<<<< HEAD
+  'data protection', 'quantum-safe security'], ';/services/it-infrastructure': ['
+  'IT infrastructure, '
+=======
+  'data protection', 'quantum-safe security'], ';/services/it-infrastructure': ['IT infrastructure, '
+>>>>>>> main
+,
+  network infrastructure', ''
+  'cloud infrastructure',
+  'data centers', 'server management',
+<<<<<<< HEAD
+  'network security'], ';/services/micro-saas-solutions': ['
+  'micro SaaS, '
+=======
+  'network security'], ';/services/micro-saas-solutions': ['micro SaaS, '
+>>>>>>> main
+,
+  software as a service', ''
+  'SaaS platforms',
+  'business software', 'cloud applications',
+<<<<<<< HEAD
+  'subscription software'], ';/solutions/enterprise': ['
+  'enterprise solutions, '
+=======
+  'subscription software'], ';/solutions/enterprise': ['enterprise solutions, '
+>>>>>>> main
+,
+  enterprise IT', ''
+  'large business solutions',
+  'scalable technology', 'enterprise software',
+<<<<<<< HEAD
+  'business technology'], ';/solutions/healthcare': ['
+  'healthcare technology, '
+=======
+  'business technology'], ';/solutions/healthcare': ['healthcare technology, '
+>>>>>>> main
+,
+  health IT', ''
+  'medical software',
+<<<<<<< HEAD
+  'healthcare compliance', 'HIPAA solutions',medical technology'] } static generateSEOData(path) { const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) { const baseTitle ='
+  'Zion Tech Group' if (path ==='
+  '/') { return `${baseTitle} - Revolutionary Technology Solutions` const pathSegments = path.split(`
+  '/').filter(Boolean) if (pathSegments.length === 0) return baseTitle const lastSegment = pathSegments[pathSegments.length - 1] const formattedSegment = lastSegment .split('
+  '-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join('
+  ' ')`; return `${formattedSegment} - ${baseTitle}`  static generateDescription(path) { return this.DEFAULT_META_DESCRIPTIONS[path] ||`
+  ';Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.''
+  '  static generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || ['technology'
+  ', 'IT services'
+  ', 'digital solutions'
+  ', 'business technology'
+  ', 'innovation'
+  '] static generateCanonicalUrl(path) { const baseUrl = 'https: ''`'/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.', /about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.',/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.', /pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.',/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.', /blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.',/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.', /services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.',/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.', /services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.',/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.', /services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.', /solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.',/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } } static generateTitle(path) { const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {'/': ['AI marketplace', tech services',artificial intelligence', IT services',AI developers', technology marketplace',AI solutions', machine learning',digital transformation', micro SaaS',quantum computing', blockchain',cybersecurity', edge computing',metaverse'], /services': ['AI services',cybersecurity', cloud infrastructure',IT solutions', digital transformation',automation', machine learning',blockchain', quantum computing'], /ai-solutions': ['artificial intelligence',AI automation', machine learning',deep learning', neural networks',AI systems', intelligent automation',AI platforms'], /about': ['Zion Tech Group',technology company', innovation',expertise', leadership',mission', vision',company history'], /contact': ['contact us',get in touch', support',consultation', partnership',sales inquiry', technical support'], /pricing': ['pricing plans',cost', subscription',enterprise pricing', custom solutions',affordable technology'], /careers': ['job opportunities',careers', employment',work with us', join our team',technology jobs', AI careers'], /blog': ['technology blog',industry insights', AI trends',tech news', thought leadership',expert analysis'], /news': ['company news',press releases', announcements',updates', partnerships',achievements'], /services/ai-autonomous-systems': ['AI autonomous systems',intelligent automation', business process automation',AI agents', autonomous operations',machine learning systems'], /services/quantum-technology': ['quantum computing',quantum technology', quantum algorithms',quantum cryptography', quantum machine learning',quantum advantage'], /services/cybersecurity': ['cybersecurity',information security', threat protection',security assessment', compliance',data protection', quantum-safe security'], /services/it-infrastructure': ['IT infrastructure',network infrastructure', cloud infrastructure',data centers', server management',network security'], /services/micro-saas-solutions': ['micro SaaS',software as a service', SaaS platforms',business software', cloud applications',subscription software'], /solutions/enterprise': ['enterprise solutions',enterprise IT', large business solutions',scalable technology', enterprise software',business technology'], /solutions/healthcare': ['healthcare technology',health IT', medical software',healthcare compliance', HIPAA solutions',medical technology'] }  export class SEOOptimizer { static DEFAULT_META_DESCRIPTIONS = {';/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',;/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',;/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.', ';/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.', ';/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.', ';/pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.', ';/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.', ';/blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.', ';/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.', ';/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.', ';/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.', ';/services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.', ';/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.', ';/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.',;/solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.', ';/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } static KEYWORD_MAPPINGS = {'/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'], ';/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'], ';/ai-solutions': ['artificial intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'], ';/about': ['Zion Tech Group', 'technology comp', 'innovation', 'expertise', 'leadership', 'mission', 'vision', 'comp history'], ';/contact': ['contact us', 'get in touch', 'support', 'consultation', 'partnership', 'sales inquiry', 'technical support'], ';/pricing': ['pricing plans', 'cost', 'subscription', 'enterprise pricing', 'custom solutions', 'affordable technology'], ';/careers': ['job opportunities', 'careers', 'employment', 'work with us', 'join our team', 'technology jobs', 'AI careers'], ';/blog': ['technology blog', 'industry insights', 'AI trends', 'tech news', 'thought leadership', 'expert analysis'], ';/news': ['comp news', 'press releases', 'announcements', 'updates', 'partnerships', 'achievements'], ';/services/ai-autonomous-systems': ['AI autonomous systems', 'intelligent automation', 'business process automation', 'AI agents', 'autonomous operations', 'machine learning systems'], ';/services/quantum-technology': ['quantum computing', 'quantum technology', 'quantum algorithms', 'quantum cryptography', 'quantum machine learning', 'quantum advantage'], ';/services/cybersecurity': ['cybersecurity', 'information security', 'threat protection', 'security assessment', 'compliance', 'data protection', 'quantum-safe security'], ';/services/it-infrastructure': ['IT infrastructure', 'network infrastructure', 'cloud infrastructure', 'data centers', 'server management', 'network security'], ';/services/micro-saas-solutions': ['micro SaaS', 'software as a service', 'SaaS platforms', 'business software', 'cloud applications', 'subscription software'], ';/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'], ';/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions', 'medical technology'] } static generateSEOData(path) { const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) { const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` const pathSegments = path.split('/').filter(Boolean) if(pathSegments.length === 0) return baseTitle const lastSegment = pathSegments[pathSegments.length-1] const formattedSegment = lastSegment .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join(' ')`; return `${formattedSegment} - ${baseTitle}`  static generateDescription(path) { return this.DEFAULT_META_DESCRIPTIONS[path] ||';Professional technology solutions and services.Expert IT consulting, AI development, and digital transformation services for modern businesses.'  static generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'] static generateCanonicalUrl(path) { const baseUrl = 'https:
+'
+=======
+  'healthcare compliance', 'HIPAA solutions','medical technology'] } static generateSEOData(path) {const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) {const baseTitle =
+  'Zion Tech Group' if (path ===
+  '/') { return `${baseTitle} - Revolutionary Technology Solutions` const pathSegments = path.split(
+  '/').filter(Boolean) if (pathSegments.length === 0) return baseTitle const lastSegment = pathSegments[pathSegments.length - 1] const formattedSegment = lastSegment .split(
+  '-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join(
+  ' ')`; return `${formattedSegment} - ${baseTitle}`  static generateDescription(path) {return this.DEFAULT_META_DESCRIPTIONS[path] ||
+  ';Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.'
+  '  static generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || ['technology
+  ', 'IT services
+  ', 'digital solutions
+  ', 'business technology
+  ', 'innovation
+<<<<<<< HEAD
+  '] static generateCanonicalUrl(path) { const baseUrl = 'https: ''`'/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.',/about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.',/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.',/pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.',/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.',/blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.',/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.',/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.',/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.',/services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.',/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.',/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.',/solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.',/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } } static generateTitle(path) { const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {'/': ['AI marketplace',tech services',artificial intelligence',IT services',AI developers',technology marketplace',AI solutions',machine learning',digital transformation',micro SaaS',quantum computing',blockchain',cybersecurity',edge computing',metaverse'],/services': ['AI services',cybersecurity',cloud infrastructure',IT solutions',digital transformation',automation',machine learning',blockchain',quantum computing'],/ai-solutions': ['artificial intelligence',AI automation',machine learning',deep learning',neural networks',AI systems',intelligent automation',AI platforms'],/about': ['Zion Tech Group',technology company',innovation',expertise',leadership',mission',vision',company history'],/contact': ['contact us',get in touch',support',consultation',partnership',sales inquiry',technical support'],/pricing': ['pricing plans',cost',subscription',enterprise pricing',custom solutions',affordable technology'],/careers': ['job opportunities',careers',employment',work with us',join our team',technology jobs',AI careers'],/blog': ['technology blog',industry insights',AI trends',tech news',thought leadership',expert analysis'],/news': ['company news',press releases',announcements',updates',partnerships',achievements'],/services/ai-autonomous-systems': ['AI autonomous systems',intelligent automation',business process automation',AI agents',autonomous operations',machine learning systems'],/services/quantum-technology': ['quantum computing',quantum technology',quantum algorithms',quantum cryptography',quantum machine learning',quantum advantage'],/services/cybersecurity': ['cybersecurity',information security',threat protection',security assessment',compliance',data protection',quantum-safe security'],/services/it-infrastructure': ['IT infrastructure',network infrastructure',cloud infrastructure',data centers',server management',network security'],/services/micro-saas-solutions': ['micro SaaS',software as a service',SaaS platforms',business software',cloud applications',subscription software'],/solutions/enterprise': ['enterprise solutions',enterprise IT',large business solutions',scalable technology',enterprise software',business technology'],/solutions/healthcare': ['healthcare technology',health IT',medical software',healthcare compliance',HIPAA solutions',medical technology'] }  export class SEOOptimizer { static DEFAULT_META_DESCRIPTIONS = {';/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',';/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',';/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.',';/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.',';/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.',';/pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.',';/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.',';/blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.',';/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.',';/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.',';/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.',';/services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.',';/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.',';/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.',';/solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.',';/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } static KEYWORD_MAPPINGS = {'/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],';/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'],';/ai-solutions': ['artificial intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'],';/about': ['Zion Tech Group', 'technology comp', 'innovation', 'expertise', 'leadership', 'mission', 'vision', 'comp history'],';/contact': ['contact us', 'get in touch', 'support', 'consultation', 'partnership', 'sales inquiry', 'technical support'],';/pricing': ['pricing plans', 'cost', 'subscription', 'enterprise pricing', 'custom solutions', 'affordable technology'],';/careers': ['job opportunities', 'careers', 'employment', 'work with us', 'join our team', 'technology jobs', 'AI careers'],';/blog': ['technology blog', 'industry insights', 'AI trends', 'tech news', 'thought leadership', 'expert analysis'],';/news': ['comp news', 'press releases', 'announcements', 'updates', 'partnerships', 'achievements'],';/services/ai-autonomous-systems': ['AI autonomous systems', 'intelligent automation', 'business process automation', 'AI agents', 'autonomous operations', 'machine learning systems'],';/services/quantum-technology': ['quantum computing', 'quantum technology', 'quantum algorithms', 'quantum cryptography', 'quantum machine learning', 'quantum advantage'],';/services/cybersecurity': ['cybersecurity', 'information security', 'threat protection', 'security assessment', 'compliance', 'data protection', 'quantum-safe security'],';/services/it-infrastructure': ['IT infrastructure', 'network infrastructure', 'cloud infrastructure', 'data centers', 'server management', 'network security'],';/services/micro-saas-solutions': ['micro SaaS', 'software as a service', 'SaaS platforms', 'business software', 'cloud applications', 'subscription software'],';/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'],';/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions','medical technology'] } static generateSEOData(path) { const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) { const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` const pathSegments = path.split('/').filter(Boolean) if(pathSegments.length === 0) return baseTitle const lastSegment = pathSegments[pathSegments.length-1] const formattedSegment = lastSegment .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join(' ')`; return `${formattedSegment} - ${baseTitle}`  static generateDescription(path) { return this.DEFAULT_META_DESCRIPTIONS[path] ||';Professional technology solutions and services.Expert IT consulting, AI development, and digital transformation services for modern businesses.'  static generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'] static generateCanonicalUrl(path) { const baseUrl = 'https:
+=======
+<<<<<<< HEAD
+  '] static generateCanonicalUrl(path) { const baseUrl = 'https: ''`'/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.', /about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.',/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.', /pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.',/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.', /blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.',/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.', /services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.',/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.', /services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.',/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.', /services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.', /solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.',/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } } static generateTitle(path) {const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {'/': ['AI marketplace', tech services',artificial intelligence', IT services',AI developers', technology marketplace',AI solutions', machine learning',digital transformation', micro SaaS',quantum computing', blockchain',cybersecurity', edge computing',metaverse'], /services': ['AI services',cybersecurity', cloud infrastructure',IT solutions', digital transformation',automation', machine learning',blockchain', quantum computing'], /ai-solutions': ['artificial intelligence',AI automation', machine learning',deep learning', neural networks',AI systems', intelligent automation',AI platforms'], /about': ['Zion Tech Group',technology company', innovation',expertise', leadership',mission', vision',company history'], /contact': ['contact us',get in touch', support',consultation', partnership',sales inquiry', technical support'], /pricing': ['pricing plans',cost', subscription',enterprise pricing', custom solutions',affordable technology'], /careers': ['job opportunities',careers', employment',work with us', join our team',technology jobs', AI careers'], /blog': ['technology blog',industry insights', AI trends',tech news', thought leadership',expert analysis'], /news': ['company news',press releases', announcements',updates', partnerships',achievements'], /services/ai-autonomous-systems': ['AI autonomous systems',intelligent automation', business process automation',AI agents', autonomous operations',machine learning systems'], /services/quantum-technology': ['quantum computing',quantum technology', quantum algorithms',quantum cryptography', quantum machine learning',quantum advantage'], /services/cybersecurity': ['cybersecurity',information security', threat protection',security assessment', compliance',data protection', quantum-safe security'], /services/it-infrastructure': ['IT infrastructure',network infrastructure', cloud infrastructure',data centers', server management',network security'], /services/micro-saas-solutions': ['micro SaaS',software as a service', SaaS platforms',business software', cloud applications',subscription software'], /solutions/enterprise': ['enterprise solutions',enterprise IT', large business solutions',scalable technology', enterprise software',business technology'], /solutions/healthcare': ['healthcare technology',health IT', medical software',healthcare compliance', HIPAA solutions',medical technology'] }  export class SEOOptimizer {static DEFAULT_META_DESCRIPTIONS = {';/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',';/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',';/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.', ';/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.', ';/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.', ';/pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.', ';/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.', ';/blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.', ';/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.', ';/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.', ';/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.', ';/services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.', ';/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.', ';/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.',';/solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.', ';/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } static KEYWORD_MAPPINGS = {'/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'], ';/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'], ';/ai-solutions': ['artificial intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'], ';/about': ['Zion Tech Group', 'technology comp', 'innovation', 'expertise', 'leadership', 'mission', 'vision', 'comp history'], ';/contact': ['contact us', 'get in touch', 'support', 'consultation', 'partnership', 'sales inquiry', 'technical support'], ';/pricing': ['pricing plans', 'cost', 'subscription', 'enterprise pricing', 'custom solutions', 'affordable technology'], ';/careers': ['job opportunities', 'careers', 'employment', 'work with us', 'join our team', 'technology jobs', 'AI careers'], ';/blog': ['technology blog', 'industry insights', 'AI trends', 'tech news', 'thought leadership', 'expert analysis'], ';/news': ['comp news', 'press releases', 'announcements', 'updates', 'partnerships', 'achievements'], ';/services/ai-autonomous-systems': ['AI autonomous systems', 'intelligent automation', 'business process automation', 'AI agents', 'autonomous operations', 'machine learning systems'], ';/services/quantum-technology': ['quantum computing', 'quantum technology', 'quantum algorithms', 'quantum cryptography', 'quantum machine learning', 'quantum advantage'], ';/services/cybersecurity': ['cybersecurity', 'information security', 'threat protection', 'security assessment', 'compliance', 'data protection', 'quantum-safe security'], ';/services/it-infrastructure': ['IT infrastructure', 'network infrastructure', 'cloud infrastructure', 'data centers', 'server management', 'network security'], ';/services/micro-saas-solutions': ['micro SaaS', 'software as a service', 'SaaS platforms', 'business software', 'cloud applications', 'subscription software'], ';/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'], ';/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions', 'medical technology'] } static generateSEOData(path) {const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) {const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` const pathSegments = path.split('/').filter(Boolean) if(pathSegments.length === 0) return baseTitle const lastSegment = pathSegments[pathSegments.length-1] const formattedSegment = lastSegment .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join(' ')`; return `${formattedSegment} - ${baseTitle}`  static generateDescription(path) { return this.DEFAULT_META_DESCRIPTIONS[path] ||';Professional technology solutions and services.Expert IT consulting, AI development, and digital transformation services for modern businesses.'  static generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'] static generateCanonicalUrl(path) { const baseUrl = 'https:
+=======
+  '] static generateCanonicalUrl(path) { const baseUrl = 'https: ''`'/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.', /about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.',/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.', /pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.',/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.', /blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.',/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.', /services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.',/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.', /services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.',/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.', /services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.', /solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.',/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } } static generateTitle(path) { const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {'/': ['AI marketplace', tech services',artificial intelligence', IT services',AI developers', technology marketplace',AI solutions', machine learning',digital transformation', micro SaaS',quantum computing', blockchain',cybersecurity', edge computing',metaverse'], /services': ['AI services',cybersecurity', cloud infrastructure',IT solutions', digital transformation',automation', machine learning',blockchain', quantum computing'], /ai-solutions': ['artificial intelligence',AI automation', machine learning',deep learning', neural networks',AI systems', intelligent automation',AI platforms'], /about': ['Zion Tech Group',technology company', innovation',expertise', leadership',mission', vision',company history'], /contact': ['contact us',get in touch', support',consultation', partnership',sales inquiry', technical support'], /pricing': ['pricing plans',cost', subscription',enterprise pricing', custom solutions',affordable technology'], /careers': ['job opportunities',careers', employment',work with us', join our team',technology jobs', AI careers'], /blog': ['technology blog',industry insights', AI trends',tech news', thought leadership',expert analysis'], /news': ['company news',press releases', announcements',updates', partnerships',achievements'], /services/ai-autonomous-systems': ['AI autonomous systems',intelligent automation', business process automation',AI agents', autonomous operations',machine learning systems'], /services/quantum-technology': ['quantum computing',quantum technology', quantum algorithms',quantum cryptography', quantum machine learning',quantum advantage'], /services/cybersecurity': ['cybersecurity',information security', threat protection',security assessment', compliance',data protection', quantum-safe security'], /services/it-infrastructure': ['IT infrastructure',network infrastructure', cloud infrastructure',data centers', server management',network security'], /services/micro-saas-solutions': ['micro SaaS',software as a service', SaaS platforms',business software', cloud applications',subscription software'], /solutions/enterprise': ['enterprise solutions',enterprise IT', large business solutions',scalable technology', enterprise software',business technology'], /solutions/healthcare': ['healthcare technology',health IT', medical software',healthcare compliance', HIPAA solutions',medical technology'] }  export class SEOOptimizer { static DEFAULT_META_DESCRIPTIONS = {';/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',';/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',';/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.', ';/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.', ';/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.', ';/pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.', ';/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.', ';/blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.', ';/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.', ';/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.', ';/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.', ';/services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.', ';/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.', ';/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.',';/solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.', ';/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } static KEYWORD_MAPPINGS = {'/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'], ';/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'], ';/ai-solutions': ['artificial intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'], ';/about': ['Zion Tech Group', 'technology comp', 'innovation', 'expertise', 'leadership', 'mission', 'vision', 'comp history'], ';/contact': ['contact us', 'get in touch', 'support', 'consultation', 'partnership', 'sales inquiry', 'technical support'], ';/pricing': ['pricing plans', 'cost', 'subscription', 'enterprise pricing', 'custom solutions', 'affordable technology'], ';/careers': ['job opportunities', 'careers', 'employment', 'work with us', 'join our team', 'technology jobs', 'AI careers'], ';/blog': ['technology blog', 'industry insights', 'AI trends', 'tech news', 'thought leadership', 'expert analysis'], ';/news': ['comp news', 'press releases', 'announcements', 'updates', 'partnerships', 'achievements'], ';/services/ai-autonomous-systems': ['AI autonomous systems', 'intelligent automation', 'business process automation', 'AI agents', 'autonomous operations', 'machine learning systems'], ';/services/quantum-technology': ['quantum computing', 'quantum technology', 'quantum algorithms', 'quantum cryptography', 'quantum machine learning', 'quantum advantage'], ';/services/cybersecurity': ['cybersecurity', 'information security', 'threat protection', 'security assessment', 'compliance', 'data protection', 'quantum-safe security'], ';/services/it-infrastructure': ['IT infrastructure', 'network infrastructure', 'cloud infrastructure', 'data centers', 'server management', 'network security'], ';/services/micro-saas-solutions': ['micro SaaS', 'software as a service', 'SaaS platforms', 'business software', 'cloud applications', 'subscription software'], ';/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'], ';/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions', 'medical technology'] } static generateSEOData(path) { const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) { const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` const pathSegments = path.split('/').filter(Boolean) if(pathSegments.length === 0) return baseTitle const lastSegment = pathSegments[pathSegments.length-1] const formattedSegment = lastSegment .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join(' ')`; return `${formattedSegment} - ${baseTitle}`  static generateDescription(path) { return this.DEFAULT_META_DESCRIPTIONS[path] ||';Professional technology solutions and services.Expert IT consulting, AI development, and digital transformation services for modern businesses.'  static generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'] static generateCanonicalUrl(path) { const baseUrl = 'https:
+=======
   Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group."
   ', /services': Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.,  ,/ai-solutions"
+>>>>>>> main
   ': Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology., '
-  , /about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology., /contact"
+  , /about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology., /contact""
   ':,'
-  Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities."
+  Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.""
   ', /pricing': 'Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget.,/careers'
   ':, '
-  Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation."
-  ', /blog': Latest insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.,  ,/news"
+  Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.""
+  ', /blog': Latest insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.,  ,/news""
   ': Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations, partnerships, and industry developments., '
-  , /services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise., /services/quantum-technology"
+  , /services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise., /services/quantum-technology""
   ':,'
-  Cutting-edge quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities."
+  Cutting-edge quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities.""
   ', /services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection.,/services/it-infrastructure'
   ':, '
-  Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business."
+  Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.""
   ', /services/micro-saas-solutions': Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.,
-  , /solutions/enterprise"
+  , /solutions/enterprise""
   ': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.,/solutions/healthcare':, '
   Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.' } } static generateTitle (path) { const baseTitle ='
-  'Zion Tech Group' if (path ==="
-  '/') { return `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {'/': ["
+  'Zion Tech Group' if (path ===""
+  '/') { return `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {'/': [""
   'AI marketplace, tech services,'
   , artificial intelligence', IT services'
-  ', AI developers', technology marketplace"
-  ', AI solutions', machine learning"
-  ', digital transformation', micro SaaS"
-  ', quantum computing', blockchain"
-  ', cybersecurity', edge computing"
-  ', metaverse'], /services"
-  ': ['AI services,cybersecurity,  , cloud infrastructure"
-  ', IT solutions', digital transformation"
-  ', automation', machine learning"
-  ', blockchain', quantum computing"
-  '], /ai-solutions': ["
+  ', AI developers', technology marketplace""
+  ', AI solutions', machine learning""
+  ', digital transformation', micro SaaS""
+  ', quantum computing', blockchain""
+  ', cybersecurity', edge computing""
+  ', metaverse'], /services""
+  ': ['AI services,cybersecurity,  , cloud infrastructure""
+  ', IT solutions', digital transformation""
+  ', automation', machine learning""
+  ', blockchain', quantum computing""
+  '], /ai-solutions': [""
   'artificial intelligence,AI automation, '
   , machine learning', deep learning'
-  ', neural networks', AI systems"
-  ', intelligent automation', AI platforms"
-  '], /about': ["
+  ', neural networks', AI systems""
+  ', intelligent automation', AI platforms""
+  '], /about': [""
   'Zion Tech Group,technology company, '
   , innovation', expertise'
-  ', leadership', mission"
-  ', vision', company history"
-  '], /contact': ["
+  ', leadership', mission""
+  ', vision', company history""
+  '], /contact': [""
   'contact us,get in touch, '
   , support', consultation'
-  ', partnership', sales inquiry"
-  ', technical support'], /pricing"
-  ': ['pricing plans,cost,  , subscription"
-  ', enterprise pricing', custom solutions"
-  ', affordable technology'], /careers"
-  ': ['job opportunities,careers,  , employment"
-  ', work with us', join our team"
-  ', technology jobs', AI careers"
-  '], /blog': ["
+  ', partnership', sales inquiry""
+  ', technical support'], /pricing""
+  ': ['pricing plans,cost,  , subscription""
+  ', enterprise pricing', custom solutions""
+  ', affordable technology'], /careers""
+  ': ['job opportunities,careers,  , employment""
+  ', work with us', join our team""
+  ', technology jobs', AI careers""
+  '], /blog': [""
   'technology blog,industry insights, '
   , AI trends', tech news'
-  ', thought leadership', expert analysis"
-  '], /news': ["
+  ', thought leadership', expert analysis""
+  '], /news': [""
   'company news,press releases, '
   , announcements', updates'
-  ', partnerships', achievements"
-  '], /services/ai-autonomous-systems': ["
+  ', partnerships', achievements""
+  '], /services/ai-autonomous-systems': [""
   'AI autonomous systems,intelligent automation, '
   , business process automation', AI agents'
-  ', autonomous operations', machine learning systems"
-  '], /services/quantum-technology': ["
+  ', autonomous operations', machine learning systems""
+  '], /services/quantum-technology': [""
   'quantum computing,quantum technology, '
   , quantum algorithms', quantum cryptography'
-  ', quantum machine learning', quantum advantage"
-  '], /services/cybersecurity': ["
+  ', quantum machine learning', quantum advantage""
+  '], /services/cybersecurity': [""
   'cybersecurity,information security, '
   , threat protection', security assessment'
+<<<<<<< HEAD
+  ', compliance', data protection""
+  ', quantum-safe security'], /services/it-infrastructure""
+  ': ['IT infrastructure,network infrastructure,  , cloud infrastructure""
+  ', data centers', server management""
+  ', network security'], /services/micro-saas-solutions""
+  ': ['micro SaaS,software as a service,  , SaaS platforms""
+  ', business software', cloud applications""
+  ', subscription software'], /solutions/enterprise""
+  ': ['enterprise solutions,enterprise IT,  , large business solutions""
+  ', scalable technology', enterprise software""
+  ', business technology'], /solutions/healthcare""
+  ': ['healthcare technology,health IT,  , medical software""
+  ', healthcare compliance', HIPAA solutions""
+  ', medical technology'] }  export class SEOOptimizer { static DEFAULT_META_DESCRIPTIONS = {';/': Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.,""
+  , ';/services': Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.,""
+  , ';/ai-solutions': Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.,  ,';/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology., '
+  /contact': Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.,'
+  , ';/pricing': 'Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget., '
+  /careers': Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.,'
+  , ';/blog': Latest insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.,  ,';/news': Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations, partnerships, and industry developments.,  ,';/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise., '
+  /services/quantum-technology': 'Cutting-edge quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities.,""
+  /services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection., /services/it-infrastructure': Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.,'
+  , ';/services/micro-saas-solutions': Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.,""
+  , ';/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth., '
+  /solutions/healthcare': Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.,', } static KEYWORD_MAPPINGS = {'/': [""
+  'AI marketplace, '
+, ""
+  tech services', '
+  'artificial intelligence', ""
+  'IT services', 'AI developers', ""
+  'technology marketplace', 'AI solutions', ""
+  'machine learning', 'digital transformation', ""
+  'micro SaaS', 'quantum computing', ""
+  'blockchain', 'cybersecurity', ""
+  'edge computing', 'metaverse'], ';/services': [""
+  'AI services, '
+,""
+  cybersecurity', '
+  'cloud infrastructure',""
+  'IT solutions', 'digital transformation',""
+  'automation', 'machine learning',""
+  'blockchain', 'quantum computing'], ';/ai-solutions': [""
+  'artificial intelligence, '
+,""
+  AI automation', '
+  'machine learning',""
+  'deep learning', 'neural networks',""
+  'AI systems', 'intelligent automation',""
+  'AI platforms'], ';/about': [""
+  'Zion Tech Group, '
+,""
+  technology comp', '
+  'innovation',""
+  'expertise', 'leadership',""
+  'mission', 'vision',""
+  'comp history'], ';/contact': [""
+  'contact us, '
+,""
+  get in touch', '
+  'support',""
+  'consultation', 'partnership',""
+  'sales inquiry', 'technical support'], ';/pricing': [""
+  'pricing plans, '
+,""
+  cost', '
+  'subscription',""
+  'enterprise pricing', 'custom solutions',""
+  'affordable technology'], ';/careers': [""
+  'job opportunities, '
+,""
+  careers', '
+  'employment',""
+  'work with us', 'join our team',""
+  'technology jobs', 'AI careers'], ';/blog': [""
+  'technology blog, '
+,""
+  industry insights', '
+  'AI trends',""
+  'tech news', 'thought leadership',""
+  'expert analysis'], ';/news': [""
+  'comp news, '
+,""
+  press releases', '
+  'announcements',""
+  'updates', 'partnerships',""
+  'achievements'], ';/services/ai-autonomous-systems': [""
+  'AI autonomous systems, '
+,""
+  intelligent automation', '
+  'business process automation',""
+  'AI agents', 'autonomous operations',""
+  'machine learning systems'], ';/services/quantum-technology': [""
+  'quantum computing, '
+,""
+  quantum technology', '
+  'quantum algorithms',""
+  'quantum cryptography', 'quantum machine learning',""
+  'quantum advantage'], ';/services/cybersecurity': [""
+  'cybersecurity, '
+,""
+  information security', '
+  'threat protection',""
+  'security assessment', 'compliance',""
+  'data protection', 'quantum-safe security'], ';/services/it-infrastructure': [""
+  'IT infrastructure, '
+,""
+  network infrastructure', '
+  'cloud infrastructure',""
+  'data centers', 'server management',""
+  'network security'], ';/services/micro-saas-solutions': [""
+  'micro SaaS, '
+,""
+  software as a service', '
+  'SaaS platforms',""
+  'business software', 'cloud applications',""
+  'subscription software'], ';/solutions/enterprise': [""
+  'enterprise solutions, '
+,""
+  enterprise IT', '
+  'large business solutions',""
+  'scalable technology', 'enterprise software',""
+  'business technology'], ';/solutions/healthcare': [""
+  'healthcare technology, '
+,""
+  health IT', '
+  'medical software',""
+  'healthcare compliance', 'HIPAA solutions','medical technology'] } static generateSEOData(path) { const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) { const baseTitle =""
+  'Zion Tech Group' if (path ==="`"
+  '/') { return `${baseTitle} - Revolutionary Technology Solutions` const pathSegments = path.split(""
+  '/').filter(Boolean) if (pathSegments.length === 0) return baseTitle const lastSegment = pathSegments[pathSegments.length - 1] const formattedSegment = lastSegment .split(""
+  '-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join("`"
+  ' ')`; return `${formattedSegment} - ${baseTitle}`  static generateDescription(path) { return this.DEFAULT_META_DESCRIPTIONS[path] ||""
+  ';Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.'
+  '  static generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || ['technology""
+  ', 'IT services""
+  ', 'digital solutions""
+  ', 'business technology""
+  ', 'innovation"`;"
+  '] static generateCanonicalUrl(path) { const baseUrl = 'https: ''`'/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.', /about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.',/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.', /pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.',/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.', /blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.',/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.', /services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.',/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.', /services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.',/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.', /services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.', /solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.',/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } } static generateTitle(path) { const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {'/': ['AI marketplace', tech services',artificial intelligence', IT services',AI developers', technology marketplace',AI solutions', machine learning',digital transformation', micro SaaS',quantum computing', blockchain',cybersecurity', edge computing',metaverse'], /services': ['AI services',cybersecurity', cloud infrastructure',IT solutions', digital transformation',automation', machine learning',blockchain', quantum computing'], /ai-solutions': ['artificial intelligence',AI automation', machine learning',deep learning', neural networks',AI systems', intelligent automation',AI platforms'], /about': ['Zion Tech Group',technology company', innovation',expertise', leadership',mission', vision',company history'], /contact': ['contact us',get in touch', support',consultation', partnership',sales inquiry', technical support'], /pricing': ['pricing plans',cost', subscription',enterprise pricing', custom solutions',affordable technology'], /careers': ['job opportunities',careers', employment',work with us', join our team',technology jobs', AI careers'], /blog': ['technology blog',industry insights', AI trends',tech news', thought leadership',expert analysis'], /news': ['company news',press releases', announcements',updates', partnerships',achievements'], /services/ai-autonomous-systems': ['AI autonomous systems',intelligent automation', business process automation',AI agents', autonomous operations',machine learning systems'], /services/quantum-technology': ['quantum computing',quantum technology', quantum algorithms',quantum cryptography', quantum machine learning',quantum advantage'], /services/cybersecurity': ['cybersecurity',information security', threat protection',security assessment', compliance',data protection', quantum-safe security'], /services/it-infrastructure': ['IT infrastructure',network infrastructure', cloud infrastructure',data centers', server management',network security'], /services/micro-saas-solutions': ['micro SaaS',software as a service', SaaS platforms',business software', cloud applications',subscription software'], /solutions/enterprise': ['enterprise solutions',enterprise IT', large business solutions',scalable technology', enterprise software',business technology'], /solutions/healthcare': ['healthcare technology',health IT', medical software',healthcare compliance', HIPAA solutions',medical technology'] }  export class SEOOptimizer { static DEFAULT_META_DESCRIPTIONS = {';/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',';/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',';/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.', ';/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.', ';/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.', ';/pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.', ';/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.', ';/blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.', ';/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.', ';/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.', ';/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.', ';/services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.', ';/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.', ';/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.',';/solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.', ';/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } static KEYWORD_MAPPINGS = {'/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'], ';/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'], ';/ai-solutions': ['artificial intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'], ';/about': ['Zion Tech Group', 'technology comp', 'innovation', 'expertise', 'leadership', 'mission', 'vision', 'comp history'], ';/contact': ['contact us', 'get in touch', 'support', 'consultation', 'partnership', 'sales inquiry', 'technical support'], ';/pricing': ['pricing plans', 'cost', 'subscription', 'enterprise pricing', 'custom solutions', 'affordable technology'], ';/careers': ['job opportunities', 'careers', 'employment', 'work with us', 'join our team', 'technology jobs', 'AI careers'], ';/blog': ['technology blog', 'industry insights', 'AI trends', 'tech news', 'thought leadership', 'expert analysis'], ';/news': ['comp news', 'press releases', 'announcements', 'updates', 'partnerships', 'achievements'], ';/services/ai-autonomous-systems': ['AI autonomous systems', 'intelligent automation', 'business process automation', 'AI agents', 'autonomous operations', 'machine learning systems'], ';/services/quantum-technology': ['quantum computing', 'quantum technology', 'quantum algorithms', 'quantum cryptography', 'quantum machine learning', 'quantum advantage'], ';/services/cybersecurity': ['cybersecurity', 'information security', 'threat protection', 'security assessment', 'compliance', 'data protection', 'quantum-safe security'], ';/services/it-infrastructure': ['IT infrastructure', 'network infrastructure', 'cloud infrastructure', 'data centers', 'server management', 'network security'], ';/services/micro-saas-solutions': ['micro SaaS', 'software as a service', 'SaaS platforms', 'business software', 'cloud applications', 'subscription software'], ';/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'], ';/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions', 'medical technology'] } static generateSEOData(path) { const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) { const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` const pathSegments = path.split('/').filter(Boolean) if(pathSegments.length === 0) return baseTitle const lastSegment = pathSegments[pathSegments.length-1] const formattedSegment = lastSegment .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join(' ')`; return `${formattedSegment} - ${baseTitle}`  static generateDescription(path) { return this.DEFAULT_META_DESCRIPTIONS[path] ||';Professional technology solutions and services.Expert IT consulting, AI development, and digital transformation services for modern businesses.'  static generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'] static generateCanonicalUrl(path) { const baseUrl = 'https: ";"
+}}}}}}}}}}}}`
+=======
   ', compliance', data protection"
   ', quantum-safe security'], /services/it-infrastructure"
   ': ['IT infrastructure,network infrastructure,  , cloud infrastructure"
@@ -88,121 +1393,99 @@
   ', business technology'], /solutions/healthcare"
   ': ['healthcare technology,health IT,  , medical software"
   ', healthcare compliance', HIPAA solutions"
-  ', medical technology'] }  export class SEOOptimizer { static DEFAULT_META_DESCRIPTIONS = {';/': Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.,"
-  , ';/services': Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.,"
-  , ';/ai-solutions': Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.,  ,';/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology., '
-  /contact': Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.,'
-  , ';/pricing': 'Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget., '
-  /careers': Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.,'
-  , ';/blog': Latest insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.,  ,';/news': Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations, partnerships, and industry developments.,  ,';/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise., '
+  ', medical technology'] }  export class SEOOptimizer { static DEFAULT_META_DESCRIPTIONS = {';/': Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.,,;/services': Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.,,;/ai-solutions': Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.,  ,';/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology., '
+  /contact': Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.,,;/pricing': 'Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget., '
+  /careers': Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.,,;/blog': Latest insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.,  ,';/news': Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations, partnerships, and industry developments.,  ,';/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise., '
   /services/quantum-technology': 'Cutting-edge quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities.,"
-  /services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection., /services/it-infrastructure': Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.,'
-  , ';/services/micro-saas-solutions': Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.,"
-  , ';/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth., '
+  /services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection., /services/it-infrastructure': Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.,,;/services/micro-saas-solutions': Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.,,;/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth., '
   /solutions/healthcare': Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.,',
 } static KEYWORD_MAPPINGS = {'/': ["
-  'AI marketplace, '
-,"
-  tech services', '
-  'artificial intelligence',"
-  'IT services', 'AI developers',"
-  'technology marketplace', 'AI solutions',"
-  'machine learning', 'digital transformation',"
-  'micro SaaS', 'quantum computing',"
-  'blockchain', 'cybersecurity',"
-  'edge computing', 'metaverse'], ';/services': ["
-  'AI services, '
-,"
-  cybersecurity', '
-  'cloud infrastructure',"
-  'IT solutions', 'digital transformation',"
-  'automation', 'machine learning',"
-  'blockchain', 'quantum computing'], ';/ai-solutions': ["
-  'artificial intelligence, '
-,"
-  AI automation', '
-  'machine learning',"
-  'deep learning', 'neural networks',"
-  'AI systems', 'intelligent automation',"
+  'AI marketplace, ,
+  tech services,
+  'artificial intelligence,
+  'IT services,AI developers,
+  'technology marketplace,AI solutions,
+  'machine learning,digital transformation,
+  'micro SaaS,quantum computing,
+  'blockchain,cybersecurity,
+  'edge computing,metaverse'], ';/services': ["
+  'AI services, ,
+  cybersecurity,
+  'cloud infrastructure,
+  'IT solutions,digital transformation,
+  'automation,machine learning,
+  'blockchain,quantum computing'], ';/ai-solutions': ["
+  'artificial intelligence, ,
+  AI automation,
+  'machine learning,
+  'deep learning,neural networks,
+  'AI systems,intelligent automation,
   'AI platforms'], ';/about': ["
-  'Zion Tech Group, '
-,"
-  technology comp', '
-  'innovation',"
-  'expertise', 'leadership',"
-  'mission', 'vision',"
+  'Zion Tech Group, ,
+  technology comp,
+  'innovation,
+  'expertise,leadership,
+  'mission,vision,
   'comp history'], ';/contact': ["
-  'contact us, '
-,"
-  get in touch', '
-  'support',"
-  'consultation', 'partnership',"
-  'sales inquiry', 'technical support'], ';/pricing': ["
-  'pricing plans, '
-,"
-  cost', '
-  'subscription',"
-  'enterprise pricing', 'custom solutions',"
+  'contact us, ,
+  get in touch,
+  'support,
+  'consultation,partnership,
+  'sales inquiry,technical support'], ';/pricing': ["
+  'pricing plans, ,
+  cost,
+  'subscription,
+  'enterprise pricing,custom solutions,
   'affordable technology'], ';/careers': ["
-  'job opportunities, '
-,"
-  careers', '
-  'employment',"
-  'work with us', 'join our team',"
-  'technology jobs', 'AI careers'], ';/blog': ["
-  'technology blog, '
-,"
-  industry insights', '
-  'AI trends',"
-  'tech news', 'thought leadership',"
+  'job opportunities, ,
+  careers,
+  'employment,
+  'work with us,join our team,
+  'technology jobs,AI careers'], ';/blog': ["
+  'technology blog, ,
+  industry insights,
+  'AI trends,
+  'tech news,thought leadership,
   'expert analysis'], ';/news': ["
-  'comp news, '
-,"
-  press releases', '
-  'announcements',"
-  'updates', 'partnerships',"
+  'comp news, ,
+  press releases,
+  'announcements,
+  'updates,partnerships,
   'achievements'], ';/services/ai-autonomous-systems': ["
-  'AI autonomous systems, '
-,"
-  intelligent automation', '
-  'business process automation',"
-  'AI agents', 'autonomous operations',"
+  'AI autonomous systems, ,
+  intelligent automation,
+  'business process automation,
+  'AI agents,autonomous operations,
   'machine learning systems'], ';/services/quantum-technology': ["
-  'quantum computing, '
-,"
-  quantum technology', '
-  'quantum algorithms',"
-  'quantum cryptography', 'quantum machine learning',"
+  'quantum computing, ,
+  quantum technology,
+  'quantum algorithms,
+  'quantum cryptography,quantum machine learning,
   'quantum advantage'], ';/services/cybersecurity': ["
-  'cybersecurity, '
-,"
-  information security', '
-  'threat protection',"
-  'security assessment', 'compliance',"
-  'data protection', 'quantum-safe security'], ';/services/it-infrastructure': ["
-  'IT infrastructure, '
-,"
-  network infrastructure', '
-  'cloud infrastructure',"
-  'data centers', 'server management',"
+  'cybersecurity, ,
+  information security,
+  'threat protection,
+  'security assessment,compliance,
+  'data protection,quantum-safe security'], ';/services/it-infrastructure': ["
+  'IT infrastructure, ,
+  network infrastructure,
+  'cloud infrastructure,
+  'data centers,server management,
   'network security'], ';/services/micro-saas-solutions': ["
-  'micro SaaS, '
-,"
-  software as a service', '
-  'SaaS platforms',"
-  'business software', 'cloud applications',"
+  'micro SaaS, ,
+  software as a service,
+  'SaaS platforms,
+  'business software,cloud applications,
   'subscription software'], ';/solutions/enterprise': ["
-  'enterprise solutions, '
-,"
-  enterprise IT', '
-  'large business solutions',"
-  'scalable technology', 'enterprise software',"
+  'enterprise solutions, ,
+  enterprise IT,
+  'large business solutions,
+  'scalable technology,enterprise software,
   'business technology'], ';/solutions/healthcare': ["
-  'healthcare technology, '
-,"
-  health IT', '
-  'medical software',"
-  'healthcare compliance', 'HIPAA solutions','medical technology'] } static generateSEOData(path) { const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) { const baseTitle ="
+  'healthcare technology, ,
+  health IT,
+  'medical software,
+  'healthcare compliance,HIPAA solutions,medical technology'] } static generateSEOData(path) { const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) { const baseTitle ="
   'Zion Tech Group' if (path ==="`
   '/') { return `${baseTitle} - Revolutionary Technology Solutions` const pathSegments = path.split("
   '/').filter(Boolean) if (pathSegments.length === 0) return baseTitle const lastSegment = pathSegments[pathSegments.length - 1] const formattedSegment = lastSegment .split("
@@ -210,10 +1493,18 @@
   ' ')`; return `${formattedSegment} - ${baseTitle}`  static generateDescription(path) { return this.DEFAULT_META_DESCRIPTIONS[path] ||"
   ';Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.'
   '  static generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || ['technology"
-  ', 'IT services"
-  ', 'digital solutions"
-  ', 'business technology"
-  ', 'innovation"`;
-  '] static generateCanonicalUrl(path) { const baseUrl = 'https: ''`'/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.', /about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.',/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.', /pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.',/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.', /blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.',/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.', /services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.',/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.', /services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.',/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.', /services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.', /solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.',/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } } static generateTitle(path) { const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {'/': ['AI marketplace', tech services',artificial intelligence', IT services',AI developers', technology marketplace',AI solutions', machine learning',digital transformation', micro SaaS',quantum computing', blockchain',cybersecurity', edge computing',metaverse'], /services': ['AI services',cybersecurity', cloud infrastructure',IT solutions', digital transformation',automation', machine learning',blockchain', quantum computing'], /ai-solutions': ['artificial intelligence',AI automation', machine learning',deep learning', neural networks',AI systems', intelligent automation',AI platforms'], /about': ['Zion Tech Group',technology company', innovation',expertise', leadership',mission', vision',company history'], /contact': ['contact us',get in touch', support',consultation', partnership',sales inquiry', technical support'], /pricing': ['pricing plans',cost', subscription',enterprise pricing', custom solutions',affordable technology'], /careers': ['job opportunities',careers', employment',work with us', join our team',technology jobs', AI careers'], /blog': ['technology blog',industry insights', AI trends',tech news', thought leadership',expert analysis'], /news': ['company news',press releases', announcements',updates', partnerships',achievements'], /services/ai-autonomous-systems': ['AI autonomous systems',intelligent automation', business process automation',AI agents', autonomous operations',machine learning systems'], /services/quantum-technology': ['quantum computing',quantum technology', quantum algorithms',quantum cryptography', quantum machine learning',quantum advantage'], /services/cybersecurity': ['cybersecurity',information security', threat protection',security assessment', compliance',data protection', quantum-safe security'], /services/it-infrastructure': ['IT infrastructure',network infrastructure', cloud infrastructure',data centers', server management',network security'], /services/micro-saas-solutions': ['micro SaaS',software as a service', SaaS platforms',business software', cloud applications',subscription software'], /solutions/enterprise': ['enterprise solutions',enterprise IT', large business solutions',scalable technology', enterprise software',business technology'], /solutions/healthcare': ['healthcare technology',health IT', medical software',healthcare compliance', HIPAA solutions',medical technology'] }  export class SEOOptimizer { static DEFAULT_META_DESCRIPTIONS = {';/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',';/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',';/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.', ';/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.', ';/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.', ';/pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.', ';/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.', ';/blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.', ';/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.', ';/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.', ';/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.', ';/services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.', ';/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.', ';/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.',';/solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.', ';/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } static KEYWORD_MAPPINGS = {'/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'], ';/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'], ';/ai-solutions': ['artificial intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'], ';/about': ['Zion Tech Group', 'technology comp', 'innovation', 'expertise', 'leadership', 'mission', 'vision', 'comp history'], ';/contact': ['contact us', 'get in touch', 'support', 'consultation', 'partnership', 'sales inquiry', 'technical support'], ';/pricing': ['pricing plans', 'cost', 'subscription', 'enterprise pricing', 'custom solutions', 'affordable technology'], ';/careers': ['job opportunities', 'careers', 'employment', 'work with us', 'join our team', 'technology jobs', 'AI careers'], ';/blog': ['technology blog', 'industry insights', 'AI trends', 'tech news', 'thought leadership', 'expert analysis'], ';/news': ['comp news', 'press releases', 'announcements', 'updates', 'partnerships', 'achievements'], ';/services/ai-autonomous-systems': ['AI autonomous systems', 'intelligent automation', 'business process automation', 'AI agents', 'autonomous operations', 'machine learning systems'], ';/services/quantum-technology': ['quantum computing', 'quantum technology', 'quantum algorithms', 'quantum cryptography', 'quantum machine learning', 'quantum advantage'], ';/services/cybersecurity': ['cybersecurity', 'information security', 'threat protection', 'security assessment', 'compliance', 'data protection', 'quantum-safe security'], ';/services/it-infrastructure': ['IT infrastructure', 'network infrastructure', 'cloud infrastructure', 'data centers', 'server management', 'network security'], ';/services/micro-saas-solutions': ['micro SaaS', 'software as a service', 'SaaS platforms', 'business software', 'cloud applications', 'subscription software'], ';/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'], ';/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions', 'medical technology'] } static generateSEOData(path) { const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) { const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` const pathSegments = path.split('/').filter(Boolean) if(pathSegments.length === 0) return baseTitle const lastSegment = pathSegments[pathSegments.length-1] const formattedSegment = lastSegment .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join(' ')`; return `${formattedSegment} - ${baseTitle}`  static generateDescription(path) { return this.DEFAULT_META_DESCRIPTIONS[path] ||';Professional technology solutions and services.Expert IT consulting, AI development, and digital transformation services for modern businesses.'  static generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'] static generateCanonicalUrl(path) { const baseUrl = 'https:
+  ,IT services"
+  ,digital solutions"
+  ,business technology"
+  ,innovation"`;
+  '] static generateCanonicalUrl(path) { const baseUrl = 'https: ''`'/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.',/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.', /about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.',/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.', /pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.',/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.', /blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.',/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.', /services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.',/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.', /services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.',/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.', /services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.', /solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.',/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } } static generateTitle(path) { const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` } static KEYWORD_MAPPINGS = {'/': ['AI marketplace', tech services',artificial intelligence', IT services',AI developers', technology marketplace',AI solutions', machine learning',digital transformation', micro SaaS',quantum computing', blockchain',cybersecurity', edge computing',metaverse'], /services': ['AI services',cybersecurity', cloud infrastructure',IT solutions', digital transformation',automation', machine learning',blockchain', quantum computing'], /ai-solutions': ['artificial intelligence',AI automation', machine learning',deep learning', neural networks',AI systems', intelligent automation',AI platforms'], /about': ['Zion Tech Group',technology company', innovation',expertise', leadership',mission', vision',company history'], /contact': ['contact us',get in touch', support',consultation', partnership',sales inquiry', technical support'], /pricing': ['pricing plans',cost', subscription',enterprise pricing', custom solutions',affordable technology'], /careers': ['job opportunities',careers', employment',work with us', join our team',technology jobs', AI careers'], /blog': ['technology blog',industry insights', AI trends',tech news', thought leadership',expert analysis'], /news': ['company news',press releases', announcements',updates', partnerships',achievements'], /services/ai-autonomous-systems': ['AI autonomous systems',intelligent automation', business process automation',AI agents', autonomous operations',machine learning systems'], /services/quantum-technology': ['quantum computing',quantum technology', quantum algorithms',quantum cryptography', quantum machine learning',quantum advantage'], /services/cybersecurity': ['cybersecurity',information security', threat protection',security assessment', compliance',data protection', quantum-safe security'], /services/it-infrastructure': ['IT infrastructure',network infrastructure', cloud infrastructure',data centers', server management',network security'], /services/micro-saas-solutions': ['micro SaaS',software as a service', SaaS platforms',business software', cloud applications',subscription software'], /solutions/enterprise': ['enterprise solutions',enterprise IT', large business solutions',scalable technology', enterprise software',business technology'], /solutions/healthcare': ['healthcare technology',health IT', medical software',healthcare compliance', HIPAA solutions',medical technology'] }  export class SEOOptimizer { static DEFAULT_META_DESCRIPTIONS = {';/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.Transform your business with Zion Tech Group.,;/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.,;/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation.Drive innovation with our cutting-edge AI technology.,;/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.,;/contact': 'Get in touch with Zion Tech Group.Contact our expert team for technology solutions, consultations, and partnership opportunities.,;/pricing': 'Transparent pricing for our comprehensive technology services.Choose the perfect plan for your business needs and budget.,;/careers': 'Join the Zion Tech Group team.Explore exciting career opportunities in technology, AI, and innovation.,;/blog': 'Latest insights, industry trends, and technology news from Zion Tech Group.Stay ahead with our expert analysis and thought leadership.,;/news': 'Breaking news and updates from Zion Tech Group.Stay informed about our latest innovations, partnerships, and industry developments.,;/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations.Intelligent automation for the future of enterprise.,;/services/quantum-technology': 'Cutting-edge quantum technology solutions.Harness the power of quantum computing for unprecedented computational capabilities.,;/services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets.Quantum-safe security and comprehensive threat protection.,;/services/it-infrastructure': 'Robust IT infrastructure solutions.Scalable, secure, and high-performance technology foundations for your business.,;/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses.Scalable, cost-effective software-as-a-service platforms.,;/solutions/enterprise': 'Enterprise-grade technology solutions.Comprehensive IT services designed for large-scale business operations and growth.,;/solutions/healthcare': 'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.' } static KEYWORD_MAPPINGS = {'/': ['AI marketplace,tech services,artificial intelligence,IT services,AI developers,technology marketplace,AI solutions,machine learning,digital transformation,micro SaaS,quantum computing,blockchain,cybersecurity,edge computing,metaverse'], ';/services': ['AI services,cybersecurity,cloud infrastructure,IT solutions,digital transformation,automation,machine learning,blockchain,quantum computing'], ';/ai-solutions': ['artificial intelligence,AI automation,machine learning,deep learning,neural networks,AI systems,intelligent automation,AI platforms'], ';/about': ['Zion Tech Group,technology comp,innovation,expertise,leadership,mission,vision,comp history'], ';/contact': ['contact us,get in touch,support,consultation,partnership,sales inquiry,technical support'], ';/pricing': ['pricing plans,cost,subscription,enterprise pricing,custom solutions,affordable technology'], ';/careers': ['job opportunities,careers,employment,work with us,join our team,technology jobs,AI careers'], ';/blog': ['technology blog,industry insights,AI trends,tech news,thought leadership,expert analysis'], ';/news': ['comp news,press releases,announcements,updates,partnerships,achievements'], ';/services/ai-autonomous-systems': ['AI autonomous systems,intelligent automation,business process automation,AI agents,autonomous operations,machine learning systems'], ';/services/quantum-technology': ['quantum computing,quantum technology,quantum algorithms,quantum cryptography,quantum machine learning,quantum advantage'], ';/services/cybersecurity': ['cybersecurity,information security,threat protection,security assessment,compliance,data protection,quantum-safe security'], ';/services/it-infrastructure': ['IT infrastructure,network infrastructure,cloud infrastructure,data centers,server management,network security'], ';/services/micro-saas-solutions': ['micro SaaS,software as a service,SaaS platforms,business software,cloud applications,subscription software'], ';/solutions/enterprise': ['enterprise solutions,enterprise IT,large business solutions,scalable technology,enterprise software,business technology'], ';/solutions/healthcare': ['healthcare technology,health IT,medical software,healthcare compliance,HIPAA solutions,medical technology'] } static generateSEOData(path) { const title = this.generateTitle(path) const description = this.generateDescription(path) const keywords = this.generateKeywords(path) const canonicalUrl = this.generateCanonicalUrl(path) const structuredData = this.generateStructuredData(path)  return { title, description, keywords, canonicalUrl, structuredData }  static generateTitle(path) { const baseTitle = 'Zion Tech Group' if(path === '/') { return `${baseTitle} - Revolutionary Technology Solutions` const pathSegments = path.split('/').filter(Boolean) if(pathSegments.length === 0) return baseTitle const lastSegment = pathSegments[pathSegments.length-1] const formattedSegment = lastSegment .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1)) .join(' ')`; return `${formattedSegment} - ${baseTitle}`  static generateDescription(path) { return this.DEFAULT_META_DESCRIPTIONS[path] ||';Professional technology solutions and services.Expert IT consulting, AI development, and digital transformation services for modern businesses.'  static generateKeywords(path) { return this.KEYWORD_MAPPINGS[path] || ['technology,IT services,digital solutions,business technology,innovation'] static generateCanonicalUrl(path) { const baseUrl = 'https:
 ";
 }}}}}}}}}}}}`
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

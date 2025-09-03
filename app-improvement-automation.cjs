@@ -27,7 +27,7 @@ class AppImprovementAutomation {
 
   async optimizeNextConfig() {
     this.log('⚙️ Optimizing Next.js configuration...');
-    
+
     const nextConfigPath = path.join(this.projectRoot, 'next.config.js');
     if (!fs.existsSync(nextConfigPath)) {
       this.log('❌ next.config.js not found');
@@ -36,26 +36,35 @@ class AppImprovementAutomation {
 
     try {
       let config = fs.readFileSync(nextConfigPath, 'utf8');
-      
+
       // Remove deprecated options
       config = config.replace(/newNextLinkBehavior:\s*true,?/g, '');
       config = config.replace(/esmExternals:\s*[^,}]+[,}]?/g, '');
-      
+
       // Add performance optimizations
       if (!config.includes('experimental:')) {
-        config = config.replace(/(module\.exports\s*=\s*{)/, '$1\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: [\'lucide-react\', \'framer-motion\'],\n  },');
+        config = config.replace(
+          /(module\.exports\s*=\s*{)/,
+          "$1\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: ['lucide-react', 'framer-motion'],\n  },"
+        );
       }
-      
+
       // Add compression
       if (!config.includes('compress:')) {
-        config = config.replace(/(module\.exports\s*=\s*{)/, '$1\n  compress: true,');
+        config = config.replace(
+          /(module\.exports\s*=\s*{)/,
+          '$1\n  compress: true,'
+        );
       }
-      
+
       // Add poweredByHeader: false for security
       if (!config.includes('poweredByHeader:')) {
-        config = config.replace(/(module\.exports\s*=\s*{)/, '$1\n  poweredByHeader: false,');
+        config = config.replace(
+          /(module\.exports\s*=\s*{)/,
+          '$1\n  poweredByHeader: false,'
+        );
       }
-      
+
       fs.writeFileSync(nextConfigPath, config);
       this.log('✅ Next.js configuration optimized');
       return { success: true };
@@ -67,7 +76,7 @@ class AppImprovementAutomation {
 
   async optimizePackageJson() {
     this.log('📦 Optimizing package.json...');
-    
+
     const packageJsonPath = path.join(this.projectRoot, 'package.json');
     if (!fs.existsSync(packageJsonPath)) {
       this.log('❌ package.json not found');
@@ -76,7 +85,7 @@ class AppImprovementAutomation {
 
     try {
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-      
+
       // Add useful scripts
       const usefulScripts = {
         'dev:clean': 'rm -rf .next && npm run dev',
@@ -85,28 +94,28 @@ class AppImprovementAutomation {
         'lint:fix': 'next lint --fix',
         'type-check:watch': 'tsc --noEmit --watch',
         'test:ci': 'jest --ci --coverage --watchAll=false',
-        'clean': 'rm -rf .next node_modules/.cache',
-        'postinstall': 'npm run clean'
+        clean: 'rm -rf .next node_modules/.cache',
+        postinstall: 'npm run clean',
       };
 
       packageJson.scripts = { ...packageJson.scripts, ...usefulScripts };
-      
+
       // Add engines field for better compatibility
       if (!packageJson.engines) {
         packageJson.engines = {
           node: '>=18.0.0',
-          npm: '>=8.0.0'
+          npm: '>=8.0.0',
         };
       }
-      
+
       // Add repository info if missing
       if (!packageJson.repository) {
         packageJson.repository = {
           type: 'git',
-          url: 'git+https://github.com/your-org/your-repo.git'
+          url: 'git+https://github.com/your-org/your-repo.git',
         };
       }
-      
+
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
       this.log('✅ package.json optimized');
       return { success: true };
@@ -118,7 +127,7 @@ class AppImprovementAutomation {
 
   async createGitHooks() {
     this.log('🪝 Setting up Git hooks...');
-    
+
     const gitHooksDir = path.join(this.projectRoot, '.git', 'hooks');
     if (!fs.existsSync(gitHooksDir)) {
       this.log('❌ Git hooks directory not found');
@@ -181,9 +190,9 @@ echo "✅ Pre-push checks passed"
 
   async createDockerfile() {
     this.log('🐳 Creating optimized Dockerfile...');
-    
+
     const dockerfilePath = path.join(this.projectRoot, 'Dockerfile');
-    
+
     const dockerfile = `# Use the official Node.js runtime as the base image
 FROM node:18-alpine AS base
 
@@ -246,9 +255,9 @@ CMD ["node", "server.js"]
 
   async createDockerCompose() {
     this.log('🐳 Creating docker-compose.yml...');
-    
+
     const dockerComposePath = path.join(this.projectRoot, 'docker-compose.yml');
-    
+
     const dockerCompose = `version: '3.8'
 
 services:
@@ -291,9 +300,9 @@ services:
 
   async createNginxConfig() {
     this.log('🌐 Creating Nginx configuration...');
-    
+
     const nginxConfigPath = path.join(this.projectRoot, 'nginx.conf');
-    
+
     const nginxConfig = `events {
     worker_connections 1024;
 }
@@ -353,14 +362,19 @@ http {
 
   async createHealthCheck() {
     this.log('🏥 Creating health check endpoint...');
-    
-    const healthCheckPath = path.join(this.projectRoot, 'pages', 'api', 'health.js');
+
+    const healthCheckPath = path.join(
+      this.projectRoot,
+      'pages',
+      'api',
+      'health.js'
+    );
     const apiDir = path.dirname(healthCheckPath);
-    
+
     if (!fs.existsSync(apiDir)) {
       fs.mkdirSync(apiDir, { recursive: true });
     }
-    
+
     const healthCheck = `export default function handler(req, res) {
   const healthCheck = {
     uptime: process.uptime(),
@@ -391,14 +405,14 @@ http {
 
   async createCIWorkflow() {
     this.log('🔄 Creating GitHub Actions workflow...');
-    
+
     const workflowDir = path.join(this.projectRoot, '.github', 'workflows');
     if (!fs.existsSync(workflowDir)) {
       fs.mkdirSync(workflowDir, { recursive: true });
     }
-    
+
     const workflowPath = path.join(workflowDir, 'ci.yml');
-    
+
     const workflow = `name: CI/CD Pipeline
 
 on:
@@ -468,10 +482,10 @@ jobs:
 
   async run() {
     this.log('🚀 Starting App Improvement Automation');
-    
+
     const results = {
       timestamp: new Date().toISOString(),
-      optimizations: {}
+      optimizations: {},
     };
 
     // Run all optimizations
@@ -485,7 +499,10 @@ jobs:
     results.optimizations.ciWorkflow = await this.createCIWorkflow();
 
     // Generate report
-    const reportPath = path.join(this.reportsDir, 'app-improvement-report.json');
+    const reportPath = path.join(
+      this.reportsDir,
+      'app-improvement-report.json'
+    );
     fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
 
     this.log('📊 Report generated: ' + reportPath);
