@@ -1,80 +1,80 @@
 import React from 'react';
 import Link from 'next/link';
-import { Headphones, Brain, MessageSquare, BarChart3, Clock, Users, CheckCircle, ArrowRight, Star, Zap, Shield, Globe } from 'lucide-react';
+import { Mail, Brain, Zap, Shield, BarChart3, Clock, Users, CheckCircle, ArrowRight, Star, TrendingUp, MessageSquare } from 'lucide-react';
 
-export default function AICustomerSupportPlatform() {
+export default function AIEmailAutomationPlatform() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Chatbots",
-      description: "Intelligent chatbots that understand context and provide accurate, helpful responses 24/7."
+      title: "AI-Powered Email Classification",
+      description: "Automatically categorize and prioritize incoming emails using advanced machine learning algorithms."
     },
     {
-      icon: MessageSquare,
-      title: "Multi-Channel Support",
-      description: "Unified support across email, chat, phone, and social media platforms."
-    },
-    {
-      icon: BarChart3,
-      title: "Real-Time Analytics",
-      description: "Comprehensive dashboard with customer satisfaction metrics and support performance insights."
-    },
-    {
-      icon: Clock,
-      title: "Instant Response",
-      description: "AI-powered instant responses reduce wait times and improve customer experience."
-    },
-    {
-      icon: Users,
-      title: "Agent Collaboration",
-      description: "Seamless handoff between AI and human agents with complete conversation history."
+      icon: Zap,
+      title: "Smart Auto-Responses",
+      description: "Generate contextually appropriate responses based on email content and sender history."
     },
     {
       icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-level security with end-to-end encryption and compliance with industry standards."
+      title: "Spam & Threat Detection",
+      description: "Advanced AI filters to detect and block spam, phishing, and malicious content."
+    },
+    {
+      icon: BarChart3,
+      title: "Email Analytics Dashboard",
+      description: "Comprehensive insights into email performance, response times, and engagement metrics."
+    },
+    {
+      icon: Clock,
+      title: "Intelligent Scheduling",
+      description: "AI-powered email scheduling based on recipient time zones and optimal send times."
+    },
+    {
+      icon: Users,
+      title: "Team Collaboration",
+      description: "Shared inbox management with AI-assisted task assignment and follow-up reminders."
     }
   ];
 
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$49/month",
-      users: "Up to 3 agents",
+      price: "$29/month",
+      users: "Up to 5 users",
       features: [
-        "Basic AI chatbot",
-        "Email & chat support",
-        "Basic analytics",
-        "Standard integrations",
-        "Email support"
+        "Basic AI email classification",
+        "Auto-response templates",
+        "Spam protection",
+        "Email analytics",
+        "Standard support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$149/month",
-      users: "Up to 10 agents",
+      price: "$79/month",
+      users: "Up to 25 users",
       features: [
-        "Advanced AI chatbot",
-        "Multi-channel support",
-        "Advanced analytics",
-        "Custom integrations",
-        "Priority support",
-        "Team collaboration tools"
+        "Advanced AI classification",
+        "Custom auto-responses",
+        "Advanced threat detection",
+        "Detailed analytics",
+        "Team collaboration tools",
+        "Priority support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399/month",
-      users: "Unlimited agents",
+      price: "$199/month",
+      users: "Unlimited users",
       features: [
+        "Full AI automation suite",
         "Custom AI training",
-        "All channels included",
-        "Advanced reporting",
-        "API access",
-        "Dedicated support",
-        "Custom branding"
+        "Enterprise security",
+        "Advanced integrations",
+        "Dedicated account manager",
+        "24/7 support"
       ],
       popular: false
     }
@@ -82,47 +82,42 @@ export default function AICustomerSupportPlatform() {
 
   const benefits = [
     {
-      metric: "90%",
-      description: "Faster response times"
-    },
-    {
       metric: "85%",
+      description: "Reduction in email response time"
+    },
+    {
+      metric: "60%",
+      description: "Decrease in spam emails"
+    },
+    {
+      metric: "40%",
+      description: "Improvement in email organization"
+    },
+    {
+      metric: "95%",
       description: "Customer satisfaction rate"
-    },
-    {
-      metric: "70%",
-      description: "Reduction in support costs"
-    },
-    {
-      metric: "24/7",
-      description: "Always available support"
     }
-  ];
-
-  const integrations = [
-    "Slack", "Microsoft Teams", "Salesforce", "HubSpot", "Zendesk", "Intercom",
-    "Shopify", "WooCommerce", "WordPress", "Facebook", "Twitter", "Instagram"
   ];
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-600 via-teal-600 to-blue-600 py-20 text-white">
+      <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 py-20 text-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-              <Headphones className="w-4 h-4 mr-2" />
-              AI Customer Support Platform
+              <Mail className="w-4 h-4 mr-2" />
+              AI-Powered Email Automation
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Customer Support Platform
+              AI Email Automation Platform
             </h1>
-            <p className="text-xl text-green-100 max-w-3xl mx-auto mb-8">
-              Revolutionize your customer support with AI-powered chatbots, multi-channel communication, 
-              and intelligent analytics that deliver exceptional customer experiences.
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+              Transform your email management with intelligent automation that handles classification, 
+              responses, and analytics while you focus on what matters most.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="#contact" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+              <Link href="#contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
                 Start Free Trial
               </Link>
               <Link href="#features" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
@@ -138,12 +133,12 @@ export default function AICustomerSupportPlatform() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Results</h2>
-            <p className="text-gray-600 text-lg">See how our AI customer support platform transforms customer experience</p>
+            <p className="text-gray-600 text-lg">See how our AI email automation transforms business communication</p>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">{benefit.metric}</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">{benefit.metric}</div>
                 <p className="text-gray-600">{benefit.description}</p>
               </div>
             ))}
@@ -156,12 +151,12 @@ export default function AICustomerSupportPlatform() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Powerful Features</h2>
-            <p className="text-gray-600 text-lg">Everything you need to deliver exceptional customer support</p>
+            <p className="text-gray-600 text-lg">Everything you need to automate and optimize your email workflow</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
@@ -172,40 +167,23 @@ export default function AICustomerSupportPlatform() {
         </div>
       </section>
 
-      {/* Integrations Section */}
+      {/* Pricing Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>
-            <p className="text-gray-600 text-lg">Connect with your favorite tools and platforms</p>
-          </div>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
-            {integrations.map((integration, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-lg p-4 text-center hover:shadow-lg transition-shadow">
-                <span className="text-sm font-medium text-gray-700">{integration}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-gray-600 text-lg">Choose the plan that fits your support team size</p>
+            <p className="text-gray-600 text-lg">Choose the plan that fits your team size and needs</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
-              <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.popular ? 'border-2 border-green-500 bg-green-50' : 'border border-gray-200 bg-white'}`}>
+              <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.popular ? 'border-2 border-blue-500 bg-blue-50' : 'border border-gray-200 bg-white'}`}>
                 {tier.popular && (
-                  <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
+                  <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
                     Most Popular
                   </div>
                 )}
                 <h3 className="text-2xl font-semibold text-gray-900 mb-2">{tier.name}</h3>
-                <div className="text-3xl font-bold text-green-600 mb-2">{tier.price}</div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">{tier.price}</div>
                 <p className="text-gray-600 mb-6">{tier.users}</p>
                 <ul className="space-y-3 mb-6">
                   {tier.features.map((feature, featureIndex) => (
@@ -217,7 +195,7 @@ export default function AICustomerSupportPlatform() {
                 </ul>
                 <Link href="#contact" className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
                   tier.popular 
-                    ? 'bg-green-600 text-white hover:bg-green-700' 
+                    ? 'bg-blue-600 text-white hover:bg-blue-700' 
                     : 'bg-gray-900 text-white hover:bg-gray-800'
                 }`}>
                   Get Started
@@ -229,31 +207,31 @@ export default function AICustomerSupportPlatform() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>
-            <p className="text-gray-600 text-lg">Ideal for businesses looking to enhance their customer support</p>
+            <p className="text-gray-600 text-lg">Ideal for businesses looking to streamline their email communication</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
               <div className="flex items-center mb-4">
-                <Globe className="w-8 h-8 text-blue-500 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">E-commerce Businesses</h3>
+                <TrendingUp className="w-8 h-8 text-green-500 mr-3" />
+                <h3 className="text-xl font-semibold text-gray-900">Growing Businesses</h3>
               </div>
               <p className="text-gray-600">
-                Handle high-volume customer inquiries with AI-powered responses, order tracking, 
-                and seamless integration with your e-commerce platform.
+                Scale your email communication efficiently as your team grows. Our AI handles the complexity 
+                while maintaining personal touch in customer interactions.
               </p>
             </div>
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
               <div className="flex items-center mb-4">
-                <Zap className="w-8 h-8 text-yellow-500 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">SaaS Companies</h3>
+                <MessageSquare className="w-8 h-8 text-blue-500 mr-3" />
+                <h3 className="text-xl font-semibold text-gray-900">Customer Support Teams</h3>
               </div>
               <p className="text-gray-600">
-                Provide instant technical support, onboarding assistance, and feature explanations 
-                to help users get the most out of your software.
+                Reduce response times and improve customer satisfaction with intelligent email routing, 
+                auto-responses, and comprehensive analytics.
               </p>
             </div>
           </div>
@@ -264,8 +242,8 @@ export default function AICustomerSupportPlatform() {
       <section id="contact" className="bg-gray-900 text-white py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Customer Support?</h2>
-            <p className="text-gray-300 text-lg">Start your free trial today and experience the power of AI customer support</p>
+            <h2 className="text-3xl font-bold mb-4">Ready to Automate Your Email?</h2>
+            <p className="text-gray-300 text-lg">Start your free trial today and experience the power of AI email automation</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
@@ -277,11 +255,11 @@ export default function AICustomerSupportPlatform() {
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  <span className="text-gray-300">No setup fees</span>
+                  <span className="text-gray-300">No credit card required</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  <span className="text-gray-300">Easy migration from existing tools</span>
+                  <span className="text-gray-300">Setup in under 5 minutes</span>
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -293,15 +271,15 @@ export default function AICustomerSupportPlatform() {
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Contact Our Team</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <MessageSquare className="w-5 h-5 text-green-500 mr-3" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-gray-700 hover:text-green-600">kleber@ziontechgroup.com</a>
+                  <Mail className="w-5 h-5 text-blue-500 mr-3" />
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-gray-700 hover:text-blue-600">kleber@ziontechgroup.com</a>
                 </div>
                 <div className="flex items-center">
-                  <Headphones className="w-5 h-5 text-green-500 mr-3" />
-                  <a href="tel:+13024640950" className="text-gray-700 hover:text-green-600">+1 302 464 0950</a>
+                  <MessageSquare className="w-5 h-5 text-blue-500 mr-3" />
+                  <a href="tel:+13024640950" className="text-gray-700 hover:text-blue-600">+1 302 464 0950</a>
                 </div>
               </div>
-              <Link href="https://ziontechgroup.com/contact" className="mt-6 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-block">
+              <Link href="https://ziontechgroup.com/contact" className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block">
                 Start Free Trial
               </Link>
             </div>
