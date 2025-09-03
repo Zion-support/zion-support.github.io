@@ -110,7 +110,7 @@ export default function Services() {,"});,"})
                   <Clock className="h-4 w-4" />;,"});,"})
                   <span>2-4 weeks delivery</span>;,"});,"})
                 <Link;,"});,"})
-                  to="/contact";,"});,"})
+                  href="/contact";,"});,"})
                   className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group";,"});,"})
                   aria-label="Get started with AI services";,"});,"})
                   Get started with AI;,"});,"})
@@ -213,7 +213,7 @@ export default function Services() {,"});,"})
                 aria-label="Contact us to get started";,"});,"})
                 Contact Us;,"});,"})
                 <ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" />;,"});,"})
-                to="/";,"});,"})
+                href="/";,"});,"})
                 className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group";,"});,"})
                 aria-label="Back to homepage";,"});,"})
                 Back to Home{' '}"});,"})
@@ -488,7 +488,7 @@ import PageTransition from '../src/components/PageTransition;
 								<li>• Content calendar automation</li>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-purple-600">From $199/mo</span>
-								<Link to="/contact" className="text-purple-600 hover: text-purple-500">Try demo →</Link>
+								<Link href="/contact" className="text-purple-600 hover: text-purple-500">Try demo →</Link>
 
 						{/* AI Email Automation */}
 								<Mail className="h-5 w-5 text-green-600" />
@@ -498,7 +498,7 @@ import PageTransition from '../src/components/PageTransition;
 								<li>• CRM integration and lead scoring</li>
 								<li>• A/B testing and performance analytics</li>
 								<span className="font-semibold text-green-600">From $149/mo</span>
-								<Link to="/contact" className="text-green-600 hover: text-green-500">Get started →</Link>
+								<Link href="/contact" className="text-green-600 hover: text-green-500">Get started →</Link>
 
 								<Database className="h-5 w-5 text-indigo-600" />
 								<h3 className="font-semibold text-gray-900">Data Engineering as a Service</h3>
@@ -781,7 +781,7 @@ import PageTransition from '../src/components/PageTransition;
 								<li>• Real-time analytics and response tracking</li>
 								<li>• Multi-channel distribution and targeting</li>
 								<span className="font-semibold text-pink-600">From $99/mo</span>
-								<Link to="/contact" className="text-pink-600 hover: text-pink-500">Try free →</Link>
+								<Link href="/contact" className="text-pink-600 hover: text-pink-500">Try free →</Link>
 
 						{/* AI Customer Support Platform */}
 								<Headphones className="h-5 w-5 text-indigo-600" />
@@ -791,7 +791,7 @@ import PageTransition from '../src/components/PageTransition;
 								<li>• Knowledge base integration and ticket routing</li>
 								<li>• Performance analytics and customer satisfaction tracking</li>
 								<span className="font-semibold text-indigo-600">From $179/mo</span>
-								<Link to="/contact" className="text-indigo-600 hover: text-indigo-500">See demo →</Link>
+								<Link href="/contact" className="text-indigo-600 hover: text-indigo-500">See demo →</Link>
 
 						{/* AI Financial Analytics */}
 								<BarChart className="h-5 w-5 text-emerald-600" />
@@ -801,7 +801,7 @@ import PageTransition from '../src/components/PageTransition;
 								<li>• Predictive modeling and risk assessment</li>
 								<li>• Automated reporting and compliance tracking</li>
 								<span className="font-semibold text-emerald-600">From $299/mo</span>
-								<Link to="/contact" className="text-emerald-600 hover: text-emerald-500">Request demo →</Link>
+								<Link href="/contact" className="text-emerald-600 hover: text-emerald-500">Request demo →</Link>
 
 						{/* IoT Edge Computing */}
 								<Cpu className="h-5 w-5 text-cyan-600" />
@@ -811,7 +811,7 @@ import PageTransition from '../src/components/PageTransition;
 								<li>• Device management and remote monitoring</li>
 								<li>• Scalable infrastructure and security protocols</li>
 								<span className="font-semibold text-cyan-600">From $399/mo</span>
-								<Link to="/contact" className="text-cyan-600 hover: text-cyan-500">Learn more →</Link>
+								<Link href="/contact" className="text-cyan-600 hover: text-cyan-500">Learn more →</Link>
 
 						{/* AI Legal Document Analyzer */}
 								<FileText className="h-5 w-5 text-amber-600" />
@@ -821,7 +821,7 @@ import PageTransition from '../src/components/PageTransition;
 								<li>• Risk assessment and compliance verification</li>
 								<li>• Document comparison and version control</li>
 								<span className="font-semibold text-amber-600">From $349/mo</span>
-								<Link to="/contact" className="text-amber-600 hover: text-amber-500">Book consultation →</Link>
+								<Link href="/contact" className="text-amber-600 hover: text-amber-500">Book consultation →</Link>
 
 					<div className="mt-10 text-center text-sm text-gray-500">
 						Need something custom? Email
@@ -1970,7 +1970,7 @@ export default function Services() {'
                 className="group rounded-md bg-blue-600 px-8 py-4 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-all duration-200 hover:scale-105"
                 Get Free Consultation
                 <ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" />
-                to="/"
+                href="/"
                 className="text-sm font-semibold leading-6 text-gray-600 hover:text-blue-600 transition-colors group"
           {/* Pricing Tiers */}"
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">"

@@ -12,7 +12,7 @@ const BlogIndex: NextPage = () => {
       date: '2024-01-15',
       author: 'Tech Team',
       href: '/blog/5g-technology-and-its-impact-on-iot-chat',
-      category: 'Technology',;
+      category: 'Technology'
 },
     {
       title: 'AI-Powered Marketplaces: The Future of Digital Commerce',
@@ -20,7 +20,7 @@ const BlogIndex: NextPage = () => {
       date: '2024-01-10',
       author: 'AI Team',
       href: '/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat',
-      category: 'AI';
+      category: 'AI'
 },
     {
       title: 'API-First Development: Building Scalable Systems',
@@ -28,7 +28,7 @@ const BlogIndex: NextPage = () => {
       date: '2024-01-05',
       author: 'Engineering Team',
       href: '/blog/api-first-development-building-scalable-systems-chat',
-      category: 'Development';
+      category: 'Development'
 },
     {
       title: 'Augmented Reality in Enterprise Applications',
@@ -36,7 +36,7 @@ const BlogIndex: NextPage = () => {
       date: '2024-01-01',
       author: 'Innovation Team',
       href: '/blog/augmented-reality-in-enterprise-applications-chat',
-      category: 'Innovation';
+      category: 'Innovation'
 },
     {
       title: 'Blockchain Technology in Modern Business Solutions',
@@ -44,7 +44,7 @@ const BlogIndex: NextPage = () => {
       date: '2023-12-28',
       author: 'Blockchain Team',
       href: '/blog/blockchain-technology-in-modern-business-solutions-chat',
-      category: 'Blockchain';
+      category: 'Blockchain'
 },
     {
       title: 'Cloud-Native Architecture Best Practices',
@@ -52,7 +52,7 @@ const BlogIndex: NextPage = () => {
       date: '2023-12-25',
       author: 'Cloud Team',
       href: '/blog/cloud-native-architecture-best-practices-chat',
-      category: 'Cloud';
+      category: 'Cloud'
 }
   ]
 

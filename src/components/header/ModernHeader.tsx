@@ -21,7 +21,10 @@ export function ModernHeader() {
     { name: 'Micro SaaS', href: '/micro-saas', description: 'Custom software solutions' },
     { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security and compliance' },
     { name: 'Cloud Platforms', href: '/cloud-platforms', description: 'Scalable cloud infrastructure' },
-    { name: 'Data Analytics', href: '/data-analytics', description: 'Business intelligence and insights' }
+    { name: 'Data Analytics', href: '/data-analytics', description: 'Business intelligence and insights' },
+    { name: 'Blockchain Solutions', href: '/blockchain-solutions', description: 'Blockchain and Web3 solutions' },
+    { name: 'IoT Solutions', href: '/iot-solutions', description: 'Internet of Things solutions' },
+    { name: 'Emerging Tech', href: '/emerging-tech', description: 'Cutting-edge technology solutions' }
   ]
 
   return (
@@ -51,7 +54,7 @@ export function ModernHeader() {
             <div className="hidden lg:flex items-center space-x-4">
               <Link href="/pricing" className="hover:text-blue-200 transition-colors">Pricing</Link>
               <Link href="/careers" className="hover:text-blue-200 transition-colors">Careers</Link>
-              <Link to="/support" className="hover:text-blue-200 transition-colors">Support</Link>
+              <Link href="/support" className="hover:text-blue-200 transition-colors">Support</Link>
             </div>
           </div>
         </div>
@@ -98,7 +101,7 @@ export function ModernHeader() {
                       {services.map((service) => (
                         <Link
                           key={service.name}
-                          to={service.href}
+                          href={service.href}
                           className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
                         >
                           <div className="font-medium text-gray-900">{service.name}</div>
@@ -121,11 +124,17 @@ export function ModernHeader() {
               <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 About
               </Link>
+              <Link href="/solutions" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                Solutions
+              </Link>
               <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Case Studies
               </Link>
               <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Blog
+              </Link>
+              <Link href="/pricing" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                Pricing
               </Link>
               <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Contact
@@ -171,7 +180,7 @@ export function ModernHeader() {
                 {services.map((service) => (
                   <Link
                     key={service.name}
-                    to={service.href}
+                    href={service.href}
                     className="block pl-4 text-gray-600 hover:text-blue-600 transition-colors"
                     onClick={closeMobileMenu}
                   >
@@ -195,6 +204,13 @@ export function ModernHeader() {
                 About
               </Link>
               <Link
+                href="/solutions"
+                className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                onClick={closeMobileMenu}
+              >
+                Solutions
+              </Link>
+              <Link
                 href="/case-studies"
                 className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"
                 onClick={closeMobileMenu}
@@ -207,6 +223,13 @@ export function ModernHeader() {
                 onClick={closeMobileMenu}
               >
                 Blog
+              </Link>
+              <Link
+                href="/pricing"
+                className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                onClick={closeMobileMenu}
+              >
+                Pricing
               </Link>
               <Link
                 href="/contact"

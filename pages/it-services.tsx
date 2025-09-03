@@ -296,6 +296,61 @@ export default function ITServices() {
       category: 'Low-Code Services';
 },
     {
+      title: 'IT Helpdesk Platform for Managed Service Providers',
+      description: 'Comprehensive IT helpdesk solution designed specifically for MSPs with client management and ticketing',
+      icon: Users,
+      features: [
+        'Multi-client ticketing system with client portals,Public and private knowledge bases,Remote monitoring and management integration,Automated ticket routing and escalation,SLA management and reporting,Integration with PSA and RMM tools'
+      ],
+      pricing: '$2,000 - $12,000/month',
+      delivery: '3-6 weeks',
+      category: 'MSP Services'
+    },
+    {
+      title: 'Cloud Cost Optimization & FinOps Platform',
+      description: 'Intelligent cloud cost management and optimization with automated resource scaling',
+      icon: TrendingUp,
+      features: [
+        'Real-time cloud cost monitoring and analysis,Automated resource optimization and scaling,Cost allocation and chargeback management,Reserved instance and savings plan optimization,Multi-cloud cost comparison and recommendations,FinOps best practices implementation'
+      ],
+      pricing: '$3,000 - $18,000/month',
+      delivery: '4-8 weeks',
+      category: 'Cloud Optimization Services'
+    },
+    {
+      title: 'API Management & Developer Portal Platform',
+      description: 'Comprehensive API management solution with developer portal and analytics',
+      icon: Code,
+      features: [
+        'API gateway and management platform,Developer portal and documentation,API analytics and monitoring,Rate limiting and throttling,API security and authentication,Third-party API integration and management'
+      ],
+      pricing: '$2,500 - $15,000/month',
+      delivery: '4-10 weeks',
+      category: 'API Management Services'
+    },
+    {
+      title: 'Digital Workplace & Collaboration Platform',
+      description: 'Comprehensive digital workplace solution with unified communication and collaboration tools',
+      icon: Users,
+      features: [
+        'Unified communication and collaboration platform,Digital workspace optimization,Employee experience management,Remote work enablement and support,Integration with productivity tools,Digital transformation consulting'
+      ],
+      pricing: '$4,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Digital Workplace Services'
+    },
+    {
+      title: 'AI-Powered IT Service Management (ITSM)',
+      description: 'Intelligent IT service management with AI-driven automation and predictive analytics',
+      icon: Settings,
+      features: [
+        'AI-powered incident management and resolution,Predictive analytics for IT operations,Automated change management and approval workflows,Service catalog and request management,IT asset management and optimization,Integration with existing IT tools and systems'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '6-14 weeks',
+      category: 'ITSM Services'
+    },
+    {
       title: 'Cybersecurity Operations Center (SOC)',
       description: '24/7 security operations center and threat monitoring services',
       icon: Shield,

@@ -298,8 +298,107 @@ export default function MicroSaaS() {
       ],
       pricing: '$299 - $1,499/month',
       delivery: '4-6 weeks',
-      category: 'Real Estate SaaS';
-},
+      category: 'Real Estate SaaS'
+    },
+    {
+      title: 'AI-Powered Website Analytics for Small Business',
+      description: 'Intuitive website analytics dashboard designed specifically for small business owners without technical expertise',
+      icon: BarChart3,
+      features: [
+        'User-friendly dashboard with plain English insights,Traffic analysis and visitor behavior tracking,Conversion funnel optimization and recommendations,SEO performance monitoring and suggestions,Competitor analysis and benchmarking,Automated reporting and alerts'
+      ],
+      pricing: '$29 - $149/month',
+      delivery: '1-2 weeks',
+      category: 'Analytics SaaS'
+    },
+    {
+      title: 'Smart E-commerce Return Management System',
+      description: 'Automated return processing platform that simplifies returns for both merchants and customers',
+      icon: ArrowRight,
+      features: [
+        'Automated return request processing and approval,Smart return label generation and tracking,Real-time inventory updates and restocking,Customer satisfaction surveys and feedback collection,Return analytics and fraud prevention,Integration with major e-commerce platforms'
+      ],
+      pricing: '$99 - $499/month',
+      delivery: '2-3 weeks',
+      category: 'E-commerce SaaS'
+    },
+    {
+      title: 'AI-Powered Content Creation Suite',
+      description: 'Comprehensive AI content generation platform for blogs, social media, and marketing materials',
+      icon: FileText,
+      features: [
+        'AI-generated blog posts and articles,Social media content creation and scheduling,Product descriptions and marketing copy,SEO-optimized content with keyword integration,Brand voice consistency and tone matching,Content performance analytics and optimization'
+      ],
+      pricing: '$79 - $399/month',
+      delivery: '2-3 weeks',
+      category: 'Content SaaS'
+    },
+    {
+      title: 'Intelligent Email Follow-up Automation',
+      description: 'Smart email sequence automation with AI-powered personalization and optimal timing',
+      icon: Mail,
+      features: [
+        'AI-powered email sequence creation and optimization,Personalized content based on recipient behavior,Optimal send time prediction and automation,Engagement tracking and response analysis,A/B testing for email campaigns,CRM integration and lead nurturing'
+      ],
+      pricing: '$49 - $299/month',
+      delivery: '1-2 weeks',
+      category: 'Email Marketing SaaS'
+    },
+    {
+      title: 'AI-Powered Social Media Management Platform',
+      description: 'Comprehensive social media management with AI content creation, scheduling, and analytics',
+      icon: Globe,
+      features: [
+        'AI-generated social media posts and captions,Optimal posting time recommendations,Hashtag research and trending topic analysis,Engagement analytics and audience insights,Multi-platform scheduling and management,Brand voice consistency and content moderation'
+      ],
+      pricing: '$99 - $499/month',
+      delivery: '2-3 weeks',
+      category: 'Social Media SaaS'
+    },
+    {
+      title: 'Smart Inventory Optimization System',
+      description: 'AI-driven inventory management with demand forecasting and automated reordering',
+      icon: BarChart3,
+      features: [
+        'Demand forecasting with machine learning algorithms,Automated reorder point calculations and alerts,Multi-location inventory tracking and management,Supplier performance analytics and optimization,Cost reduction recommendations,Integration with POS and ERP systems'
+      ],
+      pricing: '$199 - $999/month',
+      delivery: '3-4 weeks',
+      category: 'Inventory SaaS'
+    },
+    {
+      title: 'AI-Powered Customer Segmentation Platform',
+      description: 'Intelligent customer segmentation and targeting with behavioral analysis and predictive modeling',
+      icon: Users,
+      features: [
+        'AI-powered customer segmentation and profiling,Behavioral analysis and pattern recognition,Predictive customer lifetime value modeling,Personalized marketing campaign recommendations,Real-time customer journey tracking,Integration with marketing automation tools'
+      ],
+      pricing: '$149 - $799/month',
+      delivery: '3-4 weeks',
+      category: 'Marketing SaaS'
+    },
+    {
+      title: 'Intelligent Project Management Suite',
+      description: 'AI-enhanced project management with predictive analytics and resource optimization',
+      icon: Target,
+      features: [
+        'AI-powered project timeline prediction and optimization,Resource allocation and capacity planning,Risk assessment and mitigation recommendations,Team performance analytics and insights,Automated task prioritization and scheduling,Integration with popular project management tools'
+      ],
+      pricing: '$99 - $599/month',
+      delivery: '3-4 weeks',
+      category: 'Project Management SaaS'
+    },
+    {
+      title: 'AI-Powered Financial Planning Assistant',
+      description: 'Intelligent financial planning and budgeting tool with predictive analytics and recommendations',
+      icon: TrendingUp,
+      features: [
+        'AI-powered budget creation and optimization,Expense categorization and spending analysis,Financial goal tracking and progress monitoring,Predictive cash flow analysis and forecasting,Investment recommendations and portfolio optimization,Tax planning and compliance assistance'
+      ],
+      pricing: '$79 - $399/month',
+      delivery: '2-3 weeks',
+      category: 'Finance SaaS'
+    },
     {
       title: 'Smart Healthcare Appointment Scheduler',
       description: 'AI-powered healthcare scheduling with patient preference learning and resource optimization',
@@ -1404,8 +1503,8 @@ export default function MicroSaaS() {
       </Head>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-20 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-16 sm:py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <div className="flex items-center justify-center mb-6">
               <Code className="h-12 w-12 text-orange-600 mr-4" />

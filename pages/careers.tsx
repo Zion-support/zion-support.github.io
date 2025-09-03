@@ -13,7 +13,7 @@ import {
   CheckCircle,
   MapPin,
   Clock,
-  DollarSign;
+  DollarSign
 } from 'lucide-react';
 
 const Careers: NextPage = () => {
@@ -21,22 +21,22 @@ const Careers: NextPage = () => {
     {
       icon: Heart,
       title: 'Health & Wellness',
-      description: 'Comprehensive health insurance, dental, vision, and wellness programs.';
-},
+      description: 'Comprehensive health insurance, dental, vision, and wellness programs.'
+    },
     {
       icon: Home,
       title: 'Remote Work',
-      description: 'Flexible remote work options and home office stipend.';
-},
+      description: 'Flexible remote work options and home office stipend.'
+    },
     {
       icon: Award,
       title: 'Growth Opportunities',
-      description: 'Professional development, training programs, and career advancement paths.';
-},
+      description: 'Professional development, training programs, and career advancement paths.'
+    },
     {
       icon: Zap,
       title: 'Innovation Time',
-      description: 'Dedicated time for personal projects and innovation.';
+      description: 'Dedicated time for personal projects and innovation.'
 }
   ]
 
@@ -46,22 +46,22 @@ const Careers: NextPage = () => {
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
-      description: 'Join our team to build cutting-edge web applications using React, Node.js, and cloud technologies.';
-},
+      description: 'Join our team to build cutting-edge web applications using React, Node.js, and cloud technologies.'
+    },
     {
       title: 'AI/ML Engineer',
       location: 'San Francisco, CA',
       type: 'Full-time',
       experience: '3+ years',
-      description: 'Develop and deploy machine learning models and AI solutions for our clients.';
-},
+      description: 'Develop and deploy machine learning models and AI solutions for our clients.'
+    },
     {
       title: 'DevOps Engineer',
       location: 'Remote',
       type: 'Full-time',
       experience: '4+ years',
-      description: 'Manage cloud infrastructure and implement CI/CD pipelines for scalable applications.';
-}
+      description: 'Manage cloud infrastructure and implement CI/CD pipelines for scalable applications.'
+    }
   ]
 
   return (

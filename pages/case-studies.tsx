@@ -10,7 +10,7 @@ import {
   TrendingUp,
   Award,
   Globe,
-  Zap;
+  Zap
 } from 'lucide-react';
 
 const CaseStudies: NextPage = () => {
