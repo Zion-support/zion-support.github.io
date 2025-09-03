@@ -12,7 +12,6 @@
         setIsSubmitting(false);
         router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};
 
-<<<<<<< HEAD
   const containerVariants = {
   hidden: { opacity: 0,
   y: 20
@@ -56,7 +55,6 @@ import { Link  } from 'react-router-dom';
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 
->>>>>>> main
 export function ITServiceRequestHero() {
   return ("
     <section className="py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
@@ -154,66 +152,37 @@ export function ITServiceRequestHero() {
             <h3 className="text-2xl font-bold text-white mb-6 text-center">
               Contact Information
             </h3>
-<<<<<<< HEAD
 
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-=======
-            "
-            <div className="space-y-6">"
-              <div className="flex items-center gap-4">"
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">"
->>>>>>> main
-                  <span className="text-white text-xl">📞</span>
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">                  <span className="text-white text-xl">📞</span>
                 </div>
                 <div>"
                   <p className="text-gray-300 text-sm">Phone</p>"
                   <p className="text-white font-semibold">+1 302 464 0950</p>
                 </div>
               </div>
-<<<<<<< HEAD
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
-=======
-              "
-              <div className="flex items-center gap-4">"
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">"
->>>>>>> main
-                  <span className="text-white text-xl">✉️</span>
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">                  <span className="text-white text-xl">✉️</span>
                 </div>
                 <div>"
                   <p className="text-gray-300 text-sm">Email</p>"
                   <p className="text-white font-semibold">kleber@ziontechgroup.com</p>
                 </div>
               </div>
-<<<<<<< HEAD
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
-=======
-              "
-              <div className="flex items-center gap-4">"
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">"
->>>>>>> main
-                  <span className="text-white text-xl">📍</span>
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">                  <span className="text-white text-xl">📍</span>
                 </div>
                 <div>"
                   <p className="text-gray-300 text-sm">Address</p>"
                   <p className="text-white font-semibold text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
-<<<<<<< HEAD
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center">
-=======
-              "
-              <div className="flex items-center gap-4">"
-                <div className="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center">"
->>>>>>> main
-                  <span className="text-white text-xl">🌐</span>
+                <div className="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center">                  <span className="text-white text-xl">🌐</span>
                 </div>
                 <div>"
                   <p className="text-gray-300 text-sm">Website</p>"

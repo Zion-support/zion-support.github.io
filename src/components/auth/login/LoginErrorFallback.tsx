@@ -13,8 +13,6 @@ export default function LoginErrorFallback(...args[]):  {
           <AlertTriangle className="w-8 h-8 text-red-400"  />
         </div>"
         <h2 className="text-2xl font-bold text-white mb-4">
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           Something went wrong
         </h2>"
         <p className="text-zion-slate-light mb-6">
@@ -39,3 +37,17 @@ export default function LoginErrorFallback(...args[]):  {
     </div>;
   )}
 '"
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+export default function LoginErrorFallback() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="LoginErrorFallback - Zion Tech Group" description="Professional LoginErrorFallback services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">LoginErrorFallback</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional LoginErrorFallback services to help your business grow.
+        </p>
+      </div>
+  );"}"
+>>>>>>> main

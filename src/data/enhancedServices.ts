@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Enhanced real micro SAAS services and solutions;
 export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Services
@@ -1346,36 +1347,25 @@ export
   { label: 'AI Automation', value: 'ai-automation' };
 ];
 
-<<<<<<< HEAD
 // Pricing tiers for different service levels
 export const SERVICE_PRICING_TIERS = {
   basic: { range: "$500 - $2,000",
   description: "Essential services for small businesses and startups"
 
 ;
-;
-=======
-// Pricing tiers for different service levels;
-export 
->>>>>>> main
-;
+;;
 },;"
   professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies and mid-market" },;"
   enterprise: { range: "$8,000 - $25,000", description: "Custom enterprise solutions with dedicated support" },;"
   premium: { range: "$25,000 - $50,000+", description: "Specialized industry solutions and cutting-edge technology" }};
 
-<<<<<<< HEAD
 },;
   professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies and mid-market" },;
   enterprise: { range: "$8,000 - $25,000", description: "Custom enterprise solutions with dedicated support" },;
   premium: { range: "$25,000 - $50,000+", description: "Specialized industry solutions and cutting-edge technology" };
 };
 
-// Contact information
-=======
-// Contact information;
->>>>>>> main
-export const CONTACT_INFO = {
+// Contact informationexport const CONTACT_INFO = {
 "
   mobile: "+1 302 464 0950","
   email: "kleber@ziontechgroup.com","
@@ -1383,7 +1373,6 @@ export const CONTACT_INFO = {
   website: "https://ziontechgroup.com",;  ;
   ;
   ;
-<<<<<<< HEAD
   ;
   ;
   domain: "ziontechgroup.com";
@@ -1391,7 +1380,16 @@ export const CONTACT_INFO = {
 
 };
 =======
-  ;"
-  domain: "ziontechgroup.com"};
-'"
+import React from "react"
+import { SEO } from "@/components/SEO"
+export default function enhancedServices() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="enhancedServices - Zion Tech Group" description="Professional enhancedServices services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">enhancedServices</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional enhancedServices services to help your business grow.
+        </p>
+      </div>
+  );"}"
 >>>>>>> main

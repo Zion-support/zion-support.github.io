@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback
 import { supabase } from '@/integrations/supabase/client';
 
@@ -23,3 +24,8 @@ export default function Page() {
 }
 
 export default useJobDetails;
+=======
+"";,"});,"})"
+"
+&apos,"""
+>>>>>>> main

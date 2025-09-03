@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
 interface AnalyticsData {
@@ -14,8 +14,6 @@ interface AnalyticsData {
   target?: number;
   unit?: string}
 
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface ChartData {
 
   labels: string[];
@@ -524,3 +522,8 @@ export function AdvancedAnalyticsDashboard({
     </>
   )}
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

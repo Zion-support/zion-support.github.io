@@ -1,4 +1,3 @@
-const PWAUpdater: React.FC<PWAUpdaterProps> = ({
 
 <<<<<<< HEAD
 interface PWAUpdaterProps {
@@ -8,8 +7,6 @@ interface PWAUpdaterProps {
 }
 
 const PWAUpdater: React.FC < PWAUpdaterProps> = ({
-=======
->>>>>>> main
   autoCheck = true,
   checkInterval = 300000, // 5 minutes
   showUpdatePrompt = true}) => {
@@ -249,3 +246,7 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
     </>) };
 export default PWAUpdater;
 '"
+=======
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

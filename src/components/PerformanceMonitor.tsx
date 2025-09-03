@@ -3,10 +3,12 @@ import React, { useEffect, useState, useCallback } from 'react';
 export const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({
 export default PerformanceMonitor;
 import { motion, AnimatePresence  } from 'framer-motion';
+=======
+>>>>>>> main
 
-export default function Page() {
-}) => {
+import React, { useState, useEffect } from 'react'
 
+<<<<<<< HEAD
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [performanceScore, setPerformanceScore] = useState<number>(0);
@@ -77,25 +79,15 @@ export default function Page() {
           setMetrics(prev =>
             prev ? { ...prev, fcp: fcpEntry.startTime } : null
           )}
-<<<<<<< HEAD
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
-=======
-      });'      fcpObserver.observe({ entryTypes: ['paint'] });
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
         if(lcpEntry) {
 
           setMetrics(prev =>
             prev ? { ...prev, lcp: lcpEntry.startTime } : null
           )}
-<<<<<<< HEAD
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-=======
-      });'      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       // Observe FID
 
         if(fidEntry) {
@@ -105,13 +97,8 @@ export default function Page() {
               ? { ...prev, fid: fidEntry.processingStart - fidEntry.startTime }
               : null
           )}
-<<<<<<< HEAD
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
-=======
-      });'      fidObserver.observe({ entryTypes: ['first-input'] });
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
     if(tips.length === 0) {
       tips.push('Great performance! Keep monitoring for any regressions')}
 
@@ -141,8 +128,17 @@ export default function Page() {
         lcpObserver.disconnect () ;
         fidObserver.disconnect () ;
         clsObserver.disconnect () }}  }, []);
+=======
+export default function PerformanceMonitor() {
+  const [metrics, setMetrics] = useState({
+    loadTime: 0,
+    memoryUsage: 0,
+    cpuUsage: 0
+  })
+>>>>>>> main
 
   useEffect(() => {
+<<<<<<< HEAD
   // TODO: Add dependencies if needed
 
   return () => {
@@ -164,117 +160,33 @@ export default function Page() {
     
     return () => clearTimeout(timer) }, []) ;
   if(!isVisible || !showDetails) return null;
+=======
+    const interval = setInterval(() => {
+      setMetrics({
+        loadTime: Math.random() * 1000,
+        memoryUsage: Math.random() * 100,
+        cpuUsage: Math.random() * 100
+      })
+    }, 1000)
 
-  return ()
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}"
-      className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-slate-700 rounded-lg p-4 shadow-xl z-50 max-w-sm"
-    >"
-      <div className="flex items-center justify-between mb-3">"
-        <div className="flex items-center space-x-2">"
-          <Activity className="w-5 h-5 text-cyan-400"  />"          <span className="text-sm font-semibold text-white">Performance</span>
-        </div>"
-        <div className="flex items-center space-x-2">
-          <div
-            className={`w-3 h-3 rounded-full ${performanceScore >= 90'
-                ? 'bg-green-400'
-                : performanceScore >= 50'
-                  ? 'bg-yellow-400''
-                  : 'bg-red-400'`
-            }`}
-          />"
-          <span className="text-sm font-bold text-white">
-            {performanceScore}
-          </span>
-        </div>
-      </div>
+    return () => clearInterval(interval)
+  }, [])
+>>>>>>> main
 
-      {metrics && ("
-        <div className="space-y-2">"
-          <div className="flex items-center justify-between text-xs">"
-            <span className="text-slate-300">FCP</span>"
-            <div className="flex items-center space-x-1">
-              {getMetricIcon(getMetricStatus('fcp', metrics.fcp))}
-              <span'
-                className={getMetricColor(getMetricStatus('fcp', metrics.fcp))}
-              >
-                {Math.round(metrics.fcp)}ms
-              </span>
-            </div>
-          </div>
-"
-          <div className="flex items-center justify-between text-xs">"
-            <span className="text-slate-300">LCP</span>"
-            <div className="flex items-center space-x-1">
-              {getMetricIcon(getMetricStatus('lcp', metrics.lcp))}
-              <span'
-                className={getMetricColor(getMetricStatus('lcp', metrics.lcp))}
-              >
-                {Math.round(metrics.lcp)}ms
-              </span>
-            </div>
-          </div>
-"
-          <div className="flex items-center justify-between text-xs">"
-            <span className="text-slate-300">FID</span>"
-            <div className="flex items-center space-x-1">
-              {getMetricIcon(getMetricStatus('fid', metrics.fid))}
-              <span'
-                className={getMetricColor(getMetricStatus('fid', metrics.fid))}
-              >
-                {Math.round(metrics.fid)}ms
-              </span>
-            </div>
-          </div>
-"
-          <div className="flex items-center justify-between text-xs">"
-            <span className="text-slate-300">CLS</span>"
-            <div className="flex items-center space-x-1">
-              {getMetricIcon(getMetricStatus('cls', metrics.cls))}
-              <span'
-                className={getMetricColor(getMetricStatus('cls', metrics.cls))}
-              >
-                {metrics.cls.toFixed(3)}
-              </span>
-            </div>
-          </div>
-"
-          <div className="flex items-center justify-between text-xs">"
-            <span className="text-slate-300">TTFB</span>"
-            <div className="flex items-center space-x-1">
-              {getMetricIcon(getMetricStatus('ttfb', metrics.ttfb))}
-              <span
-                className={getMetricColor('
-                  getMetricStatus('ttfb', metrics.ttfb)
-                )}
-              >
-                {Math.round(metrics.ttfb)}ms
-              </span>
-            </div>
-          </div>
-        </div>
-      )}
-"
-      <div className="mt-3 pt-3 border-t border-slate-700">"
-        <div className="flex items-center justify-between text-xs">"
-          <span className="text-slate-400">Status</span>
-          <span`
-            className={`text-xs font-medium ${performanceScore >= 90'
-                ? 'text-green-400'
-                : performanceScore >= 50'
-                  ? 'text-yellow-400''
-                  : 'text-red-400'`
-            }`}
-          >
-            {performanceScore >= 90'
-              ? 'Excellent'
-              : performanceScore >= 50'
-                ? 'Needs Improvement''
-                : 'Poor'}
-          </span>
-        </div>
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="bg-white p-4 rounded-lg shadow">
+        <h3 className="font-semibold">Load Time</h3>
+        <p className="text-2xl font-bold text-blue-600">{metrics.loadTime.toFixed(2)}ms</p>
       </div>
-    </motion.div>) };
-export default PerformanceMonitor;
-'"`
+      <div className="bg-white p-4 rounded-lg shadow">
+        <h3 className="font-semibold">Memory Usage</h3>
+        <p className="text-2xl font-bold text-orange-600">{metrics.memoryUsage.toFixed(1)}%</p>
+      </div>
+      <div className="bg-white p-4 rounded-lg shadow">
+        <h3 className="font-semibold">CPU Usage</h3>
+        <p className="text-2xl font-bold text-purple-600">{metrics.cpuUsage.toFixed(1)}%</p>
+      </div>
+    </div>
+  )
+}

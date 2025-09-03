@@ -13,6 +13,7 @@ function Accessibility () {
   Type,
   Eye,
   Volume2,
+<<<<<<< HEAD
   Keyboard,
 =======
 import { Accessibility as AccessibilityIcon, Type, Eye, Volume2, Keyboard, >>>>>>> main X, Plus, Minus, Contrast, Sun, Moon, Settings  } from 'lucide-react';
@@ -141,6 +142,9 @@ export function Accessibility() {
             <div className="p-6">
 >>>>>>> main
               {/* Header */}
+=======
+  Keyboard,              {/* Header */}
+>>>>>>> main
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-lg font-semibold text-white flex items-center gap-2">
                   <AccessibilityIcon className="w-5 h-5 text-cyan-400"  />
@@ -306,3 +310,8 @@ export function Accessibility() {
       </AnimatePresence>
     </>
   )}
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

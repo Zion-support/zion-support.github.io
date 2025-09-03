@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 interface BudgetStatusDisplayProps extends React.PropsWithChildren<{}> {
 
@@ -25,12 +24,7 @@ const parseBudget = (budgetString: string): { min: number | null; max: number | 
     min = 0; // Assuming no minimum if it's "under X"'
   } else if(budgetString.startsWith('>) || budgetString.startsWith('over')) {
 
-    min = parseFloat(budgetString.replace(/[>$,\soverk]/g,));
-=======
-'
-    min = parseFloat(budgetString.replace(/[>$,\soverk]/g, ''));'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-     if(budgetString.includes('k')) min = kTo1000(budgetString);
+    min = parseFloat(budgetString.replace(/[>$,\soverk]/g,));     if(budgetString.includes('k')) min = kTo1000(budgetString);
     max = Infinity; // No explicit maximum"
   } else { // Assuming a single number or "approx X"'
     min = parseFloat(budgetString.replace(/[$,\sapproxk]/g,));
@@ -43,25 +37,13 @@ const parseBudget = (budgetString: string): { min: number | null; max: number | 
 
   return { min, max }};
 
-<<<<<<< HEAD
 export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: BudgetStatusDisplayProps) => {;
   const userBudget = parseBudget(projectBriefBudget);
   const estimatedAvgCost = (estimatedCost.min + estimatedCost.max) / 2;
 
-  let status: 'good' | 'warning' | 'danger' | 'info' = 'info';
-=======
-;
-export 
-
-<<<<<<< HEAD
-
-  let status: 'good' | 'warning' | 'danger' | 'info' = 'info';"
->>>>>>> main
-  let message = "";
-=======
+  let status: 'good' | 'warning' | 'danger' | 'info' = 'info';  let message = "";
 '
   let status: 'good' | 'warning' | 'danger' | 'info' = 'info';"  let message = "";
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   let progressValue = 0; // Percentage for the progress bar
 
   if(userBudget.max !== null && userBudget.max !== Infinity) {
@@ -92,15 +74,9 @@ export
       status = 'warning';"
       message = "The estimated cost is below your specified minimum budget.";
       progressValue = (estimatedAvgCost / userBudget.min) * 100};
-<<<<<<< HEAD
   } else {;
     status = 'info';"
-    message = "Your budget was specified as a general figure.The estimated cost is provided for your review.";
-=======
-  } else {;'
-    status = 'info';"    message = "Your budget was specified as a general figure.The estimated cost is provided for your review.";
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    // No clear target for progress bar, maybe show 50% or hide it
+    message = "Your budget was specified as a general figure.The estimated cost is provided for your review.";    // No clear target for progress bar, maybe show 50% or hide it
     progressValue = 50}
 ;
   const getAlertVariant = () => {;'"

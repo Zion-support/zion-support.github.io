@@ -99,14 +99,9 @@ const zionContact: ServiceContact = {
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 
-<<<<<<< HEAD
 };
 
-// Ultimate Micro SAAS Services 2025
-=======
-// Ultimate Micro SAAS Services 2025;
->>>>>>> main
-export const ultimateMicroSaasServices2025: MicroSaasService[] = [{
+// Ultimate Micro SAAS Services 2025export const ultimateMicroSaasServices2025: MicroSaasService[] = [{
 
     id: 1,"
     name: "NeuralFlow Enterprise","

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useState, useEffect } from 'react';
 export default function Page() {
@@ -13,7 +12,6 @@ import { Switch } from '@/components/ui/switch';"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';"
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';"
 import { ScrollArea } from '@/components/ui/scroll-area';"
->>>>>>> main
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 export default function Page() {
 ;
@@ -141,15 +139,8 @@ export default function Page() {
   () => handleToggleStatus(webhook.id,
   webhook.is_active)
 
-<<<<<<< HEAD
 }/>
-                      <span className="ml-2 text-sm">
-=======
-
-}/>"
-                      <span className="ml-2 text-sm">"
->>>>>>> main
-                        {webhook.is_active ? "Active" : "Inactive"}
+                      <span className="ml-2 text-sm">                        {webhook.is_active ? "Active" : "Inactive"}
                       </span>
                     </div>
 

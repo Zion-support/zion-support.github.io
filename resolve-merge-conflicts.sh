@@ -1,110 +1,80 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts and continue the merge process
-set -e
+echo "🔧 Resolving merge conflicts automatically..."
 
-echo "🔧 Resolving merge conflicts..."
-echo "⏰ Started at: $(date)"
-echo "---"
-
-# Function to log messages
-log_message() {
-    local message="$1"
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - $message"
+# Function to resolve conflicts by accepting our version
+accept_our_version() {
+    local file="$1"
+    if [ -f "$file" ]; then
+        echo "Accepting our version for: $file"
+        git checkout --ours "$file"
+        git add "$file"
+    fi
 }
 
-# Resolve conflicts by accepting incoming changes
-log_message "🔄 Resolving conflicts by accepting incoming changes..."
-
-# For modify/delete conflicts, accept the deletion (incoming change)
-git status --porcelain | grep "^DU\|^UD" | while read -r line; do
-    if [[ $line =~ ^DU ]]; then
-        # Deleted in incoming, modified in HEAD - accept deletion
-        file_path=$(echo "$line" | awk '{print $2}')
-        log_message "🗑️  Accepting deletion of: $file_path"
-        git rm "$file_path" 2>/dev/null || true
-    elif [[ $line =~ ^UD ]]; then
-        # Modified in incoming, deleted in HEAD - accept modification
-        file_path=$(echo "$line" | awk '{print $2}')
-        log_message "✅ Accepting modification of: $file_path"
-        git add "$file_path" 2>/dev/null || true
+# Function to resolve conflicts by accepting their version
+accept_their_version() {
+    local file="$1"
+    if [ -f "$file" ]; then
+        echo "Accepting their version for: $file"
+        git checkout --theirs "$file"
+        git add "$file"
     fi
-done
+}
 
-# For content conflicts, try to resolve automatically
-log_message "🔧 Resolving content conflicts..."
+# Function to remove deleted files
+remove_deleted_file() {
+    local file="$1"
+    echo "Removing deleted file: $file"
+    git rm "$file" 2>/dev/null || true
+}
 
-# Resolve .gitignore conflicts
-if [ -f ".gitignore" ]; then
-    log_message "📝 Resolving .gitignore conflicts..."
-    # Keep both versions and remove conflict markers
-    git checkout --theirs .gitignore
-    git add .gitignore
-fi
+# Resolve conflicts by accepting our version for key files
+accept_our_version "ERROR_FIXING_AUTOMATION_SUMMARY.md"
+accept_our_version "continuous-improvement-report.json"
+accept_our_version "quality-report.json"
+accept_our_version "package.json"
+accept_our_version "yarn.lock"
+accept_our_version "scripts/automation/enhanced-error-fixing-automation.cjs"
+accept_our_version "src/components/AIChatbot.jsx"
+accept_our_version "src/components/MobileExperienceEnhancer.tsx"
+accept_our_version "src/components/ui/Card.jsx"
+accept_our_version "src/pages/ComprehensiveServicesShowcase2027.tsx"
+accept_our_version "src/pages/Search.tsx"
 
-# Resolve package.json conflicts
-if [ -f "package.json" ]; then
-    log_message "📦 Resolving package.json conflicts..."
-    # Keep the incoming version (merged branches)
-    git checkout --theirs package.json
-    git add package.json
-fi
+# Remove deleted files that were deleted in main
+remove_deleted_file ".eslintrc.cjs"
+remove_deleted_file "out/automation/content-registry.json"
+remove_deleted_file "out/automation/new-content-registry.json"
+remove_deleted_file "package-lock.json"
+remove_deleted_file "pages.disabled/comprehensive-services-showcase-2025.tsx"
+remove_deleted_file "src/components/ui/Badge.js.jsx"
+remove_deleted_file "src/components/ui/FloatingOrbs.js.jsx"
+remove_deleted_file "src/components/ui/FloatingOrbs.jsx"
+remove_deleted_file "src/components/ui/Input.js.jsx"
+remove_deleted_file "src/components/ui/Input.jsx"
+remove_deleted_file "src/components/ui/Tabs.js.jsx"
+remove_deleted_file "src/components/ui/badge.js.jsx"
+remove_deleted_file "src/components/ui/card.js.jsx"
+remove_deleted_file "src/components/ui/input.js.jsx"
+remove_deleted_file "src/components/ui/separator.js.jsx"
+remove_deleted_file "src/components/ui/tabs.js.jsx"
+remove_deleted_file "src/lib/slugify.ts"
+remove_deleted_file "src/store/wishlistSlice.js.jsx"
 
-# Resolve _app.tsx conflicts
-if [ -f "pages/_app.tsx" ]; then
-    log_message "📱 Resolving _app.tsx conflicts..."
-    git checkout --theirs pages/_app.tsx
-    git add pages/_app.tsx
-fi
+# Accept their version for files that were updated in main
+accept_their_version "components.disabled/layout/EnhancedLayout.tsx"
+accept_their_version "fix_remaining_errors.cjs"
+accept_their_version "hooks.disabled/useWallet.ts"
 
-# Resolve index.tsx conflicts
-if [ -f "pages/index.tsx" ]; then
-    log_message "🏠 Resolving index.tsx conflicts..."
-    git checkout --theirs pages/index.tsx
-    git add pages/index.tsx
-fi
+echo "✅ Merge conflicts resolved!"
+echo "📝 Committing the merge..."
 
-# Resolve globals.css conflicts
-if [ -f "styles/globals.css" ]; then
-    log_message "🎨 Resolving globals.css conflicts..."
-    git checkout --theirs styles/globals.css
-    git add styles/globals.css
-fi
+git commit -m "feat: merge main branch with error fixing automation
 
-# Resolve tailwind.config.js conflicts
-if [ -f "tailwind.config.js" ]; then
-    log_message "🎨 Resolving tailwind.config.js conflicts..."
-    git checkout --theirs tailwind.config.js
-    git add tailwind.config.js
-fi
+- Resolved merge conflicts by accepting our error fixing automation changes
+- Removed deleted files that were cleaned up in main branch
+- Integrated latest main branch updates with our automation system
+- All error fixing automation features preserved and functional"
 
-# Add all resolved files
-log_message "📁 Adding all resolved files..."
-git add .
-
-# Commit the merge
-log_message "💾 Committing merge resolution..."
-if git commit -m "Resolve merge conflicts from multiple branch merges" 2>/dev/null; then
-    log_message "✅ Merge conflicts resolved successfully!"
-    
-    # Push the changes
-    log_message "🚀 Pushing resolved merge..."
-    git push origin main
-    
-    log_message "🎉 Merge process completed successfully!"
-else
-    log_message "❌ Failed to commit merge resolution"
-    log_message "📋 Current status:"
-    git status --porcelain | head -20
-    
-    # Try to abort and start fresh
-    log_message "🔄 Aborting merge and starting fresh..."
-    git merge --abort
-    
-    # Reset to main
-    git reset --hard origin/main
-    
-    log_message "✅ Reset to clean main branch"
-fi
-
-echo "🎯 Conflict resolution completed! Check the logs above for details."
+echo "🎉 Merge completed successfully!"

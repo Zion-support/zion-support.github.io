@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 
@@ -477,3 +478,6 @@ export default function Page() {
     </>)};
 export default ModernUIEnhancer;
 '"`
+=======
+}
+>>>>>>> main

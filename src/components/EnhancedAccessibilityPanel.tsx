@@ -1,11 +1,10 @@
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
  params - Function parameters
  * @returns {*} Function return value
  */
 function EnhancedAccessibilityPanel () {
-=======
->>>>>>> main
 
   Accessibility,
   Eye,
@@ -141,6 +140,7 @@ export function EnhancedAccessibilityPanel() {
 
   // Load settings from localStorage
   useEffect(() => {
+<<<<<<< HEAD
   // TODO: Add dependencies if needed
 
   return () => {
@@ -148,13 +148,10 @@ export function EnhancedAccessibilityPanel() {
   };
 }, []);, []);
 <<<<<<< HEAD
+=======
+>>>>>>> main
 
     if(saved) {
-=======
-'
-    const saved = localStorage.getItem('accessibility-settings');    if(saved) {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       try {
         
         setSettings(savedSettings) ;
@@ -214,14 +211,8 @@ export function EnhancedAccessibilityPanel() {
 
     try {
       // Check for missing alt text'
-<<<<<<< HEAD
       
       images.forEach((img, index) => {
-
-=======
-      const images = document.querySelectorAll('img');      images.forEach((img, index) => {
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         if(!img.alt && !img.getAttribute('aria-label')) {
 
           newIssues.push({
@@ -292,13 +283,8 @@ export function EnhancedAccessibilityPanel() {
       
       textElements.forEach((element, index) => {
 
-<<<<<<< HEAD
 
-        // This is a simplified check - in production you'd want a proper contrast ratio calculation
-=======
-'        // This is a simplified check - in production you'd want a proper contrast ratio calculation
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-        if(color === backgroundColor) {
+        // This is a simplified check - in production you'd want a proper contrast ratio calculation        if(color === backgroundColor) {
 
           newIssues.push({
 `
@@ -315,10 +301,8 @@ export function EnhancedAccessibilityPanel() {
       
       interactiveElements.forEach((element, index) => {
 
-=======
       );      interactiveElements.forEach((element, index) => {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         if(element.tagName === 'BUTTON' && !element.getAttribute('type')) {
 
           newIssues.push({
@@ -638,3 +622,8 @@ export function EnhancedAccessibilityPanel() {
       </AnimatePresence>
     </>) }
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

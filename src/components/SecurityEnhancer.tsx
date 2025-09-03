@@ -1,11 +1,10 @@
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
  params - Function parameters
  * @returns {*} Function return value
  */
 function SecurityEnhancer () {
-=======
->>>>>>> main
 
   Shield,
   Lock,
@@ -105,9 +104,7 @@ export function SecurityEnhancer() {
   // Set security headers
   
     cspMeta.httpEquiv = 'Content-Security-Policy';
-=======
     const cspMeta = document.createElement('meta');'    cspMeta.httpEquiv = 'Content-Security-Policy';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     cspMeta.content = ['
       "default-src 'self'","
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com","
@@ -522,3 +519,8 @@ export function SecurityEnhancer() {
     </>
   )}
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

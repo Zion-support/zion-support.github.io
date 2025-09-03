@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 export default Search;
 import { motion  } from 'framer-motion';
@@ -197,158 +198,55 @@ export default function Page() {
                 >
                   Search
                 </button>
+=======
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const Search = () => {
+  return (
+    <>
+      <Head>
+        <title>Search - Zion Tech Group</title>
+        <meta name="description" content="Professional Search services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Search
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional Search services and solutions
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
+>>>>>>> main
               </div>
-            </form>
-          </div>
-        </section>
-
-        {/* Filters and Results */}
-        <section className="py-8 px-4">
-          <div  className="max - w-7xl mx -auto">
-            <div  className="grid grid - cols - 1 lg:grid - cols - 4 gap-8">
-              {/* Filters Sidebar */}
-              <div  className="lg:col - span -1">
-                <div  className="bg-slate - 800 / 50 backdrop - blur - sm rounded-xl p - 6 border border-slate -700 / 50">
-                  <h3 className="text-white font - semibold text-lg mb-4 flex items - center gap-2">
-                    <Filter className="w-5 h-5" />
-                    Filters
-                  </h3>
-
-                  {/* Categories */}
-                  <div  className="mb-6">
-                    <h4 className="text-white font - medium mb-3">Categories</h4>
-                    <div  className="space - y-2">
-                      {categories.map(category => (<button     key={category.id}
-                          onClick={ () => setActiveCategory(category.id) }
-                          className={`w-full text-left px-3 py-2 rounded-lg text-sm transition - colors ${activeCategory === category.id
-                              ? 'bg-blue - 500 text-white'
-                              : 'text-gray - 300 hover:bg-slate - 700 / 50'
-                          }`}
-                        >
-                          {category.name}
-                          <span className="float - right text-xs opacity -75"> ({category.count}) </span>
-                        </button>) ) }
-                    </div>
-                  </div>
-
-                  {/* Sort Options */}
-                  <div>
-                    <h4 className="text-white font - medium mb-3">Sort By</h4>
-                    <div  className="space - y-2">
-                      {sortOptions.map(option => (<button     key={option.id}
-                          onClick={ () => setSortBy(option.id) }
-                          className={`w-full text-left px-3 py-2 rounded-lg text-sm transition - colors ${sortBy === option.id
-                              ? 'bg-purple - 500 text-white'
-                              : 'text-gray - 300 hover:bg-slate - 700 / 50'
-                          }`}
-                        >
-                          {option.name}
-                        </button>) ) }
-                    </div>
-                  </div>
-                </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
               </div>
-
-              {/* Results */}
-              <div  className="lg:col - span -3">
-                {loading ? (<div  className="text-center py-12">
-                    <div  className="animate - spin rounded-full h-12 w-12 border-b-2 border-blue - 500 mx - auto mb-4"></div>
-                    <p className="text-gray -400">Searching...</p>
-                  </div>) : results.length > 0 ? (<div  className="space - y-6">
-                    {results.map((result, index) => (<motion.div
-                        key={result.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className="bg-slate - 800 / 50 backdrop - blur - sm rounded-xl p - 6 border border-slate - 700 / 50 hover:border-blue - 500 / 50 transition - all duration -300"
-                      >
-                        <div  className="flex items - start justify - between mb-4">
-                          <div  className="flex items - center gap-3">
-                            {getTypeIcon(result.type) }
-                            <div>
-                              <span className="inline - block px-2 py-1 bg-slate - 700 / 50 text-gray - 300 text-xs rounded">
-                                {getTypeLabel(result.type) }
-                              </span>
-                              {result.featured && (<span className="inline - block px-2 py-1 bg-yellow-500 / 20 text-yellow-400 text-xs rounded ml-2">
-                                  Featured
-                                </span>) }
-                            </div>
-                          </div>
-                          <div  className="flex items - center gap-2">
-                            <Star className="w-4 h-4 text-yellow-400 fill -current" />
-                            <span className="text-white text-sm">
-                              {result.rating}
-                            </span>
-                            <span className="text-gray - 400 text-sm"> ({result.reviews}) </span>
-                          </div>
-                        </div>
-
-                        <h3 className="text-white font - semibold text-xl mb-2">
-                          {result.title}
-                        </h3>
-                        <p className="text-gray - 300 mb-4">
-                          {result.description}
-                        </p>
-
-                        <div  className="flex items - center gap-4 mb-4 text-sm text-gray -400">
-                          <div  className="flex items - center gap-1">
-                            <MapPin className="w-4 h-4" />
-                            {result.location}
-                          </div>
-                          <div  className="flex items - center gap-1">
-                            <DollarSign className="w-4 h-4" />
-                            {result.price}
-                          </div>
-                          <div  className="flex items - center gap-1">
-                            <Calendar className="w-4 h-4" />
-                            {new Date(result.date) .toLocaleDateString () }
-                          </div>
-                        </div>
-
-                        <div  className="flex items - center justify -between">
-                          <div  className="flex flex - wrap gap-2">
-                            {result.tags
-                              .slice(0, 3) .map((tag: string, idx: number) => (<span
-                                  key={idx}
-                                  className="px-2 py-1 bg-slate - 700 / 50 text-gray - 300 text-xs rounded"
-                                >
-                                  {tag}
-                                </span>) ) }
-                          </div>
-                          <div  className="flex items - center gap-2">
-                            <button     className="p - 2 text-gray - 400 hover:text-white transition -colors">
-                              <Bookmark className="w-4 h-4" />
-                            </button>
-                            <button     className="p - 2 text-gray - 400 hover:text-white transition -colors">
-                              <Share2 className="w-4 h-4" />
-                            </button>
-                            <button     className="px-4 py-2 bg-gradient - to - r from - blue - 500 to - purple - 500 text-white rounded-lg text-sm font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration -300">
-                              View Details
-                            </button>
-                          </div>
-                        </div>
-                      </motion.div>) ) }
-                  </div>) : searchQuery ? (<div  className="text-center py-12">
-                    <SearchIcon className="w-16 h-16 text-gray - 400 mx - auto mb-4" />
-                    <h3 className="text-white text-xl font - semibold mb-2">
-                      No results found
-                    </h3>
-                    <p className="text-gray -400">
-                      Try adjusting your search terms or filters.</p>
-                  </div>) : (<div  className="text-center py-12">
-                    <SearchIcon className="w-16 h-16 text-gray - 400 mx - auto mb-4" />
-                    <h3 className="text-white text-xl font - semibold mb-2">
-                      Start your search
-                    </h3>
-                    <p className="text-gray -400">
-                      Enter a search term to find services, talent, equipment,
-                      and companies.</p>
-                  </div>) }
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
             </div>
-          </div>
-        </section>
-      </div>
-    </>) ;
-};
-
+    </>
+  );
+}
+export default Search

@@ -1,37 +1,15 @@
-// Minimal type declarations for offline development
-
-// React stubs
-declare module 'react' {
-  export type FC<P = any> = (props: anyP)  => ;
-  export type ReactNode = ;
-  export interface ChangeEvent<T = any> { target: T }
-  export interface FormEvent<T = any> {}
-  export interface KeyboardEvent<T = any> {};
-  export interface RefObject<T> { current: T };
-  export type RefCallback<T> = (value: anyT)  => void;
-  export type Ref<T> = RefObject<T> | RefCallback<T> | null;
-  export type LegacyRef<T> = Ref<T>;
-  export function useRef<T = any>(initial: T): { current: T };
-  const react: ;
-  export default react}
-
-declare module 'react/jsx-runtime' {
-  export {}}
-
-declare namespace JSX {
-  interface Element {
-
+// comment
+export interface offlineshimsdType {
+  id: string
+  name: string
+  createdAt: Date
 }
+<<<<<<< HEAD
   interface IntrinsicElements {
 
-<<<<<<< HEAD
     [elemName: string]: ;
 
-}
-=======
-    [elemName: string]: }
->>>>>>> main
-}
+}}
 
 declare module 'react-dom' {
   export function reactDom: ;
@@ -80,3 +58,6 @@ declare module 'zod' {
 
 export default useEffect;
 export default useRef;
+=======
+  updatedAt: Date,export default offlineshimsdType
+>>>>>>> main

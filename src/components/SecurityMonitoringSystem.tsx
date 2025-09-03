@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
 interface SecurityThreat {
@@ -13,8 +13,6 @@ interface SecurityThreat {
   affectedSystems: string[];
   recommendations: string[]}
 
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface VulnerabilityAssessment {
   id: string;
   category: 'network' | 'application' | 'infrastructure' | 'data';
@@ -648,3 +646,8 @@ export function SecurityMonitoringSystem({
     </>
   )}
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

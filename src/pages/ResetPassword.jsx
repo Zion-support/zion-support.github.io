@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useParams, useNavigate  } from 'react-router-dom';
 import { useState, useEffect } from 'react';
  from 'react';
@@ -68,3 +69,9 @@ export default function ResetPasswordPage () {
         </Button>
       </form>
     </div>) }
+=======
+"";,"});,})"
+;,});,"})
+}
+;"&apos,"
+>>>>>>> main

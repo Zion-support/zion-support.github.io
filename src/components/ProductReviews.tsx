@@ -1,21 +1,8 @@
-import React, { useEffect, useState, FormEvent, useCallback } from 'react'; // Added useCallback
-// import { Review } from '@/types/reviews'; // Assuming this path is correct from earlier exploration
-// For the purpose of this subtask, let's define a local Review type if the import path is uncertain or to ensure self-containment
-// In a real scenario, this would be imported from the shared types.export interface Review {
-  id: string;
-  rating: number;
-  comment?: string | null; // Ensure this matches your actual type(e.g. review_text)
-  review_text?: string | null; // Alternative field name for comment
-  created_at: string; // Or Date
-  user?: { // Assuming user is nested and might have a name
-    id: string | number; // User ID could be string or number
-    name?: string | null;
-  } | null;
-  reviewer_profile?: { // Another possible structure for reviewer info
-    display_name?: string | null;
-  } | null;
-  // Add any other fields that your Review type actually has
+
+"";,"});,})"
+;,});,"})
 }
+<<<<<<< HEAD
 
 // import { useAuth } from '@/hooks/useAuth'; // Assuming an auth hook exists
 // For now, let's mock a basic useAuth hook if not available to allow component structure
@@ -219,3 +206,6 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {
 };
 
 export default ProductReviews;
+=======
+;"&apos,"
+>>>>>>> main

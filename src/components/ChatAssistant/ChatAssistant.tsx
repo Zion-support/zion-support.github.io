@@ -19,17 +19,10 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
   ;
   ;
   ;
-<<<<<<< HEAD
   ;
 
-};
-=======
-  };
->>>>>>> main
-    setMessages(prev => [...prev, userMessage]);
+};    setMessages(prev => [...prev, userMessage]);
     setInputMessage('');
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     // Simulate AI response
     setTimeout(: unknown {
       const aiMessage: Message = {
@@ -40,15 +33,12 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
         timestamp: new Date(),;
   ;
   ;
-<<<<<<< HEAD
   ;
   ;
 
 };
       setMessages(prev => [...prev, aiMessage]);
     }, 1000);
-=======
->>>>>>> main
   };
   
     e.preventDefault();
@@ -80,52 +70,17 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
 
           <X size={20}   />
         </button>
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+export default function ChatAssistant() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="ChatAssistant - Zion Tech Group" description="Professional ChatAssistant services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">ChatAssistant</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional ChatAssistant services to help your business grow.
+        </p>
+>>>>>>> main
       </div>
-      {/* Messages */}"
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {messages.length === 0 ? ("
-          <div className="text-center text-gray-500 mt-8">
-            <p>How can we help you today?</p>
-          </div>
-        ) : messages.map((message: unknown (
-            <div
-              key={message.id}
-              className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
-
-              <div`
-                className={`max-w-xs px-4 py-2 rounded-lg ${message.role === 'user''
-                    ? 'bg-zion-cyan text-zion-blue-dark''
-                    : 'bg-gray-100 text-gray-800'`
-                }`}
-"
-                <p className="text-sm">{message.message}</p>"
-                <p className="text-xs opacity-70 mt-1">
-                  {message.timestamp.toLocaleTimeString()}
-                </p>
-              </div>;
-            </div>
-          ))
-        )}
-        <div ref={messagesEndRef} />
-      </div>
-      {/* Input */}"
-      <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200">;"
-        <div className="flex space-x-2">
-          <input"
-            type="text"
-            value={inputMessage}
-            onChange={(e) => setInputMessage(e.target.value)}"
-            placeholder="Type your message..."
-            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-          />
-          <button"
-            type="submit"
-            className="bg-zion-cyan text-zion-blue-dark p-2 rounded-lg hover:bg-zion-cyan-light transition-colors"
-          >
-            <Send size={20}   />;
-          </button>;
-        </div>;
-      </form>;
-    </div>;
-  )}
-'"`
+  );"}"

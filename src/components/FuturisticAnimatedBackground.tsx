@@ -1,12 +1,8 @@
+<<<<<<< HEAD
 export const FuturisticAnimatedBackground: React.FC = () => {;
 export default FuturisticAnimatedBackground;
 
-<<<<<<< HEAD
   const canvasRef = useRef < HTMLCanvasElement> (null) ;
-
-=======
-
->>>>>>> main
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
@@ -23,43 +19,20 @@ export default FuturisticAnimatedBackground;
     window.addEventListener('resize', resizeCanvas);
 
     // Add enhanced grid background'
-<<<<<<< HEAD
 
     if(gridCtx) {
-=======
-    const gridCanvas = document.createElement('canvas');'
-    const gridCtx = gridCanvas.getContext('2d');    if(gridCtx) {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       gridCanvas.width = canvas.width;
       gridCanvas.height = canvas.height;
-<<<<<<< HEAD
 
       // Draw enhanced grid
-      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1) ';
-=======
-      
-      // Draw enhanced grid'
-      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1);
->>>>>>> main
-      gridCtx.lineWidth = 1;
+      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1) ';      gridCtx.lineWidth = 1;
 
       for(let x = 0; x < gridCanvas.width; x += 40) {
-<<<<<<< HEAD
         gridCtx.beginPath () ;
         gridCtx.moveTo(x, 0) ;
         gridCtx.lineTo(x, gridCanvas.height) ;
         gridCtx.stroke () ;
       }
-
-=======
-
-        gridCtx.beginPath();
-        gridCtx.moveTo(x, 0);
-        gridCtx.lineTo(x, gridCanvas.height);
-        gridCtx.stroke()}
-      
->>>>>>> main
       for(let y = 0; y < gridCanvas.height; y += 40) {
 
         gridCtx.beginPath();
@@ -182,13 +155,8 @@ export default FuturisticAnimatedBackground;
 
       // Floating circle
       
-<<<<<<< HEAD
 
-      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5);
-=======
-'      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5)';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      ctx.beginPath();
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5);      ctx.beginPath();
       ctx.arc(circleX, circleY, circleSize, 0, Math.PI * 2);
       ctx.stroke();
 
@@ -228,3 +196,17 @@ export default FuturisticAnimatedBackground;
     />;) };
 
 export default FuturisticAnimatedBackground}}}}}}'"`
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+export default function FuturisticAnimatedBackground() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="FuturisticAnimatedBackground - Zion Tech Group" description="Professional FuturisticAnimatedBackground services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">FuturisticAnimatedBackground</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional FuturisticAnimatedBackground services to help your business grow.
+        </p>
+      </div>
+  );"}"
+>>>>>>> main

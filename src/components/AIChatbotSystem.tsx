@@ -1,7 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-export const AIChatbotSystem: React.FC < AIChatbotSystemProps> = ({
-import { motion, AnimatePresence  } from 'framer-motion';
 
+<<<<<<< HEAD
 export default function Page() {
 > {
 
@@ -418,3 +416,7 @@ showHeader:  true,;
       </AnimatePresence>;
     </>;) ;
 };
+=======
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

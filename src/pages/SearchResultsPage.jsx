@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useInfiniteQuery } from '@tanstack / react -query';
 export default function Page() {
 &limit=${LIMIT}`) ;
@@ -49,3 +50,6 @@ export default function Page() {
       <div ref={loader} className="h-1"/>
       {isFetchingNextPage && <p className="text-center mt-4">Loading more...</p>}
     </main>) }
+=======
+import React from 'react'; export default function SearchResultsPage () { const LIMIT = 20; const router = useNavigate () ; const initialQuery = router.query.q || "; const [query, setQuery] = useState(initialQuery); const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading, refetch } = useInfiniteQuery({ queryKey["search", query],; queryFn: async ({ pageParam = 1 }) => { const res = await fetch(`/api / search?q=${encodeURIComponent (query) }&page=${pageParam}&limit=${LIMIT}`) ; if(!res.ok) throw new Error("Failed to fetch") ; return(await res.json () ) }, enabled: !!query, initialPageParam: 1, getNextPageParam: (lastPage, pages) => lastPage.length < LIMIT ? null : pages.length + 1 }) ;
+>>>>>>> main

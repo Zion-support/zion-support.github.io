@@ -129,34 +129,19 @@
           initial = {
 
   { opacity: 0,
-<<<<<<< HEAD
   y: 20 ;
 
-}}
-=======
-  y: 20 }}
->>>>>>> main
-          whileInView = {
+}}          whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD
   y: 0 ;
 
-}}
-=======
-  y: 0 }}
->>>>>>> main
-          transition = {
+}}          transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD
   delay: 0.4 ;
 
-}}
-=======
-  delay: 0.4 }}
->>>>>>> main
-          viewport={{ once: true }}
+}}          viewport={{ once: true }}
 "
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>"
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">"

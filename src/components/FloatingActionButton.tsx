@@ -4,16 +4,7 @@
   MessageCircle,
   Phone,
   Mail,
-  MapPin,
-=======
-<<<<<<< HEAD
-  Plus, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  MapPin, 
->>>>>>> main
-  ArrowUp,
+  MapPin,  ArrowUp,
   X,
   Settings,
   HelpCircle,
@@ -363,10 +354,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           animation: bounce 2s infinite}`
       `}</style>
     </>) ;
-=======
 type FloatingActionButtonProps = {
   enabled?: boolean;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 };
 
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {
@@ -383,3 +372,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = t
   )};
 
 export default FloatingActionButton;
+=======
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

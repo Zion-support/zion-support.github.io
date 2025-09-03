@@ -1,12 +1,10 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
 []}
 ;
-const heroSlides: HeroSlide[] = [=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  {
+const heroSlides: HeroSlide[] = [  {
 
     id: 'ai-solutions',
     title: 'AI-Powered Business Solutions',
@@ -115,12 +113,6 @@ const heroSlides: HeroSlide[] = [=======
     
       if(e.key === 'ArrowRight') nextSlide();
       if(e.key === ' ') {
-=======
-'
-      if(e.key === 'ArrowLeft') prevSlide();'
-      if(e.key === 'ArrowRight') nextSlide();'      if(e.key === ' ') {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
         e.preventDefault();
         setIsAutoPlaying(!isAutoPlaying)}
     };
@@ -336,3 +328,8 @@ const heroSlides: HeroSlide[] = [=======
     </section>) }
 export { HeroSection };
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

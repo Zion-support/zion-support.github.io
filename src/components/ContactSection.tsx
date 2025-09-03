@@ -1,4 +1,3 @@
-export function ContactSection(...args[]):  {
 
 <<<<<<< HEAD
   const contactInfo = [{
@@ -12,11 +11,7 @@ export function ContactSection(...args[]):  {
       title: "Email",
       value: "kleber@ziontechgroup.com",
       link: "mailto:kleber@ziontechgroup.com"
-    },;
-=======
-  
->>>>>>> main
-    {;
+    },;    {;
       icon: MapPin,;"
       title: "Address",;"
       value: "364 E Main St STE 1008 Middletown DE 19709",;"
@@ -119,3 +114,7 @@ export default ContactSection;
 export default ContactSection;
 export default ContactSection;
 '"
+=======
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

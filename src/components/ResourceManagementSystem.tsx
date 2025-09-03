@@ -1,5 +1,9 @@
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
+import {  import { motion, AnimatePresence  } from 'framer-motion';
+=======
+>>>>>>> main
 
+<<<<<<< HEAD
 export default function Page() {
 > {
 
@@ -173,3 +177,7 @@ showStats:  true,;
 
   // Calculate resource stats
   const resourceStats = {
+=======
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

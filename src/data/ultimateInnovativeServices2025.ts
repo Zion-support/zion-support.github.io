@@ -40,7 +40,6 @@ export
   'Biotechnology',;
   'Space Technology',;
   'Green Technology';
-=======
   'AI & Automation','
   'Quantum Computing','
   'Blockchain & Web3','
@@ -50,7 +49,6 @@ export
   'Robotics & Automation',;'
   'Biotechnology',;'
   'Space Technology',;'  'Green Technology';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 ;
 export const SERVICE_SUBCATEGORIES = {

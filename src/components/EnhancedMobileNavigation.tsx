@@ -12,7 +12,6 @@ interface NavigationItem {
 
   label: string;
   path: string;
-<<<<<<< HEAD
   icon: React.ComponentType<{ size?: number; className?: string
 }>;
 } from 'lucide - react';
@@ -21,12 +20,7 @@ interface NavigationItem {
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string }>;
-  children?: NavigationItem[];
-=======
-  icon: React.ComponentType<{ size?: number; className?: string 
-}>;  children?: NavigationItem[];
->>>>>>> main
-  description?: string}
+  children?: NavigationItem[];  description?: string}
 ;
 const navigationItems: NavigationItem[] = [{
 
@@ -234,13 +228,8 @@ export default function EnhancedMobileNavigation() {
   { backgroundColor: isItemActive ? 'rgba(34, 221, 210,
   0.1)' : 'transparent' ;
 
-<<<<<<< HEAD
 }}
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
-=======
-}}'          className={`relative ${depth > 0 ? 'ml-4' : ''}`}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
           <Link
             to={item.path}
             onClick={() => handleNavigation(item.path)}`
@@ -263,11 +252,8 @@ export default function EnhancedMobileNavigation() {
             </div>
             {hasChildren && (
               <ChevronDown
-<<<<<<< HEAD
                 size={16}`
-                className={`transition-transform duration-200 ${=======
-                size={16}`                className={`transition-transform duration-200 ${'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+                className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${'
                   isExpanded ? 'rotate-180' : ''`
                 }`}
               />) }          </Link>
@@ -279,11 +265,8 @@ export default function EnhancedMobileNavigation() {
               aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
 
               <ChevronDown
-<<<<<<< HEAD
                 size={16}`
-                className={`transition-transform duration-200 ${=======
-                size={16}`                className={`transition-transform duration-200 ${'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+                className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${'
                   isExpanded ? 'rotate-180' : ''`
                 }`}
               />
@@ -453,3 +436,8 @@ export default function EnhancedMobileNavigation() {
     </>
   )}};
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

@@ -12,51 +12,6 @@ export default function Page() {
   { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
   { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
   { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-];
-
-  '
-  const [status, setStatus] = useState<any>('idle');
-  const [errors, setErrors] = useState<Partial<NewsletterFormData>>({});
-
-    const newErrors: Partial < NewsletterFormData> = {};
-    if(!formData.email) {
-
-      newErrors.email = 'Email is required'} else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-
-      newErrors.email = 'Please enter a valid email address'}
-
-    if(!formData.firstName) {
-
-      newErrors.firstName = 'First name is required'}
-
-    if(formData.interests.length = == 0) {;
-      newErrors.interests = 'Please select at least one interest'}
-    setErrors(newErrors) ;
-    return Object.keys(newErrors) .length === 0};
-
-      return}
-
-    setStatus('loading');
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout (resolve, 2000) ) ;
-
-      // Here you would typically send the data to your newsletter service'
-      // // // // // // // // console.log('Newsletter subscription:', formData);
-
-<<<<<<< HEAD
-      console.log('Newsletter subscription: ', formData) ;
-
-      setStatus('success') ;
-=======
-      // console.log('Newsletter subscription: ', formData);
-      '
-      setStatus('success');
->>>>>>> main
-
       // Reset form after successful submission
       setTimeout(() => {
         setFormData({
@@ -67,17 +22,10 @@ export default function Page() {
           frequency: 'monthly'
         });
       // // // // // // // // console.error('Newsletter subscription error:', error);
-<<<<<<< HEAD
     }
         setStatus('idle')}, 3000)} catch(error) {
 
-      setStatus('error');
-=======
-    }'        setStatus('idle')}, 3000)} catch(error) {
-'
-      setStatus('error');'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      // console.error('Newsletter subscription error:', error)}
+      setStatus('error');      // console.error('Newsletter subscription error:', error)}
   };
 
       setErrors(prev => ({ ...prev, interests: null }) ) }
@@ -89,14 +37,8 @@ export default function Page() {
     if(errors[field]) {
 
       setErrors(prev => ({ ...prev, [field]: null }));
-<<<<<<< HEAD
     }
   };
-
-=======
-    }  };
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   if(status = == 'success') {
 
     return ()
@@ -374,3 +316,8 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
       </motion.form>;
     </div>;) };
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

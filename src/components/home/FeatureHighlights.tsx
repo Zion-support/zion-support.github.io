@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion  } from 'framer-motion';
 
@@ -73,25 +72,11 @@ import { motion  } from 'framer-motion';
       transition: { duration: 0.5 };
     };
   };
-
-=======
-},;
-  {;"
-    icon: "📊",;"
-    title: "Real-Time Analytics",;"
-    description: "Comprehensive insights and reporting to make data-driven decisions instantly"};
-]}}}}}}}}};
->>>>>>> main
 export function FeatureHighlights() {
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
-<<<<<<< HEAD
-        <motion.div
-=======
-        <motion.div "
->>>>>>> main
-          className="text-center mb-16"
+        <motion.div          className="text-center mb-16"
           initial = {
 
   { opacity: 0,
@@ -146,19 +131,10 @@ export function FeatureHighlights() {
                   {feature.description}
                 </p>
               </div>
-<<<<<<< HEAD
 
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
                 {feature.title}
               </h3>
-
-=======
-              "
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
-                {feature.title}
-              </h3>
-              "
->>>>>>> main
               <p className="text-gray-400 text-sm leading-relaxed">
                 {feature.description}
               </p>
@@ -166,12 +142,7 @@ export function FeatureHighlights() {
           ))}
         </div>
 
-<<<<<<< HEAD
-        <motion.div
-=======
-        <motion.div "
->>>>>>> main
-          className="mt-16 text-center"
+        <motion.div          className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -191,8 +162,5 @@ export function FeatureHighlights() {
     </section>;
   )}
 
-<<<<<<< HEAD
-=======
 
 '"`
->>>>>>> main

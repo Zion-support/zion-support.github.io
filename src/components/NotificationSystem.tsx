@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
 > {
@@ -41,6 +41,7 @@ enableSound:  true,;
   const [isOpen, setIsOpen] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
   
+<<<<<<< HEAD
   // Initialize audio for notification sounds
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -165,6 +166,9 @@ enableSound:  true,;
       case 'bottom-right':'        return 'bottom-4 right-4';
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       default:'
+=======
+  // Initialize audio for notification sounds      default:'
+>>>>>>> main
         return 'top-4 right-4'}
   };
 
@@ -431,9 +435,7 @@ export
 // Utility functions for common notification types
 export 
         priority: 'medium',;
-=======
 })};'        priority: 'medium',;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ...options;
@@ -493,3 +495,8 @@ export
   }
 };
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

@@ -1,5 +1,5 @@
-
 <<<<<<< HEAD
+
  * CategoriesSection function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
@@ -49,11 +49,6 @@ const specialServices = [{
     link: "/services - comparison"
   }
 ];
-=======
-
-;
->>>>>>> main
-
 interface CategoriesSectionProps {
   // Add your props here
 
@@ -74,19 +69,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           backgroundSize: '50px 50px'
         }}></div>
       </div>
-<<<<<<< HEAD
 
       <div className="container mx - auto px-4 relative z -10">
         {showTitle && (<motion.div
-            className="text-center mb-16"
-=======
-      "
-      <div className="container mx-auto px-4 relative z-10">
-        {showTitle && (
-          <motion.div"
-            className="text-center mb-16"
->>>>>>> main
-            initial={{ opacity: 0, y: 20 }}
+            className="text-center mb-16"            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -98,18 +84,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
             </p>
           </motion.div>;) }
-<<<<<<< HEAD
 
         <motion.div
           className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap-6"
-          variants={containerVariants}
-=======
-        
-        <motion.div "
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-          variants={containerVariants}"
->>>>>>> main
-          initial="hidden"
+          variants={containerVariants}          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
@@ -131,16 +109,9 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               </Link>
             </motion.div>) ) }
         </motion.div>
-<<<<<<< HEAD
 
         <motion.div
-          className="mt-12"
-=======
-        
-        <motion.div "
-          className="mt-12"
->>>>>>> main
-          initial={{ opacity: 0, y: 20 }}
+          className="mt-12"          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -164,32 +135,17 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             to="/services"
             className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors text-lg font-medium py-2"
 
-<<<<<<< HEAD
             View All Services < ArrowRight className="w-5 h-5 ml-2 group - hover:translate - x-1 transition -transform" />
 
         <motion.div
-          className="mt-12 flex justify -center"
-=======
-            View All Services"
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"  />        
-        <motion.div "
-          className="mt-12 flex justify-center"
->>>>>>> main
-          initial={{ opacity: 0, y: 20 }}
+          className="mt-12 flex justify -center"          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-<<<<<<< HEAD
           <Link
             to="/categories"
-            className="text-cyan - 400 border-b border-cyan - 400 hover:border-cyan - 300 transition - colors flex items - center gap-2"
-=======
-          <Link "
-            to="/categories"
-            className="text-cyan-400 border-b border-cyan-400 hover:border-cyan-300 transition-colors flex items-center gap-2"
->>>>>>> main
-          >
+            className="text-cyan - 400 border-b border-cyan - 400 hover:border-cyan - 300 transition - colors flex items - center gap-2"          >
             View All Categories"
             <span className="text-sm group-hover:translate-x-1 transition-transform duration-300">→</span>
           </Link>
@@ -197,3 +153,17 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       </div>
     </section>;
   )}}}}}}}}}}'"`
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+export default function CategoriesSection() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="CategoriesSection - Zion Tech Group" description="Professional CategoriesSection services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">CategoriesSection</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional CategoriesSection services to help your business grow.
+        </p>
+      </div>
+  );"}"
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -271,3 +272,5 @@ export default function Page() {
     </section>)};
 export default InteractiveHero;
 '"`
+=======
+>>>>>>> main

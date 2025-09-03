@@ -1,24 +1,5 @@
-// Interface for the existing service structure
-export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-  contactInfo: {
+// comment
+export const serviceMapper = {}
 
 <<<<<<< HEAD
     // Interface for the existing service structure
@@ -56,27 +37,6 @@ export interface Service {
     marketSize?: string;
     compliance?: string[];
   }
-=======
-    phone: string;
-    email: string;
-    website: string};
-  technicalSpecs?: {
-
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[]};
-  competitors?: string[];
-  marketSize?: string;
-  compliance?: string[]}
-
-// Map 2026 services to existing service structure
-export function map2026ServicesToExistingStructure(): Service[] {
-
-  return specializedIndustrySolutions2026.map(service => ({
->>>>>>> main
-
     id: service.id,
     title: service.name,
     description: service.description,
@@ -113,3 +73,7 @@ export function map2026ServicesToExistingStructure(): Service[] {
     compliance: ['SOC 2',ISO 27001'], // Default compliance
   }))}
 '"
+=======
+
+export default serviceMapper
+>>>>>>> main

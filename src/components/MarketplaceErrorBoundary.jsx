@@ -2,11 +2,9 @@ import React from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
  from 'swr';
 ) {
-=======
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 ) {
->>>>>>> main
 
     const handleRetry = async () => {
         try {

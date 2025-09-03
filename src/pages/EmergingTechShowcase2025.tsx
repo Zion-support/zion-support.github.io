@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 export default EmergingTechShowcase2025;}}
 import { Brain, import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
@@ -267,3 +268,21 @@ export default function Page() {
           </motion.div>) }
       </AnimatePresence>
     </div>) };
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+;,"});,"})
+}
+export default function EmergingTechShowcase2025() {return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="EmergingTechShowcase2025 - Zion Tech Group" description="Professional EmergingTechShowcase2025 services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">EmergingTechShowcase2025</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional EmergingTechShowcase2025 services to help your business grow.
+        </p>
+      </div>
+  )
+}
+}""
+>>>>>>> main

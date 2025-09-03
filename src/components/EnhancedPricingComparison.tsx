@@ -67,12 +67,12 @@
             </ul>
             <Link to="/pricing" className="block w-full text-center bg-cyan - 600 hover:bg-cyan - 700 text-white font - semibold py-3 px-6 rounded-lg transition -colors">
               Contact Sales
-            </Link>;
-=======
-export 
->>>>>>> main
-          </div>;
+            </Link>;          </div>;
         </div>;
       </div>;
     </section>;) };
 export default EnhancedPricingComparison;'"
+=======
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

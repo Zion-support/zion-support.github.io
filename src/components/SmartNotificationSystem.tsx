@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
   id: string;
@@ -22,6 +22,7 @@ import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
 interface SmartNotificationSystemProps {
   // Add your props here
+<<<<<<< HEAD
 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -567,6 +568,8 @@ export function SmartNotificationSystem({
 export 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+=======
+>>>>>>> main
 };
 
 const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {
@@ -574,3 +577,8 @@ const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabl
   return <div className="hidden" aria-hidden="true" />};
 
 export default SmartNotificationSystem;
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

@@ -3,10 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { api, ApiResponse } from '@/services / api';
 export default function Page() {
 }}}
-=======
-<<<<<<< HEAD
->>>>>>> main
-
 interface User {
   id: number;
   name: string;
@@ -52,8 +48,6 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
 
     e.preventDefault () ;
 
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     if(!newUser.name.trim() || !newUser.email.trim()) {
 
       setError('Name and email are required');
@@ -94,16 +88,8 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
                 type="text"
                 placeholder="Name"
                 value={newUser.name}
-<<<<<<< HEAD
                 onChange = { (e) => setNewUser(prev => ({ ...prev,
   name: e.target.value
-=======
-                onChange = {
-
-  (e) => setNewUser(prev => ({ ...prev,
-  name: e.target.value 
->>>>>>> main
-
 }))}"
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
@@ -112,16 +98,8 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
                 type="email"
                 placeholder="Email"
                 value={newUser.email}
-<<<<<<< HEAD
                 onChange = { (e) => setNewUser(prev => ({ ...prev,
   email: e.target.value
-=======
-                onChange = {
-
-  (e) => setNewUser(prev => ({ ...prev,
-  email: e.target.value 
->>>>>>> main
-
 }))}"
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
@@ -198,3 +176,8 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
     </div>;) };
 
 export default ApiDemo}}}}}}}'"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

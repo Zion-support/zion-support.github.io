@@ -117,7 +117,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       
       {/* Skip Links */}
       <AnimatePresence>
-<<<<<<< HEAD
         {showSkipLinks && (<motion.div
             initial = {
   { opacity: 0,
@@ -140,18 +139,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               <a
                 href="#main - content"
                 className="px-4 py-2 bg-white rounded-lg font - semibold hover:bg-gray - 100 focus:outline - none focus:ring - 2 focus:ring -black"
-
-=======
-        {showSkipLinks && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed top-0 left-0 right-0 z-50 bg-blue-600 text-white p-2 text-center"
-          >
-            <div className="flex justify-center space-x-4">
-              <a href="#main-content" className="hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded px-2 py-1">
->>>>>>> main
                 Skip to main content
               </a>
               <a href="#navigation" className="hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded px-2 py-1">
@@ -166,7 +153,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       </AnimatePresence>
 
       {/* Accessibility Controls */}
-<<<<<<< HEAD
       <div  className="fixed bottom - 4 left - 4 z -40">;
         <motion.div
           initial = {
@@ -177,31 +163,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
           animate = {
   { opacity: 1,
   x: 0
-=======
-      <div className="fixed bottom-4 right-4 z-50 flex flex-col space-y-2">
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={toggleHighContrast}
-          className={`p-3 rounded-full shadow-lg transition-colors ${highContrast ? 'bg-yellow-500 text-black' : 'bg-gray-700 text-white'
-          }`}
-          title="Toggle high contrast"
-        >
-          <Sun className="w-5 h-5"  />
-        </motion.button>
-
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={toggleReducedMotion}
-          className={`p-3 rounded-full shadow-lg transition-colors ${reducedMotion ? 'bg-green-500 text-white' : 'bg-gray-700 text-white'
-          }`}
-          title="Toggle reduced motion"
-        >
-          <Braille className="w-5 h-5"  />
-        </motion.button>
->>>>>>> main
-
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
@@ -242,3 +203,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       </div>
     </AccessibilityContext.Provider>
   )};
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

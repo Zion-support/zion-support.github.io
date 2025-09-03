@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const api = {
 export default api;
 import { API_BASE_URL } from '../config / constants';

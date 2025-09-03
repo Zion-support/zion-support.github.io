@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Star  } from 'lucide-react';
 import { ReviewStats } from '@/components/reviews/ReviewStats';
@@ -81,3 +82,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
     </div>
   );
 }
+=======
+interface ProfileRatingsProps { userId: string; averageRating?: number; ratingCount?: number;   } export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) { const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews(); const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
+>>>>>>> main

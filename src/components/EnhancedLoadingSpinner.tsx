@@ -1,9 +1,6 @@
-
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 
->>>>>>> main
+
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
   size?: 'sm' | 'md' | 'lg';
@@ -11,6 +8,7 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
   text?: string;
   showProgress?: boolean;
   progress?: number}
+<<<<<<< HEAD
 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -125,6 +123,8 @@ export function EnhancedLoadingSpinner({
 =======
 
 >>>>>>> main
+=======
+>>>>>>> main
         setTimeout(() => {
           setIsVisible(false) ;
           onComplete?.() }, 1000) }, autoCompleteDelay) ;
@@ -134,7 +134,6 @@ export function EnhancedLoadingSpinner({
 
   if(!enabled || !isVisible) return null;
 
-<<<<<<< HEAD
   const renderSpinner = () => {
     switch(variant) {
       case 'futuristic':
@@ -183,15 +182,8 @@ export function EnhancedLoadingSpinner({
                 }}
               />) ) }
           </div>) ;
-=======
-  
-<<<<<<< HEAD
->>>>>>> main
-
       case 'minimal':
-=======
 '      case 'minimal':
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         return ()
           <motion.div"
             className="w-full h-full border-2 border-zion-cyan border-t-transparent rounded-full"
@@ -230,37 +222,59 @@ export function EnhancedLoadingSpinner({
           />) }
   }}
     return ()
+=======
+<<<<<<< HEAD
+import React from 'react'
+import { motion  } from 'framer-motion'
+
+interface EnhancedLoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg'
+  text?: string
+  className?: string
+}
+
+export default function EnhancedLoadingSpinner({ 
+  size = 'md', 
+  text = 'Loading...',
+  className = ''
+}: EnhancedLoadingSpinnerProps) {
+  const sizeClasses = { sm: 'w-8 h-8',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16'
+  }
+
+  const textSizes = { sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg'
+  }
+
+  return(<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
+>>>>>>> main
       <motion.div
-        key={loadingState.message}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}"
-        className="text-center text-zion-slate-600 dark:text-zion-slate-400 font-medium"
+        className={`${sizeClasses[size]} relative`}
+        animate={{ rotate: 360   }}
+        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
       >
-        {loadingState.message}
-      </motion.div>) };
-
-    return ("
-      <div className="w-full mt-4">"        <div className="flex justify-between text-xs text-zion-slate-500 mb-1">
-          <span>Progress</span>
-          <span>{Math.round(loadingState.progress)}%</span>
-        </div>"
-        <div className="w-full bg-zion-slate-200 dark:bg-zion-slate-700 rounded-full h-2 overflow-hidden">
-          <motion.div"
-            className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"
-            initial={{ width: 0 }}`
-            animate={{ width: `${loadingState.progress}%` }}"
-            transition={{ duration: 0.3, ease: "easeOut" }}
-          />
-        </div>
-      </div>) };
-
-    return ()      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}"
-        className="flex items-center justify-center space-x-2 mt-3 text-xs text-zion-slate-500"
-      >"
-        <Clock className="w-3 h-3"  />        <span>Estimated time: {loadingState.estimatedTime.toFixed(1)}s</span>
+        {/* Outer ring */}
+        <div className={`${sizeClasses[size]} border-4 border-blue-200 rounded-full`} />
+        
+        {/* Inner spinning ring */}
+        <motion.div
+          className={`${sizeClasses[size]} border-4 border-transparent border-t-blue-600 rounded-full absolute inset-0`}
+          animate={{ rotate: -360   }}
+          transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
+        />
+        
+        {/* Center dot */}
+        <motion.div
+          className="absolute inset-0 flex items-center justify-center"
+          animate={{ scale: [1, 1.2, 1] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <div className="w-2 h-2 bg-blue-600 rounded-full" />
+        </motion.div>
       </motion.div>
+<<<<<<< HEAD
     )};
 
     if(!config) return null}}};
@@ -268,110 +282,332 @@ export function EnhancedLoadingSpinner({
 export default function EnhancedLoadingSpinner() {
 
   ;
-=======
 '
   sm: 'w-8 h-8','
     md: 'w-12 h-12',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
   lg: 'w-16 h-16'}};
 
   ;
-=======
 '
   sm: 'text-sm','
     md: 'text-base',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
   lg: 'text-lg';
   };
+=======
+      
+      {/* Loading text */}
+      <motion.div
+        className={`text-gray-600 font-medium ${textSizes[size]}`}
+        animate={{ opacity: [0.5, 1, 0.5] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+      >
+        {text}
+      </motion.div>
+      
+      {/* Dots animation */}
+      <div className="flex space-x-1">
+        {[0, 1, 2].map((i) => (
+          <motion.div
+            key={i}
+            className="w-2 h-2 bg-blue-600 rounded-full"
+            animate={{ scale: [1, 1.5, 1],
+              opacity: [0.5, 1, 0.5]
+            }}
+            transition={{ duration: 1.5, 
+              repeat: Infinity, 
+              delay: i * 0.2,
+              ease: "easeInOut"
+            }}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+=======
+import React from "react""
+interface EnhancedLoadingSpinnerProps {"
+  size?: "sm" | "md" | "lg"
+  text?: string,className?: string}
+;
+export default function EnhancedLoadingSpinner() {;
 
-    switch(variant) {;
-      case 'ai':;"
-        return <Brain className="w-full h-full text-cyan-400"  />;
-      case 'quantum':;"
-        return <Atom className="w-full h-full text-purple-400"  />;
-      case 'futuristic':;"
-        return <Zap className="w-full h-full text-blue-400"  />;
-      default:;"
-        return <Loader2 className="w-full h-full text-gray-400" />}
-  };
+  const sizeClasses = {";
+    sm: "w-8 h-8",";
+    md: "w-12 h-12",";
+    lg: "w-16 h-16";
+,;
+  const textSizes = {,";
+sm: "text-sm",";
+    md: "text-base",";
+    lg: "text-lg";
+>>>>>>> main
 
-    switch(variant) {;
-      case 'ai':;
-        return 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-400/30';
-      case 'quantum':;
-        return 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/30';
-      case 'futuristic':;
-        return 'bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border-blue-400/30';
-      default:;
-        return 'bg-gray-100 border-gray-200'}
-  };
+  const sizeClasses = {}"}>
+      <motion.div,"
+className="{"${sizeClasses[size]}" relative"}"
+        animate="{{" rotate: 360 }}"
+        transition="{{" duration: 1, repeat: Infinity, ease: "linear" }}
+
+      >
+        {/* comment */}"
+        <div className="{"${sizeClasses[size]}" border-4 border-blue-200 rounded-full"}       />
+        
+        {/* comment */}"
+          className="{"${sizeClasses[size]}" border-4 border-transparent border-t-blue-600 rounded-full absolute inset-0"}"
+          animate="{{" rotate: -360 }}"
+          transition="{{" duration: 0.8, repeat: Infinity, ease: "linear" }}
+
+       />
+        
+        {/* comment */}"
+          className="absolute inset-0 flex items-center justify-center""
+          animate="{{" scale: [1, 1.2, 1] }}"
+          transition="{{" duration: 1.5, repeat: Infinity, ease: "easeInOut" }}"
+          <div className="{"w-2" h-2 bg-blue-600 rounded-full"  />
+        </motion.div>
+      
+      {/* comment */}"
+        className="{"text-gray-600" font-medium ${textSizes[size]}"}"
+        animate="{{" opacity: [0.5, 1, 0.5] }}"
+        transition="{{" duration: 2, repeat: Infinity, ease: "easeInOut"} }}
+
+        {text}
+
+      {/* comment */}"
+      <div className="flex space-x-1">
+        {[0, 1, 2].map((i) => ("
+            key="{i}""
+            className="w-2 h-2 bg-blue-600 rounded-full""
+            animate="{{"
+              scale: [1, 1.5, 1],
+              opacity: [0.5, 1, 0.5]
+}}"
+            transition="{{"
+              duration: 1.5,
+              repeat: Infinity,
+              delay: i * 0.2,"
+              ease: "easeInOut",
+        ))}
+
+      </div>
+  )
+}
+          className="absolute inset-0 flex items-center justify-center""          animate="{{" scale: [1, 1.2, 1] }}"          transition="{{" duration: 1.5, repeat: Infinity, ease: "easeInOut" }}"        >"          <div className="w-2 h-2 bg-blue-600 rounded-full"  />"        </motion.div>"      </motion.div>
+      
+"
+,"});,"})","});,"})"
+interface EnhancedLoadingSpinnerProps {,"});,"})"
+  size?: "sm" | "md" | "lg";,"});,"})"
+  text?: string,"});,"})"
+  className?: string,"});,"});"
+}"});,"})"
+;,"});,"})"
+export default function EnhancedLoadingSpinner({,"});,"})"
+  size = "md",,"});,"})"
+  text = "Loading...",,"});,"})"
+  className = "";,"});,"});"
+}: EnhancedLoadingSpinnerProps) {,"});,"})"
+  const sizeClasses = {});,"})"
+    md: "w-12 h-12","});,"})"
+    lg: "w-16 h-16","});,"})"
+  const textSizes = {});,"})"
+    md: "text-base","});,"})"
+    lg: "text-lg","});,"})
+}
+  return ("
+    <div className="{"flex" flex-col items-center justify-center space-y-4 ${className}"}>;,"});,"})"
+      <motion.div,"});,"})"
+        className="{"${sizeClasses[size]}" relative"}"});,"})"
+        animate="{{" rotate: 360  }}"});,"})"
+        transition="{{" duration: 1, repeat: Infinity, ease: "linear" }}"});,"})"
+      >;,"});,"})"
+        {/* comment */}"});,"})"
+        <div className="{"${sizeClasses[size]}" border-4 border-blue-200 rounded-full"}       />;,"});,"})"
+        {/* comment */}"});,"})"
+          className="{"${sizeClasses[size]}" border-4 border-transparent border-t-blue-600 rounded-full absolute inset-0"}"});,"})"
+          animate="{{" rotate: -360  }}"});,"})"
+          transition="{{" duration: 0.8, repeat: Infinity, ease: "linear" }}"});,"})" />;,"});,"})"
+        {/* comment */}"});,"})"
+          className="absolute inset-0 flex items-center justify-center";,"});,"})"
+          animate="{{" scale: [1, 1.2, 1] }}"});,"})"
+          transition="{{" duration: 1.5, repeat: Infinity, ease: "easeInOut" }}"});,"})"
+          <div className="w-2 h-2 bg-blue-600 rounded-full"  />;,"});,"})"
+        </motion.div>;,"});,"})"
+      {/* comment */}"});,"})"
+        className="{"text-gray-600" font-medium ${textSizes[size]}"}"});,"})"
+        animate="{{" opacity: [0.5, 1, 0.5] }}"});,"})"
+        transition="{{" duration: 2, repeat: Infinity, ease: "easeInOut" }}"});,"})"
+        {text}"});,"})"
+      {/* comment */}"});,"})"
+      <div className="flex space-x-1">;,"});,"})"
+        {[0, 1, 2].map((i) => (;,"});,"})"
+            key={i}"});,"})"
+            className="w-2 h-2 bg-blue-600 rounded-full";,"});,"})"
+            animate="{{" scale: [1, 1.5, 1],,"});,"})"
+              opacity: [0.5, 1, 0.5],"});,"});"
+}}"});,"})"
+            transition="{{" duration: 1.5,"});,"})"
+              repeat: Infinity,"});,"})"
+              delay: i * 0.2,"});,"})"
+              ease: "easeInOut","});,"})"
+        ))}"});,"})"
+      </div>;,"});,"})"
+  );,"});,"})"interface EnhancedLoadingSpinnerProps {"
+  size?: "sm" | "md" | "lg" text?: string className?: string}
+
+  size = "md",,
+  text = "Loading...",,
+  className = ""}: EnhancedLoadingSpinnerProps) {"
+  const sizeClasses = {}"
+  const textSizes = {}
 
   return ("
-    <AnimatePresence mode="wait">
-      <motion.div"
-        className="flex flex-col items-center justify-center p-6"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.8 }}
-        transition={{ duration: 0.3 }}
-      >
-        {/* Main spinner container */}"
-        <div className="relative">
-          <div"
-            className="relative"
-            style={{
+    <div className="{"flex" flex-col items-center justify-center space-y-4 ${className}"}>"
+        animate="{{" rotate: 360  }}"
+        transition="{{" duration: 1, repeat: Infinity, ease: "linear" }}
 
-              width: config.container,
-              height: config.container
-            }}"
-            role="status"
-            
-            aria-live="polite"
-          >
-            {renderSpinner () }
-          </div>
-          {renderStatusIcon () }
-        </div>
+      > {/* comment */};"
+  text: = "Loading...",";"
+  className: = ""}: EnhancedLoadingSpinnerProps) {";"
+  const sizeClasses = {}",
+  const textSizes = {}","
+  return: (<div className="{"flex" flex-col items-center justify-center space-y-4 ${className}"}>";"
+      <motion.div: className="{"${sizeClasses[size]}" relative"}";"
+        animate="{{" rotate: 360: }};"
+        transition="{{" duration:  ,1, repeat: Infinit,y, ease: "linear"}}"
+      >{/* comment */}"
+        <div className = "{"${sizeClasses[size]}" border-4 border-blue-200 rounded-full"}       />" {/* comment */}"
+          className="{"${sizeClasses[size]}" border-4 border-transparent border-t-blue-600 rounded-full absolute inset-0"}";"
+          animate = "{{" rotate: -360: }}"
+          transition="{{" duration: 0.,8, repeat: Infinit,y, ease: "linear"}}" />{/* comment */}"
+          className="absolute inset - 0 flex items-center justify-center","
+          animate = "{{" scale: [,1, 1.2, 1] }}"
+          transition = "{{" duration: 1.,5, repeat: Infinit,y, ease: "easeInOut"}}","
+          <div: className = "w-2 h-2 bg-blue-600 rounded-full" />",",
+      {/* comment */}"
+        className="{"text-gray-600" font-medium ${textSizes[size]}"}";"
+        animate = "{{" opacity: [0.,5, 1, 0.5] }}"
+        transition="{{" duration:  ,2, repeat: Infinit,y, ease: "easeInOut"}}"
+      >{text}
 
-        {/* Loading message */}`
-        <div className={`mt-4 ${config.text}`}>
-          {renderMessage()}
-        </div>
+      {/* comment */}"
+      <div className="flex space - x-1">", {[0, 1, 2].map((i) => ("
+          <motion.div: key = "{i}""
+            className="w - 2 h-2 bg-blue-600 rounded-full","
+            animate = "{{" scale: [,1, 1.5, 1],
+              opacity: [0.,5, 1, 0.5]"
+            transition="{{" duration: 1.,5,
+              repeat: Infinit,y>
+              delay: i: * 0.,2,
+              ease: "easeInOut,"}}";";"
+interface EnhancedLoadingSpinnerProps {""
+  )};framer-motion";;framer-motion
+  size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg&apos; text?: string className?: string}&apos;&apos
+export default function EnhancedLoadingSpinner( {
+  size = &apos;md&apos,
+  text = &apos;Loading...&apos,
+  className = &apos;&apos}: EnhancedLoadingSpinnerProps) {&apos}&apos
+  const sizeClasses = {}&apos,
+  const textSizes = {}"
+  return (&apos;<div className = "{"flex" flex-col items-center justify-center space-y-4 ${className}"}>
+      <motion.div>
 
-        {/* Progress bar */}
-        {renderProgress () }
+export default function EnhancedLoadingSpinner({""}"
+  size = "md", text = "Loading...", className = ""}: EnhancedLoadingSpinnerProps) {""
+  const sizeClasses = {}"
+"""
+  const textSizes = {}: EnhancedLoadingSpinnerProps) {"
+""
+  const textSizes = {}
 
-        {/* Estimated time */}
-        {renderEstimatedTime () }
+  return ("
+    <div className="{"flex" flex-col items-center justify-center space-y-4 ${className}"}" >"
+      <motion .div""
+        animate="{{" rotate: 360    }}>
+      >{/* comment */}"
+        <div className="{"${sizeClasses[size]}" border-4 border-blue-200 rounded-full"}       /> {/* comment */}"
+        transition="{{" duration: 1, repeat: Infinity, ease: &apos,linear&apos}}
 
-        {/* Loading steps for themed variant */}
-        {variant === 'themed' && ("
-          <div className="flex space-x-2 mt-4">
-            {loadingSteps.map((step, index) => (
-              <div
-                key={index}`
-                className={`w-2 h-2 rounded-full transition-colors duration-300 ${index <= currentStep ? 'bg-zion-cyan' : 'bg-zion-slate-300 dark:bg-zion-slate-600'`
-                }`}
-              />) ) }
-          </div>) }
+      >{/* comment */}&apos;"
+        animate = "{{" rotate: 360  }}"""
+        transition="{{" duration: 1, repeat: Infinity, ease: "linear" }}" >"
+        {/* comment */}""
+        <div className="{"${sizeClasses[size]}" border-4 border-blue-200 rounded-full"} /" >""
+          animate="{{" rotate: -360    }}"
+          animate="{{" rotate: -360  }}"
+          transition="{{" duration: 0.8, repeat: Infinity, ease: "linear" }}
 
-        {/* Accessibility announcement */}"
-        <div className="sr-only" aria-live="polite">'`
-          {loadingState.type === 'loading' && `Loading: ${loadingState.message}`}
-          {loadingState.type === 'success' && 'Loading complete'}
-          {loadingState.type === 'error' && 'Loading failed'}
-          {loadingState.type === 'warning' && 'Loading warning'}`
-          {showProgress && loadingState.progress !== undefined && `Progress: ${Math.round(loadingState.progress)}%`}
-        </div>
-      </motion.div>
-    </AnimatePresence>) }
+       />{/* comment */}"
+          className="absolute inset-0 flex items-center justify-center";"
+          transition = "{{" duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
 
-// Export as ZionLoadingSpinner for backward compatibility
-export default EnhancedLoadingSpinner;
-'"`
+        >;"
+          <div className="w-2 h-2 bg-blue-600 rounded-full"  />
+        </motion.div>
+      </motion.div> {/* comment */}"
+          transition = "{{" duration: 0.8, repeat: Infinity, ease: &apos,linear&apos}}
+
+       />{/* comment */}&apos
+        <;<motion.div,"
+className="&apos;absolute" inset-0 flex items-center justify-center";"
+          transition = "{{" duration: 1.5, repeat: Infinity, ease: &apos,easeInOut&apos}}>
+        >&apos;&apos;"
+          <div className="&apos;w-2" h-2 bg-blue-600 rounded-full&apos;       />&apos;"
+          animate = "{{" rotate: -360  }}"""
+        /" >""
+        <motion .div"""
+          className="absolute inset-0 flex items-center justify-center""
+          animate="{{" scale: [1, 1.2, 1] }}"""
+          transition="{{" duration: 1.5, repeat: Infinity, ease: "easeInOut" }}" >""
+          <div className="w-2 h-2 bg-blue-600 rounded-full" /" >""
+        transition="{{" duration: 2, repeat: Infinity, ease: "easeInOut" }}
+
+      </motion.div> {/* comment */}"
+      <div className="flex space-x-1"> {[0, 1, 2].map((i) => (;"
+            className="w-2 h-2 bg-blue-600 rounded-full";"
+            animate="{{" scale: [1, 1.5, 1],
+              opacity: [0.5, 1, 0.5]}}"
+            transition = "{{" duration: 1.5,
+repeat: Infinity,
+delay: i * 0.2,"
+ease: "easeInOut"}}
+
+         />))}
+
+      </div>;"
+        transition = "{{" duration: 2, repeat: Infinity, ease: &apos,easeInOut&apos}}
+
+      >{text}&apos;"
+      <div className="&apos;flex" space-x-1&apos;>
+        {[0, 1, 2].map((i) => (&apos}"
+            className="&apos;w-2" h-2 bg-blue-600 rounded-full";"
+            animate = "{{" scale: [1, 1.5, 1],"
+            transition="{{" duration: 1.5,
+              ease: &apos,easeInOut&apos}}
+
+         />))}&apos;&apos;"
+        animate = "{{" opacity: [0.5, 1, 0.5] }}"""
+        transition="{{" duration: 2, repeat: Infinity, ease: "easeInOut" }}" >""
+      {/* comment */}"""
+      <div className="flex space-x-1">"
+            animate="{{" scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5]"
+            transition="{{" duration: 1.5, repeat: Infinity,"
+              delay: i * 0.2, ease: "easeInOut"}}
+
+          <motion .div,"
+key={i}"""
+            className="w-2 h-2 bg-blue-600 rounded-full""
+            animate="{{" scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5]}}"""
+            transition="{{" duration: 1.5, repeat: Infinity, delay: i * 0.2, ease: "easeInOut'}}
+
+"
+;"">
+}"""
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link, useSearchParams  } from 'react-router-dom';
 export default function Page() {
 ,
@@ -349,60 +350,55 @@ export default function Page() {
           <div  className="mb-6">
             <p className="text-slate -300">
               {searchQuery ? `Found ${filteredResults.length} results for "${searchQuery}"` : `Showing ${filteredResults.length} items`}
+=======
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const SearchPage = () => {
+  return (
+    <>
+      <Head>
+        <title>Search Page - Zion Tech Group</title>
+        <meta name="description" content="Professional Search Page services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Search Page
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional Search Page services and solutions
+>>>>>>> main
             </p>
-          </div>
-
-          {/* Results Grid */}
-          <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6">
-            <AnimatePresence>
-              {filteredResults.map((result, index) => (<motion.div
-                  key={result.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                >
-                  <Link
-                    to={result.path}
-                    className="block p - 6 bg-slate - 800 / 50 backdrop - blur - sm rounded-xl border border-slate - 700 / 50 hover:border-cyan - 400 / 30 transition - all duration - 300 group h-full"
-                  >
-                    <div  className="flex items - start justify - between mb-4">
-                      <div  className="w-12 h-12 bg-gradient - to - br from - cyan - 400 / 20 to - blue - 500 / 20 rounded-lg flex items - center justify - center group - hover:scale - 110 transition -transform">
-                        <result.icon className="w-6 h-6 text-cyan -400" />
-                      </div>
-                      {result.featured && (<Star className="w-5 h-5 text-yellow-400" />) }
-                    </div>
-
-                    <h3 className="text-lg font - semibold text-white mb-2 group - hover:text-cyan - 400 transition -colors">
-                      {result.title}
-                    </h3>
-
-                    <p className="text-sm text-slate - 400 mb-4 group - hover:text-slate - 300 transition -colors">
-                      {result.description}
-                    </p>
-
-                    <div  className="flex items - center justify -between">
-                      <span className="text-xs text-slate - 500 bg-slate - 700 / 50 px-2 py-1 rounded">
-                        {result.category}
-                      </span>
-                      <ArrowRight className="w-4 h-4 text-slate - 500 group - hover:text-cyan - 400 transition -colors" />
-                    </div>
-                  </Link>
-                </motion.div>) ) }
-            </AnimatePresence>
-          </div>
-
-          {/* No Results */}
-          {filteredResults.length === 0 && (<motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-12"
-            >
-              <div  className="w-16 h-16 bg-slate - 700 / 50 rounded-full flex items - center justify - center mx - auto mb-4">
-                <Search className="w-8 h-8 text-slate -400" />
-              </div>) }
-          </div>
-        </div>;
-      </div>
-    </div>;) ;
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+    </>
+  );
 }
+export default SearchPage

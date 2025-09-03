@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useNavigate  } from 'react-router-dom';
 export default function Page() {
 }
@@ -184,3 +185,6 @@ export default function Page() {
       </div>
 
     </>) }
+=======
+import React from 'react'; export default function CategoryDetail () { const AUTO_SERVICE_TITLES = ["AI - Powered Customer Support", "Cloud Infrastructure Management", "Predictive Analytics Consulting", "Cybersecurity Automation Suite", "Robotic Process Automation", "Machine Learning Model Tuning", "IoT Device Integration Service", "Blockchain Data Solutions" ]; function generateInnovationListing(index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length]; const price = Math.floor(Math.random () * 9500) + 500;
+>>>>>>> main

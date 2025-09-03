@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const ModernUIEnhancer: React.FC < ModernUIEnhancerProps> = ({
 
 interface ModernUIEnhancerProps {
@@ -13,17 +14,10 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
   const [accentColor, setAccentColor] = useState('#0ea5e9');
 
     // Add modern font loading'
-<<<<<<< HEAD
     
     fontLink.rel = 'preload';
     fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
-    fontLink.as = 'style';
-=======
-    const fontLink = document.createElement('link');'
-    fontLink.rel = 'preload';'
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';'    fontLink.as = 'style';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    document.head.appendChild(fontLink) ;
+    fontLink.as = 'style';    document.head.appendChild(fontLink) ;
 
     // Apply modern typography
     
@@ -94,14 +88,8 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
   }, [enabled, isDarkMode]) ;
 
     // Add modern button styles'"
-<<<<<<< HEAD
     
     buttons.forEach((button) => {
-
-=======
-    const buttons = document.querySelectorAll('button, .btn, []');    buttons.forEach((button) => {
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       if(!button.classList.contains('modern-enhanced')) {
 
         button.classList.add('modern-enhanced');`
@@ -114,14 +102,8 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     }) ;
 
     // Add modern card styles'"
-<<<<<<< HEAD
     
     cards.forEach((card) => {
-
-=======
-    const cards = document.querySelectorAll('.card, [class*="card"], [class*="Card"]');    cards.forEach((card) => {
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       if(!card.classList.contains('modern-enhanced')) {
 
         card.classList.add('modern-enhanced');`
@@ -162,3 +144,17 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
   // Don't render anything - this is a utility component
   return null};
 '"`
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+export default function ModernUIEnhancer() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="ModernUIEnhancer - Zion Tech Group" description="Professional ModernUIEnhancer services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">ModernUIEnhancer</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional ModernUIEnhancer services to help your business grow.
+        </p>
+      </div>
+  );"}"
+>>>>>>> main

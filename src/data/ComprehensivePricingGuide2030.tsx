@@ -5,17 +5,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-<<<<<<< HEAD
   const getFilteredServices = () => {;
     let services: any[] = [];
-
-=======
-  
-    let services: unknown[] = [];
-    
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
->>>>>>> main
     switch(activeTab) {
 
       case 'microsaas':
@@ -42,14 +33,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 ;
     return services};
 
-<<<<<<< HEAD
   const getCategories = () => {;
     let services: any[] = [];
-
-=======
-  
-    let services: unknown[] = [];    
->>>>>>> main
     switch(activeTab) {
 
       case 'microsaas':
@@ -64,14 +49,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
     return categories};
 
-<<<<<<< HEAD
   const getPriceRange = () => {;
     let services: any[] = [];
-
-=======
-  
-    let services: unknown[] = [];    
->>>>>>> main
     switch(activeTab) {
 
       case 'microsaas':
@@ -457,13 +436,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   (e) => setPriceRange([priceRange[0],
   parseInt(e.target.value)])
 
-<<<<<<< HEAD
-}
-=======
-
-}"
->>>>>>> main
-                      className="flex-1"
+}                      className="flex-1"
                     />
                     <input"
                       type="range"
@@ -475,13 +448,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   (e) => setPriceRange([parseInt(e.target.value),
   priceRange[1]])
 
-<<<<<<< HEAD
-}
-=======
-
-}"
->>>>>>> main
-                      className="flex-1"
+}                      className="flex-1"
                     />
                   </div>"
                   <div className="flex justify-between text-sm text-gray-500 mt-1">
@@ -520,15 +487,10 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   ;
   ;
   priceRangeData[1]]);
-<<<<<<< HEAD
                     setSelectedCategory('all');
 
 }}
-                  className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
-=======
-                    setSelectedCategory('all')}}"                  className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
->>>>>>> main
-                >
+                  className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"                >
                   Reset Filters
                 </button>
               </div>
@@ -583,15 +545,10 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   ;
   ;
   priceRangeData[1]]);
-<<<<<<< HEAD
                   setSelectedCategory('all');
 
 }}
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-=======
-                  setSelectedCategory('all')}}"                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
->>>>>>> main
-              >
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"              >
                 Clear Filters
               </button>
             </div>;
@@ -666,3 +623,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   )};
 
 export default ComprehensivePricingGuide2030}}}}}}}'"`
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+export default function ComprehensivePricingGuide2030() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="ComprehensivePricingGuide2030 - Zion Tech Group" description="Professional ComprehensivePricingGuide2030 services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">ComprehensivePricingGuide2030</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional ComprehensivePricingGuide2030 services to help your business grow.
+        </p>
+      </div>
+  );"}"
+>>>>>>> main

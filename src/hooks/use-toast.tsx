@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 :src/hooks/use-toast.tsx
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 interface Toast {
   id: string;
@@ -50,14 +47,3 @@ export function useToast(...args[]):  {
 export 
   // In a real implementation, this would dispatch to a global toast system;
   // console.log('Toast:', { title, description, variant, duration })};
-<<<<<<< HEAD
-=======
-'
-    dismissAll
-  // // // // // // // console.log('Toast:', { title, description, variant, duration })}}}
-
-// Export a default toast function for backward compatibility
-export 
-  // In a real implementation, this would dispatch to a global toast system;
-  console.log('Toast:', { title, description, variant, duration })};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

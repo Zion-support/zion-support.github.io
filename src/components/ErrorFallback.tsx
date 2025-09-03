@@ -1,6 +1,6 @@
+<<<<<<< HEAD
 export const ErrorFallback: React.FC < ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
 
-<<<<<<< HEAD
 interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
 
   error: anyError;
@@ -12,18 +12,7 @@ interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
       <div  className="max - w-md w-full bg-white rounded-lg shadow-lg p - 6 text-center">
         <div  className="text-red - 500 text-6xl mb-4">⚠️</div>
         <h1 className="text-2xl font - bold text-gray - 900 mb-4">Something went wrong</h1>
-        <p className="text-gray - 600 mb-6">
-=======
-export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
-
-  return ()
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">"
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">"
-        <div className="text-red-500 text-6xl mb-4">⚠️</div>"
-        <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>"
-        <p className="text-gray-600 mb-6">
->>>>>>> main
-          We're sorry, but something unexpected happened.Please try refreshing the page.</p>"
+        <p className="text-gray - 600 mb-6">          We're sorry, but something unexpected happened.Please try refreshing the page.</p>"
         <div className="space-y-3">
           <button
             onClick={resetErrorBoundary}"
@@ -51,3 +40,17 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorB
       </div>;
     </div>;) };
 '"
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+export default function ErrorFallback() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="ErrorFallback - Zion Tech Group" description="Professional ErrorFallback services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">ErrorFallback</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional ErrorFallback services to help your business grow.
+        </p>
+      </div>
+  );"}"
+>>>>>>> main

@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, Sparkles, Filter, TrendingUp, Clock, Star const mockSuggestions = [;
-<<<<<<< HEAD
 
-=======
->>>>>>> main
     { id: '1', text: 'AI Development Services', type: 'service', relevance: 95, category: 'AI & ML' },
     { id: '2', text: 'Cloud Infrastructure', type: 'service', relevance: 88, category: 'DevOps' },
     { id: '3', text: 'React Native Apps', type: 'technology', relevance: 82, category: 'Mobile' },

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useParams, Link  } from 'react-router-dom';
 export default function Page() {
 ,
@@ -211,3 +212,5 @@ export default function Page() {
           </div>
         </div>
       </div>) }
+=======
+>>>>>>> main

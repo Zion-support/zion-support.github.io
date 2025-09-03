@@ -8,8 +8,6 @@ export default function Page() {
 
   return ()
     <div
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       data-testid= "equipment-link";'`
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
       onClick={handleViewListing};
@@ -139,3 +137,8 @@ export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

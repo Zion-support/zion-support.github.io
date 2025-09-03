@@ -5,10 +5,6 @@ export default function ServiceVirtualScroll() {
 export function VirtualScroll < T> ({
 import { motion, AnimatePresence  } from 'framer-motion';
 
-=======
-export function VirtualScroll<T>({
->>>>>>> main
-
   items,
   height,
   itemHeight,
@@ -19,15 +15,10 @@ export function VirtualScroll<T>({
   const [scrollTop, setScrollTop] = useState(0);
   
   // Calculate visible range
-<<<<<<< HEAD
   const visibleRange = useMemo(() => {;
     const start = Math.floor(scrollTop / itemHeight) ;
     const visibleCount = Math.ceil(height / itemHeight) ;
     const end = start + visibleCount + overscan;
-
-=======
-
->>>>>>> main
     return {
 
       start: Math.max(0, start - overscan),
@@ -197,3 +188,8 @@ export default function ServiceVirtualScroll() {
       className={className};
      />;
   )}'"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

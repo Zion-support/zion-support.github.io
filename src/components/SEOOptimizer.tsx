@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
 interface SEOMetrics {
@@ -115,6 +115,7 @@ autoAnalyze:  true,;
   // Analyze SEO
   
     setIsAnalyzing(true) ;
+<<<<<<< HEAD
 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -153,6 +154,8 @@ autoAnalyze:  true,;
 =======
   const filteredIssues = useMemo(() => {;'    if(selectedCategory === 'all') return analysis?.issues || [];
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+=======
+>>>>>>> main
     return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ;
 
   // Filter suggestions by priority
@@ -483,3 +486,8 @@ autoAnalyze:  true,;
     optimizePage
   }};
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

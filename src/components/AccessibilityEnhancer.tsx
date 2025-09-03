@@ -29,7 +29,6 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
   const [issues, setIssues] = useState<any[]>([]);
 
   // Keyboard navigation support
-<<<<<<< HEAD
   useEffect(() => {
   // TODO: Add dependencies if needed
 
@@ -238,6 +237,7 @@ interactiveElements.forEach(element:  > {;
     document.head.appendChild(style) ;
 
     return () => {
+<<<<<<< HEAD
       document.head.removeChild(style) ;
 =======
   useEffect(() => {
@@ -258,20 +258,18 @@ interactiveElements.forEach(element:  > {;
       }
 >>>>>>> main
     };
+=======
+      document.head.removeChild(style) ;    };
+>>>>>>> main
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
 
   // Apply accessibility settings to the document
-<<<<<<< HEAD
   const applySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
 
-    // High contrast
-=======
-  
->>>>>>> main
-    if(newSettings.highContrast) {
+    // High contrast    if(newSettings.highContrast) {
       root.classList.add('high-contrast')} else {
       root.classList.remove('high-contrast')}
 
@@ -293,7 +291,6 @@ interactiveElements.forEach(element:  > {;
     applySettings(newSettings)};
 
   // Update individual setting
-<<<<<<< HEAD
   const updateSetting = <K extends keyof AccessibilitySettings> (key: K,
     value: AccessibilitySettings[K]) => {
     const newSettings = { ...settings, [key]: value };
@@ -306,11 +303,6 @@ interactiveElements.forEach(element:  > {;
       setNotifications(prev => prev.filter (n => n !== notification) ) ;
     }, 3000) ;
   };
-=======
-  
-    saveSettings(newSettings)};
->>>>>>> main
-
   // Reset to default settings
   
     saveSettings(defaultSettings)};
@@ -439,7 +431,6 @@ interactiveElements.forEach(element:  > {;
                   This website meets Web Content Accessibility Guidelines 2.1 Level AA standards for accessibility.</p>
               </div>
             </div>
-<<<<<<< HEAD
 
             {/* Accessibility Scan */}
             <div className="mb-6">
@@ -898,11 +889,9 @@ interactiveElements.forEach(element:  > {;
                 </div>
               </div>
             </motion.div>
-          </motion.div>) }
-=======
-          </motion.div>
-        )}
->>>>>>> main
-      </AnimatePresence>
+          </motion.div>) }      </AnimatePresence>
     </>
   )}
+=======
+import React, { useState, useEffect } from 'react'; interface AccessibilityEnhancerProps { children: React.ReactNode;   } const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => { const [accessibilitySettings, setAccessibilitySettings] = useState({ highContrast: false, largeText: false, reducedMotion: false, focusVisible: true }); useEffect(() => {
+>>>>>>> main
