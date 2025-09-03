@@ -17,6 +17,12 @@ const ServicesOverview = lazy(() => import('./pages/services-overview'));
 const AIContentGenerationSuite = lazy(() => import('./pages/services/ai-content-generation-suite'));
 const CloudMigrationServices = lazy(() => import('./pages/services/cloud-migration-services'));
 const SmartCRMPlatform = lazy(() => import('./pages/services/smart-crm-platform'));
+const AISocialMediaManager = lazy(() => import('./pages/services/ai-social-media-manager'));
+const AIEmailMarketingAutomation = lazy(() => import('./pages/services/ai-email-marketing-automation'));
+const AICustomerSupportAutomation = lazy(() => import('./pages/services/ai-customer-support-automation'));
+const QuantumCloudInfrastructure = lazy(() => import('./pages/services/quantum-cloud-infrastructure'));
+const AIProjectManagementPlatform = lazy(() => import('./pages/services/ai-project-management-platform'));
+const AIFinancialTradingPlatform = lazy(() => import('./pages/services/ai-financial-trading-platform'));
 
 // Simple Header component
 const Header = () => (
@@ -69,6 +75,12 @@ function App() {
             <Route path="/services/ai-content-generation-suite" element={<AIContentGenerationSuite />} />
             <Route path="/services/cloud-migration-services" element={<CloudMigrationServices />} />
             <Route path="/services/smart-crm-platform" element={<SmartCRMPlatform />} />
+            <Route path="/services/ai-social-media-manager" element={<AISocialMediaManager />} />
+            <Route path="/services/ai-email-marketing-automation" element={<AIEmailMarketingAutomation />} />
+            <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
+            <Route path="/services/quantum-cloud-infrastructure" element={<QuantumCloudInfrastructure />} />
+            <Route path="/services/ai-project-management-platform" element={<AIProjectManagementPlatform />} />
+            <Route path="/services/ai-financial-trading-platform" element={<AIFinancialTradingPlatform />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
         </Suspense>

@@ -1,16 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Calendar, 
-  Users, 
+  Mail, 
   Target, 
   BarChart3, 
+  Users, 
   Zap, 
-  Brain, 
+  TrendingUp, 
   CheckCircle, 
   ArrowRight,
   Phone,
-  Mail,
   MapPin,
   Star,
   Clock,
@@ -33,7 +32,9 @@ import {
   List,
   Plus,
   ExternalLink,
+  Brain,
   MessageSquare,
+  Calendar,
   PieChart,
   LineChart,
   Activity,
@@ -95,257 +96,91 @@ import {
   ChevronRight,
   ChevronLeft,
   ChevronUp,
-  ChevronDown,
-  TrendingUp,
-  Shield,
-  Lock,
-  Database,
-  Network,
-  Code,
-  Server,
-  Cloud,
-  Cpu,
-  HardDrive,
-  Wifi,
-  Bluetooth,
-  Battery,
-  Power,
-  Wrench,
-  Tool,
-  Cog,
-  Sliders,
-  ToggleLeft,
-  ToggleRight,
-  Switch,
-  Button,
-  MousePointer,
-  Keyboard,
-  MonitorSpeaker,
-  Printer,
-  Scanner,
-  Fax,
-  Router,
-  Modem,
-  Hub,
-  Switch as SwitchIcon,
-  WifiOff,
-  Signal,
-  SignalHigh,
-  SignalLow,
-  SignalZero,
-  Wifi2,
-  Wifi1,
-  Wifi0,
-  BluetoothConnected,
-  BluetoothSearching,
-  BluetoothOff,
-  BatteryCharging,
-  BatteryFull,
-  BatteryLow,
-  BatteryMedium,
-  BatteryEmpty,
-  PowerOff,
-  PowerOn,
-  Plug,
-  PlugZap,
-  PlugZap2,
-  Zap as ZapIcon,
-  Lightning,
-  Thunder,
-  Storm,
-  Rain,
-  Snow,
-  Sun,
-  Moon,
-  CloudRain,
-  CloudSnow,
-  CloudLightning,
-  CloudSun,
-  CloudMoon,
-  CloudDrizzle,
-  CloudHail,
-  CloudFog,
-  CloudWind,
-  Wind,
-  Thermometer,
-  ThermometerSun,
-  ThermometerSnow,
-  Droplets,
-  Umbrella,
-  SunDim,
-  SunMedium,
-  SunHigh,
-  MoonStar,
-  MoonWaningCrescent,
-  MoonWaningGibbous,
-  MoonWaxingCrescent,
-  MoonWaxingGibbous,
-  MoonFirstQuarter,
-  MoonLastQuarter,
-  MoonNew,
-  MoonFull,
-  Sunrise,
-  Sunset,
-  SunClock,
-  MoonClock,
-  Star as StarIcon,
-  Stars,
-  Sparkles,
-  Sparkle,
-  Gem,
-  Diamond,
-  Crown,
-  Medal,
-  Trophy,
-  Award,
-  Gift,
-  Present,
-  PartyPopper,
-  Confetti,
-  Balloon,
-  Cake,
-  Cookie,
-  Coffee,
-  Tea,
-  Beer,
-  Wine,
-  Cocktail,
-  Juice,
-  Milk,
-  Water,
-  Soda,
-  Energy,
-  Fuel,
-  Gas,
-  Oil,
-  Fire,
-  Flame,
-  Match,
-  Lighter,
-  Candle,
-  Lightbulb,
-  Lamp,
-  Flashlight,
-  Lantern,
-  Torch,
-  Spotlight,
-  Sun as SunIcon,
-  LightbulbOff,
-  LightbulbOn,
-  LightbulbIcon,
-  LightbulbIconOff,
-  LightbulbIconOn,
-  LightbulbIcon2,
-  LightbulbIcon2Off,
-  LightbulbIcon2On,
-  LightbulbIcon3,
-  LightbulbIcon3Off,
-  LightbulbIcon3On,
-  LightbulbIcon4,
-  LightbulbIcon4Off,
-  LightbulbIcon4On,
-  LightbulbIcon5,
-  LightbulbIcon5Off,
-  LightbulbIcon5On,
-  LightbulbIcon6,
-  LightbulbIcon6Off,
-  LightbulbIcon6On,
-  LightbulbIcon7,
-  LightbulbIcon7Off,
-  LightbulbIcon7On,
-  LightbulbIcon8,
-  LightbulbIcon8Off,
-  LightbulbIcon8On,
-  LightbulbIcon9,
-  LightbulbIcon9Off,
-  LightbulbIcon9On,
-  LightbulbIcon10,
-  LightbulbIcon10Off,
-  LightbulbIcon10On
+  ChevronDown
 } from 'lucide-react';
 
-const AIProjectManagementPlatform: React.FC = () => {
+const AIEmailMarketingAutomation: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Planning",
-      description: "Intelligent project planning that automatically creates timelines, assigns resources, and predicts potential bottlenecks.",
-      benefits: ["Reduce planning time by 70%", "Predict project risks", "Optimize resource allocation", "Automated timeline generation"]
+      title: "AI Content Generation",
+      description: "Automatically create compelling email content, subject lines, and CTAs that drive engagement and conversions.",
+      benefits: ["Increase open rates by 45%", "Boost click-through rates by 60%", "Generate personalized content", "A/B test automatically"]
     },
     {
       icon: Target,
-      title: "Smart Task Management",
-      description: "AI-driven task prioritization and assignment based on team capacity, skills, and project requirements.",
-      benefits: ["Intelligent task prioritization", "Skill-based assignments", "Workload balancing", "Deadline optimization"]
+      title: "Smart Segmentation",
+      description: "AI-powered audience segmentation based on behavior, preferences, and engagement patterns for maximum relevance.",
+      benefits: ["Dynamic audience segments", "Behavioral targeting", "Predictive analytics", "Real-time segmentation"]
     },
     {
       icon: BarChart3,
-      title: "Predictive Analytics",
-      description: "Advanced analytics that forecast project outcomes, identify risks, and suggest optimization strategies.",
-      benefits: ["Project outcome prediction", "Risk identification", "Performance optimization", "Resource forecasting"]
-    },
-    {
-      icon: Users,
-      title: "Team Collaboration",
-      description: "Seamless collaboration tools with AI-powered communication optimization and conflict resolution.",
-      benefits: ["Enhanced team communication", "Conflict detection", "Meeting optimization", "Knowledge sharing"]
-    },
-    {
-      icon: Zap,
-      title: "Automated Workflows",
-      description: "Smart automation that handles routine tasks, notifications, and project updates without manual intervention.",
-      benefits: ["Automated status updates", "Smart notifications", "Workflow optimization", "Reduced manual work"]
+      title: "Advanced Analytics",
+      description: "Comprehensive email performance tracking with AI insights to optimize your campaigns continuously.",
+      benefits: ["Real-time performance metrics", "Predictive analytics", "ROI tracking", "Campaign optimization suggestions"]
     },
     {
       icon: Calendar,
       title: "Intelligent Scheduling",
-      description: "AI-optimized scheduling that considers team availability, project dependencies, and resource constraints.",
-      benefits: ["Optimal meeting scheduling", "Resource conflict resolution", "Dependency management", "Capacity planning"]
+      description: "AI determines the optimal send times for each subscriber to maximize engagement and deliverability.",
+      benefits: ["Optimal send time prediction", "Timezone optimization", "Frequency capping", "Deliverability optimization"]
+    },
+    {
+      icon: Users,
+      title: "Personalization Engine",
+      description: "Advanced personalization that creates unique email experiences for each subscriber based on their data.",
+      benefits: ["Dynamic content personalization", "Product recommendations", "Behavioral triggers", "Lifecycle automation"]
+    },
+    {
+      icon: Zap,
+      title: "Automation Workflows",
+      description: "Sophisticated email automation sequences that nurture leads and customers throughout their journey.",
+      benefits: ["Welcome series automation", "Abandoned cart recovery", "Win-back campaigns", "Lifecycle nurturing"]
     }
   ];
 
-  const projectTypes = [
+  const automationTypes = [
     {
-      name: "Software Development",
-      description: "Agile project management with AI-powered sprint planning and code quality monitoring",
-      icon: Code,
-      color: "from-blue-400 to-cyan-500",
-      results: "40% faster delivery"
-    },
-    {
-      name: "Marketing Campaigns",
-      description: "Campaign management with AI-driven content optimization and performance tracking",
-      icon: Target,
-      color: "from-purple-400 to-pink-500",
-      results: "60% higher ROI"
-    },
-    {
-      name: "Construction Projects",
-      description: "Construction management with AI-powered resource optimization and safety monitoring",
-      icon: Building2,
-      color: "from-orange-400 to-red-500",
-      results: "30% cost reduction"
-    },
-    {
-      name: "Event Planning",
-      description: "Event management with AI-driven vendor selection and logistics optimization",
-      icon: Calendar,
+      name: "Welcome Series",
+      description: "Onboard new subscribers with a personalized welcome sequence",
+      icon: Heart,
       color: "from-green-400 to-emerald-500",
-      results: "50% time savings"
+      results: "40% higher engagement"
     },
     {
-      name: "Research Projects",
-      description: "Research management with AI-powered data analysis and collaboration tools",
-      icon: BookOpen,
-      color: "from-indigo-400 to-purple-500",
-      results: "70% faster insights"
+      name: "Abandoned Cart",
+      description: "Recover lost sales with intelligent cart abandonment emails",
+      icon: ShoppingBag,
+      color: "from-red-400 to-orange-500",
+      results: "25% recovery rate"
     },
     {
-      name: "Product Launch",
-      description: "Product launch management with AI-driven market analysis and go-to-market optimization",
-      icon: Rocket,
+      name: "Win-Back Campaigns",
+      description: "Re-engage inactive subscribers with targeted win-back sequences",
+      icon: RefreshCw,
+      color: "from-purple-400 to-pink-500",
+      results: "15% reactivation rate"
+    },
+    {
+      name: "Birthday & Anniversary",
+      description: "Celebrate special occasions with personalized automated emails",
+      icon: Calendar,
+      color: "from-blue-400 to-cyan-500",
+      results: "60% higher open rates"
+    },
+    {
+      name: "Product Recommendations",
+      description: "AI-powered product suggestions based on purchase history",
+      icon: Target,
       color: "from-yellow-400 to-orange-500",
-      results: "80% success rate"
+      results: "35% increase in sales"
+    },
+    {
+      name: "Post-Purchase Follow-up",
+      description: "Nurture customers after purchase with relevant content and offers",
+      icon: CheckCircle,
+      color: "from-indigo-400 to-purple-500",
+      results: "50% repeat purchase rate"
     }
   ];
 
@@ -353,12 +188,12 @@ const AIProjectManagementPlatform: React.FC = () => {
     {
       name: "Starter",
       price: "$197/month",
-      description: "Perfect for small teams and startups",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Up to 10 team members",
-        "Unlimited projects",
-        "Basic AI features",
-        "Task management",
+        "Up to 5,000 subscribers",
+        "Unlimited emails",
+        "Basic automation workflows",
+        "Email templates library",
         "Basic analytics",
         "Email support",
         "Mobile app access"
@@ -369,17 +204,17 @@ const AIProjectManagementPlatform: React.FC = () => {
     {
       name: "Professional",
       price: "$497/month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for growing businesses and agencies",
       features: [
-        "Up to 50 team members",
-        "Advanced AI features",
-        "Predictive analytics",
-        "Custom workflows",
-        "Advanced reporting",
+        "Up to 25,000 subscribers",
+        "Advanced automation workflows",
+        "AI content generation",
+        "Advanced segmentation",
+        "A/B testing",
         "Priority support",
         "Team collaboration",
-        "API access",
-        "Custom integrations"
+        "Custom integrations",
+        "Advanced analytics"
       ],
       popular: true,
       color: "from-blue-400 to-cyan-500"
@@ -387,17 +222,17 @@ const AIProjectManagementPlatform: React.FC = () => {
     {
       name: "Enterprise",
       price: "$1,297/month",
-      description: "For large organizations",
+      description: "For large organizations and agencies",
       features: [
-        "Unlimited team members",
+        "Unlimited subscribers",
         "White-label solution",
         "Advanced AI features",
-        "Custom automation",
+        "Custom automation workflows",
         "Dedicated account manager",
-        "Advanced security",
-        "Multi-brand support",
-        "Custom development",
-        "SLA guarantees"
+        "API access",
+        "Custom reporting",
+        "Multi-brand management",
+        "Advanced deliverability tools"
       ],
       popular: false,
       color: "from-purple-400 to-pink-500"
@@ -405,46 +240,46 @@ const AIProjectManagementPlatform: React.FC = () => {
   ];
 
   const integrations = [
-    { name: "Slack", icon: MessageSquare, color: "from-purple-400 to-pink-500" },
-    { name: "Microsoft Teams", icon: Users, color: "from-blue-400 to-indigo-500" },
-    { name: "Jira", icon: Target, color: "from-blue-500 to-blue-600" },
-    { name: "Asana", icon: CheckCircle, color: "from-green-400 to-emerald-500" },
-    { name: "Trello", icon: Grid, color: "from-blue-400 to-cyan-500" },
-    { name: "GitHub", icon: Code, color: "from-gray-800 to-gray-900" },
-    { name: "Google Workspace", icon: Globe, color: "from-green-400 to-blue-500" },
-    { name: "Salesforce", icon: Users, color: "from-blue-400 to-indigo-500" }
+    { name: "Shopify", icon: ShoppingBag, color: "from-green-400 to-emerald-500" },
+    { name: "WooCommerce", icon: ShoppingBag, color: "from-purple-400 to-pink-500" },
+    { name: "Salesforce", icon: Users, color: "from-blue-400 to-indigo-500" },
+    { name: "HubSpot", icon: Target, color: "from-orange-400 to-red-500" },
+    { name: "Zapier", icon: Zap, color: "from-yellow-400 to-orange-500" },
+    { name: "WordPress", icon: Globe, color: "from-blue-500 to-blue-600" },
+    { name: "Magento", icon: ShoppingBag, color: "from-orange-500 to-red-500" },
+    { name: "BigCommerce", icon: ShoppingBag, color: "from-blue-500 to-indigo-500" }
   ];
 
   const useCases = [
     {
-      title: "Software Development Teams",
-      description: "Streamline agile development with AI-powered sprint planning, code quality monitoring, and automated testing workflows.",
-      results: "Average 40% faster project delivery"
+      title: "E-commerce Stores",
+      description: "Increase sales with automated product recommendations, abandoned cart recovery, and customer lifecycle emails.",
+      results: "Average 40% increase in email revenue"
     },
     {
-      title: "Marketing Agencies",
-      description: "Manage multiple client campaigns with AI-driven content optimization, performance tracking, and resource allocation.",
-      results: "Average 60% increase in campaign ROI"
+      title: "SaaS Companies",
+      description: "Improve user onboarding, reduce churn, and increase upgrades with targeted email sequences.",
+      results: "Average 30% reduction in churn rate"
     },
     {
-      title: "Construction Companies",
-      description: "Optimize construction projects with AI-powered resource management, safety monitoring, and timeline optimization.",
-      results: "Average 30% reduction in project costs"
+      title: "Service Businesses",
+      description: "Nurture leads, book appointments, and maintain client relationships with automated follow-ups.",
+      results: "Average 50% increase in appointment bookings"
     },
     {
-      title: "Consulting Firms",
-      description: "Manage client projects with AI-driven resource allocation, timeline optimization, and performance tracking.",
-      results: "Average 50% improvement in project success rate"
+      title: "Content Creators",
+      description: "Build engaged audiences with newsletter automation, content promotion, and subscriber nurturing.",
+      results: "Average 60% increase in subscriber engagement"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Helmet>
-        <title>AI Project Management Platform - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered project management platform that reduces planning time by 70% and improves project success rates by 50%. Intelligent task management, predictive analytics, and automated workflows." />
-        <meta name="keywords" content="AI project management, project management software, task management, team collaboration, project analytics, workflow automation" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-project-management-platform" />
+        <title>AI Email Marketing Automation - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered email marketing automation platform that increases open rates by 45% and boosts conversions by 60%. Advanced segmentation, personalization, and analytics." />
+        <meta name="keywords" content="AI email marketing, email automation, email marketing platform, email segmentation, email personalization, email analytics" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-email-marketing-automation" />
       </Helmet>
 
       {/* Hero Section */}
@@ -452,15 +287,15 @@ const AIProjectManagementPlatform: React.FC = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium mb-6">
-              <Calendar className="w-4 h-4 mr-2" />
-              AI-Powered Project Management
+              <Mail className="w-4 h-4 mr-2" />
+              AI-Powered Email Marketing
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI Project Management Platform
+              AI Email Marketing Automation
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your project management with AI that reduces planning time by 70% and improves success rates by 50%. 
-              Intelligent task management, predictive analytics, and automated workflows.
+              Transform your email marketing with AI that creates, segments, and optimizes campaigns automatically. 
+              Increase open rates by 45% and boost conversions by 60%.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -483,20 +318,20 @@ const AIProjectManagementPlatform: React.FC = () => {
           {/* Key Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
             <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>
-              <div className="text-gray-300">Faster Planning</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">45%</div>
+              <div className="text-gray-300">Average Open Rate Increase</div>
             </div>
             <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-              <div className="text-3xl font-bold text-green-400 mb-2">50%</div>
-              <div className="text-gray-300">Higher Success Rate</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">60%</div>
+              <div className="text-gray-300">Click-Through Rate Boost</div>
             </div>
             <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-              <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
-              <div className="text-gray-300">Time Savings</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">25%</div>
+              <div className="text-gray-300">Cart Recovery Rate</div>
             </div>
             <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-              <div className="text-3xl font-bold text-pink-400 mb-2">95%</div>
-              <div className="text-gray-300">Team Satisfaction</div>
+              <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Deliverability Rate</div>
             </div>
           </div>
         </div>
@@ -510,7 +345,7 @@ const AIProjectManagementPlatform: React.FC = () => {
               Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI project management platform combines advanced machine learning with project management expertise to deliver exceptional results.
+              Our AI email marketing platform combines machine learning with email marketing expertise to deliver exceptional results.
             </p>
           </div>
 
@@ -536,29 +371,29 @@ const AIProjectManagementPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Project Types */}
+      {/* Automation Types */}
       <section className="py-20 px-4 bg-white/5">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Perfect for Any Project Type
+              Advanced Automation Workflows
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI project management platform adapts to any industry and project type with specialized features and optimizations.
+              Pre-built automation sequences that nurture leads and customers throughout their entire journey.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projectTypes.map((project, index) => (
+            {automationTypes.map((automation, index) => (
               <div key={index} className="p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className={`w-16 h-16 bg-gradient-to-r ${project.color} rounded-xl flex items-center justify-center mb-6`}>
-                  <project.icon className="w-8 h-8 text-white" />
+                <div className={`w-16 h-16 bg-gradient-to-r ${automation.color} rounded-xl flex items-center justify-center mb-6`}>
+                  <automation.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{project.name}</h3>
-                <p className="text-gray-300 mb-6">{project.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-4">{automation.name}</h3>
+                <p className="text-gray-300 mb-6">{automation.description}</p>
                 <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-full text-sm font-medium">
                   <TrendingUp className="w-4 h-4 mr-2" />
-                  {project.results}
+                  {automation.results}
                 </div>
               </div>
             ))}
@@ -574,7 +409,7 @@ const AIProjectManagementPlatform: React.FC = () => {
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Connect with your favorite tools and platforms to create a unified project management ecosystem.
+              Connect with your favorite tools and platforms to create a unified marketing ecosystem.
             </p>
           </div>
 
@@ -599,7 +434,7 @@ const AIProjectManagementPlatform: React.FC = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your team size and needs. All plans include our core AI features with no hidden fees.
+              Choose the plan that fits your business needs. All plans include our core AI features with no hidden fees.
             </p>
           </div>
 
@@ -650,7 +485,7 @@ const AIProjectManagementPlatform: React.FC = () => {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-300 mb-4">Need a custom solution for your organization?</p>
+            <p className="text-gray-300 mb-4">Need a custom solution for your enterprise?</p>
             <a 
               href="mailto:kleber@ziontechgroup.com" 
               className="inline-flex items-center px-6 py-3 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
@@ -670,7 +505,7 @@ const AIProjectManagementPlatform: React.FC = () => {
               Proven Results Across Industries
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how teams across industries are achieving remarkable results with our AI project management platform.
+              See how businesses like yours are achieving remarkable growth with our AI email marketing automation.
             </p>
           </div>
 
@@ -694,10 +529,10 @@ const AIProjectManagementPlatform: React.FC = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12 border border-white/10">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Project Management?
+              Ready to Transform Your Email Marketing?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of teams already using our AI project management platform to deliver projects faster, more efficiently, and with higher success rates.
+              Join thousands of businesses already using our AI email marketing automation to increase engagement, drive sales, and grow their customer base.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -726,4 +561,4 @@ const AIProjectManagementPlatform: React.FC = () => {
   );
 };
 
-export default AIProjectManagementPlatform;
+export default AIEmailMarketingAutomation;

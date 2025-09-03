@@ -1,12 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Calendar, 
+  Headphones, 
+  MessageSquare, 
+  Bot, 
   Users, 
-  Target, 
   BarChart3, 
   Zap, 
-  Brain, 
   CheckCircle, 
   ArrowRight,
   Phone,
@@ -33,7 +33,8 @@ import {
   List,
   Plus,
   ExternalLink,
-  MessageSquare,
+  Brain,
+  Calendar,
   PieChart,
   LineChart,
   Activity,
@@ -49,7 +50,6 @@ import {
   BookOpen,
   Camera,
   CreditCard,
-  Headphones,
   Hash,
   ThumbsUp,
   Bookmark,
@@ -96,6 +96,7 @@ import {
   ChevronLeft,
   ChevronUp,
   ChevronDown,
+  Target,
   TrendingUp,
   Shield,
   Lock,
@@ -264,102 +265,102 @@ import {
   LightbulbIcon10On
 } from 'lucide-react';
 
-const AIProjectManagementPlatform: React.FC = () => {
+const AICustomerSupportAutomation: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Planning",
-      description: "Intelligent project planning that automatically creates timelines, assigns resources, and predicts potential bottlenecks.",
-      benefits: ["Reduce planning time by 70%", "Predict project risks", "Optimize resource allocation", "Automated timeline generation"]
+      icon: Bot,
+      title: "AI-Powered Chatbots",
+      description: "Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.",
+      benefits: ["Resolve 80% of queries instantly", "24/7 availability", "Multilingual support", "Context-aware responses"]
     },
     {
-      icon: Target,
-      title: "Smart Task Management",
-      description: "AI-driven task prioritization and assignment based on team capacity, skills, and project requirements.",
-      benefits: ["Intelligent task prioritization", "Skill-based assignments", "Workload balancing", "Deadline optimization"]
+      icon: Brain,
+      title: "Smart Ticket Routing",
+      description: "AI automatically categorizes and routes tickets to the right agents based on content, urgency, and expertise.",
+      benefits: ["Reduce response time by 70%", "Improve resolution accuracy", "Optimize agent workload", "Priority-based routing"]
+    },
+    {
+      icon: MessageSquare,
+      title: "Omnichannel Support",
+      description: "Unified support across email, chat, phone, social media, and messaging platforms with consistent experience.",
+      benefits: ["Unified customer view", "Cross-channel continuity", "Reduced response time", "Improved customer satisfaction"]
     },
     {
       icon: BarChart3,
-      title: "Predictive Analytics",
-      description: "Advanced analytics that forecast project outcomes, identify risks, and suggest optimization strategies.",
-      benefits: ["Project outcome prediction", "Risk identification", "Performance optimization", "Resource forecasting"]
-    },
-    {
-      icon: Users,
-      title: "Team Collaboration",
-      description: "Seamless collaboration tools with AI-powered communication optimization and conflict resolution.",
-      benefits: ["Enhanced team communication", "Conflict detection", "Meeting optimization", "Knowledge sharing"]
+      title: "Advanced Analytics",
+      description: "Comprehensive insights into support performance, customer satisfaction, and agent productivity.",
+      benefits: ["Real-time performance metrics", "Customer satisfaction tracking", "Agent productivity insights", "Predictive analytics"]
     },
     {
       icon: Zap,
       title: "Automated Workflows",
-      description: "Smart automation that handles routine tasks, notifications, and project updates without manual intervention.",
-      benefits: ["Automated status updates", "Smart notifications", "Workflow optimization", "Reduced manual work"]
+      description: "Smart automation that handles routine tasks, escalations, and follow-ups without human intervention.",
+      benefits: ["Automate repetitive tasks", "Reduce manual work by 60%", "Consistent process execution", "Faster resolution times"]
     },
     {
-      icon: Calendar,
-      title: "Intelligent Scheduling",
-      description: "AI-optimized scheduling that considers team availability, project dependencies, and resource constraints.",
-      benefits: ["Optimal meeting scheduling", "Resource conflict resolution", "Dependency management", "Capacity planning"]
+      icon: Users,
+      title: "Knowledge Management",
+      description: "AI-powered knowledge base that learns from interactions and provides accurate, up-to-date information.",
+      benefits: ["Self-updating knowledge base", "Instant information retrieval", "Reduced training time", "Consistent responses"]
     }
   ];
 
-  const projectTypes = [
+  const supportChannels = [
     {
-      name: "Software Development",
-      description: "Agile project management with AI-powered sprint planning and code quality monitoring",
-      icon: Code,
+      name: "Live Chat",
+      description: "Real-time chat support with AI assistance",
+      icon: MessageSquare,
       color: "from-blue-400 to-cyan-500",
-      results: "40% faster delivery"
+      responseTime: "< 30 seconds"
     },
     {
-      name: "Marketing Campaigns",
-      description: "Campaign management with AI-driven content optimization and performance tracking",
-      icon: Target,
-      color: "from-purple-400 to-pink-500",
-      results: "60% higher ROI"
-    },
-    {
-      name: "Construction Projects",
-      description: "Construction management with AI-powered resource optimization and safety monitoring",
-      icon: Building2,
-      color: "from-orange-400 to-red-500",
-      results: "30% cost reduction"
-    },
-    {
-      name: "Event Planning",
-      description: "Event management with AI-driven vendor selection and logistics optimization",
-      icon: Calendar,
+      name: "Email Support",
+      description: "AI-enhanced email ticket management",
+      icon: Mail,
       color: "from-green-400 to-emerald-500",
-      results: "50% time savings"
+      responseTime: "< 2 hours"
     },
     {
-      name: "Research Projects",
-      description: "Research management with AI-powered data analysis and collaboration tools",
-      icon: BookOpen,
+      name: "Phone Support",
+      description: "AI-powered call routing and assistance",
+      icon: Phone,
+      color: "from-purple-400 to-pink-500",
+      responseTime: "< 1 minute"
+    },
+    {
+      name: "Social Media",
+      description: "Monitor and respond across social platforms",
+      icon: Share2,
+      color: "from-orange-400 to-red-500",
+      responseTime: "< 1 hour"
+    },
+    {
+      name: "Video Support",
+      description: "Screen sharing and video assistance",
+      icon: Video,
       color: "from-indigo-400 to-purple-500",
-      results: "70% faster insights"
+      responseTime: "On-demand"
     },
     {
-      name: "Product Launch",
-      description: "Product launch management with AI-driven market analysis and go-to-market optimization",
-      icon: Rocket,
+      name: "Self-Service",
+      description: "AI-powered help center and FAQs",
+      icon: BookOpen,
       color: "from-yellow-400 to-orange-500",
-      results: "80% success rate"
+      responseTime: "Instant"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$197/month",
-      description: "Perfect for small teams and startups",
+      price: "$297/month",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 10 team members",
-        "Unlimited projects",
-        "Basic AI features",
-        "Task management",
+        "Up to 1,000 tickets/month",
+        "Basic AI chatbot",
+        "Email and chat support",
         "Basic analytics",
+        "Knowledge base",
         "Email support",
         "Mobile app access"
       ],
@@ -368,14 +369,14 @@ const AIProjectManagementPlatform: React.FC = () => {
     },
     {
       name: "Professional",
-      price: "$497/month",
+      price: "$697/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 50 team members",
-        "Advanced AI features",
-        "Predictive analytics",
+        "Up to 10,000 tickets/month",
+        "Advanced AI chatbot",
+        "Omnichannel support",
+        "Advanced analytics",
         "Custom workflows",
-        "Advanced reporting",
         "Priority support",
         "Team collaboration",
         "API access",
@@ -386,81 +387,81 @@ const AIProjectManagementPlatform: React.FC = () => {
     },
     {
       name: "Enterprise",
-      price: "$1,297/month",
+      price: "$1,997/month",
       description: "For large organizations",
       features: [
-        "Unlimited team members",
+        "Unlimited tickets",
         "White-label solution",
         "Advanced AI features",
         "Custom automation",
         "Dedicated account manager",
-        "Advanced security",
+        "Advanced reporting",
         "Multi-brand support",
-        "Custom development",
-        "SLA guarantees"
+        "SLA guarantees",
+        "Custom development"
       ],
       popular: false,
       color: "from-purple-400 to-pink-500"
     }
   ];
 
-  const integrations = [
-    { name: "Slack", icon: MessageSquare, color: "from-purple-400 to-pink-500" },
-    { name: "Microsoft Teams", icon: Users, color: "from-blue-400 to-indigo-500" },
-    { name: "Jira", icon: Target, color: "from-blue-500 to-blue-600" },
-    { name: "Asana", icon: CheckCircle, color: "from-green-400 to-emerald-500" },
-    { name: "Trello", icon: Grid, color: "from-blue-400 to-cyan-500" },
-    { name: "GitHub", icon: Code, color: "from-gray-800 to-gray-900" },
-    { name: "Google Workspace", icon: Globe, color: "from-green-400 to-blue-500" },
-    { name: "Salesforce", icon: Users, color: "from-blue-400 to-indigo-500" }
+  const automationTypes = [
+    {
+      title: "Ticket Auto-Classification",
+      description: "Automatically categorize and prioritize support tickets based on content analysis.",
+      results: "90% accuracy in classification"
+    },
+    {
+      title: "Smart Escalation",
+      description: "Intelligent escalation to human agents when AI cannot resolve the issue.",
+      results: "60% reduction in escalation time"
+    },
+    {
+      title: "Follow-up Automation",
+      description: "Automated follow-up emails to ensure customer satisfaction and gather feedback.",
+      results: "40% increase in satisfaction scores"
+    },
+    {
+      title: "Knowledge Base Updates",
+      description: "AI automatically updates knowledge base based on new solutions and common queries.",
+      results: "50% reduction in knowledge maintenance"
+    }
   ];
 
-  const useCases = [
-    {
-      title: "Software Development Teams",
-      description: "Streamline agile development with AI-powered sprint planning, code quality monitoring, and automated testing workflows.",
-      results: "Average 40% faster project delivery"
-    },
-    {
-      title: "Marketing Agencies",
-      description: "Manage multiple client campaigns with AI-driven content optimization, performance tracking, and resource allocation.",
-      results: "Average 60% increase in campaign ROI"
-    },
-    {
-      title: "Construction Companies",
-      description: "Optimize construction projects with AI-powered resource management, safety monitoring, and timeline optimization.",
-      results: "Average 30% reduction in project costs"
-    },
-    {
-      title: "Consulting Firms",
-      description: "Manage client projects with AI-driven resource allocation, timeline optimization, and performance tracking.",
-      results: "Average 50% improvement in project success rate"
-    }
+  const integrations = [
+    { name: "Salesforce", icon: Users, color: "from-blue-400 to-indigo-500" },
+    { name: "HubSpot", icon: Target, color: "from-orange-400 to-red-500" },
+    { name: "Zendesk", icon: Headphones, color: "from-green-400 to-emerald-500" },
+    { name: "Freshdesk", icon: MessageSquare, color: "from-blue-500 to-blue-600" },
+    { name: "Intercom", icon: Bot, color: "from-purple-400 to-pink-500" },
+    { name: "Slack", icon: MessageSquare, color: "from-purple-500 to-pink-500" },
+    { name: "Microsoft Teams", icon: Users, color: "from-blue-500 to-indigo-500" },
+    { name: "WhatsApp", icon: MessageSquare, color: "from-green-500 to-emerald-500" }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Helmet>
-        <title>AI Project Management Platform - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered project management platform that reduces planning time by 70% and improves project success rates by 50%. Intelligent task management, predictive analytics, and automated workflows." />
-        <meta name="keywords" content="AI project management, project management software, task management, team collaboration, project analytics, workflow automation" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-project-management-platform" />
+        <title>AI Customer Support Automation - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered customer support automation platform that resolves 80% of queries instantly and reduces response time by 70%. Omnichannel support with intelligent chatbots." />
+        <meta name="keywords" content="AI customer support, support automation, chatbot, omnichannel support, customer service, support analytics" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-customer-support-automation" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium mb-6">
-              <Calendar className="w-4 h-4 mr-2" />
-              AI-Powered Project Management
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-full text-sm font-medium mb-6">
+              <Headphones className="w-4 h-4 mr-2" />
+              AI-Powered Customer Support
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI Project Management Platform
+              AI Customer Support Automation
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your project management with AI that reduces planning time by 70% and improves success rates by 50%. 
-              Intelligent task management, predictive analytics, and automated workflows.
+              Transform your customer support with AI that resolves 80% of queries instantly and reduces response time by 70%. 
+              Provide exceptional support across all channels 24/7.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -483,20 +484,20 @@ const AIProjectManagementPlatform: React.FC = () => {
           {/* Key Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
             <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>
-              <div className="text-gray-300">Faster Planning</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
+              <div className="text-gray-300">Queries Resolved Instantly</div>
             </div>
             <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-              <div className="text-3xl font-bold text-green-400 mb-2">50%</div>
-              <div className="text-gray-300">Higher Success Rate</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">70%</div>
+              <div className="text-gray-300">Faster Response Time</div>
             </div>
             <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
-              <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
-              <div className="text-gray-300">Time Savings</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+              <div className="text-gray-300">Always Available</div>
             </div>
             <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl">
               <div className="text-3xl font-bold text-pink-400 mb-2">95%</div>
-              <div className="text-gray-300">Team Satisfaction</div>
+              <div className="text-gray-300">Customer Satisfaction</div>
             </div>
           </div>
         </div>
@@ -510,14 +511,14 @@ const AIProjectManagementPlatform: React.FC = () => {
               Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI project management platform combines advanced machine learning with project management expertise to deliver exceptional results.
+              Our AI customer support platform combines advanced machine learning with customer service expertise to deliver exceptional support experiences.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center mb-6">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -536,29 +537,56 @@ const AIProjectManagementPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Project Types */}
+      {/* Support Channels */}
       <section className="py-20 px-4 bg-white/5">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Perfect for Any Project Type
+              Omnichannel Support
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI project management platform adapts to any industry and project type with specialized features and optimizations.
+              Provide consistent, high-quality support across all customer touchpoints with unified AI assistance.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projectTypes.map((project, index) => (
+            {supportChannels.map((channel, index) => (
               <div key={index} className="p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className={`w-16 h-16 bg-gradient-to-r ${project.color} rounded-xl flex items-center justify-center mb-6`}>
-                  <project.icon className="w-8 h-8 text-white" />
+                <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-xl flex items-center justify-center mb-6`}>
+                  <channel.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{project.name}</h3>
-                <p className="text-gray-300 mb-6">{project.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-4">{channel.name}</h3>
+                <p className="text-gray-300 mb-6">{channel.description}</p>
+                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-full text-sm font-medium">
+                  <Clock className="w-4 h-4 mr-2" />
+                  {channel.responseTime}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Automation Types */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Intelligent Automation
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Advanced automation that handles routine tasks and improves support efficiency without compromising quality.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {automationTypes.map((automation, index) => (
+              <div key={index} className="p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
+                <h3 className="text-2xl font-semibold text-white mb-4">{automation.title}</h3>
+                <p className="text-gray-300 mb-6">{automation.description}</p>
                 <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-full text-sm font-medium">
                   <TrendingUp className="w-4 h-4 mr-2" />
-                  {project.results}
+                  {automation.results}
                 </div>
               </div>
             ))}
@@ -567,14 +595,14 @@ const AIProjectManagementPlatform: React.FC = () => {
       </section>
 
       {/* Integrations */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-white/5">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Connect with your favorite tools and platforms to create a unified project management ecosystem.
+              Connect with your existing tools and platforms to create a unified support ecosystem.
             </p>
           </div>
 
@@ -592,14 +620,14 @@ const AIProjectManagementPlatform: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 bg-white/5">
+      <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your team size and needs. All plans include our core AI features with no hidden fees.
+              Choose the plan that fits your business needs. All plans include our core AI features with no hidden fees.
             </p>
           </div>
 
@@ -650,7 +678,7 @@ const AIProjectManagementPlatform: React.FC = () => {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-300 mb-4">Need a custom solution for your organization?</p>
+            <p className="text-gray-300 mb-4">Need a custom solution for your enterprise?</p>
             <a 
               href="mailto:kleber@ziontechgroup.com" 
               className="inline-flex items-center px-6 py-3 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
@@ -662,42 +690,15 @@ const AIProjectManagementPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Proven Results Across Industries
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how teams across industries are achieving remarkable results with our AI project management platform.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
-                <p className="text-gray-300 mb-6">{useCase.description}</p>
-                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-full text-sm font-medium">
-                  <TrendingUp className="w-4 h-4 mr-2" />
-                  {useCase.results}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12 border border-white/10">
+          <div className="text-center bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-12 border border-white/10">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Project Management?
+              Ready to Transform Your Customer Support?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of teams already using our AI project management platform to deliver projects faster, more efficiently, and with higher success rates.
+              Join thousands of businesses already using our AI customer support automation to provide exceptional support experiences and reduce costs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -726,4 +727,4 @@ const AIProjectManagementPlatform: React.FC = () => {
   );
 };
 
-export default AIProjectManagementPlatform;
+export default AICustomerSupportAutomation;
