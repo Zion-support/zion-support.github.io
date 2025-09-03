@@ -3,7 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
-  eslint: { ignoreDuringBuilds: true },
+  eslint: { 
+    ignoreDuringBuilds: true,
+    dirs: ['pages', 'components', 'lib', 'hooks']
+  },
   typescript: { ignoreBuildErrors: true },
   trailingSlash: true,
   generateBuildId: async () => {
