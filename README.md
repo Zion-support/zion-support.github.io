@@ -4,23 +4,50 @@ A modern, high-performance website built with Next.js, showcasing AI services, I
 
 ## 🚀 Features
 
-- **Modern Tech Stack**: Next.js 15, React 18, TypeScript, Tailwind CSS
-- **Performance Optimized**: Bundle analysis, lazy loading, image optimization
-- **SEO Enhanced**: Comprehensive meta tags, structured data, sitemap generation
-- **Security First**: Security headers, dependency auditing, XSS protection
-- **Accessibility**: WCAG compliant, semantic HTML, keyboard navigation
-- **Mobile Responsive**: Optimized for all device sizes
-- **Error Handling**: Comprehensive error boundaries and monitoring
+## ✨ Features
 
-## 🛠️ Tech Stack
+- **AI-Powered Solutions**: Advanced artificial intelligence and machine learning capabilities
+- **Cloud Infrastructure**: Scalable and secure cloud computing solutions
+- **Digital Transformation**: Complete digital transformation services
+- **Real-time Analytics**: Advanced analytics and reporting tools
+- **Security First**: Enterprise-grade security and compliance
+- **Responsive Design**: Mobile-first, responsive user interface
 
-### Frontend
-- **Next.js 15** - React framework with SSR/SSG
-- **React 18** - UI library with concurrent features
-- **TypeScript** - Type-safe JavaScript
+## 🛠️ Technology Stack
+
+- **Frontend**: Next.js 15, React 18, TypeScript
+- **Styling**: Tailwind CSS, Framer Motion
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Cloud**: AWS, Google Cloud, Azure
+- **AI/ML**: TensorFlow, PyTorch, OpenAI
+- **Testing**: Jest, React Testing Library
+- **CI/CD**: GitHub Actions, Docker
+
 - **Tailwind CSS** - Utility-first CSS framework
 - **Framer Motion** - Animation library
 
+### State Management
+
+- **React Hooks** - useState, useEffect for local state
+- **Context API** - For global state management
+- **React Router** - Client-side routing
+
+### Performance
+
+- **Lazy Loading** - Components loaded on demand
+- **Image Optimization** - Next.js image optimization
+- **Code Splitting** - Automatic bundle splitting
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+- Git
+
+### Installation
 ### Development Tools
 - **ESLint** - Code linting
 - **Prettier** - Code formatting
@@ -34,26 +61,27 @@ A modern, high-performance website built with Next.js, showcasing AI services, I
 
 ## 📦 Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Zion-Technologies/Website.git
-   cd Website
-   ```
+1. Clone the repository: ```bash
+git clone https://github.com/your-org/zion-tech-group.git
+cd zion-tech-group
+```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+2. Install dependencies:
+```bash
+npm install
+```
 
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env.local
-   # Edit .env.local with your configuration
-   ```
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+```
 
-4. **Run the development server**
+4. Run the development server:
+```bash
+npm run dev
+```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
    ```bash
    npm run dev
    # or
@@ -77,49 +105,101 @@ npm run build
 npm run start
 ```
 
-### Performance Analysis
-```bash
-npm run analyze
-npm run perf:lighthouse
-```
+### Header Component (`src/components/header/Header.jsx`)
 
-## 📁 Project Structure
+- Logo with Zion Tech Group branding
+- Main navigation with dropdown menus
+- Search functionality with suggestions
+- User authentication and language selection
+- Mobile-responsive design
 
-```
-├── pages/                 # Next.js pages
-│   ├── api/              # API routes
-│   ├── _app.tsx          # App wrapper
-│   ├── _document.tsx     # Document structure
-│   └── index.tsx         # Homepage
-├── src/
-│   ├── components/       # React components
-│   │   ├── ui/          # UI components
-│   │   ├── layout/      # Layout components
-│   │   └── seo/         # SEO components
-│   ├── hooks/           # Custom React hooks
-│   ├── lib/             # Utility libraries
-│   ├── styles/          # Global styles
-│   └── types/           # TypeScript types
-├── public/              # Static assets
-├── scripts/             # Build and utility scripts
-└── automation/          # Automation scripts
-```
+### Footer Component (`src/components/Footer.jsx`)
 
-## 🎯 Key Components
+- Company information and branding
+- Organized link sections
+- Newsletter signup
+- Social media links
+- Trust indicators and certifications
+
+### Sidebar Component (`src/components/Sidebar.jsx`)
+
+- Collapsible navigation sections
+- Service and solution categories
+- Quick access to key pages
+- Mobile-friendly overlay design
+
+### HomePage Component (`src/pages/HomePage.jsx`)
+
+- Hero section with compelling messaging
+- Feature highlights with icons
+- Statistics and social proof
+- Service preview cards
+- Testimonials and CTA sections
 
 ### SEOHead
 Comprehensive SEO component with meta tags, Open Graph, Twitter Cards, and structured data.
 
-### ErrorBoundary
-Robust error handling with fallback UI and error reporting.
+### Service Data (`src/data/marketplaceData.js`)
 
-### LazyImage
-Performance-optimized image component with lazy loading and intersection observer.
+- Search suggestions and keywords
+- Service categories and descriptions
+- Industry solutions and use cases
+- Testimonials and case studies
+
+### Page Templates
+
+- **SimplePage.jsx** - Template for various routes with dynamic content
+- **ComprehensivePricing2025.jsx** - Pricing page with plans and add-ons
+- **Sitemap.jsx** - Complete site navigation structure
 
 ### LoadingSpinner
 Accessible loading component with smooth animations.
 
-## 🔧 Scripts
+### Enhanced Search Input
+
+- Real-time search suggestions
+- Recent and popular searches
+- Category-based filtering
+- Keyboard navigation support
+
+### Search Suggestions
+
+- Service-related keywords
+- Industry-specific terms
+- Technology stack references
+- Company and solution names
+
+## 📊 Analytics and SEO
+
+### SEO Features
+
+- Meta tags and descriptions
+- Structured data markup
+- Sitemap generation
+- Open Graph tags
+
+### Performance Monitoring
+
+- Lighthouse performance metrics
+- Core Web Vitals tracking
+- Page load optimization
+- Bundle size analysis
+
+## 🚀 Deployment
+
+### Build Process
+
+1. **Development**: `npm run dev` for local development
+2. **Build**: `npm run build` for production build
+3. **Start**: `npm start` for production server
+
+### Environment Variables
+
+- Configure environment variables in `.env.local`
+- Set production URLs and API endpoints
+- Configure analytics and monitoring
+
+## 📜 Available Scripts
 
 ### Development
 - `npm run dev` - Start development server
@@ -130,7 +210,7 @@ Accessible loading component with smooth animations.
 
 ### Performance
 - `npm run analyze` - Bundle analysis
-- `npm run perf:lighthouse` - Lighthouse audit
+- `npm run perf: lighthouse` - Lighthouse audit
 - `npm run perf:monitor` - Performance monitoring
 
 ### Security
@@ -167,30 +247,38 @@ Accessible loading component with smooth animations.
 - **Image Optimization**: WebP/AVIF support
 - **Code Splitting**: Route-based splitting
 
+## 🏗️ Project Structure
+
+```
+zion-tech-group/
+├── src/
+│   ├── components/     # React components
+│   ├── pages/         # Next.js pages
+│   ├── hooks/         # Custom React hooks
+│   ├── utils/         # Utility functions
+│   ├── types/         # TypeScript type definitions
+│   └── styles/        # Global styles
+├── public/            # Static assets
+├── scripts/           # Automation scripts
+├── __tests__/         # Test files
+└── docs/              # Documentation
+```
+
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+This is a proprietary project for Zion Tech Group. For feature requests or bug reports, please contact the development team.
 
-### Code Standards
-- Follow TypeScript best practices
-- Use ESLint and Prettier
-- Write tests for new features
-- Follow accessibility guidelines
-- Optimize for performance
+---
+
+**Zion Tech Group** - Transforming businesses through innovative technology solutions.
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+For technical support or questions about the website: - **Email**: contact@ziontechgroup.com
+- **Documentation**: Check the `/docs` section
+- **Issues**: Use the GitHub issues page
 
-## 📞 Support
-
-- **Email**: support@ziontechgroup.com
-- **Website**: [https://ziontechgroup.com](https://ziontechgroup.com)
-- **Documentation**: [https://docs.ziontechgroup.com](https://docs.ziontechgroup.com)
+For support, email support@ziontechgroup.com or create an issue in the repository.
 
 ## 🏢 About Zion Tech Group
 
@@ -202,11 +290,7 @@ Zion Tech Group is a leading provider of revolutionary AI services, IT solutions
 - **Micro SaaS**: Scalable software solutions, API development
 - **Consulting**: Technology strategy, digital transformation
 
-### Contact
-- **Address**: 364 E Main St STE 1008, Middletown, DE 19709
-- **Phone**: +1-302-464-0950
-- **Email**: kleber@ziontechgroup.com
-
----
-
-Built with ❤️ by the Zion Tech Group team
+- [Website](https://ziontechgroup.com)
+- [Documentation](https://docs.ziontechgroup.com)
+- [API Reference](https://api.ziontechgroup.com/docs)
+- [Community](https://community.ziontechgroup.com)

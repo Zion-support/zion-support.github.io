@@ -1,14 +1,70 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+#!/usr/bin/env node;
 
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
-
-let totalImprovements = 0;
+import fs from 'fs';import path from 'path';import { glob } from 'glob';';let totalImprovements = 0;
 let filesProcessed = 0;
+;
+// Common type replacements;
+const typeReplacements = {;
+  // React types;
+  'any[]': 'React.ReactNode[]',';  "any": 'unknown',';  'any)': 'unknown)',';  'any;': 'unknown;',';  'any,': 'unknown,',';  'any ': 'unknown ',';  'any=': 'unknown=',';  '"any":': '"unknown":',';  'any>': 'unknown>',';  'any<': 'unknown<',';  'any}': 'unknown}',';  'any{': 'unknown{',';  // Specific React component types;
+  'React.ComponentType<any>': 'React.ComponentType<Record<string, unknown>>',';  'React.FC<any>': 'React.FC<Record<string, unknown>>',';  'React.Component<any>': 'React.Component<Record<string, unknown>>',';  // Event types;
+  'React.ChangeEvent<any>': 'React.ChangeEvent<HTMLInputElement>',';  'React.MouseEvent<any>': 'React.MouseEvent<HTMLButtonElement>',';  'React.FormEvent<any>': 'React.FormEvent<HTMLFormElement>',';  // Function types;
+  '() => any': '() => void',';  '("value": any)': '("value": unknown)',';  '("item": any)': '("item": unknown)',';  '("data": any)': '("data": unknown)',';  '("props": any)': '("props": Record<string, unknown>)',';  '("event": any)': '("event": React.SyntheticEvent)',';  // Array types;
+  'any[]': 'unknown[]',';  'Array<any>': 'Array<unknown>',';  // Object types;
+  'Record<string, any>': 'Record<string, unknown>',';  '{ ["key": string]: any }': '{ ["key": string]: unknown }',';};;
+// Interface definitions for common patterns;
+const commonInterfaces = ``;// Common interfaces for better type safety;
+interface ApiResponse<T = unknown> {;
+  "data": T;";  "status": number;";  message?: string;,
 
 // Common type replacements
 const typeReplacements = {
+  // React types'
+  'any[]: 'React.ReactNode[],
+  'any': 'unknown',
+  'any): 'unknown),
+  'any;: 'unknown;,
+  'any,: 'unknown,,
+  'any ': 'unknown ',
+  'any=': 'unknown=',
+  'any:': 'unknow,
+    n:',
+  'any>': 'unknown>',
+  'any<': 'unknown<',
+  'any}: 'unknown},
+  'any{': 'unknown{',
+  
+  // Specific React component types'
+  'React.ComponentType<any>': 'React.ComponentType<Record<string, unknown>>',
+  'React.FC<any>': 'React.FC<Record<string, unknown>>',
+  'React.Component<any>': 'React.Component<Record<string, unknown>>',
+  
+  // Event types'
+  'React.ChangeEvent<any>': 'React.ChangeEvent<HTMLInputElement>',
+  'React.MouseEvent<any>': 'React.MouseEvent<HTMLButtonElement>',
+  'React.FormEvent<any>': 'React.FormEvent<HTMLFormElement>',
+  
+  // Function types'
+  '() => any': '() => void',
+  '(value: any): '(valu,
+    e: unknown),
+  '(item: any): '(ite,
+    m: unknown),
+  '(data: any): '(dat,
+    a: unknown),
+  '(props: any): '(prop,
+    s: Record<string, unknown>),
+  '(event: any): '(even,
+    t: React.SyntheticEvent),
+  
+  // Array types'
+  'any[]: 'unknown[],
+  'Array<any>': 'Array<unknown>',
+  
+  // Object types'
+  'Record<string, any>': 'Record<string, unknown>',
+  '{ [key: string]: any }: '{ [key: string]: unknown },
   // React types
   'any[]': 'React.ReactNode[],any': 'unknown,any)': 'unknown),any;': 'unknown;,any,': 'unknown,,any ': 'unknown ,any=': 'unknown=,any:': 'unknown:,any>': 'unknown>,any<': 'unknown<,any}': 'unknown},any{': 'unknown{',
   
@@ -25,31 +81,35 @@ const typeReplacements = {
   'any[]': 'unknown[],Array<any>': 'Array<unknown>',
   
   // Object types
-  'Record<string, any>': 'Record<string, unknown>,{ [key: string]: any }': '{ [key: string]: unknown }',
-};
+  'Record<string, any>': 'Record<string, unknown>,{ [key: string]: any }': '{ [key: string]: unknown }'};
 
-// Interface definitions for common patterns
+// Interface definitions for common patterns'
 const commonInterfaces = `
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
-  status: number;
+  statu,
+    s: number;
   message?: string;
 }
 
 interface User {
   id: string;
   email: string;
-  name: string;
-  role: 'admin' | 'user' | 'guest';
+  nam,
+    e: string;`
+  rol,
+    e: 'admin' | 'user' | 'guest';
 }
 
 interface Service {
   id: string;
   name: string;
   description: string;
-  price: number;
-  category: string;
+  pric,
+    e: number;
+  categor,
+    y: string;
 }
 
 interface FormData {
@@ -57,21 +117,29 @@ interface FormData {
 }
 
 interface ComponentProps {
+;
+interface User {;
+  "id": string;";  "email": string;";  "name": string;";  "role": 'admin' | 'user' | 'guest';}';;
+interface Service {;
+  "id": string;";  "name": string;";  "description": string;";  "price": number;";  "category": string;,";}
+;
+interface FormData {;
+  ["key": string]: string | number | boolean | File;,";}
+;
+interface ComponentProps {;
   className?: string;
   children?: React.ReactNode;
-  [key: string]: unknown;
-}
-`;
-
-// Improve TypeScript file
-function improveTypeScriptFile(content, filePath) {
+  ["key": string]: unknown;,";}
+`;`;
+// Improve TypeScript file;
+function improveTypeScriptFile(content, filePath) {;
   let improved = content;
   let changes = 0;
 
-  // Add common interfaces if not present
-  if (improved.includes('any') && !improved.includes('interface ApiResponse')) {
+  // Add common interfaces if not present`
+  if (improved.includes('any') && !improved.includes('interface ApiResponse')) {'
     const importIndex = improved.indexOf('import');
-    if (importIndex !== -1) {
+    if (importIndex !== -1) {'
       const nextLineIndex = improved.indexOf('\n', importIndex);
       improved = improved.slice(0, nextLineIndex) + commonInterfaces + '\n' + improved.slice(nextLineIndex);
       changes++;
@@ -79,20 +147,30 @@ function improveTypeScriptFile(content, filePath) {
   }
 
   // Replace any types with more specific types
-  Object.entries(typeReplacements).forEach(([anyType, replacement]) => {
+  Object.entries(typeReplacements).forEach(([anyType, replacement]) => {'
     const regex = new RegExp(anyType.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
     const matches = improved.match(regex);
     if (matches) {
+;
+  // Add common interfaces if not present;
+  if (improved.includes('any') && !improved.includes('interface ApiResponse')) {';    const importIndex = improved.indexOf('import');    if (importIndex !== -1) {;      const nextLineIndex = improved.indexOf('\n', importIndex);      improved =;        improved.slice(0, nextLineIndex) +;
+        commonInterfaces +;
+        '\n' +';        improved.slice(nextLineIndex);      changes++;}
+  }
+;
+  // Replace any types with more specific types;
+  Object.entries(typeReplacements).forEach(([anyType, replacement]) => {;
+    const regex = new RegExp(;);      anyType.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),';      'g'';    );    const matches = improved.match(regex);
+    if (matches) {;
       improved = improved.replace(regex, replacement);
-      changes += matches.length;
-    }
+      changes += matches.length;}
   });
-
-  // Add proper typing for function parameters
+;
+  // Add proper typing for function parameters;
   const functionParamRegex = /function\s+\w+\s*\(\s*(\w+)\s*:\s*any\s*\)/g;
   const functionMatches = improved.match(functionParamRegex);
   if (functionMatches) {
-    improved = improved.replace(functionParamRegex, (match, paramName) => {
+    improved = improved.replace(functionParamRegex, (match, paramName) => {'
       return match.replace(`: any`, ': unknown');
     });
     changes += functionMatches.length;
@@ -102,7 +180,7 @@ function improveTypeScriptFile(content, filePath) {
   const arrowParamRegex = /\(\s*(\w+)\s*:\s*any\s*\)\s*=>/g;
   const arrowMatches = improved.match(arrowParamRegex);
   if (arrowMatches) {
-    improved = improved.replace(arrowParamRegex, (match, paramName) => {
+    improved = improved.replace(arrowParamRegex, (match, paramName) => {'
       return match.replace(`: any`, ': unknown');
     });
     changes += arrowMatches.length;
@@ -112,7 +190,7 @@ function improveTypeScriptFile(content, filePath) {
   const destructuringRegex = /\{\s*(\w+)\s*:\s*any\s*\}/g;
   const destructuringMatches = improved.match(destructuringRegex);
   if (destructuringMatches) {
-    improved = improved.replace(destructuringRegex, (match, propName) => {
+    improved = improved.replace(destructuringRegex, (match, propName) => {'
       return match.replace(`: any`, ': unknown');
     });
     changes += destructuringMatches.length;
@@ -121,7 +199,7 @@ function improveTypeScriptFile(content, filePath) {
   // Add proper typing for useState
   const useStateRegex = /useState\s*<\s*any\s*>/g;
   const useStateMatches = improved.match(useStateRegex);
-  if (useStateMatches) {
+  if (useStateMatches) {'
     improved = improved.replace(useStateRegex, 'useState<unknown>');
     changes += useStateMatches.length;
   }
@@ -129,24 +207,65 @@ function improveTypeScriptFile(content, filePath) {
   // Add proper typing for useEffect
   const useEffectRegex = /useEffect\s*\(\s*\(\s*\)\s*=>\s*{[^}]*},\s*\[\s*\]\s*\)/g;
   const useEffectMatches = improved.match(useEffectRegex);
-  if (useEffectMatches) {
+  if (useEffectMatches) {'
     console.log(`⚠️  Found useEffect with empty dependencies in ${filePath}`);
   }
 
   // Add proper typing for event handlers
   const eventHandlerRegex = /const\s+(\w+)\s*=\s*\(\s*event\s*:\s*any\s*\)\s*=>/g;
+  if (functionMatches) {;
+    improved = improved.replace(functionParamRegex, (match, paramName) => {;
+      return match.replace(`: any`, ': unknown');    });`;    changes += functionMatches.length;,';}
+;
+  // Add proper typing for arrow function parameters;
+  const arrowParamRegex = /\(\s*(\w+)\s*:\s*any\s*\)\s*=>/g;
+  const arrowMatches = improved.match(arrowParamRegex);
+  if (arrowMatches) {;
+    improved = improved.replace(arrowParamRegex, (match, paramName) => {;
+      return match.replace(`: any`, ': unknown');    });`;    changes += arrowMatches.length;,';}
+;
+  // Add proper typing for object destructuring;
+  const destructuringRegex = /\{\s*(\w+)\s*:\s*any\s*\}/g;
+  const destructuringMatches = improved.match(destructuringRegex);
+  if (destructuringMatches) {;
+    improved = improved.replace(destructuringRegex, (match, propName) => {;
+      return match.replace(`: any`, ': unknown');    });`;    changes += destructuringMatches.length;}
+;
+  // Add proper typing for useState;
+  const useStateRegex = /useState\s*<\s*any\s*>/g;
+  const useStateMatches = improved.match(useStateRegex);
+  if (useStateMatches) {;
+    improved = improved.replace(useStateRegex, 'useState<unknown>');    changes += useStateMatches.length;,';}
+;
+  // Add proper typing for useEffect;
+  const useEffectRegex =;
+    /useEffect\s*\(\s*\(\s*\)\s*=>\s*{[^}]*},\s*\[\s*\]\s*\)/g;
+  const useEffectMatches = improved.match(useEffectRegex);
+  if (useEffectMatches) {;
+    console.log(`⚠️  Found useEffect with empty dependencies in ${filePath}`);`;  }
+;
+  // Add proper typing for event handlers;
+  const eventHandlerRegex =;
+    /const\s+(\w+)\s*=\s*\(\s*event\s*:\s*any\s*\)\s*=>/g;
   const eventHandlerMatches = improved.match(eventHandlerRegex);
+  if (eventHandlerMatches) {;
+    improved = improved.replace(eventHandlerRegex, (match, handlerName) => {;
+      return match.replace('"event": any', '"event": React.SyntheticEvent');    });    changes += eventHandlerMatches.length;,
   if (eventHandlerMatches) {
+    improved = improved.replace(eventHandlerRegex, (match, handlerName) => {`
+      return match.replace('event: any', 'event: React.SyntheticEvent');
     improved = improved.replace(eventHandlerRegex, (match, handlerName) => {
       return match.replace('event: any,event: React.SyntheticEvent');
     });
     changes += eventHandlerMatches.length;
   }
 
-  // Add proper typing for API calls
+  // Add proper typing for API calls'
   const apiCallRegex = /fetch\s*\(\s*['"][^'"]+['"]\s*\)\s*\.then\s*\(\s*\(\s*response\s*:\s*any\s*\)/g;
   const apiCallMatches = improved.match(apiCallRegex);
   if (apiCallMatches) {
+    improved = improved.replace(apiCallRegex, (match) => {"
+      return match.replace('response: any', 'response: Response');
     improved = improved.replace(apiCallRegex, (match) => {
       return match.replace('response: any,response: Response');
     });
@@ -158,54 +277,97 @@ function improveTypeScriptFile(content, filePath) {
 
 // Process individual file
 function processFile(filePath) {
-  try {
+  try {'
     const content = fs.readFileSync(filePath, 'utf8');
     const result = improveTypeScriptFile(content, filePath);
 
-    if (result.changes > 0) {
+    if (result.changes > 0) {'
       fs.writeFileSync(filePath, result.content, 'utf8');
       totalImprovements += result.changes;
       console.log(`✅ Improved ${filePath} (${result.changes} type improvements)`);
     }
 
     filesProcessed++;
-  } catch (error) {
+  } catch (error) {`
     console.error(`❌ Error processing ${filePath}:`, error.message);
   }
-}
+;
+  // Add proper typing for API calls;
+  const apiCallRegex =;
+    /fetch\s*\(\s*['"][^'"]+['"]\s*\)\s*\.then\s*\(\s*\(\s*response\s*:\s*any\s*\)/g;";  const apiCallMatches = improved.match(apiCallRegex);
+  if (apiCallMatches) {;
+    improved = improved.replace(apiCallRegex, match => {;);      return match.replace('"response": any', '"response": Response');    });    changes += apiCallMatches.length;}
+;
+  return { "content": improved, changes };,";}
+;
+// Process individual file;
+function processFile(filePath) {;
+  try {;
+    const content = fs.readFileSync(filePath, 'utf8');    const result = improveTypeScriptFile(content, filePath);
+;
+    if (result.changes > 0) {;
+      fs.writeFileSync(filePath, result.content, 'utf8');      totalImprovements += result.changes;      console.log(;);        `✅ Improved ${filePath} (${result.changes} type improvements)``;      );}
+;
+    filesProcessed++;} catch (error) {;
+    console.error(`❌ Error processing ${filePath}:`, error.message);`;  }
 
 // Generate TypeScript improvement report
 function generateTypeScriptReport() {
   const report = {
     timestamp: new Date().toISOString(),
     improvements: {
-      totalFilesProcessed: filesProcessed,
+      totalFilesProcesse,
+    d: filesProcessed,
       totalTypeImprovements: totalImprovements,
+      recommendations: [`
+        'Consider using strict TypeScript configuration',
+        'Add proper error handling with typed error objects',
+        'Use discriminated unions for better type safety',
+        'Implement proper API response typing',
+        'Add JSDoc comments for complex functions',
+        'Use const assertions for immutable data',
+        'Consider using branded types for IDs',
       recommendations: [
-        'Consider using strict TypeScript configuration,Add proper error handling with typed error objects,Use discriminated unions for better type safety,Implement proper API response typing,Add JSDoc comments for complex functions,Use const assertions for immutable data,Consider using branded types for IDs',
-      ]
-    }
+        'Consider using strict TypeScript configuration,Add proper error handling with typed error objects,Use discriminated unions for better type safety,Implement proper API response typing,Add JSDoc comments for complex functions,Use const assertions for immutable data,Consider using branded types for IDs'];
+}
   };
-
+'
   fs.writeFileSync('typescript-improvement-report.json', JSON.stringify(report, null, 2));
   console.log('📊 TypeScript improvement report generated: typescript-improvement-report.json');
 }
 
 // Main improvement function
-async function main() {
+async function main() {'
   console.log('🔧 Starting TypeScript improvements...\n');
 
+  const patterns = ['
+    'src/**/*.{ts,tsx},
+    'pages/**/*.{ts,tsx},
+    'components/**/*.{ts,tsx}
+  ]
+
+  const excludeDirs = ['
+    'node_modules',
+    '.next',
+    'build',
+    'dist',
+    'scripts',
+    'automation',
+    'automation_backup',
+    'src.disabled',
+    'pages.disabled',
+    'components.disabled'
   const patterns = [
     'src/**/*.{ts,tsx},pages/**/*.{ts,tsx},components/**/*.{ts,tsx}'
-  ];
+  ]
 
   const excludeDirs = [
     'node_modules,.next,build,dist,scripts,automation,automation_backup,src.disabled,pages.disabled,components.disabled'
-  ];
+  ]
 
   for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      ignore: excludeDirs.map(dir => `**/${dir}/**`)
+    const files = await glob(pattern, {'
+      ignore: excludeDirs.map(dir => `**/${dir}/**`);
     });
 
     for (const file of files) {
@@ -214,12 +376,33 @@ async function main() {
   }
 
   generateTypeScriptReport();
-
-  console.log(`\n📊 TypeScript Improvement Summary:`);
-  console.log(`   Files processed: ${filesProcessed}`);
-  console.log(`   Total type improvements: ${totalImprovements}`);
+`
+  console.log(`\n📊 TypeScript Improvement Summary:`);`
+  console.log(`   Files processe,
+    d: ${filesProcessed}`);`
+  console.log(`   Total type improvements: ${totalImprovements}`);`
   console.log(`\n✨ TypeScript improvements completed!`);
 }
 
 // Run the script
-main().catch(console.error);
+main().catch(console.error);`
+;
+// Generate TypeScript improvement report;
+function generateTypeScriptReport() {;
+  const report = {;
+    "timestamp": new Date().toISOString(),;";    "improvements": {;";      "totalFilesProcessed": filesProcessed,;";      "totalTypeImprovements": totalImprovements,;";      "recommendations": [;";        'Consider using strict TypeScript configuration',';        'Add proper error handling with typed error objects',';        'Use discriminated unions for better type safety',';        'Implement proper API response typing',';        'Add JSDoc comments for complex functions',';        'Use const assertions for immutable data',';        'Consider using branded types for IDs',';      ],;,';},;};
+;
+  fs.writeFileSync(;);    'typescript-improvement-report.json',';    JSON.stringify(report, null, 2);  );
+  console.log(;);    '📊 TypeScript improvement report "generated": typescript-improvement-report.json'';  );,';}
+;
+// Main improvement function;
+async function main() {;
+  console.log('🔧 Starting TypeScript improvements...\n');';  const patterns = [;
+    'src/**/*.{ts,tsx}',';    'pages/**/*.{ts,tsx}',';    'components/**/*.{ts,tsx}',';  ]
+  const excludeDirs = [;
+    'node_modules',';    '.next',';    'build',';    'dist',';    'scripts',';    'automation',';    'automation_backup',';    'src.disabled',';    'pages.disabled',';    'components.disabled',';  ]
+  for (const pattern of patterns) {;
+    const files = await glob(pattern, {;);      "ignore": excludeDirs.map(dir => `**/${dir}/* */)
+=======
+#!/usr/bin/env node; import fs from 'fs';import path from 'path';import { glob } from 'glob';';let totalImprovements = 0; let filesProcessed = 0; // Common type replacements; const typeReplacements = {; // React types; 'any[]': 'React.ReactNode[]','; "any: 'unknown','; 'any)': 'unknown)','; 'any;': 'unknown;','; 'any,': 'unknown,','; 'any ': 'unknown ','; 'any=': 'unknown=','; 'any: ': 'unknown','; 'any>': 'unknown>','; 'any<': 'unknown<','; 'any}': 'unknown}','; 'any{': 'unknown{',';'; // Specific React component types; 'React.ComponentType<any>': 'React.ComponentType<Record<string, unknown>>','; 'React.FC<any>': 'React.FC<Record<string, unknown>>','; 'React.Component<any>': 'React.Component<Record<string, unknown>>',';'; // Event types; 'React.ChangeEvent<any>': 'React.ChangeEvent<HTMLInputElement>','; 'React.MouseEvent<any>': 'React.MouseEvent<HTMLButtonElement>','; 'React.FormEvent<any>': 'React.FormEvent<HTMLFormElement>',';'; // Function types; '() => any' '() => void','; '(value": any)': '("value unknown)','; '(item: any)' '(item unknown)','; '(data": any)': '("data unknown)','; '(props: any)' '(props Record<string, unknown>)','; '(event": any)': '("event React.SyntheticEvent)',';'; // Array types; 'any[]': 'unknown[]','; 'Array<any>': 'Array<unknown>',';'; // Object types; 'Record<string, any>': 'Record<string, unknown>','; '{ [key: string] any }': '{ [key string] unknown }',';};'; // Interface definitions for common patterns; const commonInterfaces = ``;// Common interfaces for better type safety; interface ApiResponse<T = unknown> {; data": T"; status number; message? string, }; // Interface definitions for common patterns' const commonInterfaces = ` // Common interfaces for better type safety interface ApiResponse<T = unknown> { data: T, statu, s: number; message? string, } interface User { id: string; email string, nam, e: string,` rol, e: 'admin' | 'user' | 'guest', } interface Service { id: string; name: string; description string, pric, e: number, categor, y: string, } interface FormData { [key: string] string | number | boolean | File, } interface ComponentProps { className?: string; children?: React.ReactNode; [key string] unknown,;} `;`; // Improve TypeScript file; function improveTypeScriptFile(content, filePath) {; let improved = content; let changes = 0; // Add common interfaces if not present` if (improved.includes('any') && !improved.includes('interface ApiResponse')) {' const importIndex = improved.indexOf('import'); if (importIndex !== -1) {' const nextLineIndex = improved.indexOf('\n', importIndex); improved = improved.slice(0, nextLineIndex) + commonInterfaces + '\n' + improved.slice(nextLineIndex); changes++; } } // Replace any types with more specific types Object.entries(typeReplacements).forEach(([anyType, replacement]) => {' const regex = new RegExp(anyType.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'); const matches = improved.match(regex); if (matches) { improved = improved.replace(regex, replacement); changes += matches.length;, } }); // Add proper typing for function parameters; const functionParamRegex = /function\s+\w+\s*\(\s*(\w+)\s*\s*any\s*\)/g; const functionMatches = improved.match(functionParamRegex); if (functionMatches) { improved = improved.replace(functionParamRegex, (match, paramName) => {' return match.replace(`: any`, ': unknown'); }); changes += functionMatches.length; } // Add proper typing for arrow function parameters const arrowParamRegex = /\(\s*(\w+)\s*\s*any\s*\)\s*=>/g; const arrowMatches = improved.match(arrowParamRegex); if (arrowMatches) { improved = improved.replace(arrowParamRegex, (match, paramName) => {' return match.replace(`: any`, ': unknown'); }); changes += arrowMatches.length; } // Add proper typing for object destructuring const destructuringRegex = /\{\s*(\w+)\s*\s*any\s*\}/g; const destructuringMatches = improved.match(destructuringRegex); if (destructuringMatches) { improved = improved.replace(destructuringRegex, (match, propName) => {' return match.replace(`: any`, ' unknown'); }); changes += destructuringMatches.length; } // Add proper typing for useState const useStateRegex = /useState\s*<\s*any\s*>/g; const useStateMatches = improved.match(useStateRegex); if (useStateMatches) {' improved = improved.replace(useStateRegex, 'useState<unknown>'); changes += useStateMatches.length; } // Add proper typing for useEffect const useEffectRegex = /useEffect\s*\(\s*\(\s*\)\s*=>\s*{[^}]*},\s*\[\s*\]\s*\)/g; const useEffectMatches = improved.match(useEffectRegex); if (useEffectMatches) {' console.log(`⚠️ Found useEffect with empty dependencies in ${filePath}`); } // Add proper typing for event handlers const eventHandlerRegex = /const\s+(\w+)\s*=\s*\(\s*event\s*\s*any\s*\)\s*=>/g; const eventHandlerMatches = improved.match(eventHandlerRegex); if (eventHandlerMatches) {; improved = improved.replace(eventHandlerRegex, (match, handlerName) => {; return match.replace('"event": any', 'event: React.SyntheticEvent');', });'; changes += eventHandlerMatches.length;, }); changes += eventHandlerMatches.length; } // Add proper typing for API calls' const apiCallRegex = /fetch\s*\(\s*['][^']+[']\s*\)\s*\.then\s*\(\s*\(\s*response\s*:\s*any\s*\)/g; const apiCallMatches = improved.match(apiCallRegex); if (apiCallMatches) { improved = improved.replace(apiCallRegex, (match) => { return match.replace('response: any', 'response: Response'), }); changes += apiCallMatches.length; } return { content improved, changes }; } // Process individual file function processFile(filePath) { try {' const content = fs.readFileSync(filePath, 'utf8'); const result = improveTypeScriptFile(content, filePath); if (result.changes > 0) {' fs.writeFileSync(filePath, result.content, 'utf8'); totalImprovements += result.changes; console.log(`✅ Improved ${filePath} (${result.changes} type improvements)`); } filesProcessed++; } catch (error) {` console.error(`❌ Error processing ${filePath}`, error.message); } } ; return { "content" improved, changes },";} ; // Process individual file; function processFile(filePath) {; try {; const content = fs.readFileSync(filePath, 'utf8');'; const result = improveTypeScriptFile(content, filePath); if (result.changes > 0) {; fs.writeFileSync(filePath, result.content, 'utf8');'; totalImprovements += result.changes;'; console.log(;); `✅ Improved ${filePath} (${result.changes} type improvements)``; );, } ; filesProcessed++;, } catch (error) {; console.error(`❌ Error processing ${filePath}`, error.message);`; } ] } }; ' fs.writeFileSync('typescript-improvement-report.json', JSON.stringify(report, null, 2)); console.log('📊 TypeScript improvement report generated: typescript-improvement-report.json'), } // Main improvement function async function main() {' console.log('🔧 Starting TypeScript improvements...\n'); const patterns = [' 'src/**/*.{ts,tsx}, 'pages/**/*.{ts,tsx}, 'components/**/*.{ts,tsx} ]; const excludeDirs = [' 'node_modules', '.next', 'build', 'dist', 'scripts', 'automation', 'automation_backup', 'src.disabled', 'pages.disabled', 'components.disabled' ]; for (const pattern of patterns) { const files = await glob(pattern, {' ignore excludeDirs.map(dir => `**/${dir}/**`); }); for (const file of files) { processFile(file); } } generateTypeScriptReport(); ` console.log(`\n📊 TypeScript Improvement Summary `),` console.log(` Files processe, d ${filesProcessed}`);` console.log(` Total type improvements ${totalImprovements}`);` console.log(`\n✨ TypeScript improvements completed!`); } // Run the script main().catch(console.error);` 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

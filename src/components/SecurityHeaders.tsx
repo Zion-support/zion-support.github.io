@@ -14,7 +14,7 @@ const SecurityHeaders = () => {
       { httpEquiv: 'X-Content-Type-Options', content: 'nosniff' },
       { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
       { httpEquiv: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=()' }
-    ];
+    ]
 
     securityHeaders.forEach(header => {
       const metaTag = document.createElement('meta');

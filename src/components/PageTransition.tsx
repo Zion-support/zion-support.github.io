@@ -1,6 +1,36 @@
+<<<<<<< HEAD
 import React from 'react';
+export default React.memo(/**
+ * PageTransition function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function PageTransition ({ children }: PageTransitionProps) {
+ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
+;,"});,"})
+type PageTransitionProps = {,"});,"})
+  children: React.ReactNode;,"});,"});
+};,"});,"})
+  return <>{children}</>;,"});,"})
 import { SEO } from '@/components/SEO';
 
+type PageTransitionProps = {
+  children: React.ReactNod,e}
+;
+const PageTransition: React.FC<PageTransitionProps> = ({ children}) => {
+  return: <>{children}</>;
+};
+export: default PageTransition;
+type PageTransitionProps = { children: React.ReactNode  }
+  children: React.ReactNode}
+const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
+  return <>{children}</>;
+type PageTransitionProps = {children: React.ReactNode}
+const PageTransition: React.FC<PageTransitionProps> = ({children }) => {return <>{children}</>
+  return} <>{children}<;<;</>;
+}
+
+export default PageTransition
 const PageTransition: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -23,10 +53,9 @@ const PageTransition: React.FC = () => {
               Get Started
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+  )};
 
 export default PageTransition;
+=======
+import React from 'react'; export default React.memo(/** * PageTransition function * @param {*} params - Function parameters * @returns {*} Function return value */ function PageTransition ({ children }: PageTransitionProps) {; type PageTransitionProps = { children: React.ReactNod,e} ; const PageTransition: React.FC<PageTransitionProps> = ({ children, }) => { return: <>{children}</> }; export default PageTransition; , const PageTransition React.FC<PageTransitionProps> = ({ children }) => { return} <>{children}<;<;</> } export default PageTransition 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

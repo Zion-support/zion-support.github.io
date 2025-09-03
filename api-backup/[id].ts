@@ -1,0 +1,1 @@
+// Assuming: SerializedOrder can also represent a detailed order // Define a more detailed order structure if different from SerializedOrder list item
