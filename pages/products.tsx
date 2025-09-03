@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Globe, TrendingUp, Award, Clock, Users } from 'lucide-react';
@@ -70,8 +71,12 @@ const Products: NextPage = () => {
   ];
 
   const categories = ['All', 'AI Tools', 'Productivity', 'Marketing', 'Finance', 'Sales'];
+=======
+>>>>>>> main
 
+export default function ProductsPage() {
   return (
+<<<<<<< HEAD
     <MainLayout
       title="Products - Zion Tech Group"
       description="Discover our innovative software products designed to transform your business operations with cutting-edge AI and automation."
@@ -224,7 +229,12 @@ const Products: NextPage = () => {
         </div>
       </section>
     </MainLayout>
+=======
+    <main className="max-w-4xl mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold mb-4">Products</h1>
+      <p className="text-gray-700">Explore our product offerings.</p>
+    </main>
+>>>>>>> main
   );
-};
+}
 
-export default Products;
