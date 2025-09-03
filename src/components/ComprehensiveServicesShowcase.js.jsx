@@ -14,9 +14,9 @@ import React, { useState } from "react";""";,"});,"})","});,"})","})";
   Target,""";,"});,"})";
   Award"""";,"});,"});";,
 } from "lucide - react","";,"});,"})","});,"})";
-;,"});,"})";
+
 // comment;
-;,"});,"})";
+
 const serviceCategories = [];,"});,"})";
   {}"});,"})";
 ";,"});,"})";
@@ -43,14 +43,14 @@ const serviceCategories = [];,"});,"})";
     services: revolutionary2027AIInnovationServices,"});,"});";,
 }"});,"})";
 ];,"});,"})";
-;,"});,"})";
+
 export function ComprehensiveServicesShowcase() {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
 """;,"});,"})";
   const [selectedCategory, setSelectedCategory] = useState("micro-saas");,"});,"})";
   const [selectedService, setSelectedService] = useState(null);,"});,"})";
-;,"});,"})";
+
   const containerVariants = {}"});,"})";
     hidden: { opacity: 0 },,"});,"})";
     visible: {}"});,"})";
@@ -60,7 +60,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
         delayChildren: 0.2,"});,"});";,
 }"});,"});";,
 };,"});,"})";
-;,"});,"})";
+
   const itemVariants = {}"});,"})";
   hidden: { y: 20,"});,"})";
   opacity: 0,"});,"});";,
@@ -74,7 +74,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
         ease: "easeOut"","});,"});";,
 }"});,"});";,
 };,"});,"})";
-;,"});,"})";
+
   const cardVariants = {}"});,"})";
   hidden: { scale: 0.95,"});,"})";
   opacity: 0,"});,"});";,
@@ -189,7 +189,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
                   y: -8,"""";,"});,"})";
                   boxShadow: "0 20px 40px rgba(0, 0, 0,"""";,"});,"})";
   0.3)";,"});,"})";
-;,"});,"});";,
+
 }}"});,"})">""";,"});,"})";
                 {/* comment */}"""";,"});,"})";
                 <div className="flex items-start justify-between mb-4">"""";,"});,"})";
@@ -403,11 +403,9 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
 }
   const [selectedService, setSelectedService] = useState();,
 }  const containerVariants = {}
-;
+
 // Import the new service data;
-;
-;
-;
+
 const serviceCategories = [];
   {}
 ';
@@ -433,20 +431,20 @@ const serviceCategories = [];
     color: 'from-blue-600 to-cyan-600',;
     services: revolutionary2027AIInnovationServices;,
 }
-;
+
   const itemVariants = {}
-;
+
   hidden: { y: 20, opacity: 0}, visible: {}";
       y: 0, opacity: 1, transition: {}
 """;
         duration: 0.5,""";
         ease: "easeOut"""}
     }
-;,
+
 }
-;
+
   const cardVariants = {}
-;
+
   hidden: { scale: 0.95, opacity: 0}, visible: {}";
       scale: 1, opacity: 1, transition: {}
 "";
@@ -461,9 +459,9 @@ const serviceCategories = [];
         {/* comment */}""";
         <motion .div "";
           className="text-center mb-16"          initial = {}
-;
+
   { opacity: 0, y: 30}}
-;
+
           animate = {}";
   { opacity: 1, y: 0}}";
           transition="{{" duration: 0.6 }}""">"""";
@@ -504,13 +502,13 @@ designed to transform your business and drive exponential growth.";
         {/* comment */}""";
         <motion .div "";
           className="flex flex-wrap justify-center gap-4 mb-12"          initial = {}
-;
+
   { opacity: 0, y: 20}}
-;
+
           animate = {}
-;
+
   { opacity: 1, y: 0}}
-;
+
           transition = {}";
   { duration: 0.6, delay: 0.2}}">;
           {serviceCategories.map ( (category) => (<button key="{category.id}
@@ -523,10 +521,10 @@ designed to transform your business and drive exponential growth.";
                   ? "bg-gradient-to-r ${category.color} text-white shadow-lg""""""""";
                   : "bg-zion-slate-dark text-zion-cyan-light hover:bg-zion-slate hover:text-zion-cyan border border-zion-cyan/30"""", ";,
 }"}
-;
+
             >;
               {category.icon}
-;
+
               <span>{category.name}</span>;
             </button>) ) }";
         </motion.div>;
@@ -599,7 +597,7 @@ designed to transform your business and drive exponential growth.";
                       <span className="bg-zion-cyan/20 text-zion-cyan text-xs px-2 py-1 rounded-full">;
                         +{service.features.length-3} more,;
                       </span>) }
-;
+
                   </div>";
                 </div>;
 """;
@@ -632,13 +630,13 @@ designed to transform your business and drive exponential growth.";
         {/* comment */}""";
         <motion .div "";
           className="text-center mt-16"          initial = {}
-;
+
   { opacity: 0, y: 30}}
-;
+
           animate = {}
-;
+
   { opacity: 1, y: 0}}
-;
+
           transition = {}">;
   { duration: 0.6, delay: 0.4",";";,
 }}""">"""";
@@ -675,13 +673,13 @@ designed to transform your business and drive exponential growth.";
             onClick="{" () ="> setSelectedService (null) }">""";
             <motion .div"";
               className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"              initial = {}
-;
+
   { scale: 0.9, opacity: 0}}
-;
+
               animate = {}
-;
+
   { scale: 1, opacity: 1}}
-;
+
               exit = {}";
   { scale: 0.9, opacity: 0}}";
               onClick="{(e)" ="> e.stopPropagation()}"">""";
@@ -707,7 +705,7 @@ designed to transform your business and drive exponential growth.";
                         <span className="text-zion-cyan-light">{feature}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>";
                 </div>;
 """;
@@ -758,11 +756,11 @@ designed to transform your business and drive exponential growth.";
                 </div>;
             </motion.div>,;
           </motion.div>) }
-;
+
       </AnimatePresence>";
     </section>"";
   )}""""";
 """""""'";
 ";
 
-export default Component
+export default Component;

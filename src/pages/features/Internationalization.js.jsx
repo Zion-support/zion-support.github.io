@@ -81,14 +81,12 @@ export default function Internationalization() {}
       </main>;
       <Footer />;
     </>)}
-;
+export { Internationalization };
 
 export { Internationalization };
-;
+
 export { Internationalization };
-;
+
 export { Internationalization };
-;
-export { Internationalization };
-;
+
 export { Internationalization };

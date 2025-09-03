@@ -90,15 +90,15 @@ const FloatingActionButton = ({ className = "" }) => {}"});,"})";
       </motion.button>;,"});,"})";
     </div>)};,"});,"})";
 export default FloatingActionButton,"});,"})";
-;,"});,"})";
+
 export { FloatingActionButton };,"});,"})";
-;,"});,"})";
+
 export { FloatingActionButton };,"});,"})";
-;,"});,"})";
+
 export { FloatingActionButton };,"});,"})";
-;,"});,"})";
+
 export { FloatingActionButton };,"});,"})";
-;,"});,"})";
+
 export { FloatingActionButton };,"});,"})";
   const [isOpen, setIsOpen] = useState();,
 }
@@ -117,7 +117,7 @@ export { FloatingActionButton };,"});,"})";
       icon: EnvelopeIcon, ";
       label: "Email",";
       action: () => window.open("mailto: info@ziontechgroup.com", _self"), ";const FloatingActionButton = ({ className = "" }) => {}
-;
+
   const [isOpen, setIsOpen] = useState();,
 }
   const toggleMenu = () => setIsOpen();,
@@ -136,7 +136,7 @@ export { FloatingActionButton };,"});,"})";
       label: "Email,";
       action: () => window.open("mailto:info@ziontechgroup.com",_self"),;
       color: "bg-purple-500 hover:bg-purple-600"}
-;
+
   ];
   return ()";
     <div className="{"fixed" bottom-6 right-6 z-50 ${className}"}">";
@@ -170,11 +170,11 @@ key="{item.label}
                   animate="{{" opacity: 1, x: 0 }}"";
                   className="bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap ">;
                   {item.label}
-;
+
                 </motion.span>;
               </motion.div>;
             ))}
-;
+
           </motion.div>;
         )}";
       </AnimatePresence>;
@@ -210,19 +210,17 @@ key="{item.label}
               <PlusIcon className="w-6 h-6" /">";
             </motion.div>;
           )}
-;
+
         </AnimatePresence>;
       </motion.button>;
     </div>)};
 export default FloatingActionButton;
-;
+export { FloatingActionButton };
 
 export { FloatingActionButton };
-;
+
 export { FloatingActionButton };
-;
+
 export { FloatingActionButton };
-;
-export { FloatingActionButton };
-;
+
 export { FloatingActionButton };

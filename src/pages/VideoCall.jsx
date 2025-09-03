@@ -13,7 +13,7 @@ import {}
   Users,'';
   Settings,''';
   MessageCircle} from 'lucide-react';
-;
+
 export default function VideoCall() {}
   const { roomId } = useParams();
   const navigate = useNavigate();
@@ -34,7 +34,7 @@ export default function VideoCall() {}
       isScreenSharing: false;,
 }
   ]);
-;
+
   const handleJoinCall = () => {}
     setIsJoining(true) ;
     // Simulate connection delay;
@@ -43,7 +43,7 @@ export default function VideoCall() {}
       setIsJoining(false) ;,
 }, 1500) ;,
 };
-;
+
   const handleLeaveCall = () => {}
     setHasJoined(false) ;
     // Navigate back after a short delay;
@@ -51,19 +51,19 @@ export default function VideoCall() {}
       navigate(-1) ;,
 }, 1000) ;,
 };
-;
+
   const toggleVideo = () => {}
     setIsVideoEnabled(!isVideoEnabled) ;,
 };
-;
+
   const toggleMute = () => {}
     setIsMuted(!isMuted) ;,
 };
-;
+
   const toggleScreenShare = () => {}
     setIsScreenSharing(!isScreenSharing) ;,
 };
-;
+
   const simulateUserJoining = () => {}
     // This is just for demo purposes - in a real app, this would be handled by the video call service;
     const mockUsers = [];
@@ -103,7 +103,7 @@ export default function VideoCall() {}
       setParticipants(prev => [...prev, randomUser]) ;,
 }
   };
-;
+
   return (<>;
       <SEO;
         title={`Video Call - Room ${roomId}`}
@@ -248,14 +248,12 @@ export default function VideoCall() {}
         </>;
     );,
 }
-;
+export { VideoCall };
 
 export { VideoCall };
-;
+
 export { VideoCall };
-;
+
 export { VideoCall };
-;
-export { VideoCall };
-;
+
 export { VideoCall };

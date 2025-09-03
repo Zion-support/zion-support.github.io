@@ -2,7 +2,7 @@ import { Link  } from 'react-router-dom';
 export default function Page() {;,
 }}}
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
 ,;
     {;
@@ -61,9 +61,9 @@ export default function Page() {;
       status: 'coming-soon';,
 }
   ];
-;
+
     return matchesCategory && matchesSearch});
-;
+
       case 'price':;
         return a.pricing.starter - b.pricing.starter;
       case 'popularity':;
@@ -71,7 +71,7 @@ export default function Page() {;
       default:;
         return 0}
   });
-;
+
       case 'beta':;
         return 'bg-yellow-100 text-yellow-800';
       case 'coming-soon':;
@@ -79,7 +79,7 @@ export default function Page() {;
       default:;
         return 'bg-gray-100 text-gray-800'}
   };
-;
+
       case 'beta':;
         return 'Beta';
       case 'coming-soon':;
@@ -87,7 +87,7 @@ export default function Page() {;
       default:;
         return 'Unknown'}
   };
-;
+
   return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         {/* Header */}

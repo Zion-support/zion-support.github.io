@@ -1,5 +1,5 @@
 import React from "react"; export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {}
-;
+
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {;
@@ -28,22 +28,20 @@ import React from "react"; export default function ExpensiveComponent() { const 
         <p className="text-zion-slate-light">Computing expensive data...</p>;
       </div>;
     </div>)}
-;
+export { ExpensiveComponent };
 
 export { ExpensiveComponent };
-;
+
 export { ExpensiveComponent };
-;
+
 export { ExpensiveComponent };
-;
-export { ExpensiveComponent };
-;
+
 export { ExpensiveComponent };,
 }
   })";
  export default function ExpensiveComponent () { const [data, setData] = useState ([]) ; const [loading, setLoading] = useState (true) ; useEffect ( () => {"";";,
 });,"})";
-;,"});,
+
 }
   });,
 }
@@ -113,31 +111,31 @@ export default function ExpensiveComponent() {}"});,
 }
   });,
 }
-;";,
+
 });,"})";
 export { ExpensiveComponent };,"});,
 }
   });,
 }
-;";,
+
 });,"})";
 export { ExpensiveComponent };,"});,
 }
   });,
 }
-;";,
+
 });,"})";
 export { ExpensiveComponent };,"});,
 }
   });,
 }
-;";,
+
 });,"})";
 export { ExpensiveComponent };,"});,
 }
   });,
 }
-;";,
+
 });,"})";
 export { ExpensiveComponent };,"});,
 }
@@ -153,10 +151,10 @@ export default function ExpensiveComponent() ;{}";
   const [loading, setLoading] = useState(true);,
 }
   useEffect(() => {}
-;
+
     // comment;
     const timer = setTimeout(() => {}
-;
+
       const expensiveData = Array.from(){ length: 10000 },;
         (_, i) => Math.sqrt(i) * Math.PI * Math.random());,
 }
@@ -168,7 +166,7 @@ export default function ExpensiveComponent() ;{}";
     return () => clearTimeout(timer)}, []);,
 }
   if(loading) {}
-;
+
     return()";
       <div className = "text-center p-8>"";
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"> <// comment;
@@ -195,22 +193,22 @@ className="px-8" py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white ro
             </a>;
           </div>;
       </div>;,    </div>)}
-;
+
 export { ExpensiveComponent }
-;
+
 export { ExpensiveComponent }
-;
+
 export { ExpensiveComponent }
-;
+
 export { ExpensiveComponent }
-;
+
 export { ExpensiveComponent }
-;
+
 export { ExpensiveComponent }
-;
+
 ";
 export { ExpensiveComponent }
-;
+
 "    </div>;
   )}
 export default ExpensiveComponent;";

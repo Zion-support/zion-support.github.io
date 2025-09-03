@@ -220,14 +220,12 @@ export default function TalentDashboard() {}
     <ProtectedRoute>;
       <TalentDashboardContent />;
     </ProtectedRoute>)}
-;
+export { TalentDashboardContent, TalentDashboard };
 
 export { TalentDashboardContent, TalentDashboard };
-;
+
 export { TalentDashboardContent, TalentDashboard };
-;
+
 export { TalentDashboardContent, TalentDashboard };
-;
-export { TalentDashboardContent, TalentDashboard };
-;
+
 export { TalentDashboardContent, TalentDashboard };

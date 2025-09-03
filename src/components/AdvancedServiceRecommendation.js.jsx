@@ -297,7 +297,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
                 if(e.target.checked) {}"});,"})";
                     setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,,"});,"})";
   goal] ;,"});,"})";
-;,"});,"});";,
+
 }) ) }"});,"})";
                 else {}"});,"})";
 """;,"});,"})";
@@ -317,7 +317,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
                 if(e.target.checked) {}"});,"})";
                     setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,,"});,"})";
   challenge] ;,"});,"})";
-;,"});,"});";,
+
 }) ) }"});,"})";
                 else {}"});,"})";
 """;,"});,"})";
@@ -482,15 +482,15 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
         </motion.div>)}"});,"})";
     </div>)};,"});,"})";
 export default AdvancedServiceRecommendation,"});,"})";
-;,"});,"})";
+
 export { AdvancedServiceRecommendation };,"});,"})";
-;,"});,"})";
+
 export { AdvancedServiceRecommendation };,"});,"})";
-;,"});,"})";
+
 export { AdvancedServiceRecommendation };,"});,"})";
-;,"});,"})";
+
 export { AdvancedServiceRecommendation };,"});,"})";
-;,"});,"})";
+
 export { AdvancedServiceRecommendation };,"});,"})""";
 const AdvancedServiceRecommendation = () => {}";
     const [clientProfile, setClientProfile] = useState({}
@@ -623,10 +623,10 @@ const AdvancedServiceRecommendation = () => {}";
             link: "https:// comment;
             contactInfo: "+1 302 464 0950,";
             email: "kleber@ziontechgroup.com"}
-;
+
     ];
     const calculateMatchScore = (service, profile) => {}
-;
+
         let score = 0,;
         // comment;
 if(service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {}
@@ -667,15 +667,15 @@ if(service.targetAudience?.some((audience) => audience.toLowerCase().includes(pr
         // comment;
 const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some ( (benefit) => benefit.toLowerCase () .includes(goal.toLowerCase () ) ) ) .length,;
 score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, score) }
-;
+
     const generateRecommendations = () => {}
-;
+
         setIsAnalyzing();,
 }
         // commentsetTimeout(() => {}
-;
+
             const recs = mockServices.map(service => {}
-;
+
                 const matchScore = calculateMatchScore(service, clientProfile)";
                 let priority";
                 if (matchScore >= 80)";
@@ -702,7 +702,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                 const timeToValue = complexity === "Simple" ? "2-4 months" :";
                     complexity === "Moderate" ? "4-8 months" : "8-12 months;
                 return {}
-;
+
                     service, matchScore, reasoning, priority, implementationComplexity: complexity, expectedROI, timeToValue}}) .sort((a, b) => b.matchScore - a.matchScore);,
 }
             setRecommendations();,
@@ -710,7 +710,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
             setIsAnalyzing();,
 }
             setShowResults(true) }, 2000) }
-;
+
     const getPriorityColor = (priority) => {}";
         switch (priority) {}
 ";
@@ -719,9 +719,9 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
             case "Medium": return "bg-yellow-100 text-yellow-800"";
             case "Low": return "bg-green-100 text-green-800"";
             default: return "bg-gray-100 text-gray-800"}
-;,
+
 }
-;
+
     const getComplexityColor = (complexity) => {}";
         switch (complexity) {}
 ";
@@ -730,9 +730,9 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
             case "Moderate": return "bg-yellow-100 text-yellow-800"";
             case "Simple": return "bg-green-100 text-green-800"";
             default: return "bg-gray-100 text-gray-800"}
-;,
+
 }
-;
+
     const isFormComplete = () => {}";
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&;
             clientProfile.timeline && clientProfile.technologyMaturity &&"";
@@ -743,7 +743,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
     return (";
     <div className = "max-w-7xl mx-auto p-6">;
       {/* comment */}
-;
+
       <motion.div initial = {}";
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1, y: 0 """"">;
@@ -755,7 +755,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
           Get personalized service recommendations based on your industry, goals, and requirements.Our AI analyzes your profile to suggest the perfect solutions for your business.</p>;
       </motion.div>;
       {/* comment */}
-;
+
       <motion.div initial = {}";
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1, y: 0 """"">;
@@ -824,7 +824,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                 <input type="checkbox" checked="{clientProfile.primaryGoals.includes(goal)}" onChange = {}";
   (e) ="> {}";
                 if(e.target.checked) {}
-;
+
                     setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,;
   goal]}) ) }";
                 else {}
@@ -842,7 +842,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                 <input type="checkbox" checked="{clientProfile.challenges.includes(challenge)}" onChange = {}";
   (e) ="> {}";
                 if(e.target.checked) {}
-;
+
                     setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,;
   challenge]}) ) }";
                 else {}
@@ -862,12 +862,12 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                 <Brain className="w-5 h-5 mr-2"/">";
                 Get AI Recommendations,;
 </>) }
-;
+
           </Button>;
         </div>;
       </motion.div>;
       {/* comment */}
-;
+
       {showResults && (<motion .div initial = {}";
   { opacity: 0, y: 20}} animate = {}""">;
   { opacity: 1, y: 0","}} transition="{{" delay: 0.2 }}">"""";";,
@@ -897,7 +897,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                         <div className="flex flex-wrap gap-2 mb-4">";
                           <Badge className={getPriorityColor(rec.priority)}">";
                             Priority: {rec.priority}
-;
+
                           </Badge>";
                           <Badge className="{getComplexityColor" (rec.implementationComplexity) }">";
                             Complexity: {rec.implementationComplexity}""";
@@ -914,7 +914,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                         </div>"";
                         <div className="text-sm text-zion-slate-light">;
                           {rec.service.duration}
-;
+
                         </div>;
                     </div>";
                   </CardHeader>;
@@ -929,9 +929,9 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                         <ul className="space-y-2">""",;
                           {rec.reasoning.map((reason, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";
                               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"/">"                              {reason}
-;
+
                             </li>) ) }
-;
+
                         </ul>";
                       </div>;
                       """;
@@ -953,7 +953,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                             <span className="text-sm text-zion-slate-light">Category: </span>"";
                             <Badge variant="outline" className="text-xs">,;
                               {rec.service.category.toUpperCase()}
-;
+
                             </Badge>";
                           </div>;
                         </div>""";
@@ -970,10 +970,10 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                   </CardContent>;
                 </Card>;
               </motion.div>) ) }
-;
+
           </div>;
           {/* comment */}
-;
+
           <motion.div initial = {}";
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1, y: 0 """"">;
@@ -1007,14 +1007,12 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
         </motion.div>)}
     </div>)};
 export default AdvancedServiceRecommendation;
-;
+export { AdvancedServiceRecommendation };
 
 export { AdvancedServiceRecommendation };
-;
+
 export { AdvancedServiceRecommendation };
-;
+
 export { AdvancedServiceRecommendation };
-;
-export { AdvancedServiceRecommendation };
-;
+
 export { AdvancedServiceRecommendation };

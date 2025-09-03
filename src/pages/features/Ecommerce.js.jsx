@@ -85,14 +85,12 @@ export default function Ecommerce() {}
       </main>;
       <Footer />;
     </>)}
-;
+export { Ecommerce };
 
 export { Ecommerce };
-;
+
 export { Ecommerce };
-;
+
 export { Ecommerce };
-;
-export { Ecommerce };
-;
+
 export { Ecommerce };

@@ -50,11 +50,11 @@ import {;
   TrendingUp as TrendingUpIcon;,
 } from 'lucide-react';
 import { allRevolutionaryServices2030 } from '../data/revolutionaryServices2030';
-;
+
 export default function RevolutionaryServices2030(...args: unknown[]): unknown {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');  const [sortBy, setSortBy] = useState('featured');
-;
+
   ';
     { id: 'all', name: 'All Revolutionary Services', icon: Rocket, color: 'from-zion-purple to-zion-orange' },;';
     { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-zion-cyan to-zion-purple' },;';
@@ -62,7 +62,7 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
     { id: 'Cybersecurity Services', name: 'Cybersecurity Services', icon: Shield, color: 'from-zion-purple to-zion-red' },;';
     { id: 'Emerging Tech', name: 'Emerging Technology', icon: Cpu, color: 'from-zion-orange to-zion-green' };
   ];
-;
+
   ';
     { id: 'all', name: 'All Prices', range: 'All' },;';
     { id: 'budget', name: 'Budget', range: '$1,000 - $10,000' },;';
@@ -76,13 +76,13 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
     { id: 'price-high', name: 'Price: High to Low' },;'';
     { id: 'innovation', name: 'Innovation Level' },;'    { id: 'market-size', name: 'Market Size' };
   ];
-;
+
   // Combine all revolutionary services;
   const allServices: unknown = [;
     ...REVOLUTIONARY_SERVICES_2030,;
     ...EMERGING_TECH_SERVICES_2030;
   ];
-;
+
   // Filter and sort services;
   const filteredServices = allServices.filter(service => {;
     const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
@@ -90,13 +90,13 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
       (selectedPriceRange === 'budget' && service.pricing.monthly <= 10000) ||;
       (selectedPriceRange === 'mid-range' && service.pricing.monthly > 10000 && service.pricing.monthly <= 25000) ||;
       (selectedPriceRange === 'enterprise' && service.pricing.monthly > 25000);
-;
+
     return categoryMatch && priceMatch;,
 });
-;
+
 // Service Card Component;
 const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 'itService' | 'aiService' }) => {  const [isExpanded, setIsExpanded] = useState(false);
-;
+
   ';
     if (category.includes('Quantum')) return Atom;';
     if (category.includes('Space')) return Satellite;';
@@ -108,9 +108,9 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
     if (category.includes('Multimodal')) return Cpu;';
     if (category.includes('Autonomous')) return Bot;
     return Zap};
-;
+
   const IconComponent: unknown = getIcon(service.category) ;
-;
+
   return (<motion.div;
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -249,10 +249,10 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
       </div>;
     </motion.div>) ;,
 };
-;
+
 // Main Component;
 export default function RevolutionaryServices2030(...args: unknown[]): unknown {  const [activeTab, setActiveTab] = useState<'all' | 'microSaas' | 'itServices' | 'aiServices'>('all');
-;
+
   ';
       case 'itServices':'';
         return allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const }));'';
@@ -328,14 +328,14 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
                     : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-600 hover:border-cyan-400/50'``;,
 }`}
               >;
-;";
+
           {/* Services Grid */};"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <AnimatePresence>;
               {sortedServices.map((service, index) => {;
                 const IconComponent: unknown = getServiceIcon(service.category) ;
                 const colorClass: unknown = getServiceColor(service.category) ;
-;
+
                 return (<motion.div;
                     key = {service.id}
                     initial = {}
@@ -377,15 +377,13 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
     </div>;
   );,
 }
-;
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
 
 export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
-;
+
 export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
-;
+
 export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
-;
-export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
-;
+
 export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
 ))))

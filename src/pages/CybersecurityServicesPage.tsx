@@ -25,7 +25,7 @@ import { ;
   Monitor,;
   TrendingUp;,
 } from 'lucide-react';
-;
+
 export default function CybersecurityServicesPage() {;
   const services = [;
     {;
@@ -50,7 +50,7 @@ export default function CybersecurityServicesPage() {;
       icon: CheckCircle;,
 }
   ];
-;
+
   const features = [;
     {;
       icon: Shield,;
@@ -73,7 +73,7 @@ export default function CybersecurityServicesPage() {;
       description: "Secure user authentication and role-based permissions";,
 }
   ];
-;
+
   return (;
     <>;
       <SEOHead ;
@@ -239,7 +239,7 @@ export default function CybersecurityServicesPage() {;
   );
 import React from "react";
 import { SEO } from "@/components/SEO";
-;,"});,"});,
+
 }
 export default function CybersecurityServicesPage() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";

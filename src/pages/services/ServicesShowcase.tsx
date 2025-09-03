@@ -20,7 +20,7 @@ import { ;
   Target,;
   Rocket;,
 } from 'lucide-react';
-;
+
 export default function ServicesShowcase() {;
   const services = [;
     {;
@@ -90,7 +90,7 @@ export default function ServicesShowcase() {;
       href: '/services/ai-healthcare-platform';,
 }
   ];
-;
+
   const categories = [;
     { name: 'All Services', count: services.length, active: true },;
     { name: 'AI & Development', count: services.filter(s => s.category.includes('AI & Development')).length },;
@@ -100,7 +100,7 @@ export default function ServicesShowcase() {;
     { name: 'Cloud & DevOps', count: services.filter(s => s.category.includes('Cloud & DevOps')).length },;
     { name: 'AI & Healthcare', count: services.filter(s => s.category.includes('AI & Healthcare')).length }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 pt-24">;
       {/* Hero Section */}

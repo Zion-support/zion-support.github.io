@@ -245,13 +245,13 @@ const BookOpen = ({ className }) => (<svg className={className} fill="none" stro
   </svg>);
 export default AIAutonomousResearch;,
 }}}
-;
+
 export { AIAutonomousResearch, BookOpen };
-;
+
 export { AIAutonomousResearch, BookOpen };
-;
+
 export { AIAutonomousResearch, BookOpen };
-;
+
 export { AIAutonomousResearch, BookOpen };
-;
+
 export { AIAutonomousResearch, BookOpen };

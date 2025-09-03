@@ -1,6 +1,6 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 export default function Page() {;
-;
+
   performance: {;
 
     loadTime: number;
@@ -10,7 +10,7 @@ export default function Page() {;
       lcp: number;
       fid: number;
       cls: number}}}
-;
+
 interface EnhancedAnalyticsProps {;
   // Add your props here;
 
@@ -32,7 +32,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
   const [userInteractions, setUserInteractions] = useState(0);
   const [scrollDepth, setScrollDepth] = useState(0);
   const [timeOnPage, setTimeOnPage] = useState(0);
-;
+
   // Initialize analytics;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -42,7 +42,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
 };,
 }, []);, []);
     if(!enabled) return;
-;
+
     // Initialize Google Analytics(if tracking ID provided);
     if(trackingId && trackingId !== 'G-XXXXXXXXXX') {;
 
@@ -50,7 +50,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
       const script = document.createElement('script');      script.async = true;
       script.src = `https://www.googletagmanager.com / gtag / js?id=${trackingId}`;
       document.head.appendChild(script) ;
-;
+
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {;
 
@@ -64,7 +64,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
 
           custom_parameter_1: 'user_type',;
           custom_parameter_2: 'page_category'}});
-;
+
       // Track page view';
       gtag('event',page_view', {;
 
@@ -73,7 +73,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
         page_referrer: document.referrer})}
     // Initialize session tracking;
     setSessionStart(Date.now());
-;
+
     // Track session start';
     trackEvent('session_start', {;
 
@@ -81,7 +81,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
       user_agent: navigator.userAgent,;
       language: navigator.language,;
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone});
-;
+
     return : unknown {;
       if(script) {;
 
@@ -96,7 +96,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
 };,
 }, []);, []);
     if(!enabled) return;
-;
+
     const handleRouteChange = (...args: unknown[]): unknown => {;
       const newPage = window.location.pathname;      if(newPage !== currentPage) {;
 
@@ -107,22 +107,22 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
           page_title: document.title,;
           previous_page: currentPage,;
           time_on_previous_page: timeOnPage});
-;
+
         setCurrentPage(newPage) ;
         setTimeOnPage(0) ;
         setScrollDepth(0) ;
         setUserInteractions(0) }    };
-;
+
     // Listen for route changes(for SPA);
     window.addEventListener('popstate', handleRouteChange);
-;
+
     // Track initial page';
     trackEvent('page_view', {;
 
       page_path: currentPage,;
       page_title: document.title,;
       is_initial_page: true});
-;
+
     return () => {;
 
       window.removeEventListener('popstate', handleRouteChange)}}, [enabled, currentPage, timeOnPage]) ;
@@ -135,7 +135,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
 };,
 }, []);, []);
     if(!enabled) return;
-;
+
       trackEvent('user_interaction', {;
 
       setUserInteractions(prev => prev + 1);'      trackEvent('user_interaction', {;
@@ -143,11 +143,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
         interaction_type: 'click',;
         page_path: currentPage,;
         timestamp: Date.now()})};
-;
+
       if(scrollPercent > scrollDepth) {;
 
         setScrollDepth(scrollPercent);
-;
+
         // Track scroll milestones;
         if(scrollPercent >= 25 && scrollDepth < 25) {;
 
@@ -175,10 +175,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
     // Set up event listeners';
     document.addEventListener('click', trackInteraction);
     window.addEventListener('scroll', trackScroll);
-;
+
     // Update time on page every second;
     sessionRef.current = setInterval(trackTimeOnPage, 1000) ;
-;
+
     return () => {;
 
       document.removeEventListener('click', trackInteraction);
@@ -196,14 +196,12 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
 };,
 }, []);, []);
     if(!enabled) return;
-;
-
         trackEvent('performance_metrics', {;
           load_time: loadTime,;
           fcp: fcp,;
           lcp: lcp,;
           page_path: currentPage})}    };
-;
+
     // Track performance after page load';
     if(document.readyState === 'complete') {;
 
@@ -221,24 +219,22 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
 };,
 }, []);, []);
     if(!enabled) return;
-;
-
       trackEvent('session_end', {;
         session_duration: sessionDuration,;
         pages_viewed: 1, // Simplified;
         total_interactions: userInteractions,;
         average_time_on_page: timeOnPage})};
-;
+
     window.addEventListener('beforeunload', handleBeforeUnload);
     return () => window.removeEventListener('beforeunload', handleBeforeUnload)}, [enabled, sessionStart, userInteractions, timeOnPage]);
-;
+
   // Track event function;
   ;
       // Google Analytics 4;
       if(window.gtag) {;
 
         window.gtag('event', eventName, parameters)}
-;
+
       // Custom analytics tracking;
       ;
       // Send to analytics endpoint(if configured);
@@ -249,12 +245,12 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
           method: 'POST',;
           headers: { 'Content-Type': 'application/json' },;
           body: JSON.stringify(eventData)}).catch(console.error)}
-;
+
       // Store locally for dashboard;
       setAnalyticsData(prev => {;
 
         if (!prev) return null;
-;
+
         return {;
 
           ...prev,;
@@ -265,7 +261,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
             scrollDepth: Math.max(prev.userEngagement.scrollDepth, scrollDepth),;
             timeOnPage: Math.max(prev.userEngagement.timeOnPage, timeOnPage),;
             interactions: userInteractions}}});
-;
+
       // console.log('Analytics Event:', eventData)},;
     [enabled, currentPage, scrollDepth, timeOnPage, userInteractions];
   );
@@ -312,7 +308,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
             cls: 0.05}}})}
   }, [showDashboard, scrollDepth, timeOnPage, userInteractions]) ;
   if(!enabled) return null;
-;
+
   return ();
     <>;
       {/* Analytics Toggle Button */}
@@ -328,7 +324,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
           <BarChart3 className="w-5 h-5" />;
         </motion.button>;
       )}
-;
+
       {/* Analytics Dashboard */}
       <AnimatePresence>;
         {isVisible && showDashboard && analyticsData && (<motion.div;

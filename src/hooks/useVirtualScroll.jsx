@@ -154,8 +154,6 @@ export default function Page() {;
             height: state.totalHeight,;
             position: 'relative',;
   transform: `translateY(${virtualScrollParams.offsetY;
-
-;
 `;,
 }px)`;,
 }

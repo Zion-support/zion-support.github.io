@@ -2,7 +2,7 @@ import React from 'react';''';
 import { motion } from 'framer-motion';''';
 import { Link } from 'react-router-dom';''';
 import { Brain, TrendingUp, Zap, BarChart3, CheckCircle, ArrowRight, Play } from 'lucide-react';
-;
+
 const features = [;
     {;
         title: "AI-Powered Autonomous Decision Platform",;
@@ -207,14 +207,12 @@ export default function AIAutonomousDecisionPlatform() {}
         </div>;
       </section>;
     </div>)}
-;
+export { AIAutonomousDecisionPlatform, IconComponent };
 
 export { AIAutonomousDecisionPlatform, IconComponent };
-;
+
 export { AIAutonomousDecisionPlatform, IconComponent };
-;
+
 export { AIAutonomousDecisionPlatform, IconComponent };
-;
-export { AIAutonomousDecisionPlatform, IconComponent };
-;
+
 export { AIAutonomousDecisionPlatform, IconComponent };

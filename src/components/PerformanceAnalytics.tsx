@@ -20,17 +20,17 @@ export default function Page() {;
         icon: Zap;
 
     ];
-;
+
       'High memory usage detected on server-01',;
       'Network latency increased by 15%',;
       'Error rate spike detected in last 5 minutes';
     ];
-;
+
     ;
       'Consider implementing lazy loading for images',;
       'Optimize database queries for better performance',;
       'Enable CDN for static assets delivery';    ];
-;
+
     return {;
 
       timestamp: now,;
@@ -47,27 +47,27 @@ export default function Page() {;
 
       return () => clearInterval(interval) }
   }, [isMonitoring, generateMockData]) ;
-;
+
     switch(status) {;
       case 'good': return 'text-green-400';
       case 'warning': return 'text-yellow-400';
       case 'critical': return 'text-red-400';
       default: return 'text-gray-400'};
-;
+
     switch(status) {;
       case 'good': return 'bg-green-500/20';
       case 'warning': return 'bg-yellow-500/20';
       case 'critical': return 'bg-red-500/20';
       default: return 'bg-gray-500/20'};
-;
+
     switch(trend) {;
       case 'up': return <TrendingUp className="w-4 h-4 text-red-400"  />;'";
       case 'down': return <TrendingDown className="w-4 h-4 text-green-400"  />;";
       default: return <Activity className="w-4 h-4 text-blue-400"  />};
-;
+
     setIsMonitoring(true) ;
     setPerformanceData(generateMockData () ) };
-;
+
     setIsMonitoring(false) };
   return (";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6">";
@@ -190,7 +190,7 @@ export default function Page() {;
                 </div>;
               </motion.div>) ) }
           </motion.div>) }
-;
+
         {/* Alerts and Recommendations */}
         {performanceData && (<motion.div;
             initial = {;
@@ -235,7 +235,7 @@ export default function Page() {;
               </div>;
             </div>;
           </motion.div>) }
-;
+
         {/* Performance Chart Placeholder */}
         <motion.div;
           initial = {;
@@ -287,5 +287,5 @@ export default function Page() {;
       </div>;
     </div>;) ;
 </div>};
-;
+
 export default PerformanceAnalytics}}}}}}}}'"`;

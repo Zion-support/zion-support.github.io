@@ -29,4 +29,4 @@ const featuredServices = ENHANCED_SERVICES.filter() service => service.featured 
 ";
 
   );
-export default Component
+export default Component;

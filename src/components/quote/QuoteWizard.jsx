@@ -120,7 +120,7 @@ export function QuoteWizard({ category }) {;
             ))}
           </div>;
         )}
-;
+
         {delayedError && (";
           <div className="space-y-2" data-testid="fetch-error-alert">";
             <Alert variant="destructive">;
@@ -137,12 +137,12 @@ export function QuoteWizard({ category }) {;
             </Button>;
           </div>;
         )}
-;
+
         {!loading && !delayedError && data && data.length === 0 && (";
           <div className="text-center text-muted-foreground py-12">;
             No {category} found.</div>;
         )}
-;
+
         {!loading && !delayedError && data && data.length > 0 && (";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
             {data.map(item => (;
@@ -190,7 +190,7 @@ export function QuoteWizard({ category }) {;
             ))}
           </div>;
         )}
-;
+
         {selectionError && (;
           <p";
             className="text-red-500 text-sm mt-2";

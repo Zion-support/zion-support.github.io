@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
-;
+
 export function ReferralMiddleware({ children }: Props) {;
   const { user } = useAuth();
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
@@ -14,7 +14,7 @@ export function ReferralMiddleware({ children }: Props) {;
       localStorage.setItem('referralCode', code);,
 }
   }, []);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);

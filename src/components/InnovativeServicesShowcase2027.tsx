@@ -1,10 +1,10 @@
 import {  import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
-;
+
 export default function Page() {;,
 },;
       { threshold: 0.1 }
     );
-;
+
     if(element) {  ;
   ;
   ;
@@ -168,7 +168,7 @@ export default function Page() {;,
                     <div className="text-gray-400 text-xs">ROI</div>;
                   </div>;
                 </div>;
-;
+
                 {/* Price & CTA */}";
                 <div className="flex items-center justify-between mb-4">;";
                   <div className="text-2xl font-bold text-white">{service.price}</div>;

@@ -5,7 +5,7 @@
       title: "Early Access",;";
       description: "Be the first to know about beta programs and launches"};
   ];
-;
+
   if(isSubscribed) {;
 
     return (";
@@ -176,5 +176,5 @@
         </div>;
       </div>;
     </section>;) };
-;
+
 export default NewsletterSection}}}'";

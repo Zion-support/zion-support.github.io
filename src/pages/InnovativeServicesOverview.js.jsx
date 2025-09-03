@@ -1,10 +1,6 @@
 import React, { useState } from 'react';''';
 import { motion } from 'framer-motion';
-;
-;
-;
-;
-;
+
 const InnovativeServicesOverview = () => {;
     const [selectedService, setSelectedService] = useState(null);    const [selectedCategory, setSelectedCategory] = useState('all');
     const allServices = [];
@@ -324,14 +320,12 @@ const InnovativeServicesOverview = () => {;
       </section>;
     </div>)};
 export default InnovativeServicesOverview;
-;
+export { InnovativeServicesOverview };
 
 export { InnovativeServicesOverview };
-;
+
 export { InnovativeServicesOverview };
-;
+
 export { InnovativeServicesOverview };
-;
-export { InnovativeServicesOverview };
-;
+
 export { InnovativeServicesOverview };

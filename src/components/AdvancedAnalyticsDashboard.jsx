@@ -25,7 +25,7 @@ export default function AdvancedAnalyticsDashboard() {return (;
   Brain,;
   Rocket} from "lucide - react",;
 const AdvancedAnalyticsDashboard = () => {}
-;
+
 ";
 
   const [timeRange, setTimeRange] = useState("30d")";
@@ -33,7 +33,7 @@ const AdvancedAnalyticsDashboard = () => {}
 }
   // comment;
   const metrics = []{}
-;
+
       title: "Total Revenue",;
       value: "$2.4M",";
       change: 12.5,;
@@ -56,10 +56,10 @@ change: 2.1,"";";
 change: 0.3,"";";
       icon: <Star className="w - 6 h-6"  />,",;
       color: "from-yellow-500 to-orange-600"}
-;
+
   ];
   const servicePerformance = []{}
-;
+
       name: "AI CRM Platform",;
 performance: 96,;
 growth: 15.2,";
@@ -118,14 +118,14 @@ Shield,&apos;
       change: 0.3,&apos;&apos,";";
       icon: &apos,&apos, <Star className="&apos,w-6" h-6&apos,       />,;
       color: &apos,from-yellow-500 to-orange-600&apos}
-;
+
   ]&apos;&apos;
       name: &apos,AI CRM Platform&apos,;
       performance: 96,;
       clients: 89,&apos;
       revenue: 450000,&apos;&apos;
       status: &apos,trending&apos} {}
-;
+
       name: &apos,Quantum Computing&apos,;
       performance: 92,;
       clients: 23,&apos;
@@ -135,7 +135,7 @@ Shield,&apos;
       clients: 156,&apos;
       revenue: 780000,&apos;&apos;
       status: &apos,stable&apos} {}
-;
+
       name: &apos,Cybersecurity Suite&apos,;
       performance: 94,;
       clients: 203,&apos;
@@ -154,9 +154,9 @@ Shield,&apos;
                 key={range}"";";
                 variant="{timeRange" === range ? "default"  : "outline"}"">;
                 size="sm"";"                onClick = "{()" => setTimeRange(range)}
-;
+
               >{range}
-;
+
               </Button>;
   return (&apos;&apos,&apos;&apos,";
     <div className="&apos;max-w-7xl" mx-auto p-6&apos;>;
@@ -193,7 +193,7 @@ business intelligence";
                 size="&apos;sm&apos;&apos;">{range}&apos;&apos;
               </Button>;
             ))}
-;
+
           </div>;
       </motion.div> {/* comment */}";
         initial = "{{" opacity: 0, y: 20 }}";
@@ -241,7 +241,7 @@ business intelligence";
                     )}&apos;"&apos,;
                     <span&apos;"&apos;
                       className="{"text-sm" font-medium ${metric.changeType === &apos;increase&apos; ? &apos;text-green-600&apos; : &apos;text-red-600&apos}"}
-;
+
                     >{metric.change}%&apos;&apos;
                     </span>";
               </CardHeader>&apos;&apos,&apos;&apos,;
@@ -301,7 +301,7 @@ business intelligence";
                       className = "border-b border-zion-slate-light/10 hover: bg-zion-blue-light/5">",;
                       <td className="py-3 px-4">",";
                         <div className="font-medium text-zion-blue-dark"> {service.name}
-;
+
                       </td>"";";
                         <div className="flex items-center gap-2">"";";
                           <div className="w - 16 bg-zion-slate-light/20 rounded-full h-2">",;
@@ -319,9 +319,9 @@ business intelligence";
                           ${(service.revenue / 1000).toFixed(0)}K,;
                         </span>"";";
                         <Badge className="{getStatusColor(service.status)}">"";"                          <div className = "flex items-center gap-1"> {getStatusIcon(service.status)}
-;
+
                             {service.status}
-;
+
                         </Badge>;
                       </td>;
                     </motion.tr>;";
@@ -418,7 +418,7 @@ business intelligence";
                         <Badge className="{getStatusColor(service.status)}">"";
                           <div className="flex items-center gap-1">;
                             {getStatusIcon(service.status)}
-;
+
                             {service.status}&apos;
                         </Badge>;
                       </td>;
@@ -594,9 +594,9 @@ decisions.""";
               <Shield className="w-5 h-5 mr-2"  />;
               Schedule Demo,;
     </div>)}
-;
+
 export default AdvancedAnalyticsDashboard;
 export { AdvancedAnalyticsDashboard }
-;
+
 ";
 import React { useState }  from "react,)))))))))))))))))))

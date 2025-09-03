@@ -33,14 +33,12 @@ const MobileLaunch = () => {}
       </div>;
     </>)};
 export default MobileLaunch;
-;
+export { MobileLaunch };
 
 export { MobileLaunch };
-;
+
 export { MobileLaunch };
-;
+
 export { MobileLaunch };
-;
-export { MobileLaunch };
-;
+
 export { MobileLaunch };

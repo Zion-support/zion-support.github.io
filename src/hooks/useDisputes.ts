@@ -63,7 +63,7 @@ export default function Page() {;
       return null;,
 }
   };
-;
+
   const createDispute = async(disputeData: { ;
     project_id: string;
     milestone_id?: string;
@@ -74,7 +74,7 @@ export default function Page() {;
       toast.error("You must be logged in to create a dispute");
       return null;,
 }
-;
+
     try {;
       const { data, error } = await supabase;
         .from("disputes");
@@ -84,7 +84,7 @@ export default function Page() {;
 });
         .select();
         .single();
-;
+
       if(error) throw error;
       ;
       toast.success("Dispute submitted successfully");
@@ -97,7 +97,7 @@ export default function Page() {;
       return null;,
 }
   };
-;
+
   const updateDisputeStatus = async(disputeId: string, status: DisputeStatus): Promise<boolean> => {;
     try {;
       const { error } = await supabase;
@@ -121,7 +121,7 @@ export default function Page() {;
       return false;,
 }
   };
-;
+
   const resolveDispute = async(disputeId: string, ;
     resolution: { summary: string; resolution_type: string; }
   ): Promise<boolean> => {;
@@ -160,7 +160,7 @@ export default function Page() {;
       return false;,
 }
   };
-;
+
   const getDisputeMessages = async(disputeId: string): Promise<DisputeMessage[]> => {;
     try {;
       const { data, error } = await supabase;
@@ -181,13 +181,13 @@ export default function Page() {;
       return [];,
 }
   };
-;
+
   const addDisputeMessage = async(disputeId: string, message: string, isAdminNote = false): Promise<boolean> => {;
     if(!user) {;
       toast.error("You must be logged in to send a message");
       return false;,
 }
-;
+
     try {;
       const { error } = await supabase;
         .from("dispute_messages");
@@ -208,7 +208,7 @@ export default function Page() {;
       return false;,
 }
   };
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);

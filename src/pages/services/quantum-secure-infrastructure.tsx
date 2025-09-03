@@ -260,5 +260,5 @@ const QuantumSecureInfrastructure = () => {;
     </>;
   );,
 }
-;
-export default QuantumSecureInfrastructure
+
+export default QuantumSecureInfrastructure;

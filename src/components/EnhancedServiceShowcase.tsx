@@ -1,5 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
 ,;
   {;
@@ -102,7 +102,7 @@ export default function Page() {;
     link: '/ai-services/healthcare';
 
 ];
-;
+
   'Cybersecurity',;
   'Cloud & DevOps',;
   'Blockchain & Web3',;
@@ -113,12 +113,12 @@ export default function Page() {;
       },;
       { threshold: 0.1 }
     );
-;
+
     if(element) {;
       observer.observe(element)}
-;
+
     return () => observer.disconnect()}, []);
-;
+
       />;
     ))};
           i < Math.floor(rating) ;
@@ -181,7 +181,7 @@ export default function Page() {;
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'';
                   : 'bg-zion-slate-light text-gray-300 hover:bg-zion-cyan/10 hover:text-zion-cyan border border-zion-slate'`;,
 }`}
-;
+
               {category}
             </button>) ) }
         </motion.div>;
@@ -222,7 +222,7 @@ export default function Page() {;
                       <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-black px-4 py-1 rounded-full text-sm font-bold">;
                         Popular;
                       </div>) }
-;
+
                     {/* Service Icon */}`;
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;";
                       <service.icon className="w-8 h-8 text-white" />;

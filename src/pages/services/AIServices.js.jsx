@@ -153,14 +153,12 @@ const AIServices = () => {}
       </section>;
     </div>)};
 export default AIServices;
-;
+export { AIServices };
 
 export { AIServices };
-;
+
 export { AIServices };
-;
+
 export { AIServices };
-;
-export { AIServices };
-;
+
 export { AIServices };

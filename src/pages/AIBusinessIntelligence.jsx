@@ -224,13 +224,13 @@ import { BarChart3, TrendingUp, Target, Users, Zap, Shield, ArrowRight, CheckCir
     </>)};
 export default AIBusinessIntelligence;,
 }
-;
+
 export { AIBusinessIntelligence };
-;
+
 export { AIBusinessIntelligence };
-;
+
 export { AIBusinessIntelligence };
-;
+
 export { AIBusinessIntelligence };
-;
+
 export { AIBusinessIntelligence };

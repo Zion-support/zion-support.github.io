@@ -122,51 +122,21 @@ const AICodeReviewAssistant = () => {;
             <motion.div initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} transition={{ duration: 0.6 }} className="text-6xl mb-6">;
               🔍;
             </motion.div>;
             <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} transition = {;
   { duration: 0.6,;
   delay: 0.2 ;
-
-;
-
-;
-
-;,
 }}>;
               AI-Powered;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">;
@@ -176,30 +146,12 @@ const AICodeReviewAssistant = () => {;
             <motion.p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} transition = {;
   { duration: 0.6,;
   delay: 0.4 ;
-
-;
-
-;
-
-;,
 }}>;
               Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, ;
               suggests improvements, and maintains code quality standards across your development team.;
@@ -209,30 +161,12 @@ const AICodeReviewAssistant = () => {;
             <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto" initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} transition = {;
   { duration: 0.6,;
   delay: 0.6 ;
-
-;
-
-;
-
-;,
 }}>;
               {benefits.map((benefit, index) => (<div key={index} className="text-center">;
                   <div className="text-3xl font-bold text-blue-400 mb-2">{benefit.metric}</div>;
@@ -243,30 +177,12 @@ const AICodeReviewAssistant = () => {;
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} transition = {;
   { duration: 0.6,;
   delay: 0.8 ;
-
-;
-
-;
-
-;,
 }}>;
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
                 Start Free Trial;
@@ -284,21 +200,9 @@ const AICodeReviewAssistant = () => {;
             <motion.div className="text-center mb-16" initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} transition={{ duration: 0.6 }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
                 Powerful Features for Modern Development;
@@ -312,30 +216,12 @@ const AICodeReviewAssistant = () => {;
               {features.map((feature, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300" initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} transition = {;
   { duration: 0.6,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}>;
                   <div className="text-blue-400 mb-4">{feature.icon}</div>;
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>;
@@ -351,21 +237,9 @@ const AICodeReviewAssistant = () => {;
             <motion.div className="text-center mb-16" initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} transition={{ duration: 0.6 }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
                 Flexible Pricing Plans;
@@ -381,37 +255,19 @@ const AICodeReviewAssistant = () => {;
                 : 'border-white/20 hover:border-white/40'}`} initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} transition = {;
   { duration: 0.6,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}>;
                   {plan.popular && (<div className="text-center mb-4">;
                       <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">;
                         Most Popular;
                       </span>;
                     </div>)}
-;
+
                   <div className="text-center mb-6">;
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                     <div className="text-4xl font-bold text-blue-400 mb-2">;
@@ -446,21 +302,9 @@ const AICodeReviewAssistant = () => {;
               <motion.div initial = {;
   { opacity: 0,;
   x: -20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   x: 0 ;
-
-;
-
-;
-
-;,
 }} transition={{ duration: 0.6 }}>;
                 <h3 className="text-2xl font-bold text-white mb-6">Seamless Integrations</h3>;
                 <div className="grid grid-cols-2 gap-4">;
@@ -475,21 +319,9 @@ const AICodeReviewAssistant = () => {;
               <motion.div initial = {;
   { opacity: 0,;
   x: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   x: 0 ;
-
-;
-
-;
-
-;,
 }} transition={{ duration: 0.6 }}>;
                 <h3 className="text-2xl font-bold text-white mb-6">Perfect For</h3>;
                 <div className="space-y-3">;
@@ -509,51 +341,21 @@ const AICodeReviewAssistant = () => {;
             <motion.h2 className="text-3xl md:text-4xl font-bold text-white mb-6" initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} transition={{ duration: 0.6 }}>;
               Ready to Transform Your Code Review Process?;
             </motion.h2>;
             <motion.p className="text-xl text-gray-300 mb-8" initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} transition = {;
   { duration: 0.6,;
   delay: 0.2 ;
-
-;
-
-;
-
-;,
 }}>;
               Join hundreds of development teams already using our AI-powered code review assistant;
             </motion.p>;
@@ -561,30 +363,12 @@ const AICodeReviewAssistant = () => {;
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} transition = {;
   { duration: 0.6,;
   delay: 0.4 ;
-
-;
-
-;
-
-;,
 }}>;
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
                 Start Free Trial;
@@ -598,30 +382,12 @@ const AICodeReviewAssistant = () => {;
             <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }} whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} transition = {;
   { duration: 0.6,;
   delay: 0.6 ;
-
-;
-
-;
-
-;,
 }}>;
               <h3 className="text-lg font-semibold text-white mb-4">Why Choose Our AI Code Review Assistant?</h3>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">;
@@ -647,12 +413,6 @@ const AICodeReviewAssistant = () => {;
             <motion.div className="mt-8 text-sm text-gray-400" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition = {;
   { duration: 0.6,;
   delay: 0.8 ;
-
-;
-
-;
-
-;,
 }}>;
               <p>Email: kleber@ziontechgroup.com</p>;
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
@@ -664,13 +424,13 @@ const AICodeReviewAssistant = () => {;
     </>)};
 export default AICodeReviewAssistant;,
 }}}}
-;
+
 export { AICodeReviewAssistant };
-;
+
 export { AICodeReviewAssistant };
-;
+
 export { AICodeReviewAssistant };
-;
+
 export { AICodeReviewAssistant };
-;
+
 export { AICodeReviewAssistant };

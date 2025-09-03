@@ -243,14 +243,12 @@ const TalentDirectory = () => {}
       </section>;
     </div>)};
 export default TalentDirectory;
-;
+export { TalentDirectory };
 
 export { TalentDirectory };
-;
+
 export { TalentDirectory };
-;
+
 export { TalentDirectory };
-;
-export { TalentDirectory };
-;
+
 export { TalentDirectory };

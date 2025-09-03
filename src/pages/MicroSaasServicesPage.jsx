@@ -1,7 +1,5 @@
 import React from 'react';
-;
-;
-;import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart, Shield, Zap } from "lucide-react";
+
 export default function MicroSAASServicesPage() {}
     const microSAASServices = [];
         {}
@@ -652,7 +650,7 @@ export default function MicroSAASServicesPage() {}
       {service.featured && (<div className="absolute - top - 3 -right - 3 bg-gradient - to - r from - zion - purple to - zion - cyan text-white text-xs font - bold px-3 py-1 rounded-full">;
           Featured;
         </div>) }
-;
+
       {/* Service Image */}
       <div className="relative mb-6 overflow-hidden rounded-xl">;
         <img src={service.images[0]} alt={service.title} className="w-full h-48 object - cover group - hover:scale - 110 transition - transform duration -500"/>;
@@ -686,24 +684,24 @@ export default function MicroSAASServicesPage() {}
             MessageCircle,;
             ArrowRight,;
             Sparkles} from 'lucide - react';
-;
+
   const [selectedCategory, setSelectedCategory] = useState < string> ('all') ;
   const [searchQuery, setSearchQuery] = useState < string> ('') ;
-;
+
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => {}
     const matchesSearch = service.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
                          service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
                          service.tags.some(tag => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch;,
 }) ;
-;
+
   const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }
     if(model === 'monthly') return `${currency}${price}/month`;
     if(model === 'yearly') return `${currency}${price}/year`;
     if(model === 'one - time') return `${currency}${price}`;
     return `${currency}${price}`;,
 };
-;
+
   const ServiceCard = ({service}: {service}: MicroSaasService }) => (<Card className="group relative overflow-hidden border-0 bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate / 50 backdrop - blur - sm hover:from - zion - blue - dark / 70 hover:to - zion - slate / 70 transition - all duration - 500 hover:scale - 105 hover:shadow-2xl hover:shadow-zion -purple / 20">;
       <div className="absolute inset - 0 bg-gradient - to - r from - zion - purple / 5 to - zion - cyan / 5 opacity - 0 group - hover:opacity - 100 transition - opacity duration -500"></div>;
 
@@ -841,7 +839,7 @@ export default function MicroSAASServicesPage() {}
         </div>;
       </div>;
     </div>) ;
-;
+
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - blue - dark to - zion - slate -dark">;
       <SEO title="Micro SAAS Services - Zion Tech Group" description="Discover innovative micro SAAS services and solutions in AI, IT, and business automation.Transform your business with cutting - edge technology." keywords="micro SAAS, AI services, IT solutions, business automation, Zion Tech Group" canonical="https://ziontechgroup.com / micro - saas - services"/>;
 
@@ -993,14 +991,12 @@ export default function MicroSAASServicesPage() {}
         </div>;
       </div>;
     </div>)}
-;
+export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
 
 export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-;
+
 export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-;
+
 export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-;
-export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-;
+
 export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };

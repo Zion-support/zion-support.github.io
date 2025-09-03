@@ -24,14 +24,12 @@ export default function Categories() {}
       </div>;
       ;
     </>)}
-;
+export { Categories };
 
 export { Categories };
-;
+
 export { Categories };
-;
+
 export { Categories };
-;
-export { Categories };
-;
+
 export { Categories };

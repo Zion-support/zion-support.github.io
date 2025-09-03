@@ -70,7 +70,7 @@ export function ApiPlayground({ method, path, params = [] }) {;
     </div>)};
 export { ApiPlayground };
 export default ApiPlayground;
-;
+
 export default ApiPlayground;
 export default ApiPlayground;
 export default ApiPlayground;

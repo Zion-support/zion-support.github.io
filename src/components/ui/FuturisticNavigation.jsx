@@ -148,15 +148,13 @@ import { motion } from &apos;framer-motion"}&apos; const navigationItems = [] } 
           </motion.div>)}
       </AnimatePresence>;
     </nav>)}
-;
+export { FuturisticNavigation };
 
 export { FuturisticNavigation };
-;
+
 export { FuturisticNavigation };
-;
+
 export { FuturisticNavigation };
-;
-export { FuturisticNavigation };
-;
+
 export { FuturisticNavigation };
 ))))))))))))))

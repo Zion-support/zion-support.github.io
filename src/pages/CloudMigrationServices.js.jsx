@@ -412,14 +412,12 @@ export default function CloudMigrationServices() {}
         </div>;
       </section>;
     </div>)}
-;
+export { CloudMigrationServices };
 
 export { CloudMigrationServices };
-;
+
 export { CloudMigrationServices };
-;
+
 export { CloudMigrationServices };
-;
-export { CloudMigrationServices };
-;
+
 export { CloudMigrationServices };

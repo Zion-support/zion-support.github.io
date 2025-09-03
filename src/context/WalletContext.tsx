@@ -1,12 +1,12 @@
 import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from 'react';
 import Web3Modal from 'web3modal';
 import { ethers } from 'ethers';
-;
+
 export default function Page() {;
 > = ({ children }) => {;
   const [wallet, setWallet] = useState<WalletState>(initialWalletState);
   const [web3ModalInstance, setWeb3ModalInstance] = useState<Web3Modal | null>(null);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
@@ -20,7 +20,7 @@ export default function Page() {;
         setWeb3ModalInstance(modal);,
 }
   }, []);
-;
+
   const disconnectWallet = useCallback(async () => {;
     if(web3ModalInstance?.cachedProvider) {;
         web3ModalInstance.clearCachedProvider();,
@@ -39,7 +39,7 @@ export default function Page() {;
       const signer = provider.getSigner();
       const address = await signer.getAddress();
       const network = await provider.getNetwork();
-;
+
       setWallet({;
         provider,;
         signer,;
@@ -47,7 +47,7 @@ export default function Page() {;
         chainId: network.chainId,;
         isConnected: true,;,
 });
-;
+
       instance.on('accountsChanged', (accounts: string[]) => {;
         if(accounts.length > 0) {;
           // Re-fetch signer and network info as account change might imply network change in some wallets;
@@ -66,7 +66,7 @@ export default function Page() {;
           disconnectWallet();,
 }
       });
-;
+
       instance.on('chainChanged', async () => { // Added async;
         // Re-initialize provider, signer, address, and chainId;
         const newProvider = new ethers.providers.Web3Provider(instance);
@@ -82,12 +82,12 @@ export default function Page() {;
 });
         console.log('Network changed to:', newNetwork.chainId);,
 });
-;
+
       instance.on('disconnect', (error: any) => {;
         console.log('Disconnected', error);
         disconnectWallet();,
 });
-;,
+
 } catch(error) {;
       console.error('Error connecting wallet:', error);
       // If user closes modal, it might throw an error, so we ensure state is reset;
@@ -98,13 +98,13 @@ export default function Page() {;
   const displayAddress = wallet.address;
     ? `${wallet.address.substring(0, 6)}...${wallet.address.substring(wallet.address.length-4)}`;
     : null;
-;
+
   return (<WalletContext.Provider value={{ ...wallet, connectWallet, disconnectWallet, displayAddress }}>;
       {children}
     </WalletContext.Provider>;
   );,
 };
-;
+
 export const useWallet = (): WalletContextType => {;
   const context = useContext(WalletContext);
   if(context === undefined) {;

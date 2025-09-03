@@ -28,7 +28,7 @@ import { ;
   Calendar,;
   Briefcase;,
 } from 'lucide-react';
-;
+
 export function PartnersPage() {;
   const partnerTypes = [;
     {;
@@ -56,7 +56,7 @@ export function PartnersPage() {;
       count: 8;,
 }
   ];
-;
+
   const featuredPartners = [;
     {;
       name: 'Microsoft',;
@@ -113,7 +113,7 @@ export function PartnersPage() {;
       focus: ['Database', 'Enterprise Applications', 'Cloud Infrastructure', 'Analytics'];,
 }
   ];
-;
+
   const partnerBenefits = [;
     {;
       icon: TrendingUp,;
@@ -146,7 +146,7 @@ export function PartnersPage() {;
       description: 'Worldwide support network and local market expertise.';,
 }
   ];
-;
+
   const partnershipPrograms = [;
     {;
       name: 'Technology Partner Program',;
@@ -203,7 +203,7 @@ export function PartnersPage() {;
       ];,
 }
   ];
-;
+
   const testimonials = [;
     {;
       name: 'Jennifer Martinez',;
@@ -227,7 +227,7 @@ export function PartnersPage() {;
       rating: 5;,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -560,5 +560,5 @@ export function PartnersPage() {;
     </div>;
   );,
 }
-;
+
 export default PartnersPage;

@@ -4,12 +4,12 @@ import { toast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { EmptyMatchesCard } from './EmptyMatchesCard';
 import { JobMatchCard } from './JobMatchCard';
-;
+
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
   const [talents, setTalents] = useState<any[]>([]); // Added type for talents;
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
-;
+
   const fetchSuggestedTalents = useCallback(async () => { // Wrapped in useCallback;
     setIsLoading(true);
     try {;
@@ -34,7 +34,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
           );
         `);
         .eq("job_id", jobId);
-;
+
       if(error) throw error;
       setTalents(data || []);,
 } catch(error) {;
@@ -56,7 +56,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
       description: `Navigating to talent profile: ${talentId}`,;,
 });,
 };
-;
+
   const handleInvite = (talentId: string) => {;
     console.log("Invite talent:", talentId);
     toast({;
@@ -64,14 +64,14 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
       description: `Inviting talent: ${talentId}`,;,
 });,
 };
-;
+
   const handleRefresh = () => {;
     setIsProcessing(true);
     fetchSuggestedTalents().finally(() => {;
       setIsProcessing(false);,
 });,
 };
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -98,7 +98,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
       skills: talent.talent_profile?.skills || [],;,
 };,
 });
-;
+
   return (<Card className="border-zion-blue-light bg-zion-blue">;
       <CardHeader>;
         <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>;

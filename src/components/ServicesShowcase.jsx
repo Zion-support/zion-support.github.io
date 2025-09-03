@@ -182,4 +182,4 @@ const categoryColors = {} const features = [;
 ";
 
   );
-export default Component
+export default Component;

@@ -245,14 +245,12 @@ const AIAutonomousRiskManagement = () => {}
       </div>;
     </>)};
 export default AIAutonomousRiskManagement;
-;
+export { AIAutonomousRiskManagement };
 
 export { AIAutonomousRiskManagement };
-;
+
 export { AIAutonomousRiskManagement };
-;
+
 export { AIAutonomousRiskManagement };
-;
-export { AIAutonomousRiskManagement };
-;
+
 export { AIAutonomousRiskManagement };

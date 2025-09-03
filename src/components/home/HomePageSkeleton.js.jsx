@@ -25,5 +25,5 @@ const HomePageSkeletonJs = () => {;
           </div>;
     </div>;,;
   )}
-;
+
 export default HomePageSkeletonJs;

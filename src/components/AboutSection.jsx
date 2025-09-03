@@ -38,4 +38,4 @@ export function AboutSection() { const achievements = [] const values = [] const
 ";
 
   );
-export default Component
+export default Component;

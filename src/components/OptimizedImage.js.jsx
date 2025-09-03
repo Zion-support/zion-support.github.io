@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-;
+
 export default function Page() {;
 ,;
       {;
@@ -47,7 +47,7 @@ export default function Page() {;
             </div>;
           </motion.div>;
         )}
-;
+
         {/* Error State */}
         {hasError && (;
           <motion.div;

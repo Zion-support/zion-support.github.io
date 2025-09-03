@@ -15,14 +15,12 @@ export default function IntegrationsPage() {}
       </main>;
       ;
     </ProtectedRoute>)}
-;
+export { IntegrationsPage };
 
 export { IntegrationsPage };
-;
+
 export { IntegrationsPage };
-;
+
 export { IntegrationsPage };
-;
-export { IntegrationsPage };
-;
+
 export { IntegrationsPage };

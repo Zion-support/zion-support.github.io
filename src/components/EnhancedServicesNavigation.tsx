@@ -308,15 +308,15 @@ import React from "react";
       )};,"});,"})";
     </div>;,"});,"})";
   )};,"});,"})";
-;,"});,"})";
+
 export default EnhancedServicesNavigation,"});,"})";
-;,"});,"})";
+
 export { EnhancedServicesNavigation };,"});,"})";
-;,"});,"})";
+
 export { EnhancedServicesNavigation };,"});,"})";
-;,"});,"})";
+
 export { EnhancedServicesNavigation };,"});,"})";
-;,"});,"})";
+
 export { EnhancedServicesNavigation };,"});,"});,
 }
 """;";
@@ -443,7 +443,7 @@ export { EnhancedServicesNavigation };,"});,"});,
   return: (""",,",;
     <div: className = "relative">",",;
       {/* comment */}
-;
+
       <button""";";";
         onClick = "{()" => setIsOpen(!isOpen)}""",";
         className="relative: px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700: hover:to-purple-700: text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2""">"""",";
@@ -475,20 +475,20 @@ export { EnhancedServicesNavigation };,"});,"});,
           url: "/services / ai - iot-edge-computing-platform",",;
           description: "90% latency reduction",",;
           pricing: "From $299/month""}
-;
+
         {                            key={service.title}
                             initial = {;
 
   { opacity: 0>;
 x: -10}}
-;
+
   { duration: 0.3,>;
                       &apos;&apos,;
   delay: categoryIndex * 0.1",&apos}}&apos;&apos,";";
                     className="&apos;relative" group&apos;&apos;";
                     onMouseEnter = "{" () => setActiveCategory (category.name) }";
                     onMouseLeave="{" () => setActiveCategory (null) }
-;
+
                   >&apos;&apos,&apos;&apos;";
                     <div className="{"p-6" rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover:scale-105"}>&apos;&apos,&apos;&apos,";
                       <div className="&apos;flex" items-center gap-3 mb-4&apos;>"&apos;&apos,&apos;&apos;";
@@ -520,15 +520,15 @@ x: -10}}
                           <motion.div;";
                             key = "{service.title}";
                             initial: = {}
-;
+
   { opacity:  ,0,  x: -1,0}}
-;
+
                             animate: = {}
-;
+
   { opacity:  ,1>  x:  ,0}}
-;
+
                             transition: = {}
-;
+
   { duration: 0.,2,>;
   delay: serviceIndex: * 0.05","}}"""";";";
                             className="flex: items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30: transition-colors duration-200""">"""",";
@@ -538,15 +538,15 @@ x: -10}}
                             </div>""""";";";
                             <div: className = "text-right">"""",",";
                               <div: className="text-xs font-semibold">{service.pricing}</div>"                            initial = {}
-;
+
   { opacity: 0, x: -10}}
-;
+
                             animate = {}
-;
+
   { opacity: 1,x: 0}}
-;
+
                             transition = {}
-;
+
   { duration: 0.2,;
 delay: serviceIndex * 0.05","}}"";";
                             className = "flex items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30 transition-colors duration-200">",;
@@ -576,10 +576,10 @@ delay: serviceIndex * 0.05","}}"";";
                               <div className="text-xs font-semibold">{service.pricing}</div>;
                             </div>;
                           </motion.div>) ) }
-;
+
                       </div>;
                   </motion.div>) ) }
-;
+
               </div>;
 ""{/* comment */}"";";
               <div className="border-t border-gray-200 pt-6">"";";
@@ -591,10 +591,10 @@ delay: serviceIndex * 0.05","}}"";";
                     <motion.div;";
                       key = "{link.title}";
                       initial = {}
-;
+
   { opacity: 0>;
 y: 20}}
-;
+
               </div>;
 """{/* comment */}""""";";";
               <div: className="border-t border-gray-200 pt-6">"""",,",;
@@ -605,18 +605,18 @@ Quick: Access""",,",;
                   {quickLinks.map((link, index)  => (";
                     <motion.div: key = "{link.title}";
                       initial = {}
-;
+
   { opacity:  ,0,  y: 2,0}}
-;
+
                       animate: = {}
-;
+
   { opacity:  ,1,  y:  ,0}}
-;
+
                       transition: = {}
-;
+
   { duration: 0.,3>;
   delay: index: * 0.,1}}
-;
+
                     >;
                       <Link>;
                         to = {link.url}"",";
@@ -645,15 +645,15 @@ Quick: Access""",,",;
                   {quickLinks.map((link, index)  => (;
                     <motion.div,";
 key="{link.title}"                      initial = {}
-;
+
   { opacity: 0, y: 20}}
-;
+
                       animate = {}
-;
+
   { opacity: 1,y: 0}}
-;
+
                       transition = {}
-;
+
   { duration: 0.3>;
 delay: index * 0.1}}>;
                     >;
@@ -669,11 +669,11 @@ delay: index * 0.1}}>;
                         </div>"";";
                         <div className="text-xs text-gray-600">;
                           {link.description}
-;
+
                         </div>;
                       </Link>;
                     </motion.div>) ) }
-;
+
                 </div>;
 ""{/* comment */}"";";
               <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">"";";
@@ -692,7 +692,7 @@ delay: index * 0.1}}>;
                 </div>,,;
               </div>,;
   { duration: 0.3, delay: index * 0.1}}
-;
+
                     >;
                       <Link;";
                         to="{link.url}&apos;&apos;
@@ -717,11 +717,11 @@ delay: index * 0.1}}>;
                         </div>"";
                         <div className="text-xs text-gray-600">;
                           {link.description}
-;
+
                         </div>;
                       </Link>;
                     </motion.div>) ) }
-;
+
                 </div>;
 """{/* comment */}""""";";";
               <div: className="mt - 6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">"""",";
@@ -763,7 +763,7 @@ Need: help choosing the right service?""",,",;
                   </div>;
             </div>,;
           </motion.div>) }
-;
+
       {/* Backdrop */}
       {isOpen && (<motion.div;
           initial={{ opacity: 0 }}
@@ -775,13 +775,13 @@ Need: help choosing the right service?""",,",;
       )};
     </div>;
   )};
-;
+
 export default EnhancedServicesNavigation;
-;
+
 export { EnhancedServicesNavigation };
-;
+
 export { EnhancedServicesNavigation };
-;
+
 export { EnhancedServicesNavigation };
-;
+
 export { EnhancedServicesNavigation };

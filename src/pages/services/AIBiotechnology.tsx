@@ -25,7 +25,7 @@ import { ;
   Pill;,
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-;
+
 export default function AIBiotechnology() {;
   const features = [;
     "AI-powered drug discovery and design",;
@@ -37,7 +37,7 @@ export default function AIBiotechnology() {;
     "Drug repurposing AI",;
     "Clinical trial optimization";
   ];
-;
+
   const benefits = [;
     "Accelerated drug development timeline",;
     "Improved drug efficacy and safety",;
@@ -48,7 +48,7 @@ export default function AIBiotechnology() {;
     "Innovative therapeutic approaches",;
     "Precision medicine capabilities";
   ];
-;
+
   const pricingTiers = [;
     {;
       name: "Bio Starter",;
@@ -96,7 +96,7 @@ export default function AIBiotechnology() {;
       ];,
 }
   ];
-;
+
   const useCases = [;
     {;
       title: "Pharmaceutical Development",;
@@ -119,7 +119,7 @@ export default function AIBiotechnology() {;
       icon: Microscope;,
 }
   ];
-;
+
   const technologies = [;
     {;
       name: "Machine Learning",;
@@ -142,7 +142,7 @@ export default function AIBiotechnology() {;
       icon: Target;,
 }
   ];
-;
+
   const industries = [;
     {;
       name: "Pharmaceutical",;
@@ -165,7 +165,7 @@ export default function AIBiotechnology() {;
       icon: Microscope;,
 }
   ];
-;
+
   return (;
     <>;
       <SEO ;

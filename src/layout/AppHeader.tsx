@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
-;
+
 export function AppHeader() {;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-;
+
   const handleSearch = (e: React.FormEvent) => {;
     e.preventDefault();
     if (searchQuery.trim()) {;
@@ -591,7 +591,7 @@ export function AppHeader() {;
     { name: 'About', href: '/about', current: false },;
     { name: 'Contact', href: '/contact', current: false },;
   ];
-;
+
   const services = [;
     { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },;
     { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },;
@@ -600,7 +600,7 @@ export function AppHeader() {;
     { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },;
     { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' },;
   ];
-;
+
   return (;
     <>;
       <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">;

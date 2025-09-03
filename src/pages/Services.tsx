@@ -1,17 +1,17 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
+
 export default function Services(...args: any[]): any {): unknown {): unknown {}
   const [activeCategory, setActiveCategory] = useState(0);';
   const [searchTerm, setSearchTerm] = useState('');
-;
+
   const filteredServices: unknown = allServices.filter(service => {}
     const matchesSearch: unknown = service.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
                          service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
     const matchesCategory: unknown = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;,
 }) ;
-;
+
   return();
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">"";
       <div className="container mx-auto px-4 py-24 text-center text-white">"        <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
@@ -204,7 +204,7 @@ export default function Services(...args: any[]): any {): unknown {): unknown {}
 export default Services;'";
 '"'";
 export { Services };
-;
+
 export default function Services() {;
   const services = [;
     {;
@@ -338,7 +338,7 @@ export default function Services() {;
       ],;
       link: "/services/cloud"    }
   ];
-;
+
   const stats = [;
     {;
       icon: Globe,;
@@ -365,7 +365,7 @@ export default function Services() {;
       description: "Zero breaches";,
 }
   ];
-;
+
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -375,7 +375,7 @@ export default function Services() {;
 }
     }
   };
-;
+
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;
     visible: {;
@@ -386,7 +386,7 @@ export default function Services() {;
 }
     }
   };
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}

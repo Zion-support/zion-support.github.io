@@ -25,7 +25,7 @@ import { ;
   Eye,;
   Brain as BrainIcon;,
 } from 'lucide-react';
-;
+
 const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
   const features = [;
     {;
@@ -53,7 +53,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
       benefits: ["HIPAA compliant", "End-to-end encryption", "Audit trails"];,
 }
   ];
-;
+
   const pricingPlans = [;
     {;
       name: "Clinic",;
@@ -97,7 +97,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
       popular: false;,
 }
   ];
-;
+
   const useCases = [;
     {;
       title: "Radiology Departments",;
@@ -120,7 +120,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
       icon: Microscope;,
 }
   ];
-;
+
   const benefits = [;
     {;
       metric: "99.7%",;
@@ -143,7 +143,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
       detail: "Average reduction in diagnostic costs";,
 }
   ];
-;
+
   const specialties = [;
     "Cardiology",;
     "Neurology",;
@@ -154,7 +154,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
     "Ophthalmology",;
     "Orthopedics";
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">;
       <SEO ;
@@ -360,7 +360,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-slate-400 mb-6">{plan.description}</p>;
@@ -476,5 +476,5 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default AIAutonomousHealthcareDiagnosticsPlatform;

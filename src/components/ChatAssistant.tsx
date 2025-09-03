@@ -11,7 +11,7 @@ interface ChatAssistantProps {;
   enableFileUpload?: boolean;
   enableSuggestions?: boolean;,
 }
-;
+
 export const ChatAssistant: React.FC<ChatAssistantProps> = ({;
   enabled = true,;
   position = 'bottom-right',;
@@ -35,11 +35,11 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({;
   const [isListening, setIsListening] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-;
+
   const scrollToBottom = () => {;
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });,
 };
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -49,21 +49,21 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({;
 }, []);, []);
     scrollToBottom();,
 }, [messages]);
-;
+
   const handleSendMessage = async () => {;
     if(!inputValue.trim()) return;
-;
+
     const userMessage: Message = {;
       id: Date.now().toString(),;
       text: inputValue,;
       sender: 'user',;
       timestamp: new Date();,
 };
-;
+
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
     setIsTyping(true);
-;
+
     // Simulate AI response;
     setTimeout(() => {;
       const aiResponse: Message = {;
@@ -81,7 +81,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({;
       setIsTyping(false);,
 }, 1500);,
 };
-;
+
   const getAIResponse = (input: string): string => {;
     const responses = ["I'd be happy to help you with that! Can you provide more details about your specific needs?",;
       "That's a great question! Our team specializes in AI, cybersecurity, and cloud solutions.Which area interests you most?",;
@@ -91,28 +91,28 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({;
     ];
     return responses[Math.floor(Math.random() * responses.length)];,
 };
-;
+
   const handleKeyPress = (e: React.KeyboardEvent) => {;
     if(e.key === 'Enter' && !e.shiftKey) {;
       e.preventDefault();
       handleSendMessage();,
 }
   };
-;
+
   const toggleVoice = () => {;
     setIsListening(!isListening);
     // Voice functionality would be implemented here;,
 };
-;
+
   const positionClasses = {;
     'bottom-right': 'bottom-4 right-4',;
     'bottom-left': 'bottom-4 left-4',;
     'top-right': 'top-4 right-4',;
     'top-left': 'top-4 left-4';,
 };
-;
+
   if(!enabled) return null;
-;
+
   return (<div className={`fixed ${positionClasses[position]} z-50`}>;
       {/* Chat Window */}
       <AnimatePresence>;
@@ -239,5 +239,5 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({;
     </div>;
   );,
 };
-;
+
 export default ChatAssistant;

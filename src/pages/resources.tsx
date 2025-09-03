@@ -17,7 +17,7 @@ import { ;
   Star,;
   CheckCircle;,
 } from 'lucide-react';
-;
+
 export default function ResourcesPage() {;
   const whitepapers = [;
     {;
@@ -48,7 +48,7 @@ export default function ResourcesPage() {;
       downloadUrl: "/resources/whitepapers/ai-cybersecurity.pdf";,
 }
   ];
-;
+
   const caseStudies = [;
     {;
       title: "How TechCorp Reduced Cloud Costs by 40%",;
@@ -75,7 +75,7 @@ export default function ResourcesPage() {;
       url: "/resources/case-studies/quantumbank-quantum-computing";,
 }
   ];
-;
+
   const guides = [;
     {;
       title: "Getting Started with AI Implementation",;
@@ -102,7 +102,7 @@ export default function ResourcesPage() {;
       url: "/resources/guides/cybersecurity-framework-implementation";,
 }
   ];
-;
+
   const webinars = [;
     {;
       title: "The Future of AI in Business",;
@@ -121,7 +121,7 @@ export default function ResourcesPage() {;
       registrationUrl: "/webinars/cloud-cost-optimization-workshop";,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}

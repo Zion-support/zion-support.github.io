@@ -69,14 +69,12 @@ function ProjectsContent() {}
     </>)}
 export default function Projects() {;
     return <ProjectsContent />}
-;
+export { ProjectsContent, Projects };
 
 export { ProjectsContent, Projects };
-;
+
 export { ProjectsContent, Projects };
-;
+
 export { ProjectsContent, Projects };
-;
-export { ProjectsContent, Projects };
-;
+
 export { ProjectsContent, Projects };

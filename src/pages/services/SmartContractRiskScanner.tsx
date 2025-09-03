@@ -31,7 +31,7 @@ import { ;
   Users,;
   TrendingUp;,
 } from 'lucide-react';
-;
+
 export default function SmartContractRiskScanner(...args: []):  {;
   const features = [;
     {;
@@ -59,7 +59,7 @@ export default function SmartContractRiskScanner(...args: []):  {;
       benefits: ['Code quality metrics', 'Gas optimization', 'Best practices', 'Performance analysis'];,
 };
   ];
-;
+
   const scanningCapabilities = [;
     {;
       title: 'Reentrancy Attacks',;
@@ -86,7 +86,7 @@ export default function SmartContractRiskScanner(...args: []):  {;
       features: ['Business logic analysis', 'State machine validation', 'Flow control analysis', 'Edge case testing'];,
 };
   ];
-;
+
   const pricing = [;
     {;
       name: 'Starter',;
@@ -141,7 +141,7 @@ export default function SmartContractRiskScanner(...args: []):  {;
       popular: false;,
 };
   ];
-;
+
   const marketInfo = {;
   marketSize: '$2.8 billion',;
     growthRate: '23.4% CAGR',;
@@ -153,13 +153,9 @@ export default function SmartContractRiskScanner(...args: []):  {;
   ;
   roi: '300-500% within 6 months';
   ;
-;
 
-;
-
-;,
 };
-;
+
   const supportedNetworks = [;
     'Ethereum',;
     'Binance Smart Chain',;
@@ -170,7 +166,7 @@ export default function SmartContractRiskScanner(...args: []):  {;
     'Optimism',;
     'Base';
   ];
-;
+
   const securityStandards = [;
     'OWASP Top 10',;
     'Smart Contract Security Verification Standard',;
@@ -179,7 +175,7 @@ export default function SmartContractRiskScanner(...args: []):  {;
     'ISO 27001 Compliance',;
     'SOC 2 Type II';
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -195,22 +191,10 @@ export default function SmartContractRiskScanner(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             animate = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             className="text-center";
@@ -265,22 +249,10 @@ export default function SmartContractRiskScanner(...args: []):  {;
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition={{ duration: 0.6 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center";
@@ -302,22 +274,10 @@ export default function SmartContractRiskScanner(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16";
@@ -338,32 +298,14 @@ export default function SmartContractRiskScanner(...args: []):  {;
                 initial = {;
   { opacity: 0,;
   x: index % 2 === 0 ? -20 : 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   x: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.6,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-red-400/50 transition-all duration-300";
 
@@ -397,22 +339,10 @@ export default function SmartContractRiskScanner(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16";
@@ -433,32 +363,14 @@ export default function SmartContractRiskScanner(...args: []):  {;
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.6,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-red-400/50 transition-all duration-300";
 
@@ -492,22 +404,10 @@ export default function SmartContractRiskScanner(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16";
@@ -528,32 +428,14 @@ export default function SmartContractRiskScanner(...args: []):  {;
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.6,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-red-400/50 transition-all duration-300";
 
@@ -574,22 +456,10 @@ export default function SmartContractRiskScanner(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16";
@@ -610,32 +480,14 @@ export default function SmartContractRiskScanner(...args: []):  {;
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.6,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-red-400/50 transition-all duration-300";
 
@@ -656,22 +508,10 @@ export default function SmartContractRiskScanner(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16";
@@ -692,39 +532,21 @@ export default function SmartContractRiskScanner(...args: []):  {;
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.6,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${;
                   plan.popular;
                     ? 'border-red-400 shadow-lg shadow-red-400/20';
                     : 'border-slate-700';,
 }`}
-;
+
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
                     <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium">;
@@ -732,7 +554,7 @@ export default function SmartContractRiskScanner(...args: []):  {;
                     </div>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <div className="flex items-baseline justify-center space-x-1 mb-4">;
@@ -759,7 +581,7 @@ export default function SmartContractRiskScanner(...args: []):  {;
                       ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover:from-red-700 hover:to-orange-700';
                       : 'bg-slate-700 text-white hover:bg-slate-600';,
 }`}
-;
+
                   {plan.cta}
                 </motion.button>;
               </motion.div>;
@@ -775,25 +597,13 @@ export default function SmartContractRiskScanner(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
-;
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Ready to Secure Your Smart Contracts?;
             </h2>;
@@ -824,13 +634,13 @@ export default function SmartContractRiskScanner(...args: []):  {;
     </div>;
   );,
 }}}}}
-;
+
 export { SmartContractRiskScanner };
-;
+
 export { SmartContractRiskScanner };
-;
+
 export { SmartContractRiskScanner };
-;
+
 export { SmartContractRiskScanner };
-;
+
 export { SmartContractRiskScanner };

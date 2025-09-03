@@ -213,13 +213,13 @@ export default function EnterpriseSolutions() {;
       </section>;
     </div>);,
 }}}}
-;
+
 export { EnterpriseSolutions, Icon };
-;
+
 export { EnterpriseSolutions, Icon };
-;
+
 export { EnterpriseSolutions, Icon };
-;
+
 export { EnterpriseSolutions, Icon };
-;
+
 export { EnterpriseSolutions, Icon };

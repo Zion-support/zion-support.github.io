@@ -6,7 +6,7 @@ interface ContactInfoProps {;
   showTitle?: boolean;
   variant?: 'default' | 'compact' | 'detailed';,
 }
-;
+
 export default function ContactInfo({ ;
   className = '', ;
   showTitle = true, ;
@@ -18,7 +18,7 @@ export default function ContactInfo({ ;
     address: '364 E Main St STE 1008, Middletown DE 19709',;
     website: 'https://ziontechgroup.com';,
 }
-;
+
   if (variant === 'compact') {;
     return (;
       <div className={`flex flex-wrap gap-4 text-sm ${className}`}>;
@@ -33,7 +33,7 @@ export default function ContactInfo({ ;
       </div>;
     );,
 }
-;
+
   if (variant === 'detailed') {;
     return (;
       <div className={`space-y-4 ${className}`}>;
@@ -81,7 +81,7 @@ export default function ContactInfo({ ;
       </div>;
     );,
 }
-;
+
   // Default variant;
   return (;
     <div className={`space-y-4 ${className}`}>;

@@ -1,4 +1,4 @@
-;,"});,"});";,
+
 }) }"});,"})";
         catch (error) {}"});,"})";
 ";,"});,"})";
@@ -274,9 +274,9 @@ export { SEOOptimizer };,"});,"})";
  const SEOOptimizer = () => {const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";""const;const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {&apos;import React { useState, useEffect, useCallback } from &apos;react&apos,lucide-react";&apos;&apos,;
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";";
 ""}}}
-;
+
 const SEOOptimizer = () => {}
-;
+
     const;const;const [isOpen, setIsOpen] = useState (false);,
 }
     const [isAnalyzing, setIsAnalyzing] = useState (false);,
@@ -286,14 +286,14 @@ const SEOOptimizer = () => {}
     const [selectedPage, setSelectedPage] = useState (null);,
 }
     const analyzeSEO = useCallback (async () => {}
-;
+
         setIsAnalyzing (true);,
 }
         try {}
-;
+
             // comment;
             const samplePages = []{}
-;
+
 ";
 
                     url: "/",;
@@ -364,11 +364,9 @@ const SEOOptimizer = () => {}
                     images["/images / ai - solutions.jpg"], ",;
                     links["/services", /about",/contact"], ",;
                     keywords["artificial intelligence", machine learning",predictive analytics", AI automation"];
-
-;
             ]&apos;&apos;
             const pageAnalyses = samplePages.map(page => {}
-;
+
                 const;const;const score = calculateSEOScore(page);,
 }
                 const issues = identifySEOIssues(page);,
@@ -376,7 +374,7 @@ const SEOOptimizer = () => {}
                 const recommendations = generateSEORecommendations(issues);,
 }
                 return {}
-;
+
                     pageUrl: page.url,;
 title: page.title,;
 metaDescription: page.metaDescription,;
@@ -399,11 +397,11 @@ issues,;
 }
             const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0) .length;
             // comment            const issueCounts = {}
-;
+
             pageAnalyses.forEach(page => {}
-;
+
                 page.issues.forEach(issue => {}
-;
+
                     issueCounts[issue] = (issueCounts[issue] || 0) + 1})});,
 }
             const topIssues = Object.entries(issueCounts);,
@@ -421,24 +419,24 @@ issues,;
             const summary = generateSummary(pageAnalyses, topIssues);,
 }
             setReport({}
-;
+
                 totalPages,;
                 averageScore,;
                 pagesWithIssues,;
                 topIssues,;
                 pageAnalyses,;
                 summary})}
-;
+
                 totalPages, averageScore,;
                 pagesWithIssues, topIssues,;
                 pageAnalyses, summary})}
-;
+
         catch (error) {}";
             // comment;
 
             // comment;
         finally {}
-;
+
             setIsAnalyzing(false)}
     }, []);
     useEffect(() => {;

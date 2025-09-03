@@ -13,7 +13,7 @@ seller: {;
     name: string;
     rating: number;
     reviews: number;
-;,
+
 };
   location: string;  createdAt: string;
   updatedAt: string;
@@ -32,7 +32,7 @@ export interface ProductListing extends Listing {;
     cost: number;
     method: string;
     estimatedDays: number}}
-;
+
 export interface ServiceListing extends Listing {;
   serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
   duration?: string;

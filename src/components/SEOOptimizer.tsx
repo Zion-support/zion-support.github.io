@@ -1,5 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
 interface SEOMetrics {;
   pageSpeed: number;
@@ -13,14 +13,14 @@ coreWebVitals: {;
     fid: number;
     cls: number;,
 }}
-;
+
 interface SEOOptimizerProps extends React.PropsWithChildren<{}> {;
 
   url?: string;
   autoAnalyze?: boolean;
   showDetails?: boolean;
   onAnalysisComplete?: (analysis: SEOAnalysis) => void}
-;
+
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
 
   url,;
@@ -32,7 +32,7 @@ autoAnalyze:  true,;
   const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
-;
+
   // Mock SEO analysis data(in real app, this would come from actual analysis);
   const mockAnalysis: SEOAnalysis = useMemo(() => ({;
 
@@ -110,13 +110,13 @@ autoAnalyze:  true,;
         fid: 45,;
         cls: 0.08}},;
     lastUpdated: new Date () }) , []) ;
-;
+
   // Analyze SEO;
   ;
     setIsAnalyzing(true) ;
-;
+
     return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ;
-;
+
   // Filter suggestions by priority;
   const filteredSuggestions = useMemo(() => {;
     return analysis?.suggestions.sort((a, b) => {;
@@ -130,7 +130,7 @@ autoAnalyze:  true,;
   ;
   low: 1 };
       return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis]) ;
-;
+
   if(!analysis && !isAnalyzing) {;
 
     return ();
@@ -182,7 +182,7 @@ autoAnalyze:  true,;
           </button>;
         </div>;
       </div>;
-;
+
       {isAnalyzing ? (";
         <div className="text-center py-12">;";
           <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4" />";
@@ -281,7 +281,7 @@ autoAnalyze:  true,;
                         ? 'bg-zion-cyan text-white'';
                         : 'bg-zion-slate/10 text-zion-slate hover:bg-zion-slate/20'`;,
 }`}
-;
+
                     {category.charAt(0) .toUpperCase () + category.slice(1) }
                   </button>) ) }
               </div>;
@@ -421,15 +421,15 @@ autoAnalyze:  true,;
       ) : null};
     </div>;
   )};
-;
+
 // Hook for using SEO optimization;
   const [analysis, setAnalysis] = useState < SEOAnalysis | null> (null) ;
   const [isOptimizing, setIsOptimizing] = useState(false);
-;
+
     setIsOptimizing(true) ;    // Implement actual optimization logic here;
     await new Promise(resolve => setTimeout (resolve, 3000) ) ;
     setIsOptimizing(false) }, []) ;
-;
+
   return {;
 
     analysis,;
@@ -437,5 +437,3 @@ autoAnalyze:  true,;
     optimizePage;,
 }};
 '"`;
-
-;,"});,})";

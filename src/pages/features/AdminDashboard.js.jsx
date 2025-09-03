@@ -77,14 +77,12 @@ export default function AdminDashboard() {}
       </main>;
       <Footer />;
     </>)}
-;
+export { AdminDashboard };
 
 export { AdminDashboard };
-;
+
 export { AdminDashboard };
-;
+
 export { AdminDashboard };
-;
-export { AdminDashboard };
-;
+
 export { AdminDashboard };

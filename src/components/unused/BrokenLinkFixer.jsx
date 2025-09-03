@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
                     else {;
 
@@ -313,13 +313,13 @@ export default function Page() {;
                         </div>;
                       </div>;
                     </div>)}
-;
+
                   {/* Check Button */}";
                   <button onClick={checkAllLinks} disabled={isChecking} className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">;
                     {isChecking ? 'Checking...' : 'Check All Links'}
                   </button>;
                 </div>)}
-;
+
               {/* Broken Links Tab */}'";
               {activeTab === 'broken' && (<div className="space-y-4">'";
                   {links.filter(link => link.status === 'broken').length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">";
@@ -355,7 +355,7 @@ export default function Page() {;
                           </div>))}
                     </div>)}
                 </div>)}
-;
+
               {/* Healthy Links Tab */}'";
               {activeTab === 'healthy' && (<div className="space-y-4">'";
                   {links.filter(link => link.status === 'healthy').length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">";
@@ -385,7 +385,7 @@ export default function Page() {;
                           </div>))}
                     </div>)}
                 </div>)}
-;
+
               {/* Actions Tab */}'";
               {activeTab === 'actions' && (<div className="space-y-4">";
                   <div className="text-center text-gray-500 dark:text-gray-400">";
@@ -397,7 +397,7 @@ export default function Page() {;
                   {links.filter(link => link.status === 'broken' && link.fixable).length > 0 && (<button onClick={autoFixBrokenLinks} className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">;
                       Auto-fix Broken Links;
                     </button>)}
-;
+
                   {/* Re-check Button */}";
                   <button onClick={checkAllLinks} disabled={isChecking} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">";
                     <ArrowPathIcon className="w-4 h-4 inline mr-2"/>;
@@ -443,11 +443,11 @@ export default function Page() {;
           outline-offset: 2px !important;
           background-color: rgba(249, 115, 22, 0.1) !important;
           transition: all 0.3s ease !important}
-;
+
         .link-target-placeholder {;
 
           animation: pulse 2s infinite}
-;
+
         @keyframes pulse {;
 
           0%, 100% { opacity: 1}

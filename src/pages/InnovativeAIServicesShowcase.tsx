@@ -7,7 +7,7 @@ import {;
   BarChart3, Shield, Briefcase, Package, Target;,
 } from 'lucide-react';
 import SEO from '@/components/SEO';
-;
+
 export default function InnovativeAIServicesShowcase(...args: unknown[]): unknown {;
   const services = [;
     {;
@@ -91,7 +91,7 @@ export default function InnovativeAIServicesShowcase(...args: unknown[]): unknow
       route: '/services/ai-supply-chain-optimization';,
 };
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
       <SEO ;
@@ -314,13 +314,13 @@ export default function InnovativeAIServicesShowcase(...args: unknown[]): unknow
     </div>;
   );,
 }}}
-;
+
 export { InnovativeAIServicesShowcase };
-;
+
 export { InnovativeAIServicesShowcase };
-;
+
 export { InnovativeAIServicesShowcase };
-;
+
 export { InnovativeAIServicesShowcase };
-;
+
 export { InnovativeAIServicesShowcase };

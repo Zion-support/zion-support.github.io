@@ -27,7 +27,7 @@ import { ;
   Bell,;
   Award;,
 } from 'lucide-react';
-;
+
 const MicroCRM = () => {;
   const contactInfo = {;
     phone: "+1 302 464 0950",;
@@ -35,7 +35,7 @@ const MicroCRM = () => {;
     address: "364 E Main St STE 1008, Middletown DE 19709",;
     website: "https://ziontechgroup.com";,
 };
-;
+
   const features = [;
     {;
       title: "Contact Management",;
@@ -68,7 +68,7 @@ const MicroCRM = () => {;
       icon: Zap;,
 }
   ];
-;
+
   const pricingPlans = [;
     {;
       name: "Starter",;
@@ -120,7 +120,7 @@ const MicroCRM = () => {;
       popular: false;,
 }
   ];
-;
+
   const testimonials = [;
     {;
       name: "David Thompson",;
@@ -144,7 +144,7 @@ const MicroCRM = () => {;
       rating: 5;,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">;
       {/* Header */}
@@ -275,7 +275,7 @@ const MicroCRM = () => {;
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <div className="flex items-baseline justify-center mb-4">;
@@ -392,5 +392,5 @@ const MicroCRM = () => {;
     </div>;
   );,
 };
-;
+
 export default MicroCRM;

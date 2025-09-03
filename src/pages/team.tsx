@@ -13,7 +13,7 @@ import { ;
   Brain,;
   Zap;,
 } from 'lucide-react';
-;
+
 export default function TeamPage() {;
   const leadership = [;
     {;
@@ -47,7 +47,7 @@ export default function TeamPage() {;
       expertise: ["Operations", "Process Optimization", "Team Scaling"];,
 }
   ];
-;
+
   const advisors = [;
     {;
       name: "Dr. Emily Watson",;
@@ -66,7 +66,7 @@ export default function TeamPage() {;
       expertise: ["Cybersecurity", "Threat Intelligence", "Secure Systems"];,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}

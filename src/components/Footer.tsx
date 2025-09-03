@@ -58,10 +58,10 @@ import {;
   Palette,;
   ChevronDown;,
 } from 'lucide-react';
-;
+
 export function Footer() {;
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
-;
+
   // Handle scroll to show/hide scroll to top button;
   React.useEffect(() => {;
   // TODO: Add dependencies if needed;,
@@ -207,11 +207,11 @@ export function Footer() {
         newSet.add(title);
       }
     };
-;
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);,
 }, []);
-;
+
   // Toggle section expansion (for mobile);
   const toggleSection = (title: string) => {;
     setExpandedSections(prev => {;
@@ -224,7 +224,7 @@ export function Footer() {
       return newSet;,
 });,
 };
-;
+
   // Scroll to top function;
   const scrollToTop = () => {;
     window.scrollTo({;
@@ -232,7 +232,7 @@ export function Footer() {
       behavior: 'smooth';,
 });,
 };
-;
+
 export default function Footer() {;
   const footerSections = [;
     {;
@@ -370,27 +370,25 @@ icon: Atom,";
 services: [ { name: "AI-Quantum Hybrid Computing Platform", href: "/services/ai-quantum-hybrid-platform" }, { name: "Quantum Computing as a Service", href: "/services/quantum-computing-as-a-service" }, { name: "AI Space Technology Platform", href: "/services/ai-space-technology-platform" }, { name: "AI IoT Edge Computing Platform", href: "/services/ai-iot-edge-computing-platform" }";
       title: "Resources",";
 links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href: "/white-papers" }, { name: "Support Center", href: "/help" }, { name: "Training", href: "/training" }, { name: "Blog", href: "/blog" }, { name: "Research", href: "/research-development" }
-;
+
       ]}
-;
+
   ]";
   const solutions = [];
-
-;
   const contactInfo = [;
     { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },;
     { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },;
     { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },;
     { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
   ];
-;
+
   const scrollToTop = () => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });,
 };
   const scrollToTop = () => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });,
 };
-;
+
   return (;
     <footer className="bg-slate-900 text-white">;
       {/* Main Footer Content */}

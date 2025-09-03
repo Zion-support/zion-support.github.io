@@ -17,7 +17,7 @@ import { ;
   Building,;
   Eye;,
 } from 'lucide-react';
-;
+
 const AboutStory = () => {;
   const timeline = [;
     {;
@@ -69,7 +69,7 @@ const AboutStory = () => {;
       achievements: ['Next-gen AI', 'Emerging Markets', '10,000+ Projects'];,
 }
   ];
-;
+
   const missionValues = [;
     {;
       icon: Target,;
@@ -90,7 +90,7 @@ const AboutStory = () => {;
       color: 'from-red-500 to-orange-500';,
 }
   ];
-;
+
   const keyAchievements = [;
     {;
       number: '15+',;
@@ -129,7 +129,7 @@ const AboutStory = () => {;
       icon: Users;,
 }
   ];
-;
+
   const companyCulture = [;
     {;
       title: 'Innovation at Core',;
@@ -156,7 +156,7 @@ const AboutStory = () => {;
       color: 'from-blue-500 to-indigo-500';,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       {/* Hero Section */}
@@ -475,5 +475,5 @@ const AboutStory = () => {;
     </div>;
   );,
 };
-;
+
 export default AboutStory;

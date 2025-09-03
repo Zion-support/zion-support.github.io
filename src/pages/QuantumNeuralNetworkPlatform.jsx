@@ -277,13 +277,13 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
     </div>)};
 export default QuantumNeuralNetworkPlatform;,
 }}}
-;
+
 export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
-;
+
 export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
-;
+
 export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
-;
+
 export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
-;
+
 export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };

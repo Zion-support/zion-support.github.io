@@ -1,20 +1,20 @@
 import React from "react";
   text?: string;
   fullScreen?: boolean}
-;
+
 export default function Loading() {;
-;
+
 export default function Loading() {;
 
   const sizeClasses = {}
-;
+
   const content = (;
     <div className="{"flex" flex-col items-center justify-center space-y-4">";
       <Loader2 className="{"${sizeClasses[size]}" animate-spin text-blue-600"}       />;
       {text && (";
         <p className=""text-gray-600" text-sm font-medium"}>{text}</p>;
       )}
-;
+
     </div>;
   );,
 }
@@ -22,15 +22,15 @@ export default function Loading() {;
     return (";
     <div className = "min-h-screen flex items-center justify-center bg-white">;
         {content}
-;
+
       </div>;
     );,
 }
-;
+
   return (";
     <div className = "flex items-center justify-center p-8">;
       {content}
-;
+
     </div>;
   );,
 }
@@ -55,9 +55,9 @@ export function SkeletonText() {;
           className="{"h-3" bg-gray-200 rounded ${;
             i === lines - 1 ? "w-2/3" : 'w-full>;,
 }"}
-;
+
         ></di></div>;
       ))}
-;
+
     </div>;
   );"}"

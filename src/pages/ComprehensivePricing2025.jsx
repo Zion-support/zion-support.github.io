@@ -67,7 +67,7 @@ export default function ComprehensivePricing2025() {;
       icon: Building,";
       color: "from-orange-500 to-red-500",;
       popular: false}
-;
+
   ];
 
   const addOns = [];
@@ -173,7 +173,7 @@ export default function ComprehensivePricing2025() {;
         "Training & Certification,;
         "Strategic Consulting"], icon: Building,;
       color: "from-orange-500 to-red-500", popular: false}
-;
+
   ];
 
   const addOns = []";
@@ -208,7 +208,7 @@ with flexible options to scale as you grow.;
                 className="{"relative" w-16 h-8 rounded-full transition-colors duration-300 ${";
                   billingCycle === "yearly" ? "bg-zion-cyan" : "bg-zion-purple/30";,
 }"}
-;
+
               >;
                 <div className = "{"absolute" top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${";
                   billingCycle === "yearly" ? "translate-x-8" : "translate-x-1">;,
@@ -226,7 +226,7 @@ with flexible options to scale as you grow.;
                 className="{"relative" w-16 h-8 rounded-full transition-colors duration-300 ${;
                   billingCycle === "yearly" ? "bg-zion-cyan" : "bg-zion-purple/30;,
 }"}
-;
+
               >";
                 <div className = "{"absolute" top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${ billingCycle === "yearly" ? "translate-x-8" : "translate-x-1" }"}       />;
               </button>";
@@ -238,7 +238,7 @@ with flexible options to scale as you grow.;
                 className="{"relative" w-16 h-8 rounded-full transition-colors duration-300 ${;
                   billingCycle === "yearly" ? "bg-zion-cyan" : "bg-zion-purple/30", ";,
 }"}
-;
+
               >;
                 <div className = "{"absolute" top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${"">;
                   billingCycle === "yearly" ? "translate-x-8" : "translate-x-1",";";,
@@ -251,7 +251,7 @@ with flexible options to scale as you grow.;
                     Save {savings}%;
                   </span>;
                 )}
-;
+
               </span>;
             </div>;
       </section>;
@@ -266,7 +266,7 @@ with flexible options to scale as you grow.;
                   plan.popular;
                     ? "bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-cyan scale-105";
                     : "bg-zion-blue-dark/50 border border-zion-purple/20 hover: border-zion-purple/40""}"}
-;
+
               >;
                 {plan.popular && (;
                   <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2">";
@@ -306,7 +306,7 @@ with flexible options to scale as you grow.;
                   <div className="mb-6">;
                     <span className="{"text-4xl" font-bold text-white">;
                       ${plan.price[billingCycle]}
-;
+
                     </span>;
                     <span className=""}text-zion-slate-light" ml-2">;
 ";
@@ -320,11 +320,11 @@ with flexible options to scale as you grow.;
                   <div className="mb-6">";
                     <span className="{"text-4xl" font-bold text-white">;
                       ${plan.price[billingCycle]}
-;
+
                     </span>""}";
                     <span className="text-zion-slate-light ml-2">";
                       /{billingCycle === "monthly" ? "month" : "year"}
-;
+
                     </span>;
                   </div>;
 ";
@@ -338,10 +338,10 @@ with flexible options to scale as you grow.;
                       plan.popular";
                         ? "bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover: from-zion-purple/80 hover:to-zion-cyan/80",;
                         : "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30"}"}
-;
+
                   >;
                     {selectedPlan === plan.id ? "Current Plan" : "Choose Plan"}
-;
+
                   </button>;
                 </div>";
 ";
@@ -363,7 +363,7 @@ with flexible options to scale as you grow.;
                         : "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30", ";,
 }"}">;
                     {selectedPlan = == plan.id ? "Current Plan" : "Choose Plan"}
-;
+
                   </button>;
                 </div>";
 ";
@@ -375,10 +375,10 @@ with flexible options to scale as you grow.;
                       <span className="text-zion-slate-light text-sm">{feature}</span>;
                     </div>;
                   ))}
-;
+
                 </div>;
             ))}
-;
+
           </div>;
       </section>;
 ";
@@ -413,7 +413,7 @@ with flexible options to scale as you grow.;
                 <div className="text-center">;
                   <div className="{"text-2xl" font-bold text-white mb-2">;
                     ${addon.price[billingCycle]}
-;
+
                   </div>;
                   <span className=""}text-zion-slate-light" text-sm">";
 ";
@@ -438,15 +438,15 @@ with flexible options to scale as you grow.;
                 <div className="text-center">";
                   <div className="{"text-2xl" font-bold text-white mb-2">;
                     ${addon.price[billingCycle]}
-;
+
                   </div>""}";
                   <span className="text-zion-slate-light text-sm">;
                     /{billingCycle === "monthly" ? "month" : "year"}
-;
+
                   </span>;
                 </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -505,7 +505,7 @@ with flexible options to scale as you grow.;
                 answer: "No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity."},";
               {question: "What happens if I exceed my plan limits?",";
                 answer: "We"ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed."}
-;
+
             ].map((faq, index) => (";
               <div key = "{index}" className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6">";
                 <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>;
@@ -544,7 +544,7 @@ with flexible options to scale as you grow.;
                 <p className="text-zion-slate-light">{faq.answer}</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
 ";

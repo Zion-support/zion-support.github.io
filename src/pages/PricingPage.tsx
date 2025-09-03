@@ -17,11 +17,11 @@ import { ;
   Mail,;
   Globe;,
 } from 'lucide-react';
-;
+
 export default function PricingPage() {;
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-;
+
   const pricingPlans = [;
     {;
       name: 'Starter',;
@@ -89,7 +89,7 @@ export default function PricingPage() {;
       popular: false;,
 }
   ];
-;
+
   const servicePackages = [;
     {;
       name: 'AI & Machine Learning',;
@@ -148,7 +148,7 @@ export default function PricingPage() {;
       ];,
 }
   ];
-;
+
   const addOns = [;
     {;
       name: '24/7 Support',;
@@ -175,11 +175,11 @@ export default function PricingPage() {;
       icon: Shield;,
 }
   ];
-;
+
   const getYearlyDiscount = (monthlyPrice: number) => {;
     return Math.round((monthlyPrice * 12 - monthlyPrice * 10) / (monthlyPrice * 12) * 100);,
 };
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
       {/* Hero Section */}

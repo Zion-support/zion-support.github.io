@@ -4,9 +4,9 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
   ];
 
   const handleNavigation = (path) => {onNavigate(path)}
-;
+
   const toggleMenu = () => setIsOpen(!isOpen);
-;
+
   const navigationItems = [  ;
   const navigationItems = [';
     { href: '/', label: 'Home', icon: Home, matches: (path) => path === '/' },;
@@ -16,7 +16,7 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
     { href: '/equipment', label: 'Equipment', icon: Store, matches: (path) => path.startsWith('/equipment') },;
     { href: '/community', label: 'Community', icon: Users, matches: (path) => path.startsWith('/community') },;
   ];
-;
+
   if(isAuthenticated) {;
     navigationItems.push({;
       href: '/dashboard',;
@@ -25,7 +25,7 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
       matches: (path) => path.startsWith('/dashboard');,
 });,
 }
-;
+
   return (<div className={cn("md:hidden", className)}>;
       {/* Mobile menu button */}
       <Button;
@@ -59,7 +59,7 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
                       <ChevronRight className="h-4 w-4 group-open: rotate-90 transition-transform"  />;
                     </summary>",;
                         <Link key="{child.name}" to="{child.href}" className="flex items-center px-4 py-2 text-sm text-zion-slate-light hover: text-zion-cyan hover:bg-zion-purple/10 transition-colors" onClick="{()" => handleNavigation(child.href)}
-;
+
                 const Icon = item.icon;
                 const isActive = item.matches(location.pathname);
                 return (<Link;
@@ -80,7 +80,7 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
                     onClick="{()" ="> handleNavigation(item.href)}
                     <item .icon className="h-5 w-5 mr-3" /">";
                 )}
-;
+
           </nav>;
 ";
         {/* comment */}
@@ -106,7 +106,7 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
                 to="/login";
                 className="block w-full px-4 py-2 border border-zion-purple/30 text-zion-cyan text-center rounded-lg hover: bg-zion-purple/10 transition-colors"",;
                 onClick="{()" => handleNavigation("/login")}
-;
+
                 Sign In";
               <Link";
                 to="/register";
@@ -187,4 +187,4 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
       )}
     </div>;
   );
-export default Component
+export default Component;

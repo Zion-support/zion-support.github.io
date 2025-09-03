@@ -25,7 +25,7 @@ import { ;
   BookOpen,;
   Lightbulb;,
 } from 'lucide-react';
-;
+
 export function TeamPage() {;
   const teamMembers = [;
     {;
@@ -97,7 +97,7 @@ export function TeamPage() {;
       isFounder: false;,
 }
   ];
-;
+
   const teamStats = [;
     {;
       icon: Users,;
@@ -124,7 +124,7 @@ export function TeamPage() {;
       description: 'Consistently high ratings from our clients';,
 }
   ];
-;
+
   const values = [;
     {;
       icon: Lightbulb,;
@@ -157,7 +157,7 @@ export function TeamPage() {;
       description: 'We are committed to continuous learning and growth, both as individuals and as an organization.';,
 }
   ];
-;
+
   const departments = [;
     {;
       name: 'Engineering',;
@@ -188,7 +188,7 @@ export function TeamPage() {;
       focus: ['Product Strategy', 'UX Design', 'Business Analysis', 'Market Research'];,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -484,5 +484,5 @@ export function TeamPage() {;
     </div>;
   );,
 }
-;
+
 export default TeamPage;

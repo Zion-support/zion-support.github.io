@@ -18,7 +18,7 @@ import { ;
   Database,;
   Lock;,
 } from 'lucide-react';
-;
+
 const CloudMigrationServices = () => {;
   const features = [;
     'Zero-downtime migration',;
@@ -30,7 +30,7 @@ const CloudMigrationServices = () => {;
     'Compliance & governance',;
     'Training & documentation';
   ];
-;
+
   const benefits = [;
     'Reduce infrastructure costs by 40%',;
     'Improve scalability & flexibility',;
@@ -41,7 +41,7 @@ const CloudMigrationServices = () => {;
     'Better performance & reliability',;
     'Future-proof technology stack';
   ];
-;
+
   const migrationSteps = [;
     {;
       step: '1',;
@@ -74,7 +74,7 @@ const CloudMigrationServices = () => {;
       duration: 'Ongoing';,
 }
   ];
-;
+
   const pricing = {;
     small: {;
       name: 'Small Business',;
@@ -99,14 +99,14 @@ const CloudMigrationServices = () => {;
       marketPrice: '$25,000+';,
 }
   };
-;
+
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com';,
 };
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
       {/* Header */}
@@ -344,5 +344,5 @@ const CloudMigrationServices = () => {;
     </div>;
   );,
 };
-;
+
 export default CloudMigrationServices;

@@ -1,6 +1,6 @@
 import {  import { innovativeServices2025 } from '../data/innovativeServices2025';
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -20,10 +20,10 @@ function EnhancedHeader () {export function EnhancedHeader() {;
 }, []);, []);
     ;,
 };
-;
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
-;
+
   const handleSearch = async(e: React.FormEvent) => {;
 
     e.preventDefault();    if(searchQuery.trim()) {;
@@ -35,7 +35,7 @@ function EnhancedHeader () {export function EnhancedHeader() {;
 
         setIsSearching(false)}    }
   };
-;
+
   // Enhanced navigation with better organization;
   ;
   // Enhanced services by category with better organization;
@@ -91,7 +91,7 @@ function EnhancedHeader () {export function EnhancedHeader() {;
                 >;
                   {item.name}
                 </Link>) ) }
-;
+
               {/* Enhanced Services Mega Menu */}";
               <div className="relative group">;
                 <button";
@@ -322,7 +322,7 @@ function EnhancedHeader () {export function EnhancedHeader() {;
             <a href="/careers" className="text-gray-700 hover:text-blue-600">Careers</a>,,;
   ),";
 ,"});,"})";
-;,"});,"})";
+
 export const EnhancedHeader: React.FC = () => {,"});,"})";
   return (<header className="bg-white shadow-lg">;,"});,"})";
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,"});,"})";
@@ -360,7 +360,7 @@ export function EnhancedHeader() {;
   useEffect(() => {;
     const handleScroll = () => {;
       setScrolled(window.scrollY > 50)}
-;
+
     window.addEventListener();,
 }
     return () => window.removeEventListener("scroll", handleScroll)}, []);react"react - router-dom",framer-motion;
@@ -390,7 +390,7 @@ export function EnhancedHeader() {}""""";
   const [activeDropdown, setActiveDropdown] = useState<;<;<string | null>(null);,
 }
   useEffect(() => {}
-;
+
     window.addEventListener(&apos;scroll&apos, handleScroll);,
 }
     return () => window.removeEventListener(&apos;scroll&apos, handleScroll)}, []);,
@@ -452,7 +452,7 @@ export function EnhancedHeader() {}""""";
   const supportLinks = [];
   const toggleDropdown = (dropdown: string) =>  {,,;
     setActiveDropdown(activeDropdown: === dropdown ? null: dropdown)}
-;
+
 export: const EnhancedHeader: React.FC: = () => {,;
   const [mobileOpen, setMobileOpen] = useState();,
 }
@@ -496,7 +496,7 @@ services: [ { name: "AI Email Automation Suite", href: "/services/ai-email-autom
       title: "DevOps & Automation",;
 icon: Workflow,";
 services: [ { name: "AI-Powered DevOps Automation", href: "/services/ai-powered-devops-automation", description: "Intelligent CI/CD & infrastructure automation" }, { name: "Cloud DevOps", href: "/services/cloud-devops", description: "Infrastructure automation & scaling" }, { name: "IT Infrastructure", href: "/services/it-infrastructure", description: "Enterprise infrastructure solutions" }, { name: "FinOps Advisor", href: "/services/finops-advisor", description: "Cloud cost optimization" }]}
-;
+
   // comment;
       name: "AI Email Automation Suite;
       description: "Intelligent email management & automation",;
@@ -582,7 +582,7 @@ color: "from-yellow-500 to-orange-500",;
       title: &apos,DevOps & Automation&apos,;
       icon: Workflow,;
         { nam,e: &apos,AI-Powered DevOps Automation&apos, href: &apos,/services/ai-powered-devops-automation&apos, description: &apos,Intelligent CI/CD & infrastructure automation&apos} { name: &apos,Cloud DevOps&apos, href: &apos,/services/cloud-devops&apos, description: &apos,Infrastructure automation & scaling&apos} { name: &apos,IT Infrastructure&apos, href: &apos,/services/it-infrastructure&apos, description: &apos,Enterprise infrastructure solutions&apos} { name: &apos,FinOps Advisor&apos, href: &apos,/services/finops-advisor&apos, description: &apos,Cloud cost optimization&apos}]}
-;
+
     { name: "Home", href: "/", current: true } { name: "About", href: "/about", current: false } { name: "Services", href: "/services", current: false } { name: "Innovative Services 2028", href: "/innovative-services-showcase-2028", current: false } { name: "Pricing Guide", href: "/comprehensive-pricing-guide-2028", current: false } { name: "Solutions", href: "/solutions", current: false } { name: "Contact", href: "/contact", current: false }];
   // comment;
     { title: "AI & Machine Learning", icon: Brain,";
@@ -605,7 +605,7 @@ color: "from-yellow-500 to-orange-500",;
         { name: "AI Email Automation Suite", href: "/services/ai-email-automation-suite", description: "Intelligent email management & automation" } { name: "AI Social Media Scheduler", href: "/services/ai-social-media-scheduler", description: "AI-powered social media automation" } { name: "AI Customer Insights Platform", href: "/services/ai-customer-insights-platform", description: "Advanced customer analytics & insights" } { name: "Micro CRM", href: "/services/micro-crm", description: "Lightweight customer management" } { name: "Helpdesk Platform", href: "/services/helpdesk-platform", description: "Efficient support system" } { name: "AI Content Marketing", href: "/services/ai-content-marketing-suite", description: "AI-powered content creation" } { name: "Customer Support Automation", href: "/services/ai-customer-support-automation", description: "Intelligent support automation" } { name: "Website Analytics", href: "/services/website-analytics", description: "Performance insights" }]} { title: "DevOps & Automation",";
       icon: Workflow, color: "from-blue-500 to-indigo-500",";
         { name: "AI-Powered DevOps Automation", href: "/services/ai-powered-devops-automation", description: "Intelligent CI/CD & infrastructure automation" } { name: "Cloud DevOps", href: "/services/cloud-devops", description: "Infrastructure automation & scaling" } { name: "IT Infrastructure", href: "/services/it-infrastructure", description: "Enterprise infrastructure solutions" } { name: "FinOps Advisor", href: "/services/finops-advisor", description: "Cloud cost optimization" }]}
-;
+
   // comment;
   const services = []&apos;
   const solutionsCategories = []} {;
@@ -613,7 +613,7 @@ color: "from-yellow-500 to-orange-500",;
       icon: Cpu,;
       solutions: [,;
         { nam,e: &apos,AI Solutions&apos, href: &apos,/ai-solutions&apos, description: &apos,Artificial intelligence integration&apos} { name: &apos,Digital Transformation&apos, href: &apos,/services/digital-transformation&apos, description: &apos,Business modernization&apos} { name: &apos,Research & Development&apos, href: &apos,/research-development&apos, description: &apos,Innovation and discovery&apos} { name: &apos,Green IT Solutions&apos, href: &apos,/green-it&apos, description: &apos,Sustainable technology&apos}]}
-;
+
   const companyLinks = [];&apos;
   const resourceLinks = [];&apos;
   const supportLinks = [];&apos,;
@@ -650,7 +650,7 @@ solutions: [ { name: "AI Solutions", href: "/ai-solutions", description: "Artifi
   const supportLinks = [];
   const toggleDropdown = (dropdown: string) => {,,;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)}
-;
+
   const [servicesOpen, setServicesOpen] = useState(false);,
 }
   const navLinks = []";,
@@ -664,11 +664,11 @@ solutions: [ { name: "AI Solutions", href: "/ai-solutions", description: "Artifi
   const [mobileOpen, setMobileOpen] = useState();,
 }
 export const EnhancedHeader: React.FC = () => {}
-;
+
   const;const;const [mobileOpen, setMobileOpen] = useState(false);,
 }
     { label: &apos,Home&apos, href: &apos,/&apos} { label: &apos,Services&apos, href: &apos,/services&apos} { label: &apos,Solutions&apos, href: &apos,/solutions&apos} { label: &apos,Enterprise&apos, href: &apos,/enterprise&apos} { label: &apos,Request Quote&apos, href: &apos,/request-quote&apos} { label: &apos,Case Studies&apos, href: &apos,/case-studies&apos} { label: &apos,Careers&apos, href: &apos,/careers&apos} { label: &apos,Contact&apos, href: &apos,/contact&apos}
-;
+
   return(&apos;&apos;";
     <header className="&apos;bg-white" shadow-lg&apos;>&apos,";
       <div className="&apos;max-w-7xl" mx-auto px-4 sm: px-6 lg:px-8&apos,>&apos,";
@@ -748,7 +748,7 @@ aria-label = "Toggle navigation>;
         </div>;
       )}</header>;
   )}
-;
+
   )}";
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,";
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react;

@@ -12,7 +12,7 @@ import React from 'react';
       features: ['Quantum consciousness mapping',Ethical boundary testing',Real-time monitoring'],''';
       targetAudience: 'AI research institutions, Government agencies,''';
   Ethics committees';
-;,
+
 },;    {}
 ';
 '';
@@ -172,18 +172,18 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'''';
       ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),;'''';
       ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' })),;'      ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }));
     ]};
-;
+
     let matchesPrice = true;';
     if (priceRange === 'low') matchesPrice = price < 500;';
     else if (priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000;';
     else if (priceRange === 'high') matchesPrice = price > 10000;
-;
+
     return matchesCategory && matchesPrice;,
 }) ;';
 '';
   ''';
     return parseInt(roi.replace('%',))};
-;
+
   return()    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">";
       {/* Hero Section */}"";
       <section className="relative py-20 overflow-hidden">"";
@@ -313,7 +313,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'''';
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'''`'`'`;
                       : 'bg-zion-slate/50 text-zion-slate-light hover:bg-zion-slate/70'````;,
 }`}
-;
+
                   {range.name}
                 </motion.button>) ) }
             </div>;
@@ -524,17 +524,15 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'''';
     </div>;
   );,
 };
-;
+
 export default ComprehensivePricingGuide2028;
 export default ComprehensivePricingGuide2028;
-;
+export { ComprehensivePricingGuide2028, ComprehensivePricingGuide2028 };
 
 export { ComprehensivePricingGuide2028, ComprehensivePricingGuide2028 };
-;
+
 export { ComprehensivePricingGuide2028, ComprehensivePricingGuide2028 };
-;
+
 export { ComprehensivePricingGuide2028, ComprehensivePricingGuide2028 };
-;
-export { ComprehensivePricingGuide2028, ComprehensivePricingGuide2028 };
-;
+
 export { ComprehensivePricingGuide2028, ComprehensivePricingGuide2028 };

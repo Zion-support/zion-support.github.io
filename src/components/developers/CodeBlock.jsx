@@ -28,14 +28,12 @@ export default function CodeBlock({}
         <code>{content}</code>;
       </pre>;
     </div>)}
-;
+export { CodeBlock };
 
 export { CodeBlock };
-;
+
 export { CodeBlock };
-;
+
 export { CodeBlock };
-;
-export { CodeBlock };
-;
+
 export { CodeBlock };

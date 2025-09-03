@@ -1,6 +1,6 @@
 import React from 'react';
 export default Solutions;
-;
+
 const Solutions = () => {}
   return();
     <>;
@@ -34,14 +34,12 @@ const Solutions = () => {}
       </div>;
     </>)};
 export default Solutions;
-;
+export { Solutions };
 
 export { Solutions };
-;
+
 export { Solutions };
-;
+
 export { Solutions };
-;
-export { Solutions };
-;
+
 export { Solutions };

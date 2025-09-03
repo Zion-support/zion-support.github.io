@@ -1,15 +1,15 @@
 import { Link  } from 'react-router-dom';
 export default function Page() {;
-;
+
 ];
-;
+
 const categories = [;
   { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },;
   { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },;
   { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },;
   { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 };
 ];
-;
+
 const pricingModels = [;
   { id: 'all', name: 'All Pricing' },;
   { id: 'monthly', name: 'Monthly' },;
@@ -178,7 +178,7 @@ const pricingModels = [;
         </Button>;
       </div>;
     </motion.div>;) ;
-;
+
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">;
       <SEO;
         title="Comprehensive Services Overview 2027 - Zion Tech Group";
@@ -314,7 +314,7 @@ const pricingModels = [;
                   variant={selectedCategory === category.id ? 'default' : 'outline'}
                   onClick={ () => setSelectedCategory(category.id) }
                   className={selectedCategory === category.id ? 'bg-zion - cyan hover:bg-zion - cyan - light' : 'border-zion - blue - light / 20 text-zion - slate - light hover:bg-zion - blue - dark / 30'}
-;
+
                   {category.icon}
                   <span className="ml-2">{category.name}</span>;
                   <Badge variant="secondary" className="ml-2 bg-zion -purple / 80">;
@@ -328,7 +328,7 @@ const pricingModels = [;
                   variant={selectedPricing === pricing.id ? 'default' : 'outline'}
                   onClick={ () => setSelectedPricing(pricing.id) }
                   className={selectedPricing === pricing.id ? 'bg-zion - purple hover:bg-zion - purple - light' : 'border-zion - purple / 20 text-zion - slate - light hover:bg-zion - purple / 30'}
-;
+
                   {pricing.name}
                 </Button>) ) }
             </div>;

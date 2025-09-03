@@ -333,14 +333,12 @@ const Leadership = () => {}
       </section>;
     </div>)};
 export default Leadership;
-;
+export { Leadership };
 
 export { Leadership };
-;
+
 export { Leadership };
-;
+
 export { Leadership };
-;
-export { Leadership };
-;
+
 export { Leadership };

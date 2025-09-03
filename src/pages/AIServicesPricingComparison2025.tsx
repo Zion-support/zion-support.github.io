@@ -341,22 +341,22 @@ name: "IBM Quantum",;
     visible: {,;
 opacity: 1,;
       transition: {,staggerChildren: 0.1}
-;,
+
 }
-;,
+
 }
-;
+
   const itemVariants = {},;
     visible: {,;
 y: 0,;
       opacity: 1,;
       transition: {,;
 duration: 0.5,"        ease: "easeOut"}
-;,
+
 }
-;,
+
 }
-;
+
   return (;
     <>;
       <Helmet>;
@@ -427,14 +427,14 @@ initial="{{" opacity: 0, y: 30 }}";
                   {categories.map((category) => (",;
                     <option key="{category.id}" value="{category.id}">;
                       {category.icon} {category.name}
-;
+
                     </option>;
                   ))}
-;
+
                 </select>;
               </div>;
             {/* comment */}
-;
+
             <motion.div,";
 variants="{containerVariants}
               initial="hidden;
@@ -457,12 +457,12 @@ key="{service.id}
                         <h4 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h4>";
                         <div className="{"text-4xl" font-bold text-green-400 mb-2">;
                           ${service.zionPrice.toLocaleString()}
-;
+
                         </div>";
                         <div className=""text-sm" text-gray-300 mb-4"}>One-time setup</div>";
                         <div className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">;
                           {service.roi}
-;
+
                         </div>;
 ";
                       <div className="space-y-3 mb-6">";
@@ -473,7 +473,7 @@ key="{service.id}
                             <span className="text-gray-300 text-sm">{feature}</span>;
                           </div>;
                         ))}
-;
+
                       </div>;
 ";
                       <div className="text-center">";
@@ -486,14 +486,14 @@ key="{service.id}
                       </div>;
 ,;
                     {/* comment */}
-;
+
                     {service.competitors.map((competitor, index) => (";
                       <div key="{index}" className="bg-white/5 border border-gray-600 rounded-lg p-6">";
                         <div className="text-center mb-6">";
                           <h4 className="text-xl font-bold text-white mb-2">{competitor.name}</h4>";
                           <div className="{"text-3xl" font-bold text-red-400 mb-2">;
                             ${competitor.price.toLocaleString()}
-;
+
                           </div>";
                           <div className=""text-sm" text-gray-300 mb-4"}>Annual subscription</div>";
                           <div className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm font-semibold">;
@@ -508,7 +508,7 @@ key="{service.id}
                               <span className="text-gray-400 text-sm">{feature}</span>;
                             </div>;
                           ))}
-;
+
                         </div>;
 ";
                         <div className="space-y-3 mb-6">";
@@ -519,10 +519,10 @@ key="{service.id}
                               <span className="text-gray-400 text-sm">{feature}</span>;
                             </div>;
                           ))}
-;
+
                         </div>;
                     ))}
-;
+
                   </div>;
 ";
                   <div className="mt-8 text-center">";
@@ -543,7 +543,7 @@ key="{service.id}
                         </div>;
                 </motion.div>;
               ))}
-;
+
             </motion.div>;
           </div>;
         </section>;
@@ -555,7 +555,7 @@ initial="{{" opacity: 0, y: 30 }}";
               whileInView="{{" opacity: 1, y: 0 }}";
               transition="{{" duration: 0.8 }}";
               viewport="{{" once: true }}
-;
+
             >";
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
                 Ready to Save Money & Get Better Results?;
@@ -581,6 +581,6 @@ Call: +1 302 464 0950,;
       </div>;
     </>;
   )}
-;
+
 ");
 export default AIServicesPricingComparison2025;"}}}}}}}}}}}}}}

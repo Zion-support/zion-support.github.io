@@ -6,8 +6,6 @@ import { Button } from "../components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 import { Check, Star, Zap, Shield, TrendingUp, Users, Cloud, Brain, Code, Database, Globe, Smartphone, Server, Lock, BarChart3, Settings, Phone, Mail, MapPin, ExternalLink, DollarSign, Target, Award } from 'lucide-react';
 import enhancedMicroSaasServices2025 from "../data/enhancedMicroSaasServices2025";
-;
-;
 const ComprehensivePricing = () => {;
     const [activeTab, setActiveTab] = useState('microsaas');    const [billingCycle, setBillingCycle] = useState('monthly');
     const getCategoryIcon = (category) => {}
@@ -300,13 +298,13 @@ const ComprehensivePricing = () => {;
     </div>)};
 export default ComprehensivePricing;,
 }}}}}}}}}}}}
-;
+
 export { ComprehensivePricing };
-;
+
 export { ComprehensivePricing };
-;
+
 export { ComprehensivePricing };
-;
+
 export { ComprehensivePricing };
-;
+
 export { ComprehensivePricing };

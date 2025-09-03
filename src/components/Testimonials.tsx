@@ -7,11 +7,11 @@ interface Testimonial {;
   rating: number;
   avatar: string;,
 }
-;
+
 interface TestimonialsProps {;
   testimonials: Testimonial[];,
 }
-;
+
   return (<section className="py-20 bg-gray -800">;
       <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-16">;
@@ -63,5 +63,5 @@ interface TestimonialsProps {;
     </section>;
   );,
 }
-;
+
 export default Testimonials;

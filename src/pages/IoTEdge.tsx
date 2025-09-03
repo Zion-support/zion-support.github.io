@@ -20,7 +20,7 @@ import { ;
   Rocket,;
   Sensor;,
 } from 'lucide-react';
-;
+
 const services = [;
   {;
     icon: Cpu,;
@@ -51,7 +51,7 @@ const services = [;
     benefits: ['Enhanced security', 'Compliance ready', 'Risk mitigation', 'Trust building'];,
 }
 ];
-;
+
 const technologies = [;
   { name: 'AWS IoT', description: 'Amazon IoT platform', icon: Cloud },;
   { name: 'Azure IoT', description: 'Microsoft IoT services', icon: Cloud },;
@@ -62,7 +62,7 @@ const technologies = [;
   { name: 'Node-RED', description: 'IoT flow programming', icon: Code },;
   { name: 'Grafana', description: 'Monitoring & visualization', icon: BarChart3 }
 ];
-;
+
 const useCases = [;
   {;
     industry: 'Manufacturing',;
@@ -86,7 +86,7 @@ const useCases = [;
     results: ['Efficient resource use', 'Real-time optimization', 'Cost savings', 'Improved services'];,
 }
 ];
-;
+
 export default function IoTEdge() {;
   return (;
     <div className="min-h-screen bg-futuristic">;
@@ -304,26 +304,26 @@ export default function IoTEdge() {;
     </div>;
   );,
 }
-;
+
 // Missing icon components;
 const Cloud = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.004 5.004 0 00-5.1 4.999z" />;
   </svg>;
 );
-;
+
 const Brain = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />;
   </svg>;
 );
-;
+
 const Factory = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />;
   </svg>;
 );
-;
+
 const Heart = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />;

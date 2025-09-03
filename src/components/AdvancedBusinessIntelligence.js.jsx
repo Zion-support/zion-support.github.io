@@ -371,7 +371,7 @@ export function AdvancedBusinessIntelligence() {;
             </div>;
           </div>;
         )}
-;
+
         {activeTab === 'insights' && (";
           <div className="space-y-4">;
             {insights.map(insight => (;
@@ -424,7 +424,7 @@ export function AdvancedBusinessIntelligence() {;
             ))}
           </div>;
         )}
-;
+
         {activeTab === 'models' && (";
           <div className="space-y-4">;
             {models.map(model => (;
@@ -476,7 +476,7 @@ export function AdvancedBusinessIntelligence() {;
             ))}
           </div>;
         )}
-;
+
         {activeTab === 'analytics' && (";
           <div className="space-y-6">";
             <div className="text-center text-zion-slate-light">";

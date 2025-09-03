@@ -213,7 +213,7 @@ export default function NewServicesOverview() {}
                     path: '/comprehensive-services-showcase';
 
             ];
-;
+
     ];
     const benefits = [];
         {}
@@ -432,14 +432,12 @@ export default function NewServicesOverview() {}
         </div>;
       </div>;
     </div>)}
-;
+export { NewServicesOverview };
 
 export { NewServicesOverview };
-;
+
 export { NewServicesOverview };
-;
+
 export { NewServicesOverview };
-;
-export { NewServicesOverview };
-;
+
 export { NewServicesOverview };

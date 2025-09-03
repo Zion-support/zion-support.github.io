@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 export const TestimonialsSection: React.FC = () => {;
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
 ,;
   {;
@@ -36,15 +36,13 @@ export default function Page() {;
     industry: "Healthcare",;";
     project: "Cloud Migration & Optimization"};
 ];
-;
-;
 export const TestimonialsSection: React.FC = props {;
   const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
-;
+
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true) }}};
-;
+
   // Auto - play functionality;
   React.useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -54,9 +52,9 @@ export const TestimonialsSection: React.FC = props {;
 };,
 }, []);, []);
     if(!isAutoPlaying) return}, 5000) ;
-;
+
     return () => clearInterval(interval) }, [isAutoPlaying, currentTestimonial]) ;
-;
+
   return (";
     <section className="py-20 bg-zion-blue-dark">";
       <div className="container mx-auto px-4">";
@@ -193,7 +191,7 @@ export const TestimonialsSection: React.FC = props {;
                       <CheckCircle className="w-5 h-5 text-green-400"  />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>;
                     </div>;
                   )}
-;
+
                   {/* Results */}";
                   <div className="bg-white/5 border border-white/10 rounded-lg p-4">";
                     <h5 className="text-white font-semibold mb-3">Key Results</h5>";

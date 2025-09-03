@@ -33,14 +33,12 @@ const API = () => {}
       </div>;
     </>)};
 export default API;
-;
+export { API };
 
 export { API };
-;
+
 export { API };
-;
+
 export { API };
-;
-export { API };
-;
+
 export { API };

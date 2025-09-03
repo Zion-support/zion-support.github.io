@@ -13,7 +13,7 @@ import { ;
   Zap,;
   Lightbulb;,
 } from 'lucide-react';
-;
+
 export default function EventsPage() {;
   const upcomingEvents = [;
     {;
@@ -91,7 +91,7 @@ export default function EventsPage() {;
       registrationUrl: "/events/quantum-computing-workshop";,
 }
   ];
-;
+
   const pastEvents = [;
     {;
       title: "AI-Powered Customer Experience Summit",;
@@ -115,9 +115,9 @@ export default function EventsPage() {;
       recordingUrl: "/events/recordings/cybersecurity-workshop";,
 }
   ];
-;
+
   const eventCategories = ["All", "Webinar", "Workshop", "Conference", "Panel Discussion", "AI & Technology", "Cloud & Infrastructure", "Cybersecurity", "Digital Transformation", "AI Ethics", "Quantum Computing"];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}

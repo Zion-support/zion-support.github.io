@@ -1,13 +1,13 @@
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { toast } from '@/hooks/use-toast';
-;
+
 export default function Page() {;
       setReferralCode(data || null); // Set to null if no data;,
 } catch(error) {;
       console.error("Error in fetchReferralCode:", error);,
 }
   }, [user?.id]);
-;
+
   const fetchReferrals = useCallback(async () => {;
     if(!user?.id) return;
     try {;
@@ -23,7 +23,7 @@ export default function Page() {;
       console.error("Error fetching referrals:", error);,
 }
   }, [user?.id]);
-;
+
   const fetchRewards = useCallback(async () => {;
     if(!user?.id) return;
     try {;
@@ -39,7 +39,7 @@ export default function Page() {;
       console.error("Error fetching rewards:", error);,
 }
   }, [user?.id]);
-;
+
   const fetchReferralStats = useCallback(async () => {;
     if(!user?.id) return;
     try {;
@@ -76,7 +76,7 @@ export default function Page() {;
       console.error("Error fetching referral stats:", error);,
 }
   }, [user?.id]);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
@@ -95,7 +95,7 @@ export default function Page() {;
       setIsLoading(false);,
 }
   }, [user, fetchReferralCode, fetchReferralStats, fetchReferrals, fetchRewards]);
-;
+
   const generateReferralCode = async () => {;
     try {;
       if(!user) {;
@@ -106,19 +106,19 @@ export default function Page() {;
 });
         return;,
 }
-;
+
       const { data, error } = await supabase.rpc('generate_referral_code', {;
         p_user_id: user.id ;,
 });
-;
+
       if(error) throw error;
-;
+
       toast({;
         title: "Success!",;
         description: "Your referral code has been generated",;
         variant: "success",;,
 });
-;
+
       await fetchReferralCode(); ;
       ;
       return data;,
@@ -131,7 +131,7 @@ export default function Page() {;
 });,
 }
   };
-;
+
   const getReferralLink = useCallback(() => { // Wrapped in useCallback;
     if(!referralCode?.code) return ""; // Check referralCode.code;
     ;

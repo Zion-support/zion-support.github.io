@@ -15,7 +15,7 @@ import { ;
   Target,;
   TrendingUp;,
 } from 'lucide-react';
-;
+
 const AIContentGenerationSuite = () => {;
   const features = [;
     'AI-powered blog post generation',;
@@ -27,7 +27,7 @@ const AIContentGenerationSuite = () => {;
     'Content calendar management',;
     'Performance analytics';
   ];
-;
+
   const benefits = [;
     'Save 80% content creation time',;
     'Consistent brand voice across all channels',;
@@ -38,7 +38,7 @@ const AIContentGenerationSuite = () => {;
     '24/7 content generation capability',;
     'Integration with popular platforms';
   ];
-;
+
   const pricing = {;
     starter: {;
       name: 'Starter',;
@@ -60,14 +60,14 @@ const AIContentGenerationSuite = () => {;
       marketPrice: '$1,299/month';,
 }
   };
-;
+
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com';,
 };
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
       {/* Header */}
@@ -272,5 +272,5 @@ const AIContentGenerationSuite = () => {;
     </div>;
   );,
 };
-;
+
 export default AIContentGenerationSuite;

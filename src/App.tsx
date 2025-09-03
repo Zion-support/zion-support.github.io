@@ -40,8 +40,6 @@ const News = lazy(() => import('./pages/News'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
-
-
 // 2029 Cutting-Edge Services
 const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeServices2029'));
 
@@ -171,7 +169,7 @@ const LoadingSpinner = () => (
     </div>
   </motion.div>
 );
-;
+
 // Simple Footer component;
 const Footer = () => (;
   <footer className="bg-zion-slate-dark text-white p-4 mt-auto">;
@@ -443,5 +441,5 @@ function App() {
     </HelmetProvider>
   );
 }
-;
+
 export default App;

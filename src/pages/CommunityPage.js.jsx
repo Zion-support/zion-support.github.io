@@ -220,14 +220,12 @@ export default function CommunityPage() {}
         </Tabs>;
       </div>;
     </>)}
-;
+export { CommunityPage };
 
 export { CommunityPage };
-;
+
 export { CommunityPage };
-;
+
 export { CommunityPage };
-;
-export { CommunityPage };
-;
+
 export { CommunityPage };

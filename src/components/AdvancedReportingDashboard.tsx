@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 export const AdvancedReportingDashboard: React.FC < AdvancedReportingDashboardProps> = ({;
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
 > {;
 
@@ -9,7 +9,7 @@ export default function Page() {;
   showFilters?: boolean;
   showCharts?: boolean;
   maxReports?: number}
-;
+
 export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({;
 
 showMetrics:  true,;
@@ -28,7 +28,7 @@ showMetrics:  true,;
   const [showReportDetails, setShowReportDetails] = useState(false);
   const [sortBy, setSortBy] = useState<any>('date');
   const [sortOrder, setSortOrder] = useState<any>('desc');
-;
+
   // Sample report data;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -148,10 +148,10 @@ showMetrics:  true,;
         rating: 4.6;
 
     ];
-;
+
     setReports(sampleReports) ;
     setFilteredReports(sampleReports) }, []) ;
-;
+
   // Filter and sort reports;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -161,19 +161,19 @@ showMetrics:  true,;
 };,
 }, []);, []);
     let filtered = reports;
-;
+
     if(selectedType !== 'all') {;
 
       filtered = filtered.filter(r => r.type === selectedType)}
-;
+
     if(selectedCategory !== 'all') {;
 
       filtered = filtered.filter(r => r.category === selectedCategory)}
-;
+
     if(selectedStatus !== 'all') {;
 
       filtered = filtered.filter(r => r.status === selectedStatus)}
-;
+
     if(searchQuery) {;
 
       filtered = filtered.filter(r =>;
@@ -186,12 +186,12 @@ showMetrics:  true,;
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       )}
-;
+
     // Sort reports;
     filtered.sort((a, b) => {;
 
       let aValue: any, bValue: unknown;
-;
+
       switch(sortBy) {;
 
         case 'date':;
@@ -224,14 +224,14 @@ showMetrics:  true,;
         default:;
           aValue = 0;
           bValue = 0}
-;
+
       if(sortOrder = == 'asc') {;
         return aValue > bValue ? 1 : -1} else {;
 
         return aValue < bValue ? 1 : -1}
     }) ;
     setFilteredReports(filtered.slice (0, maxReports) ) }, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]) ;
-;
+
   // Calculate report metrics;
   const reportMetrics = {;
 }}

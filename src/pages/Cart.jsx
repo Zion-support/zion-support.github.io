@@ -2,13 +2,13 @@ import { Button } from '@/components/ui/button';''';
 import { Link } from 'react-router-dom';''';
 import { useState, useEffect } from 'react';''';
 import { Link, useNavigate } from 'react-router-dom';
-;
+
     const navigate = useNavigate () ;
     const [items, setItems] = useState ([]) ;
     const [loading, setLoading] = useState (false) ;
     const [cartLoading, setCartLoading] = useState (true) ;
     const [showEmpty, setShowEmpty] = useState (false) ;
-;
+
     useEffect ( () => {}
         // Simulate loading cart data;
         const timer = setTimeout(() => {}
@@ -21,7 +21,7 @@ import { Link, useNavigate } from 'react-router-dom';
     useEffect ( () => {}
         if (!cartLoading && items.length === 0) {}
             setShowEmpty(true);
-;,
+
 }, [cartLoading, items]) ;
     const updateQuantity = (id, qty) => {}
         dispatch(updateQuantityAction ({ id, quantity: qty }) ) ;,
@@ -43,10 +43,10 @@ import { Link, useNavigate } from 'react-router-dom';
                 amount: subtotal;,
 }) ;
             setDiscount(res.data.discount || 0) ;
-;
+
         catch(e) {}
             setDiscount(0) ;
-;,
+
 };
     const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0) ;
     const total = subtotal - discount;
@@ -55,7 +55,7 @@ import { Link, useNavigate } from 'react-router-dom';
         <Skeleton className="h-8 w-1/3"/>"";
         <Skeleton className="h-32 w-full"/>;
       </div>) ;
-;
+
     if (showEmpty) {}
 ";
 "";
@@ -66,7 +66,7 @@ import { Link, useNavigate } from 'react-router-dom';
           <Link href="/marketplace">Browse Marketplace</Link>;
         </Button>;
       </div>) ;
-;
+
     const tax = subtotal * 0.1;";
     const total = subtotal + tax;"";
     return (<div className="container max-w-2xl py-10">"";
@@ -102,10 +102,10 @@ import { Link, useNavigate } from 'react-router-dom';
 }}}}}}}}}}}}}}}
             setShowEmpty(true) ;,
 }, 1000) ;
-;
+
         return () => clearTimeout(timer) ;,
 }, []) ;
-;
+
     if (cartLoading) {}
 ";
         return ("";
@@ -115,7 +115,7 @@ import { Link, useNavigate } from 'react-router-dom';
             </div>;
         );,
 }
-;
+
     if (showEmpty) {}
 ";
         return ("";
@@ -146,12 +146,10 @@ import { Link, useNavigate } from 'react-router-dom';
         </div>;
     );,
 }
-;
+export { CartPage };
 
 export { CartPage };
-;
+
 export { CartPage };
-;
-export { CartPage };
-;
+
 export { CartPage };

@@ -1,14 +1,12 @@
 import React from 'react';
-;
-;
-;import { MessageCircle, Calendar, Star } from 'lucide-react';
+
 export const HireNowCTA = ({}
-;
+
   hourlyRate,;
   availability,;
   rating,;
   reviewCount}) => {}
-;
+
   return();";
     <Card className="sticky top - 4">",;
       <CardHeader>"";";
@@ -37,7 +35,7 @@ export const HireNowCTA = ({}
             <Badge>;
   hourlyRate, availability,;
   rating, reviewCount}) => {}
-;
+
   return();";
     <Card className = "sticky top-4>"";
       <CardHeader>"""";
@@ -98,7 +96,7 @@ export const HireNowCTA = ({}
                 availability === &apos;available&apos;&apos,&apos>;
                   ? &apos;bg-green-100 text-green-800&apos;&apos,&apos>;
                   : &apos;&apos}
-;
+
             >{availability}&apos;&apos;
             </Badge>;
           </div>;
@@ -167,9 +165,9 @@ export const HireNowCTA = ({}
                 availability == = "available"",;
                   ? "bg - green-100 text-green-800"",;
                   : "}
-;
+
             >{availability}
-;
+
             </Badge>;
           </div>;
         </div>;
@@ -196,14 +194,14 @@ export const HireNowCTA = ({}
 }";";
 ";
 ";
-;
+
 """;
                 availability = = = "available"""",;
                   ? "bg - green-100 text-green-800"""",;
                   : ""}
-;
+
             >{availability}
-;
+
             </Badge>";
           </div>;
         </div>"",";

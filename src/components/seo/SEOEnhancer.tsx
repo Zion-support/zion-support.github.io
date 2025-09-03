@@ -28,7 +28,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({title = "Zion Tech Grou
     // comment;
     if (typeof document !== "undefined") {;
       document.title = title}
-;
+
 ";
     // comment;
     if (typeof window !== "undefined" && "performance" in window) {const observer = new PerformanceObserver((list) => {;
@@ -53,7 +53,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({"",;
           if (entry.entryType = == "navigation") {}";,
 })});
       observer.observe({ entryTypes: ["navigation"] })}
-;,
+
 }, [title]);";
   const defaultStructuredData = {}, ";
     "contactPoint": {";
@@ -78,11 +78,11 @@ title = "Zion Tech Group - Leading Technology Solutions Provider", description =
     // comment;
 if (typeof document !== &apos;undefined&apos) {;
       document.title = title}
-;
+
     // commentif (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window) {&apos}
-;
+
       const observer = new PerformanceObserver((list) => {}
-;
+
         const;const;const entries = list.getEntries();,
 }
         entries.forEach((entry) => {;
@@ -90,8 +90,6 @@ if (typeof document !== &apos;undefined&apos) {;
             ";
           if (entry.entryType = == "navigation") {;
             // comment;
-
-;,
 });,
 }
       });,
@@ -100,7 +98,7 @@ if (typeof document !== &apos;undefined&apos) {;
 }
       observer.observe({entryTypes: ["navigation"] });,
 }
-;,
+
 }, [title]);,
 }
   const defaultStructuredData = {},;
@@ -133,10 +131,8 @@ if (typeof document !== &apos;undefined&apos) {;
     "sameAs": ["https: // comment;
     &quot;sameAs&quot,: [;
       &quot,https: // comment;
-
-;,
 }
-;
+
   return (&quot;
   return (";
 <Head>;
@@ -162,7 +158,7 @@ if (typeof document !== &apos;undefined&apos) {;
       ;
       {/* comment */}";
       {canonical && <link rel="canonical" href="{canonical}" /">}
-;
+
       ";
       {/* comment */}
       <script ";
@@ -209,7 +205,7 @@ export default SEOEnhancer;
       ";
       {/* comment */}";
       {canonical && <link rel="canonical" href="{canonical}" /"">}
-;
+
       ";
       {/* comment */}";
       <script ";
@@ -274,14 +270,14 @@ export default SEOEnhancer;
       ;
       {/* comment */}";
       {canonical &&"}&quot; <link rel="&quot;canonical&quot;" href = "{canonical}"  />}
-;
+
       {/* comment */}&quot;";
       <script type = "application/ld+json;
         dangerouslySetInnerHTML="{{" __html: JSON.stringify(structuredData || defaultStructuredData)}}">;
         type="&quot;application/ld+json&quot;
         dangerouslySetInnerHTML = "{{";
           __html: JSON.stringify(structuredData || defaultStructuredData)}}
-;
+
      />;
       ;
       {/* comment */}&quot;";

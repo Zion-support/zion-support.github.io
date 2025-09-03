@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
  from 'react';
 export /**;
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -173,5 +173,3 @@ function Accessibility () {;
       </AnimatePresence>;
     </>;
   )}
-;
-;,"});,})";

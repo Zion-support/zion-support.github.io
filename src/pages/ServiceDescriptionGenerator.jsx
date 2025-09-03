@@ -63,14 +63,12 @@ export default function ServiceDescriptionGenerator() {}
       </main>;
       ;
     </div>)}
-;
+export { ServiceDescriptionGenerator };
 
 export { ServiceDescriptionGenerator };
-;
+
 export { ServiceDescriptionGenerator };
-;
+
 export { ServiceDescriptionGenerator };
-;
-export { ServiceDescriptionGenerator };
-;
+
 export { ServiceDescriptionGenerator };

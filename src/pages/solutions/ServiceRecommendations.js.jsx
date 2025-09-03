@@ -29,14 +29,12 @@ const ServiceRecommendations = () => {}
   );,
 };
 export default ServiceRecommendations;
-;
+export { ServiceRecommendations };
 
 export { ServiceRecommendations };
-;
+
 export { ServiceRecommendations };
-;
+
 export { ServiceRecommendations };
-;
-export { ServiceRecommendations };
-;
+
 export { ServiceRecommendations };

@@ -42,7 +42,7 @@ export default function Page() {;
         categoryId: post.categoryId,;
         tags: post.tags.join(",;
   ") ;
-;,
+
 };
     const handleSubmit = async(values) => {;
         try {;
@@ -83,14 +83,12 @@ export default function Page() {;
 
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>;
       </div>)}
-;
+export { EditPostPage };
 
 export { EditPostPage };
-;
+
 export { EditPostPage };
-;
+
 export { EditPostPage };
-;
-export { EditPostPage };
-;
+
 export { EditPostPage };

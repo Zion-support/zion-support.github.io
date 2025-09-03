@@ -1,8 +1,6 @@
 import React, { useState } from 'react';''';
 import { Link } from 'react-router-dom';''';
 import { motion } from 'framer-motion';
-;
-;
 const UltimateServicesShowcase2026 = () => {;
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');    const [sortBy, setSortBy] = useState('name');
@@ -334,14 +332,12 @@ const UltimateServicesShowcase2026 = () => {;
       </section>;
     </div>)};
 export default UltimateServicesShowcase2026;
-;
+export { UltimateServicesShowcase2026 };
 
 export { UltimateServicesShowcase2026 };
-;
+
 export { UltimateServicesShowcase2026 };
-;
+
 export { UltimateServicesShowcase2026 };
-;
-export { UltimateServicesShowcase2026 };
-;
+
 export { UltimateServicesShowcase2026 };

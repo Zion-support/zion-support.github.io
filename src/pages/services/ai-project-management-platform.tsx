@@ -22,7 +22,7 @@ import { Brain, ;
   Smartphone,;
   Cloud;,
 } from 'lucide-react';
-;
+
 export default function AIProjectManagementPlatform(...args: []):  {;
   const features = [;
     {;
@@ -56,7 +56,7 @@ export default function AIProjectManagementPlatform(...args: []):  {;
       description: 'Intelligent report generation with customizable dashboards and stakeholder updates';,
 };
   ];
-;
+
   const pricingPlans = [;
     {;
       name: 'Starter',;
@@ -108,7 +108,7 @@ export default function AIProjectManagementPlatform(...args: []):  {;
       popular: false;,
 };
   ];
-;
+
   const benefits = [;
     {;
       icon: Clock,;
@@ -131,7 +131,7 @@ export default function AIProjectManagementPlatform(...args: []):  {;
       description: 'Automated workflows free up time for strategic work';,
 };
   ];
-;
+
   const useCases = [;
     {;
       title: 'Software Development',;
@@ -154,7 +154,7 @@ export default function AIProjectManagementPlatform(...args: []):  {;
       icon: Calendar;,
 };
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -169,25 +169,13 @@ export default function AIProjectManagementPlatform(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             animate = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
-;
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">;
               <Brain className="w-4 h-4 mr-2" />;
               AI-Powered Project Management;
@@ -214,7 +202,7 @@ export default function AIProjectManagementPlatform(...args: []):  {;
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
@@ -222,22 +210,10 @@ export default function AIProjectManagementPlatform(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -258,32 +234,14 @@ export default function AIProjectManagementPlatform(...args: []):  {;
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.8,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300";
@@ -306,22 +264,10 @@ export default function AIProjectManagementPlatform(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -342,32 +288,14 @@ export default function AIProjectManagementPlatform(...args: []):  {;
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.8,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 className="text-center";
@@ -390,22 +318,10 @@ export default function AIProjectManagementPlatform(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -426,32 +342,14 @@ export default function AIProjectManagementPlatform(...args: []):  {;
                 initial = {;
   { opacity: 0,;
   x: index % 2 === 0 ? -20 : 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   x: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.8,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700";
@@ -474,22 +372,10 @@ export default function AIProjectManagementPlatform(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -510,32 +396,14 @@ export default function AIProjectManagementPlatform(...args: []):  {;
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.8,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${;
@@ -543,7 +411,7 @@ export default function AIProjectManagementPlatform(...args: []):  {;
                     ? 'border-purple-500 ring-2 ring-purple-500/20';
                     : 'border-gray-700';,
 }`}
-;
+
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">;
@@ -551,7 +419,7 @@ export default function AIProjectManagementPlatform(...args: []):  {;
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-gray-300 mb-4">{plan.description}</p>;
@@ -590,26 +458,14 @@ export default function AIProjectManagementPlatform(...args: []):  {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-;
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
               Ready to Transform Your Project Management?;
             </h2>;
@@ -635,13 +491,13 @@ export default function AIProjectManagementPlatform(...args: []):  {;
     </div>;
   );,
 }}}}}}
-;
+
 export { AIProjectManagementPlatform };
-;
+
 export { AIProjectManagementPlatform };
-;
+
 export { AIProjectManagementPlatform };
-;
+
 export { AIProjectManagementPlatform };
-;
+
 export { AIProjectManagementPlatform };

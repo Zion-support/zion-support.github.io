@@ -1,7 +1,7 @@
 export const api = {;
 export default api;
 import { API_BASE_URL } from '../config / constants';
-;
+
 export default function Page() {;
 : any): Promise < ApiResponse < T>> {;
   ;
@@ -13,20 +13,20 @@ export default function Page() {;
 },;
     ...options,;,
 };
-;
+
   try {;
     ;
     if(!response.ok) {;
       throw new ApiError(response.status,;
         `HTTP error ! status: ${response.status}`) }
-;
+
     return data} catch(error) {;
     if(error instanceof ApiError) {;
       throw error}
     throw new ApiError(500,;
       `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`) }
 }
-;
+
   // Health check;
   health: () => apiRequest('/health') ,;
 
@@ -93,5 +93,5 @@ export default function Page() {;
   deleteOrder: (id: number) =>;
     apiRequest(`/orders/${id}`, { method: 'DELETE' }) ,;,
 };
-;
+
 }

@@ -1,6 +1,6 @@
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react';''';
 import React from 'react';
-;
+
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
@@ -71,7 +71,7 @@ return();
                     variant="outline""";
                     className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white ">,;
                     View {category}
-;
+
                   </Button>;
                 </CardContent>;
               </Card>;
@@ -199,4 +199,4 @@ your business needs";
 """";
 ";
 
-export default Component
+export default Component;

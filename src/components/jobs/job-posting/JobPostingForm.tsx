@@ -11,7 +11,7 @@ import { DateFields } from './DateFields';
 import { DescriptionFields } from './DescriptionFields';
 import { useJobs } from '@/hooks/useJobs';
 import { JobSchemaType } from './validation';
-;
+
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
   const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
@@ -29,10 +29,10 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
     setIsRemote,;
     submitJob;,
 } = useJobForm({ jobId, onSuccess });
-;
+
   const { handleSubmit, setValue, getValues, formState } = form; // Destructured getValues;
   const { isSubmitting } = formState;
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -78,10 +78,10 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
     setEditorContent(value);
     setValue('description', value);,
 }, [setValue]);
-;
+
   const onSubmit = async(values: JobSchemaType) => {;
     setIsFormLoading(true);
-;
+
     try {;
       const jobData = await submitJob(values);
       ;
@@ -94,7 +94,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
         form.reset();
         setEditorContent("");,
 }
-;
+
       if(onSuccess) {;
         onSuccess();,
 }
@@ -105,11 +105,11 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
       setIsFormLoading(false);,
 }
   };
-;
+
   if(isLoading || isFormLoading) {;
     return <div className="flex items-center justify-center p-8">Loading...</div>;,
 }
-;
+
   return (<Form {...form}>;
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">;
         <div>;

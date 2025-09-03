@@ -230,7 +230,7 @@ export default function Page() {;
       icon: Phone;,
 }
   ];
-;
+
     return ()      <div key={item.name} className="mb-1">;
         {hasChildren ? (;
           <div>;
@@ -277,7 +277,7 @@ export default function Page() {;
         )}
       </div>;
     )};
-;
+
   return ();
     <>;
       {/* Mobile menu button */}

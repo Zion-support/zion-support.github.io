@@ -2,26 +2,26 @@ import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import {  import { motion  } from 'framer-motion';
  from 'lucide-react';
-;
+
 export function NewsletterSection() {;
 
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-;
+
   const handleSubmit = async e => {;
 
     e.preventDefault();
     setIsLoading(true);
-;
+
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 1000));
-;
+
     setIsSubscribed(true);
     setIsLoading(false);
     setEmail('');,
 };
-;
+
   const benefits = [{;
 
       icon: <Star className="w-6 h-6" />,;
@@ -43,14 +43,14 @@ export function NewsletterSection() {;
       title: 'Community Access',;
       description: 'Join our exclusive tech community'},;
   ];
-;
+
   const stats = [';
     { value: '50K+', label: 'Subscribers' },;
     { value: '95%', label: 'Satisfaction' },;
     { value: '24/7', label: 'Support' },;
     { value: '100%', label: 'Free' },;
   ];
-;
+
   const containerVariants = {;
 
     hidden: { opacity: 0 },;
@@ -61,12 +61,12 @@ export function NewsletterSection() {;
 
         staggerChildren: 0.2,;
         delayChildren: 0.1}}};
-;
+
   const itemVariants = {;
 
     hidden: { opacity: 0, y: 20 },;
     visible: { opacity: 1, y: 0 }};
-;
+
   if(isSubscribed) {;
 
     return (";
@@ -115,7 +115,7 @@ export function NewsletterSection() {;
         </motion.div>;
       </section>) ;,
 }
-;
+
   return (";
     <section className="py-20 bg-gradient-to-br from-zion-purple via-zion-purple-dark to-zion-slate-dark relative overflow-hidden">";
       <div className="absolute inset-0 opacity-10">";

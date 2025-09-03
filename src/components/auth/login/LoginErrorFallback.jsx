@@ -28,11 +28,11 @@ const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}"});,"})";
         </div>;,"});,"})";
   )};,"});,"})";
 export default LoginErrorFallback,"});,"})";
-;,"});,"})";
+
 export { LoginErrorFallback };,"});,"});,
 }
 const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}
-;
+
   return();";
     <div: className="min - h-screen bg-background flex items-center justify-center p-4">"""",";
       <div: className="max - w-md w-full space-y-8">"""",";
@@ -77,7 +77,7 @@ const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}";
                 Error details",;
               </summary>"";";
               <pre className = "mt-2 text-xs text-red-500 bg-red-50 p-2 rounded overflow-auto"> {error.message}
-;
+
               </pre>;
             </details>;
           )}";
@@ -94,11 +94,11 @@ const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}";
           </button>,,;
         </div>,;
 export: default LoginErrorFallback,export: { LoginErrorFallback }
-;
+
 export { LoginErrorFallback }
-;
+
 const LoginErrorFallback = memo(({error, resetErrorBoundary }) => {}
-;
+
   return()";
     <;<div className="&apos;min-h-screen" bg-background flex items-center justify-center p-4&apos;>"&apos;&apos,&apos;&apos;";
       <div className="&apos;max-w-md" w-full space-y-8&apos;>"&apos;&apos,&apos;&apos;";
@@ -134,7 +134,7 @@ const LoginErrorFallback = memo(({error, resetErrorBoundary }) => {}
               </summary>"";
               <pre className="mt-2 text-xs text-red-500 bg-red-50 p-2 rounded overflow-auto">;
                 {error.message}
-;
+
               </pre>;
             </details>;
           )}
@@ -148,14 +148,12 @@ const LoginErrorFallback = memo(({error, resetErrorBoundary }) => {}
     </div>;
   )};
 export default LoginErrorFallback;
-;
+export { LoginErrorFallback };
 
 export { LoginErrorFallback };
-;
+
 export { LoginErrorFallback };
-;
+
 export { LoginErrorFallback };
-;
-export { LoginErrorFallback };
-;
+
 export { LoginErrorFallback };

@@ -1,17 +1,17 @@
 import { Link  } from 'react-router-dom';
  from 'framer-motion';
-;
+
  from 'lucide-react';
-;
+
  from 'lucide-react';
-;
+
 export function EnhancedFuturisticFooter() {;
 
         { name: 'Press & Media', href: '/press', featured: false },;
         { name: 'Legal & Privacy', href: '/legal', featured: false };
       ]};
   ];
-;
+
   return ()    <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">;
       {/* Enhanced Animated Background */}";
       <div className="absolute inset-0 bg-futuristic-enhanced">";
@@ -328,26 +328,26 @@ export function EnhancedFuturisticFooter() {;
       ];,
 }
   ];
-;
+
     { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },;
     { name: 'Contact Support', href: '/support', icon: MessageCircle },;
     { name: 'View Status', href: '/status', icon: Gauge }
   ];
-;
+
     { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },;
     { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' },;
     { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' },;
     { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },;
     { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
   ];
-;
+
     email: 'info@ziontechgroup.com',;
     address: '123 Innovation Drive, Tech City, TC 12345';
 ';
     phone: '+1(555) 123-4567',;';
     email: 'info@ziontechgroup.com','    address: '123 Innovation Drive, Tech City, TC 12345';,
 };
-;
+
   return (";
     <footer className="bg-slate-900 text-white relative overflow-hidden">;
       {/* Background Elements */}";
@@ -460,7 +460,7 @@ export function EnhancedFuturisticFooter() {;
           </div>;
         </section>;
       </div>;
-;
+
       {/* Bottom Footer */};";
       <div className="border-t border-slate-700/50">;";
         <div className="container-responsive py-6">;";

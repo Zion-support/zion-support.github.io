@@ -142,13 +142,13 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {}
     </div>)};
 export default NotFound;,
 }
-;
+
 export { NotFound };
-;
+
 export { NotFound };
-;
+
 export { NotFound };
-;
+
 export { NotFound };
-;
+
 export { NotFound };

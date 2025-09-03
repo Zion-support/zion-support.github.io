@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
 ,";
     { icon: <Star className="w-6 h-6"/>, value: "4.8/5", label: "Global Rating" },";

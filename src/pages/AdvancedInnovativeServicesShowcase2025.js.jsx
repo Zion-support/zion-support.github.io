@@ -1,6 +1,6 @@
 import React, { useState } from 'react';''';
 import { Link } from 'react-router-dom';
-;
+
 const AdvancedInnovativeServicesShowcase2025 = () => {;
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -282,14 +282,12 @@ const AdvancedInnovativeServicesShowcase2025 = () => {;
       </section>;
     </div>)};
 export default AdvancedInnovativeServicesShowcase2025;
-;
+export { AdvancedInnovativeServicesShowcase2025 };
 
 export { AdvancedInnovativeServicesShowcase2025 };
-;
+
 export { AdvancedInnovativeServicesShowcase2025 };
-;
+
 export { AdvancedInnovativeServicesShowcase2025 };
-;
-export { AdvancedInnovativeServicesShowcase2025 };
-;
+
 export { AdvancedInnovativeServicesShowcase2025 };

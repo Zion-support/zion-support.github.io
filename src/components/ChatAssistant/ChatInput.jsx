@@ -3,21 +3,21 @@ import { Button } from "../ui/Button.jsx";
 import { Send export function ChatInput({ onSend, disabled = false }) {    const [message, setMessage] = useState('');
     const inputRef = useRef(null);
     useEffect(() => {}
-;
+
         // comment;
         inputRef.current?.focus()}, []);,
 }
     const handleSubmit = (e) => {}
-;
+
         e.preventDefault();,
 }
         if (message.trim() && !disabled) {}";
             onSend(message)";
             setMessage("")}
     }
-;
+
     const handleKeyPress = (e) => {}
-;
+
 ";
         if (e.key = == "Enter" && !e.shiftKey) {}";
             handleSubmit(e)}""";";,

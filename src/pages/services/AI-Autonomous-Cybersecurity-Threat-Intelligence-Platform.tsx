@@ -26,7 +26,7 @@ import { ;
   Server,;
   Key;,
 } from 'lucide-react';
-;
+
 const AIAutonomousCybersecurityThreatIntelligencePlatform: React.FC = () => {;
   const features = [;
     {;
@@ -54,7 +54,7 @@ const AIAutonomousCybersecurityThreatIntelligencePlatform: React.FC = () => {;
       benefits: ["Predictive threat modeling", "Behavioral analysis", "Risk assessment"];,
 }
   ];
-;
+
   const pricingPlans = [;
     {;
       name: "Business",;
@@ -98,7 +98,7 @@ const AIAutonomousCybersecurityThreatIntelligencePlatform: React.FC = () => {;
       popular: false;,
 }
   ];
-;
+
   const useCases = [;
     {;
       title: "Financial Services",;
@@ -121,7 +121,7 @@ const AIAutonomousCybersecurityThreatIntelligencePlatform: React.FC = () => {;
       icon: Cpu;,
 }
   ];
-;
+
   const benefits = [;
     {;
       metric: "99.9%",;
@@ -144,7 +144,7 @@ const AIAutonomousCybersecurityThreatIntelligencePlatform: React.FC = () => {;
       detail: "Average reduction in security incident costs";,
 }
   ];
-;
+
   const securityFeatures = [;
     "Zero Trust Architecture",;
     "Behavioral Analytics",;
@@ -155,7 +155,7 @@ const AIAutonomousCybersecurityThreatIntelligencePlatform: React.FC = () => {;
     "Security Orchestration",;
     "Threat Intelligence";
   ];
-;
+
   const complianceStandards = [;
     "SOC 2 Type II",;
     "ISO 27001",;
@@ -166,7 +166,7 @@ const AIAutonomousCybersecurityThreatIntelligencePlatform: React.FC = () => {;
     "FedRAMP",;
     "CIS Controls";
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">;
       <SEO ;
@@ -405,7 +405,7 @@ const AIAutonomousCybersecurityThreatIntelligencePlatform: React.FC = () => {;
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-slate-400 mb-6">{plan.description}</p>;
@@ -521,5 +521,5 @@ const AIAutonomousCybersecurityThreatIntelligencePlatform: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default AIAutonomousCybersecurityThreatIntelligencePlatform;

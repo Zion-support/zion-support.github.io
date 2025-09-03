@@ -21,7 +21,7 @@ import { ;
   CircuitBoard, ;
   Microchip ;,
 } from 'lucide-react';
-;
+
 const QuantumComputing = () => {;
   const features = [;
     {;
@@ -45,7 +45,7 @@ const QuantumComputing = () => {;
       description: "Access quantum computing power through our cloud platform";,
 }
   ];
-;
+
   const useCases = [;
     {;
       title: "Financial Modeling",;
@@ -68,7 +68,7 @@ const QuantumComputing = () => {;
       icon: Network;,
 }
   ];
-;
+
   const technologies = [;
     "Quantum Annealing",;
     "Quantum Machine Learning",;
@@ -77,7 +77,7 @@ const QuantumComputing = () => {;
     "Quantum-Classical Hybrid Systems",;
     "Quantum Cloud Infrastructure";
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
       {/* Hero Section */}
@@ -283,5 +283,5 @@ const QuantumComputing = () => {;
     </div>;
   );,
 };
-;
+
 export default QuantumComputing;

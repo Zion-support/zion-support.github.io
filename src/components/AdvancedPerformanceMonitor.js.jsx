@@ -416,7 +416,7 @@ export function AdvancedPerformanceMonitor() {;
             </div>;
           </div>;
         )}
-;
+
         {activeTab === 'metrics' && (";
           <div className="space-y-4">;
             {filteredMetrics.map(metric => (;
@@ -480,7 +480,7 @@ export function AdvancedPerformanceMonitor() {;
             ))}
           </div>;
         )}
-;
+
         {activeTab === 'alerts' && (";
           <div className="space-y-4">;
             {performanceAlerts.map(alert => (;
@@ -553,7 +553,7 @@ export function AdvancedPerformanceMonitor() {;
             ))}
           </div>;
         )}
-;
+
         {activeTab === 'scalability' && (";
           <div className="space-y-4">;
             {scalabilityMetrics.map(metric => (;
@@ -622,7 +622,7 @@ export function AdvancedPerformanceMonitor() {;
             ))}
           </div>;
         )}
-;
+
         {activeTab === 'analytics' && (";
           <div className="space-y-6">";
             <div className="text-center text-zion-slate-light">";

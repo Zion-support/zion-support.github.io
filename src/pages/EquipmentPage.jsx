@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';''';
 import { Button } from '@/components/ui/button';''';
 import { Badge } from '@/components/ui/badge';''';
 import { Filter, SortAsc, Star, ShoppingCart import { Footer } from '@/components/Footer';
-;
+
 const EquipmentPage = () => {}
   const [equipment, setEquipment] = useState([]);
   const [loading, setLoading] = useState(true);';
@@ -28,12 +28,12 @@ const EquipmentPage = () => {}
   const categories = ['Servers',Networking',Storage',Workstations',Security'];''';
   const brandOptions = ['Dell',HP',Cisco',IBM',Lenovo'];''';
   const availabilityOptions = ['In Stock',Low Stock',Out of Stock'];
-;
+
   useEffect ( () => {}
     // Simulate loading;
     setTimeout ( () => {}
       setLoading (false) }, 1000) }, []) ;
-;
+
   const EquipmentCard = ({ equipment }) => (;
     <Card className="h-full hover:shadow-lg transition-shadow">"";
       <CardHeader className="pb-3">"";
@@ -144,16 +144,16 @@ const EquipmentPage = () => {}
       </div>;
       <Footer />;
     </div>) };
-;
+
 export default EquipmentPage;,
 }}
-;
+
 export { EquipmentPage, EquipmentCard };
-;
+
 export { EquipmentPage, EquipmentCard };
-;
+
 export { EquipmentPage, EquipmentCard };
-;
+
 export { EquipmentPage, EquipmentCard };
-;
+
 export { EquipmentPage, EquipmentCard };

@@ -260,5 +260,5 @@ const AIAutonomousDevOpsPlatform = () => {;
     </>;
   );,
 }
-;
-export default AIAutonomousDevOpsPlatform
+
+export default AIAutonomousDevOpsPlatform;

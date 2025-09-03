@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-;
+
 interface PerformanceMetrics {;
   loadTime: number;
   firstContentfulPaint: number;
@@ -7,11 +7,11 @@ interface PerformanceMetrics {;
   cumulativeLayoutShift: number;
   firstInputDelay: number;,
 }
-;
+
 const PerformanceOptimizer: React.FC = () => {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isOptimized, setIsOptimized] = useState(false);
-;
+
   useEffect(() => {;
     // Monitor Core Web Vitals;
     const observer = new PerformanceObserver((list) => {;
@@ -25,9 +25,9 @@ const PerformanceOptimizer: React.FC = () => {;
 }
       });,
 });
-;
+
     observer.observe({ entryTypes: ['largest-contentful-paint'] });
-;
+
     // Get page load time;
     window.addEventListener('load', () => {;
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -39,16 +39,16 @@ const PerformanceOptimizer: React.FC = () => {;
         firstInputDelay: 0;,
 });,
 });
-;
+
     // Optimize images;
     optimizeImages();
     ;
     // Preload critical resources;
     preloadCriticalResources();
-;
+
     return () => observer.disconnect();,
 }, []);
-;
+
   const optimizeImages = () => {;
     const images = document.querySelectorAll('img');
     images.forEach((img) => {;
@@ -60,12 +60,12 @@ const PerformanceOptimizer: React.FC = () => {;
 }
     });,
 };
-;
+
   const preloadCriticalResources = () => {;
     const criticalFonts = [;
       'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
     ];
-;
+
     criticalFonts.forEach((font) => {;
       const link = document.createElement('link');
       link.rel = 'preload';
@@ -74,19 +74,19 @@ const PerformanceOptimizer: React.FC = () => {;
       document.head.appendChild(link);,
 });,
 };
-;
+
   const enableOptimizations = () => {;
     // Enable service worker for caching;
     if ('serviceWorker' in navigator) {;
       navigator.serviceWorker.register('/sw.js');,
 }
-;
+
     // Enable compression;
     document.documentElement.style.setProperty('--compression-enabled', 'true');
     ;
     setIsOptimized(true);,
 };
-;
+
   return (;
     <div className="performance-optimizer">;
       {metrics && (;
@@ -108,5 +108,5 @@ const PerformanceOptimizer: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default PerformanceOptimizer;

@@ -15,11 +15,11 @@ function withAuth(Component) {}
         }, [isLoggedIn, router]);
         if (!isLoggedIn) {}
             return null;
-;
+
         return <Component {...props}/>;,
 };
     return Wrapped;
-;
+
 export { withAuth };';
 export default withAuth;'';,
 }}}''';
@@ -31,7 +31,7 @@ export default withAuth;'';,
         return <Component {...props}/>};
     return Wrapped};
 export default withAuth;
-;
+
 export default withAuth;
 export default withAuth;
 export default withAuth;
@@ -39,14 +39,12 @@ export default withAuth;
 export default withAuth;
 export default withAuth;
 export default withAuth;
-;
+export { Wrapped };
 
 export { Wrapped };
-;
+
 export { Wrapped };
-;
+
 export { Wrapped };
-;
-export { Wrapped };
-;
+
 export { Wrapped };

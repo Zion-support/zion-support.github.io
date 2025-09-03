@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 export default FloatingActionButton;
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
       icon: ChatBubbleLeftRightIcon,";
       label: &apos,Live Chat&apos,";
       action: () => window.open(&aposhttp,s: // comment;
@@ -16,7 +16,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
       color: &apos,bg - purple-500 hove,r:bg-purple-600&apos}";
   EnvelopeIcon} from "@heroicons / react/24/outline",;
 const FloatingActionButton = ({ className = " }) => {}
-;
+
   const [isOpen, setIsOpen] = useState();,
 }
       label: "Live Chat",";
@@ -39,7 +39,7 @@ const FloatingActionButton = ({ className = " }) => {}
       label: "Email", ";
       action: () => window.open("mailto: info@ziontechgroup.com", _self"), ";
       color: "bg-purple-500 hover:bg-purple-600"}
-;
+
   ];
   return();,
 }
@@ -62,7 +62,7 @@ const FloatingActionButton = ({ className = " }) => {}
     <div className = "{"fixed" bottom-6 right-6 z-50 ${className}"}>;
       <AnimatePresence>;
         {isOpen && (}
-;
+
           <motion.div,">;
 className="&apos;absolute" bottom-16 right-0 mb-2 space-y-3&apos;&apos,&apos;>{actionItems.map((item, index) => (&apos}&apos;";
             className = "absolute bottom-16 right-0 mb-2 space-y-3""">{actionItems.map((item, index) => (";
@@ -85,7 +85,7 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;";
                 transition="{{" delay: index * 0.1 }}"""";";
                 className = "flex items-center space-x-3 ">";
                   className="{"${item.color}" text-white p-3 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110"}
-;
+
                   aria-label={item.label}"">"";";
                   <item.icon className="w-5 h-5" />;
                 </motion.button>;
@@ -93,7 +93,7 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;";
                   initial="{{" opacity: 0, x: -10 }}"";";
                   animate="{{" opacity: 1, x: 0 }}"";";
                   className = "bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap ">{item.label}
-;
+
                 </motion.span>;
               </motion.div>;
                   aria-label = {item.label}""">""";
@@ -103,7 +103,7 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;";
                 </motion.span>;
               </motion.div>;
             ))}
-;
+
       </AnimatePresence>;
       <motion.button;
         onClick={toggleMenu}"";";
@@ -152,17 +152,15 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;";
               key="open""";";
               <PlusIcon className = "w-6 h-6"  />;
     </div>)}
-;
+
 export default FloatingActionButton;
-;
+export { FloatingActionButton };
 
 export { FloatingActionButton };
-;
+
 export { FloatingActionButton };
-;
+
 export { FloatingActionButton };
-;
-export { FloatingActionButton };
-;
+
 export { FloatingActionButton };
 )))))))))))

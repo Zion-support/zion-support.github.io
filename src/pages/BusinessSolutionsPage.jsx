@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';''';
 import { Badge } from '@/components/ui/badge';''';
 import { Link } from 'react-router-dom';
 import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare, Shield, DollarSign, Search, Lightbulb, Star, Leaf const BusinessSolutions = [;
-;
+
     {}
         title: "Business Strategy Consulting","";
         description: "Strategic planning and business model optimization for growth","";
@@ -306,14 +306,12 @@ export default function BusinessSolutionsPage() {}
         </div>;
       </div>;
     </div>)}
-;
+export { BusinessSolutions, BusinessSolutionsPage };
 
 export { BusinessSolutions, BusinessSolutionsPage };
-;
+
 export { BusinessSolutions, BusinessSolutionsPage };
-;
+
 export { BusinessSolutions, BusinessSolutionsPage };
-;
-export { BusinessSolutions, BusinessSolutionsPage };
-;
+
 export { BusinessSolutions, BusinessSolutionsPage };

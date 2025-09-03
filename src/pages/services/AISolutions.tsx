@@ -38,7 +38,7 @@ import { ;
   Building2,;
   ShoppingCart;,
 } from 'lucide-react';
-;
+
 const AISolutions: React.FC = () => {;
   const solutions = [;
     {;
@@ -78,7 +78,7 @@ const AISolutions: React.FC = () => {;
       features: ['Cloud AI platforms', 'Edge computing', 'GPU optimization', 'Scalable architecture'];,
 }
   ];
-;
+
   const industries = [;
     {;
       name: 'Healthcare',;
@@ -111,7 +111,7 @@ const AISolutions: React.FC = () => {;
       description: 'Smart grid management, predictive maintenance, and energy optimization';,
 }
   ];
-;
+
   const benefits = [;
     {;
       icon: TrendingUp,;
@@ -134,7 +134,7 @@ const AISolutions: React.FC = () => {;
       description: 'Stay ahead with cutting-edge AI technology';,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">;
       {/* Hero Section */}
@@ -307,5 +307,5 @@ const AISolutions: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default AISolutions;

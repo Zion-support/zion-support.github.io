@@ -33,14 +33,12 @@ export default function SignUp() {}
         Sign Up;
       </button>;
     </form>)}
-;
+export { SignUp };
 
 export { SignUp };
-;
+
 export { SignUp };
-;
+
 export { SignUp };
-;
-export { SignUp };
-;
+
 export { SignUp };

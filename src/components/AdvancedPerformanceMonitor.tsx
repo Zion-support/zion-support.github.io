@@ -1,12 +1,12 @@
 import {   Activity, Zap, Clock,  TrendingUp, AlertTriangle  } from 'lucide-react';
-;
+
 export default function Page() {;
 );
-;
+
   // Calculate performance score based on Core Web Vitals;
   ;
       let validMetrics = 0;
-;
+
       // FCP scoring(0-100);
       if(metrics.fcp !== null) {;
 
@@ -14,7 +14,7 @@ export default function Page() {;
         if(metrics.fcp < 1800) totalScore += 100;
         else if(metrics.fcp < 3000) totalScore += 50;
         else totalScore += 0}
-;
+
       // LCP scoring(0-100);
       if(metrics.lcp !== null) {;
 
@@ -22,7 +22,7 @@ export default function Page() {;
         if(metrics.lcp < 2500) totalScore += 100;
         else if(metrics.lcp < 4000) totalScore += 50;
         else totalScore += 0}
-;
+
       // FID scoring(0-100);
       if(metrics.fid !== null) {;
 
@@ -30,7 +30,7 @@ export default function Page() {;
         if(metrics.fid < 100) totalScore += 100;
         else if(metrics.fid < 300) totalScore += 50;
         else totalScore += 0}
-;
+
       // CLS scoring(0-100);
       if(metrics.cls !== null) {;
 
@@ -38,10 +38,10 @@ export default function Page() {;
         if(metrics.cls < 0.1) totalScore += 100;
         else if(metrics.cls < 0.25) totalScore += 50;
         else totalScore += 0}
-;
+
       let rating: 'good' | 'needs-improvement' | 'poor';
       let color: string;
-;
+
       if(averageScore >= 90) {;
 
         rating = 'good';
@@ -53,12 +53,12 @@ export default function Page() {;
         rating = 'poor';
         color = 'text-red-500'}
     });
-;
+
   TrendingUp,';
   AlertTriangle} from 'lucide-react';    ;
     let grade: 'A' | 'B' | 'C' | 'D' | 'F';
     let color: string;
-;
+
     if(averageScore >= 90) {;
       grade = 'A';
       color = 'text-green-500'} else if(averageScore >= 80) {;
@@ -71,7 +71,7 @@ export default function Page() {;
       grade = 'F';
       color = 'text-red-500'}
   }, []) ;
-;
+
       return { score: averageScore, rating, color }},;
     [];
   );
@@ -79,7 +79,7 @@ export default function Page() {;
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
-;
+
     if('PerformanceObserver' in window) {;
 
       // First Contentful Paint;
@@ -89,7 +89,7 @@ export default function Page() {;
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))}
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
-;
+
       // Largest Contentful Paint;
 
         if(lastEntry) {;
@@ -97,7 +97,7 @@ export default function Page() {;
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))}
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-;
+
       // First Input Delay;
       const fidObserver = new PerformanceObserver(list => {;
 
@@ -108,7 +108,7 @@ export default function Page() {;
             setMetrics(prev => ({ ...prev, fid }) ) }
         })});
       fidObserver.observe({ entryTypes: ['first-input'] });
-;
+
       // Layout Shift;
       const clsObserver = new PerformanceObserver(list => {;
 
@@ -126,24 +126,24 @@ export default function Page() {;
         fidObserver.disconnect();
         clsObserver.disconnect()}}
   }, []);
-;
+
   // Measure other performance metrics;
   ;
       setMetrics(prev => ({ ...prev, ttfb }))}
   }, []) ;
-;
+
       // First Meaningful Paint(FMP) - approximated;
       ;
       setMetrics(prev => ({ ...prev, fmp }));
-;
+
   // Format time values;
   ;
     return `${Math.round(time)}ms`};
-;
+
   // Format CLS value;
   ;
     return cls.toFixed(3)};
-;
+
   // Get metric rating;
   ;
     switch(metric) {;
@@ -174,7 +174,7 @@ export default function Page() {;
             : '🔴 Poor';
       default:';
         return 'N/A'}  };
-;
+
   if(!isVisible) {;
 
     return ();
@@ -183,7 +183,7 @@ export default function Page() {;
         className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50">";
         <Activity className="w-6 h-6"  />      </button>;
     )}
-;
+
   return (";
     <div className="fixed bottom-4 right-4 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl p-6 shadow-2xl z-50 max-w-sm">";
       <div className="flex items-center justify-between mb-4">";

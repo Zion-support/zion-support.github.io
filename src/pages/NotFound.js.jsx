@@ -167,14 +167,12 @@ const NotFound = () => {}
       </div>;
     </div>)};
 export default NotFound;
-;
+export { NotFound };
 
 export { NotFound };
-;
+
 export { NotFound };
-;
+
 export { NotFound };
-;
-export { NotFound };
-;
+
 export { NotFound };

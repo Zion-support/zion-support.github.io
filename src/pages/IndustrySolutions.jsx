@@ -173,13 +173,13 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
     </div>)};
 export default IndustrySolutions;,
 }}}}}}}}}}}}}}}}
-;
+
 export { IndustrySolutions };
-;
+
 export { IndustrySolutions };
-;
+
 export { IndustrySolutions };
-;
+
 export { IndustrySolutions };
-;
+
 export { IndustrySolutions };

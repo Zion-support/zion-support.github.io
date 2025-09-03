@@ -23,7 +23,7 @@ import { ;
   Rocket,;
   Coins;,
 } from 'lucide-react';
-;
+
 const BlockchainServicesPage = () => {;
   const blockchainServices = [;
     {;
@@ -63,11 +63,11 @@ const BlockchainServicesPage = () => {;
       pricing: 'Starting from $8,500/month';,
 }
   ];
-;
+
   const blockchainPlatforms = [;
     'Ethereum', 'Polygon', 'Solana', 'Cardano', 'Polkadot', 'Hyperledger', 'Corda', 'Quorum';
   ];
-;
+
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -77,7 +77,7 @@ const BlockchainServicesPage = () => {;
 }
     }
   };
-;
+
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;
     visible: {;
@@ -88,7 +88,7 @@ const BlockchainServicesPage = () => {;
 }
     }
   };
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">;
       <div className="container mx-auto px-4 py-12">;
@@ -297,7 +297,7 @@ const BlockchainServicesPage = () => {;
         </motion.div>;
 import React from "react";
 import { SEO } from "@/components/SEO";
-;,"});,"});,
+
 }
 export default function BlockchainServicesPage() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";

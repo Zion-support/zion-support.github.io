@@ -1,5 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
 > {;
 
@@ -9,7 +9,7 @@ export default function Page() {;
   enableVibration?: boolean;
   autoDismiss?: boolean;
   defaultDuration?: number}
-;
+
 interface NotificationSettings {;
   sound: boolean;
   vibration: boolean;
@@ -17,7 +17,7 @@ interface NotificationSettings {;
   position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   maxNotifications: number;
   defaultDuration: number}
-;
+
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({;
 
   maxNotifications = 5,;
@@ -45,7 +45,7 @@ enableSound:  true,;
   // Initialize audio for notification sounds      default:';
         return 'top-4 right-4'}
   };
-;
+
   // Update settings;
   ;
     setSettings(prev => ({ ...prev, ...newSettings }) ) }, []) ;
@@ -59,7 +59,7 @@ enableSound:  true,;
 }, []);, []); (window as) .addNotification = addNotification;
     return () => {;
       delete(window as) .addNotification}}, [addNotification]) ;
-;
+
   return ();
     <>;
       {/* Notification Bell */}`;
@@ -182,7 +182,7 @@ enableSound:  true,;
   y: -10;,
 }}`;
             className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-4 w-96 max-h-96 overflow-hidden`}
-;
+
             {/* Header */}";
             <div className="flex items-center justify-between mb-4">";
               <h3 className="text-lg font-semibold text-zion-slate-dark">Notifications</h3>;
@@ -267,7 +267,7 @@ enableSound:  true,;
                                     markAsRead(notification.id)}}"                                  className="text-xs px-2 py-1 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded transition-colors">;
                                   {notification.action.label}
                                 </button>) }
-;
+
                               {!notification.read && (;
                                 <button;
                                   onClick={() => markAsRead(notification.id)}";
@@ -286,7 +286,7 @@ enableSound:  true,;
       </AnimatePresence>;
     </>;
   )};
-;
+
 // Hook for using notifications in components;
 export ;
   ;
@@ -294,7 +294,7 @@ export ;
       (window as any).addNotification(notification)}
   }, []) ;
   return { addNotification }};
-;
+
 // Utility functions for common notification types;
 export ;
         priority: 'medium',;,
@@ -358,5 +358,3 @@ export ;
   }
 };
 '"`;
-
-;,"});,})";

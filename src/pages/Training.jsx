@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-;
+
 export default function Training() {;
   return (;
     <div className="min-h-screen bg-gray-50 py-12">;
@@ -38,16 +38,14 @@ export default function Training() {;
       </section>;
     </div>) ;,
 };
-;
+
 export default Training;
-;
+export { Training };
 
 export { Training };
-;
+
 export { Training };
-;
+
 export { Training };
-;
-export { Training };
-;
+
 export { Training };

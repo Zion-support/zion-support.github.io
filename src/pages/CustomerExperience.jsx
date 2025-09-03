@@ -71,11 +71,11 @@ import {}
   Settings,''';
   Palette'''';,
 } from 'lucide-react';
-;
+
     technologies["Analytics Platforms", "Data Visualization", "Machine Learning", "Reporting Tools"];,
 }
 ];
-;
+
 const customerExperienceTechnologies = [];
   {}
 ";
@@ -113,7 +113,7 @@ const customerExperienceTechnologies = [];
     useCase: "Custom Experiences","";
     reliability: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -145,7 +145,7 @@ const successStories = [];
     results: "50% increase in portal usage, 45% reduction in appointment booking time, improved patient satisfaction","";
     logo: "HP";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -179,7 +179,7 @@ const processSteps = [];
     icon: Gauge,"";
     duration: "Ongoing";
 ];
-;
+
 const customerExperienceBenefits = [];
   {}
 ";
@@ -214,7 +214,7 @@ const customerExperienceBenefits = [];
     examples["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"];,
 }
 ];
-;
+
 export default function CustomerExperience() {}
 ';
 '';
@@ -523,7 +523,7 @@ export default function CustomerExperience() {}
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
 }`}
-;
+
                 {category}
               </button>) ) }
           </div>";
@@ -546,7 +546,7 @@ export default function CustomerExperience() {}
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
+
 ";,
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
@@ -712,14 +712,12 @@ export default function CustomerExperience() {}
       </section>;
     </div>;
   )}
-;
+export { CustomerExperience };
 
 export { CustomerExperience };
-;
+
 export { CustomerExperience };
-;
+
 export { CustomerExperience };
-;
-export { CustomerExperience };
-;
+
 export { CustomerExperience };

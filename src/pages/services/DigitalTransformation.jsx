@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-;
+
 const DigitalTransformation = () => {;
     const transformationServices = [;
         {;
@@ -71,21 +71,9 @@ const DigitalTransformation = () => {;
           <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {;
   { opacity: 0,;
   y: -20 ;
-
-;
-
-;
-
-;,
 }} animate = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }} transition={{ duration: 0.8 }}>;
             Digital;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">;
@@ -134,12 +122,6 @@ const DigitalTransformation = () => {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }} viewport={{ once: true }}>;
                 <div className="text-5xl mb-6">{service.icon}</div>;
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>;
@@ -273,15 +255,15 @@ const DigitalTransformation = () => {;
     </div>;
   );,
 }
-;
+
 export default DigitalTransformation;
-;
+
 export { DigitalTransformation };
-;
+
 export { DigitalTransformation };
-;
+
 export { DigitalTransformation };
-;
+
 export { DigitalTransformation };
-;
+
 export { DigitalTransformation };

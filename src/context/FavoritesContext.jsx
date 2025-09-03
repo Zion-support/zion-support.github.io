@@ -1,9 +1,9 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';
-;
+
 ) {;
   const [favorites, setFavorites] = useState([]);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -20,7 +20,7 @@ import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';
 }
     }
   }, []);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -30,7 +30,7 @@ import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';
 }, []);, []);
     localStorage.setItem('favorites', JSON.stringify(favorites));,
 }, [favorites]);
-;
+
   const toggleFavorite = async productId => {;
     try {;
       await toggleFavoriteRequest(productId);
@@ -43,15 +43,15 @@ import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';
       console.error('Toggle favorite failed', err);,
 }
   };
-;
+
   const isFavorite = id => favorites.includes(id);
-;
+
   return (<FavoritesContext.Provider value={{ favorites, toggleFavorite, isFavorite }}>;
       {children}
     </FavoritesContext.Provider>;
   );,
 }
-;
+
 export function useFavorites() {;
   return useContext(FavoritesContext);,
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Code, Shield, Zap, Brain, Users, TrendingUp, CheckCircle, Star } from 'lucide-react';
-;
+
 export default function AIAutonomousCodeReview() {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">;

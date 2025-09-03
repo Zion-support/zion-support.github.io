@@ -2,7 +2,7 @@ import React from 'react';''';
 import { motion } from 'framer-motion';''';
 import { Link } from 'react-router-dom';''';
 import { Brain, TrendingUp, Zap, BarChart3, CheckCircle, ArrowRight, Play } from 'lucide-react';
-;
+
 const features = [;
     {;
         title: "AI-Powered Autonomous Education Professor",;
@@ -207,14 +207,12 @@ export default function AIAutonomousEducationProfessor() {}
         </div>;
       </section>;
     </div>)}
-;
+export { AIAutonomousEducationProfessor, IconComponent };
 
 export { AIAutonomousEducationProfessor, IconComponent };
-;
+
 export { AIAutonomousEducationProfessor, IconComponent };
-;
+
 export { AIAutonomousEducationProfessor, IconComponent };
-;
-export { AIAutonomousEducationProfessor, IconComponent };
-;
+
 export { AIAutonomousEducationProfessor, IconComponent };

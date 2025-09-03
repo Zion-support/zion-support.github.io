@@ -1,5 +1,5 @@
 import {  import { motion  } from 'framer-motion';
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -16,7 +16,7 @@ function AnalyticsManager () {;
   Globe,;
   Smartphone,;
   Monitor} from 'lucide-react';
-;
+
 interface AnalyticsData {;
 
   pageViews: number;
@@ -44,7 +44,7 @@ interface UserSession {;
 }[];
   userAgent: string;
   referrer: string}
-;
+
 export function AnalyticsManager() {;
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(;
     null;
@@ -54,7 +54,7 @@ export function AnalyticsManager() {;
   );
   const [isTracking, setIsTracking] = useState(false);
   const [showAnalytics, setShowAnalytics] = useState(false);
-;
+
   // Initialize analytics tracking;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -65,12 +65,12 @@ export function AnalyticsManager() {;
 }, []);, []);
     initializeAnalytics();
     return () => cleanupAnalytics()}, []);
-;
+
     // Create or retrieve session;
     ;
     localStorage.setItem('zion_session_id', sessionId);
       localStorage.getItem('zion_session_id') || generateSessionId();'    localStorage.setItem('zion_session_id', sessionId);
-;
+
     const session: UserSession = {;
 
       id: sessionId,;
@@ -80,47 +80,47 @@ export function AnalyticsManager() {;
       events: [],;
       userAgent: navigator.userAgent,;
       referrer: document.referrer};
-;
+
     setCurrentSession(session);
-;
+
     // Track page view;
     trackPageView(window.location.pathname);
-;
+
     // Track user agent;
     trackUserAgent(navigator.userAgent);
-;
+
     // Track referrer;
     if(document.referrer) {;
 
       trackReferrer(document.referrer)}
     // Set up event listeners;
     setupEventListeners();
-;
+
     // Set up performance monitoring;
     setupPerformanceMonitoring();
-;
+
     // Set up session tracking;
     setupSessionTracking();
-;
+
     // console.log('Analytics initialized for session:', sessionId)}, []);
-;
+
     document.removeEventListener('scroll', handleScroll);
     window.removeEventListener('beforeunload', handleBeforeUnload);
     document.removeEventListener('click', handleClick);';
     document.removeEventListener('scroll', handleScroll);'    window.removeEventListener('beforeunload', handleBeforeUnload);
-;
+
     // Save session data;
     if(currentSession) {;
 
       saveSessionData(currentSession)}
   }, [currentSession]) };
-;
+
     // Scroll tracking';
     document.addEventListener('scroll', handleScroll, { passive: true });
-;
+
     // Page unload tracking';
     window.addEventListener('beforeunload', handleBeforeUnload)}, []);
-;
+
     // Track button clicks';
     if(target.tagName === 'BUTTON' || target.closest('button')) {;
       trackEvent('button_click', {;
@@ -128,7 +128,7 @@ export function AnalyticsManager() {;
         text: target.textContent || target.innerText,;
         className: target.className,;
         id: target.id})}
-;
+
     // Track link clicks';
     if(target.tagName === 'A' || target.closest('a')) {;
 
@@ -150,20 +150,20 @@ export function AnalyticsManager() {;
         name: (target as HTMLInputElement).name,;
         id: target.id})}
   }, []) ;
-;
+
     if(scrollDepth % 25 === 0) {;
 
       // Track at 25%, 50%, 75%, 100%';
       trackEvent('scroll_depth', { depth: scrollDepth })}
   }, []) }
   }, [currentSession]) ;
-;
+
         if(fcp) {;
 
           trackPerformance('fcp', fcp.startTime)}
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
-;
+
       // Largest Contentful Paint;
 
         if(lcp) {;
@@ -171,7 +171,7 @@ export function AnalyticsManager() {;
           trackPerformance('lcp', lcp.startTime)}
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-;
+
       // First Input Delay;
 
         if(fid) {;
@@ -179,7 +179,7 @@ export function AnalyticsManager() {;
           trackPerformance('fid', fid.processingStart - fid.startTime)}
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
-;
+
       // Cumulative Layout Shift;
       const clsObserver = new PerformanceObserver(list => {;
 
@@ -193,17 +193,17 @@ export function AnalyticsManager() {;
       clsObserver.observe({ entryTypes: ['layout-shift'] })}
   }, []) }
     }, 30000) ;
-;
+
     return () => clearInterval(activityInterval) }, [currentSession]) ;
-;
+
         trackEvent('page_view', { path });
-;
+
         // Send to analytics endpoint';
         sendAnalyticsData('page_view', { path, timestamp: Date.now() })}
     },;
     [currentSession];
   );
-;
+
         setCurrentSession(prev =>;
           prev;
             ? {;
@@ -213,13 +213,13 @@ export function AnalyticsManager() {;
                 lastActivity: Date.now()}
             : null;
         );
-;
+
         // Send to analytics endpoint';
         sendAnalyticsData('event', event)}
     },;
     [currentSession];
   )}, [])}, [])}, []);
-;
+
         // For now, just log to console';
         // console.log('Analytics Event:', { type, data, sessionId: currentSession?.id })} catch(error) {;
 
@@ -227,7 +227,7 @@ export function AnalyticsManager() {;
     },;
     [currentSession];
   );
-;
+
         // Send to analytics endpoint';
         await sendAnalyticsData('session_end', session)} catch(error) {;
 
@@ -235,7 +235,7 @@ export function AnalyticsManager() {;
     },;
     [sendAnalyticsData];
   );
-;
+
     // Calculate bounce rate(single page view sessions);
     ;
     // Calculate conversion rate(sessions with specific events);
@@ -266,7 +266,7 @@ export function AnalyticsManager() {;
       return 'Tablet'} else {;
 
       return 'Desktop'}  };
-;
+
   // Update analytics data when session changes;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -291,7 +291,7 @@ export function AnalyticsManager() {;
         <BarChart3 className="w-6 h-6" />;
       </motion.button>;
     )}
-;
+
   return ();
     <motion.div;
       initial={{ opacity: 0, y: 20 }}

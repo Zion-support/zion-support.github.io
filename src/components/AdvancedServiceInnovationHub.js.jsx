@@ -308,7 +308,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
               </motion.div>) ) }"});,"})";
           </motion.div>;,"});,"})";
         </>) }"});,"})";
-;,"});,"})";
+
       {/* comment */}";,"});,"})";
       {viewMode === "roadmap" && (<motion.div initial = {}"});,"})";
   { opacity: 0,"});,"})";
@@ -399,7 +399,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
               </Card>;,"});,"})";
             </motion.div>) ) }"});,"})";
         </motion.div>) }"});,"})";
-;,"});,"})";
+
       {/* comment */}";,"});,"})";
       {viewMode === "insights" && (<motion.div initial = {}"});,"})";
   { opacity: 0,"});,"})";
@@ -542,7 +542,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
             </CardContent>;,"});,"})";
           </Card>;,"});,"})";
         </motion.div>) }"});,"})";
-;,"});,"})";
+
       {/* comment */}"});,"})";
       <motion.div initial = {}"});,"})";
   { opacity: 0,"});,"})";
@@ -579,18 +579,18 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
       </motion.div>;,"});,"})";
     </div>)};,"});,"})";
 export default AdvancedServiceInnovationHub,"});,"})";
-;,"});,"})";
+
 export { AdvancedServiceInnovationHub };,"});,"})";
-;,"});,"})";
+
 export { AdvancedServiceInnovationHub };,"});,"})";
-;,"});,"})";
+
 export { AdvancedServiceInnovationHub };,"});,"})";
-;,"});,"})";
+
 export { AdvancedServiceInnovationHub };,"});,"})";
-;,"});,"})";
+
 export { AdvancedServiceInnovationHub };,"});,"})""""";";
 const AdvancedServiceInnovationHub = () => {}
-;
+
 """;";
     const [selectedCategory, setSelectedCategory] = useState("all")";
     const [selectedImpact, setSelectedImpact] = useState("all")";
@@ -765,11 +765,11 @@ const innovationTrends = []";
             keyPlayers["Neuralink",Kernel",Medical Device Companies"],";
             technologies["Neural Interfaces",Signal Processing",AI/ML"],";
             status: "Emerging"}
-;
+
     ]    const filteredTrends = useMemo(() => {}
-;
+
         return innovationTrends.filter(trend => {}
-;
+
             const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                 trend.description.toLowerCase().includes(searchTerm.toLowerCase());,
 }
@@ -783,9 +783,9 @@ const innovationTrends = []";
             case "Medium": return "bg-yellow-100 text-yellow-800"";
             case "Low": return "bg-green-100 text-green-800"";
             default: return "bg-gray-100 text-gray-800"}
-;,
+
 }
-;
+
     const getStatusColor = (status) => {}";
         switch (status) {}
 ";
@@ -795,9 +795,9 @@ const innovationTrends = []";
             case "Mature": return "bg-orange-100 text-orange-800"";
             case "Disruptive": return "bg-purple-100 text-purple-800"";
             default: return "bg-gray-100 text-gray-800"}
-;,
+
 }
-;
+
     const getCategoryIcon = (category) => {}";
         switch(category) {}
 "";
@@ -821,7 +821,7 @@ const innovationTrends = []";
     return (";
     <div className="max-w-7xl mx-auto p-6">;
       {/* comment */}
-;
+
       <motion.div initial = {}";
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1, y: 0 """"">;
@@ -841,9 +841,9 @@ const innovationTrends = []";
                 {mode === "trends" && <TrendingUp className="w-4 h-4 mr-2"/">}""""";
                 {mode === "roadmap" && <Rocket className="w-4 h-4 mr-2"/">}""""";
                 {mode === "insights" && <Lightbulb className="w-4 h-4 mr-2"/">}"                {mode.charAt(0).toUpperCase() + mode.slice(1)}
-;
+
               </Button>))}
-;
+
           </div>";
         </div>;
       </motion.div>";
@@ -851,7 +851,7 @@ const innovationTrends = []";
       {/* comment */}""";
       {viewMode === "trends" && (<>;
           {/* comment */}
-;
+
           <motion.div initial = {}";
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1, y: 0 """"">;
@@ -861,9 +861,9 @@ const innovationTrends = []";
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>""",;
                 <select value="{selectedCategory}" onChange="{(e)" ="> setSelectedCategory(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">;
                   {categories.map(category => (<option key="{category.id}" value={category.id}">"                      {category.name}
-;
+
                     </option>) ) }
-;
+
                 </select>";
               </div>;
               """;
@@ -894,7 +894,7 @@ const innovationTrends = []";
               </div>;
           </motion.div>;
           {/* comment */}
-;
+
           <motion.div initial = {}";
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1, y: 0 """"">;
@@ -921,7 +921,7 @@ const innovationTrends = []";
                             </Badge>";
                             <Badge className="{getStatusColor(trend.status)" }">";
                               {trend.status}
-;
+
                             </Badge>;
                           </div>;
                     </div>";
@@ -957,9 +957,9 @@ const innovationTrends = []";
                         <span className="text-sm text-zion-slate-light">Key Technologies: </span>"";
                         <div className="flex flex-wrap gap-1 mt-1">""",;
                           {trend.technologies.slice(0, 3).map((tech, idx) => (<Badge key="{idx}" variant="outline" className="text-xs">                              {tech}
-;
+
                             </Badge>) ) }
-;
+
                         </div>";
                       </div>;
                       """;
@@ -967,14 +967,14 @@ const innovationTrends = []";
                         <span className="text-sm text-zion-slate-light">Key Players: </span>"";
                         <div className="flex flex-wrap gap-1 mt-1">""",;
                           {trend.keyPlayers.slice(0, 3).map((player, idx) => (<Badge key="{idx}" variant="outline" className="text-xs">                              {player}
-;
+
                             </Badge>) ) }
-;
+
                         </div>;
                   </CardContent>;
                 </Card>;
               </motion.div>) ) }
-;
+
           </motion.div>;
 </>) }";
 
@@ -1013,7 +1013,7 @@ const innovationTrends = []";
                         </Badge>"";
                         <Badge className="bg-zion-purple/10 text-zion-purple">;
                           {roadmap.category.toUpperCase()}
-;
+
                         </Badge>;
                       </div>;
                   </div>";
@@ -1029,9 +1029,9 @@ const innovationTrends = []";
                       <ul className="space-y-2">""",;
                         {roadmap.milestones.map((milestone, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";
                             <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>                            {milestone}
-;
+
                           </li>) ) }
-;
+
                       </ul>";
                     </div>;
                     """;
@@ -1043,9 +1043,9 @@ const innovationTrends = []";
                       <ul className="space-y-2">"";
                         {roadmap.challenges.map((challenge, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";
                             <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>                            {challenge}
-;
+
                           </li>) ) }
-;
+
                       </ul>";
                     </div>;
                     """;
@@ -1057,15 +1057,15 @@ const innovationTrends = []";
                       <ul className="space-y-2">"";
                         {roadmap.opportunities.map((opportunity, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";
                             <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>                            {opportunity}
-;
+
                           </li>) ) }
-;
+
                       </ul>;
                     </div>;
                 </CardContent>;
               </Card>;
             </motion.div>) ) }
-;
+
         </motion.div>) }";
 
       {/* comment */}";
@@ -1206,9 +1206,9 @@ const innovationTrends = []";
             </CardContent>;
           </Card>,;
         </motion.div>) }
-;
+
       {/* comment */}
-;
+
       <motion.div initial = {}";
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1, y: 0 """"">;
@@ -1240,14 +1240,12 @@ const innovationTrends = []";
       </motion.div>;
     </div>)};
 export default AdvancedServiceInnovationHub;
-;
+export { AdvancedServiceInnovationHub };
 
 export { AdvancedServiceInnovationHub };
-;
+
 export { AdvancedServiceInnovationHub };
-;
+
 export { AdvancedServiceInnovationHub };
-;
-export { AdvancedServiceInnovationHub };
-;
+
 export { AdvancedServiceInnovationHub };

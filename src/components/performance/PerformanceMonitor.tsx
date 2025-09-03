@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-;
+
 type PerformanceMetrics = {;
   firstContentfulPaintMs?: number;,
 };
-;
+
 export default function PerformanceMonitor() {;
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-;
+
   useEffect(() => {;
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const entryHandler = (list: PerformanceObserverEntryList) => {;
@@ -22,7 +22,7 @@ export default function PerformanceMonitor() {;
       // no-op;,
 }
   }, []);
-;
+
   if (!metrics.firstContentfulPaintMs) return null;
   return (;
     <div className="fixed bottom-2 right-2 text-xs bg-black/60 text-white px-2 py-1 rounded">;
@@ -30,4 +30,4 @@ export default function PerformanceMonitor() {;
     </div>;
   );,
 }
-;
+

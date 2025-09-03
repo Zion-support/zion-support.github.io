@@ -29,14 +29,12 @@ const FiveGNetworkOptimization = () => {}
   );,
 };
 export default FiveGNetworkOptimization;
-;
+export { FiveGNetworkOptimization };
 
 export { FiveGNetworkOptimization };
-;
+
 export { FiveGNetworkOptimization };
-;
+
 export { FiveGNetworkOptimization };
-;
-export { FiveGNetworkOptimization };
-;
+
 export { FiveGNetworkOptimization };

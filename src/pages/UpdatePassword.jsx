@@ -85,7 +85,7 @@ export default function Page() {;
                     Request new reset link;
                   </Button>;
                 </div>) }
-;
+
               {success ? (<div className="text-center py-8">;
                   <div className="mx - auto flex items - center justify - center h-12 w-12 rounded-full bg-zion - purple / 20 mb-4">;
                     <LockKeyhole className="h-6 w-6 text-zion -purple"/>;
@@ -144,14 +144,12 @@ export default function Page() {;
       </div>;
       ;
     </>)}
-;
+export { UpdatePassword };
 
 export { UpdatePassword };
-;
+
 export { UpdatePassword };
-;
+
 export { UpdatePassword };
-;
-export { UpdatePassword };
-;
+
 export { UpdatePassword };

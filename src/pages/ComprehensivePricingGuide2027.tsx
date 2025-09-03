@@ -1,5 +1,5 @@
 import { Link  } from 'react-router-dom';
-;
+
 export default function ComprehensivePricingGuide2027(...args: unknown[]): unknown {;
   const serviceCategories = [;
     {;
@@ -116,7 +116,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
       ];,
 }
   };
-;
+
   const enterprisePackages = [;
     {;
       name: "Starter Enterprise",;
@@ -167,7 +167,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
       popular: false;,
 }
   ];
-;
+
   const marketComparison = [;
     {;
       feature: "AI Workflow Automation",;
@@ -198,7 +198,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
       savings: "50-63%";,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">;
       {/* Futuristic Animated Background */}
@@ -373,7 +373,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                         Most Popular;
                       </span>;
                     </div>) }
-;
+
                   <div className="text-center mb-8">;
                     <h3 className="text-2xl font - bold text-white mb-4">{pkg.name}</h3>;
                     <div className="mb-4">;
@@ -536,16 +536,14 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
     </div>;
   );,
 };
-;
+
 export default ComprehensivePricingGuide2027;
-;
+export { ComprehensivePricingGuide2027 };
 
 export { ComprehensivePricingGuide2027 };
-;
+
 export { ComprehensivePricingGuide2027 };
-;
+
 export { ComprehensivePricingGuide2027 };
-;
-export { ComprehensivePricingGuide2027 };
-;
+
 export { ComprehensivePricingGuide2027 };

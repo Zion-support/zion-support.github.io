@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion  } from 'framer-motion';
-;
+
 export default function Page() {;
     componentDidCatch(error, errorInfo) {;
 
@@ -46,10 +46,10 @@ export default function Page() {;
             // // // // // // // // console.log('Error ID:', errorReport.id);
             // // // // // // // // console.log('Error Details:', errorReport);
             console.groupEnd();
-;
+
         // In production, you would send this to your error reporting service;
         // Example: Sentry.captureException(error, { extra: errorReport });
-;
+
             // console.log('Error ID:', errorReport.id);
             // console.log('Error Details:', errorReport);
             console.groupEnd()}
@@ -100,14 +100,14 @@ export default function Page() {;
 
       handleError(event.reason, { componentStack: 'Promise rejection' });,
 });
-;
+
     return () => {;
 
       window.removeEventListener('error', handleError);
       window.removeEventListener('unhandledrejection', handleError);,
 };,
 }, []);
-;
+
   if(hasError) {;
 
     const defaultFallback = (";
@@ -170,16 +170,14 @@ export default function Page() {;
         </motion.div>;
       </div>;
     );
-;
+
     return fallback || defaultFallback;,
 }
-;
+
   return children;,
 };
-;
+
 export { EnhancedErrorBoundary };
 export default EnhancedErrorBoundary;'"`;,
 }}}}}}}}}}}}}'"`'"`;
-
-;
 export { Page };

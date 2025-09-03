@@ -577,11 +577,11 @@ import {}
   Zap,''';
   Cpu'''';,
 } from 'lucide-react';
-;
+
     technologies["Computer Vision", "Robotics", "AI", "Medical Imaging"];,
 }
 ];
-;
+
 const autonomousTechnologies = [];
   {}
 ";
@@ -619,7 +619,7 @@ const autonomousTechnologies = [];
     useCase: "Physical Control","";
     reliability: "Critical";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -651,7 +651,7 @@ const successStories = [];
     results: "30% yield increase, 40% water savings, reduced labor costs, improved sustainability","";
     logo: "AC";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -685,7 +685,7 @@ const processSteps = [];
     icon: Shield,"";
     duration: "8-16 weeks";
 ];
-;
+
 const autonomousBenefits = [];
   {}
 ";
@@ -720,7 +720,7 @@ const autonomousBenefits = [];
     examples["Easy scaling", "Adaptive systems", "Modular design", "Future-proof technology"];,
 }
 ];
-;
+
 export default function AIAutonomousSystems() {}
 ';
 '';
@@ -1029,7 +1029,7 @@ export default function AIAutonomousSystems() {}
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
 }`}
-;
+
                 {category}
               </button>) ) }
           </div>";
@@ -1052,7 +1052,7 @@ export default function AIAutonomousSystems() {}
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
+
 ";,
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
@@ -1218,14 +1218,12 @@ export default function AIAutonomousSystems() {}
       </section>;
     </div>;
   )}
-;
+export { AIAutonomousSystems };
 
 export { AIAutonomousSystems };
-;
+
 export { AIAutonomousSystems };
-;
+
 export { AIAutonomousSystems };
-;
-export { AIAutonomousSystems };
-;
+
 export { AIAutonomousSystems };

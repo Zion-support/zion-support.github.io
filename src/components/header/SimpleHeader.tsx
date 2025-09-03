@@ -120,4 +120,4 @@ const SimpleHeader = () => {
   )
 }
 
-export default SimpleHeader
+export default SimpleHeader;

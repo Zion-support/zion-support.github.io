@@ -6,8 +6,6 @@ import { useTheme } from "@/hooks/useTheme";
 import { cn } from "@/lib/utils";
 import { apiClient } from "@/utils/apiClient";
 import { Loader2, Send import { useEffect, useRef, useState } from "react";
-;
-;
 // Define suggested quick replies;
 const QUICK_REPLIES = [;
     { id: "hire", text: "How do I hire?" },;
@@ -256,7 +254,7 @@ export function ChatBotPanel() {}
             </Button>;
           </div>;
         </div>)}
-;
+
       <div className={;
   cn("p-4 border-t",  theme === "dark" ? "border-zion-blue-light" : "border-gray-200");,
 }>;
@@ -264,7 +262,7 @@ export function ChatBotPanel() {}
 
             e.preventDefault();
             handleSendMessage();
-;,
+
 }} className="flex items-center gap-2">;
           <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className={;
   cn("flex-1",  theme === "dark";

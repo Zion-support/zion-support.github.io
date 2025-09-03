@@ -34,14 +34,12 @@ const BlockchainServices = () => {}
       </section>;
     </div>)};
 export default BlockchainServices;
-;
+export { BlockchainServices };
 
 export { BlockchainServices };
-;
+
 export { BlockchainServices };
-;
+
 export { BlockchainServices };
-;
-export { BlockchainServices };
-;
+
 export { BlockchainServices };

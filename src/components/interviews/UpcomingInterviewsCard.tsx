@@ -12,7 +12,7 @@ export function UpcomingInterviewsCard() {;
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -43,7 +43,7 @@ export function UpcomingInterviewsCard() {;
         setIsLoading(false);,
 }
     };
-;
+
     loadInterviews();,
 }, [fetchInterviews]); // Added fetchInterviews;
 
@@ -71,7 +71,7 @@ export function UpcomingInterviewsCard() {;
       </Card>;
     );,
 }
-;
+
   if(upcomingInterviews.length === 0) {;
     return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
@@ -92,7 +92,7 @@ export function UpcomingInterviewsCard() {;
       </Card>;
     );,
 }
-;
+
   return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
       <CardHeader>;
         <CardTitle className="text-lg flex items-center">;

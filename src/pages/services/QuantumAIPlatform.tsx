@@ -22,7 +22,7 @@ import { Atom, ;
   Shield;,
 } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
-;
+
 const QuantumAIPlatform = () => {;
   const features = [;
     {;
@@ -35,7 +35,7 @@ const QuantumAIPlatform = () => {;
       ];,
 };
   ];
-;
+
   const pricingPlans = [;
     {;
       name: "Quantum Starter",;
@@ -78,7 +78,7 @@ const QuantumAIPlatform = () => {;
       popular: false;,
 };
   ];
-;
+
   const useCases = [;
     {;
       name: "Financial Services",;
@@ -108,7 +108,7 @@ const QuantumAIPlatform = () => {;
       ];,
 };
   ];
-;
+
   const quantumAdvantages = [;
     {;
       title: "Exponential Speedup",;
@@ -135,7 +135,7 @@ const QuantumAIPlatform = () => {;
       metric: "100%";,
 };
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -150,22 +150,10 @@ const QuantumAIPlatform = () => {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             animate = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             className="text-center";
@@ -209,22 +197,10 @@ const QuantumAIPlatform = () => {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16";
@@ -245,32 +221,14 @@ const QuantumAIPlatform = () => {;
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.8,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 text-center";
 
@@ -294,22 +252,10 @@ const QuantumAIPlatform = () => {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16";
@@ -330,32 +276,14 @@ const QuantumAIPlatform = () => {;
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.8,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300";
 
@@ -388,22 +316,10 @@ const QuantumAIPlatform = () => {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16";
@@ -424,39 +340,21 @@ const QuantumAIPlatform = () => {;
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.8,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${;
                   plan.popular;
                     ? 'border-blue-500 ring-2 ring-blue-500/20';
                     : 'border-slate-700';,
 }`}
-;
+
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">;
@@ -503,22 +401,10 @@ const QuantumAIPlatform = () => {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16";
@@ -539,32 +425,14 @@ const QuantumAIPlatform = () => {;
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.8,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300";
 
@@ -595,25 +463,13 @@ const QuantumAIPlatform = () => {;
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
-;
+
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready for the Quantum Revolution?;
             </h2>;
@@ -643,16 +499,14 @@ const QuantumAIPlatform = () => {;
     </div>;
   );,
 };
-;
+
 export default QuantumAIPlatform;
-;
+export { QuantumAIPlatform };
 
 export { QuantumAIPlatform };
-;
+
 export { QuantumAIPlatform };
-;
+
 export { QuantumAIPlatform };
-;
-export { QuantumAIPlatform };
-;
+
 export { QuantumAIPlatform };

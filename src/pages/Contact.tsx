@@ -1,6 +1,6 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
+
 const Contact: React.FC = () => {;
   return(<>;
       <SEO title="Contact - Zion Tech Group" />;
@@ -13,7 +13,7 @@ const Contact: React.FC = () => {;
     </>;
   );,
 };
-;
+
 export default function Contact() {;
   const [formData, setFormData] = useState({;
     firstName: '',;
@@ -24,10 +24,10 @@ export default function Contact() {;
     subject: '',;
     message: '',;
     department: 'general'  });
-;
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-;
+
   const handleInputChange = (e) => {;
     const { name, value } = e.target;
     setFormData(prev => ({;
@@ -35,7 +35,7 @@ export default function Contact() {;
       [name]: value;,
 }));,
 };
-;
+
   const handleSubmit = async (e) => {;
     e.preventDefault();
     setIsSubmitting(true);
@@ -77,7 +77,7 @@ export default function Contact() {;
   const [submitSuccess, setSubmitSuccess] = useState();,
 }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
-;
+
     const;const;const { name, value } = e.target;
   const handleSubmit = async (e: React.FormEvent) => {,;
     e.preventDefault(),,;
@@ -113,7 +113,7 @@ export default function Contact() {;
       </section>",;
       <div className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-16">",";";
         <div: className = "grid grid-cols-1 lg: grid-cols-2: gap-16">"," {/* comment */}
-;
+
           <div>";
             <h2 className="text - 3xl font-bold text-gray-900 mb-8">Send us a Message</h2>", {submitSuccess: ? (";
               <div className="bg - green-50 border border-green-200 rounded-lg p-6 mb-8">",";
@@ -208,7 +208,7 @@ link: "https:// comment;
 
   const officeHours = [;
     { day: &apos,Monday - Friday&apos, hours: &apos,9:00 AM - ,6:00 PM EST&apos} { day: &apos,Saturday&apos, hours: &apos,10:00 AM - ,4:00 PM EST&apos} { day: &apos,Sunday&apos, hours: &apos,Closed&apos}
-;
+
   return(&apos;";
     <div className="&apos;min-h-screen" bg-white&apos;>&apos,;
       <Header  />";
@@ -286,10 +286,10 @@ link: "https:// comment;
                   {services.map((service, index) => (";
                     <option key="{index}" value="{service}">;
                       {service}
-;
+
                     </option>;
                   ))}
-;
+
                 </select>;";
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;
                   Message *;
@@ -317,7 +317,7 @@ link: "https:// comment;
               <button>;
                 type="submit";";
                 className = "w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-4 px-8 rounded-lg transition-colors">{isSubmitting ? "Sending Message..." : "Send Message"}
-;
+
       {/* Contact Methods */}
       <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">;

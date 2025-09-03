@@ -8,7 +8,7 @@ alt: string,;
   priority?: boolean,";
   placeholder?: "blur" | "empty",;
   blurDataURL?: string}
-;
+
 const LazyImage: React.FC<LazyImageProps> = ({,;
   src,;
   alt,;
@@ -33,16 +33,16 @@ const LazyImage: React.FC<LazyImageProps> = ({,;
 }
           observer.disconnect();,
 }
-;,
+
 },;
       { threshold: 0.1 }
-;
+
     );,
 }
     if (imgRef.current) {;
       observer.observe(imgRef.current);,
 }
-;
+
     return () => observer.disconnect();,
 }
   }, [priority]);,
@@ -54,7 +54,7 @@ const LazyImage: React.FC<LazyImageProps> = ({,;
           <LoadingSpinner size="sm" text=""  />;
         </div>;
       )}
-;
+
       {isInView && (";
         <Image src="{src}
           alt="{alt}
@@ -68,7 +68,7 @@ const LazyImage: React.FC<LazyImageProps> = ({,;
           placeholder="{placeholder}
           blurDataURL="{blurDataURL}" />;
       )}
-;
+
     </div>;
   )}
       },;
@@ -77,7 +77,7 @@ const LazyImage: React.FC<LazyImageProps> = ({,;
     if (imgRef.current) {;
       observer.observe(imgRef.current);,;,
 }
-;
+
     return () => observer.disconnect();,;,
 }, [priority]);
   return (;

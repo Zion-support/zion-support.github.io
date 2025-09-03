@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-;
+
 export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true }) => {;
     const [brokenLinks, setBrokenLinks] = useState([]);
     const [fixedLinks, setFixedLinks] = useState([]);
@@ -159,7 +159,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
           </div>;
         </div>;
       )}
-;
+
       {/* Status Summary */}
       {showStatus && (";
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">";
@@ -189,7 +189,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
           </div>;
         </div>;
       )}
-;
+
       {/* Broken Links List */}
       {brokenLinks.length > 0 && (";
         <div className="mb-6">";
@@ -226,7 +226,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
           </div>;
         </div>;
       )}
-;
+
       {/* Fixed Links List */}
       {fixedLinks.length > 0 && (";
         <div className="mb-6">";
@@ -251,7 +251,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
           </div>;
         </div>;
       )}
-;
+
       {/* Action Buttons */}";
       <div className="flex flex-wrap gap-2">;
         <button;
@@ -287,8 +287,6 @@ export default LinkMonitor;
 '"`;
 import React from "react";
 export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([]) ; const [fixedLinks, setFixedLinks] = useState ([]) ; const [isScanning, setIsScanning] = useState (false) ; const [scanProgress, setScanProgress] = useState (0) ; const [lastScanTime, setLastScanTime] = useState (null) ;"";,"});,"})";
-;,"});,"})","});,"})";
-;,"});,"})";
 export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true }) => {;,"});,"})";
     const [brokenLinks, setBrokenLinks] = useState([]);,"});,"})";
     const [fixedLinks, setFixedLinks] = useState([]);,"});,"})";
@@ -438,7 +436,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
               style="{{" width: "${scanProgress}%" }}"});,"})"></div>;,"});,"})";
           </div>;,"});,"})";
       )}"});,"})";
-;,"});,"})";
+
       {/* comment */}""";,"});,"})";
       {showStatus && ("""";,"});,"})";
         <div className="grid grid-cols-1 md: grid-cols-3 gap-4 mb-6">""","});,"})";
@@ -466,7 +464,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
               Last Scan,"});,"})";
             </div>;,"});,"})";
       )}"});,"})";
-;,"});,"})";
+
       {/* comment */}""";,"});,"})";
       {brokenLinks.length > 0 && ("""";,"});,"})";
         <div className="mb-6">"""";,"});,"})";
@@ -502,7 +500,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             ))}"});,"})";
           </div>;,"});,"})";
       )}"});,"})";
-;,"});,"})";
+
       {/* comment */}""";,"});,"})";
       {fixedLinks.length > 0 && ("""";,"});,"})";
         <div className="mb-6">"""";,"});,"})";

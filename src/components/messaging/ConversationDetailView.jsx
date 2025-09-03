@@ -5,8 +5,6 @@ import { Button } from '@/components/ui/button';''';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';''';
 import { AspectRatio } from '@/components/ui/aspect-ratio';''';
 import { useAuth } from '@/hooks/useAuth';
-;
-;
 export function ConversationDetailView() {    const { user } = useAuth();
     const { activeConversation, activeMessages, sendMessage, loadMessages } = useMessaging();';
     const [messageText, setMessageText] = useState('');
@@ -100,7 +98,7 @@ export function ConversationDetailView() {    const { user } = useAuth();
             </div>;
           </div>;
         </div>)}
-;
+
       {/* Messages */}";
       <div className="flex-1 overflow-y-auto p-4 space-y-4">";
         {groupedMessages.length === 0 ? (<div className="text-center text-zion-slate py-12">;

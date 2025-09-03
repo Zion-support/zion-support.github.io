@@ -1,5 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
       // Apply large text;
       if(updatedSettings.largeText) {;
@@ -7,19 +7,19 @@ export default function Page() {;
         document.documentElement.classList.add('large-text')} else {;
 
         document.documentElement.classList.remove('large-text')}
-;
+
       // Apply reduced motion;
       if(updatedSettings.reducedMotion) {;
 
         document.documentElement.classList.add('reduced-motion')} else {;
 
         document.documentElement.classList.remove('reduced-motion')}
-;
+
     // Color blindness simulation;
     if(newSettings.colorBlindness !== 'none') {;
       root.classList.add(`color-blind-${newSettings.colorBlindness}`)} else {;
       root.classList.remove('color-blind-protanopia',color-blind-deuteranopia',color-blind-tritanopia')}
-;
+
       // Store settings in localStorage;
       localStorage.setItem(';
         'accessibility-settings',;
@@ -27,12 +27,12 @@ export default function Page() {;
       )},;
     [settings];
   );
-;
+
   // Load saved settings;
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
-;
+
     if(savedSettings) {;
 
       setSettings(parsedSettings);
@@ -49,13 +49,13 @@ export default function Page() {;
     ;
     setTimeout(() => {;
       document.body.removeChild(announcement)}, 1000)}, [settings.screenReader]);
-;
+
   // Keyboard navigation enhancement;
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
     if(!enabled || !settings.keyboardNavigation) return;
-;
+
       switch(event.key) {;
 
         case 'ArrowDown':';
@@ -83,37 +83,37 @@ export default function Page() {;
           )?.focus();
           break}
     };
-;
+
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
-;
+
   // Enhanced focus management;
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
     ;
       setCurrentFocus(target) ;
-;
+
       if(settings.focusIndicator) {;
 
         target.style.outline = '3px solid #3b82f6';
         target.style.outlineOffset = '2px'}
     };
-;
+
       if(settings.focusIndicator) {;
 
         target.style.outline = '';
         target.style.outlineOffset = '';,
 }
     };
-;
+
     document.addEventListener('focusin', handleFocusChange);    document.addEventListener('focusout', handleFocusOut);
-;
+
     return () => {;
 
       document.removeEventListener('focusin', handleFocusChange);
       document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator]) ;
-;
+
   // Screen reader announcements;
   ;
         announcement.setAttribute('aria-live',polite');
@@ -121,17 +121,17 @@ export default function Page() {;
         announcement.className="sr-only";
         announcement.textContent = message;
         document.body.appendChild(announcement);
-;
+
         setTimeout(() => {;
           document.body.removeChild(announcement)}, 1000)}
     },;
     [settings.screenReader];
   );
-;
+
   // Toggle settings;
   ;
       applySettings({ [key]: newValue });
-;
+
       if(key === 'highContrast') {;
 
         announceToScreenReader();
@@ -146,14 +146,14 @@ export default function Page() {;
     },;
     [settings, applySettings, announceToScreenReader];
   );
-;
+
   // Zoom controls;
   ;
       applySettings({ zoomLevel: newZoom });`;
       announceToScreenReader(`Zoom level ${newZoom}%`)},;
     [settings.zoomLevel, applySettings, announceToScreenReader];
   );
-;
+
   return ();
     <>;
       {/* Accessibility Toggle Button */}
@@ -353,7 +353,7 @@ export default function Page() {;
                     </div>;
                   </div>;
                 )}
-;
+
                 <button;
                   onClick={runAccessibilityAudit}
                   className="w-full bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple text-sm py-2 rounded-lg transition-colors">;
@@ -421,11 +421,11 @@ export default function Page() {;
           clip: rect(0, 0, 0, 0);
           white-space: nowrap;
           border: 0}
-;
+
         .high-contrast {;
 
           filter: contrast(1.5) brightness(1.2)}
-;
+
         .large-text {;
 
           font-size: 1.2em}
@@ -436,6 +436,6 @@ export default function Page() {;
           transition-duration: 0.01ms !important}`      `}</style>;
     </>;
   )};
-;
+
 export default EnhancedAccessibilityEnhancer;
 '"`;

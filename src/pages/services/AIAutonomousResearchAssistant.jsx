@@ -409,15 +409,15 @@ const AIAutonomousResearchAssistant = () => {;
     </div>;
   );,
 };
-;
+
 export default AIAutonomousResearchAssistant;
-;
+
 export { AIAutonomousResearchAssistant };
-;
+
 export { AIAutonomousResearchAssistant };
-;
+
 export { AIAutonomousResearchAssistant };
-;
+
 export { AIAutonomousResearchAssistant };
-;
+
 export { AIAutonomousResearchAssistant };

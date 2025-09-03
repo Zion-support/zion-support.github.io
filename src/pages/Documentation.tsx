@@ -142,7 +142,7 @@ initial = "{{" opacity: 0, y: 20 }}";
 ";
             <div className="&quot;grid" grid-cols-1 md:grid-cols-2 l,g: grid-cols-4 gap-8&quot,>;
               {docCategories.map((category, index) => (&quot}
-;
+
                 <motion.div,";
 key = "{category.title}
                   initial="{{" opacity: 0, y: 20 }}";
@@ -182,7 +182,7 @@ key = "{category.title}
                   </div>;
                 </motion.div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -227,7 +227,7 @@ initial = "{{" opacity: 0, y: 20 }}";
 ";
             <div className="&quot;grid" grid-cols-1 md: grid-cols-2 gap-8&quot,>;
               {popularDocs.map((doc, index) => (&quot}
-;
+
                 <motion.div,";
 key = "{doc.title}
                   initial="{{" opacity: 0, y: 20 }}";
@@ -238,12 +238,12 @@ key = "{doc.title}
                   <div className = "flex items-start justify-between mb-4">,";
                     <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">,;
                       {doc.category}
-;
+
                     </span>;";
                     <div className="flex items-center text-gray-400 text-sm">;";
                       <Users className="w-4 h-4 mr-1"  />;
                       {doc.views}
-;
+
                     </div>;
                   ;";
                   <h3 className="text-xl font-bold text-white mb-2">{doc.title}</h3>;";
@@ -269,7 +269,7 @@ key = "{doc.title}
                   <div className="flex items-start justify-between mb-4">";
                     <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">,;
                       {doc.category}
-;
+
                     </span>";
                     <div className="&quot;flex" items-center text-gray-400 text-sm&quot;>&quot;
                       <Users className="&quot;w-4" h-4 mr-1&quot;       />;
@@ -296,7 +296,7 @@ key = "{doc.title}
                   </div>;
                 </motion.div>,;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";

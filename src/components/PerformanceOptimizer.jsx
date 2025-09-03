@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation  } from 'react-router-dom';
-;
+
 export default function Page() {;
 ";
         // Add decoding="async" for better performance';
@@ -12,7 +12,7 @@ export default function Page() {;
 };,
 });,
 };
-;
+
     // Use requestIdleCallback for non-critical optimization';
     if('requestIdleCallback' in window) {;
 
@@ -22,10 +22,10 @@ export default function Page() {;
       setTimeout(optimizeImages, 100);,
 }
   }, [location.pathname]);
-;
+
   // Memoize expensive computations;
   const optimizedChildren = useMemo(() => children, [children]);
-;
+
   // Optimize scroll performance;
   const handleScroll = useCallback(() => {;
     // Throttle scroll events for better performance;
@@ -37,20 +37,20 @@ export default function Page() {;
 }, 16); // ~60fps;,
 }
   }, []);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
-;
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);,
 }, [handleScroll]);
-;
+
   // Service Worker registration for caching;
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
-;
+
     if('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {;
 
       navigator.serviceWorker';
@@ -58,7 +58,7 @@ export default function Page() {;
         .then(registration => {;
 
           // // console.log('SW registered: ', registration);
-;
+
           // Check for updates';
           registration.addEventListener('updatefound', () => {;
             const newWorker = registration.installing;
@@ -83,12 +83,12 @@ export default function Page() {;
 });,
 }
   }, []);
-;
+
   // Intersection Observer for lazy loading;
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
-;
+
     if('IntersectionObserver' in window) {;
 
       const observer = new IntersectionObserver();
@@ -113,18 +113,18 @@ export default function Page() {;
           rootMargin: '50px',;
           threshold: 0.1}
       );
-;
+
       // Observe all images with data-src';
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach(img => observer.observe(img));
-;
+
       return () => observer.disconnect();,
 }
   }, [location.pathname]);
-;
+
   return <>{optimizedChildren}</>;,
 };
-;
+
 // Add global performance optimizations';
 if(typeof window !== 'undefined') {;
 
@@ -138,7 +138,7 @@ if(typeof window !== 'undefined') {;
       { priority: 'background' }
     );,
 }
-;
+
   // Optimize memory usage';
   if('memory' in performance) {;
 
@@ -155,7 +155,7 @@ if(typeof window !== 'undefined') {;
 }
   });,
 }
-;";,
+
 });,"});,
 }
  export const PerformanceOptimizer = memo(({ children }) => { const location = useLocation () "

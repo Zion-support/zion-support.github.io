@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-;
+
 import { UserMenu } from './UserMenu.jsx';
 import { LanguageSelector } from './LanguageSelector.jsx';
 import { MainNavigation } from '@/layout/MainNavigation';
@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles } from "lucide-react";
 import { Search as SearchIcon } from "lucide-react";
-;
+
 export function Header({ hideLogin = false, customLogo, customTheme }) {  const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();
   const navigate = useNavigate();';
@@ -37,7 +37,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {  const 
         backgroundColor: effectiveTheme.backgroundColor,;
         color: effectiveTheme.textColor,;
         borderColor: "${effectiveTheme.primaryColor}20"}
-;
+
   // Handle scroll effect;
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
@@ -48,7 +48,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {  const 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);,
 }, []);
-;
+
   // comment;
 useEffect(() => {const handleScroll = () => {;
       setIsScrolled(window.scrollY > 20)};
@@ -67,9 +67,9 @@ useEffect(() => {const handleScroll = () => {;
       navigate("/search?q="${encodeURIComponent(query)}");";
       setQuery("")}
   }
-;
+
   const toggleMobileMenu = () => {setIsMobileMenuOpen(!isMobileMenuOpen)}
-;
+
   return (";
     <header";
       className = "{"sticky" top-0 z-50 w-full transition-all duration-300 ${;
@@ -139,10 +139,10 @@ useEffect(() => {;
       navigate("/search?q="${encodeURIComponent(query)}");";
       navigate("/search?q = ${encodeURIComponent(query)}"),;
       setQuery()}
-;
+
   const toggleMobileMenu = () => {;
     setIsMobileMenuOpen(!isMobileMenuOpen)}
-;
+
   return (;
     <header className = "{"sticky" top-0 z-50 w-full transition-all duration-300 ${";
         isScrolled;
@@ -203,7 +203,7 @@ useEffect(() => {;
                     className="bg-gradient-to-r from-zion-purple to-zion-cyan hover: from-zion-purple/80 hover:to-zion-cyan/80 text-white";
                     Get Started,;
               )}
-;
+
 </>;
           ";
           <LanguageSelector /">";
@@ -220,7 +220,7 @@ useEffect(() => {;
           <button onClick={toggleMobileMenu}
             className="lg: hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors  >",;
             {isMobileMenuOpen ? <X size="{24}" /"> : <Menu size="{24}" /">}
-;
+
           </button>;
       {/* comment */}";
       <MobileMenu isOpen="{isMobileMenuOpen}" onClose="{()" => setIsMobileMenuOpen(false)}";
@@ -231,7 +231,7 @@ useEffect(() => {;
           navigate(path);,
 }
           setIsMobileMenuOpen(false)}}
-;
+
     </header>";
   )}
   )}""";";,

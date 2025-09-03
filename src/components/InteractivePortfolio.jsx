@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, Calendar const portfolioProjects = [;
-;
+
     {;
 
         id: '1',;
@@ -187,7 +187,7 @@ export function InteractivePortfolio() {;
                       Featured;
                     </span>;
                   </div>) }
-;
+
                 {/* Project Image */}";
                 <div className="relative h-48 overflow-hidden">";
                   <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>";

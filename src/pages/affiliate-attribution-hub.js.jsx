@@ -266,14 +266,12 @@ const AffiliateAttributionHub = () => {}
       </section>;
     </div>)};
 export default AffiliateAttributionHub;
-;
+export { AffiliateAttributionHub };
 
 export { AffiliateAttributionHub };
-;
+
 export { AffiliateAttributionHub };
-;
+
 export { AffiliateAttributionHub };
-;
-export { AffiliateAttributionHub };
-;
+
 export { AffiliateAttributionHub };

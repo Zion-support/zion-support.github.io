@@ -21,14 +21,12 @@ const MobileAppPage = () => {;
                                                 ,;
                                                     <AppStoreBanner />)};
 export default MobileAppPage;
-;
+export { MobileAppPage };
 
 export { MobileAppPage };
-;
+
 export { MobileAppPage };
-;
+
 export { MobileAppPage };
-;
-export { MobileAppPage };
-;
+
 export { MobileAppPage };

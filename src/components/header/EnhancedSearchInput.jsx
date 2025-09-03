@@ -12,7 +12,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
   const [suggestions, setSuggestions] = useState([]);
   const searchRef = useRef(null);
   const inputRef = useRef(null);
-;
+
   // Sample search suggestions;
   const allSuggestions = [';
     { type: 'service', text: 'IT Support Services', icon: Users, category: 'Services' },;
@@ -24,7 +24,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
     { type: 'service', text: 'IT Consulting', icon: TrendingUp, category: 'Consulting' },;
     { type: 'service', text: 'Managed IT Services', icon: Building, category: 'Managed Services' }
   ];
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -39,10 +39,10 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
         setIsOpen(false);
         setActiveIndex(-1)}
     };
-;
+
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -59,12 +59,12 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
 
       setSuggestions([])}
     setActiveIndex(-1)}, [searchQuery]);
-;
+
   const handleInputChange = (e) => {;
 
     setSearchQuery(e.target.value);
     setIsOpen(true)};
-;
+
   const handleKeyDown = (e) => {;
 
     if(e.key === 'ArrowDown') {;
@@ -88,14 +88,14 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
       setIsOpen(false);
       setActiveIndex(-1)}
   };
-;
+
   const handleSuggestionClick = (suggestion) => {;
 
     setSearchQuery(suggestion.text);
     setIsOpen(false);
     setActiveIndex(-1);
     handleSearch(suggestion.text)};
-;
+
   const handleSearch = (query) => {;
 
     if(query.trim()) {;
@@ -103,40 +103,40 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
       // Add to recent searches;
       const newRecent = [query, ...recentSearches.filter(s => s !== query)].slice(0, 5);
       setRecentSearches(newRecent);
-;
+
       // Store in localStorage';
       localStorage.setItem('recentSearches', JSON.stringify(newRecent));
-;
+
       // Perform search(in a real app, this would navigate to search results);
       // // // // // // // // console.log('Searching for:', query);
-;
+
       // Close search;
       setIsOpen(false);
       setActiveIndex(-1)}
   };
-;
+
   const handleRecentSearchClick = (search) => {;
 
     setSearchQuery(search);
     handleSearch(search)};
-;
+
   const handleTrendingSearchClick = (search) => {;
 
     setSearchQuery(search);
     handleSearch(search)};
-;
+
   const clearSearch = () => {;
 
     setSearchQuery('');
     inputRef.current?.focus()};
-;
+
   const removeRecentSearch = (searchToRemove, e) => {;
 
     e.stopPropagation();
     const newRecent = recentSearches.filter(s => s !== searchToRemove);
     setRecentSearches(newRecent);
     localStorage.setItem('recentSearches', JSON.stringify(newRecent))};
-;
+
   return ();
     <div className="relative flex-1 max-w-2xl" ref={searchRef}>;
       {/* Search Input */}";
@@ -189,7 +189,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
               </div>;
             </div>;
           )}
-;
+
           {/* Recent Searches */}
           {recentSearches.length > 0 && (";
             <div className="p-4 border-b border-gray-200">";
@@ -219,7 +219,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
               </div>;
             </div>;
           )}
-;
+
           {/* Trending Searches */}";
           <div className="p-4">";
             <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">";

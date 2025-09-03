@@ -1,5 +1,5 @@
 import { Link, useLocation  } from 'react-router-dom';
-;
+
 export default function Page() {;
 ,;
   {;
@@ -248,7 +248,7 @@ export default function Page() {;
 },;
   { label: 'Contact', href: '/contact' }
 ];
-;
+
 export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
 
 className:  '',;
@@ -265,18 +265,18 @@ className:  '',;
     // Cleanup function;,
 };,
 }, []);, []);
-;
+
       root.classList.add(newTheme)}
     ';
     localStorage.setItem('zion-theme', newTheme)}, [onThemeChange])}};
-;
+
   return ()    <nav className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${  const contactInfo = {;
     phone: "+1 302 464 0950",;
     email: "kleber@ziontechgroup.com",;
     website: "https://ziontechgroup.com",;
     address: "364 E Main St STE 1008 Middletown DE 19709";,
 };
-;
+
   return (<nav className = {`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${isScrolled;
         ? 'bg-white / 95 dark:bg-slate - 900 / 95 backdrop - blur - md shadow-lg';
         : 'bg-transparent';,
@@ -310,7 +310,7 @@ className:  '',;
                     className="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">;
                     {item.label}
                   </Link>) }
-;
+
                 {/* Dropdown Menu */}
                 {item.children && (<AnimatePresence>;
                     {activeDropdown === item.label && (<motion.div;
@@ -449,7 +449,7 @@ className:  '',;
                               {item.label}
                             </Link>) }
                         </div>) ) }
-;
+
               {/* Mobile Actions */}";
               <div className="pt-4 border-t border-slate-700/50 space-y-3">";
                 <div className="flex items-center space-x-4 text-slate-400">";
@@ -474,5 +474,3 @@ className:  '',;
       </AnimatePresence>;
     </nav>;
   )};'"`;
-
-;,"});,})";

@@ -50,7 +50,7 @@ import {;
   Timer,;
   Zap as ZapIcon;,
 } from 'lucide-react';
-;
+
 interface PricingTier {;
   name: string;
   price: string;
@@ -61,7 +61,7 @@ interface PricingTier {;
   savings?: string;
   marketPrice?: string;,
 }
-;
+
 interface ServiceCategory {;
   id: string;
   name: string;
@@ -76,10 +76,10 @@ interface ServiceCategory {;
     implementationTime: string;,
 }>;,
 }
-;
+
 export default function ComprehensivePricingGuide2025() {;
   const [selectedCategory, setSelectedCategory] = useState<string>('ai-saas');
-;
+
   const serviceCategories: ServiceCategory[] = [;
     {;
       id: 'ai-saas',;
@@ -299,9 +299,9 @@ export default function ComprehensivePricingGuide2025() {;
       ];,
 }
   ];
-;
+
   const selectedCategory = serviceCategories.find(cat => cat.id === selectedCategory) || serviceCategories[0];
-;
+
   return (;
     <>;
       <Helmet>;
@@ -490,7 +490,7 @@ export default function ComprehensivePricingGuide2025() {;
                             </span>;
                           </div>;
                         )}
-;
+
                         <div className="text-center mb-6">;
                           <h4 className="text-xl font-bold text-white mb-2">{tier.name}</h4>;
                           <div className="mb-2">;
@@ -512,7 +512,7 @@ export default function ComprehensivePricingGuide2025() {;
                             </div>;
                           </div>;
                         )}
-;
+
                         {/* Features */}
                         <ul className="space-y-3 mb-6">;
                           {tier.features.map((feature, idx) => (;

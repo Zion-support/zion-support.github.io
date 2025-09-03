@@ -1,8 +1,8 @@
 
 "";,"});,})";
-;,});,"});,
+
 }
-;
+
 // import { useAuth } from '@/hooks/useAuth'; // Assuming an auth hook exists;
 // For now, let's mock a basic useAuth hook if not available to allow component structure;
 // In a real scenario, this would come from your actual auth context/hooks;
@@ -21,7 +21,7 @@ const useAuth = () => {;
   // }, []);
   return { user, isAuthenticated: user?.isLoggedIn ?? false };,
 };
-;
+
 // Assuming RatingStars component exists as seen in ProductListingCard.tsx;
 // If not, a simple display of rating number will be shown.// For actual stars, you'd import your RatingStars component:;
 // import { RatingStars } from '@/components/RatingStars'; // Or its correct path;
@@ -33,7 +33,7 @@ interface RatingStarsProps {;
   interactive?: boolean;
   onRate?: (rating: number) => void;,
 }
-;
+
 // Placeholder for RatingStars if not available or for simplicity in this subtask;
 const RatingStarsDisplay: React.FC<Pick<RatingStarsProps, 'value'>> = ({ value }) => (;
   <div className="flex items-center">;
@@ -43,7 +43,7 @@ const RatingStarsDisplay: React.FC<Pick<RatingStarsProps, 'value'>> = ({ value }
     <span className="ml-2 text-sm text-gray-600">({value.toFixed(1)})</span>;
   </div>;
 );
-;
+
 // Placeholder for an interactive star rating input;
 const StarRatingInput: React.FC<Pick<RatingStarsProps, 'value' | 'onRate'>> = ({ value, onRate }) => (;
   <div className="flex">;
@@ -59,23 +59,23 @@ const StarRatingInput: React.FC<Pick<RatingStarsProps, 'value' | 'onRate'>> = ({
     ))}
   </div>;
 );
-;
+
 interface ProductReviewsProps {;
   productId: string;,
 }
-;
+
 const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {;
   const { user, isAuthenticated } = useAuth();
   const [reviews, setReviews] = useState<Review[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-;
+
   const [newRating, setNewRating] = useState(0);
   const [newComment, setNewComment] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [submitSuccess, setSubmitSuccess] = useState<string | null>(null);
-;
+
   const fetchReviews = useCallback(async () => { // Wrapped in useCallback;
     setIsLoading(true);
     setError(null);
@@ -115,19 +115,19 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {;
     setIsSubmitting(true);
     setSubmitError(null);
     setSubmitSuccess(null);
-;
+
     try {;
       const response = await fetch('/api/reviews', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON.stringify({ productId, rating: newRating, comment: newComment }),;,
 });
-;
+
       if(!response.ok) {;
         const errorData = await response.json();
         throw new Error(errorData.error || `Failed to submit review: ${response.statusText}`);,
 }
-;
+
       setSubmitSuccess('Review submitted successfully! It may take some time to appear.');
       setNewRating(0);
       setNewComment('');
@@ -138,17 +138,17 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {;
       setIsSubmitting(false);,
 }
   };
-;
+
   return (<div className="mt-8">;
       <h3 className="text-xl font-semibold mb-4">Product Reviews</h3>;
 
       {isLoading && <p>Loading reviews...</p>}
       {error && <p className="text-red-500">Error: {error}</p>}
-;
+
       {!isLoading && !error && reviews.length === 0 && (;
         <p>No reviews yet.Be the first to review!</p>;
       )}
-;
+
       {!isLoading && !error && reviews.length > 0 && (;
         <div className="space-y-4 mb-6">;
           {reviews.map((review) => (;
@@ -165,7 +165,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {;
           ))}
         </div>;
       )}
-;
+
       {isAuthenticated && (;
         <div className="mt-6 p-4 border rounded-md bg-white dark:bg-gray-900">;
           <h4 className="text-lg font-semibold mb-3">Write a Review</h4>;
@@ -202,5 +202,5 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {;
     </div>;
   );,
 };
-;
+
 export default ProductReviews;

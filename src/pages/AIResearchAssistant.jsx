@@ -163,14 +163,12 @@ export default function AIResearchAssistant() {}
         </div>;
       </div>;
     </div>)}
-;
+export { AIResearchAssistant };
 
 export { AIResearchAssistant };
-;
+
 export { AIResearchAssistant };
-;
+
 export { AIResearchAssistant };
-;
-export { AIResearchAssistant };
-;
+
 export { AIResearchAssistant };

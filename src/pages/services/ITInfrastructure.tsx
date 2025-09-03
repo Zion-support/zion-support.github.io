@@ -29,21 +29,21 @@ const ITInfrastructure: React.FC = () => {;
       icon: Shield;,
 }
   ];
-;
+
   const infrastructureAreas = [;
     { area: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },;
     { area: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },;
     { area: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },;
     { area: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
-;
+
   const keyFeatures = [;
     { name: "High Availability", icon: "🔄", description: "99.9% uptime guarantee with redundancy" },;
     { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },;
     { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },;
     { name: "Expert Support", icon: "👨‍💻", description: "Certified engineers and technicians" }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-background">;
       <SEO ;
@@ -73,14 +73,14 @@ const ITInfrastructure: React.FC = () => {;
       icon: "🔒";,
 }
   ];
-;
+
   const infrastructureAreas = [;
     {area}: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },;
     {area}: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },;
     {area}: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },;
     {area}: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
-;
+
   return (;
     <>;
       <Helmet>;
@@ -244,5 +244,5 @@ const ITInfrastructure: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default ITInfrastructure;)

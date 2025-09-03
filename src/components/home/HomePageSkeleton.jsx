@@ -54,5 +54,5 @@ const HomePageSkeleton = () => {;
           </div>;
     </div>;,;
   )}
-;
+
 export default HomePageSkeleton;

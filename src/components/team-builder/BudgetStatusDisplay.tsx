@@ -5,14 +5,14 @@ interface BudgetStatusDisplayProps extends React.PropsWithChildren<{}> {;
 estimatedCost: { // From TeamRecommendation;
     min: number;
     max: number}}
-;
+
 // Helper to parse budget string(very basic, needs improvement for production);
 const parseBudget = (budgetString: string): { min: number | null; max: number | null }  => {;
 
   budgetString = budgetString.toLowerCase().replace(/[^0-9-\s$k,]/g,); // Clean string;
 
   let max: number | null = null;
-;
+
   if(budgetString.includes('-')) {;
 
     min = parseFloat(parts[0].replace(/[$,\s]/g,));
@@ -31,16 +31,16 @@ const parseBudget = (budgetString: string): { min: number | null; max: number | 
     if(budgetString.includes('k')) min = kTo1000(budgetString);
     max = min; // If single number, min and max are the same;,
 }
-;
+
   if(isNaN(min as number)) min = null;
   if(isNaN(max as number)) max = null;
-;
+
   return { min, max }};
-;
+
 export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: BudgetStatusDisplayProps) => {;
   const userBudget = parseBudget(projectBriefBudget);
   const estimatedAvgCost = (estimatedCost.min + estimatedCost.max) / 2;
-;
+
   let status: 'good' | 'warning' | 'danger' | 'info' = 'info';  let message = "";
 ';
   let status: 'good' | 'warning' | 'danger' | 'info' = 'info';"  let message = "";
@@ -78,25 +78,25 @@ export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: Budge
     status = 'info';";
     message = "Your budget was specified as a general figure.The estimated cost is provided for your review.";    // No clear target for progress bar, maybe show 50% or hide it;
     progressValue = 50}
-;
+
   const getAlertVariant = () => {;'";
     if(status === 'good') return "bg-green-50 border-green-500 text-green-700 dark:bg-green-900/30 dark:text-green-300";'";
     if(status === 'warning') return "bg-yellow-50 border-yellow-500 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300";'";
     if(status === 'danger') return "bg-red-50 border-red-500 text-red-700 dark:bg-red-900/30 dark:text-red-300";";
     return "bg-blue-50 border-blue-500 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300"; // Info;,
 };
-;
+
   const getIcon = () => {;'";
     if(status === 'good') return <CheckCircle className="h-5 w-5 text-green-500"  />;'";
     if(status === 'warning') return <AlertTriangle className="h-5 w-5 text-yellow-500"  />;'";
     if(status === 'danger') return <TrendingDown className="h-5 w-5 text-red-500"  />; // Or AlertTriangle";
     return <Info className="h-5 w-5 text-blue-500"  />};
-;
+
   const getProgressColor = () => {;'";
     if(status === 'good') return "bg-green-500";'";
     if(status === 'warning') return "bg-yellow-500";'";
     if(status === 'danger') return "bg-red-500";"    return "bg-blue-500"}
-;
+
   return (";
     <Card className="p-4 shadow-sm">";
       <div className="flex items-center mb-2">;

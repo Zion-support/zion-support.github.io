@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from "./SEO";
-;
+
 export default function SitemapPage() {;
     const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);
     const talentRoutes = completeSitemap.filter(route => route.requiredAuth &&;
@@ -38,11 +38,11 @@ export default function SitemapPage() {;
                     to={route.path}"";
                     className="text-zion-slate-light hover: text-zion-cyan transition-colors block ">,;
                     {route.label || route.title}
-;
+
                   </Link>;
                 </li>;
               ))}
-;
+
             </ul>";
           </div>;
 """;
@@ -58,11 +58,11 @@ export default function SitemapPage() {;
                     to={route.path}"";
                     className="text-zion-slate-light hover: text-zion-cyan transition-colors block ">,;
                     {route.label || route.title}
-;
+
                   </Link>;
                 </li>;
               ))}
-;
+
             </ul>";
           </div>;
 """;
@@ -78,11 +78,11 @@ export default function SitemapPage() {;
                     to={route.path}"";
                     className="text-zion-slate-light hover: text-zion-cyan transition-colors block ">,;
                     {route.label || route.title}
-;
+
                   </Link>;
                 </li>;
               ))}
-;
+
             </ul>";
           </div>;
 """;
@@ -98,11 +98,11 @@ export default function SitemapPage() {;
                     to={route.path}"";
                     className="text-zion-slate-light hover: text-zion-cyan transition-colors block ">,;
                     {route.label || route.title}
-;
+
                   </Link>;
                 </li>;
               ))}
-;
+
             </ul>;
           </div>";
         </div>;
@@ -125,23 +125,21 @@ export default function SitemapPage() {;
                 </span>"""';
                 <p className="text-sm text-zion-slate-light mt-1">;
                   {route.description}
-;
+
                 </p>;
               </div>;
             ))}
-;
+
           </div>;
         </div>;
       </div>;
     </div>)}
-;
+export { SitemapPage };
 
 export { SitemapPage };
-;
+
 export { SitemapPage };
-;
+
 export { SitemapPage };
-;
-export { SitemapPage };
-;
+
 export { SitemapPage };

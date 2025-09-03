@@ -117,11 +117,11 @@ import {}
   Battery,''';
   Signal'''';,
 } from 'lucide-react';
-;
+
     technologies["CDN", "Edge Computing", "Load Balancing", "Performance Monitoring"];,
 }
 ];
-;
+
 const contentTechnologies = [];
   {}
 ";
@@ -159,7 +159,7 @@ const contentTechnologies = [];
     useCase: "Performance Analysis","";
     reliability: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -191,7 +191,7 @@ const successStories = [];
     results: "500% increase in content output, 60% improvement in SEO performance, higher conversion rates","";
     logo: "EB";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -225,7 +225,7 @@ const processSteps = [];
     icon: BarChart3,"";
     duration: "Ongoing";
 ];
-;
+
 const contentBenefits = [];
   {}
 ";
@@ -260,7 +260,7 @@ const contentBenefits = [];
     examples["Performance metrics", "Audience insights", "A/B testing", "ROI tracking"];,
 }
 ];
-;
+
 export default function ContentCreation() {}
 ';
 '';
@@ -569,7 +569,7 @@ export default function ContentCreation() {}
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
 }`}
-;
+
                 {category}
               </button>) ) }
           </div>";
@@ -592,7 +592,7 @@ export default function ContentCreation() {}
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
+
 ";,
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
@@ -758,14 +758,12 @@ export default function ContentCreation() {}
       </section>;
     </div>;
   )}
-;
+export { ContentCreation };
 
 export { ContentCreation };
-;
+
 export { ContentCreation };
-;
+
 export { ContentCreation };
-;
-export { ContentCreation };
-;
+
 export { ContentCreation };

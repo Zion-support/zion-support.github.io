@@ -72,14 +72,12 @@ export default function CheckoutPage() {}
           Use test card 4242-4242-4242-4242 with  future date and CVC.;
         </p>)}
     </div>)}
-;
+export { CheckoutPage };
 
 export { CheckoutPage };
-;
+
 export { CheckoutPage };
-;
+
 export { CheckoutPage };
-;
-export { CheckoutPage };
-;
+
 export { CheckoutPage };

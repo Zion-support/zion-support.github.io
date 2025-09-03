@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link  } from 'react-router-dom';
-;
+
 export default function Page() {      >;
         <Home className="w-4 h-4 mr-1" />;
         Home;
       </NavLink>;,
 }
-;
+
   ];
 
   const handleDropdownToggle = (index) => {setActiveDropdown(activeDropdown === index ? null : index)};";
@@ -85,9 +85,9 @@ export default function Page() {      >;
         { name: "Documentation", href: "/docs" },;
         { name: "Training", href: "/training" },;
         { name: "Contact", href: "/contact" }
-;
+
       ]}
-;
+
 ";
   return (";
     <nav className="flex space-x-8">";
@@ -101,7 +101,7 @@ export default function Page() {      >;
                     ? "text-zion-cyan bg-zion-purple/10";
                     : "text-zion-slate-light hover:text-white hove,";
     r: bg-zion-purple/10""}"}
-;
+
               >;
                 <span>{item.name}</span>;
                 <ChevronDown ;
@@ -109,7 +109,7 @@ export default function Page() {      >;
                     activeDropdown === index ? "rotate-180" : """  />;
               </button>;
               {/* comment */}
-;
+
               {activeDropdown === index && (;
                 <div className=""absolute" top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">;
                   <div className="py-2">;
@@ -119,10 +119,10 @@ export default function Page() {      >;
                         className="block px-4 py-3 text-sm text-zion-slate-light hover:text-white hove,";
     r: bg-zion-purple/10 transition-colors"">;
                         onClick="{()" => setActiveDropdown(null)}
-;
+
   const handleDropdownToggle = (index) => {;
     setActiveDropdown(activeDropdown === index ? null : index)}
-;
+
 ";
   return (";
       {navigationItems.map((item, index) => (";
@@ -153,13 +153,13 @@ export default function Page() {      >;
                         className="block px-4 py-3 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"">;
                         onClick="{()" ="> setActiveDropdown(null)}";
                         {child.name}
-;
+
                       </Link>;
                     ))}
-;
+
                   </div>;
               )}
-;
+
           ) : (";
               to="{item.href}";
               className="{"px-3" py-2 rounded-md text-sm font-medium transition-colors ${";
@@ -167,7 +167,7 @@ export default function Page() {      >;
             <Link to="{item.href}";,
 }"}">";
               {item.name}
-;
+
     </nav>";
   )} ("")"}
 "";

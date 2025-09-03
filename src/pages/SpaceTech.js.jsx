@@ -78,14 +78,12 @@ const SpaceTech = () => {}
       </section>;
     </div>)};
 export default SpaceTech;
-;
+export { SpaceTech };
 
 export { SpaceTech };
-;
+
 export { SpaceTech };
-;
+
 export { SpaceTech };
-;
-export { SpaceTech };
-;
+
 export { SpaceTech };

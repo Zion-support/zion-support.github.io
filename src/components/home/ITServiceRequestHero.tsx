@@ -1,5 +1,3 @@
-;export function ITServiceRequestHero(...args[]):  {;
-
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   ;
@@ -11,7 +9,7 @@
       setTimeout(: unknown {;
         setIsSubmitting(false);
         router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};
-;
+
   const containerVariants = {;
   hidden: { opacity: 0,;
   y: 20;,
@@ -25,7 +23,7 @@
 };,
 };,
 };
-;
+
   const itemVariants = {;
   hidden: { opacity: 0,;
   y: 20;,
@@ -36,23 +34,23 @@
       transition: { duration: 0.5 };,
 };,
 };
-;
+
   const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },;
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },;
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
-;
+
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';
-;
+
 ,";
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },";
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;";
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
-;
+
 export function ITServiceRequestHero() {;
   return (";
     <section className="py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">;

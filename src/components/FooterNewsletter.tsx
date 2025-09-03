@@ -6,7 +6,7 @@
 
       setIsSubmitting(false)}
   };
-;
+
   return ();
     <div className="bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">";
       <div className="text-center">";

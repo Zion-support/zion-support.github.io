@@ -33,14 +33,12 @@ const Documentation = () => {}
       </div>;
     </>)};
 export default Documentation;
-;
+export { Documentation };
 
 export { Documentation };
-;
+
 export { Documentation };
-;
+
 export { Documentation };
-;
-export { Documentation };
-;
+
 export { Documentation };

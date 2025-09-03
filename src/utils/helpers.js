@@ -1,5 +1,3 @@
 // comment;
-export const helpers = {}
-;
-
-export default helpers
+export const helpers = {};
+export default helpers;

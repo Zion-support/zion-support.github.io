@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 export /**;
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
 ,;
   {;
@@ -52,20 +52,20 @@ export default function Page() {;
     duration: "Ongoing",;";
     success: "100% client retention"};
 ];
-;
+
 const stats = [;";
   { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },;";
   { icon: <Target className="w-6 h-6"  />, value: "99.9%", label: "Success Rate" },;";
   { icon: <TrendingUp className="w-6 h-6"  />, value: "50%", label: "Cost Reduction" },;";
   { icon: <Award className="w-6 h-6"  />, value: "1000+", label: "Projects Completed" };];
-;
+
   const [hoveredStep, setHoveredStep] = useState < number | null> (null) ;
   const [activeStep, setActiveStep] = useState < number> (0) ;
-;
+
       transition: {;
         staggerChildren: 0.2,;
         delayChildren: 0.1}}};
-;
+
   const statsVariants = {;
   hidden: { opacity: 0,;
   scale: 0.8;,
@@ -148,7 +148,7 @@ const stats = [;";
           initial="hidden";
           whileInView="visible";
           viewport={{ once: true }}
-;
+
           {stats.map((stat, index) => (;
             <motion.div;
               key={index}
@@ -168,7 +168,7 @@ const stats = [;";
           initial="hidden";
           whileInView="visible";
           viewport={{ once: true }}
-;
+
           {/* Enhanced connection line */}";
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block">";
             <motion.div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple" initial={{ width: "0%" }} whileInView={{ width: "100%" }} viewport={{ once: true }} transition = {;
@@ -336,6 +336,6 @@ const stats = [;";
         </motion.div>;
       </div>;
     </section>;) }
-;,
+
 }
 '"`;

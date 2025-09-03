@@ -1,6 +1,6 @@
 import React from 'react';''';
 import { SEO } from '../components/SEO';
-;
+
 const Pricing = () => {}
   const pricingTiers = [];
     {}
@@ -54,7 +54,7 @@ const Pricing = () => {}
       cta: 'Contact Sales',';
       link: '/contact'}
   ];
-;
+
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <SEO"";
@@ -171,15 +171,15 @@ const Pricing = () => {}
     </div>;
   );,
 }
-;
+
 export default Pricing;
-;
+
 export { Pricing };
-;
+
 export { Pricing };
-;
+
 export { Pricing };
-;
+
 export { Pricing };
-;
+
 export { Pricing };

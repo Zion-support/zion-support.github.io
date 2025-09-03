@@ -247,14 +247,12 @@ const AIAutonomousIOTSecurity = () => {}
       </div>;
     </>)};
 export default AIAutonomousIOTSecurity;
-;
+export { AIAutonomousIOTSecurity };
 
 export { AIAutonomousIOTSecurity };
-;
+
 export { AIAutonomousIOTSecurity };
-;
+
 export { AIAutonomousIOTSecurity };
-;
-export { AIAutonomousIOTSecurity };
-;
+
 export { AIAutonomousIOTSecurity };

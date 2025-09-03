@@ -146,7 +146,7 @@ export default function ListingDetail() {}
                     <span className="text-sm text-zion - slate -light">;
                       {listing.rating.toFixed(1) } ({listing.reviewCount} reviews) </span>;
                   </div>) }
-;,
+
 }/>))}";
                     </div>"";
                     <span className="text-sm text-zion-slate-light">;
@@ -169,15 +169,13 @@ export default function ListingDetail() {}
   () => {;
                 toast({;
                     title: "Payment Processing",;
+export { ListingDetail };
 
-;
 export { ListingDetail };
-;
+
 export { ListingDetail };
-;
+
 export { ListingDetail };
-;
-export { ListingDetail };
-;
+
 export { ListingDetail };
 )))

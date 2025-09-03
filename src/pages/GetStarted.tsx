@@ -16,11 +16,11 @@ import { ;
   BookOpen,;
   Download;,
 } from 'lucide-react';
-;
+
 const GetStarted = () => {;
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
   const [currentStep, setCurrentStep] = useState(1);
-;
+
   const gettingStartedPaths = [;
     {;
       id: 'individual',;
@@ -50,7 +50,7 @@ const GetStarted = () => {;
       difficulty: 'Advanced';,
 }
   ];
-;
+
   const onboardingSteps = [;
     {;
       step: 1,;
@@ -105,7 +105,7 @@ const GetStarted = () => {;
       ];,
 }
   ];
-;
+
   const quickStartGuides = [;
     {;
       title: 'AI Content Generation',;
@@ -132,7 +132,7 @@ const GetStarted = () => {;
       link: '/docs/security-setup';,
 }
   ];
-;
+
   const supportOptions = [;
     {;
       icon: MessageCircle,;
@@ -156,7 +156,7 @@ const GetStarted = () => {;
       availability: '24/7';,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       {/* Hero Section */}
@@ -337,7 +337,7 @@ const GetStarted = () => {;
           </div>;
         </section>;
       )}
-;
+
       {/* Quick Start Guides */}
       <section className="py-20 px-6">;
         <div className="container mx-auto">;
@@ -473,5 +473,5 @@ const GetStarted = () => {;
     </div>;
   );,
 };
-;
+
 export default GetStarted;

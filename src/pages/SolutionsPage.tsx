@@ -1,5 +1,5 @@
 import React from 'react';
-;
+
 const SolutionsPage: React.FC = () => {;
   return (;
     <div className="min-h-screen bg-gray-50 py-20">;
@@ -38,5 +38,5 @@ const SolutionsPage: React.FC = () => {;
     </div>;
   );,
 };
-;
+
 export default SolutionsPage;

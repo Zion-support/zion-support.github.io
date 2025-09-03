@@ -11,7 +11,7 @@ const Match: React.FC = () => {;'''';
     { id: 'data', name: 'Data & Analytics', icon: Database, count: 25 },;''';
     { id: 'iot', name: 'IoT & Edge', icon: Cpu, count: 20 };
   ];
-;
+
   const matchedServices: unknown = [{}
       id: 1,;
       name: "AI Business Intelligence","";
@@ -95,7 +95,7 @@ const Match: React.FC = () => {;'''';
       featured: true;,
 };
   ];
-;
+
                          service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
     return matchesCategory && matchesSearch}) ;";
   return ("";
@@ -455,15 +455,15 @@ const Match: React.FC = () => {;'''';
     </div>;
   );,
 };
-;
+
 export default Match;}}}
-;
+
 export { Match };
-;
+
 export { Match };
-;
+
 export { Match };
-;
+
 export { Match };
-;
+
 export { Match };

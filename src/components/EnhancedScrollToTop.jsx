@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 export default EnhancedScrollToTop;
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
 export default function Page() {;
 , []);
     const scrollToTop = () => {;
@@ -29,13 +29,13 @@ export default function Page() {;
     </AnimatePresence>)};
 export default EnhancedScrollToTop;,
 }}
-;
+
 export { EnhancedScrollToTop };
-;
+
 export { EnhancedScrollToTop };
-;
+
 export { EnhancedScrollToTop };
-;
+
 export { EnhancedScrollToTop };
-;
+
 export { EnhancedScrollToTop };

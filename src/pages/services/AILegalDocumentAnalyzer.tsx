@@ -19,10 +19,10 @@ import { FileText, ;
   MapPin,;
   ExternalLink;,
 } from 'lucide-react.ts';
-;
+
 const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
   const [activeTab, setActiveTab] = useState('overview');
-;
+
   const features = [;
     "Contract risk assessment",;
     "Compliance violation detection", ;
@@ -35,7 +35,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
     "Multi-language support",;
     "Integration with legal databases";
   ];
-;
+
   const benefits = [;
     "Reduce legal review time by 90%",;
     "Identify 95% of compliance risks",;
@@ -43,7 +43,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
     "Improve contract negotiation outcomes",;
     "Ensure regulatory compliance";
   ];
-;
+
   const useCases = [;
     "Contract review and analysis",;
     "Regulatory compliance checking",;
@@ -51,7 +51,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
     "Due diligence processes",;
     "Legal document automation";
   ];
-;
+
   const pricingPlans = [;
     {;
       name: "Starter",;
@@ -98,13 +98,13 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
       popular: false;,
 }
   ];
-;
+
   const competitors = [;
     { name: "Kira Systems", price: "$2,500+/month", rating: 4.2 },;
     { name: "Luminance", price: "$3,000+/month", rating: 4.0 },;
     { name: "ContractPodAi", price: "$2,800+/month", rating: 4.1 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">;
       {/* Hero Section */}
@@ -250,7 +250,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
               </div>;
             </motion.div>;
           )}
-;
+
           {/* Features Tab */}
           {activeTab === 'features' && (;
             <motion.div;
@@ -313,7 +313,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
               </div>;
             </motion.div>;
           )}
-;
+
           {/* Pricing Tab */}
           {activeTab === 'pricing' && (;
             <motion.div;
@@ -379,7 +379,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
               </div>;
             </motion.div>;
           )}
-;
+
           {/* Competitors Tab */}
           {activeTab === 'competitors' && (;
             <motion.div;
@@ -428,7 +428,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
               </div>;
             </motion.div>;
           )}
-;
+
           {/* Contact Tab */}
           {activeTab === 'contact' && (;
             <motion.div;
@@ -491,15 +491,15 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
     </div>;
   );,
 };
-;
+
 export default AILegalDocumentAnalyzer;
-;
+
 export { AILegalDocumentAnalyzer };
-;
+
 export { AILegalDocumentAnalyzer };
-;
+
 export { AILegalDocumentAnalyzer };
-;
+
 export { AILegalDocumentAnalyzer };
-;
+
 export { AILegalDocumentAnalyzer };

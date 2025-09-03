@@ -1,8 +1,6 @@
 import React, { useState } from 'react';''';
 import { motion } from 'framer-motion';''';
 import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-;
-;
 import SEOHead from "../components/SEOHead.jsx";
 const AdvancedServicesShowcase2025 = () => {;
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -48,14 +46,12 @@ const AdvancedServicesShowcase2025 = () => {;
             'DevOps & Automation': '⚡',;
             'Data Quality & Analytics': '📊',;
             'API Management': '🔌',;
+export { AdvancedServicesShowcase2025 };
 
-;
 export { AdvancedServicesShowcase2025 };
-;
+
 export { AdvancedServicesShowcase2025 };
-;
+
 export { AdvancedServicesShowcase2025 };
-;
-export { AdvancedServicesShowcase2025 };
-;
+
 export { AdvancedServicesShowcase2025 };}}}

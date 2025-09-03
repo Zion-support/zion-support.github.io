@@ -366,14 +366,12 @@ export default function TenantOnboarding() {}
       </main>;
       ;
     </>)}
-;
+export { TenantOnboarding };
 
 export { TenantOnboarding };
-;
+
 export { TenantOnboarding };
-;
+
 export { TenantOnboarding };
-;
-export { TenantOnboarding };
-;
+
 export { TenantOnboarding };

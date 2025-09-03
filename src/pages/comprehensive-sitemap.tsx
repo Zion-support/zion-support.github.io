@@ -58,7 +58,7 @@ import {;
   Briefcase,;
   ExternalLink;,
 } from 'lucide-react';
-;
+
 interface SitemapSection {;
   title: string;
   icon: React.ComponentType<any>;
@@ -71,7 +71,7 @@ interface SitemapSection {;
     external?: boolean;,
 }>;,
 }
-;
+
 export default function ComprehensiveSitemap() {;
   const sitemapSections: SitemapSection[] = [;
     {;
@@ -264,7 +264,7 @@ export default function ComprehensiveSitemap() {;
       ];,
 }
   ];
-;
+
   return (;
     <>;
       <Helmet>;

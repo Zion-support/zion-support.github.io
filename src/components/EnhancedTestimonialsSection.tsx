@@ -1,6 +1,6 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
-;
+
 interface Testimonial {;
   id: string;
   name: string;
@@ -13,7 +13,7 @@ interface Testimonial {;
   results: string[];
   avatar: string;,
 }
-;
+
 const testimonials: Testimonial[] = [{;
 
     id: '1',;
@@ -80,12 +80,12 @@ const testimonials: Testimonial[] = [{;
     avatar: '/images/avatars/lisa-park.jpg';
 
 ];
-;
+
 export default function EnhancedTestimonialsSection(...args[]):  {;
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -94,14 +94,14 @@ export default function EnhancedTestimonialsSection(...args[]):  {;
 };,
 }, []);, []);
     if(!isAutoPlaying) return;
-;
+
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length) }, 8000) ;
-;
+
     return () => clearInterval(interval) }, [isAutoPlaying, testimonials.length]) ;
-;
+
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length) ;
     setIsAutoPlaying(false) };
-;
+
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length) ;
     setIsAutoPlaying(false) };
                   animate = {;

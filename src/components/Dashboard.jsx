@@ -27,4 +27,4 @@ import React from "react";
 ";
 
   );
-export default Component
+export default Component;

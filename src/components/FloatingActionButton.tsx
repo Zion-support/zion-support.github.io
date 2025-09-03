@@ -13,7 +13,7 @@
   Download,;
   Printer';,
 } from 'lucide-react';
-;
+
 interface FloatingAction {;
 
   id: string;
@@ -23,7 +23,7 @@ interface FloatingAction {;
   action: () => void;
   color: string;
   priority: 'high' | 'medium' | 'low'}
-;
+
 interface FloatingActionButtonProps {;
   actions?: FloatingAction[];
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
@@ -31,7 +31,7 @@ interface FloatingActionButtonProps {;
   showScrollToTop?: boolean;
   showContactActions?: boolean;
   showUtilityActions?: boolean;
-;
+
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
 
   actions = [],;
@@ -44,7 +44,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
   const [isExpanded, setIsExpanded] = useState(false);
   const [showScrollButton, setShowScrollButton] = useState(false);
   const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
-;
+
   // Detect theme;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -53,7 +53,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
     // Cleanup function;,
 };,
 }, []);, []);
-;
+
     if(theme === 'auto') {;
 
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')};
@@ -63,7 +63,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
 
       setCurrentTheme(theme)}
   }, [theme]) ;
-;
+
   // Show scroll to top button when scrolled down;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -74,10 +74,10 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
 }, []);, []);
     ;,
 };
-;
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
-;
+
   // Default actions;
   const defaultActions: FloatingAction[] = [// Contact actions;
     ...(showContactActions ? [;
@@ -208,19 +208,19 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
     // Custom actions;
     ...actions,;
   ];
-;
+
   // Sort actions by priority;
   ;
     return priorityOrder[b.priority] - priorityOrder[a.priority]}) ;
-;
+
   // Toggle expansion;
   ;,
 }, []) ;
-;
+
   // Scroll to top;
   ;,
 }, []);
-;
+
   // Show notification;
   ;
     notification.className=";
@@ -228,9 +228,9 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
       transform translate-x-full transition-transform duration-300 ease-in-out";
     `;
     notification.textContent = message;
-;
+
     document.body.appendChild(notification) ;
-;
+
     // Animate in;
     setTimeout(() => {;
 
@@ -242,7 +242,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
       notification.classList.add('translate-x-full');
       setTimeout(() => {;
         document.body.removeChild(notification)}, 300)}, 3000)}, []);
-;
+
   // Get position classes;
   ;
       case 'top-right':';
@@ -252,11 +252,11 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
       default:';
         return 'bottom-6 right-6'}
   };
-;
+
   // Get theme classes;
   ;,
 };
-;
+
   return ();
     <>;
       {/* Main Floating Action Button */}`;
@@ -285,7 +285,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
                   </span>;
                 </div>) ) }
             </div>) }
-;
+
           {/* Main Button */}
           <button;
             onClick={toggleExpansion}`;
@@ -315,7 +315,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
           `}">;
           <ArrowUp size={24}  />;
         </button>) }
-;
+
       {/* CSS Animations */}`;
       <style jsx>{`;
         @keyframes slideInUp {;
@@ -329,7 +329,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
             opacity: 1;
             transform: translateY(0) scale(1) }
         }
-;
+
         @keyframes bounce {;
 
           0%, 20%, 53%, 80%, 100% {;
@@ -354,7 +354,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({;
 type FloatingActionButtonProps = {;
   enabled?: boolean;,
 };
-;
+
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {;
   const [open, setOpen] = useState(false);
   if(!enabled) return null;
@@ -366,5 +366,5 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = t
       <Plus size={24}  />;
     </button>;
   )};
-;
+
 export default FloatingActionButton;

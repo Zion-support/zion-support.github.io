@@ -23,15 +23,15 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"});,
     </div>)};,"});,"})";
 export default EmptyState,"});,"});";,
 }"});,"})";
-;,"});,"})";
+
 export { EmptyState };,"});,"})";
-;,"});,"})";
+
 export { EmptyState };,"});,"})";
-;,"});,"})";
+
 export { EmptyState };,"});,"})";
-;,"});,"})";
+
 export { EmptyState };,"});,"})";
-;,"});,"})";
+
 export { EmptyState };,"});,"});,
 }
 const EmptyState = ({title, subtitle, cta, href, hasSession }) => {}";
@@ -66,10 +66,10 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}";
             ) : (;
               <Button disabled>{cta}</Button>;
             )}
-;
+
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
-;
+
         </Tooltip>;
       </TooltipProvider>;";
   return()";
@@ -91,29 +91,29 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}";
         <Tooltip>;
           <TooltipTrigger asChild>;
             {hasSession ? (}
-;
+
               <Button asChild>";
                 <Link href="{href}">{cta}</Link>;
               </Button>;
             ) : (;
               <Button disabled>{cta}</Button>;
             )}
-;
+
           </TooltipTrigger>;
           {!hasSession &&} <TooltipContent>Login required</TooltipContent>}
-;
+
         </Tooltip>;
       </TooltipProvider>;
     </div>)};
 export default EmptyState;,
 }
-;
+
 export { EmptyState };
-;
+
 export { EmptyState };
-;
+
 export { EmptyState };
-;
+
 export { EmptyState };
-;
+
 export { EmptyState };

@@ -2,11 +2,11 @@ import { Link, useLocation  } from 'react-router-dom';
  from 'react';
 export const EnhancedMobileNavigation: React.FC = () => {;
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
  from 'lucide-react';
-;
+
 >} from 'lucide-react';
-;
+
 interface NavigationItem {;
 
   label: string;
@@ -14,13 +14,13 @@ interface NavigationItem {;
   icon: React.ComponentType<{ size?: number; className?: string;,
 }>;,
 } from 'lucide - react';
-;
+
 interface NavigationItem {;
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string }>;
   children?: NavigationItem[];  description?: string}
-;
+
 const navigationItems: NavigationItem[] = [{;
 
     label: 'Home',;
@@ -99,19 +99,17 @@ const navigationItems: NavigationItem[] = [{;
     description: 'Get in touch with us';
 
 ];
-;
-;
   {;
     label: 'Documentation',;
     path: '/docs',;
     icon: FileText,;
     color: 'bg-zion-blue'};];
-;
+
 export const EnhancedMobileNavigation: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false);
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [activePath, setActivePath] = useState('/');
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -120,7 +118,7 @@ export const EnhancedMobileNavigation: React.FC = () => {;
 };,
 }, []);, []);
     setActivePath(location.pathname)}, [location]);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -134,7 +132,7 @@ export const EnhancedMobileNavigation: React.FC = () => {;
 
         setIsOpen(false)}
     };
-;
+
 export default function EnhancedMobileNavigation() {;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -175,7 +173,7 @@ export default function EnhancedMobileNavigation() {;
       icon: Phone;,
 }
   ];
-;
+
   // Close mobile menu when route changes;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -186,7 +184,7 @@ export default function EnhancedMobileNavigation() {;
 }, []);, []);
     setIsOpen(false);
     setActiveSubmenu(null)}, [location.pathname]);
-;
+
   // Prevent body scroll when menu is open;
   useEffect(() => {;
   // TODO: Add dependencies if needed;
@@ -199,11 +197,11 @@ export default function EnhancedMobileNavigation() {;
 
       document.addEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'hidden'}
-;
+
     return () => {;
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset'}}, [isOpen]);
-;
+
   const toggleExpanded = (label: string) => {;
 
     setExpandedItems(prev => {;
@@ -214,11 +212,11 @@ export default function EnhancedMobileNavigation() {;
 
         newSet.add(label)}
       return newSet})};
-;
+
     setExpandedItems(new Set())};
-;
+
     if(path === '/') {};
-;
+
     return ()      <div key = {item.label} className="w-full">;
         <motion.div;
           initial={false}
@@ -226,7 +224,7 @@ export default function EnhancedMobileNavigation() {;
 
   { backgroundColor: isItemActive ? 'rgba(34, 221, 210,;
   0.1)' : 'transparent' ;
-;,
+
 }}
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
           <Link;
@@ -262,7 +260,7 @@ export default function EnhancedMobileNavigation() {;
               onClick={() => toggleExpanded(item.label)}";
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover:text-white transition-colors"'`;
               aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
-;
+
               <ChevronDown;
                 size={16}`;
                 className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${';
@@ -351,7 +349,7 @@ export default function EnhancedMobileNavigation() {;
                   <X size={24}   />;
                 </button>;
               </div>;
-;
+
               {/* Navigation Content */}";
               <div className="flex-1 overflow-y-auto">;
                 {/* Quick Actions */}";

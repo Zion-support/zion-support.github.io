@@ -31,7 +31,7 @@ import { MessageSquare, ;
   Shield,;
   Settings;,
 } from 'lucide-react.ts';
-;
+
 export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown {;
   const features = [;
     {;
@@ -65,7 +65,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       description: "Generate comprehensive reports and alerts for stakeholders with actionable insights and recommendations.";,
 };
   ];
-;
+
   const benefits = [;
     {;
       icon: Zap,;
@@ -98,7 +98,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       description: "Automate feedback analysis and reporting, saving hours of manual work each week.";,
 };
   ];
-;
+
   const pricingPlans = [;
     {;
       name: "Starter",;
@@ -153,7 +153,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       popular: false;,
 };
   ];
-;
+
   const useCases = [;
     {;
       industry: "E-commerce",;
@@ -186,7 +186,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       icon: Settings;,
 };
   ];
-;
+
   const integrations = [;
     {;
       name: "Survey Platforms",;
@@ -213,7 +213,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"];,
 };
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO;
@@ -230,22 +230,10 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             animate = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
           >;
@@ -284,22 +272,10 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -319,32 +295,14 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.5,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50">;
@@ -380,22 +338,10 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -415,32 +361,14 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.5,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50">;
@@ -476,22 +404,10 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -511,32 +427,14 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.5,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${;
@@ -552,7 +450,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-gray-400 text-sm mb-4">{plan.description}</p>;
@@ -591,22 +489,10 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -626,32 +512,14 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.5,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50">;
@@ -687,22 +555,10 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -722,32 +578,14 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
                 initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
                 whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
                 transition = {;
   { duration: 0.5,;
   delay: index * 0.1 ;
-
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50">;
@@ -776,22 +614,10 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
             initial = {;
   { opacity: 0,;
   y: 20 ;
-
-;
-
-;
-
-;,
 }}
             whileInView = {;
   { opacity: 1,;
   y: 0 ;
-
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -819,13 +645,13 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
     </div>;
   );,
 }
-;
+
 export { AICustomerFeedbackAnalytics };
-;
+
 export { AICustomerFeedbackAnalytics };
-;
+
 export { AICustomerFeedbackAnalytics };
-;
+
 export { AICustomerFeedbackAnalytics };
-;
+
 export { AICustomerFeedbackAnalytics };

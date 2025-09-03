@@ -18,14 +18,12 @@ export default ProjectMilestones;
 export default ProjectMilestones;
 export default ProjectMilestones;
 export default ProjectMilestones;
-;
+export { ProjectMilestones };
 
 export { ProjectMilestones };
-;
+
 export { ProjectMilestones };
-;
+
 export { ProjectMilestones };
-;
-export { ProjectMilestones };
-;
+
 export { ProjectMilestones };

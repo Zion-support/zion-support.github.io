@@ -1,10 +1,10 @@
 import { Link  } from 'react-router-dom';
-;
+
 export default function Page() {;
 const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {;
 
   const [currentSlide, setCurrentSlide] = useState(0);  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-;
+
   const heroSlides: HeroSlide[] = [{;
 
       title: "AI-Powered Business Solutions",";
@@ -57,7 +57,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       ];
 
   ];
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 
@@ -66,13 +66,13 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 };,
 }, []);, []);
     if(!isAutoPlaying) return;
-;
+
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length) }, 6000) ;
     return () => clearInterval(interval) }, [isAutoPlaying, heroSlides.length]) ;
-;
+
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length) ;
     setIsAutoPlaying(false) };
-;
+
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length) ;
     setIsAutoPlaying(false) };
             scale: [1, 1.1, 1];,
@@ -143,7 +143,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   y: -20;,
 }}
                 transition={{ duration: 0.5 }}
-;
+
                 {/* Icon and category */}
                 <motion.div";
                   className="flex items-center justify-center lg:justify-start mb-6";

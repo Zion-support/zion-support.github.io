@@ -8,7 +8,7 @@ export default function Page() {;
       transition: {;
         duration: 0.5,;";
         ease: "easeOut"}}};
-;
+
   const hoverVariants = {;
   hover: {;
       y: -8,      scale: 1.02,;
@@ -17,11 +17,11 @@ export default function Page() {;
         duration: 0.3,;"  ease: "easeOut";
       ;,
 }}};
-;,
+
 };,
 };,
 };
-;
+
   return (    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">;
       {/* Background Elements */}";
       <div className="absolute inset-0 opacity-30">";
@@ -224,7 +224,7 @@ export default function Page() {;
             ))}
           </div>;
         </motion.div>;
-;
+
         {/* CTA Section */}
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
@@ -258,17 +258,17 @@ export default function Page() {;
 
   { opacity: 0,;
   y: 30 ;
-;,
+
 }}          whileInView = {;
 
   { opacity: 1,;
   y: 0 ;
-;,
+
 }}          transition = {;
 
   { duration: 0.8,;
   delay: 0.4 ;
-;,
+
 }}
           viewport={{ once: true }}
           className="text-center">;
@@ -294,6 +294,6 @@ export default function Page() {;
       </div>;
     </section>;
   )};
-;export { QuickAccess };
+
 '"`;
 )

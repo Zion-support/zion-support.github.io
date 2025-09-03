@@ -329,13 +329,13 @@ export default function DataAnalyticsServices() {}
       </section>;
     </div>);,
 }}}
-;
+
 export { DataAnalyticsServices };
-;
+
 export { DataAnalyticsServices };
-;
+
 export { DataAnalyticsServices };
-;
+
 export { DataAnalyticsServices };
-;
+
 export { DataAnalyticsServices };

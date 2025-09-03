@@ -28,15 +28,15 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"})";
       </TooltipProvider>;,"});,"})";
     </div>)};,"});,"})";
 export default EmptyState,"});,"})";
-;,"});,"})";
+
 export { EmptyState };,"});,"})";
-;,"});,"})";
+
 export { EmptyState };,"});,"})";
-;,"});,"})";
+
 export { EmptyState };,"});,"})";
-;,"});,"})";
+
 export { EmptyState };,"});,"})";
-;,"});,"})";
+
 export { EmptyState };,"});,"})";
 ";
 ";const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}";
@@ -57,22 +57,20 @@ export { EmptyState };,"});,"})";
             ) : (";
               <Button disabled">{cta}</Button>";
             )}
-;
+
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
-;
+
         </Tooltip>;
       </TooltipProvider>;
     </div>)};
 export default EmptyState;
-;
+export { EmptyState };
 
 export { EmptyState };
-;
+
 export { EmptyState };
-;
+
 export { EmptyState };
-;
-export { EmptyState };
-;
+
 export { EmptyState };

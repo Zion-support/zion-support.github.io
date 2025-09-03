@@ -281,16 +281,16 @@ export default function ForumPostPage() {}
   160) } keywords = {}
   `community, forum, discussion, ${post.tags.join(',;
   ') ;
-;,
+
 }`} canonical={`https://ziontechgroup.com / community / post/${post.id}`}/>;
-;,
+
 } keywords = {}
 '`;
 '`'`;
 '`'`'`;
 '`'`'`'`;
   `community, forum, discussion, ${post.tags.join(',);
-;
+
 `;
 ``;,
 }`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>;";
@@ -418,14 +418,12 @@ export default function ForumPostPage() {}
         </div>;
       </div>;
     </>)}
-;
+export { ForumPostPage };
 
 export { ForumPostPage };
-;
+
 export { ForumPostPage };
-;
+
 export { ForumPostPage };
-;
-export { ForumPostPage };
-;
+
 export { ForumPostPage };

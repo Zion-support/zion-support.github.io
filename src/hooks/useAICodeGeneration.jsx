@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
-;
+
 export const useAICodeGeneration = () => {;
     const { trackEvent } = useAnalytics({        enableTracking: true,;
         enableUserBehaviorTracking: true;,
@@ -51,11 +51,11 @@ export const useAICodeGeneration = () => {;
             // // // // // // // // // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {                error: error instanceof Error ? error.message : 'Unknown error';,
 });
-;
+
         finally {;
 
             setIsGenerating(false);
-;,
+
 })}
         catch(error) {;
             // // console.error('Failed to generate code:', error);
@@ -95,11 +95,11 @@ export const useAICodeGeneration = () => {;
             // // // // // // // // // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {                error: error instanceof Error ? error.message : 'Unknown error';,
 });
-;
+
         finally {;
 
             setIsAnalyzing(false);
-;,
+
 })}
         catch(error) {;
             // // console.error('Failed to analyze code:', error);
@@ -143,7 +143,7 @@ export const useAICodeGeneration = () => {;
             trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {                error: error instanceof Error ? error.message : 'Unknown error';,
 });
             return code;
-;
+
                     break}
             trackEvent('ai_code_generation',code_optimized', focus, optimizedCode.length);
             return optimizedCode}
@@ -165,7 +165,7 @@ export const useAICodeGeneration = () => {;
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {                error: error instanceof Error ? error.message : 'Unknown error';,
 });
             return '// Failed to generate tests';
-;
+
                 testCode = generateJestTests(code)}
             else if(language === 'python') {;
 
@@ -193,7 +193,7 @@ export const useAICodeGeneration = () => {;
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {                error: error instanceof Error ? error.message : 'Unknown error';,
 });
             return '// Failed to generate documentation';
-;
+
                 docs = generateJSDoc(code)}
             else if(language === 'python') {;
 
@@ -263,14 +263,14 @@ export const useAICodeGeneration = () => {;
 '`;
         return `import React, { useState, useEffect, useCallback } from 'react';
 import { motion  } from 'framer-motion';
-;
+
 export default function Page() {;
 , []);
-;
+
   const handleAction = useCallback(() => {;
     // TODO: Implement action handler;,
 }, []);
-;
+
   return ();
     <motion.div;
       initial={{ opacity: 0 }}
@@ -289,20 +289,20 @@ export default GeneratedComponent;`};
         return `import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
-;
+
 const app = express();
 const PORT = process.env.PORT || 3000;
-;
+
 // Middleware;
 app.use(cors());
 app.use(helmet());
 app.use(express.json());
-;
+
 // Routes';
 app.get('/', (req, res) => {;
 
   res.json({ message: 'Generated API based on prompt: ${prompt}})});
-;
+
 // TODO: Implement additional routes based on prompt;
 
 app.listen(PORT, () => {;
@@ -313,8 +313,6 @@ app.listen(PORT, () => {;
         return `#!/usr/bin/env python3";
 
 Generated Python code based on prompt: ${prompt}";
-
-;
 import asyncio;
 from typing import Optional, List, Dict, Any;
 from dataclasses import dataclass;
@@ -345,7 +343,7 @@ if __name__ == "__main__":`;
 // Framework: ${options.framework || 'none'}
 // Style: ${options.style}
 // Target: ${options.target}
-;
+
 // TODO: Implement code based on prompt requirements;
 // This is a placeholder implementation;
 
@@ -467,8 +465,6 @@ if __name__ == "__main__":`;
     // Helper functions for test generation;
     const generateJestTests = (_code) => {;
         return `import { render, screen, fireEvent } from '@testing-library/react';
-;
-;
 describe('GeneratedComponent', () => {;
   it('renders without crashing', () => {;
     render(<GeneratedComponent />);    expect(screen.getByText('Generated Component')).toBeInTheDocument()});
@@ -476,7 +472,7 @@ describe('GeneratedComponent', () => {;
   it('handles user interactions', () => {}
     render(<GeneratedComponent />);
     expect(screen.getByText('Generated Component')).toBeInTheDocument()});
-;
+
   it('handles user interactions', () => {;
     render(<GeneratedComponent />);
     // TODO: Add specific test cases based on component functionality;,
@@ -487,7 +483,7 @@ describe('GeneratedComponent', () => {;
 `;
         return `import pytest;
 from generated_module import GeneratedClass;
-;
+
 class TestGeneratedClass:;
     def test_initialization(self):;
         instance = GeneratedClass();
@@ -532,11 +528,11 @@ Generated Module;
 
 This module was generated based on user requirements.;";
 """;
-;
+
 def generated_function():;";
     """;
     Generated function with docstring.;
-;
+
     Returns:;
         str: Description of return value";
     """;`;
@@ -581,7 +577,7 @@ def generated_function():;";
         getCodeMetrics;,
 };,
 };
-;
+
 export default with;
 export default with;
 export default with;

@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';';
 import { motion, AnimatePresence } from 'framer-motion';';
 import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
-;
+
 export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {;
     const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,;
         enableUserBehaviorTracking: true;,
@@ -24,7 +24,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         fields.forEach(field => {;
 import React from "react";
 import { useState, useEffect, useCallback } from "react";,"});,"})","});,"})","});,"})";
-;,"});,"})";
+
 export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className = ", enableAnalytics = true, showProgressBar = true }) => {;,"});,"})";
     const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,"});,"})";
         enableUserBehaviorTracking: true,"});,"});";,
@@ -396,7 +396,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
 }
     // comment;
 useEffect(() => {}
-;
+
         const initialValidation = {}";
         fields.forEach();,
 }
@@ -414,7 +414,7 @@ setProgress((filledFields / totalFields) * 100)}, [formData, fields.length]);,
 }
     // comment;
 const validateField = useCallback((name, value) => {}
-;
+
                 isValid: !field.required,;
                 message: '',;
                 isTouched: false;,
@@ -429,56 +429,56 @@ const validateField = useCallback((name, value) => {}
     // Cleanup function;,
 };,
 }, []);, []);
-;
+
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/";
                 if (!emailPattern.test(stringValue)) {}
-;
+
                     return "Please enter a valid email address"}", ";,
 }";
             // comment;
             if (field.type = == "tel" && stringValue) {}
-;
+
                 const phonePattern = /^[\+]?[1-9][\d]{0, 15}$/";
                 if (!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g))) {}";
 ";
 """;
                     return "Please enter a valid phone number"}
-;,
+
 }
-;
+
             // comment;
 if(field.validation?.minLength && stringValue.length < field.validation.minLength) {}
-;
+
                 return "Minimum length is ${field.validation.minLength} characters"}
-;
+
             if(field.validation?.maxLength && stringValue.length > field.validation.maxLength) {}";
 ";
 
 ";
 "";
                 return "Maximum length is ${field.validation.maxLength} characters"}
-;
+
             // comment;
 if (field.validation?.pattern && !field.validation.pattern.test(stringValue)) {}
 ";
 """;
                 return "Please enter a valid value"}
-;
+
             // comment;
 if(field.validation?.custom) {}
-;
+
                 const customError = field.validation.custom();,
 }
                 if();,
 }                    return customError}
-;,
+
 }
-;
+
         return null}, [fields]);,
 }
     // comment;
 const handleFieldChange = useCallback((name, value) => {}
-;
+
         setFormData(prev => ({ ...prev, [name]: value }));,
 }
         // comment;
@@ -488,7 +488,7 @@ const error = validateField();,
             ...prev, [name]: {}
                 isValid: !error, ";
                 message: error || ", isTouched: true}
-;,
+
 }));,
 }
         // comment;
@@ -496,12 +496,12 @@ if (enableAnalytics) {}
 ";
 "";
             trackEvent("form", field_changed", name, null, { fieldName: name, value: String(value) })}
-;,
+
 }, [validateField, enableAnalytics, trackEvent]);,
 }
     // comment;
 const handleFieldBlur = useCallback((name) => {}
-;
+
         const value = formData[name];
         const error = validateField();,
 }
@@ -509,39 +509,39 @@ const handleFieldBlur = useCallback((name) => {}
             ...prev, [name]: {}
                 ...prev[name], isValid: !error,";
                 message: error || ", isTouched: true}
-;,
+
 }))}, [formData, validateField]);,
 }
     // comment;
 const isFormValid = useCallback(() => {}
-;
+
         return Object.values(validation).every(v => v.isValid)}, [validation]);,
 }
     // comment;
 const handleSubmit = useCallback(async (e) => {}
-;
+
         e.preventDefault();,
 }
         if(!isFormValid()) {}
-;
+
             // comment;
 if (enableAnalytics) {}
 ";
                 trackEvent("form", validation_error",form_submission_failed", null, {}
                     errors: Object.values(validation).filter(v => !v.isValid).length})}
-;
+
             return}
-;
+
         setIsSubmitting();,
 }
         try {}
-;
+
             // comment;
 if (enableAnalytics) {}
 ";
 """;
                 trackEvent("form", submission_started",form_submitted")}
-;
+
             await onSubmit();,
 }
             // comment;
@@ -552,21 +552,21 @@ if (enableAnalytics) {}
                 trackEvent("form", submission_success",form_completed")";
                 trackEvent("form",submission_success",form_completed")";
                 trackConversion("form_submission", 1, { formType: title })}
-;
+
             setIsSubmitted();,
 }
             // comment;
 setTimeout(() => {}
-;
+
                 setIsSubmitted();,
 }
                 setFormData();,
 }
                 setValidation();,
 }                setProgress(0)}, 5000)}
-;
+
         catch(error) {}
-;
+
             // comment;
 if (enableAnalytics) {}
 ";
@@ -576,14 +576,14 @@ if (enableAnalytics) {}
                     error: error instanceof Error ? error.message : "Unknown error"""})}""";
             // comment;
         finally {}
-;
+
             setIsSubmitting(false)}
-;,
+
 }, [formData, validation, isFormValid, onSubmit, enableAnalytics, trackEvent, trackConversion, title]);,
 }
     // comment;
 const togglePasswordVisibility = useCallback((fieldName) => {}
-;
+
         setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }))}, []);,
 }
     // comment;
@@ -601,7 +601,7 @@ const getFieldIcon = useCallback((field) => {}";
             case "textarea": return <MessageSquare className="w-4 h-4"/">";
             case "select": return <Building className="w-4 h-4"/">";
             default: return <User className="w-4 h-4"/">}
-;,
+
 }, []);,
 }
     // comment;
@@ -665,24 +665,24 @@ const renderField = useCallback((field) => {}
 """;
           {/* comment */}""";
           {fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">""""              {fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"/">) : (<AlertCircle className="w-5 h-5 text-red-500"/">)}
-;
+
             </div>)}
-;
+
         </div>;
         {/* comment */}
-;
+
         {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial = {}";
   { opacity: 0, height: 0}} animate = {}
   { opacity: 1, ";
   height: "auto" """"">;
 """"}} className="text-sm text-red-600 dark: text-red-400">,            {fieldValidation.message}
-;
+
           </motion.p>)}
-;
+
       </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]);,
 }
     if(isSubmitted) {}
-;
+
         return (<motion.div initial = {}";
   { opacity: 0, scale: 0.9}} animate = {}
   { opacity: 1, scale: 1 """"">;
@@ -694,9 +694,9 @@ const renderField = useCallback((field) => {}
         <p className="text-green-600 dark:text-green-300">"",;
           Your message has been sent successfully. We&apos,ll get back to you soon!";
         </p>      </motion.div>)}
-;
+
     return (<motion .div initial = {}
-;
+
   { opacity: 0, y: 20}} animate = {}">;
   { opacity: 1, y: 0 ",,;
 "","";";,
@@ -733,12 +733,12 @@ const renderField = useCallback((field) => {}
               Sending...""";
 </>) : (<>"";
               <Send className="w-5 h-5"/">"              {submitText}
-;
+
 </>) }
-;
+
         </motion.button>;
         {/* comment */}
-;
+
         <AnimatePresence>;
           {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial = {}";
   { opacity: 0, height: 0}} animate = {}
@@ -749,7 +749,7 @@ const renderField = useCallback((field) => {}
               <p className="text-sm text-red-600 dark:text-red-400">;
                 Please fix the errors above before submitting the form.</p>,;
             </motion.div>) }
-;
+
         </AnimatePresence>";
       </form>"";
     </motion.div>)}""""";
@@ -758,4 +758,4 @@ const renderField = useCallback((field) => {}
 } catch (error) {;
     console.error(error);,
 }
-export default Component
+export default Component;

@@ -2,21 +2,21 @@ import { useEffect, useState, useCallback } from 'react'; // Added useCallback;
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
  from '@/types/tokens';
-;
+
 export function useWallet() {;
   const { user } = useAuth();
   const [wallet, setWallet] = useState<Wallet | null>(null);
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-;
+
   const fetchWallet = useCallback(async () => { // Wrapped in useCallback;
     if(!user?.id) {;
       setWallet(null);
       // setLoading(false); // Loading state handled by calling function or initial useEffect;
       return;,
 }
-;
+
     // setLoading(true); // setLoading will be handled by the useEffect calling this;
     try {;
       const { data, error: supabaseError } = await supabase;
@@ -24,7 +24,7 @@ export function useWallet() {;
         .select('*');
         .eq('user_id', user.id);
         .single();
-;
+
       if(supabaseError && supabaseError.code !== 'PGRST116') { // PGRST116: single row not found, not an error for new users;
         throw supabaseError;,
 }
@@ -49,7 +49,7 @@ export function useWallet() {;
         .select('*');
         .eq('user_id', user.id);
         .order('created_at', { ascending: false });
-;
+
       if(supabaseError) throw supabaseError;
       setTransactions((data || []) as TokenTransaction[]);,
 } catch(err: any) {;
@@ -75,7 +75,7 @@ export function useWallet() {;
     ]);
     // TODO: Call actual API to record token earning;,
 }
-;
+
   async function spendTokens(amount: number, reason?: string) {;
     if(!user?.id) return;
     // This is an optimistic update;
@@ -94,7 +94,7 @@ export function useWallet() {;
     ]);
     // TODO: Call actual API to record token spending;,
 }
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;
 

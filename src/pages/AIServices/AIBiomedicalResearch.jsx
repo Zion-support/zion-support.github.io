@@ -2,7 +2,7 @@ import React from 'react';''';
 import { motion } from 'framer-motion';''';
 import { Link } from 'react-router-dom';''';
 import { Brain, TrendingUp, Zap, BarChart3, CheckCircle, ArrowRight, Play } from 'lucide-react';
-;
+
 const features = [;
     {;
         title: "AI-Powered Biomedical Research",;
@@ -207,14 +207,12 @@ export default function AIBiomedicalResearch() {}
         </div>;
       </section>;
     </div>)}
-;
+export { AIBiomedicalResearch, IconComponent };
 
 export { AIBiomedicalResearch, IconComponent };
-;
+
 export { AIBiomedicalResearch, IconComponent };
-;
+
 export { AIBiomedicalResearch, IconComponent };
-;
-export { AIBiomedicalResearch, IconComponent };
-;
+
 export { AIBiomedicalResearch, IconComponent };

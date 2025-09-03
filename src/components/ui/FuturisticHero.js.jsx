@@ -207,7 +207,7 @@ export default function FuturisticHero() {}
   {}
                 y[0, -100],;
                 opacity[0, 1, 0],;
-;,
+
 }} transition = {}
   {}
                 duration: Math.random() * 3 + 2,;
@@ -215,14 +215,12 @@ export default function FuturisticHero() {}
                 delay: Math.random() * 2}}/>))}
       </div>;
     </section>)}
-;
+export { FuturisticHero };
 
 export { FuturisticHero };
-;
+
 export { FuturisticHero };
-;
+
 export { FuturisticHero };
-;
-export { FuturisticHero };
-;
+
 export { FuturisticHero };

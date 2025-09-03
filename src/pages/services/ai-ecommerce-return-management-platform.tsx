@@ -38,7 +38,7 @@ import { ;
   QrCode,;
   Mail;,
 } from 'lucide-react';
-;
+
 const AIEcommerceReturnManagementPlatform = () => {;
   const features = [;
     {;
@@ -72,7 +72,7 @@ const AIEcommerceReturnManagementPlatform = () => {;
       description: "Automated restocking decisions based on return condition, demand forecasting, and inventory levels.";,
 }
   ];
-;
+
   const pricingTiers = [;
     {;
       name: "Starter",;
@@ -127,7 +127,7 @@ const AIEcommerceReturnManagementPlatform = () => {;
       popular: false;,
 }
   ];
-;
+
   const benefits = [;
     {;
       icon: <TrendingUp className="w-8 h-8 text-green-500" />,;
@@ -150,7 +150,7 @@ const AIEcommerceReturnManagementPlatform = () => {;
       description: "AI-powered fraud detection prevents return abuse and protects your business.";,
 }
   ];
-;
+
   const integrations = [;
     { name: "Shopify", logo: "🛍️" },;
     { name: "WooCommerce", logo: "🛒" },;
@@ -165,7 +165,7 @@ const AIEcommerceReturnManagementPlatform = () => {;
     { name: "USPS", logo: "📮" },;
     { name: "DHL", logo: "🌍" }
   ];
-;
+
   const workflowSteps = [;
     {;
       step: "1",;
@@ -193,7 +193,7 @@ const AIEcommerceReturnManagementPlatform = () => {;
       description: "Automatic refund processing or exchange fulfillment based on return condition.";,
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
@@ -540,5 +540,5 @@ const AIEcommerceReturnManagementPlatform = () => {;
     </div>;
   );,
 };
-;
+
 export default AIEcommerceReturnManagementPlatform;

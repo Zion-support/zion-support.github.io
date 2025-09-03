@@ -258,14 +258,12 @@ const AIAutonomousEducationProfessor = () => {}
       </div>;
     </>)};
 export default AIAutonomousEducationProfessor;
-;
+export { AIAutonomousEducationProfessor };
 
 export { AIAutonomousEducationProfessor };
-;
+
 export { AIAutonomousEducationProfessor };
-;
+
 export { AIAutonomousEducationProfessor };
-;
-export { AIAutonomousEducationProfessor };
-;
+
 export { AIAutonomousEducationProfessor };

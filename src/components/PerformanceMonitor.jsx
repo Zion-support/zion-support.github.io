@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion  } from 'framer-motion';
-;
+
 export default function Page() {;
       // CLS scoring(0-100);
       if(metrics.cls !== null) {;
@@ -9,7 +9,7 @@ export default function Page() {;
         if(metrics.cls <= 0.1) totalScore += 100;
         else if(metrics.cls <= 0.25) totalScore += 50;
         else totalScore += 0}
-;
+
       // TTFB scoring(0-100);
       if(metrics.ttfb !== null) {;
 
@@ -17,24 +17,24 @@ export default function Page() {;
         if(metrics.ttfb <= 800) totalScore += 100;
         else if(metrics.ttfb <= 1800) totalScore += 50;
         else totalScore += 0}
-;
+
       return validMetrics > 0 ? Math.round(totalScore / validMetrics) : 0};
-;
+
     const newScore = calculateScore () ;
     setScore(newScore) ;
-;
+
     // Show component after score calculation;
     if(newScore > 0) {;
 
       setTimeout(() => setIsVisible(true), 1000)}
   }, [metrics]);
-;
+
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
     // Only run in browser environment';
     if(typeof window === 'null') return;
-;
+
     // Performance Observer for Core Web Vitals';
     if('PerformanceObserver' in window) {;
 
@@ -49,7 +49,7 @@ export default function Page() {;
         fcpObserver.observe({ entryTypes['paint'] })} catch(e) {;
 
         // console.warn('FCP observer failed:', e)}
-;
+
       // Largest Contentful Paint;
       try {;
         const lastEntry = entries[entries.length-1];
@@ -60,7 +60,7 @@ export default function Page() {;
         lcpObserver.observe({ entryTypes['largest-contentful-paint'] })} catch(e) {;
 
         // console.warn('LCP observer failed:', e)}
-;
+
       // First Input Delay;
       try {;
         const fidObserver = new PerformanceObserver((list) => {;
@@ -76,7 +76,7 @@ export default function Page() {;
         fidObserver.observe({ entryTypes['first-input'] })} catch(e) {;
 
         // console.warn('FID observer failed:', e)}
-;
+
       // Cumulative Layout Shift;
       try {;
         const clsValue = 0;
@@ -91,7 +91,7 @@ export default function Page() {;
 
         // console.warn('CLS observer failed:', e)}
     }
-;
+
     // Time to First Byte(from navigation timing);
     const navigationEntry = performance.getEntriesByType('navigation')[0];
     if(navigationEntry) {;
@@ -99,21 +99,21 @@ export default function Page() {;
       const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
       setMetrics(prev => ({ ...prev, ttfb: Math.round (ttfb) }) ) }
   }, []) ;
-;
+
   if(!isVisible) return null;
-;
+
   const getScoreColor = (score) => {;
 
     if(score >= 90) return 'text-green-400';
     if(score >= 50) return 'text-yellow-400';
     return 'text-red-400'};
-;
+
   const getScoreLabel = (score) => {;
 
     if(score >= 90) return 'Excellent';
     if(score >= 50) return 'Good';
     return 'Poor'};
-;
+
   return ();
     <motion.div;
       initial = {;

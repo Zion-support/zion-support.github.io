@@ -259,14 +259,12 @@ const AIAutonomousMonitoringSecurity = () => {}
       </div>;
     </>)};
 export default AIAutonomousMonitoringSecurity;
-;
+export { AIAutonomousMonitoringSecurity };
 
 export { AIAutonomousMonitoringSecurity };
-;
+
 export { AIAutonomousMonitoringSecurity };
-;
+
 export { AIAutonomousMonitoringSecurity };
-;
-export { AIAutonomousMonitoringSecurity };
-;
+
 export { AIAutonomousMonitoringSecurity };

@@ -403,14 +403,12 @@ export default function PricingPage() {}
         </div>;
       </section>;
     </div>)}
-;
+export { PricingPage, IconComponent };
 
 export { PricingPage, IconComponent };
-;
+
 export { PricingPage, IconComponent };
-;
+
 export { PricingPage, IconComponent };
-;
-export { PricingPage, IconComponent };
-;
+
 export { PricingPage, IconComponent };

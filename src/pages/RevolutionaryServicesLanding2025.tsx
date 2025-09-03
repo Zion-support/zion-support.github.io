@@ -47,4 +47,4 @@ const RevolutionaryServicesLanding2025 = () => {;
     </>;
   );,
 }
-export default RevolutionaryServicesLanding2025
+export default RevolutionaryServicesLanding2025;

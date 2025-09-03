@@ -1,6 +1,4 @@
 import React from 'react';
-;
-;
 const InnovationServicesMarketing = () => {;
     const allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
     const categories = Array.from(new Set(allServices.map(service => service.category)));
@@ -461,14 +459,12 @@ const InnovationServicesMarketing = () => {;
       </div>;
     </div>)};
 export default InnovationServicesMarketing;
-;
+export { InnovationServicesMarketing };
 
 export { InnovationServicesMarketing };
-;
+
 export { InnovationServicesMarketing };
-;
+
 export { InnovationServicesMarketing };
-;
-export { InnovationServicesMarketing };
-;
+
 export { InnovationServicesMarketing };
