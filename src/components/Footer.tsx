@@ -48,8 +48,10 @@ export default function Footer() {
               <li><Link href="/ai-services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">AI Services</Link></li>
               <li><Link href="/it-services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">IT Services</Link></li>
               <li><Link href="/micro-saas" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Micro SaaS</Link></li>
+              <li><Link href="/services/cybersecurity" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Cybersecurity</Link></li>
+              <li><Link href="/services/cloud" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Cloud Services</Link></li>
+              <li><Link href="/services/transformation" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Digital Transformation</Link></li>
               <li><Link href="/services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">All Services</Link></li>
-              <li><Link href="/solutions" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Solutions</Link></li>
             </ul>
           </div>
 
@@ -63,6 +65,7 @@ export default function Footer() {
               <li><Link href="/blog" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Blog</Link></li>
               <li><Link href="/case-studies" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Case Studies</Link></li>
               <li><Link href="/partners" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Partners</Link></li>
+              <li><Link href="/press" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Press</Link></li>
             </ul>
           </div>
 
@@ -107,6 +110,9 @@ export default function Footer() {
             </Link>
             <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
               Cookie Policy
+            </Link>
+            <Link href="/status" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
+              System Status
             </Link>
           </div>
         </div>

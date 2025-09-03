@@ -19,7 +19,8 @@ import {
   Rocket,
   ShoppingCart,
   BarChart3,
-  Info
+  Info,
+  Settings
 } from 'lucide-react';
 
 const Navigation = () => {
@@ -45,6 +46,9 @@ const Navigation = () => {
         { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
         { name: 'IT Services', href: '/it-services', icon: Network, description: 'Comprehensive IT solutions' },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS solutions' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Security solutions' },
+        { name: 'Cloud Services', href: '/services/cloud', icon: Cloud, description: 'Cloud infrastructure' },
+        { name: 'Digital Transformation', href: '/services/transformation', icon: Zap, description: 'Business transformation' },
         { name: 'All Services', href: '/services', icon: Settings, description: 'Complete service overview' }
       ]
     },
@@ -118,7 +122,7 @@ const Navigation = () => {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
                           transition={{ duration: 0.2 }}
-                          className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 overflow-hidden"
+                          className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 overflow-hidden"
                         >
                           <div className="p-4">
                             {item.dropdown.map((dropdownItem) => (

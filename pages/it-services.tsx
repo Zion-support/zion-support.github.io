@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
+import SEOHead from '../src/components/SEOHead';
 import {
   Server,
   Cloud,
@@ -822,7 +822,9 @@ export default function ITServices() {
       pricing: '$10,000 - $50,000/month',
       delivery: '10-20 weeks',
       category: 'Threat Intelligence'
-=======
+    },
+    {
+      title: 'Green IT Solutions',
       description: 'Environmentally conscious IT solutions with carbon footprint reduction',
       icon: TreePine,
       features: [
@@ -938,12 +940,11 @@ export default function ITServices() {
 
   return (
     <PageTransition>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/it-services" />
-      </Head>
+      <SEOHead
+        title="IT Services - Zion Tech Group"
+        description="Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and technical support for modern businesses."
+        keywords="IT services, cloud infrastructure, cybersecurity, network management, technical support, IT consulting, system administration"
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-20 sm:py-32">
