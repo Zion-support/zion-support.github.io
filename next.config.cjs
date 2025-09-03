@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+=======
+/** Cleaned Next.js config to allow build to proceed safely */
+>>>>>>> origin/feat/add-real-services-2025
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
+<<<<<<< HEAD
   compress: true,
   poweredByHeader: false,
   eslint: { 
@@ -37,3 +42,17 @@ const nextConfig = {
 
 module.exports = nextConfig;
 
+=======
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  experimental: { optimizeCss: true, scrollRestoration: true },
+  images: {
+    domains: ["images.unsplash.com", "via.placeholder.com", "ziontechgroup.com"],
+    formats: ["image/avif", "image/webp"],
+  },
+  compiler: { removeConsole: process.env.NODE_ENV === 'production' },
+  webpack: (config) => config,
+};
+
+module.exports = nextConfig;
+>>>>>>> origin/feat/add-real-services-2025
