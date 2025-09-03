@@ -1,201 +1,271 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-import { Shield, Lock, Database, UserCheck, AlertTriangle, CheckCircle } from 'lucide-react';
+import { Shield, Lock, Eye, Database, UserCheck, FileText, AlertTriangle } from 'lucide-react';
 
 const DataProtection: NextPage = () => {
+  const lastUpdated = 'January 27, 2025';
+
   const protectionMeasures = [
     {
-      icon: <Shield className="w-8 h-8 text-blue-600" />,
+      icon: Lock,
       title: 'Data Encryption',
-      description: 'All sensitive data is encrypted both in transit and at rest using industry-standard encryption protocols.'
+      description: 'All data is encrypted both in transit and at rest using industry-standard encryption protocols.',
+      details: [
+        'AES-256 encryption for data at rest',
+        'TLS 1.3 for data in transit',
+        'End-to-end encryption for sensitive communications',
+        'Regular encryption key rotation'
+      ]
     },
     {
-      icon: <Lock className="w-8 h-8 text-blue-600" />,
+      icon: Shield,
       title: 'Access Controls',
-      description: 'Strict access controls ensure only authorized personnel can access your data.'
+      description: 'Strict access controls ensure only authorized personnel can access your data.',
+      details: [
+        'Multi-factor authentication (MFA)',
+        'Role-based access control (RBAC)',
+        'Principle of least privilege',
+        'Regular access reviews and audits'
+      ]
     },
     {
-      icon: <Database className="w-8 h-8 text-blue-600" />,
-      title: 'Secure Storage',
-      description: 'Data is stored in secure, certified data centers with multiple layers of protection.'
+      icon: Eye,
+      title: 'Monitoring & Logging',
+      description: 'Comprehensive monitoring and logging of all data access and modifications.',
+      details: [
+        'Real-time security monitoring',
+        'Comprehensive audit logs',
+        'Automated threat detection',
+        '24/7 security operations center'
+      ]
     },
     {
-      icon: <UserCheck className="w-8 h-8 text-blue-600" />,
-      title: 'Regular Audits',
-      description: 'We conduct regular security audits and assessments to maintain the highest standards.'
+      icon: Database,
+      title: 'Data Backup & Recovery',
+      description: 'Regular backups and disaster recovery procedures to protect against data loss.',
+      details: [
+        'Automated daily backups',
+        'Geographically distributed storage',
+        'Point-in-time recovery capabilities',
+        'Regular disaster recovery testing'
+      ]
     }
   ];
 
   const complianceStandards = [
-    { name: 'GDPR', description: 'General Data Protection Regulation compliance' },
-    { name: 'CCPA', description: 'California Consumer Privacy Act compliance' },
-    { name: 'SOC 2', description: 'Security and availability controls' },
-    { name: 'ISO 27001', description: 'Information security management' },
-    { name: 'HIPAA', description: 'Healthcare data protection (where applicable)' }
+    {
+      name: 'GDPR',
+      description: 'General Data Protection Regulation compliance for EU data subjects',
+      status: 'Compliant',
+      icon: '🇪🇺'
+    },
+    {
+      name: 'CCPA',
+      description: 'California Consumer Privacy Act compliance for California residents',
+      status: 'Compliant',
+      icon: '🇺🇸'
+    },
+    {
+      name: 'HIPAA',
+      description: 'Health Insurance Portability and Accountability Act for healthcare data',
+      status: 'Compliant',
+      icon: '🏥'
+    },
+    {
+      name: 'SOC 2',
+      description: 'Service Organization Control 2 Type II certification',
+      status: 'Certified',
+      icon: '🔒'
+    },
+    {
+      name: 'ISO 27001',
+      description: 'International standard for information security management',
+      status: 'Certified',
+      icon: '🌍'
+    }
+  ];
+
+  const dataRights = [
+    {
+      title: 'Right to Access',
+      description: 'You have the right to request access to your personal data and receive a copy of the data we hold about you.'
+    },
+    {
+      title: 'Right to Rectification',
+      description: 'You can request correction of inaccurate or incomplete personal data.'
+    },
+    {
+      title: 'Right to Erasure',
+      description: 'You have the right to request deletion of your personal data under certain circumstances.'
+    },
+    {
+      title: 'Right to Portability',
+      description: 'You can request a copy of your data in a structured, machine-readable format.'
+    },
+    {
+      title: 'Right to Object',
+      description: 'You can object to the processing of your personal data for certain purposes.'
+    },
+    {
+      title: 'Right to Restrict Processing',
+      description: 'You can request that we limit the processing of your personal data.'
+    }
   ];
 
   return (
     <MainLayout
       title="Data Protection - Zion Tech Group"
-      description="Learn about Zion Tech Group's comprehensive data protection measures and compliance standards."
+      description="Learn about Zion Tech Group's comprehensive data protection measures, compliance standards, and your data rights."
+      keywords="data protection, GDPR compliance, data security, privacy rights, data encryption, compliance standards"
     >
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <Shield className="w-16 h-16 text-blue-400" />
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Data <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Protection</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Your data security is our top priority. Learn about our comprehensive data protection measures and compliance standards.
-          </p>
-        </div>
-      </section>
-
-      {/* Protection Measures */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Data Protection Measures</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We implement multiple layers of security to protect your data and ensure compliance with global standards.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {protectionMeasures.map((measure, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-lg text-center">
-                <div className="flex justify-center mb-4">
-                  {measure.icon}
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{measure.title}</h3>
-                <p className="text-gray-600">{measure.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Compliance Standards */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Compliance Standards</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We maintain compliance with major international data protection and security standards.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceStandards.map((standard, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
-                <div className="flex items-center mb-4">
-                  <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                  <h3 className="text-xl font-bold text-gray-900">{standard.name}</h3>
-                </div>
-                <p className="text-gray-600">{standard.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Data Protection Content */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto prose prose-lg">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Data Classification and Handling</h2>
-            <p className="text-gray-600 mb-6">
-              We classify data based on sensitivity levels and apply appropriate protection measures:
-            </p>
-            <ul className="list-disc list-inside text-gray-600 mb-8 space-y-2">
-              <li><strong>Public:</strong> Information that can be freely shared</li>
-              <li><strong>Internal:</strong> Information for internal use only</li>
-              <li><strong>Confidential:</strong> Sensitive business information</li>
-              <li><strong>Restricted:</strong> Highly sensitive personal or financial data</li>
-            </ul>
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Technical Safeguards</h2>
-            <p className="text-gray-600 mb-6">
-              Our technical safeguards include:
-            </p>
-            <ul className="list-disc list-inside text-gray-600 mb-8 space-y-2">
-              <li>AES-256 encryption for data at rest</li>
-              <li>TLS 1.3 encryption for data in transit</li>
-              <li>Multi-factor authentication for system access</li>
-              <li>Regular security updates and patches</li>
-              <li>Intrusion detection and prevention systems</li>
-              <li>Automated backup and disaster recovery</li>
-            </ul>
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Administrative Safeguards</h2>
-            <p className="text-gray-600 mb-6">
-              We implement comprehensive administrative controls:
-            </p>
-            <ul className="list-disc list-inside text-gray-600 mb-8 space-y-2">
-              <li>Regular security training for all employees</li>
-              <li>Background checks for personnel with data access</li>
-              <li>Clear data handling policies and procedures</li>
-              <li>Incident response and breach notification procedures</li>
-              <li>Regular security assessments and audits</li>
-              <li>Vendor security requirements and monitoring</li>
-            </ul>
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Physical Safeguards</h2>
-            <p className="text-gray-600 mb-6">
-              Physical security measures include:
-            </p>
-            <ul className="list-disc list-inside text-gray-600 mb-8 space-y-2">
-              <li>Secure data centers with 24/7 monitoring</li>
-              <li>Biometric access controls</li>
-              <li>Video surveillance and alarm systems</li>
-              <li>Environmental controls and fire suppression</li>
-              <li>Secure disposal of hardware and media</li>
-              <li>Visitor access controls and logging</li>
-            </ul>
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Data Breach Response</h2>
-            <p className="text-gray-600 mb-6">
-              In the event of a data breach, we have established procedures to:
-            </p>
-            <ul className="list-disc list-inside text-gray-600 mb-8 space-y-2">
-              <li>Immediately contain and assess the breach</li>
-              <li>Notify affected individuals within 72 hours (GDPR)</li>
-              <li>Report to relevant authorities as required</li>
-              <li>Conduct forensic analysis and remediation</li>
-              <li>Implement additional safeguards to prevent recurrence</li>
-              <li>Provide support and resources to affected parties</li>
-            </ul>
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights</h2>
-            <p className="text-gray-600 mb-6">
-              Under applicable data protection laws, you have the right to:
-            </p>
-            <ul className="list-disc list-inside text-gray-600 mb-8 space-y-2">
-              <li>Access your personal data</li>
-              <li>Correct inaccurate data</li>
-              <li>Delete your data (right to be forgotten)</li>
-              <li>Restrict processing of your data</li>
-              <li>Data portability</li>
-              <li>Object to processing</li>
-              <li>Withdraw consent</li>
-            </ul>
-
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Our Data Protection Officer</h2>
-            <p className="text-gray-600 mb-6">
-              For questions about data protection or to exercise your rights, contact our Data Protection Officer:
-            </p>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <p className="text-gray-600 mb-2"><strong>Email:</strong> dpo@ziontechgroup.com</p>
-              <p className="text-gray-600 mb-2"><strong>Phone:</strong> +1-302-464-0950</p>
-              <p className="text-gray-600"><strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709</p>
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
+        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <Shield className="w-16 h-16 mx-auto mb-6 text-blue-400" />
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Data Protection</h1>
+              <p className="text-xl text-gray-200 mb-4">
+                Your data security and privacy are our top priorities. Learn about our comprehensive 
+                protection measures and compliance standards.
+              </p>
+              <p className="text-sm text-gray-300">Last updated: {lastUpdated}</p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Protection Measures */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Data Protection Measures</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {protectionMeasures.map((measure, index) => (
+                  <div key={index} className="bg-white rounded-lg shadow-lg p-8">
+                    <div className="flex items-center mb-6">
+                      <measure.icon className="w-8 h-8 text-blue-600 mr-4" />
+                      <h3 className="text-2xl font-bold text-gray-900">{measure.title}</h3>
+                    </div>
+                    <p className="text-gray-600 mb-6">{measure.description}</p>
+                    <ul className="space-y-3">
+                      {measure.details.map((detail, detailIndex) => (
+                        <li key={detailIndex} className="flex items-start">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                          <span className="text-gray-600">{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Compliance Standards */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Compliance Standards</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {complianceStandards.map((standard, index) => (
+                  <div key={index} className="bg-gray-50 rounded-lg p-6 text-center">
+                    <div className="text-4xl mb-4">{standard.icon}</div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{standard.name}</h3>
+                    <p className="text-gray-600 mb-4">{standard.description}</p>
+                    <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
+                      standard.status === 'Compliant' || standard.status === 'Certified'
+                        ? 'bg-green-100 text-green-800'
+                        : 'bg-yellow-100 text-yellow-800'
+                    }`}>
+                      {standard.status}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Data Rights */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Your Data Rights</h2>
+              <div className="space-y-6">
+                {dataRights.map((right, index) => (
+                  <div key={index} className="bg-white rounded-lg shadow-lg p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{right.title}</h3>
+                    <p className="text-gray-600">{right.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Data Breach Response */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-red-50 border border-red-200 rounded-lg p-8">
+                <div className="flex items-center mb-4">
+                  <AlertTriangle className="w-8 h-8 text-red-600 mr-4" />
+                  <h2 className="text-2xl font-bold text-gray-900">Data Breach Response</h2>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  In the unlikely event of a data breach, we have comprehensive procedures in place to:
+                </p>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span>Immediately contain and assess the breach</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span>Notify affected individuals within 72 hours</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span>Report to relevant authorities as required by law</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span>Implement additional security measures to prevent future breaches</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Information */}
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center text-white">
+              <h2 className="text-3xl font-bold mb-6">Data Protection Questions?</h2>
+              <p className="text-xl mb-8 text-blue-100">
+                Our data protection team is here to help with any questions about your data rights or our security measures.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="mailto:privacy@ziontechgroup.com"
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Contact Privacy Team
+                </a>
+                <a
+                  href="/privacy"
+                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                >
+                  Privacy Policy
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </MainLayout>
   );
 };
