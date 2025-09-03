@@ -10,21 +10,24 @@ interface PerformanceOptimizerProps {
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   preloadImages = [],
   preloadFonts = [
-    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
+    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap',
   ],
-  criticalCSS
+  criticalCSS,
 }) => {
   useEffect(() => {
     // Performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver(list => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             console.log('LCP: ', entry.startTime);
           }
           if (entry.entryType === 'first-input') {
-            console.log('FID: ', (entry as any).processingStart - entry.startTime);
+            console.log(
+              'FID: ',
+              (entry as any).processingStart - entry.startTime
+            );
           }
           if (entry.entryType === 'layout-shift') {
             if (!(entry as any).hadRecentInput) {
@@ -35,7 +38,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       });
 
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+<<<<<<< HEAD
+        observer.observe({
+          entryTypes: [
+            'largest-contentful-paint',
+            'first-input',
+            'layout-shift',
+          ],
+        });
+=======
+        observer.observe({ entryTypes: ['largest-contentful-paint,first-input,layout-shift'] });
+>>>>>>> main
       } catch (e) {
         // Fallback for browsers that don't support all entry types
         console.log('Performance monitoring not fully supported');
@@ -75,7 +88,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="anonymous"
+      />
 
       {/* Preload critical fonts */}
       {preloadFonts.map((font, index) => (
@@ -90,12 +107,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
       {/* Preload critical images */}
       {preloadImages.map((image, index) => (
-        <link
-          key={index}
-          rel="preload"
-          href={image}
-          as="image"
-        />
+        <link key={index} rel="preload" href={image} as="image" />
       ))}
 
       {/* Performance hints */}

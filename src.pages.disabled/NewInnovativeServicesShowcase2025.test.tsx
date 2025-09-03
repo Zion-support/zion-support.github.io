@@ -1,7 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import NewInnovativeServicesShowcase2025 from './NewInnovativeServicesShowcase2025'
-describe('NewInnovativeServicesShowcase2025', () => {
+import NewInnovativeServicesShowcase2025  from './NewInnovativeServicesShowcase2025'describe('NewInnovativeServicesShowcase2025', () => {
   it('renders without crashing', () => {
     render(<NewInnovativeServicesShowcase2025 />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

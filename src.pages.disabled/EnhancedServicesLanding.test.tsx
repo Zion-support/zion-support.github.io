@@ -1,7 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import EnhancedServicesLanding from './EnhancedServicesLanding'
-describe('EnhancedServicesLanding', () => {
+import EnhancedServicesLanding  from './EnhancedServicesLanding'describe('EnhancedServicesLanding', () => {
   it('renders without crashing', () => {
     render(<EnhancedServicesLanding />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

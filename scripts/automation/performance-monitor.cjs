@@ -12,11 +12,11 @@ const AUTOMATION_INTERVAL =
 
 async function runPerformanceMonitor() {
   try {
-    console.log(`📊 Running performance monitoring at ${new Date().toISOString()}'
+    console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);
     );
-
-    // Build the project first
-    console.log(`'🏗️ Building project for performance analysis...');
+`);
+    // Build the project first`);
+    console.log(`🏗️ Building project for performance analysis...`);
     execSync('npm run build', { stdio: 'inherit' });
 
     // Check bundle size

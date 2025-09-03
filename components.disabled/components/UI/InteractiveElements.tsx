@@ -23,23 +23,26 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
   disabled = false,
   loading = false,
   icon,
-  className = ''
+  className = '',
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden';
-  
+  const baseClasses =
+    'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden';
+
   const variantClasses: Record<ButtonVariant, string> = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
-    secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500',
+    secondary:
+      'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500',
     ghost: 'bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500',
-    gradient: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500'
+    gradient:
+      'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500',
   };
 
   const sizeClasses: Record<ButtonSize, string> = {
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg'
+    lg: 'px-6 py-3 text-lg',
   };
 
   return (
@@ -61,7 +64,7 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
           <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
         </motion.div>
       )}
-      
+
       <motion.div
         animate={{ opacity: loading ? 0 : 1 }}
         className="flex items-center"
@@ -91,7 +94,7 @@ interface AnimatedCardProps {
 export const AnimatedCard: React.FC<AnimatedCardProps> = ({
   children,
   className = '',
-  delay = 0
+  delay = 0,
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -110,7 +113,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({
       animate={controls}
       variants={{
         hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 }
+        visible: { opacity: 1, y: 0 },
       }}
       transition={{ duration: 0.5, delay }}
       className={`bg-white rounded-lg shadow-lg p-6 ${className}`}
@@ -127,18 +130,18 @@ interface LoadingSpinnerProps {
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
-  color = 'primary'
+  color = 'primary',
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-6 h-6',
-    lg: 'w-8 h-8'
+    lg: 'w-8 h-8',
   };
 
   const colorClasses = {
     primary: 'border-blue-600',
     secondary: 'border-gray-600',
-    white: 'border-white'
+    white: 'border-white',
   };
 
   return (
@@ -159,7 +162,7 @@ interface ProgressBarProps {
 export const ProgressBar: React.FC<ProgressBarProps> = ({
   progress,
   className = '',
-  showPercentage = true
+  showPercentage = true,
 }) => {
   return (
     <div className={`w-full ${className}`}>
@@ -190,7 +193,7 @@ interface TooltipProps {
 export const Tooltip: React.FC<TooltipProps> = ({
   children,
   content,
-  position = 'top'
+  position = 'top',
 }) => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -198,7 +201,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
     top: 'bottom-full left-1/2 transform -translate-x-1/2 mb-2',
     bottom: 'top-full left-1/2 transform -translate-x-1/2 mt-2',
     left: 'right-full top-1/2 transform -translate-y-1/2 mr-2',
-    right: 'left-full top-1/2 transform -translate-y-1/2 ml-2'
+    right: 'left-full top-1/2 transform -translate-y-1/2 ml-2',
   };
 
   return (
@@ -214,12 +217,17 @@ export const Tooltip: React.FC<TooltipProps> = ({
         className={`absolute z-50 px-3 py-2 text-sm text-white bg-gray-900 rounded-lg shadow-lg ${positionClasses[position]}`}
       >
         {content}
-        <div className={`absolute w-2 h-2 bg-gray-900 transform rotate-45 ${
-          position === 'top' ? 'top-full left-1/2 -translate-x-1/2 -mt-1' :
-          position === 'bottom' ? 'bottom-full left-1/2 -translate-x-1/2 -mb-1' :
-          position === 'left' ? 'left-full top-1/2 -translate-y-1/2 -ml-1' :
-          'right-full top-1/2 -translate-y-1/2 -mr-1'
-        }`} />
+        <div
+          className={`absolute w-2 h-2 bg-gray-900 transform rotate-45 ${
+            position === 'top'
+              ? 'top-full left-1/2 -translate-x-1/2 -mt-1'
+              : position === 'bottom'
+                ? 'bottom-full left-1/2 -translate-x-1/2 -mb-1'
+                : position === 'left'
+                  ? 'left-full top-1/2 -translate-y-1/2 -ml-1'
+                  : 'right-full top-1/2 -translate-y-1/2 -mr-1'
+          }`}
+        />
       </motion.div>
     </div>
   );

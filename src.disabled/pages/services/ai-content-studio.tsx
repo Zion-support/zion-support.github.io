@@ -34,7 +34,7 @@ import {
 
 const AIContentStudio: React.FC = () => {
   const features = [
-    {
+  {
       icon: PenTool,
       title: 'AI Writing Assistant',
       description: 'Generate high-quality content for blogs, social media, and marketing materials',
@@ -73,11 +73,11 @@ const AIContentStudio: React.FC = () => {
   ];
 
   const contentTypes = [
-    {
+  {
       title: 'Blog Posts & Articles',
       description: 'AI-generated long-form content with research and citations',
       icon: FileText,
-      benefits: ['SEO optimized', 'Research-backed', 'Multiple formats', 'Auto-publishing'],
+      benefits: ['SEO optimized,Research-backed,Multiple formats,Auto-publishing'],
       pricing: '$29/month',
       color: 'from-blue-500 to-cyan-500'
     },
@@ -85,7 +85,7 @@ const AIContentStudio: React.FC = () => {
       title: 'Social Media Content',
       description: 'Engaging posts, captions, and stories for all social platforms',
       icon: Users,
-      benefits: ['Platform-specific', 'Trending topics', 'Hashtag optimization', 'Scheduling'],
+      benefits: ['Platform-specific,Trending topics,Hashtag optimization,Scheduling'],
       pricing: '$19/month',
       color: 'from-green-500 to-emerald-500'
     },
@@ -93,7 +93,7 @@ const AIContentStudio: React.FC = () => {
       title: 'Marketing Materials',
       description: 'Professional copy for ads, emails, and promotional content',
       icon: Target,
-      benefits: ['A/B testing', 'Conversion focused', 'Brand voice', 'Campaign tracking'],
+      benefits: ['A/B testing,Conversion focused,Brand voice,Campaign tracking'],
       pricing: '$39/month',
       color: 'from-purple-500 to-pink-500'
     },
@@ -101,32 +101,18 @@ const AIContentStudio: React.FC = () => {
       title: 'Visual Content',
       description: 'AI-generated images, infographics, and video content',
       icon: Image,
-      benefits: ['Custom styles', 'Brand consistency', 'High resolution', 'Multiple formats'],
+      benefits: ['Custom styles,Brand consistency,High resolution,Multiple formats'],
       pricing: '$49/month',
       color: 'from-yellow-500 to-orange-500'
     }
   ];
 
   const benefits = [
-    'Save 80% content creation time',
-    'Increase engagement by 150%',
-    '24/7 content generation',
-    'Multi-language support',
-    'Brand voice consistency',
-    'SEO optimization',
-    'Performance tracking',
-    'Unlimited revisions'
+    'Save 80% content creation time,Increase engagement by 150%,24/7 content generation,Multi-language support,Brand voice consistency,SEO optimization,Performance tracking,Unlimited revisions'
   ];
 
   const technologies = [
-    'GPT-4 & Claude',
-    'DALL-E & Midjourney',
-    'Runway ML',
-    'Adobe Creative Suite',
-    'Canva Integration',
-    'WordPress Publishing',
-    'Social Media APIs',
-    'Analytics Dashboard'
+    'GPT-4 & Claude,DALL-E & Midjourney,Runway ML,Adobe Creative Suite,Canva Integration,WordPress Publishing,Social Media APIs,Analytics Dashboard'
   ];
 
   return (

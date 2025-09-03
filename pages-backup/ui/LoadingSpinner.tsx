@@ -18,8 +18,7 @@ export function LoadingDots({
   color =;
   'text-cyan-400',
   text,
-  className = ';
-  '}: LoadingSpinnerProps) {
+  className = }: LoadingSpinnerProps) {
   return()`
     <div className={`flex flex-col items-center justify-center ${className}`}>'
       <div className='flex space-x-2'>
@@ -76,8 +75,7 @@ export function LoadingSkeleton({
 export function ButtonLoader({
   size =,
   md',
-  className = ';
-  '}: {
+  className = }: {
   size?: 'sm;
   ' | 'md;
   ' | 'lg;
@@ -94,8 +92,7 @@ export function ButtonLoader({
 export function PageLoaderOverlay({
 ';
   text = 'Loading...',
-  className = ';
-  '}: {
+  className = }: {
   text?: string;
   className?: string}) {
   return()`
@@ -163,8 +160,7 @@ export function ContentPlaceholder({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}';
-            className='bg-white/5 rounded-lg p-6 border border-white/10';
-';
+            className='bg-white/5 rounded-lg p-6 border border-white/10;
             <div className='h-4 bg-white/10 rounded mb-3 animate-pulse' />'
             <div className='h-3 bg-white/10 rounded mb-2 animate-pulse' />'
             <div className='h-3 bg-white/10 rounded w-2/3 animate-pulse' />
@@ -178,8 +174,7 @@ export function ContentPlaceholder({
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}';
-            className='flex items-center space-x-3';
-';
+            className='flex items-center space-x-3;
             <div className='w-4 h-4 bg-white/10 rounded-full animate-pulse' />'
             <div className='h-3 bg-white/10 rounded flex-1 animate-pulse' />
           </motion.div>
@@ -192,8 +187,7 @@ export function ContentPlaceholder({
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.1 }}';
-            className='bg-white/5 rounded-lg p-4 border border-white/10';
-';
+            className='bg-white/5 rounded-lg p-4 border border-white/10;
             <div className='h-3 bg-white/10 rounded mb-2 animate-pulse' />'
             <div className='h-2 bg-white/10 rounded w-3/4 animate-pulse' />
           </motion.div>
