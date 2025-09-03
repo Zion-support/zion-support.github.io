@@ -19,7 +19,11 @@ import {
   Rocket,
   ShoppingCart,
   BarChart3,
-  Info
+  Info,
+  Cpu,
+  Building,
+  Target,
+  Settings
 } from 'lucide-react';
 
 const Navigation = () => {
@@ -42,16 +46,26 @@ const Navigation = () => {
       name: 'Services', 
       href: '/services', 
       dropdown: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI services' },
+        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
         { name: 'IT Services', href: '/it-services', icon: Network, description: 'Comprehensive IT solutions' },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS solutions' },
-        { name: 'Web Development', href: '/services/web-development', icon: Code, description: 'Custom web applications' },
-        { name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud, description: 'Cloud infrastructure' },
-        { name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'AI development services' }
+        { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: Shield, description: 'Blockchain & Web3' },
+        { name: 'IoT Solutions', href: '/iot-solutions', icon: Cpu, description: 'IoT & Edge Computing' },
+        { name: 'All Services', href: '/services', icon: Globe, description: 'Complete service catalog' }
       ]
     },
-    { name: 'Solutions', href: '/solutions' },
+    { 
+      name: 'Solutions', 
+      href: '/solutions',
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building, description: 'Large-scale implementations' },
+        { name: 'Startup Solutions', href: '/solutions/startup', icon: Rocket, description: 'Rapid growth solutions' },
+        { name: 'Industry Solutions', href: '/solutions/industry', icon: Target, description: 'Industry-specific solutions' },
+        { name: 'Custom Solutions', href: '/solutions/custom', icon: Settings, description: 'Tailored solutions' }
+      ]
+    },
     { name: 'About', href: '/about' },
+    { name: 'Case Studies', href: '/case-studies' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' }
