@@ -824,6 +824,160 @@ export default function AIServices() {
         'Automated compliance checking',
         'Better risk identification'
       ]
+    },
+    {
+      icon: Zap,
+      name: 'AI-Powered Email Marketing Automation',
+      description: 'Intelligent email marketing with personalized content, optimal send times, and automated A/B testing.',
+      features: [
+        'AI-generated personalized email content',
+        'Optimal send time prediction',
+        'Automated A/B testing and optimization',
+        'Customer segmentation and targeting',
+        'Email deliverability optimization',
+        'Performance analytics and insights'
+      ],
+      pricing: '$1,500 – $8,000/month',
+      perUnit: '$0.01 – $0.05 per email',
+      timeline: '3–6 weeks',
+      benefits: [
+        '45% increase in email open rates',
+        '60% improvement in click-through rates',
+        'Automated campaign optimization',
+        'Reduced manual email management'
+      ]
+    },
+    {
+      icon: Database,
+      name: 'AI Data Quality & Cleansing',
+      description: 'Automated data quality assessment, cleansing, and enrichment using advanced AI algorithms.',
+      features: [
+        'Automated data quality scoring',
+        'Duplicate detection and removal',
+        'Data enrichment and validation',
+        'Missing data imputation',
+        'Data standardization and normalization',
+        'Real-time data monitoring'
+      ],
+      pricing: '$2,000 – $12,000 setup',
+      perUnit: '$0.001 – $0.01 per record',
+      timeline: '4–8 weeks',
+      benefits: [
+        '95% improvement in data accuracy',
+        '80% reduction in data processing time',
+        'Automated data quality monitoring',
+        'Better business intelligence insights'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Video Content Analysis',
+      description: 'Advanced video analysis for content moderation, brand monitoring, and engagement optimization.',
+      features: [
+        'Automated content moderation',
+        'Brand logo and mention detection',
+        'Sentiment analysis of video content',
+        'Engagement prediction and optimization',
+        'Real-time video processing',
+        'Custom model training for specific needs'
+      ],
+      pricing: '$3,000 – $15,000 setup',
+      perUnit: '$0.05 – $0.25 per minute',
+      timeline: '4–8 weeks',
+      benefits: [
+        '90% reduction in manual moderation',
+        'Improved brand safety',
+        'Enhanced content engagement',
+        'Automated compliance monitoring'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Financial Risk Assessment',
+      description: 'Advanced financial risk modeling and assessment using machine learning for credit scoring and fraud detection.',
+      features: [
+        'Credit risk scoring and assessment',
+        'Fraud detection and prevention',
+        'Market risk analysis and modeling',
+        'Regulatory compliance monitoring',
+        'Real-time risk alerts and notifications',
+        'Custom risk model development'
+      ],
+      pricing: '$5,000 – $30,000 setup',
+      perUnit: '$0.10 – $1.00 per assessment',
+      timeline: '6–12 weeks',
+      benefits: [
+        '40% reduction in false positives',
+        'Improved risk prediction accuracy',
+        'Automated compliance reporting',
+        'Better financial decision making'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Healthcare Diagnostics',
+      description: 'Medical image analysis and diagnostic assistance using advanced computer vision and machine learning.',
+      features: [
+        'Medical image analysis and interpretation',
+        'Diagnostic assistance and recommendations',
+        'Patient data analysis and insights',
+        'Drug interaction checking',
+        'Treatment outcome prediction',
+        'HIPAA-compliant data processing'
+      ],
+      pricing: '$10,000 – $50,000 setup',
+      perUnit: '$0.50 – $5.00 per analysis',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Improved diagnostic accuracy',
+        'Faster diagnosis and treatment',
+        'Reduced medical errors',
+        'Enhanced patient outcomes'
+      ]
+    },
+    {
+      icon: Code,
+      name: 'AI-Powered Code Generation & Optimization',
+      description: 'Intelligent code generation, optimization, and automated testing using advanced AI models.',
+      features: [
+        'Automated code generation from specifications',
+        'Code optimization and refactoring',
+        'Automated test case generation',
+        'Bug detection and fixing suggestions',
+        'Code documentation generation',
+        'Integration with popular IDEs'
+      ],
+      pricing: '$2,000 – $15,000 setup',
+      perUnit: '$0.01 – $0.10 per line of code',
+      timeline: '4–8 weeks',
+      benefits: [
+        '50% faster development cycles',
+        'Improved code quality and security',
+        'Reduced development costs',
+        'Automated testing and documentation'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Cybersecurity Threat Detection',
+      description: 'Advanced threat detection and response using machine learning for real-time security monitoring.',
+      features: [
+        'Real-time threat detection and analysis',
+        'Anomaly detection and behavioral analysis',
+        'Automated incident response',
+        'Threat intelligence and correlation',
+        'Security posture assessment',
+        'Compliance monitoring and reporting'
+      ],
+      pricing: '$3,000 – $20,000 setup',
+      perUnit: '$0.001 – $0.01 per event',
+      timeline: '4–10 weeks',
+      benefits: [
+        '99.9% threat detection accuracy',
+        'Real-time security monitoring',
+        'Automated incident response',
+        'Reduced security team workload'
+      ]
     }
   ];
 

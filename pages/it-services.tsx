@@ -1022,6 +1022,236 @@ export default function ITServices() {
         'Cost-effective compliance management'
       ],
       category: 'Compliance'
+    },
+    {
+      icon: Globe,
+      name: 'Edge Computing & IoT Solutions',
+      description: 'Edge computing infrastructure and IoT device management for real-time data processing and analytics.',
+      features: [
+        'Edge computing infrastructure setup',
+        'IoT device management and monitoring',
+        'Real-time data processing and analytics',
+        'Edge-to-cloud data synchronization',
+        'IoT security and device authentication',
+        'Custom IoT application development'
+      ],
+      pricing: '$8,000 – $50,000/project',
+      projectPricing: '$1,000 – $5,000/month managed',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Reduced latency and improved performance',
+        'Real-time data processing capabilities',
+        'Enhanced IoT device security',
+        'Scalable edge computing solutions'
+      ],
+      category: 'Infrastructure'
+    },
+    {
+      icon: Database,
+      name: 'Data Lake & Analytics Platform',
+      description: 'Modern data lake architecture with real-time analytics, machine learning pipelines, and business intelligence.',
+      features: [
+        'Data lake architecture design and implementation',
+        'Real-time data streaming and processing',
+        'Machine learning pipeline development',
+        'Business intelligence and reporting dashboards',
+        'Data governance and quality management',
+        'Advanced analytics and predictive modeling'
+      ],
+      pricing: '$15,000 – $100,000/project',
+      projectPricing: '$2,000 – $10,000/month managed',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Unified data platform for analytics',
+        'Real-time business insights',
+        'Improved data-driven decision making',
+        'Scalable analytics infrastructure'
+      ],
+      category: 'Data & Analytics'
+    },
+    {
+      icon: Smartphone,
+      name: 'Mobile App Development & DevOps',
+      description: 'Native and cross-platform mobile app development with CI/CD pipelines and app store optimization.',
+      features: [
+        'Native iOS and Android app development',
+        'Cross-platform development (React Native, Flutter)',
+        'Mobile CI/CD pipeline setup',
+        'App store optimization and deployment',
+        'Mobile app testing and quality assurance',
+        'Performance monitoring and analytics'
+      ],
+      pricing: '$80 – $200/hour',
+      projectPricing: '$10,000 – $80,000/project',
+      timeline: '4–16 weeks',
+      benefits: [
+        'High-performance mobile applications',
+        'Automated deployment and testing',
+        'Improved user experience',
+        'Faster time to market'
+      ],
+      category: 'Mobile Development'
+    },
+    {
+      icon: Server,
+      name: 'Microservices Architecture & API Gateway',
+      description: 'Modern microservices architecture with API gateway, service mesh, and distributed system design.',
+      features: [
+        'Microservices architecture design',
+        'API gateway implementation and management',
+        'Service mesh setup (Istio, Linkerd)',
+        'Distributed system monitoring and tracing',
+        'Event-driven architecture implementation',
+        'Container orchestration and scaling'
+      ],
+      pricing: '$12,000 – $75,000/project',
+      projectPricing: '$1,500 – $8,000/month managed',
+      timeline: '6–20 weeks',
+      benefits: [
+        'Scalable and maintainable architecture',
+        'Improved system performance',
+        'Enhanced developer productivity',
+        'Better fault tolerance and resilience'
+      ],
+      category: 'Architecture'
+    },
+    {
+      icon: BarChart3,
+      name: 'Business Intelligence & Data Visualization',
+      description: 'Comprehensive BI solutions with interactive dashboards, reporting, and data visualization.',
+      features: [
+        'Interactive dashboard development',
+        'Custom reporting and analytics',
+        'Data visualization and storytelling',
+        'Self-service BI platform setup',
+        'Data warehouse design and implementation',
+        'Advanced analytics and forecasting'
+      ],
+      pricing: '$5,000 – $40,000/project',
+      projectPricing: '$1,000 – $5,000/month managed',
+      timeline: '3–12 weeks',
+      benefits: [
+        'Data-driven business insights',
+        'Improved decision making',
+        'Self-service analytics capabilities',
+        'Enhanced business performance'
+      ],
+      category: 'Data & Analytics'
+    },
+    {
+      icon: LinkIcon,
+      name: 'API Development & Integration',
+      description: 'RESTful and GraphQL API development with third-party integrations and API management.',
+      features: [
+        'RESTful and GraphQL API development',
+        'API documentation and testing',
+        'Third-party service integration',
+        'API gateway and management platform',
+        'API security and authentication',
+        'Performance optimization and monitoring'
+      ],
+      pricing: '$100 – $250/hour',
+      projectPricing: '$8,000 – $50,000/project',
+      timeline: '2–8 weeks',
+      benefits: [
+        'Seamless system integration',
+        'Improved API performance',
+        'Enhanced security and monitoring',
+        'Better developer experience'
+      ],
+      category: 'Integration'
+    },
+    {
+      icon: Cpu,
+      name: 'High-Performance Computing (HPC)',
+      description: 'High-performance computing solutions for scientific computing, simulations, and data processing.',
+      features: [
+        'HPC cluster design and implementation',
+        'Parallel computing optimization',
+        'GPU computing and CUDA programming',
+        'Scientific computing workflows',
+        'High-speed networking and storage',
+        'Performance monitoring and optimization'
+      ],
+      pricing: '$20,000 – $200,000/project',
+      projectPricing: '$3,000 – $20,000/month managed',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Massive computational power',
+        'Faster scientific simulations',
+        'Optimized resource utilization',
+        'Scalable computing infrastructure'
+      ],
+      category: 'High Performance Computing'
+    },
+    {
+      icon: TestTube,
+      name: 'Quality Assurance & Testing Automation',
+      description: 'Comprehensive testing strategies with automated testing frameworks and continuous quality assurance.',
+      features: [
+        'Test automation framework development',
+        'Continuous integration and testing',
+        'Performance and load testing',
+        'Security testing and vulnerability assessment',
+        'User acceptance testing coordination',
+        'Quality metrics and reporting'
+      ],
+      pricing: '$80 – $180/hour',
+      projectPricing: '$5,000 – $30,000/project',
+      timeline: '2–8 weeks',
+      benefits: [
+        'Improved software quality',
+        'Reduced testing time and costs',
+        'Automated quality assurance',
+        'Better user experience'
+      ],
+      category: 'Quality Assurance'
+    },
+    {
+      icon: BookOpen,
+      name: 'Technical Documentation & Knowledge Management',
+      description: 'Comprehensive technical documentation, API documentation, and knowledge management systems.',
+      features: [
+        'Technical documentation creation',
+        'API documentation and developer portals',
+        'Knowledge management system setup',
+        'Documentation automation and maintenance',
+        'User guides and training materials',
+        'Version control and collaboration tools'
+      ],
+      pricing: '$60 – $150/hour',
+      projectPricing: '$3,000 – $20,000/project',
+      timeline: '2–6 weeks',
+      benefits: [
+        'Improved developer onboarding',
+        'Better knowledge sharing',
+        'Reduced support overhead',
+        'Enhanced team productivity'
+      ],
+      category: 'Documentation'
+    },
+    {
+      icon: Wrench,
+      name: 'IT Infrastructure Monitoring & Management',
+      description: 'Comprehensive IT infrastructure monitoring, management, and optimization services.',
+      features: [
+        'Infrastructure monitoring and alerting',
+        'Performance optimization and tuning',
+        'Capacity planning and scaling',
+        'Backup and disaster recovery',
+        'Security monitoring and compliance',
+        '24/7 infrastructure support'
+      ],
+      pricing: '$2,000 – $15,000/month',
+      projectPricing: '$5,000 – $25,000 setup',
+      timeline: '2–6 weeks',
+      benefits: [
+        'Proactive issue detection',
+        'Improved system reliability',
+        'Reduced downtime and costs',
+        'Enhanced security posture'
+      ],
+      category: 'Infrastructure Management'
     }
   ];
 

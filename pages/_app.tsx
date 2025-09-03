@@ -7,6 +7,7 @@ import '../styles/globals.css';
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   return (
     <header style={{
@@ -34,22 +35,59 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }}>Home</Link>
-          <Link href="/services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>All Services</Link>
-          <Link href="/micro-saas" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>Micro SaaS</Link>
-          <Link href="/ai-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>AI Services</Link>
-          <Link href="/it-services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
-          }}>IT Services</Link>
+          
+          {/* Services Dropdown */}
+          <div style={{ position: 'relative', display: 'inline-block' }}>
+            <button 
+              style={{ 
+                padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none', color: 'white',
+                background: 'none', border: 'none', cursor: 'pointer'
+              }}
+              onMouseEnter={() => setServicesDropdownOpen(true)}
+              onMouseLeave={() => setServicesDropdownOpen(false)}
+            >Services ▼</button>
+            <div style={{
+              position: 'absolute', top: '100%', left: 0, 
+              background: 'rgba(11, 18, 32, 0.98)', backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8,
+              padding: '8px 0', minWidth: 200, zIndex: 1000,
+              display: servicesDropdownOpen ? 'block' : 'none'
+            }} 
+            onMouseEnter={() => setServicesDropdownOpen(true)}
+            onMouseLeave={() => setServicesDropdownOpen(false)}
+            className="services-dropdown">
+              <Link href="/services" style={{ 
+                display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                transition: 'all 0.2s ease'
+              }}>All Services</Link>
+              <Link href="/micro-saas" style={{ 
+                display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                transition: 'all 0.2s ease'
+              }}>Micro SaaS Products</Link>
+              <Link href="/ai-services" style={{ 
+                display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                transition: 'all 0.2s ease'
+              }}>AI Services</Link>
+              <Link href="/it-services" style={{ 
+                display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                transition: 'all 0.2s ease'
+              }}>IT Services</Link>
+              <Link href="/cloud-devops" style={{ 
+                display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                transition: 'all 0.2s ease'
+              }}>Cloud & DevOps</Link>
+              <Link href="/cybersecurity" style={{ 
+                display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                transition: 'all 0.2s ease'
+              }}>Cybersecurity</Link>
+              <Link href="/quantum-computing" style={{ 
+                display: 'block', padding: '8px 16px', color: 'white', textDecoration: 'none',
+                transition: 'all 0.2s ease'
+              }}>Quantum Computing</Link>
+            </div>
+          </div>
+          
           <Link href="/services-catalog" style={{ 
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
@@ -62,6 +100,10 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }}>About</Link>
+          <Link href="/faq" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>FAQ</Link>
           <Link href="/contact" style={{ 
             fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
             color: 'white', padding: '8px 16px', borderRadius: 8,
@@ -120,6 +162,18 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }} onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
+          <Link href="/cloud-devops" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Cloud & DevOps</Link>
+          <Link href="/cybersecurity" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Cybersecurity</Link>
+          <Link href="/quantum-computing" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Quantum Computing</Link>
           <Link href="/services-catalog" style={{ 
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
@@ -132,6 +186,10 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }} onClick={() => setMobileMenuOpen(false)}>About</Link>
+          <Link href="/faq" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
         </div>
       )}
     </header>
@@ -179,12 +237,15 @@ function Footer(): any {
             <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Micro SaaS Products</Link>
             <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Services</Link>
             <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>IT Services</Link>
+            <Link href="/cloud-devops" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cloud & DevOps</Link>
+            <Link href="/cybersecurity" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity</Link>
+            <Link href="/quantum-computing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Quantum Computing</Link>
             <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Services Catalog</Link>
             <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Pricing</Link>
             <div style={{ opacity: 0.8, fontSize: '0.9rem', marginTop: 8 }}>
-              <div>• 150+ Micro SaaS Products</div>
-              <div>• 100+ AI Services</div>
-              <div>• 100+ IT Solutions</div>
+              <div>• 200+ Micro SaaS Products</div>
+              <div>• 150+ AI Services</div>
+              <div>• 150+ IT Solutions</div>
             </div>
           </div>
         </div>
@@ -198,9 +259,13 @@ function Footer(): any {
             <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Digital Transformation</Link>
             <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Process Automation</Link>
             <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Predictive Analytics</Link>
-            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity</Link>
+            <Link href="/cybersecurity" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity</Link>
             <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Content Creation</Link>
             <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Customer Support</Link>
+            <Link href="/cloud-devops" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>DevOps & CI/CD</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Data Analytics</Link>
+            <Link href="/quantum-computing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Quantum Computing</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>E-Commerce Solutions</Link>
           </div>
         </div>
 
