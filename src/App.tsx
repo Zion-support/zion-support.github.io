@@ -1,53 +1,54 @@
-import React, { Suspense, lazy }  from 'react';import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// Layout Components"
-import { EnhancedHeader } from './components/EnhancedHeader
-import { EnhancedFooter } from './components/EnhancedFooter
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// Layout Components
+import { EnhancedHeader } from './components/EnhancedHeader';
+import { EnhancedFooter } from './components/EnhancedFooter';
 import { Sidebar } from './components/Sidebar';
 // Loading component
-const LoadingSpinner = () => ("
-  <div className='flex items-center justify-center min-h-screen'>"
+const LoadingSpinner = () => (
+  <div className='flex items-center justify-center min-h-screen'>
     <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600'></div>
   </div>
-)
+);
 // Optimized lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
-  const LazyComponent = lazy(importFn)
+  const LazyComponent = lazy(importFn);
   return (props: any) => (
-    <Suspense fallback={fallback || <LoadingSpinner /" >}>
-      <LazyComponent {...props} /" >
-    </Suspense>;
-  );,
+    <Suspense fallback={fallback || <LoadingSpinner />}>
+      <LazyComponent {...props} />
+    </Suspense>
+  );
 };
-// Core pages with optimized imports;"
-const Home = createLazyComponent(() => import('./pages/Home'));"
-const About = createLazyComponent(() => import('./pages/About'));"
-const Contact = createLazyComponent(() => import('./pages/Contact'));"
-const Team = createLazyComponent(() => import('./pages/Team'));"
-const Partners = createLazyComponent(() => import('./pages/Partners'));"
-const HelpCenter = createLazyComponent(() => import('./pages/Help'));"
-const PrivacyPolicy = createLazyComponent(() => import('./pages/PrivacyPolicy'));"
-const TermsOfService = createLazyComponent(() => import('./pages/TermsOfService'));"
-const Services = createLazyComponent(() => import('./pages/Services'));"
-const Pricing = createLazyComponent(() => import('./pages/Pricing'));"
-const Blog = createLazyComponent(() => import('./pages/Blog'));"
-const News = createLazyComponent(() => import('./pages/News'));"
-const Careers = createLazyComponent(() => import('./pages/Careers'));"
-const Login = createLazyComponent(() => import('./pages/Login'));"
-const Marketplace = createLazyComponent(() => import('./pages/Marketplace'));"
-const Documentation = createLazyComponent(() => import('./pages/Documentation'));"
-const Training = createLazyComponent(() => import('./pages/Training'));"
-const Webinars = createLazyComponent(() => import('./pages/Webinars'));"
-const Research = createLazyComponent(() => import('./pages/Research'));"
+// Core pages with optimized imports
+const Home = createLazyComponent(() => import('./pages/Home'));
+const About = createLazyComponent(() => import('./pages/About'));
+const Contact = createLazyComponent(() => import('./pages/Contact'));
+const Team = createLazyComponent(() => import('./pages/Team'));
+const Partners = createLazyComponent(() => import('./pages/Partners'));
+const HelpCenter = createLazyComponent(() => import('./pages/Help'));
+const PrivacyPolicy = createLazyComponent(() => import('./pages/PrivacyPolicy'));
+const TermsOfService = createLazyComponent(() => import('./pages/TermsOfService'));
+const Services = createLazyComponent(() => import('./pages/Services'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
+const Blog = createLazyComponent(() => import('./pages/Blog'));
+const News = createLazyComponent(() => import('./pages/News'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const Login = createLazyComponent(() => import('./pages/Login'));
+const Marketplace = createLazyComponent(() => import('./pages/Marketplace'));
+const Documentation = createLazyComponent(() => import('./pages/Documentation'));
+const Training = createLazyComponent(() => import('./pages/Training'));
+const Webinars = createLazyComponent(() => import('./pages/Webinars'));
+const Research = createLazyComponent(() => import('./pages/Research'));
 const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
-// Additional required components;"
-const FAQ = createLazyComponent(() => import('./pages/FAQ'));"
-const Privacy = createLazyComponent(() => import('./pages/Privacy'));"
-const Terms = createLazyComponent(() => import('./pages/Terms'));"
-const Cookies = createLazyComponent(() => import('./pages/Cookies'));"
-const DataProtection = createLazyComponent(() => import('./pages/DataProtection'));"
-const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));"
-const SystemStatus = createLazyComponent(() => import('./pages/SystemStatus'));"
-const Search = createLazyComponent(() => import('./pages/Search'));"
+// Additional required components
+const FAQ = createLazyComponent(() => import('./pages/FAQ'));
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Cookies = createLazyComponent(() => import('./pages/Cookies'));
+const DataProtection = createLazyComponent(() => import('./pages/DataProtection'));
+const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));
+const SystemStatus = createLazyComponent(() => import('./pages/SystemStatus'));
+const Search = createLazyComponent(() => import('./pages/Search'));
 const Categories = createLazyComponent(() => import('./pages/Categories'));
 ;
 // New Autonomous AI Services 2025;"
