@@ -5,91 +5,122 @@ import { HelpCircle, MessageCircle, Phone, Mail, Clock, Search, BookOpen, Users,
 
 export default function Support() {
   const supportOptions = [
+    {
+      title: 'Help Center', description: 'Browse our comprehensive knowledge base and FAQ',
+      icon: BookOpen, features: ['Searchable articles', 'Step-by-step guides', 'Video tutorials', 'Troubleshooting'], link: '/help';
+},
+    {
+      title: 'Live Chat', description: 'Get instant help from our support team',
+      icon: MessageCircle, features: ['24/7 availability', 'Instant responses', 'Screen sharing', 'File sharing'], link: '#';
+},
+    {
+      title: 'Phone Support', description: 'Speak directly with our technical experts',
+      icon: Phone, features: ['Priority support', 'Technical consultation', 'Emergency assistance', 'Follow-up calls'], link: 'tel:+13024640950';
+},
+    {
+      title: 'Email Support', description: 'Send us detailed questions and get comprehensive answers',
+      icon: Mail, features: ['Detailed responses', 'Documentation', 'Screenshots', 'Case tracking'], link: 'mailto:support@ziontechgroup.com'
   {
       title: 'Help Center',
       description: 'Browse our comprehensive knowledge base and FAQ',
       icon: BookOpen,
       features: ['Searchable articles,Step-by-step guides,Video tutorials,Troubleshooting'],
-      link: '/help'
-    },
+      link: '/help';
+},
     {
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       icon: MessageCircle,
       features: ['24/7 availability,Instant responses,Screen sharing,File sharing'],
-      link: '#'
-    },
+      link: '#';
+},
     {
       title: 'Phone Support',
       description: 'Speak directly with our technical experts',
       icon: Phone,
       features: ['Priority support,Technical consultation,Emergency assistance,Follow-up calls'],
-      link: 'tel:+13024640950'
-    },
+      link: 'tel:+13024640950';
+},
     {
       title: 'Email Support',
       description: 'Send us detailed questions and get comprehensive answers',
       icon: Mail,
       features: ['Detailed responses,Documentation,Screenshots,Case tracking'],
-      link: 'mailto:support@ziontechgroup.com'
-    }
-  ];
+      link: 'mailto:support@ziontechgroup.com';
+}
+  ]
 
   const faqCategories = [
+    {
+      title: 'Getting Started', questions: [
   {
       title: 'Getting Started',
       questions: [
         {
           question: 'How do I create an account?',
-          answer: 'You can create an account by visiting our sign-up page and providing your email address and basic information. We\'ll send you a verification email to complete the process.'
-        },
-        {
+          answer: 'You can create an account by visiting our sign-up page and providing your email address and basic information. We\'ll send you a verification email to complete the process.';
+}, {
           question: 'What services do you offer?',
-          answer: 'We offer AI services, cloud solutions, cybersecurity, and micro SaaS development. Visit our services page for detailed information about each offering.'
-        },
+          answer: 'We offer AI services, cloud solutions, cybersecurity, and micro SaaS development. Visit our services page for detailed information about each offering.';
+},
         {
-          question: 'How do I get my API key?',
-          answer: 'Once you\'ve created an account, you can find your API key in the dashboard under the "API Keys" section. You can generate new keys or revoke existing ones as needed.'
-        }
+          question: 'How do I get my API key?', answer: 'Once you\'ve created an account, you can find your API key in the dashboard under the "API Keys" section. You can generate new keys or revoke existing ones as needed.';
+}
       ]
-    },
-    {
+}, {
       title: 'Billing & Pricing',
       questions: [
         {
-          question: 'What payment methods do you accept?',
-          answer: 'We accept all major credit cards, PayPal, and bank transfers. Enterprise customers can also arrange for invoicing and payment terms.'
-        },
+          question: 'What payment methods do you accept?', answer: 'We accept all major credit cards, PayPal, and bank transfers. Enterprise customers can also arrange for invoicing and payment terms.';
+},
         {
-          question: 'Can I change my plan anytime?',
-          answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.'
-        },
+          question: 'Can I change my plan anytime?', answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.';
+},
         {
-          question: 'Do you offer refunds?',
-          answer: 'We offer a 30-day money-back guarantee for all our services. If you\'re not satisfied, contact our support team for a full refund.'
-        }
+          question: 'Do you offer refunds?', answer: 'We offer a 30-day money-back guarantee for all our services. If you\'re not satisfied, contact our support team for a full refund.';
+}
       ]
-    },
-    {
+}, {
       title: 'Technical Support',
       questions: [
         {
-          question: 'How do I integrate your API?',
-          answer: 'We provide comprehensive documentation and SDKs for popular programming languages. Check our API documentation for detailed integration guides.'
-        },
+          question: 'How do I integrate your API?', answer: 'We provide comprehensive documentation and SDKs for popular programming languages. Check our API documentation for detailed integration guides.';
+},
         {
-          question: 'What are your API rate limits?',
-          answer: 'Rate limits vary by plan. Free plans have 1,000 requests per month, Professional plans have 100,000 requests per month, and Enterprise plans have unlimited requests.'
-        },
+          question: 'What are your API rate limits?', answer: 'Rate limits vary by plan. Free plans have 1,000 requests per month, Professional plans have 100,000 requests per month, and Enterprise plans have unlimited requests.';
+},
         {
-          question: 'How do I report a bug?',
-          answer: 'You can report bugs through our support portal, email support@ziontechgroup.com, or use the feedback form in your dashboard.'
-        }
+          question: 'How do I report a bug?', answer: 'You can report bugs through our support portal, email support@ziontechgroup.com, or use the feedback form in your dashboard.';
+}
       ]
-    }
-  ];
+}
+  ]
 
   const supportTiers = [
+    {
+      name: 'Community Support', description: 'Free support through our community forums and knowledge base',
+      responseTime: '24-48 hours', features: [
+        'Community forums',
+        'Knowledge base access', 'Basic documentation',
+        'Email support'
+      ], price: 'Free';
+},
+    {
+      name: 'Standard Support', description: 'Professional support for business users',
+      responseTime: '4-8 hours', features: [
+        'Priority email support',
+        'Live chat support', 'Phone support',
+        'Advanced documentation', 'API support'
+      ], price: 'Included with Professional Plan';
+},
+    {
+      name: 'Premium Support', description: 'Dedicated support for enterprise customers',
+      responseTime: '1-2 hours', features: [
+        'Dedicated support manager',
+        '24/7 phone support', 'Priority ticket handling',
+        'Custom integrations', 'SLA guarantees',
+        'On-site support'
+      ], price: 'Custom Pricing'
   {
       name: 'Community Support',
       description: 'Free support through our community forums and knowledge base',
@@ -97,8 +128,8 @@ export default function Support() {
       features: [
         'Community forums,Knowledge base access,Basic documentation,Email support'
       ],
-      price: 'Free'
-    },
+      price: 'Free';
+},
     {
       name: 'Standard Support',
       description: 'Professional support for business users',
@@ -106,8 +137,8 @@ export default function Support() {
       features: [
         'Priority email support,Live chat support,Phone support,Advanced documentation,API support'
       ],
-      price: 'Included with Professional Plan'
-    },
+      price: 'Included with Professional Plan';
+},
     {
       name: 'Premium Support',
       description: 'Dedicated support for enterprise customers',
@@ -115,30 +146,31 @@ export default function Support() {
       features: [
         'Dedicated support manager,24/7 phone support,Priority ticket handling,Custom integrations,SLA guarantees,On-site support'
       ],
-      price: 'Custom Pricing'
-    }
-  ];
+      price: 'Custom Pricing';
+}
+  ]
 
   const contactMethods = [
+    {
+      title: 'General Inquiries', email: 'info@ziontechgroup.com',
+      phone: '+1 302 464 0950', hours: 'Monday - Friday, 9 AM - 6 PM EST';
+}, {
   {
       title: 'General Inquiries',
       email: 'info@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      hours: 'Monday - Friday, 9 AM - 6 PM EST'
-    },
+      hours: 'Monday - Friday, 9 AM - 6 PM EST';
+},
     {
       title: 'Technical Support',
-      email: 'support@ziontechgroup.com',
-      phone: '+1 302 464 0951',
-      hours: '24/7 for Premium customers'
-    },
-    {
+      email: 'support@ziontechgroup.com', phone: '+1 302 464 0951',
+      hours: '24/7 for Premium customers';
+}, {
       title: 'Sales & Partnerships',
-      email: 'sales@ziontechgroup.com',
-      phone: '+1 302 464 0952',
-      hours: 'Monday - Friday, 9 AM - 6 PM EST'
-    }
-  ];
+      email: 'sales@ziontechgroup.com', phone: '+1 302 464 0952',
+      hours: 'Monday - Friday, 9 AM - 6 PM EST';
+}
+  ]
 
   return (
     <>
@@ -151,13 +183,13 @@ export default function Support() {
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
             <div className="text-center">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
                 Support Center
               </h1>
               <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
-                We're here to help you succeed. Get the support you need, when you need it.
+                We&apos;re here to help you succeed. Get the support you need, when you need it.'
               </p>
               <div className="max-w-2xl mx-auto">
                 <div className="relative">
@@ -165,7 +197,7 @@ export default function Support() {
                   <input
                     type="text"
                     placeholder="Search for help..."
-                    className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus: outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
               </div>
@@ -187,7 +219,7 @@ export default function Support() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {supportOptions.map((option, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <option.icon className="w-8 h-8 text-white" />
                   </div>
@@ -202,7 +234,7 @@ export default function Support() {
                     ))}
                   </ul>
                   <Link href={option.link}>
-                    <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                    <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300">
                       Get Help
                       <ArrowRight className="w-4 h-4 ml-2 inline" />
                     </button>
@@ -215,7 +247,7 @@ export default function Support() {
 
         {/* FAQ Section */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Frequently Asked Questions
@@ -245,7 +277,7 @@ export default function Support() {
 
         {/* Support Tiers */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Support Tiers
@@ -258,8 +290,8 @@ export default function Support() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {supportTiers.map((tier, index) => (
                 <div key={index} className={`bg-white rounded-xl shadow-lg p-8 ${
-                  tier.name === 'Standard Support' ? 'ring-2 ring-blue-500 transform scale-105' : ''
-                }`}>
+                  tier.name === 'Standard Support' ? 'ring-2 ring-blue-500 transform scale-105' : '';
+}`}>
                   {tier.name === 'Standard Support' && (
                     <div className="text-center mb-4">
                       <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -286,9 +318,9 @@ export default function Support() {
                   </ul>
                   <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
                     tier.name === 'Standard Support' 
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700' 
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                  }`}>
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700' 
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200';
+}`}>
                     {tier.price === 'Free' ? 'Get Started' : 'Contact Sales'}
                   </button>
                 </div>
@@ -299,7 +331,7 @@ export default function Support() {
 
         {/* Contact Information */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Contact Information
@@ -316,7 +348,7 @@ export default function Support() {
                   <div className="space-y-3">
                     <div className="flex items-center justify-center">
                       <Mail className="w-5 h-5 text-blue-600 mr-2" />
-                      <a href={`mailto:${method.email}`} className="text-blue-600 hover:text-blue-700">
+                      <a href={`mailto: ${method.email}`} className="text-blue-600 hover:text-blue-700">
                         {method.email}
                       </a>
                     </div>
@@ -339,14 +371,14 @@ export default function Support() {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Still Need Help?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Can't find what you're looking for? Our support team is ready to help you succeed.
+              Can&apos;t find what you&apos;re looking for? Our support team is ready to help you succeed.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <Link href="/contact">
                 <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
                   Contact Support
@@ -362,6 +394,6 @@ export default function Support() {
           </div>
         </section>
       </main>
-    </>
+</>
   );
 }

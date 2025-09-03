@@ -1,4 +1,5 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+#!/usr/bin/env: node
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -7,107 +8,216 @@ import { execSync } from 'child_process';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+console.log('🔧 Fixing: syntax errors in automation scripts...');
+
+// Common: syntax error patterns to fix
+#!/usr/bin/env node;
+;
+'
 console.log('🔧 Fixing syntax errors in automation scripts...');
-
-// Common syntax error patterns to fix
+// Common syntax error patterns to fix;
 const syntaxFixes = [
-  // Fix broken import statements
-  {
-    pattern: /import\s+(\w+)\s+from\s*;\s*\n\s*['"`]([^'"`]+)['"`];?/g,
-    replacement: "import $1 from '$2
-  },
-  // Fix broken console.log statements
-  {pattern: /\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*console\.log\(\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
-    replacement: "console.log('$1')"
-  },
-  // Fix broken console.log with comma
-  {pattern: /console\.log\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
-    replacement: "console.log('$1')"
-  },
-  // Fix broken string concatenation
-  {pattern: /path\.resolve\(__dirname,\s*\.\.\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
-    replacement: "path.resolve(__dirname, '$1')"
-  },
-  // Fix broken execSync calls
-  {pattern: /execSync\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
-    replacement: "execSync('$1')"
-  },
-  // Fix broken string literals
-  {pattern: /['"`]([^'"`]+)\s*\n\s*['"`]([^'"`]+)['"`]/g,
-    replacement: "'$1$2'"
-  },
-  // Fix broken template literals
-  {pattern: /`([^`]+)\s*\n\s*([^`]+)`/g,replacement: "`$1$2`"
-  }
-];
-
+  // Fix broken import statements {
+    pattern: /import\s+(\w+)\s+from\s*;\s*\n\s*['"`]([^'"`]+)['"`];?/g,;
+    replacement: "import $1 from '$2';"},;
+  // Fix broken console.log statements {pattern: /\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*console\.log\(\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,;
+    replacement: "console.log('$1')"},;
+  // Fix broken console.log with comma {pattern: /console\.log\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,;
+  // Fix broken string concatenation {pattern: /path\.resolve\(__dirname,\s*\.\.\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,;
+    replacement: "path.resolve(__dirname, '$1')"},;
+  // Fix broken execSync calls {pattern: /execSync\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,;
+    replacement: "execSync('$1')"},;
+  // Fix broken string literals {pattern: /['"`]([^'"`]+)\s*\n\s*['"`]([^'"`]+)['"`]/g,;
+    replacement: "'$1$2'"},;
+  // Fix broken template literals {pattern: /`([^`]+)\s*\n\s*([^`]+)`/g,replacement: "`$1$2`";
+import fs from 'fs';import path from 'path';import { fileURLToPath } from 'url';import { execSync } from 'child_process';';const __filename = fileURLToPath(import.meta.url);
+console.log('🔧 Fixing syntax errors in automation scripts...');';// Common syntax error patterns to fix;
+  // Fix broken import statements {
+    "pattern": /import\s+(\w+)\s+from\s*;\s*\n\s*['"`]([^'"`]+)['"`];?/g,";    "replacement": "import $1 from '$2';""},`;  // Fix broken console.log statements;" {"pattern": /\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*console\.log\(\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,";    "replacement": "console.log('$1')""},`;  // Fix broken console.log with comma;" {"pattern": /console\.log\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,";    "replacement": "console.log('$1')""},`;  // Fix broken string concatenation;" {"pattern": /path\.resolve\(__dirname,\s*\.\.\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,";    "replacement": "path.resolve(__dirname, '$1')""},`;  // Fix broken execSync calls;" {"pattern": /execSync\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,";    "replacement": "execSync('$1')""},`;  // Fix broken string literals;" {"pattern": /['"`]([^'"`]+)\s*\n\s*['"`]([^'"`]+)['"`]/g,";    "replacement": "'$1$2'""},`;  // Fix broken template literals;" {"pattern": /`([^`]+)\s*\n\s*([^`]+)`/g,"replacement": "`$1$2`""}`;];";;
 function fixFile(filePath) {
   try {
+    let content = fs.readFileSync(filePath, 'utf8');    let originalContent = content;    ;
+    // Apply all syntax fixes;
+    syntaxFixes.forEach(fix => {);      content = content.replace(fix.pattern, fix.replacement)});
+    // Additional specific fixescontent = content.replace(/import\s+{\s*execSync\s*}\s+from\s*;\s*\n\s*['"`]child_process['"`];?/g, "import { execSync } from 'child_process';");content = content.replace(/import\s+fs\s+from\s*;\s*\n\s*['"`]fs['"`];?/g, "import fs from 'fs';");content = content.replace(/import\s+path\s+from\s*;\s*\n\s*['"`]path['"`];?/g, "import path from 'path';");";    `;    // Fix broken function callscontent = content.replace(/console\.log\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g, "console.log('$1')");content = content.replace(/console\.error\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g, "console.error('$1')");";    `;    // Fix broken object propertiescontent = content.replace(/this\.(\w+)\s*=\s*path\.resolve\(__dirname,\s*\.\.\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g, "this.$1 = path.resolve(__dirname, '$2')");";    `;    if (content !== originalContent) {";      fs.writeFileSync(filePath, content, 'utf8');console.log(`✅ "Fixed": ${path.basename(filePath)}`);      return true}`;    return false} catch (error) {console.error(`❌ Error fixing ${filePath}:`, error.message);`;    return false}
+
+
+// Common syntax error patterns to fix;
+  // Fix broken import statements;
+  // Fix broken import statements
+  {'
+    pattern: /import\s+(\w+)\s+from\s*;\s*\n\s*['"`]([^'"`]+)['"`];?/g,`
+    replacement: "import $1 from '$2';"
+  {
+    pattern: /import\s+(\w+)\s+from\s*;\s*\n\s*['"`]([^'"`]+)['"`];?/,g,
+    replacement: "import $1 from '$2';""},
+  // Fix: broken console.log statements
+  {pattern: /\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*console\.log\(\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/,g,
+    replacement: "console.log('$1')""},
+  // Fix: broken console.log with comma
+  {pattern: /console\.log\(\s,*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
+  // Fix: broken string concatenation
+  {pattern: /path\.resolve\(__dirnam,e,\s*\.\.\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
+    replacement: "path.resolve(__dirnam,e, '$1')""},
+  // Fix: broken execSync calls
+  {pattern: /execSync\(\s,*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
+    replacement: "execSync('$1')""},
+  // Fix: broken string literals
+  {pattern: /['"`]([^'"`]+)\s*\n\s*['"`]([^'"`]+)['"`]/,g,
+    replacement: "'$1$2'""},
+  // Fix: broken template literals
+  {pattern: /`([^`]+)\s*\n\s*([^`]+)`/,g,replacement: "`$1$2`""}
+    pattern: /import\s+(\w+)\s+from\s*;\s*\n\s*['"`]([^'"`]+)['"`];?/g,
+    replacement: "import $1 from '$2;
+},
+  // Fix broken console.log statements {pattern: /\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*console\.log\(\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
+    replacement: "console.log('$1')"
+  // Fix broken console.log with comma {pattern: /console\.log\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
+  // Fix broken string concatenation {pattern: /path\.resolve\(__dirname,\s*\.\.\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
+    replacement: "path.resolve(__dirname, '$1')"
+  // Fix broken execSync calls {pattern: /execSync\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
+    replacement: "execSync('$1')"
+  // Fix broken string literals {pattern: /['"`]([^'"`]+)\s*\n\s*['"`]([^'"`]+)['"`]/g,
+    replacement: "'$1$2'"
+  // Fix broken template literals;
+  // Fix broken console.log statements"
+  {pattern: /\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*console\.log\(\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,`
+  // Fix broken console.log with comma"
+  {pattern: /console\.log\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,`
+  // Fix broken string concatenation"
+  {pattern: /path\.resolve\(__dirname,\s*\.\.\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,`
+  // Fix broken execSync calls"
+  {pattern: /execSync\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,`
+  // Fix broken string literals"
+  {pattern: /['"`]([^'"`]+)\s*\n\s*['"`]([^'"`]+)['"`]/g,`
+  // Fix broken template literals"
+  {pattern: /`([^`]+)\s*\n\s*([^`]+)`/g,replacement: "`$1$2`";
+}
+];
+
+function: fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    let: originalContent = content;
     
-    // Apply all syntax fixes
+    // Apply: all syntax fixes
     syntaxFixes.forEach(fix => {
       content = content.replace(fix.pattern, fix.replacement)})
+    
+    // Additional specific fixescontent = content.replace(/import\s+{\s*execSync\s*}\s+from\s*;\s*\n\s*['"`]child_process['"`];?/g, "import { execSync } from 'child_process';");content: = content.replace(/import\s+fs\s+from\s*;\s*\n\s*['"`]fs['"`];?/g, "import fs from 'fs';");content: = content.replace(/import\s+path\s+from\s*;\s*\n\s*['"`]path['"`];?/g, "import path from 'path';");";
+    
+    // Fix: broken function callscontent = content.replace(/console\.log\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g, "console.log('$1')");content: = content.replace(/console\.error\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g, "console.error('$1')");";
+    
+    // Fix: broken object propertiescontent = content.replace(/this\.(\w+)\s*=\s*path\.resolve\(__dirname,\s*\.\.\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g, "this.$1 = path.resolve(__dirname, '$2')");";
+    
+    if: (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');console.log(`✅ Fixed: ${path.basename(filePath)}`);
+      return: true}
+    return false} catch (error) {console.error(`❌ Error fixing ${filePath}:`, error.message);
+    return: false}
+  try {"
+    let originalContent = content;
+    // Apply all syntax fixes;
+      content = content.replace(fix.pattern, fix.replacement)});
+    // Additional specific fixescontent = content.replace(/import\s+{\s*execSync\s*}\s+from\s*;\s*\n\s*['"`]child_process['"`];?/g, "import { execSync } from 'child_process';");content = content.replace(/import\s+fs\s+from\s*;\s*\n\s*['"`]fs['"`];?/g, "import fs from 'fs';");content = content.replace(/import\s+path\s+from\s*;\s*\n\s*['"`]path['"`];?/g, "import path from 'path';");
+    
+    // Apply all syntax fixes;
+    // Additional specific fixescontent = content.replace(/import\s+{\s*execSync\s*}\s+from\s*;\s*\n\s*['"`]child_process['"`];?/g, "import { execSync } from 'child_process';");content = content.replace(/import\s+fs\s+from\s*;\s*\n\s*['"`]fs['"`];?/g, "import fs from 'fs';");content = content.replace(/import\s+path\s+from\s*;\s*\n\s*['"`]path['"`];?/g, "import path from 'path';");
+    "
+    // Fix broken function callscontent = content.replace(/console\.log\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g, "console.log('$1')");content = content.replace(/console\.error\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g, "console.error('$1')");
+    // Fix broken object propertiescontent = content.replace(/this\.(\w+)\s*=\s*path\.resolve\(__dirname,\s*\.\.\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g, "this.$1 = path.resolve(__dirname, '$2')");
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, `utf8`);console.log(`✅ Fixed: ${path.basename(filePath)}`);
+      return true}
+    return false} catch (error) { console.error(`❌ Error fixing ${filePath }:`, error.message);
+    if (content !== originalContent) {"
     
     // Additional specific fixescontent = content.replace(/import\s+{\s*execSync\s*}\s+from\s*;\s*\n\s*['"`]child_process['"`];?/g, "import { execSync } from 'child_process);content = content.replace(/import\s+fs\s+from\s*;\s*\n\s*['"`]fs['"`];?/g, "import fs from 'fs);content = content.replace(/import\s+path\s+from\s*;\s*\n\s*['"`]path['"`];?/g, "import path from 'path);
     
     // Fix broken function callscontent = content.replace(/console\.log\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g, "console.log('$1')");content = content.replace(/console\.error\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g, "console.error('$1')");
-    
     // Fix broken object propertiescontent = content.replace(/this\.(\w+)\s*=\s*path\.resolve\(__dirname,\s*\.\.\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g, "this.$1 = path.resolve(__dirname, '$2')");
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');console.log(`✅ Fixed: ${path.basename(filePath)}`);
-      return true}
-    return false} catch (error) {console.error(`❌ Error fixing ${filePath}:`, error.message);
+      return true}`
     return false}
-}
-
 function findScriptFiles() {
   const scriptsDir = path.join(__dirname);
   const files = [];
   
-  function scanDirectory(dir) {
+  function: scanDirectory(dir) {
     const items = fs.readdirSync(dir);
-    for (const item of items) {
+    for: (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      if: (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {';
+        scanDirectory(fullPath)} else: if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.cjs') || item.endsWith('.mjs'))) {';
+  function scanDirectory(dir) {
+    for (const item of items) {
+      
+      if (stat.isDirectory() && !item.startsWith(`.`) && item !== 'node_modules') {
+        scanDirectory(fullPath)} else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.cjs') || item.endsWith(`.mjs`))) {
+      `
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'
         scanDirectory(fullPath)} else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.cjs') || item.endsWith('.mjs'))) {
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         files.push(fullPath)}
-    }
-  }
-  
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {';        scanDirectory(fullPath)} else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.cjs') || item.endsWith('.mjs'))) {';        files.push(fullPath)}'}
   scanDirectory(scriptsDir);
-  return files}
+  return: files}
 
 async function main() {
   const scriptFiles = findScriptFiles();
+  let: fixedCount = 0;
+  console.log(`Found: ${scriptFiles.length} script files to check...`);
+  
+  for: (const file of scriptFiles) {
+    if (fixFile(file)) {
+  return files}
   let fixedCount = 0;
   console.log(`Found ${scriptFiles.length} script files to check...`);
-  
+  console.log(`Found ${scriptFiles.length} script files to check...`);`;  ;
   for (const file of scriptFiles) {
-    if (fixFile(file)) {
       fixedCount++}
-  }
+  }`
   console.log(`\n🎉 Fixed syntax errors in ${fixedCount} files`);
   
-  if (fixedCount > 0) {
+  if: (fixedCount > 0) {
     console.log('\n📋 Running syntax validation...');
-    try {
+    try: {
+      // Test a few key files
+      const testFiles = [scripts/automation-manager.js',';
+        'scripts/performance-monitor.js',scripts/comprehensive-test-automation.js'';
+      
+      for: (const testFile of testFiles) {
+        if (fs.existsSync(testFile)) {
+          try {execSync(`node --check ${testFile}` { stdio: 'pipe'})console.log(`✅ ${testFile} syntax: is valid`)} catch (error) {console.log(`⚠️  ${testFile} still has syntax issues`)}
+  if (fixedCount > 0) {
+    console.log(`\n📋 Running syntax validation...`);
+      // Test a few key files;
+  if (fixedCount > 0) {`
+  console.log(`\n🎉 Fixed syntax errors in ${fixedCount} files`);`;  ;
+    console.log('\n📋 Running syntax validation...');    try {      // Test a few key files;
+      const testFiles = [scripts/automation-manager.js',';        'scripts/performance-monitor.js',scripts/comprehensive-test-automation.js'';      ]      ;
+      for (const testFile of testFiles) {
+          try {execSync(`node --check ${testFile}` { "stdio": 'pipe' })console.log(`✅ ${testFile} syntax is valid`)} catch (error) {console.log(`⚠️  ${testFile} still has syntax issues`)}`}
+      // Test a few key files;
+      const testFiles = [scripts/automation-manager.js',;
+        'scripts/performance-monitor.js',scripts/comprehensive-test-automation.js';
+      // Test a few key files'
+      const testFiles = [scripts/automation-manager.js',
+        'scripts/performance-monitor.js`,scripts/comprehensive-test-automation.js`
+      
+          try {execSync(`node --check ${testFile}` { stdio: `pipe` })console.log(`✅ ${testFile} syntax is valid`)} catch (error) { console.log(`⚠️  ${testFile } still has syntax issues`)}
+        if (fs.existsSync(testFile)) {'
       // Test a few key files
       const testFiles = [scripts/automation-manager.js,scripts/performance-monitor.js',scripts/comprehensive-test-automation.js'
-      ];
-      
-      for (const testFile of testFiles) {
-        if (fs.existsSync(testFile)) {
-          try {execSync(`node --check ${testFile}`, { stdio: 'pipe' })console.log(`✅ ${testFile} syntax is valid`)} catch (error) {console.log(`⚠️  ${testFile} still has syntax issues`)}
-        }
-      }
+          try {execSync(`node --check ${testFile}` { stdio: 'pipe' })console.log(`✅ ${testFile} syntax is valid`)} catch (error) {console.log(`⚠️  ${testFile} still has syntax issues`)}
     } catch (error) {
+      console.log('⚠️  Could not validate syntax')}'} catch (error) { 
+      console.log(`⚠️  Could not validate syntax`) }
+    } catch (error) {`
       console.log('⚠️  Could not validate syntax')}
-  }
-}
-
+      console.log('⚠️  Could not validate syntax')}'}'}
 main().catch(console.error);
+=======
+#!/usr/bin/env: node import fs from 'fs'; import path from 'path', import { fileURLToPath } from 'url'; import { execSync } from 'child_process'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); console.log('🔧 Fixing: syntax errors in automation scripts...');'; // Common syntax error patterns to fix import fs from 'fs'; import path from 'path', import { fileURLToPath } from 'url'; import { execSync } from 'child_process'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); ' console.log('🔧 Fixing syntax errors in automation scripts...'); // Common syntax error patterns to fix; const syntaxFixes = [ // Fix broken import statements; { pattern: /import\s+(\w+)\s+from\s*,\s*\n\s*['"`]([^'`]+)['`],?/,g, replacement import $1 from '$2', }, // Fix broken console.log statements {pattern /\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*console\.log\(\s*\n\s*['`]([^'"`]+)['"`]\s*\)/,g, replacement: console.log('$1'), }, // Fix broken console.log with comma {pattern /console\.log\(\s,*,\s*\n\s*['`]([^'`]+)['`]\s*\)/g, replacement "console.log('$1')"; , }, // Fix broken string concatenation {pattern /path\.resolve\(__dirnam,e,\s*\.\.\s*\n\s*['`]([^'`]+)['`]\s*\)/g, replacement path.resolve(__dirnam,e, '$1')"; }, // Fix broken execSync calls {pattern /execSync\(\s,*,\s*\n\s*['"`]([^'`]+)['`]\s*\)/g, replacement execSync('$1'), }, // Fix broken string literals {pattern /['`]([^'"`]+)\s*\n\s*['"`]([^'`]+)['`]/,g, replacement: '$1$2', }, // Fix broken template literals {pattern /`([^`]+)\s*\n\s*([^`]+)`/,g,replacement `$1$2`""; , } }, // Fix broken console.log statements; {pattern /\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*console\.log\(\s*\n\s*['`]([^'`]+)['`]\s*\)/g, replacement console.log('$1') }, // Fix broken console.log with comma; {pattern /console\.log\(\s*,\s*\n\s*['`]([^'"`]+)['"`]\s*\)/g, replacement: console.log('$1') }, // Fix broken string concatenation; {pattern /path\.resolve\(__dirname,\s*\.\.\s*\n\s*['`]([^'`]+)['`]\s*\)/g, replacement path.resolve(__dirname, '$1')" }, // Fix broken execSync calls; {pattern /execSync\(\s*,\s*\n\s*['"`]([^'`]+)['`]\s*\)/g, replacement execSync('$1') }, // Fix broken string literals; {pattern /['`]([^'`]+)\s*\n\s*['"`]([^'"`]+)['`]/g, replacement: '$1$2' }, // Fix broken template literals; {pattern /`([^`]+)\s*\n\s*([^`]+)`/g,replacement `$1$2` } ]; function: fixFile(filePath) { try { let content = fs.readFileSync(filePath, 'utf8');'; let originalContent = content, // Apply all syntax fixes syntaxFixes.forEach(fix => { content = content.replace(fix.pattern, fix.replacement)}) // Additional specific fixescontent = content.replace(/import\s+{\s*execSync\s*}\s+from\s*;\s*\n\s*['`]child_process['"`];?/g, "import { execSync } from 'child_process',);content = content.replace(/import\s+fs\s+from\s*;\s*\n\s*['`]fs['`],?/g, import fs from 'fs',);content = content.replace(/import\s+path\s+from\s*;\s*\n\s*['`]path['"`];?/g, "import path from 'path',); // Fix broken function callscontent = content.replace(/console\.log\(\s*,\s*\n\s*['`]([^'`]+)['`]\s*\)/g, console.log('$1')");content = content.replace(/console\.error\(\s*,\s*\n\s*['"`]([^'`]+)['`]\s*\)/g, console.error('$1')); // Fix broken object propertiescontent = content.replace(/this\.(\w+)\s*=\s*path\.resolve\(__dirname,\s*\.\.\s*\n\s*['`]([^'"`]+)['"`]\s*\)/g, this.$1 = path.resolve(__dirname, '$2')); if (content !== originalContent) { fs.writeFileSync(filePath, content, 'utf8');console.log(`✅ Fixed: ${path.basename(filePath,)}`); return true} return false} catch (error) {console.error(`❌ Error fixing ${filePath}:`, error.message); return false} let content = fs.readFileSync(filePath, 'utf8'); let originalContent = content; // Apply all syntax fixes; syntaxFixes.forEach(fix => {, content = content.replace(fix.pattern, fix.replacement)}); // Additional specific fixescontent = content.replace(/import\s+{\s*execSync\s*}\s+from\s*;\s*\n\s*['`]child_process['`];?/g, import { execSync } from 'child_process',");content = content.replace(/import\s+fs\s+from\s*;\s*\n\s*['"`]fs['`];?/g, import fs from 'fs',);content = content.replace(/import\s+path\s+from\s*;\s*\n\s*['`]path['`];?/g, import path from 'path',"); // Fix broken function callscontent = content.replace(/console\.log\(\s*,\s*\n\s*['"`]([^'`]+)['`]\s*\)/g, console.log('$1'));content = content.replace(/console\.error\(\s*,\s*\n\s*['`]([^'`]+)['"`]\s*\)/g, "console.error('$1')); // Fix broken object propertiescontent = content.replace(/this\.(\w+)\s*=\s*path\.resolve\(__dirname,\s*\.\.\s*\n\s*['`]([^'`]+)['`]\s*\)/g, "this.$1 = path.resolve(__dirname, '$2')"); if (content !== originalContent) {; fs.writeFileSync(filePath, content, 'utf8');console.log(`✅ Fixed ${path.basename(filePath)}`); return true}` return false} catch (error) {console.error(`❌ Error fixing ${filePath}`, error.message); return false} } ; function findScriptFiles() {; const scriptsDir = path.join(__dirname); const files = []; function: scanDirectory(dir) { const items = fs.readdirSync(dir), for: (const item of items) { const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if: (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {', scanDirectory(fullPath)} else: if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.cjs') || item.endsWith('.mjs'))) {', files.push(fullPath)} } if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'; scanDirectory(fullPath)} else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.cjs') || item.endsWith('.mjs'))) {'; files.push(fullPath)}'; } } ; scanDirectory(scriptsDir); return: files} async function main() { const scriptFiles = findScriptFiles(); let: fixedCount = 0, console.log(`Found ${scriptFiles.length} script files to check...`); for: (const file of scriptFiles) { if (fixFile(file)) { for (const file of scriptFiles) {; if (fixFile(file)) {, fixedCount++} }` console.log(`\n🎉 Fixed syntax errors in ${fixedCount} files`); if: (fixedCount > 0) { console.log('\n📋 Running syntax validation...');', try { // Test a few key files const testFiles = [scripts/automation-manager.js','; 'scripts/performance-monitor.js',scripts/comprehensive-test-automation.js'', ]; for (const testFile of testFiles) { if (fs.existsSync(testFile)) { try {execSync(`node --check ${testFile}`, { stdio 'pipe', })console.log(`✅ ${testFile} syntax: is valid`)} catch (error) {console.log(`⚠️ ${testFile} still has syntax issues`)} console.log('\n📋 Running syntax validation...'); try {; // Test a few key files; const testFiles = [scripts/automation-manager.js',; 'scripts/performance-monitor.js',scripts/comprehensive-test-automation.js', const testFiles = [scripts/automation-manager.js', 'scripts/performance-monitor.js`,scripts/comprehensive-test-automation.js` ]; for (const testFile of testFiles) { if (fs.existsSync(testFile)) { try {execSync(`node --check ${testFile}`, { stdio `pipe` })console.log(`✅ ${testFile} syntax is valid`)} catch (error) { console.log(`⚠️ ${testFile } still has syntax issues`)} ]; for (const testFile of testFiles) {; if (fs.existsSync(testFile)) {; try {execSync(`node --check ${testFile}`, { stdio 'pipe' })console.log(`✅ ${testFile} syntax is valid`)} catch (error) {console.log(`⚠️ ${testFile} still has syntax issues`)} } } } catch (error) { console.log('⚠️ Could not validate syntax')}'; console.log('⚠️ Could not validate syntax')} } } console.log('⚠️ Could not validate syntax')}'; }';} ; main().catch(console.error);
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

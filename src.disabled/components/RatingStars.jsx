@@ -1,0 +1,1 @@
+import { Star, StarHalf export function RatingStars ({ value = 0 }) { const filled = Math.floor (value) ;

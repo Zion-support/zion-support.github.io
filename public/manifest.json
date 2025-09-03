@@ -1,29 +1,39 @@
 {
   "name": "Zion Tech Group",
   "short_name": "Zion Tech",
-  "description": "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development",
+  "description": "Leading technology solutions provider for modern businesses",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0a1a",
-  "theme_color": "#0a0a1a",
-  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
   "icons": [
     {
       "src": "/icon-192x192.png",
       "sizes": "192x192",
+<<<<<<< HEAD
       "type": "image/png",
-      "purpose": "any maskable"
-    },
+      "purpose": "any maskable";
+},
     {
       "src": "/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
-    }
+      "purpose": "any maskable";
+}
   ],
   "categories": ["business", "productivity", "technology"],
   "lang": "en-US",
   "dir": "ltr",
   "scope": "/",
-  "prefer_related_applications": false
+  "prefer_related_applications": false;
+=======
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 }

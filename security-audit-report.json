@@ -1,35 +1,606 @@
 {
+<<<<<<< HEAD
+  "timestamp": "2025-09-02T22:55:19.341Z",
+  "timestamp": "2025-09-02T22:08:31.296Z",
+  "securityScore": 0,
+  "vulnerabilities": [
+    {
+      "type": "secrets",
+      "file": "__tests__/api/reset-password.test.ts",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "__tests__/api/reviews.test.ts",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "__tests__/auth/login.test.ts",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "__tests__/auth/login.test.ts",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "__tests__/auth/register.test.ts",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "__tests__/auth/register.test.ts",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "__tests__/pages/ResetPassword.test.jsx",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "__tests__/signup-auto-login.test.tsx",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "__tests__/signup.test.tsx",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "api-backup/auth/confirm-email-verification.js",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "automation-orchestrator-report.json",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "error-reports/syntax-error-fixer-report.json",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "security-reports/secret-scan.json",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "security-reports/secret-scan.json",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "security-reports/secret-scan.json",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "security-reports/security-report.json",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "security-reports/security-report.json",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "security-reports/security-report.json",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "src/pages/APIDocumentation.tsx",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "src/pages/Checkout.jsx",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "src/services/auth.ts",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "src.disabled/components/integrations/WebhookManager.tsx",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "src.disabled/pages/APIDocumentation.tsx",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "src.disabled/pages/Checkout.jsx",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "src.pages.disabled/APIDocumentation.tsx",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "secrets",
+      "file": "src.pages.disabled/Checkout.jsx",
+      "severity": "high",
+      "description": "Potential hardcoded secret found",
+      "recommendation": "Move secrets to environment variables";
+},
+    {
+      "type": "insecure_protocol",
+      "file": "api-backup/kb-chat.js",
+      "severity": "moderate",
+      "description": "Insecure HTTP protocol used",
+      "recommendation": "Use HTTPS instead of HTTP for production";
+},
+    {
+      "type": "insecure_protocol",
+      "file": "api-backup/og/[listingId].js",
+      "severity": "moderate",
+      "description": "Insecure HTTP protocol used",
+      "recommendation": "Use HTTPS instead of HTTP for production";
+},
+    {
+      "type": "insecure_protocol",
+      "file": "components.disabled/EnhancedContactForm.tsx",
+      "severity": "moderate",
+      "description": "Insecure HTTP protocol used",
+      "recommendation": "Use HTTPS instead of HTTP for production";
+},
+    {
+      "type": "insecure_protocol",
+      "file": "pages.disabled/root_pages/advanced-cybersecurity.tsx",
+      "severity": "moderate",
+      "description": "Insecure HTTP protocol used",
+      "recommendation": "Use HTTPS instead of HTTP for production";
+},
+    {
+      "type": "insecure_protocol",
+      "file": "scripts/comprehensive-app-improver.js",
+      "severity": "moderate",
+      "description": "Insecure HTTP protocol used",
+      "recommendation": "Use HTTPS instead of HTTP for production";
+},
+    {
+      "type": "insecure_protocol",
+      "file": "scripts/generate-sitemap.js",
+      "severity": "moderate",
+      "description": "Insecure HTTP protocol used",
+      "recommendation": "Use HTTPS instead of HTTP for production";
+},
+    {
+      "type": "insecure_protocol",
+      "file": "scripts/seo-optimizer.js",
+      "severity": "moderate",
+      "description": "Insecure HTTP protocol used",
+      "recommendation": "Use HTTPS instead of HTTP for production";
+},
+    {
+      "type": "insecure_protocol",
+      "file": "src/components/EnhancedHeader.tsx",
+      "severity": "moderate",
+      "description": "Insecure HTTP protocol used",
+      "recommendation": "Use HTTPS instead of HTTP for production";
+},
+    {
+      "type": "data_exposure",
+      "file": "api-backup/admin/generate-pitch-deck.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "api-backup/auth/confirm-email-verification.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "api-backup/auth/forgot.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "api-backup/auth/resend-verification-email.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "api-backup/services.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "api-backup/webhook.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "automation_backup/netlify-build-automation.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "automation_backup/netlify-build-automation.jsx",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "components/WebVitals.tsx",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "components/performance/PerformanceMonitor.tsx",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "components.disabled/WebVitals.tsx",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "health-endpoint.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "lib.disabled/config.ts",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "pages.disabled/utils/resourceMonitor.tsx",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "public/security-headers.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/automation/console-error-fixer.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/automation/continuous-improvement.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/automation/dependency-updates.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/automation/link-checker.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/automation/performance-monitor.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/automation/quality-checks.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/automation/security-audit.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/automation-wrapper.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/ci-cd-pipeline.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/comprehensive-app-improver.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/deployment-automation.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/health-checker.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/optimize-build.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/pm2/build-error-monitor.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/pm2/dependency-error-resolver.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/pm2/lint-error-auto-fixer.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/pm2/syntax-error-fixer.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "scripts/pm2/typescript-error-monitor.js",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "src/components/MobileExperienceEnhancer.tsx",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "data_exposure",
+      "file": "src/components/PerformanceMonitor.tsx",
+      "severity": "moderate",
+      "description": "Environment variables might be logged",
+      "recommendation": "Remove console.log statements that might expose sensitive data";
+},
+    {
+      "type": "debug_info",
+      "file": "automation_backup/code-quality-monitor.js",
+      "severity": "low",
+      "description": "Debug information found in code",
+      "recommendation": "Remove debug statements for production";
+},
+    {
+      "type": "debug_info",
+      "file": "scripts/automation/console-error-fixer.js",
+      "severity": "low",
+      "description": "Debug information found in code",
+      "recommendation": "Remove debug statements for production";
+},
+    {
+      "type": "debug_info",
+      "file": "scripts/comprehensive-app-improver.js",
+      "severity": "low",
+      "description": "Debug information found in code",
+      "recommendation": "Remove debug statements for production";
+},
+    {
+      "type": "debug_info",
+      "file": "scripts/lint-checker.js",
+      "severity": "low",
+      "description": "Debug information found in code",
+      "recommendation": "Remove debug statements for production";
+}
+  ],
+  "recommendations": [
+    {
+      "type": "configuration",
+      "description": "Add security headers to Next.js configuration",
+      "recommendation": "Configure security headers like X-Frame-Options, X-Content-Type-Options, etc.";
+}
+  ],
+  "summary": {
+    "totalVulnerabilities": 74,
+    "critical": 0,
+    "high": 27,
+    "moderate": 43,
+    "low": 4
   "timestamp": "2025-09-02T22:04:34.291Z",
   "environment": {
     "issues": [
       "Empty VITE_SENTRY_DSN in .env",
       "Empty VITE_GA_MEASUREMENT_ID in .env"
     ],
-    "recommendations": []
-  },
+    "recommendations": [];
+},
   "code": {
     "issues": [
       "Server-side env var in client code: /workspace/src/components/ErrorBoundary.jsx",
       "Server-side env var in client code: /workspace/src/components/MobileExperienceEnhancer.tsx",
-      "Server-side env var in client code: /workspace/src/components/PerformanceMonitor.tsx",
       "Server-side env var in client code: /workspace/src/components/error/ErrorBoundary.tsx",
       "Unsanitized dangerouslySetInnerHTML in /workspace/src/components/seo/SEOEnhancer.tsx",
+      "Server-side env var in client code: /workspace/src/store/wishlistSlice.js.jsx",
       "Server-side env var in client code: /workspace/src/store/wishlistSlice.jsx",
       "Use of eval() in /workspace/src/utils/helpers.js"
     ],
-    "recommendations": []
-  },
+    "recommendations": [];
+},
   "dependencies": {
     "issues": [
       "Potentially vulnerable package: axios"
+=======
+  "timestamp: 2025-09-02T22: 55:19.341Z",
+  "environment: {
+    issues": [
+      "Empty VITE_SENTRY_DSN in .env,
+      Empty VITE_GA_MEASUREMENT_ID in .env"
     ],
-    "recommendations": [
-      "Update axios to version < 0.21.1 or higher"
-    ]
+    "recommendations: []
   },
+  code": {
+    "issues: [
+      Server-side env var in client code: /workspace/src/components/ErrorBoundary.jsx",
+      "Server-side env var in client code: /workspace/src/components/MobileExperienceEnhancer.tsx,
+      Server-side env var in client code: /workspace/src/components/error/ErrorBoundary.tsx",
+      "Unsanitized dangerouslySetInnerHTML in /workspace/src/components/seo/SEOEnhancer.tsx,
+      Server-side env var in client code: /workspace/src/store/wishlistSlice.js.jsx",
+      "Server-side env var in client code: /workspace/src/store/wishlistSlice.jsx,
+      Use of eval() in /workspace/src/utils/helpers.js"
+    ],
+    "recommendations: []
+  },
+  dependencies": {
+    "issues: [
+      Potentially vulnerable package: axios"
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
+    ],
+    "recommendations: [
+      Update axios to version < 0.21.1 or higher"
+    ]
+<<<<<<< HEAD
+},
   "summary": {
     "overall": "vulnerable",
     "totalIssues": 10,
-    "riskLevel": "high"
+    "riskLevel": "high";
+}
+=======
+  },
+  "summary: {
+    overall": "vulnerable,
+    totalIssues": 10,
+    "riskLevel: high"
   }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 }
