@@ -231,6 +231,314 @@ export default function MicroSaaS() {
         'Reduced accounting errors'
       ],
       category: 'Financial Management'
+    },
+    {
+      icon: Clock,
+      name: 'Smart Meeting Scheduler',
+      description: 'AI-powered meeting scheduling with timezone optimization and conflict resolution.',
+      features: [
+        'Intelligent timezone detection and scheduling',
+        'Calendar conflict resolution',
+        'Meeting room and resource booking',
+        'Automated follow-up and reminders',
+        'Integration with all major calendar systems',
+        'Meeting analytics and insights'
+      ],
+      pricing: '$99 – $599/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '75% reduction in scheduling conflicts',
+        'Automated meeting coordination',
+        'Improved meeting efficiency',
+        'Better time management'
+      ],
+      category: 'Productivity'
+    },
+    {
+      icon: Users,
+      name: 'Employee Onboarding Automation',
+      description: 'Streamlined employee onboarding with automated workflows and compliance tracking.',
+      features: [
+        'Automated onboarding workflows',
+        'Document collection and verification',
+        'Compliance tracking and reporting',
+        'Task assignment and progress monitoring',
+        'Integration with HR systems',
+        'Customizable onboarding templates'
+      ],
+      pricing: '$149 – $899/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '60% faster onboarding process',
+        'Reduced administrative overhead',
+        'Improved compliance tracking',
+        'Better new hire experience'
+      ],
+      category: 'HR Management'
+    },
+    {
+      icon: BarChart3,
+      name: 'Social Media Analytics Dashboard',
+      description: 'Comprehensive social media performance tracking and competitor analysis.',
+      features: [
+        'Multi-platform social media monitoring',
+        'Competitor analysis and benchmarking',
+        'Content performance analytics',
+        'Audience insights and demographics',
+        'Hashtag tracking and optimization',
+        'Automated reporting and alerts'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '40% improvement in engagement rates',
+        'Data-driven content strategy',
+        'Competitive advantage insights',
+        'Automated performance monitoring'
+      ],
+      category: 'Marketing Analytics'
+    },
+    {
+      icon: FileText,
+      name: 'Contract Management System',
+      description: 'Automated contract lifecycle management with AI-powered risk assessment.',
+      features: [
+        'Contract creation and templating',
+        'AI-powered risk assessment',
+        'Automated renewal tracking',
+        'Electronic signature integration',
+        'Compliance monitoring and alerts',
+        'Contract analytics and reporting'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '50% reduction in contract processing time',
+        'Automated risk identification',
+        'Improved compliance management',
+        'Better contract visibility'
+      ],
+      category: 'Legal Tech'
+    },
+    {
+      icon: Globe,
+      name: 'Multi-Language Website Translator',
+      description: 'AI-powered website translation with SEO optimization and cultural adaptation.',
+      features: [
+        'Real-time website translation',
+        'SEO-optimized multilingual content',
+        'Cultural adaptation and localization',
+        'Automatic language detection',
+        'Translation quality assurance',
+        'Multi-currency and payment support'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '2–4 weeks',
+      benefits: [
+        '300% increase in global reach',
+        'Automated content localization',
+        'Improved international SEO',
+        'Reduced translation costs'
+      ],
+      category: 'Internationalization'
+    },
+    {
+      icon: Zap,
+      name: 'Inventory Optimization Engine',
+      description: 'AI-driven inventory management with demand forecasting and automated reordering.',
+      features: [
+        'Demand forecasting and prediction',
+        'Automated reorder point calculation',
+        'Multi-location inventory tracking',
+        'Supplier performance monitoring',
+        'Dead stock identification',
+        'Cost optimization recommendations'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '25% reduction in inventory costs',
+        'Automated stock management',
+        'Reduced stockouts and overstock',
+        'Improved cash flow'
+      ],
+      category: 'Supply Chain'
+    },
+    {
+      icon: Mail,
+      name: 'Email Marketing Automation Platform',
+      description: 'Advanced email marketing with behavioral triggers and personalization.',
+      features: [
+        'Behavioral trigger automation',
+        'Advanced segmentation and targeting',
+        'A/B testing and optimization',
+        'Email template builder',
+        'Deliverability monitoring',
+        'ROI tracking and analytics'
+      ],
+      pricing: '$149 – $999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '45% increase in email open rates',
+        'Automated customer nurturing',
+        'Improved conversion rates',
+        'Reduced manual campaign management'
+      ],
+      category: 'Email Marketing'
+    },
+    {
+      icon: Shield,
+      name: 'Password Security Manager',
+      description: 'Enterprise-grade password management with team collaboration and security auditing.',
+      features: [
+        'Secure password generation and storage',
+        'Team password sharing and collaboration',
+        'Security breach monitoring',
+        'Multi-factor authentication',
+        'Password strength auditing',
+        'Compliance reporting and tracking'
+      ],
+      pricing: '$99 – $599/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '99.9% reduction in password-related breaches',
+        'Improved team security practices',
+        'Automated security monitoring',
+        'Compliance with security standards'
+      ],
+      category: 'Cybersecurity'
+    },
+    {
+      icon: TrendingUp,
+      name: 'Customer Lifetime Value Predictor',
+      description: 'AI-powered customer value prediction and retention optimization.',
+      features: [
+        'Customer lifetime value prediction',
+        'Churn risk identification',
+        'Retention campaign automation',
+        'Customer segmentation analysis',
+        'Revenue forecasting',
+        'Personalized engagement strategies'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '35% increase in customer retention',
+        'Data-driven customer insights',
+        'Automated retention campaigns',
+        'Improved revenue predictability'
+      ],
+      category: 'Customer Analytics'
+    },
+    {
+      icon: Settings,
+      name: 'Workflow Automation Builder',
+      description: 'No-code workflow automation platform for business process optimization.',
+      features: [
+        'Visual workflow builder',
+        'Pre-built automation templates',
+        'Multi-app integration',
+        'Conditional logic and branching',
+        'Real-time monitoring and analytics',
+        'Custom trigger and action creation'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '70% reduction in manual tasks',
+        'Improved process efficiency',
+        'Reduced human errors',
+        'Faster business process execution'
+      ],
+      category: 'Process Automation'
+    },
+    {
+      icon: Globe,
+      name: 'Website Performance Optimizer',
+      description: 'Automated website speed optimization and Core Web Vitals improvement.',
+      features: [
+        'Automated image optimization',
+        'Code minification and compression',
+        'CDN integration and management',
+        'Core Web Vitals monitoring',
+        'Performance reporting and alerts',
+        'Mobile optimization tools'
+      ],
+      pricing: '$149 – $899/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '50% improvement in page load speed',
+        'Better search engine rankings',
+        'Improved user experience',
+        'Reduced bounce rates'
+      ],
+      category: 'Web Performance'
+    },
+    {
+      icon: Users,
+      name: 'Remote Team Collaboration Hub',
+      description: 'Comprehensive remote work platform with project management and team communication.',
+      features: [
+        'Project management and task tracking',
+        'Video conferencing integration',
+        'File sharing and collaboration',
+        'Time tracking and productivity analytics',
+        'Team communication tools',
+        'Performance monitoring and reporting'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '40% improvement in team productivity',
+        'Better remote collaboration',
+        'Reduced communication overhead',
+        'Enhanced project visibility'
+      ],
+      category: 'Remote Work'
+    },
+    {
+      icon: BarChart3,
+      name: 'Business Intelligence Dashboard',
+      description: 'Real-time business analytics with customizable dashboards and automated reporting.',
+      features: [
+        'Real-time data visualization',
+        'Customizable dashboard creation',
+        'Automated report generation',
+        'Data source integration',
+        'Predictive analytics and forecasting',
+        'Mobile-responsive design'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Data-driven decision making',
+        'Real-time business insights',
+        'Automated reporting processes',
+        'Improved operational efficiency'
+      ],
+      category: 'Business Intelligence'
+    },
+    {
+      icon: FileText,
+      name: 'Compliance Management System',
+      description: 'Automated compliance tracking and reporting for regulatory requirements.',
+      features: [
+        'Regulatory requirement tracking',
+        'Automated compliance reporting',
+        'Risk assessment and monitoring',
+        'Document management and versioning',
+        'Audit trail and logging',
+        'Compliance training management'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '90% reduction in compliance violations',
+        'Automated regulatory reporting',
+        'Improved risk management',
+        'Reduced compliance costs'
+      ],
+      category: 'Compliance'
     }
   ];
 
