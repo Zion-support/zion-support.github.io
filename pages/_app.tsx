@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import '../styles/globals.css';
@@ -8,10 +8,39 @@ import '../styles/globals.css';
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
+  // Close mobile menu on escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && mobileMenuOpen) {
+        closeMobileMenu();
+      }
+    };
+
+    if (mobileMenuOpen) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden'; // Prevent background scroll
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <header className="header">
       <nav className="header-nav">
-        <Link href="/" className="header-logo">
+        <Link href="/" className="header-logo" onClick={closeMobileMenu}>
           Zion Tech Group
         </Link>
         
@@ -25,20 +54,32 @@ function Header(): any {
 
         <button 
           className="mobile-menu-button"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
           aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-menu"
         >
-          ☰
+          <span className={`hamburger ${mobileMenuOpen ? 'open' : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
         </button>
       </nav>
       
-      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-        <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-        <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
-        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-        <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+      <div 
+        id="mobile-menu"
+        className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}
+        role="navigation"
+        aria-label="Mobile navigation"
+      >
+        <div className="mobile-menu-content">
+          <Link href="/" className="header-nav-link" onClick={closeMobileMenu}>Home</Link>
+          <Link href="/services" className="header-nav-link" onClick={closeMobileMenu}>All Services</Link>
+          <Link href="/services-catalog" className="header-nav-link" onClick={closeMobileMenu}>Catalog</Link>
+          <Link href="/pricing" className="header-nav-link" onClick={closeMobileMenu}>Pricing</Link>
+          <Link href="/contact" className="header-nav-cta" onClick={closeMobileMenu}>Contact</Link>
+        </div>
       </div>
     </header>
   );
@@ -114,6 +155,21 @@ function Footer(): any {
 }
 
 export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    // Register service worker
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('SW registered: ', registration);
+          })
+          .catch((registrationError) => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  }, []);
+
   return (
     <ErrorBoundary>
       <PerformanceMonitor />
