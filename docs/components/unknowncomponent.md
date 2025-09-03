@@ -13,7 +13,7 @@ UnknownComponent is a React component that provides user interface functionality
 ## Usage
 
 ```tsx
-import { UnknownComponent } from './App.tsx';
+import { UnknownComponent } from './components/AIChatbotSystem.test.tsx';
 
 function App() {
   return (

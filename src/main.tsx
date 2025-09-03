@@ -1,1 +1,77 @@
-import "./index.css"; // Performance monitoring const reportWebVitals = (metric: any) => { if (process.env.NODE_ENV === "development") { // // // // console.log("Web Vitals:", metric); } // In production, you could send this to analytics }; // Main render function const renderApp = () => { const root = ReactDOM.createRoot(document.getElementById("root")!); root.render( <React.StrictMode> <Router> <HelmetProvider> <ErrorBoundary> <App /> </ErrorBoundary> </HelmetProvider> </Router> </React.StrictMode> ); }; // Initialize the application try { renderApp(); // Register service worker with error handling registerServiceWorker().catch(error => { // // // console.warn("Service worker registration failed:", error); }); // Report web vitals if available if (typeof window !== "undefined" && "PerformanceObserver" in window) { try { const observer = new PerformanceObserver(list => { for (const entry of list.getEntries()) { reportWebVitals(entry); } }); observer.observe({ entryTypes: ["navigation", "resource", "paint"] }); } catch (error) { // // // console.warn("Performance monitoring failed:", error); } } } catch (error) { // // // console.error("Failed to render application:", error); // Fallback error display const rootElement = document.getElementById("root"); if (rootElement) { rootElement.innerHTML = ` <div style=" min-height: 100vh; background: #111827; color: white; display: flex; align-items: center; justify-content: center; padding: 1rem; font-family: system-ui, -apple-system, sans-serif;" > <div style="text-align: center; max-width: 500px;"> <h1 style="font-size: 2rem; margin-bottom: 1rem;">Application Failed to Load</h1> <p style="color: #9ca3af; margin-bottom: 1.5rem;"> We"re sorry, but the application failed to initialize. Please try refreshing the page. </p> <button onclick="window.location.reload()" style=" background: #06b6d4; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 0.5rem; cursor: pointer; font-size: 1rem;" > Refresh Page </button> </div> </div> `; } } 
+<<<<<<< HEAD
+import: React from 'react';';';';
+import: ReactDOM from 'react-dom/client';';';';
+import: App from './App';';';';
+
+const: root = ReactDOM.createRoot(;
+  document.getElementById('root') as: HTMLElement';';';
+);
+root.render(<App: />)
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+>>>>>>> main
+import ReactDOM from 'react-dom/client';
+import App from './App';
+;
+const root = ReactDOM.createRoot(;
+  document.getElementById('root') as HTMLElement;
+);
+<<<<<<< HEAD
+root.render(<App />);
+=======
+root.render(<App />);
+=======
+<<<<<<< HEAD
+import React from &apos;react';
+import ReactDOM from &apos;react-dom/client';
+import App from &apos;./App';&apos;&apos;
+
+<<<<<<< HEAD
+const root = ReactDOM.createRoot('
+  document.getElementById('root') as HTMLElement
+=======
+const root = ReactDOM.createRoot(
+  document.getElementById(&apos;root&apos;) as HTMLElement
+>>>>>>> main
+);
+root.render(&apos;<App />)
+=======
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const Main: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Main - Zion Tech Group"
+        description="Professional Main services by Zion Tech Group"
+        keywords="main, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Main</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional Main services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Main;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

@@ -9,7 +9,7 @@ This service provides API functionality for unknownservice operations.
 ## Usage
 
 ```typescript
-import { UnknownService } from './pages/services/Cybersecurity.tsx';
+import { UnknownService } from './pages/CybersecuritySolutions.tsx';
 
 // Example usage
 const result = await UnknownService.methodName(params);

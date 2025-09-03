@@ -13,7 +13,7 @@ AICodeGenerator is a React component that provides user interface functionality.
 ## Usage
 
 ```tsx
-import { AICodeGenerator } from './components/AICodeGenerator.jsx';
+import { AICodeGenerator } from './components/AICodeGenerator.js.jsx';
 
 function App() {
   return (

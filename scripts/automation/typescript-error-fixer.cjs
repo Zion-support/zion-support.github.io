@@ -1,276 +1,627 @@
-#!/usr/bin/env node
-
-/**
- * TypeScript Error Fixer - Automatically detects and fixes TypeScript errors
- * Runs every 45 minutes as part of the PM2 automation ecosystem
- */
-
+<<<<<<< HEAD
+#!/''usr/bin/env'' node;
+const { execSync, spawn } = require('child_process');
 const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const path = require(`path`);
+const glob = require(`glob`);
 
 class TypeScriptErrorFixer {
   constructor() {
-    this.logFile = path.join(__dirname, '../../logs/typescript-error-fixer.log');
-    this.errorsFixed = 0;
-    this.startTime = new Date();
+    this.projectRoot = process.cwd();
+    // Get automation interval from environment variable (default: 45 minutes)
+=======
+#!/'usr/bin/env' node;
+
+const { execSync, spawn } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
+;
+class TypeScriptErrorFixer {;
+  constructor() {;
+    this.projectRoot = process.cwd();
+    // Get automation interval from environment variable (default: 45 minutes);
+>>>>>>> main
+    this.AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes;
   }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    
-    console.log(logMessage.trim());
-    
-    try {
-      fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {
-      console.error('Failed to write to log file:', error.message);
-    }
+;
+  log(message) {;
+    console.log(`[${new Date().toISOString()}] ${message}`);
   }
+;
+  async runTypeScriptErrorFixer() {;
+    try {this.log(`🔧 Running TypeScript error fixer at ${new Date().toISOString()}`);
+;
+      let fixesApplied = 0;
+<<<<<<< HEAD
 
-  async runTypeCheck() {
-    try {
-      this.log('🔍 Running TypeScript type check...');
-      const result = execSync('npm run type-check', { 
-        encoding: 'utf8',
-        cwd: path.join(__dirname, '../..'),
-        stdio: 'pipe'
-      });
-      this.log('✅ TypeScript check completed successfully - no errors found');
-      return { success: true, output: result };
-    } catch (error) {
-      const output = error.stdout || error.stderr || '';
-      this.log('⚠️  TypeScript check found errors, analyzing...');
-      return { success: false, output };
-    }
-  }
+      // 1. Fix TypeScript compilation errors;
+      this.log(`🔧 Fixing TypeScript compilation errors...`);
+      fixesApplied += await this.fixTypeScriptCompilationErrors();
 
-  async fixTypeScriptErrors() {
-    try {
-      this.log('🔧 Attempting to fix TypeScript errors...');
-      
-      // Run the type check to see current errors
-      const typeCheckResult = await this.runTypeCheck();
-      
-      if (typeCheckResult.success) {
-        this.log('✅ No TypeScript errors to fix');
-        return true;
-      }
+      // 2. Fix type annotation errors;
+      this.log(`🔧 Fixing type annotation errors...`);
+      fixesApplied += await this.fixTypeAnnotationErrors();
 
-      // Parse TypeScript errors
-      const errors = this.parseTypeScriptErrors(typeCheckResult.output);
-      
-      if (errors.length === 0) {
-        this.log('✅ No TypeScript errors detected in output');
-        return true;
-      }
+      // 3. Fix interface and type definition errors;
+      this.log('🔧 Fixing interface and type definition errors...');
+      fixesApplied += await this.fixInterfaceTypeErrors();
 
-      this.log(`🔍 Found ${errors.length} TypeScript errors`);
-      
-      // Try to fix common TypeScript issues
-      for (const error of errors) {
-        if (await this.fixTypeScriptError(error)) {
-          this.errorsFixed++;
+      // 4. Fix ''import/export'' errors;
+      this.log('🔧 Fixing ''import/export'' errors...');
+      fixesApplied += await this.fixImportExportErrors();
+
+=======
+;
+      // 1. Fix TypeScript compilation errors;
+      this.log('🔧 Fixing TypeScript compilation errors...');
+      fixesApplied += await this.fixTypeScriptCompilationErrors();
+;
+      // 2. Fix type annotation errors;
+      this.log('🔧 Fixing type annotation errors...');
+      fixesApplied += await this.fixTypeAnnotationErrors();
+;
+      // 3. Fix interface and type definition errors;
+      this.log('🔧 Fixing interface and type definition errors...');
+      fixesApplied += await this.fixInterfaceTypeErrors();
+;
+      // 4. Fix 'import/export' errors;
+      this.log('🔧 Fixing 'import/export' errors...');
+      fixesApplied += await this.fixImportExportErrors();
+;
+>>>>>>> main
+      // 5. Run TypeScript compiler to check for remaining errors;
+      this.log('🔧 Running TypeScript compiler check...');
+      try {;
+        const result = await this.runCommand('npm', { args: ['run', 'type-check'] });
+        this.log('No TypeScript errors detected');
+        return [];
+<<<<<<< HEAD
+      } catch (error) {  
+        this.log(⚠️  TypeScript compilation still has issues, but fixes were applied'
+        );
         }
-      }
 
-      this.log(`✅ Fixed ${this.errorsFixed} TypeScript errors`);
-      return true;
-      
-    } catch (error) {
-      this.log(`❌ Error during TypeScript error fixing: ${error.message}`);
-      return false;
-    }
-  }
+      // Generate TypeScript error fixer report;
+      this.log('📊 Generating TypeScript error fixer report...');
+      const report = {
+        timestamp: new Date().toISOString(),
+        fixesApplied: fixesApplied,
+        summary: 'TypeScript error fixer completed`,
+        status: `completed`,
+      };
 
-  parseTypeScriptErrors(output) {
-    const errors = [];
-    const lines = output.split('\n');
-    
-    for (const line of lines) {
-      // Match TypeScript error format: file.ts:line:column - error message
-      const match = line.match(/(.+\.tsx?):(\d+):(\d+)\s*-\s*(.+)/);
-      if (match) {
-        errors.push({
-          file: match[1],
-          line: parseInt(match[2]),
-          column: parseInt(match[3]),
-          message: match[4].trim(),
-          fullLine: line
-        });
-      }
-    }
-    
-    return errors;
-  }
-
-  async fixTypeScriptError(error) {
-    try {
-      this.log(`🔧 Attempting to fix: ${error.file}:${error.line} - ${error.message}`);
-      
-      // Check if file exists
-      if (!fs.existsSync(error.file)) {
-        this.log(`⚠️  File not found: ${error.file}`);
-        return false;
-      }
-
-      // Read file content
-      const content = fs.readFileSync(error.file, 'utf8');
-      const lines = content.split('\n');
-      
-      if (error.line > lines.length) {
-        this.log(`⚠️  Line ${error.line} is beyond file length`);
-        return false;
-      }
-
-      const targetLine = lines[error.line - 1];
-      let fixedLine = targetLine;
-      let wasFixed = false;
-
-      // Apply common TypeScript fixes
-      if (error.message.includes('Cannot find module')) {
-        // Fix import issues
-        fixedLine = await this.fixImportIssue(targetLine, error.message);
-        wasFixed = true;
-      } else if (error.message.includes('Property') && error.message.includes('does not exist')) {
-        // Fix property access issues
-        fixedLine = this.fixPropertyAccessIssue(targetLine, error.message);
-        wasFixed = true;
-      } else if (error.message.includes('Type') && error.message.includes('is not assignable')) {
-        // Fix type assignment issues
-        fixedLine = this.fixTypeAssignmentIssue(targetLine, error.message);
-        wasFixed = true;
-      } else if (error.message.includes('Parameter') && error.message.includes('implicitly has an')) {
-        // Fix implicit any parameter issues
-        fixedLine = this.fixImplicitAnyIssue(targetLine, error.message);
-        wasFixed = true;
-      }
-
-      // Apply the fix if something was changed
-      if (wasFixed && fixedLine !== targetLine) {
-        lines[error.line - 1] = fixedLine;
-        fs.writeFileSync(error.file, lines.join('\n'));
-        this.log(`✅ Fixed line ${error.line} in ${error.file}`);
-        return true;
-      } else if (wasFixed) {
-        this.log(`ℹ️  No changes needed for line ${error.line}`);
-        return true;
-      } else {
-        this.log(`⚠️  No automatic fix available for: ${error.message}`);
-        return false;
-      }
-      
-    } catch (error) {
-      this.log(`❌ Failed to fix TypeScript error: ${error.message}`);
-      return false;
-    }
-  }
-
-  async fixImportIssue(line, message) {
-    // Extract module name from error message
-    const moduleMatch = message.match(/Cannot find module ['"]([^'"]+)['"]/);
-    if (!moduleMatch) return line;
-
-    const missingModule = moduleMatch[1];
-    
-    // Try to fix common import issues
-    if (missingModule.startsWith('@/')) {
-      // Fix path alias imports
-      return line.replace(
-        new RegExp(`from ['"]${missingModule}['"]`, 'g'),
-        `from '${missingModule.replace('@/', './')}'`
+      const reportPath = path.join(
+        process.cwd(),typescript-error-fixer-report.json`
       );
-    } else if (missingModule.includes('react')) {
-      // Fix React imports
-      return line.replace(
-        /import React from ['"]react['"]/g,
-        "import React from 'react'"
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(`✅ TypeScript error fixer report saved to ${reportPath}`);
+
+      this.log(✅ TypeScript error fixer completed successfully. Applied ${fixesApplied} fixes.`
       );
-    }
-    
-    return line;
-  }
-
-  fixPropertyAccessIssue(line, message) {
-    // Extract property name from error message
-    const propertyMatch = message.match(/Property ['"]([^'"]+)['"] does not exist/);
-    if (!propertyMatch) return line;
-
-    const propertyName = propertyMatch[1];
-    
-    // Add optional chaining for property access
-    return line.replace(
-      new RegExp(`(\\w+)\\.${propertyName}`, 'g'),
-      `$1?.${propertyName}`
-    );
-  }
-
-  fixTypeAssignmentIssue(line, message) {
-    // Add type assertions for assignment issues
-    return line.replace(
-      /(\w+)\s*=\s*([^;]+);/g,
-      '$1 = $2 as any;'
-    );
-  }
-
-  fixImplicitAnyIssue(line, message) {
-    // Extract parameter name from error message
-    const paramMatch = message.match(/Parameter ['"]([^'"]+)['"] implicitly has an/);
-    if (!paramMatch) return line;
-
-    const paramName = paramMatch[1];
-    
-    // Add explicit any type for parameters
-    return line.replace(
-      new RegExp(`\\(([^)]*${paramName}[^)]*)\\)`, 'g'),
-      (match, params) => {
-        return params.replace(
-          new RegExp(`\\b${paramName}\\b(?!\\s*:)`, 'g'),
-          `${paramName}: any`
+    } catch (error) {  
+      this.log(`❌ TypeScript error fixer failed: ${error.message  }`);
+=======
+      } catch (error) {;
+        this.log(⚠️  TypeScript compilation still has issues, but fixes were applied';
         );
       }
-    );
-  }
-
-  async run() {
-    this.log('🚀 TypeScript Error Fixer starting...');
-    
-    try {
-      // Ensure logs directory exists
-      const logsDir = path.dirname(this.logFile);
-      if (!fs.existsSync(logsDir)) {
-        fs.mkdirSync(logsDir, { recursive: true });
-      }
-
-      // Run the main fixing logic
-      const success = await this.fixTypeScriptErrors();
-      
-      const endTime = new Date();
-      const duration = endTime - this.startTime;
-      
-      this.log(`🏁 TypeScript Error Fixer completed in ${duration}ms`);
-      this.log(`📊 Summary: Fixed ${this.errorsFixed} errors`);
-      
-      if (success) {
-        this.log('✅ TypeScript Error Fixer completed successfully');
-        process.exit(0);
-      } else {
-        this.log('⚠️  TypeScript Error Fixer completed with warnings');
-        process.exit(1);
-      }
-      
-    } catch (error) {
-      this.log(`❌ TypeScript Error Fixer failed: ${error.message}`);
-      process.exit(1);
+;
+      // Generate TypeScript error fixer report;
+      this.log('📊 Generating TypeScript error fixer report...');
+      const report = {;
+        timestamp: new Date().toISOString(),;
+        fixesApplied: fixesApplied,;
+        summary: 'TypeScript error fixer completed',;
+        status: 'completed',;
+      };
+;
+      const reportPath = path.join(;
+        process.cwd(),typescript-error-fixer-report.json';
+      );
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(`✅ TypeScript error fixer report saved to ${reportPath}');
+;
+      this.log(✅ TypeScript error fixer completed successfully. Applied ${fixesApplied} fixes.';
+      );
+    } catch (error) {;
+      this.log(`❌ TypeScript error fixer failed: ${error.message}');
+>>>>>>> main
     }
   }
+;
+  async fixTypeScriptCompilationErrors() {;
+    let fixes = 0;
+<<<<<<< HEAD
+
+    // Fix files with TypeScript compilation errors;
+    const filesToFix = [```src/components/MobileExperienceEnhancer.tsx'''', '''src/components/ModernUIEnhancer.tsx''', '''src/components/NotificationSystem.tsx'''', '''src/components/PerformanceOptimizedLoader.tsx''', '''src/components/ProjectManagementTimeline.tsx'''', '''src/components/ResourceManagementSystem.tsx''', '''src/components/ServicesOverview.tsx'''', '''src/components/UltimateServicesShowcase.tsx''', '''src/components/UltimateServicesShowcase2025.tsx'''', '''src/context/auth/AuthContext.tsx''', '''src/context/auth/profileMapper.ts'''', '''src/context/auth/useAuthEventHandlers.ts''', '''src/context/auth/useAuthState.ts'''', '''src/hooks/usePerformanceOptimization.ts''', '''src/layout/AppHeader.tsx'''', '''src/layout/AppLayout.tsx''', '''src/layout/MainNavigation.tsx'''', '''src/layout/PrimaryNav.tsx''', '''src/legal/TermsOfService.tsx'''', '''src/pages/AIServicesPage.tsx''', '''src/pages/ForgotPassword.tsx'''', '''src/pages/admin/SupportRequests.tsx''', ''];
+
+    for (const filePath of filesToFix) {
+      if (fs.existsSync(filePath)) {
+        try {
+          let content = fs.readFileSync(filePath, 'utf8');
+          let originalContent = content;
+
+=======
+;
+    // Fix files with TypeScript compilation errors;
+    const filesToFix = [''src/components/MobileExperienceEnhancer.tsx'', ''src/components/ModernUIEnhancer.tsx'', ''src/components/NotificationSystem.tsx'', ''src/components/PerformanceOptimizedLoader.tsx'', ''src/components/ProjectManagementTimeline.tsx'', ''src/components/ResourceManagementSystem.tsx'', ''src/components/ServicesOverview.tsx'', ''src/components/UltimateServicesShowcase.tsx'', ''src/components/UltimateServicesShowcase2025.tsx'', ''src/context/auth/AuthContext.tsx'', ''src/context/auth/profileMapper.ts'', ''src/context/auth/useAuthEventHandlers.ts'', ''src/context/auth/useAuthState.ts'', ''src/hooks/usePerformanceOptimization.ts'', ''src/layout/AppHeader.tsx'', ''src/layout/AppLayout.tsx'', ''src/layout/MainNavigation.tsx'', ''src/layout/PrimaryNav.tsx'', ''src/legal/TermsOfService.tsx'', ''src/pages/AIServicesPage.tsx'', ''src/pages/ForgotPassword.tsx'', ''src/pages/admin/SupportRequests.tsx'', '];
+;
+    for (const filePath of filesToFix) {;
+      if (fs.existsSync(filePath)) {;
+        try {;
+          let content = fs.readFileSync(filePath, 'utf8');
+          let originalContent = content;
+;
+>>>>>>> main
+          // Fix 'any' type annotations with proper types;
+          content = content.replace(/:\s*any'/g, ': string');
+          content = content.replace(/:\s*'anyany/g', ': any');
+          content = content.replace(/:\s*'anystring/g', ': string');
+          content = content.replace(/:\s*anykeyof\s+(\w+)/g, ': keyof $1');
+          content = content.replace(/:\s*any\(\)/g, ': () => void');
+          content = content.replace(/:\s*any\(/g, ': (');
+          content = content.replace(/:\s*any\s*=>/g, ': ');
+          content = content.replace(/:\s*any\s*{/g, ': {');
+          content = content.replace(/:\s*any\s*;/g, ': any;');
+<<<<<<< HEAD
+
+=======
+;
+>>>>>>> main
+          // Fix missing semicolons and colons;
+          content = content.replace(/\(\s*\)\s*=>\s*{/g, '() => {');
+          content = content.replace(/:\s*{\s*;/g, ': {');
+          content = content.replace(/:\s*{\s*}/g, ': {}');
+<<<<<<< HEAD
+
+=======
+;
+>>>>>>> main
+          // Fix property signatures;
+          content = content.replace(/action\?\s*:\s*{\s*;/g, 'action?: {');
+          content = content.replace(/lastPost\?\s*:\s*{\s*;/g, 'lastPost?: {');
+          content = content.replace(/post\s*:\s*{\s*;/g, 'post: {');
+          content = content.replace(/author\s*:\s*{\s*;/g, 'author: {');
+          content = content.replace(/contactInfo\s*:\s*{\s*;/g, 'contactInfo: {');
+          content = content.replace(;
+            /coreWebVitals\s*:\s*{\s*;/g,coreWebVitals: {';
+          );
+<<<<<<< HEAD
+
+          // Fix function signatures;
+          content = content.replace(
+            /logout:\s*any\(\)\s*=>\s*Promise<any>;/g,
+            'logout: () => Promise<any>;'
+=======
+;
+          // Fix function signatures;
+          content = content.replace(;
+            /logout:\s*any\(\)\s*=>\s*Promise<any>;/g,;
+            'logout: () => Promise<any>;';
+>>>>>>> main
+          );
+          content = content.replace(;
+            /resetPassword:\s*any\(email:\s*string\)\s*=>\s*Promise<any>;/g,resetPassword: (email: string) => Promise<any>;';
+          );
+          content = content.replace(;
+            /updateProfile:\s*any\(updates:\s*Partial<User>\)\s*=>\s*Promise<any>;/g,;
+            'updateProfile: (updates: Partial<User>) => Promise<any>;';
+          );
+          content = content.replace(;
+            /loginWithGoogle:\s*any\(\)\s*=>\s*Promise<any>;/g,loginWithGoogle: () => Promise<any>;';
+          );
+          content = content.replace(;
+            /loginWithFacebook:\s*any\(\)\s*=>\s*Promise<any>;/g,;
+            'loginWithFacebook: () => Promise<any>;';
+          );
+          content = content.replace(;
+            /loginWithTwitter:\s*any\(\)\s*=>\s*Promise<any>;/g,loginWithTwitter: () => Promise<any>;';
+          );
+          content = content.replace(;
+            /loginWithWeb3:\s*any\(\)\s*=>\s*Promise<any>;/g,;
+            'loginWithWeb3: () => Promise<any>;';
+          );
+<<<<<<< HEAD
+
+          // Fix callback function types;
+          content = content.replace(
+            /setUser:\s*any\(user:\s*User\s*\|\s*null\)\s*=>\s*''void/g'',setUser: (user: User | null) => void'
+=======
+;
+          // Fix callback function types;
+          content = content.replace(;
+            /setUser:\s*any\(user:\s*User\s*\|\s*null\)\s*=>\s*'void/g',setUser: (user: User | null) => void';
+>>>>>>> main
+          );
+          content = content.replace(;
+            /setOnboardingStep:\s*any\(step:\s*number\)\s*=>\s*'void/g',;
+            'setOnboardingStep: (step: number) => void';
+          );
+<<<<<<< HEAD
+
+          // Fix specific type errors;
+          content = content.replace(
+            /onClearAll:\s*any\(\)\s*=>\s*void;/g,onClearAll: () => void;'
+=======
+;
+          // Fix specific type errors;
+          content = content.replace(;
+            /onClearAll:\s*any\(\)\s*=>\s*void;/g,onClearAll: () => void;';
+>>>>>>> main
+          );
+          content = content.replace(;
+            /onClearFilters:\s*any\(\)\s*=>\s*void;/g,;
+            'onClearFilters: () => void;';
+          );
+          content = content.replace(;
+            /removeNotification:\s*any\(id:\s*string\)\s*=>\s*void;/g,removeNotification: (id: string) => void;';
+          );
+          content = content.replace(;
+            /clearAll:\s*any\(\)\s*=>\s*void;/g,;
+            'clearAll: () => void;';
+          );
+<<<<<<< HEAD
+
+          // Fix JSX expressions;
+          content = content.replace(
+            /transition=\{\{\s*duration:\s*any(\d+\.?\d*),\s*delay:\s*(\d+\.?\d*)\s*\}\}/g,transition={{ duration: $1, delay: $2 }}'
+=======
+;
+          // Fix JSX expressions;
+          content = content.replace(;
+            /transition=\{\{\s*duration:\s*any(\d+\.?\d*),\s*delay:\s*(\d+\.?\d*)\s*\}\}/g,transition={{ duration: $1, delay: $2 }}';
+>>>>>>> main
+          );
+          content = content.replace(/color:\s*any'([^']+)'/g, "color: '$1'");
+          content = content.replace(/icon:\s*any'([^']+)'/g, "icon: '$1'");
+          content = content.replace(/id:\s*any'([^']+)'/g, "id: '$1'");
+          content = content.replace(;
+            /property:\s*any'([^']+)'/g,property: '$1'";
+          );
+<<<<<<< HEAD
+          content = content.replace(/rel:\s*any'([^']+)'/g, "rel: `$1``);
+
+          // Fix specific component errors;
+          content = content.replace(
+            /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,const $1: React.FC = () => {`
+=======
+          content = content.replace(/rel:\s*any'([^']+)'/g, "rel: '$1');
+;
+          // Fix specific component errors;
+          content = content.replace(;
+            /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,const $1: React.FC = () => {';
+>>>>>>> main
+          );
+;
+          if (content !== originalContent) {;
+            fs.writeFileSync(filePath, content);
+            fixes++;this.log(`  ✅ Fixed TypeScript errors in ${filePath}`);
+          }
+        } catch (error) {  this.log(`  ⚠️  Could not fix ${filePath  }: ${error.message}`);
+        }
+      }
+    }
+;
+    return fixes;
+  }
+;
+  async fixTypeAnnotationErrors() {;
+    let fixes = 0;
+<<<<<<< HEAD
+
+    // Fix specific type annotation issues;
+    const filesToFix = [```src/context/auth/useAuthState.ts'''', '''src/hooks/usePerformanceOptimization.ts''', '''src/utils/tokenRewards.ts'''', ''];
+
+    for (const filePath of filesToFix) {
+      if (fs.existsSync(filePath)) {
+        try {
+          let content = fs.readFileSync(filePath, 'utf8');
+          let originalContent = content;
+
+          // Fix specific type errors;
+          content = content.replace(/''anynull/g'', 'null');
+          content = content.replace(
+            /''IntersectionObserverCallback/g'',IntersectionObserverCallback'
+          );
+          content = content.replace(/''NodeJS/g'', 'NodeJS');
+          content = content.replace(/''apiClient/g``, `apiClient`);
+
+          if (content !== originalContent) {
+=======
+;
+    // Fix specific type annotation issues;
+    const filesToFix = [''src/context/auth/useAuthState.ts'', ''src/hooks/usePerformanceOptimization.ts'', ''src/utils/tokenRewards.ts'', '];
+;
+    for (const filePath of filesToFix) {;
+      if (fs.existsSync(filePath)) {;
+        try {;
+          let content = fs.readFileSync(filePath, 'utf8');
+          let originalContent = content;
+;
+          // Fix specific type errors;
+          content = content.replace(/'anynull/g', 'null');
+          content = content.replace(;
+            /'IntersectionObserverCallback/g',IntersectionObserverCallback';
+          );
+          content = content.replace(/'NodeJS/g', 'NodeJS');
+          content = content.replace(/'apiClient/g', 'apiClient');
+;
+          if (content !== originalContent) {;
+>>>>>>> main
+            fs.writeFileSync(filePath, content);
+            fixes++;
+            this.log(`  ✅ Fixed type annotation errors in ${filePath}`);
+          }
+        } catch (error) {  this.log(`  ⚠️  Could not fix ${filePath  }: ${error.message}`);
+        }
+      }
+    }
+;
+    return fixes;
+  }
+;
+  async fixInterfaceTypeErrors() {;
+    let fixes = 0;
+<<<<<<< HEAD
+
+    // Fix interface and type definition issues;
+    const filesToFix = [```src/components/NotificationSystem.tsx'''', '''src/components/ui/EnhancedNotificationSystem.tsx''', '''src/components/ui/form.tsx'''', ''];
+
+    for (const filePath of filesToFix) {
+      if (fs.existsSync(filePath)) {
+        try {
+          let content = fs.readFileSync(filePath, 'utf8');
+          let originalContent = content;
+
+=======
+;
+    // Fix interface and type definition issues;
+    const filesToFix = [''src/components/NotificationSystem.tsx'', ''src/components/ui/EnhancedNotificationSystem.tsx'', ''src/components/ui/form.tsx'', '];
+;
+    for (const filePath of filesToFix) {;
+      if (fs.existsSync(filePath)) {;
+        try {;
+          let content = fs.readFileSync(filePath, 'utf8');
+          let originalContent = content;
+;
+>>>>>>> main
+          // Fix interface property definitions;
+          content = content.replace(/action\?\s*:\s*{\s*;/g, 'action?: {');
+          content = content.replace(;
+            /success:\s*any\(title:\s*string,\s*message:\s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,success: (title: string, message: string, options?: Partial<Notification>) => {';
+          );
+          content = content.replace(;
+            /warning:\s*any\(title:\s*string,\s*message:\s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,;
+            'warning: (title: string, message: string, options?: Partial<Notification>) => {';
+          );
+          content = content.replace(;
+            /error:\s*\(title:\s*string,\s*message:\s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,error: (title: string, message: string, options?: Partial<Notification>) => {';
+          );
+          content = content.replace(;
+            /info:\s*\(title:\s*string,\s*message:\s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,;
+            'info: (title: string, message: string, options?: Partial<Notification>) => {';
+          );
+<<<<<<< HEAD
+          content = content.replace(
+            /achievement:\s*\(title:\s*string,\s*message:\s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,achievement: (title: string, message: string, options?: Partial<Notification>) => {`
+          );
+
+          // Fix form field type;
+          content = content.replace(/field:\s*any\{/g, `field: {`);
+          content = content.replace(
+            /onChange:\s*\(\)\s*=>\s*\{\s*\}\s*\}/g,onChange: () => {} }`
+=======
+          content = content.replace(;
+            /achievement:\s*\(title:\s*string,\s*message:\s*string,\s*options\?\s*:\s*Partial<Notification>\)\s*=>\s*{/g,achievement: (title: string, message: string, options?: Partial<Notification>) => {';
+          );
+;
+          // Fix form field type;
+          content = content.replace(/field:\s*any\{/g, 'field: {');
+          content = content.replace(;
+            /onChange:\s*\(\)\s*=>\s*\{\s*\}\s*\}/g,onChange: () => {} }';
+>>>>>>> main
+          );
+;
+          if (content !== originalContent) {;
+            fs.writeFileSync(filePath, content);
+            fixes++;
+            this.log(`  ✅ Fixed interface type errors in ${filePath}`);
+          }
+        } catch (error) {  this.log(`  ⚠️  Could not fix ${filePath  }: ${error.message}`);
+        }
+      }
+    }
+;
+    return fixes;
+  }
+;
+  async fixImportExportErrors() {;
+    let fixes = 0;
+<<<<<<< HEAD
+
+    // Fix ``import/export`' issues;
+    const filesToFix = ['''src/pages/AIServicesPage.tsx'''', '''src/utils/testing-system.tsx''', ''];
+
+    for (const filePath of filesToFix) {
+      if (fs.existsSync(filePath)) {
+        try {
+          let content = fs.readFileSync(filePath, 'utf8');
+          let originalContent = content;
+
+          // Fix import statements;
+          content = content.replace(
+            /import\s+\{\s*Brain,\s*Database,\s*Zap,\s*Shield,\s*BarChart3,\s*MessageSquare,\s*Code,\s*Globe,\s*Server,\s*Eye,\s*FileText,\s*CheckCircle,\s*Users,\s*Lock,\s*Search\s*\}\s*from\s*'lucide-react';/g,import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';'
+          );
+
+          // Fix export statements;
+          content = content.replace(
+            /export\s+default\s+AIServicesPage;\s*$/g,export default AIServicesPage;'
+          );
+
+          // Fix function declarations;
+          content = content.replace(
+            /const\s+AIServicesPage:\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,
+            'const AIServicesPage: React.FC = () => {'
+=======
+;
+    // Fix 'import/export' issues;
+    const filesToFix = [''src/pages/AIServicesPage.tsx'', ''src/utils/testing-system.tsx'', '];
+;
+    for (const filePath of filesToFix) {;
+      if (fs.existsSync(filePath)) {;
+        try {;
+          let content = fs.readFileSync(filePath, 'utf8');
+          let originalContent = content;
+;
+          // Fix import statements;
+          content = content.replace(;
+            /import\s+\{\s*Brain,\s*Database,\s*Zap,\s*Shield,\s*BarChart3,\s*MessageSquare,\s*Code,\s*Globe,\s*Server,\s*Eye,\s*FileText,\s*CheckCircle,\s*Users,\s*Lock,\s*Search\s*\}\s*from\s*'lucide-react';/g,import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';';
+          );
+;
+          // Fix export statements;
+          content = content.replace(;
+            /export\s+default\s+AIServicesPage;\s*$/g,export default AIServicesPage;';
+          );
+;
+          // Fix function declarations;
+          content = content.replace(;
+            /const\s+AIServicesPage:\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,;
+            'const AIServicesPage: React.FC = () => {';
+>>>>>>> main
+          );
+;
+          if (content !== originalContent) {;
+            fs.writeFileSync(filePath, content);
+            fixes++;
+<<<<<<< HEAD
+            this.log(`  ✅ Fixed ``import/export`` errors in ${filePath}`);
+=======
+            this.log(`  ✅ Fixed 'import/export' errors in ${filePath}`);
+>>>>>>> main
+          }
+        } catch (error) {  this.log(`  ⚠️  Could not fix ${filePath  }: ${error.message}`);
+        }
+      }
+    }
+;
+    return fixes;
+  }
+<<<<<<< HEAD
+
+  async runCommand(command, options = {}) {
+    try {this.log(`Running command: ${command} ${options.args ? options.args.join(' ') : ''}`);const result = execSync(`${command} ${options.args ? options.args.join(` `) : ``}`, {
+        stdio: `inherit`,
+        cwd: this.projectRoot,
+=======
+;
+  async runCommand(command, options = {}) {;
+    try {this.log(`Running command: ${command} ${options.args ? options.args.join(' ') : '}`);const result = execSync(`${command} ${options.args ? options.args.join(' ') : '}`, {;
+        stdio: 'inherit',;
+        cwd: this.projectRoot,;
+>>>>>>> main
+      });this.log(`Command finished with exit code ${result.status}`);
+      return result;
+    } catch (error) {  this.log(`Command failed: ${error.message  }`);
+      throw error;
+    }
+  }
+<<<<<<< HEAD
+
+  async generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      fixesApplied: 0, // This will be updated by runTypeScriptErrorFixer;
+      summary: `TypeScript error fixer report`,
+      status: `completed`,
+=======
+;
+  async generateReport() {;
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      fixesApplied: 0, // This will be updated by runTypeScriptErrorFixer;
+      summary: 'TypeScript error fixer report',;
+      status: 'completed',;
+>>>>>>> main
+    };
+    return report;
+  }
+}
+<<<<<<< HEAD
+
+console.log(``🔧 Starting TypeScript error fixer automation...`);
+=======
+<<<<<<< HEAD
+;
+console.log(`'🔧 Starting TypeScript error fixer automation...');
+;
+=======
+>>>>>>> main
+
+console.log(`🔧 Starting TypeScript error fixer automation...`);
+
+>>>>>>> main
+const errorFixer = new TypeScriptErrorFixer();
+<<<<<<< HEAD
+
+// Main continuous loop;
+async function runContinuous() {
+  console.log(🚀 Starting TypeScript error fixer with ${errorFixer.AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
+  );
+
+  // Run initial error fixer;
+  await errorFixer.runTypeScriptErrorFixer();
+
+  // Set up continuous execution;
+  setInterval(async () => {
+    await errorFixer.runTypeScriptErrorFixer();
+  }, errorFixer.AUTOMATION_INTERVAL);
+
+  console.log( ✅ TypeScript error fixer running. Next check in ${errorFixer.AUTOMATION_INTERVAL / 1000 / 60} minutes;
+  `);
 }
 
-// Run the fixer if this script is executed directly
-if (require.main === module) {
-  const fixer = new TypeScriptErrorFixer();
-  fixer.run();
+// Handle graceful shutdown;
+process.on(`SIGINT`, () => {
+  console.log(`🛑 Received SIGINT, shutting down gracefully...');
+=======
+;
+// Main continuous loop;
+async function runContinuous() {;
+  console.log(🚀 Starting TypeScript error fixer with ${errorFixer.AUTOMATION_INTERVAL / 1000 / 60} minute intervals';
+  );
+;
+  // Run initial error fixer;
+  await errorFixer.runTypeScriptErrorFixer();
+;
+  // Set up continuous execution;
+  setInterval(async () => {;
+    await errorFixer.runTypeScriptErrorFixer();
+  }, errorFixer.AUTOMATION_INTERVAL);
+;
+  console.log( ✅ TypeScript error fixer running. Next check in ${errorFixer.AUTOMATION_INTERVAL / 1000 / 60} minutes;
+  `);
 }
+;
+// Handle graceful shutdown;
+process.on('SIGINT', () => {;
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
+>>>>>>> main
+  process.exit(0);
+});
+;
+process.on('SIGTERM', () => {;
+  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+<<<<<<< HEAD
 
-module.exports = TypeScriptErrorFixer;
+// Start the TypeScript error fixer;
+runContinuous().catch(error => {
+=======
+;
+// Start the TypeScript error fixer;
+runContinuous().catch(error => {;
+>>>>>>> main
+  console.error('❌ Failed to start TypeScript error fixer:', error);
+  process.exit(1);
+});

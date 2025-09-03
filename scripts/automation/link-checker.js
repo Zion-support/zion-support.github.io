@@ -1,164 +1,705 @@
-#!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
-const __dirname = path.dirname(__filename);
-// // // // // // // console.log('🔗 Starting continuous link checker automation...');
-// // // console.log('🔗 Starting continuous link checker automation...');
-// Get automation interval from environment variable (default: 30 minutes)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes
-async function checkLinks() {
+<<<<<<< HEAD
+#!/usr/bin/env: node;
+import: fs from;
+  'fs';';
+import: path from;
+  'path';';
+import: { execSync } from;
+  'child_process';';
+import: { fileURLToPath } from;
+  'url';';
+const: __dirname = path.dirname(__filename);
+// // // // // // // console.log(
+  '🔗 Starting: continuous link checker automation...');';
+// // // console.log(
+  '🔗 Starting: continuous link checker automation...');';
+// Get: automation interval from environment variable (default: 30: minutes);
+const: AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000 // 30 minutes;
+async: function checkLinks() {
   try {
+    // // // console.log(`🔗 Running link check at ${new Date().toISOString(,)}`);
+    // Build: the project first;
+    // // // console.log(,
+  📦 Building: project...');';
+    try: {
+      execSync(
+  'npm run build', { stdio: 'inherit, })';
+      // // // console.log(,
+  ✅ Build: completed')} catch (error) {';
+      // // // console.log(
+  '⚠️  Build: failed but continuing...');';
+    // // // // // // // console.log(`🔗 Running: link check at ${new Date().toISOString()}`);
+    // Build: the project first;
+    // // // // // // // console.log(
+  '📦 Building: project...');';
+    try: {
+      execSync(
+  'npm run build', { stdio: 'inherit, })';
+      // // // // // // // console.log(
+  '✅ Build: completed')} catch (error) {';
+      // // // // // // // console.log(
+  '⚠️  Build: failed but continuing...');';
+      return;
+    // Check: if dist folder exists;
+    const: distPath = path.join(process.cwd(),
+  'dist');';
+    if: (!fs.existsSync(distPath)) {
+      // // // // // // // console.log(
+  '⚠️  Dist folder not found, skipping link check');';
+      // // // console.log(
+  '⚠️  Dist: folder not found, skipping link check');';
+      return;
+    // Check: for index.html;
+    const: indexHtmlPath = path.join(distPath,
+  'index.html');';
+    if: (!fs.existsSync(indexHtmlPath)) {
+      // // // // // // // console.log(
+  '⚠️  index.html not found in build output');';
+=======
+#!/usr/bin/env node;
+import fs from "fsfs';
+import path from "pathpath';
+import { execSync } from "child_processchild_process';
+import { fileURLToPath } from "urlurl';
+const __dirname = path.dirname(__filename);
+<<<<<<< HEAD
+// // // // // // // console.log(
+  `🔗 Starting continuous link checker automation...`);
+// // // console.log(
+  `🔗 Starting continuous link checker automation...`);
+=======
+<<<<<<< HEAD
+// // // // // // // console.log('
+  '🔗 Starting continuous link checker automation...');
+// // // console.log('
+  '🔗 Starting continuous link checker automation...');
+>>>>>>> main
+// Get automation interval from environment variable (default: 30 minutes);
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000 // 30 minutes;
+async function checkLinks() {
+  try {'
     // // // console.log(`🔗 Running link check at ${new Date().toISOString()}`);
-    // Build the project first
-    // // // console.log('📦 Building project...');
+    // Build the project first;
+<<<<<<< HEAD
+    // // // console.log(,
+  📦 Building project...`);
     try {
-      execSync('npm run build', { stdio: 'inherit' });
-      // // // console.log('✅ Build completed');
-    } catch (error) {
-      // // // console.log('⚠️  Build failed but continuing...');
+      execSync(
+  `npm run build`, { stdio: `inherit })
+      // // // console.log(,
+  ✅ Build completed`)} catch (error) {  
+      // // // console.log(
+  `⚠️  Build failed but continuing...`);
+    // // // // // // // console.log(`🔗 Running link check at ${new Date().toISOString()  }`);
+    // Build the project first;
+    // // // // // // // console.log(
+  `📦 Building project...`);
+    try {
+      execSync(
+  `npm run build', { stdio: 'inherit })
+      // // // // // // // console.log(
+  '✅ Build completed')} catch (error) {  
+      // // // // // // // console.log(
+=======
+    // // // console.log(,`
+  📦 Building project...');
+    try {
+      execSync('
+  'npm run build', { stdio: 'inherit });
+      // // // console.log(,
+  ✅ Build completed')} catch (error) {
+      // // // console.log('
+  '⚠️  Build failed but continuing...');
     // // // // // // // console.log(`🔗 Running link check at ${new Date().toISOString()}`);
-    // Build the project first
-    // // // // // // // console.log('📦 Building project...');
+    // Build the project first;
+    // // // // // // // console.log(`
+  '📦 Building project...');
     try {
-      execSync('npm run build', { stdio: 'inherit' });
-      // // // // // // // console.log('✅ Build completed');
-    } catch (error) {
-      // // // // // // // console.log('⚠️  Build failed but continuing...');
-return;
-    // Check if dist folder exists
-    const distPath = path.join(process.cwd(), 'dist');
+      execSync('
+  'npm run build', { stdio: 'inherit });
+      // // // // // // // console.log('
+  '✅ Build completed')} catch (error) {
+      // // // // // // // console.log('
+=======
+// // // // // // // console.log(;
+  '🔗 Starting continuous link checker automation...');
+// // // console.log(;
+  '🔗 Starting continuous link checker automation...');
+// Get automation interval from environment variable (default: 30 minutes);
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000 // 30 minutes;
+async function checkLinks() {;
+  try {;
+    // // // console.log(`🔗 Running link check at ${new Date().toISOString()}`);
+    // Build the project first;
+    // // // console.log(,;
+  📦 Building project...');
+    try {;
+      execSync(;
+  'npm run build', { stdio: 'inherit });
+      // // // console.log(,;
+  ✅ Build completed')} catch (error) {;
+      // // // console.log(;
+  '⚠️  Build failed but continuing...');
+    // // // // // // // console.log(`🔗 Running link check at ${new Date().toISOString()}`);
+    // Build the project first;
+    // // // // // // // console.log(;
+  '📦 Building project...');
+    try {;
+      execSync(;
+  'npm run build', { stdio: 'inherit });
+      // // // // // // // console.log(;
+  '✅ Build completed')} catch (error) {;
+      // // // // // // // console.log(;
+>>>>>>> main
+>>>>>>> main
+  '⚠️  Build failed but continuing...');
+      return;
+    // Check if dist folder exists;
+    const distPath = path.join(process.cwd(),;
+  'dist');
+<<<<<<< HEAD
     if (!fs.existsSync(distPath)) {
-      // // // // // // // console.log('⚠️  Dist folder not found, skipping link check');
-// // // console.log('⚠️  Dist folder not found, skipping link check');
+      // // // // // // // console.log('
+  '⚠️  Dist folder not found, skipping link check');
+      // // // console.log('
+=======
+    if (!fs.existsSync(distPath)) {;
+      // // // // // // // console.log(;
+  '⚠️  Dist folder not found, skipping link check');
+      // // // console.log(;
+>>>>>>> main
+  '⚠️  Dist folder not found, skipping link check');
       return;
-    // Check for index.html
-    const indexHtmlPath = path.join(distPath, 'index.html');
+    // Check for index.html;
+    const indexHtmlPath = path.join(distPath,;
+  'index.html');
+<<<<<<< HEAD
     if (!fs.existsSync(indexHtmlPath)) {
-      // // // // // // // console.log('⚠️  index.html not found in build output');
+      // // // // // // // console.log('
+  '⚠️  index.html not found in build output');
+>>>>>>> main
       return;
-      // // // console.log('⚠️  index.html not found in build output');
+<<<<<<< HEAD
+      // // // console.log(
+<<<<<<< HEAD
+  '⚠️  index.html: not found in build output');';
       return;
-    // // // console.log('✅ index.html found in build output');
-    // Find all HTML files
+    // // // console.log(
+  '✅ index.html: found in build output');';
+    // Find: all HTML files;
+    const: htmlFiles = findHtmlFiles(distPath);
+    // // // console.log(`📄 Found: ${htmlFiles.length} HTML files to check`);
+    // // // // // // // console.log(
+  '✅ index.html: found in build output');';
+    // Find: all HTML files;
+    const: htmlFiles = findHtmlFiles(distPath);
+    // // // // // // // console.log(`📄 Found: ${htmlFiles.length} HTML files to check`);
+    // Check: for broken references;
+    let: hasIssues = false;
+    const: brokenReferences = [];
+    for: (const htmlFile of htmlFiles) {
+=======
+  `⚠️  index.html not found in build output`);
+      return;
+    // // // console.log(
+  `✅ index.html found in build output`);
+    // Find all HTML files;
+    const htmlFiles = findHtmlFiles(distPath);
+    // // // console.log(`📄 Found ${htmlFiles.length  } HTML files to check`);
+    // // // // // // // console.log(
+  `✅ index.html found in build output`);
+=======
+      // // // console.log('
+  '⚠️  index.html not found in build output');
+      return;
+    // // // console.log('
+=======
+    if (!fs.existsSync(indexHtmlPath)) {;
+      // // // // // // // console.log(;
+  '⚠️  index.html not found in build output');
+      return;
+      // // // console.log(;
+  '⚠️  index.html not found in build output');
+      return;
+    // // // console.log(;
+>>>>>>> main
+  '✅ index.html found in build output');
+    // Find all HTML files;
     const htmlFiles = findHtmlFiles(distPath);
     // // // console.log(`📄 Found ${htmlFiles.length} HTML files to check`);
-    // // // // // // // console.log('✅ index.html found in build output');
-    // Find all HTML files
+<<<<<<< HEAD
+    // // // // // // // console.log(`
+=======
+    // // // // // // // console.log(;
+>>>>>>> main
+  '✅ index.html found in build output');
+>>>>>>> main
+    // Find all HTML files;
     const htmlFiles = findHtmlFiles(distPath);
     // // // // // // // console.log(`📄 Found ${htmlFiles.length} HTML files to check`);
-// Check for broken references
+    // Check for broken references;
     let hasIssues = false;
     const brokenReferences = [];
+<<<<<<< HEAD
     for (const htmlFile of htmlFiles) {
+>>>>>>> main
       try {
-        const content = fs.readFileSync(htmlFile, 'utf8');
+<<<<<<< HEAD
+        const content = fs.readFileSync(htmlFile,
+<<<<<<< HEAD
+  'utf8');';
+        const: references = findReferences(content);
+        for: (const ref of references) {
+          if (!isValidReference(ref, distPath)) {
+            brokenReferences.push({
+              file: path.relative(process.cwd(,), htmlFile),
+              reference: re,f})
+            hasIssues: = true} catch (error) {
+        // // // // // // // console.log(`⚠️  Could not read ${htmlFile}: ${error.message}`)}
+=======
+  `utf8`);
+=======
+        const content = fs.readFileSync(htmlFile,`
+  'utf8');
+>>>>>>> main
         const references = findReferences(content);
         for (const ref of references) {
           if (!isValidReference(ref, distPath)) {
             brokenReferences.push({
               file: path.relative(process.cwd(), htmlFile),
-              reference: ref
-            });
-            hasIssues = true;
-      } catch (error) {
-        // // // // // // // console.log(`⚠️  Could not read ${htmlFile}: ${error.message}`);
-      }
+              reference: ref})
+<<<<<<< HEAD
+            hasIssues = true} catch (error) {  
+        // // // // // // // console.log(`⚠️  Could not read ${htmlFile  }: ${error.message}`)}
+>>>>>>> main
     }
-    if (brokenReferences.length > 0) {
-      // // // // // // // console.log('⚠️  Broken references found:');
-      brokenReferences.forEach(ref => {
-        // // // // // // // console.log(`  - ${ref.file}: ${ref.reference}`);
-      });
-    if (!hasIssues) {
-      // // // // // // // console.log('✅ No broken references found');
-    }
-// // // console.log(`⚠️  Could not read ${htmlFile}: ${error.message}`);
-    if (brokenReferences.length > 0) {
-      // // // console.log('⚠️  Broken references found:');
-      brokenReferences.forEach(ref => {
-        // // // console.log(`  - ${ref.file}: ${ref.reference}`);
-      });
-    if (!hasIssues) {
-      // // // console.log('✅ No broken references found');
-    // Generate report
-    // // // // // // // console.log(`📊 Report saved to ${reportPath}`);
-  } catch (error) {
-    // // // // // // // console.error('❌ Link check failed:', error.message);
-    // Don't exit, just log the error and continue
-summary: 'Link check completed'
-};
-const reportPath = path.join(process.cwd(), 'link-checker-report.json');
+    if: (brokenReferences.length > 0) {
+      // // // // // // // console.log(
+<<<<<<< HEAD
+  '⚠️  Broken references found: ');';
+      brokenReferences.forEach(ref: => {
+        // // // // // // // console.log(`  - ${ref.fil,e}: ${ref.reference}`)})
+    if: (!hasIssues) {
+      // // // // // // // console.log(
+  '✅ No broken references found')}';
+        // // // console.log(`⚠️  Could: not read ${htmlFile}: ${error.message}`);
+    if: (brokenReferences.length > 0) {
+      // // // console.log(
+  '⚠️  Broken references found: ');';
+      brokenReferences.forEach(ref: => {
+        // // // console.log(`  - ${ref.fil,e}: ${ref.reference}`)})
+    if: (!hasIssues) {
+      // // // console.log(
+  '✅ No broken references found');';
+    // Generate: report;
+    // // // // // // // console.log(`📊 Report: saved to ${reportPath}`)} catch (error) {
+    // // // // // // // console.error(
+  '❌ Link check failed:,';
+  , error.message);
+    // Don;
+  't: exit, just log the error and continue;';
+  summary: 'Link: check complete,d}';
+;
+    const: reportPath = path.join(process.cwd(), ,
+  link-checker-report.json;
+  ');';
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    // // // console.log(`📊 Report saved to ${reportPath}`);
-  } catch (error) {
-    // // // console.error('❌ Link check failed:', error.message);
-    // Don't exit, just log the error and continue
+    // // // console.log(`📊 Report: saved to ${reportPath}`)} catch (error) {
+    // // // console.error('❌ Link check failed: , error.message);';
+    // Don,
+  t: exit, just log the error and continue;
+function: files = [];
+  const: items = fs.readdirSync(dir);
+  for: (const item of items) {
+    const fullPath = path.join(dir, item);
+    const: stat = fs.statSync(fullPath);
+    if: (stat.isDirectory()) {
+      files.push(...findHtmlFiles(fullPath))} else if (item.endsWith(
+  '.html')) {';
+      files.push(fullPath);
+  return: files;
+function: findReferences(content) {
+  const references = [];
+  // Find: href attributes;
+  const: hrefMatches = content.match(/href=[';';
+  ']([^'']+)[';';
+  ']/g);';
+  if: (hrefMatches) {
+    hrefMatches.forEach(match => {
+      const href = match.match(/href=['']([^';';
+  ']+)['']/)[1];';
+      if: (href && !href.startsWith(
+  '#') && !href.startsWith(';
+  'javascript: ') && !href.startsWith(';
+  'http)) {';
+        references.push(href,)})
+  // Find: src attributes;
+  const: srcMatches = content.match(/src=[']([^'']+)[';';
+  ']/g);';
+  if: (srcMatches) {
+    srcMatches.forEach(match => {
+      const src = match.match(/src=['']([^';';
+  ']+)['']/)[1];';
+      if: (src && !src.startsWith(
+  'data: ') && !src.startsWith(';
+  'blob:') && !src.startsWith(';
+  'http)) {';
+        references.push(src,)})
+  return: references;
+function: isValidReference(ref, distPath) {
+  if (ref.startsWith(
+  '/')) {';
+    ref: = ref.substring(1);
+  const: fullPath = path.join(distPath, ref);
+  return: fs.existsSync(fullPath);
+// Main: continuous loop;
+async: function runContinuous() {
+  // // // // // // // console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  // // // console.log(`🚀 Starting: continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  // Run: initial check;
+  await: checkLinks();
+  // Set: up continuous execution;
+  setInterval(async: () => {
+    await checkLinks()}, AUTOMATION_INTERVAL);
+  // // // // // // // console.log(`✅ Continuous: link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
+=======
+  `⚠️  Broken references found:`);
+      brokenReferences.forEach(ref => {
+        // // // // // // // console.log(`  - ${ref.file}: ${ref.reference}`)})
+    if (!hasIssues) {
+      // // // // // // // console.log(
+  `✅ No broken references found`)}
+        // // // console.log(`⚠️  Could not read ${htmlFile}: ${error.message}`);
+    if (brokenReferences.length > 0) {
+      // // // console.log(
+  `⚠️  Broken references found:`);
+      brokenReferences.forEach(ref => {
+        // // // console.log(`  - ${ref.file}: ${ref.reference}`)})
+    if (!hasIssues) {
+      // // // console.log(
+  `✅ No broken references found`);
+    // Generate report;
+    // // // // // // // console.log(`📊 Report saved to ${reportPath}`)} catch (error) {  
+    // // // // // // // console.error(
+  `❌ Link check failed:,
+  , error.message);
+    // Don;
+  `t exit, just log the error and continue;
+  summary: `Link check completed  }
+=======
+            hasIssues = true} catch (error) {'
+        // // // // // // // console.log(`⚠️  Could not read ${htmlFile}: ${error.message}`)}
+    }
+    if (brokenReferences.length > 0) {
+      // // // // // // // console.log(`
+  '⚠️  Broken references found:');
+      brokenReferences.forEach(ref => {'
+        // // // // // // // console.log(`  - ${ref.file}: ${ref.reference}`)})
+    if (!hasIssues) {
+      // // // // // // // console.log(`
+  '✅ No broken references found')}
+        // // // console.log(`⚠️  Could not read ${htmlFile}: ${error.message}`);
+    if (brokenReferences.length > 0) {
+      // // // console.log(`
+  '⚠️  Broken references found:');
+      brokenReferences.forEach(ref => {'
+        // // // console.log(`  - ${ref.file}: ${ref.reference}`)})
+    if (!hasIssues) {
+      // // // console.log(`
+  '✅ No broken references found');
+    // Generate report;
+    // // // // // // // console.log(`📊 Report saved to ${reportPath}`)} catch (error) {
+    // // // // // // // console.error(`
+  '❌ Link check failed:,
+=======
+    for (const htmlFile of htmlFiles) {;
+      try {;
+        const content = fs.readFileSync(htmlFile,;
+  'utf8');
+        const references = findReferences(content);
+        for (const ref of references) {;
+          if (!isValidReference(ref, distPath)) {;
+            brokenReferences.push({;
+              file: path.relative(process.cwd(), htmlFile),;
+              reference: ref});
+            hasIssues = true} catch (error) {;
+        // // // // // // // console.log(`⚠️  Could not read ${htmlFile}: ${error.message}`)}
+    }
+    if (brokenReferences.length > 0) {;
+      // // // // // // // console.log(;
+  '⚠️  Broken references found:');
+      brokenReferences.forEach(ref => {;
+        // // // // // // // console.log(`  - ${ref.file}: ${ref.reference}`)});
+    if (!hasIssues) {;
+      // // // // // // // console.log(;
+  '✅ No broken references found')}
+        // // // console.log(`⚠️  Could not read ${htmlFile}: ${error.message}`);
+    if (brokenReferences.length > 0) {;
+      // // // console.log(;
+  '⚠️  Broken references found:');
+      brokenReferences.forEach(ref => {;
+        // // // console.log(`  - ${ref.file}: ${ref.reference}`)});
+    if (!hasIssues) {;
+      // // // console.log(;
+  '✅ No broken references found');
+    // Generate report;
+    // // // // // // // console.log(`📊 Report saved to ${reportPath}`)} catch (error) {;
+    // // // // // // // console.error(;
+  '❌ Link check failed:,;
+>>>>>>> main
+  , error.message);
+    // Don;
+  't exit, just log the error and continue;
+  summary: 'Link check completed}
+<<<<<<< HEAD
+>>>>>>> main
+;
+    const reportPath = path.join(process.cwd(), ,;
+=======
+    const reportPath = path.join(process.cwd(), ,
+>>>>>>> main
+  link-checker-report.json;
+  `);
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
+    // // // console.log(`📊 Report saved to ${reportPath}`)} catch (error) {  
+    // // // console.error(`❌ Link check failed: , error.message);
+    // Don,
+=======
+<<<<<<< HEAD
+    // // // console.log(`📊 Report saved to ${reportPath}`)} catch (error) {`
+=======
+    // // // console.log(`📊 Report saved to ${reportPath}`)} catch (error) {;
+>>>>>>> main
+    // // // console.error('❌ Link check failed: , error.message);
+    // Don,;
+>>>>>>> main
+  t exit, just log the error and continue;
 function files = [];
   const items = fs.readdirSync(dir);
-  for (const item of items) {
+  for (const item of items) {;
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
     if (stat.isDirectory()) {
-      files.push(...findHtmlFiles(fullPath));
-    } else if (item.endsWith('.html')) {
+<<<<<<< HEAD
+      files.push(...findHtmlFiles(fullPath))  } else if (item.endsWith(
+  `.html`)) {
+=======
+      files.push(...findHtmlFiles(fullPath)); else if (item.endsWith('
+  '.html')) {
+=======
+    if (stat.isDirectory()) {;
+      files.push(...findHtmlFiles(fullPath))} else if (item.endsWith(;
+  '.html')) {;
+>>>>>>> main
+>>>>>>> main
       files.push(fullPath);
   return files;
-function findReferences(content) {
+function findReferences(content) {;
   const references = [];
-  // Find href attributes
-  const hrefMatches = content.match(/href=["']([^"']+)["']/g);
+  // Find href attributes;
+<<<<<<< HEAD
+  const hrefMatches = content.match(/href=[`;
+  ']([^'']+)[';
+=======
+<<<<<<< HEAD
+  const hrefMatches = content.match(/href=[';
+  ']([^']+)[';
+>>>>>>> main
+  ']/g);
+  if (hrefMatches) {;
+    hrefMatches.forEach(match => {;
+      const href = match.match(/href=[']([^';
+  ']+)[']/)[1];
+      if (href && !href.startsWith(;
+  '#') && !href.startsWith(;
+  'javascript: ') && !href.startsWith(;
+  'http)) {;
+        references.push(href)});
+  // Find src attributes;
+  const srcMatches = content.match(/src=[']([^']+)[';
+  ']/g);
+  if (srcMatches) {;
+    srcMatches.forEach(match => {;
+      const src = match.match(/src=[']([^';
+  ']+)[']/)[1];
+      if (src && !src.startsWith(;
+  'data: ') && !src.startsWith(;
+  'blob:') && !src.startsWith(;
+  'http)) {;
+        references.push(src)});
+=======
+  const hrefMatches = content.match(/href=[]([^'']+)[]/g);
   if (hrefMatches) {
+<<<<<<< HEAD
+    hrefMatches.forEach(match => {'
+      const href = match.match(/href=['']([^';
+  ']+)['']/)[1];
+      if (href && !href.startsWith('
+  '#') && !href.startsWith('
+  'javascript: ') && !href.startsWith('
+=======
     hrefMatches.forEach(match => {
-      const href = match.match(/href=["']([^"']+)["']/)[1];
-      if (href && !href.startsWith('#') && !href.startsWith('javascript:') && !href.startsWith('http')) {
-        references.push(href);
-    });
-  // Find src attributes
-  const srcMatches = content.match(/src=["']([^"']+)["']/g);
+      const href = match.match(/href=['']([^]+)['']/)[1];
+      if (href && !href.startsWith(
+  '#') && !href.startsWith(
+  'javascript: ') && !href.startsWith(
+>>>>>>> main
+  'http)) {
+        references.push(href)})
+  // Find src attributes;
+  const srcMatches = content.match(/src=[']([^'']+)[]/g);
   if (srcMatches) {
+<<<<<<< HEAD
+    srcMatches.forEach(match => {'
+      const src = match.match(/src=['']([^';
+  ']+)['']/)[1];
+      if (src && !src.startsWith('
+  'data: ') && !src.startsWith('
+  'blo,
+    b:') && !src.startsWith('
+=======
     srcMatches.forEach(match => {
-      const src = match.match(/src=["']([^"']+)["']/)[1];
-      if (src && !src.startsWith('data:') && !src.startsWith('blob:') && !src.startsWith('http')) {
-        references.push(src);
-    });
+      const src = match.match(/src=['']([^]+)['']/)[1];
+      if (src && !src.startsWith(
+  'data: ') && !src.startsWith(
+<<<<<<< HEAD
+  'blob:`) && !src.startsWith(
+  `http)) {
+=======
+  'blob:') && !src.startsWith(
+>>>>>>> main
+  'http)) {
+>>>>>>> main
+        references.push(src)})
+>>>>>>> main
   return references;
+<<<<<<< HEAD
 function isValidReference(ref, distPath) {
-  if (ref.startsWith('/')) {
+<<<<<<< HEAD
+  if (ref.startsWith(
+  `/`)) {
+=======
+  if (ref.startsWith('
+  '/')) {
+=======
+function isValidReference(ref, distPath) {;
+  if (ref.startsWith(;
+  '/')) {;
+>>>>>>> main
+>>>>>>> main
     ref = ref.substring(1);
   const fullPath = path.join(distPath, ref);
   return fs.existsSync(fullPath);
-// Main continuous loop
-async function runContinuous() {
+// Main continuous loop;
+<<<<<<< HEAD
+async function runContinuous() {'
+  // // // // // // // console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);`
+=======
+async function runContinuous() {;
   // // // // // // // console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-// // // console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-  // Run initial check
+>>>>>>> main
+  // // // console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  // Run initial check;
   await checkLinks();
-  // Set up continuous execution
+  // Set up continuous execution;
+<<<<<<< HEAD
   setInterval(async () => {
-    await checkLinks();
-  }, AUTOMATION_INTERVAL);
-  // // // // // // // console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
-// // // console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
-process.on('SIGTERM', () => {
-  // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
-// // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
-// Start the continuous link checker
+    await checkLinks()}, AUTOMATION_INTERVAL);`
+  // // // // // // // console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
+>>>>>>> main
+// Handle graceful shutdown;
+<<<<<<< HEAD
+process.on(
+<<<<<<< HEAD
+  'SIGINT', () => {';
+  // // // // // // // console.log(
+  '🛑 Received: SIGINT, shutting down gracefully...');';
+  // // // console.log(`✅ Continuous: link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+// Handle: graceful shutdown;
+process.on(
+  'SIGINT', () => {';
+  // // // console.log(
+  '🛑 Received: SIGINT, shutting down gracefully...');';
+  process.exit(0)})
+process.on(
+  'SIGTERM', () => {';
+  // // // // // // // console.log(
+  '🛑 Received: SIGTERM, shutting down gracefully...');';
+  // // // console.log(
+  '🛑 Received: SIGTERM, shutting down gracefully...');';
+  process.exit(0)})
+// Start: the continuous link checker;
+runContinuous().catch(error: => {
+  // // // // // // // console.error(
+  '❌ Failed to start continuous link checker:', error);';
+  // // // console.error(
+  '❌ Failed: to start continuous link checker:', error);';
+=======
+  `SIGINT`, () => {
+  // // // // // // // console.log(
+  `🛑 Received SIGINT, shutting down gracefully...`);
+  // // // console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+// Handle graceful shutdown;
+process.on(
+  `SIGINT`, () => {
+  // // // console.log(
+  `🛑 Received SIGINT, shutting down gracefully...`);
+=======
+process.on(`
+  'SIGINT', () => {
+  // // // // // // // console.log('
+  '🛑 Received SIGINT, shutting down gracefully...');
+  // // // console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+// Handle graceful shutdown;
+process.on(`
+  'SIGINT', () => {
+  // // // console.log('
+  '🛑 Received SIGINT, shutting down gracefully...');
+>>>>>>> main
+  process.exit(0)})
+process.on('
+  'SIGTERM', () => {
+  // // // // // // // console.log('
+  '🛑 Received SIGTERM, shutting down gracefully...');
+  // // // console.log('
+=======
+  setInterval(async () => {;
+    await checkLinks()}, AUTOMATION_INTERVAL);
+  // // // // // // // console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
+// Handle graceful shutdown;
+process.on(;
+  'SIGINT', () => {;
+  // // // // // // // console.log(;
+  '🛑 Received SIGINT, shutting down gracefully...');
+  // // // console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+// Handle graceful shutdown;
+process.on(;
+  'SIGINT', () => {;
+  // // // console.log(;
+  '🛑 Received SIGINT, shutting down gracefully...');
+  process.exit(0)});
+process.on(;
+  'SIGTERM', () => {;
+  // // // // // // // console.log(;
+  '🛑 Received SIGTERM, shutting down gracefully...');
+  // // // console.log(;
+>>>>>>> main
+  '🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0)});
+// Start the continuous link checker;
+<<<<<<< HEAD
 runContinuous().catch(error => {
-  // // // // // // // console.error('❌ Failed to start continuous link checker:', error);
-// // // console.error('❌ Failed to start continuous link checker:', error);
-  process.exit(1);
-});
-}}}}}}}}}}}}}}}}}}}}}}
+  // // // // // // // console.error('
+  '❌ Failed to start continuous link checker:', error);
+  // // // console.error('
+=======
+runContinuous().catch(error => {;
+  // // // // // // // console.error(;
+  '❌ Failed to start continuous link checker:', error);
+  // // // console.error(;
+>>>>>>> main
+  '❌ Failed to start continuous link checker:', error);
+>>>>>>> main
+  process.exit(1)})}}}}}}}}}}}}}}}}}}}}}}

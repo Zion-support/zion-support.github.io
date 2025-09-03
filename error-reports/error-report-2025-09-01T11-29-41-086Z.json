@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-09-01T11:29:41.086Z",
+  "reportId": "2025-09-01T11-29-41-086Z",
+  "summary": {
+    "totalErrors": 0,
+    "lintErrors": 0,
+    "lintWarnings": 0,
+    "typeErrors": 0,
+    "buildSuccess": false,
+    "corruptedFiles": 0
+  },
+  "details": {
+    "lint": {
+      "hasErrors": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "output": "\n> zion-tech-group@0.1.0 lint\n> next lint\n\nsh: 1: next: not found\n"
+    },
+    "typeCheck": {
+      "hasErrors": true,
+      "errorCount": 0,
+      "output": "\n> zion-tech-group@0.1.0 type-check\n> tsc --noEmit\n\nsh: 1: tsc: not found\n"
+    },
+    "build": {
+      "hasErrors": true,
+      "buildSuccess": false,
+      "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\nsh: 1: next: not found\n"
+    },
+    "corruptedFiles": []
+  },
+  "recommendations": [
+    {
+      "priority": "critical",
+      "action": "fix_build_errors",
+      "description": "Project build is failing - fix build errors immediately"
+    }
+  ]
+}
