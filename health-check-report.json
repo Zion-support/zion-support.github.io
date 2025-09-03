@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-03T22:54:15.891Z",
+  "timestamp": "2025-09-03T23:44:31.755Z",
   "status": "completed",
   "checks": [
     {
@@ -9,13 +9,13 @@
         "name": "ziontechgroup.com",
         "version": "0.1.0"
       },
-      "timestamp": "2025-09-03T22:54:15.891Z"
+      "timestamp": "2025-09-03T23:44:31.756Z"
     },
     {
       "name": "Dependencies check",
       "status": "failed",
       "error": "node_modules not found - run npm install",
-      "timestamp": "2025-09-03T22:54:15.891Z"
+      "timestamp": "2025-09-03T23:44:31.756Z"
     },
     {
       "name": "Build directory check",
@@ -23,7 +23,7 @@
       "result": {
         "status": "no_build_directory"
       },
-      "timestamp": "2025-09-03T22:54:15.892Z"
+      "timestamp": "2025-09-03T23:44:31.756Z"
     },
     {
       "name": "Disk space check",
@@ -33,19 +33,19 @@
         "available": "107G",
         "usePercent": "12%"
       },
-      "timestamp": "2025-09-03T22:54:15.897Z"
+      "timestamp": "2025-09-03T23:44:31.760Z"
     },
     {
       "name": "Memory check",
       "status": "passed",
       "result": {
         "total": "15Gi",
-        "used": "810Mi",
-        "free": "1.5Gi",
-        "available": "1.1Mi"
+        "used": "1.7Gi",
+        "free": "736Mi",
+        "available": "7.2Mi"
       },
-      "timestamp": "2025-09-03T22:54:15.902Z"
+      "timestamp": "2025-09-03T23:44:31.763Z"
     }
   ],
-  "completedAt": "2025-09-03T22:54:15.903Z"
+  "completedAt": "2025-09-03T23:44:31.763Z"
 }
