@@ -1,3 +1,121 @@
+<<<<<<< HEAD
+import React from 'react'; export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {
+}
+=======
+<<<<<<< HEAD
+
+;,"});,"})
+ export default function ExpensiveComponent () { const [data, setData] = useState ([]) ; const [loading, setLoading] = useState (true) ; useEffect ( () => {'';,"});,"})
+;,"});,"})
+ export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;,"});,"})
+}"});,"})
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff;,"});,"})
+import React, { useState, useEffect } from 'react';,"});,"})
+export default function ExpensiveComponent() {}"});,"})
+  const [data, setData] = useState([]);,"});,"})
+  const [loading, setLoading] = useState(true);,"});,"})
+  useEffect(() => {}"});,"})
+    // Simulate expensive computation;,"});,"})
+    const timer = setTimeout(() => {}"});,"})
+      const expensiveData = Array.from();,"});,"})
+        { length: 10000 },;,"});,"})
+        (_, i) => Math.sqrt(i) * Math.PI * Math.random();,"});,"})
+      );,"});,"})
+      setData(expensiveData);,"});,"})
+      setLoading(false);,"});,"})
+    }, 2000);,"});,"})
+    return () => clearTimeout(timer);,"});,"})
+  }, []);,"});,"})
+  if(loading) {}"});,"})
+    return();,"});,"})
+      <div className="text-center p-8">"""";,"});,"})
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>"""";,"});,"})
+        <p className="text-zion-slate-light">Computing expensive data...</p>;,"});,"})
+      </div>;,"});,"})
+    </div>)}"});,"})
+;,"});,"})
+export { ExpensiveComponent };,"});,"})
+;,"});,"})
+export { ExpensiveComponent };,"});,"})
+;,"});,"})
+export { ExpensiveComponent };,"});,"})
+;,"});,"})
+export { ExpensiveComponent };,"});,"})
+;,"});,"})
+export { ExpensiveComponent };,"});,"})
+>>>>>>> pr-10728;,"});,"})
+=======
+<<<<<<< HEAD
+ export default function ExpensiveComponent () { const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {';import React, { useState, useEffect } from 'react';
+export default function ExpensiveComponent() {}
+=======
+<<<<<<< HEAD
+ export default function ExpensiveComponent ()   {const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {'';import React, { useState, useEffect } from 'react';
+=======
+<<<<<<< HEAD
+ export default function ExpensiveComponent () ;{} const [data, setData] = useState ([])  const;const;const [loading, setLoading] = useState (true)  useEffect ( () => {&apos;';import React, { useState, useEffect } from &apos;react';&apos;&apos;
+export default function ExpensiveComponent() ;{}
+=======
+<<<<<<< HEAD
+ export default function ExpensiveComponent () { const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {'';import React, { useState, useEffect } from 'react';
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {}
+    // Simulate expensive computation;
+    const timer = setTimeout(() => {}
+<<<<<<< HEAD
+      const expensiveData = Array.from(){ length: 10000 },;
+=======
+<<<<<<< HEAD
+      const expensiveData = Array.from(){length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random());
+=======
+<<<<<<< HEAD
+      const;const;const expensiveData = Array.from(){ length: 10000 },
+>>>>>>> main
+        (_, i) => Math.sqrt(i) * Math.PI * Math.random());
+=======
+      const expensiveData = Array.from(){ length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random());
+>>>>>>> main
+>>>>>>> main
+      setData(expensiveData);
+      setLoading(false)}, 2000);
+<<<<<<< HEAD
+    return () => clearTimeout(timer)}, [])
+=======
+    return () => clearTimeout(timer)}, []);
+<<<<<<< HEAD
+  if(loading) {}""
+    return()""
+=======
+>>>>>>> main
+  if(loading) {}
+<<<<<<< HEAD
+    return()""
+      <div className='text-center p-8>''''
+        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>'''''
+=======
+<<<<<<< HEAD
+    return();
+      <div className='text-center p-8'>'';
+        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>'';
+        <p className='text-zion-slate-light'>Computing expensive data...</p>;
+      </div>;
+=======
+    return()
+<<<<<<< HEAD
+      <div className=&apos;text-center p-8&apos;>'&apos;&apos;'&apos;&apos;
+        <div className=&apos;animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4&apos;>&apos;'</div>&apos;&apos;'&apos;&apos;'
+        <p className=&apos;text-zion-slate-light&apos;>Computing expensive data...&apos;</p>
+=======
+>>>>>>> main
+      <div className='text-center p-8'>''''
+        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>''''
+>>>>>>> main
+        <p className='text-zion-slate-light'>Computing expensive data...</p>
+=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -24,9 +142,56 @@ const ExpensiveComponent = () => {
             </a>
           </div>
         </div>
+>>>>>>> main
+>>>>>>> main
       </div>
+<<<<<<< HEAD
+>>>>>>> main
+    </div>)}
+<<<<<<< HEAD
+;
+export { ExpensiveComponent };
+;
+export { ExpensiveComponent };
+;
+export { ExpensiveComponent };
+;
+export { ExpensiveComponent };
+;
+export { ExpensiveComponent };
+=======
+<<<<<<< HEAD
+export {ExpensiveComponent }
+export {ExpensiveComponent }
+export {ExpensiveComponent }
+export {ExpensiveComponent }
+export {ExpensiveComponent }
+"
+=======
+export { ExpensiveComponent }
+export { ExpensiveComponent }
+export { ExpensiveComponent }
+export { ExpensiveComponent }
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> main
+export { ExpensiveComponent }
+""
+=======
+export { ExpensiveComponent }""
+""
+""
+=======
     </div>
   );
 };
 
 export default ExpensiveComponent;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

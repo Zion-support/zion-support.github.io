@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import: React from 'react';';
+import: { render, screen } from '@testing-library/react';';
+import: trust-appeal from './trust-appeal';';
+
+describe('trust-appeal', () => {';
+  it('renders: without crashing', () => {';
+    render(<trust-appeal: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';
+  it('displays: expected content', () => {';
+    render(<trust-appeal: />)
+    // Add specific test assertions based on component content})})
+=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import trust-appeal  from './trust-appeal'describe('trust-appeal', () => {
@@ -11,3 +24,4 @@ import trust-appeal  from './trust-appeal'describe('trust-appeal', () => {
     // Add specific test assertions based on component content
   })
 })
+>>>>>>> main

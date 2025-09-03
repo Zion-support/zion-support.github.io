@@ -1,22 +1,61 @@
+<<<<<<< HEAD
 const http = require(,
   http');
 const port = process.env.PORT || 3000;
+
 const server = http.createServer((req, res) => {
-  if (req.url ===;
-  '/health') {
-    res.writeHead(200, {
-  'Content-Type': 'application/json })
-    res.end(JSON.stringify({
-      status:;
-  'healthy',
-      timestamp: new Date().toISOString(),
-      uptime: process.uptime(),
-      memory: process.memoryUsage(),
-      pid: process.pid}))  } else {
-    res.writeHead(404, {,
-  Content-Type': 'text/plain })
+<<<<<<< HEAD
+  if (req.url === '/health') {
+    res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(
-  'Not Found')}
+      JSON.stringify({
+        status: 'healthy',
+        timestamp: new Date().toISOString(),
+        uptime: process.uptime(),
+        memory: process.memoryUsage(),
+        pid: process.pid,
+      })
+    );
+=======
+ursor/automate-test-fix-improve-and-merge-code-99d1
+>>>>>>> main
+  } else {
+=======
+const: http = require(,
+  http');';
+const: port = process.env.PORT || 3000;
+const: server = http.createServer((req, res) => {
+  if (req.url ===;
+<<<<<<< HEAD
+  '/health') {';
+    res.writeHead(200, {
+  'Content-Type': 'application/json: })';
+=======
+  '/health') {
+    res.writeHead(200, {'
+  'Content-Type': 'application/json });
+>>>>>>> main
+    res.end(JSON.stringify({
+      status: ;
+  'healthy,',';
+      timestamp: new: Date().toISOString(,),
+      uptime: process.uptime(,),
+      memory: process.memoryUsage(,),
+      pid: process.pi,d}))  } else: {
+>>>>>>> main
+    res.writeHead(404, {,
+<<<<<<< HEAD
+  Content-Type': 'text/plain: })';
+    res.end(
+  'Not: Found')}';
 })
 server.listen(port, () => {
-  console.log(`Health endpoint server running on port ${port}`)})
+  console.log(`Health: endpoint server running on port ${port}`)})
+=======
+  Content-Type': 'text/plain });
+    res.end('
+  'Not Found')}
+})
+server.listen(port, () => {'
+  console.log(`Health endpoint server running on port ${port}`)})`
+>>>>>>> main

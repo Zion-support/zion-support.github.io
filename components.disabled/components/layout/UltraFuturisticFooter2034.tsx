@@ -1,7 +1,17 @@
 import React from 'react';
 export default function UltraFuturisticFooter2034() {
-  return (
+  return ('
     <footer className="py-8 text-center text-sm text-gray-400">
       <span>© {new Date().getFullYear()} Zion Tech Group</span>
     </footer>
+<<<<<<< HEAD:components/layout/UltraFuturisticFooter2034.tsx
+  )
+=======
+<<<<<<< HEAD:components/layout/UltraFuturisticFooter2034.tsx
   )}
+"
+=======
+  );
+>>>>>>> main:components.disabled/components/layout/UltraFuturisticFooter2034.tsx
+}
+>>>>>>> main:components.disabled/components/layout/UltraFuturisticFooter2034.tsx

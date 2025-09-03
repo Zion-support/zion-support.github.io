@@ -31,16 +31,24 @@ interface ComponentProps {
   [key: string]: unknown;
 }
 
-
 import { motion } from 'framer-motion';
-import { CheckCircle, Cloud, Mail, MapPin, Phone, Send, User } from 'lucide-react';
+import {
+  CheckCircle,
+  Cloud,
+  Mail,
+  MapPin,
+  Phone,
+  Send,
+  User,
+} from 'lucide-react';
 
 interface FormData {
   name: string;
   email: string;
   compunknown: string;
   service: string;
-  message: string}
+  message: string;
+}
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -126,7 +134,8 @@ const ContactForm: React.FC = () => {
           hours.'
         </p>
       </motion.div>
-    )}
+    );
+  }
 
   return (
     <div className="bg-white rounded-xl shadow-xl p-8">

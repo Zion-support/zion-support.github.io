@@ -1,11 +1,15 @@
-#!/''usr/bin/env'' node
+<<<<<<< HEAD
+#!/''usr/bin/env'' node;
+=======
+#!/'usr/bin/env' node;
 
+>>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
-class ErrorPreventionMonitor {
-  constructor() {
+;
+class ErrorPreventionMonitor {;
+  constructor() {;
     this.workspacePath = process.cwd();
     this.logsPath = path.join(this.workspacePath, 'logs');
     this.reportsPath = path.join(this.workspacePath, 'automation-reports');
@@ -13,81 +17,133 @@ class ErrorPreventionMonitor {
     this.errorPatterns = new Map();
     this.preventionHistory = new Map();
   }
+<<<<<<< HEAD
 
   ensureDirectories() {
-    ['this.logsPath', 'this.reportsPath'].forEach(dir => {
+    ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
+=======
+;
+  ensureDirectories() {;
+    ['this.logsPath', 'this.reportsPath'].forEach(dir => {;
+      if (!fs.existsSync(dir)) {;
+>>>>>>> main
         fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
+<<<<<<< HEAD
 
-  log(message, level = 'INFO') {
+  log(message, level = `INFO`) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(`logMessage);
 
-    const logFile = path.join(this.logsPath, 'error-prevention-monitor.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    const logFile = path.join(this.logsPath, `error-prevention-monitor.log`);
+    fs.appendFileSync(logFile, logMessage + `\n`);
   }
 
   async scanForPotentialErrors() {
-    this.log('🔍 Scanning for potential errors...');
+    this.log(`🔍 Scanning for potential errors...`);
 
     const potentialErrors = [];
 
-    // Scan source files for common error patterns
+    // Scan source files for common error patterns;
     const sourceFiles = this.findSourceFiles();
 
     for (const filePath of sourceFiles) {
       try {
+        const content = fs.readFileSync(filePath, `utf8`);
+        const errors = this.analyzeFileForPotentialErrors(filePath, content);
+        potentialErrors.push(...errors);
+      } catch (error) {  
+        this.log(⚠️ Could not read file ${filePath  }: ${error.message}`,
+          `WARN`
+=======
+;
+  log(message, level = 'INFO') {;
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+    console.log(`logMessage);
+;
+    const logFile = path.join(this.logsPath, 'error-prevention-monitor.log');
+    fs.appendFileSync(logFile, logMessage + '\n');
+  }
+;
+  async scanForPotentialErrors() {;
+    this.log('🔍 Scanning for potential errors...');
+;
+    const potentialErrors = [];
+;
+    // Scan source files for common error patterns;
+    const sourceFiles = this.findSourceFiles();
+;
+    for (const filePath of sourceFiles) {;
+      try {;
         const content = fs.readFileSync(filePath, 'utf8');
         const errors = this.analyzeFileForPotentialErrors(filePath, content);
         potentialErrors.push(...errors);
+<<<<<<< HEAD
+      } catch (error) {;
+        this.log(⚠️ Could not read file ${filePath}: ${error.message}',;
+          'WARN';
+=======
       } catch (error) {`);
         this.log(⚠️ Could not read file ${filePath}: ${error.message}',`);
           'WARN`);
+>>>>>>> main
+>>>>>>> main
         );
       }`);
     }`);
 this.log(Found ${potentialErrors.length} potential error patterns`);
     return potentialErrors;
   }
-
-  findSourceFiles() {
+;
+  findSourceFiles() {;
     const sourceFiles = [];
-
-    const scanDirectory = dir => {
+;
+    const scanDirectory = dir => {;
       const files = fs.readdirSync(dir);
-      files.forEach(file => {
+      files.forEach(file => {;
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
+<<<<<<< HEAD
 
         if (
           stat.isDirectory() &&
-          !file.startsWith('.') &&
-          !file.startsWith('node_modules')
+          !file.startsWith(`.`) &&
+          !file.startsWith(`node_modules')
         ) {
+=======
+;
+        if (;
+          stat.isDirectory() &&;
+          !file.startsWith('.') &&;
+          !file.startsWith('node_modules');
+        ) {;
+>>>>>>> main
           scanDirectory(filePath);
-        } else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(file)) {
+        } else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(file)) {;
           sourceFiles.push(filePath);
         }
       });
     };
-
+;
     scanDirectory(this.workspacePath);
     return sourceFiles;
   }
-
-  analyzeFileForPotentialErrors(filePath, content) {
+;
+  analyzeFileForPotentialErrors(filePath, content) {;
     const errors = [];
     const lines = content.split('\n');
-
-    for (let i = 0; i < lines.length; i++) {
+;
+    for (let i = 0; i < lines.length; i++) {;
       const line = lines[i];
       const lineNumber = i + 1;
+<<<<<<< HEAD
 
-      // Check for common error patterns
+      // Check for common error patterns;
       if (this.detectUnsafeCode(line)) {
         errors.push({
           file: filePath,
@@ -95,65 +151,77 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
           pattern: 'unsafe-code',
           description: 'Potentially unsafe code detected',
           severity: 'warning',
+=======
+;
+      // Check for common error patterns;
+      if (this.detectUnsafeCode(line)) {;
+        errors.push({;
+          file: filePath,;
+          line: lineNumber,;
+          pattern: 'unsafe-code',;
+          description: 'Potentially unsafe code detected',;
+          severity: 'warning',;
+>>>>>>> main
         });
       }
-
-      if (this.detectMemoryLeak(line)) {
-        errors.push({
-          file: filePath,
-          line: lineNumber,
-          pattern: 'memory-leak',
-          description: 'Potential memory leak detected',
-          severity: 'warning',
+;
+      if (this.detectMemoryLeak(line)) {;
+        errors.push({;
+          file: filePath,;
+          line: lineNumber,;
+          pattern: 'memory-leak',;
+          description: 'Potential memory leak detected',;
+          severity: 'warning',;
         });
       }
-
-      if (this.detectAsyncError(line)) {
-        errors.push({
-          file: filePath,
-          line: lineNumber,
-          pattern: 'async-error',
-          description: 'Potential async error handling issue',
-          severity: 'warning',
+;
+      if (this.detectAsyncError(line)) {;
+        errors.push({;
+          file: filePath,;
+          line: lineNumber,;
+          pattern: 'async-error',;
+          description: 'Potential async error handling issue',;
+          severity: 'warning',;
         });
       }
-
-      if (this.detectTypeIssue(line)) {
-        errors.push({
-          file: filePath,
-          line: lineNumber,
-          pattern: 'type-issue',
-          description: 'Potential type-related issue',
-          severity: 'warning',
+;
+      if (this.detectTypeIssue(line)) {;
+        errors.push({;
+          file: filePath,;
+          line: lineNumber,;
+          pattern: 'type-issue',;
+          description: 'Potential type-related issue',;
+          severity: 'warning',;
         });
       }
     }
-
+;
     return errors;
   }
-
-  detectUnsafeCode(line) {
-    const unsafePatterns = ['/eval\s*\(/', '/Function\s*\(/', '/innerHTML\s*=/', '/outerHTML\s*=/', '/document\.write\s*\(/', '/setTimeout\s*\([^', '']*,\s*0\)/,
-      /setInterval\s*\(['^', ']*', '\s*0\)/', ''];
-
+;
+  detectUnsafeCode(line) {;
+    const unsafePatterns = ['/eval\s*\(/', '/Function\s*\(/', '/innerHTML\s*=/', '/outerHTML\s*=/', '/document\.write\s*\(/', '/setTimeout\s*\([^', ']*,\s*0\)/,;
+      /setInterval\s*\(['^', ']*', '\s*0\)/', '];
+;
     return unsafePatterns.some(pattern => pattern.test(line));
   }
-
-  detectMemoryLeak(line) {
-    const memoryLeakPatterns = ['/addEventListener\s*\([^', '']*,\s*['^', '']*,\s*false\)/,
-      /setInterval\s*\(['^', '']*,\s*\d+\)/,
-      /setTimeout\s*\(['^', ']*', '\s*\d+\)/', '/new\s+Promise\s*\(/', '/fetch\s*\(/', ''];
-
+;
+  detectMemoryLeak(line) {;
+    const memoryLeakPatterns = ['/addEventListener\s*\([^', ']*,\s*['^', ']*,\s*false\)/,;
+      /setInterval\s*\(['^', ']*,\s*\d+\)/,;
+      /setTimeout\s*\(['^', ']*', '\s*\d+\)/', '/new\s+Promise\s*\(/', '/fetch\s*\(/', '];
+;
     return memoryLeakPatterns.some(pattern => pattern.test(line));
   }
-
-  detectAsyncError(line) {
-    const asyncErrorPatterns = [
-      /\.then\s*\([^)]*\)/,
-      /\.catch\s*\(['^)]*\)/', '/async\s+function/', '/await\s+/', ''];
-
+;
+  detectAsyncError(line) {;
+    const asyncErrorPatterns = [;
+      /\.then\s*\([^)]*\)/,;
+      /\.catch\s*\(['^)]*\)/', '/async\s+function/', '/await\s+/', '];
+;
     return asyncErrorPatterns.some(pattern => pattern.test(line));
   }
+<<<<<<< HEAD
 
   detectTypeIssue(line) {
     const typeIssuePatterns = ['/:\s*any\s*[=', '']/,
@@ -161,166 +229,240 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
       /<any>/,
       /any\[\]/,
       /Record<string,\s*any>/,
-      /{[^}]*:\s*any['^}]*}/', ''];
+      /{[^}]*:\s*any[`^}]*}/`, ``];
 
     return typeIssuePatterns.some(pattern => pattern.test(line));
   }
 
   async applyPreventiveFixes(potentialErrors) {
-    this.log(🔧 Applying preventive fixes for ${potentialErrors.length} potential issues...'
+    this.log(🔧 Applying preventive fixes for ${potentialErrors.length} potential issues...`
+=======
+;
+  detectTypeIssue(line) {;
+    const typeIssuePatterns = ['/:\s*any\s*[=', ']/,;
+      /as\s+any/,;
+      /<any>/,;
+      /any\[\]/,;
+      /Record<string,\s*any>/,;
+      /{[^}]*:\s*any['^}]*}/', '];
+;
+    return typeIssuePatterns.some(pattern => pattern.test(line));
+  }
+;
+  async applyPreventiveFixes(potentialErrors) {;
+    this.log(🔧 Applying preventive fixes for ${potentialErrors.length} potential issues...';
+>>>>>>> main
     );
-
+;
     let fixedCount = 0;
     const fixResults = [];
-
-    for (const error of potentialErrors) {
-      try {
+;
+    for (const error of potentialErrors) {;
+      try {;
         const fixed = await this.applyPreventiveFix(error);
-        if (fixed) {
+        if (fixed) {;
           fixedCount++;
         }
-
-        fixResults.push({
-          error,
-          fixed,
-          timestamp: new Date().toISOString(),
+;
+        fixResults.push({;
+          error,;
+          fixed,;
+          timestamp: new Date().toISOString(),;
         });
+<<<<<<< HEAD
       } catch (fixError) {
-        this.log( `❌ Error applying preventive fix: ${fixError.message}',ERROR'
+        this.log( `❌ Error applying preventive fix: ${fixError.message}`,ERROR`
+=======
+      } catch (fixError) {;
+        this.log( `❌ Error applying preventive fix: ${fixError.message}',ERROR';
+>>>>>>> main
         );
-        fixResults.push({
-          error,
-          fixed: false,
-          error: fixError.message,
-          timestamp: new Date().toISOString(),
+        fixResults.push({;
+          error,;
+          fixed: false,;
+          error: fixError.message,;
+          timestamp: new Date().toISOString(),;
         });
       }
     }
-
+;
     this.log(`✅ Applied ${fixedCount} preventive fixes`);
-    return {
-      fixedCount,
-      totalIssues: potentialErrors.length,
-      results: fixResults,
+    return {;
+      fixedCount,;
+      totalIssues: potentialErrors.length,;
+      results: fixResults,;
     };
   }
-
-  async applyPreventiveFix(error) {
+;
+  async applyPreventiveFix(error) {;
     const filePath = error.file;
-
-    if (!fs.existsSync(filePath)) {
+;
+    if (!fs.existsSync(filePath)) {;
       return false;
     }
+<<<<<<< HEAD
 
     try {
+      let content = fs.readFileSync(filePath, `utf8`);
+      const lines = content.split(`\n');
+=======
+;
+    try {;
       let content = fs.readFileSync(filePath, 'utf8');
       const lines = content.split('\n');
+>>>>>>> main
       const lineIndex = error.line - 1;
-
-      if (lineIndex < 0 || lineIndex >= lines.length) {
+;
+      if (lineIndex < 0 || lineIndex >= lines.length) {;
         return false;
       }
-
+;
       const originalLine = lines[lineIndex];
       let fixedLine = originalLine;
       let fixed = false;
-
-      switch (error.pattern) {
-        case 'unsafe-code':
+;
+      switch (error.pattern) {;
+        case 'unsafe-code':;
           fixedLine = await this.fixUnsafeCode(originalLine);
           fixed = fixedLine !== originalLine;
           break;
-
-        case 'memory-leak':
+;
+        case 'memory-leak':;
           fixedLine = await this.fixMemoryLeak(originalLine);
           fixed = fixedLine !== originalLine;
           break;
-
-        case 'async-error':
+;
+        case 'async-error':;
           fixedLine = await this.fixAsyncError(originalLine);
           fixed = fixedLine !== originalLine;
           break;
+<<<<<<< HEAD
 
-        case 'type-issue':
+        case `type-issue`:
+=======
+;
+        case 'type-issue':;
+>>>>>>> main
           fixedLine = await this.fixTypeIssue(originalLine);
           fixed = fixedLine !== originalLine;
           break;
       }
-
-      if (fixed) {
+;
+      if (fixed) {;
         lines[lineIndex] = fixedLine;
-        fs.writeFileSync(filePath, lines.join('\n'));this.log(`✅ Applied preventive fix in ${filePath}:${error.line}');
+        fs.writeFileSync(filePath, lines.join(`\n`));this.log(`✅ Applied preventive fix in ${filePath}:${error.line}`);
         return true;
       }
-
+;
       return false;
+<<<<<<< HEAD
     } catch (fixError) {
-      this.log(❌ Failed to apply preventive fix: ${fixError.message}',
-        'ERROR'
+      this.log(❌ Failed to apply preventive fix: ${fixError.message}`,
+        `ERROR`
+=======
+    } catch (fixError) {;
+      this.log(❌ Failed to apply preventive fix: ${fixError.message}',;
+        'ERROR';
+>>>>>>> main
       );
       return false;
     }
   }
-
-  async fixUnsafeCode(line) {
+;
+  async fixUnsafeCode(line) {;
     let fixedLine = line;
+<<<<<<< HEAD
 
-    // Replace eval with safer alternatives
+    // Replace eval with safer alternatives;
     if (line.includes('eval(')) {
       fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, 'JSON.parse($1)');
     }
 
-    // Replace innerHTML with textContent where possible
+    // Replace innerHTML with textContent where possible;
     if (line.includes('.innerHTML =')) {
       fixedLine = line.replace(
         /\.innerHTML\s*=\s*([^;]+)/g,.textContent = $1'
+=======
+;
+    // Replace eval with safer alternatives;
+    if (line.includes('eval(')) {;
+      fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, 'JSON.parse($1)');
+    }
+;
+    // Replace innerHTML with textContent where possible;
+    if (line.includes('.innerHTML =')) {;
+      fixedLine = line.replace(;
+        /\.innerHTML\s*=\s*([^;]+)/g,.textContent = $1';
+>>>>>>> main
       );
     }
-
+;
     return fixedLine;
   }
-
-  async fixMemoryLeak(line) {
+;
+  async fixMemoryLeak(line) {;
     let fixedLine = line;
+<<<<<<< HEAD
 
-    // Add cleanup for event listeners
+    // Add cleanup for event listeners;
     if (line.includes('addEventListener')) {
       fixedLine = line.replace(
         /addEventListener\s*\((['^', '']+),\s*(['^', '']+),\s*false\)/g,addEventListener($1, $2, { once: true })'
+=======
+;
+    // Add cleanup for event listeners;
+    if (line.includes('addEventListener')) {;
+      fixedLine = line.replace(;
+        /addEventListener\s*\((['^', ']+),\s*(['^', ']+),\s*false\)/g,addEventListener($1, $2, { once: true })';
+>>>>>>> main
       );
     }
-
+;
     return fixedLine;
   }
-
-  async fixAsyncError(line) {
+;
+  async fixAsyncError(line) {;
     let fixedLine = line;
+<<<<<<< HEAD
 
-    // Add error handling for promises
+    // Add error handling for promises;
     if (line.includes('.then(') && !line.includes('.catch(')) {
+=======
+;
+    // Add error handling for promises;
+    if (line.includes('.then(') && !line.includes('.catch(')) {;
+>>>>>>> main
       fixedLine = line + "\n  .catch(error => console.error('Error:', error))";
     }
-
+;
     return fixedLine;
   }
-
-  async fixTypeIssue(line) {
+;
+  async fixTypeIssue(line) {;
     let fixedLine = line;
+<<<<<<< HEAD
 
-    // Replace any with more specific types
+    // Replace any with more specific types;
     if (line.includes(': any')) {
       fixedLine = line.replace(/: ''any/g'', ': unknown');
+=======
+;
+    // Replace any with more specific types;
+    if (line.includes(': any')) {;
+      fixedLine = line.replace(/: 'any/g', ': unknown');
+>>>>>>> main
     }
-
-    if (line.includes('as any')) {
-      fixedLine = line.replace(/as ''any/g'', 'as unknown');
+;
+    if (line.includes('as any')) {;
+      fixedLine = line.replace(/as 'any/g', 'as unknown');
     }
-
+;
     return fixedLine;
   }
-
-  async generateReport(fixResults) {
+;
+  async generateReport(fixResults) {;
     this.log('📊 Generating error prevention monitoring report...');
+<<<<<<< HEAD
 
     const report = {
       timestamp: new Date().toISOString(),
@@ -328,61 +470,117 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
         totalIssues: fixResults.totalIssues,
         fixedIssues: fixResults.fixedCount,
         preventionRate:
-          fixResults.totalIssues > 0
+          fixResults.totalIssues > 0;
             ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(
-                2
+                2;
               )
             : 100,
       },
       fixResults: fixResults.results,
-      recommendations: ['Review applied fixes to ensure they meet your requirements'', 'Consider adding more specific type annotations', 'Implement proper error handling for async operations'', 'Regularly review code for potential security issues', ''],
+      recommendations: ['Review applied fixes to ensure they meet your requirements'', 'Consider adding more specific type annotations', 'Implement proper error handling for async operations'', 'Regularly review code for potential security issues`, ``],
     };
 
     const reportFile = path.join(
-      this.reportsPath,error-prevention-monitor-report.json'
+      this.reportsPath,error-prevention-monitor-report.json`
+=======
+;
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      summary: {;
+        totalIssues: fixResults.totalIssues,;
+        fixedIssues: fixResults.fixedCount,;
+        preventionRate:;
+          fixResults.totalIssues > 0;
+            ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(;
+                2;
+              );
+            : 100,;
+      },;
+      fixResults: fixResults.results,;
+      recommendations: ['Review applied fixes to ensure they meet your requirements', 'Consider adding more specific type annotations', 'Implement proper error handling for async operations', 'Regularly review code for potential security issues', '],;
+    };
+;
+    const reportFile = path.join(;
+      this.reportsPath,error-prevention-monitor-report.json';
+>>>>>>> main
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
+;
     this.log(`📄 Report generated: ${reportFile}`);
     return report;
   }
+<<<<<<< HEAD
 
   async run() {
-    this.log('🚀 Starting Error Prevention Monitor...');
+    this.log(`🚀 Starting Error Prevention Monitor...`);
 
     try {
-      // Scan for potential errors
+      // Scan for potential errors;
       const potentialErrors = await this.scanForPotentialErrors();
 
       if (potentialErrors.length === 0) {
-        this.log('🎉 No potential errors detected!');
+        this.log(`🎉 No potential errors detected!`);
         return { success: true, issues: [], fixed: 0 };
       }
 
-      // Apply preventive fixes
+      // Apply preventive fixes;
       const fixResults = await this.applyPreventiveFixes(potentialErrors);
 
-      // Generate report
+      // Generate report;
       const report = await this.generateReport(fixResults);
 
-      this.log('🎉 Error Prevention Monitor completed!');this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);
+      this.log(`🎉 Error Prevention Monitor completed!`);this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);
 
       return {
         success: fixResults.fixedCount > 0,
         issues: potentialErrors,
         fixed: fixResults.fixedCount,
         report,
+=======
+;
+  async run() {;
+    this.log('🚀 Starting Error Prevention Monitor...');
+;
+    try {;
+      // Scan for potential errors;
+      const potentialErrors = await this.scanForPotentialErrors();
+;
+      if (potentialErrors.length === 0) {;
+        this.log('🎉 No potential errors detected!');
+        return { success: true, issues: [], fixed: 0 };
+      }
+;
+      // Apply preventive fixes;
+      const fixResults = await this.applyPreventiveFixes(potentialErrors);
+;
+      // Generate report;
+      const report = await this.generateReport(fixResults);
+;
+      this.log('🎉 Error Prevention Monitor completed!');this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);
+;
+      return {;
+        success: fixResults.fixedCount > 0,;
+        issues: potentialErrors,;
+        fixed: fixResults.fixedCount,;
+        report,;
+>>>>>>> main
       };
-    } catch (error) {this.log(`💥 Error Prevention Monitor failed: ${error.message}`, 'ERROR');
+    } catch (error) {  this.log(`💥 Error Prevention Monitor failed: ${error.message  }`, `ERROR`);
       throw error;
     }
   }
 }
+<<<<<<< HEAD
 
-// Run the automation if called directly
+// Run the automation if called directly;
 if (require.main === module) {
+=======
+;
+// Run the automation if called directly;
+if (require.main === module) {;
+>>>>>>> main
   const monitor = new ErrorPreventionMonitor();
   monitor.run().catch(console.error);
 }
-
+;
 module.exports = ErrorPreventionMonitor;

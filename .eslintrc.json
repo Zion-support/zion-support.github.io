@@ -1,5 +1,19 @@
 {
+<<<<<<< HEAD
+ursor/automate-test-fix-improve-and-merge-code-99d1
+=======
   "extends": ["next/core-web-vitals"],
+<<<<<<< HEAD
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+=======
+>>>>>>> main
   "rules": {
     "no-unused-vars": "off",
     "no-console": "warn",
@@ -19,4 +33,5 @@
     "**/*.mjs",
     "src/**"
   ]
+>>>>>>> main
 }

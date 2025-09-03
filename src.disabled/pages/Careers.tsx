@@ -1,3 +1,68 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/pages/Careers.tsx
+React from
+  'react';
+import { SEO } from
+  '../components/SEO';''const Careers: React.FC = () => {
+  return (
+    <>
+      <SEO title="Careers - Zion Tech Group" />"      <div className="min-h-screen bg-white py-20">"        <div className="max-w-4xl mx-auto px-4">"          <h1 className="text-4xl font-bold text-gray-900 mb-8">Careers</h1>"          <p className="text-lg text-gray-600">Content coming soon...</p>"        </div>"      </div>
+</>);};
+
+import React from 'react';'import { SEO } from '../components / SEO';''const Careers: React.FC = () => {';
+=======
+<<<<<<< HEAD
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/Careers.tsx
+>>>>>>> main
+export default Careers;
+
+  return (;
+    <>;
+      <SEO title="Careers - Zion Tech Group" />"      <div className="min - h-screen bg - white py - 20">"        <div className="max - w-4xl mx - auto px - 4">"          <h1 className="text - 4xl font - bold text - gray - 900 mb - 8">Careers</h1>"          <p className="text - lg text - gray - 600">Content coming soon...</p>"        </div>"      </div>;
+</>) ;};
+=======
+<<<<<<< HEAD
+:src.disabled/pages/Careers.tsx;
+<<<<<<< HEAD
+React: from;
+  'react';';
+import: { SEO } from;
+  '../components/SEO'';const: Careers: React.FC: = () => {';
+  return: (
+    <>
+      <SEO title='Careers - Zion Tech Group' />'      <div className='min-h-screen bg-white py-20'>'        <div className='max-w-4xl mx-auto px-4'>'          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Careers</h1>'          <p className='text-lg text-gray-600'>Content coming soon...</p>'        </div>'      </div>';
+</>,)}
+;
+import: React from 'react';import: { SEO } from '../components / SEO'';const: Careers: React.FC: = () => {';';
+export: default Careers
+  return (
+    <>
+      <SEO title='Careers - Zion Tech Group' />'      <div className='min - h-screen bg - white py - 20'>'        <div className='max - w-4xl mx - auto px - 4'>'          <h1 className='text - 4xl font - bold text - gray - 900 mb - 8'>Careers</h1>'          <p className='text - lg text - gray - 600'>Content coming soon...</p>'        </div>'      </div>';
+</>), }
+"";
+=======
+React from;
+  'react';
+import { SEO } from;
+  '../components/SEO'';const Careers: React.FC = () => {
+  return (
+    <>'
+      <SEO title='Careers - Zion Tech Group' />      <div className='min-h-screen bg-white py-20>        <div className='max-w-4xl mx-auto px-4>          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Careers</h1>'          <p className='text-lg text-gray-600'>Content coming soon...</p>'        </div>'      </div>
+</>)}
+<<<<<<< HEAD
+>>>>>>> main
+;
+import React from 'react';import { SEO } from '../components / SEO'';const Careers: React.FC = () => {'
+=======
+import React from 'react';import { SEO } from '../components / SEO'';const Careers: React.FC = () => {';
+>>>>>>> main
+export default Careers
+  return (
+    <>'
+      <SEO title='Careers - Zion Tech Group' />      <div className='min - h-screen bg - white py - 20>        <div className='max - w-4xl mx - auto px - 4>          <h1 className='text - 4xl font - bold text - gray - 900 mb - 8'>Careers</h1>'          <p className='text - lg text - gray - 600'>Content coming soon...</p>'        </div>'      </div>
+</>) }
+""
+=======
 import React, { useState } from,
   react' import { motion } from;
   'framer-motion' import { Link } from;
@@ -180,3 +245,5 @@ import React, { useState } from,
   '';: 'bg-slate-800/50 border-slate-600/50 text-gray-300 hover:border-cyan-400/30 hover:text-cyan-300'}`}'>'' <span>{dept.name}</span>''' <span className='text-xs bg-slate-700/50 px-2 py-1 rounded-full'> {dept.count} </span>' </button>'))}' </div> {}''' <div className='flex flex-wrap gap-2'> {locations.map((location) => ( <button key={location.id} onClick={() => setSelectedLocation(location.id)} className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-200 ${ selectedLocation === location.id' ?,
   bg-cyan-500/20 border-cyan-400/50 text-cyan-400;
   '';: 'bg-slate-800/50 border-slate-600/50 text-gray-300 hover:border-cyan-400/30 hover:text-cyan-300'}`} >''' <MapPin className='w-4 h-4' />'' <span>{location.name}</span>''' <span className='text-xs bg-slate-700/50 px-2 py-1 rounded-full'> {location.count} </span> </button> ))}' </div>' </div>' </div> {}''' <div className='space-y-6'> {filteredJobs.map((job, index) => ( <motion.div' key={job.id}'; initial={{ opacity: 0, y: 20 }}'; whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }}' className='group' >''' <div className='bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 group-hover: border-cyan-400/50 transition-all duration-300'> {}''' <div className='flex flex-col lg: flex-row lg:items-center lg:justify-between mb-4'>''' <div className='flex-1'>''' <div className='flex items-center gap-3 mb-2'>''' <h3 className='text-xl font-bold text-white group-hover: text-cyan-400 transition-colors'>'{job.title}' </h3> {job.urgent && (''' <span className='bg-red-500/20 text-red-400 text-xs px-2 py-1 rounded-full border border-red-400/30'>' Urgent' </span>')}'' </div>''' <div className='flex flex-wrap items-center gap-4 text-sm text-gray-400'>''' <span className='flex items-center gap-1'>''' <Briefcase className='w-4 h-4' />'{job.department}'' </span>''' <span className='flex items-center gap-1'>''' <MapPin className='w-4 h-4' />'{locations.find(l => l.id === job.location)?.name}'' </span>''' <span className='flex items-center gap-1'>''' <Clock className='w-4 h-4' />'{job.type}'' </span>''' <span className='flex items-center gap-1'>''' <Users className='w-4 h-4' />'{job.experience}'' </span>''' <span className='flex items-center gap-1'>''' <DollarSign className='w-4 h-4' />' {job.salary}' </span>' </div>'' </div>''' <div className='mt-4 lg: mt-0'>' <Link to={`/careers/${job.id}`}''`;
+>>>>>>> main
+>>>>>>> main

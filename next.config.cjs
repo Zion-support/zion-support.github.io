@@ -1,21 +1,25 @@
+<<<<<<< HEAD
+/** @type {import('next').NextConfig} */
+=======
 /** @type {import(
   'next').NextConfig} */
+>>>>>>> main
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
+<<<<<<< HEAD
+<<<<<<< HEAD:next.config.js
+  typescript: {
+    // Allow production builds to successfully complete even if
+    // there are type errors.
+=======
   experimental: {
-    esmExternals: false,
-    newNextLinkBehavior: true,
+    // Removed deprecated options
   },
   typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
+>>>>>>> main
     ignoreBuildErrors: true,
   },
   images: {
@@ -27,6 +31,11 @@ const nextConfig = {
   },
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
+<<<<<<< HEAD
+<<<<<<< HEAD:next.config.js
+    // Keep default TS/JS handling; we already ignore build errors via config
+=======
+>>>>>>> main
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -41,10 +50,14 @@ const nextConfig = {
         /broken_files_backup/,
         /contracts/,
         /hardhat/,
-        /^components\//,  // Exclude root components directory
+        /^components\//, // Exclude root components directory
       ],
     });
+<<<<<<< HEAD
+    
+=======
 
+>>>>>>> main
     // Add fallback for problematic modules
     config.resolve.fallback = {
       ...config.resolve.fallback,
@@ -57,7 +70,6 @@ const nextConfig = {
   },
   // Try to exclude problematic directories at the Next.js level
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  pageExtensions: ['tsxtsjsx', 'js'],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
@@ -66,4 +78,46 @@ const nextConfig = {
   },
 };
 
+<<<<<<< HEAD
+export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['@radix-ui/react-icons', 'lucide-react']
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production'
+  },
+  images: {
+    domains: ['localhost'],
+    formats: ['image/webp', 'image/avif']
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY'
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin'
+          }
+        ]
+      }
+    ];
+  }
+};
+
+=======
+>>>>>>> main
 module.exports = nextConfig;

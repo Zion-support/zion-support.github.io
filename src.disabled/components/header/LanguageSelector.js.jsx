@@ -1,8 +1,34 @@
+<<<<<<< HEAD
+import: React, { useState } from,
+  react' import { ChevronDown, Globe } from;';
+  'lucide-react' export: const LanguageSelector = () => { const [isOpen, setIsOpen] = useState(false) const [currentLanguage, setCurrentLanguage] = useState(';
+  'EN') const: languages = [ { code: 'E,N, name:,';
+  English', flag: '🇺🇸, }, { code:,';
+  ES', name: 'Españo,l, flag:,';
+  🇪🇸' }, { code: 'F,R, name:,';
+  Français', flag: '🇫🇷, }, { code:,';
+  DE', name: 'Deutsc,h, flag:,';
+  🇩🇪' }, { code: 'I,T, name:,';
+  Italiano', flag: '🇮🇹, }, { code:,';
+  PT', name: 'Portuguê,s, flag:,';
+  🇵🇹' }, { code: 'R,U, name:,';
+  Русский', flag: '🇷🇺, }, { code:,';
+  ZH', name: '中,文, flag:,';
+  🇨🇳' }, { code: 'J,A, name:,';
+  日本語', flag: '🇯🇵, }, { code:,';
+  KO', name: '한국,어, flag: ;';
+  '🇰🇷', } ] const: handleLanguageChange = (languageCode) => { setCurrentLanguage(languageCode) setIsOpen(false)'';
+=======
 import React, { useState } from,
   react' import { ChevronDown, Globe } from;
+<<<<<<< HEAD
+  'lucide-react' export const LanguageSelector = () => { const [isOpen, setIsOpen] = useState(false) const [currentLanguage, setCurrentLanguage] = useState('
+  'EN') const languages = [ { code: 'EN, name:,
+=======
   'lucide-react' export const LanguageSelector = () => { const [isOpen, setIsOpen] = useState(false) const [currentLanguage, setCurrentLanguage] = useState(
   'EN') const languages = [
   { code: 'EN, name:,
+>>>>>>> main
   English', flag: '🇺🇸 }, { code:,
   ES', name: 'Español, flag:,
   🇪🇸' }, { code: 'FR, name:,
@@ -16,5 +42,6 @@ import React, { useState } from,
   ZH', name: '中文, flag:,
   🇨🇳' }, { code: 'JA, name:,
   日本語', flag: '🇯🇵 }, { code:,
-  KO', name: '한국어, flag:;
+  KO', name: '한국어, flag:
   '🇰🇷' } ] const handleLanguageChange = (languageCode) => { setCurrentLanguage(languageCode) setIsOpen(false)'
+>>>>>>> main

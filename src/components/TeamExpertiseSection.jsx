@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+const: teamMembers = [{ id:  ,1, name: "Dr.Sarah: Chen,"," role: "Chief: Technology Officer,"," expertise: "AI: & Machine Learning,"," experience: "15+ years,"," avatar: "/avatars/sarah-chen.jpg,"," bio: "Leading: expert in artificial intelligence with PhD from MIT.Specializes in computer vision and natural language processing.,"," skills["Machine Learning", "Computer Vision", "Deep Learning", "Python", "TensorFlow"]," achievements["50+ AI Projects", "15 Research Papers", "AI Innovation Award 2023"], rating: 4.,9, projects: 4,5," location: "San: Francisc,o, CA"," linkedin: "https:";";",;
+=======
+<<<<<<< HEAD
+const teamMembers = [{ id: 1, name: "Dr.Sarah Chen"," role: "Chief Technology Officer", " expertise: "AI & Machine Learning"," experience: "15+ years", " avatar: "/avatars/sarah-chen.jpg"," bio: "Leading expert in artificial intelligence with PhD from MIT.Specializes in computer vision and natural language processing.", " skills["Machine Learning", "Computer Vision", "Deep Learning", "Python", "TensorFlow"], " achievements["50+ AI Projects", "15 Research Papers", "AI Innovation Award 2023"], rating: 4.9, projects: 45, " location: "San Francisco, CA"," linkedin: "http,
+    s:"
+=======
+<<<<<<< HEAD
+const teamMembers = [{ id: 1, name: &quot;Dr.Sarah Chen&quot;,&quot; role: &quot;Chief Technology Officer&quot;,&quot; expertise: &quot;AI & Machine Learning&quot;,&quot; experience: &quot;15+ years&quot;,&quot; avatar: &quot;/avatars/sarah-chen.jpg&quot;,&quot; bio: &quot;Leading expert in artificial intelligence with PhD from MIT.Specializes in computer vision and natural language processing.&quot;,&quot; skills[&quot;Machine Learning&quot;, &quot;Computer Vision&quot;, &quot;Deep Learning&quot;, &quot;Python&quot;, &quot;TensorFlow&quot;],&quot; achievements[&quot;50+ AI Projects&quot;, &quot;15 Research Papers&quot;, &quot;AI Innovation Award 2023&quot;], rating: 4.9, projects: 45,&quot; location: &quot;San Francisco, CA&quot;,&quot; linkedin: &quot;http,s:";}"
+=======
+<<<<<<< HEAD
+const teamMembers = [{ id: 1, name: "Dr.Sarah Chen"," role: "Chief Technology Officer", " expertise: "AI & Machine Learning"," experience: "15+ years", " avatar: "/avatars/sarah-chen.jpg"," bio: "Leading expert in artificial intelligence with PhD from MIT.Specializes in computer vision and natural language processing.", " skills["Machine Learning", "Computer Vision", "Deep Learning", "Python", "TensorFlow"], " achievements["50+ AI Projects", "15 Research Papers", "AI Innovation Award 2023"], rating: 4.9, projects: 45, " location: "San Francisco, CA"," linkedin: "https:""
+}
+=======
+<<<<<<< HEAD
+const teamMembers = [{ id: 1, name: "Dr.Sarah Chen"," role: "Chief Technology Officer", " expertise: "AI & Machine Learning"," experience: "15+ years", " avatar: "/avatars/sarah-chen.jpg"," bio: "Leading expert in artificial intelligence with PhD from MIT.Specializes in computer vision and natural language processing.", " skills["Machine Learning", "Computer Vision", "Deep Learning", "Python", "TensorFlow"], " achievements["50+ AI Projects", "15 Research Papers", "AI Innovation Award 2023"], rating: 4.9, projects: 45, " location: "San Francisco, CA"," linkedin: "https:
+=======
 const teamMembers = [
   { id: 1, name: "Dr.Sarah Chen, role: "Chief Technology Officer, expertise: "AI & Machine Learning, experience: "15+ years, avatar: "/avatars/sarah-chen.jpg, bio: "Leading expert in artificial intelligence with PhD from MIT.Specializes in computer vision and natural language processing., skills["Machine Learning,Computer Vision,Deep Learning,Python,TensorFlow"], " achievements["50+ AI Projects,15 Research Papers,AI Innovation Award 2023"], rating: 4.9, projects: 45, " location: "San Francisco, CA, linkedin: "https:"
 }
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
