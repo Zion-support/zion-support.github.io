@@ -1,5 +1,13 @@
-export interface ComprehensivePricingGuide2034 {
+<<<<<<< HEAD
+export interface ComprehensivePricingGuide2034 { id: string;
+=======
+<<<<<<< HEAD
+export interface ComprehensivePricingGuide2034 {;
   id: string;
+=======
+export interface ComprehensivePricingGuide2034 {id: string;
+>>>>>>> main
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -9,9 +17,27 @@ export interface ComprehensivePricingGuide2034 {
    targetAudience: string[];
    contactInfo: {  phone: string;
    email: string;
-   website: string
-   address: string} marketPositioning: string competitiveAdvantages: string[] testimonials: string[] caseStudies: string[] } export interface PricingTier {
+<<<<<<< HEAD
+   websit,
+    e: string
+   addres,
+    s: string} marketPositioning: string competitiveAdvantages: string[] testimonial,
+    s: string[] caseStudie,
+    s: string[] } export interface PricingTier {
+=======
+<<<<<<< HEAD
+   website: string;
+<<<<<<< HEAD
+   address: string  } marketPositioning: string competitiveAdvantages: string[] testimonials: string[] caseStudies: string[] } export interface PricingTier { name: string;
+=======
+   address: string} marketPositioning: string competitiveAdvantages: string[] testimonials: string[] caseStudies: string[] } export interface PricingTier {;
+>>>>>>> main
   name: string;
+=======
+   website: string
+   address: string} marketPositioning: string competitiveAdvantages: string[] testimonials: string[] caseStudies: string[] } export interface PricingTier {name: string;
+>>>>>>> main
+>>>>>>> main
    price: number;
    currency: string;
    period: string;
@@ -22,5 +48,16 @@ export interface ComprehensivePricingGuide2034 {
    link: string;
    savings?: string;
    roi: string;
+<<<<<<< HEAD
+   estimatedDeliver,
+    y: string;
+   supportLeve,
+    l: string} export const COMPREHENSIVE_PRICING_GUIDE_2034: ComprehensivePricingGuide2034[] = [;
+=======
    estimatedDelivery: string;
+<<<<<<< HEAD
+   supportLevel: string  } export const COMPREHENSIVE_PRICING_GUIDE_2034: ComprehensivePricingGuide2034[] = [;
+=======
    supportLevel: string} export const COMPREHENSIVE_PRICING_GUIDE_2034: ComprehensivePricingGuide2034[] = [;
+>>>>>>> main
+>>>>>>> main

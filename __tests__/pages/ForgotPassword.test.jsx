@@ -1,30 +1,50 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import;
-  '@testing-library/jest-dom';
+  '@testing-library/jest-dom';';
 import { BrowserRouter as Router } from 'react-router-dom';
 import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as necessary;
+=======
+import React   from 'react';';
+import { render, screen, fireEvent, waitFor }    from '@testing-library/react;';
+import';';
+  '@testing-library/jest-dom;
+import { BrowserRouter as Router }   from 'react-router-dom';';
+import ForgotPassword  from '../../src/pages/ForgotPassword';// Adjust path as necessary;';
+>>>>>>> main
 // Mock the auth service;
-// jest.mock(
+<<<<<<< HEAD
+// jest.mock('
   '../../src/services/auth', () => ({
 //   forgotPassword: jest.fn(),
-// }));
+<<<<<<< HEAD
+// }))
 describe(
+=======
+// }));
+describe('
+>>>>>>> main
   'ForgotPassword Page', () => {
   beforeEach(() => {
     // Reset mocks before each test
-    // require(
+    // require('
   '../../src/services/auth').forgotPassword.mockClear()})
-  test(
+  test('
   'renders email input and submit button', () => {
     render(
       <Router>
         <ForgotPassword />
       </Router>
-    );
+<<<<<<< HEAD
+    )
     expect(screen.getByLabelText(/email address/i)).toBeInTheDocument()
+=======
+    );
+    expect(screen.getByLabelText(/email address/i)).toBeInTheDocument();
+>>>>>>> main
     expect(
-      screen.getByRole(
+      screen.getByRole('
   'button', { name: /send reset link/i })).toBeInTheDocument()})
   test('allows typing in email input'', () => {
     render(
@@ -32,42 +52,50 @@ describe(
         <ForgotPassword />
       </Router>
     );
-    const emailInput = screen.getByLabelText(/email address/i);
+<<<<<<< HEAD
+    const emailInput = screen.getByLabelText(/email address/i)
     fireEvent.change(emailInput, { target: { value:
   'test@example.com } })
+=======
+    const emailInput = screen.getByLabelText(/email address/i);
+    fireEvent.change(emailInput, { target: { valu,
+    e:'
+  'test@example.com } });
+>>>>>>> main
     expect(emailInput.value).toBe(,
   test@example.com')})
-  test(
-  'shows success message on successful submission (mocked)', async () => {
-    // require(
-  '../../src/services/auth').forgotPassword.mockResolvedValueOnce({ message: 'Reset link sent })
+  test('
+  'shows success message on successful submission (mocked), async () => {
+    // require('
+  '../../src/services/auth').forgotPassword.mockResolvedValueOnce({ message: 'Reset link sent });
     render(
       <Router>
         <ForgotPassword />
       </Router>
     );
     fireEvent.change(screen.getByLabelText(/email address/i), {
-      target: { value:;
+      target: { valu,
+    e:;
   'success@example.com' }})
-    fireEvent.click(screen.getByRole(
+    fireEvent.click(screen.getByRole('
   'button', { name: /send reset link/i }));
     // await waitFor(() => {
     //   expect(screen.getByText(/password reset instructions sent/i)).toBeInTheDocument();
     // })
     // expect(require(,
-  ../../src/services/auth').forgotPassword).toHaveBeenCalledWith(
+  ../../src/services/auth').forgotPassword).toHaveBeenCalledWith('
   'success@example.com');
-    console.log(
+    console.log('
   'Mock test: Simulating successful submission message check.);
-    // For now, the component directly sets a message:;
+    // For now, the component directly sets a message:
     await waitFor(() => {
       expect(
         screen.getByText(
           /password reset instructions sent to your email if it exists in our system./i)).toBeInTheDocument()})})
   test(,
-  shows error message on failed submission (mocked)', async () => {
-    // require(
-  '../../src/services/auth').forgotPassword.mockRejectedValueOnce(new Error(
+  shows error message on failed submission (mocked), async () => {
+    // require('
+  '../../src/services/auth').forgotPassword.mockRejectedValueOnce(new Error('
   'Failed to send link'))
     render(
       <Router>
@@ -75,18 +103,112 @@ describe(
       </Router>
     );
     fireEvent.change(screen.getByLabelText(/email address/i), {
-      target: { value:;
+      target: { valu,
+    e:;
   'error@example.com }})
-    fireEvent.click(screen.getByRole(
+    fireEvent.click(screen.getByRole('
   'button', { name: /send reset link/i }));
+=======
+// jest.mock(;
+  '../../src/services/auth', () => ({';
+//   forgotPassword: jest.fn(),;
+// }));
+  describe(;
+  'ForgotPassword Page', () => {';
+  beforeEach(() => {;
+    // Reset mocks before each test;
+    // require(;
+  '../../src/services/auth').forgotPassword.mockClear()})';
+  test(;
+  'renders email input and submit button', () => {';
+    render(;
+      <Router>;
+        <ForgotPassword />;
+      </Router>;
+    );
+    expect(screen.getByLabelText(/email address/i)).toBeInTheDocument();
+    expect(;
+      screen.getByRole(;
+  'button', { name: /send reset link/i })).toBeInTheDocument()})';
+  test('allows typing in email input'', () => {';
+    render(;
+      <Router>;
+        <ForgotPassword />;
+      </Router>;
+    );
+    const emailInput = screen.getByLabelText(/email address/i);
+    fireEvent.change(emailInput, { target: { value:;
+  'test@example.com } })';
+    expect(emailInput.value).toBe(,;
+  test@example.com')})';
+  test(;
+  'shows success message on successful submission (mocked)', async () => {';
+    // require(;
+  '../../src/services/auth').forgotPassword.mockResolvedValueOnce({ message: 'Reset link sent })';
+    render(;
+      <Router>;
+        <ForgotPassword />;
+      </Router>;
+    );
+    fireEvent.change(screen.getByLabelText(/email address/i), {;
+      target: { value:;
+  'success@example.com' }})';
+    fireEvent.click(screen.getByRole(;
+  'button', { name: /send reset link/i });
+    // await waitFor(() => {;
+    //   expect(screen.getByText(/password reset instructions sent/i)).toBeInTheDocument();
+    // });
+    // expect(require(,;
+  ../../src/services/auth').forgotPassword).toHaveBeenCalledWith(success@example.com');';
+    console.log(;
+  'Mock test: Simulating successful submission message check.);';
+    // For now, the component directly sets a message:;
+    await waitFor(() => {;
+      expect(;
+        screen.getByText(;
+          /password reset instructions sent to your email if it exists in our system./i)).toBeInTheDocument()})});
+  test(,;
+  shows error message on failed submission (mocked)', async () => {';
+    // require(;
+  '../../src/services/auth').forgotPassword.mockRejectedValueOnce(new Error(Failed to send link');';
+    render(;
+      <Router>;
+        <ForgotPassword />;
+      </Router>;
+    );
+    fireEvent.change(screen.getByLabelText(/email address/i), {;
+      target: { value:;
+  'error@example.com }})';
+    fireEvent.click(screen.getByRole(;
+  'button', { name: /send reset link/i });
+>>>>>>> main
     // This test needs the actual API call to be implemented in the component and mocked here.;
-    // For now, the component doesn,
+    // For now, the component doesn,;
   t show a distinct error message for API failure, only a generic success.;
-    // await waitFor(() => {
+    // await waitFor(() => {;
     //   expect(screen.getByText(/failed to send link/i)).toBeInTheDocument();
+<<<<<<< HEAD
     // })
     // expect(require('../../src/services/auth;
-  ').forgotPassword).toHaveBeenCalledWith('error@example.com;
+  ').forgotPassword).toHaveBeenCalledWith('error@example.com
   ')
     console.log(
       'Mock test: Simulating error message check (currently not implemented in component this way).)})})
+=======
+    // });
+<<<<<<< HEAD
+    // expect(require('../../src/services/auth;';
+  ').forgotPassword).toHaveBeenCalledWith('error@example.com;
+<<<<<<< HEAD
+  ');
+    console.log('
+      'Mock test: Simulating error message check (currently not implemented in component this way).)})})
+=======
+  ')';
+=======
+    // expect(require('../../src/services/auth;).forgotPassword).toHaveBeenCalledWith('error@example.com;)';
+>>>>>>> main
+    console.log(;
+      'Mock test: Simulating error message check (currently not implemented in component this way).)})})';
+>>>>>>> main
+>>>>>>> main

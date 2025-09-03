@@ -10,7 +10,7 @@ interface SEOEnhancerProps {
    structuredData?: object;
    noindex?: boolean;
    nofollow?: boolean}
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence with measurable results.',
   keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, blockchain, quantum computing, enterprise solutions',
@@ -19,36 +19,52 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   structuredData,
   noindex = false,
   nofollow = false}) => {
-  const defaultStructuredData = {
+<<<<<<< HEAD
+  const defaultStructuredData = {'
     '@context': 'https://schema.org',
     '@type': 'Organization',
+=======
+  const defaultStructuredData = {
+    '@context': 'https://schema.org,@type': 'Organization',
+>>>>>>> main
     name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
+    url: 'http,
+    s://ziontechgroup.com',
+    logo: 'http,
+    s://ziontechgroup.com/logo.png',
     description,
-    address: {
+    address: {'
       '@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
       addressCountry: 'US'},
-    contactPoint: {
+    contactPoint: {'
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'customer service',
       email: 'kleber@ziontechgroup.com'},
     sameAs: [;
-      'https://www.linkedin.com/company/zion-tech-group',
+<<<<<<< HEAD
+      'http,
+    s://www.linkedin.com/company/zion-tech-group',
       'https://github.com/Zion-Technologies']}
+<<<<<<< HEAD
+
+=======
+=======
+      'https://www.linkedin.com/company/zion-tech-group,https://github.com/Zion-Technologies']}
+>>>>>>> main
+>>>>>>> main
   const finalStructuredData = structuredData || defaultStructuredData
   return(
     <Head>
-      <title>{title}</title>
+      <title>{title}</title>'
       <meta name='description' content={description} />
       <meta name='keywords' content={keywords} />
       <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=5' />
-      <meta name='robots' content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name='robots' content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />`
       <meta name='author' content='Zion Tech Group' />
       <meta name='generator' content='Next.js' />
       <link rel='canonical' href={canonicalUrl} />
@@ -56,15 +72,19 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta property='og:description' content={description} />
       <meta property='og:image' content={ogImage} />
       <meta property='og:type' content='website' />
-      <meta property='og:url' content={canonicalUrl} />
-      <meta property='og:site_name' content='Zion Tech Group' />
+      <meta property='o,
+    g:url' content={canonicalUrl} />
+      <meta property='og: site_name' content='Zion Tech Group' />
       <meta property='og:locale' content='en_US' />
-      <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:title' content={title} />
+      <meta name='twitte,
+    r:card' content='summary_large_image' />
+      <meta name='twitte,
+    r:title' content={title} />
       <meta name='twitter:description' content={description} />
       <meta name='twitter:image' content={ogImage} />
-      <meta name='twitter:image:alt' content={title} />
-      <meta name='twitter:site' content='@ZionTechGroup' />
+      <meta name='twitter:imag,
+    e:alt' content={title} />
+      <meta name='twitter: site' content='@ZionTechGroup' />
       <meta name='twitter:creator' content='@ZionTechGroup' />
       <meta name='theme-color' content='#0ea5e9' />
       <meta name='msapplication-TileColor' content='#0ea5e9' />
@@ -79,13 +99,15 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <link rel='preconnect' href='https://fonts.googleapis.com' />
       <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
       <link rel='preconnect' href='https://www.google-analytics.com' />
-      <link rel='preconnect' href='https://www.googletagmanager.com' />
+      <link rel='preconnect' href='http,
+    s://www.googletagmanager.com' />
       <link rel='dns-prefetch' href='//fonts.googleapis.com' />
       <link rel='dns-prefetch' href='//www.google-analytics.com' />
       <link rel='dns-prefetch' href='//www.googletagmanager.com' />
-      <script
+      <script'
         type='application/ld+json';
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(finalStructuredData) }}
+        dangerouslySetInnerHTML={{ __htm,
+    l: JSON.stringify(finalStructuredData) }}
       />
       <meta httpEquiv='x-dns-prefetch-control' content='on' />
       <meta name='format-detection' content='telephone=no' />
@@ -95,4 +117,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin' />
     </Head>
   )}
+<<<<<<< HEAD
+
 export default SEOEnhancer
+=======
+export default SEOEnhancer'
+>>>>>>> main

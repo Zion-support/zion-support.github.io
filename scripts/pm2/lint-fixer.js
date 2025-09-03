@@ -1,12 +1,18 @@
 #!/usr/bin/env node;
-const fs = require(,
+const fs = require(,;
   fs');
-const path = require(
+<<<<<<< HEAD
+const path = require('
   'path');
-const { execSync } = require(
+const { execSync } = require('
+=======
+const path = require(;
+  'path');
+const { execSync } = require(;
+>>>>>>> main
   'child_process');
-class IntelligentLintFixer {
-  constructor() {
+class IntelligentLintFixer {;
+  constructor() {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot,logs/pm2/lint-fixer.log;
   ');
@@ -16,62 +22,91 @@ class IntelligentLintFixer {
     this.warningsFixed = 0;
     this.startTime = Date.now();
   log(message, level =;
-  'INFO') {
+<<<<<<< HEAD
+  `INFO`) {
+=======
+  'INFO') {;
+>>>>>>> main
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+<<<<<<< HEAD
   isLintableFile(filePath) {
+<<<<<<< HEAD
     const extensions = [
+  `.js`,.jsx;
+=======
+    const extensions = [`
   '.js',.jsx;
   ',.ts',.tsx;
   ',.vue'];
-    return extensions.some(ext => filePath.endsWith(ext))}
+    return extensions.some(ext => filePath.endsWith(ext));
   async runPrettier(files) {
-    this.log(
+    this.log('
   '💅 Running Prettier for code formatting...');
     try {
   createSuggestion(message, filePath) {
-    const suggestions = {
+    const suggestions = {'
   'no-console': {
+=======
+  isLintableFile(filePath) {;
+    const extensions = [;
+  '.js',.jsx;
+>>>>>>> main
+  ',.ts',.tsx;
+  ',.vue'];
+    return extensions.some(ext => filePath.endsWith(ext))}
+  async runPrettier(files) {;
+    this.log(;
+  '💅 Running Prettier for code formatting...');
+    try {;
+  createSuggestion(message, filePath) {;
+    const suggestions = {;
+  'no-console': {;
+>>>>>>> main
         message:;
-  'Replace console.log with proper logging,
-        fix:,
-  Implement structured logging with winston or pino',
+  'Replace console.log with proper logging,;
+        fix:,;
+  Implement structured logging with winston or pino',;
         priority: 'medium},no-unused-vars;
-  ': {
-        message:,
+  ': {;
+        message:,;
   Remove unused variables or mark with underscore;
-  ',
-        fix: 'Use _variableName or remove if truly unused,
-        priority:,
+  ',;
+        fix: 'Use _variableName or remove if truly unused,;
+        priority:,;
   low;
-  '},prefer-const': {
+  '},prefer-const': {;
         message:;
-  'Use const for variables that are not reassigned,
-        fix:,
-  Change let to const where appropriate',
+  'Use const for variables that are not reassigned,;
+        fix:,;
+  Change let to const where appropriate',;
         priority: 'low},no-var;
-  ': {
-        message:,
+  ': {;
+        message:,;
   Use modern ES6+ variable declarations;
-  ',
-        fix: 'Replace var with const or let,
+  ',;
+        fix: 'Replace var with const or let,;
         priority: 'medium;
   '}
     }
     const rule = message.ruleId;
-    if (suggestions[rule]) {
-      return {
-        file: filePath,
-        line: message.line,
-        rule: rule,
-        message: suggestions[rule].message,
-        fix: suggestions[rule].fix,
-        priority: suggestions[rule].priority,
+    if (suggestions[rule]) {;
+      return {;
+        file: filePath,;
+        line: message.line,;
+        rule: rule,;
+        message: suggestions[rule].message,;
+        fix: suggestions[rule].fix,;
+        priority: suggestions[rule].priority,;
         severity: message.severity}
     }
-  async run() {
+<<<<<<< HEAD
+  async run() {'
+=======
+  async run() {;
+>>>>>>> main
     this.log('🚀 Starting Intelligent Lint Fixer...');
-    try {
+    try {;
 }
 }
 }

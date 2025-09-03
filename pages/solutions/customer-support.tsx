@@ -5,8 +5,8 @@ import SEO from '../../components/SEO';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
-import {
-  Headphones,
+import { 
+  Headphones, 
   ArrowRight,
   CheckCircle,
   MessageSquare,
@@ -15,7 +15,7 @@ import {
   Globe,
   BarChart3,
   Clock,
-  Users,
+  Users
 } from 'lucide-react';
 
 export default function CustomerSupport() {
@@ -23,44 +23,38 @@ export default function CustomerSupport() {
     {
       icon: Bot,
       title: 'AI Chatbots',
-      description:
-        'Intelligent chatbots that provide instant responses and escalate complex issues to human agents.',
+      description: 'Intelligent chatbots that provide instant responses and escalate complex issues to human agents.'
     },
     {
       icon: MessageSquare,
       title: 'Ticket Management',
-      description:
-        'Comprehensive ticket system with priority levels, categorization, and automated routing.',
+      description: 'Comprehensive ticket system with priority levels, categorization, and automated routing.'
     },
     {
       icon: FileText,
       title: 'Knowledge Base',
-      description:
-        'Self-service knowledge base with searchable articles, FAQs, and video tutorials.',
+      description: 'Self-service knowledge base with searchable articles, FAQs, and video tutorials.'
     },
     {
       icon: Globe,
       title: 'Multi-channel Support',
-      description:
-        'Support customers across email, chat, phone, social media, and other channels.',
+      description: 'Support customers across email, chat, phone, social media, and other channels.'
     },
     {
       icon: BarChart3,
       title: 'Analytics & Reporting',
-      description:
-        'Track performance metrics, customer satisfaction, and team productivity.',
+      description: 'Track performance metrics, customer satisfaction, and team productivity.'
     },
     {
       icon: Clock,
       title: '24/7 Availability',
-      description:
-        'Round-the-clock customer support with automated responses and escalation.',
-    },
+      description: 'Round-the-clock customer support with automated responses and escalation.'
+    }
   ];
 
   return (
     <>
-      <SEO
+      <SEO 
         title="Customer Support Platform - Zion Tech Group"
         description="AI-powered customer support system with chatbots, ticket management, and knowledge base. Improve customer satisfaction."
         keywords="customer support, AI chatbots, ticket management, knowledge base, helpdesk"
@@ -71,7 +65,7 @@ export default function CustomerSupport() {
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Badge className="mb-4 bg-blue-500 text-white">
               <Headphones className="w-4 h-4 mr-2" />
@@ -79,26 +73,18 @@ export default function CustomerSupport() {
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Customer Support
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                {' '}
-                Platform
-              </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Platform</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Deliver exceptional customer support with our AI-powered platform
-              featuring intelligent chatbots, comprehensive ticket management,
-              and self-service knowledge base.
+              Deliver exceptional customer support with our AI-powered platform featuring intelligent chatbots, 
+              comprehensive ticket management, and self-service knowledge base.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-gray-900"
-              >
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
                 Schedule Demo
               </Button>
             </div>
@@ -114,24 +100,18 @@ export default function CustomerSupport() {
               Comprehensive Support Features
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to provide world-class customer support and
-              improve satisfaction.
+              Everything you need to provide world-class customer support and improve satisfaction.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <Card
-                key={index}
-                className="p-6 hover: shadow-xl transition-shadow duration-300"
-              >
+              <Card key={index} className="p-6 hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-blue-100 rounded-lg mr-4">
                     <feature.icon className="h-8 w-8 text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900">
-                    {feature.title}
-                  </h3>
+                  <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
                 </div>
                 <p className="text-gray-600">{feature.description}</p>
               </Card>
@@ -142,28 +122,21 @@ export default function CustomerSupport() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Transform Your Customer Support?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses already using our customer support
-            platform to improve satisfaction and reduce support costs.
+            Join thousands of businesses already using our customer support platform 
+            to improve satisfaction and reduce support costs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100"
-            >
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
               Start Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Link href="/contact">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-600"
-              >
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
                 Contact Sales
               </Button>
             </Link>
@@ -171,5 +144,5 @@ export default function CustomerSupport() {
         </div>
       </section>
     </>
-  );
+  )
 }

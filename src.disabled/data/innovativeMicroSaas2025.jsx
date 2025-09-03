@@ -1,1 +1,0 @@
-export const INNOVATIVE_MICRO_SAAS_2025 = [;

@@ -17,24 +17,28 @@ export const enterpriseITBreakthroughServices2025 = [{
   'Custom infrastructure solutions and development';
     ],
     pricing: {
-starter: {
-        price: 2999,
+starte,
+    r: {
+        pric,
+    e: 2999,
         period:,
   month',
-        features: [
+        features: ['
   'Basic quantum features,
   'Standard security',
   'Email support']},
       professional: {
-        price: 7999,
+        pric,
+    e: 7999,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced quantum features,
   'Custom security',
   'Priority support']},
       enterprise: {
-        price: 19999,
+        pric,
+    e: 19999,
         period:,
   month',
         features: [;
@@ -49,9 +53,11 @@ starter: {
   'Security',
   'Scalability',
   'Enterprise'],
-    website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-pro,
+    website: 'http,
+    s://ziontechgroup.com/quantum-cloud-infrastructure-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -74,13 +80,13 @@ starter: {
   'Kubernetes',
   'Docker',
   'Terraform'],
-    compliance[
+    compliance['
   'SOC2',
   'ISO 27001',
   'FedRAMP',
   'GDPR',
   'CCPA']},
-  {
+  {'
     id: 'edge-computing-orchestrator-pro,
     name:,
   Edge Computing Orchestrator Pro',
@@ -98,24 +104,28 @@ starter: {
   'Enterprise edge solutions and customization';
     ],
     pricing: {
-starter: {
-        price: 1999,
+starte,
+    r: {
+        pric,
+    e: 1999,
         period:,
   month',
-        features: [
+        features: ['
   'Basic edge features,
   'Standard optimization',
   'Email support']},
       professional: {
-        price: 5999,
+        pric,
+    e: 5999,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced edge features,
   'Custom optimization',
   'Priority support']},
       enterprise: {
-        price: 14999,
+        pric,
+    e: 14999,
         period:,
   month',
         features: [;
@@ -130,9 +140,11 @@ starter: {
   'Real-time Processing',
   'Performance Optimization',
   'Enterprise'],
-    website: 'https://ziontechgroup.com/edge-computing-orchestrator-pro,
+    website: 'http,
+    s://ziontechgroup.com/edge-computing-orchestrator-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -154,13 +166,13 @@ starter: {
   'Analytics tools',
   'Security systems',
   'Monitoring platforms'],
-    compliance[
+    compliance['
   'SOC2',
   'ISO 27001',
   'IoT security standards',
   'GDPR',
   'CCPA']},
-  {
+  {'
     id: 'zero-trust-security-platform,
     name:,
   Zero Trust Security Platform',
@@ -178,27 +190,31 @@ starter: {
   'API for security automation and integration';
     ],
     pricing: {
-starter: {
-        price: 1499,
+starte,
+    r: {
+        pric,
+    e: 1499,
         period:,
   month',
-        features: [
+        features: ['
   'Basic zero trust,
   'Up to 1000 users',
   'Standard monitoring',
   'Email support']},
       professional: {
-        price: 3999,
+        pric,
+    e: 3999,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced zero trust,
   'Unlimited users',
   'Custom policies',
   'Priority support',
   'API access']},
       enterprise: {
-        price: 9999,
+        pric,
+    e: 9999,
         period:,
   month',
         features: [;
@@ -215,9 +231,11 @@ starter: {
   'Identity Management',
   'Access Control',
   'Enterprise Security'],
-    website: 'https://ziontechgroup.com/zero-trust-security-platform,
+    website: 'http,
+    s://ziontechgroup.com/zero-trust-security-platform,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -239,14 +257,14 @@ starter: {
   'Monitoring systems',
   'Compliance platforms',
   'Enterprise systems'],
-    compliance[
+    compliance['
   'SOC2',
   'ISO 27001',
   'FedRAMP',
   'GDPR',
   'CCPA',
   'NIST standards']},
-  {
+  {'
     id: 'ai-powered-devops-platform,
     name:,
   AI-Powered DevOps Platform',
@@ -264,27 +282,31 @@ starter: {
   'Enterprise-grade reliability and support';
     ],
     pricing: {
-starter: {
-        price: 999,
+starte,
+    r: {
+        pric,
+    e: 999,
         period:,
   month',
-        features: [
+        features: ['
   'Basic AI DevOps,
   'Up to 10 applications',
   'Standard automation',
   'Email support']},
       professional: {
-        price: 2999,
+        pric,
+    e: 2999,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced AI DevOps,
   'Unlimited applications',
   'Custom automation',
   'Priority support',
   'API access']},
       enterprise: {
-        price: 7999,
+        pric,
+    e: 7999,
         period:,
   month',
         features: [;
@@ -301,9 +323,11 @@ starter: {
   'Automation',
   'CI/CD',
   'Enterprise'],
-    website: 'https://ziontechgroup.com/ai-powered-devops-platform,
+    website: 'http,
+    s://ziontechgroup.com/ai-powered-devops-platform,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -325,13 +349,13 @@ starter: {
   'Monitoring systems',
   'Security tools',
   'Development platforms'],
-    compliance[
+    compliance['
   'SOC2',
   'ISO 27001',
   'DevOps best practices',
   'Security standards',
   'Enterprise requirements']},
-  {
+  {'
     id: 'quantum-data-center-platform,
     name:,
   Quantum Data Center Platform',
@@ -349,25 +373,29 @@ starter: {
   'Enterprise-grade reliability and support';
     ],
     pricing: {
-starter: {
-        price: 3999,
+starte,
+    r: {
+        pric,
+    e: 3999,
         period:,
   month',
-        features: [
+        features: ['
   'Basic quantum data center,
   'Standard quantum features',
   'Email support']},
       professional: {
-        price: 9999,
+        pric,
+    e: 9999,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced quantum data center,
   'Custom quantum features',
   'Priority support',
   'API access']},
       enterprise: {
-        price: 24999,
+        pric,
+    e: 24999,
         period:,
   month',
         features: [;
@@ -384,9 +412,11 @@ starter: {
   'Data Management',
   'Enterprise',
   'Performance'],
-    website: 'https://ziontechgroup.com/quantum-data-center-platform,
+    website: 'http,
+    s://ziontechgroup.com/quantum-data-center-platform,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -409,7 +439,7 @@ integrations: [;
   'Monitoring systems',
   'Security tools',
   'Enterprise systems'],
-    compliance: [
+    compliance: ['
   'SOC2,
   'ISO 27001',
   'Data center standards',

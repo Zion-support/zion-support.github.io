@@ -8,6 +8,8 @@ import React, { useState, useEffect, useRef } from,
    description: string;
    url: string;
    category: 'service' | 'solution' | 'page' | 'resource;
-   icon: React.ComponentType<any>
-   relevance: number} export function GlobalSearch() { const [isOpen, setIsOpen] = useState(false) const [query, setQuery] = useState('
-  ') const [results, setResults] = useState<SearchResult[]>([]) const [isLoading, setIsLoading] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const searchRef = useRef<HTMLDivElement>(null) const inputRef = useRef<HTMLInputElement>(null) const navigate = useNavigate() '
+   ico,
+    n: React.ComponentType<any>'
+   relevanc,
+    e: number} export function GlobalSearch() { const [isOpen, setIsOpen] = useState(false) const [query, setQuery] = useState(''
+  ') const [results, setResults] = useState<SearchResult[]>([]) const [isLoading, setIsLoading] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const searchRef = useRef<HTMLDivElement>(null) const inputRef = useRef<HTMLInputElement>(null) const navigate = useNavigate() ''

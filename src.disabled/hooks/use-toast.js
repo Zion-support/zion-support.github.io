@@ -8,17 +8,17 @@ export const toast = ({ title, description, variant = 'default' }) => {
   // You can replace this with your preferred toast implementation;
   return Date.now()}
 export const useToast = () => {
-  const [toasts, setToasts] = useState([]);
+  const [toasts, setToasts] = useState([]);`
   const toast = useCallback(({ title, description, variant = 'default' }) => {
     const id = Date.now();
     const newToast = { id, title, description, variant }
     setToasts(prev => [...prev, newToast]);
     // Auto remove after 5 seconds;
     setTimeout(() => {
-      setToasts(prev => prev.filter(t => t.id !== id))}, 5000);
+      setToasts(prev => prev.filter(t => t.id !== id));, 5000);
     return id}, []);
   const dismiss = useCallback((id) => {
-    setToasts(prev => prev.filter(t => t.id !== id))}, []);
+    setToasts(prev => prev.filter(t => t.id !== id));, []);
   const clearAll = useCallback(() => {
     setToasts([])}, []);
   return {

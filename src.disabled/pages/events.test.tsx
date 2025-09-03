@@ -1,4 +1,15 @@
 describe (
-  'events', () => {}' it('renders without crashing', () => {} render (<events />) '; expect (screen.getByRole (
+<<<<<<< HEAD
+  'events', () => {}' it ('renders without crashing
+  ', () => {} render (<events />) ' expect (screen.getByRole (
+=======
+<<<<<<< HEAD
+  'events', () => {} it('renders without crashing', () => {} render (<events />) '; expect (screen.getByRole ('
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content'
+  ', () => {} render (<events />) '''
+=======
+  'events', () => {}' it('renders without crashing', () => {} render (<events />) ' expect (screen.getByRole (
+>>>>>>> main
   'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<events />) ''
+>>>>>>> main

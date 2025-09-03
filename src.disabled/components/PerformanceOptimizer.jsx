@@ -3,16 +3,21 @@ import { useLocation } from 'react-router-dom';
 
 export const PerformanceOptimizer = ({ children }) => {
   const location = useLocation();
-  useEffect(() => {
+  useEffect(() => {'
     if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => {
+      requestIdleCallback(() => {'
         if ('startViewTransition' in document) {
           try {
-            // @ts-ignore - experimental API;
+            // @ts-ignore - experimental API
             document.startViewTransition?.(() => {})} catch {}
         }
       })}
   }, [location.pathname])
   return <>{children}</>
 }
+<<<<<<< HEAD
+
 export default PerformanceOptimizer
+=======
+export default PerformanceOptimizer'
+>>>>>>> main

@@ -4,22 +4,22 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
     },
     {
       icon: BarChart3,
-      title: 'Performance Analytics',';
+      title: 'Performance Analytics',;
       description: 'Data-driven insights for optimization'}
   ]},
-    {'
-      title: 'Healthcare',';
-      description: 'Medical equipment maintenance and reliability',';
+    {''
+      title: 'Healthcare',;
+      description: 'Medical equipment maintenance and reliability',;
       icon: '🏥'}
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
-  ]';
+  ];
   const benefits = [';
-    'Reduce unplanned downtime by up to 75%',';
-    'Extend equipment lifespan and reliability',';
-    'Lower maintenance costs and labor requirements',';
-    'Improve safety and compliance standards',';
-    'Optimize spare parts inventory management',';Increase overall operational efficiency';
-  ]';Reduce unplanned downtime by up to 75%',';Extend equipment lifespan and reliability',';Lower maintenance costs and labor requirements',';Improve safety and compliance standards',';Optimize spare parts inventory management',';Increase overall operational efficiency';
+    'Reduce unplanned downtime by up to 75%',;
+    'Extend equipment lifespan and reliability',;
+    'Lower maintenance costs and labor requirements',;
+    'Improve safety and compliance standards',;
+    'Optimize spare parts inventory management',;Increase overall operational efficiency';
+  ];Reduce unplanned downtime by up to 75%',;Extend equipment lifespan and reliability',;Lower maintenance costs and labor requirements',;Improve safety and compliance standards',;Optimize spare parts inventory management',;Increase overall operational efficiency';
   ];
   return();
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
@@ -28,12 +28,12 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 <:pages.disabled/pages/services/ai-predictive-maintenance.tsx;
       <SEO;
 =;
-      <SEO '>        title='AI Predictive Maintenance Services - Zion Tech Group';
+      <SEO '>        title='AI Predictive Maintenance Services - Zion Tech Group'
         description='Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring.'/>        title='AI Predictive Maintenance Services - Zion Tech Group''        description='Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring.'/>'
-      <SEO ''
+      <SEO '''
         title='AI Predictive Maintenance Services - Zion Tech Group'';
-        description='Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring.''/>{/* Hero Section */}''
-      <section className='pt-20 pb-16 px-4'>''
+        description='Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring.''/>{/* Hero Section */}'
+      <section className='pt-20 pb-16 px-4>''
         <div className='max-w-7xl mx-auto'>
           <motion.div;
             initial = {}
@@ -41,26 +41,29 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   y: 20;
-  y: 20;
-  y: 20}}
+  ,
+    y: 20;
+  ,
+    y: 20}}
             animate = {}
   { opacity: 1,
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   y: 0}}
-            transition={{ duration: 0.6 }}';
+            transition={{ duration: 0.6 }};
             className='text-center';
 ';
-            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6'>';
-  y: 0}}';
+            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6>;
+  y: 0}};
   y: 0}}
+<<<<<<< HEAD
             transition={{ duration: 0.6 }}'';
-            className='text-center'';
+            className='text-center''
 ''
-            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6'>''
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx
               <Wrench className='w-5 h-5 text-orange-400 mr-2'  />'              <span className='text-orange-300 font-medium'>AI Predictive Maintenance</span>
-            </div>';
+            </div>'
 ''
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
               <Wrench className='w-5 h-5 text-orange-400 mr-2'  />'              <span className='text-orange-300 font-medium'>AI Predictive Maintenance</span>
@@ -68,39 +71,67 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 ''
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
               AI Predictive''
+=======
+            transition={{ duration: 0.6 }};
+            className='text-center'';
+'''
+            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6>';
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx'
+              <Wrench className='w-5 h-5 text-orange-400 mr-2'  />              <span className='text-orange-300 font-medium'>AI Predictive Maintenance</span>'
+            </div>';
+'''
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6>'
+              <Wrench className='w-5 h-5 text-orange-400 mr-2'  />              <span className='text-orange-300 font-medium'>AI Predictive Maintenance</span>
+            </div>'
+'''
+            <h1 className='text-5xl m,
+    d:text-6xl font-bold text-white mb-6>
+              AI Predictive'''
+>>>>>>> main
               <span className='block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-pink-400'>
                 Maintenance
               </span>
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx'
             </h1>'
-            </h1>
-''
+            </h1>'
+'''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment;
-              failures, reduce downtime, and optimize performance with intelligent monitoring and analytics.;
+<<<<<<< HEAD
+              failures, reduce downtime, and optimize performance with intelligent monitoring and analytics.
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx
+            </p>'
+''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
+              <button className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20'>
+=======
+              failures, reduce downtime, and optimize performance with intelligent monitoring and analytics.;
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx'
             </p>';
-''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-              <button className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20'>
+'''
+            <div className='flex flex-col sm: flex-row gap-4 justify-center>''
+              <button className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20>
+>>>>>>> main
                 Get Started'
-            </p>
-''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-              <button className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20'>
-                Get Started
-              </button>''
-              <button className='px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-200'>
+            </p>'
+'''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center>''
+              <button className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hove,
+    r:scale-105 shadow-lg shadow-orange-500/20'>
+                Get Started'
+              </button>'''
+              <button className='px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hove,
+    r:bg-orange-400/10 transition-all duration-200'>
                 Learn More
               </button>
             </div>
           </motion.div>
         </div>
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx'
       </section>'
-      </section>
-{/* Features Section */}''
-      <section className='py-16 px-4'>'
+      </section>'
+{/* Features Section */}'
+      <section className='py-16 px-4>'
         <div className='max-w-7xl mx-auto'>
           <motion.div
             initial = {}
@@ -108,41 +139,59 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   y: 20;
-  y: 20;
-  y: 20}}
+  ,
+    y: 20;
+  ,
+    y: 20}}
             whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   y: 0}}
-            transition={{ duration: 0.6 }}';
+            transition={{ duration: 0.6 }};
             className='text-center mb-16';
 ';
-  y: 0}}';
-            transition={{ duration: 0.6 }}'';
+  y: 0}};
+            transition={{ duration: 0.6 }};
             className='text-center mb-16'';
 '';
-            <h2 className='text-4xl font-bold text-white mb-4'>
+            <h2 className='text-4xl font-bold text-white mb-4>
               Predictive Maintenance Features';
   y: 0}}
+<<<<<<< HEAD
             transition={{ duration: 0.6 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
+=======
+            transition={{ duration: 0.6 }};
+            className='text-center mb-16'';
+'''
+>>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
-              Predictive Maintenance Features
-            </h2>''
+              Predictive Maintenance Features'
+            </h2>'''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Intelligent monitoring and predictive analytics for optimal performance
             </p>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {features.map((feature, index()
+=======
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx'
+          </motion.div>';
+'''
+          <div className='grid md:grid-cols-2 l,
+    g:grid-cols-4 gap-8'>
+            {features.map((feature, index();
+>>>>>>> main
               <motion.div
-          </motion.div>
-''
-          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+          </motion.div>'
+'''
+          <div className='grid md:grid-cols-2 l,
+    g:grid-cols-4 gap-8'>
             {features.map((feature, index(
               <motion.div;
                 key={feature.title}
@@ -151,50 +200,71 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   y: 20;
-  y: 20;
-  y: 20}}
+  ,
+    y: 20;
+  ,
+    y: 20}}
                 whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   y: 0;
-  y: 0;
-  y: 0}}
+  ,
+    y: 0;
+  ,
+    y: 0}}
                 transition = {}
   { duration: 0.6,
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
-  delay: index * 0.1}}';
-                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200 hover:scale-105';
+  delay: index * 0.1}};
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200 hove,
+    r:scale-105';
 ';
-                <div className='w-12 h-12 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4'>'
+                <div className='w-12 h-12 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4>'
                   <feature.icon className='w-6 h-6 text-orange-400' />
-                </div>'
+                </div>''
                 <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>';
+<<<<<<< HEAD
   delay: index * 0.1 '}}'';
-                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200 hover:scale-105'';
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200 hover:scale-105''
 ''
                 <div className='w-12 h-12 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4'>''
+=======
+  delay: index * 0.1 '}};
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200 hove,
+    r:scale-105'';
+'''
+                <div className='w-12 h-12 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4>''
+>>>>>>> main
                   <feature.icon className='w-6 h-6 text-orange-400' />'
-                </div>''
+                </div>'''
                 <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'';
+<<<<<<< HEAD
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200 hover:scale-105'';
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200 hover:scale-105''
 ''
                 <div className='w-12 h-12 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4'>''
+=======
+  delay: index * 0.1}};
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200 hove,
+    r:scale-105'';
+'''
+                <div className='w-12 h-12 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4>''
+>>>>>>> main
                   <feature.icon className='w-6 h-6 text-orange-400' />
-                </div>''
-                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>''
+                </div>'''
+                <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'''
                 <p className='text-gray-300'>{feature.description}</p>
               </motion.div>
-            ))}
+            ));
           </div>
         </div>
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx'
       </section>'
-      </section>
-      {/* Applications Section */}''
-      <section className='py-16 px-4 bg-slate-800/30'>'
+      </section>'
+      {/* Applications Section */}'
+      <section className='py-16 px-4 bg-slate-800/30>'
         <div className='max-w-7xl mx-auto'>
           <motion.div
             initial = {}
@@ -202,42 +272,59 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   y: 20;
-  y: 20;
-  y: 20}}
+  ,
+    y: 20;
+  ,
+    y: 20}}
             whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   y: 0}}
-            transition={{ duration: 0.6 }}';
+            transition={{ duration: 0.6 }};
             className='text-center mb-16';
 ';
-  y: 0}}';
-            transition={{ duration: 0.6 }}'';
+  y: 0}};
+            transition={{ duration: 0.6 }};
             className='text-center mb-16'';
 '';
-            <h2 className='text-4xl font-bold text-white mb-4'>
+            <h2 className='text-4xl font-bold text-white mb-4>
               Industry Applications';
   y: 0}}
+<<<<<<< HEAD
             transition={{ duration: 0.6 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
+=======
+            transition={{ duration: 0.6 }};
+            className='text-center mb-16'';
+'''
+>>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
-              Industry Applications
-            </h2>''
+              Industry Applications'
+            </h2>'''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Transform maintenance across various industries
             </p>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx
+          </motion.div>'
+''
+=======
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx'
           </motion.div>';
-''
+'''
+>>>>>>> main
           <div className='grid md:grid-cols-2 gap-8'>
-            {applications.map(application: unknown, index: unknown()
+            {applications.map(applicatio,
+    n: unknown, index: unknown();
               <motion.div
-          </motion.div>
-''
-          <div className='grid md:grid-cols-2 gap-8'>
-            {applications.map(application: unknown, index: unknown(
+          </motion.div>'
+'''
+          <div className='grid m,
+    d:grid-cols-2 gap-8'>
+            {applications.map(applicatio,
+    n: unknown, index: unknown(
               <motion.div;
                 key={application.title}
                 initial = {}
@@ -245,52 +332,77 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   x: index % 2 === 0 ? -20 : 20;
-  x: index % 2 === 0 ? -20 : 20;
-  x: index % 2 === 0 ? -20 : 20}}
+  ,
+    x: index % 2 === 0 ? -20 : 20;
+  ,
+    x: index % 2 === 0 ? -20 : 20}}
                 whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   x: 0;
-  x: 0;
-  x: 0}}
+  ,
+    x: 0;
+  ,
+    x: 0}}
                 transition = {}
   { duration: 0.6,
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
-  delay: index * 0.1}}';
+  delay: index * 0.1}};
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200';
 ';
+<<<<<<< HEAD
                 <div className='flex items-start space-x-4'>'
                   <div className='text-4xl'>{application.icon}</div>
                   <div>'
                     <h3 className='text-xl font-semibold text-white mb-2'>{application.title}</h3>';
   delay: index * 0.1 '}}'';
-                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200'';
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200''
 ''
                 <div className='flex items-start space-x-4'>''
                   <div className='text-4xl'>{application.icon}</div>'
                   <div>''
                     <h3 className='text-xl font-semibold text-white mb-2'>{application.title}</h3>'';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200'';
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200''
 ''
                 <div className='flex items-start space-x-4'>''
                   <div className='text-4xl'>{application.icon}</div>
                   <div>''
                     <h3 className='text-xl font-semibold text-white mb-2'>{application.title}</h3>''
+=======
+                <div className='flex items-start space-x-4>'
+                  <div className='text-4xl'>{application.icon}</div>'
+                  <div>''
+                    <h3 className='text-xl font-semibold text-white mb-2'>{application.title}</h3>';
+  delay: index * 0.1 '}};
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200'';
+'''
+                <div className='flex items-start space-x-4>''
+                  <div className='text-4xl'>{application.icon}</div>''
+                  <div>'''
+                    <h3 className='text-xl font-semibold text-white mb-2'>{application.title}</h3>'';
+  delay: index * 0.1}};
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200'';
+'''
+                <div className='flex items-start space-x-4>''
+                  <div className='text-4xl'>{application.icon}</div>'
+                  <div>'''
+                    <h3 className='text-xl font-semibold text-white mb-2'>{application.title}</h3>'''
+>>>>>>> main
                     <p className='text-gray-300'>{application.description}</p>
                   </div>
                 </div>
               </motion.div>
-            ))}
+            ));
           </div>
         </div>
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx'
       </section>'
-      </section>
-      {/* Benefits Section */}''
-      <section className='py-16 px-4'>'
+      </section>'
+      {/* Benefits Section */}'
+      <section className='py-16 px-4>'
         <div className='max-w-7xl mx-auto'>
           <motion.div
             initial = {}
@@ -298,36 +410,44 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   y: 20;
-  y: 20;
-  y: 20}}
+  ,
+    y: 20;
+  ,
+    y: 20}}
             whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   y: 0}}
-            transition={{ duration: 0.6 }}';
+            transition={{ duration: 0.6 }};
             className='text-center mb-16';
 ';
-  y: 0}}';
-            transition={{ duration: 0.6 }}'';
+  y: 0}};
+            transition={{ duration: 0.6 }};
             className='text-center mb-16'';
 '';
-            <h2 className='text-4xl font-bold text-white mb-4'>
+            <h2 className='text-4xl font-bold text-white mb-4>
               Why Choose AI Predictive Maintenance?';
   y: 0}}
+<<<<<<< HEAD
             transition={{ duration: 0.6 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
+=======
+            transition={{ duration: 0.6 }};
+            className='text-center mb-16'';
+'''
+>>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
-              Why Choose AI Predictive Maintenance?
-            </h2>''
+              Why Choose AI Predictive Maintenance?'
+            </h2>'''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Transform your maintenance strategy with intelligent automation
             </p>
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx'
           </motion.div>'
-          </motion.div>
-''
+          </motion.div>'
+'''
           <div className='grid md:grid-cols-2 gap-8'>
             <motion.div;
               initial = {}
@@ -335,30 +455,49 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   x: -20;
-  x: -20;
-  x: -20}}
+  ,
+    x: -20;
+  ,
+    x: -20}}
               whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   x: 0;
-  x: 0}}
-              transition={{ duration: 0.6 }}'';
+  ,
+    x: 0}}
+              transition={{ duration: 0.6 }};
               className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'';
 '';
+<<<<<<< HEAD
               <h3 className='text-2xl font-semibold text-white mb-6'>Key Benefits</h3>''
               <ul className='space-y-4'>
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx{benefits.map((benefit, index) => ('
                   <li key={index} className='flex items-center space-x-3'>';
   x: 0}}';
               transition={{ duration: 0.6 }}'';
-              className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'';
+              className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8''
 ''
               <h3 className='text-2xl font-semibold text-white mb-6'>Key Benefits</h3>''
               <ul className='space-y-4'>'{benefits.map((benefit, index) => (''
                   <li key={index} className='flex items-center space-x-3'>''{benefits.map((benefit, index) => (''
                   <li key={index} className='flex items-center space-x-3'>''
                     <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0'  />'                    <span className='text-gray-300'>{benefit}</span>
+=======
+              <h3 className='text-2xl font-semibold text-white mb-6'>Key Benefits</h3>'''
+              <ul className='space-y-4>
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx{benefits.map((benefit, index) => (''
+                  <li key={index} className='flex items-center space-x-3>;
+  x: 0}};
+              transition={{ duration: 0.6 }};
+              className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'';
+'''
+              <h3 className='text-2xl font-semibold text-white mb-6'>Key Benefits</h3>'''
+              <ul className='space-y-4>{benefits.map((benefit, index) => ('''
+                  <li key={index} className='flex items-center space-x-3>'{benefits.map((benefit, index) => ('''
+                  <li key={index} className='flex items-center space-x-3>''
+                    <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0'  />                    <span className='text-gray-300'>{benefit}</span>
+>>>>>>> main
                   </li>
                 ))}
               </ul>
@@ -369,7 +508,8 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
   { opacity: 0,
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   x: 20;
-  x: 20;
+  ,
+    x: 20;
             <motion.div;
               initial = {}
   { opacity: 0,
@@ -379,35 +519,53 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   x: 0}}
-              transition={{ duration: 0.6 }}';
+              transition={{ duration: 0.6 }};
               className='bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-400/30 rounded-xl p-8';
 ';
               <h3 className='text-2xl font-semibold text-white mb-6'>Get Started Today</h3>';
-  x: 0}}';
+  x: 0}};
   x: 0}}
+<<<<<<< HEAD
               transition={{ duration: 0.6 }}'';
-              className='bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-400/30 rounded-xl p-8'';
+              className='bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-400/30 rounded-xl p-8''
 ''
-              <h3 className='text-2xl font-semibold text-white mb-6'>Get Started Today</h3>'';
+              <h3 className='text-2xl font-semibold text-white mb-6'>Get Started Today</h3>''
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx
+=======
+              transition={{ duration: 0.6 }};
+              className='bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-400/30 rounded-xl p-8'';
+'''
+              <h3 className='text-2xl font-semibold text-white mb-6'>Get Started Today</h3>'';
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx'
               <p className='text-gray-300 mb-6'>
                 Ready to transform your maintenance operations? Our AI predictive maintenance experts can help you;
+                implement intelligent monitoring systems that prevent failures and optimize performance.''
+>>>>>>> main
+              <p className='text-gray-300 mb-6'>
+                Ready to transform your maintenance operations? Our AI predictive maintenance experts can help you
                 implement intelligent monitoring systems that prevent failures and optimize performance.'
+<<<<<<< HEAD
               <p className='text-gray-300 mb-6'>
-                Ready to transform your maintenance operations? Our AI predictive maintenance experts can help you;
+                Ready to transform your maintenance operations? Our AI predictive maintenance experts can help you
                 implement intelligent monitoring systems that prevent failures and optimize performance.
               </p>''
               <button className='w-full px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20'>
+=======
+              </p>'''
+              <button className='w-full px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover: from-orange-400 hove,
+    r:to-red-500 transition-all duration-200 hove,
+    r:scale-105 shadow-lg shadow-orange-500/20'>
+>>>>>>> main
                 Contact Maintenance Experts
               </button>
             </motion.div>
           </div>
         </div>
-:pages.disabled/pages/services/ai-predictive-maintenance.tsx
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx'
       </section>'
-      </section>
-      {/* CTA Section */}''
-      <section className='py-16 px-4'>'
+      </section>'
+      {/* CTA Section */}'
+      <section className='py-16 px-4>'
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div
             initial = {}
@@ -415,25 +573,43 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   y: 20;
-  y: 20;
-  y: 20}}
+  ,
+    y: 20;
+  ,
+    y: 20}}
             whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx;
   y: 0;
-  y: 0}}
-            transition={{ duration: 0.6 }}';
+  ,
+    y: 0}}
+            transition={{ duration: 0.6 }};
 '';
+            <h2 className='text-4xl font-bold text-white mb-4>
+              Ready for Predictive Maintenance?''
+            </h2>'''
+            <p className='text-xl text-gray-300 mb-8>
+              Transform your maintenance strategy with AI-powered intelligence''
+            </p>'''
+            <div className='flex flex-col sm: flex-row gap-4 justify-center>''
+              <button className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hove,
+    r:scale-105 shadow-lg shadow-orange-500/20>
+                Start Predictive Journey';
+  ,
+    y: 0}}
+            transition={{ duration: 0.6 }}
+'''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Ready for Predictive Maintenance?'
-            </h2>''
+            </h2>'''
             <p className='text-xl text-gray-300 mb-8'>
               Transform your maintenance strategy with AI-powered intelligence'
+<<<<<<< HEAD
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20'>
-                Start Predictive Journey';
+                Start Predictive Journey'
   y: 0}}
             transition={{ duration: 0.6 }}
 ''
@@ -448,13 +624,31 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
                 Start Predictive Journey
               </button>''
               <button className='px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-200'>
+=======
+            </p>'''
+            <div className='flex flex-col sm: flex-row gap-4 justify-center>''
+              <button className='px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hove,
+    r:scale-105 shadow-lg shadow-orange-500/20'>
+                Start Predictive Journey'
+              </button>'''
+              <button className='px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hove,
+    r:bg-orange-400/10 transition-all duration-200'>
+>>>>>>> main
                 Schedule Demo
               </button>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx)}'';
 export default AIPredictiveMaintenance}}}'''')}
+
 export default AIPredictiveMaintenance}}}'''
+=======
+    </div>'
+:pages.disabled/pages/services/ai-predictive-maintenance.tsx)};
+export default AIPredictiveMaintenance}}}'')}
+export default AIPredictiveMaintenance}}}''
+>>>>>>> main

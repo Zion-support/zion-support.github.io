@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-02T22:04:29.422Z",
+  "timestamp": "2025-09-02T22:55:19.427Z",
   "metaTags": {
     "pages": [
       {
@@ -4309,8 +4309,8 @@
       {
         "file": "PrivacyPolicy.tsx",
         "hasTitle": false,
-        "hasDescription": false,
-        "hasKeywords": false,
+        "hasDescription": true,
+        "hasKeywords": true,
         "hasOpenGraph": false,
         "hasTwitterCard": false
       },
@@ -5293,8 +5293,8 @@
       {
         "file": "TermsOfService.tsx",
         "hasTitle": false,
-        "hasDescription": false,
-        "hasKeywords": false,
+        "hasDescription": true,
+        "hasKeywords": true,
         "hasOpenGraph": false,
         "hasTwitterCard": false
       },
@@ -9926,7 +9926,6 @@
       "PrivacyPolicy.test.tsx: Missing meta description",
       "PrivacyPolicy.test.tsx: Missing Open Graph tags",
       "PrivacyPolicy.tsx: Missing title tag",
-      "PrivacyPolicy.tsx: Missing meta description",
       "PrivacyPolicy.tsx: Missing Open Graph tags",
       "ProductPage.jsx: Missing Open Graph tags",
       "Products.test.tsx: Missing title tag",
@@ -10240,7 +10239,6 @@
       "TermsOfService.test.tsx: Missing meta description",
       "TermsOfService.test.tsx: Missing Open Graph tags",
       "TermsOfService.tsx: Missing title tag",
-      "TermsOfService.tsx: Missing meta description",
       "TermsOfService.tsx: Missing Open Graph tags",
       "Testimonials.jsx: Missing title tag",
       "Testimonials.jsx: Missing meta description",
@@ -11073,7 +11071,7 @@
   },
   "summary": {
     "overall": "poor",
-    "totalIssues": 2383,
+    "totalIssues": 2381,
     "recommendations": []
   }
 }

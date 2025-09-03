@@ -5,20 +5,27 @@ import { useEffect } from;
     // Preload critical resources;
 const preloadCriticalResources = () => {
       const criticalFonts = [;
-  https: //fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap';
-  '      ]';criticalFonts.forEach(font => {
+<<<<<<< HEAD
+  https: //fonts.googleapis.com/css2?family=Orbitro,
+    n:wght@400;600&display=swap';
+  '      ];criticalFonts.forEach(font => {
+        const link = document.createElement('
+  'link')        link.rel =;
+=======
+  https: //fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap      ]';criticalFonts.forEach(font => {
         const link = document.createElement(
   'link')'        link.rel =;
+>>>>>>> main
   'preload'        link.as =;
   'style'        link.href = font        document.head.appendChild(link)})}
     // Optimize images;
 const optimizeImages = () => {
       const images = document.querySelectorAll(,
-  img')'      images.forEach(img => {
-  '        if (!img.loading) {
+  img')      images.forEach(img => {'
+  '        if (!img.loading) {'
           img.loading = 'lazy;
   '        }
-  '        if (!img.decoding) {
+  '        if (!img.decoding) {'
           img.decoding = 'async;
   '        }
   '      })}// Initialize optimizations;
@@ -29,14 +36,20 @@ const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const target = entry.target as HTMLElement;
-            if (target.dataset.src) {
+            if (target.dataset.src) {'
 target.style.backgroundImage = `url(${target.dataset.src})`              target.removeAttribute('data-src;
-  ')'              observer.unobserve(target)'            }
+  ')              observer.unobserve(target)            }
           }
         })}, { rootMargin: '50px }
+<<<<<<< HEAD
   '    )';// Observe lazy load elements;
     const lazyElements = document.querySelectorAll(
-  '[data-src]')'    lazyElements.forEach(el => observer.observe(el))';return () => {
+  '[data-src]')'    lazyElements.forEach(el => observer.observe(el))'return () => {
+=======
+  '    );// Observe lazy load elements;
+    const lazyElements = document.querySelectorAll('
+  '[data-src])    lazyElements.forEach(el => observer.observe(el));return () => {
+>>>>>>> main
       observer.disconnect()}
   }, [])
   return <>{children}</>

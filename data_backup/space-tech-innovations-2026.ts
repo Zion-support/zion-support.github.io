@@ -28,16 +28,21 @@ export interface SpaceTechInnovation2026 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [;
+review,
+    s: number;export const spaceTechInnovations202,
+    6: SpaceTechInnovation2026[] = [;
   // Space Technology AI Platform{
-    id:,
+    i,
+    d:,
   space-technology-ai-platform',
     name: 'Space Technology AI Platform,
     tagline:,
@@ -65,7 +70,8 @@ reviews: number;export const spaceTechInnovations2026: SpaceTechInnovation2026[]
     color: 'from-blue-600 to-indigo-600,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/space-technology-ai-platform,
+    link: 'http,
+    s://ziontechgroup.com/space-technology-ai-platform,
     marketPosition:;
   'Competitive with Maxar ($5000-50000/month), Planet Labs ($1000-10000/month), and Airbus Defence ($10000-100000/month). Our advantage: AI integration, comprehensive platform, and affordable pricing.,
   ,
@@ -112,12 +118,14 @@ reviews: number;export const spaceTechInnovations2026: SpaceTechInnovation2026[]
   350% annual growth',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete space technology platform with AI-powered operations, satellite management, and space data analysis. Includes mission planning tools and expert consultation.',
@@ -154,7 +162,8 @@ reviews: number;export const spaceTechInnovations2026: SpaceTechInnovation2026[]
     color: 'from-yellow-600 to-orange-600,
     textColor:,
   text-yellow-400',
-    link: 'https://ziontechgroup.com/quantum-space-mining-platform,
+    link: 'http,
+    s://ziontechgroup.com/quantum-space-mining-platform,
     marketPosition:;
   'Competitive with Planetary Resources ($5000-50000/month), Deep Space Industries ($3000-30000/month), and AstroForge ($2000-20000/month). Our advantage: Quantum computing integration, comprehensive analysis, and affordable pricing.,
   ,
@@ -200,12 +209,14 @@ reviews: number;export const spaceTechInnovations2026: SpaceTechInnovation2026[]
   500% annual growth',
     variant: 'quantum-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete space mining platform with quantum computing analysis, resource assessment, and mission planning. Includes investment analysis and regulatory compliance tools.',
@@ -242,7 +253,8 @@ reviews: number;export const spaceTechInnovations2026: SpaceTechInnovation2026[]
     color: 'from-green-600 to-emerald-600,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/satellite-operations-ai,
+    link: 'http,
+    s://ziontechgroup.com/satellite-operations-ai,
     marketPosition:;
   'Competitive with Maxar ($5000-50000/month), Planet Labs ($1000-10000/month), and Spire ($2000-20000/month). Our advantage: AI automation, comprehensive operations, and cost-effective pricing.,
   ,
@@ -288,12 +300,14 @@ reviews: number;export const spaceTechInnovations2026: SpaceTechInnovation2026[]
   320% annual growth',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete satellite operations platform with AI automation, monitoring, and management tools. Includes predictive maintenance and performance analytics.',
@@ -330,7 +344,8 @@ reviews: number;export const spaceTechInnovations2026: SpaceTechInnovation2026[]
     color: 'from-red-600 to-orange-600,
     textColor:,
   text-red-400',
-    link: 'https://ziontechgroup.com/space-debris-tracking-system,
+    link: 'http,
+    s://ziontechgroup.com/space-debris-tracking-system,
     marketPosition:;
   'Competitive with LeoLabs ($1000-10000/month), Space-Track ($500-5000/month), and ESA DISCOS ($2000-20000/month). Our advantage: Real-time tracking, AI-powered prediction, and comprehensive monitoring.,
   ,
@@ -376,12 +391,14 @@ reviews: number;export const spaceTechInnovations2026: SpaceTechInnovation2026[]
   280% annual growth',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete space debris tracking system with real-time monitoring, collision prediction, and avoidance recommendations. Includes mobile apps and API access.',
@@ -417,7 +434,8 @@ reviews: number;export const spaceTechInnovations2026: SpaceTechInnovation2026[]
     color: 'from-yellow-600 to-red-600,
     textColor:,
   text-yellow-400',
-    link: 'https://ziontechgroup.com/space-weather-monitoring-platform,
+    link: 'http,
+    s://ziontechgroup.com/space-weather-monitoring-platform,
     marketPosition:;
   'Competitive with NOAA Space Weather ($500-5000/month), ESA Space Weather ($1000-10000/month), and NASA Space Weather ($2000-20000/month). Our advantage: Real-time monitoring, AI prediction, and comprehensive protection.,
   ,
@@ -463,12 +481,14 @@ reviews: number;export const spaceTechInnovations2026: SpaceTechInnovation2026[]
   250% annual growth',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete space weather monitoring platform with real-time tracking, prediction algorithms, and protection recommendations. Includes mobile apps and API access.',

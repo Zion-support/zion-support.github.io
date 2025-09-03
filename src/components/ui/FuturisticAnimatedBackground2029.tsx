@@ -1,3 +1,47 @@
-import React, { useEffect, useRef } from 'react' interface FuturisticAnimatedBackground2029Props {
+<<<<<<< HEAD
+import React, { useEffect, useRef } from 'react' interface FuturisticAnimatedBackground2029Props {;
+=======
+<<<<<<< HEAD
+import React, {useEffect, useRef } from 'react' interface FuturisticAnimatedBackground2029Props {;
    intensity?: number;
+<<<<<<< HEAD
+   theme?: 'cyberpunk' | 'holographic' | 'quantum'} const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({ intensity = 0.8, theme = 'cyberpunk' }) => { const canvasRef = useRef<HTMLCanvasElement>(null) const animationRef = useRef<number>() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!canvas) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles: Array<{ x: number y: number vx: number vy: number size: number opacity: number color: string type: 'particle' | 'wave' | 'grid'   }> = [] const colors = { cyberpunk: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff'], holographic: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4'], quantum: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00'] } const selectedColors = colors[theme]''
+=======
+   theme?: 'cyberpunk' | 'holographic' | 'quantum'} const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({intensity = 0.8, theme = 'cyberpunk' }) => {const canvasRef = useRef<HTMLCanvasElement>(null) const animationRef = useRef<number>() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!canvas) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles: Array<{ x: number y: number vx: number vy: number size: number opacity: number color: string type: 'particle' | 'wave' | 'grid' }> = [] const colors = {cyberpunk: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff'], holographic: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4'], quantum: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00'] } const selectedColors = colors[theme]';'
+=======
+<<<<<<< HEAD
+import React, { useEffect, useRef } from &apos;react&apos; interface FuturisticAnimatedBackground2029Props {
+   intensity?: number;
+   theme?: &apos;cyberpunk&apos; | &apos;holographic&apos; | &apos;quantum&apos;}&apos;' const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({ intensity = 0.8, theme = &apos;cyberpunk&apos; }) => {&apos;} const canvasRef = useRef<HTMLCanvasElement>(null) const animationRef = useRef<number>() useEffect(() => {} const canvas = canvasRef.current if (!canvas) return const;const ctx = canvas.getContext(&apos;2d&apos;) if (!canvas) return canvas.width = window.innerWidth canvas.height = window.innerHeight&apos; const particles: Array<{ x: number y: number vx: number vy: number size: number opacity: number color: string typ,e: &apos;particle&apos; | &apos;wave&apos; | &apos;grid&apos; }> = []&apos; const colors = { cyberpunk: [&apos;#ff0080&apos;, &apos;#00ffff&apos;, &apos;#ffff00&apos;, &apos;#ff00ff&apos;], holographic: [&apos;#ff6b6b&apos;, &apos;#4ecdc4&apos;, &apos;#45b7d1&apos;, &apos;#96ceb4&apos;], quantum: [&apos;#00ffff&apos;, &apos;#ff00ff&apos;, &apos;#ffff00&apos;, &apos;#00ff00&apos;] }&apos; const;const selectedColors = colors[theme]';
+&apos;'
+=======
+<<<<<<< HEAD
+import React, { useEffect, useRef } from 'react' interface FuturisticAnimatedBackground2029Props {;
+   intensity?: number;""
    theme?: 'cyberpunk' | 'holographic' | 'quantum'} const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({ intensity = 0.8, theme = 'cyberpunk' }) => { const canvasRef = useRef<HTMLCanvasElement>(null) const animationRef = useRef<number>() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!canvas) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles: Array<{ x: number y: number vx: number vy: number size: number opacity: number color: string type: 'particle' | 'wave' | 'grid' }> = [] const colors = { cyberpunk: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff'], holographic: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4'], quantum: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00'] } const selectedColors = colors[theme]';'
+""
+}}
+=======
+<<<<<<< HEAD
+import React, { useEffect, useRef } from 'react' interface FuturisticAnimatedBackground2029Props {
+>>>>>>> main
+   intensity?: number;
+<<<<<<< HEAD
+   theme?: 'cyberpunk' | 'holographic' | 'quantum'} const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({ intensity = 0.8, theme = 'cyberpunk' }) => { const canvasRef = useRef<HTMLCanvasElement>(null) const animationRef = useRef<number>() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!canvas) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles: Array<{ x: number y: number vx: number vy: number size: number opacity: number colo,
+    r: string typ,
+    e: 'particle' | 'wave' | 'grid' }> = [] const colors = { cyberpunk: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff'], holographic: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4'], quantum: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00'] } const selectedColors = colors[theme];
+'
+=======
+   theme?: 'cyberpunk' | 'holographic' | 'quantum'} const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({ intensity = 0.8, theme = 'cyberpunk' }) => { const canvasRef = useRef<HTMLCanvasElement>(null) const animationRef = useRef<number>() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!canvas) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles: Array<{ x: number y: number vx: number vy: number size: number opacity: number color: string type: 'particle' | 'wave' | 'grid' }> = [] const colors = { cyberpunk: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff'], holographic: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4'], quantum: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00'] } const selectedColors = colors[theme]';'
+=======
+import React, { useEffect, useRef }  from 'react';interface FuturisticAnimatedBackground2029Props {;
+   intensity?: number;"
+   theme?: 'cyberpunk' | 'holographic' | 'quantum'} const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({ intensity = 0.8, theme = 'cyberpunk' }) => { const canvasRef = useRef<HTMLCanvasElement>(null) const animationRef = useRef<number>() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!canvas) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles: Array<{ x: number y: number vx: number vy: number size: number opacity: number color: string type: 'particle' | 'wave' | 'grid' }> = [] const colors = { cyberpunk: ['#ff0080,#00ffff,#ffff00,#ff00ff'], holographic: ['#ff6b6b,#4ecdc4,#45b7d1,#96ceb4'], quantum: ['#00ffff,#ff00ff,#ffff00,#00ff00'] } const selectedColors = colors[theme]
+"
+}}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
