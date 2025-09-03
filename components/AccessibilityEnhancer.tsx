@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, type ReactNode } from 'react';
 
 type FontSize = 'small' | 'normal' | 'large' | 'extra-large';
 
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
+interface AccessibilityEnhancerProps { children: ReactNode }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer = ({ children }: AccessibilityEnhancerProps) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState<FontSize>('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
