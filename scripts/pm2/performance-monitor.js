@@ -50,7 +50,6 @@ class PerformanceMonitor {
               calculateSize(fullPath)} else {
               buildSize += stat.size;
               fileCount++})}
-;
         calculateSize(
   'dist');
       return {
@@ -65,7 +64,6 @@ class PerformanceMonitor {
         buildTime: 0,
         buildSize: 0,
         fileCount: 0}
-;
   async checkBundleAnalysis() {
     try {
       this.log(,
@@ -73,14 +71,12 @@ class PerformanceMonitor {
       if (!fs.existsSync(
   'dist')) {
         return { error: 'No build output found }
-;
       const bundleStats = {
         totalSize: 0,
         jsFiles: [],
         cssFiles: [],
         assetFiles: [],
         largestFiles: []}
-;
       const analyzeDirectory = (dir) => {
         const items = fs.readdirSync(dir);
         items.forEach(item => {
@@ -94,7 +90,6 @@ class PerformanceMonitor {
               path: relativePath,
               size: stat.size,
               sizeKB: Math.round(stat.size / 1024 * 100) / 100}
-;
             bundleStats.totalSize += stat.size;
             if (item.endsWith(
   '.js')) {
@@ -102,7 +97,6 @@ class PerformanceMonitor {
   '.css')) {
               bundleStats.cssFiles.push(fileInfo)} else {
               bundleStats.assetFiles.push(fileInfo)})}
-;
       analyzeDirectory(
   'dist');
       // Sort files by size to find largest;
@@ -113,7 +107,6 @@ class PerformanceMonitor {
       bundleStats.totalSizeMB = Math.round(bundleStats.totalSize / (1024 * 1024) * 100) / 100;
       return bundleStats} catch (error) {
       return { error: error.message }
-;
   async checkDependencies() {
     try {
       this.log(
@@ -147,7 +140,6 @@ class PerformanceMonitor {
         largePackages: largePackages.sort((a, b) => b.size - a.size)}
 } catch (error) {
       return { error: error.message }
-;
   calculateDirectorySize(dir) {
     let size = 0;
     try {
@@ -171,13 +163,11 @@ class PerformanceMonitor {
   'lighthouse --version', { stdio: 'pipe })} catch (error) {
         return { error:,
   Lighthouse not installed. Install with: npm install -g lighthouse }
-;
       // For now, just check if we can run it;
       return { available: true, message:
   'Lighthouse available for performance testing' }
 } catch (error) {
       return { error: error.message }
-;
   async checkWebpackBundleAnalyzer() {
     try {
       this.log(
@@ -200,7 +190,6 @@ class PerformanceMonitor {
           null}
 } catch (error) {
       return { error: error.message }
-;
   async generateReport(buildStats, bundleStats, dependencyStats, lighthouseStats, analyzerStats) {
     const report = {
       timestamp: new Date().toISOString(),
@@ -220,7 +209,6 @@ class PerformanceMonitor {
         lighthouse: lighthouseStats,
         analyzer: analyzerStats},
       recommendations: []}
-;
     // Generate performance recommendations;
     if (buildStats.buildTime > 60000) { // > 1 minute;
       report.recommendations.push({

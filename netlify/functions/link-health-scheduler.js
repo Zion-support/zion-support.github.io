@@ -13,11 +13,9 @@ const path = require(,
   path');
 const { spawnSync } = require(
   'child_process');
-;
 exports.config = {
   schedule: '*/20 * * * *,
   // every 20 minutes}
-;
 exports.handler = async () => {
   const logStep(name, fn) {
     logs.push(`\n=== ${name} ===`);
@@ -45,7 +43,6 @@ exports.handler = async () => {
     statusCode: 200,
     body: JSON.stringify({ logs })}
 }
-;
   process.env.CANONICAL_URL = process.env.CANONICAL_URL ||,
   https: //ziontechgroup.com';
   logStep(

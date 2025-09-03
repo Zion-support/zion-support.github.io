@@ -1,25 +1,44 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import PerformanceEnhancer.dynamic from '../components/PerformanceEnhancer.dynamic';
-
-describe('PerformanceEnhancer.dynamic', () => {
+import PerformanceEnhancerdynamic from "../components/PerformanceEnhancer.dynamic";
+  describe('PerformanceEnhancerdynamic', () => {
   test('renders without crashing', () => {
-    render(<PerformanceEnhancer.dynamic />);
-    expect(screen.getByTestId('performanceenhancer.dynamic')).toBeInTheDocument()})
-
+    render(<PerformanceEnhancerdynamic />);
+    expect(screen.getByTestId('performanceenhancer.dynamic')).toBeInTheDocument()})';
   test('displays correct content', () => {
-    render(<PerformanceEnhancer.dynamic />);
+    render(<PerformanceEnhancerdynamic />);
+    // Add specific content tests based on component;
+  });
+  test('handles user interactions', () => {
+    render(<PerformanceEnhancerdynamic />);
+    // Add interaction tests based on component functionality;
+  });
+  test('applies correct styling', () => {
+    render(<PerformanceEnhancerdynamic />);
+    // Add styling tests if needed;
+  })});
+=======
+import React   from 'react''
+import { render, screen, fireEvent }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import PerformanceEnhancerdynamic   from '../components/PerformanceEnhancer.dynamic''
+  describe('PerformanceEnhancerdynamic', () => {'
+  test('renders without crashing', () => {'
+    render(<PerformanceEnhancerdynamic  />)
+    expect(screen.getByTestId('performanceenhancer.dynamic')).toBeInTheDocument()})'
+  test('displays correct content', () => {'
+    render(<PerformanceEnhancerdynamic  />)
     // Add specific content tests based on component
   })
-
-  test('handles user interactions', () => {
-    render(<PerformanceEnhancer.dynamic />);
+  test('handles user interactions', () => {'
+    render(<PerformanceEnhancerdynamic  />)
     // Add interaction tests based on component functionality
   })
-
-  test('applies correct styling', () => {
-    render(<PerformanceEnhancer.dynamic />);
+  test('applies correct styling', () => {'
+    render(<PerformanceEnhancerdynamic  />)
     // Add styling tests if needed
   })})
+>>>>>>> main

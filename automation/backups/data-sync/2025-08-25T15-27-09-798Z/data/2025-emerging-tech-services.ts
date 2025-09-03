@@ -5,7 +5,6 @@ const contact = {
   email: 'kleber@ziontechgroup.com,
   address:,
   364 E Main St STE 1008 Middletown DE 19709',
-  ;
   website: 'https://ziontechgroup.com}
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services{
@@ -20,16 +19,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     description:;
   'Enterprise quantum computing platform providing access to quantum processors, quantum algorithms, and hybrid quantum-classical computing solutions. Ideal for optimization problems, cryptography, and scientific research.',
     features[;
-  'Access to IBM, Google, and AWS quantum processors',
-  'Quantum algorithm library and optimization tools',
-  'Hybrid quantum-classical computing workflows',
-  'Quantum error correction and noise mitigation',
-  'Quantum machine learning algorithms',
-  'Cryptography and security applications',
-  'Scientific simulation and modeling',
-  'API access for custom quantum applications',
-  'Expert quantum computing consultation',
-  'Training and educational resources';
+  'Access to IBM, Google, and AWS quantum processors,Quantum algorithm library and optimization tools,Hybrid quantum-classical computing workflows,Quantum error correction and noise mitigation,Quantum machine learning algorithms,Cryptography and security applications,Scientific simulation and modeling,API access for custom quantum applications,Expert quantum computing consultation,Training and educational resources';
     ],
     popular: true,
     icon:,
@@ -78,16 +68,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
   /month',
     description: Enterprise-grade blockchain platform supporting multiple consensus mechanisms, smart contracts, and cross-chain interoperability. Built for scalability, security, and regulatory compliance.',
     features[;
-  'Multi-consensus blockchain networks (PoS, PoA, DPoS)',
-  'Smart contract development and deployment',
-  'Cross-chain interoperability and bridges',
-  'Enterprise identity and access management',
-  'Regulatory compliance and audit trails',
-  'High-performance transaction processing',
-  'Integration with existing enterprise systems',
-  'Blockchain analytics and monitoring',
-  'Mobile and web applications',
-  'API and SDK for developers';
+  'Multi-consensus blockchain networks (PoS, PoA, DPoS),Smart contract development and deployment,Cross-chain interoperability and bridges,Enterprise identity and access management,Regulatory compliance and audit trails,High-performance transaction processing,Integration with existing enterprise systems,Blockchain analytics and monitoring,Mobile and web applications,API and SDK for developers';
     ],
     popular: true,
     icon:,
@@ -136,16 +117,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
   /month',
     description: Comprehensive platform for analyzing satellite imagery, space weather data, and orbital information. Provides insights for agriculture, climate monitoring, urban planning, and space operations.',
     features[;
-  'Satellite imagery analysis and processing',
-  'Space weather monitoring and forecasting',
-  'Orbital debris tracking and collision avoidance',
-  'Earth observation and environmental monitoring',
-  'Agricultural monitoring and crop analysis',
-  'Urban development and infrastructure planning',
-  'Climate change impact assessment',
-  'Space mission planning and optimization',
-  'Real-time data streaming and alerts',
-  'Custom analytics and reporting tools';
+  'Satellite imagery analysis and processing,Space weather monitoring and forecasting,Orbital debris tracking and collision avoidance,Earth observation and environmental monitoring,Agricultural monitoring and crop analysis,Urban development and infrastructure planning,Climate change impact assessment,Space mission planning and optimization,Real-time data streaming and alerts,Custom analytics and reporting tools';
     ],
     popular: true,
     icon:,
@@ -194,16 +166,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
   /month',
     description: Enterprise-grade IoT platform that manages connected devices, processes edge data, and provides real-time analytics. Supports industrial IoT, smart cities, and connected consumer applications.',
     features[;
-  'Device management and provisioning',
-  'Edge computing and local data processing',
-  'Real-time data streaming and analytics',
-  'Predictive maintenance and anomaly detection',
-  'Security and access control',
-  'Integration with existing enterprise systems',
-  'Mobile applications for field operations',
-  'Custom dashboard and reporting',
-  'API access for third-party integrations',
-  'Scalable cloud infrastructure';
+  'Device management and provisioning,Edge computing and local data processing,Real-time data streaming and analytics,Predictive maintenance and anomaly detection,Security and access control,Integration with existing enterprise systems,Mobile applications for field operations,Custom dashboard and reporting,API access for third-party integrations,Scalable cloud infrastructure';
     ],
     popular: true,
     icon:,
@@ -252,16 +215,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
   /month',
     description: Comprehensive AR/VR platform for enterprise applications including employee training, product design, customer experiences, and remote collaboration. Supports multiple devices and platforms.',
     features[;
-  '3D content creation and management',
-  'Multi-device AR/VR application development',
-  'Remote collaboration and virtual meetings',
-  'Training simulation and assessment',
-  'Product visualization and design review',
-  'Customer experience and marketing applications',
-  'Analytics and performance tracking',
-  'Integration with enterprise systems',
-  'Mobile and web applications',
-  'Custom content development services';
+  '3D content creation and management,Multi-device AR/VR application development,Remote collaboration and virtual meetings,Training simulation and assessment,Product visualization and design review,Customer experience and marketing applications,Analytics and performance tracking,Integration with enterprise systems,Mobile and web applications,Custom content development services';
     ],
     popular: true,
     icon:,
@@ -310,16 +264,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
   /month',
     description: Advanced platform for developing and deploying autonomous systems including robotics, drones, autonomous vehicles, and industrial automation. Features AI-powered decision making and safety systems.',
     features[;
-  'AI-powered autonomous decision making',
-  'Computer vision and object recognition',
-  'Path planning and navigation algorithms',
-  'Safety systems and collision avoidance',
-  'Multi-agent coordination and swarm intelligence',
-  'Real-time sensor data processing',
-  'Remote monitoring and control',
-  'Integration with existing automation systems',
-  'Custom robotics and drone development',
-  'Training and simulation environments';
+  'AI-powered autonomous decision making,Computer vision and object recognition,Path planning and navigation algorithms,Safety systems and collision avoidance,Multi-agent coordination and swarm intelligence,Real-time sensor data processing,Remote monitoring and control,Integration with existing automation systems,Custom robotics and drone development,Training and simulation environments';
     ],
     popular: true,
     icon:,
@@ -369,16 +314,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     description:;
   'Advanced synthetic biology platform combining AI, machine learning, and laboratory automation for drug discovery, bioengineering, and genetic research. Accelerates research and development in biotechnology.',
     features[;
-  'AI-powered protein design and optimization',
-  'Genetic circuit design and simulation',
-  'Laboratory automation and high-throughput screening',
-  'Drug discovery and molecular modeling',
-  'Bioinformatics and sequence analysis',
-  'CRISPR gene editing tools',
-  'Synthetic DNA synthesis and assembly',
-  'Laboratory information management system',
-  'Research collaboration and data sharing',
-  'Regulatory compliance and documentation';
+  'AI-powered protein design and optimization,Genetic circuit design and simulation,Laboratory automation and high-throughput screening,Drug discovery and molecular modeling,Bioinformatics and sequence analysis,CRISPR gene editing tools,Synthetic DNA synthesis and assembly,Laboratory information management system,Research collaboration and data sharing,Regulatory compliance and documentation';
     ],
     popular: true,
     icon:,
@@ -427,16 +363,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
   /month',
     description: Intelligent energy management platform that optimizes renewable energy systems, smart grid operations, and energy storage. Reduces costs and improves sustainability for utilities and energy companies.',
     features[;
-  'Renewable energy forecasting and optimization',
-  'Smart grid management and load balancing',
-  'Energy storage optimization and management',
-  'Demand response and peak shaving',
-  'Energy efficiency monitoring and analytics',
-  'Carbon footprint tracking and reporting',
-  'Integration with smart meters and IoT devices',
-  'Predictive maintenance for energy infrastructure',
-  'Energy trading and market optimization',
-  'Sustainability reporting and compliance';
+  'Renewable energy forecasting and optimization,Smart grid management and load balancing,Energy storage optimization and management,Demand response and peak shaving,Energy efficiency monitoring and analytics,Carbon footprint tracking and reporting,Integration with smart meters and IoT devices,Predictive maintenance for energy infrastructure,Energy trading and market optimization,Sustainability reporting and compliance';
     ],
     popular: true,
     icon:,
@@ -485,16 +412,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
   /month',
     description: Comprehensive transportation platform that optimizes traffic flow, public transportation, logistics, and autonomous vehicle operations. Improves efficiency and reduces congestion in urban areas.',
     features[;
-  'Traffic flow optimization and congestion management',
-  'Public transportation scheduling and optimization',
-  'Logistics route planning and fleet management',
-  'Autonomous vehicle coordination and safety',
-  'Real-time traffic monitoring and prediction',
-  'Smart parking and mobility services',
-  'Integration with transportation infrastructure',
-  'Mobile applications for commuters',
-  'Analytics and performance reporting',
-  'API access for third-party applications';
+  'Traffic flow optimization and congestion management,Public transportation scheduling and optimization,Logistics route planning and fleet management,Autonomous vehicle coordination and safety,Real-time traffic monitoring and prediction,Smart parking and mobility services,Integration with transportation infrastructure,Mobile applications for commuters,Analytics and performance reporting,API access for third-party applications';
     ],
     popular: true,
     icon:,
@@ -543,16 +461,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
   /month',
     description: 'Advanced cybersecurity platform that implements post-quantum cryptography and quantum-resistant security protocols. Protects against future quantum computing threats while maintaining current security standards.,
     features[;
-  'Post-quantum cryptography algorithms',
-  'Quantum-resistant key management',
-  'Advanced threat detection and response',
-  'Zero-trust security architecture',
-  'Quantum-safe communication protocols',
-  'Cryptographic agility and algorithm switching',
-  'Compliance with NIST post-quantum standards',
-  'Integration with existing security infrastructure',
-  'Real-time security monitoring and alerts',
-  'Expert cybersecurity consultation';
+  'Post-quantum cryptography algorithms,Quantum-resistant key management,Advanced threat detection and response,Zero-trust security architecture,Quantum-safe communication protocols,Cryptographic agility and algorithm switching,Compliance with NIST post-quantum standards,Integration with existing security infrastructure,Real-time security monitoring and alerts,Expert cybersecurity consultation';
     ],
     popular: true,
     icon:,
@@ -592,4 +501,3 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     reviews: 7;
 ];
     return price >= minPrice && price <= maxPrice})}
-;

@@ -31,8 +31,7 @@ class DependencyMonitor {
       return audit} catch (error) {
       // npm audit might fail if there are vulnerabilities;
       try {
-        const output = error.stdout?.toString() || error.stderr?.toString() || ';
-  ';
+        const output = error.stdout?.toString() || error.stderr?.toString() || ;
         if (output.includes('npm ERR!;
   ')) {
           // Try to parse the error output for vulnerability info;
@@ -74,7 +73,6 @@ class DependencyMonitor {
           return JSON.parse(output)} catch (parseError) {
         this.log(`Error parsing npm outdated output: ${parseError.message}`);
       return { /* empty */ }
-;
   async checkPackageLock() {
     try {
       const packageLockPath = path.join(this.projectRoot,package-lock.json;
@@ -82,7 +80,6 @@ class DependencyMonitor {
       if (!fs.existsSync(packageLockPath)) {
         return { exists: false, message: 'No package-lock.json found;
   ' }
-;
       const packageLock = JSON.parse(fs.readFileSync(packageLockPath,utf8'));
       const lockfileVersion = packageLock.lockfileVersion;
       return {
@@ -92,7 +89,6 @@ class DependencyMonitor {
         devDependencies: Object.keys(packageLock.devDependencies || { /* empty */ }).length}
     } catch (error) {
       return { exists: false, error: error.message }
-;
   async checkNodeVersion() {
     try {
       const nodeVersion = process.version;
@@ -104,7 +100,6 @@ class DependencyMonitor {
       return { nodeVersion, npmVersion }
     } catch (error) {
       return { error: error.message }
-;
   async checkGitHooks() {
     try {
       const hooksDir = path.join(this.projectRoot,.git/hooks;
@@ -112,7 +107,6 @@ class DependencyMonitor {
       if (!fs.existsSync(hooksDir)) {
         return { exists: false, message: 'No git hooks directory found;
   ' }
-;
       const hooks = fs.readdirSync(hooksDir);
       const activeHooks = hooks.filter(hook => {
         const hookPath = path.join(hooksDir, hook);
@@ -122,7 +116,6 @@ class DependencyMonitor {
       return { exists: true, hooks: activeHooks }
     } catch (error) {
       return { error: error.message }
-;
   async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {
     const report = {
       timestamp: new Date().toISOString(),
@@ -146,7 +139,6 @@ class DependencyMonitor {
         node: nodeInfo,
         gitHooks: gitHooksInfo},
       recommendations: []}
-;
     // Count vulnerabilities by severity;
     if (auditResult.vulnerabilities) {
       Object.values(auditResult.vulnerabilities).forEach(vuln => {

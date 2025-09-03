@@ -52,5 +52,4 @@ const MarketplacePage: React.FC = () => {
       </section>
     </MainLayout>
   )}
-;
 export default MarketplacePage

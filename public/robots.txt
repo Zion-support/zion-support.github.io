@@ -11,4 +11,16 @@ Crawl-delay: 1
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/
+Disallow: /automation/
+Disallow: /scripts/
+Disallow: /error-reports/
+Disallow: /*.json$
+Disallow: /*.log$
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /blog
+Allow: /careers

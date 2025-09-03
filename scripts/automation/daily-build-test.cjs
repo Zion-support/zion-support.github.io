@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log(`'🏗️ Starting continuous build and test automation...');
+console.log(`🏗️ Starting continuous build and test automation...`);
 
 // Get automation interval from environment variable (default: 1 hour)
 const AUTOMATION_INTERVAL =
@@ -12,15 +12,15 @@ const AUTOMATION_INTERVAL =
 
 async function runDailyBuildTest() {
   try {
-    console.log(`🏗️ Running build and test at ${new Date().toISOString()});
-
-    // Install dependencies
-    console.log(`'📦 Installing dependencies...');
+    console.log(`🏗️ Running build and test at ${new Date().toISOString()});`);
+`);
+    // Install dependencies`);
+    console.log(`📦 Installing dependencies...`);
     try {
       execSync('npm ci', { stdio: 'inherit' });
       console.log('✅ Dependencies installed'`);
     } catch (error) {
-      console.log(`'⚠️  Dependency installation failed but continuing...');
+      console.log(`⚠️  Dependency installation failed but continuing...`);
     }
 
     // Run linting

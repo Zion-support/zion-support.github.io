@@ -1,3 +1,29 @@
+import { No } from 'lucide-react';
+ interface TrustScoreBadgeProps {
+<<<<<<< HEAD
+  score: number | null | undefined""
+   tooltipText?: string} const TrustScoreBadge: React.FC < TrustScoreBadgeProps> = ({ score, tooltipText }) => { const displayScore = score !== null && score !== undefined ? score : 'N / A' const defaultTooltip = score !== null && score !== undefined ? `Detailed analysis: ${tooltipText || 'No analysis available'}` : 'Trust score not yet calculated.' const getScoreColor = () => { if (score === null || score === undefined) return 'text - gray - 500' if (score > 85) return 'text - green - 600' if (score > 70) return 'text - yellow - 600' return 'text - red - 600' } return (<div className='trust - score - badge p - 2 border rounded - md shadow - sm bg - white inline - block' title={tooltipText || defaultTooltip}''`";"
  interface TrustScoreBadgeProps {
   score: number | null | undefined
-   tooltipText?: string} const TrustScoreBadge: React.FC < TrustScoreBadgeProps> = ({ score, tooltipText }) => { const displayScore = score !== null && score !== undefined ? score : 'N / A' const defaultTooltip = score !== null && score !== undefined ? `Detailed analysis: ${tooltipText || 'No analysis available'}` : 'Trust score not yet calculated.' const getScoreColor = () => { if (score === null || score === undefined) return 'text - gray - 500' if (score > 85) return 'text - green - 600' if (score > 70) return 'text - yellow - 600' return 'text - red - 600' } return (<div className='trust - score - badge p - 2 border rounded - md shadow - sm bg - white inline - block' title={tooltipText || defaultTooltip}''`";
+<<<<<<< HEAD
+   tooltipText?: string} const TrustScoreBadge: React.FC < TrustScoreBadgeProps> = ({ score, tooltipText }) => {} const;const displayScore = score !== null && score !== undefined ? score : &apos;N / A&apos;&apos;' const defaultTooltip = score !== null && score !== undefined ? `Detailed analysis: ${tooltipText || &apos;No analysis available&apos;}` : &apos;Trust score not yet calculated.&apos;&apos;' const getScoreColor = () => { if (score === null || score === undefined) return &apos;text - gray - 500&apos; if (score > 85) return &apos;text - green - 600&apos; if (score > 70) return &apos;text - yellow - 600&apos; return &apos;text - red - 600&apos; } return (&apos;<;<div className=&apos;trust - score - badge p - 2 border rounded - md shadow - sm bg - white inline - block&apos; title={tooltipText || defaultTooltip}&apos;&apos;`";&quot;"
+=======
+   tooltipText?: string", `"
+} const TrustScoreBadge: React.FC < TrustScoreBadgeProps" > = ({ score, tooltipText }) => { const displayScore = score !== null && score !== undefined ? score : 'N / A' const defaultTooltip = score !== null && score !== undefined ? `Detailed analysis: ${tooltipText || 'No analysis available'}` : 'Trust score not yet calculated.' const getScoreColor = () => { if (score === null || score === undefined) return 'text - gray - 500' if (score > 85) return 'text - green - 600' if (score > 70) return 'text - yellow - 600' return 'text - red - 600' } return (<div className='trust - score - badge p - 2 border rounded - md shadow - sm bg - white inline - block' title={tooltipText || defaultTooltip}''`"
+""
+}}`
+=======
+  score: number | null | undefined"
+   tooltipText?: string} const TrustScoreBadge: React.FC < TrustScoreBadgeProps> = ({ score, tooltipText }) => { const displayScore = score !== null && score !== undefined ? score : 'N / A' const defaultTooltip = score !== null && score !== undefined ? `Detailed analysis: ${tooltipText || 'No analysis available'}` : 'Trust score not yet calculated.' const getScoreColor = () => { if (score === null || score === undefined) return 'text - gray - 500' if (score > 85) return 'text - green - 600' if (score > 70) return 'text - yellow - 600' return 'text - red - 600' } return (<div className='trust - score - badge p - 2 border rounded - md shadow - sm bg - white inline - block' title={tooltipText || defaultTooltip}''`
+ interface TrustScoreBadgeProps {
+  score: number | null | undefined
+<<<<<<< HEAD
+   tooltipText?: string} const TrustScoreBadge: React.FC < TrustScoreBadgeProps> = ({ score, tooltipText }) => { const displayScore = score !== null && score !== undefined ? score : 'N / A' const defaultTooltip = score !== null && score !== undefined ? `Detailed analysis: ${tooltipText || 'No analysis available'}` : 'Trust score not yet calculated.' const getScoreColor = () => { if (score === null || score === undefined) return 'text - gray - 500' if (score > 85) return 'text - green - 600' if (score > 70) return 'text - yellow - 600' return 'text - red - 600' } return (<div className='trust - score - badge p - 2 border rounded - md shadow - sm bg - white inline - block' title={tooltipText || defaultTooltip}''`";"
+=======
+   tooltipText?: string",`
+} const TrustScoreBadge: React.FC < TrustScoreBadgeProps" > = ({ score, tooltipText }) => { const displayScore = score !== null && score !== undefined ? score : 'N / A' const defaultTooltip = score !== null && score !== undefined ? `Detailed analysis: ${tooltipText || 'No analysis available'}` : 'Trust score not yet calculated.' const getScoreColor = () => { if (score === null || score === undefined) return 'text - gray - 500' if (score > 85) return 'text - green - 600' if (score > 70) return 'text - yellow - 600' return 'text - red - 600' } return (<div className='trust - score - badge p - 2 border rounded - md shadow - sm bg - white inline - block' title={tooltipText || defaultTooltip}''`"
+"
+}}`
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

@@ -11,7 +11,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   ',
   position = 'floating;
   '}) => {
-;
   const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const { preferences, savePreferences, announceToScreenReader } = useAccessibility();
@@ -35,7 +34,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
       announceToScreenReader('Accessibility controls opened;
   ')}
   }
-;
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded)}
   const handlePreferenceChange = (key: keyof typeof preferences, value: boolean) => {

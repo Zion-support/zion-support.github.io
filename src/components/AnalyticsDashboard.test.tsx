@@ -1,10 +1,38 @@
-import { render, screen } from '@testing-library/react';
-import AnalyticsDashboard from './AnalyticsDashboard';
+<<<<<<< HEAD
+import { render, screen } from &apos;@testing-library/react';
+import AnalyticsDashboard from &apos;./AnalyticsDashboard';
 
-describe('AnalyticsDashboard', () => {
-  it('renders without crashing', () => {
-    render(<AnalyticsDashboard />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
-  it('displays expected content', () => {
-    render(<AnalyticsDashboard />)
+describe(&apos;AnalyticsDashboard&apos;, () => {
+  it(&apos;renders without crashing&apos;, () => {
+    render(&apos;}}&apos;<AnalyticsDashboard />)
+    expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
+  it(&apos;displays expected content&apos;, () => {
+    render(&apos;}<AnalyticsDashboard />)
     // Add specific test assertions based on component content})})
+=======
+<<<<<<< HEAD
+import { render, screen } from '@testing-library/react';""
+import AnalyticsDashboard from './AnalyticsDashboard';""
+describe('AnalyticsDashboard', () => {""
+  it('renders without crashing', () => {""
+=======
+import { render, screen } from '@testing-library/react
+import AnalyticsDashboard from './AnalyticsDashboard
+describe('AnalyticsDashboard', () => {"
+  it('renders without crashing', () => {"
+>>>>>>> main
+    render(<AnalyticsDashboard /" >)"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
+  it('displays expected content', () => {
+<<<<<<< HEAD
+    render(<AnalyticsDashboard /" >)"
+    // Add specific test assertions based on component content, });
+""
+=======
+    render(<AnalyticsDashboard /" >)
+    // Add specific test assertions based on component content
+})
+"
+>>>>>>> main
+}}
+>>>>>>> main

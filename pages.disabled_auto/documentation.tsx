@@ -26,7 +26,7 @@ import Link from 'next/link';
 
 const Documentation: NextPage = () => {
   const docCategories = [
-    {
+  {
       icon: Book,
       title:,
   Getting Started',
@@ -233,5 +233,4 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
       </div>
     </MainLayout>
   )}
-;
 export default Documentation

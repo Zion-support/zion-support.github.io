@@ -4,7 +4,6 @@ import { ethers, providers } from;
   'ethers';
 import { getChainById } from;
   '../utils/chains'}
-;
 declare global {
   interface Window {
   ethereum?: unknown}
