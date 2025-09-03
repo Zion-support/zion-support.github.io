@@ -1,483 +1,54 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Bot, 
-  Mail, 
-  Link, 
-  RotateCcw, 
-  GraduationCap, 
-  TrendingUp, 
-  Users, 
-  BarChart3, 
-  Zap, 
-  Shield, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Award,
-  Globe,
-  Smartphone,
-  Clock,
-  Target,
-  DollarSign,
-  Eye,
-  MousePointer,
-  Palette,
-  Database,
-  Cpu,
-  Network,
-  Lock,
-  Phone,
-  MapPin,
-  PieChart,
-  Activity,
-  CreditCard,
-  UserCheck,
-  Settings,
-  Package,
-  Truck,
-  AlertTriangle,
-  FileText,
-  QrCode,
-  Brain,
-  Lightbulb,
-  Trophy,
-  Calendar,
-  Sparkles,
-  Rocket
-} from 'lucide-react';
-
+<<<<<<< HEAD
+import React from 'react'; import { motion  } from 'framer-motion'; import { ; Brain,; Zap,; Users,; TrendingUp,; Target,; Shield,; Cloud,; CheckCircle,; ArrowRight,; Star,; Clock,; Globe,; Database,; PieChart,; LineChart,; Activity,; Eye,; Settings,; Download,; Share2,; Filter,; Search,; AlertTriangle,; Lightbulb,; BarChart,; PieChart as PieChartIcon,; LineChart as LineChartIcon,; Activity as ActivityIcon,; Eye as EyeIcon,; Settings as SettingsIcon,; Download as DownloadIcon,; Share2 as Share2Icon,; Filter as FilterIcon,; Search as SearchIcon,; AlertTriangle as AlertTriangleIcon,; Lightbulb as LightbulbIcon,; Heart,; FileText,; GraduationCap,; Leaf,; Mail,; Phone,; Video,; Award,; Headphones,; Calendar,; Bell,; UserCheck,; UserX,; UserPlus,; UserMinus,; DollarSign;  } from 'lucide-react'; import { Link  } from 'react-router-dom'; ; export default function NewInnovativeServicesShowcase2025() {; const newServices = [; {; icon: Heart,; title: "AI-Powered Customer Success Platform",";"";" description: "Transform customer success with AI intelligence.Proactively manage relationships, prevent churn, and drive expansion revenue.",;"";" features: [";"AI-Powered Customer Health Scoring",";"Intelligent Customer Journey Mapping", ";"Automated Customer Communication",";"Real-time Success Metrics Dashboard",";"Proactive Success Planning",";"Intelligent Workflow Automation";"";" ],";"";" pricing: "Starting at $399/month",;"";" benefits: [";"Reduce churn by up to 40%",";"Increase expansion revenue by 25-35%",";"Improve customer satisfaction scores",";"Enhance team productivity by 40-60%";"";" ],";"";" useCases: ["SaaS", "Enterprise Software", "E-commerce", "Financial Services"],";"";" link: "/services/ai-customer-success-platform",";"";" category: "Customer Success & Retention";";" },;";" {;"";" icon: FileText,";"";" title: "AI Document Processing & Automation",";"";" description: "Automate document workflows with 99.5% accuracy.Process PDFs, images, emails, and more with intelligent extraction.",;"";" features: [";"AI-Powered Document Understanding",";"Intelligent Workflow Automation",";"Multi-Format Document Support",";"Real-time Analytics & Insights",";"Enterprise Security & Compliance",";"Scalable Cloud Infrastructure";"";" ],";"";" pricing: "Starting at $299/month",;"";" benefits: [";"Reduce manual work by 80%",";"Process documents 90% faster",";"99.5% accuracy in extraction",";"Enterprise-grade security & compliance";"";" ],";"";" useCases: ["Financial Services", "Healthcare", "Legal", "Manufacturing"],";"";" link: "/services/ai-document-processing-automation",";"";" category: "Document Automation & Processing";";" },;";" {;"";" icon: TrendingUp,";"";" title: "AI-Driven Revenue Operations Platform",";"";" description: "Unify sales, marketing, and customer success data to drive predictable revenue growth and optimize your revenue engine.",;"";" features: [";"AI-Powered Revenue Intelligence",";"Unified Revenue Operations",";"Automated Revenue Processes",";"Real-time Revenue Analytics",";"Predictive Revenue Modeling",";"Revenue Compliance & Governance";"";" ],";"";" pricing: "Starting at $599/month",;"";" benefits: [";"Increase revenue by 20-35%",";"95%+ accuracy in revenue forecasting",";"Enhance team productivity by 40-60%",";"Reduce revenue leakage through intelligent monitoring";"";" ],";"";" useCases: ["SaaS", "Enterprise Software", "E-commerce", "Financial Services"],";"";" link: "/services/ai-revenue-operations-platform",";"";" category: "Revenue Operations & Intelligence";";" },;";" {;"";" icon: GraduationCap,";"";" title: "AI-Powered Learning Management System",";"";" description: "Deliver personalized learning experiences with intelligent content curation and advanced analytics to maximize outcomes.",;"";" features: [";"AI-Powered Learning Paths",";"Smart Content Curation",";"Automated Assessment & Grading",";"Advanced Learning Analytics",";"Competency Mapping",";"Enterprise Security & Compliance";"";" ],";"";" pricing: "Starting at $199/month",;"";" benefits: [";"Personalized learning experiences",";"Adaptive content recommendations",";"Instant feedback and assessment",";"Comprehensive learning analytics";"";" ],";"";" useCases: ["Corporate Training", "Higher Education", "Healthcare", "Manufacturing"],";"";" link: "/services/ai-learning-management-system",";"";" category: "Learning & Development";";" },;";" {;"";" icon: Leaf,";"";" title: "AI Energy Management & Sustainability Platform",";"";" description: "Optimize energy consumption, reduce costs, and improve sustainability through intelligent automation and predictive analytics.",;"";" features: [";"AI-Powered Energy Optimization",";"Smart Grid Integration",";"Sustainability Analytics",";"Real-time Energy Monitoring",";"Predictive Maintenance",";"Compliance & Reporting";"";" ],";"";" pricing: "Starting at $299/month",;"";" benefits: [";"Reduce energy costs by 15-30%",";"Track and reduce carbon footprint",";"Increase operational efficiency by 20-40%",";"Future-proof infrastructure with smart grid integration";"";" ],";"";" useCases: ["Manufacturing", "Commercial Real Estate", "Healthcare", "Data Centers"],";"";" link: "/services/ai-energy-management-sustainability",";"";" category: "Energy & Sustainability";" };";" ];";" ;"";" const categories = [";"Customer Success & Retention",";"Document Automation & Processing", ";"Revenue Operations & Intelligence",";"Learning & Development",";"Energy & Sustainability"; ];" ;";" const benefits = [;";" {;"";" icon: Brain,";"";" title: "AI-Powered Intelligence",";"";" description: "Advanced machine learning algorithms that provide intelligent insights and automation across all services";";" },;";" {;"";" icon: Zap,";"";" title: "Seamless Integration",";"";" description: "Easy integration with existing systems and workflows through APIs and custom connectors";";" },;";" {;"";" icon: Shield,";"";" title: "Enterprise Security",";"";" description: "Bank-level security with SOC2, GDPR, and industry-specific compliance requirements";";" },;";" {;"";" icon: Cloud,";"";" title: "Scalable Infrastructure",";"";" description: "Cloud-native architecture that scales with your business needs and ensures 99.9% uptime";" };";" ];";" ;"";" return(";"";" <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;"";" {}";"";" <section className="relative py-20 overflow-hidden">";"";" <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;" <motion.div;";" initial={{ opacity: 0, y: 20 }};";" animate={{ opacity: 1, y: 0 }};"";" transition={{ duration: 0.8   }}";"";" className="text-center";"";" >";"";" <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">";"";" <Lightbulb className="w-4 h-4 mr-2" />;";" Innovative AI Services 2025;";" </div>;";"";" <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;"";" Revolutionary";"";" <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"> AI-Powered Solutions</span>;";" </h1>;";"";" <p className="text-xl text-gray-400 max-w-4xl mx-auto mb-8">;" Discover our comprehensive suite of innovative micro SAAS services designed to transform your business operations,;";" drive growth, and unlock new possibilities with cutting-edge AI technology.;";" </p>;";"";" <div className="flex flex-col sm:flex-row gap-4 justify-center">;"";" <Link";"";" to="/request-quote";"";" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25";"";" >";"";" <span className="flex items-center gap-2">;"";" Get Started Today";"";" <ArrowRight className="w-5 h-5" />;";" </span>;";" </Link>;";"";" <button className="inline-flex items-center px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300">";"";" <Video className="w-5 h-5 mr-2" />; Watch Demo; </button>; </div>;" </motion.div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-20">";"";" <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">; <motion.div;" initial={{ opacity: 0, y: 20 }};";" whileInView={{ opacity: 1, y: 0 }};";" transition={{ duration: 0.8   }};"";" viewport={{ once: true   }}";"";" className="text-center mb-16";"";" >";"";" <h2 className="text-4xl font-bold text-white mb-4">;";" Our Innovative Service Portfolio;"";" </h2>";"";" <p className="text-xl text-gray-400 max-w-3xl mx-auto">;" Comprehensive AI-powered solutions designed to address your most critical business challenges;";" </p>;";" </motion.div>;";"";" <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">; {newServices.map((service, index) => (; <motion.div; key={index};" initial={{ opacity: 0, y: 20 }};";" whileInView={{ opacity: 1, y: 0 }};";" transition={{ duration: 0.6, delay: index * 0.1 }};"";" viewport={{ once: true   }}";"";" className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105";"";" >";"";" <div className="flex items-start space-x-4 mb-6">";"";" <div className="w-12 h-12 bg-cyan-500/10 border border-cyan-500/20 rounded-xl flex items-center justify-center flex-shrink-0">";"";" <service.icon className="w-6 h-6 text-cyan-400" />;"";" </div>";"";" <div className="flex-1">";"";" <div className="inline-flex items-center px-3 py-1 bg-slate-700/50 rounded-full text-xs text-cyan-400 mb-2">;";" {service.category};"";" </div>";"";" <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>";"";" <p className="text-gray-400 mb-4">{service.description}</p>;";" </div>;";" </div>;";"";" <div className="mb-6">";"";" <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>";"";" <ul className="space-y-2">;"";" {service.features.slice(0, 4).map((feature, featureIndex) => (";"";" <li key={featureIndex} className="flex items-center text-sm text-gray-300">";"";" <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />; {feature}; </li>;" ))};";" </ul>;";" </div>;";"";" <div className="mb-6">";"";" <h4 className="text-lg font-semibold text-white mb-3">Key Benefits:</h4>";"";" <ul className="space-y-2">;"";" {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (";"";" <li key={benefitIndex} className="flex items-center text-sm text-gray-300">";"";" <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />; {benefit}; </li>;" ))};";" </ul>;";" </div>;";"";" <div className="flex items-center justify-between mb-6">";"";" <div className="text-cyan-400 font-semibold">{service.pricing}</div>";"";" <div className="text-sm text-gray-400">";"";" Use Cases: {service.useCases.slice(0, 2).join(", ")};" </div>;";" </div>;";" <Link;"";" to={service.link}";"";" className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105";"";" >";"";" <span className="flex items-center gap-2">;"";" Learn More";"";" <ArrowRight className="w-4 h-4" />; </span>; </Link>; </motion.div>; ))};" </div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-20 bg-slate-800/30">";"";" <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">; <motion.div;" initial={{ opacity: 0, y: 20 }};";" whileInView={{ opacity: 1, y: 0 }};";" transition={{ duration: 0.8   }};"";" viewport={{ once: true   }}";"";" className="text-center mb-16";"";" >";"";" <h2 className="text-4xl font-bold text-white mb-4">;";" Why Choose Our AI Services?;"";" </h2>";"";" <p className="text-xl text-gray-400 max-w-3xl mx-auto">;" Proven technology and measurable results that transform your business operations;";" </p>;";" </motion.div>;";"";" <div className="grid grid-cols-1 md:grid-cols-2 gap-8">; {benefits.map((benefit, index) => (; <motion.div; key={index};" initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};";" whileInView={{ opacity: 1, x: 0 }};";" transition={{ duration: 0.6, delay: index * 0.1 }};"";" viewport={{ once: true   }}";"";" className="flex items-start space-x-4";"";" >";"";" <div className="w-12 h-12 bg-cyan-500/10 border border-cyan-500/20 rounded-xl flex items-center justify-center flex-shrink-0">";"";" <benefit.icon className="w-6 h-6 text-cyan-400" />;";" </div>;"";" <div>";"";" <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>";"";" <p className="text-gray-400">{benefit.description}</p>; </div>; </motion.div>; ))};" </div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-20">";"";" <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">; <motion.div; initial={{ opacity: 0, y: 20 }};" whileInView={{ opacity: 1, y: 0 }};";" transition={{ duration: 0.8   }};";" viewport={{ once: true   }};"";" >";"";" <h2 className="text-4xl font-bold text-white mb-6">;";" Ready to Transform Your Business?;"";" </h2>";"";" <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">;";" Join hundreds of companies that have revolutionized their operations with our AI-powered solutions.;"";" </p>";"";" <div className="flex flex-col sm:flex-row gap-4 justify-center">;"";" <Link";"";" to="/request-quote";"";" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25";"";" >";"";" <span className="flex items-center gap-2">;"";" Start Your Free Trial";"";" <ArrowRight className="w-5 h-5" />;";" </span>;"";" </Link>";"";" <button className="inline-flex items-center px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300">";"";" <Phone className="w-5 h-5 mr-2" />; Contact Sales; </button>; </div>;" </motion.div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-16 bg-slate-800/50">";"";" <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">";"";" <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>";"";" <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-300">";"";" <div className="flex items-center justify-center space-x-2">";"";" <Phone className="w-5 h-5 text-cyan-400" />;";" <span>+1 302 464 0950</span>;"";" </div>";"";" <div className="flex items-center justify-center space-x-2">";"";" <Mail className="w-5 h-5 text-cyan-400" />;";" <span>kleber@ziontechgroup.com</span>;"";" </div>";"";" <div className="flex items-center justify-center space-x-2">";"";" <Globe className="w-5 h-5 text-cyan-400" />";"";" <a href="https:
+=======
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
 const NewInnovativeServicesShowcase2025 = () => {
-  const newServices = [
-    {
-      icon: <Mail className="w-8 h-8" />,
-      title: "AI Autonomous Email Marketing Platform",
-      description: "Transform your email marketing with AI that creates, sends, and optimizes campaigns automatically. Achieve 40% higher open rates and 80% time savings.",
-      features: [
-        "AI-Powered Content Generation",
-        "Intelligent Audience Segmentation", 
-        "Predictive Send Time Optimization",
-        "Real-Time Performance Analytics",
-        "Automated Campaign Orchestration",
-        "Compliance & Deliverability"
-      ],
-      pricing: "$99 - $799/month",
-      benefits: [
-        "40% Higher Open Rates",
-        "80% Time Savings", 
-        "3x Better Targeting",
-        "25% Higher ROI"
-      ],
-      href: "/services/ai-autonomous-email-marketing-platform",
-      color: "from-blue-500 to-purple-500",
-      category: "Marketing Automation"
-    },
-    {
-      icon: <Link className="w-8 h-8" />,
-      title: "AI Affiliate Marketing Tracking Platform",
-      description: "Maximize your affiliate marketing ROI with AI-powered tracking, fraud detection, and automated optimization. Achieve 35% higher conversions and 90% fraud reduction.",
-      features: [
-        "Smart Link Generation",
-        "Intelligent Attribution",
-        "AI Fraud Detection",
-        "Predictive Analytics",
-        "Automated Payments",
-        "Compliance Management"
-      ],
-      pricing: "$149 - $999/month",
-      benefits: [
-        "35% Higher Conversions",
-        "90% Fraud Reduction",
-        "75% Time Savings",
-        "40% Better ROI"
-      ],
-      href: "/services/ai-affiliate-marketing-tracking-platform",
-      color: "from-green-500 to-blue-500",
-      category: "Affiliate Marketing"
-    },
-    {
-      icon: <RotateCcw className="w-8 h-8" />,
-      title: "AI E-commerce Return Management Platform",
-      description: "Streamline your return process with AI-powered automation, fraud detection, and inventory optimization. Achieve 60% faster processing and 40% cost reduction.",
-      features: [
-        "AI-Powered Return Prediction",
-        "Automated Return Processing",
-        "Smart Return Labels",
-        "Return Analytics Dashboard",
-        "Fraud Detection",
-        "Inventory Optimization"
-      ],
-      pricing: "$79 - $499/month",
-      benefits: [
-        "60% Faster Processing",
-        "40% Cost Reduction",
-        "85% Customer Satisfaction",
-        "90% Fraud Prevention"
-      ],
-      href: "/services/ai-ecommerce-return-management-platform",
-      color: "from-orange-500 to-red-500",
-      category: "E-commerce"
-    },
-    {
-      icon: <GraduationCap className="w-8 h-8" />,
-      title: "AI Learning Management System",
-      description: "Transform your training and education with AI-powered personalized learning, automated content creation, and predictive analytics. Achieve 45% faster learning and 90% engagement rates.",
-      features: [
-        "AI-Powered Content Creation",
-        "Adaptive Learning Paths",
-        "Predictive Analytics",
-        "Intelligent Video Processing",
-        "Automated Assessment",
-        "Compliance & Security"
-      ],
-      pricing: "$99 - $799/month",
-      benefits: [
-        "45% Faster Learning",
-        "90% Engagement Rate",
-        "70% Time Savings",
-        "85% Completion Rate"
-      ],
-      href: "/services/ai-learning-management-system",
-      color: "from-purple-500 to-pink-500",
-      category: "Education Technology"
-    }
-  ];
-
-  const categories = [
-    {
-      name: "Marketing Automation",
-      icon: <Target className="w-6 h-6" />,
-      count: 1,
-      color: "from-blue-500 to-purple-500"
-    },
-    {
-      name: "Affiliate Marketing", 
-      icon: <Link className="w-6 h-6" />,
-      count: 1,
-      color: "from-green-500 to-blue-500"
-    },
-    {
-      name: "E-commerce",
-      icon: <Package className="w-6 h-6" />,
-      count: 1,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      name: "Education Technology",
-      icon: <GraduationCap className="w-6 h-6" />,
-      count: 1,
-      color: "from-purple-500 to-pink-500"
-    }
-  ];
-
-  const stats = [
-    {
-      number: "4",
-      label: "New AI Services",
-      description: "Cutting-edge micro SAAS solutions"
-    },
-    {
-      number: "40%",
-      label: "Average Performance Improvement",
-      description: "Across all new services"
-    },
-    {
-      number: "75%",
-      label: "Time Savings",
-      description: "Through AI automation"
-    },
-    {
-      number: "90%",
-      label: "Customer Satisfaction",
-      description: "Based on user feedback"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4 mr-2" />
-              New Innovative Services 2025
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Revolutionary AI-Powered
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"> Micro SAAS Solutions</span>
+    <>
+      <Head>
+        <title>New Innovative Services Showcase2025 - Zion Tech Group</title>
+        <meta name="description" content="Professional New Innovative Services Showcase2025 services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              New Innovative Services Showcase2025
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover our latest collection of AI-powered micro SAAS services designed to transform your business operations. 
-              From email marketing automation to learning management systems, these innovative solutions deliver exceptional results.
+            <p className="text-xl text-gray-600 mb-12">
+              Professional New Innovative Services Showcase2025 services and solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-lg font-semibold transition-colors flex items-center justify-center">
-                Explore All Services
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="px-8 py-4 border border-gray-600 hover:border-gray-500 text-white rounded-lg font-semibold transition-colors">
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-4xl font-bold text-white mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-lg font-semibold text-blue-400 mb-1">
-                  {stat.label}
-                </div>
-                <div className="text-sm text-gray-300">
-                  {stat.description}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Categories Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Service Categories
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our new services span across multiple categories, each designed to address specific business needs.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {categories.map((category, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-colors"
-              >
-                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} mb-4`}>
-                  <div className="text-white">
-                    {category.icon}
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {category.name}
-                </h3>
-                <p className="text-gray-400 text-sm">
-                  {category.count} service{category.count !== 1 ? 's' : ''}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              New AI-Powered Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our latest collection of innovative AI-powered micro SAAS solutions.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {newServices.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-blue-500/50 transition-colors"
-              >
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r ${service.color}`}>
-                    <div className="text-white">
-                      {service.icon}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <span className="text-sm text-blue-400 font-medium">
-                        {service.category}
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4">
-                      {service.description}
-                    </p>
-                    <div className="text-lg font-semibold text-green-400">
-                      {service.pricing}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">
-                      Key Features
-                    </h4>
-                    <ul className="space-y-2">
-                      {service.features.slice(0, 3).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">
-                      Benefits
-                    </h4>
-                    <ul className="space-y-2">
-                      {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                          <TrendingUp className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="flex space-x-3">
-                  <a
-                    href={service.href}
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-lg font-semibold transition-colors text-center flex items-center justify-center"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
-                  <button className="px-6 py-3 border border-gray-600 hover:border-gray-500 text-white rounded-lg font-semibold transition-colors">
-                    Demo
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Join thousands of businesses using our AI-powered solutions to achieve remarkable results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  Get in Touch
-                </h3>
-                <p className="text-gray-300 mb-6">
-                  Ready to revolutionize your business with our AI-powered solutions? Contact our team to learn more.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-blue-400 mr-3" />
-                    <span className="text-white">+1 302 464 0950</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-blue-400 mr-3" />
-                    <span className="text-white">kleber@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-center">
-                    <MapPin className="w-5 h-5 text-blue-400 mr-3" />
-                    <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
-                  </div>
-                </div>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
               </div>
-              <div>
-                <form className="space-y-4">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
-                  />
-                  <textarea
-                    placeholder="Your Message"
-                    rows={4}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
-                  />
-                  <button className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors">
-                    Send Message
-                  </button>
-                </form>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
               </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
             </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    </>
   );
-};
-
-export default NewInnovativeServicesShowcase2025;
+}
+export default NewInnovativeServicesShowcase2025
+>>>>>>> main

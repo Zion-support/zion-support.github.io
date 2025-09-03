@@ -1,0 +1,1 @@
+import React from "react"; interface Notification { id: string title: string message: string type: "success" | "warning" | "error" | "info"; priority: "low" | "medium" | "high" | "critical"; timestamp: Date, read: boolean, archived: boolean, category: string, actionUrl?: string, metadata?: Record<string, any>} interface AdvancedNotificationCenterProps { // comment
