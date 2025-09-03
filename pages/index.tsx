@@ -1,9 +1,9 @@
 import React, { useState, useCallback, memo } from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 import Sidebar from '../components/Sidebar';
+import SEOHead from '../src/components/SEOHead';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Menu } from 'lucide-react';
 
 const Home = memo(() => {
@@ -16,6 +16,24 @@ const Home = memo(() => {
   const handleSidebarClose = useCallback(() => {
     setSidebarOpen(false);
   }, []);
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "description": "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ziontechgroup.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    }
+  };
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
@@ -69,62 +87,12 @@ const Home = memo(() => {
 
   return (
     <>
-      <Head>
-        <title>Zion Tech Group - Leading Technology Solutions Provider</title>
-        <meta name="description" content="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-        
-        {/* Enhanced SEO */}
-        <meta name="keywords" content="AI services, IT solutions, micro SaaS, technology consulting, digital transformation, cloud services, cybersecurity" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Zion Tech Group - Leading Technology Solutions Provider" />
-        <meta property="og:description" content="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development." />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Leading Technology Solutions Provider" />
-        <meta name="twitter:description" content="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development." />
-        
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "description": "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-                "addressCountry": "US"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
-              },
-              "sameAs": [
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup"
-              ]
-            })
-          }}
-        />
-      </Head>
+      <SEOHead
+        title="Zion Tech Group - Leading Technology Solutions Provider"
+        description="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation."
+        keywords="AI services, IT solutions, micro SaaS, technology consulting, digital transformation, cloud services, cybersecurity"
+        structuredData={structuredData}
+      />
       
       <Navigation />
       <Sidebar isOpen={sidebarOpen} onClose={handleSidebarClose} />

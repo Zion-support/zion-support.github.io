@@ -116,6 +116,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-org/your-repo.git"
-  }
+    "url": "git+https://github.com/Zion-Technologies/Website.git"
+  },
+  "keywords": [
+    "ai-services",
+    "it-solutions",
+    "micro-saas",
+    "web-development",
+    "cloud-services",
+    "devops",
+    "cybersecurity"
+  ],
+  "author": "Zion Tech Group",
+  "license": "MIT"
 }
