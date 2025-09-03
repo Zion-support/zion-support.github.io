@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 
 type Service = {
@@ -1480,7 +1481,7 @@ const itServices: Service[] = [
     link: 'https://ziontechgroup.com/it-services'}
 ];
 
-export default function Services(): any {
+export default function Services(): React.JSX.Element {
   const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (
     <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>
       <div style={{ 

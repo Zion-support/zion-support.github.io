@@ -1,11 +1,13 @@
+import React from 'react';
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+import SearchBar from '../components/SearchBar';
 import '../styles/globals.css';
 
-function Header(): any {
+function Header(): React.JSX.Element {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -26,6 +28,7 @@ function Header(): any {
           textDecoration: 'none'
         }}>Zion Tech Group</Link>
         
+<<<<<<< HEAD
         {/* Desktop Navigation */}
         <div style={{ 
           display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center'
@@ -67,6 +70,21 @@ function Header(): any {
             color: 'white', padding: '8px 16px', borderRadius: 8,
             transition: 'all 0.2s ease', textDecoration: 'none'
           }}>Contact</Link>
+=======
+        <div className="header-nav-links">
+          <Link href="/" className="header-nav-link">Home</Link>
+          <Link href="/services" className="header-nav-link">All Services</Link>
+          <Link href="/services-catalog" className="header-nav-link">Catalog</Link>
+          <Link href="/cloud-devops" className="header-nav-link">Cloud DevOps</Link>
+          <Link href="/cybersecurity" className="header-nav-link">Cybersecurity</Link>
+          <Link href="/quantum-computing" className="header-nav-link">Quantum</Link>
+          <Link href="/docs" className="header-nav-link">Docs</Link>
+          <Link href="/pricing" className="header-nav-link">Pricing</Link>
+          <div className="hidden md:block">
+            <SearchBar />
+          </div>
+          <Link href="/contact" className="header-nav-cta">Contact</Link>
+>>>>>>> origin/main
         </div>
 
         {/* Mobile Navigation */}
@@ -92,6 +110,7 @@ function Header(): any {
         </div>
       </nav>
       
+<<<<<<< HEAD
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div style={{
@@ -134,11 +153,27 @@ function Header(): any {
           }} onClick={() => setMobileMenuOpen(false)}>About</Link>
         </div>
       )}
+=======
+      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
+        <div className="md:hidden mb-4">
+          <SearchBar />
+        </div>
+        <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+        <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
+        <Link href="/cloud-devops" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Cloud DevOps</Link>
+        <Link href="/cybersecurity" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Cybersecurity</Link>
+        <Link href="/quantum-computing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Quantum</Link>
+        <Link href="/docs" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Docs</Link>
+        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+        <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+      </div>
+>>>>>>> origin/main
     </header>
   );
 }
 
-function Footer(): any {
+function Footer(): React.JSX.Element {
   return (
     <footer style={{ 
       background: 'linear-gradient(135deg, #0b1220, #1e293b)', 
@@ -172,6 +207,7 @@ function Footer(): any {
         </div>
 
         {/* Services */}
+<<<<<<< HEAD
         <div style={{ display: 'grid', gap: 12 }}>
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Our Services</h3>
           <div style={{ display: 'grid', gap: 8 }}>
@@ -186,6 +222,21 @@ function Footer(): any {
               <div>• 100+ AI Services</div>
               <div>• 100+ IT Solutions</div>
             </div>
+=======
+        <div className="footer-section">
+          <h3>Services</h3>
+          <Link href="/services">All Services</Link>
+          <Link href="/micro-saas">Micro SaaS Products</Link>
+          <Link href="/ai-services">AI Services</Link>
+          <Link href="/it-services">IT Services</Link>
+          <Link href="/services-catalog">Services Catalog</Link>
+          <Link href="/docs">Documentation</Link>
+          <Link href="/pricing">Pricing</Link>
+          <div className="text-sm mt-2 space-y-1">
+            <div>• 130+ Micro SaaS Products</div>
+            <div>• 90+ AI Services</div>
+            <div>• 90+ IT Solutions</div>
+>>>>>>> origin/main
           </div>
         </div>
 
@@ -250,8 +301,12 @@ function Footer(): any {
       }}>
         <small style={{ opacity: 0.7 }}>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
+<<<<<<< HEAD
           <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Privacy Policy</Link> | 
           <Link href="/terms" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Terms of Service</Link>
+=======
+          <Link href="/privacy">Privacy Policy</Link>
+>>>>>>> origin/main
         </small>
       </div>
     </footer>
@@ -259,6 +314,18 @@ function Footer(): any {
 }
 
 export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, []);
+
   return (
     <ErrorBoundary>
       <PerformanceMonitor />
