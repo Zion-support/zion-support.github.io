@@ -53,12 +53,18 @@ const Navigation = () => {
       ]
     },
     { name: 'Solutions', href: '/solutions' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'News', href: '/news' },
     { name: 'Pricing', href: '/pricing' },
+    { name: 'Request Quote', href: '/request-quote' },
     { name: 'Demo', href: '/demo' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' }
+    { name: 'Careers', href: '/careers' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'R&D', href: '/research-development' },
+    { name: 'Green IT', href: '/green-it' }
   ];
 
   const contactInfo = [

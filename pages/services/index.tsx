@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { services } from '../../utils/data/services';
-import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard';
+// Replaced missing EnhancedMarketplaceCard with a lightweight inline card
 
 const ServicesIndex: NextPage = () => {
   return (
@@ -20,13 +20,26 @@ const ServicesIndex: NextPage = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s) => (
-            <div key={s.id} className="flex flex-col">
-              <EnhancedMarketplaceCard
-                title={s.title}
-                description={`${s.description} Provider: ${s.provider.name}. Rating: ${s.provider.rating}/5.`}
-                price={`${s.pricing.currency} ${s.pricing.from} / ${s.pricing.type}`}
-                image={s.provider.avatar}
-              />
+            <div key={s.id} className="flex flex-col rounded-lg border p-4 bg-white shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-3 mb-3">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={s.provider.avatar} alt={s.title} className="w-12 h-12 rounded-full object-cover" />
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">{s.title}</h3>
+                  <p className="text-sm text-gray-500">by {s.provider.name}</p>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4">
+                {s.description} Rating: {s.provider.rating}/5.
+              </p>
+              <div className="mt-auto flex items-center justify-between">
+                <span className="text-blue-600 font-semibold">
+                  {s.pricing.currency} {s.pricing.from} / {s.pricing.type}
+                </span>
+                <Link href={`/services/${s.slug || ''}`} className="text-blue-600 hover:underline">
+                  Learn more
+                </Link>
+              </div>
             </div>
           ))}
         </div>
