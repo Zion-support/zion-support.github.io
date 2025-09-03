@@ -1,10 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 
 const PricingPage: React.FC = () => {
   return (
     <>
       <section className="bg-white">
+=======
+<<<<<<< HEAD
+=======
+import Layout from '../components/Layout';
+>>>>>>> c3407f17831351e4f4cfd0efb90f6fd048cb9536
+
+const PricingPage: React.FC = () => {
+  return (
+    <main style={{ background: '#f8fafc', minHeight: 'calc(100vh - 120px)' }}>
+      <section style={{ background: 'white' }}>
+>>>>>>> ff1c4aa73e82ebe1054c042ee0885413d93984f2
         <div className="container mx-auto px-4 py-12">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Pricing</h1>
           <p className="text-gray-600 mb-10 max-w-3xl">
@@ -80,7 +92,11 @@ const PricingPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
     </>
+=======
+    </main>
+>>>>>>> ff1c4aa73e82ebe1054c042ee0885413d93984f2
   );
 };
 

@@ -7,6 +7,7 @@ function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
+<<<<<<< HEAD
     <header className="sticky top-0 z-50 bg-gray-900 text-white border-b border-gray-800">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -43,6 +44,25 @@ function Header() {
               )}
             </svg>
           </button>
+=======
+    <header style={{
+      position: 'sticky', top: 0, zIndex: 50, background: '#0b1220', color: 'white',
+      borderBottom: '1px solid rgba(255,255,255,0.1)'
+    }}>
+      <nav style={{
+        maxWidth: 1200, margin: '0 auto', padding: '10px 16px', display: 'flex',
+        alignItems: 'center', justifyContent: 'space-between', gap: 12
+      }}>
+        <Link href="/" style={{ fontWeight: 800, letterSpacing: 0.3 }}>Zion Tech Group</Link>
+        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          <Link href="/" style={{ opacity: 0.9 }}>Home</Link>
+          <Link href="/services" style={{ opacity: 0.9 }}>Services</Link>
+          <Link href="/pricing" style={{ opacity: 0.9 }}>Pricing</Link>
+          <Link href="/micro-saas" style={{ opacity: 0.9 }}>Micro SaaS</Link>
+          <Link href="/ai-services" style={{ opacity: 0.9 }}>AI Services</Link>
+          <Link href="/it-services" style={{ opacity: 0.9 }}>IT Services</Link>
+          <Link href="/contact" style={{ fontWeight: 600, background: '#22d3ee', color: '#0b1220', padding: '6px 10px', borderRadius: 8 }}>Contact</Link>
+>>>>>>> ff1c4aa73e82ebe1054c042ee0885413d93984f2
         </div>
 
         {/* Mobile Navigation */}
@@ -107,9 +127,20 @@ function Footer() {
             </ul>
           </div>
         </div>
+<<<<<<< HEAD
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
           <p>© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
+=======
+        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          <Link href="/services" style={{ opacity: 0.9 }}>All Services</Link>
+          <Link href="/pricing" style={{ opacity: 0.9 }}>Pricing</Link>
+          <Link href="/micro-saas" style={{ opacity: 0.9 }}>Micro SaaS</Link>
+          <Link href="/ai-services" style={{ opacity: 0.9 }}>AI Services</Link>
+          <Link href="/it-services" style={{ opacity: 0.9 }}>IT Services</Link>
+          <Link href="/contact" style={{ opacity: 0.9 }}>Contact</Link>
+          <Link href="/privacy" style={{ opacity: 0.9 }}>Privacy Policy</Link>
+>>>>>>> ff1c4aa73e82ebe1054c042ee0885413d93984f2
         </div>
       </div>
     </footer>

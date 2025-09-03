@@ -84,6 +84,7 @@ export default [
       'e2e/**',
       'pages/**',
       'pages.disabled/**',
+      'pages.disabled_backup/**',
       'pages_backup/**',
       'supabase/**',
       'types/**',
