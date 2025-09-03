@@ -32,24 +32,24 @@ const accessibilityEnhancements = {;
   * {;
   background-color: white !important;
           color: black !important;
-          border-color: black !important;,;,
+          border-color: black !important;
 }
       }
     `;
-    document.head.appendChild(style);,;,
-},;
-;
-  // Initialize all enhancements;
-  init: () => {;
-  this.addAriaLabels();
+    document.head.appendChild(style);
+  },
+  
+  // Initialize all enhancements
+  init: () => {
+    this.addAriaLabels();
     this.addKeyboardNavigation();
-    this.addHighContrastMode();,;,
-}
+    this.addHighContrastMode();
+  }
 };
-;
-// Auto-initialize when DOM is ready;
-if (document.readyState === "loading") {;
-  document.addEventListener("DOMContentLoaded", accessibilityEnhancements.init);,;,
-} else {;
-  accessibilityEnhancements.init();,;,
+
+// Auto-initialize when DOM is ready
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", accessibilityEnhancements.init);
+} else {
+  accessibilityEnhancements.init();
 }

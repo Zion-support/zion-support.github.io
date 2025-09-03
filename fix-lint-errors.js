@@ -19,14 +19,14 @@ function fixLintErrors(content) {;
         imports.trim().split(/\s+/).length > 1;
       ) {;
   const cleanImports = imports.trim().split(/\s+/).join(", ");
-        return match.replace(imports, cleanImports);,;,
+        return match.replace(imports, cleanImports);
 }
       return match;
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {;
   // Check if imports have proper commas;
     if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {;
   const cleanImports = imports.trim().split(/\s+/).join();
-      return match.replace(imports, cleanImports);,;,
+      return match.replace(imports, cleanImports);
 }
   );
   // Fix missing semicolons after variable declarations;
@@ -42,36 +42,39 @@ function fixLintErrors(content) {;
   // Fix missing closing braces;
   const openBraces = (fixed.match(/\{/g) || []).length;
   const closeBraces = (fixed.match(/\}/g) || []).length;
-  if (openBraces > closeBraces) {;
-  fixed += "\n}".repeat(openBraces - closeBraces);,;,
+  if (openBraces > closeBraces) {
+    fixed += "\n}".repeat(openBraces - closeBraces);
+  }
+  
+  return fixed;
 }
-;
-  return fixed}
-;
-// Main function;
-async function $1() {;
-  // Get all TypeScript/JavaScript files;
-  const files = await glob("src/**/*.{ts,tsx,js,jsx}", {;
-  ignore: ["node_modules/**"]});
-  console.log(``Found ${files.length} files to process...``);
+
+// Main function
+async function main() {
+  // Get all TypeScript/JavaScript files
+  const files = await glob("src/**/*.{ts,tsx,js,jsx}", {
+    ignore: ["node_modules/**"]
+  });
+  console.log(`Found ${files.length} files to process...`);
   let fixedCount = 0;
   let errorCount = 0;
-  for (const file of files) {;
-  try {;
-  const content = fs.readFileSync(file, "utf8");
+  
+  for (const file of files) {
+    try {
+      const content = fs.readFileSync(file, "utf8");
       const fixed = fixLintErrors(content);
-      if (content !== fixed) {;
-  fs.writeFileSync(file, fixed, "utf8");
-        console.log(``Fixed: ${file}``);
-        fixedCount++;,;,
-}
-    } catch (error) {;
-  console.error(`Error processing ${file}:`, error.message);
-      errorCount++;,;,
-}
+      if (content !== fixed) {
+        fs.writeFileSync(file, fixed, "utf8");
+        console.log(`Fixed: ${file}`);
+        fixedCount++;
+      }
+    } catch (error) {
+      console.error(`Error processing ${file}:`, error.message);
+      errorCount++;
+    }
   }
-;
-  console.log(``\nCompleted: ${fixedCount} files fixed, ${errorCount} errors``);,;,
+  
+  console.log(`\nCompleted: ${fixedCount} files fixed, ${errorCount} errors`);
 }
-;
-main().catch(console.error)})
+
+main().catch(console.error);
