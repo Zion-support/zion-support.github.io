@@ -2,7 +2,7 @@
  
 const fs = require("fs") 
 const path = require("path") 
-class $1 { 
+class AdvancedSyntaxFixer { 
   constructor() { 
   this.projectRoot = process.cwd() 
     this.fixedFiles = [] 

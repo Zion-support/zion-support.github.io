@@ -1,1 +1,52 @@
 {
+  "timestamp": "2025-09-03T16:33:01.444Z",
+  "status": "healthy",
+  "checks": [
+    {
+      "name": "Node.js Version",
+      "status": "pass",
+      "message": "Node.js v22.16.0 is supported"
+    },
+    {
+      "name": "Package.json",
+      "status": "pass",
+      "message": "Package.json is valid"
+    },
+    {
+      "name": "Build Script",
+      "status": "pass",
+      "message": "Build script exists"
+    },
+    {
+      "name": "Dependencies",
+      "status": "pass",
+      "message": "node_modules directory exists"
+    },
+    {
+      "name": "File: next.config.js",
+      "status": "pass",
+      "message": "File exists"
+    },
+    {
+      "name": "File: pages/_app.tsx",
+      "status": "pass",
+      "message": "File exists"
+    },
+    {
+      "name": "File: pages/index.tsx",
+      "status": "pass",
+      "message": "File exists"
+    },
+    {
+      "name": "Disk Space",
+      "status": "pass",
+      "message": "Disk usage: 12%"
+    },
+    {
+      "name": "Memory Usage",
+      "status": "pass",
+      "message": "Memory usage: 9%"
+    }
+  ],
+  "recommendations": []
+}

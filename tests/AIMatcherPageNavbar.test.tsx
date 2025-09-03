@@ -1,1 +1,0 @@
-import { render  } from "@testing-library/react"; test(" const { container, asFragment } = render( <MemoryRouter> <AppLayout> <AIMatcherPage /> </AppLayout> </MemoryRouter> ); expect(container.querySelectorAll(" ".navbar")).toHaveLength(1); expect(asFragment()).toMatchSnapshot()})

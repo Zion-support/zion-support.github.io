@@ -1,7 +1,7 @@
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { Brain, Cloud, Layers, Shield, Sparkles, BarChart3, Zap, Database, Bot, Search, Workflow, Globe } from 'lucide-react'
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { Brain, Cloud, Layers } from 'lucide-react';
 
 export default function ServicesCatalog() {
   const contact = {
@@ -10,21 +10,7 @@ export default function ServicesCatalog() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
   }
-
-  const sections: Array<{
-    id: string
-    title: string
-    icon: any
-    items: Array<{
-      name: string
-      blurb: string
-      price: string
-      eta: string
-      bullets: string[]
-      link: string
-      refs?: Array<{ label: string; href: string }>
-    }>
-  }> = [
+  const sections = [
     {
       id: 'micro-saas',
       title: 'Micro SaaS Products',
@@ -41,39 +27,44 @@ export default function ServicesCatalog() {
             'Forecasting, budgets, and team alerts (Slack/Email)',
             'Executive savings dashboards and benchmarks'
           ],
-          link: '/micro-saas',
-          refs: [
-            { label: 'AWS Cost Explorer', href: 'https://aws.amazon.com/aws-cost-management/aws-cost-explorer/' },
-            { label: 'FinOps Foundation', href: 'https://www.finops.org/' }
-          ]
+          link: '/micro-saas'
         },
         {
-          name: 'Headless Commerce Accelerator',
-          blurb: 'Composable storefront with payments, CMS, analytics and SEO built-in. Optimized for conversion and scale.',
-          price: '$2,500 – $12,000/month',
-          eta: '3–6 weeks',
+          name: 'API Rate Limiter & Analytics',
+          blurb: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms with real-time monitoring.',
+          price: '$199 – $999/month',
+          eta: '1–2 weeks',
           bullets: [
-            'Next.js storefront with edge caching',
-            'Stripe payments, tax & shipping add‑ons',
-            'CMS-driven content and merchandising',
-            'A/B testing and conversion analytics'
+            'Dynamic rate limiting based on user tiers',
+            'Real-time API usage analytics and reporting',
+            'Revenue tracking and billing integration',
+            'DDoS protection and abuse prevention'
           ],
-          link: '/micro-saas',
-          refs: [
-            { label: 'Stripe', href: 'https://stripe.com' },
-            { label: 'Vercel Edge', href: 'https://vercel.com/features/edge-functions' }
-          ]
+          link: '/micro-saas'
         },
         {
-          name: 'Compliance Monitor (SOC2/GDPR/ISO)',
-          blurb: 'Continuous control monitoring, evidence collection, and audit‑ready reporting for modern teams.',
-          price: '$499 – $2,999/month',
+          name: 'Smart Document Processing',
+          blurb: 'AI-powered OCR, data extraction, and document workflow automation for businesses of all sizes.',
+          price: '$399 – $1,999/month',
+          eta: '2–3 weeks',
+          bullets: [
+            'Advanced OCR with 99%+ accuracy',
+            'Intelligent data extraction and validation',
+            'Workflow automation and approval processes',
+            'Integration with existing business systems'
+          ],
+          link: '/micro-saas'
+        },
+        {
+          name: 'Customer Churn Predictor',
+          blurb: 'Machine learning models to predict and prevent customer churn with actionable insights and automated interventions.',
+          price: '$399 – $1,599/month',
           eta: '2–4 weeks',
           bullets: [
-            'Policy templates and automated control checks',
-            'Evidence capture from cloud and SaaS systems',
-            'Risk register with workflows and approvals',
-            'Audit‑ready reports and reminders'
+            'Real-time churn risk scoring',
+            'Automated retention campaign triggers',
+            'Customer health dashboards',
+            'ROI tracking and success metrics'
           ],
           link: '/micro-saas'
         }
@@ -95,34 +86,44 @@ export default function ServicesCatalog() {
             'Citations, human feedback loops, analytics',
             'PII scrubbers and policy guardrails'
           ],
-          link: '/ai-services',
-          refs: [
-            { label: 'pgvector', href: 'https://github.com/pgvector/pgvector' }
-          ]
+          link: '/ai-services'
         },
         {
-          name: 'MLOps as a Service',
-          blurb: 'Managed pipelines for training, evaluation, deployment, and monitoring with cost/perf visibility.',
-          price: '$3,500 – $16,000/month',
-          eta: '4–8 weeks',
+          name: 'Computer Vision & Image Analysis',
+          blurb: 'Advanced object detection, facial recognition, quality control, and medical imaging analysis with custom model training.',
+          price: '$5,000 – $25,000 setup',
+          eta: '6–12 weeks',
           bullets: [
-            'Feature stores, model registry, canary/AB deploys',
-            'Data drift and performance monitoring',
-            'Model cards, lineage, reproducibility',
-            'Compliance‑ready audit trails'
+            'Custom object detection and classification models',
+            'Real-time image processing and analysis',
+            'Quality control and defect detection systems',
+            'Medical imaging and diagnostic assistance'
           ],
           link: '/ai-services'
         },
         {
-          name: 'AI Support Copilot',
-          blurb: 'Context‑aware agent for tier‑1/2 support with safe actions and analytics.',
-          price: '$1,200 – $8,000/month',
-          eta: '2–5 weeks',
+          name: 'AI-Powered Fraud Detection',
+          blurb: 'Real-time fraud scoring, anomaly detection, and risk assessment for financial transactions with machine learning models.',
+          price: '$8,000 – $40,000 setup',
+          eta: '8–16 weeks',
           bullets: [
-            'Semantic search across knowledge bases',
-            'Suggested replies, macros, and safe actions',
-            'Quality, deflection, CSAT analytics',
-            'Works with Zendesk, Intercom, Freshdesk'
+            'Real-time transaction fraud scoring',
+            'Behavioral anomaly detection',
+            'Risk assessment and decision automation',
+            'Compliance reporting and audit trails'
+          ],
+          link: '/ai-services'
+        },
+        {
+          name: 'Conversational AI Platform',
+          blurb: 'Multi-channel chatbots, voice assistants, and intelligent virtual agents with natural language understanding.',
+          price: '$8,000 – $35,000 setup',
+          eta: '6–14 weeks',
+          bullets: [
+            'Multi-language conversational AI',
+            'Voice and text interaction capabilities',
+            'Integration with existing business systems',
+            'Continuous learning and improvement'
           ],
           link: '/ai-services'
         }
@@ -147,34 +148,47 @@ export default function ServicesCatalog() {
           link: '/it-services'
         },
         {
-          name: 'DevSecOps Enablement',
-          blurb: 'Build and release pipelines, policy controls, and runtime security with clear SLAs.',
-          price: '$5,000 – $28,000 fixed or $140 – $200/hr',
-          eta: '3–8 weeks',
+          name: 'Kubernetes & Container Orchestration',
+          blurb: 'Production-ready Kubernetes clusters, microservices architecture, and container security hardening.',
+          price: '$8,000 – $40,000 project',
+          eta: '4–8 weeks',
           bullets: [
-            'CI/CD with GitHub Actions/GitLab',
-            'SBOM, SCA, SAST/DAST integration',
-            'Kubernetes security baselines',
-            'Observability (logs, metrics, traces)'
+            'EKS/GKE/AKS cluster setup and configuration',
+            'Microservices architecture design',
+            'Container security and compliance',
+            'Auto-scaling and load balancing'
           ],
           link: '/it-services'
         },
         {
-          name: 'Data Platform Quickstart',
-          blurb: 'Modern data stack with ingestion, warehousing, dashboards, and governance.',
-          price: '$6,000 – $35,000 fixed',
-          eta: '4–9 weeks',
+          name: 'Cybersecurity Hardening & SOC',
+          blurb: 'Comprehensive security assessment, Zero Trust implementation, and Security Operations Center setup.',
+          price: '$5,000 – $40,000 project',
+          eta: '6–12 weeks',
           bullets: [
-            'Airbyte/Fivetran ingestion and dbt transformation',
-            'Snowflake/BigQuery/Redshift warehousing',
-            'BI with Looker/Metabase',
-            'Data catalog and access governance'
+            'Zero Trust architecture implementation',
+            'Endpoint Detection and Response (EDR)',
+            'Security monitoring and incident response',
+            'Compliance and audit preparation'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'Data Engineering & Analytics',
+          blurb: 'Modern data pipeline development, ETL processes, data warehousing, and analytics platform setup.',
+          price: '$12,000 – $60,000 project',
+          eta: '8–16 weeks',
+          bullets: [
+            'Data pipeline architecture and development',
+            'ETL/ELT process automation',
+            'Data warehouse and lake setup',
+            'Business intelligence and analytics dashboards'
           ],
           link: '/it-services'
         }
       ]
     }
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -220,16 +234,6 @@ export default function ServicesCatalog() {
                     <Link href={item.link} className="px-3 py-1.5 rounded bg-blue-600 hover:bg-blue-700 text-sm">Learn more</Link>
                     <Link href="/contact" className="px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm">Request quote</Link>
                   </div>
-                  {item.refs && item.refs.length > 0 && (
-                    <div className="mt-4 text-xs text-slate-400">
-                      <div className="mb-1">References:</div>
-                      <ul className="list-disc list-inside space-y-1">
-                        {item.refs.map(r => (
-                          <li key={r.href}><a className="underline hover:text-slate-200" href={r.href} target="_blank" rel="noopener noreferrer">{r.label}</a></li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
@@ -245,6 +249,5 @@ export default function ServicesCatalog() {
         </section>
       </main>
     </div>
-  )
+  );
 }
-

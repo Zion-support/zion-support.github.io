@@ -7,10 +7,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "prebuild": "echo 'skip prebuild health-check'",
+    "prebuild": "echo \"Starting build...\"",
     "export": "next export",
     "start": "next start",
-    "postbuild": "echo 'Build completed successfully'",
+    "postbuild": "echo \"Build completed\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
@@ -50,7 +50,7 @@
     "automation:improvement:dev": "nodemon automation/continuous-automation-improvement-system.js",
     "automation:coordinator": "node automation/master-automation-coordinator.js",
     "automation:coordinator:dev": "nodemon automation/master-automation-coordinator.js",
-    "automation:all": "npm run automation:factory & npm run automation:orchestrator & npm run automation:improvement & npm run automation:coordinator",
+    "automation:all": "npm run automation:master",
     "automation:status": "node automation/check_automation_status.js",
     "automation:restart": "node automation/restart-all-automation.js",
     "automation:enhance": "node automation/enhance-all-automation.js",
@@ -155,7 +155,12 @@
     "analyze": "ANALYZE=true npm run build",
     "build:production": "NODE_ENV=production npm run build",
     "dev:fast": "npm run dev -- --turbo",
-    "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0"
+    "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0",
+    "automation:master": "node automation/master-orchestrator.cjs",
+    "automation:performance": "node automation/performance-optimizer.cjs",
+    "automation:seo": "node automation/seo-optimizer.cjs",
+    "automation:health": "node automation/health-check.cjs",
+    "automation:security": "node automation/security-scanner.cjs"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -219,7 +224,7 @@
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
     "lucide-react": "^0.536.0",
-    "next": "^12.3.4",
+    "next": "^15.5.2",
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
@@ -234,7 +239,6 @@
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "4.9.5",
     "uuid": "^11.1.0",
     "web-vitals": "^5.1.0"
   },
@@ -274,7 +278,7 @@
     "terser": "^5.43.1",
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.0.0",
+    "typescript": "^5.9.2",
     "vite": "^5.4.19"
   },
   "engines": {

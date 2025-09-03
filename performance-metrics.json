@@ -1,14 +1,22 @@
 {
-  "timestamp": "2025-09-02T21:53:35.511Z",
-  "memory": {
-    "rss": 48603136,
-    "heapTotal": 5570560,
-    "heapUsed": 4222712,
-    "external": 1461306,
-    "arrayBuffers": 10515},
-  "uptime": 0.014364044,
-  "cpu": {
-    "user": 12337,
-    "system": 4112},
-  "buildSize": 375214,
-  "nodeModulesSize": 363397017}
+  "timestamp": "2025-09-03T16:33:16.380Z",
+  "bundleSize": {
+    ".next": {
+      "size": 4684,
+      "sizeMB": "0.00"
+    },
+    "node_modules": {
+      "size": 537892248,
+      "sizeMB": "512.97"
+    }
+  },
+  "fileCounts": {
+    ".tsx": 13,
+    ".ts": 0,
+    ".jsx": 0,
+    ".js": 0,
+    ".css": 2,
+    ".json": 0
+  },
+  "recommendations": []
+}

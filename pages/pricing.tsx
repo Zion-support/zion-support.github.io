@@ -1,10 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
-import Layout from '../components/Layout';
+import Head from 'next/head';
 
 const PricingPage: React.FC = () => {
   return (
-    <Layout title="Pricing - Zion Tech Group" description="Transparent, flexible pricing for AI, IT, and Micro SaaS services.">
+    <>
+      <Head>
+        <title>Pricing - Zion Tech Group</title>
+        <meta name="description" content="Transparent, flexible pricing for AI, IT, and Micro SaaS services." />
+      </Head>
       <section className="bg-white">
         <div className="container mx-auto px-4 py-12">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Pricing</h1>
@@ -21,7 +25,6 @@ const PricingPage: React.FC = () => {
                 <li>MVP: $20,000–$60,000</li>
                 <li>Enterprise: $75,000+</li>
               </ul>
-              <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</Link>
             </div>
 
             <div className="border rounded-xl p-6 shadow-sm">
@@ -32,7 +35,6 @@ const PricingPage: React.FC = () => {
                 <li>Growth: $30,000–$80,000</li>
                 <li>Scale: $100,000+</li>
               </ul>
-              <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</Link>
             </div>
 
             <div className="border rounded-xl p-6 shadow-sm">
@@ -43,7 +45,6 @@ const PricingPage: React.FC = () => {
                 <li>Migration: $10,000–$40,000</li>
                 <li>Managed: from $2,000/mo</li>
               </ul>
-              <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</Link>
             </div>
 
             <div className="border rounded-xl p-6 shadow-sm">
@@ -54,7 +55,6 @@ const PricingPage: React.FC = () => {
                 <li>Remediation: $8,000–$50,000</li>
                 <li>Managed SOC: from $3,000/mo</li>
               </ul>
-              <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</Link>
             </div>
 
             <div className="border rounded-xl p-6 shadow-sm">
@@ -65,7 +65,6 @@ const PricingPage: React.FC = () => {
                 <li>Dashboards: $6,000–$25,000</li>
                 <li>ML Ops: $25,000+</li>
               </ul>
-              <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</Link>
             </div>
 
             <div className="border rounded-xl p-6 shadow-sm">
@@ -76,14 +75,12 @@ const PricingPage: React.FC = () => {
                 <li>MVP App: $20,000–$70,000</li>
                 <li>Enterprise: $80,000+</li>
               </ul>
-              <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</Link>
             </div>
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
-};
-
+}
 export default PricingPage;
 
