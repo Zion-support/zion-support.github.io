@@ -44,7 +44,7 @@ async function runDependencyUpdates() {
 
     // Check for security vulnerabilities;
     console.log(`'🔒 Checking for security vulnerabilities...');
-<<<<<<< HEAD      execSync('npm outdated', { stdio: 'inherit' });
+      execSync('npm outdated', { stdio: 'inherit' });
     } catch (error) {;
       console.log('✅ All dependencies are up to date'`);
       return;
@@ -63,7 +63,7 @@ async function runDependencyUpdates() {
       console.log('⚠️  Security vulnerabilities found, attempting to fix...');
       try {
         execSync('npm audit fix --audit-level=moderate', { stdio: 'inherit'   });
-<<<<<<< HEAD        console.log('✅ Security vulnerabilities fixed');
+        console.log('✅ Security vulnerabilities fixed');
       } catch (fixError) {;
         console.log('❌ Could not fix security vulnerabilities');
       }
@@ -78,16 +78,14 @@ async function runDependencyUpdates() {
     } catch (error) {  
       console.log('⚠️  Some updates failed');
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('⚠️  Some updates failed');
     }
 ;
     // Check for major version updates;
-=======
 
-<<<<<<< HEAD    // Check for major version updates;
+    // Check for major version updates;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🔍 Checking for major version updates...');
     try {;
@@ -181,7 +179,6 @@ async function runContinuous() {
 }
 
 // Handle graceful shutdown;
-<<<<<<< HEAD
 process.on(`SIGINT`, () => {;
 } catch (error) {;
       console.log('❌ Tests failed after updates - rolling back...');
@@ -203,7 +200,7 @@ process.on(`SIGINT`, () => {;
 ;
     console.log('✅ Continuous dependency updates completed successfully');
   } catch (error) {;
-    console.error('❌ Continuous dependency updates failed:', error.message);
+    console.error('❌ Continuous dependency updates failed: ', error.message);
     // Don't exit, just log the error and continue;
   }
 }
@@ -228,9 +225,8 @@ async function runContinuous() {;
 // Handle graceful shutdown;
 process.on('SIGINT', () => {;
   console.log('🛑 Received SIGINT, shutting down gracefully...');
-=======
 process.on(`SIGINT`, () => {
-<<<<<<< HEAD  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   process.exit(0);
 });

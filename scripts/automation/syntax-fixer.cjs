@@ -40,7 +40,7 @@ class SyntaxFixer {;
     
     const logFile = path.join(this.logDir, `syntax-fixer.log`);
     fs.appendFileSync(logFile, message + `\\n`);
-<<<<<<< HEAD  }
+  }
 ;
   createBackup(filePath) {;
     try {;
@@ -69,7 +69,7 @@ class SyntaxFixer {;
     // Fix unterminated single quotes at end of lines;
     fixed = fixed.replace(/^([^`\\n]*)`([^`\\n]*)$/gm, (match, before, after) => {
       if (!after.includes("`)) {        changes++;
-        return before + `" + after + "';
+        return before + ` + after + ';
       }
       return match;
     });
@@ -77,7 +77,7 @@ class SyntaxFixer {;
     // Fix unterminated double quotes at end of lines;
     fixed = fixed.replace(/^([^\\n]*)"([^"\\n]*)$/gm, (match, before, after) => {
       if (!after.includes('')) {        changes++;
-        return before + '' + after + '"';
+        return before + '' + after + '';
       }
       return match;
     });
@@ -110,7 +110,7 @@ class SyntaxFixer {;
       if (!match.endsWith(';')) {
     ;
     // Fix extra semicolons;
-    fixed = fixed.replace(/;;+/g, () => { changes++; return '; });
+    fixed = fixed.replace(/;+/g, () => { changes++; return '; });
     ;
     // Fix missing semicolons at end of import statements;
     fixed = fixed.replace(/^(import .+from .+)$/gm, (match) => {;
@@ -123,7 +123,7 @@ class SyntaxFixer {;
     
     // Fix space around assignment operators;
     fixed = fixed.replace(/(\\w)=([^=])/g, (match, before, after) => {
-<<<<<<< HEAD      changes++;
+      changes++;
       return before + ` = ` + after;
     });
     ;
@@ -135,7 +135,7 @@ class SyntaxFixer {;
     let changes = 0;
     
     // Replace CommonJS require with ES6 imports where appropriate;
-    fixed = fixed.replace(/const\\s+(\\w+)\\s*=\\s*require\\([`"]([^`]+)[`]\\);?/g, (match, varName, moduleName) => {      changes++;
+    fixed = fixed.replace(/const\\s+(\\w+)\\s*=\\s*require\\([`]([^`]+)[`]\\);?/g, (match, varName, moduleName) => {      changes++;
       return `import ${varName} from `${moduleName}`;`;
     });
     
@@ -164,7 +164,7 @@ class SyntaxFixer {;
     // Remove empty quotes at end of file;
     fixed = fixed.replace(/["`]\\s*$/, () => { changes++; return ''; });
     
-<<<<<<< HEAD    return { content: fixed, changes };
+    return { content: fixed, changes };
   }
 ;
   generateFixedContent(filePath, originalContent) {;
@@ -237,7 +237,7 @@ export default ${name};
     const name = utilityName.replace(/[^a-zA-Z0-9]/g, ``);
     return `// ${name} utility functions;
 export const ${name.toLowerCase()} = {
-<<<<<<< HEAD  // Add utility functions here;
+  // Add utility functions here;
 };
 ;
 export default ${name.toLowerCase()};
@@ -282,7 +282,7 @@ export default ${name.toLowerCase()};
       for (let i = 0; i < fixes.length; i++) {;
         let result;
         if (typeof fixes[i] === `function`) {
-<<<<<<< HEAD          result = fixes[i](content);
+          result = fixes[i](content);
         } else {;
           result = fixes[i];
         }
@@ -308,7 +308,7 @@ export default ${name.toLowerCase()};
       
       // Only write if changes were made;
       if (totalChanges > 0) {
-<<<<<<< HEAD        fs.writeFileSync(filePath, content);
+        fs.writeFileSync(filePath, content);
         this.fixesApplied += totalChanges;
         this.log(`info`, `Fixed ${filePath} (${totalChanges} changes)`);
         return true;
@@ -332,7 +332,7 @@ export default ${name.toLowerCase()};
         const stat = fs.statSync(itemPath);
         
         if (stat.isDirectory() && !item.startsWith(`.`) && item !== `node_modules`) {
-<<<<<<< HEAD          await this.scanAndFixDirectory(itemPath);
+          await this.scanAndFixDirectory(itemPath);
         } else if (item.match(/\\.(ts|tsx|js|jsx)$/)) {;
           await this.fixFile(itemPath);
         }
@@ -387,7 +387,7 @@ export default ${name.toLowerCase()};
     const reportFile = path.join(this.projectRoot, `syntax-error-fixer-report.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-<<<<<<< HEAD    // Reset counters for next run;
+    // Reset counters for next run;
     this.fixesApplied = 0;
     this.filesProcessed = 0;
     ;
@@ -412,7 +412,7 @@ export default ${name.toLowerCase()};
     
     // Keep the process alive;
     setInterval(() => {
-<<<<<<< HEAD      this.log('info', 'Syntax Fixer heartbeat - running normally');
+      this.log('info', 'Syntax Fixer heartbeat - running normally');
     }, 60 * 60 * 1000); // Heartbeat every hour;
   }
 ;

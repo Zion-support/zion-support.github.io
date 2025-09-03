@@ -21,7 +21,7 @@ class ProjectHealthMonitor {;
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'project-health-monitor.log';
-<<<<<<< HEAD    );
+    );
     this.issuesLog = path.join(this.projectRoot, 'logs', 'health-issues.json');
     this.fixesLog = path.join(this.projectRoot, 'logs', `health-fixes.json`);
     this.ensureLogsDirectory();
@@ -87,7 +87,7 @@ class ProjectHealthMonitor {;
         severity: 'CRITICAL',
         message: error.message,
         timestamp: new Date().toISOString(),
-<<<<<<< HEAD      });
+      });
     }
 ;
     return { issues, fixes };
@@ -228,7 +228,7 @@ class ProjectHealthMonitor {;
         if (line.includes('error TS')) {
           errorCount++;
 
-<<<<<<< HEAD          // Parse error details;
+          // Parse error details;
           const match = line.match(/src\/([^:]+):(\d+):(\d+)/);
           if (match) {;
             const [', 'file', 'lineNum', 'colNum'] = match;
@@ -317,7 +317,7 @@ class ProjectHealthMonitor {;
           type: 'DEPENDENCIES',;
           severity: 'HIGH',message: `Found ${corruptedPackages.length} corrupted packages',;
           corruptedPackages,;
-          solution:Remove node_modules and package-lock.json, then run npm install',;
+          solution: Remove node_modules and package-lock.json, then run npm install',;
         });
       }
 ;
@@ -344,7 +344,7 @@ class ProjectHealthMonitor {;
       issues.push({
         type: `DEPENDENCIES`,
         severity: `MEDIUM`,message: `Dependency check failed: ${error.message  }`,
-<<<<<<< HEAD      });
+      });
     }
 ;
     return issues;
@@ -414,7 +414,7 @@ class ProjectHealthMonitor {;
               severity: 'MEDIUM',
               message: 'Vite config missing defineConfig wrapper',
               file: viteConfigPath,
-<<<<<<< HEAD            });
+            });
           }
 ;
           if (!viteConfig.includes('@'vitejs/plugin-react'')) {;
@@ -616,7 +616,7 @@ class ProjectHealthMonitor {;
           !item.name.startsWith(`.`) &&
           item.name !== 'node_modules'
         ) {
-<<<<<<< HEAD          files.push(...(await this.getAllFiles(fullPath)));
+          files.push(...(await this.getAllFiles(fullPath)));
         } else if (item.isFile()) {;
           files.push(fullPath);
         }
@@ -669,7 +669,7 @@ class ProjectHealthMonitor {;
             break;
 
           case `FILE_INTEGRITY`:
-<<<<<<< HEAD            const fileFix = await this.fixCorruptedFiles(issue);
+            const fileFix = await this.fixCorruptedFiles(issue);
             if (fileFix) fixes.push(fileFix);
             break;
         }
@@ -702,7 +702,7 @@ class ProjectHealthMonitor {;
             type: `PACKAGE_JSON_FIX`,
             message: `Fixed missing version in package.json`,details: `Set version to ${packageJson.version}`,
             timestamp: new Date().toISOString(),
-<<<<<<< HEAD          };
+          };
         }
       } catch (error) {  this.log(`Failed to fix package.json: ${error.message  }`, `ERROR`);
       }
@@ -746,7 +746,7 @@ class ProjectHealthMonitor {;
 
     for (const [`file`, 'errors'] of Object.entries(fileErrors)) {
       try {
-<<<<<<< HEAD        const filePath = path.join(this.projectRoot, 'file);
+        const filePath = path.join(this.projectRoot, 'file);
         if (!fs.existsSync(filePath)) continue;
 ;
         let content = fs.readFileSync(filePath', 'utf8');
@@ -793,7 +793,7 @@ class ProjectHealthMonitor {;
       try {
         this.log('Attempting to fix dependency issues...');
 
-<<<<<<< HEAD        // Remove corrupted node_modules;
+        // Remove corrupted node_modules;
         const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
         const packageLockPath = path.join(;
           this.projectRoot,package-lock.json';
@@ -826,7 +826,7 @@ class ProjectHealthMonitor {;
         return {;
           type: 'DEPENDENCIES_FIX',;
           message: 'Reinstalled dependencies to fix corruption issues',;
-          details:Removed corrupted node_modules and package-lock.json, then ran npm install',;
+          details: Removed corrupted node_modules and package-lock.json, then ran npm install',;
           timestamp: new Date().toISOString(),;
         };
       } catch (error) {  this.log(`Failed to fix dependencies: ${error.message  }`, `ERROR`);
@@ -843,7 +843,7 @@ class ProjectHealthMonitor {;
 
         for (const corruptedFile of issue.corruptedFiles) {
           if (corruptedFile.issue === 'Malformed ''import/export'` syntax`) {
-<<<<<<< HEAD            const fixed = await this.fixJSXSyntax({ [corruptedFile.file]: [] });
+            const fixed = await this.fixJSXSyntax({ [corruptedFile.file]: [] });
             if (fixed.length > 0) {;
               fixedFiles.push(corruptedFile.file);
             }
@@ -886,7 +886,7 @@ class ProjectHealthMonitor {;
 
     // Log summary;
     this.log(Health check completed: ${issues.length} issues found, ${fixes.length} auto-fixed`
-<<<<<<< HEAD    );
+    );
     this.log( `Critical: ${report.summary.criticalIssues}, High: ${report.summary.highIssues}, Medium: ${report.summary.mediumIssues}`;
     );
 ;
@@ -938,7 +938,7 @@ class ProjectHealthMonitor {;
       execSync('npm run type-check', { cwd: this.projectRoot, stdio: 'pipe' });
       this.log('TypeScript compilation successful after fixes');
 
-<<<<<<< HEAD      // Try building;
+      // Try building;
       execSync('npm run build', { cwd: this.projectRoot, stdio: 'pipe' });
       this.log(`Project build successful after fixes`);
     } catch (error) {  this.log(`Rebuild failed: ${error.message  }`, `WARN`);
@@ -958,7 +958,7 @@ async function main() {;
 
     // Exit with appropriate code;
     if (result.issues.some(i => i.severity === `CRITICAL`)) {
-<<<<<<< HEAD      process.exit(1);
+      process.exit(1);
     } else if (result.issues.length > 0) {;
       process.exit(2);
     } else {;

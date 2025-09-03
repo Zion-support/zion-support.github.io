@@ -48,7 +48,7 @@ async function runContinuousImprovement() {
       console.log('⚠️  Linting issues found but continuing...');
       }
 
-<<<<<<< HEAD    console.log('🔍 Running quality checks...');
+    console.log('🔍 Running quality checks...');
     try {;
       execSync('npm run lint', { stdio: 'inherit' });
       console.log('✅ Linting completed');
@@ -76,16 +76,14 @@ async function runContinuousImprovement() {
     } catch (error) {  
       console.log('✅ All dependencies are up to date');
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('✅ All dependencies are up to date');
     }
 ;
     // Generate performance report;
-=======
 
-<<<<<<< HEAD    // Generate performance report;
+    // Generate performance report;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('📊 Generating performance report...');
     try {;
@@ -145,7 +143,6 @@ async function runContinuous() {
 }
 
 // Handle graceful shutdown;
-<<<<<<< HEAD
 process.on(`SIGINT`, () => {;
 } catch (error) {;
       console.log('⚠️  Bundle analysis failed but continuing...');
@@ -166,7 +163,7 @@ process.on(`SIGINT`, () => {;
 ;
     console.log('✅ Continuous improvement completed successfully');
   } catch (error) {;
-    console.error('❌ Continuous improvement failed:', error.message);
+    console.error('❌ Continuous improvement failed: ', error.message);
     // Don't exit, just log the error and continue;
   }
 }
@@ -191,9 +188,8 @@ async function runContinuous() {;
 // Handle graceful shutdown;
 process.on('SIGINT', () => {;
   console.log('🛑 Received SIGINT, shutting down gracefully...');
-=======
 process.on(`SIGINT`, () => {
-<<<<<<< HEAD  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   process.exit(0);
 });

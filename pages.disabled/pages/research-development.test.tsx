@@ -34,7 +34,7 @@ describe(
   ', () => {render (<research - development />) ;
 
 describe ('research - development', () => {
-<<<<<<< HEAD    render(<research-development />);
+    render(<research-development />);
     expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
 '

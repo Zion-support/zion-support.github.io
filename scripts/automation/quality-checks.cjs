@@ -39,7 +39,7 @@ async function runQualityChecks() {
 
     // Run linting;
     console.log(``🔍 Running ESLint...`);
-<<<<<<< HEAD    try {
+    try {
       execSync(`npm run lint`, { stdio: 'inherit' });
       console.log('✅ ESLint completed successfully'`);
     } catch (error) {  
@@ -58,16 +58,14 @@ async function runQualityChecks() {
     } catch (error) {  
       console.log('⚠️  Type checking issues found but continuing...');
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('⚠️  Type checking issues found but continuing...');
     }
 ;
     // Run tests;
-=======
 
-<<<<<<< HEAD    // Run tests;
+    // Run tests;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🧪 Running tests...');
     try {;
@@ -89,16 +87,14 @@ async function runQualityChecks() {
     } catch (error) {  
       console.log('ℹ️  Code coverage not available');
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('ℹ️  Code coverage not available');
     }
 ;
     // Check for dead code;
-=======
 
-<<<<<<< HEAD    // Check for dead code;
+    // Check for dead code;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🔍 Checking for dead code...');
     try {;
@@ -120,16 +116,14 @@ async function runQualityChecks() {
     } catch (error) {  
       console.log('ℹ️  Circular dependency checker not available');
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('ℹ️  Circular dependency checker not available');
     }
 ;
     // Check for duplicate code;
-=======
 
-<<<<<<< HEAD    // Check for duplicate code;
+    // Check for duplicate code;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🔍 Checking for duplicate code...');
     try {;
@@ -192,7 +186,7 @@ process.on(`SIGINT`, () => {;
 ;
     console.log('✅ Continuous quality checks completed successfully');
   } catch (error) {;
-    console.error('❌ Continuous quality checks failed:', error.message);
+    console.error('❌ Continuous quality checks failed: ', error.message);
     // Don't exit, just log the error and continue;
   }
 }

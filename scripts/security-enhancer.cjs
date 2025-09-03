@@ -7,7 +7,6 @@ const path = require('path');
 class SecurityEnhancer {
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
   }
 
   async addSecurityHeaders() {
@@ -58,39 +57,39 @@ const cspHeader = {
   'Content-Security-Policy': [
     {
       key: 'default-src',
-      value: "'self'";
+      value: "'self';
 },
     {
       key: 'script-src',
-      value: "'self' 'unsafe-eval' 'unsafe-inline'";
+      value: 'self' 'unsafe-eval' 'unsafe-inline'";
 },
     {
       key: 'style-src',
-      value: "'self' 'unsafe-inline'";
+      value: "'self' 'unsafe-inline';
 },
     {
       key: 'img-src',
-      value: "'self' blob: data: https:";
+      value: 'self' blob: data: https:";
 },
     {
       key: 'font-src',
-      value: "'self' https:";
+      value: "'self' https:;
 },
     {
       key: 'object-src',
-      value: "'none'";
+      value: 'none'";
 },
     {
       key: 'base-uri',
-      value: "'self'";
+      value: "'self';
 },
     {
       key: 'form-action',
-      value: "'self'";
+      value: 'self'";
 },
     {
       key: 'frame-ancestors',
-      value: "'none'";
+      value: "'none';
 }
   ]
 };
@@ -100,7 +99,6 @@ module.exports = { cspHeader };
 
     fs.writeFileSync(path.join(this.projectRoot, 'csp.config.js'), cspConfig);
     console.log('✅ CSP configuration created');
-=======
     this.securityEnhancements = [];    } catch (error) {
       this.log(`❌ Security headers creation failed: ${error.message}`);
     }
@@ -180,11 +178,10 @@ class SecurityAuditor {
       execSync(command, { stdio: 'inherit' });
       console.log('✅ NPM audit completed');
     } catch (error) {
-      console.log('❌ NPM audit failed:', error.message);
+      console.log('❌ NPM audit failed: ', error.message);
     }
   }
 
-<<<<<<< HEAD
   async createSecurityHeaders() {
     this.log('🛡️ Creating security headers configuration...');
     
@@ -200,12 +197,12 @@ export function middleware(request) {
   response.headers.set('X-XSS-Protection', '1; mode=block');
   response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
   response.headers.set('Content-Security-Policy', 
-    "default-src 'self'; " +
-    "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercel.live; " +
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
-    "font-src 'self' https://fonts.gstatic.com; " +
-    "img-src 'self' data: https:; " +
-    "connect-src 'self' https://api.vercel.com;"
+    default-src 'self'; " +
+    "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercel.live;  +
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+    "font-src 'self' https://fonts.gstatic.com;  +
+    img-src 'self' data: https:; " +
+    "connect-src 'self' https://api.vercel.com;
   );
   
   return response;
@@ -234,7 +231,7 @@ export class SecurityUtils {
     
     return input
       .replace(/[<>]/g, '') // Remove potential HTML tags
-      .replace(/javascript:/gi, '') // Remove javascript: protocol
+      .replace(/javascript: /gi, '') // Remove javascript: protocol
       .replace(/on\\w+=/gi, '') // Remove event handlers
       .trim();
   }
@@ -263,7 +260,7 @@ export class SecurityUtils {
       '&': '&amp;',
       '<': '&lt;',
       '>': '&gt;',
-      '"': '&quot;',
+      '': '&quot;',
       "'": '&#039;';
 };
     
@@ -275,7 +272,6 @@ export class SecurityUtils {
     const utilsDir = path.join(this.projectRoot, 'lib');
     if (!fs.existsSync(utilsDir)) {
       fs.mkdirSync(utilsDir, { recursive: true });
-=======
   async runSnykAudit() {
     console.log('🔍 Running Snyk audit...');
     try {
@@ -283,7 +279,7 @@ export class SecurityUtils {
       execSync(command, { stdio: 'inherit' });
       console.log('✅ Snyk audit completed');
     } catch (error) {
-      console.log('❌ Snyk audit failed:', error.message);
+      console.log('❌ Snyk audit failed: ', error.message);
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
   }

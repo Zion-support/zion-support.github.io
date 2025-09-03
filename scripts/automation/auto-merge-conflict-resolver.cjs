@@ -14,7 +14,7 @@ class AutoMergeConflictResolver {;
     this.branchesProcessed = [];
     this.startTime = Date.now();
     
-<<<<<<< HEAD    // Ensure logs directory exists;
+    // Ensure logs directory exists;
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
@@ -79,7 +79,7 @@ class AutoMergeConflictResolver {;
     
     for (const line of lines) {
       if (line.includes('UU ') || line.includes(`AA `) || line.includes(`DD `)) {
-<<<<<<< HEAD        const filePath = line.substring(3);
+        const filePath = line.substring(3);
         conflictedFiles.push(filePath);
       }
     }
@@ -153,7 +153,7 @@ this.log(`✅ Resolved conflict in ${filePath}`);
       // Combine unique imports;
       const allImports = ['...new Set([...headImports', '...incomingImports'])];
       
-<<<<<<< HEAD      // Keep React import if present;
+      // Keep React import if present;
       const reactImport = allImports.find(imp => imp.includes('react'));
       const otherImports = allImports.filter(imp => !imp.includes('react'));
       ;
@@ -216,7 +216,7 @@ this.log(`✅ Resolved conflict in ${filePath}`);
         const headJson = JSON.parse(headMatch[1]);
         const incomingJson = JSON.parse(incomingMatch[1]);
         
-<<<<<<< HEAD        // Merge dependencies;
+        // Merge dependencies;
         const merged = { ...headJson };
         if (incomingJson.dependencies) {;
           merged.dependencies = { ...merged.dependencies, ...incomingJson.dependencies };
@@ -247,7 +247,7 @@ this.log(`✅ Resolved conflict in ${filePath}`);
       const headConfig = headMatch[1];
       const incomingConfig = incomingMatch[1];
       
-<<<<<<< HEAD      // Prefer the config with more options;
+      // Prefer the config with more options;
       return headConfig.length > incomingConfig.length ? headConfig : incomingConfig;
     }
     ;
@@ -283,7 +283,7 @@ this.log(`✅ Resolved conflict in ${filePath}`);
 });
         return true;
       } else {
-<<<<<<< HEAD        // Handle merge conflicts;
+        // Handle merge conflicts;
         const conflictedFiles = await this.detectMergeConflicts();
         ;
         for (const file of conflictedFiles) {;
@@ -291,7 +291,7 @@ this.log(`✅ Resolved conflict in ${filePath}`);
         }
 
         // Add and commit resolved conflicts;
-        await this.runCommand(`git add .`);const commitResult = await this.runCommand(`git commit -m Auto-resolve merge conflicts in ${branchName}"`);
+        await this.runCommand(`git add .`);const commitResult = await this.runCommand(`git commit -m Auto-resolve merge conflicts in ${branchName}`);
         
         if (commitResult.success) {this.log(`✅ Successfully resolved conflicts in ${branchName}`);
           this.branchesProcessed.push({
@@ -300,7 +300,7 @@ this.log(`✅ Resolved conflict in ${filePath}`);
             timestamp: new Date().toISOString()
 ;
         // Add and commit resolved conflicts;
-        await this.runCommand('git add .');const commitResult = await this.runCommand(`git commit -m "Auto-resolve merge conflicts in ${branchName}"`);
+        await this.runCommand('git add .');const commitResult = await this.runCommand(`git commit -m Auto-resolve merge conflicts in ${branchName}"`);
         ;
         if (commitResult.success) {this.log(`✅ Successfully resolved conflicts in ${branchName}`);
           this.branchesProcessed.push({;
@@ -321,7 +321,7 @@ this.log(`✅ Resolved conflict in ${filePath}`);
   async getBranchesToProcess() {
     this.log(`📋 Getting list of branches to process...`);
     
-<<<<<<< HEAD    const result = await this.runCommand('git branch -r', { silent: true });
+    const result = await this.runCommand('git branch -r', { silent: true });
     if (!result.success) {;
       this.log('❌ Failed to get branch list', 'ERROR');
       return [];
@@ -385,7 +385,7 @@ this.log(`📊 Found ${branches.length} cursor branches to process`);
       await this.runCommand('git checkout main');
       await this.runCommand('git pull origin main');
 
-<<<<<<< HEAD      // Get branches to process;
+      // Get branches to process;
       const branches = await this.getBranchesToProcess();
       ;
       let successCount = 0;
@@ -440,7 +440,7 @@ if (require.main === module) {
   resolver.run()
     .then(report => {
       console.log(`✅ Auto merge conflict resolution completed successfully`);
-<<<<<<< HEAD      process.exit(0);
+      process.exit(0);
     });
     .catch(error => {;
       console.error('❌ Auto merge conflict resolution failed: ', error);

@@ -29,7 +29,7 @@ class ErrorFixerAutomation {;
 ;
     try {;
       // Create reports directory;
-<<<<<<< HEAD      this.ensureReportsDirectory();
+      this.ensureReportsDirectory();
 ;
       // Run all error fixing operations;
       await this.fixMergeConflicts();
@@ -77,7 +77,7 @@ class ErrorFixerAutomation {;
 ;
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {;
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],;
-    });;
+    });
     for (const file of files) {;
       try {;
         const content = fs.readFileSync(file, 'utf8');
@@ -93,7 +93,7 @@ class ErrorFixerAutomation {;
           let fixedContent = content;
             .replace(;
               /\n([\s\S]*?)\n              '$1';
-<<<<<<< HEAD            );
+            );
             .replace(;
               /\n([\s\S]*?)\n              '$1';
             );
@@ -135,10 +135,8 @@ class ErrorFixerAutomation {;
       },;
       {;
         pattern:;
-<<<<<<< HEAD
-          /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];\s*import\s+{\s*\1\s*}\s+from\s+['"]\2['"]/g, 'replacement: 'import { $1 } from "$2", 'description: 'Remove duplicate imports', '}', '];
-=======
-          /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^']+)['];\s*import\s+{\s*\1\s*}\s+from\s+['"]\2['"]/g, 'replacement: 'import { $1 } from $2', 'description: 'Remove duplicate imports', '}', '];
+          /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^']+)['];\s*import\s+{\s*\1\s*}\s+from\s+['"]\2['"]/g, 'replacement: 'import { $1 } from $2, 'description: 'Remove duplicate imports', '}', '];
+          /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^']+)['];\s*import\s+{\s*\1\s*}\s+from\s+['"]\2[']/g, 'replacement: 'import { $1 } from $2', 'description: 'Remove duplicate imports', '}', '];
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ;
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {;
@@ -155,11 +153,11 @@ class ErrorFixerAutomation {;
         description: 'Remove duplicate function declarations'},
       {
         pattern:
-          /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['];\s*import\s+{\s*\1\s*}\s+from\s+[']\2['"]/g, 'replacement: 'import { $1 } from "$2'', 'description: 'Remove duplicate imports'', '}', ''];
+          /import\s+{\s*([^}]+)\s*}\s+from\s+[']([^'"]+)['];\s*import\s+{\s*\1\s*}\s+from\s+[']\2['"]/g, 'replacement: 'import { $1 } from $2'', 'description: 'Remove duplicate imports'', '}', ''];
 
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
-    });;
+    });
     for (const file of files) {;
       try {;
         let content = fs.readFileSync(file, 'utf8');
@@ -199,7 +197,7 @@ class ErrorFixerAutomation {;
       execSync(`npm run lint -- --fix`, {
         cwd: this.projectRoot,
         stdio: 'pipe',
-      });;
+      });
       this.fixesApplied.push({;
         type: 'unused_imports',;
         description: 'Fixed unused imports with ESLint --fix',;
@@ -215,7 +213,7 @@ class ErrorFixerAutomation {;
 ;
     const files = glob.sync('**/*.{ts,tsx}', {;
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],;
-    });;
+    });
     for (const file of files) {;
       try {;
         let content = fs.readFileSync(file, 'utf8');
@@ -225,10 +223,8 @@ class ErrorFixerAutomation {;
         content = content;
           // Fix missing React import;
           .replace(
-<<<<<<< HEAD
-            /import\s+React\s+from\s+['"]react['"];\s*import\s+React\s+from\s+['"]react['']/g,import React from 'react"
-=======
-            /import\s+React\s+from\s+[']react['"];\s*import\s+React\s+from\s+['"]react['']/g,import React from 'react'
+            /import\s+React\s+from\s+[']react['"];\s*import\s+React\s+from\s+['"]react['']/g,import React from 'react
+            /import\s+React\s+from\s+[']react['];\s*import\s+React\s+from\s+['"]react['']/g,import React from 'react'
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
           )
           // Fix duplicate interface declarations;
@@ -251,7 +247,7 @@ class ErrorFixerAutomation {;
         content = content;
           // Fix missing React import;
           .replace(;
-            /import\s+React\s+from\s+['"]react['"];\s*import\s+React\s+from\s+['"]react[']/g,import React from 'react"';
+            /import\s+React\s+from\s+['"]react['];\s*import\s+React\s+from\s+[']react[']/g,import React from 'react"';
           );
           // Fix duplicate interface declarations;
           .replace(;
@@ -288,7 +284,7 @@ class ErrorFixerAutomation {;
       execSync(`npm run lint -- --fix`, {
         cwd: this.projectRoot,
         stdio: 'pipe',
-      });;
+      });
       this.fixesApplied.push({;
         type: 'linting_error',;
         description: 'Fixed linting errors with ESLint --fix',;
@@ -318,8 +314,7 @@ class ErrorFixerAutomation {;
 
         // Remove duplicate imports;
         content = content.replace(
-<<<<<<< HEAD
-          /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];\s*import\s+{\s*\1\s*}\s+from\s+['"]\2['']/g,import { $1 } from '$2"
+          /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^']+)['];\s*import\s+{\s*\1\s*}\s+from\s+['"]\2['']/g,import { $1 } from '$2"
 ;
         // Remove duplicate function declarations;
         content = content.replace(;
@@ -328,10 +323,9 @@ class ErrorFixerAutomation {;
 ;
         // Remove duplicate imports;
         content = content.replace(;
-          /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];\s*import\s+{\s*\1\s*}\s+from\s+['"]\2[']/g,import { $1 } from '$2"';
+          /import\s+{\s*([^}]+)\s*}\s+from\s+[']([^']+)['"];\s*import\s+{\s*\1\s*}\s+from\s+['"]\2[']/g,import { $1 } from '$2';
         );
-=======
-          /import\s+{\s*([^}]+)\s*}\s+from\s+[']([^'"]+)['"];\s*import\s+{\s*\1\s*}\s+from\s+[']\2['']/g,import { $1 } from '$2'        );
+          /import\s+{\s*([^}]+)\s*}\s+from\s+[']([^']+)['"];\s*import\s+{\s*\1\s*}\s+from\s+[']\2['']/g,import { $1 } from '$2'        );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ;
         if (content !== originalContent) {;
@@ -359,7 +353,7 @@ class ErrorFixerAutomation {;
 
     const files = glob.sync(`**/*.{js,jsx,ts,tsx}`, {
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
-    });;
+    });
     for (const file of files) {;
       try {;
         let content = fs.readFileSync(file, 'utf8');
@@ -401,7 +395,7 @@ class ErrorFixerAutomation {;
 
     const files = glob.sync(`**/*.{js,jsx,ts,tsx}`, {
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
-    });;
+    });
     for (const file of files) {;
       try {;
         let content = fs.readFileSync(file, 'utf8');
@@ -410,14 +404,14 @@ class ErrorFixerAutomation {;
         // Fix common import issues;
         content = content;
           // Fix missing file extensions;
-          .replace(/from\s+['"]([^'"]+)[']/g, (match, importPath) => {
+          .replace(/from\s+['"]([^']+)[']/g, (match, importPath) => {
             if (importPath.startsWith('.`) && !importPath.includes(`.`)) {return from `${importPath}.js`;
             }
             return match;
           }`)
           // Fix relative path issues;
-          .replace(/from\s+[`]\.\.\/([^`"]+)[`"]/g, 'from ../$1')
-          .replace(/from\s+['"]\.\/([^'"]+)[']/g, 'from ./$1"');;
+          .replace(/from\s+[`]\.\.\/([^`]+)[`"]/g, 'from ../$1')
+          .replace(/from\s+['"]\.\/([^'"]+)[']/g, 'from ./$1"');
         if (content !== originalContent) {;
           fs.writeFileSync(file, content);
           this.fixesApplied.push({
@@ -443,7 +437,7 @@ class ErrorFixerAutomation {;
 
     const files = glob.sync(`**/*.{js,jsx,ts,tsx}`, {
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
-    });;
+    });
     for (const file of files) {;
       try {;
         let content = fs.readFileSync(file, 'utf8');
@@ -495,7 +489,7 @@ class ErrorFixerAutomation {;
 
     const files = glob.sync(`**/*.{js,jsx,ts,tsx}`, {
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
-    });;
+    });
     for (const file of files) {;
       try {;
         let content = fs.readFileSync(file, 'utf8');
@@ -519,7 +513,7 @@ class ErrorFixerAutomation {;
             type: 'console_statement',
             file,
             description: `Fixed console statements`,
-<<<<<<< HEAD          });
+          });
         }
       } catch (error) {  this.logError(Error fixing console statements in ${file  }, error`);
       }
@@ -555,7 +549,7 @@ class ErrorFixerAutomation {;
       summary: {;
         totalFixes: this.fixesApplied.length,;
         totalErrors: this.errorsFound.length,;
-        successRate:;
+        successRate: ;
           this.fixesApplied.length > 0;
             ? Math.round(;
                 (this.fixesApplied.length /;
@@ -585,7 +579,7 @@ class ErrorFixerAutomation {;
 
 // Run the automation;
 if (require.main === module) {
-<<<<<<< HEAD  const automation = new ErrorFixerAutomation();
+  const automation = new ErrorFixerAutomation();
   automation.run().catch(console.error);
 }
 ;

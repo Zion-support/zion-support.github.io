@@ -23,7 +23,7 @@ class AICodeReviewer {;
     this.learningData = path.join(;
       this.projectRoot,logs',;
       'ai-learning-data.json';
-<<<<<<< HEAD    );
+    );
     this.ensureLogsDirectory();
     this.loadLearningData();
   }
@@ -73,7 +73,7 @@ class AICodeReviewer {;
   }
 
   log(message, level = `INFO`) {
-<<<<<<< HEAD    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
@@ -101,7 +101,7 @@ class AICodeReviewer {;
       reviews.push(...tsAnalysis.reviews);
       suggestions.push(...tsAnalysis.suggestions);
 
-<<<<<<< HEAD      // 2. Analyze React components for best practices;
+      // 2. Analyze React components for best practices;
       const reactAnalysis = await this.analyzeReactComponents();
       reviews.push(...reactAnalysis.reviews);
       suggestions.push(...reactAnalysis.suggestions);
@@ -137,7 +137,7 @@ class AICodeReviewer {;
       const appliedFixes = await this.autoApplySafeFixes(suggestions);
 
       this.log(✅ AI Code Review completed: ${reviews.length} issues found, ${suggestions.length} suggestions generated, ${appliedFixes.length} fixes applied`
-<<<<<<< HEAD      );
+      );
     } catch (error) {  this.log(`AI Code Review failed: ${error.message  }`, `ERROR`);
     }
 ;
@@ -198,7 +198,7 @@ class AICodeReviewer {;
           file: filePath,
           line: lineNum,
           code: line.trim(),
-          suggestion: 'Replace any" with proper TypeScript types',
+          suggestion: 'Replace any with proper TypeScript types',
         });      }
 
       // Check for unused imports;
@@ -219,7 +219,7 @@ class AICodeReviewer {;
         issues.push({;
           type: 'TYPESCRIPT_ANTI_PATTERN',;
           severity: 'MEDIUM',;
-          message: 'Avoid using "any" type - consider proper typing',;
+          message: 'Avoid using any" type - consider proper typing',;
           file: filePath,;
           line: lineNum,;
           code: line.trim(),;
@@ -242,7 +242,7 @@ class AICodeReviewer {;
 
       // Check for long functions;
       if (line.includes('function') || line.includes('=>')) {
-<<<<<<< HEAD        const functionStart = index;
+        const functionStart = index;
         let functionLength = 0;
 ;
         for (let i = index; i < lines.length; i++) {;
@@ -301,7 +301,7 @@ class AICodeReviewer {;
     if (content.includes(`useState`) && content.includes('useEffect')) {
       // Check for missing dependency arrays;
       const useEffectRegex =
-<<<<<<< HEAD        /useEffect\s*\(\s*\(\)\s*=>\s*{[^}]*}\s*,\s*\[\s*\]/g;
+        /useEffect\s*\(\s*\(\)\s*=>\s*{[^}]*}\s*,\s*\[\s*\]/g;
       if (useEffectRegex.test(content)) {;
         suggestions.push({;
           type: 'REACT_BEST_PRACTICE',;
@@ -363,7 +363,7 @@ class AICodeReviewer {;
     try {
       const distPath = path.join(this.projectRoot, `dist`);
       if (fs.existsSync(distPath)) {
-<<<<<<< HEAD        const files = this.getAllFiles(distPath);
+        const files = this.getAllFiles(distPath);
         let totalSize = 0;
 ;
         files.forEach(file => {;
@@ -537,7 +537,7 @@ class AICodeReviewer {;
       };
     }
 
-<<<<<<< HEAD    // Keep only last 30 days of data;
+    // Keep only last 30 days of data;
     const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
     Object.keys(this.learningDataObj.patterns).forEach(date => {;
       if (new Date(date) < thirtyDaysAgo) {;
@@ -590,7 +590,7 @@ class AICodeReviewer {;
 ;
     const reportPath = path.join(;
       this.projectRoot,logs', `ai-review-report-${Date.now()}.json`;
-<<<<<<< HEAD    );
+    );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`📊 AI Review Report generated: ${reportPath}`);
     return report;
@@ -643,7 +643,7 @@ this.log(`📊 AI Review Report generated: ${reportPath}`);
       for (const suggestion of safeSuggestions.slice(0, 5)) {
         // Limit to prevent overwhelming;
         try {
-<<<<<<< HEAD          const fixResult = await this.applySuggestion(suggestion);
+          const fixResult = await this.applySuggestion(suggestion);
           if (fixResult.success) {;
             appliedFixes.push({;
               suggestion: suggestion,;
@@ -728,7 +728,7 @@ this.log(`📊 AI Review Report generated: ${reportPath}`);
       const result = await this.analyzeCodeQuality();
 this.log(`✅ AI Code Review completed successfully`);
       this.log(📊 Found ${result.reviews.length} issues and ${result.suggestions.length} suggestions`
-<<<<<<< HEAD      );
+      );
 ;
       return result;
     } catch (error) {  
@@ -742,7 +742,7 @@ this.log(`✅ AI Code Review completed successfully`);
 
 // Run if called directly;
 if (require.main === module) {
-<<<<<<< HEAD  const reviewer = new AICodeReviewer();
+  const reviewer = new AICodeReviewer();
   reviewer.run().catch(console.error);
 }
 ;

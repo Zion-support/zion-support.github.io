@@ -43,7 +43,7 @@ async function checkLinks() {
       return;
       }
 
-<<<<<<< HEAD      execSync('npm run build', { stdio: 'inherit' });
+      execSync('npm run build', { stdio: 'inherit' });
       console.log('✅ Build completed'`);
     } catch (error) {;
       console.log('⚠️  Build failed but continuing...');
@@ -135,7 +135,7 @@ async function checkLinks() {
     console.error(`❌ Link check failed: `, error.message);
     // Don`t exit, just log the error and continue;
     }
-<<<<<<< HEAD    }
+    }
 ;
     // Generate report;
     const report = {;
@@ -176,11 +176,11 @@ function findHtmlFiles(dir) {;
 function findReferences(content) {;
   const references = [];
 
-<<<<<<< HEAD  // Find href attributes;
+  // Find href attributes;
   const hrefMatches = content.match(/href=["']([^']+)[']/g);
   if (hrefMatches) {;
     hrefMatches.forEach(match => {;
-      const href = match.match(/href=["']([^"']+)[']/)[1];
+      const href = match.match(/href=[']([^']+)[']/)[1];
       if (;
         href &&;
         !href.startsWith('#') &&;
@@ -219,7 +219,7 @@ function findReferences(content) {;
 
 function isValidReference(ref, distPath) {
   if (ref.startsWith(`/`)) {
-<<<<<<< HEAD    ref = ref.substring(1);
+    ref = ref.substring(1);
   }
 ;
   const fullPath = path.join(distPath, ref);
@@ -262,7 +262,7 @@ process.on(`SIGINT`, () => {
   }, AUTOMATION_INTERVAL);
 ;
   console.log( ✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-<<<<<<< HEAD  `);
+  `);
 }
 ;
 // Handle graceful shutdown;

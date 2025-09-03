@@ -20,27 +20,27 @@ class EnhancedSyntaxFixer {
       let originalContent = content;
       
       // Fix merge conflicts
-      content = content.replace(/<<<<<<< HEAD\n/g, '');
-      content = content.replace(/=======\n/g, '');
+      content = content.replace(/\n/g, '');
+      content = content.replace(/\n/g, '');
       content = content.replace(/      
       // Fix unterminated strings
-      content = content.replace(/&apos;s\s*"'\s*>/gm, '&apos;s">');
-      content = content.replace(/&apos;s\s*"'\s*,/gm, '&apos;s",');
+      content = content.replace(/&apos;s\s*"'\s*>/gm, '&apos;s>');
+      content = content.replace(/&apos;s\s*'\s*,/gm '&apos;s",');
       
       // Fix unterminated strings in general
-      content = content.replace(/"'\s*$/gm, '"');
-      content = content.replace(/"'\s*>/gm, '">');
-      content = content.replace(/"'\s*,/gm, '",');
+      content = content.replace(/"'\s*$/gm, '');
+      content = content.replace(/'\s*>/gm, '">');
+      content = content.replace(/"'\s*,/gm ',');
       
       // Fix missing semicolons
       content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');
       
       // Fix specific syntax errors we've seen
-      content = content.replace(/import Head from 'next\/head;/g, "import Head from 'next/head';");
-      content = content.replace(/';/g, "';");
-      content = content.replace(/category: 'Communication AI',/g, "category: 'Communication AI',");
-      content = content.replace(/response: 'JWT token',/g, "response: 'JWT token',");
-      content = content.replace(/Award,/g, "Award,");
+      content = content.replace(/import Head from 'next\/head;/g, import Head from 'next/head';");
+      content = content.replace(/';/g, "';);
+      content = content.replace(/category: 'Communication AI',/g, category: 'Communication AI',");
+      content = content.replace(/response: 'JWT token',/g, "response: 'JWT token',);
+      content = content.replace(/Award,/g, Award,");
       content = content.replace(/category: 'Technology',/g, "category: 'Technology',");
       
       if (content !== originalContent) {
@@ -112,10 +112,10 @@ class EnhancedSyntaxFixer {
 if (require.main === module) {
   const fixer = new EnhancedSyntaxFixer();
   fixer.fixAllFiles().then(result => {
-    console.log('Enhanced syntax fixing completed:', result);
+    console.log('Enhanced syntax fixing completed: ', result);
     process.exit(0);
   }).catch(error => {
-    console.error('Enhanced syntax fixing failed:', error);
+    console.error('Enhanced syntax fixing failed: ', error);
     process.exit(1);
   });
 }

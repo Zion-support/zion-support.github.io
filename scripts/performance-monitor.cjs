@@ -4,7 +4,6 @@ const path = require('path');
 
 class PerformanceMonitor {
   constructor() {
-<<<<<<< HEAD
     this.projectRoot = process.cwd();
     this.metrics = {
       buildTime: 0,
@@ -12,7 +11,6 @@ class PerformanceMonitor {
       memoryUsage: 0,
       timestamp: new Date().toISOString();
 };
-=======
     this.reportsDir = path.join(process.cwd(), 'performance-reports');
     this.ensureDirectories();
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
@@ -27,9 +25,8 @@ class PerformanceMonitor {
   async runLighthouse() {
     console.log('🔍 Running Lighthouse audit...');
     try {
-<<<<<<< HEAD
       const { execSync } = require('child_process');
-      execSync('NODE_OPTIONS="--max-old-space-size=8192" npm run build', {
+      execSync('NODE_OPTIONS="--max-old-space-size=8192 npm run build', {
         cwd: this.projectRoot,
         stdio: 'inherit';
 });
@@ -45,13 +42,12 @@ class PerformanceMonitor {
       
       this.saveMetrics();
       console.log('✅ Performance monitoring completed');
-=======
-      const command = 'npx lighthouse http://localhost:3000 --output=html --output-path=./performance-reports/lighthouse-report.html --chrome-flags="--headless"';
+      const command = 'npx lighthouse http: //localhost:3000 --output=html --output-path=./performance-reports/lighthouse-report.html --chrome-flags=--headless"';
       execSync(command, { stdio: 'inherit' });
       console.log('✅ Lighthouse audit completed');
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     } catch (error) {
-      console.log('❌ Lighthouse audit failed:', error.message);
+      console.log('❌ Lighthouse audit failed: ', error.message);
     }
   }
 
@@ -62,7 +58,7 @@ class PerformanceMonitor {
       execSync(command, { stdio: 'inherit' });
       console.log('✅ Bundle analysis completed');
     } catch (error) {
-      console.log('❌ Bundle analysis failed:', error.message);
+      console.log('❌ Bundle analysis failed: ', error.message);
     }
   }
 }

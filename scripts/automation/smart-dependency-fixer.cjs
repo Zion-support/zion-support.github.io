@@ -28,7 +28,7 @@ const AUTOMATION_INTERVAL =
 async function runSmartDependencyFixer() {
   try {
     console.log(`📦 Running smart dependency fixer at ${new Date().toISOString()}`
-<<<<<<< HEAD    );
+    );
 ;
     const issues = {;
       outdated: [],;
@@ -125,7 +125,7 @@ async function runSmartDependencyFixer() {
     }
 ;
     // Step 4: Check for missing packages;
-<<<<<<< HEAD    console.log('🔍 Step 4: Checking for missing packages...'`);
+    console.log('🔍 Step 4: Checking for missing packages...'`);
     try {;
       const checkOutput = execSync('npm check --json', {;
         stdio: 'pipe',;
@@ -203,7 +203,7 @@ async function runSmartDependencyFixer() {
 
     console.log(`✅ Smart dependency fixer completed successfully`);
   } catch (error) {  
-    console.error(`❌ Smart dependency fixer failed:`, error.message);
+    console.error(`❌ Smart dependency fixer failed: `, error.message);
     }
       process.cwd(),smart-dependency-fixer-report.json`);
     );
@@ -220,7 +220,7 @@ async function autoFixDependencyIssues(issues) {;
 ;
   // Fix security vulnerabilities;
   if (issues.vulnerabilities.length > 0) {;
-<<<<<<< HEAD    console.log('🔧 Attempting to fix security vulnerabilities...'`);
+    console.log('🔧 Attempting to fix security vulnerabilities...'`);
     try {;
       execSync('npm audit fix', { stdio: 'inherit' });
       fixedIssues.push({;
@@ -262,7 +262,7 @@ async function autoFixDependencyIssues(issues) {;
   if (issues.missing.length > 0) {
     console.log(`🔧 Attempting to install missing packages...`);
     try {
-<<<<<<< HEAD      execSync('npm install', { stdio: 'inherit' });
+      execSync('npm install', { stdio: 'inherit' });
       fixedIssues.push({;
         type: 'missing',;
         message: 'Reinstalled all packages',;
@@ -275,7 +275,7 @@ async function autoFixDependencyIssues(issues) {;
 
   // Fix peer dependency issues;
   if (issues.conflicts.some(conflict => conflict.includes('peer'))) {
-<<<<<<< HEAD    console.log('🔧 Attempting to fix peer dependency issues...');
+    console.log('🔧 Attempting to fix peer dependency issues...');
     try {;
       execSync('npm install --legacy-peer-deps', { stdio: 'inherit' });
       fixedIssues.push({;
@@ -303,7 +303,7 @@ async function verifyDependencyFixes(issues) {;
       auditData.vulnerabilities &&
       Object.keys(auditData.vulnerabilities).length === 0;
     ) {
-<<<<<<< HEAD      console.log('✅ Security vulnerabilities resolved');
+      console.log('✅ Security vulnerabilities resolved');
     } else {;
       console.log('⚠️  Some security vulnerabilities remain');
     }

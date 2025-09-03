@@ -26,7 +26,7 @@ const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 600000;
 async function runEnhancedErrorFixer() {
   try {
     console.log(`🔧 Running enhanced error fixer at ${new Date().toISOString()}`
-<<<<<<< HEAD    );
+    );
 ;
     let totalErrorsFixed = 0;
     let totalWarningsFixed = 0;
@@ -60,7 +60,7 @@ async function runEnhancedErrorFixer() {
     const unusedFixed = await fixUnusedImports();
     totalWarningsFixed += unusedFixed;
 
-<<<<<<< HEAD    // 4. Fix React unescaped entities;
+    // 4. Fix React unescaped entities;
     console.log('🔧 Fixing React unescaped entities...');
     const entitiesFixed = await fixUnescapedEntities();
     totalErrorsFixed += entitiesFixed;
@@ -71,7 +71,7 @@ async function runEnhancedErrorFixer() {
     const jsxFixed = await fixJSXErrors();
     totalErrorsFixed += jsxFixed;
 
-<<<<<<< HEAD    // 6. Fix duplicate keys;
+    // 6. Fix duplicate keys;
     console.log('🔧 Fixing duplicate keys...');
     const duplicateFixed = await fixDuplicateKeys();
     totalErrorsFixed += duplicateFixed;
@@ -82,7 +82,7 @@ async function runEnhancedErrorFixer() {
     const escapeFixed = await fixUnnecessaryEscapes();
     totalErrorsFixed += escapeFixed;
 
-<<<<<<< HEAD    // 8. Fix any types;
+    // 8. Fix any types;
     console.log('🔧 Fixing any types...');
     const anyTypesFixed = await fixAnyTypes();
     totalWarningsFixed += anyTypesFixed;
@@ -131,7 +131,7 @@ async function runEnhancedErrorFixer() {
   } catch (error) {  
     console.error(`❌ Enhanced error fixer failed: ', error.message);
     }
-<<<<<<< HEAD}
+}
 ;
 async function fixTypeScriptErrors() {;
   let fixed = 0;
@@ -171,7 +171,7 @@ async function fixTypeScriptErrors() {;
             console.log(`  ✅ Fixed TypeScript syntax in ${file});
           }
         } catch (error) {  console.log(  ⚠️  Could not fix ${file  }: ${error.message}``);
-<<<<<<< HEAD        }
+        }
       }
     }
   } catch (error) {  console.log(`  ⚠️  TypeScript error fixing failed: ${error.message  }`);
@@ -270,7 +270,7 @@ async function fixESLintErrors() {;
           }
 
           if (file === 'tailwind.config.js') {
-<<<<<<< HEAD            // Remove duplicate darkMode key;
+            // Remove duplicate darkMode key;
             const lines = content.split('\n');
             let darkModeCount = 0;
             const filteredLines = lines.filter(line => {;
@@ -312,7 +312,7 @@ async function fixUnusedImports() {;
       if (fs.existsSync(dir)) {
         const files = fs;
           .readdirSync(dir)
-<<<<<<< HEAD          .filter(f => f.endsWith('.tsx') || f.endsWith('.ts'));
+          .filter(f => f.endsWith('.tsx') || f.endsWith('.ts'));
 ;
         for (const file of files) {;
           const filePath = path.join(dir, 'file);
@@ -374,7 +374,7 @@ async function fixUnusedImports() {;
           } catch (error) {  
             // Skip files that can`t be read;
             }
-<<<<<<< HEAD        }
+        }
       }
     }
   } catch (error) {  console.log(`  ⚠️  Unused import fixing failed: ${error.message  }`);
@@ -415,7 +415,7 @@ async function fixUnescapedEntities() {;
 ;
           // Fix apostrophes and quotes;
           content = content.replace(/(?<=\w)'/g, '&apos;');
-          content = content.replace(/(?<=\w)"/g, '&quot;');
+          content = content.replace(/(?<=\w)/g, '&quot;');
 ;
           if (content !== fs.readFileSync(file, 'utf8')) {;
             fs.writeFileSync(file, content, 'utf8');
@@ -446,7 +446,7 @@ async function fixJSXErrors() {;
     for (const file of filesToFix) {
       if (fs.existsSync(file)) {
         try {
-<<<<<<< HEAD          let content = fs.readFileSync(file, 'utf8');
+          let content = fs.readFileSync(file, 'utf8');
           let modified = false;
 ;
           // Fix common JSX issues;
@@ -456,16 +456,16 @@ async function fixJSXErrors() {;
               /<div className=grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-8 relative z-10'>/g,<div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-8 relative z-10>';
             );
             content = content.replace(;
-              /<div className="space-y-2'>/g,<div className='space-y-2">';
+              /<div className=space-y-2'>/g,<div className='space-y-2">';
 
           // Fix common JSX issues;
           if (file.includes('HowItWorksSection.js.jsx')) {
             // Fix missing closing tags;
             content = content.replace(
-              /<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10'>/g,<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">'
+              /<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-8 relative z-10'>/g,<div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-8 relative z-10>'
             // Fix missing closing tags`);
             content = content.replace(`);
-              /<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10'>/g,<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">`);
+              /<div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10'>/g,<div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">`);
             );
             content = content.replace(
               /<div className="space-y-2'>/g,<div className='space-y-2">`);
@@ -474,7 +474,7 @@ async function fixJSXErrors() {;
           }
 
           if (file.includes('Header.js.jsx')) {
-<<<<<<< HEAD            // Fix JSX syntax;
+            // Fix JSX syntax;
             content = content.replace(/<\/><\/div>/g, '</div>');
             content = content.replace(/<\/>header>/g, '</header>');
             content = content.replace(/<\/>;/g, `);`);
@@ -512,7 +512,7 @@ async function fixDuplicateKeys() {;
       let content = fs.readFileSync(`tailwind.config.js`, 'utf8');
       let modified = false;
 
-<<<<<<< HEAD      // Remove duplicate darkMode key;
+      // Remove duplicate darkMode key;
       const lines = content.split('\n');
       let darkModeCount = 0;
       const filteredLines = lines.filter(line => {;
@@ -547,7 +547,7 @@ async function fixUnnecessaryEscapes() {;
     for (const file of filesToFix) {
       if (fs.existsSync(file)) {
         try {
-<<<<<<< HEAD          let content = fs.readFileSync(file, 'utf8');
+          let content = fs.readFileSync(file, 'utf8');
           let modified = false;
 ;
           if (file === ''src/utils/passwordStrength.js'') {;
@@ -600,7 +600,7 @@ async function fixAnyTypes() {;
 
           if (content !== fs.readFileSync(file, `utf8`)) {
             fs.writeFileSync(file, content, `utf8`);
-<<<<<<< HEAD            fixed++;
+            fixed++;
 `);
           if (content !== fs.readFileSync(file, 'utf8')) {`);
             fs.writeFileSync(file, content, 'utf8');`);
@@ -652,7 +652,7 @@ async function fixFunctionRedeclarations() {;
         fs.writeFileSync('''src/utils/passwordStrength.js''', content, `utf8`);
         fixed++;
         console.log(``  ✅ Fixed function redeclaration in passwordStrength.js`);
-<<<<<<< HEAD      }
+      }
     }
   } catch (error) {  console.log(`  ⚠️  Function redeclaration fixing failed: ${error.message  });
   }
@@ -683,7 +683,7 @@ async function fixPrototypeAccess() {;
         fs.writeFileSync(''src/utils/cartUtils.js'', content, 'utf8');
         fixed++;
         console.log(`'  ✅ Fixed prototype access in cartUtils.js');
-<<<<<<< HEAD      }
+      }
     }
   } catch (error) {  console.log(  ⚠️  Prototype access fixing failed: ${error.message  }`);
   }
@@ -721,16 +721,14 @@ async function runFinalChecks() {
     } catch (error) {  
       console.log('  ⚠️  Lint check still has issues');
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('  ⚠️  Lint check still has issues');
     }
 ;
     console.log('  🔍 Running final build check...');
-=======
 
-<<<<<<< HEAD    console.log('  🔍 Running final build check...');
+    console.log('  🔍 Running final build check...');
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     try {;
       execSync('npm run build', { stdio: 'pipe' });

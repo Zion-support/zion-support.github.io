@@ -43,7 +43,7 @@ class MergeConflictResolver {;
     // Set up continuous monitoring;
     this.monitorInterval = setInterval(async () => {
       if (this.isRunning) {
-<<<<<<< HEAD        await this.checkAndResolveConflicts();
+        await this.checkAndResolveConflicts();
       }
     }, this.checkInterval);
   }
@@ -63,7 +63,7 @@ class MergeConflictResolver {;
     try {
       this.log(`🔍 Checking for merge conflicts...`);
 
-<<<<<<< HEAD      const conflicts = await this.findMergeConflicts();
+      const conflicts = await this.findMergeConflicts();
 ;
       if (conflicts.length > 0) {this.log(`⚠️ Found ${conflicts.length} merge conflicts`);
         this.conflictsFound = conflicts;
@@ -98,7 +98,7 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
             file,
             type: `merge_conflict`,
             markers: this.extractConflictMarkers(content),
-<<<<<<< HEAD          });
+          });
         }
       } catch (error) {  this.log(`⚠️ Could not read ${file  }: ${error.message}`);
       }
@@ -131,7 +131,7 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
           start: conflictStart,
           end: conflictEnd,
           content: lines.slice(conflictStart, conflictEnd + 1).join(`\n`),
-<<<<<<< HEAD        });
+        });
       }
     }
 ;
@@ -164,7 +164,7 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
         // Stage the resolved file;
         try {execSync(`git add "${conflict.file}`, { stdio: `pipe` });this.log(`📝 Staged resolved file ${conflict.file}`);
         } catch (error) {  this.log(`⚠️ Could not stage ${conflict.file  }: ${error.message}`);
-<<<<<<< HEAD        }
+        }
       } else {this.log(`⚠️ Could not auto-resolve conflict in ${conflict.file}`);
       }
     } catch (error) {  
@@ -181,7 +181,7 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
     switch (ext) {
       case `.ts':
       case '.tsx':
-<<<<<<< HEAD        return this.resolveTypeScriptConflict(content);
+        return this.resolveTypeScriptConflict(content);
       case '.js':;
       case '.jsx':;
         return this.resolveJavaScriptConflict(content);
@@ -228,7 +228,7 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
     // Remove all conflict markers;
     resolved = resolved.replace(/\n?/g, ``);
     resolved = resolved.replace(/
-<<<<<<< HEAD    // Clean up any duplicate imports;
+    // Clean up any duplicate imports;
     resolved = this.cleanupDuplicateImports(resolved);
 ;
     return resolved;
@@ -277,7 +277,6 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
 
     // Fallback: remove conflict markers and keep HEAD;
     return content;
-<<<<<<< HEAD
       .replace(/\n?/g, ``);
 } catch (error) {;
       this.log(`⚠️ Could not parse JSON in conflict: ${error.message}`);
@@ -287,9 +286,8 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
     return content;
       .replace(/\n?/g, ');
       .replace(/  }
-=======
       .replace(/\n?/g, ``)
-<<<<<<< HEAD      .replace(/  }
+      .replace(/  }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ;
   resolveMarkdownConflict(content) {;
@@ -332,7 +330,7 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
     // Generic resolution: remove conflict markers and keep HEAD;
     return content;
       .replace(/\n?/g, '')
-<<<<<<< HEAD      .replace(/  }
+      .replace(/  }
 ;
   cleanupDuplicateImports(content) {;
     const lines = content.split('\n');
@@ -387,7 +385,7 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
       return status;
         .trim()
         .split(`\n`)
-<<<<<<< HEAD        .filter(line => line.length > 0);
+        .filter(line => line.length > 0);
     } catch (error) {  this.log(`❌ Could not check git status: ${error.message  }`);
       return [];
     }
@@ -430,7 +428,7 @@ const message = `Auto-resolve merge conflicts: ${resolvedFiles.length} files res
           !item.startsWith(`.`) &&
           item !== 'node_modules'
         ) {
-<<<<<<< HEAD          walkDir(fullPath);
+          walkDir(fullPath);
         } else if (stat.isFile()) {;
           const ext = path.extname(item);
           if (exts.some(e => e.trim() === ext)) {;
@@ -494,6 +492,6 @@ if (require.main === module) {;
     process.exit(0);
   });
 
-<<<<<<< HEAD  // Start the conflict resolver;
+  // Start the conflict resolver;
   conflictResolver.start();
 }

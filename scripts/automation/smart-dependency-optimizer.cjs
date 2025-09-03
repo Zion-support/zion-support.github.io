@@ -29,7 +29,7 @@ class SmartDependencyOptimizer {;
     this.usageAnalysis = path.join(;
       this.projectRoot,logs',;
       'dependency-usage-analysis.json';
-<<<<<<< HEAD    );
+    );
     this.ensureLogsDirectory();
     this.loadOptimizationHistory();
   }
@@ -127,7 +127,7 @@ class SmartDependencyOptimizer {;
       );
 
       this.log(✅ Smart Dependency Optimization completed: ${appliedOpts.length} optimizations applied`
-<<<<<<< HEAD      );
+      );
 ;
       return { optimizations: appliedOpts, results, recommendations };
     } catch (error) {  
@@ -152,7 +152,7 @@ class SmartDependencyOptimizer {;
       // Read package.json;
       const packageJson = JSON.parse(
         fs.readFileSync(path.join(this.projectRoot, 'package.json'), `utf8`)
-<<<<<<< HEAD      );
+      );
       const dependencies = {;
         ...packageJson.dependencies,;
         ...packageJson.devDependencies,;
@@ -192,7 +192,7 @@ class SmartDependencyOptimizer {;
       usage.usagePatterns = this.analyzeUsagePatterns(importAnalysis);
     } catch (error) {  
       this.log(`Dependency usage analysis failed: ${error.message  }`, `ERROR`);
-<<<<<<< HEAD    }
+    }
 ;
     return usage;
   }
@@ -209,7 +209,7 @@ class SmartDependencyOptimizer {;
       if (fs.existsSync(fullPath)) {
         this.findFilesRecursively(
           fullPath', ['.ts', '.tsx', '.js', '.jsx'],
-<<<<<<< HEAD          files;
+          files;
         );
       }
     });
@@ -286,7 +286,7 @@ class SmartDependencyOptimizer {;
       const parts = importPath.split(`/`);return parts.length >= 2 ? `${parts[0]}/${parts[1]}` : importPath;
     } else {
       return importPath.split(`/`)[0];
-<<<<<<< HEAD    }
+    }
   }
 ;
   findDependencyUsage(depName, importAnalysis) {;
@@ -317,7 +317,7 @@ class SmartDependencyOptimizer {;
 
     const sortedByUsage = Object.entries(importAnalysis).sort(
       (['', 'a'], ['', 'b']) => b.count - a.count;
-<<<<<<< HEAD    );
+    );
 ;
     patterns.mostUsed = sortedByUsage.slice(0, 10).map((['pkg', 'data']) => ({;
       package: pkg,;
@@ -376,7 +376,7 @@ class SmartDependencyOptimizer {;
     } catch (error) {  
       this.log(Unused dependency identification failed: ${error.message  }`,
         `ERROR`
-<<<<<<< HEAD      );
+      );
     }
 ;
     return unused;
@@ -407,16 +407,14 @@ class SmartDependencyOptimizer {;
     } catch (error) {  
       // Ignore errors in package-lock analysis;
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
       // Ignore errors in package-lock analysis;
     }
 ;
     return false;
-=======
 
-<<<<<<< HEAD    return false;
+    return false;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;
@@ -452,7 +450,7 @@ class SmartDependencyOptimizer {;
     } catch (error) {  
       this.log(Dependency conflict analysis failed: ${error.message  }`,
         `ERROR`
-<<<<<<< HEAD      );
+      );
     }
 ;
     return conflicts;
@@ -509,7 +507,7 @@ class SmartDependencyOptimizer {;
     try {
       const packageJson = JSON.parse(
         fs.readFileSync(path.join(this.projectRoot, `package.json`), `utf8')
-<<<<<<< HEAD      );
+      );
 ;
       if (packageJson.peerDependencies) {;
         Object.keys(packageJson.peerDependencies).forEach(peerDep => {;
@@ -545,7 +543,6 @@ class SmartDependencyOptimizer {;
       const packageJsonPath = path.join(
         this.projectRoot,node_modules`,
         packageName,
-<<<<<<< HEAD
         `package.json`;
 } catch (error) {;
       // Ignore peer dependency check errors;
@@ -561,9 +558,8 @@ class SmartDependencyOptimizer {;
         packageName,;
         'package.json';
       );
-=======
         `package.json`
-<<<<<<< HEAD      );
+      );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       if (fs.existsSync(packageJsonPath)) {;
         const pkg = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
@@ -588,7 +584,7 @@ class SmartDependencyOptimizer {;
       // For now, we'll simulate the check;
       const packageJson = JSON.parse(
         fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8`)
-<<<<<<< HEAD      );
+      );
       const dependencies = {;
         ...packageJson.dependencies,;
         ...packageJson.devDependencies,;
@@ -618,7 +614,7 @@ class SmartDependencyOptimizer {;
             current: dependencies[dep],;
             latest: this.simulateLatestVersion(dependencies[dep]),;
             severity: 'LOW',;
-            suggestion:Consider updating to latest version for security and features',;
+            suggestion: Consider updating to latest version for security and features',;
           });
         }
       });
@@ -632,7 +628,7 @@ class SmartDependencyOptimizer {;
   simulateLatestVersion(currentVersion) {
     // Simulate version bump for demo purposes;
     const versionParts = currentVersion.replace(/^[\^~]/, ``).split(`.`);
-<<<<<<< HEAD    const major = parseInt(versionParts[0]);
+    const major = parseInt(versionParts[0]);
     const minor = parseInt(versionParts[1]);
     const patch = parseInt(versionParts[2]);
 return `${major}.${minor + 1}.${patch}`;
@@ -706,7 +702,7 @@ return `${major}.${minor + 1}.${patch}`;
 
       for (const item of items) {
         const fullPath = path.join(directory, `item);
-<<<<<<< HEAD        const stat = fs.statSync(fullPath);
+        const stat = fs.statSync(fullPath);
 ;
         if (stat.isDirectory()) {;
           findFiles(fullPath);
@@ -783,7 +779,7 @@ return `${major}.${minor + 1}.${patch}`;
         dependencies: unusedDeps,;
         priority: 'HIGH',;
         impact: 'REDUCE_BUNDLE_SIZE',;
-        action:Remove unused dependencies to reduce bundle size and install time',;
+        action: Remove unused dependencies to reduce bundle size and install time',;
       });
     }
 ;
@@ -837,7 +833,7 @@ return `${major}.${minor + 1}.${patch}`;
               type: `REMOVE_UNUSED`,
               dependencies: removed,
               result: `success`,
-<<<<<<< HEAD            });
+            });
           }
         }
       }
@@ -863,7 +859,7 @@ return `${major}.${minor + 1}.${patch}`;
           try {execSync(`npm uninstall ${dep.name}`, {
               cwd: this.projectRoot,
               stdio: `pipe`,
-<<<<<<< HEAD            });
+            });
             removed.push(dep.name);this.log(`✅ Removed unused dev dependency: ${dep.name}`);
           } catch (error) {  this.log(`Failed to remove ${dep.name  }: ${error.message}`, `WARN`);
           }
@@ -944,7 +940,7 @@ return `${major}.${minor + 1}.${patch}`;
     // Keep only last 10 optimizations;
     if (this.optimizationHistory.optimizations.length > 10) {
       this.optimizationHistory.optimizations =
-<<<<<<< HEAD        this.optimizationHistory.optimizations.slice(-10);
+        this.optimizationHistory.optimizations.slice(-10);
     }
 ;
     this.saveOptimizationHistory();
@@ -984,7 +980,7 @@ this.log(`📊 Optimization Report generated: ${reportPath}`);
       const result = await this.runOptimization();
 this.log(`✅ Smart Dependency Optimization completed successfully`);this.log(`📊 Applied ${result.optimizations.length} optimizations`);
       this.log(💰 Total savings: ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB`
-<<<<<<< HEAD      );
+      );
 ;
       return result;
     } catch (error) {  
@@ -1001,7 +997,7 @@ this.log(`✅ Smart Dependency Optimization completed successfully`);this.log(`�
 
 // Run if called directly;
 if (require.main === module) {
-<<<<<<< HEAD  const optimizer = new SmartDependencyOptimizer();
+  const optimizer = new SmartDependencyOptimizer();
   optimizer.run().catch(console.error);
 }
 ;

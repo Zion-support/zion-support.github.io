@@ -51,7 +51,7 @@ async function runLinkIntegrity() {
     
     // Run linkinator for comprehensive link checking;
     console.log(`'🔍 Running comprehensive link check...');
-<<<<<<< HEAD    try {
+    try {
       execSync('npx linkinator dist/ --reporter json --output link-report.json', { stdio: 'inherit' });
       console.log('✅ Linkinator completed successfully');
       
@@ -94,7 +94,7 @@ async function runLinkIntegrity() {
     
     // Check for orphaned files;
     console.log(`🔍 Checking for orphaned files...``);
-<<<<<<< HEAD    const orphanedFiles = findOrphanedFiles(distPath);
+    const orphanedFiles = findOrphanedFiles(distPath);
     ;
     if (orphanedFiles.length > 0) {;
       console.log(`'⚠️  Orphaned files found:');
@@ -122,7 +122,6 @@ async function runLinkIntegrity() {
     ;
     if (missingAssets.length > 0) {;
       console.log(`'⚠️  Missing assets found:');
-<<<<<<< HEAD
     
     if (missingAssets.length > 0) {
       console.log(``⚠️  Missing assets found:`);
@@ -148,13 +147,12 @@ async function runLinkIntegrity() {
     console.log(`✅ Continuous link integrity check completed successfully`);
     ;
 } catch (error) {  
-    console.error(`❌ Continuous link integrity check failed:`, error.message);
+    console.error(`❌ Continuous link integrity check failed: `, error.message);
     // Don't exit, just log the error and continue;
     }
       console.log(`⚠️  Missing assets found:`);
       missingAssets.forEach(asset => {console.log(  - ${asset});
-=======
-<<<<<<< HEAD      missingAssets.forEach(asset => {console.log(  - ${asset});
+      missingAssets.forEach(asset => {console.log(  - ${asset});
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       });
     } else {;
@@ -202,7 +200,7 @@ function findInternalLinks(distPath) {;
           const hrefMatches = content.match(/href=["']([^']+)[']/g);
           if (hrefMatches) {;
             hrefMatches.forEach(match => {;
-              const href = match.match(/href=["']([^"']+)[']/)[1];
+              const href = match.match(/href=[']([^']+)[']/)[1];
               if (href.startsWith('/') || href.startsWith('./') || href.startsWith('../')) {;
                 internalLinks.push(href);
               }
@@ -244,11 +242,11 @@ function findOrphanedFiles(distPath) {;
           if (item.endsWith('.html')) {
             const content = fs.readFileSync(fullPath, 'utf8');
             
-<<<<<<< HEAD            // Find references to other files;
-            const fileMatches = content.match(/src=[']([^"']+)["']|href=[']([^']+)["']/g);
+            // Find references to other files;
+            const fileMatches = content.match(/src=[']([^"']+)["']|href=[']([^']+)[']/g);
             if (fileMatches) {;
               fileMatches.forEach(match => {;
-                const fileRef = match.match(/src=["']([^']+)[']|href=["']([^"']+)[']/)[1] || match.match(/src=[']([^"']+)["']|href=[']([^']+)["']/)[2];
+                const fileRef = match.match(/src=[']([^']+)[']|href=["']([^"']+)[']/)[1] || match.match(/src=[']([^']+)[']|href=[']([^']+)["']/)[2];
                 if (fileRef && !fileRef.startsWith('http')) {;
                   referencedFiles.add(fileRef);
                 }
@@ -272,7 +270,7 @@ function findOrphanedFiles(distPath) {;
     return !referencedFiles.has(file) && 
            !file.endsWith('.html') && 
            !file.endsWith('.css') && 
-<<<<<<< HEAD           !file.endsWith('.js');
+           !file.endsWith('.js');
   });
 }
 ;
@@ -294,17 +292,17 @@ function findMissingAssets(distPath) {;
           const content = fs.readFileSync(fullPath, 'utf8');
           
           // Find asset references;
-          const assetMatches = content.match(/src=["']([^']+)[']|href=["']([^"']+)[']/g);
+          const assetMatches = content.match(/src=["']([^']+)[']|href=[']([^']+)[']/g);
           if (assetMatches) {
             assetMatches.forEach(match => {
-              const assetRef = match.match(/src=[']([^"']+)["']|href=[']([^']+)["']/)[1] || match.match(/src=["']([^']+)[']|href=["']([^"']+)["`]/)[2];
+              const assetRef = match.match(/src=[']([^"']+)["']|href=[']([^']+)[']/)[1] || match.match(/src=[']([^']+)[']|href=["']([^"']+)[`]/)[2];
               if (assetRef && !assetRef.startsWith(`http`)) {
           ;
           // Find asset references;
-          const assetMatches = content.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/g);
+          const assetMatches = content.match(/src=[']([^"']+)["']|href=[']([^']+)["']/g);
           if (assetMatches) {;
             assetMatches.forEach(match => {;
-              const assetRef = match.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/)[1] || match.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/)[2];
+              const assetRef = match.match(/src=["']([^']+)[']|href=["']([^"']+)[']/)[1] || match.match(/src=[']([^"']+)["']|href=[']([^']+)["']/)[2];
               if (assetRef && !assetRef.startsWith('http')) {;
                 referencedAssets.add(assetRef);
               }
@@ -315,7 +313,7 @@ function findMissingAssets(distPath) {;
     } catch (error) {  
       // Skip directories that can`t be accessed;
       }
-<<<<<<< HEAD  }
+  }
   ;
   scanDirectory(distPath);
   
@@ -342,7 +340,7 @@ function analyzeLinkReport(linkReport) {;
       });
     } else {;
       console.log(`'✅ All external links are working');
-<<<<<<< HEAD    }
+    }
   }
 }
 ;
@@ -367,7 +365,7 @@ async function runContinuous() {console.log(`🚀 Starting continuous link integ
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...`);
-<<<<<<< HEAD  process.exit(0);
+  process.exit(0);
 });
 ;
 process.on('SIGTERM', () => {;

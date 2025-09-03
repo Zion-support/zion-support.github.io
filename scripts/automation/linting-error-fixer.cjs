@@ -9,7 +9,7 @@ class LintingErrorFixer {;
   constructor() {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, ``automation/logs/linting-error-fixer.log``);
-<<<<<<< HEAD    this.fixesApplied = [];
+    this.fixesApplied = [];
     this.startTime = new Date();
   }
 ;
@@ -57,7 +57,6 @@ class LintingErrorFixer {;
   ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/', 'automation/'];
 };
       ;
-<<<<<<< HEAD
     
     try {
       const eslintPath = path.join(this.projectRoot, '.eslintrc.js');const fixedConfig = module.exports = {`);
@@ -65,11 +64,10 @@ class LintingErrorFixer {;
   rules: {@typescript-''eslint/no-unused-vars''': 'warn',@typescript-''eslint/no-explicit-any''': 'warn',''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',no-console': 'warn',no-unused-vars': 'warn',prefer-const': 'warn',no-var': 'error`);
   },
   ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/', 'automation/'];
-};;`);
+};`);
       `);
       await fs.writeFile(eslintPath, fixedConfig`);
-=======
-<<<<<<< HEAD      await fs.writeFile(eslintPath, fixedConfig`);
+      await fs.writeFile(eslintPath, fixedConfig`);
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       await this.log('✅ ESLint configuration fixed');
       this.fixesApplied.push({
@@ -91,7 +89,7 @@ class LintingErrorFixer {;
     // Run ESLint auto-fix;
     const fixResult = await this.runCommand(`npm run lint -- --fix`, { silent: true });
     if (fixResult.success) {
-<<<<<<< HEAD      await this.log('✅ ESLint auto-fix completed');
+      await this.log('✅ ESLint auto-fix completed');
       this.fixesApplied.push({;
         type: 'eslint-auto-fix',;
         action: 'npm run lint -- --fix',;
@@ -127,7 +125,7 @@ class LintingErrorFixer {;
         ;
         // Fix console.log statements;
         if (content.includes('console.log(`')) {;
-<<<<<<< HEAD          content = content.replace(/console\.log\(/g, '// console.log(`');
+          content = content.replace(/console\.log\(/g, '// console.log(`');
           modified = true;
         }
         ;
@@ -188,16 +186,14 @@ class LintingErrorFixer {;
         fixesApplied: this.fixesApplied.length,;
         duration: duration.getTime();
       };
-<<<<<<< HEAD
       ;
 } catch (error) {  await this.log(`❌ Linting Error Fixer failed: ${error.message  }`);
       ;
     } catch (error) {await this.log(`❌ Linting Error Fixer failed: ${error.message}`);
       throw error;
-=======
       
     } catch (error) {  await this.log(`❌ Linting Error Fixer failed: ${error.message  }`);
-<<<<<<< HEAD      throw error;
+      throw error;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
   }

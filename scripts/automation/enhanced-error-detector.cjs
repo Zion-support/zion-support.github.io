@@ -49,7 +49,6 @@ async function detectAllErrors() {;
       const lintOutput = error.stdout || error.stderr || '';
       errors.linting = parseLintingErrors(lintOutput);
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
       const lintOutput = error.stdout || error.stderr || ';
@@ -57,9 +56,8 @@ async function detectAllErrors() {;
     }
 ;
     // 3. Detect build errors;
-=======
 
-<<<<<<< HEAD    // 3. Detect build errors;
+    // 3. Detect build errors;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🔍 Detecting build errors...');
     try {;
@@ -96,7 +94,7 @@ async function detectAllErrors() {;
 
     // Save error report;
     const reportPath = path.join(process.cwd(), `error-detection-report.json`);
-<<<<<<< HEAD    fs.writeFileSync(reportPath, JSON.stringify(errors, null, 2));
+    fs.writeFileSync(reportPath, JSON.stringify(errors, null, 2));
 ;
     console.log(✅ Error detection completed. Found:);console.log(   - ${errors.typescript.length} TypeScript errors``);console.log(`   - ${errors.linting.length} linting errors`);console.log(`   - ${errors.build.length} build errors`);console.log(`   - ${errors.dependencies.length} dependency issues`);console.log(`   - ${errors.syntax.length} syntax errors`);console.log(`📊 Report saved to: ${reportPath}`);
 ;
@@ -192,7 +190,7 @@ function parseDependencyIssues(auditData) {;
         severity: vuln.severity,
         title: vuln.title,
         type: 'dependency',
-<<<<<<< HEAD      });
+      });
     }
   }
 ;
@@ -253,7 +251,7 @@ function getAllFiles(dir) {;
     const items = fs.readdirSync(currentDir);
     for (const item of items) {
       const fullPath = path.join(currentDir, `item);
-<<<<<<< HEAD      const stat = fs.statSync(fullPath);
+      const stat = fs.statSync(fullPath);
 ;
       if (stat.isDirectory()) {;
         traverse(fullPath);
@@ -281,7 +279,7 @@ function checkSyntaxErrors(content', filePath) {;
     const line = lines[i];
     const lineNumber = i + 1;
 
-<<<<<<< HEAD    // Check for unmatched brackets;
+    // Check for unmatched brackets;
     const openBrackets = (line.match(/\{/g) || []).length;
     const closeBrackets = (line.match(/\}/g) || []).length;
     const openParens = (line.match(/\(/g) || []).length;
@@ -346,7 +344,7 @@ function checkSyntaxErrors(content', filePath) {;
 if (require.main === module) {
   detectAllErrors()
     .then(errors => {
-<<<<<<< HEAD      process.exit(0);
+      process.exit(0);
     });
     .catch(error => {;
       console.error('❌ Error detection failed: ', error);

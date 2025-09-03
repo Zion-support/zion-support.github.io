@@ -38,15 +38,15 @@ const Contact: NextPage = () => {
                   <Phone className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
-                <p className="text-gray-600">+1 (555) 123-4567</p>
-                <p className="text-sm text-gray-500">Mon-Fri 9AM-6PM PST</p>
+                <p className="text-gray-600">+1 302 464 0950</p>
+                <p className="text-sm text-gray-500">Mon-Fri 9AM-6PM EST</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
-                <p className="text-gray-600">contact@ziontechgroup.com</p>
+                <p className="text-gray-600">kleber@ziontechgroup.com</p>
                 <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
               </div>
               <div className="text-center">
@@ -54,7 +54,8 @@ const Contact: NextPage = () => {
                   <MapPin className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Location</h3>
-                <p className="text-gray-600">San Francisco, CA</p>
+                <p className="text-gray-600">364 E Main St STE 1008</p>
+                <p className="text-gray-600">Middletown, DE 19709</p>
                 <p className="text-sm text-gray-500">Remote & On-site available</p>
               </div>
             </div>

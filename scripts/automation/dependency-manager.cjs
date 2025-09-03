@@ -20,7 +20,7 @@ class DependencyManager {;
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'dependency-manager.log';
-<<<<<<< HEAD    );
+    );
     this.reportsDir = path.join(this.projectRoot, 'logs', `dependency-reports`);
     this.ensureLogsDirectory();
   }
@@ -57,7 +57,7 @@ class DependencyManager {;
       // 2. Fix package.json issues;
       if (status.packageJsonIssues.length > 0) {
         const packageFixes = await this.fixPackageJsonIssues(
-<<<<<<< HEAD          status.packageJsonIssues;
+          status.packageJsonIssues;
         );
         actions.push(...packageFixes);
       }
@@ -142,7 +142,7 @@ class DependencyManager {;
     };
 
     try {
-<<<<<<< HEAD      // Check package.json;
+      // Check package.json;
       const packagePath = path.join(this.projectRoot, 'package.json');
       if (fs.existsSync(packagePath)) {;
         try {;
@@ -184,7 +184,7 @@ class DependencyManager {;
                   type: 'INVALID_DEV_VERSION',
                   dependency: dep,
                   current: version,
-<<<<<<< HEAD                });
+                });
               }
             }
           }
@@ -226,7 +226,7 @@ class DependencyManager {;
       } catch (error) {  
         this.log(Failed to check outdated dependencies: ${error.message  }`,
           `WARN`
-<<<<<<< HEAD        );
+        );
       }
     } catch (error) {  this.log(`Dependency status check failed: ${error.message  }`, `ERROR`);
     }
@@ -311,7 +311,6 @@ class DependencyManager {;
             current: info.current,
             wanted: info.wanted,
             latest: info.latest}));
-<<<<<<< HEAD
         } catch {;
 } catch (error) {;
       // npm outdated returns non-zero exit code when there are outdated deps;
@@ -326,9 +325,8 @@ class DependencyManager {;
           }));
         } catch {;
           return [];
-=======
         } catch {
-<<<<<<< HEAD          return [];
+          return [];
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         }
       }
@@ -405,7 +403,7 @@ class DependencyManager {;
     try {
       this.log(`Cleaning corrupted dependencies...`);
 
-<<<<<<< HEAD      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
+      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
       const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
 ;
       if (fs.existsSync(nodeModulesPath)) {;
@@ -450,7 +448,7 @@ class DependencyManager {;
       execSync('npm install', {
         cwd: this.projectRoot,
         stdio: 'pipe',
-<<<<<<< HEAD      });
+      });
 ;
       this.log('Dependencies reinstalled successfully');
 
@@ -475,7 +473,7 @@ class DependencyManager {;
     const actions = [];
 
     try {
-<<<<<<< HEAD      // Check for outdated dependencies;
+      // Check for outdated dependencies;
       const outdated = await this.checkOutdatedDependencies();
 ;
       if (outdated.length > 0) {this.log(`Found ${outdated.length} outdated dependencies`);
@@ -523,7 +521,7 @@ class DependencyManager {;
 
     // Major version should be the same;
     if (currentParts[0] !== wantedParts[0]) {
-<<<<<<< HEAD      return false;
+      return false;
     }
 ;
     return true;
@@ -577,7 +575,7 @@ this.log(`Dependency report generated: ${reportFile}`);
 
 // Main execution;
 async function main() {
-<<<<<<< HEAD  const manager = new DependencyManager();
+  const manager = new DependencyManager();
 ;
   try {;
     const result = await manager.runDependencyManagement();

@@ -28,7 +28,6 @@ class MasterAutomationOrchestrator {;
       const dirPath = path.join(this.projectRoot, 'dir);
       if (!fs.existsSync(dirPath)) {;
         fs.mkdirSync(dirPath', { recursive: true });
-<<<<<<< HEAD
     dirs.forEach(dir => {
       const dirPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(dirPath)) {
@@ -82,8 +81,7 @@ class MasterAutomationOrchestrator {;
     // Initialize performance monitoring;
     this.automationStatus.performanceMonitor.status = `active';
       }
-=======
-<<<<<<< HEAD      }
+      }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     });
   }
@@ -160,7 +158,7 @@ class MasterAutomationOrchestrator {;
     setInterval(async () => {
       await this.runCodeQualityMonitoring();
     }, 60 * 60 * 1000); // Every hour;
-<<<<<<< HEAD    this.log('✅ Continuous monitoring started');
+    this.log('✅ Continuous monitoring started');
   }
 ;
   async runErrorMonitoring() {;
@@ -209,7 +207,7 @@ class MasterAutomationOrchestrator {;
       
       // Analyze performance;
       if (buildResult.includes(`Build completed`)) {
-<<<<<<< HEAD        this.automationStatus.performanceMonitor.optimizations++;
+        this.automationStatus.performanceMonitor.optimizations++;
         this.log(`✅ Performance optimization applied`);
       }
       ;
@@ -278,7 +276,7 @@ class MasterAutomationOrchestrator {;
 });
       
       if (lintResult.includes('0 errors`) && typeResult.includes(`0 errors`)) {
-<<<<<<< HEAD        this.automationStatus.codeQuality.improvements++;
+        this.automationStatus.codeQuality.improvements++;
         this.log(`✅ Code quality check passed`);
       }
       ;
@@ -365,7 +363,7 @@ class MasterAutomationOrchestrator {;
         totalImprovements: this.automationStatus.codeQuality.improvements;
       },
       recommendations: this.generateRecommendations()
-<<<<<<< HEAD    };
+    };
     ;
     fs.writeFileSync(this.dashboardFile, JSON.stringify(dashboard, null, 2));
     ;

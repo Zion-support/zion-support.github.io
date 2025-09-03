@@ -28,7 +28,7 @@ class ComprehensiveErrorFixer {;
       this.log(`Fixing common syntax errors...`);
 
       // Find all source files;
-<<<<<<< HEAD      const sourceFiles = this.findSourceFiles();
+      const sourceFiles = this.findSourceFiles();
 ;
       for (const file of sourceFiles) {;
         try {;
@@ -41,13 +41,11 @@ class ComprehensiveErrorFixer {;
 ;
       this.log('Common syntax errors fixed', 'success');
       this.fixes.push('syntax_errors');
-<<<<<<< HEAD
     } catch (error) { ;
 } catch (error) {;
       this.log('Syntax error fixing failed', 'error');
-=======
     } catch (error) { 
-<<<<<<< HEAD      this.log('Syntax error fixing failed', 'error');
+      this.log('Syntax error fixing failed', 'error');
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
      }
   }
@@ -76,10 +74,8 @@ class ComprehensiveErrorFixer {;
 ;
   findSourceFiles() {;
     const sourceDirs = [;
-<<<<<<< HEAD
-      'src',';      'pages',';      'components',';      'utils',';      'hooks',';      'types',';    ]    const extensions = ['.js', '.jsx', '.ts', '.tsx'];    const files = [];;
+      'src',';      'pages',';      'components',';      'utils',';      'hooks',';      'types',';    ]    const extensions = ['.js', '.jsx', '.ts', '.tsx'];    const files = [];
     for (const dir of sourceDirs) {;
-=======
       'src',';      'pages',';      'components',';      'utils',';      'hooks',';      'types',';    ];';    const extensions = ['.js', '.jsx', '.ts', '.tsx'];';    const files = [];';    for (const dir of sourceDirs) {;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       if (fs.existsSync(dir)) {;
@@ -115,7 +111,7 @@ class ComprehensiveErrorFixer {;
       let content = fs.readFileSync(filePath, `utf8`);
       let originalContent = content;
 
-<<<<<<< HEAD      // Fix common syntax errors;
+      // Fix common syntax errors;
       content = this.fixUnterminatedStrings(content);
       content = this.fixUnterminatedComments(content);
       content = this.fixDuplicateImports(content);
@@ -167,7 +163,7 @@ class ComprehensiveErrorFixer {;
 ;
       // Check for unterminated strings;
       const singleQuotes = (line.match(/'/g) || []).length;
-      const doubleQuotes = (line.match(/"/g) || []).length;
+      const doubleQuotes = (line.match(//g) || []).length;
 ;
       if (singleQuotes % 2 !== 0) {;
         // Add missing single quote;
@@ -176,8 +172,8 @@ class ComprehensiveErrorFixer {;
       }
 
       if (doubleQuotes % 2 !== 0) {
-<<<<<<< HEAD        // Add missing double quote;
-        line += '"';
+        // Add missing double quote;
+        line += '';
         this.log('Fixed unterminated double quote', 'info');
       }
 ;
@@ -189,15 +185,15 @@ class ComprehensiveErrorFixer {;
 
   fixUnterminatedComments(content) {
 ;
-      const singleQuotes = (line.match(/'/g) || []).length;      const doubleQuotes = (line.match(/"/g) || []).length;";";      if (singleQuotes % 2 !== 0) {;
+      const singleQuotes = (line.match(/'/g) || []).length;      const doubleQuotes = (line.match(/"/g) || []).length;";;      if (singleQuotes % 2 !== 0) {;
         // Add missing single quote;
-        line += "'";";        this.log('Fixed unterminated single quote', 'info');      }';;
+        line += '";";        this.log('Fixed unterminated single quote', 'info');      }';
       if (doubleQuotes % 2 !== 0) {;
         // Add missing double quote;
-        line += '"';        this.log('Fixed unterminated double quote', 'info');      }';;
+        line += '';        this.log('Fixed unterminated double quote', 'info');      }';
       fixedLines.push(line);}
 ;
-    return fixedLines.join('\n');  }';;
+    return fixedLines.join('\n');  }';
   fixUnterminatedComments(content) {;
     // Fix unterminated comments;
     let fixedContent = content;
@@ -216,7 +212,7 @@ class ComprehensiveErrorFixer {;
   }
 
   fixDuplicateImports(content) {
-<<<<<<< HEAD    // Remove duplicate import statements;
+    // Remove duplicate import statements;
     const lines = content.split('\n');
     const seenImports = new Set();
     const fixedLines = [];
@@ -294,7 +290,7 @@ class ComprehensiveErrorFixer {;
 
     // Fix unescaped entities in JSX;
     fixedContent = fixedContent.replace(/(\w)'(\w)/g, '$1&apos;$2');
-    fixedContent = fixedContent.replace(/(\w)"(\w)/g, '$1&quot;$2');
+    fixedContent = fixedContent.replace(/(\w)(\w)/g, '$1&quot;$2');
 
 ;
     // Fix unescaped entities in JSX;
@@ -337,7 +333,7 @@ class ComprehensiveErrorFixer {;
     // Fix apostrophes;
     fixedContent = fixedContent.replace(/(\w)'(\w)/g, '$1&apos;$2');
 
-<<<<<<< HEAD;
+;
   fixUnescapedEntities(content) {;
     // Fix unescaped entities;
     let fixedContent = content;
@@ -369,13 +365,11 @@ class ComprehensiveErrorFixer {;
       execSync('npm run lint -- --fix', { stdio: 'pipe' });
       this.log('ESLint auto-fix completed', 'success');
       this.fixes.push('eslint_auto_fix');
-<<<<<<< HEAD
     } catch (error) { ;
 } catch (error) {;
       this.log('ESLint auto-fix failed', 'warn');
-=======
     } catch (error) { 
-<<<<<<< HEAD      this.log('ESLint auto-fix failed', 'warn');
+      this.log('ESLint auto-fix failed', 'warn');
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
      }
   }
@@ -461,7 +455,7 @@ this.log(`Report saved to ${reportFile}`, 'info');
       return report;
     } catch (error) { 
       this.log(`Comprehensive error fixing failed: ${error.message }`, `error`);
-<<<<<<< HEAD      await this.fixCommonSyntaxErrors();
+      await this.fixCommonSyntaxErrors();
 ;
       // Run Prettier;
       await this.runPrettier();
@@ -479,13 +473,13 @@ this.log(`Report saved to ${reportFile}`, 'info');
       return report;
     }
       this.log('Comprehensive error fixing completed successfully', 'success');      return report;,';} catch (error) {;
-      this.log(`Comprehensive error fixing "failed": ${error.message}`, 'error');      const report = await this.generateReport();`;      return report;}
+      this.log(`Comprehensive error fixing "failed: ${error.message}`, 'error');      const report = await this.generateReport();`;      return report;}
   }
 }
 
 // Main execution;
 async function main() {
-<<<<<<< HEAD  const fixer = new ComprehensiveErrorFixer();
+  const fixer = new ComprehensiveErrorFixer();
 ;
   try {;
     await fixer.runFullFix();
@@ -500,7 +494,7 @@ async function main() {
 // Handle process termination;
 process.on('SIGTERM', () => {
     process.exit(0);} catch (error) {;
-    fixer.log(`Fatal "error": ${error.message}`, 'error');    await fixer.generateReport();`;    process.exit(1);}
+    fixer.log(`Fatal error": ${error.message}`, 'error');    await fixer.generateReport();`;    process.exit(1);}
 ;
 // Handle process termination;
 process.on('SIGTERM', () => {;
@@ -516,7 +510,7 @@ process.on('SIGINT', () => {;
 // Run the main function;
 main().catch(error => {
   console.error(`Fatal error: ${error.message}`);
-<<<<<<< HEAD  process.exit(1);
+  process.exit(1);
 }
 ;
 // Handle process termination;

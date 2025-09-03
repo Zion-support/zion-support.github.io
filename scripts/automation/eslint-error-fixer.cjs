@@ -17,7 +17,7 @@ class ESLintErrorFixer {;
     );
     this.reportFile = path.join(
       this.projectRoot,eslint-error-fixer-report.json`
-<<<<<<< HEAD    );
+    );
 ;
     this.ensureLogsDirectory();
 ;
@@ -45,7 +45,7 @@ class ESLintErrorFixer {;
     fs.appendFileSync(this.logFile, logMessage);
 
     if (type === `error`) {
-<<<<<<< HEAD      fs.appendFileSync(this.errorLogFile, logMessage);
+      fs.appendFileSync(this.errorLogFile, logMessage);
     }
 console.log(`[${type.toUpperCase()}] ${message}`);
   }
@@ -103,7 +103,7 @@ console.log(`[${type.toUpperCase()}] ${message}`);
     try {
       const result = await this.runCommand('npm', { args: ['run', `lint`] });
       this.log(`No ESLint errors detected`);
-<<<<<<< HEAD      return [];
+      return [];
     } catch (error) {  this.log(`ESLint errors detected: ${error.stderr  }`, `error`);
       return this.parseESLintErrors(error.stderr);
     }
@@ -129,7 +129,7 @@ console.log(`[${type.toUpperCase()}] ${message}`);
             message: line.split(` - `)[1] || line,
             rule: ruleMatch ? ruleMatch[1] : null,
             type: `eslint`,
-<<<<<<< HEAD          });
+          });
         }
       }
     }
@@ -212,7 +212,7 @@ console.log(`[${type.toUpperCase()}] ${message}`);
       error.rule === 'no-unused-vars' ||
       error.message.includes('unused variable')
     ) {
-<<<<<<< HEAD      await this.fixUnusedVariableError(error, lines);
+      await this.fixUnusedVariableError(error, lines);
     } else if (;
       error.rule === 'semi' ||;
       error.message.includes('missing semicolon');
@@ -298,13 +298,13 @@ console.log(`[${type.toUpperCase()}] ${message}`);
 ;
     // Convert single quotes to double quotes or vice versa;
     if (error.message.includes('single quotes')) {;
-      const fixedLine = targetLine.replace(/'/g, '"');
+      const fixedLine = targetLine.replace(/'/g, '');
       if (fixedLine !== targetLine) {;
         lines[error.line - 1] = fixedLine;
         fs.writeFileSync(error.file, lines.join('\n'));
       }
     } else if (error.message.includes('double quotes')) {;
-      const fixedLine = targetLine.replace(/"/g, "'");
+      const fixedLine = targetLine.replace(//g, "'");
       if (fixedLine !== targetLine) {;
         lines[error.line - 1] = fixedLine;
         fs.writeFileSync(error.file, lines.join('\n'));
@@ -338,7 +338,7 @@ console.log(`[${type.toUpperCase()}] ${message}`);
 
     // Comment out console statements;
     if (targetLine.includes('console.')) {
-<<<<<<< HEAD      const fixedLine = '// ' + targetLine;
+      const fixedLine = '// ' + targetLine;
       lines[error.line - 1] = fixedLine;
       fs.writeFileSync(error.file, lines.join('\n'));
     }
@@ -376,7 +376,7 @@ console.log(`[${type.toUpperCase()}] ${message}`);
     // Fix multiple spaces;
     fixedLine = fixedLine.replace(/[ ]{2}/g, ' ');
 
-<<<<<<< HEAD    // Fix missing spaces around operators;
+    // Fix missing spaces around operators;
     fixedLine = fixedLine.replace(/([^=!<>])=([^=])/g, '$1 = $2');
     fixedLine = fixedLine.replace(/([^=!<>])==([^=])/g, '$1 == $2');
     fixedLine = fixedLine.replace(/([^=!<>])===([^=])/g, '$1 === $2');
@@ -415,7 +415,7 @@ console.log(`[${type.toUpperCase()}] ${message}`);
     react: {
       version: `detect`,
     },
-  },};`;;
+  },};`;
       fs.writeFileSync(eslintConfigPath, updatedConfig);
       this.log(`Updated ESLint configuration for error fixing`);
     }
@@ -484,7 +484,7 @@ console.log(`[${type.toUpperCase()}] ${message}`);
         await this.fixESLintErrors(this.errors);
       } else {
         this.log(`No ESLint errors detected`);
-<<<<<<< HEAD      }
+      }
 ;
       const report = this.generateReport();
       this.log(`ESLint Error Fixer completed successfully`);
@@ -505,7 +505,7 @@ if (require.main === module) {
     .run()
     .then(report => {
       console.log(`ESLint Error Fixer completed successfully`);
-<<<<<<< HEAD      process.exit(0);
+      process.exit(0);
     });
     .catch(error => {;
       console.error('ESLint Error Fixer failed: ', error);

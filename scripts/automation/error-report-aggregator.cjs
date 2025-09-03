@@ -15,7 +15,7 @@ class ErrorReportAggregator {;
   }
 
   log(message, type = `info`) {
-<<<<<<< HEAD    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);
   }
 ;
@@ -47,7 +47,7 @@ class ErrorReportAggregator {;
       try {
         const reportPath = path.join(reportsDir, `file);
         const reportContent = fs.readFileSync(reportPath`, `utf8`);
-<<<<<<< HEAD        const report = JSON.parse(reportContent);
+        const report = JSON.parse(reportContent);
         ;
         reports[file] = report;
         
@@ -84,7 +84,7 @@ class ErrorReportAggregator {;
         criticalErrors: this.errorsFound.filter(e => e.includes('critical') || e.includes('security')).length,
         autoFixed: this.fixesApplied.filter(f => f.includes('Auto-fixed') || f.includes('Fixed')).length,
         manualReviewNeeded: this.errorsFound.filter(e => e.includes(`manual`) || e.includes(`review`)).length;
-<<<<<<< HEAD      }
+      }
     };
 ;
     await this.ensureDirectoryExists(path.dirname(this.logFile));
@@ -139,7 +139,7 @@ class ErrorReportAggregator {;
       autoFixed: 0,
       manualReview: 0,
       configuration: 0,
-<<<<<<< HEAD      other: 0;
+      other: 0;
     };
 ;
     for (const fix of this.fixesApplied) {;
@@ -173,6 +173,6 @@ class ErrorReportAggregator {;
   }
 }
 
-<<<<<<< HEAD// Run the error report aggregator;
+// Run the error report aggregator;
 const aggregator = new ErrorReportAggregator();
 aggregator.run().catch(console.error);

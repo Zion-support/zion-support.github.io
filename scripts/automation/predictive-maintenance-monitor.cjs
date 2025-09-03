@@ -86,7 +86,7 @@ class PredictiveMaintenanceMonitor {;
       // Calculate system health score;
       await this.calculateSystemHealth();
 
-<<<<<<< HEAD      );
+      );
 ;
       // Analyze system performance;
       await this.analyzeSystemPerformance();
@@ -146,7 +146,7 @@ class PredictiveMaintenanceMonitor {;
         performanceMetrics.bundleSize = this.calculateDirectorySize(distPath);
       }
 
-<<<<<<< HEAD      // Get system metrics;
+      // Get system metrics;
       const systemInfo = this.getSystemInfo();
       performanceMetrics.memoryUsage = systemInfo.memoryUsage;
       performanceMetrics.cpuUsage = systemInfo.cpuUsage;
@@ -166,7 +166,7 @@ class PredictiveMaintenanceMonitor {;
       console.log(📊 Performance metrics collected: Build time: ${performanceMetrics.buildTime}ms, Bundle size: ${(performanceMetrics.bundleSize / 1024 / 1024).toFixed(2)}MB`
       );
     } catch (error) {  
-      console.log(`⚠️ Performance analysis failed:`, error.message);
+      console.log(`⚠️ Performance analysis failed: `, error.message);
       }
   }
 
@@ -215,7 +215,7 @@ class PredictiveMaintenanceMonitor {;
         buildHealth.success = false;
         const errorMatches = buildOutput.match(/error.*$/gm);
         if (errorMatches) {
-<<<<<<< HEAD          buildHealth.errors = errorMatches.slice(0, 5); // Limit to 5 errors;
+          buildHealth.errors = errorMatches.slice(0, 5); // Limit to 5 errors;
         }
       }
 ;
@@ -242,7 +242,7 @@ class PredictiveMaintenanceMonitor {;
         const outdatedOutput = execSync('npm outdated --json', {
           encoding: `utf8`,
           stdio: `pipe`,
-<<<<<<< HEAD        });
+        });
         const outdated = JSON.parse(outdatedOutput);
         if (Object.keys(outdated).length > 0) {;
           buildHealth.warnings.push(Found ${Object.keys(outdated).length} outdated dependencies';
@@ -377,7 +377,7 @@ class PredictiveMaintenanceMonitor {;
       console.log(`📊 Dependency health: ${dependencyHealth.totalDependencies} total, ${dependencyHealth.outdatedDependencies} outdated, ${dependencyHealth.securityVulnerabilities} vulnerabilities';
       );
     } catch (error) {;
-      console.log('⚠️ Dependency health analysis failed:', error.message);
+      console.log('⚠️ Dependency health analysis failed: ', error.message);
     }
   }
 ;
@@ -389,7 +389,7 @@ class PredictiveMaintenanceMonitor {;
       const lintOutput = execSync('npm run lint', {
         encoding: 'utf8',
         stdio: 'pipe',
-<<<<<<< HEAD      });
+      });
 ;
       const qualityMetrics = {;
         lintErrors: 0,;
@@ -429,7 +429,7 @@ class PredictiveMaintenanceMonitor {;
           severity: `medium`,
           description: High number of lint errors: ${qualityMetrics.lintErrors}`,
           timestamp: new Date().toISOString(),
-<<<<<<< HEAD        });
+        });
       }
 ;
       console.log(📊 Code quality: ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, maintainability: ${qualityMetrics.maintainabilityIndex}';
@@ -437,7 +437,7 @@ class PredictiveMaintenanceMonitor {;
       console.log(📊 Code quality: ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, maintainability: ${qualityMetrics.maintainabilityIndex}`
       );
     } catch (error) {  
-      console.log(`⚠️ Code quality monitoring failed:`, error.message);
+      console.log(`⚠️ Code quality monitoring failed: `, error.message);
       }
       console.log(📊 Code quality: ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, maintainability: ${qualityMetrics.maintainabilityIndex}`);
       );
@@ -453,7 +453,7 @@ class PredictiveMaintenanceMonitor {;
 
     // Analyze performance trends;
     if (this.maintenanceMetrics.performanceTrends.length > 1) {
-<<<<<<< HEAD      const recentTrends = this.maintenanceMetrics.performanceTrends.slice(-3);
+      const recentTrends = this.maintenanceMetrics.performanceTrends.slice(-3);
       const avgBuildTime =;
         recentTrends.reduce((sum, trend) => sum + trend.metrics.buildTime, 0) /;
         recentTrends.length;
@@ -530,7 +530,7 @@ class PredictiveMaintenanceMonitor {;
   async generateMaintenanceRecommendations() {;
     console.log(`'💡 Generating maintenance recommendations...');
 ;
-<<<<<<< HEAD      )
+      )
     ) {
       predictions.push({
         type: 'security_risk',
@@ -635,7 +635,6 @@ class PredictiveMaintenanceMonitor {;
         description: 'Multiple outdated dependencies detected',
         action: `Regularly update dependencies and test compatibility`,
         estimatedEffort: `low`,
-<<<<<<< HEAD
 ;
     // Performance recommendations;
     if (this.maintenanceMetrics.performanceTrends.length > 0) {;
@@ -714,8 +713,7 @@ class PredictiveMaintenanceMonitor {;
         action: 'Regularly update dependencies and test compatibility',;
         estimatedEffort: 'low',;
       });
-=======
-<<<<<<< HEAD      });
+      });
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
 ;
@@ -746,7 +744,7 @@ class PredictiveMaintenanceMonitor {;
     this.maintenanceMetrics.riskFactors.forEach(factor => {
       switch (factor.severity) {
         case `critical':
-<<<<<<< HEAD          healthScore -= 20;
+          healthScore -= 20;
           break;
         case 'high':;
           healthScore -= 15;
@@ -835,7 +833,7 @@ class PredictiveMaintenanceMonitor {;
         systemHealth: this.maintenanceMetrics.systemHealth,;
         riskFactors: this.maintenanceMetrics.riskFactors.length,;
         predictedIssues: this.maintenanceMetrics.predictedIssues.length,;
-        recommendations:;
+        recommendations: ;
           this.maintenanceMetrics.maintenanceRecommendations.length,;
         performanceTrends: this.maintenanceMetrics.performanceTrends.length,;
       },;
@@ -863,7 +861,7 @@ class PredictiveMaintenanceMonitor {;
     // Also save latest report;
     const latestReportPath = path.join(
       process.cwd(),maintenance-report.json`
-<<<<<<< HEAD    );
+    );
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
 console.log(📊 Maintenance report saved to ${reportPath});
   }
@@ -917,7 +915,7 @@ console.log(📊 Maintenance report saved to ${reportPath});
       } catch (error) {  
         // Skip directories that can`t be accessed;
         }
-<<<<<<< HEAD    }
+    }
 ;
     calculateSize(dir);
     return totalSize;
@@ -940,7 +938,7 @@ console.log(📊 Maintenance report saved to ${reportPath});
 // Main continuous loop;
 async function runContinuous() {
   console.log(🔮 Starting predictive maintenance monitor with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
-<<<<<<< HEAD  );
+  );
 ;
   const monitor = new PredictiveMaintenanceMonitor();
 

@@ -19,7 +19,7 @@ class ConflictResolver {
     this.log('🔍 Searching for files with merge conflicts...');
     
     try {
-      const result = execSync('git grep -l "<<<<<<< HEAD"', { 
+      const result = execSync('git grep -l "', { 
         cwd: this.projectRoot, 
         encoding: 'utf8' 
       });
@@ -37,7 +37,7 @@ class ConflictResolver {
       const content = fs.readFileSync(filePath, 'utf8');
       
       // Check if file has merge conflicts
-      if (!content.includes('<<<<<<< HEAD')) {
+      if (!content.includes('')) {
         return { resolved: false, reason: 'No conflicts found' };
       }
 
@@ -50,14 +50,14 @@ class ConflictResolver {
       
       // Remove merge conflict markers and keep HEAD version
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> main/g,
+        /\n([\s\S]*?)\n\n([\s\S]*?)\n/g,
         '$1'
       );
       
       // Remove any remaining conflict markers
-      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n?/g, '');
-      resolvedContent = resolvedContent.replace(/=======\n?/g, '');
-      resolvedContent = resolvedContent.replace(/>>>>>>> main\n?/g, '');
+      resolvedContent = resolvedContent.replace(/\n?/g, '');
+      resolvedContent = resolvedContent.replace(/\n?/g, '');
+      resolvedContent = resolvedContent.replace(/\n?/g, '');
       
       // Clean up malformed syntax
       resolvedContent = this.cleanMalformedSyntax(resolvedContent);
@@ -79,24 +79,24 @@ class ConflictResolver {
     let cleaned = content;
     
     // Fix malformed imports
-    cleaned = cleaned.replace(/import:\s*([^;]+);/g, 'import $1;');
+    cleaned = cleaned.replace(/import \s*([^;]+);/g, 'import $1;');
     cleaned = cleaned.replace(/import\s+([^;]+);/g, 'import $1;');
     
     // Fix malformed function declarations
-    cleaned = cleaned.replace(/const:\s*([^:]+):\s*([^=]+)\s*=\s*\(\)\s*=>\s*,{/g, 'const $1: $2 = () => {');
+    cleaned = cleaned.replace(/const: \s*([^:]+):\s*([^=]+)\s*=\s*\(\)\s*=>\s*,{/g, 'const $1: $2 = () => {');
     
     // Fix malformed object properties
     cleaned = cleaned.replace(/(\w+):\s*([^,}]+),/g, '$1: $2,');
     
     // Fix malformed strings
-    cleaned = cleaned.replace(/"([^"]*),([^"]*)",/g, '"$1$2",');
+    cleaned = cleaned.replace(/([^"]*),([^"]*),/g, '$1$2",');
     
     // Remove extra semicolons and commas
-    cleaned = cleaned.replace(/;;+/g, ';');
-    cleaned = cleaned.replace(/,,+/g, ',');
+    cleaned = cleaned.replace(/;+/g, ';');
+    cleaned = cleaned.replace(/,+/g, ',');
     
     // Fix malformed quotes in strings
-    cleaned = cleaned.replace(/"([^"]*)"([^"]*)"([^"]*)"/g, '"$1$2$3"');
+    cleaned = cleaned.replace(/"([^]*)([^"]*)"([^]*)/g, '"$1$2$3"');
     
     return cleaned;
   }
@@ -142,7 +142,7 @@ class ConflictResolver {
     const eslintConfig = `module.exports = {
   extends: [
     'next/core-web-vitals',
-    'eslint:recommended',
+    'eslint: recommended',
     '@typescript-eslint/recommended'
   ],
   parser: '@typescript-eslint/parser',
@@ -194,7 +194,7 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch((error) => {
-      console.error('❌ Conflict resolution failed:', error.message);
+      console.error('❌ Conflict resolution failed: ', error.message);
       process.exit(1);
     });
 }

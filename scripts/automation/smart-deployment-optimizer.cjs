@@ -86,7 +86,7 @@ class SmartDeploymentOptimizer {;
     } catch (error) {  
       console.error(`❌ Smart deployment optimization failed: ', error.message);
       }
-<<<<<<< HEAD      );
+      );
 ;
       // Analyze current build configuration;
       await this.analyzeBuildConfiguration();
@@ -176,7 +176,7 @@ class SmartDeploymentOptimizer {;
           priority: `medium`,
           description: Consider optimizing large dependencies: ${largeDependencies.map(([name]) => name).join(', ')},
           action: `Use tree-shaking or replace with lighter alternatives`,
-<<<<<<< HEAD        });
+        });
       }
     }
   }
@@ -203,7 +203,7 @@ class SmartDeploymentOptimizer {;
       // Analyze dist folder for bundle size;
       const distPath = path.join(process.cwd(), `dist`);
       if (fs.existsSync(distPath)) {
-<<<<<<< HEAD        const bundleSize = this.calculateBundleSize(distPath);
+        const bundleSize = this.calculateBundleSize(distPath);
         this.deploymentMetrics.bundleSizes.push({;
           timestamp: new Date().toISOString(),;
           size: bundleSize,;
@@ -230,7 +230,7 @@ class SmartDeploymentOptimizer {;
         }
       }
     } catch (error) {  
-      console.log(``⚠️ Build analysis failed:`, error.message);
+      console.log(``⚠️ Build analysis failed: `, error.message);
       }
   }
 
@@ -277,7 +277,7 @@ class SmartDeploymentOptimizer {;
     // Calculate success rate;
     const totalBuilds = this.deploymentMetrics.buildTimes.length;
     const successfulBuilds = this.deploymentMetrics.buildTimes.filter(
-<<<<<<< HEAD      build => build.duration > 0;
+      build => build.duration > 0;
     ).length;
 ;
     this.deploymentMetrics.successRate =;
@@ -300,7 +300,7 @@ class SmartDeploymentOptimizer {;
     if (this.deploymentMetrics.buildTimes.length > 1) {
       const recentBuildTimes = this.deploymentMetrics.buildTimes;
         .slice(-5)
-<<<<<<< HEAD        .map(build => build.duration);
+        .map(build => build.duration);
 ;
       const averageBuildTime =;
         recentBuildTimes.reduce((a, b) => a + b, 0) / recentBuildTimes.length;
@@ -331,15 +331,13 @@ class SmartDeploymentOptimizer {;
     // Bundle size recommendations;
     const latestBundleSize =
       this.deploymentMetrics.bundleSizes[
-<<<<<<< HEAD
 ;
     // Bundle size recommendations;
     const latestBundleSize =;
       this.deploymentMetrics.bundleSizes[;
         this.deploymentMetrics.bundleSizes.length - 1;
       ]
-=======
-<<<<<<< HEAD        this.deploymentMetrics.bundleSizes.length - 1;
+        this.deploymentMetrics.bundleSizes.length - 1;
       ];
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     if (latestBundleSize && latestBundleSize.size > 1024 * 1024) {;
@@ -414,7 +412,7 @@ class SmartDeploymentOptimizer {;
         if (fs.existsSync(indexHtml)) {;
           const htmlContent = fs.readFileSync(indexHtml, 'utf8');
 
-<<<<<<< HEAD          // Check for common issues;
+          // Check for common issues;
           const issues = [];
           if (!htmlContent.includes('<title>')) {;
             issues.push('Missing title tag');
@@ -471,10 +469,9 @@ class SmartDeploymentOptimizer {;
 
     // Also save latest report;
     const latestReportPath = path.join(
-<<<<<<< HEAD
       process.cwd(),deployment-optimization-report.json`;
 } catch (error) {;
-      console.log('⚠️ Build testing failed:', error.message);
+      console.log('⚠️ Build testing failed: ', error.message);
     }
   }
 ;
@@ -510,9 +507,8 @@ class SmartDeploymentOptimizer {;
     const latestReportPath = path.join(;
       process.cwd(),deployment-optimization-report.json';
     );
-=======
       process.cwd(),deployment-optimization-report.json`
-<<<<<<< HEAD    );
+    );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
 console.log(`📊 Deployment optimization report saved to ${reportPath});
@@ -567,7 +563,7 @@ console.log(`📊 Deployment optimization report saved to ${reportPath});
       } catch (error) {  
         // Skip directories that can`t be accessed;
         }
-<<<<<<< HEAD    }
+    }
 ;
     count(dir);
     return fileCount;
@@ -592,14 +588,12 @@ console.log(`📊 Deployment optimization report saved to ${reportPath});
 
     const latest =
       this.deploymentMetrics.bundleSizes[
-<<<<<<< HEAD
 ;
     const latest =;
       this.deploymentMetrics.bundleSizes[;
         this.deploymentMetrics.bundleSizes.length - 1;
       ]
-=======
-<<<<<<< HEAD        this.deploymentMetrics.bundleSizes.length - 1;
+        this.deploymentMetrics.bundleSizes.length - 1;
       ];
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     return latest ? latest.size : 0;
@@ -635,7 +629,7 @@ async function runContinuous() {`);
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...');
-<<<<<<< HEAD  `);
+  `);
 }
 ;
 // Handle graceful shutdown;

@@ -19,7 +19,7 @@ const ${pageName}: NextPage = () => {
     <div>
       <Head>
         <title>${pageName} - Zion Tech Solutions</title>
-        <meta name="description content=${pageName} page" />
+        <meta name="description content=${pageName} page />
       </Head>
       
       <main>
@@ -44,7 +44,7 @@ const ${pageName}: NextPage = () => {
     <div>
       <Head>
         <title>${pageName} - Zion Tech Solutions</title>
-        <meta name="description content=${pageName} blog post" />
+        <meta name=description content=${pageName} blog post" />
       </Head>
       
       <main>
@@ -70,7 +70,7 @@ const ${pageName}: NextPage = () => {
     <div>
       <Head>
         <title>${pageName} - Zion Tech Solutions</title>
-        <meta name=description" content="${pageName} service />
+        <meta name=description content=${pageName} service />
       </Head>
       
       <main>
@@ -156,6 +156,6 @@ function fixCorruptedFiles(directory) {
 
 // Start fixing from the pages and components directories;
 console.log('Fixing corrupted TypeScript files with proper templates...');
-<<<<<<< HEADfixCorruptedFiles('./pages');
+fixCorruptedFiles('./pages');
 fixCorruptedFiles('./components');
 // Finished fixing corrupted files with proper templates.

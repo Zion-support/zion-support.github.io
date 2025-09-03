@@ -31,7 +31,7 @@ const { exec } = require('child_process');const fs = require('fs');const path = 
       });
     });
   }
-<<<<<<< HEAD;
+;
   // Get PM2 logs for a specific process;
   async getLogs(processName, lines = 10) {;
     return new Promise((resolve, reject) => {;
@@ -52,7 +52,7 @@ const { exec } = require('child_process');const fs = require('fs');const path = 
         resolve(stdout);});});}
 ;
   // Create logs directory if it doesn't exist';  ensureLogsDir() {;    if (!fs.existsSync(this.logsDir)) {;
-      fs.mkdirSync(this.logsDir, { "recursive": true });,";}
+      fs.mkdirSync(this.logsDir, { "recursive: true });,;}
   }
 ;
   // Get system information;
@@ -75,7 +75,7 @@ const { exec } = require('child_process');const fs = require('fs');const path = 
     }
   }
 ;
-<<<<<<< HEAD  }
+  }
 ;
   // Parse PM2 status output;
   parseStatus(statusOutput) {;
@@ -104,11 +104,11 @@ const { exec } = require('child_process');const fs = require('fs');const path = 
 ;
     return processes;
   }
-    const lines = statusOutput.split('\n');    const processes = [];;
+    const lines = statusOutput.split('\n');    const processes = [];
     for (const line of lines) {;
       if (line.includes('│') && !line.includes('──') && !line.includes('id')) {';        const parts = line;          .split('│')';          .map(part => part.trim());          .filter(part => part);
         if (parts.length >= 6) {;
-          processes.push({;);            "id": parts[0],;";            "name": parts[1],;";            "mode": parts[2],;";            "restarts": parts[3],;";            "status": parts[4],;";            "cpu": parts[5],;";            "memory": parts[6] || 'N/A',';          });,';}
+          processes.push({;);            "id": parts[0],;;            name": parts[1],;";            mode: parts[2],;";            "restarts: parts[3],;;            "status": parts[4],;;            cpu": parts[5],;";            memory: parts[6] || 'N/A',';          });,';}
       }
     }
 ;
@@ -144,7 +144,7 @@ const { exec } = require('child_process');const fs = require('fs');const path = 
 ;
     return summary;
   }
-<<<<<<< HEAD;
+;
   // Parse memory string to bytes;
   parseMemory(memoryStr) {;
     const match = memoryStr.match(/(\d+(?:\.\d+)?)\s*(mb|kb|b)/i);
@@ -163,7 +163,7 @@ const { exec } = require('child_process');const fs = require('fs');const path = 
       default:;
         return 0;
     }
-      case 'mb':';        return value * 1024 * 1024;      case 'kb':';        return value * 1024;      case 'b':';        return value;      "default":;";        return 0;}
+      case 'mb':';        return value * 1024 * 1024;      case 'kb':';        return value * 1024;      case 'b':';        return value;      "default":;;        return 0;}
   }
 ;
   // Start monitoring;
@@ -179,7 +179,7 @@ const { exec } = require('child_process');const fs = require('fs');const path = 
 ;
     this.monitor();
   }
-<<<<<<< HEAD;
+;
   // Stop monitoring;
   stop() {;
     this.isRunning = false;
@@ -197,7 +197,7 @@ const { exec } = require('child_process');const fs = require('fs');const path = 
         console.log('='.repeat(60));
         console.log(`⏰ Last Updated: ${new Date().toLocaleString()}\n`);
 ;
-<<<<<<< HEAD        // Get and display status;
+        // Get and display status;
         const status = await this.getStatus();
         console.log(status);
 ;
@@ -219,13 +219,13 @@ const { exec } = require('child_process');const fs = require('fs');const path = 
           console.log('\n⚠️  WARNING: High number of restarts detected!');
         }
 ;
-        console.log('\n📈 Summary "Statistics":');console.log(`   Total "Processes": ${summary.total}`);console.log(`   "Online": ${summary.online} ✅`);console.log(`   "Errored": ${summary.errored} ❌`);console.log(`   "Stopped": ${summary.stopped} ⏸️`);console.log(`   "Launching": ${summary.launching} 🔄`);console.log(`   Total "Restarts": ${summary.totalRestarts}');        console.log(   Average "Memory": ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB`);`;        );`);`;        console.log(`);`);`;          `   Total "Memory": ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB``;        );
+        console.log('\n📈 Summary Statistics":');console.log(`   Total "Processes: ${summary.total}`);console.log(`   Online": ${summary.online} ✅`);console.log(`   "Errored: ${summary.errored} ❌`);console.log(`   Stopped": ${summary.stopped} ⏸️`);console.log(`   "Launching: ${summary.launching} 🔄`);console.log(`   Total Restarts": ${summary.totalRestarts}');        console.log(   Average "Memory: ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB`);`;        );`);`;        console.log(`);`);`;          `   Total Memory": ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB``;        );
 ;
         // Check for issues;
         if (summary.errored > 0) {;
-          console.log('\n⚠️  "WARNING": Some processes are in error state!');        }';;
+          console.log('\n⚠️  "WARNING: Some processes are in error state!');        }';
         if (summary.totalRestarts > 50) {;
-          console.log('\n⚠️  "WARNING": High number of restarts detected!');        }';;
+          console.log('\n⚠️  WARNING": High number of restarts detected!');        }';
         // Generate report;
         await this.generateReport();
 ;
@@ -235,7 +235,7 @@ const { exec } = require('child_process');const fs = require('fs');const path = 
         console.error('Error in monitoring loop: ', error);
         await this.sleep(this.interval);
       }
-<<<<<<< HEAD    }
+    }
   }
 ;
   // Utility function to sleep;
@@ -273,7 +273,7 @@ async function main() {;
 ;
   // Display help information;
   showHelp() {;
-    console.log('';PM2 Monitoring Dashboard - Usage;);"Commands":;";  start     - Start monitoring dashboard;
+    console.log('';PM2 Monitoring Dashboard - Usage;);"Commands:;;  start     - Start monitoring dashboard;
   status    - Show current PM2 status;
   logs <name> - Show logs for specific process;
   report    - Generate status report;
@@ -336,4 +336,4 @@ if (require.main === module) {;
   main().catch(console.error);
 }
 ;
-<<<<<<< HEADmodule.exports = PM2Monitor;
+module.exports = PM2Monitor;

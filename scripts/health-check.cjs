@@ -22,7 +22,7 @@ const fs = require('fs');const path = require('path');const { execSync } = requi
   constructor() {;
     this.checks = [];
     this.results = {;
-      "timestamp": new Date().toISOString(),;";      "overall": 'healthy',';      "checks": [],;,";};}
+      "timestamp: new Date().toISOString(),;;      "overall": 'healthy',';      checks: [],;,";};}
 ;
   async runCheck(name, checkFn) {;
     try {;
@@ -95,7 +95,7 @@ const fs = require('fs');const path = require('path');const { execSync } = requi
     return this.results;
   }
 }
-<<<<<<< HEAD;
+;
 // Run health checks if called directly;
 if (require.main === module) {;
   const checker = new HealthChecker();

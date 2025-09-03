@@ -23,7 +23,7 @@ class SecurityAutomation {;
     const dirs = [''this.'projectRoot/security-reports'', ''this.'projectRoot/security-scan-results'', ``];
     dirs.forEach(dir => {
       if (!fs.existsSync(dir)) {
-<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
+        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -71,7 +71,7 @@ class SecurityAutomation {;
       });
 
       child.on(`close`, code => {
-<<<<<<< HEAD        if (code === 0) {this.log(`Command completed successfully with code ${code}`);
+        if (code === 0) {this.log(`Command completed successfully with code ${code}`);
           resolve({ code, stdout, stderr });
         } else {this.log(`Command failed with code ${code}`, `ERROR`);reject(new Error(`Command failed with code ${code}: ${stderr}`));
         }
@@ -90,7 +90,7 @@ class SecurityAutomation {;
     try {
       await this.runCommand(`npm ci`);
       this.log(`Dependencies installed successfully`);
-<<<<<<< HEAD      return true;
+      return true;
     } catch (error) {  this.log(`Failed to install dependencies: ${error.message  }`, `ERROR`);
       return false;
     }
@@ -173,7 +173,6 @@ this.log(`Found ${outdatedCount} outdated packages`);
       // Save outdated packages report;
       const outdatedReportFile = path.join(
         this.projectRoot,security-reports`,
-<<<<<<< HEAD
         `outdated-packages.json';
 } catch (error) {;
       this.log(`NPM audit failed: ${error.message}`, 'ERROR');
@@ -199,9 +198,8 @@ this.log(`Found ${outdatedCount} outdated packages');
         this.projectRoot,security-reports',;
         'outdated-packages.json';
       );
-=======
         `outdated-packages.json'
-<<<<<<< HEAD      );
+      );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       fs.writeFileSync(;
         outdatedReportFile,;
@@ -273,7 +271,7 @@ this.log(`Found ${outdatedCount} outdated packages');
       timestamp: new Date().toISOString(),;
     });
 
-<<<<<<< HEAD    // Check outdated packages;
+    // Check outdated packages;
     const outdatedResult = await this.checkOutdatedPackages();
     results.push({;
       step: 'outdated-packages',;
@@ -345,7 +343,7 @@ this.log(`Found ${outdatedCount} outdated packages');
       priority: 'LOW',
       action: `Regular security audits`,
       details: `Run security scans weekly to maintain security posture`,
-<<<<<<< HEAD    });
+    });
 ;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(`Security report generated: ${this.reportFile}`);
 ;
@@ -408,7 +406,6 @@ this.log(`Security automation completed. Status: ${report.status}`);this.log(`Se
 }
 
 // Run the automation if this script is executed directly;
-<<<<<<< HEAD
 if (require.main === module) {;
 } else {;
       this.log('No security vulnerabilities found. System is secure.', 'INFO');
@@ -419,9 +416,8 @@ if (require.main === module) {;
 // Run the automation if this script is executed directly;
 if (require.main === module) {;
   const security = new SecurityAutomation();
-=======
 if (require.main === module) {
-<<<<<<< HEAD  const security = new SecurityAutomation();
+  const security = new SecurityAutomation();
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   security.run().catch(error => {;
     console.error('Security automation failed: ', error);

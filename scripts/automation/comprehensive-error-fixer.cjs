@@ -39,7 +39,7 @@ class ComprehensiveErrorFixer {;
     };
     this.startTime = Date.now();
     // Get automation interval from environment variable (default: 30 minutes)
-<<<<<<< HEAD    this.AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes;
+    this.AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes;
   }
 ;
   ensureLogDirectory() {;
@@ -50,7 +50,7 @@ class ComprehensiveErrorFixer {;
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);;
+    console.log(`[${new Date().toISOString()}] ${message}`);
 ;
   log(message) {;
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -67,7 +67,6 @@ class ComprehensiveErrorFixer {;
       'src/context/auth/AuthContext.tsx',
       'src/context/auth/profileMapper.ts',
       'src/context/auth/useAuthEventHandlers.ts',
-<<<<<<< HEAD
 ;
     // Fix common TypeScript syntax errors;
     const filesToFix = [;
@@ -78,8 +77,7 @@ class ComprehensiveErrorFixer {;
       'src/context/auth/profileMapper.ts',;
       'src/context/auth/useAuthEventHandlers.ts',;
     ]
-=======
-<<<<<<< HEAD    ];
+    ];
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ;
     for (const filePath of filesToFix) {;
@@ -113,7 +111,7 @@ class ComprehensiveErrorFixer {;
           // Fix property signatures;
           content = content.replace(/action\?\s*:\s*{\s*;/g, 'action?: {');
           content = content.replace(;
-            /logout:\s*any\(\)\s*=>\s*Promise<any>;/g,;
+            /logout: \s*any\(\)\s*=>\s*Promise<any>;/g,;
             'logout: () => Promise<any>;
           );
 ;
@@ -162,7 +160,7 @@ class ComprehensiveErrorFixer {;
           // Fix JSX expressions;
           content = content.replace(
             /<div\s+className="max-w-4xl mx-auto space-y-8>\s*<div/g,
-            `<div className=max-w-4xl mx-auto space-y-8"><div`          );
+            `<div className=max-w-4xl mx-auto space-y-8><div`          );
 ;
           if (content !== originalContent) {;
             fs.writeFileSync(filePath, content);
@@ -216,7 +214,7 @@ class ComprehensiveErrorFixer {;
         let originalContent = content;
 
         // Remove empty import statements;
-        content = content.replace(/import\s+{\s*}\s+from\s+[`"][^']+['];?\n?/g, '');
+        content = content.replace(/import\s+{\s*}\s+from\s+[`][^']+['];?\n?/g, '');
         
         // Remove unused React imports if no JSX;
         if (!content.includes('jsx') && !content.includes('JSX`)) {
@@ -231,7 +229,7 @@ class ComprehensiveErrorFixer {;
         let originalContent = content;
 ;
         // Remove empty import statements;
-        content = content.replace(/import\s+{\s*}\s+from\s+['"][^'"]+['"];?\n?/g, ');
+        content = content.replace(/import\s+{\s*}\s+from\s+['][^']+['"];?\n?/g, ');
         ;
         // Remove unused React imports if no JSX;
         if (!content.includes('jsx') && !content.includes('JSX')) {;
@@ -281,7 +279,7 @@ class ComprehensiveErrorFixer {;
           content = content.replace(/console\.info\(/g, `// console.info(`);
 
           if (content !== originalContent) {
-<<<<<<< HEAD            fs.writeFileSync(filePath, content);
+            fs.writeFileSync(filePath, content);
             fixes++;
             this.log(`  ✅ Fixed console statements in ${filePath}`);
           }
@@ -383,11 +381,9 @@ class ComprehensiveErrorFixer {;
         await this.generateErrorReport();
         
         this.log(`Comprehensive error fixing completed successfully!`);
-<<<<<<< HEAD
         ;
 } catch (error) {  
-        this.log(`Error during automation: ${error.message  }`);;
-=======
+        this.log(`Error during automation: ${error.message  }`);
         
       } catch (error) {  
         this.log(`Error during automation: ${error.message  }`);
@@ -556,11 +552,9 @@ class ComprehensiveErrorFixer {;
       } else {
         this.log(`Some checks failed, but errors were fixed`);
       }
-<<<<<<< HEAD
       ;
 } catch (error) {  
-      this.log(`Error in Comprehensive Error Fixer: ${error.message  }`);;
-=======
+      this.log(`Error in Comprehensive Error Fixer: ${error.message  }`);
       
     } catch (error) {  
       this.log(`Error in Comprehensive Error Fixer: ${error.message  }`);
@@ -570,7 +564,7 @@ class ComprehensiveErrorFixer {;
 
   async fixImportIssues() {
     this.log(`🔧 Fixing import issues...`);
-<<<<<<< HEAD    // Implementation for fixing import issues;
+    // Implementation for fixing import issues;
     this.errorTypes.import++;
     this.fixCount++;
   }
@@ -587,7 +581,7 @@ class ComprehensiveErrorFixer {;
 
   async fixDependencyIssues() {
     this.log(`🔧 Fixing dependency issues...');
-<<<<<<< HEAD    // Implementation for fixing dependency issues;
+    // Implementation for fixing dependency issues;
     this.errorTypes.dependency++;
     this.fixCount++;
   }
@@ -616,13 +610,11 @@ class ComprehensiveErrorFixer {;
     try {;
       execSync('npx eslint . --fix', { stdio: 'pipe' });
       return true;
-<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       this.log('Lint failed');
-=======
     } catch (error) {  
-<<<<<<< HEAD      this.log('Lint failed');
+      this.log('Lint failed');
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       return false;
       }
@@ -697,7 +689,7 @@ process.on(`SIGTERM`, () => {
 
 // Run the fixer;
 fixer.runContinuous().catch(error => {
-  fixer.log(`Unhandled error: ${error.message}`);;
+  fixer.log(`Unhandled error: ${error.message}`);
 ;
   // Main continuous loop;
   async runContinuous() {;
@@ -718,7 +710,7 @@ fixer.runContinuous().catch(error => {
 // Start the comprehensive error fixer;
 const fixer = new ComprehensiveErrorFixer();
 fixer.runContinuous().catch(error => {;
-  console.error('❌ Failed to start comprehensive error fixer:', error);
+  console.error('❌ Failed to start comprehensive error fixer: ', error);
   process.exit(1);
 });
 ;

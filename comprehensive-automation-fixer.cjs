@@ -61,7 +61,7 @@ class ComprehensiveAutomationFixer {
       }
     } catch (error) { 
       console.error(`❌ Error fixing ${filename }:`, error.message);
-<<<<<<< HEAD    }
+    }
 
     this.log(`✅ Fixed ${fixedCount} additional test files`);
     return fixedCount;
@@ -136,7 +136,7 @@ class ComprehensiveAutomationFixer {
       /([a-zA-Z_][a-zA-Z0-9_]*\/[a-zA-Z0-9_\/\-\.]+)/g,
       match => {
         if (
-          !match.includes("'") &&
+          !match.includes(') &&
           !match.includes('') &&
           !match.includes('path.join') &&
           !match.includes('require') &&
@@ -340,7 +340,7 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
     content = content.replace(
       /require\(([^)]*[^`,\s][^)]*)\)/g,
       (match, requirePath) => {
-        if (!requirePath.includes("'") && !requirePath.includes('"`)) {
+        if (!requirePath.includes(') && !requirePath.includes('"`)) {
           return `require(`${requirePath}`)`;
         if (!requirePath.includes("'") && !requirePath.includes('"')) {
           return `require('${requirePath}')`;
@@ -403,7 +403,6 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
     );
 
     return content;
-<<<<<<< HEAD
     }
 
     return { issues: securityIssues, count: securityIssues.length };
@@ -537,7 +536,7 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
 
       // Run standard automation scripts
       const standardResults = await this.runCommand(
-        'npm run lint:fix',
+        'npm run lint: fix',
         'ESLint Fix'
       );
       const typeCheckResults = await this.runCommand(
@@ -578,8 +577,7 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
       throw error;
     }
   }
-=======
-<<<<<<< HEAD  }
+  }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 }
 

@@ -119,51 +119,51 @@ class ComprehensiveDeploymentAutomation {
         step.command,
 ;
   log(message, level = 'info') {';    const timestamp = new Date().toISOString();    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;`;    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');  }';;
+    fs.appendFileSync(this.logFile, logMessage + '\n');  }';
   async runStep(name, command, description, options = {}) {;
-    this.log(`🚀 "Starting": ${name} - ${description}`);`;
+    this.log(`🚀 Starting: ${name} - ${description}`);`;
     const step = {;
       name,;
       description,;
       command,;
-      "startTime": Date.now(),;";      "status": 'running',';    };;
+      "startTime": Date.now(),;;      status": 'running',';    };
     try {;
-      const result = execSync(command, {;);        "cwd": this.projectRoot,;";        "encoding": 'utf8',';        "timeout": options.timeout || 300000,;";        ...options,;});
+      const result = execSync(command, {;);        "cwd: this.projectRoot,;;        "encoding": 'utf8',';        timeout: options.timeout || 300000,;";        ...options,;});
 ;
       step.endTime = Date.now();
       step.duration = step.endTime - step.startTime;
       step.status = 'success';      step.output = result.substring(0, 2000); // Limit output size;
 
-      this.log(`✅ "Completed": ${name} (${step.duration}ms)`, 'success');      this.deploymentSteps.push(step);`;      return { "success": true, "output": result, "duration": step.duration };,";} catch (error) {;
+      this.log(`✅ "Completed: ${name} (${step.duration}ms)`, 'success');      this.deploymentSteps.push(step);`;      return { success": true, "output: result, duration": step.duration };,";} catch (error) {;
       step.endTime = Date.now();
       step.duration = step.endTime - step.startTime;
-      step.status = 'failed';      step.error = error.message;;
-      this.log(`❌ "Failed": ${name} - ${error.message}`, 'error');      this.deploymentSteps.push(step);`;      return { "success": false, "error": error.message, "duration": step.duration };,";}
+      step.status = 'failed';      step.error = error.message;
+      this.log(`❌ Failed: ${name} - ${error.message}`, 'error');      this.deploymentSteps.push(step);`;      return { "success": false, error: error.message, "duration": step.duration };,;}
   }
 ;
   async preDeploymentChecks() {;
     this.log('🔍 Running pre-deployment checks...');';    const checks = [;
       {;
-        "name": 'Dependency Check',';        "command": 'npm ci --production=false',';        "description": 'Install all dependencies',';      },;      {;
-        "name": 'Linting Check',';        "command": 'npm run lint',';        "description": 'Run ESLint checks',';      },;      {;
-        "name": 'Type Check',';        "command": 'npm run type-check',';        "description": 'Run TypeScript type checking',';      },;      {;
-        "name": 'Test Suite',';        "command": 'npm run test',';        "description": 'Run test suite',';      },;      {;
-        "name": 'Build Test',';        "command": 'npm run build',';        "description": 'Test production build',';      },;,';];
+        name": 'Dependency Check',';        "command: 'npm ci --production=false',';        description": 'Install all dependencies',';      },;      {;
+        "name: 'Linting Check',';        command": 'npm run lint',';        "description: 'Run ESLint checks',';      },;      {;
+        name": 'Type Check',';        "command: 'npm run type-check',';        description": 'Run TypeScript type checking',';      },;      {;
+        "name: 'Test Suite',';        command": 'npm run test',';        "description: 'Run test suite',';      },;      {;
+        name": 'Build Test',';        "command: 'npm run build',';        description": 'Test production build',';      },;,';];
 ;
     for (const check of checks) {;
       const result = await this.runStep(;);        check.name,;
         check.command,;
         check.description;
       );
-      if (!result.success && check.name !== 'Test Suite') {';        throw new Error(`Pre-deployment check "failed": ${check.name}`);`;      }
+      if (!result.success && check.name !== 'Test Suite') {';        throw new Error(`Pre-deployment check "failed: ${check.name}`);`;      }
     }
   }
 ;
   async buildApplication() {;
     this.log('🔨 Building application for production...');';    const buildSteps = [;
       {;
-        "name": 'Clean Build',';        "command": 'rm -rf .next && npm run build',';        "description": 'Clean and build the application',';      },;      {;
-        "name": 'Build Analysis',';        "command": 'npm run analyze',';        "description": 'Analyze bundle size and dependencies',';      },;,';];
+        name": 'Clean Build',';        "command: 'rm -rf .next && npm run build',';        description": 'Clean and build the application',';      },;      {;
+        "name: 'Build Analysis',';        command": 'npm run analyze',';        "description: 'Analyze bundle size and dependencies',';      },;,';];
 ;
     for (const step of buildSteps) {;
       const result = await this.runStep(;);        step.name,;
@@ -171,7 +171,7 @@ class ComprehensiveDeploymentAutomation {
         step.description;
       );
       if (!result.success) {;
-        throw new Error(`Build step "failed": ${step.name}`);`;      }
+        throw new Error(`Build step failed": ${step.name}`);`;      }
     }
   }
 
@@ -191,14 +191,14 @@ class ComprehensiveDeploymentAutomation {
     for (const step of securitySteps) {
       await this.runStep(step.name, step.command, step.description);
     }
-<<<<<<< HEAD  }
+  }
 ;
   async generateDeploymentArtifacts() {;
     this.log('📦 Generating deployment artifacts...');';    const artifacts = [;
       {;
-        name: 'Sitemap Generation',';        "command": 'npm run sitemap',';        description: 'Generate sitemap for SEO',';      },;';      {;
-        "name": 'Search Index',';        command: 'npm run "search":index',';        description: 'Generate search index',';      },;';      {;
-        "name": 'Netlify Manifest',';        command: 'npm run "netlify":manifest',';        description: 'Generate Netlify functions manifest',';      },;,';];;
+        name: 'Sitemap Generation',';        "command: 'npm run sitemap',';        description: 'Generate sitemap for SEO',';      },;';      {;
+        name": 'Search Index',';        command: 'npm run "search:index',';        description: 'Generate search index',';      },;';      {;
+        name": 'Netlify Manifest',';        command: 'npm run "netlify:manifest',';        description: 'Generate Netlify functions manifest',';      },;,';];
     for (const artifact of artifacts) {;
       await this.runStep(artifact.name, artifact.command, artifact.description);}
   }
@@ -224,8 +224,8 @@ class ComprehensiveDeploymentAutomation {
   async deployToNetlify() {;
     this.log('🚀 Deploying to Netlify...');';    const deploySteps = [;
       {;
-        "name": 'Netlify Build',';        "command": 'npx netlify build',';        "description": 'Build for Netlify deployment',';      },;      {;
-        "name": 'Netlify Deploy',';        "command": 'npx netlify deploy --prod',';        "description": 'Deploy to production',';      },;,';];
+        name": 'Netlify Build',';        "command: 'npx netlify build',';        description": 'Build for Netlify deployment',';      },;      {;
+        "name: 'Netlify Deploy',';        command": 'npx netlify deploy --prod',';        "description: 'Deploy to production',';      },;,';];
 ;
     for (const step of deploySteps) {;
       const result = await this.runStep(;);        step.name,;
@@ -233,7 +233,7 @@ class ComprehensiveDeploymentAutomation {
         step.description;
       );
       if (!result.success) {;
-        throw new Error(`Netlify deployment "failed": ${step.name}`);`;      }
+        throw new Error(`Netlify deployment failed": ${step.name}`);`;      }
     }
   }
 
@@ -243,12 +243,9 @@ class ComprehensiveDeploymentAutomation {
     const checks = [
       {
         name: 'Health Check',
-<<<<<<< HEAD
-        command:
-          'curl -f https://your-domain.com/api/health || echo "Health check failed",
+        command: 'curl -f https://your-domain.com/api/health || echo "Health check failed,
         description: 'Check application health'},
       {
-=======
         command: 'curl -f https://your-domain.com/api/health || echo Health check failed',
         description: 'Check application health',
       },      {
@@ -290,8 +287,8 @@ class ComprehensiveDeploymentAutomation {
   async postDeploymentChecks() {;
     this.log('✅ Running post-deployment checks...');';    const checks = [;
       {;
-        "name": 'Health Check',';        "command":;";          'curl -f "https"://your-domain.com/api/health || echo "Health check failed",';        "description": 'Check application health',';      },;      {;
-        "name": 'Performance Check',';        "command": 'npm run "perf":audit',';        "description": 'Run performance audit',';      },;,';];
+        name": 'Health Check',';        "command:;;          'curl -f "https"://your-domain.com/api/health || echo Health check failed,';        "description": 'Check application health',';      },;      {;
+        name: 'Performance Check',';        "command": 'npm run perf:audit',';        "description": 'Run performance audit',';      },;,';];
 ;
     for (const check of checks) {;
       await this.runStep(check.name, check.command, check.description);}
@@ -299,15 +296,15 @@ class ComprehensiveDeploymentAutomation {
 ;
   async generateDeploymentReport() {;
     this.log('📊 Generating deployment report...');';    const report = {;
-      "timestamp": new Date().toISOString(),;";      "environment": this.environment,;";      "summary": {;";        "totalSteps": this.deploymentSteps.length,;";        "successfulSteps": this.deploymentSteps.filter(;);          s => s.status === 'success'';        ).length,;        "failedSteps": this.deploymentSteps.filter(s => s.status === 'failed')';          .length,;        "totalDuration": this.deploymentSteps.reduce(;);          (sum, step) => sum + (step.duration || 0),;
+      timestamp: new Date().toISOString(),;";      "environment: this.environment,;;      "summary": {;;        totalSteps": this.deploymentSteps.length,;";        successfulSteps: this.deploymentSteps.filter(;);          s => s.status === 'success'';        ).length,;        "failedSteps": this.deploymentSteps.filter(s => s.status === 'failed')';          .length,;        totalDuration: this.deploymentSteps.reduce(;);          (sum, step) => sum + (step.duration || 0),;
           0;
         ),;},;
-      "steps": this.deploymentSteps,;";      "recommendations": this.generateRecommendations(),;,";};
+      "steps": this.deploymentSteps,;;      recommendations": this.generateRecommendations(),;,";};
 ;
     const reportFile = path.join(;);      this.reportsDir,;
       `deployment-report-${Date.now()}.json``;    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`📄 Deployment report saved "to": ${reportFile}`);`;
+    this.log(`📄 Deployment report saved to: ${reportFile}`);`;
     return report;}
 ;
   generateRecommendations() {;
@@ -385,7 +382,7 @@ class ComprehensiveDeploymentAutomation {
       this.log('🎯 Starting Comprehensive Deployment Automation');
 
       await this.preDeploymentChecks();
-<<<<<<< HEAD      await this.buildApplication();
+      await this.buildApplication();
       await this.securityChecks();
       await this.generateDeploymentArtifacts();
       await this.deployToNetlify();
@@ -408,9 +405,9 @@ class ComprehensiveDeploymentAutomation {
 // Run the automation;
 if (require.main === module) {
 ;
-      this.log('🎉 Comprehensive Deployment Automation completed successfully');      return { "success": true, report };,";} catch (error) {;
-      this.log(`💥 Deployment "failed": ${error.message}`, 'error');      await this.generateDeploymentReport();`;      this.displaySummary();
-      return { "success": false, "error": error.message };,";}
+      this.log('🎉 Comprehensive Deployment Automation completed successfully');      return { "success": true, report };,;} catch (error) {;
+      this.log(`💥 Deployment failed": ${error.message}`, 'error');      await this.generateDeploymentReport();`;      this.displaySummary();
+      return { "success: false, error": error.message };,";}
   }
 }
 ;

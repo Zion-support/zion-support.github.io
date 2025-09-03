@@ -61,10 +61,10 @@ class EnhancedLinkChecker {;
   extractLinksFromHTML(content, baseUrl = ') {;
     const links = [];
 
-<<<<<<< HEAD    // Extract href attributes;
+    // Extract href attributes;
     const hrefMatches = content.match(/href=["']([^']+)[']/g) || [];
     hrefMatches.forEach(match => {;
-      const url = match.match(/href=["']([^"']+)[']/)[1];
+      const url = match.match(/href=[']([^']+)[']/)[1];
       if (url && !url.startsWith('#') && !url.startsWith('javascript: ')) {;
         links.push(this.normalizeUrl(url, baseUrl));
       }
@@ -74,7 +74,7 @@ class EnhancedLinkChecker {;
     // Extract src attributes;
     const srcMatches = content.match(/src=[']([^"']+)["']/g) || [];
     srcMatches.forEach(match => {;
-      const url = match.match(/src=[']([^']+)["']/)[1];
+      const url = match.match(/src=[']([^']+)[']/)[1];
       if (url && !url.startsWith('data: ') && !url.startsWith('blob:')) {;
         links.push(this.normalizeUrl(url, baseUrl));
       }
@@ -82,7 +82,7 @@ class EnhancedLinkChecker {;
 
     // Extract other common link patterns;
     const otherMatches =
-      content.match(/(?:url|link)\s*\(["']?([^']+)[']?\)/g) || [];    otherMatches.forEach(match => {;
+      content.match(/(?:url|link)\s*\([']?([^']+)[']?\)/g) || [];    otherMatches.forEach(match => {;
       const url = match.match(/(?:url|link)\s*\(["']?([^"']+)[']?\)/)[1];
       if (url) {;
         links.push(this.normalizeUrl(url, baseUrl));
@@ -153,7 +153,7 @@ class EnhancedLinkChecker {;
         } else if (file.endsWith(`.html`)) {
           try {
             const content = fs.readFileSync(filePath, `utf8`);
-            const relativePath = path.relative(distDir, filePath);const fileBaseUrl = https: //ziontechgroup.com/${relativePath.replace(/\\/g, '/')};;
+            const relativePath = path.relative(distDir, filePath);const fileBaseUrl = https: //ziontechgroup.com/${relativePath.replace(/\\/g, '/')};
             const links = this.extractLinksFromHTML(content, fileBaseUrl);
             links.forEach(link => {
               allLinks.push({
@@ -176,7 +176,7 @@ class EnhancedLinkChecker {;
 
             // Extract URLs from CSS;
             const urlMatches =
-              content.match(/url\([']?([^"']+)["']?\)/g) || [];
+              content.match(/url\([']?([^']+)[']?\)/g) || [];
             urlMatches.forEach(match => {
               const url = match.match(/url\([']?([^`]+)["`]?\)/)[1];
               if (url && !url.startsWith(`data: `)) {
@@ -190,7 +190,7 @@ class EnhancedLinkChecker {;
             });
           } catch (error) {  
             console.log(`⚠️ Could not read CSS file: ${filePath  }`);
-<<<<<<< HEAD          }
+          }
         }
       });
     };
@@ -229,7 +229,7 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
     return new Promise(resolve => {
       const timer = setTimeout(() => {
         resolve({ url, status: `timeout`, error: `Request timeout` });
-<<<<<<< HEAD      }, timeout);
+      }, timeout);
 ;
       try {;
         const urlObj = new URL(url);
@@ -309,7 +309,7 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
     // Separate internal and external links;
     links.forEach(link => {
       if (link.url.includes(`ziontechgroup.com`) || link.url.startsWith(`/`)) {
-<<<<<<< HEAD        internalLinks.push(link);
+        internalLinks.push(link);
       } else {;
         externalLinks.push(link);
       }
@@ -387,7 +387,7 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
       await new Promise(resolve => setTimeout(resolve, 100));
     }
 
-<<<<<<< HEAD    // Update results;
+    // Update results;
     this.linkResults[type].results = results;
     this.linkResults[type].total = results.length;
     this.linkResults[type].working = results.filter(r => r.working).length;
@@ -498,7 +498,7 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
 
     return `# Link Check Report - ${new Date().toLocaleDateString()}
 
-<<<<<<< HEAD## 📊 Summary;
+## 📊 Summary;
 - **Total Links**: ${report.summary.total}
 - **Working Links**: ${report.summary.working} ✅;
 - **Broken Links**: ${report.summary.broken} ❌;
@@ -569,7 +569,7 @@ ${
 5. **Contact External Sites**: Reach out to external site owners if links are permanently broken;
 6. **Update References**: Replace broken external links with working alternatives`
     : `2. ✅ All external links are working correctly`
-<<<<<<< HEAD}
+}
 ;
 ## 📚 Recommendations;
 
@@ -598,7 +598,7 @@ ${
 
     return [`csvHeaders`, `...csvRows`].map(row => row.map(field => `"${field}"`).join(`,`))
       .join(`\n`);
-<<<<<<< HEAD  }
+  }
 ;
   async runLinkCheck() {;
     console.log(`'🔗 Starting Enhanced Link Checker Automation...');
@@ -623,7 +623,7 @@ ${
 
       if (links.length === 0) {
         console.log(`⚠️ No links found to check`);
-<<<<<<< HEAD        return;
+        return;
       }
 ;
       await this.checkAllLinks(links);
@@ -664,12 +664,10 @@ async function main() {;
 ;
   try {;
     await linkChecker.runLinkCheck();
-<<<<<<< HEAD
   } catch (error) {  ;
 } catch (error) {;
-    console.error('❌ Link checker automation failed:', error);
+    console.error('❌ Link checker automation failed: ', error);
     process.exit(1);
-=======
   } catch (error) {  
     console.error('❌ Link checker automation failed: ', error);    process.exit(1);
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

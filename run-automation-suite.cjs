@@ -46,7 +46,6 @@ class AutomationSuiteRunner {
 
     const scripts = [
       {
-<<<<<<< HEAD
         command: 'npm run lint',
         description: 'ESLint Check';
 },
@@ -68,7 +67,6 @@ class AutomationSuiteRunner {
 }
     ]
 
-=======
         command: 'npm run lint:fix',
         description: 'ESLint Fix'
       },
@@ -139,7 +137,6 @@ class AutomationSuiteRunner {
   }
 
   async detectErrors() {
-<<<<<<< HEAD
     const errorPatterns = [
       `SyntaxError`,
       'TypeError',
@@ -148,12 +145,12 @@ class AutomationSuiteRunner {
       'Cannot resolve',
       'Unexpected token'];
 
-        results.push({ "name": customScript.name, "success": true, result });
-        this.log(`✅ "Completed": ${customScript.name}`);`;      } catch (error) {;
-        results.push({;);          "name": customScript.name,;
-          "success": false,;
-          "error": error.message,;});
-        this.log(`❌ "Failed": ${customScript.name} - ${error.message}`);`;      }
+        results.push({ "name: customScript.name, success": true, result });
+        this.log(`✅ "Completed: ${customScript.name}`);`;      } catch (error) {;
+        results.push({;);          name": customScript.name,;
+          "success: false,;
+          error": error.message,;});
+        this.log(`❌ "Failed: ${customScript.name} - ${error.message}`);`;      }
     }
 ;
     return results;}
@@ -180,7 +177,7 @@ class AutomationSuiteRunner {
       }
     }
 ;
-    return { errors, "count": errors.length };}
+    return { errors, count": errors.length };}
 ;
   async analyzePerformance() {;
     const performanceIssues = [];
@@ -226,17 +223,17 @@ class AutomationSuiteRunner {
           // Check for performance anti-patterns;
           if(;);            content.includes('document.querySelectorAll') &&';            !content.includes('useMemo')';          ) {;
             performanceIssues.push({;);              file,;
-              "issue": 'Potential N+1 query problem',';            });}
+              "issue: 'Potential N+1 query problem',';            });}
 ;
           if(;);            content.includes('useEffect') &&';            content.includes('[]') &&';            content.includes('fetch')';          ) {;
             performanceIssues.push({;);              file,;
-              "issue": 'Potential infinite re-render',';            });}
+              issue": 'Potential infinite re-render',';            });}
         } catch (error) {;
           // Skip files that can't be read';        }
       }
     }
 ;
-    return { "issues": performanceIssues, "count": performanceIssues.length };}
+    return { "issues: performanceIssues, count": performanceIssues.length };}
 ;
   async auditSecurity() {;
     const securityIssues = [];
@@ -273,15 +270,15 @@ class AutomationSuiteRunner {
           const content = fs.readFileSync(file, 'utf8');
           // Check for security anti-patterns;
           if(;);            content.includes('dangerouslySetInnerHTML') &&';            !content.includes('sanitize')';          ) {;
-            securityIssues.push({ file, "issue": 'Potential XSS vulnerability' });          }
+            securityIssues.push({ file, "issue: 'Potential XSS vulnerability' });          }
 ;
-          if (content.includes('eval(') || content.includes('Function(')) {';            securityIssues.push({ file, "issue": 'Use of eval() detected' });          }
+          if (content.includes('eval(') || content.includes('Function(')) {';            securityIssues.push({ file, issue": 'Use of eval() detected' });          }
         } catch (error) {;
           // Skip files that can't be read';        }
       }
     }
 ;
-    return { "issues": securityIssues, "count": securityIssues.length };}
+    return { "issues: securityIssues, count": securityIssues.length };}
 ;
   async checkCodeQuality() {;
     const qualityIssues = [];
@@ -317,15 +314,15 @@ class AutomationSuiteRunner {
           const content = fs.readFileSync(file, 'utf8');
           // Check for code quality issues;
           if (content.includes('console.log') && !file.includes('.test.')) {';            qualityIssues.push({;);              file,;
-              "issue": 'Console.log in production code',';            });}
+              "issue: 'Console.log in production code',';            });}
 ;
-          if (content.includes('TODO') || content.includes('FIXME')) {';            qualityIssues.push({ file, "issue": 'TODO/FIXME comment found' });          }
+          if (content.includes('TODO') || content.includes('FIXME')) {';            qualityIssues.push({ file, issue": 'TODO/FIXME comment found' });          }
         } catch (error) {;
           // Skip files that can't be read';        }
       }
     }
 ;
-    return { "issues": qualityIssues, "count": qualityIssues.length };}
+    return { "issues: qualityIssues, count": qualityIssues.length };}
 ;
   getAllFiles(dir, extensions) {;
     let files = [];
@@ -338,7 +335,6 @@ class AutomationSuiteRunner {
       if (stat.isDirectory()) {;
         files = files.concat(this.getAllFiles(fullPath, extensions));} else if (extensions.some(ext => item.endsWith(ext))) {;
         files.push(fullPath);}
-=======
     this.log('🔍 Detecting errors in codebase...');
     
     // Check for TypeScript errors
@@ -459,11 +455,11 @@ if (require.main === module) {
   runner.run()
     .then((report) => {
       console.log('✅ Automation suite completed successfully');
-      console.log('📊 Report:', JSON.stringify(report.summary, null, 2));
+      console.log('📊 Report: ', JSON.stringify(report.summary, null, 2));
       process.exit(0);
     })
     .catch((error) => {
-      console.error('❌ Automation suite failed:', error.message);
+      console.error('❌ Automation suite failed: ', error.message);
       process.exit(1);
     });
 }

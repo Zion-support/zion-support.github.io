@@ -18,7 +18,7 @@ class AutoRecoveryManager {;
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
+        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -64,7 +64,7 @@ class AutoRecoveryManager {;
       }
     }
 
-<<<<<<< HEAD    // Check for project-specific issues;
+    // Check for project-specific issues;
     const projectIssues = await this.checkProjectIssues();
     issues.push(...projectIssues);
 `);
@@ -157,7 +157,7 @@ this.log(Found ${issues.length} system issues`);
           name: `unreadable-file`,description: `Cannot read file ${filePath  }`,
           severity: `high`,
           file: filePath,
-<<<<<<< HEAD        });
+        });
       }
     }
 ;
@@ -197,7 +197,7 @@ this.log(Found ${issues.length} system issues`);
 
   async applyRecoveryStrategies(issues) {this.log(`🔧 Applying recovery strategies for ${issues.length} issues...`);
 
-<<<<<<< HEAD    let recoveredCount = 0;
+    let recoveredCount = 0;
     const recoveryResults = [];
 ;
     for (const issue of issues) {;
@@ -229,7 +229,7 @@ this.log(Found ${issues.length} system issues`);
     }
 
     this.log(✅ Recovered from ${recoveredCount} out of ${issues.length} issues`
-<<<<<<< HEAD    );
+    );
     return {;
       recoveredCount,;
       totalIssues: issues.length,;
@@ -323,7 +323,7 @@ this.log(Found ${issues.length} system issues`);
       // For now, we`ll just log the issue;
       this.log(⚠️ Node.js recovery requires system-level intervention`,
         `WARN`
-<<<<<<< HEAD      );
+      );
       return false;
     } catch (error) {  this.log(`❌ Failed to recover Node.js: ${error.message  }`, `ERROR`);
       return false;
@@ -372,7 +372,7 @@ this.log(Found ${issues.length} system issues`);
       );
 
       this.log(`✅ Disk space recovered successfully`);
-<<<<<<< HEAD      return true;
+      return true;
     } catch (error) {  this.log(`❌ Failed to recover disk space: ${error.message  }`, `ERROR`);
       return false;
     }
@@ -440,7 +440,7 @@ this.log(Found ${issues.length} system issues`);
         description: 'Recovered project',;
         main: 'index.js',;
         scripts: {;
-          test: 'echo "Error: no test specified" && exit 1',;
+          test: 'echo Error: no test specified && exit 1',;
         },;
         keywords: [],;
         author: ',;
@@ -470,7 +470,7 @@ this.log(Found ${issues.length} system issues`);
         timeout: 300000});
 
       this.log(`✅ Dependencies recovered successfully`);
-<<<<<<< HEAD      return true;
+      return true;
     } catch (error) {  this.log(`❌ Failed to recover dependencies: ${error.message  }`, `ERROR`);
       return false;
     }
@@ -505,15 +505,13 @@ this.log(`✅ Merge conflicts recovered in ${filePath}`);
       return true;
     } catch (error) {  
       this.log(❌ Failed to recover merge conflicts in ${filePath  }: ${error.message}`,
-<<<<<<< HEAD
         `ERROR`;
 } catch (error) {;
       this.log(❌ Failed to recover merge conflicts in ${filePath}: ${error.message}',;
         'ERROR';
       );
-=======
         `ERROR`
-<<<<<<< HEAD      );
+      );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       return false;
     }
@@ -552,15 +550,13 @@ this.log(`❌ Could not recover encoding issues in ${filePath}`);
       return false;
     } catch (error) {  
       this.log(❌ Failed to recover encoding issues in ${filePath  }: ${error.message}`,
-<<<<<<< HEAD
         `ERROR`;
 } catch (error) {;
       this.log(❌ Failed to recover encoding issues in ${filePath}: ${error.message}',;
         'ERROR';
       );
-=======
         `ERROR`
-<<<<<<< HEAD      );
+      );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       return false;
     }
@@ -587,8 +583,7 @@ this.log(`❌ Could not recover encoding issues in ${filePath}`);
         case '.tsx':
           content = `// Recovered file\nexport {};\n`;
           break;
-        default:
-          content = `// Recovered file\n`;
+        default: content = `// Recovered file\n`;
 ;
       // Try to backup and recreate the file;
       const backupPath = filePath + '.backup';
@@ -616,7 +611,6 @@ this.log(✅ Unreadable file recovered: ${filePath}`);
       return true;
     } catch (error) {  
       this.log(❌ Failed to recover unreadable file ${filePath  }: ${error.message}`,
-<<<<<<< HEAD
         `ERROR`;
 } catch (error) {;
       this.log(❌ Failed to recover unreadable file ${filePath}: ${error.message}',;
@@ -625,9 +619,8 @@ this.log(✅ Unreadable file recovered: ${filePath}`);
       this.log(❌ Failed to recover unreadable file ${filePath}: ${error.message}',`);
         'ERROR`);
       );
-=======
         `ERROR`
-<<<<<<< HEAD      );
+      );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       return false;
     }
@@ -658,7 +651,7 @@ this.log(✅ Unreadable file recovered: ${filePath}`);
       summary: {;
         totalIssues: recoveryResults.totalIssues,;
         recoveredIssues: recoveryResults.recoveredCount,;
-        recoveryRate:;
+        recoveryRate: ;
           recoveryResults.totalIssues > 0;
             ? (;
                 (recoveryResults.recoveredCount / recoveryResults.totalIssues) *;
@@ -705,7 +698,7 @@ this.log(✅ Unreadable file recovered: ${filePath}`);
 
       this.log(`🎉 Auto Recovery Manager completed!`);
       this.log(📊 Recovered from ${recoveryResults.recoveredCount} out of ${recoveryResults.totalIssues} issues`
-<<<<<<< HEAD      );
+      );
 ;
       return {;
         success: recoveryResults.recoveredCount > 0,;

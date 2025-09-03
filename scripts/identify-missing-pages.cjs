@@ -9,7 +9,7 @@ async function identifyMissingPages() {;
     // Extract routes from App.tsx;
     const routeMatches = appContent.match(/path="([^]+)/g);
     const routes = routeMatches;
-      ? routeMatches.map(match => match.replace('path=", ').replace('", '));
+      ? routeMatches.map(match => match.replace('path= ').replace(', '));
       : [];
 ;
     // Get all page files;
@@ -31,7 +31,7 @@ const fs = require('fs').promises;const path = require('path');';async function 
   try {;
     // Read App.tsx to extract routes;
     const appContent = await fs.readFile('src/App.tsx', 'utf8');';    // Extract routes from App.tsx;
-    const routeMatches = appContent.match(/path="([^"]+)"/g);";    const routes = routeMatches;";      ? routeMatches.map(match => match.replace('path=", '').replace('", ''))';      : [];;
+    const routeMatches = appContent.match(/path="([^"]+)/g);;    const routes = routeMatches;";      ? routeMatches.map(match => match.replace('path=" '').replace('", ''))';      : [];
     // Get all page files;
     const pagesDir = 'src/pages';    const pageFiles = await getAllFiles(pagesDir);
 ;
@@ -39,7 +39,7 @@ const fs = require('fs').promises;const path = require('path');';async function 
     const existingPages = pageFiles.map(file => {;);      const fileName = path.basename(file, path.extname(file));
       return fileName.toLowerCase();});
 ;
-    console.log('=== ROUTES FROM APP.TSX ===');    routes.forEach(route => console.log(route));;
+    console.log('=== ROUTES FROM APP.TSX ===');    routes.forEach(route => console.log(route));
     console.log('\n=== EXISTING PAGE FILES ===');    existingPages.forEach(page => console.log(page));
 ;
     // Identify missing pages;
@@ -87,7 +87,7 @@ const fs = require('fs').promises;const path = require('path');';async function 
     return null;
   }
 }
-<<<<<<< HEAD;
+;
 async function getAllFiles(dirPath, arrayOfFiles = []) {;
   const files = await fs.readdir(dirPath);
 ;

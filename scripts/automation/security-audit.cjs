@@ -40,7 +40,7 @@ async function runSecurityAudit() {
 
     // Run npm audit;
     console.log(``🔍 Running npm security audit...`);
-<<<<<<< HEAD    try {
+    try {
       execSync(`npm audit --audit-level=moderate`, { stdio: 'inherit' });
       console.log('✅ Security audit completed - no issues found'`);
     } catch (error) {  
@@ -58,7 +58,7 @@ async function runSecurityAudit() {
       }
     }
 
-<<<<<<< HEAD    // Check for known vulnerabilities in dependencies;
+    // Check for known vulnerabilities in dependencies;
     console.log('📦 Checking for known vulnerabilities...');
     try {;
       execSync('npm audit --json', { stdio: 'pipe' });
@@ -78,16 +78,14 @@ async function runSecurityAudit() {
     } catch (error) {  
       console.log('✅ All packages are up to date');
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('✅ All packages are up to date');
     }
 ;
     // Run security scan if available;
-=======
 
-<<<<<<< HEAD    // Run security scan if available;
+    // Run security scan if available;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🔍 Running additional security scans...');
     try {;
@@ -149,7 +147,7 @@ process.on(`SIGINT`, () => {;
 ;
     console.log('✅ Continuous security audit completed successfully');
   } catch (error) {;
-    console.error('❌ Continuous security audit failed:', error.message);
+    console.error('❌ Continuous security audit failed: ', error.message);
     // Don't exit, just log the error and continue;
   }
 }

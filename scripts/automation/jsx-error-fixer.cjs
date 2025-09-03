@@ -60,17 +60,15 @@ async function runJSXErrorFixer() {;
     const reportPath = path.join(process.cwd(), `jsx-error-fixer-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ JSX error fixer report saved to ${reportPath});
     console.log(✅ JSX error fixer completed successfully. Applied ${fixesApplied} fixes.``);
-<<<<<<< HEAD
     ;
 } catch (error) {  
-    console.error(`❌ JSX error fixer failed:`, error.message);
-=======
+    console.error(`❌ JSX error fixer failed: `, error.message);
     
   } catch (error) {  
     console.error(`❌ JSX error fixer failed: `, error.message);
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
-<<<<<<< HEAD    fixesApplied += await fixJSXClosingTags();
+    fixesApplied += await fixJSXClosingTags();
     ;
     // 2. Fix JSX expression errors;
     console.log('🔧 Fixing JSX expression errors...'`);
@@ -137,13 +135,13 @@ async function fixJSXClosingTags() {;
         content = content.replace(/<\/>motion\.h1>/g, '</motion.h1>');
         
         // Fix missing closing tags;
-        content = content.replace(/<div\s+className="max-w-4xl mx-auto space-y-8>\s*<''div/g'', `<div className=max-w-4xl mx-auto space-y-8"><div`);
+        content = content.replace(/<div\s+className="max-w-4xl mx-auto space-y-8>\s*<''div/g'', `<div className=max-w-4xl mx-auto space-y-8><div`);
         
         // Fix specific JSX structure issues;
         content = content.replace(/<\/Button>\s*<\/div>\s*<\/div>/g, `</Button>\n                </div>\n              </div>`);
         
         if (content !== originalContent) {
-<<<<<<< HEAD          fs.writeFileSync(filePath, content);
+          fs.writeFileSync(filePath, content);
           fixes++;console.log(`  ✅ Fixed JSX closing tags in ${filePath}`);
         }
       } catch (error) {  console.log(`  ⚠️  Could not fix ${filePath  }: ${error.message}`);
@@ -168,11 +166,11 @@ async function fixJSXExpressions() {;
         
         // Fix JSX expressions with 'any' type annotations;
         content = content.replace(/transition=\{\{\s*duration: \s*any(\d+\.?\d*),\s*delay:\s*(\d+\.?\d*)\s*\}\}/g, 'transition={{ duration: $1, delay: $2 }}');
-        content = content.replace(/color: \s*any'([^']+)'/g, "color: '$1');
+        content = content.replace(/color: \s*any'([^']+)'/g, color: '$1');
         content = content.replace(/icon:\s*any'([^']+)'/g, icon: '$1'");
         content = content.replace(/id:\s*any'([^']+)'/g, "id: '$1');
-        content = content.replace(/property:\s*any'([^']+)'/g, property: '$1'");
-        content = content.replace(/rel:\s*any'([^']+)'/g, "rel: '$1');        
+        content = content.replace(/property:\s*any'([^']+)'/g, property: '$1');
+        content = content.replace(/rel:\s*any'([^']+)'/g, rel: '$1');        
         // Fix specific JSX expression patterns;
         content = content.replace(/href:\s*any'\/'/g, href: `/`");
         content = content.replace(/key:\s*any(\w+)/g, `key: $1`);
@@ -180,7 +178,7 @@ async function fixJSXExpressions() {;
         if (content !== originalContent) {
         ;
         // Fix specific JSX expression patterns;
-        content = content.replace(/href:\s*any'\/'/g, "href: '/'");
+        content = content.replace(/href:\s*any'\/'/g, "href: '/');
         content = content.replace(/key:\s*any(\w+)/g, 'key: $1');
         ;
         if (content !== originalContent) {;
@@ -214,8 +212,8 @@ async function fixJSXParentElements() {;
         
         // Fix JSX expressions that must have one parent element;
         if (filePath.includes('TermsOfService.tsx')) {
-<<<<<<< HEAD          // Wrap the entire JSX in a single parent div;
-          const jsxStart = content.indexOf('<div className="max-w-4xl mx-auto space-y-8>');
+          // Wrap the entire JSX in a single parent div;
+          const jsxStart = content.indexOf('<div className=max-w-4xl mx-auto space-y-8>');
           const jsxEnd = content.lastIndexOf('</div>');
           ;
           if (jsxStart !== -1 && jsxEnd !== -1) {;
@@ -247,14 +245,14 @@ async function fixJSXParentElements() {;
         if (filePath.includes('SupportRequests.tsx')) {
           // Fix the JSX structure by ensuring proper wrapping;
           content = content.replace(
-            /<SEO\s+title="Support Requests \| Admin Dashboard`/g,<div className=`support-requests-container">\n        <SEO\n          title="Support Requests | Admin Dashboard"`
+            /<SEO\s+title=Support Requests \| Admin Dashboard`/g,<div className=`support-requests-container>\n        <SEO\n          title="Support Requests | Admin Dashboard"`
           );
           
           content = content.replace(
             /<\/Tabs>\s*<\/div>\s*$/g,</Tabs>\n        </div>\n      </div>`
           // Fix the JSX structure by ensuring proper wrapping`);
           content = content.replace(`);
-            /<SEO\s+title="Support Requests \| Admin Dashboard'/g,<div className='support-requests-container">\n        <SEO\n          title="Support Requests | Admin Dashboard"`);
+            /<SEO\s+title=Support Requests \| Admin Dashboard'/g,<div className='support-requests-container>\n        <SEO\n          title="Support Requests | Admin Dashboard"`);
           );
           
           content = content.replace(
@@ -280,15 +278,13 @@ async function fixJSXAttributes() {;
   ;
   // Fix files with JSX attribute errors;
   const filesToFix = ['src/pages/ForgotPassword.tsx'';
-<<<<<<< HEAD
   
   // Fix files with JSX attribute errors;
   const filesToFix = [``src/pages/ForgotPassword.tsx`''
   // Fix files with JSX attribute errors
   const filesToFix = [''src/pages/ForgotPassword.tsx''`);
   ]
-=======
-<<<<<<< HEAD  ];
+  ];
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   ;
   for (const filePath of filesToFix) {;
@@ -299,12 +295,12 @@ async function fixJSXAttributes() {;
         ;
         // Fix JSX attribute issues;
         content = content.replace(;
-          /bg-\['url\('data: image\/svg\+xml', '%3Csvg[^>']+%3E'\)/g,bg-['url('data: 'image/svg'+xml', '%3Csvg width=\\"60\\" height=\\60\\ viewBox=\\"0 0 60 60\\" xmlns=\\http: //www.w3.'org/2000/svg'\\%3E%3Cg fill=\\"none\\" fill-rule=\\evenodd\\%3E%3Cg fill=\\"%23ffffff\\" fill-opacity=\\0.05\\%3E%3Ccircle cx=\\"30\\" cy=\\30\\ r=\\"2\\"/%3E%3'C/g'%3E%3'C/g'%3E%3'C/svg'%3E)']';
+          /bg-\['url\('data: image\/svg\+xml', '%3Csvg[^>']+%3E'\)/g,bg-['url('data: 'image/svg'+xml', '%3Csvg width=\\60\\ height=\\60\\ viewBox=\\"0 0 60 60\\" xmlns=\\http: //www.w3.'org/2000/svg'\\%3E%3Cg fill=\\none\\ fill-rule=\\evenodd\\%3E%3Cg fill=\\"%23ffffff\\" fill-opacity=\\0.05\\%3E%3Ccircle cx=\\30\\ cy=\\30\\ r=\\"2\\"/%3E%3'C/g'%3E%3'C/g'%3E%3'C/svg'%3E)']';
         );
         ;
         // Fix JSX structure;
         content = content.replace(;
-          /<div\s+className='absolute inset-0[^>]+>\s*<\/div>/g,<div className='absolute inset-0 bg-['url(\data: 'image/svg'+xml', '%3Csvg width=\\"60\\" height=\\60\\ viewBox=\\"0 0 60 60\\" xmlns=\\http: //www.w3.'org/2000/svg'\\%3E%3Cg fill=\\"none\\" fill-rule=\\evenodd\\%3E%3Cg fill=\\"%23ffffff\\" fill-opacity=\\0.05\\%3E%3Ccircle cx=\\"30\\" cy=\\30\\ r=\\"2\\"/%3E%3'C/g'%3E%3'C/g'%3E%3'C/svg'%3E\)'] opacity-50></div>';
+          /<div\s+className='absolute inset-0[^>]+>\s*<\/div>/g,<div className='absolute inset-0 bg-['url(\data: 'image/svg'+xml', '%3Csvg width=\\60\\ height=\\60\\ viewBox=\\"0 0 60 60\\" xmlns=\\http: //www.w3.'org/2000/svg'\\%3E%3Cg fill=\\none\\ fill-rule=\\evenodd\\%3E%3Cg fill=\\"%23ffffff\\" fill-opacity=\\0.05\\%3E%3Ccircle cx=\\30\\ cy=\\30\\ r=\\"2\\"/%3E%3'C/g'%3E%3'C/g'%3E%3'C/svg'%3E\)'] opacity-50></div>';
         );
         ;
         if (content !== originalContent) {;
@@ -313,15 +309,15 @@ async function fixJSXAttributes() {;
         
         // Fix JSX attribute issues;
         content = content.replace(
-          /bg-\['url\('data:image\/svg\+xml', '%3Csvg[^>']+%3E'\)/g,bg-['url('data:''image/svg''+xml', '%3Csvg width=\\"60\\" height=\\"60\\" viewBox=\\"0 0 60 60\\" xmlns=\\"http://www.w3.''org/2000/svg''\\"%3E%3Cg fill=\\"none\\" fill-rule=\\"evenodd\\"%3E%3Cg fill=\\"%23ffffff\\" fill-opacity=\\"0.05\\"%3E%3Ccircle cx=\\"30\\" cy=\\"30\\" r=\\"2\\"/%3E%3''C/g''%3E%3''C/g''%3E%3''C/svg''%3E")']'
+          /bg-\['url\('data: image\/svg\+xml', '%3Csvg[^>']+%3E'\)/g,bg-['url('data: ''image/svg''+xml', '%3Csvg width=\\60\\ height=\\"60\\" viewBox=\\0 0 60 60\\ xmlns=\\"http: //www.w3.''org/2000/svg''\\"%3E%3Cg fill=\\none\\ fill-rule=\\"evenodd\\"%3E%3Cg fill=\\%23ffffff\\ fill-opacity=\\"0.05\\"%3E%3Ccircle cx=\\30\\ cy=\\"30\\" r=\\2\\/%3E%3''C/g''%3E%3''C/g''%3E%3''C/svg''%3E")']'
         // Fix JSX attribute issues`);
         content = content.replace(`);
-          /bg-\['url\('data:image\/svg\+xml', '%3Csvg[^>']+%3E'\)/g,bg-['url('data:''image/svg''+xml', '%3Csvg width=\\"60\\" height=\\"60\\" viewBox=\\"0 0 60 60\\" xmlns=\\"http://www.w3.''org/2000/svg''\\"%3E%3Cg fill=\\"none\\" fill-rule=\\"evenodd\\"%3E%3Cg fill=\\"%23ffffff\\" fill-opacity=\\"0.05\\"%3E%3Ccircle cx=\\"30\\" cy=\\"30\\" r=\\"2\\"/%3E%3''C/g''%3E%3''C/g''%3E%3''C/svg''%3E")']`);
+          /bg-\['url\('data:image\/svg\+xml', '%3Csvg[^>']+%3E'\)/g,bg-['url('data: ''image/svg''+xml', '%3Csvg width=\\"60\\ height=\\60\\" viewBox=\\"0 0 60 60\\ xmlns=\\http: //www.w3.''org/2000/svg''\\"%3E%3Cg fill=\\"none\\ fill-rule=\\evenodd\\"%3E%3Cg fill=\\"%23ffffff\\ fill-opacity=\\0.05\\"%3E%3Ccircle cx=\\"30\\ cy=\\30\\" r=\\"2\\/%3E%3''C/g''%3E%3''C/g''%3E%3''C/svg''%3E)']`);
         );
         
         // Fix JSX structure;
         content = content.replace(
-          /<div\s+className='absolute inset-0[^>]+>\s*<\/div>/g,<div className='absolute inset-0 bg-['url(\"data: ''image/svg''+xml', '%3Csvg width=\\"60\\ height=\\60\\" viewBox=\\"0 0 60 60\\ xmlns=\\http: //www.w3.''org/2000/svg''\\"%3E%3Cg fill=\\"none\\ fill-rule=\\evenodd\\"%3E%3Cg fill=\\"%23ffffff\\ fill-opacity=\\0.05\\"%3E%3Ccircle cx=\\"30\\ cy=\\30\\" r=\\"2\\/%3E%3''C/g''%3E%3''C/g''%3E%3''C/svg``%3E\)`] opacity-50"></div>`        );
+          /<div\s+className='absolute inset-0[^>]+>\s*<\/div>/g,<div className='absolute inset-0 bg-['url(\"data: ''image/svg''+xml', '%3Csvg width=\\"60\\ height=\\60\\ viewBox=\\0 0 60 60\\ xmlns=\\http: //www.w3.''org/2000/svg''\\"%3E%3Cg fill=\\"none\\ fill-rule=\\evenodd\\%3E%3Cg fill=\\%23ffffff\\ fill-opacity=\\0.05\\"%3E%3Ccircle cx=\\"30\\ cy=\\30\\ r=\\2\\/%3E%3''C/g''%3E%3''C/g''%3E%3''C/svg``%3E\)`] opacity-50"></div>`        );
         
         if (content !== originalContent) {
           fs.writeFileSync(filePath, content);`);
@@ -359,10 +355,10 @@ async function fixJSXFragments() {;
         content = content.replace(/<\/><\/div>/g, '</></div>');
         content = content.replace(/<\/><\/header>/g, '</header>');
         content = content.replace(/<\/>;/g, '</>`);
-<<<<<<< HEAD        
+        
         // Fix specific JSX fragment issues;
         content = content.replace(
-          /<>\s*<div\s+className="[^"]*`>\s*<\/div>\s*<\/>/g,<div className=`header-container">\n        </div>`
+          /<>\s*<div\s+className="[^]*`>\s*<\/div>\s*<\/>/g,<div className=`header-container>\n        </div>`
           /<>\s*<div\s+className="[^"]*'>\s*<\/div>\s*<\/>/g,<div className='header-container">\n        </div>`);
         );
         
@@ -387,7 +383,7 @@ async function runContinuous() {console.log(`🚀 Starting JSX error fixer with 
   
   // Set up continuous execution;
   setInterval(async () => {
-<<<<<<< HEAD    await runJSXErrorFixer();
+    await runJSXErrorFixer();
   }, AUTOMATION_INTERVAL);
   console.log(`✅ JSX error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 }

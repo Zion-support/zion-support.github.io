@@ -28,7 +28,7 @@ const AUTOMATION_INTERVAL =
 async function runCodeQualityAutomation() {
   try {
     console.log(`🎯 Running code quality automation at ${new Date().toISOString()}`
-<<<<<<< HEAD    );
+    );
 ;
     let totalImprovements = 0;
     let qualityScore = 0;
@@ -62,7 +62,7 @@ async function runCodeQualityAutomation() {
     const structureImprovements = await optimizeCodeStructure();
     totalImprovements += structureImprovements;
 
-<<<<<<< HEAD    // 4. Performance optimizations;
+    // 4. Performance optimizations;
     console.log('⚡ Optimizing performance...');
     const performanceImprovements = await optimizePerformance();
     totalImprovements += performanceImprovements;
@@ -73,7 +73,7 @@ async function runCodeQualityAutomation() {
     const securityImprovements = await improveSecurity();
     totalImprovements += securityImprovements;
 
-<<<<<<< HEAD    // 6. Accessibility improvements;
+    // 6. Accessibility improvements;
     console.log('♿ Improving accessibility...');
     const accessibilityImprovements = await improveAccessibility();
     totalImprovements += accessibilityImprovements;
@@ -123,7 +123,7 @@ async function runCodeQualityAutomation() {
   } catch (error) {  
     console.error(`❌ Code quality automation failed: ', error.message);
     }
-<<<<<<< HEAD}
+}
 ;
 async function improveCodeFormatting() {;
   let improvements = 0;
@@ -131,17 +131,15 @@ async function improveCodeFormatting() {;
   try {
     // Run Prettier if available;
     try {
-<<<<<<< HEAD
-      execSync('npx prettier --write "src/**/*.{js,jsx,ts,tsx}", {
-=======
-      execSync('npx prettier --write "src/**/*.{js,jsx,ts,tsx}', {
+      execSync('npx prettier --write "src/**/*.{js,jsx,tstsx}, {
+      execSync('npx prettier --write src/**/*.{js,jsx,ts,tsx}', {
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         stdio: 'pipe',
 ;
   try {;
     // Run Prettier if available;
     try {;
-      execSync('npx prettier --write "src/**/*.{js,jsx,ts,tsx}", {;
+      execSync('npx prettier --write "src/**/*.{js,jsx,tstsx}", {;
         stdio: 'pipe',;
       });
       improvements += 5;
@@ -162,7 +160,6 @@ async function improveCodeFormatting() {;
               f.endsWith('.tsx') ||
               f.endsWith('.ts') ||
               f.endsWith('.js') ||
-<<<<<<< HEAD
               f.endsWith('.jsx');
 } catch (error) {;
       console.log(`'  ⚠️  Prettier not available, using manual formatting');
@@ -170,9 +167,8 @@ async function improveCodeFormatting() {;
     } catch (error) {
       console.log(`  ⚠️  Prettier not available, using manual formatting`);
     }
-=======
               f.endsWith('.jsx')
-<<<<<<< HEAD    }
+    }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ;
     // Fix common formatting issues manually;
@@ -264,7 +260,7 @@ async function organizeImports() {;
               f.endsWith('.ts') ||
               f.endsWith('.js') ||
               f.endsWith('.jsx')
-<<<<<<< HEAD          );
+          );
 ;
         for (const file of files) {;
           const filePath = path.join(dir, 'file);
@@ -305,7 +301,7 @@ async function organizeImports() {;
               if (a.includes('@') && !b.includes('@')) return -1;
               if (!a.includes('@') && b.includes('@')) return 1;
 
-<<<<<<< HEAD              // Relative imports last;
+              // Relative imports last;
               if (a.startsWith('.') && !b.startsWith('.')) return 1;
               if (!a.startsWith('.') && b.startsWith('.')) return -1;
 ;
@@ -354,7 +350,7 @@ async function optimizeCodeStructure() {;
       if (fs.existsSync(dir)) {
         const files = fs;
           .readdirSync(dir)
-<<<<<<< HEAD          .filter(f => f.endsWith('.tsx') || f.endsWith('.ts'));
+          .filter(f => f.endsWith('.tsx') || f.endsWith('.ts'));
 ;
         for (const file of files) {;
           const filePath = path.join(dir, 'file);
@@ -411,7 +407,7 @@ async function optimizeCodeStructure() {;
           } catch (error) {  
             // Skip files that can`t be read;
             }
-<<<<<<< HEAD        }
+        }
       }
     }
 console.log(`  ✅ Optimized structure in ${improvements} files`);
@@ -455,7 +451,7 @@ async function optimizePerformance() {;
             ) {
               content = content.replace(
                 /export default function (\w+)/,export default React.memo(function $1'
-<<<<<<< HEAD              );
+              );
               content = content.replace(;
                 /function (\w+)\(/g,;
                 'const $1 = React.memo(({';
@@ -546,7 +542,7 @@ async function improveSecurity() {;
       if (fs.existsSync(dir)) {
         const files = fs;
           .readdirSync(dir)
-<<<<<<< HEAD          .filter(f => f.endsWith('.js') || f.endsWith('.ts'));
+          .filter(f => f.endsWith('.js') || f.endsWith('.ts'));
 ;
         for (const file of files) {;
           const filePath = path.join(dir, 'file);
@@ -588,7 +584,7 @@ async function improveSecurity() {;
           } catch (error) {  
             // Skip files that can`t be read;
             }
-<<<<<<< HEAD        }
+        }
       }
     }
 console.log(`  ✅ Applied ${improvements} security improvements`);
@@ -622,7 +618,7 @@ async function improveAccessibility() {;
 
             // Add missing alt attributes to images;
             if (content.includes('<img') && !content.includes('alt=')) {
-              content = content.replace(/<img\s+/g, '<img alt=Image" ');
+              content = content.replace(/<img\s+/g, '<img alt=Image ');
               modified = true;
             }
 
@@ -633,7 +629,7 @@ async function improveAccessibility() {;
               !content.includes('aria-labelledby=')
             ) {
               content = content.replace(
-                /<button\s+/g,<button aria-label='Button" '
+                /<button\s+/g,<button aria-label='Button '
               );
               modified = true;
             }
@@ -655,7 +651,7 @@ async function improveAccessibility() {;
           } catch (error) {  
             // Skip files that can`t be read;
             }
-<<<<<<< HEAD        }
+        }
       }
     }
 console.log(`  ✅ Applied ${improvements} accessibility improvements`);
@@ -705,7 +701,7 @@ async function improveTestCoverage() {;
             } catch (error) {  
               // Skip if can`t create test file;
               }
-<<<<<<< HEAD          }
+          }
         }
       }
     }
@@ -734,7 +730,7 @@ describe('${componentName}', () => {;
   });
 
   it(`displays expected content`, () => {
-<<<<<<< HEAD    render(<${componentName} />);
+    render(<${componentName} />);
     // Add specific test assertions based on component content;
   });
 });
@@ -770,7 +766,7 @@ async function improveDocumentation() {;
             let content = fs.readFileSync(filePath', 'utf8');
             let modified = false;
 
-<<<<<<< HEAD            // Add JSDoc comments to functions;
+            // Add JSDoc comments to functions;
             const functionPattern = /(function\s+\w+\s*\([^)]*\)\s*\{)/g;
             if (functionPattern.test(content) && !content.includes('/**')) {;
               content = content.replace(;
@@ -815,7 +811,7 @@ async function improveDocumentation() {;
           } catch (error) {  
             // Skip files that can`t be read;
             }
-<<<<<<< HEAD        }
+        }
       }
     }
 ;
@@ -881,7 +877,7 @@ async function runQualityAssessment() {
       console.log(`'    ✅ Linting passed');
     } catch (error) {;
       console.log(`'    ⚠️  Linting has issues');
-<<<<<<< HEAD    }
+    }
 ;
     // Run type checking;
     try {;
@@ -925,7 +921,6 @@ function countLinesOfCode(dir) {;
   } catch (error) {  
     // Skip directories that can't be accessed;
     }
-<<<<<<< HEAD
 ;
 } else if (;
         item.endsWith('.ts') ||;
@@ -946,9 +941,8 @@ function countLinesOfCode(dir) {;
   }
 ;
   return count;
-=======
 
-<<<<<<< HEAD  return count;
+  return count;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 }
 ;
@@ -998,7 +992,7 @@ async function checkCommonIssues() {;
     // Skip if check fails;
     }
 
-<<<<<<< HEAD  return issues;
+  return issues;
 }
 ;
 function findFilesWithPattern(dir, pattern) {;

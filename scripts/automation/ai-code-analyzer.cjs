@@ -124,7 +124,7 @@ class AICodeAnalyzer {;
     for (const file of reactFiles) {;
       const content = fs.readFileSync(file, 'utf8');
 
-<<<<<<< HEAD      // Analyze component patterns;
+      // Analyze component patterns;
       const componentAnalysis = this.analyzeReactComponent(content);
 ;
       if (componentAnalysis.largeComponent) {;
@@ -256,7 +256,7 @@ class AICodeAnalyzer {;
 
     this.analysisResults.maintainabilityScore = Math.max(
       0,
-<<<<<<< HEAD      100 - totalIssues * 5;
+      100 - totalIssues * 5;
     );
 ;
     // Calculate complexity score (0-100);
@@ -298,7 +298,7 @@ class AICodeAnalyzer {;
         totalFilesAnalyzed: this.findFiles('./src', ['.ts', '.tsx', '.js', '.jsx', ']).length,;
         codeSmells: this.analysisResults.codeSmells.length,;
         performanceIssues: this.analysisResults.performanceIssues.length,;
-        securityVulnerabilities:;
+        securityVulnerabilities: ;
           this.analysisResults.securityVulnerabilities.length,;
         maintainabilityScore: this.analysisResults.maintainabilityScore,;
         complexityScore: this.analysisResults.complexityScore,;
@@ -341,7 +341,7 @@ console.log(📊 AI analysis report saved to ${reportPath});
       } catch (error) {  
         // Skip directories that can`t be accessed;
         }
-<<<<<<< HEAD    }
+    }
 ;
     scanDirectory(dir);
     return files;
@@ -386,7 +386,7 @@ console.log(📊 AI analysis report saved to ${reportPath});
         .replace(/\.(js|ts|tsx|jsx)$/, ``);
       return (
         !content.includes(importName) ||content.indexOf(importName) === content.indexOf(import.*${importName}``)
-<<<<<<< HEAD      );
+      );
     });
 ;
     return { imports, unusedImports };
@@ -431,7 +431,7 @@ async function runContinuous() {
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...');
-<<<<<<< HEAD  `);
+  `);
 }
 ;
 // Handle graceful shutdown;

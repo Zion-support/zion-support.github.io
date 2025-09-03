@@ -45,7 +45,7 @@ async function runSitemapRunner() {
     
     // Build the project first;
     console.log(``🏗️ Building project for sitemap generation...`);
-<<<<<<< HEAD    try {
+    try {
       execSync(`npm run build`, { stdio: 'inherit' });
       console.log('✅ Build completed'`);
     } catch (error) {  
@@ -65,7 +65,7 @@ async function runSitemapRunner() {
       return;
     }
     
-<<<<<<< HEAD    // Generate sitemap;
+    // Generate sitemap;
     console.log('🗺️ Generating sitemap...');
     try {;
       if (fs.existsSync(''scripts/generate-sitemap.js'')) {;
@@ -92,7 +92,7 @@ Sitemap: https://ziontechgroup.'com/sitemap.xml';
 # Disallow admin and private areas;
 Disallow: /admin/
 Disallow: /private/
-<<<<<<< HEADDisallow: /api/;
+Disallow: /api/;
       ;
       const robotsPath = path.join(distPath, 'robots.txt');
       fs.writeFileSync(robotsPath, robotsContent);
@@ -143,7 +143,7 @@ Disallow: /private/
     try {;
       if (fs.existsSync(''scripts/check-sitemap-links.js'')) {;
         execSync('node 'scripts/check-sitemap-links.js'', { stdio: 'inherit' });
-<<<<<<< HEAD    try {
+    try {
       if (fs.existsSync('''scripts/check-sitemap-links.js''')) {
         execSync('node ''scripts/check-sitemap-links.js''', { stdio: 'inherit' });
         console.log('✅ Sitemap link check completed');
@@ -166,11 +166,9 @@ Disallow: /private/
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Sitemap runner report saved to ${reportPath});
     
     console.log(`✅ Continuous sitemap runner completed successfully`);
-<<<<<<< HEAD
     ;
 } catch (error) {  
-    console.error(`❌ Continuous sitemap runner failed:`, error.message);
-=======
+    console.error(`❌ Continuous sitemap runner failed: `, error.message);
     
   } catch (error) {  
     console.error(`❌ Continuous sitemap runner failed: `, error.message);
@@ -205,7 +203,7 @@ async function runContinuous() {console.log(🚀 Starting continuous sitemap run
     console.log('✅ Continuous sitemap runner completed successfully');
     ;
   } catch (error) {;
-    console.error('❌ Continuous sitemap runner failed:', error.message);
+    console.error('❌ Continuous sitemap runner failed: ', error.message);
     // Don't exit, just log the error and continue;
   }
 }
@@ -226,7 +224,7 @@ async function runContinuous() {console.log(🚀 Starting continuous sitemap run
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...');
-<<<<<<< HEAD  process.exit(0);
+  process.exit(0);
 });
 ;
 process.on('SIGTERM', () => {;

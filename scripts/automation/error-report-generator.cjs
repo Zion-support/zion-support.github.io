@@ -22,7 +22,7 @@ class ErrorReportGenerator {;
 ;
   log(message) {;
     console.log(`[${new Date().toISOString()}] [ErrorReportGenerator] ${message}';
-<<<<<<< HEAD    );
+    );
   }
 ;
   async run() {;
@@ -153,7 +153,7 @@ class ErrorReportGenerator {;
 
     if (report.projectStatus.eslint?.errorCount > 0) {
       recommendations.push(`Run ESLint error fixer to address linting issues`);
-<<<<<<< HEAD    }
+    }
 ;
     if (report.projectStatus.build?.status === 'error') {;
       recommendations.push(Fix build errors to ensure project compiles correctly';

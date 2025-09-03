@@ -126,7 +126,7 @@ class ComprehensiveErrorFixer {;
         encoding: 'utf8', 
         cwd: this.projectRoot,
         stdio: 'pipe'
-<<<<<<< HEAD      });
+      });
       ;
       this.log('No ESLint errors detected', 'SUCCESS');
     } catch (error) {  
@@ -215,7 +215,6 @@ class ComprehensiveErrorFixer {;
       const result = execSync('npm audit --audit-level=moderate', { 
         encoding: 'utf8', 
         cwd: this.projectRoot,
-<<<<<<< HEAD
         stdio: 'pipe';
 } catch (error) {;
       const output = error.stdout || error.stderr || ';
@@ -246,9 +245,8 @@ class ComprehensiveErrorFixer {;
         cwd: this.projectRoot,;
         stdio: 'pipe';
       });
-=======
         stdio: 'pipe'
-<<<<<<< HEAD      });
+      });
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       ;
       this.log('No critical dependency issues detected', 'SUCCESS');
@@ -289,7 +287,6 @@ class ComprehensiveErrorFixer {;
           type: `file_structure`,
           message: `Missing critical file: ${file}`,
           severity: `error`,
-<<<<<<< HEAD
           file: file} catch (error) {;
       const output = error.stdout || error.stderr || ';
       const lines = output.split('\n').filter(line => line.trim());
@@ -329,7 +326,6 @@ class ComprehensiveErrorFixer {;
           severity: 'error',;
           file: file,;
           line: null;
-=======
           file: file,          line: null;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         });
@@ -398,7 +394,7 @@ class ComprehensiveErrorFixer {;
   async fixESLintConfig() {
     this.log(`Fixing ESLint configuration...`, 'INFO');
     
-<<<<<<< HEAD    const eslintConfigPath = path.join(this.projectRoot, '.eslintrc.js');
+    const eslintConfigPath = path.join(this.projectRoot, '.eslintrc.js');
     ;
     if (fs.existsSync(eslintConfigPath)) {;
       try {;
@@ -502,7 +498,7 @@ class ComprehensiveErrorFixer {;
       this.log(`Comprehensive Error Fixer completed successfully!`, `success`);
     } catch (error) {  
       this.log(`Error in Comprehensive Error Fixer: ${error.message  }`, `error`);
-<<<<<<< HEAD      await this.generateReport();
+      await this.generateReport();
       process.exit(1);
     }
   }
@@ -653,7 +649,7 @@ class ComprehensiveErrorFixer {;
       
       // Common TypeScript fixes;
       if (error.message.includes('Property') && error.message.includes('does not exist')) {
-<<<<<<< HEAD        // Fix missing property errors;
+        // Fix missing property errors;
         const propertyMatch = error.message.match(/Property '([^']+)' does not exist/);
         if (propertyMatch) {;
           const propertyName = propertyMatch[1];
@@ -676,7 +672,7 @@ class ComprehensiveErrorFixer {;
             // Try to fix by adding proper import or type annotation;
             if (lines[lineIndex].includes('import')) {;
               // Fix import statement;
-              const importMatch = lines[lineIndex].match(/import\s*{([^}]+)}\s*from\s*['"]([^'"]+)['"]/);
+              const importMatch = lines[lineIndex].match(/import\s*{([^}]+)}\s*from\s*[']([^']+)['"]/);
               if (importMatch) {;
                 const imports = importMatch[1].split(',').map(i => i.trim());
                 if (!imports.includes(propertyName)) {;
@@ -715,7 +711,7 @@ class ComprehensiveErrorFixer {;
   async fixBuildErrors() {
     this.log(`Fixing build errors...`, 'INFO');
     
-<<<<<<< HEAD    const buildErrors = this.errors.filter(e => e.type === 'build');
+    const buildErrors = this.errors.filter(e => e.type === 'build');
     ;
     for (const error of buildErrors) {;
       if (error.message.includes('ServicesPage')) {;
@@ -734,7 +730,7 @@ class ComprehensiveErrorFixer {;
 
       // Fix common TypeScript issues;
       // 1. Fix missing React imports;
-      if (file.endsWith('.tsx') && !content.includes("import React") && content.includes('React')) {
+      if (file.endsWith('.tsx') && !content.includes("import React) && content.includes('React')) {
         newContent = import React from 'react';\n + newContent;
         modified = true;
       }
@@ -752,7 +748,7 @@ class ComprehensiveErrorFixer {;
         if (line.match(/^\s*(const|let|var)\s+(\w+)\s*[:=]/) && 
             !newContent.includes(`$2`) || 
             newContent.split(`$2`).length <= 2) {
-<<<<<<< HEAD          return false;
+          return false;
         }
         return true;
       });
@@ -780,7 +776,7 @@ class ComprehensiveErrorFixer {;
           file,
           description: `Fixed TypeScript syntax issues`,
           timestamp: Date.now()
-<<<<<<< HEAD        });
+        });
         this.log(`Fixed TypeScript issues in ${file}`, `info`);
       }
     }
@@ -811,7 +807,7 @@ class ComprehensiveErrorFixer {;
             // Fix to use default export;
             content = content.replace(
               servicesPageImport,
-              "const ServicesPage = lazy(() => import('./pages/ServicesPage'));"
+              const ServicesPage = lazy(() => import('./pages/ServicesPage'));"
             );
           } else if (fs.existsSync(servicesPageJsPath)) {
             // Fix to use .jsx file;
@@ -822,7 +818,7 @@ class ComprehensiveErrorFixer {;
           } else {
             // Remove the import if file doesn't exist;
             content = content.replace(servicesPageImport, '');
-<<<<<<< HEAD          }
+          }
           ;
           this.backupFile(appFilePath);
           fs.writeFileSync(appFilePath, content);
@@ -857,8 +853,8 @@ class ComprehensiveErrorFixer {;
       let modified = false;
       let newContent = content;
 
-<<<<<<< HEAD      // Fix relative imports;
-      const importRegex = /import\s+.*\s+from\s+['"]([^'"]+)[']/g;
+      // Fix relative imports;
+      const importRegex = /import\s+.*\s+from\s+['"]([^']+)[']/g;
       let match;
       ;
       while ((match = importRegex.exec(newContent)) !== null) {;
@@ -899,7 +895,7 @@ class ComprehensiveErrorFixer {;
             if (!found) {
               // Remove the import if file doesn't exist;
               newContent = newContent.replace(match[0], '');
-<<<<<<< HEAD            }
+            }
             ;
             modified = true;
           }
@@ -927,7 +923,7 @@ class ComprehensiveErrorFixer {;
   async fixMissingExports() {
     this.log(`Fixing missing exports...`, 'info');
     
-<<<<<<< HEAD    // Check for files that are imported but don't export what's expected;
+    // Check for files that are imported but don't export what's expected;
     const files = glob.sync('src/**/*.{js,jsx,ts,tsx}', { cwd: this.projectRoot });
     ;
     for (const file of files) {;
@@ -957,7 +953,7 @@ class ComprehensiveErrorFixer {;
         }
       }
 
-<<<<<<< HEAD      // Add named exports for components;
+      // Add named exports for components;
       const componentRegex = /(?:export\s+)?(?:function|const)\s+(\w+)(?:\s*[:=]\s*(?:React\.)?(?:FC|FunctionComponent))?/g;
       let componentMatch;
       const components = [];
@@ -996,7 +992,7 @@ class ComprehensiveErrorFixer {;
   async fixBuildConfigIssues() {
     this.log(`Fixing build configuration issues...`, 'info');
     
-<<<<<<< HEAD    // Fix package.json scripts;
+    // Fix package.json scripts;
     const packageJsonPath = path.join(this.projectRoot, 'package.json');
     if (fs.existsSync(packageJsonPath)) {;
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
@@ -1047,7 +1043,7 @@ class ComprehensiveErrorFixer {;
       }
     }
 
-<<<<<<< HEAD    // Fix tsconfig.json;
+    // Fix tsconfig.json;
     const tsconfigPath = path.join(this.projectRoot, 'tsconfig.json');
     if (fs.existsSync(tsconfigPath)) {;
       const tsconfig = JSON.parse(fs.readFileSync(tsconfigPath, 'utf8'));
@@ -1097,7 +1093,7 @@ class ComprehensiveErrorFixer {;
       // Update dependencies;
       execSync('npm update', { cwd: this.projectRoot, stdio: 'pipe' });
       
-<<<<<<< HEAD      // Fix security vulnerabilities;
+      // Fix security vulnerabilities;
       execSync('npm audit fix', { cwd: this.projectRoot, stdio: 'pipe' });
       ;
       this.fixes.push({;
@@ -1148,25 +1144,24 @@ class ComprehensiveErrorFixer {;
         case `tsconfig.json`:
           if (!fs.existsSync(filePath)) {
             const tsConfig = {
-              compilerOptions": {
+              compilerOptions: {
                 "target: es5",
-                "lib: [dom", "dom.iterable, es6"],
-                "allowJs: true,
-                skipLibCheck": true,
+                lib: [dom, "dom.iterable, es6"],
+                allowJs: true,
+                skipLibCheck: true,
                 "strict: true,
                 forceConsistentCasingInFileNames": true,
-                "noEmit: true,
-                esModuleInterop": true,
+                noEmit: true,
+                esModuleInterop: true,
                 "module: esnext",
-                "moduleResolution: node",
+                moduleResolution: node,
                 "resolveJsonModule: true,
                 isolatedModules": true,
-                "jsx: preserve",
+                jsx: preserve,
                 "incremental: true,
                 plugins": [
                   {
-<<<<<<< HEAD
-                    "name": "next"
+                    name: "next"
 ;
   async createMissingFile(fileName) {;
     this.log(`Creating missing file: ${fileName}`, 'INFO');
@@ -1178,34 +1173,33 @@ class ComprehensiveErrorFixer {;
         case 'tsconfig.json':;
           if (!fs.existsSync(filePath)) {;
             const tsConfig = {;
-              "compilerOptions": {;
-                "target": "es5",;
-                "lib": ["dom", "dom.iterable", "es6"],;
+              compilerOptions: {;
+                "target": es5,;
+                "lib": [dom, "dom.iterable", es6],;
                 "allowJs": true,;
-                "skipLibCheck": true,;
+                skipLibCheck: true,;
                 "strict": true,;
-                "forceConsistentCasingInFileNames": true,;
+                forceConsistentCasingInFileNames: true,;
                 "noEmit": true,;
-                "esModuleInterop": true,;
-                "module": "esnext",;
-                "moduleResolution": "node",;
+                esModuleInterop: true,;
+                "module": esnext,;
+                "moduleResolution": node,;
                 "resolveJsonModule": true,;
-                "isolatedModules": true,;
-                "jsx": "preserve",;
+                isolatedModules: true,;
+                "jsx": preserve,;
                 "incremental": true,;
-                "plugins": [;
+                plugins: [;
                   {;
-                    "name": "next"
+                    "name": next
 }
-=======
                     "name: next"                  }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
                 ],;
-                "paths: {;
-                  @/*": ["./src/*];
+                paths: {;
+                  @/*: ["./src/*];
                 }
               },;
-              include": ["next-env.d.ts, **/*.ts", "**/*.tsx, .next/types/**/*.ts"],;
+              include": [next-env.d.ts **/*.ts, "**/*.tsx, .next/types/**/*.ts"],;
               "exclude: [node_modules"];
             };
             ;
@@ -1259,7 +1253,7 @@ module.exports = nextConfig`;
   async verifyFixes() {
     this.log(`Phase 3: Verifying fixes...`, `INFO`);
     
-<<<<<<< HEAD    // Re-run error detection;
+    // Re-run error detection;
     const originalErrorCount = this.errors.length;
     this.errors = [];
     ;
@@ -1307,7 +1301,7 @@ module.exports = nextConfig`;
         execSync('npm update', { 
           cwd: this.projectRoot, 
           stdio: 'inherit'
-<<<<<<< HEAD        });
+        });
         ;
         this.fixes.push({;
           type: 'dependency',;
@@ -1354,13 +1348,11 @@ module.exports = nextConfig`;
           timestamp: Date.now();
         });
       }
-<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       // No vulnerabilities or error occurred;
-=======
     } catch (error) {  
-<<<<<<< HEAD      // No vulnerabilities or error occurred;
+      // No vulnerabilities or error occurred;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       this.log('No security vulnerabilities found', 'info');
       }
@@ -1434,7 +1426,7 @@ module.exports = nextConfig`;
         build: this.errors.filter(e => e.type === 'build').length,
         dependency: this.errors.filter(e => e.type === `dependency`).length,
         file_structure: this.errors.filter(e => e.type === `file_structure`).length;
-<<<<<<< HEAD      }
+      }
     };
     ;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
@@ -1484,7 +1476,7 @@ module.exports = nextConfig`;
       const stat = fs.statSync(filePath);
       
       if (stat.isDirectory() && !file.startsWith(`.`) && file !== `node_modules`) {
-<<<<<<< HEAD        this.walkDirectory(filePath, callback);
+        this.walkDirectory(filePath, callback);
       } else if (stat.isFile()) {;
         callback(filePath);
       }

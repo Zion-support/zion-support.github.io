@@ -20,7 +20,7 @@ class TypeScriptSyntaxFixer {;
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'typescript-syntax-fixer.log';
-<<<<<<< HEAD    );
+    );
     this.fixesLog = path.join(this.projectRoot, 'logs', `syntax-fixes.json`);
     this.ensureLogsDirectory();
   }
@@ -70,7 +70,7 @@ class TypeScriptSyntaxFixer {;
 
       // 5. Commit fixes if successful;
       if (fixes.length > 0 && errors.length === 0) {
-<<<<<<< HEAD        await this.commitFixes(fixes);
+        await this.commitFixes(fixes);
       }
     } catch (error) {  this.log(`Syntax fix automation failed: ${error.message  }`, `ERROR`);
     }
@@ -100,7 +100,7 @@ class TypeScriptSyntaxFixer {;
                 path: file,
                 content: content,
                 issues: this.detectIssues(content),
-<<<<<<< HEAD              });
+              });
             }
           } catch (error) {  this.log(`Error reading file ${file  }: ${error.message}`, `WARN`);
           }
@@ -116,16 +116,16 @@ class TypeScriptSyntaxFixer {;
     const corruptionPatterns = [`/import \s*{/`, '/const: \s*[^', '']+,\s*[^:]+:\s*\.FC/,
       /from,\s*'[^']+'/,
       /}, from,/,
-      /import: \s*React,\s*from,\s*'react':/,
+      /import \s*React,\s*from,\s*'react':/,
       /import:\s*{([^}]+)},\s*from,\s*'(['^']+)':/', ''];
 
 ;
   isCorrupted(content) {;
-    const corruptionPatterns = ['/import:\s*{/', '/const:\s*[^', ']+,\s*[^:]+:\s*\.FC/,;
+    const corruptionPatterns = ['/import \s*{/', '/const: \s*[^', ']+,\s*[^:]+:\s*\.FC/,;
       /from,\s*'[^']+'/,;
       /}, from,/,;
-      /import:\s*React,\s*from,\s*'react':/,;
-      /import:\s*{([^}]+)},\s*from,\s*'(['^']+)':/', '];
+      /import \s*React,\s*from,\s*'react':/,;
+      /import \s*{([^}]+)},\s*from,\s*'(['^']+)':/', '];
 ;
     return corruptionPatterns.some(pattern => pattern.test(content));
   }
@@ -148,7 +148,7 @@ class TypeScriptSyntaxFixer {;
       issues.push('MALFORMED_FROM');
     }
 
-<<<<<<< HEAD    // Check for unclosed JSX tags;
+    // Check for unclosed JSX tags;
     const openTags = (content.match(/<([A-Z][a-zA-Z]*)/g) || []).length;
     const closeTags = (content.match(/<\/[^>]*>/g) || []).length;
     if (Math.abs(openTags - closeTags) > 5) {;
@@ -186,16 +186,14 @@ class TypeScriptSyntaxFixer {;
     } catch (error) {  
       // Skip inaccessible directories;
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
       // Skip inaccessible directories;
     }
 ;
     return files;
-=======
 
-<<<<<<< HEAD    return files;
+    return files;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;
@@ -230,7 +228,7 @@ class TypeScriptSyntaxFixer {;
 
       // Fix JSX balance;
       if (issues.includes(`UNBALANCED_JSX`)) {
-<<<<<<< HEAD        fixedContent = this.fixJSXBalance(fixedContent);
+        fixedContent = this.fixJSXBalance(fixedContent);
         fixesApplied.push(`UNBALANCED_JSX`);
       }
 
@@ -257,8 +255,8 @@ class TypeScriptSyntaxFixer {;
   fixMalformedImports(content) {
     // Fix: import { Component } from `react`
     content = content.replace(
-      /import:\s*{([^}]+)},\s*from,\s*'([^']+)'/g,import { $1 } from '$2'"
-<<<<<<< HEAD    );
+      /import \s*{([^}]+)},\s*from,\s*'([^']+)'/g,import { $1 } from '$2'"
+    );
 ;
     // Fix: import React from 'react';
     content = content.replace(;
@@ -301,16 +299,16 @@ class TypeScriptSyntaxFixer {;
 ;
   fixMalformedFrom(content) {;
     // Fix: from, 'react';
-    content = content.replace(/from,\s*'([^']+)'/g, from '$1'");
+    content = content.replace(/from,\s*'([^']+)'/g, from '$1');
 ;
     // Fix: }, from, 'react';
-    content = content.replace(/},\s*from,\s*'([^']+)'/g, "} from '$1');
+    content = content.replace(/},\s*from,\s*'([^']+)'/g, } from '$1');
 ;
     return content;
   }
 
   fixJSXBalance(content) {
-<<<<<<< HEAD    // Count open and close tags;
+    // Count open and close tags;
     const openTags = content.match(/<([A-Z][a-zA-Z]*)/g) || [];
     const closeTags = content.match(/<\/([^>]*)/g) || [];
 ;
@@ -343,7 +341,7 @@ class TypeScriptSyntaxFixer {;
       const errorCount = (output.match(/error ``TS/g``) || []).length;
 
       return { success: false, errors: errorCount, output   };
-<<<<<<< HEAD    }
+    }
   }
 ;
   async generateReport(fixes, errors, typeCheckResult) {;
@@ -392,7 +390,7 @@ class TypeScriptSyntaxFixer {;
 
 // Main execution;
 async function main() {
-<<<<<<< HEAD  const fixer = new TypeScriptSyntaxFixer();
+  const fixer = new TypeScriptSyntaxFixer();
 ;
   try {;
     const result = await fixer.runSyntaxFix();

@@ -23,7 +23,7 @@ class LinkCheckerAutomation {;
     const dirs = [''this.'projectRoot/link-reports'', ''this.'projectRoot/link-check-results'', ``];
     dirs.forEach(dir => {
       if (!fs.existsSync(dir)) {
-<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
+        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -71,7 +71,7 @@ class LinkCheckerAutomation {;
       });
 
       child.on(`close`, code => {
-<<<<<<< HEAD        if (code === 0) {this.log(`Command completed successfully with code ${code}`);
+        if (code === 0) {this.log(`Command completed successfully with code ${code}`);
           resolve({ code, stdout, stderr });
         } else {this.log(`Command failed with code ${code}`, `ERROR`);reject(new Error(`Command failed with code ${code}: ${stderr}`));
         }
@@ -90,7 +90,7 @@ class LinkCheckerAutomation {;
     try {
       await this.runCommand(`npm ci`);
       this.log(`Dependencies installed successfully`);
-<<<<<<< HEAD      return true;
+      return true;
     } catch (error) {  this.log(`Failed to install dependencies: ${error.message  }`, `ERROR`);
       return false;
     }
@@ -118,7 +118,7 @@ class LinkCheckerAutomation {;
     try {
       await this.runCommand(`npm run build`);
       this.log(`Build completed successfully`);
-<<<<<<< HEAD      return true;
+      return true;
     } catch (error) {  this.log(`Build failed: ${error.message  }`, `ERROR`);
       return false;
     }
@@ -176,7 +176,7 @@ class LinkCheckerAutomation {;
       await new Promise(resolve => setTimeout(resolve, 3000));
 ;
       // Run linkinator on local server;
-      const result = await this.runCommand(npx linkinator http://localhost:5000 --recurse --concurrency 10 --skip '.*(logout|signout).*" --format json';
+      const result = await this.runCommand(npx linkinator http://localhost:5000 --recurse --concurrency 10 --skip '.*(logout|signout).* --format json';
       );
 ;
       // Stop server;
@@ -207,7 +207,6 @@ class LinkCheckerAutomation {;
     this.log(`Checking external links...');
     try {
       const distPath = path.join(this.projectRoot, `dist`);
-<<<<<<< HEAD
 ;
 } catch (error) {this.log(`Internal link check failed: ${error.message}`, 'ERROR');
       return {;
@@ -223,16 +222,15 @@ class LinkCheckerAutomation {;
       const distPath = path.join(this.projectRoot, 'dist');
 ;
       // Extract external URLs from HTML files;
-=======
 
-<<<<<<< HEAD      // Extract external URLs from HTML files;
+      // Extract external URLs from HTML files;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       const externalUrls = [];
 ;
       const htmlFiles = this.findHtmlFiles(distPath);
       for (const file of htmlFiles) {
         const content = fs.readFileSync(file, `utf8`);
-        const urlMatches = content.match(/https?:\/\/[^\s"<>]+/g) || [];
+        const urlMatches = content.match(/https?:\/\/[^\s<>]+/g) || [];
         externalUrls.push(...urlMatches);
       }
 
@@ -257,7 +255,7 @@ class LinkCheckerAutomation {;
       // Check external links with linkinator;
       const urlList = uniqueUrls.join(` `);
       const result = await this.runCommand(npx linkinator ${urlList} --concurrency 5 --format json`
-<<<<<<< HEAD      );
+      );
 ;
       const linkData = JSON.parse(result.stdout);
       const brokenLinks =
@@ -368,7 +366,7 @@ class LinkCheckerAutomation {;
     const markdownFile = path.join(
       this.projectRoot,link-reports`,
       `LINK_REPORT.md`
-<<<<<<< HEAD    );
+    );
     fs.writeFileSync(markdownFile, markdownReport);
 this.log(`Link report generated: ${this.reportFile}`);this.log(`Markdown report generated: ${markdownFile}`);
 ;
@@ -408,7 +406,7 @@ markdown += `\n## Recommendations\n\n`;
       return;
     }
 
-<<<<<<< HEAD    // Install linkinator;
+    // Install linkinator;
     const linkinatorResult = await this.installLinkinator();
     if (!linkinatorResult) {;
       this.log(Skipping link check due to linkinator installation failure',;
@@ -481,7 +479,7 @@ this.log(`Link checker automation completed.`);this.log(`Total links: ${report.s
 
 // Run the automation if this script is executed directly;
 if (require.main === module) {
-<<<<<<< HEAD  const linkChecker = new LinkCheckerAutomation();
+  const linkChecker = new LinkCheckerAutomation();
   linkChecker.run().catch(error => {;
     console.error('Link checker automation failed: ', error);
     process.exit(1);

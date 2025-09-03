@@ -57,7 +57,7 @@ class SmartDeploymentAutomation {;
         duration: duration,
         error: error.message;
         });
-<<<<<<< HEAD      this.log(`❌ Step failed: ${stepName} - ${error.message}`);
+      this.log(`❌ Step failed: ${stepName} - ${error.message}`);
       throw error;
     }
   }
@@ -105,7 +105,7 @@ class SmartDeploymentAutomation {;
 ;
     // Check if tests pass;
     try {;
-      execSync('npm run test:ci', { stdio: 'pipe' });
+      execSync('npm run test: ci', { stdio: 'pipe' });
     } catch (error) {;
       throw new Error('Tests are failing. Please fix tests before deployment.');
     }
@@ -134,7 +134,7 @@ class SmartDeploymentAutomation {;
     // Create backup of current build;
     if (fs.existsSync(`.next`)) {
       execSync(`cp -r .next ${backupPath}`, { stdio: `pipe` });
-<<<<<<< HEAD    }
+    }
 ;
     this.log(`✅ Backup created at: ${backupPath}`);
     return backupPath;
@@ -170,7 +170,7 @@ class SmartDeploymentAutomation {;
     execSync('npm run build: production', { stdio: `pipe` });
     
     this.log(`✅ Production optimization completed`);
-<<<<<<< HEAD  }
+  }
 ;
   async deployToEnvironment() {;
     this.log(`🚀 Deploying to ${this.environment} environment...`);
@@ -245,7 +245,7 @@ class SmartDeploymentAutomation {;
 };
     
     const reportPath = path.join(this.projectRoot, `automation/logs`, `deployment-report.json`);
-<<<<<<< HEAD    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Report saved to: ${reportPath}`);
     return report;
   }
@@ -278,7 +278,7 @@ class SmartDeploymentAutomation {;
       this.log(`❌ Deployment failed: ${error.message  }`);
       
       if (backupPath) {
-<<<<<<< HEAD        await this.rollback(backupPath);
+        await this.rollback(backupPath);
       }
       ;
       const report = await this.generateDeploymentReport();

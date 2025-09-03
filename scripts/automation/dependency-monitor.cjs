@@ -15,7 +15,7 @@ class DependencyMonitor {;
   }
 
   log(message, type = `info`) {
-<<<<<<< HEAD    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);
   }
 ;
@@ -114,7 +114,7 @@ class DependencyMonitor {;
         }
     }
     
-<<<<<<< HEAD    // Check for missing dependencies;
+    // Check for missing dependencies;
     const lsResult = await this.runCommand('npm ls --depth=0');
     if (!lsResult.success) {;
       this.log('Missing dependencies detected', 'warn');
@@ -163,7 +163,7 @@ class DependencyMonitor {;
       
       this.log(`Dependency monitoring completed`, `success`);
     } catch (error) {  this.log(`Error during dependency monitoring: ${error.message  }`, `error`);this.errorsFound.push(`Process error: ${error.message}`);
-<<<<<<< HEAD      await this.generateReport();
+      await this.generateReport();
     }
   }
 }

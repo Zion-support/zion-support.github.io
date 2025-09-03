@@ -35,7 +35,7 @@ class LucideReactIconFixer {;
   }
 
   log(message, level = `INFO`) {
-<<<<<<< HEAD    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
@@ -106,7 +106,6 @@ class LucideReactIconFixer {;
       }
 ;
     } catch (error) {;
-<<<<<<< HEAD
       
       // 4. Commit fixes if successful;
       if (fixes.length > 0 && errors.length === 0) {
@@ -120,8 +119,7 @@ class LucideReactIconFixer {;
 `);
     } catch (error) {`);
       this.log(`Icon fix automation failed: ${error.message}`, 'ERROR');
-=======
-<<<<<<< HEAD      this.log(`Icon fix automation failed: ${error.message}`, 'ERROR');
+      this.log(`Icon fix automation failed: ${error.message}`, 'ERROR');
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
 ;
@@ -148,7 +146,7 @@ class LucideReactIconFixer {;
             if (content.includes('from \'lucide-react\``) || content.includes(`from "lucide-react`)) {
               filesWithIcons.push({
                 path: file,
-<<<<<<< HEAD                content: content;
+                content: content;
               });
             }
           } catch (error) {  this.log(`Error reading file ${file  }: ${error.message}`, `WARN`);
@@ -201,16 +199,14 @@ class LucideReactIconFixer {;
         fs.writeFileSync(filePath, newContent);this.log(`✅ Fixed icon imports in ${path.basename(filePath)}`);
         return { type: `icon_imports`, file: filePath, fix: `fixed_icon_imports` };
       }
-<<<<<<< HEAD
 ;
 } catch (error) {  this.log(`Error fixing icon imports in ${filePath  }: ${error.message}`, `WARN`);
 ;
     } catch (error) {this.log(`Error fixing icon imports in ${filePath}: ${error.message}`, 'WARN');
     }
-=======
 
     } catch (error) {  this.log(`Error fixing icon imports in ${filePath  }: ${error.message}`, `WARN`);
-<<<<<<< HEAD    }
+    }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ;
     return null;
@@ -232,14 +228,14 @@ class LucideReactIconFixer {;
         inImportBlock = true;
         
         // Extract icons from import statement;
-        const match = line.match(/import\s*\{([^}]+)\}\s*from\s*[']lucide-react['"]/);
+        const match = line.match(/import\s*\{([^}]+)\}\s*from\s*[']lucide-react[']/);
         if (match) {
           const icons = match[1].split(`,`).map(icon => icon.trim());
           
           // Add to import map, avoiding duplicates;
           for (const icon of icons) {
             if (!importMap.has(icon)) {
-<<<<<<< HEAD              importMap.set(icon, true);
+              importMap.set(icon, true);
             }
           }
         }
@@ -281,7 +277,7 @@ class LucideReactIconFixer {;
     for (const [`invalid`, `valid`] of Object.entries(iconMappings)) {const regex = new RegExp(`\\b${invalid}\\b`, `g`);
       if (newContent.includes(invalid)) {
         newContent = newContent.replace(regex, valid);this.log(`🔄 Replaced invalid icon `${invalid}` with `${valid}``);
-<<<<<<< HEAD      }
+      }
     }
 ;
     return newContent;
@@ -300,7 +296,7 @@ class LucideReactIconFixer {;
     // First pass: collect all icon names from imports;
     for (const line of lines) {
       if (line.trim().startsWith('import ') && line.includes('lucide-react')) {
-        const match = line.match(/import\s*\{([^}]+)\}\s*from\s*['"]lucide-react[']/);        if (match) {;
+        const match = line.match(/import\s*\{([^}]+)\}\s*from\s*[']lucide-react[']/);        if (match) {;
           const icons = match[1].split(',').map(icon => icon.trim());
           iconNames.push(...icons);
         }
@@ -331,7 +327,7 @@ class LucideReactIconFixer {;
         // Add filtered imports;
         newLines.push(...importLines);
         newLines.push(``);
-<<<<<<< HEAD        importLines = [];
+        importLines = [];
       } else if (!inImportBlock) {;
         newLines.push(line);
       }
@@ -369,7 +365,7 @@ class LucideReactIconFixer {;
                  const cleanIcons = icons.split(`,`).map(icon => icon.trim()).filter(Boolean);return `import { ${cleanIcons.join(', ')} } from `lucide-react``;
                })
       .replace(/,\s*,/g, `,`) // Remove double commas;
-<<<<<<< HEAD      .replace(/,\s*}/g, '}') // Remove trailing commas;
+      .replace(/,\s*}/g, '}') // Remove trailing commas;
       .replace(/{\s*,/g, '{') // Remove leading commas;
       .replace(/{\s*}/g, '{}'); // Clean empty braces;
   }
@@ -403,7 +399,7 @@ class LucideReactIconFixer {;
         totalErrors: errors.length;
       },
       fixes: fixes,
-<<<<<<< HEAD      errors: errors;
+      errors: errors;
     };
 ;
     fs.writeFileSync(this.fixesLog, JSON.stringify(report, null, 2));this.log(`📊 Icon fix report generated: ${this.fixesLog}`);

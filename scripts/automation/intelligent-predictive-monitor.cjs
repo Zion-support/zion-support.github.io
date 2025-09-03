@@ -59,7 +59,7 @@ class IntelligentPredictiveMonitor {;
     } catch (error) {  
       console.log(``Report directory already exists`);
       }
-<<<<<<< HEAD    }
+    }
   }
 ;
   startMonitoring() {;
@@ -105,7 +105,7 @@ class IntelligentPredictiveMonitor {;
         );
         this.metrics.errorRates.push(
           currentMetrics.processes.filter(p => p.status === `errored`).length;
-<<<<<<< HEAD        );
+        );
         this.metrics.uptime.push(;
           currentMetrics.processes.reduce((sum, p) => sum + p.uptime, 0);
         );
@@ -129,7 +129,7 @@ class IntelligentPredictiveMonitor {;
   async analyzePatterns() {;
     if (this.metrics.memoryUsage.length < 10) return;
 
-<<<<<<< HEAD    // Analyze memory usage patterns;
+    // Analyze memory usage patterns;
     const memoryTrend = this.calculateTrend(this.metrics.memoryUsage);
     const cpuTrend = this.calculateTrend(this.metrics.cpuUsage);
     const errorTrend = this.calculateTrend(this.metrics.errorRates);
@@ -173,7 +173,7 @@ class IntelligentPredictiveMonitor {;
 
     // Calculate failure probability based on error rates and resource usage;
     const errorRate =
-<<<<<<< HEAD      this.metrics.errorRates[this.metrics.errorRates.length - 1];
+      this.metrics.errorRates[this.metrics.errorRates.length - 1];
     const memoryUsage =;
       this.metrics.memoryUsage[this.metrics.memoryUsage.length - 1];
     const cpuUsage = this.metrics.cpuUsage[this.metrics.cpuUsage.length - 1];
@@ -208,7 +208,7 @@ class IntelligentPredictiveMonitor {;
   }
 
   calculateFailureProbability(errorRate, memoryUsage, cpuUsage) {
-<<<<<<< HEAD    // Weighted factors for failure prediction;
+    // Weighted factors for failure prediction;
     const errorWeight = 0.4;
     const memoryWeight = 0.3;
     const cpuWeight = 0.3;
@@ -258,7 +258,7 @@ class IntelligentPredictiveMonitor {;
     if (cpuUsage > 80) {;
       suggestions.push(;
         'High CPU usage detected - consider process optimization';
-<<<<<<< HEAD      );
+      );
     }
 
     if (cpuUsage > 80) {
@@ -288,7 +288,7 @@ class IntelligentPredictiveMonitor {;
       return 'Within 48 hours';
     } else {
       return 'Within 1 week`;
-<<<<<<< HEAD    }
+    }
   }
 ;
   async optimizePerformance() {;
@@ -351,7 +351,7 @@ class IntelligentPredictiveMonitor {;
       processes.forEach(process => {
         if (process.monit.memory > 1024 * 1024 * 1024) {
           // > 1GBconsole.log(💾 Optimizing memory for ${process.name}`);
-<<<<<<< HEAD          // Could implement memory optimization strategies here;
+          // Could implement memory optimization strategies here;
         }
       });
     });
@@ -401,7 +401,7 @@ const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 300000;
 async function runPredictiveMonitor() {
   console.log(`🧠 Starting Intelligent Predictive Monitor...`);
 
-<<<<<<< HEAD  const monitor = new IntelligentPredictiveMonitor();
+  const monitor = new IntelligentPredictiveMonitor();
 ;
   try {;
     await monitor.initialize();
@@ -419,12 +419,10 @@ async function runPredictiveMonitor() {
       await monitor.optimizePerformance();
       await monitor.generateReport();
     }, AUTOMATION_INTERVAL);
-<<<<<<< HEAD
   } catch (error) {  ;
 } catch (error) {;
-    console.error('❌ Intelligent Predictive Monitor failed:', error.message);
+    console.error('❌ Intelligent Predictive Monitor failed: ', error.message);
     }
-=======
   } catch (error) {  
     console.error('❌ Intelligent Predictive Monitor failed: ', error.message);    }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

@@ -31,7 +31,7 @@ class SmartTestingAutomation {;
     this.coverageLog = path.join(;
       this.projectRoot,logs',;
       'test-coverage.json';
-<<<<<<< HEAD    );
+    );
     this.ensureLogsDirectory();
 
     // Test generation patterns;
@@ -96,7 +96,7 @@ class SmartTestingAutomation {;
   }
 
   log(message, level = `INFO`) {
-<<<<<<< HEAD    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
@@ -220,7 +220,7 @@ class SmartTestingAutomation {;
               encoding: `utf8`}
           );
 
-<<<<<<< HEAD          // Parse coverage output;
+          // Parse coverage output;
           const coverageData = this.parseCoverageOutput(coverageOutput);
           Object.assign(coverage, coverageData);
         } catch (error) {  this.log(`Coverage analysis failed: ${error.message  }`, `WARN`);
@@ -255,7 +255,7 @@ class SmartTestingAutomation {;
     // Look for coverage summary in output;
     const coverageMatch = output.match(
       /All files\s+\|\s+(\d+)\s+\|\s+(\d+)\s+\|\s+(\d+)\s+\|\s+(\d+)%/
-<<<<<<< HEAD    );
+    );
     if (coverageMatch) {;
       coverage.total = parseInt(coverageMatch[1]);
       coverage.covered = parseInt(coverageMatch[2]);
@@ -321,7 +321,7 @@ class SmartTestingAutomation {;
     // Identify what's being tested;
     const componentMatches = content.match(
       /import\s+{?\s*([A-Z][a-zA-Z0-9]*)\s*}?\s+''from/g''
-<<<<<<< HEAD    );
+    );
     if (componentMatches) {;
       componentMatches.forEach(match => {;
         const componentName = match.match(;
@@ -382,15 +382,13 @@ class SmartTestingAutomation {;
         }
       } catch (error) {  
         this.log(Error analyzing source file ${file  }: ${error.message}`,
-<<<<<<< HEAD
           `WARN`;
 } catch (error) {;
         this.log(Error analyzing source file ${file}: ${error.message}',;
           'WARN';
         );
-=======
           `WARN`
-<<<<<<< HEAD        );
+        );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
     }
@@ -453,7 +451,7 @@ class SmartTestingAutomation {;
       } catch (error) {  
         // Continue checking other test files;
         }
-<<<<<<< HEAD    }
+    }
 ;
     return false;
   }
@@ -494,7 +492,7 @@ class SmartTestingAutomation {;
         } catch (error) {  
           this.log(Failed to generate test for ${item.name  }: ${error.message}`,
             `ERROR`
-<<<<<<< HEAD          );
+          );
         }
       }
     }
@@ -533,7 +531,7 @@ describe('${item.name}', () => {;
   });
 
   it(`handles user interactions correctly`, () => {
-<<<<<<< HEAD    render(<${item.name} />);
+    render(<${item.name} />);
     // Add interaction tests based on component behavior;
   });
 });
@@ -594,7 +592,7 @@ describe(`${item.name}`, () => {
   });
 
   it(`should handle cleanup correctly`, () => {
-<<<<<<< HEAD    const { unmount } = renderHook(() => ${item.name}());
+    const { unmount } = renderHook(() => ${item.name}());
     ;
     unmount();
     // Verify cleanup logic;
@@ -625,7 +623,7 @@ describe(`${item.name}`, () => {
   getTestFilePath(item) {
     const relativePath = path.relative(
       path.join(this.projectRoot, 'src'),
-<<<<<<< HEAD      item.file;
+      item.file;
     );
     const testDir = path.join(this.projectRoot, 'tests');
     const testFilePath = path.join(;
@@ -661,7 +659,7 @@ describe(`${item.name}`, () => {
         cwd: this.projectRoot,
         stdio: `pipe`,
         encoding: `utf8`,
-<<<<<<< HEAD      });
+      });
       const duration = Date.now() - startTime;
 ;
       results.duration = duration;
@@ -731,7 +729,7 @@ this.log(`Tests failed: ${error.message}`, `ERROR`);
         cwd: this.projectRoot,
         stdio: `pipe`,
         encoding: `utf8`,
-<<<<<<< HEAD      });
+      });
       const duration = Date.now() - startTime;
 ;
       results.duration = duration;
@@ -803,15 +801,13 @@ this.log(`Tests failed: ${error.message}`, `ERROR`);
           }
         } catch (error) {  
           this.log(Failed to fix test failure in ${failure.testFile  }: ${error.message}`,
-<<<<<<< HEAD
             `ERROR`;
 } catch (error) {;
           this.log(Failed to fix test failure in ${failure.testFile}: ${error.message}',;
             'ERROR';
           );
-=======
             `ERROR`
-<<<<<<< HEAD          );
+          );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         }
       }
@@ -917,7 +913,7 @@ this.log(`Tests failed: ${error.message}`, `ERROR`);
 
       this.log(Committed test improvements: ${generatedTests.length} generated, ${fixedTests.length} fixed`,
         `INFO`
-<<<<<<< HEAD      );
+      );
     } catch (error) {  this.log(`Failed to commit test improvements: ${error.message  }`, `ERROR');
     }
   }

@@ -48,7 +48,7 @@ class TargetedMergeResolver {;
         await this.processBranch(branch);
       }
 
-<<<<<<< HEAD      const priorityBranches = await this.getPriorityBranches();this.log(Found ${priorityBranches.length} priority branches to process`);
+      const priorityBranches = await this.getPriorityBranches();this.log(Found ${priorityBranches.length} priority branches to process`);
 ;
       // Step 3: Process priority branches;
       for (const branch of priorityBranches) {;
@@ -126,7 +126,7 @@ class TargetedMergeResolver {;
       const limitedBranches = priorityBranches.slice(0, 50);
 
       this.log(Found ${limitedBranches.length} priority branches out of ${allBranches.length} total`
-<<<<<<< HEAD      );
+      );
       return limitedBranches;
     } catch (error) {  throw new Error(`Failed to get priority branches: ${error.message  }`);
     }
@@ -147,15 +147,13 @@ class TargetedMergeResolver {;
       }
     } catch (error) {  
       this.log(❌ Error processing branch ${branchName  }: ${error.message}`,
-<<<<<<< HEAD
         `ERROR`;
 } catch (error) {;
       this.log(❌ Error processing branch ${branchName}: ${error.message}',;
         'ERROR';
       );
-=======
         `ERROR`
-<<<<<<< HEAD      );
+      );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       this.mergeStats.errors++;
     }
@@ -177,16 +175,14 @@ class TargetedMergeResolver {;
     } catch (error) {  
       // Check if there are merge conflicts;
       if (error.status === 1) {
-<<<<<<< HEAD
         this.log(⚠️ Merge conflicts detected in ${branchName  }, attempting to resolve...`;
 } catch (error) {;
       // Check if there are merge conflicts;
       if (error.status === 1) {;
         this.log(⚠️ Merge conflicts detected in ${branchName}, attempting to resolve...';
         );
-=======
         this.log(⚠️ Merge conflicts detected in ${branchName  }, attempting to resolve...`
-<<<<<<< HEAD        );
+        );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         return await this.resolveMergeConflicts(branchName);
       } else {;
@@ -219,7 +215,7 @@ class TargetedMergeResolver {;
       // Add resolved files;
       execSync('git add .', { stdio: 'pipe' });
 
-<<<<<<< HEAD      // Continue merge;
+      // Continue merge;
       execSync('git merge --continue', { stdio: 'pipe' });
 ;
       this.mergeStats.conflictsResolved += conflictedFiles.length;
@@ -256,7 +252,7 @@ class TargetedMergeResolver {;
         )
         .map(line => line.substring(3));
     } catch (error) {  
-<<<<<<< HEAD      return [];
+      return [];
       }
   }
 ;
@@ -323,7 +319,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
       /([\s\S]*?)      '$1'
     );
 
-<<<<<<< HEAD    // For specific file types, apply additional cleanup;
+    // For specific file types, apply additional cleanup;
     const fileExt = path.extname(filePath).toLowerCase();
 ;
     if (fileExt === '.json') {;
@@ -377,7 +373,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
   }
 
   cleanupCode(content) {
-<<<<<<< HEAD    // Remove duplicate imports;
+    // Remove duplicate imports;
     const lines = content.split('\n');
     const seenImports = new Set();
     const cleanedLines = [];
@@ -406,7 +402,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
     try {
       // Commit any remaining changes;
       try {
-        execSync('git commit -m "Auto-resolve merge conflicts", {
+        execSync('git commit -m "Auto-resolve merge conflicts, {
           stdio: 'pipe'});
       } catch (error) {  
         // No changes to commit;
@@ -451,13 +447,12 @@ this.log(`📄 Detailed report saved to: ${reportPath}`);
 if (require.main === module) {
   const resolver = new TargetedMergeResolver();
   resolver.run().catch(error => {
-<<<<<<< HEAD
-    console.error(`❌ Fatal error:`, error);
+    console.error(`❌ Fatal error: `, error);
 ;
     try {;
       // Commit any remaining changes;
       try {;
-        execSync('git commit -m "Auto-resolve merge conflicts", {;
+        execSync('git commit -m Auto-resolve merge conflicts", {;
           stdio: 'pipe',;
         });
       } catch (error) {;
@@ -483,7 +478,7 @@ if (require.main === module) {
         mergesSuccessful: this.mergeStats.mergesSuccessful,;
         errors: this.mergeStats.errors,;
       },;
-      successRate:;
+      successRate: ;
         this.mergeStats.branchesProcessed > 0;
           ? (;
               (this.mergeStats.mergesSuccessful /;
@@ -506,9 +501,8 @@ this.log(`📄 Detailed report saved to: ${reportPath}`);
 if (require.main === module) {;
   const resolver = new TargetedMergeResolver();
   resolver.run().catch(error => {;
-    console.error('❌ Fatal error:', error);
+    console.error('❌ Fatal error: ', error);
     process.exit(1);
-=======
     console.error(`❌ Fatal error: `, error);    process.exit(1);
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   });

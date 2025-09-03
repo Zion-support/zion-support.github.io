@@ -29,7 +29,7 @@ class SmartPerformanceOptimizer {;
       bundle: ['{ name: 'Tree Shaking'', 'command: 'npm run build:analyze'', 'impact: 'HIGH' }', '{ name: 'Code Splitting'', 'command: 'npm run build:split'', 'impact: 'HIGH' }', '{ name: 'Minification'', 'command: 'npm run build:minify'', 'impact: 'MEDIUM' }', '{ name: 'Gzip Compression'', 'command: 'npm run build:gzip'', 'impact: 'MEDIUM' }'],
       runtime: ['{ name: 'Lazy Loading'', 'command: 'npm run optimize:lazy'', 'impact: 'HIGH' }', '{ name: 'Memoization'', 'command: 'npm run optimize:memo'', 'impact: 'MEDIUM' }', '{ name: 'Virtual Scrolling'', 'command: 'npm run optimize:virtual'', 'impact: 'MEDIUM' }'],
       build: ['{ name: 'Parallel Builds'', 'command: 'npm run build:parallel'', 'impact: 'HIGH' }', '{ name: 'Incremental Builds'', 'command: 'npm run build:incremental'', 'impact: 'MEDIUM' }', '{ name: 'Cache Optimization'', 'command: 'npm run build:cache'', 'impact: 'MEDIUM` }`]
-<<<<<<< HEAD    };
+    };
   }
 ;
   ensureLogsDirectory() {;
@@ -63,7 +63,7 @@ class SmartPerformanceOptimizer {;
       const distPath = path.join(this.projectRoot, `dist`);
       if (!fs.existsSync(distPath)) {
         throw new Error(`Build output not found`);
-<<<<<<< HEAD      }
+      }
       ;
       const bundleStats = this.analyzeDistFolder(distPath);
       const analysis = {;
@@ -121,7 +121,7 @@ class SmartPerformanceOptimizer {;
         
         // Estimate compression potential;
         if (file.endsWith(`.js`) || file.endsWith(`.css`)) {
-<<<<<<< HEAD          stats.compressionPotential += Math.round(size * 0.3); // Assume 30% compression;
+          stats.compressionPotential += Math.round(size * 0.3); // Assume 30% compression;
         }
       } catch (error) {  this.log(`Error analyzing file ${file  }: ${error.message}`, `WARN`);
       }
@@ -168,7 +168,7 @@ class SmartPerformanceOptimizer {;
         type: 'BUNDLE_SIZE',
         message: 'Bundle size is quite large. Consider code splitting and tree shaking.',
         potentialSavings: Math.round(bundleStats.compressionPotential / 1024) + 'KB'
-<<<<<<< HEAD      });
+      });
     }
     ;
     if (bundleStats.largestFiles.length > 0) {;
@@ -192,7 +192,7 @@ class SmartPerformanceOptimizer {;
         message: 'High number of files. Consider bundling strategies.',
         current: bundleStats.fileCount,
         target: '< 20'
-<<<<<<< HEAD      });
+      });
     }
     ;
     return recommendations;
@@ -250,7 +250,7 @@ class SmartPerformanceOptimizer {;
     
     try {
       // Simulate performance metrics (in real implementation, use Lighthouse or similar)
-<<<<<<< HEAD      metrics.firstContentfulPaint = Math.random() * 2000 + 500; // 500-2500ms;
+      metrics.firstContentfulPaint = Math.random() * 2000 + 500; // 500-2500ms;
       metrics.largestContentfulPaint = Math.random() * 3000 + 1000; // 1000-4000ms;
       metrics.timeToInteractive = Math.random() * 4000 + 2000; // 2000-6000ms;
       metrics.totalBlockingTime = Math.random() * 500 + 100; // 100-600ms;
@@ -313,7 +313,7 @@ class SmartPerformanceOptimizer {;
         encoding: `utf8`, 
         cwd: this.projectRoot,
         stdio: `pipe`
-<<<<<<< HEAD      });
+      });
       const optimizedBuildTime = Date.now() - optimizedStartTime;
       ;
       const timeImprovement = buildTime - optimizedBuildTime;
@@ -378,7 +378,7 @@ class SmartPerformanceOptimizer {;
             status: `FAILED`,
             error: error.message,
             timestamp: new Date().toISOString())
-<<<<<<< HEAD          });
+          });
         }
       }
       ;
@@ -445,7 +445,7 @@ class SmartPerformanceOptimizer {;
       report.summary.failedOptimizations += report.runtimeOptimizations.filter(o => o.status === `FAILED`).length;
     }
     
-<<<<<<< HEAD    // Save report;
+    // Save report;
     await this.saveOptimizationResults(report);
     this.log(`Optimization report generated. ${report.summary.successfulOptimizations}/${report.summary.totalOptimizations} optimizations successful`);
     ;
@@ -499,6 +499,6 @@ class SmartPerformanceOptimizer {;
   }
 }
 
-<<<<<<< HEAD// Start the Smart Performance Optimizer;
+// Start the Smart Performance Optimizer;
 const optimizer = new SmartPerformanceOptimizer();
 optimizer.run();

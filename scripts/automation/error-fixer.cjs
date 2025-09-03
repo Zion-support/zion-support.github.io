@@ -65,7 +65,7 @@ class ErrorFixer {;
         if (match) {
           if (currentError) {
             errors.push(currentError);
-<<<<<<< HEAD          }
+          }
         } catch (error) {;
           this.log(`❌ Error processing ${file}: ${error.message}`);
           totalErrors++;
@@ -188,7 +188,7 @@ class ErrorFixer {;
 
         // Fix missing React imports;
         if (content.includes('React') && !content.includes('import React')) {
-          content = "import React from 'react';\n" + content;
+          content = "import React from 'react';\n + content;
         }
 
         // Fix missing JSX fragment wrappers;
@@ -293,20 +293,20 @@ class ErrorFixer {;
     ;
     // Fix common syntax errors;
     fixed = fixed.replace(/console\.log\(`([^`]*)\`\);/g, 'console.log(`$1`);');
-    fixed = fixed.replace(/console\.log\('([^']*)'\);/g, "console.log('$1');");
-    fixed = fixed.replace(/console\.log\("([^"]*)"\);/g, 'console.log("$1");');
+    fixed = fixed.replace(/console\.log\('([^']*)'\);/g, console.log('$1');");
+    fixed = fixed.replace(/console\.log\("([^]*)\);/g, 'console.log("$1");');
     ;
     // Fix template literal issues;
     fixed = fixed.replace(/`([^`]*)\`\);/g, '`$1`);');
-    fixed = fixed.replace(/'([^']*)'\);/g, "'$1');");
-    fixed = fixed.replace(/"([^"]*)"\);/g, '"$1");');
+    fixed = fixed.replace(/'([^']*)'\);/g, '$1'););
+    fixed = fixed.replace(/"([^"]*)\);/g, '$1");');
     ;
     // Fix missing semicolons;
     fixed = fixed.replace(/([^;}])\n/g, '$1;\n');
     ;
     // Fix extra quotes;
-    fixed = fixed.replace(/'/g, "'");
-    fixed = fixed.replace(/"/g, '"');
+    fixed = fixed.replace(/'/g, "');
+    fixed = fixed.replace(//g, '"');
     ;
     return fixed;
   }
@@ -442,6 +442,6 @@ this.log(`Report saved to ${reportPath}`);
 if (require.main === module) {
   const errorFixer = new ErrorFixer();
   errorFixer.run().catch(console.error);
-<<<<<<< HEAD}
+}
 ;
 module.exports = ErrorFixer;

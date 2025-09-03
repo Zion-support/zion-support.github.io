@@ -28,23 +28,23 @@ class ComprehensiveSyntaxFixer {
       const mergeConflictFixes = [
         // Remove merge conflict markers
         {
-          pattern: /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+\n/g,
+          pattern: /[\s\S]*?[\s\S]*?>>>>>>> [^\n]+\n/g,
           replacement: ''
         },
         {
-          pattern: /<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+\n/g,
+          pattern: /[\s\S]*?>>>>>>> [^\n]+\n/g,
           replacement: ''
         },
         {
-          pattern: /=======[\s\S]*?>>>>>>> [^\n]+\n/g,
+          pattern: /[\s\S]*?>>>>>>> [^\n]+\n/g,
           replacement: ''
         },
         {
-          pattern: /<<<<<<< HEAD\n/g,
+          pattern: /\n/g,
           replacement: ''
         },
         {
-          pattern: /=======\n/g,
+          pattern: /\n/g,
           replacement: ''
         },
         {
@@ -77,12 +77,12 @@ class ComprehensiveSyntaxFixer {
         },
         // Fix broken string concatenation
         {
-          pattern: /"([^"]*)\$\{([^}]*)\}([^"]*)"/g,
+          pattern: /"([^]*)\$\{([^}]*)\}([^]*)"/g,
           replacement: '`$1${$2}$3`'
         },
         // Fix broken JSX attributes
         {
-          pattern: /(\w+)="([^"]*)\$\{([^}]*)\}([^"]*)"/g,
+          pattern: /(\w+)="([^]*)\$\{([^}]*)\}([^]*)"/g,
           replacement: '$1={`$2${$3}$4`}'
         },
         // Fix broken imports
@@ -107,7 +107,7 @@ class ComprehensiveSyntaxFixer {
         },
         // Fix broken string literals
         {
-          pattern: /"([^"]*)\$\{([^}]*)\}([^"]*)";/g,
+          pattern: /"([^]*)\$\{([^}]*)\}([^]*)";/g,
           replacement: '`$1${$2}$3`;'
         },
         // Fix broken JSX
@@ -164,16 +164,16 @@ class ComprehensiveSyntaxFixer {
       const specificFixes = [
         // Fix broken JSX in Layout.tsx
         {
-          pattern: /<meta name="description" content={description} \/>";/g,
+          pattern: /<meta name="description content={description} \/>;/g,
           replacement: ''
         },
         {
-          pattern: /<meta: name="viewport" content="width=device-width, initial-scale=1" \/>";/g,
+          pattern: /<meta: name="viewport" content=width=device-width, initial-scale=1 \/>";/g,
           replacement: ''
         },
         // Fix broken MainLayout.tsx
         {
-          pattern: /import React from 'react'; import Header from '\.\/Header'; import Footer from '\.\/Footer'; import PerformanceOptimizer from '\.\.\/PerformanceOptimizer'; import AccessibilityEnhancer from '\.\.\/AccessibilityEnhancer'; import SEOEnhancer from '\.\.\/SEOEnhancer'; interface MainLayoutProps { children: React\.ReactNode; title\?: string; description\?: string; keywords\? string, } const MainLayout: React\.FC<MainLayoutProps> = \(\{ children, title = 'Zion Tech Group', description = 'Leading technology solutions and AI services', keywords = 'technology, AI, software development, consulting' \}\) => \{ return \( <div className="min-h-screen flex flex-col> <SEOEnhancer title="\{title\}" description="\{description\}" keywords=\{keywords\} \/> <PerformanceOptimizer \/> <AccessibilityEnhancer \/> <Header \/> <main className=flex-1"> \{children\} <\/main> <Footer \/> <\/div> \); \}; export default MainLayout;/g,
+          pattern: /import React from 'react'; import Header from '\.\/Header'; import Footer from '\.\/Footer'; import PerformanceOptimizer from '\.\.\/PerformanceOptimizer'; import AccessibilityEnhancer from '\.\.\/AccessibilityEnhancer'; import SEOEnhancer from '\.\.\/SEOEnhancer'; interface MainLayoutProps { children: React\.ReactNode; title\?: string; description\?: string; keywords\? string, } const MainLayout: React\.FC<MainLayoutProps> = \(\{ children, title = 'Zion Tech Group', description = 'Leading technology solutions and AI services', keywords = 'technology, AI, software development, consulting' \}\) => \{ return \( <div className="min-h-screen flex flex-col> <SEOEnhancer title=\{title\} description="\{description\}" keywords=\{keywords\} \/> <PerformanceOptimizer \/> <AccessibilityEnhancer \/> <Header \/> <main className=flex-1> \{children\} <\/main> <Footer \/> <\/div> \); \}; export default MainLayout;/g,
           replacement: `import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
@@ -195,7 +195,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   keywords = 'technology, AI, software development, consulting'
 }) => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className=min-h-screen flex flex-col">
       <SEOEnhancer title={title} description={description} keywords={keywords} />
       <PerformanceOptimizer />
       <AccessibilityEnhancer />
@@ -331,6 +331,6 @@ export default MainLayout;`
 // Run the fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.fixAllFiles().catch(error => {
-  console.error('Fatal error:', error);
+  console.error('Fatal error: ', error);
   process.exit(1);
 });

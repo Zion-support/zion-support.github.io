@@ -9,7 +9,7 @@ class BuildErrorFixer {;
   constructor() {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, ``automation/logs/build-error-fixer.log``);
-<<<<<<< HEAD    this.fixesApplied = [];
+    this.fixesApplied = [];
     this.startTime = new Date();
   }
 ;
@@ -57,7 +57,7 @@ class BuildErrorFixer {;
     await this.log('🗑️  Clearing npm cache...');
     await this.runCommand('npm cache clean --force', { silent: true });
     
-<<<<<<< HEAD    // Reinstall dependencies;
+    // Reinstall dependencies;
     await this.log('📦 Reinstalling dependencies...');
     const installResult = await this.runCommand('npm install --legacy-peer-deps');
     if (installResult.success) {;
@@ -117,7 +117,7 @@ const nextConfig = {;
 ;
 module.exports = nextConfig;
       ;
-<<<<<<< HEAD      await fs.writeFile(nextConfigPath, fixedConfig`);
+      await fs.writeFile(nextConfigPath, fixedConfig`);
       await this.log('✅ Next.js configuration fixed');
       this.fixesApplied.push({
         type: `next-config-fix`,
@@ -141,7 +141,7 @@ module.exports = nextConfig;
       
       // Update compiler options;
       if (!tsConfig.compilerOptions) {
-<<<<<<< HEAD        tsConfig.compilerOptions = {};
+        tsConfig.compilerOptions = {};
       }
       ;
       tsConfig.compilerOptions = {;
@@ -191,7 +191,7 @@ module.exports = nextConfig;
       
       // Ensure required scripts exist;
       if (!packageJson.scripts) {
-<<<<<<< HEAD        packageJson.scripts = {};
+        packageJson.scripts = {};
       }
       ;
       packageJson.scripts = {;
@@ -237,7 +237,7 @@ module.exports = nextConfig;
     try {
       await this.log(`🚀 Starting Build Error Fixer`);
       
-<<<<<<< HEAD      await this.fixNextConfig();
+      await this.fixNextConfig();
       await this.fixTypeScriptConfig();
       await this.fixPackageJson();
       await this.fixBuildErrors();

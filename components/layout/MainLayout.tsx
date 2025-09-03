@@ -17,14 +17,20 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   title = 'Zion Tech Group',
   description = 'Leading technology solutions and AI services',
   keywords = 'technology, AI, software development, consulting'
+const MainLayout: React.FC<MainLayoutProps> = ({ 
+  children, 
+  title = 'Zion Tech Group', 
+  description = 'Leading technology solutions and AI services', 
+  keywords = 'technology, AI, software development, consulting' 
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
 }) => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col>
       <SEOEnhancer title={title} description={description} keywords={keywords} />
       <PerformanceOptimizer />
       <AccessibilityEnhancer />
       <Header />
-      <main className="flex-1">
+      <main className=flex-1">
         {children}
       </main>
       <Footer />

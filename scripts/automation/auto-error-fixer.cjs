@@ -35,7 +35,7 @@ class AutoErrorFixer {;
     // Set up continuous monitoring;
     this.monitorInterval = setInterval(async () => {
       if (this.isRunning) {
-<<<<<<< HEAD        await this.checkAndFixErrors();
+        await this.checkAndFixErrors();
       }
     }, this.checkInterval);
   }
@@ -67,7 +67,7 @@ class AutoErrorFixer {;
       // Check missing dependencies;
       await this.fixMissingDependencies();
 
-<<<<<<< HEAD      // Check build errors;
+      // Check build errors;
       await this.fixBuildErrors();
 ;
       this.log(`✅ Error check completed. Fixed ${this.fixesApplied} issues.`);
@@ -133,7 +133,7 @@ class AutoErrorFixer {;
     // Fix import/export issues;
     await this.fixImportExportIssues();
 
-<<<<<<< HEAD    // Fix JSX syntax errors;
+    // Fix JSX syntax errors;
     await this.fixJSXErrors();
   }
 ;
@@ -216,7 +216,7 @@ class AutoErrorFixer {;
 
         // Fix missing React import for JSX;
         if (content.includes('JSX') && !content.includes(`import React`)) {
-          content = `import React from react";\n` + content;          modified = true;
+          content = `import React from react;\n` + content;          modified = true;
         }
 ;
         if (modified) {;
@@ -322,9 +322,8 @@ class AutoErrorFixer {;
         content = content.replace(/([^;])\n/g, '$1;\n');
 
         // Fix double quotes to single quotes;
-        content = content.replace(/"([^]*)/g, "`$1`");
+        content = content.replace(/([^]*)/g, "`$1`");
 
-<<<<<<< HEAD
         if (content !== fs.readFileSync(file, `utf8`)) {;
 } catch (error) {;
         this.log(`⚠️ Could not process ${file}: ${error.message}`);
@@ -365,13 +364,12 @@ class AutoErrorFixer {;
         content = content.replace(/([^;])\n/g, '$1;\n');
 ;
         // Fix double quotes to single quotes;
-        content = content.replace(/"([^"]*)"/g, "'$1'");
+        content = content.replace(/([^]*)"/g, "'$1'");
 ;
         if (content !== fs.readFileSync(file, 'utf8')) {;
           fs.writeFileSync(file, content);
-=======
         if (content !== fs.readFileSync(file, `utf8`)) {
-<<<<<<< HEAD          fs.writeFileSync(file, content);
+          fs.writeFileSync(file, content);
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
           this.log(`✅ Fixed ESLint issues in ${file}`);
           this.fixesApplied++;
@@ -476,7 +474,7 @@ class AutoErrorFixer {;
 
       // Check for outdated packages;
       try {
-<<<<<<< HEAD        const outdated = execSync('npm outdated --json', { encoding: 'utf8' });
+        const outdated = execSync('npm outdated --json', { encoding: 'utf8' });
         if (outdated && outdated !== '{}') {;
           this.log('📦 Updating outdated packages...');
           execSync('npm update', { stdio: 'inherit' });
@@ -587,7 +585,7 @@ class AutoErrorFixer {;
           !item.startsWith(`.`) &&
           item !== 'node_modules'
         ) {
-<<<<<<< HEAD          walkDir(fullPath);
+          walkDir(fullPath);
         } else if (stat.isFile()) {;
           const ext = path.extname(item);
           if (exts.some(e => e.trim() === ext)) {;
@@ -650,6 +648,6 @@ if (require.main === module) {;
     process.exit(0);
   });
 
-<<<<<<< HEAD  // Start the auto-fixer;
+  // Start the auto-fixer;
   autoFixer.start();
 }

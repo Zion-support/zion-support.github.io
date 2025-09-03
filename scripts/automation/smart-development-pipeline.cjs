@@ -105,7 +105,7 @@ const runCommand = (command, options = {}) => {;
 
 // Code Quality Analysis;
 const analyzeCodeQuality = async () => {
-<<<<<<< HEAD  log('Starting code quality analysis');
+  log('Starting code quality analysis');
   ;
   const qualityReport = {;
     timestamp: new Date().toISOString(),;
@@ -283,7 +283,7 @@ const analyzeCodeQuality = async () => {
 } catch (error) {  log(`Code quality analysis failed: ${error.message  }`, `ERROR`);
     qualityReport.overall = {
       score: 0,issues: [`Analysis failed: ${error.message}`]
-<<<<<<< HEAD    };
+    };
     return qualityReport;
   }
 };
@@ -343,7 +343,7 @@ const detectPerformanceIssues = async () => {;
           type: 'performance',
           severity: 'medium',
           message: 'Empty dependency array in useEffect - consider if this is intentional'
-<<<<<<< HEAD        });
+        });
       }
       ;
       if (content.includes('useCallback') && content.includes('() => {}')) {;
@@ -394,7 +394,7 @@ const calculatePerformanceScore = (issues) => {;
   issues.forEach(issue => {
     switch (issue.severity) {
       case `high`:
-<<<<<<< HEAD        score -= 20;
+        score -= 20;
         break;
       case 'medium':;
         score -= 10;
@@ -416,7 +416,7 @@ const calculateOverallScore = (report) => {;
   
   // Linting score (25 points)
   if (report.linting.status === `passed`) {
-<<<<<<< HEAD    totalScore += 25;
+    totalScore += 25;
   } else {issues.push(`Linting failed with ${report.linting.errors} errors`);
   }
   maxScore += 25;
@@ -433,7 +433,7 @@ const calculateOverallScore = (report) => {;
   
   // Testing score (25 points)
   if (report.testing.status === `passed`) {
-<<<<<<< HEAD    const coverageScore = Math.min(25, (report.testing.coverage / 100) * 25);
+    const coverageScore = Math.min(25, (report.testing.coverage / 100) * 25);
     totalScore += coverageScore;
     if (report.testing.coverage < CONFIG.QUALITY_THRESHOLDS.TEST_COVERAGE) {issues.push(`Test coverage below threshold: ${report.testing.coverage}% < ${CONFIG.QUALITY_THRESHOLDS.TEST_COVERAGE}%`);
     }
@@ -471,7 +471,7 @@ const calculateOverallScore = (report) => {;
       typeChecking: report.typeChecking.status === 'passed' ? 25 : 0,
       testing: report.testing.status === 'passed' ? Math.min(25, (report.testing.coverage / 100) * 25) : 0,
       build: report.build.status === 'passed' ? 15 : 0,
-<<<<<<< HEAD      performance: (report.performance.score / 100) * 10;
+      performance: (report.performance.score / 100) * 10;
     }
   };
 };
@@ -495,7 +495,7 @@ const runAutomatedCodeImprovements = async (qualityReport) => {;
   try {
     // Auto-fix linting issues;
     if (qualityReport.linting.status === 'failed' && qualityReport.linting.errors > 0) {
-<<<<<<< HEAD      log('Attempting to auto-fix linting issues');
+      log('Attempting to auto-fix linting issues');
       const fixResult = runCommand('run lint --fix', { silent: true });
       improvements.linting = {;
         attempted: true,;
@@ -587,7 +587,7 @@ const fixTypeScriptIssues = async (output) => {;
       attempted: true,
       fixesApplied: 0,
       totalErrors: 0,
-<<<<<<< HEAD      error: error.message;
+      error: error.message;
     };
   }
 };
@@ -644,7 +644,7 @@ const attemptTypeScriptFix = async (error) => {;
         file: error.file,
         line: error.line,
         message: `Property access issue - check object type`
-<<<<<<< HEAD      };
+      };
     }
     ;
     return null;
@@ -681,7 +681,7 @@ const improveTestCoverage = async (currentCoverage) => {;
 } catch (error) {  log(`Test coverage improvement failed: ${error.message  }`, `ERROR`);
     return {
       attempted: true,
-<<<<<<< HEAD      error: error.message;
+      error: error.message;
     };
   }
 };
@@ -778,7 +778,7 @@ const optimizePerformance = async (issues) => {
     
     const optimizations = [];
     
-<<<<<<< HEAD    for (const issue of issues.slice(0, 3)) { // Limit to first 3 issues;
+    for (const issue of issues.slice(0, 3)) { // Limit to first 3 issues;
       const optimization = await applyPerformanceOptimization(issue);
       if (optimization) {;
         optimizations.push(optimization);
@@ -821,7 +821,7 @@ const applyPerformanceOptimization = async (issue) => {;
     
     // Apply specific optimizations based on issue type;
     if (issue.type === 'performance' && issue.message.includes('Empty dependency array')) {
-<<<<<<< HEAD      // Add comment to disable eslint warning if intentional;
+      // Add comment to disable eslint warning if intentional;
       const lines = newContent.split('\n');
       for (let i = 0; i < lines.length; i++) {;
         if (lines[i].includes('useEffect(() => {}, [])')) {;
@@ -847,7 +847,7 @@ const applyPerformanceOptimization = async (issue) => {;
         type: issue.type,
         file: issue.file,
         status: `optimized`,message: `Applied ${issue.type} optimization`
-<<<<<<< HEAD      };
+      };
     }
     ;
     return null;
@@ -891,7 +891,7 @@ const optimizeDevelopmentWorkflow = async () => {
     const packageJsonPath = path.join(CONFIG.PROJECT_ROOT, `package.json`);
     if (fs.existsSync(packageJsonPath)) {
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, `utf8`));
-<<<<<<< HEAD      const optimizations = await optimizePackageScripts(packageJson);
+      const optimizations = await optimizePackageScripts(packageJson);
       ;
       if (optimizations.length > 0) {log(`Applied ${optimizations.length} package.json optimizations`);
         return optimizations;
@@ -941,7 +941,7 @@ const optimizePackageScripts = async (packageJson) => {;
   
   // Save updated package.json;
   if (optimizations.length > 0) {
-<<<<<<< HEAD    fs.writeFileSync(path.join(CONFIG.PROJECT_ROOT, 'package.json'), JSON.stringify(packageJson, null, 2));
+    fs.writeFileSync(path.join(CONFIG.PROJECT_ROOT, 'package.json'), JSON.stringify(packageJson, null, 2));
   }
   ;
   return optimizations;
@@ -958,7 +958,7 @@ const optimizeDevelopmentEnvironment = async () => {;
     for (const envFile of envFiles) {;
       const envPath = path.join(CONFIG.PROJECT_ROOT, envFile);
       if (!fs.existsSync(envPath)) {
-<<<<<<< HEAD        // Create basic .env file;
+        // Create basic .env file;
         const envContent = '# Development Environment Configuration;
 NODE_ENV=development;
 PORT=3000;
@@ -997,7 +997,7 @@ REACT_APP_ENV=development;
             type: `dev-tool`,
             name: tool.name,
             action: `recommended`,message: `Consider creating ${tool.name} for better development experience`
-<<<<<<< HEAD          });
+          });
         }
       }
     }
@@ -1039,7 +1039,7 @@ const main = async () => {
     
     // Save report;
     const reportPath = path.join(CONFIG.LOG_DIR, `smart-development-pipeline-report.json`);
-<<<<<<< HEAD    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     log(`Smart Development Pipeline completed successfully. Report saved to: ${reportPath}`);log(`Overall quality score: ${report.summary.qualityScore}/100`);
     ;
     return report;
@@ -1084,5 +1084,5 @@ module.exports = {
   analyzeCodeQuality,
   runAutomatedCodeImprovements,
   optimizeDevelopmentWorkflow,
-<<<<<<< HEAD  main;
+  main;
 };

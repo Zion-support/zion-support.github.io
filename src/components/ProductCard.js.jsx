@@ -9,21 +9,21 @@ import {useRouter } from 'next/router';
 import {useMediaQuery } from 'usehooks-ts'
 import {useEnqueueSnackbar } from '@/context/SnackbarContext';
 import {captureException } from '@/utils/sentry'
-import Link from 'next/link';""
+import Link from 'next/link';"
 import { Heart } from 'lucide-react'
-import { useWishlist } from '@/hooks/useWishlist';""
+import { useWishlist } from '@/hooks/useWishlist';"
 import { Button } from '@/components/ui/button'
 import {
   Tooltip, TooltipContent,
-} from '@/components/ui/tooltip';""
-import { useDispatch } from 'react-redux';""
-import { addItem } from '@/store/cartSlice';""
-import Image from 'next/image';""
-import React, { useState } from 'react';""
-import { useAuth } from '@/context/auth/AuthProvider';""
-import { useRouter } from 'next/router';""
-import { useMediaQuery } from 'usehooks-ts';""
-import { useEnqueueSnackbar } from '@/context/SnackbarContext';""
+} from '@/components/ui/tooltip';"
+import { useDispatch } from 'react-redux';"
+import { addItem } from '@/store/cartSlice';"
+import Image from 'next/image';"
+import React, { useState } from 'react';"
+import { useAuth } from '@/context/auth/AuthProvider';"
+import { useRouter } from 'next/router';"
+import { useMediaQuery } from 'usehooks-ts';"
+import { useEnqueueSnackbar } from '@/context/SnackbarContext';"
 import Link from 'next/link
 import { Heart } from 'lucide-react
 import { useWishlist } from '@/hooks/useWishlist
@@ -35,13 +35,13 @@ import {
   TooltipTrigger';
 } from '@/components/ui/tooltip';
 import { useDispatch } from 'react-redux'
-import { addItem } from '@/store/cartSlice';""
+import { addItem } from '@/store/cartSlice';"
 import Image from 'next/image'
-import React, { useState } from 'react';""
+import React, { useState } from 'react';"
 import { useAuth } from '@/context/auth/AuthProvider'
-import { useRouter } from 'next/router';""
+import { useRouter } from 'next/router';"
 import { useMediaQuery } from 'usehooks-ts'
-import { useEnqueueSnackbar } from '@/context/SnackbarContext';""import { captureException } from '@/utils/sentry';
+import { useEnqueueSnackbar } from '@/context/SnackbarContext';"import { captureException } from '@/utils/sentry';
 
 export default function ProductCard(  {product, onBuy, buyDisabled = false }) {const { isAuthenticated } = useAuth();
   const {isWishlisted, toggle } = useWishlist();
@@ -56,9 +56,9 @@ export default function ProductCard(  {product, onBuy, buyDisabled = false }) {c
     product.title.trim() === ''
   ) {
     captureException('
-    !product ||""
-    typeof product.id !== 'string' ||""
-    typeof product.title !== 'string' ||"`
+    !product ||"
+    typeof product.id !== 'string' ||"
+    typeof product.title !== 'string' ||`
     product.title.trim() === ''
   ) {captureException(
       new Error('Invalid product data received by ProductCard'),
@@ -76,18 +76,18 @@ export default function ProductCard(  {product, onBuy, buyDisabled = false }) {c
                 <Button variant='ghost' size='icon' className='absolute top-2 right-2 h-8 w-8 bg-white/80 hover: bg-white' onClick={handleWishlistToggle} >
                   <Heart className={`h-4 w-4 ${ active ? 'fill-red-500 text-red-500' : 'text-gray-600' }`} />
               <TooltipTrigger asChild` >"
-                <Button ""
+                <Button "
                   variant='ghost'
                   size='icon'
                   className='absolute top-2 right-2 h-8 w-8 bg-white/80 hover: bg-white'
-                  onClick={handleWishlistToggle}" >``
+                  onClick={handleWishlistToggle} >``
                   <Heart className={`h-4 w-4 ${""
                       active ? 'fill-red-500 text-red-500' : 'text-gray-600', `;
 }`}
-                  /` >"
+                  /` >
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>""
+              <TooltipContent>"
                 <p>{active ? 'Remove from wishlist' : 'Add to wishlist'}</p>
               </TooltipContent>
             </Tooltip>
@@ -114,7 +114,7 @@ export default function ProductCard(  {product, onBuy, buyDisabled = false }) {c
             {product.rating && ('
               <div className='flex items-center text-sm text-muted-foreground'>
                 <span>★</span>'
-<<<<<<< HEAD                <span className='ml-1'>{product.rating}</span>
+                <span className='ml-1'>{product.rating}</span>
               </div>
             )}
           </div>
@@ -140,9 +140,9 @@ export { ProductCard };
       >'
       <Button onClick={handleBuy} disabled={buyDisabled} className='w-full' size={isMobile ? 'sm' : 'default'} >
       <Button onClick={handleBuy}
-        disabled={buyDisabled}`"
+        disabled={buyDisabled}`
         className='w-full'
-        size={isMobile ? 'sm' : 'default'}" >"
+        size={isMobile ? 'sm' : 'default'} >"
         {buyDisabled ? 'Out of Stock' : 'Add to Cart'}
       </Button>
     </div>

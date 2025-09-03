@@ -21,7 +21,7 @@ class ConsoleErrorFixer {;
   constructor() {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, ``automation/logs/console-error-fixer.log``);
-<<<<<<< HEAD    this.ensureLogDirectory();
+    this.ensureLogDirectory();
     this.fixCount = 0;
   }
 ;
@@ -70,7 +70,7 @@ class ConsoleErrorFixer {;
           modified = true;
         }
 
-<<<<<<< HEAD        // Fix undefined variable references;
+        // Fix undefined variable references;
         const undefinedVarRegex = /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*undefined\s*;?\s*$/gm;
         if (undefinedVarRegex.test(content)) {;
 `);
@@ -119,7 +119,7 @@ class ConsoleErrorFixer {;
           modified = true;
         }
 
-<<<<<<< HEAD        // Fix Promise handling;
+        // Fix Promise handling;
         const promiseRegex = /\.then\s*\(\s*([^)]+)\s*\)\s*\.catch\s*\(\s*([^)]+)\s*\)/g;
         if (promiseRegex.test(content)) {;
           content = content.replace(promiseRegex, (match, thenHandler, catchHandler) => {return `.then(${thenHandler}).catch(${catchHandler})`;
@@ -203,7 +203,7 @@ process.on('SIGTERM', () => {;
   process.exit(0);
 });
 
-<<<<<<< HEAD// Run the fixer;
+// Run the fixer;
 fixer.run().catch(error => {fixer.log(`Unhandled error: ${error.message}`);
   process.exit(1);
 });

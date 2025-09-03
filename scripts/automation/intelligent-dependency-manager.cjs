@@ -32,7 +32,7 @@ class IntelligentDependencyManager {;
     this.updateRecommendations = path.join(;
       this.projectRoot,logs',;
       'update-recommendations.json';
-<<<<<<< HEAD    );
+    );
     this.ensureLogsDirectory();
 ;
     this.dependencyHistory = [];
@@ -62,7 +62,7 @@ class IntelligentDependencyManager {;
   }
 
   log(message, level = `INFO`) {
-<<<<<<< HEAD    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
@@ -126,7 +126,7 @@ class IntelligentDependencyManager {;
     try {
       const packagePath = path.join(this.projectRoot, `package.json`);
       const packageContent = fs.readFileSync(packagePath, `utf8`);
-<<<<<<< HEAD      const packageData = JSON.parse(packageContent);
+      const packageData = JSON.parse(packageContent);
 ;
       const analysis = {;
         dependencies: {;
@@ -181,7 +181,7 @@ class IntelligentDependencyManager {;
             sizeKB: Math.round(stats.size / 1024),
             lastModified: stats.mtime,
             exists: true,
-<<<<<<< HEAD          });
+          });
         } else {;
           lockFiles.push({;
             name: lockFile,;
@@ -238,7 +238,7 @@ class IntelligentDependencyManager {;
         encoding: 'utf8',
         cwd: this.projectRoot,
         stdio: 'pipe',
-<<<<<<< HEAD      });
+      });
 ;
       const auditData = JSON.parse(auditOutput);
       const vulnerabilities = [];
@@ -304,7 +304,7 @@ class IntelligentDependencyManager {;
         encoding: 'utf8',
         cwd: this.projectRoot,
         stdio: 'pipe',
-<<<<<<< HEAD      });
+      });
 ;
       const lines = peerCheckOutput.split('\n');
       for (const line of lines) {
@@ -352,7 +352,7 @@ class IntelligentDependencyManager {;
         encoding: 'utf8',
         cwd: this.projectRoot,
         stdio: 'pipe',
-<<<<<<< HEAD      });
+      });
 ;
       const outdatedData = JSON.parse(outdatedOutput);
       const outdated = [];
@@ -368,7 +368,7 @@ class IntelligentDependencyManager {;
         const priority = this.calculateUpdatePriority(
           updateType,
           current,
-<<<<<<< HEAD          latest;
+          latest;
         );
 ;
         outdated.push({;
@@ -439,7 +439,7 @@ class IntelligentDependencyManager {;
               versions: [...new Set(versions)],
               severity: `HIGH`,
               action: `RESOLVE_VERSIONS`,
-<<<<<<< HEAD            });
+            });
           }
         }
       }
@@ -473,7 +473,7 @@ class IntelligentDependencyManager {;
 ;
     let priority = basePriority[updateType];
 
-<<<<<<< HEAD    // Add priority based on how old the current version is;
+    // Add priority based on how old the current version is;
     const currentDate = new Date();
     const daysSinceUpdate = Math.floor(;
       (currentDate - new Date()) / (1000 * 60 * 60 * 24);
@@ -540,7 +540,7 @@ class IntelligentDependencyManager {;
           // Check if it`s a package (has package.json)
           const packageJsonPath = path.join(itemPath, `package.json`);
           if (fs.existsSync(packageJsonPath)) {
-<<<<<<< HEAD            count++;
+            count++;
           }
         }
       }
@@ -588,7 +588,7 @@ class IntelligentDependencyManager {;
     if (analysis.outdated.length > 0) {
       const majorUpdates = analysis.outdated.filter(
         p => p.updateType === `MAJOR`
-<<<<<<< HEAD      );
+      );
       const minorUpdates = analysis.outdated.filter(;
         p => p.updateType === 'MINOR';
       );
@@ -664,7 +664,7 @@ class IntelligentDependencyManager {;
   async generateReport() {
     this.log(`Generating dependency management report...`);
 
-<<<<<<< HEAD    const analysis = await this.analyzeDependencies();
+    const analysis = await this.analyzeDependencies();
     if (!analysis) return null;
 ;
     const report = {;
@@ -725,7 +725,7 @@ class IntelligentDependencyManager {;
     // Immediate actions;
     const criticalVulns = analysis.vulnerabilities.filter(
       v => v.severity === 'CRITICAL'
-<<<<<<< HEAD    );
+    );
     if (criticalVulns.length > 0) {;
       actions.push({;
         priority: 'IMMEDIATE',;
@@ -758,7 +758,7 @@ class IntelligentDependencyManager {;
         priority: 'MEDIUM',
         action: 'npm update',
         description: `Update patch versions safely`,
-<<<<<<< HEAD      });
+      });
     }
 ;
     return actions;
@@ -792,7 +792,7 @@ class IntelligentDependencyManager {;
     } catch (error) {  
       this.log(Intelligent Dependency Manager failed: ${error.message  }`,
         `ERROR`
-<<<<<<< HEAD      );
+      );
       setTimeout(() => this.run(), 1800000); // 30 minutes on error;
     }
   }

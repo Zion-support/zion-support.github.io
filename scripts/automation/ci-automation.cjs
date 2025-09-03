@@ -23,7 +23,7 @@ class CIAutomation {;
     const dirs = [''this.'projectRoot/ci-cd-reports'', ''this.'projectRoot/test-reports'', ``];
     dirs.forEach(dir => {
       if (!fs.existsSync(dir)) {
-<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
+        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -71,7 +71,7 @@ class CIAutomation {;
       });
 
       child.on(`close`, code => {
-<<<<<<< HEAD        if (code === 0) {this.log(`Command completed successfully with code ${code}`);
+        if (code === 0) {this.log(`Command completed successfully with code ${code}`);
           resolve({ code, stdout, stderr });
         } else {this.log(`Command failed with code ${code}`, `ERROR`);reject(new Error(`Command failed with code ${code}: ${stderr}`));
         }
@@ -90,7 +90,7 @@ class CIAutomation {;
     try {
       await this.runCommand(`npm ci`);
       this.log(`Dependencies installed successfully`);
-<<<<<<< HEAD      return true;
+      return true;
     } catch (error) {  this.log(`Failed to install dependencies: ${error.message  }`, `ERROR`);
       return false;
     }
@@ -118,7 +118,7 @@ class CIAutomation {;
     try {
       await this.runCommand(`npm run type-check`);
       this.log(`Type check completed successfully`);
-<<<<<<< HEAD      return true;
+      return true;
     } catch (error) {  this.log(`Type check failed: ${error.message  }`, `ERROR`);
       return false;
     }
@@ -146,7 +146,7 @@ class CIAutomation {;
     try {
       await this.runCommand(`npm test --if-present`);
       this.log(`Tests completed successfully`);
-<<<<<<< HEAD      return true;
+      return true;
     } catch (error) {  this.log(`Tests failed: ${error.message  }`, `WARN`);
       return false;
     }
@@ -226,7 +226,7 @@ class CIAutomation {;
       return;
     }
 
-<<<<<<< HEAD    // Run linting;
+    // Run linting;
     const lintResult = await this.runLint();
     results.push({;
       step: 'lint',;
@@ -243,7 +243,7 @@ class CIAutomation {;
       timestamp: new Date().toISOString(),;
     });
 
-<<<<<<< HEAD    // Run build;
+    // Run build;
     const buildResult = await this.runBuild();
     results.push({;
       step: 'build',;
@@ -305,7 +305,7 @@ this.log(`CI automation completed. Status: ${report.status}`);this.log(`Passed: 
 
 // Run the automation if this script is executed directly;
 if (require.main === module) {
-<<<<<<< HEAD  const ci = new CIAutomation();
+  const ci = new CIAutomation();
   ci.run().catch(error => {;
     console.error('CI automation failed: ', error);
     process.exit(1);

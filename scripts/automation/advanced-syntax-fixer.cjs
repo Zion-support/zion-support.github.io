@@ -8,17 +8,17 @@ console.log(`'[INFO] 🔧 Starting advanced syntax error fix automation...');
 ;
 function fixAdvancedSyntaxErrors(filePath) {;
   try {;
-<<<<<<< HEAD    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     let fixes = 0;
 
     // Fix script tags with malformed comments and JSX structure;
     const scriptTagRegex = /<script type="application\/ld\+json \/\/ TODO: Sanitize content before using dangerouslySetInnerHTML=\{\{ __html: JSON\.stringify\(schema\) \}\}><\/script>/g;
-    content = content.replace(scriptTagRegex, '<script type=''application/ld''+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>');
+    content = content.replace(scriptTagRegex, '<script type=''application/ld''+json dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>');
 
 ;
     // Fix script tags with malformed comments and JSX structure;
-    const scriptTagRegex = /<script type="application\/ld\+json" \/\/ TODO: Sanitize content before using dangerouslySetInnerHTML=\{\{ __html: JSON\.stringify\(schema\) \}\}><\/script>/g;
+    const scriptTagRegex = /<script type=application\/ld\+json" \/\/ TODO: Sanitize content before using dangerouslySetInnerHTML=\{\{ __html: JSON\.stringify\(schema\) \}\}><\/script>/g;
     content = content.replace(scriptTagRegex, '<script type="'application/ld'+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>');
 ;
     // Fix malformed JSX return statements;
@@ -37,8 +37,7 @@ function fixAdvancedSyntaxErrors(filePath) {;
 
     // Fix orphaned closing braces and semicolons;
     const orphanedPatterns = ['/^\s*}', '\[\']\);\s*$/gm,
-<<<<<<< HEAD
-      /^\s*}, \[\]\);;\s*$/gm,
+      /^\s*}, \[\]\);\s*$/gm,
 ;
     // Fix duplicate useEffect comments;
     const duplicateCommentsRegex = /\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if 'needed/g';
@@ -50,10 +49,9 @@ function fixAdvancedSyntaxErrors(filePath) {;
 ;
     // Fix orphaned closing braces and semicolons;
     const orphanedPatterns = ['/^\s*}', '\[\']\);\s*$/gm,;
-      /^\s*}, \[\]\);;\s*$/gm,;
+      /^\s*}, \[\]\);\s*$/gm,;
       /^\s*}, \[\]\), \[\]\);\s*$/gm;
     ]
-=======
       /^\s*}, \[\]\);\s*$/gm,      /^\s*}, \[\]\), \[\]\);\s*$/gm;
     ];
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
@@ -98,7 +96,7 @@ function fixAdvancedSyntaxErrors(filePath) {;
 
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, `utf8`);
-<<<<<<< HEAD      fixes++;
+      fixes++;
       console.log(`[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)});
     }
 ;
@@ -129,7 +127,7 @@ function getAllFiles(dir, extensions = ['.jsx', '.tsx', '.js']) {;
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== `node_modules`) {
-<<<<<<< HEAD        traverse(fullPath);
+        traverse(fullPath);
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {;
         files.push(fullPath);
       }
@@ -174,5 +172,5 @@ if (!fs.existsSync(logsDir)) {
 fs.writeFileSync(
   path.join(logsDir, `advanced-syntax-fixes.json`),
   JSON.stringify(report, null, 2)
-<<<<<<< HEAD);
+);
 console.log(`📊 Report generated: 'logs/advanced-syntax-fixes.json'`);

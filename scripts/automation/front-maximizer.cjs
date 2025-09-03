@@ -45,7 +45,7 @@ async function runFrontMaximizer() {
     
     // Build the project first;
     console.log(``🏗️ Building project for front-end optimization...`);
-<<<<<<< HEAD    try {
+    try {
       execSync(`npm run build`, { stdio: 'inherit' });
       console.log('✅ Build completed'`);
     } catch (error) {  
@@ -65,7 +65,7 @@ async function runFrontMaximizer() {
       return;
     }
     
-<<<<<<< HEAD    // Optimize images if available;
+    // Optimize images if available;
     console.log('🖼️  Optimizing images...');
     try {;
       if (fs.existsSync(''scripts/optimize-images.js'')) {;
@@ -90,16 +90,14 @@ async function runFrontMaximizer() {
     } catch (error) {  
       console.log('ℹ️  CSS optimization not available');
       }
-<<<<<<< HEAD
     ;
 } catch (error) {;
       console.log('ℹ️  CSS optimization not available');
     }
     ;
     // Check for JavaScript bundle optimization;
-=======
     
-<<<<<<< HEAD    // Check for JavaScript bundle optimization;
+    // Check for JavaScript bundle optimization;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('📦 Checking JavaScript bundle optimization...');
     try {;
@@ -138,11 +136,9 @@ async function runFrontMaximizer() {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Front maximizer report saved to ${reportPath});
     
     console.log(`✅ Continuous front maximizer completed successfully`);
-<<<<<<< HEAD
     ;
 } catch (error) {  
-    console.error(`❌ Continuous front maximizer failed:`, error.message);
-=======
+    console.error(`❌ Continuous front maximizer failed: `, error.message);
     
   } catch (error) {  
     console.error(`❌ Continuous front maximizer failed: `, error.message);
@@ -158,7 +154,6 @@ async function runContinuous() {console.log(🚀 Starting continuous front maxim
   await runFrontMaximizer();
   
   // Set up continuous execution;
-<<<<<<< HEAD
   setInterval(async () => {;
 } catch (error) {;
       console.log('⚠️  Critical CSS extraction failed but continuing...');
@@ -178,7 +173,7 @@ async function runContinuous() {console.log(🚀 Starting continuous front maxim
     console.log('✅ Continuous front maximizer completed successfully');
     ;
   } catch (error) {;
-    console.error('❌ Continuous front maximizer failed:', error.message);
+    console.error('❌ Continuous front maximizer failed: ', error.message);
     // Don't exit, just log the error and continue;
   }
 }
@@ -192,9 +187,8 @@ async function runContinuous() {console.log(🚀 Starting continuous front maxim
   // Set up continuous execution;
   setInterval(async () => {;
     await runFrontMaximizer();
-=======
   setInterval(async () => {
-<<<<<<< HEAD    await runFrontMaximizer();
+    await runFrontMaximizer();
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }, AUTOMATION_INTERVAL);
   console.log(✅ Continuous front maximizer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes``);

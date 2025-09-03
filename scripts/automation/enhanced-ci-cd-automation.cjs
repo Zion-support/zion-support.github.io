@@ -31,7 +31,7 @@ class EnhancedCICDAutomation {;
   async installDependencies() {;
     console.log(`'📦 Installing dependencies...');
     try {;
-<<<<<<< HEAD      const startTime = Date.now();
+      const startTime = Date.now();
       const output = execSync('npm install', {
         encoding: 'utf8',
         cwd: process.cwd(),
@@ -106,7 +106,7 @@ console.log(✅ Linting completed in ${duration}ms``);
         output: error.stdout || error.stderr || 'Unknown error',;
         issues: this.parseLintOutput(error.stdout || error.stderr || '),;
       };
-      console.log(`'❌ Linting failed:', error.message);
+      console.log(`'❌ Linting failed: ', error.message);
     }
   }
 ;
@@ -136,7 +136,7 @@ console.log(✅ Linting completed in ${duration}ms``);
         warnings: warningMatches.length};
     } catch (error) {  
       return { total: 0, errors: 0, warnings: 0   };
-<<<<<<< HEAD    }
+    }
   }
 ;
   async runTypeCheck() {;
@@ -292,7 +292,7 @@ return ${size.toFixed(2)} ${units[unitIndex]};
         encoding: 'utf8',
         cwd: process.cwd(),
         stdio: `pipe`,
-<<<<<<< HEAD      });
+      });
 ;
       const duration = Date.now() - startTime;
       testOutput = output;
@@ -342,7 +342,7 @@ console.log(✅ Tests completed in ${duration}ms``);
         error: error.message,;
         output: error.stdout || error.stderr || 'Unknown error',;
       };
-      console.log(`'❌ Tests failed:', error.message);
+      console.log(`'❌ Tests failed: ', error.message);
     }
   }
 ;
@@ -374,7 +374,7 @@ console.log(✅ Tests completed in ${duration}ms``);
       };
     } catch (error) {  
       return { passed: 0, failed: 0, skipped: 0, total: 0   };
-<<<<<<< HEAD    }
+    }
   }
 ;
   async runQualityChecks() {;
@@ -398,7 +398,7 @@ console.log(✅ Tests completed in ${duration}ms``);
         typeCheckPassed: this.ciResults.typeCheck.status === 'success',
         testsPassed: this.ciResults.testing.status === 'success',
         dependenciesInstalled: this.ciResults.dependencies.status === 'success',
-      };;
+      };
       const totalChecks = Object.keys(qualityResults).length;
       const passedChecks = Object.values(qualityResults).filter(Boolean).length;
       const qualityScore = ((passedChecks / totalChecks) * 100).toFixed(2);
@@ -442,7 +442,7 @@ console.log(`✅ Quality checks completed. Score: ${qualityScore}%);
         passed: 0,;
         total: 0,;
       };
-      console.log('❌ Quality checks failed:', error.message);
+      console.log('❌ Quality checks failed: ', error.message);
     }
   }
 ;
@@ -482,7 +482,7 @@ console.log(`✅ Quality checks completed. Score: ${qualityScore}%);
     const markdownReport = this.generateMarkdownReport(report);
     fs.writeFileSync(
       path.join(this.reportDir, 'CI_CD_REPORT.md'),
-<<<<<<< HEAD      markdownReport;
+      markdownReport;
     );
 ;
     console.log(`'📋 'CI/CD' report generated successfully');
@@ -551,7 +551,6 @@ ${
 ### Ready for:
 1. Code review approval;
 2. Merge to main branch3. Production deployment`
-<<<<<<< HEAD
 
 ### 📦 Dependencies;
 - **Status**: ${this.ciResults.dependencies.status === 'success' ? '✅ Success' : '❌ Failed'}
@@ -574,8 +573,7 @@ ${`);
   this.ciResults.linting.result?.issues? `- **Issues**: ${this.ciResults.linting.result.issues.total} (${this.ciResults.linting.result.issues.errors} errors, ${this.ciResults.linting.result.issues.warnings} warnings``)`
     : '';
 }
-=======
-<<<<<<< HEAD}
+}
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ;
 ### 🔍 Type Checking;
@@ -642,7 +640,7 @@ ${;
 ## 🔄 Next Steps;
 
 ## 🔄 Next Steps;
-<<<<<<< HEAD      await this.installDependencies();
+      await this.installDependencies();
       await this.runLinting();
       await this.runTypeCheck();
       await this.runBuild();
@@ -676,12 +674,10 @@ ${;
       }
 ;
       return report;
-<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
-      console.error('❌ Pipeline failed:', error);
+      console.error('❌ Pipeline failed: ', error);
       process.exit(1);
-=======
     } catch (error) {  
       console.error('❌ Pipeline failed: ', error);      process.exit(1);
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

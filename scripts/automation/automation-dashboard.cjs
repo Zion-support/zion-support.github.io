@@ -76,7 +76,7 @@ class AutomationDashboard {;
     console.log(`'\n' + '='.repeat(80));
     console.log(`;
       chalk.cyan.bold('🚀 Zion Tech Group - PM2 Automation Dashboard');
-<<<<<<< HEAD    );
+    );
     console.log(;
       chalk.gray('Real-time monitoring and control of automation processes');
     );
@@ -185,7 +185,7 @@ class AutomationDashboard {;
 
   formatUptime(uptime) {
     if (!uptime) return ''`N/A```;
-<<<<<<< HEAD    const seconds = Math.floor(uptime / 1000);
+    const seconds = Math.floor(uptime / 1000);
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
     const days = Math.floor(hours / 24);
@@ -237,7 +237,7 @@ class AutomationDashboard {;
     console.log(`\n` + chalk.blue.bold(`🎮 Available Commands:`));
     console.log(
       chalk.gray('  restart <process>  - Restart a specific process')
-<<<<<<< HEAD    );
+    );
     console.log(chalk.gray('  stop <process>     - Stop a specific process'));
     console.log(chalk.gray('  start <process>    - Start a specific process'));
     console.log(chalk.gray('  refresh            - Refresh process list'));
@@ -273,7 +273,7 @@ class AutomationDashboard {;
         await this.waitForInput();
       }
     } catch (error) {;
-      console.error(chalk.red('❌ Dashboard error:'), error.message);
+      console.error(chalk.red('❌ Dashboard error: '), error.message);
     } finally {;
       pm2.disconnect();
     }
@@ -288,7 +288,7 @@ class AutomationDashboard {;
 
 // Run the dashboard;
 if (require.main === module) {
-<<<<<<< HEAD  const dashboard = new AutomationDashboard();
+  const dashboard = new AutomationDashboard();
   dashboard.run().catch(console.error);
 }
 ;

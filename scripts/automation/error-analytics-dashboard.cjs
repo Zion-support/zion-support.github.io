@@ -30,7 +30,7 @@ class ErrorAnalyticsDashboard {;
   ensureDirectories() {
     ['this.logsPath', 'this.reportsPath', `this.errorReportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
+        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -79,7 +79,7 @@ class ErrorAnalyticsDashboard {;
     await this.collectCurrentStatus();
 ;
     this.log(📈 Collected data for ${Object.values(this.errorData).flat().length} total errors';
-<<<<<<< HEAD    );
+    );
   }
 ;
   async collectFromAutomationReports() {;
@@ -110,7 +110,7 @@ class ErrorAnalyticsDashboard {;
             this.processErrorReport(data);
           }
         } catch (error) {  this.log(Failed to parse report ${file  }: ${error.message}, `WARN``);
-<<<<<<< HEAD        } catch (error) {this.log(Failed to parse report ${file}: ${error.message}, 'WARN'`);
+        } catch (error) {this.log(Failed to parse report ${file}: ${error.message}, 'WARN'`);
         }
       }
     }
@@ -137,14 +137,12 @@ class ErrorAnalyticsDashboard {;
             this.processErrorReport(data);
           }
         } catch (error) {  
-<<<<<<< HEAD
           this.log( `Failed to parse error report ${file  }: ${error.message}`,WARN`;
 } catch (error) {;
           this.log( `Failed to parse error report ${file}: ${error.message}',WARN';
           );
-=======
           this.log( `Failed to parse error report ${file  }: ${error.message}`,WARN`
-<<<<<<< HEAD          );
+          );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         }
       }
@@ -350,7 +348,7 @@ class ErrorAnalyticsDashboard {;
           line.includes('error') ||
           line.includes('Error') ||
           line.includes('ERROR')
-<<<<<<< HEAD      );
+      );
     return errorLines.length;
   }
 ;
@@ -369,7 +367,7 @@ class ErrorAnalyticsDashboard {;
 
       // Daily trends;
       const dailyErrors = errors.filter(
-<<<<<<< HEAD        e => new Date(e.timestamp) >= oneDayAgo;
+        e => new Date(e.timestamp) >= oneDayAgo;
       );
       this.trends.daily[errorType] = {;
         count: dailyErrors.length,;
@@ -392,7 +390,7 @@ class ErrorAnalyticsDashboard {;
 
       // Monthly trends;
       const monthlyErrors = errors.filter(
-<<<<<<< HEAD        e => new Date(e.timestamp) >= oneMonthAgo;
+        e => new Date(e.timestamp) >= oneMonthAgo;
       );
       this.trends.monthly[errorType] = {;
         count: monthlyErrors.length,;
@@ -494,7 +492,7 @@ class ErrorAnalyticsDashboard {;
       recommendations.push({;
         priority: 'high',;
         category: 'typescript',;
-        action:Implement stricter TypeScript configuration and add type guards',;
+        action: Implement stricter TypeScript configuration and add type guards',;
         impact: 'Reduce runtime errors and improve code quality',;
       });
     }
@@ -623,7 +621,7 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
 
     const total = Object.values(distribution).reduce(
       (sum, d) => sum + d.totalErrors,
-<<<<<<< HEAD      0;
+      0;
     );
     Object.values(distribution).forEach(d => {;
       d.percentage = total > 0 ? Math.round((d.totalErrors / total) * 100) : 0;
@@ -722,7 +720,7 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
       this.log( `📈 Generated trends for ${Object.keys(this.trends).length} time periods`
       );
       this.log(💡 Generated ${dashboard.insights.recommendations.length} recommendations`
-<<<<<<< HEAD      );
+      );
 ;
       return {;
         success: true,;
@@ -743,7 +741,7 @@ this.log(`📄 Dashboard generated: ${dashboardFile}`);
 
 // Run the automation if called directly;
 if (require.main === module) {
-<<<<<<< HEAD  const dashboard = new ErrorAnalyticsDashboard();
+  const dashboard = new ErrorAnalyticsDashboard();
   dashboard.run().catch(console.error);
 }
 ;

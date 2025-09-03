@@ -9,7 +9,7 @@ const { execSync } = require('child_process');
 class PerformanceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD    this.optimizations = [];
+    this.optimizations = [];
   }
 
   log(message) {
@@ -17,7 +17,6 @@ class PerformanceOptimizer {
   }
 
   async optimizeImages() {
-<<<<<<< HEAD
     console.log('🖼️ Optimizing images...');
     // Add image optimization logic here;
 }
@@ -31,7 +30,6 @@ class PerformanceOptimizer {
     console.log('⚡ Optimizing JavaScript...');
     // Add JS optimization logic here;
 }
-=======
     this.log('🖼️ Optimizing images...');
     try {
       // Create optimized image directories
@@ -108,7 +106,6 @@ class PerformanceMonitor {
   async runLighthouse() {
     console.log('🔍 Running Lighthouse audit...');
     try {
-<<<<<<< HEAD
       execSync('npm run build', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
@@ -116,13 +113,12 @@ class PerformanceMonitor {
 });
       this.metrics.buildTime = Date.now() - startTime;
       this.log(`✅ Build completed in ${this.metrics.buildTime}ms`, 'SUCCESS');
-=======
-      const command = 'npx lighthouse http://localhost:3000 --output=html --output-path=./performance-reports/lighthouse-report.html --chrome-flags="--headless"';
+      const command = 'npx lighthouse http: //localhost:3000 --output=html --output-path=./performance-reports/lighthouse-report.html --chrome-flags="--headless"';
       execSync(command, { stdio: 'inherit' });
       console.log('✅ Lighthouse audit completed');
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     } catch (error) {
-      console.log('❌ Lighthouse audit failed:', error.message);
+      console.log('❌ Lighthouse audit failed: ', error.message);
     }
   }
 
@@ -133,7 +129,7 @@ class PerformanceMonitor {
       execSync(command, { stdio: 'inherit' });
       console.log('✅ Bundle analysis completed');
     } catch (error) {
-      console.log('❌ Bundle analysis failed:', error.message);
+      console.log('❌ Bundle analysis failed: ', error.message);
     }
   }
 }
@@ -151,7 +147,6 @@ monitor.runBundleAnalysis();
       this.optimizations.push('Performance monitoring scripts created');
       this.log('✅ Performance monitoring scripts created');
     } catch (error) {
-<<<<<<< HEAD
       this.log(`❌ Error analyzing dependencies: ${error.message}`, 'ERROR');
     }
   }
@@ -331,7 +326,7 @@ monitor.runBundleAnalysis();
   }
 
   printSummary() {
-    this.log('\n📊 Performance Analysis Summary:', 'INFO');
+    this.log('\n📊 Performance Analysis Summary: ', 'INFO');
     this.log('='.repeat(50), 'INFO');
     this.log(`📦 Bundle Size: ${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)}MB`, 'INFO');
     this.log(`⏱️ Build Time: ${(this.metrics.buildTime / 1000).toFixed(2)}s`, 'INFO');
@@ -340,11 +335,10 @@ monitor.runBundleAnalysis();
     this.log(`💡 Optimizations: ${this.optimizations.length}`, 'INFO');
     
     if (this.optimizations.length > 0) {
-      this.log('\n🔍 Optimization Recommendations:', 'INFO');
+      this.log('\n🔍 Optimization Recommendations: ', 'INFO');
       this.optimizations.forEach((opt, index) => {
         this.log(`  ${index + 1}. [${opt.impact.toUpperCase()}] ${opt.description}`, 'INFO');
       });
-=======
       this.log(`❌ Performance script creation failed: ${error.message}`);
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }

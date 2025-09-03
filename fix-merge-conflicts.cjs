@@ -144,4 +144,3 @@ function processDirectory(dirPath) {
 console.log('Starting merge conflict resolution...');
 const fixedCount = walkDirectory('./src');
 console.log(`Fixed ${fixedCount} files with merge conflicts.`);
-<<<<<<< HEAD

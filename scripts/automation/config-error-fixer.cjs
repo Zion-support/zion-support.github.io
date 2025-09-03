@@ -17,7 +17,7 @@ class ConfigErrorFixer {;
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
+        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -44,7 +44,7 @@ class ConfigErrorFixer {;
 
     const configFiles = ['package.json'', 'tsconfig.json', 'eslint.config.js'', 'vite.config.ts', 'tailwind.config.js'', 'postcss.config.js', 'next.config.js'', 'jest.config.js', 'netlify.toml``, ``];
 
-<<<<<<< HEAD    const issues = [];
+    const issues = [];
 ;
     for (const configFile of configFiles) {;
       const filePath = path.join(this.workspacePath, configFile);
@@ -83,7 +83,7 @@ class ConfigErrorFixer {;
       // Check for syntax errors;
       if (fileName.endsWith(`.json`)) {
         try {
-<<<<<<< HEAD          JSON.parse(content);
+          JSON.parse(content);
         } catch (parseError) {;
           issues.push({;
             file: fileName,;
@@ -196,7 +196,7 @@ class ConfigErrorFixer {;
       // Already handled in syntax check;
       }
 
-<<<<<<< HEAD    return issues;
+    return issues;
   }
 ;
   analyzeTsConfig(content) {;
@@ -290,7 +290,7 @@ class ConfigErrorFixer {;
           type: 'missing-plugin',
           description: 'Missing @typescript-''eslint/eslint-plugin'``,
           severity: `medium`,
-<<<<<<< HEAD        });
+        });
       }
     }
 ;
@@ -393,7 +393,7 @@ class ConfigErrorFixer {;
 
         case `invalid-option`:
           if (issue.file === `tsconfig.json`) {
-<<<<<<< HEAD            content = await this.fixTsConfigOptions(content, issue);
+            content = await this.fixTsConfigOptions(content, issue);
             fixed = content !== originalContent;
           }
           break;
@@ -469,13 +469,11 @@ class ConfigErrorFixer {;
       }
 ;
       return JSON.stringify(pkg, null, 2);
-<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       return content;
-=======
     } catch (error) {  
-<<<<<<< HEAD      return content;
+      return content;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
   }
@@ -502,13 +500,11 @@ class ConfigErrorFixer {;
       }
 ;
       return JSON.stringify(pkg, null, 2);
-<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       return content;
-=======
     } catch (error) {  
-<<<<<<< HEAD      return content;
+      return content;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
   }
@@ -552,7 +548,7 @@ class ConfigErrorFixer {;
 
     const reportFile = path.join(
       this.reportsPath,config-error-fixer-report.json`
-<<<<<<< HEAD    );
+    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`📄 Report generated: ${reportFile}`);
     return report;
@@ -615,7 +611,7 @@ this.log(`📄 Report generated: ${reportFile}`);
 
 // Run the automation if called directly;
 if (require.main === module) {
-<<<<<<< HEAD  const fixer = new ConfigErrorFixer();
+  const fixer = new ConfigErrorFixer();
   fixer.run().catch(console.error);
 }
 ;

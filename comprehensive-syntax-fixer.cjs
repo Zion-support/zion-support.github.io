@@ -49,13 +49,13 @@ class ComprehensiveSyntaxFixer {
   hasSyntaxIssues(content) {
     // Check for common syntax issues
     const issues = [
-      /import:\s*[^;]+;/g,  // Malformed imports
-      /const:\s*[^=]+=/g,   // Malformed const declarations
-      /interface:\s*[^{]+{/g, // Malformed interface declarations
+      /import \s*[^;]+;/g,  // Malformed imports
+      /const: \s*[^=]+=/g,   // Malformed const declarations
+      /interface: \s*[^{]+{/g, // Malformed interface declarations
       /from\s+'[^']*';'/g,  // Double quotes in imports
-      /"[^"]*",[^"]*"/g,    // Malformed strings
-      /;;+/g,               // Multiple semicolons
-      /,,+/g,               // Multiple commas
+      /"[^]*,[^"]*"/g,    // Malformed strings
+      /;+/g,               // Multiple semicolons
+      /,+/g,               // Multiple commas
       /:\s*[^=,}]+:/g,      // Malformed type annotations
     ];
     
@@ -66,25 +66,25 @@ class ComprehensiveSyntaxFixer {
     let fixed = content;
     
     // Fix malformed imports
-    fixed = fixed.replace(/import:\s*([^;]+);/g, 'import $1;');
+    fixed = fixed.replace(/import \s*([^;]+);/g, 'import $1;');
     
     // Fix malformed const declarations
-    fixed = fixed.replace(/const:\s*([^:]+):\s*([^=]+)\s*=\s*\(\)\s*=>\s*,{/g, 'const $1: $2 = () => {');
+    fixed = fixed.replace(/const: \s*([^:]+):\s*([^=]+)\s*=\s*\(\)\s*=>\s*,{/g, 'const $1: $2 = () => {');
     fixed = fixed.replace(/const:\s*([^=]+)=/g, 'const $1 =');
     
     // Fix malformed interface declarations
-    fixed = fixed.replace(/interface:\s*([^{]+){/g, 'interface $1 {');
+    fixed = fixed.replace(/interface: \s*([^{]+){/g, 'interface $1 {');
     
     // Fix malformed imports with double quotes
-    fixed = fixed.replace(/from\s+'([^']*)';'/g, "from '$1';");
+    fixed = fixed.replace(/from\s+'([^']*)';'/g, from '$1';);
     
     // Fix malformed strings
-    fixed = fixed.replace(/"([^"]*),([^"]*)",/g, '"$1$2",');
-    fixed = fixed.replace(/"([^"]*);([^"]*)";/g, '"$1$2";');
+    fixed = fixed.replace(/"([^"]*),([^]*),/g, '"$1$2",');
+    fixed = fixed.replace(/([^]*);([^"]*)";/g, '$1$2;');
     
     // Fix multiple semicolons and commas
-    fixed = fixed.replace(/;;+/g, ';');
-    fixed = fixed.replace(/,,+/g, ',');
+    fixed = fixed.replace(/;+/g, ';');
+    fixed = fixed.replace(/,+/g, ',');
     
     // Fix malformed type annotations
     fixed = fixed.replace(/:\s*([^=,}]+):/g, ': $1');
@@ -93,13 +93,13 @@ class ComprehensiveSyntaxFixer {
     fixed = fixed.replace(/\(\)\s*=>\s*,{/g, '() => {');
     
     // Fix malformed array destructuring
-    fixed = fixed.replace(/const:\s*\[([^\]]+)\]/g, 'const [$1]');
+    fixed = fixed.replace(/const: \s*\[([^\]]+)\]/g, 'const [$1]');
     
     // Fix malformed object properties
     fixed = fixed.replace(/(\w+):\s*([^,}]+),/g, '$1: $2,');
     
     // Fix malformed quotes in strings
-    fixed = fixed.replace(/"([^"]*)"([^"]*)"([^"]*)"/g, '"$1$2$3"');
+    fixed = fixed.replace(/"([^"]*)([^]*)"([^"]*)/g, '$1$2$3"');
     
     // Fix malformed React component declarations
     fixed = fixed.replace(/const\s+(\w+):\s*(\w+):\s*=\s*\(\)\s*=>\s*,{/g, 'const $1: $2 = () => {');
@@ -108,10 +108,10 @@ class ComprehensiveSyntaxFixer {
     fixed = fixed.replace(/NextPage:\s*=/g, 'NextPage =');
     
     // Fix malformed useState declarations
-    fixed = fixed.replace(/const:\s*\[([^\]]+)\]/g, 'const [$1]');
+    fixed = fixed.replace(/const: \s*\[([^\]]+)\]/g, 'const [$1]');
     
     // Fix malformed string concatenation
-    fixed = fixed.replace(/"([^"]*):([^"]*)"/g, '"$1$2"');
+    fixed = fixed.replace(/"([^]*):([^]*)"/g, '"$1$2');
     
     // Fix malformed object keys
     fixed = fixed.replace(/(\w+):\s*([^,}]+);/g, '$1: $2,');
@@ -126,13 +126,13 @@ class ComprehensiveSyntaxFixer {
     fixed = fixed.replace(/`([^`]*):([^`]*)`/g, '`$1$2`');
     
     // Fix malformed JSX attributes
-    fixed = fixed.replace(/className:\s*"([^"]*)"/g, 'className="$1"');
+    fixed = fixed.replace(/className: \s*([^"]*)"/g, 'className=$1');
     
     // Fix malformed export statements
-    fixed = fixed.replace(/export:\s*([^;]+);/g, 'export $1;');
+    fixed = fixed.replace(/export: \s*([^;]+);/g, 'export $1;');
     
     // Fix malformed default exports
-    fixed = fixed.replace(/export:\s*default\s*([^;]+);/g, 'export default $1;');
+    fixed = fixed.replace(/export: \s*default\s*([^;]+);/g, 'export default $1;');
     
     // Clean up any remaining malformed syntax
     fixed = fixed.replace(/;\s*;/g, ';');
@@ -154,12 +154,12 @@ class ComprehensiveSyntaxFixer {
       const fixes = [
         // Fix missing semicolons after import statements
         {
-          pattern: /^import\s+.*from\s+['"][^'"]+['"]\s*$/gm,
+          pattern: /^import\s+.*from\s+['"][^'"]+[']\s*$/gm,
           replacement: (match) => match.endsWith(';') ? match : match + ';';
 },
         // Fix unterminated string literals
         {
-          pattern: /(['"])([^'"]*?)(\n|$)/g,
+          pattern: /(['])([^'"]*?)(\n|$)/g,
           replacement: (match, quote, content, newline) => {
             if (content.includes('\\' + quote)) return match;
             return quote + content + quote + ';' + newline;
@@ -276,116 +276,116 @@ class ComprehensiveSyntaxFixer {
   fixImportStatements(content) {
     // Fix incomplete import statements
     const importFixes = [
-      { pattern: /import fs from;/g, replacement: 'import fs from "fs";' },
+      { pattern: /import fs from;/g, replacement: 'import fs from "fs;' },
       {
         pattern: /import path from;/g,
-        replacement: 'import path from "path";'},
+        replacement: 'import path from path";'},
       {
         pattern: /import { execSync } from;/g,
-        replacement: 'import { execSync } from "child_process";'},
+        replacement: 'import { execSync } from "child_process;'},
       {
         pattern: /import axios from;/g,
-        replacement: 'import axios from "axios";'},
+        replacement: 'import axios from axios";'},
       {
         pattern: /import http from;/g,
-        replacement: 'import http from "http";'},
+        replacement: 'import http from "http;'},
       {
         pattern: /import https from;/g,
-        replacement: 'import https from "https";'},
+        replacement: 'import https from https";'},
       {
         pattern: /import { fileURLToPath } from;/g,
-        replacement: 'import { fileURLToPath } from "url";'},
+        replacement: 'import { fileURLToPath } from "url;'},
       {
         pattern: /import { dirname } from;/g,
-        replacement: 'import { dirname } from "path";'},
-      { pattern: /import os from;/g, replacement: 'import os from "os";' },
+        replacement: 'import { dirname } from path";'},
+      { pattern: /import os from;/g, replacement: 'import os from "os;' },
       {
         pattern: /import crypto from;/g,
-        replacement: 'import crypto from "crypto";'},
-      { pattern: /import url from;/g, replacement: 'import url from "url";' },
+        replacement: 'import crypto from crypto";'},
+      { pattern: /import url from;/g, replacement: 'import url from "url;' },
       {
         pattern: /import util from;/g,
-        replacement: 'import util from "util";'},
+        replacement: 'import util from util";'},
       {
         pattern: /import stream from;/g,
-        replacement: 'import stream from "stream";'},
+        replacement: 'import stream from "stream;'},
       {
         pattern: /import zlib from;/g,
-        replacement: 'import zlib from "zlib";'},
+        replacement: 'import zlib from zlib";'},
       {
         pattern: /import cluster from;/g,
-        replacement: 'import cluster from "cluster";'},
+        replacement: 'import cluster from "cluster;'},
       {
         pattern: /import worker_threads from;/g,
-        replacement: 'import worker_threads from "worker_threads";'},
+        replacement: 'import worker_threads from worker_threads";'},
       {
         pattern: /import perf_hooks from;/g,
-        replacement: 'import perf_hooks from "perf_hooks";'},
-      { pattern: /import v8 from;/g, replacement: 'import v8 from "v8";' },
-      { pattern: /import vm from;/g, replacement: 'import vm from "vm";' },
+        replacement: 'import perf_hooks from "perf_hooks;'},
+      { pattern: /import v8 from;/g, replacement: 'import v8 from v8";' },
+      { pattern: /import vm from;/g, replacement: 'import vm from "vm;' },
       {
         pattern: /import readline from;/g,
-        replacement: 'import readline from "readline";'},
+        replacement: 'import readline from readline";'},
       {
         pattern: /import repl from;/g,
-        replacement: 'import repl from "repl";'},
-      { pattern: /import tls from;/g, replacement: 'import tls from "tls";' },
-      { pattern: /import net from;/g, replacement: 'import net from "net";' },
+        replacement: 'import repl from "repl;'},
+      { pattern: /import tls from;/g, replacement: 'import tls from tls";' },
+      { pattern: /import net from;/g, replacement: 'import net from "net;' },
       {
         pattern: /import dgram from;/g,
-        replacement: 'import dgram from "dgram";'},
-      { pattern: /import dns from;/g, replacement: 'import dns from "dns";' },
+        replacement: 'import dgram from dgram";'},
+      { pattern: /import dns from;/g, replacement: 'import dns from "dns;' },
       {
         pattern: /import querystring from;/g,
-        replacement: 'import querystring from "querystring";'},
+        replacement: 'import querystring from querystring";'},
       {
         pattern: /import punycode from;/g,
-        replacement: 'import punycode from "punycode";'},
+        replacement: 'import punycode from "punycode;'},
       {
         pattern: /import string_decoder from;/g,
-        replacement: 'import string_decoder from "string_decoder";'},
+        replacement: 'import string_decoder from string_decoder";'},
       {
         pattern: /import timers from;/g,
-        replacement: 'import timers from "timers";'},
+        replacement: 'import timers from "timers;'},
       {
         pattern: /import events from;/g,
-        replacement: 'import events from "events";'},
+        replacement: 'import events from events";'},
       {
         pattern: /import assert from;/g,
-        replacement: 'import assert from "assert";'},
+        replacement: 'import assert from "assert;'},
       {
         pattern: /import buffer from;/g,
-        replacement: 'import buffer from "buffer";'},
+        replacement: 'import buffer from buffer";'},
       {
         pattern: /import console from;/g,
-        replacement: 'import console from "console";'},
+        replacement: 'import console from "console;'},
       {
         pattern: /import process from;/g,
-        replacement: 'import process from "process";'},
+        replacement: 'import process from process";'},
       {
         pattern: /import global from;/g,
-        replacement: 'import global from "global";'},
+        replacement: 'import global from "global;'},
       {
         pattern: /import Buffer from;/g,
-        replacement: 'import { Buffer } from "buffer";'},
+        replacement: 'import { Buffer } from buffer";'},
       {
         pattern: /import setTimeout from;/g,
-        replacement: 'import { setTimeout } from "timers";'},
+        replacement: 'import { setTimeout } from "timers;'},
       {
         pattern: /import setInterval from;/g,
-        replacement: 'import { setInterval } from "timers";'},
+        replacement: 'import { setInterval } from timers";'},
       {
         pattern: /import clearTimeout from;/g,
-        replacement: 'import { clearTimeout } from "timers";'},
+        replacement: 'import { clearTimeout } from "timers;'},
       {
         pattern: /import clearInterval from;/g,
-        replacement: 'import { clearInterval } from "timers";'},
+        replacement: 'import { clearInterval } from timers";'},
       {
         pattern: /import setImmediate from;/g,
-        replacement: 'import { setImmediate } from "timers";'},
+        replacement: 'import { setImmediate } from "timers;'},
       {
         pattern: /import clearImmediate from;/g,
-        replacement: 'import { clearImmediate } from "timers";'}];
+        replacement: 'import { clearImmediate } from timers";'}];
 
     for (const fix of importFixes) {
       content = content.replace(fix.pattern, fix.replacement);
@@ -421,25 +421,25 @@ class ComprehensiveSyntaxFixer {
     const stringFixes = [
       {
         pattern: /this\.projectRoot,logs'/g,
-        replacement: "this.projectRoot, 'logs'"},
+        replacement: "this.projectRoot, 'logs'},
       {
         pattern: /this\.projectRoot,reports'/g,
-        replacement: "this.projectRoot, 'reports'"},
+        replacement: this.projectRoot, 'reports'"},
       {
         pattern: /this\.projectRoot,automation'/g,
-        replacement: "this.projectRoot, 'automation'"},
+        replacement: "this.projectRoot, 'automation'},
       {
         pattern: /this\.projectRoot,dir\)/g,
         replacement: 'this.projectRoot, dir)'},
       {
         pattern: /path\.join\(this\.projectRoot,logs'/g,
-        replacement: "path.join(this.projectRoot, 'logs'"},
+        replacement: path.join(this.projectRoot, 'logs'"},
       {
         pattern: /path\.join\(this\.projectRoot,reports'/g,
-        replacement: "path.join(this.projectRoot, 'reports'"},
+        replacement: "path.join(this.projectRoot, 'reports'},
       {
         pattern: /path\.join\(this\.projectRoot,automation'/g,
-        replacement: "path.join(this.projectRoot, 'automation'"}];
+        replacement: path.join(this.projectRoot, 'automation'"}];
 
     for (const fix of stringFixes) {
       content = content.replace(fix.pattern, fix.replacement);
@@ -545,7 +545,6 @@ class ComprehensiveSyntaxFixer {
     
     const problematicFiles = await this.findProblematicFiles();
     
-<<<<<<< HEAD
     const allFiles = [
       ...this.getAllFiles(srcDir),
       ...this.getAllFiles(pagesDir)
@@ -555,7 +554,6 @@ class ComprehensiveSyntaxFixer {
 
     for (const file of allFiles) {
       await this.fixFile(file);
-=======
     if (problematicFiles.length === 0) {
       this.log('✅ No files with syntax issues found');
       return { fixed: 0, errors: [] };
@@ -581,7 +579,6 @@ class ComprehensiveSyntaxFixer {
     }
 
     return {
-<<<<<<< HEAD
       totalFiles: allFiles.length,
       fixedFiles: this.fixedFiles.length,
       errors: this.errors.length,
@@ -597,7 +594,6 @@ class ComprehensiveSyntaxFixer {
       fixedFiles: this.fixedFiles,
       errors: this.errors;
 };
-=======
       fixed: this.fixedFiles,
       errors: this.errors,
       totalFiles: problematicFiles.length
@@ -610,7 +606,7 @@ class ComprehensiveSyntaxFixer {
     const eslintConfig = `module.exports = {
   extends: [
     'next/core-web-vitals',
-    'eslint:recommended',
+    'eslint: recommended',
     '@typescript-eslint/recommended'
   ],
   parser: '@typescript-eslint/parser',
@@ -663,7 +659,7 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch((error) => {
-      console.error('❌ Syntax fixing failed:', error.message);
+      console.error('❌ Syntax fixing failed: ', error.message);
       process.exit(1);
     });
 }

@@ -147,7 +147,7 @@ function findFilesWithMergeConflicts(
     if ((fileName.endsWith('.tsx') || fileName.endsWith('.jsx')) && 
         !content.includes('import React') && 
         (content.includes('React.FC') || content.includes('useState') || content.includes('useEffect'))) {
-      content = "import React from 'react';\n" + content;
+      content = "import React from 'react';\n + content;
     }
     
     return content;
@@ -166,7 +166,7 @@ function findFilesWithMergeConflicts(
         this.fixedFiles.forEach(file => {
           this.log(`  - ${file}`);
         });
-<<<<<<< HEAD      }
+      }
       
       return fixedCount;
     } catch (error) {
@@ -237,10 +237,10 @@ const simpleDocumentContent = `import { Html, Head, Main, NextScript } from 'nex
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang=en">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#0a0a1a" />
+        <link rel="icon href=/favicon.ico" />
+        <meta name="theme-color content=#0a0a1a" />
       </Head>
       <body>
         <Main />
@@ -259,13 +259,13 @@ export default function Home() {
     <>
       <Head>
         <title>Zion Tech Group</title>
-        <meta name="description" content="Leading technology solutions provider" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description content=Leading technology solutions provider" />
+        <meta name="viewport content=width=device-width, initial-scale=1" />
       </Head>
-      <main className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+      <main className="min-h-screen bg-white>
+        <div className=max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">
+          <div className="text-center>
+            <h1 className=text-4xl font-bold text-gray-900 mb-6">
               Welcome to Zion Tech Group;
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -285,7 +285,7 @@ try {
   fs.writeFileSync('pages/index.tsx', simpleIndexContent);
   console.log('Created basic working structure for key files.');
 } catch (error) { 
-  console.error('Error creating basic files:', error.message);
+  console.error('Error creating basic files: ', error.message);
  }
 
 console.log('\nCleanup script completed successfully!');

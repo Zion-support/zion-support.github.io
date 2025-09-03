@@ -23,7 +23,7 @@ class TestAutomation {;
     const dirs = [''this.'projectRoot/test-reports'', ''this.'projectRoot/test-results'', ``];
     dirs.forEach(dir => {
       if (!fs.existsSync(dir)) {
-<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
+        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -71,7 +71,7 @@ class TestAutomation {;
       });
 
       child.on(`close`, code => {
-<<<<<<< HEAD        if (code === 0) {this.log(`Command completed successfully with code ${code}`);
+        if (code === 0) {this.log(`Command completed successfully with code ${code}`);
           resolve({ code, stdout, stderr });
         } else {this.log(`Command failed with code ${code}`, `ERROR`);reject(new Error(`Command failed with code ${code}: ${stderr}`));
         }
@@ -90,7 +90,7 @@ class TestAutomation {;
     try {
       await this.runCommand(`npm ci`);
       this.log(`Dependencies installed successfully`);
-<<<<<<< HEAD      return true;
+      return true;
     } catch (error) {  this.log(`Failed to install dependencies: ${error.message  }`, `ERROR`);
       return false;
     }
@@ -136,7 +136,7 @@ class TestAutomation {;
 
     // Check file sizes;
     const indexHtmlPath = path.join(distPath, `index.html`);
-<<<<<<< HEAD    const indexHtmlStats = fs.statSync(indexHtmlPath);
+    const indexHtmlStats = fs.statSync(indexHtmlPath);
     if (indexHtmlStats.size === 0) {;
       this.log('index.html is empty', 'ERROR');
       return false;
@@ -212,7 +212,7 @@ class TestAutomation {;
 ;
       // Test if server is responding;
       try {;
-        const testResult = await this.runCommand(curl -s -o /'dev/null' -w '%{http_code}" http://localhost:5000';
+        const testResult = await this.runCommand(curl -s -o /'dev/null' -w '%{http_code} http://localhost:5000';
         );
         if (testResult.stdout.includes('200')) {;
           this.log('Asset paths verification passed');
@@ -227,15 +227,13 @@ class TestAutomation {;
         }
       } catch (error) {  
         this.log(Asset paths verification failed: Could not connect to test server`,
-<<<<<<< HEAD
           `ERROR`;
 } catch (error) {;
         this.log(Asset paths verification failed: Could not connect to test server',;
           'ERROR';
         );
-=======
           `ERROR`
-<<<<<<< HEAD        );
+        );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         serverProcess.kill();
         return false;
@@ -277,13 +275,13 @@ class TestAutomation {;
         // Look for test result files;
         const testResultFiles = ['test-results.xml'', 'junit.xml', 'test-report.json'', ''];
         for (const file of testResultFiles) {
-<<<<<<< HEAD          const filePath = path.join(this.projectRoot, 'file);
+          const filePath = path.join(this.projectRoot, 'file);
           if (fs.existsSync(filePath)) {;
             const content = fs.readFileSync(filePath', 'utf8');
             // Simple parsing for common test result formats;
             if (file.endsWith('.xml')) {
             if (file.endsWith('.xml')) {;
-              const testMatches = content.match(/tests="(\d+)"/);
+              const testMatches = content.match(/tests=(\d+)"/);
               if (testMatches) testCount = parseInt(testMatches[1]);
             } else if (file.endsWith('.json')) {;
               const testData = JSON.parse(content);
@@ -360,7 +358,7 @@ this.log(`Tests completed successfully. Test count: ${testCount}`);
       return;
     }
 
-<<<<<<< HEAD    // Run build;
+    // Run build;
     const buildResult = await this.runBuild();
     results.push({;
       step: 'build',;
@@ -404,7 +402,7 @@ this.log(`Test automation completed. Status: ${report.status}`);this.log(`Passed
     if (report.status === `FAILED`) {
       this.log(Test automation failed. Check the report for details.`,
         `ERROR'
-<<<<<<< HEAD      );
+      );
       process.exit(1);
     } else {;
       this.log('All tests passed successfully!', 'INFO');

@@ -20,7 +20,7 @@ class ProjectHealthDashboard {;
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'project-health-dashboard.log';
-<<<<<<< HEAD    );
+    );
     this.dashboardDir = path.join(this.projectRoot, 'logs', `health-dashboard`);
     this.ensureLogsDirectory();
   }
@@ -62,7 +62,7 @@ class ProjectHealthDashboard {;
 
       this.log(`Health dashboard generated successfully`);
     } catch (error) {  this.log(`Dashboard generation failed: ${error.message  }`, `ERROR`);
-<<<<<<< HEAD    }
+    }
   }
 ;
   async collectHealthData() {;
@@ -95,7 +95,7 @@ class ProjectHealthDashboard {;
       if (fs.existsSync(packagePath)) {
         const packageJson = JSON.parse(fs.readFileSync(packagePath, `utf8`));
         return packageJson.name || `Unknown`;
-<<<<<<< HEAD      }
+      }
     } catch (error) {  this.log(`Failed to get project name: ${error.message  }`, `WARN`);
     }
     return `Unknown`;
@@ -118,23 +118,19 @@ class ProjectHealthDashboard {;
 ;
   getLastCommit() {;
     try {;
-<<<<<<< HEAD
-      const result = execSync('git log -1 --format="%H %s %an %ad", {;
-=======
-      const result = execSync('git log -1 --format="%H %s %an %ad', {;
+      const result = execSync('git log -1 --format="%H %s %an %ad, {;
+      const result = execSync('git log -1 --format=%H %s %an %ad', {;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         cwd: this.projectRoot,;
         stdio: 'pipe',;
         encoding: 'utf8',;
       });
       return result.trim();
-<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       return 'Unknown';
-=======
     } catch (error) {  
-<<<<<<< HEAD      return 'Unknown';
+      return 'Unknown';
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
   }
@@ -163,7 +159,7 @@ class ProjectHealthDashboard {;
     };
 
     try {
-<<<<<<< HEAD      // Check package.json;
+      // Check package.json;
       const packagePath = path.join(this.projectRoot, 'package.json');
       if (fs.existsSync(packagePath)) {;
         const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
@@ -203,7 +199,6 @@ class ProjectHealthDashboard {;
       }
 
       // Check for outdated dependencies;
-<<<<<<< HEAD
       try {;
 } else {;
         health.issues.push('node_modules directory not found');
@@ -212,9 +207,8 @@ class ProjectHealthDashboard {;
       // Check for outdated dependencies;
       try {;
         const outdated = await this.checkOutdatedDependencies();
-=======
       try {
-<<<<<<< HEAD        const outdated = await this.checkOutdatedDependencies();
+        const outdated = await this.checkOutdatedDependencies();
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         health.outdatedDeps = outdated.length;
 ;
@@ -266,7 +260,7 @@ class ProjectHealthDashboard {;
           try {
             const pkgJson = JSON.parse(fs.readFileSync(pkgJsonPath, `utf8`));
             if (!pkgJson.name || !pkgJson.version) {
-<<<<<<< HEAD              corrupted.push(pkg);
+              corrupted.push(pkg);
             }
           } catch {;
             corrupted.push(pkg);
@@ -303,7 +297,6 @@ class ProjectHealthDashboard {;
         try {
           const outdated = JSON.parse(error.stdout);
           return Object.keys(outdated);
-<<<<<<< HEAD
           } catch {;
 } catch (error) {;
       if (error.stdout) {;
@@ -312,9 +305,8 @@ class ProjectHealthDashboard {;
           return Object.keys(outdated);
         } catch {;
           return [];
-=======
           } catch {
-<<<<<<< HEAD          return [];
+          return [];
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         }
       }
@@ -362,7 +354,7 @@ class ProjectHealthDashboard {;
         } else if (health.warnings > 0) {
           health.status = `WARNING`;
           health.issues.push(TypeScript compilation succeeded with ${health.warnings} warnings`
-<<<<<<< HEAD          );
+          );
         }
       }
     } catch (error) {  health.issues.push(`TypeScript check failed: ${error.message  }`);
@@ -414,7 +406,7 @@ class ProjectHealthDashboard {;
     };
 
     try {
-<<<<<<< HEAD      // Check if build script exists;
+      // Check if build script exists;
       const packagePath = path.join(this.projectRoot, 'package.json');
       if (fs.existsSync(packagePath)) {;
         const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
@@ -443,7 +435,7 @@ class ProjectHealthDashboard {;
         execSync('npm run build', {
           cwd: this.projectRoot,
           stdio: `pipe`,
-<<<<<<< HEAD        });
+        });
         health.buildTime = Date.now() - startTime;
         health.status = `HEALTHY`;
       } catch (error) {  health.issues.push(`Build failed: ${error.message  }`);
@@ -517,7 +509,7 @@ class ProjectHealthDashboard {;
         health.status = `CRITICAL`;
       } else if (health.issues.length > 0) {
         health.status = `WARNING`;
-<<<<<<< HEAD      }
+      }
     } catch (error) {  health.issues.push(`File health check failed: ${error.message  }`);
       health.status = `ERROR`;
     }
@@ -562,8 +554,8 @@ class ProjectHealthDashboard {;
 ;
             // Check for corruption patterns;
             if (;
-              content.includes('import: {') ||;
-              content.includes('const:') ||;
+              content.includes('import {') ||;
+              content.includes('const: ') ||;
               content.includes('from,') ||;
               content.includes('}, from,');
             ) {;
@@ -585,7 +577,7 @@ class ProjectHealthDashboard {;
     const backupPatterns = [`*.backup.*`', '*.old.*', '*.bak'', '*_backup.*', '*_old.*``, ``];
 
     try {
-<<<<<<< HEAD      const allFiles = await this.getAllFiles(this.projectRoot);
+      const allFiles = await this.getAllFiles(this.projectRoot);
 ;
       for (const file of allFiles) {;
         const fileName = path.basename(file);
@@ -639,7 +631,7 @@ class ProjectHealthDashboard {;
       .replace(/\./g, '\\.')
       .replace(/\*/g, `.*`)
       .replace(/\?/g, `.`);return new RegExp(`^${regex}$`).test(fileName);
-<<<<<<< HEAD  }
+  }
 ;
   async countTotalFiles(dir) {;
     let count = 0;
@@ -669,16 +661,14 @@ class ProjectHealthDashboard {;
     } catch (error) {  
       // Skip inaccessible directories;
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
       // Skip inaccessible directories;
     }
 ;
     return count;
-=======
 
-<<<<<<< HEAD    return count;
+    return count;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;
@@ -724,7 +714,7 @@ class ProjectHealthDashboard {;
     } catch (error) {  
       health.issues.push(`PM2 health check failed: ${error.message  }`);
       health.status = `ERROR`;
-<<<<<<< HEAD    }
+    }
 ;
     return health;
   }
@@ -816,11 +806,11 @@ class ProjectHealthDashboard {;
 <html lang=en">
 <head>
     <meta charset="UTF-8>
-    <meta name=viewport" content="width=device-width, initial-scale=1.0>
+    <meta name=viewport content=width=device-width, initial-scale=1.0>
     <title>Project Health Dashboard</title>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, `Segoe UI`, Roboto, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
-<<<<<<< HEAD        .container { max-width: 1200px; margin: 0 auto; }
+        .container { max-width: 1200px; margin: 0 auto; }
         .header { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         .status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 20px; }
         .status-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
@@ -848,24 +838,24 @@ class ProjectHealthDashboard {;
             <p><strong>Last Commit:</strong> ${healthData.project.lastCommit}</p>;
         </div>;
         ;
-        <div class=status-grid">;
-            <div class="status-card status-${healthData.dependencies.status.toLowerCase()}>;
+        <div class=status-grid>;
+            <div class=status-card status-${healthData.dependencies.status.toLowerCase()}>;
                 <h3>📦 Dependencies</h3>;
                 <div class=metric">;
                     <span>Status:</span>;
                     <span class="metric-value>${healthData.dependencies.status}</span>;
                 </div>;
-                <div class=metric">;
+                <div class=metric>;
                     <span>Total Dependencies:</span>;
-                    <span class="metric-value>${healthData.dependencies.totalDeps}</span>;
+                    <span class=metric-value>${healthData.dependencies.totalDeps}</span>;
                 </div>;
                 <div class=metric">;
                     <span>Outdated:</span>;
                     <span class="metric-value>${healthData.dependencies.outdatedDeps}</span>;
                 </div>;
-                <div class=metric">;
+                <div class=metric>;
                     <span>Corrupted:</span>;
-                    <span class="metric-value>${healthData.dependencies.corruptedDeps}</span>;
+                    <span class=metric-value>${healthData.dependencies.corruptedDeps}</span>;
                 </div>;
                 ${this.renderIssues(healthData.dependencies.issues)}
             </div>;
@@ -874,17 +864,17 @@ class ProjectHealthDashboard {;
                 <h3>🔧 TypeScript</h3>;
                 <div class="metric>;
                     <span>Status:</span>;
-                    <span class=metric-value">${healthData.typescript.status}</span>;
+                    <span class=metric-value>${healthData.typescript.status}</span>;
                 </div>;
-                <div class="metric>;
+                <div class=metric>;
                     <span>Files:</span>;
                     <span class=metric-value">${healthData.typescript.files}</span>;
                 </div>;
                 <div class="metric>;
                     <span>Errors:</span>;
-                    <span class=metric-value">${healthData.typescript.errors}</span>;
+                    <span class=metric-value>${healthData.typescript.errors}</span>;
                 </div>;
-                <div class="metric>;
+                <div class=metric>;
                     <span>Warnings:</span>;
                     <span class=metric-value">${healthData.typescript.warnings}</span>;
                 </div>;
@@ -893,9 +883,9 @@ class ProjectHealthDashboard {;
             
             <div class="status-card status-${healthData.build.status.toLowerCase()}>
                 <h3>🏗️ Build</h3>
-                <div class=metric">
+                <div class=metric>
                     <span>Status:</span>
-                    <span class="metric-value>${healthData.build.status}</span>
+                    <span class=metric-value>${healthData.build.status}</span>
                 </div>
                 ${
                   healthData.build.buildTime;
@@ -905,17 +895,17 @@ class ProjectHealthDashboard {;
                     : ``
             </div>;
             ;
-            <div class="status-card status-${healthData.build.status.toLowerCase()}">;
+            <div class=status-card status-${healthData.build.status.toLowerCase()}>;
                 <h3>🏗️ Build</h3>;
                 <div class="metric">;
                     <span>Status:</span>;
-                    <span class="metric-value">${healthData.build.status}</span>;
+                    <span class=metric-value>${healthData.build.status}</span>;
                 </div>;
                 ${;
                   healthData.build.buildTime;
                     ? `<div class="metric">;
                     <span>Build Time:</span>;
-                    <span class="metric-value">${healthData.build.buildTime}ms</span></div>`;
+                    <span class=metric-value>${healthData.build.buildTime}ms</span></div>`;
                     : ';
                 }
                 ${this.renderIssues(healthData.build.issues)}
@@ -925,17 +915,17 @@ class ProjectHealthDashboard {;
                 <h3>📁 Files</h3>;
                 <div class="metric>;
                     <span>Status:</span>;
-                    <span class=metric-value">${healthData.files.status}</span>;
+                    <span class=metric-value>${healthData.files.status}</span>;
                 </div>;
-                <div class="metric>;
+                <div class=metric>;
                     <span>Total Files:</span>;
                     <span class=metric-value">${healthData.files.totalFiles}</span>;
                 </div>;
                 <div class="metric>;
                     <span>Corrupted:</span>;
-                    <span class=metric-value">${healthData.files.corruptedFiles}</span>;
+                    <span class=metric-value>${healthData.files.corruptedFiles}</span>;
                 </div>;
-                <div class="metric>;
+                <div class=metric>;
                     <span>Backup Files:</span>;
                     <span class=metric-value">${healthData.files.backupFiles}</span>;
                 </div>;
@@ -944,9 +934,9 @@ class ProjectHealthDashboard {;
             ;
             <div class="status-card status-${healthData.pm2.status.toLowerCase()}>;
                 <h3>⚡ PM2 Processes</h3>;
-                <div class=metric">;
+                <div class=metric>;
                     <span>Status:</span>;
-                    <span class="metric-value>${healthData.pm2.status}</span>;
+                    <span class=metric-value>${healthData.pm2.status}</span>;
                 </div>;
                 <div class=metric">;
                     <span>Total Processes:</span>;
@@ -956,9 +946,9 @@ class ProjectHealthDashboard {;
             </div>
         </div>
         
-        <div class=recommendations">
+        <div class=recommendations>
             <h3>💡 Recommendations</h3>
-            ${healthData.recommendations.map(rec => `<div class="recommendation>• ${rec}</div>`).join(``)}
+            ${healthData.recommendations.map(rec => `<div class=recommendation>• ${rec}</div>`).join(``)}
         </div>
         
         <div class=timestamp">            Generated at: ${new Date(healthData.timestamp).toLocaleString()}
@@ -969,10 +959,10 @@ class ProjectHealthDashboard {;
 
   renderIssues(issues) {
     if (!issues || issues.length === 0) {
-      return `<div class="issues-list><div class=issue" style="background: #f0fdf4; color: #059669;>✓ No issues found</div></div>`;
+      return `<div class="issues-list><div class=issue style=background: #f0fdf4; color: #059669;>✓ No issues found</div></div>`;
     }
 
-    return `<div class=issues-list">${issues.map(issue => `<div class="issue">⚠️ ${issue}</div>`).join(``)}</div>`;
+    return `<div class=issues-list">${issues.map(issue => `<div class="issue>⚠️ ${issue}</div>`).join(``)}</div>`;
   }
 
   async saveDashboardFiles(dashboardHtml, healthData) {
@@ -989,10 +979,10 @@ class ProjectHealthDashboard {;
 ;
   renderIssues(issues) {;
     if (!issues || issues.length === 0) {;
-      return '<div class="issues-list"><div class="issue" style="background: #f0fdf4; color: #059669;">✓ No issues found</div></div>';
+      return '<div class=issues-list"><div class="issue style=background: #f0fdf4; color: #059669;">✓ No issues found</div></div>';
     }
 ;
-    return `<div class="issues-list">${issues.map(issue => `<div class="issue">⚠️ ${issue}</div>`).join(')}</div>`;
+    return `<div class="issues-list>${issues.map(issue => `<div class=issue">⚠️ ${issue}</div>`).join(')}</div>`;
   }
 ;
   async saveDashboardFiles(dashboardHtml, healthData) {;
@@ -1028,7 +1018,7 @@ class ProjectHealthDashboard {;
     };
 
     const summaryFile = path.join(this.dashboardDir, `summary.json`);
-<<<<<<< HEAD    fs.writeFileSync(summaryFile, JSON.stringify(summary, null, 2));
+    fs.writeFileSync(summaryFile, JSON.stringify(summary, null, 2));
 this.log(`Summary report generated: ${summaryFile}`);
 ;
     return summary;
@@ -1054,7 +1044,7 @@ this.log(`Summary report generated: ${summaryFile}`);
       healthData.typescript.issues.length +
       healthData.build.issues.length +
       healthData.files.issues.length +
-<<<<<<< HEAD      healthData.pm2.issues.length;
+      healthData.pm2.issues.length;
     );
   }
 ;

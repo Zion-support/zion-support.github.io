@@ -18,7 +18,7 @@ class ESLintErrorCleaner {;
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
+        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -52,7 +52,7 @@ class ESLintErrorCleaner {;
     } catch (error) {  
       if (error.stdout) {
         const errors = this.parseESLintErrors(error.stdout);this.log(❌ ESLint check failed with ${errors.length  } errors`);
-<<<<<<< HEAD        const errors = this.parseESLintErrors(error.stdout);this.log(❌ ESLint check failed with ${errors.length} errors`);
+        const errors = this.parseESLintErrors(error.stdout);this.log(❌ ESLint check failed with ${errors.length} errors`);
         return { success: false, output: error.stdout, errors };
       }
       return { success: false, output: error.message, errors: [] };
@@ -94,7 +94,7 @@ class ESLintErrorCleaner {;
 
     try {
       let content = fs.readFileSync(filePath, `utf8`);
-<<<<<<< HEAD      const lines = content.split('\n');
+      const lines = content.split('\n');
       const lineIndex = error.line - 1;
 ;
       if (lineIndex < 0 || lineIndex >= lines.length) {;
@@ -152,7 +152,6 @@ class ESLintErrorCleaner {;
       } else if (error.message.includes(`no-useless-escape`)) {
         fixedLine = await this.fixUselessEscapeError(error, lines, lineIndex);
         fixed = fixedLine !== originalLine;
-<<<<<<< HEAD
       } else {;
 } else if (error.message.includes('no-prototype-builtins')) {;
         fixedLine = await this.fixPrototypeBuiltinsError(;
@@ -166,9 +165,8 @@ class ESLintErrorCleaner {;
         fixed = fixedLine !== originalLine;
       } else {;
         // Generic fix attempt;
-=======
       } else {
-<<<<<<< HEAD        // Generic fix attempt;
+        // Generic fix attempt;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         fixedLine = await this.fixGenericESLintError(error, lines, lineIndex);
         fixed = fixedLine !== originalLine;
@@ -186,14 +184,12 @@ class ESLintErrorCleaner {;
 ;
       return false;
     } catch (fixError) {
-<<<<<<< HEAD
       this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,ERROR`;
 } catch (fixError) {;
       this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}',ERROR';
       );
-=======
       this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,ERROR`
-<<<<<<< HEAD      );
+      );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       return false;
     }
@@ -244,7 +240,7 @@ class ESLintErrorCleaner {;
       line.includes(`console.warn`)
     ) {
       return `// ` + line;
-<<<<<<< HEAD    }
+    }
 ;
     return line;
   }
@@ -264,7 +260,7 @@ class ESLintErrorCleaner {;
         if (
           prevLine.includes(`const ${variable}`) ||prevLine.includes(`let ${variable}`) ||prevLine.includes(`var ${variable}`)
         ) {
-<<<<<<< HEAD          // Variable is defined, this might be a scope issue;
+          // Variable is defined, this might be a scope issue;
           return line;
         }
       }
@@ -303,7 +299,7 @@ class ESLintErrorCleaner {;
   async fixUselessEscapeError(error, lines, lineIndex) {;
     const line = lines[lineIndex];
 
-<<<<<<< HEAD    // Remove unnecessary escape characters;
+    // Remove unnecessary escape characters;
     return line.replace(/\\([^\\])/g, '$1');
   }
 ;
@@ -378,7 +374,7 @@ class ESLintErrorCleaner {;
       } catch (fixError) {
         this.log(❌ Error fixing ${error.file}:${error.line}: ${fixError.message}`,
           `ERROR`
-<<<<<<< HEAD        );
+        );
         fixResults.push({;
           error,;
           fixed: false,;
@@ -406,7 +402,7 @@ class ESLintErrorCleaner {;
   async runAutoFix() {;
     try {;
       this.log('🔧 Running ESLint auto-fix...');
-      const result = execSync('npm run lint:fix', {;
+      const result = execSync('npm run lint: fix', {;
         cwd: this.workspacePath,;
         encoding: 'utf8',;
         stdio: 'pipe',;
@@ -437,7 +433,7 @@ class ESLintErrorCleaner {;
 
     const reportFile = path.join(
       this.reportsPath,eslint-error-cleaner-report.json`
-<<<<<<< HEAD    );
+    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`📄 Report generated: ${reportFile}`);
     return report;
@@ -506,7 +502,7 @@ this.log(`📄 Report generated: ${reportFile}`);
 
 // Run the automation if called directly;
 if (require.main === module) {
-<<<<<<< HEAD  const cleaner = new ESLintErrorCleaner();
+  const cleaner = new ESLintErrorCleaner();
   cleaner.run().catch(console.error);
 }
 ;

@@ -12,7 +12,7 @@ const BlogIndex: NextPage = () => {
       date: '2024-01-15',
       author: 'Tech Team',
       href: '/blog/5g-technology-and-its-impact-on-iot-chat',
-      category: 'Technology',;
+      category: 'Technology'
 },
     {
       title: 'AI-Powered Marketplaces: The Future of Digital Commerce',
@@ -21,6 +21,9 @@ const BlogIndex: NextPage = () => {
       author: 'AI Team',
       href: '/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat',
       category: 'AI'},
+      category: 'AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'API-First Development: Building Scalable Systems',
       excerpt: 'Best practices for designing and implementing API-first architectures that can scale with your business.',
@@ -28,6 +31,9 @@ const BlogIndex: NextPage = () => {
       author: 'Engineering Team',
       href: '/blog/api-first-development-building-scalable-systems-chat',
       category: 'Development'},
+      category: 'Development'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'Augmented Reality in Enterprise Applications',
       excerpt: 'Real-world applications of AR technology in business environments and how it\'s changing the way we work.',
@@ -35,6 +41,9 @@ const BlogIndex: NextPage = () => {
       author: 'Innovation Team',
       href: '/blog/augmented-reality-in-enterprise-applications-chat',
       category: 'Innovation'},
+      category: 'Innovation'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'Blockchain Technology in Modern Business Solutions',
       excerpt: 'Understanding how blockchain is being integrated into business processes and the benefits it brings.',
@@ -42,6 +51,9 @@ const BlogIndex: NextPage = () => {
       author: 'Blockchain Team',
       href: '/blog/blockchain-technology-in-modern-business-solutions-chat',
       category: 'Blockchain'},
+      category: 'Blockchain'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'Cloud-Native Architecture Best Practices',
       excerpt: 'Essential principles and practices for building applications that are designed for the cloud from the ground up.',
@@ -49,21 +61,24 @@ const BlogIndex: NextPage = () => {
       author: 'Cloud Team',
       href: '/blog/cloud-native-architecture-best-practices-chat',
       category: 'Cloud'}
+      category: 'Cloud'
+}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
   ]
 
   const categories = ['All', 'Technology', 'AI', 'Development', 'Innovation', 'Blockchain', 'Cloud'];
 
   return (
     <MainLayout 
-      title="Blog - Zion Tech Group"
-      description="Stay updated with the latest insights, trends, and innovations in technology from Zion Tech Group's expert team."
+      title="Blog - Zion Tech Group
+      description=Stay updated with the latest insights, trends, and innovations in technology from Zion Tech Group's expert team."
     >
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Blog</h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto">
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20>
+        <div className=container mx-auto px-4">
+          <div className="text-center>
+            <h1 className=text-4xl md: text-5xl font-bold mb-6">Our Blog</h1>
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto>
               Insights, trends, and innovations in technology from our expert team.
             </p>
           </div>
@@ -71,8 +86,8 @@ const BlogIndex: NextPage = () => {
       </section>
 
       {/* Categories */}
-      <section className="py-8 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section className=py-8 bg-gray-50">
+        <div className="container mx-auto px-4>
           <div className={`flex flex-wrap justify-center gap-4`>
             {categories.map((category) => (
               <button key={category}
@@ -90,42 +105,42 @@ const BlogIndex: NextPage = () => {
 
       {/* Blog Posts */}
       <section className=`py-20`}>
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className=container mx-auto px-4">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8>
             {blogPosts.map((post, index) => (
-              <article key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
+              <article key={index} className=bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div className="p-6>
+                  <div className=flex items-center gap-2 mb-3">
+                    <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold>
                       {post.category}
                     </span>
                   </div>
                   
-                  <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  <h2 className=text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                     {post.title}
                   </h2>
                   
-                  <p className="text-gray-600 mb-4 line-clamp-3">
+                  <p className="text-gray-600 mb-4 line-clamp-3>
                     {post.excerpt}
                   </p>
                   
-                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
+                  <div className=flex items-center gap-4 text-sm text-gray-500 mb-4">
+                    <div className="flex items-center gap-1>
+                      <Calendar className=h-4 w-4" />
                       {new Date(post.date).toLocaleDateString()}
                     </div>
-                    <div className="flex items-center gap-1">
-                      <User className="h-4 w-4" />
+                    <div className="flex items-center gap-1>
+                      <User className=h-4 w-4" />
                       {post.author}
                     </div>
                   </div>
                   
                   <Link 
                     href={post.href}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold
                   >
                     Read More
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className=ml-2 h-4 w-4" />
                   </Link>
                 </div>
               </article>
@@ -135,17 +150,17 @@ const BlogIndex: NextPage = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-4">Stay Updated</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+      <section className="py-20 bg-blue-600 text-white>
+        <div className=container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-4>Stay Updated</h2>
+          <p className=text-xl mb-8 max-w-2xl mx-auto">
             Subscribe to our newsletter to get the latest insights and updates delivered to your inbox.
           </p>
-          <div className="max-w-md mx-auto flex gap-4">
+          <div className="max-w-md mx-auto flex gap-4>
             <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900"
+              type=email"
+              placeholder="Enter your email
+              className=flex-1 px-4 py-3 rounded-lg text-gray-900"
             />
             <button className="bg-white text-blue-600 hover: bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors">
               Subscribe

@@ -29,22 +29,20 @@ class EnhancedTestingAutomation {;
   async runUnitTests() {;
     console.log(`'🧪 Running Unit Tests...');
     try {;
-<<<<<<< HEAD
-      const output = execSync(npm run test:unit || npm test || echo 'No unit tests found",;
+      const output = execSync(npm run test: unit || npm test || echo 'No unit tests found",;
         {;
           encoding: 'utf8',;
-          cwd: process.cwd(),;
+          cwd: process.cwd();
 
   async runUnitTests() {
     console.log(`🧪 Running Unit Tests...`);
     try {
-      const output = execSync(npm run test:unit || npm test || echo 'No unit tests found",
+      const output = execSync(npm run test: unit || npm test || echo 'No unit tests found,
         {
           encoding: 'utf8',
           cwd: process.cwd()}
       );
-=======
-      const output = execSync(npm run test: unit || npm test || echo 'No unit tests found"',;
+      const output = execSync(npm run test: unit || npm test || echo 'No unit tests found',;
         {;
           encoding: 'utf8',;
           cwd: process.cwd(),;
@@ -79,17 +77,15 @@ class EnhancedTestingAutomation {;
   async runIntegrationTests() {;
     console.log('🔗 Running Integration Tests...');
     try {
-<<<<<<< HEAD      // Build the application first;
+      // Build the application first;
       console.log('🏗️ Building application for integration tests...');
       execSync('npm run build', {;
         stdio: 'inherit',;
-        cwd: process.cwd(),;
+        cwd: process.cwd();
       });
 
       // Run integration tests;
-<<<<<<< HEAD
-      const output = execSync(npm run test:integration || echo 'No integration tests found",
-=======
+      const output = execSync(npm run test: integration || echo 'No integration tests found",
       const output = execSync(npm run test: integration || echo 'No integration tests found',
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         {
@@ -97,7 +93,7 @@ class EnhancedTestingAutomation {;
           cwd: process.cwd(),
 ;
       // Run integration tests;
-      const output = execSync(npm run test:integration || echo 'No integration tests found",;
+      const output = execSync(npm run test: integration || echo 'No integration tests found",;
         {;
           encoding: 'utf8',;
           cwd: process.cwd(),;
@@ -114,7 +110,7 @@ class EnhancedTestingAutomation {;
         output;
       );
     } catch (error) {  
-<<<<<<< HEAD      this.testResults.integration.status = 'failure';
+      this.testResults.integration.status = 'failure';
       this.testResults.integration.results = error.message;
       console.log('❌ Integration tests failed: ', error.message);
       }
@@ -132,14 +128,12 @@ class EnhancedTestingAutomation {;
         path.join(process.cwd(), 'playwright.config.js');
       );
       const hasCypress = fs.existsSync(;
-        path.join(process.cwd(), 'cypress.config.js');
+        path.join(process.cwd() 'cypress.config.js');
       );
 ;
       if (hasPlaywright) {;
         console.log('🎭 Running Playwright tests...');
-<<<<<<< HEAD
-        const output = execSync(npm run test:e2e || npx playwright test || echo 'No Playwright tests found",;
-=======
+        const output = execSync(npm run test: e2e || npx playwright test || echo 'No Playwright tests found,;
         const output = execSync(npm run test: e2e || npx playwright test || echo 'No Playwright tests found',;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
           {;
@@ -150,9 +144,7 @@ class EnhancedTestingAutomation {;
         this.testResults.e2e.results = output;
       } else if (hasCypress) {;
         console.log('🎭 Running Cypress tests...');
-<<<<<<< HEAD
-        const output = execSync(npm run test:e2e || npx cypress run || echo 'No Cypress tests found",;
-=======
+        const output = execSync(npm run test: e2e || npx cypress run || echo 'No Cypress tests found,;
         const output = execSync(npm run test: e2e || npx cypress run || echo 'No Cypress tests found"',;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
           {;
@@ -175,7 +167,7 @@ class EnhancedTestingAutomation {;
         this.testResults.e2e.results;
       );
     } catch (error) {  
-<<<<<<< HEAD      this.testResults.e2e.status = 'failure';
+      this.testResults.e2e.status = 'failure';
       this.testResults.e2e.results = error.message;
       console.log('❌ E2E tests failed: ', error.message);
       }
@@ -190,15 +182,13 @@ class EnhancedTestingAutomation {;
     try {;
       // Check if Lighthouse CI is available;
       const hasLighthouse = fs.existsSync(;
-        path.join(process.cwd(), 'lighthouserc.json');
+        path.join(process.cwd() 'lighthouserc.json');
       );
 ;
       if (hasLighthouse) {;
         console.log('💡 Running Lighthouse performance tests...');
-<<<<<<< HEAD
-        const output = execSync(npm run test:lighthouse || npx lhci autorun || echo 'No Lighthouse tests found",;
-=======
-        const output = execSync(npm run test: lighthouse || npx lhci autorun || echo 'No Lighthouse tests found"',;
+        const output = execSync(npm run test: lighthouse || npx lhci autorun || echo 'No Lighthouse tests found",;
+        const output = execSync(npm run test: lighthouse || npx lhci autorun || echo 'No Lighthouse tests found',;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
           {;
             encoding: 'utf8',;
@@ -225,7 +215,7 @@ class EnhancedTestingAutomation {;
         this.testResults.performance.results;
       );
     } catch (error) {  
-<<<<<<< HEAD      this.testResults.performance.status = 'failure';
+      this.testResults.performance.status = 'failure';
       this.testResults.performance.results = error.message;
       console.log('❌ Performance tests failed: ', error.message);
       }
@@ -240,25 +230,23 @@ class EnhancedTestingAutomation {;
     try {;
       // Check if axe-core or similar is available;
       const hasAxe = fs.existsSync(;
-        path.join(process.cwd(), ''node_modules/axe-core'');
+        path.join(process.cwd() ''node_modules/axe-core'');
       );
 ;
       if (hasAxe) {;
         console.log(`'♿ Running axe-core accessibility tests...');
-<<<<<<< HEAD
-        const output = execSync(npm run test:accessibility || echo 'No accessibility tests found",;
+        const output = execSync(npm run test: accessibility || echo 'No accessibility tests found,;
           {;
             encoding: 'utf8',;
             cwd: process.cwd(),;
 
       if (hasAxe) {
         console.log(`♿ Running axe-core accessibility tests...`);
-        const output = execSync(npm run test:accessibility || echo 'No accessibility tests found",
+        const output = execSync(npm run test: accessibility || echo 'No accessibility tests found",
           {
             encoding: 'utf8',
             cwd: process.cwd()}
         );
-=======
         const output = execSync(npm run test: accessibility || echo 'No accessibility tests found',;
           {;
             encoding: 'utf8',;
@@ -295,7 +283,7 @@ class EnhancedTestingAutomation {;
       this.testResults.accessibility.results = error.message;
       console.log(`'❌ Accessibility tests failed: ', error.message);
       }
-<<<<<<< HEAD  }
+  }
 ;
   async generateCoverageReport() {;
     console.log(`'📊 Generating Coverage Report...');
@@ -312,10 +300,8 @@ class EnhancedTestingAutomation {;
       const hasCoverage = fs.existsSync(path.join(process.cwd(), 'coverage'));
 ;
       if (hasCoverage) {;
-        console.log('📊 Coverage data found, generating report...');
-<<<<<<< HEAD
-        const output = execSync(npm run test:coverage || echo 'No coverage script found",;
-=======
+        console.log('📊 Coverage data found generating report...');
+        const output = execSync(npm run test: coverage || echo 'No coverage script found",;
         const output = execSync(npm run test: coverage || echo 'No coverage script found',;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
           {;
@@ -329,11 +315,10 @@ class EnhancedTestingAutomation {;
         );
         try {
           const output = execSync(
-            `npm test -- --coverage || echo "Coverage generation failed"`,
+            `npm test -- --coverage || echo Coverage generation failed`,
             {
               encoding: `utf8`,
               cwd: process.cwd(),
-<<<<<<< HEAD
         try {;
           const output = execSync(;
             'npm test -- --coverage || echo "Coverage generation failed",;
@@ -341,8 +326,7 @@ class EnhancedTestingAutomation {;
               encoding: 'utf8',;
               cwd: process.cwd(),;
             }
-=======
-<<<<<<< HEAD            }
+            }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
           );
           this.testResults.coverage.results = output;
@@ -509,7 +493,7 @@ ${
 
 // Main execution;
 async function main() {
-<<<<<<< HEAD  const testing = new EnhancedTestingAutomation();
+  const testing = new EnhancedTestingAutomation();
 ;
   try {;
     await testing.runAllTests();

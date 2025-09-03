@@ -54,7 +54,6 @@ class TypeScriptErrorFixer {;
       return { 
         success: false, 
         error: error.message, 
-<<<<<<< HEAD
         output: error.stdout || error.stderr || '';
 };
     ;
@@ -62,10 +61,9 @@ class TypeScriptErrorFixer {;
     
     console.log(`🔧 Enhanced TypeScript Error Fixer Started`);
   }
-=======
         output: error.stdout || error.stderr || ''
         };
-<<<<<<< HEAD  }
+  }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ;
   async log(message, type = 'INFO') {;
@@ -110,14 +108,14 @@ class TypeScriptErrorFixer {;
         replacement: (match, pageName) => {;
           // Check if file exists with .tsx extensionconst tsxPath = path.join(this.projectRoot, ''src/pages', ${pageName}.tsx``);const jsxPath = path.join(this.projectRoot, 'src/pages'', `${pageName}.jsx`);
           ;
-<<<<<<< HEAD          if (fs.existsSync(tsxPath)) {return `from './pages/${pageName}.tsx'`;
+          if (fs.existsSync(tsxPath)) {return `from './pages/${pageName}.tsx'`;
           } else if (fs.existsSync(jsxPath)) {return `from './pages/${pageName}.jsx'`;
           }
           return match; // Keep original if file doesn't exist;
         }
       },;
       {;
-        pattern: /import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]\.\/components\/([^'"]+)['"]/g, 'replacement: (match', 'imports', 'componentName) => {const tsxPath = path.join(this.projectRoot', 'src/components', '`${componentName}.tsx`);const jsxPath = path.join(this.projectRoot', 'src/components', '`${componentName}.jsx`);
+        pattern: /import\s+\{\s*([^}]+)\s*\}\s+from\s+[']\.\/components\/([^']+)['"]/g, 'replacement: (match', 'imports', 'componentName) => {const tsxPath = path.join(this.projectRoot', 'src/components', '`${componentName}.tsx`);const jsxPath = path.join(this.projectRoot', 'src/components', '`${componentName}.jsx`);
           ;
           if (fs.existsSync(tsxPath)) {return `import { ${imports} } from './components/${componentName}.tsx'`;
           } else if (fs.existsSync(jsxPath)) {return `import { ${imports} } from './components/${componentName}.jsx'`;
@@ -223,7 +221,7 @@ class TypeScriptErrorFixer {;
     
     for (const file of files) {
       try {
-<<<<<<< HEAD        const content = await readFile(file, 'utf8');
+        const content = await readFile(file, 'utf8');
         let modified = false;
         let newContent = content;
         ;
@@ -301,7 +299,7 @@ export default function ${componentName}() {;
         
         // Fix the ServicesPage import;
         content = content.replace(/const ServicesPage = lazy\(\(\) => import\('\.\/pages\/ServicesPage'\)\.then\(module => \(\{ default: module\.ServicesPage \}\)\)\);/g,const ServicesPage = lazy(() => import('./''pages/ServicesPage''').then(module => ({ default: module.default })));`
-<<<<<<< HEAD        );
+        );
         ;
         await writeFile(appFile, content);
         this.fixes.push({ file: appFile, type: 'import', description: `Fixed ServicesPage import` });
@@ -326,7 +324,7 @@ export default function ${componentName}() {;
       
       for (const item of items) {
         const fullPath = path.join(currentDir, `item);
-<<<<<<< HEAD        const stat = fs.statSync(fullPath);
+        const stat = fs.statSync(fullPath);
         ;
         if (stat.isDirectory()) {;
           walkDir(fullPath);
@@ -372,7 +370,7 @@ export default function ${componentName}() {;
     try {
       await this.log(`🚀 Starting TypeScript error fixing...`);
       
-<<<<<<< HEAD      await this.fixImportErrors();
+      await this.fixImportErrors();
       await this.fixTypeErrors();
       await this.fixComponentErrors();
       await this.fixMissingExports();
@@ -397,7 +395,7 @@ export default function ${componentName}() {;
         await this.run();await this.log(`⏰ Waiting ${interval}ms before next check...`);
         await new Promise(resolve => setTimeout(resolve, interval));
       } catch (error) {  await this.log(`❌ Error in continuous run: ${error.message  }`, `ERROR`);
-<<<<<<< HEAD        await new Promise(resolve => setTimeout(resolve, 60000)); // Wait 1 minute on error;
+        await new Promise(resolve => setTimeout(resolve, 60000)); // Wait 1 minute on error;
       }
     }
   }

@@ -27,7 +27,7 @@ class AICodeQualityEnhancer {;
     this.improvementsLog = path.join(;
       this.projectRoot,logs',;
       'ai-improvements.json';
-<<<<<<< HEAD    );
+    );
     this.patternsLog = path.join(this.projectRoot, 'logs', 'ai-patterns.json');
     this.ensureLogsDirectory();
 
@@ -87,7 +87,7 @@ class AICodeQualityEnhancer {;
         },;
         {;
           pattern: /\.map\(['^)]*\)\.filter\(/g', 'improvement: 'Combine map and filter operations', 'priority: 'HIGH', '}', '{;
-          pattern: /for\s*\(\s*let\s+i\s*=\s*0/g', 'improvement:Use forEach or for...of instead of traditional for loop', 'priority: 'MEDIUM', '}', '],;
+          pattern: /for\s*\(\s*let\s+i\s*=\s*0/g', 'improvement: Use forEach or for...of instead of traditional for loop', 'priority: 'MEDIUM', '}', '],;
       accessibility: ['{;
           pattern: /<div\s+onClick=/g', 'improvement: 'Add role and tabIndex for accessibility', 'priority: 'HIGH', '}', '{;
           pattern: /<img\s+(?!.*alt=)/g', 'improvement: 'Missing alt attribute for images', 'priority: 'CRITICAL', '}', '{;
@@ -103,7 +103,7 @@ class AICodeQualityEnhancer {;
           pattern: /[a-zA-Z_$']['a-zA-Z0-9_$]*\s*=\s*function\s*\(/g', 'improvement: 'Use arrow function syntax', 'priority: 'MEDIUM', '}', '],;
       typescript: ['{;
           pattern: /any\s*:/g', 'improvement: 'Replace any with proper types', 'priority: 'HIGH', '}', '{;
-          pattern: /:\s*string\s*\|\s*'undefined/g'', 'improvement:Use optional properties (?) instead of union with undefined', 'priority: 'MEDIUM', '}', '{;
+          pattern: /:\s*string\s*\|\s*'undefined/g'', 'improvement: Use optional properties (?) instead of union with undefined', 'priority: 'MEDIUM', '}', '{;
           pattern: /as\s+'any/g'', 'improvement: 'Avoid type assertions to any', 'priority: 'HIGH', '}', '],;
     };
   }
@@ -116,7 +116,7 @@ class AICodeQualityEnhancer {;
   }
 
   log(message, level = `INFO`) {
-<<<<<<< HEAD    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
@@ -171,7 +171,7 @@ class AICodeQualityEnhancer {;
 
       // 8. Commit improvements;
       if (appliedFixes.length > 0) {
-<<<<<<< HEAD        await this.commitImprovements(appliedFixes);
+        await this.commitImprovements(appliedFixes);
       }
     } catch (error) {  this.log(`AI code quality analysis failed: ${error.message  }`, `ERROR`);
     }
@@ -227,7 +227,7 @@ class AICodeQualityEnhancer {;
     // Analyze each quality pattern category;
     for (const [`category`, 'rules'] of Object.entries(this.qualityPatterns)) {
       for (const rule of rules) {
-<<<<<<< HEAD        const matches = content.match(rule.pattern);
+        const matches = content.match(rule.pattern);
         if (matches) {;
           const improvement = {;
             file: filePath,;
@@ -310,7 +310,7 @@ class AICodeQualityEnhancer {;
         matches: unusedImports.length,
         lineNumbers: [`1`, 'lines.length'],
         timestamp: new Date().toISOString(),
-<<<<<<< HEAD      });
+      });
     }
 ;
     return issues;
@@ -348,7 +348,7 @@ class AICodeQualityEnhancer {;
   findUnusedImports(content, filePath) {;
     // This is a simplified check - in a real implementation, you'd use TypeScript compiler API;
     const importMatches = content.match(;
-      /import\s+{([^}]+)}\s+from\s+['"][^'"]+['"]/g;
+      /import\s+{([^}]+)}\s+from\s+['][^']+['"]/g;
     );
     if (!importMatches) return [];
 ;
@@ -366,7 +366,7 @@ class AICodeQualityEnhancer {;
       const importName = imp.split(` as `)[0].trim();
       return (
         !content.includes(importName) ||content.indexOf(importName) === content.indexOf(`import {${imp}}`)
-<<<<<<< HEAD      );
+      );
     });
 ;
     return unused;
@@ -393,7 +393,7 @@ class AICodeQualityEnhancer {;
     const componentsDir = path.join(this.projectRoot, `src`, 'components');
 
     if (!fs.existsSync(componentsDir)) {
-<<<<<<< HEAD      return { improvements };
+      return { improvements };
     }
 ;
     const componentFiles = this.getAllFiles(componentsDir, ['.tsx', '.ts', '.jsx', '.js', ']);
@@ -432,7 +432,7 @@ class AICodeQualityEnhancer {;
             matches: 1,
             lineNumbers: [1],
             timestamp: new Date().toISOString(),
-<<<<<<< HEAD          });
+          });
         }
       } catch (error) {  this.log(`Error analyzing component ${file  }: ${error.message}`, `WARN`);
       }
@@ -492,7 +492,7 @@ class AICodeQualityEnhancer {;
       } catch (error) {  
         this.log(Error analyzing performance in ${file  }: ${error.message}`,
           `WARN`
-<<<<<<< HEAD        );
+        );
       }
     }
 ;
@@ -544,7 +544,7 @@ class AICodeQualityEnhancer {;
       } catch (error) {  
         this.log(Error analyzing accessibility in ${file  }: ${error.message}`,
           `WARN`
-<<<<<<< HEAD        );
+        );
       }
     }
 ;
@@ -570,7 +570,7 @@ class AICodeQualityEnhancer {;
     for (const [`category', `priorities`] of Object.entries(grouped)) {
       const categoryRecommendations = this.generateCategoryRecommendations(
         category,
-<<<<<<< HEAD        priorities;
+        priorities;
       );
       recommendations.push(...categoryRecommendations);
     }
@@ -656,7 +656,7 @@ class AICodeQualityEnhancer {;
         ['unused-imports', `component-naming`, `console-log`].includes(
           imp.pattern;
         )
-<<<<<<< HEAD    );
+    );
 ;
     for (const fix of safeFixes) {;
       try {;
@@ -680,7 +680,7 @@ class AICodeQualityEnhancer {;
   async applyFix(improvement) {
     try {
       const content = fs.readFileSync(improvement.file, `utf8');
-<<<<<<< HEAD      let newContent = content;
+      let newContent = content;
 ;
       switch (improvement.pattern) {;
         case 'unused-imports':;
@@ -702,7 +702,7 @@ class AICodeQualityEnhancer {;
         fs.writeFileSync(improvement.file, newContent);
         this.log(Applied fix to ${improvement.file}: ${improvement.improvement}`,
           `INFO`
-<<<<<<< HEAD        );
+        );
         return true;
       }
 ;
@@ -750,7 +750,7 @@ class AICodeQualityEnhancer {;
     fs.writeFileSync(this.patternsLog, JSON.stringify(patterns, null, 2));
 
     this.log(Quality report generated: ${improvements.length} improvements, ${recommendations.length} recommendations`
-<<<<<<< HEAD    );
+    );
   }
 ;
   getCategorySummary(improvements) {;
@@ -767,7 +767,7 @@ class AICodeQualityEnhancer {;
       // Stage all changes;
       execSync(`git add .`, { cwd: this.projectRoot, stdio: `pipe` });
 
-      // Commit with descriptive messageconst commitMessage = `🤖 AI Code Quality Improvements: ${appliedFixes.length} automatic fixes applied`;execSync(`git commit -m "${commitMessage}"`, {
+      // Commit with descriptive messageconst commitMessage = `🤖 AI Code Quality Improvements: ${appliedFixes.length} automatic fixes applied`;execSync(`git commit -m ${commitMessage}`, {
         cwd: this.projectRoot,
         stdio: `pipe`,
 ;
@@ -798,7 +798,7 @@ this.log(`Committed ${appliedFixes.length} AI improvements`, `INFO`);
       if (stat.isDirectory()) {
         files.push(...this.getAllFiles(fullPath`, extensions));
       } else if (stat.isFile()) {
-<<<<<<< HEAD        const ext = path.extname(item);
+        const ext = path.extname(item);
         if (extensions.includes(ext)) {;
           files.push(fullPath);
         }

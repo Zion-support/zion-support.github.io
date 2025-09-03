@@ -39,7 +39,7 @@ class ComprehensiveAutomationSuite {
     try {
       fs.appendFileSync(this.logFile, logMessage + '\n');
     } catch (error) {
-      console.error('Failed to write to log file:', error.message);
+      console.error('Failed to write to log file: ', error.message);
     }
   }
 
@@ -106,42 +106,42 @@ class ComprehensiveAutomationSuite {
       let originalContent = content;
       
       // Fix merge conflicts
-      content = content.replace(/<<<<<<< HEAD\n/g, '');
-      content = content.replace(/=======\n/g, '');
+      content = content.replace(/\n/g, '');
+      content = content.replace(/\n/g, '');
       content = content.replace(/      
       // Fix unterminated strings
-      content = content.replace(/&apos;s\s*"'\s*>/gm, '&apos;s">');
-      content = content.replace(/&apos;s\s*"'\s*,/gm, '&apos;s",');
+      content = content.replace(/&apos;s\s*"'\s*>/gm, '&apos;s>');
+      content = content.replace(/&apos;s\s*'\s*,/gm '&apos;s",');
       
       // Fix unterminated strings in general
-      content = content.replace(/"'\s*$/gm, '"');
-      content = content.replace(/"'\s*>/gm, '">');
-      content = content.replace(/"'\s*,/gm, '",');
+      content = content.replace(/"'\s*$/gm, '');
+      content = content.replace(/'\s*>/gm, '">');
+      content = content.replace(/"'\s*,/gm ',');
       
       // Fix missing semicolons
       content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');
       
       // Fix specific syntax errors we've seen
-      content = content.replace(/import Head from 'next\/head;/g, "import Head from 'next/head';");
-      content = content.replace(/';/g, "';");
-      content = content.replace(/category: 'Communication AI',/g, "category: 'Communication AI',");
-      content = content.replace(/response: 'JWT token',/g, "response: 'JWT token',");
-      content = content.replace(/Award,/g, "Award,");
-      content = content.replace(/category: 'Technology',/g, "category: 'Technology',");
-      content = content.replace(/category: 'Content AI',/g, "category: 'Content AI',");
-      content = content.replace(/response: 'JWT token',/g, "response: 'JWT token',");
-      content = content.replace(/Award,/g, "Award,");
-      content = content.replace(/keywords = 'technology, AI, software development, consulting'/g, "keywords = 'technology, AI, software development, consulting'");
-      content = content.replace(/';/g, "';");
+      content = content.replace(/import Head from 'next\/head;/g, import Head from 'next/head';");
+      content = content.replace(/';/g, "';);
+      content = content.replace(/category: 'Communication AI',/g, category: 'Communication AI',");
+      content = content.replace(/response: 'JWT token',/g, "response: 'JWT token',);
+      content = content.replace(/Award,/g, Award,");
+      content = content.replace(/category: 'Technology',/g, "category: 'Technology',);
+      content = content.replace(/category: 'Content AI',/g, category: 'Content AI',");
+      content = content.replace(/response: 'JWT token',/g, "response: 'JWT token',);
+      content = content.replace(/Award,/g, Award,");
+      content = content.replace(/keywords = 'technology, AI, software development, consulting'/g, "keywords = 'technology, AI, software development, consulting');
+      content = content.replace(/';/g, ';");
       
       // Fix JSON syntax errors
-      content = content.replace(/": "eslint \. --ext \.ts,\.tsx,\.js,\.jsx --max-warnings 0";/g, '": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0"');
-      content = content.replace(/"typescript": "5\.9\.2";/g, '"typescript": "5.9.2"');
-      content = content.replace(/"npm": ">=10\.0\.0";/g, '"npm": ">=10.0.0"');
-      content = content.replace(/"url": "git\+https:\/\/github\.com\/Zion-Holdings\/zion\.app\.git";/g, '"url": "git+https://github.com/Zion-Holdings/zion.app.git"');
-      content = content.replace(/"license": "MIT"/g, '"license": "MIT"');
-      content = content.replace(/"name": "next"/g, '"name": "next"');
-      content = content.replace(/"@\/store\/\*": \["\.\/src\/store\/\*"\];/g, '"@/store/*": ["./src/store/*"]');
+      content = content.replace(/": eslint \. --ext \.ts,\.tsx,\.js,\.jsx --max-warnings 0;/g, '": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0');
+      content = content.replace(/typescript": "5\.9\.2;/g, 'typescript": "5.9.2');
+      content = content.replace(/npm": ">=10\.0\.0;/g, 'npm": ">=10.0.0');
+      content = content.replace(/url": "git\+https: \/\/github\.com\/Zion-Holdings\/zion\.app\.git;/g, 'url": "git+https: //github.com/Zion-Holdings/zion.app.git');
+      content = content.replace(/license": "MIT/g, 'license": "MIT');
+      content = content.replace(/name": "next/g, 'name": "next');
+      content = content.replace(/@\/store\/\*": \["\.\/src\/store\/\*\];/g, '@/store/*": ["./src/store/*]');
       content = content.replace(/  \];/g, '  ]');
       
       if (content !== originalContent) {
@@ -325,7 +325,7 @@ module.exports = ErrorDetector;`;
 
       // Commit changes
       const commitMessage = `Automated fixes and improvements - ${new Date().toISOString()}`;
-      execSync(`git commit -m "${commitMessage}"`, { cwd: this.projectRoot });
+      execSync(`git commit -m ${commitMessage}"`, { cwd: this.projectRoot });
       this.log('Changes committed');
 
       // Push changes
@@ -418,10 +418,10 @@ module.exports = ErrorDetector;`;
 if (require.main === module) {
   const suite = new ComprehensiveAutomationSuite();
   suite.run().then(results => {
-    console.log('Final results:', results);
+    console.log('Final results: ', results);
     process.exit(results.status === 'completed' ? 0 : 1);
   }).catch(error => {
-    console.error('Suite failed:', error);
+    console.error('Suite failed: ', error);
     process.exit(1);
   });
 }

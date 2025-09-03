@@ -39,7 +39,7 @@ class ConflictCleanupResolver {;
       // Step 1: Clean up backup files;
       await this.cleanupBackupFiles();
 
-<<<<<<< HEAD      // Step 2: Resolve merge conflicts;
+      // Step 2: Resolve merge conflicts;
       await this.resolveMergeConflicts();
 ;
       // Step 3: Clean up duplicate files;
@@ -111,7 +111,7 @@ class ConflictCleanupResolver {;
       const backupPatterns = ['**/*.backup.*', '**/*.cleanup-backup.*', '**/*.backup.1756*', '**/*.cleanup-backup.1756*', '];
 ;
       for (const pattern of backupPatterns) {;
-        try {const files = execSync(`find . -name "${pattern}" -type f`, {;
+        try {const files = execSync(`find . -name ${pattern} -type f`, {;
             encoding: 'utf8',;
           });
             .split('\n');
@@ -164,7 +164,7 @@ class ConflictCleanupResolver {;
         )
         .map(line => line.substring(3));
     } catch (error) {  
-<<<<<<< HEAD      return [];
+      return [];
       }
   }
 ;
@@ -215,15 +215,13 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
       this.cleanupStats.conflictsResolved++;
     } catch (error) {  
       this.log(❌ Failed to resolve conflicts in ${filePath  }: ${error.message}`,
-<<<<<<< HEAD
         `ERROR`;
 } catch (error) {;
       this.log(❌ Failed to resolve conflicts in ${filePath}: ${error.message}',;
         'ERROR';
       );
-=======
         `ERROR`
-<<<<<<< HEAD      );
+      );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       this.cleanupStats.errors++;
     }
@@ -284,7 +282,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
         JSON.parse(fixed);
         return fixed;
       } catch (e) {
-<<<<<<< HEAD        // If still invalid, return original content;
+        // If still invalid, return original content;
         return content;
       }
     }
@@ -327,7 +325,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
     this.log(`🧹 Cleaning up duplicate files...`);
 
     try {
-<<<<<<< HEAD      // Remove files that are marked as deleted in the remote;
+      // Remove files that are marked as deleted in the remote;
       const deletedFiles = this.getDeletedFiles();
 ;
       for (const file of deletedFiles) {;
@@ -395,12 +393,10 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
       this.log('✅ Added all resolved files');
 
       // Commit the merge;
-<<<<<<< HEAD
       execSync('git commit -m "Auto-resolve merge conflicts and cleanup", {
         stdio: 'pipe'});
       this.log('✅ Committed merge resolution');
-=======
-      execSync('git commit -m Auto-resolve merge conflicts and cleanup"', {
+      execSync('git commit -m Auto-resolve merge conflicts and cleanup', {
         stdio: 'pipe',
       });      this.log('✅ Committed merge resolution');
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
@@ -436,8 +432,7 @@ this.log(`📄 Detailed report saved to: ${reportPath}`);
 if (require.main === module) {
   const resolver = new ConflictCleanupResolver();
   resolver.run().catch(error => {
-<<<<<<< HEAD
-    console.error(`❌ Fatal error:`, error);
+    console.error(`❌ Fatal error: `, error);
 ;
     try {;
       // Add all resolved files;
@@ -445,7 +440,7 @@ if (require.main === module) {
       this.log('✅ Added all resolved files');
 ;
       // Commit the merge;
-      execSync('git commit -m "Auto-resolve merge conflicts and cleanup", {;
+      execSync('git commit -m Auto-resolve merge conflicts and cleanup", {;
         stdio: 'pipe',;
       });
       this.log('✅ Committed merge resolution');
@@ -483,9 +478,8 @@ this.log(`📄 Detailed report saved to: ${reportPath}`);
 if (require.main === module) {;
   const resolver = new ConflictCleanupResolver();
   resolver.run().catch(error => {;
-    console.error('❌ Fatal error:', error);
+    console.error('❌ Fatal error: ', error);
     process.exit(1);
-=======
     console.error(`❌ Fatal error: `, error);    process.exit(1);
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   });

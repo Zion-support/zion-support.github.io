@@ -4,16 +4,21 @@ import Link from 'next/link'
 import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine } from 'lucide-react';
 import Navigation from '../src/components/Navigation'
 import Footer from '../src/components/Footer';
+import Head from 'next/head'
+import Link from 'next/link'
+import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine } from 'lucide-react'
+import Navigation from '../src/components/Navigation'
+import Footer from '../src/components/Footer'
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
 export default function AIServices() {
-  const title = 'AI Services — Zion Tech Group';
+  const title = 'AI Services — Zion Tech Group'
   const description =
-    'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.';
+    'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.'
 
   const aiServices = [
   {
       title: 'AI-Powered Email Responder',
-      description:
-        'Automated email responses with sentiment analysis and intelligent categorization',
+      description: 'Automated email responses with sentiment analysis and intelligent categorization',
       icon: MessageSquare,
       features: [
         'Smart email categorization and prioritization,Automated response generation with personalization,Sentiment analysis and escalation triggers,Integration with CRM and helpdesk systems,Multi-language support and compliance',
@@ -24,8 +29,7 @@ export default function AIServices() {
 },
     {
       title: 'AI Content Creation Suite',
-      description:
-        'Comprehensive AI-powered content generation for marketing, social media, and documentation',
+      description: 'Comprehensive AI-powered content generation for marketing, social media, and documentation',
       icon: FileText,
       features: [
         'Automated blog posts and articles,Social media content generation,Product descriptions and marketing copy,Technical documentation creation,SEO-optimized content with keyword integration',
@@ -36,8 +40,7 @@ export default function AIServices() {
 },
     {
       title: 'Intelligent Document Processing',
-      description:
-        'AI-powered document analysis, extraction, and processing for business automation',
+      description: 'AI-powered document analysis, extraction, and processing for business automation',
       icon: FileText,
       features: [
         'Automated data extraction from PDFs and forms,Document classification and routing,OCR with 99%+ accuracy,Contract analysis and risk assessment,Compliance monitoring and reporting',
@@ -46,245 +49,228 @@ export default function AIServices() {
       delivery: '3-4 weeks',
       category: 'Document AI',
     },
+      category: 'Document AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Talent Matching',
-      description:
-        'Advanced recruitment platform with AI-driven candidate screening and matching',
+      description: 'Advanced recruitment platform with AI-driven candidate screening and matching',
       icon: Users,
       features: [
         'Resume parsing and skill extraction,Cultural fit and personality analysis,Automated interview scheduling,Bias detection and elimination,Predictive hiring success metrics',
       ],
       pricing: '$4,000 - $15, 000/month',
       delivery: '4-6 weeks',
-      category: 'HR AI',;
+      category: 'HR AI'
 },
     {
       title: 'Computer Vision Solutions',
-      description:
-        'Image and video analysis for quality control, security, and automation',
+      description: 'Image and video analysis for quality control, security, and automation',
       icon: Eye,
       features: [
         'Real-time object detection and recognition,Quality control and defect detection,Facial recognition and access control,Video analytics and monitoring,Custom model training and deployment',
       ],
       pricing: '$5,000 - $20, 000/month',
       delivery: '6-8 weeks',
-      category: 'Vision AI',;
+      category: 'Vision AI'
 },
     {
       title: 'AI Chatbot & Virtual Assistant',
-      description:
-        'Intelligent conversational AI for customer support and business automation',
+      description: 'Intelligent conversational AI for customer support and business automation',
       icon: Bot,
       features: [
         'Natural language understanding,Multi-channel deployment (web, mobile, voice),Integration with business systems,Sentiment analysis and escalation,Continuous learning and improvement',
       ],
       pricing: '$2,000 - $10, 000/month',
       delivery: '2-4 weeks',
-      category: 'Conversational AI',;
+      category: 'Conversational AI'
 },
     {
       title: 'Predictive Analytics Platform',
-      description:
-        'AI-driven forecasting and predictive modeling for business intelligence',
+      description: 'AI-driven forecasting and predictive modeling for business intelligence',
       icon: TrendingUp,
       features: [
         'Sales forecasting and demand planning,Customer churn prediction,Financial risk assessment,Market trend analysis,Real-time dashboard and alerts',
       ],
       pricing: '$6,000 - $25, 000/month',
       delivery: '8-12 weeks',
-      category: 'Analytics AI',;
+      category: 'Analytics AI'
 },
     {
       title: 'AI-Powered Search Engine',
-      description:
-        'Intelligent search with semantic understanding and personalized results',
+      description: 'Intelligent search with semantic understanding and personalized results',
       icon: Search,
       features: [
         'Semantic search with natural language queries,Personalized search results,Auto-complete and suggestions,Multi-language support,Analytics and search optimization',
       ],
       pricing: '$3,500 - $12, 000/month',
       delivery: '4-6 weeks',
-      category: 'Search AI',;
+      category: 'Search AI'
 },
     {
       title: 'AI Voice & Speech Processing',
-      description:
-        'Advanced voice recognition, synthesis, and real-time translation services',
+      description: 'Advanced voice recognition, synthesis, and real-time translation services',
       icon: Mic,
       features: [
         'Real-time speech-to-text with 99% accuracy,Multi-language voice synthesis,Voice cloning and personalization,Real-time translation and interpretation,Voice biometric authentication,Audio content analysis and insights',
       ],
       pricing: '$4,000 - $15, 000/month',
       delivery: '5-8 weeks',
-      category: 'Voice AI',;
+      category: 'Voice AI'
 },
     {
       title: 'AI-Powered Fraud Detection',
-      description:
-        'Real-time fraud prevention and risk assessment using machine learning',
+      description: 'Real-time fraud prevention and risk assessment using machine learning',
       icon: Shield,
       features: [
         'Real-time transaction monitoring,Behavioral pattern analysis,Anomaly detection algorithms,Risk scoring and decision automation,Multi-channel fraud prevention,Compliance reporting and audit trails',
       ],
       pricing: '$5,000 - $20, 000/month',
       delivery: '6-10 weeks',
-      category: 'Security AI',;
+      category: 'Security AI'
 },
     {
       title: 'AI Recommendation Engine',
-      description:
-        'Personalized recommendation system for e-commerce, content, and services',
+      description: 'Personalized recommendation system for e-commerce, content, and services',
       icon: Star,
       features: [
         'Collaborative and content-based filtering,Real-time personalization,A/B testing and optimization,Cross-platform recommendation sync,Performance analytics and insights,Custom algorithm development',
       ],
       pricing: '$3,000 - $12, 000/month',
       delivery: '4-7 weeks',
-      category: 'Recommendation AI',;
+      category: 'Recommendation AI'
 },
     {
       title: 'AI-Powered Video Analytics',
-      description:
-        'Intelligent video processing for security, marketing, and business insights',
+      description: 'Intelligent video processing for security, marketing, and business insights',
       icon: Video,
       features: [
         'Real-time video object detection,Facial recognition and tracking,Emotion and sentiment analysis,Video content summarization,Automated video editing and optimization,Live streaming analytics',
       ],
       pricing: '$6,000 - $25, 000/month',
       delivery: '8-12 weeks',
-      category: 'Video AI',;
+      category: 'Video AI'
 },
     {
       title: 'AI Process Mining & Optimization',
-      description:
-        'Intelligent process analysis and optimization for business workflows',
+      description: 'Intelligent process analysis and optimization for business workflows',
       icon: Settings,
       features: [
         'Automated process discovery,Bottleneck identification and analysis,Process optimization recommendations,Compliance monitoring and reporting,Real-time process monitoring,Predictive process analytics',
       ],
       pricing: '$8,000 - $30, 000/month',
       delivery: '10-16 weeks',
-      category: 'Process AI',;
+      category: 'Process AI'
 },
     {
       title: 'AI-Powered Supply Chain Optimization',
-      description:
-        'Intelligent supply chain management with predictive analytics and automation',
+      description: 'Intelligent supply chain management with predictive analytics and automation',
       icon: Network,
       features: [
         'Demand forecasting and planning,Supplier risk assessment,Route optimization and logistics,Inventory optimization algorithms,Supply chain visibility and tracking,Risk mitigation and contingency planning',
       ],
       pricing: '$10,000 - $40, 000/month',
       delivery: '12-20 weeks',
-      category: 'Supply Chain AI',;
+      category: 'Supply Chain AI'
 },
     {
       title: 'AI Customer Sentiment Analysis',
-      description:
-        'Real-time customer sentiment monitoring across all communication channels',
+      description: 'Real-time customer sentiment monitoring across all communication channels',
       icon: MessageSquare,
       features: [
         'Multi-channel sentiment monitoring,Real-time emotion detection,Trend analysis and reporting,Automated alert system,Customer journey sentiment mapping,Integration with CRM and support tools',
       ],
       pricing: '$2,500 - $8, 000/month',
       delivery: '3-5 weeks',
-      category: 'Sentiment AI',;
+      category: 'Sentiment AI'
 },
     {
       title: 'AI-Powered Code Generation',
-      description:
-        'Intelligent code generation and software development assistance',
+      description: 'Intelligent code generation and software development assistance',
       icon: Code,
       features: [
         'Automated code generation from specifications,Code review and optimization suggestions,Bug detection and fixing recommendations,Documentation generation,Test case generation and validation,Integration with development workflows',
       ],
       pricing: '$4,000 - $15, 000/month',
       delivery: '6-10 weeks',
-      category: 'Development AI',;
+      category: 'Development AI'
 },
     {
       title: 'AI-Powered Market Research',
-      description:
-        'Intelligent market analysis and competitive intelligence platform',
+      description: 'Intelligent market analysis and competitive intelligence platform',
       icon: BarChart3,
       features: [
         'Automated market trend analysis,Competitor monitoring and analysis,Consumer behavior insights,Price optimization recommendations,Market opportunity identification,Real-time market intelligence reports',
       ],
       pricing: '$5,000 - $18, 000/month',
       delivery: '6-12 weeks',
-      category: 'Market AI',;
+      category: 'Market AI'
 },
     {
       title: 'AI Autonomous Agents Platform',
-      description:
-        'Multi-agent AI system for complex task automation and decision making',
+      description: 'Multi-agent AI system for complex task automation and decision making',
       icon: Bot,
       features: [
         'Multi-agent orchestration and coordination,Autonomous task execution and decision making,Agent-to-agent communication and collaboration,Self-learning and adaptation capabilities,Integration with existing business systems,Real-time monitoring and intervention protocols',
       ],
       pricing: '$8,000 - $25,000/month',
       delivery: '8-16 weeks',
-      category: 'Autonomous AI',;
+      category: 'Autonomous AI'
 },
     {
       title: 'AI-Powered Drug Discovery Platform',
-      description:
-        'Intelligent pharmaceutical research with molecular analysis and drug design',
+      description: 'Intelligent pharmaceutical research with molecular analysis and drug design',
       icon: Brain,
       features: [
         'Molecular structure analysis and optimization,Drug-target interaction prediction,Toxicity and side effect assessment,Clinical trial optimization and design,Patent landscape analysis,Regulatory compliance and documentation',
       ],
       pricing: '$15,000 - $50,000/month',
       delivery: '12-24 weeks',
-      category: 'Pharma AI',;
+      category: 'Pharma AI'
 },
     {
       title: 'AI-Powered Climate Modeling System',
-      description:
-        'Advanced climate prediction and environmental impact analysis platform',
+      description: 'Advanced climate prediction and environmental impact analysis platform',
       icon: Globe,
       features: [
         'High-resolution climate modeling and prediction,Environmental impact assessment and monitoring,Carbon footprint tracking and optimization,Renewable energy resource optimization,Disaster risk assessment and mitigation,Sustainability reporting and compliance',
       ],
       pricing: '$10,000 - $35,000/month',
       delivery: '10-20 weeks',
-      category: 'Climate AI',;
+      category: 'Climate AI'
 },
     {
       title: 'AI-Powered Quantum Computing Interface',
-      description:
-        'Intelligent quantum computing optimization and algorithm development',
+      description: 'Intelligent quantum computing optimization and algorithm development',
       icon: Cpu,
       features: [
         'Quantum algorithm optimization and development,Quantum error correction and noise mitigation,Hybrid classical-quantum computing workflows,Quantum machine learning model training,Quantum simulation and modeling,Integration with existing computing infrastructure',
       ],
       pricing: '$20,000 - $75,000/month',
       delivery: '16-32 weeks',
-      category: 'Quantum AI',;
+      category: 'Quantum AI'
 },
     {
       title: 'AI-Powered Space Mission Planning',
-      description:
-        'Intelligent space mission optimization and satellite constellation management',
+      description: 'Intelligent space mission optimization and satellite constellation management',
       icon: Globe,
       features: [
         'Mission trajectory optimization and planning,Satellite constellation design and management,Space debris tracking and collision avoidance,Resource allocation and scheduling optimization,Communication network optimization,Mission risk assessment and mitigation',
       ],
       pricing: '$25,000 - $100,000/month',
       delivery: '20-40 weeks',
-      category: 'Space AI',;
+      category: 'Space AI'
 },
     {
       title: 'AI-Powered Neuromorphic Computing',
-      description:
-        'Brain-inspired computing systems with spiking neural networks',
+      description: 'Brain-inspired computing systems with spiking neural networks',
       icon: Brain,
       features: [
         'Spiking neural network design and optimization,Neuromorphic chip simulation and testing,Edge AI processing and optimization,Real-time learning and adaptation,Low-power computing optimization,Integration with IoT and edge devices',
       ],
       pricing: '$12,000 - $40,000/month',
       delivery: '12-24 weeks',
-      category: 'Neuromorphic AI',;
+      category: 'Neuromorphic AI'
 },
     {
       title: 'AI-Powered Synthetic Biology Platform',
@@ -295,8 +281,107 @@ export default function AIServices() {
       ],
       pricing: '$18,000 - $60,000/month',
       delivery: '16-28 weeks',
-      category: 'Synthetic Biology AI',;
-},
+      category: 'Synthetic Biology AI'
+    },
+    {
+      title: 'AI-Powered Social Media Intelligence Platform',
+      description: 'Advanced social media monitoring and analysis with AI-driven insights and automated responses',
+      icon: Globe,
+      features: [
+        'Real-time social media monitoring across all platforms,AI-powered sentiment analysis and trend detection,Automated content creation and posting,Influencer identification and relationship management,Brand reputation monitoring and crisis management,Competitive analysis and market intelligence'
+      ],
+      pricing: '$2,000 - $12,000/month',
+      delivery: '4-6 weeks',
+      category: 'Social Media AI'
+    },
+    {
+      title: 'Intelligent Predictive Maintenance System',
+      description: 'AI-driven equipment maintenance prediction and optimization for industrial operations',
+      icon: Settings,
+      features: [
+        'Predictive failure analysis using IoT sensor data,Automated maintenance scheduling and optimization,Equipment performance monitoring and analytics,Cost optimization and resource allocation,Integration with existing maintenance systems,Real-time alerts and notifications'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-10 weeks',
+      category: 'Maintenance AI'
+    },
+    {
+      title: 'AI-Powered Customer Segmentation Engine',
+      description: 'Advanced customer segmentation and targeting with behavioral analysis and predictive modeling',
+      icon: Users,
+      features: [
+        'AI-powered customer segmentation and profiling,Behavioral pattern recognition and analysis,Predictive customer lifetime value modeling,Personalized marketing campaign recommendations,Real-time customer journey tracking,Integration with CRM and marketing automation tools'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '4-8 weeks',
+      category: 'Customer Intelligence AI'
+    },
+    {
+      title: 'AI-Powered Inventory Optimization System',
+      description: 'Intelligent inventory management with demand forecasting and automated reordering',
+      icon: BarChart3,
+      features: [
+        'Demand forecasting with machine learning algorithms,Automated reorder point calculations and alerts,Multi-location inventory tracking and optimization,Supplier performance analytics and risk assessment,Cost reduction recommendations and optimization,Integration with ERP and POS systems'
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '6-12 weeks',
+      category: 'Inventory AI'
+    },
+    {
+      title: 'AI-Powered Energy Management System',
+      description: 'Intelligent energy consumption optimization and renewable energy integration',
+      icon: Zap,
+      features: [
+        'Energy consumption pattern analysis and optimization,Smart grid integration and load balancing,Renewable energy source optimization,Carbon footprint tracking and reduction,Energy cost optimization and forecasting,Integration with IoT devices and smart meters'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '8-16 weeks',
+      category: 'Energy AI'
+    },
+    {
+      title: 'AI-Powered Legal Document Analysis',
+      description: 'Intelligent legal document review and analysis with contract risk assessment',
+      icon: FileText,
+      features: [
+        'Automated contract analysis and risk assessment,Legal document classification and organization,Compliance monitoring and reporting,Legal research and precedent analysis,Document generation and template creation,Integration with legal case management systems'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Legal AI'
+    },
+    {
+      title: 'AI-Powered Healthcare Diagnostics Assistant',
+      description: 'Intelligent medical image analysis and diagnostic support system',
+      icon: Heart,
+      features: [
+        'Medical image analysis and interpretation,Diagnostic support and recommendation system,Patient data analysis and risk assessment,Treatment optimization and personalized medicine,Drug interaction analysis and safety monitoring,Integration with electronic health records'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '10-20 weeks',
+      category: 'Healthcare AI'
+    },
+    {
+      title: 'AI-Powered Financial Risk Assessment',
+      description: 'Advanced financial risk analysis and fraud detection system',
+      icon: Shield,
+      features: [
+        'Real-time financial risk assessment and monitoring,Fraud detection and prevention algorithms,Credit scoring and loan approval automation,Market risk analysis and portfolio optimization,Regulatory compliance monitoring and reporting,Integration with banking and financial systems'
+      ],
+      pricing: '$7,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Financial AI'
+    },
+    {
+      title: 'AI-Powered Smart City Management',
+      description: 'Intelligent urban planning and city management optimization platform',
+      icon: Globe,
+      features: [
+        'Traffic flow optimization and congestion management,Public safety monitoring and incident prediction,Resource allocation and infrastructure planning,Environmental monitoring and sustainability tracking,Citizen engagement and service optimization,Integration with IoT sensors and city infrastructure'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'Smart City AI'
+    },
     {
       title: 'AI-Powered Fusion Energy Optimization',
       description: 'Intelligent fusion reactor control and plasma optimization',
@@ -306,79 +391,73 @@ export default function AIServices() {
       ],
       pricing: '$30,000 - $120,000/month',
       delivery: '24-48 weeks',
-      category: 'Fusion AI',;
+      category: 'Fusion AI'
 },
     {
       title: 'AI-Powered Brain-Computer Interface',
-      description:
-        'Intelligent neural signal processing and brain-computer communication',
+      description: 'Intelligent neural signal processing and brain-computer communication',
       icon: Brain,
       features: [
         'Neural signal acquisition and processing,Brain activity pattern recognition,Motor intention decoding and control,Cognitive state monitoring and analysis,Real-time feedback and adaptation,Medical device integration and control',
       ],
       pricing: '$15,000 - $50,000/month',
       delivery: '20-36 weeks',
-      category: 'BCI AI',;
+      category: 'BCI AI'
 },
     {
       title: 'AI-Powered Autonomous Vehicle Fleet',
-      description:
-        'Intelligent autonomous vehicle coordination and fleet management',
+      description: 'Intelligent autonomous vehicle coordination and fleet management',
       icon: Network,
       features: [
         'Multi-vehicle coordination and communication,Dynamic route optimization and planning,Real-time traffic and obstacle avoidance,Predictive maintenance and diagnostics,Passenger safety and comfort optimization,Integration with smart city infrastructure',
       ],
       pricing: '$25,000 - $80,000/month',
       delivery: '24-40 weeks',
-      category: 'Autonomous Vehicle AI',;
+      category: 'Autonomous Vehicle AI'
 },
     {
       title: 'AI-Powered Metaverse Platform',
-      description:
-        'Intelligent virtual world creation and immersive experience optimization',
+      description: 'Intelligent virtual world creation and immersive experience optimization',
       icon: Globe,
       features: [
         'Procedural world generation and optimization,Avatar behavior and interaction modeling,Real-time physics simulation and optimization,Social interaction and community building,Virtual economy and asset management,Cross-platform integration and compatibility',
       ],
       pricing: '$20,000 - $70,000/month',
       delivery: '20-36 weeks',
-      category: 'Metaverse AI',;
+      category: 'Metaverse AI'
 },
     {
       title: 'AI-Powered Digital Twin Platform',
-      description:
-        'Intelligent digital twin creation and real-time synchronization',
+      description: 'Intelligent digital twin creation and real-time synchronization',
       icon: Monitor,
       features: [
         'Real-time data synchronization and modeling,Predictive analytics and simulation,Performance optimization and recommendations,Anomaly detection and alerting,What-if scenario analysis and planning,Integration with IoT sensors and systems',
       ],
       pricing: '$12,000 - $45,000/month',
       delivery: '16-28 weeks',
-      category: 'Digital Twin AI',;
+      category: 'Digital Twin AI'
 },
     {
       title: 'AI-Powered Edge Computing Orchestrator',
-      description:
-        'Intelligent edge computing resource management and optimization',
+      description: 'Intelligent edge computing resource management and optimization',
       icon: Server,
       features: [
         'Distributed computing resource allocation,Edge-to-cloud workload optimization,Real-time latency and bandwidth optimization,Autonomous edge device management,Data processing and analytics at the edge,Security and privacy protection',
       ],
       pricing: '$8,000 - $30,000/month',
       delivery: '12-24 weeks',
-      category: 'Edge AI',;
+      category: 'Edge AI'
 },
     {
       title: 'AI-Powered Blockchain Analytics',
-      description:
-        'Intelligent blockchain transaction analysis and DeFi optimization',
+      description: 'Intelligent blockchain transaction analysis and DeFi optimization',
       icon: Network,
       features: [
         'Blockchain transaction pattern analysis,DeFi protocol optimization and yield farming,Smart contract security auditing,Cryptocurrency market prediction and trading,Cross-chain bridge optimization,Regulatory compliance and reporting',
       ],
       pricing: '$10,000 - $35,000/month',
       delivery: '14-26 weeks',
-      category: 'Blockchain AI',;
+      category: 'Blockchain AI'
 },
     {
       title: 'AI-Powered Autonomous Trading System',
@@ -390,6 +469,9 @@ export default function AIServices() {
       pricing: '$8,000 - $35,000/month',
       delivery: '8-16 weeks',
       category: 'Trading AI'},
+      category: 'Trading AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Medical Diagnosis Assistant',
       description: 'Intelligent medical image analysis and diagnostic support system',
@@ -400,6 +482,9 @@ export default function AIServices() {
       pricing: '$15,000 - $60,000/month',
       delivery: '12-24 weeks',
       category: 'Medical AI'},
+      category: 'Medical AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Legal Document Analysis',
       description: 'Intelligent legal document review and contract analysis platform',
@@ -410,6 +495,9 @@ export default function AIServices() {
       pricing: '$6,000 - $25,000/month',
       delivery: '8-14 weeks',
       category: 'Legal AI'},
+      category: 'Legal AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Energy Management System',
       description: 'Intelligent energy consumption optimization and renewable energy integration',
@@ -420,6 +508,9 @@ export default function AIServices() {
       pricing: '$10,000 - $40,000/month',
       delivery: '10-20 weeks',
       category: 'Energy AI'},
+      category: 'Energy AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Cybersecurity Threat Detection',
       description: 'Advanced threat detection and response system with behavioral analysis',
@@ -430,6 +521,9 @@ export default function AIServices() {
       pricing: '$7,000 - $30,000/month',
       delivery: '8-16 weeks',
       category: 'Cybersecurity AI'},
+      category: 'Cybersecurity AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Autonomous Vehicle Fleet Management',
       description: 'Intelligent fleet optimization and autonomous vehicle coordination system',
@@ -440,6 +534,9 @@ export default function AIServices() {
       pricing: '$12,000 - $50,000/month',
       delivery: '12-24 weeks',
       category: 'Autonomous AI'},
+      category: 'Autonomous AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Climate Change Modeling',
       description: 'Advanced climate modeling and environmental impact assessment platform',
@@ -450,6 +547,9 @@ export default function AIServices() {
       pricing: '$15,000 - $60,000/month',
       delivery: '16-32 weeks',
       category: 'Climate AI'},
+      category: 'Climate AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Quantum Machine Learning',
       description: 'Next-generation machine learning leveraging quantum computing for complex pattern recognition',
@@ -460,6 +560,9 @@ export default function AIServices() {
       pricing: '$25,000 - $100,000/month',
       delivery: '20-40 weeks',
       category: 'Quantum ML AI'},
+      category: 'Quantum ML AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Synthetic Media Generation',
       description: 'Advanced AI system for creating realistic synthetic media including deepfakes and virtual influencers',
@@ -470,6 +573,9 @@ export default function AIServices() {
       pricing: '$8,000 - $35,000/month',
       delivery: '12-24 weeks',
       category: 'Synthetic Media AI'},
+      category: 'Synthetic Media AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Brain-Computer Interface',
       description: 'Intelligent neural interface system for direct brain-computer communication and control',
@@ -480,6 +586,9 @@ export default function AIServices() {
       pricing: '$20,000 - $80,000/month',
       delivery: '24-48 weeks',
       category: 'BCI AI'},
+      category: 'BCI AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Autonomous Drone Swarm',
       description: 'Intelligent drone swarm coordination system for complex missions and operations',
@@ -490,6 +599,9 @@ export default function AIServices() {
       pricing: '$15,000 - $60,000/month',
       delivery: '16-32 weeks',
       category: 'Drone Swarm AI'},
+      category: 'Drone Swarm AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Personalized Medicine',
       description: 'Intelligent precision medicine platform with genomic analysis and treatment optimization',
@@ -500,6 +612,9 @@ export default function AIServices() {
       pricing: '$18,000 - $70,000/month',
       delivery: '20-36 weeks',
       category: 'Precision Medicine AI'},
+      category: 'Precision Medicine AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Space Debris Management',
       description: 'Intelligent space debris tracking and collision avoidance system',
@@ -510,6 +625,9 @@ export default function AIServices() {
       pricing: '$30,000 - $120,000/month',
       delivery: '24-48 weeks',
       category: 'Space Management AI'},
+      category: 'Space Management AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Fusion Energy Control',
       description: 'Intelligent fusion reactor control system for plasma optimization and energy production',
@@ -520,6 +638,9 @@ export default function AIServices() {
       pricing: '$40,000 - $150,000/month',
       delivery: '32-64 weeks',
       category: 'Fusion Energy AI'},
+      category: 'Fusion Energy AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Synthetic Biology Design',
       description: 'Intelligent biological system design and optimization platform',
@@ -530,6 +651,9 @@ export default function AIServices() {
       pricing: '$22,000 - $85,000/month',
       delivery: '24-48 weeks',
       category: 'Synthetic Biology AI'},
+      category: 'Synthetic Biology AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Neuromorphic Computing',
       description: 'Brain-inspired computing system with spiking neural networks and edge optimization',
@@ -540,6 +664,9 @@ export default function AIServices() {
       pricing: '$16,000 - $65,000/month',
       delivery: '20-40 weeks',
       category: 'Neuromorphic AI'},
+      category: 'Neuromorphic AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Autonomous Underwater Vehicles',
       description: 'Intelligent underwater vehicle coordination system for ocean exploration and research',
@@ -550,6 +677,9 @@ export default function AIServices() {
       pricing: '$18,000 - $75,000/month',
       delivery: '24-48 weeks',
       category: 'Marine AI'},
+      category: 'Marine AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Digital Twin of Earth',
       description: 'Comprehensive digital twin system for global environmental monitoring and prediction',
@@ -560,6 +690,9 @@ export default function AIServices() {
       pricing: '$50,000 - $200,000/month',
       delivery: '40-80 weeks',
       category: 'Earth Digital Twin AI'},
+      category: 'Earth Digital Twin AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Consciousness Simulation',
       description: 'Advanced AI system for consciousness research and artificial general intelligence development',
@@ -570,6 +703,9 @@ export default function AIServices() {
       pricing: '$100,000 - $500,000/month',
       delivery: '60-120 weeks',
       category: 'Consciousness AI'},
+      category: 'Consciousness AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Cybersecurity Threat Hunter',
       description: 'Advanced AI system for proactive threat detection and automated incident response',
@@ -580,6 +716,9 @@ export default function AIServices() {
       pricing: '$5,000 - $25,000/month',
       delivery: '6-12 weeks',
       category: 'Cybersecurity AI'},
+      category: 'Cybersecurity AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Financial Trading Algorithm',
       description: 'Intelligent algorithmic trading system with market prediction and risk management',
@@ -590,6 +729,9 @@ export default function AIServices() {
       pricing: '$10,000 - $50,000/month',
       delivery: '8-16 weeks',
       category: 'FinTech AI'},
+      category: 'FinTech AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Medical Diagnosis Assistant',
       description: 'Advanced medical AI for diagnostic support and treatment recommendations',
@@ -600,6 +742,9 @@ export default function AIServices() {
       pricing: '$15,000 - $75,000/month',
       delivery: '12-24 weeks',
       category: 'Medical AI'},
+      category: 'Medical AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Autonomous Vehicle Control',
       description: 'Intelligent autonomous vehicle navigation and safety systems',
@@ -610,6 +755,9 @@ export default function AIServices() {
       pricing: '$25,000 - $100,000/month',
       delivery: '16-32 weeks',
       category: 'Autonomous Vehicle AI'},
+      category: 'Autonomous Vehicle AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Energy Grid Optimization',
       description: 'Intelligent energy distribution and consumption optimization system',
@@ -620,6 +768,9 @@ export default function AIServices() {
       pricing: '$20,000 - $80,000/month',
       delivery: '12-24 weeks',
       category: 'Energy AI'},
+      category: 'Energy AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Agricultural Intelligence',
       description: 'Smart farming system with crop monitoring and yield optimization',
@@ -630,6 +781,9 @@ export default function AIServices() {
       pricing: '$8,000 - $35,000/month',
       delivery: '10-20 weeks',
       category: 'AgTech AI'},
+      category: 'AgTech AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Smart City Management',
       description: 'Intelligent urban infrastructure management and optimization platform',
@@ -640,6 +794,9 @@ export default function AIServices() {
       pricing: '$30,000 - $150,000/month',
       delivery: '20-40 weeks',
       category: 'Smart City AI'},
+      category: 'Smart City AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Manufacturing Quality Control',
       description: 'Intelligent manufacturing process optimization and quality assurance',
@@ -650,6 +807,9 @@ export default function AIServices() {
       pricing: '$12,000 - $60,000/month',
       delivery: '10-24 weeks',
       category: 'Manufacturing AI'},
+      category: 'Manufacturing AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Personal Health Assistant',
       description: 'Intelligent personal health monitoring and wellness optimization',
@@ -660,6 +820,9 @@ export default function AIServices() {
       pricing: '$99 - $499/month',
       delivery: '6-12 weeks',
       category: 'Personal Health AI'},
+      category: 'Personal Health AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'Predictive Analytics Engine Pro',
       description: 'Advanced predictive modeling platform with real-time forecasting and business intelligence',
@@ -670,6 +833,9 @@ export default function AIServices() {
       pricing: '$8,000 - $35,000/month',
       delivery: '8-12 weeks',
       category: 'Predictive AI'},
+      category: 'Predictive AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'Voice AI Assistant Enterprise',
       description: 'Advanced conversational AI with natural language understanding and multi-modal interactions',
@@ -680,6 +846,9 @@ export default function AIServices() {
       pricing: '$5,000 - $25,000/month',
       delivery: '6-10 weeks',
       category: 'Voice AI'},
+      category: 'Voice AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Code Review Intelligence',
       description: 'Intelligent code analysis platform with automated reviews, security scanning, and optimization',
@@ -690,6 +859,9 @@ export default function AIServices() {
       pricing: '$2,500 - $12,000/month',
       delivery: '4-8 weeks',
       category: 'Development AI'},
+      category: 'Development AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'Smart Contract Analyzer AI',
       description: 'Blockchain smart contract analysis with security auditing and optimization recommendations',
@@ -700,6 +872,9 @@ export default function AIServices() {
       pricing: '$3,000 - $15,000/month',
       delivery: '5-8 weeks',
       category: 'Blockchain AI'},
+      category: 'Blockchain AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI Customer Behavior Predictor',
       description: 'Advanced customer analytics platform with behavioral prediction and personalization',
@@ -710,6 +885,9 @@ export default function AIServices() {
       pricing: '$4,000 - $18,000/month',
       delivery: '6-10 weeks',
       category: 'Customer AI'},
+      category: 'Customer AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered MLOps Platform',
       description: 'End-to-end machine learning operations with automated model deployment and monitoring',
@@ -720,6 +898,9 @@ export default function AIServices() {
       pricing: '$5,000 - $20,000/month',
       delivery: '6-8 weeks',
       category: 'MLOps AI'},
+      category: 'MLOps AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Predictive Maintenance System',
       description: 'Intelligent equipment maintenance prediction with IoT integration and cost optimization',
@@ -730,6 +911,9 @@ export default function AIServices() {
       pricing: '$3,000 - $15,000/month',
       delivery: '4-6 weeks',
       category: 'Industrial AI'},
+      category: 'Industrial AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Natural Language Processing Engine',
       description: 'Advanced NLP capabilities for text analysis, translation, and language understanding',
@@ -740,6 +924,9 @@ export default function AIServices() {
       pricing: '$2,000 - $10,000/month',
       delivery: '3-5 weeks',
       category: 'NLP AI'},
+      category: 'NLP AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Financial Risk Assessment Platform',
       description: 'Intelligent financial risk analysis with real-time monitoring and predictive modeling',
@@ -750,6 +937,9 @@ export default function AIServices() {
       pricing: '$4,000 - $18,000/month',
       delivery: '5-7 weeks',
       category: 'FinTech AI'},
+      category: 'FinTech AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Healthcare Diagnostics Assistant',
       description: 'Intelligent medical image analysis and diagnostic support with clinical decision assistance',
@@ -760,6 +950,9 @@ export default function AIServices() {
       pricing: '$5,000 - $25,000/month',
       delivery: '6-10 weeks',
       category: 'HealthTech AI'},
+      category: 'HealthTech AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Autonomous Quality Control System',
       description: 'Intelligent quality inspection and defect detection for manufacturing and production',
@@ -770,6 +963,9 @@ export default function AIServices() {
       pricing: '$3,000 - $12,000/month',
       delivery: '4-6 weeks',
       category: 'Manufacturing AI'},
+      category: 'Manufacturing AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Smart City Management Platform',
       description: 'Intelligent urban infrastructure management with IoT integration and optimization',
@@ -780,6 +976,9 @@ export default function AIServices() {
       pricing: '$8,000 - $35,000/month',
       delivery: '8-12 weeks',
       category: 'Smart City AI'},
+      category: 'Smart City AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Agricultural Intelligence System',
       description: 'Intelligent farming optimization with crop monitoring, yield prediction, and resource management',
@@ -790,6 +989,9 @@ export default function AIServices() {
       pricing: '$2,500 - $10,000/month',
       delivery: '4-6 weeks',
       category: 'AgTech AI'},
+      category: 'AgTech AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Autonomous Trading Algorithm',
       description: 'Intelligent algorithmic trading with market analysis and risk management',
@@ -800,6 +1002,9 @@ export default function AIServices() {
       pricing: '$5,000 - $25,000/month',
       delivery: '6-8 weeks',
       category: 'Trading AI'},
+      category: 'Trading AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Cybersecurity Threat Intelligence',
       description: 'Advanced threat detection and response with behavioral analysis and automated defense',
@@ -810,6 +1015,9 @@ export default function AIServices() {
       pricing: '$4,000 - $18,000/month',
       delivery: '5-7 weeks',
       category: 'Cybersecurity AI'},
+      category: 'Cybersecurity AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Personalization Engine',
       description: 'Intelligent personalization platform for content, products, and user experiences',
@@ -820,6 +1028,9 @@ export default function AIServices() {
       pricing: '$3,000 - $12,000/month',
       delivery: '4-6 weeks',
       category: 'Personalization AI'},
+      category: 'Personalization AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Quantum Computing Simulator',
       description: 'Advanced quantum computing simulation and optimization platform for complex problem solving',
@@ -830,6 +1041,9 @@ export default function AIServices() {
       pricing: '$15,000 - $50,000/month',
       delivery: '12-20 weeks',
       category: 'Quantum AI'},
+      category: 'Quantum AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Autonomous Vehicle Management',
       description: 'Intelligent fleet management and autonomous vehicle coordination system',
@@ -840,6 +1054,9 @@ export default function AIServices() {
       pricing: '$20,000 - $75,000/month',
       delivery: '16-24 weeks',
       category: 'Autonomous AI'},
+      category: 'Autonomous AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Space Technology Platform',
       description: 'Advanced space mission planning and satellite management with AI optimization',
@@ -850,6 +1067,9 @@ export default function AIServices() {
       pricing: '$25,000 - $100,000/month',
       delivery: '20-32 weeks',
       category: 'Space AI'},
+      category: 'Space AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Metaverse Development Platform',
       description: 'Comprehensive metaverse creation and management with AI-driven content generation',
@@ -860,6 +1080,9 @@ export default function AIServices() {
       pricing: '$10,000 - $40,000/month',
       delivery: '12-20 weeks',
       category: 'Metaverse AI'},
+      category: 'Metaverse AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Blockchain Intelligence Platform',
       description: 'Advanced blockchain analysis and DeFi optimization with AI-driven insights',
@@ -870,6 +1093,9 @@ export default function AIServices() {
       pricing: '$8,000 - $30,000/month',
       delivery: '10-16 weeks',
       category: 'Blockchain AI'},
+      category: 'Blockchain AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Digital Twin Platform',
       description: 'Comprehensive digital twin creation and management for physical assets and processes',
@@ -880,6 +1106,9 @@ export default function AIServices() {
       pricing: '$12,000 - $45,000/month',
       delivery: '14-22 weeks',
       category: 'Digital Twin AI'},
+      category: 'Digital Twin AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Edge Computing Platform',
       description: 'Intelligent edge computing with AI processing and real-time decision making',
@@ -890,6 +1119,9 @@ export default function AIServices() {
       pricing: '$6,000 - $25,000/month',
       delivery: '8-14 weeks',
       category: 'Edge AI'},
+      category: 'Edge AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Cybersecurity Intelligence Platform',
       description: 'Advanced threat detection and response with AI-driven security automation',
@@ -900,6 +1132,9 @@ export default function AIServices() {
       pricing: '$15,000 - $60,000/month',
       delivery: '12-20 weeks',
       category: 'Cybersecurity AI'},
+      category: 'Cybersecurity AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Healthcare Diagnostics Platform',
       description: 'Advanced medical imaging analysis and diagnostic assistance with AI',
@@ -910,6 +1145,9 @@ export default function AIServices() {
       pricing: '$20,000 - $80,000/month',
       delivery: '16-24 weeks',
       category: 'Healthcare AI'},
+      category: 'Healthcare AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Cybersecurity Threat Detection',
       description: 'Advanced threat detection and response system with real-time monitoring and automated incident response',
@@ -920,6 +1158,9 @@ export default function AIServices() {
       pricing: '$4,500 - $18,000/month',
       delivery: '6-8 weeks',
       category: 'Cybersecurity AI'},
+      category: 'Cybersecurity AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Medical Diagnosis Assistant',
       description: 'Intelligent medical diagnosis support with image analysis and symptom correlation',
@@ -930,6 +1171,9 @@ export default function AIServices() {
       pricing: '$8,000 - $35,000/month',
       delivery: '10-16 weeks',
       category: 'Medical AI'},
+      category: 'Medical AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Legal Document Analysis',
       description: 'Intelligent legal document review and contract analysis with risk assessment',
@@ -940,6 +1184,9 @@ export default function AIServices() {
       pricing: '$5,000 - $20,000/month',
       delivery: '8-12 weeks',
       category: 'Legal AI'},
+      category: 'Legal AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Financial Risk Assessment',
       description: 'Intelligent financial risk analysis and credit scoring with predictive modeling',
@@ -950,6 +1197,9 @@ export default function AIServices() {
       pricing: '$6,000 - $25,000/month',
       delivery: '8-14 weeks',
       category: 'Financial AI'},
+      category: 'Financial AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Environmental Monitoring',
       description: 'Intelligent environmental data analysis and climate prediction with IoT integration',
@@ -960,6 +1210,9 @@ export default function AIServices() {
       pricing: '$4,000 - $16,000/month',
       delivery: '6-10 weeks',
       category: 'Environmental AI'},
+      category: 'Environmental AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Autonomous Vehicle Systems',
       description: 'Advanced autonomous vehicle technology with real-time decision making and safety systems',
@@ -970,6 +1223,9 @@ export default function AIServices() {
       pricing: '$15,000 - $60,000/month',
       delivery: '16-24 weeks',
       category: 'Autonomous Vehicle AI'},
+      category: 'Autonomous Vehicle AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Satellite Data Analysis',
       description: 'Intelligent satellite imagery analysis for agriculture, urban planning, and disaster response',
@@ -980,6 +1236,9 @@ export default function AIServices() {
       pricing: '$7,000 - $28,000/month',
       delivery: '10-16 weeks',
       category: 'Satellite AI'},
+      category: 'Satellite AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Energy Grid Optimization',
       description: 'Intelligent energy grid management with demand forecasting and renewable energy integration',
@@ -990,6 +1249,9 @@ export default function AIServices() {
       pricing: '$8,000 - $32,000/month',
       delivery: '12-20 weeks',
       category: 'Energy AI'},
+      category: 'Energy AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Drug Discovery Platform',
       description: 'Intelligent drug discovery and development with molecular analysis and clinical trial optimization',
@@ -1000,6 +1262,9 @@ export default function AIServices() {
       pricing: '$12,000 - $50,000/month',
       delivery: '16-24 weeks',
       category: 'Pharmaceutical AI'},
+      category: 'Pharmaceutical AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Generative Design Platform',
       description: 'Intelligent design generation with AI-driven creativity and optimization for engineering and architecture',
@@ -1010,6 +1275,9 @@ export default function AIServices() {
       pricing: '$8,000 - $35,000/month',
       delivery: '8-16 weeks',
       category: 'Generative AI'},
+      category: 'Generative AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Autonomous Vehicle Systems',
       description: 'Advanced autonomous vehicle technology with computer vision, sensor fusion, and decision-making AI',
@@ -1020,6 +1288,9 @@ export default function AIServices() {
       pricing: '$25,000 - $100,000/month',
       delivery: '20-40 weeks',
       category: 'Autonomous Systems AI'},
+      category: 'Autonomous Systems AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Financial Trading Algorithm',
       description: 'Intelligent algorithmic trading with machine learning and real-time market analysis',
@@ -1030,6 +1301,9 @@ export default function AIServices() {
       pricing: '$15,000 - $75,000/month',
       delivery: '12-24 weeks',
       category: 'Financial AI'},
+      category: 'Financial AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Cybersecurity Threat Intelligence',
       description: 'Advanced threat detection and response with AI-driven security analytics and automated incident response',
@@ -1040,6 +1314,9 @@ export default function AIServices() {
       pricing: '$10,000 - $50,000/month',
       delivery: '8-16 weeks',
       category: 'Cybersecurity AI'},
+      category: 'Cybersecurity AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Smart City Management',
       description: 'Intelligent urban management with IoT integration, traffic optimization, and resource management',
@@ -1050,6 +1327,9 @@ export default function AIServices() {
       pricing: '$20,000 - $100,000/month',
       delivery: '16-32 weeks',
       category: 'Smart City AI'},
+      category: 'Smart City AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Personalized Medicine Platform',
       description: 'Precision medicine with AI-driven treatment recommendations and genomic analysis',
@@ -1060,6 +1340,9 @@ export default function AIServices() {
       pricing: '$15,000 - $60,000/month',
       delivery: '12-24 weeks',
       category: 'Medical AI'},
+      category: 'Medical AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Content Moderation System',
       description: 'Intelligent content moderation with automated detection of harmful content and policy enforcement',
@@ -1070,6 +1353,9 @@ export default function AIServices() {
       pricing: '$5,000 - $25,000/month',
       delivery: '6-12 weeks',
       category: 'Content Moderation AI'},
+      category: 'Content Moderation AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Energy Trading Platform',
       description: 'Intelligent energy trading with predictive analytics and automated market participation',
@@ -1080,6 +1366,9 @@ export default function AIServices() {
       pricing: '$12,000 - $50,000/month',
       delivery: '10-20 weeks',
       category: 'Energy AI'},
+      category: 'Energy AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Legal Research Assistant',
       description: 'Intelligent legal research with case law analysis, document review, and legal precedent identification',
@@ -1090,6 +1379,9 @@ export default function AIServices() {
       pricing: '$8,000 - $35,000/month',
       delivery: '8-16 weeks',
       category: 'Legal AI'},
+      category: 'Legal AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Agricultural Intelligence',
       description: 'Smart agriculture with precision farming, crop monitoring, and yield optimization',
@@ -1100,6 +1392,9 @@ export default function AIServices() {
       pricing: '$6,000 - $30,000/month',
       delivery: '8-16 weeks',
       category: 'Agricultural AI'},
+      category: 'Agricultural AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Retail Personalization Engine',
       description: 'Intelligent retail personalization with customer behavior analysis and dynamic pricing',
@@ -1110,6 +1405,9 @@ export default function AIServices() {
       pricing: '$10,000 - $40,000/month',
       delivery: '8-16 weeks',
       category: 'Retail AI'},
+      category: 'Retail AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Manufacturing Quality Assurance',
       description: 'Intelligent manufacturing with predictive quality control and process optimization',
@@ -1120,6 +1418,9 @@ export default function AIServices() {
       pricing: '$12,000 - $50,000/month',
       delivery: '10-20 weeks',
       category: 'Manufacturing AI'},
+      category: 'Manufacturing AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Educational Assessment Platform',
       description: 'Intelligent educational assessment with adaptive testing and learning analytics',
@@ -1130,6 +1431,9 @@ export default function AIServices() {
       pricing: '$5,000 - $25,000/month',
       delivery: '6-14 weeks',
       category: 'Educational AI'},
+      category: 'Educational AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Insurance Underwriting',
       description: 'Intelligent insurance underwriting with risk assessment and automated policy generation',
@@ -1140,6 +1444,9 @@ export default function AIServices() {
       pricing: '$8,000 - $35,000/month',
       delivery: '8-16 weeks',
       category: 'Insurance AI'},
+      category: 'Insurance AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Logistics Optimization',
       description: 'Intelligent logistics with route optimization, demand forecasting, and supply chain management',
@@ -1150,6 +1457,9 @@ export default function AIServices() {
       pricing: '$10,000 - $40,000/month',
       delivery: '8-16 weeks',
       category: 'Logistics AI'},
+      category: 'Logistics AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Human Resources Analytics',
       description: 'Intelligent HR analytics with talent acquisition, performance management, and workforce optimization',
@@ -1160,6 +1470,9 @@ export default function AIServices() {
       pricing: '$6,000 - $30,000/month',
       delivery: '6-14 weeks',
       category: 'HR AI'},
+      category: 'HR AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Real Estate Valuation',
       description: 'Intelligent real estate valuation with market analysis and investment recommendations',
@@ -1170,6 +1483,9 @@ export default function AIServices() {
       pricing: '$5,000 - $25,000/month',
       delivery: '6-12 weeks',
       category: 'Real Estate AI'},
+      category: 'Real Estate AI'
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Environmental Monitoring',
       description: 'Intelligent environmental monitoring with pollution detection and climate change analysis',
@@ -1180,37 +1496,40 @@ export default function AIServices() {
       pricing: '$8,000 - $35,000/month',
       delivery: '8-16 weeks',
       category: 'Environmental AI'}
+      category: 'Environmental AI'
+}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
   ]
   const aiTechnologies = [
   {
       name: 'Machine Learning',
       icon: Brain,
-      description: 'Custom ML models and algorithms',;
+      description: 'Custom ML models and algorithms'
 },
     {
       name: 'Natural Language Processing',
       icon: MessageSquare,
-      description: 'Text analysis and generation',;
+      description: 'Text analysis and generation'
 },
     {
       name: 'Computer Vision',
       icon: Eye,
-      description: 'Image and video processing',;
+      description: 'Image and video processing'
 },
     {
       name: 'Deep Learning',
       icon: Cpu,
-      description: 'Neural networks and deep architectures',;
+      description: 'Neural networks and deep architectures'
 },
     {
       name: 'Reinforcement Learning',
       icon: Target,
-      description: 'Autonomous decision making',;
+      description: 'Autonomous decision making'
 },
     {
       name: 'Generative AI',
       icon: FileText,
-      description: 'Content creation and synthesis',;
+      description: 'Content creation and synthesis'
 },
   ]
   const benefits = [
@@ -1218,70 +1537,70 @@ export default function AIServices() {
       title: 'Increased Efficiency',
       description: 'Automate repetitive tasks and processes',
       icon: Zap,
-      stat: '80%',;
+      stat: '80%'
 },
     {
       title: 'Cost Reduction',
       description: 'Reduce operational costs through automation',
       icon: TrendingUp,
-      stat: '60%',;
+      stat: '60%'
 },
     {
       title: 'Enhanced Accuracy',
       description: 'Minimize human errors with AI precision',
       icon: Target,
-      stat: '95%',;
+      stat: '95%'
 },
     {
       title: '24/7 Availability',
       description: 'Round-the-clock AI-powered services',
       icon: Clock,
-      stat: '99.9%',;
+      stat: '99.9%'
 },
   ]
   return (
     <>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
+        <meta name="description content={description} />
+        <meta name=viewport" content="width=device-width, initial-scale=1 />
+        <link rel=canonical" href="https://ziontechgroup.com/ai-services />
       </Head>
 
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="flex items-center justify-center mb-6">
-              <Brain className="h-12 w-12 text-blue-600 mr-4" />
-              <Award className="h-6 w-6 text-blue-600 mr-2" />
-              <span className="text-base font-semibold leading-7 text-blue-600">
+      <section className=bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 sm: py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8>
+          <div className=mx-auto max-w-3xl text-center">
+            <div className="flex items-center justify-center mb-6>
+              <Brain className=h-12 w-12 text-blue-600 mr-4" />
+              <Award className="h-6 w-6 text-blue-600 mr-2 />
+              <span className=text-base font-semibold leading-7 text-blue-600">
                 AI Services
               </span>
             </div>
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl>
               Artificial Intelligence Solutions
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className=mt-6 text-lg leading-8 text-gray-600">
               Transform your business with cutting-edge AI technologies. From quantum machine learning 
               to consciousness simulation, we deliver next-generation intelligent solutions that drive 
               innovation, efficiency, and competitive advantage across all industries.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-10 flex items-center justify-center gap-x-6>
               <Link
-                href="/contact"
-                className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                href=/contact"
+                className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600
               >
                 Get Started
-                <ArrowRight className="ml-2 h-4 w-4 inline" />
+                <ArrowRight className=ml-2 h-4 w-4 inline" />
               </Link>
               <Link
-                href="/pricing"
-                className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600"
+                href="/pricing
+                className=text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600"
               >
-                View Pricing <span aria-hidden="true">→</span>
+                View Pricing <span aria-hidden="true>→</span>
               </Link>
             </div>
           </div>
@@ -1289,29 +1608,29 @@ export default function AIServices() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <section className=py-24 sm: py-32 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8>
+          <div className=mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl>
               Why Choose Our AI Services?
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className=mt-6 text-lg leading-8 text-gray-600">
               Proven results and measurable impact for your business
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4>
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mx-auto mb-4">
-                  <benefit.icon className="h-8 w-8 text-blue-600" />
+              <div key={index} className=text-center">
+                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mx-auto mb-4>
+                  <benefit.icon className=h-8 w-8 text-blue-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2>
                   {benefit.stat}
                 </h3>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                <h4 className=text-lg font-semibold text-gray-900 mb-2">
                   {benefit.title}
                 </h4>
-                <p className="text-gray-600">{benefit.description}</p>
+                <p className="text-gray-600>{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -1319,31 +1638,31 @@ export default function AIServices() {
       </section>
 
       {/* AI Technologies */}
-      <section className="py-24 sm: py-32 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <section className=py-24 sm: py-32 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8>
+          <div className=mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl>
               AI Technologies We Master
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className=mt-6 text-lg leading-8 text-gray-600">
               Cutting-edge AI technologies powering the future of business
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3>
             {aiTechnologies.map((tech, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                className=bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="flex items-center mb-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
-                    <tech.icon className="h-6 w-6 text-blue-600" />
+                <div className="flex items-center mb-4>
+                  <div className=flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
+                    <tech.icon className="h-6 w-6 text-blue-600 />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 ml-4">
+                  <h3 className=text-lg font-semibold text-gray-900 ml-4">
                     {tech.name}
                   </h3>
                 </div>
-                <p className="text-gray-600">{tech.description}</p>
+                <p className="text-gray-600>{tech.description}</p>
               </div>
             ))}
           </div>
@@ -1351,79 +1670,79 @@ export default function AIServices() {
       </section>
 
       {/* AI Services Grid */}
-      <section className="py-24 sm: py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <section className=py-24 sm: py-32 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8>
+          <div className=mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl>
               Our AI Service Portfolio
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className=mt-6 text-lg leading-8 text-gray-600">
               Comprehensive AI solutions tailored to your business needs. All
               services include implementation, training, and ongoing support.
               Contact us at{' '}
               <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="text-blue-600 hover:text-blue-500"
+                href="mailto:kleber@ziontechgroup.com
+                className=text-blue-600 hover:text-blue-500"
               >
                 kleber@ziontechgroup.com
               </a>{' '}
               or call{' '}
               <a
-                href="tel:+13024640950"
-                className="text-blue-600 hover:text-blue-500"
+                href="tel:+13024640950
+                className=text-blue-600 hover:text-blue-500"
               >
                 +1 302 464 0950
               </a>{' '}
               for custom pricing.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 lg: grid-cols-2>
             {aiServices.map((service, index) => (
               <div
                 key={index}
-                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
+                className=group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
               >
-                <div className="flex items-center gap-x-3 mb-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors">
-                    <service.icon className="h-7 w-7 text-white" />
+                <div className="flex items-center gap-x-3 mb-6>
+                  <div className=flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors">
+                    <service.icon className="h-7 w-7 text-white />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">
+                    <h3 className=text-xl font-semibold text-gray-900">
                       {service.title}
                     </h3>
-                    <p className="text-sm text-blue-600 font-medium">
+                    <p className="text-sm text-blue-600 font-medium>
                       {service.category}
                     </p>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                <ul className="space-y-3 mb-6">
+                <p className=text-gray-600 mb-6">{service.description}</p>
+                <ul className="space-y-3 mb-6>
                   {service.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
-                      className="flex items-center gap-x-3"
+                      className=flex items-center gap-x-3"
                     >
-                      <CheckCircle className="h-4 w-4 text-blue-600 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">{feature}</span>
+                      <CheckCircle className="h-4 w-4 text-blue-600 flex-shrink-0 />
+                      <span className=text-sm text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4 text-sm text-gray-500">
-                    <div className="flex items-center space-x-1">
-                      <Clock className="h-4 w-4" />
+                <div className="flex items-center justify-between>
+                  <div className=flex items-center space-x-4 text-sm text-gray-500">
+                    <div className="flex items-center space-x-1>
+                      <Clock className=h-4 w-4" />
                       <span>{service.delivery}</span>
                     </div>
-                    <div className="font-semibold text-blue-600">
+                    <div className="font-semibold text-blue-600>
                       {service.pricing}
                     </div>
                   </div>
                   <Link
-                    href="/contact"
-                    className="inline-flex items-center text-sm font-semibold text-blue-600 hover: text-blue-500 transition-colors group"
+                    href=/contact"
+                    className="inline-flex items-center text-sm font-semibold text-blue-600 hover: text-blue-500 transition-colors group
                   >
                     Get Started
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className=ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
@@ -1433,26 +1752,26 @@ export default function AIServices() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 py-16 sm: py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+      <section className="bg-blue-600 py-16 sm: py-24>
+        <div className=mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center>
+            <h2 className=text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Ready to Transform Your Business with AI?
             </h2>
-            <p className="mt-6 text-lg leading-8 text-blue-100">
+            <p className="mt-6 text-lg leading-8 text-blue-100>
               Let's discuss how our AI solutions can drive your business
               forward. Get a free consultation and custom proposal.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className=mt-10 flex items-center justify-center gap-x-6">
               <Link
-                href="/contact"
-                className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                href="/contact
+                className=rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Schedule Consultation
               </Link>
               <a
-                href="tel:+13024640950"
-                className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
+                href="tel:+13024640950
+                className=text-sm font-semibold leading-6 text-white hover:text-blue-100"
               >
                 Call +1 302 464 0950 <span aria-hidden="true">→</span>
               </a>
@@ -1464,3 +1783,6 @@ export default function AIServices() {
       <Footer />
     </>
   )}
+  )
+}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb

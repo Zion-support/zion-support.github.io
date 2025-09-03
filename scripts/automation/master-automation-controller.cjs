@@ -47,7 +47,7 @@ class MasterAutomationController {;
     }, this.checkInterval);
 
     this.log(`✅ Master Controller started successfully`);
-<<<<<<< HEAD  }
+  }
 ;
   stop() {;
     this.log('🛑 Stopping Master Automation Controller...');
@@ -75,7 +75,7 @@ class MasterAutomationController {;
 
     // Initialize Auto Error Fixer;
     try {
-<<<<<<< HEAD      const AutoErrorFixer = require('./auto-error-fixer.cjs');
+      const AutoErrorFixer = require('./auto-error-fixer.cjs');
       const autoErrorFixer = new AutoErrorFixer();
       this.automations.set(`auto-error-fixer`, autoErrorFixer);
       this.log(`✅ Auto Error Fixer initialized`);
@@ -121,7 +121,7 @@ class MasterAutomationController {;
           if (AutomationClass && typeof AutomationClass === 'function') {;
             const automation = new AutomationClass();
             const name = script.replace(`.cjs`, ``);
-<<<<<<< HEAD            this.automations.set(name, automation);this.log(`✅ ${name} initialized`);
+            this.automations.set(name, automation);this.log(`✅ ${name} initialized`);
           }
         }
       } catch (error) {  this.log(`⚠️ Could not initialize ${script  }: ${error.message}`);
@@ -159,7 +159,7 @@ class MasterAutomationController {;
   async getPM2Status() {
     try {
       const status = execSync(`pm2 jlist`, { encoding: `utf8` });
-<<<<<<< HEAD      return JSON.parse(status);
+      return JSON.parse(status);
     } catch (error) {  this.log(`❌ Could not get PM2 status: ${error.message  }`);
       return [];
     }
@@ -222,7 +222,7 @@ class MasterAutomationController {;
   async startAutomation(name) {
     try {this.log(`🚀 Starting ${name}...`);execSync(`pm2 start ecosystem.config.cjs --only ${name}`, {
         stdio: `pipe`,
-<<<<<<< HEAD      });this.log(`✅ ${name} started successfully`);
+      });this.log(`✅ ${name} started successfully`);
     } catch (error) {  this.log(`❌ Failed to start ${name  }: ${error.message}`);
     }
   }
@@ -262,7 +262,7 @@ class MasterAutomationController {;
     for (const [`name`, `automation`] of this.automations) {
       try {
         if (automation.getStatus) {
-<<<<<<< HEAD          health[name] = automation.getStatus();
+          health[name] = automation.getStatus();
         } else {;
           health[name] = { status: 'unknown', error: 'No status method' };
         }
@@ -280,7 +280,7 @@ class MasterAutomationController {;
     const recommendations = [];
 
     try {
-<<<<<<< HEAD      // Check for high error rates;
+      // Check for high error rates;
       const errorLogs = await this.analyzeErrorLogs();
       if (errorLogs.length > 10) {;
         recommendations.push({;
@@ -333,7 +333,7 @@ class MasterAutomationController {;
   async analyzeErrorLogs() {
     try {
       const logDir = path.join(this.projectRoot, `logs`);
-<<<<<<< HEAD      if (!fs.existsSync(logDir)) return [];
+      if (!fs.existsSync(logDir)) return [];
 ;
       const errorLogs = [];
       const logFiles = fs;
@@ -376,13 +376,11 @@ class MasterAutomationController {;
       }
 ;
       return errorLogs;
-<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       return [];
-=======
     } catch (error) {  
-<<<<<<< HEAD      return [];
+      return [];
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
   }
@@ -411,7 +409,7 @@ class MasterAutomationController {;
       return { trend: 'stable', data: memoryData };
     } catch (error) {  
       return { trend: 'unknown', data: []   };
-<<<<<<< HEAD    }
+    }
   }
 ;
   async checkOutdatedDependencies() {;
@@ -433,7 +431,7 @@ class MasterAutomationController {;
       execSync('pm2 stop all', { stdio: `pipe` });
       this.log(`✅ All PM2 processes stopped`);
 
-<<<<<<< HEAD      // Stop this controller;
+      // Stop this controller;
       this.stop();
     } catch (error) {  this.log(`❌ Emergency stop failed: ${error.message  }`);
     }
@@ -467,7 +465,7 @@ class MasterAutomationController {;
 
         case `stop`:
           if (args.length > 0) {
-<<<<<<< HEAD            await this.stopAutomation(args[0]);
+            await this.stopAutomation(args[0]);
           } else {;
             await this.stop();
           }
@@ -524,7 +522,7 @@ if (require.main === module) {
     process.exit(0);
   });
 
-<<<<<<< HEAD  // Handle command line arguments;
+  // Handle command line arguments;
   const args = process.argv.slice(2);
   if (args.length > 0) {;
     masterController.runCommand(args[0], args.slice(1));

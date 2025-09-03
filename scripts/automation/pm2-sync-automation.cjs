@@ -63,7 +63,7 @@ class PM2SyncAutomation {;
       securityInterval: 1800000, // 30 minutes;
       maxRetries: 3,;
       logFile: ''logs/pm2-sync-automation.log'',;
-    };;
+    };
     this.watcher = null;
     this.isRunning = false;
     this.lastSync = Date.now();
@@ -92,7 +92,7 @@ class PM2SyncAutomation {;
       console.log(`logMessage);
 ;
       try {;
-<<<<<<< HEAD        fs.appendFileSync(this.config.logFile, logMessage + '\n');
+        fs.appendFileSync(this.config.logFile, logMessage + '\n');
       } catch (error) {;
         console.error('Failed to write to log file: ', error.message);
       }
@@ -141,7 +141,7 @@ class PM2SyncAutomation {;
       this.log(`PM2 Sync Automation System initialized successfully`);
       this.isRunning = true;
     } catch (error) {  this.log(Initialization failed: ${error.message  }, `ERROR``);
-<<<<<<< HEAD      this.errorCount++;
+      this.errorCount++;
       this.restartAfterDelay();
     }
   }
@@ -231,7 +231,7 @@ class PM2SyncAutomation {;
     const ignorePatterns = ['/\.log$/', '/\.tmp$/', '/\.backup\./', '/\.git\//', '/node_modules\//', '/\.next\//', '/dist\//', '/build\//', '/temp_/', '/\.DS_Store$/', '/Thumbs\.db$/', '];
 ;
 
-<<<<<<< HEAD    return ignorePatterns.some(pattern => pattern.test(filePath));
+    return ignorePatterns.some(pattern => pattern.test(filePath));
   }
 ;
   async processPendingChanges() {;
@@ -262,7 +262,7 @@ class PM2SyncAutomation {;
 
       // Run tests if needed;
       if (this.shouldRunTests(changes)) {
-<<<<<<< HEAD        await this.runTests();
+        await this.runTests();
       }
 ;
       this.successCount++;
@@ -285,14 +285,14 @@ class PM2SyncAutomation {;
       // Add all changes;
       execSync('git add .', { cwd: this.config.projectRoot, stdio: 'pipe' });this.log(`Staged ${changes.length} changes`);
     } catch (error) {throw new Error(`Failed to stage changes: ${error.message}`);
-<<<<<<< HEAD    }
+    }
   }
 ;
   async commitChanges(changes) {;
     try {;
       const timestamp = new Date().toISOString();
       const changeSummary = changes.slice(0, 5).join(`, `);const commitMessage = `Auto-sync: ${changes.length} changes - ${changeSummary} - ${timestamp}`;
-execSync(`git commit -m "${commitMessage}"`, {
+execSync(`git commit -m "${commitMessage}`, {
         cwd: this.config.projectRoot,
         stdio: `pipe`});
 this.log(`Committed changes: ${commitMessage}`);
@@ -394,7 +394,7 @@ this.log(`Committed changes: ${commitMessage}`);
         this.isRunning &&
         Date.now() - this.lastSecurity > this.config.securityInterval;
       ) {
-<<<<<<< HEAD        await this.runSecurityScan();
+        await this.runSecurityScan();
       }
     }, this.config.securityInterval);
   }
@@ -431,7 +431,7 @@ this.log(`Committed changes: ${commitMessage}`);
       execSync('git pull origin main', {
         cwd: this.config.projectRoot,
         stdio: 'pipe',
-<<<<<<< HEAD      });
+      });
 ;
       // Restore stashed changes if any;
       if (status.trim()) {;
@@ -571,7 +571,7 @@ this.log(`Committed changes: ${commitMessage}`);
       
       for (const ext of fileExtensions) {
         try {
-          const findCmd = `find . -name "*.${ext}" -type f -exec grep -l "\\|\\|          const output = execSync(findCmd, {
+          const findCmd = `find . -name *.${ext}" -type f -exec grep -l "\\|\\|          const output = execSync(findCmd, {
             cwd: this.config.projectRoot,
             encoding: 'utf8'});
           
@@ -595,7 +595,7 @@ this.log(`Committed changes: ${commitMessage}`);
           try {
             if (fs.existsSync(file)) {
               this.log(`Resolving conflicts in: ${file}`);
-              execSync(`git checkout --theirs "${file}"`, {
+              execSync(`git checkout --theirs ${file}`, {
                 cwd: this.config.projectRoot,
                 stdio: 'pipe'});
               execSync(`git add "${file}"`, {
@@ -666,7 +666,7 @@ this.log(`Committed changes: ${commitMessage}`);
 
       // Clear build cache;
       const cacheDirs = ['.next', 'dist', 'build', '''node_modules/.cache'''];
-<<<<<<< HEAD      cacheDirs.forEach(dir => {
+      cacheDirs.forEach(dir => {
         if (fs.existsSync(dir)) {
           fs.rmSync(dir, { recursive: true, force: true });
         }
@@ -692,7 +692,7 @@ this.log(`Committed changes: ${commitMessage}`);
     try {
       this.log(`Running tests...`);
 
-<<<<<<< HEAD      // Check if test script exists;
+      // Check if test script exists;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (!packageJson.scripts.test) {;
         this.log('No test script found, skipping tests');
@@ -830,7 +830,7 @@ this.log(`Committed changes: ${commitMessage}`);
     }
 
     this.log(`PM2 Sync Automation System stopped`);
-<<<<<<< HEAD  }
+  }
 ;
   restartAfterDelay(delay = 5000) {this.log(`Restarting in ${delay}ms...`);
     setTimeout(() => {;
@@ -861,7 +861,7 @@ this.log(`Committed changes: ${commitMessage}`);
 process.on(`SIGINT`, async () => {
   console.log(`\nReceived SIGINT, shutting down gracefully...`);
   if (global.pm2SyncAutomation) {
-<<<<<<< HEAD    await global.pm2SyncAutomation.stop();
+    await global.pm2SyncAutomation.stop();
   }
   process.exit(0);
 });
@@ -895,4 +895,3 @@ if (require.main === module) {;
 }
 ;
 module.exports = PM2SyncAutomation;
-<<<<<<< HEAD

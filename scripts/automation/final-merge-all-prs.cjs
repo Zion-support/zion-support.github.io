@@ -43,7 +43,7 @@ class FinalMergeAllPRs {;
       // Step 2: Get all remaining branches;
       const allBranches = await this.getAllBranches();this.log(Found ${allBranches.length} branches to process`);
 
-<<<<<<< HEAD      // Step 3: Process branches in batches;
+      // Step 3: Process branches in batches;
       const batchSize = 10;
       for (let i = 0; i < allBranches.length; i += batchSize) {;
         const batch = allBranches.slice(i, i + batchSize);
@@ -58,7 +58,7 @@ class FinalMergeAllPRs {;
           await this.processBranch(branch);
         }
 
-<<<<<<< HEAD        // Small delay between batches;
+        // Small delay between batches;
         await this.delay(1000);
       }
 ;
@@ -89,7 +89,7 @@ class FinalMergeAllPRs {;
 
       if (currentBranch !== `main`) {this.log(`Switching from ${currentBranch} to main...`);
         execSync(`git checkout main`, { stdio: `inherit` });
-<<<<<<< HEAD      }
+      }
 ;
       this.log('Pulling latest changes from main...');
       execSync(`git pull origin main`, { stdio: `inherit` });
@@ -140,7 +140,7 @@ this.log(`Found ${allBranches.length} total branches`);
     this.mergeStats.branchesProcessed++;
 
     try {
-<<<<<<< HEAD      // Attempt to merge the branch;
+      // Attempt to merge the branch;
       const mergeResult = await this.attemptMerge(branchName);
 ;
       if (mergeResult.success) {;
@@ -164,7 +164,7 @@ this.log(`Found ${allBranches.length} total branches`);
 
       // Try to merge the branchexecSync(`git merge origin/${branchName} --no-edit`, {
         stdio: `pipe`,
-<<<<<<< HEAD        timeout: 30000, // 30 second timeout;
+        timeout: 30000, // 30 second timeout;
       });
 ;
       return { success: true };
@@ -186,7 +186,7 @@ this.log(`Found ${allBranches.length} total branches`);
 
   async resolveMergeConflicts(branchName) {
     try {
-<<<<<<< HEAD      // Get list of conflicted files;
+      // Get list of conflicted files;
       const conflictedFiles = this.getConflictedFiles();
       this.log( `Found ${conflictedFiles.length} conflicted files in ${branchName}`;
       );
@@ -230,7 +230,7 @@ this.log(`Found ${allBranches.length} total branches`);
       try {
         execSync(`git merge --abort`, { stdio: `pipe`   });
       } catch (abortError) {this.log(`⚠️ Failed to abort merge: ${abortError.message}`, `WARN`);
-<<<<<<< HEAD      }
+      }
 ;
       return {;
         success: false,error: `Failed to resolve conflicts: ${error.message}`,;
@@ -295,7 +295,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
     } catch (error) {  
       this.log(❌ Failed to resolve conflicts in ${filePath  }: ${error.message}`,
         `ERROR`
-<<<<<<< HEAD      );
+      );
       throw error;
     }
   }
@@ -342,8 +342,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
       execSync('git push origin main', { stdio: `inherit` });
       this.log(`✅ Successfully pushed all merged changes to remote`);
     } catch (error) {  
-      this.log(`❌ Failed to push changes: ${error.message  }`, `ERROR`);
-<<<<<<< HEAD
+      this.log(`❌ Failed to push changes: ${error.message  }` `ERROR`);
 ;
     try {;
       // Commit any remaining changes;
@@ -361,8 +360,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
     } catch (error) {;
       this.log(`❌ Failed to push changes: ${error.message}`, 'ERROR');
     }
-=======
-<<<<<<< HEAD    }
+    }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;

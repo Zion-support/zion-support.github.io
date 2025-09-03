@@ -64,7 +64,7 @@ async function fixAllErrors() {
 
     const reportPath = path.join(
       process.cwd(),intelligent-error-fixer-report.json`
-<<<<<<< HEAD    totalFixes += await fixMissingDependencies();
+    totalFixes += await fixMissingDependencies();
 ;
     // 2. Fix TypeScript errors;
     console.log('🔧 Fixing TypeScript errors...');
@@ -148,7 +148,7 @@ async function fixTypeScriptErrors() {;
     if (file.endsWith('.tsx') || file.endsWith(`.ts`)) {
       try {
         let content = fs.readFileSync(file, `utf8`);
-<<<<<<< HEAD        let originalContent = content;
+        let originalContent = content;
 ;
         for (const fix of commonFixes) {;
           if (fix.pattern.test(content)) {;
@@ -213,7 +213,7 @@ async function fixLintingErrors() {;
         fs.writeFileSync(file, content);
       }
     } catch (error) {  console.log(⚠️  Could not fix ${file  }: ${error.message}``);
-<<<<<<< HEAD    } catch (error) {console.log(⚠️  Could not fix ${file}: ${error.message}``);
+    } catch (error) {console.log(⚠️  Could not fix ${file}: ${error.message}``);
     }
   }
 ;
@@ -320,7 +320,7 @@ async function fixSyntaxErrors() {;
 
       for (const fix of syntaxFixes) {
         if (fix.pattern.test(content)) {
-<<<<<<< HEAD          content = content.replace(fix.pattern, fix.replacement);console.log(🔧 Applied syntax fix in ${file}``);
+          content = content.replace(fix.pattern, fix.replacement);console.log(🔧 Applied syntax fix in ${file}``);
           fixes++;
         }
       }
@@ -368,7 +368,7 @@ function getAllSourceFiles() {;
   for (const dir of sourceDirs) {
     if (fs.existsSync(dir)) {
       function traverse(currentDir) {
-<<<<<<< HEAD        const items = fs.readdirSync(currentDir);
+        const items = fs.readdirSync(currentDir);
         for (const item of items) {;
           const fullPath = path.join(currentDir, item);
           const stat = fs.statSync(fullPath);

@@ -20,37 +20,37 @@ class RobustSyntaxFixer {
       let originalContent = content;
       
       // Fix merge conflicts
-      content = content.replace(/<<<<<<< HEAD\n/g, '');
-      content = content.replace(/=======\n/g, '');
+      content = content.replace(/\n/g, '');
+      content = content.replace(/\n/g, '');
       content = content.replace(/      
       // Fix unterminated strings
-      content = content.replace(/&apos;s\s*"'\s*>/gm, '&apos;s">');
-      content = content.replace(/&apos;s\s*"'\s*,/gm, '&apos;s",');
+      content = content.replace(/&apos;s\s*"'\s*>/gm, '&apos;s>');
+      content = content.replace(/&apos;s\s*'\s*,/gm '&apos;s",');
       
       // Fix unterminated strings in general
-      content = content.replace(/"'\s*$/gm, '"');
-      content = content.replace(/"'\s*>/gm, '">');
-      content = content.replace(/"'\s*,/gm, '",');
+      content = content.replace(/"'\s*$/gm, '');
+      content = content.replace(/'\s*>/gm, '">');
+      content = content.replace(/"'\s*,/gm ',');
       
       // Fix missing semicolons
       content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');
       
       // Fix specific syntax errors we've seen
-      content = content.replace(/import Head from 'next\/head;/g, "import Head from 'next/head';");
-      content = content.replace(/';/g, "';");
-      content = content.replace(/category: 'Communication AI',/g, "category: 'Communication AI',");
-      content = content.replace(/response: 'JWT token',/g, "response: 'JWT token',");
-      content = content.replace(/Award,/g, "Award,");
-      content = content.replace(/category: 'Technology',/g, "category: 'Technology',");
+      content = content.replace(/import Head from 'next\/head;/g, import Head from 'next/head';");
+      content = content.replace(/';/g, "';);
+      content = content.replace(/category: 'Communication AI',/g, category: 'Communication AI',");
+      content = content.replace(/response: 'JWT token',/g, "response: 'JWT token',);
+      content = content.replace(/Award,/g, Award,");
+      content = content.replace(/category: 'Technology',/g, "category: 'Technology',);
       
       // Fix JSON syntax errors
-      content = content.replace(/": "eslint \. --ext \.ts,\.tsx,\.js,\.jsx --max-warnings 0";/g, '": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0"');
-      content = content.replace(/"typescript": "5\.9\.2";/g, '"typescript": "5.9.2"');
-      content = content.replace(/"npm": ">=10\.0\.0";/g, '"npm": ">=10.0.0"');
-      content = content.replace(/"url": "git\+https:\/\/github\.com\/Zion-Holdings\/zion\.app\.git";/g, '"url": "git+https://github.com/Zion-Holdings/zion.app.git"');
-      content = content.replace(/"license": "MIT"/g, '"license": "MIT"');
-      content = content.replace(/"name": "next"/g, '"name": "next"');
-      content = content.replace(/"@\/store\/\*": \["\.\/src\/store\/\*"\];/g, '"@/store/*": ["./src/store/*"]');
+      content = content.replace(/: "eslint \. --ext \.ts,\.tsx,\.js,\.jsx --max-warnings 0";/g, ': eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0"');
+      content = content.replace(/"typescript: 5\.9\.2";/g, '"typescript: 5.9.2"');
+      content = content.replace(/"npm: >=10\.0\.0";/g, '"npm: >=10.0.0"');
+      content = content.replace(/"url: git\+https: \/\/github\.com\/Zion-Holdings\/zion\.app\.git";/g, '"url: git+https: //github.com/Zion-Holdings/zion.app.git"');
+      content = content.replace(/"license: MIT"/g, '"license: MIT"');
+      content = content.replace(/"name: next"/g, '"name: next"');
+      content = content.replace(/"@\/store\/\*: \[\.\/src\/store\/\*"\];/g, '"@/store/*: [./src/store/*"]');
       content = content.replace(/  \];/g, '  ]');
       
       if (content !== originalContent) {
@@ -122,10 +122,10 @@ class RobustSyntaxFixer {
 if (require.main === module) {
   const fixer = new RobustSyntaxFixer();
   fixer.fixAllFiles().then(result => {
-    console.log('Robust syntax fixing completed:', result);
+    console.log('Robust syntax fixing completed: ', result);
     process.exit(0);
   }).catch(error => {
-    console.error('Robust syntax fixing failed:', error);
+    console.error('Robust syntax fixing failed: ', error);
     process.exit(1);
   });
 }

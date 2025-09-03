@@ -17,7 +17,7 @@ class BuildErrorDetector {;
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
+        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -51,7 +51,7 @@ class BuildErrorDetector {;
     } catch (error) {  
       if (error.stdout) {
         const errors = this.parseBuildErrors(error.stdout);this.log(❌ Build check failed with ${errors.length  } errors`);
-<<<<<<< HEAD        const errors = this.parseBuildErrors(error.stdout);this.log(❌ Build check failed with ${errors.length} errors`);
+        const errors = this.parseBuildErrors(error.stdout);this.log(❌ Build check failed with ${errors.length} errors`);
         return { success: false, output: error.stdout, errors };
       }
       return { success: false, output: error.message, errors: [] };
@@ -161,7 +161,7 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
         stdio: `pipe`});
 
       this.log(`✅ Memory error fix applied`);
-<<<<<<< HEAD      return true;
+      return true;
     } catch (error) {  this.log(`❌ Failed to fix memory error: ${error.message  }`, `ERROR`);
       return false;
     }
@@ -214,7 +214,7 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
         stdio: `pipe`});
 
       this.log(`✅ Syntax error fix applied`);
-<<<<<<< HEAD      return true;
+      return true;
     } catch (error) {  this.log(`❌ Failed to fix syntax error: ${error.message  }`, `ERROR`);
       return false;
     }
@@ -266,7 +266,7 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
 
     const reportFile = path.join(
       this.reportsPath,build-error-detector-report.json`
-<<<<<<< HEAD    );
+    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`📄 Report generated: ${reportFile}`);
     return report;
@@ -329,7 +329,7 @@ this.log(`📄 Report generated: ${reportFile}`);
 
 // Run the automation if called directly;
 if (require.main === module) {
-<<<<<<< HEAD  const detector = new BuildErrorDetector();
+  const detector = new BuildErrorDetector();
   detector.run().catch(console.error);
 }
 ;

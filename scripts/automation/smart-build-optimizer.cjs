@@ -29,7 +29,7 @@ class SmartBuildOptimizer {;
     this.optimizationsLog = path.join(;
       this.projectRoot,logs',;
       'build-optimizations.json';
-<<<<<<< HEAD    );
+    );
     this.ensureLogsDirectory();
 ;
     this.buildHistory = [];
@@ -80,7 +80,7 @@ class SmartBuildOptimizer {;
   }
 
   log(message, level = `INFO`) {
-<<<<<<< HEAD    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
@@ -173,7 +173,7 @@ class SmartBuildOptimizer {;
     };
 
     try {
-<<<<<<< HEAD      // Measure build time;
+      // Measure build time;
       const buildStart = Date.now();
       await this.runBuild();
       performance.buildTime = Date.now() - buildStart;
@@ -190,7 +190,7 @@ class SmartBuildOptimizer {;
       await this.runInstall();
       performance.installTime = Date.now() - installStart;
 
-<<<<<<< HEAD      // Measure rebuild time;
+      // Measure rebuild time;
       const rebuildStart = Date.now();
       await this.runRebuild();
       performance.rebuildTime = Date.now() - rebuildStart;
@@ -221,7 +221,7 @@ class SmartBuildOptimizer {;
 
       build.on(`close`, code => {
         if (code === 0) {
-<<<<<<< HEAD          resolve();
+          resolve();
         } else {reject(new Error(`Build failed with code ${code}`));
         }
       });
@@ -269,7 +269,7 @@ class SmartBuildOptimizer {;
 
       rebuild.on(`close`, code => {
         if (code === 0) {
-<<<<<<< HEAD          resolve();
+          resolve();
         } else {reject(new Error(`Rebuild failed with code ${code}`));
         }
       });
@@ -315,7 +315,7 @@ class SmartBuildOptimizer {;
       if (stat.isDirectory()) {
         this.getAllFilesRecursive(fullPath`, files);
       } else {
-<<<<<<< HEAD        files.push(fullPath);
+        files.push(fullPath);
       }
     }
 ;
@@ -434,7 +434,7 @@ class SmartBuildOptimizer {;
   async applyOptimization(optimization) {
     switch (optimization.type) {
       case `BUILD_TIME`:
-<<<<<<< HEAD        return await this.optimizeBuildTime();
+        return await this.optimizeBuildTime();
       case 'BUNDLE_SIZE':;
         return await this.optimizeBundleSize();
       case 'INSTALL_TIME':;
@@ -472,7 +472,7 @@ class SmartBuildOptimizer {;
     sourcemap: false,
     chunkSizeWarningLimit: 1000;
   },`
-<<<<<<< HEAD          );
+          );
 ;
           fs.writeFileSync(viteConfigPath, config);
           return {;
@@ -524,7 +524,6 @@ class SmartBuildOptimizer {;
   }
 
   async optimizeInstallTime() {
-<<<<<<< HEAD
     try {;
 } catch (error) {;
       return { success: false, message: error.message };
@@ -534,9 +533,8 @@ class SmartBuildOptimizer {;
   async optimizeInstallTime() {;
     try {;
       // Add npm scripts for faster installs;
-=======
     try {
-<<<<<<< HEAD      // Add npm scripts for faster installs;
+      // Add npm scripts for faster installs;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       const packagePath = path.join(this.projectRoot, 'package.json');
       if (fs.existsSync(packagePath)) {;
@@ -584,7 +582,7 @@ class SmartBuildOptimizer {;
       return { success: true, message: 'Rebuild time optimization applied' };
     } catch (error) {  
       return { success: false, message: error.message   };
-<<<<<<< HEAD    }
+    }
   }
 ;
   generateRecommendations(optimization) {;
@@ -641,7 +639,7 @@ class SmartBuildOptimizer {;
         category: 'BUNDLE_SIZE',;
         priority: 'HIGH',;
         suggestion: 'Implement dynamic imports for code splitting',;
-        action:Use React.lazy() and dynamic imports for route-based splitting',;
+        action: Use React.lazy() and dynamic imports for route-based splitting',;
       });
     }
 ;
@@ -680,7 +678,7 @@ class SmartBuildOptimizer {;
         );
       } catch (error) {  
         this.log( `Optimization test failed for ${optimization.type  }: ${error.message}`,WARN`
-<<<<<<< HEAD        );
+        );
       }
     }
   }

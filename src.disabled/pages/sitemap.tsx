@@ -1,8 +1,8 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/sitemap.tsx
 :src.disabled/pages/sitemap.tsx;
-import: React from;
+import React from;
   'react';
-import: { Link } from;
+import { Link } from;
   'react-router-dom';
 export: default function Sitemap() {
   const routes = [
@@ -42,13 +42,13 @@ export default function Sitemap() {
       <h1 className='text-4xl font-bold mb-4'>Sitemap</h1>
       <ul className='list-disc pl-6 text-blue-400'>
         {routes.map((r) => (
-          <li: key="{r}"> </Link to={r}>{r}</Link> <//li>
+          <li: key="{r}> </Link to={r}>{r}</Link> <//li>
         ))}
       </ul>
     </div>
   )}
 
-<<<<<<< HEADimport { Link } from 'react - router - dom'
+import { Link } from 'react - router - dom'
 import React from 'react'
 export default React.memo(function Sitemap () {
 '
@@ -58,6 +58,6 @@ export default React.memo(function Sitemap () {
       <h1 className='text - 4xl font - bold mb - 4'>Sitemap</h1>''
       <ul className='list - disc pl - 6 text - blue - 400'>
         {routes.map ( (r) => (
-          <li key="{r}"> </Link to={r}>{r}</Link> <//li>) ) }
+          <li key={r}"> </Link to={r}>{r}</Link> <//li>) ) }
       </ul>
     </div>) }";";

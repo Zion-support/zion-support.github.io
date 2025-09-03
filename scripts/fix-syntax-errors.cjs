@@ -20,16 +20,16 @@ class SyntaxErrorFixer {
       let originalContent = content;
       
       // Fix merge conflicts
-      content = content.replace(/<<<<<<< HEAD\n/g, '');
-      content = content.replace(/=======\n/g, '');
+      content = content.replace(/\n/g, '');
+      content = content.replace(/\n/g, '');
       content = content.replace(/      // Fix unterminated strings
-      content = content.replace(/&apos;s\s*"'\s*>/gm, '&apos;s">');
-      content = content.replace(/&apos;s\s*"'\s*,/gm, '&apos;s",');
+      content = content.replace(/&apos;s\s*"'\s*>/gm, '&apos;s>');
+      content = content.replace(/&apos;s\s*'\s*,/gm '&apos;s",');
       
       // Fix unterminated strings in general
-      content = content.replace(/"'\s*$/gm, '"');
-      content = content.replace(/"'\s*>/gm, '">');
-      content = content.replace(/"'\s*,/gm, '",');
+      content = content.replace(/"'\s*$/gm, '');
+      content = content.replace(/'\s*>/gm, '">');
+      content = content.replace(/"'\s*,/gm '",');
       
       // Fix missing semicolons
       content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');
@@ -103,10 +103,10 @@ class SyntaxErrorFixer {
 if (require.main === module) {
   const fixer = new SyntaxErrorFixer();
   fixer.fixAllFiles().then(result => {
-    console.log('Syntax fixing completed:', result);
+    console.log('Syntax fixing completed: ', result);
     process.exit(0);
   }).catch(error => {
-    console.error('Syntax fixing failed:', error);
+    console.error('Syntax fixing failed: ', error);
     process.exit(1);
   });
 }

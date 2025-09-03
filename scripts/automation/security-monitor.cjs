@@ -15,7 +15,7 @@ class SecurityMonitor {;
   }
 
   log(message, type = `info`) {
-<<<<<<< HEAD    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);
   }
 ;
@@ -112,7 +112,7 @@ class SecurityMonitor {;
           }
         } else {
           this.log(`All dependencies are up to date`, `success`);
-<<<<<<< HEAD        }
+        }
         ;
         return outdatedData;
       } catch (error) {  this.log(`Error parsing outdated data: ${error.message  }`, `error`);
@@ -144,7 +144,7 @@ class SecurityMonitor {;
           for (const [`name`, `info`] of Object.entries(deps)) {
             if (info.license) {
               for (const license of problematicLicenses) {
-<<<<<<< HEAD                if (info.license.includes(license)) {licenseIssues.push(`${name}: ${info.license}`);
+                if (info.license.includes(license)) {licenseIssues.push(`${name}: ${info.license}`);
                 }
               }
             }
@@ -176,7 +176,7 @@ class SecurityMonitor {;
   async checkEnvironmentVariables() {
     this.log(`Checking environment variables for security...`);
     
-<<<<<<< HEAD    const envFiles = ['.env', '.env.local', '.env.development', '.env.production'];
+    const envFiles = ['.env', '.env.local', '.env.development', '.env.production'];
     const securityIssues = [];
     ;
     for (const envFile of envFiles) {;
@@ -213,7 +213,7 @@ class SecurityMonitor {;
       this.errorsFound.push(...securityIssues);
     } else {
       this.log(`No environment variable security issues found`, 'success');
-<<<<<<< HEAD    }
+    }
     ;
     return securityIssues;
   }
@@ -228,7 +228,7 @@ class SecurityMonitor {;
       this.fixesApplied.push('Auto-fixed security vulnerabilities with npm audit fix');
     }
     
-<<<<<<< HEAD    // Try to fix vulnerabilities with force;
+    // Try to fix vulnerabilities with force;
     const fixForceResult = await this.runCommand('npm audit fix --force');
     if (fixForceResult.success) {;
       this.fixesApplied.push('Auto-fixed security vulnerabilities with npm audit fix --force');
@@ -255,7 +255,7 @@ class SecurityMonitor {;
         totalOutdated: this.errorsFound.filter(e => e.includes('Outdated')).length,
         totalLicenseIssues: this.errorsFound.filter(e => e.includes(`License`)).length,
         totalEnvIssues: this.errorsFound.filter(e => e.includes(`environment`)).length,
-<<<<<<< HEAD        autoFixed: this.fixesApplied.length;
+        autoFixed: this.fixesApplied.length;
       }
     };
 ;
@@ -286,7 +286,7 @@ class SecurityMonitor {;
       
       this.log(`Security monitoring completed`, `success`);
     } catch (error) {  this.log(`Error during security monitoring: ${error.message  }`, `error`);this.errorsFound.push(`Process error: ${error.message}`);
-<<<<<<< HEAD      await this.generateReport();
+      await this.generateReport();
     }
   }
 }

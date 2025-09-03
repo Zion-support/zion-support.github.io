@@ -10,7 +10,7 @@ class MasterErrorCoordinator {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, '''automation/logs/master-error-coordinator.log'');
     this.coordinationReportFile = path.join(this.projectRoot, '`automation/reports/coordination-report.json```);
-<<<<<<< HEAD    this.startTime = new Date();
+    this.startTime = new Date();
     this.processes = [];
     this.errors = [];
     this.fixes = [];
@@ -91,7 +91,7 @@ class MasterErrorCoordinator {;
           name: process.name,
           success: result.success,
           timestamp: new Date().toISOString(),
-<<<<<<< HEAD      try {await this.log(🔄 Running ${process.name}...`);const result = await this.runCommand(`node ${process.script}`, { silent: true });
+      try {await this.log(🔄 Running ${process.name}...`);const result = await this.runCommand(`node ${process.script}`, { silent: true });
         ;
         this.processes.push({;
           name: process.name,;
@@ -131,7 +131,7 @@ class MasterErrorCoordinator {;
     const healthReport = {
       timestamp: new Date().toISOString(),
       checks: []
-<<<<<<< HEAD    };
+    };
     ;
     for (const check of healthChecks) {;
       try {await this.log(`🔍 Running ${check.name}...`);
@@ -228,7 +228,7 @@ class MasterErrorCoordinator {;
           fix: fix.name,
           error: error.message,
           timestamp: new Date().toISOString()
-<<<<<<< HEAD        });
+        });
       }
     }
   }
@@ -272,7 +272,7 @@ class MasterErrorCoordinator {;
   async restartFailedProcesses() {
     await this.log(`🔄 Restarting failed processes...`);
     
-<<<<<<< HEAD    const failedProcesses = this.processes.filter(p => !p.success);
+    const failedProcesses = this.processes.filter(p => !p.success);
     ;
     for (const process of failedProcesses) {;
       try {await this.log(`🔄 Restarting ${process.name}...`);const restartResult = await this.runCommand(`pm2 restart ${process.name}`, { silent: true });
@@ -335,16 +335,14 @@ class MasterErrorCoordinator {;
       await this.log(`✅ Master Error Coordinator completed`);await this.log(`📈 Summary: ${report.summary.successfulProcesses}/${report.summary.totalProcesses} processes successful`);await this.log(`📈 Errors: ${report.summary.totalErrors}, Fixes: ${report.summary.totalFixes}`);
       ;
       return report;
-<<<<<<< HEAD
       ;
 } catch (error) {  await this.log(`❌ Master Error Coordinator failed: ${error.message  }`);
       ;
     } catch (error) {await this.log(`❌ Master Error Coordinator failed: ${error.message}`);
       throw error;
-=======
       
     } catch (error) {  await this.log(`❌ Master Error Coordinator failed: ${error.message  }`);
-<<<<<<< HEAD      throw error;
+      throw error;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
   }

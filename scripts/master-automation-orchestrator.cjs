@@ -226,8 +226,8 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
       this.reportsDir,
       `master-automation-report-${Date.now()}.json`
     );
-<<<<<<< HEAD    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`📄 Master report saved "to": ${reportFile}`);`;
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log(`📄 Master report saved to: ${reportFile}`);`;
     return report;}
 ;
   generateRecommendations() {;
@@ -337,22 +337,22 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
       this.log('🎯 Starting Master Automation Orchestrator');
 
       await this.runCoreAutomations();
-    const failedAutomations = this.automationResults.filter(;);      a => a.status === 'failed'';    );;
+    const failedAutomations = this.automationResults.filter(;);      a => a.status === 'failed'';    );
     if (failedAutomations.length > 0) {;
-      recommendations.push({;);        "type": 'error',';        "message": `${failedAutomations.length} automations failed. Review and fix issues.`,`;      });
+      recommendations.push({;);        "type": 'error',';        message: `${failedAutomations.length} automations failed. Review and fix issues.`,`;      });
 ;
-      failedAutomations.forEach(automation => {;);        recommendations.push({;);          "type": 'fix',';          "message": `Fix ${automation.name}: ${automation.error}`,`;        });});}
+      failedAutomations.forEach(automation => {;);        recommendations.push({;);          "type": 'fix',';          message: `Fix ${automation.name}: ${automation.error}`,`;        });});}
 ;
     const successRate =;
       (this.automationResults.filter(a => a.status === 'success').length /';        this.automationResults.length) *;      100;
 ;
     if (successRate < 80) {;
-      recommendations.push({;);        "type": 'warning',';        "message": `Automation success rate is ${successRate.toFixed(1)}%. Consider improving reliability.`,`;      });}
+      recommendations.push({;);        "type": 'warning',';        message: `Automation success rate is ${successRate.toFixed(1)}%. Consider improving reliability.`,`;      });}
 ;
     const longAutomations = this.automationResults.filter(;);      a => a.duration > 300000;
     ); // 5 minutes;
     if (longAutomations.length > 0) {;
-      recommendations.push({;);        "type": 'optimization',';        "message": `${longAutomations.length} automations took longer than 5 minutes. Consider optimizing.`,`;      });}
+      recommendations.push({;);        "type": 'optimization',';        message: `${longAutomations.length} automations took longer than 5 minutes. Consider optimizing.`,`;      });}
 ;
     return recommendations;}
 ;
@@ -360,21 +360,21 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
     const nextSteps = [];
 ;
     if (this.automationResults.every(a => a.status === 'success')) {';      nextSteps.push(;);        'All automations completed successfully. Ready for deployment.'';      );      nextSteps.push(;);        'Consider running deployment automation if not already done.'';      );,';} else {;
-      nextSteps.push(;);        'Fix failed automations before proceeding with deployment.'';      );      nextSteps.push('Review automation logs for detailed error information.');    }';;
+      nextSteps.push(;);        'Fix failed automations before proceeding with deployment.'';      );      nextSteps.push('Review automation logs for detailed error information.');    }';
     nextSteps.push(;);      'Schedule regular automation runs for continuous improvement.'';    );    nextSteps.push('Monitor automation reports for trends and improvements.');';    return nextSteps;}
 ;
   displaySummary() {;
     const totalDuration = Date.now() - this.startTime;
-    const successfulAutomations = this.automationResults.filter(;);      a => a.status === 'success'';    );    const failedAutomations = this.automationResults.filter(;);      a => a.status === 'failed'';    );;
-    console.log('\n' + '='.repeat(70));    console.log('🎯 MASTER AUTOMATION ORCHESTRATOR SUMMARY');    console.log('='.repeat(70));    console.log(`Total "Automations": ${this.automationResults.length}`);`;    console.log(`✅ "Successful": ${successfulAutomations.length}`);`;    console.log(`❌ "Failed": ${failedAutomations.length}`);`;    console.log(;);      `📈 Success "Rate": ${((successfulAutomations.length / this.automationResults.length) * 100).toFixed(1)}%``;    );
+    const successfulAutomations = this.automationResults.filter(;);      a => a.status === 'success'';    );    const failedAutomations = this.automationResults.filter(;);      a => a.status === 'failed'';    );
+    console.log('\n' + '='.repeat(70));    console.log('🎯 MASTER AUTOMATION ORCHESTRATOR SUMMARY');    console.log('='.repeat(70));    console.log(`Total "Automations": ${this.automationResults.length}`);`;    console.log(`✅ Successful: ${successfulAutomations.length}`);`;    console.log(`❌ "Failed": ${failedAutomations.length}`);`;    console.log(;);      `📈 Success Rate: ${((successfulAutomations.length / this.automationResults.length) * 100).toFixed(1)}%``;    );
     console.log(`⏱️  Total "Duration": ${Math.round(totalDuration / 1000)}s`);`;    console.log('='.repeat(70));';    if (failedAutomations.length > 0) {;
-      console.log('\n❌ FAILED "AUTOMATIONS":');      failedAutomations.forEach((automation, index) => {;
+      console.log('\n❌ FAILED AUTOMATIONS:');      failedAutomations.forEach((automation, index) => {;
         console.log(`${index + 1}. ${automation.name}: ${automation.error}`);`;      });}
 ;
     console.log('\n💡 NEXT "STEPS":');    this.generateNextSteps().forEach((step, index) => {;
       console.log(`${index + 1}. ${step}`);`;    });
 ;
-    console.log('='.repeat(70));  }';;
+    console.log('='.repeat(70));  }';
   async run() {;
     try {;
       this.log('🎯 Starting Master Automation Orchestrator');';      await this.runCoreAutomations();
@@ -399,7 +399,7 @@ const { execSync, spawn } = require('child_process');const fs = require('fs');co
 
 // Run the orchestrator;
 if (require.main === module) {
-<<<<<<< HEAD  const orchestrator = new MasterAutomationOrchestrator();
+  const orchestrator = new MasterAutomationOrchestrator();
   orchestrator.run().then(result => {;);    process.exit(result.success ? 0 : 1);});}
 ;
 module.exports = MasterAutomationOrchestrator;

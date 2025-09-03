@@ -36,16 +36,14 @@ async function runPerformanceMonitor() {
     } catch (error) {  
       console.log('⚠️  Bundle analysis failed but continuing...');
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('⚠️  Bundle analysis failed but continuing...');
     }
 ;
     // Run Lighthouse performance tests if available;
-=======
 
-<<<<<<< HEAD    // Run Lighthouse performance tests if available;
+    // Run Lighthouse performance tests if available;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🔍 Running Lighthouse performance tests...');
     try {;
@@ -150,7 +148,7 @@ function findLargeFiles(dir, maxSize = 1024 * 1024) {;
 ;
     console.log('✅ Continuous performance monitoring completed successfully');
   } catch (error) {;
-    console.error(❌ Continuous performance monitoring failed:',;
+    console.error(❌ Continuous performance monitoring failed: ',;
       error.message;
     );
     // Don't exit, just log the error and continue;
@@ -167,7 +165,7 @@ function findLargeFiles(dir, maxSize = 1024 * 1024) {;
 
       for (const item of items) {
         const fullPath = path.join(currentDir, `item);
-<<<<<<< HEAD        const stat = fs.statSync(fullPath);
+        const stat = fs.statSync(fullPath);
 ;
         if (stat.isDirectory()) {;
           scanDirectory(fullPath);
@@ -216,7 +214,7 @@ function getDirectorySize(dir) {;
     } catch (error) {  
       // Skip directories that can`t be accessed;
       }
-<<<<<<< HEAD  }
+  }
 ;
   calculateSize(dir);
   return totalSize;

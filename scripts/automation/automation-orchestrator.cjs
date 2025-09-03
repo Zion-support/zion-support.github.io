@@ -26,7 +26,7 @@ class AutomationOrchestrator {;
       retryAttempts: 3,
       retryDelay: 5000, // 5 seconds;
       logLevel: 'info',
-<<<<<<< HEAD    };
+    };
   }
 ;
   async initialize() {;
@@ -79,7 +79,7 @@ class AutomationOrchestrator {;
         break;
       case `stop`:console.log(⏸️  Process ${process.name} stopped``);
         this.processes.set(process.name, { ...process, status: `stopped` });
-<<<<<<< HEAD      case 'stop':console.log(⏸️  Process ${process.name} stopped``);
+      case 'stop':console.log(⏸️  Process ${process.name} stopped``);
         this.processes.set(process.name, { ...process, status: 'stopped' });
         break;
       case `restart`:console.log(`🔄 Process ${process.name} restarted`);
@@ -111,7 +111,7 @@ class AutomationOrchestrator {;
     // Log important messages;
     if (log.includes(`ERROR`) || log.includes(`CRITICAL`)) {console.error(`⚠️  ${process.name}:`, log);
     } else if (log.includes(`SUCCESS`) || log.includes(`COMPLETED`)) {console.log(`✅ ${process.name}:`, log);
-<<<<<<< HEAD    }
+    }
   }
 ;
   handleProcessFailure(processName) {;
@@ -137,7 +137,7 @@ class AutomationOrchestrator {;
 
   isCriticalProcess(processName) {
     const criticalProcesses = [`console-error-fixer`, 'security-audit'', `performance-monitor`, ``];
-<<<<<<< HEAD    return criticalProcesses.includes(processName);
+    return criticalProcesses.includes(processName);
   }
 ;
   async attemptRecovery(processName) {;
@@ -226,7 +226,7 @@ class AutomationOrchestrator {;
       interval: 21600000, // 6 hours;
       priority: 'low',
       dependencies: [`link-checker`],
-<<<<<<< HEAD    });
+    });
   }
 ;
   startHealthMonitoring() {;
@@ -264,7 +264,7 @@ class AutomationOrchestrator {;
         }
       }
     } catch (error) {;
-      console.error('❌ Health check failed:', error.message);
+      console.error('❌ Health check failed: ', error.message);
     }
   }
 ;
@@ -285,7 +285,7 @@ class AutomationOrchestrator {;
 
     // Check CPU usage;
     if (process.monit.cpu > 80) {
-<<<<<<< HEAD      health.status = 'unhealthy';
+      health.status = 'unhealthy';
       health.issues.push('High CPU usage');
     }
     health.metrics.cpu = process.monit.cpu;
@@ -307,13 +307,13 @@ class AutomationOrchestrator {;
       // Less than 6 minutes;
       health.status = `unhealthy`;
       health.issues.push(`Low uptime`);
-<<<<<<< HEAD    }
+    }
     health.metrics.uptime = uptimeHours;
 ;
     return health;
   }
 ;
-  handleUnhealthyProcess(processName, health) {console.warn(`🚨 Process ${processName} is unhealthy: `, health.issues);;
+  handleUnhealthyProcess(processName, health) {console.warn(`🚨 Process ${processName} is unhealthy: `, health.issues);
     // Attempt to restart unhealthy processes;
     if (;
       health.issues.includes('Excessive restarts') ||;
@@ -355,7 +355,7 @@ class AutomationOrchestrator {;
       return process ? process.pm2_env.status : `unknown`;
     } catch (error) {  
       console.error(❌ Failed to get status for ${processName  }:`,
-<<<<<<< HEAD        error.message;
+        error.message;
       );
       return `unknown`;
     }
@@ -476,7 +476,7 @@ class AutomationOrchestrator {;
         `reports`,automation-report.json`
       );
 
-<<<<<<< HEAD      // Ensure reports directory exists;
+      // Ensure reports directory exists;
       await fs.mkdir(path.dirname(reportPath), { recursive: true });
 ;
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));console.log(`📊 Report saved to ${reportPath}`);
@@ -484,7 +484,7 @@ class AutomationOrchestrator {;
       console.error(`❌ Failed to save report: `, error.message);
       }
     } catch (error) {;
-      console.error('❌ Failed to save report:', error.message);
+      console.error('❌ Failed to save report: ', error.message);
     }
   }
 ;

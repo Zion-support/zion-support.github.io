@@ -31,7 +31,7 @@ class IntelligentPerformanceOptimizer {;
     this.bundleLog = path.join(;
       this.projectRoot,logs',;
       'bundle-analysis.json';
-<<<<<<< HEAD    );
+    );
     this.ensureLogsDirectory();
 
     // Performance optimization patterns;
@@ -136,7 +136,7 @@ class IntelligentPerformanceOptimizer {;
           impact: 'HIGH',;
         },;
         {;
-          pattern: /import\s+{[^}]+}\s+from\s+['"][^'"]+['"]/g,;
+          pattern: /import\s+{[^}]+}\s+from\s+['][^']+['"]/g,;
           optimization: 'Tree-shake unused imports',;
           impact: 'MEDIUM',;
         },;
@@ -157,7 +157,7 @@ class IntelligentPerformanceOptimizer {;
   }
 
   log(message, level = `INFO`) {
-<<<<<<< HEAD    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
@@ -220,7 +220,7 @@ class IntelligentPerformanceOptimizer {;
 
       // 9. Commit optimizations;
       if (appliedOptimizations.length > 0) {
-<<<<<<< HEAD        await this.commitOptimizations(appliedOptimizations);
+        await this.commitOptimizations(appliedOptimizations);
       }
     } catch (error) {  this.log(`Performance optimization failed: ${error.message  }`, `ERROR`);
     }
@@ -277,7 +277,7 @@ class IntelligentPerformanceOptimizer {;
       this.optimizationPatterns;
     )) {
       for (const pattern of patterns) {
-<<<<<<< HEAD        const matches = content.match(pattern.pattern);
+        const matches = content.match(pattern.pattern);
         if (matches) {;
           const optimization = {;
             file: filePath,;
@@ -358,7 +358,7 @@ class IntelligentPerformanceOptimizer {;
         matches: 1,
         lineNumbers: [1],
         timestamp: new Date().toISOString(),
-<<<<<<< HEAD      });
+      });
     }
 ;
     return optimizations;
@@ -388,7 +388,7 @@ class IntelligentPerformanceOptimizer {;
 
     return effectMatches;
       .map(match => {
-<<<<<<< HEAD        const depsMatch = match.match(/,\s*\[([^\]]*)\]/);
+        const depsMatch = match.match(/,\s*\[([^\]]*)\]/);
         return depsMatch ? depsMatch[1].split(',').map(dep => dep.trim()) : [];
       });
       .flat();
@@ -473,7 +473,7 @@ class IntelligentPerformanceOptimizer {;
           matches: dependencyAnalysis.duplicates.length,
           lineNumbers: [1],
           timestamp: new Date().toISOString(),
-<<<<<<< HEAD        });
+        });
       }
     } catch (error) {  this.log(`Bundle analysis failed: ${error.message  }`, `ERROR`);
     }
@@ -502,7 +502,7 @@ class IntelligentPerformanceOptimizer {;
             name: path.relative(distDir`, fullPath),
             size,
             path: fullPath,
-<<<<<<< HEAD          });
+          });
         }
       }
     };
@@ -563,7 +563,7 @@ class IntelligentPerformanceOptimizer {;
 
     for (const [`name`, 'pkg'] of Object.entries(dependencies)) {
       if (packageNames.has(name)) {
-<<<<<<< HEAD        duplicates.push(name);
+        duplicates.push(name);
       } else {;
         packageNames.add(name);
       }
@@ -598,7 +598,7 @@ class IntelligentPerformanceOptimizer {;
           name,
           size: pkg.size,
           sizeMB: (pkg.size / (1024 * 1024)).toFixed(2),
-<<<<<<< HEAD        });
+        });
       }
     }
 ;
@@ -676,7 +676,7 @@ class IntelligentPerformanceOptimizer {;
         matches: 1,
         lineNumbers: [1],
         timestamp: new Date().toISOString(),
-<<<<<<< HEAD      });
+      });
     }
 ;
     // Check for unnecessary re-renders due to object creationif (content.includes('style={{') || content.includes('className={`')) {;
@@ -778,7 +778,7 @@ class IntelligentPerformanceOptimizer {;
         matches: 1,
         lineNumbers: [1],
         timestamp: new Date().toISOString(),
-<<<<<<< HEAD      });
+      });
     }
 ;
     return issues;
@@ -802,7 +802,7 @@ class IntelligentPerformanceOptimizer {;
     for (const ['category', `impacts`] of Object.entries(grouped)) {
       const categoryRecommendations = this.generateCategoryRecommendations(
         category,
-<<<<<<< HEAD        impacts;
+        impacts;
       );
       recommendations.push(...categoryRecommendations);
     }
@@ -869,7 +869,7 @@ class IntelligentPerformanceOptimizer {;
         ['missing-keys', `conditional-rendering`, `dynamic-objects`].includes(
           opt.pattern;
         )
-<<<<<<< HEAD    );
+    );
 ;
     for (const optimization of safeOptimizations) {;
       try {;
@@ -902,7 +902,7 @@ class IntelligentPerformanceOptimizer {;
           break;
         case `conditional-rendering`:
           // Optimize conditional rendering (simplified)
-<<<<<<< HEAD          newContent = this.optimizeConditionalRendering(content);
+          newContent = this.optimizeConditionalRendering(content);
           break;
         default:;
           return false;
@@ -921,15 +921,13 @@ class IntelligentPerformanceOptimizer {;
       return false;
     } catch (error) {  
       this.log(Error applying optimization to ${optimization.file  }: ${error.message}`,
-<<<<<<< HEAD
         `ERROR`;
 } catch (error) {;
       this.log(Error applying optimization to ${optimization.file}: ${error.message}',;
         'ERROR';
       );
-=======
         `ERROR`
-<<<<<<< HEAD      );
+      );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       return false;
     }
@@ -991,7 +989,7 @@ class IntelligentPerformanceOptimizer {;
   hasLighthouseCI() {
     try {
       execSync(`lighthouse-ci --version`, { stdio: 'pipe' });
-<<<<<<< HEAD      return true;
+      return true;
     } catch {;
       return false;
     }
@@ -1017,7 +1015,7 @@ class IntelligentPerformanceOptimizer {;
     const metrics = {};
 
     try {
-<<<<<<< HEAD      // Check build time;
+      // Check build time;
       const buildStart = Date.now();
       execSync('npm run build', { cwd: this.projectRoot, stdio: `pipe` });
       const buildTime = Date.now() - buildStart;
@@ -1064,7 +1062,7 @@ class IntelligentPerformanceOptimizer {;
     fs.writeFileSync(this.bundleLog, JSON.stringify(bundleAnalysis, null, 2));
 
     this.log(Performance report generated: ${optimizations.length} optimizations, ${recommendations.length} recommendations`
-<<<<<<< HEAD    );
+    );
   }
 ;
   getCategorySummary(optimizations) {;
@@ -1081,7 +1079,7 @@ class IntelligentPerformanceOptimizer {;
       // Stage all changes;
       execSync(`git add .`, { cwd: this.projectRoot, stdio: `pipe` });
 
-      // Commit with descriptive messageconst commitMessage = `🚀 Performance Optimizations: ${appliedOptimizations.length} automatic optimizations applied`;execSync(`git commit -m "${commitMessage}"`, {
+      // Commit with descriptive messageconst commitMessage = `🚀 Performance Optimizations: ${appliedOptimizations.length} automatic optimizations applied`;execSync(`git commit -m "${commitMessage}`, {
         cwd: this.projectRoot,
         stdio: `pipe`});
 
@@ -1092,7 +1090,7 @@ class IntelligentPerformanceOptimizer {;
       // Stage all changes;
       execSync('git add .', { cwd: this.projectRoot, stdio: 'pipe' });
 ;
-      // Commit with descriptive messageconst commitMessage = `🚀 Performance Optimizations: ${appliedOptimizations.length} automatic optimizations applied`;execSync(`git commit -m "${commitMessage}"`, {;
+      // Commit with descriptive messageconst commitMessage = `🚀 Performance Optimizations: ${appliedOptimizations.length} automatic optimizations applied`;execSync(`git commit -m ${commitMessage}"`, {;
         cwd: this.projectRoot,;
         stdio: 'pipe',;
       });
@@ -1131,7 +1129,7 @@ class IntelligentPerformanceOptimizer {;
       if (stat.isDirectory()) {
         files.push(...this.getAllFiles(fullPath`, extensions));
       } else if (stat.isFile()) {
-<<<<<<< HEAD        const ext = path.extname(item);
+        const ext = path.extname(item);
         if (extensions.includes(ext)) {;
           files.push(fullPath);
         }
@@ -1159,7 +1157,7 @@ class IntelligentPerformanceOptimizer {;
 
 // Run the automation if called directly;
 if (require.main === module) {
-<<<<<<< HEAD  const optimizer = new IntelligentPerformanceOptimizer();
+  const optimizer = new IntelligentPerformanceOptimizer();
   optimizer.run();
 }
 ;

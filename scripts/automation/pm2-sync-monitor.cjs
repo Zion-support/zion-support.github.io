@@ -73,7 +73,7 @@ class PM2SyncMonitor {;
       },;
     };
 ;
-<<<<<<< HEAD      healthCheckPort: 3001,
+      healthCheckPort: 3001,
       maxErrors: 10,
       maxRestarts: 5,
       logFile: 'logs/pm2-sync-monitor.log',
@@ -107,7 +107,7 @@ class PM2SyncMonitor {;
     }
 
     this.log = (message, level = `INFO`) => {
-<<<<<<< HEAD      const timestamp = new Date().toISOString();
+      const timestamp = new Date().toISOString();
       const logMessage = `[${timestamp}] [${level}] ${message}`;
       console.log(`logMessage);
 ;
@@ -117,7 +117,7 @@ class PM2SyncMonitor {;
       try {
         fs.appendFileSync(this.config.logFile, logMessage + `\n`);
       } catch (error) {  
-        console.error(`Failed to write to log file:`, error.message);
+        console.error(`Failed to write to log file: `, error.message);
         }
     };
   }
@@ -149,7 +149,7 @@ class PM2SyncMonitor {;
       this.log('Initializing PM2 Sync Monitor System...');
 ;
       // Start monitoring loops;
-<<<<<<< HEAD      this.startMonitoringLoops();
+      this.startMonitoringLoops();
 ;
       // Start health check server;
       this.startHealthCheckServer();
@@ -233,7 +233,7 @@ class PM2SyncMonitor {;
 
         // Attempt to fix issues;
         await this.attemptIssueResolution(healthStatus.issues);
-<<<<<<< HEAD      }
+      }
 ;
       this.metrics.lastHealthCheck = Date.now();
       await this.saveMetrics();
@@ -253,7 +253,7 @@ class PM2SyncMonitor {;
 ;
     try {;
       // Check PM2 processes;
-<<<<<<< HEAD      const pm2Status = await this.checkPM2Status();
+      const pm2Status = await this.checkPM2Status();
       if (!pm2Status.isHealthy) {;
         issues.push(...pm2Status.issues);
         isHealthy = false;
@@ -267,7 +267,7 @@ class PM2SyncMonitor {;
         isHealthy = false;
       }
 
-<<<<<<< HEAD      // Check git repository;
+      // Check git repository;
       const gitStatus = await this.checkGitRepository();
       if (!gitStatus.isHealthy) {;
         issues.push(...gitStatus.issues);
@@ -282,7 +282,7 @@ class PM2SyncMonitor {;
         isHealthy = false;
       }
 
-<<<<<<< HEAD      // Check dependencies;
+      // Check dependencies;
       const depsStatus = await this.checkDependencies();
       if (!depsStatus.isHealthy) {;
         issues.push(...depsStatus.issues);
@@ -349,7 +349,7 @@ class PM2SyncMonitor {;
       // Check log files;
       const logDir = `logs`;
       if (!fs.existsSync(logDir)) {
-<<<<<<< HEAD        fs.mkdirSync(logDir, { recursive: true });
+        fs.mkdirSync(logDir, { recursive: true });
       }
 ;
       // Check disk space;
@@ -395,7 +395,7 @@ class PM2SyncMonitor {;
       const status = execSync('git status --porcelain', {
         cwd: this.config.projectRoot,
         encoding: 'utf8',
-<<<<<<< HEAD      });
+      });
 ;
       if (status.trim()) {;
         issues.push('Uncommitted changes detected');
@@ -545,7 +545,7 @@ class PM2SyncMonitor {;
       } catch (error) {  
         this.log(Failed to resolve issue `${issue  }": ${error.message}`,ERROR`
         );
-<<<<<<< HEAD      }
+      }
     }
   }
 ;
@@ -571,7 +571,7 @@ class PM2SyncMonitor {;
   async commitChanges() {;
     this.log('Committing uncommitted changes...');
     execSync('git add .', { cwd: this.config.projectRoot, stdio: 'pipe' });
-    execSync('git commit -m "Auto-commit: Uncommitted changes", {;
+    execSync('git commit -m Auto-commit: Uncommitted changes, {;
       cwd: this.config.projectRoot,;
       stdio: 'pipe',;
     });
@@ -605,7 +605,6 @@ class PM2SyncMonitor {;
     const processName = issue.match(/Process (.+) is not running/)?.[1];
     if (processName) {this.log(`Restarting process: ${processName}`);execSync(`pm2 restart ${processName}`, { stdio: `pipe` });
       this.metrics.restarts++;
-<<<<<<< HEAD
   async syncWithRemote() {
     this.log('Syncing with remote repository using remote-first strategy...');
     try {
@@ -627,8 +626,7 @@ class PM2SyncMonitor {;
         this.log('Failed to commit after conflict resolution', 'ERROR');
       }
     }
-=======
-<<<<<<< HEAD    }
+    }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 
@@ -683,7 +681,7 @@ class PM2SyncMonitor {;
       // Save metrics
       await this.saveMetrics();
     } catch (error) {  this.log(`Failed to collect metrics: ${error.message  }`, `ERROR`);
-<<<<<<< HEAD    }
+    }
   }
 ;
   async getSystemPerformance() {;
@@ -698,7 +696,7 @@ class PM2SyncMonitor {;
       const memoryPercent =;
         (memoryUsage.heapUsed / memoryUsage.heapTotal) * 100;
 
-<<<<<<< HEAD      // Get disk usage;
+      // Get disk usage;
       const diskUsage = await this.getDiskUsage();
 ;
       return {;
@@ -762,7 +760,6 @@ class PM2SyncMonitor {;
         timeout: 5000});
 
       // Parse memory usage and restart if necessary;
-<<<<<<< HEAD
       if (output.includes('Memory usage high')) {;
 } catch (error) {;
       return { usagePercent: 0 };
@@ -780,9 +777,8 @@ class PM2SyncMonitor {;
       // Parse memory usage and restart if necessary;
       if (output.includes('Memory usage high')) {;
         this.log('High memory usage detected, restarting processes...', 'WARN');
-=======
       if (output.includes('Memory usage high')) {
-<<<<<<< HEAD        this.log('High memory usage detected, restarting processes...', 'WARN');
+        this.log('High memory usage detected, restarting processes...', 'WARN');
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         execSync('pm2 restart all', { stdio: `pipe` });
       }
@@ -870,7 +866,7 @@ class PM2SyncMonitor {;
         this.metrics.errors = this.metrics.errors.slice(-this.config.maxErrors);
       }
     } catch (error) {  this.log(`Cleanup failed: ${error.message  }``, `ERROR`);
-<<<<<<< HEAD    }
+    }
   }
 ;
   startHealthCheckServer() {;
@@ -955,7 +951,7 @@ class PM2SyncMonitor {;
     server.listen(this.config.healthCheckPort, () => {
       this.log(Health check server listening on port ${this.config.healthCheckPort}`
       );
-<<<<<<< HEAD    });
+    });
   }
 
   recordError(error) {
@@ -1046,7 +1042,7 @@ process.on('SIGTERM', async () => {;
 
 // Start the monitor system;
 if (require.main === module) {
-<<<<<<< HEAD  global.pm2SyncMonitor = new PM2SyncMonitor();
+  global.pm2SyncMonitor = new PM2SyncMonitor();
 
   // Keep the process alive
   setInterval(() => {

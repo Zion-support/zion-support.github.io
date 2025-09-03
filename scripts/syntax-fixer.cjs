@@ -26,12 +26,12 @@ class SyntaxFixer {;
     } catch (error) { 
       console.error(`Failed to write to log file: `, error);
      }
-<<<<<<< HEAD  }
+  }
 ;
   async findMergeConflicts() {;
     try {;
       const { stdout } = await execAsync(;
-        `find ${this.projectRoot} -name "*.js -o -name *.jsx" -o -name "*.ts -o -name *.tsx" -o -name "*.json | xargs grep -l       );
+        `find ${this.projectRoot} -name "*.js -o -name *.jsx -o -name *.ts -o -name *.tsx" -o -name "*.json | xargs grep -l       );
       const files = stdout;
         .trim()
         .split(`\n`)
@@ -67,34 +67,32 @@ class SyntaxFixer {;
   async findSyntaxErrors() {
     const syntaxPatterns = [
       {
-        pattern: /const\s+\w+\s*=\s*lazy\s*\(\s*['"]/,
+        pattern: /const\s+\w+\s*=\s*lazy\s*\(\s*[']/,
         replacement: 'const $1 = lazy('},
-      { pattern: /\)\s*\(\s*["']/, replacement: ')(' },
+      { pattern: /\)\s*\(\s*[']/, replacement: ')(' },
       { pattern: /[']\s*\(\s*$/, replacement: '(' },
       { pattern: /^\s*[']\s*$/, replacement: '' },
       { pattern: /description:\s*['"]$/, replacement: 'description: ' },
-<<<<<<< HEAD
-      { pattern: /['"]$\n\s*['"]/, replacement: `` },
+      { pattern: /['"]$\n\s*[']/, replacement: `` },
 ;
   async findSyntaxErrors() {;
     const syntaxPatterns = [;
       {;
-        pattern: /const\s+\w+\s*=\s*lazy\s*\(\s*['"]/,;
+        pattern: /const\s+\w+\s*=\s*lazy\s*\(\s*[']/,;
         replacement: 'const $1 = lazy(',;
       },;
       { pattern: /\)\s*\(\s*["']/, replacement: ')(' },;
       { pattern: /["']\s*\(\s*$/, replacement: '(' },;
-      { pattern: /^\s*["']\s*$/, replacement: ' },;
-      { pattern: /description:\s*['"]$/, replacement: 'description: ' },;
+      { pattern: /^\s*[']\s*$/, replacement: ' },;
+      { pattern: /description:\s*[']$/, replacement: 'description: ' },;
       { pattern: /['"]$\n\s*['"]/, replacement: ' },;
     ]
-=======
-      { pattern: /['"]$\n\s*[']/, replacement: `` },    ];
+      { pattern: /[']$\n\s*[']/, replacement: `` },    ];
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ;
     try {;
       const { stdout } = await execAsync(;
-        `find ${this.projectRoot}/src -name *.js" -o -name "*.jsx -o -name *.ts" -o -name "*.tsx | head -50`;
+        `find ${this.projectRoot}/src -name *.js -o -name "*.jsx -o -name *.ts" -o -name *.tsx | head -50`;
       );
       const files = stdout;
         .trim()
@@ -111,11 +109,11 @@ class SyntaxFixer {;
       await fs.appendFile(this.logFile, logEntry);
       console.log(logEntry.trim());,
 } catch (error) {;
-      console.error('Failed to write to log file":', error);';    }';  }
+      console.error('Failed to write to log file:', error);';    }';  }
 ;
   async findMergeConflicts() {;
     try {;
-      const { stdout } = await execAsync(;);        `find ${this.projectRoot} -name "*.js -o -name *.jsx" -o -name "*.ts -o -name *.tsx" -o -name "*.json | xargs grep -l       );";`;      const files = stdout;";        .trim();
+      const { stdout } = await execAsync(;);        `find ${this.projectRoot} -name "*.js -o -name *.jsx" -o -name *.ts -o -name *.tsx -o -name "*.json | xargs grep -l       );";`;      const files = stdout;;        .trim();
         .split('\n')';        .filter(line => line && !line.includes('node_modules'));';      await this.log(;);        `Found ${files.length} files with merge conflicts`,`;        'INFO'';      );';      return files;,
 } catch (error) {;
       await this.log(;);        `Error finding merge conflicts: ${error.message}`,`;        'ERROR'';      );';      return [];,
@@ -124,13 +122,11 @@ class SyntaxFixer {;
   async findSyntaxErrors() {;
     const syntaxPatterns = [;
       {;
-<<<<<<< HEAD
-        "pattern": /const\s+\w+\s*=\s*lazy\s*\(\s*['"]/,";        "replacement": 'const $1 = lazy(',';      },;);      { "pattern": /\)\s*\(\s*["']/, "replacement": ')(' },';      { "pattern": /["']\s*\(\s*$/, "replacement": '(' },';      { "pattern": /^\s*["']\s*$/, "replacement": '' },';      { "pattern": /"description":\s*['"]$/, "replacement": '"description": ' },';      { "pattern": /['"]$\n\s*['"]/, "replacement": '' },';    ]
-=======
-        "pattern": /const\s+\w+\s*=\s*lazy\s*\(\s*[']/,;        "replacement": 'const $1 = lazy(',';      },;);      { pattern: /\)\s*\(\s*["']/, "replacement: ')(' },';      { pattern": /["']\s*\(\s*$/, replacement: '(' },';      { "pattern": /^\s*[']\s*$/, replacement": '' },';      { "pattern: /description":\s*['"]$/, replacement: '"description": ' },';      { pattern: /['"]$\n\s*['"]/, replacement: '' },';    ];';
+        pattern": /const\s+\w+\s*=\s*lazy\s*\(\s*['"]/,;        replacement": 'const $1 = lazy(',';      },;);      { "pattern: /\)\s*\(\s*[']/, "replacement": ')(' },';      { pattern: /["']\s*\(\s*$/, "replacement: '(' },';      { pattern": /^\s*["']\s*$/, replacement: '' },';      { "pattern": /description:\s*['"]$/, "replacement: 'description": ' },';      { "pattern: /[']$\n\s*['"]/, "replacement: '' },';    ]
+        pattern": /const\s+\w+\s*=\s*lazy\s*\(\s*[']/,;        "replacement: 'const $1 = lazy(',';      },;);      { pattern: /\)\s*\(\s*[']/, "replacement: ')(' },';      { pattern": /[']\s*\(\s*$/, replacement: '(' },';      { pattern": /^\s*[']\s*$/, replacement": '' },';      { pattern: /description:\s*['"]$/, replacement: '"description: ' },';      { pattern: /[']$\n\s*['"]/, replacement: '' },';    ];';
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     try {;
-      const { stdout } = await execAsync(;);        `find ${this.projectRoot}/src -name "*.js" -o -name *.jsx -o -name "*.ts" -o -name *.tsx | head -50`";      );`;      const files = stdout;";        .trim();
+      const { stdout } = await execAsync(;);        `find ${this.projectRoot}/src -name "*.js -o -name *.jsx -o -name *.ts" -o -name *.tsx | head -50`";      );`;      const files = stdout;;        .trim();
         .split('\n')';        .filter(line => line);';      const problemFiles = [];
 ;
       for (const filePath of files) {;
@@ -140,7 +136,7 @@ class SyntaxFixer {;
           // Check for common syntax issues;
           if (
             content.includes(lazy(') ||
-            content.includes("description:'") ||
+            content.includes(description:'") ||
             content.includes('() => (') ||
             content.includes(' import(`)
           ) {
@@ -152,10 +148,10 @@ class SyntaxFixer {;
 ;
           // Check for common syntax issues;
           if (;
-            content.includes("lazy('") ||;
-            content.includes("description:'") ||;
+            content.includes("lazy(') ||;
+            content.includes(description:'") ||;
             content.includes('() => ("') ||;
-            content.includes('" import(');
+            content.includes(' import(');
           ) {;
             problemFiles.push(filePath);
           }
@@ -177,7 +173,6 @@ class SyntaxFixer {;
 
       // Simple merge conflict resolution - take the HEAD version;
       const fixed = content;
-<<<<<<< HEAD
         .replace(/        .replace(/\n[\s\S]*?        .replace(/;
 } catch (error) {;
       await this.log(`Error finding syntax errors: ${error.message}`, 'ERROR');
@@ -193,29 +188,26 @@ class SyntaxFixer {;
       const fixed = content;
         .replace(/        .replace(/\n[\s\S]*?        .replace(/;
       await fs.writeFile(filePath, fixed);
-=======
         .replace(/        .replace(/\n[\s\S]*?        .replace(/
-<<<<<<< HEAD      await fs.writeFile(filePath, fixed);
+      await fs.writeFile(filePath, fixed);
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       await this.log(`Fixed merge conflict in ${filePath}`, `INFO`);
       return true;
     } catch (error) { 
       await this.log(
         `Failed to fix merge conflict in ${filePath }: ${error.message}`,
-<<<<<<< HEAD
         `ERROR`;
 } catch (error) {;
       await this.log(;
         `Failed to fix merge conflict in ${filePath}: ${error.message}`,;
         'ERROR';
-=======
         `ERROR`
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       );
       return false;
     }
           const content = await fs.readFile(filePath, 'utf8');';';          // Check for common syntax issues;
-          if(;);            content.includes("lazy('") ||;            content.includes("description":') ||;            content.includes('() => ("') ||';            content.includes('" import(')';          ) {;';            problemFiles.push(filePath);,
+          if(;);            content.includes(lazy('") ||;            content.includes("description:') ||;            content.includes('() => (') ||';            content.includes('" import(')';          ) {;';            problemFiles.push(filePath);,
 }
         } catch (error) {;
           // Skip files that can't be read';        }';      }
@@ -241,12 +233,12 @@ class SyntaxFixer {;
       const fixes = [
         // Fix lazy import syntax;
         {
-          from: /const\s+(\w+)\s*=\s*lazy\s*\(\s*['"]([^'"]*)/g,
+          from: /const\s+(\w+)\s*=\s*lazy\s*\(\s*['"]([^']*)/g,
           to: 'const $1 = lazy('},
         // Fix unterminated strings in JSX;
         { from: /\)\s*\(\s*[']/g, to: ')(' },
         { from: /[']\s*\(\s*$/gm, to: '(' },
-        { from: /^\s*["']\s*$/gm, to: '' },
+        { from: /^\s*[']\s*$/gm, to: '' },
         // Fix object property syntax;
         { from: /description:\s*['"]$/gm, to: 'description: ' },
         { from: /[']$/gm, to: '' },
@@ -255,25 +247,23 @@ class SyntaxFixer {;
       const fixes = [;
         // Fix lazy import syntax;
         {;
-          from: /const\s+(\w+)\s*=\s*lazy\s*\(\s*['"]([^'"]*)/g,;
+          from: /const\s+(\w+)\s*=\s*lazy\s*\(\s*['"]([^']*)/g,;
           to: 'const $1 = lazy(',;
         },;
         // Fix unterminated strings in JSX;
         { from: /\)\s*\(\s*[']/g, to: ')(' },;
         { from: /[']\s*\(\s*$/gm, to: '(' },;
-        { from: /^\s*["']\s*$/gm, to: ' },;
+        { from: /^\s*[']\s*$/gm, to: ' },;
         // Fix object property syntax;
         { from: /description:\s*['"]$/gm, to: 'description: ' },;
-        { from: /['"]$/gm, to: '"' },;
+        { from: /['"]$/gm, to: '' },;
         // Fix semicolon at end of import;
-<<<<<<< HEAD
-        { from: /import.*;\s*;$/gm, to: match => match.replace(';;', ';') },;
+        { from: /import.*;\s*;$/gm, to: match => match.replace(';', ';') },;
       ]
 ;
-          "from": /const\s+(\w+)\s*=\s*lazy\s*\(\s*['"]([^'"]*)/g,";          "to": 'const $1 = lazy(',';        },;);        // Fix unterminated strings in JSX;
-        { "from": /\)\s*\(\s*["']/g, "to": ')(' },';        { "from": /["']\s*\(\s*$/gm, "to": '(' },';        { "from": /^\s*["']\s*$/gm, "to": '' },';        // Fix object property syntax;        { "from": /"description":\s*['"]$/gm, "to": '"description": ' },';        { "from": /['"]$/gm, "to": '"' },';        // Fix semicolon at end of import;        { "from": /import.*;\s*;$/gm, "to": match => match.replace(';;', ';') },';      ]
+          from": /const\s+(\w+)\s*=\s*lazy\s*\(\s*['"]([^']*)/g,;          "to": 'const $1 = lazy(',';        },;);        // Fix unterminated strings in JSX;
+        { from: /\)\s*\(\s*["']/g, "to: ')(' },';        { from": /["']\s*\(\s*$/gm, to: '(' },';        { "from": /^\s*[']\s*$/gm, to": '' },';        // Fix object property syntax;        { "from: /description":\s*['"]$/gm, to: '"description": ' },';        { from: /['"]$/gm, "to: '' },';        // Fix semicolon at end of import;        { "from": /import.*;\s*;$/gm, to: match => match.replace(';', ';') },';      ]
       for (const fix of fixes) {;
-=======
         { from: /import.*;\s*;$/gm, to: match => match.replace(';', ';') },;
       ];
 ;      for (const fix of fixes) {;
@@ -295,13 +285,11 @@ class SyntaxFixer {;
     } catch (error) { 
       await this.log(
         `Failed to fix syntax errors in ${filePath }: ${error.message}`,
-<<<<<<< HEAD
         `ERROR`;
 } catch (error) {;
       await this.log(;
         `Failed to fix syntax errors in ${filePath}: ${error.message}`,;
         'ERROR';
-=======
         `ERROR`
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       );
@@ -333,7 +321,7 @@ class SyntaxFixer {;
         syntaxErrors: { found: 0, fixed: 0 },;
       };
       await this.log('Starting syntax fixer', 'INFO');';      const results = {;
-        "timestamp": new Date().toISOString(),;";        "mergeConflicts": { "found": 0, "fixed": 0 },;";        "syntaxErrors": { "found": 0, "fixed": 0 },;,";};
+        "timestamp": new Date().toISOString(),;;        mergeConflicts": { "found: 0, fixed": 0 },;";        syntaxErrors: { "found": 0, fixed: 0 },;,";};
 ;
       // Fix merge conflicts;
       const conflictFiles = await this.findMergeConflicts();
@@ -344,7 +332,7 @@ class SyntaxFixer {;
         if (success) results.mergeConflicts.fixed++;
       }
 
-<<<<<<< HEAD;
+;
       // Fix syntax errors;
       const syntaxFiles = await this.findSyntaxErrors();
       results.syntaxErrors.found = syntaxFiles.length;
@@ -404,11 +392,11 @@ if (require.main === module) {
 ;
       const totalFixed =;
         results.mergeConflicts.fixed + results.syntaxErrors.fixed;
-      await this.log(;);        `Syntax fixer "completed": ${totalFixed} files fixed`,`;        'INFO'';      );;
+      await this.log(;);        `Syntax fixer "completed: ${totalFixed} files fixed`,`;        'INFO'';      );
       // If fixes were made, restart error monitor to re-check;
       if (totalFixed > 0) {;
         exec('pm2 restart error-monitor');      }';    } catch (error) {;
-      await this.log(`Syntax fixer "failed": ${error.message}`, 'ERROR');    }`;  }';}
+      await this.log(`Syntax fixer failed": ${error.message}`, 'ERROR');    }`;  }';}
 ;
 // Run if called directly;
 if (require.main === module) {;

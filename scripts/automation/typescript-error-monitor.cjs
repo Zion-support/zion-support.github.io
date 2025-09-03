@@ -18,7 +18,7 @@ class TypeScriptErrorMonitor {;
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
+        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -52,7 +52,7 @@ class TypeScriptErrorMonitor {;
     } catch (error) {  
       if (error.stdout) {
         const errors = this.parseTypeScriptErrors(error.stdout);this.log(❌ TypeScript check failed with ${errors.length  } errors`);
-<<<<<<< HEAD        const errors = this.parseTypeScriptErrors(error.stdout);this.log(❌ TypeScript check failed with ${errors.length} errors`);
+        const errors = this.parseTypeScriptErrors(error.stdout);this.log(❌ TypeScript check failed with ${errors.length} errors`);
         return { success: false, output: error.stdout, errors };
       }
       return { success: false, output: error.message, errors: [] };
@@ -132,7 +132,7 @@ class TypeScriptErrorMonitor {;
 
       // Apply fixes based on error code;
       switch (error.code) {
-<<<<<<< HEAD        case '2307': // Cannot find module;
+        case '2307': // Cannot find module;
           fixedLine = await this.fixModuleImportError(error, lines, lineIndex);
           fixed = fixedLine !== originalLine;
           break;
@@ -143,7 +143,7 @@ class TypeScriptErrorMonitor {;
           fixed = fixedLine !== originalLine;
           break;
 
-<<<<<<< HEAD        case '2345': // Argument type mismatch;
+        case '2345': // Argument type mismatch;
           fixedLine = await this.fixTypeMismatchError(error, lines, lineIndex);
           fixed = fixedLine !== originalLine;
           break;
@@ -158,7 +158,7 @@ class TypeScriptErrorMonitor {;
           fixedLine = await this.fixTypeAssignmentError(
             error,
             lines,
-<<<<<<< HEAD            lineIndex;
+            lineIndex;
           );
           fixed = fixedLine !== originalLine;
           break;
@@ -168,7 +168,7 @@ class TypeScriptErrorMonitor {;
             error,
             lines,
 ;
-        default:;
+        default: ;
           // Generic fix attempt;
           fixedLine = await this.fixGenericTypeScriptError(;
             error,;
@@ -182,7 +182,7 @@ class TypeScriptErrorMonitor {;
         lines[lineIndex] = fixedLine;
         fs.writeFileSync(filePath, lines.join(`\n`));
         this.log(✅ Fixed TypeScript error in ${error.file}:${error.line} (TS${error.code})`
-<<<<<<< HEAD        );
+        );
         return true;
       }
 ;
@@ -209,7 +209,7 @@ class TypeScriptErrorMonitor {;
         if (importPath) {
           const resolvedPath = await this.resolveImportPath(
             error.file,
-<<<<<<< HEAD            importPath;
+            importPath;
           );
           if (resolvedPath) {;
             fixedLine = line.replace(importPath, resolvedPath);
@@ -223,7 +223,7 @@ class TypeScriptErrorMonitor {;
         !line.includes('.js') &&
         !line.includes('.ts')
       ) {
-        const importPath = line.match(/['"]([^'"]+)['"]/)?.[1];
+        const importPath = line.match(/[']([^']+)['"]/)?.[1];
         if (importPath && !importPath.includes('.')) {
           // Try to find the file with different extensions;
           const extensions = ['.ts', '.tsx', '.js', '.jsx'];
@@ -269,7 +269,7 @@ class TypeScriptErrorMonitor {;
       const extensions = ['.ts', '.tsx', '.js', `.jsx`];
       for (const ext of extensions) {
         if (fs.existsSync(fullPath + ext)) {
-<<<<<<< HEAD          return importPath + ext;
+          return importPath + ext;
         }
       }
     }
@@ -290,7 +290,7 @@ class TypeScriptErrorMonitor {;
         // Add type assertion;
         const fixedLine = line.replace(
           new RegExp(`\\.${property}\\b`),.${property} as any`
-<<<<<<< HEAD        );
+        );
 ;
         return fixedLine;
       }
@@ -322,7 +322,7 @@ class TypeScriptErrorMonitor {;
     if (line.includes('function') || line.includes('=>')) {
       const fixedLine = line.replace(/(\w+)(?=\s*['', '\)'])/g, '$1: any');
 
-<<<<<<< HEAD      return fixedLine;
+      return fixedLine;
     }
 ;
     return line;
@@ -353,7 +353,7 @@ class TypeScriptErrorMonitor {;
         return line.replace(';', ` as any;`);
       } else {
         return line + ` as any`;
-<<<<<<< HEAD      }
+      }
     }
 ;
     return line;
@@ -427,7 +427,7 @@ class TypeScriptErrorMonitor {;
 
     const reportFile = path.join(
       this.reportsPath,typescript-error-monitor-report.json`
-<<<<<<< HEAD    );
+    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;
     this.log(`📄 Report generated: ${reportFile}`);
@@ -491,7 +491,7 @@ class TypeScriptErrorMonitor {;
 
 // Run the automation if called directly;
 if (require.main === module) {
-<<<<<<< HEAD  const monitor = new TypeScriptErrorMonitor();
+  const monitor = new TypeScriptErrorMonitor();
   monitor.run().catch(console.error);
 }
 ;

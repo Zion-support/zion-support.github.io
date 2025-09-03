@@ -37,7 +37,7 @@ class QuickErrorChecker {;
       return { success: true, output: result };
     } catch (error) {  
       return { success: false, output: error.stdout || error.stderr || error.message   };
-<<<<<<< HEAD    }
+    }
   }
 ;
   async checkSyntaxErrors() {;
@@ -71,7 +71,7 @@ class QuickErrorChecker {;
               type: `syntax-fix`,
               file: file,
               timestamp: new Date().toISOString()
-<<<<<<< HEAD          if (content.includes('}\n  }') || content.includes(']\n  }')) {await this.log(🔧 Fixing syntax in ${file}`);
+          if (content.includes('}\n  }') || content.includes(']\n  }')) {await this.log(🔧 Fixing syntax in ${file}`);
             let fixedContent = content;
               .replace(/(\w+:\s*['^', '}']+)\s*\n\s*(\w+:)/g, '$1,\n  $2');
               .replace(/(\w+:\s*\[[^\]]*\])\s*\n\s*(\w+:)/g, '$1,\n  $2');
@@ -102,7 +102,7 @@ class QuickErrorChecker {;
         
         // Check if file uses React but doesn't import it;
         if ((content.includes(`React.`) || content.includes(`<React.`)) && !content.includes("import React)) {await this.log(`🔧 Adding React import to ${file}`);
-          const fixedContent = import React from `react`;\n" + content;
+          const fixedContent = import React from `react`;\n + content;
           await fs.writeFile(filePath, fixedContent);
           this.fixesApplied.push({
             type: `import-fix`,
@@ -121,7 +121,7 @@ class QuickErrorChecker {;
         const content = await fs.readFile(filePath', 'utf8');
         ;
         // Check if file uses React but doesn't import it;
-        if ((content.includes('React.') || content.includes('<React.')) && !content.includes("import React")) {await this.log(`🔧 Adding React import to ${file}`);
+        if ((content.includes('React.') || content.includes('<React.')) && !content.includes(import React")) {await this.log(`🔧 Adding React import to ${file}`);
           const fixedContent = "import React from 'react';\n" + content;
           await fs.writeFile(filePath, fixedContent);
           this.fixesApplied.push({;
@@ -140,7 +140,7 @@ class QuickErrorChecker {;
     
     try {
       const eslintPath = path.join(this.projectRoot, `.eslintrc.js`);
-<<<<<<< HEAD      const content = await fs.readFile(eslintPath, 'utf8');
+      const content = await fs.readFile(eslintPath, 'utf8');
       ;
       if (!content.includes('module.exports')) {;
         await this.log('🔧 Fixing ESLint configuration...');const fixedConfig = `module.exports = {;
@@ -169,7 +169,7 @@ class QuickErrorChecker {;
     try {
       await this.log(`🚀 Starting Quick Error Check`);
       
-<<<<<<< HEAD      await this.checkSyntaxErrors();
+      await this.checkSyntaxErrors();
       await this.checkImportErrors();
       await this.checkESLintConfig();
       ;

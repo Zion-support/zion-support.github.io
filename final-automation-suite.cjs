@@ -21,10 +21,8 @@ class FinalAutomationSuite {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-<<<<<<< HEAD
         timeout: 300000, // 5 minutes timeout;
 });
-=======
         stdio: 'pipe'
       });
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
@@ -40,7 +38,6 @@ class FinalAutomationSuite {
   async checkGitStatus() {
     this.log('📊 Checking git status...');
     try {
-<<<<<<< HEAD
       // Build the project
       console.log('🏗️ Building project...');
       execSync('npm run build', { stdio: 'inherit' });
@@ -55,7 +52,7 @@ class FinalAutomationSuite {
       
       console.log('✅ Deployment completed successfully!');
     } catch (error) {
-      console.error('❌ Deployment failed:', error.message);
+      console.error('❌ Deployment failed: ', error.message);
       process.exit(1);
     }
   }
@@ -127,14 +124,12 @@ class CodeQualityChecker {
       console.log('Issues found:');
       issues.forEach(issue => {
         console.log(\`  - \${issue.file}: \${issue.message}\`);
-=======
       const status = execSync('git status --porcelain', {
         cwd: this.projectRoot,
         encoding: 'utf8'
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       });
       
-<<<<<<< HEAD
       if (stat.isDirectory()) {
         files.push(...this.getAllFiles(fullPath, extensions));
       } else if (stat.isFile()) {
@@ -186,7 +181,7 @@ class DependencyUpdater {
       
       console.log('✅ Dependencies updated successfully!');
     } catch (error) {
-      console.error('❌ Dependency update failed:', error.message);
+      console.error('❌ Dependency update failed: ', error.message);
     }
   }
 }
@@ -230,7 +225,7 @@ class PerformanceMonitor {
       metrics.nodeModulesSize = nodeModulesSize;
     }
     
-    console.log('📊 Performance metrics:', JSON.stringify(metrics, null, 2));
+    console.log('📊 Performance metrics: ', JSON.stringify(metrics, null, 2));
     
     // Save metrics to file
     const metricsFile = path.join(this.projectRoot, 'performance-metrics.json');
@@ -254,7 +249,6 @@ class PerformanceMonitor {
       
       if (stat.isDirectory()) {
         size += this.getDirectorySize(fullPath);
-=======
       if (status.trim()) {
         this.log('📝 Changes detected:');
         console.log(status);
@@ -268,7 +262,6 @@ class PerformanceMonitor {
       this.log(`❌ Git status check failed: ${error.message}`);
       return false;
     }
-<<<<<<< HEAD
     
     return size;
   }
@@ -292,7 +285,6 @@ monitor.monitorPerformance();
     }
 
     return { success: true, scriptsCreated: scripts.length };
-=======
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 
@@ -395,7 +387,6 @@ Enhancements: Performance, Security, SEO, Accessibility`;
           'File Cleanup',
           'Configuration Fixes'
         ]
-<<<<<<< HEAD
 },
       nextSteps: [
         'Review and test all automation scripts',
@@ -405,7 +396,6 @@ Enhancements: Performance, Security, SEO, Accessibility`;
         'Set up performance monitoring',
         'Configure security scanning',
         'Set up backup procedures'
-=======
       },
       scripts: [
         'run-automation-suite.cjs',
@@ -449,7 +439,6 @@ Enhancements: Performance, Security, SEO, Accessibility`;
   }
 
   async run() {
-<<<<<<< HEAD
     this.log('🎯 Starting Final Automation Suite...');
 
     try {
@@ -481,7 +470,6 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 } catch (error) {
       this.log(`❌ Fatal error in final automation suite: ${error.message}`);
       throw error;
-=======
     this.log('🎯 Starting Final Automation Suite');
     
     // Check git status

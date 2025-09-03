@@ -26,7 +26,7 @@ class ProjectErrorAutomation {;
     
     for (const dir of dirs) {
       await fs.mkdir(path.join(this.projectRoot, `dir)`, { recursive: true });
-<<<<<<< HEAD    }
+    }
   }
 ;
   async log(message) {;
@@ -65,7 +65,7 @@ class ProjectErrorAutomation {;
   async checkDependencies() {;
     await this.log('📦 Checking dependencies...');
     
-<<<<<<< HEAD    // Check for dependency conflicts;
+    // Check for dependency conflicts;
     const npmCheck = await this.runCommand('npm ls --depth=0', { silent: true });
     if (!npmCheck.success) {;
       await this.log('⚠️  Dependency conflicts detected');
@@ -109,7 +109,7 @@ class ProjectErrorAutomation {;
         details: typeCheck.output;
       });
       
-<<<<<<< HEAD      // Try to fix common TypeScript issues;
+      // Try to fix common TypeScript issues;
       await this.fixTypeScriptErrors(typeCheck.output);
     } else {;
       await this.log('✅ No TypeScript errors found');
@@ -179,15 +179,15 @@ class ProjectErrorAutomation {;
         
         // Fix React imports;
         if (content.includes('React') && !content.includes("import React)) {
-          content = import React from 'react';\n" + content;
+          content = import React from 'react';\n + content;
           modified = true;
         }
         
         // Fix missing type imports;
-        if (content.includes('useState') && !content.includes("import { useState }")) {
+        if (content.includes('useState') && !content.includes(import { useState }")) {
           content = content.replace(
             /import React from `react`/,import React, { useState } from `react`"
-<<<<<<< HEAD          );
+          );
           modified = true;
         }
         ;
@@ -201,7 +201,7 @@ class ProjectErrorAutomation {;
             type: `import-fix`,
             file: file,
             timestamp: new Date().toISOString()
-<<<<<<< HEAD          });
+          });
         }
       } catch (error) {  await this.log(`❌ Error fixing imports in ${file  }: ${error.message}`);
       }
@@ -241,7 +241,7 @@ class ProjectErrorAutomation {;
             type: `type-annotation-fix`,
             file: file,
             timestamp: new Date().toISOString()
-<<<<<<< HEAD          });
+          });
         }
       } catch (error) {  await this.log(`❌ Error fixing type annotations in ${file  }: ${error.message}`);
       }
@@ -294,7 +294,7 @@ class ProjectErrorAutomation {;
             type: `jsx-fix`,
             file: file,
             timestamp: new Date().toISOString()
-<<<<<<< HEAD          });
+          });
         }
       } catch (error) {  await this.log(`❌ Error fixing JSX issues in ${file  }: ${error.message}`);
       }
@@ -360,7 +360,7 @@ class ProjectErrorAutomation {;
   rules: {@typescript-''eslint/no-unused-vars''': 'warn',@typescript-''eslint/no-explicit-any''': 'warn',''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',no-console': 'warn';
 },
   ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/']
-<<<<<<< HEAD};`;
+};`;
         ;
         await fs.writeFile(eslintConfigPath, fixedConfig);
         await this.log('✅ ESLint configuration fixed');
@@ -390,7 +390,7 @@ class ProjectErrorAutomation {;
         details: buildCheck.output;
       });
       
-<<<<<<< HEAD      // Try to fix build issues;
+      // Try to fix build issues;
       await this.fixBuildErrors(buildCheck.output);
     } else {;
       await this.log('✅ Build successful');
@@ -439,7 +439,7 @@ class ProjectErrorAutomation {;
         const semicolonPattern = /(\w+)\s*\n\s*(\w+)/g;
         if (semicolonPattern.test(content)) {
           content = content.replace(semicolonPattern, `$1;\n$2`);
-<<<<<<< HEAD          modified = true;
+          modified = true;
         }
         ;
         if (modified) {;
@@ -465,7 +465,7 @@ class ProjectErrorAutomation {;
     // Update tsconfig.json if needed;
     try {
       const tsConfigPath = path.join(this.projectRoot, `tsconfig.json`);
-<<<<<<< HEAD      const tsConfig = JSON.parse(await fs.readFile(tsConfigPath, 'utf8'));
+      const tsConfig = JSON.parse(await fs.readFile(tsConfigPath, 'utf8'));
       ;
       if (!tsConfig.compilerOptions) {;
         tsConfig.compilerOptions = {};
@@ -483,7 +483,7 @@ class ProjectErrorAutomation {;
         type: `tsconfig-fix`,
         file: `tsconfig.json`,
         timestamp: new Date().toISOString()
-<<<<<<< HEAD      });
+      });
     } catch (error) {  await this.log(`❌ Error fixing TypeScript config: ${error.message  }`);
     }
   }
@@ -529,7 +529,7 @@ class ProjectErrorAutomation {;
     try {;
       await this.init();
       
-<<<<<<< HEAD      // Run all checks and fixes;
+      // Run all checks and fixes;
       await this.checkDependencies();
       await this.checkTypeScriptErrors();
       await this.checkLintingErrors();
@@ -541,16 +541,14 @@ class ProjectErrorAutomation {;
       await this.log(`✅ Project Error Automation completed`);await this.log(`📈 Summary: ${report.errorsFound} errors found, ${report.fixesApplied} fixes applied`);
       ;
       return report;
-<<<<<<< HEAD
       ;
 } catch (error) {  await this.log(`❌ Error in automation: ${error.message  }`);
       ;
     } catch (error) {await this.log(`❌ Error in automation: ${error.message}`);
       throw error;
-=======
       
     } catch (error) {  await this.log(`❌ Error in automation: ${error.message  }`);
-<<<<<<< HEAD      throw error;
+      throw error;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
   }

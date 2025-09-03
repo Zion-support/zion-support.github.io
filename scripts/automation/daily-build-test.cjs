@@ -39,7 +39,7 @@ async function runDailyBuildTest() {
 
     // Install dependencies;
     console.log(``📦 Installing dependencies...`);
-<<<<<<< HEAD    try {
+    try {
       execSync(`npm ci`, { stdio: 'inherit' });
       console.log('✅ Dependencies installed'`);
     } catch (error) {  
@@ -58,16 +58,14 @@ async function runDailyBuildTest() {
     } catch (error) {  
       console.log('⚠️  Linting failed but continuing...');
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('⚠️  Linting failed but continuing...');
     }
 ;
     // Run type checking;
-=======
 
-<<<<<<< HEAD    // Run type checking;
+    // Run type checking;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🔍 Running type checking...');
     try {;
@@ -89,16 +87,14 @@ async function runDailyBuildTest() {
     } catch (error) {  
       console.log('⚠️  Tests failed but continuing...');
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
       console.log('⚠️  Tests failed but continuing...');
     }
 ;
     // Build project;
-=======
 
-<<<<<<< HEAD    // Build project;
+    // Build project;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🏗️ Building project...');
     try {;
@@ -129,7 +125,7 @@ async function runDailyBuildTest() {
 ;
     console.log('✅ Build verification completed');
 
-<<<<<<< HEAD    // Run performance tests;
+    // Run performance tests;
     console.log('📊 Running performance tests...');
     try {;
       execSync('npm run lighthouse', { stdio: 'inherit' });
@@ -189,7 +185,7 @@ process.on(`SIGINT`, () => {;
 ;
     console.log('✅ Continuous build and test completed successfully');
   } catch (error) {;
-    console.error('❌ Continuous build and test failed:', error.message);
+    console.error('❌ Continuous build and test failed: ', error.message);
     // Don't exit, just log the error and continue;
   }
 }

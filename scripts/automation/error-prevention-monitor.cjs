@@ -18,7 +18,7 @@ class ErrorPreventionMonitor {;
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
+        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -98,7 +98,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
           !file.startsWith(`.`) &&
           !file.startsWith(`node_modules')
         ) {
-<<<<<<< HEAD          scanDirectory(filePath);
+          scanDirectory(filePath);
         } else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(file)) {;
           sourceFiles.push(filePath);
         }
@@ -207,7 +207,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
 
   async applyPreventiveFixes(potentialErrors) {
     this.log(🔧 Applying preventive fixes for ${potentialErrors.length} potential issues...`
-<<<<<<< HEAD    );
+    );
 ;
     let fixedCount = 0;
     const fixResults = [];
@@ -256,7 +256,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
     try {
       let content = fs.readFileSync(filePath, `utf8`);
       const lines = content.split(`\n');
-<<<<<<< HEAD      const lineIndex = error.line - 1;
+      const lineIndex = error.line - 1;
 ;
       if (lineIndex < 0 || lineIndex >= lines.length) {;
         return false;
@@ -299,15 +299,13 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
       return false;
     } catch (fixError) {
       this.log(❌ Failed to apply preventive fix: ${fixError.message}`,
-<<<<<<< HEAD
         `ERROR`;
 } catch (fixError) {;
       this.log(❌ Failed to apply preventive fix: ${fixError.message}',;
         'ERROR';
       );
-=======
         `ERROR`
-<<<<<<< HEAD      );
+      );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       return false;
     }
@@ -348,7 +346,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
     if (line.includes('addEventListener')) {
       fixedLine = line.replace(
         /addEventListener\s*\((['^', '']+),\s*(['^', '']+),\s*false\)/g,addEventListener($1, $2, { once: true })'
-<<<<<<< HEAD      );
+      );
     }
 ;
     return fixedLine;
@@ -401,7 +399,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
 
     const reportFile = path.join(
       this.reportsPath,error-prevention-monitor-report.json`
-<<<<<<< HEAD    );
+    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;
     this.log(`📄 Report generated: ${reportFile}`);
@@ -468,7 +466,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
 
 // Run the automation if called directly;
 if (require.main === module) {
-<<<<<<< HEAD  const monitor = new ErrorPreventionMonitor();
+  const monitor = new ErrorPreventionMonitor();
   monitor.run().catch(console.error);
 }
 ;

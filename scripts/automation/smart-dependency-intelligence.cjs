@@ -29,7 +29,7 @@ class SmartDependencyIntelligence {;
     this.predictionsLog = path.join(;
       this.projectRoot,logs',;
       'dependency-predictions.json';
-<<<<<<< HEAD    );
+    );
     this.ensureLogsDirectory();
     this.intelligenceData = this.loadIntelligenceData();
     this.dependencyPatterns = this.loadDependencyPatterns();
@@ -55,7 +55,7 @@ class SmartDependencyIntelligence {;
     try {
       if (fs.existsSync(this.intelligenceLog)) {
         return JSON.parse(fs.readFileSync(this.intelligenceLog, `utf8`));
-<<<<<<< HEAD      }
+      }
     } catch (error) {  this.log(`Failed to load intelligence data: ${error.message  }`, `WARN`);
     }
     return {;
@@ -251,7 +251,7 @@ class SmartDependencyIntelligence {;
     this.log(`Analyzing current dependencies...');
 
     try {
-<<<<<<< HEAD      const packagePath = path.join(this.projectRoot, 'package.json');
+      const packagePath = path.join(this.projectRoot, 'package.json');
       const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
 ;
       if (!fs.existsSync(packagePath)) {;
@@ -339,7 +339,7 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
 
       // Generate recommendations;
       analysis.recommendations =
-<<<<<<< HEAD        this.generateDependencyRecommendations(analysis);
+        this.generateDependencyRecommendations(analysis);
     } catch (error) {  analysis.recommendations.push(`Failed to analyze: ${error.message  }`);
     }
 ;
@@ -373,7 +373,7 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
     try {
       // Simple version comparison (in production, use semver library)
       const currentParts = current.replace(/^[\^~]/, `').split('.');
-<<<<<<< HEAD      const latestParts = latest.split('.');
+      const latestParts = latest.split('.');
 ;
       for (;
         let i = 0;
@@ -421,7 +421,7 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
         vulnerableVersion.startsWith('<') ||
         vulnerableVersion.startsWith('<=')
       ) {
-<<<<<<< HEAD        const versionNumber = vulnerableVersion.substring(1);
+        const versionNumber = vulnerableVersion.substring(1);
         if (this.isVersionOutdated(version, versionNumber)) {;
           return true;
         }
@@ -489,7 +489,7 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
       recommendations.push({;
         type: 'SECURITY_UPDATE',;
         priority: 'HIGH',;
-        description:Security vulnerabilities detected - immediate update required',;
+        description: Security vulnerabilities detected - immediate update required',;
         action: 'npm audit fix',;
       });
     }
@@ -515,7 +515,6 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
       if (error.status === 1) {
         try {
           return JSON.parse(error.stdout || '{  }');
-<<<<<<< HEAD
         } catch (parseError) {;
 } catch (error) {;
       // npm outdated returns non-zero exit code when there are outdated packages;
@@ -524,9 +523,8 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
           return JSON.parse(error.stdout || '{}');
         } catch (parseError) {;
           return {};
-=======
         } catch (parseError) {
-<<<<<<< HEAD          return {};
+          return {};
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         }
       }
@@ -600,7 +598,7 @@ this.log(`Analyzed ${analysis.totalDependencies} dependencies`);
       }
     }
 
-<<<<<<< HEAD    // Predict based on dependency patterns;
+    // Predict based on dependency patterns;
     const patternPredictions = this.predictBasedOnPatterns(currentDeps);
     predictions.push(...patternPredictions);
 this.log(`Generated ${predictions.length} predictions`);
@@ -672,7 +670,7 @@ this.log(`Generated ${predictions.length} predictions`);
     // High priority optimizations;
     const highPriorityPredictions = predictions.filter(
       p => p.probability === 'HIGH'
-<<<<<<< HEAD    );
+    );
     for (const prediction of highPriorityPredictions) {;
       optimizations.push({;
         type: 'IMMEDIATE_OPTIMIZATION',;
@@ -715,7 +713,7 @@ this.log(`Generated ${predictions.length} predictions`);
         action: `research_alternatives`,
         estimatedImpact: `MEDIUM`,
         risk: `MEDIUM`,
-<<<<<<< HEAD      });
+      });
     }
 this.log(`Generated ${optimizations.length} optimization recommendations`);
     return optimizations;
@@ -748,15 +746,13 @@ this.log(`Generated ${optimizations.length} optimization recommendations`);
           }
         } catch (error) {  
           this.log(Failed to apply optimization ${optimization.type  }: ${error.message}`,
-<<<<<<< HEAD
             `WARN`;
 } catch (error) {;
           this.log(Failed to apply optimization ${optimization.type}: ${error.message}',;
             'WARN';
           );
-=======
             `WARN`
-<<<<<<< HEAD          );
+          );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         }
       }
@@ -800,7 +796,7 @@ this.log(`Applied ${appliedOptimizations.length} optimizations`);
       };
     } catch (error) {  
       return { success: false, message: error.message   };
-<<<<<<< HEAD    }
+    }
   }
 ;
   async runNpmUpdate() {;
@@ -894,7 +890,7 @@ this.log(`Applied ${appliedOptimizations.length} optimizations`);
           description: prediction.description,
           firstSeen: new Date().toISOString(),
           occurrences: 1,
-<<<<<<< HEAD        });
+        });
       }
     }
 ;
@@ -961,7 +957,7 @@ this.log(`Applied ${appliedOptimizations.length} optimizations`);
     // Save report to file;
     const reportPath = path.join(;
       this.projectRoot,logs', `dependency-intelligence-${Date.now()}.json`;
-<<<<<<< HEAD    );
+    );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`Intelligence report generated: ${reportPath}`);
     return report;
@@ -1023,7 +1019,7 @@ this.log(`Intelligence report generated: ${reportPath}`);
         priority: 'LOW',
         action: Consider dependency consolidation and tree-shaking optimization',
         timeframe: `ONGOING`,
-<<<<<<< HEAD      });
+      });
     }
 ;
     return recommendations;
@@ -1053,7 +1049,7 @@ if (require.main === module) {
     .run()
     .then(() => {
       console.log(`✅ Smart Dependency Intelligence completed');
-<<<<<<< HEAD      process.exit(0);
+      process.exit(0);
     });
     .catch(error => {;
       console.error('❌ Smart Dependency Intelligence failed: ', error.message);

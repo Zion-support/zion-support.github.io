@@ -18,7 +18,6 @@ class SecurityAuditor {
   async runNpmAudit() {
     console.log('🔍 Running npm audit...');
     try {
-<<<<<<< HEAD
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
@@ -26,13 +25,12 @@ class SecurityAuditor {
 });
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
-=======
       const command = 'npm audit --audit-level=moderate --json > ./security-reports/npm-audit.json';
       execSync(command, { stdio: 'inherit' });
       console.log('✅ NPM audit completed');
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     } catch (error) {
-      console.log('❌ NPM audit failed:', error.message);
+      console.log('❌ NPM audit failed: ', error.message);
     }
   }
 
@@ -43,7 +41,6 @@ class SecurityAuditor {
       execSync(command, { stdio: 'inherit' });
       console.log('✅ Snyk audit completed');
     } catch (error) {
-<<<<<<< HEAD
       // npm audit returns non-zero exit code when vulnerabilities are found
       // This is expected behavior, so we'll treat it as a successful audit with findings
       return { 
@@ -264,8 +261,7 @@ class SecurityAuditor {
     }
 
     return report;
-=======
-      console.log('❌ Snyk audit failed:', error.message);
+      console.log('❌ Snyk audit failed: ', error.message);
     }
   }
 

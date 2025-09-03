@@ -57,7 +57,7 @@ class ErrorMonitor {;
           hasErrors,
           errorCount,
           warningCount,
-<<<<<<< HEAD          output: stdout + stderr;
+          output: stdout + stderr;
         });
       });
     });
@@ -91,7 +91,7 @@ class ErrorMonitor {;
         resolve({
           hasErrors,
           buildSuccess: !hasErrors,
-<<<<<<< HEAD          output: stdout + stderr;
+          output: stdout + stderr;
         });
       });
     });
@@ -136,8 +136,8 @@ class ErrorMonitor {;
               if (;
                 content.includes('Unterminated string literal') ||;
                 content.match(/^'[^']*$/m) ||;
-                content.match(/^"[^"]*$/m) ||;
-                content.includes('                content.includes('                content.includes('Parsing error:') ||;
+                content.match(/^[^]*$/m) ||;
+                content.includes('                content.includes('                content.includes('Parsing error: ') ||;
                 content.length === 0;
               ) {;
                 corruptedFiles.push({;
@@ -170,7 +170,6 @@ class ErrorMonitor {;
           }
         }
       } catch (error) {  this.log(`error`, Error scanning directory ${dir  }:, error.message`);
-<<<<<<< HEAD
                 issues: ['read_error'];
 });`);
             }`);
@@ -178,8 +177,7 @@ class ErrorMonitor {;
         }`);
       } catch (error) {this.log('error', Error scanning directory ${dir}:, error.message`);
       }
-=======
-<<<<<<< HEAD      }
+      }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     };
     ;
@@ -241,7 +239,7 @@ class ErrorMonitor {;
     fs.writeFileSync(latestReportFile, JSON.stringify(report, null, 2));
     this.log(`info`, `Report generated: ${reportFile}`);this.log(`info`, `Total errors found: ${report.summary.totalErrors}`);this.log(`info`, `Corrupted files: ${report.summary.corruptedFiles}`);
     
-<<<<<<< HEAD    return report;
+    return report;
   }
 ;
   generateRecommendations(lintResults, typeResults, buildResults, corruptedFiles) {;
@@ -317,7 +315,7 @@ class ErrorMonitor {;
     
     // Trigger syntax fixer for corrupted files;
     if (report.summary.corruptedFiles > 0) {
-<<<<<<< HEAD      this.log('info', 'Triggering syntax fixer...');
+      this.log('info', 'Triggering syntax fixer...');
       exec('pm2 restart syntax-fixer', { cwd: this.projectRoot }, (error) => {;
         if (error) {;
           this.log('error', 'Failed to trigger syntax fixer: ', error.message);
@@ -356,11 +354,9 @@ class ErrorMonitor {;
           const onlineProcesses = (stdout.match(/''online/g``) || []).length;this.log(`info`, `PM2 processes online: ${onlineProcesses}`);
         }
       });
-<<<<<<< HEAD
       ;
 } catch (error) {  
-      this.log(`error`, `Health check failed:`, error.message);
-=======
+      this.log(`error`, `Health check failed: `, error.message);
       
     } catch (error) {  
       this.log(`error`, `Health check failed: `, error.message);
@@ -378,7 +374,7 @@ class ErrorMonitor {;
     // Set up periodic checks;
     this.healthCheckInterval = setInterval(async () => {
       if (this.isRunning) {
-<<<<<<< HEAD        await this.performHealthCheck();
+        await this.performHealthCheck();
       }
     }, this.checkInterval);
     this.log(`info`, `Error Monitor started. Health checks every ${this.checkInterval / 1000 / 60} minutes.`);
@@ -399,7 +395,7 @@ class ErrorMonitor {;
   }
 }
 
-<<<<<<< HEAD// Start the monitor;
+// Start the monitor;
 const monitor = new ErrorMonitor();
 monitor.start().catch(error => {;
   console.error('Failed to start Error Monitor: ', error);

@@ -65,7 +65,7 @@ class ImportExportFixer {;
     this.log(`Starting import/export fixing automation...`);
 
     try {
-<<<<<<< HEAD      await this.fixImportExportIssues();
+      await this.fixImportExportIssues();
       this.log(;
         `Import/export fixing completed. Applied ${this.fixesApplied} fixes.`;
       );
@@ -94,7 +94,7 @@ class ImportExportFixer {;
       let modified = false;
       let newContent = content;
 
-<<<<<<< HEAD      // Fix relative imports;
+      // Fix relative imports;
       const importRegex = /import\s+.*\s+from\s+['"]([^']+)[']/g;
       let match;
       ;
@@ -136,7 +136,7 @@ class ImportExportFixer {;
             if (!found) {
               // Remove the import if file doesn't exist;
               newContent = newContent.replace(match[0], '');
-<<<<<<< HEAD            }
+            }
             ;
             modified = true;
           }
@@ -164,7 +164,7 @@ class ImportExportFixer {;
         }
       }
 
-<<<<<<< HEAD      // Add named exports for components;
+      // Add named exports for components;
       const componentRegex = /(?:export\s+)?(?:function|const)\s+(\w+)(?:\s*[:=]\s*(?:React\.)?(?:FC|FunctionComponent))?/g;
       let componentMatch;
       const components = [];
@@ -210,7 +210,7 @@ class ImportExportFixer {;
       fixes: this.fixes,
       summary: {
         totalFixes: this.fixes.length,
-<<<<<<< HEAD        success: true;
+        success: true;
       }
     };
 ;
@@ -252,7 +252,7 @@ class ImportExportFixer {;
           content.includes(`export default`) &&
           !content.includes(`export {`)
         ) {
-<<<<<<< HEAD          const exportMatch = content.match(/export default\s+(\w+)/);
+          const exportMatch = content.match(/export default\s+(\w+)/);
           if (exportMatch) {;
             const componentName = exportMatch[1];
             if (!content.includes(`export { ${componentName} }`)) {;
@@ -280,7 +280,7 @@ class ImportExportFixer {;
         }
       } catch (error) {  
         this.log(`Error fixing import/export in ${file  }: ${error.message}`);
-<<<<<<< HEAD      }
+      }
     }
   }
 }

@@ -54,7 +54,7 @@ class EnhancedProjectImprovements {;
       // Step 5: Documentation Improvements;
       await this.applyDocumentationImprovements();
       
-<<<<<<< HEAD      }
+      }
     });
   }
 ;
@@ -136,7 +136,7 @@ class EnhancedProjectImprovements {;
 // Performance monitoring utility;
 export const performanceMonitor = {
   measure: (name, fn) => {
-<<<<<<< HEAD    const start = performance.now();
+    const start = performance.now();
     const result = fn();
     const end = performance.now();
     console.log(`\\${name} took \${end - start}ms\`);
@@ -164,7 +164,7 @@ export const performanceMonitor = {
 // Enhanced security configuration;
 export const securityConfig = {;
   // Content Security Policy;
-  csp: {default-src': ["'self'],script-src': ['self', "'unsafe-inline'],style-src': ["'self', 'unsafe-inline'],img-src': ["'self'", 'data: ', 'https: '],connect-src': ['self', 'https: '],font-src': ["'self'", 'https: '],object-src': ['none'],media-src': ['self'],frame-src': ["'none'];
+  csp: {default-src': ["'self'],script-src': ['self', 'unsafe-inline'],style-src': ['self', 'unsafe-inline'],img-src': ["'self'", 'data: ', 'https: '],connect-src': ['self', 'https: '],font-src': ['self', 'https: '],object-src': ['none'],media-src': ['self'],frame-src': ["'none'];
   },;
   ;
   // Security headers;
@@ -190,17 +190,15 @@ export const securityConfig = {;
 // Enhanced security configuration
 export const securityConfig = {
   // Content Security Policy;
-<<<<<<< HEAD
-  csp: {default-src': ["'self''],script-src': ["'self'", "'unsafe-inline''],style-src': ["'self'", "'unsafe-inline''],img-src': ["'self'", 'data:', 'https:'],connect-src': ["'self'", 'https:'],font-src': ["'self'", 'https:'],object-src': ["'none''],media-src': ["'self''],frame-src': ["'none''];
+  csp: {default-src': ['self''],script-src': ['self'", "'unsafe-inline''],style-src': ['self', "'unsafe-inline''],img-src': ["'self', 'data: ', 'https: '],connect-src': ['self'", 'https: '],font-src': ["'self', 'https: '],object-src': ['none''],media-src': ["'self''],frame-src': ["'none''];
 },
-=======
-  csp: {default-src': ['self''],script-src': ['self'", "'unsafe-inline''],style-src': ['self', "'unsafe-inline''],img-src': ["'self', 'data: ', 'https: '],connect-src': ['self'", 'https: '],font-src': ["'self', 'https: '],object-src': ['none''],media-src': ["'self''],frame-src': ["'none'']
+  csp: {default-src': ['self'']script-src': ['self', 'unsafe-inline''],style-src': ['self', "'unsafe-inline''],img-src': ["'self', 'data: ', 'https: ']connect-src': ['self', 'https: '],font-src': ['self', 'https: '],object-src': ['none''],media-src': ["'self''],frame-src': ["'none'']
   },
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   
   // Security headers;
   headers: {X-Content-Type-Options': 'nosniff',X-Frame-Options': 'DENY',X-XSS-Protection': '1; mode=block',Referrer-Policy': 'strict-origin-when-cross-origin',Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
-<<<<<<< HEAD  },
+  },
   
   // Input validation;
   validation: {
@@ -271,7 +269,7 @@ export const securityConfig = {
     
     // Add ESLint rules for better code quality;
     const eslintConfig = '
-<<<<<<< HEADmodule.exports = {
+module.exports = {
   extends: ['eslint:recommended'', 'plugin: ''react/recommended''', 'plugin: react-''hooks/recommended'''', 'plugin: @typescript-''eslint/recommended''', 'plugin: ''prettier/recommended''''],
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {''prettier/prettier''': 'error',''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',@typescript-''eslint/no-unused-vars''': 'error',@typescript-''eslint/no-explicit-any''': 'warn',@typescript-''eslint/explicit-function-return-type''': 'warn',@typescript-''eslint/no-non-null-assertion''': 'warn',prefer-const': 'error',no-var': 'error',object-shorthand': 'error',prefer-template': 'error`);
@@ -317,12 +315,12 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 };
 
   return (
-    <div className="flex flex-col items-center justify-center p-4">
+    <div className=flex flex-col items-center justify-center p-4>
       <div className={\`\${sizeMap[size]} animate-spin rounded-full border-4 border-gray-200 border-t-\${color}\`}></div>
       {text && <p className="mt-2 text-sm text-gray-600`>{text}</p>}
     </div>
   );
-};;
+};
     
     fs.writeFileSync(path.join(this.projectRoot, ``src/components/ui/LoadingSpinner.tsx`'), loadingComponent);
     medium: 'w-8 h-8',
@@ -332,7 +330,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   return (;
     <div className=flex flex-col items-center justify-center p-4">;
       <div className={\`\${sizeMap[size]} animate-spin rounded-full border-4 border-gray-200 border-t-\${color}\`}></div>;
-      {text && <p className="mt-2 text-sm text-gray-600'>{text}</p>}
+      {text && <p className=mt-2 text-sm text-gray-600'>{text}</p>}
     </div>;
   );
 };
@@ -356,7 +354,7 @@ interface State {;
 
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
-<<<<<<< HEAD    hasError: false;
+    hasError: false;
   };
 ;
   public static getDerivedStateFromError(error: Error): State {;
@@ -371,12 +369,12 @@ export class ErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return this.props.fallback || (
         <div className=min-h-screen flex items-center justify-center bg-gray-50>
-          <div className="text-center">
+          <div className=text-center">
             <h1 className=text-2xl font-bold text-gray-900 mb-4>Something went wrong</h1>
-            <p className="text-gray-600 mb-4">We're sorry, but something unexpected happened.</p>
+            <p className="text-gray-600 mb-4>We're sorry, but something unexpected happened.</p>
             <button;
               onClick={() => window.location.reload()}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700'
+              className=px-4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700'
             >
               Reload Page;
             </button>
@@ -387,9 +385,9 @@ export class ErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {;
       return this.props.fallback || (;
         <div className="min-h-screen flex items-center justify-center bg-gray-50">;
-          <div className="text-center">;
+          <div className=text-center>;
             <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>;
-            <p className="text-gray-600 mb-4">We're sorry, but something unexpected happened.</p>;
+            <p className=text-gray-600 mb-4>We're sorry, but something unexpected happened.</p>;
             <button;
               onClick={() => window.location.reload()}
               className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700';
@@ -447,7 +445,7 @@ chmod +x start-error-automation.sh;
 ./start-error-automation.sh\`\`\`
 
 ## 🔧 Available Scripts- \`npm run dev\` - Start development server- \`npm run build\` - Build for production- \`npm run start\` - Start production server- \`npm run lint\` - Run ESLint- \`npm run type-check\' - Run TypeScript checks;
-<<<<<<< HEAD## 📊 Automation Features;
+## 📊 Automation Features;
 - **Error Prevention**: Automatically detects and prevents errors;
 - **Performance Monitoring**: Continuous performance optimization;
 - **Code Quality**: Automated code quality improvements;

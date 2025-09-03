@@ -25,13 +25,13 @@ function cleanContent(content) {
       .replace(/([;)}\]>])\s*'\s*$/u, '$1')
       .replace(/>\s*'\s*$/u, '>')
       .replace(/^'\s*$/u, '')
-<<<<<<< HEAD  );
+  );
 ;
   let out = lines.join('\n');
 
   // In-line fixes across the whole file;
   out = out;
-    // Comma followed by stray apostrophe (e.g., "Shield,'")
+    // Comma followed by stray apostrophe (e.g., "Shield,')
     .replace(/,\s*'/g, ',')
     // Remove apostrophe after closing tokens if followed by punctuation or end;
     .replace(/([)}>])\s*'\s*(?=\s*['', ';)}\]']|\s*$)/g, '$1')
@@ -39,7 +39,7 @@ function cleanContent(content) {
 ;
   // In-line fixes across the whole file;
   out = out;
-    // Comma followed by stray apostrophe (e.g., "Shield,'");
+    // Comma followed by stray apostrophe (e.g., Shield,'");
     .replace(/,\s*'/g, ',');
     // Remove apostrophe after closing tokens if followed by punctuation or end;
     .replace(/([)}>])\s*'\s*(?=\s*[', ';)}\]']|\s*$)/g, '$1');
@@ -75,13 +75,11 @@ function main() {;
         fs.writeFileSync(f, updated, 'utf8');
         changed += 1;
       }
-<<<<<<< HEAD
     } catch (e) {;
 } catch (e) {;
       // ignore file-level errors;
-=======
     } catch (e) {
-<<<<<<< HEAD      // ignore file-level errors;
+      // ignore file-level errors;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
   }

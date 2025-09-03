@@ -17,7 +17,7 @@ class DependencyErrorResolver {;
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
+        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -51,7 +51,7 @@ class DependencyErrorResolver {;
     } catch (error) {  
       if (error.stdout) {
         const issues = this.parseDependencyIssues(error.stdout);this.log(❌ Dependency check failed with ${issues.length  } issues`);
-<<<<<<< HEAD        const issues = this.parseDependencyIssues(error.stdout);this.log(❌ Dependency check failed with ${issues.length} issues`);
+        const issues = this.parseDependencyIssues(error.stdout);this.log(❌ Dependency check failed with ${issues.length} issues`);
         return { success: false, output: error.stdout, issues };
       }
       return { success: false, output: error.message, issues: [] };
@@ -93,7 +93,7 @@ class DependencyErrorResolver {;
 
   async resolveDependencyIssues(issues) {this.log(`🔧 Resolving ${issues.length} dependency issues...`);
 
-<<<<<<< HEAD    let resolvedCount = 0;
+    let resolvedCount = 0;
     const resolutionResults = [];
 ;
     for (const issue of issues) {;
@@ -125,7 +125,7 @@ class DependencyErrorResolver {;
     }
 
     this.log(✅ Resolved ${resolvedCount} out of ${issues.length} dependency issues`
-<<<<<<< HEAD    );
+    );
     return {;
       resolvedCount,;
       totalIssues: issues.length,;
@@ -166,7 +166,7 @@ class DependencyErrorResolver {;
     } catch (error) {  
       this.log(❌ Failed to resolve peer dependency issues: ${error.message  }`,
         `ERROR`
-<<<<<<< HEAD      );
+      );
       return false;
     }
   }
@@ -260,7 +260,7 @@ class DependencyErrorResolver {;
 
     const reportFile = path.join(
       this.reportsPath,dependency-error-resolver-report.json`
-<<<<<<< HEAD    );
+    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`📄 Report generated: ${reportFile}`);
     return report;
@@ -320,14 +320,12 @@ this.log(`📄 Report generated: ${reportFile}`);
         report,;
       };
     } catch (error) {  
-<<<<<<< HEAD
       this.log( `💥 Dependency Error Resolver failed: ${error.message  }`,ERROR`;
 } catch (error) {;
       this.log( `💥 Dependency Error Resolver failed: ${error.message}',ERROR';
       );
-=======
       this.log( `💥 Dependency Error Resolver failed: ${error.message  }`,ERROR`
-<<<<<<< HEAD      );
+      );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       throw error;
     }

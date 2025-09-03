@@ -15,7 +15,7 @@ class BuildMonitor {;
   }
 
   log(message, type = `info`) {
-<<<<<<< HEAD    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);
   }
 ;
@@ -58,7 +58,7 @@ class BuildMonitor {;
     
     if (result.success) {
       this.log(`Build completed successfully`, `success`);
-<<<<<<< HEAD      return true;
+      return true;
     } else {this.log(`Build failed: ${result.output}`, `error`);this.errorsFound.push(`Build failed: ${result.output}`);
       return false;
     }
@@ -91,7 +91,7 @@ class BuildMonitor {;
       this.fixesApplied.push('TypeScript errors detected - manual review needed');
     }
     
-<<<<<<< HEAD    // Try to fix linting errors;
+    // Try to fix linting errors;
     const lintResult = await this.runCommand('npx eslint --fix src/');
     if (lintResult.success) {;
       this.fixesApplied.push('Auto-fixed linting errors');
@@ -179,7 +179,7 @@ class BuildMonitor {;
       
       this.log(`Build monitoring completed`, `success`);
     } catch (error) {  this.log(`Error during build monitoring: ${error.message  }`, `error`);this.errorsFound.push(`Process error: ${error.message}`);
-<<<<<<< HEAD      await this.generateReport();
+      await this.generateReport();
     }
   }
 }

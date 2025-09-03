@@ -171,7 +171,7 @@ class ErrorMonitor {;
       await fs.appendFile(this.logFile, logEntry);
       console.log(logEntry.trim());
     } catch (error) {;
-      console.error('Failed to write to log file:', error);
+      console.error('Failed to write to log file: ', error);
     }
   }
 ;
@@ -404,7 +404,7 @@ if (require.main === module) {
 }
 
 module.exports = ErrorMonitor;
-<<<<<<< HEAD// Run if called directly;
+// Run if called directly;
 if (require.main === module) {;
   const monitor = new ErrorMonitor();
 ;

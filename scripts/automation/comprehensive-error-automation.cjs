@@ -34,7 +34,7 @@ class ComprehensiveErrorAutomation {;
     console.log(`'🚀 Starting Comprehensive Error Automation...');
 ;
     try {;
-<<<<<<< HEAD      this.ensureDirectories();
+      this.ensureDirectories();
       await this.loadStats();
 
       // Run comprehensive error fixing;
@@ -76,12 +76,10 @@ class ComprehensiveErrorAutomation {;
       await this.saveStats();
 ;
       console.log('✅ Comprehensive Error Automation completed successfully!');
-<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
-      console.error('❌ Comprehensive Error Automation failed:', error);
+      console.error('❌ Comprehensive Error Automation failed: ', error);
       this.stats.totalRuns++;
-=======
     } catch (error) {  
       console.error('❌ Comprehensive Error Automation failed: ', error);      this.stats.totalRuns++;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
@@ -104,12 +102,10 @@ class ComprehensiveErrorAutomation {;
     if (fs.existsSync(statsFile)) {;
       try {;
         this.stats = JSON.parse(fs.readFileSync(statsFile, 'utf8'));
-<<<<<<< HEAD
       } catch (error) {  ;
 } catch (error) {;
-        console.warn('Could not load existing stats:', error.message);
+        console.warn('Could not load existing stats: ', error.message);
         }
-=======
       } catch (error) {  
         console.warn('Could not load existing stats: ', error.message);        }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
@@ -145,7 +141,7 @@ class ComprehensiveErrorAutomation {;
     console.log('🔍 Running Code Quality Checks...');
 
     try {
-<<<<<<< HEAD      // Run ESLint;
+      // Run ESLint;
       console.log('  Running ESLint...');
       execSync('npm run lint', {;
         cwd: this.projectRoot,;
@@ -160,9 +156,9 @@ class ComprehensiveErrorAutomation {;
         stdio: 'pipe',;
       });
 
-<<<<<<< HEAD      // Run Prettier format check;
+      // Run Prettier format check;
       console.log('  Running Prettier format check...');
-      execSync('npx prettier --check "src/**/*.{js,jsx,ts,tsx}", {;
+      execSync('npx prettier --check "src/**/*.{js,jsx,tstsx}", {;
         cwd: this.projectRoot,;
         stdio: 'pipe',;
       });
@@ -176,7 +172,7 @@ class ComprehensiveErrorAutomation {;
     console.log('⚡ Running Performance Optimizations...');
 
     try {
-<<<<<<< HEAD      // Bundle analysis;
+      // Bundle analysis;
       console.log('  Analyzing bundle...');
       execSync('npm run build', {;
         cwd: this.projectRoot,;
@@ -200,7 +196,7 @@ class ComprehensiveErrorAutomation {;
     console.log('🔒 Running Security Checks...');
 
     try {
-<<<<<<< HEAD      // Run npm audit;
+      // Run npm audit;
       console.log('  Running npm audit...');
       execSync('npm audit', {;
         cwd: this.projectRoot,;
@@ -224,7 +220,7 @@ class ComprehensiveErrorAutomation {;
     console.log('📦 Running Dependency Updates...');
 
     try {
-<<<<<<< HEAD      // Check for outdated packages;
+      // Check for outdated packages;
       console.log('  Checking for outdated packages...');
       execSync('npm outdated', {;
         cwd: this.projectRoot,;
@@ -290,7 +286,7 @@ class ComprehensiveErrorAutomation {;
                 (this.stats.successfulRuns / this.stats.totalRuns) * 100;
               );
             : 0,;
-        averageFixesPerRun:;
+        averageFixesPerRun: ;
           this.stats.totalRuns > 0;
             ? Math.round(this.stats.totalFixes / this.stats.totalRuns);
             : 0,;
@@ -315,7 +311,7 @@ console.log(📄 Comprehensive report saved to: ${reportFile}``);
         category: `code_quality`,
         message: High number of errors detected. Consider code review and refactoring.',
         action: 'Review and fix critical errors first, then address warnings.',
-<<<<<<< HEAD      });
+      });
     }
 ;
     if (this.stats.failedRuns > 0) {;

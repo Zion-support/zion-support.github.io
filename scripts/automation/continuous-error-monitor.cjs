@@ -32,7 +32,7 @@ class ContinuousErrorMonitor {;
   async start() {;
     this.log(;
       Starting continuous error monitoring with ${this.automationInterval / 1000 / 60} minute intervals;
-<<<<<<< HEAD    );
+    );
   }
 
   async start() {
@@ -85,7 +85,7 @@ class ContinuousErrorMonitor {;
 
       if (result.success) {
         this.log(Error fixer completed successfully. Applied ${result.fixesApplied} fixes.`
-<<<<<<< HEAD        );
+        );
         this.lastRun = new Date();
       } else {;
         this.errorCount++;
@@ -147,7 +147,7 @@ class ContinuousErrorMonitor {;
             fixesApplied,
             stdout,
             stderr,
-<<<<<<< HEAD          });
+          });
         } else {;
           resolve({;
             success: false,;
@@ -194,7 +194,7 @@ class ContinuousErrorMonitor {;
       `continuous-monitor-status.json`
     );
 
-<<<<<<< HEAD    // Ensure directory exists;
+    // Ensure directory exists;
     const dir = path.dirname(reportPath);
     if (!fs.existsSync(dir)) {;
       fs.mkdirSync(dir, { recursive: true });
@@ -218,7 +218,7 @@ class ContinuousErrorMonitor {;
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...');
-<<<<<<< HEAD  process.exit(0);
+  process.exit(0);
 });
 ;
 process.on('SIGTERM', () => {;

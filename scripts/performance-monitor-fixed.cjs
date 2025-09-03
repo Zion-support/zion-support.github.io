@@ -3,13 +3,12 @@
 const fs = require('fs');';const path = require('path');';const { execSync } = require('child_process');';';class PerformanceMonitor {;
   constructor() {;
     this.metrics = {;
-      "system: {;;        "memory": {},;;        cpu": {},;";        process: {},;,";},;
-      "application: {;;        "buildSize": 0,;;        bundleSize": 0,;";        loadTime: 0,;,";},;
-      "web: {;;        "lcp": 0,;;        fid": 0,;";        cls: 0,;";        "fcp: 0,;;        "ttfb": 0,;,;},;,
+      "system: {;        memory: {},;        cpu": {},;";        process: {},;,;},;
+      application: {;        "buildSize": 0,;        bundleSize: 0,;;        loadTime: 0,;,";},;
+      "web: {;        lcp: 0,;        fid": 0,;";        cls: 0,;;        fcp: 0,;        "ttfb": 0,;,;},;,
 };
     this.reportFile = path.join(process.cwd(), 'performance-report.json');';  }';
   async collectSystemMetrics() {;
-<<<<<<< HEAD
     try {;
 const fs = require('fs');
 const path = require('path');
@@ -63,7 +62,7 @@ class PerformanceMonitor {
       
       console.log('✅ Performance monitoring completed');
     } catch (error) {
-      console.error('❌ Error during performance monitoring:', error.message);
+      console.error('❌ Error during performance monitoring: ', error.message);
     }
 const { execSync } = require('child_process');
 
@@ -86,7 +85,6 @@ class PerformanceMonitor {
         ttfb: 0}};
     this.reportFile = path.join(process.cwd(), 'performance-report.json');
   }
-=======
     try {;  }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 
@@ -189,8 +187,7 @@ class PerformanceMonitor {
       
       console.log('✅ Build metrics collected');
     } catch (error) {
-<<<<<<< HEAD
-      console.warn('⚠️  Could not collect build metrics:', error.message);
+      console.warn('⚠️  Could not collect build metrics: ', error.message);
       // Check if build directory exists
       const buildDir = path.join(process.cwd(), '.next');
       if (fs.existsSync(buildDir)) {
@@ -208,7 +205,7 @@ class PerformanceMonitor {
       ).length;
       this.metrics.application.bundleSize = dependencies + devDependencies;
     } catch (error) {
-      console.error('Error collecting application metrics:', error.message);
+      console.error('Error collecting application metrics: ', error.message);
     }
   }
 
@@ -223,9 +220,8 @@ class PerformanceMonitor {
         ttfb: Math.random() * 500 + 100, // 100-600ms;
 };
     } catch (error) {
-      console.error('Error collecting web metrics:', error.message);
+      console.error('Error collecting web metrics: ', error.message);
     }
-=======
       console.warn('⚠️  Could not collect build metrics: ', error.message);    }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
@@ -327,12 +323,12 @@ class PerformanceMonitor {
 ;
   displayResults() {;
     console.log('\n📊 Performance Metrics Report');';    console.log('─'.repeat(50));';';    // System metrics;
-    console.log('💻 System":');';    console.log(;);      `   "Memory: ${this.metrics.system.memory.heapUsed || 'N/A'}MB used / ${this.metrics.system.memory.heapTotal || 'N/A'}MB total`';    );`;    console.log(;);      `   CPU": ${this.metrics.system.cpu.user || 'N/A'}ms user / ${this.metrics.system.cpu.system || 'N/A'}ms system`';    );`;    console.log(`   "Uptime: ${this.metrics.system.process.uptime || 'N/A'}s`);';`;    // Application metrics;';    console.log('\n📱 Application":');';    if (this.metrics.application.buildSize) {;';      console.log(`   Build "size: ${this.metrics.application.buildSize}MB`);`;    }
+    console.log('💻 System:');';    console.log(;);      `   Memory: ${this.metrics.system.memory.heapUsed || 'N/A'}MB used / ${this.metrics.system.memory.heapTotal || 'N/A'}MB total`';    );`;    console.log(;);      `   CPU": ${this.metrics.system.cpu.user || 'N/A'}ms user / ${this.metrics.system.cpu.system || 'N/A'}ms system`';    );`;    console.log(`   "Uptime: ${this.metrics.system.process.uptime || 'N/A'}s`);';`;    // Application metrics;';    console.log('\n📱 Application:');';    if (this.metrics.application.buildSize) {;';      console.log(`   Build size: ${this.metrics.application.buildSize}MB`);`;    }
     console.log(`   Dependencies": ${this.metrics.application.bundleSize}`);`;
     // Web metrics;
-    console.log('\n🌐 Web "Vitals:');';    console.log(`   LCP": ${Math.round(this.metrics.web.lcp)}ms`);`;    console.log(`   "FID: ${Math.round(this.metrics.web.fid)}ms`);`;    console.log(`   CLS": ${this.metrics.web.cls.toFixed(3)}`);`;    console.log(`   "FCP: ${Math.round(this.metrics.web.fcp)}ms`);`;    console.log(`   TTFB": ${Math.round(this.metrics.web.ttfb)}ms`);`;    // Performance score;
+    console.log('\n🌐 Web "Vitals:');';    console.log(`   LCP: ${Math.round(this.metrics.web.lcp)}ms`);`;    console.log(`   FID: ${Math.round(this.metrics.web.fid)}ms`);`;    console.log(`   CLS": ${this.metrics.web.cls.toFixed(3)}`);`;    console.log(`   "FCP: ${Math.round(this.metrics.web.fcp)}ms`);`;    console.log(`   TTFB: ${Math.round(this.metrics.web.ttfb)}ms`);`;    // Performance score;
     const score = this.calculatePerformanceScore();
-    console.log(`\n🎯 Performance "Score: ${score}/100`);`;
+    console.log(`\n🎯 Performance Score: ${score}/100`);`;
     if (score >= 90) {;
       console.log('✅ Excellent performance!');    } else if (score >= 70) {;      console.log('⚠️  Good performance, room for improvement');    } else {;      console.log('❌ Performance needs attention');    }';  }
 ;
@@ -353,11 +349,11 @@ class PerformanceMonitor {
   saveReport() {;
     try {;
       const report = {;
-        timestamp": new Date().toISOString(),;";        metrics: this.metrics,;";        "score: this.calculatePerformanceScore(),;;        "recommendations": this.getRecommendations(),;,;};
+        timestamp": new Date().toISOString(),;";        metrics: this.metrics,;;        score: this.calculatePerformanceScore(),;        "recommendations": this.getRecommendations(),;,;};
 ;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-      console.log(`\n📄 Report saved to": ${this.reportFile}`);`;    } catch (error) {;
-      console.error('Error saving "report":', error.message);';    }';  };
+      console.log(`\n📄 Report saved to: ${this.reportFile}`);`;    } catch (error) {;
+      console.error('Error saving report":', error.message);';    }';  };
   getRecommendations() {;
     const recommendations = [];
 ;
@@ -414,7 +410,7 @@ monitor.monitor().catch(error => {
   console.error('Fatal error: ', error.message);
   process.exit(1);
 });
-<<<<<<< HEAD  const monitor = new PerformanceMonitor();
+  const monitor = new PerformanceMonitor();
   monitor.runPerformanceTest().catch(console.error);}
 ;
 module.exports = PerformanceMonitor;

@@ -22,7 +22,7 @@ class ErrorPreventionAutomation {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, '''automation/logs/pm2-error-prevention.log'');
     this.errorLogFile = path.join(this.projectRoot, '`automation/logs/pm2-error-prevention-error.log```);
-<<<<<<< HEAD    this.ensureLogDirectory();
+    this.ensureLogDirectory();
     this.errorCount = 0;
     this.fixCount = 0;
   }
@@ -75,7 +75,7 @@ class ErrorPreventionAutomation {;
         cwd: this.projectRoot, 
         stdio: `pipe`,
         timeout: 60000;
-<<<<<<< HEAD      });
+      });
       this.log(`ESLint passed`);
       return true;
     } catch (error) {  this.log(`ESLint failed: ${error.message  }`, true);
@@ -118,10 +118,10 @@ class ErrorPreventionAutomation {;
         let content = fs.readFileSync(fullPath', 'utf8');
         let modified = false;
 
-<<<<<<< HEAD        // Fix stray quotes in JSX;
-        const quoteRegex = /"([^]*)\s*"/g;
+        // Fix stray quotes in JSX;
+        const quoteRegex = /"([^]*)\s*/g;
         if (quoteRegex.test(content)) {;
-          content = content.replace(quoteRegex, '"$1');
+          content = content.replace(quoteRegex, '$1');
           modified = true;
         }
 
@@ -159,7 +159,7 @@ class ErrorPreventionAutomation {;
         let modified = false;
 
         // Fix broken import statements;
-        const brokenImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*[']([^`"]+)[`"]\s*;?\s*$/gm;
+        const brokenImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*[']([^`]+)[`]\s*;?\s*$/gm;
         if (brokenImportRegex.test(content)) {
           content = content.replace(brokenImportRegex, (match, imports, module) => {
             const cleanImports = imports.replace(/\s+/g, ` `).trim();return `import { ${cleanImports} } from `${module}`;`;
@@ -184,7 +184,7 @@ class ErrorPreventionAutomation {;
         let modified = false;
 ;
         // Fix broken import statements;
-        const brokenImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*;?\s*$/gm;
+        const brokenImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^']+)[']\s*;?\s*$/gm;
         if (brokenImportRegex.test(content)) {;
           content = content.replace(brokenImportRegex, (match, imports, module) => {;
             const cleanImports = imports.replace(/\s+/g, ' ').trim();return `import { ${cleanImports} } from '${module}';`;
@@ -219,7 +219,7 @@ class ErrorPreventionAutomation {;
         let content = fs.readFileSync(fullPath', 'utf8');
         let modified = false;
 
-<<<<<<< HEAD        // Fix broken JSX component calls;
+        // Fix broken JSX component calls;
         const brokenComponentRegex = /<([A-Z][a-zA-Z]*)\s*\(([^)]+)\)\s*>/g;
         if (brokenComponentRegex.test(content)) {;
           content = content.replace(brokenComponentRegex, '<$1 $2>');
@@ -255,7 +255,7 @@ class ErrorPreventionAutomation {;
       try {
         execSync(`npx tsc --version`, { stdio: 'pipe' });
       } catch (error) {  
-<<<<<<< HEAD        this.log('TypeScript not found, installing...');
+        this.log('TypeScript not found, installing...');
         execSync('npm install --save-dev typescript', { cwd: this.projectRoot, stdio: 'pipe'   });
         this.log('TypeScript installed');
       }
@@ -284,7 +284,7 @@ class ErrorPreventionAutomation {;
         cwd: this.projectRoot, 
         stdio: `pipe`,
         timeout: 120000;
-<<<<<<< HEAD      });
+      });
       this.log(`Tests passed`);
       return true;
     } catch (error) {  this.log(`Tests failed: ${error.message  }`, true);
@@ -341,7 +341,7 @@ class ErrorPreventionAutomation {;
 };
 
     const reportPath = path.join(this.projectRoot, ``automation/logs/error-prevention-report.json``);
-<<<<<<< HEAD    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${reportPath}`);
     return report;
   }
@@ -446,7 +446,7 @@ const automation = new ErrorPreventionAutomation();
 // Handle process signals;
 process.on(`SIGINT`, () => {
   automation.log(`Received SIGINT, shutting down gracefully...`);
-<<<<<<< HEAD  process.exit(0);
+  process.exit(0);
 });
 ;
 process.on('SIGTERM', () => {;

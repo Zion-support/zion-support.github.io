@@ -47,7 +47,7 @@ class SmartDependencyManager {;
     console.log(`'🔍 Starting Smart Dependency Analysis...');
 ;
     try {;
-<<<<<<< HEAD      await this.loadDependencies();
+      await this.loadDependencies();
       await this.analyzeDependencies();
       await this.detectConflicts();
       await this.checkVulnerabilities();
@@ -57,15 +57,13 @@ class SmartDependencyManager {;
       await this.generateReport();
 ;
       console.log(`'✅ Smart Dependency Analysis completed successfully');
-<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
 
       console.log(`✅ Smart Dependency Analysis completed successfully`);
     } catch (error) {
-      console.error('❌ Smart Dependency Analysis failed:', error.message);
+      console.error('❌ Smart Dependency Analysis failed: ', error.message);
       }
-=======
     } catch (error) {  
       console.error('❌ Smart Dependency Analysis failed: ', error.message);      }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
@@ -137,7 +135,7 @@ class SmartDependencyManager {;
       console.log(📊 Found ${this.analysis.outdated.length} outdated packages';
       `);
     } catch (error) {;
-      console.log(`'⚠️  Could not check outdated packages:', error.message);
+      console.log(`'⚠️  Could not check outdated packages: ', error.message);
     }
   }
 ;
@@ -177,7 +175,7 @@ class SmartDependencyManager {;
             version1: prodVersions.get(pkg),
             version2: version,
             severity: `medium`,
-<<<<<<< HEAD          });
+          });
         } else {;
           prodVersions.set(pkg, version);
         }
@@ -212,7 +210,7 @@ class SmartDependencyManager {;
       console.log(`🛡️  Found ${this.analysis.vulnerabilities.length} vulnerabilities`
       );
     } catch (error) {  
-      console.log(`⚠️  Could not check vulnerabilities:`, error.message);
+      console.log(`⚠️  Could not check vulnerabilities: `, error.message);
       }
   }
 
@@ -248,7 +246,7 @@ class SmartDependencyManager {;
       };
 ;
       console.log(📊 Found ${this.analysis.unused.dependencies.length} unused production dependencies';
-<<<<<<< HEAD      );
+      );
       console.log( 📊 Found ${this.analysis.unused.devDependencies.length} unused development dependencies;
       );
     } catch (error) {;
@@ -342,7 +340,7 @@ class SmartDependencyManager {;
 ;
     for (const pkg of safeUpdates.slice(0, 5)) {;
       // Limit to 5 updates at a time;
-<<<<<<< HEAD      try {console.log(📦 Updating ${pkg.name} to ${pkg.wanted}...);execSync(npm install ${pkg.name}@${pkg.wanted}, { stdio: 'pipe' }`);
+      try {console.log(📦 Updating ${pkg.name} to ${pkg.wanted}...);execSync(npm install ${pkg.name}@${pkg.wanted}, { stdio: 'pipe' }`);
         updatesApplied++;
       } catch (error) {  console.log(`⚠️  Failed to update ${pkg.name  }:`, error.message);
       }
@@ -371,13 +369,11 @@ console.log(`✅ Applied ${updatesApplied} smart updates`);
     try {const packageJsonPath = require.resolve(`${packageName}/package.json`);
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, `utf8`));
       return packageJson.version;
-<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       return null;
-=======
     } catch (error) {  
-<<<<<<< HEAD      return null;
+      return null;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
   }
@@ -427,7 +423,7 @@ console.log(`✅ Applied ${updatesApplied} smart updates`);
 
     const reportPath = path.join(
       this.reportDir,dependency-analysis-${Date.now()}.json`
-<<<<<<< HEAD    );
+    );
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
 console.log(`📊 Dependency analysis report saved to ${reportPath}`);
   }
@@ -461,6 +457,6 @@ async function runSmartDependencyManager() {;
   } catch (error) {  
     console.error(`❌ Smart Dependency Manager failed: ', error.message);
     }
-<<<<<<< HEAD}
+}
 ;
 runSmartDependencyManager();

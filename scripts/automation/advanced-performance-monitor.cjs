@@ -29,7 +29,7 @@ class AdvancedPerformanceMonitor {;
     this.alertsLog = path.join(;
       this.projectRoot,logs',;
       'performance-alerts.json';
-<<<<<<< HEAD    );
+    );
     this.ensureLogsDirectory();
 
     this.monitoringInterval = 30000; // 30 seconds;
@@ -54,7 +54,7 @@ class AdvancedPerformanceMonitor {;
       memory: ['Force garbage collection'', 'Restart PM2 processes', 'Clear build cache'', 'Optimize bundle size', ''],
       cpu: ['Reduce concurrent processes'', 'Optimize build configuration', 'Enable incremental compilation'', 'Use worker threads', ''],
       disk: ['Clean up temporary files'', 'Remove old build artifacts', 'Optimize log rotation'', 'Clear npm cache', ``],
-<<<<<<< HEAD    };
+    };
   }
 ;
   ensureLogsDirectory() {;
@@ -84,7 +84,7 @@ class AdvancedPerformanceMonitor {;
     await this.collectMetrics();
 
     this.log(`Performance monitoring started successfully`);
-<<<<<<< HEAD  }
+  }
 ;
   async collectMetrics() {;
     const metrics = {;
@@ -175,7 +175,7 @@ class AdvancedPerformanceMonitor {;
       metrics.memory.used = metrics.memory.total - metrics.memory.free;
       metrics.memory.usage = (metrics.memory.used / metrics.memory.total) * 100;
 
-<<<<<<< HEAD      // Disk usage;
+      // Disk usage;
       const diskStats = await this.getDiskUsage();
       metrics.disk = { ...metrics.disk, ...diskStats };
     } catch (error) {  this.log(`Failed to collect system metrics: ${error.message  }`, `WARN`);
@@ -269,7 +269,7 @@ class AdvancedPerformanceMonitor {;
       // Measure bundle size;
       metrics.bundleSize = await this.measureBundleSize();
 
-<<<<<<< HEAD      // Count dependencies;
+      // Count dependencies;
       metrics.dependencies = await this.countDependencies();
     } catch (error) {  this.log(`Failed to collect build metrics: ${error.message  }`, `WARN`);
     }
@@ -309,7 +309,7 @@ class AdvancedPerformanceMonitor {;
         cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe',
-<<<<<<< HEAD      });
+      });
 ;
       const lines = result.split('\n');
       const data = lines[1].split(/\s+/);
@@ -361,7 +361,7 @@ class AdvancedPerformanceMonitor {;
       };
     } catch (error) {  
       return { processes: 0, memory: 0, cpu: 0, status: 'error'   };
-<<<<<<< HEAD    }
+    }
   }
 ;
   async getBuildMetrics() {;
@@ -408,7 +408,7 @@ class AdvancedPerformanceMonitor {;
           treeShaking: config.includes('treeshake'),
           codeSplitting: config.includes(`manualChunks`),
           minification: config.includes(`minify`),
-<<<<<<< HEAD        };
+        };
       }
     } catch (error) {  this.log(`Failed to check Vite config: ${error.message  }`, `WARN`);
     }
@@ -434,13 +434,11 @@ class AdvancedPerformanceMonitor {;
       }
 ;
       return totalSize;
-<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
       return 0;
-=======
     } catch (error) {  
-<<<<<<< HEAD      return 0;
+      return 0;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
   }
@@ -540,7 +538,7 @@ class AdvancedPerformanceMonitor {;
         threshold: this.alertThresholds.bundleSize,
         current: metrics.application.build.lastBuildSize,
         category: `APPLICATION`,
-<<<<<<< HEAD      });
+      });
     }
 ;
     return issues;
@@ -575,7 +573,7 @@ class AdvancedPerformanceMonitor {;
         recommendations.push(...this.optimizationStrategies.cpu);
         break;
       case `MEMORY_HIGH`:
-<<<<<<< HEAD        recommendations.push(...this.optimizationStrategies.memory);
+        recommendations.push(...this.optimizationStrategies.memory);
         break;
       case 'DISK_HIGH':;
         recommendations.push(...this.optimizationStrategies.disk);
@@ -601,7 +599,7 @@ class AdvancedPerformanceMonitor {;
   async autoFixCriticalIssues(issues) {
     const criticalIssues = issues.filter(
       issue => issue.severity === `CRITICAL`
-<<<<<<< HEAD    );
+    );
 ;
     for (const issue of criticalIssues) {;
       try {;
@@ -660,7 +658,7 @@ class AdvancedPerformanceMonitor {;
       execSync(`npm cache clean --force', {
         cwd: this.projectRoot,
         stdio: 'pipe',
-<<<<<<< HEAD      });
+      });
 ;
       return { success: true, message: 'Disk space cleaned up successfully' };
     } catch (error) {  
@@ -709,7 +707,6 @@ class AdvancedPerformanceMonitor {;
   async fixCPUUsage() {
     try {
       // Reduce concurrent processes if CPU usage is very high;
-<<<<<<< HEAD
       const metrics =;
 } catch (error) {;
       return { success: false, message: error.message };
@@ -721,9 +718,8 @@ class AdvancedPerformanceMonitor {;
       // Reduce concurrent processes if CPU usage is very high;
       const metrics =;
         this.performanceHistory[this.performanceHistory.length - 1];
-=======
       const metrics =
-<<<<<<< HEAD        this.performanceHistory[this.performanceHistory.length - 1];
+        this.performanceHistory[this.performanceHistory.length - 1];
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       if (metrics.system.cpu.usage > 95) {;
         execSync('pm2 scale all 1', { cwd: this.projectRoot, stdio: 'pipe' });
@@ -820,7 +816,7 @@ if (require.main === module) {
 
       // Keep the process running;
       process.on('SIGINT', () => {
-<<<<<<< HEAD        console.log('Stopping performance monitor...');
+        console.log('Stopping performance monitor...');
         monitor.stopMonitoring();
         process.exit(0);
       });

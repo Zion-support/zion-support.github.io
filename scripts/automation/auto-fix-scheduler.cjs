@@ -18,7 +18,7 @@ class AutoFixScheduler {;
   constructor() {;
     this.projectRoot = process.cwd();
     this.schedule = {
-<<<<<<< HEAD      daily: '0 2 * * *', // 2 AM daily;
+      daily: '0 2 * * *', // 2 AM daily;
       weekly: '0 2 * * 0', // 2 AM every Sunday;
       monthly: '0 2 1 * *', // 2 AM on the 1st of every month;
     };
@@ -71,7 +71,7 @@ class AutoFixScheduler {;
       } catch (error) {  
         console.log(`'⚠️  Could not load fix history, starting fresh');
         }
-<<<<<<< HEAD      }
+      }
     }
   }
 ;
@@ -142,7 +142,7 @@ class AutoFixScheduler {;
         (now.getFullYear() - lastRun.getFullYear()) * 12 +;
         (now.getMonth() - lastRun.getMonth());
       return (
-<<<<<<< HEAD        monthsSinceLastRun >= 1 && now.getDate() === 1 && now.getHours() === 2;
+        monthsSinceLastRun >= 1 && now.getDate() === 1 && now.getHours() === 2;
       );
     }
     return now.getDate() === 1 && now.getHours() === 2;
@@ -175,17 +175,15 @@ class AutoFixScheduler {;
       console.error('❌ Daily fixes failed: ', error);
       this.recordFixRun('daily', new Date(), 'failed', error.message);
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
-      console.error('❌ Daily fixes failed:', error);
+      console.error('❌ Daily fixes failed: ', error);
       this.recordFixRun('daily', new Date(), 'failed', error.message);
     }
 ;
     this.saveFixHistory();
-=======
 
-<<<<<<< HEAD    this.saveFixHistory();
+    this.saveFixHistory();
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;
@@ -216,17 +214,15 @@ class AutoFixScheduler {;
       console.error('❌ Weekly fixes failed: ', error);
       this.recordFixRun('weekly', new Date(), 'failed', error.message);
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
-      console.error('❌ Weekly fixes failed:', error);
+      console.error('❌ Weekly fixes failed: ', error);
       this.recordFixRun('weekly', new Date(), 'failed', error.message);
     }
 ;
     this.saveFixHistory();
-=======
 
-<<<<<<< HEAD    this.saveFixHistory();
+    this.saveFixHistory();
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;
@@ -257,17 +253,15 @@ class AutoFixScheduler {;
       console.error('❌ Monthly fixes failed: ', error);
       this.recordFixRun('monthly', new Date(), 'failed', error.message);
       }
-<<<<<<< HEAD
 ;
 } catch (error) {;
-      console.error('❌ Monthly fixes failed:', error);
+      console.error('❌ Monthly fixes failed: ', error);
       this.recordFixRun('monthly', new Date(), 'failed', error.message);
     }
 ;
     this.saveFixHistory();
-=======
 
-<<<<<<< HEAD    this.saveFixHistory();
+    this.saveFixHistory();
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;
@@ -300,7 +294,7 @@ class AutoFixScheduler {;
     // Fix unused imports;
     await this.runUnusedImportFixes();
 
-<<<<<<< HEAD    // Run full TypeScript check;
+    // Run full TypeScript check;
     await this.runFullTypeCheck();
   }
 ;
@@ -342,7 +336,7 @@ class AutoFixScheduler {;
         // Fix .ts extensions in imports;
         const fixImports = (content) => {
           return content;
-            .replace(/from\\s+['"]([^']+)\\.ts[']/g, "from '$1'")
+            .replace(/from\\s+['"]([^']+)\\.ts[']/g, from '$1')
             .replace(/require\\s*\\(\\s*[']([^']+)\\.ts['"]\\s*\\)/g, "require('$1')");
         };
         
@@ -354,7 +348,7 @@ class AutoFixScheduler {;
             const fixedContent = fixImports(content);
             if (content !== fixedContent) {
               fs.writeFileSync(filePath, fixedContent, `utf8`);console.log(\✅ Fixed imports in \${path.relative(process.cwd(), filePath)}\);
-<<<<<<< HEAD            }
+            }
           }
         };
         ;
@@ -383,7 +377,7 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: `inherit` }`);
     } catch (error) {  
       console.error(`❌ Import fixes failed: `, error);
       }
-        console.log('✅ Import fixes completed'`);;
+        console.log('✅ Import fixes completed'`);
 ;
       const tempFile = path.join(this.projectRoot, 'temp-import-fixer.js');
       fs.writeFileSync(tempFile, importFixer);
@@ -392,7 +386,7 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
       // Clean up temp file;
       fs.unlinkSync(tempFile);
     } catch (error) {;
-      console.error('❌ Import fixes failed:', error);
+      console.error('❌ Import fixes failed: ', error);
     }
   }
 ;
@@ -432,12 +426,10 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
         cwd: this.projectRoot,;
         stdio: 'inherit',;
       });
-<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
-      console.error('❌ Comprehensive error fixer failed:', error);
+      console.error('❌ Comprehensive error fixer failed: ', error);
       }
-=======
     } catch (error) {  
       console.error('❌ Comprehensive error fixer failed: ', error);      }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
@@ -451,12 +443,10 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
         cwd: this.projectRoot,;
         stdio: 'inherit',;
       });
-<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
-      console.error('❌ Unused import fixes failed:', error);
+      console.error('❌ Unused import fixes failed: ', error);
       }
-=======
     } catch (error) {  
       console.error('❌ Unused import fixes failed: ', error);      }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
@@ -520,16 +510,14 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
       const reportPath = path.join(;
         this.projectRoot,logs',;
         'project-health-report.json';
-<<<<<<< HEAD      );
+      );
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 ;
       console.log('✅ Project health report generated');
-<<<<<<< HEAD
     } catch (error) {  ;
 } catch (error) {;
-      console.error('❌ Project health report generation failed:', error);
+      console.error('❌ Project health report generation failed: ', error);
       }
-=======
     } catch (error) {  
       console.error('❌ Project health report generation failed: ', error);      }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
@@ -631,7 +619,7 @@ const scheduler = new AutoFixScheduler();
 
 // Handle process signals;
 process.on('SIGINT', () => {
-<<<<<<< HEAD  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
   scheduler.saveFixHistory();
   process.exit(0);
 });

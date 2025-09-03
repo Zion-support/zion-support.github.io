@@ -62,7 +62,6 @@ class EnhancedErrorFixingAutomation {;
     const logsDir = path.join(process.cwd(), 'automation', 'logs');
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
-<<<<<<< HEAD
     }
   }
 ;
@@ -300,8 +299,7 @@ export default [
         description: 'Created ESLint flat configuration';
 });
     }
-=======
-<<<<<<< HEAD    }
+    }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 
@@ -461,7 +459,6 @@ export default [
         if (content !== originalContent) {;
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-<<<<<<< HEAD
 
   async fixTypeMismatch(lines, lineIndex, message) {
     const line = lines[lineIndex];
@@ -577,8 +574,7 @@ export default [
           const [, filePath, line, column, message] = match;
           await this.fixESLintError(filePath, parseInt(line), parseInt(column), message);
         }
-=======
-<<<<<<< HEAD        }
+        }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
     }

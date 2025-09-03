@@ -39,7 +39,7 @@ class MasterErrorDetectorFixer {;
   ensureDirectories() {
     [`this.logDir`, `this.reportsDir`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-<<<<<<< HEAD    console.log(`📁 Project Root: ${this.projectRoot});console.log(📊 Log Directory: ${this.logDir}``);
+    console.log(`📁 Project Root: ${this.projectRoot});console.log(📊 Log Directory: ${this.logDir}``);
   }
 ;
   ensureDirectories() {;
@@ -118,7 +118,6 @@ class MasterErrorDetectorFixer {;
         details: errors,;
         severity: 'high';
       });
-<<<<<<< HEAD
       this.errors.push({
         type: `typescript`,
         count: errors.length,
@@ -133,8 +132,7 @@ class MasterErrorDetectorFixer {;
         severity: 'high'`);
       });`);
       await this.log(❌ Found ${errors.length} TypeScript errors, 'ERROR'`);
-=======
-<<<<<<< HEAD      await this.log(❌ Found ${errors.length} TypeScript errors, 'ERROR'`);
+      await this.log(❌ Found ${errors.length} TypeScript errors, 'ERROR'`);
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       return errors;
     }
@@ -197,7 +195,7 @@ class MasterErrorDetectorFixer {;
     }
     
     await this.log(`✅ No ESLint errors found`);
-<<<<<<< HEAD    return [];
+    return [];
   }
 ;
   parseLintingErrors(output) {;
@@ -244,7 +242,7 @@ class MasterErrorDetectorFixer {;
     }
     
     await this.log(`✅ No build errors found`);
-<<<<<<< HEAD    return [];
+    return [];
   }
 ;
   parseBuildErrors(output) {;
@@ -304,7 +302,7 @@ class MasterErrorDetectorFixer {;
     await this.log(`🔧 Fixing TypeScript errors...`);
     
     const typescriptErrors = this.errors.find(e => e.type === `typescript`);
-<<<<<<< HEAD    if (!typescriptErrors) return;
+    if (!typescriptErrors) return;
     ;
     for (const error of typescriptErrors.details) {;
       try {;
@@ -328,7 +326,7 @@ class MasterErrorDetectorFixer {;
         // Add proper type annotation or fix import;
         if (lines[lineIndex].includes('import')) {
           // Fix import statement;
-          lines[lineIndex] = lines[lineIndex].replace(/from [`"]\.\/pages\/([^`"]+)[`"]/, (match, pageName) => {return `from `./pages/${pageName}.tsx``;
+          lines[lineIndex] = lines[lineIndex].replace(/from [`"]\.\/pages\/([^`]+)[`]/, (match, pageName) => {return `from `./pages/${pageName}.tsx``;
     ;
     const content = await readFile(error.file, 'utf8');
     const lines = content.split('\n');
@@ -357,7 +355,7 @@ class MasterErrorDetectorFixer {;
     const result = await this.executeCommand(`npm run lint -- --fix', { silent: true });
     
     if (result.success) {
-<<<<<<< HEAD      await this.log('✅ ESLint errors auto-fixed');
+      await this.log('✅ ESLint errors auto-fixed');
     } else {;
       await this.log('⚠️ Some ESLint errors could not be auto-fixed', 'WARN');
     }
@@ -403,7 +401,7 @@ class MasterErrorDetectorFixer {;
   async fixDependencyIssues() {;
     await this.log('🔧 Fixing dependency issues...');
     
-<<<<<<< HEAD    // Try to fix security vulnerabilities;
+    // Try to fix security vulnerabilities;
     const result = await this.executeCommand('npm audit fix', { silent: true });
     ;
     if (result.success) {;
@@ -469,7 +467,7 @@ class MasterErrorDetectorFixer {;
       await this.detectBuildErrors();
       await this.detectDependencyIssues();
       
-<<<<<<< HEAD      // Fix errors;
+      // Fix errors;
       await this.fixTypeScriptErrors();
       await this.fixLintingErrors();
       await this.fixBuildErrors();
@@ -481,16 +479,14 @@ class MasterErrorDetectorFixer {;
       await this.log(`✅ Error detection and fixing completed!`);await this.log(`📊 Total errors found: ${report.totalErrors}`);await this.log(`🔧 Errors fixed: ${this.fixes.length}`);
       ;
       return report;
-<<<<<<< HEAD
       ;
 } catch (error) {  await this.log(`❌ Error in master error detector: ${error.message  }`, `ERROR`);
       ;
     } catch (error) {await this.log(`❌ Error in master error detector: ${error.message}`, 'ERROR');
       throw error;
-=======
       
     } catch (error) {  await this.log(`❌ Error in master error detector: ${error.message  }`, `ERROR`);
-<<<<<<< HEAD      throw error;
+      throw error;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     }
   }
@@ -511,7 +507,7 @@ class MasterErrorDetectorFixer {;
 
 // Main execution;
 if (require.main === module) {
-<<<<<<< HEAD  const detector = new MasterErrorDetectorFixer();
+  const detector = new MasterErrorDetectorFixer();
   ;
   const args = process.argv.slice(2);
   const continuous = args.includes(`--continuous') || args.includes('-c');

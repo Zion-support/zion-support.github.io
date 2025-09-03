@@ -201,7 +201,7 @@ class DeploymentState {;
 // Health Check System;
 class HealthCheckSystem {
   constructor() {
-<<<<<<< HEAD    this.healthChecks = CONFIG.HEALTH_CHECKS;
+    this.healthChecks = CONFIG.HEALTH_CHECKS;
   }
   ;
   async runHealthChecks(environment) {log(`Running health checks for ${environment.name} environment`);
@@ -249,7 +249,7 @@ class HealthCheckSystem {
       output: ``,
       error: null,
       duration: 0,
-<<<<<<< HEAD      retries: 0;
+      retries: 0;
     };
     ;
     const startTime = Date.now();
@@ -287,7 +287,7 @@ class HealthCheckSystem {
         result.retries = attempt;
         
         if (attempt < checkConfig.retries) {log(`Health check ${checkName  } error on attempt ${attempt + 1}, retrying...`, `WARN`);
-<<<<<<< HEAD          await new Promise(resolve => setTimeout(resolve, 2000));
+          await new Promise(resolve => setTimeout(resolve, 2000));
         } else {log(`Health check ${checkName} error after ${checkConfig.retries + 1} attempts`, `ERROR`);
         }
       }
@@ -345,7 +345,7 @@ class DeploymentSystem {;
         timestamp: new Date().toISOString(),
         status: 'in-progress',
         healthChecks: preDeploymentHealth,
-<<<<<<< HEAD        options;
+        options;
       };
       ;
       this.state.addDeployment(deployment);
@@ -378,7 +378,7 @@ class DeploymentSystem {;
             log(`Initiating automatic rollback due to failed health checks`);
             await this.rollback(environment.name, {
               reason: `Failed post-deployment health checks`,
-<<<<<<< HEAD              healthCheckResults: postDeploymentHealth;
+              healthCheckResults: postDeploymentHealth;
             });
           }
         }
@@ -407,7 +407,7 @@ class DeploymentSystem {;
       
       return {
         success: false,
-<<<<<<< HEAD        error: error.message;
+        error: error.message;
       };
     }
   }
@@ -427,7 +427,7 @@ class DeploymentSystem {;
       
       // Step 2: Install dependencies;
       log(`Step 2: Installing dependencies`);
-<<<<<<< HEAD      const installResult = await this.installDependencies(environment);
+      const installResult = await this.installDependencies(environment);
       if (!installResult.success) {;
         return installResult;
       }
@@ -442,7 +442,7 @@ class DeploymentSystem {;
       
       // Step 4: Deploy with PM2;
       log(`Step 4: Deploying with PM2`);
-<<<<<<< HEAD      const pm2Result = await this.deployWithPM2(environment);
+      const pm2Result = await this.deployWithPM2(environment);
       if (!pm2Result.success) {;
         return pm2Result;
       }
@@ -500,7 +500,7 @@ class DeploymentSystem {;
         return {
           success: false,error: `Failed to fetch from origin: ${fetchResult.error}`,
           step: `fetch`
-<<<<<<< HEAD        };
+        };
       }
       ;
       // Checkout target branchconst checkoutResult = gitCommand(`checkout ${environment.branch}`, { silent: true });
@@ -608,7 +608,7 @@ class DeploymentSystem {;
         return {
           success: false,error: `PM2 not running: ${pm2StatusResult.error}`,
           step: `pm2-status`
-<<<<<<< HEAD        };
+        };
       }
       ;
       // Reload PM2 ecosystemconst reloadResult = executeCommand(`${CONFIG.PM2_PATH} reload ecosystem-intelligent-enhanced.config.cjs --env ${environment.name}`, { silent: true });
@@ -659,7 +659,7 @@ class DeploymentSystem {;
     try {;
       log('Verifying deployment');
       
-<<<<<<< HEAD      // Check if application is responding;
+      // Check if application is responding;
       const healthCheckResult = await this.healthChecker.runHealthChecks(environment);
       ;
       if (healthCheckResult.overall.passed) {;
@@ -740,7 +740,7 @@ class DeploymentSystem {;
         timestamp: new Date().toISOString(),
         reason: options.reason || `Manual rollback`,
         status: `in-progress`
-<<<<<<< HEAD      };
+      };
       ;
       this.state.addRollback(rollback);
       
@@ -766,7 +766,7 @@ class DeploymentSystem {;
       
       if (rollback) {
         rollback.status = `failed`;
-<<<<<<< HEAD        rollback.error = error.message;
+        rollback.error = error.message;
         rollback.completedAt = new Date().toISOString();
         this.state.saveState();
       }
@@ -786,7 +786,7 @@ class DeploymentSystem {;
       
       // Step 1: Revert to previous commit;
       log(`Step 1: Reverting to previous commit`);
-<<<<<<< HEAD      const revertResult = await this.revertToPreviousCommit(environment);
+      const revertResult = await this.revertToPreviousCommit(environment);
       if (!revertResult.success) {;
         return revertResult;
       }
@@ -801,7 +801,7 @@ class DeploymentSystem {;
         return installResult;
       }
       
-<<<<<<< HEAD      // Step 3: Rebuild application;
+      // Step 3: Rebuild application;
       log('Step 3: Rebuilding application');
       const buildResult = await this.buildApplication(environment);
       if (!buildResult.success) {;
@@ -837,7 +837,7 @@ class DeploymentSystem {;
 } catch (error) {  log(`Rollback execution failed: ${error.message  }`, `ERROR`);
       return {
         success: false,
-<<<<<<< HEAD        error: error.message;
+        error: error.message;
       };
     }
   }
@@ -874,7 +874,7 @@ class DeploymentSystem {;
         return {
           success: false,error: `Failed to get previous commit: ${previousCommitResult.error}`,
           step: `get-previous-commit`
-<<<<<<< HEAD        };
+        };
       }
       ;
       const previousCommit = previousCommitResult.output.trim();
@@ -952,7 +952,7 @@ const main = async () => {
   try {
     const deploymentSystem = new DeploymentSystem();
     
-<<<<<<< HEAD    // Check for deployment requests;
+    // Check for deployment requests;
     const deploymentRequests = await checkDeploymentRequests();
     ;
     for (const request of deploymentRequests) {log(`Processing deployment request for ${request.environment}`);
@@ -1030,7 +1030,7 @@ const generateDeploymentReport = async (deploymentSystem) => {;
   
   // Save report;
   const reportPath = path.join(CONFIG.LOG_DIR, `deployment-report.json`);
-<<<<<<< HEAD  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   log(`Deployment report generated: ${reportPath}`);
   return report;
 };
@@ -1066,5 +1066,5 @@ module.exports = {
   DeploymentSystem,
   HealthCheckSystem,
   DeploymentState,
-<<<<<<< HEAD  main;
+  main;
 };

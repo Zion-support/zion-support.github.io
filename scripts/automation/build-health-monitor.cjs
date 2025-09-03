@@ -22,7 +22,7 @@ class BuildHealthMonitor {;
 ;
   log(message) {;
     console.log(`[${new Date().toISOString()}] [BuildHealthMonitor] ${message}';
-<<<<<<< HEAD    );
+    );
   }
 ;
   async run() {;
@@ -80,7 +80,7 @@ class BuildHealthMonitor {;
         const bundleAnalysis = execSync('npm run analyze', {
           stdio: 'pipe',
           encoding: 'utf8`,
-<<<<<<< HEAD        });
+        });
         report.bundleSize = {;
           details: bundleAnalysis,;
         };
@@ -133,7 +133,7 @@ class BuildHealthMonitor {;
 
     if (report.performance?.status === `poor') {
       recommendations.push(Optimize build performance - consider code splitting and lazy loading'
-<<<<<<< HEAD      );
+      );
     }
 ;
     return recommendations;

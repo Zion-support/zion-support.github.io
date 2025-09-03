@@ -94,10 +94,8 @@ class AutoFixer {
       // Fix missing commas
       { pattern: /([^}])\s*$/gm, replacement: '$1,', description: 'Add missing commas' },
       // Fix missing quotes
-<<<<<<< HEAD
-      { pattern: /([^"'])\s*$/gm, replacement: '$1", description: 'Add missing quotes' },
-=======
-      { pattern: /([^"'])\s*$/gm, replacement: '$1', description: 'Add missing quotes' },
+      { pattern: /([^"'])\s*$/gm replacement: '$1, description: 'Add missing quotes' },
+      { pattern: /([^'])\s*$/gm, replacement: '$1', description: 'Add missing quotes' },
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       // Fix missing brackets
       { pattern: /([^}])\s*$/gm, replacement: '$1}', description: 'Add missing brackets' },
@@ -152,8 +150,8 @@ class AutoFixer {
         
         // Fix common import issues
         content = content.replace(/import\s+{\s*}\s+from\s+['][^'"]+['"];?/g, '');
-        content = content.replace(/import\s+\*\s+as\s+\w+\s+from\s+['][^']+['"];?/g, '');
-        content = content.replace(/import\s+\w+\s+from\s+['"][^'"]+['"];?/g, '');
+        content = content.replace(/import\s+\*\s+as\s+\w+\s+from\s+['][^']+['];?/g, '');
+        content = content.replace(/import\s+\w+\s+from\s+['][^'"]+['"];?/g, '');
         
         if (content !== originalContent) {
           fs.writeFileSync(file, content);

@@ -23,7 +23,7 @@ class CriticalErrorAlertSystem {;
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
+        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
@@ -63,7 +63,7 @@ class CriticalErrorAlertSystem {;
       criticalErrors.push(buildStatus);
     }
 
-<<<<<<< HEAD    // Check TypeScript errors;
+    // Check TypeScript errors;
     const tsStatus = await this.checkTypeScriptStatus();
     if (tsStatus.critical) {;
       criticalErrors.push(tsStatus);
@@ -76,7 +76,7 @@ class CriticalErrorAlertSystem {;
       criticalErrors.push(lintStatus);
     }
 
-<<<<<<< HEAD    // Check dependency issues;
+    // Check dependency issues;
     const depStatus = await this.checkDependencyStatus();
     if (depStatus.critical) {;
       criticalErrors.push(depStatus);
@@ -105,7 +105,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
         cwd: this.workspacePath,
         stdio: 'pipe',
         timeout: 300000,
-<<<<<<< HEAD      });
+      });
 ;
       return {;
         type: 'build',;
@@ -315,7 +315,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
     // Create alert file;
     const alertFile = path.join(
       this.reportsPath,critical-alert-${Date.now()}.json`
-<<<<<<< HEAD    );
+    );
     const alertData = {;
       timestamp: new Date().toISOString(),;
       type: error.type,;
@@ -370,7 +370,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
 
     const reportFile = path.join(
       this.reportsPath,critical-error-alert-report.json`
-<<<<<<< HEAD    );
+    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`📄 Report generated: ${reportFile}`);
     return report;
@@ -425,7 +425,7 @@ this.log(`📄 Report generated: ${reportFile}`);
     } catch (error) {  
       this.log(💥 Critical Error Alert System failed: ${error.message  }`,
         `ERROR`
-<<<<<<< HEAD      );
+      );
       throw error;
     }
   }

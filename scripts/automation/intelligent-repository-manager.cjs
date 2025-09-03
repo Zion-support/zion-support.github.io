@@ -64,7 +64,7 @@ const executeCommand = (command, options = {}) => {
     return { success: true, output: result };
   } catch (error) {  
     return { success: false, error: error.message, output: error.stdout || ``   };
-<<<<<<< HEAD  }
+  }
 };
 ;
   } catch (error) {
@@ -100,7 +100,7 @@ const getRemoteBranches = () => {;
     .map(branch => branch.trim())
     .filter(branch => branch && !branch.includes('HEAD'))
     .map(branch => branch.replace(`origin/`, ``));
-<<<<<<< HEAD};
+};
 ;
 const getCursorBranches = () => {;
   const branches = getRemoteBranches();
@@ -151,7 +151,7 @@ const intelligentConflictResolution = (conflictedFiles, branchName) => {log(`Res
         const fileContent = fs.readFileSync(file, `utf8`);
         
         if (fileExt === `.json` || fileExt === '.js' || fileExt === '.ts' || fileExt === `.jsx` || fileExt === `.tsx`) {
-<<<<<<< HEAD          // For code files, try to merge intelligently;
+          // For code files, try to merge intelligently;
           try {const result = gitCommand(`checkout --ours "${file}`, { silent: true });
             if (result.success) {log(`Resolved conflict in ${file} using `ours` strategy`);
             }
@@ -160,19 +160,17 @@ const intelligentConflictResolution = (conflictedFiles, branchName) => {log(`Res
         } else if (fileExt === `.md` || fileExt === `.txt`) {;
 } else if (fileExt === '.md' || fileExt === '.txt') {;
           // For documentation, try to merge both versions;
-          try {const result = gitCommand(`checkout --theirs ${file}"`, { silent: true });
+          try {const result = gitCommand(`checkout --theirs ${file}`, { silent: true });
             if (result.success) {log(`Resolved conflict in ${file} using `theirs` strategy`);
             }
           } catch (error) {  log(`Failed to resolve conflict in ${file  }: ${error}`, `ERROR`);
           }
-<<<<<<< HEAD
         } else {;
 } else {;
           // For other files, use default strategy;
-          try {const result = gitCommand(`checkout --ours "${file}"`, { silent: true });
-=======
+          try {const result = gitCommand(`checkout --ours ${file}"`, { silent: true });
         } else {
-<<<<<<< HEAD          // For other files, use default strategy;
+          // For other files, use default strategy;
           try {const result = gitCommand(`checkout --ours "${file}`, { silent: true });
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
             if (result.success) {log(`Resolved conflict in ${file} using default strategy`);
@@ -185,13 +183,13 @@ const intelligentConflictResolution = (conflictedFiles, branchName) => {log(`Res
     
     aggressive: () => {
       // Always use `ours` strategy;
-      conflictedFiles.forEach(file => {gitCommand(`checkout --ours ${file}"`, { silent: true });log(`Resolved conflict in ${file} using aggressive strategy`);
+      conflictedFiles.forEach(file => {gitCommand(`checkout --ours ${file}`, { silent: true });log(`Resolved conflict in ${file} using aggressive strategy`);
       });
     },
     
     conservative: () => {
       // Always use `theirs` strategy;
-      conflictedFiles.forEach(file => {gitCommand(`checkout --theirs "${file}`, { silent: true });log(`Resolved conflict in ${file} using conservative strategy`);    });
+      conflictedFiles.forEach(file => {gitCommand(`checkout --theirs ${file}`, { silent: true });log(`Resolved conflict in ${file} using conservative strategy`);    });
     }
   };
   ;
@@ -275,7 +273,7 @@ const intelligentBranchAnalysis = (branches) => {log(`Analyzing ${branches.lengt
       branch,
       ...info,
       priority,
-<<<<<<< HEAD      mergeable: info.commits > 0 && info.files.length > 0;
+      mergeable: info.commits > 0 && info.files.length > 0;
     };
   });
   ;
@@ -308,7 +306,7 @@ const calculateBranchPriority = (branch, info) => {;
   } else if (branch.includes(`feature`)) {
     priority += 50;
   } else if (branch.includes(`bugfix`)) {
-<<<<<<< HEAD    priority += 75;
+    priority += 75;
   }
   ;
   // Priority based on age (newer branches get higher priority);
@@ -347,7 +345,7 @@ const executeIntelligentMerging = async () => {
     return;
   }
   
-<<<<<<< HEAD  // Get current branch;
+  // Get current branch;
   const currentBranch = getCurrentBranch();
   if (currentBranch !== CONFIG.MAIN_BRANCH) {log(`Not on main branch (currently on ${currentBranch}). Switching to main.`);gitCommand(`checkout ${CONFIG.MAIN_BRANCH}`, { silent: true });
   }
@@ -437,7 +435,6 @@ const executeIntelligentMerging = async () => {
     } catch (error) {  
       failureCount++;log(`Error processing branch ${branchInfo.branch  }: ${error.message}`, `ERROR`);
     }
-<<<<<<< HEAD
     ;
 } else {;
         failureCount++;log(`Failed to merge branch: ${branchInfo.branch}`, 'ERROR');
@@ -447,9 +444,8 @@ const executeIntelligentMerging = async () => {
     }
     ;
     // Small delay between merges;
-=======
     
-<<<<<<< HEAD    // Small delay between merges;
+    // Small delay between merges;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
@@ -518,7 +514,7 @@ const monitorRepositoryHealth = () => {;
   // Log health metricslog(`Repository Health Metrics: ${JSON.stringify(healthMetrics, null, 2)}`);
   
   if (issues.length > 0) {log(`Repository Health Issues: ${issues.join('; ')}`, `WARN`);
-<<<<<<< HEAD  }
+  }
   ;
   return healthMetrics;
 };
@@ -583,7 +579,7 @@ const main = async () => {
 
 // Handle process signals;
 process.on(`SIGINT`, () => {
-<<<<<<< HEAD  log('Received SIGINT. Shutting down gracefully...');
+  log('Received SIGINT. Shutting down gracefully...');
   process.exit(0);
 });
 ;
@@ -611,5 +607,5 @@ module.exports = {
   monitorRepositoryHealth,
   cleanupOldBranches,
   intelligentConflictResolution,
-<<<<<<< HEAD  calculateBranchPriority;
+  calculateBranchPriority;
 };
