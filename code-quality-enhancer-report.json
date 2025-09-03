@@ -1,0 +1,84 @@
+{
+  "timestamp": "2025-09-03T18:50:45.310Z",
+  "duration": "14ms",
+  "improvements": [
+    {
+      "type": "structure",
+      "action": "created_directory",
+      "path": "src/hooks",
+      "timestamp": "2025-09-03T18:50:45.297Z"
+    },
+    {
+      "type": "structure",
+      "action": "created_directory",
+      "path": "src/utils",
+      "timestamp": "2025-09-03T18:50:45.297Z"
+    },
+    {
+      "type": "structure",
+      "action": "created_directory",
+      "path": "src/types",
+      "timestamp": "2025-09-03T18:50:45.297Z"
+    },
+    {
+      "type": "structure",
+      "action": "created_directory",
+      "path": "src/constants",
+      "timestamp": "2025-09-03T18:50:45.298Z"
+    },
+    {
+      "type": "structure",
+      "action": "created_directory",
+      "path": "src/services",
+      "timestamp": "2025-09-03T18:50:45.298Z"
+    },
+    {
+      "type": "structure",
+      "action": "created_directory",
+      "path": "src/contexts",
+      "timestamp": "2025-09-03T18:50:45.298Z"
+    },
+    {
+      "type": "structure",
+      "action": "created_index_file",
+      "path": "src/components/index.ts",
+      "exports": 3,
+      "timestamp": "2025-09-03T18:50:45.299Z"
+    },
+    {
+      "type": "imports",
+      "action": "optimized_imports",
+      "filesOptimized": 9,
+      "timestamp": "2025-09-03T18:50:45.308Z"
+    },
+    {
+      "type": "types",
+      "action": "created_common_types",
+      "path": "src/types/common.ts",
+      "timestamp": "2025-09-03T18:50:45.309Z"
+    },
+    {
+      "type": "utilities",
+      "action": "created_utility_functions",
+      "path": "src/utils/common.ts",
+      "timestamp": "2025-09-03T18:50:45.310Z"
+    },
+    {
+      "type": "hooks",
+      "action": "created_custom_hooks",
+      "path": "src/hooks/common.ts",
+      "timestamp": "2025-09-03T18:50:45.310Z"
+    }
+  ],
+  "issues": [],
+  "summary": {
+    "totalImprovements": 11,
+    "categories": {
+      "structure": 7,
+      "imports": 1,
+      "types": 1,
+      "utilities": 1,
+      "hooks": 1
+    }
+  }
+}

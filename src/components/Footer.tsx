@@ -1,6 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import Link from 'next/link';
+import React from 'react';
+
 
 export default function Footer() {
   return (

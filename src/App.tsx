@@ -1,8 +1,9 @@
-import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import React, { Suspense, lazy } from 'react';
 import Footer from './components/Footer';
+import Header from './components/Header';
 import LoadingSpinner from './components/LoadingSpinner';
+
 
 // Lazy load pages
 const HomePage = lazy(() => import('./pages/index'));

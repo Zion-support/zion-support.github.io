@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
 import { Search, Filter, Star, ExternalLink, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import Link from 'next/link';
+import React, { useState } from 'react';
 import { REAL_MICRO_SAAS_SERVICES_2025, SERVICE_CATEGORIES, ZION_CONTACT_INFO } from '../../data/realMicroSaasServices2025';
+
 
 export default function ComprehensiveMicroSaasShowcase() {
   const [searchTerm, setSearchTerm] = useState('');
