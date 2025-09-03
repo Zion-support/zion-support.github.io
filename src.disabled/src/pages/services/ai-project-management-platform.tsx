@@ -1,647 +1,452 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
-import { Brain, ;
-  Users, ;
-  Calendar, ;
-  TrendingUp, ;
-  Shield, ;
-  Zap, ;
-  CheckCircle, ;
-  ArrowRight,;
-  Clock,;
-  Target,;
-  BarChart3,;
-  MessageSquare,;
-  FileText,;
-  GitBranch,;
-  AlertTriangle,;
-  Star,;
-  DollarSign,;
-  Globe,;
-  Smartphone,;
-  Cloud;,
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { 
+  Brain, 
+  Users, 
+  BarChart3, 
+  Clock, 
+  CheckCircle, 
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  TrendingUp,
+  Target,
+  Zap,
+  Shield,
+  Globe,
+  Smartphone,
+  Monitor,
+  Laptop,
+  Calendar,
+  Bell,
+  Settings,
+  Lock,
+  Award,
+  Rocket,
+  Lightbulb,
+  Code,
+  Database,
+  Cloud,
+  Network,
+  Server,
+  Cpu,
+  HardDrive,
+  Wifi,
+  Bluetooth,
+  Headphones,
+  Speaker,
+  Volume2,
+  Play,
+  Pause,
+  Stop,
+  SkipBack,
+  SkipForward,
+  RotateCcw,
+  RefreshCw,
+  Maximize,
+  Minimize,
+  Fullscreen,
+  Search,
+  Filter,
+  SortAsc,
+  SortDesc,
+  Grid,
+  List,
+  Menu,
+  X,
+  Plus,
+  Minus,
+  ChevronRight,
+  ChevronLeft,
+  ChevronUp,
+  ChevronDown,
+  ExternalLink,
+  Info,
+  HelpCircle,
+  AlertCircle,
+  Check,
+  XCircle,
+  Loader,
+  Upload,
+  Archive,
+  Folder,
+  File,
+  BookOpen,
+  Newspaper,
+  PenTool,
+  Type,
+  AlignLeft,
+  AlignCenter,
+  AlignRight,
+  Bold,
+  Italic,
+  Underline,
+  Link as LinkIcon,
+  Quote,
+  List as ListIcon,
+  Hash,
+  AtSign,
+  Tag,
+  Hash as HashIcon,
+  DollarSign,
+  Percent,
+  Calculator,
+  PieChart,
+  LineChart,
+  BarChart,
+  Activity,
+  TrendingDown,
+  TrendingUp as TrendingUpIcon,
+  Zap as ZapIcon,
+  Target as TargetIcon,
+  Users as UsersIcon,
+  Globe as GlobeIcon,
+  Smartphone as SmartphoneIcon,
+  Monitor as MonitorIcon,
+  Laptop as LaptopIcon,
+  Calendar as CalendarIcon,
+  Bell as BellIcon,
+  Settings as SettingsIcon,
+  Lock as LockIcon,
+  Award as AwardIcon,
+  Rocket as RocketIcon,
+  Lightbulb as LightbulbIcon,
+  Code as CodeIcon,
+  Database as DatabaseIcon,
+  Cloud as CloudIcon,
+  Network as NetworkIcon,
+  Server as ServerIcon,
+  Cpu as CpuIcon,
+  HardDrive as HardDriveIcon,
+  Wifi as WifiIcon,
+  Bluetooth as BluetoothIcon,
+  Headphones as HeadphonesIcon,
+  Speaker as SpeakerIcon,
+  Volume2 as Volume2Icon,
+  Play as PlayIcon,
+  Pause as PauseIcon,
+  Stop as StopIcon,
+  SkipBack as SkipBackIcon,
+  SkipForward as SkipForwardIcon,
+  RotateCcw as RotateCcwIcon,
+  RefreshCw as RefreshCwIcon,
+  Maximize as MaximizeIcon,
+  Minimize as MinimizeIcon,
+  Fullscreen as FullscreenIcon,
+  Search as SearchIcon,
+  Filter as FilterIcon,
+  SortAsc as SortAscIcon,
+  SortDesc as SortDescIcon,
+  Grid as GridIcon,
+  List as ListIconAlt,
+  Menu as MenuIcon,
+  X as XIcon,
+  Plus as PlusIcon,
+  Minus as MinusIcon,
+  ChevronRight as ChevronRightIcon,
+  ChevronLeft as ChevronLeftIcon,
+  ChevronUp as ChevronUpIcon,
+  ChevronDown as ChevronDownIcon,
+  ExternalLink as ExternalLinkIcon,
+  Info as InfoIcon,
+  HelpCircle as HelpCircleIcon,
+  AlertCircle as AlertCircleIcon,
+  Check as CheckIcon,
+  XCircle as XCircleIcon,
+  Loader as LoaderIcon,
+  Upload as UploadIcon,
+  Archive as ArchiveIcon,
+  Folder as FolderIcon,
+  File as FileIcon,
+  BookOpen as BookOpenIcon,
+  Newspaper as NewspaperIcon,
+  PenTool as PenToolIcon,
+  Type as TypeIcon,
+  AlignLeft as AlignLeftIcon,
+  AlignCenter as AlignCenterIcon,
+  AlignRight as AlignRightIcon,
+  Bold as BoldIcon,
+  Italic as ItalicIcon,
+  Underline as UnderlineIcon,
+  LinkIcon as LinkIconAlt,
+  Quote as QuoteIcon,
+  ListIcon as ListIconAlt2,
+  Hash as HashIconAlt,
+  AtSign as AtSignIcon,
+  Tag as TagIcon,
+  DollarSign as DollarSignIcon,
+  Percent as PercentIcon,
+  Calculator as CalculatorIcon,
+  PieChart as PieChartIcon,
+  LineChart as LineChartIcon,
+  BarChart as BarChartIcon,
+  Activity as ActivityIcon,
+  TrendingDown as TrendingDownIcon
 } from 'lucide-react';
-;
-export default function AIProjectManagementPlatform(...args: []):  {;
-  const features = [;
-    {;
-      icon: Brain,;
-      title: 'AI-Powered Task Prioritization',;
-      description: 'Intelligent algorithms automatically prioritize tasks based on deadlines, dependencies, and team capacity';,
-},;
-    {;
-      icon: Users,;
-      title: 'Smart Team Collaboration',;
-      description: 'AI-driven team matching and workload balancing for optimal project execution';,
-},;
-    {;
-      icon: Calendar,;
-      title: 'Predictive Timeline Management',;
-      description: 'Machine learning models predict project delays and suggest mitigation strategies';,
-},;
-    {;
-      icon: TrendingUp,;
-      title: 'Performance Analytics',;
-      description: 'Real-time insights into team productivity, project health, and resource utilization';,
-},;
-    {;
-      icon: Shield,;
-      title: 'Risk Assessment & Mitigation',;
-      description: 'AI continuously monitors project risks and provides proactive recommendations';,
-},;
-    {;
-      icon: Zap,;
-      title: 'Automated Reporting',;
-      description: 'Intelligent report generation with customizable dashboards and stakeholder updates';,
-};
+
+const AIProjectManagementPlatform: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "AI-Powered Task Management",
+      description: "Intelligent task prioritization, resource allocation, and deadline prediction using advanced AI algorithms.",
+      benefits: ["40% faster project completion", "Smart resource optimization", "Predictive deadline management", "Automated task assignment"]
+    },
+    {
+      icon: Users,
+      title: "Team Collaboration Hub",
+      description: "Real-time collaboration tools with AI-enhanced communication and seamless team coordination.",
+      benefits: ["Real-time collaboration", "AI-powered communication", "Team performance insights", "Conflict resolution assistance"]
+    },
+    {
+      icon: BarChart3,
+      title: "Advanced Analytics",
+      description: "Comprehensive project analytics with AI-driven insights and predictive reporting for better decision making.",
+      benefits: ["Predictive analytics", "Performance insights", "Risk assessment", "ROI optimization"]
+    },
+    {
+      icon: Clock,
+      title: "Time Tracking & Billing",
+      description: "Automated time tracking with AI-powered productivity analysis and accurate billing management.",
+      benefits: ["Automated time tracking", "Productivity analysis", "Accurate billing", "Cost optimization"]
+    }
   ];
-;
-  const pricingPlans = [;
-    {;
-      name: 'Starter',;
-      price: '$299',;
-      period: '/month',;
-      description: 'Perfect for small teams and startups',;
-      features: [;
-        'Up to 10 team members',;
-        'Basic AI task prioritization',;
-        'Standard project templates',;
-        'Email support',;
-        'Basic analytics dashboard',;
-        'Mobile app access';
-      ],;
-      popular: false;,
-},;
-    {;
-      name: 'Professional',;
-      price: '$599',;
-      period: '/month',;
-      description: 'Ideal for growing businesses',;
-      features: [;
-        'Up to 50 team members',;
-        'Advanced AI features',;
-        'Custom project templates',;
-        'Priority support',;
-        'Advanced analytics',;
-        'API access',;
-        'Integrations (Slack, Jira, etc.)',;
-        'White-label options';
-      ],;
-      popular: true;,
-},;
-    {;
-      name: 'Enterprise',;
-      price: '$1,299',;
-      period: '/month',;
-      description: 'For large organizations',;
-      features: [;
-        'Unlimited team members',;
-        'Full AI suite',;
-        'Custom integrations',;
-        'Dedicated support manager',;
-        'Advanced security features',;
-        'Custom AI model training',;
-        'On-premise deployment options',;
-        'SLA guarantees';
-      ],;
-      popular: false;,
-};
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$29/month",
+      description: "Perfect for small teams and freelancers",
+      features: [
+        "Up to 5 team members",
+        "Unlimited projects",
+        "Basic AI features",
+        "Email support",
+        "Standard templates",
+        "Mobile app access"
+      ],
+      popular: false,
+      cta: "Start Free Trial"
+    },
+    {
+      name: "Professional",
+      price: "$79/month",
+      description: "Ideal for growing businesses",
+      features: [
+        "Up to 25 team members",
+        "Advanced AI features",
+        "Priority support",
+        "Custom templates",
+        "API access",
+        "Advanced analytics",
+        "Time tracking",
+        "Billing management"
+      ],
+      popular: true,
+      cta: "Start Free Trial"
+    },
+    {
+      name: "Enterprise",
+      price: "$199/month",
+      description: "For large organizations",
+      features: [
+        "Unlimited team members",
+        "Full AI suite",
+        "24/7 dedicated support",
+        "Custom integrations",
+        "White-label solution",
+        "Advanced security",
+        "SLA guarantee",
+        "Custom training"
+      ],
+      popular: false,
+      cta: "Contact Sales"
+    }
   ];
-;
-  const benefits = [;
-    {;
-      icon: Clock,;
-      title: '30% Faster Project Delivery',;
-      description: 'AI optimization reduces project timelines through intelligent resource allocation';,
-},;
-    {;
-      icon: Target,;
-      title: '95% On-Time Completion',;
-      description: 'Predictive analytics help teams meet deadlines consistently';,
-},;
-    {;
-      icon: BarChart3,;
-      title: '40% Cost Reduction',;
-      description: 'Eliminate waste through AI-driven efficiency improvements';,
-},;
-    {;
-      icon: Users,;
-      title: 'Enhanced Team Productivity',;
-      description: 'Automated workflows free up time for strategic work';,
-};
-  ];
-;
-  const useCases = [;
-    {;
-      title: 'Software Development',;
-      description: 'Manage complex development cycles with AI-powered sprint planning and resource allocation',;
-      icon: GitBranch;,
-},;
-    {;
-      title: 'Marketing Campaigns',;
-      description: 'Coordinate multi-channel campaigns with intelligent timeline optimization',;
-      icon: MessageSquare;,
-},;
-    {;
-      title: 'Construction Projects',;
-      description: 'Track progress and manage resources across multiple sites with predictive analytics',;
-      icon: Building;,
-},;
-    {;
-      title: 'Event Planning',;
-      description: 'Streamline event coordination with AI-driven task management and vendor coordination',;
-      icon: Calendar;,
-};
-  ];
-;
-  return (;
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-      <SEO ;
-        title="AI Project Management Platform - Zion Tech Group";
-        description="Revolutionize your project management with AI-powered task prioritization, predictive analytics, and intelligent team collaboration. Start from $299/month.";
-      />;
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <Helmet>
+        <title>AI Project Management Platform - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered project management platform that automates task management, team collaboration, and project analytics. Increase productivity by 40% with intelligent automation." />
+        <meta name="keywords" content="AI project management, task management, team collaboration, project analytics, productivity, automation, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-project-management-platform" />
+      </Helmet>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-7xl mx-auto text-center">;
-          <motion.div;
-            initial = {;
-  { opacity: 0,;
-  y: 20 ;
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 mb-6">
+              <Brain className="w-5 h-5 mr-2" />
+              AI-Powered Project Management
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                AI Project Management
+              </span>
+              <br />
+              <span className="text-white">Platform</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your project management with AI-powered automation, intelligent task management, 
+              and advanced analytics. Increase productivity by 40% and deliver projects on time, every time.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <a 
+                href="tel:+13024640950" 
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now: +1 302 464 0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Get Quote
+              </a>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-400 mb-2">40%</div>
+                <div className="text-gray-300">Productivity Increase</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Uptime SLA</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-400 mb-2">24/7</div>
+                <div className="text-gray-300">Support</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-400 mb-2">50+</div>
+                <div className="text-gray-300">Integrations</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-;
-
-;
-
-;,
-}}
-            animate = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}}
-            transition={{ duration: 0.8 }}
-;
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">;
-              <Brain className="w-4 h-4 mr-2" />;
-              AI-Powered Project Management;
-            </div>;
-
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
-              The Future of;
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Project Management</span>;
-            </h1>;
-
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-              Transform your project delivery with intelligent automation, predictive analytics, and AI-driven insights.;
-              Manage teams smarter, deliver faster, and achieve more with our cutting-edge platform.;
-            </p>;
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">;
-                Start Free Trial;
-              </button>;
-              <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">;
-                Schedule Demo;
-              </button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-;
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}}
-            whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16";
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
-              Powered by Advanced AI;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
-              Our platform leverages cutting-edge artificial intelligence to revolutionize how you manage projects;
-            </p>;
-          </motion.div>;
-
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;
-            {features.map((feature, index)  => (;
-              <motion.div;
-                key={index}
-                initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}}
-                whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}}
-                transition = {;
-  { duration: 0.8,;
-  delay: index * 0.1 ;
-
-;
-
-;
-
-;,
-}}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300";
-
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">;
-                  <feature.icon className="w-6 h-6 text-white" />;
-                </div>;
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>;
-                <p className="text-gray-300">{feature.description}</p>;
-              </motion.div>;
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Powerful AI Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI Project Management Platform combines cutting-edge technology with intuitive design 
+              to deliver exceptional results for teams of all sizes.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}}
-            whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16";
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
-              Proven Results;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
-              Join thousands of teams already experiencing the benefits of AI-powered project management;
-            </p>;
-          </motion.div>;
-
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">;
-            {benefits.map((benefit, index)  => (;
-              <motion.div;
-                key={index}
-                initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}}
-                whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}}
-                transition = {;
-  { duration: 0.8,;
-  delay: index * 0.1 ;
-
-;
-
-;
-
-;,
-}}
-                viewport={{ once: true }}
-                className="text-center";
-
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-                  <benefit.icon className="w-8 h-8 text-white" />;
-                </div>;
-                <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>;
-                <p className="text-gray-300">{benefit.description}</p>;
-              </motion.div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}}
-            whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16";
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
-              Perfect for Every Industry;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
-              Our platform adapts to your specific needs, regardless of your industry or project type;
-            </p>;
-          </motion.div>;
-
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">;
-            {useCases.map((useCase, index)  => (;
-              <motion.div;
-                key={index}
-                initial = {;
-  { opacity: 0,;
-  x: index % 2 === 0 ? -20 : 20 ;
-
-;
-
-;
-
-;,
-}}
-                whileInView = {;
-  { opacity: 1,;
-  x: 0 ;
-
-;
-
-;
-
-;,
-}}
-                transition = {;
-  { duration: 0.8,;
-  delay: index * 0.1 ;
-
-;
-
-;
-
-;,
-}}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700";
-
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-6">;
-                  <useCase.icon className="w-8 h-8 text-white" />;
-                </div>;
-                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>;
-                <p className="text-gray-300 text-lg">{useCase.description}</p>;
-              </motion.div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;
-        <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}}
-            whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16";
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
-              Choose Your Plan;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
-              Flexible pricing options designed to scale with your business needs;
-            </p>;
-          </motion.div>;
-
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">;
-            {pricingPlans.map((plan, index)  => (;
-              <motion.div;
-                key={index}
-                initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}}
-                whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}}
-                transition = {;
-  { duration: 0.8,;
-  delay: index * 0.1 ;
-
-;
-
-;
-
-;,
-}}
-                viewport={{ once: true }}
-                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${;
-                  plan.popular;
-                    ? 'border-purple-500 ring-2 ring-purple-500/20';
-                    : 'border-gray-700';,
-}`}
-;
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">;
-                      Most Popular;
-                    </span>;
-                  </div>;
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your team size and project needs. All plans include a 14-day free trial.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-blue-500 bg-blue-500/10' : 'border-white/20'} relative`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </div>
+                  </div>
                 )}
-;
-                <div className="text-center mb-8">;
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
-                  <p className="text-gray-300 mb-4">{plan.description}</p>;
-                  <div className="flex items-baseline justify-center">;
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>;
-                    <span className="text-gray-300 ml-1">{plan.period}</span>;
-                  </div>;
-                </div>;
-
-                <ul className="space-y-4 mb-8">;
-                  {plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-start">;
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />;
-                      <span className="text-gray-300">{feature}</span>;
-                    </li>;
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="text-4xl font-bold text-blue-400 mb-2">{plan.price}</div>
+                  <p className="text-gray-300">{plan.description}</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
                   ))}
-                </ul>;
-
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
-                  plan.popular;
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700';
-                    : 'bg-gray-700 text-white hover:bg-gray-600';,
-}`}>;
-                  Get Started;
-                </button>;
-              </motion.div>;
+                </ul>
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular 
+                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700' 
+                    : 'bg-white/20 text-white hover:bg-white/30'
+                }`}>
+                  {plan.cta}
+                </button>
+              </div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-4xl mx-auto text-center">;
-          <motion.div;
-            initial = {;
-  { opacity: 0,;
-  y: 20 ;
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Project Management?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of teams already using our AI Project Management Platform to deliver 
+            projects faster and more efficiently. Start your free trial today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:+13024640950" 
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call: +1 302 464 0950
+            </a>
+            <a 
+              href="mailto:kleber@ziontechgroup.com" 
+              className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Email: kleber@ziontechgroup.com
+            </a>
+          </div>
+          <div className="mt-8 text-sm text-gray-400">
+            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p>🌐 <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">https://ziontechgroup.com</a></p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
 
-;
-
-;
-
-;,
-}}
-            whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-;
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
-              Ready to Transform Your Project Management?;
-            </h2>;
-            <p className="text-xl text-gray-300 mb-8">;
-              Join thousands of teams already experiencing the future of project management;
-            </p>;
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">;
-                Start Free Trial;
-              </button>;
-              <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">;
-                Contact Sales;
-              </button>;
-            </div>;
-
-            <p className="text-gray-400 mt-6">;
-              No credit card required • 14-day free trial • Cancel anytime;
-            </p>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
-  );,
-}}}}}}
-;
-export { AIProjectManagementPlatform };
-;
-export { AIProjectManagementPlatform };
-;
-export { AIProjectManagementPlatform };
-;
-export { AIProjectManagementPlatform };
-;
-export { AIProjectManagementPlatform };
+export default AIProjectManagementPlatform;

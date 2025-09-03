@@ -1,271 +1,504 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { ;
-  Cpu, Cloud, Zap, Shield, CheckCircle, Star, ArrowRight, ;
-  Database, Network, Server, Globe, ExternalLink, Phone, ;
-  Mail, MapPin, Activity, BarChart3, Lock, Users, Clock,;
-  TrendingUp, Target, Brain, Building, Rocket;,
-} from "lucide-react";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Server, 
+  CheckCircle, 
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  TrendingUp,
+  Target,
+  Zap,
+  Globe,
+  Smartphone,
+  Monitor,
+  Laptop,
+  Calendar,
+  Bell,
+  Settings,
+  Lock,
+  Award,
+  Rocket,
+  Lightbulb,
+  Code,
+  Database,
+  Network,
+  Cpu,
+  HardDrive,
+  Wifi,
+  Bluetooth,
+  Headphones,
+  Speaker,
+  Volume2,
+  Play,
+  Pause,
+  Stop,
+  SkipBack,
+  SkipForward,
+  RotateCcw,
+  RefreshCw,
+  Maximize,
+  Minimize,
+  Fullscreen,
+  Search,
+  Filter,
+  SortAsc,
+  SortDesc,
+  Grid,
+  List,
+  Menu,
+  X,
+  Plus,
+  Minus,
+  ChevronRight,
+  ChevronLeft,
+  ChevronUp,
+  ChevronDown,
+  ExternalLink,
+  Info,
+  HelpCircle,
+  AlertCircle,
+  Check,
+  XCircle,
+  Loader,
+  Upload,
+  Archive,
+  Folder,
+  File,
+  BookOpen,
+  Newspaper,
+  PenTool,
+  Type,
+  AlignLeft,
+  AlignCenter,
+  AlignRight,
+  Bold,
+  Italic,
+  Underline,
+  Link as LinkIcon,
+  Quote,
+  List as ListIcon,
+  Hash,
+  AtSign,
+  Tag,
+  Hash as HashIcon,
+  DollarSign,
+  Percent,
+  Calculator,
+  PieChart,
+  LineChart,
+  BarChart,
+  Activity,
+  TrendingDown,
+  TrendingUp as TrendingUpIcon,
+  Zap as ZapIcon,
+  Target as TargetIcon,
+  Users as UsersIcon,
+  Globe as GlobeIcon,
+  Smartphone as SmartphoneIcon,
+  Monitor as MonitorIcon,
+  Laptop as LaptopIcon,
+  Calendar as CalendarIcon,
+  Bell as BellIcon,
+  Settings as SettingsIcon,
+  Lock as LockIcon,
+  Award as AwardIcon,
+  Rocket as RocketIcon,
+  Lightbulb as LightbulbIcon,
+  Code as CodeIcon,
+  Database as DatabaseIcon,
+  Cloud as CloudIcon,
+  Network as NetworkIcon,
+  Server as ServerIcon,
+  Cpu as CpuIcon,
+  HardDrive as HardDriveIcon,
+  Wifi as WifiIcon,
+  Bluetooth as BluetoothIcon,
+  Headphones as HeadphonesIcon,
+  Speaker as SpeakerIcon,
+  Volume2 as Volume2Icon,
+  Play as PlayIcon,
+  Pause as PauseIcon,
+  Stop as StopIcon,
+  SkipBack as SkipBackIcon,
+  SkipForward as SkipForwardIcon,
+  RotateCcw as RotateCcwIcon,
+  RefreshCw as RefreshCwIcon,
+  Maximize as MaximizeIcon,
+  Minimize as MinimizeIcon,
+  Fullscreen as FullscreenIcon,
+  Search as SearchIcon,
+  Filter as FilterIcon,
+  SortAsc as SortAscIcon,
+  SortDesc as SortDescIcon,
+  Grid as GridIcon,
+  List as ListIconAlt,
+  Menu as MenuIcon,
+  X as XIcon,
+  Plus as PlusIcon,
+  Minus as MinusIcon,
+  ChevronRight as ChevronRightIcon,
+  ChevronLeft as ChevronLeftIcon,
+  ChevronUp as ChevronUpIcon,
+  ChevronDown as ChevronDownIcon,
+  ExternalLink as ExternalLinkIcon,
+  Info as InfoIcon,
+  HelpCircle as HelpCircleIcon,
+  AlertCircle as AlertCircleIcon,
+  Check as CheckIcon,
+  XCircle as XCircleIcon,
+  Loader as LoaderIcon,
+  Upload as UploadIcon,
+  Archive as ArchiveIcon,
+  Folder as FolderIcon,
+  File as FileIcon,
+  BookOpen as BookOpenIcon,
+  Newspaper as NewspaperIcon,
+  PenTool as PenToolIcon,
+  Type as TypeIcon,
+  AlignLeft as AlignLeftIcon,
+  AlignCenter as AlignCenterIcon,
+  AlignRight as AlignRightIcon,
+  Bold as BoldIcon,
+  Italic as ItalicIcon,
+  Underline as UnderlineIcon,
+  LinkIcon as LinkIconAlt,
+  Quote as QuoteIcon,
+  ListIcon as ListIconAlt2,
+  Hash as HashIconAlt,
+  AtSign as AtSignIcon,
+  Tag as TagIcon,
+  DollarSign as DollarSignIcon,
+  Percent as PercentIcon,
+  Calculator as CalculatorIcon,
+  PieChart as PieChartIcon,
+  LineChart as LineChartIcon,
+  BarChart as BarChartIcon,
+  Activity as ActivityIcon,
+  TrendingDown as TrendingDownIcon
+} from 'lucide-react';
 
-export default function QuantumCloudInfrastructure() {;
-  const features = [;
-    "Quantum-Enhanced Computing",;
-    "Hybrid Cloud Architecture", ;
-    "AI-Optimized Resource Allocation",;
-    "Zero-Trust Security Framework",;
-    "Edge Computing Integration",;
-    "Automated Scaling & Load Balancing",;
-    "Real-time Performance Monitoring",;
-    "Disaster Recovery & Backup";
+const QuantumCloudInfrastructure: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "Quantum-Enhanced Computing",
+      description: "Leverage quantum computing principles for exponential performance improvements in complex calculations and data processing.",
+      benefits: ["1000x faster computations", "Quantum algorithm optimization", "Advanced cryptography", "Future-proof architecture"]
+    },
+    {
+      icon: Cloud,
+      title: "Hybrid Cloud Architecture",
+      description: "Seamlessly integrate public, private, and edge computing resources with intelligent workload distribution and optimization.",
+      benefits: ["Optimal resource utilization", "Cost-effective scaling", "Global edge deployment", "Multi-cloud management"]
+    },
+    {
+      icon: Shield,
+      title: "Zero-Trust Security Framework",
+      description: "Implement military-grade security with quantum-resistant encryption and continuous authentication protocols.",
+      benefits: ["Quantum-resistant encryption", "Continuous authentication", "Zero-trust architecture", "Advanced threat detection"]
+    },
+    {
+      icon: Zap,
+      title: "AI-Optimized Resource Allocation",
+      description: "Intelligent resource management with AI-powered optimization for maximum performance and cost efficiency.",
+      benefits: ["Dynamic resource scaling", "Cost optimization", "Performance prediction", "Automated load balancing"]
+    }
   ];
 
-  const benefits = [;
-    "Reduce infrastructure costs by 60%",;
-    "Improve performance by 300%",;
-    "Achieve 99.99% uptime SLA",;
-    "Scale instantly to meet demand",;
-    "Enhance security posture by 95%",;
-    "Reduce deployment time by 80%";
+  const pricingPlans = [
+    {
+      name: "Quantum Starter",
+      price: "$5,999/month",
+      description: "Perfect for mid-size businesses",
+      features: [
+        "Up to 100 virtual machines",
+        "Basic quantum computing access",
+        "Standard security protocols",
+        "24/7 monitoring",
+        "Email support",
+        "99.9% uptime SLA"
+      ],
+      popular: false,
+      cta: "Start Free Trial"
+    },
+    {
+      name: "Quantum Professional",
+      price: "$12,999/month",
+      description: "Ideal for enterprise organizations",
+      features: [
+        "Up to 500 virtual machines",
+        "Advanced quantum computing",
+        "Enhanced security protocols",
+        "Dedicated support team",
+        "Priority support",
+        "Custom integrations",
+        "99.99% uptime SLA",
+        "Disaster recovery"
+      ],
+      popular: true,
+      cta: "Start Free Trial"
+    },
+    {
+      name: "Quantum Enterprise",
+      price: "$24,999/month",
+      description: "For large-scale operations",
+      features: [
+        "Unlimited virtual machines",
+        "Full quantum computing suite",
+        "Military-grade security",
+        "24/7 dedicated support",
+        "White-label solution",
+        "Custom quantum algorithms",
+        "99.999% uptime SLA",
+        "Global deployment"
+      ],
+      popular: false,
+      cta: "Contact Sales"
+    }
   ];
 
-  const pricing = [;
-    {;
-      name: "Startup",;
-      price: "$5,999/month",;
-      details: ["Up to 10 servers", "Basic quantum features", "Email support", "Standard SLA", "Monthly backups"];,
-},;
-    {;
-      name: "Enterprise", ;
-      price: "$15,999/month",;
-      details: ["Up to 100 servers", "Full quantum suite", "24/7 support", "99.99% SLA", "Real-time backups", "Custom optimization"];,
-},;
-    {;
-      name: "Global Scale",;
-      price: "$39,999/month", ;
-      details: ["Unlimited servers", "Advanced quantum AI", "Dedicated support", "99.999% SLA", "Global edge network", "White-label solution"];,
-}
+  const useCases = [
+    {
+      title: "Financial Services",
+      description: "High-frequency trading, risk analysis, and fraud detection with quantum-enhanced algorithms.",
+      icon: DollarSign,
+      results: "300% faster risk calculations"
+    },
+    {
+      title: "Healthcare Research",
+      description: "Drug discovery, genomic analysis, and medical imaging with quantum computing power.",
+      icon: Heart,
+      results: "1000x faster drug discovery"
+    },
+    {
+      title: "Manufacturing",
+      description: "Supply chain optimization, predictive maintenance, and quality control with AI and quantum computing.",
+      icon: Settings,
+      results: "60% cost reduction"
+    },
+    {
+      title: "Research & Development",
+      description: "Scientific simulations, climate modeling, and materials science with quantum-enhanced computing.",
+      icon: Lightbulb,
+      results: "Exponential research acceleration"
+    }
   ];
 
-  const useCases = [;
-    {;
-      title: "High-Performance Computing",;
-      description: "Quantum-enhanced infrastructure for scientific computing, AI training, and complex simulations.",;
-      icon: Cpu;,
-},;
-    {;
-      title: "Global Enterprise",;
-      description: "Scalable cloud infrastructure for multinational corporations with global operations.",;
-      icon: Globe;,
-},;
-    {;
-      title: "AI/ML Workloads",;
-      description: "Optimized infrastructure for machine learning training and inference at scale.",;
-      icon: Brain;,
-}
-  ];
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+      <Helmet>
+        <title>Quantum Cloud Infrastructure - Zion Tech Group</title>
+        <meta name="description" content="Next-generation quantum-enhanced cloud infrastructure with AI optimization, zero-trust security, and 99.99% uptime guarantee. Future-proof your organization with cutting-edge technology." />
+        <meta name="keywords" content="quantum cloud, cloud infrastructure, quantum computing, AI optimization, zero-trust security, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/quantum-cloud-infrastructure" />
+      </Helmet>
 
-  const technologies = [;
-    { name: "Quantum Computing", description: "Next-generation quantum processors for complex calculations" },;
-    { name: "Edge Computing", description: "Distributed computing at the network edge for low latency" },;
-    { name: "AI Optimization", description: "Machine learning algorithms for resource optimization" },;
-    { name: "Zero-Trust Security", description: "Advanced security framework with continuous verification" },;
-    { name: "Hybrid Cloud", description: "Seamless integration of public and private cloud resources" },;
-    { name: "Automated Scaling", description: "Intelligent auto-scaling based on real-time demand" }
-  ];
+      {/* Hero Section */}
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/20 text-indigo-300 mb-6">
+              <Brain className="w-5 h-5 mr-2" />
+              Quantum-Enhanced Cloud Infrastructure
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                Quantum Cloud
+              </span>
+              <br />
+              <span className="text-white">Infrastructure</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Next-generation quantum-enhanced cloud infrastructure with AI optimization, zero-trust security, 
+              and 99.99% uptime guarantee. Future-proof your organization with cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <a 
+                href="tel:+13024640950" 
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now: +1 302 464 0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="inline-flex items-center px-8 py-4 border-2 border-indigo-400 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Get Quote
+              </a>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-indigo-400 mb-2">1000x</div>
+                <div className="text-gray-300">Faster Computing</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-indigo-400 mb-2">99.99%</div>
+                <div className="text-gray-300">Uptime SLA</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-indigo-400 mb-2">60%</div>
+                <div className="text-gray-300">Cost Reduction</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-indigo-400 mb-2">24/7</div>
+                <div className="text-gray-300">Expert Support</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  return (;
-    <>;
-      <Head>;
-        <title>Quantum Cloud Infrastructure - Zion Tech Group</title>;
-        <meta name="description" content="Next-generation quantum-enhanced cloud infrastructure with AI optimization, zero-trust security, and 99.99% uptime guarantee." />;
-        <meta name="keywords" content="quantum cloud, cloud infrastructure, quantum computing, edge computing, AI optimization, zero-trust security" />;
-        <link rel="canonical" href="https://ziontechgroup.com/services/quantum-cloud-infrastructure" />;
-      </Head>;
-
-      <div className="min-h-screen bg-white">;
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-700 py-20 text-center">;
-          <div className="max-w-6xl mx-auto px-6">;
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">;
-              <Cpu className="w-4 h-4 mr-2" />;
-              Next-Generation Cloud Infrastructure;
-            </div>;
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
-              Quantum Cloud Infrastructure;
-            </h1>;
-            <p className="text-purple-100 text-xl max-w-3xl mx-auto mb-8">;
-              Experience the future of cloud computing with quantum-enhanced infrastructure, ;
-              AI optimization, and zero-trust security for unprecedented performance and reliability.;
-            </p>;
-            <div className="flex flex-wrap justify-center gap-4">;
-              <Link href="#pricing" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-purple-50 transition-colors inline-flex items-center font-semibold">;
-                View Pricing <ArrowRight className="w-4 h-4 ml-2" />;
-              </Link>;
-              <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white/10 transition-colors inline-flex items-center">;
-                Schedule Demo <Phone className="w-4 h-4 ml-2" />;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
-
-        {/* Features Section */}
-        <section className="py-16 max-w-6xl mx-auto px-6">;
-          <div className="text-center mb-12">;
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Cutting-Edge Technology</h2>;
-            <p className="text-gray-600 text-lg">Powered by quantum computing and AI optimization</p>;
-          </div>;
-          ;
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {features.map((feature, index) => (;
-              <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">;
-                <div className="flex items-center mb-3">;
-                  <Cloud className="w-6 h-6 text-purple-600 mr-3" />;
-                  <h3 className="font-semibold text-gray-900">{feature}</h3>;
-                </div>;
-                <p className="text-gray-600 text-sm">;
-                  {feature === "Quantum-Enhanced Computing" && "Leverage quantum processors for complex calculations and optimization"}
-                  {feature === "Hybrid Cloud Architecture" && "Seamless integration of public, private, and edge computing resources"}
-                  {feature === "AI-Optimized Resource Allocation" && "Machine learning algorithms optimize resource usage in real-time"}
-                  {feature === "Zero-Trust Security Framework" && "Advanced security with continuous verification and micro-segmentation"}
-                  {feature === "Edge Computing Integration" && "Distributed computing at the network edge for ultra-low latency"}
-                  {feature === "Automated Scaling & Load Balancing" && "Intelligent auto-scaling based on real-time demand patterns"}
-                  {feature === "Real-time Performance Monitoring" && "Comprehensive monitoring with predictive analytics and alerts"}
-                  {feature === "Disaster Recovery & Backup" && "Automated backup and disaster recovery with RTO < 15 minutes"}
-                </p>;
-              </div>;
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Revolutionary Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our Quantum Cloud Infrastructure combines cutting-edge quantum computing with advanced AI 
+              optimization to deliver unprecedented performance and security.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </div>;
-        </section>;
+          </div>
+        </div>
+      </section>
 
-        {/* Benefits Section */}
-        <section className="py-16 bg-gray-50">;
-          <div className="max-w-6xl mx-auto px-6">;
-            <div className="text-center mb-12">;
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Unmatched Performance</h2>;
-              <p className="text-gray-600 text-lg">Proven results from our quantum cloud infrastructure</p>;
-            </div>;
-            ;
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {benefits.map((benefit, index) => (;
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm">;
-                  <div className="flex items-center mb-3">;
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />;
-                    <h3 className="font-semibold text-gray-900">{benefit}</h3>;
-                  </div>;
-                </div>;
-              ))}
-            </div>;
-          </div>;
-        </section>;
-
-        {/* Technology Stack */}
-        <section className="py-16 max-w-6xl mx-auto px-6">;
-          <div className="text-center mb-12">;
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Technology Stack</h2>;
-            <p className="text-gray-600 text-lg">Built on cutting-edge technologies</p>;
-          </div>;
-          ;
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {technologies.map((tech, index) => (;
-              <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 text-center">;
-                <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">;
-                  <Cpu className="w-6 h-6 text-purple-600" />;
-                </div>;
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{tech.name}</h3>;
-                <p className="text-gray-600 text-sm">{tech.description}</p>;
-              </div>;
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See how organizations across industries are leveraging our Quantum Cloud Infrastructure 
+              to achieve breakthrough results.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                  <useCase.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300 mb-4">{useCase.description}</p>
+                <div className="text-sm font-semibold text-green-400">{useCase.results}</div>
+              </div>
             ))}
-          </div>;
-        </section>;
+          </div>
+        </div>
+      </section>
 
-        {/* Use Cases Section */}
-        <section className="py-16 bg-gray-50">;
-          <div className="max-w-6xl mx-auto px-6">;
-            <div className="text-center mb-12">;
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>;
-              <p className="text-gray-600 text-lg">Ideal solutions for demanding computing needs</p>;
-            </div>;
-            ;
-            <div className="grid md:grid-cols-3 gap-8">;
-              {useCases.map((useCase, index) => (;
-                <div key={index} className="text-center">;
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <useCase.icon className="w-8 h-8 text-purple-600" />;
-                  </div>;
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{useCase.title}</h3>;
-                  <p className="text-gray-600">{useCase.description}</p>;
-                </div>;
-              ))}
-            </div>;
-          </div>;
-        </section>;
+      {/* Pricing Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Enterprise-Grade Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the quantum infrastructure plan that fits your organization's needs. 
+              All plans include a 30-day free trial and dedicated support.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-indigo-500 bg-indigo-500/10' : 'border-white/20'} relative`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="text-4xl font-bold text-indigo-400 mb-2">{plan.price}</div>
+                  <p className="text-gray-300">{plan.description}</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular 
+                    ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700' 
+                    : 'bg-white/20 text-white hover:bg-white/30'
+                }`}>
+                  {plan.cta}
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        {/* Pricing Section */}
-        <section id="pricing" className="py-16 bg-white">;
-          <div className="max-w-6xl mx-auto px-6">;
-            <div className="text-center mb-12">;
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise-Grade Pricing</h2>;
-              <p className="text-gray-600 text-lg">Scale with your infrastructure needs</p>;
-            </div>;
-            ;
-            <div className="grid md:grid-cols-3 gap-8">;
-              {pricing.map((tier, index) => (;
-                <div key={index} className={`bg-white rounded-xl p-8 shadow-lg border ${tier.name === 'Enterprise' ? 'ring-2 ring-purple-500 relative' : ''}`}>;
-                  {tier.name === 'Enterprise' && (;
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                      <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>;
-                    </div>;
-                  )}
-                  <div className="text-center mb-6">;
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>;
-                    <div className="text-4xl font-bold text-purple-600 mb-2">{tier.price}</div>;
-                    <p className="text-gray-600">per month</p>;
-                  </div>;
-                  <ul className="space-y-3 mb-8">;
-                    {tier.details.map((detail, detailIndex) => (;
-                      <li key={detailIndex} className="flex items-start">;
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />;
-                        <span className="text-gray-700">{detail}</span>;
-                      </li>;
-                    ))}
-                  </ul>;
-                  <Link href="/contact" className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors inline-flex items-center justify-center font-semibold">;
-                    Get Started <ArrowRight className="w-4 h-4 ml-2" />;
-                  </Link>;
-                </div>;
-              ))}
-            </div>;
-          </div>;
-        </section>;
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Future-Proof Your Infrastructure?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join the quantum revolution and transform your organization with our cutting-edge 
+            Quantum Cloud Infrastructure. Start your free trial today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:+13024640950" 
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call: +1 302 464 0950
+            </a>
+            <a 
+              href="mailto:kleber@ziontechgroup.com" 
+              className="inline-flex items-center px-8 py-4 border-2 border-indigo-400 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300"
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Email: kleber@ziontechgroup.com
+            </a>
+          </div>
+          <div className="mt-8 text-sm text-gray-400">
+            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p>🌐 <a href="https://ziontechgroup.com" className="text-indigo-400 hover:text-indigo-300">https://ziontechgroup.com</a></p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
 
-        {/* Contact Section */}
-        <section className="py-16 bg-purple-600 text-white">;
-          <div className="max-w-4xl mx-auto px-6 text-center">;
-            <h2 className="text-3xl font-bold mb-4">Ready for Quantum Cloud Infrastructure?</h2>;
-            <p className="text-purple-100 text-lg mb-8">;
-              Join forward-thinking companies using next-generation cloud infrastructure.;
-            </p>;
-            <div className="flex flex-wrap justify-center gap-6 mb-8">;
-              <div className="flex items-center">;
-                <Phone className="w-5 h-5 mr-2" />;
-                <span>+1 302 464 0950</span>;
-              </div>;
-              <div className="flex items-center">;
-                <Mail className="w-5 h-5 mr-2" />;
-                <span>kleber@ziontechgroup.com</span>;
-              </div>;
-              <div className="flex items-center">;
-                <MapPin className="w-5 h-5 mr-2" />;
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>;
-              </div>;
-            </div>;
-            <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-purple-50 transition-colors inline-flex items-center font-semibold">;
-              Contact Us Today <ArrowRight className="w-4 h-4 ml-2" />;
-            </Link>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
-  );,
-}
+export default QuantumCloudInfrastructure;
