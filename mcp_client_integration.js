@@ -1,2 +1,13 @@
-// // // // // // // console.log("MCP client integration placeholder");
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+<<<<<<< HEAD
+// // // // // // // console.log('MCP: client integration placeholder');';
+=======
+<<<<<<< HEAD
+// MCP client integration placeholder
+=======
+// // // // // // // console.log('MCP client integration placeholder');
+<<<<<<< HEAD
+'
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

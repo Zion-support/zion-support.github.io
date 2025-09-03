@@ -1,51 +1,114 @@
 
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+
+export default function AIMarketingAutomationPersonalization(...args: any[]): any {,
+  Predictive lead scoring and conversion optimization',;'
+  'Multi-channel campaign orchestration (email, SMS, social, web),;'
+
+  'Real-time A/B testing with AI-driven optimization',;'
+  'Customer journey mapping and automated nurturing sequences',;'
+  'Advanced analytics and ROI tracking with attribution modeling',;'
+  'Integration with major CRM, e-commerce, and advertising platforms',;
+
 export default function AIMarketingAutomationPersonalization(...args: any[]): any {
 
     'Predictive lead scoring and conversion optimization',;'
     'Multi-channel campaign orchestration (email, SMS, social, web),;'
     'Real-time A/B testing with AI-driven optimization',;'
     'Customer journey mapping and automated nurturing sequences',;'
-    'Advanced analytics and ROI tracking with attribution modeling',;''Integration with major CRM, e-commerce, and advertising platforms',;
+    'Advanced analytics and ROI tracking with attribution modeling',;'
+export default function AIMarketingAutomationPersonalization(...args: any[]): any {}
+    'Predictive lead scoring and conversion optimization',;
+    'Multi-channel campaign orchestration (email, SMS, social, web),;
+    'Real-time A/B testing with AI-driven optimization',;
+    'Customer journey mapping and automated nurturing sequences',;
+    'Advanced analytics and ROI tracking with attribution modeling',;
+    'Integration with major CRM, e-commerce, and advertising platforms',;
+>>>>>>> pr-10728
   ];
 
   '
-    'Increase conversion rates by 40-60% with personalization',;'
-    'Reduce customer acquisition costs by 30-50%',;'
-    'Improve email open rates by 25-40% with AI optimization',;'
-    'Generate 35-50% more qualified leads through automation',;'
-    'Boost customer lifetime value by 20-35%',;'
-    'Achieve 99.9% campaign delivery and tracking accuracy',;
+    'Increase conversion rates by 40-60% with personalization
+  ',;'
+
+  'Reduce customer acquisition costs by 30-50%',;'
+  'Improve email open rates by 25-40% with AI optimization',;'
+  'Generate 35-50% more qualified leads through automation',;'
+  'Boost customer lifetime value by 20-35%',;'
+  'Achieve 99.9% campaign delivery and tracking accuracy',;
   ];
 
   '
-    'Content Marketing',;'
-    'Search Engine Marketing',;'
-    'Influencer Marketing',;'
-    'Video Marketing',;'
-    'Voice & Chatbot Marketing',;'
-    'Location-Based Marketing',;
+    'Content Marketing
+  ',;'
+
+  'Search Engine Marketing',;'
+  'Influencer Marketing',;'
+  'Video Marketing',;'
+  'Voice & Chatbot Marketing',;'
+  'Location-Based Marketing',;
   ];
 
   '
-    'Lead Scoring & Qualification',;'
-    'Campaign Optimization',;'
-    'Personalization Engine',;'
-    'A/B Testing Automation',;'
-    'Performance Prediction',;'
-    'ROI Optimization',;
+    'Lead Scoring & Qualification
+  ',;'
+
+  'Campaign Optimization',;'
+  'Personalization Engine',;'
+  'A/B Testing Automation',;'
+  'Performance Prediction',;'
+  'ROI Optimization',;
   ];
 
   '
-    'Shopify',;'
-    'WooCommerce',;'
-    'Facebook Ads',;'
-    'Google Ads',;'
-    'LinkedIn Ads',;'
-    'TikTok Ads',;
+    'Shopify
+  ',;'
+
+  'WooCommerce',;'
+  'Facebook Ads',;'
+  'Google Ads',;'
+  'LinkedIn Ads',;'
+  'TikTok Ads',;
   ];
 
   '
+
+    { name: 'Scikit-learn, url:,
+  https: //scikit-learn.org/ },;,
+  { name: 'Apache Spark, url:,
+  https: //spark.apache.org/ },;,
+  { name: 'Kubernetes, url:,
+  https: //kubernetes.io/ },;,
+  { name: 'Redis, url:,
+  https: //redis.io/ },;,
+  { name: 'PostgreSQL, url:,
+  https: //www.postgresql.org/ },;,
+  { name: 'Elasticsearch, url:,
+  https: //www.elastic.co/ },;,
+  { name: 'OpenAI GPT-4, url:,
+  https: //openai.com/gpt-4 },',
+  { name: 'TensorFlow, url:,
+  https: //www.tensorflow.org/ },;,
+  '
+    { name: 'Scikit-learn, url:,
+  https: //scikit-learn.org/ },;,
+  '
+    { name: 'Apache Spark, url:,
+  https: //spark.apache.org/ },;,
+  '
+    { name: 'Kubernetes, url:,
+  https: //kubernetes.io/ },;,
+  '
+    { name: 'Redis, url:,
+  https: //redis.io/ },;,
+  '
+    { name: 'PostgreSQL, url:,
+  https: //www.postgresql.org/ },;,
+  { name: 'Elasticsearch, url:,
+  https: //www.elastic.co/ },;
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx];
+
     { name: 'Scikit-learn', url: 'https://scikit-learn.org/' },;'
     { name: 'Apache Spark', url: 'https://spark.apache.org/' },;'
     { name: 'Kubernetes', url: 'https://kubernetes.io/' },;'
@@ -60,7 +123,10 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
     { name: 'Kubernetes', url: 'https://kubernetes.io/' },;''
     { name: 'Redis', url: 'https://redis.io/' },;''
     { name: 'PostgreSQL', url: 'https://www.postgresql.org/' },;'    { name: 'Elasticsearch', url: 'https://www.elastic.co/' },;
-:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx];
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+
+  ];
+>>>>>>> pr-10728
 
   return()
     <div className = "min-h-screen bg-futuristic">""
@@ -69,7 +135,13 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
           <div className="text-center">""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+
               AI-Powered <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Marketing Automation & Personalization</span>"</h1>""
+
+              AI-Powered <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Marketing Automation & Personalization</span>"
+              AI-Powered <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Marketing Automation & Personalization</span>
+            </h1>""
+>>>>>>> pr-10728
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
               Revolutionize your marketing with AI-driven automation, intelligent personalization, and predictive analytics.
@@ -78,19 +150,43 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
                 Get Marketing Demo""
+
                 <ArrowRight className="ml-2 h-5 w-5"  /></Link>"              <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
+
+                <ArrowRight className="ml-2 h-5 w-5"  />
+              Revolutionize your marketing with AI-driven automation, intelligent personalization, and predictive analytics. 
+              Deliver the right message to the right person at the right time across all channels."
+            </p>""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">"
+                Get Marketing Demo""
+                <ArrowRight className="ml-2 h-5 w-5"  />"
+              </Link>"              <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
+>>>>>>> pr-10728
                 Visit Site;
               </a>
             </div>
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+
           </div>"</div>""
+
+          </div>"
+          </div>
+        </div>""
+>>>>>>> pr-10728
         <div className="absolute inset-0 -z-10">""
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />""
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />""
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
         </div>
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+
       </section>"""
+
+      </section>"
+      </section>
+""
+>>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">""
           <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
@@ -100,14 +196,29 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
                 <Brain className="h-8 w-8 text-white"  />"
               </div>"              <h3 className="ml-3 text-xl font-semibold text-white">AI Features</h3>"
             </div>""
+
             <ul className="space-y-3">"{features.slice(0, 4).map((item) => (""
+
+            <ul className="space-y-3">"
+                <Brain className="h-8 w-8 text-white"  />
+              </div>"              <h3 className="ml-3 text-xl font-semibold text-white">AI Features</h3>
+            </div>""
+            <ul className="space-y-3">
+              {features.slice(0, 4).map((item) => (""
+>>>>>>> pr-10728
                 <li key={item} className="flex items-center text-slate-300">""
                   <CheckCircle className="h-5 w-5 text-cyan-400 mr-3"  />                  {item}
                 </li>
               ))}
             </ul>
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+
           </div>"""
+
+          </div>"
+          </div>
+""
+>>>>>>> pr-10728
           <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
             <div className="flex items-center mb-4">""
               <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg">""
@@ -115,33 +226,67 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
                 <Target className="h-8 w-8 text-white"  />"
               </div>"              <h3 className="ml-3 text-xl font-semibold text-white">Marketing Channels</h3>"
             </div>""
+
             <ul className="space-y-3">"{marketingChannels.slice(0, 5).map((item) => (""
+
+            <ul className="space-y-3">"
+                <Target className="h-8 w-8 text-white"  />
+              </div>"              <h3 className="ml-3 text-xl font-semibold text-white">Marketing Channels</h3>
+            </div>""
+            <ul className="space-y-3">
+              {marketingChannels.slice(0, 5).map((item) => (""
+>>>>>>> pr-10728
                 <li key={item} className="flex items-center text-slate-300">""
                   <CheckCircle className="h-5 w-5 text-purple-400 mr-3"  />                  {item}
                 </li>
               ))}
             </ul>
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+
           </div>"""
+
+          </div>"
+          </div>
+""
+>>>>>>> pr-10728
           <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
             <div className="flex items-center mb-4">""
               <div className="p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg">""
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
                 <Zap className="h-8 w-8 text-white"  />"
+
               </div>"              <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>"</div>""
+
+              </div>"              <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>"
+                <Zap className="h-8 w-8 text-white"  />
+              </div>"              <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>
+            </div>""
+>>>>>>> pr-10728
             <ul className="space-y-3 text-slate-300">
               <li>Starter: $299/month (up to 10,000 contacts)</li>
               <li>Professional: $799/month (up to 100,000 contacts)</li>
               <li>Enterprise: $1,999/month (unlimited contacts)</li>
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+
               <li>Custom: Tailored enterprise solutions</li>"</ul>""
+
+              <li>Custom: Tailored enterprise solutions</li>"
+              <li>Custom: Tailored enterprise solutions</li>
+            </ul>""
+>>>>>>> pr-10728
             <div className="mt-6 text-sm text-slate-400">""
               Avg. market reference: see <a className="text-cyan-400 hover:underline" href="https://www.gartner.com/en/documents/3991477" target="_blank" rel="noreferrer">Gartner Marketing Automation</a>
             </div>
           </div>
         </div>
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+
       </section>"""
+
+      </section>"
+      </section>
+""
+>>>>>>> pr-10728
       <section className="py-12 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
           <h3 className="text-2xl font-semibold text-white mb-6">Platform Capabilities</h3>""
@@ -175,55 +320,536 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
             </div>""
             <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">""
               <div className="p-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center">""
+
                 <BarChart3 className="h-6 w-6 text-white" />"</div>""
+
+                <BarChart3 className="h-6 w-6 text-white" />"
+                <Users className="h-6 w-6 text-white"  />
+              </div>""
+              <h4 className="text-lg font-semibold text-white mb-2">Customer Segmentation</h4>""
+              <p className="text-slate-300 text-sm">
+                AI-powered behavioral analysis and dynamic segmentation;
+              </p>
+            </div>""
+            <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">""
+              <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center">""
+                <Target className="h-6 w-6 text-white"  />
+              </div>""
+              <h4 className="text-lg font-semibold text-white mb-2">Personalization</h4>""
+              <p className="text-slate-300 text-sm">
+                Dynamic content and offers based on customer behavior;
+              </p>
+            </div>""
+            <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">""
+              <div className="p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center">""
+                <TrendingUp className="h-6 w-6 text-white"  />
+              </div>""
+              <h4 className="text-lg font-semibold text-white mb-2">Automation</h4>"              <p className="text-slate-300 text-sm">
+                Intelligent campaign orchestration and nurturing sequences;
+              </p>
+            </div>""
+            <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">""
+              <div className="p-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center">""
+                <BarChart3 className="h-6 w-6 text-white" />
+              </div>""
+>>>>>>> pr-10728
               <h4 className="text-lg font-semibold text-white mb-2">Analytics</h4>""
               <p className="text-slate-300 text-sm">
                 Comprehensive ROI tracking and performance optimization;
+=======
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx;
+<<<<<<< HEAD
+export: default function AIMarketingAutomationPersonalization(...args: any[]): any: ,{,
+  Predictive lead scoring and conversion optimization',';Multi-channel: campaign orchestration (email, SMS, social, web),';Real-time: A/B testing with AI-driven optimization',';Customer: journey mapping and automated nurturing sequences',';Advanced: analytics and ROI tracking with attribution modeling',';Integration: with major CRM, e-commerce, and advertising platforms',  ]';Increase: conversion rates by 40-60% with personalization;';
+  ',';Reduce: customer acquisition costs by 30-50%',';Improve: email open rates by 25-40% with AI optimization',';Generate: 35-50% more qualified leads through automation',';Boost: customer lifetime value by 20-35%',';Achieve: 99.9% campaign delivery and tracking accuracy',';
+  ]';Content: Marketing;';
+  ',';Search: Engine Marketing',';Influencer: Marketing',';Video: Marketing',';Voice: & Chatbot Marketing',';Location-Based: Marketing',';
+  ]';Lead: Scoring & Qualification;';
+  ',';Campaign: Optimization',';Personalization: Engine',';A/B: Testing Automation',';Performance: Prediction',';ROI: Optimization',';
+  ]';Shopify;';
+  ',';WooCommerce',';Facebook: Ads',';Google: Ads',';LinkedIn: Ads',';TikTok: Ads',';
+  ]'{ name: 'Scikit-lear,n, url:,';
+  https: //scikit-learn.org/, },{ name: 'Apache: Spar,k, url:,';
+  https: //spark.apache.org/, },{ name: 'Kubernete,s, url:,';
+  https: //kubernetes.io/, },{ name: 'Redi,s, url:,';
+  https: //redis.io/, },{ name: 'PostgreSQ,L, url:,';
+  https: //www.postgresql.org/, },{ name: 'Elasticsearc,h, url:,';
+  https: //www.elastic.co/, },{ name: 'OpenAI: GPT-,4, url:,';
+  https: //openai.com/gpt-4, },',';
+  { name: 'TensorFlo,w, url:,';
+  https: //www.tensorflow.org/, },
+  '{ name: 'Scikit-lear,n, url:,';
+  https: //scikit-learn.org/, },
+  '{ name: 'Apache: Spar,k, url:,';
+  https: //spark.apache.org/, },
+  '{ name: 'Kubernete,s, url:,';
+  https: //kubernetes.io/, },
+  '{ name: 'Redi,s, url:,';
+  https: //redis.io/, },
+  '{ name: 'PostgreSQ,L, url:,';
+  https: //www.postgresql.org/, },{ name: 'Elasticsearc,h, url:,';
+  https: //www.elastic.co/, },
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx];
+  return();
+    <div: className = 'min-h-screen bg-futuristic'>''';
+      <section: className='relative overflow-hidden py-20 px-4 sm: px-6: lg:px-8'>''';
+        <div: className='max-w-7xl mx-auto'>''';
+          <div: className='text-center'>''';
+            <h1: className='text-4xl md:text-6xl: font-bold text-white mb-6'>'';';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: AI-Powered <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>Marketing Automation & Personalization</span>'</h1>''            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx;
+              Revolutionize: your marketing with AI-driven automatio,n, intelligent personalization, and predictive analytics.;
+              Deliver: the right message to the right person at the right time across all channels.
+            </p>''';
+            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
+              <Link: to='/contact' className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600: hover:to-blue-700: transition-all duration-200'>';
+                Get: Marketing Demo''';
+                <ArrowRight: className='ml-2 h-5 w-5'  /></Link>'              <a href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='inline-flex: items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500: hover:text-white: transition-all duration-200'>                Visit Site';
+              </a>
+            </div>
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: </div>'</div>''        <div className='absolute inset-0 -z-10'>''';
+          <div: className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10' />''';
+          <div: className='absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl' />''';
+          <div: className='absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl' />';
+        </div>
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: </section>'''      <section className='py-16 px-4 sm:px-6: lg:px-8'>''';
+        <div: className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3: gap-8'>''';
+          <div: className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''';
+            <div: className='flex items-center mb-4'>''';
+              <div: className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg'>'';';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: <Brain className='h-8 w-8 text-white'  />'';
+              </div>'              <h3: className='ml-3 text-xl font-semibold text-white'>AI Features</h3>'';
+            </div>''';
+            <ul: className='space-y-3'>'{features.slice(,0, 4).map((item) => (''                <li key={item} className='flex items-center text-slate-300'>''';
+                  <CheckCircle: className='h-5 w-5 text-cyan-400 mr-3'  />                  {item}';
+                </li>
+              ))}
+            </ul>
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: </div>'''          <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''';
+            <div: className='flex items-center mb-4'>''';
+              <div: className='p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg'>'';';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: <Target className='h-8 w-8 text-white'  />'';
+              </div>'              <h3: className='ml-3 text-xl font-semibold text-white'>Marketing Channels</h3>'';
+            </div>''';
+            <ul: className='space-y-3'>'{marketingChannels.slice(0, 5).map((item) => (''                <li key={item} className='flex items-center text-slate-300'>''';
+                  <CheckCircle: className='h-5 w-5 text-purple-400 mr-3'  />                  {item}';
+                </li>
+              ))}
+            </ul>
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: </div>'''          <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''';
+            <div: className='flex items-center mb-4'>''';
+              <div: className='p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg'>'';';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: <Zap className='h-8 w-8 text-white'  />'';
+              </div>'              <h3: className='ml-3 text-xl font-semibold text-white'>Pricing</h3>'</div>''            <ul className='space-y-3 text-slate-300'>';
+              <li>Starter: $299/month: (up to 1,0,000 contacts)</li>
+              <li>Professional: $799/month: (up to 10,0,000 contacts)</li>
+              <li>Enterprise: $,1,999/month: (unlimited contacts)</li>
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: <li>Custom: Tailored: enterprise solutions</li>'</ul>''            <div className='mt-6 text-sm text-slate-400'>''';
+              Avg. market: reference: see: <a className='text-cyan-400 hover:underline' href='https://www.gartner.com/en/documents/3991477' target='_blank' rel='noreferrer'>Gartner: Marketing Automation</a>';
+            </div>
+          </div>
+        </div>
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: </section>'''      <section className='py-12 px-4 sm:px-6: lg:px-8'>''';
+        <div: className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''';
+          <h3: className='text-2xl font-semibold text-white mb-6'>Platform Capabilities</h3>''';
+          <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-4: gap-6'>''';
+            <div: className='bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center'>''';
+              <div: className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center'>'';';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: <Users className='h-6 w-6 text-white'  />'';
+              </div>''';
+              <h4: className='text-lg font-semibold text-white mb-2'>Customer Segmentation</h4>''';
+              <p: className='text-slate-300 text-sm'>';
+                AI-powered: behavioral analysis and dynamic segmentation
+              </p>'';
+            </div>''';
+            <div: className='bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center'>''';
+              <div: className='p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center'>''';
+                <Target: className='h-6 w-6 text-white'  />'';
+              </div>''';
+              <h4: className='text-lg font-semibold text-white mb-2'>Personalization</h4>''';
+              <p: className='text-slate-300 text-sm'>';
+                Dynamic: content and offers based on customer behavior
+              </p>'';
+            </div>''';
+            <div: className='bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center'>''';
+              <div: className='p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center'>''';
+                <TrendingUp: className='h-6 w-6 text-white'  />'';
+              </div>''';
+              <h4: className='text-lg font-semibold text-white mb-2'>Automation</h4>'              <p className='text-slate-300 text-sm'>';
+                Intelligent: campaign orchestration and nurturing sequences
+              </p>'';
+            </div>''';
+            <div: className='bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center'>''';
+              <div: className='p-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center'>''';
+                <BarChart3: className='h-6 w-6 text-white' />'</div>''              <h4 className='text-lg font-semibold text-white mb-2'>Analytics</h4>''';
+              <p: className='text-slate-300 text-sm'>';
+                Comprehensive: ROI tracking and performance optimization
+=======
+export default function AIMarketingAutomationPersonalization(...args: any[]): any {,
+  Predictive lead scoring and conversion optimization',;Multi-channel campaign orchestration (email, SMS, social, web),;Real-time A/B testing with AI-driven optimization',;Customer journey mapping and automated nurturing sequences',;Advanced analytics and ROI tracking with attribution modeling',;Integration with major CRM, e-commerce, and advertising platforms',  ];Increase conversion rates by 40-60% with personalization;
+  ',;Reduce customer acquisition costs by 30-50%',;Improve email open rates by 25-40% with AI optimization',;Generate 35-50% more qualified leads through automation',;Boost customer lifetime value by 20-35%',;Achieve 99.9% campaign delivery and tracking accuracy',
+  ];Content Marketing;
+  ',;Search Engine Marketing',;Influencer Marketing',;Video Marketing',;Voice & Chatbot Marketing',;Location-Based Marketing',
+  ];Lead Scoring & Qualification;
+  ',;Campaign Optimization',;Personalization Engine',;A/B Testing Automation',;Performance Prediction',;ROI Optimization',
+  ];Shopify;
+  ',;WooCommerce',;Facebook Ads',;Google Ads',;LinkedIn Ads',;TikTok Ads',
+  ]{ name: 'Scikit-learn, url:,
+  https: //scikit-learn.org/ },{ name: 'Apache Spark, url:,
+  https: //spark.apache.org/ },{ name: 'Kubernetes, url:,
+  https: //kubernetes.io/ },{ name: 'Redis, url:,
+  https: //redis.io/ },{ name: 'PostgreSQL, url:,
+  https: //www.postgresql.org/ },{ name: 'Elasticsearch, url:,
+  https: //www.elastic.co/ },{ name: 'OpenAI GPT-4, url:,
+  https: //openai.com/gpt-4 },,
+  { name: 'TensorFlow, url:,
+  https: //www.tensorflow.org/ },
+  '{ name: 'Scikit-learn, url:,
+  https: //scikit-learn.org/ },
+  '{ name: 'Apache Spark, url:,
+  https: //spark.apache.org/ },
+  '{ name: 'Kubernetes, url:,
+  https: //kubernetes.io/ },
+  '{ name: 'Redis, url:,
+  https: //redis.io/ },
+  '{ name: 'PostgreSQL, url:,
+  https: //www.postgresql.org/ },{ name: 'Elasticsearch, url:,
+  https: //www.elastic.co/ },
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx];
+  return();
+<<<<<<< HEAD
+    <div className = 'min-h-screen bg-futuristic'>''
+      <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>''
+        <div className='max-w-7xl mx-auto'>''
+          <div className='text-center'>''
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>''
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+              AI-Powered <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>Marketing Automation & Personalization</span>'</h1>''            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx;
+              Revolutionize your marketing with AI-driven automation, intelligent personalization, and predictive analytics.
+              Deliver the right message to the right person at the right time across all channels.
+            </p>''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
+              <Link to='/contact' className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'>
+                Get Marketing Demo''
+=======
+    <div className = 'min-h-screen bg-futuristic>''
+      <section className='relative overflow-hidden py-20 px-4 sm: px-6 l,
+    g:px-8>''
+        <div className='max-w-7xl mx-auto>''
+          <div className='text-center>''
+            <h1 className='text-4xl m,
+    d:text-6xl font-bold text-white mb-6>';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+              AI-Powered <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>Marketing Automation & Personalization</span>'</h1>''            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx;
+              Revolutionize your marketing with AI-driven automation, intelligent personalization, and predictive analytics.;
+              Deliver the right message to the right person at the right time across all channels.'
+            </p>'''
+            <div className='flex flex-col sm: flex-row gap-4 justify-center>''
+              <Link to='/contact' className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200>
+                Get Marketing Demo'''
+>>>>>>> main
+                <ArrowRight className='ml-2 h-5 w-5'  /></Link>'              <a href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'>                Visit Site
+              </a>
+            </div>
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+          </div>'</div>''        <div className='absolute inset-0 -z-10>''
+          <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10' />''
+          <div className='absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl' />''
+          <div className='absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl' />
+        </div>
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+      </section>'''      <section className='py-16 px-4 sm:px-6 lg:px-8'>''
+        <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8'>''
+          <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''
+            <div className='flex items-center mb-4'>''
+              <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg'>''
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+=======
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+      </section>'''      <section className='py-16 px-4 sm:px-6 l,
+    g:px-8>''
+        <div className='max-w-7xl mx-auto grid grid-cols-1 l,
+    g:grid-cols-3 gap-8>''
+          <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8>''
+            <div className='flex items-center mb-4>''
+              <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg>';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+>>>>>>> main
+                <Brain className='h-8 w-8 text-white'  />'
+              </div>'              <h3 className='ml-3 text-xl font-semibold text-white'>AI Features</h3>''
+            </div>'''
+            <ul className='space-y-3>{features.slice(0, 4).map((item) => (''                <li key={item} className='flex items-center text-slate-300>''
+                  <CheckCircle className='h-5 w-5 text-cyan-400 mr-3'  />                  {item}
+                </li>
+              ))}
+            </ul>
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+          </div>'''          <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''
+            <div className='flex items-center mb-4'>''
+              <div className='p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg'>''
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+=======
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+          </div>'''          <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8>''
+            <div className='flex items-center mb-4>''
+              <div className='p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg>';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+>>>>>>> main
+                <Target className='h-8 w-8 text-white'  />'
+              </div>'              <h3 className='ml-3 text-xl font-semibold text-white'>Marketing Channels</h3>''
+            </div>'''
+            <ul className='space-y-3>{marketingChannels.slice(0, 5).map((item) => (''                <li key={item} className='flex items-center text-slate-300>''
+                  <CheckCircle className='h-5 w-5 text-purple-400 mr-3'  />                  {item}
+                </li>
+              ))}
+            </ul>
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+          </div>'''          <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''
+            <div className='flex items-center mb-4'>''
+              <div className='p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg'>''
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+=======
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+          </div>'''          <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8>''
+            <div className='flex items-center mb-4>''
+              <div className='p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg>';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+>>>>>>> main
+                <Zap className='h-8 w-8 text-white'  />'
+              </div>'              <h3 className='ml-3 text-xl font-semibold text-white'>Pricing</h3>'</div>''            <ul className='space-y-3 text-slate-300'>
+              <li>Starter: $299/month (up to 10,000 contacts)</li>
+              <li>Professional: $799/month (up to 100,000 contacts)</li>
+              <li>Enterprise: $1,999/month (unlimited contacts)</li>
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+              <li>Custom: Tailored enterprise solutions</li>'</ul>''            <div className='mt-6 text-sm text-slate-400>''
+              Avg. market reference: see <a className='text-cyan-400 hover:underline' href='https://www.gartner.com/en/documents/3991477' target='_blank' rel='noreferrer'>Gartner Marketing Automation</a>
+            </div>
+          </div>
+        </div>
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+      </section>'''      <section className='py-12 px-4 sm:px-6 lg:px-8'>''
+        <div className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''
+          <h3 className='text-2xl font-semibold text-white mb-6'>Platform Capabilities</h3>''
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>''
+            <div className='bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center'>''
+              <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center'>''
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+=======
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+      </section>'''      <section className='py-12 px-4 sm:px-6 lg:px-8>''
+        <div className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8>''
+          <h3 className='text-2xl font-semibold text-white mb-6'>Platform Capabilities</h3>'''
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6>''
+            <div className='bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center>''
+              <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center>';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+>>>>>>> main
+                <Users className='h-6 w-6 text-white'  />'
+              </div>'''
+              <h4 className='text-lg font-semibold text-white mb-2'>Customer Segmentation</h4>'''
+              <p className='text-slate-300 text-sm'>
+                AI-powered behavioral analysis and dynamic segmentation'
+              </p>''
+            </div>'''
+            <div className='bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center>''
+              <div className='p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center>''
+                <Target className='h-6 w-6 text-white'  />'
+              </div>'''
+              <h4 className='text-lg font-semibold text-white mb-2'>Personalization</h4>'''
+              <p className='text-slate-300 text-sm'>
+                Dynamic content and offers based on customer behavior'
+              </p>''
+            </div>'''
+            <div className='bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center>''
+              <div className='p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center>''
+                <TrendingUp className='h-6 w-6 text-white'  />'
+              </div>'''
+              <h4 className='text-lg font-semibold text-white mb-2'>Automation</h4>'              <p className='text-slate-300 text-sm'>
+                Intelligent campaign orchestration and nurturing sequences'
+              </p>''
+            </div>'''
+            <div className='bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center>''
+              <div className='p-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center>''
+                <BarChart3 className='h-6 w-6 text-white' /></div>''              <h4 className='text-lg font-semibold text-white mb-2'>Analytics</h4>'''
+              <p className='text-slate-300 text-sm'>
+                Comprehensive ROI tracking and performance optimization
+>>>>>>> main
+>>>>>>> main
               </p>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+
       </section>"""
+
+      </section>"
+      </section>
+""
+>>>>>>> pr-10728
       <section className="py-12 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
           <h3 className="text-2xl font-semibold text-white mb-4">AI Capabilities</h3>""
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+
           <div className="flex flex-wrap gap-3">"{aiCapabilities.map((capability) => (""
+
+          <div className="flex flex-wrap gap-3">"
+          <div className="flex flex-wrap gap-3">
+            {aiCapabilities.map((capability) => (""
+>>>>>>> pr-10728
               <span key={capability} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: </section>'''      <section className='py-12 px-4 sm:px-6: lg:px-8'>''';
+        <div: className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''';
+          <h3: className='text-2xl font-semibold text-white mb-4'>AI Capabilities</h3>'';';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: <div className='flex flex-wrap gap-3'>'{aiCapabilities.map((capability) => (''              <span key={capabilit,y} className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300'>';
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+      </section>'''      <section className='py-12 px-4 sm:px-6 lg:px-8'>''
+        <div className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''
+          <h3 className='text-2xl font-semibold text-white mb-4'>AI Capabilities</h3>''
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+          <div className='flex flex-wrap gap-3'>'{aiCapabilities.map((capability) => (''              <span key={capability} className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300'>
+=======
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+      </section>'''      <section className='py-12 px-4 s,
+    m:px-6 l,
+    g:px-8>''
+        <div className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8>''
+          <h3 className='text-2xl font-semibold text-white mb-4'>AI Capabilities</h3>'';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+          <div className='flex flex-wrap gap-3>{aiCapabilities.map((capability) => (''              <span key={capability} className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300'>
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
                 {capability}
               </span>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+
       </section>"""
+
+      </section>"
+      </section>
+""
+>>>>>>> pr-10728
       <section className="py-12 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
           <h3 className="text-2xl font-semibold text-white mb-4">Platform Integrations</h3>""
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+
           <div className="flex flex-wrap gap-3">"{integrations.map((integration) => (""
+
+          <div className="flex flex-wrap gap-3">"
+          <div className="flex flex-wrap gap-3">
+            {integrations.map((integration) => (""
+>>>>>>> pr-10728
               <span key={integration} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: </section>'''      <section className='py-12 px-4 sm: px-6: lg:px-8'>''';
+        <div: className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''';
+          <h3: className='text-2xl font-semibold text-white mb-4'>Platform Integrations</h3>'';';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: <div className='flex flex-wrap gap-3'>'{integrations.map((integration) => (''              <span key={integratio,n} className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300'>';
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+      </section>'''      <section className='py-12 px-4 sm:px-6 lg:px-8'>''
+        <div className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''
+          <h3 className='text-2xl font-semibold text-white mb-4'>Platform Integrations</h3>''
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+          <div className='flex flex-wrap gap-3'>'{integrations.map((integration) => (''              <span key={integration} className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300'>
+=======
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+      </section>'''      <section className='py-12 px-4 sm:px-6 l,
+    g:px-8>''
+        <div className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8>''
+          <h3 className='text-2xl font-semibold text-white mb-4'>Platform Integrations</h3>'';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+          <div className='flex flex-wrap gap-3>{integrations.map((integration) => (''              <span key={integration} className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300'>
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
                 {integration}
               </span>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+
       </section>"""
+
+      </section>"
+      </section>
+""
+>>>>>>> pr-10728
       <section className="py-12 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
           <h3 className="text-2xl font-semibold text-white mb-4">Tech Stack & Tools</h3>""
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+
           <div className="flex flex-wrap gap-3">"{stack.map((s) => (""
+
+          <div className="flex flex-wrap gap-3">"
+          <div className="flex flex-wrap gap-3">
+            {stack.map((s) => (""
+>>>>>>> pr-10728
               <a key={s.name} href={s.url} target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover:text-white hover:border-cyan-500">
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: </section>'''      <section className='py-12 px-4 sm: px-6: lg:px-8'>''';
+        <div: className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''';
+          <h3: className='text-2xl font-semibold text-white mb-4'>Tech Stack & Tools</h3>'';';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: <div className='flex flex-wrap gap-3'>'{stack.map((s) => (''              <a key={s.nam,e} href={s.url} target='_blank' rel='noreferrer' className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover: text-white: hover:border-cyan-500'>';
+                {s.nam,e}
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+      </section>'''      <section className='py-12 px-4 sm:px-6 lg:px-8'>''
+        <div className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''
+          <h3 className='text-2xl font-semibold text-white mb-4'>Tech Stack & Tools</h3>''
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+          <div className='flex flex-wrap gap-3'>'{stack.map((s) => (''              <a key={s.name} href={s.url} target='_blank' rel='noreferrer' className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover:text-white hover:border-cyan-500'>
+=======
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+      </section>'''      <section className='py-12 px-4 sm:px-6 l,
+    g:px-8>''
+        <div className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8>''
+          <h3 className='text-2xl font-semibold text-white mb-4'>Tech Stack & Tools</h3>'';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+          <div className='flex flex-wrap gap-3>{stack.map((s) => (''              <a key={s.name} href={s.url} target='_blank' rel='noreferrer' className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover:text-white hove,
+    r:border-cyan-500'>
+>>>>>>> main
+>>>>>>> main
                 {s.name}
+>>>>>>> main
               </a>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+
       </section>"""
+
+      </section>"
+      </section>
+""
+>>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">""
           <h2 className="text-3xl font-bold text-white mb-8">Transform Your Marketing Today</h2>""
@@ -234,7 +860,18 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
               <ArrowRight className="ml-2 h-5 w-5"  />"
             </Link>"            <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
               Call +1 302 464 0950
+
             </a>"</div>;""
+
+            </a>"
+            <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
+              Start Free Trial""
+              <ArrowRight className="ml-2 h-5 w-5"  />
+            </Link>"            <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
+              Call +1 302 464 0950;
+            </a>
+          </div>;""
+>>>>>>> pr-10728
           <p className="text-slate-400 mt-6">;""
             Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a> for enterprise solutions;
           </p>;
@@ -242,4 +879,64 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
       </section>;
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
     </div>;'"
+
+  )}
+  '"'"
+
   )}'"'"
+    </div>;
+  )}'""
+>>>>>>> pr-10728
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: </section>'''      <section className='py-16 px-4 sm: px-6: lg:px-8'>''';
+        <div: className='max-w-7xl mx-auto text-center'>''';
+          <h2: className='text-3xl font-bold text-white mb-8'>Transform Your Marketing Today</h2>''';
+          <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'';';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: <Link to='/contact' className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600: hover:to-blue-700: transition-all duration-200'>';';
+              Start: Free Trial''';
+              <ArrowRight: className='ml-2 h-5 w-5'  />'';
+            </Link>'            <a: href='tel:+13024640950' className='inline-flex: items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500: hover:text-white: transition-all duration-200'>';
+              Call: +1 302 464 0950
+            </a>'</div>'          <p className='text-slate-400 mt-6'>'';
+            Contact: us at <a href='mailto:kleber@ziontechgroup.com' className='text-cyan-400: hover:underline'>kleber@ziontechgroup.com</a> for: enterprise solutions';
+          </p>
+        </div>
+      </section>
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx: </div>'',)}';
+  '''"";
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+      </section>'''      <section className='py-16 px-4 sm:px-6 lg:px-8'>''
+        <div className='max-w-7xl mx-auto text-center'>''
+          <h2 className='text-3xl font-bold text-white mb-8'>Transform Your Marketing Today</h2>''
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx
+            <Link to='/contact' className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'>'
+              Start Free Trial''
+=======
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+      </section>'''      <section className='py-16 px-4 sm: px-6 lg:px-8>''
+        <div className='max-w-7xl mx-auto text-center>''
+          <h2 className='text-3xl font-bold text-white mb-8'>Transform Your Marketing Today</h2>'''
+          <div className='flex flex-col sm:flex-row gap-4 justify-center>';
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+            <Link to='/contact' className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200>;
+              Start Free Trial'''
+>>>>>>> main
+              <ArrowRight className='ml-2 h-5 w-5'  />'
+            </Link>'            <a href='tel:+13024640950' className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'>
+              Call +1 302 464 0950'
+            </a>'</div>'          <p className='text-slate-400 mt-6>'
+            Contact us at <a href='mailt,
+    o:kleber@ziontechgroup.com' className='text-cyan-400 hove,
+    r:underline'>kleber@ziontechgroup.com</a> for enterprise solutions
+          </p>
+        </div>
+      </section>
+:pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx'
+    </div>'')}
+  '''""
+>>>>>>> main
+>>>>>>> main

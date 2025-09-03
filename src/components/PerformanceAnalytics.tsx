@@ -1,1 +1,42 @@
-import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCircle, BarChart3, Cpu, HardDrive, Network, Monitor interface PerformanceMetric { name: string; value: number; unit: string; trend: 'up' | 'down' | 'stable'; status: 'good' | 'warning' | 'critical'; icon: React.ComponentType<any>; interface PerformanceData { timestamp: number; metrics: PerformanceMetric[]; alerts: string[]; recommendations: string[]; const PerformanceAnalytics: React.FC = () => {; const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null); const [isMonitoring, setIsMonitoring] = useState(false); const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
+<<<<<<< HEAD
+
+import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCircle, BarChart3, Cpu, HardDrive, Network, Monitor interface PerformanceMetric { name: string; value: number; unit: string; trend: 'up' | 'down' | 'stable'; status: 'good' | 'warning' | 'critical'; icon: React.ComponentType < any>; interface PerformanceData { timestamp: number; metrics: PerformanceMetric[]; alerts: string[]; recommendations: string[]; const PerformanceAnalytics: React.FC = () => {; const [performanceData, setPerformanceData] = useState < PerformanceData | null> (null) ; const [isMonitoring, setIsMonitoring] = useState (false) ; const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'> ('24h') ;'';,"});,"})
+;,"});,"})
+>>>>>>> pr-10728;,"});,"})
+=======
+<<<<<<< HEAD
+import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCircle, BarChart3, Cpu, HardDrive, Network, Monitor interface PerformanceMetric { name: string value: number unit: string trend: 'up' | 'down' | 'stable' status: 'good' | 'warning' | 'critical' icon: React.ComponentType < any> interface PerformanceData { timestamp: number metrics: PerformanceMetric[] alerts: string[] recommendations: string[] const PerformanceAnalytics: React.FC = () => { const [performanceData, setPerformanceData] = useState < PerformanceData | null> (null)  const [isMonitoring, setIsMonitoring] = useState (false)  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'> ('24h') ';;
+=======
+<<<<<<< HEAD
+import: { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCircle, BarChart3, Cpu, HardDrive, Network, Monitor interface PerformanceMetric { name: string: value: number: unit: string: trend: 'up' | 'down' | 'stable' status: 'good' | 'warning' | 'critical' icon: React.ComponentType: < any> interface PerformanceData { timestamp: number: metrics: PerformanceMetric[] alerts: string[] recommendations: string[] const: PerformanceAnalytics: React.FC: = () => { const [performanceDat,a, setPerformanceData] = useState < PerformanceData | null> (null)  const [isMonitoring, setIsMonitoring] = useState (false)  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'> ('24h') ';';';';
+=======
+<<<<<<< HEAD
+import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCircle, BarChart3, Cpu, HardDrive, Network, Monitor interface PerformanceMetric { name: string value: number unit: string trend: 'up' | 'down' | 'stable' status: 'good' | 'warning' | 'critical' icon: React.ComponentType < any> interface PerformanceData { timestamp: number metrics: PerformanceMetric[] alerts: string[] recommendations: string[] const PerformanceAnalytics: React.FC = () => { const [performanceData, setPerformanceData] = useState < PerformanceData | null> (null)  const [isMonitoring, setIsMonitoring] = useState (false)  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'> ('24h') ''
+=======
+<<<<<<< HEAD
+import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCircle, BarChart3, Cpu, HardDrive, Network, Monitor interface PerformanceMetric { name: string value: number unit: string trend: 'up' | 'down' | 'stable' status: 'good' | 'warning' | 'critical' icon: React.ComponentType < any> interface PerformanceData { timestamp: number metrics: PerformanceMetric[] alerts: string[] recommendation,
+    s: string[] const PerformanceAnalytic,
+    s: React.FC = () => { const [performanceData, setPerformanceData] = useState < PerformanceData | null> (null)  const [isMonitoring, setIsMonitoring] = useState (false)  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'> ('24h') ';'
+=======
+<<<<<<< HEAD
+import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCircle, BarChart3, Cpu, HardDrive, Network, Monitor interface PerformanceMetric { name: string value: number unit: string trend: &apos;up&apos; | &apos;down&apos; | &apos;stable&apos; status: &apos;good&apos; | &apos;warning&apos; | &apos;critical&apos; ico,n: React.ComponentType&apos;}} < any> interface PerformanceData { timestamp: number metrics: PerformanceMetric[] alerts: string[] recommendation,s: string[]} const PerformanceAnalytics: React.FC = () => {} const [performanceData, setPerformanceData] = useState < PerformanceData | null> (null)  const [isMonitoring, setIsMonitoring] = useState (false)  const;const;const [selectedTimeframe, setSelectedTimeframe] = useState;<&apos;1h&apos; | &apos;24h&apos; | &apos;7d&apos; | &apos;30d&apos;> (&apos;24h&apos;) ';
+&apos;'
+=======
+<<<<<<< HEAD
+import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCircle, BarChart3, Cpu, HardDrive, Network, Monitor interface PerformanceMetric { name: string value: number unit: string trend: 'up' | 'down' | 'stable' status: 'good' | 'warning' | 'critical' icon: React.ComponentType < any> interface PerformanceData { timestamp: number metrics: PerformanceMetric[] alerts: string[] recommendations: string[] const PerformanceAnalytics: React.FC = () => { const [performanceData, setPerformanceData] = useState < PerformanceData | null> (null)  const [isMonitoring, setIsMonitoring] = useState (false)  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'> ('24h') ';'
+<<<<<<< HEAD
+""
+}}}}
+=======
+=======
+import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCircle, BarChart3, Cpu, HardDrive, Network, Monitor interface PerformanceMetric { name: string value: number unit: string trend: 'up' | 'down' | 'stable' status: 'good' | 'warning' | 'critical' icon: React.ComponentType < any> interface PerformanceData { timestamp: number metrics: PerformanceMetric[] alerts: string[] recommendations: string[] const PerformanceAnalytics: React.FC = () => { const [performanceData, setPerformanceData] = useState < PerformanceData | null> (null)  const [isMonitoring, setIsMonitoring] = useState (false)  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'> ('24h') 
+"
+}}}}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

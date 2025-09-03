@@ -1,0 +1,37 @@
+{
+  "timestamp": "2025-09-02T21:14:45.018Z",
+  "type": "test-runner",
+  "results": {
+    "lintCheck": {
+      "success": false,
+      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+    },
+    "typeCheck": {
+      "success": false,
+      "error": "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: tsc: not found\n"
+    },
+    "tests": {
+      "success": false,
+      "error": "Command failed: npm run test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"
+    },
+    "build": {
+      "success": false,
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+    },
+    "fileIntegrity": {
+      "totalFiles": 2010,
+      "corruptedFiles": 0,
+      "issues": [
+        {
+          "file": "src/hooks/usePerformanceMonitoring.ts",
+          "issue": "Potential undefined variable with console.log"
+        },
+        {
+          "file": "src/pages/Search.tsx",
+          "issue": "TODO/FIXME comment found"
+        }
+      ]
+    },
+    "overallSuccess": false
+  }
+}
