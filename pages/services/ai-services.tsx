@@ -11,19 +11,21 @@ const AIServicesPage: NextPage = () => {
   const benefits = [
     {
       icon: <Brain className="w-8 h-8" />, title: 'Advanced AI',
-      description: 'Cutting-edge machine learning and AI technologies to solve complex business problems.';
-}, {
+      description: 'Cutting-edge machine learning and AI technologies to solve complex business problems.'
+    }, {
       icon: <Zap className="w-8 h-8" />,
-      title: 'Rapid Implementation', description: 'Quick deployment of AI solutions with proven methodologies and best practices.';
-},
+      title: 'Rapid Implementation', 
+      description: 'Quick deployment of AI solutions with proven methodologies and best practices.'
+    },
     {
       icon: <Users className="w-8 h-8" />, title: 'Expert Team',
-      description: 'AI specialists with deep expertise in machine learning and data science.';
-}, {
+      description: 'AI specialists with deep expertise in machine learning and data science.'
+    }, {
       icon: <Shield className="w-8 h-8" />,
-      title: 'Scalable Solutions', description: 'AI solutions that grow with your business and adapt to changing needs.';
-}
-  ]
+      title: 'Scalable Solutions', 
+      description: 'AI solutions that grow with your business and adapt to changing needs.'
+    }
+  ];
 
   return (
     <MainLayout
@@ -38,9 +40,32 @@ const AIServicesPage: NextPage = () => {
               AI & Machine Learning Services
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
+<<<<<<< HEAD
               Leverage the power of artificial intelligence to automate processes, gain insights, and create competitive advantages for your business.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
+=======
+              Leverage the power of artificial intelligence to automate processes, gain insights, 
+              and create competitive advantages for your business. From quantum computing to personalized medicine, 
+              our AI solutions are transforming industries and driving innovation.
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                <span className="text-blue-300">Custom AI models</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                <span className="text-green-300">Quantum computing</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                <span className="text-purple-300">Autonomous systems</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm">
+                <span className="text-orange-300">Predictive analytics</span>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-f139
               <Link href="/contact">
                 <span className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
                   Get Free Consultation
