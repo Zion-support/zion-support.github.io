@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Star, Award, Users, Globe, MapPin } from "lucide-react";
-import { REAL_MICRO_SAAS_SERVICES_2025 } from "../../data/realMicroSaasServices2025";
+import { REAL_MICRO_SAAS_SERVICES_2025, SERVICE_CATEGORIES, PRICING_TIERS, ZION_CONTACT_INFO } from "../../data/realMicroSaasServices2025";
 
 export default function Index() {;
   const features = [;
@@ -70,15 +70,15 @@ export default function Index() {;
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-8">;
               <div className="flex items-center">;
                 <Mail className="w-5 h-5 mr-2 text-indigo-400" />;
-                <span>kleber@ziontechgroup.com</span>;
+                <span>{ZION_CONTACT_INFO.email}</span>;
               </div>;
               <div className="flex items-center">;
                 <Phone className="w-5 h-5 mr-2 text-indigo-400" />;
-                <span>+1 302 464 0950</span>;
+                <span>{ZION_CONTACT_INFO.phone}</span>;
               </div>;
               <div className="flex items-center">;
                 <MapPin className="w-5 h-5 mr-2 text-indigo-400" />;
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>;
+                <span>{ZION_CONTACT_INFO.address}</span>;
               </div>;
             </div>;
             <div className="mt-4 md:mt-0">;
