@@ -1022,6 +1022,213 @@ export default function ITServices() {
         'Cost-effective compliance management'
       ],
       category: 'Compliance'
+    },
+    {
+      icon: Cloud,
+      name: 'Multi-Cloud Strategy & Management',
+      description: 'Comprehensive multi-cloud strategy with cost optimization, security, and performance management across AWS, Azure, and GCP.',
+      features: [
+        'Multi-cloud architecture design',
+        'Cost optimization across platforms',
+        'Unified security and compliance',
+        'Performance monitoring and optimization',
+        'Disaster recovery planning',
+        'Cloud governance and policies'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$25,000 – $200,000/project',
+      timeline: '6–20 weeks',
+      benefits: [
+        '30% reduction in cloud costs',
+        'Improved reliability and performance',
+        'Vendor lock-in avoidance',
+        'Enhanced security posture'
+      ],
+      category: 'Cloud & Infrastructure'
+    },
+    {
+      icon: Shield,
+      name: 'Zero Trust Security Architecture',
+      description: 'Complete zero trust security implementation with identity verification, network segmentation, and continuous monitoring.',
+      features: [
+        'Identity and access management',
+        'Network micro-segmentation',
+        'Continuous security monitoring',
+        'Privileged access management',
+        'Device trust and compliance',
+        'Security automation and orchestration'
+      ],
+      pricing: '$200 – $400/hour',
+      projectPricing: '$50,000 – $500,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Automated threat response',
+        'Compliance with regulations'
+      ],
+      category: 'Security'
+    },
+    {
+      icon: Database,
+      name: 'Data Lake & Analytics Platform',
+      description: 'Enterprise data lake implementation with real-time analytics, machine learning, and business intelligence capabilities.',
+      features: [
+        'Data ingestion and processing',
+        'Real-time analytics and streaming',
+        'Machine learning model deployment',
+        'Business intelligence dashboards',
+        'Data governance and cataloging',
+        'Performance optimization'
+      ],
+      pricing: '$180 – $350/hour',
+      projectPricing: '$75,000 – $300,000/project',
+      timeline: '12–32 weeks',
+      benefits: [
+        'Unified data platform',
+        'Real-time business insights',
+        'Scalable analytics infrastructure',
+        'Improved decision making'
+      ],
+      category: 'Data & Analytics'
+    },
+    {
+      icon: Code,
+      name: 'API-First Architecture Design',
+      description: 'Modern API-first architecture with microservices, event-driven design, and comprehensive API management.',
+      features: [
+        'API strategy and design',
+        'Microservices architecture',
+        'Event-driven architecture',
+        'API gateway implementation',
+        'Service mesh deployment',
+        'API security and monitoring'
+      ],
+      pricing: '$160 – $300/hour',
+      projectPricing: '$40,000 – $150,000/project',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Improved system scalability',
+        'Faster development cycles',
+        'Better system integration',
+        'Enhanced developer experience'
+      ],
+      category: 'Architecture'
+    },
+    {
+      icon: Server,
+      name: 'Kubernetes & Container Orchestration',
+      description: 'Enterprise Kubernetes deployment with advanced orchestration, monitoring, and security features.',
+      features: [
+        'Kubernetes cluster design and deployment',
+        'Container orchestration and management',
+        'Service mesh implementation',
+        'Monitoring and observability',
+        'Security and compliance',
+        'Auto-scaling and optimization'
+      ],
+      pricing: '$140 – $280/hour',
+      projectPricing: '$30,000 – $120,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Improved application scalability',
+        'Reduced infrastructure costs',
+        'Enhanced deployment efficiency',
+        'Better resource utilization'
+      ],
+      category: 'Cloud & Infrastructure'
+    },
+    {
+      icon: Globe,
+      name: 'Edge Computing & IoT Solutions',
+      description: 'Edge computing infrastructure with IoT device management, real-time processing, and cloud integration.',
+      features: [
+        'Edge infrastructure design',
+        'IoT device management',
+        'Real-time data processing',
+        'Edge-to-cloud connectivity',
+        'Security and compliance',
+        'Performance monitoring'
+      ],
+      pricing: '$170 – $320/hour',
+      projectPricing: '$45,000 – $180,000/project',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Reduced latency',
+        'Improved data processing',
+        'Enhanced IoT capabilities',
+        'Better user experience'
+      ],
+      category: 'Edge Computing'
+    },
+    {
+      icon: Shield,
+      name: 'DevSecOps & Security Automation',
+      description: 'Integrated security into DevOps pipelines with automated security testing, compliance, and monitoring.',
+      features: [
+        'Security integration in CI/CD',
+        'Automated security testing',
+        'Compliance automation',
+        'Security monitoring and alerting',
+        'Vulnerability management',
+        'Security training and awareness'
+      ],
+      pricing: '$150 – $300/hour',
+      projectPricing: '$35,000 – $140,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Faster secure deployments',
+        'Reduced security vulnerabilities',
+        'Automated compliance',
+        'Improved security culture'
+      ],
+      category: 'Security'
+    },
+    {
+      icon: Database,
+      name: 'Blockchain & Web3 Development',
+      description: 'Blockchain application development with smart contracts, DeFi protocols, and Web3 integration.',
+      features: [
+        'Smart contract development',
+        'DeFi protocol implementation',
+        'Web3 application development',
+        'Blockchain integration',
+        'Security auditing',
+        'Token economics design'
+      ],
+      pricing: '$200 – $400/hour',
+      projectPricing: '$60,000 – $300,000/project',
+      timeline: '10–24 weeks',
+      benefits: [
+        'Innovative blockchain solutions',
+        'Enhanced security and transparency',
+        'New revenue opportunities',
+        'Future-proof technology'
+      ],
+      category: 'Blockchain'
+    },
+    {
+      icon: Cpu,
+      name: 'High-Performance Computing Solutions',
+      description: 'High-performance computing infrastructure with GPU clusters, parallel processing, and scientific computing capabilities.',
+      features: [
+        'HPC cluster design and deployment',
+        'GPU computing and CUDA optimization',
+        'Parallel processing frameworks',
+        'Scientific computing libraries',
+        'Performance optimization',
+        'Resource management and scheduling'
+      ],
+      pricing: '$180 – $350/hour',
+      projectPricing: '$80,000 – $400,000/project',
+      timeline: '12–28 weeks',
+      benefits: [
+        'Massive computational power',
+        'Faster research and development',
+        'Complex problem solving',
+        'Competitive advantage'
+      ],
+      category: 'High Performance Computing'
     }
   ];
 

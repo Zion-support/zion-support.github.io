@@ -1066,6 +1066,248 @@ export default function MicroSaaS() {
         'Improved user onboarding'
       ],
       category: 'Identity Management'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Customer Sentiment Analyzer',
+      description: 'Real-time customer sentiment analysis across all communication channels with actionable insights.',
+      features: [
+        'Multi-channel sentiment monitoring (email, chat, social)',
+        'Real-time sentiment scoring and alerts',
+        'Customer emotion trend analysis',
+        'Automated response recommendations',
+        'Integration with CRM and support systems',
+        'Predictive customer satisfaction modeling'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '40% improvement in customer satisfaction',
+        'Early warning system for customer issues',
+        'Data-driven customer experience optimization',
+        'Reduced customer churn'
+      ],
+      category: 'Customer Analytics'
+    },
+    {
+      icon: Zap,
+      name: 'Smart Energy Management System',
+      description: 'AI-powered energy consumption optimization for buildings and facilities.',
+      features: [
+        'Real-time energy consumption monitoring',
+        'AI-powered optimization recommendations',
+        'Predictive maintenance scheduling',
+        'Carbon footprint tracking and reporting',
+        'Integration with smart building systems',
+        'Cost savings analytics and ROI tracking'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '25% reduction in energy costs',
+        'Automated energy optimization',
+        'Improved sustainability metrics',
+        'Predictive maintenance savings'
+      ],
+      category: 'Sustainability Tech'
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Fraud Detection Engine',
+      description: 'Advanced fraud detection for financial transactions with real-time risk scoring.',
+      features: [
+        'Real-time transaction monitoring',
+        'Machine learning fraud detection',
+        'Behavioral pattern analysis',
+        'Risk scoring and decision automation',
+        'False positive reduction algorithms',
+        'Compliance reporting and audit trails'
+      ],
+      pricing: '$499 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '95% fraud detection accuracy',
+        '60% reduction in false positives',
+        'Real-time risk assessment',
+        'Automated fraud prevention'
+      ],
+      category: 'FinTech Security'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Talent Acquisition Platform',
+      description: 'Intelligent recruitment platform with candidate matching and interview automation.',
+      features: [
+        'AI-powered candidate screening',
+        'Skills matching and ranking',
+        'Automated interview scheduling',
+        'Video interview analysis',
+        'Bias detection and mitigation',
+        'Recruitment analytics and reporting'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '50% faster hiring process',
+        'Improved candidate quality',
+        'Reduced recruitment bias',
+        'Automated screening efficiency'
+      ],
+      category: 'HR Tech'
+    },
+    {
+      icon: Globe,
+      name: 'Smart Supply Chain Visibility Platform',
+      description: 'End-to-end supply chain tracking with predictive analytics and risk management.',
+      features: [
+        'Real-time shipment tracking',
+        'Supply chain risk assessment',
+        'Predictive delay notifications',
+        'Vendor performance analytics',
+        'Compliance monitoring',
+        'Cost optimization recommendations'
+      ],
+      pricing: '$599 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '30% reduction in supply chain costs',
+        'Improved delivery reliability',
+        'Proactive risk management',
+        'Better vendor relationships'
+      ],
+      category: 'Supply Chain Tech'
+    },
+    {
+      icon: Code,
+      name: 'AI-Powered Code Quality Monitor',
+      description: 'Continuous code quality monitoring with automated refactoring suggestions and technical debt tracking.',
+      features: [
+        'Real-time code quality analysis',
+        'Automated refactoring recommendations',
+        'Technical debt tracking and prioritization',
+        'Code complexity monitoring',
+        'Security vulnerability detection',
+        'Team performance analytics'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '40% improvement in code quality',
+        'Reduced technical debt',
+        'Faster development cycles',
+        'Better team productivity'
+      ],
+      category: 'Development Tools'
+    },
+    {
+      icon: BarChart3,
+      name: 'Smart Business Intelligence Dashboard',
+      description: 'AI-powered business intelligence with automated insights and predictive analytics.',
+      features: [
+        'Automated data visualization',
+        'Predictive business analytics',
+        'Custom KPI tracking and alerts',
+        'Data source integration',
+        'Automated report generation',
+        'Mobile-responsive dashboards'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '50% faster decision making',
+        'Automated business insights',
+        'Improved data-driven culture',
+        'Reduced reporting overhead'
+      ],
+      category: 'Business Intelligence'
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Compliance Automation',
+      description: 'Automated compliance monitoring with regulatory change tracking and risk assessment.',
+      features: [
+        'Regulatory change monitoring',
+        'Automated compliance gap analysis',
+        'Risk assessment and scoring',
+        'Compliance reporting automation',
+        'Policy management and updates',
+        'Audit trail and documentation'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '80% reduction in compliance overhead',
+        'Automated risk identification',
+        'Improved regulatory adherence',
+        'Reduced compliance costs'
+      ],
+      category: 'Compliance Tech'
+    },
+    {
+      icon: Users,
+      name: 'Smart Customer Onboarding Platform',
+      description: 'AI-powered customer onboarding with personalized journeys and automated workflows.',
+      features: [
+        'Personalized onboarding journeys',
+        'Automated workflow triggers',
+        'Progress tracking and analytics',
+        'Multi-channel communication',
+        'Integration with CRM systems',
+        'Success metrics and optimization'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '60% improvement in onboarding completion',
+        'Reduced time to value',
+        'Automated customer success',
+        'Better customer retention'
+      ],
+      category: 'Customer Success'
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Market Research Platform',
+      description: 'Automated market research with competitor analysis and trend identification.',
+      features: [
+        'Automated competitor monitoring',
+        'Market trend analysis',
+        'Customer sentiment tracking',
+        'Pricing intelligence',
+        'Product positioning insights',
+        'Market opportunity identification'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '70% faster market research',
+        'Automated competitive intelligence',
+        'Data-driven market decisions',
+        'Reduced research costs'
+      ],
+      category: 'Market Intelligence'
+    },
+    {
+      icon: Zap,
+      name: 'Smart Workflow Automation Engine',
+      description: 'AI-powered workflow automation with intelligent decision making and process optimization.',
+      features: [
+        'Intelligent process automation',
+        'Decision tree automation',
+        'Exception handling and escalation',
+        'Process optimization recommendations',
+        'Integration with business systems',
+        'Performance monitoring and analytics'
+      ],
+      pricing: '$249 – $1,799/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '75% reduction in manual processes',
+        'Improved process efficiency',
+        'Automated decision making',
+        'Better resource utilization'
+      ],
+      category: 'Process Automation'
     }
   ];
 

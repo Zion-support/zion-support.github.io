@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search } from 'lucide-react';
+import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search, Users } from 'lucide-react';
 
 export default function AIServices() {
   const contact = {
@@ -823,6 +823,160 @@ export default function AIServices() {
         'Improved accuracy in legal analysis',
         'Automated compliance checking',
         'Better risk identification'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Autonomous Business Agents',
+      description: 'Intelligent autonomous agents that handle complex business processes and decision-making without human intervention.',
+      features: [
+        'Autonomous decision-making capabilities',
+        'Multi-step process automation',
+        'Natural language interaction',
+        'Learning and adaptation mechanisms',
+        'Integration with business systems',
+        'Performance monitoring and optimization'
+      ],
+      pricing: '$10,000 – $100,000 setup',
+      perUnit: '$500 – $5,000 per agent/month',
+      timeline: '8–16 weeks',
+      benefits: [
+        '90% reduction in manual processes',
+        '24/7 autonomous operation',
+        'Intelligent decision making',
+        'Scalable business automation'
+      ]
+    },
+    {
+      icon: Zap,
+      name: 'AI-Powered Predictive Maintenance System',
+      description: 'Advanced predictive maintenance using IoT sensors and machine learning to prevent equipment failures.',
+      features: [
+        'IoT sensor data integration',
+        'Machine learning failure prediction',
+        'Maintenance scheduling optimization',
+        'Cost-benefit analysis',
+        'Real-time monitoring dashboards',
+        'Integration with CMMS systems'
+      ],
+      pricing: '$15,000 – $75,000 setup',
+      perUnit: '$50 – $200 per device/month',
+      timeline: '6–12 weeks',
+      benefits: [
+        '40% reduction in maintenance costs',
+        '90% reduction in unplanned downtime',
+        'Extended equipment lifespan',
+        'Optimized maintenance schedules'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Quality Control System',
+      description: 'Computer vision-based quality control with real-time defect detection and automated sorting.',
+      features: [
+        'Real-time defect detection',
+        'Automated quality scoring',
+        'Statistical process control',
+        'Integration with production lines',
+        'Quality trend analysis',
+        'Automated sorting and routing'
+      ],
+      pricing: '$20,000 – $150,000 setup',
+      perUnit: '$0.01 – $0.10 per inspection',
+      timeline: '8–16 weeks',
+      benefits: [
+        '99.5% defect detection accuracy',
+        '50% reduction in quality issues',
+        'Automated quality control',
+        'Improved product consistency'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Financial Risk Management',
+      description: 'Advanced financial risk assessment and management using machine learning and real-time market data.',
+      features: [
+        'Real-time risk assessment',
+        'Portfolio optimization',
+        'Market volatility prediction',
+        'Credit risk analysis',
+        'Regulatory compliance monitoring',
+        'Automated risk reporting'
+      ],
+      pricing: '$25,000 – $200,000 setup',
+      perUnit: '$1,000 – $10,000 per portfolio/month',
+      timeline: '10–20 weeks',
+      benefits: [
+        '60% improvement in risk prediction',
+        'Automated risk management',
+        'Reduced financial losses',
+        'Better regulatory compliance'
+      ]
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Customer Behavior Analytics',
+      description: 'Deep customer behavior analysis with predictive modeling and personalized engagement strategies.',
+      features: [
+        'Customer journey mapping',
+        'Behavioral pattern analysis',
+        'Predictive customer modeling',
+        'Personalization engine',
+        'Churn prediction and prevention',
+        'Lifetime value optimization'
+      ],
+      pricing: '$8,000 – $50,000 setup',
+      perUnit: '$0.05 – $0.50 per customer/month',
+      timeline: '6–12 weeks',
+      benefits: [
+        '35% improvement in customer retention',
+        '50% increase in customer lifetime value',
+        'Personalized customer experiences',
+        'Data-driven engagement strategies'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Cybersecurity Intelligence',
+      description: 'Advanced cybersecurity threat detection and response using AI and machine learning.',
+      features: [
+        'Real-time threat detection',
+        'Behavioral anomaly analysis',
+        'Automated incident response',
+        'Threat intelligence integration',
+        'Security orchestration',
+        'Compliance monitoring'
+      ],
+      pricing: '$15,000 – $100,000 setup',
+      perUnit: '$500 – $3,000 per endpoint/month',
+      timeline: '8–16 weeks',
+      benefits: [
+        '95% reduction in false positives',
+        '60% faster threat response',
+        'Automated security operations',
+        'Enhanced security posture'
+      ]
+    },
+    {
+      icon: FileText,
+      name: 'AI-Powered Content Intelligence Platform',
+      description: 'Intelligent content analysis and optimization with automated insights and recommendations.',
+      features: [
+        'Content performance analysis',
+        'Automated content optimization',
+        'SEO and readability scoring',
+        'Content gap identification',
+        'Trend analysis and recommendations',
+        'Multi-language content support'
+      ],
+      pricing: '$5,000 – $30,000 setup',
+      perUnit: '$0.10 – $1.00 per content piece',
+      timeline: '4–8 weeks',
+      benefits: [
+        '40% improvement in content performance',
+        'Automated content optimization',
+        'Better SEO rankings',
+        'Reduced content creation costs'
       ]
     }
   ];
