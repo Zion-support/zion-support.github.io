@@ -77,16 +77,13 @@ function Footer(): any {
           <Link href="/micro-saas">Micro SaaS Products</Link>
           <Link href="/ai-services">AI Services</Link>
           <Link href="/it-services">IT Services</Link>
-          <Link href="/cloud-devops">Cloud DevOps</Link>
-          <Link href="/cybersecurity">Cybersecurity</Link>
-          <Link href="/quantum-computing">Quantum Computing</Link>
           <Link href="/services-catalog">Services Catalog</Link>
           <Link href="/docs">Documentation</Link>
           <Link href="/pricing">Pricing</Link>
           <div className="text-sm mt-2 space-y-1">
-            <div>• 120+ Micro SaaS Products</div>
-            <div>• 80+ AI Services</div>
-            <div>• 80+ IT Solutions</div>
+            <div>• 130+ Micro SaaS Products</div>
+            <div>• 90+ AI Services</div>
+            <div>• 90+ IT Solutions</div>
           </div>
         </div>
 
