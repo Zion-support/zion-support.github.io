@@ -1,10 +1,19 @@
-import { render, screen } from '@testing-library/react';
-import AnalyticsDashboard from './AnalyticsDashboard';
-
-describe('AnalyticsDashboard', () => {
-  it('renders without crashing', () => {
-    render(<AnalyticsDashboard />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
-  it('displays expected content', () => {
-    render(<AnalyticsDashboard />)
-    // Add specific test assertions based on component content})})
+  it(displays expected content", () => {
+    render(<AnalyticsDashboard  />)"
+import { render, screen } from &apos;@testing - library/react",
+import AnalyticsDashboard from &apos;./AnalyticsDashboard
+describe(&apos;AnalyticsDashboard&apos, () => {
+  it(&apos;renders without crashing&apos, () => {
+    render()
+}
+    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})
+}
+  it(&apos;displays expected content&apos, () => {
+    render()
+}
+    // comment
+    render(<AnalyticsDashboard / >)"
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
+})"
+"
+}}""

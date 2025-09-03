@@ -1,5 +1,24 @@
- export default authService';
-<<<<<<< HEAD
-;
-=======
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
+// comment
+export class authService {
+  constructor() {
+    this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"
+  }
+
+  async get() {
+    try {
+      const response = await fetch("${this.baseUrl}/auth")
+}
+      return await response.json()
+}
+    } catch (error) {
+      console.error("Error fetching data:", error)
+}
+      throw error
+    }
+
+  }
+
+
+
+export default new authService()
+}

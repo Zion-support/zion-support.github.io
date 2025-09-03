@@ -1,10 +1,19 @@
-import { render, screen } from '@testing-library/react';
-import Spinner from './Spinner';
-
-describe('Spinner', () => {
-  it('renders without crashing', () => {
-    render(<Spinner />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
-  it('displays expected content', () => {
-    render(<Spinner />)
-    // Add specific test assertions based on component content})})
+  it(displays expected content", () => {
+    render(<Spinner  />)"
+import { render, screen } from &apos;@testing - library/react",
+import Spinner from &apos;./Spinner
+describe(&apos;Spinner&apos, () => {
+  it(&apos;renders without crashing&apos, () => {
+    render()
+}
+    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})
+}
+  it(&apos;displays expected content&apos, () => {
+    render()
+}
+    // comment
+    render(<Spinner / >)"
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
+})"
+"
+}}""

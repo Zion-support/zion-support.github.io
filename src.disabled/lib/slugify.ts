@@ -1,1 +1,1 @@
-*/ export function slugify(text: anystring): string { return text .toLowerCase() .trim() .replace(/[^\w\s-]/g,);
+*/ export function slugify(text: anystring): string { return text .toLowerCase() .trim() .replace(/[^\w\s-]/,g,)

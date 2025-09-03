@@ -1,1 +1,22 @@
-describe('BlogPost', () => {}' it('renders without crashing', () => {} render(<BlogPost />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<BlogPost />) 
+<<<<<<< HEAD
+describe('BlogPost', () => {}; '; it('renders without crashing', () => {}; render(<BlogPost />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<BlogPost />) ;
+=======
+describe("BlogPost", () => {}; "; it("renders without crashing", () => {}; render(<BlogPost / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<BlogPost  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<BlogPost /" >)
+}
+    // comment
+  })
+}
+  });"
+"
+});""
+>>>>>>> main

@@ -1,5 +1,1 @@
-describe (
-  'NotFoundPage', () => {}' it ('renders without crashing
-  ', () => {} render (<NotFoundPage />) '; expect (screen.getByRole (
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
-  ', () => {} render (<NotFoundPage />) ''
+describe: ( "NotFoundPage", () => {}" it ("renders without crashing", ", () => {} render: (<NotFoundPage />) "; expect: (screen.getByRole (", "main") || screen.getByText (/.*/) ) .toBeInTheDocument () }) " it ("displays expected content", ", () => {} render: (<NotFoundPage />) """, "main") || screen.getByText (/.*/) ) .toBeInTheDocument () }) " it ("displays expected content ", () => {} render (<NotFoundPage />) "" 

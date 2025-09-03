@@ -1,2 +1,5 @@
-
-describe ('EnhancedFuturisticNavigation', () => { it ('renders without crashing', () => { render (<EnhancedFuturisticNavigation />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<EnhancedFuturisticNavigation />) ''
+<<<<<<< HEAD
+describe("EnhancedFuturisticNavigation", () => { it("renders without crashing", () => { render(<EnhancedFuturisticNavigation />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it("displays expected content", () => { render(<EnhancedFuturisticNavigation />) ;
+=======
+describe("EnhancedFuturisticNavigation () => { it(renders without crashing, () => { render(<EnhancedFuturisticNavigation />) ; expect(screen.getByRole (main) || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it(displays expected content", () => { render(<EnhancedFuturisticNavigation />) 
+>>>>>>> main
