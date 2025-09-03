@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react"
 import Link from "next/link"
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Users, Globe, Star, Award, Rocket, Lightbulb } from "lucide-react"
