@@ -44,8 +44,7 @@
   "summary": {
     "totalPassed": 1,
     "totalFailed": 4,
-    "totalErrors": 4;
-},
+    "totalErrors": 4},
   "recommendations": [
     "Fix failing unit tests to ensure code quality",
     "Fix failing integration tests to ensure component interactions work correctly",

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout'
 import { FileText, Scale, AlertTriangle, Shield, Users, Gavel } from 'lucide-react';
 
 const TermsOfService: NextPage = () => {

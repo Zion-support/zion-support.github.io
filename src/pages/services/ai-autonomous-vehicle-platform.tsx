@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   Car, Brain, 
   Shield, Zap, 
@@ -16,35 +16,28 @@ import {
   Cloud, Server,
   Database, Workflow,
   MessageCircle, Phone,
-  Mail;
-} from 'lucide-react';
+  Mail} from 'lucide-react';
 
 const AIAutonomousVehiclePlatform = () => {
   const features = [
     {
       title: "Advanced Perception Systems", description: "Multi-sensor fusion with LiDAR, radar, cameras, and ultrasonic sensors for 360° environmental awareness", icon: Eye,
-      color: "text-blue-400";
-}, {
+      color: "text-blue-400"}, {
       title: "AI Decision Making",
       description: "Real-time neural networks for instant decision making in complex traffic scenarios", icon: Brain,
-      color: "text-purple-400";
-}, {
+      color: "text-purple-400"}, {
       title: "Predictive Analytics",
       description: "ML-powered prediction of traffic patterns, pedestrian behavior, and road conditions", icon: TrendingUp,
-      color: "text-green-400";
-}, {
+      color: "text-green-400"}, {
       title: "Edge Computing",
       description: "On-board processing for ultra-low latency responses and offline operation capability", icon: Cpu,
-      color: "text-cyan-400";
-}, {
+      color: "text-cyan-400"}, {
       title: "Cybersecurity",
       description: "Advanced threat detection and prevention for vehicle systems and communications", icon: Shield,
-      color: "text-red-400";
-}, {
+      color: "text-red-400"}, {
       title: "Cloud Integration",
       description: "Seamless cloud connectivity for updates, data sharing, and fleet management", icon: Cloud,
-      color: "text-indigo-400";
-}
+      color: "text-indigo-400"}
   ]
 
   const useCases = [
@@ -75,8 +68,7 @@ const AIAutonomousVehiclePlatform = () => {
         "Cloud monitoring", "Email support",
         "Basic analytics"
       ], cta: "Start Free Trial",
-      popular: false;
-}, {
+      popular: false}, {
       name: "Professional",
       price: "$7, 999",
       period: "/month", description: "For growing fleets and commercial use",
@@ -86,8 +78,7 @@ const AIAutonomousVehiclePlatform = () => {
         "Priority support", "Custom integrations",
         "Fleet management tools"
       ], cta: "Get Started",
-      popular: true;
-}, {
+      popular: true}, {
       name: "Enterprise",
       price: "$19, 999",
       period: "/month", description: "For large fleets and enterprise deployment",
@@ -97,25 +88,20 @@ const AIAutonomousVehiclePlatform = () => {
         "24/7 dedicated support", "White-label solutions",
         "Compliance certifications"
       ], cta: "Contact Sales",
-      popular: false;
-}
+      popular: false}
   ]
 
   const benefits = [
     {
       icon: Shield, title: "Enhanced Safety",
-      description: "AI-powered systems reduce human error and improve road safety by up to 90%";
-}, {
+      description: "AI-powered systems reduce human error and improve road safety by up to 90%"}, {
       icon: DollarSign,
-      title: "Cost Reduction", description: "Lower operational costs through reduced fuel consumption and maintenance";
-},
+      title: "Cost Reduction", description: "Lower operational costs through reduced fuel consumption and maintenance"},
     {
       icon: Clock, title: "24/7 Operation",
-      description: "Continuous operation without driver fatigue or breaks";
-}, {
+      description: "Continuous operation without driver fatigue or breaks"}, {
       icon: TrendingUp,
-      title: "Scalability", description: "Easy fleet expansion and management through cloud-based systems";
-}
+      title: "Scalability", description: "Easy fleet expansion and management through cloud-based systems"}
   ]
 
   return (
@@ -219,12 +205,12 @@ const AIAutonomousVehiclePlatform = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
+                className={`bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300`
               >
                 <div className={`w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center mb-6`}>
                   <feature.icon className={`w-8 h-8 ${feature.color}`} />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className=`text-xl font-semibold text-white mb-3`}>{feature.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
@@ -303,7 +289,7 @@ const AIAutonomousVehiclePlatform = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className={`grid grid-cols-1 md:grid-cols-3 gap-8`>
             {pricing.map((tier, index) => (
               <motion.div
                 key={tier.name}
@@ -318,7 +304,7 @@ const AIAutonomousVehiclePlatform = () => {
 }`}
               >
                 {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
                     <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                       <Star className="w-4 h-4" />
                       Most Popular
@@ -344,13 +330,11 @@ const AIAutonomousVehiclePlatform = () => {
                   ))}
                 </ul>
 
-                <Link
-                  to={tier.name === "Enterprise" ? "/contact" : "/signup"}
+                <Link to={tier.name === "Enterprise" ? "/contact" : "/signup`}
                   className={`w-full px-6 py-3 rounded-lg font-semibold text-center transition-all duration-300 ${
                     tier.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-                      : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white';
-}`}
+                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: from-blue-600 hover:to-purple-700'
+                      : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'}`}
                 >
                   {tier.cta}
                 </Link>
@@ -361,7 +345,7 @@ const AIAutonomousVehiclePlatform = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-6 bg-slate-800/20">
+      <section className=`py-20 px-6 bg-slate-800/20">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -440,7 +424,7 @@ const AIAutonomousVehiclePlatform = () => {
       {/* Contact Info */}
       <section className="py-16 px-6 border-t border-slate-700/50">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             <div className="flex flex-col items-center space-y-3">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center">
                 <Phone className="w-6 h-6 text-blue-400" />
@@ -481,7 +465,6 @@ const AIAutonomousVehiclePlatform = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIAutonomousVehiclePlatform;

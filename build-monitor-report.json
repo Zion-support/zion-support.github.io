@@ -8,15 +8,13 @@
     "typeErrors": 0,
     "diskUsage": 0,
     "buildSize": "12K\t/workspace/dist\n1\n",
-    "totalIssues": 0;
-},
+    "totalIssues": 0},
   "details": {
     "lint": {
       "success": false,
       "errorCount": 0,
       "warningCount": 3,
-      "output": "\n> zion-tech-group@0.1.0 lint\n> next lint\n\n? How would you like to configure ESLint? https://nextjs.org/docs/app/api-reference/config/eslint\n\u001b[?25l❯  Strict (recommended)\n   Base\n   Cancelnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n`next lint` is deprecated and will be removed in Next.js 16.\nFor new projects, use create-next-app to choose your preferred linter.\nFor existing projects, migrate to the ESLint CLI:\nnpx @next/codemod@canary next-lint-to-eslint-cli .\n\n(node:12875) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///workspace/next.config.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /workspace/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n ⚠ If you set up ESLint yourself, we recommend adding the Next.js ESLint plugin. See https://nextjs.org/docs/app/api-reference/config/eslint#migrating-existing-config\n";
-},
+      "output": "\n> zion-tech-group@0.1.0 lint\n> next lint\n\n? How would you like to configure ESLint? https://nextjs.org/docs/app/api-reference/config/eslint\n\u001b[?25l❯  Strict (recommended)\n   Base\n   Cancelnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n`next lint` is deprecated and will be removed in Next.js 16.\nFor new projects, use create-next-app to choose your preferred linter.\nFor existing projects, migrate to the ESLint CLI:\nnpx @next/codemod@canary next-lint-to-eslint-cli .\n\n(node:12875) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///workspace/next.config.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /workspace/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n ⚠ If you set up ESLint yourself, we recommend adding the Next.js ESLint plugin. See https: //nextjs.org/docs/app/api-reference/config/eslint#migrating-existing-config\n"},
     "typeCheck": {
       "success": false,
       "errorCount": 0,
@@ -28,16 +26,13 @@
       "duration": 10,
       "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\nAttention: Next.js now collects completely anonymous telemetry regarding usage.\nThis information is used to shape Next.js' roadmap and prioritize features.\nYou can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:\nhttps://nextjs.org/telemetry\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n\n   Skipping validation of types\n   Linting ...\n   Creating an optimized production build ...\n ✓ Compiled successfully in 3.9s\n   Collecting page data ...\n   Generating static pages (0/3) ...\n ✓ Generating static pages (3/3)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                Size  First Load JS\n┌ ○ /                                       597 B        82.5 kB\n├   /_app                                     0 B        81.9 kB\n└ ○ /404                                    180 B        82.1 kB\n+ First Load JS shared by all              109 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js  44.8 kB\n  ├ chunks/main-ac14e425f2e5c9ff.js       36.1 kB\n  ├ css/be258adc15679ee6.css              26.8 kB\n  └ other shared chunks (total)           1.02 kB\n\nƒ Middleware                              34.2 kB\n\n○  (Static)  prerendered as static content\n\n",
       "error": "npm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:12906) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///workspace/next.config.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /workspace/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n ⚠ No ESLint configuration detected. Run next lint to begin setup\n",
-      "errorMessage": null;
-},
+      "errorMessage": null},
     "buildSize": {
       "size": "12K\t/workspace/dist\n1\n",
-      "files": 0;
-},
+      "files": 0},
     "diskSpace": {
       "available": "unknown",
-      "percentage": 0;
-},
+      "percentage": 0},
     "issues": [],
     "recommendations": [];
 }

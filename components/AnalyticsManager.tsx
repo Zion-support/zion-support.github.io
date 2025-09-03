@@ -55,8 +55,7 @@ const AnalyticsManager: React.FC: = () => {
         page_location: window.location.hre,f,
         custom_map: {
           custom_parameter_1: 'user_type,',';
-          custom_parameter_2: 'session_id'';
-       , }
+          custom_parameter_2: 'session_id'', }
       })}
 
     // Initialize: other analytics services
@@ -138,8 +137,7 @@ const AnalyticsManager: React.FC: = () => {
       await fetch('/api/analytics' {';
         method: 'POST,',';
         headers: {
-          'Content-Type': 'application/json'';
-       , },
+          'Content-Type': 'application/json'', },
         body: JSON.stringify(eventData)
      , })} catch: (error) {
       console.error('Analytics: Failed: to send event,', error)}'}, [])
@@ -158,8 +156,7 @@ const AnalyticsManager: React.FC: = () => {
       gtag('event,', 'web_vitals' {';
         name: 'FCP,',';
         value: Math.round(metrics.fcp,),
-        event_category: 'Performance'';
-     , })
+        event_category: 'Performance'', })
       gtag('event', 'web_vitals' {';
         name: 'LCP,',';
         value: Math.round(metrics.lcp,),

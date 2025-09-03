@@ -3,8 +3,7 @@
   "summary": {
     "total": 6,
     "successful": 0,
-    "failed": 6;
-},
+    "failed": 6},
   "results": [
     {
       "success": false,
@@ -18,23 +17,19 @@
 },
     {
       "success": false,
-      "error": "Command failed: node scripts/performance-monitor.js\nfile:///workspace/scripts/performance-monitor.js:186\n    console.log(`   Uptime: ${this.metrics.system.process?.uptime || 'N/A}s`);\n                                                                     ^^^^^^^^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n",
-      "description": "Custom Script: scripts/performance-monitor.js";
-},
+      "error": `Command failed: node scripts/performance-monitor.js\nfile:///workspace/scripts/performance-monitor.js:186\n    console.log(``   Uptime: ${this.metrics.system.process?.uptime || 'N/A}s``);\n                                                                     ^^^^^^^^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n`,
+      "description": "Custom Script: scripts/performance-monitor.js"},
     {
       "success": false,
       "error": "Command failed: node scripts/health-checker.js\nfile:///workspace/scripts/health-checker.js:2\nimport fs from;\n              ^\n\nSyntaxError: Unexpected token ';'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n",
-      "description": "Custom Script: scripts/health-checker.js";
-},
+      "description": "Custom Script: scripts/health-checker.js"},
     {
       "success": false,
       "error": "Command failed: node scripts/link-checker.js\nfile:///workspace/scripts/link-checker.js:7\nimport fs from;\n              ^\n\nSyntaxError: Unexpected token ';'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n",
-      "description": "Custom Script: scripts/link-checker.js";
-},
+      "description": "Custom Script: scripts/link-checker.js"},
     {
       "success": false,
       "error": "Command failed: node scripts/seo-optimizer.js\nfile:///workspace/scripts/seo-optimizer.js:6\nimport fs from,\n              ^\n\nSyntaxError: Unexpected token ','\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n",
-      "description": "Custom Script: scripts/seo-optimizer.js";
-}
+      "description": "Custom Script: scripts/seo-optimizer.js"}
   ]
 }

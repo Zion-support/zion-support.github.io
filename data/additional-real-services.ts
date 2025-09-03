@@ -11,13 +11,6 @@ export interface AdditionalRealService {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
-    address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const additionalEnhancedServices: AdditionalRealService[] = [
   {
     id: "ai-automation-suite",
@@ -4705,4 +4698,4 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     customers: 7,
     rating: 4.9,
     reviews: 6
-];}}}}}
+]}}}}}

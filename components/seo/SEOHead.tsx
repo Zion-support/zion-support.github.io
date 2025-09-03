@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
 
 interface SEOHeadProps {
@@ -33,8 +33,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogType = 'website',
   twitterCard = 'summary_large_image',
   noindex = false,
-  structuredData;
-}) => {
+  structuredData}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || 'https://ziontechgroup.com';
 
@@ -159,8 +158,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Structured Data */}
           type="application/ld+json"
-            __html: JSON.stringify(structuredData);
-}}
+            __html: JSON.stringify(structuredData)}}
         />
       )}
       

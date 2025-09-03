@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next';
-import Link from 'next/link';
+import Link from 'next/link'
 import MainLayout from '../../components/layout/MainLayout';
 import { 
   Brain, 
@@ -11,8 +11,7 @@ import {
   BarChart3, 
   Palette, 
   CheckCircle,
-  ArrowRight ;
-} from 'lucide-react';
+  ArrowRight} from 'lucide-react';
 
   const stats = [
     { number: '80+', label: 'Micro SaaS Solutions', icon: Zap }, { number: '35+', label: 'IT Services', icon: Shield },
@@ -25,8 +24,7 @@ import {
 },
     {
       icon: <Target className="w-8 h-8" />, title: 'Proven Results',
-      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.';
-}, {
+      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.'}, {
       icon: <Rocket className="w-8 h-8" />,
       title: 'Fast Implementation', description: 'Rapid deployment and implementation with minimal downtime, getting you up and running quickly.';
 }, {
@@ -40,64 +38,56 @@ const ServicesIndex: NextPage = () => {
       description: 'Custom AI solutions and machine learning models tailored to your business needs.',
       features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       href: '/services/ai-model-development-chat',
-      color: 'blue';
-},
+      color: 'blue'},
     {
       icon: Globe,
       title: 'Web Development',
       description: 'Modern, responsive web applications built with cutting-edge technologies.',
       features: ['React/Next.js Applications', 'E-commerce Solutions', 'Progressive Web Apps', 'API Development'],
       href: '/services/web-application-development-chat',
-      color: 'green';
-},
+      color: 'green'},
     {
       icon: Smartphone,
       title: 'Mobile Development',
       description: 'Native and cross-platform mobile applications for iOS and Android.',
       features: ['iOS Development', 'Android Development', 'React Native', 'Flutter Apps'],
       href: '/services/mobile-app-development-chat',
-      color: 'purple';
-},
+      color: 'purple'},
     {
       icon: Cloud,
       title: 'Cloud Solutions',
       description: 'Scalable cloud infrastructure and migration services for modern applications.',
       features: ['AWS/Azure/GCP', 'Cloud Migration', 'DevOps & CI/CD', 'Container Orchestration'],
       href: '/services/cloud-migration-services-chat',
-      color: 'orange';
-},
+      color: 'orange'},
     {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets.',
       features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
       href: '/services/network-security-chat',
-      color: 'red';
-},
+      color: 'red'},
     {
       icon: BarChart3,
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with advanced analytics.',
       features: ['Business Intelligence', 'Data Visualization', 'Predictive Modeling', 'Real-time Analytics'],
       href: '/services/business-intelligence-chat',
-      color: 'indigo';
-},
+      color: 'indigo'},
     {
       icon: Palette,
       title: 'UI/UX Design',
       description: 'User-centered design solutions that enhance user experience and engagement.',
       features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems'],
       href: '/services/ui-ux-design-chat',
-      color: 'pink';
-},
+      color: 'pink'},
     {
       icon: CheckCircle,
       title: 'Quality Assurance',
       description: 'Comprehensive testing services to ensure your applications perform flawlessly.',
       features: ['Automated Testing', 'Performance Testing', 'Security Testing', 'User Acceptance Testing'],
       href: '/services/quality-assurance-testing-chat',
-      color: 'teal';
-}
+      color: 'teal'}
   ]
 
   const getColorClasses = (color: string) => {
@@ -109,8 +99,7 @@ const ServicesIndex: NextPage = () => {
       red: 'bg-red-100 text-red-600',
       indigo: 'bg-indigo-100 text-indigo-600',
       pink: 'bg-pink-100 text-pink-600',
-      teal: 'bg-teal-100 text-teal-600';
-};
+      teal: 'bg-teal-100 text-teal-600'};
     return colorMap[color] || 'bg-gray-100 text-gray-600';
   };
 
@@ -428,15 +417,15 @@ const ServicesIndex: NextPage = () => {
                 </div>
                 <p className="text-gray-600 mb-4 text-sm">{service.description}</p>
                 <div className="flex justify-between items-center">
-                  <div className="text-lg font-semibold text-green-600">
+                  <div className={`text-lg font-semibold text-green-600`>
                     From ${service.pricing.starter}/mo
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=`grid md:grid-cols-2 lg:grid-cols-3 gap-8`}>
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <div key={index} className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div key={index} className={`bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow`>
                   <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 ${getColorClasses(service.color)}`}>
-                    <IconComponent className="h-6 w-6" />
+                    <IconComponent className=`h-6 w-6`} />
                   </div>
                   
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
@@ -453,14 +442,13 @@ const ServicesIndex: NextPage = () => {
                   
                   <Link 
                     href={service.href}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+                    className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold"
                   >
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -549,7 +537,6 @@ const ServicesIndex: NextPage = () => {
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )};
 
 export default ServicesIndex;

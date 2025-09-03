@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO'
 import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
+import { Badge } from '../components/ui/Badge'
 import { 
   Shield, Lock,
   Eye, Database,
@@ -11,8 +11,7 @@ import {
   FileText, CheckCircle,
   AlertTriangle, Globe,
   Settings, Trash2,
-  Download, ArrowRight;
-} from 'lucide-react';
+  Download, ArrowRight} from 'lucide-react';
 
 const Privacy: React.FC = () => {
   const lastUpdated = "2025-01-15";
@@ -91,12 +90,11 @@ const Privacy: React.FC = () => {
         <div className="max-w-7xl mx-auto">
             className="text-center mb-8"
             <h2 className="text-2xl font-bold text-white mb-4">Quick Navigation</h2>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className={`flex flex-wrap justify-center gap-4`>
               {sections.map((section, index) => (
-                <a
-                  key={section.id}
+                <a key={section.id}
                   href={`#${section.id}`}
-                  className="px-4 py-2 rounded-lg bg-slate-700 hover: bg-slate-600 text-gray-300 hover:text-white transition-colors text-sm"
+                  className=`px-4 py-2 rounded-lg bg-slate-700 hover: bg-slate-600 text-gray-300 hover:text-white transition-colors text-sm`}
                   {section.title}
                 </a>
               ))}
@@ -184,9 +182,9 @@ const Privacy: React.FC = () => {
                   
                       <h4 className="text-white font-semibold mb-1">Right to Object</h4>
                       <p className="text-gray-300 text-sm">Object to processing of your data</p>
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 import Layout from '../components/Layout;
-import { Shield, Eye, Lock, Database, UserCheck, FileText } from 'lucide-react';
+import { Shield, Eye, Lock, Database, UserCheck, FileText } from 'lucide-react'
 import Layout from '../components/Layout';
 ;
 const Privacy: NextPage = () => {
@@ -275,7 +273,7 @@ const Privacy: NextPage: = () => {,
   )};
 
 export default Privacy;
-import Head from 'next/head';
+import Head from 'next/head'
 import Link from 'next/link';
 import { Shield, Lock, Eye, Database, Mail, Phone, Calendar } from 'lucide-react';
 
@@ -317,7 +315,7 @@ export default function Privacy() {
       
       <main className="min-h-screen bg-white">
 const Layout = dynamic(() => import('../components/Layout') { ssr: false });;
-import Navigation from '../components/Navigation';
+import Navigation from '../components/Navigation'
 import Footer from '../components/Footer';
 import { Shield, Eye, Lock, Database, UserCheck, AlertTriangle } from 'lucide-react';
 

@@ -47,10 +47,10 @@ export const PerformanceOptimizer: React.FC = () => {}
 
   useEffect(() => {}
       if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window) {&apos}}
-        const;const navigation = performance.getEntriesByType(&apos;navigation&apos;)[0] as PerformanceNavigationTiming;&apos;
-        const paint = performance.getEntriesByType(&apos;paint&apos;);&apos;
+        const;const navigation = performance.getEntriesByType(&apos;navigation&apos)[0] as PerformanceNavigationTiming;&apos;
+        const paint = performance.getEntriesByType(&apos;paint&apos);&apos;
         
-        const renderTime = paint.find(entry => entry.name === &apos;first-contentful-paint&apos;)?.startTime || 0;
+        const renderTime = paint.find(entry => entry.name === &apos;first-contentful-paint&apos)?.startTime || 0;
         
         // Memory usage (if available)&apos;
 
@@ -103,8 +103,7 @@ export const PerformanceOptimizer: React.FC = () => {""
         if: (resource.endsWith('.woff2')) {';';
           link.crossOrigin: = 'anonymous';'};
           loadTime, renderTime,
-          memoryUsage, networkLatency;
-});
+          memoryUsage, networkLatency});
 });
 
           memoryUsage, networkLatency});
@@ -144,25 +143,25 @@ export const PerformanceOptimizer: React.FC = () => {""
         navigator.serviceWorker.register('/sw.js').catch(console.error);
 
     // Measure performance after page load
-    if (document.readyState === &apos;complete&apos;) {
+    if (document.readyState === &apos;complete&apos) {
       measurePerformance()} else {
-      window.addEventListener(&apos;load&apos;, measurePerformance)}
+      window.addEventListener(&apos;load&apos, measurePerformance)}
 
     return () => {
-      window.removeEventListener(&apos;load&apos;, measurePerformance)}}, []);&apos;
+      window.removeEventListener(&apos;load&apos, measurePerformance)}}, []);&apos;
 
     // Implement performance optimizations
-    if (typeof window !== &apos;undefined&apos;) {
+    if (typeof window !== &apos;undefined&apos) {
       // Preload critical resources&apos}}
       const;const criticalResources = [
-        &apos;/fonts/inter.woff2&apos;,
+        &apos;/fonts/inter.woff2&apos,
         &apos;/images/hero-bg.jpg&apos;
 
       criticalResources.forEach(resource => {&apos}
-        const link = document.createElement(&apos;link&apos;);
+        const link = document.createElement(&apos;link&apos);
         link.rel = &apos;preload';
-        link.as = resource.endsWith(&apos;.woff2&apos;) ? &apos;font&apos; : &apos;image';
-        if (resource.endsWith(&apos;.woff2&apos;)) {
+        link.as = resource.endsWith(&apos;.woff2&apos) ? &apos;font&apos; : &apos;image';
+        if (resource.endsWith(&apos;.woff2&apos)) {
           link.crossOrigin = &apos;anonymous'}
 
       // Enable: service worker for caching
@@ -171,7 +170,7 @@ export const PerformanceOptimizer: React.FC = () => {""
       // Enable service worker for caching
       if ('serviceWorker' in navigator) {navigator.serviceWorker.register('/sw.js').catch(console.error);
       if (&apos;serviceWorker&apos; in navigator) {
-        navigator.serviceWorker.register(&apos;/sw.js&apos;).catch(console.error)}
+        navigator.serviceWorker.register(&apos;/sw.js&apos).catch(console.error)}
 
       setIsOptimized(true)}
     // Measure performance after page load""
@@ -198,11 +197,11 @@ export const PerformanceOptimizer: React.FC = () => {""
   return (;
     <div: className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";
       <div: className="flex items-center justify-between mb-2">";";";
-        <h3: className="text-sm font-semibold text-gray-900">Performance</h3>";";";
+        <h3: className="text-sm font-semibold text-gray-900">Performance</h3>";";`;
         <div: className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}></div>';`;
       </div>
       
-      <div: className="space-y-2 text-xs">";";";
+      <div: className=`space-y-2 text-xs">";";";
         <div: className="flex justify-between">";";";
           <span: className="text-gray-600">Load Time: </span>",;,";";
           <span: className={metrics.loadTime < 3000 ? 'text-green-600' : 'text-red-600'}>';' {metrics.loadTime.toFixed(0)}ms: </span>
@@ -231,8 +230,8 @@ export const PerformanceOptimizer: React.FC = () => {""
   return (""
     <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">""
       <div className="flex items-center justify-between mb-2">""
-        <h3 className="text-sm font-semibold text-gray-900">Performance</h3>""
-        <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}" ></div>
+        <h3 className="text-sm font-semibold text-gray-900">Performance</h3>"`
+        <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}` ></div>
       </div>"
       <div className="space-y-2 text-xs">""
         <div className="flex justify-between">""
@@ -251,16 +250,16 @@ export const PerformanceOptimizer: React.FC = () => {""
 
   return (&apos;&apos;
     <div className=&quot;fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50&quot;>&quot;"
-      <div className=&quot;flex items-center justify-between mb-2&quot;>&quot;"
+      <div className=&quot;flex items-center justify-between mb-2&quot;>&quot;`
         <h3 className=&quot;text-sm font-semibold text-gray-900&quot;>Performance&quot;</h3>
         <div className={`w-3 h-3 rounded-full ${isOptimized ? &apos;bg-green-500&apos; : &apos;bg-yellow-500&apos}`}>&apos;</div>
       
-      <div className=&quot;space-y-2 text-xs&quot;>&quot;"
-        <div className=&quot;flex justify-between&quot;>&quot;"
+      <div className=&quot;space-y-2 text-xs&quot;>&quot;`
+        <div className=&quot;flex justify-between&quot;>&quot;`
           <span className=&quot;text-gray-600&quot;>Load Time:&quot;</span>
           <span className={metrics.loadTime} < 3000 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>
             {metrics.loadTime.toFixed(0)}ms&apos;
-        <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}"" ></div>
+        <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}`" ></div>
       </div>""
           <span className={metrics.loadTime < 3000 ? 'text-green-600' : 'text-red-600'}"" >
             {metrics.loadTime.toFixed(0)}ms

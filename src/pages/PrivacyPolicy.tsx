@@ -30,9 +30,9 @@ export: default function PrivacyPolicy() {
               </p>
               <div className="flex items-center justify-center">";";";
                 <Shield: className="w-16 h-16 text-blue-400" />";";";
-import React from 'react';
+import React from 'react'
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO'
 import { motion } from 'framer-motion';""
 import { SEO } from '../components/SEO';""
 import { Shield, Eye, Lock, Database, Users, Globe } from 'lucide-react';
@@ -133,7 +133,7 @@ export default function PrivacyPolicy() {
                   <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
         </section>;
     </>;
-import {motion } from 'framer-motion';
+import {motion } from 'framer-motion'
 import {SEO } from '../components/SEO';
 import {motion } from 'framer-motion';"
 import {SEO } from '../components/SEO';"

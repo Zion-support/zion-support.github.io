@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import {
   Target,
   Users,
@@ -12,11 +12,11 @@ import {
   Shield,
   BarChart3,
   Lightbulb,
-import Layout from '../components/Layout';
+import Layout from '../components/Layout'
 import { SEO } from '../components/SEO';
-import { Button } from '../components/ui/Button';
+import { Button } from '../components/ui/Button'
 import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
+import { Badge } from '../components/ui/Badge'
 import {
   ArrowRight,
   CheckCircle,
@@ -136,8 +136,7 @@ export default function Solutions() {
       href: '/solutions/enterprise',
       description: 'Comprehensive technology solutions for large organizations and enterprises.',
       features: ['Scalable Architecture,Enterprise Security,Integration Services,24/7 Support'],
-      href: '/solutions/enterprise';
-},
+      href: '/solutions/enterprise'},
     {
       icon: Users,
       title: 'Small Business Solutions',
@@ -151,8 +150,7 @@ export default function Solutions() {
       href: '/solutions/small-business',
       description: 'Cost-effective technology solutions designed for small and medium businesses.',
       features: ['Affordable Pricing,Quick Deployment,Easy Management,Local Support'],
-      href: '/solutions/small-business';
-},
+      href: '/solutions/small-business'},
     {
       icon: Zap,
       title: 'Startup Solutions',
@@ -166,8 +164,7 @@ export default function Solutions() {
       href: '/solutions/startups',
       description: 'Rapid development and deployment solutions for startups and new ventures.',
       features: ['Fast Time-to-Market,MVP Development,Scalable Infrastructure,Growth Support'],
-      href: '/solutions/startups';
-},
+      href: '/solutions/startups'},
     {
       icon: Target,
       title: 'Custom Development',
@@ -181,8 +178,7 @@ export default function Solutions() {
       href: '/solutions/custom-development',
       description: 'Tailored software solutions built specifically for your unique business needs.',
       features: ['Bespoke Solutions,Flexible Architecture,Custom Integrations,Ongoing Evolution'],
-      href: '/solutions/custom-development';
-},
+      href: '/solutions/custom-development'},
     {
       icon: Globe,
       title: 'Digital Transformation',
@@ -196,8 +192,7 @@ export default function Solutions() {
       href: '/solutions/digital-transformation'},
       description: 'Transform your business processes with modern digital solutions.',
       features: ['Process Automation,Digital Workflows,Data Analytics,Cloud Migration'],
-      href: '/solutions/digital-transformation';
-}
+      href: '/solutions/digital-transformation'}
   ]
 
   const benefits = [
@@ -443,15 +438,14 @@ export default function Solutions() {
                   key={index}
                   className="p-8 hover: shadow-xl transition-shadow duration-300"
                 >
-                  <div className="text-center mb-6">
-                    <div
-                      className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-${solution.color}-100 mb-4`}
+                  <div className={`text-center mb-6`>
+                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-${solution.color}-100 mb-4`}
                     >
                       <solution.icon
                         className={`h-8 w-8 text-${solution.color}-600`}
                       />
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className=`text-xl font-semibold text-gray-900 mb-2`}>
                       {solution.title}
                     </h3>
                     <p className="text-gray-600 mb-6">{solution.description}</p>
@@ -632,7 +626,7 @@ export default function Solutions() {
               </Link>"
               <Link href="/services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hove,
     r:bg-white hove,
-    r:text-blue-600 transition-colors">
+    r: text-blue-600 transition-colors">
               Every business is unique. Let us help you find the technology
               solution that fits your specific needs.
             </p>
@@ -654,8 +648,7 @@ export default function Solutions() {
         </section>
       </div>
     </Layout>
-  );
-}
+  )}
       </main>
     </>
   );

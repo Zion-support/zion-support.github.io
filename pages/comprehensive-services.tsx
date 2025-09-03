@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import { 
   ArrowRight, 
   Award, 
@@ -62,8 +62,7 @@ import {
   BarChart as Analytics,
   Users2 as Team,
   Settings as Configuration,
-  Palette as Design;
-} from 'lucide-react';
+  Palette as Design} from 'lucide-react';
 
 export default function ComprehensiveServices() {
   const title = 'Comprehensive Services — Zion Tech Group';
@@ -80,29 +79,25 @@ export default function ComprehensiveServices() {
           description: 'Advanced content creation and optimization with AI-powered insights',
           pricing: '$2,500 - $8,000/month',
           features: ['SEO optimization', 'Multi-language support', 'Brand consistency'],
-          delivery: '3-5 weeks';
-},
+          delivery: '3-5 weeks'},
         {
           name: 'AI Customer Success Automation',
           description: 'Intelligent customer success with automated engagement and churn prediction',
           pricing: '$4,000 - $12,000/month',
           features: ['Churn prediction', 'Automated campaigns', 'Health scoring'],
-          delivery: '5-7 weeks';
-},
+          delivery: '5-7 weeks'},
         {
           name: 'AI Financial Forecasting Engine',
           description: 'Advanced financial planning with machine learning predictions',
           pricing: '$6,000 - $20,000/month',
           features: ['Risk assessment', 'Cash flow optimization', 'Real-time dashboards'],
-          delivery: '6-8 weeks';
-},
+          delivery: '6-8 weeks'},
         {
           name: 'AI Healthcare Diagnostic Platform',
           description: 'Medical diagnostic assistance with AI-powered image analysis',
           pricing: '$8,000 - $25,000/month',
           features: ['Image analysis', 'HIPAA compliance', 'EHR integration'],
-          delivery: '8-12 weeks';
-}
+          delivery: '8-12 weeks'}
       ]
 },
     {
@@ -115,29 +110,25 @@ export default function ComprehensiveServices() {
           description: 'Comprehensive zero trust security implementation and management',
           pricing: '$5,000 - $30,000/month',
           features: ['IAM systems', 'Micro-segmentation', 'Continuous monitoring'],
-          delivery: '6-12 weeks';
-},
+          delivery: '6-12 weeks'},
         {
           name: 'Edge Computing Solutions',
           description: 'Distributed computing infrastructure for IoT and real-time applications',
           pricing: '$6,000 - $35,000/month',
           features: ['IoT integration', 'Real-time processing', 'Latency optimization'],
-          delivery: '6-12 weeks';
-},
+          delivery: '6-12 weeks'},
         {
           name: 'Quantum Computing Integration',
           description: 'Next-generation quantum computing solutions for complex problem solving',
           pricing: '$15,000 - $100,000/month',
           features: ['Quantum algorithms', 'ML implementations', 'Security enhancements'],
-          delivery: '12-24 weeks';
-},
+          delivery: '12-24 weeks'},
         {
           name: 'Blockchain & Web3 Infrastructure',
           description: 'Decentralized infrastructure and blockchain development services',
           pricing: '$8,000 - $50,000/month',
           features: ['Smart contracts', 'DeFi protocols', 'NFT marketplaces'],
-          delivery: '8-16 weeks';
-}
+          delivery: '8-16 weeks'}
       ]
 },
     {
@@ -150,29 +141,25 @@ export default function ComprehensiveServices() {
           description: 'AI-driven inventory optimization with predictive analytics',
           pricing: '$3,000 - $10,000/month',
           features: ['Demand forecasting', 'Automated reordering', 'Cost optimization'],
-          delivery: '4-6 weeks';
-},
+          delivery: '4-6 weeks'},
         {
           name: 'Blockchain Supply Chain Tracker',
           description: 'Transparent supply chain management with blockchain verification',
           pricing: '$5,000 - $15,000/month',
           features: ['End-to-end visibility', 'Product authentication', 'Compliance tracking'],
-          delivery: '6-10 weeks';
-},
+          delivery: '6-10 weeks'},
         {
           name: 'Smart Energy Management Platform',
           description: 'AI-powered energy optimization with sustainability tracking',
           pricing: '$3,500 - $12,000/month',
           features: ['Energy monitoring', 'Carbon tracking', 'Cost savings'],
-          delivery: '4-7 weeks';
-},
+          delivery: '4-7 weeks'},
         {
           name: 'AI-Powered E-commerce Return Manager',
           description: 'Intelligent return processing with fraud detection',
           pricing: '$1,500 - $5,000/month',
           features: ['Fraud detection', 'Automated processing', 'Analytics dashboard'],
-          delivery: '3-5 weeks';
-}
+          delivery: '3-5 weeks'}
       ]
 },
     {
@@ -185,29 +172,25 @@ export default function ComprehensiveServices() {
           description: 'Comprehensive healthcare IT solutions with AI integration',
           pricing: '$10,000 - $50,000/month',
           features: ['EHR integration', 'Telemedicine platforms', 'Patient monitoring'],
-          delivery: '10-20 weeks';
-},
+          delivery: '10-20 weeks'},
         {
           name: 'Financial Services Technology',
           description: 'Advanced fintech solutions with compliance and security',
           pricing: '$12,000 - $60,000/month',
           features: ['Payment processing', 'Risk management', 'Regulatory compliance'],
-          delivery: '12-24 weeks';
-},
+          delivery: '12-24 weeks'},
         {
           name: 'E-commerce Platform Development',
           description: 'Custom e-commerce solutions with AI-powered features',
           pricing: '$8,000 - $40,000/month',
           features: ['Personalization', 'Inventory management', 'Analytics'],
-          delivery: '8-16 weeks';
-},
+          delivery: '8-16 weeks'},
         {
           name: 'Education Technology Solutions',
           description: 'Innovative EdTech platforms with learning analytics',
           pricing: '$6,000 - $30,000/month',
           features: ['LMS integration', 'Learning analytics', 'Student engagement'],
-          delivery: '6-14 weeks';
-}
+          delivery: '6-14 weeks'}
       ]
 }
   ]
@@ -216,8 +199,7 @@ export default function ComprehensiveServices() {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709',
-    website: 'https://ziontechgroup.com';
-};
+    website: 'https://ziontechgroup.com'};
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
@@ -248,17 +230,15 @@ export default function ComprehensiveServices() {
                 Transform your business with our complete suite of AI services, IT infrastructure, 
                 micro SaaS development, and innovative digital transformation solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href={`tel:${contactInfo.phone}`}
-                  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center"
+              <div className={`flex flex-col sm:flex-row gap-4 justify-center`>
+                <a href={`tel:${contactInfo.phone}`}
+                  className=`bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center`}
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className={`w-5 h-5 mr-2` />
                   Call Now: {contactInfo.phone}
                 </a>
-                <a 
-                  href={`mailto:${contactInfo.email}`}
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center"
+                <a href={`mailto:${contactInfo.email}`}
+                  className=`border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center`}
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Email Us
@@ -294,9 +274,9 @@ export default function ComprehensiveServices() {
 
             <div className="space-y-16">
               {serviceCategories.map((category, categoryIndex) => (
-                <div key={categoryIndex} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div key={categoryIndex} className={`bg-white rounded-2xl shadow-lg overflow-hidden`>
                   <div className={`bg-gradient-to-r ${category.color} p-8`}>
-                    <div className="flex items-center space-x-4">
+                    <div className=`flex items-center space-x-4`}>
                       <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
                         <category.icon className="w-8 h-8 text-white" />
                       </div>
@@ -337,16 +317,14 @@ export default function ComprehensiveServices() {
                             </ul>
                           </div>
 
-                          <div className="flex space-x-3">
-                            <a 
-                              href={`tel:${contactInfo.phone}`}
-                              className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg text-center text-sm font-medium hover:bg-blue-700 transition-colors"
+                          <div className={`flex space-x-3`>
+                            <a href={`tel:${contactInfo.phone}`}
+                              className=`flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg text-center text-sm font-medium hover:bg-blue-700 transition-colors`
                             >
                               Get Quote
                             </a>
-                            <a 
-                              href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-                              className="flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg text-center text-sm font-medium hover:bg-blue-600 hover:text-white transition-colors"
+                            <a href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+                              className=`flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg text-center text-sm font-medium hover:bg-blue-600 hover:text-white transition-colors`}
                             >
                               Learn More
                             </a>
@@ -374,20 +352,18 @@ export default function ComprehensiveServices() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                   <Phone className="w-8 h-8 text-blue-200 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">Call Us</h3>
-                  <a 
-                    href={`tel:${contactInfo.phone}`}
-                    className="text-blue-200 hover:text-white transition-colors"
+                  <h3 className={`text-lg font-semibold mb-2`>Call Us</h3>
+                  <a href={`tel:${contactInfo.phone}`}
+                    className=`text-blue-200 hover:text-white transition-colors`}
                   >
                     {contactInfo.phone}
                   </a>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                   <Mail className="w-8 h-8 text-blue-200 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">Email Us</h3>
-                  <a 
-                    href={`mailto:${contactInfo.email}`}
-                    className="text-blue-200 hover:text-white transition-colors"
+                  <h3 className={`text-lg font-semibold mb-2`>Email Us</h3>
+                  <a href={`mailto:${contactInfo.email}`}
+                    className=`text-blue-200 hover:text-white transition-colors`}
                   >
                     {contactInfo.email}
                   </a>
@@ -399,17 +375,15 @@ export default function ComprehensiveServices() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href={`tel:${contactInfo.phone}`}
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+              <div className={`flex flex-col sm:flex-row gap-4 justify-center`>
+                <a href={`tel:${contactInfo.phone}`}
+                  className=`bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center`}
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className={`w-5 h-5 mr-2` />
                   Call Now for Free Consultation
                 </a>
-                <a 
-                  href={`mailto:${contactInfo.email}`}
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center"
+                <a href={`mailto:${contactInfo.email}`}
+                  className=`border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors flex items-center justify-center`}
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Send Email Inquiry
@@ -420,5 +394,4 @@ export default function ComprehensiveServices() {
         </section>
       </main>
     </>
-  );
-}
+  )}

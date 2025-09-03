@@ -1,5 +1,5 @@
 
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server'
 import { securityHeaders, contentSecurityPolicy } from '../lib/security';
 
 export function securityMiddleware(request: NextRequest) {
@@ -22,8 +22,7 @@ export function securityMiddleware(request: NextRequest) {
   response.headers.set('X-RateLimit-Remaining', '99');
   response.headers.set('X-RateLimit-Reset', new Date(Date.now() + 3600000).toISOString());
   
-  return response;
-}
+  return response}
 
 export const config = {
   matcher: [

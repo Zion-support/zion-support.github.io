@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout';
+import MainLayout from '../../components/layout/MainLayout'
 import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 
@@ -35,20 +35,16 @@ const DigitalTransformation: NextPage = () => {
   const transformationStages = [
     {
       stage: 'Assessment', title: 'Current State Analysis',
-      description: 'We analyze your current systems, processes, and technology stack to identify opportunities for improvement.', duration: '2-4 weeks';
-},
+      description: 'We analyze your current systems, processes, and technology stack to identify opportunities for improvement.', duration: '2-4 weeks'},
     {
       stage: 'Strategy', title: 'Digital Strategy Development',
-      description: 'We create a comprehensive digital transformation roadmap aligned with your business objectives.', duration: '3-6 weeks';
-},
+      description: 'We create a comprehensive digital transformation roadmap aligned with your business objectives.', duration: '3-6 weeks'},
     {
       stage: 'Implementation', title: 'Solution Implementation',
-      description: 'We implement the digital solutions using agile methodologies and best practices.', duration: '8-24 weeks';
-},
+      description: 'We implement the digital solutions using agile methodologies and best practices.', duration: '8-24 weeks'},
     {
       stage: 'Optimization', title: 'Continuous Improvement',
-      description: 'We monitor performance and continuously optimize your digital solutions for maximum impact.', duration: 'Ongoing';
-}
+      description: 'We monitor performance and continuously optimize your digital solutions for maximum impact.', duration: 'Ongoing'}
   ]
 
   const industries = [
@@ -238,7 +234,6 @@ const DigitalTransformation: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )};
 
 export default DigitalTransformation;

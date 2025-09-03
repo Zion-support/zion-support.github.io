@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -13,8 +13,7 @@ export default function Blog() {
       date: 'January 15, 2025',
       readTime: '5 min read',
       image: '🤖',
-      featured: true;
-},
+      featured: true},
     {
       id: 2,
       title: 'Cloud FinOps: Optimizing Your Cloud Costs in 2025',
@@ -24,8 +23,7 @@ export default function Blog() {
       date: 'January 12, 2025',
       readTime: '4 min read',
       image: '☁️',
-      featured: false;
-},
+      featured: false},
     {
       id: 3,
       title: 'Zero Trust Security: The New Standard for Enterprise Protection',
@@ -35,8 +33,7 @@ export default function Blog() {
       date: 'January 10, 2025',
       readTime: '6 min read',
       image: '🔒',
-      featured: false;
-},
+      featured: false},
     {
       id: 4,
       title: 'Building Scalable Micro SAAS Applications: Best Practices',
@@ -46,8 +43,7 @@ export default function Blog() {
       date: 'January 8, 2025',
       readTime: '7 min read',
       image: '💻',
-      featured: false;
-},
+      featured: false},
     {
       id: 5,
       title: 'Data Analytics in Healthcare: Improving Patient Outcomes',
@@ -57,8 +53,7 @@ export default function Blog() {
       date: 'January 5, 2025',
       readTime: '5 min read',
       image: '📊',
-      featured: false;
-},
+      featured: false},
     {
       id: 6,
       title: 'Quantum Computing: Breaking Down the Hype vs. Reality',
@@ -68,8 +63,7 @@ export default function Blog() {
       date: 'January 3, 2025',
       readTime: '8 min read',
       image: '🚀',
-      featured: false;
-}
+      featured: false}
   ]
 
   const categories = [
@@ -160,12 +154,11 @@ export default function Blog() {
                         </div>
                         <div>
                           <p className="font-medium text-gray-900">{featuredPost.author}</p>
-                          <p className="text-sm text-gray-500">{featuredPost.date}</p>
+                          <p className={`text-sm text-gray-500`>{featuredPost.date}</p>
                         </div>
                       </div>
-                      <Link 
-                        href={`/blog/${featuredPost.id}`}
-                        className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                      <Link href={`/blog/${featuredPost.id}`}
+                        className=`bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium`}
                       >
                         Read Full Article
                       </Link>
@@ -185,15 +178,13 @@ export default function Blog() {
         {/* Category Filter */}
         <section className="py-12 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className={`flex flex-wrap justify-center gap-3`>
               {categories.map((category, index) => (
-                <button
-                  key={index}
+                <button key={index}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                     category === 'All'
                       ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-blue-50 border border-gray-200';
-}`}
+                      : 'bg-white text-gray-700 hover: bg-blue-50 border border-gray-200'}`}
                 >
                   {category}
                 </button>
@@ -203,7 +194,7 @@ export default function Blog() {
         </section>
 
         {/* Blog Posts Grid */}
-        <section className="py-20 bg-white">
+        <section className=`py-20 bg-white`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.filter(post => !post.featured).map((post) => (
@@ -235,13 +226,12 @@ export default function Blog() {
                         </div>
                         <div>
                           <p className="text-sm font-medium text-gray-900">{post.author}</p>
-                          <p className="text-xs text-gray-500">{post.date}</p>
+                          <p className={`text-xs text-gray-500`>{post.date}</p>
                         </div>
                       </div>
                       
-                      <Link 
-                        href={`/blog/${post.id}`}
-                        className="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center group"
+                      <Link href={`/blog/${post.id}`}
+                        className=`text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center group`}
                       >
                         Read More
                         <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

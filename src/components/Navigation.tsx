@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion'
 import { 
   Menu, 
   X, 
@@ -11,8 +11,7 @@ import {
   Users, 
   Settings,
   Network,
-  Cpu;
-} from 'lucide-react';
+  Cpu} from 'lucide-react';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -35,8 +34,7 @@ const Navigation: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
 
   return (
     <nav className="bg-gray-900/95 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
@@ -174,11 +172,10 @@ const Navigation: React.FC = () => {
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
-                                className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-2"
+                                className="text-gray-400 hover: text-white block px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-2"
                                 onClick={() => {
                                   setActiveDropdown(null);
-                                  setIsOpen(false);
-                                }}
+                                  setIsOpen(false)}}
                               >
                                 <dropdownItem.icon className="w-4 h-4" />
                                 <span>{dropdownItem.name}</span>

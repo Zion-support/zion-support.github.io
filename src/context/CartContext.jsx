@@ -28,7 +28,7 @@ function cartReducer(state, action) {
                 )};}""
         case 'CLEAR_CART': return { items: [] };""
         case 'SET_ITEMS': return { items: action.payload };
-        default: return state;}
+        default: return state}
 }
 
 const CartContext = createContext(null);
@@ -37,7 +37,7 @@ export function useCart() {
     const ctx = useContext(CartContext);
     if (!ctx) {""
         throw new Error('useCart must be used within a CartProvider');}
-    return ctx;}
+    return ctx}
 
 export function CartProvider({ children }) {
     const { user } = useAuth();

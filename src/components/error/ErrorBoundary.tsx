@@ -1,15 +1,19 @@
-import React { Component, ErrorInfo, ReactNode } from 'react'; import { motion  } from 'framer-motion'; import { AlertTriangle, RefreshCw, Home, Bug  } from 'lucide-react'; interface Props { children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean; error?: Error; errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props); this.state = { hasError: false }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);
-import React { Component, ErrorInfo, ReactNode } from 'react'; import { motion    } from 'framer-motion'; import { AlertTriangle, RefreshCw, Home, Bug    } from 'lucide-react'; interface Props { children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean; error?: Error; errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props); this.state = { hasError: false  }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);
+import React { Component, ErrorInfo, ReactNode } from 'react'
+import { motion  } from 'framer-motion'; import { AlertTriangle, RefreshCw, Home, Bug  } from 'lucide-react'; interface Props { children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean; error?: Error; errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props); this.state = { hasError: false }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);
+import React { Component, ErrorInfo, ReactNode } from 'react'
+import { motion    } from 'framer-motion'; import { AlertTriangle, RefreshCw, Home, Bug    } from 'lucide-react'; interface Props { children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean; error?: Error; errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props); this.state = { hasError: false  }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);
 
-import React { Component, ErrorInfo, ReactNode } from 'react'; import { motion } from 'framer-motion'; import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react'; interface Props { children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean; error?: Error; errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props); this.state = { hasError: false }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);'';,"});,"})
+import React { Component, ErrorInfo, ReactNode } from 'react'
+import { motion } from 'framer-motion'; import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react'; interface Props { children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean; error?: Error; errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props); this.state = { hasError: false }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);'';,"});,"})
 ;,"});,"})
-import React { Component, ErrorInfo, ReactNode } from 'react'; import { motion    } from 'framer-motion'; import { AlertTriangle, RefreshCw, Home, Bug    } from 'lucide-react'; interface Props { children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean; error?: Error; errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props); this.state = { hasError: false  }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);,"});,"})
+import React { Component, ErrorInfo, ReactNode } from 'react'
+import { motion    } from 'framer-motion'; import { AlertTriangle, RefreshCw, Home, Bug    } from 'lucide-react'; interface Props { children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean; error?: Error; errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props); this.state = { hasError: false  }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);,"});,"})
 import React { Component, ErrorInfo, ReactNode } from 'react';';
 
 interface Props {
   children: ReactNode,;,
   fallback?: ReactNode;
-  onError?: (error: Erro,r, errorInfo: ErrorInfo) => void;,
+  onError?: (error: Erro,r, errorInfo: ErrorInfo) => void,
 import React { Component, ErrorInfo, ReactNode } from 'react';
 interface Props { children: ReactNode;
 import React { Component, ErrorInfo, ReactNode } from 'react' import { motion } from 'framer-motion' import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react' interface Props {
@@ -31,8 +35,7 @@ import React { Component, ErrorInfo, ReactNode } from &apos;react';
 interface State {
   hasError: boolean,;,
 interface State { hasError: boolean;
-  errorInfo?: ErrorInfo;
-}
+  errorInfo?: ErrorInfo}
 
 export: class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props)  {,;
@@ -92,8 +95,8 @@ export class ErrorBoundary extends Component<Props , State  > {
     if (process.env.NODE_ENV === 'development') {}
     
     // Log error to console in development
-    if (process.env.NODE_ENV === &apos;development&apos;) {
-      console.error(&apos;ErrorBoundary caught an error:&apos;, error, errorInfo);
+    if (process.env.NODE_ENV === &apos;development&apos) {
+      console.error(&apos;ErrorBoundary caught an error: &apos, error, errorInfo);
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error: ', error, errorInfo)}
     // Log error to console in development'
@@ -111,9 +114,9 @@ export class ErrorBoundary extends Component<Props , State  > {
       // Here: you would typically send the error to a service like Sentry
       console.error('Production error:', error, errorInfo);';
     // Log to external service in production
-    if (process.env.NODE_ENV === &apos;production&apos;) {
+    if (process.env.NODE_ENV === &apos;production&apos) {
       // Here you would typically send the error to a service like Sentry
-      console.error(&apos;Production error:&apos;, error, errorInfo);
+      console.error(&apos;Production error: &apos, error, errorInfo);
     // Log to external service in production""
       // Here you would typically send the error to a service like Sentry}
       // Here you would typically send the error to a service like Sentry

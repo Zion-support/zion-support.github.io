@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import { Code, Key, Globe, Database, Shield, Zap, ArrowRight, Copy, CheckCircle, ExternalLink, Clock, Users } from 'lucide-react';
 
 export default function API() {
@@ -19,17 +19,16 @@ export default function API() {
       endpoint: '/api/user/profile',
       description: 'Get user profile information',
       parameters: ['token'],
-      response: 'User profile data';
-},
+      response: 'User profile data'},
     {
       name: 'Services List',
       method: 'GET',
       endpoint: '/api/services',
       description: 'Get list of available services',
       parameters: ['category', 'limit'],
-      response: 'Array of services';
-}
-  ]
+      response: 'Array of services'
+    }
+  ];
 
   return (
     <>
@@ -89,7 +88,7 @@ export default function API() {
               {apiEndpoints.map((endpoint, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-md p-6">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold text-gray-900">{endpoint.name}</h3>
+                    <h3 className={`text-xl font-semibold text-gray-900`>{endpoint.name}</h3>
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                       endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :
                       endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
@@ -98,7 +97,7 @@ export default function API() {
                       {endpoint.method}
                     </span>
                   </div>
-                  <div className="bg-gray-100 rounded-lg p-4 mb-4">
+                  <div className=`bg-gray-100 rounded-lg p-4 mb-4`}>
                     <code className="text-gray-800 font-mono">{endpoint.endpoint}</code>
                   </div>
                   <p className="text-gray-600 mb-4">{endpoint.description}</p>
@@ -132,7 +131,7 @@ export default function API() {
               <p className="text-lg text-gray-600 mb-8">
                 Ready to integrate with our APIs? Get your API key and start building amazing applications.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link href="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
                   Get API Key
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -146,5 +145,4 @@ export default function API() {
         </div>
       </div>
     </>
-  );
-}
+  )}

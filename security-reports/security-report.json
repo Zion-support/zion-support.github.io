@@ -6,8 +6,7 @@
     "highVulnerabilities": 0,
     "outdatedPackages": 0,
     "securityIssues": 8,
-    "potentialSecrets": 6;
-},
+    "potentialSecrets": 6},
   "results": {
     "audit": {
       "status": "failure",
@@ -17,8 +16,7 @@
         "low": 0,
         "moderate": 0,
         "high": 0,
-        "critical": 0;
-}
+        "critical": 0}
     },
     "dependencies": {
       "status": "failure",
@@ -34,71 +32,62 @@
           "message": "innerHTML assignment detected",
           "rule": "no-inner-html",
           "file": "/workspace/src/components/unused/BrokenLinkFixer.jsx",
-          "line": 185;
-},
+          "line": 185},
         {
           "type": "pattern",
           "severity": 1,
           "message": "innerHTML assignment detected",
           "rule": "no-inner-html",
           "file": "/workspace/src/components/unused/ContentQualityEnhancer.jsx",
-          "line": 260;
-},
+          "line": 260},
         {
           "type": "pattern",
           "severity": 2,
           "message": "eval() usage detected",
           "rule": "no-eval",
           "file": "/workspace/src/hooks/useAICodeGeneration.js.jsx",
-          "line": 459;
-},
+          "line": 459},
         {
           "type": "pattern",
           "severity": 1,
           "message": "document.write() usage detected",
           "rule": "no-document-write",
           "file": "/workspace/src/hooks/useAICodeGeneration.js.jsx",
-          "line": 398;
-},
+          "line": 398},
         {
           "type": "pattern",
           "severity": 2,
           "message": "eval() usage detected",
           "rule": "no-eval",
           "file": "/workspace/src/hooks/useAICodeGeneration.jsx",
-          "line": 459;
-},
+          "line": 459},
         {
           "type": "pattern",
           "severity": 1,
           "message": "document.write() usage detected",
           "rule": "no-document-write",
           "file": "/workspace/src/hooks/useAICodeGeneration.jsx",
-          "line": 398;
-},
+          "line": 398},
         {
           "type": "pattern",
           "severity": 1,
           "message": "innerHTML assignment detected",
           "rule": "no-inner-html",
           "file": "/workspace/src/main.js.jsx",
-          "line": 48;
-},
+          "line": 48},
         {
           "type": "pattern",
           "severity": 1,
           "message": "innerHTML assignment detected",
           "rule": "no-inner-html",
           "file": "/workspace/src/main.jsx",
-          "line": 69;
-}
+          "line": 69}
       ],
       "summary": {
         "total": 0,
         "high": 0,
         "medium": 0,
-        "low": 0;
-}
+        "low": 0}
     },
     "secrets": {
       "status": "success",
@@ -107,20 +96,17 @@
           "type": "Password",
           "file": "/workspace/src/components/AdvancedCollaborationPlatform.jsx",
           "line": 99,
-          "match": "password: 'Q4Review2024'...";
-},
+          "match": "password: 'Q4Review2024'..."},
         {
           "type": "API Key",
           "file": "/workspace/src/pages/Documentation.tsx",
           "line": 133,
-          "match": "apiKey: 'your-api-key'...";
-},
+          "match": "apiKey: 'your-api-key'..."},
         {
           "type": "Password",
           "file": "/workspace/src/routes.js",
           "line": 6,
-          "match": "Password: '/forgot-password'...";
-},
+          "match": "Password: '/forgot-password'..."},
         {
           "type": "Token",
           "file": "/workspace/src/services/auth.js",
@@ -131,8 +117,7 @@
           "type": "Token",
           "file": "/workspace/src/store/authSlice.js",
           "line": 19,
-          "match": "token: 'mock-jwt-token'...";
-},
+          "match": "token: 'mock-jwt-token'..."},
         {
           "type": "Token",
           "file": "/workspace/src/utils/authUtils.ts",
@@ -148,8 +133,7 @@
           "type": "package-scripts",
           "hasSecurityScript": false,
           "hasAuditScript": false,
-          "hasLintScript": true;
-}
+          "hasLintScript": true}
       ]
 }
   },

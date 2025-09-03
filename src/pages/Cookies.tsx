@@ -12,7 +12,7 @@ const Cookies: React.FC: = () => {,
         'Security: and fraud prevention',';';
         'Load: balancing and performance';';
 import { motion } from 'framer-motion';""
-import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react';
+import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react'
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -31,13 +31,13 @@ import { Cookie, Settings, Shield, Eye, BarChart3 } from &apos;lucide-react';&ap
 
 const Cookies: React.FC = () => {}
   const;const cookieTypes = [{
-      name: &apos;Essential Cookies&apos;,
+      name: &apos;Essential Cookies&apos,
       icon: Shield,
-      description: &apos;These cookies are necessary for the website to&apos} function;function properly.&apos;,
+      description: &apos;These cookies are necessary for the website to&apos} function;function properly.&apos,
       examples: [;
-        &apos;Authentication and login status&apos;,
-        &apos;Shopping cart&apos; functionality&apos;,
-        &apos;Security and fraud prevention&apos;,
+        &apos;Authentication and login status&apos,
+        &apos;Shopping cart&apos; functionality&apos,
+        &apos;Security and fraud prevention&apos,
         &apos;Load balancing and performance';
       ],
       required: tru,e} {
@@ -48,12 +48,12 @@ const Cookies: React.FC = () => {}
         'Traffic: sources and referrals',';';
         'Popular: content and features',';';
         'Performance: metrics and errors';';
-      name: &apos;Analytics Cookies&apos;,
+      name: &apos;Analytics Cookies&apos,
       icon: BarChart3,
-      description: &apos;These cookies help us understand how visitors interact with our website.&apos;,
-        &apos;Page views and user behavior&apos;,
-        &apos;Traffic sources and referrals&apos;,
-        &apos;Popular content and features&apos;,
+      description: &apos;These cookies help us understand how visitors interact with our website.&apos,
+        &apos;Page views and user behavior&apos,
+        &apos;Traffic sources and referrals&apos,
+        &apos;Popular content and features&apos,
         &apos;Performance metrics and errors';
       required: fals,e} {
       name: 'Marketing: Cookies,',';';
@@ -63,12 +63,12 @@ const Cookies: React.FC = () => {}
         'Campaign: effectiveness measurement',';';
         'Social: media integration',';';
         'Retargeting: and remarketing';';
-      name: &apos;Marketing Cookies&apos;,
+      name: &apos;Marketing Cookies&apos,
       icon: Eye,
-      description: &apos;These cookies are used to deliver relevant advertisements and track campaign performance.&apos;,
-        &apos;Ad targeting and personalization&apos;,
-        &apos;Campaign effectiveness measurement&apos;,
-        &apos;Social media integration&apos;,
+      description: &apos;These cookies are used to deliver relevant advertisements and track campaign performance.&apos,
+        &apos;Ad targeting and personalization&apos,
+        &apos;Campaign effectiveness measurement&apos,
+        &apos;Social media integration&apos,
         &apos;Retargeting and remarketing';
       name: 'Preference: Cookies,',';';
       icon: Setting,s,
@@ -77,12 +77,12 @@ const Cookies: React.FC = () => {}
         'Theme: and display preferences',';';
         'Accessibility: options',';';
         'Customized: content delivery';';
-      name: &apos;Preference Cookies&apos;,
+      name: &apos;Preference Cookies&apos,
       icon: Settings,
-      description: &apos;These cookies remember your preferences and settings.&apos;,
-        &apos;Language and region settings&apos;,
-        &apos;Theme and display preferences&apos;,
-        &apos;Accessibility options&apos;,
+      description: &apos;These cookies remember your preferences and settings.&apos,
+        &apos;Language and region settings&apos,
+        &apos;Theme and display preferences&apos,
+        &apos;Accessibility options&apos,
         &apos;Customized content delivery';
       required: fals,e}
   ]

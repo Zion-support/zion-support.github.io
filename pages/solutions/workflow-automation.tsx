@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import SEO from '../../components/SEO';
-import { Card } from '../../components/ui/Card';
+import { Card } from '../../components/ui/Card'
 import { Button } from '../../components/ui/Button';
-import { Badge } from '../../components/ui/Badge';
+import { Badge } from '../../components/ui/Badge'
 import { 
   Workflow, 
   ArrowRight,
@@ -14,41 +14,34 @@ import {
   BarChart3,
   Shield,
   Globe,
-  Clock;
-} from 'lucide-react';
+  Clock} from 'lucide-react';
 
 export default function WorkflowAutomation() {
   const features = [
     {
       icon: Zap,
       title: 'Process Automation',
-      description: 'Automate repetitive business processes with custom workflows and triggers.';
-},
+      description: 'Automate repetitive business processes with custom workflows and triggers.'},
     {
       icon: Settings,
       title: 'Integration APIs',
-      description: 'Connect with hundreds of third-party applications and services.';
-},
+      description: 'Connect with hundreds of third-party applications and services.'},
     {
       icon: Workflow,
       title: 'Custom Workflows',
-      description: 'Build custom workflows with drag-and-drop workflow designer.';
-},
+      description: 'Build custom workflows with drag-and-drop workflow designer.'},
     {
       icon: BarChart3,
       title: 'Monitoring & Analytics',
-      description: 'Track workflow performance and identify optimization opportunities.';
-},
+      description: 'Track workflow performance and identify optimization opportunities.'},
     {
       icon: Shield,
       title: 'Security & Compliance',
-      description: 'Enterprise-grade security with compliance monitoring and audit trails.';
-},
+      description: 'Enterprise-grade security with compliance monitoring and audit trails.'},
     {
       icon: Clock,
       title: 'Real-time Processing',
-      description: 'Execute workflows in real-time with high-performance infrastructure.';
-}
+      description: 'Execute workflows in real-time with high-performance infrastructure.'}
   ]
 
   return (
@@ -121,7 +114,7 @@ export default function WorkflowAutomation() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Automate Your Workflows?
           </h2>
@@ -143,5 +136,4 @@ export default function WorkflowAutomation() {
         </div>
       </section>
     </>
-  );
-}
+  )}

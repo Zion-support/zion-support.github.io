@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next';
-import Link from 'next/link';
+import Link from 'next/link'
 import MainLayout from '../../components/layout/MainLayout';
 import { 
   Brain, 
@@ -10,8 +10,7 @@ import {
   CheckCircle,
   Zap,
   Shield,
-  BarChart3;
-} from 'lucide-react';
+  BarChart3} from 'lucide-react';
 
 const ProductsIndex: NextPage = () => {
   const products = [
@@ -26,8 +25,7 @@ const ProductsIndex: NextPage = () => {
         'Custom dashboard creation',
         'API integration'
       ],
-      color: 'blue';
-},
+      color: 'blue'},
     {
       icon: LinkIcon,
       title: 'Blockchain Solutions',
@@ -39,8 +37,7 @@ const ProductsIndex: NextPage = () => {
         'Supply chain tracking',
         'Digital identity management'
       ],
-      color: 'green';
-},
+      color: 'green'},
     {
       icon: Smartphone,
       title: 'IoT Management Platform',
@@ -52,8 +49,7 @@ const ProductsIndex: NextPage = () => {
         'Alert systems',
         'Scalable architecture'
       ],
-      color: 'purple';
-},
+      color: 'purple'},
     {
       icon: Shield,
       title: 'Cybersecurity Suite',
@@ -65,8 +61,7 @@ const ProductsIndex: NextPage = () => {
         'Compliance monitoring',
         'Security training'
       ],
-      color: 'red';
-}
+      color: 'red'}
   ]
 
   const getColorClasses = (color: string) => {
@@ -74,8 +69,7 @@ const ProductsIndex: NextPage = () => {
       blue: 'bg-blue-100 text-blue-600',
       green: 'bg-green-100 text-green-600',
       purple: 'bg-purple-100 text-purple-600',
-      red: 'bg-red-100 text-red-600';
-};
+      red: 'bg-red-100 text-red-600'};
     return colorMap[color] || 'bg-gray-100 text-gray-600';
   };
 
@@ -104,9 +98,9 @@ const ProductsIndex: NextPage = () => {
               const IconComponent = product.icon;
               return (
                 <div key={index} className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-start mb-6">
+                  <div className={`flex items-start mb-6`>
                     <div className={`w-16 h-16 rounded-lg flex items-center justify-center mr-6 ${getColorClasses(product.color)}`}>
-                      <IconComponent className="h-8 w-8" />
+                      <IconComponent className=`h-8 w-8`} />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-gray-900 mb-3">{product.title}</h3>
@@ -126,7 +120,7 @@ const ProductsIndex: NextPage = () => {
                     </ul>
                   </div>
                   
-                  <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex flex-col sm: flex-row gap-4">
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -136,8 +130,7 @@ const ProductsIndex: NextPage = () => {
                     </button>
                   </div>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -195,7 +188,7 @@ const ProductsIndex: NextPage = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Contact us to learn more about our products and how they can benefit your business.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center">
               Contact Sales
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -207,7 +200,6 @@ const ProductsIndex: NextPage = () => {
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )};
 
 export default ProductsIndex;

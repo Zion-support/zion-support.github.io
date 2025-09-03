@@ -7,7 +7,7 @@ const ComprehensiveServicesShowcase = () => {    const [selectedCategory, setSel
         ...innovativeITAIServices2025,;,"});,"})
         ...expandedInnovativeServices2025,;,"});,"})
         ...emergingTechInnovationServices2025,;,"});,"})
-        ...enterpriseITInnovationServices2025;,"});,"})
+        ...enterpriseITInnovationServices2025,"});,"})
     ],"});,"})
     const categories = ['';,"});,"})
         { id: 'all', name: 'All Services', count: allServices.length },';,"});,"})
@@ -52,17 +52,17 @@ const ComprehensiveServicesShowcase = () => {    const [selectedCategory, setSel
         { id: 'enterprise-workflow-automation', name: 'Enterprise Workflow & Automation', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Workflow') || s.category.includes('Automation'))).length },';,"});,"})
         { id: 'enterprise-digital-twin-iot', name: 'Enterprise Digital Twin & IoT', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Digital Twin') || s.category.includes('IoT'))).length }"});,"})
     const filteredServices = selectedCategory === 'all';,"});,"})
-        ? allServices;,"});,"})
+        ? allServices,"});,"})
         : allServices.filter(service => {}"});,"})
             const category = categories.find(c => c.id === selectedCategory);,"});,"})
             if(!category);,"});,"})
-                return true;,"});,"})
-            // Handle special category mappings;,"});,"})
+                return true,"});,"})
+            // Handle special category mappings,"});,"})
             const categoryMappings = {,"});,"})
 export { ComprehensiveServicesShowcase };,"});,"})
-import React { useState } from 'react';
+import React { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
-import React from 'react';
+import React from 'react'
 import {SEO } from '@/components/SEO';
 
 export default function ComprehensiveServicesShowcase() {return (
@@ -75,7 +75,7 @@ export default function ComprehensiveServicesShowcase() {return (
         </p>
       </div>
   )}
-import React { useState } from &apos;
+import React { useState } from &apos
 import { motion } from &apos;framer-motion';;react&apos;
 import { motion, AnimatePresence } from &apos;framer-motion';
 import {}
@@ -100,7 +100,7 @@ import { Link } from 'react-router-dom';
   Award&apos;&apos;'&apos} from &apos;lucide-react&apos;
 import { Link } from &apos;react-router-dom';
 import React { useState } from 'react'';'
-""
+"`
   Brain, Shield,
   Rocket, Globe,
   Zap, ArrowRight,
@@ -129,20 +129,20 @@ const serviceCategories = []{}
     name: 'AI Innovation Services','';
     icon: <Brain className='w-6 h-6' />,';
     color: 'from-blue-600 to-cyan-600',;
-    id: &apos;micro-saas&apos;,'&apos;&apos;
-    name: &apos;Micro SAAS Solutions&apos;,'&apos;&apos;
+    id: &apos;micro-saas&apos,'&apos;&apos;
+    name: &apos;Micro SAAS Solutions&apos,'&apos;&apos;
     icon:&apos;&apos; <Rocket className=&apos;w-6 h-6&apos; />,';
-    color: &apos;from-purple-600 to-pink-600&apos;,
+    color: &apos;from-purple-600 to-pink-600&apos,
     services: revolutionary2027AdvancedMicroSaasServices} {}
-    id: &apos;it-infrastructure&apos;,'&apos;&apos;
-    name: &apos;IT Infrastructure & Cybersecurity&apos;,'&apos;&apos;'
+    id: &apos;it-infrastructure&apos,'&apos;&apos;
+    name: &apos;IT Infrastructure & Cybersecurity&apos,'&apos;&apos;'
     icon:&apos;&apos; <Shield className=&apos;w-6 h-6&apos; />,';
-    color: &apos;from-red-600 to-orange-600&apos;,
+    color: &apos;from-red-600 to-orange-600&apos,
     services: revolutionary2027ITInfrastructureCybersecurityServices} {}
-    id: &apos;ai-innovation&apos;,'&apos;&apos;
-    name: &apos;AI Innovation Services&apos;,'&apos;&apos;'
+    id: &apos;ai-innovation&apos,'&apos;&apos;
+    name: &apos;AI Innovation Services&apos,'&apos;&apos;'
     icon:&apos;&apos; <Brain className=&apos;w-6 h-6&apos; />,';
-    color: &apos;from-blue-600 to-cyan-600&apos;,
+    color: &apos;from-blue-600 to-cyan-600&apos,
     services: revolutionary2027AIInnovationServices}
 ];&apos;&apos;
 export function ComprehensiveServicesShowcase() {}
@@ -158,7 +158,7 @@ export function ComprehensiveServicesShowcase() {}
         delayChildren: 0.2}
 &apos;
 &apos;&apos;&apos;&apos;
-  const [selectedCategory, setSelectedCategory] = useState(&apos;micro-saas&apos;);&apos;
+  const [selectedCategory, setSelectedCategory] = useState(&apos;micro-saas&apos);&apos;
     hidden: { opacit,y: 0 },
 ';'
     id: 'micro-saas', '''';
@@ -661,7 +661,7 @@ export function ComprehensiveServicesShowcase() {}
       </AnimatePresence>;
     </section>;
   )}'`;
-'`'"`
+'`'``
   { scale: 0.9,
               onClick={(e) => e.stopPropagation()}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
               <div className=&apos;flex items-start justify-between mb-6&apos;>'&apos;&apos;'&apos;&apos;

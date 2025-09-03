@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import Navigation from '../../src/components/Navigation';
-import Footer from '../../src/components/Footer';
+import Footer from '../../src/components/Footer'
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, Users, Globe, Zap, Database, Network, Phone, Mail } from 'lucide-react';
 
 const Cybersecurity = () => {
@@ -61,23 +61,19 @@ const Cybersecurity = () => {
     {
       name: 'SOC 2',
       description: 'Service Organization Control 2 compliance for service providers',
-      icon: Shield;
-},
+      icon: Shield},
     {
       name: 'ISO 27001',
       description: 'International standard for information security management',
-      icon: Lock;
-},
+      icon: Lock},
     {
       name: 'GDPR',
       description: 'General Data Protection Regulation compliance',
-      icon: Globe;
-},
+      icon: Globe},
     {
       name: 'HIPAA',
       description: 'Health Insurance Portability and Accountability Act',
-      icon: Users;
-}
+      icon: Users}
   ]
 
   const stats = [
@@ -239,7 +235,7 @@ const Cybersecurity = () => {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Secure Your Business Today
             </h2>
@@ -260,7 +256,6 @@ const Cybersecurity = () => {
       
       <Footer />
     </>
-  );
-};
+  )};
 
 export default Cybersecurity;

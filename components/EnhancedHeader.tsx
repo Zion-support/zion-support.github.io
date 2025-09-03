@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 import {
   Menu,
   X,
@@ -35,8 +35,7 @@ export default function EnhancedHeader() {
   };
 
   const toggleDropdown = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
-  };
+    setActiveDropdown(activeDropdown === itemName ? null : itemName)};
 
   const navigation = [
   { name: 'Home', href: '/' },
@@ -71,8 +70,7 @@ export default function EnhancedHeader() {
   ]
 
   return (
-    <header
-      className={`fixed w-full z-50 transition-all duration-300 ${
+    <header className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm';
 }`}
     >
@@ -100,18 +98,17 @@ export default function EnhancedHeader() {
             {navigation.map(item => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
-                  <div className="relative">
+                  <div className={`relative`>
                     <button
                       onClick={() => toggleDropdown(item.name)}
                       className={`text-sm font-medium px-4 py-2 rounded-md transition-colors flex items-center ${
                         router.pathname === item.href ||
                         router.pathname.startsWith(item.href + '/')
                           ? 'text-blue-600 bg-blue-50'
-                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50';
-}`}
+                          : 'text-gray-700 hover: text-blue-600 hover:bg-gray-50'}`}
                     >
                       {item.name}
-                      <ChevronDown className="ml-1 h-4 w-4" />
+                      <ChevronDown className=`ml-1 h-4 w-4`} />
                     </button>
                     {activeDropdown === item.name && (
                       <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg py-2 z-50 border">
@@ -119,7 +116,7 @@ export default function EnhancedHeader() {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors"
+                            className={`block px-4 py-2 text-sm text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors`
                             onClick={() => setActiveDropdown(null)}
                           >
                             {dropdownItem.name}
@@ -129,13 +126,11 @@ export default function EnhancedHeader() {
                     )}
                   </div>
                 ) : (
-                  <Link
-                    href={item.href}
+                  <Link href={item.href}
                     className={`text-sm font-medium px-4 py-2 rounded-md transition-colors ${
                       router.pathname === item.href
                         ? 'text-blue-600 bg-blue-50'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50';
-}`}
+                        : 'text-gray-700 hover: text-blue-600 hover:bg-gray-50'}`}
                   >
                     {item.name}
                   </Link>
@@ -145,7 +140,7 @@ export default function EnhancedHeader() {
           </nav>
 
           {/* Search and Contact */}
-          <div className="hidden md: flex items-center space-x-4">
+          <div className=`hidden md: flex items-center space-x-4`}>
             <form onSubmit={handleSearch} className="relative">
               <input
                 type="text"
@@ -190,7 +185,7 @@ export default function EnhancedHeader() {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+            <div className={`px-2 pt-2 pb-3 space-y-1 bg-white border-t`>
               {navigation.map(item => (
                 <div key={item.name}>
                   {item.dropdown ? (
@@ -201,11 +196,10 @@ export default function EnhancedHeader() {
                           router.pathname === item.href ||
                           router.pathname.startsWith(item.href + '/')
                             ? 'text-blue-600 bg-blue-50'
-                            : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50';
-}`}
+                            : 'text-gray-700 hover: text-blue-600 hover:bg-gray-50'}`}
                       >
                         {item.name}
-                        <ChevronDown className="h-4 w-4" />
+                        <ChevronDown className=`h-4 w-4`} />
                       </button>
                       {activeDropdown === item.name && (
                         <div className="pl-4 space-y-1">
@@ -213,11 +207,10 @@ export default function EnhancedHeader() {
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
-                              className="block px-3 py-2 text-sm text-gray-600 hover: text-blue-600 hover:bg-gray-50 rounded-md"
+                              className={`block px-3 py-2 text-sm text-gray-600 hover: text-blue-600 hover:bg-gray-50 rounded-md`
                               onClick={() => {
                                 setMobileMenuOpen(false);
-                                setActiveDropdown(null);
-                              }}
+                                setActiveDropdown(null)}}
                             >
                               {dropdownItem.name}
                             </Link>
@@ -226,13 +219,11 @@ export default function EnhancedHeader() {
                       )}
                     </div>
                   ) : (
-                    <Link
-                      href={item.href}
+                    <Link href={item.href}
                       className={`block px-3 py-2 text-base font-medium rounded-md ${
                         router.pathname === item.href
                           ? 'text-blue-600 bg-blue-50'
-                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50';
-}`}
+                          : 'text-gray-700 hover: text-blue-600 hover:bg-gray-50'}`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -242,7 +233,7 @@ export default function EnhancedHeader() {
               ))}
 
               {/* Mobile Search */}
-              <div className="px-3 py-2">
+              <div className=`px-3 py-2`}>
                 <form onSubmit={handleSearch} className="relative">
                   <input
                     type="text"

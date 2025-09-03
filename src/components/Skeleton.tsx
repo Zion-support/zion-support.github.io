@@ -17,8 +17,7 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {;
       <div;
         className={cn(;
           'animate-pulse bg-gray-200 rounded',;
-          className;
-        )}
+          className)}
       />;
     )}
 ;
@@ -51,7 +50,7 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
     return (}}
       <div
         className=;{cn(
-          &apos;animate-pulse bg-gray-200 rounded&apos;,
+          &apos;animate-pulse bg-gray-200 rounded&apos,
           className
         )}
       />
@@ -68,9 +67,8 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
           className={cn("
             'animate-pulse bg-gray-200 rounded h-4', i === lines - 1 ? 'w-3/4' : 'w-full'
           className={cn(
-            &apos;animate-pulse bg-gray-200 rounded h-4&apos;,
-            i === lines - 1 ? &apos;w-3/4&apos; : &apos;w-full&apos;
-          )}
+            &apos;animate-pulse bg-gray-200 rounded h-4&apos,
+            i === lines - 1 ? &apos;w-3/4&apos; : &apos;w-full&apos)}
         />
       ))}&apos;
     </div>

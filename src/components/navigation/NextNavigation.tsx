@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
@@ -18,8 +18,7 @@ import {
   Code,
   Database,
   Network,
-  Settings;
-} from 'lucide-react';
+  Settings} from 'lucide-react';
 
 const NextNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,38 +45,32 @@ const NextNavigation = () => {
           name: 'AI Services', 
           href: '/ai-services', 
           icon: Brain, 
-          description: 'Cutting-edge AI solutions' ;
-},
+          description: 'Cutting-edge AI solutions' },
         { 
           name: 'IT Services', 
           href: '/it-services', 
           icon: Cloud, 
-          description: 'Enterprise IT infrastructure' ;
-},
+          description: 'Enterprise IT infrastructure' },
         { 
           name: 'Micro SaaS', 
           href: '/micro-saas', 
           icon: Code, 
-          description: 'Custom software solutions' ;
-},
+          description: 'Custom software solutions' },
         { 
           name: 'Cybersecurity', 
           href: '/services#cybersecurity', 
           icon: Shield, 
-          description: 'Advanced security solutions' ;
-},
+          description: 'Advanced security solutions' },
         { 
           name: 'Cloud & DevOps', 
           href: '/services#cloud', 
           icon: Database, 
-          description: 'Scalable cloud infrastructure' ;
-},
+          description: 'Scalable cloud infrastructure' },
         { 
           name: 'Digital Transformation', 
           href: '/services#ai', 
           icon: Zap, 
-          description: 'Business transformation' ;
-}
+          description: 'Business transformation' }
       ] ;
 },
     { name: 'About', href: '/about' },
@@ -88,23 +81,19 @@ const NextNavigation = () => {
     { 
       icon: Phone, 
       text: '+1 302 464 0950', 
-      href: 'tel:+13024640950' ;
-},
+      href: 'tel:+13024640950' },
     { 
       icon: Mail, 
       text: 'kleber@ziontechgroup.com', 
-      href: 'mailto:kleber@ziontechgroup.com' ;
-},
+      href: 'mailto:kleber@ziontechgroup.com' },
     { 
       icon: MapPin, 
       text: '364 E Main St STE 1008, Middletown DE 19709', 
-      href: '#' ;
-}
+      href: '#' }
   ]
 
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
 
   const closeMobileMenu = () => {
     setIsOpen(false);
@@ -135,7 +124,7 @@ const NextNavigation = () => {
                   <div className="relative">
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="flex items-center space-x-1 text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2"
+                      className={`flex items-center space-x-1 text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2`
                     >
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
@@ -149,7 +138,7 @@ const NextNavigation = () => {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 overflow-hidden"
+                          className=`absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 overflow-hidden`}
                         >
                           <div className="p-4">
                             {item.dropdown.map((dropdownItem) => (
@@ -166,7 +155,7 @@ const NextNavigation = () => {
                                   <p className="text-sm font-medium text-white group-hover:text-cyan-300 transition-colors">
                                     {dropdownItem.name}
                                   </p>
-                                  <p className="text-xs text-gray-400 mt-1">
+                                  <p className={`text-xs text-gray-400 mt-1`>
                                     {dropdownItem.description}
                                   </p>
                                 </div>
@@ -178,11 +167,9 @@ const NextNavigation = () => {
                     </AnimatePresence>
                   </div>
                 ) : (
-                  <Link
-                    href={item.href}
-                    className={`text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2 ${
-                      router.pathname === item.href ? 'text-cyan-400' : '';
-}`}
+                  <Link href={item.href}
+                    className={`text-gray-300 hover: text-cyan-300 transition-colors duration-200 py-2 ${
+                      router.pathname === item.href ? 'text-cyan-400' : ''}`}
                   >
                     {item.name}
                   </Link>
@@ -192,7 +179,7 @@ const NextNavigation = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
+          <div className=`hidden lg:block`}>
             <Link
               href="/contact"
               className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
@@ -250,7 +237,7 @@ const NextNavigation = () => {
                       <div>
                         <button
                           onClick={() => toggleDropdown(item.name)}
-                          className="flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+                          className={`flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200`
                         >
                           <span>{item.name}</span>
                           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
@@ -264,7 +251,7 @@ const NextNavigation = () => {
                               animate={{ opacity: 1, height: 'auto' }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.2 }}
-                              className="ml-4 mt-2 space-y-1"
+                              className=`ml-4 mt-2 space-y-1`}
                             >
                               {item.dropdown.map((dropdownItem) => (
                                 <Link
@@ -273,7 +260,7 @@ const NextNavigation = () => {
                                   onClick={closeMobileMenu}
                                   className="flex items-center space-x-3 px-3 py-2 text-sm text-gray-400 hover:text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
                                 >
-                                  <dropdownItem.icon className="w-4 h-4 text-cyan-400" />
+                                  <dropdownItem.icon className={`w-4 h-4 text-cyan-400` />
                                   <span>{dropdownItem.name}</span>
                                 </Link>
                               ))}
@@ -282,14 +269,12 @@ const NextNavigation = () => {
                         </AnimatePresence>
                       </div>
                     ) : (
-                      <Link
-                        href={item.href}
+                      <Link href={item.href}
                         onClick={closeMobileMenu}
                         className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${
                           router.pathname === item.href 
                             ? 'text-cyan-400 bg-cyan-400/10' 
-                            : 'text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50';
-}`}
+                            : 'text-gray-300 hover: text-cyan-300 hover:bg-gray-800/50'}`}
                       >
                         {item.name}
                       </Link>
@@ -299,7 +284,7 @@ const NextNavigation = () => {
               </div>
 
               {/* Mobile CTA */}
-              <div className="pt-4 border-t border-gray-700">
+              <div className=`pt-4 border-t border-gray-700`}>
                 <Link
                   href="/contact"
                   onClick={closeMobileMenu}

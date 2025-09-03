@@ -24,7 +24,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
 ''';,"});,"})
   const [timeRange, setTimeRange] = useState('30d');''';,"});,"})
   const [selectedMetric, setSelectedMetric] = useState('overview');,"});,"})
-  // Mock data - in real app this would come from API;,"});,"})
+  // Mock data - in real app this would come from API,"});,"})
   const metrics = [];,"});,"})
     {}"});,"})
 ';,"});,"})
@@ -129,7 +129,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
         return <Activity className="w-4 h-4 text-blue-500" />;'""";,"});,"})
       case 'declining':"""";,"});,"})
         return <TrendingDown className="w-4 h-4 text-red-500" />;""";,"});,"})
-      default:"""";,"});,"})
+      default: """","});,"})
         return <Activity className="w-4 h-4 text-gray-500" />;,"});,"});
 }"});,"});
 };,"});,"})
@@ -142,32 +142,32 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
         return 'bg-blue-100 text-blue-800';,"});,"})
       case 'declining':'';,"});,"})
         return 'bg-red-100 text-red-800';,"});,"})
-      default:'';,"});,"})
+      default: '',"});,"})
         return 'bg-gray-100 text-gray-800';,"});,"});
 }"});,"});
 };""";,"});,"})
   return ("""";,"});,"})
     <div className="max-w-7xl mx-auto p-6">;,"});,"})
       {/* Header */}"});,"})
-      <motion.div;,"});,"})
+      <motion.div,"});,"})
         initial={{ opacity: 0, y: 20 }}""";,"});,"})
         animate={{ opacity: 1, y: 0 }}"""";,"});,"})
         className="mb-8"""";,"});,"})
       >"""";,"});,"})
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">""";,"});,"})
+        <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4">""","});,"})
           <div>"""";,"});,"})
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">;,"});,"})
               Advanced Analytics Dashboard""";,"});,"})
             </h1>"""";,"});,"})
             <p className="text-zion-slate-light">;,"});,"})
-              Real-time insights into service performance, client metrics, and;,"});,"})
-              business intelligence;,"});,"})
+              Real-time insights into service performance, client metrics, and,"});,"})
+              business intelligence,"});,"})
             </p>;,"});,"})
           </div>""";,"});,"})
 """";,"});,"})
           <div className="flex gap-2">';,"});,"})
             {['7d',30d',90d',1y'].map(range => (;,"});,"})
-              <Button;,"});,"})
+              <Button,"});,"})
                 key={range}'""";,"});,"})
                 variant={timeRange === range ? 'default' : 'outline'}"""";,"});,"})
                 size="sm""";,"});,"})
@@ -180,24 +180,24 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
         </div>;,"});,"})
       </motion.div>;,"});,"})
       {/* Metrics Cards */}"});,"})
-      <motion.div;,"});,"})
+      <motion.div,"});,"})
         initial={{ opacity: 0, y: 20 }}"});,"})
         animate={{ opacity: 1, y: 0 }}""";,"});,"})
         transition={{ delay: 0.1 }}"""";,"});,"})
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8""";,"});,"})
+        className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8""","});,"})
       >;,"});,"})
         {metrics.map((metric, index) => (;,"});,"})
-          <motion.div;,"});,"})
+          <motion.div,"});,"})
             key={index}"});,"})
             initial={{ opacity: 0, y: 20 }}"});,"})
             animate={{ opacity: 1, y: 0 }}"});,"})
             transition={{ delay: 0.1 * index }}""";,"});,"})
           >"""";,"});,"})
-            <Card className="h-full hover:shadow-lg transition-shadow">"""";,"});,"})
+            <Card className="h-full hover: shadow-lg transition-shadow">"""","});,"})
               <CardHeader className="pb-3">"""";,"});,"})
                 <div className="flex items-center justify-between">;,"});,"})
-                  <div;,"});,"})
-                    className={`w-12 h-12 bg-gradient-to-r ${metric.color} rounded-lg flex items-center justify-center text-white`}"});,"})
+                  <div,"});,`})
+                    className={`w-12 h-12 bg-gradient-to-r ${metric.color} rounded-lg flex items-center justify-center text-white`}`});,"})
                   >;,"});,"})
                     {metric.icon}""";,"});,"})
                   </div>"""";,"});,"})
@@ -207,8 +207,8 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
                     ) : ("""";,"});,"})
                       <ArrowDownRight className="w-4 h-4 text-red-500" />;,"});,"})
                     )}'`;,"});,"})
-                    <span'`'`;,"});,"})
-                      className={`text-sm font-medium ${metric.changeType === 'increase' ? 'text-green-600' : 'text-red-600'}`}"});,"})
+                    <span'`'`;,"});,`})
+                      className={`text-sm font-medium ${metric.changeType === 'increase' ? 'text-green-600' : 'text-red-600'}`}`});,"})
                     >;,"});,"})
                       {metric.change}%;,"});,"})
                     </span>;,"});,"})
@@ -226,7 +226,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
         ))}"});,"})
       </motion.div>;,"});,"})
       {/* Service Performance Table */}"});,"})
-      <motion.div;,"});,"})
+      <motion.div,"});,"})
         initial={{ opacity: 0, y: 20 }}"});,"})
         animate={{ opacity: 1, y: 0 }}""";,"});,"})
         transition={{ delay: 0.2 }}"""";,"});,"})
@@ -236,7 +236,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
           <CardHeader>"""";,"});,"})
             <CardTitle className="flex items-center gap-2">"""";,"});,"})
               <BarChart3 className="w-5 h-5 text-zion-cyan" />;,"});,"})
-              Service Performance Overview;,"});,"})
+              Service Performance Overview,"});,"})
             </CardTitle>;,"});,"})
           </CardHeader>""";,"});,"})
           <CardContent>"""";,"});,"})
@@ -260,18 +260,18 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
                       Revenue""";,"});,"})
                     </th>"""";,"});,"})
                     <th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">;,"});,"})
-                      Status;,"});,"})
+                      Status,"});,"})
                     </th>;,"});,"})
                   </tr>;,"});,"})
                 </thead>;,"});,"})
                 <tbody>;,"});,"})
                   {servicePerformance.map((service, index) => (;,"});,"})
-                    <motion.tr;,"});,"})
+                    <motion.tr,"});,"})
                       key={index}"});,"})
                       initial={{ opacity: 0, x: -20 }}"});,"})
                       animate={{ opacity: 1, x: 0 }}""";,"});,"})
                       transition={{ delay: 0.1 * index }}"""";,"});,"})
-                      className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5"""";,"});,"})
+                      className="border-b border-zion-slate-light/10 hover: bg-zion-blue-light/5"""","});,"})
                     >"""";,"});,"})
                       <td className="py-3 px-4">"""";,"});,"})
                         <div className="font-medium text-zion-blue-dark">;,"});,"})
@@ -282,8 +282,8 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
                         <div className="flex items-center gap-2">"""";,"});,"})
                           <div className="w-16 bg-zion-slate-light/20 rounded-full h-2">""";,"});,"})
                             <div""`;,"});,"})
-                              className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full"``;,"});,"})
-                              style={{ width: `${service.performance}%` }}"});,"})
+                              className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full"``;,"});,`})
+                              style={{ width: `${service.performance}%` }}`});,"})
                             ></div>""";,"});,"})
                           </div>"""";,"});,"})
                           <span className="text-sm font-medium">;,"});,"})
@@ -303,8 +303,8 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
                         <span className="font-medium">{service.clients}</span>""";,"});,"})
                       </td>"""";,"});,"})
                       <td className="py-3 px-4">"""";,"});,"})
-                        <span className="font-medium">;,"});,"})
-                          ${(service.revenue / 1000).toFixed(0)}K;,"});,"})
+                        <span className="font-medium">;,"});,`})
+                          ${(service.revenue / 1000).toFixed(0)}K,`});,"})
                         </span>""";,"});,"})
                       </td>"""";,"});,"})
                       <td className="py-3 px-4">""";,"});,"})
@@ -324,24 +324,24 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
         </Card>;,"});,"})
       </motion.div>;,"});,"})
       {/* Charts and Insights */}"});,"})
-      <motion.div;,"});,"})
+      <motion.div,"});,"})
         initial={{ opacity: 0, y: 20 }}"});,"})
         animate={{ opacity: 1, y: 0 }}""";,"});,"})
         transition={{ delay: 0.3 }}"""";,"});,"})
-        className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8""";,"});,"})
+        className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8""","});,"})
       >;,"});,"})
         {/* Category Distribution */}"});,"})
         <Card>""";,"});,"})
           <CardHeader>"""";,"});,"})
             <CardTitle className="flex items-center gap-2">"""";,"});,"})
               <PieChart className="w-5 h-5 text-zion-purple" />;,"});,"})
-              Service Category Distribution;,"});,"})
+              Service Category Distribution,"});,"})
             </CardTitle>;,"});,"})
           </CardHeader>""";,"});,"})
           <CardContent>"""";,"});,"})
             <div className="space-y-3">;,"});,"})
               {categoryDistribution.map((category, index) => (;,"});,"})
-                <motion.div;,"});,"})
+                <motion.div,"});,"})
                   key={index}"});,"})
                   initial={{ opacity: 0, x: -20 }}"});,"})
                   animate={{ opacity: 1, x: 0 }}""";,"});,"})
@@ -349,8 +349,8 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
                   className="flex items-center justify-between"""";,"});,"})
                 >"""";,"});,"})
                   <div className="flex items-center gap-3">`;,"});,"})
-                    <div``;,"});,"})
-                      className={`w-4 h-4 bg-gradient-to-r ${category.color} rounded-full`}""";,"});,"})
+                    <div``;,"});,`})
+                      className={`w-4 h-4 bg-gradient-to-r ${category.color} rounded-full`}`"";,"});,"})
                     ></div>"""";,"});,"})
                     <span className="font-medium text-zion-slate-dark">;,"});,"})
                       {category.label}"});,"})
@@ -358,9 +358,9 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
                   </div>"""";,"});,"})
                   <div className="flex items-center gap-2">"""";,"});,"})
                     <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">`;,"});,"})
-                      <div``;,"});,"})
-                        className={`bg-gradient-to-r ${category.color} h-2 rounded-full`}``;,"});,"})
-                        style={{ width: `${category.value}%` }}"});,"})
+                      <div``;,"});,`})
+                        className={`bg-gradient-to-r ${category.color} h-2 rounded-full`}``;,`});,`})
+                        style={{ width: `${category.value}%` }}`});,"})
                       ></div>""";,"});,"})
                     </div>"""";,"});,"})
                     <span className="text-sm font-medium text-zion-slate-light">;,"});,"})
@@ -377,7 +377,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
           <CardHeader>"""";,"});,"})
             <CardTitle className="flex items-center gap-2">"""";,"});,"})
               <Brain className="w-5 h-5 text-zion-cyan" />;,"});,"})
-              Key Insights;,"});,"})
+              Key Insights,"});,"})
             </CardTitle>;,"});,"})
           </CardHeader>""";,"});,"})
           <CardContent>"""";,"});,"})
@@ -389,8 +389,8 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
                     AI Services Growth""";,"});,"})
                   </h4>"""";,"});,"})
                   <p className="text-sm text-zion-slate-light">;,"});,"})
-                    AI and ML services showing 35% growth, highest performing;,"});,"})
-                    category;,"});,"})
+                    AI and ML services showing 35% growth, highest performing,"});,"})
+                    category,"});,"})
                   </p>;,"});,"})
                 </div>;,"});,"})
               </div>""";,"});,"})
@@ -402,7 +402,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
                     Client Acquisition""";,"});,"})
                   </h4>"""";,"});,"})
                   <p className="text-sm text-zion-slate-light">;,"});,"})
-                    New client acquisition rate increased by 18% this quarter;,"});,"})
+                    New client acquisition rate increased by 18% this quarter,"});,"})
                   </p>;,"});,"})
                 </div>;,"});,"})
               </div>""";,"});,"})
@@ -414,7 +414,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
                     Satisfaction Score""";,"});,"})
                   </h4>"""";,"});,"})
                   <p className="text-sm text-zion-slate-light">;,"});,"})
-                    Client satisfaction reached 4.8/5, highest in comp history;,"});,"})
+                    Client satisfaction reached 4.8/5, highest in comp history,"});,"})
                   </p>;,"});,"})
                 </div>;,"});,"})
               </div>;,"});,"})
@@ -423,7 +423,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
         </Card>;,"});,"})
       </motion.div>;,"});,"})
       {/* CTA Section */}"});,"})
-      <motion.div;,"});,"})
+      <motion.div,"});,"})
         initial={{ opacity: 0, y: 20 }}"});,"})
         animate={{ opacity: 1, y: 0 }}""";,"});,"})
         transition={{ delay: 0.4 }}"""";,"});,"})
@@ -432,13 +432,13 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"""";,"});,"})
           <h3 className="text-3xl font-bold mb-4">Get Detailed Analytics</h3>"""";,"});,"})
           <p className="text-xl mb-6 max-w-2xl mx-auto">;,"});,"})
-            Access comprehensive analytics, custom reports, and real-time;,"});,"})
-            insights to optimize your business performance and make data-driven;,"});,"})
+            Access comprehensive analytics, custom reports, and real-time,"});,"})
+            insights to optimize your business performance and make data-driven,"});,"})
             decisions.""";,"});,"})
           </p>"""";,"});,"})
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">""";,"});,"})
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">""","});,"})
             <Button"""";,"});,"})
-              className="bg-white text-zion-purple hover:bg-zion-slate-light""";,"});,"})
+              className="bg-white text-zion-purple hover: bg-zion-slate-light""","});,"})
               onClick={() =>';,"});,"})
                 window.open('';,"});,"})
                   'mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Access',_blank';,"});,"})
@@ -446,21 +446,21 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
 }""";,"});,"})
             >"""";,"});,"})
               <Rocket className="w-5 h-5 mr-2" />;,"});,"})
-              Request Access;,"});,"})
+              Request Access,"});,"})
             </Button>""";,"});,"})
             <Button"""";,"});,"})
               variant="outline"'""";,"});,"})
-              className="border-white text-white hover:bg-white hover:text-zion-purple"'';,"});,"})
+              className="border-white text-white hover: bg-white hover:text-zion-purple"'',"});,"})
               onClick={() => window.open('tel:+13024640950',_blank')}""";,"});,"})
             >"""";,"});,"})
               <Shield className="w-5 h-5 mr-2" />;,"});,"})
-              Schedule Demo;,"});,"})
+              Schedule Demo,"});,"})
             </Button>;,"});,"})
           </div>;,"});,"})
         </div>;,"});,"})
       </motion.div>;,"});,"})
     </div>)};,"});,"})
-export default AdvancedAnalyticsDashboard;,"});,"})
+export default AdvancedAnalyticsDashboard,"});,"})
 ;,"});,"})
 export { AdvancedAnalyticsDashboard };,"});,"})
 ;,"});,"})
@@ -473,7 +473,7 @@ export { AdvancedAnalyticsDashboard };,"});,"})
 export { AdvancedAnalyticsDashboard };,"});,"})
 import React, { useState } from 'react'''
 import React, { useState }  from 'react
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import {}""
   TrendingUp, TrendingDown, Users, DollarSign, Target, BarChart3, PieChart, Activity, Star, ArrowUpRight, ArrowDownRight, ''
   Shield,''
@@ -669,11 +669,11 @@ const AdvancedAnalyticsDashboard = () => {}""
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}""
-            transition={{ delay: 0.1 * index }}'''" >'''''"
+            transition={{ delay: 0.1 * index }}'''" >'''''`
             <Card className='h-full hover:shadow-lg transition-shadow'>''''
               <CardHeader className='pb-3'>''''
                 <div className='flex items-center justify-between'>
-                  <div className={`w-12 h-12 bg-gradient-to-r ${metric.color} rounded-lg flex items-center justify-center text-white`}" >"
+                  <div className={`w-12 h-12 bg-gradient-to-r ${metric.color} rounded-lg flex items-center justify-center text-white`}` >"
                     {metric.icon}''''
                   </div>''''
                   <div className='flex items-center gap-1'>''''
@@ -682,8 +682,8 @@ const AdvancedAnalyticsDashboard = () => {}""
                     ) : (''''
                       <ArrowDownRight className='w-4 h-4 text-red-500' /" >"`
                     )}'`"`'"
-                    <span '`'`"`"
-                      className={`text-sm font-medium ${metric.changeType === 'increase' ? 'text-green-600' : 'text-red-600'}`}" >"
+                    <span '`'`"``
+                      className={`text-sm font-medium ${metric.changeType === 'increase' ? 'text-green-600' : 'text-red-600'}`}` >"
                       {metric.change}%
                     </span>
                   </div>
@@ -754,9 +754,9 @@ const AdvancedAnalyticsDashboard = () => {}""
                       <td className='py-3 px-4'>''''
                         <div className='flex items-center gap-2'>''''
                           <div className='w-16 bg-zion-slate-light/20 rounded-full h-2'>'''`'
-                            <div ''`"`"
+                            <div ''`"``
                               className='bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full'``
-                              style={{ width: `${service.performance}%` }}"" ></div>''''
+                              style={{ width: `${service.performance}%` }}`" ></div>''''
                           </div>''''
                           <span className='text-sm font-medium'>
                             {service.performance}%
@@ -768,7 +768,7 @@ const AdvancedAnalyticsDashboard = () => {}""
                           <TrendingUp className='w-4 h-4 text-green-500' /" >''''"
                           <span className='text-green-600 font-medium'>
                             +{service.growth}%
-                          </span>""
+                          </span>"`
                         </div>''''
                       </td>''''
                       <td className='py-3 px-4'>''''
@@ -776,7 +776,7 @@ const AdvancedAnalyticsDashboard = () => {}""
                       </td>''''
                       <td className='py-3 px-4'>''''
                         <span className='font-medium'>
-                          ${(service.revenue / 1000).toFixed(0)}K""
+                          ${(service.revenue / 1000).toFixed(0)}K`"
                         </span>''''
                       </td>''''
                       <td className='py-3 px-4'>''''
@@ -820,17 +820,17 @@ const AdvancedAnalyticsDashboard = () => {}""
                   className='flex items-center justify-between''''" >''''`'"
                   className='flex items-center justify-between''" >''''`
                   <div className='flex items-center gap-3'>`
-                    <div ``"`"
-                      className={`w-4 h-4 bg-gradient-to-r ${category.color} rounded-full`}'''" ></div>'''''"
+                    <div ``"``
+                      className={`w-4 h-4 bg-gradient-to-r ${category.color} rounded-full`}'''` ></div>'''''"
                     <span className='font-medium text-zion-slate-dark'>
-                      {category.label}""
+                      {category.label}"`
                     </span>''''
                   </div>''''
                   <div className='flex items-center gap-2'>''''`
                     <div className='w-20 bg-zion-slate-light/20 rounded-full h-2'>`
                       <div ``
                         className={`bg-gradient-to-r ${category.color} h-2 rounded-full`}``
-                        style={{ width: `${category.value}%` }}"" ></div>''''
+                        style={{ width: `${category.value}%` }}`" ></div>''''
                     </div>''''
                     <span className='text-sm font-medium text-zion-slate-light'>
                       {category.value}%

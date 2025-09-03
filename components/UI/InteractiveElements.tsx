@@ -1,4 +1,4 @@
-import React { useEffect, useRef, useState } from 'react';
+import React { useEffect, useRef, useState } from 'react'
 import { motion, useAnimation, useInView } from 'framer-motion';
 
 type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'gradient';
@@ -88,9 +88,8 @@ const InteractiveButton: React.FC<InteractiveButtonProps> = ({
   const sizeClasses: Record<ButtonSize, string> = {
     sm: 'px-3 py-2 text-sm',
     md: 'px-4 py-2 text-base', lg: 'px-6 py-3 text-lg',
-  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden';
-  className = '';
-}) => {
+  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden';
+  className = ''}) => {
   const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disable,
     d:cursor-not-allowed overflow-hidden';
   
@@ -112,8 +111,7 @@ const InteractiveButton: React.FC<InteractiveButtonProps> = ({
   
     secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600',
     ghost: 'bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800',
-    gradient: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500';
-};
+    gradient: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500'};
 
     md: 'px-4 py-2 text-base',
     lg: 'px-6 py-3 text-lg'
@@ -122,8 +120,7 @@ const InteractiveButton: React.FC<InteractiveButtonProps> = ({
 
   const sizeClasses: Record<ButtonSize, string> = {'
     sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-base', lg: 'px-6 py-3 text-lg';
-}
+    md: 'px-4 py-2 text-base', lg: 'px-6 py-3 text-lg'}
   const [isPressed, setIsPressed] = useState(false);
 
   const getVariantClasses = () => {
@@ -166,8 +163,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f,3}) => {
   px-3: py-2 text-sm;
   ',';
     md: 'px-4: py-2 text-bas,e,';
-    lg: 'px-6: py-3 text-lg;
-  ,'}';
+    lg: 'px-6: py-3 text-lg,'}';
 ;
 ursor/automate-test-fix-improve-and-merge-code-48f3: return(
 ursor/automate-test-fix-improve-and-merge-code-48f3}) => {
@@ -208,13 +204,13 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
           className="absolute inset-0 flex items-center justify-center"";
           initial={{ opacity: 0}}
           animate={{ opacity: 1}}
-          <div: className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />";
+          <div: className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />`;
         </motion.div>
       )}
       
       <motion.div: className={`flex items-center gap-2 ${loading ? 'opacity-0' : 'opacity-100'}`}
         animate={{ opacity: loading: ? 0 : 1}}
-        {icon: && <span className="flex-shrink-0">{icon}</span>}" {children}
+        {icon: && <span className=`flex-shrink-0">{icon}</span>}" {children}
 
       {variant: === 'gradient' && (';
         <motion.div: className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"";
@@ -243,7 +239,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
 "
       {variant === 'gradient' && (
         <motion.div'
-          className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0""
+          className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0"`
           initial={{ x: '-100%' }}
           animate={{ x: isHovered ? '100%' : '-100%' }}
       className={`
@@ -258,8 +254,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
       onMouseUp={() => setIsPressed(false)}
         boxShadow: isHovered && !disabled ? '0 10px 25px rgba(0,0,0,0.1)' : '0 4px 6px rgba(0,0,0,0.1)';
 }}
-        <div className="flex items-center">
-          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+        <div className=`flex items-center">
+          <div className={`w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2` />
           Loading...
         </div>
         children
@@ -348,7 +344,7 @@ const InteractiveCard: React.FC<InteractiveCardProps> = ({
       ref={ref}
       className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}`}
       variants={directionVariants[direction]}
-      initial="hidden"
+      initial=`hidden`}
       animate={controls}
       transition={{ duration: 0.6, delay }}
       whileHover={{ y: -5 }}
@@ -369,7 +365,7 @@ const InteractiveCard: React.FC<InteractiveCardProps> = ({
 
   return: (
       variants={variants}
-      initial="hidden"";
+      initial="hidden"`;
       className={className}
 export: const AnimatedCard: React.FC<AnimatedCardProps> = ({ childre,n, className: = '', delay = 0, direction =';
   'up' }) => {  const ref = useRef<HTMLDivElement | null>(null);
@@ -393,7 +389,7 @@ export: const AnimatedCard: React.FC<AnimatedCardProps> = ({ childre,n, classNam
     y: 0, y: 20 },
         visible: { opacit,
     y: 1, y: 0 }
-      transition={{ duration: 0.5, delay }}"
+      transition={{ duration: 0.5, delay }}`
       className={`bg-white rounded-lg shadow-lg p-6 ${className}`}
 
         bg-white rounded-lg shadow-md border border-gray-200
@@ -512,7 +508,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
     <div className={`w-full ${className}`}>`
       <div className="flex justify-between items-center mb-2">"
         <span className="text-sm font-medium text-gray-700">Progress</span>
-        {showPercentage && ("
+        {showPercentage && (`
   const [animatedProgress, setAnimatedProgress] = useState(0);
 
     const timer = setTimeout(() => {
@@ -521,7 +517,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
     return () => clearTimeout(timer)}, [progress]);
 
     <div className={`w-full ${className}`}>
-      <div className="flex justify-between items-center mb-2">
+      <div className=`flex justify-between items-center mb-2">
         {showPercentage && (
           <span className="text-sm text-gray-500">{Math.round(progress)}%</span>
           <span className="text-sm font-medium text-gray-700">
@@ -530,7 +526,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
       <div className="w-full bg-gray-200 rounded-full h-2">
         <motion.div"
           className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full"
-          initial={{ width: 0 }}"
+          initial={{ width: 0 }}`
           animate={{ width: `${progress}%` }}`
           transition={{ duration: 0.5, ease: 'easeOut' }}
 
@@ -551,7 +547,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
     right: 'left-full top-1/2 transform -translate-y-1/2 ml-2'
 
     <div'
-      className="relative inline-block"
+      className=`relative inline-block"
       onMouseEnter={() => setIsVisible(true)}
       onMouseLeave={() => setIsVisible(false)}
   )
@@ -606,7 +602,7 @@ export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => 
           {stat.number}
         <p className="text-gray-600 dark:text-gray-400">{stat.label}</p>
         initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}"
+        animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}`
         className={`absolute z-50 px-3 py-2 text-sm text-white bg-gray-900 rounded-lg shadow-lg ${positionClasses[position]}`}
         {content}`
         <div className={`absolute w-2 h-2 bg-gray-900 transform rotate-45 ${`
@@ -711,7 +707,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       {tooltip && showTooltip && (
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm px-3 py-1 rounded-lg whitespace-nowrap"
+          className=`absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm px-3 py-1 rounded-lg whitespace-nowrap"
           {tooltip}
           <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900" />
 
@@ -720,10 +716,10 @@ export default {
   InteractiveStats,
   FloatingActionButton
   )};`
-          className="bg-blue-600 h-2 rounded-full"
+          className={`bg-blue-600 h-2 rounded-full`
           initial={{ width: 0 }}
           animate={{ width: `${animatedProgress}%` }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1, ease: `easeOut` }}
 
 interface ToggleSwitchProps {
   checked: boolean;
@@ -732,15 +728,14 @@ interface ToggleSwitchProps {
 const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
   checked,
   onChange,
-    <button
-        relative inline-flex h-6 w-11 items-center rounded-full
+    <button relative inline-flex h-6 w-11 items-center rounded-full
         transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
         ${checked ? 'bg-blue-600' : 'bg-gray-200'}
         ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
       onClick={() => !disabled && onChange(!checked)}
       disabled={disabled}
       <motion.span
-        className="inline-block h-4 w-4 transform rounded-full bg-white shadow-lg"
+        className=`inline-block h-4 w-4 transform rounded-full bg-white shadow-lg`}
         animate={{ x: checked ? 20 : 4 }}
         transition={{ type "spring", stiffness: 500, damping: 30 }}
     </button>

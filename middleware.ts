@@ -48,7 +48,7 @@ export function middleware(_request: NextRequest) {
 
   response.headers.set('Content-Security-Policy', csp);  
   // Log request for monitoring
-  console.log(`[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}`);
+  console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}``);
 
   // Handle specific routes
   const { pathname } = request.nextUrl;
@@ -66,8 +66,7 @@ export function middleware(_request: NextRequest) {
   // Add response time header
   response.headers.set('X-Response-Time', `${Date.now() - startTime}ms`);
 
-  return response;
-}
+  return response}
 
 export const config = {'
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)]};

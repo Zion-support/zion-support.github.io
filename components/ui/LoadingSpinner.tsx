@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { motion } from 'framer-motion'; LoadingSpinnerProps {'
   size?: 'sm' | 'md' | 'lg';'  className?: string;'}
 
@@ -42,8 +42,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({'
   text = 'Loading...'}) => {
     sm: 'h-4 w-4',
     md: 'h-8 w-8',
-    lg: 'h-12 w-12';
-};
+    lg: 'h-12 w-12'};
 
   return (
     <div className={cn('flex flex-col items-center justify-center space-y-2', className)}>

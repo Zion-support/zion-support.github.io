@@ -14,13 +14,13 @@ const AccessibilityContext = createContext (null) ;,"});,"})
 ''';,"});,"})
         throw new Error('useAccessibility must be used within an AccessibilityProvider')}"});,"})
     return context};,"});,"})
-// Accessibility Provider Component;,"});,"})
+// Accessibility Provider Component,"});,"})
 export const AccessibilityProvider = ({ children }) => {}"});,"})
     const [highContrast, setHighContrast] = useState(false);,"});,"})
     const [reducedMotion, setReducedMotion] = useState(false);,"});,"})
     const [fontSize, setFontSize] = useState('medium');,"});,"})
     const [colorBlindMode, setColorBlindMode] = useState('none');,"});,"})
-    // Load settings from localStorage;,"});,"})
+    // Load settings from localStorage,"});,"})
     useEffect(() => {}"});,"})
         const savedSettings = localStorage.getItem('zion-accessibility-settings');,"});,"})
         if (savedSettings) {}"});,"})
@@ -30,12 +30,12 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})
             setFontSize(settings.fontSize || 'medium');,"});,"})
             setColorBlindMode(settings.colorBlindMode || 'none')}"});,"});
 }, []);,"});,"})
-    // Save settings to localStorage;,"});,"})
+    // Save settings to localStorage,"});,"})
         const settings = {}"});,"})
   highContrast,;,"});,"})
             reducedMotion,""";,"});,"})
             fontSize,"'""";,"});,"})
-import React { useState, useEffect, createContext, useContext } from 'react'';
+import React { useState, useEffect, createContext, useContext } from 'react''
 import { motion, AnimatePresence } from 'framer-motion'';
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
 
@@ -77,11 +77,12 @@ export const AccessibilityProvider = ({ children }) => {}
             fontSize,''''';
  const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';'';import React { useState, useEffect, createContext, useContext } from 'react'';';
  const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';'';import React { useState, useEffect, createContext, useContext } from 'react'''
- const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context };import React { useState, useEffect, createContext, useContext } from 'react'';
+ const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }
+import React { useState, useEffect, createContext, useContext } from 'react'';
 '
  const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';import React { useState, useEffect, createContext, useContext } from 'react';
  const AccessibilityContext = createContext (null)  export const useAccessibility = () => {const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';'';import React {useState, useEffect, createContext, useContext } from 'react'';'
- const AccessibilityContext = createContext (null)  export const useAccessibility = () => {} const;const;const context = useContext (AccessibilityContext)  if (!context) { throw new Error (&apos; &apos;useAccessibility must be used within an AccessibilityProvider&apos;)  } return context }';&apos;import React { useState, useEffect, createContext, useContext } from &apos;react&apos;
+ const AccessibilityContext = createContext (null)  export const useAccessibility = () => {} const;const;const context = useContext (AccessibilityContext)  if (!context) { throw new Error (&apos; &apos;useAccessibility must be used within an AccessibilityProvider&apos)  } return context }';&apos;import React { useState, useEffect, createContext, useContext } from &apos;react&apos;
 &apos;'
  const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';'';import React { useState, useEffect, createContext, useContext } from 'react'';'
 ""

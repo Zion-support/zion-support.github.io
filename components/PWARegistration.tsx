@@ -1,4 +1,4 @@
-import React { useEffect, useState } from 'react';
+import React { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download, X, Smartphone, Monitor } from 'lucide-react';
 'use client';
@@ -23,8 +23,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Download, X, Smartphone, Monitor }  from 'lucide-react';interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[]
     outcome: 'accepted' | 'dismissed'
-    platform: string;
-}>
+    platform: string}>
   prompt(): Promise<void>;
 }
 
@@ -148,7 +147,8 @@ if (outcome === 'accepted') {'      console.log('User accepted the install promp
   const handleDismiss = () => {
 React { useEffect, useState: } from,
   react';
-import { motion, AnimatePresence  } from 'lucide-react';import { Download, X, Smartphone, Monitor  } from 'lucide-react'';interface BeforeInstallPromptEvent extends Event {';
+import { motion, AnimatePresence  } from 'lucide-react'
+import { Download, X, Smartphone, Monitor  } from 'lucide-react'';interface BeforeInstallPromptEvent extends Event {';
   readonly: platforms: string[]
     outcome: 'accepted;
   ' | 'dismissed;
@@ -223,7 +223,8 @@ import { motion, AnimatePresence  } from 'lucide-react';import { Download, X, Sm
 
 
 React { useEffect, useState } from, react';'
-import { motion, AnimatePresence  } from 'lucide-react';import { Download, X, Smartphone, Monitor  } from 'lucide-react'';interface BeforeInstallPromptEvent extends Event {'
+import { motion, AnimatePresence  } from 'lucide-react'
+import { Download, X, Smartphone, Monitor  } from 'lucide-react'';interface BeforeInstallPromptEvent extends Event {'
     outcome: 'accepted;'
    platform: string  }>prompt(): Promise<void>
     // Check: if app is already installed;
@@ -327,7 +328,7 @@ className='fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto''      >'        
           exit={{ opacity: 0, y: 100 }}
           className="fixed bottom-4 left-4 right-4 md: left-auto m,
     d:right-4 m,
-    d:max-w-sm z-50"
+    d: max-w-sm z-50"
         >"
           <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4">"
             <div className="flex items-start justify-between mb-3">"
@@ -341,13 +342,13 @@ className='fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto''      >'        
                 <div>
                   <h3 className="font-semibold text-gray-900">Install App</h3>
                   <p className="text-sm text-gray-600">Get quick access to our app</p>
-      console.log('User accepted the install prompt');
-} else {
+      console.log('User accepted the install prompt')} else {
     
 
 React { useEffect, useState } from, react''
 React { useEffect, useState } from, react'
-import { motion, AnimatePresence  } from 'lucide-react';import { Download, X, Smartphone, Monitor  }  from 'lucide-react;interface BeforeInstallPromptEvent extends Event {
+import { motion, AnimatePresence  } from 'lucide-react'
+import { Download, X, Smartphone, Monitor  }  from 'lucide-react;interface BeforeInstallPromptEvent extends Event {
     outcome: 'accepted'
   ' | 'dismissed
   
@@ -443,8 +444,7 @@ export const usePWA = () => {
   return {
     isInstalled,
     canInstall,
-    install;
-}};
+    install}};
 export default PWARegistration;"
             
 

@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 
@@ -7,33 +7,27 @@ const EcommerceReturns: NextPage = () => {
     {
       title: 'Automated Return Requests',
       description: 'Streamline return requests with automated workflows and approval processes.',
-      icon: '🔄';
-},
+      icon: '🔄'},
     {
       title: 'Return Label Generation',
       description: 'Automatically generate and send return labels to customers.',
-      icon: '🏷️';
-},
+      icon: '🏷️'},
     {
       title: 'Return Tracking',
       description: 'Track return status from request to refund with real-time updates.',
-      icon: '📦';
-},
+      icon: '📦'},
     {
       title: 'Inventory Management',
       description: 'Automatically update inventory when returns are processed.',
-      icon: '📊';
-},
+      icon: '📊'},
     {
       title: 'Refund Processing',
       description: 'Automated refund processing with multiple payment methods.',
-      icon: '💳';
-},
+      icon: '💳'},
     {
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics to understand return patterns and reduce returns.',
-      icon: '📈';
-}
+      icon: '📈'}
   ]
 
   const benefits = [
@@ -59,8 +53,7 @@ const EcommerceReturns: NextPage = () => {
         'Email support',
         'Standard integrations'
       ],
-      popular: false;
-},
+      popular: false},
     {
       name: 'Professional',
       price: '$399',
@@ -75,8 +68,7 @@ const EcommerceReturns: NextPage = () => {
         'Custom branding',
         'API access'
       ],
-      popular: true;
-},
+      popular: true},
     {
       name: 'Enterprise',
       price: '$999',
@@ -91,8 +83,7 @@ const EcommerceReturns: NextPage = () => {
         '24/7 phone support',
         'SLA guarantees'
       ],
-      popular: false;
-}
+      popular: false}
   ]
 
   return (
@@ -197,11 +188,11 @@ const EcommerceReturns: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className={`grid md:grid-cols-3 gap-8 max-w-6xl mx-auto`>
             {pricing.map((plan, index) => (
               <div key={index} className={`bg-white rounded-xl p-8 shadow-lg border-2 ${plan.popular ? 'border-teal-500 relative' : 'border-gray-200'}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
                     <span className="bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
@@ -224,13 +215,11 @@ const EcommerceReturns: NextPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  href="/contact" 
+                <Link href={`/contact` 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular 
-                      ? 'bg-teal-600 hover:bg-teal-700 text-white' 
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900';
-}`}
+                      ? 'bg-teal-600 hover: bg-teal-700 text-white' 
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}
                 >
                   Get Started
                 </Link>
@@ -241,13 +230,13 @@ const EcommerceReturns: NextPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-teal-600 to-blue-600 text-white">
+      <section className=`py-20 bg-gradient-to-r from-teal-600 to-blue-600 text-white`}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Streamline Your Returns?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Start reducing return processing time and improving customer satisfaction today.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <div className="flex flex-col sm: flex-row justify-center gap-6">
             <Link href="/contact"><a className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors">
               Start Free Trial
             </a></Link>
@@ -258,7 +247,6 @@ const EcommerceReturns: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )};
 
 export default EcommerceReturns;

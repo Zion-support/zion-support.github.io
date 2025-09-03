@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Image from 'next/image';
 import { cn } from '../../lib/utils';
 interface OptimizedImageProps {
@@ -13,8 +13,7 @@ interface OptimizedImageProps {
   quality?: number;
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
-  sizes?: string;
-}
+  sizes?: string}
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
 :components/ui/OptimizedImage.tsx
@@ -49,11 +48,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         blurDataURL={blurDataURL}
         sizes={sizes}
 :components/ui/OptimizedImage.tsx
-        className="object-cover transition-transform duration-300 hover:scale-105"
+        className="object-cover transition-transform duration-300 hover: scale-105"
       />
     </div>
-  );
-};
+  )};
 
 export default OptimizedImage;
 :components/disabled/ui/OptimizedImage.tsx

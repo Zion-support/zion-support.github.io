@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {SEO } from '@/components/SEO';
 
 export default function EnhancedLayout() {return (
@@ -6,16 +6,16 @@ export default function EnhancedLayout() {return (
       <SEO title="EnhancedLayout" - Zion Tech Group" description="Professional EnhancedLayout services by Zion Tech Group />
       <div className="container" mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8>EnhancedLayout</h1>
-        <p className="text-gray-300" text-lg">
+        <p className="text-gray-300" text-lg`>
           Professional EnhancedLayout services to help your business grow.
         </p>
       </div>
     </div>
   );
 }
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from 'react'
 import Head from 'next/head';
-import { PerformanceOptimizer } from './PerformanceOptimizer';
+import { PerformanceOptimizer } from './PerformanceOptimizer'
 import { SEOOptimizer } from './SEOOptimizer';
 import { OptimizedImage } from './OptimizedImage';
 
@@ -28,8 +28,7 @@ interface EnhancedLayoutProps {
   canonical?: string;
   noindex?: boolean;
   showPerformanceMetrics?: boolean;
-  showSEOAnalysis?: boolean;
-}
+  showSEOAnalysis?: boolean}
 
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
   children,
@@ -40,8 +39,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
   canonical,
   noindex = false,
   showPerformanceMetrics = false,
-  showSEOAnalysis = false;
-}) => {
+  showSEOAnalysis = false}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 
@@ -59,7 +57,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
         <Head>
           {/* Basic Meta Tags */}
           <title>{fullTitle}</title>
-          <meta name="description" content={description} />
+          <meta name=`description" content={description} />
           <meta name="keywords" content={keywords} />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />

@@ -8,13 +8,11 @@ const supabase = createClient(supabaseUrl, serviceKey);
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(405).end();
-    return;
-  }
+    return}
   const { email, items = [] } = req.body || {};
   if (!email) {
     res.status(400).json({ error: 'Missing email' });
-    return;
-  }
+    return}
   const token = randomUUID();
   const total = Array.isArray(items)
     ? items.reduce((s, i) => s + (i.price || 0) * (i.quantity || 1), 0)
@@ -26,8 +24,7 @@ async function handler(req, res) {
     .single();
   if (error || !data) {
     res.status(500).json({ error: error?.message || 'Failed to create order' });
-    return;
-  }
+    return}
   res.status(200).json({ orderId: data.id, token });
 }
 export default withErrorLogging(handler);

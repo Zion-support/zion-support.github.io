@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import Head from 'next/head'
 import Layout from '../components/Layout';
 import {
   ArrowRight,
@@ -10,8 +10,7 @@ import {
   TrendingUp,
   Award,
   Globe,
-  Zap;
-} from 'lucide-react';
+  Zap} from 'lucide-react';
 
 const CaseStudies: NextPage = () => {
   const caseStudies = [
@@ -32,8 +31,7 @@ const CaseStudies: NextPage = () => {
       teamSize: '8 experts',
       technologies: ['React', 'Node.js', 'Machine Learning', 'AWS'],
       image: '/api/placeholder/600/400',
-      featured: true;
-},
+      featured: true},
     {
       id: 2,
       title: 'Enterprise Cloud Migration',
@@ -51,8 +49,7 @@ const CaseStudies: NextPage = () => {
       teamSize: '12 experts',
       technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform'],
       image: '/api/placeholder/600/400',
-      featured: true;
-},
+      featured: true},
     {
       id: 3,
       title: 'Educational AI Platform',
@@ -70,8 +67,7 @@ const CaseStudies: NextPage = () => {
       teamSize: '16 experts',
       technologies: ['Adaptive Learning', 'Educational AI', 'Content Personalization', 'Learning Analytics'],
       image: '/api/placeholder/600/400',
-      featured: false;
-}
+      featured: false}
   ]
 
   return (
@@ -288,7 +284,7 @@ const CaseStudies: NextPage = () => {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let's discuss your project and create a solution that delivers real results
             </p>
-            <button className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300">
+            <button className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover: bg-gray-100 transition-all duration-300">
               Start Your Project
               <ArrowRight className="ml-2 w-5 h-5" />
             </button>
@@ -296,7 +292,6 @@ const CaseStudies: NextPage = () => {
         </section>
       </Layout>
     </>
-  );
-};
+  )};
 
 export default CaseStudies;

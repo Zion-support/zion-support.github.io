@@ -3,7 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 import { Button } from './ui/Button.jsx';,"});,"})
 import { Input } from './ui/input';,"});,"})
 import { Textarea } from './ui/textarea.jsx';,"});,"})
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';import { Checkbox } from './ui/checkbox';,"});,"})
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select'
+import { Checkbox } from './ui/checkbox';,"});,"})
 import {}"});,"})
   Mail,;,"});,"})
   Phone,;,"});,"})
@@ -76,7 +77,7 @@ export const QuoteRequestForm = () => {}"});,"})
       ...prev,;,"});,"})
       [field]: value}));,"});,"})
 ;,"});,"})
-    // Clear error when user starts typing;,"});,"})
+    // Clear error when user starts typing,"});,"})
     if(errors[field]) {}"});,"})
       setErrors(prev => ({}"});,"})
         ...prev,';,"});,"})
@@ -101,24 +102,24 @@ export const QuoteRequestForm = () => {}"});,"})
       newErrors.agreeToTerms = 'You must agree to the terms and conditions';,"});,"})
 ;,"});,"})
     setErrors(newErrors) ;,"});,"})
-    return Object.keys(newErrors) .length === 0;,"});,"});
+    return Object.keys(newErrors) .length === 0,"});,"});
 };,"});,"})
 ;,"});,"})
   const handleSubmit = async e => {}"});,"})
     e.preventDefault();,"});,"})
 ;,"});,"})
     if(!validateForm()) {}"});,"})
-      return;,"});,"});
+      return,"});,"});
 }"});,"})
 ;,"});,"})
     setIsSubmitting(true) ;,"});,"})
 ;,"});,"})
     try {}"});,"})
-      // Simulate API call;,"});,"})
+      // Simulate API call,"});,"})
       await new Promise(resolve => setTimeout(resolve, 2000));,"});,"})
 ;,"});,"})
       setIsSubmitted(true);,"});,"})
-      // Reset form;,"});,"})
+      // Reset form,"});,"})
       setFormData({}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -155,10 +156,10 @@ export const QuoteRequestForm = () => {}"});,"})
             Quote Request Submitted!""";,"});,"})
           </h2>"""";,"});,"})
           <p className="text-gray-600 mb-6">;,"});,"})
-            Thank you for your interest.Our team will review your request and;,"});,"})
+            Thank you for your interest.Our team will review your request and,"});,"})
             get back to you within 24 hours.</p>;,"});,"})
           <Button onClick={ () => setIsSubmitted(false) }>;,"});,"})
-            Submit Another Request;,"});,"})
+            Submit Another Request,"});,"})
           </Button>;,"});,"})
         </CardContent>;,"});,"})
       </Card>) ;,"});,"});
@@ -169,19 +170,19 @@ export const QuoteRequestForm = () => {}"});,"})
       <CardHeader className="text-center">"""";,"});,"})
         <CardTitle className="text-3xl font-bold">Request a Quote</CardTitle>;,"});,"})
         <CardDescription>';,"});,"})
-          Tell us about your project and we'll provide you with a customized;,"});,"})
-          quote;,"});,"})
+          Tell us about your project and we'll provide you with a customized,"});,"})
+          quote,"});,"})
         </CardDescription>""";,"});,"})
       </CardHeader>"""";,"});,"})
       <CardContent className="p-6">"""";,"});,"})
         <form onSubmit={handleSubmit} className="space-y-6">""";,"});,"})
           {/* Personal Information */}"""";,"});,"})
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">""";,"});,"})
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">""","});,"})
             <div>"""";,"});,"})
               <label className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
                 First Name *;,"});,"})
               </label>;,"});,"})
-              <Input;,"});,"})
+              <Input,"});,"})
                 value={formData.firstName}'""";,"});,"})
                 onChange={e => handleChange('firstName', e.target.value)}"'""";,"});,"})
                 placeholder="John"'';,"});,"})
@@ -196,7 +197,7 @@ export const QuoteRequestForm = () => {}"});,"})
               <label className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
                 Last Name *;,"});,"})
               </label>;,"});,"})
-              <Input;,"});,"})
+              <Input,"});,"})
                 value={formData.lastName}'""";,"});,"})
                 onChange={e => handleChange('lastName', e.target.value)}"'""";,"});,"})
                 placeholder="Doe"'';,"});,"})
@@ -209,7 +210,7 @@ export const QuoteRequestForm = () => {}"});,"})
           </div>;,"});,"})
 """;,"});,"})
           {/* Contact Information */}"""";,"});,"})
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">""";,"});,"})
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">""","});,"})
             <div>"""";,"});,"})
               <label className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
                 Email *;,"});,"})
@@ -228,9 +229,9 @@ export const QuoteRequestForm = () => {}"});,"})
 """;,"});,"})
             <div>"""";,"});,"})
               <label className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
-                Phone;,"});,"})
+                Phone,"});,"})
               </label>;,"});,"})
-              <Input;,"});,"})
+              <Input,"});,"})
                 value={formData.phone}'""";,"});,"})
                 onChange={e => handleChange('phone', e.target.value)}"""";,"});,"})
                 placeholder="+1 (555) 123-4567""";,"});,"})
@@ -242,7 +243,7 @@ export const QuoteRequestForm = () => {}"});,"})
             <label className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
               Company Name *;,"});,"})
             </label>;,"});,"})
-            <Input;,"});,"})
+            <Input,"});,"})
               value={formData.company}'""";,"});,"})
               onChange={e => handleChange('company', e.target.value)}"'""";,"});,"})
               placeholder="Your Company Inc."'';,"});,"})
@@ -254,12 +255,12 @@ export const QuoteRequestForm = () => {}"});,"})
           </div>;,"});,"})
 """;,"});,"})
           {/* Project Details */}"""";,"});,"})
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">""";,"});,"})
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">""","});,"})
             <div>"""";,"});,"})
               <label className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
                 Service Type *;,"});,"})
               </label>;,"});,"})
-              <Select;,"});,"})
+              <Select,"});,"})
                 value={formData.serviceType}';,"});,"})
                 onValueChange={value => handleChange('serviceType', value)}"});,"})
               >';,"});,"})
@@ -284,9 +285,9 @@ export const QuoteRequestForm = () => {}"});,"})
 """;,"});,"})
             <div>"""";,"});,"})
               <label className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
-                Timeline;,"});,"})
+                Timeline,"});,"})
               </label>;,"});,"})
-              <Select;,"});,"})
+              <Select,"});,"})
                 value={formData.timeline}';,"});,"})
                 onValueChange={value => handleChange('timeline', value)}"});,"})
               >""";,"});,"})
@@ -303,12 +304,12 @@ export const QuoteRequestForm = () => {}"});,"})
             </div>;,"});,"})
           </div>""";,"});,"})
 """";,"});,"})
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">""";,"});,"})
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">""","});,"})
             <div>"""";,"});,"})
               <label className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
-                Budget Range;,"});,"})
+                Budget Range,"});,"})
               </label>;,"});,"})
-              <Select;,"});,"})
+              <Select,"});,"})
                 value={formData.budget}';,"});,"})
                 onValueChange={value => handleChange('budget', value)}"});,"})
               >""";,"});,"})
@@ -326,9 +327,9 @@ export const QuoteRequestForm = () => {}"});,"})
 """;,"});,"})
             <div>"""";,"});,"})
               <label className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
-                Urgency Level;,"});,"})
+                Urgency Level,"});,"})
               </label>;,"});,"})
-              <Select;,"});,"})
+              <Select,"});,"})
                 value={formData.urgency}';,"});,"})
                 onValueChange={value => handleChange('urgency', value)}"});,"})
               >;,"});,"})
@@ -349,7 +350,7 @@ export const QuoteRequestForm = () => {}"});,"})
             <label className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
               Project Description *;,"});,"})
             </label>;,"});,"})
-            <Textarea;,"});,"})
+            <Textarea,"});,"})
               value={formData.projectDescription}'""";,"});,"})
               onChange={e => handleChange('projectDescription', e.target.value)}"""";,"});,"})
               placeholder="Please describe your project requirements, goals, and any specific needs...""";,"});,"})
@@ -364,12 +365,12 @@ export const QuoteRequestForm = () => {}"});,"})
           </div>;,"});,"})
 """;,"});,"})
           {/* Preferences */}"""";,"});,"})
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">""";,"});,"})
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">""","});,"})
             <div>"""";,"});,"})
               <label className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
-                Preferred Contact Method;,"});,"})
+                Preferred Contact Method,"});,"})
               </label>;,"});,"})
-              <Select;,"});,"})
+              <Select,"});,"})
                 value={formData.contactMethod}';,"});,"})
                 onValueChange={value => handleChange('contactMethod', value)}"});,"})
               >;,"});,"})
@@ -397,7 +398,7 @@ export const QuoteRequestForm = () => {}"});,"})
               />"""";,"});,"})
               <label htmlFor="terms" className="text-sm text-gray-700">'""";,"});,"})
                 I agree to the{' '}"""";,"});,"})
-                <a href="/terms" className="text-blue-600 hover:underline">';,"});,"})
+                <a href="/terms" className="text-blue-600 hover: underline">',"});,"})
                   Terms and Conditions'';,"});,"})
                 </a>{' '}"});,"})
                 *;,"});,"})
@@ -416,7 +417,7 @@ export const QuoteRequestForm = () => {}"});,"})
 }""";,"});,"})
               />"""";,"});,"})
               <label htmlFor="marketing" className="text-sm text-gray-700">;,"});,"})
-                I agree to receive marketing communications from Zion Tech Group;,"});,"})
+                I agree to receive marketing communications from Zion Tech Group,"});,"})
               </label>;,"});,"})
             </div>;,"});,"})
           </div>;,"});,"})
@@ -436,7 +437,7 @@ export const QuoteRequestForm = () => {}"});,"})
               ) : (""";,"});,"})
                 <>"""";,"});,"})
                   <Send className="w-5 h-5 mr-2" />;,"});,"})
-                  Submit Quote Request;,"});,"})
+                  Submit Quote Request,"});,"})
                 </>) }"});,"})
             </Button>;,"});,"})
           </div>;,"});,"})
@@ -468,30 +469,30 @@ export const QuoteRequestForm = () => {}
 ';
 &apos;
 &apos;&apos;
-    firstName: &apos;&apos;,&apos;&apos;
-    lastName: &apos;&apos;,&apos;&apos;
-    email: &apos;&apos;,&apos;&apos;
-    phone: &apos;&apos;,&apos;&apos;
-    company: &apos;&apos;,&apos;&apos;
-    serviceType: &apos;&apos;,&apos;&apos;
-    projectDescription: &apos;&apos;,&apos;&apos;
-    timeline: &apos;&apos;,&apos;&apos;
-    budget: &apos;&apos;,&apos;&apos;
-    urgency: &apos;medium&apos;,'&apos;
-    contactMethod: &apos;email&apos;,
+    firstName: &apos;&apos,&apos;&apos;
+    lastName: &apos;&apos,&apos;&apos;
+    email: &apos;&apos,&apos;&apos;
+    phone: &apos;&apos,&apos;&apos;
+    company: &apos;&apos,&apos;&apos;
+    serviceType: &apos;&apos,&apos;&apos;
+    projectDescription: &apos;&apos,&apos;&apos;
+    timeline: &apos;&apos,&apos;&apos;
+    budget: &apos;&apos,&apos;&apos;
+    urgency: &apos;medium&apos,'&apos;
+    contactMethod: &apos;email&apos,
     agreeToTerms: false,
     agreeToMarketing: false})&apos;&apos;
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [isSubmitted, setIsSubmitted] = useState (false) ;
   const [errors, setErrors] = useState ({}) ';&apos;&apos;
-  const serviceTypes = [&apos;&apos;{ value: &apos;ai-services&apos;, label: &apos;AI & Machine Learning Services&apos; },&apos;{ value: &apos;it-solutions&apos;, label: &apos;IT Infrastructure & Solutions&apos; },&apos;{ value: &apos;talent-hiring&apos;, label: &apos;Talent Acquisition & Staffing&apos; },&apos;{ value: &apos;equipment&apos;, label: &apos;Equipment & Hardware&apos; },&apos;{ value: &apos;consulting&apos;, label: &apos;IT Consulting & Strategy&apos; },&apos;{ value: &apos;custom-development&apos;, label: &apos;Custom Software Development&apos; },&apos;{ value: &apos;other&apos;, label: &apos;Other Services&apos; }
+  const serviceTypes = [&apos;&apos;{ value: &apos;ai-services&apos, label: &apos;AI & Machine Learning Services&apos},&apos;{ value: &apos;it-solutions&apos, label: &apos;IT Infrastructure & Solutions&apos},&apos;{ value: &apos;talent-hiring&apos, label: &apos;Talent Acquisition & Staffing&apos},&apos;{ value: &apos;equipment&apos, label: &apos;Equipment & Hardware&apos},&apos;{ value: &apos;consulting&apos, label: &apos;IT Consulting & Strategy&apos},&apos;{ value: &apos;custom-development&apos, label: &apos;Custom Software Development&apos},&apos;{ value: &apos;other&apos, label: &apos;Other Services&apos}
   ]';&apos;&apos;
-  const timelineOptions = [&apos;&apos;{ value: &apos;asap&apos;, label: &apos;ASAP (Within 1 week)},&apos;{ value: &apos;1-2-weeks&apos;, label: &apos;1-2 weeks&apos; },&apos;{ value: &apos;1-month&apos;, label: &apos;1 month&apos; },&apos;{ value: &apos;2-3-months&apos;, label: &apos;2-3 months&apos; },&apos;{ value: &apos;3-6-months&apos;, label: &apos;3-6 months&apos; },&apos;{ value: &apos;6-months-plus&apos;, label: &apos;6+ months&apos; }
+  const timelineOptions = [&apos;&apos;{ value: &apos;asap&apos, label: &apos;ASAP (Within 1 week)},&apos;{ value: &apos;1-2-weeks&apos, label: &apos;1-2 weeks&apos},&apos;{ value: &apos;1-month&apos, label: &apos;1 month&apos},&apos;{ value: &apos;2-3-months&apos, label: &apos;2-3 months&apos},&apos;{ value: &apos;3-6-months&apos, label: &apos;3-6 months&apos},&apos;{ value: &apos;6-months-plus&apos, label: &apos;6+ months&apos}
   ]';&apos;&apos;
-  const budgetRanges = [&apos;&apos;{ value: &apos;under-5k&apos;, label: &apos;Under $5,000&apos; },&apos;{ value: &apos;5k-10k&apos;, label: &apos;$5,000 - $10,000&apos; },&apos;{ value: &apos;10k-25k&apos;, label: &apos;$10,000 - $25,000&apos; },&apos;{ value: &apos;25k-50k&apos;, label: &apos;$25,000 - $50,000&apos; },&apos;{ value: &apos;50k-100k&apos;, label: &apos;$50,000 - $100,000&apos; },&apos;{ value: &apos;100k-plus&apos;, label: &apos;$100,000+&apos; },&apos;{ value: &apos;to-be-discussed&apos;, label: &apos;To be discussed&apos; }
+  const budgetRanges = [&apos;&apos;{ value: &apos;under-5k&apos, label: &apos;Under $5,000&apos},&apos;{ value: &apos;5k-10k&apos, label: &apos;$5,000 - $10,000&apos},&apos;{ value: &apos;10k-25k&apos, label: &apos;$10,000 - $25,000&apos},&apos;{ value: &apos;25k-50k&apos, label: &apos;$25,000 - $50,000&apos},&apos;{ value: &apos;50k-100k&apos, label: &apos;$50,000 - $100,000&apos},&apos;{ value: &apos;100k-plus&apos, label: &apos;$100,000+&apos},&apos;{ value: &apos;to-be-discussed&apos, label: &apos;To be discussed&apos}
   ]';&apos;&apos;
   const urgencyLevels = [&apos;&apos;
-    { value: &apos;low&apos;, label: &apos;Low - Planning phase&apos; },&apos;{ value: &apos;medium&apos;, label: &apos;Medium - Ready to start soon&apos; },&apos;{ value: &apos;high&apos;, label: &apos;High - Need to start immediately&apos; },&apos;{ value: &apos;critical&apos;, label: &apos;Critical - Emergency situation&apos; }
+    { value: &apos;low&apos, label: &apos;Low - Planning phase&apos},&apos;{ value: &apos;medium&apos, label: &apos;Medium - Ready to start soon&apos},&apos;{ value: &apos;high&apos, label: &apos;High - Need to start immediately&apos},&apos;{ value: &apos;critical&apos, label: &apos;Critical - Emergency situation&apos}
   ]&apos;&apos;
 import React, { useState } from 'react';""
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';""
@@ -500,12 +501,12 @@ import { Input } from './ui/input';""
 import { Textarea } from './ui/textarea.jsx';""
 import { Textarea } from './ui/textarea.jsx';""
 ""
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Button} from './ui/Button.jsx';
+import { Button} from './ui/Button.jsx'
 import { Input} from './ui/input';
-import { Textarea} from './ui/textarea.jsx';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';import { Checkbox} from './ui/checkbox';
+import { Textarea} from './ui/textarea.jsx'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';import { Checkbox} from './ui/checkbox'
 import {}
   Mail,;
   Phone,;
@@ -586,7 +587,7 @@ export const QuoteRequestForm = () => {}
       setErrors(prev => ({}
         ...prev,';
         [field]: '}))}
-        [field]: &apos;&apos;}))}
+        [field]: &apos;&apos}))}
         ...prev, ';'
         [field]: ''}))}
   }
@@ -635,23 +636,23 @@ export const QuoteRequestForm = () => {}
 ';
 &apos;
 &apos;&apos;
-        firstName: &apos;&apos;,&apos;&apos;
-        lastName: &apos;&apos;,&apos;&apos;
-        email: &apos;&apos;,&apos;&apos;
-        phone: &apos;&apos;,&apos;&apos;
-        company: &apos;&apos;,&apos;&apos;
-        serviceType: &apos;&apos;,&apos;&apos;
-        projectDescription: &apos;&apos;,&apos;&apos;
-        timeline: &apos;&apos;,&apos;&apos;
-        budget: &apos;&apos;,&apos;&apos;
-        urgency: &apos;medium&apos;,'&apos;
-        contactMethod: &apos;email&apos;,
+        firstName: &apos;&apos,&apos;&apos;
+        lastName: &apos;&apos,&apos;&apos;
+        email: &apos;&apos,&apos;&apos;
+        phone: &apos;&apos,&apos;&apos;
+        company: &apos;&apos,&apos;&apos;
+        serviceType: &apos;&apos,&apos;&apos;
+        projectDescription: &apos;&apos,&apos;&apos;
+        timeline: &apos;&apos,&apos;&apos;
+        budget: &apos;&apos,&apos;&apos;
+        urgency: &apos;medium&apos,'&apos;
+        contactMethod: &apos;email&apos,
         agreeToTerms: false,
         agreeToMarketing: false})} catch (error) {}
 ';
 &apos;
 &apos;&apos;
-      // console.error(&apos;Error submitting form:&apos;, error)} finally {}
+      // console.error(&apos;Error submitting form: &apos, error)} finally {}
 ';'
 '';
         firstName: ','';
@@ -839,10 +840,10 @@ export const QuoteRequestForm = () => {}
               </label>
               <Input;
                 value={formData.firstName}&apos;&apos;'';
-                onChange={e => handleChange(&apos;firstName&apos;, e.target.value)}&apos;&apos;'&apos;
+                onChange={e => handleChange(&apos;firstName&apos, e.target.value)}&apos;&apos;'&apos;
                 placeholder=&apos;John&apos;&apos;
-                className={errors.firstName ? &apos;border-red-500&apos; : &apos;&apos;}
-              />&apos;&apos;'{errors.firstName && (&apos;&apos;'&apos;&apos;}'
+                className={errors.firstName ? &apos;border-red-500&apos; : &apos;&apos}
+              />&apos;&apos;'{errors.firstName && (&apos;&apos;'&apos;&apos}'
                 <p className=&apos;text-red-500 text-sm mt-1&apos;>{errors.firstName}&apos;</p>
               )}
             </div>
@@ -853,10 +854,10 @@ export const QuoteRequestForm = () => {}
               </label>
               <Input;
                 value={formData.lastName}&apos;&apos;'';
-                onChange={e => handleChange(&apos;lastName&apos;, e.target.value)}&apos;&apos;'&apos;
+                onChange={e => handleChange(&apos;lastName&apos, e.target.value)}&apos;&apos;'&apos;
                 placeholder=&apos;Doe&apos;&apos;
-                className={errors.lastName ? &apos;border-red-500&apos; : &apos;&apos;}
-              />&apos;&apos;'{errors.lastName && (&apos;&apos;'&apos;&apos;}'
+                className={errors.lastName ? &apos;border-red-500&apos; : &apos;&apos}
+              />&apos;&apos;'{errors.lastName && (&apos;&apos;'&apos;&apos}'
                 <p className=&apos;text-red-500 text-sm mt-1&apos;>{errors.lastName}&apos;</p>
               )}
             </div>
@@ -870,10 +871,10 @@ export const QuoteRequestForm = () => {}
               <Input&apos;&apos;'';
                 type=&apos;email&apos;&apos;
                 value={formData.email}&apos;&apos;'';
-                onChange={e => handleChange(&apos;email&apos;, e.target.value)}&apos;&apos;'&apos;
+                onChange={e => handleChange(&apos;email&apos, e.target.value)}&apos;&apos;'&apos;
                 placeholder=&apos;john@company.com&apos;&apos;
-                className={errors.email ? &apos;border-red-500&apos; : &apos;&apos;}
-              />&apos;&apos;'{errors.email && (&apos;&apos;'&apos;&apos;}'
+                className={errors.email ? &apos;border-red-500&apos; : &apos;&apos}
+              />&apos;&apos;'{errors.email && (&apos;&apos;'&apos;&apos}'
                 <p className=&apos;text-red-500 text-sm mt-1&apos;>{errors.email}&apos;</p>
               )}
             </div>
@@ -950,7 +951,7 @@ export const QuoteRequestForm = () => {}
                 placeholder='+1 (555) 123-4567'''
               />
                 value={formData.phone}&apos;&apos;'';
-                onChange={e => handleChange(&apos;phone&apos;, e.target.value)}&apos;&apos;'';
+                onChange={e => handleChange(&apos;phone&apos, e.target.value)}&apos;&apos;'';
                 placeholder=&apos;+1 (555) 123-4567&apos;&apos;'
               />&apos;&apos;
             </div>
@@ -962,10 +963,10 @@ export const QuoteRequestForm = () => {}
             </label>
             <Input;
               value={formData.company}&apos;&apos;'';
-              onChange={e => handleChange(&apos;company&apos;, e.target.value)}&apos;&apos;'&apos;
+              onChange={e => handleChange(&apos;company&apos, e.target.value)}&apos;&apos;'&apos;
               placeholder=&apos;Your Company Inc.&apos;&apos;
-              className={errors.company ? &apos;border-red-500&apos; : &apos;&apos;}
-            />&apos;&apos;'{errors.company && (&apos;&apos;'&apos;&apos;}'
+              className={errors.company ? &apos;border-red-500&apos; : &apos;&apos}
+            />&apos;&apos;'{errors.company && (&apos;&apos;'&apos;&apos}'
               <p className=&apos;text-red-500 text-sm mt-1&apos;>{errors.company}&apos;</p>
             )}
           </div>
@@ -977,10 +978,10 @@ export const QuoteRequestForm = () => {}
               </label>
               <Select;
                 value={formData.serviceType}';
-                onValueChange={value => handleChange(&apos;serviceType&apos;, value)}
+                onValueChange={value => handleChange(&apos;serviceType&apos, value)}
               >&apos;&apos;'
                 <SelectTrigger&apos;
-                  className={errors.serviceType ? &apos;border-red-500&apos; : &apos;&apos;}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
+                  className={errors.serviceType ? &apos;border-red-500&apos; : &apos;&apos}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
                   <SelectValue placeholder=&apos;Select a service&apos; />&apos;
           {/* Company Information */}''''
           <div>''''
@@ -1029,7 +1030,7 @@ export const QuoteRequestForm = () => {}
                       {service.label}
                     </SelectItem>) ) }
                 </SelectContent>
-              </Select>&apos;&apos;'{errors.serviceType && (&apos;&apos;'&apos;&apos;}'
+              </Select>&apos;&apos;'{errors.serviceType && (&apos;&apos;'&apos;&apos}'
                 <p className=&apos;text-red-500 text-sm mt-1&apos;>
                   {errors.serviceType}&apos;
                 </p>
@@ -1042,7 +1043,7 @@ export const QuoteRequestForm = () => {}
               </label>
               <Select;
                 value={formData.timeline}';
-                onValueChange={value => handleChange(&apos;timeline&apos;, value)}
+                onValueChange={value => handleChange(&apos;timeline&apos, value)}
               >&apos;&apos;'&apos;&apos;
                 <SelectTrigger>&apos;&apos;'&apos;&apos;'
                   <SelectValue placeholder=&apos;Select timeline&apos; />&apos;
@@ -1107,7 +1108,7 @@ export const QuoteRequestForm = () => {}
               </label>
               <Select;
                 value={formData.budget}';
-                onValueChange={value => handleChange(&apos;budget&apos;, value)}
+                onValueChange={value => handleChange(&apos;budget&apos, value)}
               >&apos;&apos;'&apos;&apos;
                 <SelectTrigger>&apos;&apos;'&apos;&apos;'
                   <SelectValue placeholder=&apos;Select budget range&apos; />&apos;
@@ -1157,7 +1158,7 @@ export const QuoteRequestForm = () => {}
               </label>
               <Select;
                 value={formData.urgency}';
-                onValueChange={value => handleChange(&apos;urgency&apos;, value)}
+                onValueChange={value => handleChange(&apos;urgency&apos, value)}
               >&apos;&apos;
 ''''
             <div>''''
@@ -1213,11 +1214,11 @@ export const QuoteRequestForm = () => {}
             </label>
             <Textarea;
               value={formData.projectDescription}&apos;&apos;'';
-              onChange={e => handleChange(&apos;projectDescription&apos;, e.target.value)}&apos;&apos;'';
+              onChange={e => handleChange(&apos;projectDescription&apos, e.target.value)}&apos;&apos;'';
               placeholder=&apos;Please describe your project requirements, goals, and any specific needs...&apos;&apos;
               rows={6}';
-              className={errors.projectDescription ? &apos;border-red-500&apos; : &apos;&apos;}
-            />&apos;&apos;'{errors.projectDescription && (&apos;&apos;'&apos;&apos;}'
+              className={errors.projectDescription ? &apos;border-red-500&apos; : &apos;&apos}
+            />&apos;&apos;'{errors.projectDescription && (&apos;&apos;'&apos;&apos}'
               <p className=&apos;text-red-500 text-sm mt-1&apos;>
                 {errors.projectDescription}&apos;
               </p>
@@ -1231,7 +1232,7 @@ export const QuoteRequestForm = () => {}
               </label>
               <Select;
                 value={formData.contactMethod}';
-                onValueChange={value => handleChange(&apos;contactMethod&apos;, value)}
+                onValueChange={value => handleChange(&apos;contactMethod&apos, value)}
               >&apos;&apos;
                 <SelectTrigger>
                   <SelectValue />
@@ -1356,15 +1357,15 @@ export const QuoteRequestForm = () => {}
                 id=&apos;terms&apos;&apos;
                 checked={formData.agreeToTerms}
                 onCheckedChange={checked =>';
-                  handleChange(&apos;agreeToTerms&apos;, checked)}&apos;&apos;'/>&apos;&apos;'&apos;&apos;'
+                  handleChange(&apos;agreeToTerms&apos, checked)}&apos;&apos;'/>&apos;&apos;'&apos;&apos;'
               <label htmlFor=&apos;terms&apos; className=&apos;text-sm text-gray-700&apos;>'&apos;&apos;
-                I agree to the{&apos; &apos;}&apos;&apos;'&apos;&apos;'
-                <a href=&apos;/terms&apos; className=&apos;text-blue-600 hover:underline&apos;>';
+                I agree to the{&apos; &apos}&apos;&apos;'&apos;&apos;'
+                <a href=&apos;/terms&apos; className=&apos;text-blue-600 hover: underline&apos;>';
                   Terms and Conditions&apos;&apos;''
-                </a>{&apos; &apos;}
+                </a>{&apos; &apos}
                 *&apos;&apos;
               </label>
-            </div>&apos;&apos;'{errors.agreeToTerms && (&apos;&apos;'&apos;&apos;}'
+            </div>&apos;&apos;'{errors.agreeToTerms && (&apos;&apos;'&apos;&apos}'
               <p className=&apos;text-red-500 text-sm&apos;>{errors.agreeToTerms}&apos;</p>
             )}&apos;&apos;
 &apos;&apos;'&apos;&apos;'
@@ -1373,7 +1374,7 @@ export const QuoteRequestForm = () => {}
                 id=&apos;marketing&apos;&apos;
                 checked={formData.agreeToMarketing}
                 onCheckedChange={checked =>';
-                  handleChange(&apos;agreeToMarketing&apos;, checked)}&apos;&apos;'/>&apos;&apos;'&apos;&apos;'
+                  handleChange(&apos;agreeToMarketing&apos, checked)}&apos;&apos;'/>&apos;&apos;'&apos;&apos;'
               <label htmlFor=&apos;marketing&apos; className=&apos;text-sm text-gray-700&apos;>
                 I agree to receive marketing communications from Zion Tech Group&apos;
               </label>
@@ -1384,7 +1385,7 @@ export const QuoteRequestForm = () => {}
             <Button&apos;&apos;'&apos;
               type=&apos;submit&apos;&apos;'';
               disabled={isSubmitting}&apos;&apos;'';
-              className=&apos;px-8 py-3 text-lg &apos;>{isSubmitting ? (&apos;&apos;'&apos;}&apos;
+              className=&apos;px-8 py-3 text-lg &apos;>{isSubmitting ? (&apos;&apos;'&apos}&apos;
                 <>&apos;&apos;'&apos;&apos;'
                   <div className=&apos;animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2&apos;>&apos;'</div>
                   Submitting...
@@ -1447,8 +1448,7 @@ export const QuoteRequestForm = () => {}
 }'';";
 }'';
 '''''';
-    </Card>) }&apos;&quot;
-}&apos;';
+    </Card>) }&apos;&quot}&apos;';
 &apos;&apos;'&apos;&apos;'
 &apos;'
     </Card>) }'';"";

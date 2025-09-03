@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { Helmet } from 'react-helmet-async';
 import { 
   Headphones, 
@@ -18,8 +18,7 @@ import {
   Users,
   Bot,
   Phone,
-  Mail;
-} from 'lucide-react';
+  Mail} from 'lucide-react';
 
 const AICustomerSupportPlatform: React.FC = () => {
   const features = [
@@ -36,8 +35,7 @@ const AICustomerSupportPlatform: React.FC = () => {
     {
       icon: Brain,
       title: "Smart Ticket Routing",
-      description: "AI automatically categorizes and routes tickets to the right agents based on expertise and workload.";
-},
+      description: "AI automatically categorizes and routes tickets to the right agents based on expertise and workload."},
     {
       icon: BarChart3,
       title: "Real-Time Analytics",
@@ -46,13 +44,11 @@ const AICustomerSupportPlatform: React.FC = () => {
     {
       icon: Shield,
       title: "Knowledge Base AI",
-      description: "Automatically updated knowledge base with AI-powered search and intelligent article suggestions.";
-},
+      description: "Automatically updated knowledge base with AI-powered search and intelligent article suggestions."},
     {
       icon: Globe,
       title: "24/7 Availability",
-      description: "Round-the-clock customer support with AI handling common queries and human agents for complex issues.";
-}
+      description: "Round-the-clock customer support with AI handling common queries and human agents for complex issues."}
   ]
 
   const benefits = [
@@ -68,23 +64,19 @@ const AICustomerSupportPlatform: React.FC = () => {
     {
       title: "CRM Integration",
       description: "Seamlessly integrate with Salesforce, HubSpot, and other CRM platforms for complete customer context.",
-      icon: Users;
-},
+      icon: Users},
     {
       title: "E-commerce Platforms",
       description: "Connect with Shopify, WooCommerce, and Magento for order tracking and product support.",
-      icon: Target;
-},
+      icon: Target},
     {
       title: "Communication Tools",
       description: "Integrate with Slack, Microsoft Teams, and other collaboration tools for internal coordination.",
-      icon: MessageSquare;
-},
+      icon: MessageSquare},
     {
       title: "Analytics Platforms",
       description: "Connect with Google Analytics, Mixpanel, and other tools for comprehensive customer insights.",
-      icon: BarChart3;
-}
+      icon: BarChart3}
   ]
 
   const pricing = [
@@ -114,8 +106,7 @@ const AICustomerSupportPlatform: React.FC = () => {
         "Priority support",
         "Analytics dashboard"
       ],
-      popular: true;
-},
+      popular: true},
     {
       name: "Enterprise",
       price: "$150",
@@ -310,11 +301,11 @@ const AICustomerSupportPlatform: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-8`>
               {pricing.map((plan, index) => (
                 <div key={index} className={`relative p-8 rounded-xl border-2 ${plan.popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} hover:shadow-lg transition-shadow`}>
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
                       <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                         Most Popular
                       </span>
@@ -336,13 +327,11 @@ const AICustomerSupportPlatform: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <a 
-                    href="https://ziontechgroup.com/contact" 
+                  <a href={`https: //ziontechgroup.com/contact` 
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                       plan.popular 
                         ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                        : 'bg-gray-900 text-white hover:bg-gray-800';
-}`}
+                        : 'bg-gray-900 text-white hover:bg-gray-800'}`}
                   >
                     Get Started
                   </a>
@@ -353,7 +342,7 @@ const AICustomerSupportPlatform: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+        <section className=`py-20 px-4 sm: px-6 lg:px-8 bg-blue-600`}>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Customer Support?
@@ -384,7 +373,6 @@ const AICustomerSupportPlatform: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default AICustomerSupportPlatform;

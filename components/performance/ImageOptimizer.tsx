@@ -104,8 +104,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       {'
         threshold: 0.1}
     );
-        threshold: 0.1;
-}
+        threshold: 0.1}
 
 
     return () => {
@@ -136,8 +135,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         <span className="text-gray-500 text-sm">Image failed to load</span>
 
 
-    <div
-      ref={imgRef}"
+    <div ref={imgRef}`
       className={`relative overflow-hidden ${className}`}`
       style={fill ? { position: 'relative', width: '100%', height: '100%' } : { width, height, ...style }}
       ref={imgRef}
@@ -169,14 +167,13 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
           objectFit: 'cover',
           width: fill ? '100%' : width,
           height: fill ? '100%' : height,
-          ...style;
-}}
+          ...style}}
         loading={priority ? 'eager' : 'lazy'}
       />
       
       {/* Loading skeleton */}
-          className="absolute inset-0 bg-gray-200 animate-pulse"
-          aria-hidden="true"
+          className=`absolute inset-0 bg-gray-200 animate-pulse"
+          aria-hidden={`true`
 export: default ImageOptimizer
 
 export default ImageOptimizer
@@ -188,7 +185,7 @@ export default ImageOptimizer;
         style={{`
           ...style}}
       
-          className="absolute inset-0 bg-gray-200 animate-pulse""
+          className=`absolute inset-0 bg-gray-200 animate-pulse`}"
           className='absolute inset-0 bg-gray-200 animate-pulse'
           aria-hidden='true'/>)}
 

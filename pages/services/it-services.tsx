@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout';
+import MainLayout from '../../components/layout/MainLayout'
 import { getServicesByCategory } from '../../data/services';
-import { ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from 'lucide-react';
+import { ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from 'lucide-react'
 import Link from 'next/link';
 
 const ITServicesPage: NextPage = () => {
@@ -11,18 +11,14 @@ const ITServicesPage: NextPage = () => {
   const benefits = [
     {
       icon: <Shield className="w-8 h-8" />, title: 'Enterprise Security',
-      description: 'Bank-level security protocols and compliance standards to protect your business data.';
-}, {
+      description: 'Bank-level security protocols and compliance standards to protect your business data.'}, {
       icon: <Zap className="w-8 h-8" />,
-      title: 'Performance Optimization', description: 'Optimize your infrastructure for maximum performance and efficiency.';
-},
+      title: 'Performance Optimization', description: 'Optimize your infrastructure for maximum performance and efficiency.'},
     {
       icon: <Users className="w-8 h-8" />, title: 'Expert Team',
-      description: 'Experienced IT professionals with deep expertise in enterprise solutions.';
-}, {
+      description: 'Experienced IT professionals with deep expertise in enterprise solutions.'}, {
       icon: <Globe className="w-8 h-8" />,
-      title: 'Global Support', description: '24/7 support and monitoring to ensure your systems run smoothly.';
-}
+      title: 'Global Support', description: '24/7 support and monitoring to ensure your systems run smoothly.'}
   ]
 
   return (
@@ -93,8 +89,8 @@ const ITServicesPage: NextPage = () => {
                 <div className="flex items-start justify-between mb-6">
                   <div className="text-5xl">{service.icon}</div>
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-blue-600">${service.pricing.starter.toLocaleString()}</div>
-                    <div className="text-sm text-gray-500">Starting price</div>
+                    <div className={`text-3xl font-bold text-blue-600`>${service.pricing.starter.toLocaleString()}</div>
+                    <div className=`text-sm text-gray-500`}>Starting price</div>
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.name}</h3>
@@ -320,7 +316,6 @@ const ITServicesPage: NextPage = () => {
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )};
 
 export default ITServicesPage;

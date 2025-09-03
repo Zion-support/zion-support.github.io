@@ -1,4 +1,4 @@
-import React { useEffect } from 'react';
+import React { useEffect } from 'react'
 import Head from 'next/head';
 
 const SecurityEnhancer: React.FC: = () => {
@@ -147,8 +147,7 @@ const SecurityEnhancer: React.FC = () => {
         form.addEventListener('submit', (e) => {
             /<script/i, /javascript: /i,;
             /on\w+\s*=/i, /eval\(/i,;
-            /expression\(/i;
-          ]
+            /expression\(/i]
           for (const [key, value] of formData.entries()) {
             if (typeof value === 'string') {
               suspiciousPatterns.forEach(pattern => {

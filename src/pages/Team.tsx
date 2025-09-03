@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {SEO } from '@/components/SEO';
 
 ;,"});,"})
@@ -15,13 +15,12 @@ export default function Team() {return (
 import React from &apos;react';
 import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import { SEO } from '../components/SEO';
 import { ;
   Linkedin, Twitter, Github, Mail, Award, Users, ;
   Brain, Atom, Shield, Rocket, Globe, Code, ;
-  Star, CheckCircle, TrendingUp, Target ;
-} from 'lucide-react';
+  Star, CheckCircle, TrendingUp, Target} from 'lucide-react';
 ;
 export default function Team() {;
   const teamMembers = [;
@@ -101,58 +100,56 @@ export default function Team() {;
 import { 
   Linkedin, Twitter, Github, Mail, Award, Users, 
   Brain, Atom, Shield, Rocket, Globe, Code, 
-  Star, CheckCircle, TrendingUp, Target ;
-} from &apos;lucide-react';&apos;&apos;
+  Star, CheckCircle, TrendingUp, Target} from &apos;lucide-react';&apos;&apos;
 
 export default function Team() {}
   const teamMembers = [
     ;{
       id: 1,
-      name: &quot;Dr. Sarah Chen&quot;,
-      role: &quot;Chief Executive Officer&quot;,
-      department: &quot;Executive&quot;,
-      bio: &quot;Visionary leader with 15+ years in AI and quantum computing. Former MIT researcher and Google AI pioneer.&quot;,
-      expertise: [&quot;AI Strategy&quot;, &quot;Quantum Computing&quot;, &quot;Leadership&quot;],
-      achievements: [&quot;MIT PhD&quot;, &quot;Google AI Research&quot;, &quot;50+ Patents&quot;];
+      name: &quot;Dr. Sarah Chen&quot,
+      role: &quot;Chief Executive Officer&quot,
+      department: &quot;Executive&quot,
+      bio: &quot;Visionary leader with 15+ years in AI and quantum computing. Former MIT researcher and Google AI pioneer.&quot,
+      expertise: [&quot;AI Strategy&quot, &quot;Quantum Computing&quot, &quot;Leadership&quot],
+      achievements: [&quot;MIT PhD&quot, &quot;Google AI Research&quot, &quot;50+ Patents&quot];
 },
     {
       id: 2,
-      name: &quot;Prof. Michael Rodriguez&quot;,
-      role: &quot;Chief Technology Officer&quot;,
-      department: &quot;Technology&quot;,
-      bio: &quot;Quantum computing expert and former IBM Research scientist. Leading our quantum technology initiatives.&quot;,
-      expertise: [&quot;Quantum Computing&quot;, &quot;Research&quot;, &quot;Innovation&quot;],
-      achievements: [&quot;IBM Research&quot;, &quot;Quantum Pioneer&quot;, &quot;Nobel Nominee&quot;];
+      name: &quot;Prof. Michael Rodriguez&quot,
+      role: &quot;Chief Technology Officer&quot,
+      department: &quot;Technology&quot,
+      bio: &quot;Quantum computing expert and former IBM Research scientist. Leading our quantum technology initiatives.&quot,
+      expertise: [&quot;Quantum Computing&quot, &quot;Research&quot, &quot;Innovation&quot],
+      achievements: [&quot;IBM Research&quot, &quot;Quantum Pioneer&quot, &quot;Nobel Nominee&quot];
 },
     {
       id: 3,
-      name: &quot;Alex Thompson&quot;,
-      role: &quot;Head of AI Research&quot;,
-      department: &quot;AI & Machine Learning&quot;,
-      bio: &quot;AI researcher and entrepreneur. Former DeepMind engineer with expertise in neural networks and deep learning.&quot;,
-      expertise: [&quot;Deep Learning&quot;, &quot;Neural Networks&quot;, &quot;AI Ethics&quot;],
-      achievements: [&quot;DeepMind Alumni&quot;, &quot;AI Ethics Leader&quot;, &quot;30+ Publications&quot;];
+      name: &quot;Alex Thompson&quot,
+      role: &quot;Head of AI Research&quot,
+      department: &quot;AI & Machine Learning&quot,
+      bio: &quot;AI researcher and entrepreneur. Former DeepMind engineer with expertise in neural networks and deep learning.&quot,
+      expertise: [&quot;Deep Learning&quot, &quot;Neural Networks&quot, &quot;AI Ethics&quot],
+      achievements: [&quot;DeepMind Alumni&quot, &quot;AI Ethics Leader&quot, &quot;30+ Publications&quot];
 },
     {
       id: 4,
-      name: &quot;Lisa Park&quot;,
-      role: &quot;Chief Security Officer&quot;,
-      department: &quot;Cybersecurity&quot;,
-      bio: &quot;Cybersecurity expert with 12+ years protecting enterprise systems. Former NSA security analyst.&quot;,
-      expertise: [&quot;Cybersecurity&quot;, &quot;Risk Management&quot;, &quot;Compliance&quot;],
-      achievements: [&quot;NSA Experience&quot;, &quot;Security Expert&quot;, &quot;CISSP Certified&quot;];
+      name: &quot;Lisa Park&quot,
+      role: &quot;Chief Security Officer&quot,
+      department: &quot;Cybersecurity&quot,
+      bio: &quot;Cybersecurity expert with 12+ years protecting enterprise systems. Former NSA security analyst.&quot,
+      expertise: [&quot;Cybersecurity&quot, &quot;Risk Management&quot, &quot;Compliance&quot],
+      achievements: [&quot;NSA Experience&quot, &quot;Security Expert&quot, &quot;CISSP Certified&quot];
 }
   ]&quot;
 
   const stats = [
-    { number: &quot;50+&quot;, label: &quot;Team Members&quot;, icon: Users },
-    { number: &quot;15+&quot;, label: &quot;Countries&quot;, icon: Globe },
-    { number: &quot;200+&quot;, label: &quot;Years Combined Experience&quot;, icon: Award },
-    { number: &quot;95%&quot;, label: &quot;Employee Satisfaction&quot;, icon: Star }
+    { number: &quot;50+&quot, label: &quot;Team Members&quot, icon: Users },
+    { number: &quot;15+&quot, label: &quot;Countries&quot, icon: Globe },
+    { number: &quot;200+&quot, label: &quot;Years Combined Experience&quot, icon: Award },
+    { number: &quot;95%&quot, label: &quot;Employee Satisfaction&quot, icon: Star }
   ]
 
-  return (&quot;
-} from 'lucide-react';
+  return (&quot} from 'lucide-react';
 export default function Team() {
   const teamMembers = [
     { id: 1, name: "Dr. Sarah Chen",
@@ -225,7 +222,7 @@ export default function Team() {
                 united by a passion for innovation and excellence.&quot;
               </p>
               <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6&quot;>
-                {stats.map((stat, index) => (&quot;}
+                {stats.map((stat, index) => (&quot}
               <p className="text-xl text-gray-300 mb-8">
                 World-class experts in AI, quantum computing, cybersecurity, and emerging technologies, united by a passion for innovation and excellence.
               </p>
@@ -297,7 +294,7 @@ export default function Team() {
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-8&quot;>
-              {teamMembers.map((member, index) => (&quot;}
+              {teamMembers.map((member, index) => (&quot}
                 <motion.div
                   key={member.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -356,7 +353,7 @@ export default function Team() {
                     <div className=&quot;mb-4&quot;>&quot;"
                       <h4 className=&quot;text-sm font-semibold text-white mb-2&quot;>Expertise&quot;</h4>
                       <div className=&quot;flex flex-wrap gap-2&quot;>
-                        {member.expertise.map((skill, skillIndex) => (&quot;}
+                        {member.expertise.map((skill, skillIndex) => (&quot}
                           <span
                             key={skillIndex}
                             className=&quot;px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300&quot;
@@ -378,7 +375,7 @@ export default function Team() {
                     <div className=&quot;mb-4&quot;>&quot;"
                       <h4 className=&quot;text-sm font-semibold text-white mb-2&quot;>Key Achievements&quot;</h4>
                       <div className=&quot;space-y-1&quot;>
-                        {member.achievements.map((achievement, achIndex) => (&quot;}
+                        {member.achievements.map((achievement, achIndex) => (&quot}
                           <div key={achIndex} className=&quot;flex items-center text-xs text-gray-400&quot;>&quot;"
                             <CheckCircle className=&quot;w-3 h-3 text-green-400 mr-2&quot; />
                             {achievement}&quot;
@@ -387,25 +384,24 @@ export default function Team() {
                       </div>;
                     </div>;
 
-                    <div className="flex items-center justify-center space-x-4 pt-4 border-t border-slate-600/50">;
+                    <div className={`flex items-center justify-center space-x-4 pt-4 border-t border-slate-600/50`>;
                       <a;
                         href={`mailto:${member.name.toLowerCase().replace(/\s+/g, '.')}@ziontechgroup.com`}
-                        className="text-gray-400 hover:text-green-400 transition-colors";
+                        className=`text-gray-400 hover:text-green-400 transition-colors`};
                       >;
                         <Mail className="w-5 h-5" />;
                       </a>;
                     </div>;
                   </div>;
                 </motion.div>;
-                    <div className=&quot;flex items-center justify-center space-x-4 pt-4 border-t border-slate-600/50&quot;>&quot;"
-                      <a
-                        href={`mailto:${member.name.toLowerCase().replace(/\s+/g, &apos;.&apos;)}@ziontechgroup.com`}
+                    <div className=&quot;flex items-center justify-center space-x-4 pt-4 border-t border-slate-600/50&quot;>&quot;`
+                      <a href={`mailto:${member.name.toLowerCase().replace(/\s+/g, &apos;.&apos)}@ziontechgroup.com`}
                         className=&quot;text-gray-400 hover:text-green-400 transition-colors&quot;
                       >&quot;&apos;
                         <Mail className=&quot;w-5 h-5&quot; />&quot;
                         href={`mailto: ${member.name.toLowerCase().replace(/\s+/g, '.')}@ziontechgroup.com`}
                         href={`mailto: ${member.name.toLowerCase().replace(/\\s+/g, '.')}@ziontechgroup.com`}
-                        className="text-gray-400 hover: text-green-400 transition-colors"
+                        className=`text-gray-400 hover: text-green-400 transition-colors"
                       >
                         <Mail className="w-5 h-5" />
                       </a>
@@ -491,7 +487,7 @@ export default function Team() {
                 </a>
                 <a
                   href=&quot;/contact&quot;
-                  className=&quot;inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hove,r:text-white transition-all duration-200&quot;
+                  className=&quot;inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hove,r: text-white transition-all duration-200&quot;
                 >&quot;
                   <Mail className=&quot;w-5 h-5 mr-2&quot; />
                   Get in Touch&quot;
@@ -503,5 +499,4 @@ export default function Team() {
       </div>
 </>
   )
-  );
-}
+  )}

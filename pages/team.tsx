@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO'
 import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
+import { Card } from '../components/ui/Card'
 import { Badge } from '../components/ui/Badge';
 import { 
   Linkedin, Twitter,
@@ -16,14 +16,13 @@ import {
   MapPin, Calendar,
   GraduationCap, Briefcase,
   Heart, Sparkles,
-  CheckCircle, ArrowRight;
-} from 'lucide-react';
+  CheckCircle, ArrowRight} from 'lucide-react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer'
 import Navigation from '../components/layout/EnhancedNavigation';
-import Footer from '../components/layout/Footer';
+import Footer from '../components/layout/Footer'
 import { ArrowRight, Award, Brain, Code, Globe, Shield, Users, Zap } from 'lucide-react';
 
 export default function Team() {
@@ -33,57 +32,49 @@ export default function Team() {
       title: "Chief Executive Officer", bio: "Visionary leader with 15+ years of experience in AI and technology innovation. Former VP of Engineering at leading tech companies.",
       image: "/api/placeholder/300/300", expertise: ["AI Strategy", "Leadership", "Innovation"], education: "PhD in Computer Science, MIT", experience: "15+ years",
       linkedin: "https://linkedin.com/in/sarahjohnson", twitter: "https://twitter.com/sarahjohnson",
-      email: "sarah@ziontechgroup.com", featured: true;
-},
+      email: "sarah@ziontechgroup.com", featured: true},
     {
       id: 2, name: "Michael Chen",
       title: "Chief Technology Officer", bio: "Technology architect with expertise in AI, cloud computing, and scalable systems. Led development teams at Fortune 500 companies.",
       image: "/api/placeholder/300/300", expertise: ["AI Architecture", "Cloud Computing", "System Design"], education: "MS in Computer Science, Stanford", experience: "12+ years",
       linkedin: "https://linkedin.com/in/michaelchen", twitter: "https://twitter.com/michaelchen",
-      email: "michael@ziontechgroup.com", featured: true;
-},
+      email: "michael@ziontechgroup.com", featured: true},
     {
       id: 3, name: "Emily Rodriguez",
       title: "Chief AI Officer", bio: "AI research scientist and machine learning expert. Published author with 50+ research papers in top-tier conferences.",
       image: "/api/placeholder/300/300", expertise: ["Machine Learning", "Research", "AI Ethics"], education: "PhD in AI, Carnegie Mellon", experience: "10+ years",
       linkedin: "https://linkedin.com/in/emilyrodriguez", twitter: "https://twitter.com/emilyrodriguez",
-      email: "emily@ziontechgroup.com", featured: true;
-},
+      email: "emily@ziontechgroup.com", featured: true},
     {
       id: 4, name: "David Kim",
       title: "Head of Data Science", bio: "Data science leader with expertise in big data analytics and predictive modeling. Former data scientist at Google and Amazon.",
       image: "/api/placeholder/300/300", expertise: ["Data Science", "Analytics", "Predictive Modeling"], education: "PhD in Statistics, UC Berkeley", experience: "8+ years",
       linkedin: "https://linkedin.com/in/davidkim", twitter: "https://twitter.com/davidkim",
-      email: "david@ziontechgroup.com", featured: false;
-},
+      email: "david@ziontechgroup.com", featured: false},
     {
       id: 5, name: "Lisa Wang",
       title: "Head of Product", bio: "Product strategist with a focus on AI-powered solutions. Led product development for multiple successful AI startups.",
       image: "/api/placeholder/300/300", expertise: ["Product Strategy", "AI Products", "User Experience"], education: "MBA, Harvard Business School", experience: "9+ years",
       linkedin: "https://linkedin.com/in/lisawang", twitter: "https://twitter.com/lisawang",
-      email: "lisa@ziontechgroup.com", featured: false;
-},
+      email: "lisa@ziontechgroup.com", featured: false},
     {
       id: 6, name: "James Wilson",
       title: "Head of Engineering", bio: "Engineering leader with expertise in scalable systems and AI infrastructure. Former senior engineer at Netflix and Uber.",
       image: "/api/placeholder/300/300", expertise: ["Engineering", "Infrastructure", "Scalability"], education: "MS in Software Engineering, CMU", experience: "11+ years",
       linkedin: "https://linkedin.com/in/jameswilson", twitter: "https://twitter.com/jameswilson",
-      email: "james@ziontechgroup.com", featured: false;
-},
+      email: "james@ziontechgroup.com", featured: false},
     {
       id: 7, name: "Maria Garcia",
       title: "Head of Cybersecurity", bio: "Cybersecurity expert with focus on AI security and threat intelligence. Former security architect at major financial institutions.",
       image: "/api/placeholder/300/300", expertise: ["Cybersecurity", "AI Security", "Threat Intelligence"], education: "MS in Cybersecurity, Georgia Tech", experience: "7+ years",
       linkedin: "https://linkedin.com/in/mariagarcia", twitter: "https://twitter.com/mariagarcia",
-      email: "maria@ziontechgroup.com", featured: false;
-},
+      email: "maria@ziontechgroup.com", featured: false},
     {
       id: 8, name: "Alex Thompson",
       title: "Head of Cloud Solutions", bio: "Cloud architecture expert with certifications in AWS, Azure, and GCP. Led cloud migration projects for enterprise clients.",
       image: "/api/placeholder/300/300", expertise: ["Cloud Architecture", "Migration", "DevOps"], education: "BS in Computer Science, UT Austin", experience: "6+ years",
       linkedin: "https://linkedin.com/in/alexthompson", twitter: "https://twitter.com/alexthompson",
-      email: "alex@ziontechgroup.com", featured: false;
-}
+      email: "alex@ziontechgroup.com", featured: false}
   ]
 
   const leadership = teamMembers.filter(member => member.featured);
@@ -103,47 +94,38 @@ export default function Team() {
       expertise: 'AI & Machine Learning',
       description: 'Visionary leader with 15+ years in AI and technology innovation.',
       icon: Brain,
-      linkedin: 'https://linkedin.com/in/kleber-santos';
-},
+      linkedin: 'https://linkedin.com/in/kleber-santos'},
     {
       name: 'Sarah Johnson', role: 'CTO',
       expertise: 'Cloud Architecture', description: 'Expert in scalable cloud solutions and enterprise architecture.',
-      icon: Globe, linkedin: 'https://linkedin.com/in/sarah-johnson';
-},
+      icon: Globe, linkedin: 'https://linkedin.com/in/sarah-johnson'},
     {
       name: 'Michael Chen', role: 'Lead AI Engineer',
       expertise: 'Machine Learning', description: 'Specialist in deep learning and autonomous systems development.',
-      icon: Brain, linkedin: 'https://linkedin.com/in/michael-chen';
-},
+      icon: Brain, linkedin: 'https://linkedin.com/in/michael-chen'},
     {
       name: 'Emily Rodriguez', role: 'Security Director',
       expertise: 'Cybersecurity', description: 'Cybersecurity expert with focus on zero-trust architecture.',
-      icon: Shield, linkedin: 'https://linkedin.com/in/emily-rodriguez';
-},
+      icon: Shield, linkedin: 'https://linkedin.com/in/emily-rodriguez'},
     {
       name: 'David Kim', role: 'DevOps Lead',
       expertise: 'Infrastructure', description: 'DevOps specialist with expertise in automation and scaling.',
-      icon: Code, linkedin: 'https://linkedin.com/in/david-kim';
-},
+      icon: Code, linkedin: 'https://linkedin.com/in/david-kim'},
     {
       name: 'Lisa Thompson', role: 'Product Manager',
       expertise: 'SaaS Solutions', description: 'Product strategist focused on micro SaaS and user experience.',
-      icon: Users, linkedin: 'https://linkedin.com/in/lisa-thompson';
-}
+      icon: Users, linkedin: 'https://linkedin.com/in/lisa-thompson'}
   ]
 
   const values = [
     {
       title: "Innovation First", description: "We push the boundaries of what&apos;s possible with AI and technology", ''
-      icon: Brain;
-},
+      icon: Brain},
     {
       title: "Client Success", description: "Our success is measured by the success of our clients",
-      icon: Target;
-}, {
+      icon: Target}, {
       title: "Ethical AI",
-      description: "We develop AI solutions that are fair, transparent, and beneficial", icon: Shield;
-},
+      description: "We develop AI solutions that are fair, transparent, and beneficial", icon: Shield},
     {
       title: "Continuous Learning", description: "We stay at the forefront of technology through constant learning",
       icon: TrendingUp
@@ -151,15 +133,12 @@ export default function Team() {
   {
       icon: Brain,
       title: 'Innovation First',
-      description: 'We push the boundaries of technology to deliver cutting-edge solutions.';
-}, {
+      description: 'We push the boundaries of technology to deliver cutting-edge solutions.'}, {
       icon: Users,
-      title: 'Client Success', description: 'Your success is our success. We\'re committed to delivering exceptional results.';
-},
+      title: 'Client Success', description: 'Your success is our success. We\'re committed to delivering exceptional results.'},
     {
       icon: Shield, title: 'Security & Trust',
-      description: 'We maintain the highest security standards and build trust through transparency.';
-}, {
+      description: 'We maintain the highest security standards and build trust through transparency.'}, {
       icon: Zap,
       title: 'Agile Delivery', description: 'Fast, efficient delivery without compromising on quality or security.';
 }
@@ -299,9 +278,9 @@ export default function Team() {
                         <Twitter className="w-4 h-4" />
                       </a>
                     </Button>
-                    <Button variant="outline" size="sm" asChild>
+                    <Button variant="outline" size={`sm` asChild>
                       <a href={`mailto: ${member.email}`}>
-                        <Mail className="w-4 h-4" />
+                        <Mail className=`w-4 h-4`} />
                       </a>
                     </Button>
                   </div>
@@ -365,9 +344,9 @@ export default function Team() {
                         <Linkedin className="w-4 h-4" />
                       </a>
                     </Button>
-                    <Button variant="outline" size="sm" asChild>
+                    <Button variant="outline" size={`sm` asChild>
                       <a href={`mailto: ${member.email}`}>
-                        <Mail className="w-4 h-4" />
+                        <Mail className=`w-4 h-4`} />
                       </a>
                     </Button>
                   </div>
@@ -540,5 +519,4 @@ export default function Team() {
       
       <Footer />
 </>
-  );
-}
+  )}

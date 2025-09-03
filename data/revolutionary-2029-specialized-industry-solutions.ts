@@ -29,8 +29,7 @@ export interface RevolutionarySpecializedIndustryService2029 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
+    address: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -38,8 +37,7 @@ export interface RevolutionarySpecializedIndustryService2029 {
   rating: number;
   reviews: number;
   isPopular?: boolean;
-  isNew?: boolean;
-}
+  isNew?: boolean}
 export const revolutionarySpecializedIndustryServices2029: RevolutionarySpecializedIndustryService2029[] =
   [
     // AI-Powered Healthcare Platform
@@ -659,8 +657,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
 export const getSpecializedIndustryServicesByCategory = (category: string) => {
   return revolutionarySpecializedIndustryServices2029.filter(
     service => service.category === category
-  );
-};
+  )};
 export const getPopularSpecializedIndustryServices = () => {
   return revolutionarySpecializedIndustryServices2029.filter(
     service => service.isPopular
@@ -677,6 +674,5 @@ export const getSpecializedIndustryServicesByPriceRange = (
 ) => {
   return revolutionarySpecializedIndustryServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
-    return price >= minPrice && price <= maxPrice;
-  });
+    return price >= minPrice && price <= maxPrice});
 };

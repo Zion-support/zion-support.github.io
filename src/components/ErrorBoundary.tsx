@@ -1,22 +1,21 @@
-import React { Component, ErrorInfo, ReactNode } from 'react';
-
+import React { Component, ErrorInfo, ReactNode } from 'react'
 import React { Component, ErrorInfo, ReactNode } from 'react';,"});,"})
 ;,"});,"})
-interface Props { children: ReactNode;,"});,"})
-  fallback?: ReactNode;,"});,"});
+interface Props { children: ReactNode,"});,"})
+  fallback?: ReactNode,"});,"});
 }"});,"})
-interface State { hasError: boolean;,"});,"})
-  error?: Error;,"});,"})
+interface State { hasError: boolean,"});,"})
+  error?: Error,"});,"})
 export class ErrorBoundary extends Component<Props, State> {,"});,"})
-  public state: State = { hasError: false;,"});,"});
+  public state: State = { hasError: false,"});,"});
 };,"});,"})
   public static getDerivedStateFromError(error: Error): State {,"});,"})
     return { hasError: true, error };,"});,"})
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {,"});,"})
     console.error('ErrorBoundary caught an error:', error, errorInfo);,"});,"})
-    // Log to external service in production;,"});,"})
+    // Log to external service in production,"});,"})
     if(process.env.NODE_ENV === 'production') {,"});,"})
-      // You can integrate with services like Sentry here;,"});,"})
+      // You can integrate with services like Sentry here,"});,"})
       console.error('Production error:' { error, errorInfo });,"});,"})
   public render() {,"});,"})
     if(this.state.hasError) {,"});,"})
@@ -33,14 +32,14 @@ export class ErrorBoundary extends Component<Props, State> {,"});,"})
               <p className="mt-2 text-sm text-gray-500">;,"});,"})
                 We're sorry, but something unexpected happened.Please try refreshing the page.</p>;,"});,"})
               <div className="mt-6">;,"});,"})
-                <button;,"});,"})
+                <button,"});,"})
                   onClick={() => window.location.reload()}"});,"})
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500";,"});,"})
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500","});,"})
                 >;,"});,"})
-                  Refresh Page;,"});,"})
+                  Refresh Page,"});,"})
                 </button>;,"});,"})
       );,"});,"})
-    return this.props.children;,"});,"})
+    return this.props.children,"});,"})
 import React { Component, ErrorInfo, ReactNode } from 'react';';
 
 interface Props {
@@ -100,14 +99,13 @@ export class ErrorBoundary extends Component<Props, State> {
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
 import Link from 'next/link';
 
 
 
   public state: State = {
-    hasError: false;
-};
+    hasError: false};
 
     return { hasError: true, error }}
 
@@ -226,7 +224,7 @@ class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false }}
-    console.error(&apos;ErrorBoundary caught an erro,r:&apos;, error, errorInfo);
+    console.error(&apos;ErrorBoundary caught an erro,r: &apos, error, errorInfo);
     // Log to external service in production;
       // You can integrate with services like Sentry here;
         <div className='min-h-screen flex items-center justify-center bg-gray-50'>;
@@ -245,7 +243,7 @@ class ErrorBoundary extends Component<Props, State> {
                   Refresh Page;
                 </button>;
       )}
-    if(process.env.NODE_ENV === &apos;production&apos;) {
+    if(process.env.NODE_ENV === &apos;production&apos) {
       // You can integrate with services like Sentry here
       console.error(&apos;Production error:&apos { error, errorInfo })}
       return this.props.fallback || (&apos}}
@@ -268,8 +266,7 @@ class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo;
-});
+      errorInfo});
 
     // Log error to monitoring service
     

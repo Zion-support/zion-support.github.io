@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import SEO from '../../components/SEO';
-import { Card } from '../../components/ui/Card';
+import { Card } from '../../components/ui/Card'
 import { Button } from '../../components/ui/Button';
-import { Badge } from '../../components/ui/Badge';
+import { Badge } from '../../components/ui/Badge'
 import { 
   Brain, 
   ArrowRight,
@@ -20,8 +20,7 @@ import {
   Globe,
   Search,
   PenTool,
-  BarChart3;
-} from 'lucide-react';
+  BarChart3} from 'lucide-react';
 
 export default function AIContentCreation() {
   const features = [
@@ -38,23 +37,19 @@ export default function AIContentCreation() {
     {
       icon: Search,
       title: 'SEO Optimization',
-      description: 'Automatically optimize content for search engines with keyword research and optimization.';
-},
+      description: 'Automatically optimize content for search engines with keyword research and optimization.'},
     {
       icon: Globe,
       title: 'Multi-language Support',
-      description: 'Create content in multiple languages with accurate translation and localization.';
-},
+      description: 'Create content in multiple languages with accurate translation and localization.'},
     {
       icon: BarChart3,
       title: 'Content Analytics',
-      description: 'Track performance metrics and optimize content strategy with detailed analytics.';
-},
+      description: 'Track performance metrics and optimize content strategy with detailed analytics.'},
     {
       icon: Zap,
       title: 'Real-time Generation',
-      description: 'Generate content instantly with our advanced AI models and processing capabilities.';
-}
+      description: 'Generate content instantly with our advanced AI models and processing capabilities.'}
   ]
 
   const pricingPlans = [
@@ -70,8 +65,7 @@ export default function AIContentCreation() {
         '2 languages supported',
         'Email support'
       ],
-      popular: false;
-},
+      popular: false},
     {
       name: 'Professional',
       price: '$599',
@@ -85,8 +79,7 @@ export default function AIContentCreation() {
         'Content analytics dashboard',
         'Priority support'
       ],
-      popular: true;
-},
+      popular: true},
     {
       name: 'Enterprise',
       price: '$1,299',
@@ -101,8 +94,7 @@ export default function AIContentCreation() {
         'Dedicated account manager',
         '24/7 phone support'
       ],
-      popular: false;
-}
+      popular: false}
   ]
 
   return (
@@ -185,11 +177,11 @@ export default function AIContentCreation() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className={`grid grid-cols-1 md:grid-cols-3 gap-8`>
             {pricingPlans.map((plan, index) => (
               <Card key={index} className={`p-8 relative ${plan.popular ? 'ring-2 ring-blue-500 shadow-xl' : ''}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
                     <Badge className="bg-blue-500 text-white px-4 py-1">
                       Most Popular
                     </Badge>
@@ -209,13 +201,12 @@ export default function AIContentCreation() {
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-600">{feature}</span>
+                      <span className={`text-gray-600`>{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <Button 
-                  className={`w-full ${plan.popular ? 'bg-blue-600 hover:bg-blue-700' : ''}`}
+                <Button className={`w-full ${plan.popular ? 'bg-blue-600 hover:bg-blue-700' : ''}`}
                   variant={plan.popular ? 'default' : 'outline'}
                 >
                   Get Started
@@ -227,8 +218,8 @@ export default function AIContentCreation() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className=`py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white`}>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Transform Your Content Strategy?
           </h2>
@@ -250,5 +241,4 @@ export default function AIContentCreation() {
         </div>
       </section>
     </>
-  );
-}
+  )}

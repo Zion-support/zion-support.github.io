@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import {
   Link2,
   BarChart3,
@@ -27,8 +27,7 @@ import {
   Eye,
   Settings,
   FileText,
-  MessageSquare;
-} from 'lucide-react';
+  MessageSquare} from 'lucide-react';
 import PageTransition from '../../src/components/PageTransition';
 
 export default function AffiliateMarketingTracking() {
@@ -104,8 +103,7 @@ export default function AffiliateMarketingTracking() {
         '1 admin user',
         'Basic integrations'
       ],
-      popular: false;
-},
+      popular: false},
     {
       name: 'Professional',
       price: '$799',
@@ -120,8 +118,7 @@ export default function AffiliateMarketingTracking() {
         'API access',
         'White-label options'
       ],
-      popular: true;
-},
+      popular: true},
     {
       name: 'Enterprise',
       price: 'Custom',
@@ -136,8 +133,7 @@ export default function AffiliateMarketingTracking() {
         'Custom integrations',
         'SLA guarantee'
       ],
-      popular: false;
-}
+      popular: false}
   ]
 
   return (
@@ -226,11 +222,11 @@ export default function AffiliateMarketingTracking() {
             </p>
           </div>
           
-          <div className="grid gap-8 lg:grid-cols-3">
+          <div className={`grid gap-8 lg:grid-cols-3`>
             {pricing.map((plan, index) => (
               <div key={index} className={`relative rounded-2xl border p-8 shadow-sm ${plan.popular ? 'border-blue-600 bg-blue-50' : 'border-gray-200 bg-white'}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
                     <span className="inline-flex items-center rounded-full bg-blue-600 px-4 py-1 text-sm font-semibold text-white">
                       Most Popular
                     </span>
@@ -253,7 +249,7 @@ export default function AffiliateMarketingTracking() {
                   ))}
                 </ul>
                 <div className="mt-8">
-                  <Link href="/contact" className={`block w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? 'bg-blue-600 text-white hover:bg-blue-500' : 'bg-gray-900 text-white hover:bg-gray-800'}`}>
+                  <Link href={`/contact` className={`block w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? 'bg-blue-600 text-white hover:bg-blue-500' : 'bg-gray-900 text-white hover:bg-gray-800'}`}>
                     Get Started
                   </Link>
                 </div>
@@ -264,7 +260,7 @@ export default function AffiliateMarketingTracking() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 sm:py-32">
+      <section className=`py-24 sm:py-32`}>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

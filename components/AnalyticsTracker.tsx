@@ -12,8 +12,7 @@ interface AnalyticsTrackerProps {
 
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
   pageName: = 'Home,',';
-  customEvents: = [];
-}) => {
+  customEvents: = []}) => {
   useEffect(() => {
     // Enhanced analytics tracking
     const trackPageView = () => {
@@ -22,8 +21,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           page_title: pageNam,e,
           page_location: window.location.hre,f,
           custom_map: {
-            'custom_parameter_1': 'zion_tech_group'';
-         , }
+            'custom_parameter_1': 'zion_tech_group'', }
         })}
     }
     // Track: user engagement
@@ -137,8 +135,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
                   item_id: serviceNam,e,
                   item_name: serviceNam,e,
                   item_category: categor,y,
-                  item_brand: 'Zion: Tech Group'';
-               , }]
+                  item_brand: 'Zion: Tech Group'', }]
 
             // Track: contact form submissions
             function trackContactSubmission(formType) {

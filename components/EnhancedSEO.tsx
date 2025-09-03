@@ -1,7 +1,6 @@
-import Head from 'next/head';
+import Head from 'next/head'
 import { useRouter } from 'next/router'; SEOProps {title?: string;'
-import React from 'react';
-
+import React from 'react'
 import { useRouter } from 'next/router';
 
 interface SEOProps {
@@ -43,8 +42,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     'cloud infrastructure',
     'software development',
     'technology consulting'
-  author: 'Zion Tech Group';
-};
+  author: 'Zion Tech Group'};
 
   description:
     'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.',
@@ -56,8 +54,7 @@ import { useRouter }  from 'next/router';interface SEOProps {
   url?: string
   type?: string
   keywords?: string[]
-  author?: string;
-}
+  author?: string}
 
 
   title: 'Zion Tech Group - Leading Technology Solutions Provider', description: 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.', image: 'https://ziontechgroup.com/og-image.svg','  url: 'https://ziontechgroup.com', type 'website','  keywords: ['    'technology solutions', 'AI development','    'quantum computing', 'blockchain infrastructure','    'digital transformation', 'enterprise software','    'cloud solutions', 'cybersecurity','    'micro SaaS', 'Zion Tech Group''  ], author: 'Zion Tech Group','};'
@@ -79,7 +76,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="description" content={description} />"      <meta name="keywords" content={keywords.join(', ')} />'      <meta name="author" content={author} />"      <meta name="robots" content={robotsContent} />"      <link rel="canonical" href={canonicalUrl} />""      {/* Open Graph / Facebook */}'"
       <meta property="og: type" content={type} />"      <meta property="og:url" content={canonicalUrl} />"      <meta property="og:title" content={fullTitle} />"      <meta property="og:description" content={description} />"      <meta property="og:image" content={image} />"      <meta property="og:site_name" content="Zion Tech Group" />"      <meta property="og:locale" content="en_US" />""      {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />"      <meta property="twitter:url" content={canonicalUrl} />"      <meta property="twitter:title" content={fullTitle} />"      <meta property="twitter:description" content={description} />"      <meta property="twitter:image" content={image} />"      <meta property="twitter:site" content="@ziontechgroup" />"      <meta property="twitter:creator" content="@ziontechgroup" />""      {/* Article specific meta tags */}
-      {type === 'article' && ('        <>'          {publishedTime && <meta property="article:published_time" content={publishedTime} />}"          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}"          {section && <meta property="article:section" content={section} />}"          {tags && tags.map((tag, index) => ("            <meta key={index} property="article: tag" content={tag} />"          ))}"</>
+      {type === 'article' && ('        <>'          {publishedTime && <meta property="article:published_time" content={publishedTime} />}"          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}"          {section && <meta property="article:section" content={section} />}"          {tags && tags.map((tag, index) => ("            <meta key={index} property="article: tag" content={tag} />"          ))}`</>
       )}
   title = 'Zion Tech Group - Advanced Technology Solutions',
   description = 'Leading provider of AI, blockchain, quantum computing, and enterprise technology solutions. Transform your business with cutting-edge innovation.',
@@ -93,22 +90,21 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   section,
   tags = [],
   noindex = false,
-  nofollow = false;
-}) => {
+  nofollow = false}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
   const fullKeywords = [...keywords, 'Zion Tech Group', 'technology solutions', 'innovation'].join(', ');
 
   return (
-      <meta name="description" content={fullDescription} />
+      <meta name=`description" content={fullDescription} />
       <meta name="keywords" content={fullKeywords} />
       <meta name="author" content={author} />
       
       {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name={`robots` content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
       
       {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
+      <meta property=`og:title`} content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
       <meta property="og:image" content={image} />
       <meta property="og:url" content={url} />
@@ -130,7 +126,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       ))}
       
       {/* Canonical URL */}
-      <link rel="canonical" href={url} />
+      <link rel={`canonical` href={url} />
       
 const defaultSEO = {'
   title: 'Zion Tech Group - Leading Technology Solutions Provider', description: 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.', image: '/images/og-image.jpg',
@@ -170,7 +166,7 @@ const defaultSEO = {'
   const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
 
       <title>{title}</title>`
-      <meta name="description" content={description} />"
+      <meta name=`description`} content={description} />"
       <meta name="keywords" content={keywords.join(', ')} />
       
       {/* Open Graph */}"

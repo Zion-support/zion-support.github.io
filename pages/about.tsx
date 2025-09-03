@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 import Layout from '../components/Layout';
-import Link from 'next/link';
+import Link from 'next/link'
 import { Users, Award, Target, CheckCircle, ArrowRight, Globe, Heart, Zap } from 'lucide-react';
 
 const About: NextPage = () => {
@@ -70,7 +70,7 @@ const About: NextPage = () => {
               The principles that guide everything we do and shape our culture
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-blue-600" />
@@ -153,7 +153,6 @@ const About: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )};
 
 export default About;

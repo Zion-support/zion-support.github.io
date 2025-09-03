@@ -5,13 +5,10 @@
     "heapTotal": 5570560,
     "heapUsed": 4222712,
     "external": 1461306,
-    "arrayBuffers": 10515;
-},
+    "arrayBuffers": 10515},
   "uptime": 0.014364044,
   "cpu": {
     "user": 12337,
-    "system": 4112;
-},
+    "system": 4112},
   "buildSize": 375214,
-  "nodeModulesSize": 363397017;
-}
+  "nodeModulesSize": 363397017}

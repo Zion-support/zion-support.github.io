@@ -3,8 +3,7 @@ export interface RealMarketServiceExtended {
   name: string;
   tagline: string;
   price: string;
-  features: string[];
-}
+  features: string[]}
 export const realMarketServicesExtended: RealMarketServiceExtended[] = [
   {
     id: 'extended-service-1',

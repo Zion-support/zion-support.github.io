@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import { Users, MapPin, Clock, ArrowRight, CheckCircle, Star, Award } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -13,8 +13,7 @@ export default function Talent() {
       location: "San Francisco, CA",
       type: "Full-time",
       experience: "5+ years",
-      description: "Lead the development of cutting-edge AI solutions and machine learning models.";
-},
+      description: "Lead the development of cutting-edge AI solutions and machine learning models."},
     {
       id: 2,
       title: "Cloud Solutions Architect",
@@ -22,8 +21,7 @@ export default function Talent() {
       location: "Remote",
       type: "Full-time",
       experience: "7+ years",
-      description: "Design and implement scalable cloud architectures for enterprise clients.";
-},
+      description: "Design and implement scalable cloud architectures for enterprise clients."},
     {
       id: 3,
       title: "Full Stack Developer",
@@ -49,8 +47,7 @@ export default function Talent() {
       location: "San Francisco, CA",
       type: "Full-time",
       experience: "5+ years",
-      description: "Drive growth by building relationships with enterprise clients and partners.";
-},
+      description: "Drive growth by building relationships with enterprise clients and partners."},
     {
       id: 6,
       title: "UX/UI Designer",
@@ -58,8 +55,7 @@ export default function Talent() {
       location: "Remote",
       type: "Full-time",
       experience: "3+ years",
-      description: "Create intuitive and beautiful user experiences for our digital products.";
-}
+      description: "Create intuitive and beautiful user experiences for our digital products."}
   ]
 
   const benefits = [
@@ -210,10 +206,9 @@ export default function Talent() {
                     </div>
                   </div>
                   
-                  <div className="mt-4 lg:mt-0 lg:ml-6">
-                    <Link
-                      href={`/talent/${position.id}`}
-                      className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                  <div className={`mt-4 lg:mt-0 lg:ml-6`>
+                    <Link href={`/talent/${position.id}`}
+                      className=`inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors`}
                     >
                       Apply Now
                       <ArrowRight className="h-4 w-4 ml-2" />
@@ -228,7 +223,7 @@ export default function Talent() {
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+        <div className="mx-auto max-w-7xl px-6 lg: px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Don't See Your Perfect Role?
           </h2>
@@ -244,5 +239,4 @@ export default function Talent() {
         </div>
       </section>
     </PageTransition>
-  );
-}
+  )}

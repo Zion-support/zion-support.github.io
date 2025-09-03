@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import {
   Handshake,
   Award,
@@ -14,9 +14,9 @@ import {
   Lightbulb,
   Shield,
   Cloud} from 'lucide-react';
-import SEO from '../components/SEO';
+import SEO from '../components/SEO'
 import { Card } from '../components/ui/Card';
-import { Button } from '../components/ui/Button';
+import { Button } from '../components/ui/Button'
 import { Badge } from '../components/ui/Badge';
 export default function Partners() {
   const partnerBenefits = [
@@ -144,42 +144,33 @@ export default function Partners() {
   const currentPartners = [
     {
       name: 'Microsoft', logo: '/api/placeholder/200/100',
-      description: 'Cloud infrastructure and AI services partnership', category: 'Technology Partner';
-},
+      description: 'Cloud infrastructure and AI services partnership', category: 'Technology Partner'},
     {
       name: 'Amazon Web Services', logo: '/api/placeholder/200/100',
-      description: 'Cloud computing and machine learning solutions', category: 'Technology Partner';
-},
+      description: 'Cloud computing and machine learning solutions', category: 'Technology Partner'},
     {
       name: 'Google Cloud', logo: '/api/placeholder/200/100',
-      description: 'AI and analytics platform integration', category: 'Technology Partner';
-},
+      description: 'AI and analytics platform integration', category: 'Technology Partner'},
     {
       name: 'IBM', logo: '/api/placeholder/200/100',
-      description: 'Quantum computing and enterprise solutions', category: 'Strategic Partner';
-},
+      description: 'Quantum computing and enterprise solutions', category: 'Strategic Partner'},
     {
       name: 'Oracle', logo: '/api/placeholder/200/100',
-      description: 'Database and enterprise application integration', category: 'Technology Partner';
-},
+      description: 'Database and enterprise application integration', category: 'Technology Partner'},
     {
       name: 'Salesforce', logo: '/api/placeholder/200/100',
-      description: 'CRM and customer experience solutions', category: 'Technology Partner';
-}
+      description: 'CRM and customer experience solutions', category: 'Technology Partner'}
   ]
 
   const partnershipBenefits = [
     {
       icon: Star, title: 'Access to Cutting-Edge Technology',
-      description: 'Leverage the latest innovations and technologies from our partners.';
-}, {
+      description: 'Leverage the latest innovations and technologies from our partners.'}, {
       icon: Users,
-      title: 'Expanded Market Reach', description: 'Tap into new markets and customer segments through our partner network.';
-},
+      title: 'Expanded Market Reach', description: 'Tap into new markets and customer segments through our partner network.'},
     {
       icon: Award, title: 'Enhanced Credibility',
-      description: 'Build trust with customers through our established partner relationships.';
-}, {
+      description: 'Build trust with customers through our established partner relationships.'}, {
       icon: CheckCircle,
       title: 'Comprehensive Support', description: 'Access to expert support and resources from our partner ecosystem.'
   {
@@ -261,8 +252,7 @@ export default function Partners() {
       title: 'Go-to-Market',
       description:
         'We launch joint marketing initiatives and begin delivering solutions together.'},
-      description: 'We launch joint marketing initiatives and begin delivering solutions together.';
-}
+      description: 'We launch joint marketing initiatives and begin delivering solutions together.'}
   ]
 
   return (
@@ -499,21 +489,19 @@ export default function Partners() {
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                      <Building className="w-6 h-6 text-white" />
+                      <Building className={`w-6 h-6 text-white` />
                     </div>
-                    <span
-                      className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                         partner.tier === 'Platinum'
                           ? 'bg-yellow-100 text-yellow-800'
                           : partner.tier === 'Gold'
                             ? 'bg-gray-100 text-gray-800'
-                            : 'bg-orange-100 text-orange-800';
-}`}
+                            : 'bg-orange-100 text-orange-800'}`}
                     >
                       {partner.tier}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className=`text-xl font-bold text-gray-900 mb-2`}>
                     {partner.name}
                   </h3>
                   <p className="text-blue-600 font-semibold mb-2">
@@ -729,7 +717,7 @@ export default function Partners() {
               variant="outline""
               className="border-white text-white hove,
     r:bg-white hove,
-    r:text-blue-600"
+    r: text-blue-600"
             >
               Download Partner Kit
             </Button>
@@ -739,8 +727,7 @@ export default function Partners() {
         </section>
       </main>
     </>
-  );
-}
+  )}
   );
 }
 "

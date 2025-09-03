@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
+import fs from 'fs'
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -16,8 +16,7 @@ function fixSyntaxErrors(content) {
     if (!match.endsWith(';')) {
       return match + ';
     }
-    return match;
-  });
+    return match});
   
   // Fix malformed export statements
   fixed = fixed.replace(/export\s+default\s+function\s+([^{]+)\s*{/g, 'export default function $1 {');
@@ -40,10 +39,9 @@ function fixSyntaxErrors(content) {
   fixed = fixed.replace(/\]\s*\[/g, '], [');
   
   // Fix broken string literals
-  fixed = fixed.replace(/'([^']*)\s*'/g, '$1'");
+  fixed = fixed.replace(/'([^']*)\s*'/g, '$1'`);
   
-  return fixed;
-}
+  return fixed}
 
 // Function to process a single file
 function processFile(filePath) {
@@ -53,7 +51,7 @@ function processFile(filePath) {
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(``Fixed: ${filePath}``);
 import { execSync } from 'child_process';
 
 // Function to fix common syntax errors in files
@@ -64,19 +62,18 @@ function fixSyntaxErrors(filePath) {
 
     // Fix malformed imports - add missing semicolons
     content = content.replace(
-      /import\s+{[^}]+}\s+from\s+['"][^'"]+['"]\s*(?!;)/g,
+      /import\s+{[^}]+}\s+from\s+['`][^'"]+['"]\s*(?!;)/g,
       match => {
         if (!match.endsWith(';')) {
           modified = true;
           return match + ';
         }
-        return match;
-      }
+        return match}
     );
 
     // Fix broken import statements with missing commas
     content = content.replace(
-      /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"]/g,
+      /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['`]/g,
       (match, imports) => {
         // Check if imports have proper comma separation
         if (imports.includes(' ') && !imports.includes(',')) {
@@ -84,8 +81,7 @@ function fixSyntaxErrors(filePath) {
           const fixedImports = imports.split(/\s+/).join(', ');
           return match.replace(imports, fixedImports);
         }
-        return match;
-      }
+        return match}
     );
 
     // Fix missing semicolons after variable declarations
@@ -96,8 +92,7 @@ function fixSyntaxErrors(filePath) {
           modified = true;
           return match + ';
         }
-        return match;
-      }
+        return match}
     );
 
     // Fix broken JSX syntax - missing closing tags
@@ -109,8 +104,7 @@ function fixSyntaxErrors(filePath) {
           modified = true;
           return match + `</${tagName}>`;
         }
-        return match;
-      }
+        return match}
     );
 
     // Fix malformed function declarations
@@ -128,13 +122,12 @@ function fixSyntaxErrors(filePath) {
         modified = true;
         return match.replace('}}', '}');
       }
-      return match;
-    });
+      return match});
 
     // Fix broken string literals
-    content = content.replace(/['"]([^'"]*)\s*['"]\s*['"]/g, (match, str) => {
+    content = content.replace(/['`]([^'"]*)\s*['"]\s*['"]/g, (match, str) => {
       modified = true;
-      return `"${str}"`;
+      return ``${str}``;
     });
 
     // Fix missing commas in arrays and objects
@@ -153,19 +146,15 @@ function fixSyntaxErrors(filePath) {
           return `[${items.join(', ')}]`;
         }
       }
-      return match;
-    });
+      return match});
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
+      console.log(``Fixed syntax errors in: ${filePath}``);
+      return true}
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-<<<<<<< HEAD    return false;
-  }
+<<<<<<< HEAD    return false}
 }
 
 // Function to recursively find and process files
@@ -186,14 +175,13 @@ function processDirectory(dirPath) {
     }
   }
   
-  return fixedCount;
-}
+  return fixedCount}
 
 // Main execution
 const srcDir = path.join(__dirname, 'src');
 console.log('Starting syntax error fixes...');
 const totalFixed = processDirectory(srcDir);
-console.log(`Fixed ${totalFixed} files`);
+console.log(``Fixed ${totalFixed} files``);
 // Function to find all TypeScript and JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   let files = [];
@@ -219,8 +207,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
     console.error(`Error reading directory ${dir}:`, error.message);
   }
 
-  return files;
-}
+  return files}
 
 // Main execution
 function main() {
@@ -232,7 +219,7 @@ function main() {
   let fixedCount = 0;
   let totalCount = files.length;
 
-  console.log(`Found ${totalCount} files to check...`);
+  console.log(``Found ${totalCount} files to check...``);
 
   for (const file of files) {
     if (fixSyntaxErrors(file)) {
@@ -240,9 +227,9 @@ function main() {
     }
   }
 
-  console.log(
+  console.log(`
     `\nFixed syntax errors in ${fixedCount} out of ${totalCount} files.`
-  );
+  `);
 
   // Run linting to check remaining errors
   console.log('\nRunning linting to check remaining errors...');

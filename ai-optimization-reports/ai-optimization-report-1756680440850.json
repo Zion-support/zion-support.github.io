@@ -5,8 +5,7 @@
     "optimizationsApplied": 1596,
     "performanceGains": 0,
     "memorySavings": 2319080,
-    "securityFixes": 52;
-},
+    "securityFixes": 52},
   "optimizations": {
     "performance": [
       {

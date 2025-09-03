@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {Link } from 'react-router-dom';
 import {ArrowRight, 
   Play, 
@@ -16,30 +16,25 @@ import {ArrowRight,
   Clock'
   TrendingUp,;
   Globe,;
-  Clock;
-} from 'lucide-react';
+  Clock} from 'lucide-react';
 
 export function HomePage() {const features = [{
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence and machine learning services',
-      color: 'from-purple-500 to-pink-500';
-},
+      color: 'from-purple-500 to-pink-500'},
     {icon: Cloud,
       title: 'Cloud Excellence',
       description: 'Scalable cloud infrastructure and migration services',
-      color: 'from-blue-500 to-cyan-500';
-},
+      color: 'from-blue-500 to-cyan-500'},
     {icon: Shield,
       title: 'Cybersecurity',
       description: 'Advanced security and compliance solutions',
-      color: 'from-green-500 to-emerald-500';
-},
+      color: 'from-green-500 to-emerald-500'},
     {icon: Rocket,
       title: 'Digital Transformation',
       description: 'End-to-end business transformation services',
-      color: 'from-orange-500 to-red-500';
-}
+      color: 'from-orange-500 to-red-500'}
   ]
 
   const stats = ['
@@ -61,22 +56,20 @@ export function HomePage() {const features = [{
   const testimonials = [{name: 'Sarah Johnson',
       title: 'CTO at TechCorp',
       content: 'Zion Tech Group transformed our infrastructure completely. Their expertise is unmatched.',
-      rating: 5;
-},
+      rating: 5},
     {'
       name: 'Michael Chen',
     {name: 'Michael Chen',
       title: 'VP Engineering',
       content: 'The AI solutions they implemented increased our efficiency by 300%. Incredible results!',
-      rating: 5;
-},
+      rating: 5},
     {'
       name: 'Emily Rodriguez',
     {name: 'Emily Rodriguez',
       title: 'Operations Director',
 import React from 'react';""
 import React from 'react
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   ArrowRight, Play, 
   Star, Users, 
@@ -303,9 +296,9 @@ export function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-4 gap-8">
             {features.map((feature, index) => ("
-              <div key={index} className="text-center group">"
+              <div key={index} className="text-center group">`
                 <div className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>`
-                  <feature.icon className="h-8 w-8 text-white" />
+                  <feature.icon className=`h-8 w-8 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
@@ -313,15 +306,15 @@ export function HomePage() {
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="text-center group">
+              <div key={index} className={`text-center group`>
                 <div className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center group-hover: scale-110 transition-transform duration-300`}>
-                  <feature.icon className="h-8 w-8 text-white" />
+                  <feature.icon className=`h-8 w-8 text-white`} />
                 </div>
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (""
-              <div key={index} className="text-center group">
-                <div className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center group-hover: scale-110 transition-transform duration-300`}" >"
+              <div key={index} className={`text-center group`>
+                <div className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center group-hover: scale-110 transition-transform duration-300`}` >`}
                   <feature .icon className="h-8 w-8 text-white" /" >"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -638,7 +631,6 @@ export function HomePage() {
         </div>
       </section>
     </div>
-  );
-}"
+  )}"
   );}"`";
 }'`

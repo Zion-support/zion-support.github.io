@@ -18,7 +18,7 @@ class MaintenanceScheduler {
       .filter(task => task.frequency === 'daily')
       .forEach(task => {
         try {
-          console.log(`Running: ${task.name}`);
+          console.log(``Running: ${task.name}``);
           execSync(task.command, { stdio: 'inherit' });
         } catch (error) {
           console.error(`Failed: ${task.name}`, error.message);
@@ -32,7 +32,7 @@ class MaintenanceScheduler {
       .filter(task => task.frequency === 'weekly')
       .forEach(task => {
         try {
-          console.log(`Running: ${task.name}`);
+          console.log(``Running: ${task.name}``);
           execSync(task.command, { stdio: 'inherit' });
         } catch (error) {
           console.error(`Failed: ${task.name}`, error.message);
@@ -49,5 +49,4 @@ if (arg === 'daily') {
 } else if (arg === 'weekly') {
   scheduler.runWeeklyMaintenance();
 } else {
-  console.log('Usage: node maintenance-scheduler.js [daily|weekly]');
-}
+  console.log('Usage: node maintenance-scheduler.js [daily|weekly]')}

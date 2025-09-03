@@ -13,7 +13,7 @@ import { Input } from "@/components/ui/input";"""";,"});,"})
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";"""";,"});,"})
 import { Link } from "react-router-dom";"""";,"});,"})
 import { LoadingOverlay } from "@/components/LoadingOverlay";,"});,"})
-// Form validation schema;,"});,"})
+// Form validation schema,"});,"})
 const loginSchema = z.object({}"});,"})
 """;,"});,"})
 """";,"});,"})
@@ -33,7 +33,7 @@ function LoginForm() {}"});,"})
             password: ""}});,"});,"})
     const onSubmit = async (data) => {}"});,"})
         if (isSubmitting);,"});,"})
-            return;,"});,"})
+            return,"});,"})
         try {}"});,"})
             setIsSubmitting(true);,"});,"})
             const { error } = await login(data.email, data.password);,"});,"})
@@ -85,7 +85,7 @@ function LoginForm() {}"});,"})
             </FormItem>)}/>"""";,"});,"})
         <div className="flex items-center justify-between">"""";,"});,"})
           <div className="text-sm">"""";,"});,"})
-            <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;,"});,"})
+            <Link to="/forgot-password" className="font-medium text-zion-cyan hover: text-zion-cyan-light">,"});,"})
               Forgot your password?;,"});,"})
             </Link>;,"});,"})
           </div>""";,"});,"})
@@ -97,10 +97,10 @@ function LoginForm() {}"});,"})
       <LoadingOverlay visible={isLoading || isSubmitting}/>;,"});,"})
     </Form>)};,"});,"})
 export { LoginForm };,"});,"})
-export default LoginForm;,"});,"})
+export default LoginForm,"});,"})
 ;,"});,"})
-export default LoginForm;,"});,"})
-export default LoginForm;,"});,"})
+export default LoginForm,"});,"})
+export default LoginForm,"});,"})
 ;,"});,"})
 export { LoginForm };,"});,"})
 ;,"});,"})
@@ -115,7 +115,7 @@ export { LoginForm };,"});,"})
 ' ' ' ' ' ' '''"'"
 
 ""
-import React from 'react';
+import React from 'react'
 import { SEO } from '@/components/SEO';
 
 const LoginForm.Js: React.FC = () => {
@@ -135,7 +135,7 @@ const LoginForm.Js: React.FC = () => {
           <div className="flex justify-center">
             <a 
               href="/contact" 
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300"
             >
               Get Started
             </a>
@@ -143,7 +143,6 @@ const LoginForm.Js: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default LoginForm.Js;

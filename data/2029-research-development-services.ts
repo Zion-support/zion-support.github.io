@@ -36,13 +36,6 @@ export interface ResearchDevelopmentService2029 {
     mobile: string;
     email: string;
     website: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
-    address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [
   {
     id: 'advanced-research-automation',
@@ -295,4 +288,4 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-];}}}}}}
+]}}}}}}

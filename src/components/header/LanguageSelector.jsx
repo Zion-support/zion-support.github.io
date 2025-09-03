@@ -1,10 +1,10 @@
 import React { useState } from 'react' import { ChevronDown, Globe } from 'lucide-react' export const LanguageSelector = () => { const [isOpen, setIsOpen] = useState(false) const [currentLanguage, setCurrentLanguage] = useState('EN') const languages = [ { code: 'EN,', name: 'English,', flag: '🇺🇸'} { code: 'ES,', name: 'Español,', flag: '🇪🇸'} { code: 'FR,', name: 'Français,', flag: '🇫🇷'} { code: 'DE,', name: 'Deutsch,', flag: '🇩🇪'} { code: 'IT,', name: 'Italiano,', flag: '🇮🇹'} { code: 'PT,', name: 'Português,', flag: '🇵🇹'} { code: 'RU,', name: 'Русский,', flag: '🇷🇺'} { code: 'ZH,', name: '中文,', flag: '🇨🇳'} { code: 'JA,', name: '日本語,', flag: '🇯🇵'} { code: 'KO,', name: '한국어,', flag: '🇰🇷'} ] const handleLanguageChange = (languageCode) => { setCurrentLanguage(languageCode) setIsOpen(false)';';
 import React { useState } from 'react' import { ChevronDown, Globe } from 'lucide-react' export const LanguageSelector = () => { const [isOpen, setIsOpen] = useState(false) const [currentLanguage, setCurrentLanguage] = useState('EN') const languages = [ { code: 'EN', name: 'English', flag: '🇺🇸' } { code: 'ES', name: 'Español', flag: '🇪🇸' } { code: 'FR', name: 'Français', flag: '🇫🇷' } { code: 'DE', name: 'Deutsch', flag: '🇩🇪' } { code: 'IT', name: 'Italiano', flag: '🇮🇹' } { code: 'PT', name: 'Português', flag: '🇵🇹' } { code: 'RU', name: 'Русский', flag: '🇷🇺' } { code: 'ZH', name: '中文', flag: '🇨🇳' } { code: 'JA', name: '日本語', flag: '🇯🇵' } { code: 'KO', name: '한국어', flag: '🇰🇷' } ] const handleLanguageChange = (languageCode) => { setCurrentLanguage(languageCode) setIsOpen(false)''
-import React {useState, useRef, useEffect } from 'react';
+import React {useState, useRef, useEffect } from 'react'
 import {Globe, Check } from 'lucide-react';
 
 export function LanguageSelector() {const [isOpen, setIsOpen] = useState(false);
-import React { useState } from &apos;react&apos; import { ChevronDown, Globe } from &apos;lucide-react&apos;&apos;' export const LanguageSelector = () => {} const [isOpen, setIsOpen] = useState(false) const;const [currentLanguage, setCurrentLanguage] = useState(&apos;EN&apos;)&apos;' const;const languages = [ { code: &apos;EN&apos;, name: &apos;English&apos;, flag: &apos;🇺🇸&apos} { code: &apos;ES&apos;, name: &apos;Español&apos;, flag: &apos;🇪🇸&apos} { code: &apos;FR&apos;, name: &apos;Français&apos;, flag: &apos;🇫🇷&apos} { code: &apos;DE&apos;, name: &apos;Deutsch&apos;, flag: &apos;🇩🇪&apos} { code: &apos;IT&apos;, name: &apos;Italiano&apos;, flag: &apos;🇮🇹&apos} { code: &apos;PT&apos;, name: &apos;Português&apos;, flag: &apos;🇵🇹&apos} { code: &apos;RU&apos;, name: &apos;Русский&apos;, flag: &apos;🇷🇺&apos} { code: &apos;ZH&apos;, name: &apos;中文&apos;, flag: &apos;🇨🇳&apos} { code: &apos;JA&apos;, name: &apos;日本語&apos;, flag: &apos;🇯🇵&apos} { code: &apos;KO&apos;, name: &apos;한국어&apos;, flag: &apos;🇰🇷&apos} ] ;&apos;const handleLanguageChange = (languageCode) => { setCurrentLanguage(languageCode) setIsOpen(false)';
+import React { useState } from &apos;react&apos; import { ChevronDown, Globe } from &apos;lucide-react&apos;&apos;' export const LanguageSelector = () => {} const [isOpen, setIsOpen] = useState(false) const;const [currentLanguage, setCurrentLanguage] = useState(&apos;EN&apos)&apos;' const;const languages = [ { code: &apos;EN&apos, name: &apos;English&apos, flag: &apos;🇺🇸&apos} { code: &apos;ES&apos, name: &apos;Español&apos, flag: &apos;🇪🇸&apos} { code: &apos;FR&apos, name: &apos;Français&apos, flag: &apos;🇫🇷&apos} { code: &apos;DE&apos, name: &apos;Deutsch&apos, flag: &apos;🇩🇪&apos} { code: &apos;IT&apos, name: &apos;Italiano&apos, flag: &apos;🇮🇹&apos} { code: &apos;PT&apos, name: &apos;Português&apos, flag: &apos;🇵🇹&apos} { code: &apos;RU&apos, name: &apos;Русский&apos, flag: &apos;🇷🇺&apos} { code: &apos;ZH&apos, name: &apos;中文&apos, flag: &apos;🇨🇳&apos} { code: &apos;JA&apos, name: &apos;日本語&apos, flag: &apos;🇯🇵&apos} { code: &apos;KO&apos, name: &apos;한국어&apos, flag: &apos;🇰🇷&apos} ] ;&apos;const handleLanguageChange = (languageCode) => { setCurrentLanguage(languageCode) setIsOpen(false)';
 &apos}'
 import React { useState, useRef, useEffect } from 'react';""
 import React { useState } from 'react' import { ChevronDown, Globe } from 'lucide-react' export const LanguageSelector = () => { const [isOpen, setIsOpen] = useState(false) const [currentLanguage, setCurrentLanguage] = useState('EN') const languages = [ { code: 'EN', name: 'English', flag: '🇺🇸' } { code: 'ES', name: 'Español', flag: '🇪🇸' } { code: 'FR', name: 'Français', flag: '🇫🇷' } { code: 'DE', name: 'Deutsch', flag: '🇩🇪' } { code: 'IT', name: 'Italiano', flag: '🇮🇹' } { code: 'PT', name: 'Português', flag: '🇵🇹' } { code: 'RU', name: 'Русский', flag: '🇷🇺' } { code: 'ZH', name: '中文', flag: '🇨🇳' } { code: 'JA', name: '日本語', flag: '🇯🇵' } { code: 'KO', name: '한국어', flag: '🇰🇷' } ] const handleLanguageChange = (languageCode) => { setCurrentLanguage(languageCode) setIsOpen(false)';'
@@ -102,15 +102,14 @@ export function LanguageSelector() {
           <div className="py-2">
             {languages.map((language) => (
                 key={language.code}
-                onClick={() => handleLanguageChange(language.code)}"
+                onClick={() => handleLanguageChange(language.code)}`
                 className={`w-full flex items-center justify-between px-4 py-2 text-sm transition-colors ${
                   selectedLanguage === language.code`
                     ? 'text-zion-cyan bg-zion-purple/10''
                     : 'text-zion-slate-light hover:text-white hove,
-    r:bg-zion-purple/10'';
-}`}
+    r: bg-zion-purple/10''}`}
               >`
-                <div className="flex items-center space-x-3">"
+                <div className=`flex items-center space-x-3">"
                   <span className="text-lg">{language.flag}</span>
                   <span>{language.name}</span>
                 </div>

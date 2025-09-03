@@ -30,7 +30,7 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"})
         </Tooltip>;,"});,"})
       </TooltipProvider>;,"});,"})
     </div>)};,"});,"})
-export default EmptyState;,"});,"})
+export default EmptyState,"});,"})
 ;,"});,"})
 export { EmptyState };,"});,"})
 ;,"});,"})
@@ -44,7 +44,7 @@ export { EmptyState };,"});,"})
 ''
 import Link from 'next/link'''
 import { MessageSquare } from 'lucide-react'''
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'
 import {}""
   Tooltip, TooltipContent, TooltipProvider, ''
   TooltipTrigger} from '@/components/ui/tooltip'
@@ -53,7 +53,7 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
 '
 import Link from 'next/link''
 import { MessageSquare }  from 'lucide-react
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'
 import {}"
   Tooltip, TooltipContent, TooltipProvider,'
   TooltipTrigger}  from '@/components/ui/tooltip';const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}

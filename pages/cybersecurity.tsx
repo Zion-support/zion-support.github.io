@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer';
+import Footer from '../src/components/Footer'
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, Phone, Mail, Users, Award, Clock, Globe } from 'lucide-react';
 
 export default function Cybersecurity() {
@@ -175,7 +175,7 @@ export default function Cybersecurity() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-red-900/20 to-orange-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Secure Your Business?
           </h2>
@@ -203,5 +203,4 @@ export default function Cybersecurity() {
 
       <Footer />
     </div>
-  );
-}
+  )}

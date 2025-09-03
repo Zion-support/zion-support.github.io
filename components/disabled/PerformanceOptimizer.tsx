@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'
 import Head from 'next/head';
 
 interface PerformanceOptimizerProps {
@@ -47,10 +47,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     </Head>
-  );
-};
+  )};
 
 export default PerformanceOptimizer;

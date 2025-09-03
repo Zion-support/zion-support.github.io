@@ -48,7 +48,7 @@ export default function Sitemap() {
     </div>
   )}
 
-<<<<<<< HEADimport { Link } from 'react - router - dom';
+<<<<<<< HEADimport { Link } from 'react - router - dom'
 import React from 'react'
 export default React.memo(function Sitemap () {
 '

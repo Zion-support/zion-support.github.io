@@ -1,10 +1,9 @@
-import React from 'react';
+import React from 'react'
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO'
 import { ;
   Handshake, Globe, Award, Users, Building, ;
-  Star, CheckCircle, ArrowRight, ExternalLink ;
-} from 'lucide-react';
+  Star, CheckCircle, ArrowRight, ExternalLink} from 'lucide-react';
 ;
 export default function Partners() {;
   const partners = [;
@@ -70,29 +69,25 @@ export default function Partners() {;
       description: "Leading technology companies providing cutting-edge solutions",;
       icon: Building,;
       count: 12,;
-      color: "from-blue-500 to-cyan-500";
-    },;
+      color: "from-blue-500 to-cyan-500"},;
     {;
       title: "Cloud Partners",;
       description: "Global cloud providers enabling scalable infrastructure",;
       icon: Globe,;
       count: 8,;
-      color: "from-green-500 to-emerald-500";
-    },;
+      color: "from-green-500 to-emerald-500"},;
     {;
       title: "Research Partners",;
       description: "Academic institutions and research organizations",;
       icon: Award,
       count: 15,;
-      color: "from-purple-500 to-pink-500";
-    },;
+      color: "from-purple-500 to-pink-500"},;
     {;
       title: "Channel Partners",;
       description: "Distribution and implementation partners worldwide",;
       icon: Handshake,;
       count: 25,;
-      color: "from-orange-500 to-red-500";
-    }
+      color: "from-orange-500 to-red-500"}
   ]
 ;
   const benefits = [;
@@ -122,7 +117,7 @@ export default function Partners() {;
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto";
             >;
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">;
                 Our Partners;
               </h1>;
               <p className="text-xl text-gray-300 mb-8">;
@@ -136,7 +131,7 @@ export default function Partners() {;
           </div>;
         </section>;
 
-;,"});,"})
+,"});,"})
         {/* Partnership Types */}
         <section className="py-16">;
           <div className="container mx-auto px-4">;
@@ -172,72 +167,70 @@ import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
 import { 
   Handshake, Globe, Award, Users, Building, 
-  Star, CheckCircle, ArrowRight, ExternalLink ;
-} from &apos;lucide-react';&apos;&apos;
+  Star, CheckCircle, ArrowRight, ExternalLink} from &apos;lucide-react';&apos;&apos;
 
 export default function Partners() {}
   const partners = [
     ;{
       id: 1,
-      name: &quot;Microsoft&quot;,
-      category: &quot;Technology Partner&quot;,
-      description: &quot;Strategic partnership in cloud computing and AI solutions&quot;,
-      logo: &quot;/api/placeholder/200/100&quot;,
-      website: &quot;http,s://microsoft.com&quot;,
-      benefits: [&quot;Azure Integration&quot;, &quot;AI Services&quot;, &quot;Enterprise Solutions&quot;];
+      name: &quot;Microsoft&quot,
+      category: &quot;Technology Partner&quot,
+      description: &quot;Strategic partnership in cloud computing and AI solutions&quot,
+      logo: &quot;/api/placeholder/200/100&quot,
+      website: &quot;http,s: //microsoft.com&quot,
+      benefits: [&quot;Azure Integration&quot, &quot;AI Services&quot, &quot;Enterprise Solutions&quot];
 },
     {
       id: 2,
-      name: &quot;Google Cloud&quot;,
-      category: &quot;Cloud Partner&quot;,
-      description: &quot;Advanced cloud infrastructure and machine learning platforms&quot;,
-      logo: &quot;/api/placeholder/200/100&quot;,
-      website: &quot;http,s://cloud.google.com&quot;,
-      benefits: [&quot;GCP Services&quot;, &quot;ML Platforms&quot;, &quot;Data Analytics&quot;];
+      name: &quot;Google Cloud&quot,
+      category: &quot;Cloud Partner&quot,
+      description: &quot;Advanced cloud infrastructure and machine learning platforms&quot,
+      logo: &quot;/api/placeholder/200/100&quot,
+      website: &quot;http,s: //cloud.google.com&quot,
+      benefits: [&quot;GCP Services&quot, &quot;ML Platforms&quot, &quot;Data Analytics&quot];
 },
     {
       id: 3,
-      name: &quot;IBM&quot;,
-      category: &quot;Quantum Computing Partner&quot;,
-      description: &quot;Quantum computing research and development collaboration&quot;,
-      logo: &quot;/api/placeholder/200/100&quot;,
-      website: &quot;http,s://ibm.com&quot;,
-      benefits: [&quot;Quantum Systems&quot;, &quot;Research Collaboration&quot;, &quot;Enterprise AI&quot;];
+      name: &quot;IBM&quot,
+      category: &quot;Quantum Computing Partner&quot,
+      description: &quot;Quantum computing research and development collaboration&quot,
+      logo: &quot;/api/placeholder/200/100&quot,
+      website: &quot;http,s: //ibm.com&quot,
+      benefits: [&quot;Quantum Systems&quot, &quot;Research Collaboration&quot, &quot;Enterprise AI&quot];
 },
     {
       id: 4,
-      name: &quot;Amazon Web Services&quot;,
-      category: &quot;Cloud Infrastructure Partner&quot;,
-      description: &quot;Comprehensive cloud services and infrastructure solutions&quot;,
-      logo: &quot;/api/placeholder/200/100&quot;,
-      website: &quot;http,s://aws.amazon.com&quot;,
-      benefits: [&quot;AWS Services&quot;, &quot;Infrastructure&quot;, &quot;Global Reach&quot;];
+      name: &quot;Amazon Web Services&quot,
+      category: &quot;Cloud Infrastructure Partner&quot,
+      description: &quot;Comprehensive cloud services and infrastructure solutions&quot,
+      logo: &quot;/api/placeholder/200/100&quot,
+      website: &quot;http,s: //aws.amazon.com&quot,
+      benefits: [&quot;AWS Services&quot, &quot;Infrastructure&quot, &quot;Global Reach&quot];
 },
     {
       id: 5,
-      name: &quot;NVIDIA&quot;,
-      category: &quot;AI Hardware Partner&quot;,
-      description: &quot;Advanced GPU solutions for AI and machine learning workloads&quot;,
-      logo: &quot;/api/placeholder/200/100&quot;,
-      website: &quot;http,s://nvidia.com&quot;,
-      benefits: [&quot;GPU Solutions&quot;, &quot;AI Acceleration&quot;, &quot;Deep Learning&quot;];
+      name: &quot;NVIDIA&quot,
+      category: &quot;AI Hardware Partner&quot,
+      description: &quot;Advanced GPU solutions for AI and machine learning workloads&quot,
+      logo: &quot;/api/placeholder/200/100&quot,
+      website: &quot;http,s: //nvidia.com&quot,
+      benefits: [&quot;GPU Solutions&quot, &quot;AI Acceleration&quot, &quot;Deep Learning&quot];
 },
     {
       id: 6,
-      name: &quot;Intel&quot;,
-      category: &quot;Technology Partner&quot;,
-      description: &quot;Advanced processor technologies and AI optimization&quot;,
-      logo: &quot;/api/placeholder/200/100&quot;,
-      website: &quot;http,s://intel.com&quot;,
-      benefits: [&quot;Processor Tech&quot;, &quot;AI Optimization&quot;, &quot;Performance&quot;];
+      name: &quot;Intel&quot,
+      category: &quot;Technology Partner&quot,
+      description: &quot;Advanced processor technologies and AI optimization&quot,
+      logo: &quot;/api/placeholder/200/100&quot,
+      website: &quot;http,s: //intel.com&quot,
+      benefits: [&quot;Processor Tech&quot, &quot;AI Optimization&quot, &quot;Performance&quot];
 }
   ]&quot;
 
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import { SEO } from '../components/SEO';
 import { 
-  Handshake, Globe, Award, Users, Building, Star, CheckCircle, ArrowRight, ExternalLink ;
-} from 'lucide-react';
+  Handshake, Globe, Award, Users, Building, Star, CheckCircle, ArrowRight, ExternalLink} from 'lucide-react';
 export default function Partners() {
   const partners = [
     { id: 1, name: "Microsoft",
@@ -294,60 +287,51 @@ export default function Partners() {
   const partnershipTypes = [
     { title: "Technology Partners", description: "Leading technology companies providing cutting-edge solutions",
     {
-      title: &quot;Technology Partners&quot;,
-      description: &quot;Leading technology companies providing cutting-edge solutions&quot;,
+      title: &quot;Technology Partners&quot,
+      description: &quot;Leading technology companies providing cutting-edge solutions&quot,
       icon: Building,
       count: 12,
-      color: &quot;from-blue-500 to-cyan-500&quot;
-    },
+      color: &quot;from-blue-500 to-cyan-500&quot},
     {
-      title: &quot;Cloud Partners&quot;,
-      description: &quot;Global cloud providers enabling scalable infrastructure&quot;,
+      title: &quot;Cloud Partners&quot,
+      description: &quot;Global cloud providers enabling scalable infrastructure&quot,
       icon: Globe,
       count: 8,
-      color: &quot;from-green-500 to-emerald-500&quot;
-    },
+      color: &quot;from-green-500 to-emerald-500&quot},
     {
-      title: &quot;Research Partners&quot;,
-      description: &quot;Academic institutions and research organizations&quot;,
+      title: &quot;Research Partners&quot,
+      description: &quot;Academic institutions and research organizations&quot,
       icon: Award,
       count: 15,
-      color: &quot;from-purple-500 to-pink-500&quot;
-    },
+      color: &quot;from-purple-500 to-pink-500&quot},
     {
-      title: &quot;Channel Partners&quot;,
-      description: &quot;Distribution and implementation partners worldwide&quot;,
+      title: &quot;Channel Partners&quot,
+      description: &quot;Distribution and implementation partners worldwide&quot,
       icon: Handshake,
       count: 25,
-      color: &quot;from-orange-500 to-red-500&quot;
-    }
+      color: &quot;from-orange-500 to-red-500&quot}
   ]&quot;
 
   const benefits = [
-    &quot;Access to cutting-edge technology and platforms&quot;,
-    &quot;Joint research and development opportunities&quot;,
-    &quot;Global market reach and distribution channels&quot;,
-    &quot;Technical support and training programs&quot;,
-    &quot;Co-marketing and go-to-market strategies&quot;,
-    &quot;Priority access to new features and updates&quot;
-  ]
+    &quot;Access to cutting-edge technology and platforms&quot,
+    &quot;Joint research and development opportunities&quot,
+    &quot;Global market reach and distribution channels&quot,
+    &quot;Technical support and training programs&quot,
+    &quot;Co-marketing and go-to-market strategies&quot,
+    &quot;Priority access to new features and updates&quot]
 
   return (&quot;
   {
       title: "Technology Partners", description: "Leading technology companies providing cutting-edge solutions",
       icon: Building, count: 12,
-      color: "from-blue-500 to-cyan-500";
-}, { title: "Cloud Partners",
+      color: "from-blue-500 to-cyan-500"}, { title: "Cloud Partners",
       description: "Global cloud providers enabling scalable infrastructure", icon: Globe,
-      count: 8, color: "from-green-500 to-emerald-500";
-},
+      count: 8, color: "from-green-500 to-emerald-500"},
     { title: "Research Partners", description: "Academic institutions and research organizations",
       icon: Award, count: 15,
-      color: "from-purple-500 to-pink-500";
-}, { title: "Channel Partners",
+      color: "from-purple-500 to-pink-500"}, { title: "Channel Partners",
       description: "Distribution and implementation partners worldwide", icon: Handshake,
-      count: 25, color: "from-orange-500 to-red-500";
-}
+      count: 25, color: "from-orange-500 to-red-500"}
   ]
   const benefits = [
     "Access to cutting-edge technology and platforms", "Joint research and development opportunities",
@@ -414,7 +398,7 @@ export default function Partners() {
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-8&quot;>
-              {partnershipTypes.map((type, index) => (&quot;}
+              {partnershipTypes.map((type, index) => (&quot}
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {partnershipTypes.map((type, index) => (
                 <motion.div
@@ -422,14 +406,14 @@ export default function Partners() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105";
+                  className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105`;
                 >;
                   <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-4`}>;
-                    <type.icon className="w-8 h-8 text-white" />;
+                    <type.icon className=`w-8 h-8 text-white`} />;
                   </div>;
                   <h3 className="text-xl font-bold text-white mb-2">{type.title}</h3>;
                   <p className="text-gray-300 text-sm mb-3">{type.description}</p>;
-                  <div className="text-2xl font-bold text-blue-400">{type.count}+</div>;
+                  <div className={`text-2xl font-bold text-blue-400`>{type.count}+</div>;
                 </motion.div>;
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hove,r:scale-105&quot;
                 >&quot;
@@ -446,7 +430,7 @@ export default function Partners() {
         </section>;
 
         {/* Partners Grid */}
-        <section className="py-16">;
+        <section className=`py-16`}>;
           <div className="container mx-auto px-4">;
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -484,7 +468,7 @@ export default function Partners() {
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-3 gap-8&quot;>
-              {partners.map((partner, index) => (&quot;}
+              {partners.map((partner, index) => (&quot}
                 <motion.div
                   key={partner.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -531,7 +515,7 @@ export default function Partners() {
                   <div className=&quot;mb-4&quot;>&quot;"
                     <h4 className=&quot;text-sm font-semibold text-white mb-2&quot;>Key Benefits&quot;</h4>
                     <div className=&quot;space-y-1&quot;>
-                      {partner.benefits.map((benefit, benefitIndex) => (&quot;}
+                      {partner.benefits.map((benefit, benefitIndex) => (&quot}
                         <div key={benefitIndex} className=&quot;flex items-center text-xs text-gray-400&quot;>&quot;"
                           <CheckCircle className=&quot;w-3 h-3 text-green-400 mr-2&quot; />
                           {benefit}&quot;
@@ -608,7 +592,7 @@ export default function Partners() {
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-3 gap-6&quot;>
-              {benefits.map((benefit, index) => (&quot;}
+              {benefits.map((benefit, index) => (&quot}
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -705,7 +689,7 @@ export default function Partners() {
                 </a>
                 <a
                   href=&quot;/about&quot;
-                  className=&quot;inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hove,r:text-white transition-all duration-200&quot;
+                  className=&quot;inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hove,r: text-white transition-all duration-200&quot;
                 >&quot;
                   <ArrowRight className=&quot;w-5 h-5 mr-2&quot; />
                   Learn More&quot;
@@ -717,5 +701,4 @@ export default function Partners() {
       </div>
 </>
   )
-  );
-}
+  )}

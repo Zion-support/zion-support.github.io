@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 
@@ -7,33 +7,27 @@ const AISEOOptimization: NextPage = () => {
     {
       title: 'Content Analysis',
       description: 'AI-powered analysis of your content for SEO optimization opportunities.',
-      icon: '🔍';
-},
+      icon: '🔍'},
     {
       title: 'Keyword Research',
       description: 'Advanced keyword research and competitor analysis using AI algorithms.',
-      icon: '🎯';
-},
+      icon: '🎯'},
     {
       title: 'On-Page Optimization',
       description: 'Automated suggestions for title tags, meta descriptions, and content structure.',
-      icon: '📝';
-},
+      icon: '📝'},
     {
       title: 'Technical SEO',
       description: 'Comprehensive technical SEO audits and optimization recommendations.',
-      icon: '⚙️';
-},
+      icon: '⚙️'},
     {
       title: 'Content Generation',
       description: 'AI-generated SEO-optimized content that ranks well in search engines.',
-      icon: '✍️';
-},
+      icon: '✍️'},
     {
       title: 'Performance Tracking',
       description: 'Real-time tracking of SEO performance with actionable insights.',
-      icon: '📊';
-}
+      icon: '📊'}
   ]
 
   const benefits = [
@@ -59,8 +53,7 @@ const AISEOOptimization: NextPage = () => {
         'Standard integrations',
         'Basic content suggestions'
       ],
-      popular: false;
-},
+      popular: false},
     {
       name: 'Professional',
       price: '$499',
@@ -75,8 +68,7 @@ const AISEOOptimization: NextPage = () => {
         'AI content generation',
         'Competitor analysis'
       ],
-      popular: true;
-},
+      popular: true},
     {
       name: 'Enterprise',
       price: '$1,299',
@@ -91,8 +83,7 @@ const AISEOOptimization: NextPage = () => {
         '24/7 phone support',
         'SLA guarantees'
       ],
-      popular: false;
-}
+      popular: false}
   ]
 
   return (
@@ -197,11 +188,11 @@ const AISEOOptimization: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className={`grid md:grid-cols-3 gap-8 max-w-6xl mx-auto`>
             {pricing.map((plan, index) => (
               <div key={index} className={`bg-white rounded-xl p-8 shadow-lg border-2 ${plan.popular ? 'border-yellow-500 relative' : 'border-gray-200'}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
                     <span className="bg-yellow-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
@@ -224,13 +215,11 @@ const AISEOOptimization: NextPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  href="/contact" 
+                <Link href={`/contact` 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular 
-                      ? 'bg-yellow-600 hover:bg-yellow-700 text-white' 
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900';
-}`}
+                      ? 'bg-yellow-600 hover: bg-yellow-700 text-white' 
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}
                 >
                   Get Started
                 </Link>
@@ -241,13 +230,13 @@ const AISEOOptimization: NextPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-yellow-600 to-orange-600 text-white">
+      <section className=`py-20 bg-gradient-to-r from-yellow-600 to-orange-600 text-white`}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Boost Your Search Rankings?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Start improving your SEO performance with AI-powered optimization tools.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <div className="flex flex-col sm: flex-row justify-center gap-6">
             <Link href="/contact"><a className="bg-white text-yellow-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors">
               Start Free Trial
             </a></Link>
@@ -258,7 +247,6 @@ const AISEOOptimization: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )};
 
 export default AISEOOptimization;

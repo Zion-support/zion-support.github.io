@@ -29,8 +29,7 @@ export interface RevolutionaryITInfrastructureService2029 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
+    address: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -38,8 +37,7 @@ export interface RevolutionaryITInfrastructureService2029 {
   rating: number;
   reviews: number;
   isPopular?: boolean;
-  isNew?: boolean;
-}
+  isNew?: boolean}
 export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastructureService2029[] =
   [
     // Zero Trust Network Access
@@ -644,8 +642,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
 export const getITInfrastructureServicesByCategory = (category: string) => {
   return revolutionaryITInfrastructureServices2029.filter(
     service => service.category === category
-  );
-};
+  )};
 export const getPopularITInfrastructureServices = () => {
   return revolutionaryITInfrastructureServices2029.filter(
     service => service.isPopular
@@ -662,6 +659,5 @@ export const getITInfrastructureServicesByPriceRange = (
 ) => {
   return revolutionaryITInfrastructureServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
-    return price >= minPrice && price <= maxPrice;
-  });
+    return price >= minPrice && price <= maxPrice});
 };

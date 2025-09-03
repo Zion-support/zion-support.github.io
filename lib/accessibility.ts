@@ -47,8 +47,7 @@ export const accessibilityUtils = {
   // Check if element is visible
   isVisible: (element) => {
     const style = window.getComputedStyle(element);
-    return style.display !== 'none' && style.visibility !== 'hidden' && style.opacity !== '0';
-  },
+    return style.display !== 'none' && style.visibility !== 'hidden' && style.opacity !== '0'},
   
   // Announce to screen readers
   announce: (message) => {

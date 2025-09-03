@@ -1,24 +1,20 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import { ArrowRight, CheckCircle, Star, Users, Award, Globe, Brain, Cloud, Shield, Zap, Database, Cpu, Lock, Heart, TrendingUp, Target, BarChart3, PenTool, Eye, Server, Smartphone, Network, Clock, Sparkles, Phone, Mail, MapPin, FileText, Building2, Car, Share2 } from 'lucide-react';
 
 const AIContentGenerator: NextPage = () => {
   const features = [
     {
       title: 'Multi-Language Support', description: 'Generate content in over 50 languages with native-level quality',
-      icon: <Globe className="w-6 h-6" />;
-}, {
+      icon: <Globe className="w-6 h-6" />}, {
       title: 'SEO Optimization',
-      description: 'AI-powered SEO optimization for better search rankings', icon: <Zap className="w-6 h-6" />;
-},
+      description: 'AI-powered SEO optimization for better search rankings', icon: <Zap className="w-6 h-6" />},
     {
       title: 'Brand Voice Consistency', description: 'Maintain consistent brand voice across all content',
-      icon: <Shield className="w-6 h-6" />;
-}, {
+      icon: <Shield className="w-6 h-6" />}, {
       title: 'Real-time Collaboration',
-      description: 'Work together with your team in real-time', icon: <Users className="w-6 h-6" />;
-}
+      description: 'Work together with your team in real-time', icon: <Users className="w-6 h-6" />}
   ]
 
   const pricingPlans = [
@@ -29,8 +25,7 @@ const AIContentGenerator: NextPage = () => {
         '10, 000 words per month',
         '5 languages supported', 'Basic SEO optimization',
         'Email support', 'Standard templates'
-      ], popular: false;
-},
+      ], popular: false},
     {
       name: 'Professional', price: '$199',
       period: '/month', description: 'Ideal for growing businesses and content teams',
@@ -39,8 +34,7 @@ const AIContentGenerator: NextPage = () => {
         '25 languages supported', 'Advanced SEO optimization',
         'Priority support', 'Custom templates',
         'Team collaboration (up to 5 users)', 'API access'
-      ], popular: true;
-},
+      ], popular: true},
     {
       name: 'Enterprise', price: 'Custom',
       period: '', description: 'Tailored solutions for large organizations',
@@ -49,8 +43,7 @@ const AIContentGenerator: NextPage = () => {
         'Custom AI models', 'Dedicated support',
         'White-label solution', 'Unlimited team members',
         'Advanced analytics', 'Custom integrations'
-      ], popular: false;
-}
+      ], popular: false}
   ]
 
   return (
@@ -111,11 +104,11 @@ export default function AIContentGenerator() {
             </p>
           </div>
           
-          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className={`grid md: grid-cols-3 gap-8 max-w-6xl mx-auto`>
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white p-8 rounded-lg shadow-lg relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
                     <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
@@ -140,16 +133,14 @@ export default function AIContentGenerator() {
                   ))}
                 </ul>
                 
-                <Link
-                  href="/contact"
+                <Link href={`/contact`
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
                       ? 'bg-blue-600 hover: bg-blue-700 text-white'
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900';
-}`}
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}
                 >
                   Get Started
-              <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              <h1 className=`text-5xl font-bold text-gray-900 mb-6`}>
                 AI Content Generator
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
@@ -391,7 +382,7 @@ export default function AIContentGenerator() {
 
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Content Creation?</h2>
             <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
               Join thousands of content creators and marketers who are already using our AI to create better content faster.
@@ -411,5 +402,4 @@ export default function AIContentGenerator() {
         </section>
       </main>
     </>
-  );
-}
+  )}

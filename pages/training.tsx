@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import {
   BookOpen,
   Users,
@@ -209,8 +209,7 @@ export default function Training() {
       author: "Jennifer Liu",
       title: "AI Engineer",
       company: "Tech Corp",
-      rating: 5;
-},
+      rating: 5},
     {
       quote:
         'The cloud architecture course gave me the skills I needed to lead our digital transformation initiative. Highly recommended!',
@@ -329,11 +328,10 @@ export default function Training() {
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex-1">
                       <div className="flex items-center space-x-3 mb-3">
-                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                        <span className={`bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold`>
                           {program.category}
                         </span>
-                        <span
-                          className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
                             program.level === 'Beginner'
                               ? 'bg-green-100 text-green-800'
                               : program.level === 'Intermediate'
@@ -344,7 +342,7 @@ export default function Training() {
                           {program.level}
                         </span>
                       </div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                      <h3 className=`text-2xl font-bold text-gray-900 mb-3`}>
                         {program.title}
                       </h3>
                       <p className="text-gray-600 mb-4">
@@ -563,5 +561,4 @@ export default function Training() {
         </section>
       </main>
     </>
-  );
-}
+  )}

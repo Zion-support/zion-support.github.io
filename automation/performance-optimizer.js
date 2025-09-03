@@ -29,8 +29,7 @@ fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logM
 
       // Generate optimization report
       const report = {
-  timestamp: new Date().toISOString(), bundleSize: bundleAnalysis, imageOptimization: imageOptimization, dependencies: dependencyAnalysis, recommendations: this.generateRecommendations();
-}
+  timestamp: new Date().toISOString(), bundleSize: bundleAnalysis, imageOptimization: imageOptimization, dependencies: dependencyAnalysis, recommendations: this.generateRecommendations()}
 
 this.saveReport(report);this.saveReport(report)
 this.log(

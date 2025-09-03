@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 
@@ -7,33 +7,27 @@ const AffiliateMarketing: NextPage = () => {
     {
       title: 'Referral Link Management',
       description: 'Create, track, and manage custom referral links with detailed analytics.',
-      icon: '🔗';
-},
+      icon: '🔗'},
     {
       title: 'Commission Tracking',
       description: 'Automatically calculate and track commissions for all affiliate partners.',
-      icon: '💰';
-},
+      icon: '💰'},
     {
       title: 'Performance Analytics',
       description: 'Comprehensive dashboard with real-time performance metrics and insights.',
-      icon: '📊';
-},
+      icon: '📊'},
     {
       title: 'Partner Management',
       description: 'Manage affiliate partners, approve applications, and track performance.',
-      icon: '👥';
-},
+      icon: '👥'},
     {
       title: 'Payment Processing',
       description: 'Automated payment processing with multiple payment methods.',
-      icon: '💳';
-},
+      icon: '💳'},
     {
       title: 'Fraud Detection',
       description: 'Advanced fraud detection to protect your affiliate program.',
-      icon: '🛡️';
-}
+      icon: '🛡️'}
   ]
 
   const benefits = [
@@ -58,8 +52,7 @@ const AffiliateMarketing: NextPage = () => {
         'Basic fraud protection',
         'Monthly payouts'
       ],
-      popular: false;
-},
+      popular: false},
     {
       name: 'Professional',
       price: '$399',
@@ -74,8 +67,7 @@ const AffiliateMarketing: NextPage = () => {
         'API access',
         'Custom branding'
       ],
-      popular: true;
-},
+      popular: true},
     {
       name: 'Enterprise',
       price: '$999',
@@ -90,8 +82,7 @@ const AffiliateMarketing: NextPage = () => {
         'Advanced API access',
         'Custom fraud rules'
       ],
-      popular: false;
-}
+      popular: false}
   ]
 
   return (
@@ -196,11 +187,11 @@ const AffiliateMarketing: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className={`grid md:grid-cols-3 gap-8 max-w-6xl mx-auto`>
             {pricing.map((plan, index) => (
               <div key={index} className={`bg-white rounded-xl p-8 shadow-lg border-2 ${plan.popular ? 'border-green-500 relative' : 'border-gray-200'}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
                     <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
@@ -223,13 +214,11 @@ const AffiliateMarketing: NextPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  href="/contact" 
+                <Link href={`/contact` 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular 
-                      ? 'bg-green-600 hover:bg-green-700 text-white' 
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900';
-}`}
+                      ? 'bg-green-600 hover: bg-green-700 text-white' 
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}
                 >
                   Get Started
                 </Link>
@@ -240,13 +229,13 @@ const AffiliateMarketing: NextPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      <section className=`py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white`}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Launch Your Affiliate Program?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Start growing your business through strategic partnerships and performance-based marketing.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <div className="flex flex-col sm: flex-row justify-center gap-6">
             <Link href="/contact"><a className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors">
               Start Free Trial
             </a></Link>
@@ -257,7 +246,6 @@ const AffiliateMarketing: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )};
 
 export default AffiliateMarketing;

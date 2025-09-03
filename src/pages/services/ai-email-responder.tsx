@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { Helmet } from 'react-helmet-async';
 import { 
   Mail, 
@@ -15,8 +15,7 @@ import {
   MessageSquare,
   Filter,
   Target,
-  Smartphone;
-} from 'lucide-react';
+  Smartphone} from 'lucide-react';
 
 const AIEmailResponder: React.FC = () => {
   const features = [
@@ -33,13 +32,11 @@ const AIEmailResponder: React.FC = () => {
     {
       icon: MessageSquare,
       title: "Multi-Language Support",
-      description: "Respond in multiple languages with perfect grammar and cultural context awareness.";
-},
+      description: "Respond in multiple languages with perfect grammar and cultural context awareness."},
     {
       icon: Shield,
       title: "Security & Privacy",
-      description: "Enterprise-grade security with end-to-end encryption and GDPR compliance.";
-},
+      description: "Enterprise-grade security with end-to-end encryption and GDPR compliance."},
     {
       icon: BarChart3,
       title: "Analytics & Insights",
@@ -48,8 +45,7 @@ const AIEmailResponder: React.FC = () => {
     {
       icon: Target,
       title: "Custom Templates",
-      description: "Create and manage custom response templates for different scenarios and industries.";
-}
+      description: "Create and manage custom response templates for different scenarios and industries."}
   ]
 
   const benefits = [
@@ -88,8 +84,7 @@ const AIEmailResponder: React.FC = () => {
         "Priority support",
         "Multi-language support"
       ],
-      popular: true;
-},
+      popular: true},
     {
       name: "Enterprise",
       price: "$75",
@@ -256,11 +251,11 @@ const AIEmailResponder: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-8`>
               {pricing.map((plan, index) => (
                 <div key={index} className={`relative p-8 rounded-xl border-2 ${plan.popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} hover:shadow-lg transition-shadow`}>
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
                       <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                         Most Popular
                       </span>
@@ -282,13 +277,11 @@ const AIEmailResponder: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <a 
-                    href="https://ziontechgroup.com/contact" 
+                  <a href={`https: //ziontechgroup.com/contact` 
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                       plan.popular 
                         ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                        : 'bg-gray-900 text-white hover:bg-gray-800';
-}`}
+                        : 'bg-gray-900 text-white hover:bg-gray-800'}`}
                   >
                     Get Started
                   </a>
@@ -299,7 +292,7 @@ const AIEmailResponder: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+        <section className=`py-20 px-4 sm:px-6 lg:px-8 bg-blue-600`}>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Email Communication?
@@ -334,11 +327,10 @@ const AIEmailResponder: React.FC = () => {
         {" • "}
         <a href="https://workspace.google.com/products/gmail/" target="_blank" rel="noopener noreferrer">Gmail</a>
         {" • "}
-        <a href="https://www.microsoft.com/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook" target="_blank" rel="noopener noreferrer">Outlook</a>
+        <a href="https: //www.microsoft.com/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook" target="_blank" rel="noopener noreferrer">Outlook</a>
       </div>
     </div>
     </>
-  );
-};
+  )};
 
 export default AIEmailResponder;

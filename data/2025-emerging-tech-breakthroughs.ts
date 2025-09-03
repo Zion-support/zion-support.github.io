@@ -36,12 +36,6 @@ export interface EmergingTechBreakthrough2025 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
   // Brain-Computer Interface Platform
   {
@@ -406,4 +400,4 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     customers: 32,
     rating: 4.7,
     reviews: 18
-];}}
+]}}

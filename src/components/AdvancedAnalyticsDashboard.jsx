@@ -1,6 +1,6 @@
-import React { useState } from 'react';
+import React { useState } from 'react'
 import { motion } from 'framer-motion';
-import React from 'react';
+import React from 'react'
 import {SEO } from '@/components/SEO';
 
 export default function AdvancedAnalyticsDashboard() {return (
@@ -30,7 +30,7 @@ import {}
   Shield,';
   Brain,'';
   Rocket} from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 const AdvancedAnalyticsDashboard = () => {}
@@ -98,59 +98,59 @@ import { Button } from &apos;./ui/button&apos;
 import { Badge } from &apos;./ui/badge';&apos;&apos;
 &apos;
 &apos;&apos;&apos;&apos;
-  const [timeRange, setTimeRange] = useState(&apos;30d&apos;)';&apos;&apos;
-  const [selectedMetric, setSelectedMetric] = useState(&apos;overview&apos;);
+  const [timeRange, setTimeRange] = useState(&apos;30d&apos)';&apos;&apos;
+  const [selectedMetric, setSelectedMetric] = useState(&apos;overview&apos);
   // Mock data - in real app this would come from API;&apos;
 &apos;&apos;
-      title: &apos;Total Revenue&apos;,'&apos;
-      value: &apos;$2.4M&apos;,&apos;
+      title: &apos;Total Revenue&apos,'&apos;
+      value: &apos;$2.4M&apos,&apos;
       change: 12.5,&apos;&apos;
-      changeType: &apos;increase&apos;,'&apos;
+      changeType: &apos;increase&apos,'&apos;
       icon:&apos;&apos; <DollarSign className=&apos;w-6 h-6&apos; />,&apos;&apos;
       color: &apos;from-green-500 to-emerald-600&apos} {}
-      title: &apos;Active Clients&apos;,';
-      value: &apos;1,247&apos;,
+      title: &apos;Active Clients&apos,';
+      value: &apos;1,247&apos,
       change: 8.2,&apos;&apos;'';
-      changeType: &apos;increase&apos;,'&apos;&apos;'
+      changeType: &apos;increase&apos,'&apos;&apos;'
       icon:&apos;&apos; <Users className=&apos;w-6 h-6&apos; />,';
       color: &apos;from-blue-500 to-cyan-600&apos} {}
-      title: &apos;Service Performance&apos;,';
-      value: &apos;94.2%&apos;,
+      title: &apos;Service Performance&apos,';
+      value: &apos;94.2%&apos,
       change: 2.1,&apos;&apos;'';
       icon:&apos;&apos; <Target className=&apos;w-6 h-6&apos; />,';
       color: &apos;from-purple-500 to-pink-600&apos} {}
-      title: &apos;Client Satisfaction&apos;,';
-      value: &apos;4.8/5&apos;,
+      title: &apos;Client Satisfaction&apos,';
+      value: &apos;4.8/5&apos,
       change: 0.3,&apos;&apos;'';
       icon:&apos;&apos; <Star className=&apos;w-6 h-6&apos; />,';
       color: &apos;from-yellow-500 to-orange-600&apos}
   ]&apos;&apos;
-      name: &apos;AI CRM Platform&apos;,
+      name: &apos;AI CRM Platform&apos,
       performance: 96,
       clients: 89,&apos;
       revenue: 450000,&apos;&apos;
       status: &apos;trending&apos} {}
-      name: &apos;Quantum Computing&apos;,
+      name: &apos;Quantum Computing&apos,
       performance: 92,
       clients: 23,&apos;
       revenue: 1200000,&apos;&apos;
-      name: &apos;Blockchain Solutions&apos;,
+      name: &apos;Blockchain Solutions&apos,
       performance: 88,
       clients: 156,&apos;
       revenue: 780000,&apos;&apos;
       status: &apos;stable&apos} {}
-      name: &apos;Cybersecurity Suite&apos;,
+      name: &apos;Cybersecurity Suite&apos,
       performance: 94,
       clients: 203,&apos;
       revenue: 920000,&apos;&apos;
-      name: &apos;IoT Platform&apos;,
+      name: &apos;IoT Platform&apos,
       performance: 85,
       growth: 8.7,
       clients: 67,
       revenue: 340000,';
       status: &apos;stable&apos}
   ]';&apos;&apos;
-  const categoryDistribution = [&apos;&apos { label: &apos;AI & ML&apos;, value: 35, color: &apos;from-purple-500 to-pink-600&apos},&apos { label: &apos;Quantum&apos;, value: 20, color: &apos;from-blue-500 to-cyan-600&apos},&apos { label: &apos;Blockchain&apos;, value: 25, color: &apos;from-green-500 to-emerald-600&apos},&apos { label: &apos;Cybersecurity&apos;, value: 15, color: &apos;from-red-500 to-pink-600&apos},&apos { label: &apos;IoT&apos;, value: 5, color: &apos;from-orange-500 to-yellow-600&apos}
+  const categoryDistribution = [&apos;&apos { label: &apos;AI & ML&apos, value: 35, color: &apos;from-purple-500 to-pink-600&apos},&apos { label: &apos;Quantum&apos, value: 20, color: &apos;from-blue-500 to-cyan-600&apos},&apos { label: &apos;Blockchain&apos, value: 25, color: &apos;from-green-500 to-emerald-600&apos},&apos { label: &apos;Cybersecurity&apos, value: 15, color: &apos;from-red-500 to-pink-600&apos},&apos { label: &apos;IoT&apos, value: 5, color: &apos;from-orange-500 to-yellow-600&apos}
   const getStatusIcon = status => {}
     switch (status) {}
 &apos;&apos;'';
@@ -241,8 +241,7 @@ import { Badge} from './ui/badge';
       case 'declining': ''''
         return <TrendingDown className='w-4 h-4 text-red-500' />';'
       default: ''''
-        return <Activity className='w-4 h-4 text-gray-500' />;
-}
+        return <Activity className='w-4 h-4 text-gray-500' />}
   }&apos;
   const getStatusColor = status => {}
       case 'trending':';
@@ -320,7 +319,7 @@ import { Badge} from './ui/badge';
               business intelligence&apos;
           </div>&apos;&apos;
 &apos;&apos;'&apos;&apos;'
-          <div className=&apos;flex gap-2&apos;>&apos {[&apos;7d&apos;,30d&apos;,90d&apos;,1y&apos;].map(range => (&apos}&apos;
+          <div className=&apos;flex gap-2&apos;>&apos {[&apos;7d&apos,30d&apos,90d&apos,1y&apos].map(range => (&apos}&apos;
           </div>''';'
           <div className='flex gap-2'>'{['7d', 30d',90d', 1y'].map(range => (
                 key={range}&apos;&apos;'';
@@ -697,13 +696,13 @@ import { Badge} from './ui/badge';
             <Button&apos;&apos;'';
               className=&apos;bg-white text-zion-purple hover:bg-zion-slate-light&apos;&apos;
                 window.open(&apos;
-                  &apos;mailt,o:kleber@ziontechgroup.com?subject=Analytics Dashboard Access&apos;,_blank&apos;)}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
+                  &apos;mailt,o: kleber@ziontechgroup.com?subject=Analytics Dashboard Access&apos,_blank&apos)}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
               <Rocket className=&apos;w-5 h-5 mr-2&apos; />
               Request Access&apos;
             </Button>&apos;&apos;'&apos;&apos;
               variant=&apos;outline&apos;&apos;'&apos;
               className=&apos;border-white text-white hover:bg-white hover:text-zion-purple&apos;&apos;
-              onClick={() => window.open(&apos;te,l:+13024640950&apos;,_blank&apos;)}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
+              onClick={() => window.open(&apos;te,l: +13024640950&apos,_blank&apos)}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
               <Shield className=&apos;w-5 h-5 mr-2&apos; />
               Schedule Demo&apos;
         transition={{ delay: 0.4 }}'''';

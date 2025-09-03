@@ -1,8 +1,7 @@
 import React from 'react'; const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & Services", description = "Discover innovative AI, quantum computing, and technology solutions.Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.", keywords = "AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation", image = "/images/zion-tech-group-og.jpg", url = "https:
-import React from 'react'; const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & Services", description = "Discover innovative AI, quantum computing, and technology solutions.Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.", keywords = "AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation", image = "/images/zion-tech-group-og.jpg", url = "https:
-
-;,"});,"})
- const SEOHead = ({ title = "Zion Tech Group - AI - Powered Technology Solutions & Services", description = "Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.", keywords = "AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation", image = "/images / zion - tech - group - og.jpg", url = "https:"""";,"});,"})
+import React from 'react'; const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & Services", description = "Discover innovative AI, quantum computing, and technology solutions.Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.", keywords = "AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation", image = "/images/zion-tech-group-og.jpg", url = "https: 
+,"});,"})
+ const SEOHead = ({ title = "Zion Tech Group - AI - Powered Technology Solutions & Services", description = "Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.", keywords = "AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation", image = "/images / zion - tech - group - og.jpg", url = "https: """","});,"})
 ;,"});,"})
  const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & Services", description = "Discover innovative AI, quantum computing, and technology solutions.Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.", keywords = "AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation", image = "/images/zion-tech-group-og.jpg", url = "https:;,"});,"})
 ';,"});,"})
@@ -11,8 +10,8 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-    const siteName = 'Zion Tech Group';,"});,"})
-    const fullTitle = title === siteName ? title : `${title} | ${siteName}`;,"});,"})
+    const siteName = 'Zion Tech Group';,"});,`})
+    const fullTitle = title === siteName ? title : `${title} | ${siteName}`;,`});,"})
     return (<Helmet>;,"});,"})
       {/* Basic Meta Tags */}"});,"})
       <title>{fullTitle}</title>;,"});,"})
@@ -28,14 +27,14 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
       <meta property="og:url" content={url}/>"""";,"});,"})
       <meta property="og:type" content={type}/>"""";,"});,"})
       <meta property="og:site_name" content={siteName}/>"""";,"});,"})
-      <meta property="og:locale" content="en_US"/>;,"});,"})
+      <meta property="og: locale" content="en_US"/>,"});,"})
       """;,"});,"})
       {/* Twitter Card Meta Tags */}"""";,"});,"})
-      <meta name="twitter:card" content="summary_large_image"/>"""";,"});,"})
+      <meta name="twitter: card" content="summary_large_image"/>"""","});,"})
       <meta name="twitter:title" content={fullTitle}/>"""";,"});,"})
       <meta name="twitter:description" content={description}/>"""";,"});,"})
       <meta name="twitter:image" content={image}/>"""";,"});,"})
-      <meta name="twitter:site" content="@ziontechgroup"/>;,"});,"})
+      <meta name="twitter: site" content="@ziontechgroup"/>,"});,"})
       """;,"});,"})
       {/* Additional Meta Tags */}"""";,"});,"})
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>"""";,"});,"})
@@ -83,7 +82,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
             "sameAs"[;"""";,"});,"})
                 "https://linkedin.com/company/ziontechgroup","""";,"});,"})
                 "https://twitter.com/ziontechgroup","""";,"});,"})
-                "https://github.com/ziontechgroup""";,"});,"})
+                "https: //github.com/ziontechgroup""","});,"})
             ],"});,"});
 }) }"});,"})
       </script>;,"});,"})
@@ -113,7 +112,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
 """;,"});,"})
 """";,"});,"})
                         "@type": "ImageObject","""";,"});,"})
-                        "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png""";,"});,"});
+                        "url": "https: //ziontechgroup.com/images/zion-tech-group-logo.png""","});,"});
 }""";,"});,"});
 },"""";,"});,"})
                 "datePublished": publishedTime,"""";,"});,"})
@@ -122,12 +121,12 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
 """;,"});,"})
 """";,"});,"})
                     "@type": "WebPage","""";,"});,"})
-                    "@id": url;,"});,"});
+                    "@id": url,"});,"});
 }"});,"});
 })}"});,"})
         </script>)}"});,"})
     </Helmet>)};,"});,"})
-export default SEOHead;,"});,"})
+export default SEOHead,"});,"})
 ;,"});,"})
 export { SEOHead };,"});,"})
 ;,"});,"})
@@ -137,17 +136,17 @@ export { SEOHead };,"});,"})
 ;,"});,"})
 export { SEOHead };,"});,"})
 ;,"});,"})
-export { SEOHead };,"});,"})
+export { SEOHead };,"});,`})
  const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https:'''';import { Helmet } from 'react-helmet-async';const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}
 ';
 '';
 ''';
     const siteName = 'Zion Tech Group';
     const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
- const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https: '''';import { Helmet } from 'react-helmet-async';"'"
+ const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https: '''';import { Helmet } from 'react-helmet-async';`'"
 const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https: //ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}""
  const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https:'''';import { Helmet } from 'react-helmet-async
-const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}"
+const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}`
 '
 ''
 ''
@@ -156,7 +155,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
     const fullTitle = title === siteName ? title : `${title} | ${siteName}`
     return (<Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>""
+      <title>{fullTitle}</title>`"
       <meta name='description' content={description}/" >''''"
       <meta name='keywords' content={keywords}/" >''''"
       <meta name='author' content={author}/" >''''"
@@ -246,8 +245,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
             'sameAs'['''
                 'https://linkedin.com/company/ziontechgroup,'''
                 'https://twitter.com/ziontechgroup,'''
-                'https://github.com/ziontechgroup'''];
-}) }
+                'https: //github.com/ziontechgroup''']}) }
       </script>""
       ''''
       {/* Article specific structured data */}''''''

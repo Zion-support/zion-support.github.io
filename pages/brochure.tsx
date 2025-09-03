@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer';
+import Footer from '../src/components/Footer'
 import { Download, FileText, Users, Zap, Brain, Cloud, Shield, ArrowRight, CheckCircle, Star, Mail, Phone } from 'lucide-react';
 
 const Brochure = () => {
@@ -81,23 +81,19 @@ const Brochure = () => {
     {
       title: 'Detailed Service Information',
       description: 'Comprehensive details about our offerings, capabilities, and methodologies',
-      icon: FileText;
-},
+      icon: FileText},
     {
       title: 'Case Studies & Success Stories',
       description: 'Real-world examples of how we\'ve helped businesses achieve their goals',
-      icon: Star;
-},
+      icon: Star},
     {
       title: 'Technical Specifications',
       description: 'In-depth technical details about our solutions and implementation processes',
-      icon: Shield;
-},
+      icon: Shield},
     {
       title: 'Pricing & Package Information',
       description: 'Transparent pricing information and service packages to help you plan your budget',
-      icon: Zap;
-}
+      icon: Zap}
   ]
 
   const testimonials = [
@@ -106,22 +102,19 @@ const Brochure = () => {
       company: 'InnovateTech Solutions',
       role: 'CEO',
       content: 'The brochures provided excellent detail about the services. It helped us make an informed decision about partnering with Zion Tech Group.',
-      rating: 5;
-},
+      rating: 5},
     {
       name: 'David Thompson',
       company: 'Global Enterprises',
       role: 'CTO',
       content: 'Very comprehensive and well-organized. The case studies were particularly helpful in understanding the potential impact.',
-      rating: 5;
-},
+      rating: 5},
     {
       name: 'Lisa Wang',
       company: 'StartupHub',
       role: 'Founder',
       content: 'The technical specifications in the brochures gave us confidence in their expertise. Highly recommended!',
-      rating: 5;
-}
+      rating: 5}
   ]
 
   return (
@@ -263,7 +256,7 @@ const Brochure = () => {
 
         {/* Contact Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Need More Information?
             </h2>
@@ -286,7 +279,6 @@ const Brochure = () => {
       
       <Footer />
     </>
-  );
-};
+  )};
 
 export default Brochure;

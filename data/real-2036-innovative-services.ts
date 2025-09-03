@@ -312,22 +312,3 @@ export const real2036InnovativeServices = [
       'Advanced risk management',
       'Competitive trading edge'
     ],
-<<<<<<< HEAD
-    useCases: [
-      'Hedge fund operations',
-      'Investment banking',
-      'Portfolio management',
-      'Risk assessment'
-    ]
-
-];}
-=======
-    useCases[;
-      'Hedge fund operations',;
-      'Investment banking',;
-      'Portfolio management',;
-      'Risk assessment';
-    ];
-  };
-];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

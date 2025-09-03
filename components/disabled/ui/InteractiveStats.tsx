@@ -1,31 +1,26 @@
 import React  from 'react';interface StatItem {
   label: string
    value: string | number
-   description?: string;
-}
+   description?: string}
 
 :components/ui/InteractiveStats.tsx
 interface StatItem {
   label: string;
   value: string | number;
-  description?: string;
-}
+  description?: string}
 interface InteractiveStatsProps {
   stats: StatItem[];
-  className?: string;
-}
+  className?: string}
 export default function InteractiveStats({
   stats,
   className = 'grid grid-cols-1 md: grid-cols-3 gap-6',
 interface InteractiveStatsProps {
   stats: StatItem[]
-   className?: string;
-}
+   className?: string}
 
 export default function InteractiveStats({
   stats, className = 'grid grid-cols-1 md: grid-cols-3 gap-6'
-:components/disabled/ui/InteractiveStats.tsx;
-}: InteractiveStatsProps) {
+:components/disabled/ui/InteractiveStats.tsx}: InteractiveStatsProps) {
   return (
     <div className={className}>
       {stats.map((stat, index) => (
@@ -48,5 +43,4 @@ export default function InteractiveStats({
 :components/ui/InteractiveStats.tsx
   );
   )
-:components/disabled/ui/InteractiveStats.tsx;
-}
+:components/disabled/ui/InteractiveStats.tsx}

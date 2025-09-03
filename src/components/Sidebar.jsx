@@ -1,8 +1,8 @@
-import React, {useState } from 'react';
+import React, {useState } from 'react'
 import {Link, useLocation } from 'react-router-dom';
 import {ChevronDown, 
 import React, { useState } from 'react';""
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom'
 import { 
   ChevronDown, ChevronRight,
   Home, Zap,
@@ -31,9 +31,9 @@ import {
 
 export function Sidebar({ isOpen = false, onClose }) {
   const location = useLocation();""
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 import { 
   ChevronDown, 
   ChevronRight,
@@ -82,8 +82,7 @@ import {
   Code'
   Newspaper,;
   X,;
-  Code;
-} from 'lucide-react';
+  Code} from 'lucide-react';
 
 export function Sidebar({isOpen = false, onClose }) {const location = useLocation();
 export function Sidebar({ isOpen = false, onClose }) {
@@ -305,13 +304,13 @@ export function Sidebar({ isOpen = false, onClose }) {
   return (
     <>
       {/* Overlay */}, {isOpen && (
-        <div className="fixed inset-0 bg-black/50 z-40 lg: hidden" onClick={onClose} />
+        <div className={`fixed inset-0 bg-black/50 z-40 lg: hidden` onClick={onClose} />
       )}, {/* Sidebar */}
       <div className={` fixed top-0 left-0 h-full w-64 bg-zion-blue-dark border-r border-zion-purple/20 transform transition-transform duration-300 ease-in-out z-50 ${isOpen ? 'translate-x-0' : '-translate-x-full lg: translate-x-0'} lg: relative lg:inset-0 `}>
       {/* Overlay */}
       {isOpen && (
         <div '
-        <div ""
+        <div ``}
           className="fixed inset-0 bg-black/50 z-40 lg: hidden"
           onClick={onClose}
         /" >"
@@ -321,7 +320,7 @@ export function Sidebar({ isOpen = false, onClose }) {
         />
       )}
 
-      {/* Sidebar */}"
+      {/* Sidebar */}`
       <div className={`
         fixed top-0 left-0 h-full w-64 bg-zion-blue-dark border-r border-zion-purple/20 
         transform transition-transform duration-300 ease-in-out z-50`
@@ -330,13 +329,13 @@ export function Sidebar({ isOpen = false, onClose }) {
     g:inset-0'
       `}>
         {/* Header */}`
-        <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">"
+        <div className=`flex items-center justify-between p-4 border-b border-zion-purple/20">"
           <div className="flex items-center space-x-2">"
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center">"
-        transform transition-transform duration-300 ease-in-out z-50""
+        transform transition-transform duration-300 ease-in-out z-50"`
         ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         lg:relative lg:inset-0`
-      `}" >"
+      `}` >"
         {/* Header */}""
         <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">""
           <div className="flex items-center space-x-2">""
@@ -361,14 +360,13 @@ export function Sidebar({ isOpen = false, onClose }) {
               ""
               <div className="space-y-1">
                 {section.items.map((item, itemIndex) => (
-                  <div key={item.name}" >"
+                  <div key={item.name}" >`
         fixed top-0 left-0 h-full w-64 bg-gray-900 border-r border-gray-700 
         transform transition-transform duration-300 ease-in-out z-50
         ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-        lg:relative lg:inset-0`;
-}>
+        lg: relative lg:inset-0`}>
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-gray-700">
+        <div className=`flex items-center justify-between p-4 border-b border-gray-700">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
               <span className="text-white font-bold text-lg">Z</span>
@@ -405,27 +403,25 @@ export function Sidebar({ isOpen = false, onClose }) {
                 {section.items.map((item, itemIndex) => (
                   <div key={item.name}>
                     {item.href ? (
-                      <Link
-                        to={item.href}"
+                      <Link to={item.href}`
                         className={`
                           flex items-center px-4 py-2 text-sm transition-colors group
                           ${isActive(item.href)`
                             ? 'text-zion-cyan bg-zion-purple/10 border-r-2 border-zion-cyan''
                             : 'text-zion-slate-light hover:text-white hove,
-    r:bg-zion-purple/10';
-}
+    r: bg-zion-purple/10'}
                         `}
                         onClick={onClose}
                       >`
-                        <item.icon className="h-4 w-4 mr-3 flex-shrink-0" />"
+                        <item.icon className=`h-4 w-4 mr-3 flex-shrink-0" />"
                         <span className="flex-1">{item.name}</span>
                         {item.description && ("
-                          <span className="text-xs text-zion-slate-light opacity-0 group-hover:opacity-100 transition-opacity">
+                          <span className={`text-xs text-zion-slate-light opacity-0 group-hover:opacity-100 transition-opacity`>
                       <Link to={item.href} className={` flex items-center px-4 py-2 text-sm transition-colors group ${isActive(item.href) ? 'text-zion-cyan bg-zion-purple/10 border-r-2 border-zion-cyan' : 'text-zion-slate-light hover: text-white hover:bg-zion-purple/10' } `} onClick={onClose} >
-                        <item.icon className="h-4 w-4 mr-3 flex-shrink-0" />
+                        <item.icon className=`h-4 w-4 mr-3 flex-shrink-0`} />
                         <span className="flex-1">{item.name}</span>
                         {item.description && (
-                          <span className="text-xs text-zion-slate-light opacity-0 group-hover: opacity-100 transition-opacity">
+                          <span className={`text-xs text-zion-slate-light opacity-0 group-hover: opacity-100 transition-opacity`>
                       <Link href={item.href}
                         className={`
                           flex items-center px-4 py-2 text-sm transition-colors group
@@ -433,18 +429,17 @@ export function Sidebar({ isOpen = false, onClose }) {
                             ? 'text-zion-cyan bg-zion-purple/10 border-r-2 border-zion-cyan'
                             : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'}`
                         `}
-                        onClick={onClose}" >"
+                        onClick={onClose}` >`}
                         <item .icon className="h-4 w-4 mr-3 flex-shrink-0" /" >"
                         <span className="flex-1">{item.name}</span>
                         {item.description && (""
-                          <span className="text-xs text-zion-slate-light opacity-0 group-hover: opacity-100 transition-opacity">
+                          <span className={`text-xs text-zion-slate-light opacity-0 group-hover: opacity-100 transition-opacity`>
                           ${isActive(item.href)
                             ? 'text-blue-400 bg-blue-900/20 border-r-2 border-blue-400'
-                            : 'text-gray-300 hover:text-white hover:bg-gray-800';
-}`;
+                            : 'text-gray-300 hover:text-white hover:bg-gray-800'}`;
 }
                         onClick={onClose}>
-                        <item.icon className="h-4 w-4 mr-3 flex-shrink-0" />
+                        <item.icon className=`h-4 w-4 mr-3 flex-shrink-0`} />
                         <span className="flex-1">{item.name}</span>
                         {item.description && (
                           <span className="text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async'
 import { 
   CheckCircle, 
   XCircle, 
@@ -13,8 +13,7 @@ import {
   ArrowRight,
   ChevronDown,
   Search,
-  Filter;
-} from 'lucide-react';
+  Filter} from 'lucide-react';
 
 const AIServicesPricingComparison2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -65,8 +64,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       ],
       roi: "600% within 8 months",
       setupTime: "4-5 weeks",
-      website: "https://ziontechgroup.com/ai-legal-counsel";
-},
+      website: "https://ziontechgroup.com/ai-legal-counsel"},
     {
       id: "ai-autonomous-hr-platform",
       service: "AI Autonomous HR Platform",
@@ -96,8 +94,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       ],
       roi: "450% within 7 months",
       setupTime: "3-4 weeks",
-      website: "https://ziontechgroup.com/ai-hr-platform";
-},
+      website: "https://ziontechgroup.com/ai-hr-platform"},
     {
       id: "ai-autonomous-marketing-platform",
       service: "AI Autonomous Marketing Platform",
@@ -127,8 +124,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       ],
       roi: "500% within 6 months",
       setupTime: "4-5 weeks",
-      website: "https://ziontechgroup.com/ai-marketing-platform";
-},
+      website: "https://ziontechgroup.com/ai-marketing-platform"},
     {
       id: "ai-autonomous-sales-platform",
       service: "AI Autonomous Sales Platform",
@@ -158,8 +154,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       ],
       roi: "400% within 6 months",
       setupTime: "3-4 weeks",
-      website: "https://ziontechgroup.com/ai-sales-platform";
-},
+      website: "https://ziontechgroup.com/ai-sales-platform"},
     {
       id: "ai-autonomous-finance-platform",
       service: "AI Autonomous Finance Platform",
@@ -189,8 +184,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       ],
       roi: "550% within 8 months",
       setupTime: "4-5 weeks",
-      website: "https://ziontechgroup.com/ai-finance-platform";
-},
+      website: "https://ziontechgroup.com/ai-finance-platform"},
     {
       id: "ai-autonomous-cybersecurity-platform",
       service: "AI Autonomous Cybersecurity Platform",
@@ -220,8 +214,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       ],
       roi: "700% within 10 months",
       setupTime: "6-7 weeks",
-      website: "https://ziontechgroup.com/ai-cybersecurity";
-},
+      website: "https://ziontechgroup.com/ai-cybersecurity"},
     {
       id: "ai-autonomous-data-analytics-platform",
       service: "AI Autonomous Data Analytics Platform",
@@ -251,8 +244,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       ],
       roi: "550% within 8 months",
       setupTime: "4-5 weeks",
-      website: "https://ziontechgroup.com/ai-data-analytics";
-},
+      website: "https://ziontechgroup.com/ai-data-analytics"},
     {
       id: "ai-autonomous-devops-platform",
       service: "AI Autonomous DevOps Platform",
@@ -282,8 +274,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       ],
       roi: "600% within 9 months",
       setupTime: "5-6 weeks",
-      website: "https://ziontechgroup.com/ai-devops";
-},
+      website: "https://ziontechgroup.com/ai-devops"},
     {
       id: "ai-autonomous-cloud-management-platform",
       service: "AI Autonomous Cloud Management Platform",
@@ -313,8 +304,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       ],
       roi: "650% within 10 months",
       setupTime: "6-7 weeks",
-      website: "https://ziontechgroup.com/ai-cloud-management";
-},
+      website: "https://ziontechgroup.com/ai-cloud-management"},
     {
       id: "ai-autonomous-blockchain-platform",
       service: "AI Autonomous Blockchain Platform",
@@ -344,8 +334,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       ],
       roi: "800% within 12 months",
       setupTime: "8-9 weeks",
-      website: "https://ziontechgroup.com/ai-blockchain-platform";
-},
+      website: "https://ziontechgroup.com/ai-blockchain-platform"},
     {
       id: "ai-autonomous-quantum-platform",
       service: "AI Autonomous Quantum Platform",
@@ -375,24 +364,21 @@ const AIServicesPricingComparison2025: React.FC = () => {
       ],
       roi: "1000% within 15 months",
       setupTime: "10-12 weeks",
-      website: "https://ziontechgroup.com/ai-quantum-platform";
-}
+      website: "https://ziontechgroup.com/ai-quantum-platform"}
   ]
 
   const filteredServices = pricingComparison.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.service.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-}
+        staggerChildren: 0.1}
     }
   };
 
@@ -403,8 +389,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut";
-}
+        ease: "easeOut"}
     }
   };
 
@@ -516,10 +501,10 @@ const AIServicesPricingComparison2025: React.FC = () => {
                     <div className="bg-gradient-to-br from-green-500/20 to-blue-500/20 border border-green-500/50 rounded-lg p-6">
                       <div className="text-center mb-6">
                         <h4 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h4>
-                        <div className="text-4xl font-bold text-green-400 mb-2">
+                        <div className={`text-4xl font-bold text-green-400 mb-2`>
                           ${service.zionPrice.toLocaleString()}
                         </div>
-                        <div className="text-sm text-gray-300 mb-4">One-time setup</div>
+                        <div className=`text-sm text-gray-300 mb-4`}>One-time setup</div>
                         <div className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">
                           {service.roi}
                         </div>
@@ -552,10 +537,10 @@ const AIServicesPricingComparison2025: React.FC = () => {
                       <div key={index} className="bg-white/5 border border-gray-600 rounded-lg p-6">
                         <div className="text-center mb-6">
                           <h4 className="text-xl font-bold text-white mb-2">{competitor.name}</h4>
-                          <div className="text-3xl font-bold text-red-400 mb-2">
+                          <div className={`text-3xl font-bold text-red-400 mb-2`>
                             ${competitor.price.toLocaleString()}
                           </div>
-                          <div className="text-sm text-gray-300 mb-4">Annual subscription</div>
+                          <div className=`text-sm text-gray-300 mb-4`}>Annual subscription</div>
                           <div className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm font-semibold">
                             Higher Cost
                           </div>
@@ -625,7 +610,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
                 Our AI autonomous platforms deliver superior value, better ROI, and advanced features 
                 compared to traditional solutions. Get started today and transform your business.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 <a
                   href="mailto:kleber@ziontechgroup.com?subject=AI Services Pricing Consultation"
                   className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -644,7 +629,6 @@ const AIServicesPricingComparison2025: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default AIServicesPricingComparison2025;

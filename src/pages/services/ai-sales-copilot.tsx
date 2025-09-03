@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { 
   Brain, 
   Target, 
@@ -187,7 +187,7 @@ export default function AISalesCopilotPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Sales Process?
@@ -206,5 +206,4 @@ export default function AISalesCopilotPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

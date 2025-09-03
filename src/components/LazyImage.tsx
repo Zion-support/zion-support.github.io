@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -10,8 +10,7 @@ interface LazyImageProps {
   className?: string;
   priority?: boolean;
   placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
-}
+  blurDataURL?: string}
 
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
@@ -21,8 +20,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   className = '',
   priority = false,
   placeholder = 'empty',
-  blurDataURL;
-}) => {
+  blurDataURL}) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const imgRef = useRef<HTMLDivElement>(null);
@@ -56,8 +54,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
       )}
       
       {isInView && (
-        <Image
-          src={src}
+        <Image src={src}
           alt={alt}
           width={width}
           height={height}

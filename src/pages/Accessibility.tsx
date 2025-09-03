@@ -40,7 +40,7 @@ const Accessibility: React.FC: = () => {,
         'Visual: alerts and notifications',';';
         'Sign: language support where applicable';';
 import { motion } from 'framer-motion';""
-import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react';
+import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react'
 import { motion } from 'framer-motion';
 const Accessibility: React.FC = () => {
   const features = [
@@ -79,7 +79,7 @@ const Accessibility: React.FC = () => {
         'Captions and transcripts',;
         'Text-based alternatives',;
         'Visual alerts and notifications',;
-import React from 'react';
+import React from 'react'
 import {SEO } from '@/components/SEO';
 
 export default function Accessibility() {return (
@@ -100,38 +100,38 @@ import { motion } from 'framer-motion';"
 const Accessibility: React.FC = () => {}
   const;const;const features = [
     {
-      title: &apos;Visual Accessibility&apos;,
+      title: &apos;Visual Accessibility&apos,
       icon: Eye,
-      description: &apos;Support for users with visual impairments&apos;,
-        &apos;High contrast mode support&apos;,
-        &apos;Screen reader compatibility&apos;,
-        &apos;Text scaling and zoom&apos} functionality&apos;,
-        &apos;Alternative text for images&apos;,
+      description: &apos;Support for users with visual impairments&apos,
+        &apos;High contrast mode support&apos,
+        &apos;Screen reader compatibility&apos,
+        &apos;Text scaling and zoom&apos} functionality&apos,
+        &apos;Alternative text for images&apos,
         &apos;Keyboard navigation support';
-      title: &apos;Motor Accessibility&apos;,
+      title: &apos;Motor Accessibility&apos,
       icon: MousePointer,
-      description: &apos;Support for users with motor impairments&apos;,
+      description: &apos;Support for users with motor impairments&apos,
       features: [
-        &apos;Keyboard-only navigation&apos;,
-        &apos;Voice control compatibility&apos;,
-        &apos;Large click targets&apos;,
-        &apos;Customizable interaction timeouts&apos;,
+        &apos;Keyboard-only navigation&apos,
+        &apos;Voice control compatibility&apos,
+        &apos;Large click targets&apos,
+        &apos;Customizable interaction timeouts&apos,
         &apos;Switch control support';
-      title: &apos;Cognitive Accessibility&apos;,
+      title: &apos;Cognitive Accessibility&apos,
       icon: AccessibilityIcon,
-      description: &apos;Support for users with cognitive differences&apos;,
-        &apos;Clear and simple language&apos;,
-        &apos;Consistent navigation patterns&apos;,
-        &apos;Error prevention and recovery&apos;,
-        &apos;Progress indicators&apos;,
+      description: &apos;Support for users with cognitive differences&apos,
+        &apos;Clear and simple language&apos,
+        &apos;Consistent navigation patterns&apos,
+        &apos;Error prevention and recovery&apos,
+        &apos;Progress indicators&apos,
         &apos;Help and support resources';
-      title: &apos;Auditory Accessibility&apos;,
+      title: &apos;Auditory Accessibility&apos,
       icon: Ear,
-      description: &apos;Support for users with hearing impairments&apos;,
-        &apos;Visual indicators for audio content&apos;,
-        &apos;Captions and transcripts&apos;,
-        &apos;Text-based alternatives&apos;,
-        &apos;Visual alerts and notifications&apos;,
+      description: &apos;Support for users with hearing impairments&apos,
+        &apos;Visual indicators for audio content&apos,
+        &apos;Captions and transcripts&apos,
+        &apos;Text-based alternatives&apos,
+        &apos;Visual alerts and notifications&apos,
         &apos;Sign language support where applicable';
       title: 'Visual Accessibility', icon: Eye,
       description: 'Support for users with visual impairments', features: [;
@@ -196,10 +196,10 @@ const Accessibility: React.FC = () => {}
             Last updated: {new Date().toLocaleDateString()}
         </motion.div>;
   ]&apos;&apos;
-    &apos;WCAG 2.1 AA compliance&apos;,
-    &apos;Section 508 compliance&apos;,
-    &apos;ADA compliance&apos;,
-    &apos;EN 301 549 compliance&apos;,
+    &apos;WCAG 2.1 AA compliance&apos,
+    &apos;Section 508 compliance&apos,
+    &apos;ADA compliance&apos,
+    &apos;EN 301 549 compliance&apos,
     &apos;ISO/IEC 40500 compliance';
   return(&apos;&apos;
     <div className=&apos;min-h-screen bg-gradient-to-br from-slate-50 to-blue-50&apos;>&apos;'

@@ -5,7 +5,7 @@ import { useVirtualScroll } from "../hooks/useVirtualScroll.jsx";,"});,"})
 ;,"});,"})
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {,"});,"})
     const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
-        enableUserBehaviorTracking: true;,"});,"});
+        enableUserBehaviorTracking: true,"});,"});
 });,"});,"})
     // State management'';,"});,"})
     const [searchQuery, setSearchQuery] = useState('');,"});,"})
@@ -14,65 +14,65 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     const [selectedItems, setSelectedItems] = useState(new Set());,"});,"})
     const [currentPage, setCurrentPage] = useState(1);,"});,"})
     const [showFilters, setShowFilters] = useState(false);,"});,"})
-    // Process data based on search, filters, and sorting;,"});,"})
+    // Process data based on search, filters, and sorting,"});,"})
     const processedData = useMemo(() => {}"});,"})
         let result = [...data];,"});,"})
-        // Apply search;,"});,"})
+        // Apply search,"});,"})
         if(searchQuery.trim()) {}"});,"})
             result = result.filter(item => columns.some(col => {}"});,"})
                 const value = String(item[col.key]).toLowerCase();,"});,"})
                 return value.includes(searchQuery.toLowerCase())}))}"});,"})
-        // Apply filters;,"});,"})
+        // Apply filters,"});,"})
         filters.forEach(filter => {}"});,"})
             result = result.filter(item => {}"});,"})
                 const value = String(item[filter.key]).toLowerCase();,"});,"})
                 const filterValue = filter.value.toLowerCase();,"});,"})
                 switch (filter.operator) {}"});,"})
 ';,"});,"})
-                    case 'contains': any;,"});,"})
+                    case 'contains': any,"});,"})
                         return value.includes(filterValue);,"});,"})
-                    case 'equals': any;,"});,"})
-                        return value === filterValue;,"});,"})
-                    case 'starts_with': any;,"});,"})
+                    case 'equals': any,"});,"})
+                        return value === filterValue,"});,"})
+                    case 'starts_with': any,"});,"})
                         return value.startsWith(filterValue);,"});,"})
-                    case 'ends_with': any;,"});,"})
+                    case 'ends_with': any,"});,"})
                         return value.endsWith(filterValue);,"});,"})
-                    case 'regex': any;,"});,"})
+                    case 'regex': any,"});,"})
                         try {}"});,"})
 '';,"});,"})
 ''';,"});,"})
                             return new RegExp(filterValue,i').test(value)}"});,"})
                         catch {}"});,"})
                             return false}"});,"})
-                    default: any;,"});,"})
+                    default: any,"});,"})
                         return true}"});,"});
 }) }) ;,"});,"})
-        // Apply sorting;,"});,"})
+        // Apply sorting,"});,"})
         if(sortConfig) {}"});,"})
             result.sort((a, b) => {}"});,"})
                 const aVal = a[sortConfig.key];,"});,"})
                 const bVal = b[sortConfig.key];,"});,"})
                 if (aVal < bVal)';,"});,"})
-                    return sortConfig.direction === 'asc' ? -1 : 1;,"});,"})
+                    return sortConfig.direction === 'asc' ? -1 : 1,"});,"})
                 if (aVal > bVal)';,"});,"})
-                    return sortConfig.direction === 'asc' ? 1 : -1;,"});,"})
+                    return sortConfig.direction === 'asc' ? 1 : -1,"});,"})
                 return 0})}"});,"})
         return result}, [data, searchQuery, filters, sortConfig, columns]);,"});,"})
-    // Pagination;,"});,"})
+    // Pagination,"});,"})
     const totalPages = Math.ceil(processedData.length / pageSize);,"});,"})
-    const paginatedData = enablePagination;,"});,"})
+    const paginatedData = enablePagination,"});,"})
         ? processedData.slice((currentPage - 1) * pageSize, currentPage * pageSize);,"});,"})
-        : processedData;,"});,"})
-    // Virtual scrolling;,"});,"})
+        : processedData,"});,"})
+    // Virtual scrolling,"});,"})
     const { virtualItems, containerProps, listProps } = useVirtualScroll(paginatedData {}"});,"})
         itemHeight: 60,;,"});,"})
-        containerHeight: height - 120, // Account for header and controls;,"});,"})
-        overscan: 5;,"});,"});
+        containerHeight: height - 120, // Account for header and controls,"});,"})
+        overscan: 5,"});,"});
 }) ;,"});,"})
-    // Handle sorting;,"});,"})
+    // Handle sorting,"});,"})
     const handleSort = useCallback((key) => {}"});,"})
         if(!enableSorting);,"});,"})
-            return;,"});,"})
+            return,"});,"})
         setSortConfig(prev => {}"});,"})
             if (prev?.key === key) {}"});,"})
                 return prev.direction === 'asc''''';,"});,"})
@@ -80,7 +80,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     : null}''';,"});,"})
             return { key, direction: 'asc' }});''';,"});,"})
         trackEvent('table',column_sorted', String(key))}, [enableSorting, trackEvent]);,"});,"})
-    // Handle filter change;,"});,"})
+    // Handle filter change,"});,"})
     const handleFilterChange = useCallback((key, value, operator) => {}"});,"})
         setFilters(prev => {}"});,"})
             const newFilters = prev.filter(f => f.key !== key);,"});,"})
@@ -90,7 +90,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 });''';,"});,"})
         trackEvent('table',filter_applied', String(key), null { operator, value });,"});,"});
 }, [trackEvent]);,"});,"})
-    // Handle selection;,"});,"})
+    // Handle selection,"});,"})
     const handleSelectionChange = useCallback((item, checked) => {}"});,"})
         const itemKey = String(item.id || JSON.stringify(item));,"});,"})
         const newSelection = new Set(selectedItems);,"});,"})
@@ -100,7 +100,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             newSelection.delete(itemKey)}"});,"})
         setSelectedItems(newSelection);,"});,"})
         onSelectionChange?.(Array.from(newSelection).map(key => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data]);,"});,"})
-    // Handle select all;,"});,"})
+    // Handle select all,"});,"})
     const handleSelectAll = useCallback((checked) => {}"});,"})
             const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))));,"});,"})
             setSelectedItems(allKeys);,"});,"})
@@ -108,32 +108,32 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             setSelectedItems(new Set());,"});,"})
             onSelectionChange?.([])}"});,"});
 }, [paginatedData, onSelectionChange]);,"});,"})
-    // Export data;,"});,"})
+    // Export data,"});,"})
     const handleExport = useCallback(() => {}"});,"})
         if(onExport) {}"});,"})
             onExport(processedData)}"});,"})
-            // Default CSV export;,"});,"})
+            // Default CSV export,"});,"})
             const csvContent = generateCSV(processedData, columns);,"});,"})
             downloadCSV(csvContent,table-export.csv')}';,"});,"})
         trackEvent('table',data_exported',export_completed', processedData.length)}, [processedData, columns, onExport, trackEvent]);,"});,"})
-    // Generate CSV content;,"});,"})
+    // Generate CSV content,"});,"})
     const generateCSV = (data, columns) => {}"});,"})
         const headers = columns.map(col => col.header).join(');,"});,"})
         const rows = data.map(item => columns.map(col => {}"});,"})
 '""";,"});,"})
             const value = item[col.key];'"'""";,"});,"})
-            return typeof value === 'string' && value.includes(') ? `"${value}"` : value}).join('));,"});,"})
+            return typeof value === 'string' && value.includes(') ? ``${value}`` : value}).join('));,"});,"})
         return [headers, ...rows].join('\n')};,"});,"})
-    // Download CSV;,"});,"})
+    // Download CSV,"});,"})
     const downloadCSV = (content, filename) => {}"});,"})
         const blob = new Blob([content] { type 'text/csv' });'';,"});,"})
         const url = window.URL.createObjectURL(blob);''';,"});,"})
         const a = document.createElement('a');,"});,"})
-        a.href = url;,"});,"})
-        a.download = filename;,"});,"})
+        a.href = url,"});,"})
+        a.download = filename,"});,"})
         a.click () ;,"});,"})
         window.URL.revokeObjectURL(url) };,"});,"})
-    // Get sort icon;,"});,"})
+    // Get sort icon,"});,"})
     const getSortIcon = (key) => {}"});,"})
         if(!enableSorting || sortConfig?.key !== key) {}"});,"})
 """;,"});,"})
@@ -142,59 +142,59 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         return sortConfig.direction === 'asc'"""";,"});,"})
             ? <ChevronUp className="w-4 h-4 text-blue-500"/>"""";,"});,"})
             : <ChevronDown className="w-4 h-4 text-blue-500"/>};,"});,"})
-    // Render cell content;,"});,"})
+    // Render cell content,"});,"})
     const renderCell = (column, item, index) => {}"});,"})
         const value = item[column.key];,"});,"})
         if (column.render) {}"});,"})
 '`;,"});,"})
-            return column.render(value, item, index)}'`'`;,"});,"})
-        return (<span className={`truncate ${column.align === 'center' ? 'text-center' : column.align === 'right' ? 'text-right' : 'text-left'}`}>;,"});,"})
+            return column.render(value, item, index)}'`'`;,"});,`})
+        return (<span className={`truncate ${column.align === 'center' ? 'text-center' : column.align === 'right' ? 'text-right' : 'text-left'}`}>;,`});,"})
         {value}`;,"});,"})
-      </span>)};``;,"});,"})
-    return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>""";,"});,"})
+      </span>)};``;,"});,`})
+    return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>`"";,"});,"})
       {/* Header Controls */}"""";,"});,"})
-      <div className="p-4 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">"""";,"});,"})
+      <div className="p-4 border-b border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">"""","});,"})
         <div className="flex items-center justify-between mb-4">"""";,"});,"})
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">;,"});,"})
+          <h3 className="text-lg font-semibold text-gray-900 dark: text-white">,"});,"})
             Data Table ({processedData.length} items);,"});,"})
           </h3>""";,"});,"})
           <div className="flex items-center gap-2">"""";,"});,"})
-            {enableExport && (<button onClick={handleExport} className="px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">"""";,"});,"})
+            {enableExport && (<button onClick={handleExport} className="px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">"""","});,"})
                 <Download className="w-4 h-4"/>;,"});,"})
-                Export;,"});,"})
+                Export,"});,"})
               </button>)}`;,"});,"})
-`'`;,"});,"})
-            <button onClick={() => setShowFilters(!showFilters)} className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters''`;,"});,"})
+`'`;,"});,`})
+            <button onClick={() => setShowFilters(!showFilters)} className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters''`;,"});,`})
             ? 'bg-blue-500 text-white''`'"`;,"});,"})
             : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500'}`}>"""";,"});,"})
               <Filter className="w-4 h-4"/>;,"});,"})
-              Filters;,"});,"})
+              Filters,"});,"})
             </button>;,"});,"})
           </div>;,"});,"})
         {/* Search Bar */}"""";,"});,"})
         {enableSearch && (<div className="relative">"""";,"});,"})
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"/>"""";,"});,"})
-            <input type="text" placeholder="Search in all columns..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"/>;,"});,"})
+            <input type="text" placeholder="Search in all columns..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"/>,"});,"})
           </div>)}"});,"})
         {/* Filters Panel */}"});,"})
         <AnimatePresence>;,"});,"})
           {showFilters && (<motion.div initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  height: 0;,"});,"});
+  height: 0,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,';,"});,"})
-  height: 'auto';,"});,"});
+  height: 'auto',"});,"});
 }} exit = {}"});,"});
-}} className="mt-4 p-4 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">"""";,"});,"})
-              <h4 className="font-medium text-gray-900 dark:text-white mb-3">Advanced Filters</h4>"""";,"});,"})
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"""";,"});,"})
+}} className="mt-4 p-4 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">"""","});,"})
+              <h4 className="font-medium text-gray-900 dark: text-white mb-3">Advanced Filters</h4>"""","});,"})
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-4">"""","});,"})
                 {columns.filter(col => col.filterable !== false).map(column => (<div key={String(column.key)} className="space-y-2">"""";,"});,"})
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">;,"});,"})
+                    <label className="block text-sm font-medium text-gray-700 dark: text-gray-300">,"});,"})
                       {column.header}"});,"})
                     </label>;,"});,"})
                     <select onChange = {}"});,"})
   (e) => handleFilterChange(column.key, e.target.value,contains');,"});,"});
-} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"""";,"});,"})
+} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"""","});,"})
                       <option value="">No filter</option>"""";,"});,"})
                       <option value="contains">Contains</option>"""";,"});,"})
                       <option value="equals">Equals</option>"""";,"});,"})
@@ -207,79 +207,79 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
       {/* Table Container */}"""";,"});,"})
       <div className="overflow-hidden">""";,"});,"})
         {/* Table Header */}"""";,"});,"})
-        <div className="bg-gray-100 dark:bg-gray-700 border-b border-gray-200 dark:border-gray-600">"""";,"});,"})
+        <div className="bg-gray-100 dark: bg-gray-700 border-b border-gray-200 dark:border-gray-600">"""","});,"})
           <div className="flex items-center px-4 py-3">"""";,"});,"})
             {enableSelection && (<div className="w-8 mr-2">"""";,"});,"})
-                <input type="checkbox" checked={selectedItems.size === paginatedData.length && paginatedData.length > 0} onChange={(e) => handleSelectAll(e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>;,"});,"})
+                <input type="checkbox" checked={selectedItems.size === paginatedData.length && paginatedData.length > 0} onChange={(e) => handleSelectAll(e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500"/>,"});,"})
               </div>)}'`;,"});,"})
-'`'`;,"});,"})
-            {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>'`'"`;,"});,"})
-                <button onClick={() => handleSort(column.key)} disabled={!enableSorting || !column.sortable} className={`w-full flex items-center justify-between px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? 'cursor-default' : 'cursor-pointer'}`}>"""";,"});,"})
-                  <span className="font-medium text-gray-700 dark:text-gray-300 text-sm">;,"});,"})
+'`'`;,"});,`})
+            {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>'`'``;,"});,`})
+                <button onClick={() => handleSort(column.key)} disabled={!enableSorting || !column.sortable} className={`w-full flex items-center justify-between px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? 'cursor-default' : 'cursor-pointer'}`}>`""";,"});,"})
+                  <span className="font-medium text-gray-700 dark: text-gray-300 text-sm">,"});,"})
                   </span>;,"});,"})
                   {column.sortable !== false && getSortIcon(column.key) }"});,"})
               </div>))}""";,"});,"})
             {enableActions && (<div className="w-20 px-2 py-1">"""";,"});,"})
-                <span className="font-medium text-gray-700 dark:text-gray-300 text-sm">Actions</span>;,"});,"})
+                <span className="font-medium text-gray-700 dark: text-gray-300 text-sm">Actions</span>,"});,"})
         {/* Table Body with Virtual Scrolling */}"""";,"});,"})
         <div {...containerProps} className="relative">;,"});,"})
           <div {...listProps}>;,"});,"})
             {virtualItems.map((item, index) => (<motion.div key={String(item.id || index)} initial = {}"});,"})
-  y: 20;,"});,"})
+  y: 20,"});,"})
   { opacity: 1,;,"});,"})
-  y: 0;,"});,"});
-}} className={`flex items - center px - 4 py - 3 border - b border - gray - 100 dark:border - gray - 600 hover:bg - gray - 50 dark:hover:bg - gray - 700 transition - colors ${onRowClick ? 'cursor - pointer' : ''} ${selectedItems.has (String (item.id || JSON.stringify (item) ) ) ? 'bg - blue - 50 dark:bg - blue - 900 / 20' : ''}`} onClick = { () => onRowClick?. (item,;,"});,"})
+  y: 0,"});,`});
+}} className={`flex items - center px - 4 py - 3 border - b border - gray - 100 dark:border - gray - 600 hover:bg - gray - 50 dark:hover:bg - gray - 700 transition - colors ${onRowClick ? 'cursor - pointer' : ''} ${selectedItems.has (String (item.id || JSON.stringify (item) ) ) ? 'bg - blue - 50 dark:bg - blue - 900 / 20' : ''}`} onClick = { () => onRowClick?. (item,;,`});,"})
   index) }>""";,"});,"})
                 {enableSelection && (<div className="w - 8 mr - 2">""";,"});,"})
                     <input type="checkbox" checked={selectedItems.has (String (item.id || JSON.stringify (item) ) ) } onChange = { (e) => handleSelectionChange (item,""";,"});,"})
-  e.target.checked) } onClick={ (e) => e.stopPropagation () } className="w - 4 h - 4 text - blue - 600 border - gray - 300 rounded focus:ring - blue - 500"/>;,"});,"})
-                  </div>) }"});,"})
-                {columns.map (column => (<div key={String (column.key) } className={`flex - 1 px - 2 py - 1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>;,"});,"})
-                    {renderCell (column, item, index) }"});,"});
-}} className={`flex items-center px-4 py-3 border-b border-gray-100 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? 'cursor-pointer' : ''} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick = {}"});,"})
+  e.target.checked) } onClick={ (e) => e.stopPropagation () } className="w - 4 h - 4 text - blue - 600 border - gray - 300 rounded focus: ring - blue - 500"/>,"});,"})
+                  </div>) }"});,`})
+                {columns.map (column => (<div key={String (column.key) } className={`flex - 1 px - 2 py - 1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>;,`});,"})
+                    {renderCell (column, item, index) }"});,`});
+}} className={`flex items-center px-4 py-3 border-b border-gray-100 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? 'cursor-pointer' : ''} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick = {}`});,"})
   () => onRowClick?.(item,;,"});,"})
   index);,"});,"});
 }>"""";,"});,"})
                     <input type="checkbox" checked={selectedItems.has(String(item.id || JSON.stringify(item)))} onChange = {}"});,"})
   (e) => handleSelectionChange(item,;,"});,"})
   e.target.checked);,"});,"});
-} onClick={(e) => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>;,"});,"})
-                {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>;,"});,"})
+} onClick={(e) => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500"/>,"});,`})
+                {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>;,`});,"})
                     {renderCell(column, item, index)}"});,"})
                 {enableActions && (<div className="w-20 px-2 py-1 flex items-center gap-1">"""";,"});,"})
-                    <button className="p-1 text-gray-400 hover:text-blue-500 transition-colors">"""";,"});,"})
+                    <button className="p-1 text-gray-400 hover: text-blue-500 transition-colors">"""","});,"})
                       <Eye className="w-4 h-4"/>""";,"});,"})
                     </button>"""";,"});,"})
-                    <button className="p-1 text-gray-400 hover:text-green-500 transition-colors">"""";,"});,"})
+                    <button className="p-1 text-gray-400 hover: text-green-500 transition-colors">"""","});,"})
                       <Edit className="w-4 h-4"/>""";,"});,"})
-                    <button className="p-1 text-gray-400 hover:text-red-500 transition-colors">"""";,"});,"})
+                    <button className="p-1 text-gray-400 hover: text-red-500 transition-colors">"""","});,"})
                       <Trash2 className="w-4 h-4"/>;,"});,"})
               </motion.div>) ) }"});,"})
       {/* Pagination */}"""";,"});,"})
-      {enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">"""";,"});,"})
+      {enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">"""","});,"})
           <div className="flex items-center justify-between">"""";,"});,"})
-            <div className="text-sm text-gray-700 dark:text-gray-300">;,"});,"})
-              Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, processedData.length)} of {processedData.length} results;,"});,"})
+            <div className="text-sm text-gray-700 dark: text-gray-300">,"});,"})
+              Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, processedData.length)} of {processedData.length} results,"});,"})
             </div>""";,"});,"})
             <div className="flex items-center gap-2">;,"});,"})
               <button onClick = {}"});,"})
   () => setCurrentPage(prev => Math.max(1,;,"});,"})
   prev - 1));,"});,"});
-} disabled={currentPage === 1} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">;,"});,"})
-                Previous;,"});,"})
+} disabled={currentPage === 1} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">,"});,"})
+                Previous,"});,"})
               {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {}"});,"})
 `;,"});,"})
 `'`'`;,"});,"})
-                const page = i + 1;`'`'`'`;,"});,"})
-                return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page''`'`'`;,"});,"})
+                const page = i + 1;`'`'`'`;,"});,`})
+                return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page''`'`'`;,"});,`})
                         ? 'bg-blue-500 text-white''`'`'`'`;,"});,"})
                         : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>;,"});,"})
                     {page}"});,"})
                   </button>) }) }"});,"})
   () => setCurrentPage(prev => Math.min(totalPages,;,"});,"})
   prev + 1));,"});,"});
-} disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">;,"});,"})
-                Next;,"});,"})
+} disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">,"});,"})
+                Next,"});,"})
     </div>)};'"`;,"});,"})
 '"`'"`;,"});,"})
 import { useState, useMemo, useCallback } from 'react';';
@@ -313,23 +313,23 @@ import {motion, AnimatePresence } from 'framer-motion';"
 import {ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';"
 import {useVirtualScroll } from '../hooks/useVirtualScroll.jsx';
 export const AdvancedDataTable = ({data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className='', onRowClick, onSelectionChange, onExport }) => {const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true})';'
-import { useState, useMemo, useCallback } from &apos;
+import { useState, useMemo, useCallback } from &apos
 import { motion } from &apos;framer-motion';;react';
 import { motion, AnimatePresence } from &apos;framer-motion';
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from &apos;lucide-react';
 import { useVirtualScroll } from &apos;../hooks/useVirtualScroll.jsx';&apos;&apos;
 
-export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = &apos;&apos;, onRowClick, onSelectionChange, onExport }) => {&apos}&apos;
+export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = &apos;&apos, onRowClick, onSelectionChange, onExport }) => {&apos}&apos;
     const;const { trackEvent } = useAnalytics({        enableTracking: true,
         enableUserBehaviorTracking: true})';
     // State management&apos;&apos;&apos;
-    const [searchQuery, setSearchQuery] = useState(&apos;&apos;);&apos;&apos;
+    const [searchQuery, setSearchQuery] = useState(&apos;&apos);&apos;&apos;
 import { useVirtualScroll } from '../hooks/useVirtualScroll.jsx';""
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {""
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})';'
-"";
+``;
 }
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
 ;
@@ -392,7 +392,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                             return new RegExp(filterValue,i').test(value)}
 &apos;
 &apos;&apos;
-                            return new RegExp(filterValue,i&apos;).test(value)}
+                            return new RegExp(filterValue,i&apos).test(value)}
 ';'
                     case 'contains': any;
                         return value.includes(filterValue)';'
@@ -482,7 +482,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     ? { key, direction: &apos;desc&apos}&apos;
                     : null}&apos;&apos;
             return { key, direction: &apos;asc&apos}})';
-        trackEvent(&apos;table&apos;,column_sorted&apos;, String(key))}, [enableSorting, trackEvent]);
+        trackEvent(&apos;table&apos,column_sorted&apos, String(key))}, [enableSorting, trackEvent]);
     // Handle filter change;&apos;&apos;
                 return prev.direction === 'asc''''';
                     ? { key, direction: 'desc' }'';
@@ -495,7 +495,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             const;const;const newFilters = prev.filter(f => f.key !== key);
                 newFilters.push({ key, value, operator })}
             return newFilters})';
-        trackEvent(&apos;table&apos;,filter_applied&apos;, String(key), null { operator, value })}, [trackEvent]);
+        trackEvent(&apos;table&apos,filter_applied&apos, String(key), null { operator, value })}, [trackEvent]);
     // Handle selection;&apos;&apos;
             return newFilters})';'
         trackEvent('table', filter_applied', String(key), null { operator, value })}, [trackEvent]);'
@@ -608,8 +608,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         else {}
             // Default CSV export;export;export;
             const csvContent = generateCSV(processedData, columns)';
-            downloadCSV(csvContent,table-&apos;&apos;export.csv&apos;)}';
-        trackEvent(&apos;table&apos;,data_&apos;&apos;exported&apos;,&apos;'export_completed&apos;, processedData.length)}, [processedData, columns, onExport, trackEvent]);
+            downloadCSV(csvContent,table-&apos;&apos;export.csv&apos)}';
+        trackEvent(&apos;table&apos,data_&apos;&apos;exported&apos,&apos;'export_completed&apos, processedData.length)}, [processedData, columns, onExport, trackEvent]);
     // Generate CSV content;&apos;
     const generateCSV = (data, columns) => {}
         const headers = columns.map(col => col.header).join(');
@@ -621,15 +621,15 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     const downloadCSV = (content, filename) => {}
         const blob = new Blob([content] { type 'text/csv' })';
 &apos;&apos;&apos;&apos;
-        const headers = columns.map(col => col.header).join(&apos;);&apos;
+        const headers = columns.map(col => col.header).join(&apos);&apos;
 &apos;&apos;'';&apos;&apos;
             const value = item[col.key]&apos;&apos;&apos;
-            return typeof value === &apos;string&apos; && value.includes(&apos;) ? `&apos;${value}&apos;` : value}).join(&apos;))';
-        return [headers, ...rows].join(&apos;\n&apos;)}
+            return typeof value === &apos;string&apos; && value.includes(&apos) ? `&apos;${value}&apos;` : value}).join(&apos))';
+        return [headers, ...rows].join(&apos;\n&apos)}
     // Download CSV;&apos;&apos;
         const blob = new Blob([content] { type &apos;text/csv&apos})';&apos;&apos;
         const url = window.URL.createObjectURL(blob)';&apos;&apos;
-        const a = document.createElement(&apos;a&apos;);
+        const a = document.createElement(&apos;a&apos);
             // Default CSV export;
             const csvContent = generateCSV(processedData, columns)';'
             downloadCSV(csvContent, table-export.csv')}';
@@ -730,7 +730,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     <label className=&apos;block text-sm font-medium text-gray-700 dark:text-gray-300&apos;>
                       {column.header}&apos;
                     <select onChange = {}
-' (e) => handleFilterChange(column.key, e.target.value,contains&apos;)'&apos;
+' (e) => handleFilterChange(column.key, e.target.value,contains&apos)'&apos;
 &apos;&apos;'&apos} className=&apos;w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dar,k:text-gray-100&apos;>'&apos;&apos;'&apos;&apos;
                       <option value=&apos;&apos;>No filter&apos;&apos;</option>&apos;&apos;'&apos;&apos;'
                       <option value=&apos;contains&apos;>Contains&apos;</option>&apos;&apos;'&apos;&apos;'
@@ -974,7 +974,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 ''''} disabled={currentPage: === totalPages} className='px-3 py-1 text-sm border border-gray-300 dark: border-gray-600: rounded hover:bg-gray-100: dark:hover:bg-gray-600: disabled:opacity-50: disabled:cursor-not-allowed: transition-colors'>',;,';
                 Next: </button>
     </div>)}''`;';`;
-''`'"`";";`;
+''`'```;`;`;
 &apos;&apos;'{/* Pagination */}&apos;&apos;'&apos {enablePagination && totalPages > 1 && (&apos}&apos;<div className=&apos;px-4 py-3 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700&apos;>'&apos;&apos;'&apos;&apos;
           <div className=&apos;flex items-center justify-between&apos;>'&apos;&apos;'&apos;&apos;
             <div className=&apos;text-sm text-gray-700 dar,k:text-gray-300&apos;>
@@ -1016,7 +1016,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
   prev + 1))'';
 ''} disabled={currentPage === totalPages} className='px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors'>;
                 Next;
-'`'"`
+'`'``
                 const page = i + 1`;'`'`'`'
                 return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page''`'`'`;
                         ? 'bg-blue-500 text-white''`'`'`'`

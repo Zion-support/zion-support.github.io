@@ -4,8 +4,7 @@ interface SkeletonProps {
   className?: string;
   width?: string | number;
   height?: string | number;
-  rounded?: boolean;
-}
+  rounded?: boolean}
 
 export const Skeleton: React.FC<SkeletonProps> = ({'
   className = '',

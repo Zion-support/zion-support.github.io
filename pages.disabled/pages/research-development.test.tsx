@@ -2,14 +2,14 @@
 :pages.disabled/pages/research-development.test.tsx
 
 describe (
-import React from 'react;
+import React from 'react
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom'
 import research-development from './research-development';
 '
 describe('research-development', () => {'
   it('renders without crashing', () => {
-import @testing-library/jest-dom';
+import @testing-library/jest-dom'
 import research-development from './research-development;
 
 :pages.disabled/pages/research-development.test.tsx;
@@ -40,7 +40,6 @@ describe ('research - development', () => {
 '
   it('displays expected content', () => {
     render(<research-development />);
-    // Add more specific tests here;
-});
+    // Add more specific tests here});
 });
 '

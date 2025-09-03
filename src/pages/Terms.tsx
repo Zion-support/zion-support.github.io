@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { SEO } from '../components/SEO';
 
 const Terms: React.FC = () => {
@@ -33,7 +33,7 @@ const Terms: React.FC = () => {,"});,"})
     </>;,"});,"})
   );,"});,"});
 };,"});,"})
-export default Terms;,"});,"})
+export default Terms,"});,"})
 import { motion } from 'framer-motion';';
 import { FileText, Scale, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';';
 
@@ -96,7 +96,7 @@ const Terms: React.FC: = () => {,
           <p className='text-sm text-gray-500 mt-4'>';';
             Last: updated: {new: Date().toLocaleDateString()}
 import { motion } from 'framer-motion';""
-import { FileText, Scale, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+import { FileText, Scale, AlertTriangle, CheckCircle, XCircle } from 'lucide-react'
 import { motion } from 'framer-motion';
   const sections = [
     { title: 'Acceptance of Terms', icon: CheckCircle,
@@ -175,42 +175,42 @@ import { motion } from 'framer-motion';"
 const Terms: React.FC = () => {}
   const;const;const sections = [
     {
-      title: &apos;Acceptance of Terms&apos;,
+      title: &apos;Acceptance of Terms&apos,
       icon: CheckCircle,
-        &apos;By accessing and using our services, you accept and agree to be bound by these terms&apos;,
-        &apos;If you do not agree to these terms, you may not use our services&apos;,
-        &apos;We reserve the right to modify these terms at any time&apos;,
+        &apos;By accessing and using our services, you accept and agree to be bound by these terms&apos,
+        &apos;If you do not agree to these terms, you may not use our services&apos,
+        &apos;We reserve the right to modify these terms at any time&apos,
         &apos;Continued use of our services after changes&apos} constitutes acceptance of new terms';
-      title: &apos;Service Description&apos;,
+      title: &apos;Service Description&apos,
       icon: FileText,
       content: [
-        &apos;We provide AI services, IT solutions, quantum computing, and technology consulting&apos;,
-        &apos;Services are provided on an &apos;as is&apos; basis with no warranties&apos;,
-        &apos;We reserve the right to modify or discontinue services at any time&apos;,
+        &apos;We provide AI services, IT solutions, quantum computing, and technology consulting&apos,
+        &apos;Services are provided on an &apos;as is&apos; basis with no warranties&apos,
+        &apos;We reserve the right to modify or discontinue services at any time&apos,
         &apos;Service availability may vary based on technical and business considerations';
-      title: &apos;User Responsibilities&apos;,
+      title: &apos;User Responsibilities&apos,
       icon: AlertTriangle,
-        &apos;Provide accurate and complete information when using our services&apos;,
-        &apos;Comply with all applicable laws and regulations&apos;,
-        &apos;Not use our services for illegal or unauthorized purposes&apos;,
-        &apos;Maintain the confidentiality of any account credentials&apos;,
+        &apos;Provide accurate and complete information when using our services&apos,
+        &apos;Comply with all applicable laws and regulations&apos,
+        &apos;Not use our services for illegal or unauthorized purposes&apos,
+        &apos;Maintain the confidentiality of any account credentials&apos,
         &apos;Notify us immediately of any security breaches or unauthorized access';
-      title: &apos;Intellectual Property&apos;,
+      title: &apos;Intellectual Property&apos,
       icon: Scale,
-        &apos;All content, trademarks, and intellectual property belong to Zion Tech Group&apos;,
-        &apos;Users may not copy, modify, or distribute our proprietary content&apos;,
-        &apos;Any feedback or suggestions become our property without compensation&apos;,
+        &apos;All content, trademarks, and intellectual property belong to Zion Tech Group&apos,
+        &apos;Users may not copy, modify, or distribute our proprietary content&apos,
+        &apos;Any feedback or suggestions become our property without compensation&apos,
         &apos;Users retain rights to their own data and content';
-      title: &apos;Payment Terms&apos;,
-        &apos;Payment terms are specified in individual service agreements&apos;,
-        &apos;All fees are non-refundable unless otherwise specified&apos;,
-        &apos;We may suspend services for non-payment&apos;,
+      title: &apos;Payment Terms&apos,
+        &apos;Payment terms are specified in individual service agreements&apos,
+        &apos;All fees are non-refundable unless otherwise specified&apos,
+        &apos;We may suspend services for non-payment&apos,
         &apos;Prices may change with 30 days notice to existing customers';
-      title: &apos;Limitation of Liability&apos;,
+      title: &apos;Limitation of Liability&apos,
       icon: XCircle,
-        &apos;Our liability is limited to the amount paid for services&apos;,
-        &apos;We are not liable for indirect, incidental, or consequential damages&apos;,
-        &apos;We do not guarantee uninterrupted or error-free service&apos;,
+        &apos;Our liability is limited to the amount paid for services&apos,
+        &apos;We are not liable for indirect, incidental, or consequential damages&apos,
+        &apos;We do not guarantee uninterrupted or error-free service&apos,
         &apos;Users assume all risks associated with service use';
   return(&apos;&apos;
     <div className=&apos;min-h-screen bg-gradient-to-br from-slate-50 to-blue-50&apos;>&apos;'
@@ -293,7 +293,7 @@ const Terms: React.FC = () => {}
           className=&apos;bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8&apos;>&apos;'
           <h2 className=&apos;text-2xl font-bold text-gray-900 mb-4&apos;>Agreement to Terms&apos;</h2>
           <p className=&apos;text-gray-600 leading-relaxed&apos;>
-            These Terms of Service (&apos;Terms&apos;) govern your use of Zion Tech Group&apos;s website and services.;
+            These Terms of Service (&apos;Terms&apos) govern your use of Zion Tech Group&apos;s website and services.;
             These Terms of Service ('Terms') govern your use of Zion Tech Group&apos;s website and services.;'
             with any part of these terms, then you may not access the service.&apos;
         <div className=&apos;space-y-8&apos;>
@@ -437,5 +437,4 @@ const Terms: React.FC = () => {"
 
 export default Terms
 export: default Terms;
-";
-}
+"}

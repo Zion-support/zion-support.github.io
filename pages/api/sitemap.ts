@@ -19,28 +19,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/auth/forgot-password',
     '/auth/reset-password',
     '/auth/verify'
-<<<<<<< HEAD
-  ]
-
-  const blogPages = [
-=======
-  ];
-    const blogPages = [
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     '/blog/5g-technology-and-its-impact-on-iot',
     '/blog/ai-powered-marketplaces-the-future-of-digital-commerce',
     '/blog/api-first-development-building-scalable-systems',
     '/blog/augmented-reality-in-enterprise-applications',
     '/blog/blockchain-technology-in-modern-business-solutions',
     '/blog/cloud-native-architecture-best-practices'
-<<<<<<< HEAD
-  ]
-
-  const servicePages = [
-=======
-  ];
-    const servicePages = [
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     '/services/ai-autonomous-business-operations-platform',
     '/services/ai-cybersecurity-threat-intelligence',
     '/services/ai-financial-trading-platform',
@@ -49,13 +33,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/services/blockchain-solutions',
     '/services/cloud-infrastructure',
     '/services/iot-platforms'
-<<<<<<< HEAD
-  ]
-
-=======
-  ];
-  
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   const allPages = [...staticPages, ...blogPages, ...servicePages];
   
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
 
 interface SEOHeadProps {
@@ -14,8 +14,7 @@ interface SEOHeadProps {
   section?: string;
   tags?: string[];
   noindex?: boolean;
-  nofollow?: boolean;
-}
+  nofollow?: boolean}
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - AI & Technology Solutions',

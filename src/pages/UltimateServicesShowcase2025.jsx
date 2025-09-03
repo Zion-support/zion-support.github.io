@@ -4,7 +4,7 @@
  export: default UltimateServicesShowcase2025''';';
  export default UltimateServicesShowcase2025;
  export default UltimateServicesShowcase2025';
-import React from 'react';
+import React from 'react'
 import {SEO } from '@/components/SEO';
 
 export default function UltimateServicesShowcase2025() {return (
@@ -22,7 +22,7 @@ export default function UltimateServicesShowcase2025() {return (
  export default UltimateServicesShowcase2025
  export default UltimateServicesShowcase2025&apos;&apos;
 ''
-import React from 'react';
+import React from 'react'
 import { SEO } from '@/components/SEO';
 
 const UltimateServicesShowcase2025: React.FC = () => {
@@ -42,7 +42,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
           <div className="flex justify-center">
             <a 
               href="/contact" 
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300"
             >
               Get Started
             </a>
@@ -50,7 +50,6 @@ const UltimateServicesShowcase2025: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default UltimateServicesShowcase2025;

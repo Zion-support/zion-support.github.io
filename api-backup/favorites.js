@@ -9,8 +9,7 @@ export default async function handler(req, res) {
   const userId = req.body?.user_id || req.query?.userId;
   if (!userId) {
     res.status(400).json({ error: 'Missing userId' });
-    return;
-  }
+    return}
   if (req.method === 'GET') {
     const { data, error } = await supabase
       .from('favorites')
@@ -19,27 +18,22 @@ export default async function handler(req, res) {
       .order('created_at', { ascending: false });
     if (error) {
       res.status(500).json({ error: error.message });
-      return;
-    }
+      return}
     res.status(200).json(data || []);
-    return;
-  }
+    return}
   const { item_type, item_id } = req.body || {};
   if (!item_type || !item_id) {
     res.status(400).json({ error: 'Missing item_type or item_id' });
-    return;
-  }
+    return}
   if (req.method === 'POST') {
     const { error } = await supabase
       .from('favorites')
       .insert({ user_id: userId, item_type, item_id });
     if (error) {
       res.status(500).json({ error: error.message });
-      return;
-    }
+      return}
     res.status(200).json({ success: true });
-    return;
-  }
+    return}
   if (req.method === 'DELETE') {
     const { error } = await supabase
       .from('favorites')
@@ -49,11 +43,9 @@ export default async function handler(req, res) {
       .eq('item_id', item_id);
     if (error) {
       res.status(500).json({ error: error.message });
-      return;
-    }
+      return}
     res.status(200).json({ success: true });
-    return;
-  }
+    return}
   res.status(405).end();
 }
 ursor/automate-test-fix-improve-and-merge-code-99d1

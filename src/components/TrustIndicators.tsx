@@ -77,8 +77,8 @@ const TrustIndicators: React.FC = () => {
               className="text-center group hover: scale-105 transition-transform duration-300"" >"
             <div key={index}"
               className='text-center group hover:scale-105 transition-transform duration-300  >'
-              <div className="w-16 h-16 bg-slate-800/50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700/50 transition-colors">
-                <indicator .icon className={`w-8 h-8 ${indicator.color}`} /" >"
+              <div className={`w-16 h-16 bg-slate-800/50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700/50 transition-colors`>
+                <indicator .icon className={`w-8 h-8 ${indicator.color}`} /` >`}
               </div>""
               <h3 className="text-sm font-semibold text-white mb-1">
                 {indicator.title}

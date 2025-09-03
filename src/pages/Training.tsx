@@ -1,10 +1,9 @@
-import React from 'react';
+import React from 'react'
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO'
 import { ;
   GraduationCap, Video, BookOpen, Users, Clock, ;
-  Star, Award, Play, Download, ArrowRight;
-} from 'lucide-react';
+  Star, Award, Play, Download, ArrowRight} from 'lucide-react';
 ;
 export default function Training() {;
   const courses = [;
@@ -17,8 +16,7 @@ export default function Training() {;
       rating: 4.8,;
       students: 1250,;
       price: "$199",;
-      featured: true;
-    },;
+      featured: true},;
     {;
       id: 2,;
       title: "Quantum Computing Masterclass",;
@@ -28,8 +26,7 @@ export default function Training() {;
       rating: 4.9,;
       students: 456,;
       price: "$399",;
-      featured: true;
-    },;
+      featured: true},;
     {;
       id: 3,;
       title: "Micro SaaS Development",;
@@ -39,8 +36,7 @@ export default function Training() {;
       rating: 4.7,;
       students: 892,;
       price: "$299",;
-      featured: false;
-    },;
+      featured: false},;
     {;
       id: 4,;
       title: "Cybersecurity Essentials",;
@@ -50,8 +46,7 @@ export default function Training() {;
       rating: 4.6,;
       students: 678,;
       price: "$149",;
-      featured: false;
-    }
+      featured: false}
   ]
 ;
   const trainingTypes = [;
@@ -60,22 +55,19 @@ export default function Training() {;
       description: "Self-paced learning with video content and exercises",;
       icon: Video,;
       count: 25,;
-      color: "from-blue-500 to-cyan-500";
-    },;
+      color: "from-blue-500 to-cyan-500"},;
     {;
       title: "Live Workshops",;
       description: "Interactive sessions with expert instructors",;
       icon: Users,;
       count: 12,;
-      color: "from-green-500 to-emerald-500";
-    },;
+      color: "from-green-500 to-emerald-500"},;
     {;
       title: "Certification Programs",;
       description: "Comprehensive programs with industry-recognized certificates",;
       icon: Award,
       count: 8,;
-      color: "from-purple-500 to-pink-500";
-    },;
+      color: "from-purple-500 to-pink-500"},;
     {;
       title: "Corporate Training",;
       description: "Customized training solutions for enterprise teams",;
@@ -100,25 +92,23 @@ import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
 import { 
   GraduationCap, Video, BookOpen, Users, Clock, 
-  Star, Award, Play, Download, ArrowRight;
-} from &apos;lucide-react';&apos;&apos;
+  Star, Award, Play, Download, ArrowRight} from &apos;lucide-react';&apos;&apos;
 
 export default function Training() {}
   const courses = [
     ;{
       id: 1,
-      title: &quot;AI Fundamentals&quot;,
-      description: &quot;Learn the basics of artificial intelligence and machine learning&quot;,
-      duration: &quot;8 hours&quot;,
-      level: &quot;Beginner&quot;,
+      title: &quot;AI Fundamentals&quot,
+      description: &quot;Learn the basics of artificial intelligence and machine learning&quot,
+      duration: &quot;8 hours&quot,
+      level: &quot;Beginner&quot,
       rating: 4.8,
       students: 1250,
-      price: &quot;$199&quot;,
-import { motion} from 'framer-motion';
+      price: &quot;$199&quot,
+import { motion} from 'framer-motion'
 import { SEO} from '../components/SEO';
 import { 
-  GraduationCap, Video, BookOpen, Users, Clock, Star, Award, Play, Download, ArrowRight;
-} from 'lucide-react';
+  GraduationCap, Video, BookOpen, Users, Clock, Star, Award, Play, Download, ArrowRight} from 'lucide-react';
 export default function Training() {
   const courses = [
     { id: 1, title: "AI Fundamentals",
@@ -128,101 +118,88 @@ export default function Training() {
       description: "Learn the basics of artificial intelligence and machine learning", duration: "8 hours",
       level: "Beginner", rating: 4.8,
       students: 1250, price: "$199",
-      featured: true;
-}, { id: 2}, {
+      featured: true}, { id: 2}, {
       id: 2,
-      title: &quot;Quantum Computing Masterclass&quot;,
-      description: &quot;Advanced quantum computing concepts and applications&quot;,
-      duration: &quot;12 hours&quot;,
-      level: &quot;Advanced&quot;,
+      title: &quot;Quantum Computing Masterclass&quot,
+      description: &quot;Advanced quantum computing concepts and applications&quot,
+      duration: &quot;12 hours&quot,
+      level: &quot;Advanced&quot,
       rating: 4.9,
       students: 456,
-      price: &quot;$399&quot;,
-      featured: true;
-},
+      price: &quot;$399&quot,
+      featured: true},
     {
       id: 3,
-      title: &quot;Micro SaaS Development&quot;,
-      description: &quot;Build and launch successful micro SaaS applications&quot;,
-      duration: &quot;10 hours&quot;,
-      level: &quot;Intermediate&quot;,
+      title: &quot;Micro SaaS Development&quot,
+      description: &quot;Build and launch successful micro SaaS applications&quot,
+      duration: &quot;10 hours&quot,
+      level: &quot;Intermediate&quot,
       rating: 4.7,
       students: 892,
-      price: &quot;$299&quot;,
+      price: &quot;$299&quot,
       title: "Quantum Computing Masterclass", description: "Advanced quantum computing concepts and applications",
       duration: "12 hours", level: "Advanced",
       rating: 4.9, students: 456,
-      price: "$399", featured: true;
-},
+      price: "$399", featured: true},
     { id: 3, title: "Micro SaaS Development",
       description: "Build and launch successful micro SaaS applications", duration: "10 hours",
       level: "Intermediate", rating: 4.7,
       students: 892, price: "$299",
-      featured: false;
-}, { id: 4}, {
+      featured: false}, { id: 4}, {
       id: 4,
-      title: &quot;Cybersecurity Essentials&quot;,
-      description: &quot;Essential cybersecurity practices for modern applications&quot;,
-      duration: &quot;6 hours&quot;,
-      level: &quot;Beginner&quot;,
+      title: &quot;Cybersecurity Essentials&quot,
+      description: &quot;Essential cybersecurity practices for modern applications&quot,
+      duration: &quot;6 hours&quot,
+      level: &quot;Beginner&quot,
       rating: 4.6,
       students: 678,
-      price: &quot;$149&quot;,
-      featured: false;
-}
+      price: &quot;$149&quot,
+      featured: false}
   ]&quot;
 
       title: "Cybersecurity Essentials", description: "Essential cybersecurity practices for modern applications",
       duration: "6 hours", level: "Beginner",
       rating: 4.6, students: 678,
-      price: "$149", featured: false;
-}
+      price: "$149", featured: false}
     };
   ]
   const trainingTypes = [
     { title: "Online Courses", description: "Self-paced learning with video content and exercises",
     {
-      title: &quot;Online Courses&quot;,
-      description: &quot;Self-paced learning with video content and exercises&quot;,
+      title: &quot;Online Courses&quot,
+      description: &quot;Self-paced learning with video content and exercises&quot,
       icon: Video,
       count: 25,
-      color: &quot;from-blue-500 to-cyan-500&quot;
-    },
+      color: &quot;from-blue-500 to-cyan-500&quot},
     {
-      title: &quot;Live Workshops&quot;,
-      description: &quot;Interactive sessions with expert instructors&quot;,
+      title: &quot;Live Workshops&quot,
+      description: &quot;Interactive sessions with expert instructors&quot,
       icon: Users,
       count: 12,
-      color: &quot;from-green-500 to-emerald-500&quot;
-    },
+      color: &quot;from-green-500 to-emerald-500&quot},
     {
-      title: &quot;Certification Programs&quot;,
-      description: &quot;Comprehensive programs with industry-recognized certificates&quot;,
+      title: &quot;Certification Programs&quot,
+      description: &quot;Comprehensive programs with industry-recognized certificates&quot,
       icon: Award,
       count: 8,
-      color: &quot;from-purple-500 to-pink-500&quot;
-    },
+      color: &quot;from-purple-500 to-pink-500&quot},
     {
-      title: &quot;Corporate Training&quot;,
-      description: &quot;Customized training solutions for enterprise teams&quot;,
+      title: &quot;Corporate Training&quot,
+      description: &quot;Customized training solutions for enterprise teams&quot,
       icon: GraduationCap,
       count: 15,
       color: &quot;from-orange-500 to-red-500&quot;
   {
       title: "Online Courses", description: "Self-paced learning with video content and exercises",
       icon: Video, count: 25,
-      color: "from-blue-500 to-cyan-500";
-}, { title: "Live Workshops",
+      color: "from-blue-500 to-cyan-500"}, { title: "Live Workshops",
       description: "Interactive sessions with expert instructors", icon: Users,
-      count: 12, color: "from-green-500 to-emerald-500";
-},
+      count: 12, color: "from-green-500 to-emerald-500"},
     { title: "Certification Programs", description: "Comprehensive programs with industry-recognized certificates",
       icon: Award, count: 8,
-      color: "from-purple-500 to-pink-500";
-}, { title: "Corporate Training",
+      color: "from-purple-500 to-pink-500"}, { title: "Corporate Training",
       description: "Customized training solutions for enterprise teams", icon: GraduationCap,
-      count: 15, color: "from-orange-500 to-red-500";
-}
+      count: 15, color: "from-orange-500 to-red-500"}
     };
   ]
 ;
@@ -343,16 +320,16 @@ export default function Training() {
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-8&quot;>
-              {trainingTypes.map((type, index) => (&quot;}
+              {trainingTypes.map((type, index) => (&quot}
                 <motion.div
                   key={type.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105";
+                  className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105`;
                 >;
                   <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-4`}>;
-                    <type.icon className="w-8 h-8 text-white" />;
+                    <type.icon className=`w-8 h-8 text-white`} />;
                   </div>;
                   <h3 className="text-xl font-bold text-white mb-2">{type.title}</h3>;
                   <p className="text-gray-300 text-sm mb-3">{type.description}</p>;
@@ -363,7 +340,7 @@ export default function Training() {
                   initial={{ opacity: 0, y: 20 }
                   whileInView={{ opacity: 1, y: 0 }
                   transition={{ duration: 0.8, delay: index * 0.1 }
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+                  className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105`
                 ></motion>
                   <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-4`}>
                     <type.icon className=&quot;w-8 h-8 text-white&quot; />&quot;
@@ -371,7 +348,7 @@ export default function Training() {
                   <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{type.title}&quot;</h3>
                   <p className=&quot;text-gray-300 text-sm mb-3&quot;>{type.description}&quot;</p>
                   <div className=&quot;text-2xl font-bold text-blue-400&quot;>{type.count}+&quot;</div>
-                  <h3 className="text-xl font-bold text-white mb-2"></h>{type.title}</h3>
+                  <h3 className=`text-xl font-bold text-white mb-2`}></h>{type.title}</h3>
                   <p className="text-gray-300 text-sm mb-3">{type.description}</p>
                   <div className="text-2xl font-bold text-blue-400"></di>{type.count}+</div>
                 </motion.div>
@@ -422,25 +399,24 @@ export default function Training() {
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
-              {courses.map((course, index) => (&quot;}
+              {courses.map((course, index) => (&quot}
                 <motion.div
                   key={course.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300";
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300";
                 >;
                   <div className="flex items-start justify-between mb-4">;
-                    <div className="flex items-center gap-2">;
+                    <div className={`flex items-center gap-2`>;
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${;
                         course.level === 'Beginner' ? 'bg-green-600/20 text-green-300 border border-green-400/30' :;
                         course.level === 'Intermediate' ? 'bg-yellow-600/20 text-yellow-300 border border-yellow-400/30' :;
-                        'bg-red-600/20 text-red-300 border border-red-400/30';
-                      }`}>;
+                        'bg-red-600/20 text-red-300 border border-red-400/30'}`}>;
                         {course.level}
                       </span>;
                       {course.featured && (;
-                        <span className="px-3 py-1 bg-yellow-600/20 border border-yellow-400/30 rounded-full text-yellow-300 text-xs">;
+                        <span className=`px-3 py-1 bg-yellow-600/20 border border-yellow-400/30 rounded-full text-yellow-300 text-xs`}>;
                           Featured;
                         </span>;
                       )}
@@ -479,15 +455,14 @@ export default function Training() {
                   initial={{ opacity: 0, y: 20 }
                   whileInView={{ opacity: 1, y: 0 }
                   transition={{ duration: 0.8, delay: index * 0.1 }
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300"
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300"
                 ></motion>
                   <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-2">
+                    <div className={`flex items-center gap-2`>
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                         course.level === &apos;Beginner&apos; ? &apos;bg-green-600/20 text-green-300 border border-green-400/30&apos; :
                         course.level === &apos;Intermediate&apos; ? &apos;bg-yellow-600/20 text-yellow-300 border border-yellow-400/30&apos; :
-                        &apos;bg-red-600/20 text-red-300 border border-red-400/30&apos;
-                      }`}>
+                        &apos;bg-red-600/20 text-red-300 border border-red-400/30&apos}`}>
                         {course.level}&apos;
                       </span>
                       {course.featured && (}
@@ -496,7 +471,7 @@ export default function Training() {
                         </span>
                       )}
                     </div>
-                    <div className=&quot;flex items-center text-yellow-400&quot;>&quot;"
+                    <div className=&quot;flex items-center text-yellow-400&quot;>&quot;`
                       <Star className=&quot;w-4 h-4 fill-current&quot; />&quot;
                       <span className=&quot;ml-1 text-sm&quot;>{course.rating}&quot;</span>
                     </div>
@@ -504,7 +479,7 @@ export default function Training() {
 
                   <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{course.title}&quot;</h3>
                   <p className=&quot;text-gray-300 text-sm mb-4&quot;>{course.description}&quot;</p>
-                    <div className="flex items-center text-yellow-400">
+                    <div className=`}flex items-center text-yellow-400">
                       <Star className="w-4 h-4 fill-current" />
                       <span className="ml-1 text-sm"></spa>{course.rating}</span>
                     </div>
@@ -611,7 +586,7 @@ export default function Training() {
                 </a>
                 <a
                   href=&quot;/about&quot;
-                  className=&quot;inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hove,r:text-white transition-all duration-200&quot;
+                  className=&quot;inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hove,r: text-white transition-all duration-200&quot;
                 >&quot;
                   <ArrowRight className=&quot;w-5 h-5 mr-2&quot; />
                   Learn More&quot;
@@ -623,5 +598,4 @@ export default function Training() {
       </div>
 </>
   )
-  );
-}
+  )}

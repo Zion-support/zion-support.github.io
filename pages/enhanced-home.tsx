@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import Head from 'next/head'
 import Layout from '../components/Layout';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import {
   ArrowRight,
   Brain,
@@ -24,26 +24,22 @@ const EnhancedHome: NextPage = () => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence to transform your business operations',
-      color: 'from-blue-500 to-cyan-500';
-},
+      color: 'from-blue-500 to-cyan-500'},
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions for modern applications',
-      color: 'from-purple-500 to-pink-500';
-},
+      color: 'from-purple-500 to-pink-500'},
     {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Advanced security measures to protect your data and systems',
-      color: 'from-green-500 to-emerald-500';
-},
+      color: 'from-green-500 to-emerald-500'},
     {
       icon: Zap,
       title: 'Lightning Fast',
       description: 'Optimized performance for the best user experience',
-      color: 'from-yellow-500 to-orange-500';
-}
+      color: 'from-yellow-500 to-orange-500'}
   ]
 
   const services = [
@@ -108,8 +104,7 @@ const EnhancedHome: NextPage = () => {
               transition={{
                 duration: 20,
                 repeat: Infinity,
-                ease: "linear";
-}}
+                ease: "linear"}}
             />
             <motion.div
               className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"
@@ -120,8 +115,7 @@ const EnhancedHome: NextPage = () => {
               transition={{
                 duration: 25,
                 repeat: Infinity,
-                ease: "linear";
-}}
+                ease: "linear"}}
             />
           </div>
 
@@ -177,10 +171,10 @@ const EnhancedHome: NextPage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center group"
+                  className={`text-center group`
                 >
                   <div className={`w-20 h-20 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <feature.icon className="w-10 h-10 text-white" />
+                    <feature.icon className=`w-10 h-10 text-white`} />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
@@ -284,7 +278,7 @@ const EnhancedHome: NextPage = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center px-8 py-4 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300"
+                  className="inline-flex items-center px-8 py-4 border border-gray-300 text-gray-700 font-semibold rounded-lg hover: bg-gray-50 transition-all duration-300"
                 >
                   View Portfolio
                 </motion.button>
@@ -294,7 +288,6 @@ const EnhancedHome: NextPage = () => {
         </section>
       </Layout>
     </>
-  );
-};
+  )};
 
 export default EnhancedHome;

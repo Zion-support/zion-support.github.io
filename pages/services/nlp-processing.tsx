@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { ArrowRight, CheckCircle, MessageSquare, Brain, FileText, Globe, Zap, Target, TrendingUp, Star, Shield, Users } from 'lucide-react';
 import PageTransition from '../../src/components/PageTransition';
 
@@ -462,7 +462,7 @@ export default function NLPProcessing() {
 			</section>
 
 			{/* CTA Section */}
-			<section className="bg-gradient-to-r from-violet-600 to-purple-600 py-24 sm:py-32">
+			<section className="bg-gradient-to-r from-violet-600 to-purple-600 py-24 sm: py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -492,5 +492,4 @@ export default function NLPProcessing() {
 				</div>
 			</section>
 		</PageTransition>
-	);
-}
+	)}

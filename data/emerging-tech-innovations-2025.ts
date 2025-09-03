@@ -36,12 +36,6 @@ export interface EmergingTechInnovation2025 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
   // Neuromorphic Computing
   {
@@ -302,4 +296,4 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     customers: 35,
     rating: 4.8,
     reviews: 24
-];}}
+]}}

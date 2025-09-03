@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import {useLocation } from 'react-router-dom';
-import {ArrowRight, Home, ChevronRight } from 'lucide-react';
+import {ArrowRight, Home, ChevronRight } from 'lucide-react'
 import {Link } from 'react-router-dom';
 import React from 'react';""
 import { useLocation } from 'react-router-dom';""
@@ -24,18 +24,15 @@ export default function SimplePage()   {const location = useLocation();
             titl,
     e: 'AI & Machine Learning',
             description: 'Intelligent solutions that learn, adapt, and optimize your business processes',
-            link: '/services/ai';
-},
+            link: '/services/ai'},
           {'
             title: 'Cloud Solutions',
             description: 'Scalable cloud infrastructure and migration services for modern businesses',
-            link: '/services/cloud';
-},
+            link: '/services/cloud'},
           {'
             title: 'Cybersecurity',
             description: 'Advanced security solutions to protect your digital assets and ensure compliance',
-            link: '/services/cybersecurity';
-},
+            link: '/services/cybersecurity'},
           {'
             title: 'Digital Transformation',
     const pathMap = {""
@@ -172,20 +169,16 @@ export default function SimplePage()   {const location = useLocation();
         sections: [{
             title: 'AI & Machine Learning',
             description: 'Intelligent solutions that learn, adapt, and optimize your business processes',
-            link: '/services/ai';
-},
+            link: '/services/ai'},
           {title: 'Cloud Solutions',
             description: 'Scalable cloud infrastructure and migration services for modern businesses',
-            link: '/services/cloud';
-},
+            link: '/services/cloud'},
           {title: 'Cybersecurity',
             description: 'Advanced security solutions to protect your digital assets and ensure compliance',
-            link: '/services/cybersecurity';
-},
+            link: '/services/cybersecurity'},
           {title: 'Digital Transformation',
             description: 'End-to-end business transformation services to modernize your operations',
-            link: '/services/transformation';
-}
+            link: '/services/transformation'}
         ]
 },
       '/solutions': {'
@@ -197,18 +190,15 @@ export default function SimplePage()   {const location = useLocation();
             titl,
     e: 'Manufacturing',
             description: 'Smart factory solutions and Industry 4.0 technologies',
-            link: '/solutions/manufacturing';
-},
+            link: '/solutions/manufacturing'},
           {'
             title: 'Financial Services',
             description: 'FinTech solutions for modern banking and financial institutions',
-            link: '/solutions/financial';
-},
+            link: '/solutions/financial'},
           {'
             title: 'Healthcare',
             description: 'Digital health solutions and medical technology innovations',
-            link: '/solutions/healthcare';
-},
+            link: '/solutions/healthcare'},
           {'
             title: 'Retail',
       '/solutions': {title: 'Industry Solutions',
@@ -217,20 +207,16 @@ export default function SimplePage()   {const location = useLocation();
         sections: [{
             title: 'Manufacturing',
             description: 'Smart factory solutions and Industry 4.0 technologies',
-            link: '/solutions/manufacturing';
-},
+            link: '/solutions/manufacturing'},
           {title: 'Financial Services',
             description: 'FinTech solutions for modern banking and financial institutions',
-            link: '/solutions/financial';
-},
+            link: '/solutions/financial'},
           {title: 'Healthcare',
             description: 'Digital health solutions and medical technology innovations',
-            link: '/solutions/healthcare';
-},
+            link: '/solutions/healthcare'},
           {title: 'Retail',
             description: 'E-commerce and omnichannel retail solutions',
-            link: '/solutions/retail';
-}
+            link: '/solutions/retail'}
         ]
 },
       '/about': {'
@@ -242,18 +228,15 @@ export default function SimplePage()   {const location = useLocation();
             titl,
     e: 'Our Mission',
             description: 'To empower businesses with transformative technology solutions that drive innovation and growth',
-            link: '/about/mission';
-},
+            link: '/about/mission'},
           {'
             title: 'Our Team',
             description: 'Meet the experts behind our innovative solutions and exceptional service',
-            link: '/about/team';
-},
+            link: '/about/team'},
           {'
             title: 'Our Values',
             description: 'Innovation, integrity, excellence, and customer success drive everything we do',
-            link: '/about/values';
-},
+            link: '/about/values'},
           {'
             title: 'Our History',
       '/about': {title: 'About Zion Tech Group',
@@ -262,20 +245,16 @@ export default function SimplePage()   {const location = useLocation();
         sections: [{
             title: 'Our Mission',
             description: 'To empower businesses with transformative technology solutions that drive innovation and growth',
-            link: '/about/mission';
-},
+            link: '/about/mission'},
           {title: 'Our Team',
             description: 'Meet the experts behind our innovative solutions and exceptional service',
-            link: '/about/team';
-},
+            link: '/about/team'},
           {title: 'Our Values',
             description: 'Innovation, integrity, excellence, and customer success drive everything we do',
-            link: '/about/values';
-},
+            link: '/about/values'},
           {title: 'Our History',
             description: 'From startup to industry leader - our journey of innovation and growth',
-            link: '/about/history';
-}
+            link: '/about/history'}
         ]
 },
       '/contact': {'
@@ -287,18 +266,15 @@ export default function SimplePage()   {const location = useLocation();
             titl,
     e: 'Get a Quote',
             description: 'Request a customized quote for your specific technology needs',
-            link: '/request-quote';
-},
+            link: '/request-quote'},
           {'
             title: 'Schedule a Consultation',
             description: 'Book a free consultation with our technology experts',
-            link: '/consultation';
-},
+            link: '/consultation'},
           {'
             title: 'Support',
             description: 'Get technical support and assistance for existing solutions',
-            link: '/support';
-},
+            link: '/support'},
           {'
             title: 'Partnership',
       '/contact': {title: 'Contact Us',
@@ -307,20 +283,16 @@ export default function SimplePage()   {const location = useLocation();
         sections: [{
             title: 'Get a Quote',
             description: 'Request a customized quote for your specific technology needs',
-            link: '/request-quote';
-},
+            link: '/request-quote'},
           {title: 'Schedule a Consultation',
             description: 'Book a free consultation with our technology experts',
-            link: '/consultation';
-},
+            link: '/consultation'},
           {title: 'Support',
             description: 'Get technical support and assistance for existing solutions',
-            link: '/support';
-},
+            link: '/support'},
           {title: 'Partnership',
             description: 'Explore partnership opportunities with Zion Tech Group',
-            link: '/partners';
-}
+            link: '/partners'}
         ]
 },
       '/blog': {'
@@ -332,18 +304,15 @@ export default function SimplePage()   {const location = useLocation();
             titl,
     e: 'Technology Trends',
             description: 'Explore emerging technologies and their impact on business',
-            link: '/blog/trends';
-},
+            link: '/blog/trends'},
           {'
             title: 'Industry Insights',
             description: 'Deep dives into specific industry challenges and solutions',
-            link: '/blog/industry';
-},
+            link: '/blog/industry'},
           {'
             title: 'Case Studies',
             description: 'Real-world examples of our solutions in action',
-            link: '/case-studies';
-},
+            link: '/case-studies'},
           {'
             title: 'Expert Opinions',
       '/blog': {title: 'Blog & Insights',
@@ -352,20 +321,16 @@ export default function SimplePage()   {const location = useLocation();
         sections: [{
             title: 'Technology Trends',
             description: 'Explore emerging technologies and their impact on business',
-            link: '/blog/trends';
-},
+            link: '/blog/trends'},
           {title: 'Industry Insights',
             description: 'Deep dives into specific industry challenges and solutions',
-            link: '/blog/industry';
-},
+            link: '/blog/industry'},
           {title: 'Case Studies',
             description: 'Real-world examples of our solutions in action',
-            link: '/case-studies';
-},
+            link: '/case-studies'},
           {title: 'Expert Opinions',
             description: 'Thought leadership and expert perspectives on technology',
-            link: '/blog/expert';
-}
+            link: '/blog/expert'}
         ]
 },
       '/careers': {'
@@ -377,18 +342,15 @@ export default function SimplePage()   {const location = useLocation();
             titl,
     e: 'Open Positions',
             description: 'Browse current job openings and opportunities',
-            link: '/careers/positions';
-},
+            link: '/careers/positions'},
           {'
             title: 'Company Culture',
             description: 'Learn about our values, culture, and work environment',
-            link: '/careers/culture';
-},
+            link: '/careers/culture'},
           {'
             title: 'Benefits & Perks',
             description: 'Discover the benefits of working at Zion Tech Group',
-            link: '/careers/benefits';
-},
+            link: '/careers/benefits'},
           {'
             title: 'Career Growth',
       '/careers': {title: 'Join Our Team',
@@ -397,20 +359,16 @@ export default function SimplePage()   {const location = useLocation();
         sections: [{
             title: 'Open Positions',
             description: 'Browse current job openings and opportunities',
-            link: '/careers/positions';
-},
+            link: '/careers/positions'},
           {title: 'Company Culture',
             description: 'Learn about our values, culture, and work environment',
-            link: '/careers/culture';
-},
+            link: '/careers/culture'},
           {title: 'Benefits & Perks',
             description: 'Discover the benefits of working at Zion Tech Group',
-            link: '/careers/benefits';
-},
+            link: '/careers/benefits'},
           {title: 'Career Growth',
             description: 'Opportunities for professional development and advancement',
-            link: '/careers/growth';
-}
+            link: '/careers/growth'}
         ]
 },
       '/partners': {'
@@ -422,18 +380,15 @@ export default function SimplePage()   {const location = useLocation();
             titl,
     e: 'Become a Partner',
             description: 'Learn about partnership opportunities and benefits',
-            link: '/partners/join';
-},
+            link: '/partners/join'},
           {'
             title: 'Partner Programs',
             description: 'Explore our various partnership programs and tiers',
-            link: '/partners/programs';
-},
+            link: '/partners/programs'},
           {'
             title: 'Partner Resources',
             description: 'Access tools, training, and support for partners',
-            link: '/partners/resources';
-},
+            link: '/partners/resources'},
           {'
             title: 'Partner Success Stories',
       '/partners': {title: 'Partnerships',
@@ -442,20 +397,16 @@ export default function SimplePage()   {const location = useLocation();
         sections: [{
             title: 'Become a Partner',
             description: 'Learn about partnership opportunities and benefits',
-            link: '/partners/join';
-},
+            link: '/partners/join'},
           {title: 'Partner Programs',
             description: 'Explore our various partnership programs and tiers',
-            link: '/partners/programs';
-},
+            link: '/partners/programs'},
           {title: 'Partner Resources',
             description: 'Access tools, training, and support for partners',
-            link: '/partners/resources';
-},
+            link: '/partners/resources'},
           {title: 'Partner Success Stories',
             description: 'See how our partners have grown with us',
-            link: '/partners/success';
-}
+            link: '/partners/success'}
         ]
 }
     };
@@ -814,6 +765,5 @@ export default function SimplePage()   {const location = useLocation();
         </div>
       </section>
     </div>
-  );
-}"
+  )}"
   );}""

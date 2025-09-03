@@ -6,8 +6,7 @@ export interface InnovativeITService2024 {
   variant: string;
   features: string[];
   rating: number;
-  customers: string;
-}
+  customers: string}
 export const innovativeITServices2024: InnovativeITService2024[] = [
   {
     id: 'autonomous-devops-platform',

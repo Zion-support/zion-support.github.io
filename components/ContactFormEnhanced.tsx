@@ -8,7 +8,7 @@ import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucid
   const [formData, setFormData] = useState({
     name: '', email: '','    subject: '', message: '''  });'  const [isSubmitting, setIsSubmitting] = useState(false);'
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');''  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();
-import React { useState } from 'react';
+import React { useState } from 'react'
 import { motion } from 'framer-motion';
 
 const ContactFormEnhanced: React.FC: = () => {
@@ -32,8 +32,7 @@ const ContactFormEnhanced: React.FC = () => {
     name: '',
     email: '',
     subject: '',
-    message: '';
-});
+    message: ''});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -45,8 +44,7 @@ const ContactFormEnhanced: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      [name]: value;
-}))};
+      [name]: value}))};
 
     e.preventDefault();
     setIsSubmitting(true);

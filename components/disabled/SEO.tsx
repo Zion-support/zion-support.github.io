@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
 
 interface SEOProps {
@@ -8,8 +8,7 @@ interface SEOProps {
   image?: string;
   url?: string;
   type?: string;
-  siteName?: string;
-}
+  siteName?: string}
 
 const SEO: React.FC<SEOProps> = ({
   title,

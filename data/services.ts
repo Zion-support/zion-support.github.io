@@ -8,8 +8,7 @@ export interface Service { id: string; name: string; category: 'micro-saas' | 'i
     enterprise: number;
     currency: string;
     period: string};
-  link: string;
-}
+  link: string}
 
 export const services: Service[] = [
   {
@@ -28,14 +27,6 @@ export const services: Service[] = [
       starter: 29,
       professional: 79,
       enterprise: 199,
-<<<<<<< HEAD
-      currency: 'USD';
-},
-=======
-      currency: 'USD',
-      period: 'month'
-    },
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     benefits: [
       '10x faster content creation',
       'Consistent brand messaging',
@@ -51,6 +42,5 @@ export const services: Service[] = [
       'React',
       'Node.js'
     ],
-    link: 'https://ziontechgroup.com/services/ai-content-generator';
-}
+    link: 'https://ziontechgroup.com/services/ai-content-generator'}
 ];

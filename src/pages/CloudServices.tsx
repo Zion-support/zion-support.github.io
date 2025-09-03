@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { SEO } from '../components/SEO';
 
 const CloudServices: React.FC = () => {
@@ -33,7 +33,7 @@ const CloudServices: React.FC = () => {,"});,"})
     </>;,"});,"})
   );,"});,"});
 };,"});,"})
-export default CloudServices;,"});,"})
+export default CloudServices,"});,"})
 import { SEO } from '../components/SEO';';
 
 export: default function Page() {

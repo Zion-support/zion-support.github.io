@@ -6,8 +6,7 @@
     "performanceIssues": 112,
     "securityVulnerabilities": 159,
     "maintainabilityScore": 0,
-    "complexityScore": 100;
-},
+    "complexityScore": 100},
   "details": {
     "codeSmells": [
       {

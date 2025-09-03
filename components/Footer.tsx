@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react'
 import { 
   Phone, 
   Mail, 
@@ -11,8 +11,7 @@ import {
   Instagram,
   Brain,
   ArrowUp,
-  Heart;
-} from 'lucide-react';
+  Heart} from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -230,11 +229,11 @@ export default function Footer() {
               We help businesses transform and innovate with cutting-edge artificial intelligence.
             
             <div className="space-y-3 mb-6">
-                <Mail className="w-4 h-4 mr-3 text-blue-400" />
-                <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">
+                <Mail className={`w-4 h-4 mr-3 text-blue-400` />
+                <a href={`mailto:${contactInfo.email}`} className=`hover:text-white transition-colors`}>
                   {contactInfo.email}
-                <Phone className="w-4 h-4 mr-3 text-blue-400" />
-                <a href={`tel:${contactInfo.phone}`} className="hover:text-white transition-colors">
+                <Phone className={`w-4 h-4 mr-3 text-blue-400` />
+                <a href={`tel:${contactInfo.phone}`} className=`hover:text-white transition-colors`}>
                   {contactInfo.phone}
                 <MapPin className="w-4 h-4 mr-3 text-blue-400" />
                 <span>{contactInfo.address}</span>
@@ -470,9 +469,9 @@ export default function Footer() {
                   Middletown DE 19709
                 </span>
               {serviceCategories.map((category) => (
-                <div key={category.title} className="space-y-1">
+                <div key={category.title} className={`space-y-1`>
                     <category.icon className={`w-4 h-4 ${category.color}`} />
-                    <span className="text-sm font-medium">{category.title}</span>
+                    <span className=`text-sm font-medium`}>{category.title}</span>
                   <div className="ml-6 space-y-1">
                     {category.services.map((service) => (
                         key={service.name}
@@ -482,9 +481,9 @@ export default function Footer() {
             <h3 className="text-xl font-bold text-white mb-6">Our Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div key={category.title}>
-                  <div className="flex items-center mb-4">
+                  <div className={`flex items-center mb-4`>
                     <category.icon className={`w-5 h-5 mr-2 ${category.color}`} />
-                    <h4 className="text-white font-semibold">{category.title}</h4>
+                    <h4 className=`text-white font-semibold`}>{category.title}</h4>
                       <li key={service.name}>
                           className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
                           <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />

@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import SEO from '../../components/SEO';
-import { Card } from '../../components/ui/Card';
+import { Card } from '../../components/ui/Card'
 import { Button } from '../../components/ui/Button';
-import { Badge } from '../../components/ui/Badge';
+import { Badge } from '../../components/ui/Badge'
 import { 
   Calendar, 
   ArrowRight,
@@ -15,21 +15,18 @@ import {
   Clock,
   Globe,
   Mail,
-  Smartphone;
-} from 'lucide-react';
+  Smartphone} from 'lucide-react';
 
 export default function EventManagement() {
   const features = [
     {
       icon: Users,
       title: 'Event Registration',
-      description: 'Streamlined registration process with custom forms and automated confirmations.';
-},
+      description: 'Streamlined registration process with custom forms and automated confirmations.'},
     {
       icon: Ticket,
       title: 'Ticketing System',
-      description: 'Sell tickets online with secure payment processing and digital ticket delivery.';
-},
+      description: 'Sell tickets online with secure payment processing and digital ticket delivery.'},
     {
       icon: Users,
       title: 'Attendee Management',
@@ -122,7 +119,7 @@ export default function EventManagement() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Streamline Your Events?
           </h2>
@@ -144,5 +141,4 @@ export default function EventManagement() {
         </div>
       </section>
     </>
-  );
-}
+  )}

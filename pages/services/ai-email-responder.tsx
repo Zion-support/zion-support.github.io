@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 
@@ -7,33 +7,27 @@ const AIEmailResponder: NextPage = () => {
     {
       title: 'Smart Email Classification',
       description: 'Automatically categorize emails by priority, type, and urgency using AI.',
-      icon: '📧';
-},
+      icon: '📧'},
     {
       title: 'Auto-Response Generation',
       description: 'Generate contextual, personalized responses for common inquiries.',
-      icon: '🤖';
-},
+      icon: '🤖'},
     {
       title: 'Sentiment Analysis',
       description: 'Analyze email sentiment to prioritize urgent or negative messages.',
-      icon: '😊';
-},
+      icon: '😊'},
     {
       title: 'Multi-Language Support',
       description: 'Process and respond to emails in multiple languages automatically.',
-      icon: '🌍';
-},
+      icon: '🌍'},
     {
       title: 'Integration Ready',
       description: 'Seamlessly integrate with Gmail, Outlook, and other email platforms.',
-      icon: '🔗';
-},
+      icon: '🔗'},
     {
       title: 'Learning Capabilities',
       description: 'Continuously learns from your responses to improve accuracy over time.',
-      icon: '🧠';
-}
+      icon: '🧠'}
   ]
 
   const benefits = [
@@ -58,8 +52,7 @@ const AIEmailResponder: NextPage = () => {
         'Standard integrations',
         'Basic analytics'
       ],
-      popular: false;
-},
+      popular: false},
     {
       name: 'Professional',
       price: '$199',
@@ -74,8 +67,7 @@ const AIEmailResponder: NextPage = () => {
         'Multi-language support',
         'Custom templates'
       ],
-      popular: true;
-},
+      popular: true},
     {
       name: 'Enterprise',
       price: '$499',
@@ -90,8 +82,7 @@ const AIEmailResponder: NextPage = () => {
         'Advanced reporting',
         '24/7 phone support'
       ],
-      popular: false;
-}
+      popular: false}
   ]
 
   return (
@@ -196,11 +187,11 @@ const AIEmailResponder: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className={`grid md:grid-cols-3 gap-8 max-w-6xl mx-auto`>
             {pricing.map((plan, index) => (
               <div key={index} className={`bg-white rounded-xl p-8 shadow-lg border-2 ${plan.popular ? 'border-purple-500 relative' : 'border-gray-200'}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
                     <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
@@ -223,13 +214,11 @@ const AIEmailResponder: NextPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  href="/contact" 
+                <Link href={`/contact` 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular 
-                      ? 'bg-purple-600 hover:bg-purple-700 text-white' 
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900';
-}`}
+                      ? 'bg-purple-600 hover: bg-purple-700 text-white' 
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}
                 >
                   Get Started
                 </Link>
@@ -240,13 +229,13 @@ const AIEmailResponder: NextPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+      <section className=`py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white`}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Automate Your Email Responses?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Start saving time and improving customer satisfaction with AI-powered email automation.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <div className="flex flex-col sm: flex-row justify-center gap-6">
             <Link href="/contact"><a className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors">
               Start Free Trial
             </a></Link>
@@ -257,7 +246,6 @@ const AIEmailResponder: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )};
 
 export default AIEmailResponder;

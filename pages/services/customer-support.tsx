@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 
@@ -7,33 +7,27 @@ const CustomerSupport: NextPage = () => {
     {
       title: 'Multi-Channel Support',
       description: 'Handle tickets from email, chat, phone, and social media in one unified platform.',
-      icon: '📞';
-},
+      icon: '📞'},
     {
       title: 'AI-Powered Chatbots',
       description: 'Deploy intelligent chatbots for instant customer assistance and ticket routing.',
-      icon: '🤖';
-},
+      icon: '🤖'},
     {
       title: 'Knowledge Base',
       description: 'Create and manage comprehensive knowledge bases for self-service support.',
-      icon: '📚';
-},
+      icon: '📚'},
     {
       title: 'Ticket Management',
       description: 'Organize, prioritize, and track support tickets with advanced workflow automation.',
-      icon: '🎫';
-},
+      icon: '🎫'},
     {
       title: 'Live Chat',
       description: 'Real-time chat support with file sharing, screen sharing, and co-browsing.',
-      icon: '💬';
-},
+      icon: '💬'},
     {
       title: 'Analytics & Reporting',
       description: 'Comprehensive analytics to measure performance and improve customer satisfaction.',
-      icon: '📊';
-}
+      icon: '📊'}
   ]
 
   const benefits = [
@@ -59,8 +53,7 @@ const CustomerSupport: NextPage = () => {
         'Email support',
         'Mobile app access'
       ],
-      popular: false;
-},
+      popular: false},
     {
       name: 'Professional',
       price: '$499',
@@ -75,8 +68,7 @@ const CustomerSupport: NextPage = () => {
         'Custom branding',
         'API access'
       ],
-      popular: true;
-},
+      popular: true},
     {
       name: 'Enterprise',
       price: '$1,299',
@@ -91,8 +83,7 @@ const CustomerSupport: NextPage = () => {
         '24/7 phone support',
         'SLA guarantees'
       ],
-      popular: false;
-}
+      popular: false}
   ]
 
   return (
@@ -197,11 +188,11 @@ const CustomerSupport: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className={`grid md:grid-cols-3 gap-8 max-w-6xl mx-auto`>
             {pricing.map((plan, index) => (
               <div key={index} className={`bg-white rounded-xl p-8 shadow-lg border-2 ${plan.popular ? 'border-orange-500 relative' : 'border-gray-200'}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
                     <span className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
@@ -224,13 +215,11 @@ const CustomerSupport: NextPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  href="/contact" 
+                <Link href={`/contact` 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular 
-                      ? 'bg-orange-600 hover:bg-orange-700 text-white' 
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900';
-}`}
+                      ? 'bg-orange-600 hover: bg-orange-700 text-white' 
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}
                 >
                   Get Started
                 </Link>
@@ -241,13 +230,13 @@ const CustomerSupport: NextPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
+      <section className=`py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white`}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Customer Support?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Start delivering exceptional customer experiences with our comprehensive support platform.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <div className="flex flex-col sm: flex-row justify-center gap-6">
             <Link href="/contact"><a className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors">
               Start Free Trial
             </a></Link>
@@ -258,7 +247,6 @@ const CustomerSupport: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )};
 
 export default CustomerSupport;

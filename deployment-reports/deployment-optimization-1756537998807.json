@@ -5,8 +5,7 @@
     "averageBuildTime": 0,
     "latestBundleSize": 0,
     "deploymentFrequency": 0,
-    "successRate": 0;
-},
+    "successRate": 0},
   "metrics": {
     "buildTimes": [],
     "bundleSizes": [],

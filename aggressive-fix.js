@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
+import fs from 'fs'
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -15,22 +15,21 @@ function createValidReactComponent(filePath) {
     .join('')
     .replace(/[^a-zA-Z0-9]/g, '');
 
-  return `import React from 'react';
+  return `import React from 'react'
 import { SEO } from '@/components/SEO';
 
 export default function ${componentName}() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <SEO 
-        title="${componentName} - Zion Technologies"
-        description="Professional ${componentName} services by Zion Technologies"
+      <SEO title=`${componentName} - Zion Technologies`
+        description=`Professional ${componentName} services by Zion Technologies`
       />
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">
+          <h1 className={`text-4xl font-bold text-white mb-8`>
             ${componentName}
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className=`text-xl text-gray-300 max-w-3xl mx-auto`}>
             Professional ${componentName} services delivered with cutting-edge technology and expertise.
           </p>
         </div>
@@ -67,14 +66,11 @@ function fixFile(filePath) {
       
       const newContent = createValidReactComponent(filePath);
       fs.writeFileSync(filePath, newContent);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 function processDirectory(dirPath) {
@@ -99,9 +95,8 @@ function processDirectory(dirPath) {
     console.error(`Error processing directory ${dirPath}:`, error.message);
   }
   
-  return fixedCount;
-}
+  return fixedCount}
 
 console.log('Starting aggressive fix...');
 const fixedCount = processDirectory(path.join(__dirname, 'src'));
-console.log(`Fixed ${fixedCount} files`);
+console.log(``Fixed ${fixedCount} files``);

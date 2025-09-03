@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import Navigation from '../../src/components/Navigation';
-import Footer from '../../src/components/Footer';
+import Footer from '../../src/components/Footer'
 import { Cloud, Server, GitBranch, Zap, CheckCircle, ArrowRight, Users, Globe, Database, Network, Phone, Mail, Settings, Monitor } from 'lucide-react';
 
 const CloudDevOps = () => {
@@ -61,33 +61,27 @@ const CloudDevOps = () => {
     {
       name: 'AWS',
       description: 'Amazon Web Services cloud platform',
-      icon: Cloud;
-},
+      icon: Cloud},
     {
       name: 'Azure',
       description: 'Microsoft Azure cloud services',
-      icon: Cloud;
-},
+      icon: Cloud},
     {
       name: 'Docker',
       description: 'Containerization platform',
-      icon: Server;
-},
+      icon: Server},
     {
       name: 'Kubernetes',
       description: 'Container orchestration',
-      icon: Settings;
-},
+      icon: Settings},
     {
       name: 'Terraform',
       description: 'Infrastructure as Code',
-      icon: GitBranch;
-},
+      icon: GitBranch},
     {
       name: 'Jenkins',
       description: 'CI/CD automation',
-      icon: Zap;
-}
+      icon: Zap}
   ]
 
   const stats = [
@@ -285,7 +279,7 @@ const CloudDevOps = () => {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Transform Your Infrastructure?
             </h2>
@@ -306,7 +300,6 @@ const CloudDevOps = () => {
       
       <Footer />
     </>
-  );
-};
+  )};
 
 export default CloudDevOps;

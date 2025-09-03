@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import { ShoppingCart, Star, Users, TrendingUp, CheckCircle, ArrowRight, Search, Filter, Heart, Download } from 'lucide-react';
+import { ShoppingCart, Star, Users, TrendingUp, CheckCircle, ArrowRight, Search, Filter, Heart, Download } from 'lucide-react'
 import SimpleNavigation from '../src/components/SimpleNavigation';
 import { SimpleFooter } from '../src/components/SimpleFooter';
 
@@ -29,26 +29,22 @@ export default function Marketplace() {
       name: 'AI Solutions',
       count: '25+ Products',
       description: 'Ready-to-use AI models, APIs, and automation tools',
-      icon: '🤖';
-},
+      icon: '🤖'},
     {
       name: 'SaaS Tools',
       count: '40+ Products',
       description: 'Software-as-a-Service solutions for business growth',
-      icon: '💻';
-},
+      icon: '💻'},
     {
       name: 'IT Services',
       count: '30+ Services',
       description: 'Infrastructure, security, and technical support',
-      icon: '🔧';
-},
+      icon: '🔧'},
     {
       name: 'Templates',
       count: '50+ Templates',
       description: 'Website templates, UI kits, and design resources',
-      icon: '🎨';
-}
+      icon: '🎨'}
   ]
 
   const featuredProducts = [
@@ -296,7 +292,7 @@ export default function Marketplace() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 sm:py-24 bg-gradient-to-br from-indigo-600 to-purple-600">
+        <section className="py-16 sm: py-24 bg-gradient-to-br from-indigo-600 to-purple-600">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-3xl font-bold text-white mb-6">
@@ -327,5 +323,4 @@ export default function Marketplace() {
 
       <SimpleFooter />
     </>
-  );
-}
+  )}

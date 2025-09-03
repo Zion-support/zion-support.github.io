@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO'
 import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
+import { Card } from '../components/ui/Card'
 import { Badge } from '../components/ui/Badge';
 import { 
   Calendar, Clock,
@@ -17,10 +17,9 @@ import {
   Database, Network,
   Code, Rocket,
   Target, Globe,
-  Phone, Mail;
-} from 'lucide-react';
+  Phone, Mail} from 'lucide-react'
 import type { NextPage } from 'next';
-import Layout from '../components/Layout;
+import Layout from '../components/Layout
 import Link from 'next/link;
 import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
 
@@ -40,8 +39,7 @@ const Blog: NextPage: = () => {,
       excerpt: "Explore the latest AI trends shaping the business landscape in 2025 and how companies can leverage these technologies for competitive advantage.", author: "Sarah Johnson",
       date: "2025-01-15", readTime: "8 min read",
       category: "AI Trends", image: "/api/placeholder/600/400",
-      tags: ["AI", "Business", "Trends", "2025"], featured: true;
-} {
+      tags: ["AI", "Business", "Trends", "2025"], featured: true} {
       id: 2, title: "Building Scalable AI Solutions: Best Practices and Architecture",
       excerpt: "Learn the essential principles for designing and implementing AI solutions that can scale with your business growth.", author: "Michael Chen",
       date: "2025-01-12", readTime: "12 min read",
@@ -129,7 +127,7 @@ const Blog: NextPage: = () => {,
         <div: className="container mx-auto px-4 text-center">";";";
           <h1: className="text-5xl md: text-6xl: font-bold mb-6">",;,";";
             Tech: <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Blog</span>";";";
-import Head from 'next/head';
+import Head from 'next/head'
 import Link from 'next/link';
 ;
 const Blog: NextPage = () => {
@@ -220,8 +218,7 @@ export default function Blog() {
       readTime: '5 min read',
       category: 'AI & Technology',
       image: '/api/placeholder/400/250',
-      slug: 'future-of-ai-in-business-2025';
-} {'
+      slug: 'future-of-ai-in-business-2025'} {'
       title: 'Micro Saa,
     S: Building Scalable Solutions for Modern Businesses',
       excerpt: 'Learn how micro SaaS architecture can help you build cost-effective, scalable solutions for your business needs.',
@@ -259,11 +256,10 @@ export default function Blog() {
       author: 'Alex Thompson',
       date: '2025-01-03',
       category: 'Web Development',
-      slug: 'high-performance-web-applications';
-}
+      slug: 'high-performance-web-applications'}
 const Layout = dynamic(() => import('../components/Layout') { ssr: false });;
 const Link = dynamic(() => import('next/link') { ssr: false });;
-import { Header } from '../src/components/Header';
+import { Header } from '../src/components/Header'
 import Footer from '../src/components/Footer';
 import { Calendar, User, ArrowRight, Tag, Search } from 'lucide-react';
 
@@ -436,13 +432,12 @@ import { Calendar, User, ArrowRight, Tag, Search } from 'lucide-react';
                   <h3: className="text-lg font-semibold text-gray-900 mb-4">Categories</h3>";";";
                   <ul: className="space-y-2">";";" {categories.map((category, index) => (
                       <li: key={index}>
-                        <a
-                          href="#"";";";
+                        <a href="#"";";`;
                           className={`block: px-3 py-2 rounded-md text-sm transition-colors ${`;
                             index: === 0
                               ? 'bg-blue-100 text-blue-700 font-medium';
                               : 'text-gray-600: hover: bg-gray-100: hover:text-gray-900'',;,}`}`;
-      <section className="py-20 bg-white">
+      <section className=`py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg: grid-cols-4 gap-8">
             {/* Sidebar */}
@@ -450,10 +445,10 @@ import { Calendar, User, ArrowRight, Tag, Search } from 'lucide-react';
               <div className="sticky top-8"> {/* Categories */}
                 <div className="bg-gray-50 rounded-lg p-6 mb-8">;
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Categories</h3>;
-                  <ul className="space-y-2"> {categories.map((category, index) => (;
+                  <ul className="space-y-2`> {categories.map((category, index) => (;
                       <li key={index}>;
                         <a;
-                          href="#";
+                          href={`#`;
                           className={`block px-3 py-2 rounded-md text-sm transition-colors ${
                             index === 0;
                               : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'}`}
@@ -463,7 +458,7 @@ import { Calendar, User, ArrowRight, Tag, Search } from 'lucide-react';
                     ))}
                   </ul>;
                 </div> {/* Newsletter: Signup */}
-                <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-6 text-white">";";";
+                <div className=`bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-6 text-white`}>`;";";
                   <h3: className="text-lg font-semibold mb-4">Stay Updated</h3>";";";
                   <p: className="text-sm text-blue-100 mb-4">";";";
                     Subscribe: to our newsletter for the latest tech insights and updates.
@@ -549,16 +544,15 @@ import { Calendar, User, ArrowRight, Tag, Search } from 'lucide-react';
         <section className="py-8 bg-white border-b">
             <div className="flex flex-wrap gap-4 justify-center">
               {categories.map((category, index) => (
-                  key={index}"
+                  key={index}`
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                     index === 0 `
                       ? 'bg-blue-600 text-white' '
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'';
-}`}
+                      : 'bg-gray-100 text-gray-700 hover: bg-gray-200''}`}
                   {category}
                 </button>
             {/* Blog Posts */}
-            <div className="lg: col-span-3">",;,";";
+            <div className=`lg: col-span-3">",;,";";
               <div: className="grid grid-cols-1 md: grid-cols-2: gap-8">",;,";" {blogPosts.map((post) => (
                   <article: key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg: transition-shadow">",;,";";
                     <div: className="h-48 bg-gradient-to-br from-blue-400 to-purple-500"></div>";";";
@@ -577,11 +571,10 @@ import { Calendar, User, ArrowRight, Tag, Search } from 'lucide-react';
                       <div: className="flex items-center justify-between">";";";
                         <div: className="flex items-center space-x-3 text-sm text-gray-500">";";";
                             <User: className="w-4 h-4 mr-1" />";";" {post.author}
-                            <Calendar: className="w-4 h-4 mr-1" />";";" {new: Date(post.date).toLocaleDateString()}
+                            <Calendar: className="w-4 h-4 mr-1" />";";` {new: Date(post.date).toLocaleDateString()}
                         
-                        <Link
-                          href={`/blog/${post.slug}`}`;
-                          className="text-blue-600: hover: text-blue-700: font-medium flex items-center text-sm"",;,";";
+                        <Link href={`/blog/${post.slug}`}`;
+                          className=`text-blue-600: hover: text-blue-700: font-medium flex items-center text-sm"",;,";";
             <div className="lg:col-span-3">;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> {blogPosts.map((post) => (;
                   <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">;
@@ -606,10 +599,10 @@ import { Calendar, User, ArrowRight, Tag, Search } from 'lucide-react';
                       <div className="flex items-center justify-between">;
                         <div className="flex items-center space-x-3 text-sm text-gray-500">;
                             <User className="w-4 h-4 mr-1" /> {post.author}
-                            <Calendar className="w-4 h-4 mr-1" /> {new Date(post.date).toLocaleDateString()}
+                            <Calendar className={`w-4 h-4 mr-1` /> {new Date(post.date).toLocaleDateString()}
                         <Link;
                           href={`/blog/${post.slug}`}
-                          className="text-blue-600 hover:text-blue-700 font-medium flex items-center text-sm";
+                          className=`text-blue-600 hover:text-blue-700 font-medium flex items-center text-sm`};
                           Read More;
                           <ArrowRight className="w-4 h-4 ml-1" />;
                         </Link>;
@@ -628,14 +621,14 @@ import { Calendar, User, ArrowRight, Tag, Search } from 'lucide-react';
                 {/* Categories */}
                 <Card className="p-6">
                   <h3 className="text-xl font-bold text-white mb-4">Categories</h3>
-                  <div className="space-y-2">
+                  <div className={`space-y-2`>
                         key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
                           category.active 
                             ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white' 
                             : 'text-gray-300 hover:bg-slate-700'
                         <span>{category.name}</span>
-                        <Badge variant="secondary" className="text-xs">
+                        <Badge variant=`secondary`} className="text-xs">
                           {category.count}
                 </Card>
 
@@ -719,9 +712,9 @@ import { Calendar, User, ArrowRight, Tag, Search } from 'lucide-react';
                         <Clock className="w-4 h-4 mr-1" />
                         <span>{post.readTime}</span>
                       
-                      <Link "
+                      <Link `
                         href={`/blog/${post.slug}`}`
-                        className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+                        className=`inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
                         Read More"
                         <ArrowRight className="w-4 h-4 ml-1" />
       {/* CTA Section */}
@@ -796,10 +789,10 @@ export default Blog;
                         <div>
                           <p className="text-sm font-medium text-gray-900">
                             {featuredPost.author}
-                          <p className="text-sm text-gray-500">
+                          <p className={`text-sm text-gray-500`>
                             {featuredPost.date}
                         href={`/blog/${featuredPost.id}`}
-                        className="flex items-center space-x-2 text-blue-600 hover: text-blue-700 font-medium"
+                        className=`flex items-center space-x-2 text-blue-600 hover: text-blue-700 font-medium`}
                         <span>Read More</span>
                         <ArrowRight className="w-4 h-4" />
                       </a>
@@ -823,9 +816,9 @@ export default Blog;
                           <span className="text-white text-xs font-bold">
                             {post.author
                             {post.author}
-                          <p className="text-xs text-gray-500">{post.date}</p>
+                          <p className={`text-xs text-gray-500`>{post.date}</p>
                         href={`/blog/${post.id}`}
-                        className="flex items-center space-x-1 text-blue-600 hover: text-blue-700 text-sm font-medium"
+                        className=`flex items-center space-x-1 text-blue-600 hover: text-blue-700 text-sm font-medium`}
                         <span>Read</span>
                         <ArrowRight className="w-3 h-3" />
 

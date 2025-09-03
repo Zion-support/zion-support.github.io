@@ -36,12 +36,6 @@ export interface NextGenAIService2026 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   // AI Creative Studio Platform
   {
@@ -302,4 +296,4 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     customers: 120,
     rating: 4.9,
     reviews: 80
-];}}
+]}}

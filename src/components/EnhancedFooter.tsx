@@ -1,8 +1,12 @@
-import React from 'react'; import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion'; import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users  } from 'lucide-react'; const EnhancedFooter: React.FC = () => { const currentYear = new Date().getFullYear(); const footerSections = [{ title: 'Services', links: [ { name: 'AI Solutions', href: '/services/ai-services' } { name: 'IT & Security', href: '/services/it-services' } { name: 'Blockchain & Web3', href: '/services/blockchain-services' } { name: 'Sustainability', href: '/services/sustainability' } { name: 'Healthcare Tech', href: '/services/healthcare-tech' } { name: 'Edge Computing', href: '/services/edge-computing' } ] } { title: 'Solutions', links: [{ name: 'Enterprise', href: '/solutions/enterprise' } { name: 'Startups', href: '/solutions/startups' } { name: 'Healthcare', href: '/solutions/healthcare' } { name: 'Financial Services', href: '/solutions/financial' } { name: 'Manufacturing', href: '/solutions/manufacturing' } { name: 'Education', href: '/solutions/education' } ] } { title: 'Company', links: [{ name: 'About Us', href: '/about' } { name: 'Our Team', href: '/about/team' } { name: 'Careers', href: '/careers' } { name: 'Partners', href: '/partners' } { name: 'Press', href: '/press' } { name: 'Case Studies', href: '/case-studies' } ] } { title: 'Resources', links: [{ name: 'Blog', href: '/blog' } { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api' } { name: 'Developer Tools', href: '/developer' } { name: 'Training', href: '/training' } { name: 'Support', href: '/support' } ] } ]; const socialLinks = [ { name: 'LinkedIn', href: 'https:
+import React from 'react'
+import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion'
+import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users  } from 'lucide-react'; const EnhancedFooter: React.FC = () => { const currentYear = new Date().getFullYear(); const footerSections = [{ title: 'Services', links: [ { name: 'AI Solutions', href: '/services/ai-services' } { name: 'IT & Security', href: '/services/it-services' } { name: 'Blockchain & Web3', href: '/services/blockchain-services' } { name: 'Sustainability', href: '/services/sustainability' } { name: 'Healthcare Tech', href: '/services/healthcare-tech' } { name: 'Edge Computing', href: '/services/edge-computing' } ] } { title: 'Solutions', links: [{ name: 'Enterprise', href: '/solutions/enterprise' } { name: 'Startups', href: '/solutions/startups' } { name: 'Healthcare', href: '/solutions/healthcare' } { name: 'Financial Services', href: '/solutions/financial' } { name: 'Manufacturing', href: '/solutions/manufacturing' } { name: 'Education', href: '/solutions/education' } ] } { title: 'Company', links: [{ name: 'About Us', href: '/about' } { name: 'Our Team', href: '/about/team' } { name: 'Careers', href: '/careers' } { name: 'Partners', href: '/partners' } { name: 'Press', href: '/press' } { name: 'Case Studies', href: '/case-studies' } ] } { title: 'Resources', links: [{ name: 'Blog', href: '/blog' } { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api' } { name: 'Developer Tools', href: '/developer' } { name: 'Training', href: '/training' } { name: 'Support', href: '/support' } ] } ]; const socialLinks = [ { name: 'LinkedIn', href: 'https:
 import React from,
-  react'; import { Link } from
+  react'
+import { Link } from
   'react-router-dom'; import { motion } from
-  'framer-motion'; import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users } from
+  'framer-motion'
+import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Github, ArrowRight, Heart, Shield, Zap, Users } from
   'lucide-react'; const EnhancedFooter: React.FC = () => { const currentYear = new Date().getFullYear(); const footerSections = [ { title:
   'Services, links: [ { name:,
   AI Solutions', href: '/services/ai-services } { name:,
@@ -82,7 +86,7 @@ export const EnhancedFooter: React.FC = () => {
 import { Link } from 'react-router-dom';';
 import { motion } from 'framer-motion';';
 import {
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion';
   Phone,;
   Mail,;
@@ -125,10 +129,10 @@ export default function EnhancedFooter() {return (
       <SEO title="EnhancedFooter - Zion Tech Group" description="Professional EnhancedFooter services by Zion Tech Group" />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">EnhancedFooter</h1>
-        <p className="text-gray-300 text-lg">
+        <p className={`text-gray-300 text-lg`>
           Professional EnhancedFooter services to help your business grow.
   )}
-import { Link } from &apos;
+import { Link } from &apos
 import Link from &apos;next/link';react-router-dom';
 import { motion } from &apos;framer-motion';
   Phone,
@@ -227,17 +231,17 @@ export: function EnhancedFooter() {
 export function EnhancedFooter() {}
   const footerSections = [
     {
-      title: &apos;Featured Services&apos;,
-      links: [{ nam,e: &apos;AI Content Generator&apos;, href: &apos;/services/ai-content-generator&apos;, icon: PenTool, featured: true } { name: &apos;Smart Inventory Management&apos;, href: &apos;/services/smart-inventory-management&apos;, icon: Database, featured: true } { name: &apos;Cloud Migration Services&apos;, href: &apos;/services/cloud-migration-services&apos;, icon: Cloud, featured: true } { name: &apos;AI Project Management&apos;, href: &apos;/services/ai-project-management&apos;, icon: Brain, featured: true } { name: &apos;AI Customer Support&apos;, href: &apos;/services/ai-customer-support-automation&apos;, icon: MessageCircle, featured: true }
-      title: &apos;Core Services&apos;,
-        { nam,e: &apos;Micro SAAS Solutions&apos;, href: &apos;/services/micro-saas-solutions&apos;, icon: Code } { name: &apos;AI Services&apos;, href: &apos;/ai-services&apos;, icon: Brain } { name: &apos;IT Infrastructure&apos;, href: &apos;/it-services&apos;, icon: Server } { name: &apos;Quantum Computing&apos;, href: &apos;/services/quantum-computing&apos;, icon: Atom } { name: &apos;Blockchain Solutions&apos;, href: &apos;/services/blockchain-enterprise-solutions&apos;, icon: Shield } { name: &apos;2025 Innovative Services&apos;, href: &apos;/zion-innovative-services-2025&apos;, icon: Star } { name: &apos;2025 Services Showcase&apos;, href: &apos;/innovative-services-showcase-2025&apos;, icon: Star }
-      title: &apos;Solutions&apos;,
-        { nam,e: &apos;Enterprise Solutions&apos;, href: &apos;/solutions/enterprise&apos;, icon: Building } { name: &apos;Healthcare Solutions&apos;, href: &apos;/solutions/healthcare&apos;, icon: Users } { name: &apos;Financial Solutions&apos;, href: &apos;/solutions/financial&apos;, icon: TrendingUp } { name: &apos;Manufacturing Solutions&apos;, href: &apos;/solutions/manufacturing&apos;, icon: Server } { name: &apos;Retail Solutions&apos;, href: &apos;/solutions/retail&apos;, icon: ShoppingCart } { name: &apos;Space Technology&apos;, href: &apos;/solutions/space-tech&apos;, icon: Network }
-      title: &apos;Company&apos;,
-        { nam,e: &apos;About Us&apos;, href: &apos;/about&apos;, icon: Users } { name: &apos;Our Team&apos;, href: &apos;/team&apos;, icon: Award } { name: &apos;Careers&apos;, href: &apos;/careers&apos;, icon: Users } { name: &apos;News & Press&apos;, href: &apos;/press&apos;, icon: BookOpen } { name: &apos;Case Studies&apos;, href: &apos;/case-studies&apos;, icon: BarChart3 } { name: &apos;Partners&apos;, href: &apos;/partners&apos;, icon: Handshake }
-      title: &apos;Resources&apos;,
-        { nam,e: &apos;Blog&apos;, href: &apos;/blog&apos;, icon: BookOpen } { name: &apos;Documentation&apos;, href: &apos;/documentation&apos;, icon: FileText } { name: &apos;Help Center&apos;, href: &apos;/help&apos;, icon: HelpCircle } { name: &apos;Webinars&apos;, href: &apos;/webinars&apos;, icon: Video } { name: &apos;White Papers&apos;, href: &apos;/white-papers&apos;, icon: FileText } { name: &apos;Training&apos;, href: &apos;/training&apos;, icon: GraduationCap }
-import Link from 'next/link';""
+      title: &apos;Featured Services&apos,
+      links: [{ nam,e: &apos;AI Content Generator&apos, href: &apos;/services/ai-content-generator&apos, icon: PenTool, featured: true } { name: &apos;Smart Inventory Management&apos, href: &apos;/services/smart-inventory-management&apos, icon: Database, featured: true } { name: &apos;Cloud Migration Services&apos, href: &apos;/services/cloud-migration-services&apos, icon: Cloud, featured: true } { name: &apos;AI Project Management&apos, href: &apos;/services/ai-project-management&apos, icon: Brain, featured: true } { name: &apos;AI Customer Support&apos, href: &apos;/services/ai-customer-support-automation&apos, icon: MessageCircle, featured: true }
+      title: &apos;Core Services&apos,
+        { nam,e: &apos;Micro SAAS Solutions&apos, href: &apos;/services/micro-saas-solutions&apos, icon: Code } { name: &apos;AI Services&apos, href: &apos;/ai-services&apos, icon: Brain } { name: &apos;IT Infrastructure&apos, href: &apos;/it-services&apos, icon: Server } { name: &apos;Quantum Computing&apos, href: &apos;/services/quantum-computing&apos, icon: Atom } { name: &apos;Blockchain Solutions&apos, href: &apos;/services/blockchain-enterprise-solutions&apos, icon: Shield } { name: &apos;2025 Innovative Services&apos, href: &apos;/zion-innovative-services-2025&apos, icon: Star } { name: &apos;2025 Services Showcase&apos, href: &apos;/innovative-services-showcase-2025&apos, icon: Star }
+      title: &apos;Solutions&apos,
+        { nam,e: &apos;Enterprise Solutions&apos, href: &apos;/solutions/enterprise&apos, icon: Building } { name: &apos;Healthcare Solutions&apos, href: &apos;/solutions/healthcare&apos, icon: Users } { name: &apos;Financial Solutions&apos, href: &apos;/solutions/financial&apos, icon: TrendingUp } { name: &apos;Manufacturing Solutions&apos, href: &apos;/solutions/manufacturing&apos, icon: Server } { name: &apos;Retail Solutions&apos, href: &apos;/solutions/retail&apos, icon: ShoppingCart } { name: &apos;Space Technology&apos, href: &apos;/solutions/space-tech&apos, icon: Network }
+      title: &apos;Company&apos,
+        { nam,e: &apos;About Us&apos, href: &apos;/about&apos, icon: Users } { name: &apos;Our Team&apos, href: &apos;/team&apos, icon: Award } { name: &apos;Careers&apos, href: &apos;/careers&apos, icon: Users } { name: &apos;News & Press&apos, href: &apos;/press&apos, icon: BookOpen } { name: &apos;Case Studies&apos, href: &apos;/case-studies&apos, icon: BarChart3 } { name: &apos;Partners&apos, href: &apos;/partners&apos, icon: Handshake }
+      title: &apos;Resources&apos,
+        { nam,e: &apos;Blog&apos, href: &apos;/blog&apos, icon: BookOpen } { name: &apos;Documentation&apos, href: &apos;/documentation&apos, icon: FileText } { name: &apos;Help Center&apos, href: &apos;/help&apos, icon: HelpCircle } { name: &apos;Webinars&apos, href: &apos;/webinars&apos, icon: Video } { name: &apos;White Papers&apos, href: &apos;/white-papers&apos, icon: FileText } { name: &apos;Training&apos, href: &apos;/training&apos, icon: GraduationCap }
+import Link from 'next/link';``}
 import Link from 'next/link
   Phone, Mail,
   MapPin, Linkedin,
@@ -257,7 +261,7 @@ import Link from 'next/link
   Video, GraduationCap,
   Atom, PenTool,;""
   DollarSign} from 'lucide-react';
-""
+"`
   Atom, PenTool,
 export function EnhancedFooter() {
       title: 'Featured Services',;
@@ -284,9 +288,9 @@ export function EnhancedFooter() {
         { name: 'Blog', href: '/blog', icon: BookOpen } { name: 'Documentation', href: '/documentation', icon: FileText } { name: 'Help Center', href: '/help', icon: HelpCircle } { name: 'Webinars', href: '/webinars', icon: Video } { name: 'White Papers', href: '/white-papers', icon: FileText } { name: 'Training', href: '/training', icon: GraduationCap }
   ]&apos;
   const socialLinks = [
-    { name: &apos;LinkedIn&apos;, href: &apos;http,s://linkedin.com/company/ziontechgroup&apos;, icon: Linkedin, color: &apos;hove,r:text-blue-400&apos} { name: &apos;Twitter&apos;, href: &apos;http,s://twitter.com/ziontechgroup&apos;, icon: Twitter, color: &apos;hove,r:text-blue-400&apos} { name: &apos;Facebook&apos;, href: &apos;http,s://facebook.com/ziontechgroup&apos;, icon: Facebook, color: &apos;hove,r:text-blue-600&apos} { name: &apos;Instagram&apos;, href: &apos;http,s://instagram.com/ziontechgroup&apos;, icon: Instagram, color: &apos;hove,r:text-pink-400&apos} { name: &apos;GitHub&apos;, href: &apos;http,s://github.com/ziontechgroup&apos;, icon: Github, color: &apos;hove,r:text-gray-400&apos} { name: &apos;YouTube&apos;, href: &apos;http,s://youtube.com/@ziontechgroup&apos;, icon: Youtube, color: &apos;hove,r:text-red-400&apos}
+    { name: &apos;LinkedIn&apos, href: &apos;http,s: //linkedin.com/company/ziontechgroup&apos, icon: Linkedin, color: &apos;hove,r:text-blue-400&apos} { name: &apos;Twitter&apos, href: &apos;http,s: //twitter.com/ziontechgroup&apos, icon: Twitter, color: &apos;hove,r:text-blue-400&apos} { name: &apos;Facebook&apos, href: &apos;http,s: //facebook.com/ziontechgroup&apos, icon: Facebook, color: &apos;hove,r:text-blue-600&apos} { name: &apos;Instagram&apos, href: &apos;http,s: //instagram.com/ziontechgroup&apos, icon: Instagram, color: &apos;hove,r:text-pink-400&apos} { name: &apos;GitHub&apos, href: &apos;http,s: //github.com/ziontechgroup&apos, icon: Github, color: &apos;hove,r:text-gray-400&apos} { name: &apos;YouTube&apos, href: &apos;http,s: //youtube.com/@ziontechgroup&apos, icon: Youtube, color: &apos;hove,r:text-red-400&apos}
   const quickLinks = [
-    { name: &apos;Contact Us&apos;, href: &apos;/contact&apos;, icon: MessageCircle } { name: &apos;Request Quote&apos;, href: &apos;/request-quote&apos;, icon: DollarSign } { name: &apos;Support&apos;, href: &apos;/help&apos;, icon: HelpCircle } { name: &apos;Privacy Policy&apos;, href: &apos;/privacy&apos;, icon: Shield } { name: &apos;Terms of Service&apos;, href: &apos;/terms&apos;, icon: FileText } { name: &apos;Cookie Policy&apos;, href: &apos;/cookies&apos;, icon: Shield }
+    { name: &apos;Contact Us&apos, href: &apos;/contact&apos, icon: MessageCircle } { name: &apos;Request Quote&apos, href: &apos;/request-quote&apos, icon: DollarSign } { name: &apos;Support&apos, href: &apos;/help&apos, icon: HelpCircle } { name: &apos;Privacy Policy&apos, href: &apos;/privacy&apos, icon: Shield } { name: &apos;Terms of Service&apos, href: &apos;/terms&apos, icon: FileText } { name: &apos;Cookie Policy&apos, href: &apos;/cookies&apos, icon: Shield }
   return(&apos;
     <footer className=&apos;bg-zinc-900 border-t border-white/20&apos;>
       {/* Main Footer Content */}&apos;
@@ -350,8 +354,7 @@ export function EnhancedFooter() {
               <h4 className=&apos;text-white font-semibold mb-3&apos;>Follow Us&apos;</h4>
               <div className=&apos;flex space-x-4&apos;>
                 {socialLinks.map((social) => (&apos}
-                  <a
-                    key={social.name}
+                  <a key={social.name}
                     target='_blank'
                     rel='noopener noreferrer'
                     target=&apos;_blank';
@@ -570,5 +573,5 @@ export function EnhancedFooter() {
       </motion.div>
     </footer>
   )};
-  Atom, PenTool,;"
+  Atom, PenTool,;`
   DollarSign} from 'lucide-react

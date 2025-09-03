@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { Helmet } from 'react-helmet-async';
 import { 
   PenTool, 
@@ -21,8 +21,7 @@ import {
   FileText,
   Image,
   Video,
-  Mic;
-} from 'lucide-react';
+  Mic} from 'lucide-react';
 
 const AIContentCreationTools: React.FC = () => {
   const features = [
@@ -54,31 +53,26 @@ const AIContentCreationTools: React.FC = () => {
     {
       icon: Shield,
       title: "Brand Consistency",
-      description: "Maintain consistent brand voice and style across all content with AI-powered brand guidelines enforcement.";
-}
+      description: "Maintain consistent brand voice and style across all content with AI-powered brand guidelines enforcement."}
   ]
 
   const contentTypes = [
     {
       title: "Blog Posts & Articles",
       description: "Generate comprehensive blog posts, articles, and long-form content with proper structure and SEO optimization.",
-      icon: FileText;
-},
+      icon: FileText},
     {
       title: "Social Media Content",
       description: "Create engaging posts, captions, and stories for all major social media platforms with trending hashtags.",
-      icon: Share2;
-},
+      icon: Share2},
     {
       title: "Marketing Materials",
       description: "Produce sales copy, email campaigns, landing pages, and promotional content that converts.",
-      icon: Target;
-},
+      icon: Target},
     {
       title: "Video Scripts",
       description: "Write compelling video scripts for YouTube, TikTok, Instagram, and other video platforms.",
-      icon: Video;
-}
+      icon: Video}
   ]
 
   const benefits = [
@@ -117,8 +111,7 @@ const AIContentCreationTools: React.FC = () => {
         "Priority support",
         "Brand voice training"
       ],
-      popular: true;
-},
+      popular: true},
     {
       name: "Enterprise",
       price: "$125",
@@ -313,11 +306,11 @@ const AIContentCreationTools: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-8`>
               {pricing.map((plan, index) => (
                 <div key={index} className={`relative p-8 rounded-xl border-2 ${plan.popular ? 'border-purple-500 bg-purple-50' : 'border-gray-200 bg-white'} hover:shadow-lg transition-shadow`}>
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
                       <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                         Most Popular
                       </span>
@@ -339,13 +332,11 @@ const AIContentCreationTools: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <a 
-                    href="https://ziontechgroup.com/contact" 
+                  <a href={`https: //ziontechgroup.com/contact` 
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                       plan.popular 
                         ? 'bg-purple-600 text-white hover:bg-purple-700' 
-                        : 'bg-gray-900 text-white hover:bg-gray-800';
-}`}
+                        : 'bg-gray-900 text-white hover:bg-gray-800'}`}
                   >
                     Get Started
                   </a>
@@ -356,7 +347,7 @@ const AIContentCreationTools: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-purple-600">
+        <section className=`py-20 px-4 sm: px-6 lg:px-8 bg-purple-600`}>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Content Strategy?
@@ -387,7 +378,6 @@ const AIContentCreationTools: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default AIContentCreationTools;

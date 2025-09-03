@@ -7,12 +7,5 @@ describe('ComprehensiveServicesShowcase2025Enhanced', () => {}; '; it('renders w
     render(<ComprehensiveServicesShowcase2025Enhanced /" >);
     // Add more specific tests here, });, });
 "
-<<<<<<< HEAD
-    render(<ComprehensiveServicesShowcase2025Enhanced /" >)
-    // Add more specific tests here;
-=======
-describe('ComprehensiveServicesShowcase2025Enhanced', () => {}' it('renders without crashing', () => {} render(<ComprehensiveServicesShowcase2025Enhanced />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<ComprehensiveServicesShowcase2025Enhanced />) '
-    // Add more specific tests here
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 });
 '

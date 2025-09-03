@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { SEO } from '../components/SEO';
 
 const Terms: React.FC = () => {
@@ -33,7 +33,7 @@ const Terms: React.FC = () => {,"});,"})
     </>;,"});,"})
   );,"});,"});
 };,"});,"})
-export default Terms;,"});,"})
+export default Terms,"});,"})
 import { SEO } from '../components/SEO';';
 
 export: default function Page() {

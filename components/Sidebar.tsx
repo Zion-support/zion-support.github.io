@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 import {
   Home,
   Briefcase,
@@ -38,8 +38,7 @@ import {
 
 interface SidebarProps {
   isOpen: boolean;
-  onClose: () => void;
-}
+  onClose: () => void}
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const router = useRouter();
@@ -161,19 +160,17 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         </button>
 
         {isExpanded && (
-          <div className="ml-4 space-y-1">
+          <div className={`ml-4 space-y-1`>
             {items.map((item, index) => (
-              <Link
-                key={index}
+              <Link key={index}
                 href={item.href}
                 onClick={onClose}
                 className={`flex items-center space-x-3 py-2 px-3 rounded-lg transition-colors ${
                   router.pathname === item.href
                     ? 'bg-blue-100 text-blue-600'
-                    : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50';
-}`}
+                    : 'text-gray-600 hover: text-blue-600 hover:bg-gray-50'}`}
               >
-                <item.icon className="w-4 h-4" />
+                <item.icon className=`w-4 h-4`} />
                 <span className="text-sm">{item.name}</span>
               </Link>
             ))}
@@ -231,19 +228,17 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
               Main
             </h3>
-            <div className="space-y-1">
+            <div className={`space-y-1`>
               {mainNavigation.map((item, index) => (
-                <Link
-                  key={index}
+                <Link key={index}
                   href={item.href}
                   onClick={onClose}
                   className={`flex items-center space-x-3 py-2 px-3 rounded-lg transition-colors ${
                     router.pathname === item.href
                       ? 'bg-blue-100 text-blue-600'
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50';
-}`}
+                      : 'text-gray-600 hover: text-blue-600 hover:bg-gray-50'}`}
                 >
-                  <item.icon className="w-4 h-4" />
+                  <item.icon className=`w-4 h-4`} />
                   <span className="text-sm">{item.name}</span>
                 </Link>
               ))}
@@ -314,5 +309,4 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         </div>
       </div>
     </>
-  );
-}
+  )}

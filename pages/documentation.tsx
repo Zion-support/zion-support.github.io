@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout'
 import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
@@ -245,7 +245,6 @@ const Documentation: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )};
 
 export default Documentation;

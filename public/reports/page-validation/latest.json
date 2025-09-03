@@ -6,8 +6,7 @@
     "totalIssues": 0,
     "totalWarnings": 4,
     "buildBreakingFiles": 0,
-    "canBuild": true;
-},
+    "canBuild": true},
   "results": [
     {
       "file": "pages/api/email-validator.ts",
@@ -93,7 +92,6 @@
 
   "results": [],
   "buildBreakingFiles": [],
-  "generatedAt": "2025-08-20T19:21:03.555Z"
+  "generatedAt": "2025-08-20T19: 21:03.555Z"
 
-  "generatedAt": "2025-08-20T20:44:48.331Z";
-}
+  "generatedAt": "2025-08-20T20:44:48.331Z"}

@@ -5,7 +5,7 @@ interface SEOEnhancerProps {title?: string;
 import React, { useEffect } from &apos;react';
 import Head from &apos;next/head';
 import React, { useEffect } from 'react';""
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'
 import Head from 'next/head';
 
 interface SEOEnhancerProps {
@@ -16,15 +16,13 @@ interface SEOEnhancerProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: any;
-}&apos;&apos;
+  structuredData?: any}&apos;&apos;
 
 export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
   title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',
   keywords = 'AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting', canonical,
   ogImage = 'https: //ziontechgroup.com/og-image.jpg', ogType = 'website',
-  twitterCard = 'summary_large_image', structuredData;
-}) => {
+  twitterCard = 'summary_large_image', structuredData}) => {
   useEffect(() => {'
     // Update page title dynamically""
     if (typeof document !== 'undefined') {
@@ -33,8 +31,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
 export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',
   keywords = 'AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting', canonical,
   ogImage = 'https: //ziontechgroup.com/og-image.jpg', ogType = 'website',
-  twitterCard = 'summary_large_image', structuredData;
-}) => {useEffect(() => {
+  twitterCard = 'summary_large_image', structuredData}) => {useEffect(() => {
     // Update page title dynamically"
     if (typeof document !== 'undefined') {
       document.title = title}
@@ -74,34 +71,32 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({""
       "@type": "ContactPoint", "telephone": "+1-302-464-0950", ""
       "contactType": "customer service", "email": "kleber@ziontechgroup.com"},""
     "sameAs": [""
-      "https://ziontechgroup.com"]
+      "https: //ziontechgroup.com"]
 export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = &apos;Zion Tech Group - Leading Technology Solutions Provider&apos;,
-  description = &apos;Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.&apos;,
-  keywords = &apos;AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting&apos;,
+  title = &apos;Zion Tech Group - Leading Technology Solutions Provider&apos,
+  description = &apos;Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.&apos,
+  keywords = &apos;AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting&apos,
   canonical,
-  ogImage = &apos;https://ziontechgroup.com/og-image.jpg&apos;,
-  ogType = &apos;website&apos;,
-  twitterCard = &apos;summary_large_image&apos;,
+  ogImage = &apos;https: //ziontechgroup.com/og-image.jpg&apos,
+  ogType = &apos;website&apos,
+  twitterCard = &apos;summary_large_image&apos,
   structuredData
   title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',
   keywords = 'AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting', canonical,
   ogImage = 'https: //ziontechgroup.com/og-image.jpg', ogType = 'website',
-  twitterCard = 'summary_large_image', structuredData;
-}) => {
+  twitterCard = 'summary_large_image', structuredData}) => {
   useEffect(() => {
     // Update page title dynamically
-    if (typeof document !== &apos;undefined&apos;) {
-      document.title = title;
-    }
+    if (typeof document !== &apos;undefined&apos) {
+      document.title = title}
 
     // Add performance monitoring
-    if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window) {&apos;}
+    if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window) {&apos}
       const observer = new PerformanceObserver((list) => {}
         const;const;const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (entry.entryType === &apos;navigation&apos;) {
-            console.log(&apos;Page load time:&apos;, entry.duration);
+          if (entry.entryType === &apos;navigation&apos) {
+            console.log(&apos;Page load time: &apos, entry.duration);
           if (entry.entryType === 'navigation') {
             // Page load time logged (removed console.log for production);
 }
@@ -129,29 +124,28 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   const defaultStructuredData = {"@context": "https: //schema.org", "@type": "Organization",
     "name": "Zion Tech Group", "url": "https: //ziontechgroup.com",
     "logo": "https: //ziontechgroup.com/logo.png", "description": description,
-      observer.observe({ entryTypes: [&apos;navigation&apos;] });
+      observer.observe({ entryTypes: [&apos;navigation&apos] });
     }
   }, [title]);&apos;
 
   const defaultStructuredData = {
-    &quot;@context&quot;: &quot;https://schema.org&quot;,
-    &quot;@type&quot;: &quot;Organization&quot;,
-    &quot;name&quot;: &quot;Zion Tech Group&quot;,
-    &quot;url&quot;: &quot;https://ziontechgroup.com&quot;,
-    &quot;logo&quot;: &quot;https://ziontechgroup.com/logo.png&quot;,
+    &quot;@context&quot;: &quot;https: //schema.org&quot,
+    &quot;@type&quot;: &quot;Organization&quot,
+    &quot;name&quot;: &quot;Zion Tech Group&quot,
+    &quot;url&quot;: &quot;https: //ziontechgroup.com&quot,
+    &quot;logo&quot;: &quot;https: //ziontechgroup.com/logo.png&quot,
     &quot;description&quot;: description,
     &quot;address&quot;: {
-      &quot;@type&quot;: &quot;PostalAddress&quot;,
-      &quot;streetAddress&quot;: &quot;364 E Main St STE 1008&quot;,
-      &quot;addressLocality&quot;: &quot;Middletown&quot;,
-      &quot;addressRegion&quot;: &quot;DE&quot;,
-      &quot;postalCode&quot;: &quot;19709&quot;,
-      &quot;addressCountry&quot;: &quot;US&quot;
-    },
+      &quot;@type&quot;: &quot;PostalAddress&quot,
+      &quot;streetAddress&quot;: &quot;364 E Main St STE 1008&quot,
+      &quot;addressLocality&quot;: &quot;Middletown&quot,
+      &quot;addressRegion&quot;: &quot;DE&quot,
+      &quot;postalCode&quot;: &quot;19709&quot,
+      &quot;addressCountry&quot;: &quot;US&quot},
     &quot;contactPoint&quot;: {
-      &quot;@type&quot;: &quot;ContactPoint&quot;,
-      &quot;telephone&quot;: &quot;+1-302-464-0950&quot;,
-      &quot;contactType&quot;: &quot;customer service&quot;,
+      &quot;@type&quot;: &quot;ContactPoint&quot,
+      &quot;telephone&quot;: &quot;+1-302-464-0950&quot,
+      &quot;contactType&quot;: &quot;customer service&quot,
       &quot;email&quot;: &quot;kleber@ziontechgroup.com&quot;
     "@context": "https://schema.org", "@type": "Organization",
     "name": "Zion Tech Group", "url": "https://ziontechgroup.com",
@@ -166,8 +160,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 },
     "sameAs": ["https: //ziontechgroup.com"
     &quot;sameAs&quot;: [
-      &quot;https://ziontechgroup.com&quot;
-    ]
+      &quot;https://ziontechgroup.com&quot]
 }
   };
 
@@ -271,7 +264,7 @@ export default SEOEnhancer;""
       <meta property=&quot;og:title&quot; content={title} />&quot;
       <meta property=&quot;og:description&quot; content={description} />&quot;
       <meta property=&quot;og:type&quot; content={ogType} />&quot;
-      <meta property=&quot;og:url&quot; content={canonical || &apos;http,s://ziontechgroup.com&apos;} />&apos;
+      <meta property=&quot;og:url&quot; content={canonical || &apos;http,s: //ziontechgroup.com&apos} />&apos;
       <meta property=&quot;og:image&quot; content={ogImage} />&quot;
       <meta property=&quot;og:site_name&quot; content=&quot;Zion Tech Group&quot; />
       {/* Open Graph */}
@@ -309,12 +302,10 @@ export default SEOEnhancer;""
       {/* Structured Data */}&quot;
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData || defaultStructuredData);
-}}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData || defaultStructuredData)}}
         type=&quot;application/ld+json&quot;
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || defaultStructuredData);
-}}
+          __html: JSON.stringify(structuredData || defaultStructuredData)}}
       />
       
       {/* Performance hints */}&quot;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {SEO } from '@/components/SEO';
 
 ;,"});,"})
@@ -19,7 +19,7 @@ import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
 import React, { useState } from 'react';""
 import { motion } from 'framer-motion';""
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO'
 import { 
   Search, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Users, ChevronDown,
   ChevronUp, HelpCircle, CheckCircle, ArrowRight';
@@ -28,12 +28,11 @@ import {
 } from 'lucide-react';""
 import React, { useState } from 'react
 import { motion } from 'framer-motion
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO'
 import { ;
   Search, MessageCircle, Phone, Mail, Clock, ;
   BookOpen, Video, FileText, Users, ChevronDown,;
-  ChevronUp, HelpCircle, CheckCircle, ArrowRight;
-} from 'lucide-react';
+  ChevronUp, HelpCircle, CheckCircle, ArrowRight} from 'lucide-react';
 ;
 export default function Help() {;
   const [searchQuery, setSearchQuery] = useState(');
@@ -44,26 +43,22 @@ export default function Help() {;
       id: 1,;
       question: "How do I get started with Zion Tech Group services?",;
       answer: "Getting started is easy! Contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and recommend the best solutions for your business.",;
-      category: "Getting Started";
-    },;
+      category: "Getting Started"},;
     {;
       id: 2,;
       question: "What AI services do you offer?",;
       answer: "We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, and custom AI solutions tailored to your business needs.",;
-      category: "AI Services";
-    },;
+      category: "AI Services"},;
     {;
       id: 3,;
       question: "Do you provide quantum computing solutions?",;
       answer: "Yes! We offer quantum computing services including quantum algorithm development, quantum machine learning, and access to quantum computing platforms for research and development.",;
-      category: "Quantum Computing";
-    },;
+      category: "Quantum Computing"},;
     {;
       id: 4,;
       question: "What is your pricing structure?",;
       answer: "Our pricing varies based on project scope, complexity, and requirements. We offer flexible pricing models including project-based, retainer, and subscription options. Contact us for a customized quote.",;
-      category: "Pricing";
-    }
+      category: "Pricing"}
   ]
 ;
   const helpCategories = [;
@@ -72,29 +67,25 @@ export default function Help() {;
       description: "New to Zion Tech Group? Start here",;
       icon: BookOpen,;
       articles: 12,;
-      color: "from-blue-500 to-cyan-500";
-    },;
+      color: "from-blue-500 to-cyan-500"},;
     {;
       title: "AI Services",;
       description: "Learn about our AI and machine learning solutions",;
       icon: MessageCircle,;
       articles: 25,;
-      color: "from-purple-500 to-pink-500";
-    },;
+      color: "from-purple-500 to-pink-500"},;
     {;
       title: "Quantum Computing",;
       description: "Explore quantum computing capabilities",;
       icon: Star,;
       articles: 18,;
-      color: "from-orange-500 to-red-500";
-    },;
+      color: "from-orange-500 to-red-500"},;
     {;
       title: "Technical Support",;
       description: "Get help with technical issues",;
       icon: HelpCircle,;
       articles: 30,;
-      color: "from-green-500 to-emerald-500";
-    }
+      color: "from-green-500 to-emerald-500"}
   ]
 ;
   const contactMethods = [;
@@ -103,27 +94,23 @@ export default function Help() {;
       description: "Get instant help from our support team",;
       icon: MessageCircle,;
       availability: "24/7 Available",;
-      responseTime: "Immediate";
-    },;
+      responseTime: "Immediate"},;
     {;
       title: "Phone Support",;
       description: "Speak directly with our technical experts",;
       icon: Phone,;
       availability: "Mon-Fri 9AM-6PM EST",;
-      responseTime: "Immediate";
-    },;
+      responseTime: "Immediate"},;
     {;
       title: "Email Support",;
       description: "Send us your questions and we'll respond quickly",;
       icon: Mail,;
       availability: "24/7 Available",;
-      responseTime: "Within 4 hours";
-    }
+      responseTime: "Within 4 hours"}
   ]
 ;
   const toggleFAQ = (id: number) => {;
-    setExpandedFAQ(expandedFAQ === id ? null : id);
-  };
+    setExpandedFAQ(expandedFAQ === id ? null : id)};
 ;
   return (;
     <>;
@@ -187,11 +174,10 @@ export default function Help() {;
                 <motion.div;
 import { 
   Search, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Users, ChevronDown,
-  ChevronUp, HelpCircle, CheckCircle, ArrowRight;
-} from &apos;lucide-react';&apos;&apos;
+  ChevronUp, HelpCircle, CheckCircle, ArrowRight} from &apos;lucide-react';&apos;&apos;
 
 export default function Help() ;{}
-  const [searchQuery, setSearchQuery] = useState(&apos;&apos;);&apos;&apos;
+  const [searchQuery, setSearchQuery] = useState(&apos;&apos);&apos;&apos;
   const [expandedFAQ, setExpandedFAQ] = useState<;<;<number | null>(null);
 
   const faqs = [
@@ -199,127 +185,107 @@ export default function Help() ;{}
       answer: "Getting started is easy! Contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and recommend the best solutions for your business.", '
     {
       id: 1,
-      question: &quot;How do I get started with Zion Tech Group services?&quot;,
-      answer: &quot;Getting started is easy! Contact our team through our contact form or call us directly. We&apos;ll schedule a consultation to understand your needs and recommend the best solutions for your business.&quot;,
-      category: &quot;Getting Started&quot;
-    },
+      question: &quot;How do I get started with Zion Tech Group services?&quot,
+      answer: &quot;Getting started is easy! Contact our team through our contact form or call us directly. We&apos;ll schedule a consultation to understand your needs and recommend the best solutions for your business.&quot,
+      category: &quot;Getting Started&quot},
     {
       id: 2,
-      question: &quot;What AI services do you offer?&quot;,
-      answer: &quot;We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, and custom AI solutions tailored to your business needs.&quot;,
-      category: &quot;AI Services&quot;
-    },
+      question: &quot;What AI services do you offer?&quot,
+      answer: &quot;We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, and custom AI solutions tailored to your business needs.&quot,
+      category: &quot;AI Services&quot},
     {
       id: 3,
-      question: &quot;Do you provide quantum computing solutions?&quot;,
-      answer: &quot;Yes! We offer quantum computing services including quantum algorithm development, quantum machine learning, and access to quantum computing platforms for research and development.&quot;,
-      category: &quot;Quantum Computing&quot;
-    },
+      question: &quot;Do you provide quantum computing solutions?&quot,
+      answer: &quot;Yes! We offer quantum computing services including quantum algorithm development, quantum machine learning, and access to quantum computing platforms for research and development.&quot,
+      category: &quot;Quantum Computing&quot},
     {
       id: 4,
-      question: &quot;What is your pricing structure?&quot;,
-      answer: &quot;Our pricing varies based on project scope, complexity, and requirements. We offer flexible pricing models including project-based, retainer, and subscription options. Contact us for a customized quote.&quot;,
+      question: &quot;What is your pricing structure?&quot,
+      answer: &quot;Our pricing varies based on project scope, complexity, and requirements. We offer flexible pricing models including project-based, retainer, and subscription options. Contact us for a customized quote.&quot,
       category: &quot;Pricing&quot;
       id: 1, question: "How do I get started with Zion Tech Group services?",
       answer: "Getting started is easy! Contact our team through our contact form or call us directly. We&apos;ll schedule a consultation to understand your needs and recommend the best solutions for your business.", '
-      category: "Getting Started";
-},
+      category: "Getting Started"},
     { id: 2, question: "What AI services do you offer?",
-      answer: "We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, and custom AI solutions tailored to your business needs.", category: "AI Services";
-},
+      answer: "We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, and custom AI solutions tailored to your business needs.", category: "AI Services"},
     { id: 3, question: "Do you provide quantum computing solutions?",
-      answer: "Yes! We offer quantum computing services including quantum algorithm development, quantum machine learning, and access to quantum computing platforms for research and development.", category: "Quantum Computing";
-},
+      answer: "Yes! We offer quantum computing services including quantum algorithm development, quantum machine learning, and access to quantum computing platforms for research and development.", category: "Quantum Computing"},
     { id: 4, question: "What is your pricing structure?",
-      answer: "Our pricing varies based on project scope, complexity, and requirements. We offer flexible pricing models including project-based, retainer, and subscription options. Contact us for a customized quote.", category: "Pricing";
-}
+      answer: "Our pricing varies based on project scope, complexity, and requirements. We offer flexible pricing models including project-based, retainer, and subscription options. Contact us for a customized quote.", category: "Pricing"}
   ]&quot;
 
   const helpCategories = [
     { title: "Getting Started", description: "New to Zion Tech Group? Start here",
     {
-      title: &quot;Getting Started&quot;,
-      description: &quot;New to Zion Tech Group? Start here&quot;,
+      title: &quot;Getting Started&quot,
+      description: &quot;New to Zion Tech Group? Start here&quot,
       icon: BookOpen,
       articles: 12,
-      color: &quot;from-blue-500 to-cyan-500&quot;
-    },
+      color: &quot;from-blue-500 to-cyan-500&quot},
     {
-      title: &quot;AI Services&quot;,
-      description: &quot;Learn about our AI and machine learning solutions&quot;,
+      title: &quot;AI Services&quot,
+      description: &quot;Learn about our AI and machine learning solutions&quot,
       icon: MessageCircle,
       articles: 25,
-      color: &quot;from-purple-500 to-pink-500&quot;
-    },
+      color: &quot;from-purple-500 to-pink-500&quot},
     {
-      title: &quot;Quantum Computing&quot;,
-      description: &quot;Explore quantum computing capabilities&quot;,
+      title: &quot;Quantum Computing&quot,
+      description: &quot;Explore quantum computing capabilities&quot,
       icon: Star,
       articles: 18,
-      color: &quot;from-orange-500 to-red-500&quot;
-    },
+      color: &quot;from-orange-500 to-red-500&quot},
     {
-      title: &quot;Technical Support&quot;,
-      description: &quot;Get help with technical issues&quot;,
+      title: &quot;Technical Support&quot,
+      description: &quot;Get help with technical issues&quot,
       icon: HelpCircle,
       articles: 30,
       color: &quot;from-green-500 to-emerald-500&quot;
       title: "Getting Started", description: "New to Zion Tech Group? Start here",
       icon: BookOpen, articles: 12,
-      color: "from-blue-500 to-cyan-500";
-}, { title: "AI Services",
+      color: "from-blue-500 to-cyan-500"}, { title: "AI Services",
       description: "Learn about our AI and machine learning solutions", icon: MessageCircle,
-      articles: 25, color: "from-purple-500 to-pink-500";
-},
+      articles: 25, color: "from-purple-500 to-pink-500"},
     { title: "Quantum Computing", description: "Explore quantum computing capabilities",
       icon: Star, articles: 18,
-      color: "from-orange-500 to-red-500";
-}, { title: "Technical Support",
+      color: "from-orange-500 to-red-500"}, { title: "Technical Support",
       description: "Get help with technical issues", icon: HelpCircle,
-      articles: 30, color: "from-green-500 to-emerald-500";
-}
+      articles: 30, color: "from-green-500 to-emerald-500"}
   ]&quot;
 
   const contactMethods = [
     { title: "Live Chat", description: "Get instant help from our support team",
     {
-      title: &quot;Live Chat&quot;,
-      description: &quot;Get instant help from our support team&quot;,
+      title: &quot;Live Chat&quot,
+      description: &quot;Get instant help from our support team&quot,
       icon: MessageCircle,
-      availability: &quot;24/7 Available&quot;,
-      responseTime: &quot;Immediate&quot;
-    },
+      availability: &quot;24/7 Available&quot,
+      responseTime: &quot;Immediate&quot},
     {
-      title: &quot;Phone Support&quot;,
-      description: &quot;Speak directly with our technical experts&quot;,
+      title: &quot;Phone Support&quot,
+      description: &quot;Speak directly with our technical experts&quot,
       icon: Phone,
-      availability: &quot;Mon-Fri 9AM-6PM EST&quot;,
-      responseTime: &quot;Immediate&quot;
-    },
+      availability: &quot;Mon-Fri 9AM-6PM EST&quot,
+      responseTime: &quot;Immediate&quot},
     {
-      title: &quot;Email Support&quot;,
-      description: &quot;Send us your questions and we&apos;ll respond quickly&quot;,
+      title: &quot;Email Support&quot,
+      description: &quot;Send us your questions and we&apos;ll respond quickly&quot,
       icon: Mail,
-      availability: &quot;24/7 Available&quot;,
+      availability: &quot;24/7 Available&quot,
       responseTime: &quot;Within 4 hours&quot;
       title: "Live Chat", description: "Get instant help from our support team",
       icon: MessageCircle, availability: "24/7 Available",
-      responseTime: "Immediate";
-}, { title: "Phone Support",
+      responseTime: "Immediate"}, { title: "Phone Support",
       description: "Speak directly with our technical experts", icon: Phone,
-      availability: "Mon-Fri 9AM-6PM EST", responseTime: "Immediate";
-},
+      availability: "Mon-Fri 9AM-6PM EST", responseTime: "Immediate"},
     { title: "Email Support", description: "Send us your questions and we'll respond quickly", '
     {
       title: "Email Support", description: "Send us your questions and we&apos;ll respond quickly", '
       icon: Mail,
-      availability: "24/7 Available", responseTime: "Within 4 hours";
-}
+      availability: "24/7 Available", responseTime: "Within 4 hours"}
   ]&quot;
 
   const toggleFAQ = (id: number) => {
-    setExpandedFAQ(expandedFAQ === id ? null : id);
-  }
+    setExpandedFAQ(expandedFAQ === id ? null : id)}
   };
 
   return (
@@ -393,22 +359,22 @@ export default function Help() ;{}
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-8&quot;>
-              {helpCategories.map((category, index) => (&quot;}
+              {helpCategories.map((category, index) => (&quot}
                 <motion.div
                   key={category.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 cursor-pointer";
+                  className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 cursor-pointer`;
                 >;
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4`}>;
-                    <category.icon className="w-8 h-8 text-white" />;
+                    <category.icon className=`w-8 h-8 text-white`} />;
                   </div>;
                   <h3 className="text-xl font-bold text-white mb-2">{category.title}</h3>;
                   <p className="text-gray-300 text-sm mb-3">{category.description}</p>;
                   <div className="flex items-center justify-between">;
                     <span className="text-blue-400 text-sm">{category.articles} articles</span>;
-                    <ArrowRight className="w-5 h-5 text-gray-400" />;
+                    <ArrowRight className={`w-5 h-5 text-gray-400` />;
                   </div>;
                 </motion.div>;
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hove,r:scale-105 cursor-pointer&quot;
@@ -418,7 +384,7 @@ export default function Help() ;{}
                   </div>
                   <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{category.title}&quot;</h3>
                   <p className=&quot;text-gray-300 text-sm mb-3&quot;>{category.description}&quot;</p>
-                  <div className=&quot;flex items-center justify-between&quot;>&quot;"
+                  <div className=&quot;flex items-center justify-between&quot;>&quot;`
                     <span className=&quot;text-blue-400 text-sm&quot;>{category.articles} articles&quot;</span>
                     <ArrowRight className=&quot;w-5 h-5 text-gray-400&quot; />&quot;
                   </div>
@@ -429,7 +395,7 @@ export default function Help() ;{}
         </section>;
 
         {/* FAQ Section */}
-        <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
+        <section className=`}py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
           <div className="container mx-auto px-4">;
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -467,7 +433,7 @@ export default function Help() ;{}
             </motion.div>
 
             <div className=&quot;max-w-4xl mx-auto space-y-4&quot;>
-              {faqs.map((faq, index) => (&quot;}
+              {faqs.map((faq, index) => (&quot}
                 <motion.div
                   key={faq.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -524,7 +490,7 @@ export default function Help() ;{}
                   {expandedFAQ === faq.id && (}
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: &quot;auto&quot; }}
+                      animate={{ opacity: 1, height: &quot;auto&quot}}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3   }}
                       className="px-6 pb-6"
@@ -580,7 +546,7 @@ export default function Help() ;{}
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
-              {contactMethods.map((method, index) => (&quot;}
+              {contactMethods.map((method, index) => (&quot}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Contact Support</h2>

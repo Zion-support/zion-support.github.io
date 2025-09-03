@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer';
+import Footer from '../src/components/Footer'
 import { Play, Calendar, Users, Zap, Brain, Cloud, Shield, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
 const Demo = () => {
@@ -59,22 +59,19 @@ const Demo = () => {
       company: 'TechCorp Inc.',
       role: 'CTO',
       content: 'The AI demo was incredible. We could see exactly how it would integrate with our existing systems.',
-      rating: 5;
-},
+      rating: 5},
     {
       name: 'Michael Chen',
       company: 'StartupXYZ',
       role: 'Founder',
       content: 'The micro SaaS demo showed us the potential for our product. Highly recommended!',
-      rating: 5;
-},
+      rating: 5},
     {
       name: 'Emily Rodriguez',
       company: 'Enterprise Solutions',
       role: 'IT Director',
       content: 'The IT services demo covered everything we needed. Very comprehensive and professional.',
-      rating: 5;
-}
+      rating: 5}
   ]
 
   return (
@@ -123,7 +120,7 @@ const Demo = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 mb-12`>
               {demos.map((demo) => (
                 <div
                   key={demo.id}
@@ -131,10 +128,9 @@ const Demo = () => {
                   className={`cursor-pointer rounded-lg p-6 border-2 transition-all ${
                     selectedDemo === demo.id
                       ? 'border-blue-500 bg-blue-50'
-                      : 'border-gray-200 hover:border-gray-300';
-}`}
+                      : 'border-gray-200 hover: border-gray-300'}`}
                 >
-                  <div className="flex items-center mb-4">
+                  <div className=`flex items-center mb-4`}>
                     <div className="p-3 bg-blue-100 rounded-lg mr-4">
                       <demo.icon className="w-6 h-6 text-blue-600" />
                     </div>
@@ -211,7 +207,7 @@ const Demo = () => {
 
         {/* Schedule Demo Section */}
         <section id="schedule" className="py-20 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Schedule Your Demo</h2>
               <p className="text-lg text-gray-600">
@@ -260,7 +256,6 @@ const Demo = () => {
       
       <Footer />
     </>
-  );
-};
+  )};
 
 export default Demo;

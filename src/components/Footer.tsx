@@ -1,12 +1,12 @@
 
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})
 import React { useState } from 'react.ts';';
 import { Link               } from 'react-router-dom.ts';';
 import { motion               } from 'framer-motion.ts';';
 import { Twitter,
-import React { useState } from 'react.ts';
+import React { useState } from 'react.ts'
 import { Link               } from 'react-router-dom.ts';
-import { motion               } from 'framer-motion.ts';
+import { motion               } from 'framer-motion.ts'
 import { Twitter,;
   Linkedin,;
   Instagram,;
@@ -144,7 +144,7 @@ export function Footer(...args: any[]): any {
                 <span>{section.title}</span>;
               </motion.button>;
               <motion.div;
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom';
 import { 
   Phone, 
@@ -156,8 +156,7 @@ import {
   Instagram,
   Brain,
   ArrowUp,
-  Heart;
-} from 'lucide-react';
+  Heart} from 'lucide-react';
 
 export function Footer() {'
 import React { useState } from 'react.ts';""
@@ -180,7 +179,7 @@ export function Footer() {
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin } { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter } { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook } { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
 
   const scrollToTop = () => {
-import Link from 'next/link';
+import Link from 'next/link'
 import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, ArrowUp } from 'lucide-react';
 
 export default function Footer() {
@@ -194,7 +193,7 @@ export default function Footer() {
       { name: 'Blog', href: '/blog' } { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api' } { name: 'Developer Portal', href: '/developer' } { name: 'Support', href: '/support' }
 
     { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup' } { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup' } { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup' } { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup' }
-import React { useState } from &apos;
+import React { useState } from &apos
 import { motion } from &apos;framer-motion';;
 import Link from &apos;next/link';react.ts';
 import { Link               } from &apos;react-router-dom.ts';
@@ -303,34 +302,34 @@ export function Footer(...args: any[]): any {}
   const [activeSection, setActiveSection] = useState<;<;<any>(null);
   const footerSections = [
     {
-      title: &apos;Comp&apos;,
+      title: &apos;Comp&apos,
       icon: Building,
-      links: [{ nam,e: &apos;About Us&apos;, path: &apos;/about&apos;, icon: Users } { name: &apos;Our Story&apos;, path: &apos;/about/story&apos;, icon: FileText } { name: &apos;Team&apos;, path: &apos;/about/team&apos;, icon: Users } { name: &apos;Careers&apos;, path: &apos;/careers&apos;, icon: Briefcase } { name: &apos;Partners&apos;, path: &apos;/partners&apos;, icon: Network } { name: &apos;Press&apos;, path: &apos;/press&apos;, icon: Newspaper } { name: &apos;Contact&apos;, path: &apos;/contact&apos;, icon: Phone }
-      title: &apos;AI & Quantum Solutions&apos;,
+      links: [{ nam,e: &apos;About Us&apos, path: &apos;/about&apos, icon: Users } { name: &apos;Our Story&apos, path: &apos;/about/story&apos, icon: FileText } { name: &apos;Team&apos, path: &apos;/about/team&apos, icon: Users } { name: &apos;Careers&apos, path: &apos;/careers&apos, icon: Briefcase } { name: &apos;Partners&apos, path: &apos;/partners&apos, icon: Network } { name: &apos;Press&apos, path: &apos;/press&apos, icon: Newspaper } { name: &apos;Contact&apos, path: &apos;/contact&apos, icon: Phone }
+      title: &apos;AI & Quantum Solutions&apos,
       icon: Brain,
-      category: &apos;Core Services&apos;,
-        { nam,e: &apos;AI Customer Success Automation&apos;, href: &apos;/services/ai-customer-success-automation&apos;, badge: &apos;Popular&apos} { name: &apos;AI Healthcare Analytics Platform&apos;, href: &apos;/services/ai-healthcare-analytics-platform&apos;, badge: &apos;New&apos} { name: &apos;AI Financial Risk Management&apos;, href: &apos;/services/ai-financial-risk-management-enhanced&apos;, badge: &apos;Featured&apos} { name: &apos;AI Supply Chain Optimization&apos;, href: &apos;/services/ai-supply-chain-optimization-enhanced&apos;, badge: &apos;Trending&apos} { name: &apos;AI Legal Document Automation&apos;, href: &apos;/services/ai-legal-document-automation-platform&apos;, badge: &apos;Innovative&apos} { name: &apos;AI Mental Health Support&apos;, href: &apos;/services/ai-mental-health-support-platform&apos;, badge: &apos;Healthcare&apos} { name: &apos;AI Smart Home Energy Management&apos;, href: &apos;/services/ai-smart-home-energy-management-platform&apos;, badge: &apos;IoT&apos} { name: &apos;AI Autonomous Logistics&apos;, href: &apos;/services/ai-autonomous-logistics-platform&apos;, badge: &apos;Logistics&apos} { name: &apos;AI-Powered SEO&apos;, href: &apos;/services/ai-powered-seo&apos;, badge: &apos;Marketing&apos} { name: &apos;Quantum Edge Computing&apos;, href: &apos;/services/quantum-edge-computing-solutions&apos;, badge: &apos;Quantum&apos} { name: &apos;AI Space Technology&apos;, href: &apos;/services/ai-space-technology-platform&apos;, badge: &apos;Space Tech&apos} { name: &apos;AI Carbon Footprint Management&apos;, href: &apos;/services/ai-carbon-footprint-management-platform&apos;, badge: &apos;Green Tech&apos} { name: &apos;AI Autonomous Manufacturing&apos;, href: &apos;/services/ai-autonomous-manufacturing-platform&apos;, badge: &apos;Manufacturing&apos} { name: &apos;AI Enterprise Resource Planning&apos;, href: &apos;/services/ai-enterprise-resource-planning&apos;, badge: &apos;ERP&apos} { name: &apos;AI Autonomous Business Operations&apos;, href: &apos;/services/ai-autonomous-business-operations-platform&apos;, badge: &apos;Automation&apos} { name: &apos;AI Customer Experience Analytics&apos;, href: &apos;/services/ai-customer-experience-analytics-platform&apos;, badge: &apos;Analytics&apos}
-      title: &apos;AI Cybersecurity & Infrastructure&apos;,
+      category: &apos;Core Services&apos,
+        { nam,e: &apos;AI Customer Success Automation&apos, href: &apos;/services/ai-customer-success-automation&apos, badge: &apos;Popular&apos} { name: &apos;AI Healthcare Analytics Platform&apos, href: &apos;/services/ai-healthcare-analytics-platform&apos, badge: &apos;New&apos} { name: &apos;AI Financial Risk Management&apos, href: &apos;/services/ai-financial-risk-management-enhanced&apos, badge: &apos;Featured&apos} { name: &apos;AI Supply Chain Optimization&apos, href: &apos;/services/ai-supply-chain-optimization-enhanced&apos, badge: &apos;Trending&apos} { name: &apos;AI Legal Document Automation&apos, href: &apos;/services/ai-legal-document-automation-platform&apos, badge: &apos;Innovative&apos} { name: &apos;AI Mental Health Support&apos, href: &apos;/services/ai-mental-health-support-platform&apos, badge: &apos;Healthcare&apos} { name: &apos;AI Smart Home Energy Management&apos, href: &apos;/services/ai-smart-home-energy-management-platform&apos, badge: &apos;IoT&apos} { name: &apos;AI Autonomous Logistics&apos, href: &apos;/services/ai-autonomous-logistics-platform&apos, badge: &apos;Logistics&apos} { name: &apos;AI-Powered SEO&apos, href: &apos;/services/ai-powered-seo&apos, badge: &apos;Marketing&apos} { name: &apos;Quantum Edge Computing&apos, href: &apos;/services/quantum-edge-computing-solutions&apos, badge: &apos;Quantum&apos} { name: &apos;AI Space Technology&apos, href: &apos;/services/ai-space-technology-platform&apos, badge: &apos;Space Tech&apos} { name: &apos;AI Carbon Footprint Management&apos, href: &apos;/services/ai-carbon-footprint-management-platform&apos, badge: &apos;Green Tech&apos} { name: &apos;AI Autonomous Manufacturing&apos, href: &apos;/services/ai-autonomous-manufacturing-platform&apos, badge: &apos;Manufacturing&apos} { name: &apos;AI Enterprise Resource Planning&apos, href: &apos;/services/ai-enterprise-resource-planning&apos, badge: &apos;ERP&apos} { name: &apos;AI Autonomous Business Operations&apos, href: &apos;/services/ai-autonomous-business-operations-platform&apos, badge: &apos;Automation&apos} { name: &apos;AI Customer Experience Analytics&apos, href: &apos;/services/ai-customer-experience-analytics-platform&apos, badge: &apos;Analytics&apos}
+      title: &apos;AI Cybersecurity & Infrastructure&apos,
       icon: Shield,
-      category: &apos;Security & Infrastructure&apos;,
-        { nam,e: &apos;AI-Powered DevOps Automation&apos;, href: &apos;/services/ai-powered-devops-automation&apos;, badge: &apos;New&apos} { name: &apos;AI-Powered Cybersecurity Suite&apos;, href: &apos;/services/ai-powered-cybersecurity-suite&apos;, badge: &apos;Security&apos} { name: &apos;Enterprise IT Infrastructure Management&apos;, href: &apos;/services/enterprise-it-infrastructure-management&apos;, badge: &apos;Infrastructure&apos} { name: &apos;Cloud Migration & Optimization&apos;, href: &apos;/services/cloud-migration-and-optimization&apos;, badge: &apos;Cloud&apos} { name: &apos;AI Data Analytics Platform&apos;, href: &apos;/services/ai-data-analytics-platform&apos;, badge: &apos;Analytics&apos} { name: &apos;AI DevOps Automation&apos;, href: &apos;/services/ai-devops-automation&apos;, badge: &apos;DevOps&apos} { name: &apos;Edge Computing Platform&apos;, href: &apos;/services/edge-computing-platform&apos;, badge: &apos;Edge&apos}
-      title: &apos;Micro SaaS Solutions&apos;,
+      category: &apos;Security & Infrastructure&apos,
+        { nam,e: &apos;AI-Powered DevOps Automation&apos, href: &apos;/services/ai-powered-devops-automation&apos, badge: &apos;New&apos} { name: &apos;AI-Powered Cybersecurity Suite&apos, href: &apos;/services/ai-powered-cybersecurity-suite&apos, badge: &apos;Security&apos} { name: &apos;Enterprise IT Infrastructure Management&apos, href: &apos;/services/enterprise-it-infrastructure-management&apos, badge: &apos;Infrastructure&apos} { name: &apos;Cloud Migration & Optimization&apos, href: &apos;/services/cloud-migration-and-optimization&apos, badge: &apos;Cloud&apos} { name: &apos;AI Data Analytics Platform&apos, href: &apos;/services/ai-data-analytics-platform&apos, badge: &apos;Analytics&apos} { name: &apos;AI DevOps Automation&apos, href: &apos;/services/ai-devops-automation&apos, badge: &apos;DevOps&apos} { name: &apos;Edge Computing Platform&apos, href: &apos;/services/edge-computing-platform&apos, badge: &apos;Edge&apos}
+      title: &apos;Micro SaaS Solutions&apos,
       icon: Code,
-      category: &apos;Micro SaaS&apos;,
-        { nam,e: &apos;AI Email Automation Suite&apos;, href: &apos;/services/ai-email-automation-suite&apos;, badge: &apos;New&apos} { name: &apos;AI Social Media Scheduler&apos;, href: &apos;/services/ai-social-media-scheduler&apos;, badge: &apos;New&apos} { name: &apos;AI Customer Insights Platform&apos;, href: &apos;/services/ai-customer-insights-platform&apos;, badge: &apos;New&apos} { name: &apos;Micro CRM&apos;, href: &apos;/services/micro-crm&apos;, badge: &apos;Popular&apos} { name: &apos;Helpdesk Platform&apos;, href: &apos;/services/helpdesk-platform&apos;, badge: &apos;Support&apos} { name: &apos;Website Analytics&apos;, href: &apos;/services/website-analytics&apos;, badge: &apos;Analytics&apos}
-      title: &apos;Solutions&apos;,
+      category: &apos;Micro SaaS&apos,
+        { nam,e: &apos;AI Email Automation Suite&apos, href: &apos;/services/ai-email-automation-suite&apos, badge: &apos;New&apos} { name: &apos;AI Social Media Scheduler&apos, href: &apos;/services/ai-social-media-scheduler&apos, badge: &apos;New&apos} { name: &apos;AI Customer Insights Platform&apos, href: &apos;/services/ai-customer-insights-platform&apos, badge: &apos;New&apos} { name: &apos;Micro CRM&apos, href: &apos;/services/micro-crm&apos, badge: &apos;Popular&apos} { name: &apos;Helpdesk Platform&apos, href: &apos;/services/helpdesk-platform&apos, badge: &apos;Support&apos} { name: &apos;Website Analytics&apos, href: &apos;/services/website-analytics&apos, badge: &apos;Analytics&apos}
+      title: &apos;Solutions&apos,
       links: [
-        { nam,e: &apos;Enterprise Solutions&apos;, href: &apos;/enterprise&apos} { name: &apos;Healthcare Tech&apos;, href: &apos;/solutions/healthcare&apos} { name: &apos;Financial Solutions&apos;, href: &apos;/financial-solutions&apos} { name: &apos;Manufacturing&apos;, href: &apos;/manufacturing-solutions&apos} { name: &apos;Industry Solutions&apos;, href: &apos;/industry-solutions&apos} { name: &apos;Emerging Tech&apos;, href: &apos;/emerging-tech&apos}
-      title: &apos;Company&apos;,
-        { nam,e: &apos;About Us&apos;, href: &apos;/about&apos} { name: &apos;Our Team&apos;, href: &apos;/about/team&apos} { name: &apos;Careers&apos;, href: &apos;/careers&apos} { name: &apos;Partners&apos;, href: &apos;/partners&apos} { name: &apos;News & Updates&apos;, href: &apos;/news&apos} { name: &apos;Case Studies&apos;, href: &apos;/case-studies&apos}
-      title: &apos;Quantum Computing & Emerging Tech&apos;,
+        { nam,e: &apos;Enterprise Solutions&apos, href: &apos;/enterprise&apos} { name: &apos;Healthcare Tech&apos, href: &apos;/solutions/healthcare&apos} { name: &apos;Financial Solutions&apos, href: &apos;/financial-solutions&apos} { name: &apos;Manufacturing&apos, href: &apos;/manufacturing-solutions&apos} { name: &apos;Industry Solutions&apos, href: &apos;/industry-solutions&apos} { name: &apos;Emerging Tech&apos, href: &apos;/emerging-tech&apos}
+      title: &apos;Company&apos,
+        { nam,e: &apos;About Us&apos, href: &apos;/about&apos} { name: &apos;Our Team&apos, href: &apos;/about/team&apos} { name: &apos;Careers&apos, href: &apos;/careers&apos} { name: &apos;Partners&apos, href: &apos;/partners&apos} { name: &apos;News & Updates&apos, href: &apos;/news&apos} { name: &apos;Case Studies&apos, href: &apos;/case-studies&apos}
+      title: &apos;Quantum Computing & Emerging Tech&apos,
       icon: Atom,
-        { nam,e: &apos;AI-Quantum Hybrid Computing Platform&apos;, href: &apos;/services/ai-quantum-hybrid-platform&apos} { name: &apos;Quantum Computing as a Service&apos;, href: &apos;/services/quantum-computing-as-a-service&apos} { name: &apos;AI Space Technology Platform&apos;, href: &apos;/services/ai-space-technology-platform&apos} { name: &apos;AI IoT Edge Computing Platform&apos;, href: &apos;/services/ai-iot-edge-computing-platform&apos}
-      title: &apos;Resources&apos;,
-        { nam,e: &apos;Documentation&apos;, href: &apos;/docs&apos} { name: &apos;White Papers&apos;, href: &apos;/white-papers&apos} { name: &apos;Support Center&apos;, href: &apos;/help&apos} { name: &apos;Training&apos;, href: &apos;/training&apos} { name: &apos;Blog&apos;, href: &apos;/blog&apos} { name: &apos;Research&apos;, href: &apos;/research-development&apos}
+        { nam,e: &apos;AI-Quantum Hybrid Computing Platform&apos, href: &apos;/services/ai-quantum-hybrid-platform&apos} { name: &apos;Quantum Computing as a Service&apos, href: &apos;/services/quantum-computing-as-a-service&apos} { name: &apos;AI Space Technology Platform&apos, href: &apos;/services/ai-space-technology-platform&apos} { name: &apos;AI IoT Edge Computing Platform&apos, href: &apos;/services/ai-iot-edge-computing-platform&apos}
+      title: &apos;Resources&apos,
+        { nam,e: &apos;Documentation&apos, href: &apos;/docs&apos} { name: &apos;White Papers&apos, href: &apos;/white-papers&apos} { name: &apos;Support Center&apos, href: &apos;/help&apos} { name: &apos;Training&apos, href: &apos;/training&apos} { name: &apos;Blog&apos, href: &apos;/blog&apos} { name: &apos;Research&apos, href: &apos;/research-development&apos}
   ]&apos;
   const solutions = [
-    { name: &apos;Enterprise Solutions&apos;, href: &apos;/solutions/enterprise&apos} { name: &apos;Healthcare Solutions&apos;, href: &apos;/solutions/healthcare&apos} { name: &apos;Financial Solutions&apos;, href: &apos;/solutions/financial&apos} { name: &apos;Government Solutions&apos;, href: &apos;/solutions/government&apos} { name: &apos;Manufacturing Solutions&apos;, href: &apos;/solutions/manufacturing&apos} { name: &apos;Retail Solutions&apos;, href: &apos;/solutions/retail&apos} { name: &apos;Education Solutions&apos;, href: &apos;/solutions/education&apos} { name: &apos;Startup Solutions&apos;, href: &apos;/solutions/startup&apos}
+    { name: &apos;Enterprise Solutions&apos, href: &apos;/solutions/enterprise&apos} { name: &apos;Healthcare Solutions&apos, href: &apos;/solutions/healthcare&apos} { name: &apos;Financial Solutions&apos, href: &apos;/solutions/financial&apos} { name: &apos;Government Solutions&apos, href: &apos;/solutions/government&apos} { name: &apos;Manufacturing Solutions&apos, href: &apos;/solutions/manufacturing&apos} { name: &apos;Retail Solutions&apos, href: &apos;/solutions/retail&apos} { name: &apos;Education Solutions&apos, href: &apos;/solutions/education&apos} { name: &apos;Startup Solutions&apos, href: &apos;/solutions/startup&apos}
   return(&apos;
     <footer className=&apos;bg-zion-blue-dark border-t border-zion-purple/30&apos;>
       {/* Main Footer Content */}&apos;
@@ -602,7 +601,7 @@ import {Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'luci
               <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
 export function Footer() {import React { useState } from 'react.ts';"
 import {Link               } from 'react-router-dom.ts';"
-import {motion               } from 'framer-motion.ts';
+import {motion               } from 'framer-motion.ts'
 import {Twitter, Linkedin,
   Instagram, Globe,
   Linkedin, Twitter,
@@ -636,7 +635,7 @@ import {Twitter, Linkedin,
   Settings, Palette} from 'lucide-react';
 import React { useState } from 'react.ts';"
 import { Link               } from 'react-router-dom.ts';"
-import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react'
 import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Globe, ArrowUp } from 'lucide-react';
 
 

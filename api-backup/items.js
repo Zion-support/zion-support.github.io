@@ -5,8 +5,7 @@ const items = [
 export default function handler(req, res) {
   if (req.method !== 'GET') {
     res.status(405).end();
-    return;
-  }
+    return}
   const { category } = req.query;
   const result =
     typeof category === 'string'

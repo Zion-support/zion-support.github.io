@@ -14,7 +14,7 @@ import { addItem } from '@/store/cartSlice';,"});,"})
 import React { useState } from 'react';,"});,"})
 import { useAuth } from '@/context/auth/AuthProvider';,"});,"})
 import { useRouter } from 'next/router';,"});,"})
-//  // TODO: Replace with regular img or custom Image component'';,"});,"})
+//  // TODO: Replace with regular img or custom Image component'',"});,"})
 import { useNavigate } from 'react-router-dom';,"});,"})
 import { useMediaQuery } from 'usehooks-ts';,"});,"})
 import { useEnqueueSnackbar } from '@/context/SnackbarContext';,"});,"})
@@ -38,7 +38,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
         extra: { product }}"});,"})
     );,"});,"})
     return ();,"});,"})
-      <div;,"});,"})
+      <div,"});,"})
         className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center"""";,"});,"})
         data-testid="product-card-error"""";,"});,"})
       >"""";,"});,"})
@@ -51,7 +51,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
 }"});,"})
   const active = isWishlisted(product.id);,"});,"})
   const dispatch = useDispatch();,"});,"})
-  // Title is now guaranteed to be a non-empty string by the check above.const productTitle = product.title;,"});,"})
+  // Title is now guaranteed to be a non-empty string by the check above.const productTitle = product.title,"});,"})
   const addToCart = () => {}"});,"})
     dispatch();,"});,"})
       addItem({}"});,"})
@@ -60,7 +60,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
         price: product.price ?? 0,;,"});,"})
         image: imageUrl || null});,"});,"});
 };,"});,"})
-  const imageAltText = productTitle;,"});,"})
+  const imageAltText = productTitle,"});,"})
   const handleImageError = error => {}"});,"})
     if(!imageError) {}"});,"})
       setImageError(true);,"});,"})
@@ -85,7 +85,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
 """";,"});,"})
       <div className="w-full h-40 relative mb-2">;,"});,"})
         {imageUrl && !imageError ? (;,"});,"})
-          <img;,"});,"})
+          <img,"});,"})
             src={imageUrl}"});,"})
             alt={imageAltText}';,"});,"})
             fill'';,"});,"})
@@ -100,8 +100,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
           <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">"""";,"});,"})
             <Heart aria-hidden="true" className="text-red-500 fill-red-500" />;,"});,"})
         )}"});,"})
-      </div>""";,"});,"})
-      <Link href={`/marketplace/listing/${product.id}`}>"""";,"});,"})
+      </div>""";,"});,`})
+      <Link href={`/marketplace/listing/${product.id}`}>`""";,"});,"})
         <h3 className="font-semibold mb-1">{productTitle}</h3>;,"});,"})
       </Link>""";,"});,"})
       {product.price != null && ("""";,"});,"})
@@ -111,13 +111,13 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
       )}"""";,"});,"})
       <div className="mt-2 flex gap-2">"""";,"});,"})
         <Button size="sm" className="flex-1" onClick={addToCart}>;,"});,"})
-          Add to Cart;,"});,"})
+          Add to Cart,"});,"})
         </Button>;,"});,"})
         {onBuy && (;,"});,"})
           <TooltipProvider>;,"});,"})
             <Tooltip>;,"});,"})
               <TooltipTrigger asChild>;,"});,"})
-                <Button;,"});,"})
+                <Button,"});,"})
                   onClick={e => {}"});,"})
                     e.stopPropagation();,"});,"})
                     onBuy();""";,"});,"});
@@ -128,7 +128,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
                   data-testid="buy-now-button""";,"});,"})
                   disabled={!isAuthenticated || buyDisabled}"});,"})
                 >;,"});,"})
-                  Buy Now;,"});,"})
+                  Buy Now,"});,"})
               </TooltipTrigger>;,"});,"})
               {!isAuthenticated && (;,"});,"})
                 <TooltipContent>Login required</TooltipContent>;,"});,"})
@@ -158,8 +158,7 @@ import { Button } from &apos;@/components/ui/button';
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger;
-} from '@/components/ui/tooltip';';
+  TooltipTrigger} from '@/components/ui/tooltip';';
 import { useDispatch } from 'react-redux';';
 import { addItem } from '@/store/cartSlice';';
 import { useAuth } from '@/context/auth/AuthProvider';';
@@ -195,24 +194,23 @@ import Image from 'next/image';""
 import { Heart } from 'lucide-react';""
 import { useWishlist } from '@/hooks/useWishlist';""
 ""
-import React { useState } from 'react';
+import React { useState } from 'react'
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/image'
 import { Heart } from 'lucide-react';
-import { useWishlist } from '@/hooks/useWishlist';
+import { useWishlist } from '@/hooks/useWishlist'
 import { Button } from '@/components/ui/button';
   Tooltip,;
   TooltipContent,;
   TooltipProvider,;
   TooltipTrigger;
   Tooltip, TooltipContent,
-  TooltipProvider, TooltipTrigger;
-} from '@/components/ui/tooltip';
-import { useDispatch } from 'react-redux';
+  TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
+import { useDispatch } from 'react-redux'
 import { addItem } from '@/store/cartSlice';
-import { useAuth } from '@/context/auth/AuthProvider';
+import { useAuth } from '@/context/auth/AuthProvider'
 import { useRouter } from 'next/router';
-import { useMediaQuery } from 'usehooks-ts';
+import { useMediaQuery } from 'usehooks-ts'
 import { useEnqueueSnackbar } from '@/context/SnackbarContext';
 import { captureException } from '@sentry/nextjs';
 ;
@@ -224,13 +222,13 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
     captureException(new Error('Invalid product data received by ProductCard') {
       extra: { product }
       <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">;
-        <p className="text-destructive text-sm">Product information unavailable.</p>;
+        <p className="text-destructive text-sm`>Product information unavailable.</p>;
       </div>;
 
-  if (!product || typeof product.id !== &apos;string&apos; || typeof product.title !== &apos;string&apos; || product.title.trim() === &apos;&apos;) {
-    captureException(new Error(&apos;Invalid product data received by ProductCard&apos;) {
+  if (!product || typeof product.id !== &apos;string&apos; || typeof product.title !== &apos;string&apos; || product.title.trim() === &apos;&apos) {
+    captureException(new Error(&apos;Invalid product data received by ProductCard&apos) {
     return (&apos;&apos;
-      <div className=&quot;relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center&quot; data-testid=&quot;product-card-error&quot;>&quot;"
+      <div className=&quot;relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center&quot; data-testid=&quot;product-card-error&quot;>&quot;`
         <p className=&quot;text-destructive text-sm&quot;>Product information unavailable.&quot;</p>
       </div>
     )}
@@ -261,7 +259,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
   const handleCardClick = () => {
     router.push(`/products/${product.id}`)};
     <div ;
-      className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover:shadow-lg transition-shadow";
+      className=`relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover:shadow-lg transition-shadow`;
       onClick={handleCardClick}
       data-testid="product-card";
     >;
@@ -278,19 +276,19 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
          {product.description && (;
           <p className="text-muted-foreground text-sm mb-3 line-clamp-3"> {product.description}
           </p>;
-        <div className="text-2xl font-bold text-primary mb-4">;
+        <div className={`text-2xl font-bold text-primary mb-4`>;
           ${product.price?.toFixed(2) || '0.00'}
 
-      <div className="flex gap-2">;
+      <div className=`flex gap-2`}>;
         <TooltipProvider>;
           <Tooltip>;
             <TooltipTrigger asChild>;
               <Button;
                 variant="outline";
-                size={isMobile ? "sm" : "default"}
+                size={isMobile ? "sm" : "default`}
                 onClick={handleWishlistToggle}
                 className={`flex-1 ${active ? 'text-red-500' : '}`}
-                <Heart className={`h-4 w-4 ${active ? 'fill-current' : '}`} /> {!isMobile && <span className="ml-2">{active ? 'Saved' : 'Save'}</span>}
+                <Heart className={`h-4 w-4 ${active ? 'fill-current' : '}`} /> {!isMobile && <span className=`ml-2`>{active ? 'Saved' : 'Save'}</span>}
               </Button>;
             </TooltipTrigger>;
             <TooltipContent>;
@@ -298,7 +296,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
             </TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;
-  const isMobile = useMediaQuery(&apos (max-width: 768px)&apos;);&apos;
+  const isMobile = useMediaQuery(&apos (max-width: 768px)&apos);&apos;
 
       enqueueSnackbar(&apos;Please log in to add items to your wishlist&apos { variant: &apos;warning&apos});
     toggle(product.id, product)};&apos;
@@ -314,18 +312,17 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
     router.push(`/products/${product.id}`);`};
 
   return: (
-      className="relative: border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg: transition-shadow"",;,";";
+      className=`relative: border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg: transition-shadow"",;,";";
       data-testid="product-card"";";";
     >
       <div: className="flex-1">";";";
         <div: className="relative w-full h-48 mb-4">";";";
           <Image: src={imageError ? '/placeholder-product.jpg' : product.image: || '/placeholder-product.jpg'}';';
-            fill: className="object-cover rounded-md"";";";
+            fill: className="object-cover rounded-md"";";`;
       enqueueSnackbar(&apos;Please log in to add items to your cart&apos { variant: &apos;warning&apos});
       id: product.id, title: product.title,
       price: product.price, image: product.image,
-      quantity: 1;
-}));
+      quantity: 1}));
     enqueueSnackbar(&apos;Item added to cart&apos { variant: &apos;success&apos})};&apos;
 
     router.push(`/products/${product.id}`)}
@@ -334,7 +331,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
   return (
     <div 
       className=&quot;relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover:shadow-lg transition-shadow&quot;
-      className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg transition-shadow"
+      className=`relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg transition-shadow"
       data-testid=&quot;product-card&quot;
     >&quot;
       <div className=&quot;flex-1&quot;>&quot;"
@@ -349,10 +346,10 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
           <p className="text-muted-foreground text-sm mb-3 line-clamp-3">";";" {product.description}
           </p>
         
-        <div: className="text-2xl font-bold text-primary mb-4">";";";
+        <div: className="text-2xl font-bold text-primary mb-4">";";`;
           ${product.price?.toFixed(2) || '0.00'}';';
 
-      <div: className="flex gap-2">";";";
+      <div: className=`flex gap-2">";";`;
         <h3 className=&quot;font-semibold text-lg mb-2 line-clamp-2&quot;>{product.title}&quot;</h3>
         
         {product.description && (}
@@ -362,15 +359,14 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
         <div className=&quot;text-2xl font-bold text-primary mb-4&quot;>
           ${product.price?.toFixed(2) || &apos;0.00&apos}&apos;'
 
-      <div className=&quot;flex gap-2&quot;>&quot;"
+      <div className=&quot;flex gap-2&quot;>&quot;`
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger: asChild>
-              <Button
-                variant="outline"";";";
-                size={isMobile: ? "sm" : "default"}";";";
+              <Button variant="outline"";";";
+                size={isMobile: ? "sm" : "default"}";";`;
                 className={`flex-1: ${active ? 'text-red-500' : ''}`}';`;
-                <Heart: className={`h-4 w-4 ${active ? 'fill-current' : ''}`} />';` {!isMobile: && <span className="ml-2">{active ? 'Saved' : 'Save'}</span>}';';
+                <Heart: className={`h-4 w-4 ${active ? 'fill-current' : ''}`} />';` {!isMobile: && <span className=`ml-2`>{active ? 'Saved' : 'Save'}</span>}';';
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -388,14 +384,13 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
 
         <Button: onClick={handleAddToCart}
           disabled={buyDisabled}
-          className="flex-1"";";";
+          className=`flex-1"";";";
           Add: to Cart
           onClick={handleAddToCart}
           className="flex-1";
           Add to Cart;
           className=&quot;flex-1&quot;
-          Add to Cart&quot;
-  );
+          Add to Cart&quot);
 }
 import React { useState } from 'react
 import Link from 'next/link

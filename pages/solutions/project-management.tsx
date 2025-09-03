@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import SEO from '../../components/SEO';
-import { Card } from '../../components/ui/Card';
+import { Card } from '../../components/ui/Card'
 import { Button } from '../../components/ui/Button';
-import { Badge } from '../../components/ui/Badge';
+import { Badge } from '../../components/ui/Badge'
 import { 
   FolderKanban, 
   ArrowRight,
@@ -14,8 +14,7 @@ import {
   BarChart3,
   Target,
   FileText,
-  MessageSquare;
-} from 'lucide-react';
+  MessageSquare} from 'lucide-react';
 
 export default function ProjectManagement() {
   const features = [
@@ -27,28 +26,23 @@ export default function ProjectManagement() {
     {
       icon: Users,
       title: 'Team Collaboration',
-      description: 'Real-time collaboration tools for seamless team communication.';
-},
+      description: 'Real-time collaboration tools for seamless team communication.'},
     {
       icon: Clock,
       title: 'Time Tracking',
-      description: 'Track time spent on projects and tasks with detailed reporting.';
-},
+      description: 'Track time spent on projects and tasks with detailed reporting.'},
     {
       icon: BarChart3,
       title: 'Reporting & Analytics',
-      description: 'Comprehensive reports on project progress and team productivity.';
-},
+      description: 'Comprehensive reports on project progress and team productivity.'},
     {
       icon: FileText,
       title: 'Document Management',
-      description: 'Centralized document storage and version control for all project files.';
-},
+      description: 'Centralized document storage and version control for all project files.'},
     {
       icon: MessageSquare,
       title: 'Communication Hub',
-      description: 'Integrated messaging and discussion threads for project communication.';
-}
+      description: 'Integrated messaging and discussion threads for project communication.'}
   ]
 
   return (
@@ -121,7 +115,7 @@ export default function ProjectManagement() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Streamline Your Projects?
           </h2>
@@ -143,5 +137,4 @@ export default function ProjectManagement() {
         </div>
       </section>
     </>
-  );
-}
+  )}

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import Link from 'next/link';
-import Navigation from '../../src/components/Navigation';
+import Navigation from '../../src/components/Navigation'
 import Footer from '../../src/components/Footer';
-import SEOHead from '../../src/components/SEO/SEOHead';
+import SEOHead from '../../src/components/SEO/SEOHead'
 import ErrorBoundary from '../../src/components/ErrorBoundary';
 import { 
   Database, 
@@ -19,16 +19,14 @@ import {
   TrendingUp,
   Cpu,
   HardDrive,
-  Network;
-} from 'lucide-react';
+  Network} from 'lucide-react';
 
 export default function DatabaseSolutions() {
   const features = [
     {
       icon: Database,
       title: 'Database Design & Architecture',
-      description: 'Custom database solutions designed for optimal performance and scalability';
-},
+      description: 'Custom database solutions designed for optimal performance and scalability'},
     {
       icon: Server,
       title: 'Database Administration',
@@ -37,46 +35,38 @@ export default function DatabaseSolutions() {
     {
       icon: Shield,
       title: 'Data Security & Backup',
-      description: 'Enterprise-grade security with automated backup and disaster recovery';
-},
+      description: 'Enterprise-grade security with automated backup and disaster recovery'},
     {
       icon: Zap,
       title: 'Performance Optimization',
-      description: 'Advanced tuning and optimization for maximum database performance';
-},
+      description: 'Advanced tuning and optimization for maximum database performance'},
     {
       icon: Cloud,
       title: 'Cloud Database Migration',
-      description: 'Seamless migration to cloud-based database solutions';
-},
+      description: 'Seamless migration to cloud-based database solutions'},
     {
       icon: BarChart3,
       title: 'Data Analytics & Reporting',
-      description: 'Transform your data into actionable insights with advanced analytics';
-}
+      description: 'Transform your data into actionable insights with advanced analytics'}
   ]
 
   const databaseTypes = [
     {
       name: 'SQL Databases',
       description: 'MySQL, PostgreSQL, SQL Server, Oracle',
-      icon: Database;
-},
+      icon: Database},
     {
       name: 'NoSQL Databases',
       description: 'MongoDB, Cassandra, Redis, DynamoDB',
-      icon: HardDrive;
-},
+      icon: HardDrive},
     {
       name: 'Cloud Databases',
       description: 'AWS RDS, Azure SQL, Google Cloud SQL',
-      icon: Cloud;
-},
+      icon: Cloud},
     {
       name: 'In-Memory Databases',
       description: 'Redis, Memcached, Hazelcast',
-      icon: Cpu;
-}
+      icon: Cpu}
   ]
 
   const benefits = [
@@ -251,7 +241,7 @@ export default function DatabaseSolutions() {
             Let our database experts help you design, implement, and optimize 
             the perfect database solution for your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link
               href="/contact"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
@@ -271,5 +261,4 @@ export default function DatabaseSolutions() {
 
       <Footer />
     </ErrorBoundary>
-  );
-}
+  )}

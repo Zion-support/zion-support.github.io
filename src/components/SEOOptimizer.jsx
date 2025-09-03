@@ -10,39 +10,39 @@
             setIsAnalyzing(false)}"});,"});
 }, []);,"});,"})
     useEffect(() => {}"});,"})
-        // Auto-analyze SEO when component mounts;,"});,"})
+        // Auto-analyze SEO when component mounts,"});,"})
         analyzeSEO()}, [analyzeSEO]);,"});,"})
     const calculateSEOScore = (page) => {}"});,"})
-        let score = 0;,"});,"})
-        const maxScore = 0;,"});,"})
-        // Title optimization(0 - 20 points) maxScore += 20;,"});,"})
+        let score = 0,"});,"})
+        const maxScore = 0,"});,"})
+        // Title optimization(0 - 20 points) maxScore += 20,"});,"})
         if(page.title.length >= 30 && page.title.length <= 60) {}"});,"})
             score += 20}"});,"})
         else if(page.title.length > 0) {}"});,"})
             score += 10}"});,"})
-        // Meta description(0 - 15 points) maxScore += 15;,"});,"})
+        // Meta description(0 - 15 points) maxScore += 15,"});,"})
         if(page.metaDescription.length >= 120 && page.metaDescription.length <= 160) {}"});,"})
             score += 15}"});,"})
         else if(page.metaDescription.length > 0) {}"});,"})
             score += 8}"});,"})
-        // Headings(0 - 15 points) maxScore += 15;,"});,"})
+        // Headings(0 - 15 points) maxScore += 15,"});,"})
         if(page.headings.length >= 3) {}"});,"})
         else if(page.headings.length >= 1) {}"});,"})
-        // Images(0 - 10 points) maxScore += 10;,"});,"})
+        // Images(0 - 10 points) maxScore += 10,"});,"})
         if(page.images.length >= 2) {}"});,"})
         else if(page.images.length >= 1) {}"});,"})
             score += 5}"});,"})
-        // Internal links(0 - 15 points) maxScore += 15;,"});,"})
+        // Internal links(0 - 15 points) maxScore += 15,"});,"})
         if(page.links.length >= 3) {}"});,"})
         else if(page.links.length >= 1) {}"});,"})
-        // Keywords(0 - 10 points) maxScore += 10;,"});,"})
+        // Keywords(0 - 10 points) maxScore += 10,"});,"})
         if(page.keywords.length >= 3) {}"});,"})
         else if(page.keywords.length >= 1) {}"});,"})
         // URL structure (0-15 points);,"});,"})
-        maxScore += 15;,"});,"})
+        maxScore += 15,"});,"})
         if (page.url === '/' || page.url.includes('-')) {}"});,"})
         else if(page.url.length > 0) {}"});,"})
-            score += 8;,"});,"})
+            score += 8,"});,"})
         return Math.round((score / maxScore) * 100) ;,"});,"});
 };,"});,"})
     const issues = [];,"});,"})
@@ -86,31 +86,31 @@
         recommendations.push('Optimize page loading speed for better user experience and SEO');,"});,"})
         return recommendations};,"});,"})
     const generateSummary = (pageAnalyses, topIssues) => {}"});,"})
-        const totalPages = pageAnalyses.length;,"});,"})
-        const excellentPages = pageAnalyses.filter(page => page.score >= 80) .length;,"});,"})
-        const goodPages = pageAnalyses.filter(page => page.score >= 60) .length;,"});,"})
-        const poorPages = pageAnalyses.filter(page => page.score < 40) .length;,"});,"})
-        let summary = `Analyzed ${totalPages} pages for SEO.`;,"});,"})
+        const totalPages = pageAnalyses.length,"});,"})
+        const excellentPages = pageAnalyses.filter(page => page.score >= 80) .length,"});,"})
+        const goodPages = pageAnalyses.filter(page => page.score >= 60) .length,"});,"})
+        const poorPages = pageAnalyses.filter(page => page.score < 40) .length,"});,`})
+        let summary = `Analyzed ${totalPages} pages for SEO.`;,`});,"})
         if(excellentPages > 0) {}"});,"})
 `;,"});,"})
 ``;,"});,"})
 ```;,"});,"})
-````;,"});,"})
-            summary += `${excellentPages} pages have excellent SEO. `}"});,"})
-        if (goodPages > 0) {}"});,"})
-            summary += `${goodPages} pages have good SEO. `}"});,"})
-        if (poorPages > 0) {}"});,"})
-            summary += `${poorPages} pages need significant SEO improvement. `}"});,"})
+````;,"});,`})
+            summary += `${excellentPages} pages have excellent SEO. `}`});,"})
+        if (goodPages > 0) {}"});,`})
+            summary += `${goodPages} pages have good SEO. `}`});,"})
+        if (poorPages > 0) {}"});,`})
+            summary += `${poorPages} pages need significant SEO improvement. `}`});,"})
         if (topIssues.length > 0) {}"});,"})
 '`;,"});,"})
 '`'`;,"});,"})
 '`'`'`;,"});,"})
-'`'`'`'`;,"});,"})
-            summary += `Top SEO issues to address: ${topIssues.slice(0, 3).join(')}.`}"});,"})
+'`'`'`'`;,"});,`})
+            summary += `Top SEO issues to address: ${topIssues.slice(0, 3).join(')}.`}`});,"})
         return summary};,"});,"})
     const exportSEOReport = () => {}"});,"})
         if (!report);,"});,"})
-            return;,"});,"})
+            return,"});,"})
         const csvContent = ['';,"});,"})
             ['Page URL',Title',SEO Score',Issues',Recommendations'],;,"});,"})
             ...report.pageAnalyses.map(page => [page.pageUrl,';,"});,"})
@@ -119,7 +119,7 @@
                 page.issues.join('; '),''`'`;,"});,"})
                 page.recommendations.join('; ')'`'`'`;,"});,"})
             ])'`'`'`'`;,"});,"})
-        ].map(row => row.map(cell => `"${cell}"`).join(')).join('\n');''';,"});,"})
+        ].map(row => row.map(cell => ``${cell}``).join(')).join('\n');''';,"});,"})
         const blob = new Blob([csvContent] { type 'text/csv' });'';,"});,"})
         const url = window.URL.createObjectURL(blob);''';,"});,"})
         const a = document.createElement('a');'';,"});,"})
@@ -142,12 +142,12 @@
         return 'Poor'};"""";,"});,"})
     return (<div className="fixed bottom-6 right-24 z-50">""";,"});,"})
       {/* Floating Action Button */}"""";,"});,"})
-      <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle SEO Optimizer">"""";,"});,"})
+      <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle SEO Optimizer">"""","});,"})
         <Search className="w-6 h-6"/>;,"});,"})
       </button>;,"});,"})
 """;,"});,"})
       {/* SEO Optimizer Panel */}"""";,"});,"})
-      {isOpen && (<div className="absolute bottom-16 right-0 w-[700px] bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">""";,"});,"})
+      {isOpen && (<div className="absolute bottom-16 right-0 w-[700px] bg-white dark: bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">""","});,"})
           {/* Header */}"""";,"});,"})
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">"""";,"});,"})
             <div className="flex items-center justify-between">"""";,"});,"})
@@ -155,7 +155,7 @@
                 <TrendingUp className="w-5 h-5"/>;,"});,"})
                 SEO Optimizer""";,"});,"})
               </h3>"""";,"});,"})
-              <button onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white transition-colors">;,"});,"})
+              <button onClick={() => setIsOpen(false)} className="text-white/80 hover: text-white transition-colors">,"});,"})
                 ×;,"});,"})
             </div>;,"});,"})
             {/* Summary Stats */}"""";,"});,"})
@@ -176,96 +176,96 @@
                 <span className="ml-2 text-gray-600">Analyzing SEO...</span>"""";,"});,"})
               </div>) : report ? (<div className="space-y-4">""";,"});,"})
                 {/* Top Issues */}"""";,"});,"})
-                {report.topIssues.length > 0 && (<div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">"""";,"});,"})
-                    <h4 className="font-medium text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2">"""";,"});,"})
+                {report.topIssues.length > 0 && (<div className="bg-yellow-50 dark: bg-yellow-900/20 p-4 rounded-lg">"""","});,"})
+                    <h4 className="font-medium text-yellow-800 dark: text-yellow-200 mb-2 flex items-center gap-2">"""","});,"})
                       <AlertTriangle className="w-4 h-4"/>;,"});,"})
                       Top SEO Issues to Address""";,"});,"})
                     </h4>"""";,"});,"})
                     <div className="space-y-1">"""";,"});,"})
-                      {report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className="text-sm text-yellow-700 dark:text-yellow-300">;,"});,"})
+                      {report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className="text-sm text-yellow-700 dark: text-yellow-300">,"});,"})
                           • {issue}"});,"})
                         </div>) ) }"});,"})
                 {/* Pages Analysis */}"""";,"});,"})
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden">"""";,"});,"})
+                <div className="bg-gray-50 dark: bg-gray-800 rounded-lg overflow-hidden">"""","});,"})
                   <div className="overflow-x-auto">"""";,"});,"})
                     <table className="w-full">"""";,"});,"})
-                      <thead className="bg-gray-100 dark:bg-gray-700">""";,"});,"})
+                      <thead className="bg-gray-100 dark: bg-gray-700">""","});,"})
                         <tr>"""";,"});,"})
                           <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">;,"});,"})
                             Page""";,"});,"})
                           </th>"""";,"});,"})
                             SEO Score""";,"});,"})
                             Status""";,"});,"})
-                            Issues;,"});,"})
+                            Issues,"});,"})
                           </th>;,"});,"})
                         </tr>""";,"});,"})
                       </thead>"""";,"});,"})
-                      <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">"""";,"});,"})
+                      <tbody className="bg-white dark: bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">"""","});,"})
                         {report.pageAnalyses.map((page, index) => (<tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer" onClick={() => setSelectedPage(page)}>"""";,"});,"})
                             <td className="px-4 py-3">"""";,"});,"})
-                              <div className="text-sm font-medium text-gray-900 dark:text-white">;,"});,"})
+                              <div className="text-sm font-medium text-gray-900 dark: text-white">,"});,"})
                                 {page.title}""";,"});,"})
-                              <div className="text-xs text-gray-500 dark:text-gray-400">;,"});,"})
+                              <div className="text-xs text-gray-500 dark: text-gray-400">,"});,"})
                                 {page.pageUrl}"});,"})
                               </div>""";,"});,"})
                             </td>"""";,"});,"})
-                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">;,"});,"})
+                            <td className="px-4 py-3 text-sm text-gray-900 dark: text-white">,"});,"})
                               {page.score}%""";,"});,"})
                             </td>""`;,"});,"})
-                            <td className="px-4 py-3">``;,"});,"})
-                              <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full border ${getScoreColor(page.score)}`}>;,"});,"})
+                            <td className="px-4 py-3">``;,"});,`})
+                              <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full border ${getScoreColor(page.score)}`}>;,`});,"})
                                 {getScoreText(page.score)}"});,"})
                               </span>""";,"});,"})
-                              {page.issues.length} issues;,"});,"})
+                              {page.issues.length} issues,"});,"})
                             </td>;,"});,"})
                           </tr>) ) }"});,"})
                       </tbody>;,"});,"})
                     </table>;,"});,"})
                 {/* Page Details Modal */}"""";,"});,"})
                 {selectedPage && (<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">"""";,"});,"})
-                    <div className="bg-white dark:bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">"""";,"});,"})
+                    <div className="bg-white dark: bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">"""","});,"})
                       <div className="flex items-center justify-between mb-4">"""";,"});,"})
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">;,"});,"})
+                        <h3 className="text-lg font-semibold text-gray-900 dark: text-white">,"});,"})
                           SEO Analysis: {selectedPage.title}""";,"});,"})
-                        <button onClick={() => setSelectedPage(null)} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">;,"});,"})
+                        <button onClick={() => setSelectedPage(null)} className="text-gray-400 hover: text-gray-600 dark:hover:text-gray-300">,"});,"})
 """";,"});,"})
                       <div className="space-y-4">"""";,"});,"})
                         <div className="grid grid-cols-2 gap-4">"""";,"});,"})
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">"""";,"});,"})
-                            <div className="text-sm text-gray-500 dark:text-gray-400">SEO Score</div>"""";,"});,"})
+                          <div className="bg-gray-50 dark: bg-gray-800 p-3 rounded-lg">"""","});,"})
+                            <div className="text-sm text-gray-500 dark: text-gray-400">SEO Score</div>"""","});,"})
                             <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.score}%</div>""";,"});,"})
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Headings</div>"""";,"});,"})
+                            <div className="text-sm text-gray-500 dark: text-gray-400">Headings</div>"""","});,"})
                             <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.headings.length}</div>""";,"});,"})
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Images</div>"""";,"});,"})
+                            <div className="text-sm text-gray-500 dark: text-gray-400">Images</div>"""","});,"})
                             <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.images.length}</div>""";,"});,"})
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Links</div>"""";,"});,"})
+                            <div className="text-sm text-gray-500 dark: text-gray-400">Links</div>"""","});,"})
                             <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.links.length}</div>;,"});,"})
                         {selectedPage.issues.length > 0 && (<div>"""";,"});,"})
-                            <h4 className="font-medium text-red-600 dark:text-red-400 mb-2">SEO Issues Found</h4>"""";,"});,"})
+                            <h4 className="font-medium text-red-600 dark: text-red-400 mb-2">SEO Issues Found</h4>"""","});,"})
                             <div className="space-y-2">"""";,"});,"})
-                              {selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dark:text-red-400">"""";,"});,"})
+                              {selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dark: text-red-400">"""","});,"})
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"/>;,"});,"})
                                   <span>{issue}</span>;,"});,"})
                         {selectedPage.recommendations.length > 0 && (<div>"""";,"});,"})
-                            <h4 className="font-medium text-green-600 dark:text-green-400 mb-2">SEO Recommendations</h4>"""";,"});,"})
-                              {selectedPage.recommendations.map((rec, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 dark:text-green-400">"""";,"});,"})
+                            <h4 className="font-medium text-green-600 dark: text-green-400 mb-2">SEO Recommendations</h4>"""","});,"})
+                              {selectedPage.recommendations.map((rec, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 dark: text-green-400">"""","});,"})
                                   <Zap className="w-4 h-4 mt-0.5 flex-shrink-0"/>;,"});,"})
                                   <span>{rec}</span>;,"});,"})
                   </div>)}"""";,"});,"})
               </div>) : (<div className="text-center py-8 text-gray-500">;,"});,"})
-                No SEO analysis data available;,"});,"})
+                No SEO analysis data available,"});,"})
           {/* Footer Actions */}"""";,"});,"})
-          <div className="bg-gray-50 dark:bg-gray-800 p-3 flex gap-2">"'"`;,"});,"})
-            <button onClick={analyzeSEO} disabled={isAnalyzing} className="flex-1 bg-purple-600 hover:bg-purple-700 disabled:bg-purple-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">'`'`;,"});,"})
-              <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`}/>';,"});,"})
+          <div className="bg-gray-50 dark: bg-gray-800 p-3 flex gap-2">"'"`,"});,"})
+            <button onClick={analyzeSEO} disabled={isAnalyzing} className="flex-1 bg-purple-600 hover: bg-purple-700 disabled:bg-purple-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">'`'`,"});,`})
+              <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`}/>';,`});,"})
               {isAnalyzing ? 'Analyzing...' : 'Analyze SEO'}""";,"});,"})
             </button>"""";,"});,"})
-            <button onClick={exportSEOReport} className="px-3 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-md transition-colors flex items-center gap-2">"""";,"});,"})
+            <button onClick={exportSEOReport} className="px-3 py-2 bg-pink-600 hover: bg-pink-700 text-white rounded-md transition-colors flex items-center gap-2">"""","});,"})
               <Download className="w-4 h-4"/>;,"});,"})
-              Export;,"});,"})
+              Export,"});,"})
         </div>)}"});,"})
     </div>)};,"});,"})
-export default SEOOptimizer;,"});,"});
+export default SEOOptimizer,"});,"});
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"});,"})
 export { SEOOptimizer };,"});,"})
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {';import React { useState, useEffect, useCallback } from 'react';
@@ -312,28 +312,28 @@ const SEOOptimizer = () => {}
                     keywords['artificial intelligence',machine learning',predictive analytics',AI automation'];
 &apos;
 &apos;&apos;
-                    url: &apos;/&apos;,&apos;&apos;
-                    title: &apos;Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services&apos;,'&apos;
-                    metaDescription: &apos;Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.&apos;,'&apos;
-                    headings[&apos;AI-Powered Business Solutions&apos;,Comprehensive IT Services&apos;,Micro-SaaS Solutions&apos;],';
-                    images[&apos;/images/hero-ai-solutions.jpg&apos;,/images/hero-it-services.jpg&apos;],';
-                    links[&apos;/services&apos;,/ai-solutions&apos;,/about&apos;,/contact&apos;],';
-                    keywords[&apos;AI solutions&apos;,quantum computing&apos;,cybersecurity&apos;,digital transformation&apos;];
+                    url: &apos;/&apos,&apos;&apos;
+                    title: &apos;Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services&apos,'&apos;
+                    metaDescription: &apos;Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.&apos,'&apos;
+                    headings[&apos;AI-Powered Business Solutions&apos,Comprehensive IT Services&apos,Micro-SaaS Solutions&apos],';
+                    images[&apos;/images/hero-ai-solutions.jpg&apos,/images/hero-it-services.jpg&apos],';
+                    links[&apos;/services&apos,/ai-solutions&apos,/about&apos,/contact&apos],';
+                    keywords[&apos;AI solutions&apos,quantum computing&apos,cybersecurity&apos,digital transformation&apos];
 } {}
-                    url: &apos;/services&apos;,'&apos;
-                    title: &apos;Our Services - Comprehensive Technology Solutions&apos;,'&apos;
-                    metaDescription: &apos;Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.&apos;,'&apos;
-                    headings[&apos;AI Solutions&apos;,Cloud & DevOps&apos;,Cybersecurity&apos;,Digital Transformation&apos;],';
-                    images[&apos;/images/services-overview.jpg&apos;],';
-                    links[&apos;/ai-solutions&apos;,/cloud-devops&apos;,/cybersecurity&apos;,/about&apos;],';
-                    keywords[&apos;technology services&apos;,AI solutions&apos;,cloud infrastructure&apos;,cybersecurity&apos;]
-                    url: &apos;/ai-solutions&apos;,'&apos;
-                    title: &apos;AI Solutions - Artificial Intelligence Services&apos;,'&apos;
-                    metaDescription: &apos;Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.&apos;,'&apos;
-                    headings[&apos;Machine Learning&apos;,Predictive Analytics&apos;,AI Automation&apos;,Business Intelligence&apos;],';
-                    images[&apos;/images/ai-solutions.jpg&apos;],';
-                    links[&apos;/services&apos;,/about&apos;,/contact&apos;],';
-                    keywords[&apos;artificial intelligence&apos;,machine learning&apos;,predictive analytics&apos;,AI automation&apos;]
+                    url: &apos;/services&apos,'&apos;
+                    title: &apos;Our Services - Comprehensive Technology Solutions&apos,'&apos;
+                    metaDescription: &apos;Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.&apos,'&apos;
+                    headings[&apos;AI Solutions&apos,Cloud & DevOps&apos,Cybersecurity&apos,Digital Transformation&apos],';
+                    images[&apos;/images/services-overview.jpg&apos],';
+                    links[&apos;/ai-solutions&apos,/cloud-devops&apos,/cybersecurity&apos,/about&apos],';
+                    keywords[&apos;technology services&apos,AI solutions&apos,cloud infrastructure&apos,cybersecurity&apos]
+                    url: &apos;/ai-solutions&apos,'&apos;
+                    title: &apos;AI Solutions - Artificial Intelligence Services&apos,'&apos;
+                    metaDescription: &apos;Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.&apos,'&apos;
+                    headings[&apos;Machine Learning&apos,Predictive Analytics&apos,AI Automation&apos,Business Intelligence&apos],';
+                    images[&apos;/images/ai-solutions.jpg&apos],';
+                    links[&apos;/services&apos,/about&apos,/contact&apos],';
+                    keywords[&apos;artificial intelligence&apos,machine learning&apos,predictive analytics&apos,AI automation&apos]
 ';'
 ''';'
                     url: '/', ''';'
@@ -406,7 +406,7 @@ const SEOOptimizer = () => {}
                 pageAnalyses, summary})}
         catch (error) {}
             // console.error('Error analyzing SEO:', error)}
-            // console.error(&apos;Error analyzing SEO:&apos;, error)}
+            // console.error(&apos;Error analyzing SEO: &apos, error)}
             // console.error('Error analyzing SEO: ', error)}
         finally {}
             setIsAnalyzing(false)}
@@ -445,7 +445,7 @@ const SEOOptimizer = () => {}
         // URL structure (0-15 points);
         maxScore += 15''
         maxScore += 15';
-        if (page.url === &apos;/&apos; || page.url.includes(&apos;-&apos;)) {}
+        if (page.url === &apos;/&apos; || page.url.includes(&apos;-&apos)) {}
         maxScore += 15';'
         if (page.url === '/' || page.url.includes('-')) {}
         else if(page.url.length > 0) {}
@@ -481,28 +481,28 @@ const SEOOptimizer = () => {}
             issues.push(&apos;Insufficient internal linking (should have at least 2 internal links))}
         if (page.keywords.length&apos;&apos; < 2) {}
             issues.push(&apos;Insufficient keyword targeting (should have at least 2 relevant keywords))}';
-        if (page.url !== &apos;/&apos; && !page.url.includes(&apos;-&apos;)) {}
+        if (page.url !== &apos;/&apos; && !page.url.includes(&apos;-&apos)) {}
             issues.push(&apos;URL could be more SEO-friendly (consider using hyphens))}
         return issues}&apos;&apos;
     const generateSEORecommendations = (issues) => {}
         const;const;const recommendations = []';
-        if (issues.some(issue => issue.includes(&apos;Title&apos;))) {}
-            recommendations.push(&apos;Optimize page titles with relevant keywords and compelling copy&apos;)}';
-        if (issues.some(issue => issue.includes(&apos;Meta description&apos;))) {}
-            recommendations.push(&apos;Write compelling meta descriptions that accurately describe the page content&apos;)}';
-        if (issues.some(issue => issue.includes(&apos;heading structure&apos;))) {}
-            recommendations.push(&apos;Add H1, H2, and H3 headings to improve content structure and SEO&apos;)}';
-        if (issues.some(issue => issue.includes(&apos;No images&apos;))) {}
-            recommendations.push(&apos;Add relevant images with descriptive alt text for better accessibility and SEO&apos;)}';
-        if (issues.some(issue => issue.includes(&apos;internal linking&apos;))) {}
-            recommendations.push(&apos;Add internal links to related pages to improve navigation and SEO&apos;)}';
-        if (issues.some(issue => issue.includes(&apos;keyword targeting&apos;))) {}
-            recommendations.push(&apos;Research and include relevant keywords naturally throughout the content&apos;)}';
-        if (issues.some(issue => issue.includes(&apos;URL&apos;))) {}
-            recommendations.push(&apos;Use SEO-friendly URLs with hyphens and descriptive terms&apos;)}&apos;&apos;
-        recommendations.push(&apos;Ensure content is unique, valuable, and addresses user intent&apos;)';
-        recommendations.push(&apos;Implement structured data markup for better search engine understanding&apos;)';
-        recommendations.push(&apos;Optimize page loading speed for better user experience and SEO&apos;);
+        if (issues.some(issue => issue.includes(&apos;Title&apos))) {}
+            recommendations.push(&apos;Optimize page titles with relevant keywords and compelling copy&apos)}';
+        if (issues.some(issue => issue.includes(&apos;Meta description&apos))) {}
+            recommendations.push(&apos;Write compelling meta descriptions that accurately describe the page content&apos)}';
+        if (issues.some(issue => issue.includes(&apos;heading structure&apos))) {}
+            recommendations.push(&apos;Add H1, H2, and H3 headings to improve content structure and SEO&apos)}';
+        if (issues.some(issue => issue.includes(&apos;No images&apos))) {}
+            recommendations.push(&apos;Add relevant images with descriptive alt text for better accessibility and SEO&apos)}';
+        if (issues.some(issue => issue.includes(&apos;internal linking&apos))) {}
+            recommendations.push(&apos;Add internal links to related pages to improve navigation and SEO&apos)}';
+        if (issues.some(issue => issue.includes(&apos;keyword targeting&apos))) {}
+            recommendations.push(&apos;Research and include relevant keywords naturally throughout the content&apos)}';
+        if (issues.some(issue => issue.includes(&apos;URL&apos))) {}
+            recommendations.push(&apos;Use SEO-friendly URLs with hyphens and descriptive terms&apos)}&apos;&apos;
+        recommendations.push(&apos;Ensure content is unique, valuable, and addresses user intent&apos)';
+        recommendations.push(&apos;Implement structured data markup for better search engine understanding&apos)';
+        recommendations.push(&apos;Optimize page loading speed for better user experience and SEO&apos);
         return recommendations}&apos;&apos;
             issues.push('Title is too short (should be 30-60 characters))}'
 ''
@@ -563,22 +563,22 @@ const SEOOptimizer = () => {}
 &apos;`&apos;`;
 &apos;`&apos;`&apos;`;
 &apos;`&apos;`&apos;`&apos;`;
-            summary += `Top SEO issues to address: ${topIssues.slice(0, 3).join(&apos;)}.`}
+            summary += `Top SEO issues to address: ${topIssues.slice(0, 3).join(&apos)}.`}
         return summary}&apos;&apos;
     const exportSEOReport = () => {}
         if (!report);
             return';&apos;&apos;
-        const csvContent = [&apos [&apos;Page URL&apos;,Title&apos;,SEO Score&apos;,Issues&apos;,Recommendations&apos;],
+        const csvContent = [&apos [&apos;Page URL&apos,Title&apos,SEO Score&apos,Issues&apos,Recommendations&apos],
             ...report.pageAnalyses.map(page => [page.pageUrl,';
                 page.title,&apos;
                 page.score.toString(),&apos;&apos;'`;
-                page.issues.join(&apos;),&apos;&apos;`&apos;`;
-                page.recommendations.join(&apos;)&apos;`&apos;`&apos;`;
+                page.issues.join(&apos),&apos;&apos;`&apos;`;
+                page.recommendations.join(&apos)&apos;`&apos;`&apos;`;
             ])&apos;`&apos;`&apos;`&apos;`;
-        ].map(row => row.map(cell => `&apos;${cell}&apos;`).join(&apos;)).join(&apos;\n&apos;)';&apos;&apos;
+        ].map(row => row.map(cell => `&apos;${cell}&apos;`).join(&apos)).join(&apos;\n&apos)';&apos;&apos;
         const blob = new Blob([csvContent] { type &apos;text/csv&apos})';&apos;&apos;
         const url = window.URL.createObjectURL(blob)';&apos;&apos;
-        const a = document.createElement(&apos;a&apos;)';
+        const a = document.createElement(&apos;a&apos)';
 '`;'
 '`'`;
 '`'`'`;'

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import Layout from '../components/Layout';
 import {
   Shield,
@@ -12,8 +12,7 @@ import {
   Cookie,
   Database,
   Globe,
-  BarChart3;
-} from 'lucide-react';
+  BarChart3} from 'lucide-react';
 
 export default function Cookies() {
   return (
@@ -249,7 +248,7 @@ export default function Cookies() {
               <p className="text-lg text-gray-600 mb-8">
                 If you have any questions about our use of cookies or this policy, please don't hesitate to contact us.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
@@ -268,5 +267,4 @@ export default function Cookies() {
         </section>
       </Layout>
     </>
-  );
-}
+  )}

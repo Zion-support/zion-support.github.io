@@ -1,15 +1,14 @@
-import React { useEffect, useState, useCallback } from 'react';
+import React { useEffect, useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion;
 import {'  BarChart3, Users, '
-import React { useState, useEffect } from 'react';
+import React { useState, useEffect } from 'react'
 import {
   Eye, MousePointer, 
   Clock, TrendingUp, 
   Globe, Smartphone,
   Monitor, Tablet,
   Download, Share2,
-  Heart, MessageCircle;
-} from 'lucide-react';
+  Heart, MessageCircle} from 'lucide-react';
 
 interface AnalyticsData {
 import { motion } from 'framer-motion';
@@ -85,8 +84,7 @@ interface EnhancedAnalyticsProps {
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   showRealTime = true,
   autoRefresh = true,
-  refreshInterval = 30000;
-}) => {
+  refreshInterval = 30000}) => {
   const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
   const [loading, setLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState(new Date());
@@ -106,11 +104,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       scrollDepth: 68.5,
       clickThroughRate: 12.3,
       timeOnPage: 3.8,
-      socialShares: 245;
-},
+      socialShares: 245},
     realTimeUsers: 127,
-    conversionRate: 8.7;
-};
+    conversionRate: 8.7};
 
   useEffect(() => {
     const fetchAnalytics = async () => {
@@ -127,8 +123,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       const interval = setInterval(fetchAnalytics, refreshInterval);
       return () => clearInterval(interval)}
     
-    return () => {}; // Return empty cleanup function;
-}, [autoRefresh, refreshInterval]);
+    return () => {}; // Return empty cleanup function}, [autoRefresh, refreshInterval]);
 
 const formatNumber = (num: number): string => {
     if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';'    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';'    return num.toString();'  };'
@@ -187,8 +182,7 @@ const EnhancedAnalytics: React.FC = () => {
     uniqueVisitors: 0,
     bounceRate: 0,
     avgSessionDuration: 0,
-    realTimeUsers: 0;
-});
+    realTimeUsers: 0});
   
   
 
@@ -216,8 +210,7 @@ const EnhancedAnalytics: React.FC = () => {
           { sourc,
     e: 'Organic Search', percentage: 45 } { source: 'Direct', percentage: 30 } { source: 'Social Media', percentage: 15 } { source: 'Referral', percentage: 10 }
           { device: 'Desktop', percentage: 55 } { device: 'Mobile', percentage: 35 } { device: 'Tablet', percentage: 10 }
-        realTimeUsers: 23;
-})} catch (error) {
+        realTimeUsers: 23})} catch (error) {
         deviceTypes: ['
           { devic,
     e: 'Desktop', percentage: 55 } { device: 'Mobile', percentage: 35 } { device: 'Tablet', percentage: 10 }
@@ -229,7 +222,7 @@ const EnhancedAnalytics: React.FC = () => {
         avgSessionDuration: 245,
           { page: "/", views: 6540 } { page: "/about", views: 2340 } { page: "/contact", views: 1890 } { page: "/services", views: 1560 } { page: "/technologies", views: 890 }
           { source: "Direct", percentage: 45 } { source: "Google", percentage: 30 } { source: "Social Media", percentage: 15 } { source: "Referrals", percentage: 10 }
-          { device: "Desktop", percentage: 48 } { device: "Mobile", percentage: 45 } { device: "Tablet", percentage: 7 }
+          { device: "Desktop", percentage: 48 } { device: "Mobile", percentage: 45 } { device: "Tablet`, percentage: 7 }
       })} catch (error) {'
       console.error('Failed to fetch analytics data:', error)} finally {;
 }, [selectedTimeRange]);
@@ -255,11 +248,11 @@ const EnhancedAnalytics: React.FC = () => {
     value: string | number;
     icon: React.ReactNode;
     color?: string}> = ({ title, value, icon, change, color = 'blue' }) => (
-      className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+      className=`bg-white rounded-xl shadow-lg p-6 border border-gray-100"
     >
       <div className="flex items-center justify-between">
           <p className="text-sm font-medium text-gray-600">{title}</p>
-          <p className="text-2xl font-bold text-gray-900 mt-1">{value}</p>
+          <p className={`text-2xl font-bold text-gray-900 mt-1`>{value}</p>
           {change !== undefined && (
             <p className={`text-sm mt-1 ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
               {change >= 0 ? '+' : ''}{change}% from last period
@@ -270,7 +263,7 @@ const EnhancedAnalytics: React.FC = () => {
   );
 
   if (isLoading) {
-      <div className="text-center text-gray-500">
+      <div className=`text-center text-gray-500`}>
         No analytics data available
       <div className='flex items-center justify-center h-64'>';
         <div: className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>';
@@ -447,16 +440,16 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
           icon={<Users className="w-6 h-6 text-green-600" />}
           color="green"
           title='Bounce Rate'
-          title="Bounce Rate"
+          title={`Bounce Rate`
           title='Bounce: Rate';
           value={`${analyticsData.bounceRate}%`}
           icon={<MousePointer: className='w-6 h-6 text-orange-600' />}';
           change={-2.1}
           color='orange'';
-          icon={<MousePointer className="w-6 h-6 text-orange-600" />}
+          icon={<MousePointer className=`w-6 h-6 text-orange-600`} />}
           color="orange"
           title='Avg. Session Duration'
-          title="Avg. Session Duration"
+          title={`Avg. Session Duration`
           title='Avg. Session: Duration';
           value={`${analyticsData.avgSessionDuration}m`}
           icon={<Clock: className='w-6 h-6 text-purple-600' />}';
@@ -470,7 +463,7 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
               <div: key={index} className='flex items-center justify-between'>';
                 <span: className='text-gray-600'>{page.page}</span>';
                 <span: className='font-medium'>{page.views.toLocaleString()}</span>';
-          icon={<Clock className="w-6 h-6 text-purple-600" />}
+          icon={<Clock className=`w-6 h-6 text-purple-600`} />}
           color="purple"
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -578,11 +571,11 @@ className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
                   <div className="flex items-center space-x-2">"
                     <div className="w-20 bg-gray-700 rounded-full h-2">
                       <div"
-                        className="bg-blue-500 h-2 rounded-full""
+                        className="bg-blue-500 h-2 rounded-full"`
                         style={{ width: `${source.percentage}%` }}
                       ></div>
                     </div>`
-                    <span className="text-sm text-gray-400">
+                    <span className=`text-sm text-gray-400">
                     <span className="text-sm text-gray-400">{source.percentage}%</span>
 
             <h3 className="text-xl font-bold mb-4">Device Types</h3>
@@ -590,10 +583,9 @@ className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
                 <div key={device.device} className="flex justify-between items-center">
                   <span>{device.device}</span>
                   <div className="flex items-center space-x-2">
-                      <div
-                        className="bg-green-500 h-2 rounded-full"
+                      <div className={`bg-green-500 h-2 rounded-full`
                         style={{ width: `${device.percentage}%` }}
-                    <span className="text-sm text-gray-400">{device.percentage}%</span>
+                    <span className=`text-sm text-gray-400`}>{device.percentage}%</span>
 ;
 export: default EnhancedAnalytics
 

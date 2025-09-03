@@ -19,11 +19,11 @@ const FloatingActionButton = ({ className = '' }) => {}"});,"})
       action: () => window.open('mailto:info@ziontechgroup.com',_self'),';,"});,"})
       color: 'bg-purple-500 hover:bg-purple-600'}"});,"})
   ],"});,"})
-  return ();,"});,"})
-    <div className={`fixed bottom-6 right-6 z-50 ${className}`}>;,"});,"})
+  return ();,"});,`})
+    <div className={`fixed bottom-6 right-6 z-50 ${className}`}>;,`});,"})
       <AnimatePresence>;,"});,"})
         {isOpen && (;,"});,"})
-          <motion.div;,"});,"})
+          <motion.div,"});,"})
             initial={{ opacity: 0, scale: 0.8 }}"});,"})
             animate={{ opacity: 1, scale: 1 }}"});,"})
             exit={{ opacity: 0, scale: 0.8 }}"});,"})
@@ -37,15 +37,15 @@ const FloatingActionButton = ({ className = '' }) => {}"});,"})
                 transition={{ delay: index * 0.1 }}"""";,"});,"})
                 className="flex items-center space-x-3""";,"});,"})
                 <motion.button`;,"});,"})
-                  onClick={item.action}``;,"});,"})
-                  className={`${item.color} text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110`}"});,"})
+                  onClick={item.action}``;,"});,`})
+                  className={`${item.color} text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110`}`});,"})
                   whileHover={{ scale: 1.1 }}"});,"})
                   whileTap={{ scale: 0.95 }}"});,"})
                   aria-label={item.label}""";,"});,"})
                 >"""";,"});,"})
                   <item.icon className="w-5 h-5" />;,"});,"})
                 </motion.button>;,"});,"})
-                <motion.span;,"});,"})
+                <motion.span,"});,"})
                   initial={{ opacity: 0, x: -10 }}""";,"});,"})
                   animate={{ opacity: 1, x: 0 }}"""";,"});,"})
                   className="bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap""";,"});,"})
@@ -57,7 +57,7 @@ const FloatingActionButton = ({ className = '' }) => {}"});,"})
       </AnimatePresence>;,"});,"})
       <motion.button""";,"});,"})
         onClick={toggleMenu}"""";,"});,"})
-        className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110""";,"});,"})
+        className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110""","});,"})
         whileTap={{ scale: 0.95 }}';,"});,"})
         aria-label={isOpen ? 'Close quick actions' : 'Open quick actions'}""";,"});,"})
         <AnimatePresence mode="wait">;,"});,"})
@@ -77,11 +77,11 @@ const FloatingActionButton = ({ className = '' }) => {}"});,"})
     </div>) ;,"});,"});
 };,"});,"})
 ;,"});,"})
-export default FloatingActionButton;,"});,"})
+export default FloatingActionButton,"});,"})
 export { FloatingActionButton };,"});,"})
-import React { useState } from 'react';
+import React { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
-import React from 'react';
+import React from 'react'
 import {SEO } from '@/components/SEO';
 
 export default function FloatingActionButton() {return (
@@ -94,7 +94,7 @@ export default function FloatingActionButton() {return (
         </p>
       </div>
   )}
-import React { useState } from &apos;
+import React { useState } from &apos
 import { motion } from &apos;framer-motion';;react&apos;
 import { motion, AnimatePresence } from &apos;framer-motion';
 import {}
@@ -108,19 +108,19 @@ const FloatingActionButton = ({ className = &apos;&apos}) => {}&apos;&apos;
   const toggleMenu = () => setIsOpen(!isOpen);
   const actionItems = []{}
       icon: ChatBubbleLeftRightIcon,';
-      label: &apos;Live Chat&apos;,';
-      action: () => window.open(&apos;http,s://ziontechgroup.com/chat&apos;,_blank&apos;),';
+      label: &apos;Live Chat&apos,';
+      action: () => window.open(&apos;http,s: //ziontechgroup.com/chat&apos,_blank&apos),';
       color: &apos;bg-green-500 hove,r:bg-green-600&apos} {}
       icon: PhoneIcon,';
-      label: &apos;Call Us&apos;,';
-      action: () => window.open(&apos;te,l:+1-555-0123&apos;,_self&apos;),';
+      label: &apos;Call Us&apos,';
+      action: () => window.open(&apos;te,l: +1-555-0123&apos,_self&apos),';
       color: &apos;bg-blue-500 hove,r:bg-blue-600&apos} {}
       icon: EnvelopeIcon,';
-      label: &apos;Email&apos;,';
-      action: () => window.open(&apos;mailt,o:info@ziontechgroup.com&apos;,_self&apos;),';
+      label: &apos;Email&apos,';
+      action: () => window.open(&apos;mailt,o: info@ziontechgroup.com&apos,_self&apos),';
       color: &apos;bg-purple-500 hove,r:bg-purple-600&apos}
 import React { useState } from 'react'';'
-""
+"`
   PlusIcon, XMarkIcon,
   ChatBubbleLeftRightIcon, PhoneIcon,';'
   EnvelopeIcon} from '@heroicons/react/24/outline';
@@ -235,8 +235,7 @@ const FloatingActionButton = ({ className = ' }) => {}
             <motion.div&apos;&apos;'';
               key=&apos;close&apos;&apos;
               transition={{ duration: 0.2 }}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
-              <XMarkIcon className=&apos;w-6 h-6&apos; />&apos;
-          ) : (&apos;&apos;'&apos;&apos;
+              <XMarkIcon className=&apos;w-6 h-6&apos; />&apos) : (&apos;&apos;'&apos;&apos;
               key=&apos;open&apos;&apos;
               <PlusIcon className=&apos;w-6 h-6&apos; />&apos;
       <motion.button''';'
@@ -260,4 +259,4 @@ export { FloatingActionButton }
 
 
 import React { useState }  from 'react;'
-"
+`

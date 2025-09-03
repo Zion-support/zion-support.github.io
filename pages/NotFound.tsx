@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react';
 
 export default function NotFound() {
@@ -41,7 +41,7 @@ export default function NotFound() {
             
             <button
               onClick={() => window.history.back()}
-              className="inline-flex items-center justify-center w-full px-6 py-3 bg-gray-800 text-white font-medium rounded-lg hover:bg-gray-700 transition-colors duration-300"
+              className="inline-flex items-center justify-center w-full px-6 py-3 bg-gray-800 text-white font-medium rounded-lg hover: bg-gray-700 transition-colors duration-300"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
@@ -70,5 +70,4 @@ export default function NotFound() {
         </div>
       </div>
     </>
-  );
-}
+  )}

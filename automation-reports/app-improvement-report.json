@@ -2,28 +2,20 @@
   "timestamp": "2025-09-02T22:42:39.835Z",
   "optimizations": {
     "nextConfig": {
-      "success": true;
-},
+      "success": true},
     "packageJson": {
-      "success": true;
-},
+      "success": true},
     "gitHooks": {
-      "success": true;
-},
+      "success": true},
     "dockerfile": {
-      "success": true;
-},
+      "success": true},
     "dockerCompose": {
-      "success": true;
-},
+      "success": true},
     "nginxConfig": {
-      "success": true;
-},
+      "success": true},
     "healthCheck": {
-      "success": true;
-},
+      "success": true},
     "ciWorkflow": {
-      "success": true;
-}
+      "success": true}
   }
 }

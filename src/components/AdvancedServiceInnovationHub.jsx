@@ -14,7 +14,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
     const [selectedStatus, setSelectedStatus] = useState('all');''';,"});,"})
     const [searchTerm, setSearchTerm] = useState('');''';,"});,"})
     const [viewMode, setViewMode] = useState('trends');,"});,"})
-    // Mock data - in real app this would come from API;,"});,"})
+    // Mock data - in real app this would come from API,"});,"})
     const innovationTrends = [];,"});,"})
         {}"});,"})
             id: 'quantum-supremacy',''';,"});,"})
@@ -27,7 +27,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
             investment: '$50B+',''';,"});,"})
             keyPlayers['IBM',Google',Microsoft',Startups'],;''';,"});,"})
             technologies['Quantum Computing',Quantum Algorithms',Quantum Software'],;''';,"});,"})
-            status: 'Emerging';,"});,"});
+            status: 'Emerging',"});,"});
 },;,"});,"})
             id: 'ai-consciousness',''';,"});,"})
             title: 'AI Consciousness & General Intelligence',''';,"});,"})
@@ -54,7 +54,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
             investment: '$500B+',''';,"});,"})
             keyPlayers['ITER',Private Fusion Companies',Government Labs'],;''';,"});,"})
             technologies['Fusion Physics',Plasma Confinement',Energy Conversion'],;''';,"});,"})
-            status: 'Growing';,"});,"})
+            status: 'Growing',"});,"})
             id: 'synthetic-biology',''';,"});,"})
             title: 'Synthetic Biology Revolution',''';,"});,"})
             description: 'Engineering of custom organisms and biological systems for industrial applications.',''';,"});,"})
@@ -113,20 +113,20 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
       {/* Header */}"});,"})
       <motion.div initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"});
+  y: 20,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  y: 0;,"});,"})
+  y: 0,"});,"})
 """;,"});,"})
 """";,"});,"});
 }} className="mb-8">"""";,"});,"})
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">""";,"});,"})
+        <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4">""","});,"})
           <div>"""";,"});,"})
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">;,"});,"})
               Advanced Service Innovation Hub""";,"});,"})
             </h1>"""";,"});,"})
             <p className="text-zion-slate-light">;,"});,"})
-              Explore cutting-edge innovation trends, future technology roadmaps, and strategic insights for the next generation of services;,"});,"})
+              Explore cutting-edge innovation trends, future technology roadmaps, and strategic insights for the next generation of services,"});,"})
             </p>;,"});,"})
           </div>""";,"});,"})
 "'""";,"});,"})
@@ -143,7 +143,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
       {viewMode === 'trends' && (<>;,"});,"})
           {/* Filters */}"});,"});
 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"""";,"});,"})
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">""";,"});,"})
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">""","});,"})
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>"""";,"});,"})
                 <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">;,"});,"})
                   {categories.map(category => (<option key={category.id} value={category.id}>;,"});,"})
@@ -167,12 +167,12 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
                 <Input placeholder="Search trends..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full"/>;,"});,"})
           </motion.div>;,"});,"})
           {/* Trends Grid */}"});,"});
-}} transition={{ delay: 0.2 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">;,"});,"})
+}} transition={{ delay: 0.2 }} className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">,"});,"})
             {filteredTrends.map((trend, index) => (<motion.div key={trend.id} initial = {}"});,"})
-  x: index % 2 === 0 ? -20 : 20;,"});,"})
-  x: 0;,"});,"});
+  x: index % 2 === 0 ? -20 : 20,"});,"})
+  x: 0,"});,"});
 }} transition={{ delay: 0.1 * index }}>"""";,"});,"})
-                <Card className="h-full hover:shadow-lg transition-shadow">""";,"});,"})
+                <Card className="h-full hover: shadow-lg transition-shadow">""","});,"})
                   <CardHeader>"""";,"});,"})
                     <div className="flex items-start justify-between mb-4">"""";,"});,"})
                       <div className="flex items-center gap-3">"""";,"});,"})
@@ -183,7 +183,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
                           </CardTitle>"""";,"});,"})
                           <div className="flex gap-2 mt-2">;,"});,"})
                             <Badge className={getImpactColor(trend.impact)}>;,"});,"})
-                              {trend.impact} Impact;,"});,"})
+                              {trend.impact} Impact,"});,"})
                             </Badge>;,"});,"})
                             <Badge className={getStatusColor(trend.status) }>;,"});,"})
                               {trend.status}"});,"})
@@ -194,22 +194,22 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
                     </p>""";,"});,"})
                     <div className="space-y-3">"""";,"});,"})
                       <div className="flex justify-between items-center">"""";,"});,"})
-                        <span className="text-sm text-zion-slate-light">Timeline:</span>"""";,"});,"})
+                        <span className="text-sm text-zion-slate-light">Timeline: </span>"""","});,"})
                         <span className="text-sm font-medium text-zion-slate-dark">{trend.timeline}</span>;,"});,"})
-                        <span className="text-sm text-zion-slate-light">Adoption Rate:</span>"""";,"});,"})
+                        <span className="text-sm text-zion-slate-light">Adoption Rate: </span>"""","});,"})
                         <div className="flex items-center gap-2">"""";,"});,"})
-                          <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">"""";,"});,"})
-                            <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: `${trend.adoption}%` }}></div>""";,"});,"})
+                          <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">"""";,"});,`})
+                            <div className={`bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full` style={{ width: `${trend.adoption}%` }}></div>``}`;,"});,"})
                           </div>"""";,"});,"})
                           <span className="text-sm font-medium">{trend.adoption}%</span>;,"});,"})
-                        <span className="text-sm text-zion-slate-light">Investment:</span>"""";,"});,"})
+                        <span className="text-sm text-zion-slate-light">Investment: </span>"""","});,"})
                         <span className="text-sm font-medium text-zion-cyan">{trend.investment}</span>;,"});,"})
-                        <span className="text-sm text-zion-slate-light">Key Technologies:</span>"""";,"});,"})
+                        <span className="text-sm text-zion-slate-light">Key Technologies: </span>"""","});,"})
                         <div className="flex flex-wrap gap-1 mt-1">"""";,"});,"})
                           {trend.technologies.slice(0, 3).map((tech, idx) => (<Badge key={idx} variant="outline" className="text-xs">;,"});,"})
                               {tech}"});,"})
                             </Badge>) ) }"});,"})
-                        <span className="text-sm text-zion-slate-light">Key Players:</span>"""";,"});,"})
+                        <span className="text-sm text-zion-slate-light">Key Players: </span>"""","});,"})
                           {trend.keyPlayers.slice(0, 3).map((player, idx) => (<Badge key={idx} variant="outline" className="text-xs">;,"});,"})
                               {player}"});,"})
                   </CardContent>;,"});,"})
@@ -221,8 +221,8 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
       {viewMode === 'roadmap' && (<motion.div initial = {}"});,"});
 }} transition={{ delay: 0.1 }} className="space-y-6">;,"});,"})
           {futureRoadmap.map((roadmap, index) => (<motion.div key={roadmap.id} initial = {}"});,"})
-  x: -20;,"});,"})
-              <Card className="hover:shadow-lg transition-shadow">""";,"});,"})
+  x: -20,"});,"})
+              <Card className="hover: shadow-lg transition-shadow">""","});,"})
                   <div className="flex items-start justify-between">"""";,"});,"})
                     <div className="flex-1">"""";,"});,"})
                       <div className="flex items-center gap-3 mb-3">"""";,"});,"})
@@ -239,7 +239,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
                           Investment: {roadmap.investment}""";,"});,"})
                         <Badge className="bg-zion-purple/10 text-zion-purple">;,"});,"})
                           {roadmap.category.toUpperCase()}"});,"})
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">""";,"});,"})
+                  <div className="grid grid-cols-1 lg: grid-cols-3 gap-6">""","});,"})
                       <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">"""";,"});,"})
                         <CheckCircle className="w-4 h-4 text-green-500"/>;,"});,"})
                         Key Milestones""";,"});,"})
@@ -264,11 +264,11 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
       {/* Strategic Insights View */}';,"});,"})
       {viewMode === 'insights' && (<motion.div initial = {}"});,"});
 }} transition={{ delay: 0.1 }} className="space-y-6">"""";,"});,"})
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">;,"});,"})
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">,"});,"})
             <Card>""";,"});,"})
                 <CardTitle className="flex items-center gap-2">"""";,"});,"})
                   <TrendingUp className="w-5 h-5 text-zion-green"/>;,"});,"})
-                  Investment Trends;,"});,"})
+                  Investment Trends,"});,"})
                 </CardTitle>;,"});,"})
               </CardHeader>""";,"});,"})
                 <div className="space-y-4">"""";,"});,"})
@@ -287,7 +287,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
                     <span className="font-semibold text-zion-green">$100B+</span>""";,"});,"})
                     <div className="bg-zion-green h-2 rounded-full" style={{ width: '60%' }}></div>;,"});,"})
                   <Users className="w-5 h-5 text-zion-blue"/>;,"});,"})
-                  Market Adoption;,"});,"})
+                  Market Adoption,"});,"})
                     <span className="text-zion-slate-light">Early Adopters</span>"""";,"});,"})
                     <span className="font-semibold text-zion-cyan">15%</span>""";,"});,"})
                     <div className="bg-zion-cyan h-2 rounded-full" style={{ width: '15%' }}></div>;,"});,"})
@@ -301,30 +301,30 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
                     <span className="font-semibold text-zion-green">10%</span>""";,"});,"})
                     <div className="bg-zion-green h-2 rounded-full" style={{ width: '10%' }}></div>;,"});,"})
                 <Lightbulb className="w-5 h-5 text-zion-yellow"/>;,"});,"})
-                Strategic Recommendations;,"});,"})
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">""";,"});,"})
+                Strategic Recommendations,"});,"})
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">""","});,"})
                   <h4 className="font-semibold text-zion-slate-dark mb-3">Immediate Actions (0-2 years)</h4>"""";,"});,"})
                     <li className="text-sm text-zion-slate-light flex items-start gap-2">"""";,"});,"})
                       <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0"/>;,"});,"})
                       Invest in quantum computing research and development""";,"});,"})
                     </li>"""";,"});,"})
                       Develop AI ethics and governance frameworks""";,"});,"})
-                      Establish partnerships with space technology companies;,"});,"})
+                      Establish partnerships with space technology companies,"});,"})
                     </li>;,"});,"})
                   <h4 className="font-semibold text-zion-slate-dark mb-3">Strategic Planning (2-5 years)</h4>"""";,"});,"})
                       <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0"/>;,"});,"})
                       Build quantum internet infrastructure""";,"});,"})
                       Develop synthetic biology capabilities""";,"});,"})
-                      Invest in fusion energy research;,"});,"})
+                      Invest in fusion energy research,"});,"})
       {/* CTA Section */}"});,"});
 }} transition={{ delay: 0.4 }} className="mt-12 text-center">"""";,"});,"})
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"""";,"});,"})
           <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>"""";,"});,"})
           <p className="text-xl mb-6 max-w-2xl mx-auto">;,"});,"})
-            Our innovation hub provides the insights and strategies you need to stay ahead;,"});,"})
+            Our innovation hub provides the insights and strategies you need to stay ahead,"});,"})
             of emerging technologies and capitalize on future opportunities.""";,"});,"})
           </p>"""";,"});,"})
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">"""";,"});,"})
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">"""","});,"})
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {}"});,"})
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',_blank');,"});,"});
 }>"""";,"});,"})
@@ -334,23 +334,23 @@ const AdvancedServiceInnovationHub = () => {}"});,"})
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {}"});,"})
   () => window.open('tel:+13024640950',_blank');,"});,"})
               <Zap className="w-5 h-5 mr-2"/>;,"});,"})
-              Speak with an Expert;,"});,"})
+              Speak with an Expert,"});,"})
             </Button>;,"});,"})
     </div>)};,"});,"})
-export default AdvancedServiceInnovationHub;,"});,"});
+export default AdvancedServiceInnovationHub,"});,"});
 }}}}}}"});,"})
 export { AdvancedServiceInnovationHub };,"});,"})
-import React { useState, useMemo } from 'react';
+import React { useState, useMemo } from 'react'
 import { motion } from 'framer-motion';
-import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';
+import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
+import { Button } from './ui/button'
 import { Badge } from './ui/badge';
 import { Input } from './ui/input';
 const AdvancedServiceInnovationHub = () => {}
 ';
 '';
-import React from 'react';
+import React from 'react'
 import {SEO } from '@/components/SEO';
 
 export default function AdvancedServiceInnovationHub() {return (
@@ -372,67 +372,67 @@ import { Badge } from &apos;./ui/badge&apos;&apos;
 import { Input } from &apos;./ui/input';&apos;&apos;
 &apos;
 &apos;&apos;&apos;&apos;
-    const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos;)';&apos;&apos;
-    const [selectedImpact, setSelectedImpact] = useState(&apos;all&apos;)';&apos;&apos;
-    const [selectedStatus, setSelectedStatus] = useState(&apos;all&apos;)';&apos;&apos;
-    const [searchTerm, setSearchTerm] = useState(&apos;&apos;)';&apos;&apos;
-    const [viewMode, setViewMode] = useState(&apos;trends&apos;);
+    const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos)';&apos;&apos;
+    const [selectedImpact, setSelectedImpact] = useState(&apos;all&apos)';&apos;&apos;
+    const [selectedStatus, setSelectedStatus] = useState(&apos;all&apos)';&apos;&apos;
+    const [searchTerm, setSearchTerm] = useState(&apos;&apos)';&apos;&apos;
+    const [viewMode, setViewMode] = useState(&apos;trends&apos);
     // Mock data - in real app this would come from API;&apos;
     const innovationTrends = []{}
 &apos;&apos;
-            id: &apos;quantum-supremacy&apos;,'&apos;
-            title: &apos;Quantum Supremacy & Commercialization&apos;,'&apos;
-            description: &apos;The transition from quantum research to practical commercial applications across industries.&apos;,'&apos;
-            category: &apos;quantum&apos;,'&apos;
-            impact: &apos;High&apos;,'&apos;
-            timeline: &apos;2025-2030&apos;,&apos;
+            id: &apos;quantum-supremacy&apos,'&apos;
+            title: &apos;Quantum Supremacy & Commercialization&apos,'&apos;
+            description: &apos;The transition from quantum research to practical commercial applications across industries.&apos,'&apos;
+            category: &apos;quantum&apos,'&apos;
+            impact: &apos;High&apos,'&apos;
+            timeline: &apos;2025-2030&apos,&apos;
             adoption: 85,&apos;&apos;
-            investment: &apos;$50B+&apos;,'&apos;
-            keyPlayers[&apos;IBM&apos;,Google&apos;,Microsoft&apos;,Startups&apos;],';
-            technologies[&apos;Quantum Computing&apos;,Quantum Algorithms&apos;,Quantum Software&apos;],';
+            investment: &apos;$50B+&apos,'&apos;
+            keyPlayers[&apos;IBM&apos,Google&apos,Microsoft&apos,Startups&apos],';
+            technologies[&apos;Quantum Computing&apos,Quantum Algorithms&apos,Quantum Software&apos],';
             status: &apos;Emerging&apos} {}
-            id: &apos;ai-consciousness&apos;,'&apos;
-            title: &apos;AI Consciousness & General Intelligence&apos;,'&apos;
-            description: &apos;Development of self-aware AI systems with human-like reasoning and consciousness.&apos;,'&apos;
-            category: &apos;ai&apos;,'&apos;
-            timeline: &apos;2030-2040&apos;,&apos;
+            id: &apos;ai-consciousness&apos,'&apos;
+            title: &apos;AI Consciousness & General Intelligence&apos,'&apos;
+            description: &apos;Development of self-aware AI systems with human-like reasoning and consciousness.&apos,'&apos;
+            category: &apos;ai&apos,'&apos;
+            timeline: &apos;2030-2040&apos,&apos;
             adoption: 45,&apos;&apos;
-            investment: &apos;$100B+&apos;,'&apos;
-            keyPlayers[&apos;OpenAI&apos;,Anthropic&apos;,Research Labs&apos;,Universities&apos;],';
-            technologies[&apos;AI Consciousness&apos;,General AI&apos;,Neural Networks&apos;],';
-            id: &apos;space-mining&apos;,'&apos;
-            title: &apos;Space Mining & Resource Extraction&apos;,'&apos;
-            description: &apos;Commercial extraction of valuable resources from asteroids and celestial bodies.&apos;,'&apos;
-            category: &apos;space-tech&apos;,'&apos;
+            investment: &apos;$100B+&apos,'&apos;
+            keyPlayers[&apos;OpenAI&apos,Anthropic&apos,Research Labs&apos,Universities&apos],';
+            technologies[&apos;AI Consciousness&apos,General AI&apos,Neural Networks&apos],';
+            id: &apos;space-mining&apos,'&apos;
+            title: &apos;Space Mining & Resource Extraction&apos,'&apos;
+            description: &apos;Commercial extraction of valuable resources from asteroids and celestial bodies.&apos,'&apos;
+            category: &apos;space-tech&apos,'&apos;
             adoption: 30,&apos;&apos;
-            investment: &apos;$200B+&apos;,'&apos;
-            keyPlayers[&apos;SpaceX&apos;,Blue Origin&apos;,Asteroid Mining Companies&apos;],';
-            technologies[&apos;Space Robotics&apos;,Resource Processing&apos;,Space Logistics&apos;],';
-            id: &apos;fusion-energy&apos;,'&apos;
-            title: &apos;Fusion Energy Commercialization&apos;,'&apos;
-            description: &apos;Breakthrough in controlled nuclear fusion for unlimited clean energy.&apos;,'&apos;
-            category: &apos;green-tech&apos;,'&apos;
+            investment: &apos;$200B+&apos,'&apos;
+            keyPlayers[&apos;SpaceX&apos,Blue Origin&apos,Asteroid Mining Companies&apos],';
+            technologies[&apos;Space Robotics&apos,Resource Processing&apos,Space Logistics&apos],';
+            id: &apos;fusion-energy&apos,'&apos;
+            title: &apos;Fusion Energy Commercialization&apos,'&apos;
+            description: &apos;Breakthrough in controlled nuclear fusion for unlimited clean energy.&apos,'&apos;
+            category: &apos;green-tech&apos,'&apos;
             adoption: 60,&apos;&apos;
-            investment: &apos;$500B+&apos;,'&apos;
-            keyPlayers[&apos;ITER&apos;,Private Fusion Companies&apos;,Government Labs&apos;],';
-            technologies[&apos;Fusion Physics&apos;,Plasma Confinement&apos;,Energy Conversion&apos;],';
+            investment: &apos;$500B+&apos,'&apos;
+            keyPlayers[&apos;ITER&apos,Private Fusion Companies&apos,Government Labs&apos],';
+            technologies[&apos;Fusion Physics&apos,Plasma Confinement&apos,Energy Conversion&apos],';
             status: &apos;Growing&apos} {}
-            id: &apos;synthetic-biology&apos;,'&apos;
-            title: &apos;Synthetic Biology Revolution&apos;,'&apos;
-            description: &apos;Engineering of custom organisms and biological systems for industrial applications.&apos;,'&apos;
-            category: &apos;biotech-ai&apos;,'&apos;
-            timeline: &apos;2025-2035&apos;,&apos;
+            id: &apos;synthetic-biology&apos,'&apos;
+            title: &apos;Synthetic Biology Revolution&apos,'&apos;
+            description: &apos;Engineering of custom organisms and biological systems for industrial applications.&apos,'&apos;
+            category: &apos;biotech-ai&apos,'&apos;
+            timeline: &apos;2025-2035&apos,&apos;
             adoption: 70,&apos;&apos;
-            investment: &apos;$150B+&apos;,'&apos;
-            keyPlayers[&apos;Ginkgo Bioworks&apos;,Twist Bioscience&apos;,Research Institutions&apos;],';
-            technologies[&apos;DNA Programming&apos;,Genetic Engineering&apos;,Bio-Manufacturing&apos;],';
-            id: &apos;brain-computer-interfaces&apos;,'&apos;
-            title: &apos;Brain-Computer Interface Revolution&apos;,'&apos;
-            description: &apos;Direct neural control of computers and digital systems for enhanced human capabilities.&apos;,'&apos;
+            investment: &apos;$150B+&apos,'&apos;
+            keyPlayers[&apos;Ginkgo Bioworks&apos,Twist Bioscience&apos,Research Institutions&apos],';
+            technologies[&apos;DNA Programming&apos,Genetic Engineering&apos,Bio-Manufacturing&apos],';
+            id: &apos;brain-computer-interfaces&apos,'&apos;
+            title: &apos;Brain-Computer Interface Revolution&apos,'&apos;
+            description: &apos;Direct neural control of computers and digital systems for enhanced human capabilities.&apos,'&apos;
             adoption: 40,&apos;&apos;
-            investment: &apos;$80B+&apos;,'&apos;
-            keyPlayers[&apos;Neuralink&apos;,Kernel&apos;,Medical Device Companies&apos;],';
-            technologies[&apos;Neural Interfaces&apos;,Signal Processing&apos;,AI/ML&apos;],';
+            investment: &apos;$80B+&apos,'&apos;
+            keyPlayers[&apos;Neuralink&apos,Kernel&apos,Medical Device Companies&apos],';
+            technologies[&apos;Neural Interfaces&apos,Signal Processing&apos,AI/ML&apos],';
             status: &apos;Emerging&apos}
     ]&apos;&apos;
 import React { useState, useMemo } from 'react'';'
@@ -444,7 +444,7 @@ import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCir
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';'';'
 import { Button } from './ui/button'';'';'
 import { Badge } from './ui/badge'';'';'
-""
+"`
 ';'
 ''';'
     const [selectedCategory, setSelectedCategory] = useState('all')';
@@ -593,8 +593,7 @@ import { Badge } from './ui/badge'';'';'
             case &apos;biotech-ai&apos;: return&apos;&apos; <Dna className=&apos;w-5 h-5&apos;/>';&apos;&apos;
             default: return&apos;&apos; <Cpu className=&apos;w-5 h-5&apos;/>}
     }&apos;&apos;&apos;'
-    const categories = [&apos;&apos;'&apos;&apos;'{ id: &apos;all&apos;, name: &apos;All Categories&apos;, icon:&apos}&apos; <Globe className=&apos;w-4 h-4&apos;/> },&apos;&apos;'&apos;&apos { id: &apos;quantum&apos;, name: &apos;Quantum Technology&apos;, icon:&apos}&apos; <Atom className=&apos;w-4 h-4&apos;/> },&apos;&apos;'&apos;&apos { id: &apos;ai&apos;, name: &apos;Artificial Intelligence&apos;, icon:&apos}&apos; <Brain className=&apos;w-4 h-4&apos;/> },&apos;&apos;'&apos;&apos { id: &apos;space-tech&apos;, name: &apos;Space Technology&apos;, icon:&apos}&apos; <Satellite className=&apos;w-4 h-4&apos;/> },&apos;&apos;'&apos;&apos { id: &apos;green-tech&apos;, name: &apos;Green Technology&apos;, icon:&apos}&apos; <Leaf className=&apos;w-4 h-4&apos;/> },&apos;&apos;'&apos;&apos { id: &apos;biotech-ai&apos;, name: &apos;Biotech AI&apos;, icon:&apos}&apos; <;<Dna className=&apos;w-4 h-4&apos;/> }&apos;&apos;
-    ]';&apos;&apos;
+    const categories = [&apos;&apos;'&apos;&apos;'{ id: &apos;all&apos, name: &apos;All Categories&apos, icon:&apos}&apos; <Globe className=&apos;w-4 h-4&apos;/> },&apos;&apos;'&apos;&apos { id: &apos;quantum&apos, name: &apos;Quantum Technology&apos, icon:&apos}&apos; <Atom className=&apos;w-4 h-4&apos;/> },&apos;&apos;'&apos;&apos { id: &apos;ai&apos, name: &apos;Artificial Intelligence&apos, icon:&apos}&apos; <Brain className=&apos;w-4 h-4&apos;/> },&apos;&apos;'&apos;&apos { id: &apos;space-tech&apos, name: &apos;Space Technology&apos, icon:&apos}&apos; <Satellite className=&apos;w-4 h-4&apos;/> },&apos;&apos;'&apos;&apos { id: &apos;green-tech&apos, name: &apos;Green Technology&apos, icon:&apos}&apos; <Leaf className=&apos;w-4 h-4&apos;/> },&apos;&apos;'&apos;&apos { id: &apos;biotech-ai&apos, name: &apos;Biotech AI&apos, icon:&apos}&apos; <;<Dna className=&apos;w-4 h-4&apos;/> }&apos;&apos]';&apos;&apos;
     return (&apos;&apos;<div className=&apos;max-w-7xl mx-auto p-6&apos;>
       {/* Header */}&apos;
             case 'High': return 'bg-red-100 text-red-800'';'
@@ -723,7 +722,7 @@ import { Badge } from './ui/badge'';'';'
               Explore cutting-edge innovation trends, future technology roadmaps, and strategic insights for the next generation of services&apos;
           </div>&apos;&apos;
           &apos;&apos;'&apos;&apos;''
-          <div className=&apos;flex gap-2&apos;>'&apos;&apos;'&apos;&apos {[&apos;trends&apos;,roadmap&apos;,insights&apos;].map((mode) => (&apos}&apos;<Button key={mode} variant={viewMode === mode ? &apos;default&apos; : &apos;outline&apos} size=&apos;sm&apos; onClick={() => setViewMode(mode)}>&apos;&apos;'&apos;&apos;'{mode === &apos;trends&apos; &&'}&apos; <TrendingUp className=&apos;w-4 h-4 mr-2&apos;/>}&apos;&apos;'&apos;&apos;'{mode === &apos;roadmap&apos; &&'}&apos; <Rocket className=&apos;w-4 h-4 mr-2&apos;/>}&apos;&apos;'&apos;&apos;'{mode === &apos;insights&apos; &&'}&apos; <Lightbulb className=&apos;w-4 h-4 mr-2&apos;/>}
+          <div className=&apos;flex gap-2&apos;>'&apos;&apos;'&apos;&apos {[&apos;trends&apos,roadmap&apos,insights&apos].map((mode) => (&apos}&apos;<Button key={mode} variant={viewMode === mode ? &apos;default&apos; : &apos;outline&apos} size=&apos;sm&apos; onClick={() => setViewMode(mode)}>&apos;&apos;'&apos;&apos;'{mode === &apos;trends&apos; &&'}&apos; <TrendingUp className=&apos;w-4 h-4 mr-2&apos;/>}&apos;&apos;'&apos;&apos;'{mode === &apos;roadmap&apos; &&'}&apos; <Rocket className=&apos;w-4 h-4 mr-2&apos;/>}&apos;&apos;'&apos;&apos;'{mode === &apos;insights&apos; &&'}&apos; <Lightbulb className=&apos;w-4 h-4 mr-2&apos;/>}
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}&apos;
       </motion.div>&apos;
 '&apos {/* Innovation Trends View */}&apos;&apos;'{viewMode === &apos;trends&apos; && (&apos}&apos;<>{/* Filters */}
@@ -1044,7 +1043,7 @@ import { Badge } from './ui/badge'';'';'
             </Button>'';
             <Button variant='outline' className='border-white text-white hover:bg-white hover:text-zion-purple' onClick = {}
 ' () => window.open('tel:+13024640950',_blank');
-              <Zap className='w-5 h-5 mr-2"/>;
+              <Zap className='w-5 h-5 mr-2`/>;
               Speak with an Expert;
             </Button>;
       </motion.div> {/* Strategic Insights View */}&apos {viewMode === &apos;insights&apos; && (&apos}<motion.div initial = {}
@@ -1165,13 +1164,13 @@ import { Badge } from './ui/badge'';'';'
           </p>&apos;&apos;'&apos;&apos;'
           <div className=&apos;flex flex-col sm:flex-row gap-4 justify-center&apos;>'&apos;&apos;'&apos;&apos;
             <Button className=&apos;bg-white text-zion-purple hove,r:bg-zion-slate-light&apos; onClick = {}
-' () => window.open(&apos;mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation&apos;,_blank&apos;);
+' () => window.open(&apos;mailto: kleber@ziontechgroup.com?subject=Innovation Strategy Consultation&apos,_blank&apos);
 &apos;&apos;'}>&apos;&apos;'&apos;&apos;'
               <Users className=&apos;w-5 h-5 mr-2&apos;/>
               Get Innovation Strategy&apos;&apos;'&apos;&apos;
             </Button>&apos;&apos;'&apos;&apos;'
             <Button variant=&apos;outline&apos; className=&apos;border-white text-white hover:bg-white hove,r:text-zion-purple&apos; onClick = {}
-' () => window.open(&apos;tel:+13024640950&apos;,_blank&apos;);
+' () => window.open(&apos;tel: +13024640950&apos,_blank&apos);
               <Zap className=&apos;w-5 h-5 mr-2&quot;/>
               Speak with an Expert&quot;
 ''''}} transition={{ delay: 0.4 }} className='mt-12 text-center'>''''

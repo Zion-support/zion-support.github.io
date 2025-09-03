@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import Head from 'next/head';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import { 
   Eye, 
   EyeOff, 
@@ -10,14 +10,12 @@ import {
   User,
   Shield,
   Zap,
-  Star;
-} from 'lucide-react';
+  Star} from 'lucide-react';
 
 export default function Login() {
   const [formData, setFormData] = useState({
     email: '',
-    password: '';
-});
+    password: ''});
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -26,8 +24,7 @@ export default function Login() {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value;
-}));
+      [name]: value}));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -46,23 +43,19 @@ export default function Login() {
     {
       icon: User,
       title: 'Personal Dashboard',
-      description: 'Access your personalized workspace';
-},
+      description: 'Access your personalized workspace'},
     {
       icon: Shield,
       title: 'Secure Access',
-      description: 'Enterprise-grade security';
-},
+      description: 'Enterprise-grade security'},
     {
       icon: Zap,
       title: 'Fast Performance',
-      description: 'Lightning-fast platform';
-},
+      description: 'Lightning-fast platform'},
     {
       icon: Star,
       title: 'Premium Features',
-      description: 'Access to exclusive tools';
-}
+      description: 'Access to exclusive tools'}
   ]
 
   return (
@@ -236,7 +229,7 @@ export default function Login() {
               <div className="mt-8 text-center">
                 <p className="text-gray-600">
                   Don't have an account?{' '}
-                  <a href="/register" className="text-blue-600 hover:text-blue-500 font-medium">
+                  <a href="/register" className="text-blue-600 hover: text-blue-500 font-medium">
                     Create one here
                   </a>
                 </p>
@@ -246,5 +239,4 @@ export default function Login() {
         </div>
       </div>
     </>
-  );
-}
+  )}

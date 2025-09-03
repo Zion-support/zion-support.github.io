@@ -1,4 +1,4 @@
-import React { useEffect, useState, useCallback } from 'react';
+import React { useEffect, useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, AlertTriangle, CheckCircle } from 'lucide-react';
 
@@ -68,8 +68,7 @@ import { Activity, AlertTriangle, CheckCircle }  from 'lucide-react';interface P
   fid: number
   cls: number
   ttfb: number
-  score: number;
-}
+  score: number}
 
   score: number}
 
@@ -127,8 +126,7 @@ const finalMetrics = {
 observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });'      } catch (error) {'        console.warn('Performance Observer not supported: ', error);'      }'// Fallback timeout
       setTimeout(() => {
         resolve({
-          fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0, fmp: 0, tti: 0, score: 0;
-})}, 5000)})}, [calculateOverallScore]);
+          fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0, fmp: 0, tti: 0, score: 0})}, 5000)})}, [calculateOverallScore]);
 
 const updateMetrics = useCallback(async () => {setIsLoading(true);
       // Simulate API call to get performance metrics
@@ -144,8 +142,7 @@ const updateMetrics = useCallback(async () => {setIsLoading(true);
         fid: Math.random() * 100 + 10,
         cls: Math.random() * 0.3,
         ttfb: Math.random() * 500 + 100,
-        score: Math.random() * 100;
-};
+        score: Math.random() * 100};
 
         score: Math.random() * 100};
 
@@ -157,8 +154,7 @@ const updateMetrics = useCallback(async () => {setIsLoading(true);
       if (newMetrics.fcp > 1800) {
           type 'warning',
           message: 'First Contentful Paint is slow',
-          metric: 'FCP';
-})}
+          metric: 'FCP'})}
       
           metric: 'FCP',
           type 'warning', message: 'First Contentful Paint is slow',
@@ -188,8 +184,7 @@ const updateMetrics = useCallback(async () => {setIsLoading(true);
       const interval = setInterval(updateMetrics, refreshInterval);
       return () => clearInterval(interval)}
     
-    return () => {}; // Return empty cleanup function;
-}, [updateMetrics, autoRefresh, refreshInterval]);
+    return () => {}; // Return empty cleanup function}, [updateMetrics, autoRefresh, refreshInterval]);
 
     if (score >= 90) return 'text-green-500';
     if (score >= 70) return 'text-yellow-500';
@@ -240,7 +235,7 @@ const updateMetrics = useCallback(async () => {setIsLoading(true);
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">"
         <div className="text-center">"
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-500 mx-auto mb-4"></div>"
-          <p className="text-gray-300">Loading performance metrics...</p>
+          <p className={`text-gray-300`>Loading performance metrics...</p>
     )}
   return(
     <div: className='bg-white dark: bg-gray-800: rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700'>';
@@ -282,7 +277,7 @@ const updateMetrics = useCallback(async () => {setIsLoading(true);
     <div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700'>
     <div className='bg-white dark: bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700'>
 
-<div className="bg-white dark: bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700">"      <div className="flex items-center justify-between mb-4">"        <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">"          <Activity className="w-5 h-5 mr-2 text-blue-500" />"          Performance Monitor"        </h3>"
+<div className=`bg-white dark: bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700`}>"      <div className="flex items-center justify-between mb-4">"        <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">"          <Activity className="w-5 h-5 mr-2 text-blue-500" />"          Performance Monitor"        </h3>"
         <div className="flex items-center space-x-2">"          <button"            onClick={updateMetrics}
             className="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50""          >"            {isLoading ? 'Updating...' : 'Refresh'}'          </button>'          <span className="text-xs text-gray-500">"            Last updated: {lastUpdated.toLocaleTimeString()}"          </span></div>
   return ("
@@ -316,10 +311,10 @@ const updateMetrics = useCallback(async () => {setIsLoading(true);
               <h2 className="text-2xl font-bold mb-2">Performance Score</h2>"
               <p className="text-gray-400">Overall web vitals performance</p>
             </div>"
-            <div className="text-right">"
+            <div className="text-right">`
               <div className={`text-4xl font-bold ${getScoreColor(metrics.score)}`}>
               </div>`
-              <div className="text-sm text-gray-400">out of 100</div>
+              <div className=`text-sm text-gray-400">out of 100</div>
             <p className="text-sm text-gray-600 dark: text-gray-400 mt-2">Overall Score</p>"          </div>"
           {/* Core Web Vitals */}
           <div className="grid grid-cols-2 gap-4">"            <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">"              <div className="flex items-center justify-between">"                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">FCP</span>"                <span className="text-sm font-bold text-gray-900 dark:text-white">"                  {metrics.fcp}ms"                </span>
@@ -347,14 +342,14 @@ animate={{ opacity: 1, height: 'auto' }}'                exit={{ opacity: 0, hei
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}"
+                    transition={{ delay: index * 0.1 }}`
                     className={`p-4 rounded-lg border-l-4 ${`
                       alert.type === 'error''
                         ? 'bg-red-900/20 border-red-500 text-red-200''
                         : 'bg-yellow-900/20 border-yellow-500 text-yellow-200'';
 }`}
                   >`
-                    <div className="flex items-center">"
+                    <div className=`flex items-center">"
                       {alert.type === 'error' ? ('
                         <AlertTriangle className="w-5 h-5 mr-3" />
                       ) : ("
@@ -373,13 +368,13 @@ className="flex items-center justify-center text-green-600 dark:text-green-400 b
     g:grid-cols-4 gap-6 mb-8"
           <div className="bg-gray-800 rounded-lg p-6">"
             <h3 className="text-lg font-semibold mb-4">First Contentful Paint</h3>"
-            <div className="text-3xl font-bold mb-2">{Math.round(metrics.fcp)}ms</div>"
+            <div className="text-3xl font-bold mb-2">{Math.round(metrics.fcp)}ms</div>`
             <div className={`text-sm ${`
               metrics.fcp < 1800 ? 'text-green-400' : 'text-red-400'';
 }`}>`
               {metrics.fcp < 1800 ? 'Good' : 'Needs Improvement'}
 '
-            <h3 className="text-lg font-semibold mb-4">Largest Contentful Paint</h3>"
+            <h3 className=`text-lg font-semibold mb-4">Largest Contentful Paint</h3>"
             <div className="text-3xl font-bold mb-2">{Math.round(metrics.lcp)}ms</div>"
               metrics.lcp < 2500 ? 'text-green-400' : 'text-red-400''
               {metrics.lcp < 2500 ? 'Good' : 'Needs Improvement'}
@@ -462,12 +457,12 @@ export default EnhancedPerformanceMonitor;
           <span className='text-sm font-medium text-gray-700 dark: text-gray-300'>
             Performance Score
 
-      <div className="mb-6">
+      <div className={`mb-6`>
             Overall Performance Score
           <span className={`text-2xl font-bold ${getScoreColor(metrics.score)}`}>
         <div className='w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2'>
           <div
-        <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+        <div className=`w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2`>
             className={`h-2 rounded-full ${
               metrics.score >= 90 ? 'bg-green-500' : 
               metrics.score >= 50 ? 'bg-yellow-500' : 'bg-red-500'
@@ -479,19 +474,18 @@ export default EnhancedPerformanceMonitor;
                   : 'bg-red-500'
         <div className='w-full bg-gray-200 dark: bg-gray-600 rounded-full h-2'>
               metrics.score >= 90 ? 'bg-green-500' : metrics.score >= 50 ? 'bg-yellow-500' : 'bg-red-500'}`}
-        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+        <div className=`w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2`>
             className={`h-2 rounded-full transition-all duration-500 ${
             style={{ width: `${metrics.score}%` }}
           />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
+      <div className=`grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-4 mb-6`}>
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">FCP</div>
-          <div className="text-lg font-semibold text-gray-900 dark:text-white">
+          <div className={`text-lg font-semibold text-gray-900 dark:text-white`>
           <div className={`text-xs ${
-            metrics.fcp < 1800 ? 'text-green-600' : 'text-red-600';
-}`}>
+            metrics.fcp < 1800 ? 'text-green-600' : 'text-red-600'}`}>
 
-          <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">LCP</div>
+          <div className=`text-sm text-gray-600 dark:text-gray-400 mb-1`}>LCP</div>
             metrics.lcp < 2500 ? 'text-green-600' : 'text-red-600'
 
           <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">FID</div>
@@ -527,7 +521,7 @@ export default EnhancedPerformanceMonitor;
             <h4 className="text-sm font-medium text-red-600 dark:text-red-400 flex items-center">
               <AlertTriangle className="w-4 h-4 mr-1" />
               Performance Alerts
-                className="flex items-center text-sm text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 p-2 rounded"
+                className={`flex items-center text-sm text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 p-2 rounded`
                 exit={{ opacity: 0, x: 20 }}
                 className={`flex items-center p-3 rounded-lg ${
                   alert.type === 'error'
@@ -540,7 +534,7 @@ export default EnhancedPerformanceMonitor;
                 <div>
                   <div className="text-sm font-medium text-gray-900 dark:text-white">
                     {alert.metric} Alert
-                  <div className="text-sm text-gray-600 dark:text-gray-400">
+                  <div className=`text-sm text-gray-600 dark:text-gray-400`}>
                     {alert.message}
 
                 className='flex items-center text-sm text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 p-2 rounded'

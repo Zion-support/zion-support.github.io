@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import Head from 'next/head'
 import Layout from '../components/Layout';
 import {
   BookOpen,
@@ -14,8 +14,7 @@ import {
   Globe,
   Database,
   Shield,
-  Users;
-} from 'lucide-react';
+  Users} from 'lucide-react';
 
 const Docs: NextPage = () => {
   const quickStart = [
@@ -23,20 +22,17 @@ const Docs: NextPage = () => {
       step: 1,
       title: 'Get Your API Key',
       description: 'Sign up for a free account and get your API key',
-      icon: Shield;
-},
+      icon: Shield},
     {
       step: 2,
       title: 'Install SDK',
       description: 'Install our SDK in your preferred language',
-      icon: Code;
-},
+      icon: Code},
     {
       step: 3,
       title: 'Make Your First Request',
       description: 'Start building with our comprehensive API',
-      icon: Zap;
-}
+      icon: Zap}
   ]
 
   const sections = [
@@ -244,14 +240,12 @@ import { ZionSDK } from '@zion/sdk';
 
 const zion = new ZionSDK({
   apiKey: 'your-api-key',
-  environment: 'production';
-});
+  environment: 'production'});
 
 // Make a request
 const result = await zion.ai.process({
   text: 'Hello, world!',
-  model: 'gpt-4';
-});
+  model: 'gpt-4'});
 
 console.log(result);`}</code>
                 </pre>
@@ -304,7 +298,7 @@ print(result)`}</code>
               <p className="text-xl text-gray-600 mb-8">
                 Our support team is here to help you succeed
               </p>
-              <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="grid md: grid-cols-3 gap-8 mb-12">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="w-8 h-8 text-blue-600" />
@@ -342,7 +336,6 @@ print(result)`}</code>
         </section>
       </Layout>
     </>
-  );
-};
+  )};
 
 export default Docs;

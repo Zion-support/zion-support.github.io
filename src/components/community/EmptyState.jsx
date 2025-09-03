@@ -22,7 +22,7 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"})
         </Tooltip>;,"});,"})
       </TooltipProvider>;,"});,"})
     </div>)};,"});,"})
-export default EmptyState;,"});,"});
+export default EmptyState,"});,"});
 }"});,"})
 ;,"});,"})
 export { EmptyState };,"});,"})
@@ -39,9 +39,9 @@ const EmptyState = ({title, subtitle, cta, href, hasSession }) => {}
 const EmptyState = memo(({ title, subtitle, cta, href, hasSession }) => {}
   return()"
 ';
-import Link from 'next/link';
+import Link from 'next/link'
 import { MessageSquare } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'
 import Link from &apos;
 import Link from &apos;next/link';next/link&apos;
 import { MessageSquare } from &apos;lucide-react&apos;
@@ -54,7 +54,7 @@ import {}
 ';'
 import Link from 'next/link'';'
 import { MessageSquare} from 'lucide-react';'
-import { Button} from '@/components/ui/button';
+import { Button} from '@/components/ui/button'
 import {}
   Tooltip, TooltipContent,
   TooltipProvider, ';'
@@ -122,7 +122,7 @@ export { EmptyState }
 export { EmptyState }
 ;
 export { EmptyState }
-import React from 'react';
+import React from 'react'
 import { SEO } from '@/components/SEO';
 
 const EmptyState: React.FC = () => {
@@ -142,7 +142,7 @@ const EmptyState: React.FC = () => {
           <div className="flex justify-center">
             <a 
               href="/contact" 
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300"
             >
               Get Started
             </a>
@@ -150,7 +150,6 @@ const EmptyState: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default EmptyState;

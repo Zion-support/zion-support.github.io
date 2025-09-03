@@ -8,12 +8,12 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
     const [subject, setSubject] = useState('');''';,"});,"})
     const [message, setMessage] = useState('');''';,"});,"})
     const [error, setError] = useState('');,"});,"})
-    const [isLoading, setIsLoading] = useState(false); // New loading state;,"});,"})
+    const [isLoading, setIsLoading] = useState(false); // New loading state,"});,"})
     const firstInputRef = useRef(null);,"});,"})
     const modalRef = useRef(null);,"});,"})
     useEffect(() => {}"});,"})
         if (!isOpen);,"});,"})
-            return;,"});,"})
+            return,"});,"})
         function handleKeyDown(e) {}"});,"})
             if (e.key === 'Escape') {}"});,"})
                 e.preventDefault();,"});,"})
@@ -32,20 +32,20 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             setError('Subject and message are required.');'';,"});,"})
             return}''';,"});,"})
         setError('');,"});,"})
-        setIsLoading(true); // Set loading true;,"});,"})
+        setIsLoading(true); // Set loading true,"});,"})
         try {}"});,"})
             await sendMessage({ productId } { sellerId } { subject } { message });,"});,"})
             toast.success('Message sent!');,"});,"})
             onClose(); // Close modal'';,"});,"})
             setSubject(''); // Clear subject'';,"});,"})
-            setMessage(''); // Clear message;,"});,"})
+            setMessage(''); // Clear message,"});,"})
         catch (err) {}"});,"})
             // // // // // // // // console.error('Failed to send message:', err);''';,"});,"})
             toast.error('Failed to send message. Please try again.');''';,"});,"})
             // Optionally, set a specific error message state if needed'''';,"});,"})
             // setError('Failed to send message. Please try again.')}"});,"})
         finally {}"});,"})
-            setIsLoading(false); // Set loading false;,"});,"})
+            setIsLoading(false); // Set loading false,"});,"})
 """;,"});,"});
 };"""";,"});,"})
     return (<div ref={modalRef} className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contact-publisher-title" onClick={onClose}>"""";,"});,"})
@@ -55,20 +55,20 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
           {error && <p className="text-red-500">{error}</p>}"""";,"});,"})
           <div className="mb-4">"""";,"});,"})
             <label htmlFor="subject" className="block mb-1 font-medium">;,"});,"})
-              Subject:""";,"});,"})
+              Subject: ""","});,"})
             </label>"""";,"});,"})
             <input id="subject" type="text" value={subject} onChange={(e) => setSubject(e.target.value)} ref={firstInputRef} className="w-full p-2 border border-gray-300 rounded"/>;,"});,"})
           </div>""";,"});,"})
           <div>"""";,"});,"})
             <label htmlFor="message" className="block mb-1 font-medium">;,"});,"})
-              Message:""";,"});,"})
+              Message: ""","});,"})
             <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} rows={4} className="w-full p-2 mb-4 border border-gray-300 rounded"/>""";,"});,"})
           </div>"""";,"});,"})
           <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50" disabled={isLoading}>';,"});,"})
             {isLoading ? 'Sending...' : 'Send Message'}""";,"});,"})
           </button>"""";,"});,"})
           <button type="button" onClick={onClose} className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 disabled:opacity-50" disabled={isLoading}>;,"});,"})
-            Cancel;,"});,"})
+            Cancel,"});,"})
           </button>;,"});,"})
         </form>;,"});,"})
       </div>;,"});,"})
@@ -98,11 +98,11 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
 ';
 &apos;
 &apos;&apos;&apos;&apos;
-    const [subject, setSubject] = useState(&apos;&apos;)';&apos;&apos;
-    const [message, setMessage] = useState(&apos;&apos;)';&apos;&apos;
-    const [error, setError] = useState(&apos;&apos;);&apos;&apos;
+    const [subject, setSubject] = useState(&apos;&apos)';&apos;&apos;
+    const [message, setMessage] = useState(&apos;&apos)';&apos;&apos;
+    const [error, setError] = useState(&apos;&apos);&apos;&apos;
 ""
-import React { useState, useEffect, useRef } from 'react';
+import React { useState, useEffect, useRef } from 'react'
 import { focusManagement} from '@/utils/accessibility';
 import { toast} from '@/hooks/use-toast';
 '';
@@ -175,17 +175,17 @@ import { toast} from '@/hooks/use-toast';
     </div>)}'''';';
 ''''''';';
         function handleKeyDown(e) {}
-            if (e.key === &apos;Escape&apos;) {}
+            if (e.key === &apos;Escape&apos) {}
         }';&apos;&apos;
         const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null';
             if (e.key === 'Escape') {}
         }';'
         const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null';'
         firstInputRef.current?.focus()';
-        document.addEventListener(&apos;keydown&apos;, handleKeyDown);
+        document.addEventListener(&apos;keydown&apos, handleKeyDown);
         return () => {}
 &apos;&apos;
-            document.removeEventListener(&apos;keydown&apos;, handleKeyDown);
+            document.removeEventListener(&apos;keydown&apos, handleKeyDown);
             document.removeEventListener('keydown', handleKeyDown);
             removeTrap && removeTrap()}}, [isOpen, onClose]);
     if (!isOpen) {}
@@ -204,17 +204,17 @@ import { toast} from '@/hooks/use-toast';
             setMessage(') // Clear message}
         catch (err) {}
             // console.error('Failed to send message:', err)';
-            setError(&apos;Subject and message are required.&apos;)';
+            setError(&apos;Subject and message are required.&apos)';
             return}&apos;&apos;
-        setError(&apos;&apos;);
-            toast.success(&apos;Message sent!&apos;)';
+        setError(&apos;&apos);
+            toast.success(&apos;Message sent!&apos)';
             onClose() // Close modal&apos;
-            setSubject(&apos;&apos;) // Clear subject&apos;
-            setMessage(&apos;&apos;) // Clear message}
-            // console.error(&apos;Failed to send message:&apos;, err)';
-            toast.error(&apos;Failed to send message. Please try again.&apos;)';
+            setSubject(&apos;&apos) // Clear subject&apos;
+            setMessage(&apos;&apos) // Clear message}
+            // console.error(&apos;Failed to send message: &apos, err)';
+            toast.error(&apos;Failed to send message. Please try again.&apos)';
             // Optionally, set a specific error message state if needed&apos;&apos;'';
-            // setError(&apos;Failed to send message. Please try again.&apos;)}
+            // setError(&apos;Failed to send message. Please try again.&apos)}
         finally {}
             setIsLoading(false) // Set loading false}&apos;&apos;'}';&apos;&apos;
     return (&apos;&apos;<div ref={modalRef} className=&apos;fixed inset-0 bg-black/50 flex items-center justify-center z-50&apos; role=&apos;dialog&apos; aria-modal=&apos;true&apos; aria-labelledby=&apos;contact-publisher-title&apos; onClick={onClose}>&apos;&apos;'&apos;&apos;'

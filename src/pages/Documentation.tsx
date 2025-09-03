@@ -1,10 +1,9 @@
-import React from 'react';
+import React from 'react'
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO'
 import { ;
   BookOpen, Code, FileText, Video, Download, ;
-  Search, ArrowRight, ExternalLink, Star, Users;
-} from 'lucide-react';
+  Search, ArrowRight, ExternalLink, Star, Users} from 'lucide-react';
 ;
 export default function Documentation() {;
   const docCategories = [;
@@ -13,29 +12,25 @@ export default function Documentation() {;
       description: "Quick start guides and setup instructions",;
       icon: BookOpen,;
       articles: 12,;
-      color: "from-blue-500 to-cyan-500";
-    },;
+      color: "from-blue-500 to-cyan-500"},;
     {;
       title: "API Reference",;
       description: "Complete API documentation and examples",;
       icon: Code,;
       articles: 45,;
-      color: "from-green-500 to-emerald-500";
-    },;
+      color: "from-green-500 to-emerald-500"},;
     {;
       title: "Guides & Tutorials",;
       description: "Step-by-step tutorials and best practices",;
       icon: FileText,;
       articles: 28,;
-      color: "from-purple-500 to-pink-500";
-    },;
+      color: "from-purple-500 to-pink-500"},;
     {;
       title: "Video Tutorials",;
       description: "Visual learning resources and demos",;
       icon: Video,;
       articles: 15,;
-      color: "from-orange-500 to-red-500";
-    }
+      color: "from-orange-500 to-red-500"}
   ]
 ;
   const popularDocs = [;
@@ -44,22 +39,19 @@ export default function Documentation() {;
       description: "Get up and running with Zion Tech Group services in minutes",;
       category: "Getting Started",;
       readTime: "5 min read",;
-      views: 1250;
-    },;
+      views: 1250},;
     {;
       title: "API Authentication",;
       description: "Learn how to authenticate and secure your API requests",;
       category: "API Reference",;
       readTime: "8 min read",;
-      views: 980;
-    },;
+      views: 980},;
     {;
       title: "AI Model Integration",;
       description: "Integrate our AI models into your applications",;
       category: "Guides & Tutorials",;
       readTime: "12 min read",;
-      views: 756;
-    },;
+      views: 756},;
     {;
       title: "Quantum Computing Basics",;
       description: "Introduction to quantum computing concepts and applications",;
@@ -84,46 +76,40 @@ import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
 import { 
   BookOpen, Code, FileText, Video, Download, 
-  Search, ArrowRight, ExternalLink, Star, Users;
-} from &apos;lucide-react';&apos;&apos;
+  Search, ArrowRight, ExternalLink, Star, Users} from &apos;lucide-react';&apos;&apos;
 
 export default function Documentation() {}
   const docCategories = [
     ;{
-      title: &quot;Getting Started&quot;,
-      description: &quot;Quick start guides and setup instructions&quot;,
+      title: &quot;Getting Started&quot,
+      description: &quot;Quick start guides and setup instructions&quot,
       icon: BookOpen,
       articles: 12,
-      color: &quot;from-blue-500 to-cyan-500&quot;
-    },
+      color: &quot;from-blue-500 to-cyan-500&quot},
     {
-      title: &quot;API Reference&quot;,
-      description: &quot;Complete API documentation and examples&quot;,
+      title: &quot;API Reference&quot,
+      description: &quot;Complete API documentation and examples&quot,
       icon: Code,
       articles: 45,
-      color: &quot;from-green-500 to-emerald-500&quot;
-    },
+      color: &quot;from-green-500 to-emerald-500&quot},
     {
-      title: &quot;Guides & Tutorials&quot;,
-      description: &quot;Step-by-step tutorials and best practices&quot;,
+      title: &quot;Guides & Tutorials&quot,
+      description: &quot;Step-by-step tutorials and best practices&quot,
       icon: FileText,
       articles: 28,
-      color: &quot;from-purple-500 to-pink-500&quot;
-    },
+      color: &quot;from-purple-500 to-pink-500&quot},
     {
-      title: &quot;Video Tutorials&quot;,
-      description: &quot;Visual learning resources and demos&quot;,
+      title: &quot;Video Tutorials&quot,
+      description: &quot;Visual learning resources and demos&quot,
       icon: Video,
       articles: 15,
-      color: &quot;from-orange-500 to-red-500&quot;
-    }
+      color: &quot;from-orange-500 to-red-500&quot}
   ]&quot;
 
-import { motion} from 'framer-motion';
+import { motion} from 'framer-motion'
 import { SEO} from '../components/SEO';
 import { 
-  BookOpen, Code, FileText, Video, Download, Search, ArrowRight, ExternalLink, Star, Users;
-} from 'lucide-react';
+  BookOpen, Code, FileText, Video, Download, Search, ArrowRight, ExternalLink, Star, Users} from 'lucide-react';
 export default function Documentation() {
   const docCategories = [
     { title: "Getting Started", description: "Quick start guides and setup instructions",
@@ -131,64 +117,53 @@ export default function Documentation() {
   {
       title: "Getting Started", description: "Quick start guides and setup instructions",
       icon: BookOpen, articles: 12,
-      color: "from-blue-500 to-cyan-500";
-}, { title: "API Reference",
+      color: "from-blue-500 to-cyan-500"}, { title: "API Reference",
       description: "Complete API documentation and examples", icon: Code,
-      articles: 45, color: "from-green-500 to-emerald-500";
-},
+      articles: 45, color: "from-green-500 to-emerald-500"},
     { title: "Guides & Tutorials", description: "Step-by-step tutorials and best practices",
       icon: FileText, articles: 28,
-      color: "from-purple-500 to-pink-500";
-}, { title: "Video Tutorials",
+      color: "from-purple-500 to-pink-500"}, { title: "Video Tutorials",
       description: "Visual learning resources and demos", icon: Video,
-      articles: 15, color: "from-orange-500 to-red-500";
-}
+      articles: 15, color: "from-orange-500 to-red-500"}
     };
   ]
   const popularDocs = [
     { title: "Quick Start Guide", description: "Get up and running with Zion Tech Group services in minutes",
     {
-      title: &quot;Quick Start Guide&quot;,
-      description: &quot;Get up and running with Zion Tech Group services in minutes&quot;,
-      category: &quot;Getting Started&quot;,
-      readTime: &quot;5 min read&quot;,
-      views: 1250;
-},
+      title: &quot;Quick Start Guide&quot,
+      description: &quot;Get up and running with Zion Tech Group services in minutes&quot,
+      category: &quot;Getting Started&quot,
+      readTime: &quot;5 min read&quot,
+      views: 1250},
     {
-      title: &quot;API Authentication&quot;,
-      description: &quot;Learn how to authenticate and secure your API requests&quot;,
-      category: &quot;API Reference&quot;,
-      readTime: &quot;8 min read&quot;,
-      views: 980;
-},
+      title: &quot;API Authentication&quot,
+      description: &quot;Learn how to authenticate and secure your API requests&quot,
+      category: &quot;API Reference&quot,
+      readTime: &quot;8 min read&quot,
+      views: 980},
     {
-      title: &quot;AI Model Integration&quot;,
-      description: &quot;Integrate our AI models into your applications&quot;,
-      category: &quot;Guides & Tutorials&quot;,
-      readTime: &quot;12 min read&quot;,
-      views: 756;
-},
+      title: &quot;AI Model Integration&quot,
+      description: &quot;Integrate our AI models into your applications&quot,
+      category: &quot;Guides & Tutorials&quot,
+      readTime: &quot;12 min read&quot,
+      views: 756},
     {
-      title: &quot;Quantum Computing Basics&quot;,
-      description: &quot;Introduction to quantum computing concepts and applications&quot;,
-      category: &quot;Guides & Tutorials&quot;,
-      readTime: &quot;15 min read&quot;,
+      title: &quot;Quantum Computing Basics&quot,
+      description: &quot;Introduction to quantum computing concepts and applications&quot,
+      category: &quot;Guides & Tutorials&quot,
+      readTime: &quot;15 min read&quot,
       views: 634
   {
       title: "Quick Start Guide", description: "Get up and running with Zion Tech Group services in minutes",
       category: "Getting Started", readTime: "5 min read",
-      views: 1250;
-}, { title: "API Authentication",
+      views: 1250}, { title: "API Authentication",
       description: "Learn how to authenticate and secure your API requests", category: "API Reference",
-      readTime: "8 min read", views: 980;
-},
+      readTime: "8 min read", views: 980},
     { title: "AI Model Integration", description: "Integrate our AI models into your applications",
       category: "Guides & Tutorials", readTime: "12 min read",
-      views: 756;
-}, { title: "Quantum Computing Basics",
+      views: 756}, { title: "Quantum Computing Basics",
       description: "Introduction to quantum computing concepts and applications", category: "Guides & Tutorials",
-      readTime: "15 min read", views: 634;
-}
+      readTime: "15 min read", views: 634}
     };
   ]
 ;
@@ -331,16 +306,16 @@ export default function Documentation() {
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-8&quot;>
-              {docCategories.map((category, index) => (&quot;}
+              {docCategories.map((category, index) => (&quot}
                 <motion.div
                   key={category.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 cursor-pointer";
+                  className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 cursor-pointer`;
                 >;
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4`}>;
-                    <category.icon className="w-8 h-8 text-white" />;
+                    <category.icon className=`w-8 h-8 text-white`} />;
                   </div>;
                   <h3 className="text-xl font-bold text-white mb-2">{category.title}</h3>;
                   <p className="text-gray-300 text-sm mb-3">{category.description}</p>;
@@ -354,17 +329,17 @@ export default function Documentation() {
                   initial={{ opacity: 0, y: 20 }
                   whileInView={{ opacity: 1, y: 0 }
                   transition={{ duration: 0.8, delay: index * 0.1 }
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+                  className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 cursor-pointer`
                 ></motion>
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4`}>
                     <category.icon className=&quot;w-8 h-8 text-white&quot; />&quot;
                   </div>
                   <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{category.title}&quot;</h3>
                   <p className=&quot;text-gray-300 text-sm mb-3&quot;>{category.description}&quot;</p>
-                  <div className=&quot;flex items-center justify-between&quot;>&quot;"
+                  <div className=&quot;flex items-center justify-between&quot;>&quot;`
                     <span className=&quot;text-blue-400 text-sm&quot;>{category.articles} articles&quot;</span>
                     <ArrowRight className=&quot;w-5 h-5 text-gray-400&quot; />&quot;
-                  <h3 className="text-xl font-bold text-white mb-2"></h>{category.title}</h3>
+                  <h3 className=`}text-xl font-bold text-white mb-2"></h>{category.title}</h3>
                   <p className="text-gray-300 text-sm mb-3">{category.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-blue-400 text-sm"></spa>{category.articles} articles</span>
@@ -418,7 +393,7 @@ export default function Documentation() {
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
-              {popularDocs.map((doc, index) => (&quot;}
+              {popularDocs.map((doc, index) => (&quot}
                 <motion.div
                   key={doc.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -760,7 +735,7 @@ export default function Documentation() {
                 </a>
                 <a
                   href=&quot;/contact&quot;
-                  className=&quot;inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hove,r:text-white transition-all duration-200&quot;
+                  className=&quot;inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hove,r: text-white transition-all duration-200&quot;
                 >&quot;
                   <ArrowRight className=&quot;w-5 h-5 mr-2&quot; />
                   Get in Touch&quot;
@@ -772,5 +747,4 @@ export default function Documentation() {
       </div>
 </>
   )
-  );
-}
+  )}

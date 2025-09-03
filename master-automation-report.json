@@ -39,6 +39,5 @@
     "totalPhases": 6,
     "successfulPhases": 5,
     "failedPhases": 1,
-    "overallSuccess": false;
-}
+    "overallSuccess": false}
 }

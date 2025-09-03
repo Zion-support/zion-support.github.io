@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import Head from 'next/head';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import { 
   User, 
   Bell, 
@@ -22,8 +22,7 @@ import {
   Shield,
   Brain,
   Code,
-  Cloud;
-} from 'lucide-react';
+  Cloud} from 'lucide-react';
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -34,29 +33,25 @@ export default function Dashboard() {
       value: '12',
       change: '+2 this month',
       icon: BarChart3,
-      color: 'from-blue-500 to-cyan-500';
-},
+      color: 'from-blue-500 to-cyan-500'},
     {
       title: 'Team Members',
       value: '8',
       change: '+1 this week',
       icon: Users,
-      color: 'from-green-500 to-emerald-500';
-},
+      color: 'from-green-500 to-emerald-500'},
     {
       title: 'Completed Tasks',
       value: '47',
       change: '+12 this week',
       icon: CheckCircle,
-      color: 'from-purple-500 to-pink-500';
-},
+      color: 'from-purple-500 to-pink-500'},
     {
       title: 'Revenue',
       value: '$125K',
       change: '+15% this month',
       icon: TrendingUp,
-      color: 'from-orange-500 to-red-500';
-}
+      color: 'from-orange-500 to-red-500'}
   ]
 
   const recentProjects = [
@@ -92,22 +87,19 @@ export default function Dashboard() {
       title: 'New project assigned',
       message: 'You have been assigned to the AI Chatbot project',
       time: '2 hours ago',
-      type: 'info';
-},
+      type: 'info'},
     {
       id: 2,
       title: 'Meeting reminder',
       message: 'Team standup meeting in 30 minutes',
       time: '30 minutes ago',
-      type: 'warning';
-},
+      type: 'warning'},
     {
       id: 3,
       title: 'Project completed',
       message: 'Mobile App Development project has been completed',
       time: '1 day ago',
-      type: 'success';
-}
+      type: 'success'}
   ]
 
   const quickActions = [
@@ -116,29 +108,25 @@ export default function Dashboard() {
       description: 'Start a new project',
       icon: Plus,
       color: 'from-blue-500 to-cyan-500',
-      href: '/projects/new';
-},
+      href: '/projects/new'},
     {
       title: 'View Reports',
       description: 'Check project analytics',
       icon: BarChart3,
       color: 'from-green-500 to-emerald-500',
-      href: '/reports';
-},
+      href: '/reports'},
     {
       title: 'Team Chat',
       description: 'Communicate with team',
       icon: MessageCircle,
       color: 'from-purple-500 to-pink-500',
-      href: '/chat';
-},
+      href: '/chat'},
     {
       title: 'Download Resources',
       description: 'Access project files',
       icon: Download,
       color: 'from-orange-500 to-red-500',
-      href: '/resources';
-}
+      href: '/resources'}
   ]
 
   const services = [
@@ -147,22 +135,19 @@ export default function Dashboard() {
       description: 'Explore our AI solutions',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
-      href: '/services/ai-services';
-},
+      href: '/services/ai-services'},
     {
       title: 'Micro SAAS',
       description: 'Business automation tools',
       icon: Code,
       color: 'from-blue-500 to-cyan-500',
-      href: '/services/micro-saas';
-},
+      href: '/services/micro-saas'},
     {
       title: 'IT Services',
       description: 'Infrastructure management',
       icon: Cloud,
       color: 'from-green-500 to-emerald-500',
-      href: '/services/it-services';
-}
+      href: '/services/it-services'}
   ]
 
   return (
@@ -217,10 +202,10 @@ export default function Dashboard() {
                   <div>
                     <p className="text-sm font-medium text-gray-600">{stat.title}</p>
                     <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-                    <p className="text-sm text-green-600">{stat.change}</p>
+                    <p className={`text-sm text-green-600`>{stat.change}</p>
                   </div>
                   <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-lg flex items-center justify-center`}>
-                    <stat.icon className="w-6 h-6 text-white" />
+                    <stat.icon className=`w-6 h-6 text-white`} />
                   </div>
                 </div>
               </motion.div>
@@ -242,10 +227,10 @@ export default function Dashboard() {
                     <a
                       key={index}
                       href={action.href}
-                      className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors"
+                      className={`flex items-center p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors`
                     >
                       <div className={`w-10 h-10 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center mr-4`}>
-                        <action.icon className="w-5 h-5 text-white" />
+                        <action.icon className=`w-5 h-5 text-white`} />
                       </div>
                       <div>
                         <h3 className="font-medium text-gray-900">{action.title}</h3>
@@ -274,7 +259,7 @@ export default function Dashboard() {
                   {recentProjects.map((project) => (
                     <div key={project.id} className="border border-gray-200 rounded-lg p-4">
                       <div className="flex items-center justify-between mb-2">
-                        <h3 className="font-medium text-gray-900">{project.name}</h3>
+                        <h3 className={`font-medium text-gray-900`>{project.name}</h3>
                         <span className={`px-2 py-1 text-xs font-medium rounded-full ${
                           project.status === 'Completed' ? 'bg-green-100 text-green-800' :
                           project.status === 'In Progress' ? 'bg-blue-100 text-blue-800' :
@@ -284,20 +269,19 @@ export default function Dashboard() {
                         </span>
                       </div>
                       
-                      <div className="mb-3">
+                      <div className=`mb-3`}>
                         <div className="flex items-center justify-between text-sm text-gray-600 mb-1">
                           <span>Progress</span>
                           <span>{project.progress}%</span>
                         </div>
                         <div className="w-full bg-gray-200 rounded-full h-2">
-                          <div 
-                            className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                          <div className={`bg-blue-600 h-2 rounded-full transition-all duration-300`
                             style={{ width: `${project.progress}%` }}
                           ></div>
                         </div>
                       </div>
                       
-                      <div className="flex items-center justify-between text-sm text-gray-600">
+                      <div className=`flex items-center justify-between text-sm text-gray-600`}>
                         <span>Due: {project.dueDate}</span>
                         <span>{project.team.length} team members</span>
                       </div>
@@ -319,10 +303,10 @@ export default function Dashboard() {
                     <a
                       key={index}
                       href={service.href}
-                      className="flex flex-col items-center p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors text-center"
+                      className={`flex flex-col items-center p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors text-center`
                     >
                       <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-3`}>
-                        <service.icon className="w-6 h-6 text-white" />
+                        <service.icon className=`w-6 h-6 text-white`} />
                       </div>
                       <h3 className="font-medium text-gray-900 mb-1">{service.title}</h3>
                       <p className="text-sm text-gray-600">{service.description}</p>
@@ -344,13 +328,13 @@ export default function Dashboard() {
                 <h2 className="text-lg font-semibold text-gray-900 mb-4">Notifications</h2>
                 <div className="space-y-3">
                   {notifications.map((notification) => (
-                    <div key={notification.id} className="flex items-start space-x-3">
+                    <div key={notification.id} className={`flex items-start space-x-3`>
                       <div className={`w-2 h-2 rounded-full mt-2 ${
                         notification.type === 'success' ? 'bg-green-500' :
                         notification.type === 'warning' ? 'bg-yellow-500' :
                         'bg-blue-500';
 }`}></div>
-                      <div className="flex-1">
+                      <div className=`flex-1`}>
                         <h4 className="text-sm font-medium text-gray-900">{notification.title}</h4>
                         <p className="text-sm text-gray-600">{notification.message}</p>
                         <p className="text-xs text-gray-500 mt-1">{notification.time}</p>
@@ -398,7 +382,7 @@ export default function Dashboard() {
                     </div>
                     <div>
                       <h4 className="text-sm font-medium text-gray-900">Client Presentation</h4>
-                      <p className="text-xs text-gray-600">Friday, 3:00 PM</p>
+                      <p className="text-xs text-gray-600">Friday, 3: 00 PM</p>
                     </div>
                   </div>
                 </div>
@@ -411,5 +395,4 @@ export default function Dashboard() {
         </div>
       </div>
     </>
-  );
-}
+  )}

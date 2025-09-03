@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import SEO from '../../components/SEO';
-import { Card } from '../../components/ui/Card';
+import { Card } from '../../components/ui/Card'
 import { Button } from '../../components/ui/Button';
-import { Badge } from '../../components/ui/Badge';
+import { Badge } from '../../components/ui/Badge'
 import { 
   Headphones, 
   ArrowRight,
@@ -15,16 +15,14 @@ import {
   Globe,
   BarChart3,
   Clock,
-  Users;
-} from 'lucide-react';
+  Users} from 'lucide-react';
 
 export default function CustomerSupport() {
   const features = [
     {
       icon: Bot,
       title: 'AI Chatbots',
-      description: 'Intelligent chatbots that provide instant responses and escalate complex issues to human agents.';
-},
+      description: 'Intelligent chatbots that provide instant responses and escalate complex issues to human agents.'},
     {
       icon: MessageSquare,
       title: 'Ticket Management',
@@ -48,8 +46,7 @@ export default function CustomerSupport() {
     {
       icon: Clock,
       title: '24/7 Availability',
-      description: 'Round-the-clock customer support with automated responses and escalation.';
-}
+      description: 'Round-the-clock customer support with automated responses and escalation.'}
   ]
 
   return (
@@ -122,7 +119,7 @@ export default function CustomerSupport() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Transform Your Customer Support?
           </h2>
@@ -144,5 +141,4 @@ export default function CustomerSupport() {
         </div>
       </section>
     </>
-  );
-}
+  )}

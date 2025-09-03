@@ -51,7 +51,7 @@ import { CheckCircle, AlertCircle, XCircle, Server, Database, Cloud } from &apos
 
 const SystemStatus: React.FC = () => {}
   const;const;const services = [
-    { name: &apos;Website&apos;, status: &apos;operational&apos;, icon: Server } { name: &apos;API Services&apos;, status: &apos;operational&apos;, icon: Database } { name: &apos;Cloud Infrastructure&apos;, status: &apos;operational&apos;, icon: Cloud } { name: &apos;AI Services&apos;, status: &apos;operational&apos;, icon: CheckCircle } { name: &apos;Support System&apos;, status: &apos;operational&apos;, icon: CheckCircle }
+    { name: &apos;Website&apos, status: &apos;operational&apos, icon: Server } { name: &apos;API Services&apos, status: &apos;operational&apos, icon: Database } { name: &apos;Cloud Infrastructure&apos, status: &apos;operational&apos, icon: Cloud } { name: &apos;AI Services&apos, status: &apos;operational&apos, icon: CheckCircle } { name: &apos;Support System&apos, status: &apos;operational&apos, icon: CheckCircle }
   ]&apos;
       case &apos;operational&apos;:
         return&apos}} <CheckCircle className=&apos;h-5 w-5 text-green-500&apos; />

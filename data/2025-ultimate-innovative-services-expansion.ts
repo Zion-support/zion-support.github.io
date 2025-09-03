@@ -48,7 +48,6 @@ const contact = {
   ;
   ;
   website: 'https://ziontechgroup.com';
-;
 };
 export const ultimateInnovativeServices2025: UltimateInnovativeService[] = [
   // REVOLUTIONARY AI & AUTONOMOUS SYSTEMS
@@ -551,4 +550,4 @@ export const ultimateInnovativeServices2025: UltimateInnovativeService[] = [
     aiCapabilities['Personalized Recommendations', 'Dynamic Pricing', 'Customer Behavior Analysis', 'Sales Forecasting'],
     marketDisruption: 'Revolutionizes retail with AI personalization'
 ];
-export default ultimateInnovativeServices2025;}}
+export default ultimateInnovativeServices2025}}

@@ -530,8 +530,7 @@
     {
       "type": "jest_tests",
       "status": "failed",
-      "output": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n";
-},
+      "output": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"},
     {
       "type": "playwright_tests",
       "status": "failed",
@@ -546,6 +545,5 @@
     "accessibility_tests": 1,
     "security_tests": 1,
     "passed": 0,
-    "failed": 2;
-}
+    "failed": 2}
 }

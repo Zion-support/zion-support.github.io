@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   Check, Star, 
   Zap, Shield, 
   Users, ArrowRight,
   Crown, Rocket,
-  Building;
-} from 'lucide-react';
+  Building} from 'lucide-react';
 
 export const PricingSection: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('annual');
@@ -22,8 +21,7 @@ export const PricingSection: React.FC = () => {
         'Monthly performance reports', 'Basic security features',
         'Up to 5 team members'
       ], cta: 'Get Started',
-      popular: false, color: 'from-blue-500 to-cyan-500';
-},
+      popular: false, color: 'from-blue-500 to-cyan-500'},
     {
       name: 'Professional', icon: Building,
       description: 'Ideal for growing businesses', price: billingCycle === 'annual' ? 799 : 899,
@@ -34,8 +32,7 @@ export const PricingSection: React.FC = () => {
         'Up to 25 team members', 'Custom reporting',
         'API access'
       ], cta: 'Start Free Trial',
-      popular: true, color: 'from-purple-500 to-pink-500';
-},
+      popular: true, color: 'from-purple-500 to-pink-500'},
     {
       name: 'Enterprise', icon: Crown,
       description: 'For large organizations with complex needs', price: 'Custom',
@@ -46,8 +43,7 @@ export const PricingSection: React.FC = () => {
         'Unlimited team members', 'Custom SLA guarantees',
         'On-premise deployment options', 'White-label solutions'
       ], cta: 'Contact Sales',
-      popular: false, color: 'from-yellow-500 to-orange-500';
-}
+      popular: false, color: 'from-yellow-500 to-orange-500'}
   ]
 
   const savings = billingCycle === 'annual' ? 25 : 0;
@@ -81,13 +77,13 @@ export const PricingSection: React.FC = () => {
           </p>
 
           {/* Billing Toggle */}
-          <div className="flex items-center justify-center gap-4 mb-8">
+          <div className={`flex items-center justify-center gap-4 mb-8`>
             <span className={`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-zion-slate-light'}`}>
               Monthly
             </span>
             <button
               onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
-              className="relative w-16 h-8 bg-zion-purple/20 rounded-full p-1 transition-colors duration-200"
+              className=`relative w-16 h-8 bg-zion-purple/20 rounded-full p-1 transition-colors duration-200`
             >
               <motion.div
                 layout
@@ -103,7 +99,7 @@ export const PricingSection: React.FC = () => {
               <motion.span
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="inline-flex items-center gap-1 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium"
+                className=`inline-flex items-center gap-1 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium`}
               >
                 <Check className="w-4 h-4" />
                 Save {savings}%
@@ -113,7 +109,7 @@ export const PricingSection: React.FC = () => {
         </motion.div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+        <div className={`grid grid-cols-1 md: grid-cols-3 gap-8`>
           {plans.map((plan, index) => {
             const IconComponent = plan.icon;
             return (
@@ -124,14 +120,13 @@ export const PricingSection: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative group ${
-                  plan.popular ? 'md:-mt-4 md:mb-4' : '';
-}`}
+                  plan.popular ? 'md: -mt-4 md:mb-4' : ''}`}
               >
                 {/* Popular Badge */}
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2 z-10`}>
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-                      <Star className="w-4 h-4 fill-current" />
+                      <Star className={`w-4 h-4 fill-current` />
                       Most Popular
                     </div>
                   </div>
@@ -139,11 +134,10 @@ export const PricingSection: React.FC = () => {
 
                 {/* Main Card */}
                 <div className={`relative h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${
-                  plan.popular ? 'border-zion-cyan/50 bg-zion-blue-light/20' : '';
-}`}>
+                  plan.popular ? 'border-zion-cyan/50 bg-zion-blue-light/20' : ''}`}>
                   {/* Icon */}
                   <div className={`w-16 h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
-                    <IconComponent className="w-8 h-8" />
+                    <IconComponent className=`w-8 h-8`} />
                   </div>
 
                   {/* Plan Info */}
@@ -154,16 +148,16 @@ export const PricingSection: React.FC = () => {
                   <div className="mb-6">
                     {typeof plan.price === 'number' ? (
                       <div className="flex items-baseline gap-2">
-                        <span className="text-4xl font-bold text-white">${plan.price}</span>
-                        <span className="text-zion-slate-light">/month</span>
+                        <span className={`text-4xl font-bold text-white`>${plan.price}</span>
+                        <span className=`text-zion-slate-light`}>/month</span>
                         {plan.originalPrice && (
-                          <span className="text-lg text-zion-slate-light line-through">
+                          <span className={`text-lg text-zion-slate-light line-through`>
                             ${plan.originalPrice}
                           </span>
                         )}
                       </div>
                     ) : (
-                      <div className="text-3xl font-bold text-white">{plan.price}</div>
+                      <div className=`text-3xl font-bold text-white`}>{plan.price}</div>
                     )}
                   </div>
 
@@ -180,28 +174,26 @@ export const PricingSection: React.FC = () => {
                   {/* CTA Button */}
                   <Link
                     to={plan.name === 'Enterprise' ? '/contact' : '/signup'}
-                    className="block w-full"
+                    className={`block w-full`
                   >
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
                         plan.popular
-                          ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-cyan/90 hover:to-zion-purple/90'
-                          : 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white';
-}`}
+                          ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover: from-zion-cyan/90 hover:to-zion-purple/90'
+                          : 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'}`}
                     >
                       {plan.cta}
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className=`w-4 h-4`} />
                     </motion.button>
                   </Link>
                 </div>
 
                 {/* Hover Effect Border */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10"></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-hover: opacity-20 transition-opacity duration-300 -z-10"></div>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
 
         {/* Additional Info */}
@@ -242,7 +234,7 @@ export const PricingSection: React.FC = () => {
         </motion.div>
       </div>
     </section>
-import React from 'react';
+import React from 'react'
 import {SEO } from '@/components/SEO';
 
 export default function PricingSection() {return (

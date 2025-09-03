@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import {
   BarChart3,
   Eye,
@@ -28,8 +28,7 @@ import {
   FileText,
   MessageSquare,
   PieChart,
-  Activity;
-} from 'lucide-react';
+  Activity} from 'lucide-react';
 import PageTransition from '../../src/components/PageTransition';
 
 export default function WebsiteAnalytics() {
@@ -105,8 +104,7 @@ export default function WebsiteAnalytics() {
         'Standard reports',
         'Mobile app access'
       ],
-      popular: false;
-},
+      popular: false},
     {
       name: 'Professional',
       price: '$79',
@@ -121,8 +119,7 @@ export default function WebsiteAnalytics() {
         'E-commerce tracking',
         'API access'
       ],
-      popular: true;
-},
+      popular: true},
     {
       name: 'Business',
       price: '$199',
@@ -137,8 +134,7 @@ export default function WebsiteAnalytics() {
         'Advanced integrations',
         'SLA guarantee'
       ],
-      popular: false;
-}
+      popular: false}
   ]
 
   const benefits = [
@@ -150,18 +146,15 @@ export default function WebsiteAnalytics() {
     {
       icon: Zap,
       title: 'Real-time Data',
-      description: 'Get instant updates on your website performance and visitor behavior';
-},
+      description: 'Get instant updates on your website performance and visitor behavior'},
     {
       icon: Target,
       title: 'Goal-Focused',
-      description: 'Track what matters most to your business with custom goal setting';
-},
+      description: 'Track what matters most to your business with custom goal setting'},
     {
       icon: Smartphone,
       title: 'Mobile Access',
-      description: 'Monitor your analytics on-the-go with our mobile-optimized interface';
-}
+      description: 'Monitor your analytics on-the-go with our mobile-optimized interface'}
   ]
 
   return (
@@ -278,11 +271,11 @@ export default function WebsiteAnalytics() {
             </p>
           </div>
           
-          <div className="grid gap-8 lg:grid-cols-3">
+          <div className={`grid gap-8 lg:grid-cols-3`>
             {pricing.map((plan, index) => (
               <div key={index} className={`relative rounded-2xl border p-8 shadow-sm ${plan.popular ? 'border-blue-600 bg-blue-50' : 'border-gray-200 bg-white'}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
                     <span className="inline-flex items-center rounded-full bg-blue-600 px-4 py-1 text-sm font-semibold text-white">
                       Most Popular
                     </span>
@@ -305,7 +298,7 @@ export default function WebsiteAnalytics() {
                   ))}
                 </ul>
                 <div className="mt-8">
-                  <Link href="/contact" className={`block w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? 'bg-blue-600 text-white hover:bg-blue-500' : 'bg-gray-900 text-white hover:bg-gray-800'}`}>
+                  <Link href={`/contact` className={`block w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? 'bg-blue-600 text-white hover:bg-blue-500' : 'bg-gray-900 text-white hover:bg-gray-800'}`}>
                     Get Started
                   </Link>
                 </div>
@@ -316,7 +309,7 @@ export default function WebsiteAnalytics() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-24 sm:py-32 bg-blue-600">
+      <section className=`py-24 sm:py-32 bg-blue-600`}>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">

@@ -1,12 +1,10 @@
-import React from 'react';
-
+import React from 'react'
 import React from 'react';
 
 interface InteractiveSearchProps {
   placeholder?: string;
   onSearch?: (query: string) => void;
-  className?: string;
-}
+  className?: string}
 
 export default function InteractiveSearch({ 
   placeholder = "Search...", 
@@ -17,8 +15,7 @@ export default function InteractiveSearch({
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
     const query = formData.get('search') as string;
-    onSearch?.(query);
-  };
+    onSearch?.(query)};
 
   return (
     <form onSubmit={handleSubmit} className={className}>

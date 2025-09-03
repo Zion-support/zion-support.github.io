@@ -3,8 +3,7 @@
   "summary": {
     "total": 6,
     "passed": 5,
-    "failed": 1;
-},
+    "failed": 1},
   "results": {
     "unit": {
       "status": "success",
@@ -12,8 +11,7 @@
 },
     "integration": {
       "status": "failure",
-      "results": "Command failed: npm run build";
-},
+      "results": "Command failed: npm run build"},
     "e2e": {
       "status": "success",
       "results": "No E2E testing framework available";
@@ -24,12 +22,10 @@
 },
     "accessibility": {
       "status": "success",
-      "results": "Lint check failed: Command failed: npm run lint\nInvalid option '--ext' - perhaps you meant '-c'?\nYou're using eslint.config.js, some command line flags are no longer available. Please see https://eslint.org/docs/latest/use/command-line-interface for details.\n";
-},
+      "results": "Lint check failed: Command failed: npm run lint\nInvalid option '--ext' - perhaps you meant '-c'?\nYou're using eslint.config.js, some command line flags are no longer available. Please see https: //eslint.org/docs/latest/use/command-line-interface for details.\n"},
     "coverage": {
       "status": "success",
       "results": "Coverage generation failed\n";
 }
   },
-  "qualityGates": true;
-}
+  "qualityGates": true}

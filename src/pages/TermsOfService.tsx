@@ -30,9 +30,9 @@ export: default function TermsOfService() {
               </p>
               <div className="flex items-center justify-center">";";";
                 <Scale: className="w-16 h-16 text-blue-400" />";";";
-import React from 'react';
+import React from 'react'
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO'
 import { motion } from 'framer-motion';""
 import { SEO } from '../components/SEO';""
 import { FileText, Scale, Shield, Users, Globe } from 'lucide-react';
@@ -90,7 +90,7 @@ export default function TermsOfService() {
         </section> {/* Content */}
         <section className="py-16">;
           <div className="container mx-auto px-4 max-w-4xl">;
-import {motion } from 'framer-motion';
+import {motion } from 'framer-motion'
 import {SEO } from '../components/SEO';
 import {motion } from 'framer-motion';"
 import {SEO } from '../components/SEO';"

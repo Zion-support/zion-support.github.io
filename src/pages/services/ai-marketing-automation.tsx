@@ -2,7 +2,7 @@ import React from 'react';""
 import { SEO } from '../../components/SEO';""
 import React  from 'react
 import { SEO }  from ';../../components/SEO';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import { 
   Target, Zap, 
   Users, Shield, 
@@ -281,8 +281,8 @@ const AIMarketingAutomation: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}""
-                className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:bg-slate-700/50"" >"
-                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}" >"
+                className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:bg-slate-700/50"" >`
+                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}` >"
                   <feature .icon className="w-8 h-8 text-white" /" >"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
@@ -318,8 +318,8 @@ const AIMarketingAutomation: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}""
                 className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300"" >"
-                <div className="flex items-start gap-4 mb-6">`
-                  <div className={`w-16 h-16 bg-gradient-to-br ${channel.color} rounded-xl flex items-center justify-center flex-shrink-0`}" >"
+                <div className={`flex items-start gap-4 mb-6`>`
+                  <div className={`w-16 h-16 bg-gradient-to-br ${channel.color} rounded-xl flex items-center justify-center flex-shrink-0`}` >`}
                     <channel .icon className="w-8 h-8 text-white" /" >"
                   </div>
                   <div>""
@@ -522,7 +522,7 @@ const AIMarketingAutomation: React.FC = () => {
                 <textarea ""
                   placeholder="Tell us about your marketing needs..."
                   rows={4}""
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"" ></textarea>"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"" ></textarea>"
                 <button ""
                   type="submit"
                   className="w-full btn-futuristic bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700"" >"
@@ -535,6 +535,6 @@ const AIMarketingAutomation: React.FC = () => {
         </div>
       </section>
     </div>
-  );};
+  )};
 
 export default AIMarketingAutomation;"`"

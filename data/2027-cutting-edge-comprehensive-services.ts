@@ -651,11 +651,9 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
 ];
 // Helper functions for service management
 export const getServiceById = (id: string) => {;
-  return cuttingEdgeComprehensiveServices2027.find(service => service.id === id);
-};
+  return cuttingEdgeComprehensiveServices2027.find(service => service.id === id)};
 export const getServicesByCategory = (category: string) => {;
-  return cuttingEdgeComprehensiveServices2027.filter(service => service.category === category);
-};
+  return cuttingEdgeComprehensiveServices2027.filter(service => service.category === category)};
 export const getPopularServices = () => {;
   return cuttingEdgeComprehensiveServices2027.filter(service => service.popular);
 };
@@ -670,6 +668,5 @@ export const searchServices = (query: string) => {;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
     service.category.toLowerCase().includes(lowercaseQuery) ||;
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
-  );
-};
-export default cuttingEdgeComprehensiveServices2027;}}
+  )};
+export default cuttingEdgeComprehensiveServices2027}}

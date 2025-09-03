@@ -1,10 +1,10 @@
-import React { useState } from 'react';
+import React { useState } from 'react'
 import { Link } from 'react-router-dom';
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import { ModernHeader } from '../src/components/header/ModernHeader';
-import { SimpleFooter } from '../src/components/layout/SimpleFooter';
+import { SimpleFooter } from '../src/components/layout/SimpleFooter'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award, Mail, Smartphone, Target, FileText, BarChart, Settings, Headphones, ShieldCheck, Cpu, Wifi, Monitor } from 'lucide-react';
 
 export default function Services() {
@@ -58,173 +58,173 @@ export default function Services() {,"});,"})
   return (;,"});,"})
     <PageTransition>;,"});,"})
       {/* Hero Section */}"});,"})
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">;,"});,"})
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">;,"});,"})
+      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">,"});,"})
+        <div className="mx-auto max-w-7xl px-6 lg: px-8">,"});,"})
           <div className="mx-auto max-w-2xl text-center">;,"});,"})
             <div className="flex items-center justify-center mb-4">;,"});,"})
               <Award className="h-6 w-6 text-blue-600 mr-2" />;,"});,"})
               <span className="text-base font-semibold leading-7 text-blue-600">;,"});,"})
-                Our Services;,"});,"})
+                Our Services,"});,"})
               </span>;,"});,"})
             </div>;,"});,"})
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">;,"});,"})
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl">,"});,"})
             </h1>;,"});,"})
             <p className="mt-6 text-lg leading-8 text-gray-600">;,"});,"})
-              From strategy to production, we deliver outcomes fast. Our;,"});,"})
-              comprehensive suite of services covers everything you need to;,"});,"})
+              From strategy to production, we deliver outcomes fast. Our,"});,"})
+              comprehensive suite of services covers everything you need to,"});,"})
               transform your business.;,"});,"})
             </p>;,"});,"})
       </section>;,"});,"})
       {/* Services Grid */}"});,"})
-      <section className="py-24 sm: py-32">;,"});,"})
-          <div className="grid gap-8 lg:grid-cols-2">;,"});,"})
+      <section className="py-24 sm: py-32">,"});,"})
+          <div className="grid gap-8 lg: grid-cols-2">,"});,"})
             {/* AI Autonomous Systems */}"});,"})
-            <div;,"});,"})
+            <div,"});,"})
               id="ai";,"});,"})
-              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-blue-300";,"});,"})
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-blue-300","});,"})
             >;,"});,"})
               <div className="flex items-center gap-x-3 mb-6">;,"});,"})
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors">;,"});,"})
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover: bg-blue-700 transition-colors">,"});,"})
                   <Brain className="h-7 w-7 text-white" />;,"});,"})
                 <div>;,"});,"})
                   <h2 className="text-xl font-semibold text-gray-900">;,"});,"})
-                    AI Autonomous Systems;,"});,"})
+                    AI Autonomous Systems,"});,"})
                   </h2>;,"});,"})
                   <p className="text-sm text-blue-600 font-medium">;,"});,"})
-                    Intelligent Automation;,"});,"})
+                    Intelligent Automation,"});,"})
               <p className="text-gray-600 mb-6">;,"});,"})
-                Transform your operations with intelligent automation and;,"});,"})
+                Transform your operations with intelligent automation and,"});,"})
                 AI-powered decision making.;,"});,"})
               <ul className="space-y-3 mb-6">;,"});,"})
                 <li className="flex items-center gap-x-3">;,"});,"})
                   <CheckCircle className="h-4 w-4 text-blue-600" />;,"});,"})
                   <span className="text-sm text-gray-700">;,"});,"})
-                    Sales/CS multi-agent copilots;,"});,"})
+                    Sales/CS multi-agent copilots,"});,"})
                 </li>;,"});,"})
-                    RAG and workflow orchestration;,"});,"})
-                    Observability and guardrails;,"});,"})
-                    Intelligent process automation;,"});,"})
+                    RAG and workflow orchestration,"});,"})
+                    Observability and guardrails,"});,"})
+                    Intelligent process automation,"});,"})
               </ul>;,"});,"})
               <div className="flex items-center justify-between">;,"});,"})
                 <div className="flex items-center space-x-2 text-sm text-gray-500">;,"});,"})
                   <Clock className="h-4 w-4" />;,"});,"})
                   <span>2-4 weeks delivery</span>;,"});,"})
-                <Link;,"});,"})
+                <Link,"});,"})
                   to="/contact";,"});,"})
-                  className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group";,"});,"})
+                  className="inline-flex items-center text-sm font-semibold text-blue-600 hover: text-blue-500 transition-colors group","});,"})
                   aria-label="Get started with AI services";,"});,"})
-                  Get started with AI;,"});,"})
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />;,"});,"})
+                  Get started with AI,"});,"})
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover: translate-x-1 transition-transform" />,"});,"})
                 </Link>;,"});,"})
             {/* Cloud Platforms */}"});,"})
               id="cloud";,"});,"})
-              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-green-300";,"});,"})
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors">;,"});,"})
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-green-300","});,"})
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover: bg-green-700 transition-colors">,"});,"})
                   <Cloud className="h-7 w-7 text-white" />;,"});,"})
-                    Cloud Platforms;,"});,"})
+                    Cloud Platforms,"});,"})
                   <p className="text-sm text-green-600 font-medium">;,"});,"})
-                    Scalable Infrastructure;,"});,"})
-                Build scalable, resilient cloud infrastructure that grows with;,"});,"})
+                    Scalable Infrastructure,"});,"})
+                Build scalable, resilient cloud infrastructure that grows with,"});,"})
                 your business.;,"});,"})
                   <CheckCircle className="h-4 w-4 text-green-600" />;,"});,"})
-                    Serverless and Kubernetes;,"});,"})
-                    Data pipelines and ML ops;,"});,"})
-                    FinOps and SRE practices;,"});,"})
-                    Multi-cloud architecture;,"});,"})
+                    Serverless and Kubernetes,"});,"})
+                    Data pipelines and ML ops,"});,"})
+                    FinOps and SRE practices,"});,"})
+                    Multi-cloud architecture,"});,"})
                   <span>4-8 weeks delivery</span>;,"});,"})
-                  className="inline-flex items-center text-sm font-semibold text-green-600 hover: text-green-500 transition-colors group";,"});,"})
+                  className="inline-flex items-center text-sm font-semibold text-green-600 hover: text-green-500 transition-colors group","});,"})
                   aria-label="Get started with cloud services";,"});,"})
-                  Get started with Cloud;,"});,"})
+                  Get started with Cloud,"});,"})
             {/* Cybersecurity */}"});,"})
               id="cybersecurity";,"});,"})
-              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-purple-300";,"});,"})
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors">;,"});,"})
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-purple-300","});,"})
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover: bg-purple-700 transition-colors">,"});,"})
                   <Shield className="h-7 w-7 text-white" />;,"});,"})
-                    Cybersecurity;,"});,"})
+                    Cybersecurity,"});,"})
                   <p className="text-sm text-purple-600 font-medium">;,"});,"})
-                    Zero-Trust Security;,"});,"})
-                Protect your business with enterprise-grade security frameworks;,"});,"})
+                    Zero-Trust Security,"});,"})
+                Protect your business with enterprise-grade security frameworks,"});,"})
                 and compliance automation.;,"});,"})
                   <CheckCircle className="h-4 w-4 text-purple-600" />;,"});,"})
-                    Zero-trust architecture;,"});,"})
-                    Compliance automation;,"});,"})
-                    Incident response;,"});,"})
+                    Zero-trust architecture,"});,"})
+                    Compliance automation,"});,"})
+                    Incident response,"});,"})
                   <span className="text-sm text-gray-700">Security audits</span>;,"});,"})
                   <span>3-6 weeks delivery</span>;,"});,"})
-                  className="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group";,"});,"})
+                  className="inline-flex items-center text-sm font-semibold text-purple-600 hover: text-purple-500 transition-colors group","});,"})
                   aria-label="Get started with cybersecurity services";,"});,"})
-                  Get started with Security;,"});,"})
+                  Get started with Security,"});,"})
             {/* Micro SaaS */}"});,"})
               id="saas";,"});,"})
-              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-orange-300";,"});,"})
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors">;,"});,"})
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-orange-300","});,"})
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover: bg-orange-700 transition-colors">,"});,"})
                   <Code className="h-7 w-7 text-white" />;,"});,"})
-                    Micro SaaS;,"});,"})
+                    Micro SaaS,"});,"})
                   <p className="text-sm text-orange-600 font-medium">;,"});,"})
-                    Custom Solutions;,"});,"})
-                Custom software solutions tailored to your specific business;,"});,"})
+                    Custom Solutions,"});,"})
+                Custom software solutions tailored to your specific business,"});,"})
                 needs and workflows.;,"});,"})
                   <CheckCircle className="h-4 w-4 text-orange-600" />;,"});,"})
-                    Custom web applications;,"});,"})
+                    Custom web applications,"});,"})
                   <span className="text-sm text-gray-700">API development</span>;,"});,"})
-                    Integration services;,"});,"})
-                    Maintenance & support;,"});,"})
+                    Integration services,"});,"})
+                    Maintenance & support,"});,"})
                   <span>6-12 weeks delivery</span>;,"});,"})
-                  className="inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group";,"});,"})
+                  className="inline-flex items-center text-sm font-semibold text-orange-600 hover: text-orange-500 transition-colors group","});,"})
                   aria-label="Get started with custom software services";,"});,"})
-                  Get started with SaaS;,"});,"})
+                  Get started with SaaS,"});,"})
       {/* Process Section */}"});,"})
-      <section className="py-24 sm:py-32 bg-gray-50">;,"});,"})
-          <div className="mx-auto max-w-2xl lg:text-center mb-16">;,"});,"})
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">;,"});,"})
-              Our Delivery Process;,"});,"})
-              We follow a proven methodology that ensures quality, speed, and;,"});,"})
+      <section className="py-24 sm: py-32 bg-gray-50">,"});,"})
+          <div className="mx-auto max-w-2xl lg: text-center mb-16">,"});,"})
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl">,"});,"})
+              Our Delivery Process,"});,"})
+              We follow a proven methodology that ensures quality, speed, and,"});,"})
               successful outcomes.;,"});,"})
-          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">;,"});,"})
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">,"});,"})
             <div className="text-center group">;,"});,"})
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4">;,"});,"})
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover: bg-blue-200 transition-colors mb-4">,"});,"})
                 <span className="text-2xl font-bold text-blue-600">1</span>;,"});,"})
               <h3 className="text-lg font-semibold text-gray-900 mb-2">;,"});,"})
-                Discovery;,"});,"})
+                Discovery,"});,"})
               </h3>;,"});,"})
               <p className="text-gray-600">;,"});,"})
-                Understand your needs and requirements;,"});,"})
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover:bg-green-200 transition-colors mb-4">;,"});,"})
+                Understand your needs and requirements,"});,"})
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover: bg-green-200 transition-colors mb-4">,"});,"})
                 <span className="text-2xl font-bold text-green-600">2</span>;,"});,"})
-                Strategy;,"});,"})
+                Strategy,"});,"})
               <p className="text-gray-600">Plan the solution architecture</p>;,"});,"})
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-200 transition-colors mb-4">;,"});,"})
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover: bg-purple-200 transition-colors mb-4">,"});,"})
                 <span className="text-2xl font-bold text-purple-600">3</span>;,"});,"})
-                Development;,"});,"})
+                Development,"});,"})
               <p className="text-gray-600">Build and test the solution</p>;,"});,"})
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover:bg-orange-200 transition-colors mb-4">;,"});,"})
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover: bg-orange-200 transition-colors mb-4">,"});,"})
                 <span className="text-2xl font-bold text-orange-600">4</span>;,"});,"})
-                Deployment;,"});,"})
+                Deployment,"});,"})
               <p className="text-gray-600">Launch and monitor performance</p>;,"});,"})
       {/* CTA Section */}"});,"})
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32">;,"});,"})
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">;,"});,"})
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32">,"});,"})
+            <h2 className="text-3xl font-bold tracking-tight text-white sm: text-4xl">,"});,"})
               Ready to get started?;,"});,"})
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">;,"});,"})
-              Let&apos;s discuss your project requirements and how we can help;,"});,"})
+              Let&apos;s discuss your project requirements and how we can help,"});,"})
               you achieve your goals.';,"});,"})
             <div className="mt-10 flex items-center justify-center gap-x-6">;,"});,"})
-                className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50 transition-all duration-200 hover:scale-105";,"});,"})
+                className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50 transition-all duration-200 hover:scale-105","});,"})
                 aria-label="Contact us to get started";,"});,"})
-                Contact Us;,"});,"})
-                <ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" />;,"});,"})
+                Contact Us,"});,"})
+                <ArrowRight className="ml-2 h-4 w-4 inline group-hover: translate-x-1 transition-transform" />,"});,"})
                 to="/";,"});,"})
-                className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group";,"});,"})
+                className="text-sm font-semibold leading-6 text-white hover: text-blue-100 transition-colors group","});,"})
                 aria-label="Back to homepage";,"});,"})
                 Back to Home{' '}"});,"})
-                <span;,"});,"})
+                <span,"});,"})
                   aria-hidden="true";,"});,"})
-                  className="group-hover:translate-x-1 transition-transform inline-block";,"});,"})
+                  className="group-hover: translate-x-1 transition-transform inline-block","});,"})
                   →;,"});,"})
     </PageTransition>;,"});,"})
   );,"});,"});
 }"});,"})
-import Link from 'next/link;
+import Link from 'next/link
 import {
   ArrowRight,
   Brain,
@@ -272,9 +272,8 @@ import {
   Globe as GlobeIcon,
   Shield as ShieldIcon,
   ChevronDown,
-  ChevronUp;
-} from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
+  ChevronUp} from 'lucide-react';
+import PageTransition from '../src/components/PageTransition'
 import { services, serviceCategories, Service } from '../data/services';
 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -287,8 +286,7 @@ import { services, serviceCategories, Service } from '../data/services';
     const iconMap: { [key: string]: any } = {
       MessageCircle, Eye, FileText, TrendingUp, Cloud, Settings, LinkIcon, Database,
       Users, CheckSquare, ShoppingCart, UserCheck, Shield, Lock, AlertTriangle,
-      Wifi, Link2, Glasses, Bot, Brain, Code, Zap, Globe, Target, Activity;
-};
+      Wifi, Link2, Glasses, Bot, Brain, Code, Zap, Globe, Target, Activity};
     return iconMap[iconName] || Code};
 
   const getColorClasses = (color: string) => {
@@ -1182,14 +1180,13 @@ export default function Services() {'
               />
 
             {/* Category Filter */}
-            <div className="flex flex-wrap gap-2">
+            <div className={`flex flex-wrap gap-2`>
               <button
                 onClick={() => setSelectedCategory('all')}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   selectedCategory === 'all'
                     ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200';
-}`}
+                    : 'bg-gray-100 text-gray-700 hover: bg-gray-200'}`}
                 All Services ({services.length})
               </button>
               {serviceCategories.map((category) => (
@@ -1199,24 +1196,23 @@ export default function Services() {'
                   {category.name} ({category.count})
               ))}
 
-      <section className="py-24 sm:py-32">
+      <section className=`py-24 sm:py-32`}>
           <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
             {filteredServices.map((service) => {
               const IconComponent = getIconComponent(service.icon);
               const colors = getColorClasses(service.color);
               const isExpanded = expandedService === service.id;
 
-                <div
-                  key={service.id}
-                  className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-gray-300"
+                <div key={service.id}
+                  className={`group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-gray-300`
                     <div className={`flex h-12 w-12 items-center justify-center rounded-lg ${colors.bg} ${colors.hover} transition-colors`}>
-                      <IconComponent className="h-7 w-7 text-white" />
-                      <h2 className="text-xl font-semibold text-gray-900">
+                      <IconComponent className=`h-7 w-7 text-white`} />
+                      <h2 className={`text-xl font-semibold text-gray-900`>
                         {service.title}
                       <p className={`text-sm ${colors.text} font-medium`}>
                         {service.category}
 
-                  <p className="text-gray-600 mb-6">
+                  <p className=`text-gray-600 mb-6`}>
                     {service.description}
 
                   {/* Pricing */}
@@ -1233,9 +1229,9 @@ export default function Services() {'
                     <h4 className="text-sm font-medium text-gray-700 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, isExpanded ? service.features.length : 3).map((feature, index) => (
-                        <li key={index} className="flex items-center gap-x-3">
+                        <li key={index} className={`flex items-center gap-x-3`>
                           <CheckCircle className={`h-4 w-4 ${colors.text}`} />
-                          <span className="text-sm text-gray-700">{feature}</span>
+                          <span className=`text-sm text-gray-700`}>{feature}</span>
                       {service.features.length > 3 && (
                           onClick={() => setExpandedService(isExpanded ? null : service.id)}
                           className="flex items-center text-sm text-blue-600 hover:text-blue-500 transition-colors"
@@ -1263,12 +1259,12 @@ export default function Services() {'
                   {/* Delivery Time and CTA */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2 text-sm text-gray-500">
-                      <Clock className="h-4 w-4" />
+                      <Clock className={`h-4 w-4` />
                       <span>{service.deliveryTime}</span>
                       className={`inline-flex items-center text-sm font-semibold ${colors.text} hover:opacity-80 transition-colors group`}
                       aria-label={`Get started with ${service.title}`}
                       Get Quote
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className=`ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform`} />
               )})}
 
           {filteredServices.length === 0 && (
@@ -2056,10 +2052,9 @@ export default function Services() {'
                 Back to Home{' '}
                 <span'
                   aria-hidden="true""
-                  className="group-hover:translate-x-1 transition-transform inline-block"
+                  className="group-hover: translate-x-1 transition-transform inline-block"
                   →
-  );
-}
+  )}
 ;
 	return (;
 		<PageTransition> {/* Hero Section */}

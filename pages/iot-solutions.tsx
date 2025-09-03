@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import { Header } from '../src/components/Header';
+import { Header } from '../src/components/Header'
 import Footer from '../src/components/Footer';
 import {
   Wifi,
@@ -199,5 +199,4 @@ export default function IoTSolutions() {
 
       <Footer />
     </>
-  );
-}
+  )}

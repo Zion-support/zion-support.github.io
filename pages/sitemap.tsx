@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO'
 import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
+import { Badge } from '../components/ui/Badge'
 import { 
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import { ModernHeader } from '../src/components/header/ModernHeader';
-import { SimpleFooter } from '../src/components/layout/SimpleFooter';
+import { SimpleFooter } from '../src/components/layout/SimpleFooter'
 import { Globe, ExternalLink, ArrowRight } from 'lucide-react';
 
 export default function Sitemap() {
@@ -76,28 +76,28 @@ import {;,"});,"})
   Filter, Calendar,;,"});,"})
   Star, TrendingUp,;,"});,"})
   Brain, Cloud,;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})
             animate={{ opacity: 1, y: 0 }}"});,"})
             transition={{ duration: 0.6 }}"});,"})
             className="text-center mb-12";,"});,"})
           >;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})
           </motion.div>;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})
                 initial={{ opacity: 0, y: 20 }}"});,"})
                 animate={{ opacity: 1, y: 0 }}"});,"})
                 transition={{ duration: 0.6, delay: index * 0.1 }}"});,"})
               >;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})
               </motion.div>;,"});,"})
             ))}"});,"})
           </div>;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})
           </motion.div>;,"});,"})
         </div>;,"});,"})
       </div>;,"});,"})
     </>;,"});,"})
-const Sitemap: React.FC = () => {;,"});,"})
+const Sitemap: React.FC = () => {,"});,"})
   const links = [;,"});,"})
     { name: 'Home', url: '/' },;,"});,"})
     { name: 'About', url: '/about' },;,"});,"})
@@ -120,7 +120,7 @@ const Sitemap: React.FC = () => {;,"});,"})
     <div className="min-h-screen px-6 py-16 max-w-4xl mx-auto">;,"});,"})
       <h1 className="text-3xl font-bold mb-6">Sitemap</h1>;,"});,"})
       <p className="text-gray-600 mb-8">Quick links to primary pages and sections.</p>;,"});,"})
-      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">;,"});,"})
+      <ul className="grid grid-cols-1 sm: grid-cols-2 gap-3">,"});,"})
         {links.map((l) => (;,"});,"})
           <li key={l.url}>;,"});,"})
             <a className="text-blue-600 hover:underline" href={l.url}>;,"});,"})
@@ -134,16 +134,16 @@ const Sitemap: React.FC = () => {;,"});,"})
   );,"});,"});
 };,"});,"})
 ;,"});,"})
-export default SitemapPage;,"});,"})
-import React from 'react';
+export default SitemapPage,"});,"})
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import { motion } from 'framer-motion';
-import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card';
+import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer'
 import {
   Globe,
   ArrowRight,
@@ -262,9 +262,9 @@ export default function Sitemap() {
       icon: MapPin,
       text: '364 E Main St STE 1008, Middletown DE 19709',
       href: '#'},
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import SEO from '../components/SEO';
-import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card';
+import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card'
 import { Badge } from '../components/ui/Badge';
 import {
   Map, ArrowRight,
@@ -278,8 +278,7 @@ import {
   Star, TrendingUp,
   Brain, Cloud,
   Database, Code,
-  Building, Zap;
-} from 'lucide-react';
+  Building, Zap} from 'lucide-react';
 
 const SitemapPage = () => {
   const pages = [
@@ -288,113 +287,97 @@ const SitemapPage = () => {
       description: 'Main landing page with company overview and featured services',
       url: '/',
       icon: Home,
-      category: 'Main';
-},
+      category: 'Main'},
     {
       title: 'All Services',
       description: 'Comprehensive showcase of all our technology services and solutions',
       url: '/comprehensive-services-showcase-2026',
       icon: Zap,
-      category: 'Services';
-},
+      category: 'Services'},
     {
       title: 'Micro SaaS',
       description: 'Affordable, specialized software solutions for small businesses',
       url: '/services/micro-saas',
       icon: Zap,
-      category: 'Services';
-},
+      category: 'Services'},
     {
       title: 'AI & Machine Learning',
       description: 'Advanced AI solutions and intelligent automation services',
       url: '/services/ai-services',
       icon: Brain,
-      category: 'Services';
-},
+      category: 'Services'},
     {
       title: 'IT Services',
       description: 'Comprehensive IT support and infrastructure management',
       url: '/services/it-services',
       icon: Building,
-      category: 'Services';
-},
+      category: 'Services'},
     {
       title: 'Cloud & Infrastructure',
       description: 'Scalable cloud solutions and infrastructure management',
       url: '/services/cloud-infrastructure',
       icon: Cloud,
-      category: 'Services';
-},
+      category: 'Services'},
     {
       title: 'Data & Analytics',
       description: 'Real-time data processing and business intelligence',
       url: '/services/data-analytics',
       icon: Database,
-      category: 'Services';
-},
+      category: 'Services'},
     {
       title: 'Developer Tools',
       description: 'Development automation and operational excellence',
       url: '/services/developer-tools',
       icon: Code,
-      category: 'Services';
-},
+      category: 'Services'},
     {
       title: 'Industry Solutions',
       description: 'Specialized solutions for specific industries',
       url: '/services/industry-solutions',
       icon: Building,
-      category: 'Services';
-},
+      category: 'Services'},
     {
       title: 'Emerging Technology',
       description: 'Cutting-edge technology solutions and platforms',
       url: '/services/emerging-tech',
       icon: Zap,
-      category: 'Services';
-},
+      category: 'Services'},
     {
       title: 'Solutions',
       description: 'Industry-specific solutions and enterprise packages',
       url: '/solutions',
       icon: Briefcase,
-      category: 'Solutions';
-},
+      category: 'Solutions'},
     {
       title: 'Enterprise',
       description: 'Enterprise-grade solutions and consulting services',
       url: '/enterprise',
       icon: Building,
-      category: 'Solutions';
-},
+      category: 'Solutions'},
     {
       title: 'About',
       description: 'Learn about our company, mission, and team',
       url: '/about',
       icon: Users,
-      category: 'Company';
-},
+      category: 'Company'},
     {
       title: 'Case Studies',
       description: 'Success stories and client testimonials',
       url: '/case-studies',
       icon: FileText,
-      category: 'Company';
-},
+      category: 'Company'},
     {
       title: 'Careers',
       description: 'Join our team and explore career opportunities',
       url: '/careers',
       icon: Briefcase,
-      category: 'Company';
-},
+      category: 'Company'},
     {
       title: 'Contact',
       description: 'Get in touch with our team for consultations',
       url: '/contact',
       icon: Phone,
-      category: 'Contact';
-}
+      category: 'Contact'}
   ]
 
   const categories = ['Main', 'Services', 'Solutions', 'Company', 'Contact'];
@@ -413,8 +396,7 @@ const SitemapPage = () => {
             initial={{ opacity: 0, y: 20 }}
   Database, Network,
   Zap, Target,
-  CheckCircle;
-} from 'lucide-react';''const Sitemap: React.FC = () => {
+  CheckCircle} from 'lucide-react';''const Sitemap: React.FC = () => {
   const lastUpdated = new Date().toISOString().split('T')[0];''  const mainPages = [;
     { name: "Home", url: "/", description: "Welcome to Zion Tech Group", icon: Home },"    { name: "About", url: "/about", description: "Learn about our company and mission", icon: Users },"    { name: "Services", url: "/services", description: "Our AI and technology solutions", icon: Briefcase },"    { name: "Contact", url: "/contact", description: "Get in touch with our team", icon: Phone },"    { name: "Careers", url: "/careers", description: "Join our team of experts", icon: Users },"    { name: "Team", url: "/team", description: "Meet our leadership and experts", icon: Award },"    { name: "Pricing", url: "/pricing", description: "Transparent pricing for our services", icon: DollarSign },"    { name: "Blog", url: "/blog", description: "Latest insights and technology trends", icon: BookOpen },"    { name: "Case Studies", url: "/case-studies", description: "Success stories from our clients", icon: TrendingUp },"    { name: "White Papers", url: "/white-papers", description: "Research and insights", icon: FileText },"    { name: "Webinars", url: "/webinars", description: "Expert-led educational sessions", icon: Calendar },"    { name: "Privacy Policy", url: "/privacy", description: "How we protect your data", icon: Shield },"    { name: "Terms of Service", url: "/terms", description: "Terms and conditions", icon: FileText }"  ]"
   const servicePages = [;
@@ -945,7 +927,7 @@ const SitemapPage: React.FC = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.05 * pageIndex }}
                     >
-<Card className="p-6 h-full hover:shadow-lg transition-shadow">"                        <div className="flex items-start mb-4">"                          <div className={`p-3 rounded-lg bg-gradient-to-r ${category.color} mr-4`}>"                            <page.icon className="w-6 h-6 text-white" />"                          </div>"                          <div className="flex-1">"                            <h3 className="text-xl font-bold text-white mb-2">{page.name}</h3>"                            <p className="text-gray-300 text-sm mb-4">{page.description}</p>"                          </div>"                        </div>`                        "
+<Card className="p-6 h-full hover:shadow-lg transition-shadow">"                        <div className="flex items-start mb-4">`                          <div className={`p-3 rounded-lg bg-gradient-to-r ${category.color} mr-4`}>`                            <page.icon className="w-6 h-6 text-white" />"                          </div>"                          <div className="flex-1">"                            <h3 className="text-xl font-bold text-white mb-2">{page.name}</h3>"                            <p className="text-gray-300 text-sm mb-4">{page.description}</p>"                          </div>"                        </div>`                        "
                         <div className="flex items-center justify-between">"                          <a"                            href={page.url}
                             className="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center""                          >"                            Visit Page
                             <ArrowRight className="w-4 h-4 ml-1" />"                          </a>"                          <Badge variant="secondary" className="text-xs">"                            {page.url}"                          </Badge></div>
@@ -1255,7 +1237,7 @@ className="text-center""            >"              <div className="p-6 rounded-
 
         {/* Quick Links */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Quick Links</h2>
               <p className="text-xl text-gray-600">Popular pages and resources</p>
@@ -1304,8 +1286,7 @@ className="text-center""            >"              <div className="p-6 rounded-
       
       <SimpleFooter />
     </>
-  );
-}
+  )}
 
           {/* Last Updated */}
           <div className="text-center mt-12">
@@ -1360,8 +1341,7 @@ const Sitemap: React.FC = () => {
 }
   );
 };
-export default SitemapPage;
-}
+export default SitemapPage}
 }
 };
 export default SitemapPage;

@@ -29,10 +29,10 @@ const AIDevelopment: NextPage: = () => {,
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
               View: All Services
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 import { Award, Brain, Cloud, Globe, Image, Target, Today, Users, Zap } from 'lucide-react';
 '
-import Layout from '../../components/Layout';
+import Layout from '../../components/Layout'
 import Link from 'next/link';
 const AIDevelopment: NextPage = () => {
     <Layout'
@@ -44,7 +44,7 @@ const AIDevelopment: NextPage = () => {
           <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">"
             <Brain className="w-10 h-10 text-white" />
           </div>"
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
 import { Brain, Zap, Target, CheckCircle, ArrowRight, Users, Award, Globe } from 'lucide-react';
 ;
@@ -183,7 +183,7 @@ import {
   ArrowRight,
   Users,
   Award,
-  Globe} from 'lucide-react';
+  Globe} from 'lucide-react'
 import Navigation from '../../src/components/Navigation';
 import Footer from '../../src/components/Footer';
   Bot,

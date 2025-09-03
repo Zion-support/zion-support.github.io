@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
+import fs from 'fs'
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -17,8 +17,7 @@ function fixFile(filePath) {
       if (!match.endsWith(';')) {
         return match + ';';
       }
-      return match;
-    });
+      return match});
     
     // Fix broken JSX syntax
     fixed = fixed.replace(/<([^>]+)\s*>/g, (match) => {
@@ -35,14 +34,11 @@ function fixFile(filePath) {
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
+      console.log(``Fixed: ${filePath}``);
+      return true}
+    return false} catch (error) {
     console.error(`Error: ${filePath}`, error.message);
-    return false;
-  }
+    return false}
 }
 
 function processDirectory(dirPath) {
@@ -62,10 +58,9 @@ function processDirectory(dirPath) {
     }
   }
   
-  return fixedCount;
-}
+  return fixedCount}
 
 const srcDir = path.join(__dirname, 'src');
 console.log('Final fix...');
 const totalFixed = processDirectory(srcDir);
-console.log(`Fixed ${totalFixed} files`);
+console.log(``Fixed ${totalFixed} files``);

@@ -48,7 +48,6 @@ const contact = {
   ;
   ;
   website: 'https://ziontechgroup.com';
-;
 };
 export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureService[] = [
   // HYBRID CLOUD ORCHESTRATION
@@ -501,4 +500,4 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     aiCapabilities['Autonomous Optimization', 'Performance Prediction', 'Automatic Routing', 'Traffic Optimization'],
     marketDisruption: 'Revolutionizes network management with autonomous AI'
 ];
-export default enterpriseITInfrastructureServices2025;}}
+export default enterpriseITInfrastructureServices2025}}

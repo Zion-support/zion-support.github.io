@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { SEO } from '../components/SEO';
 
 const Contact: React.FC = () => {
@@ -30,25 +30,25 @@ export default function Contact() {,"});,"})
     company: '',;,"});,"})
     phone: '',;,"});,"})
     service: '',;,"});,"})
-    message: '';,"});,"});
+    message: '',"});,"});
 });,"});,"})
   const [isSubmitting, setIsSubmitting] = useState(false);,"});,"})
   const [submitSuccess, setSubmitSuccess] = useState(false);,"});,"})
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,"});,"})
-    const { name, value } = e.target;,"});,"})
+    const { name, value } = e.target,"});,"})
     setFormData(prev => ({,"});,"})
       ...prev,;,"});,"})
-      [name]: value;,"});,"});
+      [name]: value,"});,"});
 }));,"});,"});
 };,"});,"})
   const handleSubmit = async (e: React.FormEvent) => {,"});,"})
     e.preventDefault();,"});,"})
     setIsSubmitting(true);,"});,"})
-    // Simulate form submission;,"});,"})
+    // Simulate form submission,"});,"})
     await new Promise(resolve => setTimeout(resolve, 2000));,"});,"})
     setIsSubmitting(false);,"});,"})
     setSubmitSuccess(true);,"});,"})
-    // Reset form after success;,"});,"})
+    // Reset form after success,"});,"})
     setTimeout(() => {,"});,"})
       setSubmitSuccess(false);,"});,"})
       setFormData({,"});,"});
@@ -67,20 +67,20 @@ export default function Contact() {,"});,"})
       icon: '📍',;,"});,"})
       title: 'Office Address',;,"});,"})
       details: '364 E Main St STE 1008, Middletown DE 19709',;,"});,"})
-      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709';,"});,"});
+      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',"});,"});
 },;,"});,"})
       icon: '📧',;,"});,"})
       title: 'Email',;,"});,"})
       details: 'kleber@ziontechgroup.com',;,"});,"})
-      link: 'mailto:kleber@ziontechgroup.com';,"});,"})
+      link: 'mailto:kleber@ziontechgroup.com',"});,"})
       icon: '📱',;,"});,"})
       title: 'Phone',;,"});,"})
       details: '+1 (302) 464-0950',;,"});,"})
-      link: 'tel:+13024640950';,"});,"})
+      link: 'tel:+13024640950',"});,"})
       icon: '🌐',;,"});,"})
       title: 'Website',;,"});,"})
       details: 'ziontechgroup.com',;,"});,"})
-      link: 'https://ziontechgroup.com';,"});,"});
+      link: 'https://ziontechgroup.com',"});,"});
 }"});,"})
   const officeHours = [,"});,"})
     { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST' },;,"});,"})
@@ -91,19 +91,19 @@ export default function Contact() {,"});,"})
       <Header />;,"});,"})
       {/* Hero Section */}"});,"})
       <section className="pt-20 pb-16 bg-gradient-to-br from-gray-50 to-blue-50">;,"});,"})
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;,"});,"})
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,"});,"})
           <div className="text-center">;,"});,"})
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">;,"});,"})
-              Get In Touch;,"});,"})
+            <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">,"});,"})
+              Get In Touch,"});,"})
             </h1>;,"});,"})
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">;,"});,"})
-              Ready to transform your business? Let's discuss how our technology solutions;,"});,"})
+            <p className="text-xl md: text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">,"});,"})
+              Ready to transform your business? Let's discuss how our technology solutions,"});,"})
               can drive innovation and growth for your organization.;,"});,"})
             </p>;,"});,"})
           </div>;,"});,"})
       </section>;,"});,"})
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;,"});,"})
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">;,"});,"})
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,"});,"})
+        <div className="grid grid-cols-1 lg: grid-cols-2 gap-16">,"});,"})
           {/* Contact Form */}"});,"})
           <div>;,"});,"})
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Send us a Message</h2>;,"});,"})
@@ -117,18 +117,18 @@ export default function Contact() {,"});,"})
                     <p className="text-green-700">We'll get back to you within 24 hours.</p>;,"});,"})
             ) : null}"});,"})
             <form onSubmit={handleSubmit} className="space-y-6">;,"});,"})
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;,"});,"})
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,"});,"})
                   <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
                     First Name *;,"});,"})
                   </label>;,"});,"})
-                  <input;,"});,"})
+                  <input,"});,"})
                     type="text";,"});,"})
                     id="firstName";,"});,"})
                     name="firstName";,"});,"})
                     value={formData.firstName}"});,"})
                     onChange={handleInputChange}"});,"})
-                    required;,"});,"})
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";,"});,"})
+                    required,"});,"})
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent","});,"})
                   />;,"});,"})
                   <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
                     Last Name *;,"});,"})
@@ -142,19 +142,19 @@ export default function Contact() {,"});,"})
                     name="email";,"});,"})
                     value={formData.email}"});,"})
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
-                    Phone Number;,"});,"})
+                    Phone Number,"});,"})
                     type="tel";,"});,"})
                     id="phone";,"});,"})
                     name="phone";,"});,"})
                     value={formData.phone}"});,"})
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
-                  Company Name;,"});,"})
+                  Company Name,"});,"})
                   id="company";,"});,"})
                   name="company";,"});,"})
                   value={formData.company}"});,"})
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
-                  Service of Interest;,"});,"})
-                <select;,"});,"})
+                  Service of Interest,"});,"})
+                <select,"});,"})
                   id="service";,"});,"})
                   name="service";,"});,"})
                   value={formData.service}"});,"})
@@ -168,16 +168,16 @@ export default function Contact() {,"});,"})
                 </select>;,"});,"})
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;,"});,"})
                   Message *;,"});,"})
-                <textarea;,"});,"})
+                <textarea,"});,"})
                   id="message";,"});,"})
                   name="message";,"});,"})
                   value={formData.message}"});,"})
                   rows={6}"});,"})
                   placeholder="Tell us about your project, goals, or how we can help...";,"});,"})
-              <button;,"});,"})
+              <button,"});,"})
                 type="submit";,"});,"})
                 disabled={isSubmitting}"});,"})
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-4 px-8 rounded-lg transition-colors";,"});,"})
+                className="w-full bg-blue-600 hover: bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-4 px-8 rounded-lg transition-colors","});,"})
                 {isSubmitting ? 'Sending Message...' : 'Send Message'}"});,"})
               </button>;,"});,"})
             </form>;,"});,"})
@@ -191,11 +191,11 @@ export default function Contact() {,"});,"})
                     <div key={index} className="flex items-start space-x-4">;,"});,"})
                       <div className="text-2xl">{method.icon}</div>;,"});,"})
                         <h4 className="font-medium text-gray-900">{method.title}</h4>;,"});,"})
-                        <a;,"});,"})
+                        <a,"});,"})
                           href={method.link}"});,"})
                           target={method.link.startsWith('http') ? '_blank' : '_self'}"});,"})
                           rel={method.link.startsWith('http') ? 'noopener noreferrer' : ''}"});,"})
-                          className="text-blue-600 hover:text-blue-700 hover:underline";,"});,"})
+                          className="text-blue-600 hover: text-blue-700 hover:underline","});,"})
                           {method.details}"});,"})
                         </a>;,"});,"})
               {/* Office Hours */}"});,"})
@@ -207,25 +207,25 @@ export default function Contact() {,"});,"})
                       <span className="font-medium text-gray-900">{schedule.hours}</span>;,"});,"})
               {/* Quick Links */}"});,"})
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Quick Links</h3>;,"});,"})
-                  <Link to="/services" className="block text-blue-600 hover:text-blue-700 hover:underline">;,"});,"})
-                    View Our Services;,"});,"})
+                  <Link to="/services" className="block text-blue-600 hover: text-blue-700 hover:underline">,"});,"})
+                    View Our Services,"});,"})
                   </Link>;,"});,"})
-                  <Link to="/case-studies" className="block text-blue-600 hover:text-blue-700 hover:underline">;,"});,"})
-                    Case Studies;,"});,"})
-                  <Link to="/about" className="block text-blue-600 hover:text-blue-700 hover:underline">;,"});,"})
-                    About Zion Tech Group;,"});,"})
-                  <Link to="/pricing" className="block text-blue-600 hover:text-blue-700 hover:underline">;,"});,"})
-                    Pricing Information;,"});,"})
+                  <Link to="/case-studies" className="block text-blue-600 hover: text-blue-700 hover:underline">,"});,"})
+                    Case Studies,"});,"})
+                  <Link to="/about" className="block text-blue-600 hover: text-blue-700 hover:underline">,"});,"})
+                    About Zion Tech Group,"});,"})
+                  <Link to="/pricing" className="block text-blue-600 hover: text-blue-700 hover:underline">,"});,"})
+                    Pricing Information,"});,"})
               {/* Emergency Support */}"});,"})
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;,"});,"})
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">Need Immediate Support?</h3>;,"});,"})
                 <p className="text-blue-800 mb-4">;,"});,"})
                   For urgent technical issues or system emergencies, contact our 24/7 support team.;,"});,"})
-                  href="tel:+13024640950";,"});,"})
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors";,"});,"})
+                  href="tel: +13024640950","});,"})
+                  className="inline-flex items-center bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors","});,"})
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">;,"});,"})
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />;,"});,"})
-                  Call Now;,"});,"})
+                  Call Now,"});,"})
       <Footer />;,"});,"})
   );,"});,"})
     firstName: '', lastName: '',""
@@ -270,12 +270,12 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) =>  {,;
 export default function Contact() {}
   const [formData, setFormData] = useState( {
-    firstName: &apos;&apos;,
-    lastName: &apos;&apos;,
-    email: &apos;&apos;,
-    company: &apos;&apos;,
-    phone: &apos;&apos;,
-    service: &apos;&apos;,
+    firstName: &apos;&apos,
+    lastName: &apos;&apos,
+    email: &apos;&apos,
+    company: &apos;&apos,
+    phone: &apos;&apos,
+    service: &apos;&apos,
     message: &apos;&apos})&apos;&apos;
   const;const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({ firstName: '', lastName: '',
@@ -487,31 +487,31 @@ export default function Contact() {}
                     <option key={index} value={service}>;
         message: &apos;&apos})}, 5000)}
 ;&apos;&apos;
-    &apos;AI & Machine Learning&apos;,
-    &apos;Cloud & DevOps&apos;,
-    &apos;Cybersecurity&apos;,
-    &apos;Digital Transformation&apos;,
-    &apos;Financial Solutions&apos;,
-    &apos;Manufacturing Solutions&apos;,
+    &apos;AI & Machine Learning&apos,
+    &apos;Cloud & DevOps&apos,
+    &apos;Cybersecurity&apos,
+    &apos;Digital Transformation&apos,
+    &apos;Financial Solutions&apos,
+    &apos;Manufacturing Solutions&apos,
     &apos;Other';
   ]&apos;&apos;
   const contactMethods = [
     {
-      icon: &apos;📍&apos;,
-      title: &apos;Office Address&apos;,
-      details: &apos;364 E Main St STE 1008, Middletown DE 19709&apos;,
+      icon: &apos;📍&apos,
+      title: &apos;Office Address&apos,
+      details: &apos;364 E Main St STE 1008, Middletown DE 19709&apos,
       link: &apos;http,s://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709&apos} {
-      icon: &apos;📧&apos;,
-      title: &apos;Email&apos;,
-      details: &apos;kleber@ziontechgroup.com&apos;,
+      icon: &apos;📧&apos,
+      title: &apos;Email&apos,
+      details: &apos;kleber@ziontechgroup.com&apos,
       link: &apos;mailt,o:kleber@ziontechgroup.com&apos} {
-      icon: &apos;📱&apos;,
-      title: &apos;Phone&apos;,
-      details: &apos;+1 (302) 464-0950&apos;,
+      icon: &apos;📱&apos,
+      title: &apos;Phone&apos,
+      details: &apos;+1 (302) 464-0950&apos,
       link: &apos;te,l:+13024640950&apos} {
-      icon: &apos;🌐&apos;,
-      title: &apos;Website&apos;,
-      details: &apos;ziontechgroup.com&apos;,
+      icon: &apos;🌐&apos,
+      title: &apos;Website&apos,
+      details: &apos;ziontechgroup.com&apos,
       link: &apos;http,s://ziontechgroup.com&apos}
   ]&apos;
         firstName: '', lastName: '',
@@ -527,7 +527,7 @@ export default function Contact() {}
       title: 'Phone', details: '+1 (302) 464-0950', link: 'tel:+13024640950'} { icon: '🌐', title: 'Website',
       details: 'ziontechgroup.com', link: 'https://ziontechgroup.com'}
   const officeHours = [
-    { day: &apos;Monday - Friday&apos;, hours: &apos;9:00 AM - ,6:00 PM EST&apos} { day: &apos;Saturday&apos;, hours: &apos;10:00 AM - ,4:00 PM EST&apos} { day: &apos;Sunday&apos;, hours: &apos;Closed&apos}
+    { day: &apos;Monday - Friday&apos, hours: &apos;9:00 AM - ,6:00 PM EST&apos} { day: &apos;Saturday&apos, hours: &apos;10:00 AM - ,4:00 PM EST&apos} { day: &apos;Sunday&apos, hours: &apos;Closed&apos}
   return(&apos;
     <div className=&apos;min-h-screen bg-white&apos;>&apos;'
       <Header />
@@ -683,8 +683,8 @@ export default function Contact() {}
                       <div className=&apos;text-2xl&apos;>{method.icon}&apos;</div>
                         <h4 className=&apos;font-medium text-gray-900&apos;>{method.title}&apos;</h4>
                         <a
-                          target={method.link.startsWith(&apos;http&apos;) ? &apos;_blank&apos; : &apos;_self&apos}
-                          rel={method.link.startsWith(&apos;http&apos;) ? &apos;noopener noreferrer&apos; : &apos;&apos}
+                          target={method.link.startsWith(&apos;http&apos) ? &apos;_blank&apos; : &apos;_self&apos}
+                          rel={method.link.startsWith(&apos;http&apos) ? &apos;noopener noreferrer&apos; : &apos;&apos}
                           className=&apos;text-blue-600 hover:text-blue-700 hove,r:underline&apos;>{method.details}&apos;&apos;
                         </a>
               {/* Office: Hours */}

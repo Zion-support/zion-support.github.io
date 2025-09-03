@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from 'react'
 import Head from 'next/head';
 
 interface EnhancedLayoutProps {
@@ -10,8 +10,7 @@ interface EnhancedLayoutProps {
   canonical?: string;
   noindex?: boolean;
   showPerformanceMetrics?: boolean;
-  showSEOAnalysis?: boolean;
-}
+  showSEOAnalysis?: boolean}
 
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
   children,
@@ -22,8 +21,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
   canonical,
   noindex = false,
   showPerformanceMetrics = false,
-  showSEOAnalysis = false;
-}) => {
+  showSEOAnalysis = false}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || 'https://ziontechgroup.com';
 

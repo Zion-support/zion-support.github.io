@@ -7,14 +7,13 @@ export const performanceMonitor = {
         const navigation = performance.getEntriesByType('navigation')[0];
         const loadTime = navigation.loadEventEnd - navigation.fetchStart;
         
-        console.log(`Page load time: ${loadTime}ms`);
+        console.log(``Page load time: ${loadTime}ms``);
         
         // Send to analytics
         if (typeof gtag !== 'undefined') {
           gtag('event', 'page_load_time', {
             value: Math.round(loadTime),
-            event_category: 'Performance';
-});
+            event_category: 'Performance'});
         }
       });
     }
@@ -38,9 +37,8 @@ export const performanceMonitor = {
     if (typeof window !== 'undefined' && 'memory' in performance) {
       setInterval(() => {
         const memory = performance.memory;
-        console.log(`Memory usage: ${Math.round(memory.usedJSHeapSize / 1024 / 1024)}MB`);
-      }, 30000); // Every 30 seconds;
-}
+        console.log(``Memory usage: ${Math.round(memory.usedJSHeapSize / 1024 / 1024)}MB``);
+      }, 30000); // Every 30 seconds}
   }
 };
 

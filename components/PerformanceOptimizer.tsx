@@ -17,13 +17,11 @@ const PerformanceOptimizer: React.FC = () => {
       const images = document.querySelectorAll('img');
       images.forEach((img) => {
         if (!img.loading) {
-          img.loading = 'lazy';
-        }
+          img.loading = 'lazy'}
       });
     }
   }, []);
 
-  return null;
-};
+  return null};
 
 export default PerformanceOptimizer;

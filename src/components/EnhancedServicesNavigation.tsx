@@ -6,7 +6,7 @@
           title: "Code Review & Security","""";,"});,"})
           url: "/services/ai-code-review-security","""";,"});,"})
           description: "85% vulnerability reduction","""";,"});,"})
-          pricing: "From $49/month""";,"});,"});
+          pricing: "From $49/month""","});,"});
 },;,"});,"})
         {}"});,"})
 """;,"});,"})
@@ -14,7 +14,7 @@
           title: "Customer Experience Analytics","""";,"});,"})
           url: "/services/ai-customer-experience-analytics","""";,"});,"})
           description: "35% satisfaction increase","""";,"});,"})
-          pricing: "From $299/month""";,"});,"});
+          pricing: "From $299/month""","});,"});
 },;,"});,"})
         {}"});,"})
 """;,"});,"})
@@ -22,7 +22,7 @@
           title: "DevOps Automation","""";,"});,"})
           url: "/services/ai-devops-automation-platform","""";,"});,"})
           description: "80% deployment time reduction","""";,"});,"})
-          pricing: "From $199/month""";,"});,"});
+          pricing: "From $199/month""","});,"});
 },;,"});,"})
         {}"});,"})
 """;,"});,"})
@@ -30,7 +30,7 @@
           title: "IoT Edge Computing","""";,"});,"})
           url: "/services/ai-iot-edge-computing-platform","""";,"});,"})
           description: "90% latency reduction","""";,"});,"})
-          pricing: "From $299/month""";,"});,"});
+          pricing: "From $299/month""","});,"});
 }"});,"})
       ],"});,"});
 },;,"});,"})
@@ -48,7 +48,7 @@
           title: "Cloud DevOps","""";,"});,"})
           url: "/services/cloud-devops","""";,"});,"})
           description: "Streamlined deployment","""";,"});,"})
-          pricing: "Custom pricing""";,"});,"});
+          pricing: "Custom pricing""","});,"});
 },;,"});,"})
         {}"});,"})
 """;,"});,"})
@@ -56,7 +56,7 @@
           title: "IT Infrastructure","""";,"});,"})
           url: "/services/it-infrastructure","""";,"});,"})
           description: "Enterprise-grade solutions","""";,"});,"})
-          pricing: "Custom pricing""";,"});,"});
+          pricing: "Custom pricing""","});,"});
 },;,"});,"})
         {}"});,"})
 """;,"});,"})
@@ -64,7 +64,7 @@
           title: "Digital Twin","""";,"});,"})
           url: "/services/digital-twin","""";,"});,"})
           description: "Virtual representations","""";,"});,"})
-          pricing: "Custom pricing""";,"});,"});
+          pricing: "Custom pricing""","});,"});
 }"});,"})
       ],"});,"});
 },;,"});,"})
@@ -82,7 +82,7 @@
           title: "Data Analytics","""";,"});,"})
           url: "/services/data-analytics","""";,"});,"})
           description: "Comprehensive analysis","""";,"});,"})
-          pricing: "Custom pricing""";,"});,"});
+          pricing: "Custom pricing""","});,"});
 },;,"});,"})
         {}"});,"})
 """;,"});,"})
@@ -90,7 +90,7 @@
           title: "AI Business Intelligence","""";,"});,"})
           url: "/services/ai-business-intelligence","""";,"});,"})
           description: "AI-powered insights","""";,"});,"})
-          pricing: "Custom pricing""";,"});,"});
+          pricing: "Custom pricing""","});,"});
 },;,"});,"})
         {}"});,"})
 """;,"});,"})
@@ -98,7 +98,7 @@
           title: "IoT Edge","""";,"});,"})
           url: "/services/iot-edge","""";,"});,"})
           description: "Real-time processing","""";,"});,"})
-          pricing: "Custom pricing""";,"});,"});
+          pricing: "Custom pricing""","});,"});
 }"});,"})
       ],"});,"});
 },;,"});,"})
@@ -116,7 +116,7 @@
           title: "Zero Trust Architecture","""";,"});,"})
           url: "/services/zero-trust-network-architecture","""";,"});,"})
           description: "Modern security framework","""";,"});,"})
-          pricing: "Custom pricing""";,"});,"});
+          pricing: "Custom pricing""","});,"});
 },;,"});,"})
         {}"});,"})
 """;,"});,"})
@@ -124,7 +124,7 @@
           title: "Cybersecurity Suite","""";,"});,"})
           url: "/services/ai-cybersecurity-suite","""";,"});,"})
           description: "Comprehensive security","""";,"});,"})
-          pricing: "Custom pricing""";,"});,"});
+          pricing: "Custom pricing""","});,"});
 },;,"});,"})
         {}"});,"})
 """;,"});,"})
@@ -132,7 +132,7 @@
           title: "Compliance Assistant","""";,"});,"})
           url: "/services/ai-compliance-assistant","""";,"});,"})
           description: "AI-powered compliance","""";,"});,"})
-          pricing: "Custom pricing""";,"});,"});
+          pricing: "Custom pricing""","});,"});
 }"});,"})
       ]};,"});,"})
   ]};  ],"});,"})
@@ -142,12 +142,12 @@
       {/* Main Services Button */}"});,"})
       <button""";,"});,"})
         onClick={() => setIsOpen(!isOpen)}"""";,"});,"})
-        className="relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"""";,"});,"})
+        className="relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"""","});,"})
       >"""";,"});,"})
         <span className="flex items-center gap-2">;,"});,"})
           <span>🚀</span>;,"});,"})
           <span > Services</span>;,"});,"})
-          <motion.span;,"});,"})
+          <motion.span,"});,"})
             animate={{ rotate: isOpen ? 180 : 0 }}"});,"})
             transition={{ duration: 0.3 }}"});,"})
           >;,"});,"})
@@ -157,18 +157,18 @@
       </button>;,"});,"})
       {/* Services Dropdown */}"});,"})
       <AnimatePresence>;,"});,"})
-        {isOpen && (<motion.div;,"});,"})
+        {isOpen && (<motion.div,"});,"})
             initial = {}"});,"})
   { opacity: 0, y: -10,;,"});,"})
-  scale: 0.95;,"});,"});
+  scale: 0.95,"});,"});
 }}"});,"})
             animate = {}"});,"})
   { opacity: 1, y: 0,;,"});,"})
-  scale: 1;,"});,"});
+  scale: 1,"});,"});
 }}"});,"})
             exit = {}"});,"})
   { opacity: 0, y: -10,;,"});,"})
-  scale: 0.95;,"});,"});
+  scale: 0.95,"});,"});
 }}""";,"});,"})
             transition={{ duration: 0.2 }}"""";,"});,"})
             className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden"""";,"});,"})
@@ -180,34 +180,34 @@
                   Our Complete Service Portfolio""";,"});,"})
                 </h3>"""";,"});,"})
                 <p className="text-gray-600">;,"});,"})
-                  From AI-powered micro SAAS to enterprise infrastructure solutions;,"});,"})
+                  From AI-powered micro SAAS to enterprise infrastructure solutions,"});,"})
                 </p>;,"});,"})
               </div>;,"});,"})
 """;,"});,"})
               {/* Service Categories Grid */}"""";,"});,"})
-              <div className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">;,"});,"})
+              <div className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">,"});,"})
                 {serviceCategories.map((category, categoryIndex)  => (;,"});,"})
-                  <motion.div;,"});,"})
+                  <motion.div,"});,"})
                     key={category.name}"});,"})
                     initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  x: categoryIndex % 2 === 0 ? -20 : 20;,"});,"});
+  x: categoryIndex % 2 === 0 ? -20 : 20,"});,"});
 }}"});,"})
                     animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  x: 0;,"});,"});
+  x: 0,"});,"});
 }}"});,"})
                     transition = {}"});,"})
   { duration: 0.3,;,"});,"})
                       """;,"});,"})
-  delay: categoryIndex * 0.1;,"});,"})
+  delay: categoryIndex * 0.1,"});,"})
 """;,"});,"});
 }}"""";,"});,"})
                     className="relative group""";,"});,"})
                     onMouseEnter={ () => setActiveCategory (category.name) }"});,"})
                     onMouseLeave={ () => setActiveCategory (null) }"});,"})
-                  >""";,"});,"})
-                    <div className={`p-6 rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover:scale-105`}>"""";,"});,"})
+                  >""";,"});,`})
+                    <div className={`p-6 rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover:scale-105`}>`""";,"});,"})
                       <div className="flex items-center gap-3 mb-4">"""";,"});,"})
                         <span className="text-2xl">{category.icon}</span>""";,"});,"})
                         <div>"""";,"});,"})
@@ -218,22 +218,22 @@
                       """";,"});,"})
                       <div className="space-y-2">;,"});,"})
                         {category.services.map((service, serviceIndex) => (;,"});,"})
-                          <motion.div;,"});,"})
+                          <motion.div,"});,"})
                             key={service.title}"});,"})
                             initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  x: -10;,"});,"});
+  x: -10,"});,"});
 }}"});,"})
                             animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  x: 0;,"});,"});
+  x: 0,"});,"});
 }}"});,"})
                             transition = {}"});,"})
   { duration: 0.2,;,"});,"})
-  delay: serviceIndex * 0.05;,"});,"})
+  delay: serviceIndex * 0.05,"});,"})
 """;,"});,"});
 }}"""";,"});,"})
-                            className="flex items-center justify-between p-2 rounded bg-white/20 hover:bg-white/30 transition-colors duration-200"""";,"});,"})
+                            className="flex items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30 transition-colors duration-200"""","});,"})
                           >"""";,"});,"})
                             <div className="flex-1">"""";,"});,"})
                               <div className="font-medium text-sm">{service.title}</div>"""";,"});,"})
@@ -253,29 +253,29 @@
                 <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">;,"});,"})
                   Quick Access""";,"});,"})
                 </h4>"""";,"});,"})
-                <div className="grid grid-cols-2 md: grid-cols-4 gap-4">;,"});,"})
+                <div className="grid grid-cols-2 md: grid-cols-4 gap-4">,"});,"})
                   {quickLinks.map((link, index)  => (;,"});,"})
-                    <motion.div;,"});,"})
+                    <motion.div,"});,"})
                       key={link.title}"});,"})
                       initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"});
+  y: 20,"});,"});
 }}"});,"})
                       animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  y: 0;,"});,"});
+  y: 0,"});,"});
 }}"});,"})
                       transition = {}"});,"})
   { duration: 0.3,;,"});,"})
-  delay: index * 0.1;,"});,"});
+  delay: index * 0.1,"});,"});
 }}"});,"})
                     >;,"});,"})
-                      <Link;,"});,"})
+                      <Link,"});,"})
                         to={link.url}""";,"});,"})
                         onClick={() => setIsOpen(false)}"""";,"});,"})
-                        className="block p-4 text-center rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-200 group"""";,"});,"})
+                        className="block p-4 text-center rounded-lg bg-gray-50 hover: bg-gray-100 transition-colors duration-200 group"""","});,"})
                       >"""";,"});,"})
-                        <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-200">;,"});,"})
+                        <div className="text-2xl mb-2 group-hover: scale-110 transition-transform duration-200">,"});,"})
                           {link.icon}""";,"});,"})
                         </div>"""";,"});,"})
                         <div className="font-medium text-gray-900 text-sm mb-1">;,"});,"})
@@ -295,7 +295,7 @@
                   <p className="text-sm text-gray-700 mb-2">;,"});,"})
                     Need help choosing the right service?""";,"});,"})
                   </p>"""";,"});,"})
-                  <div className="flex flex-col sm:flex-row gap-2 justify-center text-sm">"""";,"});,"})
+                  <div className="flex flex-col sm: flex-row gap-2 justify-center text-sm">"""","});,"})
                     <span className="text-gray-600">"""";,"});,"})
                       📱 <span className="font-medium">+1 302 464 0950</span>""";,"});,"})
                     </span>"""";,"});,"})
@@ -309,7 +309,7 @@
           </motion.div>) }"});,"})
       </AnimatePresence>;,"});,"})
       {/* Backdrop */}"});,"})
-      {isOpen && (<motion.div;,"});,"})
+      {isOpen && (<motion.div,"});,"})
           initial={{ opacity: 0 }}"});,"})
           animate={{ opacity: 1 }}""";,"});,"})
           exit={{ opacity: 0 }}"""";,"});,"})
@@ -320,7 +320,7 @@
     </div>;,"});,"})
   )};,"});,"})
 ;,"});,"})
-export default EnhancedServicesNavigation;,"});,"})
+export default EnhancedServicesNavigation,"});,"})
 ;,"});,"})
 export { EnhancedServicesNavigation };,"});,"})
 ;,"});,"})
@@ -577,123 +577,123 @@ export { EnhancedServicesNavigation };,"});,"})
           description: 'AI-powered compliance','';
           pricing: 'Custom pricing''}
 '&apos;
-          title: &apos;Code Review & Security&apos;,'&apos;
-          url: &apos;/services/ai-code-review-security&apos;,'&apos;
-          description: &apos;85% vulnerability reduction&apos;,'&apos;
+          title: &apos;Code Review & Security&apos,'&apos;
+          url: &apos;/services/ai-code-review-security&apos,'&apos;
+          description: &apos;85% vulnerability reduction&apos,'&apos;
 &apos;&apos;'';
-          title: &apos;Code Review & Security&apos;,'&apos;&apos;
-          url: &apos;/services/ai-code-review-security&apos;,'&apos;&apos;
-          description: &apos;85% vulnerability reduction&apos;,'&apos;&apos;
+          title: &apos;Code Review & Security&apos,'&apos;&apos;
+          url: &apos;/services/ai-code-review-security&apos,'&apos;&apos;
+          description: &apos;85% vulnerability reduction&apos,'&apos;&apos;
           pricing: &apos;From $49/month&apos;&apos;'},
         {}
 &apos;&apos;
 &apos;&apos;'';
-          title: &apos;Customer Experience Analytics&apos;,'&apos;&apos;
-          url: &apos;/services/ai-customer-experience-analytics&apos;,'&apos;&apos;
-          description: &apos;35% satisfaction increase&apos;,'&apos;&apos;
+          title: &apos;Customer Experience Analytics&apos,'&apos;&apos;
+          url: &apos;/services/ai-customer-experience-analytics&apos,'&apos;&apos;
+          description: &apos;35% satisfaction increase&apos,'&apos;&apos;
           pricing: &apos;From $299/month&apos;&apos;'},
         {}
 &apos;&apos;
 &apos;&apos;'';
-          title: &apos;DevOps Automation&apos;,'&apos;&apos;
-          url: &apos;/services/ai-devops-automation-platform&apos;,'&apos;&apos;
-          description: &apos;80% deployment time reduction&apos;,'&apos;&apos;
+          title: &apos;DevOps Automation&apos,'&apos;&apos;
+          url: &apos;/services/ai-devops-automation-platform&apos,'&apos;&apos;
+          description: &apos;80% deployment time reduction&apos,'&apos;&apos;
           pricing: &apos;From $199/month&apos;&apos;'},
         {}
 &apos;&apos;
 &apos;&apos;'';
-          title: &apos;IoT Edge Computing&apos;,'&apos;&apos;
-          url: &apos;/services/ai-iot-edge-computing-platform&apos;,'&apos;&apos;
-          description: &apos;90% latency reduction&apos;,'&apos;&apos;
+          title: &apos;IoT Edge Computing&apos,'&apos;&apos;
+          url: &apos;/services/ai-iot-edge-computing-platform&apos,'&apos;&apos;
+          description: &apos;90% latency reduction&apos,'&apos;&apos;
           pricing: &apos;From $299/month&apos;&apos;'}
       ]},
     {}
 &apos;&apos;
 &apos;&apos;'';
-      name: &apos;Cloud & Infrastructure&apos;,'&apos;&apos;
-      description: &apos;Enterprise solutions&apos;,'&apos;&apos;
-      icon: &apos;☁️&apos;,'&apos;&apos;
-      color: &apos;from-green-600 to-blue-600&apos;,
+      name: &apos;Cloud & Infrastructure&apos,'&apos;&apos;
+      description: &apos;Enterprise solutions&apos,'&apos;&apos;
+      icon: &apos;☁️&apos,'&apos;&apos;
+      color: &apos;from-green-600 to-blue-600&apos,
       services[
         {}
 &apos;&apos;
 &apos;&apos;'';
-          title: &apos;Cloud DevOps&apos;,'&apos;&apos;
-          url: &apos;/services/cloud-devops&apos;,'&apos;&apos;
-          description: &apos;Streamlined deployment&apos;,'&apos;&apos;
+          title: &apos;Cloud DevOps&apos,'&apos;&apos;
+          url: &apos;/services/cloud-devops&apos,'&apos;&apos;
+          description: &apos;Streamlined deployment&apos,'&apos;&apos;
           pricing: &apos;Custom pricing&apos;&apos;'},
         {}
 &apos;&apos;
 &apos;&apos;'';
-          title: &apos;IT Infrastructure&apos;,'&apos;&apos;
-          url: &apos;/services/it-infrastructure&apos;,'&apos;&apos;
-          description: &apos;Enterprise-grade solutions&apos;,'&apos;&apos;
+          title: &apos;IT Infrastructure&apos,'&apos;&apos;
+          url: &apos;/services/it-infrastructure&apos,'&apos;&apos;
+          description: &apos;Enterprise-grade solutions&apos,'&apos;&apos;
           pricing: &apos;Custom pricing&apos;&apos;'},
         {}
 &apos;&apos;
 &apos;&apos;'';
-          title: &apos;Digital Twin&apos;,'&apos;&apos;
-          url: &apos;/services/digital-twin&apos;,'&apos;&apos;
-          description: &apos;Virtual representations&apos;,'&apos;&apos;
+          title: &apos;Digital Twin&apos,'&apos;&apos;
+          url: &apos;/services/digital-twin&apos,'&apos;&apos;
+          description: &apos;Virtual representations&apos,'&apos;&apos;
           pricing: &apos;Custom pricing&apos;&apos;'}
       ]},
     {}
 &apos;&apos;
 &apos;&apos;'';
-      name: &apos;Data & Analytics&apos;,'&apos;&apos;
-      description: &apos;Business intelligence&apos;,'&apos;&apos;
-      icon: &apos;📊&apos;,'&apos;&apos;
-      color: &apos;from-purple-600 to-pink-600&apos;,
+      name: &apos;Data & Analytics&apos,'&apos;&apos;
+      description: &apos;Business intelligence&apos,'&apos;&apos;
+      icon: &apos;📊&apos,'&apos;&apos;
+      color: &apos;from-purple-600 to-pink-600&apos,
       services[
         {}
 &apos;&apos;
 &apos;&apos;'';
-          title: &apos;Data Analytics&apos;,'&apos;&apos;
-          url: &apos;/services/data-analytics&apos;,'&apos;&apos;
-          description: &apos;Comprehensive analysis&apos;,'&apos;&apos;
+          title: &apos;Data Analytics&apos,'&apos;&apos;
+          url: &apos;/services/data-analytics&apos,'&apos;&apos;
+          description: &apos;Comprehensive analysis&apos,'&apos;&apos;
           pricing: &apos;Custom pricing&apos;&apos;'},
         {}
 &apos;&apos;
 &apos;&apos;'';
-          title: &apos;AI Business Intelligence&apos;,'&apos;&apos;
-          url: &apos;/services/ai-business-intelligence&apos;,'&apos;&apos;
-          description: &apos;AI-powered insights&apos;,'&apos;&apos;
+          title: &apos;AI Business Intelligence&apos,'&apos;&apos;
+          url: &apos;/services/ai-business-intelligence&apos,'&apos;&apos;
+          description: &apos;AI-powered insights&apos,'&apos;&apos;
           pricing: &apos;Custom pricing&apos;&apos;'},
         {}
 &apos;&apos;
 &apos;&apos;'';
-          title: &apos;IoT Edge&apos;,'&apos;&apos;
-          url: &apos;/services/iot-edge&apos;,'&apos;&apos;
-          description: &apos;Real-time processing&apos;,'&apos;&apos;
+          title: &apos;IoT Edge&apos,'&apos;&apos;
+          url: &apos;/services/iot-edge&apos,'&apos;&apos;
+          description: &apos;Real-time processing&apos,'&apos;&apos;
           pricing: &apos;Custom pricing&apos;&apos;'}
       ]},
     {}
 &apos;&apos;
 &apos;&apos;'';
-      name: &apos;Security & Compliance&apos;,'&apos;&apos;
-      description: &apos;Enterprise security&apos;,'&apos;&apos;
-      icon: &apos;🔒&apos;,'&apos;&apos;
-      color: &apos;from-red-600 to-orange-600&apos;,
+      name: &apos;Security & Compliance&apos,'&apos;&apos;
+      description: &apos;Enterprise security&apos,'&apos;&apos;
+      icon: &apos;🔒&apos,'&apos;&apos;
+      color: &apos;from-red-600 to-orange-600&apos,
       services[{}
 &apos;&apos;
 &apos;&apos;'';
-          title: &apos;Zero Trust Architecture&apos;,'&apos;&apos;
-          url: &apos;/services/zero-trust-network-architecture&apos;,'&apos;&apos;
-          description: &apos;Modern security framework&apos;,'&apos;&apos;
+          title: &apos;Zero Trust Architecture&apos,'&apos;&apos;
+          url: &apos;/services/zero-trust-network-architecture&apos,'&apos;&apos;
+          description: &apos;Modern security framework&apos,'&apos;&apos;
           pricing: &apos;Custom pricing&apos;&apos;'},
         {}
 &apos;&apos;
 &apos;&apos;'';
-          title: &apos;Cybersecurity Suite&apos;,'&apos;&apos;
-          url: &apos;/services/ai-cybersecurity-suite&apos;,'&apos;&apos;
-          description: &apos;Comprehensive security&apos;,'&apos;&apos;
+          title: &apos;Cybersecurity Suite&apos,'&apos;&apos;
+          url: &apos;/services/ai-cybersecurity-suite&apos,'&apos;&apos;
+          description: &apos;Comprehensive security&apos,'&apos;&apos;
           pricing: &apos;Custom pricing&apos;&apos;'},
         {}
 &apos;&apos;
 &apos;&apos;'';
-          title: &apos;Compliance Assistant&apos;,'&apos;&apos;
-          url: &apos;/services/ai-compliance-assistant&apos;,'&apos;&apos;
-          description: &apos;AI-powered compliance&apos;,'&apos;&apos;
+          title: &apos;Compliance Assistant&apos,'&apos;&apos;
+          url: &apos;/services/ai-compliance-assistant&apos,'&apos;&apos;
+          description: &apos;AI-powered compliance&apos,'&apos;&apos;
           pricing: &apos;Custom pricing&apos;&apos;'}
       ]}
   ]}  ]';
@@ -708,7 +708,7 @@ export { EnhancedServicesNavigation };,"});,"})
           title: 'Code Review & Security', ''';'
           url: '/services/ai-code-review-security', ''';'
           description: '85% vulnerability reduction', ''';'
-""
+``
 '''';
           title: 'Code Review & Security', '''';
           url: '/services/ai-code-review-security', '''';
@@ -918,7 +918,7 @@ export { EnhancedServicesNavigation };,"});,"})
               </div>
 &apos;&apos;'{/* Service Categories Grid */}&apos;&apos;'&apos;&apos;'
               <div className=&apos;grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8&apos;>
-                {serviceCategories.map((category, categoryIndex)  => (&apos;}
+                {serviceCategories.map((category, categoryIndex)  => (&apos}
   scale: 0.95}}''';'
             transition={{ duration: 0.2   }}'''';
             className='absolute top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden''''>'''''
@@ -945,7 +945,7 @@ export { EnhancedServicesNavigation };,"});,"})
                     transition: = {}
   { duration: 0.,3,
                       ''';';
-  delay: categoryIndex: * 0.1';,'}}'''';';
+  delay: categoryIndex: * 0.1','}}'''';';
                     className='relative: group''';';
                     onMouseEnter={ () => setActiveCategory: (category.name) }
                     onMouseLeave={ () => setActiveCategory (null) }
@@ -991,7 +991,7 @@ export { EnhancedServicesNavigation };,"});,"})
   x: -10}}
   { duration: 0.3,
                       &apos;&apos;
-  delay: categoryIndex * 0.1';&apos;}}&apos;&apos;'';
+  delay: categoryIndex * 0.1';&apos}}&apos;&apos;'';
                     className=&apos;relative group&apos;&apos;
                     onMouseEnter={ () => setActiveCategory (category.name) }
                     onMouseLeave={ () => setActiveCategory (null) }
@@ -1006,7 +1006,7 @@ export { EnhancedServicesNavigation };,"});,"})
                       </div>&apos;&apos;
                       &apos;&apos;'&apos;&apos;'
                       <div className=&apos;space-y-2&apos;>
-                        {category.services.map((service, serviceIndex) => (&apos;}
+                        {category.services.map((service, serviceIndex) => (&apos}
   { duration: 0.3, ''';'
   delay: categoryIndex * 0.1';'}}'''';
                     className='relative group''';
@@ -1034,7 +1034,7 @@ export { EnhancedServicesNavigation };,"});,"})
   x:  ,0}}
                             transition: = {}
   { duration: 0.,2,
-  delay: serviceIndex: * 0.05';,'}}'''';';
+  delay: serviceIndex: * 0.05','}}'''';';
                             className='flex: items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30: transition-colors duration-200''''>''''',;,';
                             <div: className='flex-1'>''''';';
                               <div: className='font-medium text-sm'>{service.title}</div>''''';';
@@ -1059,7 +1059,7 @@ export { EnhancedServicesNavigation };,"});,"})
                               <div className='text-xs font-semibold'>{service.pricing}</div>;
                             </div>;
   { duration: 0.2,
-  delay: serviceIndex * 0.05';&apos;}}&apos;&apos;'';
+  delay: serviceIndex * 0.05';&apos}}&apos;&apos;'';
                             className=&apos;flex items-center justify-between p-2 rounded bg-white/20 hover:bg-white/30 transition-colors duration-200&apos;&apos;'&apos;>'&apos;&apos;'&apos;&apos;
                             <div className=&apos;flex-1&apos;>'&apos;&apos;'&apos;&apos;
                               <div className=&apos;font-medium text-sm&apos;>{service.title}&apos;</div>&apos;&apos;'&apos;&apos;'
@@ -1129,7 +1129,7 @@ export { EnhancedServicesNavigation };,"});,"})
                   Quick Access&apos;&apos;'&apos;&apos;
                 </h4>&apos;&apos;'&apos;&apos;'
                 <div className=&apos;grid grid-cols-2 md: grid-cols-4 gap-4&apos;>
-                  {quickLinks.map((link, index)  => (&apos;}
+                  {quickLinks.map((link, index)  => (&apos}
 '''{/* Quick Links */}'''''
               <div className='border-t border-gray-200 pt-6'>''''
                 <h4 className='text-lg font-semibold text-gray-900 mb-4 text-center'>
@@ -1260,7 +1260,7 @@ export { EnhancedServicesNavigation };,"});,"})
           initial={{ opacity: 0}}
           animate={{ opacity: 1}}''';';
           exit={{ opacity: 0}}'''';';
-          className='fixed: inset-0 bg-black/20 z-40''";";";";
+          className='fixed: inset-0 bg-black/20 z-40''`;`;";";
       </AnimatePresence>;
       {/* Backdrop */}
       {isOpen && (<motion.div;

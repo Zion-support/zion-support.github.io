@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { SEO } from '../components/SEO';
 
 const Privacy: React.FC = () => {
@@ -33,7 +33,7 @@ const Privacy: React.FC = () => {,"});,"})
     </>;,"});,"})
   );,"});,"});
 };,"});,"})
-export default Privacy;,"});,"})
+export default Privacy,"});,"})
 import { motion } from 'framer-motion';';
 import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react';';
 
@@ -104,7 +104,7 @@ const Privacy: React.FC: = () => {,
           <p className='text-sm text-gray-500 mt-4'>';';
             Last: updated: {new: Date().toLocaleDateString()}
 import { motion } from 'framer-motion';""
-import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react';
+import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react'
 import { motion } from 'framer-motion';
   const sections = [
     { title: 'Information We Collect', icon: Database,
@@ -191,50 +191,50 @@ import { motion } from 'framer-motion';"
 const Privacy: React.FC = () => {}
   const;const;const sections = [
     {
-      title: &apos;Information We Collect&apos;,
+      title: &apos;Information We Collect&apos,
       icon: Database,
-        &apos;Personal information you provide (name, email, phone number)&apos;,
-        &apos;Business information for service delivery&apos;,
-        &apos;Technical information (IP address, browser type, device information)&apos;,
-        &apos;Usage data and analytics to improve our services&apos;,
+        &apos;Personal information you provide (name, email, phone number)&apos,
+        &apos;Business information for service delivery&apos,
+        &apos;Technical information (IP address, browser type, device information)&apos,
+        &apos;Usage data and analytics to improve our services&apos,
         &apos;Communication records and support interactions';
-      title: &apos;How We Use Your Information&apos;,
+      title: &apos;How We Use Your Information&apos,
       icon: Eye,
       content: [
-        &apos;To provide and improve our services&apos;,
-        &apos;To communicate with you about our services&apos;,
-        &apos;To process payments and manage accounts&apos;,
-        &apos;To provide customer support&apos;,
-        &apos;To comply with legal obligations&apos;,
+        &apos;To provide and improve our services&apos,
+        &apos;To communicate with you about our services&apos,
+        &apos;To process payments and manage accounts&apos,
+        &apos;To provide customer support&apos,
+        &apos;To comply with legal obligations&apos,
         &apos;To protect our rights and prevent fraud';
-      title: &apos;Information Sharing&apos;,
+      title: &apos;Information Sharing&apos,
       icon: UserCheck,
-        &apos;We do not sell your personal information&apos;,
-        &apos;We may share information with trusted service providers&apos;,
-        &apos;We may disclose information if required by law&apos;,
-        &apos;We may share information in case of business transfers&apos;,
+        &apos;We do not sell your personal information&apos,
+        &apos;We may share information with trusted service providers&apos,
+        &apos;We may disclose information if required by law&apos,
+        &apos;We may share information in case of business transfers&apos,
         &apos;We may share aggregated, non-personal information';
-      title: &apos;Data Security&apos;,
+      title: &apos;Data Security&apos,
       icon: Lock,
-        &apos;We use industry-standard encryption to protect your data&apos;,
-        &apos;We implement access controls and authentication&apos;,
-        &apos;We regularly update our security measures&apos;,
-        &apos;We conduct security audits and assessments&apos;,
+        &apos;We use industry-standard encryption to protect your data&apos,
+        &apos;We implement access controls and authentication&apos,
+        &apos;We regularly update our security measures&apos,
+        &apos;We conduct security audits and assessments&apos,
         &apos;We train our staff on data protection practices';
-      title: &apos;Your Rights&apos;,
+      title: &apos;Your Rights&apos,
       icon: Shield,
-        &apos;Right to access your personal information&apos;,
-        &apos;Right to correct inaccurate information&apos;,
-        &apos;Right to delete your personal information&apos;,
-        &apos;Right to restrict processing of your information&apos;,
-        &apos;Right to data portability&apos;,
+        &apos;Right to access your personal information&apos,
+        &apos;Right to correct inaccurate information&apos,
+        &apos;Right to delete your personal information&apos,
+        &apos;Right to restrict processing of your information&apos,
+        &apos;Right to data portability&apos,
         &apos;Right to object to processing';
-      title: &apos;Cookies and Tracking&apos;,
+      title: &apos;Cookies and Tracking&apos,
       icon: FileText,
-        &apos;We use cookies to improve website&apos}&apos; functionality&apos;,
-        &apos;We use analytics cookies to understand usage&apos;,
-        &apos;We use marketing cookies for targeted advertising&apos;,
-        &apos;You can control cookie settings in your browser&apos;,
+        &apos;We use cookies to improve website&apos}&apos; functionality&apos,
+        &apos;We use analytics cookies to understand usage&apos,
+        &apos;We use marketing cookies for targeted advertising&apos,
+        &apos;You can control cookie settings in your browser&apos,
         &apos;Some features may not work without cookies';
   return(&apos;&apos;
     <div className=&apos;min-h-screen bg-gradient-to-br from-slate-50 to-blue-50&apos;>&apos;'
@@ -315,7 +315,7 @@ const Privacy: React.FC = () => {}
           className=&apos;bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8&apos;>&apos;'
           <h2 className=&apos;text-2xl font-bold text-gray-900 mb-4&apos;>Introduction&apos;</h2>
           <p className=&apos;text-gray-600 leading-relaxed&apos;>
-            Zion Tech Group (&apos;we,&apos; &apos;our,&apos; or &apos;us&apos;) is committed to protecting your privacy. This Privacy Policy;
+            Zion Tech Group (&apos;we,&apos; &apos;our,&apos; or &apos;us&apos) is committed to protecting your privacy. This Privacy Policy;
           className='bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Introduction</h2>
           <p className='text-gray-600 leading-relaxed'>

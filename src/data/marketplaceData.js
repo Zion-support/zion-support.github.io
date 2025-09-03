@@ -132,79 +132,6 @@ export const serviceCategories = [
     icon: '☁️',
     services: ['
       'Cloud Migration',
-<<<<<<< HEAD
-    services: [""
-      'Machine Learning Models', ""
-      'Natural Language Processing',""
-      'Computer Vision', ""
-      'Predictive Analytics',""
-      'AI Chatbots', ""
-      'Recommendation Systems',""
-      'Data Mining', ""
-      'Neural Networks'];
-}, {""
-    id: 'cloud-devops',""
-    name: 'Cloud & DevOps', ""
-    description: 'Scalable infrastructure and automated operations',""
-    icon: '☁️', services: [""
-      'Cloud Migration',""
-      'DevOps Automation', ""
-      'Container Orchestration',""
-      'Infrastructure as Code', ""
-      'CI/CD Pipelines',""
-      'Monitoring & Logging', ""
-      'Auto Scaling',""
-      'Load Balancing'];
-}, {""
-    id: 'cybersecurity',""
-    name: 'Cybersecurity', ""
-    description: 'Protection and compliance solutions',""
-    icon: '🔒', services: [""
-      'Security Audits',""
-      'Penetration Testing', ""
-      'Vulnerability Assessment',""
-      'Incident Response', ""
-      'Security Monitoring',""
-      'Compliance Management', ""
-      'Identity & Access Management',""
-      'Data Protection'];
-}, {""
-    id: 'digital-transformation',""
-    name: 'Digital Transformation', ""
-    description: 'Business evolution through technology',""
-    icon: '🚀', services: [""
-      'Process Automation',""
-      'Workflow Optimization', ""
-      'Change Management',""
-      'Digital Strategy', ""
-      'Legacy Modernization',""
-      'Business Process Reengineering', ""
-      'Digital Adoption',""
-      'Innovation Consulting', 
-  {"
-    id: 'ai-ml,
-    name: 'AI & Machine Learning,
-    description: 'Intelligent solutions powered by artificial intelligence,
-    icon: '🤖',
-    services: ["
-      'Machine Learning Models,
-      'Natural Language Processing,
-      'Computer Vision,
-      'Predictive Analytics,
-      'AI Chatbots,
-      'Recommendation Systems,
-      'Data Mining,
-      'Neural Networks'];
-},
-  {id: 'cloud-devops',
-    name: 'Cloud & DevOps',
-    description: 'Scalable infrastructure and automated operations',
-    icon: '☁️',
-    services: ['Cloud Migration',
-      'DevOps Automation',
-=======
-<<<<<<< HEAD      'DevOps Automation',
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       'Container Orchestration',
       'Infrastructure as Code',
       'CI/CD Pipelines',
@@ -241,91 +168,6 @@ export const serviceCategories = [
     icon: '🚀',
     services: ['
       'Process Automation',
-<<<<<<< HEAD      'Workflow Optimization',
-      'Change Management',
-      'Digital Strategy',
-      'Legacy Modernization',
-      'Business Process Reengineering',
-      'Digital Adoption',
-      'Innovation Consulting'
-    ]
-}
-];
-
-export const industrySolutions = [
-  {'
-    id: 'manufacturing',
-    name: 'Manufacturing',
-    description: 'Smart factory and Industry 4.0 solutions',
-    icon: '🏭',
-    solutions: ['
-      'Predictive Maintenance',
-      'Quality Control',
-      'Supply Chain Optimization',
-      'Production Planning',
-      'Asset Management',
-      'Performance Monitoring'
-    ]
-},
-  {'
-    id: 'financial',
-    name: 'Financial Services',
-    description: 'FinTech and banking solutions',
-    icon: '💳',
-    solutions: ['
-      'Digital Banking',
-<<<<<<< HEAD
-export const industrySolutions = [{id: 'manufacturing',
-    name: 'Manufacturing',
-    description: 'Smart factory and Industry 4.0 solutions',
-  {"
-    id: 'cloud-devops,
-    name: 'Cloud & DevOps,
-    description: 'Scalable infrastructure and automated operations,
-    icon: '☁️',
-    services: ["
-      'Cloud Migration,
-      'DevOps Automation,
-      'Container Orchestration,
-      'Infrastructure as Code,
-      'CI/CD Pipelines,
-      'Monitoring & Logging,
-      'Auto Scaling,
-      'Load Balancing'];
-},
-  {"
-    id: 'cybersecurity,
-    name: 'Cybersecurity,
-    description: 'Protection and compliance solutions,
-    icon: '🔒',
-    services: ["
-      'Security Audits,
-      'Penetration Testing,
-      'Vulnerability Assessment,
-      'Incident Response,
-      'Security Monitoring,
-      'Compliance Management,
-      'Identity & Access Management,
-      'Data Protection'];
-},
-  {"
-    id: 'digital-transformation,
-    name: 'Digital Transformation,
-    description: 'Business evolution through technology,
-    icon: '🚀',
-    services: ["
-      'Process Automation,
-      'Workflow Optimization,
-      'Change Management,
-      'Digital Strategy,
-      'Legacy Modernization,
-      'Business Process Reengineering,
-      'Digital Adoption,
-      'Innovation Consulting'];
-}
-=======
-]  }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ];
 
 export const industrySolutions = [
@@ -380,64 +222,6 @@ export const industrySolutions = [
     description: 'Smart factory and Industry 4.0 solutions', "
     icon: '🏭',
     solutions: ["
-<<<<<<< HEAD
-      'Predictive Maintenance,
-      'Quality Control,
-      'Supply Chain Optimization,
-      'Production Planning,
-      'Asset Management,
-      'Performance Monitoring'];
-},
-  {id: 'financial',
-    name: 'Financial Services',
-    description: 'FinTech and banking solutions',
-    icon: '💳',
-    solutions: ['Digital Banking',
-      'Payment Processing',
-=======
-      'Predictive Maintenance', "
-      'Quality Control',"
-      'Supply Chain Optimization', "
-      'Production Planning',"
-      'Asset Management', "
-      'Performance Monitoring',
-]
-  }, {"
-    id: 'financial',"
-    name: 'Financial Services', "
-    description: 'FinTech and banking solutions',"
-    icon: '💳', solutions: ["
-      'Digital Banking',"
-      'Payment Processing', "
-      'Risk Analytics',"
-      'Compliance Automation', "
-      'Customer Onboarding',"
-      'Fraud Detection', 
-]
-  }, {"
-    id: 'healthcare',"
-    name: 'Healthcare', "
-    description: 'Digital health and medical technology',"
-    icon: '🏥', solutions: ["
-      'Electronic Health Records',"
-      'Telemedicine Platforms', "
-      'Medical Imaging',"
-      'Patient Management', "
-      'Clinical Decision Support',"
-      'Healthcare Analytics', 
-]
-  }, {"
-    id: 'retail',"
-    name: 'Retail', "
-    description: 'E-commerce and omnichannel solutions',"
-    icon: '🛒', solutions: ["
-      'E-commerce Platforms',"
-      'Inventory Management', "
-      'Customer Analytics',"
-      'Omnichannel Integration', "
-      'Personalization',"
-      'Mobile Commerce',       'Payment Processing',
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       'Risk Analytics',
       'Compliance Automation',
       'Customer Onboarding',
@@ -470,55 +254,6 @@ export const industrySolutions = [
     icon: '🛒',
     solutions: ['
       'E-commerce Platforms',
-<<<<<<< HEAD      'Inventory Management',
-      'Customer Analytics',
-      'Omnichannel Integration',
-      'Personalization',
-      'Mobile Commerce'
-    ]
-}
-];
-
-export const testimonials = [{id: 1,
-    name: 'Sarah Johnson',
-    title: 'CTO',
-    company: 'TechCorp Industries',
-    content: 'Zion Tech Group transformed our legacy systems into a modern, scalable cloud infrastructure. Their expertise in DevOps and automation has increased our deployment speed by 300%.',
-    rating: 5,
-    avatar: '/avatars/sarah.jpg';
-},
-  {id: 2,
-    name: 'Michael Chen',
-    title: 'VP of Engineering',
-    company: 'InnovateBank',
-    content: 'The AI-powered fraud detection system from Zion Tech Group has reduced our false positives by 60% while maintaining 99.9% accuracy. Outstanding results!',
-    rating: 5,
-    avatar: '/avatars/michael.jpg';
-},
-  {id: 3,
-    name: 'Emily Rodriguez',
-    title: 'Operations Director',
-    company: 'GreenManufacturing Co.',
-  {"
-    id: 'financial,
-    name: 'Financial Services,
-    description: 'FinTech and banking solutions,
-    icon: '💳',
-    solutions: [
-      'Digital Banking,
-      'Payment Processing,
-      'Risk Analytics,
-      'Compliance Automation,
-      'Customer Onboarding,
-<<<<<<< HEAD
-      'Fraud Detection'];
-},
-  {"
-=======
-      'Fraud Detection']
-  },
-  {
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     id: 'healthcare,
     name: 'Healthcare,
     description: 'Digital health and medical technology,
@@ -542,52 +277,17 @@ export const testimonials = [{id: 1,
       'Customer Analytics,
       'Omnichannel Integration,
       'Personalization,
-<<<<<<< HEAD
-      'Mobile Commerce'];
-}
-=======
-      'Mobile Commerce',
-]  }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ];
 
 export const caseStudies = [
   {'
     id: 'cloud-migration-bank',
     content: 'Zion Tech Group transformed our legacy systems into a modern, scalable cloud infrastructure. Their expertise in DevOps and automation has increased our deployment speed by 300%.',
-<<<<<<< HEAD
-    rating: 5, ""
-    avatar: '/avatars/sarah.jpg'}, {
-    id: 2,""
-    name: 'Michael Chen', ""
-    title: 'VP of Engineering',""
-    company: 'InnovateBank', "";
-},
-  {
-=======
-    rating: 5, "
-    avatar: '/avatars/sarah.jpg',
-}, {
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     id: 2,"
     name: 'Michael Chen', "
     title: 'VP of Engineering',"
     company: 'InnovateBank', "
     content: 'The AI-powered fraud detection system from Zion Tech Group has reduced our false positives by 60% while maintaining 99.9% accuracy. Outstanding results!',
-<<<<<<< HEAD
-    rating: 5, ""
-    avatar: '/avatars/michael.jpg'}, {
-    id: 3,""
-    name: 'Emily Rodriguez', ""
-    title: 'Operations Director',""
-    company: 'GreenManufacturing Co.', "";
-},
-  {
-=======
-    rating: 5, "
-    avatar: '/avatars/michael.jpg',
-}, {
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     id: 3,"
     name: 'Emily Rodriguez', "
     title: 'Operations Director',"

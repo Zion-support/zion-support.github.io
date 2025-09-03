@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout'
 import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Cloud } from 'lucide-react';
 
 const Status: NextPage = () => {
@@ -8,30 +8,24 @@ const Status: NextPage = () => {
     {
       name: 'Web Application', status: 'operational',
       uptime: '99.9%', responseTime: '120ms',
-      lastIncident: 'No incidents in the past 30 days';
-}, {
+      lastIncident: 'No incidents in the past 30 days'}, {
       name: 'API Services',
       status: 'operational', uptime: '99.8%',
-      responseTime: '85ms', lastIncident: 'No incidents in the past 30 days';
-},
+      responseTime: '85ms', lastIncident: 'No incidents in the past 30 days'},
     {
       name: 'Database', status: 'operational',
       uptime: '99.9%', responseTime: '45ms',
-      lastIncident: 'No incidents in the past 30 days';
-}, {
+      lastIncident: 'No incidents in the past 30 days'}, {
       name: 'Cloud Infrastructure',
       status: 'operational', uptime: '99.7%',
-      responseTime: '200ms', lastIncident: 'No incidents in the past 30 days';
-},
+      responseTime: '200ms', lastIncident: 'No incidents in the past 30 days'},
     {
       name: 'CDN', status: 'operational',
       uptime: '99.9%', responseTime: '50ms',
-      lastIncident: 'No incidents in the past 30 days';
-}, {
+      lastIncident: 'No incidents in the past 30 days'}, {
       name: 'Monitoring',
       status: 'operational', uptime: '100%',
-      responseTime: '30ms', lastIncident: 'No incidents in the past 30 days';
-}
+      responseTime: '30ms', lastIncident: 'No incidents in the past 30 days'}
   ]
 
   const getStatusIcon = (status: string) => {
@@ -39,8 +33,7 @@ const Status: NextPage = () => {
       case 'operational': return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'degraded': return <AlertCircle className="w-5 h-5 text-yellow-500" />;
       case 'outage': return <XCircle className="w-5 h-5 text-red-500" />;
-      default: return <Clock className="w-5 h-5 text-gray-500" />;
-    }
+      default: return <Clock className="w-5 h-5 text-gray-500" />}
   };
 
   const getStatusColor = (status: string) => {
@@ -48,21 +41,18 @@ const Status: NextPage = () => {
       case 'operational': return 'text-green-600 bg-green-100';
       case 'degraded': return 'text-yellow-600 bg-yellow-100';
       case 'outage': return 'text-red-600 bg-red-100';
-      default: return 'text-gray-600 bg-gray-100';
-    }
+      default: return 'text-gray-600 bg-gray-100'}
   };
 
   const incidents = [
     {
       id: 1, title: 'Scheduled Maintenance - API Services',
       status: 'resolved', date: '2025-01-20',
-      description: 'Scheduled maintenance window for API services completed successfully.', impact: 'minor';
-},
+      description: 'Scheduled maintenance window for API services completed successfully.', impact: 'minor'},
     {
       id: 2, title: 'Database Performance Issue',
       status: 'resolved', date: '2025-01-15',
-      description: 'Temporary performance degradation in database queries has been resolved.', impact: 'minor';
-}
+      description: 'Temporary performance degradation in database queries has been resolved.', impact: 'minor'}
   ]
 
   return (
@@ -162,14 +152,14 @@ const Status: NextPage = () => {
                             </div>
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="flex items-center">
+                            <div className={`flex items-center`>
                               {getStatusIcon(service.status)}
                               <span className={`ml-2 inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(service.status)}`}>
                                 {service.status}
                               </span>
                             </div>
                           </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          <td className=`px-6 py-4 whitespace-nowrap text-sm text-gray-900`}>
                             {service.uptime}
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
@@ -210,7 +200,7 @@ const Status: NextPage = () => {
                         </div>
                         <p className="text-gray-600 mb-2">{incident.description}</p>
                         <div className="flex items-center text-sm text-gray-500">
-                          <span className="mr-4">Date: {incident.date}</span>
+                          <span className={`mr-4`>Date: {incident.date}</span>
                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                             incident.impact === 'minor' ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-red-800';
 }`}>
@@ -227,7 +217,7 @@ const Status: NextPage = () => {
         </section>
 
         {/* Monitoring Information */}
-        <section className="py-16 bg-gray-50">
+        <section className=`py-16 bg-gray-50`}>
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Monitoring & Alerts</h2>
@@ -275,7 +265,7 @@ const Status: NextPage = () => {
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 px-4 py-3 rounded-l-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-500"
               />
               <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-r-lg font-semibold transition-colors">
                 Subscribe
@@ -285,7 +275,6 @@ const Status: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )};
 
 export default Status;

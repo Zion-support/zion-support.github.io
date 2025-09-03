@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { 
   FileText, 
   Download, 
@@ -331,7 +331,7 @@ export default function ResourcesPage() {
           <p className="text-lg text-zion-slate-light mb-8">
             Subscribe to our newsletter to receive the latest insights, whitepapers, and event notifications directly in your inbox.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
             <input 
               type="email" 
               placeholder="Enter your email address"
@@ -344,5 +344,4 @@ export default function ResourcesPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

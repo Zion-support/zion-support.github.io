@@ -119,16 +119,14 @@ const AccessibilityManager: React.FC = () => {
     setSettings(prev => ({ ...prev, [key]: value }))};
 
     if (settings.screenReader) {
-    screenReader: false;
-});
+    screenReader: false});
     // Check for user preferences;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)).matches;
     const prefersHighContrast = window.matchMedia('(prefers-contras,
     t: high)).matches;
     // Load saved settings;
         ...prev, reducedMotion: prefersReducedMotion,
-        highContrast: prefersHighContrast;
-}))}
+        highContrast: prefersHighContrast}))}
     // Detect screen reader;
     // Apply accessibility settings;
     // High contrast;
@@ -208,7 +206,7 @@ const AccessibilityManager: React.FC = () => {
             />
         {isOpen && (
           <div className="absolute bottom-16 right-0 bg-white border border-gray-200 rounded-lg shadow-xl p-4 w-80">
-            <h3 className="text-lg font-semibold mb-4">
+            <h3 className={`text-lg font-semibold mb-4`>
               Accessibility Settings
             </h3>
 ;`
@@ -231,8 +229,8 @@ const AccessibilityManager: React.FC = () => {
             {/* High Contrast Toggle */}
             <div className='mb-4>
               <label className='flex items-center justify-between'>
-            <div className="mb-4">
-              <label className="flex items-center justify-between">
+            <div className=`mb-4`}>
+              <label className={`flex items-center justify-between`>
                 <span>High Contrast Mode</span>
                   onClick={() =>
                     handleToggle('highContrast', !settings.highContrast);
@@ -262,7 +260,7 @@ const AccessibilityManager: React.FC = () => {
               <label className='block text-sm font-medium mb-2'>Font Size</label>'
               <div className='flex space-x-2>
                 {(['small', 'normal', 'large', 'xlarge'] as const).map((size) => ( {/* Font Size Controls */}
-              <label className="block text-sm font-medium mb-2">
+              <label className=`block text-sm font-medium mb-2`}>
                 Font Size
               <div className="flex space-x-2">
                 {(['small', 'normal', 'large', 'xlarge'] as const).map(size => (

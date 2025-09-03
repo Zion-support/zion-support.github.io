@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import Head from 'next/head'
 import Layout from '../components/Layout';
 import {
   Users,
@@ -13,8 +13,7 @@ import {
   CheckCircle,
   MapPin,
   Clock,
-  DollarSign;
-} from 'lucide-react';
+  DollarSign} from 'lucide-react';
 
 const Careers: NextPage = () => {
   const benefits = [
@@ -26,8 +25,7 @@ const Careers: NextPage = () => {
     {
       icon: Home,
       title: 'Remote Work',
-      description: 'Flexible remote work options and home office stipend.';
-},
+      description: 'Flexible remote work options and home office stipend.'},
     {
       icon: Award,
       title: 'Growth Opportunities',
@@ -36,8 +34,7 @@ const Careers: NextPage = () => {
     {
       icon: Zap,
       title: 'Innovation Time',
-      description: 'Dedicated time for personal projects and innovation.';
-}
+      description: 'Dedicated time for personal projects and innovation.'}
   ]
 
   const openPositions = [
@@ -53,15 +50,13 @@ const Careers: NextPage = () => {
       location: 'San Francisco, CA',
       type: 'Full-time',
       experience: '3+ years',
-      description: 'Develop and deploy machine learning models and AI solutions for our clients.';
-},
+      description: 'Develop and deploy machine learning models and AI solutions for our clients.'},
     {
       title: 'DevOps Engineer',
       location: 'Remote',
       type: 'Full-time',
       experience: '4+ years',
-      description: 'Manage cloud infrastructure and implement CI/CD pipelines for scalable applications.';
-}
+      description: 'Manage cloud infrastructure and implement CI/CD pipelines for scalable applications.'}
   ]
 
   return (
@@ -204,7 +199,7 @@ const Careers: NextPage = () => {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Don't see a position that fits? We're always looking for talented individuals to join our growing team.
             </p>
-            <button className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300">
+            <button className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover: bg-gray-100 transition-all duration-300">
               Send Us Your Resume
               <ArrowRight className="ml-2 w-5 h-5" />
             </button>
@@ -212,7 +207,6 @@ const Careers: NextPage = () => {
         </section>
       </Layout>
     </>
-  );
-};
+  )};
 
 export default Careers;

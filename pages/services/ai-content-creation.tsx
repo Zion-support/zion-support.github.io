@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 
@@ -7,33 +7,27 @@ const AIContentCreation: NextPage = () => {
     {
       title: 'Blog Post Generation',
       description: 'Create engaging, SEO-optimized blog posts tailored to your industry and audience.',
-      icon: '📝';
-},
+      icon: '📝'},
     {
       title: 'Social Media Content',
       description: 'Generate compelling social media posts for all platforms with consistent brand voice.',
-      icon: '📱';
-},
+      icon: '📱'},
     {
       title: 'Email Marketing',
       description: 'Craft personalized email campaigns that drive engagement and conversions.',
-      icon: '📧';
-},
+      icon: '📧'},
     {
       title: 'Product Descriptions',
       description: 'Write compelling product descriptions that highlight features and benefits.',
-      icon: '🛍️';
-},
+      icon: '🛍️'},
     {
       title: 'Technical Documentation',
       description: 'Generate clear, comprehensive technical documentation for your products.',
-      icon: '📚';
-},
+      icon: '📚'},
     {
       title: 'Marketing Copy',
       description: 'Create persuasive marketing copy for ads, landing pages, and campaigns.',
-      icon: '🎯';
-}
+      icon: '🎯'}
   ]
 
   const benefits = [
@@ -57,8 +51,7 @@ const AIContentCreation: NextPage = () => {
         'Email support',
         'Standard quality content'
       ],
-      popular: false;
-},
+      popular: false},
     {
       name: 'Professional',
       price: '$299',
@@ -72,8 +65,7 @@ const AIContentCreation: NextPage = () => {
         'Multi-language support',
         'Brand voice training'
       ],
-      popular: true;
-},
+      popular: true},
     {
       name: 'Enterprise',
       price: '$799',
@@ -87,8 +79,7 @@ const AIContentCreation: NextPage = () => {
         'White-label solution',
         'Advanced analytics'
       ],
-      popular: false;
-}
+      popular: false}
   ]
 
   return (
@@ -193,11 +184,11 @@ const AIContentCreation: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className={`grid md:grid-cols-3 gap-8 max-w-6xl mx-auto`>
             {pricing.map((plan, index) => (
               <div key={index} className={`bg-white rounded-xl p-8 shadow-lg border-2 ${plan.popular ? 'border-blue-500 relative' : 'border-gray-200'}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
                     <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
@@ -220,13 +211,11 @@ const AIContentCreation: NextPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  href="/contact" 
+                <Link href={`/contact` 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular 
-                      ? 'bg-blue-600 hover:bg-blue-700 text-white' 
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900';
-}`}
+                      ? 'bg-blue-600 hover: bg-blue-700 text-white' 
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}
                 >
                   Get Started
                 </Link>
@@ -237,13 +226,13 @@ const AIContentCreation: NextPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className=`py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white`}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Content Strategy?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Start creating high-quality content at scale with our AI-powered platform.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <div className="flex flex-col sm: flex-row justify-center gap-6">
             <Link href="/contact"><a className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors">
               Start Free Trial
             </a></Link>
@@ -254,7 +243,6 @@ const AIContentCreation: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )};
 
 export default AIContentCreation;

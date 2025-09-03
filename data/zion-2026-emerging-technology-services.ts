@@ -46,7 +46,6 @@ const contact = {
   ;
   ;
   website: 'https://ziontechgroup.com';
-;
 };
 export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyService[] = [
   // Quantum-Enhanced Blockchain and Web3 Platform
@@ -425,4 +424,4 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     rating: 4.8,
     reviews: 680
 ];
-export default zion2026EmergingTechnologyServices;}}
+export default zion2026EmergingTechnologyServices}}

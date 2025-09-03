@@ -5,30 +5,30 @@ import React from 'react';
 ,"});,"})
 export const Sidebar: React.FC = () => {,"});,"})
   return (;,"});,"})
-    <aside className="hidden lg:block w-64 bg-white border-r border-gray-200">;,"});,"})
+    <aside className="hidden lg: block w-64 bg-white border-r border-gray-200">,"});,"})
       <nav className="p-6 space-y-6">;,"});,"})
         <div>;,"});,"})
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Services</h3>;,"});,"})
           <ul className="mt-3 space-y-2 text-gray-700">;,"});,"})
-            <li><a href="/services" className="hover:text-blue-600">All Services</a></li>;,"});,"})
-            <li><a href="/services/ai-analytics" className="hover:text-blue-600">AI & Analytics</a></li>;,"});,"})
-            <li><a href="/services/cybersecurity" className="hover:text-blue-600">Cybersecurity</a></li>;,"});,"})
-            <li><a href="/services/cloud-devops" className="hover:text-blue-600">Cloud & DevOps</a></li>;,"});,"})
-            <li><a href="/services/iot-edge" className="hover:text-blue-600">IoT & Edge</a></li>;,"});,"})
+            <li><a href="/services" className="hover: text-blue-600">All Services</a></li>,"});,"})
+            <li><a href="/services/ai-analytics" className="hover: text-blue-600">AI & Analytics</a></li>,"});,"})
+            <li><a href="/services/cybersecurity" className="hover: text-blue-600">Cybersecurity</a></li>,"});,"})
+            <li><a href="/services/cloud-devops" className="hover: text-blue-600">Cloud & DevOps</a></li>,"});,"})
+            <li><a href="/services/iot-edge" className="hover: text-blue-600">IoT & Edge</a></li>,"});,"})
           </ul>;,"});,"})
         </div>;,"});,"})
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Products</h3>;,"});,"})
-            <li><a href="/micro-saas" className="hover:text-blue-600">Micro SAAS</a></li>;,"});,"})
-            <li><a href="/marketplace" className="hover:text-blue-600">Marketplace</a></li>;,"});,"})
-            <li><a href="/marketplace/products" className="hover:text-blue-600">Products</a></li>;,"});,"})
-            <li><a href="/marketplace/talent" className="hover:text-blue-600">Talent</a></li>;,"});,"})
-            <li><a href="/marketplace/equipment" className="hover:text-blue-600">Equipment</a></li>;,"});,"})
+            <li><a href="/micro-saas" className="hover: text-blue-600">Micro SAAS</a></li>,"});,"})
+            <li><a href="/marketplace" className="hover: text-blue-600">Marketplace</a></li>,"});,"})
+            <li><a href="/marketplace/products" className="hover: text-blue-600">Products</a></li>,"});,"})
+            <li><a href="/marketplace/talent" className="hover: text-blue-600">Talent</a></li>,"});,"})
+            <li><a href="/marketplace/equipment" className="hover: text-blue-600">Equipment</a></li>,"});,"})
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Company</h3>;,"});,"})
-            <li><a href="/about" className="hover:text-blue-600">About</a></li>;,"});,"})
-            <li><a href="/partners" className="hover:text-blue-600">Partners</a></li>;,"});,"})
-            <li><a href="/team" className="hover:text-blue-600">Team</a></li>;,"});,"})
-            <li><a href="/careers" className="hover:text-blue-600">Careers</a></li>;,"});,"})
-            <li><a href="/contact" className="hover:text-blue-600">Contact</a></li>;,"});,"})
+            <li><a href="/about" className="hover: text-blue-600">About</a></li>,"});,"})
+            <li><a href="/partners" className="hover: text-blue-600">Partners</a></li>,"});,"})
+            <li><a href="/team" className="hover: text-blue-600">Team</a></li>,"});,"})
+            <li><a href="/careers" className="hover: text-blue-600">Careers</a></li>,"});,"})
+            <li><a href="/contact" className="hover: text-blue-600">Contact</a></li>,"});,"})
       </nav>;,"});,"})
     </aside>;,"});,"})
   );,"});,"});
@@ -151,25 +151,25 @@ export: const Sidebar: React.FC: = () => {,;
 export const Sidebar: React.FC = () => {}
   const;const;const serviceCategories = [
     {
-      title: &apos;AI & Machine Learning&apos;,
+      title: &apos;AI & Machine Learning&apos,
       icon: Brain,
-      links: [{ nam,e: &apos;AI Services Overview&apos;, href: &apos;/ai-services&apos} { name: &apos;AI Content Generator&apos;, href: &apos;/services/ai-content-generator&apos} { name: &apos;AI Project Management&apos;, href: &apos;/services/ai-project-management&apos} { name: &apos;AI Customer Support&apos;, href: &apos;/services/ai-customer-support-automation&apos} { name: &apos;AI Business Intelligence&apos;, href: &apos;/services/ai-business-intelligence&apos}
-      title: &apos;Cloud & Infrastructure&apos;,
+      links: [{ nam,e: &apos;AI Services Overview&apos, href: &apos;/ai-services&apos} { name: &apos;AI Content Generator&apos, href: &apos;/services/ai-content-generator&apos} { name: &apos;AI Project Management&apos, href: &apos;/services/ai-project-management&apos} { name: &apos;AI Customer Support&apos, href: &apos;/services/ai-customer-support-automation&apos} { name: &apos;AI Business Intelligence&apos, href: &apos;/services/ai-business-intelligence&apos}
+      title: &apos;Cloud & Infrastructure&apos,
       icon: Cloud,
       links: [
-        { nam,e: &apos;Cloud DevOps&apos;, href: &apos;/services/cloud-devops&apos} { name: &apos;IT Infrastructure&apos;, href: &apos;/it-services&apos} { name: &apos;Cloud Migration&apos;, href: &apos;/services/cloud-migration-services&apos} { name: &apos;FinOps Advisor&apos;, href: &apos;/services/finops-advisor&apos}
-      title: &apos;Cybersecurity&apos;,
+        { nam,e: &apos;Cloud DevOps&apos, href: &apos;/services/cloud-devops&apos} { name: &apos;IT Infrastructure&apos, href: &apos;/it-services&apos} { name: &apos;Cloud Migration&apos, href: &apos;/services/cloud-migration-services&apos} { name: &apos;FinOps Advisor&apos, href: &apos;/services/finops-advisor&apos}
+      title: &apos;Cybersecurity&apos,
       icon: Shield,
-        { nam,e: &apos;AI Cybersecurity Platform&apos;, href: &apos;/services/ai-cybersecurity-platform&apos} { name: &apos;Security Headers & CSP&apos;, href: &apos;/services/security-headers-csp&apos} { name: &apos;Zero Trust Network&apos;, href: &apos;/services/zero-trust-network-access&apos} { name: &apos;DSR Privacy Portal&apos;, href: &apos;/services/dsr-portal&apos}
-      title: &apos;Development&apos;,
+        { nam,e: &apos;AI Cybersecurity Platform&apos, href: &apos;/services/ai-cybersecurity-platform&apos} { name: &apos;Security Headers & CSP&apos, href: &apos;/services/security-headers-csp&apos} { name: &apos;Zero Trust Network&apos, href: &apos;/services/zero-trust-network-access&apos} { name: &apos;DSR Privacy Portal&apos, href: &apos;/services/dsr-portal&apos}
+      title: &apos;Development&apos,
       icon: Code,
-        { nam,e: &apos;Micro SaaS Solutions&apos;, href: &apos;/micro-saas&apos} { name: &apos;Custom Development&apos;, href: &apos;/services/custom-development&apos} { name: &apos;API Development&apos;, href: &apos;/services/api-development&apos} { name: &apos;Mobile Apps&apos;, href: &apos;/services/mobile-development&apos}
-      title: &apos;Data & Analytics&apos;,
+        { nam,e: &apos;Micro SaaS Solutions&apos, href: &apos;/micro-saas&apos} { name: &apos;Custom Development&apos, href: &apos;/services/custom-development&apos} { name: &apos;API Development&apos, href: &apos;/services/api-development&apos} { name: &apos;Mobile Apps&apos, href: &apos;/services/mobile-development&apos}
+      title: &apos;Data & Analytics&apos,
       icon: Database,
-        { nam,e: &apos;Data Analytics&apos;, href: &apos;/services/data-analytics&apos} { name: &apos;Business Intelligence&apos;, href: &apos;/services/business-intelligence&apos} { name: &apos;Data Governance&apos;, href: &apos;/services/ai-data-governance-platform&apos} { name: &apos;Predictive Analytics&apos;, href: &apos;/services/ai-predictive-maintenance&apos}
-      title: &apos;Infrastructure&apos;,
+        { nam,e: &apos;Data Analytics&apos, href: &apos;/services/data-analytics&apos} { name: &apos;Business Intelligence&apos, href: &apos;/services/business-intelligence&apos} { name: &apos;Data Governance&apos, href: &apos;/services/ai-data-governance-platform&apos} { name: &apos;Predictive Analytics&apos, href: &apos;/services/ai-predictive-maintenance&apos}
+      title: &apos;Infrastructure&apos,
       icon: Network,
-        { nam,e: &apos;Network Solutions&apos;, href: &apos;/services/network-solutions&apos} { name: &apos;IoT Edge Computing&apos;, href: &apos;/services/iot-edge-computing&apos} { name: &apos;Digital Twin Platform&apos;, href: &apos;/services/digital-twin&apos} { name: &apos;Smart City Infrastructure&apos;, href: &apos;/services/ai-smart-city-infrastructure-management&apos}
+        { nam,e: &apos;Network Solutions&apos, href: &apos;/services/network-solutions&apos} { name: &apos;IoT Edge Computing&apos, href: &apos;/services/iot-edge-computing&apos} { name: &apos;Digital Twin Platform&apos, href: &apos;/services/digital-twin&apos} { name: &apos;Smart City Infrastructure&apos, href: &apos;/services/ai-smart-city-infrastructure-management&apos}
   Brain, Cloud,
   Database, Network,
   Users, Award,
@@ -195,9 +195,9 @@ export const Sidebar: React.FC = () => {}
         { name: 'Network Solutions', href: '/services/network-solutions' } { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' } { name: 'Digital Twin Platform', href: '/services/digital-twin' } { name: 'Smart City Infrastructure', href: '/services/ai-smart-city-infrastructure-management' }
   ]&apos;
   const companyLinks = [
-    { name: &apos;About Us&apos;, href: &apos;/about&apos;, icon: Users } { name: &apos;Our Team&apos;, href: &apos;/team&apos;, icon: Award } { name: &apos;Careers&apos;, href: &apos;/careers&apos;, icon: Users } { name: &apos;Partners&apos;, href: &apos;/partners&apos;, icon: Award } { name: &apos;Contact&apos;, href: &apos;/contact&apos;, icon: HelpCircle }
+    { name: &apos;About Us&apos, href: &apos;/about&apos, icon: Users } { name: &apos;Our Team&apos, href: &apos;/team&apos, icon: Award } { name: &apos;Careers&apos, href: &apos;/careers&apos, icon: Users } { name: &apos;Partners&apos, href: &apos;/partners&apos, icon: Award } { name: &apos;Contact&apos, href: &apos;/contact&apos, icon: HelpCircle }
   const marketplaceLinks = [
-    { name: &apos;Marketplace&apos;, href: &apos;/marketplace&apos;, icon: ShoppingCart } { name: &apos;Products&apos;, href: &apos;/marketplace/products&apos;, icon: ShoppingCart } { name: &apos;Talent&apos;, href: &apos;/marketplace/talent&apos;, icon: Users } { name: &apos;Equipment&apos;, href: &apos;/marketplace/equipment&apos;, icon: Network }
+    { name: &apos;Marketplace&apos, href: &apos;/marketplace&apos, icon: ShoppingCart } { name: &apos;Products&apos, href: &apos;/marketplace/products&apos, icon: ShoppingCart } { name: &apos;Talent&apos, href: &apos;/marketplace/talent&apos, icon: Users } { name: &apos;Equipment&apos, href: &apos;/marketplace/equipment&apos, icon: Network }
   return(&apos;
     <aside className=&apos;hidden lg:block w-80 bg-white border-r border-gray-200 h-full overflow-y-auto&apos;>&apos;'
       <div className=&apos;p-6 space-y-8&apos;>

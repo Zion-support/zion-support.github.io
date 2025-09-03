@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { motion } from 'framer-motion';
 import { 
   Mail, Phone, 
   MapPin, Send, 
   CheckCircle, AlertCircle,
   User, Building,
-  MessageSquare;
-} from 'lucide-react';
+  MessageSquare} from 'lucide-react';
 
 export const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -14,8 +13,7 @@ export const ContactForm: React.FC = () => {
     email: '', company: '',
     phone: '', service: '',
     message: '', budget: '',
-    timeline: '';
-});
+    timeline: ''});
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -23,8 +21,7 @@ export const ContactForm: React.FC = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev, [name]: value;
-}));
+      ...prev, [name]: value}));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -40,8 +37,7 @@ export const ContactForm: React.FC = () => {
         email: '', company: '',
         phone: '', service: '',
         message: '', budget: '',
-        timeline: '';
-});
+        timeline: ''});
     } catch (error) {
       setSubmitStatus('error');
     } finally {
@@ -87,8 +83,7 @@ export const ContactForm: React.FC = () => {
           Send Another Message
         </button>
       </motion.div>
-    );
-  }
+    )}
 
   return (
     <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">

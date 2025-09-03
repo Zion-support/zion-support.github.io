@@ -1,22 +1,19 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import { HelpCircle, MessageCircle, Phone, Mail, Clock, Search, BookOpen, Users, ArrowRight, CheckCircle, Star, Globe } from 'lucide-react';
 
 export default function Support() {
   const supportOptions = [
     {
       title: 'Help Center', description: 'Browse our comprehensive knowledge base and FAQ',
-      icon: BookOpen, features: ['Searchable articles', 'Step-by-step guides', 'Video tutorials', 'Troubleshooting'], link: '/help';
-},
+      icon: BookOpen, features: ['Searchable articles', 'Step-by-step guides', 'Video tutorials', 'Troubleshooting'], link: '/help'},
     {
       title: 'Live Chat', description: 'Get instant help from our support team',
-      icon: MessageCircle, features: ['24/7 availability', 'Instant responses', 'Screen sharing', 'File sharing'], link: '#';
-},
+      icon: MessageCircle, features: ['24/7 availability', 'Instant responses', 'Screen sharing', 'File sharing'], link: '#'},
     {
       title: 'Phone Support', description: 'Speak directly with our technical experts',
-      icon: Phone, features: ['Priority support', 'Technical consultation', 'Emergency assistance', 'Follow-up calls'], link: 'tel:+13024640950';
-},
+      icon: Phone, features: ['Priority support', 'Technical consultation', 'Emergency assistance', 'Follow-up calls'], link: 'tel:+13024640950'},
     {
       title: 'Email Support', description: 'Send us detailed questions and get comprehensive answers',
       icon: Mail, features: ['Detailed responses', 'Documentation', 'Screenshots', 'Case tracking'], link: 'mailto:support@ziontechgroup.com'
@@ -25,29 +22,25 @@ export default function Support() {
       description: 'Browse our comprehensive knowledge base and FAQ',
       icon: BookOpen,
       features: ['Searchable articles,Step-by-step guides,Video tutorials,Troubleshooting'],
-      link: '/help';
-},
+      link: '/help'},
     {
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       icon: MessageCircle,
       features: ['24/7 availability,Instant responses,Screen sharing,File sharing'],
-      link: '#';
-},
+      link: '#'},
     {
       title: 'Phone Support',
       description: 'Speak directly with our technical experts',
       icon: Phone,
       features: ['Priority support,Technical consultation,Emergency assistance,Follow-up calls'],
-      link: 'tel:+13024640950';
-},
+      link: 'tel:+13024640950'},
     {
       title: 'Email Support',
       description: 'Send us detailed questions and get comprehensive answers',
       icon: Mail,
       features: ['Detailed responses,Documentation,Screenshots,Case tracking'],
-      link: 'mailto:support@ziontechgroup.com';
-}
+      link: 'mailto:support@ziontechgroup.com'}
   ]
 
   const faqCategories = [
@@ -58,8 +51,7 @@ export default function Support() {
       questions: [
         {
           question: 'How do I create an account?',
-          answer: 'You can create an account by visiting our sign-up page and providing your email address and basic information. We\'ll send you a verification email to complete the process.';
-}, {
+          answer: 'You can create an account by visiting our sign-up page and providing your email address and basic information. We\'ll send you a verification email to complete the process.'}, {
           question: 'What services do you offer?',
           answer: 'We offer AI services, cloud solutions, cybersecurity, and micro SaaS development. Visit our services page for detailed information about each offering.';
 },
@@ -84,8 +76,7 @@ export default function Support() {
       title: 'Technical Support',
       questions: [
         {
-          question: 'How do I integrate your API?', answer: 'We provide comprehensive documentation and SDKs for popular programming languages. Check our API documentation for detailed integration guides.';
-},
+          question: 'How do I integrate your API?', answer: 'We provide comprehensive documentation and SDKs for popular programming languages. Check our API documentation for detailed integration guides.'},
         {
           question: 'What are your API rate limits?', answer: 'Rate limits vary by plan. Free plans have 1,000 requests per month, Professional plans have 100,000 requests per month, and Enterprise plans have unlimited requests.';
 },
@@ -103,16 +94,14 @@ export default function Support() {
         'Community forums',
         'Knowledge base access', 'Basic documentation',
         'Email support'
-      ], price: 'Free';
-},
+      ], price: 'Free'},
     {
       name: 'Standard Support', description: 'Professional support for business users',
       responseTime: '4-8 hours', features: [
         'Priority email support',
         'Live chat support', 'Phone support',
         'Advanced documentation', 'API support'
-      ], price: 'Included with Professional Plan';
-},
+      ], price: 'Included with Professional Plan'},
     {
       name: 'Premium Support', description: 'Dedicated support for enterprise customers',
       responseTime: '1-2 hours', features: [
@@ -128,8 +117,7 @@ export default function Support() {
       features: [
         'Community forums,Knowledge base access,Basic documentation,Email support'
       ],
-      price: 'Free';
-},
+      price: 'Free'},
     {
       name: 'Standard Support',
       description: 'Professional support for business users',
@@ -137,8 +125,7 @@ export default function Support() {
       features: [
         'Priority email support,Live chat support,Phone support,Advanced documentation,API support'
       ],
-      price: 'Included with Professional Plan';
-},
+      price: 'Included with Professional Plan'},
     {
       name: 'Premium Support',
       description: 'Dedicated support for enterprise customers',
@@ -146,8 +133,7 @@ export default function Support() {
       features: [
         'Dedicated support manager,24/7 phone support,Priority ticket handling,Custom integrations,SLA guarantees,On-site support'
       ],
-      price: 'Custom Pricing';
-}
+      price: 'Custom Pricing'}
   ]
 
   const contactMethods = [
@@ -164,8 +150,7 @@ export default function Support() {
     {
       title: 'Technical Support',
       email: 'support@ziontechgroup.com', phone: '+1 302 464 0951',
-      hours: '24/7 for Premium customers';
-}, {
+      hours: '24/7 for Premium customers'}, {
       title: 'Sales & Partnerships',
       email: 'sales@ziontechgroup.com', phone: '+1 302 464 0952',
       hours: 'Monday - Friday, 9 AM - 6 PM EST';
@@ -287,13 +272,13 @@ export default function Support() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-8`>
               {supportTiers.map((tier, index) => (
                 <div key={index} className={`bg-white rounded-xl shadow-lg p-8 ${
                   tier.name === 'Standard Support' ? 'ring-2 ring-blue-500 transform scale-105' : '';
 }`}>
                   {tier.name === 'Standard Support' && (
-                    <div className="text-center mb-4">
+                    <div className=`text-center mb-4`}>
                       <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
@@ -312,15 +297,14 @@ export default function Support() {
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
+                        <span className={`text-gray-700`>{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
                     tier.name === 'Standard Support' 
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700' 
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200';
-}`}>
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'}`}>
                     {tier.price === 'Free' ? 'Get Started' : 'Contact Sales'}
                   </button>
                 </div>
@@ -330,7 +314,7 @@ export default function Support() {
         </section>
 
         {/* Contact Information */}
-        <section className="py-20 bg-white">
+        <section className=`py-20 bg-white`}>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
@@ -347,14 +331,14 @@ export default function Support() {
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{method.title}</h3>
                   <div className="space-y-3">
                     <div className="flex items-center justify-center">
-                      <Mail className="w-5 h-5 text-blue-600 mr-2" />
-                      <a href={`mailto: ${method.email}`} className="text-blue-600 hover:text-blue-700">
+                      <Mail className={`w-5 h-5 text-blue-600 mr-2` />
+                      <a href={`mailto: ${method.email}`} className=`text-blue-600 hover:text-blue-700`}>
                         {method.email}
                       </a>
                     </div>
                     <div className="flex items-center justify-center">
-                      <Phone className="w-5 h-5 text-blue-600 mr-2" />
-                      <a href={`tel:${method.phone}`} className="text-blue-600 hover:text-blue-700">
+                      <Phone className={`w-5 h-5 text-blue-600 mr-2` />
+                      <a href={`tel:${method.phone}`} className=`text-blue-600 hover:text-blue-700`}>
                         {method.phone}
                       </a>
                     </div>
@@ -395,5 +379,4 @@ export default function Support() {
         </section>
       </main>
 </>
-  );
-}
+  )}

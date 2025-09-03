@@ -95,8 +95,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
     script1.src = `https: //www.googletagmanager.com/gtag/js?id=${trackingId}`;
     document.head.appendChild(script1);`
 const Analytics: React.FC<AnalyticsProps> = ({ 
-  trackingId = process.env['NEXT_PUBLIC_GA_TRACKING_ID'] ;
-}) => {
+  trackingId = process.env['NEXT_PUBLIC_GA_TRACKING_ID'] }) => {
     if (!trackingId || typeof window === 'undefined') return;
     
     // Load Google Analytics

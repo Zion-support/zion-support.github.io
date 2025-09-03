@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 import Link from 'next/link';
 import { Search, ArrowRight, FileText, Globe, Users, Zap } from 'lucide-react';
 
@@ -87,8 +87,7 @@ export default function SearchPage() {
       case 'page':
         return <FileText className="w-5 h-5 text-green-600" />;
       default:
-        return <Globe className="w-5 h-5 text-gray-600" />;
-    }
+        return <Globe className="w-5 h-5 text-gray-600" />}
   };
 
   return (
@@ -131,10 +130,10 @@ export default function SearchPage() {
           {/* Search Results */}
           {router.query.q && (
             <div className="mb-6">
-              <p className="text-gray-600">
+              <p className={`text-gray-600`>
                 {isLoading
                   ? 'Searching...'
-                  : `Found ${searchResults.length} results for "${router.query.q}"`}
+                  : `Found ${searchResults.length} results for `${router.query.q}`}`}
               </p>
             </div>
           )}

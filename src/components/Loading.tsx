@@ -1,28 +1,25 @@
-import React from 'react';
+import React from 'react'
 import { Loader2, } from 'lucide-react';
 
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
-  fullScreen?: boolean;
-}
+  fullScreen?: boolean}
 
 export default function Loading({ 
   size = 'md', 
   text = 'Loading...', 
-  fullScreen = false ;
-}: LoadingProps) {
+  fullScreen = false}: LoadingProps) {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-    lg: 'w-12 h-12';
-  };
+    lg: 'w-12 h-12'};
 
   const content = (
-    <div className="flex flex-col items-center justify-center space-y-4">
+    <div className={`flex flex-col items-center justify-center space-y-4`>
       <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`} />
       {text && (
-        <p className="text-gray-600 text-sm font-medium">{text}</p>
+        <p className=`text-gray-600 text-sm font-medium`}>{text}</p>
       )}
     </div>;
   );
@@ -56,8 +53,7 @@ export function SkeletonCard() {
 export function SkeletonText({ lines = 3 }: { lines?: number, }) {
   return (<div className="animate-pulse space-y-2">
       {Array.from({ length: lines, }).map((_, i) => (
-        <div
-          key={i}
+        <div key={i}
           className={`h-3 bg-gray-200 rounded ${
             i === lines - 1 ? 'w-2/3' : 'w-full';
 }`}

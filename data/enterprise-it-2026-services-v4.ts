@@ -36,12 +36,6 @@ export interface EnterpriseIT2026ServiceV4 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
   // Zero-Trust Network Architecture Platform
   {
@@ -458,4 +452,4 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     customers: 40,
     rating: 4.9,
     reviews: 32
-];}}
+]}}

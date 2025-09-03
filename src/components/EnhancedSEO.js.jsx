@@ -3,7 +3,7 @@ import React from 'react'; export default function EnhancedSEO({ title = "Zion T
 }
 
 ;,"});,"})
- export default function EnhancedSEO ({ title = "Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions", description = "Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.", keywords = "AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation", canonical, ogImage = "https:"""";,"});,"})
+ export default function EnhancedSEO ({ title = "Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions", description = "Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.", keywords = "AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation", canonical, ogImage = "https: """","});,"})
 ;,"});,"})
  export default function EnhancedSEO({ title = "Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions", description = "Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions.Transform your business with cutting-edge technology services.", keywords = "AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation", canonical, ogImage = "https:;,"});,"});
 }"});,"})
@@ -13,8 +13,8 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-    const currentUrl = typeof window !== 'null' ? window.location.href : canonical || 'https://ziontechgroup.com';,"});,"})
-    // Default structured data for organization;,"});,"})
+    const currentUrl = typeof window !== 'null' ? window.location.href : canonical || 'https: //ziontechgroup.com',"});,"})
+    // Default structured data for organization,"});,"})
     const defaultStructuredData = {}"});,"})
   "@context": "https://schema.org","""";,"});,"})
         "@type": "Organization","""";,"});,"})
@@ -44,7 +44,7 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
         "sameAs"[;"""";,"});,"})
             "https://linkedin.com/company/ziontechgroup","""";,"});,"})
             "https://twitter.com/ziontechgroup","""";,"});,"})
-            "https://github.com/Zion-Holdings"""";,"});,"})
+            "https: //github.com/Zion-Holdings"""","});,"})
         ],"""";,"});,"})
         "offers": {}"});,"})
 """;,"});,"})
@@ -56,8 +56,8 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
             "description": "Enterprise AI and Technology Solutions""";,"});,"});
 }"});,"});
 };,"});,"})
-    // Merge with provided structured data;,"});,"})
-    const finalStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;,"});,"})
+    // Merge with provided structured data,"});,"})
+    const finalStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData,"});,"})
     return (<Helmet>;,"});,"})
       {/* Basic Meta Tags */}""";,"});,"})
       <title>{title}</title>"""";,"});,"})
@@ -71,7 +71,7 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
       {canonical && <link rel="canonical" href={canonical}/>}"});,"})
       '""";,"});,"})
       {/* Robot Instructions */}'"'""";,"});,"})
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-snippet:-1, max-image-preview:large, max-video-preview:-1`}/>;,"});,"})
+      <meta name={`robots` content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-snippet:-1, max-image-preview:large, max-video-preview:-1`}/>;,`});,`}})
       """;,"});,"})
       {/* Open Graph Tags */}"""";,"});,"})
       <meta property="og:title" content={title}/>"""";,"});,"})
@@ -79,16 +79,16 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
       <meta property="og:type" content={ogType}/>"""";,"});,"})
       <meta property="og:url" content={currentUrl}/>"""";,"});,"})
       <meta property="og:image" content={ogImage}/>"""";,"});,"})
-      <meta property="og:image:width" content="1200"/>"""";,"});,"})
-      <meta property="og:image:height" content="630"/>"""";,"});,"})
+      <meta property="og: image:width" content="1200"/>"""","});,"})
+      <meta property="og: image:height" content="630"/>"""","});,"})
       <meta property="og:image:alt" content={title}/>"""";,"});,"})
-      <meta property="og:site_name" content="Zion Tech Group"/>"""";,"});,"})
-      <meta property="og:locale" content="en_US"/>;,"});,"})
+      <meta property="og: site_name" content="Zion Tech Group"/>"""","});,"})
+      <meta property="og: locale" content="en_US"/>,"});,"})
       """;,"});,"})
       {/* Twitter Card Tags */}"""";,"});,"})
       <meta name="twitter:card" content={twitterCard}/>"""";,"});,"})
-      <meta name="twitter:site" content="@ziontechgroup"/>"""";,"});,"})
-      <meta name="twitter:creator" content="@ziontechgroup"/>"""";,"});,"})
+      <meta name="twitter: site" content="@ziontechgroup"/>"""","});,"})
+      <meta name="twitter: creator" content="@ziontechgroup"/>"""","});,"})
       <meta name="twitter:title" content={title}/>"""";,"});,"})
       <meta name="twitter:description" content={description}/>"""";,"});,"})
       <meta name="twitter:image" content={ogImage}/>"""";,"});,"})
@@ -107,13 +107,13 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
       </script>;,"});,"})
       """;,"});,"})
       {/* Preconnect to external domains for performance */}"""";,"});,"})
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>"""";,"});,"})
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>"""";,"});,"})
-      <link rel="preconnect" href="https://www.google-analytics.com"/>;,"});,"})
+      <link rel="preconnect" href="https: //fonts.googleapis.com"/>"""","});,"})
+      <link rel="preconnect" href="https: //fonts.gstatic.com" crossOrigin=""/>"""","});,"})
+      <link rel="preconnect" href="https: //www.google-analytics.com"/>,"});,"})
       """;,"});,"})
       {/* DNS Prefetch for external resources */}"""";,"});,"})
-      <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>"""";,"});,"})
-      <link rel="dns-prefetch" href="https://www.google-analytics.com"/>;,"});,"})
+      <link rel="dns-prefetch" href="https: //www.googletagmanager.com"/>"""","});,"})
+      <link rel="dns-prefetch" href="https: //www.google-analytics.com"/>,"});,"})
       """;,"});,"})
       {/* Security Headers */}"""";,"});,"})
       <meta httpEquiv="X-Content-Type-Options" content="nosniff"/>"""";,"});,"})
@@ -130,7 +130,7 @@ export { EnhancedSEO };,"});,"})
 ;,"});,"})
 export { EnhancedSEO };,"});,"})
 ;,"});,"})
-export { EnhancedSEO };,"});,"})
+export { EnhancedSEO };,"});,`})
  export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https:'''';import { Helmet } from 'react-helmet-async';export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting-edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https://ziontechgroup.com/images/og-default.jpg', ogType = 'website', twitterCard = 'summary_large_image', structuredData, noindex = false, nofollow = false }) {}
 ';
 '';
@@ -224,7 +224,7 @@ export { EnhancedSEO };,"});,"})
       <meta name='format-detection' content='telephone=no'/>
       ''';
       {/* Structured Data */}'''';
- export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https: '''';import { Helmet } from 'react-helmet-async';"'"
+ export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https: '''';import { Helmet } from 'react-helmet-async';`'"
  export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https:'''';import { Helmet } from 'react-helmet-async
 export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting-edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https://ziontechgroup.com/images/og-default.jpg', ogType = 'website', twitterCard = 'summary_large_image', structuredData, noindex = false, nofollow = false }) {}"
 '
@@ -311,10 +311,10 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
       <meta httpEquiv='Content-Type' content='text/html charset=utf-8'/" >"
       ''''
       {/* Canonical URL */}''''
-      {canonical && <link rel='canonical' href={canonical}/" >}"
+      {canonical && <link rel='canonical' href={canonical}/" >}`
       ''''
       {/* Robot Instructions */}''''''
-      <meta name='robots' content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-snippet: -1, max-image-preview: large, max-video-preview: -1`}/" >"
+      <meta name='robots' content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-snippet: -1, max-image-preview: large, max-video-preview: -1`}/` >"
       ''''
       {/* Open Graph Tags */}''''
       <meta property='og:title' content={title}/" >''''"

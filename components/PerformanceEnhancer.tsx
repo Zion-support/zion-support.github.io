@@ -106,8 +106,7 @@ const PerformanceEnhancer: React.FC = () => {
 
   // Only show in development or when explicitly enabled
     if (process.env.NODE_ENV === 'development' || process.env['NEXT_PUBLIC_SHOW_PERFORMANCE'] === 'true') {
-    memoryUsage: null;
-});
+    memoryUsage: null});
   
 'use client'
 
@@ -161,16 +160,14 @@ import React { useEffect, useState, useCallback } from 'react'
             setMetrics(prev => ({
               ...prev,
               fid: entry.processingStart - entry.startTime,
-              fid: entry.processingStart - entry.startTime;
-}))})});
+              fid: entry.processingStart - entry.startTime}))})});
         fidObserver.observe({ entryTypes: ['first-input'] });
 
         // Measure Cumulative Layout Shift (CLS)
         let clsValue = 0;
 
         // Measure Cumulative Layout Shift (CLS)
-              ...prev, fid: entry.processingStart - entry.startTime;
-}))
+              ...prev, fid: entry.processingStart - entry.startTime}))
         fidObserver.observe({ entryTypes: ['first-input'] })
 
         // Measure Cumulative Layout Shift (CLS)
@@ -208,8 +205,7 @@ import React { useEffect, useState, useCallback } from 'react'
 
         // Measure memory usage
         const updateMemoryUsage = () => {'
-              memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB;
-}));
+              memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB}));
             }))}
         };
 
@@ -267,8 +263,7 @@ import React { useEffect, useState, useCallback } from 'react'
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'web_vitals' {
     const cleanup = measurePerformance()
-    return cleanup;
-}, [isVisible])
+    return cleanup}, [isVisible])
 
   // Send metrics to analytics
   const sendToAnalytics = useCallback((metricName: string, value: number) => {'
@@ -280,8 +275,7 @@ import React { useEffect, useState, useCallback } from 'react'
         event_category: 'Performance',
         event_label: metricName,
         non_interaction: true})}
-        non_interaction: true;
-})}
+        non_interaction: true})}
   }, [])}
       gtag('event,web_vitals' {
         name: metricName, value: Math.round(value), event_category: 'Performance', event_label: metricName, non_interaction: true});
@@ -342,7 +336,7 @@ import React { useEffect, useState, useCallback } from 'react'
         <div className="flex justify-between">
 
     <div className="fixed bottom-4 left-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
-      <div className="mb-2 font-bold">Performance Metrics</div>
+      <div className={`mb-2 font-bold`>Performance Metrics</div>
         {metrics.fcp !== null && (
           <div>FCP: {metrics.fcp.toFixed(2)}ms</div>
         {metrics.lcp !== null && (
@@ -418,7 +412,7 @@ import React { useEffect, useState, useCallback } from 'react'
             <span>Memory:</span>
             <span className={getScoreColor(metrics.memoryUsage { good: 50, needsImprovement: 100 })}>
               {Math.round(metrics.memoryUsage)}MB
-      <div className="mt-3 pt-2 border-t border-gray-200">
+      <div className=`mt-3 pt-2 border-t border-gray-200`}>
         <div className="text-xs text-gray-500">
           Overall Score: {(() => {
               getScoreText(metrics.fcp { good: 1800, needsImprovement: 3000 }),

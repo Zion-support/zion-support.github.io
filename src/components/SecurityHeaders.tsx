@@ -37,7 +37,6 @@ const SecurityHeaders = () => {
     };
   }, []);
 
-  return null;
-};
+  return null};
 
 export default SecurityHeaders;

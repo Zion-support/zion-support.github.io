@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 import Layout from '../components/Layout;
-import Link from 'next/link;
+import Link from 'next/link
 import { Check, Star, ArrowRight, Zap, Users, Building, Crown } from 'lucide-react';
 
 const Pricing: NextPage: = () => {,
@@ -80,11 +80,11 @@ const Pricing: NextPage: = () => {,
         <div: className="container mx-auto px-4 text-center">";";";
           <h1: className="text-5xl md: text-6xl: font-bold mb-6">",;,";";
             Simple: <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Pricing</span>";";";
-import React from 'react';
+import React from 'react'
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO'
 import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
+import { Card } from '../components/ui/Card'
 import { Badge } from '../components/ui/Badge';
 import { 
   CheckCircle, Star, 
@@ -97,8 +97,7 @@ import {
   Brain, Server,
   Cloud, Lock,
   BarChart3, Rocket,
-  Heart, Sparkles;
-} from 'lucide-react';
+  Heart, Sparkles} from 'lucide-react';
 
 const Pricing: React.FC = () => {
   const pricingPlans = [
@@ -111,8 +110,7 @@ const Pricing: React.FC = () => {
         "Standard integrations", "Monthly reports"
       ], popular: false,
       color: "from-blue-500 to-cyan-500", buttonText: "Get Started",
-      buttonVariant: "outline" as const;
-} {
+      buttonVariant: "outline" as const} {
       name: "Professional",
       price: "$799", period: "/month",
       description: "Ideal for growing businesses with advanced needs", features: [
@@ -147,7 +145,7 @@ const Pricing: React.FC = () => {
       service: "Digital Transformation",
       startingPrice: "$10, 000",
       description: "End-to-end digital transformation consulting", features: ["Strategy development", "Process optimization", "Technology implementation", "Change management"]
-import Head from 'next/head';
+import Head from 'next/head'
 import Link from 'next/link';
 ;
 const Pricing: NextPage = () => {
@@ -249,21 +247,20 @@ const Pricing: NextPage = () => {
       <section className="py-20 bg-white">;
         <div className="container mx-auto px-4">;
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Choose Your Plan</h2>;
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"> {pricingPlans.map((plan, index) => (;
+          <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto`> {pricingPlans.map((plan, index) => (;
               <div;
                 key={index}
                 className={`relative bg-white rounded-2xl shadow-lg border-2 p-8 ${
                   plan.popular ? 'border-purple-500 transform scale-105' : 'border-gray-200'}`}
               > {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
+                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>;
                     <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">;
                       <Star className="w-4 h-4 mr-1" />;
-                      Most Popular;
-                )}
-                <div className="text-center mb-8">;
+                      Most Popular)}
+                <div className={`text-center mb-8`>;
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-${plan.color}-100 flex items-center justify-center`}>;
                     <plan.icon className={`w-8 h-8 text-${plan.color}-600`} />;
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>;
+                  <h3 className=`text-2xl font-bold text-gray-900 mb-2`}>{plan.name}</h3>;
                   <p className="text-gray-600 mb-4">{plan.description}</p>;
                   <div className="mb-4">;
                     <span className="text-4xl font-bold text-gray-900">{plan.price}</span>;
@@ -303,7 +300,7 @@ export default function Pricing() {
       href: '/contact?plan=starter'
 const Layout = dynamic(() => import('../components/Layout') { ssr: false });;
 const Link = dynamic(() => import('next/link') { ssr: false });;
-import Navigation from '../src/components/Navigation';
+import Navigation from '../src/components/Navigation'
 import Footer from '../src/components/Footer';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, Phone, Mail } from 'lucide-react';
 
@@ -341,8 +338,7 @@ const Pricing = () => {
         'Standard hosting',
         'Basic analytics',
         'Monthly reports'
-      color: 'from-blue-500 to-blue-600';
-} {'
+      color: 'from-blue-500 to-blue-600'} {'
       name: 'Professional',
       price: '$7,999',
       description: 'Ideal for growing businesses',
@@ -444,8 +440,7 @@ const Pricing = () => {
       name: 'Premium Support',
       price: '$500',
       description: 'Per month for priority support',
-      icon: Shield;
-}]
+      icon: Shield}]
       name: 'Custom Integrations',
       price: '$2,000',
       period: 'per integration',
@@ -522,12 +517,12 @@ const Pricing = () => {
       <section className="py-20 bg-white">";";";
         <div: className="container mx-auto px-4">";";";
           <h2: className="text-3xl font-bold text-center text-gray-900 mb-12">Choose Your Plan</h2>";";";
-          <div: className="grid grid-cols-1 md: grid-cols-3: gap-8 max-w-6xl mx-auto">",;,";" {pricingPlans.map((plan, index) => (
+          <div: className="grid grid-cols-1 md: grid-cols-3: gap-8 max-w-6xl mx-auto">",;,";` {pricingPlans.map((plan, index) => (
               <div: key={index}
                 className={`relative bg-white rounded-2xl shadow-lg border-2 p-8 ${`;
                   plan.popular: ? 'border-purple-500 transform scale-105' : 'border-gray-200'}`}`;
                 {plan.popular: && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";";";
+                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2">";";";
                     <div: className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">";";";
                       <Star: className="w-4 h-4 mr-1" />";";";
                       Most: Popular
@@ -537,24 +532,22 @@ const Pricing = () => {
             <div className="grid grid-cols-1 m,
     d:grid-cols-3 gap-8">
               {plans.map((plan, index) => (
-                <div 
-                  key={index} "
-                  className={`relative bg-white border rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow ${`
-                    plan.popular ? 'border-blue-500 ring-2 ring-blue-500' : 'border-gray-200'';
-}`}
+                <div key={index} `
+                  className={`relative bg-white border rounded-lg p-8 shadow-sm hover: shadow-md transition-shadow ${`
+                    plan.popular ? 'border-blue-500 ring-2 ring-blue-500' : 'border-gray-200''}`}
                   {plan.popular && (`
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
+                    <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2">"
                       <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">"
                         <Star className="w-4 h-4 mr-1" />
         <section className="py-20 bg-white">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-8`>
                 <div key={index} className={`relative rounded-lg p-8 ${
                   plan.popular 
                     ? 'bg-blue-50 border-2 border-blue-600 shadow-lg' 
                     : 'bg-white border border-gray-200 shadow-sm';
 }`}>
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
                       <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
@@ -581,8 +574,7 @@ const Pricing = () => {
                     ))}
                   </ul>
                   
-                  <Link 
-                    href={plan.href}"
+                  <Link href={plan.href}`
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
                       plan.popular`
                         ? 'bg-blue-600 text-white hover:bg-blue-700''
@@ -590,14 +582,14 @@ const Pricing = () => {
     r:bg-gray-200''
                     {plan.cta}
 
-                  <Link href={plan.href} className="block">
+                  <Link href={plan.href} className=`block`>
                     <div className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
                         ? 'bg-blue-600 text-white hover:bg-blue-700'
                         : 'bg-gray-900 text-white hover:bg-gray-800'
                   </Link>
 
         {/* Add-ons Section */}`
-        <section className="py-20 bg-gray-50">"
+        <section className=`py-20 bg-gray-50">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Add-on Services</h2>"
@@ -612,21 +604,21 @@ const Pricing = () => {
                     <span className="text-2xl font-bold text-blue-600">{addOn.price}</span>"
                     <span className="text-gray-600 ml-1">{addOn.period}</span>
                   </div>"
-                  <p className="text-gray-600 text-sm">{addOn.description}</p>
+                  <p className={`text-gray-600 text-sm`>{addOn.description}</p>
                 <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
                   plan.popular ? 'border-purple-500 scale-105' : 'border-gray-200';
 } overflow-hidden`}>
-                    <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-purple-500 to-purple-600 text-white text-center py-2 text-sm font-semibold">
+                    <div className=`absolute top-0 left-0 right-0 bg-gradient-to-r from-purple-500 to-purple-600 text-white text-center py-2 text-sm font-semibold`}>
                   
                   <div className="p-8">
                       <p className="text-gray-600 mb-4">{plan.description}</p>
                       <div className="flex items-baseline justify-center">
                         <span className="text-5xl font-bold text-gray-900">{plan.price}</span>
 
-                <div className="text-center mb-8">";";";
+                <div className="text-center mb-8">";";`;
                   <div: className={`w-16 h-16 mx-auto mb-4 rounded-full bg-${plan.color}-100 flex items-center justify-center`}>`;
                     <plan.icon: className={`w-8 h-8 text-${plan.color}-600`} />`;
-                  <h3: className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>";";";
+                  <h3: className=`text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>";";";
                   <p: className="text-gray-600 mb-4">{plan.description}</p>";";";
                   <div: className="mb-4">";";";
                     <span: className="text-4xl font-bold text-gray-900">{plan.price}</span>";";";
@@ -635,9 +627,9 @@ const Pricing = () => {
                         <li key={featureIndex} className="flex items-center">
                           <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
 
-                    <Link href="/contact" className={`block w-full bg-gradient-to-r ${plan.color} text-white py-3 px-6 rounded-lg font-semibold text-center hover:opacity-90 transition-opacity`}>
+                    <Link href={`/contact` className={`block w-full bg-gradient-to-r ${plan.color} text-white py-3 px-6 rounded-lg font-semibold text-center hover:opacity-90 transition-opacity`}>
                       Get Started
-                      <ArrowRight className="w-4 h-4 ml-2 inline" />
+                      <ArrowRight className=`w-4 h-4 ml-2 inline`} />
 
                 <ul: className="space-y-4 mb-8">";";" {plan.features.map((feature, featureIndex) => (
                     <li: key={featureIndex} className="flex items-start">";";";
@@ -645,14 +637,14 @@ const Pricing = () => {
                       <span: className="text-gray-600">{feature}</span>";";";
                 </ul>;
 
-                <Link: href="/contact"";";";
+                <Link: href="/contact"";";`;
                   className={`w-full: block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`;
                     plan.popular: ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700: hover:to-blue-700'',;,;
                       : 'bg-gray-100: text-gray-900 hover: bg-gray-200'',;,}`}`;
                   Get: Started
-                  <ArrowRight className="w-4 h-4 ml-2 inline" />";";";
+                  <ArrowRight className=`w-4 h-4 ml-2 inline" />";";`;
                 <Link;
-                  href="/contact";
+                  href={`/contact`;
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700';
@@ -667,7 +659,7 @@ const Pricing = () => {
       </section>;
 
       {/* Service: Pricing */}
-      <section className="py-20 bg-gray-50">";";";
+      <section className=`py-20 bg-gray-50`}>`;";";
           <h2: className="text-3xl font-bold text-center text-gray-900 mb-12">Service-Specific Pricing</h2>";";";
           <div: className="grid grid-cols-1 md: grid-cols-2: gap-8 max-w-4xl mx-auto">",;,";" {/* Service Pricing */}
       <section className="py-20 bg-gray-50">;
@@ -773,14 +765,13 @@ const Pricing = () => {
                   <ul className="space-y-2">
                     {addon.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <Check className="w-4 h-4 text-green-500 mr-2" />
+                        <Check className={`w-4 h-4 text-green-500 mr-2` />
                         {feature}
 
-                  <Button 
-                    variant={plan.buttonVariant}
+                  <Button variant={plan.buttonVariant}
                     className={`w-full bg-gradient-to-r ${plan.color} text-white hover: opacity-90 transition-opacity`}
                     {plan.buttonText}
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className=`w-4 h-4 ml-2`} />
                   </Button>
                 </Card>
 

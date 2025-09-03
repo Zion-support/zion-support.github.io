@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { Helmet } from 'react-helmet-async';
 import { 
   Smartphone, 
@@ -17,16 +17,14 @@ import {
   Clock,
   Download,
   Share2,
-  Eye;
-} from 'lucide-react';
+  Eye} from 'lucide-react';
 
 const MobileSurveyTool: React.FC = () => {
   const features = [
     {
       icon: Smartphone,
       title: "Mobile-First Design",
-      description: "Optimized for mobile devices with responsive design that adapts to any screen size for maximum engagement.";
-},
+      description: "Optimized for mobile devices with responsive design that adapts to any screen size for maximum engagement."},
     {
       icon: Zap,
       title: "Adaptive Question Flow",
@@ -67,23 +65,19 @@ const MobileSurveyTool: React.FC = () => {
     {
       title: "Customer Feedback",
       description: "Gather real-time customer satisfaction and feedback across all touchpoints.",
-      icon: MessageSquare;
-},
+      icon: MessageSquare},
     {
       title: "Market Research",
       description: "Conduct comprehensive market research with adaptive questioning techniques.",
-      icon: Target;
-},
+      icon: Target},
     {
       title: "Employee Surveys",
       description: "Measure employee engagement and satisfaction with confidential, mobile-friendly surveys.",
-      icon: Users;
-},
+      icon: Users},
     {
       title: "Event Feedback",
       description: "Collect instant feedback at events, conferences, and workshops using QR codes.",
-      icon: Star;
-}
+      icon: Star}
   ]
 
   const pricing = [
@@ -113,8 +107,7 @@ const MobileSurveyTool: React.FC = () => {
         "Priority support",
         "API access"
       ],
-      popular: true;
-},
+      popular: true},
     {
       name: "Enterprise",
       price: "$95",
@@ -309,11 +302,11 @@ const MobileSurveyTool: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-8`>
               {pricing.map((plan, index) => (
                 <div key={index} className={`relative p-8 rounded-xl border-2 ${plan.popular ? 'border-green-500 bg-green-50' : 'border-gray-200 bg-white'} hover:shadow-lg transition-shadow`}>
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
                       <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                         Most Popular
                       </span>
@@ -335,13 +328,11 @@ const MobileSurveyTool: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <a 
-                    href="https://ziontechgroup.com/contact" 
+                  <a href={`https: //ziontechgroup.com/contact` 
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                       plan.popular 
                         ? 'bg-green-600 text-white hover:bg-green-700' 
-                        : 'bg-gray-900 text-white hover:bg-gray-800';
-}`}
+                        : 'bg-gray-900 text-white hover:bg-gray-800'}`}
                   >
                     Get Started
                   </a>
@@ -352,7 +343,7 @@ const MobileSurveyTool: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-green-600">
+        <section className=`py-20 px-4 sm: px-6 lg:px-8 bg-green-600`}>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Create Better Surveys?
@@ -383,7 +374,6 @@ const MobileSurveyTool: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default MobileSurveyTool;

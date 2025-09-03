@@ -77,8 +77,7 @@ import React { useEffect }  from 'react';interface PerformanceMetrics {
    fid?: number
    cls?: number
    ttfb?: number
-   fmp?: number;
-}
+   fmp?: number}
 
 
 const PerformanceMonitor: React.FC = () => {
@@ -233,13 +232,10 @@ const PerformanceMonitor: React.FC = () => {
             metric_5: 'ttfb'},
           value: Math.round(metrics.fcp || 0),
           non_interaction: true});
-            metric_5: 'ttfb';
-},
-          non_interaction: true;
-}) (window as any).gtag('event,web_vitals' {
+            metric_5: 'ttfb'},
+          non_interaction: true}) (window as any).gtag('event,web_vitals' {
           event_category: 'Performance', event_label: 'Core Web Vitals', custom_map: {
-            metric_1: 'fcp', metric_2: 'lcp', metric_3: 'fid', metric_4: 'cls', metric_5: 'ttfb';
-}, value: Math.round(metrics.fcp || 0), non_interaction: true
+            metric_1: 'fcp', metric_2: 'lcp', metric_3: 'fid', metric_4: 'cls', metric_5: 'ttfb'}, value: Math.round(metrics.fcp || 0), non_interaction: true
 
       // Send to custom analytics endpoint
       if (process.env.NODE_ENV === 'production') {

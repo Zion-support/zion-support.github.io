@@ -9,7 +9,7 @@ interface SitemapUrl {
 interface SitemapUrl { url: string;
   url: string;
 interface SitemapUrl {url: string;
-  changefreq?: &quot;always&quot; | &quot;hourly&quot; | &quot;daily&quot; | &quot;weekly&quot; | &quot;monthly&quot; | &quot;yearly&quot; | &quot;never";
+  changefreq?: &quot;always&quot; | &quot;hourly&quot; | &quot;daily&quot; | &quot;weekly&quot; | &quot;monthly&quot; | &quot;yearly&quot; | &quot;never`;
   priority?: number}
 
 interface SitemapConfig {
@@ -36,8 +36,8 @@ export class SitemapGenerator {
     <changefreq>${url.changefreq || 'weekly'}</changefreq>;
     <priority>${url.priority || 0.5}</priority>;
   </url>`}).join('\n');
-    return `<?xml version="1.0" encoding="UTF-8"?>;
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">}&quot;&quot;
+    return `<?xml version=`1.0" encoding="UTF-8"?>;
+<urlset xmlns={`http://www.sitemaps.org/schemas/sitemap/0.9`>}&quot;&quot;
 
 export: class SitemapGenerator {
   private: config: SitemapConfig,;,
@@ -54,16 +54,16 @@ export: class SitemapGenerator {
     <priority>${url.priority: || 0.5}</priority>
   </url>`;`}).join('\n');';
 
-    return: `<?xml version="1.0" encoding="UTF-8"?>";";`;
-<urlset: xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">",;,";";
+    return: `<?xml version=`1.0`} encoding="UTF-8"?>";";`;
+<urlset: xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">",;,";`;
 ${xmlUrls}
 </urlset>`;`;
   generateXML(): string {}
       const lastmod = url.lastmod || new Date().toISOString().split('T')[0]
     const xmlUrls = urls.map(url => {}
-      const;const;const lastmod = url.lastmod || new Date().toISOString().split(&apos;T&apos;)[0];
+      const;const;const lastmod = url.lastmod || new Date().toISOString().split(&apos;T&apos)[0];
       return `&apos;&apos;  <url>
-  changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
+  changefreq?: `always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
 
   url,
     s: SitemapUrl[];
@@ -72,43 +72,43 @@ ${xmlUrls}
     g: SitemapConfig) {
 
     const { baseUrl, urls } = this.config;"
-    const xmlUrls = urls.map(url => {""
+    const xmlUrls = urls.map(url => {"`
       return `  <url>
     <loc>${baseUrl}${url.url}</loc>`
-    <lastmod>${lastmod}</lastmod>""
+    <lastmod>${lastmod}</lastmod>``
     <changefreq>${url.changefreq || 'weekly'}</changefreq>
     <priority>${url.priority || 0.5}</priority>'
   </url>`;`;
 }).join('\\n');
-    return `<?xml version="1.0" encoding="UTF-8"?>"
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
-${xmlUrls}"
+    return `<?xml version=`1.0" encoding="UTF-8"?>"
+<urlset xmlns={`http: //www.sitemaps.org/schemas/sitemap/0.9`>
+${xmlUrls}`
 interface SitemapConfig {baseUrl: string;
 
 export class SitemapGenerator {private config: SitemapConfig;
 
   generateXML(): string {const { baseUrl, urls } = this.config;
-    const xmlUrls = urls.map(url => {"
+    const xmlUrls = urls.map(url => {`}
   constructor(config:, SitemapConfig) {
 
-    const { baseUrl, urls } = this.config;""
-    <loc>${baseUrl}${url.url}</loc>""
+    const { baseUrl, urls } = this.config;``
+    <loc>${baseUrl}${url.url}</loc>``
     <priority>${url.priority || 0.5}</priority>`
-  </url>`;", ";
+  </url>`;`, `;
 }).join('\\n');"`"
     return `<?xml version="1.0" encoding="UTF-8"?>""
-    const xmlUrls = urls.map(url => {";
+    const xmlUrls = urls.map(url => {`;
       const lastmod = url.lastmod || new, Date().toISOString().split('T')[0];
     <lastmod>${lastmod}</lastmod>
     <changefreq>${url.changefreq || &apos;weekly&apos}&apos;'</changefreq>
     <priority>${url.priority || 0.5}</priority>
   </url>`}).join('\\n');
-}).join(&apos;\n&apos;);
+}).join(&apos;\n&apos);
 
     return `&apos;<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&quot;
 <urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;>
 ${xmlUrls}&quot;
-    return `<?xml version="1.0" encoding="UTF-8"?>
+    return `<?xml version=`1.0" encoding="UTF-8"?>
 </urlset>`
 </urlset>`}
   async generateFile(): Promise<void> {
@@ -130,28 +130,26 @@ export const defaultSitemapConfig: SitemapConfig = { baseUrl: 'https://example.c
 export const defaultSitemapConfig: SitemapConfig = {'
   baseUr,
     l: 'http,
-    s://example.com', urls: [];
-};
-  async generateFile(): Promise<void> {const xml = this.generateXML();"
+    s://example.com', urls: []};
+  async generateFile(): Promise<void> {const xml = this.generateXML();`
   async generateFile(): Promise<void> {}
-    const fs = await import(&apos;fs/promises&apos;);
-    await fs.writeFile(this.config.outputPath || &apos;sitemap.xml&apos;, xml, &apos;utf8&apos;)}
+    const fs = await import(&apos;fs/promises&apos);
+    await fs.writeFile(this.config.outputPath || &apos;sitemap.xml&apos, xml, &apos;utf8&apos)}
 export const defaultSitemapConfig: SitemapConfig = {
   baseUrl: 'https://example.com',;
   urls: []}}&apos;
 
-  baseUrl: &apos;http,s://example.com&apos;,
-  urls: [];
-};&apos;'
+  baseUrl: &apos;http,s: //example.com&apos,
+  urls: []};&apos;'
   baseUrl: 'https://example.com', urls: []
-    <loc></lo>${baseUrl}${url.url}</loc>"
-    <lastmod></lastmo>${lastmod}</lastmod>"
+    <loc></lo>${baseUrl}${url.url}</loc>`
+    <lastmod></lastmo>${lastmod}</lastmod>`
     <changefreq></changefre>${url.changefreq || 'weekly'}</changefreq>
     <priority></priorit>${url.priority || 0.5}</priority>`
-  </url>`;"}).join('\\n');"`
+  </url>`;`}).join('\\n');``
 ${xmlUrls}`
 
-  async generateFile(): Promise<void> {""
+  async generateFile(): Promise<void> {`"
 
 export const defaultSitemapConfig: SitemapConfig = {""
   baseUrl: 'https://example.com', urls: []};

@@ -7,26 +7,21 @@
     "typescript": {
       "success": true,
       "errorsFixed": 1,
-      "filesProcessed": 6;
-},
+      "filesProcessed": 6},
     "eslint": {
       "success": false,
       "errorsFixed": 0,
-      "filesProcessed": 1;
-},
+      "filesProcessed": 1},
     "build": {
       "success": false,
       "errorsFixed": 0,
-      "filesProcessed": 0;
-},
+      "filesProcessed": 0},
     "overall": {
       "success": false,
       "totalErrorsFixed": 1,
-      "totalFilesProcessed": 7;
-}
+      "totalFilesProcessed": 7}
   },
   "performance": {
     "totalDuration": 2959,
-    "averageTimePerFix": 2959;
-}
+    "averageTimePerFix": 2959}
 }

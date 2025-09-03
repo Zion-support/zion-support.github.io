@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import { motion } from 'framer-motion';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/Card';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/Card'
 import { Button } from './ui/Button';
 import { 
   Brain, 
@@ -88,8 +88,7 @@ const ServicesSection: React.FC = () => {
       title: 'AI Services',
       description: 'Machine learning, natural language processing, and AI-powered automation solutions.',
       features: ['Machine Learning Models', 'NLP Solutions', 'AI Automation', 'Predictive Analytics'],
-      link: '/ai-services';
-} {
+      link: '/ai-services'} {
       icon: Cloud,
       title: 'Cloud Services',
       description: 'Scalable cloud infrastructure and migration services for modern businesses.',
@@ -114,8 +113,7 @@ const ServicesSection: React.FC = () => {
       title: 'Micro SaaS',
       description: 'Lightweight, focused software solutions that solve specific business problems.',
       features: ['Rapid Development', 'Cost-Effective', 'Scalable', 'User-Friendly'],
-      link: '/micro-saas';
-}
+      link: '/micro-saas'}
   ]
 
   return (
@@ -174,8 +172,7 @@ const ServicesSection: React.FC = () => {
     y: 1,
       transition: {
         staggerChildre,
-    n: 0.1;
-};
+    n: 0.1};
 
   const itemVariants = {
     y: 0, y: 20 },

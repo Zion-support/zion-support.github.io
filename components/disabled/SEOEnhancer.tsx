@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
 
 interface SEOEnhancerProps {
@@ -8,8 +8,7 @@ interface SEOEnhancerProps {
   ogImage?: string;
   url?: string;
   type?: string;
-  siteName?: string;
-}
+  siteName?: string}
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions Provider',

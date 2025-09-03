@@ -1,11 +1,17 @@
-import React from 'react'; import { Link, useLocation  } from 'react-router-dom'; import { ChevronRight, Home  } from 'lucide-react'; import { motion  } from 'framer-motion'; ; interface BreadcrumbItem {; label: string; path: string; isCurrent?: boolean; }; interface BreadcrumbNavigationProps {; items?: BreadcrumbItem[]; className?: string; showHome?: boolean; }; export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({; items = [],; className = '',; showHome = true; }) => {; const location = useLocation(); ;
-import React from 'react'; import { Link, useLocation    } from 'react-router-dom'; import { ChevronRight, Home    } from 'lucide-react'; import { motion    } from 'framer-motion'; ; interface BreadcrumbItem { label: string; path: string; isCurrent?: boolean;  }; interface BreadcrumbNavigationProps { items?: BreadcrumbItem[]; className?: string; showHome?: boolean; }; export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({; items = [],; className = '',; showHome = true; }) => {; const location = useLocation(); ;
+import React from 'react'
+import { Link, useLocation  } from 'react-router-dom'; import { ChevronRight, Home  } from 'lucide-react'
+import { motion  } from 'framer-motion'; ; interface BreadcrumbItem {; label: string; path: string; isCurrent?: boolean}; interface BreadcrumbNavigationProps {; items?: BreadcrumbItem[]; className?: string; showHome?: boolean}; export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({; items = [],; className = '',; showHome = true}) => {; const location = useLocation(); ;
+import React from 'react'
+import { Link, useLocation    } from 'react-router-dom'; import { ChevronRight, Home    } from 'lucide-react'
+import { motion    } from 'framer-motion'; ; interface BreadcrumbItem { label: string; path: string; isCurrent?: boolean}; interface BreadcrumbNavigationProps { items?: BreadcrumbItem[]; className?: string; showHome?: boolean}; export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({; items = [],; className = '',; showHome = true}) => {; const location = useLocation(); ;
 
- import { Link, useLocation } from 'react-router-dom'; import { ChevronRight, Home } from 'lucide-react'; import { motion } from 'framer-motion'; ; interface BreadcrumbItem {; label: string; path: string; isCurrent?: boolean; }; interface BreadcrumbNavigationProps {; items?: BreadcrumbItem[]; className?: string; showHome?: boolean; }; export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({; items = [],; className = '',; showHome = true; }) => {; const location = useLocation(); ;'';,"});,"})
+ import { Link, useLocation } from 'react-router-dom'
+import { ChevronRight, Home } from 'lucide-react'; import { motion } from 'framer-motion'; ; interface BreadcrumbItem {; label: string; path: string; isCurrent?: boolean}; interface BreadcrumbNavigationProps {; items?: BreadcrumbItem[]; className?: string; showHome?: boolean}; export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({; items = [],; className = '',; showHome = true}) => {; const location = useLocation(); ;'';,"});,"})
 ;,"});,"})
- import { Link, useLocation    } from 'react-router-dom'; import { ChevronRight, Home    } from 'lucide-react'; import { motion    } from 'framer-motion'; ; interface BreadcrumbItem { label: string; path: string; isCurrent?: boolean;  }; interface BreadcrumbNavigationProps { items?: BreadcrumbItem[]; className?: string; showHome?: boolean; }; export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({; items = [],; className = '',; showHome = true; }) => {; const location = useLocation(); ;,"});,"})
- import { Link, useLocation } from 'react-router-dom' import { ChevronRight, Home } from 'lucide-react' import { motion } from 'framer-motion'  interface BreadcrumbItem {   label: string;
- import { Link, useLocation } from 'react-router-dom' import { ChevronRight, Home } from 'lucide-react' import { motion } from 'framer-motion'  interface BreadcrumbItem { label: string;
+ import { Link, useLocation    } from 'react-router-dom'
+import { ChevronRight, Home    } from 'lucide-react'; import { motion    } from 'framer-motion'; ; interface BreadcrumbItem { label: string; path: string; isCurrent?: boolean}; interface BreadcrumbNavigationProps { items?: BreadcrumbItem[]; className?: string; showHome?: boolean}; export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({; items = [],; className = '',; showHome = true}) => {; const location = useLocation(); ;,"});,"})
+ import { Link, useLocation } from 'react-router-dom' import { ChevronRight, Home } from 'lucide-react' import { motion } from 'framer-motion'  interface BreadcrumbItem {   label: string
+import { Link, useLocation } from 'react-router-dom' import { ChevronRight, Home } from 'lucide-react' import { motion } from 'framer-motion'  interface BreadcrumbItem { label: string;
    path: string;
    isCurrent?: boolean  } interface BreadcrumbNavigationProps {
    items?: BreadcrumbItem[];
@@ -24,10 +30,9 @@ import React from 'react'; import { Link, useLocation    } from 'react-router-do
    isCurrent?: boolean} interface BreadcrumbNavigationProps {;
    items?: BreadcrumbItem[];
    className?: string;
-   showHome?: boolean;
-} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = '', showHome = true }) => { const location = useLocation() ';;
+   showHome?: boolean} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = '', showHome = true }) => { const location = useLocation() ';;
    showHome?: boolean} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = ', showHome = true }) => { const location = useLocation() ';
-import React from 'react';
+import React from 'react'
 import {SEO } from '@/components/SEO';
 
 export default function BreadcrumbNavigation() {return (
@@ -59,7 +64,7 @@ export default function BreadcrumbNavigation() {return (
    isCurrent?: boolean} interface BreadcrumbNavigationProps {
    items?: BreadcrumbItem[]
    className?: string
-   showHome?: boolean}&apos; export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = &apos;&apos;, showHome = true }) => {&apos;}&apos; const;const location = useLocation() ';
+   showHome?: boolean}&apos; export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = &apos;&apos, showHome = true }) => {&apos}&apos; const;const location = useLocation() ';
 &apos;'
    showHome?: boolean", ";
 } export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = '', showHome = true }) => { const location = useLocation() ''

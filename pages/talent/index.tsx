@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next';
-import Link from 'next/link';
+import Link from 'next/link'
 import MainLayout from '../../components/layout/MainLayout';
 import { 
   Users, 
@@ -10,8 +10,7 @@ import {
   CheckCircle,
   Briefcase,
   GraduationCap,
-  Heart;
-} from 'lucide-react';
+  Heart} from 'lucide-react';
 
 const TalentIndex: NextPage = () => {
   const jobOpenings = [
@@ -241,14 +240,13 @@ const TalentIndex: NextPage = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             We&apos;re always looking for talented individuals. Send us your resume and let us know how you can contribute to our team.
           </p>
-          <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center">
+          <Link href="/contact" className="bg-white text-blue-600 hover: bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center">
             Get in Touch
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )};
 
 export default TalentIndex;

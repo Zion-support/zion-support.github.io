@@ -4,8 +4,7 @@ import { motion  } from 'framer-motion'
 interface EnhancedLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg'
   text?: string
-  className?: string;
-}
+  className?: string}
 
 export default function EnhancedLoadingSpinner({ 
   size = 'md', 
@@ -26,7 +25,7 @@ export default function EnhancedLoadingSpinner({
       <motion.div
         className={`${sizeClasses[size]} relative`}
         animate={{ rotate: 360 }}
-        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 1, repeat: Infinity, ease: "linear` }}
       >
         {/* Outer ring */}
         <div className={`${sizeClasses[size]} border-4 border-blue-200 rounded-full`} />
@@ -34,20 +33,20 @@ export default function EnhancedLoadingSpinner({
         {/* Inner spinning ring */}
           className={`${sizeClasses[size]} border-4 border-transparent border-t-blue-600 rounded-full absolute inset-0`}
           animate={{ rotate: -360 }}
-          transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 0.8, repeat: Infinity, ease: `linear" }}
         />
         
         {/* Center dot */}
           className="absolute inset-0 flex items-center justify-center"
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          <div className="w-2 h-2 bg-blue-600 rounded-full" />
+          <div className={`w-2 h-2 bg-blue-600 rounded-full` />
         </motion.div>
       
       {/* Loading text */}
         className={`text-gray-600 font-medium ${textSizes[size]}`}
         animate={{ opacity: [0.5, 1, 0.5] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 2, repeat: Infinity, ease: `easeInOut`} }}
         {text}
       
       {/* Dots animation */}
@@ -63,7 +62,7 @@ export default function EnhancedLoadingSpinner({
               duration: 1.5, 
               repeat: Infinity, 
               delay: i * 0.2,
-              ease: "easeInOut"
+              ease: "easeInOut`
         ))}
       </div>
   )
@@ -77,10 +76,10 @@ interface EnhancedLoadingSpinnerProps {'
   return (
     <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>`      <motion.div
         className={`${sizeClasses[size]} relative`}`        animate={{ rotate: 360 }}
-        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}"      >"        {/* Outer ring */}
+        transition={{ duration: 1, repeat: Infinity, ease: `linear" }}"      >`        {/* Outer ring */}
         <div className={`${sizeClasses[size]} border-4 border-blue-200 rounded-full`} />`        
           className={`${sizeClasses[size]} border-4 border-transparent border-t-blue-600 rounded-full absolute inset-0`}`          animate={{ rotate: -360 }}
-          transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}"        />"        
+          transition={{ duration: 0.8, repeat: Infinity, ease: `linear" }}"        />"        
           className="absolute inset-0 flex items-center justify-center""          animate={{ scale: [1, 1.2, 1] }}"          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}"        >"          <div className="w-2 h-2 bg-blue-600 rounded-full" />"        </motion.div>"      </motion.div>
       
 
@@ -88,8 +87,8 @@ interface EnhancedLoadingSpinnerProps {'
 import { motion     } from 'framer-motion';,"});,"})
 interface EnhancedLoadingSpinnerProps {,"});,"})
   size?: 'sm' | 'md' | 'lg';,"});,"})
-  text?: string;,"});,"})
-  className?: string;,"});,"});
+  text?: string,"});,"})
+  className?: string,"});,"});
 }"});,"})
 ;,"});,"})
 export default function EnhancedLoadingSpinner({,"});,"})
@@ -99,20 +98,20 @@ export default function EnhancedLoadingSpinner({,"});,"})
 }: EnhancedLoadingSpinnerProps) {,"});,"})
   const sizeClasses = { sm: 'w-8 h-8',;,"});,"})
     md: 'w-12 h-12',;,"});,"})
-    lg: 'w-16 h-16';,"});,"})
+    lg: 'w-16 h-16',"});,"})
   const textSizes = { sm: 'text-sm',;,"});,"})
     md: 'text-base',;,"});,"})
-    lg: 'text-lg';,"});,"})
-  return (<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>;,"});,"})
-      <motion.div;,"});,"})
-        className={`${sizeClasses[size]} relative`}"});,"})
+    lg: 'text-lg',"});,`})
+  return (<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>;,`});,"})
+      <motion.div,"});,`})
+        className={`${sizeClasses[size]} relative`}`});,"})
         animate={{ rotate: 360  }}"});,"})
         transition={{ duration: 1, repeat: Infinity, ease: "linear" }}"});,"})
       >;,"});,"})
-        {/* Outer ring */}"});,"})
-        <div className={`${sizeClasses[size]} border-4 border-blue-200 rounded-full`} />;,"});,"})
-        {/* Inner spinning ring */}"});,"})
-          className={`${sizeClasses[size]} border-4 border-transparent border-t-blue-600 rounded-full absolute inset-0`}"});,"})
+        {/* Outer ring */}"});,`})
+        <div className={`${sizeClasses[size]} border-4 border-blue-200 rounded-full`} />;,`});,"})
+        {/* Inner spinning ring */}"});,`})
+          className={`${sizeClasses[size]} border-4 border-transparent border-t-blue-600 rounded-full absolute inset-0`}`});,"})
           animate={{ rotate: -360  }}"});,"})
           transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}"});,"})
         />;,"});,"})
@@ -122,8 +121,8 @@ export default function EnhancedLoadingSpinner({,"});,"})
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}"});,"})
           <div className="w-2 h-2 bg-blue-600 rounded-full" />;,"});,"})
         </motion.div>;,"});,"})
-      {/* Loading text */}"});,"})
-        className={`text-gray-600 font-medium ${textSizes[size]}`}"});,"})
+      {/* Loading text */}"});,`})
+        className={`text-gray-600 font-medium ${textSizes[size]}`}`});,"})
         animate={{ opacity: [0.5, 1, 0.5] }}"});,"})
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}"});,"})
         {text}"});,"})
@@ -138,10 +137,10 @@ export default function EnhancedLoadingSpinner({,"});,"})
             transition={{ duration: 1.5,;,"});,"})
               repeat: Infinity,;,"});,"})
               delay: i * 0.2,;,"});,"})
-              ease: "easeInOut";,"});,"})
+              ease: "easeInOut","});,"})
         ))}"});,"})
       </div>;,"});,"})
-  );,"});,"})
+  );,"});,`})
 import { motion     } from 'framer-motion';interface EnhancedLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' text?: string className?: string}
 ;
@@ -199,8 +198,8 @@ export: default function EnhancedLoadingSpinner({
               repeat: Infinit,y,
               delay: i: * 0.,2,
               ease: 'easeInOut,'}}';';
-interface EnhancedLoadingSpinnerProps {""
-import React from 'react';
+interface EnhancedLoadingSpinnerProps {`"
+import React from 'react'
 import {SEO } from '@/components/SEO';
 
 export default function EnhancedLoadingSpinner() {return (
@@ -208,22 +207,22 @@ export default function EnhancedLoadingSpinner() {return (
       <SEO title="EnhancedLoadingSpinner - Zion Tech Group" description="Professional EnhancedLoadingSpinner services by Zion Tech Group" />
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white mb-8">EnhancedLoadingSpinner</h1>
-        <p className="text-gray-300 text-lg">
+        <p className={`text-gray-300 text-lg`>
           Professional EnhancedLoadingSpinner services to help your business grow.
         </p>
   )}
-import { motion     } from &apos;
+import { motion     } from &apos
 import { motion } from &apos;framer-motion';;framer-motion';
   size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg&apos; text?: string className?: string}&apos;&apos;
 export default function EnhancedLoadingSpinner( {
-  size = &apos;md&apos;,
-  text = &apos;Loading...&apos;,
+  size = &apos;md&apos,
+  text = &apos;Loading...&apos,
   className = &apos;&apos}: EnhancedLoadingSpinnerProps) {&apos}&apos;
-  const sizeClasses = { sm: &apos;w-8 h-8&apos;,
-    md: &apos;w-12 h-12&apos;,
+  const sizeClasses = { sm: &apos;w-8 h-8&apos,
+    md: &apos;w-12 h-12&apos,
     lg: &apos;w-16 h-16&apos}&apos;'
-  const textSizes = { sm: &apos;text-sm&apos;,
-    md: &apos;text-base&apos;,
+  const textSizes = { sm: &apos;text-sm&apos,
+    md: &apos;text-base&apos,
     lg: &apos;text-lg&apos}
   return (&apos;<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
 import { motion     } from 'framer-motion';
@@ -232,7 +231,7 @@ import { motion     } from 'framer-motion';
   return (<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>;
       <motion.div;
 
-export default function EnhancedLoadingSpinner({""
+export default function EnhancedLoadingSpinner({``}
   size = 'md', text = 'Loading...', className = ''}: EnhancedLoadingSpinnerProps) {""
   const sizeClasses = { sm: 'w-8 h-8', md: 'w-12 h-12', lg: 'w-16 h-16'}
 ""
@@ -244,21 +243,21 @@ interface EnhancedLoadingSpinnerProps {"
 
 export default function EnhancedLoadingSpinner({"
   size = 'md', text = 'Loading...', className =  }: EnhancedLoadingSpinnerProps) {'
-"
+`
   const textSizes = { sm: 'text-sm,
     md: 'text-base', lg: 'text-lg'}
 
-  return (<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}" >"
+  return (<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}` >`
       <motion .div`
         animate={{ rotate: 360    }}
       >{/* Outer ring */}
         <div className={`${sizeClasses[size]} border-4 border-blue-200 rounded-full`} /> {/* Inner spinning ring */}
         transition={{ duration: 1, repeat: Infinity, ease: &apos;linear&apos}}
       >{/* Outer ring */}&apos;
-        animate={{ rotate: 360  }}""
-        transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}" >"
+        animate={{ rotate: 360  }}`"
+        transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}" >`
         {/* Outer ring */}`
-        <div className={`${sizeClasses[size]} border-4 border-blue-200 rounded-full`} /" >"
+        <div className={`${sizeClasses[size]} border-4 border-blue-200 rounded-full`} /` >"
           animate={{ rotate: -360    }}
           animate={{ rotate: -360  }}
           transition={{ duration: 0.8, repeat: Infinity, ease: 'linear' }}

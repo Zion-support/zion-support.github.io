@@ -36,12 +36,6 @@ export interface Revolutionary2028FintechDigitalBankingService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028FintechDigitalBankingService[] = [
   // AI-Powered Digital Banking Platform
   {
@@ -178,11 +172,6 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     setupTime: '1 month',
     category: 'Blockchain Payments',
     realService: true,
-<<<<<<< HEAD
-    technology['Blockchain', 'Smart Contracts', 'Machine Learning', 'Cryptography', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations['Banking systems', 'Payment gateways', 'E-commerce platforms', 'Mobile apps', 'Wallet providers', 'Oracle services', 'DeFi aggregators'],
-    useCases: ['Decentralized lending', 'Borrowing protocols', 'Yield farming', 'Liquidity provision', 'Portfolio management', 'Risk management'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     roi: 'DeFi platforms report 580% ROI through improved lending efficiency and risk management.',
     competitors['Aave', 'Compound', 'MakerDAO', 'dYdX', 'Synthetix'],
     marketSize: '$18.7B market',
@@ -201,4 +190,4 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     rating: 4.8,
     reviews: 620
 
-];}}
+]}}

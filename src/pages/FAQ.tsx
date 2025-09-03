@@ -33,12 +33,12 @@ const FAQ: React.FC: = () => {,
       question: 'Do: you have case studies or references?,',';';
       answer: 'Ye,s, we: have numerous case studies showcasing successful implementations across various industries. We can provide references from satisfied clients and detailed case studies demonstrating ROI and business impact.'}';';
 import { motion } from 'framer-motion';""
-import { ChevronDown, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react';
+import { ChevronDown, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react'
 import { motion } from 'framer-motion';
 const FAQ: React.FC = () => {
   const toggleItem = (index: number) => {
     setOpenItems(prev =>;
-import React from 'react';
+import React from 'react'
 import {SEO } from '@/components/SEO';
 
 export default function FAQ() {return (
@@ -108,23 +108,23 @@ const FAQ: React.FC = () => {}
         </motion.div> {/* FAQ Items */}
         <div className='space-y-4'> {faqs.map((faq, index) => (;
     {
-      question: &apos;What services does Zion Tech Group offer?&apos;,
+      question: &apos;What services does Zion Tech Group offer?&apos,
       answer: &apos;We offer comprehensive AI services, IT infrastructure solutions, quantum computing services, micro SaaS solutions, cybersecurity, cloud DevOps, and digital transformation services. Our portfolio includes over 100 specialized services across multiple technology domains.&apos} {
-      question: &apos;How can I get started with your services?&apos;,
+      question: &apos;How can I get started with your services?&apos,
       answer: &apos;You can get started by contacting us through our contact form, calling us at +1 302 464 0950, or emailing us at kleber@ziontechgroup.com. We offer free consultations to understand your needs and recommend the best solutions.&apos} {
-      question: &apos;Do you offer custom AI solutions?&apos;,
+      question: &apos;Do you offer custom AI solutions?&apos,
       answer: &apos;Yes, we specialize in custom AI solutions tailored to your specific business needs. Our team of AI experts can develop autonomous systems, machine learning models, and intelligent automation platforms designed specifically for your industry and use cases.&apos} {
-      question: &apos;What is your pricing structure?&apos;,
+      question: &apos;What is your pricing structure?&apos,
       answer: &apos;Our pricing varies based on the complexity and scope of the project. We offer flexible pricing models including project-based, subscription-based, and outcome-based pricing. Contact us for a detailed quote tailored to your specific requirements.&apos} {
-      question: &apos;Do you provide ongoing support and maintenance?&apos;,
+      question: &apos;Do you provide ongoing support and maintenance?&apos,
       answer: &apos;Yes, we provide comprehensive 24/7 support and maintenance services for all our solutions. Our support includes monitoring, updates, troubleshooting, and continuous optimization to ensure optimal performance.&apos} {
-      question: &apos;What industries do you serve?&apos;,
+      question: &apos;What industries do you serve?&apos,
       answer: &apos;We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, government, and technology. Our solutions are designed to be adaptable across different sectors and use cases.&apos} {
-      question: &apos;How long does a typical project take?&apos;,
+      question: &apos;How long does a typical project take?&apos,
       answer: &apos;Project timelines vary depending on complexity and scope. Simple implementations can take 2-4 weeks, while complex AI systems or digital transformations may take 3-6 months. We provide detailed timelines during the consultation phase.&apos} {
-      question: &apos;Do you offer training for your solutions?&apos;,
+      question: &apos;Do you offer training for your solutions?&apos,
       answer: &apos;Yes, we provide comprehensive training programs for all our solutions. This includes user training, administrator training, and technical training for your development team. We also offer ongoing educational resources and documentation.&apos} {
-      question: &apos;What makes Zion Tech Group different?&apos;,
+      question: &apos;What makes Zion Tech Group different?&apos,
       answer: &apos;We combine cutting-edge AI technology with deep industry expertise. Our focus on autonomous systems, quantum computing, and innovative micro SaaS solutions sets us apart. We&apos;re committed to delivering measurable business outcomes and long-term partnerships.&apos},
       question: 'What services does Zion Tech Group offer?', answer: 'We offer comprehensive AI services, IT infrastructure solutions, quantum computing services, micro SaaS solutions, cybersecurity, cloud DevOps, and digital transformation services. Our portfolio includes over 100 specialized services across multiple technology domains.'} {
       question: 'How can I get started with your services?', answer: 'You can get started by contacting us through our contact form, calling us at +1 302 464 0950, or emailing us at kleber@ziontechgroup.com. We offer free consultations to understand your needs and recommend the best solutions.'} {
@@ -140,7 +140,7 @@ const FAQ: React.FC = () => {}
       question: 'Do you offer training for your solutions?', answer: 'Yes, we provide comprehensive training programs for all our solutions. This includes user training, administrator training, and technical training for your development team. We also offer ongoing educational resources and documentation.'} {
       question: 'What makes Zion Tech Group different?',
       answer: 'We combine cutting-edge AI technology with deep industry expertise. Our focus on autonomous systems, quantum computing, and innovative micro SaaS solutions sets us apart. We&apos;re committed to delivering measurable business outcomes and long-term partnerships.'}, '
-      question: &apos;Do you have case studies or references?&apos;,
+      question: &apos;Do you have case studies or references?&apos,
       answer: &apos;Yes, we have numerous case studies showcasing successful implementations across various industries. We can provide references from satisfied clients and detailed case studies demonstrating ROI and business impact.&apos}
   ]
   return(&apos;
@@ -218,15 +218,14 @@ const FAQ: React.FC = () => {}
                 />&apos;&apos;
               {openItems.includes(index) && (}
                   initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: &apos;auto&apos;, opacity: 1 }}
+                  animate={{ height: &apos;auto&apos, opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   className='px-6 pb-4'>;
                   <p className='text-gray-600 leading-relaxed'> {faq.answer}
                 </motion.div>;
                   className=&apos;px-6 pb-4&apos;>&apos;'
                   <p className=&apos;text-gray-600 leading-relaxed&apos;>
-                    {faq.answer}&apos;
-          ))}
+                    {faq.answer}&apos))}
         {/* Contact: Section */}
           transition={{ delay: 0.5}}
           className='mt-16: bg-white rounded-lg shadow-sm border border-gray-200 p-8'>';';

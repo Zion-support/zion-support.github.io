@@ -1,23 +1,7 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import Head from 'next/head'
 import Layout from '../components/Layout';
-<<<<<<< HEAD
-import {
-  Shield,
-  Zap,
-  Globe,
-  Lock,
-  Database,
-  ArrowRight,
-  CheckCircle,
-  Users,
-  Award,
-} from 'lucide-react';
-
-=======
-import { Shield, Zap, Globe, Lock, Database, ArrowRight, CheckCircle, Users, Award } from 'lucide-react';
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 const BlockchainSolutions: NextPage = () => {
   const services = [
     {
@@ -151,7 +135,7 @@ const BlockchainSolutions: NextPage = () => {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let's discuss your blockchain project and create a solution that drives innovation
             </p>
-            <button className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300">
+            <button className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover: bg-gray-100 transition-all duration-300">
               Start Your Project
               <ArrowRight className="ml-2 w-5 h-5" />
             </button>
@@ -159,7 +143,6 @@ const BlockchainSolutions: NextPage = () => {
         </section>
       </Layout>
     </>
-  );
-};
+  )};
 
 export default BlockchainSolutions;

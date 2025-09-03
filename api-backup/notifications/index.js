@@ -8,13 +8,11 @@ const supabase = createClient(supabaseUrl, serviceKey);
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
     res.status(405).end();
-    return;
-  }
+    return}
   const userId = req.query?.userId;
   if (!userId) {
     res.status(400).json({ error: 'Missing userId' });
-    return;
-  }
+    return}
   const { data, error } = await supabase
     .from('notifications')
     .select('*')
@@ -22,8 +20,7 @@ export default async function handler(req, res) {
     .order('created_at', { ascending: false });
   if (error) {
     res.status(500).json({ error: error.message });
-    return;
-  }
+    return}
   res.status(200).json(data || []);
 }
 ursor/automate-test-fix-improve-and-merge-code-99d1

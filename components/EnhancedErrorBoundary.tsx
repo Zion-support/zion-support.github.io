@@ -47,8 +47,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasErro,
     r: false,
       error: null,
-      errorInfo: null;
-}}
+      errorInfo: null}}
 
   static getDerivedStateFromError(error: Error): State {
       hasError: true,
@@ -56,8 +55,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-      errorInfo;
-});
+      errorInfo});
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -81,20 +79,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             error: {
               message: error.message,
               stack: error.stack,
-              name: error.name;
-},
+              name: error.name},
             errorInfo: {
               componentStack: errorInfo.componentStack,
               timestamp: new Date().toISOString(),
               userAgent: navigator.userAgent,
-              url: window.location.href;
-});
+              url: window.location.href});
 }).catch(() => {
-          // Silently fail if error reporting fails;
-})}
+          // Silently fail if error reporting fails})}
     } catch (reportingError) {
-      // Silently fail if error reporting fails;
-};
+      // Silently fail if error reporting fails};
 
   private handleRetry = () => {;
 })};
@@ -162,15 +156,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     r: {
             messag,
     e: error.message,
-            componentStack: errorInfo.componentStack;
-}).catch(console.error)} catch (loggingError) {'
+            componentStack: errorInfo.componentStack}).catch(console.error)} catch (loggingError) {'
       console.error('Failed to log error to service:', loggingError)}
         gtag('event,exception' {
           description: error.message, fatal: false})}
       // Example: Send to custom endpoint;
       fetch('/api/error-reporting' {
-        // Silently fail if error reporting fails;
-})} catch (reportingError) {
+        // Silently fail if error reporting fails})} catch (reportingError) {
       // Silently fail if error reporting fails
 
 

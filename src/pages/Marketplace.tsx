@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {SEO } from '@/components/SEO';
 
 ;,"});,"})
@@ -15,13 +15,12 @@ export default function Marketplace() {return (
 import React from &apos;react';
 import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import { SEO } from '../components/SEO';
 import { ;
   ShoppingCart, Star, Users, Code, Database, ;
   Shield, Rocket, Brain, ArrowRight, Filter,;
-  Search, Grid, List, Heart, ExternalLink;
-} from 'lucide-react';
+  Search, Grid, List, Heart, ExternalLink} from 'lucide-react';
 ;
 export default function Marketplace() {;
   const products = [;
@@ -135,67 +134,66 @@ export default function Marketplace() {;
                 <motion.div;
 import { 
   ShoppingCart, Star, Users, Code, Database, Shield, Rocket, Brain, ArrowRight, Filter,
-  Search, Grid, List, Heart, ExternalLink;
-} from &apos;lucide-react';&apos;&apos;
+  Search, Grid, List, Heart, ExternalLink} from &apos;lucide-react';&apos;&apos;
 
 export default function Marketplace() {}
   const products = [
     ;{
       id: 1,
-      name: &quot;AI Content Generator Pro&quot;,
-      description: &quot;Advanced AI-powered content creation tool with natural language processing&quot;,
-      price: &quot;$99/month&quot;,
-      category: &quot;AI Tools&quot;,
+      name: &quot;AI Content Generator Pro&quot,
+      description: &quot;Advanced AI-powered content creation tool with natural language processing&quot,
+      price: &quot;$99/month&quot,
+      category: &quot;AI Tools&quot,
       rating: 4.8,
       reviews: 124,
-      image: &quot;/api/placeholder/300/200&quot;,
+      image: &quot;/api/placeholder/300/200&quot,
       featured: true,
-      tags: [&quot;AI&quot;, &quot;Content&quot;, &quot;NLP&quot;];
+      tags: [&quot;AI&quot, &quot;Content&quot, &quot;NLP&quot];
 },
     {
       id: 2,
-      name: &quot;Quantum Analytics Dashboard&quot;,
-      description: &quot;Real-time analytics dashboard powered by quantum computing algorithms&quot;,
-      price: &quot;$299/month&quot;,
-      category: &quot;Analytics&quot;,
+      name: &quot;Quantum Analytics Dashboard&quot,
+      description: &quot;Real-time analytics dashboard powered by quantum computing algorithms&quot,
+      price: &quot;$299/month&quot,
+      category: &quot;Analytics&quot,
       rating: 4.9,
       reviews: 89,
-      image: &quot;/api/placeholder/300/200&quot;,
+      image: &quot;/api/placeholder/300/200&quot,
       featured: true,
-      tags: [&quot;Quantum&quot;, &quot;Analytics&quot;, &quot;Dashboard&quot;];
+      tags: [&quot;Quantum&quot, &quot;Analytics&quot, &quot;Dashboard&quot];
 },
     {
       id: 3,
-      name: &quot;Micro SaaS Starter Kit&quot;,
-      description: &quot;Complete toolkit for building and launching micro SaaS applications&quot;,
-      price: &quot;$199/month&quot;,
-      category: &quot;Development&quot;,
+      name: &quot;Micro SaaS Starter Kit&quot,
+      description: &quot;Complete toolkit for building and launching micro SaaS applications&quot,
+      price: &quot;$199/month&quot,
+      category: &quot;Development&quot,
       rating: 4.7,
       reviews: 156,
-      image: &quot;/api/placeholder/300/200&quot;,
+      image: &quot;/api/placeholder/300/200&quot,
       featured: false,
-      tags: [&quot;SaaS&quot;, &quot;Development&quot;, &quot;Starter&quot;];
+      tags: [&quot;SaaS&quot, &quot;Development&quot, &quot;Starter&quot];
 },
     {
       id: 4,
-      name: &quot;Cybersecurity Suite&quot;,
-      description: &quot;Comprehensive security solution for enterprise applications&quot;,
-      price: &quot;$499/month&quot;,
-      category: &quot;Security&quot;,
+      name: &quot;Cybersecurity Suite&quot,
+      description: &quot;Comprehensive security solution for enterprise applications&quot,
+      price: &quot;$499/month&quot,
+      category: &quot;Security&quot,
       rating: 4.9,
       reviews: 67,
-      image: &quot;/api/placeholder/300/200&quot;,
+      image: &quot;/api/placeholder/300/200&quot,
       featured: false,
-      tags: [&quot;Security&quot;, &quot;Enterprise&quot;, &quot;Protection&quot;];
+      tags: [&quot;Security&quot, &quot;Enterprise&quot, &quot;Protection&quot];
 }
   ]&quot;
 
   const categories = [
-    { name: &quot;AI Tools&quot;, icon: Brain, count: 25, color: &quot;from-purple-500 to-pink-500&quot; },
-    { name: &quot;Analytics&quot;, icon: Database, count: 18, color: &quot;from-blue-500 to-cyan-500&quot; },
-    { name: &quot;Development&quot;, icon: Code, count: 32, color: &quot;from-green-500 to-emerald-500&quot; },
-    { name: &quot;Security&quot;, icon: Shield, count: 15, color: &quot;from-red-500 to-orange-500&quot; },
-    { name: &quot;Micro SaaS&quot;, icon: Rocket, count: 28, color: &quot;from-indigo-500 to-blue-500&quot; }
+    { name: &quot;AI Tools&quot, icon: Brain, count: 25, color: &quot;from-purple-500 to-pink-500&quot},
+    { name: &quot;Analytics&quot, icon: Database, count: 18, color: &quot;from-blue-500 to-cyan-500&quot},
+    { name: &quot;Development&quot, icon: Code, count: 32, color: &quot;from-green-500 to-emerald-500&quot},
+    { name: &quot;Security&quot, icon: Shield, count: 15, color: &quot;from-red-500 to-orange-500&quot},
+    { name: &quot;Micro SaaS&quot, icon: Rocket, count: 28, color: &quot;from-indigo-500 to-blue-500&quot}
   ]
 
   return (&quot;
@@ -204,8 +202,7 @@ export default function Marketplace() {}
         title=&quot;Marketplace - Zion Tech Group | Technology Solutions & Tools&quot;
         description=&quot;Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group&apos;s marketplace.&quot;
         keywords=&quot;marketplace, technology solutions, AI tools, micro SaaS, software, Zion Tech Group&quot;
-      />&quot;
-} from 'lucide-react';
+      />&quot} from 'lucide-react';
 export default function Marketplace() {
   const products = [
     { id: 1, name: "AI Content Generator Pro",
@@ -316,19 +313,19 @@ export default function Marketplace() {
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-5 gap-6&quot;>
-              {categories.map((category, index) => (&quot;}
+              {categories.map((category, index) => (&quot}
                 <motion.div
                   key={category.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 cursor-pointer";
+                  className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 cursor-pointer`;
                 >;
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4`}>;
-                    <category.icon className="w-8 h-8 text-white" />;
+                    <category.icon className=`w-8 h-8 text-white`} />;
                   </div>;
                   <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>;
-                  <p className="text-gray-400 text-sm">{category.count} products</p>;
+                  <p className={`text-gray-400 text-sm`>{category.count} products</p>;
                 </motion.div>;
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hove,r:scale-105 cursor-pointer&quot;
                 >&quot;
@@ -344,7 +341,7 @@ export default function Marketplace() {
         </section>;
 
         {/* Featured Products */}
-        <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
+        <section className=`py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50`}>;
           <div className="container mx-auto px-4">;
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
@@ -382,7 +379,7 @@ export default function Marketplace() {
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-8&quot;>
-              {products.map((product, index) => (&quot;}
+              {products.map((product, index) => (&quot}
                 <motion.div
                   key={product.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -415,7 +412,7 @@ export default function Marketplace() {
                     <p className="text-gray-300 text-sm mb-4 line-clamp-2">{product.description}</p>;
                     ;
                     <div className="flex items-center mb-4">;
-                      <div className="flex items-center">;
+                      <div className={`flex items-center`>;
                         {[...Array(5)].map((_, i) => (;
                           <Star;
                             key={i}
@@ -427,7 +424,7 @@ export default function Marketplace() {
                           />;
                         ))}
                       </div>;
-                      <span className="text-gray-400 text-sm ml-2">;
+                      <span className=`text-gray-400 text-sm ml-2`}>;
                         {product.rating} ({product.reviews} reviews);
                       </span>;
                     </div>;
@@ -473,16 +470,14 @@ export default function Marketplace() {
                     <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{product.name}&quot;</h3>
                     <p className=&quot;text-gray-300 text-sm mb-4 line-clamp-2&quot;>{product.description}&quot;</p>
                     
-                    <div className=&quot;flex items-center mb-4&quot;>&quot;"
+                    <div className=&quot;flex items-center mb-4&quot;>&quot;`
                       <div className=&quot;flex items-center&quot;>
-                        {[...Array(5)].map((_, i) => (&quot;}
-                          <Star
-                            key={i}
+                        {[...Array(5)].map((_, i) => (&quot}
+                          <Star key={i}
                             className={`w-4 h-4 ${
                               i}} < Math.floor(product.rating)
                                 ? &apos;text-yellow-400 fill-current&apos;
-                                : &apos;text-gray-600&apos;
-                            }`}
+                                : &apos;text-gray-600&apos}`}
                           />
                         ))}&apos;
                       </div>
@@ -491,7 +486,7 @@ export default function Marketplace() {
                       </span>
                     </div>
 
-                    <div className=&quot;flex items-center justify-between mb-4&quot;>&quot;"
+                    <div className=&quot;flex items-center justify-between mb-4&quot;>&quot;`
                       <span className=&quot;text-2xl font-bold text-white&quot;>{product.price}&quot;</span>
                       <button className=&quot;text-gray-400 hover:text-red-400 transition-colors&quot;>&quot;"
                         <Heart className=&quot;w-5 h-5&quot; />&quot;
@@ -503,7 +498,7 @@ export default function Marketplace() {
                     </div>
 
                     <div className=&quot;flex gap-2 mb-4&quot;>
-                      {product.tags.map((tag, tagIndex) => (&quot;}
+                      {product.tags.map((tag, tagIndex) => (&quot}
                         <span
                           key={tagIndex}
                           className=&quot;px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300&quot;
@@ -612,7 +607,7 @@ export default function Marketplace() {
                 </a>
                 <a
                   href=&quot;/services&quot;
-                  className=&quot;inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hove,r:text-white transition-all duration-200&quot;
+                  className=&quot;inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hove,r: text-white transition-all duration-200&quot;
                 >&quot;
                   <ArrowRight className=&quot;w-5 h-5 mr-2&quot; />
                   View All Services&quot;
@@ -624,5 +619,4 @@ export default function Marketplace() {
       </div>
 </>
   )
-  );
-}
+  )}

@@ -29,8 +29,7 @@ export interface ZionCuttingEdgeService2029 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   technology: string[];
   integrations: string[];
@@ -42,8 +41,7 @@ export interface ZionCuttingEdgeService2029 {
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
   // AI-Powered Quantum Computing Solutions
   {
@@ -786,8 +784,7 @@ export const getServicesByCategory = (
 ) => {
   return zionCuttingEdgeServices2029.filter(
     service => service.category === category
-  );
-};
+  )};
 export const getPopularServices = () => {
   return zionCuttingEdgeServices2029.filter(service => service.isPopular);
 };

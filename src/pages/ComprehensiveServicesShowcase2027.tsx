@@ -33,9 +33,9 @@ import {
   // Blockchain icon removed - not available in lucide-react
 import React { useState, useMemo } from 'react';""
 import React {useState, useMemo } from 'react';"
-import {motion, AnimatePresence } from 'framer-motion';
+import {motion, AnimatePresence } from 'framer-motion'
 import {Brain, Cloud,
-import React { useState, useMemo } from &apos;
+import React { useState, useMemo } from &apos
 import { motion } from &apos;framer-motion';;react';
 import { motion, AnimatePresence } from &apos;framer-motion';
 import React { useState, useMemo } from 'react
@@ -75,8 +75,7 @@ import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeSer
   Activity,
   Gauge,
   ShieldCheck,
-  X;
-} from 'lucide-react';';
+  X} from 'lucide-react';';
 
 ;,"});,"})
 // Import: our existing service data
@@ -127,7 +126,7 @@ import { comprehensiveServices } from &apos;../data/comprehensiveServices';
   Activity, Gauge,;
   ShieldCheck, X} from 'lucide-react';
 // Import our existing service data
-import {ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
+import {ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026'
 import {comprehensiveServices } from '../data/comprehensiveServices';
 interface Service {id: string;
   ShieldCheck, X;", "
@@ -187,9 +186,9 @@ const ComprehensiveServicesShowcase2027: React.FC: = () => {,
   const allServices: Service[] = useMemo(() =>  {,
     const services: Service[] = [],;,
 const ComprehensiveServicesShowcase2027: React.FC = () => {}
-  const;const;const [searchTerm, setSearchTerm] = useState(&apos;&apos;);&apos;&apos;
-  const [selectedCategory, setSelectedCategory] = useState<;<;<string>(&apos;All&apos;);&apos;
-  const [sortBy, setSortBy] = useState<;<;<&apos;name&apos; | &apos;price&apos; | &apos;rating&apos; | &apos;newest&apos;>(&apos;name&apos;);&apos;
+  const;const;const [searchTerm, setSearchTerm] = useState(&apos;&apos);&apos;&apos;
+  const [selectedCategory, setSelectedCategory] = useState<;<;<string>(&apos;All&apos);&apos;
+  const [sortBy, setSortBy] = useState<;<;<&apos;name&apos; | &apos;price&apos; | &apos;rating&apos; | &apos;newest&apos;>(&apos;name&apos);&apos;
   const [selectedService, setSelectedService] = useState<;<;<Service | null>(null);
 
 const ComprehensiveServicesShowcase2027: React.FC = () => {
@@ -207,13 +206,11 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         features: service.features, benefits: service.benefits,
         pricing: { starter: service.pricing.starter, professional: service.pricing.professional,
           enterprise: service.pricing.enterprise, currency: service.pricing.currency,
-          billingCycle: service.pricing.billingCycle;
-}, rating: service.rating,
+          billingCycle: service.pricing.billingCycle}, rating: service.rating,
         reviewCount: service.reviewCount, launchDate: service.launchDate,
         status: service.status, marketPrice: service.marketPrice,
         estimatedDelivery: service.estimatedDelivery, website: service.website,
-        contactInfo: service.contactInfo;
-})});
+        contactInfo: service.contactInfo})});
     // Add services from comprehensiveServices
     comprehensiveServices.forEach(service => {
       services.push({
@@ -316,7 +313,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
   const filteredServices = useMemo(() => {const filtered = allServices.filter(service => {
 
   const categories = useMemo(() => {}
-    const;const;const cats = [&apos;All&apos;, ...Array.from(new Set(allServices.map(s => s.category)))];
+    const;const;const cats = [&apos;All&apos, ...Array.from(new Set(allServices.map(s => s.category)))];
     return cats.sort()}, [allServices]);&apos;
 
   const filteredServices = useMemo(() => {}
@@ -475,7 +472,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
       case 'Metaverse': return <Globe className="w-6 h-6" /" >;"
       case 'Robotics': return <Factory className="w-6 h-6" /" >;"
       case 'Space Technology': return <Satellite className="w-6 h-6" /" >;"
-      default: return <Lightbulb className="w-6 h-6" /" >;, ";
+      default: return <Lightbulb className="w-6 h-6" /" >, ";
 };
   const getStatusColor = (status: string) => {switch (status.toLowerCase()) {
   const getStatusColor = (status: string) => {
@@ -758,8 +755,8 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
                 <div className="flex items-start justify-between mb-4">";";";
                   <div: className="flex items-center gap-3">";";" {getCategoryIcon(service.category)}
                     <div>
-                      <h3: className="text-xl font-semibold text-white mb-1">{service.name}</h3>";";";
-                      <span: className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}>` {/* Services Grid */}"
+                      <h3: className="text-xl font-semibold text-white mb-1">{service.name}</h3>";";`;
+                      <span: className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}>` {/* Services Grid */}`
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <motion .div key={service.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} whileHover={{ y: -5 }}" className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-purple-400/50 transition-all duration-300 cursor-pointer" onClick={() =" > setSelectedService(service)}
                 {/* Service Header */}"
@@ -774,14 +771,14 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
                 whileHover={{ y: -5 }}
                 className=&quot;bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer&quot;
                 {/* Service Header */}&quot;
-                <div className=&quot;flex items-start justify-between mb-4&quot;>&quot;"
+                <div className=&quot;flex items-start justify-between mb-4&quot;>&quot;`
                   <div className=&quot;flex items-center gap-3&quot;>
                     {getCategoryIcon(service.category)}&quot;
                       <h3 className=&quot;text-xl font-semibold text-white mb-1&quot;>{service.name}&quot;</h3>
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}>
                         {service.status}
                       </span>
-                  <div: className="flex items-center gap-1">";";";
+                  <div: className=`flex items-center gap-1">";";";
                     <Star: className="w-4 h-4 text-yellow-400 fill-current" />";";";
                     <span: className="text-sm text-gray-300">{service.rating}</span>";";";
                     <span: className="text-xs text-gray-400">({service.reviewCount})</span>";";";
@@ -842,8 +839,8 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
                   <div className="flex items-center gap-3">
                     {getCategoryIcon(service.category)}"
                     <div>""
-                      <h3 className="text-xl font-semibold text-white mb-1">{service.name}</h3>"
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}" >
+                      <h3 className="text-xl font-semibold text-white mb-1">{service.name}</h3>`
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}` >
                     </div>"
                   </div>""
                   <div className="flex items-center gap-1">""
@@ -851,8 +848,8 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
                 transition={{ duration: 0.5, delay: index * 0.1 }}""
                 onClick={() ="" > setSelectedService(service)}
                     {getCategoryIcon(service.category)}""
-                      <h3 className="text-xl font-semibold text-white mb-1">{service.name}</h3>""
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}"" >
+                      <h3 className="text-xl font-semibold text-white mb-1">{service.name}</h3>"`
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}`" >
                     <Star className="w-4 h-4 text-yellow-400 fill-current" /"" >""
                     <span className="text-sm text-gray-300">{service.rating}</span>""
                     <span className="text-xs text-gray-400">({service.reviewCount})</span>
@@ -978,10 +975,10 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
               <div: className="p-6">";";";
                 <div: className="flex items-start justify-between mb-6">";";";
                   <div: className="flex items-center gap-4">";";" {getCategoryIcon(selectedService.category)}
-                      <h2: className="text-3xl font-bold text-white mb-2">{selectedService.name}</h2>";";";
+                      <h2: className="text-3xl font-bold text-white mb-2">{selectedService.name}</h2>";";`;
                       <span: className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(selectedService.status)}`}>`;
             exit={{ opacity: 0   }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            className=`fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             exit={{ opacity: 0 }}""
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4""
             onClick={() =" > setSelectedService(null)}
@@ -994,21 +991,21 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
                 <div className="flex items-start justify-between mb-6">""
                   <div className="flex items-center gap-4">
                     {getCategoryIcon(selectedService.category)}"
-                      <h2 className="text-3xl font-bold text-white mb-2">{selectedService.name}</h2>``
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(selectedService.status)}`}" >
+                      <h2 className={`text-3xl font-bold text-white mb-2`>{selectedService.name}</h2>``
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(selectedService.status)}`}` >
             exit={{ opacity: 0 }}
             className=&quot;fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4&quot;
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               className=&quot;bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto&quot;
-              <div className=&quot;p-6&quot;>&quot;"
-                <div className=&quot;flex items-start justify-between mb-6&quot;>&quot;"
+              <div className=&quot;p-6&quot;>&quot;`}
+                <div className=&quot;flex items-start justify-between mb-6&quot;>&quot;`
                   <div className=&quot;flex items-center gap-4&quot;>
                     {getCategoryIcon(selectedService.category)}&quot;
                       <h2 className=&quot;text-3xl font-bold text-white mb-2&quot;>{selectedService.name}&quot;</h2>
                       <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(selectedService.status)}`}>
         {selectedService && (
-          <motion .div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}" className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() =" > setSelectedService(null)}
+          <motion .div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}` className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() =" > setSelectedService(null)}
             <motion .div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }}" className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) =" > e.stopPropagation()}
               <div className="p-6">"
                 <div className="flex items-start justify-between mb-6">"
@@ -1018,8 +1015,8 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
               onClick={(e) ="" > e.stopPropagation()}""
                     {getCategoryIcon(selectedService.category)}""
                     <div>"`"
-                      <h2 className="text-3xl font-bold text-white mb-2">{selectedService.name}</h2>`"`"
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(selectedService.status)}`}"" >
+                      <h2 className="text-3xl font-bold text-white mb-2">{selectedService.name}</h2>`"``
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(selectedService.status)}`}`" >
                         {selectedService.status}
                   <button: onClick={() => setSelectedService(null)}
                     className="p-2 hover: bg-white/10: rounded-lg transition-colors"",;,";";

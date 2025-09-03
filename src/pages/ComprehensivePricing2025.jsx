@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, {useState } from 'react'
 import {Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe } from 'lucide-react';
 import {Link } from 'react-router-dom';
 
@@ -27,8 +27,7 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
       ],
       icon: Zap,
       color: 'from-blue-500 to-cyan-500',
-      popular: false;
-},
+      popular: false},
     {'
       id: 'professional',
       name: 'Professional',
@@ -53,8 +52,7 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
       ],
       icon: Shield,
       color: 'from-purple-500 to-pink-500',
-      popular: true;
-},
+      popular: true},
     {'
       id: 'enterprise',
       name: 'Enterprise',
@@ -82,8 +80,7 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
       ],
       icon: Building,
       color: 'from-orange-500 to-red-500',
-      popular: false;
-}
+      popular: false}
   ]
 
   const addOns = [
@@ -93,31 +90,27 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
       description: 'Custom AI model development and training',
       price: { monthl,
     y: 199, yearly: 1990 },
-      icon: Brain;
-},
+      icon: Brain},
     {'
       name: 'Cloud Optimization',
     {name: 'Cloud Optimization',
       description: 'Advanced cloud cost optimization and management',
       price: { monthl,
     y: 149, yearly: 1490 },
-      icon: Cloud;
-},
+      icon: Cloud},
     {'
       name: 'Security Enhancement',
     {name: 'Security Enhancement',
       description: 'Advanced security features and compliance',
       price: { monthl,
     y: 179, yearly: 1790 },
-      icon: Shield;
-},
+      icon: Shield},
     {'
       name: 'Digital Transformation',
       description: 'End-to-end business transformation consulting',
       price: { monthl,
     y: 299, yearly: 2990 },
-      icon: Rocket;
-}
+      icon: Rocket}
   ]
 '
   const savings = billingCycle === 'yearly' ? 20 : 0;
@@ -134,7 +127,7 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
             <p className="text-xl m,
     d:text-2xl text-zion-slate-light mb-8 leading-relaxed">
     {name: 'Digital Transformation',
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import React, { useState } from 'react';""
 import { Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe } from 'lucide-react';""
 import React, { useState } from 'react
@@ -303,7 +296,7 @@ export default function ComprehensivePricing2025() {""
             </p>
             
             {/* Billing Toggle */}"
-            <div className="flex items-center justify-center space-x-4 mb-8">"
+            <div className="flex items-center justify-center space-x-4 mb-8">`
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-zion-slate-light'}`}>
                 Monthly
               </span>
@@ -320,9 +313,9 @@ export default function ComprehensivePricing2025() {""
               <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-zion-slate-light'}`}>
                 Yearly`
                 {billingCycle === 'yearly' && ('
-            {/* Billing Toggle */}""
-            <div className="flex items-center justify-center space-x-4 mb-8">""
-              <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-zion-slate-light'}`}" >"
+            {/* Billing Toggle */}`"
+            <div className="flex items-center justify-center space-x-4 mb-8">"`
+              <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-zion-slate-light'}`}` >`
                 Monthly
               </span>
               <button onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
@@ -335,17 +328,17 @@ export default function ComprehensivePricing2025() {""
               <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-zion-slate-light'}`}>
                 Yearly
                 {billingCycle === 'yearly' && (
-              <button ""
-                onClick={() =" > setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}`"
+              <button `"
+                onClick={() =" > setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}``
                 className={`relative w-16 h-8 rounded-full transition-colors duration-300 ${""
                   billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30', `;
 }`}
               >`
-                <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${""
+                <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${`"
                   billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1',`;
 }`} /" >"
-              </button>"`"
-              <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-zion-slate-light'}`}" >"
+              </button>"``
+              <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-zion-slate-light'}`}` >"
                 Yearly""
                 {billingCycle === 'yearly' && (""
                   <span className="ml-2 px-2 py-1 bg-green-500 text-white text-xs rounded-full">
@@ -363,35 +356,33 @@ export default function ComprehensivePricing2025() {""
         <div className="container mx-auto px-4">"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {plans.map((plan) => (
-              <div
-                key={plan.id}"
+              <div key={plan.id}`
                 className={`relative rounded-2xl p-8 transition-all duration-300 ${
                   plan.popular`
                     ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-cyan scale-105''
-                    : 'bg-zion-blue-dark/50 border border-zion-purple/20 hover:border-zion-purple/40'';
-}`}
+                    : 'bg-zion-blue-dark/50 border border-zion-purple/20 hover: border-zion-purple/40''}`}
               >
                 {plan.popular && (`
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
+                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2">"
       {/* Pricing Plans */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className={`grid grid-cols-1 md: grid-cols-3 gap-8 max-w-7xl mx-auto`>
             {plans.map((plan) => (
               <div key={plan.id} className={`relative rounded-2xl p-8 transition-all duration-300 ${ plan.popular ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-cyan scale-105' : 'bg-zion-blue-dark/50 border border-zion-purple/20 hover: border-zion-purple/40' }`} >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
       {/* Pricing Plans */}""
       <section className="py-20">""
         <div className="container mx-auto px-4">""
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className={`grid grid-cols-1 md: grid-cols-3 gap-8 max-w-7xl mx-auto`>
             {plans.map((plan) => (
               <div key={plan.id}`
                 className={`relative rounded-2xl p-8 transition-all duration-300 ${
                   plan.popular""
                     ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-cyan scale-105'
                     : 'bg-zion-blue-dark/50 border border-zion-purple/20 hover:border-zion-purple/40', `;
-}`}" >"
+}`}` >`}
                 {plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -400,31 +391,31 @@ export default function ComprehensivePricing2025() {""
                   </div>
                 )}
 "
-                <div className="text-center mb-8">"
+                <div className="text-center mb-8">`
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${plan.color} flex items-center justify-center`}>`
-                    <plan.icon className="h-8 w-8 text-white" />
+                    <plan.icon className=`h-8 w-8 text-white" />
                   </div>"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                   <p className="text-zion-slate-light mb-6">{plan.description}</p>
                   "
                   <div className="mb-6">"
-                    <span className="text-4xl font-bold text-white">
+                    <span className={`text-4xl font-bold text-white`>
                       ${plan.price[billingCycle]}
-                    </span>"
-                    <span className="text-zion-slate-light ml-2">"
+                    </span>`
+                    <span className=`}text-zion-slate-light ml-2">"
 ""
-                <div className="text-center mb-8">`
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${plan.color} flex items-center justify-center`}" >"
+                <div className={`text-center mb-8`>`
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${plan.color} flex items-center justify-center`}` >`}
                     <plan .icon className="h-8 w-8 text-white" /" >"
                   </div>""
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
                   <p className="text-zion-slate-light mb-6">{plan.description}</p>
                   ""
                   <div className="mb-6">""
-                    <span className="text-4xl font-bold text-white">
+                    <span className={`text-4xl font-bold text-white`>
                       ${plan.price[billingCycle]}
-                    </span>""
-                    <span className="text-zion-slate-light ml-2">""
+                    </span>``}
+                    <span className="text-zion-slate-light ml-2">"`
                       /{billingCycle === 'monthly' ? 'month' : 'year'}
                     </span>
                   </div>
@@ -435,17 +426,16 @@ export default function ComprehensivePricing2025() {""
                         ? 'bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover: from-zion-purple/80 hove,
     r:to-zion-cyan/80''
                         : 'bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hove,
-    r:bg-zion-purple/30''
+    r: bg-zion-purple/30''
                       plan.popular
                         ? 'bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover: from-zion-purple/80 hover:to-zion-cyan/80'
-                        : 'bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30';
-}`}
+                        : 'bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30'}`}
                   >`
                     {selectedPlan === plan.id ? 'Current Plan' : 'Choose Plan'}
                   </button>
                 </div>
 '
-                <div className="space-y-4">"
+                <div className=`space-y-4">"
                   <h4 className="font-semibold text-white mb-4">What's included:</h4>
                   {plan.features.map((feature, index) => ('
                     <div key={index} className="flex items-start space-x-3">"
@@ -456,13 +446,13 @@ export default function ComprehensivePricing2025() {""
                   {plan.features.map((feature, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <Check className="h-5 w-5 text-zion-cyan mt-0.5 flex-shrink-0" />
-                  <button onClick={() =" > setSelectedPlan(plan.id)}`"
+                  <button onClick={() =" > setSelectedPlan(plan.id)}``
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular""
                         ? 'bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover: from-zion-purple/80 hover:to-zion-cyan/80'
                         : 'bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30', `;
 }`}
-                  >""
+                  >`"
                     {selectedPlan === plan.id ? 'Current Plan' : 'Choose Plan'}
                   </button>
                 </div>
@@ -511,10 +501,10 @@ export default function ComprehensivePricing2025() {""
                 <h3 className="text-lg font-semibold text-white mb-2">{addon.name}</h3>"
                 <p className="text-zion-slate-light text-sm mb-4">{addon.description}</p>"
                 <div className="text-center">"
-                  <div className="text-2xl font-bold text-white mb-2">
+                  <div className={`text-2xl font-bold text-white mb-2`>
                     ${addon.price[billingCycle]}
-                  </div>"
-                  <span className="text-zion-slate-light text-sm">"
+                  </div>`
+                  <span className=`}text-zion-slate-light text-sm">"
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {addOns.map((addon, index) => (
@@ -535,9 +525,9 @@ export default function ComprehensivePricing2025() {""
                 <h3 className="text-lg font-semibold text-white mb-2">{addon.name}</h3>""
                 <p className="text-zion-slate-light text-sm mb-4">{addon.description}</p>""
                 <div className="text-center">""
-                  <div className="text-2xl font-bold text-white mb-2">
+                  <div className={`text-2xl font-bold text-white mb-2`>
                     ${addon.price[billingCycle]}
-                  </div>""
+                  </div>``}
                   <span className="text-zion-slate-light text-sm">""
                     /{billingCycle === 'monthly' ? 'month' : 'year'}
                   </span>
@@ -575,20 +565,17 @@ export default function ComprehensivePricing2025() {""
 },
               {'
                 question: 'Do you offer custom pricing for enterprise clients?',
-                answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.';
-},
+                answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.'},
               {'
                 question: 'What payment methods do you accept?',
                 answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.';
 },
               {'
                 question: 'Is there a setup fee?',
-                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.';
-},
+                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.'},
               {'
                 question: 'What happens if I exceed my plan limits?',
-                answer: 'We\'ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed.';
-}
+                answer: 'We\'ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed.'}
             ].map((faq, index) => ('
               <div key={index} className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6">"
                 <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>"
@@ -599,17 +586,14 @@ export default function ComprehensivePricing2025() {""
                 answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.';
 },
               {question: 'Do you offer custom pricing for enterprise clients?',
-                answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.';
-},
+                answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.'},
               {question: 'What payment methods do you accept?',
                 answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.';
 },
               {question: 'Is there a setup fee?',
-                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.';
-},
+                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.'},
               {question: 'What happens if I exceed my plan limits?',
-                answer: 'We\'ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed.';
-}
+                answer: 'We\'ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed.'}
             ].map((faq, index) => (
               <div key={index} className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
@@ -707,6 +691,5 @@ export default function ComprehensivePricing2025() {""
         </div>
       </section>
     </div>
-  );
-}"
+  )}"
   );}"`"

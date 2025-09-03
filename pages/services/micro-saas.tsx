@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout';
+import MainLayout from '../../components/layout/MainLayout'
 import { getServicesByCategory } from '../../data/services';
-import { ArrowRight, CheckCircle, Star, Zap, Users, Shield } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Zap, Users, Shield } from 'lucide-react'
 import Link from 'next/link';
 
 const MicroSaasPage: NextPage = () => {
@@ -15,14 +15,12 @@ const MicroSaasPage: NextPage = () => {
 },
     {
       icon: <Users className="w-8 h-8" />, title: 'Scalable Solutions',
-      description: 'Start small and grow as your business expands. Our solutions scale with your needs.';
-}, {
+      description: 'Start small and grow as your business expands. Our solutions scale with your needs.'}, {
       icon: <Shield className="w-8 h-8" />,
       title: 'Enterprise Security', description: 'Bank-level security with SOC 2 compliance, ensuring your data is always protected.';
 }, {
       icon: <Star className="w-8 h-8" />,
-      title: 'Proven Results', description: 'Track record of successful implementations with measurable ROI for our clients.';
-}
+      title: 'Proven Results', description: 'Track record of successful implementations with measurable ROI for our clients.'}
   ]
 
   return (
@@ -94,8 +92,8 @@ const MicroSaasPage: NextPage = () => {
                 <div className="flex items-start justify-between mb-6">
                   <div className="text-5xl">{service.icon}</div>
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-blue-600">${service.pricing.starter}</div>
-                    <div className="text-sm text-gray-500">Starting price per month</div>
+                    <div className={`text-3xl font-bold text-blue-600`>${service.pricing.starter}</div>
+                    <div className=`text-sm text-gray-500`}>Starting price per month</div>
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.name}</h3>
@@ -362,7 +360,6 @@ const MicroSaasPage: NextPage = () => {
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )};
 
 export default MicroSaasPage;

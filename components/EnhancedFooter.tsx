@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Link from 'next/link';
 import {
   Facebook,
@@ -277,5 +277,4 @@ export default function EnhancedFooter() {
         <ArrowUp className="w-5 h-5" />
       </button>
     </footer>
-  );
-}
+  )}

@@ -46,7 +46,6 @@ const contact = {
   ;
   ;
   website: 'https://ziontechgroup.com';
-;
 };
 export const zion2026CuttingEdgeMicroSaasServices: Zion2026CuttingEdgeMicroSaasService[] = [
   // AI-Powered Autonomous Business Intelligence Platform
@@ -519,4 +518,4 @@ export const zion2026CuttingEdgeMicroSaasServices: Zion2026CuttingEdgeMicroSaasS
     rating: 4.8,
     reviews: 1450
 ];
-export default zion2026CuttingEdgeMicroSaasServices;}}
+export default zion2026CuttingEdgeMicroSaasServices}}

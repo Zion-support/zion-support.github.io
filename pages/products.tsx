@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Globe, Database, Network, Brain, Cloud } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -14,8 +14,7 @@ export default function Products() {
         'Multi-source data integration'
       ], pricing: 'Starting at $299/month',
       category: 'AI & Analytics', rating: 4.9,
-      users: '500+', image: '/products/ai-bi-platform.jpg';
-},
+      users: '500+', image: '/products/ai-bi-platform.jpg'},
     {
       title: 'Cloud Migration Suite', description: 'Seamlessly migrate your infrastructure to the cloud with our comprehensive migration tools.',
       features: [
@@ -24,8 +23,7 @@ export default function Products() {
         '24/7 migration support'
       ], pricing: 'Starting at $199/month',
       category: 'Cloud Computing', rating: 4.8,
-      users: '300+', image: '/products/cloud-migration.jpg';
-},
+      users: '300+', image: '/products/cloud-migration.jpg'},
     {
       title: 'Cybersecurity Monitoring System', description: 'Protect your business with our advanced threat detection and response platform.',
       features: [
@@ -34,8 +32,7 @@ export default function Products() {
         '24/7 SOC support'
       ], pricing: 'Starting at $399/month',
       category: 'Cybersecurity', rating: 4.9,
-      users: '200+', image: '/products/cybersecurity-monitoring.jpg';
-},
+      users: '200+', image: '/products/cybersecurity-monitoring.jpg'},
     {
       title: 'Micro SaaS Development Kit', description: 'Build and launch your own micro SaaS products with our comprehensive development framework.',
       features: [
@@ -44,8 +41,7 @@ export default function Products() {
         'Deployment automation'
       ], pricing: 'Starting at $149/month',
       category: 'SaaS Development', rating: 4.7,
-      users: '150+', image: '/products/micro-saas-kit.jpg';
-},
+      users: '150+', image: '/products/micro-saas-kit.jpg'},
     {
       title: 'Digital Transformation Hub', description: 'Accelerate your digital transformation with our integrated suite of modernization tools.',
       features: [
@@ -54,8 +50,7 @@ export default function Products() {
         'ROI tracking'
       ], pricing: 'Starting at $249/month',
       category: 'Digital Transformation', rating: 4.8,
-      users: '400+', image: '/products/digital-transformation.jpg';
-},
+      users: '400+', image: '/products/digital-transformation.jpg'},
     {
       title: 'IoT Edge Computing Platform', description: 'Connect and manage your IoT devices with our powerful edge computing solution.',
       features: [
@@ -64,8 +59,7 @@ export default function Products() {
         'Remote monitoring'
       ], pricing: 'Starting at $179/month',
       category: 'IoT & Edge Computing', rating: 4.6,
-      users: '100+', image: '/products/iot-edge-platform.jpg';
-}
+      users: '100+', image: '/products/iot-edge-platform.jpg'}
   ]
 
   const categories = [
@@ -146,8 +140,7 @@ export default function Products() {
         "Digital identity"
       ],
       category: "Blockchain",
-      pricing: "Custom pricing";
-},
+      pricing: "Custom pricing"},
     {
       id: 6,
       name: "Global Connectivity Suite",
@@ -161,8 +154,7 @@ export default function Products() {
         "Performance optimization"
       ],
       category: "Networking",
-      pricing: "Starting at $999/month";
-}
+      pricing: "Starting at $999/month"}
   ]
 
   const categories = ["All", "AI Solutions", "Cloud Solutions", "Security", "IoT Solutions", "Blockchain", "Networking"];
@@ -202,15 +194,13 @@ export default function Products() {
       {/* Category Filter */}
       <section className="py-8 bg-white border-b">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="flex flex-wrap gap-2 justify-center">
+          <div className={`flex flex-wrap gap-2 justify-center`>
             {categories.map((category) => (
-              <button
-                key={category}
+              <button key={category}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   category === "All"
                     ? "bg-blue-600 text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200";
-}`}
+                    : "bg-gray-100 text-gray-700 hover: bg-gray-200"}`}
               >
                 {category}
               </button>
@@ -220,7 +210,7 @@ export default function Products() {
       </section>
 
           {/* Products Grid */}
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=`grid md: grid-cols-2 lg:grid-cols-3 gap-8`}>
             {products.map((product, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover: shadow-xl transition-shadow">
                 <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500"></div>
@@ -268,10 +258,9 @@ export default function Products() {
                     </span>
                   </div>
                   
-                  <div className="flex gap-3">
-                    <Link 
-                      href={`/products/${product.title.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="flex-1 bg-blue-600 hover: bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors"
+                  <div className={`flex gap-3`>
+                    <Link href={`/products/${product.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      className=`flex-1 bg-blue-600 hover: bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors`}
                     </div>
                     <Link
                       href="/contact"
@@ -338,7 +327,7 @@ export default function Products() {
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+        <div className="mx-auto max-w-7xl px-6 lg: px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
@@ -355,5 +344,4 @@ export default function Products() {
         </div>
       </section>
     </PageTransition>
-  );
-}
+  )}

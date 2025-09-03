@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
 
 interface SEOEnhancerProps {
@@ -7,8 +7,7 @@ interface SEOEnhancerProps {
   keywords?: string;
   image?: string;
   url?: string;
-  type?: string;
-}
+  type?: string}
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions',
@@ -16,7 +15,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   keywords = 'technology, AI, software development, IT services',
   image = '/images/zion-tech-group-og.jpg',
   url = 'https://ziontechgroup.com',
-  type = 'website';
+  type = 'website',
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
+import fs from 'fs'
 import { glob } from 'glob';
 
 // Function to fix remaining lint errors
@@ -31,8 +31,7 @@ function fixRemainingLintErrors(content) {
     fixed = fixed.replace(/import\s+([^;]+);/, "import $1;\nimport Link from 'next/link);
   }
 
-  return fixed;
-}
+  return fixed}
 
 // Main function
 async function main() {
@@ -40,7 +39,7 @@ async function main() {
   const files = await glob('pages/**/*.{ts,tsx,js,jsx}', {
     ignore: ['node_modules/**']});
 
-  console.log(`Found ${files.length} files to process...`);
+  console.log(``Found ${files.length} files to process...``);
 
   let fixedCount = 0;
   let errorCount = 0;
@@ -52,7 +51,7 @@ async function main() {
 
       if (content !== fixed) {
         fs.writeFileSync(file, fixed, 'utf8');
-        console.log(`Fixed: ${file}`);
+        console.log(``Fixed: ${file}``);
         fixedCount++;
       }
     } catch (error) {
@@ -61,7 +60,7 @@ async function main() {
     }
   }
 
-  console.log(`\nCompleted: ${fixedCount} files fixed, ${errorCount} errors`);
+  console.log(``\nCompleted: ${fixedCount} files fixed, ${errorCount} errors``);
 }
 
 main().catch(console.error);

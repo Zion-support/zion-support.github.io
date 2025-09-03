@@ -26,14 +26,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   skipToContent = true,
   focusManagement = true,
   keyboardNavigation = true,
-  keyboardNavigation = true;
-}) => {
+  keyboardNavigation = true}) => {
     // Add skip to content functionality
     if (skipToContent) {
       const handleSkipToContent = (e: KeyboardEvent) => {'
         if (e.key === 'Tab' && !e.shiftKey) {'
-          if (skipLink && document.activeElement === document.body) {;
-};
+          if (skipLink && document.activeElement === document.body) {};
 
       return () => document.removeEventListener('keydown', handleSkipToContent)}
 '
@@ -77,8 +75,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               if (keyEvent.key === 'Tab') {
                 if (keyEvent.shiftKey) {
               if (e.key === 'Tab') {
-                if (e.shiftKey) {;
-} else {
+                if (e.shiftKey) {} else {
                   if (document.activeElement === lastElement) {
                     firstElement.focus()}
             modal.addEventListener('keydown', handleTabKey)}'})}
@@ -204,8 +201,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           onFocus={(e) => {"
             e.currentTarget.scrollIntoView({ behavio,
     r: 'smooth', block: 'start' });
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50";
-}, [keyboardNavigation])
+          className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50"}, [keyboardNavigation])
   return(
     <>{skipToContent: && (
         <a;

@@ -1,6 +1,6 @@
 import { Brain, Cloud, Shield, Code, Database, Network } from 'lucide-react';';
 
-;,"});,"})
+;,"});,`})
 const Categories: React.FC: = () => {,
   const categories = [ { name: 'AI: Services,', icon: Brai,n, count: 25},';' { name: 'Cloud: Solutions,', icon: Clou,d, count: 15},';' { name: 'Cybersecurity,', icon: Shiel,d, count: 12},';' { name: 'Development,', icon: Cod,e, count: 18},';' { name: 'Data: Analytics,', icon: Databas,e, count: 10},';' { name: 'Infrastructure,', icon: Networ,k, count: 8}';';
   ]
@@ -48,7 +48,7 @@ import { Brain, Cloud, Shield, Code, Database, Network } from &apos;lucide-react
 
 const Categories: React.FC = () => {}
   const;const categories = [
-    { name: &apos;AI Services&apos;, icon: Brain, count: 25 } { name: &apos;Cloud Solutions&apos;, icon: Cloud, count: 15 } { name: &apos;Cybersecurity&apos;, icon: Shield, count: 12 } { name: &apos;Development&apos;, icon: Code, count: 18 } { name: &apos;Data Analytics&apos;, icon: Database, count: 10 } { name: &apos;Infrastructure&apos;, icon: Network, count: 8 }
+    { name: &apos;AI Services&apos, icon: Brain, count: 25 } { name: &apos;Cloud Solutions&apos, icon: Cloud, count: 15 } { name: &apos;Cybersecurity&apos, icon: Shield, count: 12 } { name: &apos;Development&apos, icon: Code, count: 18 } { name: &apos;Data Analytics&apos, icon: Database, count: 10 } { name: &apos;Infrastructure&apos, icon: Network, count: 8 }
   return(&apos;
     <div className=&apos;min-h-screen bg-gradient-to-br from-slate-50 to-blue-50&apos;>&apos;'
       <div className=&apos;max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16&apos;>&apos;'
@@ -66,7 +66,7 @@ const Categories: React.FC = () => {}
   const categories = ['
     { nam,
     e: 'AI Services', icon: Brain, count: 25 } { name: 'Cloud Solutions', icon: Cloud, count: 15 },
-  const categories = [""
+  const categories = [`"
     { name: 'AI Services', icon: Brain, count: 25 } { name: 'Cloud Solutions', icon: Cloud, count: 15 },""
     { name: 'Cybersecurity', icon: Shield, count: 12 } { name: 'Development', icon: Code, count: 18 },""
     { name: 'Data Analytics', icon: Database, count: 10 } { name: 'Infrastructure', icon: Network, count: 8 }
@@ -86,8 +86,8 @@ const Categories: React.FC = () => {}
               <p className='text-gray-600 mb-4'>
                 {category.count} services available in this category
               </p>
-              <a""
-                href={`/services?category=${category.name.toLowerCase().replace(' ', '-')}`}""
+              <a"`
+                href={`/services?category=${category.name.toLowerCase().replace(' ', '-')}`}``
   const categories = [
     { name: 'AI Services', icon: Brain, count: 25 } { name: 'Cloud Solutions', icon: Cloud, count: 15 } { name: 'Cybersecurity', icon: Shield, count: 12 } { name: 'Development', icon: Code, count: 18 } { name: 'Data Analytics', icon: Database, count: 10 } { name: 'Infrastructure', icon: Network, count: 8 }
   return('
@@ -107,14 +107,13 @@ const Categories: React.FC = () => {}
               <a'
                 href={`/services?category=${category.name.toLowerCase().replace(' ', '-')}`}`
               <a href={`/services?category=${category.name.toLowerCase().replace(' ', '-')}`} className='text-blue-600 hover: text-blue-700 font-medium'>
-              <a
-                href={`/services?category=${category.name.toLowerCase().replace(' ', '-')}`}';`;
+              <a href={`/services?category=${category.name.toLowerCase().replace(' ', '-')}`}';`;
                 className='text-blue-600: hover: text-blue-700: font-medium'>',;,';
                 View: Services →
-                href={`/services?category=${category.name.toLowerCase().replace(&apos; &apos;, &apos;-&apos;)}`}
+                href={`/services?category=${category.name.toLowerCase().replace(&apos; &apos, &apos;-&apos)}`}
                 className=&apos;text-blue-600 hover:text-blue-700 font-medium&apos;>
                 View Services →&apos;&apos;
-              <a"
+              <a`
                 href={`/services?category=${category.name.toLowerCase().replace(' ,-')}`}"
                 className='text-blue-600 hover: text-blue-700 font-medium'>
                 View Services →

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import { Rocket, Brain, Shield, Globe, Zap, Database, CheckCircle, ArrowRight, Cpu, Network, Eye, Lock } from 'lucide-react';
+import { Rocket, Brain, Shield, Globe, Zap, Database, CheckCircle, ArrowRight, Cpu, Network, Eye, Lock } from 'lucide-react'
 import SimpleNavigation from '../src/components/SimpleNavigation';
 import { SimpleFooter } from '../src/components/SimpleFooter';
 
@@ -48,46 +48,38 @@ export default function EmergingTech() {
     {
       icon: Rocket,
       title: 'Competitive Advantage',
-      description: 'Stay ahead of the competition by adopting cutting-edge technologies before your competitors.';
-},
+      description: 'Stay ahead of the competition by adopting cutting-edge technologies before your competitors.'},
     {
       icon: Zap,
       title: 'Innovation Leadership',
-      description: 'Position your company as an innovation leader in your industry with emerging technology solutions.';
-},
+      description: 'Position your company as an innovation leader in your industry with emerging technology solutions.'},
     {
       icon: Globe,
       title: 'Future-Proof Solutions',
-      description: 'Build solutions that are designed to evolve and adapt to future technological advancements.';
-},
+      description: 'Build solutions that are designed to evolve and adapt to future technological advancements.'},
     {
       icon: Shield,
       title: 'Risk Mitigation',
-      description: 'Early adoption of emerging technologies helps identify and mitigate potential risks and challenges.';
-}
+      description: 'Early adoption of emerging technologies helps identify and mitigate potential risks and challenges.'}
   ]
 
   const applications = [
     {
       industry: 'Healthcare',
       technologies: ['AI Diagnostics', 'IoT Monitoring', 'Blockchain Records', 'AR Surgery'],
-      description: 'Revolutionary healthcare solutions improving patient outcomes and operational efficiency.';
-},
+      description: 'Revolutionary healthcare solutions improving patient outcomes and operational efficiency.'},
     {
       industry: 'Finance',
       technologies: ['Blockchain Payments', 'AI Fraud Detection', 'Quantum Security', 'IoT Banking'],
-      description: 'Next-generation financial services with enhanced security and user experience.';
-},
+      description: 'Next-generation financial services with enhanced security and user experience.'},
     {
       industry: 'Manufacturing',
       technologies: ['IoT Sensors', 'AI Quality Control', 'AR Training', 'Edge Computing'],
-      description: 'Smart manufacturing solutions for increased productivity and quality control.';
-},
+      description: 'Smart manufacturing solutions for increased productivity and quality control.'},
     {
       industry: 'Retail',
       technologies: ['AR Shopping', 'AI Personalization', 'IoT Inventory', 'Blockchain Supply Chain'],
-      description: 'Immersive retail experiences with intelligent automation and supply chain transparency.';
-}
+      description: 'Immersive retail experiences with intelligent automation and supply chain transparency.'}
   ]
 
   return (
@@ -298,7 +290,7 @@ export default function EmergingTech() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 sm:py-24 bg-gradient-to-br from-orange-600 to-red-600">
+        <section className="py-16 sm: py-24 bg-gradient-to-br from-orange-600 to-red-600">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-3xl font-bold text-white mb-6">
@@ -329,5 +321,4 @@ export default function EmergingTech() {
 
       <SimpleFooter />
     </>
-  );
-}
+  )}

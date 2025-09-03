@@ -4,7 +4,7 @@ import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User
 ;,"});,"})
 export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {;,"});,"})
     const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,;,"});,"})
-        enableUserBehaviorTracking: true;,"});,"});
+        enableUserBehaviorTracking: true,"});,"});
 });,"});,"})
     const [formData, setFormData] = useState({});,"});,"})
     const [validation, setValidation] = useState({});,"});,"})
@@ -12,7 +12,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     const [isSubmitted, setIsSubmitted] = useState(false);,"});,"})
     const [showPassword, setShowPassword] = useState({});,"});,"})
     const [progress, setProgress] = useState(0);,"});,"})
-    // Initialize form data and validation;,"});,"})
+    // Initialize form data and validation,"});,"})
     useEffect(() => {}"});,"})
         const initialValidation = {};,"});,"})
         fields.forEach(field => {}"});,"})
@@ -23,24 +23,24 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             initialValidation[field.name] = {}"});,"})
                 isValid: !field.required,';,"});,"})
                 message: '',;,"});,"})
-                isTouched: false;,"});,"});
+                isTouched: false,"});,"});
 }});,"});,"})
         setFormData(initialData);,"});,"})
         setValidation(initialValidation)}, [fields]);,"});,"})
-    // Update progress based on filled fields;,"});,"})
+    // Update progress based on filled fields,"});,"})
     useEffect(() => {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-        const filledFields = Object.values(formData).filter(value => typeof value === 'boolean' ? value : value.toString().trim() !== '').length;,"});,"})
-        const totalFields = fields.length;,"});,"})
+        const filledFields = Object.values(formData).filter(value => typeof value === 'boolean' ? value : value.toString().trim() !== '').length,"});,"})
+        const totalFields = fields.length,"});,"})
         setProgress((filledFields / totalFields) * 100)}, [formData, fields.length]);,"});,"})
-    // Validate field;,"});,"})
+    // Validate field,"});,"})
     const validateField = useCallback((name, value) => {}"});,"})
         const field = fields.find(f => f.name === name);,"});,"})
         if(!field);,"});,"})
-            return null;,"});,"})
-        // Required field validation;,"});,"})
+            return null,"});,"})
+        // Required field validation,"});,"})
         if (field.required) {}"});,"})
 ';,"});,"})
             if (typeof value === 'boolean' && !value) {}"});,"})
@@ -72,49 +72,49 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 ''';,"});,"})
                     return 'Please enter a valid phone number'}"});,"});
 }"});,"})
-            // Length validation;,"});,"})
-            if(field.validation?.minLength && stringValue.length < field.validation.minLength) {}"});,"})
-                return `Minimum length is ${field.validation.minLength} characters`}"});,"})
+            // Length validation,"});,"})
+            if(field.validation?.minLength && stringValue.length < field.validation.minLength) {}"});,`})
+                return `Minimum length is ${field.validation.minLength} characters`}`});,"})
             if(field.validation?.maxLength && stringValue.length > field.validation.maxLength) {}"});,"})
 `;,"});,"})
 ``;,"});,"})
 ```;,"});,"})
-````;,"});,"})
-                return `Maximum length is ${field.validation.maxLength} characters`}"});,"})
-            // Pattern validation;,"});,"})
+````;,"});,`})
+                return `Maximum length is ${field.validation.maxLength} characters`}`});,"})
+            // Pattern validation,"});,"})
             if (field.validation?.pattern && !field.validation.pattern.test(stringValue)) {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
                 return 'Please enter a valid value'}"});,"})
-            // Custom validation;,"});,"})
+            // Custom validation,"});,"})
             if(field.validation?.custom) {}"});,"})
                 const customError = field.validation.custom(stringValue);,"});,"})
                 if(customError);,"});,"})
                     return customError}"});,"});
 }"});,"})
         return null}, [fields]);,"});,"})
-    // Handle field change;,"});,"})
+    // Handle field change,"});,"})
     const handleFieldChange = useCallback((name, value) => {}"});,"})
         setFormData(prev => ({ ...prev, [name]: value }));,"});,"})
-        // Validate field;,"});,"})
+        // Validate field,"});,"})
         const error = validateField(name, value);,"});,"})
         setValidation(prev => ({}"});,"})
             ...prev,;,"});,"})
             [name]: {}"});,"})
                 isValid: !error,';,"});,"})
                 message: error || '',;,"});,"})
-                isTouched: true;,"});,"});
+                isTouched: true,"});,"});
 }"});,"});
 }));,"});,"})
-        // Track form interaction;,"});,"})
+        // Track form interaction,"});,"})
         if (enableAnalytics) {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
             trackEvent('form',field_changed', name, null, { fieldName: name, value: String(value) })}"});,"});
 }, [validateField, enableAnalytics, trackEvent]);,"});,"})
-    // Handle field blur;,"});,"})
+    // Handle field blur,"});,"})
     const handleFieldBlur = useCallback((name) => {}"});,"})
         const value = formData[name];,"});,"})
         const error = validateField(name, value);,"});,"})
@@ -124,33 +124,33 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 ...prev[name],;,"});,"})
                 isValid: !error,';,"});,"})
                 message: error || '',;,"});,"})
-                isTouched: true;,"});,"});
+                isTouched: true,"});,"});
 }"});,"});
 }))}, [formData, validateField]);,"});,"})
-    // Check if form is valid;,"});,"})
+    // Check if form is valid,"});,"})
     const isFormValid = useCallback(() => {}"});,"})
         return Object.values(validation).every(v => v.isValid)}, [validation]);,"});,"})
-    // Handle form submission;,"});,"})
+    // Handle form submission,"});,"})
     const handleSubmit = useCallback(async (e) => {}"});,"})
         e.preventDefault();,"});,"})
         if(!isFormValid()) {}"});,"})
-            // Track validation error;,"});,"})
+            // Track validation error,"});,"})
             if (enableAnalytics) {}"});,"})
 ';,"});,"})
                 trackEvent('form',validation_error',form_submission_failed', null, {}"});,"})
-                    errors: Object.values(validation).filter(v => !v.isValid).length;,"});,"});
+                    errors: Object.values(validation).filter(v => !v.isValid).length,"});,"});
 })}"});,"})
             return}"});,"})
         setIsSubmitting(true);,"});,"})
         try {}"});,"})
-            // Track form submission start;,"});,"})
+            // Track form submission start,"});,"})
             if (enableAnalytics) {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
                 trackEvent('form',submission_started',form_submitted')}"});,"})
             await onSubmit(formData);,"});,"})
-            // Track successful submission;,"});,"})
+            // Track successful submission,"});,"})
             if (enableAnalytics) {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -158,30 +158,30 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 trackEvent('form',submission_success',form_completed');''';,"});,"})
                 trackConversion('form_submission', 1, { formType: title })}"});,"})
             setIsSubmitted(true);,"});,"})
-            // Reset form after successful submission;,"});,"})
+            // Reset form after successful submission,"});,"})
             setTimeout(() => {}"});,"})
                 setIsSubmitted(false);,"});,"})
                 setFormData({});,"});,"})
                 setValidation({});,"});,"})
                 setProgress(0)}, 5000)}"});,"})
         catch(error) {}"});,"})
-            // Track submission error;,"});,"})
+            // Track submission error,"});,"})
             if (enableAnalytics) {}"});,"})
 ';,"});,"})
                 trackEvent('form',submission_error',form_failed', null, {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-                    error: error instanceof Error ? error.message : 'Unknown error''';,"});,"});
+                    error: error instanceof Error ? error.message : 'Unknown error''',"});,"});
 })}''';,"});,"})
             // console.error('Form submission failed:', error)}"});,"})
         finally {}"});,"})
             setIsSubmitting(false)}"});,"});
 }, [formData, validation, isFormValid, onSubmit, enableAnalytics, trackEvent, trackConversion, title]);,"});,"})
-    // Toggle password visibility;,"});,"})
+    // Toggle password visibility,"});,"})
     const togglePasswordVisibility = useCallback((fieldName) => {}"});,"})
         setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }))}, []);,"});,"})
-    // Get field icon;,"});,"})
+    // Get field icon,"});,"})
     const getFieldIcon = useCallback((field) => {}"});,"})
         switch(field.type) {}"});,"})
 '""";,"});,"})
@@ -192,19 +192,19 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             case 'select': return <Building className="w-4 h-4"/>;"""";,"});,"})
             default: return <User className="w-4 h-4"/>}"});,"});
 }, []);,"});,"})
-    // Render field;,"});,"})
+    // Render field,"});,"})
     const renderField = useCallback((field) => {}"});,"})
         const fieldValidation = validation[field.name];,"});,"})
         const isPasswordField = field.name.toLowerCase().includes('password');,"});,"})
         return (<motion.div key={field.name} initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"});
+  y: 20,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  y: 0 """;,"});,"})
+  y: 0 ""","});,"})
 """";,"});,"});
 }} className="space-y-2">"""";,"});,"})
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">""";,"});,"})
+        <label className="block text-sm font-medium text-gray-700 dark: text-gray-300">""","});,"})
           {field.label}"""";,"});,"})
           {field.required && <span className="text-red-500 ml-1">*</span>}"});,"})
         </label>""";,"});,"})
@@ -218,19 +218,19 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
           {field.type === 'textarea' ? (<textarea name={field.name} value={fieldValue} onChange = {}"});,"})
   (e) => handleFieldChange(field.name,;,"});,"})
   e.target.value)`;,"});,"})
-``;,"});,"});
-} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched';,"});,"})
+``;,"});,`});
+} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched',"});,`})
                     ? fieldValidation.isValid'';,"});,"})
-                        ? 'border-green-500 focus:ring-green-200'''`;,"});,"})
-                        : 'border-red-500 focus:ring-red-200''`'`;,"});,"})
+                        ? 'border-green-500 focus: ring-green-200'''`,"});,"})
+                        : 'border-red-500 focus: ring-red-200''`'`,"});,"})
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`} rows={4}/>) : field.type === 'select' ? (<select name={field.name} value={fieldValue} onChange = {}"});,"})
   (e) => handleFieldChange(field.name,;,"});,"})
   e.target.value)`;,"});,"})
-``;,"});,"});
-} onBlur={() => handleFieldBlur(field.name)} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched';,"});,"})
+``;,"});,`});
+} onBlur={() => handleFieldBlur(field.name)} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched',"});,`})
                     ? fieldValidation.isValid'';,"});,"})
-                        ? 'border-green-500 focus:ring-green-200'''`;,"});,"})
-                        : 'border-red-500 focus:ring-red-200''`'"`;,"});,"})
+                        ? 'border-green-500 focus: ring-green-200'''`,"});,"})
+                        : 'border-red-500 focus: ring-red-200''`'"`,"});,"})
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}>"""";,"});,"})
               <option value="">Select an option</option>;,"});,"})
               {field.options?.map(option => (<option key={option.value} value={option.value}>;,"});,"})
@@ -241,22 +241,22 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   (e) => handleFieldChange(field.name,;,"});,"})
   e.target.checked)""";,"});,"})
 """";,"});,"});
-} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>"""";,"});,"})
-              <span className="text-sm text-gray-600 dark:text-gray-400">;,"});,"})
+} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500"/>"""","});,"})
+              <span className="text-sm text-gray-600 dark: text-gray-400">,"});,"})
                 {field.placeholder}"});,"})
               </span>';,"});,"})
             </div>) : (<input type={isPasswordField && showPassword[field.name] ? 'text' : field.type} name={field.name} value={fieldValue} onChange = {}"});,"})
   (e) => handleFieldChange(field.name,;,"});,"})
   e.target.value)`;,"});,"})
-``;,"});,"});
-} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched';,"});,"})
+``;,"});,`});
+} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched',"});,`})
                     ? fieldValidation.isValid'';,"});,"})
-                        ? 'border-green-500 focus:ring-green-200'''`;,"});,"})
-                        : 'border-red-500 focus:ring-red-200''`'`;,"});,"})
+                        ? 'border-green-500 focus: ring-green-200'''`,"});,"})
+                        : 'border-red-500 focus: ring-red-200''`'`,"});,"})
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}/>)}"});,"})
 """;,"});,"})
           {/* Password Toggle */}"""";,"});,"})
-          {isPasswordField && (<button type="button" onClick={() => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors">"""";,"});,"})
+          {isPasswordField && (<button type="button" onClick={() => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600 transition-colors">"""","});,"})
               {showPassword[field.name] ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>}"});,"})
             </button>)}"});,"})
 """;,"});,"})
@@ -268,40 +268,40 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         {/* Validation Message */}"});,"})
         {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  height: 0;,"});,"});
+  height: 0,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,';,"});,"})
-  height: 'auto' """;,"});,"})
+  height: 'auto' ""","});,"})
 """";,"});,"});
-}} className="text-sm text-red-600 dark:text-red-400">;,"});,"})
+}} className="text-sm text-red-600 dark: text-red-400">,"});,"})
             {fieldValidation.message}"});,"})
           </motion.p>)}"});,"})
       </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]);,"});,"})
     if(isSubmitted) {}"});,"})
         return (<motion.div initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  scale: 0.9;,"});,"});
+  scale: 0.9,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  scale: 1 """;,"});,"})
+  scale: 1 ""","});,"})
 """";,"});,"});
-}} className="text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">"""";,"});,"})
+}} className="text-center p-8 bg-green-50 dark: bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">"""","});,"})
         <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"/>"""";,"});,"})
-        <h3 className="text-2xl font-bold text-green-800 dark:text-green-200 mb-2">;,"});,"})
+        <h3 className="text-2xl font-bold text-green-800 dark: text-green-200 mb-2">,"});,"})
           Thank You!""";,"});,"})
         </h3>"""";,"});,"})
-        <p className="text-green-600 dark:text-green-300">';,"});,"})
+        <p className="text-green-600 dark: text-green-300">',"});,"})
           Your message has been sent successfully. We'll get back to you soon!;,"});,"})
         </p>;,"});,"})
       </motion.div>)}"});,"})
     return (<motion.div initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"});
+  y: 20,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  y: 0 `;,"});,"})
-``;,"});,"});
-}} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>""";,"});,"})
+  y: 0 `,"});,"})
+``;,"});,`});
+}} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>`"";,"});,"})
       {/* Header */}"""";,"});,"})
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">"""";,"});,"})
         <h2 className="text-2xl font-bold mb-2">{title}</h2>"""";,"});,"})
@@ -310,24 +310,24 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 """;,"});,"})
       {/* Progress Bar */}"""";,"});,"})
       {showProgressBar && (<div className="px-6 pt-4">"""";,"});,"})
-          <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">;,"});,"})
+          <div className="flex items-center justify-between text-sm text-gray-600 dark: text-gray-400 mb-2">,"});,"})
             <span>Form Progress</span>;,"});,"})
             <span>{Math.round(progress)}%</span>""";,"});,"})
           </div>""`;,"});,"})
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">"`"`;,"});,"})
-            <motion.div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300" initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>;,"});,"})
+          <div className="w-full bg-gray-200 dark: bg-gray-700 rounded-full h-2">"`"`,"});,"})
+            <motion.div className={`bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300` initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>;,`});,`}})
           </div>;,"});,"})
         </div>) }"});,"})
 """;,"});,"})
       {/* Form */}"""";,"});,"})
       <form onSubmit={handleSubmit} className="p-6 space-y-6">"""";,"});,"})
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;,"});,"})
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,"});,"})
           {fields.map(field => renderField(field))}"});,"})
         </div>;,"});,"})
 "`;,"});,"})
         {/* Submit Button */}"`'"`;,"});,"})
-        <motion.button type="submit" disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting''`;,"});,"})
-            ? 'bg-gray-400 cursor-not-allowed''`'`;,"});,"})
+        <motion.button type={`submit` disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting''`;,"});,`})
+            ? 'bg-gray-400 cursor-not-allowed''`'`;,`}});,"})
             : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>""";,"});,"})
           {isSubmitting ? (<>"""";,"});,"})
               <Loader2 className="w-5 h-5 animate-spin"/>;,"});,"})
@@ -341,16 +341,16 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         <AnimatePresence>;,"});,"})
           {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  height: 0;,"});,"});
+  height: 0,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,';,"});,"})
-  height: 'auto';,"});,"});
+  height: 'auto',"});,"});
 }} exit = {}"});,"})
   { opacity: 0,;,"});,"})
-  height: 0 """;,"});,"})
+  height: 0 ""","});,"})
 """";,"});,"});
-}} className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">"""";,"});,"})
-              <p className="text-sm text-red-600 dark:text-red-400">;,"});,"})
+}} className="p-3 bg-red-50 dark: bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">"""","});,"})
+              <p className="text-sm text-red-600 dark: text-red-400">,"});,"})
                 Please fix the errors above before submitting the form.</p>;,"});,"})
             </motion.div>) }"});,"})
         </AnimatePresence>;,"});,"})
@@ -423,7 +423,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             // Phone validation''
             if (field.type === 'tel' && stringValue) {}
                 const phonePattern = /^[\+]?[1-9][\d]{0, 15}$/
-                if (!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g))) {}""
+                if (!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g))) {}"`
 ''
 ''
 ''''
@@ -439,7 +439,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 ````
                 return `Maximum length is ${field.validation.maxLength} characters`}
             // Pattern validation
-            if (field.validation?.pattern && !field.validation.pattern.test(stringValue)) {}""
+            if (field.validation?.pattern && !field.validation.pattern.test(stringValue)) {}`"
 ''
 ''
 ''''
@@ -567,21 +567,21 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
           {/* Input Field */}''
           {field.type === 'textarea' ? (<textarea name={field.name} value={fieldValue} onChange = {}`
   (e) =" > handleFieldChange(field.name, e.target.value)`"
-``", `";
+``", ``;
 } onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched''
                     ? fieldValidation.isValid''`
                         ? 'border-green-500 focus:ring-green-200'''`"`"
                         : 'border-red-500 focus:ring-red-200''`'`"`"
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`} rows={4}/>) : field.type === 'select' ? (<select name={field.name} value={fieldValue} onChange = {}`
-  (e) =" > handleFieldChange(field.name, e.target.value)`"
-``", `";
+  (e) =` > handleFieldChange(field.name, e.target.value)`"
+``", ``;
 } onBlur={() => handleFieldBlur(field.name)} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched''
                     ? fieldValidation.isValid''`
                         ? 'border-green-500 focus:ring-green-200'''`"`"
                         : 'border-red-500 focus:ring-red-200''`''`"`'"
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}>''''
               <option value=''>Select an option</option>
-              {field.options?.map(option => (<option key={option.value} value={option.value}" >"
+              {field.options?.map(option => (<option key={option.value} value={option.value}` >"
                   {option.label}''''
                 </option>))}''''''
             </select>) : field.type === 'checkbox' ? (<div className='flex items-center space-x-3'>''''
@@ -593,12 +593,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
               </span>''
             </div>) : (<input type={isPasswordField && showPassword[field.name] ? 'text' : field.type} name={field.name} value={fieldValue} onChange = {}`
   (e) =" > handleFieldChange(field.name, e.target.value)`"
-``", `";
+``", ``;
 } onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched''
                     ? fieldValidation.isValid''`
                         ? 'border-green-500 focus:ring-green-200'''`"`"
                         : 'border-red-500 focus:ring-red-200''`'`"`"
-                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}/>)}""
+                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}/>)}`"
 ''''
           {/* Password Toggle */}''''
           {isPasswordField && (<button type='button' onClick={() =" > togglePasswordVisibility(field.name)} className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600 transition-colors'>''''"
@@ -635,8 +635,8 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     return (<motion .div initial = {}
   { opacity: 0, y: 20}} animate = {}`
   { opacity: 1, y: 0 `
-``",`";
-}} className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}" >''''"
+``",``;
+}} className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}` >''''"
       {/* Header */}''''
       <div className='bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white'>''''
         <h2 className='text-2xl font-bold mb-2'>{title}</h2>''''
@@ -649,8 +649,8 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             <span>Form Progress</span>""
             <span>{Math.round(progress)}%</span>'''`'
           </div>''`"`"
-          <div className='w-full bg-gray-200 dark: bg-gray-700 rounded-full h-2'>'`'`"`"
-            <motion .div className='bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300' initial={{ width: 0 }} animate={{ width: `${progress}%` }}/" >"
+          <div className='w-full bg-gray-200 dark: bg-gray-700 rounded-full h-2'>'`'`"``
+            <motion .div className='bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300' initial={{ width: 0 }} animate={{ width: `${progress}%` }}/` >"
           </div>
         </div>) }""
 ''''
@@ -660,10 +660,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
           {fields.map(field => renderField(field))}
         </div>"`"
 '`"`'"
-        {/* Submit Button */}'`''`"`'"
+        {/* Submit Button */}'`''`"`'`
         <motion .button type='submit' disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting''`"`"
             ? 'bg-gray-400 cursor-not-allowed''`'`"`"
-            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}" >''''"
+            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}` >''''"
           {isSubmitting ? (<>''''
               <Loader2 className='w-5 h-5 animate-spin'/" >"
               Sending...''''

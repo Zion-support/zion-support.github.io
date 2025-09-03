@@ -21,8 +21,7 @@ class AdvancedMonitor {
       this.checkPM2Processes();
       this.checkDiskSpace();
       this.checkMemoryUsage();
-    }, 30000); // Check every 30 seconds;
-}
+    }, 30000); // Check every 30 seconds}
 
   checkSystemHealth() {
     const timestamp = new Date().toISOString();
@@ -34,8 +33,7 @@ class AdvancedMonitor {
     pm2.list((err, list) => {
       if (err) {
         console.error('PM2 monitoring error:', err);
-        return;
-      }
+        return}
       
       const timestamp = new Date().toISOString();
       const logEntry = `[${timestamp}] PM2 processes: ${list.length} running\n`;

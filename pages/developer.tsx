@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import Head from 'next/head'
 import Layout from '../components/Layout';
 import {
   Code,
@@ -13,8 +13,7 @@ import {
   CheckCircle,
   Zap,
   Globe,
-  Database;
-} from 'lucide-react';
+  Database} from 'lucide-react';
 
 const Developer: NextPage = () => {
   const resources = [
@@ -28,8 +27,7 @@ const Developer: NextPage = () => {
         'Code Examples',
         'Best Practices'
       ],
-      link: '/docs';
-},
+      link: '/docs'},
     {
       icon: Code,
       title: 'Code Samples',
@@ -40,8 +38,7 @@ const Developer: NextPage = () => {
         'Python Scripts',
         'Mobile SDKs'
       ],
-      link: '/examples';
-},
+      link: '/examples'},
     {
       icon: Users,
       title: 'Community',
@@ -52,8 +49,7 @@ const Developer: NextPage = () => {
         'Stack Overflow',
         'Developer Blog'
       ],
-      link: '/community';
-}
+      link: '/community'}
   ]
 
   const tutorials = [
@@ -85,26 +81,22 @@ const Developer: NextPage = () => {
       name: 'Zion CLI',
       description: 'Command-line interface for managing your projects',
       icon: Code,
-      link: '/cli';
-},
+      link: '/cli'},
     {
       name: 'API Explorer',
       description: 'Interactive tool for testing our APIs',
       icon: Globe,
-      link: '/api-explorer';
-},
+      link: '/api-explorer'},
     {
       name: 'Code Generator',
       description: 'Generate boilerplate code for common patterns',
       icon: Zap,
-      link: '/generator';
-},
+      link: '/generator'},
     {
       name: 'Database Manager',
       description: 'Manage your databases with our web interface',
       icon: Database,
-      link: '/database';
-}
+      link: '/database'}
   ]
 
   return (
@@ -186,17 +178,16 @@ const Developer: NextPage = () => {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {tutorials.map((tutorial, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow duration-300">
                   <div className="p-6">
-                    <div className="flex items-center justify-between mb-3">
+                    <div className={`flex items-center justify-between mb-3`>
                       <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                         tutorial.difficulty === 'Beginner' ? 'bg-green-100 text-green-800' :
                         tutorial.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-800' :
-                        'bg-red-100 text-red-800';
-}`}>
+                        'bg-red-100 text-red-800'}`}>
                         {tutorial.difficulty}
                       </span>
-                      <span className="text-sm text-gray-500">{tutorial.duration}</span>
+                      <span className=`text-sm text-gray-500`}>{tutorial.duration}</span>
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{tutorial.title}</h3>
                     <p className="text-gray-600 mb-4">{tutorial.description}</p>
@@ -297,7 +288,7 @@ const Developer: NextPage = () => {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Get started with our developer resources and build your next amazing application
             </p>
-            <button className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300">
+            <button className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover: bg-gray-100 transition-all duration-300">
               Get API Key
               <ArrowRight className="ml-2 w-5 h-5" />
             </button>
@@ -305,7 +296,6 @@ const Developer: NextPage = () => {
         </section>
       </Layout>
     </>
-  );
-};
+  )};
 
 export default Developer;

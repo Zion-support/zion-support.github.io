@@ -32,13 +32,11 @@ export interface RealMicroSaasService2024 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation?: boolean;
   implementationDetails?: string;
   launchDate?: string;
-  reviews?: number;
-}
+  reviews?: number}
 
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
   {

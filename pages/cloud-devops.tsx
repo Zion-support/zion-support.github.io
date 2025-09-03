@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer';
+import Footer from '../src/components/Footer'
 import { Cloud, Server, GitBranch, Zap, CheckCircle, ArrowRight, Phone, Mail, Users, Award, Clock, Globe } from 'lucide-react';
 
 export default function CloudDevOps() {
@@ -175,7 +175,7 @@ export default function CloudDevOps() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Scale Your Infrastructure?
           </h2>
@@ -203,5 +203,4 @@ export default function CloudDevOps() {
 
       <Footer />
     </div>
-  );
-}
+  )}

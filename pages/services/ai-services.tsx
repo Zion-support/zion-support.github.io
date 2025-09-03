@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout';
+import MainLayout from '../../components/layout/MainLayout'
 import { getServicesByCategory } from '../../data/services';
-import { ArrowRight, CheckCircle, Brain, Zap, Users, Shield } from 'lucide-react';
+import { ArrowRight, CheckCircle, Brain, Zap, Users, Shield } from 'lucide-react'
 import Link from 'next/link';
 
 const AIServicesPage: NextPage = () => {
@@ -11,18 +11,14 @@ const AIServicesPage: NextPage = () => {
   const benefits = [
     {
       icon: <Brain className="w-8 h-8" />, title: 'Advanced AI',
-      description: 'Cutting-edge machine learning and AI technologies to solve complex business problems.';
-}, {
+      description: 'Cutting-edge machine learning and AI technologies to solve complex business problems.'}, {
       icon: <Zap className="w-8 h-8" />,
-      title: 'Rapid Implementation', description: 'Quick deployment of AI solutions with proven methodologies and best practices.';
-},
+      title: 'Rapid Implementation', description: 'Quick deployment of AI solutions with proven methodologies and best practices.'},
     {
       icon: <Users className="w-8 h-8" />, title: 'Expert Team',
-      description: 'AI specialists with deep expertise in machine learning and data science.';
-}, {
+      description: 'AI specialists with deep expertise in machine learning and data science.'}, {
       icon: <Shield className="w-8 h-8" />,
-      title: 'Scalable Solutions', description: 'AI solutions that grow with your business and adapt to changing needs.';
-}
+      title: 'Scalable Solutions', description: 'AI solutions that grow with your business and adapt to changing needs.'}
   ]
 
   return (
@@ -93,8 +89,8 @@ const AIServicesPage: NextPage = () => {
                 <div className="flex items-start justify-between mb-6">
                   <div className="text-5xl">{service.icon}</div>
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-blue-600">${service.pricing.starter.toLocaleString()}</div>
-                    <div className="text-sm text-gray-500">Starting price</div>
+                    <div className={`text-3xl font-bold text-blue-600`>${service.pricing.starter.toLocaleString()}</div>
+                    <div className=`text-sm text-gray-500`}>Starting price</div>
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.name}</h3>
@@ -378,7 +374,6 @@ const AIServicesPage: NextPage = () => {
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )};
 
 export default AIServicesPage;

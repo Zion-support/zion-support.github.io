@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from 'next/link'
 import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from 'lucide-react';
 
 export default function Whitepapers() {
@@ -118,8 +118,7 @@ export default function Whitepapers() {
     const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.topics.some(topic => topic.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   return (
     <MainLayout
@@ -253,7 +252,7 @@ export default function Whitepapers() {
               </div>
               
               {/* Category Filter */}
-              <div className="flex flex-wrap gap-2">
+              <div className={`flex flex-wrap gap-2`>
                 {categories.map((category) => (
                   <button
                     key={category}
@@ -261,8 +260,7 @@ export default function Whitepapers() {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedCategory === category
                         ? 'bg-blue-600 text-white'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200';
-}`}
+                        : 'bg-gray-100 text-gray-700 hover: bg-gray-200'}`}
                   >
                     {category}
                   </button>
@@ -273,7 +271,7 @@ export default function Whitepapers() {
         </section>
 
       {/* All Whitepapers Grid */}
-      <section className="py-16 bg-gray-50">
+      <section className=`py-16 bg-gray-50`}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">All Whitepapers</h2>
@@ -404,7 +402,7 @@ export default function Whitepapers() {
               Subscribe to our newsletter and be the first to access new white papers, 
               industry insights, and technology updates.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -418,5 +416,4 @@ export default function Whitepapers() {
         </section>
       </main>
     </>
-  );
-}
+  )}

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { SEO } from '../components/SEO'
 import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
+import { Badge } from '../components/ui/Badge'
 import { 
   FileText, Scale,
   AlertTriangle, CheckCircle,
@@ -10,8 +10,7 @@ import {
   Mail, Phone,
   ArrowRight, Shield,
   Users, DollarSign,
-  Clock, BookOpen;
-} from 'lucide-react';
+  Clock, BookOpen} from 'lucide-react';
 
 const Terms: React.FC = () => {
   const lastUpdated = "2025-01-15";
@@ -89,12 +88,11 @@ const Terms: React.FC = () => {
         <div className="max-w-7xl mx-auto">
             className="text-center mb-8"
             <h2 className="text-2xl font-bold text-white mb-4">Quick Navigation</h2>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className={`flex flex-wrap justify-center gap-4`>
               {sections.map((section, index) => (
-                <a
-                  key={section.id}
+                <a key={section.id}
                   href={`#${section.id}`}
-                  className="px-4 py-2 rounded-lg bg-slate-700 hover: bg-slate-600 text-gray-300 hover:text-white transition-colors text-sm"
+                  className=`px-4 py-2 rounded-lg bg-slate-700 hover: bg-slate-600 text-gray-300 hover:text-white transition-colors text-sm`}
                   {section.title}
                 </a>
               ))}
@@ -176,9 +174,9 @@ const Terms: React.FC = () => {
                     <Globe className="w-6 h-6 text-blue-400" />
                   <h3 className="text-white font-semibold mb-2">Address</h3>
                   <p className="text-gray-300 text-sm">{contactInfo.address}</p>
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 import Layout from '../components/Layout;
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+import { FileText, Scale, Shield, AlertTriangle, CheckCircle, XCircle } from 'lucide-react'
 import Layout from '../components/Layout';
 ;
 const Terms: NextPage = () => {
@@ -358,7 +356,7 @@ const Terms: NextPage: = () => {,
   )};
 
 export default Terms;
-import Head from 'next/head';
+import Head from 'next/head'
 import Link from 'next/link';
 import { FileText, Scale, Shield, AlertTriangle, Mail, Phone, Calendar } from 'lucide-react';
 
@@ -371,7 +369,7 @@ export default function Terms() {
       
       <main className="min-h-screen bg-white">
 const Layout = dynamic(() => import('../components/Layout') { ssr: false });;
-import Navigation from '../components/Navigation';
+import Navigation from '../components/Navigation'
 import Footer from '../components/Footer';
 import { FileText, Scale, AlertCircle, Shield, Users, Gavel } from 'lucide-react';
 

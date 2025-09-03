@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import Head from 'next/head';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import { 
   User, 
   Mail, 
@@ -12,8 +12,7 @@ import {
   Shield,
   Users,
   Zap,
-  Star;
-} from 'lucide-react';
+  Star} from 'lucide-react';
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -25,8 +24,7 @@ export default function Register() {
     company: '',
     phone: '',
     agreeToTerms: false,
-    subscribeNewsletter: true;
-});
+    subscribeNewsletter: true});
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -37,8 +35,7 @@ export default function Register() {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value;
-}));
+      [name]: type === 'checkbox' ? checked : value}));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -56,13 +53,11 @@ export default function Register() {
     {
       icon: Users,
       title: 'Access to Expert Network',
-      description: 'Connect with our certified professionals and industry experts';
-},
+      description: 'Connect with our certified professionals and industry experts'},
     {
       icon: Zap,
       title: 'Priority Support',
-      description: 'Get priority access to our support team and faster response times';
-},
+      description: 'Get priority access to our support team and faster response times'},
     {
       icon: Star,
       title: 'Exclusive Content',
@@ -71,8 +66,7 @@ export default function Register() {
     {
       icon: Shield,
       title: 'Secure Platform',
-      description: 'Your data is protected with enterprise-grade security';
-}
+      description: 'Your data is protected with enterprise-grade security'}
   ]
 
   if (isRegistered) {
@@ -116,7 +110,7 @@ export default function Register() {
               </ul>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/dashboard"
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
@@ -134,8 +128,7 @@ export default function Register() {
           </motion.div>
         </div>
       </>
-    );
-  }
+    )}
 
   return (
     <>
@@ -420,7 +413,7 @@ export default function Register() {
               <div className="mt-8 text-center">
                 <p className="text-gray-600">
                   Already have an account?{' '}
-                  <a href="/login" className="text-blue-600 hover:text-blue-500 font-medium">
+                  <a href="/login" className="text-blue-600 hover: text-blue-500 font-medium">
                     Sign in here
                   </a>
                 </p>
@@ -430,5 +423,4 @@ export default function Register() {
         </div>
       </div>
     </>
-  );
-}
+  )}

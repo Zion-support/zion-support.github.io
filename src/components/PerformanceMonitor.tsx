@@ -1,6 +1,6 @@
 
 ;,"});,"})
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 ;
@@ -13,8 +13,7 @@ interface PerformanceMetrics {
   name: string;
   value: number;
   delta: number;
-  id: string;
-}
+  id: string}
 
 const PerformanceMonitor = () => {
   useEffect(() => {
@@ -51,8 +50,7 @@ const PerformanceMonitor = () => {
             const navEntry = entry as PerformanceNavigationTiming;
             console.log('Navigation timing:', { domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
               loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-              totalTime: navEntry.loadEventEnd - navEntry.fetchStart;
-});
+              totalTime: navEntry.loadEventEnd - navEntry.fetchStart});
             // Navigation timing logged (removed console.log for production);
 }
         }
@@ -67,12 +65,10 @@ const PerformanceMonitor = () => {
     getTTFB(sendToAnalytics);
   }, []);
 
-  return null;
-};
+  return null};
 
 // Declare gtag for TypeScript
 declare global {
-  interface Window { gtag: (...args: any[]) => void;
-}
+  interface Window { gtag: (...args: any[]) => void}
 }
 export default PerformanceMonitor;

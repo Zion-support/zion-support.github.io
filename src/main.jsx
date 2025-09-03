@@ -85,14 +85,14 @@ const renderApp = () => {
 function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `""
-            <div style="padding: 20px;text-align: center;font-family: sans-serif;">
+            <div style={`padding: 20px;text-align: center;font-family: sans-serif;`>
                 <h1>Application Error</h1>
                 <p>${message}</p>`
             </div>`;}
 }
 
 try {
-    renderApp();} catch (error) {""
+    renderApp();} catch (error) {``}
     console.error('Global error caught in main.jsx: ', error);
     displayFatalError(error.message);}
 ""

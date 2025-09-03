@@ -7,7 +7,7 @@ import {
   Linkedin, 
   Twitter, 
   Github,
-  ArrowUp;
+  ArrowUp,
 } from 'lucide-react';
 
 const Footer: React.FC = () => {

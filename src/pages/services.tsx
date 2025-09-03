@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { SEO } from '../components/SEO';
 
 const Services: React.FC = () => {
@@ -29,7 +29,7 @@ const Services: React.FC = () => {,"});,"})
     </>;,"});,"})
   );,"});,"});
 };,"});,"})
-export default Services;,"});,"})
+export default Services,"});,"})
 import { SEO } from '../components/SEO';';
 
 export default function Services() {
@@ -138,8 +138,7 @@ export default function Services() {
       red: 'bg-red-100 text-red-800 border-red-200',
       green: 'bg-green-100 text-green-800 border-green-200',
       indigo: 'bg-indigo-100 text-indigo-800 border-indigo-200',
-      yellow: 'bg-yellow-100 text-yellow-800 border-yellow-200';
-};
+      yellow: 'bg-yellow-100 text-yellow-800 border-yellow-200'};
     return colorMap[color] || 'bg-gray-100 text-gray-800 border-gray-200'};
 
   return (
@@ -219,14 +218,14 @@ export default function Services() {
                         >
                           Learn More
                           <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={`M17 8l4 4m0 0l-4 4m4-4H3` />
                           </svg>
                         <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getColorClasses(category.color)}`}>
                           {category.category}
                         </span>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <section className=`py-20 bg-gradient-to-r from-blue-600 to-purple-600`}>
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Let&apos;s discuss how our technology solutions can drive innovation and growth for your organization

@@ -36,12 +36,6 @@ export interface CuttingEdgeITInfrastructureInnovation2025 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const cuttingEdgeITInfrastructureInnovations2025 = [
   // Quantum-Safe Cloud Infrastructure Platform
   {
@@ -256,22 +250,3 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
     ],
     marketSize: '$16.4B by 2025',
     targetAudience: 'Data center operators, cloud providers, enterprises with large IT infrastructure',
-<<<<<<< HEAD
-    competitiveAdvantage: 'Only fully autonomous data center management platform with AI-driven optimization',
-    contact: 'kleber@ziontechgroup.com',
-    mobile: '+1 302 464 0950',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-    slug: '/autonomous-data-center-management-platform'
-
-];}}
-=======
-    competitiveAdvantage: 'Only fully autonomous data center management platform with AI-driven optimization',;
-    contact: 'kleber@ziontechgroup.com',;
-    mobile: '+1 302 464 0950',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',;
-    slug: '/autonomous-data-center-management-platform';
-  };
-];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

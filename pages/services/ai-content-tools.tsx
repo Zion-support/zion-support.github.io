@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { ArrowRight, CheckCircle, Brain, FileText, Image, Video, Mic, Globe, Zap, Target, TrendingUp, Star, Shield } from 'lucide-react';
 import PageTransition from '../../src/components/PageTransition';
 
@@ -388,7 +388,7 @@ export default function AIContentTools() {
 			</section>
 
 			{/* CTA Section */}
-			<section className="bg-gradient-to-r from-purple-600 to-pink-600 py-24 sm:py-32">
+			<section className="bg-gradient-to-r from-purple-600 to-pink-600 py-24 sm: py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -418,5 +418,4 @@ export default function AIContentTools() {
 				</div>
 			</section>
 		</PageTransition>
-	);
-}
+	)}

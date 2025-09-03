@@ -30,7 +30,7 @@ class CodeQualityChecker {
 
   run() {
     this.scanDirectory(process.cwd());
-    console.log(`Found ${this.issues.length} code quality issues`);
+    console.log(``Found ${this.issues.length} code quality issues``);
     this.issues.forEach(issue => console.log(issue));
   }
 }

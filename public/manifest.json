@@ -10,30 +10,4 @@
     {
       "src": "/icon-192x192.png",
       "sizes": "192x192",
-<<<<<<< HEAD
-      "type": "image/png",
-      "purpose": "any maskable";
-},
-    {
-      "src": "/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable";
-}
-  ],
-  "categories": ["business", "productivity", "technology"],
-  "lang": "en-US",
-  "dir": "ltr",
-  "scope": "/",
-  "prefer_related_applications": false;
-=======
-      "type": "image/png"
-    },
-    {
-      "src": "/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 }

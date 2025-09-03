@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import Head from 'next/head';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import { 
   CheckCircle, 
   Clock, 
@@ -11,8 +11,7 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin;
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 
 export default function RequestQuote() {
   const [formData, setFormData] = useState({
@@ -25,8 +24,7 @@ export default function RequestQuote() {
     timeline: '',
     budget: '',
     description: '',
-    requirements: '';
-});
+    requirements: ''});
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -35,8 +33,7 @@ export default function RequestQuote() {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value;
-}));
+      [name]: value}));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -84,23 +81,19 @@ export default function RequestQuote() {
     {
       icon: Clock,
       title: 'Fast Response',
-      description: 'Get your quote within 24 hours';
-},
+      description: 'Get your quote within 24 hours'},
     {
       icon: DollarSign,
       title: 'Competitive Pricing',
-      description: 'Best value for your investment';
-},
+      description: 'Best value for your investment'},
     {
       icon: Users,
       title: 'Expert Team',
-      description: 'Certified professionals';
-},
+      description: 'Certified professionals'},
     {
       icon: Zap,
       title: 'Quick Start',
-      description: 'Begin your project immediately';
-}
+      description: 'Begin your project immediately'}
   ]
 
   if (isSubmitted) {
@@ -144,7 +137,7 @@ export default function RequestQuote() {
               </ul>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
@@ -162,8 +155,7 @@ export default function RequestQuote() {
           </motion.div>
         </div>
       </>
-    );
-  }
+    )}
 
   return (
     <>
@@ -437,7 +429,7 @@ export default function RequestQuote() {
 
         {/* Contact Info */}
         <div className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Need Immediate Assistance?
@@ -476,5 +468,4 @@ export default function RequestQuote() {
         </div>
       </div>
     </>
-  );
-}
+  )}

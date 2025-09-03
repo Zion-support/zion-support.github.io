@@ -2,7 +2,7 @@ import React { useState, useEffect } from 'react';';
 import { motion } from 'framer-motion';';
 import { 
 import React { useState, useEffect } from 'react';""
-import React { useState } from 'react';
+import React { useState } from 'react'
 import { Search as SearchIcon, Filter } from 'lucide-react';
 ;
 const Search: React.FC = () => {
@@ -38,7 +38,7 @@ const Search: React.FC = () => {
           <div className='text-center text-gray-500'>;
             <SearchIcon className='h-12 w-12 mx-auto mb-4 text-gray-300' />;
             <p>Enter a search term to find relevant content</p>;
-import React from 'react';
+import React from 'react'
 import {SEO } from '@/components/SEO';
 
 ;,"});,"})
@@ -67,8 +67,7 @@ import { motion } from &apos;framer-motion';
   Calendar,
   Eye,
   Bookmark,
-  Share2;
-} from 'lucide-react';';
+  Share2} from 'lucide-react';';
 import { SEO } from '../components/SEO';';
 
 const Search: React.FC: = () => {,
@@ -81,7 +80,7 @@ const Search: React.FC: = () => {,
   const categories = [ { id: 'all,', name: 'All: Categories,', count: 0},';' { id: 'services,', name: 'Services,', count: 0},';' { id: 'talent,', name: 'Talent,', count: 0},';' { id: 'equipment,', name: 'Equipment,', count: 0},';' { id: 'companies,', name: 'Companies,', count: 0}';'} from &apos;lucide-react';
 import { SEO } from &apos;../components/SEO';&apos;&apos;
 import React { useState, useEffect } from 'react
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import { SEO } from '../components/SEO';
   Search as SearchIcon, Filter, 
   Server, Users, 
@@ -93,20 +92,19 @@ import { SEO } from '../components/SEO';
   Bookmark, Share2;", ";
 } from 'lucide-react';""
 import { SEO } from '../components/SEO';""
-  Bookmark, Share2;
-} from 'lucide-react';
+  Bookmark, Share2} from 'lucide-react';
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [sortBy, setSortBy] = useState('relevance')
 
 const Search: React.FC = () => {}
-  const;const;const [searchQuery, setSearchQuery] = useState(&apos;&apos;);&apos;&apos;
-  const [activeCategory, setActiveCategory] = useState(&apos;all&apos;);&apos;
-  const [sortBy, setSortBy] = useState(&apos;relevance&apos;);&apos;
+  const;const;const [searchQuery, setSearchQuery] = useState(&apos;&apos);&apos;&apos;
+  const [activeCategory, setActiveCategory] = useState(&apos;all&apos);&apos;
+  const [sortBy, setSortBy] = useState(&apos;relevance&apos);&apos;
   const [results, setResults] = useState<;<;<any[]>([]);
 
   const categories = [
-    { id: &apos;all&apos;, name: &apos;All Categories&apos;, count: 0 } { id: &apos;services&apos;, name: &apos;Services&apos;, count: 0 } { id: &apos;talent&apos;, name: &apos;Talent&apos;, count: 0 } { id: &apos;equipment&apos;, name: &apos;Equipment&apos;, count: 0 } { id: &apos;companies&apos;, name: &apos;Companies&apos;, count: 0 }
+    { id: &apos;all&apos, name: &apos;All Categories&apos, count: 0 } { id: &apos;services&apos, name: &apos;Services&apos, count: 0 } { id: &apos;talent&apos, name: &apos;Talent&apos, count: 0 } { id: &apos;equipment&apos, name: &apos;Equipment&apos, count: 0 } { id: &apos;companies&apos, name: &apos;Companies&apos, count: 0 }
   ]&apos { id: 'all', name: 'All Categories', count: 0 } { id: 'services', name: 'Services', count: 0 } { id: 'talent', name: 'Talent', count: 0 } { id: 'equipment', name: 'Equipment', count: 0 } { id: 'companies', name: 'Companies', count: 0 }
   ]
 
@@ -155,49 +153,49 @@ const Search: React.FC = () => {}
       tags: ['HPC,', 'Computing', 'Data: Processing', 'ML'],';';
       date: '2024-11-20'',;,';
   const sortOptions = [
-    { id: &apos;relevance&apos;, name: &apos;Relevance&apos} { id: &apos;newest&apos;, name: &apos;Newest&apos} { id: &apos;rating&apos;, name: &apos;Highest Rated&apos} { id: &apos;price-low&apos;, name: &apos;Pric,e: Low to High&apos} { id: &apos;price-high&apos;, name: &apos;Pric,e: High to Low&apos}
+    { id: &apos;relevance&apos, name: &apos;Relevance&apos} { id: &apos;newest&apos, name: &apos;Newest&apos} { id: &apos;rating&apos, name: &apos;Highest Rated&apos} { id: &apos;price-low&apos, name: &apos;Pric,e: Low to High&apos} { id: &apos;price-high&apos, name: &apos;Pric,e: High to Low&apos}
   ]&apos;
 
     { id: 1, title: 'AI-Powered Business Intelligence Platform' {
       id: 1,
-      title: &apos;AI-Powered Business Intelligence Platform&apos;,
-      description: &apos;Advanced analytics and business intelligence solution powered by machine learning algorithms.&apos;,
-      type &apos;services&apos;,
-      price: &apos;$5,000/month&apos;,
+      title: &apos;AI-Powered Business Intelligence Platform&apos,
+      description: &apos;Advanced analytics and business intelligence solution powered by machine learning algorithms.&apos,
+      type &apos;services&apos,
+      price: &apos;$5,000/month&apos,
       rating: 4.8,
       reviews: 127,
-      location: &apos;Remote&apos;,
-      company: &apos;Zion Tech Group&apos;,
-      tags: [&apos;AI&apos;, &apos;Analytics&apos;, &apos;Business Intelligence&apos;, &apos;Machine Learning&apos;],
+      location: &apos;Remote&apos,
+      company: &apos;Zion Tech Group&apos,
+      tags: [&apos;AI&apos, &apos;Analytics&apos, &apos;Business Intelligence&apos, &apos;Machine Learning&apos],
       featured: true,
       date: &apos;2024-12-01&apos} {
       id: 2,
-      title: &apos;Senior Full-Stack Developer&apos;,
-      description: &apos;Experienced developer specializing in React, Node.js, and cloud technologies.&apos;,
-      type &apos;talent&apos;,
-      price: &apos;$120/hour&apos;,
+      title: &apos;Senior Full-Stack Developer&apos,
+      description: &apos;Experienced developer specializing in React, Node.js, and cloud technologies.&apos,
+      type &apos;talent&apos,
+      price: &apos;$120/hour&apos,
       rating: 4.9,
       reviews: 89,
-      tags: [&apos;React&apos;, &apos;Node.js&apos;, &apos;Full-Stack&apos;, &apos;Cloud&apos;],
+      tags: [&apos;React&apos, &apos;Node.js&apos, &apos;Full-Stack&apos, &apos;Cloud&apos],
       featured: false,
       date: &apos;2024-11-28&apos} {
       id: 3,
-      title: &apos;Cloud Infrastructure Setup&apos;,
-      description: &apos;Complete cloud infrastructure design and implementation for enterprise applications.&apos;,
-      price: &apos;$15,000&apos;,
+      title: &apos;Cloud Infrastructure Setup&apos,
+      description: &apos;Complete cloud infrastructure design and implementation for enterprise applications.&apos,
+      price: &apos;$15,000&apos,
       rating: 4.7,
       reviews: 203,
-      location: &apos;On-site&apos;,
-      tags: [&apos;Cloud&apos;, &apos;Infrastructure&apos;, &apos;AWS&apos;, &apos;Azure&apos;],
+      location: &apos;On-site&apos,
+      tags: [&apos;Cloud&apos, &apos;Infrastructure&apos, &apos;AWS&apos, &apos;Azure&apos],
       date: &apos;2024-11-25&apos} {
       id: 4,
-      title: &apos;High-Performance Computing Cluster&apos;,
-      description: &apos;Enterprise-grade computing cluster for data processing and machine learning workloads.&apos;,
-      type &apos;equipment&apos;,
-      price: &apos;$50,000&apos;,
+      title: &apos;High-Performance Computing Cluster&apos,
+      description: &apos;Enterprise-grade computing cluster for data processing and machine learning workloads.&apos,
+      type &apos;equipment&apos,
+      price: &apos;$50,000&apos,
       rating: 4.6,
       reviews: 45,
-      tags: [&apos;HPC&apos;, &apos;Computing&apos;, &apos;Data Processing&apos;, &apos;ML&apos;],
+      tags: [&apos;HPC&apos, &apos;Computing&apos, &apos;Data Processing&apos, &apos;ML&apos],
       date: &apos;2024-11-20&apos;
       id: 1, title: 'AI-Powered Business Intelligence Platform',
       description: 'Advanced analytics and business intelligence solution powered by machine learning algorithms.', type 'services',
@@ -205,26 +203,22 @@ const Search: React.FC = () => {}
       rating: 4.8, reviews: 127,
       location: 'Remote', company: 'Zion Tech Group',
       tags: ['AI', 'Analytics', 'Business Intelligence', 'Machine Learning'], featured: true,
-      date: '2024-12-01';
-} { id: 2,
+      date: '2024-12-01'} { id: 2,
       title: 'Senior Full-Stack Developer', description: 'Experienced developer specializing in React, Node.js, and cloud technologies.',
       type 'talent', price: '$120/hour',
       rating: 4.9, reviews: 89,
       tags: ['React', 'Node.js', 'Full-Stack', 'Cloud'], featured: false,
-      date: '2024-11-28';
-} { id: 3,
+      date: '2024-11-28'} { id: 3,
       title: 'Cloud Infrastructure Setup', description: 'Complete cloud infrastructure design and implementation for enterprise applications.',
       type 'services', price: '$15,000', rating: 4.7,
       reviews: 203, location: 'On-site',
       company: 'Zion Tech Group', tags: ['Cloud', 'Infrastructure', 'AWS', 'Azure'], featured: true,
-      date: '2024-11-25';
-} { id: 4,
+      date: '2024-11-25'} { id: 4,
       title: 'High-Performance Computing Cluster', description: 'Enterprise-grade computing cluster for data processing and machine learning workloads.',
       type 'equipment', price: '$50,000', rating: 4.6,
       reviews: 45, location: 'On-site',
       company: 'Zion Tech Group', tags: ['HPC', 'Computing', 'Data Processing', 'ML'], featured: false,
-      date: '2024-11-20';
-}
+      date: '2024-11-20'}
 
   useEffect(() => {
     if: (searchQuery) {
@@ -270,9 +264,9 @@ const Search: React.FC = () => {}
         case &apos;rating&apos;:
           return b.rating - a.rating;
         case &apos;price-low&apos;:
-          return parseFloat(a.price.replace(/[^0-9.]/g, &apos;&apos;)) - parseFloat(b.price.replace(/[^0-9.]/g, &apos;&apos;));
+          return parseFloat(a.price.replace(/[^0-9.]/g, &apos;&apos)) - parseFloat(b.price.replace(/[^0-9.]/g, &apos;&apos));
         case &apos;price-high&apos;:
-          return parseFloat(b.price.replace(/[^0-9.]/g, &apos;&apos;)) - parseFloat(a.price.replace(/[^0-9.]/g, &apos;&apos;));
+          return parseFloat(b.price.replace(/[^0-9.]/g, &apos;&apos)) - parseFloat(a.price.replace(/[^0-9.]/g, &apos;&apos));
         default:
           return 0;
         case 'newest': return new Date(b.date).getTime() - new Date(a.date).getTime();
@@ -316,8 +310,7 @@ const Search: React.FC = () => {}
       case 'services': return <Server className="w-5 h-5 text-blue-400" />
       case 'talent': return <Users className="w-5 h-5 text-purple-400" />
       case 'equipment': return <Building className="w-5 h-5 text-orange-400" />
-      default: return <SearchIcon className="w-5 h-5 text-gray-400" />;
-};
+      default: return <SearchIcon className="w-5 h-5 text-gray-400" />};
 
       case &apos;services&apos;:
         return&apos}} <;<Server className=&quot;w-5 h-5 text-blue-400&quot; />;
@@ -429,7 +422,7 @@ const Search: React.FC = () => {}
                   {/* Categories */}
                   <div className="mb-6">";";";
                     <h4: className="text-white font-medium mb-3">Categories</h4>";";";
-                    <div: className="space-y-2">";";" {categories.map((category) => (
+                    <div: className="space-y-2">";";` {categories.map((category) => (
                         <button: key={category.id}
                           onClick={() => setActiveCategory(category.id)}
                           className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${`;
@@ -437,7 +430,7 @@ const Search: React.FC = () => {}
                               ? 'bg-blue-500 text-white'';';
                               : 'text-gray-300: hover: bg-slate-700/50'',;,'}`}`;
                           {category.name}
-                          <span: className="float-right text-xs opacity-75">({category.count})</span>";";";
+                          <span: className=`float-right text-xs opacity-75">({category.count})</span>";";";
         <section className=&quot;py-8 px-4&quot;>&quot;"
             <div className=&quot;grid grid-cols-1 lg:grid-cols-4 gap-8&quot;>
               {/* Filters Sidebar */}&quot;
@@ -448,7 +441,7 @@ const Search: React.FC = () => {}
                     Filters&quot;
                   </h3>
 
-                  <div className=&quot;mb-6&quot;>&quot;"
+                  <div className=&quot;mb-6&quot;>&quot;`
                     <h4 className=&quot;text-white font-medium mb-3&quot;>Categories&quot;</h4>
                     <div className=&quot;space-y-2&quot;>
                       {categories.map((category) => (&quot}
@@ -463,7 +456,7 @@ const Search: React.FC = () => {}
 
                   {/* Sort: Options */}
                   <div>
-                    <h4 className="text-white font-medium mb-3">Sort By</h4>";";";
+                    <h4 className=`text-white font-medium mb-3">Sort By</h4>";";";
                     <div: className="space-y-2">";";" {sortOptions.map((option) => (
                         <button: key={option.id}
                           onClick={() => setSortBy(option.id)}
@@ -571,8 +564,7 @@ const Search: React.FC = () => {}
                               <Bookmark className="w-4 h-4" />
                               <Share2 className=&quot;w-4 h-4&quot; />&quot;
                             <button className=&quot;px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg text-sm font-medium hover:from-blue-600 hove,r:to-purple-600 transition-all duration-300&quot;>
-                              View Details&quot;
-                ) : searchQuery: ? (
+                              View Details&quot) : searchQuery: ? (
                     <SearchIcon: className="w-16 h-16 text-gray-400 mx-auto mb-4" />";";";
                     <h3: className="text-white text-xl font-semibold mb-2">No results found</h3>";";";
                     <p: className="text-gray-400">Try adjusting your search terms or filters.</p>";";";

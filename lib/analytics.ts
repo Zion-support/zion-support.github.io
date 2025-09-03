@@ -32,8 +32,7 @@ export const measurePerformance = () => {'
         performance.getEntriesByName('first-contentful-paint')[0]?.startTime ||
         0};
   }
-  return null;
-};
+  return null};
 
 // Web Vitals tracking
 interface WebVitalMetric {
@@ -41,8 +40,7 @@ interface WebVitalMetric {
   valu,
     e: number;
   i,
-    d: string;
-}
+    d: string}
 
 export const trackWebVitals = (metric: WebVitalMetric) => {'
   if (typeof window !== 'undefined' && window.gtag) {'
@@ -62,7 +60,6 @@ declare global {
       command: string,
       targetId: string,
       config?: Record<string, unknown>
-    ) => void;
-  }
+    ) => void}
 }
 '
