@@ -353,7 +353,7 @@ import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
 import React from 'react';
 import Head from 'next/head';
 import { Header } from '../src/components/Header';
-import Footer from '../src/components/Footer';
+import Footer from '../components/Footer';
 import { Calendar, User, ArrowRight, Tag, Search } from 'lucide-react';
 >>>>>>> main
 

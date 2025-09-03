@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import { Play, Calendar, Users, Zap, Brain, Cloud, Shield, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
 const Demo = () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Navigation from '../../src/components/Navigation';
-import Footer from '../../src/components/Footer';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 import { Cloud, Server, GitBranch, Zap, CheckCircle, ArrowRight, Users, Globe, Database, Network, Phone, Mail, Settings, Monitor } from 'lucide-react';
 
 const CloudDevOps = () => {

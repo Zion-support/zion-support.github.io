@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Navigation from '../../src/components/Navigation';
-import Footer from '../../src/components/Footer';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, Users, Globe, Zap, Database, Network, Phone, Mail } from 'lucide-react';
 
 const Cybersecurity = () => {
