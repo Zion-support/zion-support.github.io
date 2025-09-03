@@ -1,3 +1,1 @@
-export: /* empty */ {}
-;
-export /* empty */ {}
+export const serviceVariants = {};
