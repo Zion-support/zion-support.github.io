@@ -1,0 +1,104 @@
+{
+  "timestamp": "2025-09-02T21:14:45.120Z",
+  "type": "comprehensive-automation-summary",
+  "automationResults": {
+    "total": 4,
+    "successful": 3,
+    "failed": 1,
+    "results": [
+      {
+        "name": "Error Fixer",
+        "path": "scripts/automation/error-fixer.cjs",
+        "success": false,
+        "error": "Command failed: node scripts/automation/error-fixer.cjs\n/workspace/scripts/automation/error-fixer.cjs:112\n    const report = {;\n                    ^\n\nSyntaxError: Unexpected token ';'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"},
+      {
+        "name": "Performance Optimizer",
+        "path": "scripts/automation/performance-optimizer.cjs",
+        "success": true,
+        "output": "[2025-09-02T21:14:44.487Z] 🚀 Starting Performance Optimizer\n[2025-09-02T21:14:44.489Z] 🖼️ Optimizing images...\n[2025-09-02T21:14:44.490Z] ✅ Found 0 images to optimize\n[2025-09-02T21:14:44.490Z] 💻 Optimizing code...\n[2025-09-02T21:14:44.566Z] 🎉 Optimized 0 files, removed 0 console.log statements\n[2025-09-02T21:14:44.566Z] 📦 Analyzing bundle size...\n[2025-09-02T21:14:44.652Z] ⚠️ Build failed, skipping bundle analysis: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n\n[2025-09-02T21:14:44.652Z] 📊 Report generated: /workspace/automation-reports/performance-optimizer-report-2025-09-02T21-14-44-652Z.json\n[2025-09-02T21:14:44.652Z] ✅ Performance Optimizer completed successfully\n"},
+      {
+        "name": "Test Runner",
+        "path": "scripts/automation/test-runner.cjs",
+        "success": true,
+        "output": "[2025-09-02T21:14:44.673Z] 🚀 Starting Test Runner\n[2025-09-02T21:14:44.675Z] 🔍 Running lint check...\n[2025-09-02T21:14:44.753Z] ⚠️ Lint check failed: Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n\n[2025-09-02T21:14:44.753Z] 🔍 Running TypeScript type check...\n[2025-09-02T21:14:44.829Z] ⚠️ Type check failed: Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: tsc: not found\n\n[2025-09-02T21:14:44.829Z] 🧪 Running tests...\n[2025-09-02T21:14:44.904Z] ⚠️ Tests failed: Command failed: npm run test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n\n[2025-09-02T21:14:44.904Z] 🏗️ Running build...\n[2025-09-02T21:14:44.979Z] ❌ Build failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n\n[2025-09-02T21:14:44.980Z] 🔍 Checking file integrity...\n[2025-09-02T21:14:45.018Z] 📊 File integrity check: 2010 files checked, 0 corrupted, 2 issues found\n[2025-09-02T21: 14:45.018Z] 📊 Report generated: /workspace/automation-reports/test-runner-report-2025-09-02T21-14-45-018Z.json\n[2025-09-02T21:14:45.018Z] ⚠️ Some tests failed - check the report for details\n"},
+      {
+        "name": "Security Auditor",
+        "path": "scripts/automation/security-auditor.cjs",
+        "success": true,
+        "output": "[2025-09-02T21:14:45.035Z] 🚀 Starting Security Auditor\n[2025-09-02T21:14:45.038Z] 🔒 Starting security audit...\n[2025-09-02T21:14:45.102Z] 📊 Security audit: 2010 files checked, 17 security issues found\n[2025-09-02T21:14:45.102Z] 📊 Report generated: /workspace/automation-reports/security-auditor-report-2025-09-02T21-14-45-102Z.json\n[2025-09-02T21:14:45.102Z] ⚠️ Security audit found 17 issues\n[2025-09-02T21:14:45.102Z]    High: 0, Medium: 13, Low: 4\n"}
+    ]
+},
+  "reports": {
+    "total": 15,
+    "types": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "error-fixer",
+      "performance-optimizer",
+      "performance-optimizer",
+      "security-auditor",
+      "security-auditor",
+      "test-runner",
+      "test-runner"
+    ],
+    "summary": [
+      {
+        "timestamp": "2025-09-02T19:06:25.613Z",
+        "success": false},
+      {
+        "timestamp": "2025-09-01T12:00:06.678Z",
+        "success": false},
+      {
+        "success": false},
+      {
+        "timestamp": "2025-09-02T21:03:59.556Z",
+        "success": false},
+      {
+        "timestamp": "2025-08-29T23:03:40.520Z",
+        "success": false},
+      {
+        "timestamp": "2025-08-30T05:13:57.876Z",
+        "success": false},
+      {
+        "timestamp": "2025-09-02T19:07:40.695Z",
+        "success": false},
+      {
+        "timestamp": "2025-09-01T12:00:00.517Z",
+        "success": false},
+      {
+        "type": "error-fixer",
+        "timestamp": "2025-09-02T21:06:25.684Z",
+        "success": true},
+      {
+        "type": "performance-optimizer",
+        "timestamp": "2025-09-02T21:07:35.015Z",
+        "success": true},
+      {
+        "type": "performance-optimizer",
+        "timestamp": "2025-09-02T21:14:44.652Z",
+        "success": true},
+      {
+        "type": "security-auditor",
+        "timestamp": "2025-09-02T21:14:42.973Z",
+        "success": false},
+      {
+        "type": "security-auditor",
+        "timestamp": "2025-09-02T21:14:45.102Z",
+        "success": false},
+      {
+        "type": "test-runner",
+        "timestamp": "2025-09-02T21:13:28.561Z",
+        "success": false},
+      {
+        "type": "test-runner",
+        "timestamp": "2025-09-02T21:14:45.018Z",
+        "success": false}
+    ]
+},
+  "overallSuccess": false}

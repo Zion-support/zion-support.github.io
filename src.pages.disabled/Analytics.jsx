@@ -1,3 +1,1 @@
-:src.pages.disabled/Analytics.jsx;
-import React  from 'react;export default function Analytics () {';
-import React  from 'react;export default function Analytics () {'''";
+:src.pages.disabled/Analytics.jsx "export default function Analytics () { export default function Analytics () {""""

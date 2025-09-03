@@ -11,75 +11,69 @@
     "fileCount": 2903,
     "dependencyStatus": "unknown",
     "securityStatus": "vulnerable",
-    "performanceStatus": "poor"
-  },
+    "performanceStatus": "poor";
+},
   "automationsExecuted": 5,
   "results": [
     {
       "automation": "enhanced-error-fixer",
       "status": "failed",
       "error": "spawnSync /bin/sh ETIMEDOUT",
-      "timestamp": "2025-09-02T15:44:41.681Z"
-    },
+      "timestamp": "2025-09-02T15: 44:41.681Z"},
     {
       "automation": "console-error-fixer",
       "status": "success",
       "executionTime": 320,
       "result": "[CONSOLE-ERROR-FIXER] Starting Console Error Fixer...\n[CONSOLE-ERROR-FIXER] Fixing console errors...\n[CONSOLE-ERROR-FIXER] Fixing runtime errors...\n[CONSOLE-ERROR-FIXER] Fixed runtime errors in src/services/auth.ts\n[CONSOLE-ERROR-FIXER] Console Error Fixer completed. Fixed 1 issues.\n",
-      "timestamp": "2025-09-02T15:44:42.002Z"
-    },
+      "timestamp": "2025-09-02T15: 44:42.002Z"},
     {
       "automation": "code-quality-automation",
       "status": "failed",
       "error": "spawnSync /bin/sh ETIMEDOUT",
-      "timestamp": "2025-09-02T15:49:42.090Z"
-    },
+      "timestamp": "2025-09-02T15: 49:42.090Z"},
     {
       "automation": "security-audit",
       "status": "failed",
       "error": "Command failed: node ./scripts/automation/security-audit.cjs\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
-      "timestamp": "2025-09-02T15:54:40.366Z"
-    },
+      "timestamp": "2025-09-02T15: 54:40.366Z"},
     {
       "automation": "performance-monitor",
       "status": "failed",
       "error": "spawnSync /bin/sh ETIMEDOUT",
-      "timestamp": "2025-09-02T15:59:40.428Z"
-    }
+      "timestamp": "2025-09-02T15: 59:40.428Z"}
   ],
   "insights": [
     {
       "type": "build",
       "severity": "high",
       "message": "Project build is failing",
-      "recommendation": "Investigate build errors and run enhanced-error-fixer"
-    },
+      "recommendation": "Investigate build errors and run enhanced-error-fixer";
+},
     {
       "type": "testing",
       "severity": "medium",
       "message": "Project tests are failing",
-      "recommendation": "Run code-quality-automation to improve test coverage and fix failing tests"
-    },
+      "recommendation": "Run code-quality-automation to improve test coverage and fix failing tests";
+},
     {
       "type": "performance",
       "severity": "medium",
       "message": "Project has performance issues",
-      "recommendation": "Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks"
-    },
+      "recommendation": "Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks";
+},
     {
       "type": "automation",
       "severity": "medium",
       "message": "Automation success rate is 20.0%",
-      "recommendation": "Investigate failing automations and improve error handling"
-    },
+      "recommendation": "Investigate failing automations and improve error handling";
+},
     {
       "type": "maintenance",
       "severity": "low",
       "message": "Project has 2903 files",
-      "recommendation": "Consider code splitting and modularization to improve maintainability"
-    }
+      "recommendation": "Consider code splitting and modularization to improve maintainability";
+}
   ],
   "summary": "Intelligent automation orchestrator completed - Executed 5 automations",
   "status": "completed",
-  "nextRun": "2025-09-02T16:04:40.429Z"
-}
+  "nextRun": "2025-09-02T16: 04:40.429Z"}

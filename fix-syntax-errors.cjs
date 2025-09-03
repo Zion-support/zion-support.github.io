@@ -1,155 +1,155 @@
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node;
 
-// Function to fix common syntax errors in files
+<<<<<<< HEAD
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix common patterns
-    const fixes = [
-      // Fix malformed imports
-      {
-        pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]/g,
-        replacement: "import { $1 } from '$2'\nimport { $3 } from '$4'"
-      },
-      // Fix missing semicolons after imports
-      {
-        pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*(?=\s*import|\s*const|\s*function|\s*export)/g,
-        replacement: "import { $1 } from '$2';\n"
-      },
-      // Fix malformed JSX attributes
-      {
-        pattern: /className\s*=\s*['"]([^'"]*)['"]\s*['"]([^'"]*)['"]/g,
-        replacement: "className='$1 $2'"
-      },
-      // Fix malformed function declarations
-      {
-        pattern: /const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[/g,
-        replacement: "const $1: React.FC = () => {\n  const $2 = ["
-      },
-      // Fix malformed array syntax
-      {
-        pattern: /\[\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*['"]([^'"]*)['"]\s*description:\s*['"]([^'"]*)['"]\s*}/g,
-        replacement: "[{ icon: $1, title: '$2', description: '$4' }"
-      },
-      // Fix malformed return statements
-      {
-        pattern: /return\s*\(\s*['"]([^'"]*)['"]\s*<div/g,
-        replacement: "return (\n    <div"
-      },
-      // Fix malformed JSX closing tags
-      {
-        pattern: /<\/div>\s*\)\s*}\s*;\s*export\s+default/g,
-        replacement: "    </div>\n  );\n};\n\nexport default"
-      },
-      // Fix malformed quotes in strings
-      {
-        pattern: /['"]([^'"]*)['"]\s*['"]([^'"]*)['"]/g,
-        replacement: "'$1 $2'"
-      },
-      // Fix malformed object properties
-      {
-        pattern: /{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*['"]([^'"]*)['"]\s*description:\s*['"]([^'"]*)['"]\s*}/g,
-        replacement: "{ icon: $1, title: '$2', description: '$4' }"
-      },
-      // Fix malformed function calls
-      {
-        pattern: /(\w+)\s*\(\s*\)\s*<div/g,
-        replacement: "$1() {\n  return (\n    <div"
-      },
-      // Fix malformed export statements
-      {
-        pattern: /export\s+default\s+(\w+)\s*;\s*['"]([^'"]*)['"]/g,
-        replacement: "export default $1;"
-      }
-    ];
-
-    // Apply fixes
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
-
-    // If the file is severely corrupted, create a minimal valid component
-    if (content.includes('Parsing error') || content.length < 100) {
-      const fileName = path.basename(filePath, path.extname(filePath));
-      const componentName = fileName.replace(/[-_]/g, '').replace(/\b\w/g, l => l.toUpperCase());
-      
-      content = `import React from 'react';
-import { SEO } from '@/components/SEO';
-
-const ${componentName}: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="${componentName} - Zion Tech Group"
-        description="Professional ${componentName} services by Zion Tech Group"
-        keywords="${componentName.toLowerCase()}, technology, services"
-      />
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">${componentName}</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Professional ${componentName} services to help your business grow.
-          </p>
-          <div className="flex justify-center">
-            <a 
-              href="/contact" 
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
-            >
-              Get Started
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default ${componentName};`;
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
     
-    return false;
+    // Fix common syntax errors
+    content = content
+      // Fix malformed quotes
+      .replace(/''/g, '\n')
+      .replace(/';'/g, ';\n')
+      .replace(/';/g, ';\n')
+      .replace(/`'/g, '`\n')
+      .replace(/'`/g, '\n`')
+      // Fix missing newlines after imports
+      .replace(/';import/g, ';\nimport')
+      .replace(/';const/g, ';\nconst')
+      .replace(/';interface/g, ';\ninterface')
+      .replace(/';export/g, ';\nexport')
+      // Fix malformed JSX
+      .replace(/className="([^"]*)"([^"]*)"([^"]*)"/g, 'className="$1$2$3"')
+      .replace(/className={`([^`]*)`([^`]*)`([^`]*)`}/g, 'className={`$1$2$3`}')
+      // Fix malformed template literals
+      .replace(/`([^`]*)`([^`]*)`([^`]*)`/g, '`$1$2$3`')
+      // Fix malformed function calls
+      .replace(/\(([^)]*)\);([^;]*);/g, '($1);\n$2;')
+      // Clean up multiple newlines
+      .replace(/\n{3,}/g, '\n\n')
+      // Fix malformed object properties
+      .replace(/(\w+):\s*'([^']*)',\s*'([^']*)'/g, '$1: \'$2\',\n    $1: \'$3\'')
+      .replace(/(\w+):\s*'([^']*)',\s*(\w+):/g, '$1: \'$2\',\n    $3:');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
   }
 }
 
-// Function to recursively find and fix files
-function fixFilesInDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
+// Get all TypeScript/JavaScript files
+const componentsDir = 'components';
+const files = [];
 
-  files.forEach(file => {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      fixedCount += fixFilesInDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.js')) {
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++;
-      }
+function getAllFiles(dir) {
+  const items = fs.readdirSync(dir);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory()) {
+      getAllFiles(fullPath);
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
+      files.push(fullPath);
     }
-  });
-
-  return fixedCount;
+  }
 }
 
-// Main execution
-console.log('Starting syntax error fixes...');
-const fixedCount = fixFilesInDirectory('./src');
-console.log(`Fixed ${fixedCount} files.`);
+getAllFiles(componentsDir);
+
+// Fix all files
+files.forEach(fixSyntaxErrors);
+
+console.log(`Fixed ${files.length} files`);
+=======
+const fs = require("fs");
+const path = require("path");
+// Function to fix common syntax errors;
+function fixSyntaxErrors(content) {
+  // Remove corrupted content patterns;
+  let fixed = content;
+    // Remove malformed import statements;
+    .replace(/import React \{ useState \} from "react";\s*import \{ motion\s*\} from "framer-motion"; import \{ [^}]+ \} from "lucide-react";/g, "import React, { useState } from "react";\nimport { motion  } from "framer-motion";\nimport { Shield, TrendingUp, Brain, CheckCircle, Star, ArrowRight, Users, Target, Clock, DollarSign, Database, Zap, Globe, Activity, AlertTriangle, Eye, Lock, Download, Upload, RefreshCw, Settings, Play, Gauge, BarChart3, Cpu, Factory, Truck, HardHat, Thermometer, GaugeIcon, AlertCircle, CheckSquare, XCircle, ShieldCheck, Fingerprint, Search, Bell, FileText, CreditCard, Building, ShoppingCart  } from "lucide-react";");
+    ;
+    // Fix malformed JSX attributes;
+    .replace(/className="([^"]*)"/g, "className="$1"");
+    .replace(/className="([^"]*)"/g, "className="$1"");
+    ;
+    // Fix malformed object properties;
+    .replace(/title: "([^"]*)" description:;/g, "title: "$1",\n    description:");
+    .replace(/icon: ([^,}]+) color: "([^"]*)",/g, "icon: $1,\n    color: "$2",");
+    ;
+    // Fix malformed array syntax;
+    .replace(/\[
+  \s*\{/g, "[\n  {");
+    .replace(/,\s*\};\s*\]/g, "\n  }\n];");
+    ;
+    // Fix malformed function calls;
+    .replace(/return\s*\(\s*;/g, "return (\n    ");
+    .replace(/return\s*\(\s*<div/g, "return (\n    <div");
+    ;
+    // Remove corrupted patterns;
+    .replace(/; return\(\); <div[^>]*>/g, "return (\n    <div");
+    .replace(/; export default[^]*;.*$/g, ");\n\nexport default ComponentName;");
+    ;
+    // Fix malformed template literals;
+    .replace(/`\s*\{\s*activeTab === "([^"]+)" && \(\s*`/g, "{activeTab === "$1" && (");
+    .replace(/`\s*\}\s*\{\s*activeTab === "([^"]+)" && \(/g, "}\n{activeTab === "$1" && (");
+    ;
+    // Remove duplicate content;
+    .replace(/(import React[^]+;[\s\S]*?export default[^]+)\1+/g, "$1");
+    ;
+    // Clean up extra semicolons and commas;
+    .replace(/;+$/gm, ";");
+    .replace(/,\s*}/g, "\n  }");
+    .replace(/,\s*]/g, "\n]");
+    ;
+    // Fix malformed JSX closing tags;
+    .replace(/<\/div>\s*;\s*\)\s*;\s*}/g, "</div>\n  );\n};");
+    ;
+    // Remove corrupted patterns at the end;
+    .replace(/;,"\}\);,"\}\)\s*$/g, ");\n\nexport default ComponentName;");
+    .replace(/>>>>>>> pr-\d+.*$/g, "");
+    .replace(/;,"\}\);,"\}\)\s*$/g, ");\n\nexport default ComponentName;");
+  return fixed;,
+}
+;
+// Function to process a single file;
+function processFile(filePath) {
+  try {
+  const content = fs.readFileSync(filePath, "utf8");
+    // Skip if file is too corrupted;
+    if (content.length < 100 || content.includes(">>>>>>> pr-")) {
+  console.log(`Skipping corrupted file: ${filePath}`);
+      return;,
+}
+    ;
+    const fixed = fixSyntaxErrors(content);
+    if (fixed !== content) {
+  fs.writeFileSync(filePath, fixed);
+      console.log(`Fixed: ${filePath}`);,
+}
+  } catch (error) {
+  console.error(`Error processing ${filePath}:`, error.message);,
+}
+}
+;
+// Function to recursively process directory;
+function processDirectory(dirPath) {
+  const items = fs.readdirSync(dirPath);
+  for (const item of items) {
+  const fullPath = path.join(dirPath, item);
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory()) {
+  processDirectory(fullPath);,
+} else if (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js")) {
+  processFile(fullPath);,
+}
+  }
+}
+;
+// Main execution;
+console.log("Starting syntax error fixes...");
+processDirectory("./src");
+console.log("Syntax error fixes completed!')
+>>>>>>> main

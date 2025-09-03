@@ -101,9 +101,8 @@ class ComprehensiveMergeResolver {
         } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
           try {
             const content = fs.readFileSync(itemPath, 'utf8');
-            if (content.includes('<<<<<<< HEAD') || 
-                content.includes('>>>>>>> ') || 
-                content.includes('======= ')) {
+            if (content.includes('') || 
+                content.includes('                content.includes(' ')) {
               conflictFiles.push(itemPath);
             }
           } catch (error) {
@@ -127,17 +126,15 @@ class ComprehensiveMergeResolver {
       
       // Remove conflict markers and keep HEAD version
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> .*/g,
-        (match) => {
-          const headContent = match.split('=======')[0].replace('<<<<<<< HEAD\n', '');
+        /[\s\S]*?[\s\S]*?        (match) => {
+          const headContent = match.split('')[0].replace('\n', '');
           return headContent;
         }
       );
       
       // Also handle simpler conflict patterns
-      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n/g, '');
-      resolvedContent = resolvedContent.replace(/=======[\s\S]*?>>>>>>> .*/g, '');
-      
+      resolvedContent = resolvedContent.replace(/\n/g, '');
+      resolvedContent = resolvedContent.replace(/[\s\S]*?      
       fs.writeFileSync(filePath, resolvedContent);
       this.conflictsResolved++;
       this.results.conflictsResolved++;

@@ -1,195 +1,193 @@
 module.exports = {
-  apps: [;
-    // Main application{
-      name:,
-  zion-app',
-      script: 'npm,
-      args:,
-  start',
-      cwd: './,
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart:,
-  1G',
-      env: {
-        NODE_ENV:;
-  'production,
-        PORT: 3000},
-      env_production: {
-        NODE_ENV:;
-  'production',
-        PORT: 3000},
-      error_file:,
-  ./logs/app-error.log',
-      out_file: './logs/app-out.log,
-      log_file:;
-  './logs/app-combined.log',
-      time: true,
-      log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z,
-      merge_logs: true,
-      max_restarts: 10,
-      min_uptime:;
-  '10s',
-      restart_delay: 4000,
-      kill_timeout: 5000,
-      wait_ready: true,
-      listen_timeout: 8000,
-      health_check_grace_period: 30000,
-      health_check_fatal_exceptions: true,
-      cron_restart:,
-  0 2 * * *',
-      pid_file: './logs/app.pid,
-      pmx: true,
-      max_unstable_restarts: 5,
-      unstable_restart_delay: 10000},
-    // Core automation processes{
-      name:,
-  error-monitor',
-      script: './scripts/error-monitor.cjs,
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart:,
-  500M',
-      env: {
-        NODE_ENV:;
-  'production      },
-      error_file:,
-  ./logs/error-monitor-error.log',
-      out_file: './logs/error-monitor-out.log,
-      log_file:;
-  './logs/error-monitor-combined.log',
-      time: true,
-      log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z,
-      merge_logs: true,
-      max_restarts: 5,
-      min_uptime:;
-  '5s',
-      restart_delay: 2000,
-      cron_restart:,
-  */5 * * * *'    },
+  apps: [
+    // AI-Powered Code Analyzer
     {
-      name: 'syntax-fixer,
-      script:;
-  './scripts/syntax-fixer.cjs',
+      name: 'ai-code-analyzer',
+      script: './scripts/automation/ai-code-analyzer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart:,
-  500M',
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV:;
-  'production      },
-      error_file:,
-  ./logs/syntax-fixer-error.log',
-      out_file: './logs/syntax-fixer-out.log,
-      log_file:;
-  './logs/syntax-fixer-combined.log',
-      time: true,
-      log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z,
+        NODE_ENV: 'production',
+        AI_ANALYSIS_MODE: 'true'
+      },
+      log_file: './logs/ai-code-analyzer.log',
+      error_file: './logs/ai-code-analyzer-error.log',
+      out_file: './logs/ai-code-analyzer-out.log',
       merge_logs: true,
-      max_restarts: 3,
-      min_uptime:;
-  '5s',
-      restart_delay: 2000,
-      cron_restart:,
-  */10 * * * *'    },
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Smart Performance Optimizer
     {
-      name: 'build-health-check,
-      script:;
-  './scripts/build-health-check.cjs',
+      name: 'smart-performance-optimizer',
+      script: './scripts/automation/smart-performance-optimizer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart:,
-  300M',
+      max_memory_restart: '1G',
       env: {
-        NODE_ENV:;
-  'production      },
-      error_file:,
-  ./logs/build-health-error.log',
-      out_file: './logs/build-health-out.log,
-      log_file:;
-  './logs/build-health-combined.log',
-      time: true,
-      log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z,
+        NODE_ENV: 'production',
+        PERFORMANCE_OPTIMIZATION_MODE: 'true'
+      },
+      log_file: './logs/smart-performance-optimizer.log',
+      error_file: './logs/smart-performance-optimizer-error.log',
+      out_file: './logs/smart-performance-optimizer-out.log',
       merge_logs: true,
-      max_restarts: 5,
-      min_uptime:;
-  '5s',
-      restart_delay: 1000,
-      cron_restart:,
-  */15 * * * *'    },
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Intelligent Dependency Manager
     {
-      name: 'merge-conflict-resolver,
-      script:;
-  './scripts/merge-conflict-resolver.cjs',
+      name: 'intelligent-dependency-manager',
+      script: './scripts/automation/intelligent-dependency-manager.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart:,
-  500M',
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV:;
-  'production      },
-      error_file:,
-  ./logs/merge-resolver-error.log',
-      out_file: './logs/merge-resolver-out.log,
-      log_file:;
-  './logs/merge-resolver-combined.log',
-      time: true,
-      log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z,
+        NODE_ENV: 'production',
+        DEPENDENCY_MANAGEMENT_MODE: 'true'
+      },
+      log_file: './logs/intelligent-dependency-manager.log',
+      error_file: './logs/intelligent-dependency-manager-error.log',
+      out_file: './logs/intelligent-dependency-manager-out.log',
       merge_logs: true,
-      max_restarts: 3,
-      min_uptime:;
-  '10s',
-      restart_delay: 5000,
-      cron_restart:,
-  */30 * * * *'    },
-    // Enhanced automation processes{
-      name: 'ai-code-analyzer,
-      script:;
-  './scripts/automation/ai-code-analyzer.cjs',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Project Health Monitor
+    {
+      name: 'project-health-monitor',
+      script: './scripts/automation/project-health-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart:,
-  512M',
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV:;
-  'production,
-        AI_ANALYSIS_MODE:,
-  true'},
-      cron_restart: '0 */2 * * *,
-      log_file:,
-  ./logs/ai-code-analyzer.log',
-      error_file: './logs/ai-code-analyzer-error.log,
-      out_file:;
-  './logs/ai-code-analyzer-out.log',
+        NODE_ENV: 'production',
+        HEALTH_MONITORING_MODE: 'true'
+      },
+      log_file: './logs/project-health-monitor.log',
+      error_file: './logs/project-health-monitor-error.log',
+      out_file: './logs/project-health-monitor-out.log',
       merge_logs: true,
-      log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z}  ],
-  deploy: {
-    production: {
-      user:,
-  ubuntu',
-      host: 'localhost,
-      ref:,
-  origin/main',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git,
-      path:,
-  /workspace,pre-deploy-local': ',
-,
-  post-deploy;
-  ': 'npm install && npm run build && pm2 reload ecosystem.working.js --env production,
-,
-  pre-setup;
-  ': '}
-  }
-}
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Enhanced Security Automation
+    {
+      name: 'enhanced-security-automation',
+      script: './scripts/automation/enhanced-security-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        SECURITY_MODE: 'true'
+      },
+      log_file: './logs/enhanced-security-automation.log',
+      error_file: './logs/enhanced-security-automation-error.log',
+      out_file: './logs/enhanced-security-automation-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Enhanced Testing Automation
+    {
+      name: 'enhanced-testing-automation',
+      script: './scripts/automation/enhanced-testing-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        TESTING_MODE: 'true'
+      },
+      log_file: './logs/enhanced-testing-automation.log',
+      error_file: './logs/enhanced-testing-automation-error.log',
+      out_file: './logs/enhanced-testing-automation-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // PM2 Sync Automation
+    {
+      name: 'pm2-sync-automation',
+      script: './scripts/automation/pm2-sync-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        SYNC_MODE: 'true'
+      },
+      log_file: './logs/pm2-sync-automation.log',
+      error_file: './logs/pm2-sync-automation-error.log',
+      out_file: './logs/pm2-sync-automation-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Link Checker Automation
+    {
+      name: 'link-checker-automation',
+      script: './scripts/automation/link-checker-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        LINK_CHECKING_MODE: 'true'
+      },
+      log_file: './logs/link-checker-automation.log',
+      error_file: './logs/link-checker-automation-error.log',
+      out_file: './logs/link-checker-automation-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // TypeScript Syntax Fixer
+    {
+      name: 'typescript-syntax-fixer',
+      script: './scripts/automation/typescript-syntax-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+        SYNTAX_FIXING_MODE: 'true'
+      },
+      log_file: './logs/typescript-syntax-fixer.log',
+      error_file: './logs/typescript-syntax-fixer-error.log',
+      out_file: './logs/typescript-syntax-fixer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Console Error Fixer
+    {
+      name: 'console-error-fixer',
+      script: './scripts/automation/console-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+        ERROR_FIXING_MODE: 'true'
+      },
+      log_file: './logs/console-error-fixer.log',
+      error_file: './logs/console-error-fixer-error.log',
+      out_file: './logs/console-error-fixer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    }
+  ]
+};

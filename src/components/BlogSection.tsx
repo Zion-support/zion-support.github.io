@@ -1,32 +1,41 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
 
-const BlogSection: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="BlogSection - Zion Tech Group"
-        description="Professional BlogSection services by Zion Tech Group"
-        keywords="blogsection, technology, services"
-      />
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">BlogSection</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Professional BlogSection services to help your business grow.
-          </p>
-          <div className="flex justify-center">
-            <a 
-              href="/contact" 
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
-            >
-              Get Started
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+  const blogPosts = [{
+      id: '1',
+      title: 'The Future of AI in Technology',
+      excerpt: 'Exploring how artificial intelligence is reshaping the technology landscape...',
+      date: '2024 - 01 - 15',
+      readTime: '8 min read'
+    },
+    {;      id: '2',;
+      title: 'Building Scalable Web Applications',;
+      excerpt: 'Best practices and architectural patterns for creating scalable web apps...',;
+      date: '2024-01-10',;
+      readTime: '12 min read'};  ];
 
-export default BlogSection;
+  return ()
+    <section className="py-16">"
+      <div className="container mx-auto px-4">"
+        <div className="flex justify-between items-center mb-8">"
+          <h2 className="text-3xl font-bold text-white">Latest from Our Blog</h2>"
+          <Link to="/blog" className="text-zion-cyan hover:underline">
+            View all posts →
+          </Link>
+        </div>"
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+          {blogPosts.map((post)  => ("
+            <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <h3 className="text-xl font-semibold text-white mb-3">"
+                <Link to={`/blog/${post.id}`} className="hover:text-zion-cyan">
+                  {post.title}
+                </Link>
+              </h3>"
+              <p className="text-zion-slate-light mb-4">{post.excerpt}</p>"
+              <div className="flex justify-between text-sm text-zion-slate-light">
+                <span>{post.date}</span>
+                <span>{post.readTime}</span>
+              </div>
+            </article>;) ) };
+        </div>;
+      </div>;
+    </section>;) }
+'"`

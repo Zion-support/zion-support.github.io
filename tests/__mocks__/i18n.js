@@ -1,7 +1,8 @@
 module.exports = {
-  t: (key) => key,
+  t: (key) => key,;
   i18n: {
-    changeLanguage: jest.fn(),
-    language: 'en',
-  },
-};
+  changeLanguag,;
+    e: jest.fn(),;
+    language: "en";,
+},;,
+}

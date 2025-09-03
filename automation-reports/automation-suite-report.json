@@ -1,125 +1,25 @@
 {
-  "timestamp": "2025-09-03T00:09:23.133Z",
-  "summary": {
-    "total": 8,
-    "successful": 4,
-    "failed": 4
-  },
-  "results": [
-    {
-      "command": "npm run lint:fix",
-      "description": "ESLint Fix",
-      "success": false,
-      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n`next lint` is deprecated and will be removed in Next.js 16.\nFor new projects, use create-next-app to choose your preferred linter.\nFor existing projects, migrate to the ESLint CLI:\nnpx @next/codemod@canary next-lint-to-eslint-cli .\n\nInvalid next.config.js options detected: \n    Expected 'image/avif' | 'image/webp', received 'image/webp,image/avif' at \"images.formats[0]\"\nSee more info here: https://nextjs.org/docs/messages/invalid-next-config\n"
     },
     {
-      "command": "npm run type-check",
-      "description": "TypeScript Type Check",
-      "success": false,
-      "error": "spawnSync /bin/sh ENOBUFS"
+      "name: Performance Analysis",
+      "success: true,
+      result": {
+        "issues: [
+          {
     },
     {
-      "command": "npm run test",
-      "description": "Test Suite",
-      "success": false,
-      "error": "spawnSync /bin/sh ENOBUFS"
+      "name: Security Audit",
+      "success: true,
+      result": {
+        "issues: [
+          {
     },
     {
-      "command": "npm run build",
-      "description": "Build Application",
-      "success": false,
-      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nInvalid next.config.js options detected: \n    Expected 'image/avif' | 'image/webp', received 'image/webp,image/avif' at \"images.formats[0]\"\nSee more info here: https://nextjs.org/docs/messages/invalid-next-config\n"
-    },
-    {
-      "name": "Error Detection",
-      "success": true,
-      "result": {
-        "errors": [],
-        "count": 0
-      }
-    },
-    {
-      "name": "Performance Analysis",
-      "success": true,
-      "result": {
-        "issues": [
+      "name: Code Quality Check",
+      "success: true,
+      result": {
+        "issues: [
           {
-            "file": "/workspace/src/components/PerformanceOptimizer.tsx",
-            "issue": "Potential N+1 query problem"
-          },
-          {
-            "file": "/workspace/src/components/SecurityHeaders.tsx",
-            "issue": "Potential N+1 query problem"
-          },
-          {
-            "file": "/workspace/src/components/disabled/AdvancedAICodeGenerator.js.jsx",
-            "issue": "Potential infinite re-render"
-          },
-          {
-            "file": "/workspace/src/pages/Checkout.jsx",
-            "issue": "Potential infinite re-render"
-          },
-          {
-            "file": "/workspace/src/pages/SavedTalentsPage.jsx",
-            "issue": "Potential infinite re-render"
-          }
-        ],
-        "count": 5
-      }
-    },
-    {
-      "name": "Security Audit",
-      "success": true,
-      "result": {
-        "issues": [
-          {
-            "file": "/workspace/src/components/SEO/SEOHead.tsx",
-            "issue": "Potential XSS vulnerability"
-          },
-          {
-            "file": "/workspace/src/components/seo/SEOHead.tsx",
-            "issue": "Potential XSS vulnerability"
-          },
-          {
-            "file": "/workspace/src/utils/helpers.js",
-            "issue": "Use of eval() detected"
-          }
-        ],
-        "count": 3
-      }
-    },
-    {
-      "name": "Code Quality Check",
-      "success": true,
-      "result": {
-        "issues": [
-          {
-            "file": "/workspace/src/components/AICodeGenerator.js.jsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/components/EnterpriseDashboard.js.jsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/components/MachineLearningDashboard.js.jsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/components/header/LanguageSelector.jsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/components/header/UserMenu.jsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/hooks/use-toast.js",
-            "issue": "Console.log in production code"
-          }
-        ],
-        "count": 6
-      }
     }
   ]
 }

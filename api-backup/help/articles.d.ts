@@ -1,3 +1,0 @@
-interface Req {
-  method?: string;
-   query?: { q?: string}

@@ -1,35 +1,26 @@
 {
-  "timestamp": "2025-09-02T22:04:34.291Z",
-  "environment": {
-    "issues": [
-      "Empty VITE_SENTRY_DSN in .env",
-      "Empty VITE_GA_MEASUREMENT_ID in .env"
+<<<<<<< HEAD
+  "timestamp": "2025-09-01T11:46:25.206Z",
+  "summary": "Security audit completed",
+  "status": "completed"
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-01T12:14:15.720Z",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "timestamp": "2025-09-01T13:36:52.431Z",
+=======
+  "timestamp": "2025-09-01T12:03:06.525Z",
+>>>>>>> origin/main
+>>>>>>> main
+  "summary": "Security audit completed",
+  "status": "completed"
+=======
     ],
-    "recommendations": []
-  },
-  "code": {
-    "issues": [
-      "Server-side env var in client code: /workspace/src/components/ErrorBoundary.jsx",
-      "Server-side env var in client code: /workspace/src/components/MobileExperienceEnhancer.tsx",
-      "Server-side env var in client code: /workspace/src/components/PerformanceMonitor.tsx",
-      "Server-side env var in client code: /workspace/src/components/error/ErrorBoundary.tsx",
-      "Unsanitized dangerouslySetInnerHTML in /workspace/src/components/seo/SEOEnhancer.tsx",
-      "Server-side env var in client code: /workspace/src/store/wishlistSlice.jsx",
-      "Use of eval() in /workspace/src/utils/helpers.js"
-    ],
-    "recommendations": []
-  },
-  "dependencies": {
-    "issues": [
-      "Potentially vulnerable package: axios"
-    ],
-    "recommendations": [
-      "Update axios to version < 0.21.1 or higher"
+    "recommendations: [
+      Update axios to version < 0.21.1 or higher"
     ]
-  },
-  "summary": {
-    "overall": "vulnerable",
-    "totalIssues": 10,
-    "riskLevel": "high"
-  }
+>>>>>>> main
+>>>>>>> main
 }

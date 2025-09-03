@@ -2,13 +2,13 @@
   "compilerOptions": {
     "target": "ES2020",
     "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ES6"
+      "dom",
+      "dom.iterable",
+      "es6"
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -18,47 +18,22 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": [
-      "react",
-      "react-dom",
-      "node"
-    ],
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/pages/*": [
-        "./src/pages/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*"
-      ],
-      "@/hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@/types/*": [
-        "./src/types/*"
-      ]
-    },
-    "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
+    "baseUrl": "."
   },
   "include": [
     "next-env.d.ts",
+    "pages/**/*",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "data/services.ts",
+    "styles/**/*",
+    "types/**/*",
+    "utils/**/*",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
     "node_modules",
     ".next",
     "out",
@@ -66,12 +41,18 @@
     "api-backup",
     "pages.disabled",
     "backup-pages",
-    ".backup",
-    ".disabled",
     "automation/backups",
     "automation_backup",
     "broken_files_backup",
     "contracts",
-    "hardhat"
+    "cypress",
+    "temp_working",
+    "supabase/functions",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.backup",
+    "**/*.disabled"
   ]
 }

@@ -2,66 +2,55 @@ import React from 'react';
 import Head from 'next/head';
 
 interface SEOProps {
-  title?: string;
-  description?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
+  title: string;
+  description: string;
   keywords?: string;
-  author?: string;
-  robots?: string;
+  image?: string;
+  url?: string;
+  type?: string;
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  description = 'Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation.',
-  canonical = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  keywords = 'AI services, IT solutions, micro SaaS, technology consulting, digital transformation, artificial intelligence, cloud computing, software development',
-  author = 'Zion Tech Group',
-  robots = 'index, follow'
+  title,
+  description,
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation, IT services, Zion Tech Group",
+  image = "https://ziontechgroup.com/og-image.png",
+  url = "https://ziontechgroup.com",
+  type = "website"
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-
+  
   return (
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content={robots} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={canonical} />
-      
-      {/* Open Graph Meta Tags */}
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonical} />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={image} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
       
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={url} />
+      <meta property="twitter:title" content={fullTitle} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={image} />
       
-      {/* Additional Meta Tags */}
-      <meta name="theme-color" content="#2563eb" />
-      <meta name="msapplication-TileColor" content="#2563eb" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      {/* Additional SEO */}
+      <meta name="theme-color" content="#3B82F6" />
+      <meta name="msapplication-TileColor" content="#3B82F6" />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />
       
       {/* Favicon */}
       <link rel="icon" href="/favicon.ico" />
@@ -80,25 +69,19 @@ const SEO: React.FC<SEOProps> = ({
             "name": "Zion Tech Group",
             "url": "https://ziontechgroup.com",
             "logo": "https://ziontechgroup.com/logo.png",
-            "description": description,
+            "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "364 E Main St STE 1008",
-              "addressLocality": "Middletown",
-              "addressRegion": "DE",
-              "postalCode": "19709",
-              "addressCountry": "US"
+              "addressCountry": "BR",
+              "addressLocality": "São Paulo"
             },
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "+1-302-464-0950",
               "contactType": "customer service",
-              "email": "contact@ziontechgroup.com"
+              "availableLanguage": ["English", "Portuguese"]
             },
             "sameAs": [
-              "https://linkedin.com/company/ziontechgroup",
-              "https://twitter.com/ziontechgroup",
-              "https://github.com/ziontechgroup"
+              "https://www.linkedin.com/company/zion-technologies"
             ]
           })
         }}
