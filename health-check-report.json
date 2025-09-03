@@ -1,84 +1,62 @@
 {
-  "timestamp": "2025-09-03T16:57:54.780Z",
+  "timestamp": "2025-09-03T21:30:05.200Z",
+  "status": "completed",
   "checks": [
     {
-      "name": "Node.js Version",
+      "name": "Package.json Validation",
       "status": "passed",
-      "message": "Node.js version v22.16.0 is supported",
-      "duration": 1,
-      "details": {
-        "version": "v22.16.0",
-        "majorVersion": 22
-      }
-    },
-    {
-      "name": "Package Configuration",
-      "status": "passed",
-      "message": "package.json is valid",
-      "duration": 0,
-      "details": {
+      "result": {
         "name": "ziontechgroup.com",
-        "version": "0.1.0",
-        "scriptsCount": 156
-      }
+        "version": "0.1.0"
+      },
+      "timestamp": "2025-09-03T21:30:05.201Z"
     },
     {
-      "name": "Dependencies",
+      "name": "Dependencies Check",
       "status": "passed",
-      "message": "All dependencies are installed correctly",
-      "duration": 408,
-      "details": {}
+      "result": {
+        "status": "dependencies_installed"
+      },
+      "timestamp": "2025-09-03T21:30:05.201Z"
     },
     {
-      "name": "Build System",
+      "name": "Build Directory Check",
       "status": "passed",
-      "message": "Build system configuration is complete",
-      "duration": 0,
-      "details": {
-        "hasNextConfig": true,
-        "hasTsConfig": true
-      }
+      "result": {
+        "status": "build_directory_exists"
+      },
+      "timestamp": "2025-09-03T21:30:05.201Z"
     },
     {
-      "name": "Source Files",
-      "status": "passed",
-      "message": "Source files found: 13 pages, 3 components",
-      "duration": 0,
-      "details": {
-        "pageCount": 13,
-        "componentCount": 3,
-        "hasPagesDir": true,
-        "hasComponentsDir": true
-      }
+      "name": "PM2 Process Check",
+      "status": "failed",
+      "error": "PM2 not available or no processes running",
+      "timestamp": "2025-09-03T21:30:05.476Z"
     },
     {
-      "name": "Git Repository",
+      "name": "Disk Space Check",
       "status": "passed",
-      "message": "Git repository on branch 'cursor/automate-test-fix-improve-and-merge-code-62a4' with uncommitted changes",
-      "duration": 66,
-      "details": {
-        "branch": "cursor/automate-test-fix-improve-and-merge-code-62a4",
-        "hasChanges": true,
-        "changesCount": 15
-      }
+      "result": {
+        "available": "105G",
+        "used": "15G",
+        "total": "126G"
+      },
+      "timestamp": "2025-09-03T21:30:05.484Z"
     },
     {
-      "name": "Security",
+      "name": "Memory Check",
       "status": "passed",
-      "message": "Basic security files are present",
-      "duration": 0,
-      "details": {
-        "foundFiles": [
-          ".gitignore",
-          ".env.example"
-        ]
-      }
+      "result": {
+        "total": "16017MB",
+        "used": "2433MB",
+        "available": "13584MB"
+      },
+      "timestamp": "2025-09-03T21:30:05.512Z"
     }
   ],
   "summary": {
-    "total": 7,
-    "passed": 7,
-    "failed": 0,
-    "warnings": 0
+    "total": 6,
+    "passed": 5,
+    "failed": 1
   }
 }
