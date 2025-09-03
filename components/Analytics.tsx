@@ -88,3 +88,14 @@ export const trackPageView = (url: string, title: string) => {
     });
   }
 };
+
+declare global {
+  interface Window {
+    dataLayer?: unknown[];
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+// Allow using gtag as a global if injected by GA
+// eslint-disable-next-line no-var
+declare var gtag: (...args: unknown[]) => void;
