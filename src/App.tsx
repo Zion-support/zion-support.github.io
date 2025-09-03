@@ -171,20 +171,20 @@ const LoadingSpinner = () => (
     </div>
   </motion.div>
 );
-;
-// Simple Footer component;
-const Footer = () => (;
-  <footer className="bg-zion-slate-dark text-white p-4 mt-auto">;
-    <div className="container mx-auto text-center">;
-      <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>;
-      <div className="mt-2 text-sm text-gray-300">;
-        <p>Phone: <a href="tel:+13024640950" className="hover:text-cyan-400">+1 302 464 0950</a></p>;
-        <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400">kleber@ziontechgroup.com</a></p>;
-        <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>;
-        <p>Website: <a href="https://ziontechgroup.com" className="hover:text-cyan-400">https://ziontechgroup.com</a></p>;
-      </div>;
-    </div>;
-  </footer>;
+
+// Simple Footer component
+const Footer = () => (
+  <footer className="bg-zion-slate-dark text-white p-4 mt-auto">
+    <div className="container mx-auto text-center">
+      <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+      <div className="mt-2 text-sm text-gray-300">
+        <p>Phone: <a href="tel:+13024640950" className="hover:text-cyan-400">+1 302 464 0950</a></p>
+        <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400">kleber@ziontechgroup.com</a></p>
+        <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
+        <p>Website: <a href="https://ziontechgroup.com" className="hover:text-cyan-400">https://ziontechgroup.com</a></p>
+      </div>
+    </div>
+  </footer>
 );
 
 function App() {

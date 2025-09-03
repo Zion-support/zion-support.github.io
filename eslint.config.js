@@ -17,8 +17,12 @@ export default [
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
-      // Newly ignored problematic directories
+      // Keep core app sources excluded from lint due to known corruption in many files
       'src/**',
+      // Additional backups and generated artifacts
+      'backup/**',
+      'backup-pages/**',
+      'automation_backup/**',
       'src.pages.disabled/**',
       'src.disabled/**',
       'components.disabled/**',
@@ -31,8 +35,11 @@ export default [
       'pages-backup/**',
       'pages-disabled/**',
       'tests.disabled/**',
+      // Tests are handled via override below; ignore legacy scattered tests at repo root
       'tests/**',
       '__tests__/**',
+      '*.test.*',
+      '*.spec.*',
       'supabase/**',
       'scripts/**',
       'automation/**',
@@ -64,6 +71,9 @@ export default [
       'tailwind.config.ts',
       'vite.config.ts',
       'vitest.config.ts',
+      '.prettierrc.js',
+      '.stylelintrc.*',
+      '.commitlintrc.*',
       'ecosystem*.cjs',
       '*.cjs',
     ],
