@@ -1,4 +1,13 @@
-export const messageChannelHandler = {
-  sendMessage: (message$1 => {},
-  receiveMessage: (callback$1 => {},
+type MessageHandler = {
+  sendMessage: (message: unknown) => void;
+  receiveMessage: (callback: (message: unknown) => void) => void;
+};
+
+export const messageChannelHandler: MessageHandler = {
+  sendMessage: (_message) => {
+    // No-op: placeholder for message channel integration
+  },
+  receiveMessage: (_callback) => {
+    // No-op: placeholder for message listener registration
+  },
 };

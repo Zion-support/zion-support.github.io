@@ -3,23 +3,18 @@ import Link from 'next/link';
 
 const EnhancedNavigation: React.FC = () => {
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <div className="text-xl font-bold text-gray-800">Logo</div>
+          <Link href="/" className="text-xl font-bold text-gray-800">Zion Tech Group</Link>
           <div className="hidden md:flex space-x-8">
-            <Link href="/" legacyBehavior>
-              <a className="text-gray-600 hover:text-gray-900">Home</a>
-            </Link>
-            <Link href="/services" legacyBehavior>
-              <a className="text-gray-600 hover:text-gray-900">Services</a>
-            </Link>
-            <Link href="/about" legacyBehavior>
-              <a className="text-gray-600 hover:text-gray-900">About</a>
-            </Link>
-            <Link href="/contact" legacyBehavior>
-              <a className="text-gray-600 hover:text-gray-900">Contact</a>
-            </Link>
+            <Link href="/" className="text-gray-600 hover:text-gray-900">Home</Link>
+            <Link href="/services" className="text-gray-600 hover:text-gray-900">Services</Link>
+            <Link href="/products" className="text-gray-600 hover:text-gray-900">Products</Link>
+            <Link href="/category" className="text-gray-600 hover:text-gray-900">Categories</Link>
+            <Link href="/blog" className="text-gray-600 hover:text-gray-900">Blog</Link>
+            <Link href="/about" className="text-gray-600 hover:text-gray-900">About</Link>
+            <Link href="/contact" className="text-gray-600 hover:text-gray-900">Contact</Link>
           </div>
         </div>
       </div>
